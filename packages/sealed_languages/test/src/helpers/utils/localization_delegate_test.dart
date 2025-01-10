@@ -1,41 +1,43 @@
 import "package:sealed_languages/src/data/natural_languages.data.dart";
 import "package:sealed_languages/src/data/scripts.data.dart";
 import "package:sealed_languages/src/helpers/extensions/basic_locale_extension.dart";
-import "package:sealed_languages/src/helpers/utils/locale_parser.dart";
+import "package:sealed_languages/src/helpers/utils/localization_delegate.dart";
 import "package:sealed_languages/src/model/core/basic_locale.dart";
 import "package:test/test.dart";
 
-void main() => group("$LocaleParser", () {
+void main() => group("$LocalizationDelegate", () {
       const language = LangEng();
       const script = ScriptLatn();
       const countryCode = "US";
       const locale = BasicLocale(language);
 
-      late LocaleParser parser; // ignore: avoid-late-keyword, it's just a test.
+      late LocalizationDelegate parser; // ignore: avoid-late-keyword, it's test
 
       setUp(
-        () => parser =
-            const LocaleParser(languages: [language], scripts: [script]),
+        () => parser = const LocalizationDelegate(
+          languages: [language],
+          scripts: [script],
+        ),
       );
 
       group(
         "constructor",
         () => test(
           "creates instance with null parameters",
-          () => expect(const LocaleParser(), isNotNull),
+          () => expect(const LocalizationDelegate(), isNotNull),
         ),
       );
 
-      group("parse", () {
-        test("null input", () => expect(parser.parse(null), isNull));
+      group("parseLocale", () {
+        test("null input", () => expect(parser.parseLocale(null), isNull));
 
-        test("empty string", () => expect(parser.parse(""), isNull));
+        test("empty string", () => expect(parser.parseLocale(""), isNull));
 
-        test("whitespace", () => expect(parser.parse(" "), isNull));
+        test("whitespace", () => expect(parser.parseLocale(" "), isNull));
 
         group("valid formats", () {
           test("parses language only", () {
-            final result = parser.parse("en");
+            final result = parser.parseLocale("en");
 
             expect(result?.toString(), locale.toString());
             expect(result?.language, equals(language));
@@ -44,7 +46,7 @@ void main() => group("$LocaleParser", () {
           });
 
           test("parses language with country", () {
-            final result = parser.parse("en_US");
+            final result = parser.parseLocale("en_US");
 
             expect(
               result?.toString(),
@@ -57,7 +59,7 @@ void main() => group("$LocaleParser", () {
           });
 
           test("parses language with script", () {
-            final result = parser.parse("en_Latn");
+            final result = parser.parseLocale("en_Latn");
 
             expect(
               result?.toString(),
@@ -69,7 +71,7 @@ void main() => group("$LocaleParser", () {
           });
 
           test("parses full format", () {
-            final result = parser.parse("en_Latn_US");
+            final result = parser.parseLocale("en_Latn_US");
 
             expect(
               result?.toString(),
@@ -86,67 +88,69 @@ void main() => group("$LocaleParser", () {
         group("case sensitivity", () {
           test(
             "uppercase language",
-            () => expect(parser.parse("EN")?.language, equals(language)),
+            () => expect(parser.parseLocale("EN")?.language, equals(language)),
           );
 
           test(
             "mixed case country",
-            () =>
-                expect(parser.parse("en_uS")?.countryCode, equals(countryCode)),
+            () => expect(
+              parser.parseLocale("en_uS")?.countryCode,
+              equals(countryCode),
+            ),
           );
 
           test(
             "mixed case script",
-            () => expect(parser.parse("en_lAtN")?.script, equals(script)),
+            () => expect(parser.parseLocale("en_lAtN")?.script, equals(script)),
           );
         });
 
         group("separators", () {
           test(
             "underscore separator",
-            () => expect(parser.parse("en_US"), isNotNull),
+            () => expect(parser.parseLocale("en_US"), isNotNull),
           );
 
           test(
             "hyphen separator",
-            () => expect(parser.parse("en-US"), isNotNull),
+            () => expect(parser.parseLocale("en-US"), isNotNull),
           );
 
           test(
             "space separator",
-            () => expect(parser.parse("en US "), isNotNull),
+            () => expect(parser.parseLocale("en US "), isNotNull),
           );
 
           test(
             "multiple separators",
-            () => expect(parser.parse("en__US"), isNotNull),
+            () => expect(parser.parseLocale("en__US"), isNotNull),
           );
         });
 
         group("invalid formats", () {
           test(
             "rejects invalid language length",
-            () => expect(parser.parse("eng"), isNull),
+            () => expect(parser.parseLocale("eng"), isNull),
           );
 
           test(
             "rejects invalid country length",
-            () => expect(parser.parse("en_USA"), isNull),
+            () => expect(parser.parseLocale("en_USA"), isNull),
           );
 
           test(
             "rejects invalid script length",
-            () => expect(parser.parse("en_Latin"), isNull),
+            () => expect(parser.parseLocale("en_Latin"), isNull),
           );
 
           test(
             "rejects invalid characters",
-            () => expect(parser.parse("en_123"), isNull),
+            () => expect(parser.parseLocale("en_123"), isNull),
           );
 
           test(
             "rejects wrong order",
-            () => expect(parser.parse("US_en"), isNull),
+            () => expect(parser.parseLocale("US_en"), isNull),
           );
         });
       });

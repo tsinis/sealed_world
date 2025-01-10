@@ -56,8 +56,8 @@ class ItemProperties<T extends Object> {
       item.hashCode;
 
   @override
-  String toString() =>
-      """ItemProperties($item, index: $index, isChosen: $isChosen, isDisabled: $isDisabled)""";
+  String toString() => "ItemProperties($item, index: $index, "
+      "isChosen: $isChosen, isDisabled: $isDisabled)";
 
   /// Creates a new [ItemProperties] object with the same properties as this
   /// one, but with some of them potentially overridden.
