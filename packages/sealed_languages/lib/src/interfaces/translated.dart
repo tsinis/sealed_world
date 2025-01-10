@@ -1,4 +1,5 @@
 import "../model/translated_name.dart";
+import "basic_localization_delegate.dart";
 import "iso_standardized.dart";
 
 part "iso_translated.dart";
@@ -34,9 +35,12 @@ sealed class Translated<T extends TranslatedName> {
   ///
   /// The [translations] parameter is required and represents a list of objects
   /// that implement the [TranslatedName] interface.
-  const Translated({required this.translations}); // coverage:ignore-line
+  const Translated({List<T>? translations}) // coverage:ignore-line
+      : _translations = translations;
+
+  final List<T>? _translations;
 
   /// A list of [TranslatedName] objects representing the translations, with
   /// different languages, country and script codes.
-  final List<T> translations;
+  List<T> get translations => _translations ?? [];
 }

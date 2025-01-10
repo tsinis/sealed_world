@@ -288,14 +288,10 @@ class NaturalLanguage extends Language
   String get internationalName => name;
 
   @override
-  List<TranslatedName> get translations => throw UnimplementedError(
-        """
-Please provide translations for your custom language for example via override:
+  List<TranslatedName> get translations => l10n.translatedNames({this});
 
-@override
-${List<TranslatedName>} get translations => [$TranslatedName($LangEng(), name: "Custom")];
-""",
-      );
+  @override
+  LocalizationDelegate get l10n => const LocalizationDelegate();
 
   /// Returns a string representation of this [NaturalLanguage] object.
   ///

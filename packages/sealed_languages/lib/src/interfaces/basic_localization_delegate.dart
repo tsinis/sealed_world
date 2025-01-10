@@ -21,15 +21,22 @@ abstract class BasicLocalizationDelegate<L extends BasicLocale,
   static const unicodeLocale =
       r"^(\p{L}{2})(?:[_\s-]+(?:(\p{L}{4})|(\p{L}{2}))?)?(?:[_\s-]+(\p{L}{2}))?$";
 
-  RegExp get pattern =>
-      RegExp(unicodeLocale, caseSensitive: false, unicode: true);
+  /// {@macro copy_with_method}
+  BasicLocalizationDelegate<L, T> copyWith({
+    Iterable<NaturalLanguage>? languages,
+    LocaleMapFunction<String> Function()? mapper,
+    Iterable<Script>? scripts,
+  });
 
   L toLocale(NaturalLanguage language, Script? script, String? countryCode);
 
   T toTranslation(L locale, String name, String? alt);
 
+  RegExp get localePattern =>
+      RegExp(unicodeLocale, caseSensitive: false, unicode: true);
+
   L? parseLocale(Object? locale) {
-    final match = pattern.firstMatch(locale?.toString().trim() ?? "");
+    final match = localePattern.firstMatch(locale?.toString() ?? "");
     final lang = NaturalLanguage.maybeFromCodeShort(match?.group(1), languages);
     if (lang == null) return null;
 
@@ -43,9 +50,9 @@ abstract class BasicLocalizationDelegate<L extends BasicLocale,
     );
   }
 
-  UnmodifiableMapView<Iso, String> commonNamesMap<Iso extends IsoStandardized>(
+  Map<Iso, String> commonNamesMap<Iso extends IsoStandardized>(
     Iterable<Iso> items, {
-    LocaleMappingOptions<L> options = const LocaleMappingOptions(),
+    required LocaleMappingOptions<L> options,
   }) {
     final noFullNamesOptions = options.copyWith(localizeFullNames: false);
     final rawMap = _rawLocaleMap(items, noFullNamesOptions);
@@ -57,14 +64,14 @@ abstract class BasicLocalizationDelegate<L extends BasicLocale,
 
     final results = <Iso, String>{};
     for (final iso in items) {
-      final translation = map[iso.code];
-      if (translation != null) results[iso] = translation;
+      final maybeCommonName = map[iso.code];
+      if (maybeCommonName != null) results[iso] = maybeCommonName;
     }
 
-    return UnmodifiableMapView(results);
+    return Map.unmodifiable(results);
   }
 
-  List<T> toTranslatedNames(
+  List<T> translatedNames(
     Iterable<IsoStandardized> items, {
     LocaleMappingOptions<L> options = const LocaleMappingOptions(),
   }) {
@@ -86,7 +93,7 @@ abstract class BasicLocalizationDelegate<L extends BasicLocale,
             mainLocale: options.mainLocale?.toUnicodeLocaleId(),
             useLanguageFallback: options.useLanguageFallback,
           ) ??
-      LocaleMap(const {});
+      const {};
 
   T? _maybeToTranslatedName(
     LocaleMap map,

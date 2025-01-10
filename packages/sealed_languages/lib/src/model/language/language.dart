@@ -7,6 +7,7 @@ import "../../helpers/extensions/sealed_world_iterable_extension.dart";
 import "../../helpers/extensions/sealed_world_object_extension.dart";
 import "../../helpers/extensions/upper_case_iso_map_extension.dart";
 import "../../helpers/natural_language/natural_language_json.dart";
+import "../../helpers/utils/localization_delegate.dart";
 import "../../interfaces/iso_standardized.dart";
 import "../../interfaces/json_encodable.dart";
 import "../../interfaces/named.dart";

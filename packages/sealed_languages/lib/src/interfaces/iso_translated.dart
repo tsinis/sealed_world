@@ -17,8 +17,10 @@ abstract interface class IsoTranslated<Translation extends TranslatedName,
     implements IsoStandardized<Name> {
   /// Creates a new instance of the [IsoTranslated] object.
   ///
-  /// The [translations] parameter is required and should be provided when
-  /// creating a new instance. It represents the translations of the item's name
-  /// into multiple languages.
-  const IsoTranslated({required super.translations}); // coverage:ignore-line
+  /// The [translations] parameter isn't required and could be provided when
+  /// creating a new (custom) instance. It represents the translations
+  /// of the item's name into multiple languages.
+  const IsoTranslated({super.translations}); // coverage:ignore-line
+
+  BasicLocalizationDelegate get l10n; // TODO! Add generics.
 }

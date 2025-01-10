@@ -10,15 +10,8 @@ void main() => group("$LocalizationDelegate", () {
       const script = ScriptLatn();
       const countryCode = "US";
       const locale = BasicLocale(language);
-
-      late LocalizationDelegate parser; // ignore: avoid-late-keyword, it's test
-
-      setUp(
-        () => parser = const LocalizationDelegate(
-          languages: [language],
-          scripts: [script],
-        ),
-      );
+      const parser =
+          LocalizationDelegate(languages: [language], scripts: [script]);
 
       group(
         "constructor",
@@ -118,7 +111,7 @@ void main() => group("$LocalizationDelegate", () {
 
           test(
             "space separator",
-            () => expect(parser.parseLocale("en US "), isNotNull),
+            () => expect(parser.parseLocale("en US"), isNotNull),
           );
 
           test(

@@ -1,5 +1,3 @@
-import "dart:collection" show UnmodifiableMapView;
-
 /// A type alias for a JSON-encoded map.
 ///
 /// The [JsonMap] type alias is used to represent a map that has been encoded to
@@ -50,10 +48,10 @@ typedef JsonObjectMap = Map<String, Object?>;
 
 typedef IsoLocaleKey = ({String isoCode, String locale});
 
-typedef LocaleMap = UnmodifiableMapView<IsoLocaleKey, String>;
+typedef LocaleMap = Map<IsoLocaleKey, String>;
 
-typedef LocaleMapFunction<T extends Object>
-    = UnmodifiableMapView<IsoLocaleKey, String> Function(
+typedef LocaleMapFunction<T extends Object> = Map<IsoLocaleKey, String>
+    Function(
   Set<String> isoCodes, {
   bool useLanguageFallback,
   String? altSymbol,
