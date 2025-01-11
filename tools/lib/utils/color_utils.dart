@@ -46,7 +46,6 @@ class ColorUtils {
     final fills = fillPattern.allMatches(svgContent);
     final strokes = strokePattern.allMatches(svgContent);
 
-    // print("Fills: ${fills.length}, Strokes: ${strokes.length}");
     for (final match in fills) _colorFromHex(match.group(1));
     for (final match in strokes) _colorFromHex(match.group(1));
 
@@ -117,7 +116,7 @@ class ColorUtils {
   /// colorFromHex('') == null // empty
   /// ```
   /// Reference: https://en.wikipedia.org/wiki/Web_colors#Hex_triplet
-  Color? colorFromHex(String inputString, {bool enableAlpha = true}) {
+  static Color? colorFromHex(String inputString, {bool enableAlpha = true}) {
     // Registers validator for exactly 6 or 8 digits long HEX (with optional #).
     final hexValidator = RegExp(kCompleteValidHexPattern);
     // Validating input, if it does not match — it's not proper HEX.
@@ -143,8 +142,6 @@ class ColorUtils {
     if (intColorValue == null) return null;
     // Register output color for the last step.
     final color = Color(intColorValue);
-
-    // final lol = Color.fromARGB(255, 255, 255, 255);
 
     // Decide to return color with transparency information or not.
     return enableAlpha ? color : color.withAlpha(255);

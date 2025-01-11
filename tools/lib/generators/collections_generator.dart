@@ -63,6 +63,7 @@ class CollectionsGenerator {
     const ${camelCaseType}CodeNumericMap = {
     """);
       for (final item in items.cast<WorldCountry>()) {
+        // ignore: avoid-continue, it's just a test.
         if (item.codeNumeric.trim().isEmpty) continue;
         buffer.write('"${item.codeNumeric}": ${item.runtimeType}(),\n');
       }

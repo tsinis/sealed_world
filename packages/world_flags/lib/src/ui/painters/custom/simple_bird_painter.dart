@@ -81,7 +81,7 @@ final class SimpleBirdPainter extends MultiElementPainter {
   }
 
   // ignore: avoid-returning-cascades, it's exceptional.
-  Path _drawPath(double width, double height) => Path()
+  static Path _drawPath(double width, double height) => Path()
     ..moveTo(width, height * 0.2)
     ..lineTo(width * 0.68, height * 0.2)
     ..cubicTo(

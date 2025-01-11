@@ -1,7 +1,6 @@
-// ignore_for_file: avoid-shadowing, avoid-similar-names, avoid-type-casts,
-
-// ignore: lines_longer_than_80_chars, it's CLI tool, not a production code.
+// ignore_for_file: lines_longer_than_80_chars, avoid-continue
 // ignore_for_file: avoid_print, avoid-non-ascii-symbols, prefer-moving-to-variable
+// ignore_for_file: avoid-shadowing, avoid-similar-names, avoid-type-casts
 import "dart:convert";
 
 import "package:change_case/change_case.dart";

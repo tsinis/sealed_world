@@ -31,7 +31,7 @@ const map = {
         final colors = ColorUtils([], countryName).extractColorsFromSvg(svg);
         // ignore: avoid-returning-void, we need this message.
         if (colors.isEmpty) return print("No colors for $countryName!");
-        // ignore_for_file: format-comment, it's made it job already.
+        // ignore_for_file: format-comment, avoid-commented-out-code, it's done.
         // final properties = FlagProperties(
         //   colors.map((c) => ColorsProperties.fromIntColor(c.value)).toList(),
         // );

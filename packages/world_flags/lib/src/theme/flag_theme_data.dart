@@ -1,3 +1,5 @@
+// ignore_for_file: prefer-class-destructuring
+
 import "package:flutter/material.dart";
 
 import "../interfaces/decorated_flag_interface.dart";

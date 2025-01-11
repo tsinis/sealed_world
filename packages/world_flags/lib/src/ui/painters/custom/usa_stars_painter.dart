@@ -41,7 +41,7 @@ final class UsaStarsPainter extends MultiElementPainter {
     return parent;
   }
 
-  Path _drawStar(Offset offset, double outerRadius) {
+  static Path _drawStar(Offset offset, double outerRadius) {
     final path = Path();
     final innerRadius = outerRadius * 0.4;
     for (int i = 0; i < _points * 2; i += 1) {

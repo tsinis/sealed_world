@@ -52,8 +52,8 @@ extension BasicLocaleExtension on BasicLocale {
     if (hasOnlyLanguage) return languageCode;
 
     final sb = StringBuffer(languageCode);
-    if (!hasNoScript) sb.write(separator + (script?.code ?? ""));
-    if (!hasNoCountry) sb.write(separator + (countryCode ?? ""));
+    if (!hasNoScript) sb.write(separator + (script?.code ?? separator));
+    if (!hasNoCountry) sb.write(separator + (countryCode ?? separator));
 
     return sb.toString();
   }

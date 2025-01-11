@@ -53,7 +53,7 @@ class TemplateRouteParser extends RouteInformationParser<ParsedRoute> {
       final pathRegExp = pathToRegExp(pathTemplate, parameters: parameters);
       if (pathRegExp.hasMatch(path)) {
         final match = pathRegExp.matchAsPrefix(path);
-        if (match == null) continue;
+        if (match == null) continue; // ignore: avoid-continue, just an example.
         final params = extract(parameters, match);
         parsedRoute = ParsedRoute(path, pathTemplate, params, queryParams);
       }

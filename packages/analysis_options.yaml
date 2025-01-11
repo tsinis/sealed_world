@@ -74,6 +74,7 @@ dart_code_metrics:
     - avoid-unsafe-collection-methods: false # They are being used on purpose.
     - enum-constants-ordering: false # This might be a breaking change.
     - match-getter-setter-field-names: false # Most of those are just aliases.
+    - no-empty-string: false # This will be a breaking change.
     - no-equal-arguments: false # Not our use-case here.
     - no-magic-number: false # Packages contain a lot of numbers.
     - no-magic-string: false # Packages contain a lot of strings.
@@ -83,6 +84,7 @@ dart_code_metrics:
     - prefer-explicit-parameter-names: false # This will be dev. defined.
     - prefer-prefixed-global-constants: false # This will be a breaking change.
     - prefer-single-declaration-per-file: false # Data is stored in one file.
+    - prefer-static-method: false # This has a lot of false positives now (Jan 2025).
     - prefer-test-matchers: false # Introduces coupling in tests.
     # Enabled:
     - avoid-high-cyclomatic-complexity:
@@ -152,6 +154,12 @@ dart_code_metrics:
         exclude:
           - "**/data/**.data.dart"
           - "**/translations/**.l10n.dart"
+    - prefer-class-destructuring:
+        min-occurrences: 4
+    - avoid-continue:
+        exclude:
+          - test/**
+
     # Enabled:
     - avoid-accessing-collections-by-constant-index
     - avoid-accessing-other-classes-private-members
@@ -167,6 +175,8 @@ dart_code_metrics:
     - avoid-collection-equality-checks
     - avoid-collection-methods-with-unrelated-types
     - avoid-collection-mutating-methods
+    - avoid-commented-out-code
+    - avoid-complex-arithmetic-expressions
     - avoid-complex-loop-conditions
     - avoid-conditions-with-boolean-literals
     - avoid-contradictory-expressions
@@ -192,11 +202,13 @@ dart_code_metrics:
     - avoid-explicit-type-declaration
     - avoid-extensions-on-records
     - avoid-function-type-in-records
+    - avoid-future-ignore
     - avoid-future-tostring
     - avoid-generics-shadowing
     - avoid-global-state
     - avoid-high-cyclomatic-complexity
     - avoid-identical-exception-handling-blocks
+    - avoid-if-with-many-branches
     - avoid-implicitly-nullable-extension-types
     - avoid-importing-entrypoint-exports
     - avoid-incomplete-copy-with
@@ -276,6 +288,7 @@ dart_code_metrics:
     - avoid-unnecessary-collections
     - avoid-unnecessary-conditionals
     - avoid-unnecessary-constructor
+    - avoid-unnecessary-continue
     - avoid-unnecessary-enum-arguments
     - avoid-unnecessary-enum-prefix
     - avoid-unnecessary-extends
@@ -330,6 +343,7 @@ dart_code_metrics:
     - no-equal-switch-expression-cases
     - no-equal-then-else
     - no-object-declaration
+    - pattern-fields-ordering
     - prefer-abstract-final-static-class
     - prefer-add-all
     - prefer-addition-subtraction-assignments
@@ -340,6 +354,7 @@ dart_code_metrics:
     - prefer-both-inlining-annotations
     - prefer-bytes-builder
     - prefer-commenting-analyzer-ignores
+    - prefer-commenting-future-delayed
     - prefer-conditional-expressions
     - prefer-contains
     - prefer-correct-callback-field-name
@@ -381,7 +396,7 @@ dart_code_metrics:
     - prefer-simpler-patterns-null-check
     - prefer-single-declaration-per-file
     - prefer-specific-cases-first
-    - prefer-static-class
+    - prefer-switch-expression
     - prefer-switch-with-enums
     - prefer-switch-with-sealed-classes
     - prefer-trailing-comma
@@ -393,6 +408,7 @@ dart_code_metrics:
     - prefer-wildcard-pattern
     - record-fields-ordering
     - unnecessary-trailing-comma
+    - use-existing-destructuring
     - use-existing-variable
 
 linter:

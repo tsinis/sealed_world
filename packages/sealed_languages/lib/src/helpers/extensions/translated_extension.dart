@@ -1,3 +1,5 @@
+// ignore_for_file: avoid-continue
+
 import "../../data/natural_languages.data.dart";
 import "../../interfaces/translated.dart";
 import "../../model/core/basic_locale.dart";
