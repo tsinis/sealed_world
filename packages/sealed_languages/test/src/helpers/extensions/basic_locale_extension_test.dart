@@ -3,6 +3,7 @@ import "package:sealed_languages/src/helpers/extensions/basic_locale_extension.d
 import "package:sealed_languages/src/model/core/basic_locale.dart";
 import "package:sealed_languages/src/model/language/language.dart";
 import "package:sealed_languages/src/model/script/writing_system.dart";
+import "package:sealed_languages/src/model/translated_name.dart";
 import "package:test/test.dart";
 
 void main() => group("BasicLocaleExtension", () {
@@ -31,4 +32,12 @@ void main() => group("BasicLocaleExtension", () {
           expect(copy.script, value.countryCode);
         });
       });
+
+      test(
+        "toTranslatedName",
+        () => expect(
+          value.toTranslatedName(string),
+          TranslatedName(value.language, name: string),
+        ),
+      );
     });

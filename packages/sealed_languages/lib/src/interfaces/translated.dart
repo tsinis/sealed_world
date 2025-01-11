@@ -42,5 +42,5 @@ sealed class Translated<T extends TranslatedName> {
 
   /// A list of [TranslatedName] objects representing the translations, with
   /// different languages, country and script codes.
-  List<T> get translations => _translations ?? [];
+  List<T> get translations => _translations ?? []; // coverage:ignore-line
 }

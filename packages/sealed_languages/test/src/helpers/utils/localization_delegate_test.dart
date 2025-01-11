@@ -3,6 +3,7 @@ import "package:sealed_languages/src/data/scripts.data.dart";
 import "package:sealed_languages/src/helpers/extensions/basic_locale_extension.dart";
 import "package:sealed_languages/src/helpers/utils/localization_delegate.dart";
 import "package:sealed_languages/src/model/core/basic_locale.dart";
+import "package:sealed_languages/src/model/translated_name.dart";
 import "package:test/test.dart";
 
 void main() => group("$LocalizationDelegate", () {
@@ -20,6 +21,25 @@ void main() => group("$LocalizationDelegate", () {
           () => expect(const LocalizationDelegate(), isNotNull),
         ),
       );
+
+      test(
+        "toTranslation",
+        () => expect(
+          parser.toTranslation(locale, countryCode, null),
+          const TranslatedName(language, name: countryCode),
+        ),
+      );
+
+      test("copyWith", () {
+        LocalizationDelegate copy =
+            parser.copyWith(languages: const [], scripts: const []);
+        expect(copy.languages, isEmpty);
+        expect(copy.scripts, isEmpty);
+        expect(copy, isNot(parser));
+        copy = parser.copyWith();
+        expect(copy.languages, isNotEmpty);
+        expect(copy.scripts, isNotEmpty);
+      });
 
       group("parseLocale", () {
         test("null input", () => expect(parser.parseLocale(null), isNull));

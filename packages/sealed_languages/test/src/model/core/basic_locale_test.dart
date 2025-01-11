@@ -39,5 +39,15 @@ void main() => group("$BasicLocale", () {
         expect(value.script, parsed.script);
       });
 
-      test("toString", () => expect(value.toString(), "aa_Zzzz_01"));
+      group("toString", () {
+        test("short: true", () => expect(value.toString(), "aa_Zzzz_01"));
+
+        test(
+          "short: false",
+          () => expect(
+            value.toString(short: false),
+            '''BasicLocale(LangAar(), countryCode: "$string", script: ScriptZzzz())''',
+          ),
+        );
+      });
     });

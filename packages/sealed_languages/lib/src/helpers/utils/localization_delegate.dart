@@ -29,11 +29,11 @@ class LocalizationDelegate
   ) =>
       BasicLocale(language, script: script, countryCode: countryCode);
 
-  @override
+  @override // coverage:ignore-line
   TranslatedName toTranslation(BasicLocale locale, String name, String? alt) =>
       locale.toTranslatedName(name, fullName: alt);
 
-  @override
+  @override // coverage:ignore-line
   LocalizationDelegate copyWith({
     Iterable<NaturalLanguage>? languages,
     LocaleMapFunction<String> Function()? mapper,
