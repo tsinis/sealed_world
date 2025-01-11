@@ -1,5 +1,6 @@
 import "../../interfaces/translated.dart";
 import "../../model/core/basic_locale.dart";
+import "../../model/core/locale_mapping_options.dart";
 import "../../model/translated_name.dart";
 import "translated_extension.dart";
 
@@ -37,6 +38,8 @@ extension IsoTranslatedIterableExtension<
   /// );
   /// print(cache[const LangAfr()]); // "Afrikaans"
   /// ```
+  @Deprecated("Please use `commonNamesMap` instead - it provides more efficient"
+      " lookup, consumes less memory and has more `options` to define.")
   Map<I, String> commonNamesCacheMap(
     L locale, {
     bool useLanguageFallback = true,
@@ -52,4 +55,26 @@ extension IsoTranslatedIterableExtension<
 
     return Map.unmodifiable(map);
   }
+
+  /// Extracts a map of common name translations for the given [options].
+  ///
+  /// The result map is a [Map] where the keys are [IsoTranslated] objects and
+  /// the values are the corresponding translations in the given locale(s).
+  ///
+  /// The returned map is unmodifiable to prevent accidental modifications.
+  ///
+  /// Example usage:
+  ///
+  /// ```dart
+  /// final map = NaturalLanguage.list.commonNamesMap(
+  ///   options: const LocaleMappingOptions(
+  ///   mainLocale: BasicLocale(LangCes()),
+  ///   fallbackLocale: BasicLocale(LangEng(), countryCode: "US"),
+  ///   localizeFullNames: false,
+  ///   ),
+  /// );
+  /// print(map[const LangAfr()]); // "Afrikaans"
+  /// ```
+  Map<I, String> commonNamesMap({required LocaleMappingOptions<L> options}) =>
+      isEmpty ? const {} : first.l10n.commonNamesMap(this, options: options);
 }

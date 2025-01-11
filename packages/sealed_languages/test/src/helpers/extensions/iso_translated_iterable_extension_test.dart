@@ -1,3 +1,5 @@
+// ignore_for_file: deprecated_member_use_from_same_package, it's TODO!
+
 import "package:_sealed_world_tests/sealed_world_tests.dart";
 import "package:sealed_languages/language_translations.dart";
 import "package:sealed_languages/src/data/natural_languages.data.dart";
