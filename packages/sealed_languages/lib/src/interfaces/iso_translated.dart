@@ -22,5 +22,9 @@ abstract interface class IsoTranslated<Translation extends TranslatedName,
   /// of the item's name into multiple languages.
   const IsoTranslated({super.translations}); // coverage:ignore-line
 
+  /// Returns the [BasicLocalizationDelegate] used for handling translations.
+  ///
+  /// This delegate provides localization functionality for ISO standardized
+  /// entities.
   BasicLocalizationDelegate get l10n; // Should be static... TODO!: Generics.
 }

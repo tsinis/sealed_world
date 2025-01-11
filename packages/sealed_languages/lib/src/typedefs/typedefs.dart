@@ -46,10 +46,31 @@ typedef JsonMap = Map<String, dynamic>;
 ///   - [JsonMap], the type alias for a JSON-encoded map.
 typedef JsonObjectMap = Map<String, Object?>;
 
+/// A record type representing a key for ISO locale mappings.
+///
+/// Fields:
+/// - `isoCode`: The ISO standard code (e.g. country or currency code).
+/// - `locale`: The Unicode locale identifier for the translation.
 typedef IsoLocaleKey = ({String isoCode, String locale});
 
+/// A map type that associates [IsoLocaleKey]s with their localized string
+/// values.
 typedef LocaleMap = Map<IsoLocaleKey, String>;
 
+/// A function type that maps ISO codes to their localized strings.
+///
+/// Type parameter [T] represents the type of locale identifier.
+///
+/// Parameters:
+/// - [isoCodes]: Set of ISO codes to be mapped.
+/// - [useLanguageFallback]: Whether to try language-only codes if specific
+///       locale not found.
+/// - [altSymbol]: Symbol used to mark alternative names.
+/// - [mainLocale]: Primary locale for translation lookup.
+/// - [fallbackLocale]: Secondary locale used when translation not found in main
+///       locale.
+///
+/// Returns a [LocaleMap] containing the mapped localized strings.
 typedef LocaleMapFunction<T extends Object> = Map<IsoLocaleKey, String>
     Function(
   Set<String> isoCodes, {

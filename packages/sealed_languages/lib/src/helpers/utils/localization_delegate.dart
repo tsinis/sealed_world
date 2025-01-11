@@ -6,8 +6,19 @@ import "../../model/translated_name.dart";
 import "../../typedefs/typedefs.dart";
 import "../extensions/basic_locale_extension.dart";
 
+/// A concrete implementation of abstract [BasicLocalizationDelegate] that uses
+/// [BasicLocale] and [TranslatedName] types for localization operations.
+///
+/// This delegate provides default implementation for handling ISO standardized
+/// entities localization without extending the base locale functionality.
 class LocalizationDelegate
     extends BasicLocalizationDelegate<BasicLocale, TranslatedName> {
+  /// Creates a [LocalizationDelegate] instance.
+  ///
+  /// Parameters are passed directly to [BasicLocalizationDelegate]:
+  /// - [languages]: Optional collection of supported languages.
+  /// - [mapper]: Optional function that returns locale mapping function.
+  /// - [scripts]: Optional collection of supported scripts.
   const LocalizationDelegate({super.languages, super.mapper, super.scripts});
 
   @override

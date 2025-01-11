@@ -10,14 +10,36 @@ import "../model/translated_name.dart";
 import "../typedefs/typedefs.dart";
 import "iso_standardized.dart";
 
+/// A delegate that handles localization of ISO standardized entities.
+///
+/// Type parameters:
+/// - [L]: Type of locale extending [BasicLocale].
+/// - [T]: Type of translated name extending [TranslatedName].
 abstract class BasicLocalizationDelegate<L extends BasicLocale,
     T extends TranslatedName> {
+  /// Creates a [BasicLocalizationDelegate] instance.
+  ///
+  /// Parameters:
+  /// - [languages]: Optional collection of supported languages for locale
+  ///       parsing.
+  /// - [mapper]: Optional function that returns locale mapping function
+  /// - [scripts]: Optional collection of supported scripts for locale parsing.
   const BasicLocalizationDelegate({this.languages, this.mapper, this.scripts});
 
+  /// Optional collection of supported languages. Used to limit locale parsing
+  /// and validation.
   final Iterable<NaturalLanguage>? languages;
+
+  /// Function that returns a locale mapping function. Used to map ISO codes to
+  /// their localized names.
+  // ignore: prefer-correct-callback-field-name, it's a function that returns a function.
   final LocaleMapFunction<String> Function()? mapper;
+
+  /// Optional collection of supported scripts. Used to limit locale parsing and
+  /// validation.
   final Iterable<Script>? scripts;
 
+  /// Regular expression pattern for parsing Unicode locale identifiers.
   static const unicodeLocale =
       r"^(\p{L}{2})(?:[_\s-]+(?:(\p{L}{4})|(\p{L}{2}))?)?(?:[_\s-]+(\p{L}{2}))?$";
 
@@ -28,13 +50,38 @@ abstract class BasicLocalizationDelegate<L extends BasicLocale,
     Iterable<Script>? scripts,
   });
 
+  /// Creates a locale instance from the given components.
+  ///
+  /// Parameters:
+  /// - [language]: The language of the locale.
+  /// - [script]: Optional writing system.
+  /// - [countryCode]: Optional country/region code.
+  ///
+  /// Returns a locale of type [L].
   L toLocale(NaturalLanguage language, Script? script, String? countryCode);
 
+  /// Creates a translated name instance from a locale and name components.
+  ///
+  /// Parameters:
+  /// - [locale]: The locale for the translation.
+  /// - [name]: The common/short name.
+  /// - [alt]: Optional alternative/full name.
+  ///
+  /// Returns a translated name of type [T].
   T toTranslation(L locale, String name, String? alt);
 
+  /// Gets the compiled regular expression for parsing locale identifiers.
+  ///
+  /// Returns a case-insensitive [RegExp] with Unicode support.
   RegExp get localePattern =>
       RegExp(unicodeLocale, caseSensitive: false, unicode: true);
 
+  /// Parses a locale identifier string into a locale object.
+  ///
+  /// Parameters:
+  /// - [locale]: The locale identifier to parse.
+  ///
+  /// Returns a locale of type [L] if valid, null otherwise.
   L? parseLocale(Object? locale) {
     final match = localePattern.firstMatch(locale?.toString() ?? "");
     final lang = NaturalLanguage.maybeFromCodeShort(match?.group(1), languages);
@@ -50,6 +97,13 @@ abstract class BasicLocalizationDelegate<L extends BasicLocale,
     );
   }
 
+  /// Creates a map of ISO codes to their common names in the specified locale.
+  ///
+  /// Parameters:
+  /// - [items]: Collection of ISO standardized items.
+  /// - [options]: Locale mapping configuration options.
+  ///
+  /// Returns an unmodifiable map of ISO items to their localized common names.
   Map<Iso, String> commonNamesMap<Iso extends IsoStandardized>(
     Iterable<Iso> items, {
     required LocaleMappingOptions<L> options,
@@ -71,6 +125,13 @@ abstract class BasicLocalizationDelegate<L extends BasicLocale,
     return Map.unmodifiable(results);
   }
 
+  /// Creates a list of translated names for the given ISO items.
+  ///
+  /// Parameters:
+  /// - [items]: Collection of ISO standardized items to translate.
+  /// - [options]: Optional locale mapping configuration.
+  ///
+  /// Returns an unmodifiable list of translated names.
   List<T> translatedNames(
     Iterable<IsoStandardized> items, {
     LocaleMappingOptions<L> options = const LocaleMappingOptions(),

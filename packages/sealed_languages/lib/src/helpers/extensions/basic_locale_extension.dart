@@ -58,6 +58,21 @@ extension BasicLocaleExtension on BasicLocale {
     return sb.toString();
   }
 
+  /// Creates a [TranslatedName] instance from this locale with the provided
+  /// name.
+  ///
+  /// Takes a required [name] parameter representing the common/short
+  /// translation and an optional [fullName] for the full/official translation.
+  ///
+  /// Example:
+  /// ```dart
+  /// const engLocale = BasicLocale(LangEng(), countryCode: 'US');
+  /// final translation = engLocale.toTranslatedName('USA',
+  ///   fullName: 'United States of America');
+  /// ```
+  ///
+  /// Returns a [TranslatedName] that inherits this locale's language, country
+  /// code, and script while adding the provided name and full name.
   TranslatedName toTranslatedName(String name, {String? fullName}) =>
       TranslatedName(
         language,
