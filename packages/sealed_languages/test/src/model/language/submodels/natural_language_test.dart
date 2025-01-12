@@ -660,13 +660,18 @@ void main() => group("$NaturalLanguage", () {
         final min = kSealedLanguagesSupportedLanguages.length + 1;
 
         test("every language should have at least $min translations", () {
+          int totalCount = 0;
+
           for (final translated in NaturalLanguage.list) {
+            totalCount += translated.translations.length;
             expect(translated.translations.length, greaterThanOrEqualTo(min));
             expect(
               translated.translations.every((l10n) => l10n.name.isNotEmpty),
               isTrue,
             );
           }
+
+          expect(totalCount, 20881);
         });
 
         test(

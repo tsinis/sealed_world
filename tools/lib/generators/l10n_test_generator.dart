@@ -1,4 +1,4 @@
-import "package:sealed_countries/sealed_countries.dart";
+import "package:sealed_languages/sealed_languages.dart";
 
 import "../constants/path_constants.dart";
 import "../models/package.dart";
@@ -71,6 +71,15 @@ const value = $instance;\n
 """);
         if (full != null) {
           buffer.write("expect(translated?.fullName, expectedFullName);");
+        }
+        if (locale.hasOnlyLanguage) {
+          buffer.write("""
+        final unexpectedScriptTranslation = value.maybeTranslation(
+          const ${locale.copyWith(script: const ScriptCyrs()).toString(short: false)},
+        );
+
+        expect(unexpectedScriptTranslation?.name, expectedName);
+""");
         }
 
         buffer.write("""
