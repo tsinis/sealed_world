@@ -1,5 +1,5 @@
 import "package:change_case/change_case.dart";
-import "package:sealed_countries/sealed_countries.dart";
+import "package:sealed_languages/sealed_languages.dart";
 
 import "../models/package.dart";
 import "../utils/code_utils.dart";

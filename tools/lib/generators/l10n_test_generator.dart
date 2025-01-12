@@ -15,8 +15,8 @@ class L10NTestGenerator {
   static const _dart = DartUtils();
 
   Future<void> generate(String path) async {
-    final prefix = "${package.dataRepresent}_${l10nLabel}_";
     final io = IoUtils();
+    final prefix = "${package.dataRepresent}_${l10nLabel}_";
     final dependencyImport = package.whenConst(
       sealedLanguages: """
 import "package:sealed_languages/src/data/scripts.data.dart";

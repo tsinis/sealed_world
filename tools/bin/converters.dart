@@ -6,7 +6,7 @@ import "package:cli/models/package.dart";
 import "package:cli/utils/args_parser.dart";
 import "package:cli/utils/io_utils.dart";
 import "package:cli/utils/json_utils.dart";
-import "package:sealed_countries/sealed_countries.dart";
+import "package:sealed_languages/sealed_languages.dart";
 
 /// Usage: `dart run :converters sealed_countries`.
 void main(List<String> args) {
