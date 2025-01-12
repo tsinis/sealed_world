@@ -66,7 +66,6 @@ void main() => group("$LocalizationDelegate", () {
               locale.copyWith(countryCode: countryCode).toString(),
             );
             expect(result?.language, equals(language));
-            expect(result?.language, equals(language));
             expect(result?.script, isNull);
             expect(result?.countryCode, equals(countryCode));
           });

@@ -64,13 +64,21 @@ typedef LocaleMap = Map<IsoLocaleKey, String>;
 /// Parameters:
 /// - [isoCodes]: Set of ISO codes to be mapped.
 /// - [useLanguageFallback]: Whether to try language-only codes if specific
-///       locale not found.
+/// locale not found.
 /// - [altSymbol]: Symbol used to mark alternative names.
 /// - [mainLocale]: Primary locale for translation lookup.
 /// - [fallbackLocale]: Secondary locale used when translation not found in main
-///       locale.
+/// locale.
 ///
 /// Returns a [LocaleMap] containing the mapped localized strings.
+///
+/// Example:
+/// ```dart
+/// {
+///   (isoCode: 'USA', locale: 'en_US'): 'United States',
+///   (isoCode: 'USA', locale: 'es'): 'Estados Unidos',
+/// }
+/// ```
 typedef LocaleMapFunction<T extends Object> = Map<IsoLocaleKey, String>
     Function(
   Set<String> isoCodes, {

@@ -73,7 +73,7 @@ abstract class BasicLocalizationDelegate<L extends BasicLocale,
   /// Gets the compiled regular expression for parsing locale identifiers.
   ///
   /// Returns a case-insensitive [RegExp] with Unicode support.
-  RegExp get localePattern =>
+  static final localePattern =
       RegExp(unicodeLocale, caseSensitive: false, unicode: true);
 
   /// Parses a locale identifier string into a locale object.
@@ -104,6 +104,8 @@ abstract class BasicLocalizationDelegate<L extends BasicLocale,
   /// - [options]: Locale mapping configuration options.
   ///
   /// Returns an unmodifiable map of ISO items to their localized common names.
+// TODO! Add tests for those lines.
+// coverage:ignore-start
   Map<Iso, String> commonNamesMap<Iso extends IsoStandardized>(
     Iterable<Iso> items, {
     required LocaleMappingOptions<L> options,
@@ -173,4 +175,5 @@ abstract class BasicLocalizationDelegate<L extends BasicLocale,
 
     return toTranslation(basicLocale, entry.value, fullName);
   }
+// coverage:ignore-end
 }

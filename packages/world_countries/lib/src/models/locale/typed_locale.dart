@@ -25,11 +25,7 @@ import "../../extensions/typed_locale_extension.dart";
 /// Example usage:
 ///
 /// ```dart
-/// const typedLocale = TypedLocale<String>(
-///   LangEng(),
-///   country: 'US',
-///   script: ScriptLatn(),
-/// );
+/// const typedLocale = TypedLocale(LangEng(), script: ScriptLatn());
 /// ```
 @immutable
 base class TypedLocale<

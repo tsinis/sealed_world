@@ -15,7 +15,7 @@ extension LocaleExtension on Locale? {
   /// `null`.
   ///
   /// If the [Locale] is not `null`, the `maybeToTypedLocale` method returns a
-  /// [TypedLocale<String>] instance with the following properties:
+  /// [TypedLocale] instance with the following properties:
   /// - `language`: The [NaturalLanguage] corresponding to the [Locale].
   /// - `country`: The country code of the [Locale].
   /// - `script`: The script code of the [Locale], if available.

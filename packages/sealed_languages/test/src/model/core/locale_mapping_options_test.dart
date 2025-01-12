@@ -5,7 +5,7 @@ import "package:test/test.dart";
 void main() => group("$LocaleMappingOptions", () {
       const options = LocaleMappingOptions<String>();
 
-      test("toSting", () {
+      test("toString", () {
         expect(
           options.toString(),
           'LocaleMappingOptions(altSymbol: "+", localizeFullNames: true, '
