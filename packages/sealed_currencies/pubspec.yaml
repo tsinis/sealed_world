@@ -28,6 +28,6 @@ dev_dependencies:
     path: ../_sealed_world_tests
   build_runner: ^2.4.14 # From Google
   coverage: ^1.11.1 # From Google
-  dart_code_metrics_presets: ^2.19.0
+  dart_code_metrics_presets: ^2.20.0
   lints: ^5.1.1 # From Google
   test: ^1.25.14 # From Google

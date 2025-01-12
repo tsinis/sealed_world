@@ -1,8 +1,11 @@
+// ignore_for_file: deprecated_member_use_from_same_package, it's TODO!
+
 import "package:_sealed_world_tests/sealed_world_tests.dart";
 import "package:sealed_languages/language_translations.dart";
 import "package:sealed_languages/src/data/natural_languages.data.dart";
 import "package:sealed_languages/src/helpers/extensions/iso_translated_iterable_extension.dart";
 import "package:sealed_languages/src/model/core/basic_locale.dart";
+import "package:sealed_languages/src/model/core/locale_mapping_options.dart";
 import "package:sealed_languages/src/model/language/language.dart";
 import "package:test/test.dart";
 
@@ -28,5 +31,15 @@ void main() => group("IsoTranslatedIterableExtension", () {
             expect(cache.length, 1);
           },
         );
+      });
+
+      // TODO! Add more tests.
+      group("commonNamesMap", () {
+        performanceTest("on empty list should return empty map", () {
+          final map = <NaturalLanguage>{}.commonNamesMap(
+            options: const LocaleMappingOptions(),
+          );
+          expect(map, isEmpty);
+        });
       });
     });

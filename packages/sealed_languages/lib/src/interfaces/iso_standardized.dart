@@ -29,10 +29,10 @@
 /// }
 /// ```
 ///
-/// In this example the `NaturalLanguage` class implements the `IsoStandardized`
+/// In this example the `NaturalLanguage` class implements the [IsoStandardized]
 /// interface with a `String` type parameter for the name property. The class
 /// defines properties for the ISO code, the name of the natural language, and
-/// other optional properties. The `IsoStandardized` interface is used to ensure
+/// other optional properties. The [IsoStandardized] interface is used to ensure
 /// that the `NaturalLanguage` class conforms to ISO standards.
 abstract interface class IsoStandardized<Name extends Object> {
   /// Creates a new instance of the [IsoStandardized] object.

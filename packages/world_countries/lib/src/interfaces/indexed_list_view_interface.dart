@@ -84,7 +84,7 @@ abstract interface class IndexedListViewInterface {
   /// Determines the order to lay children out horizontally and how to interpret
   /// `start` and `end` in the horizontal direction.
   ///
-  /// Defaults to the ambient `Directionality`.
+  /// Defaults to the ambient [Directionality].
   ///
   /// If `textDirection` is `TextDirection.rtl`, then the direction in which
   /// text flows starts from right to left. Otherwise, if `textDirection` is
@@ -162,7 +162,7 @@ abstract interface class IndexedListViewInterface {
   final EdgeInsetsGeometry? padding;
 
   /// {@template sealed_world.add_repaint_boundaries}
-  /// Whether to wrap each child in a `RepaintBoundary`.
+  /// Whether to wrap each child in a [RepaintBoundary].
   ///
   /// Typically, children in a scrolling container are wrapped in repaint
   /// boundaries so that they do not need to be repainted as the list scrolls.
@@ -170,19 +170,19 @@ abstract interface class IndexedListViewInterface {
   /// snippet of text), it might be more efficient to not add a repaint boundary
   /// and instead always repaint the children during scrolling.
   ///
-  /// Defaults to true.
+  /// Defaults to `true`.
   /// {@endtemplate}
   final bool? addRepaintBoundaries;
 
   /// {@template sealed_world.add_semantic_indexes}
-  /// Whether to wrap each child in an `IndexedSemantics`.
+  /// Whether to wrap each child in an [IndexedSemantics].
   ///
   /// Typically, children in a scrolling container must be annotated with a
   /// semantic index in order to generate the correct accessibility
   /// announcements. This should only be set to false if the indexes have
-  /// already been provided by an `IndexedSemantics` widget.
+  /// already been provided by an [IndexedSemantics] widget.
   ///
-  /// Defaults to true.
+  /// Defaults to `true`.
   ///
   /// See also:
   ///

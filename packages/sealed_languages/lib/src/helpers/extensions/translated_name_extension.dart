@@ -13,7 +13,7 @@ extension TranslatedNameExtension on TranslatedName {
   /// {@template copy_with_method}
   /// Creates a copy of this object with the given fields replaced with
   /// the new values.
-  /// If the new values are null, the field is left unchanged. Otherwise,
+  /// If the new values are `null`, the field is left unchanged. Otherwise,
   /// the field is replaced with the new value.
   /// {@endtemplate}
   // ignore: long-parameter-list, 5 params in the default constructor.
@@ -68,6 +68,6 @@ extension TranslatedNameExtension on TranslatedName {
 
   /// Returns a [BasicLocale] object from this [TranslatedName] that represent
   /// locale of translation.
-  BasicLocale get locale =>
+  BasicLocale get asBasicLocale =>
       BasicLocale(language, countryCode: countryCode, script: script);
 }

@@ -10,31 +10,32 @@ extension LocaleExtension on Locale? {
   /// Converts the [Locale] to a [TypedLocale], if possible.
   ///
   /// The `maybeToTypedLocale` method takes an optional [fallbackLanguage]
-  /// parameter of type `NaturalLanguage?`. If [fallbackLanguage] is provided,
-  /// it is used as the language for the `TypedLocale` if the `Locale` is
+  /// parameter of type [NaturalLanguage?]. If [fallbackLanguage] is provided,
+  /// it is used as the language for the [TypedLocale] if the [Locale] is
   /// `null`.
   ///
-  /// If the `Locale` is not `null`, the `maybeToTypedLocale` method returns a
-  /// `TypedLocale<String>` instance with the following properties:
-  /// - `language`: The `NaturalLanguage` corresponding to the `Locale`.
-  /// - `country`: The country code of the `Locale`.
-  /// - `script`: The script code of the `Locale`, if available.
+  /// If the [Locale] is not `null`, the `maybeToTypedLocale` method returns a
+  /// [TypedLocale] instance with the following properties:
+  /// - `language`: The [NaturalLanguage] corresponding to the [Locale].
+  /// - `country`: The country code of the [Locale].
+  /// - `script`: The script code of the [Locale], if available.
   ///
-  /// If the `Locale` is `null`, the `maybeToTypedLocale` method returns
+  /// If the [Locale] is `null`, the `maybeToTypedLocale` method returns
   /// `null`.
   ///
   /// Example usage:
   ///
   /// ```dart
   /// final locale = Locale('en', 'US');
+  /// // typedLocale is equal to: IsoLocale(LangEng(), country: CountryUsa()).
   /// final typedLocale = locale.maybeToTypedLocale();
-  /// /// typedLocale is equal to: IsoLocale(LangEng(), country: CountryUsa()).
   /// ```
   TypedLocale<String>? maybeToTypedLocale([NaturalLanguage? fallbackLanguage]) {
     final language = maybeLanguage ?? fallbackLanguage;
 
     // ignore: avoid-negated-conditions, due to line length.
     return language != null
+        // ignore: deprecated_member_use_from_same_package, it's TODO!
         ? TypedLocale(language, country: this?.countryCode, script: maybeScript)
         : null;
   }

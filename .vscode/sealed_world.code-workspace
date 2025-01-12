@@ -348,7 +348,11 @@
         "type": "shell",
         "label": "Update Dart Coverage",
         "dependsOrder": "sequence",
-        "dependsOn": ["Dart Test", "Format Dart Coverage", "Generate Coverage"],
+        "dependsOn": [
+          "Dart Test (Exclude Generated)",
+          "Format Dart Coverage",
+          "Generate Coverage"
+        ],
         "presentation": { "revealProblems": "onProblem", "close": true }
       },
       {
@@ -363,7 +367,7 @@
         "dependsOrder": "sequence",
         "dependsOn": [
           "Dart Pub Get",
-          "Dart Test",
+          "Dart Test (Exclude Generated)",
           "Dart Format",
           "Dart Analyze",
           "Dart Code Metrics Analyze",

@@ -1,8 +1,8 @@
 import "package:flutter/widgets.dart";
 
-/// A set of useful extensions related to [Navigator] for `BuildContext`.
+/// A set of useful extensions related to [Navigator] for [BuildContext].
 extension NavigatorContextExtension on BuildContext {
-  /// Returns the nearest `NavigatorState` instance for the current context.
+  /// Returns the nearest [NavigatorState] instance for the current context.
   NavigatorState get navigator => Navigator.of(this);
 
   /// Pops the current route off the navigation stack and returns to the
@@ -15,7 +15,7 @@ extension NavigatorContextExtension on BuildContext {
   @optionalTypeArgs
   void pop<T extends Object>([T? result]) => navigator.pop<T>(result);
 
-  /// Pushes a new `Route` onto the navigation stack and returns a [Future] that
+  /// Pushes a new [Route] onto the navigation stack and returns a [Future] that
   /// completes when the new route is popped.
   ///
   /// Example usage:

@@ -1,4 +1,5 @@
 import "../model/translated_name.dart";
+import "basic_localization_delegate.dart";
 import "iso_standardized.dart";
 
 part "iso_translated.dart";
@@ -23,10 +24,10 @@ part "iso_translated.dart";
 /// }
 /// ```
 ///
-/// In this example, the `TranslatedObject` class implements the `Translated`
+/// In this example, the `TranslatedObject` class implements the [Translated]
 /// interface with a `TranslatedName` type parameter for the translations. The
 /// class defines a property `translations` which is a list of objects
-/// representing the translated names of the country. The `Translated` interface
+/// representing the translated names of the country. The [Translated] interface
 /// is used to ensure that the `TranslatedObject` class has the required
 /// translations.
 sealed class Translated<T extends TranslatedName> {
@@ -34,9 +35,12 @@ sealed class Translated<T extends TranslatedName> {
   ///
   /// The [translations] parameter is required and represents a list of objects
   /// that implement the [TranslatedName] interface.
-  const Translated({required this.translations}); // coverage:ignore-line
+  const Translated({List<T>? translations}) // coverage:ignore-line
+      : _translations = translations;
+
+  final List<T>? _translations;
 
   /// A list of [TranslatedName] objects representing the translations, with
   /// different languages, country and script codes.
-  final List<T> translations;
+  List<T> get translations => _translations ?? []; // coverage:ignore-line
 }

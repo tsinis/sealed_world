@@ -1,3 +1,5 @@
+// ignore_for_file: prefer-class-destructuring
+
 import "package:flutter/foundation.dart";
 import "package:flutter/widgets.dart" show BuildContext;
 
@@ -56,8 +58,8 @@ class ItemProperties<T extends Object> {
       item.hashCode;
 
   @override
-  String toString() =>
-      """ItemProperties($item, index: $index, isChosen: $isChosen, isDisabled: $isDisabled)""";
+  String toString() => "ItemProperties($item, index: $index, "
+      "isChosen: $isChosen, isDisabled: $isDisabled)";
 
   /// Creates a new [ItemProperties] object with the same properties as this
   /// one, but with some of them potentially overridden.

@@ -1,4 +1,4 @@
-// ignore_for_file: prefer-moving-to-variable
+// ignore_for_file: prefer-moving-to-variable, prefer-class-destructuring
 
 import "dart:ui";
 

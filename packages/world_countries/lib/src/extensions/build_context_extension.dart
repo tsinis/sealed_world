@@ -1,8 +1,8 @@
 import "package:flutter/material.dart";
 
-/// A set of useful extensions for `BuildContext`.
+/// A set of useful extensions for [BuildContext].
 extension BuildContextExtension on BuildContext {
-  /// Returns the `MaterialLocalizations` instance for the current context.
+  /// Returns the [MaterialLocalizations] instance for the current context.
   ///
   /// Example usage:
   /// ```dart
@@ -10,13 +10,13 @@ extension BuildContextExtension on BuildContext {
   /// ```
   MaterialLocalizations get materialL10n => MaterialLocalizations.of(this);
 
-  /// Returns `true` if the current `BuildContext` has a `MaterialLocalizations`
+  /// Returns `true` if the current [BuildContext] has a [MaterialLocalizations]
   /// instance associated with it.
   bool get hasMaterialL10n =>
       Localizations.of<MaterialLocalizations?>(this, MaterialLocalizations) !=
       null;
 
-  /// Returns the nearest `FocusScopeNode` instance for the current context.
+  /// Returns the nearest [FocusScopeNode] instance for the current context.
   ///
   /// Example usage:
   /// ```dart
@@ -24,7 +24,7 @@ extension BuildContextExtension on BuildContext {
   /// ```
   FocusScopeNode get focus => FocusScope.of(this);
 
-  /// Returns the nearest `MediaQueryData` instance for the current context.
+  /// Returns the nearest [MediaQueryData] instance for the current context.
   ///
   /// Example usage:
   /// ```dart
@@ -32,7 +32,7 @@ extension BuildContextExtension on BuildContext {
   /// ```
   MediaQueryData get media => MediaQuery.of(this);
 
-  /// Returns the padding from the nearest `MediaQueryData` instance for the
+  /// Returns the padding from the nearest [MediaQueryData] instance for the
   /// current context.
   ///
   /// Example usage:
@@ -41,7 +41,7 @@ extension BuildContextExtension on BuildContext {
   /// ```
   EdgeInsets get padding => MediaQuery.paddingOf(this);
 
-  /// Returns the `ThemeData` instance for the current context.
+  /// Returns the [ThemeData] instance for the current context.
   ///
   /// Example usage:
   /// ```dart
@@ -49,7 +49,7 @@ extension BuildContextExtension on BuildContext {
   /// ```
   ThemeData get theme => Theme.of(this);
 
-  /// Returns the nearest `ScaffoldState` instance for the current context.
+  /// Returns the nearest [ScaffoldState] instance for the current context.
   ///
   /// Example usage:
   /// ```dart
@@ -57,7 +57,7 @@ extension BuildContextExtension on BuildContext {
   /// ```
   ScaffoldState get scaffold => Scaffold.of(this);
 
-  /// Returns the nearest `ScaffoldMessengerState` instance for the current
+  /// Returns the nearest [ScaffoldMessengerState] instance for the current
   /// context.
   ///
   /// Example usage:
@@ -66,7 +66,7 @@ extension BuildContextExtension on BuildContext {
   /// ```
   ScaffoldMessengerState get messenger => ScaffoldMessenger.of(this);
 
-  /// Shows a `SnackBar` at the bottom of the screen.
+  /// Shows a [SnackBar] at the bottom of the screen.
   ///
   /// Example usage:
   /// ```dart

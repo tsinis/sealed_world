@@ -59,7 +59,7 @@ class RouteParseUtils {
     return _returnFromCountryData(null);
   }
 
-  T? _maybeData<T extends IsoStandardized>(
+  static T? _maybeData<T extends IsoStandardized>(
     String code, {
     required T? Function(String code) onCode,
     required T? Function() orElse,

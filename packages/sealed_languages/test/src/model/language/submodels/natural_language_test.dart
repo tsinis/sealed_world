@@ -670,13 +670,8 @@ void main() => group("$NaturalLanguage", () {
         });
 
         test(
-          "throws $UnimplementedError on custom class with no translations",
-          () {
-            expect(
-              () => const _NaturalLanguageTest().translations,
-              throwsUnimplementedError,
-            );
-          },
+          "returns empty list on custom class with no translations",
+          () => expect(const _NaturalLanguageTest().translations, isEmpty),
         );
       });
 

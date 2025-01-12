@@ -41,6 +41,7 @@ dart_code_metrics:
     - consistent-update-render-object
     - dispose-fields
     - prefer-action-button-tooltip
+    - prefer-align-over-container
     - prefer-center-over-align
     - prefer-const-border-radius
     - prefer-container
@@ -53,9 +54,12 @@ dart_code_metrics:
     - prefer-single-widget-per-file
     - prefer-sized-box-square
     - prefer-sliver-prefix
+    - prefer-spacing
     - prefer-text-rich
+    - prefer-transform-over-container
     - prefer-using-list-view
     - proper-super-calls
+    - use-closest-build-context
     - use-setstate-synchronously
 
 linter:

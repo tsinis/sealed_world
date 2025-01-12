@@ -2,7 +2,7 @@ import "dart:ui" show Locale;
 
 import "locale/typed_locale.dart";
 
-/// A typedef representing a map entry of `Locale` and `TypedLocale`.
+/// A typedef representing a map entry of [Locale] and [TypedLocale].
 ///
 ///
 /// The `LocaleEntry` typedef is a shorthand for `MapEntry<Locale, TypedLocale>`

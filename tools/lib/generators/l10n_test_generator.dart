@@ -54,7 +54,7 @@ const value = $instance;\n
 """);
 
       for (final l10n in translated.translations) {
-        final locale = l10n.locale;
+        final locale = l10n.asBasicLocale;
         final common = l10n.name;
         final full = l10n.fullName;
 

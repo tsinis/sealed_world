@@ -1,5 +1,5 @@
 // ignore_for_file: avoid-similar-names, prefer-correct-setter-parameter-name,
-// ignore_for_file: prefer-extracting-function-callbacks
+// ignore_for_file: prefer-extracting-function-callbacks,
 
 import "dart:io";
 

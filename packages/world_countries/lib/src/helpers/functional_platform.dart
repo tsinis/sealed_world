@@ -10,9 +10,9 @@ sealed class FunctionalPlatform {
   /// Example usage:
   /// ```dart
   /// FunctionalPlatform.maybeWhenConst(
-  ///   android: () => print('Running on Android'),
-  ///   iOS: () => print('Running on iOS'),
-  ///   orElse: () => print('Running on other platform'),
+  ///   android: 'Running on Android',
+  ///   iOS: 'Running on iOS',
+  ///   orElse: 'Running on other platform',
   /// );
   /// ```
   static R maybeWhenConst<R>({
@@ -26,25 +26,15 @@ sealed class FunctionalPlatform {
     R? windows,
   }) {
     if (kIsWeb) return web ?? orElse; // IO is not available on Web.
-    switch (defaultTargetPlatform) {
-      case TargetPlatform.android:
-        return android ?? orElse;
 
-      case TargetPlatform.iOS:
-        return iOS ?? orElse;
-
-      case TargetPlatform.macOS:
-        return macOS ?? orElse;
-
-      case TargetPlatform.windows:
-        return windows ?? orElse;
-
-      case TargetPlatform.linux:
-        return linux ?? orElse;
-
-      case TargetPlatform.fuchsia:
-        return fuchsia ?? orElse;
-    }
+    return switch (defaultTargetPlatform) {
+      TargetPlatform.android => android ?? orElse,
+      TargetPlatform.iOS => iOS ?? orElse,
+      TargetPlatform.macOS => macOS ?? orElse,
+      TargetPlatform.windows => windows ?? orElse,
+      TargetPlatform.linux => linux ?? orElse,
+      TargetPlatform.fuchsia => fuchsia ?? orElse,
+    };
   }
 
   /// Invokes the given function based on the current platform.
@@ -78,24 +68,14 @@ sealed class FunctionalPlatform {
     R Function()? windows,
   }) {
     if (kIsWeb) return web?.call() ?? orElse(); // IO is not available on Web.
-    switch (defaultTargetPlatform) {
-      case TargetPlatform.android:
-        return android?.call() ?? orElse();
 
-      case TargetPlatform.iOS:
-        return iOS?.call() ?? orElse();
-
-      case TargetPlatform.macOS:
-        return macOS?.call() ?? orElse();
-
-      case TargetPlatform.windows:
-        return windows?.call() ?? orElse();
-
-      case TargetPlatform.linux:
-        return linux?.call() ?? orElse();
-
-      case TargetPlatform.fuchsia:
-        return fuchsia?.call() ?? orElse();
-    }
+    return switch (defaultTargetPlatform) {
+      TargetPlatform.android => android?.call() ?? orElse(),
+      TargetPlatform.iOS => iOS?.call() ?? orElse(),
+      TargetPlatform.macOS => macOS?.call() ?? orElse(),
+      TargetPlatform.windows => windows?.call() ?? orElse(),
+      TargetPlatform.linux => linux?.call() ?? orElse(),
+      TargetPlatform.fuchsia => fuchsia?.call() ?? orElse(),
+    };
   }
 }

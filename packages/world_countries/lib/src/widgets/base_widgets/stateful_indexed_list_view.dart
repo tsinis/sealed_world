@@ -148,18 +148,18 @@ abstract class StatefulIndexedListView<T extends Object> extends StatefulWidget
   final EdgeInsetsGeometry? padding;
 
   /// {@template sealed_world.add_automatic_keep_alives}
-  /// Whether to wrap each child in an `AutomaticKeepAlive`.
+  /// Whether to wrap each child in an [AutomaticKeepAlive].
   ///
-  /// Typically, children in lazy list are wrapped in `AutomaticKeepAlive`
-  /// widgets so that children can use `KeepAliveNotification`s to preserve
+  /// Typically, children in lazy list are wrapped in [AutomaticKeepAlive]
+  /// widgets so that children can use [KeepAliveNotification]s to preserve
   /// their state when they would otherwise be garbage collected off-screen.
   ///
   /// This feature (and `addRepaintBoundaries`) must be disabled if the children
-  /// are going to manually maintain their `KeepAlive` state. It may also be
+  /// are going to manually maintain their [KeepAlive] state. It may also be
   /// more efficient to disable this feature if it is known ahead of time that
   /// none of the children will ever try to keep themselves alive.
   ///
-  /// Defaults to true.
+  /// Defaults to `true`.
   /// {@endtemplate}
   final bool addAutomaticKeepAlives;
 

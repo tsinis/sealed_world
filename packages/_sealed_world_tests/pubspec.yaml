@@ -15,5 +15,5 @@ dependencies:
   vm_service: ^14.2.5 # Specific version for the flags package. From Google
 
 dev_dependencies:
-  dart_code_metrics_presets: ^2.19.0
+  dart_code_metrics_presets: ^2.20.0
   lints: ^5.1.1 # From Google

@@ -45,12 +45,11 @@ class _MainState extends State<Main> {
         child: SafeArea(
           minimum: const EdgeInsets.all(_size / 2),
           child: ListView.separated(
-            itemBuilder: (_, index) {
+            itemBuilder: (bc, index) {
               final country = WorldCountry.list[index];
               final isFull = fullFlags.contains(country);
-              final style = TextStyle(
-                color: isFull ? null : Theme.of(context).disabledColor,
-              );
+              final style =
+                  TextStyle(color: isFull ? null : Theme.of(bc).disabledColor);
 
               return ListTile(
                 leading:
@@ -66,7 +65,7 @@ class _MainState extends State<Main> {
                   ),
                 ),
                 onTap: isFull
-                    ? () => SettingsDialog.show(_aspectRatio, context, country)
+                    ? () => SettingsDialog.show(_aspectRatio, bc, country)
                     : null,
                 minLeadingWidth: _size * 1.5,
               );

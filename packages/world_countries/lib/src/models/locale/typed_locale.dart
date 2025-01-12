@@ -1,5 +1,6 @@
-// ignore: lines_longer_than_80_chars, we are re-using Locale implementations.
+// ignore: lines_longer_than_80_chars, we are re-using `Locale` implementations.
 // ignore_for_file: prefer-overriding-parent-equality, avoid-nullable-parameters-with-default-values, avoid-suspicious-super-overrides
+// ignore_for_file: deprecated_member_use_from_same_package, TODO!
 
 import "dart:ui" show Locale;
 
@@ -19,27 +20,24 @@ import "../../extensions/typed_locale_extension.dart";
 /// The [TypedLocale] class has the following properties:
 /// - `language`: The [NaturalLanguage] representing the language of the locale.
 /// - `country`: The optional country information of generic type `CountryType`.
-/// - `script`: The optional script information of type `Script`.
+/// - `script`: The optional script information of type [Script].
 ///
 /// Example usage:
 ///
 /// ```dart
-/// const typedLocale = TypedLocale<String>(
-///   LangEng(),
-///   country: 'US',
-///   script: ScriptLatn(),
-/// );
+/// const typedLocale = TypedLocale(LangEng(), script: ScriptLatn());
 /// ```
 @immutable
-base class TypedLocale<CountryType extends Object> extends Locale
-    implements BasicLocale {
+base class TypedLocale<
+    @Deprecated("Please use `IsoLocale` class instead.")
+    CountryType extends Object> extends Locale implements BasicLocale {
   /// Creates an instance of [TypedLocale].
   ///
   /// The [language] parameter is required.
   /// The [country] and [script] parameters are optional.
   const TypedLocale(
     this.language, {
-    this.country,
+    @Deprecated("Please use `IsoLocale` class instead.") this.country,
     this.script,
     this.countryTranslations = const {},
     this.currencyTranslations = const {},
@@ -52,7 +50,7 @@ base class TypedLocale<CountryType extends Object> extends Locale
   /// The [country] and [script] parameters are optional.
   TypedLocale.fromSubtags({
     required this.language,
-    this.country,
+    @Deprecated("Please use `IsoLocale` class instead.") this.country,
     this.script,
     this.countryTranslations = const {},
     this.currencyTranslations = const {},
@@ -73,7 +71,7 @@ base class TypedLocale<CountryType extends Object> extends Locale
   ///
   factory TypedLocale.withTranslationsCache(
     NaturalLanguage language, {
-    CountryType? country,
+    @Deprecated("Please use `IsoLocale` class instead.") CountryType? country,
     Script? script,
     Iterable<NaturalLanguage>? languages = NaturalLanguage.list,
     Iterable<FiatCurrency>? currencies = FiatCurrency.list,
@@ -90,7 +88,7 @@ base class TypedLocale<CountryType extends Object> extends Locale
   final NaturalLanguage language;
 
   /// The optional country information of generic type `CountryType`.
-  final CountryType? country;
+  final CountryType? country; // ignore: deprecated_consistency, it's TODO!
 
   @override
   final Script? script;
@@ -120,7 +118,7 @@ base class TypedLocale<CountryType extends Object> extends Locale
   // ignore: long-parameter-list, class has 6 properties.
   TypedLocale<CountryType> copyWith({
     NaturalLanguage? language,
-    CountryType? country,
+    @Deprecated("Please use `IsoLocale` class instead.") CountryType? country,
     Script? script,
     Map<WorldCountry, String>? countryTranslations,
     Map<FiatCurrency, String>? currencyTranslations,

@@ -2,6 +2,7 @@ import "../../helpers/extensions/sealed_world_object_extension.dart";
 import "../../model/core/basic_locale.dart";
 import "../../model/language/language.dart";
 import "../../model/script/writing_system.dart";
+import "../../model/translated_name.dart";
 import "../../typedefs/typedefs.dart";
 
 /// Provides extension methods for [BasicLocale] class.
@@ -51,9 +52,33 @@ extension BasicLocaleExtension on BasicLocale {
     if (hasOnlyLanguage) return languageCode;
 
     final sb = StringBuffer(languageCode);
-    if (!hasNoScript) sb.write(separator + (script?.code ?? ""));
-    if (!hasNoCountry) sb.write(separator + (countryCode ?? ""));
+    if (!hasNoScript) sb.write(separator + (script?.code ?? separator));
+    if (!hasNoCountry) sb.write(separator + (countryCode ?? separator));
 
     return sb.toString();
   }
+
+  /// Creates a [TranslatedName] instance from this locale with the provided
+  /// name.
+  ///
+  /// Takes a required [name] parameter representing the common/short
+  /// translation and an optional [fullName] for the full/official translation.
+  ///
+  /// Example:
+  /// ```dart
+  /// const engLocale = BasicLocale(LangEng(), countryCode: 'US');
+  /// final translation = engLocale.toTranslatedName('USA',
+  ///   fullName: 'United States of America');
+  /// ```
+  ///
+  /// Returns a [TranslatedName] that inherits this locale's language, country
+  /// code, and script while adding the provided name and full name.
+  TranslatedName toTranslatedName(String name, {String? fullName}) =>
+      TranslatedName(
+        language,
+        name: name,
+        fullName: fullName,
+        countryCode: countryCode,
+        script: script,
+      );
 }

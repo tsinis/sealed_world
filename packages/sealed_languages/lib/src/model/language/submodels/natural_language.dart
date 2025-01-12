@@ -288,14 +288,10 @@ class NaturalLanguage extends Language
   String get internationalName => name;
 
   @override
-  List<TranslatedName> get translations => throw UnimplementedError(
-        """
-Please provide translations for your custom language for example via override:
+  List<TranslatedName> get translations => l10n.translatedNames({this});
 
-@override
-${List<TranslatedName>} get translations => [$TranslatedName($LangEng(), name: "Custom")];
-""",
-      );
+  @override
+  LocalizationDelegate get l10n => const LocalizationDelegate();
 
   /// Returns a string representation of this [NaturalLanguage] object.
   ///
@@ -316,7 +312,7 @@ ${List<TranslatedName>} get translations => [$TranslatedName($LangEng(), name: "
   @override
   String toJson({JsonCodec codec = const JsonCodec()}) => codec.encode(toMap());
 
-  /// Returns a `NaturalLanguage` object whose [code] or the value returned by
+  /// Returns a [NaturalLanguage] object whose [code] or the value returned by
   /// [where] matches the specified [value], or `null` if no such object exists
   /// in the specified [languages] list.
   ///
@@ -362,7 +358,7 @@ ${List<TranslatedName>} get translations => [$TranslatedName($LangEng(), name: "
   /// The [code] parameter is required and should be an object representing the
   /// ISO 639 code for the language.
   /// {@macro any_code_object}
-  /// The optional [languages] parameter specifies the list of `NaturalLanguage`
+  /// The optional [languages] parameter specifies the list of [NaturalLanguage]
   /// objects to search.
   /// {@macro optional_instances_array_parameter}
   /// Example usage:

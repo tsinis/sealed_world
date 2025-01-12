@@ -9,12 +9,12 @@ import "../theme/tile_theme_data/country_tile_theme_data.dart";
 import "../theme/tile_theme_data/currency_tile_theme_data.dart";
 import "../theme/tile_theme_data/language_tile_theme_data.dart";
 
-/// A set of useful extensions for `BuildContext` related to the world_countries
+/// A set of useful extensions for [BuildContext] related to the world_countries
 /// package.
 extension WorldCountriesBuildContextExtension on BuildContext {
-  /// Returns the `TypedLocale` instance for the current context, or `null` if
-  /// the current context does not have a `TypedLocale` (for example, because
-  /// `TypedLocaleDelegate` is not provided in the `MaterialApp`'s
+  /// Returns the [TypedLocale] instance for the current context, or `null` if
+  /// the current context does not have a [TypedLocale] (for example, because
+  /// [TypedLocaleDelegate] is not provided in the [MaterialApp]'s
   /// `localizationsDelegates` list or locale was not detected).
   TypedLocale? get maybeLocale => TypedLocaleDelegate.maybeOf(this);
 

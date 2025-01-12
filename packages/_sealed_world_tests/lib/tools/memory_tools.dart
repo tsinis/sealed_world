@@ -8,7 +8,7 @@ import "package:vm_service/vm_service_io.dart" show vmServiceConnectUri;
 class MemoryTools extends MemoryUsage {
   MemoryTools({super.externalUsage, super.heapCapacity, super.heapUsage});
 
-  Future<MemoryTools?> get memoryUsage async {
+  static Future<MemoryTools?> get memoryUsage async {
     final info = await Service.getInfo();
     if (info.serverWebSocketUri == null) return null;
     final service =
@@ -28,7 +28,7 @@ class MemoryTools extends MemoryUsage {
     );
   }
 
-  Future<MemoryTools?> compareTo(MemoryTools? other) async {
+  static Future<MemoryTools?> compareTo(MemoryTools? other) async {
     final memNow = await memoryUsage;
 
     return memNow == null ? null : memNow - other;
@@ -43,7 +43,7 @@ class MemoryTools extends MemoryUsage {
       );
 
   /// Converts bytes to megabytes with 1 decimal place.
-  double toMB(int? bytes) =>
+  static double toMB(int? bytes) =>
       bytes == null ? 0 : (bytes / (1024 * 1024)).roundToDouble();
 
   @override
