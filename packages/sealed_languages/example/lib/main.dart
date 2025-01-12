@@ -7,9 +7,10 @@ void main() {
   );
   // Prints a list of Indo-European languages:
   print(indoEuropeanLanguages);
-  // (Language(name: Avestan), Language(name: Afrikaans),
-  // ...
-  // Language(name: Walloon), Language(name: Yiddish).
+
+  /// (Language(name: Avestan), Language(name: Afrikaans),
+  /// ...
+  /// Language(name: Walloon), Language(name: Yiddish).
 
   const eng = "Eng";
   final fromCode = NaturalLanguage.fromCode(eng);
