@@ -115,7 +115,7 @@ extension TranslatedExtension<T extends TranslatedName, L extends BasicLocale>
     Script? script,
   }) {
     if (countryCode == null && script == null) {
-      return translations // TODO! Always put ones without code last.
+      return translations // TODO! Always put ones without code first.
           .firstWhere((trn) => trn.countryCode == null && trn.script == null);
     }
     for (final l10n in translations) {

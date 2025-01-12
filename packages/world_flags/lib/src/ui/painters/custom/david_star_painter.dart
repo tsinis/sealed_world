@@ -29,7 +29,7 @@ final class DavidStarPainter extends CustomElementsPainter {
     return null;
   }
 
-// ignore: long-parameter-list, TODO! Refactor later.
+// ignore: long-parameter-list, TODO? Refactor later.
   static void _drawTriangle(
     Canvas canvas,
     Offset center,
