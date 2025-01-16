@@ -123,8 +123,6 @@ If you have any issues or suggestions for the package, please file them in the G
 - [ISO](https://www.iso.org/iso-639-language-codes.html)
 - [Wikipedia](https://wikipedia.org/wiki/List_of_ISO_639-1_codes)
 - [Data Source](https://github.com/haliaeetus/iso-639)[^1]
-- [Primary Translations Source](https://github.com/umpirsky/language-list)
-- [Secondary Translations Source](https://github.com/symfony/intl)
 - [Project Roadmap](https://github.com/users/tsinis/projects/1)
 
 [^1]: Translated JSON data to Dart language (following Effective Dart: Style guidelines), modified, added additional data and functionality.

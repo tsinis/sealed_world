@@ -5,6 +5,7 @@
 // Both projects are licensed under the MIT License.
 
 /// Provides language translations for sealed_languages.
+@Deprecated("Please use `l10n_languages` package instead.")
 library sealed_language_translations;
 
 import "src/data/natural_languages.data.dart";

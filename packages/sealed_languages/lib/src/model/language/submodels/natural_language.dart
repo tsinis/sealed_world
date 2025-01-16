@@ -291,7 +291,8 @@ class NaturalLanguage extends Language
   List<TranslatedName> get translations => l10n.translatedNames({this});
 
   @override
-  LocalizationDelegate get l10n => const LocalizationDelegate();
+  LocalizationDelegate get l10n =>
+      LocalizationDelegate(mapper: () => LanguagesLocaleMapper().localize);
 
   /// Returns a string representation of this [NaturalLanguage] object.
   ///

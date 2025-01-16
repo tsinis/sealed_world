@@ -4,6 +4,7 @@ description: Provides data for world languages in the form of sealed classes.
 maintainer: Roman Cinis
 repository: https://github.com/tsinis/sealed_world/tree/main/packages/sealed_languages
 issue_tracker: https://github.com/tsinis/sealed_world/issues
+publish_to: none # TODO! Change to 'https://pub.dev' when ready to publish.
 topics:
   - languages
   - language
@@ -18,7 +19,11 @@ screenshots:
     path: doc/example.webp
 
 environment:
-  sdk: ^3.0.0
+  sdk: ^3.6.0
+
+dependencies:
+  l10n_languages:
+    path: ../l10n_languages
 
 dev_dependencies:
   _sealed_world_tests:
