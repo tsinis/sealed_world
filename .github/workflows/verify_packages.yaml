@@ -1,0 +1,35 @@
+name: verify_packages
+
+on:
+  push:
+    branches: [main]
+    paths:
+      - "packages/**/*.dart"
+  pull_request:
+    branches: [main]
+    paths:
+      - "packages/**/*.dart"
+      - ".github/workflows/verify_packages.yaml"
+
+jobs:
+  detect-packages:
+    runs-on: ubuntu-latest
+    outputs:
+      packages: ${{ steps.set-packages.outputs.packages }}
+    steps:
+      - uses: actions/checkout@v4.2.2
+      - id: set-packages
+        run: |
+          PACKAGES=$(ls packages | jq -R -s -c 'split("\n")[:-1]')
+          echo "packages=$PACKAGES" >> $GITHUB_OUTPUT
+
+  verify-packages:
+    needs: detect-packages
+    strategy:
+      matrix:
+        package: ${{ fromJson(needs.detect-packages.outputs.packages) }}
+    uses: ./.github/workflows/verify_package_workflow.yaml
+    with:
+      package_name: ${{ matrix.package }}
+      is_flutter: ${{ contains(matrix.package, 'world_') }}
+    secrets: inherit
