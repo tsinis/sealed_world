@@ -152,7 +152,7 @@ dart_code_metrics:
           - "**/data/**.data.dart"
     - avoid-non-empty-constructor-bodies:
         exclude:
-          - "**/*l10n/data/**.data.dart"
+          - "**/src/**/**.data.dart"
     - avoid-non-ascii-symbols:
         exclude:
           - "**/data/**.data.dart"

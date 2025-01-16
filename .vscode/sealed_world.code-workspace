@@ -39,6 +39,10 @@
     {
       "name": "Tests",
       "path": "../packages/_sealed_world_tests"
+    },
+    {
+      "name": "L10N Langs",
+      "path": "../packages/l10n_languages"
     }
   ],
   "settings": {
