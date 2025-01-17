@@ -1,4 +1,4 @@
-import "../_iso_locale_mapper.dart";
+import "../iso_locale_mapper.dart";
 
 /// Contains 172 translation(s).
 /// Provides translations for the Chechen language

@@ -1,4 +1,4 @@
-import "../_iso_locale_mapper.dart";
+import "../iso_locale_mapper.dart";
 
 /// Contains 121 translation(s).
 /// Provides translations for the (Scottish) Gaelic language

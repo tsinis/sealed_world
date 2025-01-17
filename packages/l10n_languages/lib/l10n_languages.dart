@@ -7,7 +7,6 @@
 /// Provides language translations for different locales.
 library l10n_languages;
 
-import "src/_iso_locale_mapper.dart";
 import "src/data/af_languages_l10n.data.dart";
 import "src/data/ak_languages_l10n.data.dart";
 import "src/data/am_languages_l10n.data.dart";
@@ -165,6 +164,7 @@ import "src/data/za_languages_l10n.data.dart";
 import "src/data/zh_hant_languages_l10n.data.dart";
 import "src/data/zh_languages_l10n.data.dart";
 import "src/data/zu_languages_l10n.data.dart";
+import "src/iso_locale_mapper.dart";
 
 export "src/data/af_languages_l10n.data.dart";
 export "src/data/ak_languages_l10n.data.dart";
@@ -323,6 +323,7 @@ export "src/data/za_languages_l10n.data.dart";
 export "src/data/zh_hant_languages_l10n.data.dart";
 export "src/data/zh_languages_l10n.data.dart";
 export "src/data/zu_languages_l10n.data.dart";
+export "src/iso_locale_mapper.dart";
 
 /// Provides language names translations for different locales.
 // ignore: prefer-match-file-name, it's main library file.

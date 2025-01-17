@@ -1,4 +1,4 @@
-import "../_iso_locale_mapper.dart";
+import "../iso_locale_mapper.dart";
 
 /// Contains 43 translation(s).
 /// Provides translations for the Fula (Fulah/Pulaar/Pular) language

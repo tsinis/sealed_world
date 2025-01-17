@@ -1,5 +1,5 @@
 // ignore_for_file: avoid-unnecessary-collections
-import "../_iso_locale_mapper.dart";
+import "../iso_locale_mapper.dart";
 
 /// Contains 1 translation(s).
 /// Provides translations for the German language

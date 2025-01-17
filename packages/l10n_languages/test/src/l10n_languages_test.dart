@@ -1,7 +1,8 @@
 // ignore_for_file: avoid-non-ascii-symbols
 
-import "package:l10n_languages/l10n_languages.dart";
-import "package:l10n_languages/src/_iso_locale_mapper.dart";
+import "package:l10n_languages/l10n_languages.dart" show LanguagesLocaleMapper;
+import "package:l10n_languages/src/data/af_languages_l10n.data.dart";
+import "package:l10n_languages/src/iso_locale_mapper.dart";
 import "package:test/test.dart";
 
 void main() => group("$LanguagesLocaleMapper", () {

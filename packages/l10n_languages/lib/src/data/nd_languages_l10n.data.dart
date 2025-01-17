@@ -1,4 +1,4 @@
-import "../_iso_locale_mapper.dart";
+import "../iso_locale_mapper.dart";
 
 /// Contains 45 translation(s).
 /// Provides translations for the Northern Ndebele language
