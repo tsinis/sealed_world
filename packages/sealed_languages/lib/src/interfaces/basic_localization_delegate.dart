@@ -81,7 +81,7 @@ abstract class BasicLocalizationDelegate<L extends BasicLocale,
   /// Parameters:
   /// - [locale]: The locale identifier to parse.
   ///
-  /// Returns a locale of type [L] if valid, null otherwise.
+  /// Returns a locale of type [L] if valid, `null` otherwise.
   L? parseLocale(Object? locale) {
     final match = localePattern.firstMatch(locale?.toString() ?? "");
     final lang = NaturalLanguage.maybeFromCodeShort(match?.group(1), languages);
@@ -104,8 +104,6 @@ abstract class BasicLocalizationDelegate<L extends BasicLocale,
   /// - [options]: Locale mapping configuration options.
   ///
   /// Returns an unmodifiable map of ISO items to their localized common names.
-// TODO! Add tests for those lines.
-// coverage:ignore-start
   Map<Iso, String> commonNamesMap<Iso extends IsoStandardized>(
     Iterable<Iso> items, {
     required LocaleMappingOptions<L> options,
@@ -175,5 +173,4 @@ abstract class BasicLocalizationDelegate<L extends BasicLocale,
 
     return toTranslation(basicLocale, entry.value, fullName);
   }
-// coverage:ignore-end
 }
