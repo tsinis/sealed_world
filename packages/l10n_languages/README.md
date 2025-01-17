@@ -51,7 +51,7 @@ void main() {
   final localized =
       mapper.localize(isoCodes, mainLocale: "sk", fallbackLocale: "cs");
 
-  print("Total names count: ${localized.length}");
+  print("Names count: ${localized.length}"); // Prints: "Names count: 6".
 
   /// Print out the localized names.
   localized.forEach(
@@ -69,7 +69,7 @@ void main() {
 
 - **No 3rd-party dependencies**: This package has no dependencies, ensuring that you won't have any issues or conflicts with other dependencies (no even `meta` here, because of that).
 - **Rich data**: This package offers tons of translations (all [GlobalMaterialLocalizations](https://api.flutter.dev/flutter/flutter_localizations/GlobalMaterialLocalizations-class.html) and [GlobalCupertinoLocalizations](https://api.flutter.dev/flutter/flutter_localizations/GlobalCupertinoLocalizations-class.html) locales and more).
-- **High code coverage**: The code in this package has 100% code coverage, with more than TODO! tests, providing confidence in its reliability and stability.
+- **High code coverage**: The code in this package has 100% code coverage, providing confidence in its reliability and stability.
 - **Comprehensive documentation**: This package provides full documentation for every non-code generated public member, usually with examples, ensuring clarity and ease of use.
 - **Industry adopted**: This package is actively used in production by numerous European companies, ensuring its efficacy and robustness in real-world scenarios.
 - **MIT license**: This package and sources are released under the MIT license, which is a permissive license that allows users to use, modify, and distribute the code with minimal restrictions. The MIT license is considered better than most other open-source licenses because it provides flexibility and allows users to incorporate the code into their projects without worrying about legal implications.

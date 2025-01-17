@@ -1,4 +1,4 @@
-// ignore_for_file: avoid-continue
+// ignore_for_file: avoid-unused-ignores, avoid-continue
 
 import "package:change_case/change_case.dart";
 import "package:sealed_languages/sealed_languages.dart";
@@ -232,6 +232,7 @@ class $pascalCaseName extends IsoLocaleMapper<String> {
         .extract(codes, altSymbol: altSymbol)
         .map((code, l10n) => MapEntry((isoCode: code, locale: locale), l10n));
     localeEntry.value.map.clear();
+    map.clear();
 
     return Map.unmodifiable(results);
   }

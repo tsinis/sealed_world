@@ -15,7 +15,7 @@ void main() {
   final localized =
       mapper.localize(isoCodes, mainLocale: "sk", fallbackLocale: "cs");
 
-  print("Total names count: ${localized.length}");
+  print("Names count: ${localized.length}"); // Prints: "Names count: 6".
 
   /// Print out the localized names.
   localized.forEach(

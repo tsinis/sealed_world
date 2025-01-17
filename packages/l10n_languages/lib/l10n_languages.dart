@@ -558,6 +558,7 @@ class LanguagesLocaleMapper extends IsoLocaleMapper<IsoLocaleMapper<String>> {
         .extract(codes, altSymbol: altSymbol)
         .map((code, l10n) => MapEntry((isoCode: code, locale: locale), l10n));
     localeEntry.value.map.clear();
+    map.clear();
 
     return Map.unmodifiable(results);
   }
