@@ -33,13 +33,40 @@ void main() => group("IsoTranslatedIterableExtension", () {
         );
       });
 
-      // TODO! Add more tests.
       group("commonNamesMap", () {
         performanceTest("on empty list should return empty map", () {
           final map = <NaturalLanguage>{}.commonNamesMap(
             options: const LocaleMappingOptions(),
           );
           expect(map, isEmpty);
+        });
+
+        performanceTest("returns correct translations for non-empty list", () {
+          const languages = {LangDeu(), LangEng()};
+
+          final map = languages.commonNamesMap(
+            options: const LocaleMappingOptions(
+              mainLocale: BasicLocale(LangDeu()),
+              fallbackLocale: BasicLocale(LangEng()),
+            ),
+          );
+
+          expect(map.entries.last.value, "Englisch");
+          expect(map.entries.first.value, "Deutsch");
+          expect(map.length, languages.length);
+        });
+
+        performanceTest("uses fallback locale when main locale missing", () {
+          const languages = {LangEng()};
+
+          final map = languages.commonNamesMap(
+            options: const LocaleMappingOptions(
+              mainLocale: BasicLocale(LangKal()),
+              fallbackLocale: BasicLocale(LangEng()),
+            ),
+          );
+
+          expect(map.entries.single.value, "English");
         });
       });
     });

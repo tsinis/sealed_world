@@ -68,34 +68,38 @@ Use `NaturalLanguage` class to get information about languages. Either construct
   print("${fromCode.name}: ${fromCode.codeShort}"); // Prints: "English: EN".
   print(fromCode.isEng); // Prints: "true".
 
- final script = Script.fromCodeNumeric("215");
- /// Equivalent of Script.codeNumericMap["215"];
- print("${script.name}: ${script.code}"); // Prints: "Latin: Latn".
+  final script = Script.fromCodeNumeric(215);
+  /// Equivalent of Script.codeNumericMap["215"];
+  print("${script.name}: ${script.code}"); // Prints: "Latin: Latn".
 
- final maybeCzech = NaturalLanguage.maybeFromValue(
-   "CZE",
-   where: (language) => language.bibliographicCode,
- );
+  final maybeCzech = NaturalLanguage.maybeFromValue(
+    "CZE",
+    where: (language) => language.bibliographicCode,
+  );
 
- // This will print: "Native name: čeština".
- print("Native name: ${maybeCzech?.namesNative.first}");
+  // This will print: "Native name: čeština".
+  print("Native name: ${maybeCzech?.namesNative.first}");
 
- final indoEuropeanLanguages = NaturalLanguage.list.where(
-   (language) => language.family is IndoEuropean,
- );
- // Prints a list of Indo-European languages:
- print(indoEuropeanLanguages);
- // (Language(name: Avestan), Language(name: Afrikaans),
- // ...
- // Language(name: Walloon), Language(name: Yiddish).
+  final indoEuropeanLanguages = NaturalLanguage.list.where(
+    (language) => language.family is IndoEuropean,
+  );
+  // Prints a list of Indo-European languages:
+  print(indoEuropeanLanguages);
+  // (Language(name: Avestan), Language(name: Afrikaans),
+  // ...
+  // Language(name: Walloon), Language(name: Yiddish).
 
- // Prints Slovak translations of all available languages.
- for (final language in NaturalLanguage.list) {
-   print(
-     "Slovak name of ${language.name}: "
-     "${language.maybeTranslation(const BasicLocale(LangSlk()))?.name}",
-   );
- }
+  // Collects Slovak translations of all available languages.
+  final slovakNames = NaturalLanguage.list.commonNamesMap(
+    options: const LocaleMappingOptions(mainLocale: BasicLocale(LangSlk())),
+  );
+
+  print(
+    """Fully translated to Slovak: ${slovakNames.length == NaturalLanguage.list.length}""",
+  ); // Prints: "Fully translated to Slovak: true".
+  for (final slkTranslation in slovakNames.entries) {
+    print("Slovak name of ${slkTranslation.key.name}: ${slkTranslation.value}");
+  }
 ```
 
 For more usage examples, please see the `/example` folder.

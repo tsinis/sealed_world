@@ -39,39 +39,68 @@ import "../../model/translated_name.dart";
 /// found for the specified language, it falls back to the `orElse` language.
 extension TranslatedExtension<T extends TranslatedName, L extends BasicLocale,
     N extends Object> on IsoTranslated<T, N> {
-  /// Returns a localized common name for this object based on provided options.
+  /// Returns a localized common name for this object.
   ///
   /// Parameters:
-  /// - [options]: Configuration for locale mapping.
+  /// - [mainLocale]: Required primary locale for translation lookup
+  /// - [fallbackLocale]: Optional secondary locale to use if main locale
+  /// translation is missing.
+  /// - [useLanguageFallback]: Whether to try language-only codes when specific
+  /// locale not found.
   /// - [orElse]: Default value to return if translation is not found, defaults
-  /// to empty string.
+  ///  to empty string.
   ///
   /// Example:
   /// ```dart
-  /// final name = language.commonNameFor(
-  ///   LocaleMappingOptions(mainLocale: LangDeu()),
-  /// ); // Returns "Englisch" for English language.
+  /// // Returns German common name for the language or `orElse` if not found.
+  /// final name = language.commonNameFor(const BasicLocale(LangDeu()));
   /// ```
-  String commonNameFor(LocaleMappingOptions<L> options, {String orElse = ""}) =>
-      l10n.commonNamesMap({this}, options: options)[this] ?? orElse;
+  String commonNameFor(
+    L mainLocale, {
+    L? fallbackLocale,
+    bool useLanguageFallback = true,
+    String orElse = "",
+  }) =>
+      l10n.commonNamesMap(
+        {this},
+        options: LocaleMappingOptions<L>(
+          mainLocale: mainLocale,
+          fallbackLocale: fallbackLocale,
+          useLanguageFallback: useLanguageFallback,
+        ),
+      )[this] ??
+      orElse;
 
   /// Returns a localized common name for this object or null if not found.
   ///
   /// Parameters:
-  /// - [options]: Configuration for locale mapping.
-  /// - [orElse]: Optional default value to return if translation is not found.
+  /// - [mainLocale]: Required primary locale for translation lookup
+  /// - [fallbackLocale]: Optional secondary locale to use if main locale
+  ///       translation is missing
+  /// - [useLanguageFallback]: Whether to try language-only codes when specific
+  ///       locale not found
+  /// - [orElse]: Optional default value to return if translation is not found
   ///
   /// Example:
   /// ```dart
-  /// final name = language.maybeCommonNameFor(
-  ///   LocaleMappingOptions(mainLocale: LangDeu()),
-  /// ); // Returns "Englisch" or `null` for English language.
+  /// // Returns German common name for the language or `null` if not found.
+  /// final name = language.maybeCommonNameFor(const BasicLocale(LangDeu()));
   /// ```
   String? maybeCommonNameFor(
-    LocaleMappingOptions<L> options, {
+    L mainLocale, {
+    L? fallbackLocale,
+    bool useLanguageFallback = true,
     String? orElse,
   }) =>
-      l10n.commonNamesMap({this}, options: options)[this] ?? orElse;
+      l10n.commonNamesMap(
+        {this},
+        options: LocaleMappingOptions<L>(
+          mainLocale: mainLocale,
+          fallbackLocale: fallbackLocale,
+          useLanguageFallback: useLanguageFallback,
+        ),
+      )[this] ??
+      orElse;
 
   /// Retrieves the translation for the specified locale [BasicLocale] with
   /// required `language` parameter.

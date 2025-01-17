@@ -13,11 +13,11 @@ class LocaleMappingOptions<T extends Object> {
   /// - [localizeFullNames]: Whether to include full/official names in
   /// localization.
   /// - [useLanguageFallback]: Whether to fallback to language-only codes.
-  /// - [altSymbol]: Symbol used to mark alternative names, defaults to "+".
+  /// - [altSymbol]: Symbol used to mark alternative names, defaults to `"+"`.
   const LocaleMappingOptions({
+    this.mainLocale,
     this.fallbackLocale,
     this.localizeFullNames = true,
-    this.mainLocale,
     this.useLanguageFallback = true,
     this.altSymbol = "+",
   });
