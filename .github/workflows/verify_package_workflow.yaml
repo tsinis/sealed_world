@@ -57,20 +57,20 @@ jobs:
         if: ${{ github.event_name == 'pull_request' }}
         run: dart pub publish --dry-run
 
-      - name: 🧮 Calculate PANA score
-        if: false # ${{ github.event_name == 'pull_request' }} # Disabled due to outdated Pana in action
-        uses: axel-op/dart-package-analyzer@v3
-        id: analysis
-        with:
-          githubToken: ${{ secrets.GITHUB_TOKEN }}
-          relativePath: ${{ env.relative_path }}
+      # - name: 🧮 Calculate PANA score
+      #   if: false # ${{ github.event_name == 'pull_request' }} # Disabled due to outdated Pana in action
+      #   uses: axel-op/dart-package-analyzer@v3
+      #   id: analysis
+      #   with:
+      #     githubToken: ${{ secrets.GITHUB_TOKEN }}
+      #     relativePath: ${{ env.relative_path }}
 
-      - name: 📈 Check Pub score
-        if: false # ${{ github.event_name == 'pull_request' }} # Disabled due to outdated Pana in action
-        uses: fujidaiti/dart-package-inspector@v2.0.4
-        with:
-          report: ${{ steps.analysis.outputs.json_output }}
-          min-pub-points: 150
+      # - name: 📈 Check Pub score
+      #   if: false # ${{ github.event_name == 'pull_request' }} # Disabled due to outdated Pana in action
+      #   uses: fujidaiti/dart-package-inspector@v2.0.4
+      #   with:
+      #     report: ${{ steps.analysis.outputs.json_output }}
+      #     min-pub-points: 150
 
       - name: 📥 Install DCM
         if: ${{ github.event_name == 'pull_request' }}
