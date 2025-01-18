@@ -68,6 +68,10 @@ const value = $instance;\n
         );
 
         expect(translated?.name, expectedName);
+        final commonMapTranslation = value.maybeCommonNameFor(
+          const ${locale.toString(short: false)},
+        );
+        expect(commonMapTranslation, expectedName);
 """);
         if (full != null) {
           buffer.write("expect(translated?.fullName, expectedFullName);");

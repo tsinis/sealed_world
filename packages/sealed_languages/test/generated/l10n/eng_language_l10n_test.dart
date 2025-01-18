@@ -13,25 +13,6 @@ void main() => group(
       () {
         const value = LangEng();
 
-        test("has translation for 'en' locale", () {
-          const expectedName = "English";
-
-          final translated = value.maybeTranslation(
-            const BasicLocale(LangEng()),
-            useLanguageFallback: false,
-          );
-
-          expect(translated?.name, expectedName);
-          final unexpectedScriptTranslation = value.maybeTranslation(
-            const BasicLocale(LangEng(), script: ScriptCyrs()),
-          );
-
-          expect(unexpectedScriptTranslation?.name, expectedName);
-          expect(
-            value.translations,
-            contains(const TranslatedName(LangEng(), name: expectedName)),
-          );
-        });
         test("has translation for 'af' locale", () {
           const expectedName = "Engels";
 
@@ -41,6 +22,10 @@ void main() => group(
           );
 
           expect(translated?.name, expectedName);
+          final commonMapTranslation = value.maybeCommonNameFor(
+            const BasicLocale(LangAfr()),
+          );
+          expect(commonMapTranslation, expectedName);
           final unexpectedScriptTranslation = value.maybeTranslation(
             const BasicLocale(LangAfr(), script: ScriptCyrs()),
           );
@@ -60,6 +45,10 @@ void main() => group(
           );
 
           expect(translated?.name, expectedName);
+          final commonMapTranslation = value.maybeCommonNameFor(
+            const BasicLocale(LangAka()),
+          );
+          expect(commonMapTranslation, expectedName);
           final unexpectedScriptTranslation = value.maybeTranslation(
             const BasicLocale(LangAka(), script: ScriptCyrs()),
           );
@@ -79,6 +68,10 @@ void main() => group(
           );
 
           expect(translated?.name, expectedName);
+          final commonMapTranslation = value.maybeCommonNameFor(
+            const BasicLocale(LangAmh()),
+          );
+          expect(commonMapTranslation, expectedName);
           final unexpectedScriptTranslation = value.maybeTranslation(
             const BasicLocale(LangAmh(), script: ScriptCyrs()),
           );
@@ -98,6 +91,10 @@ void main() => group(
           );
 
           expect(translated?.name, expectedName);
+          final commonMapTranslation = value.maybeCommonNameFor(
+            const BasicLocale(LangAra()),
+          );
+          expect(commonMapTranslation, expectedName);
           final unexpectedScriptTranslation = value.maybeTranslation(
             const BasicLocale(LangAra(), script: ScriptCyrs()),
           );
@@ -106,6 +103,29 @@ void main() => group(
           expect(
             value.translations,
             contains(const TranslatedName(LangAra(), name: expectedName)),
+          );
+        });
+        test("has translation for 'as' locale", () {
+          const expectedName = "ইংৰাজী";
+
+          final translated = value.maybeTranslation(
+            const BasicLocale(LangAsm()),
+            useLanguageFallback: false,
+          );
+
+          expect(translated?.name, expectedName);
+          final commonMapTranslation = value.maybeCommonNameFor(
+            const BasicLocale(LangAsm()),
+          );
+          expect(commonMapTranslation, expectedName);
+          final unexpectedScriptTranslation = value.maybeTranslation(
+            const BasicLocale(LangAsm(), script: ScriptCyrs()),
+          );
+
+          expect(unexpectedScriptTranslation?.name, expectedName);
+          expect(
+            value.translations,
+            contains(const TranslatedName(LangAsm(), name: expectedName)),
           );
         });
         test("has translation for 'az' locale", () {
@@ -117,6 +137,10 @@ void main() => group(
           );
 
           expect(translated?.name, expectedName);
+          final commonMapTranslation = value.maybeCommonNameFor(
+            const BasicLocale(LangAze()),
+          );
+          expect(commonMapTranslation, expectedName);
           final unexpectedScriptTranslation = value.maybeTranslation(
             const BasicLocale(LangAze(), script: ScriptCyrs()),
           );
@@ -136,6 +160,10 @@ void main() => group(
           );
 
           expect(translated?.name, expectedName);
+          final commonMapTranslation = value.maybeCommonNameFor(
+            const BasicLocale(LangAze(), script: ScriptCyrl()),
+          );
+          expect(commonMapTranslation, expectedName);
           expect(
             value.translations,
             contains(
@@ -156,6 +184,10 @@ void main() => group(
           );
 
           expect(translated?.name, expectedName);
+          final commonMapTranslation = value.maybeCommonNameFor(
+            const BasicLocale(LangBel()),
+          );
+          expect(commonMapTranslation, expectedName);
           final unexpectedScriptTranslation = value.maybeTranslation(
             const BasicLocale(LangBel(), script: ScriptCyrs()),
           );
@@ -175,6 +207,10 @@ void main() => group(
           );
 
           expect(translated?.name, expectedName);
+          final commonMapTranslation = value.maybeCommonNameFor(
+            const BasicLocale(LangBul()),
+          );
+          expect(commonMapTranslation, expectedName);
           final unexpectedScriptTranslation = value.maybeTranslation(
             const BasicLocale(LangBul(), script: ScriptCyrs()),
           );
@@ -194,6 +230,10 @@ void main() => group(
           );
 
           expect(translated?.name, expectedName);
+          final commonMapTranslation = value.maybeCommonNameFor(
+            const BasicLocale(LangBam()),
+          );
+          expect(commonMapTranslation, expectedName);
           final unexpectedScriptTranslation = value.maybeTranslation(
             const BasicLocale(LangBam(), script: ScriptCyrs()),
           );
@@ -213,6 +253,10 @@ void main() => group(
           );
 
           expect(translated?.name, expectedName);
+          final commonMapTranslation = value.maybeCommonNameFor(
+            const BasicLocale(LangBen()),
+          );
+          expect(commonMapTranslation, expectedName);
           final unexpectedScriptTranslation = value.maybeTranslation(
             const BasicLocale(LangBen(), script: ScriptCyrs()),
           );
@@ -221,6 +265,29 @@ void main() => group(
           expect(
             value.translations,
             contains(const TranslatedName(LangBen(), name: expectedName)),
+          );
+        });
+        test("has translation for 'bo' locale", () {
+          const expectedName = "དབྱིན་ཇིའི་སྐད།";
+
+          final translated = value.maybeTranslation(
+            const BasicLocale(LangBod()),
+            useLanguageFallback: false,
+          );
+
+          expect(translated?.name, expectedName);
+          final commonMapTranslation = value.maybeCommonNameFor(
+            const BasicLocale(LangBod()),
+          );
+          expect(commonMapTranslation, expectedName);
+          final unexpectedScriptTranslation = value.maybeTranslation(
+            const BasicLocale(LangBod(), script: ScriptCyrs()),
+          );
+
+          expect(unexpectedScriptTranslation?.name, expectedName);
+          expect(
+            value.translations,
+            contains(const TranslatedName(LangBod(), name: expectedName)),
           );
         });
         test("has translation for 'br' locale", () {
@@ -232,6 +299,10 @@ void main() => group(
           );
 
           expect(translated?.name, expectedName);
+          final commonMapTranslation = value.maybeCommonNameFor(
+            const BasicLocale(LangBre()),
+          );
+          expect(commonMapTranslation, expectedName);
           final unexpectedScriptTranslation = value.maybeTranslation(
             const BasicLocale(LangBre(), script: ScriptCyrs()),
           );
@@ -251,6 +322,10 @@ void main() => group(
           );
 
           expect(translated?.name, expectedName);
+          final commonMapTranslation = value.maybeCommonNameFor(
+            const BasicLocale(LangBos()),
+          );
+          expect(commonMapTranslation, expectedName);
           final unexpectedScriptTranslation = value.maybeTranslation(
             const BasicLocale(LangBos(), script: ScriptCyrs()),
           );
@@ -270,6 +345,10 @@ void main() => group(
           );
 
           expect(translated?.name, expectedName);
+          final commonMapTranslation = value.maybeCommonNameFor(
+            const BasicLocale(LangBos(), script: ScriptCyrl()),
+          );
+          expect(commonMapTranslation, expectedName);
           expect(
             value.translations,
             contains(
@@ -290,6 +369,10 @@ void main() => group(
           );
 
           expect(translated?.name, expectedName);
+          final commonMapTranslation = value.maybeCommonNameFor(
+            const BasicLocale(LangCat()),
+          );
+          expect(commonMapTranslation, expectedName);
           final unexpectedScriptTranslation = value.maybeTranslation(
             const BasicLocale(LangCat(), script: ScriptCyrs()),
           );
@@ -298,6 +381,29 @@ void main() => group(
           expect(
             value.translations,
             contains(const TranslatedName(LangCat(), name: expectedName)),
+          );
+        });
+        test("has translation for 'ce' locale", () {
+          const expectedName = "ингалсан";
+
+          final translated = value.maybeTranslation(
+            const BasicLocale(LangChe()),
+            useLanguageFallback: false,
+          );
+
+          expect(translated?.name, expectedName);
+          final commonMapTranslation = value.maybeCommonNameFor(
+            const BasicLocale(LangChe()),
+          );
+          expect(commonMapTranslation, expectedName);
+          final unexpectedScriptTranslation = value.maybeTranslation(
+            const BasicLocale(LangChe(), script: ScriptCyrs()),
+          );
+
+          expect(unexpectedScriptTranslation?.name, expectedName);
+          expect(
+            value.translations,
+            contains(const TranslatedName(LangChe(), name: expectedName)),
           );
         });
         test("has translation for 'cs' locale", () {
@@ -309,6 +415,10 @@ void main() => group(
           );
 
           expect(translated?.name, expectedName);
+          final commonMapTranslation = value.maybeCommonNameFor(
+            const BasicLocale(LangCes()),
+          );
+          expect(commonMapTranslation, expectedName);
           final unexpectedScriptTranslation = value.maybeTranslation(
             const BasicLocale(LangCes(), script: ScriptCyrs()),
           );
@@ -317,6 +427,29 @@ void main() => group(
           expect(
             value.translations,
             contains(const TranslatedName(LangCes(), name: expectedName)),
+          );
+        });
+        test("has translation for 'cv' locale", () {
+          const expectedName = "акӑлчан";
+
+          final translated = value.maybeTranslation(
+            const BasicLocale(LangChv()),
+            useLanguageFallback: false,
+          );
+
+          expect(translated?.name, expectedName);
+          final commonMapTranslation = value.maybeCommonNameFor(
+            const BasicLocale(LangChv()),
+          );
+          expect(commonMapTranslation, expectedName);
+          final unexpectedScriptTranslation = value.maybeTranslation(
+            const BasicLocale(LangChv(), script: ScriptCyrs()),
+          );
+
+          expect(unexpectedScriptTranslation?.name, expectedName);
+          expect(
+            value.translations,
+            contains(const TranslatedName(LangChv(), name: expectedName)),
           );
         });
         test("has translation for 'cy' locale", () {
@@ -328,6 +461,10 @@ void main() => group(
           );
 
           expect(translated?.name, expectedName);
+          final commonMapTranslation = value.maybeCommonNameFor(
+            const BasicLocale(LangCym()),
+          );
+          expect(commonMapTranslation, expectedName);
           final unexpectedScriptTranslation = value.maybeTranslation(
             const BasicLocale(LangCym(), script: ScriptCyrs()),
           );
@@ -347,6 +484,10 @@ void main() => group(
           );
 
           expect(translated?.name, expectedName);
+          final commonMapTranslation = value.maybeCommonNameFor(
+            const BasicLocale(LangDan()),
+          );
+          expect(commonMapTranslation, expectedName);
           final unexpectedScriptTranslation = value.maybeTranslation(
             const BasicLocale(LangDan(), script: ScriptCyrs()),
           );
@@ -366,6 +507,10 @@ void main() => group(
           );
 
           expect(translated?.name, expectedName);
+          final commonMapTranslation = value.maybeCommonNameFor(
+            const BasicLocale(LangDeu()),
+          );
+          expect(commonMapTranslation, expectedName);
           final unexpectedScriptTranslation = value.maybeTranslation(
             const BasicLocale(LangDeu(), script: ScriptCyrs()),
           );
@@ -385,6 +530,10 @@ void main() => group(
           );
 
           expect(translated?.name, expectedName);
+          final commonMapTranslation = value.maybeCommonNameFor(
+            const BasicLocale(LangDzo()),
+          );
+          expect(commonMapTranslation, expectedName);
           final unexpectedScriptTranslation = value.maybeTranslation(
             const BasicLocale(LangDzo(), script: ScriptCyrs()),
           );
@@ -404,6 +553,10 @@ void main() => group(
           );
 
           expect(translated?.name, expectedName);
+          final commonMapTranslation = value.maybeCommonNameFor(
+            const BasicLocale(LangEwe()),
+          );
+          expect(commonMapTranslation, expectedName);
           final unexpectedScriptTranslation = value.maybeTranslation(
             const BasicLocale(LangEwe(), script: ScriptCyrs()),
           );
@@ -423,6 +576,10 @@ void main() => group(
           );
 
           expect(translated?.name, expectedName);
+          final commonMapTranslation = value.maybeCommonNameFor(
+            const BasicLocale(LangEll()),
+          );
+          expect(commonMapTranslation, expectedName);
           final unexpectedScriptTranslation = value.maybeTranslation(
             const BasicLocale(LangEll(), script: ScriptCyrs()),
           );
@@ -431,6 +588,29 @@ void main() => group(
           expect(
             value.translations,
             contains(const TranslatedName(LangEll(), name: expectedName)),
+          );
+        });
+        test("has translation for 'en' locale", () {
+          const expectedName = "English";
+
+          final translated = value.maybeTranslation(
+            const BasicLocale(LangEng()),
+            useLanguageFallback: false,
+          );
+
+          expect(translated?.name, expectedName);
+          final commonMapTranslation = value.maybeCommonNameFor(
+            const BasicLocale(LangEng()),
+          );
+          expect(commonMapTranslation, expectedName);
+          final unexpectedScriptTranslation = value.maybeTranslation(
+            const BasicLocale(LangEng(), script: ScriptCyrs()),
+          );
+
+          expect(unexpectedScriptTranslation?.name, expectedName);
+          expect(
+            value.translations,
+            contains(const TranslatedName(LangEng(), name: expectedName)),
           );
         });
         test("has translation for 'eo' locale", () {
@@ -442,6 +622,10 @@ void main() => group(
           );
 
           expect(translated?.name, expectedName);
+          final commonMapTranslation = value.maybeCommonNameFor(
+            const BasicLocale(LangEpo()),
+          );
+          expect(commonMapTranslation, expectedName);
           final unexpectedScriptTranslation = value.maybeTranslation(
             const BasicLocale(LangEpo(), script: ScriptCyrs()),
           );
@@ -461,6 +645,10 @@ void main() => group(
           );
 
           expect(translated?.name, expectedName);
+          final commonMapTranslation = value.maybeCommonNameFor(
+            const BasicLocale(LangSpa()),
+          );
+          expect(commonMapTranslation, expectedName);
           final unexpectedScriptTranslation = value.maybeTranslation(
             const BasicLocale(LangSpa(), script: ScriptCyrs()),
           );
@@ -480,6 +668,10 @@ void main() => group(
           );
 
           expect(translated?.name, expectedName);
+          final commonMapTranslation = value.maybeCommonNameFor(
+            const BasicLocale(LangEst()),
+          );
+          expect(commonMapTranslation, expectedName);
           final unexpectedScriptTranslation = value.maybeTranslation(
             const BasicLocale(LangEst(), script: ScriptCyrs()),
           );
@@ -499,6 +691,10 @@ void main() => group(
           );
 
           expect(translated?.name, expectedName);
+          final commonMapTranslation = value.maybeCommonNameFor(
+            const BasicLocale(LangEus()),
+          );
+          expect(commonMapTranslation, expectedName);
           final unexpectedScriptTranslation = value.maybeTranslation(
             const BasicLocale(LangEus(), script: ScriptCyrs()),
           );
@@ -518,6 +714,10 @@ void main() => group(
           );
 
           expect(translated?.name, expectedName);
+          final commonMapTranslation = value.maybeCommonNameFor(
+            const BasicLocale(LangFas()),
+          );
+          expect(commonMapTranslation, expectedName);
           final unexpectedScriptTranslation = value.maybeTranslation(
             const BasicLocale(LangFas(), script: ScriptCyrs()),
           );
@@ -537,6 +737,10 @@ void main() => group(
           );
 
           expect(translated?.name, expectedName);
+          final commonMapTranslation = value.maybeCommonNameFor(
+            const BasicLocale(LangFul()),
+          );
+          expect(commonMapTranslation, expectedName);
           final unexpectedScriptTranslation = value.maybeTranslation(
             const BasicLocale(LangFul(), script: ScriptCyrs()),
           );
@@ -556,6 +760,10 @@ void main() => group(
           );
 
           expect(translated?.name, expectedName);
+          final commonMapTranslation = value.maybeCommonNameFor(
+            const BasicLocale(LangFin()),
+          );
+          expect(commonMapTranslation, expectedName);
           final unexpectedScriptTranslation = value.maybeTranslation(
             const BasicLocale(LangFin(), script: ScriptCyrs()),
           );
@@ -575,6 +783,10 @@ void main() => group(
           );
 
           expect(translated?.name, expectedName);
+          final commonMapTranslation = value.maybeCommonNameFor(
+            const BasicLocale(LangFao()),
+          );
+          expect(commonMapTranslation, expectedName);
           final unexpectedScriptTranslation = value.maybeTranslation(
             const BasicLocale(LangFao(), script: ScriptCyrs()),
           );
@@ -594,6 +806,10 @@ void main() => group(
           );
 
           expect(translated?.name, expectedName);
+          final commonMapTranslation = value.maybeCommonNameFor(
+            const BasicLocale(LangFra()),
+          );
+          expect(commonMapTranslation, expectedName);
           final unexpectedScriptTranslation = value.maybeTranslation(
             const BasicLocale(LangFra(), script: ScriptCyrs()),
           );
@@ -613,6 +829,10 @@ void main() => group(
           );
 
           expect(translated?.name, expectedName);
+          final commonMapTranslation = value.maybeCommonNameFor(
+            const BasicLocale(LangFry()),
+          );
+          expect(commonMapTranslation, expectedName);
           final unexpectedScriptTranslation = value.maybeTranslation(
             const BasicLocale(LangFry(), script: ScriptCyrs()),
           );
@@ -632,6 +852,10 @@ void main() => group(
           );
 
           expect(translated?.name, expectedName);
+          final commonMapTranslation = value.maybeCommonNameFor(
+            const BasicLocale(LangGle()),
+          );
+          expect(commonMapTranslation, expectedName);
           final unexpectedScriptTranslation = value.maybeTranslation(
             const BasicLocale(LangGle(), script: ScriptCyrs()),
           );
@@ -651,6 +875,10 @@ void main() => group(
           );
 
           expect(translated?.name, expectedName);
+          final commonMapTranslation = value.maybeCommonNameFor(
+            const BasicLocale(LangGla()),
+          );
+          expect(commonMapTranslation, expectedName);
           final unexpectedScriptTranslation = value.maybeTranslation(
             const BasicLocale(LangGla(), script: ScriptCyrs()),
           );
@@ -670,6 +898,10 @@ void main() => group(
           );
 
           expect(translated?.name, expectedName);
+          final commonMapTranslation = value.maybeCommonNameFor(
+            const BasicLocale(LangGlg()),
+          );
+          expect(commonMapTranslation, expectedName);
           final unexpectedScriptTranslation = value.maybeTranslation(
             const BasicLocale(LangGlg(), script: ScriptCyrs()),
           );
@@ -689,6 +921,10 @@ void main() => group(
           );
 
           expect(translated?.name, expectedName);
+          final commonMapTranslation = value.maybeCommonNameFor(
+            const BasicLocale(LangGuj()),
+          );
+          expect(commonMapTranslation, expectedName);
           final unexpectedScriptTranslation = value.maybeTranslation(
             const BasicLocale(LangGuj(), script: ScriptCyrs()),
           );
@@ -708,6 +944,10 @@ void main() => group(
           );
 
           expect(translated?.name, expectedName);
+          final commonMapTranslation = value.maybeCommonNameFor(
+            const BasicLocale(LangHau()),
+          );
+          expect(commonMapTranslation, expectedName);
           final unexpectedScriptTranslation = value.maybeTranslation(
             const BasicLocale(LangHau(), script: ScriptCyrs()),
           );
@@ -727,6 +967,10 @@ void main() => group(
           );
 
           expect(translated?.name, expectedName);
+          final commonMapTranslation = value.maybeCommonNameFor(
+            const BasicLocale(LangHeb()),
+          );
+          expect(commonMapTranslation, expectedName);
           final unexpectedScriptTranslation = value.maybeTranslation(
             const BasicLocale(LangHeb(), script: ScriptCyrs()),
           );
@@ -746,6 +990,10 @@ void main() => group(
           );
 
           expect(translated?.name, expectedName);
+          final commonMapTranslation = value.maybeCommonNameFor(
+            const BasicLocale(LangHin()),
+          );
+          expect(commonMapTranslation, expectedName);
           final unexpectedScriptTranslation = value.maybeTranslation(
             const BasicLocale(LangHin(), script: ScriptCyrs()),
           );
@@ -765,6 +1013,10 @@ void main() => group(
           );
 
           expect(translated?.name, expectedName);
+          final commonMapTranslation = value.maybeCommonNameFor(
+            const BasicLocale(LangHrv()),
+          );
+          expect(commonMapTranslation, expectedName);
           final unexpectedScriptTranslation = value.maybeTranslation(
             const BasicLocale(LangHrv(), script: ScriptCyrs()),
           );
@@ -784,6 +1036,10 @@ void main() => group(
           );
 
           expect(translated?.name, expectedName);
+          final commonMapTranslation = value.maybeCommonNameFor(
+            const BasicLocale(LangHun()),
+          );
+          expect(commonMapTranslation, expectedName);
           final unexpectedScriptTranslation = value.maybeTranslation(
             const BasicLocale(LangHun(), script: ScriptCyrs()),
           );
@@ -803,6 +1059,10 @@ void main() => group(
           );
 
           expect(translated?.name, expectedName);
+          final commonMapTranslation = value.maybeCommonNameFor(
+            const BasicLocale(LangHye()),
+          );
+          expect(commonMapTranslation, expectedName);
           final unexpectedScriptTranslation = value.maybeTranslation(
             const BasicLocale(LangHye(), script: ScriptCyrs()),
           );
@@ -811,6 +1071,29 @@ void main() => group(
           expect(
             value.translations,
             contains(const TranslatedName(LangHye(), name: expectedName)),
+          );
+        });
+        test("has translation for 'ia' locale", () {
+          const expectedName = "anglese";
+
+          final translated = value.maybeTranslation(
+            const BasicLocale(LangIna()),
+            useLanguageFallback: false,
+          );
+
+          expect(translated?.name, expectedName);
+          final commonMapTranslation = value.maybeCommonNameFor(
+            const BasicLocale(LangIna()),
+          );
+          expect(commonMapTranslation, expectedName);
+          final unexpectedScriptTranslation = value.maybeTranslation(
+            const BasicLocale(LangIna(), script: ScriptCyrs()),
+          );
+
+          expect(unexpectedScriptTranslation?.name, expectedName);
+          expect(
+            value.translations,
+            contains(const TranslatedName(LangIna(), name: expectedName)),
           );
         });
         test("has translation for 'id' locale", () {
@@ -822,6 +1105,10 @@ void main() => group(
           );
 
           expect(translated?.name, expectedName);
+          final commonMapTranslation = value.maybeCommonNameFor(
+            const BasicLocale(LangInd()),
+          );
+          expect(commonMapTranslation, expectedName);
           final unexpectedScriptTranslation = value.maybeTranslation(
             const BasicLocale(LangInd(), script: ScriptCyrs()),
           );
@@ -830,6 +1117,29 @@ void main() => group(
           expect(
             value.translations,
             contains(const TranslatedName(LangInd(), name: expectedName)),
+          );
+        });
+        test("has translation for 'ie' locale", () {
+          const expectedName = "anglesi";
+
+          final translated = value.maybeTranslation(
+            const BasicLocale(LangIle()),
+            useLanguageFallback: false,
+          );
+
+          expect(translated?.name, expectedName);
+          final commonMapTranslation = value.maybeCommonNameFor(
+            const BasicLocale(LangIle()),
+          );
+          expect(commonMapTranslation, expectedName);
+          final unexpectedScriptTranslation = value.maybeTranslation(
+            const BasicLocale(LangIle(), script: ScriptCyrs()),
+          );
+
+          expect(unexpectedScriptTranslation?.name, expectedName);
+          expect(
+            value.translations,
+            contains(const TranslatedName(LangIle(), name: expectedName)),
           );
         });
         test("has translation for 'ig' locale", () {
@@ -841,6 +1151,10 @@ void main() => group(
           );
 
           expect(translated?.name, expectedName);
+          final commonMapTranslation = value.maybeCommonNameFor(
+            const BasicLocale(LangIbo()),
+          );
+          expect(commonMapTranslation, expectedName);
           final unexpectedScriptTranslation = value.maybeTranslation(
             const BasicLocale(LangIbo(), script: ScriptCyrs()),
           );
@@ -860,6 +1174,10 @@ void main() => group(
           );
 
           expect(translated?.name, expectedName);
+          final commonMapTranslation = value.maybeCommonNameFor(
+            const BasicLocale(LangIii()),
+          );
+          expect(commonMapTranslation, expectedName);
           final unexpectedScriptTranslation = value.maybeTranslation(
             const BasicLocale(LangIii(), script: ScriptCyrs()),
           );
@@ -879,6 +1197,10 @@ void main() => group(
           );
 
           expect(translated?.name, expectedName);
+          final commonMapTranslation = value.maybeCommonNameFor(
+            const BasicLocale(LangIsl()),
+          );
+          expect(commonMapTranslation, expectedName);
           final unexpectedScriptTranslation = value.maybeTranslation(
             const BasicLocale(LangIsl(), script: ScriptCyrs()),
           );
@@ -898,6 +1220,10 @@ void main() => group(
           );
 
           expect(translated?.name, expectedName);
+          final commonMapTranslation = value.maybeCommonNameFor(
+            const BasicLocale(LangIta()),
+          );
+          expect(commonMapTranslation, expectedName);
           final unexpectedScriptTranslation = value.maybeTranslation(
             const BasicLocale(LangIta(), script: ScriptCyrs()),
           );
@@ -917,6 +1243,10 @@ void main() => group(
           );
 
           expect(translated?.name, expectedName);
+          final commonMapTranslation = value.maybeCommonNameFor(
+            const BasicLocale(LangJpn()),
+          );
+          expect(commonMapTranslation, expectedName);
           final unexpectedScriptTranslation = value.maybeTranslation(
             const BasicLocale(LangJpn(), script: ScriptCyrs()),
           );
@@ -925,6 +1255,29 @@ void main() => group(
           expect(
             value.translations,
             contains(const TranslatedName(LangJpn(), name: expectedName)),
+          );
+        });
+        test("has translation for 'jv' locale", () {
+          const expectedName = "Inggris";
+
+          final translated = value.maybeTranslation(
+            const BasicLocale(LangJav()),
+            useLanguageFallback: false,
+          );
+
+          expect(translated?.name, expectedName);
+          final commonMapTranslation = value.maybeCommonNameFor(
+            const BasicLocale(LangJav()),
+          );
+          expect(commonMapTranslation, expectedName);
+          final unexpectedScriptTranslation = value.maybeTranslation(
+            const BasicLocale(LangJav(), script: ScriptCyrs()),
+          );
+
+          expect(unexpectedScriptTranslation?.name, expectedName);
+          expect(
+            value.translations,
+            contains(const TranslatedName(LangJav(), name: expectedName)),
           );
         });
         test("has translation for 'ka' locale", () {
@@ -936,6 +1289,10 @@ void main() => group(
           );
 
           expect(translated?.name, expectedName);
+          final commonMapTranslation = value.maybeCommonNameFor(
+            const BasicLocale(LangKat()),
+          );
+          expect(commonMapTranslation, expectedName);
           final unexpectedScriptTranslation = value.maybeTranslation(
             const BasicLocale(LangKat(), script: ScriptCyrs()),
           );
@@ -955,6 +1312,10 @@ void main() => group(
           );
 
           expect(translated?.name, expectedName);
+          final commonMapTranslation = value.maybeCommonNameFor(
+            const BasicLocale(LangKik()),
+          );
+          expect(commonMapTranslation, expectedName);
           final unexpectedScriptTranslation = value.maybeTranslation(
             const BasicLocale(LangKik(), script: ScriptCyrs()),
           );
@@ -974,6 +1335,10 @@ void main() => group(
           );
 
           expect(translated?.name, expectedName);
+          final commonMapTranslation = value.maybeCommonNameFor(
+            const BasicLocale(LangKaz()),
+          );
+          expect(commonMapTranslation, expectedName);
           final unexpectedScriptTranslation = value.maybeTranslation(
             const BasicLocale(LangKaz(), script: ScriptCyrs()),
           );
@@ -993,6 +1358,10 @@ void main() => group(
           );
 
           expect(translated?.name, expectedName);
+          final commonMapTranslation = value.maybeCommonNameFor(
+            const BasicLocale(LangKhm()),
+          );
+          expect(commonMapTranslation, expectedName);
           final unexpectedScriptTranslation = value.maybeTranslation(
             const BasicLocale(LangKhm(), script: ScriptCyrs()),
           );
@@ -1012,6 +1381,10 @@ void main() => group(
           );
 
           expect(translated?.name, expectedName);
+          final commonMapTranslation = value.maybeCommonNameFor(
+            const BasicLocale(LangKan()),
+          );
+          expect(commonMapTranslation, expectedName);
           final unexpectedScriptTranslation = value.maybeTranslation(
             const BasicLocale(LangKan(), script: ScriptCyrs()),
           );
@@ -1031,6 +1404,10 @@ void main() => group(
           );
 
           expect(translated?.name, expectedName);
+          final commonMapTranslation = value.maybeCommonNameFor(
+            const BasicLocale(LangKor()),
+          );
+          expect(commonMapTranslation, expectedName);
           final unexpectedScriptTranslation = value.maybeTranslation(
             const BasicLocale(LangKor(), script: ScriptCyrs()),
           );
@@ -1050,6 +1427,10 @@ void main() => group(
           );
 
           expect(translated?.name, expectedName);
+          final commonMapTranslation = value.maybeCommonNameFor(
+            const BasicLocale(LangKas()),
+          );
+          expect(commonMapTranslation, expectedName);
           final unexpectedScriptTranslation = value.maybeTranslation(
             const BasicLocale(LangKas(), script: ScriptCyrs()),
           );
@@ -1058,6 +1439,29 @@ void main() => group(
           expect(
             value.translations,
             contains(const TranslatedName(LangKas(), name: expectedName)),
+          );
+        });
+        test("has translation for 'ku' locale", () {
+          const expectedName = "îngilîzî";
+
+          final translated = value.maybeTranslation(
+            const BasicLocale(LangKur()),
+            useLanguageFallback: false,
+          );
+
+          expect(translated?.name, expectedName);
+          final commonMapTranslation = value.maybeCommonNameFor(
+            const BasicLocale(LangKur()),
+          );
+          expect(commonMapTranslation, expectedName);
+          final unexpectedScriptTranslation = value.maybeTranslation(
+            const BasicLocale(LangKur(), script: ScriptCyrs()),
+          );
+
+          expect(unexpectedScriptTranslation?.name, expectedName);
+          expect(
+            value.translations,
+            contains(const TranslatedName(LangKur(), name: expectedName)),
           );
         });
         test("has translation for 'ky' locale", () {
@@ -1069,6 +1473,10 @@ void main() => group(
           );
 
           expect(translated?.name, expectedName);
+          final commonMapTranslation = value.maybeCommonNameFor(
+            const BasicLocale(LangKir()),
+          );
+          expect(commonMapTranslation, expectedName);
           final unexpectedScriptTranslation = value.maybeTranslation(
             const BasicLocale(LangKir(), script: ScriptCyrs()),
           );
@@ -1088,6 +1496,10 @@ void main() => group(
           );
 
           expect(translated?.name, expectedName);
+          final commonMapTranslation = value.maybeCommonNameFor(
+            const BasicLocale(LangLtz()),
+          );
+          expect(commonMapTranslation, expectedName);
           final unexpectedScriptTranslation = value.maybeTranslation(
             const BasicLocale(LangLtz(), script: ScriptCyrs()),
           );
@@ -1107,6 +1519,10 @@ void main() => group(
           );
 
           expect(translated?.name, expectedName);
+          final commonMapTranslation = value.maybeCommonNameFor(
+            const BasicLocale(LangLug()),
+          );
+          expect(commonMapTranslation, expectedName);
           final unexpectedScriptTranslation = value.maybeTranslation(
             const BasicLocale(LangLug(), script: ScriptCyrs()),
           );
@@ -1126,6 +1542,10 @@ void main() => group(
           );
 
           expect(translated?.name, expectedName);
+          final commonMapTranslation = value.maybeCommonNameFor(
+            const BasicLocale(LangLin()),
+          );
+          expect(commonMapTranslation, expectedName);
           final unexpectedScriptTranslation = value.maybeTranslation(
             const BasicLocale(LangLin(), script: ScriptCyrs()),
           );
@@ -1145,6 +1565,10 @@ void main() => group(
           );
 
           expect(translated?.name, expectedName);
+          final commonMapTranslation = value.maybeCommonNameFor(
+            const BasicLocale(LangLao()),
+          );
+          expect(commonMapTranslation, expectedName);
           final unexpectedScriptTranslation = value.maybeTranslation(
             const BasicLocale(LangLao(), script: ScriptCyrs()),
           );
@@ -1164,6 +1588,10 @@ void main() => group(
           );
 
           expect(translated?.name, expectedName);
+          final commonMapTranslation = value.maybeCommonNameFor(
+            const BasicLocale(LangLit()),
+          );
+          expect(commonMapTranslation, expectedName);
           final unexpectedScriptTranslation = value.maybeTranslation(
             const BasicLocale(LangLit(), script: ScriptCyrs()),
           );
@@ -1183,6 +1611,10 @@ void main() => group(
           );
 
           expect(translated?.name, expectedName);
+          final commonMapTranslation = value.maybeCommonNameFor(
+            const BasicLocale(LangLub()),
+          );
+          expect(commonMapTranslation, expectedName);
           final unexpectedScriptTranslation = value.maybeTranslation(
             const BasicLocale(LangLub(), script: ScriptCyrs()),
           );
@@ -1202,6 +1634,10 @@ void main() => group(
           );
 
           expect(translated?.name, expectedName);
+          final commonMapTranslation = value.maybeCommonNameFor(
+            const BasicLocale(LangLav()),
+          );
+          expect(commonMapTranslation, expectedName);
           final unexpectedScriptTranslation = value.maybeTranslation(
             const BasicLocale(LangLav(), script: ScriptCyrs()),
           );
@@ -1221,6 +1657,10 @@ void main() => group(
           );
 
           expect(translated?.name, expectedName);
+          final commonMapTranslation = value.maybeCommonNameFor(
+            const BasicLocale(LangMlg()),
+          );
+          expect(commonMapTranslation, expectedName);
           final unexpectedScriptTranslation = value.maybeTranslation(
             const BasicLocale(LangMlg(), script: ScriptCyrs()),
           );
@@ -1229,6 +1669,29 @@ void main() => group(
           expect(
             value.translations,
             contains(const TranslatedName(LangMlg(), name: expectedName)),
+          );
+        });
+        test("has translation for 'mi' locale", () {
+          const expectedName = "Ingarihi";
+
+          final translated = value.maybeTranslation(
+            const BasicLocale(LangMri()),
+            useLanguageFallback: false,
+          );
+
+          expect(translated?.name, expectedName);
+          final commonMapTranslation = value.maybeCommonNameFor(
+            const BasicLocale(LangMri()),
+          );
+          expect(commonMapTranslation, expectedName);
+          final unexpectedScriptTranslation = value.maybeTranslation(
+            const BasicLocale(LangMri(), script: ScriptCyrs()),
+          );
+
+          expect(unexpectedScriptTranslation?.name, expectedName);
+          expect(
+            value.translations,
+            contains(const TranslatedName(LangMri(), name: expectedName)),
           );
         });
         test("has translation for 'mk' locale", () {
@@ -1240,6 +1703,10 @@ void main() => group(
           );
 
           expect(translated?.name, expectedName);
+          final commonMapTranslation = value.maybeCommonNameFor(
+            const BasicLocale(LangMkd()),
+          );
+          expect(commonMapTranslation, expectedName);
           final unexpectedScriptTranslation = value.maybeTranslation(
             const BasicLocale(LangMkd(), script: ScriptCyrs()),
           );
@@ -1259,6 +1726,10 @@ void main() => group(
           );
 
           expect(translated?.name, expectedName);
+          final commonMapTranslation = value.maybeCommonNameFor(
+            const BasicLocale(LangMal()),
+          );
+          expect(commonMapTranslation, expectedName);
           final unexpectedScriptTranslation = value.maybeTranslation(
             const BasicLocale(LangMal(), script: ScriptCyrs()),
           );
@@ -1278,6 +1749,10 @@ void main() => group(
           );
 
           expect(translated?.name, expectedName);
+          final commonMapTranslation = value.maybeCommonNameFor(
+            const BasicLocale(LangMon()),
+          );
+          expect(commonMapTranslation, expectedName);
           final unexpectedScriptTranslation = value.maybeTranslation(
             const BasicLocale(LangMon(), script: ScriptCyrs()),
           );
@@ -1297,6 +1772,10 @@ void main() => group(
           );
 
           expect(translated?.name, expectedName);
+          final commonMapTranslation = value.maybeCommonNameFor(
+            const BasicLocale(LangMar()),
+          );
+          expect(commonMapTranslation, expectedName);
           final unexpectedScriptTranslation = value.maybeTranslation(
             const BasicLocale(LangMar(), script: ScriptCyrs()),
           );
@@ -1316,6 +1795,10 @@ void main() => group(
           );
 
           expect(translated?.name, expectedName);
+          final commonMapTranslation = value.maybeCommonNameFor(
+            const BasicLocale(LangMsa()),
+          );
+          expect(commonMapTranslation, expectedName);
           final unexpectedScriptTranslation = value.maybeTranslation(
             const BasicLocale(LangMsa(), script: ScriptCyrs()),
           );
@@ -1335,6 +1818,10 @@ void main() => group(
           );
 
           expect(translated?.name, expectedName);
+          final commonMapTranslation = value.maybeCommonNameFor(
+            const BasicLocale(LangMlt()),
+          );
+          expect(commonMapTranslation, expectedName);
           final unexpectedScriptTranslation = value.maybeTranslation(
             const BasicLocale(LangMlt(), script: ScriptCyrs()),
           );
@@ -1354,6 +1841,10 @@ void main() => group(
           );
 
           expect(translated?.name, expectedName);
+          final commonMapTranslation = value.maybeCommonNameFor(
+            const BasicLocale(LangMya()),
+          );
+          expect(commonMapTranslation, expectedName);
           final unexpectedScriptTranslation = value.maybeTranslation(
             const BasicLocale(LangMya(), script: ScriptCyrs()),
           );
@@ -1373,6 +1864,10 @@ void main() => group(
           );
 
           expect(translated?.name, expectedName);
+          final commonMapTranslation = value.maybeCommonNameFor(
+            const BasicLocale(LangNob()),
+          );
+          expect(commonMapTranslation, expectedName);
           final unexpectedScriptTranslation = value.maybeTranslation(
             const BasicLocale(LangNob(), script: ScriptCyrs()),
           );
@@ -1392,6 +1887,10 @@ void main() => group(
           );
 
           expect(translated?.name, expectedName);
+          final commonMapTranslation = value.maybeCommonNameFor(
+            const BasicLocale(LangNde()),
+          );
+          expect(commonMapTranslation, expectedName);
           final unexpectedScriptTranslation = value.maybeTranslation(
             const BasicLocale(LangNde(), script: ScriptCyrs()),
           );
@@ -1411,6 +1910,10 @@ void main() => group(
           );
 
           expect(translated?.name, expectedName);
+          final commonMapTranslation = value.maybeCommonNameFor(
+            const BasicLocale(LangNep()),
+          );
+          expect(commonMapTranslation, expectedName);
           final unexpectedScriptTranslation = value.maybeTranslation(
             const BasicLocale(LangNep(), script: ScriptCyrs()),
           );
@@ -1430,6 +1933,10 @@ void main() => group(
           );
 
           expect(translated?.name, expectedName);
+          final commonMapTranslation = value.maybeCommonNameFor(
+            const BasicLocale(LangNld()),
+          );
+          expect(commonMapTranslation, expectedName);
           final unexpectedScriptTranslation = value.maybeTranslation(
             const BasicLocale(LangNld(), script: ScriptCyrs()),
           );
@@ -1449,6 +1956,10 @@ void main() => group(
           );
 
           expect(translated?.name, expectedName);
+          final commonMapTranslation = value.maybeCommonNameFor(
+            const BasicLocale(LangNno()),
+          );
+          expect(commonMapTranslation, expectedName);
           final unexpectedScriptTranslation = value.maybeTranslation(
             const BasicLocale(LangNno(), script: ScriptCyrs()),
           );
@@ -1468,6 +1979,10 @@ void main() => group(
           );
 
           expect(translated?.name, expectedName);
+          final commonMapTranslation = value.maybeCommonNameFor(
+            const BasicLocale(LangNor()),
+          );
+          expect(commonMapTranslation, expectedName);
           final unexpectedScriptTranslation = value.maybeTranslation(
             const BasicLocale(LangNor(), script: ScriptCyrs()),
           );
@@ -1476,6 +1991,29 @@ void main() => group(
           expect(
             value.translations,
             contains(const TranslatedName(LangNor(), name: expectedName)),
+          );
+        });
+        test("has translation for 'oc' locale", () {
+          const expectedName = "anglés";
+
+          final translated = value.maybeTranslation(
+            const BasicLocale(LangOci()),
+            useLanguageFallback: false,
+          );
+
+          expect(translated?.name, expectedName);
+          final commonMapTranslation = value.maybeCommonNameFor(
+            const BasicLocale(LangOci()),
+          );
+          expect(commonMapTranslation, expectedName);
+          final unexpectedScriptTranslation = value.maybeTranslation(
+            const BasicLocale(LangOci(), script: ScriptCyrs()),
+          );
+
+          expect(unexpectedScriptTranslation?.name, expectedName);
+          expect(
+            value.translations,
+            contains(const TranslatedName(LangOci(), name: expectedName)),
           );
         });
         test("has translation for 'om' locale", () {
@@ -1487,6 +2025,10 @@ void main() => group(
           );
 
           expect(translated?.name, expectedName);
+          final commonMapTranslation = value.maybeCommonNameFor(
+            const BasicLocale(LangOrm()),
+          );
+          expect(commonMapTranslation, expectedName);
           final unexpectedScriptTranslation = value.maybeTranslation(
             const BasicLocale(LangOrm(), script: ScriptCyrs()),
           );
@@ -1506,6 +2048,10 @@ void main() => group(
           );
 
           expect(translated?.name, expectedName);
+          final commonMapTranslation = value.maybeCommonNameFor(
+            const BasicLocale(LangOri()),
+          );
+          expect(commonMapTranslation, expectedName);
           final unexpectedScriptTranslation = value.maybeTranslation(
             const BasicLocale(LangOri(), script: ScriptCyrs()),
           );
@@ -1525,6 +2071,10 @@ void main() => group(
           );
 
           expect(translated?.name, expectedName);
+          final commonMapTranslation = value.maybeCommonNameFor(
+            const BasicLocale(LangOss()),
+          );
+          expect(commonMapTranslation, expectedName);
           final unexpectedScriptTranslation = value.maybeTranslation(
             const BasicLocale(LangOss(), script: ScriptCyrs()),
           );
@@ -1544,6 +2094,10 @@ void main() => group(
           );
 
           expect(translated?.name, expectedName);
+          final commonMapTranslation = value.maybeCommonNameFor(
+            const BasicLocale(LangPan()),
+          );
+          expect(commonMapTranslation, expectedName);
           final unexpectedScriptTranslation = value.maybeTranslation(
             const BasicLocale(LangPan(), script: ScriptCyrs()),
           );
@@ -1563,6 +2117,10 @@ void main() => group(
           );
 
           expect(translated?.name, expectedName);
+          final commonMapTranslation = value.maybeCommonNameFor(
+            const BasicLocale(LangPol()),
+          );
+          expect(commonMapTranslation, expectedName);
           final unexpectedScriptTranslation = value.maybeTranslation(
             const BasicLocale(LangPol(), script: ScriptCyrs()),
           );
@@ -1582,6 +2140,10 @@ void main() => group(
           );
 
           expect(translated?.name, expectedName);
+          final commonMapTranslation = value.maybeCommonNameFor(
+            const BasicLocale(LangPus()),
+          );
+          expect(commonMapTranslation, expectedName);
           final unexpectedScriptTranslation = value.maybeTranslation(
             const BasicLocale(LangPus(), script: ScriptCyrs()),
           );
@@ -1601,6 +2163,10 @@ void main() => group(
           );
 
           expect(translated?.name, expectedName);
+          final commonMapTranslation = value.maybeCommonNameFor(
+            const BasicLocale(LangPor()),
+          );
+          expect(commonMapTranslation, expectedName);
           final unexpectedScriptTranslation = value.maybeTranslation(
             const BasicLocale(LangPor(), script: ScriptCyrs()),
           );
@@ -1620,6 +2186,10 @@ void main() => group(
           );
 
           expect(translated?.name, expectedName);
+          final commonMapTranslation = value.maybeCommonNameFor(
+            const BasicLocale(LangQue()),
+          );
+          expect(commonMapTranslation, expectedName);
           final unexpectedScriptTranslation = value.maybeTranslation(
             const BasicLocale(LangQue(), script: ScriptCyrs()),
           );
@@ -1639,6 +2209,10 @@ void main() => group(
           );
 
           expect(translated?.name, expectedName);
+          final commonMapTranslation = value.maybeCommonNameFor(
+            const BasicLocale(LangRoh()),
+          );
+          expect(commonMapTranslation, expectedName);
           final unexpectedScriptTranslation = value.maybeTranslation(
             const BasicLocale(LangRoh(), script: ScriptCyrs()),
           );
@@ -1658,6 +2232,10 @@ void main() => group(
           );
 
           expect(translated?.name, expectedName);
+          final commonMapTranslation = value.maybeCommonNameFor(
+            const BasicLocale(LangRun()),
+          );
+          expect(commonMapTranslation, expectedName);
           final unexpectedScriptTranslation = value.maybeTranslation(
             const BasicLocale(LangRun(), script: ScriptCyrs()),
           );
@@ -1677,6 +2255,10 @@ void main() => group(
           );
 
           expect(translated?.name, expectedName);
+          final commonMapTranslation = value.maybeCommonNameFor(
+            const BasicLocale(LangRon()),
+          );
+          expect(commonMapTranslation, expectedName);
           final unexpectedScriptTranslation = value.maybeTranslation(
             const BasicLocale(LangRon(), script: ScriptCyrs()),
           );
@@ -1696,6 +2278,10 @@ void main() => group(
           );
 
           expect(translated?.name, expectedName);
+          final commonMapTranslation = value.maybeCommonNameFor(
+            const BasicLocale(LangRus()),
+          );
+          expect(commonMapTranslation, expectedName);
           final unexpectedScriptTranslation = value.maybeTranslation(
             const BasicLocale(LangRus(), script: ScriptCyrs()),
           );
@@ -1715,6 +2301,10 @@ void main() => group(
           );
 
           expect(translated?.name, expectedName);
+          final commonMapTranslation = value.maybeCommonNameFor(
+            const BasicLocale(LangKin()),
+          );
+          expect(commonMapTranslation, expectedName);
           final unexpectedScriptTranslation = value.maybeTranslation(
             const BasicLocale(LangKin(), script: ScriptCyrs()),
           );
@@ -1723,6 +2313,75 @@ void main() => group(
           expect(
             value.translations,
             contains(const TranslatedName(LangKin(), name: expectedName)),
+          );
+        });
+        test("has translation for 'sa' locale", () {
+          const expectedName = "आङ्ग्लभाषा";
+
+          final translated = value.maybeTranslation(
+            const BasicLocale(LangSan()),
+            useLanguageFallback: false,
+          );
+
+          expect(translated?.name, expectedName);
+          final commonMapTranslation = value.maybeCommonNameFor(
+            const BasicLocale(LangSan()),
+          );
+          expect(commonMapTranslation, expectedName);
+          final unexpectedScriptTranslation = value.maybeTranslation(
+            const BasicLocale(LangSan(), script: ScriptCyrs()),
+          );
+
+          expect(unexpectedScriptTranslation?.name, expectedName);
+          expect(
+            value.translations,
+            contains(const TranslatedName(LangSan(), name: expectedName)),
+          );
+        });
+        test("has translation for 'sc' locale", () {
+          const expectedName = "inglesu";
+
+          final translated = value.maybeTranslation(
+            const BasicLocale(LangSrd()),
+            useLanguageFallback: false,
+          );
+
+          expect(translated?.name, expectedName);
+          final commonMapTranslation = value.maybeCommonNameFor(
+            const BasicLocale(LangSrd()),
+          );
+          expect(commonMapTranslation, expectedName);
+          final unexpectedScriptTranslation = value.maybeTranslation(
+            const BasicLocale(LangSrd(), script: ScriptCyrs()),
+          );
+
+          expect(unexpectedScriptTranslation?.name, expectedName);
+          expect(
+            value.translations,
+            contains(const TranslatedName(LangSrd(), name: expectedName)),
+          );
+        });
+        test("has translation for 'sd' locale", () {
+          const expectedName = "انگريزي";
+
+          final translated = value.maybeTranslation(
+            const BasicLocale(LangSnd()),
+            useLanguageFallback: false,
+          );
+
+          expect(translated?.name, expectedName);
+          final commonMapTranslation = value.maybeCommonNameFor(
+            const BasicLocale(LangSnd()),
+          );
+          expect(commonMapTranslation, expectedName);
+          final unexpectedScriptTranslation = value.maybeTranslation(
+            const BasicLocale(LangSnd(), script: ScriptCyrs()),
+          );
+
+          expect(unexpectedScriptTranslation?.name, expectedName);
+          expect(
+            value.translations,
+            contains(const TranslatedName(LangSnd(), name: expectedName)),
           );
         });
         test("has translation for 'se' locale", () {
@@ -1734,6 +2393,10 @@ void main() => group(
           );
 
           expect(translated?.name, expectedName);
+          final commonMapTranslation = value.maybeCommonNameFor(
+            const BasicLocale(LangSme()),
+          );
+          expect(commonMapTranslation, expectedName);
           final unexpectedScriptTranslation = value.maybeTranslation(
             const BasicLocale(LangSme(), script: ScriptCyrs()),
           );
@@ -1753,6 +2416,10 @@ void main() => group(
           );
 
           expect(translated?.name, expectedName);
+          final commonMapTranslation = value.maybeCommonNameFor(
+            const BasicLocale(LangSag()),
+          );
+          expect(commonMapTranslation, expectedName);
           final unexpectedScriptTranslation = value.maybeTranslation(
             const BasicLocale(LangSag(), script: ScriptCyrs()),
           );
@@ -1772,6 +2439,10 @@ void main() => group(
           );
 
           expect(translated?.name, expectedName);
+          final commonMapTranslation = value.maybeCommonNameFor(
+            const BasicLocale(LangSin()),
+          );
+          expect(commonMapTranslation, expectedName);
           final unexpectedScriptTranslation = value.maybeTranslation(
             const BasicLocale(LangSin(), script: ScriptCyrs()),
           );
@@ -1791,6 +2462,10 @@ void main() => group(
           );
 
           expect(translated?.name, expectedName);
+          final commonMapTranslation = value.maybeCommonNameFor(
+            const BasicLocale(LangSlk()),
+          );
+          expect(commonMapTranslation, expectedName);
           final unexpectedScriptTranslation = value.maybeTranslation(
             const BasicLocale(LangSlk(), script: ScriptCyrs()),
           );
@@ -1810,6 +2485,10 @@ void main() => group(
           );
 
           expect(translated?.name, expectedName);
+          final commonMapTranslation = value.maybeCommonNameFor(
+            const BasicLocale(LangSlv()),
+          );
+          expect(commonMapTranslation, expectedName);
           final unexpectedScriptTranslation = value.maybeTranslation(
             const BasicLocale(LangSlv(), script: ScriptCyrs()),
           );
@@ -1829,6 +2508,10 @@ void main() => group(
           );
 
           expect(translated?.name, expectedName);
+          final commonMapTranslation = value.maybeCommonNameFor(
+            const BasicLocale(LangSna()),
+          );
+          expect(commonMapTranslation, expectedName);
           final unexpectedScriptTranslation = value.maybeTranslation(
             const BasicLocale(LangSna(), script: ScriptCyrs()),
           );
@@ -1848,6 +2531,10 @@ void main() => group(
           );
 
           expect(translated?.name, expectedName);
+          final commonMapTranslation = value.maybeCommonNameFor(
+            const BasicLocale(LangSom()),
+          );
+          expect(commonMapTranslation, expectedName);
           final unexpectedScriptTranslation = value.maybeTranslation(
             const BasicLocale(LangSom(), script: ScriptCyrs()),
           );
@@ -1867,6 +2554,10 @@ void main() => group(
           );
 
           expect(translated?.name, expectedName);
+          final commonMapTranslation = value.maybeCommonNameFor(
+            const BasicLocale(LangSqi()),
+          );
+          expect(commonMapTranslation, expectedName);
           final unexpectedScriptTranslation = value.maybeTranslation(
             const BasicLocale(LangSqi(), script: ScriptCyrs()),
           );
@@ -1886,6 +2577,10 @@ void main() => group(
           );
 
           expect(translated?.name, expectedName);
+          final commonMapTranslation = value.maybeCommonNameFor(
+            const BasicLocale(LangSrp()),
+          );
+          expect(commonMapTranslation, expectedName);
           final unexpectedScriptTranslation = value.maybeTranslation(
             const BasicLocale(LangSrp(), script: ScriptCyrs()),
           );
@@ -1905,6 +2600,10 @@ void main() => group(
           );
 
           expect(translated?.name, expectedName);
+          final commonMapTranslation = value.maybeCommonNameFor(
+            const BasicLocale(LangSrp(), script: ScriptLatn()),
+          );
+          expect(commonMapTranslation, expectedName);
           expect(
             value.translations,
             contains(
@@ -1916,6 +2615,29 @@ void main() => group(
             ),
           );
         });
+        test("has translation for 'su' locale", () {
+          const expectedName = "Inggris";
+
+          final translated = value.maybeTranslation(
+            const BasicLocale(LangSun()),
+            useLanguageFallback: false,
+          );
+
+          expect(translated?.name, expectedName);
+          final commonMapTranslation = value.maybeCommonNameFor(
+            const BasicLocale(LangSun()),
+          );
+          expect(commonMapTranslation, expectedName);
+          final unexpectedScriptTranslation = value.maybeTranslation(
+            const BasicLocale(LangSun(), script: ScriptCyrs()),
+          );
+
+          expect(unexpectedScriptTranslation?.name, expectedName);
+          expect(
+            value.translations,
+            contains(const TranslatedName(LangSun(), name: expectedName)),
+          );
+        });
         test("has translation for 'sv' locale", () {
           const expectedName = "engelska";
 
@@ -1925,6 +2647,10 @@ void main() => group(
           );
 
           expect(translated?.name, expectedName);
+          final commonMapTranslation = value.maybeCommonNameFor(
+            const BasicLocale(LangSwe()),
+          );
+          expect(commonMapTranslation, expectedName);
           final unexpectedScriptTranslation = value.maybeTranslation(
             const BasicLocale(LangSwe(), script: ScriptCyrs()),
           );
@@ -1944,6 +2670,10 @@ void main() => group(
           );
 
           expect(translated?.name, expectedName);
+          final commonMapTranslation = value.maybeCommonNameFor(
+            const BasicLocale(LangSwa()),
+          );
+          expect(commonMapTranslation, expectedName);
           final unexpectedScriptTranslation = value.maybeTranslation(
             const BasicLocale(LangSwa(), script: ScriptCyrs()),
           );
@@ -1963,6 +2693,10 @@ void main() => group(
           );
 
           expect(translated?.name, expectedName);
+          final commonMapTranslation = value.maybeCommonNameFor(
+            const BasicLocale(LangSwa(), countryCode: "CD"),
+          );
+          expect(commonMapTranslation, expectedName);
           expect(
             value.translations,
             contains(
@@ -1983,6 +2717,10 @@ void main() => group(
           );
 
           expect(translated?.name, expectedName);
+          final commonMapTranslation = value.maybeCommonNameFor(
+            const BasicLocale(LangTam()),
+          );
+          expect(commonMapTranslation, expectedName);
           final unexpectedScriptTranslation = value.maybeTranslation(
             const BasicLocale(LangTam(), script: ScriptCyrs()),
           );
@@ -2002,6 +2740,10 @@ void main() => group(
           );
 
           expect(translated?.name, expectedName);
+          final commonMapTranslation = value.maybeCommonNameFor(
+            const BasicLocale(LangTel()),
+          );
+          expect(commonMapTranslation, expectedName);
           final unexpectedScriptTranslation = value.maybeTranslation(
             const BasicLocale(LangTel(), script: ScriptCyrs()),
           );
@@ -2010,6 +2752,29 @@ void main() => group(
           expect(
             value.translations,
             contains(const TranslatedName(LangTel(), name: expectedName)),
+          );
+        });
+        test("has translation for 'tg' locale", () {
+          const expectedName = "Англисӣ";
+
+          final translated = value.maybeTranslation(
+            const BasicLocale(LangTgk()),
+            useLanguageFallback: false,
+          );
+
+          expect(translated?.name, expectedName);
+          final commonMapTranslation = value.maybeCommonNameFor(
+            const BasicLocale(LangTgk()),
+          );
+          expect(commonMapTranslation, expectedName);
+          final unexpectedScriptTranslation = value.maybeTranslation(
+            const BasicLocale(LangTgk(), script: ScriptCyrs()),
+          );
+
+          expect(unexpectedScriptTranslation?.name, expectedName);
+          expect(
+            value.translations,
+            contains(const TranslatedName(LangTgk(), name: expectedName)),
           );
         });
         test("has translation for 'th' locale", () {
@@ -2021,6 +2786,10 @@ void main() => group(
           );
 
           expect(translated?.name, expectedName);
+          final commonMapTranslation = value.maybeCommonNameFor(
+            const BasicLocale(LangTha()),
+          );
+          expect(commonMapTranslation, expectedName);
           final unexpectedScriptTranslation = value.maybeTranslation(
             const BasicLocale(LangTha(), script: ScriptCyrs()),
           );
@@ -2040,6 +2809,10 @@ void main() => group(
           );
 
           expect(translated?.name, expectedName);
+          final commonMapTranslation = value.maybeCommonNameFor(
+            const BasicLocale(LangTir()),
+          );
+          expect(commonMapTranslation, expectedName);
           final unexpectedScriptTranslation = value.maybeTranslation(
             const BasicLocale(LangTir(), script: ScriptCyrs()),
           );
@@ -2048,6 +2821,29 @@ void main() => group(
           expect(
             value.translations,
             contains(const TranslatedName(LangTir(), name: expectedName)),
+          );
+        });
+        test("has translation for 'tk' locale", () {
+          const expectedName = "iňlis dili";
+
+          final translated = value.maybeTranslation(
+            const BasicLocale(LangTuk()),
+            useLanguageFallback: false,
+          );
+
+          expect(translated?.name, expectedName);
+          final commonMapTranslation = value.maybeCommonNameFor(
+            const BasicLocale(LangTuk()),
+          );
+          expect(commonMapTranslation, expectedName);
+          final unexpectedScriptTranslation = value.maybeTranslation(
+            const BasicLocale(LangTuk(), script: ScriptCyrs()),
+          );
+
+          expect(unexpectedScriptTranslation?.name, expectedName);
+          expect(
+            value.translations,
+            contains(const TranslatedName(LangTuk(), name: expectedName)),
           );
         });
         test("has translation for 'tl' locale", () {
@@ -2059,6 +2855,10 @@ void main() => group(
           );
 
           expect(translated?.name, expectedName);
+          final commonMapTranslation = value.maybeCommonNameFor(
+            const BasicLocale(LangTgl()),
+          );
+          expect(commonMapTranslation, expectedName);
           final unexpectedScriptTranslation = value.maybeTranslation(
             const BasicLocale(LangTgl(), script: ScriptCyrs()),
           );
@@ -2078,6 +2878,10 @@ void main() => group(
           );
 
           expect(translated?.name, expectedName);
+          final commonMapTranslation = value.maybeCommonNameFor(
+            const BasicLocale(LangTon()),
+          );
+          expect(commonMapTranslation, expectedName);
           final unexpectedScriptTranslation = value.maybeTranslation(
             const BasicLocale(LangTon(), script: ScriptCyrs()),
           );
@@ -2097,6 +2901,10 @@ void main() => group(
           );
 
           expect(translated?.name, expectedName);
+          final commonMapTranslation = value.maybeCommonNameFor(
+            const BasicLocale(LangTur()),
+          );
+          expect(commonMapTranslation, expectedName);
           final unexpectedScriptTranslation = value.maybeTranslation(
             const BasicLocale(LangTur(), script: ScriptCyrs()),
           );
@@ -2105,6 +2913,29 @@ void main() => group(
           expect(
             value.translations,
             contains(const TranslatedName(LangTur(), name: expectedName)),
+          );
+        });
+        test("has translation for 'tt' locale", () {
+          const expectedName = "инглиз";
+
+          final translated = value.maybeTranslation(
+            const BasicLocale(LangTat()),
+            useLanguageFallback: false,
+          );
+
+          expect(translated?.name, expectedName);
+          final commonMapTranslation = value.maybeCommonNameFor(
+            const BasicLocale(LangTat()),
+          );
+          expect(commonMapTranslation, expectedName);
+          final unexpectedScriptTranslation = value.maybeTranslation(
+            const BasicLocale(LangTat(), script: ScriptCyrs()),
+          );
+
+          expect(unexpectedScriptTranslation?.name, expectedName);
+          expect(
+            value.translations,
+            contains(const TranslatedName(LangTat(), name: expectedName)),
           );
         });
         test("has translation for 'ug' locale", () {
@@ -2116,6 +2947,10 @@ void main() => group(
           );
 
           expect(translated?.name, expectedName);
+          final commonMapTranslation = value.maybeCommonNameFor(
+            const BasicLocale(LangUig()),
+          );
+          expect(commonMapTranslation, expectedName);
           final unexpectedScriptTranslation = value.maybeTranslation(
             const BasicLocale(LangUig(), script: ScriptCyrs()),
           );
@@ -2135,6 +2970,10 @@ void main() => group(
           );
 
           expect(translated?.name, expectedName);
+          final commonMapTranslation = value.maybeCommonNameFor(
+            const BasicLocale(LangUkr()),
+          );
+          expect(commonMapTranslation, expectedName);
           final unexpectedScriptTranslation = value.maybeTranslation(
             const BasicLocale(LangUkr(), script: ScriptCyrs()),
           );
@@ -2154,6 +2993,10 @@ void main() => group(
           );
 
           expect(translated?.name, expectedName);
+          final commonMapTranslation = value.maybeCommonNameFor(
+            const BasicLocale(LangUrd()),
+          );
+          expect(commonMapTranslation, expectedName);
           final unexpectedScriptTranslation = value.maybeTranslation(
             const BasicLocale(LangUrd(), script: ScriptCyrs()),
           );
@@ -2173,6 +3016,10 @@ void main() => group(
           );
 
           expect(translated?.name, expectedName);
+          final commonMapTranslation = value.maybeCommonNameFor(
+            const BasicLocale(LangUzb()),
+          );
+          expect(commonMapTranslation, expectedName);
           final unexpectedScriptTranslation = value.maybeTranslation(
             const BasicLocale(LangUzb(), script: ScriptCyrs()),
           );
@@ -2192,6 +3039,10 @@ void main() => group(
           );
 
           expect(translated?.name, expectedName);
+          final commonMapTranslation = value.maybeCommonNameFor(
+            const BasicLocale(LangUzb(), script: ScriptCyrl()),
+          );
+          expect(commonMapTranslation, expectedName);
           expect(
             value.translations,
             contains(
@@ -2212,6 +3063,10 @@ void main() => group(
           );
 
           expect(translated?.name, expectedName);
+          final commonMapTranslation = value.maybeCommonNameFor(
+            const BasicLocale(LangVie()),
+          );
+          expect(commonMapTranslation, expectedName);
           final unexpectedScriptTranslation = value.maybeTranslation(
             const BasicLocale(LangVie(), script: ScriptCyrs()),
           );
@@ -2220,425 +3075,6 @@ void main() => group(
           expect(
             value.translations,
             contains(const TranslatedName(LangVie(), name: expectedName)),
-          );
-        });
-        test("has translation for 'yi' locale", () {
-          const expectedName = "ענגליש";
-
-          final translated = value.maybeTranslation(
-            const BasicLocale(LangYid()),
-            useLanguageFallback: false,
-          );
-
-          expect(translated?.name, expectedName);
-          final unexpectedScriptTranslation = value.maybeTranslation(
-            const BasicLocale(LangYid(), script: ScriptCyrs()),
-          );
-
-          expect(unexpectedScriptTranslation?.name, expectedName);
-          expect(
-            value.translations,
-            contains(const TranslatedName(LangYid(), name: expectedName)),
-          );
-        });
-        test("has translation for 'yo' locale", () {
-          const expectedName = "Èdè Gẹ̀ẹ́sì";
-
-          final translated = value.maybeTranslation(
-            const BasicLocale(LangYor()),
-            useLanguageFallback: false,
-          );
-
-          expect(translated?.name, expectedName);
-          final unexpectedScriptTranslation = value.maybeTranslation(
-            const BasicLocale(LangYor(), script: ScriptCyrs()),
-          );
-
-          expect(unexpectedScriptTranslation?.name, expectedName);
-          expect(
-            value.translations,
-            contains(const TranslatedName(LangYor(), name: expectedName)),
-          );
-        });
-        test("has translation for 'yo_BJ' locale", () {
-          const expectedName = "Èdè Gɛ̀ɛ́sì";
-
-          final translated = value.maybeTranslation(
-            const BasicLocale(LangYor(), countryCode: "BJ"),
-            useLanguageFallback: false,
-          );
-
-          expect(translated?.name, expectedName);
-          expect(
-            value.translations,
-            contains(
-              const TranslatedName(
-                LangYor(),
-                name: expectedName,
-                countryCode: "BJ",
-              ),
-            ),
-          );
-        });
-        test("has translation for 'zh' locale", () {
-          const expectedName = "英文";
-
-          final translated = value.maybeTranslation(
-            const BasicLocale(LangZho()),
-            useLanguageFallback: false,
-          );
-
-          expect(translated?.name, expectedName);
-          final unexpectedScriptTranslation = value.maybeTranslation(
-            const BasicLocale(LangZho(), script: ScriptCyrs()),
-          );
-
-          expect(unexpectedScriptTranslation?.name, expectedName);
-          expect(
-            value.translations,
-            contains(const TranslatedName(LangZho(), name: expectedName)),
-          );
-        });
-        test("has translation for 'zu' locale", () {
-          const expectedName = "i-English";
-
-          final translated = value.maybeTranslation(
-            const BasicLocale(LangZul()),
-            useLanguageFallback: false,
-          );
-
-          expect(translated?.name, expectedName);
-          final unexpectedScriptTranslation = value.maybeTranslation(
-            const BasicLocale(LangZul(), script: ScriptCyrs()),
-          );
-
-          expect(unexpectedScriptTranslation?.name, expectedName);
-          expect(
-            value.translations,
-            contains(const TranslatedName(LangZul(), name: expectedName)),
-          );
-        });
-        test("has translation for 'as' locale", () {
-          const expectedName = "ইংৰাজী";
-
-          final translated = value.maybeTranslation(
-            const BasicLocale(LangAsm()),
-            useLanguageFallback: false,
-          );
-
-          expect(translated?.name, expectedName);
-          final unexpectedScriptTranslation = value.maybeTranslation(
-            const BasicLocale(LangAsm(), script: ScriptCyrs()),
-          );
-
-          expect(unexpectedScriptTranslation?.name, expectedName);
-          expect(
-            value.translations,
-            contains(const TranslatedName(LangAsm(), name: expectedName)),
-          );
-        });
-        test("has translation for 'bo' locale", () {
-          const expectedName = "དབྱིན་ཇིའི་སྐད།";
-
-          final translated = value.maybeTranslation(
-            const BasicLocale(LangBod()),
-            useLanguageFallback: false,
-          );
-
-          expect(translated?.name, expectedName);
-          final unexpectedScriptTranslation = value.maybeTranslation(
-            const BasicLocale(LangBod(), script: ScriptCyrs()),
-          );
-
-          expect(unexpectedScriptTranslation?.name, expectedName);
-          expect(
-            value.translations,
-            contains(const TranslatedName(LangBod(), name: expectedName)),
-          );
-        });
-        test("has translation for 'ce' locale", () {
-          const expectedName = "ингалсан";
-
-          final translated = value.maybeTranslation(
-            const BasicLocale(LangChe()),
-            useLanguageFallback: false,
-          );
-
-          expect(translated?.name, expectedName);
-          final unexpectedScriptTranslation = value.maybeTranslation(
-            const BasicLocale(LangChe(), script: ScriptCyrs()),
-          );
-
-          expect(unexpectedScriptTranslation?.name, expectedName);
-          expect(
-            value.translations,
-            contains(const TranslatedName(LangChe(), name: expectedName)),
-          );
-        });
-        test("has translation for 'cv' locale", () {
-          const expectedName = "акӑлчан";
-
-          final translated = value.maybeTranslation(
-            const BasicLocale(LangChv()),
-            useLanguageFallback: false,
-          );
-
-          expect(translated?.name, expectedName);
-          final unexpectedScriptTranslation = value.maybeTranslation(
-            const BasicLocale(LangChv(), script: ScriptCyrs()),
-          );
-
-          expect(unexpectedScriptTranslation?.name, expectedName);
-          expect(
-            value.translations,
-            contains(const TranslatedName(LangChv(), name: expectedName)),
-          );
-        });
-        test("has translation for 'ia' locale", () {
-          const expectedName = "anglese";
-
-          final translated = value.maybeTranslation(
-            const BasicLocale(LangIna()),
-            useLanguageFallback: false,
-          );
-
-          expect(translated?.name, expectedName);
-          final unexpectedScriptTranslation = value.maybeTranslation(
-            const BasicLocale(LangIna(), script: ScriptCyrs()),
-          );
-
-          expect(unexpectedScriptTranslation?.name, expectedName);
-          expect(
-            value.translations,
-            contains(const TranslatedName(LangIna(), name: expectedName)),
-          );
-        });
-        test("has translation for 'ie' locale", () {
-          const expectedName = "anglesi";
-
-          final translated = value.maybeTranslation(
-            const BasicLocale(LangIle()),
-            useLanguageFallback: false,
-          );
-
-          expect(translated?.name, expectedName);
-          final unexpectedScriptTranslation = value.maybeTranslation(
-            const BasicLocale(LangIle(), script: ScriptCyrs()),
-          );
-
-          expect(unexpectedScriptTranslation?.name, expectedName);
-          expect(
-            value.translations,
-            contains(const TranslatedName(LangIle(), name: expectedName)),
-          );
-        });
-        test("has translation for 'jv' locale", () {
-          const expectedName = "Inggris";
-
-          final translated = value.maybeTranslation(
-            const BasicLocale(LangJav()),
-            useLanguageFallback: false,
-          );
-
-          expect(translated?.name, expectedName);
-          final unexpectedScriptTranslation = value.maybeTranslation(
-            const BasicLocale(LangJav(), script: ScriptCyrs()),
-          );
-
-          expect(unexpectedScriptTranslation?.name, expectedName);
-          expect(
-            value.translations,
-            contains(const TranslatedName(LangJav(), name: expectedName)),
-          );
-        });
-        test("has translation for 'ku' locale", () {
-          const expectedName = "îngilîzî";
-
-          final translated = value.maybeTranslation(
-            const BasicLocale(LangKur()),
-            useLanguageFallback: false,
-          );
-
-          expect(translated?.name, expectedName);
-          final unexpectedScriptTranslation = value.maybeTranslation(
-            const BasicLocale(LangKur(), script: ScriptCyrs()),
-          );
-
-          expect(unexpectedScriptTranslation?.name, expectedName);
-          expect(
-            value.translations,
-            contains(const TranslatedName(LangKur(), name: expectedName)),
-          );
-        });
-        test("has translation for 'mi' locale", () {
-          const expectedName = "Ingarihi";
-
-          final translated = value.maybeTranslation(
-            const BasicLocale(LangMri()),
-            useLanguageFallback: false,
-          );
-
-          expect(translated?.name, expectedName);
-          final unexpectedScriptTranslation = value.maybeTranslation(
-            const BasicLocale(LangMri(), script: ScriptCyrs()),
-          );
-
-          expect(unexpectedScriptTranslation?.name, expectedName);
-          expect(
-            value.translations,
-            contains(const TranslatedName(LangMri(), name: expectedName)),
-          );
-        });
-        test("has translation for 'oc' locale", () {
-          const expectedName = "anglés";
-
-          final translated = value.maybeTranslation(
-            const BasicLocale(LangOci()),
-            useLanguageFallback: false,
-          );
-
-          expect(translated?.name, expectedName);
-          final unexpectedScriptTranslation = value.maybeTranslation(
-            const BasicLocale(LangOci(), script: ScriptCyrs()),
-          );
-
-          expect(unexpectedScriptTranslation?.name, expectedName);
-          expect(
-            value.translations,
-            contains(const TranslatedName(LangOci(), name: expectedName)),
-          );
-        });
-        test("has translation for 'sa' locale", () {
-          const expectedName = "आङ्ग्लभाषा";
-
-          final translated = value.maybeTranslation(
-            const BasicLocale(LangSan()),
-            useLanguageFallback: false,
-          );
-
-          expect(translated?.name, expectedName);
-          final unexpectedScriptTranslation = value.maybeTranslation(
-            const BasicLocale(LangSan(), script: ScriptCyrs()),
-          );
-
-          expect(unexpectedScriptTranslation?.name, expectedName);
-          expect(
-            value.translations,
-            contains(const TranslatedName(LangSan(), name: expectedName)),
-          );
-        });
-        test("has translation for 'sc' locale", () {
-          const expectedName = "inglesu";
-
-          final translated = value.maybeTranslation(
-            const BasicLocale(LangSrd()),
-            useLanguageFallback: false,
-          );
-
-          expect(translated?.name, expectedName);
-          final unexpectedScriptTranslation = value.maybeTranslation(
-            const BasicLocale(LangSrd(), script: ScriptCyrs()),
-          );
-
-          expect(unexpectedScriptTranslation?.name, expectedName);
-          expect(
-            value.translations,
-            contains(const TranslatedName(LangSrd(), name: expectedName)),
-          );
-        });
-        test("has translation for 'sd' locale", () {
-          const expectedName = "انگريزي";
-
-          final translated = value.maybeTranslation(
-            const BasicLocale(LangSnd()),
-            useLanguageFallback: false,
-          );
-
-          expect(translated?.name, expectedName);
-          final unexpectedScriptTranslation = value.maybeTranslation(
-            const BasicLocale(LangSnd(), script: ScriptCyrs()),
-          );
-
-          expect(unexpectedScriptTranslation?.name, expectedName);
-          expect(
-            value.translations,
-            contains(const TranslatedName(LangSnd(), name: expectedName)),
-          );
-        });
-        test("has translation for 'su' locale", () {
-          const expectedName = "Inggris";
-
-          final translated = value.maybeTranslation(
-            const BasicLocale(LangSun()),
-            useLanguageFallback: false,
-          );
-
-          expect(translated?.name, expectedName);
-          final unexpectedScriptTranslation = value.maybeTranslation(
-            const BasicLocale(LangSun(), script: ScriptCyrs()),
-          );
-
-          expect(unexpectedScriptTranslation?.name, expectedName);
-          expect(
-            value.translations,
-            contains(const TranslatedName(LangSun(), name: expectedName)),
-          );
-        });
-        test("has translation for 'tg' locale", () {
-          const expectedName = "Англисӣ";
-
-          final translated = value.maybeTranslation(
-            const BasicLocale(LangTgk()),
-            useLanguageFallback: false,
-          );
-
-          expect(translated?.name, expectedName);
-          final unexpectedScriptTranslation = value.maybeTranslation(
-            const BasicLocale(LangTgk(), script: ScriptCyrs()),
-          );
-
-          expect(unexpectedScriptTranslation?.name, expectedName);
-          expect(
-            value.translations,
-            contains(const TranslatedName(LangTgk(), name: expectedName)),
-          );
-        });
-        test("has translation for 'tk' locale", () {
-          const expectedName = "iňlis dili";
-
-          final translated = value.maybeTranslation(
-            const BasicLocale(LangTuk()),
-            useLanguageFallback: false,
-          );
-
-          expect(translated?.name, expectedName);
-          final unexpectedScriptTranslation = value.maybeTranslation(
-            const BasicLocale(LangTuk(), script: ScriptCyrs()),
-          );
-
-          expect(unexpectedScriptTranslation?.name, expectedName);
-          expect(
-            value.translations,
-            contains(const TranslatedName(LangTuk(), name: expectedName)),
-          );
-        });
-        test("has translation for 'tt' locale", () {
-          const expectedName = "инглиз";
-
-          final translated = value.maybeTranslation(
-            const BasicLocale(LangTat()),
-            useLanguageFallback: false,
-          );
-
-          expect(translated?.name, expectedName);
-          final unexpectedScriptTranslation = value.maybeTranslation(
-            const BasicLocale(LangTat(), script: ScriptCyrs()),
-          );
-
-          expect(unexpectedScriptTranslation?.name, expectedName);
-          expect(
-            value.translations,
-            contains(const TranslatedName(LangTat(), name: expectedName)),
           );
         });
         test("has translation for 'wo' locale", () {
@@ -2650,6 +3086,10 @@ void main() => group(
           );
 
           expect(translated?.name, expectedName);
+          final commonMapTranslation = value.maybeCommonNameFor(
+            const BasicLocale(LangWol()),
+          );
+          expect(commonMapTranslation, expectedName);
           final unexpectedScriptTranslation = value.maybeTranslation(
             const BasicLocale(LangWol(), script: ScriptCyrs()),
           );
@@ -2669,6 +3109,10 @@ void main() => group(
           );
 
           expect(translated?.name, expectedName);
+          final commonMapTranslation = value.maybeCommonNameFor(
+            const BasicLocale(LangXho()),
+          );
+          expect(commonMapTranslation, expectedName);
           final unexpectedScriptTranslation = value.maybeTranslation(
             const BasicLocale(LangXho(), script: ScriptCyrs()),
           );
@@ -2677,6 +3121,76 @@ void main() => group(
           expect(
             value.translations,
             contains(const TranslatedName(LangXho(), name: expectedName)),
+          );
+        });
+        test("has translation for 'yi' locale", () {
+          const expectedName = "ענגליש";
+
+          final translated = value.maybeTranslation(
+            const BasicLocale(LangYid()),
+            useLanguageFallback: false,
+          );
+
+          expect(translated?.name, expectedName);
+          final commonMapTranslation = value.maybeCommonNameFor(
+            const BasicLocale(LangYid()),
+          );
+          expect(commonMapTranslation, expectedName);
+          final unexpectedScriptTranslation = value.maybeTranslation(
+            const BasicLocale(LangYid(), script: ScriptCyrs()),
+          );
+
+          expect(unexpectedScriptTranslation?.name, expectedName);
+          expect(
+            value.translations,
+            contains(const TranslatedName(LangYid(), name: expectedName)),
+          );
+        });
+        test("has translation for 'yo' locale", () {
+          const expectedName = "Èdè Gẹ̀ẹ́sì";
+
+          final translated = value.maybeTranslation(
+            const BasicLocale(LangYor()),
+            useLanguageFallback: false,
+          );
+
+          expect(translated?.name, expectedName);
+          final commonMapTranslation = value.maybeCommonNameFor(
+            const BasicLocale(LangYor()),
+          );
+          expect(commonMapTranslation, expectedName);
+          final unexpectedScriptTranslation = value.maybeTranslation(
+            const BasicLocale(LangYor(), script: ScriptCyrs()),
+          );
+
+          expect(unexpectedScriptTranslation?.name, expectedName);
+          expect(
+            value.translations,
+            contains(const TranslatedName(LangYor(), name: expectedName)),
+          );
+        });
+        test("has translation for 'yo_BJ' locale", () {
+          const expectedName = "Èdè Gɛ̀ɛ́sì";
+
+          final translated = value.maybeTranslation(
+            const BasicLocale(LangYor(), countryCode: "BJ"),
+            useLanguageFallback: false,
+          );
+
+          expect(translated?.name, expectedName);
+          final commonMapTranslation = value.maybeCommonNameFor(
+            const BasicLocale(LangYor(), countryCode: "BJ"),
+          );
+          expect(commonMapTranslation, expectedName);
+          expect(
+            value.translations,
+            contains(
+              const TranslatedName(
+                LangYor(),
+                name: expectedName,
+                countryCode: "BJ",
+              ),
+            ),
           );
         });
         test("has translation for 'za' locale", () {
@@ -2688,6 +3202,10 @@ void main() => group(
           );
 
           expect(translated?.name, expectedName);
+          final commonMapTranslation = value.maybeCommonNameFor(
+            const BasicLocale(LangZha()),
+          );
+          expect(commonMapTranslation, expectedName);
           final unexpectedScriptTranslation = value.maybeTranslation(
             const BasicLocale(LangZha(), script: ScriptCyrs()),
           );
@@ -2696,6 +3214,52 @@ void main() => group(
           expect(
             value.translations,
             contains(const TranslatedName(LangZha(), name: expectedName)),
+          );
+        });
+        test("has translation for 'zh' locale", () {
+          const expectedName = "英文";
+
+          final translated = value.maybeTranslation(
+            const BasicLocale(LangZho()),
+            useLanguageFallback: false,
+          );
+
+          expect(translated?.name, expectedName);
+          final commonMapTranslation = value.maybeCommonNameFor(
+            const BasicLocale(LangZho()),
+          );
+          expect(commonMapTranslation, expectedName);
+          final unexpectedScriptTranslation = value.maybeTranslation(
+            const BasicLocale(LangZho(), script: ScriptCyrs()),
+          );
+
+          expect(unexpectedScriptTranslation?.name, expectedName);
+          expect(
+            value.translations,
+            contains(const TranslatedName(LangZho(), name: expectedName)),
+          );
+        });
+        test("has translation for 'zu' locale", () {
+          const expectedName = "i-English";
+
+          final translated = value.maybeTranslation(
+            const BasicLocale(LangZul()),
+            useLanguageFallback: false,
+          );
+
+          expect(translated?.name, expectedName);
+          final commonMapTranslation = value.maybeCommonNameFor(
+            const BasicLocale(LangZul()),
+          );
+          expect(commonMapTranslation, expectedName);
+          final unexpectedScriptTranslation = value.maybeTranslation(
+            const BasicLocale(LangZul(), script: ScriptCyrs()),
+          );
+
+          expect(unexpectedScriptTranslation?.name, expectedName);
+          expect(
+            value.translations,
+            contains(const TranslatedName(LangZul(), name: expectedName)),
           );
         });
       },
