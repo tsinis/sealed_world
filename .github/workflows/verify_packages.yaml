@@ -4,11 +4,11 @@ on:
   push:
     branches: [main]
     paths:
-      - "packages/**/*.dart"
+      - "packages/**"
   pull_request:
     branches: [main]
     paths:
-      - "packages/**/*.dart"
+      - "packages/**"
       - ".github/workflows/verify_packages.yaml"
 
 jobs:
@@ -16,30 +16,40 @@ jobs:
     name: Detect Changed Packages
     runs-on: ubuntu-latest
     outputs:
-      changed: ${{ steps.detect.outputs.changed }}
+      matrix: ${{ steps.changes.outputs.all_changed_files }}
     steps:
       - uses: actions/checkout@v4.2.2
-      - name: Detect Directory Changes
-        id: detect
-        uses: tchupp/actions-detect-directory-changes@v1
         with:
-          included-paths: |
+          fetch-depth: 0
+
+      - name: Get changed directories
+        id: changes
+        uses: tj-actions/changed-files@v45.0.6
+        with:
+          dir_names: true
+          json: true
+          files: |
             packages/**
             !packages/_*
-          included-extensions: "dart,md"
+          files_ignore: |
+            **/*.md
+            **/example/**
+            **/analysis_options.yaml
+            **/flutter_analysis_options.yaml
 
   verify-changed-packages:
     needs: detect-changed-packages
-    if: needs.detect-changed-packages.outputs.changed != '[]'
-    runs-on: ubuntu-latest
+    if: needs.detect-changed-packages.outputs.matrix != '[]'
     strategy:
       fail-fast: false
       matrix:
-        changed-dir: ${{ fromJSON(needs.detect-changed-packages.outputs.changed) }}
+        package: ${{ fromJSON(needs.detect-changed-packages.outputs.matrix) }}
+    runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v4.2.2
-      - name: Verify
-        run: |
-          echo "Verifying changed directory: ${{ matrix.changed-dir }}"
-          # Replace this with your verification steps
-        working-directory: ${{ matrix.changed-dir }}
+      - name: Verify Package
+        uses: ./.github/workflows/verify_package_workflow.yaml
+        with:
+          package_name: ${{ matrix.package }}
+          is_flutter: ${{ contains(matrix.package, 'world_') }}
+          secrets: inherit
