@@ -12,45 +12,47 @@ on:
       - ".github/workflows/verify_packages.yaml"
 
 jobs:
-  detect-changed-packages:
-    name: Detect Changed Packages
+  detect-packages:
     runs-on: ubuntu-latest
     outputs:
-      matrix: ${{ steps.changes.outputs.all_changed_files }}
+      packages: ${{ steps.set-packages.outputs.packages }}
     steps:
       - uses: actions/checkout@v4.2.2
         with:
           fetch-depth: 0
 
-      - name: Get changed directories
-        id: changes
-        uses: tj-actions/changed-files@v45.0.6
-        with:
-          dir_names: true
-          json: true
-          files: packages/[!_]*/**
-          files_ignore: |
-            **/*.md
-            **/example/**
-            **/analysis_options.yaml
-            **/flutter_analysis_options.yaml
-          diff_relative: true
-          dir_names_exclude_current_dir: true
-          since_last_remote_commit: true
+      - id: set-packages
+        run: |
+          # For PRs, compare with base branch
+          if [ "${{ github.event_name }}" = "pull_request" ]; then
+            BASE_SHA=${{ github.event.pull_request.base.sha }}
+            HEAD_SHA=${{ github.event.pull_request.head.sha }}
+          else
+            # For pushes, compare with previous commit
+            BASE_SHA=$(git rev-parse HEAD^)
+            HEAD_SHA=$(git rev-parse HEAD)
+          fi
 
-  verify-changed-packages:
-    needs: detect-changed-packages
-    if: needs.detect-changed-packages.outputs.matrix != '[]'
+          # Get changed files and extract unique package names
+          PACKAGES=$(git diff --name-only $BASE_SHA $HEAD_SHA -- 'packages/**/*.dart' |
+            grep -v "_" |  # Exclude packages starting with underscore
+            cut -d'/' -f2 |  # Extract package name from path
+            sort -u |  # Get unique package names
+            grep -v '^$' |  # Remove empty lines
+            jq -R -s -c 'split("\n")[:-1]')  # Convert to JSON array
+
+          echo "packages=$PACKAGES" >> $GITHUB_OUTPUT
+          echo "Changed packages: $PACKAGES"
+
+  verify-packages:
+    needs: detect-packages
+    if: fromJson(needs.detect-packages.outputs.packages)[0] != null
     strategy:
       fail-fast: false
       matrix:
-        package: ${{ fromJSON(needs.detect-changed-packages.outputs.matrix) }}
-    runs-on: ubuntu-latest
-    steps:
-      - uses: actions/checkout@v4.2.2
-      - name: Verify Package
-        uses: ./.github/workflows/verify_package_workflow.yaml
-        with:
-          package_name: ${{ matrix.package }}
-          is_flutter: ${{ contains(matrix.package, 'world_') }}
-          secrets: inherit
+        package: ${{ fromJson(needs.detect-packages.outputs.packages) }}
+    uses: ./.github/workflows/verify_package_workflow.yaml
+    with:
+      package_name: ${{ matrix.package }}
+      is_flutter: ${{ contains(matrix.package, 'world_') }}
+    secrets: inherit
