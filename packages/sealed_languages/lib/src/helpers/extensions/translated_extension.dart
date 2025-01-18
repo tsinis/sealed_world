@@ -38,7 +38,7 @@ import "../../model/translated_name.dart";
 /// returns the translation as a [TranslatedName] object. If no translation is
 /// found for the specified language, it falls back to the `orElse` language.
 extension TranslatedExtension<T extends TranslatedName, L extends BasicLocale,
-    N extends Object> on IsoTranslated<T, N> {
+    N extends Object> on IsoTranslated<T, N, L> {
   /// Returns a localized common name for this object.
   ///
   /// Parameters:

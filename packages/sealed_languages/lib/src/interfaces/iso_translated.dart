@@ -7,14 +7,16 @@ part of "translated.dart";
 /// translated into multiple languages. It ensures that the item conforms to
 /// ISO standards and provides translations for the item's name.
 ///
-/// The [Translation] type parameter represents the translated name of the item.
-/// The [Name] type parameter represents the name of the ISO object.
+/// The [T] type parameter represents the translated name of the item.
+/// The [N] type parameter represents the name of the ISO object.
+/// The [L] type parameter represents the basic locale used for localization.
 ///
 /// The `translations` parameter is optional and should be provided when
 /// creating a new (custom) instance of [IsoTranslated].
-abstract interface class IsoTranslated<Translation extends TranslatedName,
-        Name extends Object> extends Translated<Translation>
-    implements IsoStandardized<Name> {
+abstract interface class IsoTranslated<
+    T extends TranslatedName,
+    N extends Object,
+    L extends BasicLocale> extends Translated<T> implements IsoStandardized<N> {
   /// Creates a new instance of the [IsoTranslated] object.
   ///
   /// The [translations] parameter isn't required and could be provided when
@@ -26,5 +28,6 @@ abstract interface class IsoTranslated<Translation extends TranslatedName,
   ///
   /// This delegate provides localization functionality for ISO standardized
   /// entities.
-  BasicLocalizationDelegate get l10n; // Should be static... TODO!: Generics.
+  // TODO? Should be static: https://github.com/dart-lang/language/issues/368.
+  BasicLocalizationDelegate<L, T> get l10n;
 }

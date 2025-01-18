@@ -14,7 +14,7 @@ extension IsoTranslatedIterableExtension<
     L extends BasicLocale,
     T extends TranslatedName,
     N extends Object,
-    I extends IsoTranslated<T, N>> on Iterable<I> {
+    I extends IsoTranslated<T, N, L>> on Iterable<I> {
   /// Generates a cache map of common name translations for the given [locale].
   ///
   /// The cache map is a [Map] where the keys are [IsoTranslated] objects and

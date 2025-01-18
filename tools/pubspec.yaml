@@ -1,6 +1,6 @@
 name: cli
 description: Command-line tools for a sealed_world eco-system.
-version: 0.0.3
+version: 0.0.4
 publish_to: none
 
 environment:
@@ -8,13 +8,15 @@ environment:
 
 dependencies:
   args: ^2.6.0
-  change_case: ^2.1.0
+  change_case: ^2.2.0
   collection: ^1.19.1
   path: ^1.9.1
   pure_dart_ui: ^0.1.10
   rw_git: ^1.0.3
   sealed_countries:
     path: ../packages/sealed_countries
+  sealed_currencies: any
+  sealed_languages: any
   select_annotation: ^0.2.0
   yaml: ^3.1.3
 
