@@ -19,8 +19,9 @@ final class IoUtils {
   set directory(Directory value) => Directory.current = value;
   Directory get directory => _dirCache;
 
-  File copyFile(String sourcePath, Directory destination, String filename) {
-    final destinationFile = File(join(destination.path, filename));
+  File copyFile(String sourcePath, Directory destination, [String? filename]) {
+    final name = filename ?? basename(sourcePath);
+    final destinationFile = File(join(destination.path, name));
     if (!destination.existsSync()) destination.createSync(recursive: true);
     destinationFile.writeAsBytesSync(File(sourcePath).readAsBytesSync());
 

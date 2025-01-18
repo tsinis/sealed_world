@@ -19,7 +19,10 @@ class L10NDataGenerator {
   Future<void> generate(String path) async {
     final directory = Directory(path);
     final io = IoUtils(directory)
-      ..writeContentToFile(join(path, "iso_locale_mapper.dart"), "TODO!");
+      ..copyFile(
+        "../packages/l10n_languages/lib/src/iso_locale_mapper.dart",
+        directory,
+      );
 
     final locales = <String>{};
 
