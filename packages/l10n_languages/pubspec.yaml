@@ -1,6 +1,6 @@
 version: 0.1.0
 name: l10n_languages
-description: Provides language names translations.
+description: Provides language names translations (for 157 different locales).
 maintainer: Roman Cinis
 repository: https://github.com/tsinis/sealed_world/tree/main/packages/l10n_languages
 issue_tracker: https://github.com/tsinis/sealed_world/issues
