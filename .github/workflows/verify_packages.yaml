@@ -23,37 +23,13 @@ jobs:
 
       - id: set-packages
         run: |
-          # Debug information
-          echo "Event name: ${{ github.event_name }}"
-          echo "GitHub ref: ${{ github.ref }}"
-
-          # For PRs, compare with base branch
-          if [ "${{ github.event_name }}" = "pull_request" ]; then
-            BASE_SHA=${{ github.event.pull_request.base.sha }}
-            HEAD_SHA=${{ github.event.pull_request.head.sha }}
-          else
-            # For pushes, compare with previous commit
-            BASE_SHA=$(git rev-parse HEAD^)
-            HEAD_SHA=$(git rev-parse HEAD)
-          fi
-
-          echo "Base SHA: $BASE_SHA"
-          echo "Head SHA: $HEAD_SHA"
-
-          # Show raw diff output for debugging
-          echo "Changed files:"
-          git diff --name-only $BASE_SHA $HEAD_SHA -- 'packages/**/*.dart'
-
-          # Get changed files and extract unique package names with debug output
-          PACKAGES=$(git diff --name-only $BASE_SHA $HEAD_SHA -- 'packages/**/*.dart' | tee >(cat >&2) | \
-            grep -v "_" | tee >(echo "After underscore filter:" >&2) | \
-            cut -d'/' -f2 | tee >(echo "After path extraction:" >&2) | \
-            sort -u | tee >(echo "After unique sort:" >&2) | \
-            grep -v '^$' | tee >(echo "After empty line removal:" >&2) | \
+          PACKAGES=$(git diff --name-only ${{ github.event.pull_request.base.sha || 'HEAD^' }} ${{ github.event.pull_request.head.sha || 'HEAD' }} -- 'packages/**' | \
+            grep -v '^packages/_\|analysis_options.yaml\|flutter_analysis_options.yaml' | \
+            cut -d'/' -f2 | \
+            sort -u | \
             jq -R -s -c 'split("\n")[:-1]')
 
-          # Debug final output
-          echo "Final PACKAGES value: $PACKAGES"
+          echo "Changed packages: $PACKAGES"
           echo "packages=$PACKAGES" >> $GITHUB_OUTPUT
 
   verify-packages:
