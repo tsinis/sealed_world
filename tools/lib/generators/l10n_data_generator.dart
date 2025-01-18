@@ -38,7 +38,8 @@ class L10NDataGenerator {
     final plural = package.dataRepresentPlural.toPascalCase();
 
     final mapperBugger = StringBuffer("""
-import "iso_locale_mapper.dart";
+import "src/iso_locale_mapper.dart";
+export "src/iso_locale_mapper.dart";
 
 /// Provides ${package.dataRepresent} names translations for different locales.
 // ignore: prefer-match-file-name, it's main library file.
