@@ -13,26 +13,31 @@ on:
 
 jobs:
   detect-packages:
+    name: 🔍 Detect Changed Packages
     runs-on: ubuntu-latest
+    timeout-minutes: 5
     outputs:
       packages: ${{ steps.set-packages.outputs.packages }}
     steps:
-      - uses: actions/checkout@v4.2.2
+      - name: 📚 Git Checkout
+        uses: actions/checkout@v4.2.2
         with:
           fetch-depth: 0
 
-      - id: set-packages
+      - name: 🔎 Find Changed Packages
+        id: set-packages
         run: |
           PACKAGES=$(git diff --name-only ${{ github.event.pull_request.base.sha || 'HEAD^' }} ${{ github.event.pull_request.head.sha || 'HEAD' }} -- 'packages/**' | \
-            grep -v '^packages/_\|analysis_options.yaml\|flutter_analysis_options.yaml' | \
+            grep -v '^packages/_\|\.yaml$' | \
             cut -d'/' -f2 | \
             sort -u | \
             jq -R -s -c 'split("\n")[:-1]')
 
-          echo "Changed packages: $PACKAGES"
-          echo "packages=$PACKAGES" >> $GITHUB_OUTPUT
+            echo "Changed packages: $PACKAGES"
+            echo "packages=$PACKAGES" >> $GITHUB_OUTPUT
 
   verify-packages:
+    name: 🛃 Verify ${{ matrix.package }}
     needs: detect-packages
     if: fromJson(needs.detect-packages.outputs.packages)[0] != null
     strategy:
