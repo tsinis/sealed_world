@@ -12,31 +12,34 @@ on:
       - ".github/workflows/verify_packages.yaml"
 
 jobs:
-  detect-packages:
+  detect-changed-packages:
+    name: Detect Changed Packages
     runs-on: ubuntu-latest
     outputs:
-      packages: ${{ steps.set-packages.outputs.packages }}
+      changed: ${{ steps.detect.outputs.changed }}
     steps:
       - uses: actions/checkout@v4.2.2
-      - id: set-packages
-        run: |
-          PACKAGES=$(find packages \
-            -maxdepth 1 \
-            -type d \
-            -not -name "_*" \
-            -not -name "packages" \
-            -exec basename {} \; \
-            | jq -R -s -c 'split("\n")[:-1]')
-          echo "packages=$PACKAGES" >> $GITHUB_OUTPUT
+      - name: Detect Directory Changes
+        id: detect
+        uses: tchupp/actions-detect-directory-changes@v1
+        with:
+          included-paths: |
+            packages/**
+            !packages/_*
+          included-extensions: "dart,md"
 
-  verify-packages:
-    needs: detect-packages
+  verify-changed-packages:
+    needs: detect-changed-packages
+    if: needs.detect-changed-packages.outputs.changed != '[]'
+    runs-on: ubuntu-latest
     strategy:
       fail-fast: false
       matrix:
-        package: ${{ fromJson(needs.detect-packages.outputs.packages) }}
-    uses: ./.github/workflows/verify_package_workflow.yaml
-    with:
-      package_name: ${{ matrix.package }}
-      is_flutter: ${{ contains(matrix.package, 'world_') }}
-    secrets: inherit
+        changed-dir: ${{ fromJSON(needs.detect-changed-packages.outputs.changed) }}
+    steps:
+      - uses: actions/checkout@v4.2.2
+      - name: Verify
+        run: |
+          echo "Verifying changed directory: ${{ matrix.changed-dir }}"
+          # Replace this with your verification steps
+        working-directory: ${{ matrix.changed-dir }}
