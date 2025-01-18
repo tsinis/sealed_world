@@ -28,14 +28,15 @@ jobs:
         with:
           dir_names: true
           json: true
-          files: |
-            packages/**
-            !packages/_*
+          files: packages/[!_]*/**
           files_ignore: |
             **/*.md
             **/example/**
             **/analysis_options.yaml
             **/flutter_analysis_options.yaml
+          diff_relative: true
+          dir_names_exclude_current_dir: true
+          since_last_remote_commit: true
 
   verify-changed-packages:
     needs: detect-changed-packages
