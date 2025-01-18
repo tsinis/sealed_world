@@ -7,7 +7,7 @@ NEW FEATURES
 - Introduced new methods for working with common names and common name maps: `commonNamesMap` on ISO collections and `commonNameFor`/`maybeCommonNameFor` on ISO objects. These methods are significantly faster than the old `translations` - related methods because they work directly with locale-specific maps instead of iterating through all translations of each ISO object.
 - The `translations` getter is now a real computed field. This means it will only generate the translations when they are requested, rather than storing them all in memory. It's recommended to cache the results of the getter to avoid redundant calculations. Because of that - `translation` and `maybeTranslation` methods are no longer recommended for retriving localization data.
 - The `commonNamesCacheMap` is deprecated because it relies on the memory-intensive `translations` getter.
-- New localization delegates on `IsoTranslated` objects simplify complex queries for object localizations. Also new methods based on them - `commonNamesMap` on ISO collections and `commonNameFor`/`maybeCommonNameFor` on ISO objects. They should be used instead of `translation` and `maybeTranslation` methods now.
+- New localization delegates on `IsoTranslated` objects simplify complex queries for object localizations. Also, new methods based on them - `commonNamesMap` on ISO collections and `commonNameFor`/`maybeCommonNameFor` on ISO objects. They should be used instead of `translation` and `maybeTranslation` methods now.
 - Bool getters on `IsoStandardized` objects can now be applied to null values. For example, `maybeIso.isRus` will return `false` if `maybeIso` is null, without the need for additional null-checks.
 
 BREAKING CHANGES
