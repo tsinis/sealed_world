@@ -2167,7 +2167,7 @@ extension ScriptFunctional on Script {
       };
 }
 
-extension ScriptBoolGetters on Script {
+extension ScriptBoolGetters on Script? {
   /// Checks if this [Script] instance is Adlam.
   bool get isAdlm => this == const ScriptAdlm();
 

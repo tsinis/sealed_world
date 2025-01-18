@@ -43,5 +43,19 @@ sealed class Translated<T extends TranslatedName> {
 
   /// A list of [TranslatedName] objects representing the translations, with
   /// different languages, country and script codes.
+  ///
+  /// IMPORTANT! It's recommended to cache the result of this getter, because
+  /// it's mostly a computed property on very large collections. If you need
+  /// to access localization data for specific locale please use the
+  /// methods called `commonName*` on ISO objects.
+  ///
+  /// Example:
+  /// ```dart
+  /// // Not recommended: Accessing translations directly
+  /// final allTranslations = isoObject.translations;
+  ///
+  /// // Recommended: Using commonName* methods
+  /// final translation = isoObject.commonNameFor(const BasicLocale(LangEng()));
+  /// ```
   List<T> get translations => _translations ?? []; // coverage:ignore-line
 }

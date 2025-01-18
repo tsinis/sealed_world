@@ -1,10 +1,9 @@
-version: 1.5.1
+version: 2.0.0
 name: sealed_languages
 description: Provides data for world languages in the form of sealed classes.
 maintainer: Roman Cinis
 repository: https://github.com/tsinis/sealed_world/tree/main/packages/sealed_languages
 issue_tracker: https://github.com/tsinis/sealed_world/issues
-publish_to: none # TODO! Change to 'https://pub.dev' when ready to publish.
 topics:
   - languages
   - language
@@ -13,17 +12,18 @@ topics:
   - iso-639
 
 screenshots:
+  - description: "Code quality"
+    path: doc/quality.webp
   - description: "Structure visualization"
     path: doc/structure.webp
   - description: "Examples of usage"
     path: doc/example.webp
 
 environment:
-  sdk: ^3.5.3
+  sdk: ^3.6.0
 
 dependencies:
-  l10n_languages:
-    path: ../l10n_languages
+  l10n_languages: ^0.1.0
 
 dev_dependencies:
   _sealed_world_tests:

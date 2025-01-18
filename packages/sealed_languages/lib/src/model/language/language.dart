@@ -1,4 +1,4 @@
-import "package:l10n_languages/l10n_languages.dart";
+import "package:l10n_languages/l10n_languages.dart" show LanguagesLocaleMapper;
 
 import "../../collections/natural_language_collections.dart";
 import "../../data/natural_language_families.data.dart";

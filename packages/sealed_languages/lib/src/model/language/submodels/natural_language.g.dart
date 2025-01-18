@@ -1877,7 +1877,7 @@ extension NaturalLanguageFunctional on NaturalLanguage {
       };
 }
 
-extension NaturalLanguageBoolGetters on NaturalLanguage {
+extension NaturalLanguageBoolGetters on NaturalLanguage? {
   /// Checks if this [NaturalLanguage] instance is Afar.
   bool get isAar => this == const LangAar();
 
