@@ -23,6 +23,10 @@ jobs:
 
       - id: set-packages
         run: |
+          # Debug information
+          echo "Event name: ${{ github.event_name }}"
+          echo "GitHub ref: ${{ github.ref }}"
+
           # For PRs, compare with base branch
           if [ "${{ github.event_name }}" = "pull_request" ]; then
             BASE_SHA=${{ github.event.pull_request.base.sha }}
@@ -33,16 +37,24 @@ jobs:
             HEAD_SHA=$(git rev-parse HEAD)
           fi
 
-          # Get changed files and extract unique package names
-          PACKAGES=$(git diff --name-only $BASE_SHA $HEAD_SHA -- 'packages/**/*.dart' |
-            grep -v "_" |  # Exclude packages starting with underscore
-            cut -d'/' -f2 |  # Extract package name from path
-            sort -u |  # Get unique package names
-            grep -v '^$' |  # Remove empty lines
-            jq -R -s -c 'split("\n")[:-1]')  # Convert to JSON array
+          echo "Base SHA: $BASE_SHA"
+          echo "Head SHA: $HEAD_SHA"
 
+          # Show raw diff output for debugging
+          echo "Changed files:"
+          git diff --name-only $BASE_SHA $HEAD_SHA -- 'packages/**/*.dart'
+
+          # Get changed files and extract unique package names with debug output
+          PACKAGES=$(git diff --name-only $BASE_SHA $HEAD_SHA -- 'packages/**/*.dart' | tee >(cat >&2) | \
+            grep -v "_" | tee >(echo "After underscore filter:" >&2) | \
+            cut -d'/' -f2 | tee >(echo "After path extraction:" >&2) | \
+            sort -u | tee >(echo "After unique sort:" >&2) | \
+            grep -v '^$' | tee >(echo "After empty line removal:" >&2) | \
+            jq -R -s -c 'split("\n")[:-1]')
+
+          # Debug final output
+          echo "Final PACKAGES value: $PACKAGES"
           echo "packages=$PACKAGES" >> $GITHUB_OUTPUT
-          echo "Changed packages: $PACKAGES"
 
   verify-packages:
     needs: detect-packages
