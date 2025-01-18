@@ -1,3 +1,4 @@
+import "../model/core/basic_locale.dart";
 import "../model/translated_name.dart";
 import "basic_localization_delegate.dart";
 import "iso_standardized.dart";

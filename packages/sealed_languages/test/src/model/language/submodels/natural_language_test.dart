@@ -1,4 +1,5 @@
 import "package:_sealed_world_tests/sealed_world_tests.dart";
+// ignore: deprecated_member_use_from_same_package, it's TODO!
 import "package:sealed_languages/language_translations.dart";
 import "package:sealed_languages/src/helpers/extensions/sealed_world_json_string_extension.dart";
 import "package:sealed_languages/src/helpers/natural_language/natural_language_json.dart";
@@ -660,13 +661,18 @@ void main() => group("$NaturalLanguage", () {
         final min = kSealedLanguagesSupportedLanguages.length + 1;
 
         test("every language should have at least $min translations", () {
+          int totalCount = 0;
+
           for (final translated in NaturalLanguage.list) {
+            totalCount += translated.translations.length;
             expect(translated.translations.length, greaterThanOrEqualTo(min));
             expect(
               translated.translations.every((l10n) => l10n.name.isNotEmpty),
               isTrue,
             );
           }
+
+          expect(totalCount, 20881);
         });
 
         test(

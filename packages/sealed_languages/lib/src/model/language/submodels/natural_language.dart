@@ -3,7 +3,7 @@ part of "../language.dart";
 /// A class that represents a natural language.
 class NaturalLanguage extends Language
     implements
-        IsoTranslated<TranslatedName, String>,
+        IsoTranslated<TranslatedName, String, BasicLocale>,
         JsonEncodable<NaturalLanguage> {
   /// {@template natural_language_constructor}
   /// Creates a new instance of the [NaturalLanguage] class.
@@ -291,7 +291,8 @@ class NaturalLanguage extends Language
   List<TranslatedName> get translations => l10n.translatedNames({this});
 
   @override
-  LocalizationDelegate get l10n => const LocalizationDelegate();
+  LocalizationDelegate get l10n =>
+      LocalizationDelegate(mapper: () => LanguagesLocaleMapper().localize);
 
   /// Returns a string representation of this [NaturalLanguage] object.
   ///

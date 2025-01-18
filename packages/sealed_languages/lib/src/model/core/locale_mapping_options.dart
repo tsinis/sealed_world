@@ -7,22 +7,22 @@ class LocaleMappingOptions<T extends Object> {
   /// configuration.
   ///
   /// Parameters:
-  /// - [altSymbol]: Symbol used to mark alternative names, defaults to "+".
-  /// - [fallbackLocale]: Secondary locale to use if main locale translation is
-  ///       missing.
-  /// - [localizeFullNames]: Whether to include full/official names in
-  ///       localization.
   /// - [mainLocale]: Primary locale for translation lookup.
+  /// - [fallbackLocale]: Secondary locale to use if main locale translation is
+  /// missing.
+  /// - [localizeFullNames]: Whether to include full/official names in
+  /// localization.
   /// - [useLanguageFallback]: Whether to fallback to language-only codes.
+  /// - [altSymbol]: Symbol used to mark alternative names, defaults to `"+"`.
   const LocaleMappingOptions({
-    this.altSymbol = "+",
+    this.mainLocale,
     this.fallbackLocale,
     this.localizeFullNames = true,
-    this.mainLocale,
     this.useLanguageFallback = true,
+    this.altSymbol = "+",
   });
 
-  /// Default symbol used to mark alternative names in localization.
+  /// Default symbol used to mark alternative names in localization maps.
   static const defaultAltSymbol = "+";
 
   /// Symbol used to mark alternative/full names in localized strings.

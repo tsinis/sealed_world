@@ -3,6 +3,7 @@
 import "../../data/natural_languages.data.dart";
 import "../../interfaces/translated.dart";
 import "../../model/core/basic_locale.dart";
+import "../../model/core/locale_mapping_options.dart";
 import "../../model/language/language.dart";
 import "../../model/script/writing_system.dart";
 import "../../model/translated_name.dart";
@@ -36,8 +37,71 @@ import "../../model/translated_name.dart";
 /// `script`, and a default `orElse` language if no translation is found. It
 /// returns the translation as a [TranslatedName] object. If no translation is
 /// found for the specified language, it falls back to the `orElse` language.
-extension TranslatedExtension<T extends TranslatedName, L extends BasicLocale>
-    on Translated<T> {
+extension TranslatedExtension<T extends TranslatedName, L extends BasicLocale,
+    N extends Object> on IsoTranslated<T, N, L> {
+  /// Returns a localized common name for this object.
+  ///
+  /// Parameters:
+  /// - [mainLocale]: Required primary locale for translation lookup
+  /// - [fallbackLocale]: Optional secondary locale to use if main locale
+  /// translation is missing.
+  /// - [useLanguageFallback]: Whether to try language-only codes when specific
+  /// locale not found.
+  /// - [orElse]: Default value to return if translation is not found, defaults
+  ///  to empty string.
+  ///
+  /// Example:
+  /// ```dart
+  /// // Returns German common name for the language or `orElse` if not found.
+  /// final name = language.commonNameFor(const BasicLocale(LangDeu()));
+  /// ```
+  String commonNameFor(
+    L mainLocale, {
+    L? fallbackLocale,
+    bool useLanguageFallback = true,
+    String orElse = "",
+  }) =>
+      l10n.commonNamesMap(
+        {this},
+        options: LocaleMappingOptions<L>(
+          mainLocale: mainLocale,
+          fallbackLocale: fallbackLocale,
+          useLanguageFallback: useLanguageFallback,
+        ),
+      )[this] ??
+      orElse;
+
+  /// Returns a localized common name for this object or null if not found.
+  ///
+  /// Parameters:
+  /// - [mainLocale]: Required primary locale for translation lookup
+  /// - [fallbackLocale]: Optional secondary locale to use if main locale
+  ///       translation is missing
+  /// - [useLanguageFallback]: Whether to try language-only codes when specific
+  ///       locale not found
+  /// - [orElse]: Optional default value to return if translation is not found
+  ///
+  /// Example:
+  /// ```dart
+  /// // Returns German common name for the language or `null` if not found.
+  /// final name = language.maybeCommonNameFor(const BasicLocale(LangDeu()));
+  /// ```
+  String? maybeCommonNameFor(
+    L mainLocale, {
+    L? fallbackLocale,
+    bool useLanguageFallback = true,
+    String? orElse,
+  }) =>
+      l10n.commonNamesMap(
+        {this},
+        options: LocaleMappingOptions<L>(
+          mainLocale: mainLocale,
+          fallbackLocale: fallbackLocale,
+          useLanguageFallback: useLanguageFallback,
+        ),
+      )[this] ??
+      orElse;
+
   /// Retrieves the translation for the specified locale [BasicLocale] with
   /// required `language` parameter.
   ///
@@ -114,10 +178,7 @@ extension TranslatedExtension<T extends TranslatedName, L extends BasicLocale>
     String? countryCode,
     Script? script,
   }) {
-    if (countryCode == null && script == null) {
-      return translations // TODO! Always put ones without code first.
-          .firstWhere((trn) => trn.countryCode == null && trn.script == null);
-    }
+    if (countryCode == null && script == null) return translations.firstOrNull;
     for (final l10n in translations) {
       if (countryCode != null && l10n.countryCode != countryCode) continue;
       if (script != null && l10n.script != script) continue;
@@ -125,6 +186,6 @@ extension TranslatedExtension<T extends TranslatedName, L extends BasicLocale>
       return l10n; // ignore: avoid-unconditional-break, conditions were met.
     }
 
-    return useLanguageFallback ? translations.first : null;
+    return useLanguageFallback ? translations.firstOrNull : null;
   }
 }

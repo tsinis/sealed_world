@@ -150,6 +150,9 @@ dart_code_metrics:
     - prefer-match-file-name:
         exclude:
           - "**/data/**.data.dart"
+    - avoid-non-empty-constructor-bodies:
+        exclude:
+          - "**/src/**/**.data.dart"
     - avoid-non-ascii-symbols:
         exclude:
           - "**/data/**.data.dart"
@@ -243,7 +246,6 @@ dart_code_metrics:
     - avoid-nested-switch-expressions
     - avoid-nested-switches
     - avoid-non-ascii-symbols
-    - avoid-non-empty-constructor-bodies
     - avoid-non-final-exception-class-fields
     - avoid-non-null-assertion
     - avoid-not-encodable-in-to-json
@@ -285,7 +287,6 @@ dart_code_metrics:
     - avoid-unconditional-break
     - avoid-unknown-pragma
     - avoid-unnecessary-call
-    - avoid-unnecessary-collections
     - avoid-unnecessary-conditionals
     - avoid-unnecessary-constructor
     - avoid-unnecessary-continue

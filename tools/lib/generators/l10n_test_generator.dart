@@ -1,4 +1,4 @@
-import "package:sealed_countries/sealed_countries.dart";
+import "package:sealed_languages/sealed_languages.dart";
 
 import "../constants/path_constants.dart";
 import "../models/package.dart";
@@ -15,8 +15,8 @@ class L10NTestGenerator {
   static const _dart = DartUtils();
 
   Future<void> generate(String path) async {
-    final prefix = "${package.dataRepresent}_${l10nLabel}_";
     final io = IoUtils();
+    final prefix = "${package.dataRepresent}_${l10nLabel}_";
     final dependencyImport = package.whenConst(
       sealedLanguages: """
 import "package:sealed_languages/src/data/scripts.data.dart";
@@ -71,6 +71,15 @@ const value = $instance;\n
 """);
         if (full != null) {
           buffer.write("expect(translated?.fullName, expectedFullName);");
+        }
+        if (locale.hasOnlyLanguage) {
+          buffer.write("""
+        final unexpectedScriptTranslation = value.maybeTranslation(
+          const ${locale.copyWith(script: const ScriptCyrs()).toString(short: false)},
+        );
+
+        expect(unexpectedScriptTranslation?.name, expectedName);
+""");
         }
 
         buffer.write("""

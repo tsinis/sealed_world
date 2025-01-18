@@ -1,3 +1,6 @@
+// ignore_for_file: avoid-non-ascii-symbols
+
+// ignore: deprecated_member_use_from_same_package, it's TODO!
 import "package:sealed_languages/language_translations.dart";
 import "package:sealed_languages/src/data/natural_languages.data.dart";
 import "package:sealed_languages/src/data/scripts.data.dart";
@@ -89,6 +92,51 @@ void main() => group("TranslatedExtension", () {
             expect(withoutCode, isNot(withCode));
           },
         );
+      });
+
+      group("commonNameFor", () {
+        test("returns translation for valid locale", () {
+          final name = portuguese.commonNameFor(const BasicLocale(LangRus()));
+          expect(name, "португальский");
+        });
+
+        test("returns orElse value when translation not found", () {
+          final name = portuguese.commonNameFor(
+            const BasicLocale(LangKal()),
+            orElse: "Not Found",
+          );
+          expect(name, "Not Found");
+        });
+
+        test("returns empty string by default when translation not found", () {
+          final name = portuguese.commonNameFor(
+            const BasicLocale(LangKal()),
+          );
+          expect(name, isEmpty);
+        });
+      });
+
+      group("maybeCommonNameFor", () {
+        test("returns translation for valid locale", () {
+          final name =
+              portuguese.maybeCommonNameFor(const BasicLocale(LangRus()));
+          expect(name, "португальский");
+        });
+
+        test("returns orElse value when translation not found", () {
+          final name = portuguese.maybeCommonNameFor(
+            const BasicLocale(LangKal()),
+            orElse: "Not Found",
+          );
+          expect(name, "Not Found");
+        });
+
+        test("returns null by default when translation not found", () {
+          final name = portuguese.maybeCommonNameFor(
+            const BasicLocale(LangKal()),
+          );
+          expect(name, isNull);
+        });
       });
 
       test("translation should always provide at least eng translation", () {

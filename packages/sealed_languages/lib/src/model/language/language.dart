@@ -1,3 +1,5 @@
+import "package:l10n_languages/l10n_languages.dart";
+
 import "../../collections/natural_language_collections.dart";
 import "../../data/natural_language_families.data.dart";
 import "../../data/natural_languages.data.dart";
@@ -12,6 +14,7 @@ import "../../interfaces/iso_standardized.dart";
 import "../../interfaces/json_encodable.dart";
 import "../../interfaces/named.dart";
 import "../../interfaces/translated.dart";
+import "../core/basic_locale.dart";
 import "../core/upper_case_iso_map.dart";
 import "../language_family/language_family.dart";
 import "../script/writing_system.dart";

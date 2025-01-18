@@ -39,6 +39,10 @@
     {
       "name": "Tests",
       "path": "../packages/_sealed_world_tests"
+    },
+    {
+      "name": "L10N Langs",
+      "path": "../packages/l10n_languages"
     }
   ],
   "settings": {
@@ -53,7 +57,7 @@
     "explorer.fileNesting.expand": false,
     "explorer.fileNesting.patterns": {
       "pubspec.yaml": ".flutter-plugins, .packages, .dart_tool, .flutter-plugins-dependencies, .metadata, .packages, pubspec.lock, build.yaml, analysis_options.yaml, all_lint_rules.yaml, flutter_*.yaml, icons_launcher.yaml",
-      ".gitignore": ".gitattributes, .gitmodules, .gitmessage, .mailmap, .git-blame*",
+      ".gitignore": ".gitattributes, .gitmodules, .gitmessage, .pubignore, .mailmap, .git-blame*",
       "readme.*": "authors, backers.md, changelog*, citation*, code_of_conduct.md, codeowners, contributing.md, contributors, copying, credits, governance.md, history.md, license*, maintainers, readme*, security.md, sponsors.md",
       "*.dart": "$(capture).g.dart, $(capture).freezed.dart, $(capture).select.dart, $(capture).config.dart",
       "*.graphql": "$(capture).gql.dart, $(capture).*.gql.dart",

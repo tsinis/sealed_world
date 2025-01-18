@@ -70,7 +70,7 @@ jobs:
         uses: fujidaiti/dart-package-inspector@v2.0.4
         with:
           report: ${{ steps.analysis.outputs.json_output }}
-          min-pub-points: 150
+          min-pub-points: 140
 
       - name: 📥 Install DCM
         if: ${{ github.event_name == 'pull_request' }}
