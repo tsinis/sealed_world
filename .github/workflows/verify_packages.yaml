@@ -20,12 +20,19 @@ jobs:
       - uses: actions/checkout@v4.2.2
       - id: set-packages
         run: |
-          PACKAGES=$(find packages -maxdepth 1 -type d -not -name "packages" -not -name "_*" -exec basename {} \; | jq -R -s -c 'split("\n")[:-1]')
+          PACKAGES=$(find packages \
+            -maxdepth 1 \
+            -type d \
+            -not -name "_*" \
+            -not -name "packages" \
+            -exec basename {} \; \
+            | jq -R -s -c 'split("\n")[:-1]')
           echo "packages=$PACKAGES" >> $GITHUB_OUTPUT
 
   verify-packages:
     needs: detect-packages
     strategy:
+      fail-fast: false
       matrix:
         package: ${{ fromJson(needs.detect-packages.outputs.packages) }}
     uses: ./.github/workflows/verify_package_workflow.yaml
