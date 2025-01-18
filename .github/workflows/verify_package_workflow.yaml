@@ -76,7 +76,7 @@ jobs:
         if: ${{ github.event_name == 'pull_request' }}
         uses: CQLabs/setup-dcm@v2.0.0
         with:
-          github_token: ${{ secrets.GITHUB_TOKEN }}
+          github-token: ${{ secrets.GITHUB_TOKEN }}
 
       - name: 🔎 Dart Code Metrics
         if: ${{ github.event_name == 'pull_request' }}
