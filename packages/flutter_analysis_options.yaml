@@ -1,6 +1,8 @@
 include: analysis_options.yaml
 
 dart_code_metrics:
+  extends:
+    - package:dart_code_metrics_presets/flutter_all.yaml
   rules:
     # Disabled:
     - avoid-duplicate-cascades: false # Conflicts with CustomPainters.

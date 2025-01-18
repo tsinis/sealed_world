@@ -11,8 +11,9 @@ part of "translated.dart";
 /// The [N] type parameter represents the name of the ISO object.
 /// The [L] type parameter represents the basic locale used for localization.
 ///
-/// The `translations` parameter is optional and should be provided when
-/// creating a new (custom) instance of [IsoTranslated].
+/// The [translations] parameter is optional and could be provided when
+/// creating a new (custom) instance of [IsoTranslated], but it's recommended
+/// to use [l10n] override instead.
 abstract interface class IsoTranslated<
     T extends TranslatedName,
     N extends Object,

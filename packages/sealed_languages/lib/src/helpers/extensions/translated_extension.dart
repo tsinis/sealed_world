@@ -103,7 +103,9 @@ extension TranslatedExtension<T extends TranslatedName, L extends BasicLocale,
       orElse;
 
   /// Retrieves the translation for the specified locale [BasicLocale] with
-  /// required `language` parameter.
+  /// required `language` parameter. This method might be expensive so it's
+  /// recommended to use `commonNameFor`/`maybeCommonName` methods instead
+  /// or cache the result.
   ///
   /// This method returns the translation for the specified [BasicLocale] with a
   /// required `language` parameter,
@@ -133,7 +135,8 @@ extension TranslatedExtension<T extends TranslatedName, L extends BasicLocale,
 
   /// Retrieves the translation for the specified [BasicLocale] locale with
   /// required `language` parameter and optional `countryCode` and `script`
-  /// parameters.
+  /// parameters. This method might be expensive so it's recommended to use
+  /// `commonNameFor`/`maybeCommonName` methods instead or cache the result.
   ///
   /// This method returns the translation for the specified [locale] with a
   /// required `language` parameter and optional `countryCode` and `script`
