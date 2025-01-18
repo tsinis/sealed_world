@@ -8,7 +8,7 @@ part of "../currency.dart";
 /// properties specific to fiat currencies.
 class FiatCurrency extends Currency
     implements
-        IsoTranslated<TranslatedName, String>,
+        IsoTranslated<TranslatedName, String, BasicLocale>,
         JsonEncodable<FiatCurrency> {
   /// {@template currency_constructor}
   /// Creates a new instance of [FiatCurrency].
@@ -246,6 +246,9 @@ class FiatCurrency extends Currency
 
   @override
   String get internationalName => name;
+
+  @override
+  LocalizationDelegate get l10n => const LocalizationDelegate(); // TODO!
 
   /// Returns a string representation of this instance.
   @override
