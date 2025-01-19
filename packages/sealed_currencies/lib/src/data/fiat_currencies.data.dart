@@ -1,5 +1,3 @@
-// ignore: avoid-importing-entrypoint-exports, it contains all the translations.
-import "../../currency_translations.dart";
 import "../model/currency/currency.dart";
 
 /// A class that represents the United Arab Emirates Dirham currency.
@@ -17,7 +15,6 @@ class FiatAed extends FiatCurrency {
           namesNative: const ["درهم إماراتي"],
           smallestDenomination: 25,
           subunit: "Fils",
-          translations: aedCurrencyTranslations,
         );
 }
 
@@ -36,7 +33,6 @@ class FiatAfn extends FiatCurrency {
           namesNative: const ["افغانی"],
           smallestDenomination: 100,
           subunit: "Pul",
-          translations: afnCurrencyTranslations,
         );
 }
 
@@ -56,7 +52,6 @@ class FiatAll extends FiatCurrency {
           namesNative: const ["Leku Shqiptar"],
           smallestDenomination: 100,
           subunit: "Qintar",
-          translations: allCurrencyTranslations,
         );
 }
 
@@ -75,7 +70,6 @@ class FiatAmd extends FiatCurrency {
           namesNative: const ["Հայկական Դրամ"],
           smallestDenomination: 10,
           subunit: "Luma",
-          translations: amdCurrencyTranslations,
         );
 }
 
@@ -97,7 +91,6 @@ class FiatAng extends FiatCurrency {
           namesNative: const ["Antilliaanse gulden"],
           subunit: "Cent",
           unitFirst: true,
-          translations: angCurrencyTranslations,
         );
 }
 
@@ -115,7 +108,6 @@ class FiatAoa extends FiatCurrency {
           namesNative: const ["Angolan kwanza"],
           smallestDenomination: 10,
           subunit: "Cêntimo",
-          translations: aoaCurrencyTranslations,
         );
 }
 
@@ -138,7 +130,6 @@ class FiatArs extends FiatCurrency {
           namesNative: const ["Argentine peso"],
           subunit: "Centavo",
           unitFirst: true,
-          translations: arsCurrencyTranslations,
         );
 }
 
@@ -161,7 +152,6 @@ class FiatAud extends FiatCurrency {
           smallestDenomination: 5,
           subunit: "Cent",
           unitFirst: true,
-          translations: audCurrencyTranslations,
         );
 }
 
@@ -181,7 +171,6 @@ class FiatAwg extends FiatCurrency {
           namesNative: const ["Arubaanse florijn"],
           smallestDenomination: 5,
           subunit: "Cent",
-          translations: awgCurrencyTranslations,
         );
 }
 
@@ -200,7 +189,6 @@ class FiatAzn extends FiatCurrency {
           namesNative: const ["Azərbaycan manatı"],
           subunit: "Qəpik",
           unitFirst: true,
-          translations: aznCurrencyTranslations,
         );
 }
 
@@ -220,7 +208,6 @@ class FiatBam extends FiatCurrency {
           smallestDenomination: 5,
           subunit: "Fening",
           unitFirst: true,
-          translations: bamCurrencyTranslations,
         );
 }
 
@@ -241,7 +228,6 @@ class FiatBbd extends FiatCurrency {
           namesNative: const ["Barbadian dollar"],
           subunit: "Cent",
           unitFirst: true,
-          translations: bbdCurrencyTranslations,
         );
 }
 
@@ -260,7 +246,6 @@ class FiatBdt extends FiatCurrency {
           namesNative: const ["টাকা"],
           subunit: "Paisa",
           unitFirst: true,
-          translations: bdtCurrencyTranslations,
         );
 }
 
@@ -278,7 +263,6 @@ class FiatBgn extends FiatCurrency {
           codeNumeric: "975",
           namesNative: const ["Български лев"],
           subunit: "Stotinka",
-          translations: bgnCurrencyTranslations,
         );
 }
 
@@ -299,7 +283,6 @@ class FiatBhd extends FiatCurrency {
           subunit: "Fils",
           subunitToUnit: 1000,
           unitFirst: true,
-          translations: bhdCurrencyTranslations,
         );
 }
 
@@ -320,7 +303,6 @@ class FiatBif extends FiatCurrency {
           smallestDenomination: 100,
           subunit: "Centime",
           subunitToUnit: 1,
-          translations: bifCurrencyTranslations,
         );
 }
 
@@ -341,7 +323,6 @@ class FiatBmd extends FiatCurrency {
           namesNative: const ["Bermudian dollars"],
           subunit: "Cent",
           unitFirst: true,
-          translations: bmdCurrencyTranslations,
         );
 }
 
@@ -362,7 +343,6 @@ class FiatBnd extends FiatCurrency {
           namesNative: const ["Ringgit Brunei"],
           subunit: "Sen",
           unitFirst: true,
-          translations: bndCurrencyTranslations,
         );
 }
 
@@ -382,7 +362,6 @@ class FiatBob extends FiatCurrency {
           smallestDenomination: 10,
           subunit: "Centavo",
           unitFirst: true,
-          translations: bobCurrencyTranslations,
         );
 }
 
@@ -404,7 +383,6 @@ class FiatBrl extends FiatCurrency {
           smallestDenomination: 5,
           subunit: "Centavo",
           unitFirst: true,
-          translations: brlCurrencyTranslations,
         );
 }
 
@@ -425,7 +403,6 @@ class FiatBsd extends FiatCurrency {
           namesNative: const ["Bahamian dollar"],
           subunit: "Cent",
           unitFirst: true,
-          translations: bsdCurrencyTranslations,
         );
 }
 
@@ -444,7 +421,6 @@ class FiatBtn extends FiatCurrency {
           namesNative: const ["དངུལ་ཀྲམ"],
           smallestDenomination: 5,
           subunit: "Chertrum",
-          translations: btnCurrencyTranslations,
         );
 }
 
@@ -463,7 +439,6 @@ class FiatBwp extends FiatCurrency {
           smallestDenomination: 5,
           subunit: "Thebe",
           unitFirst: true,
-          translations: bwpCurrencyTranslations,
         );
 }
 
@@ -484,7 +459,6 @@ class FiatByn extends FiatCurrency {
           codeNumeric: "933",
           namesNative: const ["беларускі рубель", "белорусский рубль"],
           subunit: "Kapeyka",
-          translations: bynCurrencyTranslations,
         );
 }
 
@@ -505,7 +479,6 @@ class FiatBzd extends FiatCurrency {
           namesNative: const ["Belize dollar"],
           subunit: "Cent",
           unitFirst: true,
-          translations: bzdCurrencyTranslations,
         );
 }
 
@@ -528,7 +501,6 @@ class FiatCad extends FiatCurrency {
           smallestDenomination: 5,
           subunit: "Cent",
           unitFirst: true,
-          translations: cadCurrencyTranslations,
         );
 }
 
@@ -547,7 +519,6 @@ class FiatCdf extends FiatCurrency {
           codeNumeric: "976",
           namesNative: const ["franc congolais"],
           subunit: "Centime",
-          translations: cdfCurrencyTranslations,
         );
 }
 
@@ -569,7 +540,6 @@ class FiatChf extends FiatCurrency {
           smallestDenomination: 5,
           subunit: "Rappen",
           unitFirst: true,
-          translations: chfCurrencyTranslations,
         );
 }
 
@@ -592,7 +562,6 @@ class FiatClf extends FiatCurrency {
           subunit: "Peso",
           subunitToUnit: 10000,
           unitFirst: true,
-          translations: clfCurrencyTranslations,
         );
 }
 
@@ -615,7 +584,6 @@ class FiatClp extends FiatCurrency {
           subunit: "Peso",
           subunitToUnit: 1,
           unitFirst: true,
-          translations: clpCurrencyTranslations,
         );
 }
 
@@ -635,7 +603,6 @@ class FiatCny extends FiatCurrency {
           namesNative: const ["人民币"],
           subunit: "Fen",
           unitFirst: true,
-          translations: cnyCurrencyTranslations,
         );
 }
 
@@ -659,7 +626,6 @@ class FiatCop extends FiatCurrency {
           smallestDenomination: 20,
           subunit: "Centavo",
           unitFirst: true,
-          translations: copCurrencyTranslations,
         );
 }
 
@@ -682,7 +648,6 @@ class FiatCrc extends FiatCurrency {
           smallestDenomination: 500,
           subunit: "Céntimo",
           unitFirst: true,
-          translations: crcCurrencyTranslations,
         );
 }
 
@@ -701,7 +666,6 @@ class FiatCuc extends FiatCurrency {
           codeNumeric: "931",
           namesNative: const ["Peso Convertible"],
           subunit: "Centavo",
-          translations: cucCurrencyTranslations,
         );
 }
 
@@ -722,7 +686,6 @@ class FiatCup extends FiatCurrency {
           namesNative: const ["peso cubano"],
           subunit: "Centavo",
           unitFirst: true,
-          translations: cupCurrencyTranslations,
         );
 }
 
@@ -742,7 +705,6 @@ class FiatCve extends FiatCurrency {
           namesNative: const ["eskudu kabu-verdianu"],
           smallestDenomination: 100,
           subunit: "Centavo",
-          translations: cveCurrencyTranslations,
         );
 }
 
@@ -762,7 +724,6 @@ class FiatCzk extends FiatCurrency {
           namesNative: const ["koruna česká"],
           smallestDenomination: 100,
           subunit: "Haléř",
-          translations: czkCurrencyTranslations,
         );
 }
 
@@ -781,7 +742,6 @@ class FiatDjf extends FiatCurrency {
           smallestDenomination: 100,
           subunit: "Centime",
           subunitToUnit: 1,
-          translations: djfCurrencyTranslations,
         );
 }
 
@@ -803,7 +763,6 @@ class FiatDkk extends FiatCurrency {
           namesNative: const ["dansk krone"],
           smallestDenomination: 50,
           subunit: "Øre",
-          translations: dkkCurrencyTranslations,
         );
 }
 
@@ -825,7 +784,6 @@ class FiatDop extends FiatCurrency {
           smallestDenomination: 100,
           subunit: "Centavo",
           unitFirst: true,
-          translations: dopCurrencyTranslations,
         );
 }
 
@@ -844,7 +802,6 @@ class FiatDzd extends FiatCurrency {
           namesNative: const ["دينار جزائري"],
           smallestDenomination: 100,
           subunit: "Centime",
-          translations: dzdCurrencyTranslations,
         );
 }
 
@@ -865,7 +822,6 @@ class FiatEgp extends FiatCurrency {
           smallestDenomination: 25,
           subunit: "Piastre",
           unitFirst: true,
-          translations: egpCurrencyTranslations,
         );
 }
 
@@ -882,7 +838,6 @@ class FiatErn extends FiatCurrency {
           codeNumeric: "232",
           namesNative: const ["Eritrean nakfa"],
           subunit: "Cent",
-          translations: ernCurrencyTranslations,
         );
 }
 
@@ -900,7 +855,6 @@ class FiatEtb extends FiatCurrency {
           codeNumeric: "230",
           namesNative: const ["Ethiopian birr"],
           subunit: "Santim",
-          translations: etbCurrencyTranslations,
         );
 }
 
@@ -922,7 +876,6 @@ class FiatEur extends FiatCurrency {
           priority: 2,
           subunit: "Cent",
           unitFirst: true,
-          translations: eurCurrencyTranslations,
         );
 }
 
@@ -943,7 +896,6 @@ class FiatFjd extends FiatCurrency {
           namesNative: const ["Fijian dollar"],
           smallestDenomination: 5,
           subunit: "Cent",
-          translations: fjdCurrencyTranslations,
         );
 }
 
@@ -963,7 +915,6 @@ class FiatFkp extends FiatCurrency {
           codeNumeric: "238",
           namesNative: const ["Falkland Islands pound"],
           subunit: "Penny",
-          translations: fkpCurrencyTranslations,
         );
 }
 
@@ -983,7 +934,6 @@ class FiatGbp extends FiatCurrency {
           priority: 3,
           subunit: "Penny",
           unitFirst: true,
-          translations: gbpCurrencyTranslations,
         );
 }
 
@@ -1001,7 +951,6 @@ class FiatGel extends FiatCurrency {
           codeNumeric: "981",
           namesNative: const ["ქართული ლარი"],
           subunit: "Tetri",
-          translations: gelCurrencyTranslations,
         );
 }
 
@@ -1021,7 +970,6 @@ class FiatGhs extends FiatCurrency {
           namesNative: const ["Ghanaian cedi"],
           subunit: "Pesewa",
           unitFirst: true,
-          translations: ghsCurrencyTranslations,
         );
 }
 
@@ -1041,7 +989,6 @@ class FiatGip extends FiatCurrency {
           namesNative: const ["Gibraltar pound"],
           subunit: "Penny",
           unitFirst: true,
-          translations: gipCurrencyTranslations,
         );
 }
 
@@ -1058,7 +1005,6 @@ class FiatGmd extends FiatCurrency {
           codeNumeric: "270",
           namesNative: const ["Gambian dalasi"],
           subunit: "Butut",
-          translations: gmdCurrencyTranslations,
         );
 }
 
@@ -1079,7 +1025,6 @@ class FiatGnf extends FiatCurrency {
           smallestDenomination: 100,
           subunit: "Centime",
           subunitToUnit: 1,
-          translations: gnfCurrencyTranslations,
         );
 }
 
@@ -1097,7 +1042,6 @@ class FiatGtq extends FiatCurrency {
           namesNative: const ["quetzal guatemalteco"],
           subunit: "Centavo",
           unitFirst: true,
-          translations: gtqCurrencyTranslations,
         );
 }
 
@@ -1118,7 +1062,6 @@ class FiatGyd extends FiatCurrency {
           namesNative: const ["Guyanese dollar"],
           smallestDenomination: 100,
           subunit: "Cent",
-          translations: gydCurrencyTranslations,
         );
 }
 
@@ -1140,7 +1083,6 @@ class FiatHkd extends FiatCurrency {
           smallestDenomination: 10,
           subunit: "Cent",
           unitFirst: true,
-          translations: hkdCurrencyTranslations,
         );
 }
 
@@ -1160,7 +1102,6 @@ class FiatHnl extends FiatCurrency {
           smallestDenomination: 5,
           subunit: "Centavo",
           unitFirst: true,
-          translations: hnlCurrencyTranslations,
         );
 }
 
@@ -1180,7 +1121,6 @@ class FiatHrk extends FiatCurrency {
           codeNumeric: "191",
           namesNative: const ["hrvatska kuna"],
           subunit: "Lipa",
-          translations: hrkCurrencyTranslations,
         );
 }
 
@@ -1198,7 +1138,6 @@ class FiatHtg extends FiatCurrency {
           namesNative: const ["goud ayisyen"],
           smallestDenomination: 5,
           subunit: "Centime",
-          translations: htgCurrencyTranslations,
         );
 }
 
@@ -1218,7 +1157,6 @@ class FiatHuf extends FiatCurrency {
           namesNative: const ["Magyar forint"],
           smallestDenomination: 5,
           subunitToUnit: 1,
-          translations: hufCurrencyTranslations,
         );
 }
 
@@ -1239,7 +1177,6 @@ class FiatIdr extends FiatCurrency {
           smallestDenomination: 5000,
           subunit: "Sen",
           unitFirst: true,
-          translations: idrCurrencyTranslations,
         );
 }
 
@@ -1260,7 +1197,6 @@ class FiatIls extends FiatCurrency {
           smallestDenomination: 10,
           subunit: "Agora",
           unitFirst: true,
-          translations: ilsCurrencyTranslations,
         );
 }
 
@@ -1281,7 +1217,6 @@ class FiatInr extends FiatCurrency {
           smallestDenomination: 50,
           subunit: "Paisa",
           unitFirst: true,
-          translations: inrCurrencyTranslations,
         );
 }
 
@@ -1300,7 +1235,6 @@ class FiatIqd extends FiatCurrency {
           smallestDenomination: 50000,
           subunit: "Fils",
           subunitToUnit: 1000,
-          translations: iqdCurrencyTranslations,
         );
 }
 
@@ -1319,7 +1253,6 @@ class FiatIrr extends FiatCurrency {
           namesNative: const ["ریال ایران"],
           smallestDenomination: 5000,
           unitFirst: true,
-          translations: irrCurrencyTranslations,
         );
 }
 
@@ -1339,7 +1272,6 @@ class FiatIsk extends FiatCurrency {
           codeNumeric: "352",
           namesNative: const ["íslensk króna"],
           subunitToUnit: 1,
-          translations: iskCurrencyTranslations,
         );
 }
 
@@ -1360,7 +1292,6 @@ class FiatJmd extends FiatCurrency {
           namesNative: const ["Jamaican dollar"],
           subunit: "Cent",
           unitFirst: true,
-          translations: jmdCurrencyTranslations,
         );
 }
 
@@ -1381,7 +1312,6 @@ class FiatJod extends FiatCurrency {
           subunit: "Fils",
           subunitToUnit: 1000,
           unitFirst: true,
-          translations: jodCurrencyTranslations,
         );
 }
 
@@ -1402,7 +1332,6 @@ class FiatJpy extends FiatCurrency {
           priority: 6,
           subunitToUnit: 1,
           unitFirst: true,
-          translations: jpyCurrencyTranslations,
         );
 }
 
@@ -1422,7 +1351,6 @@ class FiatKes extends FiatCurrency {
           smallestDenomination: 50,
           subunit: "Cent",
           unitFirst: true,
-          translations: kesCurrencyTranslations,
         );
 }
 
@@ -1440,7 +1368,6 @@ class FiatKgs extends FiatCurrency {
           codeNumeric: "417",
           namesNative: const ["Кыргыз сом"],
           subunit: "Tyiyn",
-          translations: kgsCurrencyTranslations,
         );
 }
 
@@ -1459,7 +1386,6 @@ class FiatKhr extends FiatCurrency {
           namesNative: const ["រៀល"],
           smallestDenomination: 5000,
           subunit: "Sen",
-          translations: khrCurrencyTranslations,
         );
 }
 
@@ -1480,7 +1406,6 @@ class FiatKmf extends FiatCurrency {
           smallestDenomination: 100,
           subunit: "Centime",
           subunitToUnit: 1,
-          translations: kmfCurrencyTranslations,
         );
 }
 
@@ -1498,7 +1423,6 @@ class FiatKpw extends FiatCurrency {
           codeNumeric: "408",
           namesNative: const ["조선 민주주의 인민 공화국 원"],
           subunit: "Chŏn",
-          translations: kpwCurrencyTranslations,
         );
 }
 
@@ -1517,7 +1441,6 @@ class FiatKrw extends FiatCurrency {
           namesNative: const ["원"],
           subunitToUnit: 1,
           unitFirst: true,
-          translations: krwCurrencyTranslations,
         );
 }
 
@@ -1538,7 +1461,6 @@ class FiatKwd extends FiatCurrency {
           subunit: "Fils",
           subunitToUnit: 1000,
           unitFirst: true,
-          translations: kwdCurrencyTranslations,
         );
 }
 
@@ -1559,7 +1481,6 @@ class FiatKyd extends FiatCurrency {
           namesNative: const ["Cayman Islands dollar"],
           subunit: "Cent",
           unitFirst: true,
-          translations: kydCurrencyTranslations,
         );
 }
 
@@ -1577,7 +1498,6 @@ class FiatKzt extends FiatCurrency {
           namesNative: const ["Қазақстан теңгесі", "Казахстанский тенге"],
           smallestDenomination: 100,
           subunit: "Tiyn",
-          translations: kztCurrencyTranslations,
         );
 }
 
@@ -1597,7 +1517,6 @@ class FiatLak extends FiatCurrency {
           namesNative: const ["ເງີນກີບລາວ"],
           smallestDenomination: 10,
           subunit: "Att",
-          translations: lakCurrencyTranslations,
         );
 }
 
@@ -1618,7 +1537,6 @@ class FiatLbp extends FiatCurrency {
           smallestDenomination: 25000,
           subunit: "Piastre",
           unitFirst: true,
-          translations: lbpCurrencyTranslations,
         );
 }
 
@@ -1639,7 +1557,6 @@ class FiatLkr extends FiatCurrency {
           namesNative: const ["ශ්‍රී ලංකා රුපියල්"],
           smallestDenomination: 100,
           subunit: "Cent",
-          translations: lkrCurrencyTranslations,
         );
 }
 
@@ -1660,7 +1577,6 @@ class FiatLrd extends FiatCurrency {
           namesNative: const ["Liberian dollars"],
           smallestDenomination: 5,
           subunit: "Cent",
-          translations: lrdCurrencyTranslations,
         );
 }
 
@@ -1679,7 +1595,6 @@ class FiatLsl extends FiatCurrency {
           codeNumeric: "426",
           namesNative: const ["Lesotho loti"],
           subunit: "Sente",
-          translations: lslCurrencyTranslations,
         );
 }
 
@@ -1699,7 +1614,6 @@ class FiatLyd extends FiatCurrency {
           smallestDenomination: 50,
           subunit: "Dirham",
           subunitToUnit: 1000,
-          translations: lydCurrencyTranslations,
         );
 }
 
@@ -1716,7 +1630,6 @@ class FiatMad extends FiatCurrency {
           codeNumeric: "504",
           namesNative: const ["درهم مغربي"],
           subunit: "Centime",
-          translations: madCurrencyTranslations,
         );
 }
 
@@ -1734,7 +1647,6 @@ class FiatMdl extends FiatCurrency {
           codeNumeric: "498",
           namesNative: const ["leu moldovenesc"],
           subunit: "Ban",
-          translations: mdlCurrencyTranslations,
         );
 }
 
@@ -1753,7 +1665,6 @@ class FiatMga extends FiatCurrency {
           subunit: "Iraimbilanja",
           subunitToUnit: 5,
           unitFirst: true,
-          translations: mgaCurrencyTranslations,
         );
 }
 
@@ -1771,7 +1682,6 @@ class FiatMkd extends FiatCurrency {
           namesNative: const ["Македонски денар"],
           smallestDenomination: 100,
           subunit: "Deni",
-          translations: mkdCurrencyTranslations,
         );
 }
 
@@ -1790,7 +1700,6 @@ class FiatMmk extends FiatCurrency {
           namesNative: const ["ကျပ်"],
           smallestDenomination: 50,
           subunit: "Pya",
-          translations: mmkCurrencyTranslations,
         );
 }
 
@@ -1809,7 +1718,6 @@ class FiatMnt extends FiatCurrency {
           namesNative: const ["Монгол төгрөг"],
           smallestDenomination: 2000,
           subunit: "Möngö",
-          translations: mntCurrencyTranslations,
         );
 }
 
@@ -1828,7 +1736,6 @@ class FiatMop extends FiatCurrency {
           namesNative: const ["澳門圓"],
           smallestDenomination: 10,
           subunit: "Avo",
-          translations: mopCurrencyTranslations,
         );
 }
 
@@ -1846,7 +1753,6 @@ class FiatMru extends FiatCurrency {
           namesNative: const ["أوقية موريتانية"],
           subunit: "Khoums",
           subunitToUnit: 5,
-          translations: mruCurrencyTranslations,
         );
 }
 
@@ -1866,7 +1772,6 @@ class FiatMur extends FiatCurrency {
           smallestDenomination: 100,
           subunit: "Cent",
           unitFirst: true,
-          translations: murCurrencyTranslations,
         );
 }
 
@@ -1883,7 +1788,6 @@ class FiatMvr extends FiatCurrency {
           codeNumeric: "462",
           namesNative: const ["ދިވެހި ރުފިޔާ"],
           subunit: "Laari",
-          translations: mvrCurrencyTranslations,
         );
 }
 
@@ -1900,7 +1804,6 @@ class FiatMwk extends FiatCurrency {
           codeNumeric: "454",
           namesNative: const ["Malawian kwacha"],
           subunit: "Tambala",
-          translations: mwkCurrencyTranslations,
         );
 }
 
@@ -1922,7 +1825,6 @@ class FiatMxn extends FiatCurrency {
           smallestDenomination: 5,
           subunit: "Centavo",
           unitFirst: true,
-          translations: mxnCurrencyTranslations,
         );
 }
 
@@ -1941,7 +1843,6 @@ class FiatMyr extends FiatCurrency {
           smallestDenomination: 5,
           subunit: "Sen",
           unitFirst: true,
-          translations: myrCurrencyTranslations,
         );
 }
 
@@ -1962,7 +1863,6 @@ class FiatMzn extends FiatCurrency {
           namesNative: const ["Metical moçambicano"],
           subunit: "Centavo",
           unitFirst: true,
-          translations: mznCurrencyTranslations,
         );
 }
 
@@ -1983,7 +1883,6 @@ class FiatNad extends FiatCurrency {
           namesNative: const ["Namibian dollar"],
           smallestDenomination: 5,
           subunit: "Cent",
-          translations: nadCurrencyTranslations,
         );
 }
 
@@ -2003,7 +1902,6 @@ class FiatNgn extends FiatCurrency {
           smallestDenomination: 50,
           subunit: "Kobo",
           unitFirst: true,
-          translations: ngnCurrencyTranslations,
         );
 }
 
@@ -2023,7 +1921,6 @@ class FiatNio extends FiatCurrency {
           smallestDenomination: 5,
           subunit: "Centavo",
           unitFirst: true,
-          translations: nioCurrencyTranslations,
         );
 }
 
@@ -2046,7 +1943,6 @@ class FiatNok extends FiatCurrency {
           namesNative: const ["norsk krone"],
           smallestDenomination: 100,
           subunit: "Øre",
-          translations: nokCurrencyTranslations,
         );
 }
 
@@ -2067,7 +1963,6 @@ class FiatNpr extends FiatCurrency {
           namesNative: const ["रुपैयाँ"],
           subunit: "Paisa",
           unitFirst: true,
-          translations: nprCurrencyTranslations,
         );
 }
 
@@ -2089,7 +1984,6 @@ class FiatNzd extends FiatCurrency {
           smallestDenomination: 10,
           subunit: "Cent",
           unitFirst: true,
-          translations: nzdCurrencyTranslations,
         );
 }
 
@@ -2110,7 +2004,6 @@ class FiatOmr extends FiatCurrency {
           subunit: "Baisa",
           subunitToUnit: 1000,
           unitFirst: true,
-          translations: omrCurrencyTranslations,
         );
 }
 
@@ -2128,7 +2021,6 @@ class FiatPab extends FiatCurrency {
           namesNative: const ["Balboa panameño"],
           subunit: "Centésimo",
           unitFirst: true,
-          translations: pabCurrencyTranslations,
         );
 }
 
@@ -2149,7 +2041,6 @@ class FiatPen extends FiatCurrency {
           namesNative: const ["sol peruano"],
           subunit: "Céntimo",
           unitFirst: true,
-          translations: penCurrencyTranslations,
         );
 }
 
@@ -2168,7 +2059,6 @@ class FiatPgk extends FiatCurrency {
           namesNative: const ["Papua New Guinean kina"],
           smallestDenomination: 5,
           subunit: "Toea",
-          translations: pgkCurrencyTranslations,
         );
 }
 
@@ -2188,7 +2078,6 @@ class FiatPhp extends FiatCurrency {
           namesNative: const ["Piso ng Pilipinas"],
           subunit: "Centavo",
           unitFirst: true,
-          translations: phpCurrencyTranslations,
         );
 }
 
@@ -2210,7 +2099,6 @@ class FiatPkr extends FiatCurrency {
           smallestDenomination: 100,
           subunit: "Paisa",
           unitFirst: true,
-          translations: pkrCurrencyTranslations,
         );
 }
 
@@ -2230,7 +2118,6 @@ class FiatPln extends FiatCurrency {
           codeNumeric: "985",
           namesNative: const ["Polski złoty"],
           subunit: "Grosz",
-          translations: plnCurrencyTranslations,
         );
 }
 
@@ -2251,7 +2138,6 @@ class FiatPyg extends FiatCurrency {
           subunit: "Céntimo",
           subunitToUnit: 1,
           unitFirst: true,
-          translations: pygCurrencyTranslations,
         );
 }
 
@@ -2270,7 +2156,6 @@ class FiatQar extends FiatCurrency {
           codeNumeric: "634",
           namesNative: const ["ريال قطري"],
           subunit: "Dirham",
-          translations: qarCurrencyTranslations,
         );
 }
 
@@ -2289,7 +2174,6 @@ class FiatRon extends FiatCurrency {
           codeNumeric: "946",
           namesNative: const ["Leu românesc"],
           subunit: "Bani",
-          translations: ronCurrencyTranslations,
         );
 }
 
@@ -2309,7 +2193,6 @@ class FiatRsd extends FiatCurrency {
           smallestDenomination: 100,
           subunit: "Para",
           unitFirst: true,
-          translations: rsdCurrencyTranslations,
         );
 }
 
@@ -2330,7 +2213,6 @@ class FiatRub extends FiatCurrency {
           codeNumeric: "643",
           namesNative: const ["Российский рубль"],
           subunit: "Kopeck",
-          translations: rubCurrencyTranslations,
         );
 }
 
@@ -2350,7 +2232,6 @@ class FiatRwf extends FiatCurrency {
           smallestDenomination: 100,
           subunit: "Centime",
           subunitToUnit: 1,
-          translations: rwfCurrencyTranslations,
         );
 }
 
@@ -2371,7 +2252,6 @@ class FiatSar extends FiatCurrency {
           smallestDenomination: 5,
           subunit: "Hallallah",
           unitFirst: true,
-          translations: sarCurrencyTranslations,
         );
 }
 
@@ -2392,7 +2272,6 @@ class FiatSbd extends FiatCurrency {
           namesNative: const ["Solomon Islands dollar"],
           smallestDenomination: 10,
           subunit: "Cent",
-          translations: sbdCurrencyTranslations,
         );
 }
 
@@ -2412,7 +2291,6 @@ class FiatScr extends FiatCurrency {
           codeNumeric: "690",
           namesNative: const ["roupie seychelloise"],
           subunit: "Cent",
-          translations: scrCurrencyTranslations,
         );
 }
 
@@ -2431,7 +2309,6 @@ class FiatSdg extends FiatCurrency {
           namesNative: const ["جنيه سوداني"],
           subunit: "Piastre",
           unitFirst: true,
-          translations: sdgCurrencyTranslations,
         );
 }
 
@@ -2453,7 +2330,6 @@ class FiatSek extends FiatCurrency {
           namesNative: const ["svensk krona"],
           smallestDenomination: 100,
           subunit: "Öre",
-          translations: sekCurrencyTranslations,
         );
 }
 
@@ -2474,7 +2350,6 @@ class FiatSgd extends FiatCurrency {
           namesNative: const ["Singapore dollar"],
           subunit: "Cent",
           unitFirst: true,
-          translations: sgdCurrencyTranslations,
         );
 }
 
@@ -2493,7 +2368,6 @@ class FiatShp extends FiatCurrency {
           codeNumeric: "654",
           namesNative: const ["Saint Helena pound"],
           subunit: "Penny",
-          translations: shpCurrencyTranslations,
         );
 }
 
@@ -2512,7 +2386,6 @@ class FiatSle extends FiatCurrency {
           namesNative: const ["Sierra Leonean leone"],
           smallestDenomination: 1000,
           subunit: "Cent",
-          translations: sleCurrencyTranslations,
         );
 }
 
@@ -2531,7 +2404,6 @@ class FiatSll extends FiatCurrency {
           namesNative: const ["Sierra Leonean leone"],
           smallestDenomination: 1000,
           subunit: "Cent",
-          translations: sllCurrencyTranslations,
         );
 }
 
@@ -2549,7 +2421,6 @@ class FiatSos extends FiatCurrency {
           codeNumeric: "706",
           namesNative: const ["Shilin soomaali"],
           subunit: "Cent",
-          translations: sosCurrencyTranslations,
         );
 }
 
@@ -2567,7 +2438,6 @@ class FiatSrd extends FiatCurrency {
           codeNumeric: "968",
           namesNative: const ["Surinamese dollar"],
           subunit: "Cent",
-          translations: srdCurrencyTranslations,
         );
 }
 
@@ -2587,7 +2457,6 @@ class FiatSsp extends FiatCurrency {
           namesNative: const ["South Sudanese pound"],
           smallestDenomination: 5,
           subunit: "piaster",
-          translations: sspCurrencyTranslations,
         );
 }
 
@@ -2607,7 +2476,6 @@ class FiatStn extends FiatCurrency {
           namesNative: const ["dobra são-tomense"],
           smallestDenomination: 10,
           subunit: "Cêntimo",
-          translations: stnCurrencyTranslations,
         );
 }
 
@@ -2627,7 +2495,6 @@ class FiatSvc extends FiatCurrency {
           namesNative: const ["Colón salvadoreño"],
           subunit: "Centavo",
           unitFirst: true,
-          translations: svcCurrencyTranslations,
         );
 }
 
@@ -2647,7 +2514,6 @@ class FiatSyp extends FiatCurrency {
           namesNative: const ["الليرة السورية"],
           smallestDenomination: 100,
           subunit: "Piastre",
-          translations: sypCurrencyTranslations,
         );
 }
 
@@ -2666,7 +2532,6 @@ class FiatSzl extends FiatCurrency {
           namesNative: const ["Swazi lilangeni"],
           subunit: "Cent",
           unitFirst: true,
-          translations: szlCurrencyTranslations,
         );
 }
 
@@ -2685,7 +2550,6 @@ class FiatThb extends FiatCurrency {
           namesNative: const ["บาทไทย"],
           subunit: "Satang",
           unitFirst: true,
-          translations: thbCurrencyTranslations,
         );
 }
 
@@ -2702,7 +2566,6 @@ class FiatTjs extends FiatCurrency {
           codeNumeric: "972",
           namesNative: const ["Сомонӣ"],
           subunit: "Diram",
-          translations: tjsCurrencyTranslations,
         );
 }
 
@@ -2719,7 +2582,6 @@ class FiatTmt extends FiatCurrency {
           codeNumeric: "934",
           namesNative: const ["manat"],
           subunit: "Tenge",
-          translations: tmtCurrencyTranslations,
         );
 }
 
@@ -2739,7 +2601,6 @@ class FiatTnd extends FiatCurrency {
           smallestDenomination: 10,
           subunit: "Millime",
           subunitToUnit: 1000,
-          translations: tndCurrencyTranslations,
         );
 }
 
@@ -2758,7 +2619,6 @@ class FiatTop extends FiatCurrency {
           namesNative: const ["Tongan paʻanga"],
           subunit: "Seniti",
           unitFirst: true,
-          translations: topCurrencyTranslations,
         );
 }
 
@@ -2780,7 +2640,6 @@ class FiatTry extends FiatCurrency {
           namesNative: const ["Türk lirası"],
           subunit: "kuruş",
           unitFirst: true,
-          translations: tryCurrencyTranslations,
         );
 }
 
@@ -2800,7 +2659,6 @@ class FiatTtd extends FiatCurrency {
           codeNumeric: "780",
           namesNative: const ["Trinidad & Tobago Dollar"],
           subunit: "Cent",
-          translations: ttdCurrencyTranslations,
         );
 }
 
@@ -2822,7 +2680,6 @@ class FiatTwd extends FiatCurrency {
           smallestDenomination: 50,
           subunit: "Cent",
           unitFirst: true,
-          translations: twdCurrencyTranslations,
         );
 }
 
@@ -2841,7 +2698,6 @@ class FiatTzs extends FiatCurrency {
           smallestDenomination: 5000,
           subunit: "Cent",
           unitFirst: true,
-          translations: tzsCurrencyTranslations,
         );
 }
 
@@ -2859,7 +2715,6 @@ class FiatUah extends FiatCurrency {
           codeNumeric: "980",
           namesNative: const ["українська гривня"],
           subunit: "Kopiyka",
-          translations: uahCurrencyTranslations,
         );
 }
 
@@ -2878,7 +2733,6 @@ class FiatUgx extends FiatCurrency {
           smallestDenomination: 1000,
           subunit: "Cent",
           subunitToUnit: 1,
-          translations: ugxCurrencyTranslations,
         );
 }
 
@@ -2900,7 +2754,6 @@ class FiatUsd extends FiatCurrency {
           priority: 1,
           subunit: "Cent",
           unitFirst: true,
-          translations: usdCurrencyTranslations,
         );
 }
 
@@ -2923,7 +2776,6 @@ class FiatUyu extends FiatCurrency {
           smallestDenomination: 100,
           subunit: "Centésimo",
           unitFirst: true,
-          translations: uyuCurrencyTranslations,
         );
 }
 
@@ -2942,7 +2794,6 @@ class FiatUzs extends FiatCurrency {
           namesNative: const ["Oʻzbekiston soʻmi"],
           smallestDenomination: 100,
           subunit: "Tiyin",
-          translations: uzsCurrencyTranslations,
         );
 }
 
@@ -2963,7 +2814,6 @@ class FiatVes extends FiatCurrency {
           namesNative: const ["Bolívar Soberano"],
           subunit: "Céntimo",
           unitFirst: true,
-          translations: vesCurrencyTranslations,
         );
 }
 
@@ -2985,7 +2835,6 @@ class FiatVnd extends FiatCurrency {
           smallestDenomination: 100,
           subunit: "Hào",
           subunitToUnit: 1,
-          translations: vndCurrencyTranslations,
         );
 }
 
@@ -3003,7 +2852,6 @@ class FiatVuv extends FiatCurrency {
           namesNative: const ["Vanuatu vatu"],
           subunitToUnit: 1,
           unitFirst: true,
-          translations: vuvCurrencyTranslations,
         );
 }
 
@@ -3023,7 +2871,6 @@ class FiatWst extends FiatCurrency {
           namesNative: const ["Samoa tālā"],
           smallestDenomination: 10,
           subunit: "Sene",
-          translations: wstCurrencyTranslations,
         );
 }
 
@@ -3044,7 +2891,6 @@ class FiatXaf extends FiatCurrency {
           smallestDenomination: 100,
           subunit: "Centime",
           subunitToUnit: 1,
-          translations: xafCurrencyTranslations,
         );
 }
 
@@ -3064,7 +2910,6 @@ class FiatXag extends FiatCurrency {
           smallestDenomination: 0,
           subunit: "oz",
           subunitToUnit: 1,
-          translations: xagCurrencyTranslations,
         );
 }
 
@@ -3084,7 +2929,6 @@ class FiatXau extends FiatCurrency {
           smallestDenomination: 0,
           subunit: "oz",
           subunitToUnit: 1,
-          translations: xauCurrencyTranslations,
         );
 }
 
@@ -3102,7 +2946,6 @@ class FiatXba extends FiatCurrency {
           namesNative: const ["European Composite Unit (EURCO)"],
           smallestDenomination: 0,
           subunitToUnit: 1,
-          translations: xbaCurrencyTranslations,
         );
 }
 
@@ -3120,7 +2963,6 @@ class FiatXbb extends FiatCurrency {
           namesNative: const ["European Monetary Unit (E.M.U.-6)"],
           smallestDenomination: 0,
           subunitToUnit: 1,
-          translations: xbbCurrencyTranslations,
         );
 }
 
@@ -3138,7 +2980,6 @@ class FiatXbc extends FiatCurrency {
           namesNative: const ["European Unit of Account 9 (E.U.A.-9)"],
           smallestDenomination: 0,
           subunitToUnit: 1,
-          translations: xbcCurrencyTranslations,
         );
 }
 
@@ -3156,7 +2997,6 @@ class FiatXbd extends FiatCurrency {
           namesNative: const ["European Unit of Account 17 (E.U.A.-17)"],
           smallestDenomination: 0,
           subunitToUnit: 1,
-          translations: xbdCurrencyTranslations,
         );
 }
 
@@ -3177,7 +3017,6 @@ class FiatXcd extends FiatCurrency {
           namesNative: const ["East Caribbean dollar"],
           subunit: "Cent",
           unitFirst: true,
-          translations: xcdCurrencyTranslations,
         );
 }
 
@@ -3197,7 +3036,6 @@ class FiatXdr extends FiatCurrency {
           namesNative: const ["Derechos especiales de giro"],
           smallestDenomination: 0,
           subunitToUnit: 1,
-          translations: xdrCurrencyTranslations,
         );
 }
 
@@ -3218,7 +3056,6 @@ class FiatXof extends FiatCurrency {
           smallestDenomination: 100,
           subunit: "Centime",
           subunitToUnit: 1,
-          translations: xofCurrencyTranslations,
         );
 }
 
@@ -3238,7 +3075,6 @@ class FiatXpd extends FiatCurrency {
           smallestDenomination: 0,
           subunit: "oz",
           subunitToUnit: 1,
-          translations: xpdCurrencyTranslations,
         );
 }
 
@@ -3258,7 +3094,6 @@ class FiatXpf extends FiatCurrency {
           smallestDenomination: 100,
           subunit: "Centime",
           subunitToUnit: 1,
-          translations: xpfCurrencyTranslations,
         );
 }
 
@@ -3276,7 +3111,6 @@ class FiatXpt extends FiatCurrency {
           namesNative: const ["Platinum"],
           smallestDenomination: 0,
           subunitToUnit: 1,
-          translations: xptCurrencyTranslations,
         );
 }
 
@@ -3295,7 +3129,6 @@ class FiatXts extends FiatCurrency {
           namesNative: const ["Test currency"],
           smallestDenomination: 0,
           subunitToUnit: 1,
-          translations: xtsCurrencyTranslations,
         );
 }
 
@@ -3314,7 +3147,6 @@ class FiatYer extends FiatCurrency {
           namesNative: const ["ريال يمني"],
           smallestDenomination: 100,
           subunit: "Fils",
-          translations: yerCurrencyTranslations,
         );
 }
 
@@ -3336,7 +3168,6 @@ class FiatZar extends FiatCurrency {
           smallestDenomination: 10,
           subunit: "Cent",
           unitFirst: true,
-          translations: zarCurrencyTranslations,
         );
 }
 
@@ -3356,7 +3187,6 @@ class FiatZmw extends FiatCurrency {
           smallestDenomination: 5,
           subunit: "Ngwee",
           unitFirst: true,
-          translations: zmwCurrencyTranslations,
         );
 }
 
@@ -3376,6 +3206,5 @@ class FiatZwl extends FiatCurrency {
           namesNative: const ["Zimbabwe Dollar"],
           subunit: "Cent",
           unitFirst: true,
-          translations: zwlCurrencyTranslations,
         );
 }

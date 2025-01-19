@@ -4,6 +4,7 @@ description: Provides data for world currencies in the form of sealed classes.
 maintainer: Roman Cinis
 repository: https://github.com/tsinis/sealed_world/tree/main/packages/sealed_currencies
 issue_tracker: https://github.com/tsinis/sealed_world/issues
+publish_to: none # TODO! Remove this line before publishing.
 topics:
   - currencies
   - currency
@@ -21,6 +22,8 @@ environment:
   sdk: ^3.6.0
 
 dependencies:
+  l10n_currencies:
+    path: ../l10n_currencies
   sealed_languages: ^2.0.0
 
 dev_dependencies:

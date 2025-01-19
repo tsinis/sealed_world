@@ -13,20 +13,20 @@ class FiatCurrency extends Currency
   /// {@template currency_constructor}
   /// Creates a new instance of [FiatCurrency].
   ///
-  /// The `code`, `name`, `namesNative`, `translations` and `codeNumeric`
-  /// parameters are required. The `priority` parameter defaults to 100, and
-  /// the `smallestDenomination` parameter defaults to 1.
+  /// The [code], [name], [namesNative], [translations] and [codeNumeric]
+  /// parameters are required. The [priority] parameter defaults to 100, and
+  /// the [smallestDenomination] parameter defaults to 1.
   ///
-  /// The `alternateSymbols`, `disambiguateSymbol`, `htmlEntity`, `subunit`,
-  /// `subunitToUnit`, and `unitFirst` parameters are optional.
+  /// The [alternateSymbols], [disambiguateSymbol], [htmlEntity], [subunit],
+  /// [subunitToUnit], and [unitFirst] parameters are optional.
   ///
-  /// The `symbol`, `decimalMark`, and `thousandsSeparator` parameters are
+  /// The [symbol], [decimalMark], and [thousandsSeparator] parameters are
   /// inherited from the [Currency] class and are also optional.
   /// {@endtemplate}
-  /// Throws an `AssertionError` if `code` is not exactly 3 characters long,
-  /// `codeNumeric` is not exactly 3 characters long, `namesNative` is empty,
-  /// `htmlEntity` is empty, `subunit` is empty, `alternateSymbols` is empty, or
-  /// `smallestDenomination` is negative.
+  /// Throws an [AssertionError] if [code] is not exactly 3 characters long,
+  /// [codeNumeric] is not exactly 3 characters long, [namesNative] is empty,
+  /// [htmlEntity] is empty, [subunit] is empty, [alternateSymbols] is empty, or
+  /// [smallestDenomination] is negative.
   const FiatCurrency({
     /// The international 3-numeric non-empty letter code as defined by the ISO
     /// 4217 standard.
@@ -34,7 +34,6 @@ class FiatCurrency extends Currency
     required super.name,
     required this.namesNative,
     required this.codeNumeric,
-    required this.translations,
     this.alternateSymbols,
     this.disambiguateSymbol,
     this.htmlEntity,
@@ -46,6 +45,7 @@ class FiatCurrency extends Currency
     super.symbol,
     super.decimalMark = dot,
     super.thousandsSeparator = ",",
+    List<TranslatedName>? translations,
   })  : assert(
           code.length == IsoStandardized.codeLength,
           """`code` should be exactly ${IsoStandardized.codeLength} characters long!""",
@@ -74,10 +74,7 @@ class FiatCurrency extends Currency
           smallestDenomination >= 0,
           "`smallestDenomination` should not be negative!",
         ),
-        assert(
-          translations != const <TranslatedName>[],
-          "`translations` should not be empty!",
-        );
+        _translations = translations;
 
   /// {@macro permissive_constructor}
   /// {@macro currency_constructor}
@@ -86,7 +83,6 @@ class FiatCurrency extends Currency
     required super.name,
     this.namesNative = const [],
     this.codeNumeric = "",
-    this.translations = const [],
     this.alternateSymbols,
     this.disambiguateSymbol,
     this.htmlEntity,
@@ -98,7 +94,8 @@ class FiatCurrency extends Currency
     super.symbol,
     super.decimalMark = dot,
     super.thousandsSeparator = ",",
-  });
+    List<TranslatedName>? translations,
+  }) : _translations = translations;
 
   /// Returns a [FiatCurrency] instance from an letter ISO 4217 code.
   ///
@@ -178,13 +175,13 @@ class FiatCurrency extends Currency
   /// final currency = FiatCurrency.fromAnyCode("eur");
   /// ```
   ///
-  /// In the above example, the `fromAnyCode` factory method is called with the
+  /// In the above example, the  factory method is called with the
   /// code "eur". It uses the `maybeMapIsoCode` method to determine the
   /// appropriate mapping for the code. If the code is numeric, it calls the
   /// `fromCodeNumeric` factory method to create a [FiatCurrency] instance.
   /// Otherwise, it calls the `fromCode` factory method to create a
   /// [FiatCurrency] instance. The resulting [FiatCurrency] instance is assigned
-  /// to the `code` variable.
+  /// to the [code] variable.
   factory FiatCurrency.fromAnyCode(
     Object code, [
     Iterable<FiatCurrency>? currencies,
@@ -233,9 +230,6 @@ class FiatCurrency extends Currency
   /// Should the currency symbol precede the amount, or should it come after?
   final bool unitFirst;
 
-  @override
-  final List<TranslatedName> translations;
-
   /// Default decimal separator for most currencies.
   static const dot = ".";
 
@@ -248,7 +242,12 @@ class FiatCurrency extends Currency
   String get internationalName => name;
 
   @override
-  LocalizationDelegate get l10n => const LocalizationDelegate(); // TODO!
+  List<TranslatedName> get translations =>
+      _translations ?? l10n.translatedNames({this});
+
+  @override
+  LocalizationDelegate get l10n =>
+      LocalizationDelegate(mapper: () => CurrenciesLocaleMapper().localize);
 
   /// Returns a string representation of this instance.
   @override
@@ -330,7 +329,7 @@ class FiatCurrency extends Currency
   /// value "eur". It uses the `maybeMapIsoCode` method to determine the
   /// appropriate mapping for the value. If the value is numeric, it compares it
   /// with the `codeNumeric` property of each [FiatCurrency] instance.
-  /// Otherwise, it compares it with the uppercase version of the `code`
+  /// Otherwise, it compares it with the uppercase version of the [code]
   /// property of each [FiatCurrency] instance. The resulting [FiatCurrency]
   /// instance is assigned to the `currency` variable.
   static FiatCurrency? maybeFromAnyCode(
@@ -462,4 +461,6 @@ class FiatCurrency extends Currency
   /// [FiatCurrency] class. This is combination of [FiatCurrency.list]
   /// plus all currencies from the [FiatCurrency.specialPurposeList].
   static const listExtended = [...list, ...specialPurposeList];
+
+  final List<TranslatedName>? _translations;
 }

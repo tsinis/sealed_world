@@ -1,3 +1,5 @@
+import "package:l10n_currencies/l10n_currencies.dart"
+    show CurrenciesLocaleMapper;
 import "package:sealed_languages/sealed_languages.dart";
 
 import "../../collections/fiat_currency_collections.dart";
