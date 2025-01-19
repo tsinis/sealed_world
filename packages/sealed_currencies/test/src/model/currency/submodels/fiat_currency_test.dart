@@ -593,7 +593,7 @@ void main() => group("$FiatCurrency", () {
             name: value.name,
             namesNative: value.namesNative,
             codeNumeric: value.codeNumeric,
-            translations: value.translations,
+            translations: const [],
           ),
           shouldThrow: false,
         );
@@ -639,17 +639,6 @@ void main() => group("$FiatCurrency", () {
             namesNative: const [],
             codeNumeric: value.codeNumeric,
             translations: value.translations,
-          ),
-        );
-
-        assertTest(
-          "empty translations",
-          () => FiatCurrency(
-            code: value.code,
-            name: value.name,
-            namesNative: value.namesNative,
-            codeNumeric: value.codeNumeric,
-            translations: const [],
           ),
         );
 
