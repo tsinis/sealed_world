@@ -264,8 +264,7 @@ class FiatCurrency extends Currency
           "namesNative: ${jsonEncode(namesNative)}, "
           "priority: $priority, smallestDenomination: $smallestDenomination, "
           '${subunit == null ? '' : 'subunit: "$subunit", '}'
-          "subunitToUnit: $subunitToUnit, unitFirst: $unitFirst, "
-          "translations: ${code.toLowerCase()}CurrencyTranslations,)";
+          "subunitToUnit: $subunitToUnit, unitFirst: $unitFirst,)";
 
   @override
   String toJson({JsonCodec codec = const JsonCodec()}) => codec.encode(toMap());
@@ -290,7 +289,7 @@ class FiatCurrency extends Currency
   ///   "Euro",
   ///   where: (currency) => currency.namesNative.first,
   /// );
-  /// print(euro); // Prints: "Currency(code: EUR)".
+  /// print(euro); // Prints: "Currency(code: "EUR")".
   /// ```
   static FiatCurrency? maybeFromValue<T extends Object>(
     T value, {

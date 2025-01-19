@@ -22,7 +22,7 @@ void main() => group("$Currency", () {
             r'htmlEntity: r"$", codeNumeric: "032", '
             'namesNative: ["Argentine peso"], priority: 100, '
             'smallestDenomination: 1, subunit: "Centavo", subunitToUnit: 100, '
-            "unitFirst: true, translations: arsCurrencyTranslations,)",
+            "unitFirst: true,)",
           ),
         );
       });
