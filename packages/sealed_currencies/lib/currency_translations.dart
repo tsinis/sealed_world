@@ -5,6 +5,9 @@
 // Both projects are licensed under the MIT License.
 
 /// Provides currency translations for sealed_currencies.
+@Deprecated(
+  "Please migrate to `package:l10n_currencies/l10n_currencies.dart` package.",
+)
 library sealed_currency_translations;
 
 import "package:sealed_languages/sealed_languages.dart";

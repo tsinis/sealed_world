@@ -1727,7 +1727,7 @@ extension FiatCurrencyFunctional on FiatCurrency {
       };
 }
 
-extension FiatCurrencyBoolGetters on FiatCurrency {
+extension FiatCurrencyBoolGetters on FiatCurrency? {
   /// Checks if this [FiatCurrency] instance is United Arab Emirates Dirham.
   bool get isAed => this == const FiatAed();
 

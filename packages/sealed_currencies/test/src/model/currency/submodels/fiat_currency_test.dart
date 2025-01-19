@@ -1,6 +1,7 @@
 // ignore_for_file: deprecated_member_use, it's TODO!
 
 import "package:_sealed_world_tests/sealed_world_tests.dart";
+// ignore: deprecated_member_use_from_same_package, it's TODO!
 import "package:sealed_currencies/currency_translations.dart";
 import "package:sealed_currencies/src/helpers/fiat_currency/fiat_currency_json.dart";
 import "package:sealed_currencies/src/model/currency/currency.dart";
