@@ -1,3 +1,22 @@
+## 2.0.0
+
+🎉 Second anniversary and new major release!
+
+NEW FEATURES
+
+- Introduced new methods for working with common names and common name maps: `commonNamesMap` on ISO collections and `commonNameFor`/`maybeCommonNameFor` on ISO objects. These methods are significantly faster than the old `translations` - related methods because they work directly with locale-specific maps instead of iterating through all translations of each ISO object.
+- The `translations` getter is now a computed field. This means it will only generate the translations when they are requested, rather than storing them all in memory. It's recommended to cache the results of the getter to avoid redundant calculations. Because of that - `translation` and `maybeTranslation` methods are no longer recommended for retriving localization data.
+- The `commonNamesCacheMap` is deprecated because it relies on the memory-intensive `translations` getter.
+- New localization delegates on `IsoTranslated` objects simplify complex queries for object localizations.
+- Bool getters on `IsoStandardized` objects can now be applied to null values. For example, `maybeIso.isRub` will return `false` if `maybeIso` is null, without the need for additional null-checks.
+
+BREAKING CHANGES
+
+- The package now requires Dart v3.6.0 or higher.
+- The `IsoTranslated<T, N, L>` class now uses three generic types instead of two. If you used this class directly in your code, simply add the additional generic `<L extends BasicLocale>` to your reference.
+- The default `toString()` implementation of `BasicLocale` now uses Flutter's `Locale`-like output format. You can still access the old output by setting the `short` flag to `false`.
+- The `sealed_currency_translations` library is deprecated. Migrate to the [l10n_currencies](https://pub.dev/packages/l10n_currencies) package or use `l10n` getter in ISO objects that provides the same data without holding all translations in memory. This sub-library and its content (except for supported locales lists - they will be moved to the main library) will be removed in the next package version.
+
 ## 1.5.1
 
 NEW FEATURES

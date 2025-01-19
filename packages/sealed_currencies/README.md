@@ -2,7 +2,7 @@
 [![Codecov](https://codecov.io/github/tsinis/sealed_world/branch/main/graph/badge.svg)](https://app.codecov.io/github/tsinis/sealed_world/flags)
 [![CodeRabbit](https://img.shields.io/coderabbit/prs/github/tsinis/sealed_world?logo=vowpalwabbit&logoColor=orange&color=dark-green)](https://coderabbit.ai)
 [![Dart Code Metrics](https://img.shields.io/badge/passing-dcm?style=flat&logo=dart&logoColor=lightskyblue&label=dcm&color=dark-green)](https://dcm.dev)
-[![CI checks](https://github.com/tsinis/sealed_world/actions/workflows/sealed_currencies.yaml/badge.svg)](https://github.com/tsinis/sealed_world/actions/workflows/sealed_currencies.yaml)
+[![CI checks](https://github.com/tsinis/sealed_world/actions/workflows/verify_packages.yaml/badge.svg)](https://github.com/tsinis/sealed_world/actions/workflows/verify_packages.yaml)
 [![Pub points](https://img.shields.io/pub/points/sealed_currencies)](https://pub.dev/packages/sealed_currencies/score)
 [![Last commit](https://img.shields.io/github/last-commit/tsinis/sealed_world)](https://github.com/tsinis/sealed_world/commits/main/packages/sealed_currencies)
 [![GitHub stars](https://img.shields.io/github/stars/tsinis/sealed_world?style=flat&color=green)](https://github.com/tsinis/sealed_world/stargazers)
@@ -15,24 +15,24 @@ This ISO-driven, pure Dart, fully tested and 3rd-party dependency-free package p
 
 **FiatCurrency** class provides the following information about currencies:
 
-| **Field**            | **Required** | **Description**                                                                         | **Example for FiatEur**                        |
-| -------------------- | ------------ | --------------------------------------------------------------------------------------- | ---------------------------------------------- |
-| code                 | **Yes**      | The international 3-numeric non-empty letter code as defined by the ISO 4217 standard.  | "EUR"                                          |
-| name                 | **Yes**      | The English name of the currency.                                                       | "Euro"                                         |
-| namesNative          | **Yes**      | The native names of the currency in different locales.                                  | ["Euro"]                                       |
-| codeNumeric          | **Yes**      | The international 3-numeric non-empty numeric code as defined by the ISO 4217 standard. | "978"                                          |
-| alternateSymbols     | No           | Alternative symbols for this currency or `null` if no such symbols exists.              | `null`                                         |
-| disambiguateSymbol   | No           | Alternative currency used if symbol is ambiguous, or `null` if no such symbol exists.   | `null`                                         |
-| htmlEntity           | No           | The HTML entity for the currency symbol, or `null` if no such entity exists.            | "€"                                            |
-| smallestDenomination | **Yes**      | Smallest amount of cash possible (in the subunit of this currency).                     | 1                                              |
-| subunit              | No           | The name of the fractional monetary unit, or `null` if no such name exists.             | "Cent"                                         |
-| subunitToUnit        | **Yes**      | The proportion between the unit and the subunit.                                        | 100                                            |
-| priority             | **Yes**      | A numerical value that can be used to sort/group any currency list.                     | 2                                              |
-| unitFirst            | **Yes**      | Should the currency symbol precede the amount, or should it come after?                 | true                                           |
-| symbol               | No           | The currency symbol.                                                                    | "€"                                            |
-| decimalMark          | **Yes**      | The decimal mark, or character used to separate the whole unit from the subunit.        | ","                                            |
-| thousandsSeparator   | **Yes**      | The character used to separate thousands grouping of the whole unit.                    | "."                                            |
-| translations         | **Yes**      | A list of `TranslatedName`s representing the currency name translations.                | **115+** translations for a Euro currency name |
+| **Field**            | **Required**                | **Description**                                                                         | **Example for FiatEur**                        |
+| -------------------- | --------------------------- | --------------------------------------------------------------------------------------- | ---------------------------------------------- |
+| code                 | **Yes**                     | The international 3-numeric non-empty letter code as defined by the ISO 4217 standard.  | "EUR"                                          |
+| name                 | **Yes**                     | The English name of the currency.                                                       | "Euro"                                         |
+| namesNative          | **Yes**                     | The native names of the currency in different locales.                                  | ["Euro"]                                       |
+| codeNumeric          | **Yes**                     | The international 3-numeric non-empty numeric code as defined by the ISO 4217 standard. | "978"                                          |
+| alternateSymbols     | No                          | Alternative symbols for this currency or `null` if no such symbols exists.              | `null`                                         |
+| disambiguateSymbol   | No                          | Alternative currency used if symbol is ambiguous, or `null` if no such symbol exists.   | `null`                                         |
+| htmlEntity           | No                          | The HTML entity for the currency symbol, or `null` if no such entity exists.            | "€"                                            |
+| smallestDenomination | **Yes**                     | Smallest amount of cash possible (in the subunit of this currency).                     | 1                                              |
+| subunit              | No                          | The name of the fractional monetary unit, or `null` if no such name exists.             | "Cent"                                         |
+| subunitToUnit        | **Yes**                     | The proportion between the unit and the subunit.                                        | 100                                            |
+| priority             | **Yes**                     | A numerical value that can be used to sort/group any currency list.                     | 2                                              |
+| unitFirst            | **Yes**                     | Should the currency symbol precede the amount, or should it come after?                 | true                                           |
+| symbol               | No                          | The currency symbol.                                                                    | "€"                                            |
+| decimalMark          | **Yes**                     | The decimal mark, or character used to separate the whole unit from the subunit.        | ","                                            |
+| thousandsSeparator   | **Yes**                     | The character used to separate thousands grouping of the whole unit.                    | "."                                            |
+| translations         | **Yes** (for built-in data) | A list of `TranslatedName`s representing the currency name translations.                | **115+** translations for a Euro currency name |
 
 Compile time constant list of all currencies accessible via `FiatCurrency.list` and more over, the **FiatCurrency** class provides the following methods/constructors:
 
@@ -48,7 +48,7 @@ Compile time constant list of all currencies accessible via `FiatCurrency.list` 
 
 and (thanks to sealed nature of the class) functional-style like methods: `whenOrNull`, `maybeWhen`, `when`, `map`, `maybeMap` and `is*` boolean getters. You can also find a lot of common method you may know from Dart ecosystem - `toString` overrides, `copyWith`, `toJson`, etc. Also a compile time const, tree-shakable, case case insensitive code `map`s (for a 0(1) access time code mapping), `list` and much more.
 
-> Translations: Use `maybeTranslation()` or `translation()` methods to get translations for specific locale.
+> Translations: Use `maybeCommonNameFor()` or `commonNameFor()` methods to get translations for specific locale.
 
 ### Getting started
 
@@ -71,31 +71,38 @@ Use `FiatCurrency` class to get information about currencies. Either construct a
 
 ```dart
   print(FiatCurrency.listExtended.length); // Prints: "169".
-  print(FiatCurrency.list.length); // Prints: "159".
 
   final serbianDinar = FiatCurrency.fromCode("Rsd");
-  print(serbianDinar); // Prints: "Serbian Dinar".
+  print(serbianDinar.name); // Prints: "Serbian Dinar".
 
   final maybeEuro = FiatCurrency.maybeFromValue(
     "Euro",
     where: (currency) => currency.namesNative.first,
   );
-  print(maybeEuro?.isEur); // Prints: true.
+  print(maybeEuro.isEur); // Prints: true.
   print(maybeEuro?.toString(short: false));
   /*
   Prints: "FiatCurrency(code: "EUR", name: "Euro", decimalMark: ",",
   thousandsSeparator: ".", symbol: r"€", htmlEntity: "€", codeNumeric: "978",
   namesNative: ["Euro"], priority: 2, smallestDenomination: 1, subunit: "Cent",
-  subunitToUnit: 100, unitFirst: true), translations: eurCurrencyTranslations".
+  subunitToUnit: 100, unitFirst: true,)".
   */
 
   // Prints German translations of all available regular currencies.
-  for (final currency in FiatCurrency.list) {
-    print(
-      "German name of ${currency.name}: "
-      "${currency.maybeTranslation(const BasicLocale(LangDeu()))?.name}",
-    );
+  final germanNames = FiatCurrency.list.commonNamesMap(
+    options: const LocaleMappingOptions(mainLocale: BasicLocale(LangDeu())),
+  );
+
+  print(
+    """Fully translated to German: ${germanNames.length == FiatCurrency.list.length}""",
+  ); // Prints: "Fully translated to German: true".
+  for (final deuTranslation in germanNames.entries) {
+    print("German name of ${deuTranslation.key.name}: ${deuTranslation.value}");
   }
+
+  print(
+    serbianDinar.maybeCommonNameFor(const BasicLocale(LangPol())),
+  ); // Prints common Polish name of RSD: "dinar serbski".
 ```
 
 For more usage examples, please see the `/example` folder.
@@ -123,8 +130,6 @@ If you have any issues or suggestions for the package, please file them in the G
 - [ISO](https://www.iso.org/iso-4217-currency-codes.html)
 - [Wikipedia](https://wikipedia.org/wiki/ISO_4217)
 - [Data Source](https://github.com/RubyMoney/money)[^2]
-- [Primary Translations Source](https://github.com/umpirsky/currency-list)
-- [Secondary Translations Source](https://github.com/symfony/intl)
 - [Project Roadmap](https://github.com/users/tsinis/projects/1)
 
 [^1]: Doesn't contain complementary funds, etc. currency codes: BOV, CHE, CHW, COU, MXV, USN, UYI, UYW, VED, XSU, XUA, XXX.
