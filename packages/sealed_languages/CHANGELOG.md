@@ -1,6 +1,6 @@
 ## 2.0.0
 
-🎉 Second anniversary and major new release!
+🎉 Second anniversary and new major release!
 
 NEW FEATURES
 

@@ -43,6 +43,10 @@
     {
       "name": "L10N Langs",
       "path": "../packages/l10n_languages"
+    },
+    {
+      "name": "L10N Currencies",
+      "path": "../packages/l10n_currencies"
     }
   ],
   "settings": {

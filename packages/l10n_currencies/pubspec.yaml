@@ -1,0 +1,29 @@
+version: 0.1.0
+name: l10n_currencies
+description: Provides currency names translations (for 161 different locales).
+maintainer: Roman Cinis
+repository: https://github.com/tsinis/sealed_world/tree/main/packages/l10n_currencies
+issue_tracker: https://github.com/tsinis/sealed_world/issues
+topics:
+  - l10n
+  - localization
+  - currency
+  - translations
+  - currencies
+
+screenshots:
+  - description: "Code quality"
+    path: doc/quality.webp
+  - description: "Examples of usage"
+    path: doc/example.webp
+
+environment:
+  sdk: ^3.6.0
+
+dev_dependencies:
+  _sealed_world_tests:
+    path: ../_sealed_world_tests
+  coverage: ^1.11.1 # From Google
+  dart_code_metrics_presets: ^2.20.0
+  lints: ^5.1.1 # From Google
+  test: ^1.25.14 # From Google

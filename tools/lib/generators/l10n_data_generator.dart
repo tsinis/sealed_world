@@ -19,7 +19,10 @@ class L10NDataGenerator {
   Future<void> generate(String path) async {
     final directory = Directory(path);
     final io = IoUtils(directory)
-      ..writeContentToFile(join(path, "iso_locale_mapper.dart"), "TODO!");
+      ..copyFile(
+        "../packages/l10n_languages/lib/src/iso_locale_mapper.dart",
+        directory,
+      );
 
     final locales = <String>{};
 
@@ -35,7 +38,8 @@ class L10NDataGenerator {
     final plural = package.dataRepresentPlural.toPascalCase();
 
     final mapperBugger = StringBuffer("""
-import "iso_locale_mapper.dart";
+import "src/iso_locale_mapper.dart";
+export "src/iso_locale_mapper.dart";
 
 /// Provides ${package.dataRepresent} names translations for different locales.
 // ignore: prefer-match-file-name, it's main library file.

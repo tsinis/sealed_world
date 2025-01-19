@@ -10,7 +10,7 @@ void main() => group("IsoTranslatedIterableExtension", tags: "generated", () {
       final locales =
           LanguagesLocaleMapper().map.keys.map(parser.parseLocale).nonNulls;
 
-      const noFallbackMap = <String, int>{
+      const noFallbackMap = {
         "af": 184,
         "ak": 38,
         "am": 184,

@@ -1,3 +1,5 @@
+// ignore_for_file: deprecated_member_use, it's TODO!
+
 import "package:_sealed_world_tests/sealed_world_tests.dart";
 import "package:sealed_currencies/currency_translations.dart";
 import "package:sealed_currencies/src/helpers/fiat_currency/fiat_currency_json.dart";
@@ -591,7 +593,7 @@ void main() => group("$FiatCurrency", () {
             name: value.name,
             namesNative: value.namesNative,
             codeNumeric: value.codeNumeric,
-            translations: value.translations,
+            translations: const [],
           ),
           shouldThrow: false,
         );
@@ -637,17 +639,6 @@ void main() => group("$FiatCurrency", () {
             namesNative: const [],
             codeNumeric: value.codeNumeric,
             translations: value.translations,
-          ),
-        );
-
-        assertTest(
-          "empty translations",
-          () => FiatCurrency(
-            code: value.code,
-            name: value.name,
-            namesNative: value.namesNative,
-            codeNumeric: value.codeNumeric,
-            translations: const [],
           ),
         );
 

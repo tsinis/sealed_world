@@ -16,7 +16,7 @@ Future<void> main(List<String> args) {
     dirName,
     "lib",
     PathConstants.src,
-    "l10n",
+    PathConstants.src,
   );
 
   final generator = L10NDataGenerator(package);
