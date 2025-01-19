@@ -252,20 +252,10 @@ const hmdCountryTranslations = [
   TranslatedName(LangAmh(), name: "ኽርድ ደሴቶችና ማክዶናልድ ደሴቶች"),
   TranslatedName(LangAsm(), name: "হাৰ্ড দ্বীপ আৰু মেকডোনাল্ড দ্বীপপুঞ্জ"),
   TranslatedName(LangAze(), name: "Herd və Makdonald adaları"),
-  TranslatedName(
-    LangAze(),
-    name: "Һерд вә Макдоналд адалары",
-    script: ScriptCyrl(),
-  ),
   TranslatedName(LangBel(), name: "Астравы Херд і Макдональд"),
   TranslatedName(LangBul(), name: "острови Хърд и Макдоналд"),
   TranslatedName(LangBen(), name: "হার্ড এবং ম্যাকডোনাল্ড দ্বীপপুঞ্জ"),
   TranslatedName(LangBos(), name: "Herd i arhipelag MekDonald"),
-  TranslatedName(
-    LangBos(),
-    name: "Херд и Мекдоналд Острва",
-    script: ScriptCyrl(),
-  ),
   TranslatedName(LangCat(), name: "Illa Heard i Illes McDonald"),
   TranslatedName(LangChe(), name: "Херд гӀайре а, Макдональд гӀайренаш а"),
   TranslatedName(LangDan(), name: "Heard Island og McDonald Islands"),
@@ -333,11 +323,6 @@ const hmdCountryTranslations = [
   TranslatedName(LangUig(), name: "ھېرد ئارىلى ۋە ماكدونالد ئاراللىرى"),
   TranslatedName(LangUkr(), name: "Острови Герд і Макдоналд"),
   TranslatedName(LangUzb(), name: "Xerd va Makdonald orollari"),
-  TranslatedName(
-    LangUzb(),
-    name: "Херд ва Макдоналд ороллари",
-    script: ScriptCyrl(),
-  ),
   TranslatedName(LangVie(), name: "Quần đảo Heard và McDonald"),
   TranslatedName(LangWol(), name: "Duni Hërd ak Duni MakDonald"),
   TranslatedName(LangZul(), name: "I-Heard & McDonald Island"),
@@ -358,4 +343,19 @@ const hmdCountryTranslations = [
   TranslatedName(LangArg(), name: "Islas Heard y McDonald"),
   TranslatedName(LangIle(), name: "Insules Heard e McDonald Islands"),
   TranslatedName(LangOci(), name: "Illas Heard e McDonald"),
+  TranslatedName(
+    LangUzb(),
+    name: "Херд ва Макдоналд ороллари",
+    script: ScriptCyrl(),
+  ),
+  TranslatedName(
+    LangAze(),
+    name: "Һерд вә Макдоналд адалары",
+    script: ScriptCyrl(),
+  ),
+  TranslatedName(
+    LangBos(),
+    name: "Херд и Мекдоналд Острва",
+    script: ScriptCyrl(),
+  ),
 ];
