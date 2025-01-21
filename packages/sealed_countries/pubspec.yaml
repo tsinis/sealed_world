@@ -1,9 +1,10 @@
-version: 1.5.1
+version: 2.0.0
 name: sealed_countries
 description: Provides data for world countries in the form of sealed classes.
 maintainer: Roman Cinis
 repository: https://github.com/tsinis/sealed_world/tree/main/packages/sealed_countries
 issue_tracker: https://github.com/tsinis/sealed_world/issues
+publish_to: none # TODO! Remove this line before publishing.
 topics:
   - countries
   - country
@@ -18,10 +19,12 @@ screenshots:
     path: doc/example.webp
 
 environment:
-  sdk: ^3.0.0
+  sdk: ^3.6.0
 
 dependencies:
-  sealed_currencies: ^1.5.1
+  l10n_countries:
+    path: ../l10n_countries
+  sealed_currencies: ^2.0.0
 
 dev_dependencies:
   _sealed_world_tests:

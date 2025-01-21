@@ -14,7 +14,6 @@ import "../model/country/submodels/gini.dart";
 import "../model/country/submodels/idd.dart";
 import "../model/country/submodels/lat_lng.dart";
 import "../model/country/submodels/maps.dart";
-import "../translations/unk_country.l10n.dart";
 import "geo/continental_sections.data.dart";
 import "geo/continents.data.dart";
 import "regional_bloc/regional_bloc.data.dart";
@@ -54,7 +53,6 @@ class CountryUnk extends WorldCountry {
           continent: const Europe(),
           subregion: const SouthwestEurope(),
           languages: const [LangSrp(), LangSqi()],
-          translations: unkCountryTranslations,
           latLng: const LatLng(42.666667, 21.166667),
           landlocked: true,
           bordersCodes: const ["Alb", "Mkd", "Mne", "Srb"],

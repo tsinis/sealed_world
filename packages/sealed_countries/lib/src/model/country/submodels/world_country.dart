@@ -26,7 +26,7 @@ part of "../country.dart";
 /// ```
 class WorldCountry extends Country
     implements
-        IsoTranslated<TranslatedName, CountryName>,
+        IsoTranslated<TranslatedName, CountryName, BasicLocale>,
         JsonEncodable<WorldCountry> {
   /// {@template country_constructor}
   /// Creates a new [WorldCountry] object with the given properties.
@@ -55,7 +55,6 @@ class WorldCountry extends Country
     required this.population,
     required this.timezones,
     required this.tld, // Top Level Domain.
-    required this.translations,
     required this.demonyms,
     this.currencies,
     this.capitalInfo,
@@ -72,6 +71,7 @@ class WorldCountry extends Country
     this.subregion,
     this.unMember = true,
     this.regionalBlocs,
+    List<TranslatedName>? translations,
   })  : assert(
           code.length == IsoStandardized.codeLength,
           """`code` should be exactly ${IsoStandardized.codeLength} characters long!""",
@@ -103,10 +103,6 @@ class WorldCountry extends Country
           "`timezones` should not be empty!",
         ),
         assert(
-          translations != const <TranslatedName>[],
-          "`translations` should not be empty!",
-        ),
-        assert(
           demonyms != const <Demonyms>[],
           "`demonyms` should not be empty!",
         ),
@@ -119,7 +115,8 @@ class WorldCountry extends Country
         assert(
           regionalBlocs != const <RegionalBloc>[],
           "`regionalBlocs` should not be empty!",
-        );
+        ),
+        _translations = translations;
 
   /// {@macro permissive_constructor}
   /// {@macro country_constructor}
@@ -140,7 +137,6 @@ class WorldCountry extends Country
     this.population = 1,
     this.timezones = const [],
     this.tld = const [],
-    this.translations = const [],
     this.demonyms = const [],
     this.currencies,
     this.capitalInfo,
@@ -157,7 +153,8 @@ class WorldCountry extends Country
     this.subregion,
     this.unMember = true,
     this.regionalBlocs,
-  });
+    List<TranslatedName>? translations,
+  }) : _translations = translations;
 
   /// Returns an [WorldCountry] object from the given [code]
   /// ISO 3166-1 Alpha-3 code.
@@ -304,10 +301,6 @@ class WorldCountry extends Country
   /// The official languages spoken in the country.
   final List<NaturalLanguage> languages;
 
-  /// The translations of the country name.
-  @override
-  final List<TranslatedName> translations;
-
   /// The geographic coordinates of the country.
   final LatLng latLng;
 
@@ -365,6 +358,14 @@ class WorldCountry extends Country
 
   @override
   String get internationalName => name.common;
+
+  @override
+  List<TranslatedName> get translations =>
+      _translations ?? l10n.translatedNames({this});
+
+  @override
+  LocalizationDelegate get l10n =>
+      LocalizationDelegate(mapper: () => CountriesLocaleMapper().localize);
 
   @override
   String toString({bool short = true}) => short
@@ -601,4 +602,6 @@ class WorldCountry extends Country
   /// A list of all the countries currently supported
   /// by the [WorldCountry] class.
   static const list = worldCountryList;
+
+  final List<TranslatedName>? _translations;
 }
