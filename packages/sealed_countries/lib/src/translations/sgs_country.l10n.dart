@@ -257,11 +257,6 @@ const sgsCountryTranslations = [
   ),
   TranslatedName(LangAze(), name: "Cənubi Corciya və Cənubi Sendviç adaları"),
   TranslatedName(
-    LangAze(),
-    name: "Ҹәнуби Ҹорҹија вә Ҹәнуби Сендвич адалары",
-    script: ScriptCyrl(),
-  ),
-  TranslatedName(
     LangBel(),
     name: "Паўднёвая Георгія і Паўднёвыя Сандвічавы астравы",
   ),
@@ -271,11 +266,6 @@ const sgsCountryTranslations = [
     name: "দক্ষিণ জর্জিয়া ও দক্ষিণ স্যান্ডউইচ দ্বীপপুঞ্জ",
   ),
   TranslatedName(LangBos(), name: "Južna Džordžija i Južna Sendvič ostrva"),
-  TranslatedName(
-    LangBos(),
-    name: "Јужна Џорџија и Јужна Сендвичка Острва",
-    script: ScriptCyrl(),
-  ),
   TranslatedName(LangCat(), name: "Illes Geòrgia del Sud i Sandwich del Sud"),
   TranslatedName(
     LangChe(),
@@ -329,22 +319,12 @@ const sgsCountryTranslations = [
     LangKaz(),
     name: "Оңтүстік Георгия және Оңтүстік Сандвич аралдары",
   ),
-  TranslatedName(
-    LangKaz(),
-    name: "Оңтүстік Георгия және Оңтүстік Сандвичев аралы",
-    script: ScriptCyrl(),
-  ),
   TranslatedName(LangKhm(), name: "កោះ​ហ្សកហ្ស៊ី​ខាងត្បូង និង សង់វិច​ខាងត្បូង"),
   TranslatedName(
     LangKan(),
     name: "ದಕ್ಷಿಣ ಜಾರ್ಜಿಯಾ ಮತ್ತು ದಕ್ಷಿಣ ಸ್ಯಾಂಡ್‍ವಿಚ್ ದ್ವೀಪಗಳು",
   ),
   TranslatedName(LangKas(), name: "جنوٗبی جارجِیا تہٕ جنوٗبی سینڑوٕچ جٔزیٖرٕ"),
-  TranslatedName(
-    LangKas(),
-    name: "جنوٗبی جارجِیا تہٕ جنوٗبی سینٛڑوٕچ جٔزیٖرٕ",
-    script: ScriptArab(),
-  ),
   TranslatedName(LangKir(), name: "Түштүк Жоржия жана Түштүк Сэндвич аралдары"),
   TranslatedName(LangLtz(), name: "Südgeorgien an déi Südlech Sandwichinselen"),
   TranslatedName(LangLin(), name: "Îles de Géorgie du Sud et Sandwich du Sud"),
@@ -357,11 +337,6 @@ const sgsCountryTranslations = [
     name: "ദക്ഷിണ ജോർജ്ജിയയും ദക്ഷിണ സാൻഡ്‌വിച്ച് ദ്വീപുകളും",
   ),
   TranslatedName(LangMon(), name: "Өмнөд Жоржиа ба Өмнөд Сэндвичийн арлууд"),
-  TranslatedName(
-    LangMon(),
-    name: "Өмнөд Жоржиа ба Өмнөд Сэндвичийн Арлууд",
-    script: ScriptCyrl(),
-  ),
   TranslatedName(LangMar(), name: "दक्षिण जॉर्जिया आणि दक्षिण सँडविच बेटे"),
   TranslatedName(
     LangMsa(),
@@ -405,11 +380,6 @@ const sgsCountryTranslations = [
     name: "Visiwa vya Georgia Kusini na Sandwich Kusini",
   ),
   TranslatedName(
-    LangSwa(),
-    name: "Visiwa vya Jojia ya Kusini na Sandwich ya Kusini",
-    countryCode: "KE",
-  ),
-  TranslatedName(
     LangTam(),
     name: "தெற்கு ஜார்ஜியா மற்றும் தெற்கு சாண்ட்விச் தீவுகள்",
   ),
@@ -431,22 +401,12 @@ const sgsCountryTranslations = [
     name: "جەنۇبىي جورجىيە ۋە جەنۇبىي ساندۋىچ ئاراللىرى",
   ),
   TranslatedName(
-    LangUig(),
-    name: "جەنۇبىي جورجىيە ۋە جەنۇبىي ساندىۋىچ ئاراللىرى",
-    script: ScriptArab(),
-  ),
-  TranslatedName(
     LangUkr(),
     name: "Південна Джорджія та Південні Сандвічеві Острови",
   ),
   TranslatedName(
     LangUzb(),
     name: "Janubiy Georgiya va Janubiy Sendvich orollari",
-  ),
-  TranslatedName(
-    LangUzb(),
-    name: "Жанубий Георгия ва Жанубий Сендвич ороллари",
-    script: ScriptCyrl(),
   ),
   TranslatedName(LangVie(), name: "Nam Georgia & Quần đảo Nam Sandwich"),
   TranslatedName(LangWol(), name: "Seworsi di Sid ak Duni Sàndwiis di Sid"),
@@ -491,5 +451,45 @@ const sgsCountryTranslations = [
   TranslatedName(
     LangOci(),
     name: "Georgie del Sud e les Illes Sandwich del Sud",
+  ),
+  TranslatedName(
+    LangAze(),
+    name: "Ҹәнуби Ҹорҹија вә Ҹәнуби Сендвич адалары",
+    script: ScriptCyrl(),
+  ),
+  TranslatedName(
+    LangBos(),
+    name: "Јужна Џорџија и Јужна Сендвичка Острва",
+    script: ScriptCyrl(),
+  ),
+  TranslatedName(
+    LangKaz(),
+    name: "Оңтүстік Георгия және Оңтүстік Сандвичев аралы",
+    script: ScriptCyrl(),
+  ),
+  TranslatedName(
+    LangKas(),
+    name: "جنوٗبی جارجِیا تہٕ جنوٗبی سینٛڑوٕچ جٔزیٖرٕ",
+    script: ScriptArab(),
+  ),
+  TranslatedName(
+    LangMon(),
+    name: "Өмнөд Жоржиа ба Өмнөд Сэндвичийн Арлууд",
+    script: ScriptCyrl(),
+  ),
+  TranslatedName(
+    LangUzb(),
+    name: "Жанубий Георгия ва Жанубий Сендвич ороллари",
+    script: ScriptCyrl(),
+  ),
+  TranslatedName(
+    LangSwa(),
+    name: "Visiwa vya Jojia ya Kusini na Sandwich ya Kusini",
+    countryCode: "KE",
+  ),
+  TranslatedName(
+    LangUig(),
+    name: "جەنۇبىي جورجىيە ۋە جەنۇبىي ساندىۋىچ ئاراللىرى",
+    script: ScriptArab(),
   ),
 ];

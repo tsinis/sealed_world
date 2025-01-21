@@ -47,6 +47,10 @@
     {
       "name": "L10N Currencies",
       "path": "../packages/l10n_currencies"
+    },
+    {
+      "name": "L10N Countries",
+      "path": "../packages/l10n_countries"
     }
   ],
   "settings": {

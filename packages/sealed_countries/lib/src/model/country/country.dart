@@ -1,3 +1,4 @@
+import "package:l10n_countries/l10n_countries.dart" show CountriesLocaleMapper;
 import "package:sealed_currencies/sealed_currencies.dart";
 
 import "../../collections/world_country_collections.dart";
