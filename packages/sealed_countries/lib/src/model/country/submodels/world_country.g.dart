@@ -2537,7 +2537,7 @@ extension WorldCountryFunctional on WorldCountry {
       };
 }
 
-extension WorldCountryBoolGetters on WorldCountry {
+extension WorldCountryBoolGetters on WorldCountry? {
   /// Checks if this [WorldCountry] instance is Aruba.
   bool get isAbw => this == const CountryAbw();
 
