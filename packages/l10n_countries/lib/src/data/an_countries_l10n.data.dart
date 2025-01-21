@@ -50,7 +50,7 @@ class AnCountriesL10N extends IsoLocaleMapper<String> {
       "CCK": "Islas Cocos",
       "CHE": "Suiza",
       "CHL": "Chile",
-      "CHN": "¨China",
+      "CHN": "China",
       "CIV": "Costa de Vori",
       "CMR": "Camerún",
       "COD": "Republica Democratica d'o Congo",

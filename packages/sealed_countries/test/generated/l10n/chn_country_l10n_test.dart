@@ -3665,7 +3665,7 @@ void main() => group(
           );
         });
         test("has translation for 'an' locale", () {
-          const expectedName = "¨China";
+          const expectedName = "China";
 
           final translated = value.maybeTranslation(
             const BasicLocale(LangArg()),

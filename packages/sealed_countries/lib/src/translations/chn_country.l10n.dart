@@ -405,7 +405,7 @@ const chnCountryTranslations = [
   TranslatedName(LangXho(), name: "IShayina"),
   TranslatedName(LangZha(), name: "Cunghgoz"),
   TranslatedName(LangSan(), name: "चीन:"),
-  TranslatedName(LangArg(), name: "¨China"),
+  TranslatedName(LangArg(), name: "China"),
   TranslatedName(LangCos(), name: "China"),
   TranslatedName(LangIna(), name: "China"),
   TranslatedName(LangIle(), name: "China"),

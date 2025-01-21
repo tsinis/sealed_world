@@ -340,8 +340,8 @@ void main() => group(
           );
         });
         test("has translation for 'hu' locale", () {
-          const expectedName = "Tádzsikisztán";
-          const expectedFullName = "Tádzsik Köztársaság";
+          const expectedName = "Tanzánia";
+          const expectedFullName = "Tanzániai Egyesült Köztársaság";
           final translated = value.maybeTranslation(
             const BasicLocale(LangHun()),
             useLanguageFallback: false,

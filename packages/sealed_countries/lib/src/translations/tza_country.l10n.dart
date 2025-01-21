@@ -201,8 +201,8 @@ const tzaCountryTranslations = [
   ),
   CountryName(
     language: LangHun(),
-    official: "Tádzsik Köztársaság",
-    common: "Tádzsikisztán",
+    official: "Tanzániai Egyesült Köztársaság",
+    common: "Tanzánia",
   ),
   CountryName(
     language: LangIta(),

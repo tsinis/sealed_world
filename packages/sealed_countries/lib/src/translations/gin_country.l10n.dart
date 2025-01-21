@@ -215,11 +215,7 @@ const ginCountryTranslations = [
     official: "Republiek Guinee",
     common: "Guinee",
   ),
-  CountryName(
-    language: LangFas(),
-    official: "مملکت مستقل پاپوآ گینه نو",
-    common: "پاپوآ گینه نو",
-  ),
+  CountryName(language: LangFas(), official: "جمهوریگینه", common: "گینه"),
   CountryName(
     language: LangPol(),
     official: "Republika Gwinei",

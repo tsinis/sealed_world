@@ -490,8 +490,8 @@ void main() => group(
           );
         });
         test("has translation for 'fa' locale", () {
-          const expectedName = "پاپوآ گینه نو";
-          const expectedFullName = "مملکت مستقل پاپوآ گینه نو";
+          const expectedName = "گینه";
+          const expectedFullName = "جمهوریگینه";
           final translated = value.maybeTranslation(
             const BasicLocale(LangFas()),
             useLanguageFallback: false,
