@@ -1,3 +1,5 @@
+// ignore_for_file: deprecated_member_use, it's TODO!
+
 import "package:_sealed_world_tests/sealed_world_tests.dart";
 import "package:sealed_countries/country_translations.dart";
 import "package:sealed_countries/sealed_countries.dart";
@@ -844,7 +846,7 @@ void main() => group("$WorldCountry", () {
             population: value.population,
             timezones: value.timezones,
             tld: value.tld,
-            translations: value.translations,
+            translations: const [],
             demonyms: value.demonyms,
             currencies: value.currencies,
           ),
@@ -1046,31 +1048,6 @@ void main() => group("$WorldCountry", () {
             timezones: const [],
             tld: value.tld,
             translations: value.translations,
-            demonyms: value.demonyms,
-            currencies: value.currencies,
-          ),
-        );
-
-        assertTest(
-          "translations empty",
-          () => WorldCountry(
-            name: value.name,
-            altSpellings: value.altSpellings,
-            areaMetric: value.areaMetric,
-            code: value.code,
-            codeNumeric: value.codeNumeric,
-            codeShort: value.codeShort,
-            continent: value.continent,
-            emoji: value.emoji,
-            idd: value.idd,
-            languages: value.languages,
-            latLng: value.latLng,
-            maps: value.maps,
-            namesNative: value.namesNative,
-            population: value.population,
-            timezones: value.timezones,
-            tld: value.tld,
-            translations: const [],
             demonyms: value.demonyms,
             currencies: value.currencies,
           ),

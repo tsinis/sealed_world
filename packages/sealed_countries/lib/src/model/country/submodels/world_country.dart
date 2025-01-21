@@ -2,15 +2,15 @@ part of "../country.dart";
 
 /// A class that represents a country in the world.
 ///
-/// The `WorldCountry` class is a class that represents a country in the world.
-/// It extends the `Country` class, which represents a country. It consists of
+/// The [WorldCountry] class is a class that represents a country in the world.
+/// It extends the [Country] class, which represents a country. It consists of
 /// various fields that describe the country, such as its name, code,
-/// currencies, languages, and more. The `WorldCountry` class includes methods
+/// currencies, languages, and more. The [WorldCountry] class includes methods
 /// to create a new country object from its code or code short, and a static
-/// method `maybeFromValue` to create a new country object from a value, such as
-/// a string, while handling null values. The `WorldCountry` class also includes
+/// method [maybeFromValue] to create a new country object from a value, such as
+/// a string, while handling null values. The [WorldCountry] class also includes
 /// methods to convert the country object to a string representation, and a
-/// static constant `list` that contains all of the countries of the world.
+/// static constant [list] that contains all of the countries of the world.
 ///
 /// Example usage:
 ///
@@ -163,7 +163,7 @@ class WorldCountry extends Country
   /// representing a three-letter ISO 3166-1 Alpha-3 code.
   /// {@macro any_code_object}
   /// Returns a [WorldCountry] object that represents the country with the given
-  /// code or throws a `StateError` if no such country exists.
+  /// code or throws a [StateError] if no such country exists.
   ///
   /// The optional [countries] parameter can be used to specify a list of
   /// [WorldCountry] objects to search through.
@@ -183,7 +183,7 @@ class WorldCountry extends Country
   /// object representing a two-letter ISO 3166-1 Alpha-2 code.
   /// {@macro any_code_object}
   /// Returns a [WorldCountry] object that represents the country with the given
-  /// code or throws a `StateError` if no such country exists.
+  /// code or throws a [StateError] if no such country exists.
   ///
   /// The optional [countries] parameter can be used to specify a list of
   /// [WorldCountry] objects to search through.
@@ -202,7 +202,7 @@ class WorldCountry extends Country
   /// object representing a three-digit ISO 3166-1 numeric code.
   /// {@macro any_code_object}
   /// Returns a [WorldCountry] object that represents the country with the given
-  /// code or throws a `StateError` if no such country exists.
+  /// code or throws a [StateError] if no such country exists.
   ///
   /// The optional [countries] parameter can be used to specify a list of
   /// [WorldCountry] objects to search through.
@@ -226,7 +226,7 @@ class WorldCountry extends Country
   /// representing a ISO 3166-1 code.
   /// {@macro any_code_object}
   /// Returns a [WorldCountry] object that represents the country with the given
-  /// code or throws a `StateError` if no such country exists.
+  /// code or throws a [StateError] if no such country exists.
   ///
   /// The optional [countries] parameter can be used to specify a list of
   /// [WorldCountry] objects to search through.
@@ -243,7 +243,7 @@ class WorldCountry extends Country
   /// `fromCodeNumeric` factory method to create a [WorldCountry] instance.
   /// Otherwise, it calls the `fromCode` factory method to create a
   /// [WorldCountry] instance. The resulting [WorldCountry] instance is assigned
-  /// to the `code` variable.
+  /// to the [code] variable.
   factory WorldCountry.fromAnyCode(
     Object code, [
     Iterable<WorldCountry>? countries,
@@ -395,15 +395,15 @@ class WorldCountry extends Country
   String toJson({JsonCodec codec = const JsonCodec()}) => codec.encode(toMap());
 
   /// Returns a [WorldCountry] object that represents the country with the given
-  /// `value`.
+  /// [value].
   ///
-  /// The `value` parameter is required and should not be `null`. The `where`
+  /// The [value] parameter is required and should not be `null`. The [where]
   /// parameter is an optional function that takes a [WorldCountry] object as
-  /// its parameter and returns a value to compare with `value`. If `where` is
-  /// `null`, the `code` field of the [WorldCountry] object will be used. The
-  /// `countries` parameter is an optional iterable of [WorldCountry] objects
+  /// its parameter and returns a value to compare with [value]. If [where] is
+  /// `null`, the [code] field of the [WorldCountry] object will be used. The
+  /// [countries] parameter is an optional iterable of [WorldCountry] objects
   /// that defaults to `list`. Returns a [WorldCountry] object that represents
-  /// the country with the given `value`, or `null` if no such country exists.
+  /// the country with the given [value], or `null` if no such country exists.
   static WorldCountry? maybeFromValue<T extends Object>(
     T value, {
     T? Function(WorldCountry country)? where,
@@ -466,8 +466,8 @@ class WorldCountry extends Country
     return countries.firstIsoWhereCodeOtherOrNull(string);
   }
 
-  /// Returns an [WorldCountry] object from the given `code` ISO 3166-1 code,
-  /// or `null` if no such instance exists.
+  /// Returns an [WorldCountry] object from the given [codeNumeric] ISO 3166-1
+  /// code or `null` if no such instance exists.
   ///
   /// The [codeNumeric] parameter is required and must be a valid country code
   /// object representing a three-digit ISO 3166-1 numeric code.
@@ -510,7 +510,7 @@ class WorldCountry extends Country
   /// print(blr != null) // Prints: true.
   /// ```
   ///
-  /// In the above example, the `maybeFromAnyCode` method is called with the
+  /// In the above example, the [maybeFromAnyCode] method is called with the
   /// value "eur". It uses the `maybeMapIsoCode` method to determine the
   /// appropriate mapping for the value. If the value is numeric, it compares it
   /// with the `codeNumeric` property of each [WorldCountry] instance.
@@ -574,7 +574,7 @@ class WorldCountry extends Country
   /// Example usage:
   ///
   /// ```dart
-  /// WorldCountry.codeShortMap[BF]; // CountryBfa().
+  /// WorldCountry.codeShortMap['BF']; // CountryBfa().
   /// ```
   static const codeShortMap = UpperCaseIsoMap(
     worldCountryCodeOtherMap,
