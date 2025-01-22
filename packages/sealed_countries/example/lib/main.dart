@@ -28,7 +28,7 @@ void main() {
   for (final cnt in WorldCountry.list) {
     print(
       "${cnt.internationalName} translated to Slovak language: "
-      "${cnt.translation(const BasicLocale(LangSlk())).name}",
+      "${cnt.translation(const BasicTypedLocale(LangSlk())).name}",
     );
   }
 

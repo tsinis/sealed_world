@@ -26,7 +26,7 @@ part of "../country.dart";
 /// ```
 class WorldCountry extends Country
     implements
-        IsoTranslated<TranslatedName, CountryName, BasicLocale>,
+        IsoTranslated<TranslatedName, CountryName, BasicTypedLocale>,
         JsonEncodable<WorldCountry> {
   /// {@template country_constructor}
   /// Creates a new [WorldCountry] object with the given properties.
@@ -364,8 +364,8 @@ class WorldCountry extends Country
       _translations ?? l10n.translatedNames({this});
 
   @override
-  LocalizationDelegate get l10n =>
-      LocalizationDelegate(mapper: () => CountriesLocaleMapper().localize);
+  TypedLocalizationDelegate get l10n =>
+      TypedLocalizationDelegate(mapper: () => CountriesLocaleMapper().localize);
 
   @override
   String toString({bool short = true}) => short
