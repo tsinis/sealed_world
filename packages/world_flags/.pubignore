@@ -1,0 +1,8 @@
+test/goldens/**
+example/android/**
+example/ios/**
+example/macos/**
+example/windows/**
+example/linux/**
+example/.vscode/**
+doc/example.gif
