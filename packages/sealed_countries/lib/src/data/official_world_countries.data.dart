@@ -2,7 +2,7 @@
 // https://gitlab.com/restcountries/restcountries, which is
 // licensed under the Mozilla Public License Version 2.0.
 
-// ignore_for_file: lines_longer_than_80_chars, alt-spellings are unpredictable.
+// ignore_for_file: lines_longer_than_80_chars, alt-spellings, avoid-suspicious-super-overrides
 
 import "package:sealed_currencies/sealed_currencies.dart";
 
@@ -48,12 +48,10 @@ class CountryAbw extends WorldCountry {
           cioc: "ARU",
           independent: false,
           unMember: false,
-          currencies: const [FiatAwg()],
           idd: const Idd(root: 2, suffixes: [97]),
           altSpellings: const ["AW"],
           continent: const Americas(),
           subregion: const Caribbean(),
-          languages: const [LangNld()],
           latLng: const LatLng(12.5, -69.96666666),
           areaMetric: 180,
           demonyms: const [
@@ -74,6 +72,10 @@ class CountryAbw extends WorldCountry {
             latLng: LatLng(12.52, -70.03),
           ),
         );
+  @override
+  List<FiatCurrency> get currencies => const [FiatAwg()];
+  @override
+  List<NaturalLanguage> get languages => const [LangNld()];
 }
 
 /// A class that represents the Afghanistan country.
@@ -105,12 +107,10 @@ class CountryAfg extends WorldCountry {
           codeNumeric: "004",
           codeShort: "AF",
           cioc: "AFG",
-          currencies: const [FiatAfn()],
           idd: const Idd(root: 9, suffixes: [3]),
           altSpellings: const ["AF", "Afġānistān"],
           continent: const Asia(),
           subregion: const SouthernAsia(),
-          languages: const [LangPus(), LangTuk()],
           latLng: const LatLng(33, 65),
           landlocked: true,
           bordersCodes: const ["Irn", "Pak", "Tkm", "Uzb", "Tjk", "Chn"],
@@ -134,6 +134,10 @@ class CountryAfg extends WorldCountry {
           ),
           regionalBlocs: const [BlocSAARC()],
         );
+  @override
+  List<FiatCurrency> get currencies => const [FiatAfn()];
+  @override
+  List<NaturalLanguage> get languages => const [LangPus(), LangTuk()];
 }
 
 /// A class that represents the Angola country.
@@ -160,7 +164,6 @@ class CountryAgo extends WorldCountry {
           codeNumeric: "024",
           codeShort: "AO",
           cioc: "ANG",
-          currencies: const [FiatAoa()],
           idd: const Idd(root: 2, suffixes: [44]),
           altSpellings: const [
             "AO",
@@ -169,7 +172,6 @@ class CountryAgo extends WorldCountry {
           ],
           continent: const Africa(),
           subregion: const MiddleAfrica(),
-          languages: const [LangPor()],
           latLng: const LatLng(-12.5, 18.5),
           bordersCodes: const ["Cog", "Cod", "Zmb", "Nam"],
           areaMetric: 1246700,
@@ -197,6 +199,10 @@ class CountryAgo extends WorldCountry {
           ),
           regionalBlocs: const [BlocAU()],
         );
+  @override
+  List<FiatCurrency> get currencies => const [FiatAoa()];
+  @override
+  List<NaturalLanguage> get languages => const [LangPor()];
 }
 
 /// A class that represents the Anguilla country.
@@ -224,12 +230,10 @@ class CountryAia extends WorldCountry {
           codeShort: "AI",
           independent: false,
           unMember: false,
-          currencies: const [FiatXcd()],
           idd: const Idd(root: 1, suffixes: [264]),
           altSpellings: const ["AI"],
           continent: const Americas(),
           subregion: const Caribbean(),
-          languages: const [LangEng()],
           latLng: const LatLng(18.25, -63.16666666),
           areaMetric: 91,
           demonyms: const [
@@ -258,6 +262,10 @@ class CountryAia extends WorldCountry {
             latLng: LatLng(18.22, -63.05),
           ),
         );
+  @override
+  List<FiatCurrency> get currencies => const [FiatXcd()];
+  @override
+  List<NaturalLanguage> get languages => const [LangEng()];
 }
 
 /// A class that represents the Åland Islands country.
@@ -285,12 +293,10 @@ class CountryAla extends WorldCountry {
           codeShort: "AX",
           independent: false,
           unMember: false,
-          currencies: const [FiatEur()],
           idd: const Idd(root: 3, suffixes: [5818]),
           altSpellings: const ["AX", "Aaland", "Aland", "Ahvenanmaa"],
           continent: const Europe(),
           subregion: const NorthernEurope(),
-          languages: const [LangSwe()],
           latLng: const LatLng(60.116667, 19.9),
           areaMetric: 1580,
           demonyms: const [
@@ -315,6 +321,10 @@ class CountryAla extends WorldCountry {
           ),
           regionalBlocs: const [BlocEU()],
         );
+  @override
+  List<FiatCurrency> get currencies => const [FiatEur()];
+  @override
+  List<NaturalLanguage> get languages => const [LangSwe()];
 }
 
 /// A class that represents the Albania country.
@@ -341,12 +351,10 @@ class CountryAlb extends WorldCountry {
           codeNumeric: "008",
           codeShort: "AL",
           cioc: "ALB",
-          currencies: const [FiatAll()],
           idd: const Idd(root: 3, suffixes: [55]),
           altSpellings: const ["AL", "Shqipëri", "Shqipëria", "Shqipnia"],
           continent: const Europe(),
           subregion: const SouthwestEurope(),
-          languages: const [LangSqi()],
           latLng: const LatLng(41, 20),
           bordersCodes: const ["Mne", "Grc", "Mkd", "Unk"],
           areaMetric: 28748,
@@ -374,6 +382,10 @@ class CountryAlb extends WorldCountry {
           ),
           regionalBlocs: const [BlocCEFTA()],
         );
+  @override
+  List<FiatCurrency> get currencies => const [FiatAll()];
+  @override
+  List<NaturalLanguage> get languages => const [LangSqi()];
 }
 
 /// A class that represents the Andorra country.
@@ -400,7 +412,6 @@ class CountryAnd extends WorldCountry {
           codeNumeric: "020",
           codeShort: "AD",
           cioc: "AND",
-          currencies: const [FiatEur()],
           idd: const Idd(root: 3, suffixes: [76]),
           altSpellings: const [
             "AD",
@@ -409,7 +420,6 @@ class CountryAnd extends WorldCountry {
           ],
           continent: const Europe(),
           subregion: const SouthernEurope(),
-          languages: const [LangCat()],
           latLng: const LatLng(42.5, 1.5),
           landlocked: true,
           bordersCodes: const ["Fra", "Esp"],
@@ -440,6 +450,10 @@ class CountryAnd extends WorldCountry {
             regExpPattern: r"^(?:AD)*(\d{3})$",
           ),
         );
+  @override
+  List<FiatCurrency> get currencies => const [FiatEur()];
+  @override
+  List<NaturalLanguage> get languages => const [LangCat()];
 }
 
 /// A class that represents the United Arab Emirates country.
@@ -466,12 +480,10 @@ class CountryAre extends WorldCountry {
           codeNumeric: "784",
           codeShort: "AE",
           cioc: "UAE",
-          currencies: const [FiatAed()],
           idd: const Idd(root: 9, suffixes: [71]),
           altSpellings: const ["AE", "UAE", "Emirates"],
           continent: const Asia(),
           subregion: const WesternAsia(),
-          languages: const [LangAra()],
           latLng: const LatLng(24, 54),
           bordersCodes: const ["Omn", "Sau"],
           areaMetric: 83600,
@@ -496,6 +508,10 @@ class CountryAre extends WorldCountry {
           ),
           regionalBlocs: const [BlocAL()],
         );
+  @override
+  List<FiatCurrency> get currencies => const [FiatAed()];
+  @override
+  List<NaturalLanguage> get languages => const [LangAra()];
 }
 
 /// A class that represents the Argentina country.
@@ -527,7 +543,6 @@ class CountryArg extends WorldCountry {
           codeNumeric: "032",
           codeShort: "AR",
           cioc: "ARG",
-          currencies: const [FiatArs()],
           idd: const Idd(root: 5, suffixes: [4]),
           altSpellings: const [
             "AR",
@@ -536,7 +551,6 @@ class CountryArg extends WorldCountry {
           ],
           continent: const Americas(),
           subregion: const SouthAmerica(),
-          languages: const [LangGrn(), LangSpa()],
           latLng: const LatLng(-34, -64),
           bordersCodes: const ["Bol", "Bra", "Chl", "Pry", "Ury"],
           areaMetric: 2780400,
@@ -572,6 +586,10 @@ class CountryArg extends WorldCountry {
           ),
           regionalBlocs: const [BlocUSAN()],
         );
+  @override
+  List<FiatCurrency> get currencies => const [FiatArs()];
+  @override
+  List<NaturalLanguage> get languages => const [LangGrn(), LangSpa()];
 }
 
 /// A class that represents the Armenia country.
@@ -598,7 +616,6 @@ class CountryArm extends WorldCountry {
           codeNumeric: "051",
           codeShort: "AM",
           cioc: "ARM",
-          currencies: const [FiatAmd()],
           idd: const Idd(root: 3, suffixes: [74]),
           altSpellings: const [
             "AM",
@@ -608,7 +625,6 @@ class CountryArm extends WorldCountry {
           ],
           continent: const Asia(),
           subregion: const WesternAsia(),
-          languages: const [LangHye()],
           latLng: const LatLng(40, 45),
           landlocked: true,
           bordersCodes: const ["Aze", "Geo", "Irn", "Tur"],
@@ -639,6 +655,10 @@ class CountryArm extends WorldCountry {
               const PostalCode(format: "######", regExpPattern: r"^(\d{6})$"),
           regionalBlocs: const [BlocEEU()],
         );
+  @override
+  List<FiatCurrency> get currencies => const [FiatAmd()];
+  @override
+  List<NaturalLanguage> get languages => const [LangHye()];
 }
 
 /// A class that represents the American Samoa country.
@@ -672,7 +692,6 @@ class CountryAsm extends WorldCountry {
           cioc: "ASA",
           independent: false,
           unMember: false,
-          currencies: const [FiatUsd()],
           idd: const Idd(root: 1, suffixes: [684]),
           altSpellings: const [
             "AS",
@@ -682,7 +701,6 @@ class CountryAsm extends WorldCountry {
           ],
           continent: const Oceania(),
           subregion: const Polynesia(),
-          languages: const [LangEng(), LangSmo()],
           latLng: const LatLng(-14.33333333, -170),
           areaMetric: 199,
           demonyms: const [
@@ -708,6 +726,10 @@ class CountryAsm extends WorldCountry {
             latLng: LatLng(-14.27, -170.7),
           ),
         );
+  @override
+  List<FiatCurrency> get currencies => const [FiatUsd()];
+  @override
+  List<NaturalLanguage> get languages => const [LangEng(), LangSmo()];
 }
 
 /// A class that represents the Antarctica country.
@@ -738,7 +760,6 @@ class CountryAta extends WorldCountry {
           idd: const Idd(root: 6, suffixes: [72]),
           altSpellings: const ["AQ"],
           continent: const Antarctica(),
-          languages: const [LangEng()],
           latLng: const LatLng(-90, 0),
           areaMetric: 14000000,
           demonyms: const [
@@ -771,6 +792,8 @@ class CountryAta extends WorldCountry {
             "UTC+12:00",
           ],
         );
+  @override
+  List<NaturalLanguage> get languages => const [LangEng()];
 }
 
 /// A class that represents the French Southern and Antarctic Lands country.
@@ -799,11 +822,9 @@ class CountryAtf extends WorldCountry {
           codeShort: "TF",
           independent: false,
           unMember: false,
-          currencies: const [FiatEur()],
           idd: const Idd(root: 2, suffixes: [62]),
           altSpellings: const ["TF", "French Southern Territories"],
           continent: const Antarctica(),
-          languages: const [LangFra()],
           latLng: const LatLng(-49.25, 69.167),
           areaMetric: 7747,
           demonyms: const [
@@ -828,6 +849,10 @@ class CountryAtf extends WorldCountry {
           ),
           regionalBlocs: const [BlocAU()],
         );
+  @override
+  List<FiatCurrency> get currencies => const [FiatEur()];
+  @override
+  List<NaturalLanguage> get languages => const [LangFra()];
 }
 
 /// A class that represents the Antigua and Barbuda country.
@@ -854,12 +879,10 @@ class CountryAtg extends WorldCountry {
           codeNumeric: "028",
           codeShort: "AG",
           cioc: "ANT",
-          currencies: const [FiatXcd()],
           idd: const Idd(root: 1, suffixes: [268]),
           altSpellings: const ["AG"],
           continent: const Americas(),
           subregion: const Caribbean(),
-          languages: const [LangEng()],
           latLng: const LatLng(17.05, -61.8),
           areaMetric: 442,
           demonyms: const [
@@ -889,6 +912,10 @@ class CountryAtg extends WorldCountry {
           ),
           regionalBlocs: const [BlocCARICOM()],
         );
+  @override
+  List<FiatCurrency> get currencies => const [FiatXcd()];
+  @override
+  List<NaturalLanguage> get languages => const [LangEng()];
 }
 
 /// A class that represents the Australia country.
@@ -915,12 +942,10 @@ class CountryAus extends WorldCountry {
           codeNumeric: "036",
           codeShort: "AU",
           cioc: "AUS",
-          currencies: const [FiatAud()],
           idd: const Idd(root: 6, suffixes: [1]),
           altSpellings: const ["AU"],
           continent: const Oceania(),
           subregion: const AustraliaAndNewZealand(),
-          languages: const [LangEng()],
           latLng: const LatLng(-27, 133),
           areaMetric: 7692024,
           demonyms: const [
@@ -961,6 +986,10 @@ class CountryAus extends WorldCountry {
           postalCode:
               const PostalCode(format: "####", regExpPattern: r"^(\d{4})$"),
         );
+  @override
+  List<FiatCurrency> get currencies => const [FiatAud()];
+  @override
+  List<NaturalLanguage> get languages => const [LangEng()];
 }
 
 /// A class that represents the Austria country.
@@ -987,12 +1016,10 @@ class CountryAut extends WorldCountry {
           codeNumeric: "040",
           codeShort: "AT",
           cioc: "AUT",
-          currencies: const [FiatEur()],
           idd: const Idd(root: 4, suffixes: [3]),
           altSpellings: const ["AT", "Osterreich", "Oesterreich"],
           continent: const Europe(),
           subregion: const CentralEurope(),
-          languages: const [LangDeu()],
           latLng: const LatLng(47.33333333, 13.33333333),
           landlocked: true,
           bordersCodes: const [
@@ -1032,6 +1059,10 @@ class CountryAut extends WorldCountry {
               const PostalCode(format: "####", regExpPattern: r"^(\d{4})$"),
           regionalBlocs: const [BlocEU()],
         );
+  @override
+  List<FiatCurrency> get currencies => const [FiatEur()];
+  @override
+  List<NaturalLanguage> get languages => const [LangDeu()];
 }
 
 /// A class that represents the Azerbaijan country.
@@ -1058,7 +1089,6 @@ class CountryAze extends WorldCountry {
           codeNumeric: "031",
           codeShort: "AZ",
           cioc: "AZE",
-          currencies: const [FiatAzn()],
           idd: const Idd(root: 9, suffixes: [94]),
           altSpellings: const [
             "AZ",
@@ -1067,7 +1097,6 @@ class CountryAze extends WorldCountry {
           ],
           continent: const Asia(),
           subregion: const WesternAsia(),
-          languages: const [LangAze()],
           latLng: const LatLng(40.5, 47.5),
           landlocked: true,
           bordersCodes: const ["Arm", "Geo", "Irn", "Rus", "Tur"],
@@ -1103,6 +1132,10 @@ class CountryAze extends WorldCountry {
             regExpPattern: r"^(?:AZ)*(\d{4})$",
           ),
         );
+  @override
+  List<FiatCurrency> get currencies => const [FiatAzn()];
+  @override
+  List<NaturalLanguage> get languages => const [LangAze()];
 }
 
 /// A class that represents the Burundi country.
@@ -1134,7 +1167,6 @@ class CountryBdi extends WorldCountry {
           codeNumeric: "108",
           codeShort: "BI",
           cioc: "BDI",
-          currencies: const [FiatBif()],
           idd: const Idd(root: 2, suffixes: [57]),
           altSpellings: const [
             "BI",
@@ -1144,7 +1176,6 @@ class CountryBdi extends WorldCountry {
           ],
           continent: const Africa(),
           subregion: const EasternAfrica(),
-          languages: const [LangFra(), LangRun()],
           latLng: const LatLng(-3.5, 30),
           landlocked: true,
           bordersCodes: const ["Cod", "Rwa", "Tza"],
@@ -1177,6 +1208,10 @@ class CountryBdi extends WorldCountry {
           ),
           regionalBlocs: const [BlocAU()],
         );
+  @override
+  List<FiatCurrency> get currencies => const [FiatBif()];
+  @override
+  List<NaturalLanguage> get languages => const [LangFra(), LangRun()];
 }
 
 /// A class that represents the Belgium country.
@@ -1213,7 +1248,6 @@ class CountryBel extends WorldCountry {
           codeNumeric: "056",
           codeShort: "BE",
           cioc: "BEL",
-          currencies: const [FiatEur()],
           idd: const Idd(root: 3, suffixes: [2]),
           altSpellings: const [
             "BE",
@@ -1228,7 +1262,6 @@ class CountryBel extends WorldCountry {
           ],
           continent: const Europe(),
           subregion: const WesternEurope(),
-          languages: const [LangDeu(), LangFra(), LangNld()],
           latLng: const LatLng(50.83333333, 4),
           bordersCodes: const ["Fra", "Deu", "Lux", "Nld"],
           areaMetric: 30528,
@@ -1254,6 +1287,11 @@ class CountryBel extends WorldCountry {
               const PostalCode(format: "####", regExpPattern: r"^(\d{4})$"),
           regionalBlocs: const [BlocEU()],
         );
+  @override
+  List<FiatCurrency> get currencies => const [FiatEur()];
+  @override
+  List<NaturalLanguage> get languages =>
+      const [LangDeu(), LangFra(), LangNld()];
 }
 
 /// A class that represents the Benin country.
@@ -1280,7 +1318,6 @@ class CountryBen extends WorldCountry {
           codeNumeric: "204",
           codeShort: "BJ",
           cioc: "BEN",
-          currencies: const [FiatXof()],
           idd: const Idd(root: 2, suffixes: [29]),
           altSpellings: const [
             "BJ",
@@ -1289,7 +1326,6 @@ class CountryBen extends WorldCountry {
           ],
           continent: const Africa(),
           subregion: const WesternAfrica(),
-          languages: const [LangFra()],
           latLng: const LatLng(9.5, 2.25),
           bordersCodes: const ["Bfa", "Ner", "Nga", "Tgo"],
           areaMetric: 112622,
@@ -1317,6 +1353,10 @@ class CountryBen extends WorldCountry {
           ),
           regionalBlocs: const [BlocAU()],
         );
+  @override
+  List<FiatCurrency> get currencies => const [FiatXof()];
+  @override
+  List<NaturalLanguage> get languages => const [LangFra()];
 }
 
 /// A class that represents the Caribbean Netherlands country.
@@ -1344,12 +1384,10 @@ class CountryBes extends WorldCountry {
           codeShort: "BQ",
           independent: false,
           unMember: false,
-          currencies: const [FiatUsd()],
           idd: const Idd(root: 5, suffixes: [99]),
           altSpellings: const ["BES islands"],
           continent: const Americas(),
           subregion: const Caribbean(),
-          languages: const [LangEng(), LangNld()],
           latLng: const LatLng(12.18, -68.25),
           areaMetric: 328,
           demonyms: const [
@@ -1373,6 +1411,10 @@ class CountryBes extends WorldCountry {
             latLng: LatLng(12.14, -68.27),
           ),
         );
+  @override
+  List<FiatCurrency> get currencies => const [FiatUsd()];
+  @override
+  List<NaturalLanguage> get languages => const [LangEng(), LangNld()];
 }
 
 /// A class that represents the Burkina Faso country.
@@ -1399,12 +1441,10 @@ class CountryBfa extends WorldCountry {
           codeNumeric: "854",
           codeShort: "BF",
           cioc: "BUR",
-          currencies: const [FiatXof()],
           idd: const Idd(root: 2, suffixes: [26]),
           altSpellings: const ["BF"],
           continent: const Africa(),
           subregion: const WesternAfrica(),
-          languages: const [LangFra()],
           latLng: const LatLng(13, -2),
           landlocked: true,
           bordersCodes: const ["Ben", "Civ", "Gha", "Mli", "Ner", "Tgo"],
@@ -1437,6 +1477,10 @@ class CountryBfa extends WorldCountry {
           ),
           regionalBlocs: const [BlocAU()],
         );
+  @override
+  List<FiatCurrency> get currencies => const [FiatXof()];
+  @override
+  List<NaturalLanguage> get languages => const [LangFra()];
 }
 
 /// A class that represents the Bangladesh country.
@@ -1463,7 +1507,6 @@ class CountryBgd extends WorldCountry {
           codeNumeric: "050",
           codeShort: "BD",
           cioc: "BAN",
-          currencies: const [FiatBdt()],
           idd: const Idd(root: 8, suffixes: [80]),
           altSpellings: const [
             "BD",
@@ -1472,7 +1515,6 @@ class CountryBgd extends WorldCountry {
           ],
           continent: const Asia(),
           subregion: const SouthernAsia(),
-          languages: const [LangBen()],
           latLng: const LatLng(24, 90),
           bordersCodes: const ["Mmr", "Ind"],
           areaMetric: 147570,
@@ -1507,6 +1549,10 @@ class CountryBgd extends WorldCountry {
               const PostalCode(format: "####", regExpPattern: r"^(\d{4})$"),
           regionalBlocs: const [BlocSAARC()],
         );
+  @override
+  List<FiatCurrency> get currencies => const [FiatBdt()];
+  @override
+  List<NaturalLanguage> get languages => const [LangBen()];
 }
 
 /// A class that represents the Bulgaria country.
@@ -1533,7 +1579,6 @@ class CountryBgr extends WorldCountry {
           codeNumeric: "100",
           codeShort: "BG",
           cioc: "BUL",
-          currencies: const [FiatBgn()],
           idd: const Idd(root: 3, suffixes: [59]),
           altSpellings: const [
             "BG",
@@ -1542,7 +1587,6 @@ class CountryBgr extends WorldCountry {
           ],
           continent: const Europe(),
           subregion: const SouthwestEurope(),
-          languages: const [LangBul()],
           latLng: const LatLng(43, 25),
           bordersCodes: const ["Grc", "Mkd", "Rou", "Srb", "Tur"],
           areaMetric: 110879,
@@ -1572,6 +1616,10 @@ class CountryBgr extends WorldCountry {
               const PostalCode(format: "####", regExpPattern: r"^(\d{4})$"),
           regionalBlocs: const [BlocEU()],
         );
+  @override
+  List<FiatCurrency> get currencies => const [FiatBgn()];
+  @override
+  List<NaturalLanguage> get languages => const [LangBul()];
 }
 
 /// A class that represents the Bahrain country.
@@ -1598,7 +1646,6 @@ class CountryBhr extends WorldCountry {
           codeNumeric: "048",
           codeShort: "BH",
           cioc: "BRN",
-          currencies: const [FiatBhd()],
           idd: const Idd(root: 9, suffixes: [73]),
           altSpellings: const [
             "BH",
@@ -1607,7 +1654,6 @@ class CountryBhr extends WorldCountry {
           ],
           continent: const Asia(),
           subregion: const WesternAsia(),
-          languages: const [LangAra()],
           latLng: const LatLng(26, 50.55),
           areaMetric: 765,
           demonyms: const [
@@ -1637,6 +1683,10 @@ class CountryBhr extends WorldCountry {
           ),
           regionalBlocs: const [BlocAL()],
         );
+  @override
+  List<FiatCurrency> get currencies => const [FiatBhd()];
+  @override
+  List<NaturalLanguage> get languages => const [LangAra()];
 }
 
 /// A class that represents the Bahamas country.
@@ -1663,12 +1713,10 @@ class CountryBhs extends WorldCountry {
           codeNumeric: "044",
           codeShort: "BS",
           cioc: "BAH",
-          currencies: const [FiatBsd(), FiatUsd()],
           idd: const Idd(root: 1, suffixes: [242]),
           altSpellings: const ["BS", "Commonwealth of the Bahamas"],
           continent: const Americas(),
           subregion: const Caribbean(),
-          languages: const [LangEng()],
           latLng: const LatLng(25.0343, -77.3963),
           areaMetric: 13943,
           demonyms: const [
@@ -1694,6 +1742,10 @@ class CountryBhs extends WorldCountry {
           ),
           regionalBlocs: const [BlocCARICOM()],
         );
+  @override
+  List<FiatCurrency> get currencies => const [FiatBsd(), FiatUsd()];
+  @override
+  List<NaturalLanguage> get languages => const [LangEng()];
 }
 
 /// A class that represents the Bosnia and Herzegovina country.
@@ -1730,7 +1782,6 @@ class CountryBih extends WorldCountry {
           codeNumeric: "070",
           codeShort: "BA",
           cioc: "BIH",
-          currencies: const [FiatBam()],
           idd: const Idd(root: 3, suffixes: [87]),
           altSpellings: const [
             "Босна и Херцеговина",
@@ -1739,7 +1790,6 @@ class CountryBih extends WorldCountry {
           ],
           continent: const Europe(),
           subregion: const SouthwestEurope(),
-          languages: const [LangBos(), LangHrv(), LangSrp()],
           latLng: const LatLng(44, 18),
           bordersCodes: const ["Hrv", "Mne", "Srb"],
           areaMetric: 51209,
@@ -1769,6 +1819,11 @@ class CountryBih extends WorldCountry {
           postalCode: const PostalCode(),
           regionalBlocs: const [BlocCEFTA()],
         );
+  @override
+  List<FiatCurrency> get currencies => const [FiatBam()];
+  @override
+  List<NaturalLanguage> get languages =>
+      const [LangBos(), LangHrv(), LangSrp()];
 }
 
 /// A class that represents the Saint Barthélemy country.
@@ -1796,7 +1851,6 @@ class CountryBlm extends WorldCountry {
           codeShort: "BL",
           independent: false,
           unMember: false,
-          currencies: const [FiatEur()],
           idd: const Idd(root: 5, suffixes: [90]),
           altSpellings: const [
             "BL",
@@ -1806,7 +1860,6 @@ class CountryBlm extends WorldCountry {
           ],
           continent: const Americas(),
           subregion: const Caribbean(),
-          languages: const [LangFra()],
           latLng: const LatLng(18.5, -63.41666666),
           areaMetric: 21,
           demonyms: const [
@@ -1836,6 +1889,10 @@ class CountryBlm extends WorldCountry {
           ),
           postalCode: const PostalCode(),
         );
+  @override
+  List<FiatCurrency> get currencies => const [FiatEur()];
+  @override
+  List<NaturalLanguage> get languages => const [LangFra()];
 }
 
 /// A class that represents the Belarus country.
@@ -1867,7 +1924,6 @@ class CountryBlr extends WorldCountry {
           codeNumeric: "112",
           codeShort: "BY",
           cioc: "BLR",
-          currencies: const [FiatByn()],
           idd: const Idd(root: 3, suffixes: [75]),
           altSpellings: const [
             "BY",
@@ -1878,7 +1934,6 @@ class CountryBlr extends WorldCountry {
           ],
           continent: const Europe(),
           subregion: const EasternEurope(),
-          languages: const [LangBel(), LangRus()],
           latLng: const LatLng(53, 28),
           landlocked: true,
           bordersCodes: const ["Lva", "Ltu", "Pol", "Rus", "Ukr"],
@@ -1913,6 +1968,10 @@ class CountryBlr extends WorldCountry {
               const PostalCode(format: "######", regExpPattern: r"^(\d{6})$"),
           regionalBlocs: const [BlocEEU()],
         );
+  @override
+  List<FiatCurrency> get currencies => const [FiatByn()];
+  @override
+  List<NaturalLanguage> get languages => const [LangBel(), LangRus()];
 }
 
 /// A class that represents the Belize country.
@@ -1944,12 +2003,10 @@ class CountryBlz extends WorldCountry {
           codeNumeric: "084",
           codeShort: "BZ",
           cioc: "BIZ",
-          currencies: const [FiatBzd()],
           idd: const Idd(root: 50, suffixes: [1]),
           altSpellings: const ["BZ"],
           continent: const Americas(),
           subregion: const CentralAmerica(),
-          languages: const [LangEng(), LangSpa()],
           latLng: const LatLng(17.25, -88.75),
           bordersCodes: const ["Gtm", "Mex"],
           areaMetric: 22966,
@@ -1977,6 +2034,10 @@ class CountryBlz extends WorldCountry {
           ),
           regionalBlocs: const [BlocCARICOM(), BlocCAIS()],
         );
+  @override
+  List<FiatCurrency> get currencies => const [FiatBzd()];
+  @override
+  List<NaturalLanguage> get languages => const [LangEng(), LangSpa()];
 }
 
 /// A class that represents the Bermuda country.
@@ -2005,7 +2066,6 @@ class CountryBmu extends WorldCountry {
           cioc: "BER",
           independent: false,
           unMember: false,
-          currencies: const [FiatBmd()],
           idd: const Idd(root: 1, suffixes: [441]),
           altSpellings: const [
             "BM",
@@ -2015,7 +2075,6 @@ class CountryBmu extends WorldCountry {
           ],
           continent: const Americas(),
           subregion: const NorthAmerica(),
-          languages: const [LangEng()],
           latLng: const LatLng(32.33333333, -64.75),
           areaMetric: 54,
           demonyms: const [
@@ -2048,6 +2107,10 @@ class CountryBmu extends WorldCountry {
             regExpPattern: r"^([A-Z]{2}\d{2})$",
           ),
         );
+  @override
+  List<FiatCurrency> get currencies => const [FiatBmd()];
+  @override
+  List<NaturalLanguage> get languages => const [LangEng()];
 }
 
 /// A class that represents the Bolivia country.
@@ -2089,7 +2152,6 @@ class CountryBol extends WorldCountry {
           codeNumeric: "068",
           codeShort: "BO",
           cioc: "BOL",
-          currencies: const [FiatBob()],
           idd: const Idd(root: 5, suffixes: [91]),
           altSpellings: const [
             "BO",
@@ -2104,7 +2166,6 @@ class CountryBol extends WorldCountry {
           ],
           continent: const Americas(),
           subregion: const SouthAmerica(),
-          languages: const [LangAym(), LangGrn(), LangQue(), LangSpa()],
           latLng: const LatLng(-17, -65),
           landlocked: true,
           bordersCodes: const ["Arg", "Bra", "Chl", "Pry", "Per"],
@@ -2133,6 +2194,11 @@ class CountryBol extends WorldCountry {
           ),
           regionalBlocs: const [BlocUSAN()],
         );
+  @override
+  List<FiatCurrency> get currencies => const [FiatBob()];
+  @override
+  List<NaturalLanguage> get languages =>
+      const [LangAym(), LangGrn(), LangQue(), LangSpa()];
 }
 
 /// A class that represents the Brazil country.
@@ -2159,7 +2225,6 @@ class CountryBra extends WorldCountry {
           codeNumeric: "076",
           codeShort: "BR",
           cioc: "BRA",
-          currencies: const [FiatBrl()],
           idd: const Idd(root: 5, suffixes: [5]),
           altSpellings: const [
             "BR",
@@ -2169,7 +2234,6 @@ class CountryBra extends WorldCountry {
           ],
           continent: const Americas(),
           subregion: const SouthAmerica(),
-          languages: const [LangPor()],
           latLng: const LatLng(-10, -55),
           bordersCodes: const [
             "Arg",
@@ -2216,6 +2280,10 @@ class CountryBra extends WorldCountry {
           ),
           regionalBlocs: const [BlocUSAN()],
         );
+  @override
+  List<FiatCurrency> get currencies => const [FiatBrl()];
+  @override
+  List<NaturalLanguage> get languages => const [LangPor()];
 }
 
 /// A class that represents the Barbados country.
@@ -2242,12 +2310,10 @@ class CountryBrb extends WorldCountry {
           codeNumeric: "052",
           codeShort: "BB",
           cioc: "BAR",
-          currencies: const [FiatBbd()],
           idd: const Idd(root: 1, suffixes: [246]),
           altSpellings: const ["BB"],
           continent: const Americas(),
           subregion: const Caribbean(),
-          languages: const [LangEng()],
           latLng: const LatLng(13.16666666, -59.53333333),
           areaMetric: 430,
           demonyms: const [
@@ -2281,6 +2347,10 @@ class CountryBrb extends WorldCountry {
           ),
           regionalBlocs: const [BlocCARICOM()],
         );
+  @override
+  List<FiatCurrency> get currencies => const [FiatBbd()];
+  @override
+  List<NaturalLanguage> get languages => const [LangEng()];
 }
 
 /// A class that represents the Brunei country.
@@ -2307,7 +2377,6 @@ class CountryBrn extends WorldCountry {
           codeNumeric: "096",
           codeShort: "BN",
           cioc: "BRU",
-          currencies: const [FiatBnd(), FiatSgd()],
           idd: const Idd(root: 6, suffixes: [73]),
           altSpellings: const [
             "BN",
@@ -2317,7 +2386,6 @@ class CountryBrn extends WorldCountry {
           ],
           continent: const Asia(),
           subregion: const SouthEasternAsia(),
-          languages: const [LangMsa()],
           latLng: const LatLng(4.5, 114.66666666),
           bordersCodes: const ["Mys"],
           areaMetric: 5765,
@@ -2348,6 +2416,10 @@ class CountryBrn extends WorldCountry {
           ),
           regionalBlocs: const [BlocASEAN()],
         );
+  @override
+  List<FiatCurrency> get currencies => const [FiatBnd(), FiatSgd()];
+  @override
+  List<NaturalLanguage> get languages => const [LangMsa()];
 }
 
 /// A class that represents the Bhutan country.
@@ -2374,12 +2446,10 @@ class CountryBtn extends WorldCountry {
           codeNumeric: "064",
           codeShort: "BT",
           cioc: "BHU",
-          currencies: const [FiatBtn(), FiatInr()],
           idd: const Idd(root: 9, suffixes: [75]),
           altSpellings: const ["BT", "Kingdom of Bhutan"],
           continent: const Asia(),
           subregion: const SouthernAsia(),
-          languages: const [LangDzo()],
           latLng: const LatLng(27.5, 90.5),
           landlocked: true,
           bordersCodes: const ["Chn", "Ind"],
@@ -2412,6 +2482,10 @@ class CountryBtn extends WorldCountry {
           ),
           regionalBlocs: const [BlocSAARC()],
         );
+  @override
+  List<FiatCurrency> get currencies => const [FiatBtn(), FiatInr()];
+  @override
+  List<NaturalLanguage> get languages => const [LangDzo()];
 }
 
 /// A class that represents the Bouvet Island country.
@@ -2442,7 +2516,6 @@ class CountryBvt extends WorldCountry {
           idd: const Idd(root: 4, suffixes: [7]),
           altSpellings: const ["BV", "Bouvetøya", "Bouvet-øya"],
           continent: const Antarctica(),
-          languages: const [LangNor()],
           latLng: const LatLng(54.4208, 3.3464),
           areaMetric: 49,
           demonyms: const [
@@ -2462,6 +2535,8 @@ class CountryBvt extends WorldCountry {
           timezones: const ["UTC+01:00"],
           hasCoatOfArms: false,
         );
+  @override
+  List<NaturalLanguage> get languages => const [LangNor()];
 }
 
 /// A class that represents the Botswana country.
@@ -2493,7 +2568,6 @@ class CountryBwa extends WorldCountry {
           codeNumeric: "072",
           codeShort: "BW",
           cioc: "BOT",
-          currencies: const [FiatBwp()],
           idd: const Idd(root: 2, suffixes: [67]),
           altSpellings: const [
             "BW",
@@ -2502,7 +2576,6 @@ class CountryBwa extends WorldCountry {
           ],
           continent: const Africa(),
           subregion: const SouthernAfrica(),
-          languages: const [LangEng(), LangTsn()],
           latLng: const LatLng(-22, 24),
           landlocked: true,
           bordersCodes: const ["Nam", "Zaf", "Zmb", "Zwe"],
@@ -2531,6 +2604,10 @@ class CountryBwa extends WorldCountry {
           ),
           regionalBlocs: const [BlocAU()],
         );
+  @override
+  List<FiatCurrency> get currencies => const [FiatBwp()];
+  @override
+  List<NaturalLanguage> get languages => const [LangEng(), LangTsn()];
 }
 
 /// A class that represents the Central African Republic country.
@@ -2562,7 +2639,6 @@ class CountryCaf extends WorldCountry {
           codeNumeric: "140",
           codeShort: "CF",
           cioc: "CAF",
-          currencies: const [FiatXaf()],
           idd: const Idd(root: 2, suffixes: [36]),
           altSpellings: const [
             "CF",
@@ -2571,7 +2647,6 @@ class CountryCaf extends WorldCountry {
           ],
           continent: const Africa(),
           subregion: const MiddleAfrica(),
-          languages: const [LangFra(), LangSag()],
           latLng: const LatLng(7, 21),
           landlocked: true,
           bordersCodes: const ["Cmr", "Tcd", "Cod", "Cog", "Ssd", "Sdn"],
@@ -2604,6 +2679,10 @@ class CountryCaf extends WorldCountry {
           ),
           regionalBlocs: const [BlocAU()],
         );
+  @override
+  List<FiatCurrency> get currencies => const [FiatXaf()];
+  @override
+  List<NaturalLanguage> get languages => const [LangFra(), LangSag()];
 }
 
 /// A class that represents the Canada country.
@@ -2635,7 +2714,6 @@ class CountryCan extends WorldCountry {
           codeNumeric: "124",
           codeShort: "CA",
           cioc: "CAN",
-          currencies: const [FiatCad()],
           idd: const Idd(
             root: 1,
             suffixes: [
@@ -2677,7 +2755,6 @@ class CountryCan extends WorldCountry {
           altSpellings: const ["CA"],
           continent: const Americas(),
           subregion: const NorthAmerica(),
-          languages: const [LangEng(), LangFra()],
           latLng: const LatLng(60, -95),
           bordersCodes: const ["Usa"],
           areaMetric: 9984670,
@@ -2718,6 +2795,10 @@ class CountryCan extends WorldCountry {
           ),
           regionalBlocs: const [BlocNAFTA()],
         );
+  @override
+  List<FiatCurrency> get currencies => const [FiatCad()];
+  @override
+  List<NaturalLanguage> get languages => const [LangEng(), LangFra()];
 }
 
 /// A class that represents the Cocos (Keeling) Islands country.
@@ -2745,12 +2826,10 @@ class CountryCck extends WorldCountry {
           codeShort: "CC",
           independent: false,
           unMember: false,
-          currencies: const [FiatAud()],
           idd: const Idd(root: 6, suffixes: [1]),
           altSpellings: const ["CC", "Keeling Islands", "Cocos Islands"],
           continent: const Oceania(),
           subregion: const AustraliaAndNewZealand(),
-          languages: const [LangEng()],
           latLng: const LatLng(12.1642, 96.871),
           areaMetric: 14,
           demonyms: const [
@@ -2774,6 +2853,10 @@ class CountryCck extends WorldCountry {
             latLng: LatLng(-12.17, 96.83),
           ),
         );
+  @override
+  List<FiatCurrency> get currencies => const [FiatAud()];
+  @override
+  List<NaturalLanguage> get languages => const [LangEng()];
 }
 
 /// A class that represents the Switzerland country.
@@ -2815,7 +2898,6 @@ class CountryChe extends WorldCountry {
           codeNumeric: "756",
           codeShort: "CH",
           cioc: "SUI",
-          currencies: const [FiatChf()],
           idd: const Idd(root: 4, suffixes: [1]),
           altSpellings: const [
             "CH",
@@ -2827,7 +2909,6 @@ class CountryChe extends WorldCountry {
           ],
           continent: const Europe(),
           subregion: const WesternEurope(),
-          languages: const [LangFra(), LangDeu(), LangIta(), LangRoh()],
           latLng: const LatLng(47, 8),
           landlocked: true,
           bordersCodes: const ["Aut", "Fra", "Ita", "Lie", "Deu"],
@@ -2854,6 +2935,11 @@ class CountryChe extends WorldCountry {
               const PostalCode(format: "####", regExpPattern: r"^(\d{4})$"),
           regionalBlocs: const [BlocEFTA()],
         );
+  @override
+  List<FiatCurrency> get currencies => const [FiatChf()];
+  @override
+  List<NaturalLanguage> get languages =>
+      const [LangFra(), LangDeu(), LangIta(), LangRoh()];
 }
 
 /// A class that represents the Chile country.
@@ -2880,12 +2966,10 @@ class CountryChl extends WorldCountry {
           codeNumeric: "152",
           codeShort: "CL",
           cioc: "CHI",
-          currencies: const [FiatClp()],
           idd: const Idd(root: 5, suffixes: [6]),
           altSpellings: const ["CL", "Republic of Chile", "República de Chile"],
           continent: const Americas(),
           subregion: const SouthAmerica(),
-          languages: const [LangSpa()],
           latLng: const LatLng(-30, -71),
           bordersCodes: const ["Arg", "Bol", "Per"],
           areaMetric: 756102,
@@ -2911,6 +2995,10 @@ class CountryChl extends WorldCountry {
               const PostalCode(format: "#######", regExpPattern: r"^(\d{7})$"),
           regionalBlocs: const [BlocPA(), BlocUSAN()],
         );
+  @override
+  List<FiatCurrency> get currencies => const [FiatClp()];
+  @override
+  List<NaturalLanguage> get languages => const [LangSpa()];
 }
 
 /// A class that represents the China country.
@@ -2933,7 +3021,6 @@ class CountryChn extends WorldCountry {
           codeNumeric: "156",
           codeShort: "CN",
           cioc: "CHN",
-          currencies: const [FiatCny()],
           idd: const Idd(root: 8, suffixes: [6]),
           altSpellings: const [
             "CN",
@@ -2946,7 +3033,6 @@ class CountryChn extends WorldCountry {
           ],
           continent: const Asia(),
           subregion: const EasternAsia(),
-          languages: const [LangZho()],
           latLng: const LatLng(35, 105),
           bordersCodes: const [
             "Afg",
@@ -2988,6 +3074,10 @@ class CountryChn extends WorldCountry {
           postalCode:
               const PostalCode(format: "######", regExpPattern: r"^(\d{6})$"),
         );
+  @override
+  List<FiatCurrency> get currencies => const [FiatCny()];
+  @override
+  List<NaturalLanguage> get languages => const [LangZho()];
 }
 
 /// A class that represents the Ivory Coast country.
@@ -3014,7 +3104,6 @@ class CountryCiv extends WorldCountry {
           codeNumeric: "384",
           codeShort: "CI",
           cioc: "CIV",
-          currencies: const [FiatXof()],
           idd: const Idd(root: 2, suffixes: [25]),
           altSpellings: const [
             "CI",
@@ -3025,7 +3114,6 @@ class CountryCiv extends WorldCountry {
           ],
           continent: const Africa(),
           subregion: const WesternAfrica(),
-          languages: const [LangFra()],
           latLng: const LatLng(8, -5),
           bordersCodes: const ["Bfa", "Gha", "Gin", "Lbr", "Mli"],
           areaMetric: 322463,
@@ -3053,6 +3141,10 @@ class CountryCiv extends WorldCountry {
           ),
           regionalBlocs: const [BlocAU()],
         );
+  @override
+  List<FiatCurrency> get currencies => const [FiatXof()];
+  @override
+  List<NaturalLanguage> get languages => const [LangFra()];
 }
 
 /// A class that represents the Cameroon country.
@@ -3084,7 +3176,6 @@ class CountryCmr extends WorldCountry {
           codeNumeric: "120",
           codeShort: "CM",
           cioc: "CMR",
-          currencies: const [FiatXaf()],
           idd: const Idd(root: 2, suffixes: [37]),
           altSpellings: const [
             "CM",
@@ -3093,7 +3184,6 @@ class CountryCmr extends WorldCountry {
           ],
           continent: const Africa(),
           subregion: const MiddleAfrica(),
-          languages: const [LangEng(), LangFra()],
           latLng: const LatLng(6, 12),
           bordersCodes: const ["Caf", "Tcd", "Cog", "Gnq", "Gab", "Nga"],
           areaMetric: 475442,
@@ -3125,6 +3215,10 @@ class CountryCmr extends WorldCountry {
           ),
           regionalBlocs: const [BlocAU()],
         );
+  @override
+  List<FiatCurrency> get currencies => const [FiatXaf()];
+  @override
+  List<NaturalLanguage> get languages => const [LangEng(), LangFra()];
 }
 
 /// A class that represents the DR Congo country.
@@ -3166,7 +3260,6 @@ class CountryCod extends WorldCountry {
           codeNumeric: "180",
           codeShort: "CD",
           cioc: "COD",
-          currencies: const [FiatCdf()],
           idd: const Idd(root: 2, suffixes: [43]),
           altSpellings: const [
             "CD",
@@ -3177,7 +3270,6 @@ class CountryCod extends WorldCountry {
           ],
           continent: const Africa(),
           subregion: const MiddleAfrica(),
-          languages: const [LangFra(), LangKon(), LangLin(), LangSwa()],
           latLng: const LatLng(0, 25),
           bordersCodes: const [
             "Ago",
@@ -3219,6 +3311,11 @@ class CountryCod extends WorldCountry {
           ),
           regionalBlocs: const [BlocAU()],
         );
+  @override
+  List<FiatCurrency> get currencies => const [FiatCdf()];
+  @override
+  List<NaturalLanguage> get languages =>
+      const [LangFra(), LangKon(), LangLin(), LangSwa()];
 }
 
 /// A class that represents the Republic of the Congo country.
@@ -3255,12 +3352,10 @@ class CountryCog extends WorldCountry {
           codeNumeric: "178",
           codeShort: "CG",
           cioc: "CGO",
-          currencies: const [FiatXaf()],
           idd: const Idd(root: 2, suffixes: [42]),
           altSpellings: const ["CG", "Congo", "Congo-Brazzaville"],
           continent: const Africa(),
           subregion: const MiddleAfrica(),
-          languages: const [LangFra(), LangKon(), LangLin()],
           latLng: const LatLng(-1, 15),
           bordersCodes: const ["Ago", "Cmr", "Caf", "Cod", "Gab"],
           areaMetric: 342000,
@@ -3293,6 +3388,11 @@ class CountryCog extends WorldCountry {
           ),
           regionalBlocs: const [BlocAU()],
         );
+  @override
+  List<FiatCurrency> get currencies => const [FiatXaf()];
+  @override
+  List<NaturalLanguage> get languages =>
+      const [LangFra(), LangKon(), LangLin()];
 }
 
 /// A class that represents the Cook Islands country.
@@ -3321,12 +3421,10 @@ class CountryCok extends WorldCountry {
           cioc: "COK",
           independent: false,
           unMember: false,
-          currencies: const [FiatNzd()],
           idd: const Idd(root: 6, suffixes: [82]),
           altSpellings: const ["CK", "Kūki 'Āirani"],
           continent: const Oceania(),
           subregion: const Polynesia(),
-          languages: const [LangEng()],
           latLng: const LatLng(-21.23333333, -159.76666666),
           areaMetric: 236,
           demonyms: const [
@@ -3351,6 +3449,10 @@ class CountryCok extends WorldCountry {
             latLng: LatLng(-21.2, -159.77),
           ),
         );
+  @override
+  List<FiatCurrency> get currencies => const [FiatNzd()];
+  @override
+  List<NaturalLanguage> get languages => const [LangEng()];
 }
 
 /// A class that represents the Colombia country.
@@ -3377,7 +3479,6 @@ class CountryCol extends WorldCountry {
           codeNumeric: "170",
           codeShort: "CO",
           cioc: "COL",
-          currencies: const [FiatCop()],
           idd: const Idd(root: 5, suffixes: [7]),
           altSpellings: const [
             "CO",
@@ -3386,7 +3487,6 @@ class CountryCol extends WorldCountry {
           ],
           continent: const Americas(),
           subregion: const SouthAmerica(),
-          languages: const [LangSpa()],
           latLng: const LatLng(4, -72),
           bordersCodes: const ["Bra", "Ecu", "Pan", "Per", "Ven"],
           areaMetric: 1141748,
@@ -3418,6 +3518,10 @@ class CountryCol extends WorldCountry {
           ),
           regionalBlocs: const [BlocPA(), BlocUSAN()],
         );
+  @override
+  List<FiatCurrency> get currencies => const [FiatCop()];
+  @override
+  List<NaturalLanguage> get languages => const [LangSpa()];
 }
 
 /// A class that represents the Comoros country.
@@ -3449,7 +3553,6 @@ class CountryCom extends WorldCountry {
           codeNumeric: "174",
           codeShort: "KM",
           cioc: "COM",
-          currencies: const [FiatKmf()],
           idd: const Idd(root: 2, suffixes: [69]),
           altSpellings: const [
             "KM",
@@ -3460,7 +3563,6 @@ class CountryCom extends WorldCountry {
           ],
           continent: const Africa(),
           subregion: const EasternAfrica(),
-          languages: const [LangAra(), LangFra()],
           latLng: const LatLng(-12.16666666, 44.25),
           areaMetric: 1862,
           demonyms: const [
@@ -3487,6 +3589,10 @@ class CountryCom extends WorldCountry {
           ),
           regionalBlocs: const [BlocAU(), BlocAL()],
         );
+  @override
+  List<FiatCurrency> get currencies => const [FiatKmf()];
+  @override
+  List<NaturalLanguage> get languages => const [LangAra(), LangFra()];
 }
 
 /// A class that represents the Cape Verde country.
@@ -3513,7 +3619,6 @@ class CountryCpv extends WorldCountry {
           codeNumeric: "132",
           codeShort: "CV",
           cioc: "CPV",
-          currencies: const [FiatCve()],
           idd: const Idd(root: 2, suffixes: [38]),
           altSpellings: const [
             "CV",
@@ -3522,7 +3627,6 @@ class CountryCpv extends WorldCountry {
           ],
           continent: const Africa(),
           subregion: const WesternAfrica(),
-          languages: const [LangPor()],
           latLng: const LatLng(16.5388, -23.0418),
           areaMetric: 4033,
           demonyms: const [
@@ -3555,6 +3659,10 @@ class CountryCpv extends WorldCountry {
               const PostalCode(format: "####", regExpPattern: r"^(\d{4})$"),
           regionalBlocs: const [BlocAU()],
         );
+  @override
+  List<FiatCurrency> get currencies => const [FiatCve()];
+  @override
+  List<NaturalLanguage> get languages => const [LangPor()];
 }
 
 /// A class that represents the Costa Rica country.
@@ -3581,7 +3689,6 @@ class CountryCri extends WorldCountry {
           codeNumeric: "188",
           codeShort: "CR",
           cioc: "CRC",
-          currencies: const [FiatCrc()],
           idd: const Idd(root: 50, suffixes: [6]),
           altSpellings: const [
             "CR",
@@ -3590,7 +3697,6 @@ class CountryCri extends WorldCountry {
           ],
           continent: const Americas(),
           subregion: const CentralAmerica(),
-          languages: const [LangSpa()],
           latLng: const LatLng(10, -84),
           bordersCodes: const ["Nic", "Pan"],
           areaMetric: 51100,
@@ -3624,6 +3730,10 @@ class CountryCri extends WorldCountry {
               const PostalCode(format: "####", regExpPattern: r"^(\d{4})$"),
           regionalBlocs: const [BlocCAIS()],
         );
+  @override
+  List<FiatCurrency> get currencies => const [FiatCrc()];
+  @override
+  List<NaturalLanguage> get languages => const [LangSpa()];
 }
 
 /// A class that represents the Cuba country.
@@ -3650,12 +3760,10 @@ class CountryCub extends WorldCountry {
           codeNumeric: "192",
           codeShort: "CU",
           cioc: "CUB",
-          currencies: const [FiatCuc(), FiatCup()],
           idd: const Idd(root: 5, suffixes: [3]),
           altSpellings: const ["CU", "Republic of Cuba", "República de Cuba"],
           continent: const Americas(),
           subregion: const Caribbean(),
-          languages: const [LangSpa()],
           latLng: const LatLng(21.5, -80),
           areaMetric: 109884,
           demonyms: const [
@@ -3680,6 +3788,10 @@ class CountryCub extends WorldCountry {
             regExpPattern: r"^(?:CP)*(\d{5})$",
           ),
         );
+  @override
+  List<FiatCurrency> get currencies => const [FiatCuc(), FiatCup()];
+  @override
+  List<NaturalLanguage> get languages => const [LangSpa()];
 }
 
 /// A class that represents the Curaçao country.
@@ -3712,7 +3824,6 @@ class CountryCuw extends WorldCountry {
           codeShort: "CW",
           independent: false,
           unMember: false,
-          currencies: const [FiatAng()],
           idd: const Idd(root: 5, suffixes: [99]),
           altSpellings: const [
             "CW",
@@ -3724,7 +3835,6 @@ class CountryCuw extends WorldCountry {
           ],
           continent: const Americas(),
           subregion: const Caribbean(),
-          languages: const [LangEng(), LangNld()],
           latLng: const LatLng(12.116667, -68.933333),
           areaMetric: 444,
           demonyms: const [
@@ -3753,6 +3863,10 @@ class CountryCuw extends WorldCountry {
             latLng: LatLng(12.1, -68.92),
           ),
         );
+  @override
+  List<FiatCurrency> get currencies => const [FiatAng()];
+  @override
+  List<NaturalLanguage> get languages => const [LangEng(), LangNld()];
 }
 
 /// A class that represents the Christmas Island country.
@@ -3780,12 +3894,10 @@ class CountryCxr extends WorldCountry {
           codeShort: "CX",
           independent: false,
           unMember: false,
-          currencies: const [FiatAud()],
           idd: const Idd(root: 6, suffixes: [1]),
           altSpellings: const ["CX", "Territory of Christmas Island"],
           continent: const Oceania(),
           subregion: const AustraliaAndNewZealand(),
-          languages: const [LangEng()],
           latLng: const LatLng(-10.5, 105.66666666),
           areaMetric: 135,
           demonyms: const [
@@ -3810,6 +3922,10 @@ class CountryCxr extends WorldCountry {
           postalCode:
               const PostalCode(format: "####", regExpPattern: r"^(\d{4})$"),
         );
+  @override
+  List<FiatCurrency> get currencies => const [FiatAud()];
+  @override
+  List<NaturalLanguage> get languages => const [LangEng()];
 }
 
 /// A class that represents the Cayman Islands country.
@@ -3838,12 +3954,10 @@ class CountryCym extends WorldCountry {
           cioc: "CAY",
           independent: false,
           unMember: false,
-          currencies: const [FiatKyd()],
           idd: const Idd(root: 1, suffixes: [345]),
           altSpellings: const ["KY"],
           continent: const Americas(),
           subregion: const Caribbean(),
-          languages: const [LangEng()],
           latLng: const LatLng(19.3133, -81.2546),
           areaMetric: 264,
           demonyms: const [
@@ -3872,6 +3986,10 @@ class CountryCym extends WorldCountry {
             latLng: LatLng(19.3, -81.38),
           ),
         );
+  @override
+  List<FiatCurrency> get currencies => const [FiatKyd()];
+  @override
+  List<NaturalLanguage> get languages => const [LangEng()];
 }
 
 /// A class that represents the Cyprus country.
@@ -3903,7 +4021,6 @@ class CountryCyp extends WorldCountry {
           codeNumeric: "196",
           codeShort: "CY",
           cioc: "CYP",
-          currencies: const [FiatEur()],
           idd: const Idd(root: 3, suffixes: [57]),
           altSpellings: const [
             "CY",
@@ -3915,7 +4032,6 @@ class CountryCyp extends WorldCountry {
           ],
           continent: const Europe(),
           subregion: const SouthernEurope(),
-          languages: const [LangEll(), LangTur()],
           latLng: const LatLng(35, 33),
           areaMetric: 9251,
           demonyms: const [
@@ -3944,6 +4060,10 @@ class CountryCyp extends WorldCountry {
               const PostalCode(format: "####", regExpPattern: r"^(\d{4})$"),
           regionalBlocs: const [BlocEU()],
         );
+  @override
+  List<FiatCurrency> get currencies => const [FiatEur()];
+  @override
+  List<NaturalLanguage> get languages => const [LangEll(), LangTur()];
 }
 
 /// A class that represents the Czechia country.
@@ -3970,12 +4090,10 @@ class CountryCze extends WorldCountry {
           codeNumeric: "203",
           codeShort: "CZ",
           cioc: "CZE",
-          currencies: const [FiatCzk()],
           idd: const Idd(root: 4, suffixes: [20]),
           altSpellings: const ["CZ", "Česká republika", "Česko"],
           continent: const Europe(),
           subregion: const CentralEurope(),
-          languages: const [LangCes()],
           latLng: const LatLng(49.75, 15.5),
           landlocked: true,
           bordersCodes: const ["Aut", "Deu", "Pol", "Svk"],
@@ -4001,6 +4119,10 @@ class CountryCze extends WorldCountry {
           postalCode: const PostalCode(format: "### ##"),
           regionalBlocs: const [BlocEU()],
         );
+  @override
+  List<FiatCurrency> get currencies => const [FiatCzk()];
+  @override
+  List<NaturalLanguage> get languages => const [LangCes()];
 }
 
 /// A class that represents the Germany country.
@@ -4027,7 +4149,6 @@ class CountryDeu extends WorldCountry {
           codeNumeric: "276",
           codeShort: "DE",
           cioc: "GER",
-          currencies: const [FiatEur()],
           idd: const Idd(root: 4, suffixes: [9]),
           altSpellings: const [
             "DE",
@@ -4036,7 +4157,6 @@ class CountryDeu extends WorldCountry {
           ],
           continent: const Europe(),
           subregion: const WesternEurope(),
-          languages: const [LangDeu()],
           latLng: const LatLng(51, 9),
           bordersCodes: const [
             "Aut",
@@ -4075,6 +4195,10 @@ class CountryDeu extends WorldCountry {
           postalCode: const PostalCode(),
           regionalBlocs: const [BlocEU()],
         );
+  @override
+  List<FiatCurrency> get currencies => const [FiatEur()];
+  @override
+  List<NaturalLanguage> get languages => const [LangDeu()];
 }
 
 /// A class that represents the Djibouti country.
@@ -4106,7 +4230,6 @@ class CountryDji extends WorldCountry {
           codeNumeric: "262",
           codeShort: "DJ",
           cioc: "DJI",
-          currencies: const [FiatDjf()],
           idd: const Idd(root: 2, suffixes: [53]),
           altSpellings: const [
             "DJ",
@@ -4119,7 +4242,6 @@ class CountryDji extends WorldCountry {
           ],
           continent: const Africa(),
           subregion: const EasternAfrica(),
-          languages: const [LangAra(), LangFra()],
           latLng: const LatLng(11.5, 43),
           bordersCodes: const ["Eri", "Eth", "Som"],
           areaMetric: 23200,
@@ -4147,6 +4269,10 @@ class CountryDji extends WorldCountry {
           ),
           regionalBlocs: const [BlocAU(), BlocAL()],
         );
+  @override
+  List<FiatCurrency> get currencies => const [FiatDjf()];
+  @override
+  List<NaturalLanguage> get languages => const [LangAra(), LangFra()];
 }
 
 /// A class that represents the Dominica country.
@@ -4173,7 +4299,6 @@ class CountryDma extends WorldCountry {
           codeNumeric: "212",
           codeShort: "DM",
           cioc: "DMA",
-          currencies: const [FiatXcd()],
           idd: const Idd(root: 1, suffixes: [767]),
           altSpellings: const [
             "DM",
@@ -4183,7 +4308,6 @@ class CountryDma extends WorldCountry {
           ],
           continent: const Americas(),
           subregion: const Caribbean(),
-          languages: const [LangEng()],
           latLng: const LatLng(15.41666666, -61.33333333),
           areaMetric: 751,
           demonyms: const [
@@ -4212,6 +4336,10 @@ class CountryDma extends WorldCountry {
             latLng: LatLng(15.3, -61.4),
           ),
         );
+  @override
+  List<FiatCurrency> get currencies => const [FiatXcd()];
+  @override
+  List<NaturalLanguage> get languages => const [LangEng()];
 }
 
 /// A class that represents the Denmark country.
@@ -4238,7 +4366,6 @@ class CountryDnk extends WorldCountry {
           codeNumeric: "208",
           codeShort: "DK",
           cioc: "DEN",
-          currencies: const [FiatDkk()],
           idd: const Idd(root: 4, suffixes: [5]),
           altSpellings: const [
             "DK",
@@ -4248,7 +4375,6 @@ class CountryDnk extends WorldCountry {
           ],
           continent: const Europe(),
           subregion: const NorthernEurope(),
-          languages: const [LangDan()],
           latLng: const LatLng(56, 10),
           bordersCodes: const ["Deu"],
           areaMetric: 43094,
@@ -4280,6 +4406,10 @@ class CountryDnk extends WorldCountry {
               const PostalCode(format: "####", regExpPattern: r"^(\d{4})$"),
           regionalBlocs: const [BlocEU()],
         );
+  @override
+  List<FiatCurrency> get currencies => const [FiatDkk()];
+  @override
+  List<NaturalLanguage> get languages => const [LangDan()];
 }
 
 /// A class that represents the Dominican Republic country.
@@ -4306,12 +4436,10 @@ class CountryDom extends WorldCountry {
           codeNumeric: "214",
           codeShort: "DO",
           cioc: "DOM",
-          currencies: const [FiatDop()],
           idd: const Idd(root: 1, suffixes: [809, 829, 849]),
           altSpellings: const ["DO"],
           continent: const Americas(),
           subregion: const Caribbean(),
-          languages: const [LangSpa()],
           latLng: const LatLng(19, -70.66666666),
           bordersCodes: const ["Hti"],
           areaMetric: 48671,
@@ -4344,6 +4472,10 @@ class CountryDom extends WorldCountry {
           postalCode: const PostalCode(),
           regionalBlocs: const [BlocCARICOM(), BlocCAIS()],
         );
+  @override
+  List<FiatCurrency> get currencies => const [FiatDop()];
+  @override
+  List<NaturalLanguage> get languages => const [LangSpa()];
 }
 
 /// A class that represents the Algeria country.
@@ -4370,12 +4502,10 @@ class CountryDza extends WorldCountry {
           codeNumeric: "012",
           codeShort: "DZ",
           cioc: "ALG",
-          currencies: const [FiatDzd()],
           idd: const Idd(root: 2, suffixes: [13]),
           altSpellings: const ["DZ", "Dzayer", "Algérie"],
           continent: const Africa(),
           subregion: const NorthernAfrica(),
-          languages: const [LangAra()],
           latLng: const LatLng(28, 3),
           bordersCodes: const ["Tun", "Lby", "Ner", "Esh", "Mrt", "Mli", "Mar"],
           areaMetric: 2381741,
@@ -4405,6 +4535,10 @@ class CountryDza extends WorldCountry {
           postalCode: const PostalCode(),
           regionalBlocs: const [BlocAU(), BlocAL()],
         );
+  @override
+  List<FiatCurrency> get currencies => const [FiatDzd()];
+  @override
+  List<NaturalLanguage> get languages => const [LangAra()];
 }
 
 /// A class that represents the Ecuador country.
@@ -4431,7 +4565,6 @@ class CountryEcu extends WorldCountry {
           codeNumeric: "218",
           codeShort: "EC",
           cioc: "ECU",
-          currencies: const [FiatUsd()],
           idd: const Idd(root: 5, suffixes: [93]),
           altSpellings: const [
             "EC",
@@ -4440,7 +4573,6 @@ class CountryEcu extends WorldCountry {
           ],
           continent: const Americas(),
           subregion: const SouthAmerica(),
-          languages: const [LangSpa()],
           latLng: const LatLng(-2, -77.5),
           bordersCodes: const ["Col", "Per"],
           areaMetric: 276841,
@@ -4476,6 +4608,10 @@ class CountryEcu extends WorldCountry {
           ),
           regionalBlocs: const [BlocUSAN()],
         );
+  @override
+  List<FiatCurrency> get currencies => const [FiatUsd()];
+  @override
+  List<NaturalLanguage> get languages => const [LangSpa()];
 }
 
 /// A class that represents the Egypt country.
@@ -4502,12 +4638,10 @@ class CountryEgy extends WorldCountry {
           codeNumeric: "818",
           codeShort: "EG",
           cioc: "EGY",
-          currencies: const [FiatEgp()],
           idd: const Idd(root: 2, suffixes: [0]),
           altSpellings: const ["EG", "Arab Republic of Egypt"],
           continent: const Africa(),
           subregion: const NorthernAfrica(),
-          languages: const [LangAra()],
           latLng: const LatLng(27, 30),
           bordersCodes: const ["Isr", "Lby", "Pse", "Sdn"],
           areaMetric: 1002450,
@@ -4537,6 +4671,10 @@ class CountryEgy extends WorldCountry {
           postalCode: const PostalCode(),
           regionalBlocs: const [BlocAU(), BlocAL()],
         );
+  @override
+  List<FiatCurrency> get currencies => const [FiatEgp()];
+  @override
+  List<NaturalLanguage> get languages => const [LangAra()];
 }
 
 /// A class that represents the Eritrea country.
@@ -4573,7 +4711,6 @@ class CountryEri extends WorldCountry {
           codeNumeric: "232",
           codeShort: "ER",
           cioc: "ERI",
-          currencies: const [FiatErn()],
           idd: const Idd(root: 2, suffixes: [91]),
           altSpellings: const [
             "ER",
@@ -4585,7 +4722,6 @@ class CountryEri extends WorldCountry {
           ],
           continent: const Africa(),
           subregion: const EasternAfrica(),
-          languages: const [LangAra(), LangEng(), LangTir()],
           latLng: const LatLng(15, 39),
           bordersCodes: const ["Dji", "Eth", "Sdn"],
           areaMetric: 117600,
@@ -4612,6 +4748,11 @@ class CountryEri extends WorldCountry {
           ),
           regionalBlocs: const [BlocAU()],
         );
+  @override
+  List<FiatCurrency> get currencies => const [FiatErn()];
+  @override
+  List<NaturalLanguage> get languages =>
+      const [LangAra(), LangEng(), LangTir()];
 }
 
 /// A class that represents the Western Sahara country.
@@ -4639,12 +4780,10 @@ class CountryEsh extends WorldCountry {
           codeShort: "EH",
           independent: false,
           unMember: false,
-          currencies: const [FiatDzd(), FiatMad(), FiatMru()],
           idd: const Idd(root: 2, suffixes: [12]),
           altSpellings: const ["EH", "Taneẓroft Tutrimt"],
           continent: const Africa(),
           subregion: const NorthernAfrica(),
-          languages: const [LangSpa()],
           latLng: const LatLng(24.5, -13),
           bordersCodes: const ["Dza", "Mrt", "Mar"],
           areaMetric: 266000,
@@ -4666,6 +4805,10 @@ class CountryEsh extends WorldCountry {
           ),
           regionalBlocs: const [BlocAU()],
         );
+  @override
+  List<FiatCurrency> get currencies => const [FiatDzd(), FiatMad(), FiatMru()];
+  @override
+  List<NaturalLanguage> get languages => const [LangSpa()];
 }
 
 /// A class that represents the Spain country.
@@ -4692,12 +4835,10 @@ class CountryEsp extends WorldCountry {
           codeNumeric: "724",
           codeShort: "ES",
           cioc: "ESP",
-          currencies: const [FiatEur()],
           idd: const Idd(root: 3, suffixes: [4]),
           altSpellings: const ["ES", "Kingdom of Spain", "Reino de España"],
           continent: const Europe(),
           subregion: const SouthernEurope(),
-          languages: const [LangSpa()],
           latLng: const LatLng(40, -4),
           bordersCodes: const ["And", "Fra", "Gib", "Prt", "Mar"],
           areaMetric: 505992,
@@ -4726,6 +4867,10 @@ class CountryEsp extends WorldCountry {
           postalCode: const PostalCode(),
           regionalBlocs: const [BlocEU()],
         );
+  @override
+  List<FiatCurrency> get currencies => const [FiatEur()];
+  @override
+  List<NaturalLanguage> get languages => const [LangSpa()];
 }
 
 /// A class that represents the Estonia country.
@@ -4752,7 +4897,6 @@ class CountryEst extends WorldCountry {
           codeNumeric: "233",
           codeShort: "EE",
           cioc: "EST",
-          currencies: const [FiatEur()],
           idd: const Idd(root: 3, suffixes: [72]),
           altSpellings: const [
             "EE",
@@ -4762,7 +4906,6 @@ class CountryEst extends WorldCountry {
           ],
           continent: const Europe(),
           subregion: const NorthernEurope(),
-          languages: const [LangEst()],
           latLng: const LatLng(59, 26),
           bordersCodes: const ["Lva", "Rus"],
           areaMetric: 45227,
@@ -4791,6 +4934,10 @@ class CountryEst extends WorldCountry {
           postalCode: const PostalCode(),
           regionalBlocs: const [BlocEU()],
         );
+  @override
+  List<FiatCurrency> get currencies => const [FiatEur()];
+  @override
+  List<NaturalLanguage> get languages => const [LangEst()];
 }
 
 /// A class that represents the Ethiopia country.
@@ -4817,7 +4964,6 @@ class CountryEth extends WorldCountry {
           codeNumeric: "231",
           codeShort: "ET",
           cioc: "ETH",
-          currencies: const [FiatEtb()],
           idd: const Idd(root: 2, suffixes: [51]),
           altSpellings: const [
             "ET",
@@ -4827,7 +4973,6 @@ class CountryEth extends WorldCountry {
           ],
           continent: const Africa(),
           subregion: const EasternAfrica(),
-          languages: const [LangAmh()],
           latLng: const LatLng(8, 38),
           landlocked: true,
           bordersCodes: const ["Dji", "Eri", "Ken", "Som", "Ssd", "Sdn"],
@@ -4862,6 +5007,10 @@ class CountryEth extends WorldCountry {
               const PostalCode(format: "####", regExpPattern: r"^(\d{4})$"),
           regionalBlocs: const [BlocAU()],
         );
+  @override
+  List<FiatCurrency> get currencies => const [FiatEtb()];
+  @override
+  List<NaturalLanguage> get languages => const [LangAmh()];
 }
 
 /// A class that represents the Finland country.
@@ -4893,7 +5042,6 @@ class CountryFin extends WorldCountry {
           codeNumeric: "246",
           codeShort: "FI",
           cioc: "FIN",
-          currencies: const [FiatEur()],
           idd: const Idd(root: 3, suffixes: [58]),
           altSpellings: const [
             "FI",
@@ -4904,7 +5052,6 @@ class CountryFin extends WorldCountry {
           ],
           continent: const Europe(),
           subregion: const NorthernEurope(),
-          languages: const [LangFin(), LangSwe()],
           latLng: const LatLng(64, 26),
           bordersCodes: const ["Nor", "Swe", "Rus"],
           areaMetric: 338424,
@@ -4933,6 +5080,10 @@ class CountryFin extends WorldCountry {
           postalCode: const PostalCode(regExpPattern: r"^(?:FI)*(\d{5})$"),
           regionalBlocs: const [BlocEU()],
         );
+  @override
+  List<FiatCurrency> get currencies => const [FiatEur()];
+  @override
+  List<NaturalLanguage> get languages => const [LangFin(), LangSwe()];
 }
 
 /// A class that represents the Fiji country.
@@ -4964,7 +5115,6 @@ class CountryFji extends WorldCountry {
           codeNumeric: "242",
           codeShort: "FJ",
           cioc: "FIJ",
-          currencies: const [FiatFjd()],
           idd: const Idd(root: 6, suffixes: [79]),
           altSpellings: const [
             "FJ",
@@ -4975,7 +5125,6 @@ class CountryFji extends WorldCountry {
           ],
           continent: const Oceania(),
           subregion: const Melanesia(),
-          languages: const [LangEng(), LangFij()],
           latLng: const LatLng(17.7134, 178.065),
           areaMetric: 18272,
           demonyms: const [
@@ -4997,6 +5146,10 @@ class CountryFji extends WorldCountry {
             latLng: LatLng(-18.13, 178.42),
           ),
         );
+  @override
+  List<FiatCurrency> get currencies => const [FiatFjd()];
+  @override
+  List<NaturalLanguage> get languages => const [LangEng(), LangFij()];
 }
 
 /// A class that represents the Falkland Islands country.
@@ -5024,7 +5177,6 @@ class CountryFlk extends WorldCountry {
           codeShort: "FK",
           independent: false,
           unMember: false,
-          currencies: const [FiatFkp()],
           idd: const Idd(root: 50, suffixes: [0]),
           altSpellings: const [
             "FK",
@@ -5033,7 +5185,6 @@ class CountryFlk extends WorldCountry {
           ],
           continent: const Americas(),
           subregion: const SouthAmerica(),
-          languages: const [LangEng()],
           latLng: const LatLng(-51.75, -59),
           areaMetric: 12173,
           demonyms: const [
@@ -5058,6 +5209,10 @@ class CountryFlk extends WorldCountry {
           ),
           regionalBlocs: const [BlocUSAN()],
         );
+  @override
+  List<FiatCurrency> get currencies => const [FiatFkp()];
+  @override
+  List<NaturalLanguage> get languages => const [LangEng()];
 }
 
 /// A class that represents the France country.
@@ -5084,12 +5239,10 @@ class CountryFra extends WorldCountry {
           codeNumeric: "250",
           codeShort: "FR",
           cioc: "FRA",
-          currencies: const [FiatEur()],
           idd: const Idd(root: 3, suffixes: [3]),
           altSpellings: const ["FR", "French Republic", "République française"],
           continent: const Europe(),
           subregion: const WesternEurope(),
-          languages: const [LangFra()],
           latLng: const LatLng(46, 2),
           bordersCodes: const [
             "And",
@@ -5142,6 +5295,10 @@ class CountryFra extends WorldCountry {
           postalCode: const PostalCode(),
           regionalBlocs: const [BlocEU()],
         );
+  @override
+  List<FiatCurrency> get currencies => const [FiatEur()];
+  @override
+  List<NaturalLanguage> get languages => const [LangFra()];
 }
 
 /// A class that represents the Faroe Islands country.
@@ -5174,12 +5331,10 @@ class CountryFro extends WorldCountry {
           codeShort: "FO",
           independent: false,
           unMember: false,
-          currencies: const [FiatDkk()],
           idd: const Idd(root: 2, suffixes: [98]),
           altSpellings: const ["FO", "Føroyar", "Færøerne"],
           continent: const Europe(),
           subregion: const NorthernEurope(),
-          languages: const [LangDan(), LangFao()],
           latLng: const LatLng(62, -7),
           areaMetric: 1393,
           demonyms: const [
@@ -5204,6 +5359,10 @@ class CountryFro extends WorldCountry {
             regExpPattern: r"^(?:FO)*(\d{3})$",
           ),
         );
+  @override
+  List<FiatCurrency> get currencies => const [FiatDkk()];
+  @override
+  List<NaturalLanguage> get languages => const [LangDan(), LangFao()];
 }
 
 /// A class that represents the Micronesia country.
@@ -5230,7 +5389,6 @@ class CountryFsm extends WorldCountry {
           codeNumeric: "583",
           codeShort: "FM",
           cioc: "FSM",
-          currencies: const [FiatUsd()],
           idd: const Idd(root: 6, suffixes: [91]),
           altSpellings: const [
             "FM",
@@ -5239,7 +5397,6 @@ class CountryFsm extends WorldCountry {
           ],
           continent: const Oceania(),
           subregion: const Micronesia(),
-          languages: const [LangEng()],
           latLng: const LatLng(6.91666666, 158.25),
           areaMetric: 702,
           demonyms: const [
@@ -5269,6 +5426,10 @@ class CountryFsm extends WorldCountry {
           ),
           postalCode: const PostalCode(),
         );
+  @override
+  List<FiatCurrency> get currencies => const [FiatUsd()];
+  @override
+  List<NaturalLanguage> get languages => const [LangEng()];
 }
 
 /// A class that represents the Gabon country.
@@ -5295,7 +5456,6 @@ class CountryGab extends WorldCountry {
           codeNumeric: "266",
           codeShort: "GA",
           cioc: "GAB",
-          currencies: const [FiatXaf()],
           idd: const Idd(root: 2, suffixes: [41]),
           altSpellings: const [
             "GA",
@@ -5304,7 +5464,6 @@ class CountryGab extends WorldCountry {
           ],
           continent: const Africa(),
           subregion: const MiddleAfrica(),
-          languages: const [LangFra()],
           latLng: const LatLng(-1, 11.75),
           bordersCodes: const ["Cmr", "Cog", "Gnq"],
           areaMetric: 267668,
@@ -5332,6 +5491,10 @@ class CountryGab extends WorldCountry {
           ),
           regionalBlocs: const [BlocAU()],
         );
+  @override
+  List<FiatCurrency> get currencies => const [FiatXaf()];
+  @override
+  List<NaturalLanguage> get languages => const [LangFra()];
 }
 
 /// A class that represents the United Kingdom country.
@@ -5358,12 +5521,10 @@ class CountryGbr extends WorldCountry {
           codeNumeric: "826",
           codeShort: "GB",
           cioc: "GBR",
-          currencies: const [FiatGbp()],
           idd: const Idd(root: 4, suffixes: [4]),
           altSpellings: const ["GB", "UK", "Great Britain"],
           continent: const Europe(),
           subregion: const NorthernEurope(),
-          languages: const [LangEng()],
           latLng: const LatLng(54, -2),
           bordersCodes: const ["Irl"],
           areaMetric: 242900,
@@ -5404,6 +5565,10 @@ class CountryGbr extends WorldCountry {
                 r"^(([A-Z]\d{2}[A-Z]{2})|([A-Z]\d{3}[A-Z]{2})|([A-Z]{2}\d{2}[A-Z]{2})|([A-Z]{2}\d{3}[A-Z]{2})|([A-Z]\d[A-Z]\d[A-Z]{2})|([A-Z]{2}\d[A-Z]\d[A-Z]{2})|(GIR0AA))$",
           ),
         );
+  @override
+  List<FiatCurrency> get currencies => const [FiatGbp()];
+  @override
+  List<NaturalLanguage> get languages => const [LangEng()];
 }
 
 /// A class that represents the Georgia country.
@@ -5430,12 +5595,10 @@ class CountryGeo extends WorldCountry {
           codeNumeric: "268",
           codeShort: "GE",
           cioc: "GEO",
-          currencies: const [FiatGel()],
           idd: const Idd(root: 9, suffixes: [95]),
           altSpellings: const ["GE", "Sakartvelo"],
           continent: const Asia(),
           subregion: const WesternAsia(),
-          languages: const [LangKat()],
           latLng: const LatLng(42, 43.5),
           bordersCodes: const ["Arm", "Aze", "Rus", "Tur"],
           areaMetric: 69700,
@@ -5464,6 +5627,10 @@ class CountryGeo extends WorldCountry {
           postalCode:
               const PostalCode(format: "####", regExpPattern: r"^(\d{4})$"),
         );
+  @override
+  List<FiatCurrency> get currencies => const [FiatGel()];
+  @override
+  List<NaturalLanguage> get languages => const [LangKat()];
 }
 
 /// A class that represents the Guernsey country.
@@ -5496,7 +5663,6 @@ class CountryGgy extends WorldCountry {
           codeShort: "GG",
           independent: false,
           unMember: false,
-          currencies: const [FiatGbp()],
           idd: const Idd(root: 4, suffixes: [4]),
           altSpellings: const [
             "GG",
@@ -5505,7 +5671,6 @@ class CountryGgy extends WorldCountry {
           ],
           continent: const Europe(),
           subregion: const NorthernEurope(),
-          languages: const [LangEng(), LangFra()],
           latLng: const LatLng(49.46666666, -2.58333333),
           areaMetric: 78,
           demonyms: const [
@@ -5538,6 +5703,10 @@ class CountryGgy extends WorldCountry {
                 r"^(([A-Z]\d{2}[A-Z]{2})|([A-Z]\d{3}[A-Z]{2})|([A-Z]{2}\d{2}[A-Z]{2})|([A-Z]{2}\d{3}[A-Z]{2})|([A-Z]\d[A-Z]\d[A-Z]{2})|([A-Z]{2}\d[A-Z]\d[A-Z]{2})|(GIR0AA))$",
           ),
         );
+  @override
+  List<FiatCurrency> get currencies => const [FiatGbp()];
+  @override
+  List<NaturalLanguage> get languages => const [LangEng(), LangFra()];
 }
 
 /// A class that represents the Ghana country.
@@ -5564,12 +5733,10 @@ class CountryGha extends WorldCountry {
           codeNumeric: "288",
           codeShort: "GH",
           cioc: "GHA",
-          currencies: const [FiatGhs()],
           idd: const Idd(root: 2, suffixes: [33]),
           altSpellings: const ["GH"],
           continent: const Africa(),
           subregion: const WesternAfrica(),
-          languages: const [LangEng()],
           latLng: const LatLng(8, -2),
           bordersCodes: const ["Bfa", "Civ", "Tgo"],
           areaMetric: 238533,
@@ -5593,6 +5760,10 @@ class CountryGha extends WorldCountry {
           ),
           regionalBlocs: const [BlocAU()],
         );
+  @override
+  List<FiatCurrency> get currencies => const [FiatGhs()];
+  @override
+  List<NaturalLanguage> get languages => const [LangEng()];
 }
 
 /// A class that represents the Gibraltar country.
@@ -5620,12 +5791,10 @@ class CountryGib extends WorldCountry {
           codeShort: "GI",
           independent: false,
           unMember: false,
-          currencies: const [FiatGip()],
           idd: const Idd(root: 3, suffixes: [50]),
           altSpellings: const ["GI"],
           continent: const Europe(),
           subregion: const SouthernEurope(),
-          languages: const [LangEng()],
           latLng: const LatLng(36.13333333, -5.35),
           bordersCodes: const ["Esp"],
           areaMetric: 6,
@@ -5656,6 +5825,10 @@ class CountryGib extends WorldCountry {
           ),
           regionalBlocs: const [BlocEU()],
         );
+  @override
+  List<FiatCurrency> get currencies => const [FiatGip()];
+  @override
+  List<NaturalLanguage> get languages => const [LangEng()];
 }
 
 /// A class that represents the Guinea country.
@@ -5682,7 +5855,6 @@ class CountryGin extends WorldCountry {
           codeNumeric: "324",
           codeShort: "GN",
           cioc: "GUI",
-          currencies: const [FiatGnf()],
           idd: const Idd(root: 2, suffixes: [24]),
           altSpellings: const [
             "GN",
@@ -5691,7 +5863,6 @@ class CountryGin extends WorldCountry {
           ],
           continent: const Africa(),
           subregion: const WesternAfrica(),
-          languages: const [LangFra()],
           latLng: const LatLng(11, -10),
           bordersCodes: const ["Civ", "Gnb", "Lbr", "Mli", "Sen", "Sle"],
           areaMetric: 245857,
@@ -5715,6 +5886,10 @@ class CountryGin extends WorldCountry {
           ),
           regionalBlocs: const [BlocAU()],
         );
+  @override
+  List<FiatCurrency> get currencies => const [FiatGnf()];
+  @override
+  List<NaturalLanguage> get languages => const [LangFra()];
 }
 
 /// A class that represents the Guadeloupe country.
@@ -5742,12 +5917,10 @@ class CountryGlp extends WorldCountry {
           codeShort: "GP",
           independent: false,
           unMember: false,
-          currencies: const [FiatEur()],
           idd: const Idd(root: 5, suffixes: [90]),
           altSpellings: const ["GP", "Gwadloup"],
           continent: const Americas(),
           subregion: const Caribbean(),
-          languages: const [LangFra()],
           latLng: const LatLng(16.25, -61.583333),
           areaMetric: 1628,
           demonyms: const [
@@ -5776,6 +5949,10 @@ class CountryGlp extends WorldCountry {
           ),
           postalCode: const PostalCode(regExpPattern: r"^((97|98)\d{3})$"),
         );
+  @override
+  List<FiatCurrency> get currencies => const [FiatEur()];
+  @override
+  List<NaturalLanguage> get languages => const [LangFra()];
 }
 
 /// A class that represents the Gambia country.
@@ -5802,12 +5979,10 @@ class CountryGmb extends WorldCountry {
           codeNumeric: "270",
           codeShort: "GM",
           cioc: "GAM",
-          currencies: const [FiatGmd()],
           idd: const Idd(root: 2, suffixes: [20]),
           altSpellings: const ["GM", "Republic of the Gambia"],
           continent: const Africa(),
           subregion: const WesternAfrica(),
-          languages: const [LangEng()],
           latLng: const LatLng(13.46666666, -16.56666666),
           bordersCodes: const ["Sen"],
           areaMetric: 10689,
@@ -5831,6 +6006,10 @@ class CountryGmb extends WorldCountry {
           ),
           regionalBlocs: const [BlocAU()],
         );
+  @override
+  List<FiatCurrency> get currencies => const [FiatGmd()];
+  @override
+  List<NaturalLanguage> get languages => const [LangEng()];
 }
 
 /// A class that represents the Guinea-Bissau country.
@@ -5858,7 +6037,6 @@ class CountryGnb extends WorldCountry {
           codeShort: "GW",
           cioc: "GBS",
           unMember: false,
-          currencies: const [FiatXof()],
           idd: const Idd(root: 2, suffixes: [45]),
           altSpellings: const [
             "GW",
@@ -5867,7 +6045,6 @@ class CountryGnb extends WorldCountry {
           ],
           continent: const Africa(),
           subregion: const WesternAfrica(),
-          languages: const [LangPor()],
           latLng: const LatLng(12, -15),
           bordersCodes: const ["Gin", "Sen"],
           areaMetric: 36125,
@@ -5901,6 +6078,10 @@ class CountryGnb extends WorldCountry {
               const PostalCode(format: "####", regExpPattern: r"^(\d{4})$"),
           regionalBlocs: const [BlocAU()],
         );
+  @override
+  List<FiatCurrency> get currencies => const [FiatXof()];
+  @override
+  List<NaturalLanguage> get languages => const [LangPor()];
 }
 
 /// A class that represents the Equatorial Guinea country.
@@ -5937,7 +6118,6 @@ class CountryGnq extends WorldCountry {
           codeNumeric: "226",
           codeShort: "GQ",
           cioc: "GEQ",
-          currencies: const [FiatXaf()],
           idd: const Idd(root: 2, suffixes: [40]),
           altSpellings: const [
             "GQ",
@@ -5948,7 +6128,6 @@ class CountryGnq extends WorldCountry {
           ],
           continent: const Africa(),
           subregion: const MiddleAfrica(),
-          languages: const [LangFra(), LangPor(), LangSpa()],
           latLng: const LatLng(2, 10),
           bordersCodes: const ["Cmr", "Gab"],
           areaMetric: 28051,
@@ -5979,6 +6158,11 @@ class CountryGnq extends WorldCountry {
           ),
           regionalBlocs: const [BlocAU()],
         );
+  @override
+  List<FiatCurrency> get currencies => const [FiatXaf()];
+  @override
+  List<NaturalLanguage> get languages =>
+      const [LangFra(), LangPor(), LangSpa()];
 }
 
 /// A class that represents the Greece country.
@@ -6005,7 +6189,6 @@ class CountryGrc extends WorldCountry {
           codeNumeric: "300",
           codeShort: "GR",
           cioc: "GRE",
-          currencies: const [FiatEur()],
           idd: const Idd(root: 3, suffixes: [0]),
           altSpellings: const [
             "GR",
@@ -6015,7 +6198,6 @@ class CountryGrc extends WorldCountry {
           ],
           continent: const Europe(),
           subregion: const SouthernEurope(),
-          languages: const [LangEll()],
           latLng: const LatLng(39, 22),
           bordersCodes: const ["Alb", "Bgr", "Tur", "Mkd"],
           areaMetric: 131990,
@@ -6040,6 +6222,10 @@ class CountryGrc extends WorldCountry {
           postalCode: const PostalCode(format: "### ##"),
           regionalBlocs: const [BlocEU()],
         );
+  @override
+  List<FiatCurrency> get currencies => const [FiatEur()];
+  @override
+  List<NaturalLanguage> get languages => const [LangEll()];
 }
 
 /// A class that represents the Grenada country.
@@ -6066,12 +6252,10 @@ class CountryGrd extends WorldCountry {
           codeNumeric: "308",
           codeShort: "GD",
           cioc: "GRN",
-          currencies: const [FiatXcd()],
           idd: const Idd(root: 1, suffixes: [473]),
           altSpellings: const ["GD"],
           continent: const Americas(),
           subregion: const Caribbean(),
-          languages: const [LangEng()],
           latLng: const LatLng(12.11666666, -61.66666666),
           areaMetric: 344,
           demonyms: const [
@@ -6101,6 +6285,10 @@ class CountryGrd extends WorldCountry {
           ),
           regionalBlocs: const [BlocCAIS()],
         );
+  @override
+  List<FiatCurrency> get currencies => const [FiatXcd()];
+  @override
+  List<NaturalLanguage> get languages => const [LangEng()];
 }
 
 /// A class that represents the Greenland country.
@@ -6128,12 +6316,10 @@ class CountryGrl extends WorldCountry {
           codeShort: "GL",
           independent: false,
           unMember: false,
-          currencies: const [FiatDkk()],
           idd: const Idd(root: 2, suffixes: [99]),
           altSpellings: const ["GL", "Grønland"],
           continent: const Americas(),
           subregion: const NorthAmerica(),
-          languages: const [LangKal()],
           latLng: const LatLng(72, -40),
           areaMetric: 2166086,
           demonyms: const [
@@ -6163,6 +6349,10 @@ class CountryGrl extends WorldCountry {
           postalCode:
               const PostalCode(format: "####", regExpPattern: r"^(\d{4})$"),
         );
+  @override
+  List<FiatCurrency> get currencies => const [FiatDkk()];
+  @override
+  List<NaturalLanguage> get languages => const [LangKal()];
 }
 
 /// A class that represents the Guatemala country.
@@ -6189,12 +6379,10 @@ class CountryGtm extends WorldCountry {
           codeNumeric: "320",
           codeShort: "GT",
           cioc: "GUA",
-          currencies: const [FiatGtq()],
           idd: const Idd(root: 50, suffixes: [2]),
           altSpellings: const ["GT"],
           continent: const Americas(),
           subregion: const CentralAmerica(),
-          languages: const [LangSpa()],
           latLng: const LatLng(15.5, -90.25),
           bordersCodes: const ["Blz", "Slv", "Hnd", "Mex"],
           areaMetric: 108889,
@@ -6226,6 +6414,10 @@ class CountryGtm extends WorldCountry {
           ),
           postalCode: const PostalCode(),
         );
+  @override
+  List<FiatCurrency> get currencies => const [FiatGtq()];
+  @override
+  List<NaturalLanguage> get languages => const [LangSpa()];
 }
 
 /// A class that represents the French Guiana country.
@@ -6253,12 +6445,10 @@ class CountryGuf extends WorldCountry {
           codeShort: "GF",
           independent: false,
           unMember: false,
-          currencies: const [FiatEur()],
           idd: const Idd(root: 5, suffixes: [94]),
           altSpellings: const ["GF", "Guiana", "Guyane"],
           continent: const Americas(),
           subregion: const SouthAmerica(),
-          languages: const [LangFra()],
           latLng: const LatLng(4, -53),
           bordersCodes: const ["Bra", "Sur"],
           areaMetric: 83534,
@@ -6285,6 +6475,10 @@ class CountryGuf extends WorldCountry {
           postalCode: const PostalCode(regExpPattern: r"^((97|98)3\d{2})$"),
           regionalBlocs: const [BlocUSAN()],
         );
+  @override
+  List<FiatCurrency> get currencies => const [FiatEur()];
+  @override
+  List<NaturalLanguage> get languages => const [LangFra()];
 }
 
 /// A class that represents the Guam country.
@@ -6315,12 +6509,10 @@ class CountryGum extends WorldCountry {
           cioc: "GUM",
           independent: false,
           unMember: false,
-          currencies: const [FiatUsd()],
           idd: const Idd(root: 1, suffixes: [671]),
           altSpellings: const ["GU", "Guåhån"],
           continent: const Oceania(),
           subregion: const Micronesia(),
-          languages: const [LangCha(), LangEng(), LangSpa()],
           latLng: const LatLng(13.46666666, 144.78333333),
           areaMetric: 549,
           demonyms: const [
@@ -6346,6 +6538,11 @@ class CountryGum extends WorldCountry {
           postalCode:
               const PostalCode(format: "969##", regExpPattern: r"^(969\d{2})$"),
         );
+  @override
+  List<FiatCurrency> get currencies => const [FiatUsd()];
+  @override
+  List<NaturalLanguage> get languages =>
+      const [LangCha(), LangEng(), LangSpa()];
 }
 
 /// A class that represents the Guyana country.
@@ -6372,12 +6569,10 @@ class CountryGuy extends WorldCountry {
           codeNumeric: "328",
           codeShort: "GY",
           cioc: "GUY",
-          currencies: const [FiatGyd()],
           idd: const Idd(root: 5, suffixes: [92]),
           altSpellings: const ["GY", "Co-operative Republic of Guyana"],
           continent: const Americas(),
           subregion: const SouthAmerica(),
-          languages: const [LangEng()],
           latLng: const LatLng(5, -59),
           bordersCodes: const ["Bra", "Sur", "Ven"],
           areaMetric: 214969,
@@ -6405,6 +6600,10 @@ class CountryGuy extends WorldCountry {
           ),
           regionalBlocs: const [BlocCARICOM(), BlocUSAN()],
         );
+  @override
+  List<FiatCurrency> get currencies => const [FiatGyd()];
+  @override
+  List<NaturalLanguage> get languages => const [LangEng()];
 }
 
 /// A class that represents the Hong Kong country.
@@ -6440,12 +6639,10 @@ class CountryHkg extends WorldCountry {
           cioc: "HKG",
           independent: false,
           unMember: false,
-          currencies: const [FiatHkd()],
           idd: const Idd(root: 8, suffixes: [52]),
           altSpellings: const ["HK"],
           continent: const Asia(),
           subregion: const EasternAsia(),
-          languages: const [LangEng(), LangZho()],
           latLng: const LatLng(22.267, 114.188),
           bordersCodes: const ["Chn"],
           areaMetric: 1104,
@@ -6475,6 +6672,10 @@ class CountryHkg extends WorldCountry {
             latLng: LatLng(22.267, 114.188),
           ),
         );
+  @override
+  List<FiatCurrency> get currencies => const [FiatHkd()];
+  @override
+  List<NaturalLanguage> get languages => const [LangEng(), LangZho()];
 }
 
 /// A class that represents the Heard Island and McDonald Islands country.
@@ -6505,7 +6706,6 @@ class CountryHmd extends WorldCountry {
           idd: const Idd(root: 6, suffixes: [72]),
           altSpellings: const ["HM", "Heard Island and McDonald Islands"],
           continent: const Antarctica(),
-          languages: const [LangEng()],
           latLng: const LatLng(53.0818, 73.5042),
           areaMetric: 412,
           demonyms: const [
@@ -6525,6 +6725,8 @@ class CountryHmd extends WorldCountry {
           timezones: const ["UTC+05:00"],
           hasCoatOfArms: false,
         );
+  @override
+  List<NaturalLanguage> get languages => const [LangEng()];
 }
 
 /// A class that represents the Honduras country.
@@ -6551,7 +6753,6 @@ class CountryHnd extends WorldCountry {
           codeNumeric: "340",
           codeShort: "HN",
           cioc: "HON",
-          currencies: const [FiatHnl()],
           idd: const Idd(root: 50, suffixes: [4]),
           altSpellings: const [
             "HN",
@@ -6560,7 +6761,6 @@ class CountryHnd extends WorldCountry {
           ],
           continent: const Americas(),
           subregion: const CentralAmerica(),
-          languages: const [LangSpa()],
           latLng: const LatLng(15, -86.5),
           bordersCodes: const ["Gtm", "Slv", "Nic"],
           areaMetric: 112492,
@@ -6592,6 +6792,10 @@ class CountryHnd extends WorldCountry {
           ),
           regionalBlocs: const [BlocCAIS()],
         );
+  @override
+  List<FiatCurrency> get currencies => const [FiatHnl()];
+  @override
+  List<NaturalLanguage> get languages => const [LangSpa()];
 }
 
 /// A class that represents the Croatia country.
@@ -6618,7 +6822,6 @@ class CountryHrv extends WorldCountry {
           codeNumeric: "191",
           codeShort: "HR",
           cioc: "CRO",
-          currencies: const [FiatEur()],
           idd: const Idd(root: 3, suffixes: [85]),
           altSpellings: const [
             "HR",
@@ -6628,7 +6831,6 @@ class CountryHrv extends WorldCountry {
           ],
           continent: const Europe(),
           subregion: const SouthwestEurope(),
-          languages: const [LangHrv()],
           latLng: const LatLng(45.16666666, 15.5),
           bordersCodes: const ["Bih", "Hun", "Mne", "Srb", "Svn"],
           areaMetric: 56594,
@@ -6656,6 +6858,10 @@ class CountryHrv extends WorldCountry {
           ),
           regionalBlocs: const [BlocEU()],
         );
+  @override
+  List<FiatCurrency> get currencies => const [FiatEur()];
+  @override
+  List<NaturalLanguage> get languages => const [LangHrv()];
 }
 
 /// A class that represents the Haiti country.
@@ -6687,7 +6893,6 @@ class CountryHti extends WorldCountry {
           codeNumeric: "332",
           codeShort: "HT",
           cioc: "HAI",
-          currencies: const [FiatHtg()],
           idd: const Idd(root: 50, suffixes: [9]),
           altSpellings: const [
             "HT",
@@ -6697,7 +6902,6 @@ class CountryHti extends WorldCountry {
           ],
           continent: const Americas(),
           subregion: const Caribbean(),
-          languages: const [LangFra(), LangHat()],
           latLng: const LatLng(19, -72.41666666),
           bordersCodes: const ["Dom"],
           areaMetric: 27750,
@@ -6725,6 +6929,10 @@ class CountryHti extends WorldCountry {
           ),
           regionalBlocs: const [BlocCARICOM()],
         );
+  @override
+  List<FiatCurrency> get currencies => const [FiatHtg()];
+  @override
+  List<NaturalLanguage> get languages => const [LangFra(), LangHat()];
 }
 
 /// A class that represents the Hungary country.
@@ -6751,12 +6959,10 @@ class CountryHun extends WorldCountry {
           codeNumeric: "348",
           codeShort: "HU",
           cioc: "HUN",
-          currencies: const [FiatHuf()],
           idd: const Idd(root: 3, suffixes: [6]),
           altSpellings: const ["HU"],
           continent: const Europe(),
           subregion: const CentralEurope(),
-          languages: const [LangHun()],
           latLng: const LatLng(47, 20),
           landlocked: true,
           bordersCodes: const ["Aut", "Hrv", "Rou", "Srb", "Svk", "Svn", "Ukr"],
@@ -6791,6 +6997,10 @@ class CountryHun extends WorldCountry {
               const PostalCode(format: "####", regExpPattern: r"^(\d{4})$"),
           regionalBlocs: const [BlocEU()],
         );
+  @override
+  List<FiatCurrency> get currencies => const [FiatHuf()];
+  @override
+  List<NaturalLanguage> get languages => const [LangHun()];
 }
 
 /// A class that represents the Indonesia country.
@@ -6817,7 +7027,6 @@ class CountryIdn extends WorldCountry {
           codeNumeric: "360",
           codeShort: "ID",
           cioc: "INA",
-          currencies: const [FiatIdr()],
           idd: const Idd(root: 6, suffixes: [2]),
           altSpellings: const [
             "ID",
@@ -6826,7 +7035,6 @@ class CountryIdn extends WorldCountry {
           ],
           continent: const Asia(),
           subregion: const SouthEasternAsia(),
-          languages: const [LangInd()],
           latLng: const LatLng(-5, 120),
           bordersCodes: const ["Tls", "Mys", "Png"],
           areaMetric: 1904569,
@@ -6853,12 +7061,16 @@ class CountryIdn extends WorldCountry {
           car: const Car(sign: "RI", isRightSide: false),
           timezones: const ["UTC+07:00", "UTC+08:00", "UTC+09:00"],
           capitalInfo: const CapitalInfo(
-            capital: Capital("Jakarta"),
+            capital: Capital("Nusantara"),
             latLng: LatLng(-6.17, 106.82),
           ),
           postalCode: const PostalCode(),
           regionalBlocs: const [BlocASEAN()],
         );
+  @override
+  List<FiatCurrency> get currencies => const [FiatIdr()];
+  @override
+  List<NaturalLanguage> get languages => const [LangInd()];
 }
 
 /// A class that represents the Isle of Man country.
@@ -6891,12 +7103,10 @@ class CountryImn extends WorldCountry {
           codeShort: "IM",
           independent: false,
           unMember: false,
-          currencies: const [FiatGbp()],
           idd: const Idd(root: 4, suffixes: [4]),
           altSpellings: const ["IM", "Ellan Vannin", "Mann", "Mannin"],
           continent: const Europe(),
           subregion: const NorthernEurope(),
-          languages: const [LangEng(), LangGlv()],
           latLng: const LatLng(54.25, -4.5),
           areaMetric: 572,
           demonyms: const [
@@ -6921,6 +7131,10 @@ class CountryImn extends WorldCountry {
           ),
           regionalBlocs: const [BlocEU()],
         );
+  @override
+  List<FiatCurrency> get currencies => const [FiatGbp()];
+  @override
+  List<NaturalLanguage> get languages => const [LangEng(), LangGlv()];
 }
 
 /// A class that represents the India country.
@@ -6957,7 +7171,6 @@ class CountryInd extends WorldCountry {
           codeNumeric: "356",
           codeShort: "IN",
           cioc: "IND",
-          currencies: const [FiatInr()],
           idd: const Idd(root: 9, suffixes: [1]),
           altSpellings: const [
             "IN",
@@ -6968,7 +7181,6 @@ class CountryInd extends WorldCountry {
           ],
           continent: const Asia(),
           subregion: const SouthernAsia(),
-          languages: const [LangEng(), LangHin(), LangTam()],
           latLng: const LatLng(20, 77),
           bordersCodes: const ["Bgd", "Btn", "Mmr", "Chn", "Npl", "Pak"],
           areaMetric: 3287590,
@@ -6994,6 +7206,11 @@ class CountryInd extends WorldCountry {
               const PostalCode(format: "######", regExpPattern: r"^(\d{6})$"),
           regionalBlocs: const [BlocSAARC()],
         );
+  @override
+  List<FiatCurrency> get currencies => const [FiatInr()];
+  @override
+  List<NaturalLanguage> get languages =>
+      const [LangEng(), LangHin(), LangTam()];
 }
 
 /// A class that represents the British Indian Ocean Territory country.
@@ -7021,12 +7238,10 @@ class CountryIot extends WorldCountry {
           codeShort: "IO",
           independent: false,
           unMember: false,
-          currencies: const [FiatUsd()],
           idd: const Idd(root: 2, suffixes: [46]),
           altSpellings: const ["IO"],
           continent: const Africa(),
           subregion: const EasternAfrica(),
-          languages: const [LangEng()],
           latLng: const LatLng(-6, 71.5),
           areaMetric: 60,
           demonyms: const [
@@ -7047,6 +7262,10 @@ class CountryIot extends WorldCountry {
           ),
           regionalBlocs: const [BlocAU()],
         );
+  @override
+  List<FiatCurrency> get currencies => const [FiatUsd()];
+  @override
+  List<NaturalLanguage> get languages => const [LangEng()];
 }
 
 /// A class that represents the Ireland country.
@@ -7078,7 +7297,6 @@ class CountryIrl extends WorldCountry {
           codeNumeric: "372",
           codeShort: "IE",
           cioc: "IRL",
-          currencies: const [FiatEur()],
           idd: const Idd(root: 3, suffixes: [53]),
           altSpellings: const [
             "IE",
@@ -7088,7 +7306,6 @@ class CountryIrl extends WorldCountry {
           ],
           continent: const Europe(),
           subregion: const NorthernEurope(),
-          languages: const [LangEng(), LangGle()],
           latLng: const LatLng(53, -8),
           bordersCodes: const ["Gbr"],
           areaMetric: 70273,
@@ -7121,6 +7338,10 @@ class CountryIrl extends WorldCountry {
           ),
           regionalBlocs: const [BlocEU()],
         );
+  @override
+  List<FiatCurrency> get currencies => const [FiatEur()];
+  @override
+  List<NaturalLanguage> get languages => const [LangEng(), LangGle()];
 }
 
 /// A class that represents the Iran country.
@@ -7147,7 +7368,6 @@ class CountryIrn extends WorldCountry {
           codeNumeric: "364",
           codeShort: "IR",
           cioc: "IRI",
-          currencies: const [FiatIrr()],
           idd: const Idd(root: 9, suffixes: [8]),
           altSpellings: const [
             "IR",
@@ -7157,7 +7377,6 @@ class CountryIrn extends WorldCountry {
           ],
           continent: const Asia(),
           subregion: const SouthernAsia(),
-          languages: const [LangFas()],
           latLng: const LatLng(32, 53),
           bordersCodes: const ["Afg", "Arm", "Aze", "Irq", "Pak", "Tur", "Tkm"],
           areaMetric: 1648195,
@@ -7185,6 +7404,10 @@ class CountryIrn extends WorldCountry {
             regExpPattern: r"^(\d{10})$",
           ),
         );
+  @override
+  List<FiatCurrency> get currencies => const [FiatIrr()];
+  @override
+  List<NaturalLanguage> get languages => const [LangFas()];
 }
 
 /// A class that represents the Iraq country.
@@ -7211,7 +7434,6 @@ class CountryIrq extends WorldCountry {
           codeNumeric: "368",
           codeShort: "IQ",
           cioc: "IRQ",
-          currencies: const [FiatIqd()],
           idd: const Idd(root: 9, suffixes: [64]),
           altSpellings: const [
             "IQ",
@@ -7220,7 +7442,6 @@ class CountryIrq extends WorldCountry {
           ],
           continent: const Asia(),
           subregion: const WesternAsia(),
-          languages: const [LangAra()],
           latLng: const LatLng(33, 44),
           bordersCodes: const ["Irn", "Jor", "Kwt", "Sau", "Syr", "Tur"],
           areaMetric: 438317,
@@ -7246,6 +7467,10 @@ class CountryIrq extends WorldCountry {
           postalCode: const PostalCode(),
           regionalBlocs: const [BlocAL()],
         );
+  @override
+  List<FiatCurrency> get currencies => const [FiatIqd()];
+  @override
+  List<NaturalLanguage> get languages => const [LangAra()];
 }
 
 /// A class that represents the Iceland country.
@@ -7272,7 +7497,6 @@ class CountryIsl extends WorldCountry {
           codeNumeric: "352",
           codeShort: "IS",
           cioc: "ISL",
-          currencies: const [FiatIsk()],
           idd: const Idd(root: 3, suffixes: [54]),
           altSpellings: const [
             "IS",
@@ -7282,7 +7506,6 @@ class CountryIsl extends WorldCountry {
           ],
           continent: const Europe(),
           subregion: const NorthernEurope(),
-          languages: const [LangIsl()],
           latLng: const LatLng(65, -18),
           areaMetric: 103000,
           demonyms: const [
@@ -7315,6 +7538,10 @@ class CountryIsl extends WorldCountry {
               const PostalCode(format: "###", regExpPattern: r"^(\d{3})$"),
           regionalBlocs: const [BlocEFTA()],
         );
+  @override
+  List<FiatCurrency> get currencies => const [FiatIsk()];
+  @override
+  List<NaturalLanguage> get languages => const [LangIsl()];
 }
 
 /// A class that represents the Israel country.
@@ -7346,12 +7573,10 @@ class CountryIsr extends WorldCountry {
           codeNumeric: "376",
           codeShort: "IL",
           cioc: "ISR",
-          currencies: const [FiatIls()],
           idd: const Idd(root: 9, suffixes: [72]),
           altSpellings: const ["IL", "State of Israel", "Medīnat Yisrā'el"],
           continent: const Asia(),
           subregion: const WesternAsia(),
-          languages: const [LangAra(), LangHeb()],
           latLng: const LatLng(31.47, 35.13),
           bordersCodes: const ["Egy", "Jor", "Lbn", "Pse", "Syr"],
           areaMetric: 20770,
@@ -7380,6 +7605,10 @@ class CountryIsr extends WorldCountry {
           ),
           postalCode: const PostalCode(),
         );
+  @override
+  List<FiatCurrency> get currencies => const [FiatIls()];
+  @override
+  List<NaturalLanguage> get languages => const [LangAra(), LangHeb()];
 }
 
 /// A class that represents the Italy country.
@@ -7406,12 +7635,10 @@ class CountryIta extends WorldCountry {
           codeNumeric: "380",
           codeShort: "IT",
           cioc: "ITA",
-          currencies: const [FiatEur()],
           idd: const Idd(root: 3, suffixes: [9]),
           altSpellings: const ["IT", "Italian Republic", "Repubblica italiana"],
           continent: const Europe(),
           subregion: const SouthernEurope(),
-          languages: const [LangIta()],
           latLng: const LatLng(42.83333333, 12.83333333),
           bordersCodes: const ["Aut", "Fra", "Smr", "Svn", "Che", "Vat"],
           areaMetric: 301336,
@@ -7436,6 +7663,10 @@ class CountryIta extends WorldCountry {
           postalCode: const PostalCode(),
           regionalBlocs: const [BlocEU()],
         );
+  @override
+  List<FiatCurrency> get currencies => const [FiatEur()];
+  @override
+  List<NaturalLanguage> get languages => const [LangIta()];
 }
 
 /// A class that represents the Jamaica country.
@@ -7462,12 +7693,10 @@ class CountryJam extends WorldCountry {
           codeNumeric: "388",
           codeShort: "JM",
           cioc: "JAM",
-          currencies: const [FiatJmd()],
           idd: const Idd(root: 1, suffixes: [658, 876]),
           altSpellings: const ["JM"],
           continent: const Americas(),
           subregion: const Caribbean(),
-          languages: const [LangEng()],
           latLng: const LatLng(18.25, -77.5),
           areaMetric: 10991,
           demonyms: const [
@@ -7494,6 +7723,10 @@ class CountryJam extends WorldCountry {
           ),
           regionalBlocs: const [BlocCARICOM()],
         );
+  @override
+  List<FiatCurrency> get currencies => const [FiatJmd()];
+  @override
+  List<NaturalLanguage> get languages => const [LangEng()];
 }
 
 /// A class that represents the Jersey country.
@@ -7526,7 +7759,6 @@ class CountryJey extends WorldCountry {
           codeShort: "JE",
           independent: false,
           unMember: false,
-          currencies: const [FiatGbp()],
           idd: const Idd(root: 4, suffixes: [4]),
           altSpellings: const [
             "JE",
@@ -7536,7 +7768,6 @@ class CountryJey extends WorldCountry {
           ],
           continent: const Europe(),
           subregion: const NorthernEurope(),
-          languages: const [LangEng(), LangFra()],
           latLng: const LatLng(49.25, -2.16666666),
           areaMetric: 116,
           demonyms: const [
@@ -7569,6 +7800,10 @@ class CountryJey extends WorldCountry {
                 r"^(([A-Z]\d{2}[A-Z]{2})|([A-Z]\d{3}[A-Z]{2})|([A-Z]{2}\d{2}[A-Z]{2})|([A-Z]{2}\d{3}[A-Z]{2})|([A-Z]\d[A-Z]\d[A-Z]{2})|([A-Z]{2}\d[A-Z]\d[A-Z]{2})|(GIR0AA))$",
           ),
         );
+  @override
+  List<FiatCurrency> get currencies => const [FiatGbp()];
+  @override
+  List<NaturalLanguage> get languages => const [LangEng(), LangFra()];
 }
 
 /// A class that represents the Jordan country.
@@ -7595,7 +7830,6 @@ class CountryJor extends WorldCountry {
           codeNumeric: "400",
           codeShort: "JO",
           cioc: "JOR",
-          currencies: const [FiatJod()],
           idd: const Idd(root: 9, suffixes: [62]),
           altSpellings: const [
             "JO",
@@ -7604,7 +7838,6 @@ class CountryJor extends WorldCountry {
           ],
           continent: const Asia(),
           subregion: const WesternAsia(),
-          languages: const [LangAra()],
           latLng: const LatLng(31, 36),
           bordersCodes: const ["Irq", "Isr", "Pse", "Sau", "Syr"],
           areaMetric: 89342,
@@ -7638,6 +7871,10 @@ class CountryJor extends WorldCountry {
           postalCode: const PostalCode(),
           regionalBlocs: const [BlocAL()],
         );
+  @override
+  List<FiatCurrency> get currencies => const [FiatJod()];
+  @override
+  List<NaturalLanguage> get languages => const [LangAra()];
 }
 
 /// A class that represents the Japan country.
@@ -7660,12 +7897,10 @@ class CountryJpn extends WorldCountry {
           codeNumeric: "392",
           codeShort: "JP",
           cioc: "JPN",
-          currencies: const [FiatJpy()],
           idd: const Idd(root: 8, suffixes: [1]),
           altSpellings: const ["JP", "Nippon", "Nihon"],
           continent: const Asia(),
           subregion: const EasternAsia(),
-          languages: const [LangJpn()],
           latLng: const LatLng(36, 138),
           areaMetric: 377930,
           demonyms: const [
@@ -7693,6 +7928,10 @@ class CountryJpn extends WorldCountry {
           postalCode:
               const PostalCode(format: "###-####", regExpPattern: r"^(\d{7})$"),
         );
+  @override
+  List<FiatCurrency> get currencies => const [FiatJpy()];
+  @override
+  List<NaturalLanguage> get languages => const [LangJpn()];
 }
 
 /// A class that represents the Kazakhstan country.
@@ -7724,7 +7963,6 @@ class CountryKaz extends WorldCountry {
           codeNumeric: "398",
           codeShort: "KZ",
           cioc: "KAZ",
-          currencies: const [FiatKzt()],
           idd: const Idd(root: 7, suffixes: [6, 7]),
           altSpellings: const [
             "KZ",
@@ -7738,7 +7976,6 @@ class CountryKaz extends WorldCountry {
           ],
           continent: const Asia(),
           subregion: const CentralAsia(),
-          languages: const [LangKaz(), LangRus()],
           latLng: const LatLng(48.0196, 66.9237),
           landlocked: true,
           bordersCodes: const ["Chn", "Kgz", "Rus", "Tkm", "Uzb"],
@@ -7773,6 +8010,10 @@ class CountryKaz extends WorldCountry {
               const PostalCode(format: "######", regExpPattern: r"^(\d{6})$"),
           regionalBlocs: const [BlocEEU()],
         );
+  @override
+  List<FiatCurrency> get currencies => const [FiatKzt()];
+  @override
+  List<NaturalLanguage> get languages => const [LangKaz(), LangRus()];
 }
 
 /// A class that represents the Kenya country.
@@ -7804,12 +8045,10 @@ class CountryKen extends WorldCountry {
           codeNumeric: "404",
           codeShort: "KE",
           cioc: "KEN",
-          currencies: const [FiatKes()],
           idd: const Idd(root: 2, suffixes: [54]),
           altSpellings: const ["KE", "Republic of Kenya", "Jamhuri ya Kenya"],
           continent: const Africa(),
           subregion: const EasternAfrica(),
-          languages: const [LangEng(), LangSwa()],
           latLng: const LatLng(1, 38),
           bordersCodes: const ["Eth", "Som", "Ssd", "Tza", "Uga"],
           areaMetric: 580367,
@@ -7834,6 +8073,10 @@ class CountryKen extends WorldCountry {
           postalCode: const PostalCode(),
           regionalBlocs: const [BlocAU()],
         );
+  @override
+  List<FiatCurrency> get currencies => const [FiatKes()];
+  @override
+  List<NaturalLanguage> get languages => const [LangEng(), LangSwa()];
 }
 
 /// A class that represents the Kyrgyzstan country.
@@ -7865,7 +8108,6 @@ class CountryKgz extends WorldCountry {
           codeNumeric: "417",
           codeShort: "KG",
           cioc: "KGZ",
-          currencies: const [FiatKgs()],
           idd: const Idd(root: 9, suffixes: [96]),
           altSpellings: const [
             "KG",
@@ -7876,7 +8118,6 @@ class CountryKgz extends WorldCountry {
           ],
           continent: const Asia(),
           subregion: const CentralAsia(),
-          languages: const [LangKir(), LangRus()],
           latLng: const LatLng(41, 75),
           landlocked: true,
           bordersCodes: const ["Chn", "Kaz", "Tjk", "Uzb"],
@@ -7903,6 +8144,10 @@ class CountryKgz extends WorldCountry {
               const PostalCode(format: "######", regExpPattern: r"^(\d{6})$"),
           regionalBlocs: const [BlocEEU()],
         );
+  @override
+  List<FiatCurrency> get currencies => const [FiatKgs()];
+  @override
+  List<NaturalLanguage> get languages => const [LangKir(), LangRus()];
 }
 
 /// A class that represents the Cambodia country.
@@ -7929,12 +8174,10 @@ class CountryKhm extends WorldCountry {
           codeNumeric: "116",
           codeShort: "KH",
           cioc: "CAM",
-          currencies: const [FiatKhr(), FiatUsd()],
           idd: const Idd(root: 8, suffixes: [55]),
           altSpellings: const ["KH", "Kingdom of Cambodia"],
           continent: const Asia(),
           subregion: const SouthEasternAsia(),
-          languages: const [LangKhm()],
           latLng: const LatLng(13, 105),
           bordersCodes: const ["Lao", "Tha", "Vnm"],
           areaMetric: 181035,
@@ -7966,6 +8209,10 @@ class CountryKhm extends WorldCountry {
           postalCode: const PostalCode(),
           regionalBlocs: const [BlocASEAN()],
         );
+  @override
+  List<FiatCurrency> get currencies => const [FiatKhr(), FiatUsd()];
+  @override
+  List<NaturalLanguage> get languages => const [LangKhm()];
 }
 
 /// A class that represents the Kiribati country.
@@ -7992,7 +8239,6 @@ class CountryKir extends WorldCountry {
           codeNumeric: "296",
           codeShort: "KI",
           cioc: "KIR",
-          currencies: const [FiatAud()],
           idd: const Idd(root: 6, suffixes: [86]),
           altSpellings: const [
             "KI",
@@ -8001,7 +8247,6 @@ class CountryKir extends WorldCountry {
           ],
           continent: const Oceania(),
           subregion: const Micronesia(),
-          languages: const [LangEng()],
           latLng: const LatLng(1.41666666, 173),
           areaMetric: 811,
           demonyms: const [
@@ -8030,6 +8275,10 @@ class CountryKir extends WorldCountry {
             latLng: LatLng(1.33, 172.98),
           ),
         );
+  @override
+  List<FiatCurrency> get currencies => const [FiatAud()];
+  @override
+  List<NaturalLanguage> get languages => const [LangEng()];
 }
 
 /// A class that represents the Saint Kitts and Nevis country.
@@ -8056,7 +8305,6 @@ class CountryKna extends WorldCountry {
           codeNumeric: "659",
           codeShort: "KN",
           cioc: "SKN",
-          currencies: const [FiatXcd()],
           idd: const Idd(root: 1, suffixes: [869]),
           altSpellings: const [
             "KN",
@@ -8064,7 +8312,6 @@ class CountryKna extends WorldCountry {
           ],
           continent: const Americas(),
           subregion: const Caribbean(),
-          languages: const [LangEng()],
           latLng: const LatLng(17.33333333, -62.75),
           areaMetric: 261,
           demonyms: const [
@@ -8094,6 +8341,10 @@ class CountryKna extends WorldCountry {
           ),
           regionalBlocs: const [BlocCARICOM()],
         );
+  @override
+  List<FiatCurrency> get currencies => const [FiatXcd()];
+  @override
+  List<NaturalLanguage> get languages => const [LangEng()];
 }
 
 /// A class that represents the South Korea country.
@@ -8116,7 +8367,6 @@ class CountryKor extends WorldCountry {
           codeNumeric: "410",
           codeShort: "KR",
           cioc: "KOR",
-          currencies: const [FiatKrw()],
           idd: const Idd(root: 8, suffixes: [2]),
           altSpellings: const [
             "KR",
@@ -8127,7 +8377,6 @@ class CountryKor extends WorldCountry {
           ],
           continent: const Asia(),
           subregion: const EasternAsia(),
-          languages: const [LangKor()],
           latLng: const LatLng(37, 127.5),
           bordersCodes: const ["Prk"],
           areaMetric: 100210,
@@ -8162,6 +8411,10 @@ class CountryKor extends WorldCountry {
             regExpPattern: r"^(?:SEOUL)*(\d{6})$",
           ),
         );
+  @override
+  List<FiatCurrency> get currencies => const [FiatKrw()];
+  @override
+  List<NaturalLanguage> get languages => const [LangKor()];
 }
 
 /// A class that represents the Kuwait country.
@@ -8188,12 +8441,10 @@ class CountryKwt extends WorldCountry {
           codeNumeric: "414",
           codeShort: "KW",
           cioc: "KUW",
-          currencies: const [FiatKwd()],
           idd: const Idd(root: 9, suffixes: [65]),
           altSpellings: const ["KW", "State of Kuwait", "Dawlat al-Kuwait"],
           continent: const Asia(),
           subregion: const WesternAsia(),
-          languages: const [LangAra()],
           latLng: const LatLng(29.5, 45.75),
           bordersCodes: const ["Irq", "Sau"],
           areaMetric: 17818,
@@ -8222,6 +8473,10 @@ class CountryKwt extends WorldCountry {
           postalCode: const PostalCode(),
           regionalBlocs: const [BlocAL()],
         );
+  @override
+  List<FiatCurrency> get currencies => const [FiatKwd()];
+  @override
+  List<NaturalLanguage> get languages => const [LangAra()];
 }
 
 /// A class that represents the Laos country.
@@ -8248,7 +8503,6 @@ class CountryLao extends WorldCountry {
           codeNumeric: "418",
           codeShort: "LA",
           cioc: "LAO",
-          currencies: const [FiatLak()],
           idd: const Idd(root: 8, suffixes: [56]),
           altSpellings: const [
             "LA",
@@ -8258,7 +8512,6 @@ class CountryLao extends WorldCountry {
           ],
           continent: const Asia(),
           subregion: const SouthEasternAsia(),
-          languages: const [LangLao()],
           latLng: const LatLng(18, 105),
           landlocked: true,
           bordersCodes: const ["Mmr", "Khm", "Chn", "Tha", "Vnm"],
@@ -8284,6 +8537,10 @@ class CountryLao extends WorldCountry {
           postalCode: const PostalCode(),
           regionalBlocs: const [BlocASEAN()],
         );
+  @override
+  List<FiatCurrency> get currencies => const [FiatLak()];
+  @override
+  List<NaturalLanguage> get languages => const [LangLao()];
 }
 
 /// A class that represents the Lebanon country.
@@ -8315,7 +8572,6 @@ class CountryLbn extends WorldCountry {
           codeNumeric: "422",
           codeShort: "LB",
           cioc: "LBN",
-          currencies: const [FiatLbp()],
           idd: const Idd(root: 9, suffixes: [61]),
           altSpellings: const [
             "LB",
@@ -8324,7 +8580,6 @@ class CountryLbn extends WorldCountry {
           ],
           continent: const Asia(),
           subregion: const WesternAsia(),
-          languages: const [LangAra(), LangFra()],
           latLng: const LatLng(33.83333333, 35.83333333),
           bordersCodes: const ["Isr", "Syr"],
           areaMetric: 10452,
@@ -8356,6 +8611,10 @@ class CountryLbn extends WorldCountry {
           ),
           regionalBlocs: const [BlocAL()],
         );
+  @override
+  List<FiatCurrency> get currencies => const [FiatLbp()];
+  @override
+  List<NaturalLanguage> get languages => const [LangAra(), LangFra()];
 }
 
 /// A class that represents the Liberia country.
@@ -8382,12 +8641,10 @@ class CountryLbr extends WorldCountry {
           codeNumeric: "430",
           codeShort: "LR",
           cioc: "LBR",
-          currencies: const [FiatLrd()],
           idd: const Idd(root: 2, suffixes: [31]),
           altSpellings: const ["LR", "Republic of Liberia"],
           continent: const Africa(),
           subregion: const WesternAfrica(),
-          languages: const [LangEng()],
           latLng: const LatLng(6.5, -9.5),
           bordersCodes: const ["Gin", "Civ", "Sle"],
           areaMetric: 111369,
@@ -8417,6 +8674,10 @@ class CountryLbr extends WorldCountry {
               const PostalCode(format: "####", regExpPattern: r"^(\d{4})$"),
           regionalBlocs: const [BlocAU(), BlocAL()],
         );
+  @override
+  List<FiatCurrency> get currencies => const [FiatLrd()];
+  @override
+  List<NaturalLanguage> get languages => const [LangEng()];
 }
 
 /// A class that represents the Libya country.
@@ -8443,12 +8704,10 @@ class CountryLby extends WorldCountry {
           codeNumeric: "434",
           codeShort: "LY",
           cioc: "LBA",
-          currencies: const [FiatLyd()],
           idd: const Idd(root: 2, suffixes: [18]),
           altSpellings: const ["LY", "State of Libya", "Dawlat Libya"],
           continent: const Africa(),
           subregion: const NorthernAfrica(),
-          languages: const [LangAra()],
           latLng: const LatLng(25, 17),
           bordersCodes: const ["Dza", "Tcd", "Egy", "Ner", "Sdn", "Tun"],
           areaMetric: 1759540,
@@ -8471,6 +8730,10 @@ class CountryLby extends WorldCountry {
             latLng: LatLng(32.88, 13.17),
           ),
         );
+  @override
+  List<FiatCurrency> get currencies => const [FiatLyd()];
+  @override
+  List<NaturalLanguage> get languages => const [LangAra()];
 }
 
 /// A class that represents the Saint Lucia country.
@@ -8497,12 +8760,10 @@ class CountryLca extends WorldCountry {
           codeNumeric: "662",
           codeShort: "LC",
           cioc: "LCA",
-          currencies: const [FiatXcd()],
           idd: const Idd(root: 1, suffixes: [758]),
           altSpellings: const ["LC"],
           continent: const Americas(),
           subregion: const Caribbean(),
-          languages: const [LangEng()],
           latLng: const LatLng(13.88333333, -60.96666666),
           areaMetric: 616,
           demonyms: const [
@@ -8533,6 +8794,10 @@ class CountryLca extends WorldCountry {
           ),
           regionalBlocs: const [BlocCARICOM()],
         );
+  @override
+  List<FiatCurrency> get currencies => const [FiatXcd()];
+  @override
+  List<NaturalLanguage> get languages => const [LangEng()];
 }
 
 /// A class that represents the Liechtenstein country.
@@ -8559,7 +8824,6 @@ class CountryLie extends WorldCountry {
           codeNumeric: "438",
           codeShort: "LI",
           cioc: "LIE",
-          currencies: const [FiatChf()],
           idd: const Idd(root: 4, suffixes: [23]),
           altSpellings: const [
             "LI",
@@ -8568,7 +8832,6 @@ class CountryLie extends WorldCountry {
           ],
           continent: const Europe(),
           subregion: const WesternEurope(),
-          languages: const [LangDeu()],
           latLng: const LatLng(47.26666666, 9.53333333),
           landlocked: true,
           bordersCodes: const ["Aut", "Che"],
@@ -8602,6 +8865,10 @@ class CountryLie extends WorldCountry {
               const PostalCode(format: "####", regExpPattern: r"^(\d{4})$"),
           regionalBlocs: const [BlocEFTA()],
         );
+  @override
+  List<FiatCurrency> get currencies => const [FiatChf()];
+  @override
+  List<NaturalLanguage> get languages => const [LangDeu()];
 }
 
 /// A class that represents the Sri Lanka country.
@@ -8633,7 +8900,6 @@ class CountryLka extends WorldCountry {
           codeNumeric: "144",
           codeShort: "LK",
           cioc: "SRI",
-          currencies: const [FiatLkr()],
           idd: const Idd(root: 9, suffixes: [4]),
           altSpellings: const [
             "LK",
@@ -8642,7 +8908,6 @@ class CountryLka extends WorldCountry {
           ],
           continent: const Asia(),
           subregion: const SouthernAsia(),
-          languages: const [LangSin(), LangTam()],
           latLng: const LatLng(7, 81),
           bordersCodes: const ["Ind"],
           areaMetric: 65610,
@@ -8675,6 +8940,10 @@ class CountryLka extends WorldCountry {
           postalCode: const PostalCode(),
           regionalBlocs: const [BlocSAARC()],
         );
+  @override
+  List<FiatCurrency> get currencies => const [FiatLkr()];
+  @override
+  List<NaturalLanguage> get languages => const [LangSin(), LangTam()];
 }
 
 /// A class that represents the Lesotho country.
@@ -8706,12 +8975,10 @@ class CountryLso extends WorldCountry {
           codeNumeric: "426",
           codeShort: "LS",
           cioc: "LES",
-          currencies: const [FiatLsl(), FiatZar()],
           idd: const Idd(root: 2, suffixes: [66]),
           altSpellings: const ["LS", "Kingdom of Lesotho", "Muso oa Lesotho"],
           continent: const Africa(),
           subregion: const SouthernAfrica(),
-          languages: const [LangEng(), LangSot()],
           latLng: const LatLng(-29.5, 28.5),
           landlocked: true,
           bordersCodes: const ["Zaf"],
@@ -8742,6 +9009,10 @@ class CountryLso extends WorldCountry {
               const PostalCode(format: "###", regExpPattern: r"^(\d{3})$"),
           regionalBlocs: const [BlocAU()],
         );
+  @override
+  List<FiatCurrency> get currencies => const [FiatLsl(), FiatZar()];
+  @override
+  List<NaturalLanguage> get languages => const [LangEng(), LangSot()];
 }
 
 /// A class that represents the Lithuania country.
@@ -8768,7 +9039,6 @@ class CountryLtu extends WorldCountry {
           codeNumeric: "440",
           codeShort: "LT",
           cioc: "LTU",
-          currencies: const [FiatEur()],
           idd: const Idd(root: 3, suffixes: [70]),
           altSpellings: const [
             "LT",
@@ -8777,7 +9047,6 @@ class CountryLtu extends WorldCountry {
           ],
           continent: const Europe(),
           subregion: const NorthernEurope(),
-          languages: const [LangLit()],
           latLng: const LatLng(56, 24),
           bordersCodes: const ["Blr", "Lva", "Pol", "Rus"],
           areaMetric: 65300,
@@ -8813,6 +9082,10 @@ class CountryLtu extends WorldCountry {
           ),
           regionalBlocs: const [BlocEU()],
         );
+  @override
+  List<FiatCurrency> get currencies => const [FiatEur()];
+  @override
+  List<NaturalLanguage> get languages => const [LangLit()];
 }
 
 /// A class that represents the Luxembourg country.
@@ -8849,7 +9122,6 @@ class CountryLux extends WorldCountry {
           codeNumeric: "442",
           codeShort: "LU",
           cioc: "LUX",
-          currencies: const [FiatEur()],
           idd: const Idd(root: 3, suffixes: [52]),
           altSpellings: const [
             "LU",
@@ -8860,7 +9132,6 @@ class CountryLux extends WorldCountry {
           ],
           continent: const Europe(),
           subregion: const WesternEurope(),
-          languages: const [LangDeu(), LangFra(), LangLtz()],
           latLng: const LatLng(49.75, 6.16666666),
           landlocked: true,
           bordersCodes: const ["Bel", "Fra", "Deu"],
@@ -8895,6 +9166,11 @@ class CountryLux extends WorldCountry {
               const PostalCode(format: "####", regExpPattern: r"^(\d{4})$"),
           regionalBlocs: const [BlocEU()],
         );
+  @override
+  List<FiatCurrency> get currencies => const [FiatEur()];
+  @override
+  List<NaturalLanguage> get languages =>
+      const [LangDeu(), LangFra(), LangLtz()];
 }
 
 /// A class that represents the Latvia country.
@@ -8921,7 +9197,6 @@ class CountryLva extends WorldCountry {
           codeNumeric: "428",
           codeShort: "LV",
           cioc: "LAT",
-          currencies: const [FiatEur()],
           idd: const Idd(root: 3, suffixes: [71]),
           altSpellings: const [
             "LV",
@@ -8930,7 +9205,6 @@ class CountryLva extends WorldCountry {
           ],
           continent: const Europe(),
           subregion: const NorthernEurope(),
-          languages: const [LangLav()],
           latLng: const LatLng(57, 25),
           bordersCodes: const ["Blr", "Est", "Ltu", "Rus"],
           areaMetric: 64559,
@@ -8958,6 +9232,10 @@ class CountryLva extends WorldCountry {
           ),
           regionalBlocs: const [BlocEU()],
         );
+  @override
+  List<FiatCurrency> get currencies => const [FiatEur()];
+  @override
+  List<NaturalLanguage> get languages => const [LangLav()];
 }
 
 /// A class that represents the Macau country.
@@ -8992,7 +9270,6 @@ class CountryMac extends WorldCountry {
           codeShort: "MO",
           independent: false,
           unMember: false,
-          currencies: const [FiatMop()],
           idd: const Idd(root: 8, suffixes: [53]),
           altSpellings: const [
             "MO",
@@ -9004,7 +9281,6 @@ class CountryMac extends WorldCountry {
           ],
           continent: const Asia(),
           subregion: const EasternAsia(),
-          languages: const [LangPor(), LangZho()],
           latLng: const LatLng(22.16666666, 113.55),
           bordersCodes: const ["Chn"],
           areaMetric: 30,
@@ -9026,6 +9302,10 @@ class CountryMac extends WorldCountry {
           car: const Car(sign: "MO", isRightSide: false),
           timezones: const ["UTC+08:00"],
         );
+  @override
+  List<FiatCurrency> get currencies => const [FiatMop()];
+  @override
+  List<NaturalLanguage> get languages => const [LangPor(), LangZho()];
 }
 
 /// A class that represents the Saint Martin country.
@@ -9053,7 +9333,6 @@ class CountryMaf extends WorldCountry {
           codeShort: "MF",
           independent: false,
           unMember: false,
-          currencies: const [FiatEur()],
           idd: const Idd(root: 5, suffixes: [90]),
           altSpellings: const [
             "MF",
@@ -9063,7 +9342,6 @@ class CountryMaf extends WorldCountry {
           ],
           continent: const Americas(),
           subregion: const Caribbean(),
-          languages: const [LangFra()],
           latLng: const LatLng(18.0708, 63.0501),
           bordersCodes: const ["Sxm"],
           areaMetric: 53,
@@ -9094,6 +9372,10 @@ class CountryMaf extends WorldCountry {
           ),
           postalCode: const PostalCode(),
         );
+  @override
+  List<FiatCurrency> get currencies => const [FiatEur()];
+  @override
+  List<NaturalLanguage> get languages => const [LangFra()];
 }
 
 /// A class that represents the Morocco country.
@@ -9120,7 +9402,6 @@ class CountryMar extends WorldCountry {
           codeNumeric: "504",
           codeShort: "MA",
           cioc: "MAR",
-          currencies: const [FiatMad()],
           idd: const Idd(root: 2, suffixes: [12]),
           altSpellings: const [
             "MA",
@@ -9129,7 +9410,6 @@ class CountryMar extends WorldCountry {
           ],
           continent: const Africa(),
           subregion: const NorthernAfrica(),
-          languages: const [LangAra()],
           latLng: const LatLng(32, -5),
           bordersCodes: const ["Dza", "Esh", "Esp"],
           areaMetric: 446550,
@@ -9158,6 +9438,10 @@ class CountryMar extends WorldCountry {
           postalCode: const PostalCode(),
           regionalBlocs: const [BlocAU(), BlocAL()],
         );
+  @override
+  List<FiatCurrency> get currencies => const [FiatMad()];
+  @override
+  List<NaturalLanguage> get languages => const [LangAra()];
 }
 
 /// A class that represents the Monaco country.
@@ -9184,7 +9468,6 @@ class CountryMco extends WorldCountry {
           codeNumeric: "492",
           codeShort: "MC",
           cioc: "MON",
-          currencies: const [FiatEur()],
           idd: const Idd(root: 3, suffixes: [77]),
           altSpellings: const [
             "MC",
@@ -9193,7 +9476,6 @@ class CountryMco extends WorldCountry {
           ],
           continent: const Europe(),
           subregion: const WesternEurope(),
-          languages: const [LangFra()],
           latLng: const LatLng(43.73333333, 7.4),
           bordersCodes: const ["Fra"],
           areaMetric: 2.02,
@@ -9223,6 +9505,10 @@ class CountryMco extends WorldCountry {
           ),
           postalCode: const PostalCode(),
         );
+  @override
+  List<FiatCurrency> get currencies => const [FiatEur()];
+  @override
+  List<NaturalLanguage> get languages => const [LangFra()];
 }
 
 /// A class that represents the Moldova country.
@@ -9249,7 +9535,6 @@ class CountryMda extends WorldCountry {
           codeNumeric: "498",
           codeShort: "MD",
           cioc: "MDA",
-          currencies: const [FiatMdl()],
           idd: const Idd(root: 3, suffixes: [73]),
           altSpellings: const [
             "MD",
@@ -9259,7 +9544,6 @@ class CountryMda extends WorldCountry {
           ],
           continent: const Europe(),
           subregion: const EasternEurope(),
-          languages: const [LangRon()],
           latLng: const LatLng(47, 29),
           landlocked: true,
           bordersCodes: const ["Rou", "Ukr"],
@@ -9288,6 +9572,10 @@ class CountryMda extends WorldCountry {
           ),
           regionalBlocs: const [BlocCEFTA()],
         );
+  @override
+  List<FiatCurrency> get currencies => const [FiatMdl()];
+  @override
+  List<NaturalLanguage> get languages => const [LangRon()];
 }
 
 /// A class that represents the Madagascar country.
@@ -9319,7 +9607,6 @@ class CountryMdg extends WorldCountry {
           codeNumeric: "450",
           codeShort: "MG",
           cioc: "MAD",
-          currencies: const [FiatMga()],
           idd: const Idd(root: 2, suffixes: [61]),
           altSpellings: const [
             "MG",
@@ -9329,7 +9616,6 @@ class CountryMdg extends WorldCountry {
           ],
           continent: const Africa(),
           subregion: const EasternAfrica(),
-          languages: const [LangFra(), LangMlg()],
           latLng: const LatLng(-20, 47),
           areaMetric: 587041,
           demonyms: const [
@@ -9354,6 +9640,10 @@ class CountryMdg extends WorldCountry {
               const PostalCode(format: "###", regExpPattern: r"^(\d{3})$"),
           regionalBlocs: const [BlocAU()],
         );
+  @override
+  List<FiatCurrency> get currencies => const [FiatMga()];
+  @override
+  List<NaturalLanguage> get languages => const [LangFra(), LangMlg()];
 }
 
 /// A class that represents the Maldives country.
@@ -9380,7 +9670,6 @@ class CountryMdv extends WorldCountry {
           codeNumeric: "462",
           codeShort: "MV",
           cioc: "MDV",
-          currencies: const [FiatMvr()],
           idd: const Idd(root: 9, suffixes: [60]),
           altSpellings: const [
             "MV",
@@ -9390,7 +9679,6 @@ class CountryMdv extends WorldCountry {
           ],
           continent: const Asia(),
           subregion: const SouthernAsia(),
-          languages: const [LangDiv()],
           latLng: const LatLng(3.25, 73),
           areaMetric: 300,
           demonyms: const [
@@ -9419,6 +9707,10 @@ class CountryMdv extends WorldCountry {
           postalCode: const PostalCode(),
           regionalBlocs: const [BlocSAARC()],
         );
+  @override
+  List<FiatCurrency> get currencies => const [FiatMvr()];
+  @override
+  List<NaturalLanguage> get languages => const [LangDiv()];
 }
 
 /// A class that represents the Mexico country.
@@ -9445,7 +9737,6 @@ class CountryMex extends WorldCountry {
           codeNumeric: "484",
           codeShort: "MX",
           cioc: "MEX",
-          currencies: const [FiatMxn()],
           idd: const Idd(root: 5, suffixes: [2]),
           altSpellings: const [
             "MX",
@@ -9455,7 +9746,6 @@ class CountryMex extends WorldCountry {
           ],
           continent: const Americas(),
           subregion: const NorthAmerica(),
-          languages: const [LangSpa()],
           latLng: const LatLng(23, -102),
           bordersCodes: const ["Blz", "Gtm", "Usa"],
           areaMetric: 1964375,
@@ -9484,6 +9774,10 @@ class CountryMex extends WorldCountry {
           postalCode: const PostalCode(),
           regionalBlocs: const [BlocPA(), BlocNAFTA()],
         );
+  @override
+  List<FiatCurrency> get currencies => const [FiatMxn()];
+  @override
+  List<NaturalLanguage> get languages => const [LangSpa()];
 }
 
 /// A class that represents the Marshall Islands country.
@@ -9515,7 +9809,6 @@ class CountryMhl extends WorldCountry {
           codeNumeric: "584",
           codeShort: "MH",
           cioc: "MHL",
-          currencies: const [FiatUsd()],
           idd: const Idd(root: 6, suffixes: [92]),
           altSpellings: const [
             "MH",
@@ -9524,7 +9817,6 @@ class CountryMhl extends WorldCountry {
           ],
           continent: const Oceania(),
           subregion: const Micronesia(),
-          languages: const [LangEng(), LangMah()],
           latLng: const LatLng(9, 168),
           areaMetric: 181,
           demonyms: const [
@@ -9552,6 +9844,10 @@ class CountryMhl extends WorldCountry {
             latLng: LatLng(7.1, 171.38),
           ),
         );
+  @override
+  List<FiatCurrency> get currencies => const [FiatUsd()];
+  @override
+  List<NaturalLanguage> get languages => const [LangEng(), LangMah()];
 }
 
 /// A class that represents the North Macedonia country.
@@ -9578,7 +9874,6 @@ class CountryMkd extends WorldCountry {
           codeNumeric: "807",
           codeShort: "MK",
           cioc: "MKD",
-          currencies: const [FiatMkd()],
           idd: const Idd(root: 3, suffixes: [89]),
           altSpellings: const [
             "MK",
@@ -9589,7 +9884,6 @@ class CountryMkd extends WorldCountry {
           ],
           continent: const Europe(),
           subregion: const SouthwestEurope(),
-          languages: const [LangMkd()],
           latLng: const LatLng(41.83333333, 22),
           landlocked: true,
           bordersCodes: const ["Alb", "Bgr", "Grc", "Srb", "Unk"],
@@ -9624,6 +9918,10 @@ class CountryMkd extends WorldCountry {
               const PostalCode(format: "####", regExpPattern: r"^(\d{4})$"),
           regionalBlocs: const [BlocCEFTA()],
         );
+  @override
+  List<FiatCurrency> get currencies => const [FiatMkd()];
+  @override
+  List<NaturalLanguage> get languages => const [LangMkd()];
 }
 
 /// A class that represents the Mali country.
@@ -9650,12 +9948,10 @@ class CountryMli extends WorldCountry {
           codeNumeric: "466",
           codeShort: "ML",
           cioc: "MLI",
-          currencies: const [FiatXof()],
           idd: const Idd(root: 2, suffixes: [23]),
           altSpellings: const ["ML", "Republic of Mali", "République du Mali"],
           continent: const Africa(),
           subregion: const WesternAfrica(),
-          languages: const [LangFra()],
           latLng: const LatLng(17, -4),
           landlocked: true,
           bordersCodes: const ["Dza", "Bfa", "Gin", "Civ", "Mrt", "Ner", "Sen"],
@@ -9680,6 +9976,10 @@ class CountryMli extends WorldCountry {
           ),
           regionalBlocs: const [BlocAU()],
         );
+  @override
+  List<FiatCurrency> get currencies => const [FiatXof()];
+  @override
+  List<NaturalLanguage> get languages => const [LangFra()];
 }
 
 /// A class that represents the Malta country.
@@ -9711,7 +10011,6 @@ class CountryMlt extends WorldCountry {
           codeNumeric: "470",
           codeShort: "MT",
           cioc: "MLT",
-          currencies: const [FiatEur()],
           idd: const Idd(root: 3, suffixes: [56]),
           altSpellings: const [
             "MT",
@@ -9720,7 +10019,6 @@ class CountryMlt extends WorldCountry {
           ],
           continent: const Europe(),
           subregion: const SouthernEurope(),
-          languages: const [LangEng(), LangMlt()],
           latLng: const LatLng(35.9375, 14.3754),
           areaMetric: 316,
           demonyms: const [
@@ -9747,6 +10045,10 @@ class CountryMlt extends WorldCountry {
           ),
           regionalBlocs: const [BlocEU()],
         );
+  @override
+  List<FiatCurrency> get currencies => const [FiatEur()];
+  @override
+  List<NaturalLanguage> get languages => const [LangEng(), LangMlt()];
 }
 
 /// A class that represents the Myanmar country.
@@ -9773,7 +10075,6 @@ class CountryMmr extends WorldCountry {
           codeNumeric: "104",
           codeShort: "MM",
           cioc: "MYA",
-          currencies: const [FiatMmk()],
           idd: const Idd(root: 9, suffixes: [5]),
           altSpellings: const [
             "MM",
@@ -9783,7 +10084,6 @@ class CountryMmr extends WorldCountry {
           ],
           continent: const Asia(),
           subregion: const SouthEasternAsia(),
-          languages: const [LangMya()],
           latLng: const LatLng(22, 98),
           bordersCodes: const ["Bgd", "Chn", "Ind", "Lao", "Tha"],
           areaMetric: 676578,
@@ -9808,6 +10108,10 @@ class CountryMmr extends WorldCountry {
           postalCode: const PostalCode(),
           regionalBlocs: const [BlocASEAN()],
         );
+  @override
+  List<FiatCurrency> get currencies => const [FiatMmk()];
+  @override
+  List<NaturalLanguage> get languages => const [LangMya()];
 }
 
 /// A class that represents the Montenegro country.
@@ -9834,12 +10138,10 @@ class CountryMne extends WorldCountry {
           codeNumeric: "499",
           codeShort: "ME",
           cioc: "MNE",
-          currencies: const [FiatEur()],
           idd: const Idd(root: 3, suffixes: [82]),
           altSpellings: const ["ME", "Crna Gora"],
           continent: const Europe(),
           subregion: const SouthwestEurope(),
-          languages: const [LangSrp()],
           latLng: const LatLng(42.5, 19.3),
           bordersCodes: const ["Alb", "Bih", "Hrv", "Srb", "Unk"],
           areaMetric: 13812,
@@ -9872,6 +10174,10 @@ class CountryMne extends WorldCountry {
           postalCode: const PostalCode(),
           regionalBlocs: const [BlocCEFTA()],
         );
+  @override
+  List<FiatCurrency> get currencies => const [FiatEur()];
+  @override
+  List<NaturalLanguage> get languages => const [LangSrp()];
 }
 
 /// A class that represents the Mongolia country.
@@ -9898,12 +10204,10 @@ class CountryMng extends WorldCountry {
           codeNumeric: "496",
           codeShort: "MN",
           cioc: "MGL",
-          currencies: const [FiatMnt()],
           idd: const Idd(root: 9, suffixes: [76]),
           altSpellings: const ["MN"],
           continent: const Asia(),
           subregion: const EasternAsia(),
-          languages: const [LangMon()],
           latLng: const LatLng(46, 105),
           landlocked: true,
           bordersCodes: const ["Chn", "Rus"],
@@ -9933,6 +10237,10 @@ class CountryMng extends WorldCountry {
           postalCode:
               const PostalCode(format: "######", regExpPattern: r"^(\d{6})$"),
         );
+  @override
+  List<FiatCurrency> get currencies => const [FiatMnt()];
+  @override
+  List<NaturalLanguage> get languages => const [LangMon()];
 }
 
 /// A class that represents the Northern Mariana Islands country.
@@ -9965,7 +10273,6 @@ class CountryMnp extends WorldCountry {
           codeShort: "MP",
           independent: false,
           unMember: false,
-          currencies: const [FiatUsd()],
           idd: const Idd(root: 1, suffixes: [670]),
           altSpellings: const [
             "MP",
@@ -9974,7 +10281,6 @@ class CountryMnp extends WorldCountry {
           ],
           continent: const Oceania(),
           subregion: const Micronesia(),
-          languages: const [LangCha(), LangEng()],
           latLng: const LatLng(15.2, 145.75),
           areaMetric: 464,
           demonyms: const [
@@ -9999,6 +10305,10 @@ class CountryMnp extends WorldCountry {
             latLng: LatLng(15.2, 145.75),
           ),
         );
+  @override
+  List<FiatCurrency> get currencies => const [FiatUsd()];
+  @override
+  List<NaturalLanguage> get languages => const [LangCha(), LangEng()];
 }
 
 /// A class that represents the Mozambique country.
@@ -10025,7 +10335,6 @@ class CountryMoz extends WorldCountry {
           codeNumeric: "508",
           codeShort: "MZ",
           cioc: "MOZ",
-          currencies: const [FiatMzn()],
           idd: const Idd(root: 2, suffixes: [58]),
           altSpellings: const [
             "MZ",
@@ -10034,7 +10343,6 @@ class CountryMoz extends WorldCountry {
           ],
           continent: const Africa(),
           subregion: const EasternAfrica(),
-          languages: const [LangPor()],
           latLng: const LatLng(-18.25, 35),
           bordersCodes: const ["Mwi", "Zaf", "Swz", "Tza", "Zmb", "Zwe"],
           areaMetric: 801590,
@@ -10068,6 +10376,10 @@ class CountryMoz extends WorldCountry {
               const PostalCode(format: "####", regExpPattern: r"^(\d{4})$"),
           regionalBlocs: const [BlocAU()],
         );
+  @override
+  List<FiatCurrency> get currencies => const [FiatMzn()];
+  @override
+  List<NaturalLanguage> get languages => const [LangPor()];
 }
 
 /// A class that represents the Mauritania country.
@@ -10094,7 +10406,6 @@ class CountryMrt extends WorldCountry {
           codeNumeric: "478",
           codeShort: "MR",
           cioc: "MTN",
-          currencies: const [FiatMru()],
           idd: const Idd(root: 2, suffixes: [22]),
           altSpellings: const [
             "MR",
@@ -10103,7 +10414,6 @@ class CountryMrt extends WorldCountry {
           ],
           continent: const Africa(),
           subregion: const WesternAfrica(),
-          languages: const [LangAra()],
           latLng: const LatLng(20, -12),
           bordersCodes: const ["Dza", "Mli", "Sen", "Esh"],
           areaMetric: 1030700,
@@ -10135,6 +10445,10 @@ class CountryMrt extends WorldCountry {
           ),
           regionalBlocs: const [BlocAU(), BlocAL()],
         );
+  @override
+  List<FiatCurrency> get currencies => const [FiatMru()];
+  @override
+  List<NaturalLanguage> get languages => const [LangAra()];
 }
 
 /// A class that represents the Montserrat country.
@@ -10162,12 +10476,10 @@ class CountryMsr extends WorldCountry {
           codeShort: "MS",
           independent: false,
           unMember: false,
-          currencies: const [FiatXcd()],
           idd: const Idd(root: 1, suffixes: [664]),
           altSpellings: const ["MS"],
           continent: const Americas(),
           subregion: const Caribbean(),
-          languages: const [LangEng()],
           latLng: const LatLng(16.75, -62.2),
           areaMetric: 102,
           demonyms: const [
@@ -10197,6 +10509,10 @@ class CountryMsr extends WorldCountry {
           ),
           regionalBlocs: const [BlocCARICOM()],
         );
+  @override
+  List<FiatCurrency> get currencies => const [FiatXcd()];
+  @override
+  List<NaturalLanguage> get languages => const [LangEng()];
 }
 
 /// A class that represents the Martinique country.
@@ -10224,12 +10540,10 @@ class CountryMtq extends WorldCountry {
           codeShort: "MQ",
           independent: false,
           unMember: false,
-          currencies: const [FiatEur()],
           idd: const Idd(root: 5, suffixes: [96]),
           altSpellings: const ["MQ"],
           continent: const Americas(),
           subregion: const Caribbean(),
-          languages: const [LangFra()],
           latLng: const LatLng(14.666667, -61),
           areaMetric: 1128,
           demonyms: const [
@@ -10258,6 +10572,10 @@ class CountryMtq extends WorldCountry {
           ),
           postalCode: const PostalCode(),
         );
+  @override
+  List<FiatCurrency> get currencies => const [FiatEur()];
+  @override
+  List<NaturalLanguage> get languages => const [LangFra()];
 }
 
 /// A class that represents the Mauritius country.
@@ -10289,7 +10607,6 @@ class CountryMus extends WorldCountry {
           codeNumeric: "480",
           codeShort: "MU",
           cioc: "MRI",
-          currencies: const [FiatMur()],
           idd: const Idd(root: 2, suffixes: [30]),
           altSpellings: const [
             "MU",
@@ -10298,7 +10615,6 @@ class CountryMus extends WorldCountry {
           ],
           continent: const Africa(),
           subregion: const EasternAfrica(),
-          languages: const [LangEng(), LangFra()],
           latLng: const LatLng(-20.28333333, 57.55),
           areaMetric: 2040,
           demonyms: const [
@@ -10329,6 +10645,10 @@ class CountryMus extends WorldCountry {
           ),
           regionalBlocs: const [BlocAU()],
         );
+  @override
+  List<FiatCurrency> get currencies => const [FiatMur()];
+  @override
+  List<NaturalLanguage> get languages => const [LangEng(), LangFra()];
 }
 
 /// A class that represents the Malawi country.
@@ -10360,12 +10680,10 @@ class CountryMwi extends WorldCountry {
           codeNumeric: "454",
           codeShort: "MW",
           cioc: "MAW",
-          currencies: const [FiatMwk()],
           idd: const Idd(root: 2, suffixes: [65]),
           altSpellings: const ["MW", "Republic of Malawi"],
           continent: const Africa(),
           subregion: const EasternAfrica(),
-          languages: const [LangEng(), LangNya()],
           latLng: const LatLng(-13.5, 34),
           landlocked: true,
           bordersCodes: const ["Moz", "Tza", "Zmb"],
@@ -10394,6 +10712,10 @@ class CountryMwi extends WorldCountry {
           ),
           regionalBlocs: const [BlocAU()],
         );
+  @override
+  List<FiatCurrency> get currencies => const [FiatMwk()];
+  @override
+  List<NaturalLanguage> get languages => const [LangEng(), LangNya()];
 }
 
 /// A class that represents the Malaysia country.
@@ -10425,12 +10747,10 @@ class CountryMys extends WorldCountry {
           codeNumeric: "458",
           codeShort: "MY",
           cioc: "MAS",
-          currencies: const [FiatMyr()],
           idd: const Idd(root: 6, suffixes: [0]),
           altSpellings: const ["MY"],
           continent: const Asia(),
           subregion: const SouthEasternAsia(),
-          languages: const [LangEng(), LangMsa()],
           latLng: const LatLng(2.5, 112.5),
           bordersCodes: const ["Brn", "Idn", "Tha"],
           areaMetric: 330803,
@@ -10464,6 +10784,10 @@ class CountryMys extends WorldCountry {
           postalCode: const PostalCode(),
           regionalBlocs: const [BlocASEAN()],
         );
+  @override
+  List<FiatCurrency> get currencies => const [FiatMyr()];
+  @override
+  List<NaturalLanguage> get languages => const [LangEng(), LangMsa()];
 }
 
 /// A class that represents the Mayotte country.
@@ -10491,7 +10815,6 @@ class CountryMyt extends WorldCountry {
           codeShort: "YT",
           independent: false,
           unMember: false,
-          currencies: const [FiatEur()],
           idd: const Idd(root: 2, suffixes: [62]),
           altSpellings: const [
             "YT",
@@ -10500,7 +10823,6 @@ class CountryMyt extends WorldCountry {
           ],
           continent: const Africa(),
           subregion: const EasternAfrica(),
-          languages: const [LangFra()],
           latLng: const LatLng(-12.83333333, 45.16666666),
           areaMetric: 374,
           demonyms: const [
@@ -10527,6 +10849,10 @@ class CountryMyt extends WorldCountry {
           postalCode: const PostalCode(),
           regionalBlocs: const [BlocAU()],
         );
+  @override
+  List<FiatCurrency> get currencies => const [FiatEur()];
+  @override
+  List<NaturalLanguage> get languages => const [LangFra()];
 }
 
 /// A class that represents the Namibia country.
@@ -10573,19 +10899,10 @@ class CountryNam extends WorldCountry {
           codeNumeric: "516",
           codeShort: "NA",
           cioc: "NAM",
-          currencies: const [FiatNad(), FiatZar()],
           idd: const Idd(root: 2, suffixes: [64]),
           altSpellings: const ["NA", "Namibië", "Republic of Namibia"],
           continent: const Africa(),
           subregion: const SouthernAfrica(),
-          languages: const [
-            LangAfr(),
-            LangDeu(),
-            LangEng(),
-            LangHer(),
-            LangNdo(),
-            LangTsn(),
-          ],
           latLng: const LatLng(-22, 17),
           bordersCodes: const ["Ago", "Bwa", "Zaf", "Tur"],
           areaMetric: 825615,
@@ -10613,6 +10930,11 @@ class CountryNam extends WorldCountry {
           ),
           regionalBlocs: const [BlocAU()],
         );
+  @override
+  List<FiatCurrency> get currencies => const [FiatNad(), FiatZar()];
+  @override
+  List<NaturalLanguage> get languages =>
+      const [LangAfr(), LangDeu(), LangEng(), LangHer(), LangNdo(), LangTsn()];
 }
 
 /// A class that represents the New Caledonia country.
@@ -10640,12 +10962,10 @@ class CountryNcl extends WorldCountry {
           codeShort: "NC",
           independent: false,
           unMember: false,
-          currencies: const [FiatXpf()],
           idd: const Idd(root: 6, suffixes: [87]),
           altSpellings: const ["NC"],
           continent: const Oceania(),
           subregion: const Melanesia(),
-          languages: const [LangFra()],
           latLng: const LatLng(-21.5, 165.5),
           areaMetric: 18575,
           demonyms: const [
@@ -10675,6 +10995,10 @@ class CountryNcl extends WorldCountry {
           ),
           postalCode: const PostalCode(),
         );
+  @override
+  List<FiatCurrency> get currencies => const [FiatXpf()];
+  @override
+  List<NaturalLanguage> get languages => const [LangFra()];
 }
 
 /// A class that represents the Niger country.
@@ -10701,12 +11025,10 @@ class CountryNer extends WorldCountry {
           codeNumeric: "562",
           codeShort: "NE",
           cioc: "NIG",
-          currencies: const [FiatXof()],
           idd: const Idd(root: 2, suffixes: [27]),
           altSpellings: const ["NE", "Nijar"],
           continent: const Africa(),
           subregion: const WesternAfrica(),
-          languages: const [LangFra()],
           latLng: const LatLng(16, 8),
           landlocked: true,
           bordersCodes: const ["Dza", "Ben", "Bfa", "Tcd", "Lby", "Mli", "Nga"],
@@ -10737,6 +11059,10 @@ class CountryNer extends WorldCountry {
               const PostalCode(format: "####", regExpPattern: r"^(\d{4})$"),
           regionalBlocs: const [BlocAU()],
         );
+  @override
+  List<FiatCurrency> get currencies => const [FiatXof()];
+  @override
+  List<NaturalLanguage> get languages => const [LangFra()];
 }
 
 /// A class that represents the Norfolk Island country.
@@ -10764,7 +11090,6 @@ class CountryNfk extends WorldCountry {
           codeShort: "NF",
           independent: false,
           unMember: false,
-          currencies: const [FiatAud()],
           idd: const Idd(root: 6, suffixes: [72]),
           altSpellings: const [
             "NF",
@@ -10773,7 +11098,6 @@ class CountryNfk extends WorldCountry {
           ],
           continent: const Oceania(),
           subregion: const AustraliaAndNewZealand(),
-          languages: const [LangEng()],
           latLng: const LatLng(-29.03333333, 167.95),
           areaMetric: 36,
           demonyms: const [
@@ -10802,6 +11126,10 @@ class CountryNfk extends WorldCountry {
             latLng: LatLng(-29.05, 167.97),
           ),
         );
+  @override
+  List<FiatCurrency> get currencies => const [FiatAud()];
+  @override
+  List<NaturalLanguage> get languages => const [LangEng()];
 }
 
 /// A class that represents the Nigeria country.
@@ -10828,7 +11156,6 @@ class CountryNga extends WorldCountry {
           codeNumeric: "566",
           codeShort: "NG",
           cioc: "NGR",
-          currencies: const [FiatNgn()],
           idd: const Idd(root: 2, suffixes: [34]),
           altSpellings: const [
             "NG",
@@ -10838,7 +11165,6 @@ class CountryNga extends WorldCountry {
           ],
           continent: const Africa(),
           subregion: const WesternAfrica(),
-          languages: const [LangEng()],
           latLng: const LatLng(10, 8),
           bordersCodes: const ["Ben", "Cmr", "Tcd", "Ner"],
           areaMetric: 923768,
@@ -10868,6 +11194,10 @@ class CountryNga extends WorldCountry {
               const PostalCode(format: "######", regExpPattern: r"^(\d{6})$"),
           regionalBlocs: const [BlocAU()],
         );
+  @override
+  List<FiatCurrency> get currencies => const [FiatNgn()];
+  @override
+  List<NaturalLanguage> get languages => const [LangEng()];
 }
 
 /// A class that represents the Nicaragua country.
@@ -10894,7 +11224,6 @@ class CountryNic extends WorldCountry {
           codeNumeric: "558",
           codeShort: "NI",
           cioc: "NCA",
-          currencies: const [FiatNio()],
           idd: const Idd(root: 50, suffixes: [5]),
           altSpellings: const [
             "NI",
@@ -10903,7 +11232,6 @@ class CountryNic extends WorldCountry {
           ],
           continent: const Americas(),
           subregion: const CentralAmerica(),
-          languages: const [LangSpa()],
           latLng: const LatLng(13, -85),
           bordersCodes: const ["Cri", "Hnd"],
           areaMetric: 130373,
@@ -10939,6 +11267,10 @@ class CountryNic extends WorldCountry {
           ),
           regionalBlocs: const [BlocCAIS()],
         );
+  @override
+  List<FiatCurrency> get currencies => const [FiatNio()];
+  @override
+  List<NaturalLanguage> get languages => const [LangSpa()];
 }
 
 /// A class that represents the Niue country.
@@ -10962,12 +11294,10 @@ class CountryNiu extends WorldCountry {
           codeShort: "NU",
           independent: false,
           unMember: false,
-          currencies: const [FiatNzd()],
           idd: const Idd(root: 6, suffixes: [83]),
           altSpellings: const ["NU"],
           continent: const Oceania(),
           subregion: const Polynesia(),
-          languages: const [LangEng()],
           latLng: const LatLng(-19.03333333, -169.86666666),
           areaMetric: 260,
           demonyms: const [
@@ -10988,6 +11318,10 @@ class CountryNiu extends WorldCountry {
             latLng: LatLng(-19.02, -169.92),
           ),
         );
+  @override
+  List<FiatCurrency> get currencies => const [FiatNzd()];
+  @override
+  List<NaturalLanguage> get languages => const [LangEng()];
 }
 
 /// A class that represents the Netherlands country.
@@ -11014,12 +11348,10 @@ class CountryNld extends WorldCountry {
           codeNumeric: "528",
           codeShort: "NL",
           cioc: "NED",
-          currencies: const [FiatEur()],
           idd: const Idd(root: 3, suffixes: [1]),
           altSpellings: const ["NL", "Holland", "Nederland", "The Netherlands"],
           continent: const Europe(),
           subregion: const WesternEurope(),
-          languages: const [LangNld()],
           latLng: const LatLng(52.5, 5.75),
           bordersCodes: const ["Bel", "Deu"],
           areaMetric: 41850,
@@ -11051,6 +11383,10 @@ class CountryNld extends WorldCountry {
           ),
           regionalBlocs: const [BlocEU()],
         );
+  @override
+  List<FiatCurrency> get currencies => const [FiatEur()];
+  @override
+  List<NaturalLanguage> get languages => const [LangNld()];
 }
 
 /// A class that represents the Norway country.
@@ -11082,7 +11418,6 @@ class CountryNor extends WorldCountry {
           codeNumeric: "578",
           codeShort: "NO",
           cioc: "NOR",
-          currencies: const [FiatNok()],
           idd: const Idd(root: 4, suffixes: [7]),
           altSpellings: const [
             "NO",
@@ -11094,7 +11429,6 @@ class CountryNor extends WorldCountry {
           ],
           continent: const Europe(),
           subregion: const NorthernEurope(),
-          languages: const [LangNno(), LangNob()],
           latLng: const LatLng(62, 10),
           bordersCodes: const ["Fin", "Swe", "Rus"],
           areaMetric: 323802,
@@ -11128,6 +11462,10 @@ class CountryNor extends WorldCountry {
               const PostalCode(format: "####", regExpPattern: r"^(\d{4})$"),
           regionalBlocs: const [BlocEFTA()],
         );
+  @override
+  List<FiatCurrency> get currencies => const [FiatNok()];
+  @override
+  List<NaturalLanguage> get languages => const [LangNno(), LangNob()];
 }
 
 /// A class that represents the Nepal country.
@@ -11154,7 +11492,6 @@ class CountryNpl extends WorldCountry {
           codeNumeric: "524",
           codeShort: "NP",
           cioc: "NEP",
-          currencies: const [FiatNpr()],
           idd: const Idd(root: 9, suffixes: [77]),
           altSpellings: const [
             "NP",
@@ -11163,7 +11500,6 @@ class CountryNpl extends WorldCountry {
           ],
           continent: const Asia(),
           subregion: const SouthernAsia(),
-          languages: const [LangNep()],
           latLng: const LatLng(28, 84),
           landlocked: true,
           bordersCodes: const ["Chn", "Ind"],
@@ -11194,6 +11530,10 @@ class CountryNpl extends WorldCountry {
           postalCode: const PostalCode(),
           regionalBlocs: const [BlocSAARC()],
         );
+  @override
+  List<FiatCurrency> get currencies => const [FiatNpr()];
+  @override
+  List<NaturalLanguage> get languages => const [LangNep()];
 }
 
 /// A class that represents the Nauru country.
@@ -11225,7 +11565,6 @@ class CountryNru extends WorldCountry {
           codeNumeric: "520",
           codeShort: "NR",
           cioc: "NRU",
-          currencies: const [FiatAud()],
           idd: const Idd(root: 6, suffixes: [74]),
           altSpellings: const [
             "NR",
@@ -11236,7 +11575,6 @@ class CountryNru extends WorldCountry {
           ],
           continent: const Oceania(),
           subregion: const Micronesia(),
-          languages: const [LangEng(), LangNau()],
           latLng: const LatLng(-0.53333333, 166.91666666),
           areaMetric: 21,
           demonyms: const [
@@ -11257,6 +11595,10 @@ class CountryNru extends WorldCountry {
             latLng: LatLng(-0.55, 166.92),
           ),
         );
+  @override
+  List<FiatCurrency> get currencies => const [FiatAud()];
+  @override
+  List<NaturalLanguage> get languages => const [LangEng(), LangNau()];
 }
 
 /// A class that represents the New Zealand country.
@@ -11288,12 +11630,10 @@ class CountryNzl extends WorldCountry {
           codeNumeric: "554",
           codeShort: "NZ",
           cioc: "NZL",
-          currencies: const [FiatNzd()],
           idd: const Idd(root: 6, suffixes: [4]),
           altSpellings: const ["NZ", "Aotearoa"],
           continent: const Oceania(),
           subregion: const AustraliaAndNewZealand(),
-          languages: const [LangEng(), LangMri()],
           latLng: const LatLng(-41, 174),
           areaMetric: 270467,
           demonyms: const [
@@ -11330,6 +11670,10 @@ class CountryNzl extends WorldCountry {
           postalCode:
               const PostalCode(format: "####", regExpPattern: r"^(\d{4})$"),
         );
+  @override
+  List<FiatCurrency> get currencies => const [FiatNzd()];
+  @override
+  List<NaturalLanguage> get languages => const [LangEng(), LangMri()];
 }
 
 /// A class that represents the Oman country.
@@ -11356,12 +11700,10 @@ class CountryOmn extends WorldCountry {
           codeNumeric: "512",
           codeShort: "OM",
           cioc: "OMA",
-          currencies: const [FiatOmr()],
           idd: const Idd(root: 9, suffixes: [68]),
           altSpellings: const ["OM", "Sultanate of Oman", "Salṭanat ʻUmān"],
           continent: const Asia(),
           subregion: const WesternAsia(),
-          languages: const [LangAra()],
           latLng: const LatLng(21, 57),
           bordersCodes: const ["Sau", "Are", "Yem"],
           areaMetric: 309500,
@@ -11387,6 +11729,10 @@ class CountryOmn extends WorldCountry {
               const PostalCode(format: "###", regExpPattern: r"^(\d{3})$"),
           regionalBlocs: const [BlocAL()],
         );
+  @override
+  List<FiatCurrency> get currencies => const [FiatOmr()];
+  @override
+  List<NaturalLanguage> get languages => const [LangAra()];
 }
 
 /// A class that represents the Pakistan country.
@@ -11418,7 +11764,6 @@ class CountryPak extends WorldCountry {
           codeNumeric: "586",
           codeShort: "PK",
           cioc: "PAK",
-          currencies: const [FiatPkr()],
           idd: const Idd(root: 9, suffixes: [2]),
           altSpellings: const [
             "PK",
@@ -11428,7 +11773,6 @@ class CountryPak extends WorldCountry {
           ],
           continent: const Asia(),
           subregion: const SouthernAsia(),
-          languages: const [LangEng(), LangUrd()],
           latLng: const LatLng(30, 70),
           bordersCodes: const ["Afg", "Chn", "Ind", "Irn"],
           areaMetric: 881912,
@@ -11461,6 +11805,10 @@ class CountryPak extends WorldCountry {
           postalCode: const PostalCode(),
           regionalBlocs: const [BlocSAARC()],
         );
+  @override
+  List<FiatCurrency> get currencies => const [FiatPkr()];
+  @override
+  List<NaturalLanguage> get languages => const [LangEng(), LangUrd()];
 }
 
 /// A class that represents the Panama country.
@@ -11487,7 +11835,6 @@ class CountryPan extends WorldCountry {
           codeNumeric: "591",
           codeShort: "PA",
           cioc: "PAN",
-          currencies: const [FiatPab(), FiatUsd()],
           idd: const Idd(root: 50, suffixes: [7]),
           altSpellings: const [
             "PA",
@@ -11496,7 +11843,6 @@ class CountryPan extends WorldCountry {
           ],
           continent: const Americas(),
           subregion: const CentralAmerica(),
-          languages: const [LangSpa()],
           latLng: const LatLng(9, -80),
           bordersCodes: const ["Col", "Cri"],
           areaMetric: 75417,
@@ -11528,6 +11874,10 @@ class CountryPan extends WorldCountry {
           ),
           regionalBlocs: const [BlocCAIS()],
         );
+  @override
+  List<FiatCurrency> get currencies => const [FiatPab(), FiatUsd()];
+  @override
+  List<NaturalLanguage> get languages => const [LangSpa()];
 }
 
 /// A class that represents the Pitcairn Islands country.
@@ -11555,7 +11905,6 @@ class CountryPcn extends WorldCountry {
           codeShort: "PN",
           independent: false,
           unMember: false,
-          currencies: const [FiatNzd()],
           idd: const Idd(root: 6, suffixes: [4]),
           altSpellings: const [
             "PN",
@@ -11564,7 +11913,6 @@ class CountryPcn extends WorldCountry {
           ],
           continent: const Oceania(),
           subregion: const Polynesia(),
-          languages: const [LangEng()],
           latLng: const LatLng(-25.06666666, -130.1),
           areaMetric: 47,
           demonyms: const [
@@ -11593,6 +11941,10 @@ class CountryPcn extends WorldCountry {
             latLng: LatLng(-25.07, -130.08),
           ),
         );
+  @override
+  List<FiatCurrency> get currencies => const [FiatNzd()];
+  @override
+  List<NaturalLanguage> get languages => const [LangEng()];
 }
 
 /// A class that represents the Peru country.
@@ -11629,12 +11981,10 @@ class CountryPer extends WorldCountry {
           codeNumeric: "604",
           codeShort: "PE",
           cioc: "PER",
-          currencies: const [FiatPen()],
           idd: const Idd(root: 5, suffixes: [1]),
           altSpellings: const ["PE", "Republic of Peru", "República del Perú"],
           continent: const Americas(),
           subregion: const SouthAmerica(),
-          languages: const [LangAym(), LangQue(), LangSpa()],
           latLng: const LatLng(-10, -76),
           bordersCodes: const ["Bol", "Bra", "Chl", "Col", "Ecu"],
           areaMetric: 1285216,
@@ -11663,6 +12013,11 @@ class CountryPer extends WorldCountry {
           postalCode: const PostalCode(),
           regionalBlocs: const [BlocPA(), BlocUSAN()],
         );
+  @override
+  List<FiatCurrency> get currencies => const [FiatPen()];
+  @override
+  List<NaturalLanguage> get languages =>
+      const [LangAym(), LangQue(), LangSpa()];
 }
 
 /// A class that represents the Philippines country.
@@ -11694,7 +12049,6 @@ class CountryPhl extends WorldCountry {
           codeNumeric: "608",
           codeShort: "PH",
           cioc: "PHI",
-          currencies: const [FiatPhp()],
           idd: const Idd(root: 6, suffixes: [3]),
           altSpellings: const [
             "PH",
@@ -11703,7 +12057,6 @@ class CountryPhl extends WorldCountry {
           ],
           continent: const Asia(),
           subregion: const SouthEasternAsia(),
-          languages: const [LangEng(), LangTgl()],
           latLng: const LatLng(13, 122),
           areaMetric: 342353,
           demonyms: const [
@@ -11732,6 +12085,10 @@ class CountryPhl extends WorldCountry {
               const PostalCode(format: "####", regExpPattern: r"^(\d{4})$"),
           regionalBlocs: const [BlocASEAN()],
         );
+  @override
+  List<FiatCurrency> get currencies => const [FiatPhp()];
+  @override
+  List<NaturalLanguage> get languages => const [LangEng(), LangTgl()];
 }
 
 /// A class that represents the Palau country.
@@ -11758,12 +12115,10 @@ class CountryPlw extends WorldCountry {
           codeNumeric: "585",
           codeShort: "PW",
           cioc: "PLW",
-          currencies: const [FiatUsd()],
           idd: const Idd(root: 6, suffixes: [80]),
           altSpellings: const ["PW", "Republic of Palau", "Beluu er a Belau"],
           continent: const Oceania(),
           subregion: const Micronesia(),
-          languages: const [LangEng()],
           latLng: const LatLng(7.5, 134.5),
           areaMetric: 459,
           demonyms: const [
@@ -11785,6 +12140,10 @@ class CountryPlw extends WorldCountry {
           postalCode:
               const PostalCode(format: "96940", regExpPattern: r"^(96940)$"),
         );
+  @override
+  List<FiatCurrency> get currencies => const [FiatUsd()];
+  @override
+  List<NaturalLanguage> get languages => const [LangEng()];
 }
 
 /// A class that represents the Papua New Guinea country.
@@ -11816,7 +12175,6 @@ class CountryPng extends WorldCountry {
           codeNumeric: "598",
           codeShort: "PG",
           cioc: "PNG",
-          currencies: const [FiatPgk()],
           idd: const Idd(root: 6, suffixes: [75]),
           altSpellings: const [
             "PG",
@@ -11825,7 +12183,6 @@ class CountryPng extends WorldCountry {
           ],
           continent: const Oceania(),
           subregion: const Melanesia(),
-          languages: const [LangEng(), LangHmo()],
           latLng: const LatLng(-6, 147),
           bordersCodes: const ["Idn"],
           areaMetric: 462840,
@@ -11858,6 +12215,10 @@ class CountryPng extends WorldCountry {
           postalCode:
               const PostalCode(format: "###", regExpPattern: r"^(\d{3})$"),
         );
+  @override
+  List<FiatCurrency> get currencies => const [FiatPgk()];
+  @override
+  List<NaturalLanguage> get languages => const [LangEng(), LangHmo()];
 }
 
 /// A class that represents the Poland country.
@@ -11884,7 +12245,6 @@ class CountryPol extends WorldCountry {
           codeNumeric: "616",
           codeShort: "PL",
           cioc: "POL",
-          currencies: const [FiatPln()],
           idd: const Idd(root: 4, suffixes: [8]),
           altSpellings: const [
             "PL",
@@ -11893,7 +12253,6 @@ class CountryPol extends WorldCountry {
           ],
           continent: const Europe(),
           subregion: const CentralEurope(),
-          languages: const [LangPol()],
           latLng: const LatLng(52, 20),
           bordersCodes: const ["Blr", "Cze", "Deu", "Ltu", "Rus", "Svk", "Ukr"],
           areaMetric: 312679,
@@ -11922,6 +12281,10 @@ class CountryPol extends WorldCountry {
           postalCode: const PostalCode(format: "##-###"),
           regionalBlocs: const [BlocEU()],
         );
+  @override
+  List<FiatCurrency> get currencies => const [FiatPln()];
+  @override
+  List<NaturalLanguage> get languages => const [LangPol()];
 }
 
 /// A class that represents the Puerto Rico country.
@@ -11955,7 +12318,6 @@ class CountryPri extends WorldCountry {
           cioc: "PUR",
           independent: false,
           unMember: false,
-          currencies: const [FiatUsd()],
           idd: const Idd(root: 1, suffixes: [787, 939]),
           altSpellings: const [
             "PR",
@@ -11964,7 +12326,6 @@ class CountryPri extends WorldCountry {
           ],
           continent: const Americas(),
           subregion: const Caribbean(),
-          languages: const [LangEng(), LangSpa()],
           latLng: const LatLng(18.25, -66.5),
           areaMetric: 8870,
           demonyms: const [
@@ -11998,6 +12359,10 @@ class CountryPri extends WorldCountry {
             regExpPattern: r"^(\d{9})$",
           ),
         );
+  @override
+  List<FiatCurrency> get currencies => const [FiatUsd()];
+  @override
+  List<NaturalLanguage> get languages => const [LangEng(), LangSpa()];
 }
 
 /// A class that represents the North Korea country.
@@ -12024,7 +12389,6 @@ class CountryPrk extends WorldCountry {
           codeNumeric: "408",
           codeShort: "KP",
           cioc: "PRK",
-          currencies: const [FiatKpw()],
           idd: const Idd(root: 8, suffixes: [50]),
           altSpellings: const [
             "KP",
@@ -12038,7 +12402,6 @@ class CountryPrk extends WorldCountry {
           ],
           continent: const Asia(),
           subregion: const EasternAsia(),
-          languages: const [LangKor()],
           latLng: const LatLng(40, 127),
           bordersCodes: const ["Chn", "Kor", "Rus"],
           areaMetric: 120538,
@@ -12070,6 +12433,10 @@ class CountryPrk extends WorldCountry {
           postalCode:
               const PostalCode(format: "###-###", regExpPattern: r"^(\d{6})$"),
         );
+  @override
+  List<FiatCurrency> get currencies => const [FiatKpw()];
+  @override
+  List<NaturalLanguage> get languages => const [LangKor()];
 }
 
 /// A class that represents the Portugal country.
@@ -12087,7 +12454,7 @@ class CountryPrt extends WorldCountry {
           namesNative: const [
             CountryName(
               language: LangPor(),
-              official: "República português",
+              official: "República Portuguesa",
               common: "Portugal",
             ),
           ],
@@ -12096,7 +12463,6 @@ class CountryPrt extends WorldCountry {
           codeNumeric: "620",
           codeShort: "PT",
           cioc: "POR",
-          currencies: const [FiatEur()],
           idd: const Idd(root: 3, suffixes: [51]),
           altSpellings: const [
             "PT",
@@ -12106,7 +12472,6 @@ class CountryPrt extends WorldCountry {
           ],
           continent: const Europe(),
           subregion: const SouthernEurope(),
-          languages: const [LangPor()],
           latLng: const LatLng(39.5, -8),
           bordersCodes: const ["Esp"],
           areaMetric: 92090,
@@ -12140,6 +12505,10 @@ class CountryPrt extends WorldCountry {
               const PostalCode(format: "####-###", regExpPattern: r"^(\d{7})$"),
           regionalBlocs: const [BlocEU()],
         );
+  @override
+  List<FiatCurrency> get currencies => const [FiatEur()];
+  @override
+  List<NaturalLanguage> get languages => const [LangPor()];
 }
 
 /// A class that represents the Paraguay country.
@@ -12171,7 +12540,6 @@ class CountryPry extends WorldCountry {
           codeNumeric: "600",
           codeShort: "PY",
           cioc: "PAR",
-          currencies: const [FiatPyg()],
           idd: const Idd(root: 5, suffixes: [95]),
           altSpellings: const [
             "PY",
@@ -12181,7 +12549,6 @@ class CountryPry extends WorldCountry {
           ],
           continent: const Americas(),
           subregion: const SouthAmerica(),
-          languages: const [LangGrn(), LangSpa()],
           latLng: const LatLng(-23, -58),
           landlocked: true,
           bordersCodes: const ["Arg", "Bol", "Bra"],
@@ -12216,6 +12583,10 @@ class CountryPry extends WorldCountry {
               const PostalCode(format: "######", regExpPattern: r"^(\d{6})$"),
           regionalBlocs: const [BlocUSAN()],
         );
+  @override
+  List<FiatCurrency> get currencies => const [FiatPyg()];
+  @override
+  List<NaturalLanguage> get languages => const [LangGrn(), LangSpa()];
 }
 
 /// A class that represents the Palestine country.
@@ -12244,7 +12615,6 @@ class CountryPse extends WorldCountry {
           cioc: "PLE",
           independent: false,
           unMember: false,
-          currencies: const [FiatEgp(), FiatIls(), FiatJod()],
           idd: const Idd(root: 9, suffixes: [70]),
           altSpellings: const [
             "PS",
@@ -12254,7 +12624,6 @@ class CountryPse extends WorldCountry {
           ],
           continent: const Asia(),
           subregion: const WesternAsia(),
-          languages: const [LangAra()],
           latLng: const LatLng(31.9, 35.2),
           bordersCodes: const ["Isr", "Egy", "Jor"],
           areaMetric: 6220,
@@ -12287,6 +12656,10 @@ class CountryPse extends WorldCountry {
           ),
           regionalBlocs: const [BlocAL()],
         );
+  @override
+  List<FiatCurrency> get currencies => const [FiatEgp(), FiatIls(), FiatJod()];
+  @override
+  List<NaturalLanguage> get languages => const [LangAra()];
 }
 
 /// A class that represents the French Polynesia country.
@@ -12314,7 +12687,6 @@ class CountryPyf extends WorldCountry {
           codeShort: "PF",
           independent: false,
           unMember: false,
-          currencies: const [FiatXpf()],
           idd: const Idd(root: 6, suffixes: [89]),
           altSpellings: const [
             "PF",
@@ -12324,7 +12696,6 @@ class CountryPyf extends WorldCountry {
           ],
           continent: const Oceania(),
           subregion: const Polynesia(),
-          languages: const [LangFra()],
           latLng: const LatLng(17.6797, 149.4068),
           areaMetric: 4167,
           demonyms: const [
@@ -12353,6 +12724,10 @@ class CountryPyf extends WorldCountry {
           ),
           postalCode: const PostalCode(regExpPattern: r"^((97|98)7\d{2})$"),
         );
+  @override
+  List<FiatCurrency> get currencies => const [FiatXpf()];
+  @override
+  List<NaturalLanguage> get languages => const [LangFra()];
 }
 
 /// A class that represents the Qatar country.
@@ -12379,12 +12754,10 @@ class CountryQat extends WorldCountry {
           codeNumeric: "634",
           codeShort: "QA",
           cioc: "QAT",
-          currencies: const [FiatQar()],
           idd: const Idd(root: 9, suffixes: [74]),
           altSpellings: const ["QA", "State of Qatar", "Dawlat Qaṭar"],
           continent: const Asia(),
           subregion: const WesternAsia(),
-          languages: const [LangAra()],
           latLng: const LatLng(25.5, 51.25),
           bordersCodes: const ["Sau"],
           areaMetric: 11586,
@@ -12412,6 +12785,10 @@ class CountryQat extends WorldCountry {
           ),
           regionalBlocs: const [BlocAL()],
         );
+  @override
+  List<FiatCurrency> get currencies => const [FiatQar()];
+  @override
+  List<NaturalLanguage> get languages => const [LangAra()];
 }
 
 /// A class that represents the Réunion country.
@@ -12439,12 +12816,10 @@ class CountryReu extends WorldCountry {
           codeShort: "RE",
           independent: false,
           unMember: false,
-          currencies: const [FiatEur()],
           idd: const Idd(root: 2, suffixes: [62]),
           altSpellings: const ["RE", "Reunion"],
           continent: const Africa(),
           subregion: const EasternAfrica(),
-          languages: const [LangFra()],
           latLng: const LatLng(-21.15, 55.5),
           areaMetric: 2511,
           demonyms: const [
@@ -12476,6 +12851,10 @@ class CountryReu extends WorldCountry {
               const PostalCode(regExpPattern: r"^((97|98)(4|7|8)\d{2})$"),
           regionalBlocs: const [BlocAU()],
         );
+  @override
+  List<FiatCurrency> get currencies => const [FiatEur()];
+  @override
+  List<NaturalLanguage> get languages => const [LangFra()];
 }
 
 /// A class that represents the Romania country.
@@ -12502,12 +12881,10 @@ class CountryRou extends WorldCountry {
           codeNumeric: "642",
           codeShort: "RO",
           cioc: "ROU",
-          currencies: const [FiatRon()],
           idd: const Idd(root: 4, suffixes: [0]),
           altSpellings: const ["RO", "Rumania", "Roumania", "România"],
           continent: const Europe(),
           subregion: const SouthwestEurope(),
-          languages: const [LangRon()],
           latLng: const LatLng(46, 25),
           bordersCodes: const ["Bgr", "Hun", "Mda", "Srb", "Ukr"],
           areaMetric: 238391,
@@ -12533,6 +12910,10 @@ class CountryRou extends WorldCountry {
               const PostalCode(format: "######", regExpPattern: r"^(\d{6})$"),
           regionalBlocs: const [BlocEU()],
         );
+  @override
+  List<FiatCurrency> get currencies => const [FiatRon()];
+  @override
+  List<NaturalLanguage> get languages => const [LangRon()];
 }
 
 /// A class that represents the Russia country.
@@ -12559,7 +12940,6 @@ class CountryRus extends WorldCountry {
           codeNumeric: "643",
           codeShort: "RU",
           cioc: "RUS",
-          currencies: const [FiatRub()],
           idd: const Idd(root: 7, suffixes: [3, 4, 5, 8, 9]),
           altSpellings: const [
             "RU",
@@ -12568,7 +12948,6 @@ class CountryRus extends WorldCountry {
           ],
           continent: const Europe(),
           subregion: const EasternEurope(),
-          languages: const [LangRus()],
           latLng: const LatLng(60, 100),
           bordersCodes: const [
             "Aze",
@@ -12619,6 +12998,10 @@ class CountryRus extends WorldCountry {
               const PostalCode(format: "######", regExpPattern: r"^(\d{6})$"),
           regionalBlocs: const [BlocEEU()],
         );
+  @override
+  List<FiatCurrency> get currencies => const [FiatRub()];
+  @override
+  List<NaturalLanguage> get languages => const [LangRus()];
 }
 
 /// A class that represents the Rwanda country.
@@ -12655,7 +13038,6 @@ class CountryRwa extends WorldCountry {
           codeNumeric: "646",
           codeShort: "RW",
           cioc: "RWA",
-          currencies: const [FiatRwf()],
           idd: const Idd(root: 2, suffixes: [50]),
           altSpellings: const [
             "RW",
@@ -12665,7 +13047,6 @@ class CountryRwa extends WorldCountry {
           ],
           continent: const Africa(),
           subregion: const EasternAfrica(),
-          languages: const [LangEng(), LangFra(), LangKin()],
           latLng: const LatLng(-2, 30),
           landlocked: true,
           bordersCodes: const ["Bdi", "Cod", "Tza", "Uga"],
@@ -12694,6 +13075,11 @@ class CountryRwa extends WorldCountry {
           ),
           regionalBlocs: const [BlocAU()],
         );
+  @override
+  List<FiatCurrency> get currencies => const [FiatRwf()];
+  @override
+  List<NaturalLanguage> get languages =>
+      const [LangEng(), LangFra(), LangKin()];
 }
 
 /// A class that represents the Saudi Arabia country.
@@ -12720,7 +13106,6 @@ class CountrySau extends WorldCountry {
           codeNumeric: "682",
           codeShort: "SA",
           cioc: "KSA",
-          currencies: const [FiatSar()],
           idd: const Idd(root: 9, suffixes: [66]),
           altSpellings: const [
             "Saudi",
@@ -12730,7 +13115,6 @@ class CountrySau extends WorldCountry {
           ],
           continent: const Asia(),
           subregion: const WesternAsia(),
-          languages: const [LangAra()],
           latLng: const LatLng(25, 45),
           bordersCodes: const ["Irq", "Jor", "Kwt", "Omn", "Qat", "Are", "Yem"],
           areaMetric: 2149690,
@@ -12763,6 +13147,10 @@ class CountrySau extends WorldCountry {
           postalCode: const PostalCode(),
           regionalBlocs: const [BlocAL()],
         );
+  @override
+  List<FiatCurrency> get currencies => const [FiatSar()];
+  @override
+  List<NaturalLanguage> get languages => const [LangAra()];
 }
 
 /// A class that represents the Sudan country.
@@ -12794,7 +13182,6 @@ class CountrySdn extends WorldCountry {
           codeNumeric: "729",
           codeShort: "SD",
           cioc: "SUD",
-          currencies: const [FiatSdg()],
           idd: const Idd(root: 2, suffixes: [49]),
           altSpellings: const [
             "SD",
@@ -12803,7 +13190,6 @@ class CountrySdn extends WorldCountry {
           ],
           continent: const Africa(),
           subregion: const NorthernAfrica(),
-          languages: const [LangAra(), LangEng()],
           latLng: const LatLng(15, 30),
           bordersCodes: const ["Caf", "Tcd", "Egy", "Eri", "Eth", "Lby", "Ssd"],
           areaMetric: 1886068,
@@ -12832,6 +13218,10 @@ class CountrySdn extends WorldCountry {
           postalCode: const PostalCode(),
           regionalBlocs: const [BlocAU(), BlocAL()],
         );
+  @override
+  List<FiatCurrency> get currencies => const [FiatSdg()];
+  @override
+  List<NaturalLanguage> get languages => const [LangAra(), LangEng()];
 }
 
 /// A class that represents the Senegal country.
@@ -12858,7 +13248,6 @@ class CountrySen extends WorldCountry {
           codeNumeric: "686",
           codeShort: "SN",
           cioc: "SEN",
-          currencies: const [FiatXof()],
           idd: const Idd(root: 2, suffixes: [21]),
           altSpellings: const [
             "SN",
@@ -12867,7 +13256,6 @@ class CountrySen extends WorldCountry {
           ],
           continent: const Africa(),
           subregion: const WesternAfrica(),
-          languages: const [LangFra()],
           latLng: const LatLng(14, -14),
           bordersCodes: const ["Gmb", "Gin", "Gnb", "Mli", "Mrt"],
           areaMetric: 196722,
@@ -12900,6 +13288,10 @@ class CountrySen extends WorldCountry {
           postalCode: const PostalCode(),
           regionalBlocs: const [BlocAU()],
         );
+  @override
+  List<FiatCurrency> get currencies => const [FiatXof()];
+  @override
+  List<NaturalLanguage> get languages => const [LangFra()];
 }
 
 /// A class that represents the Singapore country.
@@ -12937,7 +13329,6 @@ class CountrySgp extends WorldCountry {
           codeNumeric: "702",
           codeShort: "SG",
           cioc: "SGP",
-          currencies: const [FiatSgd()],
           idd: const Idd(root: 6, suffixes: [5]),
           altSpellings: const [
             "SG",
@@ -12947,7 +13338,6 @@ class CountrySgp extends WorldCountry {
           ],
           continent: const Asia(),
           subregion: const SouthEasternAsia(),
-          languages: const [LangZho(), LangEng(), LangMsa(), LangTam()],
           latLng: const LatLng(1.36666666, 103.8),
           areaMetric: 710,
           demonyms: const [
@@ -12979,6 +13369,11 @@ class CountrySgp extends WorldCountry {
               const PostalCode(format: "######", regExpPattern: r"^(\d{6})$"),
           regionalBlocs: const [BlocASEAN()],
         );
+  @override
+  List<FiatCurrency> get currencies => const [FiatSgd()];
+  @override
+  List<NaturalLanguage> get languages =>
+      const [LangZho(), LangEng(), LangMsa(), LangTam()];
 }
 
 /// A class that represents the South Georgia country.
@@ -13006,14 +13401,12 @@ class CountrySgs extends WorldCountry {
           codeShort: "GS",
           independent: false,
           unMember: false,
-          currencies: const [FiatShp()],
           idd: const Idd(root: 50, suffixes: [0]),
           altSpellings: const [
             "GS",
             "South Georgia and the South Sandwich Islands",
           ],
           continent: const Antarctica(),
-          languages: const [LangEng()],
           latLng: const LatLng(-54.5, -37),
           areaMetric: 3903,
           demonyms: const [
@@ -13038,6 +13431,10 @@ class CountrySgs extends WorldCountry {
           ),
           regionalBlocs: const [BlocUSAN()],
         );
+  @override
+  List<FiatCurrency> get currencies => const [FiatShp()];
+  @override
+  List<NaturalLanguage> get languages => const [LangEng()];
 }
 
 /// A class that represents the Saint Helena, Ascension and Tristan da Cunha country.
@@ -13065,7 +13462,6 @@ class CountryShn extends WorldCountry {
           codeShort: "SH",
           independent: false,
           unMember: false,
-          currencies: const [FiatGbp(), FiatShp()],
           idd: const Idd(root: 2, suffixes: [90, 47]),
           altSpellings: const [
             "Saint Helena",
@@ -13073,7 +13469,6 @@ class CountryShn extends WorldCountry {
           ],
           continent: const Africa(),
           subregion: const WesternAfrica(),
-          languages: const [LangEng()],
           latLng: const LatLng(-15.95, -5.72),
           areaMetric: 394,
           demonyms: const [
@@ -13107,6 +13502,10 @@ class CountryShn extends WorldCountry {
           ),
           regionalBlocs: const [BlocAU()],
         );
+  @override
+  List<FiatCurrency> get currencies => const [FiatGbp(), FiatShp()];
+  @override
+  List<NaturalLanguage> get languages => const [LangEng()];
 }
 
 /// A class that represents the Svalbard and Jan Mayen country.
@@ -13134,12 +13533,10 @@ class CountrySjm extends WorldCountry {
           codeShort: "SJ",
           independent: false,
           unMember: false,
-          currencies: const [FiatNok()],
           idd: const Idd(root: 4, suffixes: [779]),
           altSpellings: const ["SJ", "Svalbard and Jan Mayen Islands"],
           continent: const Europe(),
           subregion: const NorthernEurope(),
-          languages: const [LangNor()],
           latLng: const LatLng(78, 20),
           areaMetric: 377,
           demonyms: const [
@@ -13163,6 +13560,10 @@ class CountrySjm extends WorldCountry {
             latLng: LatLng(78.22, 15.63),
           ),
         );
+  @override
+  List<FiatCurrency> get currencies => const [FiatNok()];
+  @override
+  List<NaturalLanguage> get languages => const [LangNor()];
 }
 
 /// A class that represents the Solomon Islands country.
@@ -13189,12 +13590,10 @@ class CountrySlb extends WorldCountry {
           codeNumeric: "090",
           codeShort: "SB",
           cioc: "SOL",
-          currencies: const [FiatSbd()],
           idd: const Idd(root: 6, suffixes: [77]),
           altSpellings: const ["SB"],
           continent: const Oceania(),
           subregion: const Melanesia(),
-          languages: const [LangEng()],
           latLng: const LatLng(-8, 159),
           areaMetric: 28896,
           demonyms: const [
@@ -13224,6 +13623,10 @@ class CountrySlb extends WorldCountry {
             latLng: LatLng(-9.43, 159.95),
           ),
         );
+  @override
+  List<FiatCurrency> get currencies => const [FiatSbd()];
+  @override
+  List<NaturalLanguage> get languages => const [LangEng()];
 }
 
 /// A class that represents the Sierra Leone country.
@@ -13250,12 +13653,10 @@ class CountrySle extends WorldCountry {
           codeNumeric: "694",
           codeShort: "SL",
           cioc: "SLE",
-          currencies: const [FiatSll()],
           idd: const Idd(root: 2, suffixes: [32]),
           altSpellings: const ["SL", "Republic of Sierra Leone"],
           continent: const Africa(),
           subregion: const WesternAfrica(),
-          languages: const [LangEng()],
           latLng: const LatLng(8.5, -11.5),
           bordersCodes: const ["Gin", "Lbr"],
           areaMetric: 71740,
@@ -13287,6 +13688,10 @@ class CountrySle extends WorldCountry {
           ),
           regionalBlocs: const [BlocAU()],
         );
+  @override
+  List<FiatCurrency> get currencies => const [FiatSll()];
+  @override
+  List<NaturalLanguage> get languages => const [LangEng()];
 }
 
 /// A class that represents the El Salvador country.
@@ -13313,7 +13718,6 @@ class CountrySlv extends WorldCountry {
           codeNumeric: "222",
           codeShort: "SV",
           cioc: "ESA",
-          currencies: const [FiatUsd()],
           idd: const Idd(root: 50, suffixes: [3]),
           altSpellings: const [
             "SV",
@@ -13322,7 +13726,6 @@ class CountrySlv extends WorldCountry {
           ],
           continent: const Americas(),
           subregion: const CentralAmerica(),
-          languages: const [LangSpa()],
           latLng: const LatLng(13.83333333, -88.91666666),
           bordersCodes: const ["Gtm", "Hnd"],
           areaMetric: 21041,
@@ -13358,6 +13761,10 @@ class CountrySlv extends WorldCountry {
           ),
           regionalBlocs: const [BlocCAIS()],
         );
+  @override
+  List<FiatCurrency> get currencies => const [FiatUsd()];
+  @override
+  List<NaturalLanguage> get languages => const [LangSpa()];
 }
 
 /// A class that represents the San Marino country.
@@ -13384,7 +13791,6 @@ class CountrySmr extends WorldCountry {
           codeNumeric: "674",
           codeShort: "SM",
           cioc: "SMR",
-          currencies: const [FiatEur()],
           idd: const Idd(root: 3, suffixes: [78]),
           altSpellings: const [
             "SM",
@@ -13393,7 +13799,6 @@ class CountrySmr extends WorldCountry {
           ],
           continent: const Europe(),
           subregion: const SouthernEurope(),
-          languages: const [LangIta()],
           latLng: const LatLng(43.76666666, 12.41666666),
           landlocked: true,
           bordersCodes: const ["Ita"],
@@ -13426,6 +13831,10 @@ class CountrySmr extends WorldCountry {
           postalCode:
               const PostalCode(format: "4789#", regExpPattern: r"^(4789\d)$"),
         );
+  @override
+  List<FiatCurrency> get currencies => const [FiatEur()];
+  @override
+  List<NaturalLanguage> get languages => const [LangIta()];
 }
 
 /// A class that represents the Somalia country.
@@ -13457,7 +13866,6 @@ class CountrySom extends WorldCountry {
           codeNumeric: "706",
           codeShort: "SO",
           cioc: "SOM",
-          currencies: const [FiatSos()],
           idd: const Idd(root: 2, suffixes: [52]),
           altSpellings: const [
             "SO",
@@ -13468,7 +13876,6 @@ class CountrySom extends WorldCountry {
           ],
           continent: const Africa(),
           subregion: const EasternAfrica(),
-          languages: const [LangAra(), LangSom()],
           latLng: const LatLng(10, 49),
           bordersCodes: const ["Dji", "Eth", "Ken"],
           areaMetric: 637657,
@@ -13500,6 +13907,10 @@ class CountrySom extends WorldCountry {
           ),
           regionalBlocs: const [BlocAU(), BlocAL()],
         );
+  @override
+  List<FiatCurrency> get currencies => const [FiatSos()];
+  @override
+  List<NaturalLanguage> get languages => const [LangAra(), LangSom()];
 }
 
 /// A class that represents the Saint Pierre and Miquelon country.
@@ -13527,7 +13938,6 @@ class CountrySpm extends WorldCountry {
           codeShort: "PM",
           independent: false,
           unMember: false,
-          currencies: const [FiatEur()],
           idd: const Idd(root: 50, suffixes: [8]),
           altSpellings: const [
             "PM",
@@ -13535,7 +13945,6 @@ class CountrySpm extends WorldCountry {
           ],
           continent: const Americas(),
           subregion: const NorthAmerica(),
-          languages: const [LangFra()],
           latLng: const LatLng(46.83333333, -56.33333333),
           areaMetric: 242,
           demonyms: const [
@@ -13565,6 +13974,10 @@ class CountrySpm extends WorldCountry {
           ),
           postalCode: const PostalCode(regExpPattern: r"^(97500)$"),
         );
+  @override
+  List<FiatCurrency> get currencies => const [FiatEur()];
+  @override
+  List<NaturalLanguage> get languages => const [LangFra()];
 }
 
 /// A class that represents the Serbia country.
@@ -13591,7 +14004,6 @@ class CountrySrb extends WorldCountry {
           codeNumeric: "688",
           codeShort: "RS",
           cioc: "SRB",
-          currencies: const [FiatRsd()],
           idd: const Idd(root: 3, suffixes: [81]),
           altSpellings: const [
             "RS",
@@ -13602,7 +14014,6 @@ class CountrySrb extends WorldCountry {
           ],
           continent: const Europe(),
           subregion: const SouthwestEurope(),
-          languages: const [LangSrp()],
           latLng: const LatLng(44, 21),
           landlocked: true,
           bordersCodes: const ["Bih", "Bgr", "Hrv", "Hun", "Mkd", "Mne", "Rou"],
@@ -13629,6 +14040,10 @@ class CountrySrb extends WorldCountry {
               const PostalCode(format: "######", regExpPattern: r"^(\d{6})$"),
           regionalBlocs: const [BlocCEFTA()],
         );
+  @override
+  List<FiatCurrency> get currencies => const [FiatRsd()];
+  @override
+  List<NaturalLanguage> get languages => const [LangSrp()];
 }
 
 /// A class that represents the South Sudan country.
@@ -13655,12 +14070,10 @@ class CountrySsd extends WorldCountry {
           codeNumeric: "728",
           codeShort: "SS",
           cioc: "SSD",
-          currencies: const [FiatSsp()],
           idd: const Idd(root: 2, suffixes: [11]),
           altSpellings: const ["SS"],
           continent: const Africa(),
           subregion: const MiddleAfrica(),
-          languages: const [LangEng()],
           latLng: const LatLng(7, 30),
           landlocked: true,
           bordersCodes: const ["Caf", "Cod", "Eth", "Ken", "Sdn", "Uga"],
@@ -13694,6 +14107,10 @@ class CountrySsd extends WorldCountry {
           ),
           regionalBlocs: const [BlocAU()],
         );
+  @override
+  List<FiatCurrency> get currencies => const [FiatSsp()];
+  @override
+  List<NaturalLanguage> get languages => const [LangEng()];
 }
 
 /// A class that represents the São Tomé and Príncipe country.
@@ -13720,7 +14137,6 @@ class CountryStp extends WorldCountry {
           codeNumeric: "678",
           codeShort: "ST",
           cioc: "STP",
-          currencies: const [FiatStn()],
           idd: const Idd(root: 2, suffixes: [39]),
           altSpellings: const [
             "ST",
@@ -13730,7 +14146,6 @@ class CountryStp extends WorldCountry {
           ],
           continent: const Africa(),
           subregion: const MiddleAfrica(),
-          languages: const [LangPor()],
           latLng: const LatLng(1, 7),
           areaMetric: 964,
           demonyms: const [
@@ -13761,6 +14176,10 @@ class CountryStp extends WorldCountry {
           ),
           regionalBlocs: const [BlocAU()],
         );
+  @override
+  List<FiatCurrency> get currencies => const [FiatStn()];
+  @override
+  List<NaturalLanguage> get languages => const [LangPor()];
 }
 
 /// A class that represents the Suriname country.
@@ -13787,7 +14206,6 @@ class CountrySur extends WorldCountry {
           codeNumeric: "740",
           codeShort: "SR",
           cioc: "SUR",
-          currencies: const [FiatSrd()],
           idd: const Idd(root: 5, suffixes: [97]),
           altSpellings: const [
             "SR",
@@ -13798,7 +14216,6 @@ class CountrySur extends WorldCountry {
           ],
           continent: const Americas(),
           subregion: const SouthAmerica(),
-          languages: const [LangNld()],
           latLng: const LatLng(4, -56),
           bordersCodes: const ["Bra", "Guf", "Guy"],
           areaMetric: 163820,
@@ -13830,6 +14247,10 @@ class CountrySur extends WorldCountry {
           ),
           regionalBlocs: const [BlocCARICOM(), BlocUSAN()],
         );
+  @override
+  List<FiatCurrency> get currencies => const [FiatSrd()];
+  @override
+  List<NaturalLanguage> get languages => const [LangNld()];
 }
 
 /// A class that represents the Slovakia country.
@@ -13856,12 +14277,10 @@ class CountrySvk extends WorldCountry {
           codeNumeric: "703",
           codeShort: "SK",
           cioc: "SVK",
-          currencies: const [FiatEur()],
           idd: const Idd(root: 4, suffixes: [21]),
           altSpellings: const ["SK", "Slovak Republic", "Slovenská republika"],
           continent: const Europe(),
           subregion: const CentralEurope(),
-          languages: const [LangSlk()],
           latLng: const LatLng(48.66666666, 19.5),
           landlocked: true,
           bordersCodes: const ["Aut", "Cze", "Hun", "Pol", "Ukr"],
@@ -13887,6 +14306,10 @@ class CountrySvk extends WorldCountry {
           postalCode: const PostalCode(format: "###  ##"),
           regionalBlocs: const [BlocEU()],
         );
+  @override
+  List<FiatCurrency> get currencies => const [FiatEur()];
+  @override
+  List<NaturalLanguage> get languages => const [LangSlk()];
 }
 
 /// A class that represents the Slovenia country.
@@ -13913,7 +14336,6 @@ class CountrySvn extends WorldCountry {
           codeNumeric: "705",
           codeShort: "SI",
           cioc: "SLO",
-          currencies: const [FiatEur()],
           idd: const Idd(root: 3, suffixes: [86]),
           altSpellings: const [
             "SI",
@@ -13922,7 +14344,6 @@ class CountrySvn extends WorldCountry {
           ],
           continent: const Europe(),
           subregion: const CentralEurope(),
-          languages: const [LangSlv()],
           latLng: const LatLng(46.11666666, 14.81666666),
           bordersCodes: const ["Aut", "Hrv", "Ita", "Hun"],
           areaMetric: 20273,
@@ -13950,6 +14371,10 @@ class CountrySvn extends WorldCountry {
           ),
           regionalBlocs: const [BlocEU()],
         );
+  @override
+  List<FiatCurrency> get currencies => const [FiatEur()];
+  @override
+  List<NaturalLanguage> get languages => const [LangSlv()];
 }
 
 /// A class that represents the Sweden country.
@@ -13976,7 +14401,6 @@ class CountrySwe extends WorldCountry {
           codeNumeric: "752",
           codeShort: "SE",
           cioc: "SWE",
-          currencies: const [FiatSek()],
           idd: const Idd(root: 4, suffixes: [6]),
           altSpellings: const [
             "SE",
@@ -13985,7 +14409,6 @@ class CountrySwe extends WorldCountry {
           ],
           continent: const Europe(),
           subregion: const NorthernEurope(),
-          languages: const [LangSwe()],
           latLng: const LatLng(62, 15),
           bordersCodes: const ["Fin", "Nor"],
           areaMetric: 450295,
@@ -14013,6 +14436,10 @@ class CountrySwe extends WorldCountry {
           ),
           regionalBlocs: const [BlocEU()],
         );
+  @override
+  List<FiatCurrency> get currencies => const [FiatSek()];
+  @override
+  List<NaturalLanguage> get languages => const [LangSwe()];
 }
 
 /// A class that represents the Eswatini country.
@@ -14044,7 +14471,6 @@ class CountrySwz extends WorldCountry {
           codeNumeric: "748",
           codeShort: "SZ",
           cioc: "SWZ",
-          currencies: const [FiatSzl(), FiatZar()],
           idd: const Idd(root: 2, suffixes: [68]),
           altSpellings: const [
             "SZ",
@@ -14057,7 +14483,6 @@ class CountrySwz extends WorldCountry {
           ],
           continent: const Africa(),
           subregion: const SouthernAfrica(),
-          languages: const [LangEng(), LangSsw()],
           latLng: const LatLng(-26.5, 31.5),
           landlocked: true,
           bordersCodes: const ["Moz", "Zaf"],
@@ -14087,6 +14512,10 @@ class CountrySwz extends WorldCountry {
           ),
           regionalBlocs: const [BlocAU()],
         );
+  @override
+  List<FiatCurrency> get currencies => const [FiatSzl(), FiatZar()];
+  @override
+  List<NaturalLanguage> get languages => const [LangEng(), LangSsw()];
 }
 
 /// A class that represents the Sint Maarten country.
@@ -14124,12 +14553,10 @@ class CountrySxm extends WorldCountry {
           codeShort: "SX",
           independent: false,
           unMember: false,
-          currencies: const [FiatAng()],
           idd: const Idd(root: 1, suffixes: [721]),
           altSpellings: const ["SX", "Sint Maarten (Dutch part)"],
           continent: const Americas(),
           subregion: const Caribbean(),
-          languages: const [LangEng(), LangFra(), LangNld()],
           latLng: const LatLng(18.033333, -63.05),
           bordersCodes: const ["Maf"],
           areaMetric: 34,
@@ -14159,6 +14586,11 @@ class CountrySxm extends WorldCountry {
             latLng: LatLng(18.02, -63.03),
           ),
         );
+  @override
+  List<FiatCurrency> get currencies => const [FiatAng()];
+  @override
+  List<NaturalLanguage> get languages =>
+      const [LangEng(), LangFra(), LangNld()];
 }
 
 /// A class that represents the Seychelles country.
@@ -14190,7 +14622,6 @@ class CountrySyc extends WorldCountry {
           codeNumeric: "690",
           codeShort: "SC",
           cioc: "SEY",
-          currencies: const [FiatScr()],
           idd: const Idd(root: 2, suffixes: [48]),
           altSpellings: const [
             "SC",
@@ -14200,7 +14631,6 @@ class CountrySyc extends WorldCountry {
           ],
           continent: const Africa(),
           subregion: const EasternAfrica(),
-          languages: const [LangEng(), LangFra()],
           latLng: const LatLng(-4.58333333, 55.66666666),
           areaMetric: 452,
           demonyms: const [
@@ -14231,6 +14661,10 @@ class CountrySyc extends WorldCountry {
           ),
           regionalBlocs: const [BlocAU()],
         );
+  @override
+  List<FiatCurrency> get currencies => const [FiatScr()];
+  @override
+  List<NaturalLanguage> get languages => const [LangEng(), LangFra()];
 }
 
 /// A class that represents the Syria country.
@@ -14257,7 +14691,6 @@ class CountrySyr extends WorldCountry {
           codeNumeric: "760",
           codeShort: "SY",
           cioc: "SYR",
-          currencies: const [FiatSyp()],
           idd: const Idd(root: 9, suffixes: [63]),
           altSpellings: const [
             "SY",
@@ -14266,7 +14699,6 @@ class CountrySyr extends WorldCountry {
           ],
           continent: const Asia(),
           subregion: const WesternAsia(),
-          languages: const [LangAra()],
           latLng: const LatLng(35, 38),
           bordersCodes: const ["Irq", "Isr", "Jor", "Lbn", "Tur"],
           areaMetric: 185180,
@@ -14290,6 +14722,10 @@ class CountrySyr extends WorldCountry {
           ),
           regionalBlocs: const [BlocAL()],
         );
+  @override
+  List<FiatCurrency> get currencies => const [FiatSyp()];
+  @override
+  List<NaturalLanguage> get languages => const [LangAra()];
 }
 
 /// A class that represents the Turks and Caicos Islands country.
@@ -14317,12 +14753,10 @@ class CountryTca extends WorldCountry {
           codeShort: "TC",
           independent: false,
           unMember: false,
-          currencies: const [FiatUsd()],
           idd: const Idd(root: 1, suffixes: [649]),
           altSpellings: const ["TC"],
           continent: const Americas(),
           subregion: const Caribbean(),
-          languages: const [LangEng()],
           latLng: const LatLng(21.75, -71.58333333),
           areaMetric: 948,
           demonyms: const [
@@ -14351,6 +14785,10 @@ class CountryTca extends WorldCountry {
             regExpPattern: r"^(TKCA 1ZZ)$",
           ),
         );
+  @override
+  List<FiatCurrency> get currencies => const [FiatUsd()];
+  @override
+  List<NaturalLanguage> get languages => const [LangEng()];
 }
 
 /// A class that represents the Chad country.
@@ -14382,7 +14820,6 @@ class CountryTcd extends WorldCountry {
           codeNumeric: "148",
           codeShort: "TD",
           cioc: "CHA",
-          currencies: const [FiatXaf()],
           idd: const Idd(root: 2, suffixes: [35]),
           altSpellings: const [
             "TD",
@@ -14392,7 +14829,6 @@ class CountryTcd extends WorldCountry {
           ],
           continent: const Africa(),
           subregion: const MiddleAfrica(),
-          languages: const [LangAra(), LangFra()],
           latLng: const LatLng(15, 19),
           landlocked: true,
           bordersCodes: const ["Cmr", "Caf", "Lby", "Ner", "Nga", "Sdn"],
@@ -14420,6 +14856,10 @@ class CountryTcd extends WorldCountry {
             latLng: LatLng(12.1, 15.03),
           ),
         );
+  @override
+  List<FiatCurrency> get currencies => const [FiatXaf()];
+  @override
+  List<NaturalLanguage> get languages => const [LangAra(), LangFra()];
 }
 
 /// A class that represents the Togo country.
@@ -14446,7 +14886,6 @@ class CountryTgo extends WorldCountry {
           codeNumeric: "768",
           codeShort: "TG",
           cioc: "TOG",
-          currencies: const [FiatXof()],
           idd: const Idd(root: 2, suffixes: [28]),
           altSpellings: const [
             "TG",
@@ -14456,7 +14895,6 @@ class CountryTgo extends WorldCountry {
           ],
           continent: const Africa(),
           subregion: const WesternAfrica(),
-          languages: const [LangFra()],
           latLng: const LatLng(8, 1.16666666),
           bordersCodes: const ["Ben", "Bfa", "Gha"],
           areaMetric: 56785,
@@ -14483,6 +14921,10 @@ class CountryTgo extends WorldCountry {
             latLng: LatLng(6.14, 1.21),
           ),
         );
+  @override
+  List<FiatCurrency> get currencies => const [FiatXof()];
+  @override
+  List<NaturalLanguage> get languages => const [LangFra()];
 }
 
 /// A class that represents the Thailand country.
@@ -14509,7 +14951,6 @@ class CountryTha extends WorldCountry {
           codeNumeric: "764",
           codeShort: "TH",
           cioc: "THA",
-          currencies: const [FiatThb()],
           idd: const Idd(root: 6, suffixes: [6]),
           altSpellings: const [
             "TH",
@@ -14521,7 +14962,6 @@ class CountryTha extends WorldCountry {
           ],
           continent: const Asia(),
           subregion: const SouthEasternAsia(),
-          languages: const [LangTha()],
           latLng: const LatLng(15, 100),
           bordersCodes: const ["Mmr", "Khm", "Lao", "Mys"],
           areaMetric: 513120,
@@ -14550,6 +14990,10 @@ class CountryTha extends WorldCountry {
           postalCode: const PostalCode(),
           regionalBlocs: const [BlocAU()],
         );
+  @override
+  List<FiatCurrency> get currencies => const [FiatThb()];
+  @override
+  List<NaturalLanguage> get languages => const [LangTha()];
 }
 
 /// A class that represents the Tajikistan country.
@@ -14581,7 +15025,6 @@ class CountryTjk extends WorldCountry {
           codeNumeric: "762",
           codeShort: "TJ",
           cioc: "TJK",
-          currencies: const [FiatTjs()],
           idd: const Idd(root: 9, suffixes: [92]),
           altSpellings: const [
             "TJ",
@@ -14592,7 +15035,6 @@ class CountryTjk extends WorldCountry {
           ],
           continent: const Asia(),
           subregion: const CentralAsia(),
-          languages: const [LangRus(), LangTgk()],
           latLng: const LatLng(39, 71),
           landlocked: true,
           bordersCodes: const ["Afg", "Chn", "Kgz", "Uzb"],
@@ -14618,6 +15060,10 @@ class CountryTjk extends WorldCountry {
           postalCode:
               const PostalCode(format: "######", regExpPattern: r"^(\d{6})$"),
         );
+  @override
+  List<FiatCurrency> get currencies => const [FiatTjs()];
+  @override
+  List<NaturalLanguage> get languages => const [LangRus(), LangTgk()];
 }
 
 /// A class that represents the Tokelau country.
@@ -14650,12 +15096,10 @@ class CountryTkl extends WorldCountry {
           codeShort: "TK",
           independent: false,
           unMember: false,
-          currencies: const [FiatNzd()],
           idd: const Idd(root: 6, suffixes: [90]),
           altSpellings: const ["TK"],
           continent: const Oceania(),
           subregion: const Polynesia(),
-          languages: const [LangEng(), LangSmo()],
           latLng: const LatLng(-9, -172),
           areaMetric: 12,
           demonyms: const [
@@ -14679,6 +15123,10 @@ class CountryTkl extends WorldCountry {
             latLng: LatLng(-9.38, -171.22),
           ),
         );
+  @override
+  List<FiatCurrency> get currencies => const [FiatNzd()];
+  @override
+  List<NaturalLanguage> get languages => const [LangEng(), LangSmo()];
 }
 
 /// A class that represents the Turkmenistan country.
@@ -14710,12 +15158,10 @@ class CountryTkm extends WorldCountry {
           codeNumeric: "795",
           codeShort: "TM",
           cioc: "TKM",
-          currencies: const [FiatTmt()],
           idd: const Idd(root: 9, suffixes: [93]),
           altSpellings: const ["TM"],
           continent: const Asia(),
           subregion: const CentralAsia(),
-          languages: const [LangRus(), LangTuk()],
           latLng: const LatLng(40, 60),
           landlocked: true,
           bordersCodes: const ["Afg", "Irn", "Kaz", "Uzb"],
@@ -14741,6 +15187,10 @@ class CountryTkm extends WorldCountry {
           postalCode:
               const PostalCode(format: "######", regExpPattern: r"^(\d{6})$"),
         );
+  @override
+  List<FiatCurrency> get currencies => const [FiatTmt()];
+  @override
+  List<NaturalLanguage> get languages => const [LangRus(), LangTuk()];
 }
 
 /// A class that represents the Timor-Leste country.
@@ -14767,7 +15217,6 @@ class CountryTls extends WorldCountry {
           codeNumeric: "626",
           codeShort: "TL",
           cioc: "TLS",
-          currencies: const [FiatUsd()],
           idd: const Idd(root: 6, suffixes: [70]),
           altSpellings: const [
             "TL",
@@ -14780,7 +15229,6 @@ class CountryTls extends WorldCountry {
           ],
           continent: const Asia(),
           subregion: const SouthEasternAsia(),
-          languages: const [LangPor()],
           latLng: const LatLng(-8.83333333, 125.91666666),
           bordersCodes: const ["Idn"],
           areaMetric: 14874,
@@ -14812,6 +15260,10 @@ class CountryTls extends WorldCountry {
             latLng: LatLng(-8.58, 125.6),
           ),
         );
+  @override
+  List<FiatCurrency> get currencies => const [FiatUsd()];
+  @override
+  List<NaturalLanguage> get languages => const [LangPor()];
 }
 
 /// A class that represents the Tonga country.
@@ -14843,12 +15295,10 @@ class CountryTon extends WorldCountry {
           codeNumeric: "776",
           codeShort: "TO",
           cioc: "TGA",
-          currencies: const [FiatTop()],
           idd: const Idd(root: 6, suffixes: [76]),
           altSpellings: const ["TO"],
           continent: const Oceania(),
           subregion: const Polynesia(),
-          languages: const [LangEng(), LangTon()],
           latLng: const LatLng(-20, -175),
           areaMetric: 747,
           demonyms: const [
@@ -14874,6 +15324,10 @@ class CountryTon extends WorldCountry {
             latLng: LatLng(-21.13, -175.2),
           ),
         );
+  @override
+  List<FiatCurrency> get currencies => const [FiatTop()];
+  @override
+  List<NaturalLanguage> get languages => const [LangEng(), LangTon()];
 }
 
 /// A class that represents the Trinidad and Tobago country.
@@ -14900,12 +15354,10 @@ class CountryTto extends WorldCountry {
           codeNumeric: "780",
           codeShort: "TT",
           cioc: "TTO",
-          currencies: const [FiatTtd()],
           idd: const Idd(root: 1, suffixes: [868]),
           altSpellings: const ["TT", "Republic of Trinidad and Tobago"],
           continent: const Americas(),
           subregion: const Caribbean(),
-          languages: const [LangEng()],
           latLng: const LatLng(10.6918, -61.2225),
           areaMetric: 5130,
           demonyms: const [
@@ -14936,6 +15388,10 @@ class CountryTto extends WorldCountry {
           ),
           regionalBlocs: const [BlocCARICOM()],
         );
+  @override
+  List<FiatCurrency> get currencies => const [FiatTtd()];
+  @override
+  List<NaturalLanguage> get languages => const [LangEng()];
 }
 
 /// A class that represents the Tunisia country.
@@ -14962,7 +15418,6 @@ class CountryTun extends WorldCountry {
           codeNumeric: "788",
           codeShort: "TN",
           cioc: "TUN",
-          currencies: const [FiatTnd()],
           idd: const Idd(root: 2, suffixes: [16]),
           altSpellings: const [
             "TN",
@@ -14971,7 +15426,6 @@ class CountryTun extends WorldCountry {
           ],
           continent: const Africa(),
           subregion: const NorthernAfrica(),
-          languages: const [LangAra()],
           latLng: const LatLng(34, 9),
           bordersCodes: const ["Dza", "Lby"],
           areaMetric: 163610,
@@ -15001,6 +15455,10 @@ class CountryTun extends WorldCountry {
               const PostalCode(format: "####", regExpPattern: r"^(\d{4})$"),
           regionalBlocs: const [BlocAU(), BlocAL()],
         );
+  @override
+  List<FiatCurrency> get currencies => const [FiatTnd()];
+  @override
+  List<NaturalLanguage> get languages => const [LangAra()];
 }
 
 /// A class that represents the Turkey country.
@@ -15027,7 +15485,6 @@ class CountryTur extends WorldCountry {
           codeNumeric: "792",
           codeShort: "TR",
           cioc: "TUR",
-          currencies: const [FiatTry()],
           idd: const Idd(root: 9, suffixes: [0]),
           altSpellings: const [
             "TR",
@@ -15037,7 +15494,6 @@ class CountryTur extends WorldCountry {
           ],
           continent: const Asia(),
           subregion: const WesternAsia(),
-          languages: const [LangTur()],
           latLng: const LatLng(39, 35),
           bordersCodes: const [
             "Arm",
@@ -15070,6 +15526,10 @@ class CountryTur extends WorldCountry {
           ),
           postalCode: const PostalCode(),
         );
+  @override
+  List<FiatCurrency> get currencies => const [FiatTry()];
+  @override
+  List<NaturalLanguage> get languages => const [LangTur()];
 }
 
 /// A class that represents the Tuvalu country.
@@ -15096,12 +15556,10 @@ class CountryTuv extends WorldCountry {
           codeNumeric: "798",
           codeShort: "TV",
           cioc: "TUV",
-          currencies: const [FiatAud()],
           idd: const Idd(root: 6, suffixes: [88]),
           altSpellings: const ["TV"],
           continent: const Oceania(),
           subregion: const Polynesia(),
-          languages: const [LangEng()],
           latLng: const LatLng(-8, 178),
           areaMetric: 26,
           demonyms: const [
@@ -15126,6 +15584,10 @@ class CountryTuv extends WorldCountry {
             latLng: LatLng(-8.52, 179.22),
           ),
         );
+  @override
+  List<FiatCurrency> get currencies => const [FiatAud()];
+  @override
+  List<NaturalLanguage> get languages => const [LangEng()];
 }
 
 /// A class that represents the Taiwan country.
@@ -15150,7 +15612,6 @@ class CountryTwn extends WorldCountry {
           cioc: "TPE",
           independent: false,
           unMember: false,
-          currencies: const [FiatTwd()],
           idd: const Idd(root: 8, suffixes: [86]),
           altSpellings: const [
             "TW",
@@ -15162,7 +15623,6 @@ class CountryTwn extends WorldCountry {
           ],
           continent: const Asia(),
           subregion: const EasternAsia(),
-          languages: const [LangZho()],
           latLng: const LatLng(23.5, 121),
           areaMetric: 36193,
           demonyms: const [
@@ -15192,6 +15652,10 @@ class CountryTwn extends WorldCountry {
           ),
           postalCode: const PostalCode(),
         );
+  @override
+  List<FiatCurrency> get currencies => const [FiatTwd()];
+  @override
+  List<NaturalLanguage> get languages => const [LangZho()];
 }
 
 /// A class that represents the Tanzania country.
@@ -15223,7 +15687,6 @@ class CountryTza extends WorldCountry {
           codeNumeric: "834",
           codeShort: "TZ",
           cioc: "TAN",
-          currencies: const [FiatTzs()],
           idd: const Idd(root: 2, suffixes: [55]),
           altSpellings: const [
             "TZ",
@@ -15233,7 +15696,6 @@ class CountryTza extends WorldCountry {
           ],
           continent: const Africa(),
           subregion: const EasternAfrica(),
-          languages: const [LangEng(), LangSwa()],
           latLng: const LatLng(-6, 35),
           bordersCodes: const [
             "Bdi",
@@ -15274,6 +15736,10 @@ class CountryTza extends WorldCountry {
           ),
           regionalBlocs: const [BlocAU()],
         );
+  @override
+  List<FiatCurrency> get currencies => const [FiatTzs()];
+  @override
+  List<NaturalLanguage> get languages => const [LangEng(), LangSwa()];
 }
 
 /// A class that represents the Uganda country.
@@ -15305,12 +15771,10 @@ class CountryUga extends WorldCountry {
           codeNumeric: "800",
           codeShort: "UG",
           cioc: "UGA",
-          currencies: const [FiatUgx()],
           idd: const Idd(root: 2, suffixes: [56]),
           altSpellings: const ["UG", "Republic of Uganda", "Jamhuri ya Uganda"],
           continent: const Africa(),
           subregion: const EasternAfrica(),
-          languages: const [LangEng(), LangSwa()],
           latLng: const LatLng(1, 32),
           landlocked: true,
           bordersCodes: const ["Cod", "Ken", "Rwa", "Ssd", "Tza"],
@@ -15339,6 +15803,10 @@ class CountryUga extends WorldCountry {
           ),
           regionalBlocs: const [BlocAU()],
         );
+  @override
+  List<FiatCurrency> get currencies => const [FiatUgx()];
+  @override
+  List<NaturalLanguage> get languages => const [LangEng(), LangSwa()];
 }
 
 /// A class that represents the Ukraine country.
@@ -15365,12 +15833,10 @@ class CountryUkr extends WorldCountry {
           codeNumeric: "804",
           codeShort: "UA",
           cioc: "UKR",
-          currencies: const [FiatUah()],
           idd: const Idd(root: 3, suffixes: [80]),
           altSpellings: const ["UA", "Ukrayina", "Украина"],
           continent: const Europe(),
           subregion: const EasternEurope(),
-          languages: const [LangUkr()],
           latLng: const LatLng(49, 32),
           bordersCodes: const ["Blr", "Hun", "Mda", "Pol", "Rou", "Rus", "Svk"],
           areaMetric: 603500,
@@ -15402,6 +15868,10 @@ class CountryUkr extends WorldCountry {
           ),
           postalCode: const PostalCode(),
         );
+  @override
+  List<FiatCurrency> get currencies => const [FiatUah()];
+  @override
+  List<NaturalLanguage> get languages => const [LangUkr()];
 }
 
 /// A class that represents the United States Minor Outlying Islands country.
@@ -15429,12 +15899,10 @@ class CountryUmi extends WorldCountry {
           codeShort: "UM",
           independent: false,
           unMember: false,
-          currencies: const [FiatUsd()],
           idd: const Idd(root: 2, suffixes: [68]),
           altSpellings: const ["UM"],
           continent: const Americas(),
           subregion: const NorthAmerica(),
-          languages: const [LangEng()],
           latLng: const LatLng(19.3, 166.633333),
           areaMetric: 34.2,
           demonyms: const [
@@ -15458,6 +15926,10 @@ class CountryUmi extends WorldCountry {
             latLng: LatLng(38.9072, 77.0369),
           ),
         );
+  @override
+  List<FiatCurrency> get currencies => const [FiatUsd()];
+  @override
+  List<NaturalLanguage> get languages => const [LangEng()];
 }
 
 /// A class that represents the Uruguay country.
@@ -15484,7 +15956,6 @@ class CountryUry extends WorldCountry {
           codeNumeric: "858",
           codeShort: "UY",
           cioc: "URU",
-          currencies: const [FiatUyu()],
           idd: const Idd(root: 5, suffixes: [98]),
           altSpellings: const [
             "UY",
@@ -15493,7 +15964,6 @@ class CountryUry extends WorldCountry {
           ],
           continent: const Americas(),
           subregion: const SouthAmerica(),
-          languages: const [LangSpa()],
           latLng: const LatLng(-33, -56),
           bordersCodes: const ["Arg", "Bra"],
           areaMetric: 181034,
@@ -15526,6 +15996,10 @@ class CountryUry extends WorldCountry {
           postalCode: const PostalCode(),
           regionalBlocs: const [BlocUSAN()],
         );
+  @override
+  List<FiatCurrency> get currencies => const [FiatUyu()];
+  @override
+  List<NaturalLanguage> get languages => const [LangSpa()];
 }
 
 /// A class that represents the United States country.
@@ -15552,7 +16026,6 @@ class CountryUsa extends WorldCountry {
           codeNumeric: "840",
           codeShort: "US",
           cioc: "USA",
-          currencies: const [FiatUsd()],
           idd: const Idd(
             root: 1,
             suffixes: [
@@ -15878,7 +16351,6 @@ class CountryUsa extends WorldCountry {
           altSpellings: const ["US", "USA", "United States of America"],
           continent: const Americas(),
           subregion: const NorthAmerica(),
-          languages: const [LangEng()],
           latLng: const LatLng(38, -97),
           bordersCodes: const ["Can", "Mex"],
           areaMetric: 9372610,
@@ -15923,6 +16395,10 @@ class CountryUsa extends WorldCountry {
           ),
           regionalBlocs: const [BlocNAFTA()],
         );
+  @override
+  List<FiatCurrency> get currencies => const [FiatUsd()];
+  @override
+  List<NaturalLanguage> get languages => const [LangEng()];
 }
 
 /// A class that represents the Uzbekistan country.
@@ -15954,7 +16430,6 @@ class CountryUzb extends WorldCountry {
           codeNumeric: "860",
           codeShort: "UZ",
           cioc: "UZB",
-          currencies: const [FiatUzs()],
           idd: const Idd(root: 9, suffixes: [98]),
           altSpellings: const [
             "UZ",
@@ -15964,7 +16439,6 @@ class CountryUzb extends WorldCountry {
           ],
           continent: const Asia(),
           subregion: const CentralAsia(),
-          languages: const [LangRus(), LangUzb()],
           latLng: const LatLng(41, 64),
           landlocked: true,
           bordersCodes: const ["Afg", "Kaz", "Kgz", "Tjk", "Tkm"],
@@ -15994,6 +16468,10 @@ class CountryUzb extends WorldCountry {
           postalCode:
               const PostalCode(format: "######", regExpPattern: r"^(\d{6})$"),
         );
+  @override
+  List<FiatCurrency> get currencies => const [FiatUzs()];
+  @override
+  List<NaturalLanguage> get languages => const [LangRus(), LangUzb()];
 }
 
 /// A class that represents the Vatican City country.
@@ -16025,7 +16503,6 @@ class CountryVat extends WorldCountry {
           codeNumeric: "336",
           codeShort: "VA",
           unMember: false,
-          currencies: const [FiatEur()],
           idd: const Idd(root: 3, suffixes: [79]),
           altSpellings: const [
             "VA",
@@ -16035,7 +16512,6 @@ class CountryVat extends WorldCountry {
           ],
           continent: const Europe(),
           subregion: const SouthernEurope(),
-          languages: const [LangIta(), LangLat()],
           latLng: const LatLng(41.9, 12.45),
           landlocked: true,
           bordersCodes: const ["Ita"],
@@ -16057,6 +16533,10 @@ class CountryVat extends WorldCountry {
             latLng: LatLng(41.9, 12.45),
           ),
         );
+  @override
+  List<FiatCurrency> get currencies => const [FiatEur()];
+  @override
+  List<NaturalLanguage> get languages => const [LangIta(), LangLat()];
 }
 
 /// A class that represents the Saint Vincent and the Grenadines country.
@@ -16083,12 +16563,10 @@ class CountryVct extends WorldCountry {
           codeNumeric: "670",
           codeShort: "VC",
           cioc: "VIN",
-          currencies: const [FiatXcd()],
           idd: const Idd(root: 1, suffixes: [784]),
           altSpellings: const ["VC"],
           continent: const Americas(),
           subregion: const Caribbean(),
-          languages: const [LangEng()],
           latLng: const LatLng(13.25, -61.2),
           areaMetric: 389,
           demonyms: const [
@@ -16118,6 +16596,10 @@ class CountryVct extends WorldCountry {
           ),
           regionalBlocs: const [BlocCARICOM()],
         );
+  @override
+  List<FiatCurrency> get currencies => const [FiatXcd()];
+  @override
+  List<NaturalLanguage> get languages => const [LangEng()];
 }
 
 /// A class that represents the Venezuela country.
@@ -16144,7 +16626,6 @@ class CountryVen extends WorldCountry {
           codeNumeric: "862",
           codeShort: "VE",
           cioc: "VEN",
-          currencies: const [FiatVes()],
           idd: const Idd(root: 5, suffixes: [8]),
           altSpellings: const [
             "VE",
@@ -16154,7 +16635,6 @@ class CountryVen extends WorldCountry {
           ],
           continent: const Americas(),
           subregion: const SouthAmerica(),
-          languages: const [LangSpa()],
           latLng: const LatLng(8, -66),
           bordersCodes: const ["Bra", "Col", "Guy"],
           areaMetric: 916445,
@@ -16188,6 +16668,10 @@ class CountryVen extends WorldCountry {
               const PostalCode(format: "####", regExpPattern: r"^(\d{4})$"),
           regionalBlocs: const [BlocUSAN()],
         );
+  @override
+  List<FiatCurrency> get currencies => const [FiatVes()];
+  @override
+  List<NaturalLanguage> get languages => const [LangSpa()];
 }
 
 /// A class that represents the British Virgin Islands country.
@@ -16216,12 +16700,10 @@ class CountryVgb extends WorldCountry {
           cioc: "IVB",
           independent: false,
           unMember: false,
-          currencies: const [FiatUsd()],
           idd: const Idd(root: 1, suffixes: [284]),
           altSpellings: const ["VG", "Virgin Islands, British"],
           continent: const Americas(),
           subregion: const Caribbean(),
-          languages: const [LangEng()],
           latLng: const LatLng(18.431383, -64.62305),
           areaMetric: 151,
           demonyms: const [
@@ -16245,6 +16727,10 @@ class CountryVgb extends WorldCountry {
             latLng: LatLng(18.42, -64.62),
           ),
         );
+  @override
+  List<FiatCurrency> get currencies => const [FiatUsd()];
+  @override
+  List<NaturalLanguage> get languages => const [LangEng()];
 }
 
 /// A class that represents the United States Virgin Islands country.
@@ -16273,12 +16759,10 @@ class CountryVir extends WorldCountry {
           cioc: "ISV",
           independent: false,
           unMember: false,
-          currencies: const [FiatUsd()],
           idd: const Idd(root: 1, suffixes: [340]),
           altSpellings: const ["VI", "Virgin Islands, U.S."],
           continent: const Americas(),
           subregion: const Caribbean(),
-          languages: const [LangEng()],
           latLng: const LatLng(18.35, -64.933333),
           areaMetric: 347,
           demonyms: const [
@@ -16303,6 +16787,10 @@ class CountryVir extends WorldCountry {
             latLng: LatLng(18.35, -64.93),
           ),
         );
+  @override
+  List<FiatCurrency> get currencies => const [FiatUsd()];
+  @override
+  List<NaturalLanguage> get languages => const [LangEng()];
 }
 
 /// A class that represents the Vietnam country.
@@ -16329,7 +16817,6 @@ class CountryVnm extends WorldCountry {
           codeNumeric: "704",
           codeShort: "VN",
           cioc: "VIE",
-          currencies: const [FiatVnd()],
           idd: const Idd(root: 8, suffixes: [4]),
           altSpellings: const [
             "VN",
@@ -16339,7 +16826,6 @@ class CountryVnm extends WorldCountry {
           ],
           continent: const Asia(),
           subregion: const SouthEasternAsia(),
-          languages: const [LangVie()],
           latLng: const LatLng(16.16666666, 107.83333333),
           bordersCodes: const ["Khm", "Chn", "Lao"],
           areaMetric: 331212,
@@ -16373,6 +16859,10 @@ class CountryVnm extends WorldCountry {
               const PostalCode(format: "######", regExpPattern: r"^(\d{6})$"),
           regionalBlocs: const [BlocASEAN()],
         );
+  @override
+  List<FiatCurrency> get currencies => const [FiatVnd()];
+  @override
+  List<NaturalLanguage> get languages => const [LangVie()];
 }
 
 /// A class that represents the Vanuatu country.
@@ -16409,7 +16899,6 @@ class CountryVut extends WorldCountry {
           codeNumeric: "548",
           codeShort: "VU",
           cioc: "VAN",
-          currencies: const [FiatVuv()],
           idd: const Idd(root: 6, suffixes: [78]),
           altSpellings: const [
             "VU",
@@ -16419,7 +16908,6 @@ class CountryVut extends WorldCountry {
           ],
           continent: const Oceania(),
           subregion: const Melanesia(),
-          languages: const [LangBis(), LangEng(), LangFra()],
           latLng: const LatLng(-16, 167),
           areaMetric: 12189,
           demonyms: const [
@@ -16449,6 +16937,11 @@ class CountryVut extends WorldCountry {
             latLng: LatLng(-17.73, 168.32),
           ),
         );
+  @override
+  List<FiatCurrency> get currencies => const [FiatVuv()];
+  @override
+  List<NaturalLanguage> get languages =>
+      const [LangBis(), LangEng(), LangFra()];
 }
 
 /// A class that represents the Wallis and Futuna country.
@@ -16476,7 +16969,6 @@ class CountryWlf extends WorldCountry {
           codeShort: "WF",
           independent: false,
           unMember: false,
-          currencies: const [FiatXpf()],
           idd: const Idd(root: 6, suffixes: [81]),
           altSpellings: const [
             "WF",
@@ -16485,7 +16977,6 @@ class CountryWlf extends WorldCountry {
           ],
           continent: const Oceania(),
           subregion: const Polynesia(),
-          languages: const [LangFra()],
           latLng: const LatLng(-13.3, -176.2),
           areaMetric: 142,
           demonyms: const [
@@ -16510,6 +17001,10 @@ class CountryWlf extends WorldCountry {
           ),
           postalCode: const PostalCode(regExpPattern: r"^(986\d{2})$"),
         );
+  @override
+  List<FiatCurrency> get currencies => const [FiatXpf()];
+  @override
+  List<NaturalLanguage> get languages => const [LangFra()];
 }
 
 /// A class that represents the Samoa country.
@@ -16541,7 +17036,6 @@ class CountryWsm extends WorldCountry {
           codeNumeric: "882",
           codeShort: "WS",
           cioc: "SAM",
-          currencies: const [FiatWst()],
           idd: const Idd(root: 6, suffixes: [85]),
           altSpellings: const [
             "WS",
@@ -16550,7 +17044,6 @@ class CountryWsm extends WorldCountry {
           ],
           continent: const Oceania(),
           subregion: const Polynesia(),
-          languages: const [LangEng(), LangSmo()],
           latLng: const LatLng(-13.58333333, -172.33333333),
           areaMetric: 2842,
           demonyms: const [
@@ -16572,6 +17065,10 @@ class CountryWsm extends WorldCountry {
             latLng: LatLng(-13.82, -171.77),
           ),
         );
+  @override
+  List<FiatCurrency> get currencies => const [FiatWst()];
+  @override
+  List<NaturalLanguage> get languages => const [LangEng(), LangSmo()];
 }
 
 /// A class that represents the Yemen country.
@@ -16598,7 +17095,6 @@ class CountryYem extends WorldCountry {
           codeNumeric: "887",
           codeShort: "YE",
           cioc: "YEM",
-          currencies: const [FiatYer()],
           idd: const Idd(root: 9, suffixes: [67]),
           altSpellings: const [
             "YE",
@@ -16607,7 +17103,6 @@ class CountryYem extends WorldCountry {
           ],
           continent: const Asia(),
           subregion: const WesternAsia(),
-          languages: const [LangAra()],
           latLng: const LatLng(15, 48),
           bordersCodes: const ["Omn", "Sau"],
           areaMetric: 527968,
@@ -16632,6 +17127,10 @@ class CountryYem extends WorldCountry {
           ),
           regionalBlocs: const [BlocAL()],
         );
+  @override
+  List<FiatCurrency> get currencies => const [FiatYer()];
+  @override
+  List<NaturalLanguage> get languages => const [LangAra()];
 }
 
 /// A class that represents the South Africa country.
@@ -16703,7 +17202,6 @@ class CountryZaf extends WorldCountry {
           codeNumeric: "710",
           codeShort: "ZA",
           cioc: "RSA",
-          currencies: const [FiatZar()],
           idd: const Idd(root: 2, suffixes: [7]),
           altSpellings: const [
             "ZA",
@@ -16713,18 +17211,6 @@ class CountryZaf extends WorldCountry {
           ],
           continent: const Africa(),
           subregion: const SouthernAfrica(),
-          languages: const [
-            LangAfr(),
-            LangEng(),
-            LangNbl(),
-            LangSot(),
-            LangSsw(),
-            LangTsn(),
-            LangTso(),
-            LangVen(),
-            LangXho(),
-            LangZul(),
-          ],
           latLng: const LatLng(-29, 24),
           bordersCodes: const ["Bwa", "Lso", "Moz", "Nam", "Swz", "Zwe"],
           areaMetric: 1221037,
@@ -16762,6 +17248,21 @@ class CountryZaf extends WorldCountry {
               const PostalCode(format: "####", regExpPattern: r"^(\d{4})$"),
           regionalBlocs: const [BlocAU()],
         );
+  @override
+  List<FiatCurrency> get currencies => const [FiatZar()];
+  @override
+  List<NaturalLanguage> get languages => const [
+        LangAfr(),
+        LangEng(),
+        LangNbl(),
+        LangSot(),
+        LangSsw(),
+        LangTsn(),
+        LangTso(),
+        LangVen(),
+        LangXho(),
+        LangZul(),
+      ];
 }
 
 /// A class that represents the Zambia country.
@@ -16788,12 +17289,10 @@ class CountryZmb extends WorldCountry {
           codeNumeric: "894",
           codeShort: "ZM",
           cioc: "ZAM",
-          currencies: const [FiatZmw()],
           idd: const Idd(root: 2, suffixes: [60]),
           altSpellings: const ["ZM", "Republic of Zambia"],
           continent: const Africa(),
           subregion: const EasternAfrica(),
-          languages: const [LangEng()],
           latLng: const LatLng(-15, 30),
           landlocked: true,
           bordersCodes: const [
@@ -16828,6 +17327,10 @@ class CountryZmb extends WorldCountry {
           postalCode: const PostalCode(),
           regionalBlocs: const [BlocAU()],
         );
+  @override
+  List<FiatCurrency> get currencies => const [FiatZmw()];
+  @override
+  List<NaturalLanguage> get languages => const [LangEng()];
 }
 
 /// A class that represents the Zimbabwe country.
@@ -16874,22 +17377,10 @@ class CountryZwe extends WorldCountry {
           codeNumeric: "716",
           codeShort: "ZW",
           cioc: "ZIM",
-          currencies: const [FiatGbp(), FiatZwl()],
           idd: const Idd(root: 2, suffixes: [63]),
           altSpellings: const ["ZW", "Republic of Zimbabwe"],
           continent: const Africa(),
           subregion: const SouthernAfrica(),
-          languages: const [
-            LangEng(),
-            LangNde(),
-            LangNya(),
-            LangSna(),
-            LangSot(),
-            LangTsn(),
-            LangTso(),
-            LangVen(),
-            LangXho(),
-          ],
           latLng: const LatLng(-20, 30),
           landlocked: true,
           bordersCodes: const ["Bwa", "Moz", "Zaf", "Tur"],
@@ -16922,4 +17413,18 @@ class CountryZwe extends WorldCountry {
           ),
           regionalBlocs: const [BlocAU()],
         );
+  @override
+  List<FiatCurrency> get currencies => const [FiatGbp(), FiatZwl()];
+  @override
+  List<NaturalLanguage> get languages => const [
+        LangEng(),
+        LangNde(),
+        LangNya(),
+        LangSna(),
+        LangSot(),
+        LangTsn(),
+        LangTso(),
+        LangVen(),
+        LangXho(),
+      ];
 }

@@ -360,7 +360,6 @@ const unkCountryTranslations = [
   TranslatedName(LangEwe(), name: "Kosovo"),
   TranslatedName(LangNob(), name: "Kosovo"),
   TranslatedName(LangBam(), name: "Kosovo", script: ScriptLatn()),
-  TranslatedName(LangEng(), name: "Kosovo", countryCode: "DG"),
   TranslatedName(LangHau(), name: "Kosovo", script: ScriptLatn()),
   TranslatedName(LangKaz(), name: "Косово", script: ScriptCyrl()),
   TranslatedName(LangKir(), name: "Косово", script: ScriptCyrl()),

@@ -5,6 +5,9 @@
 // Both projects are licensed under the MIT License.
 
 /// Provides country translations for sealed_countries.
+@Deprecated(
+  "Please migrate to `package:l10n_countries/l10n_countries.dart` package.",
+)
 library sealed_country_translations;
 
 import "package:sealed_currencies/sealed_currencies.dart";

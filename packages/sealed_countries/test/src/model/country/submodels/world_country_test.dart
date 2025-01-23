@@ -1,6 +1,7 @@
 // ignore_for_file: deprecated_member_use, it's TODO!
 
 import "package:_sealed_world_tests/sealed_world_tests.dart";
+// ignore: deprecated_member_use_from_same_package, it's TODO!
 import "package:sealed_countries/country_translations.dart";
 import "package:sealed_countries/sealed_countries.dart";
 import "package:test/test.dart";
@@ -839,7 +840,7 @@ void main() => group("$WorldCountry", () {
             continent: value.continent,
             emoji: value.emoji,
             idd: value.idd,
-            languages: value.languages,
+            languages: const [],
             latLng: value.latLng,
             maps: value.maps,
             namesNative: value.namesNative,
@@ -991,31 +992,6 @@ void main() => group("$WorldCountry", () {
             emoji: value.emoji,
             idd: value.idd,
             languages: value.languages,
-            latLng: value.latLng,
-            maps: value.maps,
-            namesNative: value.namesNative,
-            population: value.population,
-            timezones: value.timezones,
-            tld: value.tld,
-            translations: value.translations,
-            demonyms: value.demonyms,
-            currencies: value.currencies,
-          ),
-        );
-
-        assertTest(
-          "languages empty",
-          () => WorldCountry(
-            name: value.name,
-            altSpellings: value.altSpellings,
-            areaMetric: value.areaMetric,
-            code: value.code,
-            codeNumeric: value.codeNumeric,
-            codeShort: value.codeShort,
-            continent: value.continent,
-            emoji: value.emoji,
-            idd: value.idd,
-            languages: const [],
             latLng: value.latLng,
             maps: value.maps,
             namesNative: value.namesNative,
@@ -1216,7 +1192,7 @@ void main() => group("$WorldCountry", () {
           int count = 0;
           for (final country in WorldCountry.list) {
             final maybeMissing = country.maybeTranslation(
-              const BasicLocale(language, countryCode: nonExistCode),
+              const BasicTypedLocale(language, regionalCode: nonExistCode),
               useLanguageFallback: false,
             );
             // ignore: avoid-continue, it's just a test.
@@ -1224,7 +1200,7 @@ void main() => group("$WorldCountry", () {
             count += 1;
             expect(
               country.translation(
-                const BasicLocale(language, countryCode: nonExistCode),
+                const BasicTypedLocale(language, regionalCode: nonExistCode),
               ),
               isNotNull,
             );
@@ -1238,7 +1214,7 @@ void main() => group("$WorldCountry", () {
           for (final l10n in NaturalLanguage.list) {
             for (final country in WorldCountry.list) {
               final hasTranslationForValue =
-                  country.maybeTranslation(BasicLocale(l10n));
+                  country.maybeTranslation(BasicTypedLocale(l10n));
               if (hasTranslationForValue != null) {
                 map[country] = map[country]! + 1;
               }
@@ -1257,7 +1233,7 @@ void main() => group("$WorldCountry", () {
           for (final l10n in NaturalLanguage.list) {
             for (final country in WorldCountry.list) {
               final hasTranslationForValue =
-                  country.maybeTranslation(BasicLocale(l10n));
+                  country.maybeTranslation(BasicTypedLocale(l10n));
               if (hasTranslationForValue == null) {
                 missing[l10n] = {...?missing[l10n], country};
               } else {
@@ -1286,8 +1262,8 @@ void main() => group("$WorldCountry", () {
               // ignore: avoid-continue, it's just a test.
               if (l10n == const LangEng()) continue;
               expect(
-                country.translation(BasicLocale(l10n)),
-                isNot(country.translation(const BasicLocale(LangEng()))),
+                country.translation(BasicTypedLocale(l10n)),
+                isNot(country.translation(const BasicTypedLocale(LangEng()))),
               );
             }
           }
@@ -1299,7 +1275,7 @@ void main() => group("$WorldCountry", () {
             () {
               for (final language in kSealedCountriesSupportedLanguages) {
                 final cache = WorldCountry.list.commonNamesCacheMap(
-                  BasicLocale(language, script: language.scripts.first),
+                  BasicTypedLocale(language, script: language.scripts.first),
                 );
                 expect(cache.length, WorldCountry.list.length);
               }
@@ -1310,7 +1286,7 @@ void main() => group("$WorldCountry", () {
             """some languages should have at smaller amount translations of it's own name""",
             () {
               final cache = WorldCountry.list
-                  .commonNamesCacheMap(const BasicLocale(LangKal()));
+                  .commonNamesCacheMap(const BasicTypedLocale(LangKal()));
               expect(cache.length, lessThan(WorldCountry.list.length));
             },
           );

@@ -2,12 +2,14 @@
 
 import "package:_sealed_world_tests/sealed_world_tests.dart";
 import "package:l10n_countries/l10n_countries.dart" show CountriesLocaleMapper;
+import "package:sealed_countries/src/helpers/utils/typed_localization_delegate.dart";
 import "package:sealed_countries/src/model/country/country.dart";
+import "package:sealed_countries/src/model/locale/basic_typed_locale.dart";
 import "package:sealed_currencies/sealed_currencies.dart";
 import "package:test/test.dart";
 
 void main() => group("IsoTranslatedIterableExtension", tags: "generated", () {
-      const parser = LocalizationDelegate();
+      const parser = TypedLocalizationDelegate();
       final locales =
           CountriesLocaleMapper().map.keys.map(parser.parseLocale).nonNulls;
 
@@ -431,6 +433,7 @@ void main() => group("IsoTranslatedIterableExtension", tags: "generated", () {
           "az": "az_Cyrl",
           "bm": "bm_Latn",
           "bs": "bs_Cyrl",
+          "en_DG": "en",
           "kk": "kk_Cyrl",
           "ky": "ky_Cyrl",
           "mn": "mn_Cyrl",
@@ -447,11 +450,12 @@ void main() => group("IsoTranslatedIterableExtension", tags: "generated", () {
           () {
             for (final locale in locales) {
               final stringLocale = locale.toString();
+
               performanceTest("should have data for $stringLocale", () {
                 final maybeFallback =
                     parser.parseLocale(altLocaleMap[stringLocale]);
                 final withFallbackData = WorldCountry.list.commonNamesMap(
-                  options: LocaleMappingOptions(
+                  options: LocaleMappingOptions<BasicTypedLocale>(
                     mainLocale: locale,
                     fallbackLocale: maybeFallback,
                   ),

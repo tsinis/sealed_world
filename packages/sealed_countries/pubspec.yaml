@@ -4,7 +4,6 @@ description: Provides data for world countries in the form of sealed classes.
 maintainer: Roman Cinis
 repository: https://github.com/tsinis/sealed_world/tree/main/packages/sealed_countries
 issue_tracker: https://github.com/tsinis/sealed_world/issues
-publish_to: none # TODO! Remove this line before publishing.
 topics:
   - countries
   - country
@@ -13,6 +12,8 @@ topics:
   - flags
 
 screenshots:
+  - description: "Code quality"
+    path: doc/quality.webp
   - description: "Structure visualization"
     path: doc/structure.webp
   - description: "Examples of usage"
@@ -22,8 +23,7 @@ environment:
   sdk: ^3.6.0
 
 dependencies:
-  l10n_countries:
-    path: ../l10n_countries
+  l10n_countries: ^0.1.0
   sealed_currencies: ^2.0.0
 
 dev_dependencies:
