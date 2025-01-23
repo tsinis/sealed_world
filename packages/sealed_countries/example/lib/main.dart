@@ -1,4 +1,5 @@
 // ignore_for_file: avoid_print, avoid-non-ascii-symbols, prefer-match-file-name
+import "package:l10n_countries/l10n_countries.dart";
 import "package:sealed_countries/sealed_countries.dart";
 
 void main() {
@@ -25,14 +26,27 @@ void main() {
     print("${cnt.name.common} code: ${cnt.idd.phoneCode()}");
   }
 
-  for (final cnt in WorldCountry.list) {
-    print(
-      "${cnt.internationalName} translated to Slovak language: "
-      "${cnt.translation(const BasicTypedLocale(LangSlk())).name}",
-    );
+  /// Translations:
+  // Prints German translations of all available regular currencies.
+  final germanNames = WorldCountry.list.commonNamesMap(
+    options: const LocaleMappingOptions<BasicTypedLocale>(
+      mainLocale: BasicTypedLocale(LangDeu()),
+    ),
+  );
+
+  print(
+    """Fully translated to German: ${germanNames.length == WorldCountry.list.length}""",
+  ); // Prints: "Fully translated to German: true".
+  for (final deuTranslation in germanNames.entries) {
+    print("German name of ${deuTranslation.key.name}: ${deuTranslation.value}");
   }
 
-  print(const _CountryCustom().name.common); // Prints "Unknown".
+  const customCountry = _CountryCustom();
+
+  print(customCountry.name.common); // Prints "Unknown".
+  print(
+    customCountry.maybeCommonNameFor(const BasicTypedLocale(LangEng())),
+  ); // Prints "Unknown country".
 }
 
 /// Creates a instance of the custom country with permissive constructor.
@@ -46,4 +60,16 @@ class _CountryCustom extends WorldCountry {
           ),
           code: "UNK",
         );
+
+  @override
+  TypedLocalizationDelegate get l10n => super.l10n.copyWith(
+        mapper: () => CountriesLocaleMapper(
+          other: {
+            /// From the `l10n_countries` package.
+            "en": IsoLocaleMapper(
+              other: {code: "Unknown country", "$code+": "Unknown rich name"},
+            ),
+          },
+        ).localize,
+      );
 }

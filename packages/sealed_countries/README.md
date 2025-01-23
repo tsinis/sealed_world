@@ -95,15 +95,22 @@ Use `WorldCountry` class to get information about countries. Either construct a 
   print(country.isMex); // Prints: true.
 
   final europeanCountries = WorldCountry.list.where(
-    (country) => country.continent is Europe,
+    (cnt) => cnt.continent is Europe,
   );
   print(europeanCountries); // Prints a list of European countries.
 
-  for (final cnt in WorldCountry.list) {
-    print(
-      "${cnt.internationalName} translated to Slovak language: "
-      "${cnt.translation(const BasicLocale(LangSlk())).name}",
-    );
+  // Prints German translations of all available regular currencies.
+  final germanNames = WorldCountry.list.commonNamesMap(
+    options: const LocaleMappingOptions<BasicTypedLocale>(
+      mainLocale: BasicTypedLocale(LangDeu()),
+    ),
+  );
+
+  print(
+    """Fully translated to German: ${germanNames.length == WorldCountry.list.length}""",
+  ); // Prints: "Fully translated to German: true".
+  for (final deuTranslation in germanNames.entries) {
+    print("German name of ${deuTranslation.key.name}: ${deuTranslation.value}");
   }
 ```
 
