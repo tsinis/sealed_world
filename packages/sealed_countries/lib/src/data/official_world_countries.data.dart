@@ -7061,7 +7061,7 @@ class CountryIdn extends WorldCountry {
           car: const Car(sign: "RI", isRightSide: false),
           timezones: const ["UTC+07:00", "UTC+08:00", "UTC+09:00"],
           capitalInfo: const CapitalInfo(
-            capital: Capital("Jakarta"),
+            capital: Capital("Nusantara"),
             latLng: LatLng(-6.17, 106.82),
           ),
           postalCode: const PostalCode(),
@@ -12454,7 +12454,7 @@ class CountryPrt extends WorldCountry {
           namesNative: const [
             CountryName(
               language: LangPor(),
-              official: "República português",
+              official: "República Portuguesa",
               common: "Portugal",
             ),
           ],
