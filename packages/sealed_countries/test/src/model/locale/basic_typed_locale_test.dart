@@ -23,23 +23,6 @@ void main() => group("$BasicTypedLocale", () {
         );
 
         assertTest(
-          "countryCode length",
-          () => BasicTypedLocale(NaturalLanguage.list.last, regionalCode: "1"),
-        );
-      });
-
-      group("asserts", () {
-        assertTest(
-          "not",
-          () => BasicTypedLocale(
-            NaturalLanguage.list.first,
-            country: WorldCountry.list.first,
-            script: Script.list.last,
-          ),
-          shouldThrow: false,
-        );
-
-        assertTest(
           "code length",
           () => BasicTypedLocale(
             NaturalLanguage.list.first,

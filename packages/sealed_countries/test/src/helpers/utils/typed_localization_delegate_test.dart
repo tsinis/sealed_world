@@ -5,6 +5,7 @@ import "package:test/test.dart";
 
 void main() => group("$TypedLocalizationDelegate", () {
       const language = LangEng();
+      const countryCode = "US";
       const script = ScriptLatn();
       const country = CountryUsa();
       const locale = BasicLocale(language);
@@ -13,7 +14,6 @@ void main() => group("$TypedLocalizationDelegate", () {
         scripts: [script],
         countries: [country],
       );
-      const countryCode = country.codeShort;
 
       group(
         "constructor",
@@ -27,7 +27,7 @@ void main() => group("$TypedLocalizationDelegate", () {
         "toTranslation",
         () => expect(
           parser.toTranslation(locale, countryCode, null),
-          TranslatedName(language, name: countryCode),
+          const TranslatedName(language, name: countryCode),
         ),
       );
 
