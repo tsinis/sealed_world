@@ -13,7 +13,7 @@ void main() => group("$TypedLocalizationDelegate", () {
         scripts: [script],
         countries: [country],
       );
-      final countryCode = country.codeShort;
+      const countryCode = country.codeShort;
 
       group(
         "constructor",
