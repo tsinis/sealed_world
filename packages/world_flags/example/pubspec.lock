@@ -67,6 +67,30 @@ packages:
     description: flutter
     source: sdk
     version: "0.0.0"
+  l10n_countries:
+    dependency: transitive
+    description:
+      name: l10n_countries
+      sha256: a0f40143266f64e2669ed56cb5f2b3dac239405da36ce66446e916fc84474ed0
+      url: "https://pub.dev"
+    source: hosted
+    version: "0.1.0"
+  l10n_currencies:
+    dependency: transitive
+    description:
+      name: l10n_currencies
+      sha256: "7203c16b673a4b7039fb8d74bceef96f1fca80839b224d8e4445c39ff7283da6"
+      url: "https://pub.dev"
+    source: hosted
+    version: "0.1.0"
+  l10n_languages:
+    dependency: transitive
+    description:
+      name: l10n_languages
+      sha256: "8399add92b5520d5fd3db90f4e62be09fbd1dc48b244dc2fa327790b297435a6"
+      url: "https://pub.dev"
+    source: hosted
+    version: "0.1.0"
   leak_tracker:
     dependency: transitive
     description:
@@ -135,26 +159,26 @@ packages:
     dependency: transitive
     description:
       name: sealed_countries
-      sha256: cab25d9244502220f69069d569dedb39ba7983113746ba44b9ec05113c72ee81
+      sha256: e3ad520abc277abf640d4548c90406714b5f2a19296584e8ae2e6df1f80d648c
       url: "https://pub.dev"
     source: hosted
-    version: "1.5.1"
+    version: "2.0.0"
   sealed_currencies:
     dependency: transitive
     description:
       name: sealed_currencies
-      sha256: b8aa884a4b5c061883d818e8e58f62b9057d59530b71660e4ced4edfa6b514fc
+      sha256: "506a8facca33c163b4aa0231c6b032cba48d9a2281dd2dbb20bb2995d76fe606"
       url: "https://pub.dev"
     source: hosted
-    version: "1.5.1"
+    version: "2.0.0"
   sealed_languages:
     dependency: transitive
     description:
       name: sealed_languages
-      sha256: fbe2763bfac54ee8a52674c61588c4f1f9f260fd7db3782cbff3d154e952a918
+      sha256: "629c0f2bb6084b8b9a6e22c4fd2ca632cac3fcfa64018713d920f70811ec0261"
       url: "https://pub.dev"
     source: hosted
-    version: "1.5.1"
+    version: "2.0.0"
   sky_engine:
     dependency: transitive
     description: flutter
@@ -230,7 +254,7 @@ packages:
       path: ".."
       relative: true
     source: path
-    version: "1.1.1"
+    version: "2.0.0"
 sdks:
-  dart: ">=3.6.0 <4.0.0"
-  flutter: ">=3.27.1"
+  dart: ">=3.6.1 <4.0.0"
+  flutter: ">=3.27.3"
