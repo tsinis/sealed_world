@@ -31,9 +31,9 @@ class TypedLocalizationDelegate
   BasicTypedLocale toLocale(
     NaturalLanguage language,
     Script? script,
-    String? countryCode, [
+    String? countryCode, {
     WorldCountry? country,
-  ]) {
+  }) {
     final maybeCountry =
         country ?? WorldCountry.maybeFromCodeShort(countryCode, countries);
 

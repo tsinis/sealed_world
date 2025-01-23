@@ -2,6 +2,8 @@
 // https://gitlab.com/restcountries/restcountries, which is
 // licensed under the Mozilla Public License Version 2.0.
 
+// ignore_for_file: avoid-suspicious-super-overrides
+
 import "package:sealed_currencies/sealed_currencies.dart";
 
 import "../model/country/country.dart";
@@ -47,12 +49,10 @@ class CountryUnk extends WorldCountry {
           codeShort: "XK",
           cioc: "KOS",
           unMember: false,
-          currencies: const [FiatEur()],
           idd: const Idd(root: 3, suffixes: [83]),
           altSpellings: const ["XK", "Република Косово"],
           continent: const Europe(),
           subregion: const SouthwestEurope(),
-          languages: const [LangSrp(), LangSqi()],
           latLng: const LatLng(42.666667, 21.166667),
           landlocked: true,
           bordersCodes: const ["Alb", "Mkd", "Mne", "Srb"],
@@ -77,4 +77,8 @@ class CountryUnk extends WorldCountry {
           ),
           regionalBlocs: const [BlocCEFTA()],
         );
+  @override
+  List<FiatCurrency> get currencies => const [FiatEur()];
+  @override
+  List<NaturalLanguage> get languages => const [LangSrp(), LangSqi()];
 }

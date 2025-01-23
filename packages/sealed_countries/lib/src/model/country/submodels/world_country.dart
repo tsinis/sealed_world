@@ -48,7 +48,6 @@ class WorldCountry extends Country
     required this.continent,
     required this.emoji,
     required this.idd, // International Direct Dialing.
-    required this.languages,
     required this.latLng,
     required this.maps,
     required this.namesNative,
@@ -71,6 +70,7 @@ class WorldCountry extends Country
     this.subregion,
     this.unMember = true,
     this.regionalBlocs,
+    List<NaturalLanguage>? languages,
     List<TranslatedName>? translations,
   })  : assert(
           code.length == IsoStandardized.codeLength,
@@ -95,10 +95,6 @@ class WorldCountry extends Country
           "`altSpellings` should not be empty!",
         ),
         assert(
-          languages != const <NaturalLanguage>[],
-          "`languages` should not be empty!",
-        ),
-        assert(
           timezones != const <String>[],
           "`timezones` should not be empty!",
         ),
@@ -116,6 +112,7 @@ class WorldCountry extends Country
           regionalBlocs != const <RegionalBloc>[],
           "`regionalBlocs` should not be empty!",
         ),
+        _languages = languages,
         _translations = translations;
 
   /// {@macro permissive_constructor}
@@ -130,7 +127,6 @@ class WorldCountry extends Country
     this.continent = const Europe(),
     this.emoji = "🏳️", // ignore: avoid-non-ascii-symbols, for permissive one.
     this.idd = const Idd(root: 0, suffixes: [0]),
-    this.languages = const [],
     this.latLng = const LatLng(0, 0),
     this.maps = const Maps(googleMaps: " ", openStreetMaps: " "),
     this.namesNative = const [],
@@ -153,8 +149,10 @@ class WorldCountry extends Country
     this.subregion,
     this.unMember = true,
     this.regionalBlocs,
+    List<NaturalLanguage>? languages,
     List<TranslatedName>? translations,
-  }) : _translations = translations;
+  })  : _languages = languages,
+        _translations = translations;
 
   /// Returns an [WorldCountry] object from the given [code]
   /// ISO 3166-1 Alpha-3 code.
@@ -283,9 +281,6 @@ class WorldCountry extends Country
   /// Whether the country is a member of the United Nations.
   final bool unMember;
 
-  /// The currencies used in the country.
-  final List<FiatCurrency>? currencies;
-
   /// The international direct dialing codes for the country.
   final Idd idd;
 
@@ -297,9 +292,6 @@ class WorldCountry extends Country
 
   /// The subregion where the country is located.
   final SubRegion? subregion;
-
-  /// The official languages spoken in the country.
-  final List<NaturalLanguage> languages;
 
   /// The geographic coordinates of the country.
   final LatLng latLng;
@@ -359,6 +351,12 @@ class WorldCountry extends Country
   @override
   String get internationalName => name.common;
 
+  /// The currencies used in the country.
+  final List<FiatCurrency>? currencies;
+
+  /// The official languages spoken in the country.
+  List<NaturalLanguage> get languages => _languages ?? const [];
+
   @override
   List<TranslatedName> get translations =>
       _translations ?? l10n.translatedNames({this});
@@ -374,12 +372,10 @@ class WorldCountry extends Country
           'tld: ${jsonEncode(tld)}, code: "$code", '
           'codeNumeric: "$codeNumeric", codeShort: "$codeShort", '
           '${cioc == null ? '' : 'cioc: "$cioc", '}independent: $independent, '
-          "unMember: $unMember, currencies: ${currencies?.toInstancesString()},"
-          " idd: $idd, altSpellings: ${jsonEncode(altSpellings)}, "
+          "unMember: $unMember, idd: $idd, "
+          "altSpellings: ${jsonEncode(altSpellings)}, "
           "continent: ${continent.runtimeType}(), "
           """${subregion == null ? '' : 'subregion: ${subregion.runtimeType}(), '}"""
-          "languages: ${languages.toInstancesString()}, "
-          "translations: ${code.toLowerCase()}CountryTranslations, "
           "latLng: $latLng, landlocked: $landlocked, "
           """${bordersCodes == null ? '' : 'bordersCodes: ${jsonEncode(bordersCodes)}, '}"""
           '''areaMetric: $areaMetric, demonyms: $demonyms, emoji: "$emoji", maps: $maps, '''
@@ -389,7 +385,10 @@ class WorldCountry extends Country
           "startOfWeek: $startOfWeek, "
           """${capitalInfo == null ? '' : 'capitalInfo: ${capitalInfo?.toString(short: false)}, '}"""
           "${postalCode == null ? '' : 'postalCode: $postalCode, '}"
-          """${regionalBlocs == null ? '' : 'regionalBlocs: ${regionalBlocs?.toInstancesString()},'})""";
+          """${regionalBlocs == null ? '' : 'regionalBlocs: ${regionalBlocs?.toInstancesString()},'});"""
+          """${currencies == null ? '' : '@override List<FiatCurrency> get currencies => const ${currencies?.toInstancesString()}; '} """
+          "@override "
+          """List<NaturalLanguage> get languages => const ${languages.toInstancesString()}""";
 
   @override
   String toJson({JsonCodec codec = const JsonCodec()}) => codec.encode(toMap());
@@ -603,5 +602,6 @@ class WorldCountry extends Country
   /// by the [WorldCountry] class.
   static const list = worldCountryList;
 
+  final List<NaturalLanguage>? _languages;
   final List<TranslatedName>? _translations;
 }
