@@ -55,15 +55,15 @@ extension TranslatedExtension<T extends TranslatedName, L extends BasicLocale,
   /// // Returns German common name for the language or `orElse` if not found.
   /// final name = language.commonNameFor(const BasicLocale(LangDeu()));
   /// ```
-  String commonNameFor(
-    L mainLocale, {
-    L? fallbackLocale,
+  String commonNameFor<B extends L>(
+    B mainLocale, {
+    B? fallbackLocale,
     bool useLanguageFallback = true,
     String orElse = "",
   }) =>
       l10n.commonNamesMap(
         {this},
-        options: LocaleMappingOptions<L>(
+        options: LocaleMappingOptions<B>(
           mainLocale: mainLocale,
           fallbackLocale: fallbackLocale,
           useLanguageFallback: useLanguageFallback,
@@ -86,15 +86,15 @@ extension TranslatedExtension<T extends TranslatedName, L extends BasicLocale,
   /// // Returns German common name for the language or `null` if not found.
   /// final name = language.maybeCommonNameFor(const BasicLocale(LangDeu()));
   /// ```
-  String? maybeCommonNameFor(
-    L mainLocale, {
-    L? fallbackLocale,
+  String? maybeCommonNameFor<B extends L>(
+    B mainLocale, {
+    B? fallbackLocale,
     bool useLanguageFallback = true,
     String? orElse,
   }) =>
       l10n.commonNamesMap(
         {this},
-        options: LocaleMappingOptions<L>(
+        options: LocaleMappingOptions<B>(
           mainLocale: mainLocale,
           fallbackLocale: fallbackLocale,
           useLanguageFallback: useLanguageFallback,
@@ -129,7 +129,10 @@ extension TranslatedExtension<T extends TranslatedName, L extends BasicLocale,
   ///   orElse: const LangEng(), // Default language if no translation is found.
   /// );
   /// ```
-  T translation(L locale, {NaturalLanguage orElse = const LangEng()}) =>
+  T translation<B extends L>(
+    B locale, {
+    NaturalLanguage orElse = const LangEng(),
+  }) =>
       maybeTranslation(locale) ??
       translations.firstWhere((l10n) => l10n.language == orElse);
 
@@ -157,7 +160,10 @@ extension TranslatedExtension<T extends TranslatedName, L extends BasicLocale,
   /// // language if no matching translation is found.
   /// );
   /// ```
-  T? maybeTranslation(L? locale, {bool useLanguageFallback = true}) {
+  T? maybeTranslation<B extends L>(
+    B? locale, {
+    bool useLanguageFallback = true,
+  }) {
     if (locale == null) return null;
     final filtered = List<T>.unmodifiable(
       translations.where((l10n) => l10n.language == locale.language),
