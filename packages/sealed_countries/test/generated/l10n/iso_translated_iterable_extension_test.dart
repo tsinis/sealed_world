@@ -4,7 +4,6 @@ import "package:_sealed_world_tests/sealed_world_tests.dart";
 import "package:l10n_countries/l10n_countries.dart" show CountriesLocaleMapper;
 import "package:sealed_countries/src/helpers/utils/typed_localization_delegate.dart";
 import "package:sealed_countries/src/model/country/country.dart";
-import "package:sealed_countries/src/model/locale/basic_typed_locale.dart";
 import "package:sealed_currencies/sealed_currencies.dart";
 import "package:test/test.dart";
 
@@ -54,7 +53,6 @@ void main() => group("IsoTranslatedIterableExtension", tags: "generated", () {
         "ee": 250,
         "el": 250,
         "en": 250,
-        "en_DG": 250,
         "eo": 250,
         "es": 250,
         "et": 250,
@@ -252,7 +250,6 @@ void main() => group("IsoTranslatedIterableExtension", tags: "generated", () {
         "ee": 250,
         "el": 250,
         "en": 250,
-        "en_DG": 250,
         "eo": 250,
         "es": 250,
         "et": 250,
@@ -433,7 +430,6 @@ void main() => group("IsoTranslatedIterableExtension", tags: "generated", () {
           "az": "az_Cyrl",
           "bm": "bm_Latn",
           "bs": "bs_Cyrl",
-          "en_DG": "en",
           "kk": "kk_Cyrl",
           "ky": "ky_Cyrl",
           "mn": "mn_Cyrl",
@@ -455,7 +451,7 @@ void main() => group("IsoTranslatedIterableExtension", tags: "generated", () {
                 final maybeFallback =
                     parser.parseLocale(altLocaleMap[stringLocale]);
                 final withFallbackData = WorldCountry.list.commonNamesMap(
-                  options: LocaleMappingOptions<BasicTypedLocale>(
+                  options: LocaleMappingOptions(
                     mainLocale: locale,
                     fallbackLocale: maybeFallback,
                   ),

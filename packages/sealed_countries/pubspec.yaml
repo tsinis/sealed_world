@@ -1,4 +1,4 @@
-version: 2.0.0
+version: 2.0.1
 name: sealed_countries
 description: Provides data for world countries in the form of sealed classes.
 maintainer: Roman Cinis
@@ -23,8 +23,8 @@ environment:
   sdk: ^3.6.0
 
 dependencies:
-  l10n_countries: ^0.1.0
-  sealed_currencies: ^2.0.0
+  l10n_countries: ^1.0.0
+  sealed_currencies: ^2.0.1
 
 dev_dependencies:
   _sealed_world_tests:
