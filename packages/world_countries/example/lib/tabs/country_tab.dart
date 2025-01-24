@@ -9,7 +9,7 @@ import "../widgets/abstractions/world_data_tab.dart";
 import "../widgets/description_tile.dart";
 import "../widgets/tab_body.dart";
 
-final class CountryTab extends WorldDataTab<WorldCountry> {
+final class CountryTab extends WorldDataTab<BasicTypedLocale, WorldCountry> {
   CountryTab(
     super.data,
     super.nav, {
@@ -25,12 +25,12 @@ final class CountryTab extends WorldDataTab<WorldCountry> {
           mainAxisSize: MainAxisSize.min,
           children: [
             Text(
-              data.translation(const BasicLocale(LangEng())).name,
+              data.translation(const BasicTypedLocale(LangEng())).name,
               style: context.theme.textTheme.headlineSmall,
               textAlign: TextAlign.center,
             ),
             MaybeWidget(
-              data.translation(const BasicLocale(LangEng())).fullName,
+              data.translation(const BasicTypedLocale(LangEng())).fullName,
               (fullName) => Text(
                 fullName,
                 style: context.theme.textTheme.titleMedium

@@ -6,7 +6,7 @@ import "../widgets/abstractions/world_data_tab.dart";
 import "../widgets/description_tile.dart";
 import "../widgets/tab_body.dart";
 
-final class LanguageTab extends WorldDataTab<NaturalLanguage> {
+final class LanguageTab extends WorldDataTab<BasicLocale, NaturalLanguage> {
   LanguageTab(
     super.data,
     super.nav, {

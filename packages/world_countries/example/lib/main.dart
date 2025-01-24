@@ -64,7 +64,7 @@ class _MainState extends State<Main> {
           supportedLocales: [
             const Locale.fromSubtags(languageCode: "bs", scriptCode: "Cyrl"),
             const Locale.fromSubtags(languageCode: "bs", scriptCode: "Latn"),
-            const IsoLocale(LangPor(), country: CountryBra()), // Strict typed.
+            const TypedLocale(LangPor(), country: CountryBra()), // Typed one.
             for (final locale in kMaterialSupportedLanguages) Locale(locale),
           ],
           debugShowCheckedModeBanner: false,
