@@ -15,7 +15,7 @@ jobs:
   detect-packages:
     name: 🔍 Detect Changed Packages
     runs-on: ubuntu-latest
-    timeout-minutes: 25
+    timeout-minutes: 5
     outputs:
       packages: ${{ steps.set-packages.outputs.packages }}
     steps:
