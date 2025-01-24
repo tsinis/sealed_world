@@ -36,7 +36,7 @@ void main() => group("IsoTranslatedIterableExtension", () {
       group("commonNamesMap", () {
         performanceTest("on empty list should return empty map", () {
           final map = <NaturalLanguage>{}.commonNamesMap(
-            options: const LocaleMappingOptions(),
+            options: const LocaleMappingOptions<BasicLocale>(),
           );
           expect(map, isEmpty);
         });

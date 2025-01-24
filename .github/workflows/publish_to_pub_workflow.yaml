@@ -3,9 +3,6 @@ name: publish_to_pub_workflow
 on:
   workflow_call:
     inputs:
-      package_name:
-        required: true
-        type: string
       tag:
         required: true
         type: string
@@ -19,7 +16,7 @@ jobs:
     outputs:
       package_name: ${{ steps.extract_name.outputs.value }}
     steps:
-      - name: Extract package name
+      - name: 📦 Extract package name
         id: extract_name
         shell: bash
         run: |
@@ -27,7 +24,7 @@ jobs:
           echo "value=$PACKAGE_NAME" >> $GITHUB_OUTPUT
           echo "Extracted package name: $PACKAGE_NAME"
 
-      - name: Set working directory
+      - name: 📂 Set working directory
         run: echo "relative_path=packages/${{ steps.extract_name.outputs.value }}" >> $GITHUB_ENV
 
       - name: 📚 Git checkout

@@ -75,6 +75,8 @@ extension IsoTranslatedIterableExtension<
   /// );
   /// print(map[const LangAfr()]); // "Afrikaans"
   /// ```
-  Map<I, String> commonNamesMap({required LocaleMappingOptions<L> options}) =>
+  Map<I, String> commonNamesMap<B extends L>({
+    required LocaleMappingOptions<B> options,
+  }) =>
       isEmpty ? const {} : first.l10n.commonNamesMap(this, options: options);
 }

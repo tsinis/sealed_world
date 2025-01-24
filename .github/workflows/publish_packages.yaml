@@ -13,5 +13,4 @@ jobs:
     permissions:
       id-token: write
     with:
-      package_name: ${{ fromJSON(format('["{0}"]', github.ref_name))[0] }}
       tag: ${{ github.ref_name }}
