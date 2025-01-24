@@ -9,21 +9,9 @@ on:
 jobs:
   publish:
     if: github.ref_type == 'tag'
-    runs-on: ubuntu-latest
-    timeout-minutes: 5
+    uses: ./.github/workflows/publish_to_pub_workflow.yaml
     permissions:
       id-token: write
-    steps:
-      - name: Git Checkout
-        uses: actions/checkout@v4.2.2
-
-      - name: Extract Package Name
-        id: extract_package_name
-        run: |
-          echo "package_name=$(echo ${{ github.ref_name }} | cut -d '-' -f1)" >> $GITHUB_OUTPUT
-
-      - name: Publish
-        uses: ./.github/workflows/publish_to_pub_workflow.yaml
-        with:
-          package_name: ${{ steps.extract_package_name.outputs.package_name }}
-          tag: ${{ github.ref_name }}
+    with:
+      package_name: ${{ fromJSON(format('["{0}"]', github.ref_name))[0] }}
+      tag: ${{ github.ref_name }}
