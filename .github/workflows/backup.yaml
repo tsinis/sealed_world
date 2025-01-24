@@ -9,7 +9,7 @@ on:
 jobs:
   mirror-to-gitlab:
     name: 💾 Backup to GitLab
-    runs-on: ubuntu-22.04
+    runs-on: ubuntu-latest
     timeout-minutes: 10
     steps:
       - name: 📚 Git checkout
