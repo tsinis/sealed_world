@@ -10,7 +10,6 @@ jobs:
   publish:
     if: github.ref_type == 'tag'
     uses: ./.github/workflows/publish_to_pub_workflow.yaml
-    runs-on: ubuntu-latest
     permissions:
       id-token: write
     with:
