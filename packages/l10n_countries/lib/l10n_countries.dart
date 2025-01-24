@@ -47,7 +47,6 @@ import "src/data/dz_countries_l10n.data.dart";
 import "src/data/ee_countries_l10n.data.dart";
 import "src/data/el_countries_l10n.data.dart";
 import "src/data/en_countries_l10n.data.dart";
-import "src/data/en_dg_countries_l10n.data.dart";
 import "src/data/eo_countries_l10n.data.dart";
 import "src/data/es_countries_l10n.data.dart";
 import "src/data/et_countries_l10n.data.dart";
@@ -243,7 +242,6 @@ export "src/data/dz_countries_l10n.data.dart";
 export "src/data/ee_countries_l10n.data.dart";
 export "src/data/el_countries_l10n.data.dart";
 export "src/data/en_countries_l10n.data.dart";
-export "src/data/en_dg_countries_l10n.data.dart";
 export "src/data/eo_countries_l10n.data.dart";
 export "src/data/es_countries_l10n.data.dart";
 export "src/data/et_countries_l10n.data.dart";
@@ -402,7 +400,7 @@ export "src/iso_locale_mapper.dart";
 /// Provides country names translations for different locales.
 // ignore: prefer-match-file-name, it's main library file.
 class CountriesLocaleMapper extends IsoLocaleMapper<IsoLocaleMapper<String>> {
-  /// Provides names translations for 194 locales, with the option to
+  /// Provides names translations for 193 locales, with the option to
   /// add more translations via the [other] parameter.
   // ignore: avoid-non-empty-constructor-bodies,on purpose.
   CountriesLocaleMapper({Map<String, IsoLocaleMapper<String>>? other}) {
@@ -447,7 +445,6 @@ class CountriesLocaleMapper extends IsoLocaleMapper<IsoLocaleMapper<String>> {
       "ee": EeCountriesL10N(),
       "el": ElCountriesL10N(),
       "en": EnCountriesL10N(),
-      "en_DG": EnDgCountriesL10N(),
       "eo": EoCountriesL10N(),
       "es": EsCountriesL10N(),
       "et": EtCountriesL10N(),
