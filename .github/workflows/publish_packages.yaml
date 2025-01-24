@@ -2,8 +2,9 @@ name: publish_packages
 
 on:
   push:
+    branches: [main]
     tags:
-      - "[a-z0-9]+_[a-z]+-v[0-9].[0-9].[0-9]"
+      - 'l*[_]*[a-z]*-[v][0-9]+\.[0-9]+\.[0-9]+'
 
 jobs:
   publish:
