@@ -35,11 +35,10 @@ jobs:
 
       - name: 1️⃣ Set version tag
         run: |
-          VERSION_TAG=$(echo "${{ inputs.tag }}" | grep -oE '${{ env.package_name }}-v([0-9]+.[0-9]+.[0-9]+)' | grep -oE '[0-9]+\.[0-9]+\.[0-9]+')
+          VERSION_TAG=$(echo "${{ inputs.tag }}" | sed -E 's/.*-v([0-9]+\.[0-9]+\.[0-9]+)/\1/')
           echo "TAG=${VERSION_TAG}" >> $GITHUB_ENV
-        shell: /bin/bash -e {0}
-        env:
-          relative_path: ${{ env.relative_path }}
+        shell: bash
+        working-directory: ${{ env.relative_path }}
 
       - name: 2️⃣ Get version from pubspec.yaml
         run: |
