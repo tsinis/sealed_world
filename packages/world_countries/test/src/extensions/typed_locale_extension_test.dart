@@ -3,7 +3,7 @@ import "package:flutter_test/flutter_test.dart";
 import "package:world_countries/world_countries.dart";
 
 void main() => group("TypedLocaleExtension", () {
-      const locale = IsoLocale(LangEng());
+      const locale = TypedLocale(LangEng());
       const languages = NaturalLanguage.list;
       const currencies = FiatCurrency.list;
       const countries = WorldCountry.list;

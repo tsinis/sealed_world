@@ -6,7 +6,7 @@ import "package:flutter/material.dart";
 import "package:flutter_test/flutter_test.dart";
 import "package:world_countries/src/constants/ui_constants.dart";
 import "package:world_countries/src/helpers/typed_locale_delegate.dart";
-import "package:world_countries/src/models/locale/iso_locale.dart";
+import "package:world_countries/src/models/locale/typed_locale.dart";
 import "package:world_countries/src/theme/pickers_theme_data.dart";
 import "package:world_countries/src/widgets/buttons/clear_button.dart";
 import "package:world_countries/src/widgets/pickers/basic_picker.dart";
@@ -23,7 +23,7 @@ extension WidgetTesterExtension on WidgetTester {
     textBaseline: TextBaseline.alphabetic,
     textDirection: TextDirection.ltr,
     searchBarPadding: EdgeInsets.zero,
-    translation: IsoLocale(LangEng()),
+    translation: TypedLocale(LangEng()),
   );
 
   Future<BuildContext> contextExtractor([
@@ -72,7 +72,7 @@ extension WidgetTesterExtension on WidgetTester {
     await pumpAndSettle();
   }
 
-  Future<void> testPickerBody<T extends Translated>(
+  Future<void> testPickerBody<T extends IsoTranslated>(
     BasicPicker<T> picker,
     String Function(T value) findLabel, {
     bool testSelection = true,
@@ -102,30 +102,30 @@ extension WidgetTesterExtension on WidgetTester {
     if (testSelection) expect(selected, picker.items.last);
   }
 
-  Future<void> testPickerInDialog<T extends Translated>(
+  Future<void> testPickerInDialog<T extends IsoTranslated>(
     BasicPicker<T> picker,
     String Function(T value) findLabel, [
     NaturalLanguage supportedLanguage = const LangEng(),
   ]) =>
-      _testPickerIn(picker, findLabel, true, [IsoLocale(supportedLanguage)]);
+      _testPickerIn(picker, findLabel, true, [TypedLocale(supportedLanguage)]);
 
-  Future<void> testPickerInSearch<T extends Translated>(
+  Future<void> testPickerInSearch<T extends IsoTranslated>(
     BasicPicker<T> picker,
     String Function(T value) findLabel,
   ) =>
       _testPickerIn(picker, findLabel, false);
 
-  Future<void> testPickerInModal<T extends Translated>(
+  Future<void> testPickerInModal<T extends IsoTranslated>(
     BasicPicker<T> picker,
     String Function(T value) findLabel,
   ) =>
       _testPickerIn(picker, findLabel, null);
 
-  Future<void> _testPickerIn<T extends Translated>(
+  Future<void> _testPickerIn<T extends IsoTranslated>(
     BasicPicker<T> picker,
     String Function(T value) findLabel,
     bool? inDialog, [
-    List<IsoLocale> supportedLocales = const [IsoLocale(LangEng())],
+    List<TypedLocale> supportedLocales = const [TypedLocale(LangEng())],
   ]) async {
     T? selected;
     final testPicker = picker.copyWith(onSelect: (item) => selected = item);
@@ -180,7 +180,7 @@ extension WidgetTesterExtension on WidgetTester {
     expect(selected, picker.items.last);
   }
 
-  Future<void> _testPicker<T extends Translated>(
+  Future<void> _testPicker<T extends IsoTranslated>(
     BasicPicker<T> picker,
     String Function(T value) findLabel,
   ) async {
