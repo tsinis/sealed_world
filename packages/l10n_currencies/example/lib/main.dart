@@ -7,7 +7,7 @@ void main() {
   final mapper = CurrenciesLocaleMapper();
 
   /// Define some ISO codes to localize (e.g., `USD` for US Dollar,
-  ///`RUB` for Russian Ruble, etc.).
+  /// `RUB` for Russian Ruble, etc.).
   final isoCodes = {"USD", "RUB", "PLN"};
 
   /// Localize the codes with an optional main locale (e.g., "sk" for Slovak),
