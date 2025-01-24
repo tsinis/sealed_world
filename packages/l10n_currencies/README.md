@@ -14,7 +14,7 @@ This ISO-driven, pure Dart, fully tested and dependency-free package provides tr
 ### Features
 
 - 161 locales supported out of the box.
-- Three-letter ISO ISO 4217 Alpha code lookup.
+- Three-letter ISO 4217 Alpha code lookup.
 - Fallback locale support.
 - Allows injecting custom translations to extend/modify existing ones.
 - Alternative names support.
