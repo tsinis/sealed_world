@@ -2,7 +2,7 @@
 [![Codecov](https://codecov.io/github/tsinis/sealed_world/branch/main/graph/badge.svg)](https://app.codecov.io/github/tsinis/sealed_world/flags)
 [![CodeRabbit](https://img.shields.io/coderabbit/prs/github/tsinis/sealed_world?logo=vowpalwabbit&logoColor=orange&color=dark-green)](https://coderabbit.ai)
 [![Dart Code Metrics](https://img.shields.io/badge/passing-dcm?style=flat&logo=dart&logoColor=lightskyblue&label=dcm&color=dark-green)](https://dcm.dev)
-[![CI checks](https://github.com/tsinis/sealed_world/actions/workflows/world_flags.yaml/badge.svg)](https://github.com/tsinis/sealed_world/actions/workflows/world_flags.yaml)
+[![CI checks](https://github.com/tsinis/sealed_world/actions/workflows/verify_packages.yaml/badge.svg)](https://github.com/tsinis/sealed_world/actions/workflows/verify_packages.yaml)
 [![Pub points](https://img.shields.io/pub/points/world_flags)](https://pub.dev/packages/world_flags/score)
 [![Last commit](https://img.shields.io/github/last-commit/tsinis/sealed_world)](https://github.com/tsinis/sealed_world/commits/main/packages/world_flags)
 [![GitHub stars](https://img.shields.io/github/stars/tsinis/sealed_world?style=flat&color=green)](https://github.com/tsinis/sealed_world/stargazers)
@@ -30,7 +30,7 @@ Each flag is a vector-based `CustomPainter`, ensuring precise, scalable, and stu
 
 ## Getting Started
 
-To use this package, you will need Flutter version 3.10+. Add `world_flags` as a dependency in your `pubspec.yaml` file.
+To use this package, you will need Flutter version 3.27+. Add `world_flags` as a dependency in your `pubspec.yaml` file.
 
 ```yaml
 dependencies:

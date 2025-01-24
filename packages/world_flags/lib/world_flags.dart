@@ -55,7 +55,6 @@ import "src/ui/painters/custom/vct_painter.dart";
 import "src/ui/painters/custom/vir_painter.dart";
 import "src/ui/painters/multi_element_painter.dart";
 
-export "package:sealed_countries/country_translations.dart";
 export "package:sealed_countries/sealed_countries.dart";
 
 export "src/collections/properties_map.dart";

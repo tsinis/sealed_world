@@ -31,7 +31,7 @@ final class SimpleBirdPainter extends MultiElementPainter {
     final color = property.mainColor;
     final isSameAsOutline = outlineColor == color || outlineColor == null;
     final mainColor = Paint()
-      ..color = isSameAsOutline ? color : color.withOpacity(1 / 3);
+      ..color = isSameAsOutline ? color : color.withAlpha(85);
 
     canvas
       ..translate(center.dx - width / 2, center.dy - height / 2)

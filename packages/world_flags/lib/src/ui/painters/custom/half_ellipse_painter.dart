@@ -11,7 +11,7 @@ final class HalfEllipsePainter extends MultiElementPainter {
     final radius = size.height * property.heightFactor / 2;
     final rect = Rect.fromCircle(center: center, radius: radius);
     final firstColor = property.mainColor;
-    final lastColor = customColors.firstOrNull ?? firstColor.withOpacity(0);
+    final lastColor = customColors.firstOrNull ?? firstColor.withAlpha(0);
     final paint = Paint()
       ..shader = LinearGradient(
         begin: Alignment.topCenter,
