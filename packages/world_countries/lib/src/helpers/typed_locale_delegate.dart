@@ -3,7 +3,6 @@ import "package:world_flags/world_flags.dart";
 
 import "../extensions/locale_extension.dart";
 import "../extensions/typed_locale_extension.dart";
-import "../models/locale/iso_locale.dart";
 import "../models/locale/typed_locale.dart";
 import "../models/typedefs.dart";
 
@@ -104,11 +103,11 @@ class TypedLocaleDelegate implements LocalizationsDelegate<TypedLocale?> {
   /// These mappings are used as the default resolution when no other locale
   /// mapping is provided.
   static const defaultLocaleMapResolution = [
-    LocaleEntry(Locale("fil"), IsoLocale(LangTgl())),
-    LocaleEntry(Locale("gsw"), IsoLocale(LangDeu(), country: CountryChe())),
+    LocaleEntry(Locale("fil"), TypedLocale(LangTgl())),
+    LocaleEntry(Locale("gsw"), TypedLocale(LangDeu(), country: CountryChe())),
     LocaleEntry(
       Locale.fromSubtags(languageCode: "bs", scriptCode: "Cyrl"),
-      IsoLocale(LangSrp()),
+      TypedLocale(LangSrp()),
     ),
   ];
 

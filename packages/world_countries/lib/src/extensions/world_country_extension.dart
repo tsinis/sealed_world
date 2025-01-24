@@ -2,7 +2,7 @@ import "dart:ui" show Locale;
 
 import "package:world_flags/world_flags.dart";
 
-import "../models/locale/iso_locale.dart";
+import "../models/locale/typed_locale.dart";
 
 /// Extension on [WorldCountry] to convert it to a [Locale] classes.
 extension WorldCountryExtension on WorldCountry {
@@ -36,7 +36,7 @@ extension WorldCountryExtension on WorldCountry {
         countryCode: codeShort,
       );
 
-  /// Converts [WorldCountry] to a [IsoLocale].
+  /// Converts [WorldCountry] to a [TypedLocale].
   ///
   /// The optional [language] parameter specifies a [NaturalLanguage] object
   /// representing the language of the locale - if not provided method will pick
@@ -51,10 +51,11 @@ extension WorldCountryExtension on WorldCountry {
   /// print(locale.languageCode); // Prints: ru
   /// print(locale.countryCode); // Prints: US
   /// ```
-  IsoLocale toIsoLocale({NaturalLanguage? language, Script? script}) =>
-      IsoLocale(
+  TypedLocale toIsoLocale({NaturalLanguage? language, Script? script}) =>
+      TypedLocale(
         language ?? languages.first,
         country: this,
-        script: script ?? (language ?? languages.first).scripts.first,
+        script:
+            script ?? (language ?? languages.firstOrNull)?.scripts.firstOrNull,
       );
 }

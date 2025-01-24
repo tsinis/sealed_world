@@ -30,13 +30,19 @@ extension LocaleExtension on Locale? {
   /// // typedLocale is equal to: IsoLocale(LangEng(), country: CountryUsa()).
   /// final typedLocale = locale.maybeToTypedLocale();
   /// ```
-  TypedLocale<String>? maybeToTypedLocale([NaturalLanguage? fallbackLanguage]) {
+  TypedLocale? maybeToTypedLocale([NaturalLanguage? fallbackLanguage]) {
     final language = maybeLanguage ?? fallbackLanguage;
+    final country = WorldCountry.maybeFromCodeShort(this?.countryCode);
 
     // ignore: avoid-negated-conditions, due to line length.
     return language != null
         // ignore: deprecated_member_use_from_same_package, it's TODO!
-        ? TypedLocale(language, country: this?.countryCode, script: maybeScript)
+        ? TypedLocale(
+            language,
+            regionalCode: country == null ? this?.countryCode : null,
+            country: country,
+            script: maybeScript,
+          )
         : null;
   }
 
