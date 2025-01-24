@@ -18,7 +18,7 @@ void main() => group("TranslatedExtension", () {
       group("maybeTranslation", () {
         test(
           "should return null on null locale",
-          () => expect(kongo.maybeTranslation(null), isNull),
+          () => expect(kongo.maybeTranslation<BasicLocale>(null), isNull),
         );
 
         test(
