@@ -7,35 +7,12 @@ on:
       - '[a-z0-9]+_[a-z]+-v[0-9]+\.[0-9]+\.[0-9]+'
 
 jobs:
-  debug:
-    runs-on: ubuntu-latest
-    steps:
-      - name: Debug Context
-        env:
-          GITHUB_CONTEXT: ${{ toJSON(github) }}
-        run: |
-          echo "Event name: ${{ github.event_name }}"
-          echo "Ref type: ${{ github.ref_type }}"
-          echo "Ref: ${{ github.ref }}"
-          echo "Full context:"
-          echo "$GITHUB_CONTEXT"
-
   publish:
-    needs: debug
     if: github.ref_type == 'tag'
+    uses: ./.github/workflows/publish_to_pub_workflow.yaml
     runs-on: ubuntu-latest
     permissions:
       id-token: write
-    steps:
-      - name: Extract package name from the tag
-        id: extract
-        run: |
-          TAG="${GITHUB_REF#refs/tags/}"
-          PACKAGE_NAME="${TAG%%-v*}"
-          echo "package_name=$PACKAGE_NAME" >> $GITHUB_OUTPUT
-
-      - name: Call shared publish workflow
-        uses: ./.github/workflows/publish_to_pub_workflow.yaml
-        with:
-          package_name: ${{ steps.extract.outputs.package_name }}
-          tag: ${{ github.ref }}
+    with:
+      package_name: ${{ github.ref_name }}
+      tag: ${{ github.ref }}
