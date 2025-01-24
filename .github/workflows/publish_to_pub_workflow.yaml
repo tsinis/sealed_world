@@ -28,7 +28,7 @@ jobs:
           echo "Extracted package name: $PACKAGE_NAME"
 
       - name: Set working directory
-        run: echo "relative_path=packages/${{ env.package_name }}" >> $GITHUB_ENV
+        run: echo "relative_path=packages/${{ steps.extract_name.outputs.value }}" >> $GITHUB_ENV
 
       - name: 📚 Git checkout
         uses: actions/checkout@v4.2.2
