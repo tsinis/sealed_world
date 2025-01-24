@@ -41,11 +41,13 @@ jobs:
         working-directory: ${{ env.relative_path }}
 
       - name: 2️⃣ Get version from pubspec.yaml
+        working-directory: ${{ env.relative_path }}
         run: |
           PUBSPEC_VERSION=$(sed -n '1 s/version: *//p' pubspec.yaml)
           echo "PUBSPEC=${PUBSPEC_VERSION}" >> $GITHUB_ENV
 
       - name: 3️⃣ Get version from CHANGELOG.md
+        working-directory: ${{ env.relative_path }}
         run: |
           CHANGELOG_VERSION=$(sed -n '1 s/^## *//p' CHANGELOG.md)
           echo "CHANGELOG=${CHANGELOG_VERSION}" >> $GITHUB_ENV
