@@ -9,13 +9,14 @@
 [![License MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
 [![Pub package](https://img.shields.io/pub/v/l10n_currencies.svg)](https://pub.dev/packages/l10n_currencies)
 
-This ISO-driven, pure Dart, fully tested and dependency-free package provides translations for currency names in `161` different locales. For Flutter ready widgets (like currency picker) please use [world_countries](https://pub.dev/packages/world_countries) package. For Dart-only use - it's reccomended to use together with [sealed_currencies](https://pub.dev/packages/sealed_currencies) package.
+This ISO-driven, pure Dart, fully tested and dependency-free package provides translations for currency names in `161` different locales. For Flutter ready widgets (like currency picker) please use [world_countries](https://pub.dev/packages/world_countries) package. For Dart-only use - it's recommended to use together with [sealed_currencies](https://pub.dev/packages/sealed_currencies) package.
 
 ### Features
 
 - 161 locales supported out of the box.
 - Three-letter ISO ISO 4217 Alpha code lookup.
 - Fallback locale support.
+- Allows injecting custom translations to extend/modify existing ones.
 - Alternative names support.
 
 ### Getting started
@@ -43,7 +44,7 @@ void main() {
   final mapper = CurrenciesLocaleMapper();
 
   /// Define some ISO codes to localize (e.g., `USD` for US Dollar,
-  ///`RUB` for Russian Ruble, etc.).
+  /// `RUB` for Russian Ruble, etc.).
   final isoCodes = {"USD", "RUB", "PLN"};
 
   /// Localize the codes with an optional main locale (e.g., "sk" for Slovak),
@@ -72,6 +73,7 @@ void main() {
 - **High code coverage**: The code in this package has 100% code coverage, providing confidence in its reliability and stability.
 - **Comprehensive documentation**: This package provides full documentation for every non-code generated public member, usually with examples, ensuring clarity and ease of use.
 - **Industry adopted**: This package is actively used in production by numerous European companies, ensuring its efficacy and robustness in real-world scenarios.
+- **Lightweight**: This package keeps under 500 KB, ensuring it fits within the pub cache limit. This leads to quick, low-bandwidth downloads and faster caching, minimizing resource impact.
 - **MIT license**: This package and sources are released under the MIT license, which is a permissive license that allows users to use, modify, and distribute the code with minimal restrictions. The MIT license is considered better than most other open-source licenses because it provides flexibility and allows users to incorporate the code into their projects without worrying about legal implications.
 
 ### Additional information
