@@ -7,7 +7,21 @@ on:
       - '[a-z0-9]+_[a-z]+-v[0-9]+\.[0-9]+\.[0-9]+'
 
 jobs:
+  debug:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Debug Context
+        env:
+          GITHUB_CONTEXT: ${{ toJSON(github) }}
+        run: |
+          echo "Event name: ${{ github.event_name }}"
+          echo "Ref type: ${{ github.ref_type }}"
+          echo "Ref: ${{ github.ref }}"
+          echo "Full context:"
+          echo "$GITHUB_CONTEXT"
+
   publish:
+    needs: debug
     if: github.ref_type == 'tag'
     runs-on: ubuntu-latest
     permissions:
