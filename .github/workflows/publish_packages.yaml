@@ -1,0 +1,27 @@
+name: publish_packages
+
+on:
+  push:
+    branches: [main]
+    tags:
+      - "[a-z]+_[a-z]+-v[0-9].[0-9].[0-9]"
+
+jobs:
+  publish:
+    if: github.ref_type == 'tag'
+    runs-on: ubuntu-latest
+    permissions:
+      id-token: write
+    steps:
+      - name: Extract package name from the tag
+        id: extract
+        run: |
+          TAG="${GITHUB_REF#refs/tags/}"
+          PACKAGE_NAME="${TAG%%-v*}"
+          echo "package_name=$PACKAGE_NAME" >> $GITHUB_OUTPUT
+
+      - name: Call shared publish workflow
+        uses: ./.github/workflows/publish_to_pub_workflow.yaml
+        with:
+          package_name: ${{ steps.extract.outputs.package_name }}
+          tag: ${{ github.ref }}

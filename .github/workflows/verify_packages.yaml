@@ -15,7 +15,7 @@ jobs:
   detect-packages:
     name: 🔍 Detect Changed Packages
     runs-on: ubuntu-latest
-    timeout-minutes: 25
+    timeout-minutes: 15
     outputs:
       packages: ${{ steps.set-packages.outputs.packages }}
     steps:
@@ -37,7 +37,7 @@ jobs:
             echo "packages=$PACKAGES" >> $GITHUB_OUTPUT
 
   verify-packages:
-    name: 🛃 Verify ${{ matrix.package }}
+    name: Verify ${{ matrix.package }}
     needs: detect-packages
     if: fromJson(needs.detect-packages.outputs.packages)[0] != null
     strategy:
