@@ -1,4 +1,4 @@
-name: publish_to_pub
+name: publish_to_pub_workflow
 
 on:
   workflow_call:
@@ -12,24 +12,28 @@ on:
 
 jobs:
   check-package-version:
-    env:
-      relative_path: packages/${{ inputs.package_name }}
-    name: ⏳ Publish ${{ inputs.package_name }} Package
+    name: ⏳ Publish ${{ inputs.tag }} Package
     if: ${{ github.event_name == 'push' && github.actor == 'tsinis' }}
-    defaults:
-      run:
-        working-directory: ${{ env.relative_path }}
-
     runs-on: ubuntu-latest
     timeout-minutes: 10
-
+    env:
+      package_name: ${{ inputs.tag }}
+    outputs:
+      package_name: ${{ steps.set_package.outputs.package_name }}
     steps:
+      - name: Extract package name
+        id: set_package
+        run: echo "package_name=$(echo ${{ inputs.tag }} | cut -d '-' -f1)" >> $GITHUB_OUTPUT
+
+      - name: Set working directory
+        run: echo "relative_path=packages/${{ env.package_name }}" >> $GITHUB_ENV
+
       - name: 📚 Git checkout
         uses: actions/checkout@v4.2.2
 
       - name: 1️⃣ Set version tag
         run: |
-          VERSION_TAG=$(echo "${{ inputs.tag }}" | grep -oE '${{ inputs.package_name }}-v([0-9]+.[0-9]+.[0-9]+)' | grep -oE '[0-9]+\.[0-9]+\.[0-9]+')
+          VERSION_TAG=$(echo "${{ inputs.tag }}" | grep -oE '${{ env.package_name }}-v([0-9]+.[0-9]+.[0-9]+)' | grep -oE '[0-9]+\.[0-9]+\.[0-9]+')
           echo "TAG=${VERSION_TAG}" >> $GITHUB_ENV
         shell: /bin/bash -e {0}
         env:
@@ -74,4 +78,4 @@ jobs:
     uses: dart-lang/setup-dart/.github/workflows/publish.yml@main
     with:
       environment: "pub.dev"
-      working-directory: packages/${{ inputs.package_name }}
+      working-directory: packages/${{ needs.check-package-version.outputs.package_name }}
