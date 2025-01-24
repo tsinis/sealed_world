@@ -16,14 +16,16 @@ jobs:
     if: ${{ github.event_name == 'push' && github.actor == 'tsinis' }}
     runs-on: ubuntu-latest
     timeout-minutes: 10
-    env:
-      package_name: ${{ inputs.tag }}
     outputs:
-      package_name: ${{ steps.set_package.outputs.package_name }}
+      package_name: ${{ steps.extract_name.outputs.value }}
     steps:
       - name: Extract package name
-        id: set_package
-        run: echo "package_name=$(echo ${{ inputs.tag }} | cut -d '-' -f1)" >> $GITHUB_OUTPUT
+        id: extract_name
+        shell: bash
+        run: |
+          PACKAGE_NAME=$(echo "${{ inputs.tag }}" | sed 's/-v[0-9]\+\.[0-9]\+\.[0-9]\+//')
+          echo "value=$PACKAGE_NAME" >> $GITHUB_OUTPUT
+          echo "Extracted package name: $PACKAGE_NAME"
 
       - name: Set working directory
         run: echo "relative_path=packages/${{ env.package_name }}" >> $GITHUB_ENV
