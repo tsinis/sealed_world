@@ -88,12 +88,10 @@ extension TypedLocaleExtension<T extends TypedLocale> on T {
     return _copyWithTranslationMaps(languageMap, currencyMap, countryMap);
   }
 
-  Map<R, String>? _cache<R extends IsoTranslated>(Iterable<R> isoItems) =>
-      isoItems.isEmpty
+  Map<R, String>? _cache<R extends IsoTranslated>(Iterable<R> iso) =>
+      iso.isEmpty
           ? null
-          : isoItems.commonNamesMap(
-              options: LocaleMappingOptions<T>(mainLocale: this),
-            );
+          : iso.commonNamesMap(options: LocaleMappingOptions(mainLocale: this));
 
   Future<Map<R, String>?> _cacheAsync<R extends IsoTranslated>(
     Iterable<R> iso,
@@ -101,9 +99,7 @@ extension TypedLocaleExtension<T extends TypedLocale> on T {
     if (iso.isEmpty) return null;
     await Duration.zero.sleep;
 
-    return iso.commonNamesMap(
-      options: LocaleMappingOptions<T>(mainLocale: this),
-    );
+    return iso.commonNamesMap(options: LocaleMappingOptions(mainLocale: this));
   }
 
   T _copyWithTranslationMaps(

@@ -19,7 +19,7 @@ import "base_tile_theme_data.dart";
 /// ```dart
 /// final countryTileThemeData = CountryTileThemeData(
 ///   builder: (itemProperties, {isDense}) => MyCountryTile(
-///     title: itemProperties.item.translations.first.common,
+///     title: itemProperties.item.commonNameFor(locale),
 ///     isDense: isDense,
 ///   ),
 /// );
