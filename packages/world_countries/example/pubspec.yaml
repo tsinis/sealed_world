@@ -1,7 +1,9 @@
-name: example
+name: world_countries_example
 description: A world_countries example application.
 publish_to: none
 version: 3.0.0+0
+
+resolution: workspace
 
 environment:
   sdk: ^3.6.1

@@ -21,6 +21,8 @@ screenshots:
   - description: "Dialog picker example"
     path: doc/dialog_picker.webp
 
+resolution: workspace
+
 environment:
   sdk: ^3.6.0
   flutter: ">=3.27.1"
