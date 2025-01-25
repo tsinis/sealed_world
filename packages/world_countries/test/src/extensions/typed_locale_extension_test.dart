@@ -12,7 +12,7 @@ void main() => group("TypedLocaleExtension", () {
 
       group("getters", () {
         test("asBasicLocale returns correct $BasicLocale instance", () {
-          const basicLocale = locale.asBasicLocale;
+          final basicLocale = locale.asBasicLocale;
 
           expect(basicLocale, isA<BasicLocale>());
           expect(basicLocale.language, equals(locale.language));
@@ -23,7 +23,7 @@ void main() => group("TypedLocaleExtension", () {
         test(
           "asBasicTypedLocale returns correct $BasicTypedLocale instance",
           () {
-            const basicTypedLocale = locale.asBasicTypedLocale;
+            final basicTypedLocale = locale.asBasicTypedLocale;
 
             expect(basicTypedLocale, isA<BasicTypedLocale>());
             expect(basicTypedLocale.language, equals(locale.language));
@@ -34,7 +34,7 @@ void main() => group("TypedLocaleExtension", () {
         );
 
         test("asLocale returns correct SDK Locale instance", () {
-          const sdkLocale = locale.asLocale;
+          final sdkLocale = locale.asLocale;
 
           expect(sdkLocale, isA<Locale>());
           expect(sdkLocale.languageCode, equals(locale.languageCode));

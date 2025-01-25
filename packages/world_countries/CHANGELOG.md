@@ -5,7 +5,7 @@
 NEW FEATURES
 
 - Introduced new methods for working with common names and common name maps: `commonNamesMap` on ISO collections and `commonNameFor`/`maybeCommonNameFor` on ISO objects. These methods are significantly faster than the old `translations` - related methods because they work directly with locale-specific maps instead of iterating through all translations of each ISO object.
-- The `translations` getter is now a computed field. This means it will only generate the translations when they are requested, rather than storing them all in memory. It's recommended to cache the results of the getter to avoid redundant calculations. Because of that - `translation` and `maybeTranslation` methods are no longer recommended for retriving localization data.
+- The `translations` getter is now a computed field. This means it will only generate the translations when they are requested, rather than storing them all in memory. It's recommended to cache the results of the getter to avoid redundant calculations. Because of that - `translation` and `maybeTranslation` methods are no longer recommended for retrieving localization data.
 - The `commonNamesCacheMap` is deprecated because it relies on the memory-intensive `translations` getter.
 - New localization delegates on `IsoTranslated` objects simplify complex queries for object localizations.
 - Bool getters on `IsoStandardized` objects can now be applied to null values. For example, `maybeIso.isRus` will return `false` if `maybeIso` is null, without the need for additional null-checks.
@@ -25,18 +25,25 @@ BREAKING CHANGES
 
 - The package now requires Flutter v3.27.1 or higher.
 - The `IsoTranslated<T, N, L>` class now uses three generic types instead of two. If you used this class directly in your code, simply add the additional generic `<L extends BasicLocale>` to your reference.
+- `BasicPicker`, `BaseTileThemeData` and `BaseTileThemeData` are now inherited from `IsoTranslated` instead of `Translated` class.
+- `IsoLocale` is now deprecated in favor of `TypedLocale` that now implements `BasicTypedLocale` instead of `BasicLocale`.
+- Generic and `base` keyword on `TypedLocale` class are removed, you can still use new `regionalCode` parameter to provide non-typed region/country info there.
 - The default `toString()` implementation of `BasicLocale` now uses Flutter's `Locale`-like output format. You can still access the old output by setting the `short` flag to `false`.
 - The `sealed_country_translations` library is removed. Migrate to the [l10n_countries](https://pub.dev/packages/l10n_countries) package or use `l10n` getter in ISO objects that provides the same data without holding all translations in memory. This sub-library and its content (except for supported locales lists - they will be moved to the main library) will be removed in the next package version.
-- Country translation methods requires `BasicTypedLocale` instead of `BasicLocale`, if you didn't used country value - this change will not affect you, otherwise please change from:
+- Country translation methods requires `BasicTypedLocale` instead of `BasicLocale`, if you didn't used country value - this change will not affect you, same applies to `TypedLocale`. If you provided non-typed country data there - please change from:
 
 ```dart
 BasicLocale(*, countryCode: "US");
+// or
+TypedLocale(*, country: "US");
 ```
 
 to:
 
 ```dart
 BasicTypedLocale(*, regionalCode: "US"); // or BasicTypedLocale(*, country: CountryUsa());
+// or
+TypedLocale(*, regionalCode: "US"); // or TypedLocale(*, country: CountryUsa());
 ```
 
 ## 2.0.2

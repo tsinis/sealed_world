@@ -26,7 +26,7 @@ import "../models/typedefs.dart";
 ///         LocaleEntry(
 ///           /// Brazilian Portuguese could be mapped to Euro Portuguese.
 ///           Locale("pt", "BR"),
-///           IsoLocale(LangPor(), country: CountryPrt()),
+///           TypedLocale(LangPor(), country: CountryPrt()),
 ///         ),
 ///       ],
 ///     );

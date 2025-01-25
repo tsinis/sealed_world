@@ -47,15 +47,34 @@ extension WorldCountryExtension on WorldCountry {
   /// Example:
   /// ```dart
   /// const country = CountryUsa();
-  /// final locale = country.toIsoLocale(language: LangRus());
+  /// final locale = country.toTypedLocale(language: LangRus());
   /// print(locale.languageCode); // Prints: ru
   /// print(locale.countryCode); // Prints: US
   /// ```
-  TypedLocale toIsoLocale({NaturalLanguage? language, Script? script}) =>
+  TypedLocale toTypedLocale({NaturalLanguage? language, Script? script}) =>
       TypedLocale(
         language ?? languages.first,
         country: this,
         script:
             script ?? (language ?? languages.firstOrNull)?.scripts.firstOrNull,
       );
+
+  /// Converts [WorldCountry] to a [TypedLocale].
+  ///
+  /// The optional [language] parameter specifies a [NaturalLanguage] object
+  /// representing the language of the locale - if not provided method will pick
+  /// first language in the languages list. The optional [script] parameter
+  /// specifies the [Script] object for the locale, otherwise it will use the
+  /// first script from the first language in the languages list.
+  ///
+  /// Example:
+  /// ```dart
+  /// const country = CountryUsa();
+  /// final locale = country.toIsoLocale(language: LangRus());
+  /// print(locale.languageCode); // Prints: ru
+  /// print(locale.countryCode); // Prints: US
+  /// ```
+  @Deprecated("Renamed to `toTypedLocale`.")
+  TypedLocale toIsoLocale({NaturalLanguage? language, Script? script}) =>
+      toTypedLocale(language: language, script: script);
 }

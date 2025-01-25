@@ -79,9 +79,9 @@ MaterialApp(localizationsDelegates: [TypedLocaleDelegate()])
 
 Then you can also extract this delegate data from the context via `context.maybeLocale` getter, in any place of your app (from a `BuildContext`).
 
-Also, you can force pickers to use specific locale instead, by providing translation parameter to it (for example, `translation: TypedLocale.withTranslationsCache(LangEng())`, will show names in English).
+Also, you can force pickers to use a specific locale instead, by providing translation parameter to it (for example, `translation: TypedLocale.withTranslationsCache(LangEng())`, will show names in English).
 
-> Package also provides access to `TypedLocale` class that allows you to work with a type-safe versions of default [Locale](https://api.flutter.dev/flutter/dart-ui/Locale-class.html). You can also utilize it in `maybeCommonNameFor()` and `commonNameFor()` methods (you can use with country/currency/language data).
+> The package also provides access to `TypedLocale` class that allows you to work with a type-safe versions of default [Locale](https://api.flutter.dev/flutter/dart-ui/Locale-class.html). You can also utilize it in `maybeCommonNameFor()` and `commonNameFor()` methods (you can use with country/currency/language data).
 
 ### Example
 

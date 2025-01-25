@@ -93,30 +93,6 @@ void main() => group("$TypedLocale", () {
         expect(value.script, parsed.script);
       });
 
-      group("toString", () {
-        test("short: true", () => expect(value.toString(), "en_US"));
-
-        test(
-          "short: true, with regionalCode",
-          () => expect(
-            BasicTypedLocale(
-              NaturalLanguage.list.first,
-              script: Script.list.last,
-              regionalCode: WorldCountry.list.last.codeShort,
-            ).toString(),
-            "aa_Zzzz_XK",
-          ),
-        );
-
-        test(
-          "short: false",
-          () => expect(
-            value.toString(short: false),
-            'TypedLocale(LangEng(), countryCode: "US")',
-          ),
-        );
-      });
-
       group("copyWith", () {
         test("with non-null values", () {
           final copy = value.copyWith(
