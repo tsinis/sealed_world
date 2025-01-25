@@ -1,4 +1,4 @@
-version: 2.0.0
+version: 2.0.1
 name: sealed_languages
 description: Provides data for world languages in the form of sealed classes.
 maintainer: Roman Cinis
@@ -23,7 +23,7 @@ environment:
   sdk: ^3.6.0
 
 dependencies:
-  l10n_languages: ^0.1.0
+  l10n_languages: ^1.0.0
 
 dev_dependencies:
   _sealed_world_tests:

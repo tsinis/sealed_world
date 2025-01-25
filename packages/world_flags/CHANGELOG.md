@@ -1,3 +1,15 @@
+## 2.0.1
+
+REFACTOR
+
+- Improved generics handling in localization methods.
+- Update and use stable L10N packages.
+
+DOCUMENTATION
+
+- Improved documentation and example.
+- Fixed typos in the README.
+
 ## 2.0.0
 
 🎉 Second anniversary and new major release!
@@ -22,6 +34,17 @@ BREAKING CHANGES
 - The `IsoTranslated<T, N, L>` class now uses three generic types instead of two. If you used this class directly in your code, simply add the additional generic `<L extends BasicLocale>` to your reference.
 - The default `toString()` implementation of `BasicLocale` now uses Flutter's `Locale`-like output format. You can still access the old output by setting the `short` flag to `false`.
 - The `sealed_country_translations` library is removed. Migrate to the [l10n_countries](https://pub.dev/packages/l10n_countries) package or use `l10n` getter in ISO objects that provides the same data without holding all translations in memory. This sub-library and its content (except for supported locales lists - they will be moved to the main library) will be removed in the next package version.
+- Country translation methods requires `BasicTypedLocale` instead of `BasicLocale`, if you didn't used country value - this change will not affect you, otherwise please change from:
+
+```dart
+BasicLocale(*, countryCode: "US");
+```
+
+to:
+
+```dart
+BasicTypedLocale(*, regionalCode: "US"); // or BasicTypedLocale(*, country: CountryUsa());
+```
 
 ## 1.1.1
 

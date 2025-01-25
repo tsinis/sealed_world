@@ -1,46 +1,50 @@
-name: publish_to_pub
+name: publish_to_pub_workflow
 
 on:
   workflow_call:
     inputs:
-      package_name:
-        required: true
-        type: string
       tag:
         required: true
         type: string
 
 jobs:
   check-package-version:
-    env:
-      relative_path: packages/${{ inputs.package_name }}
-    name: ⏳ Publish ${{ inputs.package_name }} Package
+    name: ⏳ Publish ${{ inputs.tag }} Package
     if: ${{ github.event_name == 'push' && github.actor == 'tsinis' }}
-    defaults:
-      run:
-        working-directory: ${{ env.relative_path }}
-
     runs-on: ubuntu-latest
     timeout-minutes: 10
-
+    outputs:
+      package_name: ${{ steps.extract_name.outputs.value }}
     steps:
+      - name: 📦 Extract package name
+        id: extract_name
+        shell: bash
+        run: |
+          PACKAGE_NAME=$(echo "${{ inputs.tag }}" | sed 's/-v[0-9]\+\.[0-9]\+\.[0-9]\+//')
+          echo "value=$PACKAGE_NAME" >> $GITHUB_OUTPUT
+          echo "Extracted package name: $PACKAGE_NAME"
+
+      - name: 📂 Set working directory
+        run: echo "relative_path=packages/${{ steps.extract_name.outputs.value }}" >> $GITHUB_ENV
+
       - name: 📚 Git checkout
         uses: actions/checkout@v4.2.2
 
       - name: 1️⃣ Set version tag
         run: |
-          VERSION_TAG=$(echo "${{ inputs.tag }}" | grep -oE '${{ inputs.package_name }}-v([0-9]+.[0-9]+.[0-9]+)' | grep -oE '[0-9]+\.[0-9]+\.[0-9]+')
+          VERSION_TAG=$(echo "${{ inputs.tag }}" | sed -E 's/.*-v([0-9]+\.[0-9]+\.[0-9]+)/\1/')
           echo "TAG=${VERSION_TAG}" >> $GITHUB_ENV
-        shell: /bin/bash -e {0}
-        env:
-          relative_path: ${{ env.relative_path }}
+        shell: bash
+        working-directory: ${{ env.relative_path }}
 
       - name: 2️⃣ Get version from pubspec.yaml
+        working-directory: ${{ env.relative_path }}
         run: |
           PUBSPEC_VERSION=$(sed -n '1 s/version: *//p' pubspec.yaml)
           echo "PUBSPEC=${PUBSPEC_VERSION}" >> $GITHUB_ENV
 
       - name: 3️⃣ Get version from CHANGELOG.md
+        working-directory: ${{ env.relative_path }}
         run: |
           CHANGELOG_VERSION=$(sed -n '1 s/^## *//p' CHANGELOG.md)
           echo "CHANGELOG=${CHANGELOG_VERSION}" >> $GITHUB_ENV
@@ -74,4 +78,4 @@ jobs:
     uses: dart-lang/setup-dart/.github/workflows/publish.yml@main
     with:
       environment: "pub.dev"
-      working-directory: packages/${{ inputs.package_name }}
+      working-directory: packages/${{ needs.check-package-version.outputs.package_name }}

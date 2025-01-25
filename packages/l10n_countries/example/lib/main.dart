@@ -7,7 +7,7 @@ void main() {
   final mapper = CountriesLocaleMapper();
 
   /// Define some ISO codes to localize (e.g., `USA` for United States,
-  ///`RUS` for Russian Federation, and `POL` for Poland).
+  /// `RUS` for Russian Federation, and `POL` for Poland).
   final isoCodes = {"USA", "RUS", "POL"};
 
   /// Localize the codes with an optional main locale (e.g., "sk" for Slovak),

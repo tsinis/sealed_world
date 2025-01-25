@@ -7,7 +7,7 @@ void main() {
   final mapper = LanguagesLocaleMapper();
 
   /// Define some ISO codes to localize (e.g., `ENG` for English,
-  ///`RUS` for Russian, etc.).
+  /// `RUS` for Russian, etc.).
   final isoCodes = {"ENG", "RUS", "POL"};
 
   /// Localize the codes with an optional main locale (e.g., "sk" for Slovak),

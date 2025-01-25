@@ -43,7 +43,7 @@ void main() {
   final mapper = CountriesLocaleMapper();
 
   /// Define some ISO codes to localize (e.g., `USA` for United States,
-  ///`RUS` for Russian Federation, and `POL` for Poland).
+  /// `RUS` for Russian Federation, and `POL` for Poland).
   final isoCodes = {"USA", "RUS", "POL"};
 
   /// Localize the codes with an optional main locale (e.g., "sk" for Slovak),
@@ -72,6 +72,7 @@ void main() {
 - **High code coverage**: The code in this package has 100% code coverage, providing confidence in its reliability and stability.
 - **Comprehensive documentation**: This package provides full documentation for every non-code generated public member, usually with examples, ensuring clarity and ease of use.
 - **Industry adopted**: This package is actively used in production by numerous European companies, ensuring its efficacy and robustness in real-world scenarios.
+- **Lightweight**: This package keeps under 500 KB, ensuring it fits within the pub cache limit. This leads to quick, low-bandwidth downloads and faster caching, minimizing resource impact.
 - **MIT license**: This package and sources are released under the MIT license, which is a permissive license that allows users to use, modify, and distribute the code with minimal restrictions. The MIT license is considered better than most other open-source licenses because it provides flexibility and allows users to incorporate the code into their projects without worrying about legal implications.
 
 ### Additional information

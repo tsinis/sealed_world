@@ -1,0 +1,16 @@
+name: publish_packages
+
+on:
+  push:
+    branches: [main]
+    tags:
+      - '[a-z0-9]+_[a-z]+-v[0-9]+\.[0-9]+\.[0-9]+'
+
+jobs:
+  publish:
+    if: github.ref_type == 'tag'
+    uses: ./.github/workflows/publish_to_pub_workflow.yaml
+    permissions:
+      id-token: write
+    with:
+      tag: ${{ github.ref_name }}

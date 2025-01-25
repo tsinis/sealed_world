@@ -29,7 +29,7 @@ void main() {
   /// Translations:
   // Prints German translations of all available regular currencies.
   final germanNames = WorldCountry.list.commonNamesMap(
-    options: const LocaleMappingOptions<BasicTypedLocale>(
+    options: const LocaleMappingOptions(
       mainLocale: BasicTypedLocale(LangDeu()),
     ),
   );
