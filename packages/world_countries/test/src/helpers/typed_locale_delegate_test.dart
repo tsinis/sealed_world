@@ -5,7 +5,7 @@ import "dart:ui";
 import "package:_sealed_world_tests/sealed_world_tests.dart";
 import "package:flutter_test/flutter_test.dart";
 import "package:world_countries/src/helpers/typed_locale_delegate.dart";
-import "package:world_countries/src/models/locale/iso_locale.dart";
+import "package:world_countries/src/models/locale/typed_locale.dart";
 import "package:world_flags/world_flags.dart";
 
 void main() => group("$TypedLocaleDelegate", () {
@@ -38,7 +38,7 @@ void main() => group("$TypedLocaleDelegate", () {
           "returns typed locale on supported locale",
           () async => expect(
             await delegate.load(const Locale("en")),
-            const IsoLocale(english),
+            const TypedLocale(english),
           ),
         );
 
@@ -46,7 +46,7 @@ void main() => group("$TypedLocaleDelegate", () {
           "should map default resolution locale",
           () async => expect(
             await delegate.load(const Locale("gsw")),
-            const IsoLocale(LangDeu(), country: CountryChe()),
+            const TypedLocale(LangDeu(), country: CountryChe()),
           ),
         );
 
@@ -63,7 +63,7 @@ void main() => group("$TypedLocaleDelegate", () {
             expect(fallbackDelegate.toString(), contains(english.name));
             expect(
               await fallbackDelegate.load(const Locale("00")),
-              const IsoLocale(english),
+              const TypedLocale(english),
             );
           },
         );

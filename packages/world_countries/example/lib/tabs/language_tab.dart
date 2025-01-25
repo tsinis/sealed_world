@@ -6,7 +6,7 @@ import "../widgets/abstractions/world_data_tab.dart";
 import "../widgets/description_tile.dart";
 import "../widgets/tab_body.dart";
 
-final class LanguageTab extends WorldDataTab<NaturalLanguage> {
+final class LanguageTab extends WorldDataTab<BasicLocale, NaturalLanguage> {
   LanguageTab(
     super.data,
     super.nav, {
@@ -62,12 +62,6 @@ final class LanguageTab extends WorldDataTab<NaturalLanguage> {
               script.name,
               icon: Icons.history_edu_outlined,
               description: "Script code: ${script.code}",
-            ),
-          for (final translation in data.translations)
-            DescriptionTile.raw(
-              translation.name,
-              description: """Common ${translation.language.name} Name""",
-              leading: Text(translation.language.codeShort),
             ),
         ],
       );

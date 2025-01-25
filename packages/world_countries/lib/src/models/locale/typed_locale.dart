@@ -1,6 +1,5 @@
 // ignore: lines_longer_than_80_chars, we are re-using `Locale` implementations.
 // ignore_for_file: prefer-overriding-parent-equality, avoid-nullable-parameters-with-default-values, avoid-suspicious-super-overrides
-// ignore_for_file: deprecated_member_use_from_same_package, TODO!
 
 import "dart:ui" show Locale;
 
@@ -10,8 +9,6 @@ import "package:world_flags/world_flags.dart";
 import "../../extensions/typed_locale_extension.dart";
 
 /// A class representing a typed locale with optional country and script.
-/// However it's usually better to use the `IsoLocale` class instead of
-/// this one, in most cases, because ot generic nature of country argument.
 ///
 /// The [TypedLocale] class extends the [Locale] class and adds additional
 /// properties for language, country, and script. It provides a way to associate
@@ -28,21 +25,25 @@ import "../../extensions/typed_locale_extension.dart";
 /// const typedLocale = TypedLocale(LangEng(), script: ScriptLatn());
 /// ```
 @immutable
-base class TypedLocale<
-    @Deprecated("Please use `IsoLocale` class instead.")
-    CountryType extends Object> extends Locale implements BasicLocale {
+class TypedLocale extends Locale implements BasicTypedLocale {
   /// Creates an instance of [TypedLocale].
   ///
   /// The [language] parameter is required.
   /// The [country] and [script] parameters are optional.
   const TypedLocale(
     this.language, {
-    @Deprecated("Please use `IsoLocale` class instead.") this.country,
+    this.country,
     this.script,
     this.countryTranslations = const {},
     this.currencyTranslations = const {},
     this.languageTranslations = const {},
-  }) : super(" ", " ");
+    String? regionalCode,
+  })  : assert(
+          regionalCode == null || country == null,
+          "Cannot provide both `regionalCode` and `country` at the same time",
+        ),
+        _regionalCode = regionalCode,
+        super(" ", " ");
 
   /// Creates an instance of [TypedLocale] from subtags.
   ///
@@ -50,15 +51,21 @@ base class TypedLocale<
   /// The [country] and [script] parameters are optional.
   TypedLocale.fromSubtags({
     required this.language,
-    @Deprecated("Please use `IsoLocale` class instead.") this.country,
+    this.country,
     this.script,
     this.countryTranslations = const {},
     this.currencyTranslations = const {},
     this.languageTranslations = const {},
-  }) : super.fromSubtags(
+    String? regionalCode,
+  })  : assert(
+          regionalCode == null || country == null,
+          "Cannot provide both `regionalCode` and `country` at the same time",
+        ),
+        _regionalCode = regionalCode,
+        super.fromSubtags(
           languageCode: language.codeShort.toLowerCase(),
           scriptCode: script?.code,
-          countryCode: country?.toUpperCaseIsoCode(),
+          countryCode: country?.codeShort ?? regionalCode,
         );
 
   /// Creates an instance of [TypedLocale] with implicit translations cache
@@ -71,14 +78,19 @@ base class TypedLocale<
   ///
   factory TypedLocale.withTranslationsCache(
     NaturalLanguage language, {
-    @Deprecated("Please use `IsoLocale` class instead.") CountryType? country,
+    WorldCountry? country,
     Script? script,
     Iterable<NaturalLanguage>? languages = NaturalLanguage.list,
     Iterable<FiatCurrency>? currencies = FiatCurrency.list,
     Iterable<WorldCountry>? countries = WorldCountry.list,
+    String? regionalCode,
   }) =>
-      TypedLocale(language, country: country, script: script)
-          .copyWithTranslationsCache(
+      TypedLocale(
+        language,
+        country: country,
+        script: script,
+        regionalCode: regionalCode,
+      ).copyWithTranslationsCache(
         languages: languages,
         currencies: currencies,
         countries: countries,
@@ -87,8 +99,8 @@ base class TypedLocale<
   @override
   final NaturalLanguage language;
 
-  /// The optional country information of generic type `CountryType`.
-  final CountryType? country; // ignore: deprecated_consistency, it's TODO!
+  @override
+  final WorldCountry? country;
 
   @override
   final Script? script;
@@ -103,8 +115,8 @@ base class TypedLocale<
   final Map<NaturalLanguage, String> languageTranslations;
 
   @override
-  @required
-  String? get countryCode => country?.toUpperCaseIsoCode();
+  String? get countryCode =>
+      country?.codeShort ?? _regionalCode?.toUpperCaseIsoCode();
 
   @override
   String get languageCode => language.codeShort.toLowerCase();
@@ -116,26 +128,39 @@ base class TypedLocale<
   /// {@macro copy_with_method}
   @required
   // ignore: long-parameter-list, class has 6 properties.
-  TypedLocale<CountryType> copyWith({
+  TypedLocale copyWith({
     NaturalLanguage? language,
-    @Deprecated("Please use `IsoLocale` class instead.") CountryType? country,
+    WorldCountry? country,
     Script? script,
     Map<WorldCountry, String>? countryTranslations,
     Map<FiatCurrency, String>? currencyTranslations,
     Map<NaturalLanguage, String>? languageTranslations,
+    String? regionalCode,
   }) =>
-      TypedLocale<CountryType>(
+      TypedLocale(
         language ?? this.language,
         country: country ?? this.country,
         script: script ?? this.script,
         countryTranslations: countryTranslations ?? this.countryTranslations,
         currencyTranslations: currencyTranslations ?? this.currencyTranslations,
         languageTranslations: languageTranslations ?? this.languageTranslations,
+        regionalCode: regionalCode ?? _regionalCode,
       );
 
   @override
   String toJson({JsonCodec codec = const JsonCodec()}) =>
       asBasicLocale.toJson(codec: codec);
 
-  // TODO! Provide String toLanguageTag() => toUnicodeLocaleId('-'); override.
+  @override
+  String toLanguageTag() => toUnicodeLocaleId(separator: "-");
+
+  @override
+  String toString({bool short = true}) => short
+      ? toUnicodeLocaleId()
+      : "TypedLocale(${language.runtimeType}()"
+          "${country == null ? '' : ', country: ${country.runtimeType}()'}"
+          '''${countryCode == null || country != null ? '' : ', countryCode: "$countryCode"'}'''
+          "${script == null ? '' : ', script: ${script.runtimeType}()'})";
+
+  final String? _regionalCode;
 }

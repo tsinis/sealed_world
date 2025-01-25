@@ -79,6 +79,6 @@ extension WorldCountriesBuildContextExtension on BuildContext {
   BaseTileThemeData<FiatCurrency>? get currencyTileTheme =>
       _tileTheme<FiatCurrency>();
 
-  BaseTileThemeData<T>? _tileTheme<T extends Translated>() =>
+  BaseTileThemeData<T>? _tileTheme<T extends IsoTranslated>() =>
       Theme.of(this).extension<BaseTileThemeData<T>>();
 }

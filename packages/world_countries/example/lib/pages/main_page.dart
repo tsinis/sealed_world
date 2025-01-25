@@ -24,9 +24,9 @@ class MainPage extends StatefulWidget {
 
   final ParsedData _data;
 
-  final WorldDataTab<WorldCountry> _country;
-  final WorldDataTab<FiatCurrency> _currency;
-  final WorldDataTab<NaturalLanguage> _lang;
+  final WorldDataTab<BasicTypedLocale, WorldCountry> _country;
+  final WorldDataTab<BasicLocale, FiatCurrency> _currency;
+  final WorldDataTab<BasicLocale, NaturalLanguage> _lang;
 
   BasicPicker _mapPickers(WorldData data) =>
       data.map(country: _country, currency: _currency, language: _lang).picker;

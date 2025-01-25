@@ -9,7 +9,7 @@ import "../widgets/abstractions/world_data_tab.dart";
 import "../widgets/description_tile.dart";
 import "../widgets/tab_body.dart";
 
-final class CountryTab extends WorldDataTab<WorldCountry> {
+final class CountryTab extends WorldDataTab<BasicTypedLocale, WorldCountry> {
   CountryTab(
     super.data,
     super.nav, {
@@ -21,24 +21,10 @@ final class CountryTab extends WorldDataTab<WorldCountry> {
 
   @override
   Widget build(BuildContext context) => TabBody(
-        title: Column(
-          mainAxisSize: MainAxisSize.min,
-          children: [
-            Text(
-              data.translation(const BasicLocale(LangEng())).name,
-              style: context.theme.textTheme.headlineSmall,
-              textAlign: TextAlign.center,
-            ),
-            MaybeWidget(
-              data.translation(const BasicLocale(LangEng())).fullName,
-              (fullName) => Text(
-                fullName,
-                style: context.theme.textTheme.titleMedium
-                    ?.copyWith(fontWeight: FontWeight.w200),
-                textAlign: TextAlign.center,
-              ),
-            ),
-          ],
+        title: Text(
+          data.commonNameFor(const BasicTypedLocale(LangEng())),
+          style: context.theme.textTheme.headlineSmall,
+          textAlign: TextAlign.center,
         ),
         titleOverlay: AbsorbPointer(
           child: EmojiFlag.custom(
@@ -225,18 +211,6 @@ final class CountryTab extends WorldDataTab<WorldCountry> {
             icon: Icons.grid_view_outlined,
             description: "Regional Bloc(s)",
           ),
-          for (final translation in data.translations) ...[
-            DescriptionTile.raw(
-              translation.fullName,
-              description: """Official ${translation.language.name} Name""",
-              leading: Text(translation.language.codeShort),
-            ),
-            DescriptionTile.raw(
-              translation.name,
-              description: """Common ${translation.language.name} Name""",
-              leading: Text(translation.language.codeShort),
-            ),
-          ],
         ],
       );
 }

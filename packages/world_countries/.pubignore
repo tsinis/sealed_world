@@ -1,0 +1,8 @@
+example/android/**
+example/ios/**
+example/macos/**
+example/windows/**
+example/linux/**
+example/assets/**
+example/.vscode/**
+doc/example.gif

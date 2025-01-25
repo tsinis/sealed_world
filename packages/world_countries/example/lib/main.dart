@@ -59,12 +59,12 @@ class _MainState extends State<Main> {
           localizationsDelegates: const [
             GlobalMaterialLocalizations.delegate,
             GlobalCupertinoLocalizations.delegate,
-            TypedLocaleDelegate(), // <- Add for automatic pickers translations.
+            TypedLocaleDelegate(), // <- Add for automatic pickers localization.
           ],
           supportedLocales: [
             const Locale.fromSubtags(languageCode: "bs", scriptCode: "Cyrl"),
             const Locale.fromSubtags(languageCode: "bs", scriptCode: "Latn"),
-            const IsoLocale(LangPor(), country: CountryBra()), // Strict typed.
+            const TypedLocale(LangPor(), country: CountryBra()), // Typed one.
             for (final locale in kMaterialSupportedLanguages) Locale(locale),
           ],
           debugShowCheckedModeBanner: false,

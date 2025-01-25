@@ -26,7 +26,7 @@ part "basic_picker_state.dart";
 /// An abstract class that provides a basic picker widget, with search
 /// functionality and indexing support.
 @immutable
-abstract class BasicPicker<T extends Translated>
+abstract class BasicPicker<T extends IsoTranslated>
     extends SearchableIndexedListViewBuilder<T>
     with CompareSearchMixin<T>
     implements BasicPickerInterface {
@@ -150,7 +150,7 @@ abstract class BasicPicker<T extends Translated>
   @mustCallSuper
   Iterable<String> defaultSearch(T item, BuildContext context) => [
         _maybeNameTranslation(item, context) ??
-            item.translation(const BasicLocale(LangEng())).name,
+            item.commonNameFor(const BasicTypedLocale(LangEng())),
       ];
 
   /// Returns the name translation of the item (if exists) in form
@@ -191,10 +191,8 @@ abstract class BasicPicker<T extends Translated>
   String? _maybeNameTranslation(T item, BuildContext context) {
     final locale =
         translation ?? context.pickersTheme?.translation ?? context.maybeLocale;
-    if (locale == null) return null;
 
-    return nameTranslationCache(item, locale) ??
-        item.maybeTranslation(locale)?.name;
+    return locale == null ? null : nameTranslationCache(item, locale);
   }
 
   /// Returns translated common name of the item (if exists).

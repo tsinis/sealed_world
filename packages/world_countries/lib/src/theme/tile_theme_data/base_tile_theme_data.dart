@@ -10,8 +10,8 @@ import "../../models/item_properties.dart";
 /// content. It extends [ThemeExtension] to facilitate the ease of creating
 /// extendable theme data.
 ///
-/// The generic type `T` extends from [Translated] and represents the model that
-/// contains translated text information which the tile will use.
+/// The generic type `T` extends from [IsoTranslated] and represents the model
+/// that contains translated text information which the tile will use.
 ///
 /// Parameters:
 /// - `builder`: An optional function that returns a widget for a given set of
@@ -20,7 +20,7 @@ import "../../models/item_properties.dart";
 /// This allows for custom tile widgets to be built based on the provided item
 /// properties and whether the tile should be dense or not.
 @immutable
-base class BaseTileThemeData<T extends Translated>
+base class BaseTileThemeData<T extends IsoTranslated>
     extends _BaseTileThemeData<T> {
   /// Creates a [BaseTileThemeData] with the given properties.
   const BaseTileThemeData({super.builder});
@@ -41,7 +41,7 @@ base class BaseTileThemeData<T extends Translated>
 }
 
 @immutable
-sealed class _BaseTileThemeData<T extends Translated>
+sealed class _BaseTileThemeData<T extends IsoTranslated>
     extends ThemeExtension<BaseTileThemeData<T>> {
   const _BaseTileThemeData({this.builder}); // coverage:ignore-line
 

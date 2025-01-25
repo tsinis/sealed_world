@@ -1,6 +1,6 @@
 part of "basic_picker.dart";
 
-class _BasicPickerState<T extends Translated> extends State<BasicPicker<T>> {
+class _BasicPickerState<T extends IsoTranslated> extends State<BasicPicker<T>> {
   TextEditingController _controller = TextEditingController();
 
   @override

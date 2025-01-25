@@ -1,10 +1,8 @@
-// ignore_for_file: deprecated_member_use_from_same_package, it's TODO!
 import "dart:ui";
 
 import "package:_sealed_world_tests/sealed_world_tests.dart";
 import "package:flutter_test/flutter_test.dart";
 import "package:world_countries/src/extensions/typed_locale_extension.dart";
-import "package:world_countries/src/models/locale/iso_locale.dart";
 import "package:world_countries/src/models/locale/typed_locale.dart";
 import "package:world_flags/world_flags.dart";
 
@@ -12,7 +10,7 @@ void main() => group("$TypedLocale", () {
       const english = LangEng();
       const string = "US";
       const locale = Locale("en", string);
-      const value = TypedLocale(english, country: string);
+      const value = TypedLocale(english, regionalCode: string);
 
       test("interfaces", () {
         expect(value, isA<BasicLocale>());
@@ -20,23 +18,43 @@ void main() => group("$TypedLocale", () {
         expect(value, isA<JsonEncodable>());
       });
 
+      test("toLanguageTag", () {
+        expect(value.toLanguageTag(), "en-US");
+        expect(value.asLocale.toLanguageTag(), value.toLanguageTag());
+      });
+
+      group("toString", () {
+        test("short: true", () => expect(value.toString(), "en_US"));
+
+        test(
+          "short: true, with regionalCode",
+          () => expect(
+            BasicTypedLocale(
+              NaturalLanguage.list.first,
+              script: Script.list.last,
+              regionalCode: WorldCountry.list.last.codeShort,
+            ).toString(),
+            "aa_Zzzz_XK",
+          ),
+        );
+
+        test(
+          "short: false",
+          () => expect(
+            value.toString(short: false),
+            'TypedLocale(LangEng(), countryCode: "US")',
+          ),
+        );
+      });
+
       group("equality", () {
         test("should compare regular $Locale object with $TypedLocale", () {
           expect(value, locale);
           expect(
-            TypedLocale.fromSubtags(language: english, country: string),
+            TypedLocale.fromSubtags(language: english, regionalCode: string),
             locale,
           );
           expect(value, isNot(Locale(locale.languageCode)));
-        });
-
-        test("should compare $IsoLocale object with $TypedLocale", () {
-          expect(value, const IsoLocale(english, country: CountryUsa()));
-          expect(
-            TypedLocale.fromSubtags(language: english, country: string),
-            const IsoLocale(english, country: CountryUsa()),
-          );
-          expect(value, isNot(const IsoLocale(english)));
         });
       });
 
@@ -55,10 +73,11 @@ void main() => group("$TypedLocale", () {
         test("should create translation cache for everything", () {
           final typedLocale = TypedLocale.withTranslationsCache(
             const LangEng(),
-            country: "US",
+            regionalCode: "US",
           );
           expect(typedLocale, isA<TypedLocale>());
-          expect(typedLocale.country, isA<String>());
+          expect(typedLocale.country, isNull);
+          expect(typedLocale.countryCode, isNotEmpty);
           expect(typedLocale.languageTranslations, isNotEmpty);
           expect(typedLocale.currencyTranslations, isNotEmpty);
           expect(typedLocale.countryTranslations, isNotEmpty);
@@ -74,25 +93,17 @@ void main() => group("$TypedLocale", () {
         expect(value.script, parsed.script);
       });
 
-      test("toString", () {
-        expect(value.toString(), locale.toString());
-        final fullValue = value.copyWith(script: const ScriptLatn());
-        expect(fullValue.toString(), fullValue.asLocale.toString());
-      });
-
       group("copyWith", () {
         test("with non-null values", () {
           final copy = value.copyWith(
             language: NaturalLanguage.list.first,
-            country: WorldCountry.list.first.codeShort,
             script: Script.list.last,
           );
           expect(copy.language, NaturalLanguage.list.first);
-          expect(copy.country, WorldCountry.list.first.codeShort);
-          expect(copy.countryCode, WorldCountry.list.first.codeShort);
+          expect(copy.country, isNull);
+          expect(copy.countryCode, string);
           expect(copy.script, Script.list.last);
           expect(copy.language, isNot(value.language));
-          expect(copy.countryCode, isNot(value.countryCode));
           expect(copy.script, isNot(value.script));
         });
 

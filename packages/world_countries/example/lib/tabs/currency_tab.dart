@@ -6,7 +6,7 @@ import "../widgets/abstractions/world_data_tab.dart";
 import "../widgets/description_tile.dart";
 import "../widgets/tab_body.dart";
 
-final class CurrencyTab extends WorldDataTab<FiatCurrency> {
+final class CurrencyTab extends WorldDataTab<BasicLocale, FiatCurrency> {
   CurrencyTab(
     super.data,
     super.nav, {
@@ -96,12 +96,6 @@ final class CurrencyTab extends WorldDataTab<FiatCurrency> {
             icon: Icons.eject_outlined,
             description: "Smallest Denomination",
           ),
-          for (final translation in data.translations)
-            DescriptionTile.raw(
-              translation.name,
-              description: "Common ${translation.language.name} Name",
-              leading: Text(translation.language.codeShort),
-            ),
         ],
       );
 }

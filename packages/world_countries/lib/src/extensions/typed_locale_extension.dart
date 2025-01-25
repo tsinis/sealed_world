@@ -7,12 +7,20 @@ import "duration_extension.dart";
 
 /// An extension on [TypedLocale] that provides utilities to manage translation
 /// caches and transforms to other locale types.
-extension TypedLocaleExtension<O extends Object, T extends TypedLocale<O>>
-    on T {
+extension TypedLocaleExtension<T extends TypedLocale> on T {
   /// Returns typed locale in the more basic (parent) type [BasicLocale],
   /// without translations and other additional properties.
   BasicLocale get asBasicLocale =>
       BasicLocale(language, countryCode: countryCode, script: script);
+
+  /// Returns typed locale in the more basic (parent) type [BasicTypedLocale],
+  /// without translations and other additional properties.
+  BasicTypedLocale get asBasicTypedLocale => BasicTypedLocale(
+        language,
+        country: country,
+        script: script,
+        regionalCode: country == null ? countryCode : null,
+      );
 
   /// Returns a weak typed (String-based) SDK locale representation of [Locale].
   Locale get asLocale => Locale.fromSubtags(
@@ -80,8 +88,10 @@ extension TypedLocaleExtension<O extends Object, T extends TypedLocale<O>>
     return _copyWithTranslationMaps(languageMap, currencyMap, countryMap);
   }
 
-  Map<R, String>? _cache<R extends IsoTranslated>(Iterable<R> isoItems) =>
-      isoItems.isEmpty ? null : isoItems.commonNamesCacheMap(this);
+  Map<R, String>? _cache<R extends IsoTranslated>(Iterable<R> iso) =>
+      iso.isEmpty
+          ? null
+          : iso.commonNamesMap(options: LocaleMappingOptions(mainLocale: this));
 
   Future<Map<R, String>?> _cacheAsync<R extends IsoTranslated>(
     Iterable<R> iso,
@@ -89,7 +99,7 @@ extension TypedLocaleExtension<O extends Object, T extends TypedLocale<O>>
     if (iso.isEmpty) return null;
     await Duration.zero.sleep;
 
-    return iso.commonNamesCacheMap(this);
+    return iso.commonNamesMap(options: LocaleMappingOptions(mainLocale: this));
   }
 
   T _copyWithTranslationMaps(

@@ -1,7 +1,8 @@
+// ignore_for_file: deprecated_member_use_from_same_package, it's TODO!.
+
 import "package:flutter/material.dart";
 import "package:flutter_test/flutter_test.dart";
 import "package:world_countries/src/extensions/world_country_extension.dart";
-import "package:world_countries/src/models/locale/iso_locale.dart";
 import "package:world_countries/src/models/locale/typed_locale.dart";
 import "package:world_flags/world_flags.dart";
 
@@ -39,10 +40,10 @@ void main() => group("WorldCountryExtension ", () {
 
       group("toIsoLocale", () {
         test(
-          "should return correct $IsoLocale instance",
+          "should return correct $TypedLocale instance",
           () => expect(
             value.toIsoLocale(),
-            IsoLocale(
+            TypedLocale(
               value.languages.first,
               country: value,
               script: value.languages.first.scripts.first,
@@ -51,7 +52,7 @@ void main() => group("WorldCountryExtension ", () {
         );
 
         test(
-          "should return correct $IsoLocale instance with all properties",
+          "should return correct $TypedLocale instance with all properties",
           () {
             final convertedLocale = value.toIsoLocale(
               language: NaturalLanguage.list.first,
@@ -59,7 +60,7 @@ void main() => group("WorldCountryExtension ", () {
             );
             expect(
               convertedLocale,
-              IsoLocale(
+              TypedLocale(
                 NaturalLanguage.list.first,
                 country: value,
                 script: Script.list.first,
@@ -70,8 +71,7 @@ void main() => group("WorldCountryExtension ", () {
               convertedLocale,
               TypedLocale.fromSubtags(
                 language: NaturalLanguage.list.first,
-                // ignore: deprecated_member_use_from_same_package, it's TODO!
-                country: value.codeShort,
+                country: value,
                 script: Script.list.first,
               ),
             );

@@ -15,3 +15,7 @@ import "locale/typed_locale.dart";
 /// const localeEntry = LocaleEntry(Locale('en'), TypedLocale(LangEng()));
 /// ```
 typedef LocaleEntry = MapEntry<Locale, TypedLocale>;
+
+/// A typedef representing an [TypedLocale].
+@Deprecated("Please use `TypedLocale` instead.")
+typedef IsoLocale = TypedLocale;

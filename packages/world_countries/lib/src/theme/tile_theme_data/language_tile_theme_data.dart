@@ -17,7 +17,7 @@ import "base_tile_theme_data.dart";
 /// ```dart
 /// final languageTileThemeData = LanguageTileThemeData(
 ///   builder: (itemProperties, {isDense}) => MyLanguageTile(
-///     title: itemProperties.item.translations.first.common,
+///     title: itemProperties.item.commonNameFor(locale),
 ///     isDense: isDense,
 ///   ),
 /// );

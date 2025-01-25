@@ -9,14 +9,15 @@ import "../../model/world_data.dart";
 
 export "package:world_countries/helpers.dart";
 
-abstract base class WorldDataTab<T extends IsoTranslated>
+abstract base class WorldDataTab<L extends BasicLocale,
+        I extends IsoTranslated<TranslatedName, Object, L>>
     extends StatelessWidget {
   WorldDataTab(
     this.data,
     AsyncValueSetter<String>? nav, {
-    required BasicPicker<T> dataPicker,
+    required BasicPicker<I> dataPicker,
     required WorldData type,
-    List<T> items = const [],
+    List<I> items = const [],
     super.key,
   }) : picker = dataPicker.copyWith(
           chosen: [data],
@@ -29,7 +30,7 @@ abstract base class WorldDataTab<T extends IsoTranslated>
         );
 
   @protected
-  final T data;
+  final I data;
 
-  final BasicPicker<T> picker;
+  final BasicPicker<IsoTranslated<TranslatedName, Object, L>> picker;
 }
