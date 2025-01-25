@@ -36,7 +36,6 @@ extension LocaleExtension on Locale? {
 
     // ignore: avoid-negated-conditions, due to line length.
     return language != null
-        // ignore: deprecated_member_use_from_same_package, it's TODO!
         ? TypedLocale(
             language,
             regionalCode: country == null ? this?.countryCode : null,

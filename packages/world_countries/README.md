@@ -2,7 +2,7 @@
 [![Codecov](https://codecov.io/github/tsinis/sealed_world/branch/main/graph/badge.svg)](https://app.codecov.io/github/tsinis/sealed_world/flags)
 [![CodeRabbit](https://img.shields.io/coderabbit/prs/github/tsinis/sealed_world?logo=vowpalwabbit&logoColor=orange&color=dark-green)](https://coderabbit.ai)
 [![Dart Code Metrics](https://img.shields.io/badge/passing-dcm?style=flat&logo=dart&logoColor=lightskyblue&label=dcm&color=dark-green)](https://dcm.dev)
-[![CI checks](https://github.com/tsinis/sealed_world/actions/workflows/world_countries.yaml/badge.svg)](https://github.com/tsinis/sealed_world/actions/workflows/world_countries.yaml)
+[![CI checks](https://github.com/tsinis/sealed_world/actions/workflows/verify_packages.yaml/badge.svg)](https://github.com/tsinis/sealed_world/actions/workflows/verify_packages.yaml)
 [![Pub points](https://img.shields.io/pub/points/world_countries)](https://pub.dev/packages/world_countries/score)
 [![Last commit](https://img.shields.io/github/last-commit/tsinis/sealed_world)](https://github.com/tsinis/sealed_world/commits/main/packages/world_countries)
 [![GitHub stars](https://img.shields.io/github/stars/tsinis/sealed_world?style=flat&color=green)](https://github.com/tsinis/sealed_world/stargazers)
@@ -53,7 +53,7 @@ To preview the demo from the example, you can visit [this web page](https://tsin
 
 ### Getting started
 
-To use this package, you will need Flutter version 3.19+. Add `world_countries` as a dependency in your `pubspec.yaml` file.
+To use this package, you will need Flutter version 3.27.1+. Add `world_countries` as a dependency in your `pubspec.yaml` file.
 
 ```yaml
 dependencies:
@@ -79,9 +79,9 @@ MaterialApp(localizationsDelegates: [TypedLocaleDelegate()])
 
 Then you can also extract this delegate data from the context via `context.maybeLocale` getter, in any place of your app (from a `BuildContext`).
 
-Also, you can force pickers to use specific locale instead, by providing translation parameter to it (for example, `translation: IsoLocale.withTranslationsCache(LangEng())`, will show names in English).
+Also, you can force pickers to use specific locale instead, by providing translation parameter to it (for example, `translation: TypedLocale.withTranslationsCache(LangEng())`, will show names in English).
 
-> Package also provides access to `TypedLocale` and `IsoLocale` classes that allows you to work with a type-safe versions of default [Locale](https://api.flutter.dev/flutter/dart-ui/Locale-class.html). You can also utilize them in `translation()` and `maybeTranslation()` methods (you can use with country/currency/language data).
+> Package also provides access to `TypedLocale` class that allows you to work with a type-safe versions of default [Locale](https://api.flutter.dev/flutter/dart-ui/Locale-class.html). You can also utilize it in `maybeCommonNameFor()` and `commonNameFor()` methods (you can use with country/currency/language data).
 
 ### Example
 
@@ -113,7 +113,7 @@ void main() => runApp(
               /// Just as an example, Brazil could be mapped to Euro Portuguese.
               LocaleEntry(
                 Locale("pt", "BR"),
-                IsoLocale(LangPor(), country: CountryPrt()),
+                TypedLocale(LangPor(), country: CountryPrt()),
               ),
             ],
           ),
@@ -189,7 +189,7 @@ class _MainPageState extends State<MainPage>
         ),
         body: Center(
           child: MaybeWidget(
-            selectedCountry?.maybeTranslation(BasicLocale(LangEng()))?.name,
+            selectedCountry?.maybeCommonNameFor(BasicTypedLocale(LangEng())),
             Text.new,
             orElse: const Text(
               "Please select country by pressing on the search icon",
@@ -251,5 +251,6 @@ CountryPicker(
 - **Type-safe**: The contracts and types in this package are exceptionally strong, ensuring that your code is strongly typed and well-defined.
 - **High code coverage**: The code in this package boasts nearly 100% test coverage, with almost 5000 tests (150+ in this package, 4828+ in underlying Dart packages) ensuring reliability and stability.
 - **Comprehensive documentation**: This package provides full documentation for every non-code generated public member, usually with examples, ensuring clarity and ease of use.
+- **Lightweight**: This package keeps under 500 KB, ensuring it fits within the pub cache limit. This leads to quick, low-bandwidth downloads and faster caching, minimizing resource impact.
 - **Industry adopted**: This package is actively used in production by numerous European companies, ensuring its efficacy and robustness in real-world scenarios.
 - **MIT license**: This package and sources are released under the MIT license, which is a permissive license that allows users to use, modify, and distribute the code with minimal restrictions. The MIT license is considered better than most other open-source licenses because it provides flexibility and allows users to incorporate the code into their projects without worrying about legal implications.
