@@ -366,26 +366,26 @@ packages:
     dependency: transitive
     description:
       name: l10n_countries
-      sha256: a0f40143266f64e2669ed56cb5f2b3dac239405da36ce66446e916fc84474ed0
+      sha256: "3ce25e801479534de4c0e8ac964e1a0f3bd53837f7b06db24407c4673e9ba289"
       url: "https://pub.dev"
     source: hosted
-    version: "0.1.0"
+    version: "1.0.0"
   l10n_currencies:
     dependency: transitive
     description:
       name: l10n_currencies
-      sha256: "7203c16b673a4b7039fb8d74bceef96f1fca80839b224d8e4445c39ff7283da6"
+      sha256: "2e3d1d7be7bc12a37ef4bcc53805a0ce218f25ea959b3386779cb220d1181340"
       url: "https://pub.dev"
     source: hosted
-    version: "0.1.0"
+    version: "1.0.0"
   l10n_languages:
     dependency: transitive
     description:
       name: l10n_languages
-      sha256: "8399add92b5520d5fd3db90f4e62be09fbd1dc48b244dc2fa327790b297435a6"
+      sha256: "324e115dbc4d20e9bb504930e843848c233648ecbba40da59af4d6a0fc24bcfa"
       url: "https://pub.dev"
     source: hosted
-    version: "0.1.0"
+    version: "1.0.0"
   leak_tracker:
     dependency: transitive
     description:
@@ -542,26 +542,26 @@ packages:
     dependency: transitive
     description:
       name: sealed_countries
-      sha256: e3ad520abc277abf640d4548c90406714b5f2a19296584e8ae2e6df1f80d648c
+      sha256: "37a032302caecab2063219bd5ee474438a943ec896af1369910a011d0e9be76c"
       url: "https://pub.dev"
     source: hosted
-    version: "2.0.0"
+    version: "2.0.1"
   sealed_currencies:
     dependency: transitive
     description:
       name: sealed_currencies
-      sha256: "506a8facca33c163b4aa0231c6b032cba48d9a2281dd2dbb20bb2995d76fe606"
+      sha256: "24030ad84f0abdfc90b2306a6668b114eb66d725bf72c4638a9bf563c0581078"
       url: "https://pub.dev"
     source: hosted
-    version: "2.0.0"
+    version: "2.0.1"
   sealed_languages:
     dependency: transitive
     description:
       name: sealed_languages
-      sha256: "629c0f2bb6084b8b9a6e22c4fd2ca632cac3fcfa64018713d920f70811ec0261"
+      sha256: "89534d887680d2f67a82fc9937fd712c5d90b9fa9909de46a3bd7f2df6dde52a"
       url: "https://pub.dev"
     source: hosted
-    version: "2.0.0"
+    version: "2.0.1"
   shelf:
     dependency: transitive
     description:
@@ -746,10 +746,10 @@ packages:
     dependency: transitive
     description:
       name: world_flags
-      sha256: "96bd0cfa8f9deb330f98dfb10108915bd2dd025d31fd7cf74c4b951c7e5be2b7"
+      sha256: "500eee6014afff2c1b507a809c98862d6bc5cc9e61d558c2e01b859c024f4049"
       url: "https://pub.dev"
     source: hosted
-    version: "2.0.0"
+    version: "2.0.1"
   xml:
     dependency: transitive
     description:

@@ -59,7 +59,7 @@ class _MainState extends State<Main> {
           localizationsDelegates: const [
             GlobalMaterialLocalizations.delegate,
             GlobalCupertinoLocalizations.delegate,
-            TypedLocaleDelegate(), // <- Add for automatic pickers translations.
+            TypedLocaleDelegate(), // <- Add for automatic pickers localization.
           ],
           supportedLocales: [
             const Locale.fromSubtags(languageCode: "bs", scriptCode: "Cyrl"),

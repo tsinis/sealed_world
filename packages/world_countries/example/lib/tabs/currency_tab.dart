@@ -96,12 +96,6 @@ final class CurrencyTab extends WorldDataTab<BasicLocale, FiatCurrency> {
             icon: Icons.eject_outlined,
             description: "Smallest Denomination",
           ),
-          for (final translation in data.translations)
-            DescriptionTile.raw(
-              translation.name,
-              description: "Common ${translation.language.name} Name",
-              leading: Text(translation.language.codeShort),
-            ),
         ],
       );
 }

@@ -63,12 +63,6 @@ final class LanguageTab extends WorldDataTab<BasicLocale, NaturalLanguage> {
               icon: Icons.history_edu_outlined,
               description: "Script code: ${script.code}",
             ),
-          for (final translation in data.translations)
-            DescriptionTile.raw(
-              translation.name,
-              description: """Common ${translation.language.name} Name""",
-              leading: Text(translation.language.codeShort),
-            ),
         ],
       );
 }

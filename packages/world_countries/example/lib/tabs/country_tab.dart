@@ -21,24 +21,10 @@ final class CountryTab extends WorldDataTab<BasicTypedLocale, WorldCountry> {
 
   @override
   Widget build(BuildContext context) => TabBody(
-        title: Column(
-          mainAxisSize: MainAxisSize.min,
-          children: [
-            Text(
-              data.translation(const BasicTypedLocale(LangEng())).name,
-              style: context.theme.textTheme.headlineSmall,
-              textAlign: TextAlign.center,
-            ),
-            MaybeWidget(
-              data.translation(const BasicTypedLocale(LangEng())).fullName,
-              (fullName) => Text(
-                fullName,
-                style: context.theme.textTheme.titleMedium
-                    ?.copyWith(fontWeight: FontWeight.w200),
-                textAlign: TextAlign.center,
-              ),
-            ),
-          ],
+        title: Text(
+          data.commonNameFor(const BasicTypedLocale(LangEng())),
+          style: context.theme.textTheme.headlineSmall,
+          textAlign: TextAlign.center,
         ),
         titleOverlay: AbsorbPointer(
           child: EmojiFlag.custom(
@@ -225,18 +211,6 @@ final class CountryTab extends WorldDataTab<BasicTypedLocale, WorldCountry> {
             icon: Icons.grid_view_outlined,
             description: "Regional Bloc(s)",
           ),
-          for (final translation in data.translations) ...[
-            DescriptionTile.raw(
-              translation.fullName,
-              description: """Official ${translation.language.name} Name""",
-              leading: Text(translation.language.codeShort),
-            ),
-            DescriptionTile.raw(
-              translation.name,
-              description: """Common ${translation.language.name} Name""",
-              leading: Text(translation.language.codeShort),
-            ),
-          ],
         ],
       );
 }
