@@ -12,8 +12,6 @@ topics:
   - currency-picker
 
 screenshots:
-  - description: "Structure visualization"
-    path: doc/structure.webp
   - description: "Use with SearchAnchor widget"
     path: doc/search_anchor.webp
   - description: "Search picker example"
@@ -22,12 +20,6 @@ screenshots:
     path: doc/modal_picker.webp
   - description: "Dialog picker example"
     path: doc/dialog_picker.webp
-  - description: "Country data example"
-    path: doc/country_data.webp
-  - description: "Currency data example"
-    path: doc/currency_data.webp
-  - description: "Language data example"
-    path: doc/language_data.webp
 
 environment:
   sdk: ^3.6.0
