@@ -6,6 +6,8 @@ maintainer: Roman Cinis
 repository: https://github.com/tsinis/sealed_world/tree/main/packages/_sealed_world_tests
 issue_tracker: https://github.com/tsinis/sealed_world/issues
 
+resolution: workspace
+
 environment:
   sdk: ^3.6.0
 

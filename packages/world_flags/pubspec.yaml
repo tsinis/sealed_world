@@ -11,6 +11,8 @@ topics:
   - country-flag
   - coat-of-arms
 
+resolution: workspace
+
 environment:
   sdk: ^3.6.0
   flutter: ">=3.27.1"
