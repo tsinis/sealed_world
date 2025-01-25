@@ -1,3 +1,5 @@
+import "dart:ui" show Locale;
+
 import "package:_sealed_world_tests/sealed_world_tests.dart";
 import "package:flutter_test/flutter_test.dart";
 import "package:world_countries/world_countries.dart";
@@ -7,6 +9,39 @@ void main() => group("TypedLocaleExtension", () {
       const languages = NaturalLanguage.list;
       const currencies = FiatCurrency.list;
       const countries = WorldCountry.list;
+
+      group("getters", () {
+        test("asBasicLocale returns correct $BasicLocale instance", () {
+          final basicLocale = locale.asBasicLocale;
+
+          expect(basicLocale, isA<BasicLocale>());
+          expect(basicLocale.language, equals(locale.language));
+          expect(basicLocale.countryCode, equals(locale.countryCode));
+          expect(basicLocale.script, equals(locale.script));
+        });
+
+        test(
+          "asBasicTypedLocale returns correct $BasicTypedLocale instance",
+          () {
+            final basicTypedLocale = locale.asBasicTypedLocale;
+
+            expect(basicTypedLocale, isA<BasicTypedLocale>());
+            expect(basicTypedLocale.language, equals(locale.language));
+            expect(basicTypedLocale.country, equals(locale.country));
+            expect(basicTypedLocale.script, equals(locale.script));
+            expect(basicTypedLocale.countryCode, isNull);
+          },
+        );
+
+        test("asLocale returns correct SDK Locale instance", () {
+          final sdkLocale = locale.asLocale;
+
+          expect(sdkLocale, isA<Locale>());
+          expect(sdkLocale.languageCode, equals(locale.languageCode));
+          expect(sdkLocale.countryCode, equals(locale.countryCode));
+          expect(sdkLocale.scriptCode, equals(locale.script?.code));
+        });
+      });
 
       group("copyWithTranslationsCache", () {
         assertTest(
