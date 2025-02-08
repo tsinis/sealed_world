@@ -33,6 +33,21 @@ jobs:
         with:
           sdk: "stable"
 
+      - name: 📦 Install CLI tools
+        if: ${{ !inputs.is_flutter }}
+        run: |
+          cd $GITHUB_WORKSPACE/tools
+          dart pub get
+          dart pub global activate --source path .
+
+      - name: 🧹 Run workspace cleaner
+        if: ${{ !inputs.is_flutter }}
+        run: dart pub global run cli:workspace_cleaner
+
+      - name: 🎯 Exclude Flutter SDK from pure-Dart packages
+        if: ${{ !inputs.is_flutter }}
+        run: dart run dart_code_metrics:metrics
+
       - name: 🐦 Setup Flutter
         if: ${{ inputs.is_flutter }}
         uses: subosito/flutter-action@v2.18.0
