@@ -2,7 +2,7 @@
 
 REFACTOR
 
-- `maybeCommonNameFor` method now accepts nullable `mainLocale` parameter - if `null` is provided, `null` will be returned.
+- Nullable `maybeCommonNameFor` method now accepts nullable `mainLocale` parameter - if `null` is provided, `null` will be returned.
 
 ## 2.0.1
 
@@ -33,7 +33,7 @@ BREAKING CHANGES
 - The package now requires Dart v3.6.0 or higher.
 - The `IsoTranslated<T, N, L>` class now uses three generic types instead of two. If you used this class directly in your code, simply add the additional generic `<L extends BasicLocale>` to your reference.
 - The default `toString()` implementation of `BasicLocale` now uses Flutter's `Locale`-like output format. You can still access the old output by setting the `short` flag to `false`.
-- The `sealed_language_translations` library is deprecated. Migrate to the [l10n_languages](https://pub.dev/packages/l10n_languages) package or use `l10n` getter in ISO objects that provides the same data without holding all translations in memory. This sub-library and its content (except for supported languages lists - they will be moved to the main library) will be removed in the next package version.
+- The `sealed_language_translations` library is deprecated. Migrate to the [l10n_languages](https://pub.dev/packages/l10n_languages) package or use `l10n` getter in ISO objects that provides the same data without holding all translations in memory. This sub-library and its content (except for supported languages lists - they will be moved to the main library) will be removed in the next major package version.
 
 ## 1.5.1
 
