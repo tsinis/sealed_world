@@ -7,7 +7,6 @@ resolution: workspace
 
 environment:
   sdk: ^3.6.1
-  flutter: ^3.27.3
 
 dependencies:
   flutter:
@@ -17,8 +16,6 @@ dependencies:
 
 dev_dependencies:
   dart_code_metrics_presets: ^2.20.0
-  flutter_test: # From Google
-    sdk: flutter
   lints: ^5.1.1 # From Google
 
 flutter:

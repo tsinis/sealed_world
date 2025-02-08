@@ -117,6 +117,14 @@ void main() => group("TranslatedExtension", () {
       });
 
       group("maybeCommonNameFor", () {
+        test(
+          "returns null for null locale",
+          () => expect(
+            portuguese.maybeCommonNameFor<BasicLocale>(null),
+            isNull,
+          ),
+        );
+
         test("returns translation for valid locale", () {
           final name =
               portuguese.maybeCommonNameFor(const BasicLocale(LangRus()));

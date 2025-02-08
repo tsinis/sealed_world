@@ -33,6 +33,14 @@ jobs:
         with:
           sdk: "stable"
 
+      - name: 🧹 Workspace cleaner
+        if: ${{ !inputs.is_flutter }}
+        uses: actions/github-script@v7.0.1
+        with:
+          script: |
+            const f = 'pubspec.yaml', c = await require('fs').promises.readFile(f, 'utf8')
+            await require('fs').promises.writeFile(f, c.replace(/- packages\/world_/g, '#'))
+
       - name: 🐦 Setup Flutter
         if: ${{ inputs.is_flutter }}
         uses: subosito/flutter-action@v2.18.0
