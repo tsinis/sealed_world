@@ -18,6 +18,7 @@ import "../model/country/submodels/lat_lng.dart";
 import "../model/country/submodels/maps.dart";
 import "../model/country/submodels/postal_code.dart";
 import "../model/country/submodels/weekday.dart";
+import "../model/regional_bloc/world_bloc.dart";
 import "geo/continental_sections.data.dart";
 import "geo/continents.data.dart";
 import "regional_bloc/regional_bloc.data.dart";
@@ -34,13 +35,6 @@ class CountryAbw extends WorldCountry {
             official: "Aruba",
             common: "Aruba",
           ),
-          namesNative: const [
-            CountryName(
-              language: LangNld(),
-              official: "Aruba",
-              common: "Aruba",
-            ),
-          ],
           tld: const [".aw"],
           code: "ABW",
           codeNumeric: "533",
@@ -54,10 +48,6 @@ class CountryAbw extends WorldCountry {
           subregion: const Caribbean(),
           latLng: const LatLng(12.5, -69.96666666),
           areaMetric: 180,
-          demonyms: const [
-            Demonyms(language: LangEng(), female: "Aruban", male: "Aruban"),
-            Demonyms(language: LangFra(), female: "Arubaise", male: "Arubais"),
-          ],
           emoji: "🇦🇼",
           maps: const Maps(
             googleMaps: "8hopbQqifHAgyZyg8",
@@ -67,13 +57,23 @@ class CountryAbw extends WorldCountry {
           fifa: "ARU",
           car: const Car(sign: "A"),
           timezones: const ["UTC-04:00"],
-          capitalInfo: const CapitalInfo(
-            capital: Capital("Oranjestad"),
-            latLng: LatLng(12.52, -70.03),
-          ),
         );
   @override
   List<FiatCurrency> get currencies => const [FiatAwg()];
+  @override
+  CapitalInfo get capitalInfo => const CapitalInfo(
+        capital: Capital("Oranjestad"),
+        latLng: LatLng(12.52, -70.03),
+      );
+  @override
+  List<Demonyms> get demonyms => const [
+        Demonyms(language: LangEng(), female: "Aruban", male: "Aruban"),
+        Demonyms(language: LangFra(), female: "Arubaise", male: "Arubais"),
+      ];
+  @override
+  List<CountryName> get namesNative => const [
+        CountryName(language: LangNld(), official: "Aruba", common: "Aruba"),
+      ];
   @override
   List<NaturalLanguage> get languages => const [LangNld()];
 }
@@ -90,18 +90,6 @@ class CountryAfg extends WorldCountry {
             official: "Islamic Republic of Afghanistan",
             common: "Afghanistan",
           ),
-          namesNative: const [
-            CountryName(
-              language: LangPus(),
-              official: "د افغانستان اسلامي جمهوریت",
-              common: "افغانستان",
-            ),
-            CountryName(
-              language: LangTuk(),
-              official: "Owganystan Yslam Respublikasy",
-              common: "Owganystan",
-            ),
-          ],
           tld: const [".af"],
           code: "AFG",
           codeNumeric: "004",
@@ -115,10 +103,6 @@ class CountryAfg extends WorldCountry {
           landlocked: true,
           bordersCodes: const ["Irn", "Pak", "Tkm", "Uzb", "Tjk", "Chn"],
           areaMetric: 652230,
-          demonyms: const [
-            Demonyms(language: LangEng(), female: "Afghan", male: "Afghan"),
-            Demonyms(language: LangFra(), female: "Afghane", male: "Afghan"),
-          ],
           emoji: "🇦🇫",
           maps: const Maps(
             googleMaps: "BXBGw7yUUFknCfva9",
@@ -128,14 +112,34 @@ class CountryAfg extends WorldCountry {
           fifa: "AFG",
           car: const Car(sign: "AFG"),
           timezones: const ["UTC+04:30"],
-          capitalInfo: const CapitalInfo(
-            capital: Capital("Kabul"),
-            latLng: LatLng(34.52, 69.18),
-          ),
-          regionalBlocs: const [BlocSAARC()],
         );
   @override
   List<FiatCurrency> get currencies => const [FiatAfn()];
+  @override
+  CapitalInfo get capitalInfo => const CapitalInfo(
+        capital: Capital("Kabul"),
+        latLng: LatLng(34.52, 69.18),
+      );
+  @override
+  List<RegionalBloc> get regionalBlocs => const [BlocSAARC()];
+  @override
+  List<Demonyms> get demonyms => const [
+        Demonyms(language: LangEng(), female: "Afghan", male: "Afghan"),
+        Demonyms(language: LangFra(), female: "Afghane", male: "Afghan"),
+      ];
+  @override
+  List<CountryName> get namesNative => const [
+        CountryName(
+          language: LangPus(),
+          official: "د افغانستان اسلامي جمهوریت",
+          common: "افغانستان",
+        ),
+        CountryName(
+          language: LangTuk(),
+          official: "Owganystan Yslam Respublikasy",
+          common: "Owganystan",
+        ),
+      ];
   @override
   List<NaturalLanguage> get languages => const [LangPus(), LangTuk()];
 }
@@ -152,13 +156,6 @@ class CountryAgo extends WorldCountry {
             official: "Republic of Angola",
             common: "Angola",
           ),
-          namesNative: const [
-            CountryName(
-              language: LangPor(),
-              official: "República de Angola",
-              common: "Angola",
-            ),
-          ],
           tld: const [".ao"],
           code: "AGO",
           codeNumeric: "024",
@@ -175,14 +172,6 @@ class CountryAgo extends WorldCountry {
           latLng: const LatLng(-12.5, 18.5),
           bordersCodes: const ["Cog", "Cod", "Zmb", "Nam"],
           areaMetric: 1246700,
-          demonyms: const [
-            Demonyms(language: LangEng(), female: "Angolan", male: "Angolan"),
-            Demonyms(
-              language: LangFra(),
-              female: "Angolaise",
-              male: "Angolais",
-            ),
-          ],
           emoji: "🇦🇴",
           maps: const Maps(
             googleMaps: "q42Qbf1BmQL3fuZg9",
@@ -193,14 +182,29 @@ class CountryAgo extends WorldCountry {
           fifa: "ANG",
           car: const Car(sign: "ANG"),
           timezones: const ["UTC+01:00"],
-          capitalInfo: const CapitalInfo(
-            capital: Capital("Luanda"),
-            latLng: LatLng(-8.83, 13.22),
-          ),
-          regionalBlocs: const [BlocAU()],
         );
   @override
   List<FiatCurrency> get currencies => const [FiatAoa()];
+  @override
+  CapitalInfo get capitalInfo => const CapitalInfo(
+        capital: Capital("Luanda"),
+        latLng: LatLng(-8.83, 13.22),
+      );
+  @override
+  List<RegionalBloc> get regionalBlocs => const [BlocAU()];
+  @override
+  List<Demonyms> get demonyms => const [
+        Demonyms(language: LangEng(), female: "Angolan", male: "Angolan"),
+        Demonyms(language: LangFra(), female: "Angolaise", male: "Angolais"),
+      ];
+  @override
+  List<CountryName> get namesNative => const [
+        CountryName(
+          language: LangPor(),
+          official: "República de Angola",
+          common: "Angola",
+        ),
+      ];
   @override
   List<NaturalLanguage> get languages => const [LangPor()];
 }
@@ -217,13 +221,6 @@ class CountryAia extends WorldCountry {
             official: "Anguilla",
             common: "Anguilla",
           ),
-          namesNative: const [
-            CountryName(
-              language: LangEng(),
-              official: "Anguilla",
-              common: "Anguilla",
-            ),
-          ],
           tld: const [".ai"],
           code: "AIA",
           codeNumeric: "660",
@@ -236,18 +233,6 @@ class CountryAia extends WorldCountry {
           subregion: const Caribbean(),
           latLng: const LatLng(18.25, -63.16666666),
           areaMetric: 91,
-          demonyms: const [
-            Demonyms(
-              language: LangEng(),
-              female: "Anguillian",
-              male: "Anguillian",
-            ),
-            Demonyms(
-              language: LangFra(),
-              female: "Anguillane",
-              male: "Anguillan",
-            ),
-          ],
           emoji: "🇦🇮",
           maps: const Maps(
             googleMaps: "3KgLnEyN7amdno2p9",
@@ -257,13 +242,27 @@ class CountryAia extends WorldCountry {
           fifa: "AIA",
           car: const Car(sign: "GB", isRightSide: false),
           timezones: const ["UTC-04:00"],
-          capitalInfo: const CapitalInfo(
-            capital: Capital("The Valley"),
-            latLng: LatLng(18.22, -63.05),
-          ),
         );
   @override
   List<FiatCurrency> get currencies => const [FiatXcd()];
+  @override
+  CapitalInfo get capitalInfo => const CapitalInfo(
+        capital: Capital("The Valley"),
+        latLng: LatLng(18.22, -63.05),
+      );
+  @override
+  List<Demonyms> get demonyms => const [
+        Demonyms(language: LangEng(), female: "Anguillian", male: "Anguillian"),
+        Demonyms(language: LangFra(), female: "Anguillane", male: "Anguillan"),
+      ];
+  @override
+  List<CountryName> get namesNative => const [
+        CountryName(
+          language: LangEng(),
+          official: "Anguilla",
+          common: "Anguilla",
+        ),
+      ];
   @override
   List<NaturalLanguage> get languages => const [LangEng()];
 }
@@ -280,13 +279,6 @@ class CountryAla extends WorldCountry {
             official: "Åland Islands",
             common: "Åland Islands",
           ),
-          namesNative: const [
-            CountryName(
-              language: LangSwe(),
-              official: "Landskapet Åland",
-              common: "Åland",
-            ),
-          ],
           tld: const [".ax"],
           code: "ALA",
           codeNumeric: "248",
@@ -299,14 +291,6 @@ class CountryAla extends WorldCountry {
           subregion: const NorthernEurope(),
           latLng: const LatLng(60.116667, 19.9),
           areaMetric: 1580,
-          demonyms: const [
-            Demonyms(language: LangEng(), female: "Ålandish", male: "Ålandish"),
-            Demonyms(
-              language: LangFra(),
-              female: "Ålandaise",
-              male: "Ålandais",
-            ),
-          ],
           emoji: "🇦🇽",
           maps: const Maps(
             googleMaps: "ewFb3vYsfUmVCoSb8",
@@ -315,14 +299,29 @@ class CountryAla extends WorldCountry {
           population: 29458,
           car: const Car(),
           timezones: const ["UTC+02:00"],
-          capitalInfo: const CapitalInfo(
-            capital: Capital("Mariehamn"),
-            latLng: LatLng(60.12, 19.9),
-          ),
-          regionalBlocs: const [BlocEU()],
         );
   @override
   List<FiatCurrency> get currencies => const [FiatEur()];
+  @override
+  CapitalInfo get capitalInfo => const CapitalInfo(
+        capital: Capital("Mariehamn"),
+        latLng: LatLng(60.12, 19.9),
+      );
+  @override
+  List<RegionalBloc> get regionalBlocs => const [BlocEU()];
+  @override
+  List<Demonyms> get demonyms => const [
+        Demonyms(language: LangEng(), female: "Ålandish", male: "Ålandish"),
+        Demonyms(language: LangFra(), female: "Ålandaise", male: "Ålandais"),
+      ];
+  @override
+  List<CountryName> get namesNative => const [
+        CountryName(
+          language: LangSwe(),
+          official: "Landskapet Åland",
+          common: "Åland",
+        ),
+      ];
   @override
   List<NaturalLanguage> get languages => const [LangSwe()];
 }
@@ -339,13 +338,6 @@ class CountryAlb extends WorldCountry {
             official: "Republic of Albania",
             common: "Albania",
           ),
-          namesNative: const [
-            CountryName(
-              language: LangSqi(),
-              official: "Republika e Shqipërisë",
-              common: "Shqipëria",
-            ),
-          ],
           tld: const [".al"],
           code: "ALB",
           codeNumeric: "008",
@@ -358,14 +350,6 @@ class CountryAlb extends WorldCountry {
           latLng: const LatLng(41, 20),
           bordersCodes: const ["Mne", "Grc", "Mkd", "Unk"],
           areaMetric: 28748,
-          demonyms: const [
-            Demonyms(language: LangEng(), female: "Albanian", male: "Albanian"),
-            Demonyms(
-              language: LangFra(),
-              female: "Albanaise",
-              male: "Albanais",
-            ),
-          ],
           emoji: "🇦🇱",
           maps: const Maps(
             googleMaps: "BzN9cTuj68ZA8SyZ8",
@@ -376,14 +360,29 @@ class CountryAlb extends WorldCountry {
           fifa: "ALB",
           car: const Car(sign: "AL"),
           timezones: const ["UTC+01:00"],
-          capitalInfo: const CapitalInfo(
-            capital: Capital("Tirana"),
-            latLng: LatLng(41.32, 19.82),
-          ),
-          regionalBlocs: const [BlocCEFTA()],
         );
   @override
   List<FiatCurrency> get currencies => const [FiatAll()];
+  @override
+  CapitalInfo get capitalInfo => const CapitalInfo(
+        capital: Capital("Tirana"),
+        latLng: LatLng(41.32, 19.82),
+      );
+  @override
+  List<RegionalBloc> get regionalBlocs => const [BlocCEFTA()];
+  @override
+  List<Demonyms> get demonyms => const [
+        Demonyms(language: LangEng(), female: "Albanian", male: "Albanian"),
+        Demonyms(language: LangFra(), female: "Albanaise", male: "Albanais"),
+      ];
+  @override
+  List<CountryName> get namesNative => const [
+        CountryName(
+          language: LangSqi(),
+          official: "Republika e Shqipërisë",
+          common: "Shqipëria",
+        ),
+      ];
   @override
   List<NaturalLanguage> get languages => const [LangSqi()];
 }
@@ -400,13 +399,6 @@ class CountryAnd extends WorldCountry {
             official: "Principality of Andorra",
             common: "Andorra",
           ),
-          namesNative: const [
-            CountryName(
-              language: LangCat(),
-              official: "Principat d'Andorra",
-              common: "Andorra",
-            ),
-          ],
           tld: const [".ad"],
           code: "AND",
           codeNumeric: "020",
@@ -424,14 +416,6 @@ class CountryAnd extends WorldCountry {
           landlocked: true,
           bordersCodes: const ["Fra", "Esp"],
           areaMetric: 468,
-          demonyms: const [
-            Demonyms(language: LangEng(), female: "Andorran", male: "Andorran"),
-            Demonyms(
-              language: LangFra(),
-              female: "Andorrane",
-              male: "Andorran",
-            ),
-          ],
           emoji: "🇦🇩",
           maps: const Maps(
             googleMaps: "JqAnacWE2qEznKgw7",
@@ -441,10 +425,6 @@ class CountryAnd extends WorldCountry {
           fifa: "AND",
           car: const Car(sign: "AND"),
           timezones: const ["UTC+01:00"],
-          capitalInfo: const CapitalInfo(
-            capital: Capital("Andorra la Vella"),
-            latLng: LatLng(42.5, 1.52),
-          ),
           postalCode: const PostalCode(
             format: "AD###",
             regExpPattern: r"^(?:AD)*(\d{3})$",
@@ -452,6 +432,24 @@ class CountryAnd extends WorldCountry {
         );
   @override
   List<FiatCurrency> get currencies => const [FiatEur()];
+  @override
+  CapitalInfo get capitalInfo => const CapitalInfo(
+        capital: Capital("Andorra la Vella"),
+        latLng: LatLng(42.5, 1.52),
+      );
+  @override
+  List<Demonyms> get demonyms => const [
+        Demonyms(language: LangEng(), female: "Andorran", male: "Andorran"),
+        Demonyms(language: LangFra(), female: "Andorrane", male: "Andorran"),
+      ];
+  @override
+  List<CountryName> get namesNative => const [
+        CountryName(
+          language: LangCat(),
+          official: "Principat d'Andorra",
+          common: "Andorra",
+        ),
+      ];
   @override
   List<NaturalLanguage> get languages => const [LangCat()];
 }
@@ -468,13 +466,6 @@ class CountryAre extends WorldCountry {
             official: "United Arab Emirates",
             common: "United Arab Emirates",
           ),
-          namesNative: const [
-            CountryName(
-              language: LangAra(),
-              official: "الإمارات العربية المتحدة",
-              common: "دولة الإمارات العربية المتحدة",
-            ),
-          ],
           tld: const [".ae", "امارات."],
           code: "ARE",
           codeNumeric: "784",
@@ -487,10 +478,6 @@ class CountryAre extends WorldCountry {
           latLng: const LatLng(24, 54),
           bordersCodes: const ["Omn", "Sau"],
           areaMetric: 83600,
-          demonyms: const [
-            Demonyms(language: LangEng(), female: "Emirati", male: "Emirati"),
-            Demonyms(language: LangFra(), female: "Emirienne", male: "Emirien"),
-          ],
           emoji: "🇦🇪",
           maps: const Maps(
             googleMaps: "AZZTDA6GzVAnKMVd8",
@@ -502,14 +489,29 @@ class CountryAre extends WorldCountry {
           car: const Car(sign: "UAE"),
           timezones: const ["UTC+04:00"],
           startOfWeek: Weekday.sunday,
-          capitalInfo: const CapitalInfo(
-            capital: Capital("Abu Dhabi"),
-            latLng: LatLng(24.47, 54.37),
-          ),
-          regionalBlocs: const [BlocAL()],
         );
   @override
   List<FiatCurrency> get currencies => const [FiatAed()];
+  @override
+  CapitalInfo get capitalInfo => const CapitalInfo(
+        capital: Capital("Abu Dhabi"),
+        latLng: LatLng(24.47, 54.37),
+      );
+  @override
+  List<RegionalBloc> get regionalBlocs => const [BlocAL()];
+  @override
+  List<Demonyms> get demonyms => const [
+        Demonyms(language: LangEng(), female: "Emirati", male: "Emirati"),
+        Demonyms(language: LangFra(), female: "Emirienne", male: "Emirien"),
+      ];
+  @override
+  List<CountryName> get namesNative => const [
+        CountryName(
+          language: LangAra(),
+          official: "الإمارات العربية المتحدة",
+          common: "دولة الإمارات العربية المتحدة",
+        ),
+      ];
   @override
   List<NaturalLanguage> get languages => const [LangAra()];
 }
@@ -526,18 +528,6 @@ class CountryArg extends WorldCountry {
             official: "Argentine Republic",
             common: "Argentina",
           ),
-          namesNative: const [
-            CountryName(
-              language: LangGrn(),
-              official: "Argentine Republic",
-              common: "Argentina",
-            ),
-            CountryName(
-              language: LangSpa(),
-              official: "República Argentina",
-              common: "Argentina",
-            ),
-          ],
           tld: const [".ar"],
           code: "ARG",
           codeNumeric: "032",
@@ -554,18 +544,6 @@ class CountryArg extends WorldCountry {
           latLng: const LatLng(-34, -64),
           bordersCodes: const ["Bol", "Bra", "Chl", "Pry", "Ury"],
           areaMetric: 2780400,
-          demonyms: const [
-            Demonyms(
-              language: LangEng(),
-              female: "Argentine",
-              male: "Argentine",
-            ),
-            Demonyms(
-              language: LangFra(),
-              female: "Argentine",
-              male: "Argentin",
-            ),
-          ],
           emoji: "🇦🇷",
           maps: const Maps(
             googleMaps: "Z9DXNxhf2o93kvyc6",
@@ -576,18 +554,38 @@ class CountryArg extends WorldCountry {
           fifa: "ARG",
           car: const Car(sign: "RA"),
           timezones: const ["UTC-03:00"],
-          capitalInfo: const CapitalInfo(
-            capital: Capital("Buenos Aires"),
-            latLng: LatLng(-34.58, -58.67),
-          ),
           postalCode: const PostalCode(
             format: "@####@@@",
             regExpPattern: r"^([A-Z]\d{4}[A-Z]{3})$",
           ),
-          regionalBlocs: const [BlocUSAN()],
         );
   @override
   List<FiatCurrency> get currencies => const [FiatArs()];
+  @override
+  CapitalInfo get capitalInfo => const CapitalInfo(
+        capital: Capital("Buenos Aires"),
+        latLng: LatLng(-34.58, -58.67),
+      );
+  @override
+  List<RegionalBloc> get regionalBlocs => const [BlocUSAN()];
+  @override
+  List<Demonyms> get demonyms => const [
+        Demonyms(language: LangEng(), female: "Argentine", male: "Argentine"),
+        Demonyms(language: LangFra(), female: "Argentine", male: "Argentin"),
+      ];
+  @override
+  List<CountryName> get namesNative => const [
+        CountryName(
+          language: LangGrn(),
+          official: "Argentine Republic",
+          common: "Argentina",
+        ),
+        CountryName(
+          language: LangSpa(),
+          official: "República Argentina",
+          common: "Argentina",
+        ),
+      ];
   @override
   List<NaturalLanguage> get languages => const [LangGrn(), LangSpa()];
 }
@@ -604,13 +602,6 @@ class CountryArm extends WorldCountry {
             official: "Republic of Armenia",
             common: "Armenia",
           ),
-          namesNative: const [
-            CountryName(
-              language: LangHye(),
-              official: "Հայաստանի Հանրապետություն",
-              common: "Հայաստան",
-            ),
-          ],
           tld: const [".am"],
           code: "ARM",
           codeNumeric: "051",
@@ -629,14 +620,6 @@ class CountryArm extends WorldCountry {
           landlocked: true,
           bordersCodes: const ["Aze", "Geo", "Irn", "Tur"],
           areaMetric: 29743,
-          demonyms: const [
-            Demonyms(language: LangEng(), female: "Armenian", male: "Armenian"),
-            Demonyms(
-              language: LangFra(),
-              female: "Arménienne",
-              male: "Arménien",
-            ),
-          ],
           emoji: "🇦🇲",
           maps: const Maps(
             googleMaps: "azWUtK9bUQYEyccbA",
@@ -647,16 +630,31 @@ class CountryArm extends WorldCountry {
           fifa: "ARM",
           car: const Car(sign: "AM"),
           timezones: const ["UTC+04:00"],
-          capitalInfo: const CapitalInfo(
-            capital: Capital("Yerevan"),
-            latLng: LatLng(40.17, 44.5),
-          ),
           postalCode:
               const PostalCode(format: "######", regExpPattern: r"^(\d{6})$"),
-          regionalBlocs: const [BlocEEU()],
         );
   @override
   List<FiatCurrency> get currencies => const [FiatAmd()];
+  @override
+  CapitalInfo get capitalInfo => const CapitalInfo(
+        capital: Capital("Yerevan"),
+        latLng: LatLng(40.17, 44.5),
+      );
+  @override
+  List<RegionalBloc> get regionalBlocs => const [BlocEEU()];
+  @override
+  List<Demonyms> get demonyms => const [
+        Demonyms(language: LangEng(), female: "Armenian", male: "Armenian"),
+        Demonyms(language: LangFra(), female: "Arménienne", male: "Arménien"),
+      ];
+  @override
+  List<CountryName> get namesNative => const [
+        CountryName(
+          language: LangHye(),
+          official: "Հայաստանի Հանրապետություն",
+          common: "Հայաստան",
+        ),
+      ];
   @override
   List<NaturalLanguage> get languages => const [LangHye()];
 }
@@ -673,18 +671,6 @@ class CountryAsm extends WorldCountry {
             official: "American Samoa",
             common: "American Samoa",
           ),
-          namesNative: const [
-            CountryName(
-              language: LangEng(),
-              official: "American Samoa",
-              common: "American Samoa",
-            ),
-            CountryName(
-              language: LangSmo(),
-              official: "Sāmoa Amelika",
-              common: "Sāmoa Amelika",
-            ),
-          ],
           tld: const [".as"],
           code: "ASM",
           codeNumeric: "016",
@@ -703,14 +689,6 @@ class CountryAsm extends WorldCountry {
           subregion: const Polynesia(),
           latLng: const LatLng(-14.33333333, -170),
           areaMetric: 199,
-          demonyms: const [
-            Demonyms(
-              language: LangEng(),
-              female: "American Samoan",
-              male: "American Samoan",
-            ),
-            Demonyms(language: LangFra(), female: "Samoane", male: "Samoan"),
-          ],
           emoji: "🇦🇸",
           maps: const Maps(
             googleMaps: "Re9ePMjwP1sFCBFA6",
@@ -721,13 +699,36 @@ class CountryAsm extends WorldCountry {
           car: const Car(sign: "USA"),
           timezones: const ["UTC-11:00"],
           hasCoatOfArms: false,
-          capitalInfo: const CapitalInfo(
-            capital: Capital("Pago Pago"),
-            latLng: LatLng(-14.27, -170.7),
-          ),
         );
   @override
   List<FiatCurrency> get currencies => const [FiatUsd()];
+  @override
+  CapitalInfo get capitalInfo => const CapitalInfo(
+        capital: Capital("Pago Pago"),
+        latLng: LatLng(-14.27, -170.7),
+      );
+  @override
+  List<Demonyms> get demonyms => const [
+        Demonyms(
+          language: LangEng(),
+          female: "American Samoan",
+          male: "American Samoan",
+        ),
+        Demonyms(language: LangFra(), female: "Samoane", male: "Samoan"),
+      ];
+  @override
+  List<CountryName> get namesNative => const [
+        CountryName(
+          language: LangEng(),
+          official: "American Samoa",
+          common: "American Samoa",
+        ),
+        CountryName(
+          language: LangSmo(),
+          official: "Sāmoa Amelika",
+          common: "Sāmoa Amelika",
+        ),
+      ];
   @override
   List<NaturalLanguage> get languages => const [LangEng(), LangSmo()];
 }
@@ -744,13 +745,6 @@ class CountryAta extends WorldCountry {
             official: "Antarctica",
             common: "Antarctica",
           ),
-          namesNative: const [
-            CountryName(
-              language: LangEng(),
-              official: "Antarctica",
-              common: "Antarctica",
-            ),
-          ],
           tld: const [".aq"],
           code: "ATA",
           codeNumeric: "010",
@@ -762,18 +756,6 @@ class CountryAta extends WorldCountry {
           continent: const Antarctica(),
           latLng: const LatLng(-90, 0),
           areaMetric: 14000000,
-          demonyms: const [
-            Demonyms(
-              language: LangEng(),
-              female: "Antarctican",
-              male: "Antarctican",
-            ),
-            Demonyms(
-              language: LangFra(),
-              female: "Antarcticaine",
-              male: "Antarcticain",
-            ),
-          ],
           emoji: "🇦🇶",
           maps: const Maps(
             googleMaps: "kyBuJriu4itiXank7",
@@ -793,6 +775,27 @@ class CountryAta extends WorldCountry {
           ],
         );
   @override
+  List<Demonyms> get demonyms => const [
+        Demonyms(
+          language: LangEng(),
+          female: "Antarctican",
+          male: "Antarctican",
+        ),
+        Demonyms(
+          language: LangFra(),
+          female: "Antarcticaine",
+          male: "Antarcticain",
+        ),
+      ];
+  @override
+  List<CountryName> get namesNative => const [
+        CountryName(
+          language: LangEng(),
+          official: "Antarctica",
+          common: "Antarctica",
+        ),
+      ];
+  @override
   List<NaturalLanguage> get languages => const [LangEng()];
 }
 
@@ -808,14 +811,6 @@ class CountryAtf extends WorldCountry {
             official: "Territory of the French Southern and Antarctic Lands",
             common: "French Southern and Antarctic Lands",
           ),
-          namesNative: const [
-            CountryName(
-              language: LangFra(),
-              official:
-                  "Territoire des Terres australes et antarctiques françaises",
-              common: "Terres australes et antarctiques françaises",
-            ),
-          ],
           tld: const [".tf"],
           code: "ATF",
           codeNumeric: "260",
@@ -827,14 +822,6 @@ class CountryAtf extends WorldCountry {
           continent: const Antarctica(),
           latLng: const LatLng(-49.25, 69.167),
           areaMetric: 7747,
-          demonyms: const [
-            Demonyms(language: LangEng(), female: "French", male: "French"),
-            Demonyms(
-              language: LangFra(),
-              female: "Française",
-              male: "Français",
-            ),
-          ],
           emoji: "🇹🇫",
           maps: const Maps(
             googleMaps: "6ua6CX1m4w1xF2Em7",
@@ -843,14 +830,30 @@ class CountryAtf extends WorldCountry {
           population: 400,
           car: const Car(),
           timezones: const ["UTC+05:00"],
-          capitalInfo: const CapitalInfo(
-            capital: Capital("Port-aux-Français"),
-            latLng: LatLng(48.81, -1.4),
-          ),
-          regionalBlocs: const [BlocAU()],
         );
   @override
   List<FiatCurrency> get currencies => const [FiatEur()];
+  @override
+  CapitalInfo get capitalInfo => const CapitalInfo(
+        capital: Capital("Port-aux-Français"),
+        latLng: LatLng(48.81, -1.4),
+      );
+  @override
+  List<RegionalBloc> get regionalBlocs => const [BlocAU()];
+  @override
+  List<Demonyms> get demonyms => const [
+        Demonyms(language: LangEng(), female: "French", male: "French"),
+        Demonyms(language: LangFra(), female: "Française", male: "Français"),
+      ];
+  @override
+  List<CountryName> get namesNative => const [
+        CountryName(
+          language: LangFra(),
+          official:
+              "Territoire des Terres australes et antarctiques françaises",
+          common: "Terres australes et antarctiques françaises",
+        ),
+      ];
   @override
   List<NaturalLanguage> get languages => const [LangFra()];
 }
@@ -867,13 +870,6 @@ class CountryAtg extends WorldCountry {
             official: "Antigua and Barbuda",
             common: "Antigua and Barbuda",
           ),
-          namesNative: const [
-            CountryName(
-              language: LangEng(),
-              official: "Antigua and Barbuda",
-              common: "Antigua and Barbuda",
-            ),
-          ],
           tld: const [".ag"],
           code: "ATG",
           codeNumeric: "028",
@@ -885,18 +881,6 @@ class CountryAtg extends WorldCountry {
           subregion: const Caribbean(),
           latLng: const LatLng(17.05, -61.8),
           areaMetric: 442,
-          demonyms: const [
-            Demonyms(
-              language: LangEng(),
-              female: "Antiguan, Barbudan",
-              male: "Antiguan, Barbudan",
-            ),
-            Demonyms(
-              language: LangFra(),
-              female: "Antiguaise et barbudienne",
-              male: "Antiguaise et barbudien",
-            ),
-          ],
           emoji: "🇦🇬",
           maps: const Maps(
             googleMaps: "fnye4wGJ1RzC9jpX9",
@@ -906,14 +890,37 @@ class CountryAtg extends WorldCountry {
           fifa: "ATG",
           car: const Car(sign: "AG", isRightSide: false),
           timezones: const ["UTC-04:00"],
-          capitalInfo: const CapitalInfo(
-            capital: Capital("Saint John's"),
-            latLng: LatLng(17.12, -61.85),
-          ),
-          regionalBlocs: const [BlocCARICOM()],
         );
   @override
   List<FiatCurrency> get currencies => const [FiatXcd()];
+  @override
+  CapitalInfo get capitalInfo => const CapitalInfo(
+        capital: Capital("Saint John's"),
+        latLng: LatLng(17.12, -61.85),
+      );
+  @override
+  List<RegionalBloc> get regionalBlocs => const [BlocCARICOM()];
+  @override
+  List<Demonyms> get demonyms => const [
+        Demonyms(
+          language: LangEng(),
+          female: "Antiguan, Barbudan",
+          male: "Antiguan, Barbudan",
+        ),
+        Demonyms(
+          language: LangFra(),
+          female: "Antiguaise et barbudienne",
+          male: "Antiguaise et barbudien",
+        ),
+      ];
+  @override
+  List<CountryName> get namesNative => const [
+        CountryName(
+          language: LangEng(),
+          official: "Antigua and Barbuda",
+          common: "Antigua and Barbuda",
+        ),
+      ];
   @override
   List<NaturalLanguage> get languages => const [LangEng()];
 }
@@ -930,13 +937,6 @@ class CountryAus extends WorldCountry {
             official: "Commonwealth of Australia",
             common: "Australia",
           ),
-          namesNative: const [
-            CountryName(
-              language: LangEng(),
-              official: "Commonwealth of Australia",
-              common: "Australia",
-            ),
-          ],
           tld: const [".au"],
           code: "AUS",
           codeNumeric: "036",
@@ -948,18 +948,6 @@ class CountryAus extends WorldCountry {
           subregion: const AustraliaAndNewZealand(),
           latLng: const LatLng(-27, 133),
           areaMetric: 7692024,
-          demonyms: const [
-            Demonyms(
-              language: LangEng(),
-              female: "Australian",
-              male: "Australian",
-            ),
-            Demonyms(
-              language: LangFra(),
-              female: "Australienne",
-              male: "Australien",
-            ),
-          ],
           emoji: "🇦🇺",
           maps: const Maps(
             googleMaps: "DcjaDa7UbhnZTndH6",
@@ -979,15 +967,33 @@ class CountryAus extends WorldCountry {
             "UTC+10:30",
             "UTC+11:30",
           ],
-          capitalInfo: const CapitalInfo(
-            capital: Capital("Canberra"),
-            latLng: LatLng(-35.27, 149.13),
-          ),
           postalCode:
               const PostalCode(format: "####", regExpPattern: r"^(\d{4})$"),
         );
   @override
   List<FiatCurrency> get currencies => const [FiatAud()];
+  @override
+  CapitalInfo get capitalInfo => const CapitalInfo(
+        capital: Capital("Canberra"),
+        latLng: LatLng(-35.27, 149.13),
+      );
+  @override
+  List<Demonyms> get demonyms => const [
+        Demonyms(language: LangEng(), female: "Australian", male: "Australian"),
+        Demonyms(
+          language: LangFra(),
+          female: "Australienne",
+          male: "Australien",
+        ),
+      ];
+  @override
+  List<CountryName> get namesNative => const [
+        CountryName(
+          language: LangEng(),
+          official: "Commonwealth of Australia",
+          common: "Australia",
+        ),
+      ];
   @override
   List<NaturalLanguage> get languages => const [LangEng()];
 }
@@ -1004,13 +1010,6 @@ class CountryAut extends WorldCountry {
             official: "Republic of Austria",
             common: "Austria",
           ),
-          namesNative: const [
-            CountryName(
-              language: LangDeu(),
-              official: "Republik Österreich",
-              common: "Österreich",
-            ),
-          ],
           tld: const [".at"],
           code: "AUT",
           codeNumeric: "040",
@@ -1033,14 +1032,6 @@ class CountryAut extends WorldCountry {
             "Che",
           ],
           areaMetric: 83871,
-          demonyms: const [
-            Demonyms(language: LangEng(), female: "Austrian", male: "Austrian"),
-            Demonyms(
-              language: LangFra(),
-              female: "Autrichienne",
-              male: "Autrichien",
-            ),
-          ],
           emoji: "🇦🇹",
           maps: const Maps(
             googleMaps: "pCWpWQhznHyRzQcu9",
@@ -1051,16 +1042,35 @@ class CountryAut extends WorldCountry {
           fifa: "AUT",
           car: const Car(sign: "A"),
           timezones: const ["UTC+01:00"],
-          capitalInfo: const CapitalInfo(
-            capital: Capital("Vienna"),
-            latLng: LatLng(48.2, 16.37),
-          ),
           postalCode:
               const PostalCode(format: "####", regExpPattern: r"^(\d{4})$"),
-          regionalBlocs: const [BlocEU()],
         );
   @override
   List<FiatCurrency> get currencies => const [FiatEur()];
+  @override
+  CapitalInfo get capitalInfo => const CapitalInfo(
+        capital: Capital("Vienna"),
+        latLng: LatLng(48.2, 16.37),
+      );
+  @override
+  List<RegionalBloc> get regionalBlocs => const [BlocEU()];
+  @override
+  List<Demonyms> get demonyms => const [
+        Demonyms(language: LangEng(), female: "Austrian", male: "Austrian"),
+        Demonyms(
+          language: LangFra(),
+          female: "Autrichienne",
+          male: "Autrichien",
+        ),
+      ];
+  @override
+  List<CountryName> get namesNative => const [
+        CountryName(
+          language: LangDeu(),
+          official: "Republik Österreich",
+          common: "Österreich",
+        ),
+      ];
   @override
   List<NaturalLanguage> get languages => const [LangDeu()];
 }
@@ -1077,13 +1087,6 @@ class CountryAze extends WorldCountry {
             official: "Republic of Azerbaijan",
             common: "Azerbaijan",
           ),
-          namesNative: const [
-            CountryName(
-              language: LangAze(),
-              official: "Azərbaycan Respublikası",
-              common: "Azərbaycan",
-            ),
-          ],
           tld: const [".az"],
           code: "AZE",
           codeNumeric: "031",
@@ -1101,18 +1104,6 @@ class CountryAze extends WorldCountry {
           landlocked: true,
           bordersCodes: const ["Arm", "Geo", "Irn", "Rus", "Tur"],
           areaMetric: 86600,
-          demonyms: const [
-            Demonyms(
-              language: LangEng(),
-              female: "Azerbaijani",
-              male: "Azerbaijani",
-            ),
-            Demonyms(
-              language: LangFra(),
-              female: "Azerbaïdjanaise",
-              male: "Azerbaïdjanais",
-            ),
-          ],
           emoji: "🇦🇿",
           maps: const Maps(
             googleMaps: "az3Zz7ar2aoB9AUc6",
@@ -1123,10 +1114,6 @@ class CountryAze extends WorldCountry {
           fifa: "AZE",
           car: const Car(sign: "AZ"),
           timezones: const ["UTC+04:00"],
-          capitalInfo: const CapitalInfo(
-            capital: Capital("Baku"),
-            latLng: LatLng(40.38, 49.87),
-          ),
           postalCode: const PostalCode(
             format: "AZ ####",
             regExpPattern: r"^(?:AZ)*(\d{4})$",
@@ -1134,6 +1121,30 @@ class CountryAze extends WorldCountry {
         );
   @override
   List<FiatCurrency> get currencies => const [FiatAzn()];
+  @override
+  CapitalInfo get capitalInfo =>
+      const CapitalInfo(capital: Capital("Baku"), latLng: LatLng(40.38, 49.87));
+  @override
+  List<Demonyms> get demonyms => const [
+        Demonyms(
+          language: LangEng(),
+          female: "Azerbaijani",
+          male: "Azerbaijani",
+        ),
+        Demonyms(
+          language: LangFra(),
+          female: "Azerbaïdjanaise",
+          male: "Azerbaïdjanais",
+        ),
+      ];
+  @override
+  List<CountryName> get namesNative => const [
+        CountryName(
+          language: LangAze(),
+          official: "Azərbaycan Respublikası",
+          common: "Azərbaycan",
+        ),
+      ];
   @override
   List<NaturalLanguage> get languages => const [LangAze()];
 }
@@ -1150,18 +1161,6 @@ class CountryBdi extends WorldCountry {
             official: "Republic of Burundi",
             common: "Burundi",
           ),
-          namesNative: const [
-            CountryName(
-              language: LangFra(),
-              official: "République du Burundi",
-              common: "Burundi",
-            ),
-            CountryName(
-              language: LangRun(),
-              official: "Republika y'Uburundi ",
-              common: "Uburundi",
-            ),
-          ],
           tld: const [".bi"],
           code: "BDI",
           codeNumeric: "108",
@@ -1180,18 +1179,6 @@ class CountryBdi extends WorldCountry {
           landlocked: true,
           bordersCodes: const ["Cod", "Rwa", "Tza"],
           areaMetric: 27834,
-          demonyms: const [
-            Demonyms(
-              language: LangEng(),
-              female: "Burundian",
-              male: "Burundian",
-            ),
-            Demonyms(
-              language: LangFra(),
-              female: "Burundaise",
-              male: "Burundais",
-            ),
-          ],
           emoji: "🇧🇮",
           maps: const Maps(
             googleMaps: "RXPWoRrB9tfrJpUG7",
@@ -1202,14 +1189,34 @@ class CountryBdi extends WorldCountry {
           fifa: "BDI",
           car: const Car(sign: "RU"),
           timezones: const ["UTC+02:00"],
-          capitalInfo: const CapitalInfo(
-            capital: Capital("Gitega"),
-            latLng: LatLng(-3.43, 29.93),
-          ),
-          regionalBlocs: const [BlocAU()],
         );
   @override
   List<FiatCurrency> get currencies => const [FiatBif()];
+  @override
+  CapitalInfo get capitalInfo => const CapitalInfo(
+        capital: Capital("Gitega"),
+        latLng: LatLng(-3.43, 29.93),
+      );
+  @override
+  List<RegionalBloc> get regionalBlocs => const [BlocAU()];
+  @override
+  List<Demonyms> get demonyms => const [
+        Demonyms(language: LangEng(), female: "Burundian", male: "Burundian"),
+        Demonyms(language: LangFra(), female: "Burundaise", male: "Burundais"),
+      ];
+  @override
+  List<CountryName> get namesNative => const [
+        CountryName(
+          language: LangFra(),
+          official: "République du Burundi",
+          common: "Burundi",
+        ),
+        CountryName(
+          language: LangRun(),
+          official: "Republika y'Uburundi ",
+          common: "Uburundi",
+        ),
+      ];
   @override
   List<NaturalLanguage> get languages => const [LangFra(), LangRun()];
 }
@@ -1226,23 +1233,6 @@ class CountryBel extends WorldCountry {
             official: "Kingdom of Belgium",
             common: "Belgium",
           ),
-          namesNative: const [
-            CountryName(
-              language: LangDeu(),
-              official: "Königreich Belgien",
-              common: "Belgien",
-            ),
-            CountryName(
-              language: LangFra(),
-              official: "Royaume de Belgique",
-              common: "Belgique",
-            ),
-            CountryName(
-              language: LangNld(),
-              official: "Koninkrijk België",
-              common: "België",
-            ),
-          ],
           tld: const [".be"],
           code: "BEL",
           codeNumeric: "056",
@@ -1265,10 +1255,6 @@ class CountryBel extends WorldCountry {
           latLng: const LatLng(50.83333333, 4),
           bordersCodes: const ["Fra", "Deu", "Lux", "Nld"],
           areaMetric: 30528,
-          demonyms: const [
-            Demonyms(language: LangEng(), female: "Belgian", male: "Belgian"),
-            Demonyms(language: LangFra(), female: "Belge", male: "Belge"),
-          ],
           emoji: "🇧🇪",
           maps: const Maps(
             googleMaps: "UQQzat85TCtPRXAL8",
@@ -1279,16 +1265,41 @@ class CountryBel extends WorldCountry {
           fifa: "BEL",
           car: const Car(sign: "B"),
           timezones: const ["UTC+01:00"],
-          capitalInfo: const CapitalInfo(
-            capital: Capital("Brussels"),
-            latLng: LatLng(50.83, 4.33),
-          ),
           postalCode:
               const PostalCode(format: "####", regExpPattern: r"^(\d{4})$"),
-          regionalBlocs: const [BlocEU()],
         );
   @override
   List<FiatCurrency> get currencies => const [FiatEur()];
+  @override
+  CapitalInfo get capitalInfo => const CapitalInfo(
+        capital: Capital("Brussels"),
+        latLng: LatLng(50.83, 4.33),
+      );
+  @override
+  List<RegionalBloc> get regionalBlocs => const [BlocEU()];
+  @override
+  List<Demonyms> get demonyms => const [
+        Demonyms(language: LangEng(), female: "Belgian", male: "Belgian"),
+        Demonyms(language: LangFra(), female: "Belge", male: "Belge"),
+      ];
+  @override
+  List<CountryName> get namesNative => const [
+        CountryName(
+          language: LangDeu(),
+          official: "Königreich Belgien",
+          common: "Belgien",
+        ),
+        CountryName(
+          language: LangFra(),
+          official: "Royaume de Belgique",
+          common: "Belgique",
+        ),
+        CountryName(
+          language: LangNld(),
+          official: "Koninkrijk België",
+          common: "België",
+        ),
+      ];
   @override
   List<NaturalLanguage> get languages =>
       const [LangDeu(), LangFra(), LangNld()];
@@ -1306,13 +1317,6 @@ class CountryBen extends WorldCountry {
             official: "Republic of Benin",
             common: "Benin",
           ),
-          namesNative: const [
-            CountryName(
-              language: LangFra(),
-              official: "République du Bénin",
-              common: "Bénin",
-            ),
-          ],
           tld: const [".bj"],
           code: "BEN",
           codeNumeric: "204",
@@ -1329,14 +1333,6 @@ class CountryBen extends WorldCountry {
           latLng: const LatLng(9.5, 2.25),
           bordersCodes: const ["Bfa", "Ner", "Nga", "Tgo"],
           areaMetric: 112622,
-          demonyms: const [
-            Demonyms(language: LangEng(), female: "Beninese", male: "Beninese"),
-            Demonyms(
-              language: LangFra(),
-              female: "Béninoise",
-              male: "Béninois",
-            ),
-          ],
           emoji: "🇧🇯",
           maps: const Maps(
             googleMaps: "uMw1BsHEXQYgVFFu6",
@@ -1347,14 +1343,29 @@ class CountryBen extends WorldCountry {
           fifa: "BEN",
           car: const Car(sign: "DY"),
           timezones: const ["UTC+01:00"],
-          capitalInfo: const CapitalInfo(
-            capital: Capital("Porto-Novo"),
-            latLng: LatLng(6.48, 2.62),
-          ),
-          regionalBlocs: const [BlocAU()],
         );
   @override
   List<FiatCurrency> get currencies => const [FiatXof()];
+  @override
+  CapitalInfo get capitalInfo => const CapitalInfo(
+        capital: Capital("Porto-Novo"),
+        latLng: LatLng(6.48, 2.62),
+      );
+  @override
+  List<RegionalBloc> get regionalBlocs => const [BlocAU()];
+  @override
+  List<Demonyms> get demonyms => const [
+        Demonyms(language: LangEng(), female: "Beninese", male: "Beninese"),
+        Demonyms(language: LangFra(), female: "Béninoise", male: "Béninois"),
+      ];
+  @override
+  List<CountryName> get namesNative => const [
+        CountryName(
+          language: LangFra(),
+          official: "République du Bénin",
+          common: "Bénin",
+        ),
+      ];
   @override
   List<NaturalLanguage> get languages => const [LangFra()];
 }
@@ -1371,13 +1382,6 @@ class CountryBes extends WorldCountry {
             official: "Bonaire, Sint Eustatius and Saba",
             common: "Caribbean Netherlands",
           ),
-          namesNative: const [
-            CountryName(
-              language: LangNld(),
-              official: "Bonaire, Sint Eustatius en Saba",
-              common: "Caribisch Nederland",
-            ),
-          ],
           tld: const [".bq", ".nl"],
           code: "BES",
           codeNumeric: "535",
@@ -1390,14 +1394,6 @@ class CountryBes extends WorldCountry {
           subregion: const Caribbean(),
           latLng: const LatLng(12.18, -68.25),
           areaMetric: 328,
-          demonyms: const [
-            Demonyms(language: LangEng(), female: "Dutch", male: "Dutch"),
-            Demonyms(
-              language: LangFra(),
-              female: "Néerlandaise",
-              male: "Néerlandais",
-            ),
-          ],
           emoji: "🇧🇶",
           maps: const Maps(
             googleMaps: "4XVes1P6uEDTz77WA",
@@ -1406,13 +1402,31 @@ class CountryBes extends WorldCountry {
           population: 25987,
           car: const Car(),
           timezones: const ["UTC-04:00"],
-          capitalInfo: const CapitalInfo(
-            capital: Capital("Kralendijk"),
-            latLng: LatLng(12.14, -68.27),
-          ),
         );
   @override
   List<FiatCurrency> get currencies => const [FiatUsd()];
+  @override
+  CapitalInfo get capitalInfo => const CapitalInfo(
+        capital: Capital("Kralendijk"),
+        latLng: LatLng(12.14, -68.27),
+      );
+  @override
+  List<Demonyms> get demonyms => const [
+        Demonyms(language: LangEng(), female: "Dutch", male: "Dutch"),
+        Demonyms(
+          language: LangFra(),
+          female: "Néerlandaise",
+          male: "Néerlandais",
+        ),
+      ];
+  @override
+  List<CountryName> get namesNative => const [
+        CountryName(
+          language: LangNld(),
+          official: "Bonaire, Sint Eustatius en Saba",
+          common: "Caribisch Nederland",
+        ),
+      ];
   @override
   List<NaturalLanguage> get languages => const [LangEng(), LangNld()];
 }
@@ -1429,13 +1443,6 @@ class CountryBfa extends WorldCountry {
             official: "Burkina Faso",
             common: "Burkina Faso",
           ),
-          namesNative: const [
-            CountryName(
-              language: LangFra(),
-              official: "République du Burkina",
-              common: "Burkina Faso",
-            ),
-          ],
           tld: const [".bf"],
           code: "BFA",
           codeNumeric: "854",
@@ -1449,18 +1456,6 @@ class CountryBfa extends WorldCountry {
           landlocked: true,
           bordersCodes: const ["Ben", "Civ", "Gha", "Mli", "Ner", "Tgo"],
           areaMetric: 272967,
-          demonyms: const [
-            Demonyms(
-              language: LangEng(),
-              female: "Burkinabe",
-              male: "Burkinabe",
-            ),
-            Demonyms(
-              language: LangFra(),
-              female: "Burkinabée",
-              male: "Burkinabé",
-            ),
-          ],
           emoji: "🇧🇫",
           maps: const Maps(
             googleMaps: "rKRmpcMbFher2ozb7",
@@ -1471,14 +1466,29 @@ class CountryBfa extends WorldCountry {
           fifa: "BFA",
           car: const Car(sign: "BF"),
           timezones: const ["UTC+00:00"],
-          capitalInfo: const CapitalInfo(
-            capital: Capital("Ouagadougou"),
-            latLng: LatLng(12.37, -1.52),
-          ),
-          regionalBlocs: const [BlocAU()],
         );
   @override
   List<FiatCurrency> get currencies => const [FiatXof()];
+  @override
+  CapitalInfo get capitalInfo => const CapitalInfo(
+        capital: Capital("Ouagadougou"),
+        latLng: LatLng(12.37, -1.52),
+      );
+  @override
+  List<RegionalBloc> get regionalBlocs => const [BlocAU()];
+  @override
+  List<Demonyms> get demonyms => const [
+        Demonyms(language: LangEng(), female: "Burkinabe", male: "Burkinabe"),
+        Demonyms(language: LangFra(), female: "Burkinabée", male: "Burkinabé"),
+      ];
+  @override
+  List<CountryName> get namesNative => const [
+        CountryName(
+          language: LangFra(),
+          official: "République du Burkina",
+          common: "Burkina Faso",
+        ),
+      ];
   @override
   List<NaturalLanguage> get languages => const [LangFra()];
 }
@@ -1495,13 +1505,6 @@ class CountryBgd extends WorldCountry {
             official: "People's Republic of Bangladesh",
             common: "Bangladesh",
           ),
-          namesNative: const [
-            CountryName(
-              language: LangBen(),
-              official: "বাংলাদেশ গণপ্রজাতন্ত্রী",
-              common: "বাংলাদেশ",
-            ),
-          ],
           tld: const [".bd"],
           code: "BGD",
           codeNumeric: "050",
@@ -1518,18 +1521,6 @@ class CountryBgd extends WorldCountry {
           latLng: const LatLng(24, 90),
           bordersCodes: const ["Mmr", "Ind"],
           areaMetric: 147570,
-          demonyms: const [
-            Demonyms(
-              language: LangEng(),
-              female: "Bangladeshi",
-              male: "Bangladeshi",
-            ),
-            Demonyms(
-              language: LangFra(),
-              female: "Bangladaise",
-              male: "Bangladais",
-            ),
-          ],
           emoji: "🇧🇩",
           maps: const Maps(
             googleMaps: "op6gmLbHcvv6rLhH6",
@@ -1541,16 +1532,37 @@ class CountryBgd extends WorldCountry {
           car: const Car(sign: "BD", isRightSide: false),
           timezones: const ["UTC+06:00"],
           startOfWeek: Weekday.sunday,
-          capitalInfo: const CapitalInfo(
-            capital: Capital("Dhaka"),
-            latLng: LatLng(23.72, 90.4),
-          ),
           postalCode:
               const PostalCode(format: "####", regExpPattern: r"^(\d{4})$"),
-          regionalBlocs: const [BlocSAARC()],
         );
   @override
   List<FiatCurrency> get currencies => const [FiatBdt()];
+  @override
+  CapitalInfo get capitalInfo =>
+      const CapitalInfo(capital: Capital("Dhaka"), latLng: LatLng(23.72, 90.4));
+  @override
+  List<RegionalBloc> get regionalBlocs => const [BlocSAARC()];
+  @override
+  List<Demonyms> get demonyms => const [
+        Demonyms(
+          language: LangEng(),
+          female: "Bangladeshi",
+          male: "Bangladeshi",
+        ),
+        Demonyms(
+          language: LangFra(),
+          female: "Bangladaise",
+          male: "Bangladais",
+        ),
+      ];
+  @override
+  List<CountryName> get namesNative => const [
+        CountryName(
+          language: LangBen(),
+          official: "বাংলাদেশ গণপ্রজাতন্ত্রী",
+          common: "বাংলাদেশ",
+        ),
+      ];
   @override
   List<NaturalLanguage> get languages => const [LangBen()];
 }
@@ -1567,13 +1579,6 @@ class CountryBgr extends WorldCountry {
             official: "Republic of Bulgaria",
             common: "Bulgaria",
           ),
-          namesNative: const [
-            CountryName(
-              language: LangBul(),
-              official: "Република България",
-              common: "България",
-            ),
-          ],
           tld: const [".bg"],
           code: "BGR",
           codeNumeric: "100",
@@ -1590,14 +1595,6 @@ class CountryBgr extends WorldCountry {
           latLng: const LatLng(43, 25),
           bordersCodes: const ["Grc", "Mkd", "Rou", "Srb", "Tur"],
           areaMetric: 110879,
-          demonyms: const [
-            Demonyms(
-              language: LangEng(),
-              female: "Bulgarian",
-              male: "Bulgarian",
-            ),
-            Demonyms(language: LangFra(), female: "Bulgare", male: "Bulgare"),
-          ],
           emoji: "🇧🇬",
           maps: const Maps(
             googleMaps: "F5uAhDGWzc3BrHfm9",
@@ -1608,16 +1605,31 @@ class CountryBgr extends WorldCountry {
           fifa: "BUL",
           car: const Car(sign: "BG"),
           timezones: const ["UTC+02:00"],
-          capitalInfo: const CapitalInfo(
-            capital: Capital("Sofia"),
-            latLng: LatLng(42.68, 23.32),
-          ),
           postalCode:
               const PostalCode(format: "####", regExpPattern: r"^(\d{4})$"),
-          regionalBlocs: const [BlocEU()],
         );
   @override
   List<FiatCurrency> get currencies => const [FiatBgn()];
+  @override
+  CapitalInfo get capitalInfo => const CapitalInfo(
+        capital: Capital("Sofia"),
+        latLng: LatLng(42.68, 23.32),
+      );
+  @override
+  List<RegionalBloc> get regionalBlocs => const [BlocEU()];
+  @override
+  List<Demonyms> get demonyms => const [
+        Demonyms(language: LangEng(), female: "Bulgarian", male: "Bulgarian"),
+        Demonyms(language: LangFra(), female: "Bulgare", male: "Bulgare"),
+      ];
+  @override
+  List<CountryName> get namesNative => const [
+        CountryName(
+          language: LangBul(),
+          official: "Република България",
+          common: "България",
+        ),
+      ];
   @override
   List<NaturalLanguage> get languages => const [LangBul()];
 }
@@ -1634,13 +1646,6 @@ class CountryBhr extends WorldCountry {
             official: "Kingdom of Bahrain",
             common: "Bahrain",
           ),
-          namesNative: const [
-            CountryName(
-              language: LangAra(),
-              official: "مملكة البحرين",
-              common: "‏البحرين",
-            ),
-          ],
           tld: const [".bh"],
           code: "BHR",
           codeNumeric: "048",
@@ -1656,14 +1661,6 @@ class CountryBhr extends WorldCountry {
           subregion: const WesternAsia(),
           latLng: const LatLng(26, 50.55),
           areaMetric: 765,
-          demonyms: const [
-            Demonyms(language: LangEng(), female: "Bahraini", male: "Bahraini"),
-            Demonyms(
-              language: LangFra(),
-              female: "Bahreïnienne",
-              male: "Bahreïnien",
-            ),
-          ],
           emoji: "🇧🇭",
           maps: const Maps(
             googleMaps: "5Zue99Zc6vFBHxzJ7",
@@ -1673,18 +1670,37 @@ class CountryBhr extends WorldCountry {
           fifa: "BHR",
           car: const Car(sign: "BRN"),
           timezones: const ["UTC+03:00"],
-          capitalInfo: const CapitalInfo(
-            capital: Capital("Manama"),
-            latLng: LatLng(26.23, 50.57),
-          ),
           postalCode: const PostalCode(
             format: "####|###",
             regExpPattern: r"^(\d{3}\d?)$",
           ),
-          regionalBlocs: const [BlocAL()],
         );
   @override
   List<FiatCurrency> get currencies => const [FiatBhd()];
+  @override
+  CapitalInfo get capitalInfo => const CapitalInfo(
+        capital: Capital("Manama"),
+        latLng: LatLng(26.23, 50.57),
+      );
+  @override
+  List<RegionalBloc> get regionalBlocs => const [BlocAL()];
+  @override
+  List<Demonyms> get demonyms => const [
+        Demonyms(language: LangEng(), female: "Bahraini", male: "Bahraini"),
+        Demonyms(
+          language: LangFra(),
+          female: "Bahreïnienne",
+          male: "Bahreïnien",
+        ),
+      ];
+  @override
+  List<CountryName> get namesNative => const [
+        CountryName(
+          language: LangAra(),
+          official: "مملكة البحرين",
+          common: "‏البحرين",
+        ),
+      ];
   @override
   List<NaturalLanguage> get languages => const [LangAra()];
 }
@@ -1701,13 +1717,6 @@ class CountryBhs extends WorldCountry {
             official: "Commonwealth of the Bahamas",
             common: "Bahamas",
           ),
-          namesNative: const [
-            CountryName(
-              language: LangEng(),
-              official: "Commonwealth of the Bahamas",
-              common: "Bahamas",
-            ),
-          ],
           tld: const [".bs"],
           code: "BHS",
           codeNumeric: "044",
@@ -1719,14 +1728,6 @@ class CountryBhs extends WorldCountry {
           subregion: const Caribbean(),
           latLng: const LatLng(25.0343, -77.3963),
           areaMetric: 13943,
-          demonyms: const [
-            Demonyms(language: LangEng(), female: "Bahamian", male: "Bahamian"),
-            Demonyms(
-              language: LangFra(),
-              female: "Bahamienne",
-              male: "Bahamien",
-            ),
-          ],
           emoji: "🇧🇸",
           maps: const Maps(
             googleMaps: "1YzRs1BZrG8p8pmVA",
@@ -1736,14 +1737,29 @@ class CountryBhs extends WorldCountry {
           fifa: "BAH",
           car: const Car(sign: "BS", isRightSide: false),
           timezones: const ["UTC-05:00"],
-          capitalInfo: const CapitalInfo(
-            capital: Capital("Nassau"),
-            latLng: LatLng(25.08, -77.35),
-          ),
-          regionalBlocs: const [BlocCARICOM()],
         );
   @override
   List<FiatCurrency> get currencies => const [FiatBsd(), FiatUsd()];
+  @override
+  CapitalInfo get capitalInfo => const CapitalInfo(
+        capital: Capital("Nassau"),
+        latLng: LatLng(25.08, -77.35),
+      );
+  @override
+  List<RegionalBloc> get regionalBlocs => const [BlocCARICOM()];
+  @override
+  List<Demonyms> get demonyms => const [
+        Demonyms(language: LangEng(), female: "Bahamian", male: "Bahamian"),
+        Demonyms(language: LangFra(), female: "Bahamienne", male: "Bahamien"),
+      ];
+  @override
+  List<CountryName> get namesNative => const [
+        CountryName(
+          language: LangEng(),
+          official: "Commonwealth of the Bahamas",
+          common: "Bahamas",
+        ),
+      ];
   @override
   List<NaturalLanguage> get languages => const [LangEng()];
 }
@@ -1760,23 +1776,6 @@ class CountryBih extends WorldCountry {
             official: "Bosnia and Herzegovina",
             common: "Bosnia and Herzegovina",
           ),
-          namesNative: const [
-            CountryName(
-              language: LangBos(),
-              official: "Bosna i Hercegovina",
-              common: "Bosna i Hercegovina",
-            ),
-            CountryName(
-              language: LangHrv(),
-              official: "Bosna i Hercegovina",
-              common: "Bosna i Hercegovina",
-            ),
-            CountryName(
-              language: LangSrp(),
-              official: "Боснa и Херцеговина",
-              common: "Боснa и Херцеговина",
-            ),
-          ],
           tld: const [".ba"],
           code: "BIH",
           codeNumeric: "070",
@@ -1793,14 +1792,6 @@ class CountryBih extends WorldCountry {
           latLng: const LatLng(44, 18),
           bordersCodes: const ["Hrv", "Mne", "Srb"],
           areaMetric: 51209,
-          demonyms: const [
-            Demonyms(
-              language: LangEng(),
-              female: "Bosnian, Herzegovinian",
-              male: "Bosnian, Herzegovinian",
-            ),
-            Demonyms(language: LangFra(), female: "Bosnienne", male: "Bosnien"),
-          ],
           emoji: "🇧🇦",
           maps: const Maps(
             googleMaps:
@@ -1812,15 +1803,44 @@ class CountryBih extends WorldCountry {
           fifa: "BIH",
           car: const Car(sign: "BIH"),
           timezones: const ["UTC+01:00"],
-          capitalInfo: const CapitalInfo(
-            capital: Capital("Sarajevo"),
-            latLng: LatLng(43.87, 18.42),
-          ),
           postalCode: const PostalCode(),
-          regionalBlocs: const [BlocCEFTA()],
         );
   @override
   List<FiatCurrency> get currencies => const [FiatBam()];
+  @override
+  CapitalInfo get capitalInfo => const CapitalInfo(
+        capital: Capital("Sarajevo"),
+        latLng: LatLng(43.87, 18.42),
+      );
+  @override
+  List<RegionalBloc> get regionalBlocs => const [BlocCEFTA()];
+  @override
+  List<Demonyms> get demonyms => const [
+        Demonyms(
+          language: LangEng(),
+          female: "Bosnian, Herzegovinian",
+          male: "Bosnian, Herzegovinian",
+        ),
+        Demonyms(language: LangFra(), female: "Bosnienne", male: "Bosnien"),
+      ];
+  @override
+  List<CountryName> get namesNative => const [
+        CountryName(
+          language: LangBos(),
+          official: "Bosna i Hercegovina",
+          common: "Bosna i Hercegovina",
+        ),
+        CountryName(
+          language: LangHrv(),
+          official: "Bosna i Hercegovina",
+          common: "Bosna i Hercegovina",
+        ),
+        CountryName(
+          language: LangSrp(),
+          official: "Боснa и Херцеговина",
+          common: "Боснa и Херцеговина",
+        ),
+      ];
   @override
   List<NaturalLanguage> get languages =>
       const [LangBos(), LangHrv(), LangSrp()];
@@ -1838,13 +1858,6 @@ class CountryBlm extends WorldCountry {
             official: "Collectivity of Saint Barthélemy",
             common: "Saint Barthélemy",
           ),
-          namesNative: const [
-            CountryName(
-              language: LangFra(),
-              official: "Collectivité de Saint-Barthélemy",
-              common: "Saint-Barthélemy",
-            ),
-          ],
           tld: const [".bl"],
           code: "BLM",
           codeNumeric: "652",
@@ -1862,18 +1875,6 @@ class CountryBlm extends WorldCountry {
           subregion: const Caribbean(),
           latLng: const LatLng(18.5, -63.41666666),
           areaMetric: 21,
-          demonyms: const [
-            Demonyms(
-              language: LangEng(),
-              female: "Saint Barthélemy Islander",
-              male: "Saint Barthélemy Islander",
-            ),
-            Demonyms(
-              language: LangFra(),
-              female: "Barthéloméenne",
-              male: "Barthéloméen",
-            ),
-          ],
           emoji: "🇧🇱",
           maps: const Maps(
             googleMaps: "Mc7GqH466S7AAk297",
@@ -1883,14 +1884,36 @@ class CountryBlm extends WorldCountry {
           car: const Car(sign: "F"),
           timezones: const ["UTC-04:00"],
           hasCoatOfArms: false,
-          capitalInfo: const CapitalInfo(
-            capital: Capital("Gustavia"),
-            latLng: LatLng(17.88, -62.85),
-          ),
           postalCode: const PostalCode(),
         );
   @override
   List<FiatCurrency> get currencies => const [FiatEur()];
+  @override
+  CapitalInfo get capitalInfo => const CapitalInfo(
+        capital: Capital("Gustavia"),
+        latLng: LatLng(17.88, -62.85),
+      );
+  @override
+  List<Demonyms> get demonyms => const [
+        Demonyms(
+          language: LangEng(),
+          female: "Saint Barthélemy Islander",
+          male: "Saint Barthélemy Islander",
+        ),
+        Demonyms(
+          language: LangFra(),
+          female: "Barthéloméenne",
+          male: "Barthéloméen",
+        ),
+      ];
+  @override
+  List<CountryName> get namesNative => const [
+        CountryName(
+          language: LangFra(),
+          official: "Collectivité de Saint-Barthélemy",
+          common: "Saint-Barthélemy",
+        ),
+      ];
   @override
   List<NaturalLanguage> get languages => const [LangFra()];
 }
@@ -1907,18 +1930,6 @@ class CountryBlr extends WorldCountry {
             official: "Republic of Belarus",
             common: "Belarus",
           ),
-          namesNative: const [
-            CountryName(
-              language: LangBel(),
-              official: "Рэспубліка Беларусь",
-              common: "Беларусь",
-            ),
-            CountryName(
-              language: LangRus(),
-              official: "Республика Беларусь",
-              common: "Беларусь",
-            ),
-          ],
           tld: const [".by"],
           code: "BLR",
           codeNumeric: "112",
@@ -1938,18 +1949,6 @@ class CountryBlr extends WorldCountry {
           landlocked: true,
           bordersCodes: const ["Lva", "Ltu", "Pol", "Rus", "Ukr"],
           areaMetric: 207600,
-          demonyms: const [
-            Demonyms(
-              language: LangEng(),
-              female: "Belarusian",
-              male: "Belarusian",
-            ),
-            Demonyms(
-              language: LangFra(),
-              female: "Biélorusse",
-              male: "Biélorusse",
-            ),
-          ],
           emoji: "🇧🇾",
           maps: const Maps(
             googleMaps: "PJUDU3EBPSszCQcu6",
@@ -1960,16 +1959,34 @@ class CountryBlr extends WorldCountry {
           fifa: "BLR",
           car: const Car(sign: "BY"),
           timezones: const ["UTC+03:00"],
-          capitalInfo: const CapitalInfo(
-            capital: Capital("Minsk"),
-            latLng: LatLng(53.9, 27.57),
-          ),
           postalCode:
               const PostalCode(format: "######", regExpPattern: r"^(\d{6})$"),
-          regionalBlocs: const [BlocEEU()],
         );
   @override
   List<FiatCurrency> get currencies => const [FiatByn()];
+  @override
+  CapitalInfo get capitalInfo =>
+      const CapitalInfo(capital: Capital("Minsk"), latLng: LatLng(53.9, 27.57));
+  @override
+  List<RegionalBloc> get regionalBlocs => const [BlocEEU()];
+  @override
+  List<Demonyms> get demonyms => const [
+        Demonyms(language: LangEng(), female: "Belarusian", male: "Belarusian"),
+        Demonyms(language: LangFra(), female: "Biélorusse", male: "Biélorusse"),
+      ];
+  @override
+  List<CountryName> get namesNative => const [
+        CountryName(
+          language: LangBel(),
+          official: "Рэспубліка Беларусь",
+          common: "Беларусь",
+        ),
+        CountryName(
+          language: LangRus(),
+          official: "Республика Беларусь",
+          common: "Беларусь",
+        ),
+      ];
   @override
   List<NaturalLanguage> get languages => const [LangBel(), LangRus()];
 }
@@ -1986,18 +2003,6 @@ class CountryBlz extends WorldCountry {
             official: "Belize",
             common: "Belize",
           ),
-          namesNative: const [
-            CountryName(
-              language: LangEng(),
-              official: "Belize",
-              common: "Belize",
-            ),
-            CountryName(
-              language: LangSpa(),
-              official: "Belice",
-              common: "Belice",
-            ),
-          ],
           tld: const [".bz"],
           code: "BLZ",
           codeNumeric: "084",
@@ -2010,14 +2015,6 @@ class CountryBlz extends WorldCountry {
           latLng: const LatLng(17.25, -88.75),
           bordersCodes: const ["Gtm", "Mex"],
           areaMetric: 22966,
-          demonyms: const [
-            Demonyms(language: LangEng(), female: "Belizean", male: "Belizean"),
-            Demonyms(
-              language: LangFra(),
-              female: "Bélizienne",
-              male: "Bélizien",
-            ),
-          ],
           emoji: "🇧🇿",
           maps: const Maps(
             googleMaps: "jdCccpdLodm1uTmo9",
@@ -2028,14 +2025,26 @@ class CountryBlz extends WorldCountry {
           fifa: "BLZ",
           car: const Car(sign: "BH"),
           timezones: const ["UTC-06:00"],
-          capitalInfo: const CapitalInfo(
-            capital: Capital("Belmopan"),
-            latLng: LatLng(17.25, -88.77),
-          ),
-          regionalBlocs: const [BlocCARICOM(), BlocCAIS()],
         );
   @override
   List<FiatCurrency> get currencies => const [FiatBzd()];
+  @override
+  CapitalInfo get capitalInfo => const CapitalInfo(
+        capital: Capital("Belmopan"),
+        latLng: LatLng(17.25, -88.77),
+      );
+  @override
+  List<RegionalBloc> get regionalBlocs => const [BlocCARICOM(), BlocCAIS()];
+  @override
+  List<Demonyms> get demonyms => const [
+        Demonyms(language: LangEng(), female: "Belizean", male: "Belizean"),
+        Demonyms(language: LangFra(), female: "Bélizienne", male: "Bélizien"),
+      ];
+  @override
+  List<CountryName> get namesNative => const [
+        CountryName(language: LangEng(), official: "Belize", common: "Belize"),
+        CountryName(language: LangSpa(), official: "Belice", common: "Belice"),
+      ];
   @override
   List<NaturalLanguage> get languages => const [LangEng(), LangSpa()];
 }
@@ -2052,13 +2061,6 @@ class CountryBmu extends WorldCountry {
             official: "Bermuda",
             common: "Bermuda",
           ),
-          namesNative: const [
-            CountryName(
-              language: LangEng(),
-              official: "Bermuda",
-              common: "Bermuda",
-            ),
-          ],
           tld: const [".bm"],
           code: "BMU",
           codeNumeric: "060",
@@ -2077,18 +2079,6 @@ class CountryBmu extends WorldCountry {
           subregion: const NorthAmerica(),
           latLng: const LatLng(32.33333333, -64.75),
           areaMetric: 54,
-          demonyms: const [
-            Demonyms(
-              language: LangEng(),
-              female: "Bermudian",
-              male: "Bermudian",
-            ),
-            Demonyms(
-              language: LangFra(),
-              female: "Bermudienne",
-              male: "Bermudien",
-            ),
-          ],
           emoji: "🇧🇲",
           maps: const Maps(
             googleMaps: "NLsRGNjTzDghTtAJA",
@@ -2098,10 +2088,6 @@ class CountryBmu extends WorldCountry {
           fifa: "BER",
           car: const Car(sign: "GB", isRightSide: false),
           timezones: const ["UTC-04:00"],
-          capitalInfo: const CapitalInfo(
-            capital: Capital("Hamilton"),
-            latLng: LatLng(32.28, -64.78),
-          ),
           postalCode: const PostalCode(
             format: "@@ ##",
             regExpPattern: r"^([A-Z]{2}\d{2})$",
@@ -2109,6 +2095,24 @@ class CountryBmu extends WorldCountry {
         );
   @override
   List<FiatCurrency> get currencies => const [FiatBmd()];
+  @override
+  CapitalInfo get capitalInfo => const CapitalInfo(
+        capital: Capital("Hamilton"),
+        latLng: LatLng(32.28, -64.78),
+      );
+  @override
+  List<Demonyms> get demonyms => const [
+        Demonyms(language: LangEng(), female: "Bermudian", male: "Bermudian"),
+        Demonyms(language: LangFra(), female: "Bermudienne", male: "Bermudien"),
+      ];
+  @override
+  List<CountryName> get namesNative => const [
+        CountryName(
+          language: LangEng(),
+          official: "Bermuda",
+          common: "Bermuda",
+        ),
+      ];
   @override
   List<NaturalLanguage> get languages => const [LangEng()];
 }
@@ -2125,28 +2129,6 @@ class CountryBol extends WorldCountry {
             official: "Plurinational State of Bolivia",
             common: "Bolivia",
           ),
-          namesNative: const [
-            CountryName(
-              language: LangAym(),
-              official: "Wuliwya Suyu",
-              common: "Wuliwya",
-            ),
-            CountryName(
-              language: LangGrn(),
-              official: "Tetã Volívia",
-              common: "Volívia",
-            ),
-            CountryName(
-              language: LangQue(),
-              official: "Buliwya Mamallaqta",
-              common: "Buliwya",
-            ),
-            CountryName(
-              language: LangSpa(),
-              official: "Estado Plurinacional de Bolivia",
-              common: "Bolivia",
-            ),
-          ],
           tld: const [".bo"],
           code: "BOL",
           codeNumeric: "068",
@@ -2170,14 +2152,6 @@ class CountryBol extends WorldCountry {
           landlocked: true,
           bordersCodes: const ["Arg", "Bra", "Chl", "Pry", "Per"],
           areaMetric: 1098581,
-          demonyms: const [
-            Demonyms(language: LangEng(), female: "Bolivian", male: "Bolivian"),
-            Demonyms(
-              language: LangFra(),
-              female: "Bolivienne",
-              male: "Bolivien",
-            ),
-          ],
           emoji: "🇧🇴",
           maps: const Maps(
             googleMaps: "9DfnyfbxNM2g5U9b9",
@@ -2188,14 +2162,44 @@ class CountryBol extends WorldCountry {
           fifa: "BOL",
           car: const Car(sign: "BOL"),
           timezones: const ["UTC-04:00"],
-          capitalInfo: const CapitalInfo(
-            capital: Capital("Sucre"),
-            latLng: LatLng(-19.02, -65.26),
-          ),
-          regionalBlocs: const [BlocUSAN()],
         );
   @override
   List<FiatCurrency> get currencies => const [FiatBob()];
+  @override
+  CapitalInfo get capitalInfo => const CapitalInfo(
+        capital: Capital("Sucre"),
+        latLng: LatLng(-19.02, -65.26),
+      );
+  @override
+  List<RegionalBloc> get regionalBlocs => const [BlocUSAN()];
+  @override
+  List<Demonyms> get demonyms => const [
+        Demonyms(language: LangEng(), female: "Bolivian", male: "Bolivian"),
+        Demonyms(language: LangFra(), female: "Bolivienne", male: "Bolivien"),
+      ];
+  @override
+  List<CountryName> get namesNative => const [
+        CountryName(
+          language: LangAym(),
+          official: "Wuliwya Suyu",
+          common: "Wuliwya",
+        ),
+        CountryName(
+          language: LangGrn(),
+          official: "Tetã Volívia",
+          common: "Volívia",
+        ),
+        CountryName(
+          language: LangQue(),
+          official: "Buliwya Mamallaqta",
+          common: "Buliwya",
+        ),
+        CountryName(
+          language: LangSpa(),
+          official: "Estado Plurinacional de Bolivia",
+          common: "Bolivia",
+        ),
+      ];
   @override
   List<NaturalLanguage> get languages =>
       const [LangAym(), LangGrn(), LangQue(), LangSpa()];
@@ -2213,13 +2217,6 @@ class CountryBra extends WorldCountry {
             official: "Federative Republic of Brazil",
             common: "Brazil",
           ),
-          namesNative: const [
-            CountryName(
-              language: LangPor(),
-              official: "República Federativa do Brasil",
-              common: "Brasil",
-            ),
-          ],
           tld: const [".br"],
           code: "BRA",
           codeNumeric: "076",
@@ -2248,18 +2245,6 @@ class CountryBra extends WorldCountry {
             "Ven",
           ],
           areaMetric: 8515767,
-          demonyms: const [
-            Demonyms(
-              language: LangEng(),
-              female: "Brazilian",
-              male: "Brazilian",
-            ),
-            Demonyms(
-              language: LangFra(),
-              female: "Brésilienne",
-              male: "Brésilien",
-            ),
-          ],
           emoji: "🇧🇷",
           maps: const Maps(
             googleMaps: "waCKk21HeeqFzkNC9",
@@ -2270,18 +2255,33 @@ class CountryBra extends WorldCountry {
           fifa: "BRA",
           car: const Car(sign: "BR"),
           timezones: const ["UTC-05:00", "UTC-04:00", "UTC-03:00", "UTC-02:00"],
-          capitalInfo: const CapitalInfo(
-            capital: Capital("Brasília"),
-            latLng: LatLng(-15.79, -47.88),
-          ),
           postalCode: const PostalCode(
             format: "#####-###",
             regExpPattern: r"^(\d{8})$",
           ),
-          regionalBlocs: const [BlocUSAN()],
         );
   @override
   List<FiatCurrency> get currencies => const [FiatBrl()];
+  @override
+  CapitalInfo get capitalInfo => const CapitalInfo(
+        capital: Capital("Brasília"),
+        latLng: LatLng(-15.79, -47.88),
+      );
+  @override
+  List<RegionalBloc> get regionalBlocs => const [BlocUSAN()];
+  @override
+  List<Demonyms> get demonyms => const [
+        Demonyms(language: LangEng(), female: "Brazilian", male: "Brazilian"),
+        Demonyms(language: LangFra(), female: "Brésilienne", male: "Brésilien"),
+      ];
+  @override
+  List<CountryName> get namesNative => const [
+        CountryName(
+          language: LangPor(),
+          official: "República Federativa do Brasil",
+          common: "Brasil",
+        ),
+      ];
   @override
   List<NaturalLanguage> get languages => const [LangPor()];
 }
@@ -2298,13 +2298,6 @@ class CountryBrb extends WorldCountry {
             official: "Barbados",
             common: "Barbados",
           ),
-          namesNative: const [
-            CountryName(
-              language: LangEng(),
-              official: "Barbados",
-              common: "Barbados",
-            ),
-          ],
           tld: const [".bb"],
           code: "BRB",
           codeNumeric: "052",
@@ -2316,18 +2309,6 @@ class CountryBrb extends WorldCountry {
           subregion: const Caribbean(),
           latLng: const LatLng(13.16666666, -59.53333333),
           areaMetric: 430,
-          demonyms: const [
-            Demonyms(
-              language: LangEng(),
-              female: "Barbadian",
-              male: "Barbadian",
-            ),
-            Demonyms(
-              language: LangFra(),
-              female: "Barbadienne",
-              male: "Barbadien",
-            ),
-          ],
           emoji: "🇧🇧",
           maps: const Maps(
             googleMaps: "2m36v8STvbGAWd9c7",
@@ -2337,18 +2318,33 @@ class CountryBrb extends WorldCountry {
           fifa: "BRB",
           car: const Car(sign: "BDS", isRightSide: false),
           timezones: const ["UTC-04:00"],
-          capitalInfo: const CapitalInfo(
-            capital: Capital("Bridgetown"),
-            latLng: LatLng(13.1, -59.62),
-          ),
           postalCode: const PostalCode(
             format: "BB#####",
             regExpPattern: r"^(?:BB)*(\d{5})$",
           ),
-          regionalBlocs: const [BlocCARICOM()],
         );
   @override
   List<FiatCurrency> get currencies => const [FiatBbd()];
+  @override
+  CapitalInfo get capitalInfo => const CapitalInfo(
+        capital: Capital("Bridgetown"),
+        latLng: LatLng(13.1, -59.62),
+      );
+  @override
+  List<RegionalBloc> get regionalBlocs => const [BlocCARICOM()];
+  @override
+  List<Demonyms> get demonyms => const [
+        Demonyms(language: LangEng(), female: "Barbadian", male: "Barbadian"),
+        Demonyms(language: LangFra(), female: "Barbadienne", male: "Barbadien"),
+      ];
+  @override
+  List<CountryName> get namesNative => const [
+        CountryName(
+          language: LangEng(),
+          official: "Barbados",
+          common: "Barbados",
+        ),
+      ];
   @override
   List<NaturalLanguage> get languages => const [LangEng()];
 }
@@ -2365,13 +2361,6 @@ class CountryBrn extends WorldCountry {
             official: "Nation of Brunei, Abode of Peace",
             common: "Brunei",
           ),
-          namesNative: const [
-            CountryName(
-              language: LangMsa(),
-              official: "Nation of Brunei, Abode Damai",
-              common: "Negara Brunei Darussalam",
-            ),
-          ],
           tld: const [".bn"],
           code: "BRN",
           codeNumeric: "096",
@@ -2389,14 +2378,6 @@ class CountryBrn extends WorldCountry {
           latLng: const LatLng(4.5, 114.66666666),
           bordersCodes: const ["Mys"],
           areaMetric: 5765,
-          demonyms: const [
-            Demonyms(language: LangEng(), female: "Bruneian", male: "Bruneian"),
-            Demonyms(
-              language: LangFra(),
-              female: "Brunéienne",
-              male: "Brunéien",
-            ),
-          ],
           emoji: "🇧🇳",
           maps: const Maps(
             googleMaps: "4jb4CqBXhr8vNh579",
@@ -2406,18 +2387,33 @@ class CountryBrn extends WorldCountry {
           fifa: "BRU",
           car: const Car(sign: "BRU", isRightSide: false),
           timezones: const ["UTC+08:00"],
-          capitalInfo: const CapitalInfo(
-            capital: Capital("Bandar Seri Begawan"),
-            latLng: LatLng(4.88, 114.93),
-          ),
           postalCode: const PostalCode(
             format: "@@####",
             regExpPattern: r"^([A-Z]{2}\d{4})$",
           ),
-          regionalBlocs: const [BlocASEAN()],
         );
   @override
   List<FiatCurrency> get currencies => const [FiatBnd(), FiatSgd()];
+  @override
+  CapitalInfo get capitalInfo => const CapitalInfo(
+        capital: Capital("Bandar Seri Begawan"),
+        latLng: LatLng(4.88, 114.93),
+      );
+  @override
+  List<RegionalBloc> get regionalBlocs => const [BlocASEAN()];
+  @override
+  List<Demonyms> get demonyms => const [
+        Demonyms(language: LangEng(), female: "Bruneian", male: "Bruneian"),
+        Demonyms(language: LangFra(), female: "Brunéienne", male: "Brunéien"),
+      ];
+  @override
+  List<CountryName> get namesNative => const [
+        CountryName(
+          language: LangMsa(),
+          official: "Nation of Brunei, Abode Damai",
+          common: "Negara Brunei Darussalam",
+        ),
+      ];
   @override
   List<NaturalLanguage> get languages => const [LangMsa()];
 }
@@ -2434,13 +2430,6 @@ class CountryBtn extends WorldCountry {
             official: "Kingdom of Bhutan",
             common: "Bhutan",
           ),
-          namesNative: const [
-            CountryName(
-              language: LangDzo(),
-              official: "འབྲུག་རྒྱལ་ཁབ་",
-              common: "འབྲུག་ཡུལ་",
-            ),
-          ],
           tld: const [".bt"],
           code: "BTN",
           codeNumeric: "064",
@@ -2454,18 +2443,6 @@ class CountryBtn extends WorldCountry {
           landlocked: true,
           bordersCodes: const ["Chn", "Ind"],
           areaMetric: 38394,
-          demonyms: const [
-            Demonyms(
-              language: LangEng(),
-              female: "Bhutanese",
-              male: "Bhutanese",
-            ),
-            Demonyms(
-              language: LangFra(),
-              female: "Bhoutanaise",
-              male: "Bhoutanais",
-            ),
-          ],
           emoji: "🇧🇹",
           maps: const Maps(
             googleMaps: "VEfXXBftTFLUpNgp8",
@@ -2476,14 +2453,33 @@ class CountryBtn extends WorldCountry {
           fifa: "BHU",
           car: const Car(sign: "BHT", isRightSide: false),
           timezones: const ["UTC+06:00"],
-          capitalInfo: const CapitalInfo(
-            capital: Capital("Thimphu"),
-            latLng: LatLng(27.47, 89.63),
-          ),
-          regionalBlocs: const [BlocSAARC()],
         );
   @override
   List<FiatCurrency> get currencies => const [FiatBtn(), FiatInr()];
+  @override
+  CapitalInfo get capitalInfo => const CapitalInfo(
+        capital: Capital("Thimphu"),
+        latLng: LatLng(27.47, 89.63),
+      );
+  @override
+  List<RegionalBloc> get regionalBlocs => const [BlocSAARC()];
+  @override
+  List<Demonyms> get demonyms => const [
+        Demonyms(language: LangEng(), female: "Bhutanese", male: "Bhutanese"),
+        Demonyms(
+          language: LangFra(),
+          female: "Bhoutanaise",
+          male: "Bhoutanais",
+        ),
+      ];
+  @override
+  List<CountryName> get namesNative => const [
+        CountryName(
+          language: LangDzo(),
+          official: "འབྲུག་རྒྱལ་ཁབ་",
+          common: "འབྲུག་ཡུལ་",
+        ),
+      ];
   @override
   List<NaturalLanguage> get languages => const [LangDzo()];
 }
@@ -2500,13 +2496,6 @@ class CountryBvt extends WorldCountry {
             official: "Bouvet Island",
             common: "Bouvet Island",
           ),
-          namesNative: const [
-            CountryName(
-              language: LangNor(),
-              official: "Bouvetøya",
-              common: "Bouvetøya",
-            ),
-          ],
           tld: const [".bv"],
           code: "BVT",
           codeNumeric: "074",
@@ -2518,13 +2507,6 @@ class CountryBvt extends WorldCountry {
           continent: const Antarctica(),
           latLng: const LatLng(54.4208, 3.3464),
           areaMetric: 49,
-          demonyms: const [
-            Demonyms(
-              language: LangEng(),
-              female: "Bouvet Islander",
-              male: "Bouvet Islander",
-            ),
-          ],
           emoji: "🇧🇻",
           maps: const Maps(
             googleMaps: "7WRQAEKZb4uK36yi9",
@@ -2535,6 +2517,22 @@ class CountryBvt extends WorldCountry {
           timezones: const ["UTC+01:00"],
           hasCoatOfArms: false,
         );
+  @override
+  List<Demonyms> get demonyms => const [
+        Demonyms(
+          language: LangEng(),
+          female: "Bouvet Islander",
+          male: "Bouvet Islander",
+        ),
+      ];
+  @override
+  List<CountryName> get namesNative => const [
+        CountryName(
+          language: LangNor(),
+          official: "Bouvetøya",
+          common: "Bouvetøya",
+        ),
+      ];
   @override
   List<NaturalLanguage> get languages => const [LangNor()];
 }
@@ -2551,18 +2549,6 @@ class CountryBwa extends WorldCountry {
             official: "Republic of Botswana",
             common: "Botswana",
           ),
-          namesNative: const [
-            CountryName(
-              language: LangEng(),
-              official: "Republic of Botswana",
-              common: "Botswana",
-            ),
-            CountryName(
-              language: LangTsn(),
-              official: "Lefatshe la Botswana",
-              common: "Botswana",
-            ),
-          ],
           tld: const [".bw"],
           code: "BWA",
           codeNumeric: "072",
@@ -2580,14 +2566,6 @@ class CountryBwa extends WorldCountry {
           landlocked: true,
           bordersCodes: const ["Nam", "Zaf", "Zmb", "Zwe"],
           areaMetric: 582000,
-          demonyms: const [
-            Demonyms(language: LangEng(), female: "Motswana", male: "Motswana"),
-            Demonyms(
-              language: LangFra(),
-              female: "Botswanaise",
-              male: "Botswanais",
-            ),
-          ],
           emoji: "🇧🇼",
           maps: const Maps(
             googleMaps: "E364KeLy6N4JwxwQ8",
@@ -2598,14 +2576,38 @@ class CountryBwa extends WorldCountry {
           fifa: "BOT",
           car: const Car(sign: "BW", isRightSide: false),
           timezones: const ["UTC+02:00"],
-          capitalInfo: const CapitalInfo(
-            capital: Capital("Gaborone"),
-            latLng: LatLng(-24.63, 25.9),
-          ),
-          regionalBlocs: const [BlocAU()],
         );
   @override
   List<FiatCurrency> get currencies => const [FiatBwp()];
+  @override
+  CapitalInfo get capitalInfo => const CapitalInfo(
+        capital: Capital("Gaborone"),
+        latLng: LatLng(-24.63, 25.9),
+      );
+  @override
+  List<RegionalBloc> get regionalBlocs => const [BlocAU()];
+  @override
+  List<Demonyms> get demonyms => const [
+        Demonyms(language: LangEng(), female: "Motswana", male: "Motswana"),
+        Demonyms(
+          language: LangFra(),
+          female: "Botswanaise",
+          male: "Botswanais",
+        ),
+      ];
+  @override
+  List<CountryName> get namesNative => const [
+        CountryName(
+          language: LangEng(),
+          official: "Republic of Botswana",
+          common: "Botswana",
+        ),
+        CountryName(
+          language: LangTsn(),
+          official: "Lefatshe la Botswana",
+          common: "Botswana",
+        ),
+      ];
   @override
   List<NaturalLanguage> get languages => const [LangEng(), LangTsn()];
 }
@@ -2622,18 +2624,6 @@ class CountryCaf extends WorldCountry {
             official: "Central African Republic",
             common: "Central African Republic",
           ),
-          namesNative: const [
-            CountryName(
-              language: LangFra(),
-              official: "République centrafricaine",
-              common: "République centrafricaine",
-            ),
-            CountryName(
-              language: LangSag(),
-              official: "Ködörösêse tî Bêafrîka",
-              common: "Bêafrîka",
-            ),
-          ],
           tld: const [".cf"],
           code: "CAF",
           codeNumeric: "140",
@@ -2651,18 +2641,6 @@ class CountryCaf extends WorldCountry {
           landlocked: true,
           bordersCodes: const ["Cmr", "Tcd", "Cod", "Cog", "Ssd", "Sdn"],
           areaMetric: 622984,
-          demonyms: const [
-            Demonyms(
-              language: LangEng(),
-              female: "Central African",
-              male: "Central African",
-            ),
-            Demonyms(
-              language: LangFra(),
-              female: "Centrafricaine",
-              male: "Centrafricain",
-            ),
-          ],
           emoji: "🇨🇫",
           maps: const Maps(
             googleMaps: "51V8dsi2rGYC9n3c9",
@@ -2673,14 +2651,42 @@ class CountryCaf extends WorldCountry {
           fifa: "CTA",
           car: const Car(sign: "RCA"),
           timezones: const ["UTC+01:00"],
-          capitalInfo: const CapitalInfo(
-            capital: Capital("Bangui"),
-            latLng: LatLng(4.37, 18.58),
-          ),
-          regionalBlocs: const [BlocAU()],
         );
   @override
   List<FiatCurrency> get currencies => const [FiatXaf()];
+  @override
+  CapitalInfo get capitalInfo => const CapitalInfo(
+        capital: Capital("Bangui"),
+        latLng: LatLng(4.37, 18.58),
+      );
+  @override
+  List<RegionalBloc> get regionalBlocs => const [BlocAU()];
+  @override
+  List<Demonyms> get demonyms => const [
+        Demonyms(
+          language: LangEng(),
+          female: "Central African",
+          male: "Central African",
+        ),
+        Demonyms(
+          language: LangFra(),
+          female: "Centrafricaine",
+          male: "Centrafricain",
+        ),
+      ];
+  @override
+  List<CountryName> get namesNative => const [
+        CountryName(
+          language: LangFra(),
+          official: "République centrafricaine",
+          common: "République centrafricaine",
+        ),
+        CountryName(
+          language: LangSag(),
+          official: "Ködörösêse tî Bêafrîka",
+          common: "Bêafrîka",
+        ),
+      ];
   @override
   List<NaturalLanguage> get languages => const [LangFra(), LangSag()];
 }
@@ -2697,18 +2703,6 @@ class CountryCan extends WorldCountry {
             official: "Canada",
             common: "Canada",
           ),
-          namesNative: const [
-            CountryName(
-              language: LangEng(),
-              official: "Canada",
-              common: "Canada",
-            ),
-            CountryName(
-              language: LangFra(),
-              official: "Canada",
-              common: "Canada",
-            ),
-          ],
           tld: const [".ca"],
           code: "CAN",
           codeNumeric: "124",
@@ -2758,14 +2752,6 @@ class CountryCan extends WorldCountry {
           latLng: const LatLng(60, -95),
           bordersCodes: const ["Usa"],
           areaMetric: 9984670,
-          demonyms: const [
-            Demonyms(language: LangEng(), female: "Canadian", male: "Canadian"),
-            Demonyms(
-              language: LangFra(),
-              female: "Canadienne",
-              male: "Canadien",
-            ),
-          ],
           emoji: "🇨🇦",
           maps: const Maps(
             googleMaps: "jmEVLugreeqiZXxbA",
@@ -2784,19 +2770,31 @@ class CountryCan extends WorldCountry {
             "UTC-03:30",
           ],
           startOfWeek: Weekday.sunday,
-          capitalInfo: const CapitalInfo(
-            capital: Capital("Ottawa"),
-            latLng: LatLng(45.42, -75.7),
-          ),
           postalCode: const PostalCode(
             format: "@#@ #@#",
             regExpPattern:
                 r"^([ABCEGHJKLMNPRSTVXY]\d[ABCEGHJKLMNPRSTVWXYZ]) ?(\d[ABCEGHJKLMNPRSTVWXYZ]\d)$",
           ),
-          regionalBlocs: const [BlocNAFTA()],
         );
   @override
   List<FiatCurrency> get currencies => const [FiatCad()];
+  @override
+  CapitalInfo get capitalInfo => const CapitalInfo(
+        capital: Capital("Ottawa"),
+        latLng: LatLng(45.42, -75.7),
+      );
+  @override
+  List<RegionalBloc> get regionalBlocs => const [BlocNAFTA()];
+  @override
+  List<Demonyms> get demonyms => const [
+        Demonyms(language: LangEng(), female: "Canadian", male: "Canadian"),
+        Demonyms(language: LangFra(), female: "Canadienne", male: "Canadien"),
+      ];
+  @override
+  List<CountryName> get namesNative => const [
+        CountryName(language: LangEng(), official: "Canada", common: "Canada"),
+        CountryName(language: LangFra(), official: "Canada", common: "Canada"),
+      ];
   @override
   List<NaturalLanguage> get languages => const [LangEng(), LangFra()];
 }
@@ -2813,13 +2811,6 @@ class CountryCck extends WorldCountry {
             official: "Territory of the Cocos (Keeling) Islands",
             common: "Cocos (Keeling) Islands",
           ),
-          namesNative: const [
-            CountryName(
-              language: LangEng(),
-              official: "Territory of the Cocos (Keeling) Islands",
-              common: "Cocos (Keeling) Islands",
-            ),
-          ],
           tld: const [".cc"],
           code: "CCK",
           codeNumeric: "166",
@@ -2832,13 +2823,6 @@ class CountryCck extends WorldCountry {
           subregion: const AustraliaAndNewZealand(),
           latLng: const LatLng(12.1642, 96.871),
           areaMetric: 14,
-          demonyms: const [
-            Demonyms(
-              language: LangEng(),
-              female: "Cocos Islander",
-              male: "Cocos Islander",
-            ),
-          ],
           emoji: "🇨🇨",
           maps: const Maps(
             googleMaps: "3eCdKVpVfMcZyKcK6",
@@ -2848,13 +2832,30 @@ class CountryCck extends WorldCountry {
           car: const Car(sign: "AUS", isRightSide: false),
           timezones: const ["UTC+06:30"],
           hasCoatOfArms: false,
-          capitalInfo: const CapitalInfo(
-            capital: Capital("West Island"),
-            latLng: LatLng(-12.17, 96.83),
-          ),
         );
   @override
   List<FiatCurrency> get currencies => const [FiatAud()];
+  @override
+  CapitalInfo get capitalInfo => const CapitalInfo(
+        capital: Capital("West Island"),
+        latLng: LatLng(-12.17, 96.83),
+      );
+  @override
+  List<Demonyms> get demonyms => const [
+        Demonyms(
+          language: LangEng(),
+          female: "Cocos Islander",
+          male: "Cocos Islander",
+        ),
+      ];
+  @override
+  List<CountryName> get namesNative => const [
+        CountryName(
+          language: LangEng(),
+          official: "Territory of the Cocos (Keeling) Islands",
+          common: "Cocos (Keeling) Islands",
+        ),
+      ];
   @override
   List<NaturalLanguage> get languages => const [LangEng()];
 }
@@ -2871,28 +2872,6 @@ class CountryChe extends WorldCountry {
             official: "Swiss Confederation",
             common: "Switzerland",
           ),
-          namesNative: const [
-            CountryName(
-              language: LangFra(),
-              official: "Confédération suisse",
-              common: "Suisse",
-            ),
-            CountryName(
-              language: LangDeu(),
-              official: "Schweizerische Eidgenossenschaft",
-              common: "Schweiz",
-            ),
-            CountryName(
-              language: LangIta(),
-              official: "Confederazione Svizzera",
-              common: "Svizzera",
-            ),
-            CountryName(
-              language: LangRoh(),
-              official: "Confederaziun svizra",
-              common: "Svizra",
-            ),
-          ],
           tld: const [".ch"],
           code: "CHE",
           codeNumeric: "756",
@@ -2913,10 +2892,6 @@ class CountryChe extends WorldCountry {
           landlocked: true,
           bordersCodes: const ["Aut", "Fra", "Ita", "Lie", "Deu"],
           areaMetric: 41284,
-          demonyms: const [
-            Demonyms(language: LangEng(), female: "Swiss", male: "Swiss"),
-            Demonyms(language: LangFra(), female: "Suisse", male: "Suisse"),
-          ],
           emoji: "🇨🇭",
           maps: const Maps(
             googleMaps: "uVuZcXaxSx5jLyEC9",
@@ -2927,16 +2902,44 @@ class CountryChe extends WorldCountry {
           fifa: "SUI",
           car: const Car(sign: "CH"),
           timezones: const ["UTC+01:00"],
-          capitalInfo: const CapitalInfo(
-            capital: Capital("Bern"),
-            latLng: LatLng(46.92, 7.47),
-          ),
           postalCode:
               const PostalCode(format: "####", regExpPattern: r"^(\d{4})$"),
-          regionalBlocs: const [BlocEFTA()],
         );
   @override
   List<FiatCurrency> get currencies => const [FiatChf()];
+  @override
+  CapitalInfo get capitalInfo =>
+      const CapitalInfo(capital: Capital("Bern"), latLng: LatLng(46.92, 7.47));
+  @override
+  List<RegionalBloc> get regionalBlocs => const [BlocEFTA()];
+  @override
+  List<Demonyms> get demonyms => const [
+        Demonyms(language: LangEng(), female: "Swiss", male: "Swiss"),
+        Demonyms(language: LangFra(), female: "Suisse", male: "Suisse"),
+      ];
+  @override
+  List<CountryName> get namesNative => const [
+        CountryName(
+          language: LangFra(),
+          official: "Confédération suisse",
+          common: "Suisse",
+        ),
+        CountryName(
+          language: LangDeu(),
+          official: "Schweizerische Eidgenossenschaft",
+          common: "Schweiz",
+        ),
+        CountryName(
+          language: LangIta(),
+          official: "Confederazione Svizzera",
+          common: "Svizzera",
+        ),
+        CountryName(
+          language: LangRoh(),
+          official: "Confederaziun svizra",
+          common: "Svizra",
+        ),
+      ];
   @override
   List<NaturalLanguage> get languages =>
       const [LangFra(), LangDeu(), LangIta(), LangRoh()];
@@ -2954,13 +2957,6 @@ class CountryChl extends WorldCountry {
             official: "Republic of Chile",
             common: "Chile",
           ),
-          namesNative: const [
-            CountryName(
-              language: LangSpa(),
-              official: "República de Chile",
-              common: "Chile",
-            ),
-          ],
           tld: const [".cl"],
           code: "CHL",
           codeNumeric: "152",
@@ -2973,10 +2969,6 @@ class CountryChl extends WorldCountry {
           latLng: const LatLng(-30, -71),
           bordersCodes: const ["Arg", "Bol", "Per"],
           areaMetric: 756102,
-          demonyms: const [
-            Demonyms(language: LangEng(), female: "Chilean", male: "Chilean"),
-            Demonyms(language: LangFra(), female: "Chilienne", male: "Chilien"),
-          ],
           emoji: "🇨🇱",
           maps: const Maps(
             googleMaps: "XboxyNHh2fAjCPNn9",
@@ -2987,16 +2979,31 @@ class CountryChl extends WorldCountry {
           fifa: "CHI",
           car: const Car(sign: "RCH"),
           timezones: const ["UTC-06:00", "UTC-04:00"],
-          capitalInfo: const CapitalInfo(
-            capital: Capital("Santiago"),
-            latLng: LatLng(-33.45, -70.67),
-          ),
           postalCode:
               const PostalCode(format: "#######", regExpPattern: r"^(\d{7})$"),
-          regionalBlocs: const [BlocPA(), BlocUSAN()],
         );
   @override
   List<FiatCurrency> get currencies => const [FiatClp()];
+  @override
+  CapitalInfo get capitalInfo => const CapitalInfo(
+        capital: Capital("Santiago"),
+        latLng: LatLng(-33.45, -70.67),
+      );
+  @override
+  List<RegionalBloc> get regionalBlocs => const [BlocPA(), BlocUSAN()];
+  @override
+  List<Demonyms> get demonyms => const [
+        Demonyms(language: LangEng(), female: "Chilean", male: "Chilean"),
+        Demonyms(language: LangFra(), female: "Chilienne", male: "Chilien"),
+      ];
+  @override
+  List<CountryName> get namesNative => const [
+        CountryName(
+          language: LangSpa(),
+          official: "República de Chile",
+          common: "Chile",
+        ),
+      ];
   @override
   List<NaturalLanguage> get languages => const [LangSpa()];
 }
@@ -3013,9 +3020,6 @@ class CountryChn extends WorldCountry {
             official: "People's Republic of China",
             common: "China",
           ),
-          namesNative: const [
-            CountryName(language: LangZho(), official: "中华人民共和国", common: "中国"),
-          ],
           tld: const [".cn", ".中国", ".中國", ".公司", ".网络"],
           code: "CHN",
           codeNumeric: "156",
@@ -3053,10 +3057,6 @@ class CountryChn extends WorldCountry {
             "Vnm",
           ],
           areaMetric: 9706961,
-          demonyms: const [
-            Demonyms(language: LangEng(), female: "Chinese", male: "Chinese"),
-            Demonyms(language: LangFra(), female: "Chinoise", male: "Chinois"),
-          ],
           emoji: "🇨🇳",
           maps: const Maps(
             googleMaps: "p9qC6vgiFRRXzvGi7",
@@ -3067,15 +3067,25 @@ class CountryChn extends WorldCountry {
           fifa: "CHN",
           car: const Car(sign: "RC"),
           timezones: const ["UTC+08:00"],
-          capitalInfo: const CapitalInfo(
-            capital: Capital("Beijing"),
-            latLng: LatLng(39.92, 116.38),
-          ),
           postalCode:
               const PostalCode(format: "######", regExpPattern: r"^(\d{6})$"),
         );
   @override
   List<FiatCurrency> get currencies => const [FiatCny()];
+  @override
+  CapitalInfo get capitalInfo => const CapitalInfo(
+        capital: Capital("Beijing"),
+        latLng: LatLng(39.92, 116.38),
+      );
+  @override
+  List<Demonyms> get demonyms => const [
+        Demonyms(language: LangEng(), female: "Chinese", male: "Chinese"),
+        Demonyms(language: LangFra(), female: "Chinoise", male: "Chinois"),
+      ];
+  @override
+  List<CountryName> get namesNative => const [
+        CountryName(language: LangZho(), official: "中华人民共和国", common: "中国"),
+      ];
   @override
   List<NaturalLanguage> get languages => const [LangZho()];
 }
@@ -3092,13 +3102,6 @@ class CountryCiv extends WorldCountry {
             official: "Republic of Côte d'Ivoire",
             common: "Ivory Coast",
           ),
-          namesNative: const [
-            CountryName(
-              language: LangFra(),
-              official: "République de Côte d'Ivoire",
-              common: "Côte d'Ivoire",
-            ),
-          ],
           tld: const [".ci"],
           code: "CIV",
           codeNumeric: "384",
@@ -3117,14 +3120,6 @@ class CountryCiv extends WorldCountry {
           latLng: const LatLng(8, -5),
           bordersCodes: const ["Bfa", "Gha", "Gin", "Lbr", "Mli"],
           areaMetric: 322463,
-          demonyms: const [
-            Demonyms(language: LangEng(), female: "Ivorian", male: "Ivorian"),
-            Demonyms(
-              language: LangFra(),
-              female: "Ivoirienne",
-              male: "Ivoirien",
-            ),
-          ],
           emoji: "🇨🇮",
           maps: const Maps(
             googleMaps: "wKsmN7f5qAeNtGjP6",
@@ -3135,14 +3130,29 @@ class CountryCiv extends WorldCountry {
           fifa: "CIV",
           car: const Car(sign: "CI"),
           timezones: const ["UTC+00:00"],
-          capitalInfo: const CapitalInfo(
-            capital: Capital("Yamoussoukro"),
-            latLng: LatLng(6.82, -5.27),
-          ),
-          regionalBlocs: const [BlocAU()],
         );
   @override
   List<FiatCurrency> get currencies => const [FiatXof()];
+  @override
+  CapitalInfo get capitalInfo => const CapitalInfo(
+        capital: Capital("Yamoussoukro"),
+        latLng: LatLng(6.82, -5.27),
+      );
+  @override
+  List<RegionalBloc> get regionalBlocs => const [BlocAU()];
+  @override
+  List<Demonyms> get demonyms => const [
+        Demonyms(language: LangEng(), female: "Ivorian", male: "Ivorian"),
+        Demonyms(language: LangFra(), female: "Ivoirienne", male: "Ivoirien"),
+      ];
+  @override
+  List<CountryName> get namesNative => const [
+        CountryName(
+          language: LangFra(),
+          official: "République de Côte d'Ivoire",
+          common: "Côte d'Ivoire",
+        ),
+      ];
   @override
   List<NaturalLanguage> get languages => const [LangFra()];
 }
@@ -3159,18 +3169,6 @@ class CountryCmr extends WorldCountry {
             official: "Republic of Cameroon",
             common: "Cameroon",
           ),
-          namesNative: const [
-            CountryName(
-              language: LangEng(),
-              official: "Republic of Cameroon",
-              common: "Cameroon",
-            ),
-            CountryName(
-              language: LangFra(),
-              official: "République du Cameroun",
-              common: "Cameroun",
-            ),
-          ],
           tld: const [".cm"],
           code: "CMR",
           codeNumeric: "120",
@@ -3187,18 +3185,6 @@ class CountryCmr extends WorldCountry {
           latLng: const LatLng(6, 12),
           bordersCodes: const ["Caf", "Tcd", "Cog", "Gnq", "Gab", "Nga"],
           areaMetric: 475442,
-          demonyms: const [
-            Demonyms(
-              language: LangEng(),
-              female: "Cameroonian",
-              male: "Cameroonian",
-            ),
-            Demonyms(
-              language: LangFra(),
-              female: "Camerounaise",
-              male: "Camerounais",
-            ),
-          ],
           emoji: "🇨🇲",
           maps: const Maps(
             googleMaps: "JqiipHgFboG3rBJh9",
@@ -3209,14 +3195,42 @@ class CountryCmr extends WorldCountry {
           fifa: "CMR",
           car: const Car(sign: "CAM"),
           timezones: const ["UTC+01:00"],
-          capitalInfo: const CapitalInfo(
-            capital: Capital("Yaoundé"),
-            latLng: LatLng(3.85, 11.5),
-          ),
-          regionalBlocs: const [BlocAU()],
         );
   @override
   List<FiatCurrency> get currencies => const [FiatXaf()];
+  @override
+  CapitalInfo get capitalInfo => const CapitalInfo(
+        capital: Capital("Yaoundé"),
+        latLng: LatLng(3.85, 11.5),
+      );
+  @override
+  List<RegionalBloc> get regionalBlocs => const [BlocAU()];
+  @override
+  List<Demonyms> get demonyms => const [
+        Demonyms(
+          language: LangEng(),
+          female: "Cameroonian",
+          male: "Cameroonian",
+        ),
+        Demonyms(
+          language: LangFra(),
+          female: "Camerounaise",
+          male: "Camerounais",
+        ),
+      ];
+  @override
+  List<CountryName> get namesNative => const [
+        CountryName(
+          language: LangEng(),
+          official: "Republic of Cameroon",
+          common: "Cameroon",
+        ),
+        CountryName(
+          language: LangFra(),
+          official: "République du Cameroun",
+          common: "Cameroun",
+        ),
+      ];
   @override
   List<NaturalLanguage> get languages => const [LangEng(), LangFra()];
 }
@@ -3233,28 +3247,6 @@ class CountryCod extends WorldCountry {
             official: "Democratic Republic of the Congo",
             common: "DR Congo",
           ),
-          namesNative: const [
-            CountryName(
-              language: LangFra(),
-              official: "République démocratique du Congo",
-              common: "RD Congo",
-            ),
-            CountryName(
-              language: LangKon(),
-              official: "Repubilika ya Kongo Demokratiki",
-              common: "Repubilika ya Kongo Demokratiki",
-            ),
-            CountryName(
-              language: LangLin(),
-              official: "Republiki ya Kongó Demokratiki",
-              common: "Republiki ya Kongó Demokratiki",
-            ),
-            CountryName(
-              language: LangSwa(),
-              official: "Jamhuri ya Kidemokrasia ya Kongo",
-              common: "Jamhuri ya Kidemokrasia ya Kongo",
-            ),
-          ],
           tld: const [".cd"],
           code: "COD",
           codeNumeric: "180",
@@ -3283,18 +3275,6 @@ class CountryCod extends WorldCountry {
             "Zmb",
           ],
           areaMetric: 2344858,
-          demonyms: const [
-            Demonyms(
-              language: LangEng(),
-              female: "Congolese",
-              male: "Congolese",
-            ),
-            Demonyms(
-              language: LangFra(),
-              female: "Congolaise",
-              male: "Congolais",
-            ),
-          ],
           emoji: "🇨🇩",
           maps: const Maps(
             googleMaps: "KfhNVn6VqdZXWu8n9",
@@ -3305,14 +3285,44 @@ class CountryCod extends WorldCountry {
           fifa: "COD",
           car: const Car(sign: "CGO"),
           timezones: const ["UTC+01:00", "UTC+02:00"],
-          capitalInfo: const CapitalInfo(
-            capital: Capital("Kinshasa"),
-            latLng: LatLng(-4.32, 15.3),
-          ),
-          regionalBlocs: const [BlocAU()],
         );
   @override
   List<FiatCurrency> get currencies => const [FiatCdf()];
+  @override
+  CapitalInfo get capitalInfo => const CapitalInfo(
+        capital: Capital("Kinshasa"),
+        latLng: LatLng(-4.32, 15.3),
+      );
+  @override
+  List<RegionalBloc> get regionalBlocs => const [BlocAU()];
+  @override
+  List<Demonyms> get demonyms => const [
+        Demonyms(language: LangEng(), female: "Congolese", male: "Congolese"),
+        Demonyms(language: LangFra(), female: "Congolaise", male: "Congolais"),
+      ];
+  @override
+  List<CountryName> get namesNative => const [
+        CountryName(
+          language: LangFra(),
+          official: "République démocratique du Congo",
+          common: "RD Congo",
+        ),
+        CountryName(
+          language: LangKon(),
+          official: "Repubilika ya Kongo Demokratiki",
+          common: "Repubilika ya Kongo Demokratiki",
+        ),
+        CountryName(
+          language: LangLin(),
+          official: "Republiki ya Kongó Demokratiki",
+          common: "Republiki ya Kongó Demokratiki",
+        ),
+        CountryName(
+          language: LangSwa(),
+          official: "Jamhuri ya Kidemokrasia ya Kongo",
+          common: "Jamhuri ya Kidemokrasia ya Kongo",
+        ),
+      ];
   @override
   List<NaturalLanguage> get languages =>
       const [LangFra(), LangKon(), LangLin(), LangSwa()];
@@ -3330,23 +3340,6 @@ class CountryCog extends WorldCountry {
             official: "Republic of the Congo",
             common: "Republic of the Congo",
           ),
-          namesNative: const [
-            CountryName(
-              language: LangFra(),
-              official: "République du Congo",
-              common: "République du Congo",
-            ),
-            CountryName(
-              language: LangKon(),
-              official: "Repubilika ya Kongo",
-              common: "Repubilika ya Kongo",
-            ),
-            CountryName(
-              language: LangLin(),
-              official: "Republíki ya Kongó",
-              common: "Republíki ya Kongó",
-            ),
-          ],
           tld: const [".cg"],
           code: "COG",
           codeNumeric: "178",
@@ -3359,18 +3352,6 @@ class CountryCog extends WorldCountry {
           latLng: const LatLng(-1, 15),
           bordersCodes: const ["Ago", "Cmr", "Caf", "Cod", "Gab"],
           areaMetric: 342000,
-          demonyms: const [
-            Demonyms(
-              language: LangEng(),
-              female: "Congolese",
-              male: "Congolese",
-            ),
-            Demonyms(
-              language: LangFra(),
-              female: "Congolaise",
-              male: "Congolais",
-            ),
-          ],
           emoji: "🇨🇬",
           maps: const Maps(
             googleMaps: "Phf5dDDKdfCtuBTb6",
@@ -3382,14 +3363,39 @@ class CountryCog extends WorldCountry {
           car: const Car(sign: "RCB"),
           timezones: const ["UTC+01:00"],
           hasCoatOfArms: false,
-          capitalInfo: const CapitalInfo(
-            capital: Capital("Brazzaville"),
-            latLng: LatLng(-4.25, 15.28),
-          ),
-          regionalBlocs: const [BlocAU()],
         );
   @override
   List<FiatCurrency> get currencies => const [FiatXaf()];
+  @override
+  CapitalInfo get capitalInfo => const CapitalInfo(
+        capital: Capital("Brazzaville"),
+        latLng: LatLng(-4.25, 15.28),
+      );
+  @override
+  List<RegionalBloc> get regionalBlocs => const [BlocAU()];
+  @override
+  List<Demonyms> get demonyms => const [
+        Demonyms(language: LangEng(), female: "Congolese", male: "Congolese"),
+        Demonyms(language: LangFra(), female: "Congolaise", male: "Congolais"),
+      ];
+  @override
+  List<CountryName> get namesNative => const [
+        CountryName(
+          language: LangFra(),
+          official: "République du Congo",
+          common: "République du Congo",
+        ),
+        CountryName(
+          language: LangKon(),
+          official: "Repubilika ya Kongo",
+          common: "Repubilika ya Kongo",
+        ),
+        CountryName(
+          language: LangLin(),
+          official: "Republíki ya Kongó",
+          common: "Republíki ya Kongó",
+        ),
+      ];
   @override
   List<NaturalLanguage> get languages =>
       const [LangFra(), LangKon(), LangLin()];
@@ -3407,13 +3413,6 @@ class CountryCok extends WorldCountry {
             official: "Cook Islands",
             common: "Cook Islands",
           ),
-          namesNative: const [
-            CountryName(
-              language: LangEng(),
-              official: "Cook Islands",
-              common: "Cook Islands",
-            ),
-          ],
           tld: const [".ck"],
           code: "COK",
           codeNumeric: "184",
@@ -3427,14 +3426,6 @@ class CountryCok extends WorldCountry {
           subregion: const Polynesia(),
           latLng: const LatLng(-21.23333333, -159.76666666),
           areaMetric: 236,
-          demonyms: const [
-            Demonyms(
-              language: LangEng(),
-              female: "Cook Islander",
-              male: "Cook Islander",
-            ),
-            Demonyms(language: LangFra(), female: "Cookienne", male: "Cookien"),
-          ],
           emoji: "🇨🇰",
           maps: const Maps(
             googleMaps: "nrGZrvWRGB4WHgDC9",
@@ -3444,13 +3435,31 @@ class CountryCok extends WorldCountry {
           fifa: "COK",
           car: const Car(sign: "NZ", isRightSide: false),
           timezones: const ["UTC-10:00"],
-          capitalInfo: const CapitalInfo(
-            capital: Capital("Avarua"),
-            latLng: LatLng(-21.2, -159.77),
-          ),
         );
   @override
   List<FiatCurrency> get currencies => const [FiatNzd()];
+  @override
+  CapitalInfo get capitalInfo => const CapitalInfo(
+        capital: Capital("Avarua"),
+        latLng: LatLng(-21.2, -159.77),
+      );
+  @override
+  List<Demonyms> get demonyms => const [
+        Demonyms(
+          language: LangEng(),
+          female: "Cook Islander",
+          male: "Cook Islander",
+        ),
+        Demonyms(language: LangFra(), female: "Cookienne", male: "Cookien"),
+      ];
+  @override
+  List<CountryName> get namesNative => const [
+        CountryName(
+          language: LangEng(),
+          official: "Cook Islands",
+          common: "Cook Islands",
+        ),
+      ];
   @override
   List<NaturalLanguage> get languages => const [LangEng()];
 }
@@ -3467,13 +3476,6 @@ class CountryCol extends WorldCountry {
             official: "Republic of Colombia",
             common: "Colombia",
           ),
-          namesNative: const [
-            CountryName(
-              language: LangSpa(),
-              official: "República de Colombia",
-              common: "Colombia",
-            ),
-          ],
           tld: const [".co"],
           code: "COL",
           codeNumeric: "170",
@@ -3490,18 +3492,6 @@ class CountryCol extends WorldCountry {
           latLng: const LatLng(4, -72),
           bordersCodes: const ["Bra", "Ecu", "Pan", "Per", "Ven"],
           areaMetric: 1141748,
-          demonyms: const [
-            Demonyms(
-              language: LangEng(),
-              female: "Colombian",
-              male: "Colombian",
-            ),
-            Demonyms(
-              language: LangFra(),
-              female: "Colombienne",
-              male: "Colombien",
-            ),
-          ],
           emoji: "🇨🇴",
           maps: const Maps(
             googleMaps: "RdwTG8e7gPwS62oR6",
@@ -3512,14 +3502,29 @@ class CountryCol extends WorldCountry {
           fifa: "COL",
           car: const Car(sign: "CO"),
           timezones: const ["UTC-05:00"],
-          capitalInfo: const CapitalInfo(
-            capital: Capital("Bogotá"),
-            latLng: LatLng(4.71, -74.07),
-          ),
-          regionalBlocs: const [BlocPA(), BlocUSAN()],
         );
   @override
   List<FiatCurrency> get currencies => const [FiatCop()];
+  @override
+  CapitalInfo get capitalInfo => const CapitalInfo(
+        capital: Capital("Bogotá"),
+        latLng: LatLng(4.71, -74.07),
+      );
+  @override
+  List<RegionalBloc> get regionalBlocs => const [BlocPA(), BlocUSAN()];
+  @override
+  List<Demonyms> get demonyms => const [
+        Demonyms(language: LangEng(), female: "Colombian", male: "Colombian"),
+        Demonyms(language: LangFra(), female: "Colombienne", male: "Colombien"),
+      ];
+  @override
+  List<CountryName> get namesNative => const [
+        CountryName(
+          language: LangSpa(),
+          official: "República de Colombia",
+          common: "Colombia",
+        ),
+      ];
   @override
   List<NaturalLanguage> get languages => const [LangSpa()];
 }
@@ -3536,18 +3541,6 @@ class CountryCom extends WorldCountry {
             official: "Union of the Comoros",
             common: "Comoros",
           ),
-          namesNative: const [
-            CountryName(
-              language: LangAra(),
-              official: "الاتحاد القمري",
-              common: "القمر‎",
-            ),
-            CountryName(
-              language: LangFra(),
-              official: "Union des Comores",
-              common: "Comores",
-            ),
-          ],
           tld: const [".km"],
           code: "COM",
           codeNumeric: "174",
@@ -3565,14 +3558,6 @@ class CountryCom extends WorldCountry {
           subregion: const EasternAfrica(),
           latLng: const LatLng(-12.16666666, 44.25),
           areaMetric: 1862,
-          demonyms: const [
-            Demonyms(language: LangEng(), female: "Comoran", male: "Comoran"),
-            Demonyms(
-              language: LangFra(),
-              female: "Comorienne",
-              male: "Comorien",
-            ),
-          ],
           emoji: "🇰🇲",
           maps: const Maps(
             googleMaps: "eas4GP28C1GyStnu6",
@@ -3583,14 +3568,34 @@ class CountryCom extends WorldCountry {
           fifa: "COM",
           car: const Car(sign: "COM"),
           timezones: const ["UTC+03:00"],
-          capitalInfo: const CapitalInfo(
-            capital: Capital("Moroni"),
-            latLng: LatLng(-11.7, 43.23),
-          ),
-          regionalBlocs: const [BlocAU(), BlocAL()],
         );
   @override
   List<FiatCurrency> get currencies => const [FiatKmf()];
+  @override
+  CapitalInfo get capitalInfo => const CapitalInfo(
+        capital: Capital("Moroni"),
+        latLng: LatLng(-11.7, 43.23),
+      );
+  @override
+  List<RegionalBloc> get regionalBlocs => const [BlocAU(), BlocAL()];
+  @override
+  List<Demonyms> get demonyms => const [
+        Demonyms(language: LangEng(), female: "Comoran", male: "Comoran"),
+        Demonyms(language: LangFra(), female: "Comorienne", male: "Comorien"),
+      ];
+  @override
+  List<CountryName> get namesNative => const [
+        CountryName(
+          language: LangAra(),
+          official: "الاتحاد القمري",
+          common: "القمر‎",
+        ),
+        CountryName(
+          language: LangFra(),
+          official: "Union des Comores",
+          common: "Comores",
+        ),
+      ];
   @override
   List<NaturalLanguage> get languages => const [LangAra(), LangFra()];
 }
@@ -3607,13 +3612,6 @@ class CountryCpv extends WorldCountry {
             official: "Republic of Cabo Verde",
             common: "Cape Verde",
           ),
-          namesNative: const [
-            CountryName(
-              language: LangPor(),
-              official: "República de Cabo Verde",
-              common: "Cabo Verde",
-            ),
-          ],
           tld: const [".cv"],
           code: "CPV",
           codeNumeric: "132",
@@ -3629,18 +3627,6 @@ class CountryCpv extends WorldCountry {
           subregion: const WesternAfrica(),
           latLng: const LatLng(16.5388, -23.0418),
           areaMetric: 4033,
-          demonyms: const [
-            Demonyms(
-              language: LangEng(),
-              female: "Cape Verdian",
-              male: "Cape Verdian",
-            ),
-            Demonyms(
-              language: LangFra(),
-              female: "Cap-verdienne",
-              male: "Cap-verdien",
-            ),
-          ],
           emoji: "🇨🇻",
           maps: const Maps(
             googleMaps: "Kc9vy5ChjuiAgMfXA",
@@ -3651,16 +3637,39 @@ class CountryCpv extends WorldCountry {
           fifa: "CPV",
           car: const Car(sign: "CV"),
           timezones: const ["UTC-01:00"],
-          capitalInfo: const CapitalInfo(
-            capital: Capital("Praia"),
-            latLng: LatLng(14.92, -23.52),
-          ),
           postalCode:
               const PostalCode(format: "####", regExpPattern: r"^(\d{4})$"),
-          regionalBlocs: const [BlocAU()],
         );
   @override
   List<FiatCurrency> get currencies => const [FiatCve()];
+  @override
+  CapitalInfo get capitalInfo => const CapitalInfo(
+        capital: Capital("Praia"),
+        latLng: LatLng(14.92, -23.52),
+      );
+  @override
+  List<RegionalBloc> get regionalBlocs => const [BlocAU()];
+  @override
+  List<Demonyms> get demonyms => const [
+        Demonyms(
+          language: LangEng(),
+          female: "Cape Verdian",
+          male: "Cape Verdian",
+        ),
+        Demonyms(
+          language: LangFra(),
+          female: "Cap-verdienne",
+          male: "Cap-verdien",
+        ),
+      ];
+  @override
+  List<CountryName> get namesNative => const [
+        CountryName(
+          language: LangPor(),
+          official: "República de Cabo Verde",
+          common: "Cabo Verde",
+        ),
+      ];
   @override
   List<NaturalLanguage> get languages => const [LangPor()];
 }
@@ -3677,13 +3686,6 @@ class CountryCri extends WorldCountry {
             official: "Republic of Costa Rica",
             common: "Costa Rica",
           ),
-          namesNative: const [
-            CountryName(
-              language: LangSpa(),
-              official: "República de Costa Rica",
-              common: "Costa Rica",
-            ),
-          ],
           tld: const [".cr"],
           code: "CRI",
           codeNumeric: "188",
@@ -3700,18 +3702,6 @@ class CountryCri extends WorldCountry {
           latLng: const LatLng(10, -84),
           bordersCodes: const ["Nic", "Pan"],
           areaMetric: 51100,
-          demonyms: const [
-            Demonyms(
-              language: LangEng(),
-              female: "Costa Rican",
-              male: "Costa Rican",
-            ),
-            Demonyms(
-              language: LangFra(),
-              female: "Costaricaine",
-              male: "Costaricain",
-            ),
-          ],
           emoji: "🇨🇷",
           maps: const Maps(
             googleMaps: "RFiwytjvNrpfKN7k6",
@@ -3722,16 +3712,39 @@ class CountryCri extends WorldCountry {
           fifa: "CRC",
           car: const Car(sign: "CR"),
           timezones: const ["UTC-06:00"],
-          capitalInfo: const CapitalInfo(
-            capital: Capital("San José"),
-            latLng: LatLng(9.93, -84.09),
-          ),
           postalCode:
               const PostalCode(format: "####", regExpPattern: r"^(\d{4})$"),
-          regionalBlocs: const [BlocCAIS()],
         );
   @override
   List<FiatCurrency> get currencies => const [FiatCrc()];
+  @override
+  CapitalInfo get capitalInfo => const CapitalInfo(
+        capital: Capital("San José"),
+        latLng: LatLng(9.93, -84.09),
+      );
+  @override
+  List<RegionalBloc> get regionalBlocs => const [BlocCAIS()];
+  @override
+  List<Demonyms> get demonyms => const [
+        Demonyms(
+          language: LangEng(),
+          female: "Costa Rican",
+          male: "Costa Rican",
+        ),
+        Demonyms(
+          language: LangFra(),
+          female: "Costaricaine",
+          male: "Costaricain",
+        ),
+      ];
+  @override
+  List<CountryName> get namesNative => const [
+        CountryName(
+          language: LangSpa(),
+          official: "República de Costa Rica",
+          common: "Costa Rica",
+        ),
+      ];
   @override
   List<NaturalLanguage> get languages => const [LangSpa()];
 }
@@ -3748,13 +3761,6 @@ class CountryCub extends WorldCountry {
             official: "Republic of Cuba",
             common: "Cuba",
           ),
-          namesNative: const [
-            CountryName(
-              language: LangSpa(),
-              official: "República de Cuba",
-              common: "Cuba",
-            ),
-          ],
           tld: const [".cu"],
           code: "CUB",
           codeNumeric: "192",
@@ -3766,10 +3772,6 @@ class CountryCub extends WorldCountry {
           subregion: const Caribbean(),
           latLng: const LatLng(21.5, -80),
           areaMetric: 109884,
-          demonyms: const [
-            Demonyms(language: LangEng(), female: "Cuban", male: "Cuban"),
-            Demonyms(language: LangFra(), female: "Cubaine", male: "Cubain"),
-          ],
           emoji: "🇨🇺",
           maps: const Maps(
             googleMaps: "1dDw1QfZspfMUTm99",
@@ -3779,10 +3781,6 @@ class CountryCub extends WorldCountry {
           fifa: "CUB",
           car: const Car(sign: "C"),
           timezones: const ["UTC-05:00"],
-          capitalInfo: const CapitalInfo(
-            capital: Capital("Havana"),
-            latLng: LatLng(23.12, -82.35),
-          ),
           postalCode: const PostalCode(
             format: "CP #####",
             regExpPattern: r"^(?:CP)*(\d{5})$",
@@ -3790,6 +3788,24 @@ class CountryCub extends WorldCountry {
         );
   @override
   List<FiatCurrency> get currencies => const [FiatCuc(), FiatCup()];
+  @override
+  CapitalInfo get capitalInfo => const CapitalInfo(
+        capital: Capital("Havana"),
+        latLng: LatLng(23.12, -82.35),
+      );
+  @override
+  List<Demonyms> get demonyms => const [
+        Demonyms(language: LangEng(), female: "Cuban", male: "Cuban"),
+        Demonyms(language: LangFra(), female: "Cubaine", male: "Cubain"),
+      ];
+  @override
+  List<CountryName> get namesNative => const [
+        CountryName(
+          language: LangSpa(),
+          official: "República de Cuba",
+          common: "Cuba",
+        ),
+      ];
   @override
   List<NaturalLanguage> get languages => const [LangSpa()];
 }
@@ -3806,18 +3822,6 @@ class CountryCuw extends WorldCountry {
             official: "WorldCountry of Curaçao",
             common: "Curaçao",
           ),
-          namesNative: const [
-            CountryName(
-              language: LangEng(),
-              official: "WorldCountry of Curaçao",
-              common: "Curaçao",
-            ),
-            CountryName(
-              language: LangNld(),
-              official: "Land Curaçao",
-              common: "Curaçao",
-            ),
-          ],
           tld: const [".cw"],
           code: "CUW",
           codeNumeric: "531",
@@ -3837,18 +3841,6 @@ class CountryCuw extends WorldCountry {
           subregion: const Caribbean(),
           latLng: const LatLng(12.116667, -68.933333),
           areaMetric: 444,
-          demonyms: const [
-            Demonyms(
-              language: LangEng(),
-              female: "Curaçaoan",
-              male: "Curaçaoan",
-            ),
-            Demonyms(
-              language: LangFra(),
-              female: "Curacienne",
-              male: "Curacien",
-            ),
-          ],
           emoji: "🇨🇼",
           maps: const Maps(
             googleMaps: "9D3hTeA3qKaRT7S16",
@@ -3858,13 +3850,32 @@ class CountryCuw extends WorldCountry {
           fifa: "CUW",
           car: const Car(sign: "CW"),
           timezones: const ["UTC-04:00"],
-          capitalInfo: const CapitalInfo(
-            capital: Capital("Willemstad"),
-            latLng: LatLng(12.1, -68.92),
-          ),
         );
   @override
   List<FiatCurrency> get currencies => const [FiatAng()];
+  @override
+  CapitalInfo get capitalInfo => const CapitalInfo(
+        capital: Capital("Willemstad"),
+        latLng: LatLng(12.1, -68.92),
+      );
+  @override
+  List<Demonyms> get demonyms => const [
+        Demonyms(language: LangEng(), female: "Curaçaoan", male: "Curaçaoan"),
+        Demonyms(language: LangFra(), female: "Curacienne", male: "Curacien"),
+      ];
+  @override
+  List<CountryName> get namesNative => const [
+        CountryName(
+          language: LangEng(),
+          official: "WorldCountry of Curaçao",
+          common: "Curaçao",
+        ),
+        CountryName(
+          language: LangNld(),
+          official: "Land Curaçao",
+          common: "Curaçao",
+        ),
+      ];
   @override
   List<NaturalLanguage> get languages => const [LangEng(), LangNld()];
 }
@@ -3881,13 +3892,6 @@ class CountryCxr extends WorldCountry {
             official: "Territory of Christmas Island",
             common: "Christmas Island",
           ),
-          namesNative: const [
-            CountryName(
-              language: LangEng(),
-              official: "Territory of Christmas Island",
-              common: "Christmas Island",
-            ),
-          ],
           tld: const [".cx"],
           code: "CXR",
           codeNumeric: "162",
@@ -3900,13 +3904,6 @@ class CountryCxr extends WorldCountry {
           subregion: const AustraliaAndNewZealand(),
           latLng: const LatLng(-10.5, 105.66666666),
           areaMetric: 135,
-          demonyms: const [
-            Demonyms(
-              language: LangEng(),
-              female: "Christmas Islander",
-              male: "Christmas Islander",
-            ),
-          ],
           emoji: "🇨🇽",
           maps: const Maps(
             googleMaps: "ZC17hHsQZpShN5wk9",
@@ -3915,15 +3912,32 @@ class CountryCxr extends WorldCountry {
           population: 2072,
           car: const Car(sign: "AUS", isRightSide: false),
           timezones: const ["UTC+07:00"],
-          capitalInfo: const CapitalInfo(
-            capital: Capital("Flying Fish Cove"),
-            latLng: LatLng(-10.42, 105.68),
-          ),
           postalCode:
               const PostalCode(format: "####", regExpPattern: r"^(\d{4})$"),
         );
   @override
   List<FiatCurrency> get currencies => const [FiatAud()];
+  @override
+  CapitalInfo get capitalInfo => const CapitalInfo(
+        capital: Capital("Flying Fish Cove"),
+        latLng: LatLng(-10.42, 105.68),
+      );
+  @override
+  List<Demonyms> get demonyms => const [
+        Demonyms(
+          language: LangEng(),
+          female: "Christmas Islander",
+          male: "Christmas Islander",
+        ),
+      ];
+  @override
+  List<CountryName> get namesNative => const [
+        CountryName(
+          language: LangEng(),
+          official: "Territory of Christmas Island",
+          common: "Christmas Island",
+        ),
+      ];
   @override
   List<NaturalLanguage> get languages => const [LangEng()];
 }
@@ -3940,13 +3954,6 @@ class CountryCym extends WorldCountry {
             official: "Cayman Islands",
             common: "Cayman Islands",
           ),
-          namesNative: const [
-            CountryName(
-              language: LangEng(),
-              official: "Cayman Islands",
-              common: "Cayman Islands",
-            ),
-          ],
           tld: const [".ky"],
           code: "CYM",
           codeNumeric: "136",
@@ -3960,18 +3967,6 @@ class CountryCym extends WorldCountry {
           subregion: const Caribbean(),
           latLng: const LatLng(19.3133, -81.2546),
           areaMetric: 264,
-          demonyms: const [
-            Demonyms(
-              language: LangEng(),
-              female: "Caymanian",
-              male: "Caymanian",
-            ),
-            Demonyms(
-              language: LangFra(),
-              female: "Caïmanienne",
-              male: "Caïmanien",
-            ),
-          ],
           emoji: "🇰🇾",
           maps: const Maps(
             googleMaps: "P3ZVXX3LH63t91hL8",
@@ -3981,13 +3976,27 @@ class CountryCym extends WorldCountry {
           fifa: "CAY",
           car: const Car(sign: "GB", isRightSide: false),
           timezones: const ["UTC-05:00"],
-          capitalInfo: const CapitalInfo(
-            capital: Capital("George Town"),
-            latLng: LatLng(19.3, -81.38),
-          ),
         );
   @override
   List<FiatCurrency> get currencies => const [FiatKyd()];
+  @override
+  CapitalInfo get capitalInfo => const CapitalInfo(
+        capital: Capital("George Town"),
+        latLng: LatLng(19.3, -81.38),
+      );
+  @override
+  List<Demonyms> get demonyms => const [
+        Demonyms(language: LangEng(), female: "Caymanian", male: "Caymanian"),
+        Demonyms(language: LangFra(), female: "Caïmanienne", male: "Caïmanien"),
+      ];
+  @override
+  List<CountryName> get namesNative => const [
+        CountryName(
+          language: LangEng(),
+          official: "Cayman Islands",
+          common: "Cayman Islands",
+        ),
+      ];
   @override
   List<NaturalLanguage> get languages => const [LangEng()];
 }
@@ -4004,18 +4013,6 @@ class CountryCyp extends WorldCountry {
             official: "Republic of Cyprus",
             common: "Cyprus",
           ),
-          namesNative: const [
-            CountryName(
-              language: LangEll(),
-              official: "Δημοκρατία της Κύπρος",
-              common: "Κύπρος",
-            ),
-            CountryName(
-              language: LangTur(),
-              official: "Kıbrıs Cumhuriyeti",
-              common: "Kıbrıs",
-            ),
-          ],
           tld: const [".cy"],
           code: "CYP",
           codeNumeric: "196",
@@ -4034,14 +4031,6 @@ class CountryCyp extends WorldCountry {
           subregion: const SouthernEurope(),
           latLng: const LatLng(35, 33),
           areaMetric: 9251,
-          demonyms: const [
-            Demonyms(language: LangEng(), female: "Cypriot", male: "Cypriot"),
-            Demonyms(
-              language: LangFra(),
-              female: "Chypriote",
-              male: "Chypriote",
-            ),
-          ],
           emoji: "🇨🇾",
           maps: const Maps(
             googleMaps: "77hPBRdLid8yD5Bm7",
@@ -4052,16 +4041,36 @@ class CountryCyp extends WorldCountry {
           fifa: "CYP",
           car: const Car(sign: "CY", isRightSide: false),
           timezones: const ["UTC+02:00"],
-          capitalInfo: const CapitalInfo(
-            capital: Capital("Nicosia"),
-            latLng: LatLng(35.17, 33.37),
-          ),
           postalCode:
               const PostalCode(format: "####", regExpPattern: r"^(\d{4})$"),
-          regionalBlocs: const [BlocEU()],
         );
   @override
   List<FiatCurrency> get currencies => const [FiatEur()];
+  @override
+  CapitalInfo get capitalInfo => const CapitalInfo(
+        capital: Capital("Nicosia"),
+        latLng: LatLng(35.17, 33.37),
+      );
+  @override
+  List<RegionalBloc> get regionalBlocs => const [BlocEU()];
+  @override
+  List<Demonyms> get demonyms => const [
+        Demonyms(language: LangEng(), female: "Cypriot", male: "Cypriot"),
+        Demonyms(language: LangFra(), female: "Chypriote", male: "Chypriote"),
+      ];
+  @override
+  List<CountryName> get namesNative => const [
+        CountryName(
+          language: LangEll(),
+          official: "Δημοκρατία της Κύπρος",
+          common: "Κύπρος",
+        ),
+        CountryName(
+          language: LangTur(),
+          official: "Kıbrıs Cumhuriyeti",
+          common: "Kıbrıs",
+        ),
+      ];
   @override
   List<NaturalLanguage> get languages => const [LangEll(), LangTur()];
 }
@@ -4078,13 +4087,6 @@ class CountryCze extends WorldCountry {
             official: "Czech Republic",
             common: "Czechia",
           ),
-          namesNative: const [
-            CountryName(
-              language: LangCes(),
-              official: "Česká republika",
-              common: "Česko",
-            ),
-          ],
           tld: const [".cz"],
           code: "CZE",
           codeNumeric: "203",
@@ -4098,10 +4100,6 @@ class CountryCze extends WorldCountry {
           landlocked: true,
           bordersCodes: const ["Aut", "Deu", "Pol", "Svk"],
           areaMetric: 78865,
-          demonyms: const [
-            Demonyms(language: LangEng(), female: "Czech", male: "Czech"),
-            Demonyms(language: LangFra(), female: "Tchèque", male: "Tchèque"),
-          ],
           emoji: "🇨🇿",
           maps: const Maps(
             googleMaps: "47dmgeXMZyhDHyQW8",
@@ -4112,15 +4110,30 @@ class CountryCze extends WorldCountry {
           fifa: "CZE",
           car: const Car(sign: "CZ"),
           timezones: const ["UTC+01:00"],
-          capitalInfo: const CapitalInfo(
-            capital: Capital("Prague"),
-            latLng: LatLng(50.08, 14.47),
-          ),
           postalCode: const PostalCode(format: "### ##"),
-          regionalBlocs: const [BlocEU()],
         );
   @override
   List<FiatCurrency> get currencies => const [FiatCzk()];
+  @override
+  CapitalInfo get capitalInfo => const CapitalInfo(
+        capital: Capital("Prague"),
+        latLng: LatLng(50.08, 14.47),
+      );
+  @override
+  List<RegionalBloc> get regionalBlocs => const [BlocEU()];
+  @override
+  List<Demonyms> get demonyms => const [
+        Demonyms(language: LangEng(), female: "Czech", male: "Czech"),
+        Demonyms(language: LangFra(), female: "Tchèque", male: "Tchèque"),
+      ];
+  @override
+  List<CountryName> get namesNative => const [
+        CountryName(
+          language: LangCes(),
+          official: "Česká republika",
+          common: "Česko",
+        ),
+      ];
   @override
   List<NaturalLanguage> get languages => const [LangCes()];
 }
@@ -4137,13 +4150,6 @@ class CountryDeu extends WorldCountry {
             official: "Federal Republic of Germany",
             common: "Germany",
           ),
-          namesNative: const [
-            CountryName(
-              language: LangDeu(),
-              official: "Bundesrepublik Deutschland",
-              common: "Deutschland",
-            ),
-          ],
           tld: const [".de"],
           code: "DEU",
           codeNumeric: "276",
@@ -4170,14 +4176,6 @@ class CountryDeu extends WorldCountry {
             "Che",
           ],
           areaMetric: 357114,
-          demonyms: const [
-            Demonyms(language: LangEng(), female: "German", male: "German"),
-            Demonyms(
-              language: LangFra(),
-              female: "Allemande",
-              male: "Allemand",
-            ),
-          ],
           emoji: "🇩🇪",
           maps: const Maps(
             googleMaps: "mD9FBMq1nvXUBrkv6",
@@ -4188,15 +4186,30 @@ class CountryDeu extends WorldCountry {
           fifa: "GER",
           car: const Car(sign: "DY"),
           timezones: const ["UTC+01:00"],
-          capitalInfo: const CapitalInfo(
-            capital: Capital("Berlin"),
-            latLng: LatLng(52.52, 13.4),
-          ),
           postalCode: const PostalCode(),
-          regionalBlocs: const [BlocEU()],
         );
   @override
   List<FiatCurrency> get currencies => const [FiatEur()];
+  @override
+  CapitalInfo get capitalInfo => const CapitalInfo(
+        capital: Capital("Berlin"),
+        latLng: LatLng(52.52, 13.4),
+      );
+  @override
+  List<RegionalBloc> get regionalBlocs => const [BlocEU()];
+  @override
+  List<Demonyms> get demonyms => const [
+        Demonyms(language: LangEng(), female: "German", male: "German"),
+        Demonyms(language: LangFra(), female: "Allemande", male: "Allemand"),
+      ];
+  @override
+  List<CountryName> get namesNative => const [
+        CountryName(
+          language: LangDeu(),
+          official: "Bundesrepublik Deutschland",
+          common: "Deutschland",
+        ),
+      ];
   @override
   List<NaturalLanguage> get languages => const [LangDeu()];
 }
@@ -4213,18 +4226,6 @@ class CountryDji extends WorldCountry {
             official: "Republic of Djibouti",
             common: "Djibouti",
           ),
-          namesNative: const [
-            CountryName(
-              language: LangAra(),
-              official: "جمهورية جيبوتي",
-              common: "جيبوتي‎",
-            ),
-            CountryName(
-              language: LangFra(),
-              official: "République de Djibouti",
-              common: "Djibouti",
-            ),
-          ],
           tld: const [".dj"],
           code: "DJI",
           codeNumeric: "262",
@@ -4245,14 +4246,6 @@ class CountryDji extends WorldCountry {
           latLng: const LatLng(11.5, 43),
           bordersCodes: const ["Eri", "Eth", "Som"],
           areaMetric: 23200,
-          demonyms: const [
-            Demonyms(language: LangEng(), female: "Djibouti", male: "Djibouti"),
-            Demonyms(
-              language: LangFra(),
-              female: "Djiboutienne",
-              male: "Djiboutien",
-            ),
-          ],
           emoji: "🇩🇯",
           maps: const Maps(
             googleMaps: "V1HWfzN3bS1kwf4C6",
@@ -4263,14 +4256,38 @@ class CountryDji extends WorldCountry {
           fifa: "DJI",
           car: const Car(sign: "DJI"),
           timezones: const ["UTC+03:00"],
-          capitalInfo: const CapitalInfo(
-            capital: Capital("Djibouti"),
-            latLng: LatLng(11.58, 43.15),
-          ),
-          regionalBlocs: const [BlocAU(), BlocAL()],
         );
   @override
   List<FiatCurrency> get currencies => const [FiatDjf()];
+  @override
+  CapitalInfo get capitalInfo => const CapitalInfo(
+        capital: Capital("Djibouti"),
+        latLng: LatLng(11.58, 43.15),
+      );
+  @override
+  List<RegionalBloc> get regionalBlocs => const [BlocAU(), BlocAL()];
+  @override
+  List<Demonyms> get demonyms => const [
+        Demonyms(language: LangEng(), female: "Djibouti", male: "Djibouti"),
+        Demonyms(
+          language: LangFra(),
+          female: "Djiboutienne",
+          male: "Djiboutien",
+        ),
+      ];
+  @override
+  List<CountryName> get namesNative => const [
+        CountryName(
+          language: LangAra(),
+          official: "جمهورية جيبوتي",
+          common: "جيبوتي‎",
+        ),
+        CountryName(
+          language: LangFra(),
+          official: "République de Djibouti",
+          common: "Djibouti",
+        ),
+      ];
   @override
   List<NaturalLanguage> get languages => const [LangAra(), LangFra()];
 }
@@ -4287,13 +4304,6 @@ class CountryDma extends WorldCountry {
             official: "Commonwealth of Dominica",
             common: "Dominica",
           ),
-          namesNative: const [
-            CountryName(
-              language: LangEng(),
-              official: "Commonwealth of Dominica",
-              common: "Dominica",
-            ),
-          ],
           tld: const [".dm"],
           code: "DMA",
           codeNumeric: "212",
@@ -4310,18 +4320,6 @@ class CountryDma extends WorldCountry {
           subregion: const Caribbean(),
           latLng: const LatLng(15.41666666, -61.33333333),
           areaMetric: 751,
-          demonyms: const [
-            Demonyms(
-              language: LangEng(),
-              female: "Dominican",
-              male: "Dominican",
-            ),
-            Demonyms(
-              language: LangFra(),
-              female: "Dominiquaise",
-              male: "Dominiquais",
-            ),
-          ],
           emoji: "🇩🇲",
           maps: const Maps(
             googleMaps: "HSKdHYpFC8oHHuyV7",
@@ -4331,13 +4329,31 @@ class CountryDma extends WorldCountry {
           fifa: "DMA",
           car: const Car(sign: "WD", isRightSide: false),
           timezones: const ["UTC-04:00"],
-          capitalInfo: const CapitalInfo(
-            capital: Capital("Roseau"),
-            latLng: LatLng(15.3, -61.4),
-          ),
         );
   @override
   List<FiatCurrency> get currencies => const [FiatXcd()];
+  @override
+  CapitalInfo get capitalInfo => const CapitalInfo(
+        capital: Capital("Roseau"),
+        latLng: LatLng(15.3, -61.4),
+      );
+  @override
+  List<Demonyms> get demonyms => const [
+        Demonyms(language: LangEng(), female: "Dominican", male: "Dominican"),
+        Demonyms(
+          language: LangFra(),
+          female: "Dominiquaise",
+          male: "Dominiquais",
+        ),
+      ];
+  @override
+  List<CountryName> get namesNative => const [
+        CountryName(
+          language: LangEng(),
+          official: "Commonwealth of Dominica",
+          common: "Dominica",
+        ),
+      ];
   @override
   List<NaturalLanguage> get languages => const [LangEng()];
 }
@@ -4354,13 +4370,6 @@ class CountryDnk extends WorldCountry {
             official: "Kingdom of Denmark",
             common: "Denmark",
           ),
-          namesNative: const [
-            CountryName(
-              language: LangDan(),
-              official: "Kongeriget Danmark",
-              common: "Danmark",
-            ),
-          ],
           tld: const [".dk"],
           code: "DNK",
           codeNumeric: "208",
@@ -4378,10 +4387,6 @@ class CountryDnk extends WorldCountry {
           latLng: const LatLng(56, 10),
           bordersCodes: const ["Deu"],
           areaMetric: 43094,
-          demonyms: const [
-            Demonyms(language: LangEng(), female: "Danish", male: "Danish"),
-            Demonyms(language: LangFra(), female: "Danoise", male: "Danois"),
-          ],
           emoji: "🇩🇰",
           maps: const Maps(
             googleMaps: "UddGPN7hAyrtpFiT6",
@@ -4398,16 +4403,31 @@ class CountryDnk extends WorldCountry {
             "UTC+00:00",
             "UTC+01:00",
           ],
-          capitalInfo: const CapitalInfo(
-            capital: Capital("Copenhagen"),
-            latLng: LatLng(55.67, 12.58),
-          ),
           postalCode:
               const PostalCode(format: "####", regExpPattern: r"^(\d{4})$"),
-          regionalBlocs: const [BlocEU()],
         );
   @override
   List<FiatCurrency> get currencies => const [FiatDkk()];
+  @override
+  CapitalInfo get capitalInfo => const CapitalInfo(
+        capital: Capital("Copenhagen"),
+        latLng: LatLng(55.67, 12.58),
+      );
+  @override
+  List<RegionalBloc> get regionalBlocs => const [BlocEU()];
+  @override
+  List<Demonyms> get demonyms => const [
+        Demonyms(language: LangEng(), female: "Danish", male: "Danish"),
+        Demonyms(language: LangFra(), female: "Danoise", male: "Danois"),
+      ];
+  @override
+  List<CountryName> get namesNative => const [
+        CountryName(
+          language: LangDan(),
+          official: "Kongeriget Danmark",
+          common: "Danmark",
+        ),
+      ];
   @override
   List<NaturalLanguage> get languages => const [LangDan()];
 }
@@ -4424,13 +4444,6 @@ class CountryDom extends WorldCountry {
             official: "Dominican Republic",
             common: "Dominican Republic",
           ),
-          namesNative: const [
-            CountryName(
-              language: LangSpa(),
-              official: "República Dominicana",
-              common: "República Dominicana",
-            ),
-          ],
           tld: const [".do"],
           code: "DOM",
           codeNumeric: "214",
@@ -4443,18 +4456,6 @@ class CountryDom extends WorldCountry {
           latLng: const LatLng(19, -70.66666666),
           bordersCodes: const ["Hti"],
           areaMetric: 48671,
-          demonyms: const [
-            Demonyms(
-              language: LangEng(),
-              female: "Dominican",
-              male: "Dominican",
-            ),
-            Demonyms(
-              language: LangFra(),
-              female: "Dominicaine",
-              male: "Dominicain",
-            ),
-          ],
           emoji: "🇩🇴",
           maps: const Maps(
             googleMaps: "soxooTHxEeiAbn3UA",
@@ -4465,15 +4466,34 @@ class CountryDom extends WorldCountry {
           fifa: "DOM",
           car: const Car(sign: "DOM"),
           timezones: const ["UTC-04:00"],
-          capitalInfo: const CapitalInfo(
-            capital: Capital("Santo Domingo"),
-            latLng: LatLng(18.47, -69.9),
-          ),
           postalCode: const PostalCode(),
-          regionalBlocs: const [BlocCARICOM(), BlocCAIS()],
         );
   @override
   List<FiatCurrency> get currencies => const [FiatDop()];
+  @override
+  CapitalInfo get capitalInfo => const CapitalInfo(
+        capital: Capital("Santo Domingo"),
+        latLng: LatLng(18.47, -69.9),
+      );
+  @override
+  List<RegionalBloc> get regionalBlocs => const [BlocCARICOM(), BlocCAIS()];
+  @override
+  List<Demonyms> get demonyms => const [
+        Demonyms(language: LangEng(), female: "Dominican", male: "Dominican"),
+        Demonyms(
+          language: LangFra(),
+          female: "Dominicaine",
+          male: "Dominicain",
+        ),
+      ];
+  @override
+  List<CountryName> get namesNative => const [
+        CountryName(
+          language: LangSpa(),
+          official: "República Dominicana",
+          common: "República Dominicana",
+        ),
+      ];
   @override
   List<NaturalLanguage> get languages => const [LangSpa()];
 }
@@ -4490,13 +4510,6 @@ class CountryDza extends WorldCountry {
             official: "People's Democratic Republic of Algeria",
             common: "Algeria",
           ),
-          namesNative: const [
-            CountryName(
-              language: LangAra(),
-              official: "الجمهورية الديمقراطية الشعبية الجزائرية",
-              common: "الجزائر",
-            ),
-          ],
           tld: const [".dz", "الجزائر."],
           code: "DZA",
           codeNumeric: "012",
@@ -4509,14 +4522,6 @@ class CountryDza extends WorldCountry {
           latLng: const LatLng(28, 3),
           bordersCodes: const ["Tun", "Lby", "Ner", "Esh", "Mrt", "Mli", "Mar"],
           areaMetric: 2381741,
-          demonyms: const [
-            Demonyms(language: LangEng(), female: "Algerian", male: "Algerian"),
-            Demonyms(
-              language: LangFra(),
-              female: "Algérienne",
-              male: "Algérien",
-            ),
-          ],
           emoji: "🇩🇿",
           maps: const Maps(
             googleMaps: "RsAyAfyaiNVb8DpW8",
@@ -4528,15 +4533,30 @@ class CountryDza extends WorldCountry {
           car: const Car(sign: "DZ"),
           timezones: const ["UTC+01:00"],
           startOfWeek: Weekday.sunday,
-          capitalInfo: const CapitalInfo(
-            capital: Capital("Algiers"),
-            latLng: LatLng(36.75, 3.05),
-          ),
           postalCode: const PostalCode(),
-          regionalBlocs: const [BlocAU(), BlocAL()],
         );
   @override
   List<FiatCurrency> get currencies => const [FiatDzd()];
+  @override
+  CapitalInfo get capitalInfo => const CapitalInfo(
+        capital: Capital("Algiers"),
+        latLng: LatLng(36.75, 3.05),
+      );
+  @override
+  List<RegionalBloc> get regionalBlocs => const [BlocAU(), BlocAL()];
+  @override
+  List<Demonyms> get demonyms => const [
+        Demonyms(language: LangEng(), female: "Algerian", male: "Algerian"),
+        Demonyms(language: LangFra(), female: "Algérienne", male: "Algérien"),
+      ];
+  @override
+  List<CountryName> get namesNative => const [
+        CountryName(
+          language: LangAra(),
+          official: "الجمهورية الديمقراطية الشعبية الجزائرية",
+          common: "الجزائر",
+        ),
+      ];
   @override
   List<NaturalLanguage> get languages => const [LangAra()];
 }
@@ -4553,13 +4573,6 @@ class CountryEcu extends WorldCountry {
             official: "Republic of Ecuador",
             common: "Ecuador",
           ),
-          namesNative: const [
-            CountryName(
-              language: LangSpa(),
-              official: "República del Ecuador",
-              common: "Ecuador",
-            ),
-          ],
           tld: const [".ec"],
           code: "ECU",
           codeNumeric: "218",
@@ -4576,18 +4589,6 @@ class CountryEcu extends WorldCountry {
           latLng: const LatLng(-2, -77.5),
           bordersCodes: const ["Col", "Per"],
           areaMetric: 276841,
-          demonyms: const [
-            Demonyms(
-              language: LangEng(),
-              female: "Ecuadorean",
-              male: "Ecuadorean",
-            ),
-            Demonyms(
-              language: LangFra(),
-              female: "Équatorienne",
-              male: "Équatorien",
-            ),
-          ],
           emoji: "🇪🇨",
           maps: const Maps(
             googleMaps: "TbX8hUW4gcbRPZiK7",
@@ -4598,18 +4599,37 @@ class CountryEcu extends WorldCountry {
           fifa: "ECU",
           car: const Car(sign: "EC"),
           timezones: const ["UTC-06:00", "UTC-05:00"],
-          capitalInfo: const CapitalInfo(
-            capital: Capital("Quito"),
-            latLng: LatLng(-0.22, -78.5),
-          ),
           postalCode: const PostalCode(
             format: "@####@",
             regExpPattern: r"^([a-zA-Z]\d{4}[a-zA-Z])$",
           ),
-          regionalBlocs: const [BlocUSAN()],
         );
   @override
   List<FiatCurrency> get currencies => const [FiatUsd()];
+  @override
+  CapitalInfo get capitalInfo => const CapitalInfo(
+        capital: Capital("Quito"),
+        latLng: LatLng(-0.22, -78.5),
+      );
+  @override
+  List<RegionalBloc> get regionalBlocs => const [BlocUSAN()];
+  @override
+  List<Demonyms> get demonyms => const [
+        Demonyms(language: LangEng(), female: "Ecuadorean", male: "Ecuadorean"),
+        Demonyms(
+          language: LangFra(),
+          female: "Équatorienne",
+          male: "Équatorien",
+        ),
+      ];
+  @override
+  List<CountryName> get namesNative => const [
+        CountryName(
+          language: LangSpa(),
+          official: "República del Ecuador",
+          common: "Ecuador",
+        ),
+      ];
   @override
   List<NaturalLanguage> get languages => const [LangSpa()];
 }
@@ -4626,13 +4646,6 @@ class CountryEgy extends WorldCountry {
             official: "Arab Republic of Egypt",
             common: "Egypt",
           ),
-          namesNative: const [
-            CountryName(
-              language: LangAra(),
-              official: "جمهورية مصر العربية",
-              common: "مصر",
-            ),
-          ],
           tld: const [".eg", ".مصر"],
           code: "EGY",
           codeNumeric: "818",
@@ -4645,14 +4658,6 @@ class CountryEgy extends WorldCountry {
           latLng: const LatLng(27, 30),
           bordersCodes: const ["Isr", "Lby", "Pse", "Sdn"],
           areaMetric: 1002450,
-          demonyms: const [
-            Demonyms(language: LangEng(), female: "Egyptian", male: "Egyptian"),
-            Demonyms(
-              language: LangFra(),
-              female: "Égyptienne",
-              male: "Égyptien",
-            ),
-          ],
           emoji: "🇪🇬",
           maps: const Maps(
             googleMaps: "uoDRhXbsqjG6L7VG7",
@@ -4664,15 +4669,30 @@ class CountryEgy extends WorldCountry {
           car: const Car(sign: "ET"),
           timezones: const ["UTC+02:00"],
           startOfWeek: Weekday.sunday,
-          capitalInfo: const CapitalInfo(
-            capital: Capital("Cairo"),
-            latLng: LatLng(30.05, 31.25),
-          ),
           postalCode: const PostalCode(),
-          regionalBlocs: const [BlocAU(), BlocAL()],
         );
   @override
   List<FiatCurrency> get currencies => const [FiatEgp()];
+  @override
+  CapitalInfo get capitalInfo => const CapitalInfo(
+        capital: Capital("Cairo"),
+        latLng: LatLng(30.05, 31.25),
+      );
+  @override
+  List<RegionalBloc> get regionalBlocs => const [BlocAU(), BlocAL()];
+  @override
+  List<Demonyms> get demonyms => const [
+        Demonyms(language: LangEng(), female: "Egyptian", male: "Egyptian"),
+        Demonyms(language: LangFra(), female: "Égyptienne", male: "Égyptien"),
+      ];
+  @override
+  List<CountryName> get namesNative => const [
+        CountryName(
+          language: LangAra(),
+          official: "جمهورية مصر العربية",
+          common: "مصر",
+        ),
+      ];
   @override
   List<NaturalLanguage> get languages => const [LangAra()];
 }
@@ -4689,23 +4709,6 @@ class CountryEri extends WorldCountry {
             official: "State of Eritrea",
             common: "Eritrea",
           ),
-          namesNative: const [
-            CountryName(
-              language: LangAra(),
-              official: "دولة إرتريا",
-              common: "إرتريا‎",
-            ),
-            CountryName(
-              language: LangEng(),
-              official: "State of Eritrea",
-              common: "Eritrea",
-            ),
-            CountryName(
-              language: LangTir(),
-              official: "ሃገረ ኤርትራ",
-              common: "ኤርትራ",
-            ),
-          ],
           tld: const [".er"],
           code: "ERI",
           codeNumeric: "232",
@@ -4725,14 +4728,6 @@ class CountryEri extends WorldCountry {
           latLng: const LatLng(15, 39),
           bordersCodes: const ["Dji", "Eth", "Sdn"],
           areaMetric: 117600,
-          demonyms: const [
-            Demonyms(language: LangEng(), female: "Eritrean", male: "Eritrean"),
-            Demonyms(
-              language: LangFra(),
-              female: "Érythréenne",
-              male: "Érythréen",
-            ),
-          ],
           emoji: "🇪🇷",
           maps: const Maps(
             googleMaps: "HRyqUpnPwwG6jY5j6",
@@ -4742,14 +4737,35 @@ class CountryEri extends WorldCountry {
           fifa: "ERI",
           car: const Car(sign: "ER"),
           timezones: const ["UTC+03:00"],
-          capitalInfo: const CapitalInfo(
-            capital: Capital("Asmara"),
-            latLng: LatLng(15.33, 38.93),
-          ),
-          regionalBlocs: const [BlocAU()],
         );
   @override
   List<FiatCurrency> get currencies => const [FiatErn()];
+  @override
+  CapitalInfo get capitalInfo => const CapitalInfo(
+        capital: Capital("Asmara"),
+        latLng: LatLng(15.33, 38.93),
+      );
+  @override
+  List<RegionalBloc> get regionalBlocs => const [BlocAU()];
+  @override
+  List<Demonyms> get demonyms => const [
+        Demonyms(language: LangEng(), female: "Eritrean", male: "Eritrean"),
+        Demonyms(language: LangFra(), female: "Érythréenne", male: "Érythréen"),
+      ];
+  @override
+  List<CountryName> get namesNative => const [
+        CountryName(
+          language: LangAra(),
+          official: "دولة إرتريا",
+          common: "إرتريا‎",
+        ),
+        CountryName(
+          language: LangEng(),
+          official: "State of Eritrea",
+          common: "Eritrea",
+        ),
+        CountryName(language: LangTir(), official: "ሃገረ ኤርትራ", common: "ኤርትራ"),
+      ];
   @override
   List<NaturalLanguage> get languages =>
       const [LangAra(), LangEng(), LangTir()];
@@ -4767,13 +4783,6 @@ class CountryEsh extends WorldCountry {
             official: "Sahrawi Arab Democratic Republic",
             common: "Western Sahara",
           ),
-          namesNative: const [
-            CountryName(
-              language: LangSpa(),
-              official: "República Árabe Saharaui Democrática",
-              common: "Sahara Occidental",
-            ),
-          ],
           tld: const [".eh"],
           code: "ESH",
           codeNumeric: "732",
@@ -4787,9 +4796,6 @@ class CountryEsh extends WorldCountry {
           latLng: const LatLng(24.5, -13),
           bordersCodes: const ["Dza", "Mrt", "Mar"],
           areaMetric: 266000,
-          demonyms: const [
-            Demonyms(language: LangEng(), female: "Sahrawi", male: "Sahrawi"),
-          ],
           emoji: "🇪🇭",
           maps: const Maps(
             googleMaps: "7nU3mB69vP6zQp7A8",
@@ -4799,14 +4805,27 @@ class CountryEsh extends WorldCountry {
           car: const Car(),
           timezones: const ["UTC+00:00"],
           hasCoatOfArms: false,
-          capitalInfo: const CapitalInfo(
-            capital: Capital("El Aaiún"),
-            latLng: LatLng(-13.28, 27.14),
-          ),
-          regionalBlocs: const [BlocAU()],
         );
   @override
   List<FiatCurrency> get currencies => const [FiatDzd(), FiatMad(), FiatMru()];
+  @override
+  CapitalInfo get capitalInfo => const CapitalInfo(
+        capital: Capital("El Aaiún"),
+        latLng: LatLng(-13.28, 27.14),
+      );
+  @override
+  List<RegionalBloc> get regionalBlocs => const [BlocAU()];
+  @override
+  List<Demonyms> get demonyms =>
+      const [Demonyms(language: LangEng(), female: "Sahrawi", male: "Sahrawi")];
+  @override
+  List<CountryName> get namesNative => const [
+        CountryName(
+          language: LangSpa(),
+          official: "República Árabe Saharaui Democrática",
+          common: "Sahara Occidental",
+        ),
+      ];
   @override
   List<NaturalLanguage> get languages => const [LangSpa()];
 }
@@ -4823,13 +4842,6 @@ class CountryEsp extends WorldCountry {
             official: "Kingdom of Spain",
             common: "Spain",
           ),
-          namesNative: const [
-            CountryName(
-              language: LangSpa(),
-              official: "Reino de España",
-              common: "España",
-            ),
-          ],
           tld: const [".es"],
           code: "ESP",
           codeNumeric: "724",
@@ -4842,14 +4854,6 @@ class CountryEsp extends WorldCountry {
           latLng: const LatLng(40, -4),
           bordersCodes: const ["And", "Fra", "Gib", "Prt", "Mar"],
           areaMetric: 505992,
-          demonyms: const [
-            Demonyms(language: LangEng(), female: "Spanish", male: "Spanish"),
-            Demonyms(
-              language: LangFra(),
-              female: "Espagnole",
-              male: "Espagnol",
-            ),
-          ],
           emoji: "🇪🇸",
           maps: const Maps(
             googleMaps: "138JaXW8EZzRVitY9",
@@ -4860,15 +4864,30 @@ class CountryEsp extends WorldCountry {
           fifa: "ESP",
           car: const Car(sign: "E"),
           timezones: const ["UTC+00:00", "UTC+01:00"],
-          capitalInfo: const CapitalInfo(
-            capital: Capital("Madrid"),
-            latLng: LatLng(40.4, -3.68),
-          ),
           postalCode: const PostalCode(),
-          regionalBlocs: const [BlocEU()],
         );
   @override
   List<FiatCurrency> get currencies => const [FiatEur()];
+  @override
+  CapitalInfo get capitalInfo => const CapitalInfo(
+        capital: Capital("Madrid"),
+        latLng: LatLng(40.4, -3.68),
+      );
+  @override
+  List<RegionalBloc> get regionalBlocs => const [BlocEU()];
+  @override
+  List<Demonyms> get demonyms => const [
+        Demonyms(language: LangEng(), female: "Spanish", male: "Spanish"),
+        Demonyms(language: LangFra(), female: "Espagnole", male: "Espagnol"),
+      ];
+  @override
+  List<CountryName> get namesNative => const [
+        CountryName(
+          language: LangSpa(),
+          official: "Reino de España",
+          common: "España",
+        ),
+      ];
   @override
   List<NaturalLanguage> get languages => const [LangSpa()];
 }
@@ -4885,13 +4904,6 @@ class CountryEst extends WorldCountry {
             official: "Republic of Estonia",
             common: "Estonia",
           ),
-          namesNative: const [
-            CountryName(
-              language: LangEst(),
-              official: "Eesti Vabariik",
-              common: "Eesti",
-            ),
-          ],
           tld: const [".ee"],
           code: "EST",
           codeNumeric: "233",
@@ -4909,14 +4921,6 @@ class CountryEst extends WorldCountry {
           latLng: const LatLng(59, 26),
           bordersCodes: const ["Lva", "Rus"],
           areaMetric: 45227,
-          demonyms: const [
-            Demonyms(language: LangEng(), female: "Estonian", male: "Estonian"),
-            Demonyms(
-              language: LangFra(),
-              female: "Estonienne",
-              male: "Estonien",
-            ),
-          ],
           emoji: "🇪🇪",
           maps: const Maps(
             googleMaps: "6SsynwGUodL1sDvq8",
@@ -4927,15 +4931,30 @@ class CountryEst extends WorldCountry {
           fifa: "EST",
           car: const Car(sign: "EST"),
           timezones: const ["UTC+02:00"],
-          capitalInfo: const CapitalInfo(
-            capital: Capital("Tallinn"),
-            latLng: LatLng(59.43, 24.72),
-          ),
           postalCode: const PostalCode(),
-          regionalBlocs: const [BlocEU()],
         );
   @override
   List<FiatCurrency> get currencies => const [FiatEur()];
+  @override
+  CapitalInfo get capitalInfo => const CapitalInfo(
+        capital: Capital("Tallinn"),
+        latLng: LatLng(59.43, 24.72),
+      );
+  @override
+  List<RegionalBloc> get regionalBlocs => const [BlocEU()];
+  @override
+  List<Demonyms> get demonyms => const [
+        Demonyms(language: LangEng(), female: "Estonian", male: "Estonian"),
+        Demonyms(language: LangFra(), female: "Estonienne", male: "Estonien"),
+      ];
+  @override
+  List<CountryName> get namesNative => const [
+        CountryName(
+          language: LangEst(),
+          official: "Eesti Vabariik",
+          common: "Eesti",
+        ),
+      ];
   @override
   List<NaturalLanguage> get languages => const [LangEst()];
 }
@@ -4952,13 +4971,6 @@ class CountryEth extends WorldCountry {
             official: "Federal Democratic Republic of Ethiopia",
             common: "Ethiopia",
           ),
-          namesNative: const [
-            CountryName(
-              language: LangAmh(),
-              official: "የኢትዮጵያ ፌዴራላዊ ዲሞክራሲያዊ ሪፐብሊክ",
-              common: "ኢትዮጵያ",
-            ),
-          ],
           tld: const [".et"],
           code: "ETH",
           codeNumeric: "231",
@@ -4977,18 +4989,6 @@ class CountryEth extends WorldCountry {
           landlocked: true,
           bordersCodes: const ["Dji", "Eri", "Ken", "Som", "Ssd", "Sdn"],
           areaMetric: 1104300,
-          demonyms: const [
-            Demonyms(
-              language: LangEng(),
-              female: "Ethiopian",
-              male: "Ethiopian",
-            ),
-            Demonyms(
-              language: LangFra(),
-              female: "Éthiopienne",
-              male: "Éthiopien",
-            ),
-          ],
           emoji: "🇪🇹",
           maps: const Maps(
             googleMaps: "2Q4hQWCbhuZLj3fG6",
@@ -4999,16 +4999,31 @@ class CountryEth extends WorldCountry {
           fifa: "ETH",
           car: const Car(sign: "ETH"),
           timezones: const ["UTC+03:00"],
-          capitalInfo: const CapitalInfo(
-            capital: Capital("Addis Ababa"),
-            latLng: LatLng(9.03, 38.7),
-          ),
           postalCode:
               const PostalCode(format: "####", regExpPattern: r"^(\d{4})$"),
-          regionalBlocs: const [BlocAU()],
         );
   @override
   List<FiatCurrency> get currencies => const [FiatEtb()];
+  @override
+  CapitalInfo get capitalInfo => const CapitalInfo(
+        capital: Capital("Addis Ababa"),
+        latLng: LatLng(9.03, 38.7),
+      );
+  @override
+  List<RegionalBloc> get regionalBlocs => const [BlocAU()];
+  @override
+  List<Demonyms> get demonyms => const [
+        Demonyms(language: LangEng(), female: "Ethiopian", male: "Ethiopian"),
+        Demonyms(language: LangFra(), female: "Éthiopienne", male: "Éthiopien"),
+      ];
+  @override
+  List<CountryName> get namesNative => const [
+        CountryName(
+          language: LangAmh(),
+          official: "የኢትዮጵያ ፌዴራላዊ ዲሞክራሲያዊ ሪፐብሊክ",
+          common: "ኢትዮጵያ",
+        ),
+      ];
   @override
   List<NaturalLanguage> get languages => const [LangAmh()];
 }
@@ -5025,18 +5040,6 @@ class CountryFin extends WorldCountry {
             official: "Republic of Finland",
             common: "Finland",
           ),
-          namesNative: const [
-            CountryName(
-              language: LangFin(),
-              official: "Suomen tasavalta",
-              common: "Suomi",
-            ),
-            CountryName(
-              language: LangSwe(),
-              official: "Republiken Finland",
-              common: "Finland",
-            ),
-          ],
           tld: const [".fi"],
           code: "FIN",
           codeNumeric: "246",
@@ -5055,14 +5058,6 @@ class CountryFin extends WorldCountry {
           latLng: const LatLng(64, 26),
           bordersCodes: const ["Nor", "Swe", "Rus"],
           areaMetric: 338424,
-          demonyms: const [
-            Demonyms(language: LangEng(), female: "Finnish", male: "Finnish"),
-            Demonyms(
-              language: LangFra(),
-              female: "Finlandaise",
-              male: "Finlandais",
-            ),
-          ],
           emoji: "🇫🇮",
           maps: const Maps(
             googleMaps: "HjgWDCNKRAYHrkMn8",
@@ -5073,15 +5068,39 @@ class CountryFin extends WorldCountry {
           fifa: "FIN",
           car: const Car(sign: "FIN"),
           timezones: const ["UTC+02:00"],
-          capitalInfo: const CapitalInfo(
-            capital: Capital("Helsinki"),
-            latLng: LatLng(60.17, 24.93),
-          ),
           postalCode: const PostalCode(regExpPattern: r"^(?:FI)*(\d{5})$"),
-          regionalBlocs: const [BlocEU()],
         );
   @override
   List<FiatCurrency> get currencies => const [FiatEur()];
+  @override
+  CapitalInfo get capitalInfo => const CapitalInfo(
+        capital: Capital("Helsinki"),
+        latLng: LatLng(60.17, 24.93),
+      );
+  @override
+  List<RegionalBloc> get regionalBlocs => const [BlocEU()];
+  @override
+  List<Demonyms> get demonyms => const [
+        Demonyms(language: LangEng(), female: "Finnish", male: "Finnish"),
+        Demonyms(
+          language: LangFra(),
+          female: "Finlandaise",
+          male: "Finlandais",
+        ),
+      ];
+  @override
+  List<CountryName> get namesNative => const [
+        CountryName(
+          language: LangFin(),
+          official: "Suomen tasavalta",
+          common: "Suomi",
+        ),
+        CountryName(
+          language: LangSwe(),
+          official: "Republiken Finland",
+          common: "Finland",
+        ),
+      ];
   @override
   List<NaturalLanguage> get languages => const [LangFin(), LangSwe()];
 }
@@ -5098,18 +5117,6 @@ class CountryFji extends WorldCountry {
             official: "Republic of Fiji",
             common: "Fiji",
           ),
-          namesNative: const [
-            CountryName(
-              language: LangEng(),
-              official: "Republic of Fiji",
-              common: "Fiji",
-            ),
-            CountryName(
-              language: LangFij(),
-              official: "Matanitu Tugalala o Viti",
-              common: "Viti",
-            ),
-          ],
           tld: const [".fj"],
           code: "FJI",
           codeNumeric: "242",
@@ -5127,10 +5134,6 @@ class CountryFji extends WorldCountry {
           subregion: const Melanesia(),
           latLng: const LatLng(17.7134, 178.065),
           areaMetric: 18272,
-          demonyms: const [
-            Demonyms(language: LangEng(), female: "Fijian", male: "Fijian"),
-            Demonyms(language: LangFra(), female: "Fidjienne", male: "Fidjien"),
-          ],
           emoji: "🇫🇯",
           maps: const Maps(
             googleMaps: "r9fhDqoLZdg1zmE99",
@@ -5141,13 +5144,32 @@ class CountryFji extends WorldCountry {
           fifa: "FIJ",
           car: const Car(sign: "FJI", isRightSide: false),
           timezones: const ["UTC+12:00"],
-          capitalInfo: const CapitalInfo(
-            capital: Capital("Suva"),
-            latLng: LatLng(-18.13, 178.42),
-          ),
         );
   @override
   List<FiatCurrency> get currencies => const [FiatFjd()];
+  @override
+  CapitalInfo get capitalInfo => const CapitalInfo(
+        capital: Capital("Suva"),
+        latLng: LatLng(-18.13, 178.42),
+      );
+  @override
+  List<Demonyms> get demonyms => const [
+        Demonyms(language: LangEng(), female: "Fijian", male: "Fijian"),
+        Demonyms(language: LangFra(), female: "Fidjienne", male: "Fidjien"),
+      ];
+  @override
+  List<CountryName> get namesNative => const [
+        CountryName(
+          language: LangEng(),
+          official: "Republic of Fiji",
+          common: "Fiji",
+        ),
+        CountryName(
+          language: LangFij(),
+          official: "Matanitu Tugalala o Viti",
+          common: "Viti",
+        ),
+      ];
   @override
   List<NaturalLanguage> get languages => const [LangEng(), LangFij()];
 }
@@ -5164,13 +5186,6 @@ class CountryFlk extends WorldCountry {
             official: "Falkland Islands",
             common: "Falkland Islands",
           ),
-          namesNative: const [
-            CountryName(
-              language: LangEng(),
-              official: "Falkland Islands",
-              common: "Falkland Islands",
-            ),
-          ],
           tld: const [".fk"],
           code: "FLK",
           codeNumeric: "238",
@@ -5187,14 +5202,6 @@ class CountryFlk extends WorldCountry {
           subregion: const SouthAmerica(),
           latLng: const LatLng(-51.75, -59),
           areaMetric: 12173,
-          demonyms: const [
-            Demonyms(
-              language: LangEng(),
-              female: "Falkland Islander",
-              male: "Falkland Islander",
-            ),
-            Demonyms(language: LangFra(), female: "Malouinne", male: "Malouin"),
-          ],
           emoji: "🇫🇰",
           maps: const Maps(
             googleMaps: "TZH1x7AGanQKifNk7",
@@ -5203,14 +5210,33 @@ class CountryFlk extends WorldCountry {
           population: 2563,
           car: const Car(sign: "GB", isRightSide: false),
           timezones: const ["UTC-04:00"],
-          capitalInfo: const CapitalInfo(
-            capital: Capital("Stanley"),
-            latLng: LatLng(-51.7, -57.85),
-          ),
-          regionalBlocs: const [BlocUSAN()],
         );
   @override
   List<FiatCurrency> get currencies => const [FiatFkp()];
+  @override
+  CapitalInfo get capitalInfo => const CapitalInfo(
+        capital: Capital("Stanley"),
+        latLng: LatLng(-51.7, -57.85),
+      );
+  @override
+  List<RegionalBloc> get regionalBlocs => const [BlocUSAN()];
+  @override
+  List<Demonyms> get demonyms => const [
+        Demonyms(
+          language: LangEng(),
+          female: "Falkland Islander",
+          male: "Falkland Islander",
+        ),
+        Demonyms(language: LangFra(), female: "Malouinne", male: "Malouin"),
+      ];
+  @override
+  List<CountryName> get namesNative => const [
+        CountryName(
+          language: LangEng(),
+          official: "Falkland Islands",
+          common: "Falkland Islands",
+        ),
+      ];
   @override
   List<NaturalLanguage> get languages => const [LangEng()];
 }
@@ -5227,13 +5253,6 @@ class CountryFra extends WorldCountry {
             official: "French Republic",
             common: "France",
           ),
-          namesNative: const [
-            CountryName(
-              language: LangFra(),
-              official: "République française",
-              common: "France",
-            ),
-          ],
           tld: const [".fr"],
           code: "FRA",
           codeNumeric: "250",
@@ -5255,14 +5274,6 @@ class CountryFra extends WorldCountry {
             "Che",
           ],
           areaMetric: 551695,
-          demonyms: const [
-            Demonyms(language: LangEng(), female: "French", male: "French"),
-            Demonyms(
-              language: LangFra(),
-              female: "Française",
-              male: "Français",
-            ),
-          ],
           emoji: "🇫🇷",
           maps: const Maps(
             googleMaps: "g7QxxSFsWyTPKuzd7",
@@ -5288,15 +5299,28 @@ class CountryFra extends WorldCountry {
             "UTC+11:00",
             "UTC+12:00",
           ],
-          capitalInfo: const CapitalInfo(
-            capital: Capital("Paris"),
-            latLng: LatLng(48.87, 2.33),
-          ),
           postalCode: const PostalCode(),
-          regionalBlocs: const [BlocEU()],
         );
   @override
   List<FiatCurrency> get currencies => const [FiatEur()];
+  @override
+  CapitalInfo get capitalInfo =>
+      const CapitalInfo(capital: Capital("Paris"), latLng: LatLng(48.87, 2.33));
+  @override
+  List<RegionalBloc> get regionalBlocs => const [BlocEU()];
+  @override
+  List<Demonyms> get demonyms => const [
+        Demonyms(language: LangEng(), female: "French", male: "French"),
+        Demonyms(language: LangFra(), female: "Française", male: "Français"),
+      ];
+  @override
+  List<CountryName> get namesNative => const [
+        CountryName(
+          language: LangFra(),
+          official: "République française",
+          common: "France",
+        ),
+      ];
   @override
   List<NaturalLanguage> get languages => const [LangFra()];
 }
@@ -5313,18 +5337,6 @@ class CountryFro extends WorldCountry {
             official: "Faroe Islands",
             common: "Faroe Islands",
           ),
-          namesNative: const [
-            CountryName(
-              language: LangDan(),
-              official: "Færøerne",
-              common: "Færøerne",
-            ),
-            CountryName(
-              language: LangFao(),
-              official: "Føroyar",
-              common: "Føroyar",
-            ),
-          ],
           tld: const [".fo"],
           code: "FRO",
           codeNumeric: "234",
@@ -5337,10 +5349,6 @@ class CountryFro extends WorldCountry {
           subregion: const NorthernEurope(),
           latLng: const LatLng(62, -7),
           areaMetric: 1393,
-          demonyms: const [
-            Demonyms(language: LangEng(), female: "Faroese", male: "Faroese"),
-            Demonyms(language: LangFra(), female: "Féroïenne", male: "Féroïen"),
-          ],
           emoji: "🇫🇴",
           maps: const Maps(
             googleMaps: "6sTru4SmHdEVcNkM6",
@@ -5350,10 +5358,6 @@ class CountryFro extends WorldCountry {
           fifa: "FRO",
           car: const Car(sign: "FO"),
           timezones: const ["UTC+00:00"],
-          capitalInfo: const CapitalInfo(
-            capital: Capital("Tórshavn"),
-            latLng: LatLng(62.01, -6.77),
-          ),
           postalCode: const PostalCode(
             format: "FO-###",
             regExpPattern: r"^(?:FO)*(\d{3})$",
@@ -5361,6 +5365,29 @@ class CountryFro extends WorldCountry {
         );
   @override
   List<FiatCurrency> get currencies => const [FiatDkk()];
+  @override
+  CapitalInfo get capitalInfo => const CapitalInfo(
+        capital: Capital("Tórshavn"),
+        latLng: LatLng(62.01, -6.77),
+      );
+  @override
+  List<Demonyms> get demonyms => const [
+        Demonyms(language: LangEng(), female: "Faroese", male: "Faroese"),
+        Demonyms(language: LangFra(), female: "Féroïenne", male: "Féroïen"),
+      ];
+  @override
+  List<CountryName> get namesNative => const [
+        CountryName(
+          language: LangDan(),
+          official: "Færøerne",
+          common: "Færøerne",
+        ),
+        CountryName(
+          language: LangFao(),
+          official: "Føroyar",
+          common: "Føroyar",
+        ),
+      ];
   @override
   List<NaturalLanguage> get languages => const [LangDan(), LangFao()];
 }
@@ -5377,13 +5404,6 @@ class CountryFsm extends WorldCountry {
             official: "Federated States of Micronesia",
             common: "Micronesia",
           ),
-          namesNative: const [
-            CountryName(
-              language: LangEng(),
-              official: "Federated States of Micronesia",
-              common: "Micronesia",
-            ),
-          ],
           tld: const [".fm"],
           code: "FSM",
           codeNumeric: "583",
@@ -5399,18 +5419,6 @@ class CountryFsm extends WorldCountry {
           subregion: const Micronesia(),
           latLng: const LatLng(6.91666666, 158.25),
           areaMetric: 702,
-          demonyms: const [
-            Demonyms(
-              language: LangEng(),
-              female: "Micronesian",
-              male: "Micronesian",
-            ),
-            Demonyms(
-              language: LangFra(),
-              female: "Micronésienne",
-              male: "Micronésien",
-            ),
-          ],
           emoji: "🇫🇲",
           maps: const Maps(
             googleMaps: "LLcnofC5LxZsJXTo8",
@@ -5420,14 +5428,36 @@ class CountryFsm extends WorldCountry {
           gini: const Gini(year: 2013, coefficient: 40.1),
           car: const Car(sign: "FSM"),
           timezones: const ["UTC+10:00", "UTC+11:00"],
-          capitalInfo: const CapitalInfo(
-            capital: Capital("Palikir"),
-            latLng: LatLng(6.92, 158.15),
-          ),
           postalCode: const PostalCode(),
         );
   @override
   List<FiatCurrency> get currencies => const [FiatUsd()];
+  @override
+  CapitalInfo get capitalInfo => const CapitalInfo(
+        capital: Capital("Palikir"),
+        latLng: LatLng(6.92, 158.15),
+      );
+  @override
+  List<Demonyms> get demonyms => const [
+        Demonyms(
+          language: LangEng(),
+          female: "Micronesian",
+          male: "Micronesian",
+        ),
+        Demonyms(
+          language: LangFra(),
+          female: "Micronésienne",
+          male: "Micronésien",
+        ),
+      ];
+  @override
+  List<CountryName> get namesNative => const [
+        CountryName(
+          language: LangEng(),
+          official: "Federated States of Micronesia",
+          common: "Micronesia",
+        ),
+      ];
   @override
   List<NaturalLanguage> get languages => const [LangEng()];
 }
@@ -5444,13 +5474,6 @@ class CountryGab extends WorldCountry {
             official: "Gabonese Republic",
             common: "Gabon",
           ),
-          namesNative: const [
-            CountryName(
-              language: LangFra(),
-              official: "République gabonaise",
-              common: "Gabon",
-            ),
-          ],
           tld: const [".ga"],
           code: "GAB",
           codeNumeric: "266",
@@ -5467,14 +5490,6 @@ class CountryGab extends WorldCountry {
           latLng: const LatLng(-1, 11.75),
           bordersCodes: const ["Cmr", "Cog", "Gnq"],
           areaMetric: 267668,
-          demonyms: const [
-            Demonyms(language: LangEng(), female: "Gabonese", male: "Gabonese"),
-            Demonyms(
-              language: LangFra(),
-              female: "Gabonaise",
-              male: "Gabonais",
-            ),
-          ],
           emoji: "🇬🇦",
           maps: const Maps(
             googleMaps: "vyRSkqw1H1fnq4ry6",
@@ -5485,14 +5500,29 @@ class CountryGab extends WorldCountry {
           fifa: "GAB",
           car: const Car(sign: "G"),
           timezones: const ["UTC+01:00"],
-          capitalInfo: const CapitalInfo(
-            capital: Capital("Libreville"),
-            latLng: LatLng(0.38, 9.45),
-          ),
-          regionalBlocs: const [BlocAU()],
         );
   @override
   List<FiatCurrency> get currencies => const [FiatXaf()];
+  @override
+  CapitalInfo get capitalInfo => const CapitalInfo(
+        capital: Capital("Libreville"),
+        latLng: LatLng(0.38, 9.45),
+      );
+  @override
+  List<RegionalBloc> get regionalBlocs => const [BlocAU()];
+  @override
+  List<Demonyms> get demonyms => const [
+        Demonyms(language: LangEng(), female: "Gabonese", male: "Gabonese"),
+        Demonyms(language: LangFra(), female: "Gabonaise", male: "Gabonais"),
+      ];
+  @override
+  List<CountryName> get namesNative => const [
+        CountryName(
+          language: LangFra(),
+          official: "République gabonaise",
+          common: "Gabon",
+        ),
+      ];
   @override
   List<NaturalLanguage> get languages => const [LangFra()];
 }
@@ -5509,13 +5539,6 @@ class CountryGbr extends WorldCountry {
             official: "United Kingdom of Great Britain and Northern Ireland",
             common: "United Kingdom",
           ),
-          namesNative: const [
-            CountryName(
-              language: LangEng(),
-              official: "United Kingdom of Great Britain and Northern Ireland",
-              common: "United Kingdom",
-            ),
-          ],
           tld: const [".uk"],
           code: "GBR",
           codeNumeric: "826",
@@ -5528,14 +5551,6 @@ class CountryGbr extends WorldCountry {
           latLng: const LatLng(54, -2),
           bordersCodes: const ["Irl"],
           areaMetric: 242900,
-          demonyms: const [
-            Demonyms(language: LangEng(), female: "British", male: "British"),
-            Demonyms(
-              language: LangFra(),
-              female: "Britannique",
-              male: "Britannique",
-            ),
-          ],
           emoji: "🇬🇧",
           maps: const Maps(
             googleMaps: "FoDtc3UKMkFsXAjHA",
@@ -5555,10 +5570,6 @@ class CountryGbr extends WorldCountry {
             "UTC+02:00",
             "UTC+06:00",
           ],
-          capitalInfo: const CapitalInfo(
-            capital: Capital("London"),
-            latLng: LatLng(51.5, -0.08),
-          ),
           postalCode: const PostalCode(
             format: "@# #@@|@## #@@|@@# #@@|@@## #@@|@#@ #@@|@@#@ #@@|GIR0AA",
             regExpPattern:
@@ -5567,6 +5578,28 @@ class CountryGbr extends WorldCountry {
         );
   @override
   List<FiatCurrency> get currencies => const [FiatGbp()];
+  @override
+  CapitalInfo get capitalInfo => const CapitalInfo(
+        capital: Capital("London"),
+        latLng: LatLng(51.5, -0.08),
+      );
+  @override
+  List<Demonyms> get demonyms => const [
+        Demonyms(language: LangEng(), female: "British", male: "British"),
+        Demonyms(
+          language: LangFra(),
+          female: "Britannique",
+          male: "Britannique",
+        ),
+      ];
+  @override
+  List<CountryName> get namesNative => const [
+        CountryName(
+          language: LangEng(),
+          official: "United Kingdom of Great Britain and Northern Ireland",
+          common: "United Kingdom",
+        ),
+      ];
   @override
   List<NaturalLanguage> get languages => const [LangEng()];
 }
@@ -5583,13 +5616,6 @@ class CountryGeo extends WorldCountry {
             official: "Georgia",
             common: "Georgia",
           ),
-          namesNative: const [
-            CountryName(
-              language: LangKat(),
-              official: "საქართველო",
-              common: "საქართველო",
-            ),
-          ],
           tld: const [".ge"],
           code: "GEO",
           codeNumeric: "268",
@@ -5602,14 +5628,6 @@ class CountryGeo extends WorldCountry {
           latLng: const LatLng(42, 43.5),
           bordersCodes: const ["Arm", "Aze", "Rus", "Tur"],
           areaMetric: 69700,
-          demonyms: const [
-            Demonyms(language: LangEng(), female: "Georgian", male: "Georgian"),
-            Demonyms(
-              language: LangFra(),
-              female: "Géorgienne",
-              male: "Géorgien",
-            ),
-          ],
           emoji: "🇬🇪",
           maps: const Maps(
             googleMaps: "bvCaGBePR1ZEDK5cA",
@@ -5620,15 +5638,29 @@ class CountryGeo extends WorldCountry {
           fifa: "GEO",
           car: const Car(sign: "GE"),
           timezones: const ["UTC+04:00"],
-          capitalInfo: const CapitalInfo(
-            capital: Capital("Tbilisi"),
-            latLng: LatLng(41.68, 44.83),
-          ),
           postalCode:
               const PostalCode(format: "####", regExpPattern: r"^(\d{4})$"),
         );
   @override
   List<FiatCurrency> get currencies => const [FiatGel()];
+  @override
+  CapitalInfo get capitalInfo => const CapitalInfo(
+        capital: Capital("Tbilisi"),
+        latLng: LatLng(41.68, 44.83),
+      );
+  @override
+  List<Demonyms> get demonyms => const [
+        Demonyms(language: LangEng(), female: "Georgian", male: "Georgian"),
+        Demonyms(language: LangFra(), female: "Géorgienne", male: "Géorgien"),
+      ];
+  @override
+  List<CountryName> get namesNative => const [
+        CountryName(
+          language: LangKat(),
+          official: "საქართველო",
+          common: "საქართველო",
+        ),
+      ];
   @override
   List<NaturalLanguage> get languages => const [LangKat()];
 }
@@ -5645,18 +5677,6 @@ class CountryGgy extends WorldCountry {
             official: "Bailiwick of Guernsey",
             common: "Guernsey",
           ),
-          namesNative: const [
-            CountryName(
-              language: LangEng(),
-              official: "Bailiwick of Guernsey",
-              common: "Guernsey",
-            ),
-            CountryName(
-              language: LangFra(),
-              official: "Bailliage de Guernesey",
-              common: "Guernesey",
-            ),
-          ],
           tld: const [".gg"],
           code: "GGY",
           codeNumeric: "831",
@@ -5673,18 +5693,6 @@ class CountryGgy extends WorldCountry {
           subregion: const NorthernEurope(),
           latLng: const LatLng(49.46666666, -2.58333333),
           areaMetric: 78,
-          demonyms: const [
-            Demonyms(
-              language: LangEng(),
-              female: "Channel Islander",
-              male: "Channel Islander",
-            ),
-            Demonyms(
-              language: LangFra(),
-              female: "Guernesiaise",
-              male: "Guernesiais",
-            ),
-          ],
           emoji: "🇬🇬",
           maps: const Maps(
             googleMaps: "6kXnQU5QvEZMD9VB7",
@@ -5693,10 +5701,6 @@ class CountryGgy extends WorldCountry {
           population: 62999,
           car: const Car(sign: "GBG", isRightSide: false),
           timezones: const ["UTC+00:00"],
-          capitalInfo: const CapitalInfo(
-            capital: Capital("St. Peter Port"),
-            latLng: LatLng(49.45, -2.54),
-          ),
           postalCode: const PostalCode(
             format: "@# #@@|@## #@@|@@# #@@|@@## #@@|@#@ #@@|@@#@ #@@|GIR0AA",
             regExpPattern:
@@ -5705,6 +5709,37 @@ class CountryGgy extends WorldCountry {
         );
   @override
   List<FiatCurrency> get currencies => const [FiatGbp()];
+  @override
+  CapitalInfo get capitalInfo => const CapitalInfo(
+        capital: Capital("St. Peter Port"),
+        latLng: LatLng(49.45, -2.54),
+      );
+  @override
+  List<Demonyms> get demonyms => const [
+        Demonyms(
+          language: LangEng(),
+          female: "Channel Islander",
+          male: "Channel Islander",
+        ),
+        Demonyms(
+          language: LangFra(),
+          female: "Guernesiaise",
+          male: "Guernesiais",
+        ),
+      ];
+  @override
+  List<CountryName> get namesNative => const [
+        CountryName(
+          language: LangEng(),
+          official: "Bailiwick of Guernsey",
+          common: "Guernsey",
+        ),
+        CountryName(
+          language: LangFra(),
+          official: "Bailliage de Guernesey",
+          common: "Guernesey",
+        ),
+      ];
   @override
   List<NaturalLanguage> get languages => const [LangEng(), LangFra()];
 }
@@ -5721,13 +5756,6 @@ class CountryGha extends WorldCountry {
             official: "Republic of Ghana",
             common: "Ghana",
           ),
-          namesNative: const [
-            CountryName(
-              language: LangEng(),
-              official: "Republic of Ghana",
-              common: "Ghana",
-            ),
-          ],
           tld: const [".gh"],
           code: "GHA",
           codeNumeric: "288",
@@ -5740,10 +5768,6 @@ class CountryGha extends WorldCountry {
           latLng: const LatLng(8, -2),
           bordersCodes: const ["Bfa", "Civ", "Tgo"],
           areaMetric: 238533,
-          demonyms: const [
-            Demonyms(language: LangEng(), female: "Ghanaian", male: "Ghanaian"),
-            Demonyms(language: LangFra(), female: "Ghanéenne", male: "Ghanéen"),
-          ],
           emoji: "🇬🇭",
           maps: const Maps(
             googleMaps: "Avy5RSmdsXFBaiXq8",
@@ -5754,14 +5778,27 @@ class CountryGha extends WorldCountry {
           fifa: "GHA",
           car: const Car(sign: "GH"),
           timezones: const ["UTC+00:00"],
-          capitalInfo: const CapitalInfo(
-            capital: Capital("Accra"),
-            latLng: LatLng(5.55, -0.22),
-          ),
-          regionalBlocs: const [BlocAU()],
         );
   @override
   List<FiatCurrency> get currencies => const [FiatGhs()];
+  @override
+  CapitalInfo get capitalInfo =>
+      const CapitalInfo(capital: Capital("Accra"), latLng: LatLng(5.55, -0.22));
+  @override
+  List<RegionalBloc> get regionalBlocs => const [BlocAU()];
+  @override
+  List<Demonyms> get demonyms => const [
+        Demonyms(language: LangEng(), female: "Ghanaian", male: "Ghanaian"),
+        Demonyms(language: LangFra(), female: "Ghanéenne", male: "Ghanéen"),
+      ];
+  @override
+  List<CountryName> get namesNative => const [
+        CountryName(
+          language: LangEng(),
+          official: "Republic of Ghana",
+          common: "Ghana",
+        ),
+      ];
   @override
   List<NaturalLanguage> get languages => const [LangEng()];
 }
@@ -5778,13 +5815,6 @@ class CountryGib extends WorldCountry {
             official: "Gibraltar",
             common: "Gibraltar",
           ),
-          namesNative: const [
-            CountryName(
-              language: LangEng(),
-              official: "Gibraltar",
-              common: "Gibraltar",
-            ),
-          ],
           tld: const [".gi"],
           code: "GIB",
           codeNumeric: "292",
@@ -5798,18 +5828,6 @@ class CountryGib extends WorldCountry {
           latLng: const LatLng(36.13333333, -5.35),
           bordersCodes: const ["Esp"],
           areaMetric: 6,
-          demonyms: const [
-            Demonyms(
-              language: LangEng(),
-              female: "Gibraltar",
-              male: "Gibraltar",
-            ),
-            Demonyms(
-              language: LangFra(),
-              female: "Gibraltarienne",
-              male: "Gibraltarien",
-            ),
-          ],
           emoji: "🇬🇮",
           maps: const Maps(
             googleMaps: "CEoHAs1t6byCBhHFA",
@@ -5819,14 +5837,33 @@ class CountryGib extends WorldCountry {
           fifa: "GIB",
           car: const Car(sign: "GBZ"),
           timezones: const ["UTC+01:00"],
-          capitalInfo: const CapitalInfo(
-            capital: Capital("Gibraltar"),
-            latLng: LatLng(36.13, -5.35),
-          ),
-          regionalBlocs: const [BlocEU()],
         );
   @override
   List<FiatCurrency> get currencies => const [FiatGip()];
+  @override
+  CapitalInfo get capitalInfo => const CapitalInfo(
+        capital: Capital("Gibraltar"),
+        latLng: LatLng(36.13, -5.35),
+      );
+  @override
+  List<RegionalBloc> get regionalBlocs => const [BlocEU()];
+  @override
+  List<Demonyms> get demonyms => const [
+        Demonyms(language: LangEng(), female: "Gibraltar", male: "Gibraltar"),
+        Demonyms(
+          language: LangFra(),
+          female: "Gibraltarienne",
+          male: "Gibraltarien",
+        ),
+      ];
+  @override
+  List<CountryName> get namesNative => const [
+        CountryName(
+          language: LangEng(),
+          official: "Gibraltar",
+          common: "Gibraltar",
+        ),
+      ];
   @override
   List<NaturalLanguage> get languages => const [LangEng()];
 }
@@ -5843,13 +5880,6 @@ class CountryGin extends WorldCountry {
             official: "Republic of Guinea",
             common: "Guinea",
           ),
-          namesNative: const [
-            CountryName(
-              language: LangFra(),
-              official: "République de Guinée",
-              common: "Guinée",
-            ),
-          ],
           tld: const [".gn"],
           code: "GIN",
           codeNumeric: "324",
@@ -5866,10 +5896,6 @@ class CountryGin extends WorldCountry {
           latLng: const LatLng(11, -10),
           bordersCodes: const ["Civ", "Gnb", "Lbr", "Mli", "Sen", "Sle"],
           areaMetric: 245857,
-          demonyms: const [
-            Demonyms(language: LangEng(), female: "Guinean", male: "Guinean"),
-            Demonyms(language: LangFra(), female: "Guinéenne", male: "Guinéen"),
-          ],
           emoji: "🇬🇳",
           maps: const Maps(
             googleMaps: "8J5oM5sA4Ayr1ZYGA",
@@ -5880,14 +5906,29 @@ class CountryGin extends WorldCountry {
           fifa: "GUI",
           car: const Car(sign: "RG"),
           timezones: const ["UTC+00:00"],
-          capitalInfo: const CapitalInfo(
-            capital: Capital("Conakry"),
-            latLng: LatLng(9.5, -13.7),
-          ),
-          regionalBlocs: const [BlocAU()],
         );
   @override
   List<FiatCurrency> get currencies => const [FiatGnf()];
+  @override
+  CapitalInfo get capitalInfo => const CapitalInfo(
+        capital: Capital("Conakry"),
+        latLng: LatLng(9.5, -13.7),
+      );
+  @override
+  List<RegionalBloc> get regionalBlocs => const [BlocAU()];
+  @override
+  List<Demonyms> get demonyms => const [
+        Demonyms(language: LangEng(), female: "Guinean", male: "Guinean"),
+        Demonyms(language: LangFra(), female: "Guinéenne", male: "Guinéen"),
+      ];
+  @override
+  List<CountryName> get namesNative => const [
+        CountryName(
+          language: LangFra(),
+          official: "République de Guinée",
+          common: "Guinée",
+        ),
+      ];
   @override
   List<NaturalLanguage> get languages => const [LangFra()];
 }
@@ -5904,13 +5945,6 @@ class CountryGlp extends WorldCountry {
             official: "Guadeloupe",
             common: "Guadeloupe",
           ),
-          namesNative: const [
-            CountryName(
-              language: LangFra(),
-              official: "Guadeloupe",
-              common: "Guadeloupe",
-            ),
-          ],
           tld: const [".gp"],
           code: "GLP",
           codeNumeric: "312",
@@ -5923,18 +5957,6 @@ class CountryGlp extends WorldCountry {
           subregion: const Caribbean(),
           latLng: const LatLng(16.25, -61.583333),
           areaMetric: 1628,
-          demonyms: const [
-            Demonyms(
-              language: LangEng(),
-              female: "Guadeloupian",
-              male: "Guadeloupian",
-            ),
-            Demonyms(
-              language: LangFra(),
-              female: "Guadeloupéenne",
-              male: "Guadeloupéen",
-            ),
-          ],
           emoji: "🇬🇵",
           maps: const Maps(
             googleMaps: "Dy9R2EufJtoWm8UN9",
@@ -5943,14 +5965,36 @@ class CountryGlp extends WorldCountry {
           population: 400132,
           car: const Car(sign: "F"),
           timezones: const ["UTC-04:00"],
-          capitalInfo: const CapitalInfo(
-            capital: Capital("Basse-Terre"),
-            latLng: LatLng(16.03, -61.73),
-          ),
           postalCode: const PostalCode(regExpPattern: r"^((97|98)\d{3})$"),
         );
   @override
   List<FiatCurrency> get currencies => const [FiatEur()];
+  @override
+  CapitalInfo get capitalInfo => const CapitalInfo(
+        capital: Capital("Basse-Terre"),
+        latLng: LatLng(16.03, -61.73),
+      );
+  @override
+  List<Demonyms> get demonyms => const [
+        Demonyms(
+          language: LangEng(),
+          female: "Guadeloupian",
+          male: "Guadeloupian",
+        ),
+        Demonyms(
+          language: LangFra(),
+          female: "Guadeloupéenne",
+          male: "Guadeloupéen",
+        ),
+      ];
+  @override
+  List<CountryName> get namesNative => const [
+        CountryName(
+          language: LangFra(),
+          official: "Guadeloupe",
+          common: "Guadeloupe",
+        ),
+      ];
   @override
   List<NaturalLanguage> get languages => const [LangFra()];
 }
@@ -5967,13 +6011,6 @@ class CountryGmb extends WorldCountry {
             official: "Republic of the Gambia",
             common: "Gambia",
           ),
-          namesNative: const [
-            CountryName(
-              language: LangEng(),
-              official: "Republic of the Gambia",
-              common: "Gambia",
-            ),
-          ],
           tld: const [".gm"],
           code: "GMB",
           codeNumeric: "270",
@@ -5986,10 +6023,6 @@ class CountryGmb extends WorldCountry {
           latLng: const LatLng(13.46666666, -16.56666666),
           bordersCodes: const ["Sen"],
           areaMetric: 10689,
-          demonyms: const [
-            Demonyms(language: LangEng(), female: "Gambian", male: "Gambian"),
-            Demonyms(language: LangFra(), female: "Gambienne", male: "Gambien"),
-          ],
           emoji: "🇬🇲",
           maps: const Maps(
             googleMaps: "bbGBCxxtfD2A9Z4m6",
@@ -6000,14 +6033,29 @@ class CountryGmb extends WorldCountry {
           fifa: "GAM",
           car: const Car(sign: "WAG"),
           timezones: const ["UTC+00:00"],
-          capitalInfo: const CapitalInfo(
-            capital: Capital("Banjul"),
-            latLng: LatLng(13.45, -16.57),
-          ),
-          regionalBlocs: const [BlocAU()],
         );
   @override
   List<FiatCurrency> get currencies => const [FiatGmd()];
+  @override
+  CapitalInfo get capitalInfo => const CapitalInfo(
+        capital: Capital("Banjul"),
+        latLng: LatLng(13.45, -16.57),
+      );
+  @override
+  List<RegionalBloc> get regionalBlocs => const [BlocAU()];
+  @override
+  List<Demonyms> get demonyms => const [
+        Demonyms(language: LangEng(), female: "Gambian", male: "Gambian"),
+        Demonyms(language: LangFra(), female: "Gambienne", male: "Gambien"),
+      ];
+  @override
+  List<CountryName> get namesNative => const [
+        CountryName(
+          language: LangEng(),
+          official: "Republic of the Gambia",
+          common: "Gambia",
+        ),
+      ];
   @override
   List<NaturalLanguage> get languages => const [LangEng()];
 }
@@ -6024,13 +6072,6 @@ class CountryGnb extends WorldCountry {
             official: "Republic of Guinea-Bissau",
             common: "Guinea-Bissau",
           ),
-          namesNative: const [
-            CountryName(
-              language: LangPor(),
-              official: "República da Guiné-Bissau",
-              common: "Guiné-Bissau",
-            ),
-          ],
           tld: const [".gw"],
           code: "GNB",
           codeNumeric: "624",
@@ -6048,18 +6089,6 @@ class CountryGnb extends WorldCountry {
           latLng: const LatLng(12, -15),
           bordersCodes: const ["Gin", "Sen"],
           areaMetric: 36125,
-          demonyms: const [
-            Demonyms(
-              language: LangEng(),
-              female: "Guinea-Bissauan",
-              male: "Guinea-Bissauan",
-            ),
-            Demonyms(
-              language: LangFra(),
-              female: "Bissau-Guinéenne",
-              male: "Bissau-Guinéen",
-            ),
-          ],
           emoji: "🇬🇼",
           maps: const Maps(
             googleMaps: "5Wyaz17miUc1zLc67",
@@ -6070,16 +6099,39 @@ class CountryGnb extends WorldCountry {
           fifa: "GNB",
           car: const Car(sign: "RGB"),
           timezones: const ["UTC+00:00"],
-          capitalInfo: const CapitalInfo(
-            capital: Capital("Bissau"),
-            latLng: LatLng(11.85, -15.58),
-          ),
           postalCode:
               const PostalCode(format: "####", regExpPattern: r"^(\d{4})$"),
-          regionalBlocs: const [BlocAU()],
         );
   @override
   List<FiatCurrency> get currencies => const [FiatXof()];
+  @override
+  CapitalInfo get capitalInfo => const CapitalInfo(
+        capital: Capital("Bissau"),
+        latLng: LatLng(11.85, -15.58),
+      );
+  @override
+  List<RegionalBloc> get regionalBlocs => const [BlocAU()];
+  @override
+  List<Demonyms> get demonyms => const [
+        Demonyms(
+          language: LangEng(),
+          female: "Guinea-Bissauan",
+          male: "Guinea-Bissauan",
+        ),
+        Demonyms(
+          language: LangFra(),
+          female: "Bissau-Guinéenne",
+          male: "Bissau-Guinéen",
+        ),
+      ];
+  @override
+  List<CountryName> get namesNative => const [
+        CountryName(
+          language: LangPor(),
+          official: "República da Guiné-Bissau",
+          common: "Guiné-Bissau",
+        ),
+      ];
   @override
   List<NaturalLanguage> get languages => const [LangPor()];
 }
@@ -6096,23 +6148,6 @@ class CountryGnq extends WorldCountry {
             official: "Republic of Equatorial Guinea",
             common: "Equatorial Guinea",
           ),
-          namesNative: const [
-            CountryName(
-              language: LangFra(),
-              official: "République de la Guinée Équatoriale",
-              common: "Guinée équatoriale",
-            ),
-            CountryName(
-              language: LangPor(),
-              official: "República da Guiné Equatorial",
-              common: "Guiné Equatorial",
-            ),
-            CountryName(
-              language: LangSpa(),
-              official: "República de Guinea Ecuatorial",
-              common: "Guinea Ecuatorial",
-            ),
-          ],
           tld: const [".gq"],
           code: "GNQ",
           codeNumeric: "226",
@@ -6131,18 +6166,6 @@ class CountryGnq extends WorldCountry {
           latLng: const LatLng(2, 10),
           bordersCodes: const ["Cmr", "Gab"],
           areaMetric: 28051,
-          demonyms: const [
-            Demonyms(
-              language: LangEng(),
-              female: "Equatorial Guinean",
-              male: "Equatorial Guinean",
-            ),
-            Demonyms(
-              language: LangFra(),
-              female: "Équato-guinéenne",
-              male: "Équato-guinéen",
-            ),
-          ],
           emoji: "🇬🇶",
           maps: const Maps(
             googleMaps: "ucWfFd8aW1FbGMva9",
@@ -6152,14 +6175,45 @@ class CountryGnq extends WorldCountry {
           fifa: "EQG",
           car: const Car(sign: "GQ"),
           timezones: const ["UTC+01:00"],
-          capitalInfo: const CapitalInfo(
-            capital: Capital("Malabo"),
-            latLng: LatLng(3.75, 8.78),
-          ),
-          regionalBlocs: const [BlocAU()],
         );
   @override
   List<FiatCurrency> get currencies => const [FiatXaf()];
+  @override
+  CapitalInfo get capitalInfo =>
+      const CapitalInfo(capital: Capital("Malabo"), latLng: LatLng(3.75, 8.78));
+  @override
+  List<RegionalBloc> get regionalBlocs => const [BlocAU()];
+  @override
+  List<Demonyms> get demonyms => const [
+        Demonyms(
+          language: LangEng(),
+          female: "Equatorial Guinean",
+          male: "Equatorial Guinean",
+        ),
+        Demonyms(
+          language: LangFra(),
+          female: "Équato-guinéenne",
+          male: "Équato-guinéen",
+        ),
+      ];
+  @override
+  List<CountryName> get namesNative => const [
+        CountryName(
+          language: LangFra(),
+          official: "République de la Guinée Équatoriale",
+          common: "Guinée équatoriale",
+        ),
+        CountryName(
+          language: LangPor(),
+          official: "República da Guiné Equatorial",
+          common: "Guiné Equatorial",
+        ),
+        CountryName(
+          language: LangSpa(),
+          official: "República de Guinea Ecuatorial",
+          common: "Guinea Ecuatorial",
+        ),
+      ];
   @override
   List<NaturalLanguage> get languages =>
       const [LangFra(), LangPor(), LangSpa()];
@@ -6177,13 +6231,6 @@ class CountryGrc extends WorldCountry {
             official: "Hellenic Republic",
             common: "Greece",
           ),
-          namesNative: const [
-            CountryName(
-              language: LangEll(),
-              official: "Ελληνική Δημοκρατία",
-              common: "Ελλάδα",
-            ),
-          ],
           tld: const [".gr"],
           code: "GRC",
           codeNumeric: "300",
@@ -6201,10 +6248,6 @@ class CountryGrc extends WorldCountry {
           latLng: const LatLng(39, 22),
           bordersCodes: const ["Alb", "Bgr", "Tur", "Mkd"],
           areaMetric: 131990,
-          demonyms: const [
-            Demonyms(language: LangEng(), female: "Greek", male: "Greek"),
-            Demonyms(language: LangFra(), female: "Grecque", male: "Grec"),
-          ],
           emoji: "🇬🇷",
           maps: const Maps(
             googleMaps: "LHGcAvuRyD2iKECC6",
@@ -6215,15 +6258,30 @@ class CountryGrc extends WorldCountry {
           fifa: "GRE",
           car: const Car(sign: "GR"),
           timezones: const ["UTC+02:00"],
-          capitalInfo: const CapitalInfo(
-            capital: Capital("Athens"),
-            latLng: LatLng(37.98, 23.73),
-          ),
           postalCode: const PostalCode(format: "### ##"),
-          regionalBlocs: const [BlocEU()],
         );
   @override
   List<FiatCurrency> get currencies => const [FiatEur()];
+  @override
+  CapitalInfo get capitalInfo => const CapitalInfo(
+        capital: Capital("Athens"),
+        latLng: LatLng(37.98, 23.73),
+      );
+  @override
+  List<RegionalBloc> get regionalBlocs => const [BlocEU()];
+  @override
+  List<Demonyms> get demonyms => const [
+        Demonyms(language: LangEng(), female: "Greek", male: "Greek"),
+        Demonyms(language: LangFra(), female: "Grecque", male: "Grec"),
+      ];
+  @override
+  List<CountryName> get namesNative => const [
+        CountryName(
+          language: LangEll(),
+          official: "Ελληνική Δημοκρατία",
+          common: "Ελλάδα",
+        ),
+      ];
   @override
   List<NaturalLanguage> get languages => const [LangEll()];
 }
@@ -6240,13 +6298,6 @@ class CountryGrd extends WorldCountry {
             official: "Grenada",
             common: "Grenada",
           ),
-          namesNative: const [
-            CountryName(
-              language: LangEng(),
-              official: "Grenada",
-              common: "Grenada",
-            ),
-          ],
           tld: const [".gd"],
           code: "GRD",
           codeNumeric: "308",
@@ -6258,18 +6309,6 @@ class CountryGrd extends WorldCountry {
           subregion: const Caribbean(),
           latLng: const LatLng(12.11666666, -61.66666666),
           areaMetric: 344,
-          demonyms: const [
-            Demonyms(
-              language: LangEng(),
-              female: "Grenadian",
-              male: "Grenadian",
-            ),
-            Demonyms(
-              language: LangFra(),
-              female: "Grenadienne",
-              male: "Grenadien",
-            ),
-          ],
           emoji: "🇬🇩",
           maps: const Maps(
             googleMaps: "rqWyfUAt4xhvk1Zy9",
@@ -6279,14 +6318,29 @@ class CountryGrd extends WorldCountry {
           fifa: "GRN",
           car: const Car(sign: "WG", isRightSide: false),
           timezones: const ["UTC-04:00"],
-          capitalInfo: const CapitalInfo(
-            capital: Capital("St. George's"),
-            latLng: LatLng(32.38, -64.68),
-          ),
-          regionalBlocs: const [BlocCAIS()],
         );
   @override
   List<FiatCurrency> get currencies => const [FiatXcd()];
+  @override
+  CapitalInfo get capitalInfo => const CapitalInfo(
+        capital: Capital("St. George's"),
+        latLng: LatLng(32.38, -64.68),
+      );
+  @override
+  List<RegionalBloc> get regionalBlocs => const [BlocCAIS()];
+  @override
+  List<Demonyms> get demonyms => const [
+        Demonyms(language: LangEng(), female: "Grenadian", male: "Grenadian"),
+        Demonyms(language: LangFra(), female: "Grenadienne", male: "Grenadien"),
+      ];
+  @override
+  List<CountryName> get namesNative => const [
+        CountryName(
+          language: LangEng(),
+          official: "Grenada",
+          common: "Grenada",
+        ),
+      ];
   @override
   List<NaturalLanguage> get languages => const [LangEng()];
 }
@@ -6303,13 +6357,6 @@ class CountryGrl extends WorldCountry {
             official: "Greenland",
             common: "Greenland",
           ),
-          namesNative: const [
-            CountryName(
-              language: LangKal(),
-              official: "Kalaallit Nunaat",
-              common: "Kalaallit Nunaat",
-            ),
-          ],
           tld: const [".gl"],
           code: "GRL",
           codeNumeric: "304",
@@ -6322,18 +6369,6 @@ class CountryGrl extends WorldCountry {
           subregion: const NorthAmerica(),
           latLng: const LatLng(72, -40),
           areaMetric: 2166086,
-          demonyms: const [
-            Demonyms(
-              language: LangEng(),
-              female: "Greenlandic",
-              male: "Greenlandic",
-            ),
-            Demonyms(
-              language: LangFra(),
-              female: "Groenlandaise",
-              male: "Groenlandais",
-            ),
-          ],
           emoji: "🇬🇱",
           maps: const Maps(
             googleMaps: "j3289UPEQXt1ceSy8",
@@ -6342,15 +6377,37 @@ class CountryGrl extends WorldCountry {
           population: 56367,
           car: const Car(sign: "DK"),
           timezones: const ["UTC-04:00", "UTC-03:00", "UTC-01:00", "UTC+00:00"],
-          capitalInfo: const CapitalInfo(
-            capital: Capital("Nuuk"),
-            latLng: LatLng(64.18, -51.75),
-          ),
           postalCode:
               const PostalCode(format: "####", regExpPattern: r"^(\d{4})$"),
         );
   @override
   List<FiatCurrency> get currencies => const [FiatDkk()];
+  @override
+  CapitalInfo get capitalInfo => const CapitalInfo(
+        capital: Capital("Nuuk"),
+        latLng: LatLng(64.18, -51.75),
+      );
+  @override
+  List<Demonyms> get demonyms => const [
+        Demonyms(
+          language: LangEng(),
+          female: "Greenlandic",
+          male: "Greenlandic",
+        ),
+        Demonyms(
+          language: LangFra(),
+          female: "Groenlandaise",
+          male: "Groenlandais",
+        ),
+      ];
+  @override
+  List<CountryName> get namesNative => const [
+        CountryName(
+          language: LangKal(),
+          official: "Kalaallit Nunaat",
+          common: "Kalaallit Nunaat",
+        ),
+      ];
   @override
   List<NaturalLanguage> get languages => const [LangKal()];
 }
@@ -6367,13 +6424,6 @@ class CountryGtm extends WorldCountry {
             official: "Republic of Guatemala",
             common: "Guatemala",
           ),
-          namesNative: const [
-            CountryName(
-              language: LangSpa(),
-              official: "República de Guatemala",
-              common: "Guatemala",
-            ),
-          ],
           tld: const [".gt"],
           code: "GTM",
           codeNumeric: "320",
@@ -6386,18 +6436,6 @@ class CountryGtm extends WorldCountry {
           latLng: const LatLng(15.5, -90.25),
           bordersCodes: const ["Blz", "Slv", "Hnd", "Mex"],
           areaMetric: 108889,
-          demonyms: const [
-            Demonyms(
-              language: LangEng(),
-              female: "Guatemalan",
-              male: "Guatemalan",
-            ),
-            Demonyms(
-              language: LangFra(),
-              female: "Guatémaltèque",
-              male: "Guatémaltèque",
-            ),
-          ],
           emoji: "🇬🇹",
           maps: const Maps(
             googleMaps: "JoRAbem4Hxb9FYbVA",
@@ -6408,14 +6446,32 @@ class CountryGtm extends WorldCountry {
           fifa: "GUA",
           car: const Car(sign: "GCA"),
           timezones: const ["UTC-06:00"],
-          capitalInfo: const CapitalInfo(
-            capital: Capital("Guatemala City"),
-            latLng: LatLng(14.62, -90.52),
-          ),
           postalCode: const PostalCode(),
         );
   @override
   List<FiatCurrency> get currencies => const [FiatGtq()];
+  @override
+  CapitalInfo get capitalInfo => const CapitalInfo(
+        capital: Capital("Guatemala City"),
+        latLng: LatLng(14.62, -90.52),
+      );
+  @override
+  List<Demonyms> get demonyms => const [
+        Demonyms(language: LangEng(), female: "Guatemalan", male: "Guatemalan"),
+        Demonyms(
+          language: LangFra(),
+          female: "Guatémaltèque",
+          male: "Guatémaltèque",
+        ),
+      ];
+  @override
+  List<CountryName> get namesNative => const [
+        CountryName(
+          language: LangSpa(),
+          official: "República de Guatemala",
+          common: "Guatemala",
+        ),
+      ];
   @override
   List<NaturalLanguage> get languages => const [LangSpa()];
 }
@@ -6432,13 +6488,6 @@ class CountryGuf extends WorldCountry {
             official: "Guiana",
             common: "French Guiana",
           ),
-          namesNative: const [
-            CountryName(
-              language: LangFra(),
-              official: "Guyane",
-              common: "Guyane française",
-            ),
-          ],
           tld: const [".gf"],
           code: "GUF",
           codeNumeric: "254",
@@ -6452,14 +6501,6 @@ class CountryGuf extends WorldCountry {
           latLng: const LatLng(4, -53),
           bordersCodes: const ["Bra", "Sur"],
           areaMetric: 83534,
-          demonyms: const [
-            Demonyms(language: LangEng(), female: "Guianan", male: "Guianan"),
-            Demonyms(
-              language: LangFra(),
-              female: "Guyanaise",
-              male: "Guyanais",
-            ),
-          ],
           emoji: "🇬🇫",
           maps: const Maps(
             googleMaps: "NJawFwMzG7YtCrVP7",
@@ -6468,15 +6509,30 @@ class CountryGuf extends WorldCountry {
           population: 254541,
           car: const Car(sign: "F"),
           timezones: const ["UTC-03:00"],
-          capitalInfo: const CapitalInfo(
-            capital: Capital("Cayenne"),
-            latLng: LatLng(4.94, -52.33),
-          ),
           postalCode: const PostalCode(regExpPattern: r"^((97|98)3\d{2})$"),
-          regionalBlocs: const [BlocUSAN()],
         );
   @override
   List<FiatCurrency> get currencies => const [FiatEur()];
+  @override
+  CapitalInfo get capitalInfo => const CapitalInfo(
+        capital: Capital("Cayenne"),
+        latLng: LatLng(4.94, -52.33),
+      );
+  @override
+  List<RegionalBloc> get regionalBlocs => const [BlocUSAN()];
+  @override
+  List<Demonyms> get demonyms => const [
+        Demonyms(language: LangEng(), female: "Guianan", male: "Guianan"),
+        Demonyms(language: LangFra(), female: "Guyanaise", male: "Guyanais"),
+      ];
+  @override
+  List<CountryName> get namesNative => const [
+        CountryName(
+          language: LangFra(),
+          official: "Guyane",
+          common: "Guyane française",
+        ),
+      ];
   @override
   List<NaturalLanguage> get languages => const [LangFra()];
 }
@@ -6493,15 +6549,6 @@ class CountryGum extends WorldCountry {
             official: "Guam",
             common: "Guam",
           ),
-          namesNative: const [
-            CountryName(
-              language: LangCha(),
-              official: "Guåhån",
-              common: "Guåhån",
-            ),
-            CountryName(language: LangEng(), official: "Guam", common: "Guam"),
-            CountryName(language: LangSpa(), official: "Guam", common: "Guam"),
-          ],
           tld: const [".gu"],
           code: "GUM",
           codeNumeric: "316",
@@ -6515,13 +6562,6 @@ class CountryGum extends WorldCountry {
           subregion: const Micronesia(),
           latLng: const LatLng(13.46666666, 144.78333333),
           areaMetric: 549,
-          demonyms: const [
-            Demonyms(
-              language: LangEng(),
-              female: "Guamanian",
-              male: "Guamanian",
-            ),
-          ],
           emoji: "🇬🇺",
           maps: const Maps(
             googleMaps: "Xfnq2i279b18cH3C9",
@@ -6531,15 +6571,26 @@ class CountryGum extends WorldCountry {
           fifa: "GUM",
           car: const Car(sign: "USA"),
           timezones: const ["UTC+10:00"],
-          capitalInfo: const CapitalInfo(
-            capital: Capital("Hagåtña"),
-            latLng: LatLng(13.48, 144.75),
-          ),
           postalCode:
               const PostalCode(format: "969##", regExpPattern: r"^(969\d{2})$"),
         );
   @override
   List<FiatCurrency> get currencies => const [FiatUsd()];
+  @override
+  CapitalInfo get capitalInfo => const CapitalInfo(
+        capital: Capital("Hagåtña"),
+        latLng: LatLng(13.48, 144.75),
+      );
+  @override
+  List<Demonyms> get demonyms => const [
+        Demonyms(language: LangEng(), female: "Guamanian", male: "Guamanian"),
+      ];
+  @override
+  List<CountryName> get namesNative => const [
+        CountryName(language: LangCha(), official: "Guåhån", common: "Guåhån"),
+        CountryName(language: LangEng(), official: "Guam", common: "Guam"),
+        CountryName(language: LangSpa(), official: "Guam", common: "Guam"),
+      ];
   @override
   List<NaturalLanguage> get languages =>
       const [LangCha(), LangEng(), LangSpa()];
@@ -6557,13 +6608,6 @@ class CountryGuy extends WorldCountry {
             official: "Co-operative Republic of Guyana",
             common: "Guyana",
           ),
-          namesNative: const [
-            CountryName(
-              language: LangEng(),
-              official: "Co-operative Republic of Guyana",
-              common: "Guyana",
-            ),
-          ],
           tld: const [".gy"],
           code: "GUY",
           codeNumeric: "328",
@@ -6576,14 +6620,6 @@ class CountryGuy extends WorldCountry {
           latLng: const LatLng(5, -59),
           bordersCodes: const ["Bra", "Sur", "Ven"],
           areaMetric: 214969,
-          demonyms: const [
-            Demonyms(language: LangEng(), female: "Guyanese", male: "Guyanese"),
-            Demonyms(
-              language: LangFra(),
-              female: "Guyanienne",
-              male: "Guyanien",
-            ),
-          ],
           emoji: "🇬🇾",
           maps: const Maps(
             googleMaps: "DFsme2xEeugUAsCx5",
@@ -6594,14 +6630,29 @@ class CountryGuy extends WorldCountry {
           fifa: "GUY",
           car: const Car(sign: "GUY", isRightSide: false),
           timezones: const ["UTC-04:00"],
-          capitalInfo: const CapitalInfo(
-            capital: Capital("Georgetown"),
-            latLng: LatLng(6.8, -58.15),
-          ),
-          regionalBlocs: const [BlocCARICOM(), BlocUSAN()],
         );
   @override
   List<FiatCurrency> get currencies => const [FiatGyd()];
+  @override
+  CapitalInfo get capitalInfo => const CapitalInfo(
+        capital: Capital("Georgetown"),
+        latLng: LatLng(6.8, -58.15),
+      );
+  @override
+  List<RegionalBloc> get regionalBlocs => const [BlocCARICOM(), BlocUSAN()];
+  @override
+  List<Demonyms> get demonyms => const [
+        Demonyms(language: LangEng(), female: "Guyanese", male: "Guyanese"),
+        Demonyms(language: LangFra(), female: "Guyanienne", male: "Guyanien"),
+      ];
+  @override
+  List<CountryName> get namesNative => const [
+        CountryName(
+          language: LangEng(),
+          official: "Co-operative Republic of Guyana",
+          common: "Guyana",
+        ),
+      ];
   @override
   List<NaturalLanguage> get languages => const [LangEng()];
 }
@@ -6619,19 +6670,6 @@ class CountryHkg extends WorldCountry {
                 "Hong Kong Special Administrative Region of the People's Republic of China",
             common: "Hong Kong",
           ),
-          namesNative: const [
-            CountryName(
-              language: LangEng(),
-              official:
-                  "Hong Kong Special Administrative Region of the People's Republic of China",
-              common: "Hong Kong",
-            ),
-            CountryName(
-              language: LangZho(),
-              official: "中华人民共和国香港特别行政区",
-              common: "香港",
-            ),
-          ],
           tld: const [".hk", ".香港"],
           code: "HKG",
           codeNumeric: "344",
@@ -6646,18 +6684,6 @@ class CountryHkg extends WorldCountry {
           latLng: const LatLng(22.267, 114.188),
           bordersCodes: const ["Chn"],
           areaMetric: 1104,
-          demonyms: const [
-            Demonyms(
-              language: LangEng(),
-              female: "Hong Konger",
-              male: "Hong Konger",
-            ),
-            Demonyms(
-              language: LangFra(),
-              female: "Hongkongaise",
-              male: "Hongkongais",
-            ),
-          ],
           emoji: "🇭🇰",
           maps: const Maps(
             googleMaps: "1sEnNmT47ffrC8MU8",
@@ -6667,13 +6693,41 @@ class CountryHkg extends WorldCountry {
           fifa: "HKG",
           car: const Car(sign: "HK", isRightSide: false),
           timezones: const ["UTC+08:00"],
-          capitalInfo: const CapitalInfo(
-            capital: Capital("City of Victoria"),
-            latLng: LatLng(22.267, 114.188),
-          ),
         );
   @override
   List<FiatCurrency> get currencies => const [FiatHkd()];
+  @override
+  CapitalInfo get capitalInfo => const CapitalInfo(
+        capital: Capital("City of Victoria"),
+        latLng: LatLng(22.267, 114.188),
+      );
+  @override
+  List<Demonyms> get demonyms => const [
+        Demonyms(
+          language: LangEng(),
+          female: "Hong Konger",
+          male: "Hong Konger",
+        ),
+        Demonyms(
+          language: LangFra(),
+          female: "Hongkongaise",
+          male: "Hongkongais",
+        ),
+      ];
+  @override
+  List<CountryName> get namesNative => const [
+        CountryName(
+          language: LangEng(),
+          official:
+              "Hong Kong Special Administrative Region of the People's Republic of China",
+          common: "Hong Kong",
+        ),
+        CountryName(
+          language: LangZho(),
+          official: "中华人民共和国香港特别行政区",
+          common: "香港",
+        ),
+      ];
   @override
   List<NaturalLanguage> get languages => const [LangEng(), LangZho()];
 }
@@ -6690,13 +6744,6 @@ class CountryHmd extends WorldCountry {
             official: "Heard Island and McDonald Islands",
             common: "Heard Island and McDonald Islands",
           ),
-          namesNative: const [
-            CountryName(
-              language: LangEng(),
-              official: "Heard Island and McDonald Islands",
-              common: "Heard Island and McDonald Islands",
-            ),
-          ],
           tld: const [".hm", ".aq"],
           code: "HMD",
           codeNumeric: "334",
@@ -6708,13 +6755,6 @@ class CountryHmd extends WorldCountry {
           continent: const Antarctica(),
           latLng: const LatLng(53.0818, 73.5042),
           areaMetric: 412,
-          demonyms: const [
-            Demonyms(
-              language: LangEng(),
-              female: "Heard and McDonald Islander",
-              male: "Heard and McDonald Islander",
-            ),
-          ],
           emoji: "🇭🇲",
           maps: const Maps(
             googleMaps: "k5FBAiVaVyozuYeA7",
@@ -6725,6 +6765,22 @@ class CountryHmd extends WorldCountry {
           timezones: const ["UTC+05:00"],
           hasCoatOfArms: false,
         );
+  @override
+  List<Demonyms> get demonyms => const [
+        Demonyms(
+          language: LangEng(),
+          female: "Heard and McDonald Islander",
+          male: "Heard and McDonald Islander",
+        ),
+      ];
+  @override
+  List<CountryName> get namesNative => const [
+        CountryName(
+          language: LangEng(),
+          official: "Heard Island and McDonald Islands",
+          common: "Heard Island and McDonald Islands",
+        ),
+      ];
   @override
   List<NaturalLanguage> get languages => const [LangEng()];
 }
@@ -6741,13 +6797,6 @@ class CountryHnd extends WorldCountry {
             official: "Republic of Honduras",
             common: "Honduras",
           ),
-          namesNative: const [
-            CountryName(
-              language: LangSpa(),
-              official: "República de Honduras",
-              common: "Honduras",
-            ),
-          ],
           tld: const [".hn"],
           code: "HND",
           codeNumeric: "340",
@@ -6764,14 +6813,6 @@ class CountryHnd extends WorldCountry {
           latLng: const LatLng(15, -86.5),
           bordersCodes: const ["Gtm", "Slv", "Nic"],
           areaMetric: 112492,
-          demonyms: const [
-            Demonyms(language: LangEng(), female: "Honduran", male: "Honduran"),
-            Demonyms(
-              language: LangFra(),
-              female: "Hondurienne",
-              male: "Hondurien",
-            ),
-          ],
           emoji: "🇭🇳",
           maps: const Maps(
             googleMaps: "BbeJK8Sk2VkMHbdF8",
@@ -6782,18 +6823,33 @@ class CountryHnd extends WorldCountry {
           fifa: "HON",
           car: const Car(sign: "HN"),
           timezones: const ["UTC-06:00"],
-          capitalInfo: const CapitalInfo(
-            capital: Capital("Tegucigalpa"),
-            latLng: LatLng(14.1, -87.22),
-          ),
           postalCode: const PostalCode(
             format: "@@####",
             regExpPattern: r"^([A-Z]{2}\d{4})$",
           ),
-          regionalBlocs: const [BlocCAIS()],
         );
   @override
   List<FiatCurrency> get currencies => const [FiatHnl()];
+  @override
+  CapitalInfo get capitalInfo => const CapitalInfo(
+        capital: Capital("Tegucigalpa"),
+        latLng: LatLng(14.1, -87.22),
+      );
+  @override
+  List<RegionalBloc> get regionalBlocs => const [BlocCAIS()];
+  @override
+  List<Demonyms> get demonyms => const [
+        Demonyms(language: LangEng(), female: "Honduran", male: "Honduran"),
+        Demonyms(language: LangFra(), female: "Hondurienne", male: "Hondurien"),
+      ];
+  @override
+  List<CountryName> get namesNative => const [
+        CountryName(
+          language: LangSpa(),
+          official: "República de Honduras",
+          common: "Honduras",
+        ),
+      ];
   @override
   List<NaturalLanguage> get languages => const [LangSpa()];
 }
@@ -6810,13 +6866,6 @@ class CountryHrv extends WorldCountry {
             official: "Republic of Croatia",
             common: "Croatia",
           ),
-          namesNative: const [
-            CountryName(
-              language: LangHrv(),
-              official: "Republika Hrvatska",
-              common: "Hrvatska",
-            ),
-          ],
           tld: const [".hr"],
           code: "HRV",
           codeNumeric: "191",
@@ -6834,10 +6883,6 @@ class CountryHrv extends WorldCountry {
           latLng: const LatLng(45.16666666, 15.5),
           bordersCodes: const ["Bih", "Hun", "Mne", "Srb", "Svn"],
           areaMetric: 56594,
-          demonyms: const [
-            Demonyms(language: LangEng(), female: "Croatian", male: "Croatian"),
-            Demonyms(language: LangFra(), female: "Croate", male: "Croate"),
-          ],
           emoji: "🇭🇷",
           maps: const Maps(
             googleMaps: "qSG6xTKUmrYpwmGQ6",
@@ -6848,18 +6893,31 @@ class CountryHrv extends WorldCountry {
           fifa: "CRO",
           car: const Car(sign: "HR"),
           timezones: const ["UTC+01:00"],
-          capitalInfo: const CapitalInfo(
-            capital: Capital("Zagreb"),
-            latLng: LatLng(45.8, 16),
-          ),
           postalCode: const PostalCode(
             format: "HR-#####",
             regExpPattern: r"^(?:HR)*(\d{5})$",
           ),
-          regionalBlocs: const [BlocEU()],
         );
   @override
   List<FiatCurrency> get currencies => const [FiatEur()];
+  @override
+  CapitalInfo get capitalInfo =>
+      const CapitalInfo(capital: Capital("Zagreb"), latLng: LatLng(45.8, 16));
+  @override
+  List<RegionalBloc> get regionalBlocs => const [BlocEU()];
+  @override
+  List<Demonyms> get demonyms => const [
+        Demonyms(language: LangEng(), female: "Croatian", male: "Croatian"),
+        Demonyms(language: LangFra(), female: "Croate", male: "Croate"),
+      ];
+  @override
+  List<CountryName> get namesNative => const [
+        CountryName(
+          language: LangHrv(),
+          official: "Republika Hrvatska",
+          common: "Hrvatska",
+        ),
+      ];
   @override
   List<NaturalLanguage> get languages => const [LangHrv()];
 }
@@ -6876,18 +6934,6 @@ class CountryHti extends WorldCountry {
             official: "Republic of Haiti",
             common: "Haiti",
           ),
-          namesNative: const [
-            CountryName(
-              language: LangFra(),
-              official: "République d'Haïti",
-              common: "Haïti",
-            ),
-            CountryName(
-              language: LangHat(),
-              official: "Repiblik Ayiti",
-              common: "Ayiti",
-            ),
-          ],
           tld: const [".ht"],
           code: "HTI",
           codeNumeric: "332",
@@ -6905,10 +6951,6 @@ class CountryHti extends WorldCountry {
           latLng: const LatLng(19, -72.41666666),
           bordersCodes: const ["Dom"],
           areaMetric: 27750,
-          demonyms: const [
-            Demonyms(language: LangEng(), female: "Haitian", male: "Haitian"),
-            Demonyms(language: LangFra(), female: "Haïtienne", male: "Haïtien"),
-          ],
           emoji: "🇭🇹",
           maps: const Maps(
             googleMaps: "9o13xtjuUdqFnHbn9",
@@ -6919,18 +6961,38 @@ class CountryHti extends WorldCountry {
           fifa: "HAI",
           car: const Car(sign: "RH"),
           timezones: const ["UTC-05:00"],
-          capitalInfo: const CapitalInfo(
-            capital: Capital("Port-au-Prince"),
-            latLng: LatLng(18.53, -72.33),
-          ),
           postalCode: const PostalCode(
             format: "HT####",
             regExpPattern: r"^(?:HT)*(\d{4})$",
           ),
-          regionalBlocs: const [BlocCARICOM()],
         );
   @override
   List<FiatCurrency> get currencies => const [FiatHtg()];
+  @override
+  CapitalInfo get capitalInfo => const CapitalInfo(
+        capital: Capital("Port-au-Prince"),
+        latLng: LatLng(18.53, -72.33),
+      );
+  @override
+  List<RegionalBloc> get regionalBlocs => const [BlocCARICOM()];
+  @override
+  List<Demonyms> get demonyms => const [
+        Demonyms(language: LangEng(), female: "Haitian", male: "Haitian"),
+        Demonyms(language: LangFra(), female: "Haïtienne", male: "Haïtien"),
+      ];
+  @override
+  List<CountryName> get namesNative => const [
+        CountryName(
+          language: LangFra(),
+          official: "République d'Haïti",
+          common: "Haïti",
+        ),
+        CountryName(
+          language: LangHat(),
+          official: "Repiblik Ayiti",
+          common: "Ayiti",
+        ),
+      ];
   @override
   List<NaturalLanguage> get languages => const [LangFra(), LangHat()];
 }
@@ -6947,13 +7009,6 @@ class CountryHun extends WorldCountry {
             official: "Hungary",
             common: "Hungary",
           ),
-          namesNative: const [
-            CountryName(
-              language: LangHun(),
-              official: "Magyarország",
-              common: "Magyarország",
-            ),
-          ],
           tld: const [".hu"],
           code: "HUN",
           codeNumeric: "348",
@@ -6967,18 +7022,6 @@ class CountryHun extends WorldCountry {
           landlocked: true,
           bordersCodes: const ["Aut", "Hrv", "Rou", "Srb", "Svk", "Svn", "Ukr"],
           areaMetric: 93028,
-          demonyms: const [
-            Demonyms(
-              language: LangEng(),
-              female: "Hungarian",
-              male: "Hungarian",
-            ),
-            Demonyms(
-              language: LangFra(),
-              female: "Hongroise",
-              male: "Hongrois",
-            ),
-          ],
           emoji: "🇭🇺",
           maps: const Maps(
             googleMaps: "9gfPupm5bffixiFJ6",
@@ -6989,16 +7032,31 @@ class CountryHun extends WorldCountry {
           fifa: "HUN",
           car: const Car(sign: "H"),
           timezones: const ["UTC+01:00"],
-          capitalInfo: const CapitalInfo(
-            capital: Capital("Budapest"),
-            latLng: LatLng(47.5, 19.08),
-          ),
           postalCode:
               const PostalCode(format: "####", regExpPattern: r"^(\d{4})$"),
-          regionalBlocs: const [BlocEU()],
         );
   @override
   List<FiatCurrency> get currencies => const [FiatHuf()];
+  @override
+  CapitalInfo get capitalInfo => const CapitalInfo(
+        capital: Capital("Budapest"),
+        latLng: LatLng(47.5, 19.08),
+      );
+  @override
+  List<RegionalBloc> get regionalBlocs => const [BlocEU()];
+  @override
+  List<Demonyms> get demonyms => const [
+        Demonyms(language: LangEng(), female: "Hungarian", male: "Hungarian"),
+        Demonyms(language: LangFra(), female: "Hongroise", male: "Hongrois"),
+      ];
+  @override
+  List<CountryName> get namesNative => const [
+        CountryName(
+          language: LangHun(),
+          official: "Magyarország",
+          common: "Magyarország",
+        ),
+      ];
   @override
   List<NaturalLanguage> get languages => const [LangHun()];
 }
@@ -7015,13 +7073,6 @@ class CountryIdn extends WorldCountry {
             official: "Republic of Indonesia",
             common: "Indonesia",
           ),
-          namesNative: const [
-            CountryName(
-              language: LangInd(),
-              official: "Republik Indonesia",
-              common: "Indonesia",
-            ),
-          ],
           tld: const [".id"],
           code: "IDN",
           codeNumeric: "360",
@@ -7038,18 +7089,6 @@ class CountryIdn extends WorldCountry {
           latLng: const LatLng(-5, 120),
           bordersCodes: const ["Tls", "Mys", "Png"],
           areaMetric: 1904569,
-          demonyms: const [
-            Demonyms(
-              language: LangEng(),
-              female: "Indonesian",
-              male: "Indonesian",
-            ),
-            Demonyms(
-              language: LangFra(),
-              female: "Indonésienne",
-              male: "Indonésien",
-            ),
-          ],
           emoji: "🇮🇩",
           maps: const Maps(
             googleMaps: "9gfPupm5bffixiFJ6",
@@ -7060,15 +7099,34 @@ class CountryIdn extends WorldCountry {
           fifa: "IDN",
           car: const Car(sign: "RI", isRightSide: false),
           timezones: const ["UTC+07:00", "UTC+08:00", "UTC+09:00"],
-          capitalInfo: const CapitalInfo(
-            capital: Capital("Nusantara"),
-            latLng: LatLng(-6.17, 106.82),
-          ),
           postalCode: const PostalCode(),
-          regionalBlocs: const [BlocASEAN()],
         );
   @override
   List<FiatCurrency> get currencies => const [FiatIdr()];
+  @override
+  CapitalInfo get capitalInfo => const CapitalInfo(
+        capital: Capital("Nusantara"),
+        latLng: LatLng(-6.17, 106.82),
+      );
+  @override
+  List<RegionalBloc> get regionalBlocs => const [BlocASEAN()];
+  @override
+  List<Demonyms> get demonyms => const [
+        Demonyms(language: LangEng(), female: "Indonesian", male: "Indonesian"),
+        Demonyms(
+          language: LangFra(),
+          female: "Indonésienne",
+          male: "Indonésien",
+        ),
+      ];
+  @override
+  List<CountryName> get namesNative => const [
+        CountryName(
+          language: LangInd(),
+          official: "Republik Indonesia",
+          common: "Indonesia",
+        ),
+      ];
   @override
   List<NaturalLanguage> get languages => const [LangInd()];
 }
@@ -7085,18 +7143,6 @@ class CountryImn extends WorldCountry {
             official: "Isle of Man",
             common: "Isle of Man",
           ),
-          namesNative: const [
-            CountryName(
-              language: LangEng(),
-              official: "Isle of Man",
-              common: "Isle of Man",
-            ),
-            CountryName(
-              language: LangGlv(),
-              official: "Ellan Vannin or Mannin",
-              common: "Mannin",
-            ),
-          ],
           tld: const [".im"],
           code: "IMN",
           codeNumeric: "833",
@@ -7109,9 +7155,6 @@ class CountryImn extends WorldCountry {
           subregion: const NorthernEurope(),
           latLng: const LatLng(54.25, -4.5),
           areaMetric: 572,
-          demonyms: const [
-            Demonyms(language: LangEng(), female: "Manx", male: "Manx"),
-          ],
           emoji: "🇮🇲",
           maps: const Maps(
             googleMaps: "4DqVHDgVaFgnh8ZV8",
@@ -7120,19 +7163,37 @@ class CountryImn extends WorldCountry {
           population: 85032,
           car: const Car(sign: "GBM", isRightSide: false),
           timezones: const ["UTC+00:00"],
-          capitalInfo: const CapitalInfo(
-            capital: Capital("Douglas"),
-            latLng: LatLng(54.15, -4.48),
-          ),
           postalCode: const PostalCode(
             format: "@# #@@|@## #@@|@@# #@@|@@## #@@|@#@ #@@|@@#@ #@@|GIR0AA",
             regExpPattern:
                 r"^(([A-Z]\d{2}[A-Z]{2})|([A-Z]\d{3}[A-Z]{2})|([A-Z]{2}\d{2}[A-Z]{2})|([A-Z]{2}\d{3}[A-Z]{2})|([A-Z]\d[A-Z]\d[A-Z]{2})|([A-Z]{2}\d[A-Z]\d[A-Z]{2})|(GIR0AA))$",
           ),
-          regionalBlocs: const [BlocEU()],
         );
   @override
   List<FiatCurrency> get currencies => const [FiatGbp()];
+  @override
+  CapitalInfo get capitalInfo => const CapitalInfo(
+        capital: Capital("Douglas"),
+        latLng: LatLng(54.15, -4.48),
+      );
+  @override
+  List<RegionalBloc> get regionalBlocs => const [BlocEU()];
+  @override
+  List<Demonyms> get demonyms =>
+      const [Demonyms(language: LangEng(), female: "Manx", male: "Manx")];
+  @override
+  List<CountryName> get namesNative => const [
+        CountryName(
+          language: LangEng(),
+          official: "Isle of Man",
+          common: "Isle of Man",
+        ),
+        CountryName(
+          language: LangGlv(),
+          official: "Ellan Vannin or Mannin",
+          common: "Mannin",
+        ),
+      ];
   @override
   List<NaturalLanguage> get languages => const [LangEng(), LangGlv()];
 }
@@ -7149,23 +7210,6 @@ class CountryInd extends WorldCountry {
             official: "Republic of India",
             common: "India",
           ),
-          namesNative: const [
-            CountryName(
-              language: LangEng(),
-              official: "Republic of India",
-              common: "India",
-            ),
-            CountryName(
-              language: LangHin(),
-              official: "भारत गणराज्य",
-              common: "भारत",
-            ),
-            CountryName(
-              language: LangTam(),
-              official: "இந்தியக் குடியரசு",
-              common: "இந்தியா",
-            ),
-          ],
           tld: const [".in"],
           code: "IND",
           codeNumeric: "356",
@@ -7184,10 +7228,6 @@ class CountryInd extends WorldCountry {
           latLng: const LatLng(20, 77),
           bordersCodes: const ["Bgd", "Btn", "Mmr", "Chn", "Npl", "Pak"],
           areaMetric: 3287590,
-          demonyms: const [
-            Demonyms(language: LangEng(), female: "Indian", male: "Indian"),
-            Demonyms(language: LangFra(), female: "Indienne", male: "Indien"),
-          ],
           emoji: "🇮🇳",
           maps: const Maps(
             googleMaps: "WSk3fLwG4vtPQetp7",
@@ -7198,16 +7238,41 @@ class CountryInd extends WorldCountry {
           fifa: "IND",
           car: const Car(sign: "IND", isRightSide: false),
           timezones: const ["UTC+05:30"],
-          capitalInfo: const CapitalInfo(
-            capital: Capital("New Delhi"),
-            latLng: LatLng(28.6, 77.2),
-          ),
           postalCode:
               const PostalCode(format: "######", regExpPattern: r"^(\d{6})$"),
-          regionalBlocs: const [BlocSAARC()],
         );
   @override
   List<FiatCurrency> get currencies => const [FiatInr()];
+  @override
+  CapitalInfo get capitalInfo => const CapitalInfo(
+        capital: Capital("New Delhi"),
+        latLng: LatLng(28.6, 77.2),
+      );
+  @override
+  List<RegionalBloc> get regionalBlocs => const [BlocSAARC()];
+  @override
+  List<Demonyms> get demonyms => const [
+        Demonyms(language: LangEng(), female: "Indian", male: "Indian"),
+        Demonyms(language: LangFra(), female: "Indienne", male: "Indien"),
+      ];
+  @override
+  List<CountryName> get namesNative => const [
+        CountryName(
+          language: LangEng(),
+          official: "Republic of India",
+          common: "India",
+        ),
+        CountryName(
+          language: LangHin(),
+          official: "भारत गणराज्य",
+          common: "भारत",
+        ),
+        CountryName(
+          language: LangTam(),
+          official: "இந்தியக் குடியரசு",
+          common: "இந்தியா",
+        ),
+      ];
   @override
   List<NaturalLanguage> get languages =>
       const [LangEng(), LangHin(), LangTam()];
@@ -7225,13 +7290,6 @@ class CountryIot extends WorldCountry {
             official: "British Indian Ocean Territory",
             common: "British Indian Ocean Territory",
           ),
-          namesNative: const [
-            CountryName(
-              language: LangEng(),
-              official: "British Indian Ocean Territory",
-              common: "British Indian Ocean Territory",
-            ),
-          ],
           tld: const [".io"],
           code: "IOT",
           codeNumeric: "086",
@@ -7244,9 +7302,6 @@ class CountryIot extends WorldCountry {
           subregion: const EasternAfrica(),
           latLng: const LatLng(-6, 71.5),
           areaMetric: 60,
-          demonyms: const [
-            Demonyms(language: LangEng(), female: "Indian", male: "Indian"),
-          ],
           emoji: "🇮🇴",
           maps: const Maps(
             googleMaps: "bheNucgekVEYozoi6",
@@ -7256,14 +7311,27 @@ class CountryIot extends WorldCountry {
           car: const Car(sign: "GB"),
           timezones: const ["UTC+06:00"],
           hasCoatOfArms: false,
-          capitalInfo: const CapitalInfo(
-            capital: Capital("Diego Garcia"),
-            latLng: LatLng(-7.3, 72.4),
-          ),
-          regionalBlocs: const [BlocAU()],
         );
   @override
   List<FiatCurrency> get currencies => const [FiatUsd()];
+  @override
+  CapitalInfo get capitalInfo => const CapitalInfo(
+        capital: Capital("Diego Garcia"),
+        latLng: LatLng(-7.3, 72.4),
+      );
+  @override
+  List<RegionalBloc> get regionalBlocs => const [BlocAU()];
+  @override
+  List<Demonyms> get demonyms =>
+      const [Demonyms(language: LangEng(), female: "Indian", male: "Indian")];
+  @override
+  List<CountryName> get namesNative => const [
+        CountryName(
+          language: LangEng(),
+          official: "British Indian Ocean Territory",
+          common: "British Indian Ocean Territory",
+        ),
+      ];
   @override
   List<NaturalLanguage> get languages => const [LangEng()];
 }
@@ -7280,18 +7348,6 @@ class CountryIrl extends WorldCountry {
             official: "Republic of Ireland",
             common: "Ireland",
           ),
-          namesNative: const [
-            CountryName(
-              language: LangEng(),
-              official: "Republic of Ireland",
-              common: "Ireland",
-            ),
-            CountryName(
-              language: LangGle(),
-              official: "Poblacht na hÉireann",
-              common: "Éire",
-            ),
-          ],
           tld: const [".ie"],
           code: "IRL",
           codeNumeric: "372",
@@ -7309,14 +7365,6 @@ class CountryIrl extends WorldCountry {
           latLng: const LatLng(53, -8),
           bordersCodes: const ["Gbr"],
           areaMetric: 70273,
-          demonyms: const [
-            Demonyms(language: LangEng(), female: "Irish", male: "Irish"),
-            Demonyms(
-              language: LangFra(),
-              female: "Irlandaise",
-              male: "Irlandais",
-            ),
-          ],
           emoji: "🇮🇪",
           maps: const Maps(
             googleMaps: "hxd1BKxgpchStzQC6",
@@ -7327,19 +7375,39 @@ class CountryIrl extends WorldCountry {
           fifa: "IRL",
           car: const Car(sign: "IRL", isRightSide: false),
           timezones: const ["UTC+00:00"],
-          capitalInfo: const CapitalInfo(
-            capital: Capital("Dublin"),
-            latLng: LatLng(53.32, -6.23),
-          ),
           postalCode: const PostalCode(
             format: "#|@#|@#|@#|@#|@#|@#|@",
             regExpPattern:
                 r"^(([A-Z]\d{2}[A-Z]{2})|([A-Z]\d{3}[A-Z]{2})|([A-Z]{2}\d{2}[A-Z]{2})|([A-Z]{2}\d{3}[A-Z]{2})|([A-Z]\d[A-Z]\d[A-Z]{2})|([A-Z]{2}\d[A-Z]\d[A-Z]{2})|(GIR0AA))$",
           ),
-          regionalBlocs: const [BlocEU()],
         );
   @override
   List<FiatCurrency> get currencies => const [FiatEur()];
+  @override
+  CapitalInfo get capitalInfo => const CapitalInfo(
+        capital: Capital("Dublin"),
+        latLng: LatLng(53.32, -6.23),
+      );
+  @override
+  List<RegionalBloc> get regionalBlocs => const [BlocEU()];
+  @override
+  List<Demonyms> get demonyms => const [
+        Demonyms(language: LangEng(), female: "Irish", male: "Irish"),
+        Demonyms(language: LangFra(), female: "Irlandaise", male: "Irlandais"),
+      ];
+  @override
+  List<CountryName> get namesNative => const [
+        CountryName(
+          language: LangEng(),
+          official: "Republic of Ireland",
+          common: "Ireland",
+        ),
+        CountryName(
+          language: LangGle(),
+          official: "Poblacht na hÉireann",
+          common: "Éire",
+        ),
+      ];
   @override
   List<NaturalLanguage> get languages => const [LangEng(), LangGle()];
 }
@@ -7356,13 +7424,6 @@ class CountryIrn extends WorldCountry {
             official: "Islamic Republic of Iran",
             common: "Iran",
           ),
-          namesNative: const [
-            CountryName(
-              language: LangFas(),
-              official: "جمهوری اسلامی ایران",
-              common: "ایران",
-            ),
-          ],
           tld: const [".ir", "ایران."],
           code: "IRN",
           codeNumeric: "364",
@@ -7380,10 +7441,6 @@ class CountryIrn extends WorldCountry {
           latLng: const LatLng(32, 53),
           bordersCodes: const ["Afg", "Arm", "Aze", "Irq", "Pak", "Tur", "Tkm"],
           areaMetric: 1648195,
-          demonyms: const [
-            Demonyms(language: LangEng(), female: "Iranian", male: "Iranian"),
-            Demonyms(language: LangFra(), female: "Iranienne", male: "Iranien"),
-          ],
           emoji: "🇮🇷",
           maps: const Maps(
             googleMaps: "dMgEGuacBPGYQnjY7",
@@ -7395,10 +7452,6 @@ class CountryIrn extends WorldCountry {
           car: const Car(sign: "IR"),
           timezones: const ["UTC+03:30"],
           startOfWeek: Weekday.saturday,
-          capitalInfo: const CapitalInfo(
-            capital: Capital("Tehran"),
-            latLng: LatLng(35.7, 51.42),
-          ),
           postalCode: const PostalCode(
             format: "##########",
             regExpPattern: r"^(\d{10})$",
@@ -7406,6 +7459,24 @@ class CountryIrn extends WorldCountry {
         );
   @override
   List<FiatCurrency> get currencies => const [FiatIrr()];
+  @override
+  CapitalInfo get capitalInfo => const CapitalInfo(
+        capital: Capital("Tehran"),
+        latLng: LatLng(35.7, 51.42),
+      );
+  @override
+  List<Demonyms> get demonyms => const [
+        Demonyms(language: LangEng(), female: "Iranian", male: "Iranian"),
+        Demonyms(language: LangFra(), female: "Iranienne", male: "Iranien"),
+      ];
+  @override
+  List<CountryName> get namesNative => const [
+        CountryName(
+          language: LangFas(),
+          official: "جمهوری اسلامی ایران",
+          common: "ایران",
+        ),
+      ];
   @override
   List<NaturalLanguage> get languages => const [LangFas()];
 }
@@ -7422,13 +7493,6 @@ class CountryIrq extends WorldCountry {
             official: "Republic of Iraq",
             common: "Iraq",
           ),
-          namesNative: const [
-            CountryName(
-              language: LangAra(),
-              official: "جمهورية العراق",
-              common: "العراق",
-            ),
-          ],
           tld: const [".iq"],
           code: "IRQ",
           codeNumeric: "368",
@@ -7445,10 +7509,6 @@ class CountryIrq extends WorldCountry {
           latLng: const LatLng(33, 44),
           bordersCodes: const ["Irn", "Jor", "Kwt", "Sau", "Syr", "Tur"],
           areaMetric: 438317,
-          demonyms: const [
-            Demonyms(language: LangEng(), female: "Iraqi", male: "Iraqi"),
-            Demonyms(language: LangFra(), female: "Irakienne", male: "Irakien"),
-          ],
           emoji: "🇮🇶",
           maps: const Maps(
             googleMaps: "iL8Bmy1sUCW9fUk18",
@@ -7460,15 +7520,30 @@ class CountryIrq extends WorldCountry {
           car: const Car(sign: "IRQ"),
           timezones: const ["UTC+03:00"],
           startOfWeek: Weekday.sunday,
-          capitalInfo: const CapitalInfo(
-            capital: Capital("Baghdad"),
-            latLng: LatLng(33.33, 44.4),
-          ),
           postalCode: const PostalCode(),
-          regionalBlocs: const [BlocAL()],
         );
   @override
   List<FiatCurrency> get currencies => const [FiatIqd()];
+  @override
+  CapitalInfo get capitalInfo => const CapitalInfo(
+        capital: Capital("Baghdad"),
+        latLng: LatLng(33.33, 44.4),
+      );
+  @override
+  List<RegionalBloc> get regionalBlocs => const [BlocAL()];
+  @override
+  List<Demonyms> get demonyms => const [
+        Demonyms(language: LangEng(), female: "Iraqi", male: "Iraqi"),
+        Demonyms(language: LangFra(), female: "Irakienne", male: "Irakien"),
+      ];
+  @override
+  List<CountryName> get namesNative => const [
+        CountryName(
+          language: LangAra(),
+          official: "جمهورية العراق",
+          common: "العراق",
+        ),
+      ];
   @override
   List<NaturalLanguage> get languages => const [LangAra()];
 }
@@ -7485,13 +7560,6 @@ class CountryIsl extends WorldCountry {
             official: "Iceland",
             common: "Iceland",
           ),
-          namesNative: const [
-            CountryName(
-              language: LangIsl(),
-              official: "Ísland",
-              common: "Ísland",
-            ),
-          ],
           tld: const [".is"],
           code: "ISL",
           codeNumeric: "352",
@@ -7508,18 +7576,6 @@ class CountryIsl extends WorldCountry {
           subregion: const NorthernEurope(),
           latLng: const LatLng(65, -18),
           areaMetric: 103000,
-          demonyms: const [
-            Demonyms(
-              language: LangEng(),
-              female: "Icelander",
-              male: "Icelander",
-            ),
-            Demonyms(
-              language: LangFra(),
-              female: "Islandaise",
-              male: "Islandais",
-            ),
-          ],
           emoji: "🇮🇸",
           maps: const Maps(
             googleMaps: "WxFWSQuc3oamNxoE6",
@@ -7530,16 +7586,27 @@ class CountryIsl extends WorldCountry {
           fifa: "ISL",
           car: const Car(sign: "IS"),
           timezones: const ["UTC+00:00"],
-          capitalInfo: const CapitalInfo(
-            capital: Capital("Reykjavik"),
-            latLng: LatLng(64.15, -21.95),
-          ),
           postalCode:
               const PostalCode(format: "###", regExpPattern: r"^(\d{3})$"),
-          regionalBlocs: const [BlocEFTA()],
         );
   @override
   List<FiatCurrency> get currencies => const [FiatIsk()];
+  @override
+  CapitalInfo get capitalInfo => const CapitalInfo(
+        capital: Capital("Reykjavik"),
+        latLng: LatLng(64.15, -21.95),
+      );
+  @override
+  List<RegionalBloc> get regionalBlocs => const [BlocEFTA()];
+  @override
+  List<Demonyms> get demonyms => const [
+        Demonyms(language: LangEng(), female: "Icelander", male: "Icelander"),
+        Demonyms(language: LangFra(), female: "Islandaise", male: "Islandais"),
+      ];
+  @override
+  List<CountryName> get namesNative => const [
+        CountryName(language: LangIsl(), official: "Ísland", common: "Ísland"),
+      ];
   @override
   List<NaturalLanguage> get languages => const [LangIsl()];
 }
@@ -7556,18 +7623,6 @@ class CountryIsr extends WorldCountry {
             official: "State of Israel",
             common: "Israel",
           ),
-          namesNative: const [
-            CountryName(
-              language: LangAra(),
-              official: "دولة إسرائيل",
-              common: "إسرائيل",
-            ),
-            CountryName(
-              language: LangHeb(),
-              official: "מדינת ישראל",
-              common: "ישראל",
-            ),
-          ],
           tld: const [".il"],
           code: "ISR",
           codeNumeric: "376",
@@ -7580,14 +7635,6 @@ class CountryIsr extends WorldCountry {
           latLng: const LatLng(31.47, 35.13),
           bordersCodes: const ["Egy", "Jor", "Lbn", "Pse", "Syr"],
           areaMetric: 20770,
-          demonyms: const [
-            Demonyms(language: LangEng(), female: "Israeli", male: "Israeli"),
-            Demonyms(
-              language: LangFra(),
-              female: "Israélienne",
-              male: "Israélien",
-            ),
-          ],
           emoji: "🇮🇱",
           maps: const Maps(
             googleMaps: "6UY1AH8XeafVwdC97",
@@ -7599,14 +7646,33 @@ class CountryIsr extends WorldCountry {
           car: const Car(sign: "IL"),
           timezones: const ["UTC+02:00"],
           startOfWeek: Weekday.sunday,
-          capitalInfo: const CapitalInfo(
-            capital: Capital("Jerusalem"),
-            latLng: LatLng(31.77, 35.23),
-          ),
           postalCode: const PostalCode(),
         );
   @override
   List<FiatCurrency> get currencies => const [FiatIls()];
+  @override
+  CapitalInfo get capitalInfo => const CapitalInfo(
+        capital: Capital("Jerusalem"),
+        latLng: LatLng(31.77, 35.23),
+      );
+  @override
+  List<Demonyms> get demonyms => const [
+        Demonyms(language: LangEng(), female: "Israeli", male: "Israeli"),
+        Demonyms(language: LangFra(), female: "Israélienne", male: "Israélien"),
+      ];
+  @override
+  List<CountryName> get namesNative => const [
+        CountryName(
+          language: LangAra(),
+          official: "دولة إسرائيل",
+          common: "إسرائيل",
+        ),
+        CountryName(
+          language: LangHeb(),
+          official: "מדינת ישראל",
+          common: "ישראל",
+        ),
+      ];
   @override
   List<NaturalLanguage> get languages => const [LangAra(), LangHeb()];
 }
@@ -7623,13 +7689,6 @@ class CountryIta extends WorldCountry {
             official: "Italian Republic",
             common: "Italy",
           ),
-          namesNative: const [
-            CountryName(
-              language: LangIta(),
-              official: "Repubblica italiana",
-              common: "Italia",
-            ),
-          ],
           tld: const [".it"],
           code: "ITA",
           codeNumeric: "380",
@@ -7642,10 +7701,6 @@ class CountryIta extends WorldCountry {
           latLng: const LatLng(42.83333333, 12.83333333),
           bordersCodes: const ["Aut", "Fra", "Smr", "Svn", "Che", "Vat"],
           areaMetric: 301336,
-          demonyms: const [
-            Demonyms(language: LangEng(), female: "Italian", male: "Italian"),
-            Demonyms(language: LangFra(), female: "Italienne", male: "Italien"),
-          ],
           emoji: "🇮🇹",
           maps: const Maps(
             googleMaps: "8M1K27TDj7StTRTq8",
@@ -7656,15 +7711,28 @@ class CountryIta extends WorldCountry {
           fifa: "ITA",
           car: const Car(sign: "I"),
           timezones: const ["UTC+01:00"],
-          capitalInfo: const CapitalInfo(
-            capital: Capital("Rome"),
-            latLng: LatLng(41.9, 12.48),
-          ),
           postalCode: const PostalCode(),
-          regionalBlocs: const [BlocEU()],
         );
   @override
   List<FiatCurrency> get currencies => const [FiatEur()];
+  @override
+  CapitalInfo get capitalInfo =>
+      const CapitalInfo(capital: Capital("Rome"), latLng: LatLng(41.9, 12.48));
+  @override
+  List<RegionalBloc> get regionalBlocs => const [BlocEU()];
+  @override
+  List<Demonyms> get demonyms => const [
+        Demonyms(language: LangEng(), female: "Italian", male: "Italian"),
+        Demonyms(language: LangFra(), female: "Italienne", male: "Italien"),
+      ];
+  @override
+  List<CountryName> get namesNative => const [
+        CountryName(
+          language: LangIta(),
+          official: "Repubblica italiana",
+          common: "Italia",
+        ),
+      ];
   @override
   List<NaturalLanguage> get languages => const [LangIta()];
 }
@@ -7681,13 +7749,6 @@ class CountryJam extends WorldCountry {
             official: "Jamaica",
             common: "Jamaica",
           ),
-          namesNative: const [
-            CountryName(
-              language: LangEng(),
-              official: "Jamaica",
-              common: "Jamaica",
-            ),
-          ],
           tld: const [".jm"],
           code: "JAM",
           codeNumeric: "388",
@@ -7699,14 +7760,6 @@ class CountryJam extends WorldCountry {
           subregion: const Caribbean(),
           latLng: const LatLng(18.25, -77.5),
           areaMetric: 10991,
-          demonyms: const [
-            Demonyms(language: LangEng(), female: "Jamaican", male: "Jamaican"),
-            Demonyms(
-              language: LangFra(),
-              female: "Jamaïcaine",
-              male: "Jamaïcain",
-            ),
-          ],
           emoji: "🇯🇲",
           maps: const Maps(
             googleMaps: "Z8mQ6jxnRQKFwJy9A",
@@ -7717,14 +7770,29 @@ class CountryJam extends WorldCountry {
           fifa: "JAM",
           car: const Car(sign: "JA", isRightSide: false),
           timezones: const ["UTC-05:00"],
-          capitalInfo: const CapitalInfo(
-            capital: Capital("Kingston"),
-            latLng: LatLng(17.99702, -76.79358),
-          ),
-          regionalBlocs: const [BlocCARICOM()],
         );
   @override
   List<FiatCurrency> get currencies => const [FiatJmd()];
+  @override
+  CapitalInfo get capitalInfo => const CapitalInfo(
+        capital: Capital("Kingston"),
+        latLng: LatLng(17.99702, -76.79358),
+      );
+  @override
+  List<RegionalBloc> get regionalBlocs => const [BlocCARICOM()];
+  @override
+  List<Demonyms> get demonyms => const [
+        Demonyms(language: LangEng(), female: "Jamaican", male: "Jamaican"),
+        Demonyms(language: LangFra(), female: "Jamaïcaine", male: "Jamaïcain"),
+      ];
+  @override
+  List<CountryName> get namesNative => const [
+        CountryName(
+          language: LangEng(),
+          official: "Jamaica",
+          common: "Jamaica",
+        ),
+      ];
   @override
   List<NaturalLanguage> get languages => const [LangEng()];
 }
@@ -7741,18 +7809,6 @@ class CountryJey extends WorldCountry {
             official: "Bailiwick of Jersey",
             common: "Jersey",
           ),
-          namesNative: const [
-            CountryName(
-              language: LangEng(),
-              official: "Bailiwick of Jersey",
-              common: "Jersey",
-            ),
-            CountryName(
-              language: LangFra(),
-              official: "Bailliage de Jersey",
-              common: "Jersey",
-            ),
-          ],
           tld: const [".je"],
           code: "JEY",
           codeNumeric: "832",
@@ -7770,18 +7826,6 @@ class CountryJey extends WorldCountry {
           subregion: const NorthernEurope(),
           latLng: const LatLng(49.25, -2.16666666),
           areaMetric: 116,
-          demonyms: const [
-            Demonyms(
-              language: LangEng(),
-              female: "Channel Islander",
-              male: "Channel Islander",
-            ),
-            Demonyms(
-              language: LangFra(),
-              female: "Jersiaise",
-              male: "Jersiais",
-            ),
-          ],
           emoji: "🇯🇪",
           maps: const Maps(
             googleMaps: "rXG8GZZtsqK92kTCA",
@@ -7790,10 +7834,6 @@ class CountryJey extends WorldCountry {
           population: 100800,
           car: const Car(sign: "GBJ", isRightSide: false),
           timezones: const ["UTC+01:00"],
-          capitalInfo: const CapitalInfo(
-            capital: Capital("Saint Helier"),
-            latLng: LatLng(49.18, -2.1),
-          ),
           postalCode: const PostalCode(
             format: "@# #@@|@## #@@|@@# #@@|@@## #@@|@#@ #@@|@@#@ #@@|GIR0AA",
             regExpPattern:
@@ -7802,6 +7842,33 @@ class CountryJey extends WorldCountry {
         );
   @override
   List<FiatCurrency> get currencies => const [FiatGbp()];
+  @override
+  CapitalInfo get capitalInfo => const CapitalInfo(
+        capital: Capital("Saint Helier"),
+        latLng: LatLng(49.18, -2.1),
+      );
+  @override
+  List<Demonyms> get demonyms => const [
+        Demonyms(
+          language: LangEng(),
+          female: "Channel Islander",
+          male: "Channel Islander",
+        ),
+        Demonyms(language: LangFra(), female: "Jersiaise", male: "Jersiais"),
+      ];
+  @override
+  List<CountryName> get namesNative => const [
+        CountryName(
+          language: LangEng(),
+          official: "Bailiwick of Jersey",
+          common: "Jersey",
+        ),
+        CountryName(
+          language: LangFra(),
+          official: "Bailliage de Jersey",
+          common: "Jersey",
+        ),
+      ];
   @override
   List<NaturalLanguage> get languages => const [LangEng(), LangFra()];
 }
@@ -7818,13 +7885,6 @@ class CountryJor extends WorldCountry {
             official: "Hashemite Kingdom of Jordan",
             common: "Jordan",
           ),
-          namesNative: const [
-            CountryName(
-              language: LangAra(),
-              official: "المملكة الأردنية الهاشمية",
-              common: "الأردن",
-            ),
-          ],
           tld: const [".jo", "الاردن."],
           code: "JOR",
           codeNumeric: "400",
@@ -7841,18 +7901,6 @@ class CountryJor extends WorldCountry {
           latLng: const LatLng(31, 36),
           bordersCodes: const ["Irq", "Isr", "Pse", "Sau", "Syr"],
           areaMetric: 89342,
-          demonyms: const [
-            Demonyms(
-              language: LangEng(),
-              female: "Jordanian",
-              male: "Jordanian",
-            ),
-            Demonyms(
-              language: LangFra(),
-              female: "Jordanienne",
-              male: "Jordanien",
-            ),
-          ],
           emoji: "🇯🇴",
           maps: const Maps(
             googleMaps: "ko1dzSDKg8Gsi9A98",
@@ -7864,15 +7912,30 @@ class CountryJor extends WorldCountry {
           car: const Car(sign: "HKJ"),
           timezones: const ["UTC+03:00"],
           startOfWeek: Weekday.sunday,
-          capitalInfo: const CapitalInfo(
-            capital: Capital("Amman"),
-            latLng: LatLng(31.95, 35.93),
-          ),
           postalCode: const PostalCode(),
-          regionalBlocs: const [BlocAL()],
         );
   @override
   List<FiatCurrency> get currencies => const [FiatJod()];
+  @override
+  CapitalInfo get capitalInfo => const CapitalInfo(
+        capital: Capital("Amman"),
+        latLng: LatLng(31.95, 35.93),
+      );
+  @override
+  List<RegionalBloc> get regionalBlocs => const [BlocAL()];
+  @override
+  List<Demonyms> get demonyms => const [
+        Demonyms(language: LangEng(), female: "Jordanian", male: "Jordanian"),
+        Demonyms(language: LangFra(), female: "Jordanienne", male: "Jordanien"),
+      ];
+  @override
+  List<CountryName> get namesNative => const [
+        CountryName(
+          language: LangAra(),
+          official: "المملكة الأردنية الهاشمية",
+          common: "الأردن",
+        ),
+      ];
   @override
   List<NaturalLanguage> get languages => const [LangAra()];
 }
@@ -7889,9 +7952,6 @@ class CountryJpn extends WorldCountry {
             official: "Japan",
             common: "Japan",
           ),
-          namesNative: const [
-            CountryName(language: LangJpn(), official: "日本", common: "日本"),
-          ],
           tld: const [".jp", ".みんな"],
           code: "JPN",
           codeNumeric: "392",
@@ -7903,14 +7963,6 @@ class CountryJpn extends WorldCountry {
           subregion: const EasternAsia(),
           latLng: const LatLng(36, 138),
           areaMetric: 377930,
-          demonyms: const [
-            Demonyms(language: LangEng(), female: "Japanese", male: "Japanese"),
-            Demonyms(
-              language: LangFra(),
-              female: "Japonaise",
-              male: "Japonais",
-            ),
-          ],
           emoji: "🇯🇵",
           maps: const Maps(
             googleMaps: "NGTLSCSrA8bMrvnX9",
@@ -7921,15 +7973,24 @@ class CountryJpn extends WorldCountry {
           fifa: "JPN",
           car: const Car(sign: "J", isRightSide: false),
           timezones: const ["UTC+09:00"],
-          capitalInfo: const CapitalInfo(
-            capital: Capital("Tokyo"),
-            latLng: LatLng(35.68, 139.75),
-          ),
           postalCode:
               const PostalCode(format: "###-####", regExpPattern: r"^(\d{7})$"),
         );
   @override
   List<FiatCurrency> get currencies => const [FiatJpy()];
+  @override
+  CapitalInfo get capitalInfo => const CapitalInfo(
+        capital: Capital("Tokyo"),
+        latLng: LatLng(35.68, 139.75),
+      );
+  @override
+  List<Demonyms> get demonyms => const [
+        Demonyms(language: LangEng(), female: "Japanese", male: "Japanese"),
+        Demonyms(language: LangFra(), female: "Japonaise", male: "Japonais"),
+      ];
+  @override
+  List<CountryName> get namesNative =>
+      const [CountryName(language: LangJpn(), official: "日本", common: "日本")];
   @override
   List<NaturalLanguage> get languages => const [LangJpn()];
 }
@@ -7946,18 +8007,6 @@ class CountryKaz extends WorldCountry {
             official: "Republic of Kazakhstan",
             common: "Kazakhstan",
           ),
-          namesNative: const [
-            CountryName(
-              language: LangKaz(),
-              official: "Қазақстан Республикасы",
-              common: "Қазақстан",
-            ),
-            CountryName(
-              language: LangRus(),
-              official: "Республика Казахстан",
-              common: "Казахстан",
-            ),
-          ],
           tld: const [".kz", ".қаз"],
           code: "KAZ",
           codeNumeric: "398",
@@ -7980,18 +8029,6 @@ class CountryKaz extends WorldCountry {
           landlocked: true,
           bordersCodes: const ["Chn", "Kgz", "Rus", "Tkm", "Uzb"],
           areaMetric: 2724900,
-          demonyms: const [
-            Demonyms(
-              language: LangEng(),
-              female: "Kazakhstani",
-              male: "Kazakhstani",
-            ),
-            Demonyms(
-              language: LangFra(),
-              female: "Kazakhstanaise",
-              male: "Kazakhstanais",
-            ),
-          ],
           emoji: "🇰🇿",
           maps: const Maps(
             googleMaps: "8VohJGu7ShuzZYyeA",
@@ -8002,16 +8039,44 @@ class CountryKaz extends WorldCountry {
           fifa: "KAZ",
           car: const Car(sign: "KZ"),
           timezones: const ["UTC+05:00", "UTC+06:00"],
-          capitalInfo: const CapitalInfo(
-            capital: Capital("Nur-Sultan"),
-            latLng: LatLng(51.16, 71.45),
-          ),
           postalCode:
               const PostalCode(format: "######", regExpPattern: r"^(\d{6})$"),
-          regionalBlocs: const [BlocEEU()],
         );
   @override
   List<FiatCurrency> get currencies => const [FiatKzt()];
+  @override
+  CapitalInfo get capitalInfo => const CapitalInfo(
+        capital: Capital("Nur-Sultan"),
+        latLng: LatLng(51.16, 71.45),
+      );
+  @override
+  List<RegionalBloc> get regionalBlocs => const [BlocEEU()];
+  @override
+  List<Demonyms> get demonyms => const [
+        Demonyms(
+          language: LangEng(),
+          female: "Kazakhstani",
+          male: "Kazakhstani",
+        ),
+        Demonyms(
+          language: LangFra(),
+          female: "Kazakhstanaise",
+          male: "Kazakhstanais",
+        ),
+      ];
+  @override
+  List<CountryName> get namesNative => const [
+        CountryName(
+          language: LangKaz(),
+          official: "Қазақстан Республикасы",
+          common: "Қазақстан",
+        ),
+        CountryName(
+          language: LangRus(),
+          official: "Республика Казахстан",
+          common: "Казахстан",
+        ),
+      ];
   @override
   List<NaturalLanguage> get languages => const [LangKaz(), LangRus()];
 }
@@ -8028,18 +8093,6 @@ class CountryKen extends WorldCountry {
             official: "Republic of Kenya",
             common: "Kenya",
           ),
-          namesNative: const [
-            CountryName(
-              language: LangEng(),
-              official: "Republic of Kenya",
-              common: "Kenya",
-            ),
-            CountryName(
-              language: LangSwa(),
-              official: "Republic of Kenya",
-              common: "Kenya",
-            ),
-          ],
           tld: const [".ke"],
           code: "KEN",
           codeNumeric: "404",
@@ -8052,10 +8105,6 @@ class CountryKen extends WorldCountry {
           latLng: const LatLng(1, 38),
           bordersCodes: const ["Eth", "Som", "Ssd", "Tza", "Uga"],
           areaMetric: 580367,
-          demonyms: const [
-            Demonyms(language: LangEng(), female: "Kenyan", male: "Kenyan"),
-            Demonyms(language: LangFra(), female: "Kényane", male: "Kényan"),
-          ],
           emoji: "🇰🇪",
           maps: const Maps(
             googleMaps: "Ni9M7wcCxf8bJHLX8",
@@ -8066,15 +8115,35 @@ class CountryKen extends WorldCountry {
           fifa: "KEN",
           car: const Car(sign: "EAK", isRightSide: false),
           timezones: const ["UTC+03:00"],
-          capitalInfo: const CapitalInfo(
-            capital: Capital("Nairobi"),
-            latLng: LatLng(-1.28, 36.82),
-          ),
           postalCode: const PostalCode(),
-          regionalBlocs: const [BlocAU()],
         );
   @override
   List<FiatCurrency> get currencies => const [FiatKes()];
+  @override
+  CapitalInfo get capitalInfo => const CapitalInfo(
+        capital: Capital("Nairobi"),
+        latLng: LatLng(-1.28, 36.82),
+      );
+  @override
+  List<RegionalBloc> get regionalBlocs => const [BlocAU()];
+  @override
+  List<Demonyms> get demonyms => const [
+        Demonyms(language: LangEng(), female: "Kenyan", male: "Kenyan"),
+        Demonyms(language: LangFra(), female: "Kényane", male: "Kényan"),
+      ];
+  @override
+  List<CountryName> get namesNative => const [
+        CountryName(
+          language: LangEng(),
+          official: "Republic of Kenya",
+          common: "Kenya",
+        ),
+        CountryName(
+          language: LangSwa(),
+          official: "Republic of Kenya",
+          common: "Kenya",
+        ),
+      ];
   @override
   List<NaturalLanguage> get languages => const [LangEng(), LangSwa()];
 }
@@ -8091,18 +8160,6 @@ class CountryKgz extends WorldCountry {
             official: "Kyrgyz Republic",
             common: "Kyrgyzstan",
           ),
-          namesNative: const [
-            CountryName(
-              language: LangKir(),
-              official: "Кыргыз Республикасы",
-              common: "Кыргызстан",
-            ),
-            CountryName(
-              language: LangRus(),
-              official: "Кыргызская Республика",
-              common: "Киргизия",
-            ),
-          ],
           tld: const [".kg"],
           code: "KGZ",
           codeNumeric: "417",
@@ -8122,10 +8179,6 @@ class CountryKgz extends WorldCountry {
           landlocked: true,
           bordersCodes: const ["Chn", "Kaz", "Tjk", "Uzb"],
           areaMetric: 199951,
-          demonyms: const [
-            Demonyms(language: LangEng(), female: "Kirghiz", male: "Kirghiz"),
-            Demonyms(language: LangFra(), female: "Kirghize", male: "Kirghize"),
-          ],
           emoji: "🇰🇬",
           maps: const Maps(
             googleMaps: "SKG8BSMMQVvxkRkB7",
@@ -8136,16 +8189,36 @@ class CountryKgz extends WorldCountry {
           fifa: "KGZ",
           car: const Car(sign: "KS"),
           timezones: const ["UTC+06:00"],
-          capitalInfo: const CapitalInfo(
-            capital: Capital("Bishkek"),
-            latLng: LatLng(42.87, 74.6),
-          ),
           postalCode:
               const PostalCode(format: "######", regExpPattern: r"^(\d{6})$"),
-          regionalBlocs: const [BlocEEU()],
         );
   @override
   List<FiatCurrency> get currencies => const [FiatKgs()];
+  @override
+  CapitalInfo get capitalInfo => const CapitalInfo(
+        capital: Capital("Bishkek"),
+        latLng: LatLng(42.87, 74.6),
+      );
+  @override
+  List<RegionalBloc> get regionalBlocs => const [BlocEEU()];
+  @override
+  List<Demonyms> get demonyms => const [
+        Demonyms(language: LangEng(), female: "Kirghiz", male: "Kirghiz"),
+        Demonyms(language: LangFra(), female: "Kirghize", male: "Kirghize"),
+      ];
+  @override
+  List<CountryName> get namesNative => const [
+        CountryName(
+          language: LangKir(),
+          official: "Кыргыз Республикасы",
+          common: "Кыргызстан",
+        ),
+        CountryName(
+          language: LangRus(),
+          official: "Кыргызская Республика",
+          common: "Киргизия",
+        ),
+      ];
   @override
   List<NaturalLanguage> get languages => const [LangKir(), LangRus()];
 }
@@ -8162,13 +8235,6 @@ class CountryKhm extends WorldCountry {
             official: "Kingdom of Cambodia",
             common: "Cambodia",
           ),
-          namesNative: const [
-            CountryName(
-              language: LangKhm(),
-              official: "ព្រះរាជាណាចក្រកម្ពុជា",
-              common: "Kâmpŭchéa",
-            ),
-          ],
           tld: const [".kh"],
           code: "KHM",
           codeNumeric: "116",
@@ -8181,18 +8247,6 @@ class CountryKhm extends WorldCountry {
           latLng: const LatLng(13, 105),
           bordersCodes: const ["Lao", "Tha", "Vnm"],
           areaMetric: 181035,
-          demonyms: const [
-            Demonyms(
-              language: LangEng(),
-              female: "Cambodian",
-              male: "Cambodian",
-            ),
-            Demonyms(
-              language: LangFra(),
-              female: "Cambodgienne",
-              male: "Cambodgien",
-            ),
-          ],
           emoji: "🇰🇭",
           maps: const Maps(
             googleMaps: "nztQtFSrUXZymJaW8",
@@ -8202,15 +8256,34 @@ class CountryKhm extends WorldCountry {
           fifa: "CAM",
           car: const Car(sign: "K"),
           timezones: const ["UTC+07:00"],
-          capitalInfo: const CapitalInfo(
-            capital: Capital("Phnom Penh"),
-            latLng: LatLng(11.55, 104.92),
-          ),
           postalCode: const PostalCode(),
-          regionalBlocs: const [BlocASEAN()],
         );
   @override
   List<FiatCurrency> get currencies => const [FiatKhr(), FiatUsd()];
+  @override
+  CapitalInfo get capitalInfo => const CapitalInfo(
+        capital: Capital("Phnom Penh"),
+        latLng: LatLng(11.55, 104.92),
+      );
+  @override
+  List<RegionalBloc> get regionalBlocs => const [BlocASEAN()];
+  @override
+  List<Demonyms> get demonyms => const [
+        Demonyms(language: LangEng(), female: "Cambodian", male: "Cambodian"),
+        Demonyms(
+          language: LangFra(),
+          female: "Cambodgienne",
+          male: "Cambodgien",
+        ),
+      ];
+  @override
+  List<CountryName> get namesNative => const [
+        CountryName(
+          language: LangKhm(),
+          official: "ព្រះរាជាណាចក្រកម្ពុជា",
+          common: "Kâmpŭchéa",
+        ),
+      ];
   @override
   List<NaturalLanguage> get languages => const [LangKhm()];
 }
@@ -8227,13 +8300,6 @@ class CountryKir extends WorldCountry {
             official: "Independent and Sovereign Republic of Kiribati",
             common: "Kiribati",
           ),
-          namesNative: const [
-            CountryName(
-              language: LangEng(),
-              official: "Independent and Sovereign Republic of Kiribati",
-              common: "Kiribati",
-            ),
-          ],
           tld: const [".ki"],
           code: "KIR",
           codeNumeric: "296",
@@ -8249,18 +8315,6 @@ class CountryKir extends WorldCountry {
           subregion: const Micronesia(),
           latLng: const LatLng(1.41666666, 173),
           areaMetric: 811,
-          demonyms: const [
-            Demonyms(
-              language: LangEng(),
-              female: "I-Kiribati",
-              male: "I-Kiribati",
-            ),
-            Demonyms(
-              language: LangFra(),
-              female: "Kiribatienne",
-              male: "Kiribatien",
-            ),
-          ],
           emoji: "🇰🇮",
           maps: const Maps(
             googleMaps: "NBfYvrndW4skAimw9",
@@ -8270,13 +8324,31 @@ class CountryKir extends WorldCountry {
           gini: const Gini(year: 2006, coefficient: 37),
           car: const Car(sign: "KIR", isRightSide: false),
           timezones: const ["UTC+12:00", "UTC+13:00", "UTC+14:00"],
-          capitalInfo: const CapitalInfo(
-            capital: Capital("South Tarawa"),
-            latLng: LatLng(1.33, 172.98),
-          ),
         );
   @override
   List<FiatCurrency> get currencies => const [FiatAud()];
+  @override
+  CapitalInfo get capitalInfo => const CapitalInfo(
+        capital: Capital("South Tarawa"),
+        latLng: LatLng(1.33, 172.98),
+      );
+  @override
+  List<Demonyms> get demonyms => const [
+        Demonyms(language: LangEng(), female: "I-Kiribati", male: "I-Kiribati"),
+        Demonyms(
+          language: LangFra(),
+          female: "Kiribatienne",
+          male: "Kiribatien",
+        ),
+      ];
+  @override
+  List<CountryName> get namesNative => const [
+        CountryName(
+          language: LangEng(),
+          official: "Independent and Sovereign Republic of Kiribati",
+          common: "Kiribati",
+        ),
+      ];
   @override
   List<NaturalLanguage> get languages => const [LangEng()];
 }
@@ -8293,13 +8365,6 @@ class CountryKna extends WorldCountry {
             official: "Federation of Saint Christopher and Nevis",
             common: "Saint Kitts and Nevis",
           ),
-          namesNative: const [
-            CountryName(
-              language: LangEng(),
-              official: "Federation of Saint Christopher and Nevis",
-              common: "Saint Kitts and Nevis",
-            ),
-          ],
           tld: const [".kn"],
           code: "KNA",
           codeNumeric: "659",
@@ -8314,18 +8379,6 @@ class CountryKna extends WorldCountry {
           subregion: const Caribbean(),
           latLng: const LatLng(17.33333333, -62.75),
           areaMetric: 261,
-          demonyms: const [
-            Demonyms(
-              language: LangEng(),
-              female: "Kittitian or Nevisian",
-              male: "Kittitian or Nevisian",
-            ),
-            Demonyms(
-              language: LangFra(),
-              female: "Kittitienne-et-nevicienne",
-              male: "Kittitien-et-nevicien",
-            ),
-          ],
           emoji: "🇰🇳",
           maps: const Maps(
             googleMaps: "qiaVwcLVTXX3eoTNA",
@@ -8335,14 +8388,37 @@ class CountryKna extends WorldCountry {
           fifa: "SKN",
           car: const Car(sign: "KN", isRightSide: false),
           timezones: const ["UTC-04:00"],
-          capitalInfo: const CapitalInfo(
-            capital: Capital("Basseterre"),
-            latLng: LatLng(17.3, -62.72),
-          ),
-          regionalBlocs: const [BlocCARICOM()],
         );
   @override
   List<FiatCurrency> get currencies => const [FiatXcd()];
+  @override
+  CapitalInfo get capitalInfo => const CapitalInfo(
+        capital: Capital("Basseterre"),
+        latLng: LatLng(17.3, -62.72),
+      );
+  @override
+  List<RegionalBloc> get regionalBlocs => const [BlocCARICOM()];
+  @override
+  List<Demonyms> get demonyms => const [
+        Demonyms(
+          language: LangEng(),
+          female: "Kittitian or Nevisian",
+          male: "Kittitian or Nevisian",
+        ),
+        Demonyms(
+          language: LangFra(),
+          female: "Kittitienne-et-nevicienne",
+          male: "Kittitien-et-nevicien",
+        ),
+      ];
+  @override
+  List<CountryName> get namesNative => const [
+        CountryName(
+          language: LangEng(),
+          official: "Federation of Saint Christopher and Nevis",
+          common: "Saint Kitts and Nevis",
+        ),
+      ];
   @override
   List<NaturalLanguage> get languages => const [LangEng()];
 }
@@ -8359,9 +8435,6 @@ class CountryKor extends WorldCountry {
             official: "Republic of Korea",
             common: "South Korea",
           ),
-          namesNative: const [
-            CountryName(language: LangKor(), official: "대한민국", common: "한국"),
-          ],
           tld: const [".kr", ".한국"],
           code: "KOR",
           codeNumeric: "410",
@@ -8380,18 +8453,6 @@ class CountryKor extends WorldCountry {
           latLng: const LatLng(37, 127.5),
           bordersCodes: const ["Prk"],
           areaMetric: 100210,
-          demonyms: const [
-            Demonyms(
-              language: LangEng(),
-              female: "South Korean",
-              male: "South Korean",
-            ),
-            Demonyms(
-              language: LangFra(),
-              female: "Sud-coréenne",
-              male: "Sud-coréen",
-            ),
-          ],
           emoji: "🇰🇷",
           maps: const Maps(
             googleMaps: "7ecjaJXefjAQhxjGA",
@@ -8402,10 +8463,6 @@ class CountryKor extends WorldCountry {
           fifa: "KOR",
           car: const Car(sign: "ROK"),
           timezones: const ["UTC+09:00"],
-          capitalInfo: const CapitalInfo(
-            capital: Capital("Seoul"),
-            latLng: LatLng(37.55, 126.98),
-          ),
           postalCode: const PostalCode(
             format: "SEOUL ###-###",
             regExpPattern: r"^(?:SEOUL)*(\d{6})$",
@@ -8413,6 +8470,27 @@ class CountryKor extends WorldCountry {
         );
   @override
   List<FiatCurrency> get currencies => const [FiatKrw()];
+  @override
+  CapitalInfo get capitalInfo => const CapitalInfo(
+        capital: Capital("Seoul"),
+        latLng: LatLng(37.55, 126.98),
+      );
+  @override
+  List<Demonyms> get demonyms => const [
+        Demonyms(
+          language: LangEng(),
+          female: "South Korean",
+          male: "South Korean",
+        ),
+        Demonyms(
+          language: LangFra(),
+          female: "Sud-coréenne",
+          male: "Sud-coréen",
+        ),
+      ];
+  @override
+  List<CountryName> get namesNative =>
+      const [CountryName(language: LangKor(), official: "대한민국", common: "한국")];
   @override
   List<NaturalLanguage> get languages => const [LangKor()];
 }
@@ -8429,13 +8507,6 @@ class CountryKwt extends WorldCountry {
             official: "State of Kuwait",
             common: "Kuwait",
           ),
-          namesNative: const [
-            CountryName(
-              language: LangAra(),
-              official: "دولة الكويت",
-              common: "الكويت",
-            ),
-          ],
           tld: const [".kw"],
           code: "KWT",
           codeNumeric: "414",
@@ -8448,14 +8519,6 @@ class CountryKwt extends WorldCountry {
           latLng: const LatLng(29.5, 45.75),
           bordersCodes: const ["Irq", "Sau"],
           areaMetric: 17818,
-          demonyms: const [
-            Demonyms(language: LangEng(), female: "Kuwaiti", male: "Kuwaiti"),
-            Demonyms(
-              language: LangFra(),
-              female: "Koweïtienne",
-              male: "Koweïtien",
-            ),
-          ],
           emoji: "🇰🇼",
           maps: const Maps(
             googleMaps: "aqr3aNQjS1BAvksJ7",
@@ -8466,15 +8529,30 @@ class CountryKwt extends WorldCountry {
           car: const Car(sign: "KWT"),
           timezones: const ["UTC+03:00"],
           startOfWeek: Weekday.sunday,
-          capitalInfo: const CapitalInfo(
-            capital: Capital("Kuwait City"),
-            latLng: LatLng(29.37, 47.97),
-          ),
           postalCode: const PostalCode(),
-          regionalBlocs: const [BlocAL()],
         );
   @override
   List<FiatCurrency> get currencies => const [FiatKwd()];
+  @override
+  CapitalInfo get capitalInfo => const CapitalInfo(
+        capital: Capital("Kuwait City"),
+        latLng: LatLng(29.37, 47.97),
+      );
+  @override
+  List<RegionalBloc> get regionalBlocs => const [BlocAL()];
+  @override
+  List<Demonyms> get demonyms => const [
+        Demonyms(language: LangEng(), female: "Kuwaiti", male: "Kuwaiti"),
+        Demonyms(language: LangFra(), female: "Koweïtienne", male: "Koweïtien"),
+      ];
+  @override
+  List<CountryName> get namesNative => const [
+        CountryName(
+          language: LangAra(),
+          official: "دولة الكويت",
+          common: "الكويت",
+        ),
+      ];
   @override
   List<NaturalLanguage> get languages => const [LangAra()];
 }
@@ -8491,13 +8569,6 @@ class CountryLao extends WorldCountry {
             official: "Lao People's Democratic Republic",
             common: "Laos",
           ),
-          namesNative: const [
-            CountryName(
-              language: LangLao(),
-              official: "ສາທາລະນະ ຊາທິປະໄຕ ຄົນລາວ ຂອງ",
-              common: "ສປປລາວ",
-            ),
-          ],
           tld: const [".la"],
           code: "LAO",
           codeNumeric: "418",
@@ -8516,10 +8587,6 @@ class CountryLao extends WorldCountry {
           landlocked: true,
           bordersCodes: const ["Mmr", "Khm", "Chn", "Tha", "Vnm"],
           areaMetric: 236800,
-          demonyms: const [
-            Demonyms(language: LangEng(), female: "Laotian", male: "Laotian"),
-            Demonyms(language: LangFra(), female: "Laotienne", male: "Laotien"),
-          ],
           emoji: "🇱🇦",
           maps: const Maps(
             googleMaps: "F3asVB7sRKgSnwbE7",
@@ -8530,15 +8597,30 @@ class CountryLao extends WorldCountry {
           fifa: "LAO",
           car: const Car(sign: "LAO"),
           timezones: const ["UTC+07:00"],
-          capitalInfo: const CapitalInfo(
-            capital: Capital("Vientiane"),
-            latLng: LatLng(17.97, 102.6),
-          ),
           postalCode: const PostalCode(),
-          regionalBlocs: const [BlocASEAN()],
         );
   @override
   List<FiatCurrency> get currencies => const [FiatLak()];
+  @override
+  CapitalInfo get capitalInfo => const CapitalInfo(
+        capital: Capital("Vientiane"),
+        latLng: LatLng(17.97, 102.6),
+      );
+  @override
+  List<RegionalBloc> get regionalBlocs => const [BlocASEAN()];
+  @override
+  List<Demonyms> get demonyms => const [
+        Demonyms(language: LangEng(), female: "Laotian", male: "Laotian"),
+        Demonyms(language: LangFra(), female: "Laotienne", male: "Laotien"),
+      ];
+  @override
+  List<CountryName> get namesNative => const [
+        CountryName(
+          language: LangLao(),
+          official: "ສາທາລະນະ ຊາທິປະໄຕ ຄົນລາວ ຂອງ",
+          common: "ສປປລາວ",
+        ),
+      ];
   @override
   List<NaturalLanguage> get languages => const [LangLao()];
 }
@@ -8555,18 +8637,6 @@ class CountryLbn extends WorldCountry {
             official: "Lebanese Republic",
             common: "Lebanon",
           ),
-          namesNative: const [
-            CountryName(
-              language: LangAra(),
-              official: "الجمهورية اللبنانية",
-              common: "لبنان",
-            ),
-            CountryName(
-              language: LangFra(),
-              official: "République libanaise",
-              common: "Liban",
-            ),
-          ],
           tld: const [".lb"],
           code: "LBN",
           codeNumeric: "422",
@@ -8583,14 +8653,6 @@ class CountryLbn extends WorldCountry {
           latLng: const LatLng(33.83333333, 35.83333333),
           bordersCodes: const ["Isr", "Syr"],
           areaMetric: 10452,
-          demonyms: const [
-            Demonyms(language: LangEng(), female: "Lebanese", male: "Lebanese"),
-            Demonyms(
-              language: LangFra(),
-              female: "Libanaise",
-              male: "Libanais",
-            ),
-          ],
           emoji: "🇱🇧",
           maps: const Maps(
             googleMaps: "Sz5VCU8UFBqMyTdc9",
@@ -8601,18 +8663,38 @@ class CountryLbn extends WorldCountry {
           fifa: "LBN",
           car: const Car(sign: "RL"),
           timezones: const ["UTC+02:00"],
-          capitalInfo: const CapitalInfo(
-            capital: Capital("Beirut"),
-            latLng: LatLng(33.87, 35.5),
-          ),
           postalCode: const PostalCode(
             format: "#### ####|####",
             regExpPattern: r"^(\d{4}(\d{4})?)$",
           ),
-          regionalBlocs: const [BlocAL()],
         );
   @override
   List<FiatCurrency> get currencies => const [FiatLbp()];
+  @override
+  CapitalInfo get capitalInfo => const CapitalInfo(
+        capital: Capital("Beirut"),
+        latLng: LatLng(33.87, 35.5),
+      );
+  @override
+  List<RegionalBloc> get regionalBlocs => const [BlocAL()];
+  @override
+  List<Demonyms> get demonyms => const [
+        Demonyms(language: LangEng(), female: "Lebanese", male: "Lebanese"),
+        Demonyms(language: LangFra(), female: "Libanaise", male: "Libanais"),
+      ];
+  @override
+  List<CountryName> get namesNative => const [
+        CountryName(
+          language: LangAra(),
+          official: "الجمهورية اللبنانية",
+          common: "لبنان",
+        ),
+        CountryName(
+          language: LangFra(),
+          official: "République libanaise",
+          common: "Liban",
+        ),
+      ];
   @override
   List<NaturalLanguage> get languages => const [LangAra(), LangFra()];
 }
@@ -8629,13 +8711,6 @@ class CountryLbr extends WorldCountry {
             official: "Republic of Liberia",
             common: "Liberia",
           ),
-          namesNative: const [
-            CountryName(
-              language: LangEng(),
-              official: "Republic of Liberia",
-              common: "Liberia",
-            ),
-          ],
           tld: const [".lr"],
           code: "LBR",
           codeNumeric: "430",
@@ -8648,14 +8723,6 @@ class CountryLbr extends WorldCountry {
           latLng: const LatLng(6.5, -9.5),
           bordersCodes: const ["Gin", "Civ", "Sle"],
           areaMetric: 111369,
-          demonyms: const [
-            Demonyms(language: LangEng(), female: "Liberian", male: "Liberian"),
-            Demonyms(
-              language: LangFra(),
-              female: "Libérienne",
-              male: "Libérien",
-            ),
-          ],
           emoji: "🇱🇷",
           maps: const Maps(
             googleMaps: "4VsHsc2oeGeRL3wg6",
@@ -8666,16 +8733,31 @@ class CountryLbr extends WorldCountry {
           fifa: "LBR",
           car: const Car(sign: "LB"),
           timezones: const ["UTC+00:00"],
-          capitalInfo: const CapitalInfo(
-            capital: Capital("Monrovia"),
-            latLng: LatLng(6.3, -10.8),
-          ),
           postalCode:
               const PostalCode(format: "####", regExpPattern: r"^(\d{4})$"),
-          regionalBlocs: const [BlocAU(), BlocAL()],
         );
   @override
   List<FiatCurrency> get currencies => const [FiatLrd()];
+  @override
+  CapitalInfo get capitalInfo => const CapitalInfo(
+        capital: Capital("Monrovia"),
+        latLng: LatLng(6.3, -10.8),
+      );
+  @override
+  List<RegionalBloc> get regionalBlocs => const [BlocAU(), BlocAL()];
+  @override
+  List<Demonyms> get demonyms => const [
+        Demonyms(language: LangEng(), female: "Liberian", male: "Liberian"),
+        Demonyms(language: LangFra(), female: "Libérienne", male: "Libérien"),
+      ];
+  @override
+  List<CountryName> get namesNative => const [
+        CountryName(
+          language: LangEng(),
+          official: "Republic of Liberia",
+          common: "Liberia",
+        ),
+      ];
   @override
   List<NaturalLanguage> get languages => const [LangEng()];
 }
@@ -8692,13 +8774,6 @@ class CountryLby extends WorldCountry {
             official: "State of Libya",
             common: "Libya",
           ),
-          namesNative: const [
-            CountryName(
-              language: LangAra(),
-              official: "الدولة ليبيا",
-              common: "‏ليبيا",
-            ),
-          ],
           tld: const [".ly"],
           code: "LBY",
           codeNumeric: "434",
@@ -8711,10 +8786,6 @@ class CountryLby extends WorldCountry {
           latLng: const LatLng(25, 17),
           bordersCodes: const ["Dza", "Tcd", "Egy", "Ner", "Sdn", "Tun"],
           areaMetric: 1759540,
-          demonyms: const [
-            Demonyms(language: LangEng(), female: "Libyan", male: "Libyan"),
-            Demonyms(language: LangFra(), female: "Libyenne", male: "Libyen"),
-          ],
           emoji: "🇱🇾",
           maps: const Maps(
             googleMaps: "eLgGnaQWcJEdYRMy5",
@@ -8725,13 +8796,27 @@ class CountryLby extends WorldCountry {
           car: const Car(sign: "LAR"),
           timezones: const ["UTC+01:00"],
           startOfWeek: Weekday.sunday,
-          capitalInfo: const CapitalInfo(
-            capital: Capital("Tripoli"),
-            latLng: LatLng(32.88, 13.17),
-          ),
         );
   @override
   List<FiatCurrency> get currencies => const [FiatLyd()];
+  @override
+  CapitalInfo get capitalInfo => const CapitalInfo(
+        capital: Capital("Tripoli"),
+        latLng: LatLng(32.88, 13.17),
+      );
+  @override
+  List<Demonyms> get demonyms => const [
+        Demonyms(language: LangEng(), female: "Libyan", male: "Libyan"),
+        Demonyms(language: LangFra(), female: "Libyenne", male: "Libyen"),
+      ];
+  @override
+  List<CountryName> get namesNative => const [
+        CountryName(
+          language: LangAra(),
+          official: "الدولة ليبيا",
+          common: "‏ليبيا",
+        ),
+      ];
   @override
   List<NaturalLanguage> get languages => const [LangAra()];
 }
@@ -8748,13 +8833,6 @@ class CountryLca extends WorldCountry {
             official: "Saint Lucia",
             common: "Saint Lucia",
           ),
-          namesNative: const [
-            CountryName(
-              language: LangEng(),
-              official: "Saint Lucia",
-              common: "Saint Lucia",
-            ),
-          ],
           tld: const [".lc"],
           code: "LCA",
           codeNumeric: "662",
@@ -8766,18 +8844,6 @@ class CountryLca extends WorldCountry {
           subregion: const Caribbean(),
           latLng: const LatLng(13.88333333, -60.96666666),
           areaMetric: 616,
-          demonyms: const [
-            Demonyms(
-              language: LangEng(),
-              female: "Saint Lucian",
-              male: "Saint Lucian",
-            ),
-            Demonyms(
-              language: LangFra(),
-              female: "Saint-Lucienne",
-              male: "Saint-Lucien",
-            ),
-          ],
           emoji: "🇱🇨",
           maps: const Maps(
             googleMaps: "4HhJ2jkPdSL9BPRcA",
@@ -8788,14 +8854,35 @@ class CountryLca extends WorldCountry {
           fifa: "LCA",
           car: const Car(sign: "WL", isRightSide: false),
           timezones: const ["UTC-04:00"],
-          capitalInfo: const CapitalInfo(
-            capital: Capital("Castries"),
-            latLng: LatLng(14, -61),
-          ),
-          regionalBlocs: const [BlocCARICOM()],
         );
   @override
   List<FiatCurrency> get currencies => const [FiatXcd()];
+  @override
+  CapitalInfo get capitalInfo =>
+      const CapitalInfo(capital: Capital("Castries"), latLng: LatLng(14, -61));
+  @override
+  List<RegionalBloc> get regionalBlocs => const [BlocCARICOM()];
+  @override
+  List<Demonyms> get demonyms => const [
+        Demonyms(
+          language: LangEng(),
+          female: "Saint Lucian",
+          male: "Saint Lucian",
+        ),
+        Demonyms(
+          language: LangFra(),
+          female: "Saint-Lucienne",
+          male: "Saint-Lucien",
+        ),
+      ];
+  @override
+  List<CountryName> get namesNative => const [
+        CountryName(
+          language: LangEng(),
+          official: "Saint Lucia",
+          common: "Saint Lucia",
+        ),
+      ];
   @override
   List<NaturalLanguage> get languages => const [LangEng()];
 }
@@ -8812,13 +8899,6 @@ class CountryLie extends WorldCountry {
             official: "Principality of Liechtenstein",
             common: "Liechtenstein",
           ),
-          namesNative: const [
-            CountryName(
-              language: LangDeu(),
-              official: "Fürstentum Liechtenstein",
-              common: "Liechtenstein",
-            ),
-          ],
           tld: const [".li"],
           code: "LIE",
           codeNumeric: "438",
@@ -8836,18 +8916,6 @@ class CountryLie extends WorldCountry {
           landlocked: true,
           bordersCodes: const ["Aut", "Che"],
           areaMetric: 160,
-          demonyms: const [
-            Demonyms(
-              language: LangEng(),
-              female: "Liechtensteiner",
-              male: "Liechtensteiner",
-            ),
-            Demonyms(
-              language: LangFra(),
-              female: "Liechtensteinoise",
-              male: "Liechtensteinois",
-            ),
-          ],
           emoji: "🇱🇮",
           maps: const Maps(
             googleMaps: "KNuHeiJzAPodwM7y6",
@@ -8857,16 +8925,37 @@ class CountryLie extends WorldCountry {
           fifa: "LIE",
           car: const Car(sign: "FL"),
           timezones: const ["UTC+01:00"],
-          capitalInfo: const CapitalInfo(
-            capital: Capital("Vaduz"),
-            latLng: LatLng(47.13, 9.52),
-          ),
           postalCode:
               const PostalCode(format: "####", regExpPattern: r"^(\d{4})$"),
-          regionalBlocs: const [BlocEFTA()],
         );
   @override
   List<FiatCurrency> get currencies => const [FiatChf()];
+  @override
+  CapitalInfo get capitalInfo =>
+      const CapitalInfo(capital: Capital("Vaduz"), latLng: LatLng(47.13, 9.52));
+  @override
+  List<RegionalBloc> get regionalBlocs => const [BlocEFTA()];
+  @override
+  List<Demonyms> get demonyms => const [
+        Demonyms(
+          language: LangEng(),
+          female: "Liechtensteiner",
+          male: "Liechtensteiner",
+        ),
+        Demonyms(
+          language: LangFra(),
+          female: "Liechtensteinoise",
+          male: "Liechtensteinois",
+        ),
+      ];
+  @override
+  List<CountryName> get namesNative => const [
+        CountryName(
+          language: LangDeu(),
+          official: "Fürstentum Liechtenstein",
+          common: "Liechtenstein",
+        ),
+      ];
   @override
   List<NaturalLanguage> get languages => const [LangDeu()];
 }
@@ -8883,18 +8972,6 @@ class CountryLka extends WorldCountry {
             official: "Democratic Socialist Republic of Sri Lanka",
             common: "Sri Lanka",
           ),
-          namesNative: const [
-            CountryName(
-              language: LangSin(),
-              official: "ශ්‍රී ලංකා ප්‍රජාතාන්ත්‍රික සමාජවාදී ජනරජය",
-              common: "ශ්‍රී ලංකාව",
-            ),
-            CountryName(
-              language: LangTam(),
-              official: "இலங்கை சனநாயக சோசலிசக் குடியரசு",
-              common: "இலங்கை",
-            ),
-          ],
           tld: const [".lk", ".இலங்கை", ".ලංකා"],
           code: "LKA",
           codeNumeric: "144",
@@ -8911,18 +8988,6 @@ class CountryLka extends WorldCountry {
           latLng: const LatLng(7, 81),
           bordersCodes: const ["Ind"],
           areaMetric: 65610,
-          demonyms: const [
-            Demonyms(
-              language: LangEng(),
-              female: "Sri Lankan",
-              male: "Sri Lankan",
-            ),
-            Demonyms(
-              language: LangFra(),
-              female: "Sri-lankaise",
-              male: "Sri-lankais",
-            ),
-          ],
           emoji: "🇱🇰",
           maps: const Maps(
             googleMaps: "VkPHoeFSfgzRQCDv8",
@@ -8933,15 +8998,39 @@ class CountryLka extends WorldCountry {
           fifa: "SRI",
           car: const Car(sign: "CL", isRightSide: false),
           timezones: const ["UTC+05:30"],
-          capitalInfo: const CapitalInfo(
-            capital: Capital("Sri Jayawardenepura Kotte"),
-            latLng: LatLng(6.89, 79.9),
-          ),
           postalCode: const PostalCode(),
-          regionalBlocs: const [BlocSAARC()],
         );
   @override
   List<FiatCurrency> get currencies => const [FiatLkr()];
+  @override
+  CapitalInfo get capitalInfo => const CapitalInfo(
+        capital: Capital("Sri Jayawardenepura Kotte"),
+        latLng: LatLng(6.89, 79.9),
+      );
+  @override
+  List<RegionalBloc> get regionalBlocs => const [BlocSAARC()];
+  @override
+  List<Demonyms> get demonyms => const [
+        Demonyms(language: LangEng(), female: "Sri Lankan", male: "Sri Lankan"),
+        Demonyms(
+          language: LangFra(),
+          female: "Sri-lankaise",
+          male: "Sri-lankais",
+        ),
+      ];
+  @override
+  List<CountryName> get namesNative => const [
+        CountryName(
+          language: LangSin(),
+          official: "ශ්‍රී ලංකා ප්‍රජාතාන්ත්‍රික සමාජවාදී ජනරජය",
+          common: "ශ්‍රී ලංකාව",
+        ),
+        CountryName(
+          language: LangTam(),
+          official: "இலங்கை சனநாயக சோசலிசக் குடியரசு",
+          common: "இலங்கை",
+        ),
+      ];
   @override
   List<NaturalLanguage> get languages => const [LangSin(), LangTam()];
 }
@@ -8958,18 +9047,6 @@ class CountryLso extends WorldCountry {
             official: "Kingdom of Lesotho",
             common: "Lesotho",
           ),
-          namesNative: const [
-            CountryName(
-              language: LangEng(),
-              official: "Kingdom of Lesotho",
-              common: "Lesotho",
-            ),
-            CountryName(
-              language: LangSot(),
-              official: "Kingdom of Lesotho",
-              common: "Lesotho",
-            ),
-          ],
           tld: const [".ls"],
           code: "LSO",
           codeNumeric: "426",
@@ -8983,14 +9060,6 @@ class CountryLso extends WorldCountry {
           landlocked: true,
           bordersCodes: const ["Zaf"],
           areaMetric: 30355,
-          demonyms: const [
-            Demonyms(language: LangEng(), female: "Mosotho", male: "Mosotho"),
-            Demonyms(
-              language: LangFra(),
-              female: "Lésothienne",
-              male: "Lésothien",
-            ),
-          ],
           emoji: "🇱🇸",
           maps: const Maps(
             googleMaps: "H8gJi5mL4Cmd1SF28",
@@ -9001,16 +9070,36 @@ class CountryLso extends WorldCountry {
           fifa: "LES",
           car: const Car(sign: "LS", isRightSide: false),
           timezones: const ["UTC+02:00"],
-          capitalInfo: const CapitalInfo(
-            capital: Capital("Maseru"),
-            latLng: LatLng(-29.32, 27.48),
-          ),
           postalCode:
               const PostalCode(format: "###", regExpPattern: r"^(\d{3})$"),
-          regionalBlocs: const [BlocAU()],
         );
   @override
   List<FiatCurrency> get currencies => const [FiatLsl(), FiatZar()];
+  @override
+  CapitalInfo get capitalInfo => const CapitalInfo(
+        capital: Capital("Maseru"),
+        latLng: LatLng(-29.32, 27.48),
+      );
+  @override
+  List<RegionalBloc> get regionalBlocs => const [BlocAU()];
+  @override
+  List<Demonyms> get demonyms => const [
+        Demonyms(language: LangEng(), female: "Mosotho", male: "Mosotho"),
+        Demonyms(language: LangFra(), female: "Lésothienne", male: "Lésothien"),
+      ];
+  @override
+  List<CountryName> get namesNative => const [
+        CountryName(
+          language: LangEng(),
+          official: "Kingdom of Lesotho",
+          common: "Lesotho",
+        ),
+        CountryName(
+          language: LangSot(),
+          official: "Kingdom of Lesotho",
+          common: "Lesotho",
+        ),
+      ];
   @override
   List<NaturalLanguage> get languages => const [LangEng(), LangSot()];
 }
@@ -9027,13 +9116,6 @@ class CountryLtu extends WorldCountry {
             official: "Republic of Lithuania",
             common: "Lithuania",
           ),
-          namesNative: const [
-            CountryName(
-              language: LangLit(),
-              official: "Lietuvos Respublikos",
-              common: "Lietuva",
-            ),
-          ],
           tld: const [".lt"],
           code: "LTU",
           codeNumeric: "440",
@@ -9050,18 +9132,6 @@ class CountryLtu extends WorldCountry {
           latLng: const LatLng(56, 24),
           bordersCodes: const ["Blr", "Lva", "Pol", "Rus"],
           areaMetric: 65300,
-          demonyms: const [
-            Demonyms(
-              language: LangEng(),
-              female: "Lithuanian",
-              male: "Lithuanian",
-            ),
-            Demonyms(
-              language: LangFra(),
-              female: "Lituanienne",
-              male: "Lituanien",
-            ),
-          ],
           emoji: "🇱🇹",
           maps: const Maps(
             googleMaps: "dd1s9rrLjrK2G8yY6",
@@ -9072,18 +9142,33 @@ class CountryLtu extends WorldCountry {
           fifa: "LTU",
           car: const Car(sign: "LT"),
           timezones: const ["UTC+02:00"],
-          capitalInfo: const CapitalInfo(
-            capital: Capital("Vilnius"),
-            latLng: LatLng(54.68, 25.32),
-          ),
           postalCode: const PostalCode(
             format: "LT-#####",
             regExpPattern: r"^(?:LT)*(\d{5})$",
           ),
-          regionalBlocs: const [BlocEU()],
         );
   @override
   List<FiatCurrency> get currencies => const [FiatEur()];
+  @override
+  CapitalInfo get capitalInfo => const CapitalInfo(
+        capital: Capital("Vilnius"),
+        latLng: LatLng(54.68, 25.32),
+      );
+  @override
+  List<RegionalBloc> get regionalBlocs => const [BlocEU()];
+  @override
+  List<Demonyms> get demonyms => const [
+        Demonyms(language: LangEng(), female: "Lithuanian", male: "Lithuanian"),
+        Demonyms(language: LangFra(), female: "Lituanienne", male: "Lituanien"),
+      ];
+  @override
+  List<CountryName> get namesNative => const [
+        CountryName(
+          language: LangLit(),
+          official: "Lietuvos Respublikos",
+          common: "Lietuva",
+        ),
+      ];
   @override
   List<NaturalLanguage> get languages => const [LangLit()];
 }
@@ -9100,23 +9185,6 @@ class CountryLux extends WorldCountry {
             official: "Grand Duchy of Luxembourg",
             common: "Luxembourg",
           ),
-          namesNative: const [
-            CountryName(
-              language: LangDeu(),
-              official: "Großherzogtum Luxemburg",
-              common: "Luxemburg",
-            ),
-            CountryName(
-              language: LangFra(),
-              official: "Grand-Duché de Luxembourg",
-              common: "Luxembourg",
-            ),
-            CountryName(
-              language: LangLtz(),
-              official: "Groussherzogtum Lëtzebuerg",
-              common: "Lëtzebuerg",
-            ),
-          ],
           tld: const [".lu"],
           code: "LUX",
           codeNumeric: "442",
@@ -9136,18 +9204,6 @@ class CountryLux extends WorldCountry {
           landlocked: true,
           bordersCodes: const ["Bel", "Fra", "Deu"],
           areaMetric: 2586,
-          demonyms: const [
-            Demonyms(
-              language: LangEng(),
-              female: "Luxembourger",
-              male: "Luxembourger",
-            ),
-            Demonyms(
-              language: LangFra(),
-              female: "Luxembourgeoise",
-              male: "Luxembourgeois",
-            ),
-          ],
           emoji: "🇱🇺",
           maps: const Maps(
             googleMaps: "L6b2AgndgHprt2Ko9",
@@ -9158,16 +9214,49 @@ class CountryLux extends WorldCountry {
           fifa: "LUX",
           car: const Car(sign: "L"),
           timezones: const ["UTC+01:00"],
-          capitalInfo: const CapitalInfo(
-            capital: Capital("Luxembourg"),
-            latLng: LatLng(49.6, 6.12),
-          ),
           postalCode:
               const PostalCode(format: "####", regExpPattern: r"^(\d{4})$"),
-          regionalBlocs: const [BlocEU()],
         );
   @override
   List<FiatCurrency> get currencies => const [FiatEur()];
+  @override
+  CapitalInfo get capitalInfo => const CapitalInfo(
+        capital: Capital("Luxembourg"),
+        latLng: LatLng(49.6, 6.12),
+      );
+  @override
+  List<RegionalBloc> get regionalBlocs => const [BlocEU()];
+  @override
+  List<Demonyms> get demonyms => const [
+        Demonyms(
+          language: LangEng(),
+          female: "Luxembourger",
+          male: "Luxembourger",
+        ),
+        Demonyms(
+          language: LangFra(),
+          female: "Luxembourgeoise",
+          male: "Luxembourgeois",
+        ),
+      ];
+  @override
+  List<CountryName> get namesNative => const [
+        CountryName(
+          language: LangDeu(),
+          official: "Großherzogtum Luxemburg",
+          common: "Luxemburg",
+        ),
+        CountryName(
+          language: LangFra(),
+          official: "Grand-Duché de Luxembourg",
+          common: "Luxembourg",
+        ),
+        CountryName(
+          language: LangLtz(),
+          official: "Groussherzogtum Lëtzebuerg",
+          common: "Lëtzebuerg",
+        ),
+      ];
   @override
   List<NaturalLanguage> get languages =>
       const [LangDeu(), LangFra(), LangLtz()];
@@ -9185,13 +9274,6 @@ class CountryLva extends WorldCountry {
             official: "Republic of Latvia",
             common: "Latvia",
           ),
-          namesNative: const [
-            CountryName(
-              language: LangLav(),
-              official: "Latvijas Republikas",
-              common: "Latvija",
-            ),
-          ],
           tld: const [".lv"],
           code: "LVA",
           codeNumeric: "428",
@@ -9208,10 +9290,6 @@ class CountryLva extends WorldCountry {
           latLng: const LatLng(57, 25),
           bordersCodes: const ["Blr", "Est", "Ltu", "Rus"],
           areaMetric: 64559,
-          demonyms: const [
-            Demonyms(language: LangEng(), female: "Latvian", male: "Latvian"),
-            Demonyms(language: LangFra(), female: "Lettone", male: "Letton"),
-          ],
           emoji: "🇱🇻",
           maps: const Maps(
             googleMaps: "iQpUkH7ghq31ZtXe9",
@@ -9222,18 +9300,31 @@ class CountryLva extends WorldCountry {
           fifa: "LVA",
           car: const Car(sign: "LV"),
           timezones: const ["UTC+02:00"],
-          capitalInfo: const CapitalInfo(
-            capital: Capital("Riga"),
-            latLng: LatLng(56.95, 24.1),
-          ),
           postalCode: const PostalCode(
             format: "LV-####",
             regExpPattern: r"^(?:LV)*(\d{4})$",
           ),
-          regionalBlocs: const [BlocEU()],
         );
   @override
   List<FiatCurrency> get currencies => const [FiatEur()];
+  @override
+  CapitalInfo get capitalInfo =>
+      const CapitalInfo(capital: Capital("Riga"), latLng: LatLng(56.95, 24.1));
+  @override
+  List<RegionalBloc> get regionalBlocs => const [BlocEU()];
+  @override
+  List<Demonyms> get demonyms => const [
+        Demonyms(language: LangEng(), female: "Latvian", male: "Latvian"),
+        Demonyms(language: LangFra(), female: "Lettone", male: "Letton"),
+      ];
+  @override
+  List<CountryName> get namesNative => const [
+        CountryName(
+          language: LangLav(),
+          official: "Latvijas Republikas",
+          common: "Latvija",
+        ),
+      ];
   @override
   List<NaturalLanguage> get languages => const [LangLav()];
 }
@@ -9251,19 +9342,6 @@ class CountryMac extends WorldCountry {
                 "Macao Special Administrative Region of the People's Republic of China",
             common: "Macau",
           ),
-          namesNative: const [
-            CountryName(
-              language: LangPor(),
-              official:
-                  "Região Administrativa Especial de Macau da República Popular da China",
-              common: "Macau",
-            ),
-            CountryName(
-              language: LangZho(),
-              official: "中华人民共和国澳门特别行政区",
-              common: "澳门",
-            ),
-          ],
           tld: const [".mo"],
           code: "MAC",
           codeNumeric: "446",
@@ -9284,14 +9362,6 @@ class CountryMac extends WorldCountry {
           latLng: const LatLng(22.16666666, 113.55),
           bordersCodes: const ["Chn"],
           areaMetric: 30,
-          demonyms: const [
-            Demonyms(language: LangEng(), female: "Macanese", male: "Macanese"),
-            Demonyms(
-              language: LangFra(),
-              female: "Macanaise",
-              male: "Macanais",
-            ),
-          ],
           emoji: "🇲🇴",
           maps: const Maps(
             googleMaps: "whymRdk3dZFfAAs4A",
@@ -9304,6 +9374,25 @@ class CountryMac extends WorldCountry {
         );
   @override
   List<FiatCurrency> get currencies => const [FiatMop()];
+  @override
+  List<Demonyms> get demonyms => const [
+        Demonyms(language: LangEng(), female: "Macanese", male: "Macanese"),
+        Demonyms(language: LangFra(), female: "Macanaise", male: "Macanais"),
+      ];
+  @override
+  List<CountryName> get namesNative => const [
+        CountryName(
+          language: LangPor(),
+          official:
+              "Região Administrativa Especial de Macau da República Popular da China",
+          common: "Macau",
+        ),
+        CountryName(
+          language: LangZho(),
+          official: "中华人民共和国澳门特别行政区",
+          common: "澳门",
+        ),
+      ];
   @override
   List<NaturalLanguage> get languages => const [LangPor(), LangZho()];
 }
@@ -9320,13 +9409,6 @@ class CountryMaf extends WorldCountry {
             official: "Saint Martin",
             common: "Saint Martin",
           ),
-          namesNative: const [
-            CountryName(
-              language: LangFra(),
-              official: "Saint-Martin",
-              common: "Saint-Martin",
-            ),
-          ],
           tld: const [".fr", ".gp"],
           code: "MAF",
           codeNumeric: "663",
@@ -9345,18 +9427,6 @@ class CountryMaf extends WorldCountry {
           latLng: const LatLng(18.0708, 63.0501),
           bordersCodes: const ["Sxm"],
           areaMetric: 53,
-          demonyms: const [
-            Demonyms(
-              language: LangEng(),
-              female: "Saint Martin Islander",
-              male: "Saint Martin Islander",
-            ),
-            Demonyms(
-              language: LangFra(),
-              female: "Saint-Martinoise",
-              male: "Saint-Martinois",
-            ),
-          ],
           emoji: "🇲🇫",
           maps: const Maps(
             googleMaps: "P9ho9QuJ9EAR28JEA",
@@ -9366,14 +9436,36 @@ class CountryMaf extends WorldCountry {
           car: const Car(sign: "F"),
           timezones: const ["UTC-04:00"],
           hasCoatOfArms: false,
-          capitalInfo: const CapitalInfo(
-            capital: Capital("Marigot"),
-            latLng: LatLng(18.07, -63.08),
-          ),
           postalCode: const PostalCode(),
         );
   @override
   List<FiatCurrency> get currencies => const [FiatEur()];
+  @override
+  CapitalInfo get capitalInfo => const CapitalInfo(
+        capital: Capital("Marigot"),
+        latLng: LatLng(18.07, -63.08),
+      );
+  @override
+  List<Demonyms> get demonyms => const [
+        Demonyms(
+          language: LangEng(),
+          female: "Saint Martin Islander",
+          male: "Saint Martin Islander",
+        ),
+        Demonyms(
+          language: LangFra(),
+          female: "Saint-Martinoise",
+          male: "Saint-Martinois",
+        ),
+      ];
+  @override
+  List<CountryName> get namesNative => const [
+        CountryName(
+          language: LangFra(),
+          official: "Saint-Martin",
+          common: "Saint-Martin",
+        ),
+      ];
   @override
   List<NaturalLanguage> get languages => const [LangFra()];
 }
@@ -9390,13 +9482,6 @@ class CountryMar extends WorldCountry {
             official: "Kingdom of Morocco",
             common: "Morocco",
           ),
-          namesNative: const [
-            CountryName(
-              language: LangAra(),
-              official: "المملكة المغربية",
-              common: "المغرب",
-            ),
-          ],
           tld: const [".ma", "المغرب."],
           code: "MAR",
           codeNumeric: "504",
@@ -9413,14 +9498,6 @@ class CountryMar extends WorldCountry {
           latLng: const LatLng(32, -5),
           bordersCodes: const ["Dza", "Esh", "Esp"],
           areaMetric: 446550,
-          demonyms: const [
-            Demonyms(language: LangEng(), female: "Moroccan", male: "Moroccan"),
-            Demonyms(
-              language: LangFra(),
-              female: "Marocaine",
-              male: "Marocain",
-            ),
-          ],
           emoji: "🇲🇦",
           maps: const Maps(
             googleMaps: "6oMv3dyBZg3iaXQ5A",
@@ -9431,15 +9508,30 @@ class CountryMar extends WorldCountry {
           fifa: "MAR",
           car: const Car(sign: "MA"),
           timezones: const ["UTC+00:00"],
-          capitalInfo: const CapitalInfo(
-            capital: Capital("Rabat"),
-            latLng: LatLng(34.02, -6.82),
-          ),
           postalCode: const PostalCode(),
-          regionalBlocs: const [BlocAU(), BlocAL()],
         );
   @override
   List<FiatCurrency> get currencies => const [FiatMad()];
+  @override
+  CapitalInfo get capitalInfo => const CapitalInfo(
+        capital: Capital("Rabat"),
+        latLng: LatLng(34.02, -6.82),
+      );
+  @override
+  List<RegionalBloc> get regionalBlocs => const [BlocAU(), BlocAL()];
+  @override
+  List<Demonyms> get demonyms => const [
+        Demonyms(language: LangEng(), female: "Moroccan", male: "Moroccan"),
+        Demonyms(language: LangFra(), female: "Marocaine", male: "Marocain"),
+      ];
+  @override
+  List<CountryName> get namesNative => const [
+        CountryName(
+          language: LangAra(),
+          official: "المملكة المغربية",
+          common: "المغرب",
+        ),
+      ];
   @override
   List<NaturalLanguage> get languages => const [LangAra()];
 }
@@ -9456,13 +9548,6 @@ class CountryMco extends WorldCountry {
             official: "Principality of Monaco",
             common: "Monaco",
           ),
-          namesNative: const [
-            CountryName(
-              language: LangFra(),
-              official: "Principauté de Monaco",
-              common: "Monaco",
-            ),
-          ],
           tld: const [".mc"],
           code: "MCO",
           codeNumeric: "492",
@@ -9479,18 +9564,6 @@ class CountryMco extends WorldCountry {
           latLng: const LatLng(43.73333333, 7.4),
           bordersCodes: const ["Fra"],
           areaMetric: 2.02,
-          demonyms: const [
-            Demonyms(
-              language: LangEng(),
-              female: "Monegasque",
-              male: "Monegasque",
-            ),
-            Demonyms(
-              language: LangFra(),
-              female: "Monégasque",
-              male: "Monégasque",
-            ),
-          ],
           emoji: "🇲🇨",
           maps: const Maps(
             googleMaps: "DGpndDot28bYdXYn7",
@@ -9499,14 +9572,28 @@ class CountryMco extends WorldCountry {
           population: 39244,
           car: const Car(sign: "MC"),
           timezones: const ["UTC+01:00"],
-          capitalInfo: const CapitalInfo(
-            capital: Capital("Monaco"),
-            latLng: LatLng(43.73, 7.42),
-          ),
           postalCode: const PostalCode(),
         );
   @override
   List<FiatCurrency> get currencies => const [FiatEur()];
+  @override
+  CapitalInfo get capitalInfo => const CapitalInfo(
+        capital: Capital("Monaco"),
+        latLng: LatLng(43.73, 7.42),
+      );
+  @override
+  List<Demonyms> get demonyms => const [
+        Demonyms(language: LangEng(), female: "Monegasque", male: "Monegasque"),
+        Demonyms(language: LangFra(), female: "Monégasque", male: "Monégasque"),
+      ];
+  @override
+  List<CountryName> get namesNative => const [
+        CountryName(
+          language: LangFra(),
+          official: "Principauté de Monaco",
+          common: "Monaco",
+        ),
+      ];
   @override
   List<NaturalLanguage> get languages => const [LangFra()];
 }
@@ -9523,13 +9610,6 @@ class CountryMda extends WorldCountry {
             official: "Republic of Moldova",
             common: "Moldova",
           ),
-          namesNative: const [
-            CountryName(
-              language: LangRon(),
-              official: "Republica Moldova",
-              common: "Moldova",
-            ),
-          ],
           tld: const [".md"],
           code: "MDA",
           codeNumeric: "498",
@@ -9548,10 +9628,6 @@ class CountryMda extends WorldCountry {
           landlocked: true,
           bordersCodes: const ["Rou", "Ukr"],
           areaMetric: 33846,
-          demonyms: const [
-            Demonyms(language: LangEng(), female: "Moldovan", male: "Moldovan"),
-            Demonyms(language: LangFra(), female: "Moldave", male: "Moldave"),
-          ],
           emoji: "🇲🇩",
           maps: const Maps(
             googleMaps: "JjmyUuULujnDeFPf7",
@@ -9562,18 +9638,33 @@ class CountryMda extends WorldCountry {
           fifa: "MDA",
           car: const Car(sign: "MD"),
           timezones: const ["UTC+02:00"],
-          capitalInfo: const CapitalInfo(
-            capital: Capital("Chișinău"),
-            latLng: LatLng(47.01, 28.9),
-          ),
           postalCode: const PostalCode(
             format: "MD-####",
             regExpPattern: r"^(?:MD)*(\d{4})$",
           ),
-          regionalBlocs: const [BlocCEFTA()],
         );
   @override
   List<FiatCurrency> get currencies => const [FiatMdl()];
+  @override
+  CapitalInfo get capitalInfo => const CapitalInfo(
+        capital: Capital("Chișinău"),
+        latLng: LatLng(47.01, 28.9),
+      );
+  @override
+  List<RegionalBloc> get regionalBlocs => const [BlocCEFTA()];
+  @override
+  List<Demonyms> get demonyms => const [
+        Demonyms(language: LangEng(), female: "Moldovan", male: "Moldovan"),
+        Demonyms(language: LangFra(), female: "Moldave", male: "Moldave"),
+      ];
+  @override
+  List<CountryName> get namesNative => const [
+        CountryName(
+          language: LangRon(),
+          official: "Republica Moldova",
+          common: "Moldova",
+        ),
+      ];
   @override
   List<NaturalLanguage> get languages => const [LangRon()];
 }
@@ -9590,18 +9681,6 @@ class CountryMdg extends WorldCountry {
             official: "Republic of Madagascar",
             common: "Madagascar",
           ),
-          namesNative: const [
-            CountryName(
-              language: LangFra(),
-              official: "République de Madagascar",
-              common: "Madagascar",
-            ),
-            CountryName(
-              language: LangMlg(),
-              official: "Repoblikan'i Madagasikara",
-              common: "Madagasikara",
-            ),
-          ],
           tld: const [".mg"],
           code: "MDG",
           codeNumeric: "450",
@@ -9618,10 +9697,6 @@ class CountryMdg extends WorldCountry {
           subregion: const EasternAfrica(),
           latLng: const LatLng(-20, 47),
           areaMetric: 587041,
-          demonyms: const [
-            Demonyms(language: LangEng(), female: "Malagasy", male: "Malagasy"),
-            Demonyms(language: LangFra(), female: "Malgache", male: "Malgache"),
-          ],
           emoji: "🇲🇬",
           maps: const Maps(
             googleMaps: "AHQh2ABBaFW6Ngj26",
@@ -9632,16 +9707,36 @@ class CountryMdg extends WorldCountry {
           fifa: "MAD",
           car: const Car(sign: "RM"),
           timezones: const ["UTC+03:00"],
-          capitalInfo: const CapitalInfo(
-            capital: Capital("Antananarivo"),
-            latLng: LatLng(-18.92, 47.52),
-          ),
           postalCode:
               const PostalCode(format: "###", regExpPattern: r"^(\d{3})$"),
-          regionalBlocs: const [BlocAU()],
         );
   @override
   List<FiatCurrency> get currencies => const [FiatMga()];
+  @override
+  CapitalInfo get capitalInfo => const CapitalInfo(
+        capital: Capital("Antananarivo"),
+        latLng: LatLng(-18.92, 47.52),
+      );
+  @override
+  List<RegionalBloc> get regionalBlocs => const [BlocAU()];
+  @override
+  List<Demonyms> get demonyms => const [
+        Demonyms(language: LangEng(), female: "Malagasy", male: "Malagasy"),
+        Demonyms(language: LangFra(), female: "Malgache", male: "Malgache"),
+      ];
+  @override
+  List<CountryName> get namesNative => const [
+        CountryName(
+          language: LangFra(),
+          official: "République de Madagascar",
+          common: "Madagascar",
+        ),
+        CountryName(
+          language: LangMlg(),
+          official: "Repoblikan'i Madagasikara",
+          common: "Madagasikara",
+        ),
+      ];
   @override
   List<NaturalLanguage> get languages => const [LangFra(), LangMlg()];
 }
@@ -9658,13 +9753,6 @@ class CountryMdv extends WorldCountry {
             official: "Republic of the Maldives",
             common: "Maldives",
           ),
-          namesNative: const [
-            CountryName(
-              language: LangDiv(),
-              official: "ދިވެހިރާއްޖޭގެ ޖުމްހޫރިއްޔާ",
-              common: "ދިވެހިރާއްޖޭގެ",
-            ),
-          ],
           tld: const [".mv"],
           code: "MDV",
           codeNumeric: "462",
@@ -9681,14 +9769,6 @@ class CountryMdv extends WorldCountry {
           subregion: const SouthernAsia(),
           latLng: const LatLng(3.25, 73),
           areaMetric: 300,
-          demonyms: const [
-            Demonyms(language: LangEng(), female: "Maldivan", male: "Maldivan"),
-            Demonyms(
-              language: LangFra(),
-              female: "Maldivienne",
-              male: "Maldivien",
-            ),
-          ],
           emoji: "🇲🇻",
           maps: const Maps(
             googleMaps: "MNAWGq9vEdbZ9vUV7",
@@ -9700,15 +9780,28 @@ class CountryMdv extends WorldCountry {
           car: const Car(sign: "MV", isRightSide: false),
           timezones: const ["UTC+05:00"],
           startOfWeek: Weekday.sunday,
-          capitalInfo: const CapitalInfo(
-            capital: Capital("Malé"),
-            latLng: LatLng(4.17, 73.51),
-          ),
           postalCode: const PostalCode(),
-          regionalBlocs: const [BlocSAARC()],
         );
   @override
   List<FiatCurrency> get currencies => const [FiatMvr()];
+  @override
+  CapitalInfo get capitalInfo =>
+      const CapitalInfo(capital: Capital("Malé"), latLng: LatLng(4.17, 73.51));
+  @override
+  List<RegionalBloc> get regionalBlocs => const [BlocSAARC()];
+  @override
+  List<Demonyms> get demonyms => const [
+        Demonyms(language: LangEng(), female: "Maldivan", male: "Maldivan"),
+        Demonyms(language: LangFra(), female: "Maldivienne", male: "Maldivien"),
+      ];
+  @override
+  List<CountryName> get namesNative => const [
+        CountryName(
+          language: LangDiv(),
+          official: "ދިވެހިރާއްޖޭގެ ޖުމްހޫރިއްޔާ",
+          common: "ދިވެހިރާއްޖޭގެ",
+        ),
+      ];
   @override
   List<NaturalLanguage> get languages => const [LangDiv()];
 }
@@ -9725,13 +9818,6 @@ class CountryMex extends WorldCountry {
             official: "United Mexican States",
             common: "Mexico",
           ),
-          namesNative: const [
-            CountryName(
-              language: LangSpa(),
-              official: "Estados Unidos Mexicanos",
-              common: "México",
-            ),
-          ],
           tld: const [".mx"],
           code: "MEX",
           codeNumeric: "484",
@@ -9749,14 +9835,6 @@ class CountryMex extends WorldCountry {
           latLng: const LatLng(23, -102),
           bordersCodes: const ["Blz", "Gtm", "Usa"],
           areaMetric: 1964375,
-          demonyms: const [
-            Demonyms(language: LangEng(), female: "Mexican", male: "Mexican"),
-            Demonyms(
-              language: LangFra(),
-              female: "Mexicaine",
-              male: "Mexicain",
-            ),
-          ],
           emoji: "🇲🇽",
           maps: const Maps(
             googleMaps: "s5g7imNPMDEePxzbA",
@@ -9767,15 +9845,30 @@ class CountryMex extends WorldCountry {
           fifa: "MEX",
           car: const Car(sign: "MEX"),
           timezones: const ["UTC-08:00", "UTC-07:00", "UTC-06:00"],
-          capitalInfo: const CapitalInfo(
-            capital: Capital("Mexico City"),
-            latLng: LatLng(19.43, -99.13),
-          ),
           postalCode: const PostalCode(),
-          regionalBlocs: const [BlocPA(), BlocNAFTA()],
         );
   @override
   List<FiatCurrency> get currencies => const [FiatMxn()];
+  @override
+  CapitalInfo get capitalInfo => const CapitalInfo(
+        capital: Capital("Mexico City"),
+        latLng: LatLng(19.43, -99.13),
+      );
+  @override
+  List<RegionalBloc> get regionalBlocs => const [BlocPA(), BlocNAFTA()];
+  @override
+  List<Demonyms> get demonyms => const [
+        Demonyms(language: LangEng(), female: "Mexican", male: "Mexican"),
+        Demonyms(language: LangFra(), female: "Mexicaine", male: "Mexicain"),
+      ];
+  @override
+  List<CountryName> get namesNative => const [
+        CountryName(
+          language: LangSpa(),
+          official: "Estados Unidos Mexicanos",
+          common: "México",
+        ),
+      ];
   @override
   List<NaturalLanguage> get languages => const [LangSpa()];
 }
@@ -9792,18 +9885,6 @@ class CountryMhl extends WorldCountry {
             official: "Republic of the Marshall Islands",
             common: "Marshall Islands",
           ),
-          namesNative: const [
-            CountryName(
-              language: LangEng(),
-              official: "Republic of the Marshall Islands",
-              common: "Marshall Islands",
-            ),
-            CountryName(
-              language: LangMah(),
-              official: "Republic of the Marshall Islands",
-              common: "M̧ajeļ",
-            ),
-          ],
           tld: const [".mh"],
           code: "MHL",
           codeNumeric: "584",
@@ -9819,18 +9900,6 @@ class CountryMhl extends WorldCountry {
           subregion: const Micronesia(),
           latLng: const LatLng(9, 168),
           areaMetric: 181,
-          demonyms: const [
-            Demonyms(
-              language: LangEng(),
-              female: "Marshallese",
-              male: "Marshallese",
-            ),
-            Demonyms(
-              language: LangFra(),
-              female: "Marshallaise",
-              male: "Marshallais",
-            ),
-          ],
           emoji: "🇲🇭",
           maps: const Maps(
             googleMaps: "A4xLi1XvcX88gi3W8",
@@ -9839,13 +9908,40 @@ class CountryMhl extends WorldCountry {
           population: 59194,
           car: const Car(sign: "MH"),
           timezones: const ["UTC+12:00"],
-          capitalInfo: const CapitalInfo(
-            capital: Capital("Majuro"),
-            latLng: LatLng(7.1, 171.38),
-          ),
         );
   @override
   List<FiatCurrency> get currencies => const [FiatUsd()];
+  @override
+  CapitalInfo get capitalInfo => const CapitalInfo(
+        capital: Capital("Majuro"),
+        latLng: LatLng(7.1, 171.38),
+      );
+  @override
+  List<Demonyms> get demonyms => const [
+        Demonyms(
+          language: LangEng(),
+          female: "Marshallese",
+          male: "Marshallese",
+        ),
+        Demonyms(
+          language: LangFra(),
+          female: "Marshallaise",
+          male: "Marshallais",
+        ),
+      ];
+  @override
+  List<CountryName> get namesNative => const [
+        CountryName(
+          language: LangEng(),
+          official: "Republic of the Marshall Islands",
+          common: "Marshall Islands",
+        ),
+        CountryName(
+          language: LangMah(),
+          official: "Republic of the Marshall Islands",
+          common: "M̧ajeļ",
+        ),
+      ];
   @override
   List<NaturalLanguage> get languages => const [LangEng(), LangMah()];
 }
@@ -9862,13 +9958,6 @@ class CountryMkd extends WorldCountry {
             official: "Republic of North Macedonia",
             common: "North Macedonia",
           ),
-          namesNative: const [
-            CountryName(
-              language: LangMkd(),
-              official: "Република Северна Македонија",
-              common: "Македонија",
-            ),
-          ],
           tld: const [".mk"],
           code: "MKD",
           codeNumeric: "807",
@@ -9888,18 +9977,6 @@ class CountryMkd extends WorldCountry {
           landlocked: true,
           bordersCodes: const ["Alb", "Bgr", "Grc", "Srb", "Unk"],
           areaMetric: 25713,
-          demonyms: const [
-            Demonyms(
-              language: LangEng(),
-              female: "Macedonian",
-              male: "Macedonian",
-            ),
-            Demonyms(
-              language: LangFra(),
-              female: "Macédonienne",
-              male: "Macédonien",
-            ),
-          ],
           emoji: "🇲🇰",
           maps: const Maps(
             googleMaps: "55Q8MEnF6ACdu3q79",
@@ -9910,16 +9987,33 @@ class CountryMkd extends WorldCountry {
           fifa: "MKD",
           car: const Car(sign: "MK"),
           timezones: const ["UTC+01:00"],
-          capitalInfo: const CapitalInfo(
-            capital: Capital("Skopje"),
-            latLng: LatLng(42, 21.43),
-          ),
           postalCode:
               const PostalCode(format: "####", regExpPattern: r"^(\d{4})$"),
-          regionalBlocs: const [BlocCEFTA()],
         );
   @override
   List<FiatCurrency> get currencies => const [FiatMkd()];
+  @override
+  CapitalInfo get capitalInfo =>
+      const CapitalInfo(capital: Capital("Skopje"), latLng: LatLng(42, 21.43));
+  @override
+  List<RegionalBloc> get regionalBlocs => const [BlocCEFTA()];
+  @override
+  List<Demonyms> get demonyms => const [
+        Demonyms(language: LangEng(), female: "Macedonian", male: "Macedonian"),
+        Demonyms(
+          language: LangFra(),
+          female: "Macédonienne",
+          male: "Macédonien",
+        ),
+      ];
+  @override
+  List<CountryName> get namesNative => const [
+        CountryName(
+          language: LangMkd(),
+          official: "Република Северна Македонија",
+          common: "Македонија",
+        ),
+      ];
   @override
   List<NaturalLanguage> get languages => const [LangMkd()];
 }
@@ -9936,13 +10030,6 @@ class CountryMli extends WorldCountry {
             official: "Republic of Mali",
             common: "Mali",
           ),
-          namesNative: const [
-            CountryName(
-              language: LangFra(),
-              official: "République du Mali",
-              common: "Mali",
-            ),
-          ],
           tld: const [".ml"],
           code: "MLI",
           codeNumeric: "466",
@@ -9956,10 +10043,6 @@ class CountryMli extends WorldCountry {
           landlocked: true,
           bordersCodes: const ["Dza", "Bfa", "Gin", "Civ", "Mrt", "Ner", "Sen"],
           areaMetric: 1240192,
-          demonyms: const [
-            Demonyms(language: LangEng(), female: "Malian", male: "Malian"),
-            Demonyms(language: LangFra(), female: "Malienne", male: "Malien"),
-          ],
           emoji: "🇲🇱",
           maps: const Maps(
             googleMaps: "u9mYJkCB19wyuzh27",
@@ -9970,14 +10053,27 @@ class CountryMli extends WorldCountry {
           fifa: "MLI",
           car: const Car(sign: "RMM"),
           timezones: const ["UTC+00:00"],
-          capitalInfo: const CapitalInfo(
-            capital: Capital("Bamako"),
-            latLng: LatLng(12.65, -8),
-          ),
-          regionalBlocs: const [BlocAU()],
         );
   @override
   List<FiatCurrency> get currencies => const [FiatXof()];
+  @override
+  CapitalInfo get capitalInfo =>
+      const CapitalInfo(capital: Capital("Bamako"), latLng: LatLng(12.65, -8));
+  @override
+  List<RegionalBloc> get regionalBlocs => const [BlocAU()];
+  @override
+  List<Demonyms> get demonyms => const [
+        Demonyms(language: LangEng(), female: "Malian", male: "Malian"),
+        Demonyms(language: LangFra(), female: "Malienne", male: "Malien"),
+      ];
+  @override
+  List<CountryName> get namesNative => const [
+        CountryName(
+          language: LangFra(),
+          official: "République du Mali",
+          common: "Mali",
+        ),
+      ];
   @override
   List<NaturalLanguage> get languages => const [LangFra()];
 }
@@ -9994,18 +10090,6 @@ class CountryMlt extends WorldCountry {
             official: "Republic of Malta",
             common: "Malta",
           ),
-          namesNative: const [
-            CountryName(
-              language: LangEng(),
-              official: "Republic of Malta",
-              common: "Malta",
-            ),
-            CountryName(
-              language: LangMlt(),
-              official: "Repubblika ta ' Malta",
-              common: "Malta",
-            ),
-          ],
           tld: const [".mt"],
           code: "MLT",
           codeNumeric: "470",
@@ -10021,10 +10105,6 @@ class CountryMlt extends WorldCountry {
           subregion: const SouthernEurope(),
           latLng: const LatLng(35.9375, 14.3754),
           areaMetric: 316,
-          demonyms: const [
-            Demonyms(language: LangEng(), female: "Maltese", male: "Maltese"),
-            Demonyms(language: LangFra(), female: "Maltaise", male: "Maltais"),
-          ],
           emoji: "🇲🇹",
           maps: const Maps(
             googleMaps: "skXCqguxDxxEKVk47",
@@ -10035,18 +10115,38 @@ class CountryMlt extends WorldCountry {
           fifa: "MLT",
           car: const Car(sign: "M", isRightSide: false),
           timezones: const ["UTC+01:00"],
-          capitalInfo: const CapitalInfo(
-            capital: Capital("Valletta"),
-            latLng: LatLng(35.88, 14.5),
-          ),
           postalCode: const PostalCode(
             format: "@@@ ###|@@@ ##",
             regExpPattern: r"^([A-Z]{3}\d{2}\d?)$",
           ),
-          regionalBlocs: const [BlocEU()],
         );
   @override
   List<FiatCurrency> get currencies => const [FiatEur()];
+  @override
+  CapitalInfo get capitalInfo => const CapitalInfo(
+        capital: Capital("Valletta"),
+        latLng: LatLng(35.88, 14.5),
+      );
+  @override
+  List<RegionalBloc> get regionalBlocs => const [BlocEU()];
+  @override
+  List<Demonyms> get demonyms => const [
+        Demonyms(language: LangEng(), female: "Maltese", male: "Maltese"),
+        Demonyms(language: LangFra(), female: "Maltaise", male: "Maltais"),
+      ];
+  @override
+  List<CountryName> get namesNative => const [
+        CountryName(
+          language: LangEng(),
+          official: "Republic of Malta",
+          common: "Malta",
+        ),
+        CountryName(
+          language: LangMlt(),
+          official: "Repubblika ta ' Malta",
+          common: "Malta",
+        ),
+      ];
   @override
   List<NaturalLanguage> get languages => const [LangEng(), LangMlt()];
 }
@@ -10063,13 +10163,6 @@ class CountryMmr extends WorldCountry {
             official: "Republic of the Union of Myanmar",
             common: "Myanmar",
           ),
-          namesNative: const [
-            CountryName(
-              language: LangMya(),
-              official: "ပြည်ထောင်စု သမ္မတ မြန်မာနိုင်ငံတော်",
-              common: "မြန်မာ",
-            ),
-          ],
           tld: const [".mm"],
           code: "MMR",
           codeNumeric: "104",
@@ -10087,10 +10180,6 @@ class CountryMmr extends WorldCountry {
           latLng: const LatLng(22, 98),
           bordersCodes: const ["Bgd", "Chn", "Ind", "Lao", "Tha"],
           areaMetric: 676578,
-          demonyms: const [
-            Demonyms(language: LangEng(), female: "Burmese", male: "Burmese"),
-            Demonyms(language: LangFra(), female: "Birmane", male: "Birman"),
-          ],
           emoji: "🇲🇲",
           maps: const Maps(
             googleMaps: "4jrZyJkDERUfHyp26",
@@ -10101,15 +10190,30 @@ class CountryMmr extends WorldCountry {
           fifa: "MYA",
           car: const Car(sign: "BUR"),
           timezones: const ["UTC+06:30"],
-          capitalInfo: const CapitalInfo(
-            capital: Capital("Naypyidaw"),
-            latLng: LatLng(19.76, 96.07),
-          ),
           postalCode: const PostalCode(),
-          regionalBlocs: const [BlocASEAN()],
         );
   @override
   List<FiatCurrency> get currencies => const [FiatMmk()];
+  @override
+  CapitalInfo get capitalInfo => const CapitalInfo(
+        capital: Capital("Naypyidaw"),
+        latLng: LatLng(19.76, 96.07),
+      );
+  @override
+  List<RegionalBloc> get regionalBlocs => const [BlocASEAN()];
+  @override
+  List<Demonyms> get demonyms => const [
+        Demonyms(language: LangEng(), female: "Burmese", male: "Burmese"),
+        Demonyms(language: LangFra(), female: "Birmane", male: "Birman"),
+      ];
+  @override
+  List<CountryName> get namesNative => const [
+        CountryName(
+          language: LangMya(),
+          official: "ပြည်ထောင်စု သမ္မတ မြန်မာနိုင်ငံတော်",
+          common: "မြန်မာ",
+        ),
+      ];
   @override
   List<NaturalLanguage> get languages => const [LangMya()];
 }
@@ -10126,13 +10230,6 @@ class CountryMne extends WorldCountry {
             official: "Montenegro",
             common: "Montenegro",
           ),
-          namesNative: const [
-            CountryName(
-              language: LangSrp(),
-              official: "Црна Гора",
-              common: "Црна Гора",
-            ),
-          ],
           tld: const [".me"],
           code: "MNE",
           codeNumeric: "499",
@@ -10145,18 +10242,6 @@ class CountryMne extends WorldCountry {
           latLng: const LatLng(42.5, 19.3),
           bordersCodes: const ["Alb", "Bih", "Hrv", "Srb", "Unk"],
           areaMetric: 13812,
-          demonyms: const [
-            Demonyms(
-              language: LangEng(),
-              female: "Montenegrin",
-              male: "Montenegrin",
-            ),
-            Demonyms(
-              language: LangFra(),
-              female: "Monténégrine",
-              male: "Monténégrin",
-            ),
-          ],
           emoji: "🇲🇪",
           maps: const Maps(
             googleMaps: "4THX1fM7WqANuPbB8",
@@ -10167,15 +10252,38 @@ class CountryMne extends WorldCountry {
           fifa: "MNE",
           car: const Car(sign: "SCG"),
           timezones: const ["UTC+01:00"],
-          capitalInfo: const CapitalInfo(
-            capital: Capital("Podgorica"),
-            latLng: LatLng(42.43, 19.27),
-          ),
           postalCode: const PostalCode(),
-          regionalBlocs: const [BlocCEFTA()],
         );
   @override
   List<FiatCurrency> get currencies => const [FiatEur()];
+  @override
+  CapitalInfo get capitalInfo => const CapitalInfo(
+        capital: Capital("Podgorica"),
+        latLng: LatLng(42.43, 19.27),
+      );
+  @override
+  List<RegionalBloc> get regionalBlocs => const [BlocCEFTA()];
+  @override
+  List<Demonyms> get demonyms => const [
+        Demonyms(
+          language: LangEng(),
+          female: "Montenegrin",
+          male: "Montenegrin",
+        ),
+        Demonyms(
+          language: LangFra(),
+          female: "Monténégrine",
+          male: "Monténégrin",
+        ),
+      ];
+  @override
+  List<CountryName> get namesNative => const [
+        CountryName(
+          language: LangSrp(),
+          official: "Црна Гора",
+          common: "Црна Гора",
+        ),
+      ];
   @override
   List<NaturalLanguage> get languages => const [LangSrp()];
 }
@@ -10192,13 +10300,6 @@ class CountryMng extends WorldCountry {
             official: "Mongolia",
             common: "Mongolia",
           ),
-          namesNative: const [
-            CountryName(
-              language: LangMon(),
-              official: "Монгол улс",
-              common: "Монгол улс",
-            ),
-          ],
           tld: const [".mn"],
           code: "MNG",
           codeNumeric: "496",
@@ -10212,14 +10313,6 @@ class CountryMng extends WorldCountry {
           landlocked: true,
           bordersCodes: const ["Chn", "Rus"],
           areaMetric: 1564110,
-          demonyms: const [
-            Demonyms(
-              language: LangEng(),
-              female: "Mongolian",
-              male: "Mongolian",
-            ),
-            Demonyms(language: LangFra(), female: "Mongole", male: "Mongol"),
-          ],
           emoji: "🇲🇳",
           maps: const Maps(
             googleMaps: "A1X7bMCKThBDNjzH6",
@@ -10230,15 +10323,29 @@ class CountryMng extends WorldCountry {
           fifa: "MNG",
           car: const Car(sign: "MGL"),
           timezones: const ["UTC+07:00", "UTC+08:00"],
-          capitalInfo: const CapitalInfo(
-            capital: Capital("Ulan Bator"),
-            latLng: LatLng(47.92, 106.91),
-          ),
           postalCode:
               const PostalCode(format: "######", regExpPattern: r"^(\d{6})$"),
         );
   @override
   List<FiatCurrency> get currencies => const [FiatMnt()];
+  @override
+  CapitalInfo get capitalInfo => const CapitalInfo(
+        capital: Capital("Ulan Bator"),
+        latLng: LatLng(47.92, 106.91),
+      );
+  @override
+  List<Demonyms> get demonyms => const [
+        Demonyms(language: LangEng(), female: "Mongolian", male: "Mongolian"),
+        Demonyms(language: LangFra(), female: "Mongole", male: "Mongol"),
+      ];
+  @override
+  List<CountryName> get namesNative => const [
+        CountryName(
+          language: LangMon(),
+          official: "Монгол улс",
+          common: "Монгол улс",
+        ),
+      ];
   @override
   List<NaturalLanguage> get languages => const [LangMon()];
 }
@@ -10255,18 +10362,6 @@ class CountryMnp extends WorldCountry {
             official: "Commonwealth of the Northern Mariana Islands",
             common: "Northern Mariana Islands",
           ),
-          namesNative: const [
-            CountryName(
-              language: LangCha(),
-              official: "Sankattan Siha Na Islas Mariånas",
-              common: "Na Islas Mariånas",
-            ),
-            CountryName(
-              language: LangEng(),
-              official: "Commonwealth of the Northern Mariana Islands",
-              common: "Northern Mariana Islands",
-            ),
-          ],
           tld: const [".mp"],
           code: "MNP",
           codeNumeric: "580",
@@ -10283,14 +10378,6 @@ class CountryMnp extends WorldCountry {
           subregion: const Micronesia(),
           latLng: const LatLng(15.2, 145.75),
           areaMetric: 464,
-          demonyms: const [
-            Demonyms(language: LangEng(), female: "American", male: "American"),
-            Demonyms(
-              language: LangFra(),
-              female: "Américaine",
-              male: "Américan",
-            ),
-          ],
           emoji: "🇲🇵",
           maps: const Maps(
             googleMaps: "cpZ67knoRAcfu1417",
@@ -10300,13 +10387,32 @@ class CountryMnp extends WorldCountry {
           car: const Car(sign: "USA"),
           timezones: const ["UTC+10:00"],
           hasCoatOfArms: false,
-          capitalInfo: const CapitalInfo(
-            capital: Capital("Saipan"),
-            latLng: LatLng(15.2, 145.75),
-          ),
         );
   @override
   List<FiatCurrency> get currencies => const [FiatUsd()];
+  @override
+  CapitalInfo get capitalInfo => const CapitalInfo(
+        capital: Capital("Saipan"),
+        latLng: LatLng(15.2, 145.75),
+      );
+  @override
+  List<Demonyms> get demonyms => const [
+        Demonyms(language: LangEng(), female: "American", male: "American"),
+        Demonyms(language: LangFra(), female: "Américaine", male: "Américan"),
+      ];
+  @override
+  List<CountryName> get namesNative => const [
+        CountryName(
+          language: LangCha(),
+          official: "Sankattan Siha Na Islas Mariånas",
+          common: "Na Islas Mariånas",
+        ),
+        CountryName(
+          language: LangEng(),
+          official: "Commonwealth of the Northern Mariana Islands",
+          common: "Northern Mariana Islands",
+        ),
+      ];
   @override
   List<NaturalLanguage> get languages => const [LangCha(), LangEng()];
 }
@@ -10323,13 +10429,6 @@ class CountryMoz extends WorldCountry {
             official: "Republic of Mozambique",
             common: "Mozambique",
           ),
-          namesNative: const [
-            CountryName(
-              language: LangPor(),
-              official: "República de Moçambique",
-              common: "Moçambique",
-            ),
-          ],
           tld: const [".mz"],
           code: "MOZ",
           codeNumeric: "508",
@@ -10346,18 +10445,6 @@ class CountryMoz extends WorldCountry {
           latLng: const LatLng(-18.25, 35),
           bordersCodes: const ["Mwi", "Zaf", "Swz", "Tza", "Zmb", "Zwe"],
           areaMetric: 801590,
-          demonyms: const [
-            Demonyms(
-              language: LangEng(),
-              female: "Mozambican",
-              male: "Mozambican",
-            ),
-            Demonyms(
-              language: LangFra(),
-              female: "Mozambicaine",
-              male: "Mozambicain",
-            ),
-          ],
           emoji: "🇲🇿",
           maps: const Maps(
             googleMaps: "xCLcY9fzU6x4Pueu5",
@@ -10368,16 +10455,35 @@ class CountryMoz extends WorldCountry {
           fifa: "MOZ",
           car: const Car(sign: "MOC", isRightSide: false),
           timezones: const ["UTC+02:00"],
-          capitalInfo: const CapitalInfo(
-            capital: Capital("Maputo"),
-            latLng: LatLng(-25.95, 32.58),
-          ),
           postalCode:
               const PostalCode(format: "####", regExpPattern: r"^(\d{4})$"),
-          regionalBlocs: const [BlocAU()],
         );
   @override
   List<FiatCurrency> get currencies => const [FiatMzn()];
+  @override
+  CapitalInfo get capitalInfo => const CapitalInfo(
+        capital: Capital("Maputo"),
+        latLng: LatLng(-25.95, 32.58),
+      );
+  @override
+  List<RegionalBloc> get regionalBlocs => const [BlocAU()];
+  @override
+  List<Demonyms> get demonyms => const [
+        Demonyms(language: LangEng(), female: "Mozambican", male: "Mozambican"),
+        Demonyms(
+          language: LangFra(),
+          female: "Mozambicaine",
+          male: "Mozambicain",
+        ),
+      ];
+  @override
+  List<CountryName> get namesNative => const [
+        CountryName(
+          language: LangPor(),
+          official: "República de Moçambique",
+          common: "Moçambique",
+        ),
+      ];
   @override
   List<NaturalLanguage> get languages => const [LangPor()];
 }
@@ -10394,13 +10500,6 @@ class CountryMrt extends WorldCountry {
             official: "Islamic Republic of Mauritania",
             common: "Mauritania",
           ),
-          namesNative: const [
-            CountryName(
-              language: LangAra(),
-              official: "الجمهورية الإسلامية الموريتانية",
-              common: "موريتانيا",
-            ),
-          ],
           tld: const [".mr"],
           code: "MRT",
           codeNumeric: "478",
@@ -10417,18 +10516,6 @@ class CountryMrt extends WorldCountry {
           latLng: const LatLng(20, -12),
           bordersCodes: const ["Dza", "Mli", "Sen", "Esh"],
           areaMetric: 1030700,
-          demonyms: const [
-            Demonyms(
-              language: LangEng(),
-              female: "Mauritanian",
-              male: "Mauritanian",
-            ),
-            Demonyms(
-              language: LangFra(),
-              female: "Mauritanienne",
-              male: "Mauritanien",
-            ),
-          ],
           emoji: "🇲🇷",
           maps: const Maps(
             googleMaps: "im2MmQ5jFjzxWBks5",
@@ -10439,14 +10526,37 @@ class CountryMrt extends WorldCountry {
           fifa: "MTN",
           car: const Car(sign: "RIM"),
           timezones: const ["UTC+00:00"],
-          capitalInfo: const CapitalInfo(
-            capital: Capital("Nouakchott"),
-            latLng: LatLng(18.07, -15.97),
-          ),
-          regionalBlocs: const [BlocAU(), BlocAL()],
         );
   @override
   List<FiatCurrency> get currencies => const [FiatMru()];
+  @override
+  CapitalInfo get capitalInfo => const CapitalInfo(
+        capital: Capital("Nouakchott"),
+        latLng: LatLng(18.07, -15.97),
+      );
+  @override
+  List<RegionalBloc> get regionalBlocs => const [BlocAU(), BlocAL()];
+  @override
+  List<Demonyms> get demonyms => const [
+        Demonyms(
+          language: LangEng(),
+          female: "Mauritanian",
+          male: "Mauritanian",
+        ),
+        Demonyms(
+          language: LangFra(),
+          female: "Mauritanienne",
+          male: "Mauritanien",
+        ),
+      ];
+  @override
+  List<CountryName> get namesNative => const [
+        CountryName(
+          language: LangAra(),
+          official: "الجمهورية الإسلامية الموريتانية",
+          common: "موريتانيا",
+        ),
+      ];
   @override
   List<NaturalLanguage> get languages => const [LangAra()];
 }
@@ -10463,13 +10573,6 @@ class CountryMsr extends WorldCountry {
             official: "Montserrat",
             common: "Montserrat",
           ),
-          namesNative: const [
-            CountryName(
-              language: LangEng(),
-              official: "Montserrat",
-              common: "Montserrat",
-            ),
-          ],
           tld: const [".ms"],
           code: "MSR",
           codeNumeric: "500",
@@ -10482,18 +10585,6 @@ class CountryMsr extends WorldCountry {
           subregion: const Caribbean(),
           latLng: const LatLng(16.75, -62.2),
           areaMetric: 102,
-          demonyms: const [
-            Demonyms(
-              language: LangEng(),
-              female: "Montserratian",
-              male: "Montserratian",
-            ),
-            Demonyms(
-              language: LangFra(),
-              female: "Montserratienne",
-              male: "Montserratien",
-            ),
-          ],
           emoji: "🇲🇸",
           maps: const Maps(
             googleMaps: "CSbe7UmxPmiwQB7GA",
@@ -10503,14 +10594,37 @@ class CountryMsr extends WorldCountry {
           fifa: "MSR",
           car: const Car(sign: "GB", isRightSide: false),
           timezones: const ["UTC-04:00"],
-          capitalInfo: const CapitalInfo(
-            capital: Capital("Plymouth"),
-            latLng: LatLng(16.7, -62.22),
-          ),
-          regionalBlocs: const [BlocCARICOM()],
         );
   @override
   List<FiatCurrency> get currencies => const [FiatXcd()];
+  @override
+  CapitalInfo get capitalInfo => const CapitalInfo(
+        capital: Capital("Plymouth"),
+        latLng: LatLng(16.7, -62.22),
+      );
+  @override
+  List<RegionalBloc> get regionalBlocs => const [BlocCARICOM()];
+  @override
+  List<Demonyms> get demonyms => const [
+        Demonyms(
+          language: LangEng(),
+          female: "Montserratian",
+          male: "Montserratian",
+        ),
+        Demonyms(
+          language: LangFra(),
+          female: "Montserratienne",
+          male: "Montserratien",
+        ),
+      ];
+  @override
+  List<CountryName> get namesNative => const [
+        CountryName(
+          language: LangEng(),
+          official: "Montserrat",
+          common: "Montserrat",
+        ),
+      ];
   @override
   List<NaturalLanguage> get languages => const [LangEng()];
 }
@@ -10527,13 +10641,6 @@ class CountryMtq extends WorldCountry {
             official: "Martinique",
             common: "Martinique",
           ),
-          namesNative: const [
-            CountryName(
-              language: LangFra(),
-              official: "Martinique",
-              common: "Martinique",
-            ),
-          ],
           tld: const [".mq"],
           code: "MTQ",
           codeNumeric: "474",
@@ -10546,18 +10653,6 @@ class CountryMtq extends WorldCountry {
           subregion: const Caribbean(),
           latLng: const LatLng(14.666667, -61),
           areaMetric: 1128,
-          demonyms: const [
-            Demonyms(
-              language: LangEng(),
-              female: "Martinican",
-              male: "Martinican",
-            ),
-            Demonyms(
-              language: LangFra(),
-              female: "Martiniquaise",
-              male: "Martiniquais",
-            ),
-          ],
           emoji: "🇲🇶",
           maps: const Maps(
             googleMaps: "87ER7sDAFU7JjcvR6",
@@ -10566,14 +10661,32 @@ class CountryMtq extends WorldCountry {
           population: 378243,
           car: const Car(sign: "F"),
           timezones: const ["UTC-04:00"],
-          capitalInfo: const CapitalInfo(
-            capital: Capital("Fort-de-France"),
-            latLng: LatLng(14.6, -61.08),
-          ),
           postalCode: const PostalCode(),
         );
   @override
   List<FiatCurrency> get currencies => const [FiatEur()];
+  @override
+  CapitalInfo get capitalInfo => const CapitalInfo(
+        capital: Capital("Fort-de-France"),
+        latLng: LatLng(14.6, -61.08),
+      );
+  @override
+  List<Demonyms> get demonyms => const [
+        Demonyms(language: LangEng(), female: "Martinican", male: "Martinican"),
+        Demonyms(
+          language: LangFra(),
+          female: "Martiniquaise",
+          male: "Martiniquais",
+        ),
+      ];
+  @override
+  List<CountryName> get namesNative => const [
+        CountryName(
+          language: LangFra(),
+          official: "Martinique",
+          common: "Martinique",
+        ),
+      ];
   @override
   List<NaturalLanguage> get languages => const [LangFra()];
 }
@@ -10590,18 +10703,6 @@ class CountryMus extends WorldCountry {
             official: "Republic of Mauritius",
             common: "Mauritius",
           ),
-          namesNative: const [
-            CountryName(
-              language: LangEng(),
-              official: "Republic of Mauritius",
-              common: "Mauritius",
-            ),
-            CountryName(
-              language: LangFra(),
-              official: "République de Maurice",
-              common: "Maurice",
-            ),
-          ],
           tld: const [".mu"],
           code: "MUS",
           codeNumeric: "480",
@@ -10617,18 +10718,6 @@ class CountryMus extends WorldCountry {
           subregion: const EasternAfrica(),
           latLng: const LatLng(-20.28333333, 57.55),
           areaMetric: 2040,
-          demonyms: const [
-            Demonyms(
-              language: LangEng(),
-              female: "Mauritian",
-              male: "Mauritian",
-            ),
-            Demonyms(
-              language: LangFra(),
-              female: "Mauricienne",
-              male: "Mauricien",
-            ),
-          ],
           emoji: "🇲🇺",
           maps: const Maps(
             googleMaps: "PpKtZ4W3tir5iGrz7",
@@ -10639,14 +10728,34 @@ class CountryMus extends WorldCountry {
           fifa: "MRI",
           car: const Car(sign: "MS", isRightSide: false),
           timezones: const ["UTC+04:00"],
-          capitalInfo: const CapitalInfo(
-            capital: Capital("Port Louis"),
-            latLng: LatLng(-20.15, 57.48),
-          ),
-          regionalBlocs: const [BlocAU()],
         );
   @override
   List<FiatCurrency> get currencies => const [FiatMur()];
+  @override
+  CapitalInfo get capitalInfo => const CapitalInfo(
+        capital: Capital("Port Louis"),
+        latLng: LatLng(-20.15, 57.48),
+      );
+  @override
+  List<RegionalBloc> get regionalBlocs => const [BlocAU()];
+  @override
+  List<Demonyms> get demonyms => const [
+        Demonyms(language: LangEng(), female: "Mauritian", male: "Mauritian"),
+        Demonyms(language: LangFra(), female: "Mauricienne", male: "Mauricien"),
+      ];
+  @override
+  List<CountryName> get namesNative => const [
+        CountryName(
+          language: LangEng(),
+          official: "Republic of Mauritius",
+          common: "Mauritius",
+        ),
+        CountryName(
+          language: LangFra(),
+          official: "République de Maurice",
+          common: "Maurice",
+        ),
+      ];
   @override
   List<NaturalLanguage> get languages => const [LangEng(), LangFra()];
 }
@@ -10663,18 +10772,6 @@ class CountryMwi extends WorldCountry {
             official: "Republic of Malawi",
             common: "Malawi",
           ),
-          namesNative: const [
-            CountryName(
-              language: LangEng(),
-              official: "Republic of Malawi",
-              common: "Malawi",
-            ),
-            CountryName(
-              language: LangNya(),
-              official: "Chalo cha Malawi, Dziko la Malaŵi",
-              common: "Malaŵi",
-            ),
-          ],
           tld: const [".mw"],
           code: "MWI",
           codeNumeric: "454",
@@ -10688,14 +10785,6 @@ class CountryMwi extends WorldCountry {
           landlocked: true,
           bordersCodes: const ["Moz", "Tza", "Zmb"],
           areaMetric: 118484,
-          demonyms: const [
-            Demonyms(language: LangEng(), female: "Malawian", male: "Malawian"),
-            Demonyms(
-              language: LangFra(),
-              female: "Malawienne",
-              male: "Malawien",
-            ),
-          ],
           emoji: "🇲🇼",
           maps: const Maps(
             googleMaps: "mc6z83pW9m98X2Ef6",
@@ -10706,14 +10795,34 @@ class CountryMwi extends WorldCountry {
           fifa: "MWI",
           car: const Car(sign: "MW", isRightSide: false),
           timezones: const ["UTC+02:00"],
-          capitalInfo: const CapitalInfo(
-            capital: Capital("Lilongwe"),
-            latLng: LatLng(-13.97, 33.78),
-          ),
-          regionalBlocs: const [BlocAU()],
         );
   @override
   List<FiatCurrency> get currencies => const [FiatMwk()];
+  @override
+  CapitalInfo get capitalInfo => const CapitalInfo(
+        capital: Capital("Lilongwe"),
+        latLng: LatLng(-13.97, 33.78),
+      );
+  @override
+  List<RegionalBloc> get regionalBlocs => const [BlocAU()];
+  @override
+  List<Demonyms> get demonyms => const [
+        Demonyms(language: LangEng(), female: "Malawian", male: "Malawian"),
+        Demonyms(language: LangFra(), female: "Malawienne", male: "Malawien"),
+      ];
+  @override
+  List<CountryName> get namesNative => const [
+        CountryName(
+          language: LangEng(),
+          official: "Republic of Malawi",
+          common: "Malawi",
+        ),
+        CountryName(
+          language: LangNya(),
+          official: "Chalo cha Malawi, Dziko la Malaŵi",
+          common: "Malaŵi",
+        ),
+      ];
   @override
   List<NaturalLanguage> get languages => const [LangEng(), LangNya()];
 }
@@ -10730,18 +10839,6 @@ class CountryMys extends WorldCountry {
             official: "Malaysia",
             common: "Malaysia",
           ),
-          namesNative: const [
-            CountryName(
-              language: LangEng(),
-              official: "Malaysia",
-              common: "Malaysia",
-            ),
-            CountryName(
-              language: LangMsa(),
-              official: "مليسيا",
-              common: "مليسيا",
-            ),
-          ],
           tld: const [".my"],
           code: "MYS",
           codeNumeric: "458",
@@ -10754,18 +10851,6 @@ class CountryMys extends WorldCountry {
           latLng: const LatLng(2.5, 112.5),
           bordersCodes: const ["Brn", "Idn", "Tha"],
           areaMetric: 330803,
-          demonyms: const [
-            Demonyms(
-              language: LangEng(),
-              female: "Malaysian",
-              male: "Malaysian",
-            ),
-            Demonyms(
-              language: LangFra(),
-              female: "Malaisienne",
-              male: "Malaisien",
-            ),
-          ],
           emoji: "🇲🇾",
           maps: const Maps(
             googleMaps: "qrY1PNeUXGyXDcPy6",
@@ -10777,15 +10862,31 @@ class CountryMys extends WorldCountry {
           car: const Car(sign: "MAL", isRightSide: false),
           timezones: const ["UTC+08:00"],
           startOfWeek: Weekday.sunday,
-          capitalInfo: const CapitalInfo(
-            capital: Capital("Kuala Lumpur"),
-            latLng: LatLng(3.17, 101.7),
-          ),
           postalCode: const PostalCode(),
-          regionalBlocs: const [BlocASEAN()],
         );
   @override
   List<FiatCurrency> get currencies => const [FiatMyr()];
+  @override
+  CapitalInfo get capitalInfo => const CapitalInfo(
+        capital: Capital("Kuala Lumpur"),
+        latLng: LatLng(3.17, 101.7),
+      );
+  @override
+  List<RegionalBloc> get regionalBlocs => const [BlocASEAN()];
+  @override
+  List<Demonyms> get demonyms => const [
+        Demonyms(language: LangEng(), female: "Malaysian", male: "Malaysian"),
+        Demonyms(language: LangFra(), female: "Malaisienne", male: "Malaisien"),
+      ];
+  @override
+  List<CountryName> get namesNative => const [
+        CountryName(
+          language: LangEng(),
+          official: "Malaysia",
+          common: "Malaysia",
+        ),
+        CountryName(language: LangMsa(), official: "مليسيا", common: "مليسيا"),
+      ];
   @override
   List<NaturalLanguage> get languages => const [LangEng(), LangMsa()];
 }
@@ -10802,13 +10903,6 @@ class CountryMyt extends WorldCountry {
             official: "Department of Mayotte",
             common: "Mayotte",
           ),
-          namesNative: const [
-            CountryName(
-              language: LangFra(),
-              official: "Département de Mayotte",
-              common: "Mayotte",
-            ),
-          ],
           tld: const [".yt"],
           code: "MYT",
           codeNumeric: "175",
@@ -10825,14 +10919,6 @@ class CountryMyt extends WorldCountry {
           subregion: const EasternAfrica(),
           latLng: const LatLng(-12.83333333, 45.16666666),
           areaMetric: 374,
-          demonyms: const [
-            Demonyms(language: LangEng(), female: "Mahoran", male: "Mahoran"),
-            Demonyms(
-              language: LangFra(),
-              female: "Mahoraise",
-              male: "Mahorais",
-            ),
-          ],
           emoji: "🇾🇹",
           maps: const Maps(
             googleMaps: "1e7MXmfBwQv3TQGF7",
@@ -10842,15 +10928,30 @@ class CountryMyt extends WorldCountry {
           car: const Car(sign: "F"),
           timezones: const ["UTC+03:00"],
           hasCoatOfArms: false,
-          capitalInfo: const CapitalInfo(
-            capital: Capital("Mamoudzou"),
-            latLng: LatLng(-12.78, 45.22),
-          ),
           postalCode: const PostalCode(),
-          regionalBlocs: const [BlocAU()],
         );
   @override
   List<FiatCurrency> get currencies => const [FiatEur()];
+  @override
+  CapitalInfo get capitalInfo => const CapitalInfo(
+        capital: Capital("Mamoudzou"),
+        latLng: LatLng(-12.78, 45.22),
+      );
+  @override
+  List<RegionalBloc> get regionalBlocs => const [BlocAU()];
+  @override
+  List<Demonyms> get demonyms => const [
+        Demonyms(language: LangEng(), female: "Mahoran", male: "Mahoran"),
+        Demonyms(language: LangFra(), female: "Mahoraise", male: "Mahorais"),
+      ];
+  @override
+  List<CountryName> get namesNative => const [
+        CountryName(
+          language: LangFra(),
+          official: "Département de Mayotte",
+          common: "Mayotte",
+        ),
+      ];
   @override
   List<NaturalLanguage> get languages => const [LangFra()];
 }
@@ -10867,33 +10968,6 @@ class CountryNam extends WorldCountry {
             official: "Republic of Namibia",
             common: "Namibia",
           ),
-          namesNative: const [
-            CountryName(
-              language: LangAfr(),
-              official: "Republiek van Namibië",
-              common: "Namibië",
-            ),
-            CountryName(
-              language: LangDeu(),
-              official: "Republik Namibia",
-              common: "Namibia",
-            ),
-            CountryName(
-              language: LangEng(),
-              official: "Republic of Namibia",
-              common: "Namibia",
-            ),
-            CountryName(
-              language: LangHer(),
-              official: "Republic of Namibia",
-              common: "Namibia",
-            ),
-            CountryName(
-              language: LangTsn(),
-              official: "Lefatshe la Namibia",
-              common: "Namibia",
-            ),
-          ],
           tld: const [".na"],
           code: "NAM",
           codeNumeric: "516",
@@ -10906,14 +10980,6 @@ class CountryNam extends WorldCountry {
           latLng: const LatLng(-22, 17),
           bordersCodes: const ["Ago", "Bwa", "Zaf", "Tur"],
           areaMetric: 825615,
-          demonyms: const [
-            Demonyms(language: LangEng(), female: "Namibian", male: "Namibian"),
-            Demonyms(
-              language: LangFra(),
-              female: "Namibienne",
-              male: "Namibien",
-            ),
-          ],
           emoji: "🇳🇦",
           maps: const Maps(
             googleMaps: "oR1i8BFEYX3EY83WA",
@@ -10924,14 +10990,49 @@ class CountryNam extends WorldCountry {
           fifa: "NAM",
           car: const Car(sign: "NAM", isRightSide: false),
           timezones: const ["UTC+01:00"],
-          capitalInfo: const CapitalInfo(
-            capital: Capital("Windhoek"),
-            latLng: LatLng(-22.57, 17.08),
-          ),
-          regionalBlocs: const [BlocAU()],
         );
   @override
   List<FiatCurrency> get currencies => const [FiatNad(), FiatZar()];
+  @override
+  CapitalInfo get capitalInfo => const CapitalInfo(
+        capital: Capital("Windhoek"),
+        latLng: LatLng(-22.57, 17.08),
+      );
+  @override
+  List<RegionalBloc> get regionalBlocs => const [BlocAU()];
+  @override
+  List<Demonyms> get demonyms => const [
+        Demonyms(language: LangEng(), female: "Namibian", male: "Namibian"),
+        Demonyms(language: LangFra(), female: "Namibienne", male: "Namibien"),
+      ];
+  @override
+  List<CountryName> get namesNative => const [
+        CountryName(
+          language: LangAfr(),
+          official: "Republiek van Namibië",
+          common: "Namibië",
+        ),
+        CountryName(
+          language: LangDeu(),
+          official: "Republik Namibia",
+          common: "Namibia",
+        ),
+        CountryName(
+          language: LangEng(),
+          official: "Republic of Namibia",
+          common: "Namibia",
+        ),
+        CountryName(
+          language: LangHer(),
+          official: "Republic of Namibia",
+          common: "Namibia",
+        ),
+        CountryName(
+          language: LangTsn(),
+          official: "Lefatshe la Namibia",
+          common: "Namibia",
+        ),
+      ];
   @override
   List<NaturalLanguage> get languages =>
       const [LangAfr(), LangDeu(), LangEng(), LangHer(), LangNdo(), LangTsn()];
@@ -10949,13 +11050,6 @@ class CountryNcl extends WorldCountry {
             official: "New Caledonia",
             common: "New Caledonia",
           ),
-          namesNative: const [
-            CountryName(
-              language: LangFra(),
-              official: "Nouvelle-Calédonie",
-              common: "Nouvelle-Calédonie",
-            ),
-          ],
           tld: const [".nc"],
           code: "NCL",
           codeNumeric: "540",
@@ -10968,18 +11062,6 @@ class CountryNcl extends WorldCountry {
           subregion: const Melanesia(),
           latLng: const LatLng(-21.5, 165.5),
           areaMetric: 18575,
-          demonyms: const [
-            Demonyms(
-              language: LangEng(),
-              female: "New Caledonian",
-              male: "New Caledonian",
-            ),
-            Demonyms(
-              language: LangFra(),
-              female: "Néo-Calédonienne",
-              male: "Néo-Calédonien",
-            ),
-          ],
           emoji: "🇳🇨",
           maps: const Maps(
             googleMaps: "cBhtCeMdob4U7FRU9",
@@ -10989,14 +11071,36 @@ class CountryNcl extends WorldCountry {
           fifa: "NCL",
           car: const Car(sign: "F"),
           timezones: const ["UTC+11:00"],
-          capitalInfo: const CapitalInfo(
-            capital: Capital("Nouméa"),
-            latLng: LatLng(-22.27, 166.45),
-          ),
           postalCode: const PostalCode(),
         );
   @override
   List<FiatCurrency> get currencies => const [FiatXpf()];
+  @override
+  CapitalInfo get capitalInfo => const CapitalInfo(
+        capital: Capital("Nouméa"),
+        latLng: LatLng(-22.27, 166.45),
+      );
+  @override
+  List<Demonyms> get demonyms => const [
+        Demonyms(
+          language: LangEng(),
+          female: "New Caledonian",
+          male: "New Caledonian",
+        ),
+        Demonyms(
+          language: LangFra(),
+          female: "Néo-Calédonienne",
+          male: "Néo-Calédonien",
+        ),
+      ];
+  @override
+  List<CountryName> get namesNative => const [
+        CountryName(
+          language: LangFra(),
+          official: "Nouvelle-Calédonie",
+          common: "Nouvelle-Calédonie",
+        ),
+      ];
   @override
   List<NaturalLanguage> get languages => const [LangFra()];
 }
@@ -11013,13 +11117,6 @@ class CountryNer extends WorldCountry {
             official: "Republic of Niger",
             common: "Niger",
           ),
-          namesNative: const [
-            CountryName(
-              language: LangFra(),
-              official: "République du Niger",
-              common: "Niger",
-            ),
-          ],
           tld: const [".ne"],
           code: "NER",
           codeNumeric: "562",
@@ -11033,14 +11130,6 @@ class CountryNer extends WorldCountry {
           landlocked: true,
           bordersCodes: const ["Dza", "Ben", "Bfa", "Tcd", "Lby", "Mli", "Nga"],
           areaMetric: 1267000,
-          demonyms: const [
-            Demonyms(language: LangEng(), female: "Nigerien", male: "Nigerien"),
-            Demonyms(
-              language: LangFra(),
-              female: "Nigérienne",
-              male: "Nigérien",
-            ),
-          ],
           emoji: "🇳🇪",
           maps: const Maps(
             googleMaps: "VKNU2TLsZcgxM49c8",
@@ -11051,16 +11140,31 @@ class CountryNer extends WorldCountry {
           fifa: "NIG",
           car: const Car(sign: "RN"),
           timezones: const ["UTC+01:00"],
-          capitalInfo: const CapitalInfo(
-            capital: Capital("Niamey"),
-            latLng: LatLng(13.52, 2.12),
-          ),
           postalCode:
               const PostalCode(format: "####", regExpPattern: r"^(\d{4})$"),
-          regionalBlocs: const [BlocAU()],
         );
   @override
   List<FiatCurrency> get currencies => const [FiatXof()];
+  @override
+  CapitalInfo get capitalInfo => const CapitalInfo(
+        capital: Capital("Niamey"),
+        latLng: LatLng(13.52, 2.12),
+      );
+  @override
+  List<RegionalBloc> get regionalBlocs => const [BlocAU()];
+  @override
+  List<Demonyms> get demonyms => const [
+        Demonyms(language: LangEng(), female: "Nigerien", male: "Nigerien"),
+        Demonyms(language: LangFra(), female: "Nigérienne", male: "Nigérien"),
+      ];
+  @override
+  List<CountryName> get namesNative => const [
+        CountryName(
+          language: LangFra(),
+          official: "République du Niger",
+          common: "Niger",
+        ),
+      ];
   @override
   List<NaturalLanguage> get languages => const [LangFra()];
 }
@@ -11077,13 +11181,6 @@ class CountryNfk extends WorldCountry {
             official: "Territory of Norfolk Island",
             common: "Norfolk Island",
           ),
-          namesNative: const [
-            CountryName(
-              language: LangEng(),
-              official: "Territory of Norfolk Island",
-              common: "Norfolk Island",
-            ),
-          ],
           tld: const [".nf"],
           code: "NFK",
           codeNumeric: "574",
@@ -11100,18 +11197,6 @@ class CountryNfk extends WorldCountry {
           subregion: const AustraliaAndNewZealand(),
           latLng: const LatLng(-29.03333333, 167.95),
           areaMetric: 36,
-          demonyms: const [
-            Demonyms(
-              language: LangEng(),
-              female: "Norfolk Islander",
-              male: "Norfolk Islander",
-            ),
-            Demonyms(
-              language: LangFra(),
-              female: "Norfolkaise",
-              male: "Norfolkais",
-            ),
-          ],
           emoji: "🇳🇫",
           maps: const Maps(
             googleMaps: "pbvtm6XYd1iZbjky5",
@@ -11121,13 +11206,35 @@ class CountryNfk extends WorldCountry {
           car: const Car(sign: "AUS", isRightSide: false),
           timezones: const ["UTC+11:30"],
           hasCoatOfArms: false,
-          capitalInfo: const CapitalInfo(
-            capital: Capital("Kingston"),
-            latLng: LatLng(-29.05, 167.97),
-          ),
         );
   @override
   List<FiatCurrency> get currencies => const [FiatAud()];
+  @override
+  CapitalInfo get capitalInfo => const CapitalInfo(
+        capital: Capital("Kingston"),
+        latLng: LatLng(-29.05, 167.97),
+      );
+  @override
+  List<Demonyms> get demonyms => const [
+        Demonyms(
+          language: LangEng(),
+          female: "Norfolk Islander",
+          male: "Norfolk Islander",
+        ),
+        Demonyms(
+          language: LangFra(),
+          female: "Norfolkaise",
+          male: "Norfolkais",
+        ),
+      ];
+  @override
+  List<CountryName> get namesNative => const [
+        CountryName(
+          language: LangEng(),
+          official: "Territory of Norfolk Island",
+          common: "Norfolk Island",
+        ),
+      ];
   @override
   List<NaturalLanguage> get languages => const [LangEng()];
 }
@@ -11144,13 +11251,6 @@ class CountryNga extends WorldCountry {
             official: "Federal Republic of Nigeria",
             common: "Nigeria",
           ),
-          namesNative: const [
-            CountryName(
-              language: LangEng(),
-              official: "Federal Republic of Nigeria",
-              common: "Nigeria",
-            ),
-          ],
           tld: const [".ng"],
           code: "NGA",
           codeNumeric: "566",
@@ -11168,14 +11268,6 @@ class CountryNga extends WorldCountry {
           latLng: const LatLng(10, 8),
           bordersCodes: const ["Ben", "Cmr", "Tcd", "Ner"],
           areaMetric: 923768,
-          demonyms: const [
-            Demonyms(language: LangEng(), female: "Nigerian", male: "Nigerian"),
-            Demonyms(
-              language: LangFra(),
-              female: "Nigériane",
-              male: "Nigérian",
-            ),
-          ],
           emoji: "🇳🇬",
           maps: const Maps(
             googleMaps: "LTn417qWwBPFszuV9",
@@ -11186,16 +11278,29 @@ class CountryNga extends WorldCountry {
           fifa: "NGA",
           car: const Car(sign: "WAN"),
           timezones: const ["UTC+01:00"],
-          capitalInfo: const CapitalInfo(
-            capital: Capital("Abuja"),
-            latLng: LatLng(9.08, 7.53),
-          ),
           postalCode:
               const PostalCode(format: "######", regExpPattern: r"^(\d{6})$"),
-          regionalBlocs: const [BlocAU()],
         );
   @override
   List<FiatCurrency> get currencies => const [FiatNgn()];
+  @override
+  CapitalInfo get capitalInfo =>
+      const CapitalInfo(capital: Capital("Abuja"), latLng: LatLng(9.08, 7.53));
+  @override
+  List<RegionalBloc> get regionalBlocs => const [BlocAU()];
+  @override
+  List<Demonyms> get demonyms => const [
+        Demonyms(language: LangEng(), female: "Nigerian", male: "Nigerian"),
+        Demonyms(language: LangFra(), female: "Nigériane", male: "Nigérian"),
+      ];
+  @override
+  List<CountryName> get namesNative => const [
+        CountryName(
+          language: LangEng(),
+          official: "Federal Republic of Nigeria",
+          common: "Nigeria",
+        ),
+      ];
   @override
   List<NaturalLanguage> get languages => const [LangEng()];
 }
@@ -11212,13 +11317,6 @@ class CountryNic extends WorldCountry {
             official: "Republic of Nicaragua",
             common: "Nicaragua",
           ),
-          namesNative: const [
-            CountryName(
-              language: LangSpa(),
-              official: "República de Nicaragua",
-              common: "Nicaragua",
-            ),
-          ],
           tld: const [".ni"],
           code: "NIC",
           codeNumeric: "558",
@@ -11235,18 +11333,6 @@ class CountryNic extends WorldCountry {
           latLng: const LatLng(13, -85),
           bordersCodes: const ["Cri", "Hnd"],
           areaMetric: 130373,
-          demonyms: const [
-            Demonyms(
-              language: LangEng(),
-              female: "Nicaraguan",
-              male: "Nicaraguan",
-            ),
-            Demonyms(
-              language: LangFra(),
-              female: "Nicaraguayenne",
-              male: "Nicaraguayen",
-            ),
-          ],
           emoji: "🇳🇮",
           maps: const Maps(
             googleMaps: "P77LaEVkKJKXneRC6",
@@ -11257,18 +11343,37 @@ class CountryNic extends WorldCountry {
           fifa: "NCA",
           car: const Car(sign: "NIC"),
           timezones: const ["UTC-06:00"],
-          capitalInfo: const CapitalInfo(
-            capital: Capital("Managua"),
-            latLng: LatLng(12.13, -86.25),
-          ),
           postalCode: const PostalCode(
             format: "###-###-#",
             regExpPattern: r"^(\d{7})$",
           ),
-          regionalBlocs: const [BlocCAIS()],
         );
   @override
   List<FiatCurrency> get currencies => const [FiatNio()];
+  @override
+  CapitalInfo get capitalInfo => const CapitalInfo(
+        capital: Capital("Managua"),
+        latLng: LatLng(12.13, -86.25),
+      );
+  @override
+  List<RegionalBloc> get regionalBlocs => const [BlocCAIS()];
+  @override
+  List<Demonyms> get demonyms => const [
+        Demonyms(language: LangEng(), female: "Nicaraguan", male: "Nicaraguan"),
+        Demonyms(
+          language: LangFra(),
+          female: "Nicaraguayenne",
+          male: "Nicaraguayen",
+        ),
+      ];
+  @override
+  List<CountryName> get namesNative => const [
+        CountryName(
+          language: LangSpa(),
+          official: "República de Nicaragua",
+          common: "Nicaragua",
+        ),
+      ];
   @override
   List<NaturalLanguage> get languages => const [LangSpa()];
 }
@@ -11285,9 +11390,6 @@ class CountryNiu extends WorldCountry {
             official: "Niue",
             common: "Niue",
           ),
-          namesNative: const [
-            CountryName(language: LangEng(), official: "Niue", common: "Niue"),
-          ],
           tld: const [".nu"],
           code: "NIU",
           codeNumeric: "570",
@@ -11300,10 +11402,6 @@ class CountryNiu extends WorldCountry {
           subregion: const Polynesia(),
           latLng: const LatLng(-19.03333333, -169.86666666),
           areaMetric: 260,
-          demonyms: const [
-            Demonyms(language: LangEng(), female: "Niuean", male: "Niuean"),
-            Demonyms(language: LangFra(), female: "Niuéenne", male: "Niuéen"),
-          ],
           emoji: "🇳🇺",
           maps: const Maps(
             googleMaps: "xFgdzs3E55Rk1y8P9",
@@ -11313,13 +11411,23 @@ class CountryNiu extends WorldCountry {
           car: const Car(sign: "NZ", isRightSide: false),
           timezones: const ["UTC-11:00"],
           hasCoatOfArms: false,
-          capitalInfo: const CapitalInfo(
-            capital: Capital("Alofi"),
-            latLng: LatLng(-19.02, -169.92),
-          ),
         );
   @override
   List<FiatCurrency> get currencies => const [FiatNzd()];
+  @override
+  CapitalInfo get capitalInfo => const CapitalInfo(
+        capital: Capital("Alofi"),
+        latLng: LatLng(-19.02, -169.92),
+      );
+  @override
+  List<Demonyms> get demonyms => const [
+        Demonyms(language: LangEng(), female: "Niuean", male: "Niuean"),
+        Demonyms(language: LangFra(), female: "Niuéenne", male: "Niuéen"),
+      ];
+  @override
+  List<CountryName> get namesNative => const [
+        CountryName(language: LangEng(), official: "Niue", common: "Niue"),
+      ];
   @override
   List<NaturalLanguage> get languages => const [LangEng()];
 }
@@ -11336,13 +11444,6 @@ class CountryNld extends WorldCountry {
             official: "Kingdom of the Netherlands",
             common: "Netherlands",
           ),
-          namesNative: const [
-            CountryName(
-              language: LangNld(),
-              official: "Koninkrijk der Nederlanden",
-              common: "Nederland",
-            ),
-          ],
           tld: const [".nl"],
           code: "NLD",
           codeNumeric: "528",
@@ -11355,14 +11456,6 @@ class CountryNld extends WorldCountry {
           latLng: const LatLng(52.5, 5.75),
           bordersCodes: const ["Bel", "Deu"],
           areaMetric: 41850,
-          demonyms: const [
-            Demonyms(language: LangEng(), female: "Dutch", male: "Dutch"),
-            Demonyms(
-              language: LangFra(),
-              female: "Néerlandaise",
-              male: "Néerlandais",
-            ),
-          ],
           emoji: "🇳🇱",
           maps: const Maps(
             googleMaps: "Hv6zQswGhFxoVVBm6",
@@ -11373,18 +11466,37 @@ class CountryNld extends WorldCountry {
           fifa: "NED",
           car: const Car(sign: "NL"),
           timezones: const ["UTC+01:00"],
-          capitalInfo: const CapitalInfo(
-            capital: Capital("Amsterdam"),
-            latLng: LatLng(52.35, 4.92),
-          ),
           postalCode: const PostalCode(
             format: "#### @@",
             regExpPattern: r"^(\d{4}[A-Z]{2})$",
           ),
-          regionalBlocs: const [BlocEU()],
         );
   @override
   List<FiatCurrency> get currencies => const [FiatEur()];
+  @override
+  CapitalInfo get capitalInfo => const CapitalInfo(
+        capital: Capital("Amsterdam"),
+        latLng: LatLng(52.35, 4.92),
+      );
+  @override
+  List<RegionalBloc> get regionalBlocs => const [BlocEU()];
+  @override
+  List<Demonyms> get demonyms => const [
+        Demonyms(language: LangEng(), female: "Dutch", male: "Dutch"),
+        Demonyms(
+          language: LangFra(),
+          female: "Néerlandaise",
+          male: "Néerlandais",
+        ),
+      ];
+  @override
+  List<CountryName> get namesNative => const [
+        CountryName(
+          language: LangNld(),
+          official: "Koninkrijk der Nederlanden",
+          common: "Nederland",
+        ),
+      ];
   @override
   List<NaturalLanguage> get languages => const [LangNld()];
 }
@@ -11401,18 +11513,6 @@ class CountryNor extends WorldCountry {
             official: "Kingdom of Norway",
             common: "Norway",
           ),
-          namesNative: const [
-            CountryName(
-              language: LangNno(),
-              official: "Kongeriket Noreg",
-              common: "Noreg",
-            ),
-            CountryName(
-              language: LangNob(),
-              official: "Kongeriket Norge",
-              common: "Norge",
-            ),
-          ],
           tld: const [".no"],
           code: "NOR",
           codeNumeric: "578",
@@ -11432,18 +11532,6 @@ class CountryNor extends WorldCountry {
           latLng: const LatLng(62, 10),
           bordersCodes: const ["Fin", "Swe", "Rus"],
           areaMetric: 323802,
-          demonyms: const [
-            Demonyms(
-              language: LangEng(),
-              female: "Norwegian",
-              male: "Norwegian",
-            ),
-            Demonyms(
-              language: LangFra(),
-              female: "Norvégienne",
-              male: "Norvégien",
-            ),
-          ],
           emoji: "🇳🇴",
           maps: const Maps(
             googleMaps: "htWRrphA7vNgQNdSA",
@@ -11454,16 +11542,34 @@ class CountryNor extends WorldCountry {
           fifa: "NOR",
           car: const Car(sign: "N"),
           timezones: const ["UTC+01:00"],
-          capitalInfo: const CapitalInfo(
-            capital: Capital("Oslo"),
-            latLng: LatLng(59.92, 10.75),
-          ),
           postalCode:
               const PostalCode(format: "####", regExpPattern: r"^(\d{4})$"),
-          regionalBlocs: const [BlocEFTA()],
         );
   @override
   List<FiatCurrency> get currencies => const [FiatNok()];
+  @override
+  CapitalInfo get capitalInfo =>
+      const CapitalInfo(capital: Capital("Oslo"), latLng: LatLng(59.92, 10.75));
+  @override
+  List<RegionalBloc> get regionalBlocs => const [BlocEFTA()];
+  @override
+  List<Demonyms> get demonyms => const [
+        Demonyms(language: LangEng(), female: "Norwegian", male: "Norwegian"),
+        Demonyms(language: LangFra(), female: "Norvégienne", male: "Norvégien"),
+      ];
+  @override
+  List<CountryName> get namesNative => const [
+        CountryName(
+          language: LangNno(),
+          official: "Kongeriket Noreg",
+          common: "Noreg",
+        ),
+        CountryName(
+          language: LangNob(),
+          official: "Kongeriket Norge",
+          common: "Norge",
+        ),
+      ];
   @override
   List<NaturalLanguage> get languages => const [LangNno(), LangNob()];
 }
@@ -11480,13 +11586,6 @@ class CountryNpl extends WorldCountry {
             official: "Federal Democratic Republic of Nepal",
             common: "Nepal",
           ),
-          namesNative: const [
-            CountryName(
-              language: LangNep(),
-              official: "नेपाल संघीय लोकतान्त्रिक गणतन्त्र",
-              common: "नेपाल",
-            ),
-          ],
           tld: const [".np"],
           code: "NPL",
           codeNumeric: "524",
@@ -11504,14 +11603,6 @@ class CountryNpl extends WorldCountry {
           landlocked: true,
           bordersCodes: const ["Chn", "Ind"],
           areaMetric: 147181,
-          demonyms: const [
-            Demonyms(language: LangEng(), female: "Nepalese", male: "Nepalese"),
-            Demonyms(
-              language: LangFra(),
-              female: "Népalaise",
-              male: "Népalais",
-            ),
-          ],
           emoji: "🇳🇵",
           maps: const Maps(
             googleMaps: "UMj2zpbQp7B5c3yT7",
@@ -11523,15 +11614,30 @@ class CountryNpl extends WorldCountry {
           car: const Car(sign: "NEP", isRightSide: false),
           timezones: const ["UTC+05:45"],
           startOfWeek: Weekday.sunday,
-          capitalInfo: const CapitalInfo(
-            capital: Capital("Kathmandu"),
-            latLng: LatLng(27.72, 85.32),
-          ),
           postalCode: const PostalCode(),
-          regionalBlocs: const [BlocSAARC()],
         );
   @override
   List<FiatCurrency> get currencies => const [FiatNpr()];
+  @override
+  CapitalInfo get capitalInfo => const CapitalInfo(
+        capital: Capital("Kathmandu"),
+        latLng: LatLng(27.72, 85.32),
+      );
+  @override
+  List<RegionalBloc> get regionalBlocs => const [BlocSAARC()];
+  @override
+  List<Demonyms> get demonyms => const [
+        Demonyms(language: LangEng(), female: "Nepalese", male: "Nepalese"),
+        Demonyms(language: LangFra(), female: "Népalaise", male: "Népalais"),
+      ];
+  @override
+  List<CountryName> get namesNative => const [
+        CountryName(
+          language: LangNep(),
+          official: "नेपाल संघीय लोकतान्त्रिक गणतन्त्र",
+          common: "नेपाल",
+        ),
+      ];
   @override
   List<NaturalLanguage> get languages => const [LangNep()];
 }
@@ -11548,18 +11654,6 @@ class CountryNru extends WorldCountry {
             official: "Republic of Nauru",
             common: "Nauru",
           ),
-          namesNative: const [
-            CountryName(
-              language: LangEng(),
-              official: "Republic of Nauru",
-              common: "Nauru",
-            ),
-            CountryName(
-              language: LangNau(),
-              official: "Republic of Nauru",
-              common: "Nauru",
-            ),
-          ],
           tld: const [".nr"],
           code: "NRU",
           codeNumeric: "520",
@@ -11577,10 +11671,6 @@ class CountryNru extends WorldCountry {
           subregion: const Micronesia(),
           latLng: const LatLng(-0.53333333, 166.91666666),
           areaMetric: 21,
-          demonyms: const [
-            Demonyms(language: LangEng(), female: "Nauruan", male: "Nauruan"),
-            Demonyms(language: LangFra(), female: "Nauruane", male: "Nauruan"),
-          ],
           emoji: "🇳🇷",
           maps: const Maps(
             googleMaps: "kyAGw6XEJgjSMsTK7",
@@ -11590,13 +11680,32 @@ class CountryNru extends WorldCountry {
           gini: const Gini(year: 2012, coefficient: 34.8),
           car: const Car(sign: "NAU", isRightSide: false),
           timezones: const ["UTC+12:00"],
-          capitalInfo: const CapitalInfo(
-            capital: Capital("Yaren"),
-            latLng: LatLng(-0.55, 166.92),
-          ),
         );
   @override
   List<FiatCurrency> get currencies => const [FiatAud()];
+  @override
+  CapitalInfo get capitalInfo => const CapitalInfo(
+        capital: Capital("Yaren"),
+        latLng: LatLng(-0.55, 166.92),
+      );
+  @override
+  List<Demonyms> get demonyms => const [
+        Demonyms(language: LangEng(), female: "Nauruan", male: "Nauruan"),
+        Demonyms(language: LangFra(), female: "Nauruane", male: "Nauruan"),
+      ];
+  @override
+  List<CountryName> get namesNative => const [
+        CountryName(
+          language: LangEng(),
+          official: "Republic of Nauru",
+          common: "Nauru",
+        ),
+        CountryName(
+          language: LangNau(),
+          official: "Republic of Nauru",
+          common: "Nauru",
+        ),
+      ];
   @override
   List<NaturalLanguage> get languages => const [LangEng(), LangNau()];
 }
@@ -11613,18 +11722,6 @@ class CountryNzl extends WorldCountry {
             official: "New Zealand",
             common: "New Zealand",
           ),
-          namesNative: const [
-            CountryName(
-              language: LangEng(),
-              official: "New Zealand",
-              common: "New Zealand",
-            ),
-            CountryName(
-              language: LangMri(),
-              official: "Aotearoa",
-              common: "Aotearoa",
-            ),
-          ],
           tld: const [".nz"],
           code: "NZL",
           codeNumeric: "554",
@@ -11636,18 +11733,6 @@ class CountryNzl extends WorldCountry {
           subregion: const AustraliaAndNewZealand(),
           latLng: const LatLng(-41, 174),
           areaMetric: 270467,
-          demonyms: const [
-            Demonyms(
-              language: LangEng(),
-              female: "New Zealander",
-              male: "New Zealander",
-            ),
-            Demonyms(
-              language: LangFra(),
-              female: "Neo-Zélandaise",
-              male: "Neo-Zélandais",
-            ),
-          ],
           emoji: "🇳🇿",
           maps: const Maps(
             googleMaps: "xXiDQo65dwdpw9iu8",
@@ -11663,15 +11748,42 @@ class CountryNzl extends WorldCountry {
             "UTC+12:45",
             "UTC+13:00",
           ],
-          capitalInfo: const CapitalInfo(
-            capital: Capital("Wellington"),
-            latLng: LatLng(-41.3, 174.78),
-          ),
           postalCode:
               const PostalCode(format: "####", regExpPattern: r"^(\d{4})$"),
         );
   @override
   List<FiatCurrency> get currencies => const [FiatNzd()];
+  @override
+  CapitalInfo get capitalInfo => const CapitalInfo(
+        capital: Capital("Wellington"),
+        latLng: LatLng(-41.3, 174.78),
+      );
+  @override
+  List<Demonyms> get demonyms => const [
+        Demonyms(
+          language: LangEng(),
+          female: "New Zealander",
+          male: "New Zealander",
+        ),
+        Demonyms(
+          language: LangFra(),
+          female: "Neo-Zélandaise",
+          male: "Neo-Zélandais",
+        ),
+      ];
+  @override
+  List<CountryName> get namesNative => const [
+        CountryName(
+          language: LangEng(),
+          official: "New Zealand",
+          common: "New Zealand",
+        ),
+        CountryName(
+          language: LangMri(),
+          official: "Aotearoa",
+          common: "Aotearoa",
+        ),
+      ];
   @override
   List<NaturalLanguage> get languages => const [LangEng(), LangMri()];
 }
@@ -11688,13 +11800,6 @@ class CountryOmn extends WorldCountry {
             official: "Sultanate of Oman",
             common: "Oman",
           ),
-          namesNative: const [
-            CountryName(
-              language: LangAra(),
-              official: "سلطنة عمان",
-              common: "عمان",
-            ),
-          ],
           tld: const [".om"],
           code: "OMN",
           codeNumeric: "512",
@@ -11707,10 +11812,6 @@ class CountryOmn extends WorldCountry {
           latLng: const LatLng(21, 57),
           bordersCodes: const ["Sau", "Are", "Yem"],
           areaMetric: 309500,
-          demonyms: const [
-            Demonyms(language: LangEng(), female: "Omani", male: "Omani"),
-            Demonyms(language: LangFra(), female: "Omanaise", male: "Omanais"),
-          ],
           emoji: "🇴🇲",
           maps: const Maps(
             googleMaps: "L2BoXoAwDDwWecnw5",
@@ -11721,16 +11822,31 @@ class CountryOmn extends WorldCountry {
           car: const Car(sign: "OM"),
           timezones: const ["UTC+04:00"],
           startOfWeek: Weekday.sunday,
-          capitalInfo: const CapitalInfo(
-            capital: Capital("Muscat"),
-            latLng: LatLng(23.62, 58.58),
-          ),
           postalCode:
               const PostalCode(format: "###", regExpPattern: r"^(\d{3})$"),
-          regionalBlocs: const [BlocAL()],
         );
   @override
   List<FiatCurrency> get currencies => const [FiatOmr()];
+  @override
+  CapitalInfo get capitalInfo => const CapitalInfo(
+        capital: Capital("Muscat"),
+        latLng: LatLng(23.62, 58.58),
+      );
+  @override
+  List<RegionalBloc> get regionalBlocs => const [BlocAL()];
+  @override
+  List<Demonyms> get demonyms => const [
+        Demonyms(language: LangEng(), female: "Omani", male: "Omani"),
+        Demonyms(language: LangFra(), female: "Omanaise", male: "Omanais"),
+      ];
+  @override
+  List<CountryName> get namesNative => const [
+        CountryName(
+          language: LangAra(),
+          official: "سلطنة عمان",
+          common: "عمان",
+        ),
+      ];
   @override
   List<NaturalLanguage> get languages => const [LangAra()];
 }
@@ -11747,18 +11863,6 @@ class CountryPak extends WorldCountry {
             official: "Islamic Republic of Pakistan",
             common: "Pakistan",
           ),
-          namesNative: const [
-            CountryName(
-              language: LangEng(),
-              official: "Islamic Republic of Pakistan",
-              common: "Pakistan",
-            ),
-            CountryName(
-              language: LangUrd(),
-              official: "اسلامی جمہوریۂ پاكستان",
-              common: "پاكستان",
-            ),
-          ],
           tld: const [".pk"],
           code: "PAK",
           codeNumeric: "586",
@@ -11776,18 +11880,6 @@ class CountryPak extends WorldCountry {
           latLng: const LatLng(30, 70),
           bordersCodes: const ["Afg", "Chn", "Ind", "Irn"],
           areaMetric: 881912,
-          demonyms: const [
-            Demonyms(
-              language: LangEng(),
-              female: "Pakistani",
-              male: "Pakistani",
-            ),
-            Demonyms(
-              language: LangFra(),
-              female: "Pakistanaise",
-              male: "Pakistanais",
-            ),
-          ],
           emoji: "🇵🇰",
           maps: const Maps(
             googleMaps: "5LYujdfR5yLUXoERA",
@@ -11798,15 +11890,39 @@ class CountryPak extends WorldCountry {
           fifa: "PAK",
           car: const Car(sign: "PK", isRightSide: false),
           timezones: const ["UTC+05:00"],
-          capitalInfo: const CapitalInfo(
-            capital: Capital("Islamabad"),
-            latLng: LatLng(33.68, 73.05),
-          ),
           postalCode: const PostalCode(),
-          regionalBlocs: const [BlocSAARC()],
         );
   @override
   List<FiatCurrency> get currencies => const [FiatPkr()];
+  @override
+  CapitalInfo get capitalInfo => const CapitalInfo(
+        capital: Capital("Islamabad"),
+        latLng: LatLng(33.68, 73.05),
+      );
+  @override
+  List<RegionalBloc> get regionalBlocs => const [BlocSAARC()];
+  @override
+  List<Demonyms> get demonyms => const [
+        Demonyms(language: LangEng(), female: "Pakistani", male: "Pakistani"),
+        Demonyms(
+          language: LangFra(),
+          female: "Pakistanaise",
+          male: "Pakistanais",
+        ),
+      ];
+  @override
+  List<CountryName> get namesNative => const [
+        CountryName(
+          language: LangEng(),
+          official: "Islamic Republic of Pakistan",
+          common: "Pakistan",
+        ),
+        CountryName(
+          language: LangUrd(),
+          official: "اسلامی جمہوریۂ پاكستان",
+          common: "پاكستان",
+        ),
+      ];
   @override
   List<NaturalLanguage> get languages => const [LangEng(), LangUrd()];
 }
@@ -11823,13 +11939,6 @@ class CountryPan extends WorldCountry {
             official: "Republic of Panama",
             common: "Panama",
           ),
-          namesNative: const [
-            CountryName(
-              language: LangSpa(),
-              official: "República de Panamá",
-              common: "Panamá",
-            ),
-          ],
           tld: const [".pa"],
           code: "PAN",
           codeNumeric: "591",
@@ -11846,18 +11955,6 @@ class CountryPan extends WorldCountry {
           latLng: const LatLng(9, -80),
           bordersCodes: const ["Col", "Cri"],
           areaMetric: 75417,
-          demonyms: const [
-            Demonyms(
-              language: LangEng(),
-              female: "Panamanian",
-              male: "Panamanian",
-            ),
-            Demonyms(
-              language: LangFra(),
-              female: "Panaméenne",
-              male: "Panaméen",
-            ),
-          ],
           emoji: "🇵🇦",
           maps: const Maps(
             googleMaps: "sEN7sKqeawa5oPNLA",
@@ -11868,14 +11965,29 @@ class CountryPan extends WorldCountry {
           fifa: "PAN",
           car: const Car(sign: "PA"),
           timezones: const ["UTC-05:00"],
-          capitalInfo: const CapitalInfo(
-            capital: Capital("Panama City"),
-            latLng: LatLng(8.97, -79.53),
-          ),
-          regionalBlocs: const [BlocCAIS()],
         );
   @override
   List<FiatCurrency> get currencies => const [FiatPab(), FiatUsd()];
+  @override
+  CapitalInfo get capitalInfo => const CapitalInfo(
+        capital: Capital("Panama City"),
+        latLng: LatLng(8.97, -79.53),
+      );
+  @override
+  List<RegionalBloc> get regionalBlocs => const [BlocCAIS()];
+  @override
+  List<Demonyms> get demonyms => const [
+        Demonyms(language: LangEng(), female: "Panamanian", male: "Panamanian"),
+        Demonyms(language: LangFra(), female: "Panaméenne", male: "Panaméen"),
+      ];
+  @override
+  List<CountryName> get namesNative => const [
+        CountryName(
+          language: LangSpa(),
+          official: "República de Panamá",
+          common: "Panamá",
+        ),
+      ];
   @override
   List<NaturalLanguage> get languages => const [LangSpa()];
 }
@@ -11892,13 +12004,6 @@ class CountryPcn extends WorldCountry {
             official: "Pitcairn Group of Islands",
             common: "Pitcairn Islands",
           ),
-          namesNative: const [
-            CountryName(
-              language: LangEng(),
-              official: "Pitcairn Group of Islands",
-              common: "Pitcairn Islands",
-            ),
-          ],
           tld: const [".pn"],
           code: "PCN",
           codeNumeric: "612",
@@ -11915,18 +12020,6 @@ class CountryPcn extends WorldCountry {
           subregion: const Polynesia(),
           latLng: const LatLng(-25.06666666, -130.1),
           areaMetric: 47,
-          demonyms: const [
-            Demonyms(
-              language: LangEng(),
-              female: "Pitcairn Islander",
-              male: "Pitcairn Islander",
-            ),
-            Demonyms(
-              language: LangFra(),
-              female: "Pitcairnaise",
-              male: "Pitcairnais",
-            ),
-          ],
           emoji: "🇵🇳",
           maps: const Maps(
             googleMaps: "XGJMnMAigXjXcxSa7",
@@ -11936,13 +12029,35 @@ class CountryPcn extends WorldCountry {
           car: const Car(sign: "GB", isRightSide: false),
           timezones: const ["UTC-08:00"],
           hasCoatOfArms: false,
-          capitalInfo: const CapitalInfo(
-            capital: Capital("Adamstown"),
-            latLng: LatLng(-25.07, -130.08),
-          ),
         );
   @override
   List<FiatCurrency> get currencies => const [FiatNzd()];
+  @override
+  CapitalInfo get capitalInfo => const CapitalInfo(
+        capital: Capital("Adamstown"),
+        latLng: LatLng(-25.07, -130.08),
+      );
+  @override
+  List<Demonyms> get demonyms => const [
+        Demonyms(
+          language: LangEng(),
+          female: "Pitcairn Islander",
+          male: "Pitcairn Islander",
+        ),
+        Demonyms(
+          language: LangFra(),
+          female: "Pitcairnaise",
+          male: "Pitcairnais",
+        ),
+      ];
+  @override
+  List<CountryName> get namesNative => const [
+        CountryName(
+          language: LangEng(),
+          official: "Pitcairn Group of Islands",
+          common: "Pitcairn Islands",
+        ),
+      ];
   @override
   List<NaturalLanguage> get languages => const [LangEng()];
 }
@@ -11959,23 +12074,6 @@ class CountryPer extends WorldCountry {
             official: "Republic of Peru",
             common: "Peru",
           ),
-          namesNative: const [
-            CountryName(
-              language: LangAym(),
-              official: "Piruw Suyu",
-              common: "Piruw",
-            ),
-            CountryName(
-              language: LangQue(),
-              official: "Piruw Ripuwlika",
-              common: "Piruw",
-            ),
-            CountryName(
-              language: LangSpa(),
-              official: "República del Perú",
-              common: "Perú",
-            ),
-          ],
           tld: const [".pe"],
           code: "PER",
           codeNumeric: "604",
@@ -11988,14 +12086,6 @@ class CountryPer extends WorldCountry {
           latLng: const LatLng(-10, -76),
           bordersCodes: const ["Bol", "Bra", "Chl", "Col", "Ecu"],
           areaMetric: 1285216,
-          demonyms: const [
-            Demonyms(language: LangEng(), female: "Peruvian", male: "Peruvian"),
-            Demonyms(
-              language: LangFra(),
-              female: "Péruvienne",
-              male: "Péruvien",
-            ),
-          ],
           emoji: "🇵🇪",
           maps: const Maps(
             googleMaps: "uDWEUaXNcZTng1fP6",
@@ -12006,15 +12096,40 @@ class CountryPer extends WorldCountry {
           fifa: "PER",
           car: const Car(sign: "PE"),
           timezones: const ["UTC-05:00"],
-          capitalInfo: const CapitalInfo(
-            capital: Capital("Lima"),
-            latLng: LatLng(-12.05, -77.05),
-          ),
           postalCode: const PostalCode(),
-          regionalBlocs: const [BlocPA(), BlocUSAN()],
         );
   @override
   List<FiatCurrency> get currencies => const [FiatPen()];
+  @override
+  CapitalInfo get capitalInfo => const CapitalInfo(
+        capital: Capital("Lima"),
+        latLng: LatLng(-12.05, -77.05),
+      );
+  @override
+  List<RegionalBloc> get regionalBlocs => const [BlocPA(), BlocUSAN()];
+  @override
+  List<Demonyms> get demonyms => const [
+        Demonyms(language: LangEng(), female: "Peruvian", male: "Peruvian"),
+        Demonyms(language: LangFra(), female: "Péruvienne", male: "Péruvien"),
+      ];
+  @override
+  List<CountryName> get namesNative => const [
+        CountryName(
+          language: LangAym(),
+          official: "Piruw Suyu",
+          common: "Piruw",
+        ),
+        CountryName(
+          language: LangQue(),
+          official: "Piruw Ripuwlika",
+          common: "Piruw",
+        ),
+        CountryName(
+          language: LangSpa(),
+          official: "República del Perú",
+          common: "Perú",
+        ),
+      ];
   @override
   List<NaturalLanguage> get languages =>
       const [LangAym(), LangQue(), LangSpa()];
@@ -12032,18 +12147,6 @@ class CountryPhl extends WorldCountry {
             official: "Republic of the Philippines",
             common: "Philippines",
           ),
-          namesNative: const [
-            CountryName(
-              language: LangEng(),
-              official: "Republic of the Philippines",
-              common: "Philippines",
-            ),
-            CountryName(
-              language: LangTgl(),
-              official: "Republika ng Pilipinas",
-              common: "Pilipinas",
-            ),
-          ],
           tld: const [".ph"],
           code: "PHL",
           codeNumeric: "608",
@@ -12059,14 +12162,6 @@ class CountryPhl extends WorldCountry {
           subregion: const SouthEasternAsia(),
           latLng: const LatLng(13, 122),
           areaMetric: 342353,
-          demonyms: const [
-            Demonyms(language: LangEng(), female: "Filipino", male: "Filipino"),
-            Demonyms(
-              language: LangFra(),
-              female: "Philippine",
-              male: "Philippin",
-            ),
-          ],
           emoji: "🇵🇭",
           maps: const Maps(
             googleMaps: "k8T2fb5VMUfsWFX6A",
@@ -12077,16 +12172,36 @@ class CountryPhl extends WorldCountry {
           fifa: "PHI",
           car: const Car(sign: "RP"),
           timezones: const ["UTC+08:00"],
-          capitalInfo: const CapitalInfo(
-            capital: Capital("Manila"),
-            latLng: LatLng(14.6, 120.97),
-          ),
           postalCode:
               const PostalCode(format: "####", regExpPattern: r"^(\d{4})$"),
-          regionalBlocs: const [BlocASEAN()],
         );
   @override
   List<FiatCurrency> get currencies => const [FiatPhp()];
+  @override
+  CapitalInfo get capitalInfo => const CapitalInfo(
+        capital: Capital("Manila"),
+        latLng: LatLng(14.6, 120.97),
+      );
+  @override
+  List<RegionalBloc> get regionalBlocs => const [BlocASEAN()];
+  @override
+  List<Demonyms> get demonyms => const [
+        Demonyms(language: LangEng(), female: "Filipino", male: "Filipino"),
+        Demonyms(language: LangFra(), female: "Philippine", male: "Philippin"),
+      ];
+  @override
+  List<CountryName> get namesNative => const [
+        CountryName(
+          language: LangEng(),
+          official: "Republic of the Philippines",
+          common: "Philippines",
+        ),
+        CountryName(
+          language: LangTgl(),
+          official: "Republika ng Pilipinas",
+          common: "Pilipinas",
+        ),
+      ];
   @override
   List<NaturalLanguage> get languages => const [LangEng(), LangTgl()];
 }
@@ -12103,13 +12218,6 @@ class CountryPlw extends WorldCountry {
             official: "Republic of Palau",
             common: "Palau",
           ),
-          namesNative: const [
-            CountryName(
-              language: LangEng(),
-              official: "Republic of Palau",
-              common: "Palau",
-            ),
-          ],
           tld: const [".pw"],
           code: "PLW",
           codeNumeric: "585",
@@ -12121,10 +12229,6 @@ class CountryPlw extends WorldCountry {
           subregion: const Micronesia(),
           latLng: const LatLng(7.5, 134.5),
           areaMetric: 459,
-          demonyms: const [
-            Demonyms(language: LangEng(), female: "Palauan", male: "Palauan"),
-            Demonyms(language: LangFra(), female: "Paluane", male: "Paluan"),
-          ],
           emoji: "🇵🇼",
           maps: const Maps(
             googleMaps: "MVasQBbUkQP7qQDR9",
@@ -12133,15 +12237,29 @@ class CountryPlw extends WorldCountry {
           population: 18092,
           car: const Car(sign: "PAL"),
           timezones: const ["UTC+09:00"],
-          capitalInfo: const CapitalInfo(
-            capital: Capital("Ngerulmud"),
-            latLng: LatLng(7.5, 134.62),
-          ),
           postalCode:
               const PostalCode(format: "96940", regExpPattern: r"^(96940)$"),
         );
   @override
   List<FiatCurrency> get currencies => const [FiatUsd()];
+  @override
+  CapitalInfo get capitalInfo => const CapitalInfo(
+        capital: Capital("Ngerulmud"),
+        latLng: LatLng(7.5, 134.62),
+      );
+  @override
+  List<Demonyms> get demonyms => const [
+        Demonyms(language: LangEng(), female: "Palauan", male: "Palauan"),
+        Demonyms(language: LangFra(), female: "Paluane", male: "Paluan"),
+      ];
+  @override
+  List<CountryName> get namesNative => const [
+        CountryName(
+          language: LangEng(),
+          official: "Republic of Palau",
+          common: "Palau",
+        ),
+      ];
   @override
   List<NaturalLanguage> get languages => const [LangEng()];
 }
@@ -12158,18 +12276,6 @@ class CountryPng extends WorldCountry {
             official: "Independent State of Papua New Guinea",
             common: "Papua New Guinea",
           ),
-          namesNative: const [
-            CountryName(
-              language: LangEng(),
-              official: "Independent State of Papua New Guinea",
-              common: "Papua New Guinea",
-            ),
-            CountryName(
-              language: LangHmo(),
-              official: "Independen Stet bilong Papua Niugini",
-              common: "Papua Niu Gini",
-            ),
-          ],
           tld: const [".pg"],
           code: "PNG",
           codeNumeric: "598",
@@ -12186,18 +12292,6 @@ class CountryPng extends WorldCountry {
           latLng: const LatLng(-6, 147),
           bordersCodes: const ["Idn"],
           areaMetric: 462840,
-          demonyms: const [
-            Demonyms(
-              language: LangEng(),
-              female: "Papua New Guinean",
-              male: "Papua New Guinean",
-            ),
-            Demonyms(
-              language: LangFra(),
-              female: "Papouasienne",
-              male: "Papouasien",
-            ),
-          ],
           emoji: "🇵🇬",
           maps: const Maps(
             googleMaps: "ChGmzZBjZ3vnBwR2A",
@@ -12208,15 +12302,42 @@ class CountryPng extends WorldCountry {
           fifa: "PNG",
           car: const Car(sign: "PNG", isRightSide: false),
           timezones: const ["UTC+10:00"],
-          capitalInfo: const CapitalInfo(
-            capital: Capital("Port Moresby"),
-            latLng: LatLng(-9.45, 147.18),
-          ),
           postalCode:
               const PostalCode(format: "###", regExpPattern: r"^(\d{3})$"),
         );
   @override
   List<FiatCurrency> get currencies => const [FiatPgk()];
+  @override
+  CapitalInfo get capitalInfo => const CapitalInfo(
+        capital: Capital("Port Moresby"),
+        latLng: LatLng(-9.45, 147.18),
+      );
+  @override
+  List<Demonyms> get demonyms => const [
+        Demonyms(
+          language: LangEng(),
+          female: "Papua New Guinean",
+          male: "Papua New Guinean",
+        ),
+        Demonyms(
+          language: LangFra(),
+          female: "Papouasienne",
+          male: "Papouasien",
+        ),
+      ];
+  @override
+  List<CountryName> get namesNative => const [
+        CountryName(
+          language: LangEng(),
+          official: "Independent State of Papua New Guinea",
+          common: "Papua New Guinea",
+        ),
+        CountryName(
+          language: LangHmo(),
+          official: "Independen Stet bilong Papua Niugini",
+          common: "Papua Niu Gini",
+        ),
+      ];
   @override
   List<NaturalLanguage> get languages => const [LangEng(), LangHmo()];
 }
@@ -12233,13 +12354,6 @@ class CountryPol extends WorldCountry {
             official: "Republic of Poland",
             common: "Poland",
           ),
-          namesNative: const [
-            CountryName(
-              language: LangPol(),
-              official: "Rzeczpospolita Polska",
-              common: "Polska",
-            ),
-          ],
           tld: const [".pl"],
           code: "POL",
           codeNumeric: "616",
@@ -12256,14 +12370,6 @@ class CountryPol extends WorldCountry {
           latLng: const LatLng(52, 20),
           bordersCodes: const ["Blr", "Cze", "Deu", "Ltu", "Rus", "Svk", "Ukr"],
           areaMetric: 312679,
-          demonyms: const [
-            Demonyms(language: LangEng(), female: "Polish", male: "Polish"),
-            Demonyms(
-              language: LangFra(),
-              female: "Polonaise",
-              male: "Polonais",
-            ),
-          ],
           emoji: "🇵🇱",
           maps: const Maps(
             googleMaps: "gY9Xw4Sf4415P4949",
@@ -12274,15 +12380,28 @@ class CountryPol extends WorldCountry {
           fifa: "POL",
           car: const Car(sign: "PL"),
           timezones: const ["UTC+01:00"],
-          capitalInfo: const CapitalInfo(
-            capital: Capital("Warsaw"),
-            latLng: LatLng(52.25, 21),
-          ),
           postalCode: const PostalCode(format: "##-###"),
-          regionalBlocs: const [BlocEU()],
         );
   @override
   List<FiatCurrency> get currencies => const [FiatPln()];
+  @override
+  CapitalInfo get capitalInfo =>
+      const CapitalInfo(capital: Capital("Warsaw"), latLng: LatLng(52.25, 21));
+  @override
+  List<RegionalBloc> get regionalBlocs => const [BlocEU()];
+  @override
+  List<Demonyms> get demonyms => const [
+        Demonyms(language: LangEng(), female: "Polish", male: "Polish"),
+        Demonyms(language: LangFra(), female: "Polonaise", male: "Polonais"),
+      ];
+  @override
+  List<CountryName> get namesNative => const [
+        CountryName(
+          language: LangPol(),
+          official: "Rzeczpospolita Polska",
+          common: "Polska",
+        ),
+      ];
   @override
   List<NaturalLanguage> get languages => const [LangPol()];
 }
@@ -12299,18 +12418,6 @@ class CountryPri extends WorldCountry {
             official: "Commonwealth of Puerto Rico",
             common: "Puerto Rico",
           ),
-          namesNative: const [
-            CountryName(
-              language: LangEng(),
-              official: "Commonwealth of Puerto Rico",
-              common: "Puerto Rico",
-            ),
-            CountryName(
-              language: LangSpa(),
-              official: "Estado Libre Asociado de Puerto Rico",
-              common: "Puerto Rico",
-            ),
-          ],
           tld: const [".pr"],
           code: "PRI",
           codeNumeric: "630",
@@ -12328,18 +12435,6 @@ class CountryPri extends WorldCountry {
           subregion: const Caribbean(),
           latLng: const LatLng(18.25, -66.5),
           areaMetric: 8870,
-          demonyms: const [
-            Demonyms(
-              language: LangEng(),
-              female: "Puerto Rican",
-              male: "Puerto Rican",
-            ),
-            Demonyms(
-              language: LangFra(),
-              female: "Portoricaine",
-              male: "Portoricain",
-            ),
-          ],
           emoji: "🇵🇷",
           maps: const Maps(
             googleMaps: "sygfDbtwn389wu8x5",
@@ -12350,10 +12445,6 @@ class CountryPri extends WorldCountry {
           car: const Car(sign: "USA"),
           timezones: const ["UTC-04:00"],
           hasCoatOfArms: false,
-          capitalInfo: const CapitalInfo(
-            capital: Capital("San Juan"),
-            latLng: LatLng(18.47, -66.12),
-          ),
           postalCode: const PostalCode(
             format: "#####-####",
             regExpPattern: r"^(\d{9})$",
@@ -12361,6 +12452,37 @@ class CountryPri extends WorldCountry {
         );
   @override
   List<FiatCurrency> get currencies => const [FiatUsd()];
+  @override
+  CapitalInfo get capitalInfo => const CapitalInfo(
+        capital: Capital("San Juan"),
+        latLng: LatLng(18.47, -66.12),
+      );
+  @override
+  List<Demonyms> get demonyms => const [
+        Demonyms(
+          language: LangEng(),
+          female: "Puerto Rican",
+          male: "Puerto Rican",
+        ),
+        Demonyms(
+          language: LangFra(),
+          female: "Portoricaine",
+          male: "Portoricain",
+        ),
+      ];
+  @override
+  List<CountryName> get namesNative => const [
+        CountryName(
+          language: LangEng(),
+          official: "Commonwealth of Puerto Rico",
+          common: "Puerto Rico",
+        ),
+        CountryName(
+          language: LangSpa(),
+          official: "Estado Libre Asociado de Puerto Rico",
+          common: "Puerto Rico",
+        ),
+      ];
   @override
   List<NaturalLanguage> get languages => const [LangEng(), LangSpa()];
 }
@@ -12377,13 +12499,6 @@ class CountryPrk extends WorldCountry {
             official: "Democratic People's Republic of Korea",
             common: "North Korea",
           ),
-          namesNative: const [
-            CountryName(
-              language: LangKor(),
-              official: "조선민주주의인민공화국",
-              common: "조선",
-            ),
-          ],
           tld: const [".kp"],
           code: "PRK",
           codeNumeric: "408",
@@ -12405,18 +12520,6 @@ class CountryPrk extends WorldCountry {
           latLng: const LatLng(40, 127),
           bordersCodes: const ["Chn", "Kor", "Rus"],
           areaMetric: 120538,
-          demonyms: const [
-            Demonyms(
-              language: LangEng(),
-              female: "North Korean",
-              male: "North Korean",
-            ),
-            Demonyms(
-              language: LangFra(),
-              female: "Nord-coréenne",
-              male: "Nord-coréen",
-            ),
-          ],
           emoji: "🇰🇵",
           maps: const Maps(
             googleMaps: "9q5T2DMeH5JL7Tky6",
@@ -12426,15 +12529,33 @@ class CountryPrk extends WorldCountry {
           fifa: "PRK",
           car: const Car(),
           timezones: const ["UTC+09:00"],
-          capitalInfo: const CapitalInfo(
-            capital: Capital("Pyongyang"),
-            latLng: LatLng(39.02, 125.75),
-          ),
           postalCode:
               const PostalCode(format: "###-###", regExpPattern: r"^(\d{6})$"),
         );
   @override
   List<FiatCurrency> get currencies => const [FiatKpw()];
+  @override
+  CapitalInfo get capitalInfo => const CapitalInfo(
+        capital: Capital("Pyongyang"),
+        latLng: LatLng(39.02, 125.75),
+      );
+  @override
+  List<Demonyms> get demonyms => const [
+        Demonyms(
+          language: LangEng(),
+          female: "North Korean",
+          male: "North Korean",
+        ),
+        Demonyms(
+          language: LangFra(),
+          female: "Nord-coréenne",
+          male: "Nord-coréen",
+        ),
+      ];
+  @override
+  List<CountryName> get namesNative => const [
+        CountryName(language: LangKor(), official: "조선민주주의인민공화국", common: "조선"),
+      ];
   @override
   List<NaturalLanguage> get languages => const [LangKor()];
 }
@@ -12451,13 +12572,6 @@ class CountryPrt extends WorldCountry {
             official: "Portuguese Republic",
             common: "Portugal",
           ),
-          namesNative: const [
-            CountryName(
-              language: LangPor(),
-              official: "República Portuguesa",
-              common: "Portugal",
-            ),
-          ],
           tld: const [".pt"],
           code: "PRT",
           codeNumeric: "620",
@@ -12475,18 +12589,6 @@ class CountryPrt extends WorldCountry {
           latLng: const LatLng(39.5, -8),
           bordersCodes: const ["Esp"],
           areaMetric: 92090,
-          demonyms: const [
-            Demonyms(
-              language: LangEng(),
-              female: "Portuguese",
-              male: "Portuguese",
-            ),
-            Demonyms(
-              language: LangFra(),
-              female: "Portugaise",
-              male: "Portugais",
-            ),
-          ],
           emoji: "🇵🇹",
           maps: const Maps(
             googleMaps: "BaTBSyc4GWMmbAKB8",
@@ -12497,16 +12599,31 @@ class CountryPrt extends WorldCountry {
           fifa: "POR",
           car: const Car(sign: "P"),
           timezones: const ["UTC-01:00", "UTC+00:00"],
-          capitalInfo: const CapitalInfo(
-            capital: Capital("Lisbon"),
-            latLng: LatLng(38.72, -9.13),
-          ),
           postalCode:
               const PostalCode(format: "####-###", regExpPattern: r"^(\d{7})$"),
-          regionalBlocs: const [BlocEU()],
         );
   @override
   List<FiatCurrency> get currencies => const [FiatEur()];
+  @override
+  CapitalInfo get capitalInfo => const CapitalInfo(
+        capital: Capital("Lisbon"),
+        latLng: LatLng(38.72, -9.13),
+      );
+  @override
+  List<RegionalBloc> get regionalBlocs => const [BlocEU()];
+  @override
+  List<Demonyms> get demonyms => const [
+        Demonyms(language: LangEng(), female: "Portuguese", male: "Portuguese"),
+        Demonyms(language: LangFra(), female: "Portugaise", male: "Portugais"),
+      ];
+  @override
+  List<CountryName> get namesNative => const [
+        CountryName(
+          language: LangPor(),
+          official: "República Portuguesa",
+          common: "Portugal",
+        ),
+      ];
   @override
   List<NaturalLanguage> get languages => const [LangPor()];
 }
@@ -12523,18 +12640,6 @@ class CountryPry extends WorldCountry {
             official: "Republic of Paraguay",
             common: "Paraguay",
           ),
-          namesNative: const [
-            CountryName(
-              language: LangGrn(),
-              official: "Tetã Paraguái",
-              common: "Paraguái",
-            ),
-            CountryName(
-              language: LangSpa(),
-              official: "República de Paraguay",
-              common: "Paraguay",
-            ),
-          ],
           tld: const [".py"],
           code: "PRY",
           codeNumeric: "600",
@@ -12553,18 +12658,6 @@ class CountryPry extends WorldCountry {
           landlocked: true,
           bordersCodes: const ["Arg", "Bol", "Bra"],
           areaMetric: 406752,
-          demonyms: const [
-            Demonyms(
-              language: LangEng(),
-              female: "Paraguayan",
-              male: "Paraguayan",
-            ),
-            Demonyms(
-              language: LangFra(),
-              female: "Paraguayenne",
-              male: "Paraguayen",
-            ),
-          ],
           emoji: "🇵🇾",
           maps: const Maps(
             googleMaps: "JtnqG73WJn1Gx6mz6",
@@ -12575,16 +12668,40 @@ class CountryPry extends WorldCountry {
           fifa: "PAR",
           car: const Car(sign: "PY"),
           timezones: const ["UTC-04:00"],
-          capitalInfo: const CapitalInfo(
-            capital: Capital("Asunción"),
-            latLng: LatLng(-25.28, -57.57),
-          ),
           postalCode:
               const PostalCode(format: "######", regExpPattern: r"^(\d{6})$"),
-          regionalBlocs: const [BlocUSAN()],
         );
   @override
   List<FiatCurrency> get currencies => const [FiatPyg()];
+  @override
+  CapitalInfo get capitalInfo => const CapitalInfo(
+        capital: Capital("Asunción"),
+        latLng: LatLng(-25.28, -57.57),
+      );
+  @override
+  List<RegionalBloc> get regionalBlocs => const [BlocUSAN()];
+  @override
+  List<Demonyms> get demonyms => const [
+        Demonyms(language: LangEng(), female: "Paraguayan", male: "Paraguayan"),
+        Demonyms(
+          language: LangFra(),
+          female: "Paraguayenne",
+          male: "Paraguayen",
+        ),
+      ];
+  @override
+  List<CountryName> get namesNative => const [
+        CountryName(
+          language: LangGrn(),
+          official: "Tetã Paraguái",
+          common: "Paraguái",
+        ),
+        CountryName(
+          language: LangSpa(),
+          official: "República de Paraguay",
+          common: "Paraguay",
+        ),
+      ];
   @override
   List<NaturalLanguage> get languages => const [LangGrn(), LangSpa()];
 }
@@ -12601,13 +12718,6 @@ class CountryPse extends WorldCountry {
             official: "State of Palestine",
             common: "Palestine",
           ),
-          namesNative: const [
-            CountryName(
-              language: LangAra(),
-              official: "دولة فلسطين",
-              common: "فلسطين",
-            ),
-          ],
           tld: const [".ps", "فلسطين."],
           code: "PSE",
           codeNumeric: "275",
@@ -12627,18 +12737,6 @@ class CountryPse extends WorldCountry {
           latLng: const LatLng(31.9, 35.2),
           bordersCodes: const ["Isr", "Egy", "Jor"],
           areaMetric: 6220,
-          demonyms: const [
-            Demonyms(
-              language: LangEng(),
-              female: "Palestinian",
-              male: "Palestinian",
-            ),
-            Demonyms(
-              language: LangFra(),
-              female: "Palestinienne",
-              male: "Palestinien",
-            ),
-          ],
           emoji: "🇵🇸",
           maps: const Maps(
             googleMaps: "QvTbkRdmdWEoYAmt5",
@@ -12650,14 +12748,37 @@ class CountryPse extends WorldCountry {
           car: const Car(sign: "PS"),
           timezones: const ["UTC+02:00"],
           startOfWeek: Weekday.sunday,
-          capitalInfo: const CapitalInfo(
-            capital: Capital("Ramallah", deJure: "Jerusalem"),
-            latLng: LatLng(31.9, 35.2),
-          ),
-          regionalBlocs: const [BlocAL()],
         );
   @override
   List<FiatCurrency> get currencies => const [FiatEgp(), FiatIls(), FiatJod()];
+  @override
+  CapitalInfo get capitalInfo => const CapitalInfo(
+        capital: Capital("Ramallah", deJure: "Jerusalem"),
+        latLng: LatLng(31.9, 35.2),
+      );
+  @override
+  List<RegionalBloc> get regionalBlocs => const [BlocAL()];
+  @override
+  List<Demonyms> get demonyms => const [
+        Demonyms(
+          language: LangEng(),
+          female: "Palestinian",
+          male: "Palestinian",
+        ),
+        Demonyms(
+          language: LangFra(),
+          female: "Palestinienne",
+          male: "Palestinien",
+        ),
+      ];
+  @override
+  List<CountryName> get namesNative => const [
+        CountryName(
+          language: LangAra(),
+          official: "دولة فلسطين",
+          common: "فلسطين",
+        ),
+      ];
   @override
   List<NaturalLanguage> get languages => const [LangAra()];
 }
@@ -12674,13 +12795,6 @@ class CountryPyf extends WorldCountry {
             official: "French Polynesia",
             common: "French Polynesia",
           ),
-          namesNative: const [
-            CountryName(
-              language: LangFra(),
-              official: "Polynésie française",
-              common: "Polynésie française",
-            ),
-          ],
           tld: const [".pf"],
           code: "PYF",
           codeNumeric: "258",
@@ -12698,18 +12812,6 @@ class CountryPyf extends WorldCountry {
           subregion: const Polynesia(),
           latLng: const LatLng(17.6797, 149.4068),
           areaMetric: 4167,
-          demonyms: const [
-            Demonyms(
-              language: LangEng(),
-              female: "French Polynesian",
-              male: "French Polynesian",
-            ),
-            Demonyms(
-              language: LangFra(),
-              female: "Polynésienne",
-              male: "Polynésien",
-            ),
-          ],
           emoji: "🇵🇫",
           maps: const Maps(
             googleMaps: "xgg6BQTRyeQg4e1m6",
@@ -12718,14 +12820,36 @@ class CountryPyf extends WorldCountry {
           population: 280904,
           car: const Car(sign: "F"),
           timezones: const ["UTC-10:00", "UTC-09:30", "UTC-09:00"],
-          capitalInfo: const CapitalInfo(
-            capital: Capital("Papeetē"),
-            latLng: LatLng(-17.53, -149.56),
-          ),
           postalCode: const PostalCode(regExpPattern: r"^((97|98)7\d{2})$"),
         );
   @override
   List<FiatCurrency> get currencies => const [FiatXpf()];
+  @override
+  CapitalInfo get capitalInfo => const CapitalInfo(
+        capital: Capital("Papeetē"),
+        latLng: LatLng(-17.53, -149.56),
+      );
+  @override
+  List<Demonyms> get demonyms => const [
+        Demonyms(
+          language: LangEng(),
+          female: "French Polynesian",
+          male: "French Polynesian",
+        ),
+        Demonyms(
+          language: LangFra(),
+          female: "Polynésienne",
+          male: "Polynésien",
+        ),
+      ];
+  @override
+  List<CountryName> get namesNative => const [
+        CountryName(
+          language: LangFra(),
+          official: "Polynésie française",
+          common: "Polynésie française",
+        ),
+      ];
   @override
   List<NaturalLanguage> get languages => const [LangFra()];
 }
@@ -12742,13 +12866,6 @@ class CountryQat extends WorldCountry {
             official: "State of Qatar",
             common: "Qatar",
           ),
-          namesNative: const [
-            CountryName(
-              language: LangAra(),
-              official: "دولة قطر",
-              common: "قطر",
-            ),
-          ],
           tld: const [".qa", "قطر."],
           code: "QAT",
           codeNumeric: "634",
@@ -12761,14 +12878,6 @@ class CountryQat extends WorldCountry {
           latLng: const LatLng(25.5, 51.25),
           bordersCodes: const ["Sau"],
           areaMetric: 11586,
-          demonyms: const [
-            Demonyms(language: LangEng(), female: "Qatari", male: "Qatari"),
-            Demonyms(
-              language: LangFra(),
-              female: "Qatarienne",
-              male: "Qatarien",
-            ),
-          ],
           emoji: "🇶🇦",
           maps: const Maps(
             googleMaps: "ZV76Y49z7LLUZ2KQ6",
@@ -12779,14 +12888,23 @@ class CountryQat extends WorldCountry {
           car: const Car(sign: "Q"),
           timezones: const ["UTC+03:00"],
           startOfWeek: Weekday.sunday,
-          capitalInfo: const CapitalInfo(
-            capital: Capital("Doha"),
-            latLng: LatLng(25.28, 51.53),
-          ),
-          regionalBlocs: const [BlocAL()],
         );
   @override
   List<FiatCurrency> get currencies => const [FiatQar()];
+  @override
+  CapitalInfo get capitalInfo =>
+      const CapitalInfo(capital: Capital("Doha"), latLng: LatLng(25.28, 51.53));
+  @override
+  List<RegionalBloc> get regionalBlocs => const [BlocAL()];
+  @override
+  List<Demonyms> get demonyms => const [
+        Demonyms(language: LangEng(), female: "Qatari", male: "Qatari"),
+        Demonyms(language: LangFra(), female: "Qatarienne", male: "Qatarien"),
+      ];
+  @override
+  List<CountryName> get namesNative => const [
+        CountryName(language: LangAra(), official: "دولة قطر", common: "قطر"),
+      ];
   @override
   List<NaturalLanguage> get languages => const [LangAra()];
 }
@@ -12803,13 +12921,6 @@ class CountryReu extends WorldCountry {
             official: "Réunion Island",
             common: "Réunion",
           ),
-          namesNative: const [
-            CountryName(
-              language: LangFra(),
-              official: "Ile de la Réunion",
-              common: "La Réunion",
-            ),
-          ],
           tld: const [".re"],
           code: "REU",
           codeNumeric: "638",
@@ -12822,18 +12933,6 @@ class CountryReu extends WorldCountry {
           subregion: const EasternAfrica(),
           latLng: const LatLng(-21.15, 55.5),
           areaMetric: 2511,
-          demonyms: const [
-            Demonyms(
-              language: LangEng(),
-              female: "Réunionese",
-              male: "Réunionese",
-            ),
-            Demonyms(
-              language: LangFra(),
-              female: "Réunionnaise",
-              male: "Réunionnais",
-            ),
-          ],
           emoji: "🇷🇪",
           maps: const Maps(
             googleMaps: "wWpBrXsp8UHVbah29",
@@ -12843,16 +12942,35 @@ class CountryReu extends WorldCountry {
           car: const Car(sign: "F"),
           timezones: const ["UTC+04:00"],
           hasCoatOfArms: false,
-          capitalInfo: const CapitalInfo(
-            capital: Capital("Saint-Denis"),
-            latLng: LatLng(-20.88, 55.45),
-          ),
           postalCode:
               const PostalCode(regExpPattern: r"^((97|98)(4|7|8)\d{2})$"),
-          regionalBlocs: const [BlocAU()],
         );
   @override
   List<FiatCurrency> get currencies => const [FiatEur()];
+  @override
+  CapitalInfo get capitalInfo => const CapitalInfo(
+        capital: Capital("Saint-Denis"),
+        latLng: LatLng(-20.88, 55.45),
+      );
+  @override
+  List<RegionalBloc> get regionalBlocs => const [BlocAU()];
+  @override
+  List<Demonyms> get demonyms => const [
+        Demonyms(language: LangEng(), female: "Réunionese", male: "Réunionese"),
+        Demonyms(
+          language: LangFra(),
+          female: "Réunionnaise",
+          male: "Réunionnais",
+        ),
+      ];
+  @override
+  List<CountryName> get namesNative => const [
+        CountryName(
+          language: LangFra(),
+          official: "Ile de la Réunion",
+          common: "La Réunion",
+        ),
+      ];
   @override
   List<NaturalLanguage> get languages => const [LangFra()];
 }
@@ -12869,13 +12987,6 @@ class CountryRou extends WorldCountry {
             official: "Romania",
             common: "Romania",
           ),
-          namesNative: const [
-            CountryName(
-              language: LangRon(),
-              official: "România",
-              common: "România",
-            ),
-          ],
           tld: const [".ro"],
           code: "ROU",
           codeNumeric: "642",
@@ -12888,10 +12999,6 @@ class CountryRou extends WorldCountry {
           latLng: const LatLng(46, 25),
           bordersCodes: const ["Bgr", "Hun", "Mda", "Srb", "Ukr"],
           areaMetric: 238391,
-          demonyms: const [
-            Demonyms(language: LangEng(), female: "Romanian", male: "Romanian"),
-            Demonyms(language: LangFra(), female: "Roumaine", male: "Roumain"),
-          ],
           emoji: "🇷🇴",
           maps: const Maps(
             googleMaps: "845hAgCf1mDkN3vr7",
@@ -12902,16 +13009,31 @@ class CountryRou extends WorldCountry {
           fifa: "ROU",
           car: const Car(sign: "RO"),
           timezones: const ["UTC+02:00"],
-          capitalInfo: const CapitalInfo(
-            capital: Capital("Bucharest"),
-            latLng: LatLng(44.43, 26.1),
-          ),
           postalCode:
               const PostalCode(format: "######", regExpPattern: r"^(\d{6})$"),
-          regionalBlocs: const [BlocEU()],
         );
   @override
   List<FiatCurrency> get currencies => const [FiatRon()];
+  @override
+  CapitalInfo get capitalInfo => const CapitalInfo(
+        capital: Capital("Bucharest"),
+        latLng: LatLng(44.43, 26.1),
+      );
+  @override
+  List<RegionalBloc> get regionalBlocs => const [BlocEU()];
+  @override
+  List<Demonyms> get demonyms => const [
+        Demonyms(language: LangEng(), female: "Romanian", male: "Romanian"),
+        Demonyms(language: LangFra(), female: "Roumaine", male: "Roumain"),
+      ];
+  @override
+  List<CountryName> get namesNative => const [
+        CountryName(
+          language: LangRon(),
+          official: "România",
+          common: "România",
+        ),
+      ];
   @override
   List<NaturalLanguage> get languages => const [LangRon()];
 }
@@ -12928,13 +13050,6 @@ class CountryRus extends WorldCountry {
             official: "Russian Federation",
             common: "Russia",
           ),
-          namesNative: const [
-            CountryName(
-              language: LangRus(),
-              official: "Российская Федерация",
-              common: "Россия",
-            ),
-          ],
           tld: const [".ru", ".su", ".рф"],
           code: "RUS",
           codeNumeric: "643",
@@ -12966,10 +13081,6 @@ class CountryRus extends WorldCountry {
             "Ukr",
           ],
           areaMetric: 17098242,
-          demonyms: const [
-            Demonyms(language: LangEng(), female: "Russian", male: "Russian"),
-            Demonyms(language: LangFra(), female: "Russe", male: "Russe"),
-          ],
           emoji: "🇷🇺",
           maps: const Maps(
             googleMaps: "4F4PpDhGJgVvLby57",
@@ -12990,16 +13101,31 @@ class CountryRus extends WorldCountry {
             "UTC+11:00",
             "UTC+12:00",
           ],
-          capitalInfo: const CapitalInfo(
-            capital: Capital("Moscow"),
-            latLng: LatLng(55.75, 37.6),
-          ),
           postalCode:
               const PostalCode(format: "######", regExpPattern: r"^(\d{6})$"),
-          regionalBlocs: const [BlocEEU()],
         );
   @override
   List<FiatCurrency> get currencies => const [FiatRub()];
+  @override
+  CapitalInfo get capitalInfo => const CapitalInfo(
+        capital: Capital("Moscow"),
+        latLng: LatLng(55.75, 37.6),
+      );
+  @override
+  List<RegionalBloc> get regionalBlocs => const [BlocEEU()];
+  @override
+  List<Demonyms> get demonyms => const [
+        Demonyms(language: LangEng(), female: "Russian", male: "Russian"),
+        Demonyms(language: LangFra(), female: "Russe", male: "Russe"),
+      ];
+  @override
+  List<CountryName> get namesNative => const [
+        CountryName(
+          language: LangRus(),
+          official: "Российская Федерация",
+          common: "Россия",
+        ),
+      ];
   @override
   List<NaturalLanguage> get languages => const [LangRus()];
 }
@@ -13016,23 +13142,6 @@ class CountryRwa extends WorldCountry {
             official: "Republic of Rwanda",
             common: "Rwanda",
           ),
-          namesNative: const [
-            CountryName(
-              language: LangEng(),
-              official: "Republic of Rwanda",
-              common: "Rwanda",
-            ),
-            CountryName(
-              language: LangFra(),
-              official: "République rwandaise",
-              common: "Rwanda",
-            ),
-            CountryName(
-              language: LangKin(),
-              official: "Repubulika y'u Rwanda",
-              common: "Rwanda",
-            ),
-          ],
           tld: const [".rw"],
           code: "RWA",
           codeNumeric: "646",
@@ -13051,14 +13160,6 @@ class CountryRwa extends WorldCountry {
           landlocked: true,
           bordersCodes: const ["Bdi", "Cod", "Tza", "Uga"],
           areaMetric: 26338,
-          demonyms: const [
-            Demonyms(language: LangEng(), female: "Rwandan", male: "Rwandan"),
-            Demonyms(
-              language: LangFra(),
-              female: "Rwandaise",
-              male: "Rwandais",
-            ),
-          ],
           emoji: "🇷🇼",
           maps: const Maps(
             googleMaps: "j5xb5r7CLqjYbyP86",
@@ -13069,14 +13170,39 @@ class CountryRwa extends WorldCountry {
           fifa: "RWA",
           car: const Car(sign: "RWA"),
           timezones: const ["UTC+02:00"],
-          capitalInfo: const CapitalInfo(
-            capital: Capital("Kigali"),
-            latLng: LatLng(-1.95, 30.05),
-          ),
-          regionalBlocs: const [BlocAU()],
         );
   @override
   List<FiatCurrency> get currencies => const [FiatRwf()];
+  @override
+  CapitalInfo get capitalInfo => const CapitalInfo(
+        capital: Capital("Kigali"),
+        latLng: LatLng(-1.95, 30.05),
+      );
+  @override
+  List<RegionalBloc> get regionalBlocs => const [BlocAU()];
+  @override
+  List<Demonyms> get demonyms => const [
+        Demonyms(language: LangEng(), female: "Rwandan", male: "Rwandan"),
+        Demonyms(language: LangFra(), female: "Rwandaise", male: "Rwandais"),
+      ];
+  @override
+  List<CountryName> get namesNative => const [
+        CountryName(
+          language: LangEng(),
+          official: "Republic of Rwanda",
+          common: "Rwanda",
+        ),
+        CountryName(
+          language: LangFra(),
+          official: "République rwandaise",
+          common: "Rwanda",
+        ),
+        CountryName(
+          language: LangKin(),
+          official: "Repubulika y'u Rwanda",
+          common: "Rwanda",
+        ),
+      ];
   @override
   List<NaturalLanguage> get languages =>
       const [LangEng(), LangFra(), LangKin()];
@@ -13094,13 +13220,6 @@ class CountrySau extends WorldCountry {
             official: "Kingdom of Saudi Arabia",
             common: "Saudi Arabia",
           ),
-          namesNative: const [
-            CountryName(
-              language: LangAra(),
-              official: "المملكة العربية السعودية",
-              common: "العربية السعودية",
-            ),
-          ],
           tld: const [".sa", ".السعودية"],
           code: "SAU",
           codeNumeric: "682",
@@ -13118,18 +13237,6 @@ class CountrySau extends WorldCountry {
           latLng: const LatLng(25, 45),
           bordersCodes: const ["Irq", "Jor", "Kwt", "Omn", "Qat", "Are", "Yem"],
           areaMetric: 2149690,
-          demonyms: const [
-            Demonyms(
-              language: LangEng(),
-              female: "Saudi Arabian",
-              male: "Saudi Arabian",
-            ),
-            Demonyms(
-              language: LangFra(),
-              female: "Saoudienne",
-              male: "Saoudien",
-            ),
-          ],
           emoji: "🇸🇦",
           maps: const Maps(
             googleMaps: "5PSjvdJ1AyaLFRrG9",
@@ -13140,15 +13247,34 @@ class CountrySau extends WorldCountry {
           car: const Car(sign: "SA"),
           timezones: const ["UTC+03:00"],
           startOfWeek: Weekday.sunday,
-          capitalInfo: const CapitalInfo(
-            capital: Capital("Riyadh"),
-            latLng: LatLng(24.65, 46.7),
-          ),
           postalCode: const PostalCode(),
-          regionalBlocs: const [BlocAL()],
         );
   @override
   List<FiatCurrency> get currencies => const [FiatSar()];
+  @override
+  CapitalInfo get capitalInfo => const CapitalInfo(
+        capital: Capital("Riyadh"),
+        latLng: LatLng(24.65, 46.7),
+      );
+  @override
+  List<RegionalBloc> get regionalBlocs => const [BlocAL()];
+  @override
+  List<Demonyms> get demonyms => const [
+        Demonyms(
+          language: LangEng(),
+          female: "Saudi Arabian",
+          male: "Saudi Arabian",
+        ),
+        Demonyms(language: LangFra(), female: "Saoudienne", male: "Saoudien"),
+      ];
+  @override
+  List<CountryName> get namesNative => const [
+        CountryName(
+          language: LangAra(),
+          official: "المملكة العربية السعودية",
+          common: "العربية السعودية",
+        ),
+      ];
   @override
   List<NaturalLanguage> get languages => const [LangAra()];
 }
@@ -13165,18 +13291,6 @@ class CountrySdn extends WorldCountry {
             official: "Republic of the Sudan",
             common: "Sudan",
           ),
-          namesNative: const [
-            CountryName(
-              language: LangAra(),
-              official: "جمهورية السودان",
-              common: "السودان",
-            ),
-            CountryName(
-              language: LangEng(),
-              official: "Republic of the Sudan",
-              common: "Sudan",
-            ),
-          ],
           tld: const [".sd"],
           code: "SDN",
           codeNumeric: "729",
@@ -13193,14 +13307,6 @@ class CountrySdn extends WorldCountry {
           latLng: const LatLng(15, 30),
           bordersCodes: const ["Caf", "Tcd", "Egy", "Eri", "Eth", "Lby", "Ssd"],
           areaMetric: 1886068,
-          demonyms: const [
-            Demonyms(language: LangEng(), female: "Sudanese", male: "Sudanese"),
-            Demonyms(
-              language: LangFra(),
-              female: "Soudanaise",
-              male: "Soudanais",
-            ),
-          ],
           emoji: "🇸🇩",
           maps: const Maps(
             googleMaps: "bNW7YUJCaqR8zcXn7",
@@ -13211,15 +13317,35 @@ class CountrySdn extends WorldCountry {
           fifa: "SDN",
           car: const Car(sign: "SUD"),
           timezones: const ["UTC+03:00"],
-          capitalInfo: const CapitalInfo(
-            capital: Capital("Khartoum"),
-            latLng: LatLng(15.6, 32.53),
-          ),
           postalCode: const PostalCode(),
-          regionalBlocs: const [BlocAU(), BlocAL()],
         );
   @override
   List<FiatCurrency> get currencies => const [FiatSdg()];
+  @override
+  CapitalInfo get capitalInfo => const CapitalInfo(
+        capital: Capital("Khartoum"),
+        latLng: LatLng(15.6, 32.53),
+      );
+  @override
+  List<RegionalBloc> get regionalBlocs => const [BlocAU(), BlocAL()];
+  @override
+  List<Demonyms> get demonyms => const [
+        Demonyms(language: LangEng(), female: "Sudanese", male: "Sudanese"),
+        Demonyms(language: LangFra(), female: "Soudanaise", male: "Soudanais"),
+      ];
+  @override
+  List<CountryName> get namesNative => const [
+        CountryName(
+          language: LangAra(),
+          official: "جمهورية السودان",
+          common: "السودان",
+        ),
+        CountryName(
+          language: LangEng(),
+          official: "Republic of the Sudan",
+          common: "Sudan",
+        ),
+      ];
   @override
   List<NaturalLanguage> get languages => const [LangAra(), LangEng()];
 }
@@ -13236,13 +13362,6 @@ class CountrySen extends WorldCountry {
             official: "Republic of Senegal",
             common: "Senegal",
           ),
-          namesNative: const [
-            CountryName(
-              language: LangFra(),
-              official: "République du Sénégal",
-              common: "Sénégal",
-            ),
-          ],
           tld: const [".sn"],
           code: "SEN",
           codeNumeric: "686",
@@ -13259,18 +13378,6 @@ class CountrySen extends WorldCountry {
           latLng: const LatLng(14, -14),
           bordersCodes: const ["Gmb", "Gin", "Gnb", "Mli", "Mrt"],
           areaMetric: 196722,
-          demonyms: const [
-            Demonyms(
-              language: LangEng(),
-              female: "Senegalese",
-              male: "Senegalese",
-            ),
-            Demonyms(
-              language: LangFra(),
-              female: "Sénégalaise",
-              male: "Sénégalais",
-            ),
-          ],
           emoji: "🇸🇳",
           maps: const Maps(
             googleMaps: "o5f1uD5nyihCL3HCA",
@@ -13281,15 +13388,34 @@ class CountrySen extends WorldCountry {
           fifa: "SEN",
           car: const Car(sign: "SN"),
           timezones: const ["UTC+00:00"],
-          capitalInfo: const CapitalInfo(
-            capital: Capital("Dakar"),
-            latLng: LatLng(14.73, -17.63),
-          ),
           postalCode: const PostalCode(),
-          regionalBlocs: const [BlocAU()],
         );
   @override
   List<FiatCurrency> get currencies => const [FiatXof()];
+  @override
+  CapitalInfo get capitalInfo => const CapitalInfo(
+        capital: Capital("Dakar"),
+        latLng: LatLng(14.73, -17.63),
+      );
+  @override
+  List<RegionalBloc> get regionalBlocs => const [BlocAU()];
+  @override
+  List<Demonyms> get demonyms => const [
+        Demonyms(language: LangEng(), female: "Senegalese", male: "Senegalese"),
+        Demonyms(
+          language: LangFra(),
+          female: "Sénégalaise",
+          male: "Sénégalais",
+        ),
+      ];
+  @override
+  List<CountryName> get namesNative => const [
+        CountryName(
+          language: LangFra(),
+          official: "République du Sénégal",
+          common: "Sénégal",
+        ),
+      ];
   @override
   List<NaturalLanguage> get languages => const [LangFra()];
 }
@@ -13306,24 +13432,6 @@ class CountrySgp extends WorldCountry {
             official: "Republic of Singapore",
             common: "Singapore",
           ),
-          namesNative: const [
-            CountryName(
-              language: LangEng(),
-              official: "Republic of Singapore",
-              common: "Singapore",
-            ),
-            CountryName(language: LangZho(), official: "新加坡共和国", common: "新加坡"),
-            CountryName(
-              language: LangMsa(),
-              official: "Republik Singapura",
-              common: "Singapura",
-            ),
-            CountryName(
-              language: LangTam(),
-              official: "சிங்கப்பூர் குடியரசு",
-              common: "சிங்கப்பூர்",
-            ),
-          ],
           tld: const [".sg", ".新加坡", ".சிங்கப்பூர்"],
           code: "SGP",
           codeNumeric: "702",
@@ -13340,18 +13448,6 @@ class CountrySgp extends WorldCountry {
           subregion: const SouthEasternAsia(),
           latLng: const LatLng(1.36666666, 103.8),
           areaMetric: 710,
-          demonyms: const [
-            Demonyms(
-              language: LangEng(),
-              female: "Singaporean",
-              male: "Singaporean",
-            ),
-            Demonyms(
-              language: LangFra(),
-              female: "Singapourienne",
-              male: "Singapourien",
-            ),
-          ],
           emoji: "🇸🇬",
           maps: const Maps(
             googleMaps: "QbQt9Y9b5KFzsahV6",
@@ -13361,16 +13457,50 @@ class CountrySgp extends WorldCountry {
           fifa: "SIN",
           car: const Car(sign: "SGP", isRightSide: false),
           timezones: const ["UTC+08:00"],
-          capitalInfo: const CapitalInfo(
-            capital: Capital("Singapore"),
-            latLng: LatLng(1.28, 103.85),
-          ),
           postalCode:
               const PostalCode(format: "######", regExpPattern: r"^(\d{6})$"),
-          regionalBlocs: const [BlocASEAN()],
         );
   @override
   List<FiatCurrency> get currencies => const [FiatSgd()];
+  @override
+  CapitalInfo get capitalInfo => const CapitalInfo(
+        capital: Capital("Singapore"),
+        latLng: LatLng(1.28, 103.85),
+      );
+  @override
+  List<RegionalBloc> get regionalBlocs => const [BlocASEAN()];
+  @override
+  List<Demonyms> get demonyms => const [
+        Demonyms(
+          language: LangEng(),
+          female: "Singaporean",
+          male: "Singaporean",
+        ),
+        Demonyms(
+          language: LangFra(),
+          female: "Singapourienne",
+          male: "Singapourien",
+        ),
+      ];
+  @override
+  List<CountryName> get namesNative => const [
+        CountryName(
+          language: LangEng(),
+          official: "Republic of Singapore",
+          common: "Singapore",
+        ),
+        CountryName(language: LangZho(), official: "新加坡共和国", common: "新加坡"),
+        CountryName(
+          language: LangMsa(),
+          official: "Republik Singapura",
+          common: "Singapura",
+        ),
+        CountryName(
+          language: LangTam(),
+          official: "சிங்கப்பூர் குடியரசு",
+          common: "சிங்கப்பூர்",
+        ),
+      ];
   @override
   List<NaturalLanguage> get languages =>
       const [LangZho(), LangEng(), LangMsa(), LangTam()];
@@ -13388,13 +13518,6 @@ class CountrySgs extends WorldCountry {
             official: "South Georgia and the South Sandwich Islands",
             common: "South Georgia",
           ),
-          namesNative: const [
-            CountryName(
-              language: LangEng(),
-              official: "South Georgia and the South Sandwich Islands",
-              common: "South Georgia",
-            ),
-          ],
           tld: const [".gs"],
           code: "SGS",
           codeNumeric: "239",
@@ -13409,13 +13532,6 @@ class CountrySgs extends WorldCountry {
           continent: const Antarctica(),
           latLng: const LatLng(-54.5, -37),
           areaMetric: 3903,
-          demonyms: const [
-            Demonyms(
-              language: LangEng(),
-              female: "South Georgian South Sandwich Islander",
-              male: "South Georgian South Sandwich Islander",
-            ),
-          ],
           emoji: "🇬🇸",
           maps: const Maps(
             googleMaps: "mJzdaBwKBbm2B81q9",
@@ -13425,14 +13541,32 @@ class CountrySgs extends WorldCountry {
           car: const Car(),
           timezones: const ["UTC-02:00"],
           hasCoatOfArms: false,
-          capitalInfo: const CapitalInfo(
-            capital: Capital("King Edward Point"),
-            latLng: LatLng(-54.28, -36.5),
-          ),
-          regionalBlocs: const [BlocUSAN()],
         );
   @override
   List<FiatCurrency> get currencies => const [FiatShp()];
+  @override
+  CapitalInfo get capitalInfo => const CapitalInfo(
+        capital: Capital("King Edward Point"),
+        latLng: LatLng(-54.28, -36.5),
+      );
+  @override
+  List<RegionalBloc> get regionalBlocs => const [BlocUSAN()];
+  @override
+  List<Demonyms> get demonyms => const [
+        Demonyms(
+          language: LangEng(),
+          female: "South Georgian South Sandwich Islander",
+          male: "South Georgian South Sandwich Islander",
+        ),
+      ];
+  @override
+  List<CountryName> get namesNative => const [
+        CountryName(
+          language: LangEng(),
+          official: "South Georgia and the South Sandwich Islands",
+          common: "South Georgia",
+        ),
+      ];
   @override
   List<NaturalLanguage> get languages => const [LangEng()];
 }
@@ -13449,13 +13583,6 @@ class CountryShn extends WorldCountry {
             official: "Saint Helena, Ascension and Tristan da Cunha",
             common: "Saint Helena, Ascension and Tristan da Cunha",
           ),
-          namesNative: const [
-            CountryName(
-              language: LangEng(),
-              official: "Saint Helena, Ascension and Tristan da Cunha",
-              common: "Saint Helena, Ascension and Tristan da Cunha",
-            ),
-          ],
           tld: const [".sh", ".ac"],
           code: "SHN",
           codeNumeric: "654",
@@ -13471,18 +13598,6 @@ class CountryShn extends WorldCountry {
           subregion: const WesternAfrica(),
           latLng: const LatLng(-15.95, -5.72),
           areaMetric: 394,
-          demonyms: const [
-            Demonyms(
-              language: LangEng(),
-              female: "Saint Helenian",
-              male: "Saint Helenian",
-            ),
-            Demonyms(
-              language: LangFra(),
-              female: "Sainte-Hélénoise",
-              male: "Sainte-Hélènois",
-            ),
-          ],
           emoji: "🇸🇭",
           maps: const Maps(
             googleMaps: "iv4VxnPzHkjLCJuc6",
@@ -13492,18 +13607,41 @@ class CountryShn extends WorldCountry {
           car: const Car(sign: "GB", isRightSide: false),
           timezones: const ["UTC+00:00"],
           hasCoatOfArms: false,
-          capitalInfo: const CapitalInfo(
-            capital: Capital("Jamestown"),
-            latLng: LatLng(-15.93, -5.72),
-          ),
           postalCode: const PostalCode(
             format: "STHL 1ZZ",
             regExpPattern: r"^(STHL1ZZ)$",
           ),
-          regionalBlocs: const [BlocAU()],
         );
   @override
   List<FiatCurrency> get currencies => const [FiatGbp(), FiatShp()];
+  @override
+  CapitalInfo get capitalInfo => const CapitalInfo(
+        capital: Capital("Jamestown"),
+        latLng: LatLng(-15.93, -5.72),
+      );
+  @override
+  List<RegionalBloc> get regionalBlocs => const [BlocAU()];
+  @override
+  List<Demonyms> get demonyms => const [
+        Demonyms(
+          language: LangEng(),
+          female: "Saint Helenian",
+          male: "Saint Helenian",
+        ),
+        Demonyms(
+          language: LangFra(),
+          female: "Sainte-Hélénoise",
+          male: "Sainte-Hélènois",
+        ),
+      ];
+  @override
+  List<CountryName> get namesNative => const [
+        CountryName(
+          language: LangEng(),
+          official: "Saint Helena, Ascension and Tristan da Cunha",
+          common: "Saint Helena, Ascension and Tristan da Cunha",
+        ),
+      ];
   @override
   List<NaturalLanguage> get languages => const [LangEng()];
 }
@@ -13520,13 +13658,6 @@ class CountrySjm extends WorldCountry {
             official: "Svalbard og Jan Mayen",
             common: "Svalbard and Jan Mayen",
           ),
-          namesNative: const [
-            CountryName(
-              language: LangNor(),
-              official: "Svalbard og Jan Mayen",
-              common: "Svalbard og Jan Mayen",
-            ),
-          ],
           tld: const [".sj"],
           code: "SJM",
           codeNumeric: "744",
@@ -13539,13 +13670,6 @@ class CountrySjm extends WorldCountry {
           subregion: const NorthernEurope(),
           latLng: const LatLng(78, 20),
           areaMetric: 377,
-          demonyms: const [
-            Demonyms(
-              language: LangEng(),
-              female: "Norwegian",
-              male: "Norwegian",
-            ),
-          ],
           emoji: "🇸🇯",
           maps: const Maps(
             googleMaps: "L2wyyn3cQ16PzQ5J8",
@@ -13555,13 +13679,26 @@ class CountrySjm extends WorldCountry {
           car: const Car(sign: "N"),
           timezones: const ["UTC+01:00"],
           hasCoatOfArms: false,
-          capitalInfo: const CapitalInfo(
-            capital: Capital("Longyearbyen"),
-            latLng: LatLng(78.22, 15.63),
-          ),
         );
   @override
   List<FiatCurrency> get currencies => const [FiatNok()];
+  @override
+  CapitalInfo get capitalInfo => const CapitalInfo(
+        capital: Capital("Longyearbyen"),
+        latLng: LatLng(78.22, 15.63),
+      );
+  @override
+  List<Demonyms> get demonyms => const [
+        Demonyms(language: LangEng(), female: "Norwegian", male: "Norwegian"),
+      ];
+  @override
+  List<CountryName> get namesNative => const [
+        CountryName(
+          language: LangNor(),
+          official: "Svalbard og Jan Mayen",
+          common: "Svalbard og Jan Mayen",
+        ),
+      ];
   @override
   List<NaturalLanguage> get languages => const [LangNor()];
 }
@@ -13578,13 +13715,6 @@ class CountrySlb extends WorldCountry {
             official: "Solomon Islands",
             common: "Solomon Islands",
           ),
-          namesNative: const [
-            CountryName(
-              language: LangEng(),
-              official: "Solomon Islands",
-              common: "Solomon Islands",
-            ),
-          ],
           tld: const [".sb"],
           code: "SLB",
           codeNumeric: "090",
@@ -13596,18 +13726,6 @@ class CountrySlb extends WorldCountry {
           subregion: const Melanesia(),
           latLng: const LatLng(-8, 159),
           areaMetric: 28896,
-          demonyms: const [
-            Demonyms(
-              language: LangEng(),
-              female: "Solomon Islander",
-              male: "Solomon Islander",
-            ),
-            Demonyms(
-              language: LangFra(),
-              female: "Salomonienne",
-              male: "Salomonien",
-            ),
-          ],
           emoji: "🇸🇧",
           maps: const Maps(
             googleMaps: "JbPkx86Ywjv8C1n8A",
@@ -13618,13 +13736,35 @@ class CountrySlb extends WorldCountry {
           fifa: "SOL",
           car: const Car(sign: "SOL", isRightSide: false),
           timezones: const ["UTC+11:00"],
-          capitalInfo: const CapitalInfo(
-            capital: Capital("Honiara"),
-            latLng: LatLng(-9.43, 159.95),
-          ),
         );
   @override
   List<FiatCurrency> get currencies => const [FiatSbd()];
+  @override
+  CapitalInfo get capitalInfo => const CapitalInfo(
+        capital: Capital("Honiara"),
+        latLng: LatLng(-9.43, 159.95),
+      );
+  @override
+  List<Demonyms> get demonyms => const [
+        Demonyms(
+          language: LangEng(),
+          female: "Solomon Islander",
+          male: "Solomon Islander",
+        ),
+        Demonyms(
+          language: LangFra(),
+          female: "Salomonienne",
+          male: "Salomonien",
+        ),
+      ];
+  @override
+  List<CountryName> get namesNative => const [
+        CountryName(
+          language: LangEng(),
+          official: "Solomon Islands",
+          common: "Solomon Islands",
+        ),
+      ];
   @override
   List<NaturalLanguage> get languages => const [LangEng()];
 }
@@ -13641,13 +13781,6 @@ class CountrySle extends WorldCountry {
             official: "Republic of Sierra Leone",
             common: "Sierra Leone",
           ),
-          namesNative: const [
-            CountryName(
-              language: LangEng(),
-              official: "Republic of Sierra Leone",
-              common: "Sierra Leone",
-            ),
-          ],
           tld: const [".sl"],
           code: "SLE",
           codeNumeric: "694",
@@ -13660,18 +13793,6 @@ class CountrySle extends WorldCountry {
           latLng: const LatLng(8.5, -11.5),
           bordersCodes: const ["Gin", "Lbr"],
           areaMetric: 71740,
-          demonyms: const [
-            Demonyms(
-              language: LangEng(),
-              female: "Sierra Leonean",
-              male: "Sierra Leonean",
-            ),
-            Demonyms(
-              language: LangFra(),
-              female: "Sierra-leonaise",
-              male: "Sierra-leonais",
-            ),
-          ],
           emoji: "🇸🇱",
           maps: const Maps(
             googleMaps: "jhacar85oq9QaeKB7",
@@ -13682,14 +13803,37 @@ class CountrySle extends WorldCountry {
           fifa: "SLE",
           car: const Car(sign: "WAL"),
           timezones: const ["UTC+00:00"],
-          capitalInfo: const CapitalInfo(
-            capital: Capital("Freetown"),
-            latLng: LatLng(8.48, -13.23),
-          ),
-          regionalBlocs: const [BlocAU()],
         );
   @override
   List<FiatCurrency> get currencies => const [FiatSll()];
+  @override
+  CapitalInfo get capitalInfo => const CapitalInfo(
+        capital: Capital("Freetown"),
+        latLng: LatLng(8.48, -13.23),
+      );
+  @override
+  List<RegionalBloc> get regionalBlocs => const [BlocAU()];
+  @override
+  List<Demonyms> get demonyms => const [
+        Demonyms(
+          language: LangEng(),
+          female: "Sierra Leonean",
+          male: "Sierra Leonean",
+        ),
+        Demonyms(
+          language: LangFra(),
+          female: "Sierra-leonaise",
+          male: "Sierra-leonais",
+        ),
+      ];
+  @override
+  List<CountryName> get namesNative => const [
+        CountryName(
+          language: LangEng(),
+          official: "Republic of Sierra Leone",
+          common: "Sierra Leone",
+        ),
+      ];
   @override
   List<NaturalLanguage> get languages => const [LangEng()];
 }
@@ -13706,13 +13850,6 @@ class CountrySlv extends WorldCountry {
             official: "Republic of El Salvador",
             common: "El Salvador",
           ),
-          namesNative: const [
-            CountryName(
-              language: LangSpa(),
-              official: "República de El Salvador",
-              common: "El Salvador",
-            ),
-          ],
           tld: const [".sv"],
           code: "SLV",
           codeNumeric: "222",
@@ -13729,18 +13866,6 @@ class CountrySlv extends WorldCountry {
           latLng: const LatLng(13.83333333, -88.91666666),
           bordersCodes: const ["Gtm", "Hnd"],
           areaMetric: 21041,
-          demonyms: const [
-            Demonyms(
-              language: LangEng(),
-              female: "Salvadoran",
-              male: "Salvadoran",
-            ),
-            Demonyms(
-              language: LangFra(),
-              female: "Salvadorienne",
-              male: "Salvadorien",
-            ),
-          ],
           emoji: "🇸🇻",
           maps: const Maps(
             googleMaps: "cZnCEi5sEMQtKKcB7",
@@ -13751,18 +13876,37 @@ class CountrySlv extends WorldCountry {
           fifa: "SLV",
           car: const Car(sign: "ES"),
           timezones: const ["UTC-06:00"],
-          capitalInfo: const CapitalInfo(
-            capital: Capital("San Salvador"),
-            latLng: LatLng(13.7, -89.2),
-          ),
           postalCode: const PostalCode(
             format: "CP ####",
             regExpPattern: r"^(?:CP)*(\d{4})$",
           ),
-          regionalBlocs: const [BlocCAIS()],
         );
   @override
   List<FiatCurrency> get currencies => const [FiatUsd()];
+  @override
+  CapitalInfo get capitalInfo => const CapitalInfo(
+        capital: Capital("San Salvador"),
+        latLng: LatLng(13.7, -89.2),
+      );
+  @override
+  List<RegionalBloc> get regionalBlocs => const [BlocCAIS()];
+  @override
+  List<Demonyms> get demonyms => const [
+        Demonyms(language: LangEng(), female: "Salvadoran", male: "Salvadoran"),
+        Demonyms(
+          language: LangFra(),
+          female: "Salvadorienne",
+          male: "Salvadorien",
+        ),
+      ];
+  @override
+  List<CountryName> get namesNative => const [
+        CountryName(
+          language: LangSpa(),
+          official: "República de El Salvador",
+          common: "El Salvador",
+        ),
+      ];
   @override
   List<NaturalLanguage> get languages => const [LangSpa()];
 }
@@ -13779,13 +13923,6 @@ class CountrySmr extends WorldCountry {
             official: "Republic of San Marino",
             common: "San Marino",
           ),
-          namesNative: const [
-            CountryName(
-              language: LangIta(),
-              official: "Repubblica di San Marino",
-              common: "San Marino",
-            ),
-          ],
           tld: const [".sm"],
           code: "SMR",
           codeNumeric: "674",
@@ -13803,18 +13940,6 @@ class CountrySmr extends WorldCountry {
           landlocked: true,
           bordersCodes: const ["Ita"],
           areaMetric: 61,
-          demonyms: const [
-            Demonyms(
-              language: LangEng(),
-              female: "Sammarinese",
-              male: "Sammarinese",
-            ),
-            Demonyms(
-              language: LangFra(),
-              female: "Saint-Marinaise",
-              male: "Saint-Marinais",
-            ),
-          ],
           emoji: "🇸🇲",
           maps: const Maps(
             googleMaps: "rxCVJjm8dVY93RPY8",
@@ -13824,15 +13949,37 @@ class CountrySmr extends WorldCountry {
           fifa: "SMR",
           car: const Car(sign: "RSM"),
           timezones: const ["UTC+01:00"],
-          capitalInfo: const CapitalInfo(
-            capital: Capital("City of San Marino"),
-            latLng: LatLng(43.94, 12.45),
-          ),
           postalCode:
               const PostalCode(format: "4789#", regExpPattern: r"^(4789\d)$"),
         );
   @override
   List<FiatCurrency> get currencies => const [FiatEur()];
+  @override
+  CapitalInfo get capitalInfo => const CapitalInfo(
+        capital: Capital("City of San Marino"),
+        latLng: LatLng(43.94, 12.45),
+      );
+  @override
+  List<Demonyms> get demonyms => const [
+        Demonyms(
+          language: LangEng(),
+          female: "Sammarinese",
+          male: "Sammarinese",
+        ),
+        Demonyms(
+          language: LangFra(),
+          female: "Saint-Marinaise",
+          male: "Saint-Marinais",
+        ),
+      ];
+  @override
+  List<CountryName> get namesNative => const [
+        CountryName(
+          language: LangIta(),
+          official: "Repubblica di San Marino",
+          common: "San Marino",
+        ),
+      ];
   @override
   List<NaturalLanguage> get languages => const [LangIta()];
 }
@@ -13849,18 +13996,6 @@ class CountrySom extends WorldCountry {
             official: "Federal Republic of Somalia",
             common: "Somalia",
           ),
-          namesNative: const [
-            CountryName(
-              language: LangAra(),
-              official: "جمهورية الصومال‎‎",
-              common: "الصومال‎‎",
-            ),
-            CountryName(
-              language: LangSom(),
-              official: "Jamhuuriyadda Federaalka Soomaaliya",
-              common: "Soomaaliya",
-            ),
-          ],
           tld: const [".so"],
           code: "SOM",
           codeNumeric: "706",
@@ -13879,14 +14014,6 @@ class CountrySom extends WorldCountry {
           latLng: const LatLng(10, 49),
           bordersCodes: const ["Dji", "Eth", "Ken"],
           areaMetric: 637657,
-          demonyms: const [
-            Demonyms(language: LangEng(), female: "Somali", male: "Somali"),
-            Demonyms(
-              language: LangFra(),
-              female: "Somalienne",
-              male: "Somalien",
-            ),
-          ],
           emoji: "🇸🇴",
           maps: const Maps(
             googleMaps: "8of8q7D1a8p7R6Fc9",
@@ -13897,18 +14024,38 @@ class CountrySom extends WorldCountry {
           fifa: "SOM",
           car: const Car(sign: "SO"),
           timezones: const ["UTC+03:00"],
-          capitalInfo: const CapitalInfo(
-            capital: Capital("Mogadishu"),
-            latLng: LatLng(2.07, 45.33),
-          ),
           postalCode: const PostalCode(
             format: "@@  #####",
             regExpPattern: r"^([A-Z]{2}\d{5})$",
           ),
-          regionalBlocs: const [BlocAU(), BlocAL()],
         );
   @override
   List<FiatCurrency> get currencies => const [FiatSos()];
+  @override
+  CapitalInfo get capitalInfo => const CapitalInfo(
+        capital: Capital("Mogadishu"),
+        latLng: LatLng(2.07, 45.33),
+      );
+  @override
+  List<RegionalBloc> get regionalBlocs => const [BlocAU(), BlocAL()];
+  @override
+  List<Demonyms> get demonyms => const [
+        Demonyms(language: LangEng(), female: "Somali", male: "Somali"),
+        Demonyms(language: LangFra(), female: "Somalienne", male: "Somalien"),
+      ];
+  @override
+  List<CountryName> get namesNative => const [
+        CountryName(
+          language: LangAra(),
+          official: "جمهورية الصومال‎‎",
+          common: "الصومال‎‎",
+        ),
+        CountryName(
+          language: LangSom(),
+          official: "Jamhuuriyadda Federaalka Soomaaliya",
+          common: "Soomaaliya",
+        ),
+      ];
   @override
   List<NaturalLanguage> get languages => const [LangAra(), LangSom()];
 }
@@ -13925,13 +14072,6 @@ class CountrySpm extends WorldCountry {
             official: "Saint Pierre and Miquelon",
             common: "Saint Pierre and Miquelon",
           ),
-          namesNative: const [
-            CountryName(
-              language: LangFra(),
-              official: "Collectivité territoriale de Saint-Pierre-et-Miquelon",
-              common: "Saint-Pierre-et-Miquelon",
-            ),
-          ],
           tld: const [".pm"],
           code: "SPM",
           codeNumeric: "666",
@@ -13947,18 +14087,6 @@ class CountrySpm extends WorldCountry {
           subregion: const NorthAmerica(),
           latLng: const LatLng(46.83333333, -56.33333333),
           areaMetric: 242,
-          demonyms: const [
-            Demonyms(
-              language: LangEng(),
-              female: "Saint-Pierrais, Miquelonnais",
-              male: "Saint-Pierrais, Miquelonnais",
-            ),
-            Demonyms(
-              language: LangFra(),
-              female: "Saint-Pierraise, Miquelonaise",
-              male: "Saint-Pierrais, Miquelonais",
-            ),
-          ],
           emoji: "🇵🇲",
           maps: const Maps(
             googleMaps: "bUM8Yc8pA8ghyhmt6",
@@ -13968,14 +14096,36 @@ class CountrySpm extends WorldCountry {
           car: const Car(sign: "F"),
           timezones: const ["UTC-03:00"],
           hasCoatOfArms: false,
-          capitalInfo: const CapitalInfo(
-            capital: Capital("Saint-Pierre"),
-            latLng: LatLng(46.77, -56.18),
-          ),
           postalCode: const PostalCode(regExpPattern: r"^(97500)$"),
         );
   @override
   List<FiatCurrency> get currencies => const [FiatEur()];
+  @override
+  CapitalInfo get capitalInfo => const CapitalInfo(
+        capital: Capital("Saint-Pierre"),
+        latLng: LatLng(46.77, -56.18),
+      );
+  @override
+  List<Demonyms> get demonyms => const [
+        Demonyms(
+          language: LangEng(),
+          female: "Saint-Pierrais, Miquelonnais",
+          male: "Saint-Pierrais, Miquelonnais",
+        ),
+        Demonyms(
+          language: LangFra(),
+          female: "Saint-Pierraise, Miquelonaise",
+          male: "Saint-Pierrais, Miquelonais",
+        ),
+      ];
+  @override
+  List<CountryName> get namesNative => const [
+        CountryName(
+          language: LangFra(),
+          official: "Collectivité territoriale de Saint-Pierre-et-Miquelon",
+          common: "Saint-Pierre-et-Miquelon",
+        ),
+      ];
   @override
   List<NaturalLanguage> get languages => const [LangFra()];
 }
@@ -13992,13 +14142,6 @@ class CountrySrb extends WorldCountry {
             official: "Republic of Serbia",
             common: "Serbia",
           ),
-          namesNative: const [
-            CountryName(
-              language: LangSrp(),
-              official: "Република Србија",
-              common: "Србија",
-            ),
-          ],
           tld: const [".rs", ".срб"],
           code: "SRB",
           codeNumeric: "688",
@@ -14018,10 +14161,6 @@ class CountrySrb extends WorldCountry {
           landlocked: true,
           bordersCodes: const ["Bih", "Bgr", "Hrv", "Hun", "Mkd", "Mne", "Rou"],
           areaMetric: 88361,
-          demonyms: const [
-            Demonyms(language: LangEng(), female: "Serbian", male: "Serbian"),
-            Demonyms(language: LangFra(), female: "Serbe", male: "Serbe"),
-          ],
           emoji: "🇷🇸",
           maps: const Maps(
             googleMaps: "2Aqof7aV2Naq8YEK8",
@@ -14032,16 +14171,31 @@ class CountrySrb extends WorldCountry {
           fifa: "SRB",
           car: const Car(sign: "SRB"),
           timezones: const ["UTC+01:00"],
-          capitalInfo: const CapitalInfo(
-            capital: Capital("Belgrade"),
-            latLng: LatLng(44.83, 20.5),
-          ),
           postalCode:
               const PostalCode(format: "######", regExpPattern: r"^(\d{6})$"),
-          regionalBlocs: const [BlocCEFTA()],
         );
   @override
   List<FiatCurrency> get currencies => const [FiatRsd()];
+  @override
+  CapitalInfo get capitalInfo => const CapitalInfo(
+        capital: Capital("Belgrade"),
+        latLng: LatLng(44.83, 20.5),
+      );
+  @override
+  List<RegionalBloc> get regionalBlocs => const [BlocCEFTA()];
+  @override
+  List<Demonyms> get demonyms => const [
+        Demonyms(language: LangEng(), female: "Serbian", male: "Serbian"),
+        Demonyms(language: LangFra(), female: "Serbe", male: "Serbe"),
+      ];
+  @override
+  List<CountryName> get namesNative => const [
+        CountryName(
+          language: LangSrp(),
+          official: "Република Србија",
+          common: "Србија",
+        ),
+      ];
   @override
   List<NaturalLanguage> get languages => const [LangSrp()];
 }
@@ -14058,13 +14212,6 @@ class CountrySsd extends WorldCountry {
             official: "Republic of South Sudan",
             common: "South Sudan",
           ),
-          namesNative: const [
-            CountryName(
-              language: LangEng(),
-              official: "Republic of South Sudan",
-              common: "South Sudan",
-            ),
-          ],
           tld: const [".ss"],
           code: "SSD",
           codeNumeric: "728",
@@ -14078,18 +14225,6 @@ class CountrySsd extends WorldCountry {
           landlocked: true,
           bordersCodes: const ["Caf", "Cod", "Eth", "Ken", "Sdn", "Uga"],
           areaMetric: 619745,
-          demonyms: const [
-            Demonyms(
-              language: LangEng(),
-              female: "South Sudanese",
-              male: "South Sudanese",
-            ),
-            Demonyms(
-              language: LangFra(),
-              female: "Sud-Soudanaise",
-              male: "Sud-Soudanais",
-            ),
-          ],
           emoji: "🇸🇸",
           maps: const Maps(
             googleMaps: "Zm1AYCXb9HSNF1P27",
@@ -14101,14 +14236,35 @@ class CountrySsd extends WorldCountry {
           car: const Car(),
           timezones: const ["UTC+03:00"],
           startOfWeek: Weekday.sunday,
-          capitalInfo: const CapitalInfo(
-            capital: Capital("Juba"),
-            latLng: LatLng(4.85, 31.62),
-          ),
-          regionalBlocs: const [BlocAU()],
         );
   @override
   List<FiatCurrency> get currencies => const [FiatSsp()];
+  @override
+  CapitalInfo get capitalInfo =>
+      const CapitalInfo(capital: Capital("Juba"), latLng: LatLng(4.85, 31.62));
+  @override
+  List<RegionalBloc> get regionalBlocs => const [BlocAU()];
+  @override
+  List<Demonyms> get demonyms => const [
+        Demonyms(
+          language: LangEng(),
+          female: "South Sudanese",
+          male: "South Sudanese",
+        ),
+        Demonyms(
+          language: LangFra(),
+          female: "Sud-Soudanaise",
+          male: "Sud-Soudanais",
+        ),
+      ];
+  @override
+  List<CountryName> get namesNative => const [
+        CountryName(
+          language: LangEng(),
+          official: "Republic of South Sudan",
+          common: "South Sudan",
+        ),
+      ];
   @override
   List<NaturalLanguage> get languages => const [LangEng()];
 }
@@ -14125,13 +14281,6 @@ class CountryStp extends WorldCountry {
             official: "Democratic Republic of São Tomé and Príncipe",
             common: "São Tomé and Príncipe",
           ),
-          namesNative: const [
-            CountryName(
-              language: LangPor(),
-              official: "República Democrática do São Tomé e Príncipe",
-              common: "São Tomé e Príncipe",
-            ),
-          ],
           tld: const [".st"],
           code: "STP",
           codeNumeric: "678",
@@ -14148,18 +14297,6 @@ class CountryStp extends WorldCountry {
           subregion: const MiddleAfrica(),
           latLng: const LatLng(1, 7),
           areaMetric: 964,
-          demonyms: const [
-            Demonyms(
-              language: LangEng(),
-              female: "Sao Tomean",
-              male: "Sao Tomean",
-            ),
-            Demonyms(
-              language: LangFra(),
-              female: "Santoméenne",
-              male: "Santoméen",
-            ),
-          ],
           emoji: "🇸🇹",
           maps: const Maps(
             googleMaps: "9EUppm13RtPX9oF46",
@@ -14170,14 +14307,29 @@ class CountryStp extends WorldCountry {
           fifa: "STP",
           car: const Car(sign: "STP"),
           timezones: const ["UTC+00:00"],
-          capitalInfo: const CapitalInfo(
-            capital: Capital("São Tomé"),
-            latLng: LatLng(0.34, 6.73),
-          ),
-          regionalBlocs: const [BlocAU()],
         );
   @override
   List<FiatCurrency> get currencies => const [FiatStn()];
+  @override
+  CapitalInfo get capitalInfo => const CapitalInfo(
+        capital: Capital("São Tomé"),
+        latLng: LatLng(0.34, 6.73),
+      );
+  @override
+  List<RegionalBloc> get regionalBlocs => const [BlocAU()];
+  @override
+  List<Demonyms> get demonyms => const [
+        Demonyms(language: LangEng(), female: "Sao Tomean", male: "Sao Tomean"),
+        Demonyms(language: LangFra(), female: "Santoméenne", male: "Santoméen"),
+      ];
+  @override
+  List<CountryName> get namesNative => const [
+        CountryName(
+          language: LangPor(),
+          official: "República Democrática do São Tomé e Príncipe",
+          common: "São Tomé e Príncipe",
+        ),
+      ];
   @override
   List<NaturalLanguage> get languages => const [LangPor()];
 }
@@ -14194,13 +14346,6 @@ class CountrySur extends WorldCountry {
             official: "Republic of Suriname",
             common: "Suriname",
           ),
-          namesNative: const [
-            CountryName(
-              language: LangNld(),
-              official: "Republiek Suriname",
-              common: "Suriname",
-            ),
-          ],
           tld: const [".sr"],
           code: "SUR",
           codeNumeric: "740",
@@ -14219,18 +14364,6 @@ class CountrySur extends WorldCountry {
           latLng: const LatLng(4, -56),
           bordersCodes: const ["Bra", "Guf", "Guy"],
           areaMetric: 163820,
-          demonyms: const [
-            Demonyms(
-              language: LangEng(),
-              female: "Surinamer",
-              male: "Surinamer",
-            ),
-            Demonyms(
-              language: LangFra(),
-              female: "Surinamaise",
-              male: "Surinamais",
-            ),
-          ],
           emoji: "🇸🇷",
           maps: const Maps(
             googleMaps: "iy7TuQLSi4qgoBoG7",
@@ -14241,14 +14374,33 @@ class CountrySur extends WorldCountry {
           fifa: "SUR",
           car: const Car(sign: "SME", isRightSide: false),
           timezones: const ["UTC-03:00"],
-          capitalInfo: const CapitalInfo(
-            capital: Capital("Paramaribo"),
-            latLng: LatLng(5.83, -55.17),
-          ),
-          regionalBlocs: const [BlocCARICOM(), BlocUSAN()],
         );
   @override
   List<FiatCurrency> get currencies => const [FiatSrd()];
+  @override
+  CapitalInfo get capitalInfo => const CapitalInfo(
+        capital: Capital("Paramaribo"),
+        latLng: LatLng(5.83, -55.17),
+      );
+  @override
+  List<RegionalBloc> get regionalBlocs => const [BlocCARICOM(), BlocUSAN()];
+  @override
+  List<Demonyms> get demonyms => const [
+        Demonyms(language: LangEng(), female: "Surinamer", male: "Surinamer"),
+        Demonyms(
+          language: LangFra(),
+          female: "Surinamaise",
+          male: "Surinamais",
+        ),
+      ];
+  @override
+  List<CountryName> get namesNative => const [
+        CountryName(
+          language: LangNld(),
+          official: "Republiek Suriname",
+          common: "Suriname",
+        ),
+      ];
   @override
   List<NaturalLanguage> get languages => const [LangNld()];
 }
@@ -14265,13 +14417,6 @@ class CountrySvk extends WorldCountry {
             official: "Slovak Republic",
             common: "Slovakia",
           ),
-          namesNative: const [
-            CountryName(
-              language: LangSlk(),
-              official: "Slovenská republika",
-              common: "Slovensko",
-            ),
-          ],
           tld: const [".sk"],
           code: "SVK",
           codeNumeric: "703",
@@ -14285,10 +14430,6 @@ class CountrySvk extends WorldCountry {
           landlocked: true,
           bordersCodes: const ["Aut", "Cze", "Hun", "Pol", "Ukr"],
           areaMetric: 49037,
-          demonyms: const [
-            Demonyms(language: LangEng(), female: "Slovak", male: "Slovak"),
-            Demonyms(language: LangFra(), female: "Slovaque", male: "Slovaque"),
-          ],
           emoji: "🇸🇰",
           maps: const Maps(
             googleMaps: "uNSH2wW4bLoZVYJj7",
@@ -14299,15 +14440,30 @@ class CountrySvk extends WorldCountry {
           fifa: "SVK",
           car: const Car(sign: "SK"),
           timezones: const ["UTC+01:00"],
-          capitalInfo: const CapitalInfo(
-            capital: Capital("Bratislava"),
-            latLng: LatLng(48.15, 17.12),
-          ),
           postalCode: const PostalCode(format: "###  ##"),
-          regionalBlocs: const [BlocEU()],
         );
   @override
   List<FiatCurrency> get currencies => const [FiatEur()];
+  @override
+  CapitalInfo get capitalInfo => const CapitalInfo(
+        capital: Capital("Bratislava"),
+        latLng: LatLng(48.15, 17.12),
+      );
+  @override
+  List<RegionalBloc> get regionalBlocs => const [BlocEU()];
+  @override
+  List<Demonyms> get demonyms => const [
+        Demonyms(language: LangEng(), female: "Slovak", male: "Slovak"),
+        Demonyms(language: LangFra(), female: "Slovaque", male: "Slovaque"),
+      ];
+  @override
+  List<CountryName> get namesNative => const [
+        CountryName(
+          language: LangSlk(),
+          official: "Slovenská republika",
+          common: "Slovensko",
+        ),
+      ];
   @override
   List<NaturalLanguage> get languages => const [LangSlk()];
 }
@@ -14324,13 +14480,6 @@ class CountrySvn extends WorldCountry {
             official: "Republic of Slovenia",
             common: "Slovenia",
           ),
-          namesNative: const [
-            CountryName(
-              language: LangSlv(),
-              official: "Republika Slovenija",
-              common: "Slovenija",
-            ),
-          ],
           tld: const [".si"],
           code: "SVN",
           codeNumeric: "705",
@@ -14347,10 +14496,6 @@ class CountrySvn extends WorldCountry {
           latLng: const LatLng(46.11666666, 14.81666666),
           bordersCodes: const ["Aut", "Hrv", "Ita", "Hun"],
           areaMetric: 20273,
-          demonyms: const [
-            Demonyms(language: LangEng(), female: "Slovene", male: "Slovene"),
-            Demonyms(language: LangFra(), female: "Slovène", male: "Slovène"),
-          ],
           emoji: "🇸🇮",
           maps: const Maps(
             googleMaps: "7zgFmswcCJh5L5D49",
@@ -14361,18 +14506,33 @@ class CountrySvn extends WorldCountry {
           fifa: "SVN",
           car: const Car(sign: "SLO"),
           timezones: const ["UTC+01:00"],
-          capitalInfo: const CapitalInfo(
-            capital: Capital("Ljubljana"),
-            latLng: LatLng(46.05, 14.52),
-          ),
           postalCode: const PostalCode(
             format: "SI- ####",
             regExpPattern: r"^(?:SI)*(\d{4})$",
           ),
-          regionalBlocs: const [BlocEU()],
         );
   @override
   List<FiatCurrency> get currencies => const [FiatEur()];
+  @override
+  CapitalInfo get capitalInfo => const CapitalInfo(
+        capital: Capital("Ljubljana"),
+        latLng: LatLng(46.05, 14.52),
+      );
+  @override
+  List<RegionalBloc> get regionalBlocs => const [BlocEU()];
+  @override
+  List<Demonyms> get demonyms => const [
+        Demonyms(language: LangEng(), female: "Slovene", male: "Slovene"),
+        Demonyms(language: LangFra(), female: "Slovène", male: "Slovène"),
+      ];
+  @override
+  List<CountryName> get namesNative => const [
+        CountryName(
+          language: LangSlv(),
+          official: "Republika Slovenija",
+          common: "Slovenija",
+        ),
+      ];
   @override
   List<NaturalLanguage> get languages => const [LangSlv()];
 }
@@ -14389,13 +14549,6 @@ class CountrySwe extends WorldCountry {
             official: "Kingdom of Sweden",
             common: "Sweden",
           ),
-          namesNative: const [
-            CountryName(
-              language: LangSwe(),
-              official: "Konungariket Sverige",
-              common: "Sverige",
-            ),
-          ],
           tld: const [".se"],
           code: "SWE",
           codeNumeric: "752",
@@ -14412,10 +14565,6 @@ class CountrySwe extends WorldCountry {
           latLng: const LatLng(62, 15),
           bordersCodes: const ["Fin", "Nor"],
           areaMetric: 450295,
-          demonyms: const [
-            Demonyms(language: LangEng(), female: "Swedish", male: "Swedish"),
-            Demonyms(language: LangFra(), female: "Suédoise", male: "Suédois"),
-          ],
           emoji: "🇸🇪",
           maps: const Maps(
             googleMaps: "iqygE491ADVgnBW39",
@@ -14426,18 +14575,33 @@ class CountrySwe extends WorldCountry {
           fifa: "SWE",
           car: const Car(sign: "S"),
           timezones: const ["UTC+01:00"],
-          capitalInfo: const CapitalInfo(
-            capital: Capital("Stockholm"),
-            latLng: LatLng(59.33, 18.05),
-          ),
           postalCode: const PostalCode(
             format: "SE-### ##",
             regExpPattern: r"^(?:SE)*(\d{5})$",
           ),
-          regionalBlocs: const [BlocEU()],
         );
   @override
   List<FiatCurrency> get currencies => const [FiatSek()];
+  @override
+  CapitalInfo get capitalInfo => const CapitalInfo(
+        capital: Capital("Stockholm"),
+        latLng: LatLng(59.33, 18.05),
+      );
+  @override
+  List<RegionalBloc> get regionalBlocs => const [BlocEU()];
+  @override
+  List<Demonyms> get demonyms => const [
+        Demonyms(language: LangEng(), female: "Swedish", male: "Swedish"),
+        Demonyms(language: LangFra(), female: "Suédoise", male: "Suédois"),
+      ];
+  @override
+  List<CountryName> get namesNative => const [
+        CountryName(
+          language: LangSwe(),
+          official: "Konungariket Sverige",
+          common: "Sverige",
+        ),
+      ];
   @override
   List<NaturalLanguage> get languages => const [LangSwe()];
 }
@@ -14454,18 +14618,6 @@ class CountrySwz extends WorldCountry {
             official: "Kingdom of Eswatini",
             common: "Eswatini",
           ),
-          namesNative: const [
-            CountryName(
-              language: LangEng(),
-              official: "Kingdom of Eswatini",
-              common: "Eswatini",
-            ),
-            CountryName(
-              language: LangSsw(),
-              official: "Umbuso weSwatini",
-              common: "eSwatini",
-            ),
-          ],
           tld: const [".sz"],
           code: "SWZ",
           codeNumeric: "748",
@@ -14487,10 +14639,6 @@ class CountrySwz extends WorldCountry {
           landlocked: true,
           bordersCodes: const ["Moz", "Zaf"],
           areaMetric: 17364,
-          demonyms: const [
-            Demonyms(language: LangEng(), female: "Swazi", male: "Swazi"),
-            Demonyms(language: LangFra(), female: "Swazie", male: "Swazie"),
-          ],
           emoji: "🇸🇿",
           maps: const Maps(
             googleMaps: "cUY79eqQihFSE8hV6",
@@ -14502,18 +14650,38 @@ class CountrySwz extends WorldCountry {
           car: const Car(sign: "SD", isRightSide: false),
           timezones: const ["UTC+02:00"],
           hasCoatOfArms: false,
-          capitalInfo: const CapitalInfo(
-            capital: Capital("Mbabane"),
-            latLng: LatLng(-26.32, 31.13),
-          ),
           postalCode: const PostalCode(
             format: "@###",
             regExpPattern: r"^([A-Z]\d{3})$",
           ),
-          regionalBlocs: const [BlocAU()],
         );
   @override
   List<FiatCurrency> get currencies => const [FiatSzl(), FiatZar()];
+  @override
+  CapitalInfo get capitalInfo => const CapitalInfo(
+        capital: Capital("Mbabane"),
+        latLng: LatLng(-26.32, 31.13),
+      );
+  @override
+  List<RegionalBloc> get regionalBlocs => const [BlocAU()];
+  @override
+  List<Demonyms> get demonyms => const [
+        Demonyms(language: LangEng(), female: "Swazi", male: "Swazi"),
+        Demonyms(language: LangFra(), female: "Swazie", male: "Swazie"),
+      ];
+  @override
+  List<CountryName> get namesNative => const [
+        CountryName(
+          language: LangEng(),
+          official: "Kingdom of Eswatini",
+          common: "Eswatini",
+        ),
+        CountryName(
+          language: LangSsw(),
+          official: "Umbuso weSwatini",
+          common: "eSwatini",
+        ),
+      ];
   @override
   List<NaturalLanguage> get languages => const [LangEng(), LangSsw()];
 }
@@ -14530,23 +14698,6 @@ class CountrySxm extends WorldCountry {
             official: "Sint Maarten",
             common: "Sint Maarten",
           ),
-          namesNative: const [
-            CountryName(
-              language: LangEng(),
-              official: "Sint Maarten",
-              common: "Sint Maarten",
-            ),
-            CountryName(
-              language: LangFra(),
-              official: "Saint-Martin",
-              common: "Saint-Martin",
-            ),
-            CountryName(
-              language: LangNld(),
-              official: "Sint Maarten",
-              common: "Sint Maarten",
-            ),
-          ],
           tld: const [".sx"],
           code: "SXM",
           codeNumeric: "534",
@@ -14560,18 +14711,6 @@ class CountrySxm extends WorldCountry {
           latLng: const LatLng(18.033333, -63.05),
           bordersCodes: const ["Maf"],
           areaMetric: 34,
-          demonyms: const [
-            Demonyms(
-              language: LangEng(),
-              female: "St. Maartener",
-              male: "St. Maartener",
-            ),
-            Demonyms(
-              language: LangFra(),
-              female: "Saint-Martinoise",
-              male: "Saint-Martinois",
-            ),
-          ],
           emoji: "🇸🇽",
           maps: const Maps(
             googleMaps: "DjvcESy1a1oGEZuNA",
@@ -14581,13 +14720,45 @@ class CountrySxm extends WorldCountry {
           car: const Car(sign: "SX"),
           timezones: const ["UTC-04:00"],
           hasCoatOfArms: false,
-          capitalInfo: const CapitalInfo(
-            capital: Capital("Philipsburg"),
-            latLng: LatLng(18.02, -63.03),
-          ),
         );
   @override
   List<FiatCurrency> get currencies => const [FiatAng()];
+  @override
+  CapitalInfo get capitalInfo => const CapitalInfo(
+        capital: Capital("Philipsburg"),
+        latLng: LatLng(18.02, -63.03),
+      );
+  @override
+  List<Demonyms> get demonyms => const [
+        Demonyms(
+          language: LangEng(),
+          female: "St. Maartener",
+          male: "St. Maartener",
+        ),
+        Demonyms(
+          language: LangFra(),
+          female: "Saint-Martinoise",
+          male: "Saint-Martinois",
+        ),
+      ];
+  @override
+  List<CountryName> get namesNative => const [
+        CountryName(
+          language: LangEng(),
+          official: "Sint Maarten",
+          common: "Sint Maarten",
+        ),
+        CountryName(
+          language: LangFra(),
+          official: "Saint-Martin",
+          common: "Saint-Martin",
+        ),
+        CountryName(
+          language: LangNld(),
+          official: "Sint Maarten",
+          common: "Sint Maarten",
+        ),
+      ];
   @override
   List<NaturalLanguage> get languages =>
       const [LangEng(), LangFra(), LangNld()];
@@ -14605,18 +14776,6 @@ class CountrySyc extends WorldCountry {
             official: "Republic of Seychelles",
             common: "Seychelles",
           ),
-          namesNative: const [
-            CountryName(
-              language: LangEng(),
-              official: "Republic of Seychelles",
-              common: "Seychelles",
-            ),
-            CountryName(
-              language: LangFra(),
-              official: "République des Seychelles",
-              common: "Seychelles",
-            ),
-          ],
           tld: const [".sc"],
           code: "SYC",
           codeNumeric: "690",
@@ -14633,18 +14792,6 @@ class CountrySyc extends WorldCountry {
           subregion: const EasternAfrica(),
           latLng: const LatLng(-4.58333333, 55.66666666),
           areaMetric: 452,
-          demonyms: const [
-            Demonyms(
-              language: LangEng(),
-              female: "Seychellois",
-              male: "Seychellois",
-            ),
-            Demonyms(
-              language: LangFra(),
-              female: "Seychelloise",
-              male: "Seychellois",
-            ),
-          ],
           emoji: "🇸🇨",
           maps: const Maps(
             googleMaps: "aqCcy2TKh5TV5MAX8",
@@ -14655,14 +14802,42 @@ class CountrySyc extends WorldCountry {
           fifa: "SEY",
           car: const Car(sign: "SY", isRightSide: false),
           timezones: const ["UTC+04:00"],
-          capitalInfo: const CapitalInfo(
-            capital: Capital("Victoria"),
-            latLng: LatLng(-4.62, 55.45),
-          ),
-          regionalBlocs: const [BlocAU()],
         );
   @override
   List<FiatCurrency> get currencies => const [FiatScr()];
+  @override
+  CapitalInfo get capitalInfo => const CapitalInfo(
+        capital: Capital("Victoria"),
+        latLng: LatLng(-4.62, 55.45),
+      );
+  @override
+  List<RegionalBloc> get regionalBlocs => const [BlocAU()];
+  @override
+  List<Demonyms> get demonyms => const [
+        Demonyms(
+          language: LangEng(),
+          female: "Seychellois",
+          male: "Seychellois",
+        ),
+        Demonyms(
+          language: LangFra(),
+          female: "Seychelloise",
+          male: "Seychellois",
+        ),
+      ];
+  @override
+  List<CountryName> get namesNative => const [
+        CountryName(
+          language: LangEng(),
+          official: "Republic of Seychelles",
+          common: "Seychelles",
+        ),
+        CountryName(
+          language: LangFra(),
+          official: "République des Seychelles",
+          common: "Seychelles",
+        ),
+      ];
   @override
   List<NaturalLanguage> get languages => const [LangEng(), LangFra()];
 }
@@ -14679,13 +14854,6 @@ class CountrySyr extends WorldCountry {
             official: "Syrian Arab Republic",
             common: "Syria",
           ),
-          namesNative: const [
-            CountryName(
-              language: LangAra(),
-              official: "الجمهورية العربية السورية",
-              common: "سوريا",
-            ),
-          ],
           tld: const [".sy", "سوريا."],
           code: "SYR",
           codeNumeric: "760",
@@ -14702,10 +14870,6 @@ class CountrySyr extends WorldCountry {
           latLng: const LatLng(35, 38),
           bordersCodes: const ["Irq", "Isr", "Jor", "Lbn", "Tur"],
           areaMetric: 185180,
-          demonyms: const [
-            Demonyms(language: LangEng(), female: "Syrian", male: "Syrian"),
-            Demonyms(language: LangFra(), female: "Syrienne", male: "Syrien"),
-          ],
           emoji: "🇸🇾",
           maps: const Maps(
             googleMaps: "Xe3VnFbwdb4nv2SM9",
@@ -14716,14 +14880,29 @@ class CountrySyr extends WorldCountry {
           fifa: "SYR",
           car: const Car(sign: "SYR"),
           timezones: const ["UTC+02:00"],
-          capitalInfo: const CapitalInfo(
-            capital: Capital("Damascus"),
-            latLng: LatLng(33.5, 36.3),
-          ),
-          regionalBlocs: const [BlocAL()],
         );
   @override
   List<FiatCurrency> get currencies => const [FiatSyp()];
+  @override
+  CapitalInfo get capitalInfo => const CapitalInfo(
+        capital: Capital("Damascus"),
+        latLng: LatLng(33.5, 36.3),
+      );
+  @override
+  List<RegionalBloc> get regionalBlocs => const [BlocAL()];
+  @override
+  List<Demonyms> get demonyms => const [
+        Demonyms(language: LangEng(), female: "Syrian", male: "Syrian"),
+        Demonyms(language: LangFra(), female: "Syrienne", male: "Syrien"),
+      ];
+  @override
+  List<CountryName> get namesNative => const [
+        CountryName(
+          language: LangAra(),
+          official: "الجمهورية العربية السورية",
+          common: "سوريا",
+        ),
+      ];
   @override
   List<NaturalLanguage> get languages => const [LangAra()];
 }
@@ -14740,13 +14919,6 @@ class CountryTca extends WorldCountry {
             official: "Turks and Caicos Islands",
             common: "Turks and Caicos Islands",
           ),
-          namesNative: const [
-            CountryName(
-              language: LangEng(),
-              official: "Turks and Caicos Islands",
-              common: "Turks and Caicos Islands",
-            ),
-          ],
           tld: const [".tc"],
           code: "TCA",
           codeNumeric: "796",
@@ -14759,13 +14931,6 @@ class CountryTca extends WorldCountry {
           subregion: const Caribbean(),
           latLng: const LatLng(21.75, -71.58333333),
           areaMetric: 948,
-          demonyms: const [
-            Demonyms(
-              language: LangEng(),
-              female: "Turks and Caicos Islander",
-              male: "Turks and Caicos Islander",
-            ),
-          ],
           emoji: "🇹🇨",
           maps: const Maps(
             googleMaps: "R8VUDQfwZiFtvmyn8",
@@ -14776,10 +14941,6 @@ class CountryTca extends WorldCountry {
           car: const Car(sign: "GB", isRightSide: false),
           timezones: const ["UTC-04:00"],
           hasCoatOfArms: false,
-          capitalInfo: const CapitalInfo(
-            capital: Capital("Cockburn Town"),
-            latLng: LatLng(21.46, -71.14),
-          ),
           postalCode: const PostalCode(
             format: "TKCA 1ZZ",
             regExpPattern: r"^(TKCA 1ZZ)$",
@@ -14787,6 +14948,27 @@ class CountryTca extends WorldCountry {
         );
   @override
   List<FiatCurrency> get currencies => const [FiatUsd()];
+  @override
+  CapitalInfo get capitalInfo => const CapitalInfo(
+        capital: Capital("Cockburn Town"),
+        latLng: LatLng(21.46, -71.14),
+      );
+  @override
+  List<Demonyms> get demonyms => const [
+        Demonyms(
+          language: LangEng(),
+          female: "Turks and Caicos Islander",
+          male: "Turks and Caicos Islander",
+        ),
+      ];
+  @override
+  List<CountryName> get namesNative => const [
+        CountryName(
+          language: LangEng(),
+          official: "Turks and Caicos Islands",
+          common: "Turks and Caicos Islands",
+        ),
+      ];
   @override
   List<NaturalLanguage> get languages => const [LangEng()];
 }
@@ -14803,18 +14985,6 @@ class CountryTcd extends WorldCountry {
             official: "Republic of Chad",
             common: "Chad",
           ),
-          namesNative: const [
-            CountryName(
-              language: LangAra(),
-              official: "جمهورية تشاد",
-              common: "تشاد‎",
-            ),
-            CountryName(
-              language: LangFra(),
-              official: "République du Tchad",
-              common: "Tchad",
-            ),
-          ],
           tld: const [".td"],
           code: "TCD",
           codeNumeric: "148",
@@ -14833,14 +15003,6 @@ class CountryTcd extends WorldCountry {
           landlocked: true,
           bordersCodes: const ["Cmr", "Caf", "Lby", "Ner", "Nga", "Sdn"],
           areaMetric: 1284000,
-          demonyms: const [
-            Demonyms(language: LangEng(), female: "Chadian", male: "Chadian"),
-            Demonyms(
-              language: LangFra(),
-              female: "Tchadienne",
-              male: "Tchadien",
-            ),
-          ],
           emoji: "🇹🇩",
           maps: const Maps(
             googleMaps: "ziUdAZ8skuNfx5Hx7",
@@ -14851,13 +15013,32 @@ class CountryTcd extends WorldCountry {
           fifa: "CHA",
           car: const Car(sign: "TCH/TD"),
           timezones: const ["UTC+01:00"],
-          capitalInfo: const CapitalInfo(
-            capital: Capital("N'Djamena"),
-            latLng: LatLng(12.1, 15.03),
-          ),
         );
   @override
   List<FiatCurrency> get currencies => const [FiatXaf()];
+  @override
+  CapitalInfo get capitalInfo => const CapitalInfo(
+        capital: Capital("N'Djamena"),
+        latLng: LatLng(12.1, 15.03),
+      );
+  @override
+  List<Demonyms> get demonyms => const [
+        Demonyms(language: LangEng(), female: "Chadian", male: "Chadian"),
+        Demonyms(language: LangFra(), female: "Tchadienne", male: "Tchadien"),
+      ];
+  @override
+  List<CountryName> get namesNative => const [
+        CountryName(
+          language: LangAra(),
+          official: "جمهورية تشاد",
+          common: "تشاد‎",
+        ),
+        CountryName(
+          language: LangFra(),
+          official: "République du Tchad",
+          common: "Tchad",
+        ),
+      ];
   @override
   List<NaturalLanguage> get languages => const [LangAra(), LangFra()];
 }
@@ -14874,13 +15055,6 @@ class CountryTgo extends WorldCountry {
             official: "Togolese Republic",
             common: "Togo",
           ),
-          namesNative: const [
-            CountryName(
-              language: LangFra(),
-              official: "République togolaise",
-              common: "Togo",
-            ),
-          ],
           tld: const [".tg"],
           code: "TGO",
           codeNumeric: "768",
@@ -14898,14 +15072,6 @@ class CountryTgo extends WorldCountry {
           latLng: const LatLng(8, 1.16666666),
           bordersCodes: const ["Ben", "Bfa", "Gha"],
           areaMetric: 56785,
-          demonyms: const [
-            Demonyms(language: LangEng(), female: "Togolese", male: "Togolese"),
-            Demonyms(
-              language: LangFra(),
-              female: "Togolaise",
-              male: "Togolais",
-            ),
-          ],
           emoji: "🇹🇬",
           maps: const Maps(
             googleMaps: "jzAa9feXuXPrKVb89",
@@ -14916,13 +15082,25 @@ class CountryTgo extends WorldCountry {
           fifa: "TOG",
           car: const Car(sign: "TG"),
           timezones: const ["UTC+00:00"],
-          capitalInfo: const CapitalInfo(
-            capital: Capital("Lomé"),
-            latLng: LatLng(6.14, 1.21),
-          ),
         );
   @override
   List<FiatCurrency> get currencies => const [FiatXof()];
+  @override
+  CapitalInfo get capitalInfo =>
+      const CapitalInfo(capital: Capital("Lomé"), latLng: LatLng(6.14, 1.21));
+  @override
+  List<Demonyms> get demonyms => const [
+        Demonyms(language: LangEng(), female: "Togolese", male: "Togolese"),
+        Demonyms(language: LangFra(), female: "Togolaise", male: "Togolais"),
+      ];
+  @override
+  List<CountryName> get namesNative => const [
+        CountryName(
+          language: LangFra(),
+          official: "République togolaise",
+          common: "Togo",
+        ),
+      ];
   @override
   List<NaturalLanguage> get languages => const [LangFra()];
 }
@@ -14939,13 +15117,6 @@ class CountryTha extends WorldCountry {
             official: "Kingdom of Thailand",
             common: "Thailand",
           ),
-          namesNative: const [
-            CountryName(
-              language: LangTha(),
-              official: "ราชอาณาจักรไทย",
-              common: "ประเทศไทย",
-            ),
-          ],
           tld: const [".th", ".ไทย"],
           code: "THA",
           codeNumeric: "764",
@@ -14965,14 +15136,6 @@ class CountryTha extends WorldCountry {
           latLng: const LatLng(15, 100),
           bordersCodes: const ["Mmr", "Khm", "Lao", "Mys"],
           areaMetric: 513120,
-          demonyms: const [
-            Demonyms(language: LangEng(), female: "Thai", male: "Thai"),
-            Demonyms(
-              language: LangFra(),
-              female: "Thaïlandaise",
-              male: "Thaïlandais",
-            ),
-          ],
           emoji: "🇹🇭",
           maps: const Maps(
             googleMaps: "qeU6uqsfW4nCCwzw9",
@@ -14983,15 +15146,34 @@ class CountryTha extends WorldCountry {
           fifa: "THA",
           car: const Car(sign: "T", isRightSide: false),
           timezones: const ["UTC+07:00"],
-          capitalInfo: const CapitalInfo(
-            capital: Capital("Bangkok"),
-            latLng: LatLng(13.75, 100.52),
-          ),
           postalCode: const PostalCode(),
-          regionalBlocs: const [BlocAU()],
         );
   @override
   List<FiatCurrency> get currencies => const [FiatThb()];
+  @override
+  CapitalInfo get capitalInfo => const CapitalInfo(
+        capital: Capital("Bangkok"),
+        latLng: LatLng(13.75, 100.52),
+      );
+  @override
+  List<RegionalBloc> get regionalBlocs => const [BlocAU()];
+  @override
+  List<Demonyms> get demonyms => const [
+        Demonyms(language: LangEng(), female: "Thai", male: "Thai"),
+        Demonyms(
+          language: LangFra(),
+          female: "Thaïlandaise",
+          male: "Thaïlandais",
+        ),
+      ];
+  @override
+  List<CountryName> get namesNative => const [
+        CountryName(
+          language: LangTha(),
+          official: "ราชอาณาจักรไทย",
+          common: "ประเทศไทย",
+        ),
+      ];
   @override
   List<NaturalLanguage> get languages => const [LangTha()];
 }
@@ -15008,18 +15190,6 @@ class CountryTjk extends WorldCountry {
             official: "Republic of Tajikistan",
             common: "Tajikistan",
           ),
-          namesNative: const [
-            CountryName(
-              language: LangRus(),
-              official: "Республика Таджикистан",
-              common: "Таджикистан",
-            ),
-            CountryName(
-              language: LangTgk(),
-              official: "Ҷумҳурии Тоҷикистон",
-              common: "Тоҷикистон",
-            ),
-          ],
           tld: const [".tj"],
           code: "TJK",
           codeNumeric: "762",
@@ -15039,10 +15209,6 @@ class CountryTjk extends WorldCountry {
           landlocked: true,
           bordersCodes: const ["Afg", "Chn", "Kgz", "Uzb"],
           areaMetric: 143100,
-          demonyms: const [
-            Demonyms(language: LangEng(), female: "Tadzhik", male: "Tadzhik"),
-            Demonyms(language: LangFra(), female: "Tadjike", male: "Tadjike"),
-          ],
           emoji: "🇹🇯",
           maps: const Maps(
             googleMaps: "8rQgW88jEXijhVb58",
@@ -15053,15 +15219,34 @@ class CountryTjk extends WorldCountry {
           fifa: "TJK",
           car: const Car(sign: "TJ"),
           timezones: const ["UTC+05:00"],
-          capitalInfo: const CapitalInfo(
-            capital: Capital("Dushanbe"),
-            latLng: LatLng(38.55, 68.77),
-          ),
           postalCode:
               const PostalCode(format: "######", regExpPattern: r"^(\d{6})$"),
         );
   @override
   List<FiatCurrency> get currencies => const [FiatTjs()];
+  @override
+  CapitalInfo get capitalInfo => const CapitalInfo(
+        capital: Capital("Dushanbe"),
+        latLng: LatLng(38.55, 68.77),
+      );
+  @override
+  List<Demonyms> get demonyms => const [
+        Demonyms(language: LangEng(), female: "Tadzhik", male: "Tadzhik"),
+        Demonyms(language: LangFra(), female: "Tadjike", male: "Tadjike"),
+      ];
+  @override
+  List<CountryName> get namesNative => const [
+        CountryName(
+          language: LangRus(),
+          official: "Республика Таджикистан",
+          common: "Таджикистан",
+        ),
+        CountryName(
+          language: LangTgk(),
+          official: "Ҷумҳурии Тоҷикистон",
+          common: "Тоҷикистон",
+        ),
+      ];
   @override
   List<NaturalLanguage> get languages => const [LangRus(), LangTgk()];
 }
@@ -15078,18 +15263,6 @@ class CountryTkl extends WorldCountry {
             official: "Tokelau",
             common: "Tokelau",
           ),
-          namesNative: const [
-            CountryName(
-              language: LangEng(),
-              official: "Tokelau",
-              common: "Tokelau",
-            ),
-            CountryName(
-              language: LangSmo(),
-              official: "Tokelau",
-              common: "Tokelau",
-            ),
-          ],
           tld: const [".tk"],
           code: "TKL",
           codeNumeric: "772",
@@ -15102,13 +15275,6 @@ class CountryTkl extends WorldCountry {
           subregion: const Polynesia(),
           latLng: const LatLng(-9, -172),
           areaMetric: 12,
-          demonyms: const [
-            Demonyms(
-              language: LangEng(),
-              female: "Tokelauan",
-              male: "Tokelauan",
-            ),
-          ],
           emoji: "🇹🇰",
           maps: const Maps(
             googleMaps: "Ap5qN8qien6pT9UN6",
@@ -15118,13 +15284,31 @@ class CountryTkl extends WorldCountry {
           car: const Car(isRightSide: false),
           timezones: const ["UTC+13:00"],
           hasCoatOfArms: false,
-          capitalInfo: const CapitalInfo(
-            capital: Capital("Fakaofo"),
-            latLng: LatLng(-9.38, -171.22),
-          ),
         );
   @override
   List<FiatCurrency> get currencies => const [FiatNzd()];
+  @override
+  CapitalInfo get capitalInfo => const CapitalInfo(
+        capital: Capital("Fakaofo"),
+        latLng: LatLng(-9.38, -171.22),
+      );
+  @override
+  List<Demonyms> get demonyms => const [
+        Demonyms(language: LangEng(), female: "Tokelauan", male: "Tokelauan"),
+      ];
+  @override
+  List<CountryName> get namesNative => const [
+        CountryName(
+          language: LangEng(),
+          official: "Tokelau",
+          common: "Tokelau",
+        ),
+        CountryName(
+          language: LangSmo(),
+          official: "Tokelau",
+          common: "Tokelau",
+        ),
+      ];
   @override
   List<NaturalLanguage> get languages => const [LangEng(), LangSmo()];
 }
@@ -15141,18 +15325,6 @@ class CountryTkm extends WorldCountry {
             official: "Turkmenistan",
             common: "Turkmenistan",
           ),
-          namesNative: const [
-            CountryName(
-              language: LangRus(),
-              official: "Туркменистан",
-              common: "Туркмения",
-            ),
-            CountryName(
-              language: LangTuk(),
-              official: "Türkmenistan",
-              common: "Türkmenistan",
-            ),
-          ],
           tld: const [".tm"],
           code: "TKM",
           codeNumeric: "795",
@@ -15166,10 +15338,6 @@ class CountryTkm extends WorldCountry {
           landlocked: true,
           bordersCodes: const ["Afg", "Irn", "Kaz", "Uzb"],
           areaMetric: 488100,
-          demonyms: const [
-            Demonyms(language: LangEng(), female: "Turkmen", male: "Turkmen"),
-            Demonyms(language: LangFra(), female: "Turkmène", male: "Turkmène"),
-          ],
           emoji: "🇹🇲",
           maps: const Maps(
             googleMaps: "cgfUcaQHSWKuqeKk9",
@@ -15180,15 +15348,34 @@ class CountryTkm extends WorldCountry {
           fifa: "TKM",
           car: const Car(sign: "TM"),
           timezones: const ["UTC+05:00"],
-          capitalInfo: const CapitalInfo(
-            capital: Capital("Ashgabat"),
-            latLng: LatLng(37.95, 58.38),
-          ),
           postalCode:
               const PostalCode(format: "######", regExpPattern: r"^(\d{6})$"),
         );
   @override
   List<FiatCurrency> get currencies => const [FiatTmt()];
+  @override
+  CapitalInfo get capitalInfo => const CapitalInfo(
+        capital: Capital("Ashgabat"),
+        latLng: LatLng(37.95, 58.38),
+      );
+  @override
+  List<Demonyms> get demonyms => const [
+        Demonyms(language: LangEng(), female: "Turkmen", male: "Turkmen"),
+        Demonyms(language: LangFra(), female: "Turkmène", male: "Turkmène"),
+      ];
+  @override
+  List<CountryName> get namesNative => const [
+        CountryName(
+          language: LangRus(),
+          official: "Туркменистан",
+          common: "Туркмения",
+        ),
+        CountryName(
+          language: LangTuk(),
+          official: "Türkmenistan",
+          common: "Türkmenistan",
+        ),
+      ];
   @override
   List<NaturalLanguage> get languages => const [LangRus(), LangTuk()];
 }
@@ -15205,13 +15392,6 @@ class CountryTls extends WorldCountry {
             official: "Democratic Republic of Timor-Leste",
             common: "Timor-Leste",
           ),
-          namesNative: const [
-            CountryName(
-              language: LangPor(),
-              official: "República Democrática de Timor-Leste",
-              common: "Timor-Leste",
-            ),
-          ],
           tld: const [".tl"],
           code: "TLS",
           codeNumeric: "626",
@@ -15232,18 +15412,6 @@ class CountryTls extends WorldCountry {
           latLng: const LatLng(-8.83333333, 125.91666666),
           bordersCodes: const ["Idn"],
           areaMetric: 14874,
-          demonyms: const [
-            Demonyms(
-              language: LangEng(),
-              female: "East Timorese",
-              male: "East Timorese",
-            ),
-            Demonyms(
-              language: LangFra(),
-              female: "Est-timoraise",
-              male: "Est-timorais",
-            ),
-          ],
           emoji: "🇹🇱",
           maps: const Maps(
             googleMaps: "sFqBC9zjgUXPR1iTA",
@@ -15255,13 +15423,33 @@ class CountryTls extends WorldCountry {
           car: const Car(sign: "TL", isRightSide: false),
           timezones: const ["UTC+09:00"],
           hasCoatOfArms: false,
-          capitalInfo: const CapitalInfo(
-            capital: Capital("Dili"),
-            latLng: LatLng(-8.58, 125.6),
-          ),
         );
   @override
   List<FiatCurrency> get currencies => const [FiatUsd()];
+  @override
+  CapitalInfo get capitalInfo =>
+      const CapitalInfo(capital: Capital("Dili"), latLng: LatLng(-8.58, 125.6));
+  @override
+  List<Demonyms> get demonyms => const [
+        Demonyms(
+          language: LangEng(),
+          female: "East Timorese",
+          male: "East Timorese",
+        ),
+        Demonyms(
+          language: LangFra(),
+          female: "Est-timoraise",
+          male: "Est-timorais",
+        ),
+      ];
+  @override
+  List<CountryName> get namesNative => const [
+        CountryName(
+          language: LangPor(),
+          official: "República Democrática de Timor-Leste",
+          common: "Timor-Leste",
+        ),
+      ];
   @override
   List<NaturalLanguage> get languages => const [LangPor()];
 }
@@ -15278,18 +15466,6 @@ class CountryTon extends WorldCountry {
             official: "Kingdom of Tonga",
             common: "Tonga",
           ),
-          namesNative: const [
-            CountryName(
-              language: LangEng(),
-              official: "Kingdom of Tonga",
-              common: "Tonga",
-            ),
-            CountryName(
-              language: LangTon(),
-              official: "Kingdom of Tonga",
-              common: "Tonga",
-            ),
-          ],
           tld: const [".to"],
           code: "TON",
           codeNumeric: "776",
@@ -15301,14 +15477,6 @@ class CountryTon extends WorldCountry {
           subregion: const Polynesia(),
           latLng: const LatLng(-20, -175),
           areaMetric: 747,
-          demonyms: const [
-            Demonyms(language: LangEng(), female: "Tongan", male: "Tongan"),
-            Demonyms(
-              language: LangFra(),
-              female: "Tonguienne",
-              male: "Tonguien",
-            ),
-          ],
           emoji: "🇹🇴",
           maps: const Maps(
             googleMaps: "p5YALBY2QdEzswRo7",
@@ -15319,13 +15487,32 @@ class CountryTon extends WorldCountry {
           fifa: "TGA",
           car: const Car(sign: "TO", isRightSide: false),
           timezones: const ["UTC+13:00"],
-          capitalInfo: const CapitalInfo(
-            capital: Capital("Nuku'alofa"),
-            latLng: LatLng(-21.13, -175.2),
-          ),
         );
   @override
   List<FiatCurrency> get currencies => const [FiatTop()];
+  @override
+  CapitalInfo get capitalInfo => const CapitalInfo(
+        capital: Capital("Nuku'alofa"),
+        latLng: LatLng(-21.13, -175.2),
+      );
+  @override
+  List<Demonyms> get demonyms => const [
+        Demonyms(language: LangEng(), female: "Tongan", male: "Tongan"),
+        Demonyms(language: LangFra(), female: "Tonguienne", male: "Tonguien"),
+      ];
+  @override
+  List<CountryName> get namesNative => const [
+        CountryName(
+          language: LangEng(),
+          official: "Kingdom of Tonga",
+          common: "Tonga",
+        ),
+        CountryName(
+          language: LangTon(),
+          official: "Kingdom of Tonga",
+          common: "Tonga",
+        ),
+      ];
   @override
   List<NaturalLanguage> get languages => const [LangEng(), LangTon()];
 }
@@ -15342,13 +15529,6 @@ class CountryTto extends WorldCountry {
             official: "Republic of Trinidad and Tobago",
             common: "Trinidad and Tobago",
           ),
-          namesNative: const [
-            CountryName(
-              language: LangEng(),
-              official: "Republic of Trinidad and Tobago",
-              common: "Trinidad and Tobago",
-            ),
-          ],
           tld: const [".tt"],
           code: "TTO",
           codeNumeric: "780",
@@ -15360,18 +15540,6 @@ class CountryTto extends WorldCountry {
           subregion: const Caribbean(),
           latLng: const LatLng(10.6918, -61.2225),
           areaMetric: 5130,
-          demonyms: const [
-            Demonyms(
-              language: LangEng(),
-              female: "Trinidadian",
-              male: "Trinidadian",
-            ),
-            Demonyms(
-              language: LangFra(),
-              female: "Trinidadienne",
-              male: "Trinidadien",
-            ),
-          ],
           emoji: "🇹🇹",
           maps: const Maps(
             googleMaps: "NrRfDEWoG8FGZqWY7",
@@ -15382,14 +15550,37 @@ class CountryTto extends WorldCountry {
           fifa: "TRI",
           car: const Car(sign: "TT", isRightSide: false),
           timezones: const ["UTC-04:00"],
-          capitalInfo: const CapitalInfo(
-            capital: Capital("Port of Spain"),
-            latLng: LatLng(10.65, -61.52),
-          ),
-          regionalBlocs: const [BlocCARICOM()],
         );
   @override
   List<FiatCurrency> get currencies => const [FiatTtd()];
+  @override
+  CapitalInfo get capitalInfo => const CapitalInfo(
+        capital: Capital("Port of Spain"),
+        latLng: LatLng(10.65, -61.52),
+      );
+  @override
+  List<RegionalBloc> get regionalBlocs => const [BlocCARICOM()];
+  @override
+  List<Demonyms> get demonyms => const [
+        Demonyms(
+          language: LangEng(),
+          female: "Trinidadian",
+          male: "Trinidadian",
+        ),
+        Demonyms(
+          language: LangFra(),
+          female: "Trinidadienne",
+          male: "Trinidadien",
+        ),
+      ];
+  @override
+  List<CountryName> get namesNative => const [
+        CountryName(
+          language: LangEng(),
+          official: "Republic of Trinidad and Tobago",
+          common: "Trinidad and Tobago",
+        ),
+      ];
   @override
   List<NaturalLanguage> get languages => const [LangEng()];
 }
@@ -15406,13 +15597,6 @@ class CountryTun extends WorldCountry {
             official: "Tunisian Republic",
             common: "Tunisia",
           ),
-          namesNative: const [
-            CountryName(
-              language: LangAra(),
-              official: "الجمهورية التونسية",
-              common: "تونس",
-            ),
-          ],
           tld: const [".tn"],
           code: "TUN",
           codeNumeric: "788",
@@ -15429,14 +15613,6 @@ class CountryTun extends WorldCountry {
           latLng: const LatLng(34, 9),
           bordersCodes: const ["Dza", "Lby"],
           areaMetric: 163610,
-          demonyms: const [
-            Demonyms(language: LangEng(), female: "Tunisian", male: "Tunisian"),
-            Demonyms(
-              language: LangFra(),
-              female: "Tunisienne",
-              male: "Tunisien",
-            ),
-          ],
           emoji: "🇹🇳",
           maps: const Maps(
             googleMaps: "KgUmpZdUuNRaougs8",
@@ -15447,16 +15623,29 @@ class CountryTun extends WorldCountry {
           fifa: "TUN",
           car: const Car(sign: "TN"),
           timezones: const ["UTC+01:00"],
-          capitalInfo: const CapitalInfo(
-            capital: Capital("Tunis"),
-            latLng: LatLng(36.8, 10.18),
-          ),
           postalCode:
               const PostalCode(format: "####", regExpPattern: r"^(\d{4})$"),
-          regionalBlocs: const [BlocAU(), BlocAL()],
         );
   @override
   List<FiatCurrency> get currencies => const [FiatTnd()];
+  @override
+  CapitalInfo get capitalInfo =>
+      const CapitalInfo(capital: Capital("Tunis"), latLng: LatLng(36.8, 10.18));
+  @override
+  List<RegionalBloc> get regionalBlocs => const [BlocAU(), BlocAL()];
+  @override
+  List<Demonyms> get demonyms => const [
+        Demonyms(language: LangEng(), female: "Tunisian", male: "Tunisian"),
+        Demonyms(language: LangFra(), female: "Tunisienne", male: "Tunisien"),
+      ];
+  @override
+  List<CountryName> get namesNative => const [
+        CountryName(
+          language: LangAra(),
+          official: "الجمهورية التونسية",
+          common: "تونس",
+        ),
+      ];
   @override
   List<NaturalLanguage> get languages => const [LangAra()];
 }
@@ -15473,13 +15662,6 @@ class CountryTur extends WorldCountry {
             official: "Republic of Turkey",
             common: "Turkey",
           ),
-          namesNative: const [
-            CountryName(
-              language: LangTur(),
-              official: "Türkiye Cumhuriyeti",
-              common: "Türkiye",
-            ),
-          ],
           tld: const [".tr"],
           code: "TUR",
           codeNumeric: "792",
@@ -15506,10 +15688,6 @@ class CountryTur extends WorldCountry {
             "Syr",
           ],
           areaMetric: 783562,
-          demonyms: const [
-            Demonyms(language: LangEng(), female: "Turkish", male: "Turkish"),
-            Demonyms(language: LangFra(), female: "Turque", male: "Turc"),
-          ],
           emoji: "🇹🇷",
           maps: const Maps(
             googleMaps: "dXFFraiUDfcB6Quk6",
@@ -15520,14 +15698,28 @@ class CountryTur extends WorldCountry {
           fifa: "TUR",
           car: const Car(sign: "TR"),
           timezones: const ["UTC+03:00"],
-          capitalInfo: const CapitalInfo(
-            capital: Capital("Ankara"),
-            latLng: LatLng(39.93, 32.87),
-          ),
           postalCode: const PostalCode(),
         );
   @override
   List<FiatCurrency> get currencies => const [FiatTry()];
+  @override
+  CapitalInfo get capitalInfo => const CapitalInfo(
+        capital: Capital("Ankara"),
+        latLng: LatLng(39.93, 32.87),
+      );
+  @override
+  List<Demonyms> get demonyms => const [
+        Demonyms(language: LangEng(), female: "Turkish", male: "Turkish"),
+        Demonyms(language: LangFra(), female: "Turque", male: "Turc"),
+      ];
+  @override
+  List<CountryName> get namesNative => const [
+        CountryName(
+          language: LangTur(),
+          official: "Türkiye Cumhuriyeti",
+          common: "Türkiye",
+        ),
+      ];
   @override
   List<NaturalLanguage> get languages => const [LangTur()];
 }
@@ -15544,13 +15736,6 @@ class CountryTuv extends WorldCountry {
             official: "Tuvalu",
             common: "Tuvalu",
           ),
-          namesNative: const [
-            CountryName(
-              language: LangEng(),
-              official: "Tuvalu",
-              common: "Tuvalu",
-            ),
-          ],
           tld: const [".tv"],
           code: "TUV",
           codeNumeric: "798",
@@ -15562,14 +15747,6 @@ class CountryTuv extends WorldCountry {
           subregion: const Polynesia(),
           latLng: const LatLng(-8, 178),
           areaMetric: 26,
-          demonyms: const [
-            Demonyms(language: LangEng(), female: "Tuvaluan", male: "Tuvaluan"),
-            Demonyms(
-              language: LangFra(),
-              female: "Tuvaluane",
-              male: "Tuvaluan",
-            ),
-          ],
           emoji: "🇹🇻",
           maps: const Maps(
             googleMaps: "LbuUxtkgm1dfN1Pn6",
@@ -15579,13 +15756,23 @@ class CountryTuv extends WorldCountry {
           gini: const Gini(year: 2010, coefficient: 39.1),
           car: const Car(sign: "TUV", isRightSide: false),
           timezones: const ["UTC+12:00"],
-          capitalInfo: const CapitalInfo(
-            capital: Capital("Funafuti"),
-            latLng: LatLng(-8.52, 179.22),
-          ),
         );
   @override
   List<FiatCurrency> get currencies => const [FiatAud()];
+  @override
+  CapitalInfo get capitalInfo => const CapitalInfo(
+        capital: Capital("Funafuti"),
+        latLng: LatLng(-8.52, 179.22),
+      );
+  @override
+  List<Demonyms> get demonyms => const [
+        Demonyms(language: LangEng(), female: "Tuvaluan", male: "Tuvaluan"),
+        Demonyms(language: LangFra(), female: "Tuvaluane", male: "Tuvaluan"),
+      ];
+  @override
+  List<CountryName> get namesNative => const [
+        CountryName(language: LangEng(), official: "Tuvalu", common: "Tuvalu"),
+      ];
   @override
   List<NaturalLanguage> get languages => const [LangEng()];
 }
@@ -15602,9 +15789,6 @@ class CountryTwn extends WorldCountry {
             official: "Republic of China (Taiwan)",
             common: "Taiwan",
           ),
-          namesNative: const [
-            CountryName(language: LangZho(), official: "中華民國", common: "台灣"),
-          ],
           tld: const [".tw", ".台灣", ".台湾"],
           code: "TWN",
           codeNumeric: "158",
@@ -15625,18 +15809,6 @@ class CountryTwn extends WorldCountry {
           subregion: const EasternAsia(),
           latLng: const LatLng(23.5, 121),
           areaMetric: 36193,
-          demonyms: const [
-            Demonyms(
-              language: LangEng(),
-              female: "Taiwanese",
-              male: "Taiwanese",
-            ),
-            Demonyms(
-              language: LangFra(),
-              female: "Taïwanaise",
-              male: "Taïwanais",
-            ),
-          ],
           emoji: "🇹🇼",
           maps: const Maps(
             googleMaps: "HgMKFQjNadF3Wa6B6",
@@ -15646,14 +15818,23 @@ class CountryTwn extends WorldCountry {
           fifa: "TPE",
           car: const Car(sign: "RC"),
           timezones: const ["UTC+08:00"],
-          capitalInfo: const CapitalInfo(
-            capital: Capital("Taipei"),
-            latLng: LatLng(25.03, 121.52),
-          ),
           postalCode: const PostalCode(),
         );
   @override
   List<FiatCurrency> get currencies => const [FiatTwd()];
+  @override
+  CapitalInfo get capitalInfo => const CapitalInfo(
+        capital: Capital("Taipei"),
+        latLng: LatLng(25.03, 121.52),
+      );
+  @override
+  List<Demonyms> get demonyms => const [
+        Demonyms(language: LangEng(), female: "Taiwanese", male: "Taiwanese"),
+        Demonyms(language: LangFra(), female: "Taïwanaise", male: "Taïwanais"),
+      ];
+  @override
+  List<CountryName> get namesNative =>
+      const [CountryName(language: LangZho(), official: "中華民國", common: "台灣")];
   @override
   List<NaturalLanguage> get languages => const [LangZho()];
 }
@@ -15670,18 +15851,6 @@ class CountryTza extends WorldCountry {
             official: "United Republic of Tanzania",
             common: "Tanzania",
           ),
-          namesNative: const [
-            CountryName(
-              language: LangEng(),
-              official: "United Republic of Tanzania",
-              common: "Tanzania",
-            ),
-            CountryName(
-              language: LangSwa(),
-              official: "Jamhuri ya Muungano wa Tanzania",
-              common: "Tanzania",
-            ),
-          ],
           tld: const [".tz"],
           code: "TZA",
           codeNumeric: "834",
@@ -15708,18 +15877,6 @@ class CountryTza extends WorldCountry {
             "Zmb",
           ],
           areaMetric: 945087,
-          demonyms: const [
-            Demonyms(
-              language: LangEng(),
-              female: "Tanzanian",
-              male: "Tanzanian",
-            ),
-            Demonyms(
-              language: LangFra(),
-              female: "Tanzanienne",
-              male: "Tanzanien",
-            ),
-          ],
           emoji: "🇹🇿",
           maps: const Maps(
             googleMaps: "NWYMqZYXte4zGZ2Q8",
@@ -15730,14 +15887,34 @@ class CountryTza extends WorldCountry {
           fifa: "TAN",
           car: const Car(sign: "EAT", isRightSide: false),
           timezones: const ["UTC+03:00"],
-          capitalInfo: const CapitalInfo(
-            capital: Capital("Dodoma"),
-            latLng: LatLng(-6.16, 35.75),
-          ),
-          regionalBlocs: const [BlocAU()],
         );
   @override
   List<FiatCurrency> get currencies => const [FiatTzs()];
+  @override
+  CapitalInfo get capitalInfo => const CapitalInfo(
+        capital: Capital("Dodoma"),
+        latLng: LatLng(-6.16, 35.75),
+      );
+  @override
+  List<RegionalBloc> get regionalBlocs => const [BlocAU()];
+  @override
+  List<Demonyms> get demonyms => const [
+        Demonyms(language: LangEng(), female: "Tanzanian", male: "Tanzanian"),
+        Demonyms(language: LangFra(), female: "Tanzanienne", male: "Tanzanien"),
+      ];
+  @override
+  List<CountryName> get namesNative => const [
+        CountryName(
+          language: LangEng(),
+          official: "United Republic of Tanzania",
+          common: "Tanzania",
+        ),
+        CountryName(
+          language: LangSwa(),
+          official: "Jamhuri ya Muungano wa Tanzania",
+          common: "Tanzania",
+        ),
+      ];
   @override
   List<NaturalLanguage> get languages => const [LangEng(), LangSwa()];
 }
@@ -15754,18 +15931,6 @@ class CountryUga extends WorldCountry {
             official: "Republic of Uganda",
             common: "Uganda",
           ),
-          namesNative: const [
-            CountryName(
-              language: LangEng(),
-              official: "Republic of Uganda",
-              common: "Uganda",
-            ),
-            CountryName(
-              language: LangSwa(),
-              official: "Republic of Uganda",
-              common: "Uganda",
-            ),
-          ],
           tld: const [".ug"],
           code: "UGA",
           codeNumeric: "800",
@@ -15779,14 +15944,6 @@ class CountryUga extends WorldCountry {
           landlocked: true,
           bordersCodes: const ["Cod", "Ken", "Rwa", "Ssd", "Tza"],
           areaMetric: 241550,
-          demonyms: const [
-            Demonyms(language: LangEng(), female: "Ugandan", male: "Ugandan"),
-            Demonyms(
-              language: LangFra(),
-              female: "Ougandaise",
-              male: "Ougandais",
-            ),
-          ],
           emoji: "🇺🇬",
           maps: const Maps(
             googleMaps: "Y7812hFiGa8LD9N68",
@@ -15797,14 +15954,34 @@ class CountryUga extends WorldCountry {
           fifa: "UGA",
           car: const Car(sign: "EAU", isRightSide: false),
           timezones: const ["UTC+03:00"],
-          capitalInfo: const CapitalInfo(
-            capital: Capital("Kampala"),
-            latLng: LatLng(0.32, 32.55),
-          ),
-          regionalBlocs: const [BlocAU()],
         );
   @override
   List<FiatCurrency> get currencies => const [FiatUgx()];
+  @override
+  CapitalInfo get capitalInfo => const CapitalInfo(
+        capital: Capital("Kampala"),
+        latLng: LatLng(0.32, 32.55),
+      );
+  @override
+  List<RegionalBloc> get regionalBlocs => const [BlocAU()];
+  @override
+  List<Demonyms> get demonyms => const [
+        Demonyms(language: LangEng(), female: "Ugandan", male: "Ugandan"),
+        Demonyms(language: LangFra(), female: "Ougandaise", male: "Ougandais"),
+      ];
+  @override
+  List<CountryName> get namesNative => const [
+        CountryName(
+          language: LangEng(),
+          official: "Republic of Uganda",
+          common: "Uganda",
+        ),
+        CountryName(
+          language: LangSwa(),
+          official: "Republic of Uganda",
+          common: "Uganda",
+        ),
+      ];
   @override
   List<NaturalLanguage> get languages => const [LangEng(), LangSwa()];
 }
@@ -15821,13 +15998,6 @@ class CountryUkr extends WorldCountry {
             official: "Ukraine",
             common: "Ukraine",
           ),
-          namesNative: const [
-            CountryName(
-              language: LangUkr(),
-              official: "Україна",
-              common: "Україна",
-            ),
-          ],
           tld: const [".ua", ".укр"],
           code: "UKR",
           codeNumeric: "804",
@@ -15840,18 +16010,6 @@ class CountryUkr extends WorldCountry {
           latLng: const LatLng(49, 32),
           bordersCodes: const ["Blr", "Hun", "Mda", "Pol", "Rou", "Rus", "Svk"],
           areaMetric: 603500,
-          demonyms: const [
-            Demonyms(
-              language: LangEng(),
-              female: "Ukrainian",
-              male: "Ukrainian",
-            ),
-            Demonyms(
-              language: LangFra(),
-              female: "Ukrainienne",
-              male: "Ukrainien",
-            ),
-          ],
           emoji: "🇺🇦",
           maps: const Maps(
             googleMaps: "DvgJMiPJ7aozKFZv7",
@@ -15862,14 +16020,26 @@ class CountryUkr extends WorldCountry {
           fifa: "UKR",
           car: const Car(sign: "UA"),
           timezones: const ["UTC+02:00"],
-          capitalInfo: const CapitalInfo(
-            capital: Capital("Kyiv"),
-            latLng: LatLng(50.43, 30.52),
-          ),
           postalCode: const PostalCode(),
         );
   @override
   List<FiatCurrency> get currencies => const [FiatUah()];
+  @override
+  CapitalInfo get capitalInfo =>
+      const CapitalInfo(capital: Capital("Kyiv"), latLng: LatLng(50.43, 30.52));
+  @override
+  List<Demonyms> get demonyms => const [
+        Demonyms(language: LangEng(), female: "Ukrainian", male: "Ukrainian"),
+        Demonyms(language: LangFra(), female: "Ukrainienne", male: "Ukrainien"),
+      ];
+  @override
+  List<CountryName> get namesNative => const [
+        CountryName(
+          language: LangUkr(),
+          official: "Україна",
+          common: "Україна",
+        ),
+      ];
   @override
   List<NaturalLanguage> get languages => const [LangUkr()];
 }
@@ -15886,13 +16056,6 @@ class CountryUmi extends WorldCountry {
             official: "United States Minor Outlying Islands",
             common: "United States Minor Outlying Islands",
           ),
-          namesNative: const [
-            CountryName(
-              language: LangEng(),
-              official: "United States Minor Outlying Islands",
-              common: "United States Minor Outlying Islands",
-            ),
-          ],
           tld: const [".us"],
           code: "UMI",
           codeNumeric: "581",
@@ -15905,13 +16068,6 @@ class CountryUmi extends WorldCountry {
           subregion: const NorthAmerica(),
           latLng: const LatLng(19.3, 166.633333),
           areaMetric: 34.2,
-          demonyms: const [
-            Demonyms(
-              language: LangEng(),
-              female: "American Islander",
-              male: "American Islander",
-            ),
-          ],
           emoji: "🇺🇲",
           maps: const Maps(
             googleMaps: "hZKnrzgeK69dDyPF8",
@@ -15921,13 +16077,30 @@ class CountryUmi extends WorldCountry {
           car: const Car(),
           timezones: const ["UTC-11:00", "UTC-10:00", "UTC+12:00"],
           hasCoatOfArms: false,
-          capitalInfo: const CapitalInfo(
-            capital: Capital("Washington DC"),
-            latLng: LatLng(38.9072, 77.0369),
-          ),
         );
   @override
   List<FiatCurrency> get currencies => const [FiatUsd()];
+  @override
+  CapitalInfo get capitalInfo => const CapitalInfo(
+        capital: Capital("Washington DC"),
+        latLng: LatLng(38.9072, 77.0369),
+      );
+  @override
+  List<Demonyms> get demonyms => const [
+        Demonyms(
+          language: LangEng(),
+          female: "American Islander",
+          male: "American Islander",
+        ),
+      ];
+  @override
+  List<CountryName> get namesNative => const [
+        CountryName(
+          language: LangEng(),
+          official: "United States Minor Outlying Islands",
+          common: "United States Minor Outlying Islands",
+        ),
+      ];
   @override
   List<NaturalLanguage> get languages => const [LangEng()];
 }
@@ -15944,13 +16117,6 @@ class CountryUry extends WorldCountry {
             official: "Oriental Republic of Uruguay",
             common: "Uruguay",
           ),
-          namesNative: const [
-            CountryName(
-              language: LangSpa(),
-              official: "República Oriental del Uruguay",
-              common: "Uruguay",
-            ),
-          ],
           tld: const [".uy"],
           code: "URY",
           codeNumeric: "858",
@@ -15967,18 +16133,6 @@ class CountryUry extends WorldCountry {
           latLng: const LatLng(-33, -56),
           bordersCodes: const ["Arg", "Bra"],
           areaMetric: 181034,
-          demonyms: const [
-            Demonyms(
-              language: LangEng(),
-              female: "Uruguayan",
-              male: "Uruguayan",
-            ),
-            Demonyms(
-              language: LangFra(),
-              female: "Uruguayenne",
-              male: "Uruguayen",
-            ),
-          ],
           emoji: "🇺🇾",
           maps: const Maps(
             googleMaps: "tiQ9Baekb1jQtDSD9",
@@ -15989,15 +16143,30 @@ class CountryUry extends WorldCountry {
           fifa: "URU",
           car: const Car(sign: "ROU"),
           timezones: const ["UTC-03:00"],
-          capitalInfo: const CapitalInfo(
-            capital: Capital("Montevideo"),
-            latLng: LatLng(-34.85, -56.17),
-          ),
           postalCode: const PostalCode(),
-          regionalBlocs: const [BlocUSAN()],
         );
   @override
   List<FiatCurrency> get currencies => const [FiatUyu()];
+  @override
+  CapitalInfo get capitalInfo => const CapitalInfo(
+        capital: Capital("Montevideo"),
+        latLng: LatLng(-34.85, -56.17),
+      );
+  @override
+  List<RegionalBloc> get regionalBlocs => const [BlocUSAN()];
+  @override
+  List<Demonyms> get demonyms => const [
+        Demonyms(language: LangEng(), female: "Uruguayan", male: "Uruguayan"),
+        Demonyms(language: LangFra(), female: "Uruguayenne", male: "Uruguayen"),
+      ];
+  @override
+  List<CountryName> get namesNative => const [
+        CountryName(
+          language: LangSpa(),
+          official: "República Oriental del Uruguay",
+          common: "Uruguay",
+        ),
+      ];
   @override
   List<NaturalLanguage> get languages => const [LangSpa()];
 }
@@ -16014,13 +16183,6 @@ class CountryUsa extends WorldCountry {
             official: "United States of America",
             common: "United States",
           ),
-          namesNative: const [
-            CountryName(
-              language: LangEng(),
-              official: "United States of America",
-              common: "United States",
-            ),
-          ],
           tld: const [".us"],
           code: "USA",
           codeNumeric: "840",
@@ -16354,14 +16516,6 @@ class CountryUsa extends WorldCountry {
           latLng: const LatLng(38, -97),
           bordersCodes: const ["Can", "Mex"],
           areaMetric: 9372610,
-          demonyms: const [
-            Demonyms(language: LangEng(), female: "American", male: "American"),
-            Demonyms(
-              language: LangFra(),
-              female: "Américaine",
-              male: "Américain",
-            ),
-          ],
           emoji: "🇺🇸",
           maps: const Maps(
             googleMaps: "e8M246zY4BSjkjAv6",
@@ -16385,18 +16539,33 @@ class CountryUsa extends WorldCountry {
             "UTC+12:00",
           ],
           startOfWeek: Weekday.sunday,
-          capitalInfo: const CapitalInfo(
-            capital: Capital("Washington, D.C."),
-            latLng: LatLng(38.89, -77.05),
-          ),
           postalCode: const PostalCode(
             format: "#####-####",
             regExpPattern: r"^\d{5}(-\d{4})?$",
           ),
-          regionalBlocs: const [BlocNAFTA()],
         );
   @override
   List<FiatCurrency> get currencies => const [FiatUsd()];
+  @override
+  CapitalInfo get capitalInfo => const CapitalInfo(
+        capital: Capital("Washington, D.C."),
+        latLng: LatLng(38.89, -77.05),
+      );
+  @override
+  List<RegionalBloc> get regionalBlocs => const [BlocNAFTA()];
+  @override
+  List<Demonyms> get demonyms => const [
+        Demonyms(language: LangEng(), female: "American", male: "American"),
+        Demonyms(language: LangFra(), female: "Américaine", male: "Américain"),
+      ];
+  @override
+  List<CountryName> get namesNative => const [
+        CountryName(
+          language: LangEng(),
+          official: "United States of America",
+          common: "United States",
+        ),
+      ];
   @override
   List<NaturalLanguage> get languages => const [LangEng()];
 }
@@ -16413,18 +16582,6 @@ class CountryUzb extends WorldCountry {
             official: "Republic of Uzbekistan",
             common: "Uzbekistan",
           ),
-          namesNative: const [
-            CountryName(
-              language: LangRus(),
-              official: "Республика Узбекистан",
-              common: "Узбекистан",
-            ),
-            CountryName(
-              language: LangUzb(),
-              official: "O'zbekiston Respublikasi",
-              common: "O‘zbekiston",
-            ),
-          ],
           tld: const [".uz"],
           code: "UZB",
           codeNumeric: "860",
@@ -16443,14 +16600,6 @@ class CountryUzb extends WorldCountry {
           landlocked: true,
           bordersCodes: const ["Afg", "Kaz", "Kgz", "Tjk", "Tkm"],
           areaMetric: 447400,
-          demonyms: const [
-            Demonyms(
-              language: LangEng(),
-              female: "Uzbekistani",
-              male: "Uzbekistani",
-            ),
-            Demonyms(language: LangFra(), female: "Ouzbèke", male: "Ouzbèke"),
-          ],
           emoji: "🇺🇿",
           maps: const Maps(
             googleMaps: "AJpo6MjMx23qSWCz8",
@@ -16461,15 +16610,38 @@ class CountryUzb extends WorldCountry {
           fifa: "UZB",
           car: const Car(sign: "UZ"),
           timezones: const ["UTC+05:00"],
-          capitalInfo: const CapitalInfo(
-            capital: Capital("Tashkent"),
-            latLng: LatLng(41.32, 69.25),
-          ),
           postalCode:
               const PostalCode(format: "######", regExpPattern: r"^(\d{6})$"),
         );
   @override
   List<FiatCurrency> get currencies => const [FiatUzs()];
+  @override
+  CapitalInfo get capitalInfo => const CapitalInfo(
+        capital: Capital("Tashkent"),
+        latLng: LatLng(41.32, 69.25),
+      );
+  @override
+  List<Demonyms> get demonyms => const [
+        Demonyms(
+          language: LangEng(),
+          female: "Uzbekistani",
+          male: "Uzbekistani",
+        ),
+        Demonyms(language: LangFra(), female: "Ouzbèke", male: "Ouzbèke"),
+      ];
+  @override
+  List<CountryName> get namesNative => const [
+        CountryName(
+          language: LangRus(),
+          official: "Республика Узбекистан",
+          common: "Узбекистан",
+        ),
+        CountryName(
+          language: LangUzb(),
+          official: "O'zbekiston Respublikasi",
+          common: "O‘zbekiston",
+        ),
+      ];
   @override
   List<NaturalLanguage> get languages => const [LangRus(), LangUzb()];
 }
@@ -16486,18 +16658,6 @@ class CountryVat extends WorldCountry {
             official: "Vatican City State",
             common: "Vatican City",
           ),
-          namesNative: const [
-            CountryName(
-              language: LangIta(),
-              official: "Stato della Città del Vaticano",
-              common: "Vaticano",
-            ),
-            CountryName(
-              language: LangLat(),
-              official: "Status Civitatis Vaticanæ",
-              common: "Vaticanæ",
-            ),
-          ],
           tld: const [".va"],
           code: "VAT",
           codeNumeric: "336",
@@ -16516,10 +16676,6 @@ class CountryVat extends WorldCountry {
           landlocked: true,
           bordersCodes: const ["Ita"],
           areaMetric: 0.44,
-          demonyms: const [
-            Demonyms(language: LangEng(), female: "Vatican", male: "Vatican"),
-            Demonyms(language: LangFra(), female: "Vaticane", male: "Vatican"),
-          ],
           emoji: "🇻🇦",
           maps: const Maps(
             googleMaps: "DTKvw5Bd1QZaDZmE8",
@@ -16528,13 +16684,32 @@ class CountryVat extends WorldCountry {
           population: 451,
           car: const Car(sign: "V"),
           timezones: const ["UTC+01:00"],
-          capitalInfo: const CapitalInfo(
-            capital: Capital("Vatican City"),
-            latLng: LatLng(41.9, 12.45),
-          ),
         );
   @override
   List<FiatCurrency> get currencies => const [FiatEur()];
+  @override
+  CapitalInfo get capitalInfo => const CapitalInfo(
+        capital: Capital("Vatican City"),
+        latLng: LatLng(41.9, 12.45),
+      );
+  @override
+  List<Demonyms> get demonyms => const [
+        Demonyms(language: LangEng(), female: "Vatican", male: "Vatican"),
+        Demonyms(language: LangFra(), female: "Vaticane", male: "Vatican"),
+      ];
+  @override
+  List<CountryName> get namesNative => const [
+        CountryName(
+          language: LangIta(),
+          official: "Stato della Città del Vaticano",
+          common: "Vaticano",
+        ),
+        CountryName(
+          language: LangLat(),
+          official: "Status Civitatis Vaticanæ",
+          common: "Vaticanæ",
+        ),
+      ];
   @override
   List<NaturalLanguage> get languages => const [LangIta(), LangLat()];
 }
@@ -16551,13 +16726,6 @@ class CountryVct extends WorldCountry {
             official: "Saint Vincent and the Grenadines",
             common: "Saint Vincent and the Grenadines",
           ),
-          namesNative: const [
-            CountryName(
-              language: LangEng(),
-              official: "Saint Vincent and the Grenadines",
-              common: "Saint Vincent and the Grenadines",
-            ),
-          ],
           tld: const [".vc"],
           code: "VCT",
           codeNumeric: "670",
@@ -16569,18 +16737,6 @@ class CountryVct extends WorldCountry {
           subregion: const Caribbean(),
           latLng: const LatLng(13.25, -61.2),
           areaMetric: 389,
-          demonyms: const [
-            Demonyms(
-              language: LangEng(),
-              female: "Saint Vincentian",
-              male: "Saint Vincentian",
-            ),
-            Demonyms(
-              language: LangFra(),
-              female: "Vincentaise",
-              male: "Vincentais",
-            ),
-          ],
           emoji: "🇻🇨",
           maps: const Maps(
             googleMaps: "wMbnMqjG37FMnrwf7",
@@ -16590,14 +16746,37 @@ class CountryVct extends WorldCountry {
           fifa: "VIN",
           car: const Car(sign: "WV", isRightSide: false),
           timezones: const ["UTC-04:00"],
-          capitalInfo: const CapitalInfo(
-            capital: Capital("Kingstown"),
-            latLng: LatLng(13.13, -61.22),
-          ),
-          regionalBlocs: const [BlocCARICOM()],
         );
   @override
   List<FiatCurrency> get currencies => const [FiatXcd()];
+  @override
+  CapitalInfo get capitalInfo => const CapitalInfo(
+        capital: Capital("Kingstown"),
+        latLng: LatLng(13.13, -61.22),
+      );
+  @override
+  List<RegionalBloc> get regionalBlocs => const [BlocCARICOM()];
+  @override
+  List<Demonyms> get demonyms => const [
+        Demonyms(
+          language: LangEng(),
+          female: "Saint Vincentian",
+          male: "Saint Vincentian",
+        ),
+        Demonyms(
+          language: LangFra(),
+          female: "Vincentaise",
+          male: "Vincentais",
+        ),
+      ];
+  @override
+  List<CountryName> get namesNative => const [
+        CountryName(
+          language: LangEng(),
+          official: "Saint Vincent and the Grenadines",
+          common: "Saint Vincent and the Grenadines",
+        ),
+      ];
   @override
   List<NaturalLanguage> get languages => const [LangEng()];
 }
@@ -16614,13 +16793,6 @@ class CountryVen extends WorldCountry {
             official: "Bolivarian Republic of Venezuela",
             common: "Venezuela",
           ),
-          namesNative: const [
-            CountryName(
-              language: LangSpa(),
-              official: "República Bolivariana de Venezuela",
-              common: "Venezuela",
-            ),
-          ],
           tld: const [".ve"],
           code: "VEN",
           codeNumeric: "862",
@@ -16638,18 +16810,6 @@ class CountryVen extends WorldCountry {
           latLng: const LatLng(8, -66),
           bordersCodes: const ["Bra", "Col", "Guy"],
           areaMetric: 916445,
-          demonyms: const [
-            Demonyms(
-              language: LangEng(),
-              female: "Venezuelan",
-              male: "Venezuelan",
-            ),
-            Demonyms(
-              language: LangFra(),
-              female: "Vénézuélienne",
-              male: "Vénézuélien",
-            ),
-          ],
           emoji: "🇻🇪",
           maps: const Maps(
             googleMaps: "KLCwDN8sec7z2kse9",
@@ -16660,16 +16820,35 @@ class CountryVen extends WorldCountry {
           fifa: "VEN",
           car: const Car(sign: "YV"),
           timezones: const ["UTC-04:00"],
-          capitalInfo: const CapitalInfo(
-            capital: Capital("Caracas"),
-            latLng: LatLng(10.48, -66.87),
-          ),
           postalCode:
               const PostalCode(format: "####", regExpPattern: r"^(\d{4})$"),
-          regionalBlocs: const [BlocUSAN()],
         );
   @override
   List<FiatCurrency> get currencies => const [FiatVes()];
+  @override
+  CapitalInfo get capitalInfo => const CapitalInfo(
+        capital: Capital("Caracas"),
+        latLng: LatLng(10.48, -66.87),
+      );
+  @override
+  List<RegionalBloc> get regionalBlocs => const [BlocUSAN()];
+  @override
+  List<Demonyms> get demonyms => const [
+        Demonyms(language: LangEng(), female: "Venezuelan", male: "Venezuelan"),
+        Demonyms(
+          language: LangFra(),
+          female: "Vénézuélienne",
+          male: "Vénézuélien",
+        ),
+      ];
+  @override
+  List<CountryName> get namesNative => const [
+        CountryName(
+          language: LangSpa(),
+          official: "República Bolivariana de Venezuela",
+          common: "Venezuela",
+        ),
+      ];
   @override
   List<NaturalLanguage> get languages => const [LangSpa()];
 }
@@ -16686,13 +16865,6 @@ class CountryVgb extends WorldCountry {
             official: "Virgin Islands",
             common: "British Virgin Islands",
           ),
-          namesNative: const [
-            CountryName(
-              language: LangEng(),
-              official: "Virgin Islands",
-              common: "British Virgin Islands",
-            ),
-          ],
           tld: const [".vg"],
           code: "VGB",
           codeNumeric: "092",
@@ -16706,13 +16878,6 @@ class CountryVgb extends WorldCountry {
           subregion: const Caribbean(),
           latLng: const LatLng(18.431383, -64.62305),
           areaMetric: 151,
-          demonyms: const [
-            Demonyms(
-              language: LangEng(),
-              female: "Virgin Islander",
-              male: "Virgin Islander",
-            ),
-          ],
           emoji: "🇻🇬",
           maps: const Maps(
             googleMaps: "49C9cSesNVAR9DQk8",
@@ -16722,13 +16887,30 @@ class CountryVgb extends WorldCountry {
           fifa: "VGB",
           car: const Car(sign: "BVI", isRightSide: false),
           timezones: const ["UTC-04:00"],
-          capitalInfo: const CapitalInfo(
-            capital: Capital("Road Town"),
-            latLng: LatLng(18.42, -64.62),
-          ),
         );
   @override
   List<FiatCurrency> get currencies => const [FiatUsd()];
+  @override
+  CapitalInfo get capitalInfo => const CapitalInfo(
+        capital: Capital("Road Town"),
+        latLng: LatLng(18.42, -64.62),
+      );
+  @override
+  List<Demonyms> get demonyms => const [
+        Demonyms(
+          language: LangEng(),
+          female: "Virgin Islander",
+          male: "Virgin Islander",
+        ),
+      ];
+  @override
+  List<CountryName> get namesNative => const [
+        CountryName(
+          language: LangEng(),
+          official: "Virgin Islands",
+          common: "British Virgin Islands",
+        ),
+      ];
   @override
   List<NaturalLanguage> get languages => const [LangEng()];
 }
@@ -16745,13 +16927,6 @@ class CountryVir extends WorldCountry {
             official: "Virgin Islands of the United States",
             common: "United States Virgin Islands",
           ),
-          namesNative: const [
-            CountryName(
-              language: LangEng(),
-              official: "Virgin Islands of the United States",
-              common: "United States Virgin Islands",
-            ),
-          ],
           tld: const [".vi"],
           code: "VIR",
           codeNumeric: "850",
@@ -16765,13 +16940,6 @@ class CountryVir extends WorldCountry {
           subregion: const Caribbean(),
           latLng: const LatLng(18.35, -64.933333),
           areaMetric: 347,
-          demonyms: const [
-            Demonyms(
-              language: LangEng(),
-              female: "Virgin Islander",
-              male: "Virgin Islander",
-            ),
-          ],
           emoji: "🇻🇮",
           maps: const Maps(
             googleMaps: "mBfreywj8dor6q4m9",
@@ -16782,13 +16950,30 @@ class CountryVir extends WorldCountry {
           car: const Car(sign: "USA"),
           timezones: const ["UTC-04:00"],
           hasCoatOfArms: false,
-          capitalInfo: const CapitalInfo(
-            capital: Capital("Charlotte Amalie"),
-            latLng: LatLng(18.35, -64.93),
-          ),
         );
   @override
   List<FiatCurrency> get currencies => const [FiatUsd()];
+  @override
+  CapitalInfo get capitalInfo => const CapitalInfo(
+        capital: Capital("Charlotte Amalie"),
+        latLng: LatLng(18.35, -64.93),
+      );
+  @override
+  List<Demonyms> get demonyms => const [
+        Demonyms(
+          language: LangEng(),
+          female: "Virgin Islander",
+          male: "Virgin Islander",
+        ),
+      ];
+  @override
+  List<CountryName> get namesNative => const [
+        CountryName(
+          language: LangEng(),
+          official: "Virgin Islands of the United States",
+          common: "United States Virgin Islands",
+        ),
+      ];
   @override
   List<NaturalLanguage> get languages => const [LangEng()];
 }
@@ -16805,13 +16990,6 @@ class CountryVnm extends WorldCountry {
             official: "Socialist Republic of Vietnam",
             common: "Vietnam",
           ),
-          namesNative: const [
-            CountryName(
-              language: LangVie(),
-              official: "Cộng hòa xã hội chủ nghĩa Việt Nam",
-              common: "Việt Nam",
-            ),
-          ],
           tld: const [".vn"],
           code: "VNM",
           codeNumeric: "704",
@@ -16829,18 +17007,6 @@ class CountryVnm extends WorldCountry {
           latLng: const LatLng(16.16666666, 107.83333333),
           bordersCodes: const ["Khm", "Chn", "Lao"],
           areaMetric: 331212,
-          demonyms: const [
-            Demonyms(
-              language: LangEng(),
-              female: "Vietnamese",
-              male: "Vietnamese",
-            ),
-            Demonyms(
-              language: LangFra(),
-              female: "Vietnamienne",
-              male: "Vietnamien",
-            ),
-          ],
           emoji: "🇻🇳",
           maps: const Maps(
             googleMaps: "PCpVt9WzdJ9A9nEZ9",
@@ -16851,16 +17017,35 @@ class CountryVnm extends WorldCountry {
           fifa: "VIE",
           car: const Car(sign: "VN"),
           timezones: const ["UTC+07:00"],
-          capitalInfo: const CapitalInfo(
-            capital: Capital("Hanoi"),
-            latLng: LatLng(21.03, 105.85),
-          ),
           postalCode:
               const PostalCode(format: "######", regExpPattern: r"^(\d{6})$"),
-          regionalBlocs: const [BlocASEAN()],
         );
   @override
   List<FiatCurrency> get currencies => const [FiatVnd()];
+  @override
+  CapitalInfo get capitalInfo => const CapitalInfo(
+        capital: Capital("Hanoi"),
+        latLng: LatLng(21.03, 105.85),
+      );
+  @override
+  List<RegionalBloc> get regionalBlocs => const [BlocASEAN()];
+  @override
+  List<Demonyms> get demonyms => const [
+        Demonyms(language: LangEng(), female: "Vietnamese", male: "Vietnamese"),
+        Demonyms(
+          language: LangFra(),
+          female: "Vietnamienne",
+          male: "Vietnamien",
+        ),
+      ];
+  @override
+  List<CountryName> get namesNative => const [
+        CountryName(
+          language: LangVie(),
+          official: "Cộng hòa xã hội chủ nghĩa Việt Nam",
+          common: "Việt Nam",
+        ),
+      ];
   @override
   List<NaturalLanguage> get languages => const [LangVie()];
 }
@@ -16877,23 +17062,6 @@ class CountryVut extends WorldCountry {
             official: "Republic of Vanuatu",
             common: "Vanuatu",
           ),
-          namesNative: const [
-            CountryName(
-              language: LangBis(),
-              official: "Ripablik blong Vanuatu",
-              common: "Vanuatu",
-            ),
-            CountryName(
-              language: LangEng(),
-              official: "Republic of Vanuatu",
-              common: "Vanuatu",
-            ),
-            CountryName(
-              language: LangFra(),
-              official: "République de Vanuatu",
-              common: "Vanuatu",
-            ),
-          ],
           tld: const [".vu"],
           code: "VUT",
           codeNumeric: "548",
@@ -16910,18 +17078,6 @@ class CountryVut extends WorldCountry {
           subregion: const Melanesia(),
           latLng: const LatLng(-16, 167),
           areaMetric: 12189,
-          demonyms: const [
-            Demonyms(
-              language: LangEng(),
-              female: "Ni-Vanuatu",
-              male: "Ni-Vanuatu",
-            ),
-            Demonyms(
-              language: LangFra(),
-              female: "Vanuatuane",
-              male: "Vanuatuan",
-            ),
-          ],
           emoji: "🇻🇺",
           maps: const Maps(
             googleMaps: "hwAjehcT7VfvP5zJ8",
@@ -16932,13 +17088,37 @@ class CountryVut extends WorldCountry {
           fifa: "VAN",
           car: const Car(sign: "VU"),
           timezones: const ["UTC+11:00"],
-          capitalInfo: const CapitalInfo(
-            capital: Capital("Port Vila"),
-            latLng: LatLng(-17.73, 168.32),
-          ),
         );
   @override
   List<FiatCurrency> get currencies => const [FiatVuv()];
+  @override
+  CapitalInfo get capitalInfo => const CapitalInfo(
+        capital: Capital("Port Vila"),
+        latLng: LatLng(-17.73, 168.32),
+      );
+  @override
+  List<Demonyms> get demonyms => const [
+        Demonyms(language: LangEng(), female: "Ni-Vanuatu", male: "Ni-Vanuatu"),
+        Demonyms(language: LangFra(), female: "Vanuatuane", male: "Vanuatuan"),
+      ];
+  @override
+  List<CountryName> get namesNative => const [
+        CountryName(
+          language: LangBis(),
+          official: "Ripablik blong Vanuatu",
+          common: "Vanuatu",
+        ),
+        CountryName(
+          language: LangEng(),
+          official: "Republic of Vanuatu",
+          common: "Vanuatu",
+        ),
+        CountryName(
+          language: LangFra(),
+          official: "République de Vanuatu",
+          common: "Vanuatu",
+        ),
+      ];
   @override
   List<NaturalLanguage> get languages =>
       const [LangBis(), LangEng(), LangFra()];
@@ -16956,13 +17136,6 @@ class CountryWlf extends WorldCountry {
             official: "Territory of the Wallis and Futuna Islands",
             common: "Wallis and Futuna",
           ),
-          namesNative: const [
-            CountryName(
-              language: LangFra(),
-              official: "Territoire des îles Wallis et Futuna",
-              common: "Wallis et Futuna",
-            ),
-          ],
           tld: const [".wf"],
           code: "WLF",
           codeNumeric: "876",
@@ -16979,13 +17152,6 @@ class CountryWlf extends WorldCountry {
           subregion: const Polynesia(),
           latLng: const LatLng(-13.3, -176.2),
           areaMetric: 142,
-          demonyms: const [
-            Demonyms(
-              language: LangEng(),
-              female: "Wallis and Futuna Islander",
-              male: "Wallis and Futuna Islander",
-            ),
-          ],
           emoji: "🇼🇫",
           maps: const Maps(
             googleMaps: "CzVqK74QYtbHv65r5",
@@ -16995,14 +17161,31 @@ class CountryWlf extends WorldCountry {
           car: const Car(sign: "F"),
           timezones: const ["UTC+12:00"],
           hasCoatOfArms: false,
-          capitalInfo: const CapitalInfo(
-            capital: Capital("Mata-Utu"),
-            latLng: LatLng(-13.95, -171.93),
-          ),
           postalCode: const PostalCode(regExpPattern: r"^(986\d{2})$"),
         );
   @override
   List<FiatCurrency> get currencies => const [FiatXpf()];
+  @override
+  CapitalInfo get capitalInfo => const CapitalInfo(
+        capital: Capital("Mata-Utu"),
+        latLng: LatLng(-13.95, -171.93),
+      );
+  @override
+  List<Demonyms> get demonyms => const [
+        Demonyms(
+          language: LangEng(),
+          female: "Wallis and Futuna Islander",
+          male: "Wallis and Futuna Islander",
+        ),
+      ];
+  @override
+  List<CountryName> get namesNative => const [
+        CountryName(
+          language: LangFra(),
+          official: "Territoire des îles Wallis et Futuna",
+          common: "Wallis et Futuna",
+        ),
+      ];
   @override
   List<NaturalLanguage> get languages => const [LangFra()];
 }
@@ -17019,18 +17202,6 @@ class CountryWsm extends WorldCountry {
             official: "Independent State of Samoa",
             common: "Samoa",
           ),
-          namesNative: const [
-            CountryName(
-              language: LangEng(),
-              official: "Independent State of Samoa",
-              common: "Samoa",
-            ),
-            CountryName(
-              language: LangSmo(),
-              official: "Malo Saʻoloto Tutoʻatasi o Sāmoa",
-              common: "Sāmoa",
-            ),
-          ],
           tld: const [".ws"],
           code: "WSM",
           codeNumeric: "882",
@@ -17046,10 +17217,6 @@ class CountryWsm extends WorldCountry {
           subregion: const Polynesia(),
           latLng: const LatLng(-13.58333333, -172.33333333),
           areaMetric: 2842,
-          demonyms: const [
-            Demonyms(language: LangEng(), female: "Samoan", male: "Samoan"),
-            Demonyms(language: LangFra(), female: "Samoane", male: "Samoan"),
-          ],
           emoji: "🇼🇸",
           maps: const Maps(
             googleMaps: "CFC9fEFP9cfkYUBF9",
@@ -17060,13 +17227,32 @@ class CountryWsm extends WorldCountry {
           fifa: "SAM",
           car: const Car(sign: "WS", isRightSide: false),
           timezones: const ["UTC+13:00"],
-          capitalInfo: const CapitalInfo(
-            capital: Capital("Apia"),
-            latLng: LatLng(-13.82, -171.77),
-          ),
         );
   @override
   List<FiatCurrency> get currencies => const [FiatWst()];
+  @override
+  CapitalInfo get capitalInfo => const CapitalInfo(
+        capital: Capital("Apia"),
+        latLng: LatLng(-13.82, -171.77),
+      );
+  @override
+  List<Demonyms> get demonyms => const [
+        Demonyms(language: LangEng(), female: "Samoan", male: "Samoan"),
+        Demonyms(language: LangFra(), female: "Samoane", male: "Samoan"),
+      ];
+  @override
+  List<CountryName> get namesNative => const [
+        CountryName(
+          language: LangEng(),
+          official: "Independent State of Samoa",
+          common: "Samoa",
+        ),
+        CountryName(
+          language: LangSmo(),
+          official: "Malo Saʻoloto Tutoʻatasi o Sāmoa",
+          common: "Sāmoa",
+        ),
+      ];
   @override
   List<NaturalLanguage> get languages => const [LangEng(), LangSmo()];
 }
@@ -17083,13 +17269,6 @@ class CountryYem extends WorldCountry {
             official: "Republic of Yemen",
             common: "Yemen",
           ),
-          namesNative: const [
-            CountryName(
-              language: LangAra(),
-              official: "الجمهورية اليمنية",
-              common: "اليَمَن",
-            ),
-          ],
           tld: const [".ye"],
           code: "YEM",
           codeNumeric: "887",
@@ -17106,10 +17285,6 @@ class CountryYem extends WorldCountry {
           latLng: const LatLng(15, 48),
           bordersCodes: const ["Omn", "Sau"],
           areaMetric: 527968,
-          demonyms: const [
-            Demonyms(language: LangEng(), female: "Yemeni", male: "Yemeni"),
-            Demonyms(language: LangFra(), female: "Yéménite", male: "Yéménite"),
-          ],
           emoji: "🇾🇪",
           maps: const Maps(
             googleMaps: "WCmE76HKcLideQQw7",
@@ -17121,14 +17296,29 @@ class CountryYem extends WorldCountry {
           car: const Car(sign: "YAR"),
           timezones: const ["UTC+03:00"],
           startOfWeek: Weekday.sunday,
-          capitalInfo: const CapitalInfo(
-            capital: Capital("Sana'a"),
-            latLng: LatLng(15.37, 44.19),
-          ),
-          regionalBlocs: const [BlocAL()],
         );
   @override
   List<FiatCurrency> get currencies => const [FiatYer()];
+  @override
+  CapitalInfo get capitalInfo => const CapitalInfo(
+        capital: Capital("Sana'a"),
+        latLng: LatLng(15.37, 44.19),
+      );
+  @override
+  List<RegionalBloc> get regionalBlocs => const [BlocAL()];
+  @override
+  List<Demonyms> get demonyms => const [
+        Demonyms(language: LangEng(), female: "Yemeni", male: "Yemeni"),
+        Demonyms(language: LangFra(), female: "Yéménite", male: "Yéménite"),
+      ];
+  @override
+  List<CountryName> get namesNative => const [
+        CountryName(
+          language: LangAra(),
+          official: "الجمهورية اليمنية",
+          common: "اليَمَن",
+        ),
+      ];
   @override
   List<NaturalLanguage> get languages => const [LangAra()];
 }
@@ -17145,58 +17335,6 @@ class CountryZaf extends WorldCountry {
             official: "Republic of South Africa",
             common: "South Africa",
           ),
-          namesNative: const [
-            CountryName(
-              language: LangAfr(),
-              official: "Republiek van Suid-Afrika",
-              common: "South Africa",
-            ),
-            CountryName(
-              language: LangEng(),
-              official: "Republic of South Africa",
-              common: "South Africa",
-            ),
-            CountryName(
-              language: LangNbl(),
-              official: "IRiphabliki yeSewula Afrika",
-              common: "Sewula Afrika",
-            ),
-            CountryName(
-              language: LangSot(),
-              official: "Rephaboliki ya Afrika Borwa",
-              common: "Afrika Borwa",
-            ),
-            CountryName(
-              language: LangSsw(),
-              official: "IRiphabhulikhi yeNingizimu Afrika",
-              common: "Ningizimu Afrika",
-            ),
-            CountryName(
-              language: LangTsn(),
-              official: "Rephaboliki ya Aforika Borwa",
-              common: "Aforika Borwa",
-            ),
-            CountryName(
-              language: LangTso(),
-              official: "Riphabliki ra Afrika Dzonga",
-              common: "Afrika Dzonga",
-            ),
-            CountryName(
-              language: LangVen(),
-              official: "Riphabuḽiki ya Afurika Tshipembe",
-              common: "Afurika Tshipembe",
-            ),
-            CountryName(
-              language: LangXho(),
-              official: "IRiphabliki yaseMzantsi Afrika",
-              common: "Mzantsi Afrika",
-            ),
-            CountryName(
-              language: LangZul(),
-              official: "IRiphabliki yaseNingizimu Afrika",
-              common: "Ningizimu Afrika",
-            ),
-          ],
           tld: const [".za"],
           code: "ZAF",
           codeNumeric: "710",
@@ -17214,18 +17352,6 @@ class CountryZaf extends WorldCountry {
           latLng: const LatLng(-29, 24),
           bordersCodes: const ["Bwa", "Lso", "Moz", "Nam", "Swz", "Zwe"],
           areaMetric: 1221037,
-          demonyms: const [
-            Demonyms(
-              language: LangEng(),
-              female: "South African",
-              male: "South African",
-            ),
-            Demonyms(
-              language: LangFra(),
-              female: "Sud-africaine",
-              male: "Sud-africain",
-            ),
-          ],
           emoji: "🇿🇦",
           maps: const Maps(
             googleMaps: "CLCZ1R8Uz1KpYhRv6",
@@ -17236,20 +17362,85 @@ class CountryZaf extends WorldCountry {
           fifa: "RSA",
           car: const Car(sign: "ZA", isRightSide: false),
           timezones: const ["UTC+02:00"],
-          capitalInfo: const CapitalInfo(
-            capital: Capital(
-              "Pretoria",
-              deJure: "Bloemfontein",
-              third: "Cape Town",
-            ),
-            latLng: LatLng(-25.7, 28.22),
-          ),
           postalCode:
               const PostalCode(format: "####", regExpPattern: r"^(\d{4})$"),
-          regionalBlocs: const [BlocAU()],
         );
   @override
   List<FiatCurrency> get currencies => const [FiatZar()];
+  @override
+  CapitalInfo get capitalInfo => const CapitalInfo(
+        capital:
+            Capital("Pretoria", deJure: "Bloemfontein", third: "Cape Town"),
+        latLng: LatLng(-25.7, 28.22),
+      );
+  @override
+  List<RegionalBloc> get regionalBlocs => const [BlocAU()];
+  @override
+  List<Demonyms> get demonyms => const [
+        Demonyms(
+          language: LangEng(),
+          female: "South African",
+          male: "South African",
+        ),
+        Demonyms(
+          language: LangFra(),
+          female: "Sud-africaine",
+          male: "Sud-africain",
+        ),
+      ];
+  @override
+  List<CountryName> get namesNative => const [
+        CountryName(
+          language: LangAfr(),
+          official: "Republiek van Suid-Afrika",
+          common: "South Africa",
+        ),
+        CountryName(
+          language: LangEng(),
+          official: "Republic of South Africa",
+          common: "South Africa",
+        ),
+        CountryName(
+          language: LangNbl(),
+          official: "IRiphabliki yeSewula Afrika",
+          common: "Sewula Afrika",
+        ),
+        CountryName(
+          language: LangSot(),
+          official: "Rephaboliki ya Afrika Borwa",
+          common: "Afrika Borwa",
+        ),
+        CountryName(
+          language: LangSsw(),
+          official: "IRiphabhulikhi yeNingizimu Afrika",
+          common: "Ningizimu Afrika",
+        ),
+        CountryName(
+          language: LangTsn(),
+          official: "Rephaboliki ya Aforika Borwa",
+          common: "Aforika Borwa",
+        ),
+        CountryName(
+          language: LangTso(),
+          official: "Riphabliki ra Afrika Dzonga",
+          common: "Afrika Dzonga",
+        ),
+        CountryName(
+          language: LangVen(),
+          official: "Riphabuḽiki ya Afurika Tshipembe",
+          common: "Afurika Tshipembe",
+        ),
+        CountryName(
+          language: LangXho(),
+          official: "IRiphabliki yaseMzantsi Afrika",
+          common: "Mzantsi Afrika",
+        ),
+        CountryName(
+          language: LangZul(),
+          official: "IRiphabliki yaseNingizimu Afrika",
+          common: "Ningizimu Afrika",
+        ),
+      ];
   @override
   List<NaturalLanguage> get languages => const [
         LangAfr(),
@@ -17277,13 +17468,6 @@ class CountryZmb extends WorldCountry {
             official: "Republic of Zambia",
             common: "Zambia",
           ),
-          namesNative: const [
-            CountryName(
-              language: LangEng(),
-              official: "Republic of Zambia",
-              common: "Zambia",
-            ),
-          ],
           tld: const [".zm"],
           code: "ZMB",
           codeNumeric: "894",
@@ -17306,10 +17490,6 @@ class CountryZmb extends WorldCountry {
             "Zwe",
           ],
           areaMetric: 752612,
-          demonyms: const [
-            Demonyms(language: LangEng(), female: "Zambian", male: "Zambian"),
-            Demonyms(language: LangFra(), female: "Zambienne", male: "Zambien"),
-          ],
           emoji: "🇿🇲",
           maps: const Maps(
             googleMaps: "mweBcqvW8TppZW6q9",
@@ -17320,15 +17500,30 @@ class CountryZmb extends WorldCountry {
           fifa: "ZAM",
           car: const Car(sign: "RNR", isRightSide: false),
           timezones: const ["UTC+02:00"],
-          capitalInfo: const CapitalInfo(
-            capital: Capital("Lusaka"),
-            latLng: LatLng(-15.42, 28.28),
-          ),
           postalCode: const PostalCode(),
-          regionalBlocs: const [BlocAU()],
         );
   @override
   List<FiatCurrency> get currencies => const [FiatZmw()];
+  @override
+  CapitalInfo get capitalInfo => const CapitalInfo(
+        capital: Capital("Lusaka"),
+        latLng: LatLng(-15.42, 28.28),
+      );
+  @override
+  List<RegionalBloc> get regionalBlocs => const [BlocAU()];
+  @override
+  List<Demonyms> get demonyms => const [
+        Demonyms(language: LangEng(), female: "Zambian", male: "Zambian"),
+        Demonyms(language: LangFra(), female: "Zambienne", male: "Zambien"),
+      ];
+  @override
+  List<CountryName> get namesNative => const [
+        CountryName(
+          language: LangEng(),
+          official: "Republic of Zambia",
+          common: "Zambia",
+        ),
+      ];
   @override
   List<NaturalLanguage> get languages => const [LangEng()];
 }
@@ -17345,33 +17540,6 @@ class CountryZwe extends WorldCountry {
             official: "Republic of Zimbabwe",
             common: "Zimbabwe",
           ),
-          namesNative: const [
-            CountryName(
-              language: LangEng(),
-              official: "Republic of Zimbabwe",
-              common: "Zimbabwe",
-            ),
-            CountryName(
-              language: LangTsn(),
-              official: "Republic of Zimbabwe",
-              common: "Zimbabwe",
-            ),
-            CountryName(
-              language: LangTso(),
-              official: "Republic of Zimbabwe",
-              common: "Zimbabwe",
-            ),
-            CountryName(
-              language: LangVen(),
-              official: "Republic of Zimbabwe",
-              common: "Zimbabwe",
-            ),
-            CountryName(
-              language: LangXho(),
-              official: "Republic of Zimbabwe",
-              common: "Zimbabwe",
-            ),
-          ],
           tld: const [".zw"],
           code: "ZWE",
           codeNumeric: "716",
@@ -17385,18 +17553,6 @@ class CountryZwe extends WorldCountry {
           landlocked: true,
           bordersCodes: const ["Bwa", "Moz", "Zaf", "Tur"],
           areaMetric: 390757,
-          demonyms: const [
-            Demonyms(
-              language: LangEng(),
-              female: "Zimbabwean",
-              male: "Zimbabwean",
-            ),
-            Demonyms(
-              language: LangFra(),
-              female: "Zimbabwéenne",
-              male: "Zimbabwéen",
-            ),
-          ],
           emoji: "🇿🇼",
           maps: const Maps(
             googleMaps: "M26BqdwQctqxXS65A",
@@ -17407,14 +17563,53 @@ class CountryZwe extends WorldCountry {
           fifa: "ZIM",
           car: const Car(sign: "ZW", isRightSide: false),
           timezones: const ["UTC+02:00"],
-          capitalInfo: const CapitalInfo(
-            capital: Capital("Harare"),
-            latLng: LatLng(-17.82, 31.03),
-          ),
-          regionalBlocs: const [BlocAU()],
         );
   @override
   List<FiatCurrency> get currencies => const [FiatGbp(), FiatZwl()];
+  @override
+  CapitalInfo get capitalInfo => const CapitalInfo(
+        capital: Capital("Harare"),
+        latLng: LatLng(-17.82, 31.03),
+      );
+  @override
+  List<RegionalBloc> get regionalBlocs => const [BlocAU()];
+  @override
+  List<Demonyms> get demonyms => const [
+        Demonyms(language: LangEng(), female: "Zimbabwean", male: "Zimbabwean"),
+        Demonyms(
+          language: LangFra(),
+          female: "Zimbabwéenne",
+          male: "Zimbabwéen",
+        ),
+      ];
+  @override
+  List<CountryName> get namesNative => const [
+        CountryName(
+          language: LangEng(),
+          official: "Republic of Zimbabwe",
+          common: "Zimbabwe",
+        ),
+        CountryName(
+          language: LangTsn(),
+          official: "Republic of Zimbabwe",
+          common: "Zimbabwe",
+        ),
+        CountryName(
+          language: LangTso(),
+          official: "Republic of Zimbabwe",
+          common: "Zimbabwe",
+        ),
+        CountryName(
+          language: LangVen(),
+          official: "Republic of Zimbabwe",
+          common: "Zimbabwe",
+        ),
+        CountryName(
+          language: LangXho(),
+          official: "Republic of Zimbabwe",
+          common: "Zimbabwe",
+        ),
+      ];
   @override
   List<NaturalLanguage> get languages => const [
         LangEng(),
