@@ -58,6 +58,75 @@ class MaybeWidget<T extends Object> extends StatelessWidget {
     Key? key,
   }) : super(key: key ?? ValueKey<bool>(value != null));
 
+  /// Creates a [MaybeWidget] that uses [Offstage] as the default [orElse]
+  /// widget.
+  ///
+  /// This constructor is useful when you want to preserve the layout space even
+  /// when the [value] is `null`, but make the widget invisible.
+  ///
+  /// * [value] is the value to check for `null`.
+  /// * [_onMap] is the builder function to call with a non-null [value].
+  /// * [orElse] defaults to [Offstage] when [value] is `null`.
+  /// * [key] is the key for the widget.
+  ///
+  /// Example:
+  ///
+  /// ```dart
+  /// MaybeWidget.offstage(
+  ///   nullableValue,
+  ///   (value) => Text(value.toString()),
+  /// )
+  /// ```
+  const MaybeWidget.offstage(
+    this.value,
+    this._onMap, {
+    this.orElse = const Offstage(),
+    super.key,
+  });
+
+  /// Creates a list of widgets based on a nullable value.
+  ///
+  /// This method provides two ways to generate widgets:
+  /// 1. Using [child] to create a single widget
+  /// 2. Using [children] to create multiple widgets
+  ///
+  /// Returns an empty list if [value] is `null` or if [child] returns `null`.
+  /// When using [children], `null` widgets are filtered out from the result.
+  ///
+  /// * [value] - The nullable value to check
+  /// * [child] - Optional callback to create a single widget
+  /// * [children] - Optional callback to create multiple widgets
+  ///
+  /// Example with single child:
+  /// ```dart
+  /// MaybeWidget.list(
+  ///   maybeUser,
+  ///   child: (user) => Text(user.name),
+  /// )
+  /// ```
+  ///
+  /// Example with multiple children:
+  /// ```dart
+  /// MaybeWidget.list(
+  ///   maybeUser,
+  ///   children: (user) => [
+  ///     Text(user.name),
+  ///     if (user.isAdmin) Icon(Icons.star),
+  ///   ],
+  /// )
+  /// ```
+  static List<Widget> list<T extends Object>(
+    T? value, {
+    Widget? Function(T)? child,
+    Iterable<Widget?> Function(T)? children,
+  }) {
+    if (value == null) return const [];
+    if (children != null) return List.unmodifiable(children(value).nonNulls);
+    final maybeChild = child?.call(value);
+
+    return maybeChild == null ? const [] : [maybeChild];
+  }
+
   /// The builder function to call with a non-null [value].
   final Widget Function(T) _onMap;
 
