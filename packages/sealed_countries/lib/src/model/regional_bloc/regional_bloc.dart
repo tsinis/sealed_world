@@ -3,7 +3,7 @@ part of "world_bloc.dart";
 /// The [RegionalBloc] class is an non-abstract class that represents a regional
 /// bloc. It consists of a [String] values that represents the name and acronym
 /// of the regional bloc. The [name] and [acronym] fields are required and must
-/// not be empty. The [otherAcronyms] and [otherNames] fields are non-required.
+/// not be empty. The [otherAcronyms] and [otherNames] fields are optional.
 ///
 /// Example usage:
 ///
@@ -77,7 +77,7 @@ class RegionalBloc extends WorldBloc {
   /// The [acronym] parameter is required and must be a valid bloc acronym.
   /// {@macro any_code_object}
   /// Returns a [RegionalBloc] object that represents the bloc with the given
-  /// code or throws a [StateError] if no such bloc exists.
+  /// code if no such bloc exists.
   ///
   /// The optional [blocs] parameter can be used to specify a list of
   /// [RegionalBloc] objects to search through.

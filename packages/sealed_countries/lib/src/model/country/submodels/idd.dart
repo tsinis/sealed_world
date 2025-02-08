@@ -6,7 +6,7 @@ import "../../../helpers/extensions/country_submodels/idd_extension.dart";
 ///
 /// The [Idd] class is a simple value object that represents an International
 /// Direct Dialing (IDD) code. It consists of an [int] value that represents the
-/// root of the IDD code, and a `List<int>` value that represents the [suffixes]
+/// root of the IDD code, and a [List<int>] value that represents the [suffixes]
 /// of the IDD code.
 ///
 /// Example usage:

@@ -5,8 +5,8 @@ import "../../../helpers/extensions/country_submodels/maps_extension.dart";
 /// A class that represents URLs for Google Maps and OpenStreetMap.
 ///
 /// The [Maps] class is a simple wrapper around two string URLs for Google Maps
-/// and OpenStreetMap. It provides convenience methods for generating the full
-/// URLs from the URL prefixes and the map IDs.
+/// and OpenStreetMap. The URL prefixes are provided as static constants, while
+/// URL generation functionality is available through the [MapsExtension].
 ///
 /// Example usage:
 ///
