@@ -7,16 +7,14 @@ part of "../currency.dart";
 class CryptoCurrency extends Currency {
   /// Creates a new instance of [CryptoCurrency].
   ///
-  /// The `code` and `name` parameters are required. The `decimalMark` and
-  /// `thousandsSeparator` parameters default to "." and "," respectively.
+  /// The [code] and [name] parameters are required. The [decimalMark] and
+  /// [thousandsSeparator] parameters default to "." and "," respectively.
   ///
-  /// The `symbol` parameter is optional.
+  /// The [symbol] parameter is optional.
+  /// The [isMinable] and [isFork] parameters are optional and default to false.
+  /// The [proofType] and [dateAdded] parameters are optional.
   ///
-  /// The `isMinable` and `isFork` parameters are optional and default to false.
-  ///
-  /// The `proofType` and `dateAdded` parameters are optional.
-  ///
-  /// Throws an `AssertionError` if `proofType` is empty.
+  /// Throws an [AssertionError] if [proofType] is empty.
   const CryptoCurrency({
     required super.code,
     required super.name,
@@ -46,8 +44,8 @@ class CryptoCurrency extends Currency {
 
   /// Returns a string representation of the cryptocurrency.
   ///
-  /// The `short` parameter determines whether to print only the `code` or to
-  /// print the full details of the cryptocurrency. By default, only the `code`
+  /// The [short] parameter determines whether to print only the [code] or to
+  /// print the full details of the cryptocurrency. By default, only the [code]
   /// is printed.
   @override
   String toString({bool short = true}) => short

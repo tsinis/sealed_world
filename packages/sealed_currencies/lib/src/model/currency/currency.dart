@@ -13,28 +13,28 @@ part "submodels/fiat_currency.g.dart";
 /// A class representing a currency. This is an abstract class and should not be
 /// instantiated directly.
 ///
-/// The `code`, `decimalMark`, `name`, and `thousandsSeparator` parameters are
-/// required. The `symbol` parameter is optional.
+/// The [code], [decimalMark], [name], and [thousandsSeparator] parameters are
+/// required. The [symbol] parameter is optional.
 ///
-/// This class provides common properties for currencies, such as the `code`,
-/// `name`, `symbol`, `decimalMark`, and `thousandsSeparator`. It also provides
-/// a `toString` method that can be used to print the contents of a `Currency`
+/// This class provides common properties for currencies, such as the [code],
+/// [name], [symbol], [decimalMark], and [thousandsSeparator]. It also provides
+/// a `toString` method that can be used to print the contents of a [Currency]
 /// instance.
 ///
 /// This class is extended by the [FiatCurrency] and [CryptoCurrency] classes,
 /// which provide additional properties specific to fiat and crypto currencies,
 /// respectively.
 ///
-/// The `code` parameter should not be empty. The `name` parameter should not be
-/// empty. The `symbol` parameter should not be empty if it is provided.
+/// The [code] parameter should not be empty. The [name] parameter should not be
+/// empty. The [symbol] parameter should not be empty if it is provided.
 sealed class Currency implements Named<String> {
   /// Creates a new instance of [Currency].
   ///
-  /// The `code`, `decimalMark`, `name`, and `thousandsSeparator` parameters are
-  /// required. The `symbol` parameter is optional.
+  /// The [code], [decimalMark], [name], and [thousandsSeparator] parameters are
+  /// required. The [symbol] parameter is optional.
   ///
-  /// Throws an `AssertionError` if `code` is empty, `name` is empty, or
-  /// `symbol` is empty (if provided).
+  /// Throws an [AssertionError] if [code] is empty, [name] is empty, or
+  /// [symbol] is empty (if provided).
   const Currency({
     required this.code,
     required this.decimalMark,
@@ -70,8 +70,8 @@ sealed class Currency implements Named<String> {
 
   /// Returns a string representation of the currency.
   ///
-  /// The `short` parameter determines whether to print only the `code` or to
-  /// print the full details of the currency. By default, only the `code` is
+  /// The [code] parameter determines whether to print only the [code] or to
+  /// print the full details of the currency. By default, only the [code] is
   /// printed.
   @override
   String toString({bool short = true}) => short
