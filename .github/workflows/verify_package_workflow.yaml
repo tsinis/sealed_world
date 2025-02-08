@@ -33,17 +33,13 @@ jobs:
         with:
           sdk: "stable"
 
-      - name: 📦 Install CLI tools
+      - name: 🧹 Workspace cleaner
         if: ${{ !inputs.is_flutter }}
-        run: cd $GITHUB_WORKSPACE/tools && dart pub global activate --source path .
-
-      - name: 🧹 Run workspace cleaner
-        if: ${{ !inputs.is_flutter }}
-        run: dart pub global run cli:workspace_cleaner
-
-      - name: 🎯 Exclude Flutter SDK from pure-Dart packages
-        if: ${{ !inputs.is_flutter }}
-        run: dart run dart_code_metrics:metrics
+        uses: actions/github-script@v7.0.1
+        with:
+          script: |
+            const f = 'pubspec.yaml', c = await require('fs').promises.readFile(f, 'utf8')
+            await require('fs').promises.writeFile(f, c.replace(/- packages\/world_/g, '#'))
 
       - name: 🐦 Setup Flutter
         if: ${{ inputs.is_flutter }}
