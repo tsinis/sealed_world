@@ -25,8 +25,6 @@ dev_dependencies:
   dart_code_metrics_presets: ^2.20.0
   dhttpd: ^4.1.0 # From Google
   flutter_gen_runner: ^5.8.0
-  flutter_test: # From Google
-    sdk: flutter
   lints: ^5.1.1 # From Google
 
 flutter:
