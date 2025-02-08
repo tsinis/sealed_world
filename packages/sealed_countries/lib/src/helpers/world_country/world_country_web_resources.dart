@@ -3,7 +3,7 @@
 import "../../model/country/country.dart";
 
 /// Provides extension methods for accessing web resources related to a
-/// `WorldCountry` object.
+/// [WorldCountry] object.
 extension WorldCountryWebResources on WorldCountry {
   /// The file extension for PNG images.
   static const png = "png";
@@ -27,7 +27,7 @@ extension WorldCountryWebResources on WorldCountry {
   /// Returns the URL of the PNG image file for the country's coat of arms if it
   /// has one, or `null` otherwise.
   ///
-  /// If the `hasCoatOfArms` property of the `WorldCountry` object is `true`,
+  /// If the `hasCoatOfArms` property of the [WorldCountry] object is `true`,
   /// returns the URL of the PNG image file for the country's coat of arms.
   /// Otherwise, returns `null`.
   String? maybeCoatOfArmsPngUrl() =>
@@ -36,7 +36,7 @@ extension WorldCountryWebResources on WorldCountry {
   /// Returns the URL of the SVG image file for the country's coat of arms if it
   /// has one, or `null` otherwise.
   ///
-  /// If the `hasCoatOfArms` property of the `WorldCountry` object is `true`,
+  /// If the `hasCoatOfArms` property of the [WorldCountry] object is `true`,
   /// returns the URL of the SVG image file for the country's coat of arms.
   /// Otherwise, returns `null`.
   String? maybeCoatOfArmsSvgUrl() =>

@@ -4,11 +4,11 @@ import "../../../helpers/extensions/country_submodels/gini_extension.dart";
 
 /// A class that represents a Gini coefficient.
 ///
-/// The `Gini` class is a simple value object that represents a Gini
-/// coefficient. It consists of an `int` value that represents the year of the
-/// Gini coefficient, and a `double` value that represents the value of the Gini
-/// coefficient. The `year` field must be greater than 1990, and the
-/// `coefficient` field must be between 0.0 and 100.0 (inclusive).
+/// The [Gini] class is a simple value object that represents a Gini
+/// coefficient. It consists of an [int] value that represents the year of the
+/// Gini coefficient, and a [double] value that represents the value of the Gini
+/// coefficient. The [year] field must be greater than 1990, and the
+/// [coefficient] field must be between 0.0 and 100.0 (inclusive).
 /// Reference - https://wikipedia.org/wiki/Gini_coefficient.
 ///
 /// Example usage:
@@ -19,9 +19,9 @@ import "../../../helpers/extensions/country_submodels/gini_extension.dart";
 /// print(gini.coefficient); // Prints: 32.0
 /// ```
 final class Gini implements JsonEncodable<Gini> {
-  /// Creates a new `Gini` object with the given year and coefficient.
+  /// Creates a new [Gini] object with the given year and coefficient.
   ///
-  /// The `year` parameter must be greater than 1990, and the `coefficient`
+  /// The [year] parameter must be greater than 1990, and the [coefficient]
   /// parameter must be between 0.0 and 100.0 (inclusive).
   const Gini({required this.year, required this.coefficient})
       : assert(year > minYear, "`year` should be greater than $minYear!"),
@@ -34,16 +34,16 @@ final class Gini implements JsonEncodable<Gini> {
           "`coefficient` should be greater than $minCoefficient!",
         );
 
-  /// The minimum year that can be used as the `year` parameter when creating a
-  /// `Gini` object.
+  /// The minimum year that can be used as the [year] parameter when creating a
+  /// [Gini] object.
   static const minYear = 1990;
 
-  /// The minimum value that can be used as the `coefficient` parameter when
-  /// creating a `Gini` object.
+  /// The minimum value that can be used as the [coefficient] parameter when
+  /// creating a [Gini] object.
   static const minCoefficient = 0.0;
 
-  /// The maximum value that can be used as the `coefficient` parameter when
-  /// creating a `Gini` object.
+  /// The maximum value that can be used as the [coefficient] parameter when
+  /// creating a [Gini] object.
   static const maxCoefficient = 100.0;
 
   /// The year of this Gini coefficient.

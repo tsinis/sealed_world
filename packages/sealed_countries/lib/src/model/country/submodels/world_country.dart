@@ -31,11 +31,11 @@ class WorldCountry extends Country
   /// {@template country_constructor}
   /// Creates a new [WorldCountry] object with the given properties.
   ///
-  /// The `name` parameter is required and must not be empty. The
-  /// `altSpellings`, `languages`, `namesNative`, `translations`, `demonyms`,
-  /// `timezones`, `bordersCodes`, and `tld` parameters should not be `null`.
-  /// The `codeShort`, `codeNumeric`, `code`, `emoji`, `idd`, `latLng`, `maps`,
-  /// `areaMetric`, `population`, and `startOfWeek` parameters should not be
+  /// The [name] parameter is required and must not be empty. The
+  /// [altSpellings], [languages], [namesNative], [translations], [demonyms],
+  /// [timezones], [bordersCodes], and [tld] parameters should not be `null`.
+  /// The [codeShort], [codeNumeric], [code], [emoji], [idd], [latLng], [maps],
+  /// [areaMetric], [population], and [startOfWeek] parameters should not be
   /// `null` and must be valid values.
   /// {@endtemplate}
   const WorldCountry({
@@ -174,7 +174,7 @@ class WorldCountry extends Country
           ? codeMap.findByCodeOrThrow(code)
           : countries.firstIsoWhereCode(code.toUpperCaseIsoCode());
 
-  /// Returns an [WorldCountry] object from the given `codeShort`
+  /// Returns an [WorldCountry] object from the given [codeShort]
   /// ISO 3166-1 Alpha-2 code.
   ///
   /// The [codeShort] parameter is required and must be a valid country code
@@ -194,7 +194,7 @@ class WorldCountry extends Country
           ? codeShortMap.findByCodeOrThrow(codeShort)
           : countries.firstIsoWhereCodeOther(codeShort.toUpperCaseIsoCode());
 
-  /// Returns an [WorldCountry] object from the given `code` ISO 3166-1 code.
+  /// Returns an [WorldCountry] object from the given ISO 3166-1 code.
   ///
   /// The [codeNumeric] parameter is required and must be a valid country code
   /// object representing a three-digit ISO 3166-1 numeric code.
@@ -401,7 +401,7 @@ class WorldCountry extends Country
   /// its parameter and returns a value to compare with [value]. If [where] is
   /// `null`, the [code] field of the [WorldCountry] object will be used. The
   /// [countries] parameter is an optional iterable of [WorldCountry] objects
-  /// that defaults to `list`. Returns a [WorldCountry] object that represents
+  /// that defaults to [list]. Returns a [WorldCountry] object that represents
   /// the country with the given [value], or `null` if no such country exists.
   static WorldCountry? maybeFromValue<T extends Object>(
     T value, {
@@ -515,7 +515,7 @@ class WorldCountry extends Country
   /// with the `codeNumeric` property of each [WorldCountry] instance.
   /// If the value is two characters code, it compares it
   /// with the `codeShort` property of each [WorldCountry] instance.
-  /// Otherwise, it compares it with the uppercase version of the `code`
+  /// Otherwise, it compares it with the uppercase version of the [code]
   /// property of each [WorldCountry] instance. The resulting [WorldCountry]
   /// instance is assigned to the `country` variable.
   static WorldCountry? maybeFromAnyCode(
@@ -604,4 +604,5 @@ class WorldCountry extends Country
 
   final List<NaturalLanguage>? _languages;
   final List<TranslatedName>? _translations;
+  // TODO! Add more collections here.
 }

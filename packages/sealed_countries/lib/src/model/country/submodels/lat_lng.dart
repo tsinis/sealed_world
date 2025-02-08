@@ -5,9 +5,9 @@ import "../../../helpers/extensions/country_submodels/lat_lng_extension.dart";
 /// A geographic point on the Earth's surface, defined by its latitude and
 /// longitude.
 ///
-/// The `LatLng` class is a simple value object that represents a geographic
-/// point on the Earth's surface. It consists of a latitude and longitude pair,
-/// each of which is represented as a `double` value.
+/// The [LatLng] class is a simple value object that represents a geographic
+/// point on the Earth's surface. It consists of a [latitude] and [longitude]
+/// pair, each of which is represented as a [double] value.
 ///
 /// Example usage:
 ///
@@ -17,12 +17,12 @@ import "../../../helpers/extensions/country_submodels/lat_lng_extension.dart";
 /// print(point.longitude); // Prints: -122.4194
 /// ```
 final class LatLng implements JsonEncodable<LatLng> {
-  /// Creates a new `LatLng` object with the given latitude and longitude.
+  /// Creates a new [LatLng] object with the given [latitude] and [longitude].
   const LatLng(this.latitude, this.longitude);
 
-  /// Creates a new `LatLng` object with the given latitude and longitude.
+  /// Creates a new [LatLng] object with the given latitude and longitude.
   ///
-  /// The `latitude` and `longitude` parameters are required and represent the
+  /// The [latitude] and [longitude] parameters are required and represent the
   /// latitude and longitude of the geographic point, respectively.
   const LatLng.named({required this.latitude, required this.longitude});
 

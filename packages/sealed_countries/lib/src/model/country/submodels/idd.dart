@@ -4,9 +4,9 @@ import "../../../helpers/extensions/country_submodels/idd_extension.dart";
 
 /// A class that represents an International Direct Dialing (IDD) code.
 ///
-/// The `Idd` class is a simple value object that represents an International
-/// Direct Dialing (IDD) code. It consists of an `int` value that represents the
-/// root of the IDD code, and a `List<int>` value that represents the suffixes
+/// The [Idd] class is a simple value object that represents an International
+/// Direct Dialing (IDD) code. It consists of an [int] value that represents the
+/// root of the IDD code, and a `List<int>` value that represents the [suffixes]
 /// of the IDD code.
 ///
 /// Example usage:
@@ -16,9 +16,9 @@ import "../../../helpers/extensions/country_submodels/idd_extension.dart";
 /// print(idd); // Prints: "Idd(root: 3, suffixes: [81])"
 /// ```
 final class Idd implements JsonEncodable<Idd> {
-  /// Creates a new `Idd` object with the given root and suffixes.
+  /// Creates a new [Idd] object with the given root and suffixes.
   ///
-  /// The `suffixes` parameter must not be an empty list.
+  /// The [suffixes] parameter must not be an empty list.
   const Idd({required this.root, required this.suffixes})
       : assert(suffixes != const <int>[], "`suffixes` should not be empty!");
 

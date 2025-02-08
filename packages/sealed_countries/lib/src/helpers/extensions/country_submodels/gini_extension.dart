@@ -7,10 +7,10 @@ import "../../../model/country/submodels/gini.dart";
 /// Provides extension methods for [Gini] class.
 /// {@macro submodels_class_extension}
 extension GiniExtension on Gini {
-  /// Converts the `year` field of this `Gini` object to a `DateTime` object.
+  /// Converts the [year] field of this [Gini] object to a [DateTime] object.
   ///
-  /// Returns a `DateTime` object that represents the date and time
-  /// corresponding to the start of the year in which this `Gini` object was
+  /// Returns a [DateTime] object that represents the date and time
+  /// corresponding to the start of the year in which this [Gini] object was
   /// recorded.
   ///
   /// Example usage:

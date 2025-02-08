@@ -2,7 +2,7 @@ import "../../model/geo/submodels/continent.dart";
 
 /// Represents the continent of Europe.
 ///
-/// This class extends the `Continent` class and sets its `name`
+/// This class extends the [Continent] class and sets its [name]
 /// property to "Europe".
 ///
 /// Example:
@@ -18,7 +18,7 @@ class Europe extends Continent {
 
 /// Represents the continent of Africa.
 ///
-/// This class extends the `Continent` class and sets its `name` property to
+/// This class extends the [Continent] class and sets its [name] property to
 /// "Africa".
 ///
 /// Example:
@@ -34,7 +34,7 @@ class Africa extends Continent {
 
 /// Represents the continent of the Americas.
 ///
-/// This class extends the `Continent` class and sets its `name` property to
+/// This class extends the [Continent] class and sets its [name] property to
 /// "Americas".
 ///
 /// Example:
@@ -50,7 +50,7 @@ class Americas extends Continent {
 
 /// Represents the continent of Asia.
 ///
-/// This class extends the `Continent` class and sets its `name` property to
+/// This class extends the [Continent] class and sets its [name] property to
 /// "Asia".
 ///
 /// Example:
@@ -66,7 +66,7 @@ class Asia extends Continent {
 
 /// Represents the continent of Antarctica.
 ///
-/// This class extends the `Continent` class and sets its `name` property to
+/// This class extends the [Continent] class and sets its [name] property to
 /// "Antarctica".
 ///
 /// Example:
@@ -82,7 +82,7 @@ class Antarctica extends Continent {
 
 /// Represents the continent of Oceania.
 ///
-/// This class extends the `Continent` class and sets its `name` property to
+/// This class extends the [Continent] class and sets its [name] property to
 /// "Oceania".
 ///
 /// Example:

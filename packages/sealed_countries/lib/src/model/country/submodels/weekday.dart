@@ -4,7 +4,7 @@ part "weekday.g.dart";
 
 /// An enum that represents the days of the week.
 ///
-/// The `Weekday` enum is a simple enumeration that represents the days of the
+/// The [Weekday] enum is a simple enumeration that represents the days of the
 /// week. Each enumeration value has a corresponding label that represents the
 /// name of the day.
 ///
@@ -36,7 +36,7 @@ enum Weekday implements JsonEncodable<Weekday> {
   /// Represents Sunday.
   sunday("Sunday");
 
-  /// Creates a new `Weekday` object with the given label.
+  /// Creates a new [Weekday] object with the given label.
   const Weekday(this.label);
 
   /// The label that corresponds to this `Weekday` object.

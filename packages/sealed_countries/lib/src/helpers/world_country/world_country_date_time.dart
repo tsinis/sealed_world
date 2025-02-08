@@ -3,8 +3,8 @@
 import "../../model/country/country.dart";
 import "../../model/typedefs/utc_duration_difference.dart";
 
-/// Provides extension methods for working with time zones and `DateTime`
-/// objects related to a `WorldCountry` object.
+/// Provides extension methods for working with time zones and [DateTime]
+/// objects related to a [WorldCountry] object.
 extension WorldCountryDateTime on WorldCountry {
   /// The string for a negative UTC offset from the timezone.
   static const minus = "-";
@@ -31,16 +31,16 @@ extension WorldCountryDateTime on WorldCountry {
     return null;
   }
 
-  /// Returns a `Duration` object representing the offset from UTC indicated by
+  /// Returns a [Duration] object representing the offset from UTC indicated by
   /// the given timezone string.
   ///
   /// If the length of the timezone string is not equal to
-  /// `timezoneValueLength`, returns `null`. Otherwise, extracts the hours and
-  /// minutes values from the timezone string and returns a `Duration` object
+  /// [timezoneValueLength], returns `null`. Otherwise, extracts the hours and
+  /// minutes values from the timezone string and returns a [Duration] object
   /// representing the offset from UTC. The hours and minutes values are parsed
   /// from the substring of the timezone string starting at the index of the
-  /// `utcString` constant plus 1 and continuing for two characters (the hours
-  /// value), and the substring starting at the index of the `utcString`
+  /// [utcString] constant plus 1 and continuing for two characters (the hours
+  /// value), and the substring starting at the index of the [utcString]
   /// constant plus 4 and continuing for two characters (the minutes value).
   static Duration? tzDuration(String timezone) {
     if (timezone.length != timezoneValueLength) return null;
@@ -54,18 +54,19 @@ extension WorldCountryDateTime on WorldCountry {
     return Duration(hours: intHour, minutes: minutes);
   }
 
-  /// Returns an unmodifiable list of `UtcDurationDifference` objects
+  /// Returns an unmodifiable list of [UtcDurationDifference] objects
   /// representing the time differences between Coordinated Universal Time (UTC)
-  /// and the time zones in the `timezones` list of the `WorldCountry` object.
+  /// and the time zones in the [timezones] list of the [WorldCountry] object.
   ///
-  /// For each timezone in the `timezones` list, extracts the duration offset
+  /// For each timezone in the [timezones] list, extracts the duration offset
   /// from UTC and whether the offset is to be added to UTC or subtracted from
-  /// it. Returns an unmodifiable list of `UtcDurationDifference` objects, each
+  /// it. Returns an unmodifiable list of [UtcDurationDifference] objects, each
   /// of which contains the duration offset and a boolean indicating whether it
-  /// is to be added to or subtracted from UTC. If the length of the `timezones`
+  /// is to be added to or subtracted from UTC. If the length of the [timezones]
   /// list is 0 or if any of the timezones are invalid, returns an empty list.
   List<UtcDurationDifference> get tzUtcDurations {
     final elements = List<UtcDurationDifference>.empty(growable: true);
+
     for (final timezone in timezones) {
       final duration = tzDuration(timezone);
       final toAddDuration = toAdd(timezone);

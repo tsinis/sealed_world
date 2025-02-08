@@ -4,10 +4,10 @@ import "../../../helpers/extensions/country_submodels/postal_code_extension.dart
 
 /// A class that represents a postal code format and regular expression pattern.
 ///
-/// The `PostalCode` class is a simple value object that represents a postal
+/// The [PostalCode] class is a simple value object that represents a postal
 /// code format and regular expression pattern. It consists of two string
-/// values - a `format` string that describes the format of a postal code
-/// (e.g. "#####"), and a `regExpPattern` string that specifies a regular
+/// values - a [format] string that describes the format of a postal code
+/// (e.g. `"#####"`), and a [regExpPattern] string that specifies a regular
 /// expression pattern that can be used to validate postal codes.
 ///
 /// Example usage:
@@ -19,10 +19,10 @@ import "../../../helpers/extensions/country_submodels/postal_code_extension.dart
 /// print(postalCode.regExpPattern); // Prints: "^(\\d{5}(-\\d{4})?)$"
 /// ```
 final class PostalCode implements JsonEncodable<PostalCode> {
-  /// Creates a new `PostalCode` object with the given format and regular
+  /// Creates a new [PostalCode] object with the given format and regular
   /// expression pattern.
   ///
-  /// The `format` and `regExpPattern` parameters must be non-empty strings.
+  /// The [format] and [regExpPattern] parameters must be non-empty strings.
   const PostalCode({this.format = "#####", this.regExpPattern = r"^(\d{5})$"})
       : assert(format.length > 0, "`format` should not be empty!"),
         assert(
@@ -30,16 +30,16 @@ final class PostalCode implements JsonEncodable<PostalCode> {
           "`regExpPattern` should not be empty!",
         );
 
-  /// The format string for this `PostalCode` object.
+  /// The format string for this [PostalCode] object.
   ///
-  /// The `format` string describes the format of a postal code. It typically
-  /// consist of one or more '#' characters, which will be replaced with digits
+  /// The [format] string describes the format of a postal code. It typically
+  /// consist of one or more `#` characters, which will be replaced with digits
   /// when formatting a postal code.
   final String format;
 
-  /// The regular expression pattern for this `PostalCode` object.
+  /// The regular expression pattern for this [PostalCode] object.
   ///
-  /// The `regExpPattern` string specifies a regular expression pattern that can
+  /// The [regExpPattern] string specifies a regular expression pattern that can
   /// be used to validate postal codes. The regular expression should include a
   /// single capturing group that matches the entire postal code.
   final String regExpPattern;

@@ -4,10 +4,10 @@ import "../../../helpers/extensions/country_submodels/capital_extension.dart";
 
 /// A class that represents a capital city.
 ///
-/// The `Capital` class is a simple value object that represents a capital city.
-/// It consists of a `String` value that represents the name of the capital, and
-/// two optional `String` values that represent the de jure and third capitals
-/// of the country. The `name` field must not be empty.
+/// The [Capital] class is a simple value object that represents a capital city.
+/// It consists of a [String] value that represents the name of the capital, and
+/// two optional [String] values that represent the de jure and third capitals
+/// of the country. The [name] field must not be empty.
 ///
 /// Example usage:
 ///
@@ -21,10 +21,10 @@ import "../../../helpers/extensions/country_submodels/capital_extension.dart";
 // https://en.wikipedia.org/wiki/List_of_countries_with_multiple_capitals
 // Reference (Wikipedia).
 final class Capital implements JsonEncodable<Capital> {
-  /// Creates a new `Capital` object with the given name and optional de jure
+  /// Creates a new [Capital] object with the given name and optional de jure
   /// and third values.
   ///
-  /// The `name` parameter must not be empty.
+  /// The [name] parameter must not be empty.
   const Capital(String name, {this.deJure, this.third})
       : deFacto = name,
         assert(name.length > 0, "`name` of capital should not be empty!"),

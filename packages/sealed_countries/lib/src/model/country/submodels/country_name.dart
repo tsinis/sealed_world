@@ -7,7 +7,7 @@ import "../../../helpers/extensions/country_submodels/country_name_extension.dar
 /// The [CountryName] class is a simple value object that represents the name of
 /// a country in a particular language. It consists of a [NaturalLanguage]
 /// object that represents the language, and two [String] values that represent
-/// the official and common names of the country. The `official` and `common`
+/// the official and common names of the country. The [official] and [common]
 /// fields must not be empty.
 ///
 /// Example usage:
@@ -25,7 +25,7 @@ final class CountryName extends TranslatedName {
   /// Creates a new `CountryName` object with the given language and name
   /// values.
   ///
-  /// The `official` and `common` parameters must not be empty.
+  /// The [official] and [common] parameters must not be empty.
   const CountryName({
     required NaturalLanguage language,
     required String official,
