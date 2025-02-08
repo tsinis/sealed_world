@@ -1,3 +1,9 @@
+## 2.1.0
+
+REFACTOR
+
+- `maybeCommonNameFor` method now accepts nullable `mainLocale` parameter - if `null` is provided, `null` will be returned.
+
 ## 2.0.1
 
 REFACTOR
