@@ -843,12 +843,12 @@ void main() => group("$WorldCountry", () {
             languages: const [],
             latLng: value.latLng,
             maps: value.maps,
-            namesNative: value.namesNative,
+            namesNative: const [],
             population: value.population,
             timezones: value.timezones,
             tld: value.tld,
             translations: const [],
-            demonyms: value.demonyms,
+            demonyms: const [],
             currencies: value.currencies,
           ),
           shouldThrow: false,
@@ -955,31 +955,6 @@ void main() => group("$WorldCountry", () {
         );
 
         assertTest(
-          "namesNative empty",
-          () => WorldCountry(
-            name: value.name,
-            altSpellings: value.altSpellings,
-            areaMetric: value.areaMetric,
-            code: value.code,
-            codeNumeric: value.codeNumeric,
-            codeShort: value.codeShort,
-            continent: value.continent,
-            emoji: value.emoji,
-            idd: value.idd,
-            languages: value.languages,
-            latLng: value.latLng,
-            maps: value.maps,
-            namesNative: const [],
-            population: value.population,
-            timezones: value.timezones,
-            tld: value.tld,
-            translations: value.translations,
-            demonyms: value.demonyms,
-            currencies: value.currencies,
-          ),
-        );
-
-        assertTest(
           "altSpellings empty",
           () => WorldCountry(
             name: value.name,
@@ -1025,31 +1000,6 @@ void main() => group("$WorldCountry", () {
             tld: value.tld,
             translations: value.translations,
             demonyms: value.demonyms,
-            currencies: value.currencies,
-          ),
-        );
-
-        assertTest(
-          "demonyms empty",
-          () => WorldCountry(
-            name: value.name,
-            altSpellings: value.altSpellings,
-            areaMetric: value.areaMetric,
-            code: value.code,
-            codeNumeric: value.codeNumeric,
-            codeShort: value.codeShort,
-            continent: value.continent,
-            emoji: value.emoji,
-            idd: value.idd,
-            languages: value.languages,
-            latLng: value.latLng,
-            maps: value.maps,
-            namesNative: value.namesNative,
-            population: value.population,
-            timezones: value.timezones,
-            tld: value.tld,
-            translations: value.translations,
-            demonyms: const [],
             currencies: value.currencies,
           ),
         );

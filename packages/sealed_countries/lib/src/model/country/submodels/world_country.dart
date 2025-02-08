@@ -50,11 +50,9 @@ class WorldCountry extends Country
     required this.idd, // International Direct Dialing.
     required this.latLng,
     required this.maps,
-    required this.namesNative,
     required this.population,
     required this.timezones,
     required this.tld, // Top Level Domain.
-    required this.demonyms,
     this.currencies,
     this.capitalInfo,
     this.car = const Car(),
@@ -70,7 +68,9 @@ class WorldCountry extends Country
     this.subregion,
     this.unMember = true,
     this.regionalBlocs,
+    List<Demonyms>? demonyms,
     List<NaturalLanguage>? languages,
+    List<CountryName>? namesNative,
     List<TranslatedName>? translations,
   })  : assert(
           code.length == IsoStandardized.codeLength,
@@ -87,20 +87,12 @@ class WorldCountry extends Country
         assert(emoji.length > 0, "`emoji` should not be empty!"),
         assert(tld != const <String>[], "`tld` should not be empty!"),
         assert(
-          namesNative != const <CountryName>[],
-          "`namesNative` should not be empty!",
-        ),
-        assert(
           altSpellings != const <String>[],
           "`altSpellings` should not be empty!",
         ),
         assert(
           timezones != const <String>[],
           "`timezones` should not be empty!",
-        ),
-        assert(
-          demonyms != const <Demonyms>[],
-          "`demonyms` should not be empty!",
         ),
         assert(cioc == null || cioc.length > 0, "`cioc` should not be empty!"),
         assert(fifa == null || fifa.length > 0, "`fifa` should not be empty!"),
@@ -112,6 +104,8 @@ class WorldCountry extends Country
           regionalBlocs != const <RegionalBloc>[],
           "`regionalBlocs` should not be empty!",
         ),
+        _namesNative = namesNative,
+        _demonyms = demonyms,
         _languages = languages,
         _translations = translations;
 
@@ -129,11 +123,9 @@ class WorldCountry extends Country
     this.idd = const Idd(root: 0, suffixes: [0]),
     this.latLng = const LatLng(0, 0),
     this.maps = const Maps(googleMaps: " ", openStreetMaps: " "),
-    this.namesNative = const [],
     this.population = 1,
     this.timezones = const [],
     this.tld = const [],
-    this.demonyms = const [],
     this.currencies,
     this.capitalInfo,
     this.car = const Car(),
@@ -149,9 +141,13 @@ class WorldCountry extends Country
     this.subregion,
     this.unMember = true,
     this.regionalBlocs,
+    List<Demonyms> demonyms = const [],
     List<NaturalLanguage>? languages,
+    List<CountryName> namesNative = const [],
     List<TranslatedName>? translations,
-  })  : _languages = languages,
+  })  : _namesNative = namesNative,
+        _demonyms = demonyms,
+        _languages = languages,
         _translations = translations;
 
   /// Returns an [WorldCountry] object from the given [code]
@@ -255,10 +251,6 @@ class WorldCountry extends Country
                 short: (short) => WorldCountry.fromCodeShort(short, countries),
               );
 
-  /// The native names of the country.
-  @override
-  final List<CountryName> namesNative;
-
   /// The top level domain names for the country.
   final List<String> tld;
 
@@ -305,9 +297,6 @@ class WorldCountry extends Country
   /// The area of the country in square kilometers.
   final double areaMetric;
 
-  /// The demonym names for the people of the country.
-  final List<Demonyms> demonyms;
-
   /// The emoji flag for the country.
   final String emoji;
 
@@ -351,11 +340,18 @@ class WorldCountry extends Country
   @override
   String get internationalName => name.common;
 
+  /// The native names of the country.
+  @override
+  List<CountryName> get namesNative => _namesNative ?? const [];
+
   /// The currencies used in the country.
   final List<FiatCurrency>? currencies;
 
   /// The official languages spoken in the country.
   List<NaturalLanguage> get languages => _languages ?? const [];
+
+  /// The demonym names for the people of the country.
+  List<Demonyms> get demonyms => _demonyms ?? const [];
 
   @override
   List<TranslatedName> get translations =>
@@ -368,8 +364,7 @@ class WorldCountry extends Country
   @override
   String toString({bool short = true}) => short
       ? super.toString()
-      : "WorldCountry(name: $name, namesNative: $namesNative, "
-          'tld: ${jsonEncode(tld)}, code: "$code", '
+      : 'WorldCountry(name: $name, tld: ${jsonEncode(tld)}, code: "$code", '
           'codeNumeric: "$codeNumeric", codeShort: "$codeShort", '
           '${cioc == null ? '' : 'cioc: "$cioc", '}independent: $independent, '
           "unMember: $unMember, idd: $idd, "
@@ -378,15 +373,17 @@ class WorldCountry extends Country
           """${subregion == null ? '' : 'subregion: ${subregion.runtimeType}(), '}"""
           "latLng: $latLng, landlocked: $landlocked, "
           """${bordersCodes == null ? '' : 'bordersCodes: ${jsonEncode(bordersCodes)}, '}"""
-          '''areaMetric: $areaMetric, demonyms: $demonyms, emoji: "$emoji", maps: $maps, '''
-          "population: $population, ${gini == null ? '' : 'gini: $gini, '}"
+          'areaMetric: $areaMetric, emoji: "$emoji", maps: $maps, '
+          "population: $population,${gini == null ? ' ' : 'gini: $gini, '}"
           '${fifa == null ? '' : 'fifa: "$fifa", '}car: $car, '
           "timezones: ${jsonEncode(timezones)}, hasCoatOfArms: $hasCoatOfArms, "
           "startOfWeek: $startOfWeek, "
-          """${capitalInfo == null ? '' : 'capitalInfo: ${capitalInfo?.toString(short: false)}, '}"""
-          "${postalCode == null ? '' : 'postalCode: $postalCode, '}"
-          """${regionalBlocs == null ? '' : 'regionalBlocs: ${regionalBlocs?.toInstancesString()},'});"""
+          "${postalCode == null ? '' : 'postalCode: $postalCode, '});"
           """${currencies == null ? '' : '@override List<FiatCurrency> get currencies => const ${currencies?.toInstancesString()}; '} """
+          """${capitalInfo == null ? '' : '@override CapitalInfo get capitalInfo => const ${capitalInfo?.toString(short: false)}; '} """
+          """${regionalBlocs == null ? '' : '@override List<RegionalBloc> get regionalBlocs => const ${regionalBlocs?.toInstancesString()}; '} """
+          "@override List<Demonyms> get demonyms => const $demonyms; "
+          "@override List<CountryName> get namesNative => const $namesNative; "
           "@override "
           """List<NaturalLanguage> get languages => const ${languages.toInstancesString()}""";
 
@@ -602,7 +599,8 @@ class WorldCountry extends Country
   /// by the [WorldCountry] class.
   static const list = worldCountryList;
 
+  final List<Demonyms>? _demonyms;
   final List<NaturalLanguage>? _languages;
+  final List<CountryName>? _namesNative;
   final List<TranslatedName>? _translations;
-  // TODO! Add more collections here.
 }
