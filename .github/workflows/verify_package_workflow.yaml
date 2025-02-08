@@ -27,12 +27,6 @@ jobs:
       - name: 📚 Git checkout
         uses: actions/checkout@v4.2.2
 
-      - name: 🎯 Setup Dart
-        if: ${{ !inputs.is_flutter }}
-        uses: dart-lang/setup-dart@v1.7.0
-        with:
-          sdk: "stable"
-
       - name: 🧹 Workspace cleaner
         if: ${{ !inputs.is_flutter }}
         uses: actions/github-script@v7.0.1
@@ -40,6 +34,12 @@ jobs:
           script: |
             const f = 'pubspec.yaml', c = await require('fs').promises.readFile(f, 'utf8')
             await require('fs').promises.writeFile(f, c.replace(/- packages\/world_/g, '#'))
+
+      - name: 🎯 Setup Dart
+        if: ${{ !inputs.is_flutter }}
+        uses: dart-lang/setup-dart@v1.7.0
+        with:
+          sdk: "stable"
 
       - name: 🐦 Setup Flutter
         if: ${{ inputs.is_flutter }}
