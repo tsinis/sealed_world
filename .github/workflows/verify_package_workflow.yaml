@@ -35,10 +35,7 @@ jobs:
 
       - name: 📦 Install CLI tools
         if: ${{ !inputs.is_flutter }}
-        run: |
-          cd $GITHUB_WORKSPACE/tools
-          dart pub get
-          dart pub global activate --source path .
+        run: cd $GITHUB_WORKSPACE/tools && dart pub global activate --source path .
 
       - name: 🧹 Run workspace cleaner
         if: ${{ !inputs.is_flutter }}
