@@ -12,13 +12,13 @@ import "../models/locale/typed_locale.dart";
 /// of configurable options.
 ///
 /// Parameters:
-/// - `searchBarPadding`: The padding around the search bar. Defaults to
-///   the `EdgeInsets.only(left: 8, top: 8, right: 8)`.
-/// - `showClearButton`: A boolean value that determines whether the clear
+/// - [searchBarPadding]: The padding around the search bar. Defaults to
+///   the [EdgeInsets.only(left: 8, top: 8, right: 8)].
+/// - [showClearButton]: A boolean value that determines whether the clear
 ///   button should be shown. Defaults to `true`, showing the clear button.
-/// - `searchBar`: An optional widget that can be passed to replace the default
+/// - [searchBar]: An optional widget that can be passed to replace the default
 ///   search bar.
-/// - `translation`: An optional argument for providing localized text strings
+/// - [translation]: An optional argument for providing localized text strings
 ///   for the picker component.
 ///
 /// Implementing classes should provide behavior for these properties to create

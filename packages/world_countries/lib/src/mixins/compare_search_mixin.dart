@@ -2,7 +2,7 @@ import "package:flutter/widgets.dart" show TextEditingController, protected;
 
 import "../interfaces/searchable_interface.dart";
 
-/// A mixin that provides a `compareWithInput` method to compare an input string
+/// A mixin that provides a [compareWithInput] method to compare an input string
 /// with an item's text.
 ///
 /// This mixin should be used in combination with a class that extends

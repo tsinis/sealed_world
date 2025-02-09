@@ -10,11 +10,11 @@ import "../../models/item_properties.dart";
 /// content. It extends [ThemeExtension] to facilitate the ease of creating
 /// extendable theme data.
 ///
-/// The generic type `T` extends from [IsoTranslated] and represents the model
+/// The generic type [T] extends from [IsoTranslated] and represents the model
 /// that contains translated text information which the tile will use.
 ///
 /// Parameters:
-/// - `builder`: An optional function that returns a widget for a given set of
+/// - [builder]: An optional function that returns a widget for a given set of
 ///   [ItemProperties] and density flag.
 ///
 /// This allows for custom tile widgets to be built based on the provided item

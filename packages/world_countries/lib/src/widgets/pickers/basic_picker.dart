@@ -23,7 +23,7 @@ import "../generic_widgets/searchable_indexed_list_view_builder.dart";
 
 part "basic_picker_state.dart";
 
-/// An abstract class that provides a basic picker widget, with search
+/// An abstract class that provides a basic picker [Widget], with search
 /// functionality and indexing support.
 @immutable
 abstract class BasicPicker<T extends IsoTranslated>
