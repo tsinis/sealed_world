@@ -2,7 +2,7 @@ import "package:flutter/rendering.dart";
 
 /// An extension on [BoxDecoration] to provide additional utility methods.
 ///
-/// This extension adds a `isCircle` getter to check if the shape of the
+/// This extension adds a [isCircle] getter to check if the shape of the
 /// [BoxDecoration] is a circle.
 ///
 /// Example usage:
