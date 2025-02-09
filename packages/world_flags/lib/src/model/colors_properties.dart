@@ -31,7 +31,7 @@ class ColorsProperties {
   /// Creates a new instance of [ColorsProperties].
   ///
   /// The [color] parameter is required and specifies the color of the element.
-  /// The [ratio] parameter is optional and defaults to 1. It must be greater
+  /// The [ratio] parameter is optional and defaults to `1`. It must be greater
   /// than or equal to zero.
   const ColorsProperties(this.color, {this.ratio = 1})
       : assert(ratio >= 0, "`ratio` must be greater than or equal to zero.");
@@ -40,7 +40,7 @@ class ColorsProperties {
   /// representation of a color.
   ///
   /// The [bitColor] parameter is required and specifies the color in integer
-  /// format. The [ratio] parameter is optional and defaults to 1. It must be
+  /// format. The [ratio] parameter is optional and defaults to `1`. It must be
   /// greater than or equal to zero.
   @visibleForTesting
   ColorsProperties.fromIntColor(int bitColor, {this.ratio = 1})
@@ -51,7 +51,7 @@ class ColorsProperties {
   final Color color;
 
   /// The ratio associated with the color, typically used for flags stripes.
-  /// For example in the Germany all three colors have the same ratio of 1.
+  /// For example in the Germany all three colors have the same ratio of `1`.
   ///
   /// This value must be greater than or equal to zero.
   final int ratio;

@@ -1,7 +1,6 @@
 import "package:flutter/widgets.dart";
 import "package:sealed_countries/sealed_countries.dart";
 
-// ignore: avoid-importing-entrypoint-exports, hiding all but flag maps.
 import "../../world_flags.dart"
     show smallSimplifiedAlternativeFlagsMap, smallSimplifiedFlagsMap;
 import "../helpers/extensions/basic_flag_extension_copy_with.dart";

@@ -54,7 +54,7 @@ class CustomElementsProperties extends ElementsProperties {
 
   /// A list of additional colors for the element.
   ///
-  /// This list can be used to specify secondary colors or other color
+  /// This list can be used to specify secondary colors or other [Color]
   /// variations for the flag element.
   final List<Color> otherColors;
 }
