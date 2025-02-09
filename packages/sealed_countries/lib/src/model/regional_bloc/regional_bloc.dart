@@ -100,13 +100,13 @@ class RegionalBloc extends WorldBloc {
   /// Creates a new [RegionalBloc] object from a value.
   ///
   /// The [value] parameter is the value to be compared to the acronym of each
-  /// RegionalBloc in the [RegionalBloc]s list. If the [value] parameter matches
-  /// the acronym of a RegionalBloc, a new [RegionalBloc] object representing
-  /// that regional bloc is returned. If there is no match, `null` is returned.
-  /// If the [where] parameter is provided, it is used to determine the value to
-  /// compare for each regional bloc.
+  /// regional bloc in the [RegionalBloc]s list. If the [value] parameter
+  /// matches the acronym of a RegionalBloc, a new [RegionalBloc] object
+  /// representing that regional bloc is returned. If there is no match, `null`
+  /// is returned. If the [where] parameter is provided, it is used to determine
+  /// the value to compare for each regional bloc.
   ///
-  /// The `regionalBlocs` parameter is the list of regional blocs to search. If
+  /// The [regionalBlocs] parameter is the list of regional blocs to search. If
   /// no value is provided, the `RegionalBloc.list` constant is used.
   static RegionalBloc? maybeFromValue<T extends Object>(
     T value, {
