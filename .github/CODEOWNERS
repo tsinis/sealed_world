@@ -1,8 +1,8 @@
 # These owners will be the default owners for everything in
 
-# the repo unless a later match takes precedence.
+# The repo unless a later match takes precedence.
 
-- @tsinis
+* @tsinis
 
 # Package specific ownership
 
