@@ -1,3 +1,13 @@
+## 3.1.0
+
+NEW FEATURES
+
+- Added two new `offstage` constructor and static `list` method, to `MaybeWidget`. `MaybeWidget.offstage` - Preserves layout space but hides the widget if the provided `value` is `null`. Ideal if you want to conditionally toggle visibility without removing the widget from the tree. `MaybeWidget.list` - Builds either a single widget or multiple widgets if `value` is not `null`, or returns an empty list if it is `null`. Gives you a flexible way to handle conditional UI blocks or spread-like usage in the `Flex` widgets.
+
+REFACTOR
+
+- Nullable `maybeCommonNameFor` method now accepts nullable `mainLocale` parameter - if `null` is provided, `null` will be returned.
+
 ## 3.0.0
 
 🎉 Second anniversary and new major release!
@@ -29,7 +39,7 @@ BREAKING CHANGES
 - `IsoLocale` is now deprecated in favor of `TypedLocale` that now implements `BasicTypedLocale` instead of `BasicLocale`.
 - Generic and `base` keyword on `TypedLocale` class are removed, you can still use new `regionalCode` parameter to provide non-typed region/country info there.
 - The default `toString()` implementation of `BasicLocale` now uses Flutter's `Locale`-like output format. You can still access the old output by setting the `short` flag to `false`.
-- The `sealed_country_translations` library is removed. Migrate to the [l10n_countries](https://pub.dev/packages/l10n_countries) package or use `l10n` getter in ISO objects that provides the same data without holding all translations in memory. This sub-library and its content (except for supported locales lists - they will be moved to the main library) will be removed in the next package version.
+- The `sealed_country_translations` library is removed. Migrate to the [l10n_countries](https://pub.dev/packages/l10n_countries) package or use `l10n` getter in ISO objects that provides the same data without holding all translations in memory. This sub-library and its content (except for supported locales lists - they will be moved to the main library) will be removed in the next major package version.
 - Country translation methods requires `BasicTypedLocale` instead of `BasicLocale`, if you didn't used country value - this change will not affect you, same applies to `TypedLocale`. If you provided non-typed country data there - please change from:
 
 ```dart

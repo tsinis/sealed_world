@@ -1,7 +1,7 @@
 // ignore: lines_longer_than_80_chars, we are re-using `Locale` implementations.
 // ignore_for_file: prefer-overriding-parent-equality, avoid-nullable-parameters-with-default-values, avoid-suspicious-super-overrides
 
-import "dart:ui" show Locale;
+import "dart:ui" show Locale, keepToString;
 
 import "package:flutter/foundation.dart" show immutable, required;
 import "package:world_flags/world_flags.dart";
@@ -154,6 +154,7 @@ class TypedLocale extends Locale implements BasicTypedLocale {
   @override
   String toLanguageTag() => toUnicodeLocaleId(separator: "-");
 
+  @keepToString
   @override
   String toString({bool short = true}) => short
       ? toUnicodeLocaleId()

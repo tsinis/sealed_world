@@ -1,5 +1,8 @@
 runOnDraft: false
+addAssignees: true
 addReviewers: true
-addAssignees: author
 reviewers:
   - tsinis
+skipKeywords:
+  - wip
+  - draft

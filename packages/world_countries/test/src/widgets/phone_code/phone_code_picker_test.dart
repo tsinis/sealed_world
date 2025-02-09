@@ -24,7 +24,7 @@ void main() => group("$PhoneCodePicker", () {
         "scroll from first to last item and tap",
         (tester) async => tester.testPickerBody(
           const PhoneCodePicker(),
-          (item) => item.namesNative.first.common,
+          (item) => item.idd.phoneCode(),
         ),
       );
 
@@ -44,7 +44,7 @@ void main() => group("$PhoneCodePicker", () {
         "scroll from first to last item and without selection test",
         (tester) async => tester.testPickerBody(
           const PhoneCodePicker(),
-          (item) => item.namesNative.first.name,
+          (item) => item.idd.phoneCode(),
           testSelection: false,
         ),
       );
@@ -53,7 +53,7 @@ void main() => group("$PhoneCodePicker", () {
         "test behavior in dialog",
         (tester) async => tester.testPickerInDialog(
           const PhoneCodePicker(),
-          (item) => item.namesNative.first.name,
+          (item) => item.idd.phoneCode(),
         ),
       );
 
@@ -61,7 +61,7 @@ void main() => group("$PhoneCodePicker", () {
         "test behavior in search",
         (tester) async => tester.testPickerInSearch(
           const PhoneCodePicker(),
-          (item) => item.namesNative.first.name,
+          (item) => item.idd.phoneCode(),
         ),
       );
 
@@ -69,7 +69,7 @@ void main() => group("$PhoneCodePicker", () {
         "test behavior in modal bottom sheet",
         (tester) async => tester.testPickerInModal(
           const PhoneCodePicker(),
-          (item) => item.namesNative.first.name,
+          (item) => item.idd.phoneCode(),
         ),
       );
 
@@ -77,7 +77,7 @@ void main() => group("$PhoneCodePicker", () {
         "fromCountryPicker",
         (tester) async => tester.testPickerBody(
           PhoneCodePicker.fromCountryPicker(const CountryPicker()),
-          (item) => item.namesNative.first.name,
+          (item) => item.idd.phoneCode(),
         ),
       );
 

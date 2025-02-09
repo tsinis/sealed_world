@@ -9,18 +9,18 @@ import "../models/locale/typed_locale.dart";
 extension LocaleExtension on Locale? {
   /// Converts the [Locale] to a [TypedLocale], if possible.
   ///
-  /// The `maybeToTypedLocale` method takes an optional [fallbackLanguage]
+  /// The [maybeToTypedLocale] method takes an optional [fallbackLanguage]
   /// parameter of type [NaturalLanguage?]. If [fallbackLanguage] is provided,
   /// it is used as the language for the [TypedLocale] if the [Locale] is
   /// `null`.
   ///
-  /// If the [Locale] is not `null`, the `maybeToTypedLocale` method returns a
+  /// If the [Locale] is not `null`, the [maybeToTypedLocale] method returns a
   /// [TypedLocale] instance with the following properties:
   /// - `language`: The [NaturalLanguage] corresponding to the [Locale].
   /// - `country`: The country code of the [Locale].
   /// - `script`: The script code of the [Locale], if available.
   ///
-  /// If the [Locale] is `null`, the `maybeToTypedLocale` method returns
+  /// If the [Locale] is `null`, the [maybeToTypedLocale] method returns
   /// `null`.
   ///
   /// Example usage:

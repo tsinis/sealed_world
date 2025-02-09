@@ -13,34 +13,34 @@ class ImplicitSearchDelegate<T extends Object>
     extends SearchDelegateInterface<T> with CompareSearchMixin<T> {
   /// Constructor for the [ImplicitSearchDelegate] class.
   ///
-  /// * `items` is the list of items to search through.
-  /// * `resultsBuilder` is a function that takes a `BuildContext` and an
+  /// * [items] is the list of items to search through.
+  /// * [resultsBuilder] is a function that takes a [BuildContext] and an
   ///   [UnmodifiableListView] of items and returns a widget to display as the
   ///   search results.
-  /// * `searchIn` is a function that takes an item and returns an iterable of
+  /// * [searchIn] is a function that takes an item and returns an iterable of
   ///   strings to search in.
-  /// * `appBarBottom` is a widget to display at the bottom of the search page's
+  /// * [appBarBottom] is a widget to display at the bottom of the search page's
   ///   app bar.
-  /// * `appBarThemeData` is the theme data to use for the search page's app
+  /// * [appBarThemeData] is the theme data to use for the search page's app
   ///   bar.
-  /// * `backIconButton` is an icon button to use as the search page's back
+  /// * [backIconButton] is an icon button to use as the search page's back
   ///   button.
   /// * `caseSensitiveSearch` is a boolean indicating whether the search should
   ///   be case-sensitive.
-  /// * `clearIconButton` is an icon button to use as the search page's clear
+  /// * [clearIconButton] is an icon button to use as the search page's clear
   ///   button.
-  /// * `keyboardType` is the type of keyboard to use for the search field.
-  /// * `resultValidator` is a function that takes an item and returns a boolean
+  /// * [keyboardType] is the type of keyboard to use for the search field.
+  /// * [resultValidator] is a function that takes an item and returns a boolean
   ///   indicating whether the item should be included in the search results.
-  /// * `searchFieldDecorationTheme` is the decoration theme to use for the
+  /// * [searchFieldDecorationTheme] is the decoration theme to use for the
   ///   search field.
-  /// * `searchFieldLabel` is the label to use for the search field.
-  /// * `searchFieldStyle` is the style to use for the search field.
+  /// * [searchFieldLabel] is the label to use for the search field.
+  /// * [searchFieldStyle] is the style to use for the search field.
   /// * `showClearButton` is a boolean indicating whether to show the clear
   ///   button on the search field.
   /// * `startWithSearch` is a boolean indicating whether the search field
   ///   should search only by starting with the search string.
-  /// * `textInputAction` is the text input action to use for the search field.
+  /// * [textInputAction] is the text input action to use for the search field.
   ImplicitSearchDelegate(
     super.items, {
     required super.resultsBuilder,

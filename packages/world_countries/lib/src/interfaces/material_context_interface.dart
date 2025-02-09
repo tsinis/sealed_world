@@ -6,7 +6,7 @@ import "../constants/ui_constants.dart";
 /// An interface for a Material Design pickers.
 abstract interface class MaterialContextInterface<T extends Object> {
   // ignore: format-comment, ends with macros.
-  /// Twin of a Material's `showModalBottomSheet` function.
+  /// Twin of a Material's [showModalBottomSheet] function.
   ///
   /// {@macro flutter.material.ModalBottomSheetRoute}
   ///
@@ -35,7 +35,7 @@ abstract interface class MaterialContextInterface<T extends Object> {
     double? heightFactor = 0.66,
   });
 
-  /// Twin of a Material's `showSearch` function.
+  /// Twin of a Material's [showSearch] function.
   @optionalTypeArgs
   Future<T?>? showInSearch(
     BuildContext context, {
@@ -43,7 +43,7 @@ abstract interface class MaterialContextInterface<T extends Object> {
     bool useRootNavigator = false,
   });
 
-  /// Twin of a Material's `showDialog` function.
+  /// Twin of a Material's [showDialog] function.
   @optionalTypeArgs
   Future<T?>? showInDialog(
     BuildContext context, {

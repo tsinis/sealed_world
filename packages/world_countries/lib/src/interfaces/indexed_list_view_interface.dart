@@ -57,7 +57,7 @@ abstract interface class IndexedListViewInterface {
   /// {@template sealed_world.main_axis_alignment}
   /// How the items should be placed along the main axis.
   ///
-  /// For example, `MainAxisAlignment.start`, the default, places the children
+  /// For example, [MainAxisAlignment.start], the default, places the children
   /// at the start (i.e., the left for a horizontal axis or the top for
   /// a vertical) of the main axis.
   /// {@endtemplate}
@@ -75,7 +75,7 @@ abstract interface class IndexedListViewInterface {
   /// {@template sealed_world.cross_axis_alignment}
   /// How the items should be placed along the cross axis.
   ///
-  /// For example, `CrossAxisAlignment.center`, the default, centers the
+  /// For example, [CrossAxisAlignment.center], the default, centers the
   /// children in the cross axis.
   /// {@endtemplate}
   final CrossAxisAlignment? crossAxisAlignment;
@@ -86,28 +86,28 @@ abstract interface class IndexedListViewInterface {
   ///
   /// Defaults to the ambient [Directionality].
   ///
-  /// If `textDirection` is `TextDirection.rtl`, then the direction in which
-  /// text flows starts from right to left. Otherwise, if `textDirection` is
-  /// `TextDirection.ltr`, then the direction in which text flows starts from
+  /// If [textDirection] is [TextDirection.rtl], then the direction in which
+  /// text flows starts from right to left. Otherwise, if [textDirection] is
+  /// [TextDirection.ltr], then the direction in which text flows starts from
   /// left to right.
   ///
-  /// If the `direction` is `Axis.horizontal`, this controls the order in which
+  /// If the [direction] is [Axis.horizontal], this controls the order in which
   /// the children are positioned (left-to-right or right-to-left), and the
-  /// meaning of the `mainAxisAlignment` property's `MainAxisAlignment.start`
-  /// and `MainAxisAlignment.end` values.
+  /// meaning of the [mainAxisAlignment] property's [MainAxisAlignment.start]
+  /// and [MainAxisAlignment.end] values.
   ///
-  /// If the `direction` is `Axis.horizontal`, and either the
-  /// `mainAxisAlignment` is either `MainAxisAlignment.start` or
-  /// `MainAxisAlignment.end`, or there's more than one child, then the
-  /// `textDirection` (or the ambient `Directionality`) must not be null.
+  /// If the [direction] is [Axis.horizontal], and either the
+  /// [mainAxisAlignment] is either [MainAxisAlignment.start] or
+  /// [MainAxisAlignment.end], or there's more than one child, then the
+  /// [textDirection] (or the ambient [Directionality]) must not be null.
   ///
-  /// If the `direction` is `Axis.vertical`, this controls the meaning of the
-  /// `crossAxisAlignment` property's `CrossAxisAlignment.start` and
-  /// `CrossAxisAlignment.end` values.
+  /// If the [direction] is [Axis.vertical], this controls the meaning of the
+  /// [crossAxisAlignment] property's [CrossAxisAlignment.start] and
+  /// [CrossAxisAlignment.end] values.
   ///
-  /// If the `direction` is `Axis.vertical`, and the `crossAxisAlignment` is
-  /// either `CrossAxisAlignment.start` or `CrossAxisAlignment.end`, then the
-  /// `textDirection` (or the ambient `Directionality`) must not be null.
+  /// If the [direction] is [Axis.vertical], and the [crossAxisAlignment] is
+  /// either [CrossAxisAlignment.start] or [CrossAxisAlignment.end], then the
+  /// [textDirection] (or the ambient [Directionality]) must not be null.
   /// {@endtemplate}
   final TextDirection? textDirection;
 
@@ -115,23 +115,23 @@ abstract interface class IndexedListViewInterface {
   /// Determines the order to lay children out vertically and how to interpret
   /// `start` and `end` in the vertical direction.
   ///
-  /// Defaults to `VerticalDirection.down`.
+  /// Defaults to [VerticalDirection.down].
   ///
-  /// If the `direction` is `Axis.vertical`, this controls which order children
-  /// are painted in (down or up), the meaning of the `mainAxisAlignment`
-  /// property's `MainAxisAlignment.start` and `MainAxisAlignment.end` values.
+  /// If the [direction] is [Axis.vertical], this controls which order children
+  /// are painted in (down or up), the meaning of the [mainAxisAlignment]
+  /// property's [MainAxisAlignment.start] and [MainAxisAlignment.end] values.
   ///
-  /// If the `direction` is `Axis.vertical`, and either the `mainAxisAlignment`
-  /// is either `MainAxisAlignment.start` or `MainAxisAlignment.end`, or there's
-  /// more than one child, then the `verticalDirection` must not be null.
+  /// If the [direction] is [Axis.vertical], and either the [mainAxisAlignment]
+  /// is either [MainAxisAlignment.start] or [MainAxisAlignment.end], or there's
+  /// more than one child, then the [verticalDirection] must not be null.
   ///
-  /// If the `direction` is `Axis.horizontal`, this controls the meaning of the
-  /// `crossAxisAlignment` property's `CrossAxisAlignment.start` and
-  /// `CrossAxisAlignment.end` values.
+  /// If the [direction] is [Axis.horizontal], this controls the meaning of the
+  /// [crossAxisAlignment] property's [CrossAxisAlignment.start] and
+  /// [CrossAxisAlignment.end] values.
   ///
-  /// If the `direction` is `Axis.horizontal`, and the `crossAxisAlignment` is
-  /// either `CrossAxisAlignment.start` or `CrossAxisAlignment.end`, then the
-  /// `verticalDirection` must not be null.
+  /// If the [direction] is [Axis.horizontal], and the [crossAxisAlignment] is
+  /// either [CrossAxisAlignment.start] or [CrossAxisAlignment.end], then the
+  /// [verticalDirection] must not be null.
   /// {@endtemplate}
   final VerticalDirection? verticalDirection;
 
@@ -186,8 +186,8 @@ abstract interface class IndexedListViewInterface {
   ///
   /// See also:
   ///
-  ///  * `IndexedSemantics`, for an explanation of how to manually
-  ///    provide semantic indexes.
+  /// * [IndexedSemantics], for an explanation of how to manually
+  /// provide semantic indexes.
   /// {@endtemplate}
   final bool? addSemanticIndexes;
 

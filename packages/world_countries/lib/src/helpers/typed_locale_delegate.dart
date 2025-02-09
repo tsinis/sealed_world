@@ -13,9 +13,9 @@ import "../models/typedefs.dart";
 /// fallback language and the resolution of the locale map.
 ///
 /// The [TypedLocaleDelegate] class has the following properties:
-/// - `fallbackLanguage`: The fallback language to be used if the locale is not
+/// - [fallbackLanguage]: The fallback language to be used if the locale is not
 ///   available.
-/// - `localeMapResolution`: The resolution strategy for resolving the locale
+/// - [localeMapResolution]: The resolution strategy for resolving the locale
 ///   map.
 ///
 /// Example usage:
