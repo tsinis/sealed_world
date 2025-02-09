@@ -1,0 +1,25 @@
+# These owners will be the default owners for everything in
+
+# the repo unless a later match takes precedence.
+
+- @tsinis
+
+# Package specific ownership
+
+/packages/sealed_countries/ @tsinis
+/packages/sealed_currencies/ @tsinis
+/packages/sealed_languages/ @tsinis
+/packages/l10n_countries/ @tsinis
+/packages/l10n_currencies/ @tsinis
+/packages/l10n_languages/ @tsinis
+/packages/world_flags/ @tsinis
+/packages/world_countries/ @tsinis
+
+# Dependency management
+
+_.yaml @tsinis
+pubspec._ @tsinis
+
+# CI/CD
+
+/.github/workflows/ @tsinis

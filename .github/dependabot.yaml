@@ -1,40 +1,245 @@
 version: 2
 updates:
-  # Maintain dependencies for GitHub Actions.
+  # Maintain dependencies for GitHub Actions
   - package-ecosystem: "github-actions"
     directory: "/"
     schedule:
       interval: "weekly"
+      day: "sunday"
+      time: "09:00"
+      timezone: "Europe/Vienna"
     reviewers:
       - "tsinis"
     commit-message:
       prefix: "chore"
       include: "scope"
+    labels:
+      - "dependencies"
+      - "github_actions"
+    open-pull-requests-limit: 10
 
-  # Maintain dependencies for Dart.
+  # Maintain dependencies for Dart packages
   - package-ecosystem: "pub"
     versioning-strategy: increase
-    directories:
-      - packages/**/*
-      - packages/*
-      - tools
+    directory: "/packages/sealed_countries"
     schedule:
       interval: "weekly"
+      day: "sunday"
+      time: "09:00"
+      timezone: "Europe/Vienna"
     reviewers:
       - "tsinis"
     commit-message:
       prefix: "chore"
       include: "scope"
+    labels:
+      - "dependencies"
+      - "dart"
+    allow:
+      - dependency-type: "direct"
+    ignore:
+      - dependency-name: "*"
+        update-types: ["version-update:semver-major"]
+    open-pull-requests-limit: 5
 
-  # Maintain dependencies for Android (examples).
-  - package-ecosystem: "gradle"
-    directories:
-      - "/packages/world_countries/example/android/"
-      - "/packages/world_flags/example/android/"
+  - package-ecosystem: "pub"
+    versioning-strategy: increase
+    directory: "/packages/sealed_currencies"
     schedule:
       interval: "weekly"
+      day: "sunday"
+      time: "09:00"
+      timezone: "Europe/Vienna"
     reviewers:
       - "tsinis"
     commit-message:
       prefix: "chore"
       include: "scope"
+    labels:
+      - "dependencies"
+      - "dart"
+    allow:
+      - dependency-type: "direct"
+    ignore:
+      - dependency-name: "*"
+        update-types: ["version-update:semver-major"]
+    open-pull-requests-limit: 5
+
+  - package-ecosystem: "pub"
+    versioning-strategy: increase
+    directory: "/packages/sealed_languages"
+    schedule:
+      interval: "weekly"
+      day: "sunday"
+      time: "09:00"
+      timezone: "Europe/Vienna"
+    reviewers:
+      - "tsinis"
+    commit-message:
+      prefix: "chore"
+      include: "scope"
+    labels:
+      - "dependencies"
+      - "dart"
+    allow:
+      - dependency-type: "direct"
+    ignore:
+      - dependency-name: "*"
+        update-types: ["version-update:semver-major"]
+    open-pull-requests-limit: 5
+
+  - package-ecosystem: "pub"
+    versioning-strategy: increase
+    directory: "/packages/l10n_countries"
+    schedule:
+      interval: "weekly"
+      day: "sunday"
+      time: "09:00"
+      timezone: "Europe/Vienna"
+    reviewers:
+      - "tsinis"
+    commit-message:
+      prefix: "chore"
+      include: "scope"
+    labels:
+      - "dependencies"
+      - "dart"
+    allow:
+      - dependency-type: "direct"
+    ignore:
+      - dependency-name: "*"
+        update-types: ["version-update:semver-major"]
+    open-pull-requests-limit: 5
+
+  - package-ecosystem: "pub"
+    versioning-strategy: increase
+    directory: "/packages/l10n_currencies"
+    schedule:
+      interval: "weekly"
+      day: "sunday"
+      time: "09:00"
+      timezone: "Europe/Vienna"
+    reviewers:
+      - "tsinis"
+    commit-message:
+      prefix: "chore"
+      include: "scope"
+    labels:
+      - "dependencies"
+      - "dart"
+    allow:
+      - dependency-type: "direct"
+    ignore:
+      - dependency-name: "*"
+        update-types: ["version-update:semver-major"]
+    open-pull-requests-limit: 5
+
+  - package-ecosystem: "pub"
+    versioning-strategy: increase
+    directory: "/packages/l10n_languages"
+    schedule:
+      interval: "weekly"
+      day: "sunday"
+      time: "09:00"
+      timezone: "Europe/Vienna"
+    reviewers:
+      - "tsinis"
+    commit-message:
+      prefix: "chore"
+      include: "scope"
+    labels:
+      - "dependencies"
+      - "dart"
+    allow:
+      - dependency-type: "direct"
+    ignore:
+      - dependency-name: "*"
+        update-types: ["version-update:semver-major"]
+    open-pull-requests-limit: 5
+
+  - package-ecosystem: "pub"
+    versioning-strategy: increase
+    directory: "/packages/world_flags"
+    schedule:
+      interval: "weekly"
+      day: "sunday"
+      time: "09:00"
+      timezone: "Europe/Vienna"
+    reviewers:
+      - "tsinis"
+    commit-message:
+      prefix: "chore"
+      include: "scope"
+    labels:
+      - "dependencies"
+      - "dart"
+    allow:
+      - dependency-type: "direct"
+    ignore:
+      - dependency-name: "*"
+        update-types: ["version-update:semver-major"]
+    open-pull-requests-limit: 5
+
+  - package-ecosystem: "pub"
+    versioning-strategy: increase
+    directory: "/packages/world_countries"
+    schedule:
+      interval: "weekly"
+      day: "sunday"
+      time: "09:00"
+      timezone: "Europe/Vienna"
+    reviewers:
+      - "tsinis"
+    commit-message:
+      prefix: "chore"
+      include: "scope"
+    labels:
+      - "dependencies"
+      - "dart"
+    allow:
+      - dependency-type: "direct"
+    ignore:
+      - dependency-name: "*"
+        update-types: ["version-update:semver-major"]
+    open-pull-requests-limit: 5
+
+  # Maintain dependencies for Android examples
+  - package-ecosystem: "gradle"
+    directory: "/packages/world_countries/example/android"
+    schedule:
+      interval: "weekly"
+      day: "sunday"
+      time: "09:00"
+      timezone: "Europe/Vienna"
+    reviewers:
+      - "tsinis"
+    commit-message:
+      prefix: "chore"
+      include: "scope"
+    labels:
+      - "dependencies"
+      - "android"
+    ignore:
+      - dependency-name: "*"
+        update-types: ["version-update:semver-major"]
+    open-pull-requests-limit: 3
+
+  - package-ecosystem: "gradle"
+    directory: "/packages/world_flags/example/android"
+    schedule:
+      interval: "weekly"
+      day: "sunday"
+      time: "09:00"
+      timezone: "Europe/Vienna"
+    reviewers:
+      - "tsinis"
+    commit-message:
+      prefix: "chore"
+      include: "scope"
+    labels:
+      - "dependencies"
+      - "android"
+    ignore:
+      - dependency-name: "*"
+        update-types: ["version-update:semver-major"]
+    open-pull-requests-limit: 3
