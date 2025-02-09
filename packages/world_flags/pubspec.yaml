@@ -1,4 +1,4 @@
-version: 2.0.1
+version: 2.1.0
 name: world_flags
 description: Country flags made with Flutter - every flag is a Widget, without any assets.
 maintainer: Roman Cinis
@@ -11,16 +11,19 @@ topics:
   - country-flag
   - coat-of-arms
 
+screenshots:
+  - description: "Example of usage"
+    path: doc/example.webp
+
 resolution: workspace
 
 environment:
   sdk: ^3.6.0
-  flutter: ">=3.27.1"
 
 dependencies:
   flutter:
     sdk: flutter
-  sealed_countries: ^2.0.1
+  sealed_countries: ^2.1.0
 
 dev_dependencies:
   _sealed_world_tests:
@@ -31,7 +34,3 @@ dev_dependencies:
     sdk: flutter
   golden_toolkit: ^0.15.0 # From eBay
   lints: ^5.1.1 # From Google
-
-screenshots:
-  - description: "Example of usage"
-    path: doc/example.webp

@@ -7,8 +7,8 @@ import "../../../model/country/submodels/demonyms.dart";
 extension DemonymsExtension on Demonyms {
   /// Returns `true` if the demonym for males and females is the same.
   ///
-  /// Returns `true` if the `male` and `female` fields
-  /// of this `Demonyms` object have the same
+  /// Returns `true` if the [male] and [female] fields
+  /// of this [Demonyms] object have the same
   /// value, and `false` otherwise.
   ///
   /// Example usage:

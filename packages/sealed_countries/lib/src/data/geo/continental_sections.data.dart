@@ -4,7 +4,7 @@ import "continents.data.dart";
 
 /// Represents the Central America region.
 ///
-/// This class extends the `Americas` class and sets its `name` property to
+/// This class extends the `Americas` class and sets its [name] property to
 /// "Central America".
 ///
 /// Example:
@@ -24,7 +24,7 @@ class CentralAmerica extends Americas {
 /// Represents the North America region, which includes the countries of Canada,
 /// Mexico, and the United States.
 ///
-/// This class extends the `Americas` class and sets its `name` property to
+/// This class extends the `Americas` class and sets its [name] property to
 /// "North America".
 ///
 /// Example:
@@ -44,7 +44,7 @@ class NorthAmerica extends Americas {
 /// Represents the South America region, which includes the countries of
 /// Argentina, Bolivia, Brazil, Chile, Colombia, etc.
 ///
-/// This class extends the `Americas` class and sets its `name` property to
+/// This class extends the `Americas` class and sets its [name] property to
 /// "South America".
 ///
 /// Example:
@@ -64,7 +64,7 @@ class SouthAmerica extends Americas {
 /// Represents the Caribbean region, which includes the islands of the Caribbean
 /// Sea.
 ///
-/// This class extends the `Americas` class and sets its `name` property to
+/// This class extends the `Americas` class and sets its [name] property to
 /// "Caribbean".
 ///
 /// Example:
@@ -86,7 +86,7 @@ class Caribbean extends Americas {
 /// Represents the Central Europe region, which includes the countries of
 /// Austria, Czech Republic, Germany, Hungary, etc.
 ///
-/// This class extends the `Europe` class and sets its `name` property to
+/// This class extends the `Europe` class and sets its [name] property to
 /// "Central Europe".
 ///
 /// Example:
@@ -106,7 +106,7 @@ class CentralEurope extends Europe {
 /// Represents the Northern Europe region, which includes the countries of
 /// Denmark, Finland, Iceland, Norway, Sweden, etc.
 ///
-/// This class extends the `Europe` class and sets its `name` property to
+/// This class extends the `Europe` class and sets its [name] property to
 /// "Northern Europe".
 ///
 /// Example:
@@ -127,7 +127,7 @@ class NorthernEurope extends Europe {
 /// Andorra, Bosnia and Herzegovina, Croatia, Cyprus, Greece, Italy,
 /// Malta, Montenegro, North Macedonia, Portugal, San Marino, Serbia, etc.
 ///
-/// This class extends the `Europe` class and sets its `name` property to
+/// This class extends the `Europe` class and sets its [name] property to
 /// "Southern Europe".
 ///
 /// Example:
@@ -147,7 +147,7 @@ class SouthernEurope extends Europe {
 /// Represents the Eastern Europe region, which includes the countries of
 /// Belarus, Poland, Romania, Russia, etc.
 ///
-/// This class extends the `Europe` class and sets its `name` property to
+/// This class extends the `Europe` class and sets its [name] property to
 /// "Eastern Europe".
 ///
 /// Example:
@@ -167,7 +167,7 @@ class EasternEurope extends Europe {
 /// Represents the Western Europe region, which includes the countries of
 /// Austria, Belgium, France, Germany, Netherlands, Switzerland, etc.
 ///
-/// This class extends the `Europe` class and sets its `name` property to
+/// This class extends the `Europe` class and sets its [name] property to
 /// "Western Europe".
 ///
 /// Example:
@@ -187,7 +187,7 @@ class WesternEurope extends Europe {
 /// Represents the Southwest Europe region, which includes the countries of
 /// Andorra, France, Portugal, Spain, etc.
 ///
-/// This class extends the `Europe` class and sets its `name` property to
+/// This class extends the `Europe` class and sets its [name] property to
 /// "Southwest Europe".
 ///
 /// Example:
@@ -209,7 +209,7 @@ class SouthwestEurope extends Europe {
 /// Represents the Middle Africa region, which includes the countries of Angola,
 /// Cameroon, Central African Republic, Chad, Congo, etc.
 ///
-/// This class extends the `Africa` class and sets its `name` property to
+/// This class extends the `Africa` class and sets its [name] property to
 /// "Middle Africa".
 ///
 /// Example:
@@ -229,7 +229,7 @@ class MiddleAfrica extends Africa {
 /// Represents the Western Africa region, which includes the countries of Benin,
 /// Burkina Faso, Cape Verde, Ivory Coast, Gambia, Ghana, Guinea, etc.
 ///
-/// This class extends the `Africa` class and sets its `name` property to
+/// This class extends the `Africa` class and sets its [name] property to
 /// "Western Africa".
 ///
 /// Example:
@@ -250,7 +250,7 @@ class WesternAfrica extends Africa {
 /// Botswana, Eswatini (Swaziland), Lesotho, Namibia, South Africa, and
 /// Zimbabwe.
 ///
-/// This class extends the `Africa` class and sets its `name` property to
+/// This class extends the `Africa` class and sets its [name] property to
 /// "Southern Africa".
 ///
 /// Example:
@@ -270,7 +270,7 @@ class SouthernAfrica extends Africa {
 /// Represents the Eastern Africa region, which includes the countries of
 /// Burundi, Comoros, Djibouti, Eritrea, Ethiopia, Kenya, Madagascar, etc.
 ///
-/// This class extends the `Africa` class and sets its `name` property to
+/// This class extends the `Africa` class and sets its [name] property to
 /// "Eastern Africa".
 ///
 /// Example:
@@ -290,7 +290,7 @@ class EasternAfrica extends Africa {
 /// Represents the Northern Africa region, which includes the countries of
 /// Algeria, Egypt, Libya, Morocco, South Sudan, Sudan, and Tunisia.
 ///
-/// This class extends the `Africa` class and sets its `name` property to
+/// This class extends the `Africa` class and sets its [name] property to
 /// "Northern Africa".
 ///
 /// Example:
@@ -312,7 +312,7 @@ class NorthernAfrica extends Africa {
 /// Represents the Central Asia region, which includes the countries of
 /// Kazakhstan, Kyrgyzstan, Tajikistan, Turkmenistan, and Uzbekistan.
 ///
-/// This class extends the `Asia` class and sets its `name` property to "Central
+/// This class extends the `Asia` class and sets its [name] property to "Central
 /// Asia".
 ///
 /// Example:
@@ -332,7 +332,7 @@ class CentralAsia extends Asia {
 /// Represents the Eastern Asia region, which includes the countries of China,
 /// Japan, Mongolia, North Korea, South Korea, Taiwan etc.
 ///
-/// This class extends the `Asia` class and sets its `name` property to "Eastern
+/// This class extends the `Asia` class and sets its [name] property to "Eastern
 /// Asia".
 ///
 /// Example:
@@ -352,7 +352,7 @@ class EasternAsia extends Asia {
 /// Represents the Western Asia region, which includes the countries of Armenia,
 /// Azerbaijan, Bahrain, Cyprus, Georgia, Iran, Iraq, etc.
 ///
-/// This class extends the `Asia` class and sets its `name` property to "Western
+/// This class extends the `Asia` class and sets its [name] property to "Western
 /// Asia".
 ///
 /// Example:
@@ -372,7 +372,7 @@ class WesternAsia extends Asia {
 /// Represents the Southern Asia region, which includes the countries of
 /// Afghanistan, Bangladesh, Bhutan, India, Maldives, Nepal, Pakistan, etc.
 ///
-/// This class extends the `Asia` class and sets its `name` property to
+/// This class extends the `Asia` class and sets its [name] property to
 /// "Southern Asia".
 ///
 /// Example:
@@ -392,7 +392,7 @@ class SouthernAsia extends Asia {
 /// Represents the Southeastern Asia region, which includes the countries of
 /// Brunei, Cambodia, East Timor, Indonesia, Laos, Malaysia, etc.
 ///
-/// This class extends the `Asia` class and sets its `name` property to
+/// This class extends the `Asia` class and sets its [name] property to
 /// "SouthEastern Asia".
 ///
 /// Example:
@@ -414,7 +414,7 @@ class SouthEasternAsia extends Asia {
 /// Represents the Australia and New Zealand region, which includes the
 /// countries of Australia and New Zealand.
 ///
-/// This class extends the `Oceania` class and sets its `name` property to
+/// This class extends the `Oceania` class and sets its [name] property to
 /// "AustraliaAndNewZealand".
 ///
 /// Example:
@@ -434,7 +434,7 @@ class AustraliaAndNewZealand extends Oceania {
 /// Represents the Melanesia region, which includes the countries of Fiji, Papua
 /// New Guinea, Solomon Islands, and Vanuatu.
 ///
-/// This class extends the `Oceania` class and sets its `name` property to
+/// This class extends the `Oceania` class and sets its [name] property to
 /// "Melanesia".
 ///
 /// Example:
@@ -454,7 +454,7 @@ class Melanesia extends Oceania {
 /// Represents the Micronesia region, which includes the countries of Federated
 /// States of Micronesia, Guam, Kiribati, Marshall Islands, Nauru, etc.
 ///
-/// This class extends the `Oceania` class and sets its `name` property to
+/// This class extends the `Oceania` class and sets its [name] property to
 /// "Micronesia".
 ///
 /// Example:
@@ -474,7 +474,7 @@ class Micronesia extends Oceania {
 /// Represents the Polynesia region, which includes the countries of American
 /// Samoa, Cook Islands, French Polynesia, Niue, etc.
 ///
-/// This class extends the `Oceania` class and sets its `name` property to
+/// This class extends the `Oceania` class and sets its [name] property to
 /// "Polynesia".
 ///
 /// Example:

@@ -31,7 +31,7 @@ class ElementsProperties {
   /// [offset] parameter specifies the distance fraction in the horizontal and
   /// vertical directions from the center. It defaults to [Offset.zero]. The
   /// [heightFactor] parameter specifies the height factor of the element and
-  /// defaults to 1. The [widthFactor] parameter specifies the width factor of
+  /// defaults to `1`. The [widthFactor] parameter specifies the width factor of
   /// the element and is optional. The [angle] parameter specifies the rotation
   /// angle of the element in degrees and is optional. The [child] parameter
   /// specifies a potential child element and is optional.
@@ -58,9 +58,9 @@ class ElementsProperties {
   /// The distance fraction in the horizontal/vertical direction (of the
   /// center).
   ///
-  /// A value of -1.0 corresponds to the leftmost/topmost edge. A value of 1.0
-  /// corresponds to the rightmost/bottommost edge. Values are not limited to
-  /// that range.
+  /// A value of `-1.0` corresponds to the leftmost/topmost edge. A value of
+  /// `1.0` corresponds to the rightmost/bottommost edge. Values are not limited
+  /// to that range.
   final Offset offset;
 
   /// The primary color of the element.

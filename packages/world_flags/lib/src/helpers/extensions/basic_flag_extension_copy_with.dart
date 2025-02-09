@@ -4,7 +4,7 @@ import "../../model/flag_properties.dart";
 import "../../model/typedefs.dart";
 import "../../ui/flags/basic_flag.dart";
 
-/// An extension on [BasicFlag] to provide a `copyWith` method for creating a
+/// An extension on [BasicFlag] to provide a [copyWith] method for creating a
 /// new instance of [BasicFlag] with modified properties.
 ///
 /// This extension allows you to create a new [BasicFlag] by copying the

@@ -1,4 +1,4 @@
-version: 2.0.1
+version: 2.1.0
 name: sealed_currencies
 description: Provides data for world currencies in the form of sealed classes.
 maintainer: Roman Cinis
@@ -26,12 +26,11 @@ environment:
 
 dependencies:
   l10n_currencies: ^1.0.0
-  sealed_languages: ^2.0.1
+  sealed_languages: ^2.1.0
 
 dev_dependencies:
   _sealed_world_tests:
     path: ../_sealed_world_tests
-  build_runner: ^2.4.14 # From Google
   coverage: ^1.11.1 # From Google
   dart_code_metrics_presets: ^2.20.0
   lints: ^5.1.1 # From Google

@@ -71,14 +71,15 @@ extension TranslatedExtension<T extends TranslatedName, L extends BasicLocale,
       )[this] ??
       orElse;
 
-  /// Returns a localized common name for this object or null if not found.
+  /// Returns a localized common name for this object or `null` if not found.
   ///
   /// Parameters:
-  /// - [mainLocale]: Required primary locale for translation lookup
+  /// - [mainLocale]: Primary locale for translation lookup, if `null` is passed
+  /// the method returns `null`.
   /// - [fallbackLocale]: Optional secondary locale to use if main locale
-  ///       translation is missing
+  /// translation is missing.
   /// - [useLanguageFallback]: Whether to try language-only codes when specific
-  ///       locale not found
+  /// locale not found.
   /// - [orElse]: Optional default value to return if translation is not found
   ///
   /// Example:
@@ -87,20 +88,22 @@ extension TranslatedExtension<T extends TranslatedName, L extends BasicLocale,
   /// final name = language.maybeCommonNameFor(const BasicLocale(LangDeu()));
   /// ```
   String? maybeCommonNameFor<B extends L>(
-    B mainLocale, {
+    B? mainLocale, {
     B? fallbackLocale,
     bool useLanguageFallback = true,
     String? orElse,
   }) =>
-      l10n.commonNamesMap(
-        {this},
-        options: LocaleMappingOptions<B>(
-          mainLocale: mainLocale,
-          fallbackLocale: fallbackLocale,
-          useLanguageFallback: useLanguageFallback,
-        ),
-      )[this] ??
-      orElse;
+      mainLocale == null
+          ? null
+          : (l10n.commonNamesMap(
+                {this},
+                options: LocaleMappingOptions<B>(
+                  mainLocale: mainLocale,
+                  fallbackLocale: fallbackLocale,
+                  useLanguageFallback: useLanguageFallback,
+                ),
+              )[this] ??
+              orElse);
 
   /// Retrieves the translation for the specified locale [BasicLocale] with
   /// required `language` parameter. This method might be expensive so it's

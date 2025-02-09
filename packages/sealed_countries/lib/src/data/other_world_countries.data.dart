@@ -16,6 +16,7 @@ import "../model/country/submodels/gini.dart";
 import "../model/country/submodels/idd.dart";
 import "../model/country/submodels/lat_lng.dart";
 import "../model/country/submodels/maps.dart";
+import "../model/regional_bloc/world_bloc.dart";
 import "geo/continental_sections.data.dart";
 import "geo/continents.data.dart";
 import "regional_bloc/regional_bloc.data.dart";
@@ -32,18 +33,6 @@ class CountryUnk extends WorldCountry {
             official: "Republic of Kosovo",
             common: "Kosovo",
           ),
-          namesNative: const [
-            CountryName(
-              language: LangSqi(),
-              official: "Republika e Kosovës",
-              common: "Kosova",
-            ),
-            CountryName(
-              language: LangSrp(),
-              official: "Република Косово",
-              common: "Косово",
-            ),
-          ],
           code: "UNK",
           codeNumeric: "   ",
           codeShort: "XK",
@@ -57,10 +46,6 @@ class CountryUnk extends WorldCountry {
           landlocked: true,
           bordersCodes: const ["Alb", "Mkd", "Mne", "Srb"],
           areaMetric: 10908,
-          demonyms: const [
-            Demonyms(language: LangEng(), female: "Kosovar", male: "Kosovar"),
-            Demonyms(language: LangFra(), female: "Kosovare", male: "Kosovar"),
-          ],
           emoji: "🇽🇰",
           maps: const Maps(
             googleMaps: "CSC4Yc8SWPgburuD9",
@@ -71,14 +56,34 @@ class CountryUnk extends WorldCountry {
           fifa: "KVX",
           car: const Car(sign: "CS"),
           timezones: const ["UTC+01:00"],
-          capitalInfo: const CapitalInfo(
-            capital: Capital("Pristina"),
-            latLng: LatLng(42.67, 21.17),
-          ),
-          regionalBlocs: const [BlocCEFTA()],
         );
   @override
   List<FiatCurrency> get currencies => const [FiatEur()];
+  @override
+  CapitalInfo get capitalInfo => const CapitalInfo(
+        capital: Capital("Pristina"),
+        latLng: LatLng(42.67, 21.17),
+      );
+  @override
+  List<RegionalBloc> get regionalBlocs => const [BlocCEFTA()];
+  @override
+  List<Demonyms> get demonyms => const [
+        Demonyms(language: LangEng(), female: "Kosovar", male: "Kosovar"),
+        Demonyms(language: LangFra(), female: "Kosovare", male: "Kosovar"),
+      ];
+  @override
+  List<CountryName> get namesNative => const [
+        CountryName(
+          language: LangSqi(),
+          official: "Republika e Kosovës",
+          common: "Kosova",
+        ),
+        CountryName(
+          language: LangSrp(),
+          official: "Република Косово",
+          common: "Косово",
+        ),
+      ];
   @override
   List<NaturalLanguage> get languages => const [LangSrp(), LangSqi()];
 }

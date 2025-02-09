@@ -14,7 +14,6 @@ environment:
 dependencies:
   meta: ^1.15.0 # Specific version for the flags package. From Google
   test: ^1.25.8 # Specific version for the flags package. From Google
-  vm_service: ^14.2.5 # Specific version for the flags package. From Google
 
 dev_dependencies:
   dart_code_metrics_presets: ^2.20.0
