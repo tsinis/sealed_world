@@ -4,10 +4,10 @@ import "../../../helpers/extensions/country_submodels/demonyms_extension.dart";
 
 /// A class that represents the demonyms for a particular language.
 ///
-/// The `Demonyms` class is a simple value object that represents the demonyms
-/// for a particular language. It consists of a `NaturalLanguage` object that
-/// represents the language, and two `String` values that represent the demonym
-/// for females and males respectively. The `female` and `male` fields must not
+/// The [Demonyms] class is a simple value object that represents the demonyms
+/// for a particular language. It consists of a [NaturalLanguage] object that
+/// represents the language, and two [String] values that represent the demonym
+/// for females and males respectively. The [female] and [male] fields must not
 /// be empty.
 ///
 /// Example usage:
@@ -22,10 +22,10 @@ import "../../../helpers/extensions/country_submodels/demonyms_extension.dart";
 /// print(demonyms.male); // Output: "Englishman"
 /// ```
 final class Demonyms implements JsonEncodable<Demonyms> {
-  /// Creates a new `Demonyms` object with the given language and demonym
+  /// Creates a new [Demonyms] object with the given language and demonym
   /// values.
   ///
-  /// The `female` and `male` parameters must not be empty.
+  /// The [female] and [male] parameters must not be empty.
   const Demonyms({
     required this.language,
     required this.female,

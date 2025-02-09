@@ -2,7 +2,7 @@ import "../../model/country/country.dart";
 import "../../model/country/submodels/country_name.dart";
 import "../extensions/country_submodels/country_name_extension.dart";
 
-/// Provides extension methods for getting the names of a `WorldCountry` object.
+/// Provides extension methods for getting the names of a [WorldCountry] object.
 extension WorldCountryNames on WorldCountry {
   /// Returns the common and native names of the country as a single string.
   ///

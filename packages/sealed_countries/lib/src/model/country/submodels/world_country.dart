@@ -31,11 +31,11 @@ class WorldCountry extends Country
   /// {@template country_constructor}
   /// Creates a new [WorldCountry] object with the given properties.
   ///
-  /// The `name` parameter is required and must not be empty. The
-  /// `altSpellings`, `languages`, `namesNative`, `translations`, `demonyms`,
-  /// `timezones`, `bordersCodes`, and `tld` parameters should not be `null`.
-  /// The `codeShort`, `codeNumeric`, `code`, `emoji`, `idd`, `latLng`, `maps`,
-  /// `areaMetric`, `population`, and `startOfWeek` parameters should not be
+  /// The [name] parameter is required and must not be empty. The
+  /// [altSpellings], [languages], [namesNative], [translations], [demonyms],
+  /// [timezones], [bordersCodes], and [tld] parameters should not be `null`.
+  /// The [codeShort], [codeNumeric], [code], [emoji], [idd], [latLng], [maps],
+  /// [areaMetric], [population], and [startOfWeek] parameters should not be
   /// `null` and must be valid values.
   /// {@endtemplate}
   const WorldCountry({
@@ -50,11 +50,9 @@ class WorldCountry extends Country
     required this.idd, // International Direct Dialing.
     required this.latLng,
     required this.maps,
-    required this.namesNative,
     required this.population,
     required this.timezones,
     required this.tld, // Top Level Domain.
-    required this.demonyms,
     this.currencies,
     this.capitalInfo,
     this.car = const Car(),
@@ -70,7 +68,9 @@ class WorldCountry extends Country
     this.subregion,
     this.unMember = true,
     this.regionalBlocs,
+    List<Demonyms>? demonyms,
     List<NaturalLanguage>? languages,
+    List<CountryName>? namesNative,
     List<TranslatedName>? translations,
   })  : assert(
           code.length == IsoStandardized.codeLength,
@@ -87,20 +87,12 @@ class WorldCountry extends Country
         assert(emoji.length > 0, "`emoji` should not be empty!"),
         assert(tld != const <String>[], "`tld` should not be empty!"),
         assert(
-          namesNative != const <CountryName>[],
-          "`namesNative` should not be empty!",
-        ),
-        assert(
           altSpellings != const <String>[],
           "`altSpellings` should not be empty!",
         ),
         assert(
           timezones != const <String>[],
           "`timezones` should not be empty!",
-        ),
-        assert(
-          demonyms != const <Demonyms>[],
-          "`demonyms` should not be empty!",
         ),
         assert(cioc == null || cioc.length > 0, "`cioc` should not be empty!"),
         assert(fifa == null || fifa.length > 0, "`fifa` should not be empty!"),
@@ -112,6 +104,8 @@ class WorldCountry extends Country
           regionalBlocs != const <RegionalBloc>[],
           "`regionalBlocs` should not be empty!",
         ),
+        _namesNative = namesNative,
+        _demonyms = demonyms,
         _languages = languages,
         _translations = translations;
 
@@ -129,11 +123,9 @@ class WorldCountry extends Country
     this.idd = const Idd(root: 0, suffixes: [0]),
     this.latLng = const LatLng(0, 0),
     this.maps = const Maps(googleMaps: " ", openStreetMaps: " "),
-    this.namesNative = const [],
     this.population = 1,
     this.timezones = const [],
     this.tld = const [],
-    this.demonyms = const [],
     this.currencies,
     this.capitalInfo,
     this.car = const Car(),
@@ -149,9 +141,13 @@ class WorldCountry extends Country
     this.subregion,
     this.unMember = true,
     this.regionalBlocs,
+    List<Demonyms> demonyms = const [],
     List<NaturalLanguage>? languages,
+    List<CountryName> namesNative = const [],
     List<TranslatedName>? translations,
-  })  : _languages = languages,
+  })  : _namesNative = namesNative,
+        _demonyms = demonyms,
+        _languages = languages,
         _translations = translations;
 
   /// Returns an [WorldCountry] object from the given [code]
@@ -174,7 +170,7 @@ class WorldCountry extends Country
           ? codeMap.findByCodeOrThrow(code)
           : countries.firstIsoWhereCode(code.toUpperCaseIsoCode());
 
-  /// Returns an [WorldCountry] object from the given `codeShort`
+  /// Returns an [WorldCountry] object from the given [codeShort]
   /// ISO 3166-1 Alpha-2 code.
   ///
   /// The [codeShort] parameter is required and must be a valid country code
@@ -194,7 +190,7 @@ class WorldCountry extends Country
           ? codeShortMap.findByCodeOrThrow(codeShort)
           : countries.firstIsoWhereCodeOther(codeShort.toUpperCaseIsoCode());
 
-  /// Returns an [WorldCountry] object from the given `code` ISO 3166-1 code.
+  /// Returns an [WorldCountry] object from the given ISO 3166-1 code.
   ///
   /// The [codeNumeric] parameter is required and must be a valid country code
   /// object representing a three-digit ISO 3166-1 numeric code.
@@ -255,10 +251,6 @@ class WorldCountry extends Country
                 short: (short) => WorldCountry.fromCodeShort(short, countries),
               );
 
-  /// The native names of the country.
-  @override
-  final List<CountryName> namesNative;
-
   /// The top level domain names for the country.
   final List<String> tld;
 
@@ -305,9 +297,6 @@ class WorldCountry extends Country
   /// The area of the country in square kilometers.
   final double areaMetric;
 
-  /// The demonym names for the people of the country.
-  final List<Demonyms> demonyms;
-
   /// The emoji flag for the country.
   final String emoji;
 
@@ -351,11 +340,18 @@ class WorldCountry extends Country
   @override
   String get internationalName => name.common;
 
+  /// The native names of the country.
+  @override
+  List<CountryName> get namesNative => _namesNative ?? const [];
+
   /// The currencies used in the country.
   final List<FiatCurrency>? currencies;
 
   /// The official languages spoken in the country.
   List<NaturalLanguage> get languages => _languages ?? const [];
+
+  /// The demonym names for the people of the country.
+  List<Demonyms> get demonyms => _demonyms ?? const [];
 
   @override
   List<TranslatedName> get translations =>
@@ -368,8 +364,7 @@ class WorldCountry extends Country
   @override
   String toString({bool short = true}) => short
       ? super.toString()
-      : "WorldCountry(name: $name, namesNative: $namesNative, "
-          'tld: ${jsonEncode(tld)}, code: "$code", '
+      : 'WorldCountry(name: $name, tld: ${jsonEncode(tld)}, code: "$code", '
           'codeNumeric: "$codeNumeric", codeShort: "$codeShort", '
           '${cioc == null ? '' : 'cioc: "$cioc", '}independent: $independent, '
           "unMember: $unMember, idd: $idd, "
@@ -378,15 +373,17 @@ class WorldCountry extends Country
           """${subregion == null ? '' : 'subregion: ${subregion.runtimeType}(), '}"""
           "latLng: $latLng, landlocked: $landlocked, "
           """${bordersCodes == null ? '' : 'bordersCodes: ${jsonEncode(bordersCodes)}, '}"""
-          '''areaMetric: $areaMetric, demonyms: $demonyms, emoji: "$emoji", maps: $maps, '''
-          "population: $population, ${gini == null ? '' : 'gini: $gini, '}"
+          'areaMetric: $areaMetric, emoji: "$emoji", maps: $maps, '
+          "population: $population,${gini == null ? ' ' : 'gini: $gini, '}"
           '${fifa == null ? '' : 'fifa: "$fifa", '}car: $car, '
           "timezones: ${jsonEncode(timezones)}, hasCoatOfArms: $hasCoatOfArms, "
           "startOfWeek: $startOfWeek, "
-          """${capitalInfo == null ? '' : 'capitalInfo: ${capitalInfo?.toString(short: false)}, '}"""
-          "${postalCode == null ? '' : 'postalCode: $postalCode, '}"
-          """${regionalBlocs == null ? '' : 'regionalBlocs: ${regionalBlocs?.toInstancesString()},'});"""
+          "${postalCode == null ? '' : 'postalCode: $postalCode, '});"
           """${currencies == null ? '' : '@override List<FiatCurrency> get currencies => const ${currencies?.toInstancesString()}; '} """
+          """${capitalInfo == null ? '' : '@override CapitalInfo get capitalInfo => const ${capitalInfo?.toString(short: false)}; '} """
+          """${regionalBlocs == null ? '' : '@override List<RegionalBloc> get regionalBlocs => const ${regionalBlocs?.toInstancesString()}; '} """
+          "@override List<Demonyms> get demonyms => const $demonyms; "
+          "@override List<CountryName> get namesNative => const $namesNative; "
           "@override "
           """List<NaturalLanguage> get languages => const ${languages.toInstancesString()}""";
 
@@ -401,7 +398,7 @@ class WorldCountry extends Country
   /// its parameter and returns a value to compare with [value]. If [where] is
   /// `null`, the [code] field of the [WorldCountry] object will be used. The
   /// [countries] parameter is an optional iterable of [WorldCountry] objects
-  /// that defaults to `list`. Returns a [WorldCountry] object that represents
+  /// that defaults to [list]. Returns a [WorldCountry] object that represents
   /// the country with the given [value], or `null` if no such country exists.
   static WorldCountry? maybeFromValue<T extends Object>(
     T value, {
@@ -515,7 +512,7 @@ class WorldCountry extends Country
   /// with the `codeNumeric` property of each [WorldCountry] instance.
   /// If the value is two characters code, it compares it
   /// with the `codeShort` property of each [WorldCountry] instance.
-  /// Otherwise, it compares it with the uppercase version of the `code`
+  /// Otherwise, it compares it with the uppercase version of the [code]
   /// property of each [WorldCountry] instance. The resulting [WorldCountry]
   /// instance is assigned to the `country` variable.
   static WorldCountry? maybeFromAnyCode(
@@ -602,6 +599,8 @@ class WorldCountry extends Country
   /// by the [WorldCountry] class.
   static const list = worldCountryList;
 
+  final List<Demonyms>? _demonyms;
   final List<NaturalLanguage>? _languages;
+  final List<CountryName>? _namesNative;
   final List<TranslatedName>? _translations;
 }

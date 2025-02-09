@@ -6,9 +6,9 @@ import "lat_lng.dart";
 
 /// A class that represents information about a country's capital.
 ///
-/// The `CapitalInfo` class is a simple value object that represents information
-/// about a country's capital. It consists of a `Capital` object that represents
-/// the name of the capital, and a `LatLng` object that represents the location
+/// The [CapitalInfo] class is a simple value object that represents information
+/// about a country's capital. It consists of a [Capital] object that represents
+/// the name of the capital, and a [LatLng] object that represents the location
 /// of the de facto capital. Both fields are required.
 ///
 /// Example usage:
@@ -21,10 +21,10 @@ import "lat_lng.dart";
 /// print(capitalInfo.latLng); // Prints: LatLng(latitude: 31.9, longitude: 35.2)
 /// ```
 final class CapitalInfo implements JsonEncodable<CapitalInfo> {
-  /// Creates a new `CapitalInfo` object with the given capital
+  /// Creates a new [CapitalInfo] object with the given capital
   /// and location values.
   ///
-  /// Both the `capital` and `latLng` parameters are required.
+  /// Both the [capital] and [latLng] parameters are required.
   const CapitalInfo({required this.capital, required this.latLng});
 
   /// The capital city of the country.

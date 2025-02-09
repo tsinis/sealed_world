@@ -1,9 +1,9 @@
 part of "world_bloc.dart";
 
-/// The `RegionalBloc` class is an non-abstract class that represents a regional
-/// bloc. It consists of a `String` values that represents the name and acronym
-/// of the regional bloc. The `name` and `acronym` fields are required and must
-/// not be empty. The `otherAcronyms` and `otherNames` fields are non-required.
+/// The [RegionalBloc] class is an non-abstract class that represents a regional
+/// bloc. It consists of a [String] values that represents the name and acronym
+/// of the regional bloc. The [name] and [acronym] fields are required and must
+/// not be empty. The [otherAcronyms] and [otherNames] fields are optional.
 ///
 /// Example usage:
 ///
@@ -16,9 +16,9 @@ part of "world_bloc.dart";
 /// print(bloc.name); // Prints: "Some Bloc"
 /// ```
 class RegionalBloc extends WorldBloc {
-  /// Creates a new `RegionalBloc` object with the given name.
+  /// Creates a new [RegionalBloc] object with the given name.
   ///
-  /// The `name` and `acronym` parameters are required and must not be empty.
+  /// The [name] and [acronym] parameters are required and must not be empty.
   const RegionalBloc({
     required String super.acronym,
     required super.name,
@@ -26,13 +26,12 @@ class RegionalBloc extends WorldBloc {
     this.otherNames,
   });
 
-  /// Creates a new `RegionalBloc` object from its acronym.
-  /// Returns an [RegionalBloc] object from the given [acronym].
+  /// Creates a new [RegionalBloc] object from its [acronym].
   ///
   /// The [acronym] parameter is required and must be a valid bloc acronym.
   /// {@macro any_code_object}
   /// Returns a [RegionalBloc] object that represents the bloc with the given
-  /// code or throws a `StateError` if no such bloc exists.
+  /// code or throws a [StateError] if no such bloc exists.
   ///
   /// The optional [blocs] parameter can be used to specify a list of
   /// [RegionalBloc] objects to search through.
@@ -48,7 +47,7 @@ class RegionalBloc extends WorldBloc {
     return list.firstWhere((bloc) => bloc.acronym == string);
   }
 
-  /// Creates a new `RegionalBloc` object from its name.
+  /// Creates a new [RegionalBloc] object from its name.
   factory RegionalBloc.fromName(String name) => list.firstWhere(
         (bloc) => bloc.name.toUpperCase() == name.toUpperCaseIsoCode(),
       );
@@ -70,7 +69,7 @@ class RegionalBloc extends WorldBloc {
           "otherAcronyms: ${jsonEncode(otherAcronyms)}, "
           "otherNames: ${jsonEncode(otherNames)})";
 
-  /// Creates a new `RegionalBloc` object from its acronym.
+  /// Creates a new [RegionalBloc] object from its acronym.
   ///
   /// Returns an [RegionalBloc] object from the given [acronym], or `null`
   /// if not found.
@@ -78,7 +77,7 @@ class RegionalBloc extends WorldBloc {
   /// The [acronym] parameter is required and must be a valid bloc acronym.
   /// {@macro any_code_object}
   /// Returns a [RegionalBloc] object that represents the bloc with the given
-  /// code or throws a `StateError` if no such bloc exists.
+  /// code if no such bloc exists.
   ///
   /// The optional [blocs] parameter can be used to specify a list of
   /// [RegionalBloc] objects to search through.
@@ -98,16 +97,16 @@ class RegionalBloc extends WorldBloc {
     return null;
   }
 
-  /// Creates a new `RegionalBloc` object from a value.
+  /// Creates a new [RegionalBloc] object from a value.
   ///
-  /// The `value` parameter is the value to be compared to the acronym of each
-  /// RegionalBloc in the `RegionalBlocs` list. If the `value` parameter matches
-  /// the acronym of a RegionalBloc, a new `RegionalBloc` object representing
-  /// that regional bloc is returned. If there is no match, `null` is returned.
-  /// If the `where` parameter is provided, it is used to determine the value to
-  /// compare for each regional bloc.
+  /// The [value] parameter is the value to be compared to the acronym of each
+  /// regional bloc in the [RegionalBloc]s list. If the [value] parameter
+  /// matches the acronym of a RegionalBloc, a new [RegionalBloc] object
+  /// representing that regional bloc is returned. If there is no match, `null`
+  /// is returned. If the [where] parameter is provided, it is used to determine
+  /// the value to compare for each regional bloc.
   ///
-  /// The `regionalBlocs` parameter is the list of regional blocs to search. If
+  /// The [regionalBlocs] parameter is the list of regional blocs to search. If
   /// no value is provided, the `RegionalBloc.list` constant is used.
   static RegionalBloc? maybeFromValue<T extends Object>(
     T value, {

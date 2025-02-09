@@ -1,6 +1,6 @@
-/// The `UtcDurationDifference` type alias is a function type that represents a
+/// The [UtcDurationDifference] type alias is a function type that represents a
 /// difference in UTC time. It takes two named parameters: `duration`, which is
-/// a `Duration` object representing the amount of time to add or subtract, and
+/// a [Duration] object representing the amount of time to add or subtract, and
 /// `toAdd`, which is a `bool` value indicating whether to add or subtract the
 /// `duration`. The `duration` parameter should not be `null`.
 ///
