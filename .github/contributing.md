@@ -10,7 +10,7 @@ We love your input! We want to make contributing to this project as easy and tra
 
 ## We Develop with Github
 
-We use GitHub to host code, to track issues and feature requests, as well as accept pull requests.
+We use GitHub to host code, track issues, and feature requests, as well as accept pull requests.
 
 ## We Use [Github Flow](https://guides.github.com/introduction/flow/index.html), So All Code Changes Happen Through Pull Requests
 
@@ -27,7 +27,7 @@ Pull requests are the best way to propose changes to the codebase (we use [Githu
 
 In short, when you submit code changes, your submissions are understood to be under the same [MIT License](http://choosealicense.com/licenses/mit) that covers the project. Feel free to contact the maintainers if that's a concern.
 
-## Report bugs using Github's [issues]([https://github.com/briandk/transcriptase-atom/issues](https://github.com/tsinis/sealed_world/issues/new/choose))
+## Report bugs using Github's [issues](https://github.com/tsinis/sealed_world/issues/new/choose)
 
 We use GitHub Issues to track public bugs. Report a bug by [opening a new issue](https://github.com/tsinis/sealed_world/issues); it's that easy!
 
@@ -40,7 +40,7 @@ We use GitHub Issues to track public bugs. Report a bug by [opening a new issue]
 - A quick summary and/or background
 - Steps to reproduce
   - Be specific!
-  - Give sample code if you can. [This StackOverflow question](http://stackoverflow.com/q/12488905/180626) includes sample code that _anyone_ with a base R setup can run to reproduce what I was seeing
+  - Give a sample code if you can. [This StackOverflow question](http://stackoverflow.com/q/12488905/180626) includes sample code that _anyone_ with a base R setup can run to reproduce what I was seeing
 - What you expected would happen
 - What actually happens
 - Notes (possibly including why you think this might be happening, or stuff you tried that didn't work)
@@ -49,7 +49,7 @@ People _love_ thorough bug reports. I'm not even kidding.
 
 ## Use a Consistent Coding Style
 
-Please use this official [style guide](https://github.com/flutter/flutter/wiki/Style-guide-for-Flutter-repo), which includes advice for designing APIs for Flutter, and how to format code in project.
+Please use this official [style guide](https://github.com/flutter/flutter/wiki/Style-guide-for-Flutter-repo), which includes advice for designing APIs for Flutter, and how to format code in the project.
 
 ## License
 
