@@ -603,4 +603,21 @@ class WorldCountry extends Country
   final List<NaturalLanguage>? _languages;
   final List<CountryName>? _namesNative;
   final List<TranslatedName>? _translations;
+
+  /// Get Country from IP address
+  /// This method returns the country of the user based on their IP address.
+  static Future<WorldCountry?> get current async => await _current;
+
+  static Future<WorldCountry?> get _current async {
+    try {
+      final String countryCode =
+          await http.get("http://ip-api.com/json").then((res) {
+        final data = jsonDecode(res.body);
+        return data["countryCode"];
+      });
+      return WorldCountry.maybeFromCode(countryCode);
+    } catch (e) {
+      return null;
+    }
+  } 
 }
