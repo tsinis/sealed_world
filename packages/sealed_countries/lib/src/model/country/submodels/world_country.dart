@@ -606,7 +606,7 @@ class WorldCountry extends Country
 
   /// Get Country from IP address
   /// This method returns the country of the user based on their IP address.
-  static Future<WorldCountry?> get current async => await _current;
+  static Future<WorldCountry?> get current async => _current;
 
   static Future<WorldCountry?> get _current async {
     try {
