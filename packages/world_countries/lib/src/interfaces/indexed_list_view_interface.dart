@@ -17,7 +17,7 @@ abstract interface class IndexedListViewInterface {
   /// The optional parameters allow customization of the list's appearance
   /// and behavior.
   const IndexedListViewInterface( // coverage:ignore-line
-      {
+  {
     this.addRepaintBoundaries, // Default to: true.
     this.addSemanticIndexes, // Default to: true.
     this.cacheExtent,

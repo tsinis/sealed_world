@@ -101,35 +101,40 @@ class CurrencyTile extends ListItemTile<FiatCurrency> {
     super.visualDensity,
     super.excludeSemantics,
   }) : super(
-          currency.item,
-          isChosen: currency.isChosen,
-          isDisabled: currency.isDisabled,
-          semanticsIdentifier: currency.item.semanticIdentifier,
-          title: title ??
-              Text(
-                "${currency.item.name} (${currency.item.code})",
-                overflow: TextOverflow.ellipsis,
-              ),
-          minLeadingWidth: minLeadingWidth,
-          leading: leading ??
-              ConstrainedBox(
-                constraints:
-                    UiConstants.constraints.copyWith(minWidth: minLeadingWidth),
-                child: Padding(
-                  padding: const EdgeInsets.only(top: UiConstants.point),
-                  child: Builder(
-                    builder: (context) => Text(
-                      currency.item.unit,
-                      style: context.theme.textTheme.titleMedium,
-                      textAlign: TextAlign.center,
-                    ),
-                  ),
-                ),
-              ),
-          subtitle: subtitle ??
-              Text(
-                currency.item.namesNative.first,
-                overflow: TextOverflow.ellipsis,
-              ),
-        );
+         currency.item,
+         isChosen: currency.isChosen,
+         isDisabled: currency.isDisabled,
+         semanticsIdentifier: currency.item.semanticIdentifier,
+         title:
+             title ??
+             Text(
+               "${currency.item.name} (${currency.item.code})",
+               overflow: TextOverflow.ellipsis,
+             ),
+         minLeadingWidth: minLeadingWidth,
+         leading:
+             leading ??
+             ConstrainedBox(
+               constraints: UiConstants.constraints.copyWith(
+                 minWidth: minLeadingWidth,
+               ),
+               child: Padding(
+                 padding: const EdgeInsets.only(top: UiConstants.point),
+                 child: Builder(
+                   builder:
+                       (context) => Text(
+                         currency.item.unit,
+                         style: context.theme.textTheme.titleMedium,
+                         textAlign: TextAlign.center,
+                       ),
+                 ),
+               ),
+             ),
+         subtitle:
+             subtitle ??
+             Text(
+               currency.item.namesNative.first,
+               overflow: TextOverflow.ellipsis,
+             ),
+       );
 }

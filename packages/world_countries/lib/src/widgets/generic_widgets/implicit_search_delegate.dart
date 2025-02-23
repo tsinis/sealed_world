@@ -10,7 +10,8 @@ import "../buttons/clear_button.dart";
 /// An implementation of [SearchDelegateInterface] that uses the `compare`
 /// method of the items to search through them.
 class ImplicitSearchDelegate<T extends Object>
-    extends SearchDelegateInterface<T> with CompareSearchMixin<T> {
+    extends SearchDelegateInterface<T>
+    with CompareSearchMixin<T> {
   /// Constructor for the [ImplicitSearchDelegate] class.
   ///
   /// * [items] is the list of items to search through.
@@ -67,70 +68,69 @@ class ImplicitSearchDelegate<T extends Object>
 
   @override
   List<Widget> buildActions(BuildContext context) => [
-        if (showClearButton ?? true)
-          IconButton(
-            key: clearIconButton?.key,
-            iconSize: clearIconButton?.iconSize,
-            visualDensity: clearIconButton?.visualDensity,
-            padding: clearIconButton?.padding,
-            alignment: clearIconButton?.alignment,
-            splashRadius: clearIconButton?.splashRadius,
-            color: clearIconButton?.color,
-            focusColor: clearIconButton?.focusColor,
-            hoverColor: clearIconButton?.hoverColor,
-            highlightColor: clearIconButton?.highlightColor,
-            splashColor: clearIconButton?.splashColor,
-            disabledColor: clearIconButton?.disabledColor,
-            onPressed: () {
-              clearIconButton?.onPressed?.call();
-              query = "";
-            },
-            mouseCursor: clearIconButton?.mouseCursor,
-            focusNode: clearIconButton?.focusNode,
-            autofocus: clearIconButton?.autofocus ?? false,
-            tooltip: clearIconButton?.tooltip,
-            enableFeedback: clearIconButton?.enableFeedback,
-            constraints: clearIconButton?.constraints,
-            style: clearIconButton?.style,
-            isSelected: clearIconButton?.isSelected,
-            selectedIcon: clearIconButton?.selectedIcon,
-            icon: clearIconButton?.icon ?? ClearButton.defaultIcon,
-          ),
-      ];
+    if (showClearButton ?? true)
+      IconButton(
+        key: clearIconButton?.key,
+        iconSize: clearIconButton?.iconSize,
+        visualDensity: clearIconButton?.visualDensity,
+        padding: clearIconButton?.padding,
+        alignment: clearIconButton?.alignment,
+        splashRadius: clearIconButton?.splashRadius,
+        color: clearIconButton?.color,
+        focusColor: clearIconButton?.focusColor,
+        hoverColor: clearIconButton?.hoverColor,
+        highlightColor: clearIconButton?.highlightColor,
+        splashColor: clearIconButton?.splashColor,
+        disabledColor: clearIconButton?.disabledColor,
+        onPressed: () {
+          clearIconButton?.onPressed?.call();
+          query = "";
+        },
+        mouseCursor: clearIconButton?.mouseCursor,
+        focusNode: clearIconButton?.focusNode,
+        autofocus: clearIconButton?.autofocus ?? false,
+        tooltip: clearIconButton?.tooltip,
+        enableFeedback: clearIconButton?.enableFeedback,
+        constraints: clearIconButton?.constraints,
+        style: clearIconButton?.style,
+        isSelected: clearIconButton?.isSelected,
+        selectedIcon: clearIconButton?.selectedIcon,
+        icon: clearIconButton?.icon ?? ClearButton.defaultIcon,
+      ),
+  ];
 
   @override
   PreferredSizeWidget? buildBottom(BuildContext context) => appBarBottom;
 
   @override
   Widget buildLeading(BuildContext context) => IconButton(
-        key: backIconButton?.key,
-        iconSize: backIconButton?.iconSize,
-        visualDensity: backIconButton?.visualDensity,
-        padding: backIconButton?.padding,
-        alignment: backIconButton?.alignment,
-        splashRadius: backIconButton?.splashRadius,
-        color: backIconButton?.color,
-        focusColor: backIconButton?.focusColor,
-        hoverColor: backIconButton?.hoverColor,
-        highlightColor: backIconButton?.highlightColor,
-        splashColor: backIconButton?.splashColor,
-        disabledColor: backIconButton?.disabledColor,
-        onPressed: () {
-          backIconButton?.onPressed?.call();
-          close(context, null);
-        },
-        mouseCursor: backIconButton?.mouseCursor,
-        focusNode: backIconButton?.focusNode,
-        autofocus: backIconButton?.autofocus ?? false,
-        tooltip:
-            backIconButton?.tooltip ?? context.materialL10n.backButtonTooltip,
-        enableFeedback: backIconButton?.enableFeedback,
-        constraints: backIconButton?.constraints,
-        style: backIconButton?.style,
-        isSelected: backIconButton?.isSelected,
-        selectedIcon: backIconButton?.selectedIcon,
-        icon: backIconButton?.icon ?? const BackButtonIcon(),
-      );
+    key: backIconButton?.key,
+    iconSize: backIconButton?.iconSize,
+    visualDensity: backIconButton?.visualDensity,
+    padding: backIconButton?.padding,
+    alignment: backIconButton?.alignment,
+    splashRadius: backIconButton?.splashRadius,
+    color: backIconButton?.color,
+    focusColor: backIconButton?.focusColor,
+    hoverColor: backIconButton?.hoverColor,
+    highlightColor: backIconButton?.highlightColor,
+    splashColor: backIconButton?.splashColor,
+    disabledColor: backIconButton?.disabledColor,
+    onPressed: () {
+      backIconButton?.onPressed?.call();
+      close(context, null);
+    },
+    mouseCursor: backIconButton?.mouseCursor,
+    focusNode: backIconButton?.focusNode,
+    autofocus: backIconButton?.autofocus ?? false,
+    tooltip: backIconButton?.tooltip ?? context.materialL10n.backButtonTooltip,
+    enableFeedback: backIconButton?.enableFeedback,
+    constraints: backIconButton?.constraints,
+    style: backIconButton?.style,
+    isSelected: backIconButton?.isSelected,
+    selectedIcon: backIconButton?.selectedIcon,
+    icon: backIconButton?.icon ?? const BackButtonIcon(),
+  );
 
   @override
   Widget buildResults(BuildContext context) =>
@@ -140,8 +140,7 @@ class ImplicitSearchDelegate<T extends Object>
   Widget buildSuggestions(
     BuildContext context, [
     UnmodifiableListView<T>? items,
-  ]) =>
-      resultsBuilder(context, items ?? _filteredItems(context));
+  ]) => resultsBuilder(context, items ?? _filteredItems(context));
 
   UnmodifiableListView<T> _filteredItems(BuildContext context) =>
       UnmodifiableListView(

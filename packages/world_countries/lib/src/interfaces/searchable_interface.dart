@@ -12,7 +12,7 @@ abstract interface class SearchableInterface<T extends Object?> {
   /// * [startWithSearch] is a boolean indicating whether the search field
   ///   should only search by starting with the search string.
   const SearchableInterface( // coverage:ignore-line
-      {
+  {
     required this.searchIn,
     this.caseSensitiveSearch = false,
     this.startWithSearch = true,

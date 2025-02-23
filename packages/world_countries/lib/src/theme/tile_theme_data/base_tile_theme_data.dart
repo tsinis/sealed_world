@@ -29,15 +29,13 @@ base class BaseTileThemeData<T extends IsoTranslated>
   @optionalTypeArgs
   BaseTileThemeData<T> copyWith({
     Widget Function(ItemProperties<T> itemProperties, {bool? isDense})? builder,
-  }) =>
-      BaseTileThemeData<T>(builder: builder ?? this.builder);
+  }) => BaseTileThemeData<T>(builder: builder ?? this.builder);
 
   @override
   BaseTileThemeData<T> lerp(
     covariant ThemeExtension<BaseTileThemeData<T>>? other,
     double t,
-  ) =>
-      this;
+  ) => this;
 }
 
 @immutable
@@ -51,5 +49,5 @@ sealed class _BaseTileThemeData<T extends IsoTranslated>
   /// This builder can be used to customize the appearance and layout of the
   /// tile based on the provided properties.
   final Widget Function(ItemProperties<T> itemProperties, {bool? isDense})?
-      builder;
+  builder;
 }

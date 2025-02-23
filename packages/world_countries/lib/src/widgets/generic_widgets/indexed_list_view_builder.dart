@@ -8,7 +8,8 @@ import "../base_widgets/stateful_indexed_list_view.dart";
 
 /// A stateful indexed list view widget that displays a list of items.
 class IndexedListViewBuilder<T extends Object>
-    extends StatefulIndexedListView<T> with PropertiesConvertibleMixin<T> {
+    extends StatefulIndexedListView<T>
+    with PropertiesConvertibleMixin<T> {
   /// Constructor for the [IndexedListViewBuilder] class.
   ///
   /// * [items] is the list of items to display in the list view.
@@ -97,16 +98,19 @@ class _IndexedListViewBuilderState<T extends Object>
     final header = widget.header ?? theme?.header;
 
     return Column(
-      mainAxisAlignment: widget.mainAxisAlignment ??
+      mainAxisAlignment:
+          widget.mainAxisAlignment ??
           theme?.mainAxisAlignment ??
           MainAxisAlignment.start,
       mainAxisSize:
           widget.mainAxisSize ?? theme?.mainAxisSize ?? MainAxisSize.min,
-      crossAxisAlignment: widget.crossAxisAlignment ??
+      crossAxisAlignment:
+          widget.crossAxisAlignment ??
           theme?.crossAxisAlignment ??
           CrossAxisAlignment.center,
       textDirection: widget.textDirection ?? theme?.textDirection,
-      verticalDirection: widget.verticalDirection ??
+      verticalDirection:
+          widget.verticalDirection ??
           theme?.verticalDirection ??
           VerticalDirection.down,
       textBaseline: widget.textBaseline ?? theme?.textBaseline,
@@ -118,53 +122,61 @@ class _IndexedListViewBuilderState<T extends Object>
             duration: UiConstants.duration,
             switchInCurve: UiConstants.switchInCurve,
             switchOutCurve: UiConstants.switchOutCurve,
-            child: widget.items.isEmpty
-                ? widget.emptyStatePlaceholder
-                // ignore: avoid-shrink-wrap-in-lists, it's false by default.
-                : ListView.separated(
-                    scrollDirection:
-                        widget.direction ?? theme?.direction ?? Axis.vertical,
-                    reverse: widget.reverse ?? theme?.reverse ?? false,
-                    controller: widget.scrollController,
-                    primary: widget.primary ?? theme?.primary,
-                    physics: widget.physics ?? theme?.physics,
-                    shrinkWrap: widget.shrinkWrap ?? theme?.shrinkWrap ?? false,
-                    padding: widget.padding ?? theme?.padding,
-                    itemBuilder: (newContext, index) {
-                      final properties = widget.properties(newContext, index);
-                      final child = widget.itemBuilder?.call(properties);
-                      if (child == null) return null;
-                      if (properties.isDisabled) return child;
+            child:
+                widget.items.isEmpty
+                    ? widget.emptyStatePlaceholder
+                    // ignore: avoid-shrink-wrap-in-lists, it's false by default.
+                    : ListView.separated(
+                      scrollDirection:
+                          widget.direction ?? theme?.direction ?? Axis.vertical,
+                      reverse: widget.reverse ?? theme?.reverse ?? false,
+                      controller: widget.scrollController,
+                      primary: widget.primary ?? theme?.primary,
+                      physics: widget.physics ?? theme?.physics,
+                      shrinkWrap:
+                          widget.shrinkWrap ?? theme?.shrinkWrap ?? false,
+                      padding: widget.padding ?? theme?.padding,
+                      itemBuilder: (newContext, index) {
+                        final properties = widget.properties(newContext, index);
+                        final child = widget.itemBuilder?.call(properties);
+                        if (child == null) return null;
+                        if (properties.isDisabled) return child;
 
-                      return GestureDetector(
-                        onTap: () => widget.onSelect?.call(properties.item),
-                        child: child,
-                      );
-                    },
-                    separatorBuilder: (_, __) =>
-                        widget.separator ??
-                        theme?.separator ??
-                        UiConstants.separator,
-                    itemCount: widget.items.length,
-                    addAutomaticKeepAlives: widget.addAutomaticKeepAlives,
-                    addRepaintBoundaries: widget.addRepaintBoundaries ??
-                        theme?.addRepaintBoundaries ??
-                        true,
-                    addSemanticIndexes: widget.addSemanticIndexes ??
-                        theme?.addSemanticIndexes ??
-                        true,
-                    cacheExtent: widget.cacheExtent ?? theme?.cacheExtent,
-                    dragStartBehavior: widget.dragStartBehavior ??
-                        theme?.dragStartBehavior ??
-                        DragStartBehavior.start,
-                    keyboardDismissBehavior: widget.keyboardDismissBehavior ??
-                        theme?.keyboardDismissBehavior ??
-                        ScrollViewKeyboardDismissBehavior.manual,
-                    restorationId: widget.restorationId,
-                    clipBehavior: widget.clipBehavior ??
-                        theme?.clipBehavior ??
-                        Clip.hardEdge,
-                  ),
+                        return GestureDetector(
+                          onTap: () => widget.onSelect?.call(properties.item),
+                          child: child,
+                        );
+                      },
+                      separatorBuilder:
+                          (_, _) =>
+                              widget.separator ??
+                              theme?.separator ??
+                              UiConstants.separator,
+                      itemCount: widget.items.length,
+                      addAutomaticKeepAlives: widget.addAutomaticKeepAlives,
+                      addRepaintBoundaries:
+                          widget.addRepaintBoundaries ??
+                          theme?.addRepaintBoundaries ??
+                          true,
+                      addSemanticIndexes:
+                          widget.addSemanticIndexes ??
+                          theme?.addSemanticIndexes ??
+                          true,
+                      cacheExtent: widget.cacheExtent ?? theme?.cacheExtent,
+                      dragStartBehavior:
+                          widget.dragStartBehavior ??
+                          theme?.dragStartBehavior ??
+                          DragStartBehavior.start,
+                      keyboardDismissBehavior:
+                          widget.keyboardDismissBehavior ??
+                          theme?.keyboardDismissBehavior ??
+                          ScrollViewKeyboardDismissBehavior.manual,
+                      restorationId: widget.restorationId,
+                      clipBehavior:
+                          widget.clipBehavior ??
+                          theme?.clipBehavior ??
+                          Clip.hardEdge,
+                    ),
           ),
         ),
       ],

@@ -101,35 +101,40 @@ class CountryTile extends ListItemTile<WorldCountry> {
     super.visualDensity,
     super.excludeSemantics,
   }) : super(
-          country.item,
-          isChosen: country.isChosen,
-          isDisabled: country.isDisabled,
-          semanticsIdentifier: country.item.semanticIdentifier,
-          title: title ??
-              Text(
-                country.item.namesCommonNative(skipFirst: true),
-                overflow: TextOverflow.ellipsis,
-              ),
-          leading: Padding(
-            padding: const EdgeInsets.only(top: UiConstants.point),
-            child: leading ??
-                Builder(
-                  builder: (context) => CountryFlag.simplified(
-                    country.item,
-                    height: context.flagTheme?.height ?? leadingFlagHeight,
-                    aspectRatio: context.flagTheme?.aspectRatio ??
-                        FlagConstants.defaultAspectRatio,
-                    decoration: context.flagTheme?.decoration ??
-                        const BoxDecoration(
-                          borderRadius: BorderRadius.all(
-                            Radius.circular(UiConstants.point / 2),
-                          ),
-                        ),
-                  ),
-                ),
-          ),
-          subtitle: subtitle ?? Text(country.item.namesNative.first.common),
-        );
+         country.item,
+         isChosen: country.isChosen,
+         isDisabled: country.isDisabled,
+         semanticsIdentifier: country.item.semanticIdentifier,
+         title:
+             title ??
+             Text(
+               country.item.namesCommonNative(skipFirst: true),
+               overflow: TextOverflow.ellipsis,
+             ),
+         leading: Padding(
+           padding: const EdgeInsets.only(top: UiConstants.point),
+           child:
+               leading ??
+               Builder(
+                 builder:
+                     (context) => CountryFlag.simplified(
+                       country.item,
+                       height: context.flagTheme?.height ?? leadingFlagHeight,
+                       aspectRatio:
+                           context.flagTheme?.aspectRatio ??
+                           FlagConstants.defaultAspectRatio,
+                       decoration:
+                           context.flagTheme?.decoration ??
+                           const BoxDecoration(
+                             borderRadius: BorderRadius.all(
+                               Radius.circular(UiConstants.point / 2),
+                             ),
+                           ),
+                     ),
+               ),
+         ),
+         subtitle: subtitle ?? Text(country.item.namesNative.first.common),
+       );
 
   /// Constructor for the [CountryTile] class that uses an [ItemProperties]
   /// object. It creates a simple dense country tile with no subtitle.
@@ -176,27 +181,32 @@ class CountryTile extends ListItemTile<WorldCountry> {
     super.visualDensity = VisualDensity.compact,
     super.excludeSemantics,
   }) : super(
-          country.item,
-          isChosen: country.isChosen,
-          isDisabled: country.isDisabled,
-          semanticsIdentifier: country.item.semanticIdentifier,
-          title: title ??
-              Text(
-                country.item.namesNative.first.common,
-                overflow: TextOverflow.ellipsis,
-              ),
-          leading: leading ??
-              Builder(
-                builder: (context) => CountryFlag.simplified(
-                  country.item,
-                  height: context.flagTheme?.height ?? leadingFlagHeight,
-                  aspectRatio: context.flagTheme?.aspectRatio ??
-                      FlagConstants.defaultAspectRatio,
-                  decoration: context.flagTheme?.decoration ??
-                      const BoxDecoration(
-                        borderRadius: BorderRadius.all(Radius.circular(3)),
-                      ),
-                ),
-              ),
-        );
+         country.item,
+         isChosen: country.isChosen,
+         isDisabled: country.isDisabled,
+         semanticsIdentifier: country.item.semanticIdentifier,
+         title:
+             title ??
+             Text(
+               country.item.namesNative.first.common,
+               overflow: TextOverflow.ellipsis,
+             ),
+         leading:
+             leading ??
+             Builder(
+               builder:
+                   (context) => CountryFlag.simplified(
+                     country.item,
+                     height: context.flagTheme?.height ?? leadingFlagHeight,
+                     aspectRatio:
+                         context.flagTheme?.aspectRatio ??
+                         FlagConstants.defaultAspectRatio,
+                     decoration:
+                         context.flagTheme?.decoration ??
+                         const BoxDecoration(
+                           borderRadius: BorderRadius.all(Radius.circular(3)),
+                         ),
+                   ),
+             ),
+       );
 }

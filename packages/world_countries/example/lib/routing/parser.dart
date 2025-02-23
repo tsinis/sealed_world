@@ -27,13 +27,13 @@ class TemplateRouteParser extends RouteInformationParser<ParsedRoute> {
 
     ///  [RouteGuard] used to redirect.
     this.guard,
-  })  : initialRoute = ParsedRoute(
-          initialRoute ?? allowedPaths.first,
-          initialRoute ?? allowedPaths.first,
-          const {},
-          const {},
-        ),
-        _pathTemplates = allowedPaths;
+  }) : initialRoute = ParsedRoute(
+         initialRoute ?? allowedPaths.first,
+         initialRoute ?? allowedPaths.first,
+         const {},
+         const {},
+       ),
+       _pathTemplates = allowedPaths;
 
   final RouteGuard<ParsedRoute>? guard;
   final ParsedRoute initialRoute;

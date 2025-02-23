@@ -5,16 +5,16 @@ import "package:world_countries/world_countries.dart";
 import "../../../helpers/widget_tester_extension.dart";
 
 void main() => group("$ImplicitSearchDelegate", () {
-      final delegate = ImplicitSearchDelegate(
-        const [1],
-        resultsBuilder: (_, __) => const SizedBox(),
-        searchIn: (i, _) => [i.toString()],
-        resultValidator: (_) => false,
-      );
+  final delegate = ImplicitSearchDelegate(
+    const [1],
+    resultsBuilder: (_, _) => const SizedBox(),
+    searchIn: (i, _) => [i.toString()],
+    resultValidator: (_) => false,
+  );
 
-      testWidgets("buildResults", (tester) async {
-        final context = await tester.contextExtractor();
+  testWidgets("buildResults", (tester) async {
+    final context = await tester.contextExtractor();
 
-        expect(delegate.buildResults(context), isA<SizedBox>());
-      });
-    });
+    expect(delegate.buildResults(context), isA<SizedBox>());
+  });
+});

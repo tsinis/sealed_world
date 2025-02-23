@@ -10,7 +10,8 @@ import "../base_widgets/stateful_searchable.dart";
 /// A stateful searchable widget that builds a list view based on a list of
 /// items.
 class SearchListListenableBuilder<T extends Object>
-    extends StatefulSearchable<T> with CompareSearchMixin<T> {
+    extends StatefulSearchable<T>
+    with CompareSearchMixin<T> {
   /// Constructor for the [SearchListListenableBuilder] class.
   ///
   /// * [builder] is the builder function to use for the list view.
@@ -38,7 +39,7 @@ class SearchListListenableBuilder<T extends Object>
 
   /// The builder function to use for the list view.
   final Widget Function(BuildContext context, UnmodifiableListView<T> list)
-      builder;
+  builder;
 
   @override
   State<SearchListListenableBuilder<T>> createState() =>
@@ -76,8 +77,8 @@ class _SearchListListenableBuilderState<T extends Object>
 
   void textChanged() {
     final filteredItems = widget.items
-        // ignore: prefer-moving-to-variable, Looks like a false-positive.
-        .where((i) => widget.searchIn(i, context).toSet().any(hasSameText));
+    // ignore: prefer-moving-to-variable, Looks like a false-positive.
+    .where((i) => widget.searchIn(i, context).toSet().any(hasSameText));
     setState(() => items = UnmodifiableListView(filteredItems));
   }
 

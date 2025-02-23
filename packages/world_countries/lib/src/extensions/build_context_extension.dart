@@ -74,6 +74,5 @@ extension BuildContextExtension on BuildContext {
   /// ```
   ScaffoldFeatureController<SnackBar, SnackBarClosedReason> showSnackBar(
     SnackBar snackBar,
-  ) =>
-      messenger.showSnackBar(snackBar);
+  ) => messenger.showSnackBar(snackBar);
 }

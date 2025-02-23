@@ -37,11 +37,11 @@ extension LocaleExtension on Locale? {
     // ignore: avoid-negated-conditions, due to line length.
     return language != null
         ? TypedLocale(
-            language,
-            regionalCode: country == null ? this?.countryCode : null,
-            country: country,
-            script: maybeScript,
-          )
+          language,
+          regionalCode: country == null ? this?.countryCode : null,
+          country: country,
+          script: maybeScript,
+        )
         : null;
   }
 

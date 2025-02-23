@@ -9,8 +9,10 @@ import "../../model/world_data.dart";
 
 export "package:world_countries/helpers.dart";
 
-abstract base class WorldDataTab<L extends BasicLocale,
-        I extends IsoTranslated<TranslatedName, Object, L>>
+abstract base class WorldDataTab<
+  L extends BasicLocale,
+  I extends IsoTranslated<TranslatedName, Object, L>
+>
     extends StatelessWidget {
   WorldDataTab(
     this.data,
@@ -20,14 +22,16 @@ abstract base class WorldDataTab<L extends BasicLocale,
     List<I> items = const [],
     super.key,
   }) : picker = dataPicker.copyWith(
-          chosen: [data],
-          disabled: items.isNotEmpty ? [items.first] : null,
-          onSelect: (i) => data != i && nav != null
-              ? unawaited(
-                  nav(type.path + Constants.slash + i.code.toLowerCase()),
-                )
-              : null,
-        );
+         chosen: [data],
+         disabled: items.isNotEmpty ? [items.first] : null,
+         onSelect:
+             (i) =>
+                 data != i && nav != null
+                     ? unawaited(
+                       nav(type.path + Constants.slash + i.code.toLowerCase()),
+                     )
+                     : null,
+       );
 
   @protected
   final I data;

@@ -14,16 +14,16 @@ class DescriptionTile extends StatelessWidget {
     required IconData icon,
     required this.description,
     super.key,
-  })  : _title = isTrue ? "Yes" : "No",
-        _leading = Icon(icon, color: leadingColor);
+  }) : _title = isTrue ? "Yes" : "No",
+       _leading = Icon(icon, color: leadingColor);
 
   DescriptionTile.fromIterable(
     Iterable<Object>? iterable, {
     required IconData icon,
     required this.description,
     super.key,
-  })  : _title = iterable?.join(", "),
-        _leading = Icon(icon, color: leadingColor);
+  }) : _title = iterable?.join(", "),
+       _leading = Icon(icon, color: leadingColor);
 
   const DescriptionTile.raw(
     this._title, {
@@ -40,30 +40,31 @@ class DescriptionTile extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) => MaybeWidget(
-        _title,
-        (title) => Column(
-          children: [
-            Divider(
-              height: 1,
-              thickness: 1,
-              color: leadingColor.withValues(alpha: 0.1),
-            ),
-            ListTile(
-              leading: _leading,
-              title: Text(title),
-              subtitle: Text(
-                description,
-                style: context.theme.textTheme.labelSmall
-                    ?.copyWith(fontWeight: FontWeight.w300),
-              ),
-              dense: true,
-              leadingAndTrailingTextStyle: const TextStyle(
-                color: leadingColor,
-                fontSize: UiConstants.point * 2,
-                fontWeight: FontWeight.bold,
-              ),
-            ),
-          ],
+    _title,
+    (title) => Column(
+      children: [
+        Divider(
+          height: 1,
+          thickness: 1,
+          color: leadingColor.withValues(alpha: 0.1),
         ),
-      );
+        ListTile(
+          leading: _leading,
+          title: Text(title),
+          subtitle: Text(
+            description,
+            style: context.theme.textTheme.labelSmall?.copyWith(
+              fontWeight: FontWeight.w300,
+            ),
+          ),
+          dense: true,
+          leadingAndTrailingTextStyle: const TextStyle(
+            color: leadingColor,
+            fontSize: UiConstants.point * 2,
+            fontWeight: FontWeight.bold,
+          ),
+        ),
+      ],
+    ),
+  );
 }

@@ -9,7 +9,8 @@ import "searchable_interface.dart";
 
 /// An interface for a search delegate.
 abstract class SearchDelegateInterface<T extends Object>
-    extends SearchDelegate<T?> implements SearchableInterface<T> {
+    extends SearchDelegate<T?>
+    implements SearchableInterface<T> {
   /// Constructor for the [SearchDelegateInterface] class.
   ///
   /// * [items] is the list of items to search through.
@@ -53,7 +54,7 @@ abstract class SearchDelegateInterface<T extends Object>
 
   /// A function that takes an item and returns a boolean indicating whether the
   /// item should be included in the search results.
-  // ignore: prefer-correct-callback-field-name, Might be a breaking change.
+  // ignore:  prefer-correct-callback-field-name, Might be a breaking change.
   final bool Function(T item)? resultValidator;
 
   /// A widget to display at the bottom of the search page's app bar.
@@ -74,7 +75,7 @@ abstract class SearchDelegateInterface<T extends Object>
   /// A function that takes a `BuildContext` and an [UnmodifiableListView] of
   /// items and returns a widget to display as the search results.
   final Widget Function(BuildContext context, UnmodifiableListView<T> items)
-      resultsBuilder;
+  resultsBuilder;
 
   /// A boolean indicating whether to show the clear button on the search field.
   final bool? showClearButton;

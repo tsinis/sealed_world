@@ -58,7 +58,8 @@ class ItemProperties<T extends Object> {
       item.hashCode;
 
   @override
-  String toString() => "ItemProperties($item, index: $index, "
+  String toString() =>
+      "ItemProperties($item, index: $index, "
       "isChosen: $isChosen, isDisabled: $isDisabled)";
 
   /// Creates a new [ItemProperties] object with the same properties as this
@@ -79,12 +80,11 @@ class ItemProperties<T extends Object> {
     int? index,
     bool? isChosen,
     bool? isDisabled,
-  }) =>
-      ItemProperties<T>(
-        context ?? this.context,
-        item ?? this.item,
-        index: index ?? this.index,
-        isChosen: isChosen ?? this.isChosen,
-        isDisabled: isDisabled ?? this.isDisabled,
-      );
+  }) => ItemProperties<T>(
+    context ?? this.context,
+    item ?? this.item,
+    index: index ?? this.index,
+    isChosen: isChosen ?? this.isChosen,
+    isDisabled: isDisabled ?? this.isDisabled,
+  );
 }

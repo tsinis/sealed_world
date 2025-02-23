@@ -50,8 +50,10 @@ extension WidgetTesterExtension on WidgetTester {
   }
 
   Future<WidgetsApp> pumpWidgetsApp(Widget child) async {
-    final app =
-        WidgetsApp(builder: (_, __) => child, color: const Color(0x00000000));
+    final app = WidgetsApp(
+      builder: (_, _) => child,
+      color: const Color(0x00000000),
+    );
     await pumpWidget(app);
 
     return app;
@@ -79,9 +81,10 @@ extension WidgetTesterExtension on WidgetTester {
     ThemeExtension? theme,
   }) async {
     T? selected;
-    final testPicker = testSelection
-        ? picker.copyWith(onSelect: (item) => selected = item)
-        : picker;
+    final testPicker =
+        testSelection
+            ? picker.copyWith(onSelect: (item) => selected = item)
+            : picker;
     await pumpWidget(
       MaterialApp(
         home: Scaffold(body: testPicker),
@@ -112,14 +115,12 @@ extension WidgetTesterExtension on WidgetTester {
   Future<void> testPickerInSearch<T extends IsoTranslated>(
     BasicPicker<T> picker,
     String Function(T value) findLabel,
-  ) =>
-      _testPickerIn(picker, findLabel, false);
+  ) => _testPickerIn(picker, findLabel, false);
 
   Future<void> testPickerInModal<T extends IsoTranslated>(
     BasicPicker<T> picker,
     String Function(T value) findLabel,
-  ) =>
-      _testPickerIn(picker, findLabel, null);
+  ) => _testPickerIn(picker, findLabel, null);
 
   Future<void> _testPickerIn<T extends IsoTranslated>(
     BasicPicker<T> picker,
@@ -133,16 +134,20 @@ extension WidgetTesterExtension on WidgetTester {
       MaterialApp(
         home: Scaffold(
           body: Builder(
-            builder: (context) => Center(
-              child: IconButton(
-                onPressed: () => switch (inDialog) {
-                  true => unawaited(testPicker.showInDialog(context)),
-                  false => unawaited(testPicker.showInSearch(context)),
-                  _ => unawaited(testPicker.showInModalBottomSheet(context)),
-                },
-                icon: const Icon(Icons.search),
-              ),
-            ),
+            builder:
+                (context) => Center(
+                  child: IconButton(
+                    onPressed:
+                        () => switch (inDialog) {
+                          true => unawaited(testPicker.showInDialog(context)),
+                          false => unawaited(testPicker.showInSearch(context)),
+                          null => unawaited(
+                            testPicker.showInModalBottomSheet(context),
+                          ),
+                        },
+                    icon: const Icon(Icons.search),
+                  ),
+                ),
           ),
         ),
         localizationsDelegates: [

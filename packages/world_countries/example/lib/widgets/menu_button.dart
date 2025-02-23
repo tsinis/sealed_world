@@ -7,7 +7,8 @@ class MenuButton extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) => PopupMenuButton<String>(
-        itemBuilder: (bc) => [
+    itemBuilder:
+        (bc) => [
           PopupMenuItem(
             onTap: () => const AboutAppDialog().show(bc),
             child: const Align(
@@ -16,5 +17,5 @@ class MenuButton extends StatelessWidget {
             ),
           ),
         ],
-      );
+  );
 }

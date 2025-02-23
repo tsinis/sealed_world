@@ -25,10 +25,11 @@ class RouteParseUtils {
       final country = _maybeData(
         code,
         onCode: WorldCountry.maybeFromAnyCode,
-        orElse: () => WorldCountry.maybeFromValue(
-          code,
-          where: (cnt) => cnt.name.common.toUpperCase(),
-        ),
+        orElse:
+            () => WorldCountry.maybeFromValue(
+              code,
+              where: (cnt) => cnt.name.common.toUpperCase(),
+            ),
       );
 
       return _returnFromCountryData(country, data: WorldData.country);
@@ -36,10 +37,11 @@ class RouteParseUtils {
       final currency = _maybeData(
         code,
         onCode: FiatCurrency.maybeFromAnyCode,
-        orElse: () => FiatCurrency.maybeFromValue(
-          code,
-          where: (cur) => cur.name.toUpperCase(),
-        ),
+        orElse:
+            () => FiatCurrency.maybeFromValue(
+              code,
+              where: (cur) => cur.name.toUpperCase(),
+            ),
       );
 
       return _returnFromCurrencyData(currency);
@@ -47,10 +49,11 @@ class RouteParseUtils {
       final language = _maybeData(
         code,
         onCode: NaturalLanguage.maybeFromAnyCode,
-        orElse: () => NaturalLanguage.maybeFromValue(
-          code,
-          where: (lang) => lang.name.toUpperCase(),
-        ),
+        orElse:
+            () => NaturalLanguage.maybeFromValue(
+              code,
+              where: (lang) => lang.name.toUpperCase(),
+            ),
       );
 
       return _returnFromLanguageData(language);
@@ -63,8 +66,7 @@ class RouteParseUtils {
     String code, {
     required T? Function(String code) onCode,
     required T? Function() orElse,
-  }) =>
-      code.length < Script.codeLength ? onCode(code) : orElse();
+  }) => code.length < Script.codeLength ? onCode(code) : orElse();
 
   ParsedData _returnFromCountryData(
     WorldCountry? maybeCountry, {
@@ -72,7 +74,8 @@ class RouteParseUtils {
     NaturalLanguage? maybeLanguage,
     WorldData? data,
   }) {
-    final country = maybeCountry ??
+    final country =
+        maybeCountry ??
         PlatformDispatcher.instance.locale.maybeCountry ??
         fallbackCountry;
 

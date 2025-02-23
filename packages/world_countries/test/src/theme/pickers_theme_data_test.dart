@@ -6,17 +6,17 @@ import "package:world_flags/world_flags.dart";
 import "../../helpers/widget_tester_extension.dart";
 
 void main() => group("$PickersThemeData", () {
-      const locale = TypedLocale(LangFra());
-      const original = WidgetTesterExtension.pickersTheme;
+  const locale = TypedLocale(LangFra());
+  const original = WidgetTesterExtension.pickersTheme;
 
-      test("copyWith", () {
-        PickersThemeData copy = original.copyWith(translation: locale);
+  test("copyWith", () {
+    PickersThemeData copy = original.copyWith(translation: locale);
 
-        expect(copy, isNot(WidgetTesterExtension.pickersTheme));
-        expect(copy.translation, locale);
-        copy = copy.copyWith(showHeader: false);
-        expect(copy.showHeader, isFalse);
-      });
+    expect(copy, isNot(WidgetTesterExtension.pickersTheme));
+    expect(copy.translation, locale);
+    copy = copy.copyWith(showHeader: false);
+    expect(copy.showHeader, isFalse);
+  });
 
-      test("lerp", () => expect(original.lerp(original, 1), original));
-    });
+  test("lerp", () => expect(original.lerp(original, 1), original));
+});

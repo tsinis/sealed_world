@@ -35,7 +35,7 @@ class SimpleRouterDelegate extends RouterDelegate<ParsedRoute>
   Widget build(BuildContext context) => builder(context);
 
   @override
-  Future<void> setNewRoutePath(ParsedRoute configuration) async {
+  Future<void> setNewRoutePath(ParsedRoute configuration) {
     routeState.route = configuration;
 
     return SynchronousFuture(null);

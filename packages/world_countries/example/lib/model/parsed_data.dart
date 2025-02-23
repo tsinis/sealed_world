@@ -20,7 +20,8 @@ final class ParsedData {
   final WorldData value;
 
   @override
-  String toString() => "ParsedData(country: $country, currency: $currency, "
+  String toString() =>
+      "ParsedData(country: $country, currency: $currency, "
       "language: $language, value: $value)";
 
   @override

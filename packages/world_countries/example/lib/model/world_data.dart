@@ -27,7 +27,7 @@ enum WorldData {
   String? get label => name.toBeginningOfSentenceCase;
 
   static List<String> get paths => List.unmodifiable(
-        // ignore: avoid-slow-collection-methods, to simplify example code.
-        WorldData.values.expand((tab) => [tab.path, tab.pathTemplate]),
-      );
+    // ignore: avoid-slow-collection-methods, to simplify example code.
+    WorldData.values.expand((tab) => [tab.path, tab.pathTemplate]),
+  );
 }

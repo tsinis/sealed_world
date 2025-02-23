@@ -1,3 +1,5 @@
+// ignore_for_file: specify_nonobvious_property_types, compile-time constants.
+
 import "package:flutter/material.dart";
 
 /// A utility class that contains constants related to the user interface (UI).
@@ -41,8 +43,10 @@ sealed class UiConstants {
   );
 
   /// The default input decoration used in the UI.
-  static const inputDecoration =
-      InputDecoration(prefixIcon: searchIcon, border: OutlineInputBorder());
+  static const inputDecoration = InputDecoration(
+    prefixIcon: searchIcon,
+    border: OutlineInputBorder(),
+  );
 
   /// The default placeholder used in the UI.
   static const placeholder = SizedBox.shrink();

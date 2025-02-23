@@ -66,45 +66,45 @@ class PhoneCodePicker extends CountryPicker {
   /// * All other parameters are optional and are passed to the superclass
   ///   constructor.
   PhoneCodePicker.fromCountryPicker(CountryPicker picker, {super.key})
-      : super(
-          countries: picker.items,
-          addAutomaticKeepAlives: picker.addAutomaticKeepAlives,
-          addRepaintBoundaries: picker.addRepaintBoundaries,
-          addSemanticIndexes: picker.addSemanticIndexes,
-          cacheExtent: picker.cacheExtent,
-          caseSensitiveSearch: picker.caseSensitiveSearch,
-          chosen: picker.chosen,
-          clipBehavior: picker.clipBehavior,
-          crossAxisAlignment: picker.crossAxisAlignment,
-          direction: picker.direction,
-          disabled: picker.disabled,
-          dragStartBehavior: picker.dragStartBehavior,
-          emptyStatePlaceholder: picker.emptyStatePlaceholder,
-          itemBuilder: picker.itemBuilder,
-          keyboardDismissBehavior: picker.keyboardDismissBehavior,
-          mainAxisAlignment: picker.mainAxisAlignment,
-          mainAxisSize: picker.mainAxisSize,
-          onSelect: picker.onSelect,
-          padding: picker.padding,
-          physics: picker.physics,
-          primary: picker.primary,
-          restorationId: picker.restorationId,
-          reverse: picker.reverse,
-          scrollController: picker.scrollController,
-          searchBar: picker.searchBar,
-          searchBarPadding: picker.searchBarPadding,
-          searchIn: picker.searchIn,
-          separator: picker.separator,
-          showClearButton: picker.showClearButton,
-          showSearchBar: picker.showHeader,
-          shrinkWrap: picker.shrinkWrap,
-          sort: picker.sort,
-          startWithSearch: picker.startWithSearch,
-          textBaseline: picker.textBaseline,
-          textDirection: picker.textDirection,
-          verticalDirection: picker.verticalDirection,
-          translation: picker.translation,
-        );
+    : super(
+        countries: picker.items,
+        addAutomaticKeepAlives: picker.addAutomaticKeepAlives,
+        addRepaintBoundaries: picker.addRepaintBoundaries,
+        addSemanticIndexes: picker.addSemanticIndexes,
+        cacheExtent: picker.cacheExtent,
+        caseSensitiveSearch: picker.caseSensitiveSearch,
+        chosen: picker.chosen,
+        clipBehavior: picker.clipBehavior,
+        crossAxisAlignment: picker.crossAxisAlignment,
+        direction: picker.direction,
+        disabled: picker.disabled,
+        dragStartBehavior: picker.dragStartBehavior,
+        emptyStatePlaceholder: picker.emptyStatePlaceholder,
+        itemBuilder: picker.itemBuilder,
+        keyboardDismissBehavior: picker.keyboardDismissBehavior,
+        mainAxisAlignment: picker.mainAxisAlignment,
+        mainAxisSize: picker.mainAxisSize,
+        onSelect: picker.onSelect,
+        padding: picker.padding,
+        physics: picker.physics,
+        primary: picker.primary,
+        restorationId: picker.restorationId,
+        reverse: picker.reverse,
+        scrollController: picker.scrollController,
+        searchBar: picker.searchBar,
+        searchBarPadding: picker.searchBarPadding,
+        searchIn: picker.searchIn,
+        separator: picker.separator,
+        showClearButton: picker.showClearButton,
+        showSearchBar: picker.showHeader,
+        shrinkWrap: picker.shrinkWrap,
+        sort: picker.sort,
+        startWithSearch: picker.startWithSearch,
+        textBaseline: picker.textBaseline,
+        textDirection: picker.textDirection,
+        verticalDirection: picker.verticalDirection,
+        translation: picker.translation,
+      );
 
   @override
   Widget defaultBuilder(
@@ -112,8 +112,10 @@ class PhoneCodePicker extends CountryPicker {
     ItemProperties<WorldCountry> itemProperties, {
     bool? isDense,
   }) =>
-      context.countryTileTheme?.builder
-          ?.call(itemProperties, isDense: isDense) ??
+      context.countryTileTheme?.builder?.call(
+        itemProperties,
+        isDense: isDense,
+      ) ??
       CountryTile.fromProperties(
         itemProperties,
         leading: ConstrainedBox(
@@ -124,26 +126,30 @@ class PhoneCodePicker extends CountryPicker {
               mainAxisSize: MainAxisSize.min,
               children: [
                 Builder(
-                  builder: (newContext) => CountryFlag.simplified(
-                    itemProperties.item,
-                    height: 18,
-                    aspectRatio: newContext.flagTheme?.aspectRatio ??
-                        FlagConstants.defaultAspectRatio,
-                    decoration: newContext.flagTheme?.decoration ??
-                        const BoxDecoration(
-                          borderRadius: BorderRadius.all(
-                            Radius.circular(UiConstants.point / 2),
-                          ),
-                        ),
-                  ),
+                  builder:
+                      (newContext) => CountryFlag.simplified(
+                        itemProperties.item,
+                        height: 18,
+                        aspectRatio:
+                            newContext.flagTheme?.aspectRatio ??
+                            FlagConstants.defaultAspectRatio,
+                        decoration:
+                            newContext.flagTheme?.decoration ??
+                            const BoxDecoration(
+                              borderRadius: BorderRadius.all(
+                                Radius.circular(UiConstants.point / 2),
+                              ),
+                            ),
+                      ),
                 ),
                 Padding(
                   padding: const EdgeInsets.only(right: UiConstants.point / 2),
                   child: Builder(
-                    builder: (newContext) => Text(
-                      itemProperties.item.idd.phoneCode(),
-                      style: newContext.theme.textTheme.labelSmall,
-                    ),
+                    builder:
+                        (newContext) => Text(
+                          itemProperties.item.idd.phoneCode(),
+                          style: newContext.theme.textTheme.labelSmall,
+                        ),
                   ),
                 ),
               ],
@@ -151,9 +157,11 @@ class PhoneCodePicker extends CountryPicker {
           ),
         ),
         title: itemNameTranslated(itemProperties.item, itemProperties.context),
-        onPressed: (phone) => (isDense ?? false)
-            ? maybeSelectAndPop(phone, itemProperties.context)
-            : onSelect?.call(phone),
+        onPressed:
+            (phone) =>
+                (isDense ?? false)
+                    ? maybeSelectAndPop(phone, itemProperties.context)
+                    : onSelect?.call(phone),
         visualDensity: (isDense ?? false) ? VisualDensity.compact : null,
       );
 
@@ -203,54 +211,53 @@ class PhoneCodePicker extends CountryPicker {
     TextDirection? textDirection,
     VerticalDirection? verticalDirection,
     Iterable<String> Function(WorldCountry country, BuildContext context)?
-        searchIn,
+    searchIn,
     Widget? Function(
       ItemProperties<WorldCountry> itemProperties, {
       bool? isDense,
-    })? itemBuilder,
+    })?
+    itemBuilder,
     TypedLocale? translation,
-  }) =>
-      PhoneCodePicker(
-        countries: items ?? countries,
-        addAutomaticKeepAlives:
-            addAutomaticKeepAlives ?? this.addAutomaticKeepAlives,
-        addRepaintBoundaries: addRepaintBoundaries ?? this.addRepaintBoundaries,
-        addSemanticIndexes: addSemanticIndexes ?? this.addSemanticIndexes,
-        cacheExtent: cacheExtent ?? this.cacheExtent,
-        caseSensitiveSearch: caseSensitiveSearch ?? this.caseSensitiveSearch,
-        chosen: chosen ?? this.chosen,
-        clipBehavior: clipBehavior ?? this.clipBehavior,
-        crossAxisAlignment: crossAxisAlignment ?? this.crossAxisAlignment,
-        direction: direction ?? this.direction,
-        disabled: disabled ?? this.disabled,
-        dragStartBehavior: dragStartBehavior ?? this.dragStartBehavior,
-        emptyStatePlaceholder:
-            emptyStatePlaceholder ?? this.emptyStatePlaceholder,
-        itemBuilder: itemBuilder ?? this.itemBuilder,
-        key: key ?? this.key,
-        keyboardDismissBehavior:
-            keyboardDismissBehavior ?? this.keyboardDismissBehavior,
-        mainAxisAlignment: mainAxisAlignment ?? this.mainAxisAlignment,
-        mainAxisSize: mainAxisSize ?? this.mainAxisSize,
-        onSelect: onSelect ?? this.onSelect,
-        padding: padding ?? this.padding,
-        physics: physics ?? this.physics,
-        primary: primary ?? this.primary,
-        restorationId: restorationId ?? this.restorationId,
-        reverse: reverse ?? this.reverse,
-        scrollController: scrollController ?? this.scrollController,
-        searchBar: searchBar ?? this.searchBar,
-        searchBarPadding: searchBarPadding ?? this.searchBarPadding,
-        searchIn: searchIn ?? this.searchIn,
-        separator: separator ?? this.separator,
-        showClearButton: showClearButton ?? this.showClearButton,
-        showSearchBar: showSearchBar ?? showHeader,
-        shrinkWrap: shrinkWrap ?? this.shrinkWrap,
-        sort: sort ?? this.sort,
-        startWithSearch: startWithSearch ?? this.startWithSearch,
-        textBaseline: textBaseline ?? this.textBaseline,
-        textDirection: textDirection ?? this.textDirection,
-        verticalDirection: verticalDirection ?? this.verticalDirection,
-        translation: translation ?? this.translation,
-      );
+  }) => PhoneCodePicker(
+    countries: items ?? countries,
+    addAutomaticKeepAlives:
+        addAutomaticKeepAlives ?? this.addAutomaticKeepAlives,
+    addRepaintBoundaries: addRepaintBoundaries ?? this.addRepaintBoundaries,
+    addSemanticIndexes: addSemanticIndexes ?? this.addSemanticIndexes,
+    cacheExtent: cacheExtent ?? this.cacheExtent,
+    caseSensitiveSearch: caseSensitiveSearch ?? this.caseSensitiveSearch,
+    chosen: chosen ?? this.chosen,
+    clipBehavior: clipBehavior ?? this.clipBehavior,
+    crossAxisAlignment: crossAxisAlignment ?? this.crossAxisAlignment,
+    direction: direction ?? this.direction,
+    disabled: disabled ?? this.disabled,
+    dragStartBehavior: dragStartBehavior ?? this.dragStartBehavior,
+    emptyStatePlaceholder: emptyStatePlaceholder ?? this.emptyStatePlaceholder,
+    itemBuilder: itemBuilder ?? this.itemBuilder,
+    key: key ?? this.key,
+    keyboardDismissBehavior:
+        keyboardDismissBehavior ?? this.keyboardDismissBehavior,
+    mainAxisAlignment: mainAxisAlignment ?? this.mainAxisAlignment,
+    mainAxisSize: mainAxisSize ?? this.mainAxisSize,
+    onSelect: onSelect ?? this.onSelect,
+    padding: padding ?? this.padding,
+    physics: physics ?? this.physics,
+    primary: primary ?? this.primary,
+    restorationId: restorationId ?? this.restorationId,
+    reverse: reverse ?? this.reverse,
+    scrollController: scrollController ?? this.scrollController,
+    searchBar: searchBar ?? this.searchBar,
+    searchBarPadding: searchBarPadding ?? this.searchBarPadding,
+    searchIn: searchIn ?? this.searchIn,
+    separator: separator ?? this.separator,
+    showClearButton: showClearButton ?? this.showClearButton,
+    showSearchBar: showSearchBar ?? showHeader,
+    shrinkWrap: shrinkWrap ?? this.shrinkWrap,
+    sort: sort ?? this.sort,
+    startWithSearch: startWithSearch ?? this.startWithSearch,
+    textBaseline: textBaseline ?? this.textBaseline,
+    textDirection: textDirection ?? this.textDirection,
+    verticalDirection: verticalDirection ?? this.verticalDirection,
+    translation: translation ?? this.translation,
+  );
 }

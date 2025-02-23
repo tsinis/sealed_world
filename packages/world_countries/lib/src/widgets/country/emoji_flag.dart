@@ -56,20 +56,19 @@ class EmojiFlag extends Text {
     super.textHeightBehavior,
     super.selectionColor,
   }) : super(
-          country.emoji,
-          style: _style(style, style?.fontFamily, package: package, size: size),
-        );
+         country.emoji,
+         style: _style(style, style?.fontFamily, package: package, size: size),
+       );
 
   static TextStyle _style(
     TextStyle? style,
     String? font, {
     String? package,
     double? size,
-  }) =>
-      (style ?? const TextStyle()).copyWith(
-        color: UiConstants.color,
-        fontSize: size ?? style?.fontSize,
-        fontFamily: font,
-        package: package,
-      );
+  }) => (style ?? const TextStyle()).copyWith(
+    color: UiConstants.color,
+    fontSize: size ?? style?.fontSize,
+    fontFamily: font,
+    package: package,
+  );
 }

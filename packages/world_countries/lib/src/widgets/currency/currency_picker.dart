@@ -65,15 +65,19 @@ class CurrencyPicker extends BasicPicker<FiatCurrency> {
     ItemProperties<FiatCurrency> itemProperties, {
     bool? isDense,
   }) =>
-      context.currencyTileTheme?.builder
-          ?.call(itemProperties, isDense: isDense) ??
+      context.currencyTileTheme?.builder?.call(
+        itemProperties,
+        isDense: isDense,
+      ) ??
       CurrencyTile.fromProperties(
         itemProperties,
         title: itemNameTranslated(itemProperties.item, itemProperties.context),
         dense: isDense,
-        onPressed: (currency) => (isDense ?? false)
-            ? maybeSelectAndPop(currency, itemProperties.context)
-            : onSelect?.call(currency),
+        onPressed:
+            (currency) =>
+                (isDense ?? false)
+                    ? maybeSelectAndPop(currency, itemProperties.context)
+                    : onSelect?.call(currency),
         visualDensity: (isDense ?? false) ? VisualDensity.compact : null,
       );
 
@@ -130,54 +134,53 @@ class CurrencyPicker extends BasicPicker<FiatCurrency> {
     TextDirection? textDirection,
     VerticalDirection? verticalDirection,
     Iterable<String> Function(FiatCurrency currency, BuildContext context)?
-        searchIn,
+    searchIn,
     Widget? Function(
       ItemProperties<FiatCurrency> itemProperties, {
       bool? isDense,
-    })? itemBuilder,
+    })?
+    itemBuilder,
     TypedLocale? translation,
-  }) =>
-      CurrencyPicker(
-        currencies: items ?? currencies,
-        addAutomaticKeepAlives:
-            addAutomaticKeepAlives ?? this.addAutomaticKeepAlives,
-        addRepaintBoundaries: addRepaintBoundaries ?? this.addRepaintBoundaries,
-        addSemanticIndexes: addSemanticIndexes ?? this.addSemanticIndexes,
-        cacheExtent: cacheExtent ?? this.cacheExtent,
-        caseSensitiveSearch: caseSensitiveSearch ?? this.caseSensitiveSearch,
-        chosen: chosen ?? this.chosen,
-        clipBehavior: clipBehavior ?? this.clipBehavior,
-        crossAxisAlignment: crossAxisAlignment ?? this.crossAxisAlignment,
-        direction: direction ?? this.direction,
-        disabled: disabled ?? this.disabled,
-        dragStartBehavior: dragStartBehavior ?? this.dragStartBehavior,
-        emptyStatePlaceholder:
-            emptyStatePlaceholder ?? this.emptyStatePlaceholder,
-        itemBuilder: itemBuilder ?? this.itemBuilder,
-        key: key ?? this.key,
-        keyboardDismissBehavior:
-            keyboardDismissBehavior ?? this.keyboardDismissBehavior,
-        mainAxisAlignment: mainAxisAlignment ?? this.mainAxisAlignment,
-        mainAxisSize: mainAxisSize ?? this.mainAxisSize,
-        onSelect: onSelect ?? this.onSelect,
-        padding: padding ?? this.padding,
-        physics: physics ?? this.physics,
-        primary: primary ?? this.primary,
-        restorationId: restorationId ?? this.restorationId,
-        reverse: reverse ?? this.reverse,
-        scrollController: scrollController ?? this.scrollController,
-        searchBar: searchBar ?? this.searchBar,
-        searchBarPadding: searchBarPadding ?? this.searchBarPadding,
-        searchIn: searchIn ?? this.searchIn,
-        separator: separator ?? this.separator,
-        showClearButton: showClearButton ?? this.showClearButton,
-        showSearchBar: showSearchBar ?? showHeader,
-        shrinkWrap: shrinkWrap ?? this.shrinkWrap,
-        sort: sort ?? this.sort,
-        startWithSearch: startWithSearch ?? this.startWithSearch,
-        textBaseline: textBaseline ?? this.textBaseline,
-        textDirection: textDirection ?? this.textDirection,
-        verticalDirection: verticalDirection ?? this.verticalDirection,
-        translation: translation ?? this.translation,
-      );
+  }) => CurrencyPicker(
+    currencies: items ?? currencies,
+    addAutomaticKeepAlives:
+        addAutomaticKeepAlives ?? this.addAutomaticKeepAlives,
+    addRepaintBoundaries: addRepaintBoundaries ?? this.addRepaintBoundaries,
+    addSemanticIndexes: addSemanticIndexes ?? this.addSemanticIndexes,
+    cacheExtent: cacheExtent ?? this.cacheExtent,
+    caseSensitiveSearch: caseSensitiveSearch ?? this.caseSensitiveSearch,
+    chosen: chosen ?? this.chosen,
+    clipBehavior: clipBehavior ?? this.clipBehavior,
+    crossAxisAlignment: crossAxisAlignment ?? this.crossAxisAlignment,
+    direction: direction ?? this.direction,
+    disabled: disabled ?? this.disabled,
+    dragStartBehavior: dragStartBehavior ?? this.dragStartBehavior,
+    emptyStatePlaceholder: emptyStatePlaceholder ?? this.emptyStatePlaceholder,
+    itemBuilder: itemBuilder ?? this.itemBuilder,
+    key: key ?? this.key,
+    keyboardDismissBehavior:
+        keyboardDismissBehavior ?? this.keyboardDismissBehavior,
+    mainAxisAlignment: mainAxisAlignment ?? this.mainAxisAlignment,
+    mainAxisSize: mainAxisSize ?? this.mainAxisSize,
+    onSelect: onSelect ?? this.onSelect,
+    padding: padding ?? this.padding,
+    physics: physics ?? this.physics,
+    primary: primary ?? this.primary,
+    restorationId: restorationId ?? this.restorationId,
+    reverse: reverse ?? this.reverse,
+    scrollController: scrollController ?? this.scrollController,
+    searchBar: searchBar ?? this.searchBar,
+    searchBarPadding: searchBarPadding ?? this.searchBarPadding,
+    searchIn: searchIn ?? this.searchIn,
+    separator: separator ?? this.separator,
+    showClearButton: showClearButton ?? this.showClearButton,
+    showSearchBar: showSearchBar ?? showHeader,
+    shrinkWrap: shrinkWrap ?? this.shrinkWrap,
+    sort: sort ?? this.sort,
+    startWithSearch: startWithSearch ?? this.startWithSearch,
+    textBaseline: textBaseline ?? this.textBaseline,
+    textDirection: textDirection ?? this.textDirection,
+    verticalDirection: verticalDirection ?? this.verticalDirection,
+    translation: translation ?? this.translation,
+  );
 }
