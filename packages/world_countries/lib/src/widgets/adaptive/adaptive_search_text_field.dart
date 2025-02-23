@@ -139,7 +139,9 @@ class _AdaptiveSearchTextFieldState extends State<AdaptiveSearchTextField> {
                 autofillHints: widget.copyFrom?.autofillHints,
                 clipBehavior: widget.copyFrom?.clipBehavior ?? Clip.hardEdge,
                 restorationId: widget.copyFrom?.restorationId,
-                scribbleEnabled: widget.copyFrom?.scribbleEnabled ?? true,
+                stylusHandwritingEnabled:
+                    widget.copyFrom?.stylusHandwritingEnabled ??
+                    EditableText.defaultStylusHandwritingEnabled,
                 enableIMEPersonalizedLearning:
                     widget.copyFrom?.enableIMEPersonalizedLearning ?? true,
                 contextMenuBuilder: widget.copyFrom?.contextMenuBuilder,
