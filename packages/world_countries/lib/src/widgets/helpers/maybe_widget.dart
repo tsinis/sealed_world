@@ -9,7 +9,7 @@ class MaybeWidget<T extends Object> extends StatelessWidget {
   /// Constructor for the [MaybeWidget] class.
   ///
   /// * [value] is the value to check for null.
-  /// * [_onMap] is the builder function to call with a non-null [value].
+  /// * [_builder] is the builder function to call with a non-null [value].
   /// * [orElse] is the widget to display if [value] is null.
   /// * [key] is the key for the widget.
   /// Example:
@@ -23,7 +23,7 @@ class MaybeWidget<T extends Object> extends StatelessWidget {
   /// ```
   const MaybeWidget(
     this.value,
-    this._onMap, {
+    this._builder, {
     this.orElse = const SizedBox.shrink(),
     super.key,
   });
@@ -35,7 +35,7 @@ class MaybeWidget<T extends Object> extends StatelessWidget {
   /// Typically used with animated parents.
   ///
   /// * [value] is the value to check for null.
-  /// * [_onMap] is the builder function to call with a non-null [value].
+  /// * [_builder] is the builder function to call with a non-null [value].
   /// * [orElse] is the widget to display if [value] is null.
   /// * [key] is the key for the widget.
   /// If [key] is not provided, a null-check key will be calculated and used.
@@ -53,7 +53,7 @@ class MaybeWidget<T extends Object> extends StatelessWidget {
   /// ```
   MaybeWidget.identifiable(
     this.value,
-    this._onMap, {
+    this._builder, {
     this.orElse = const SizedBox.shrink(),
     Key? key,
   }) : super(key: key ?? ValueKey<bool>(value != null));
@@ -65,7 +65,7 @@ class MaybeWidget<T extends Object> extends StatelessWidget {
   /// when the [value] is `null`, but make the widget invisible.
   ///
   /// * [value] is the value to check for `null`.
-  /// * [_onMap] is the builder function to call with a non-null [value].
+  /// * [_builder] is the builder function to call with a non-null [value].
   /// * [orElse] defaults to [Offstage] when [value] is `null`.
   /// * [key] is the key for the widget.
   ///
@@ -79,7 +79,7 @@ class MaybeWidget<T extends Object> extends StatelessWidget {
   /// ```
   const MaybeWidget.offstage(
     this.value,
-    this._onMap, {
+    this._builder, {
     this.orElse = const Offstage(),
     super.key,
   });
@@ -128,7 +128,7 @@ class MaybeWidget<T extends Object> extends StatelessWidget {
   }
 
   /// The builder function to call with a non-null [value].
-  final Widget Function(T) _onMap;
+  final Widget Function(T) _builder;
 
   /// The widget to display if [value] is null.
   final Widget orElse;
@@ -140,6 +140,6 @@ class MaybeWidget<T extends Object> extends StatelessWidget {
   Widget build(BuildContext context) {
     final valueToMap = value;
 
-    return valueToMap == null ? orElse : _onMap(valueToMap);
+    return valueToMap == null ? orElse : _builder(valueToMap);
   }
 }
