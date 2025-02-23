@@ -245,6 +245,7 @@ dart_code_metrics:
     - avoid-nested-streams-and-futures
     - avoid-nested-switch-expressions
     - avoid-nested-switches
+    - avoid-nested-try-statements
     - avoid-non-ascii-symbols
     - avoid-non-final-exception-class-fields
     - avoid-non-null-assertion
@@ -286,6 +287,7 @@ dart_code_metrics:
     - avoid-uncaught-future-errors
     - avoid-unconditional-break
     - avoid-unknown-pragma
+    - avoid-unnecessary-block
     - avoid-unnecessary-call
     - avoid-unnecessary-conditionals
     - avoid-unnecessary-constructor
@@ -372,6 +374,7 @@ dart_code_metrics:
     - prefer-declaring-const-constructor
     - prefer-early-return
     - prefer-enums-by-name
+    - prefer-expect-later
     - prefer-explicit-function-type
     - prefer-explicit-parameter-names
     - prefer-explicit-type-arguments
@@ -391,6 +394,7 @@ dart_code_metrics:
     - prefer-prefixed-global-constants
     - prefer-private-extension-type-field
     - prefer-public-exception-classes
+    - prefer-redirecting-superclass-constructor
     - prefer-return-await
     - prefer-returning-conditional-expressions
     - prefer-simpler-boolean-expressions
@@ -422,6 +426,7 @@ linter:
     avoid_equals_and_hash_code_on_mutable_classes: false # We have no access to meta here.
     flutter_style_todos: false # Not a Flutter team.
     omit_local_variable_types: false # Conflicts with: prefer-type-over-var
+    omit_obvious_local_variable_types: false # Conflicts with: omit_local_variable_types and prefer-type-over-var.
     prefer_final_parameters: false # Conflicts with: avoid_final_parameters.
     prefer_single_quotes: false # Conflicts with: prefer_double_quotes.
     specify_nonobvious_local_variable_types: false # Conflicts with: avoid-explicit-type-declaration.
@@ -445,6 +450,7 @@ linter:
     avoid_field_initializers_in_const_classes: true
     avoid_final_parameters: true
     avoid_function_literals_in_foreach_calls: true
+    avoid_futureor_void: true
     avoid_implementing_value_types: true
     avoid_init_to_null: true
     avoid_js_rounded_ints: true
@@ -529,7 +535,7 @@ linter:
     noop_primitive_operations: true
     null_check_on_nullable_type_parameter: true
     null_closures: true
-    omit_obvious_local_variable_types: true
+    omit_obvious_property_types: true
     one_member_abstracts: true
     only_throw_errors: true
     overridden_fields: true
@@ -586,6 +592,8 @@ linter:
     sort_constructors_first: true
     sort_pub_dependencies: true
     sort_unnamed_constructors_first: true
+    specify_nonobvious_property_types: true
+    strict_top_level_inference: true
     test_types_in_equals: true
     throw_in_finally: true
     tighten_type_of_initializing_formals: true
@@ -619,9 +627,11 @@ linter:
     unnecessary_string_interpolations: true
     unnecessary_this: true
     unnecessary_to_list_in_spreads: true
+    unnecessary_underscores: true
     unreachable_from_main: true
     unrelated_type_equality_checks: true
     unsafe_html: true
+    unsafe_variance: true
     use_enums: true
     use_function_type_syntax_for_parameters: true
     use_if_null_to_convert_nulls_to_bools: true
