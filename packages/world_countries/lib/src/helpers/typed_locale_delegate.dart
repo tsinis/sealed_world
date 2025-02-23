@@ -53,10 +53,10 @@ class TypedLocaleDelegate implements LocalizationsDelegate<TypedLocale?> {
     Iterable<FiatCurrency> currenciesForTranslationCache = FiatCurrency.list,
     Iterable<NaturalLanguage> languagesForTranslationCache =
         NaturalLanguage.list,
-  })  : _asyncTranslationCacheProcessing = asyncTranslationCacheProcessing,
-        _countriesForTranslationCache = countriesForTranslationCache,
-        _currenciesForTranslationCache = currenciesForTranslationCache,
-        _languagesForTranslationCache = languagesForTranslationCache;
+  }) : _asyncTranslationCacheProcessing = asyncTranslationCacheProcessing,
+       _countriesForTranslationCache = countriesForTranslationCache,
+       _currenciesForTranslationCache = currenciesForTranslationCache,
+       _languagesForTranslationCache = languagesForTranslationCache;
 
   /// Creates an instance of [TypedLocaleDelegate] without translations caching.
   /// This is useful when you don't want to cache the translations for the
@@ -82,10 +82,10 @@ class TypedLocaleDelegate implements LocalizationsDelegate<TypedLocale?> {
     Iterable<WorldCountry> countriesForTranslationCache = const {},
     Iterable<FiatCurrency> currenciesForTranslationCache = const {},
     Iterable<NaturalLanguage> languagesForTranslationCache = const {},
-  })  : _asyncTranslationCacheProcessing = asyncTranslationCacheProcessing,
-        _countriesForTranslationCache = countriesForTranslationCache,
-        _currenciesForTranslationCache = currenciesForTranslationCache,
-        _languagesForTranslationCache = languagesForTranslationCache;
+  }) : _asyncTranslationCacheProcessing = asyncTranslationCacheProcessing,
+       _countriesForTranslationCache = countriesForTranslationCache,
+       _currenciesForTranslationCache = currenciesForTranslationCache,
+       _languagesForTranslationCache = languagesForTranslationCache;
 
   /// A constant list of [LocaleEntry] objects that define the default
   /// resolution for locale mapping.
@@ -102,7 +102,7 @@ class TypedLocaleDelegate implements LocalizationsDelegate<TypedLocale?> {
   ///
   /// These mappings are used as the default resolution when no other locale
   /// mapping is provided.
-  static const defaultLocaleMapResolution = [
+  static const defaultLocaleMapResolution = <LocaleEntry>[
     LocaleEntry(Locale("fil"), TypedLocale(LangTgl())),
     LocaleEntry(Locale("gsw"), TypedLocale(LangDeu(), country: CountryChe())),
     LocaleEntry(
@@ -143,22 +143,23 @@ class TypedLocaleDelegate implements LocalizationsDelegate<TypedLocale?> {
 
     return _asyncTranslationCacheProcessing
         ? await typedLocale?.copyWithTranslationsCacheAsync(
-            languages: _languagesForTranslationCache,
-            currencies: _currenciesForTranslationCache,
-            countries: _countriesForTranslationCache,
-          )
+          languages: _languagesForTranslationCache,
+          currencies: _currenciesForTranslationCache,
+          countries: _countriesForTranslationCache,
+        )
         : typedLocale?.copyWithTranslationsCache(
-            languages: _languagesForTranslationCache,
-            currencies: _currenciesForTranslationCache,
-            countries: _countriesForTranslationCache,
-          );
+          languages: _languagesForTranslationCache,
+          currencies: _currenciesForTranslationCache,
+          countries: _countriesForTranslationCache,
+        );
   }
 
   @override
   bool shouldReload(TypedLocaleDelegate old) => false;
 
   @override
-  String toString() => "TypedLocaleDelegate("
+  String toString() =>
+      "TypedLocaleDelegate("
       """${fallbackLanguage == null ? '' : 'fallbackLanguage: ${fallbackLanguage.runtimeType}(), '}"""
       """${localeMapResolution == null ? '' : 'localeMapResolution: $localeMapResolution, '}"""
       "asyncTranslationCacheProcessing: $_asyncTranslationCacheProcessing, "

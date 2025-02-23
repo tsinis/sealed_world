@@ -16,18 +16,18 @@ extension TypedLocaleExtension<T extends TypedLocale> on T {
   /// Returns typed locale in the more basic (parent) type [BasicTypedLocale],
   /// without translations and other additional properties.
   BasicTypedLocale get asBasicTypedLocale => BasicTypedLocale(
-        language,
-        country: country,
-        script: script,
-        regionalCode: country == null ? countryCode : null,
-      );
+    language,
+    country: country,
+    script: script,
+    regionalCode: country == null ? countryCode : null,
+  );
 
   /// Returns a weak typed (String-based) SDK locale representation of [Locale].
   Locale get asLocale => Locale.fromSubtags(
-        languageCode: languageCode,
-        countryCode: countryCode,
-        scriptCode: script?.code,
-      );
+    languageCode: languageCode,
+    countryCode: countryCode,
+    scriptCode: script?.code,
+  );
 
   /// Synchronously returns a copy of this [TypedLocale] with updated
   /// translation caches.
@@ -109,16 +109,18 @@ extension TypedLocaleExtension<T extends TypedLocale> on T {
   ) =>
       // ignore: avoid-type-casts, Might be a breaking change.
       copyWith(
-        countryTranslations: countries, // Common country names cache.
-        currencyTranslations: currencies, // Common currency names cache.
-        languageTranslations: languages, // Common language names cache.
-      ) as T;
+            countryTranslations: countries, // Common country names cache.
+            currencyTranslations: currencies, // Common currency names cache.
+            languageTranslations: languages, // Common language names cache.
+          )
+          as T;
 
   ({
     Iterable<WorldCountry> countries,
     Iterable<FiatCurrency> currencies,
     Iterable<NaturalLanguage> languages,
-  }) _itemsToTranslate(
+  })
+  _itemsToTranslate(
     Iterable<NaturalLanguage>? languages,
     Iterable<FiatCurrency>? currencies,
     Iterable<WorldCountry>? countries,

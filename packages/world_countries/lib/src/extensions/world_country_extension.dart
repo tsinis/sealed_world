@@ -27,14 +27,14 @@ extension WorldCountryExtension on WorldCountry {
     NaturalLanguage? language,
     String? languageCode,
     String? scriptCode,
-  }) =>
-      Locale.fromSubtags(
-        languageCode: language?.codeShort.toLowerCase() ??
-            languageCode ??
-            languages.first.codeShort.toLowerCase(),
-        scriptCode: scriptCode,
-        countryCode: codeShort,
-      );
+  }) => Locale.fromSubtags(
+    languageCode:
+        language?.codeShort.toLowerCase() ??
+        languageCode ??
+        languages.first.codeShort.toLowerCase(),
+    scriptCode: scriptCode,
+    countryCode: codeShort,
+  );
 
   /// Converts [WorldCountry] to a [TypedLocale].
   ///

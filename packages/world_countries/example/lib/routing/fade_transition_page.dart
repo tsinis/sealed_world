@@ -60,6 +60,5 @@ class PageBasedFadeTransitionRoute<T> extends PageRoute<T> {
     Animation<double> animation,
     Animation<double> secondaryAnimation,
     Widget child,
-  ) =>
-      child;
+  ) => child;
 }

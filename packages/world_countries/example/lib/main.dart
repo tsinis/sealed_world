@@ -50,24 +50,23 @@ class _MainState extends State<Main> {
 
   @override
   Widget build(BuildContext context) => RouteStateScope(
-        notifier: _routeState,
-        child: MaterialApp.router(
-          routeInformationParser: _routeParser,
-          routerDelegate: _routerDelegate,
-          theme:
-              ThemeProvider.of(context)?.theme.copyWith(extensions: extensions),
-          localizationsDelegates: const [
-            GlobalMaterialLocalizations.delegate,
-            GlobalCupertinoLocalizations.delegate,
-            TypedLocaleDelegate(), // <- Add for automatic pickers localization.
-          ],
-          supportedLocales: [
-            const Locale.fromSubtags(languageCode: "bs", scriptCode: "Cyrl"),
-            const Locale.fromSubtags(languageCode: "bs", scriptCode: "Latn"),
-            const TypedLocale(LangPor(), country: CountryBra()), // Typed one.
-            for (final locale in kMaterialSupportedLanguages) Locale(locale),
-          ],
-          debugShowCheckedModeBanner: false,
-        ),
-      );
+    notifier: _routeState,
+    child: MaterialApp.router(
+      routeInformationParser: _routeParser,
+      routerDelegate: _routerDelegate,
+      theme: ThemeProvider.of(context)?.theme.copyWith(extensions: extensions),
+      localizationsDelegates: const [
+        GlobalMaterialLocalizations.delegate,
+        GlobalCupertinoLocalizations.delegate,
+        TypedLocaleDelegate(), // <- Add for automatic pickers localization.
+      ],
+      supportedLocales: [
+        const Locale.fromSubtags(languageCode: "bs", scriptCode: "Cyrl"),
+        const Locale.fromSubtags(languageCode: "bs", scriptCode: "Latn"),
+        const TypedLocale(LangPor(), country: CountryBra()), // Typed one.
+        for (final locale in kMaterialSupportedLanguages) Locale(locale),
+      ],
+      debugShowCheckedModeBanner: false,
+    ),
+  );
 }

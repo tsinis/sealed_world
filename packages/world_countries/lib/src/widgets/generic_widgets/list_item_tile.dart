@@ -56,6 +56,7 @@ class ListItemTile<T extends Object> extends ListTile {
 
   /// Default font size.
   @protected
+  // ignore: specify_nonobvious_property_types, it's obvious...
   static const fontSize = UiConstants.point * 3;
 
   /// The callback function to call when the tile is pressed.
@@ -75,50 +76,49 @@ class ListItemTile<T extends Object> extends ListTile {
 
   @override
   Widget build(BuildContext context) => Material(
-        // Reference: https://github.com/flutter/flutter/issues/86584.
-        type: MaterialType.transparency,
-        child: ListTile(
-          key: key,
-          leading: Semantics(
-            excludeSemantics: excludeSemantics,
-            identifier: semanticsIdentifier,
-            child: leading,
-          ),
-          title: title,
-          subtitle:
-              Semantics(excludeSemantics: excludeSemantics, child: subtitle),
-          trailing: selected ? trailing : null,
-          isThreeLine: isThreeLine,
-          dense: dense,
-          visualDensity: visualDensity,
-          shape: shape,
-          style: style,
-          selectedColor: selectedColor,
-          iconColor: iconColor,
-          textColor: textColor,
-          titleTextStyle: titleTextStyle,
-          subtitleTextStyle: subtitleTextStyle,
-          leadingAndTrailingTextStyle: leadingAndTrailingTextStyle ??
-              const TextStyle(fontSize: fontSize),
-          contentPadding: contentPadding,
-          enabled: enabled,
-          onTap: enabled ? () => onPressed?.call(_item) : null,
-          onLongPress: onLongPress,
-          onFocusChange: onFocusChange,
-          mouseCursor: mouseCursor,
-          selected: selected,
-          focusColor: focusColor,
-          hoverColor: hoverColor,
-          splashColor: splashColor,
-          focusNode: focusNode,
-          autofocus: autofocus,
-          tileColor: tileColor,
-          selectedTileColor: selectedTileColor,
-          enableFeedback: enableFeedback,
-          horizontalTitleGap: horizontalTitleGap,
-          minVerticalPadding: minVerticalPadding,
-          minLeadingWidth: minLeadingWidth ?? (fontSize + UiConstants.point),
-          titleAlignment: titleAlignment,
-        ),
-      );
+    // Reference: https://github.com/flutter/flutter/issues/86584.
+    type: MaterialType.transparency,
+    child: ListTile(
+      key: key,
+      leading: Semantics(
+        excludeSemantics: excludeSemantics,
+        identifier: semanticsIdentifier,
+        child: leading,
+      ),
+      title: title,
+      subtitle: Semantics(excludeSemantics: excludeSemantics, child: subtitle),
+      trailing: selected ? trailing : null,
+      isThreeLine: isThreeLine,
+      dense: dense,
+      visualDensity: visualDensity,
+      shape: shape,
+      style: style,
+      selectedColor: selectedColor,
+      iconColor: iconColor,
+      textColor: textColor,
+      titleTextStyle: titleTextStyle,
+      subtitleTextStyle: subtitleTextStyle,
+      leadingAndTrailingTextStyle:
+          leadingAndTrailingTextStyle ?? const TextStyle(fontSize: fontSize),
+      contentPadding: contentPadding,
+      enabled: enabled,
+      onTap: enabled ? () => onPressed?.call(_item) : null,
+      onLongPress: onLongPress,
+      onFocusChange: onFocusChange,
+      mouseCursor: mouseCursor,
+      selected: selected,
+      focusColor: focusColor,
+      hoverColor: hoverColor,
+      splashColor: splashColor,
+      focusNode: focusNode,
+      autofocus: autofocus,
+      tileColor: tileColor,
+      selectedTileColor: selectedTileColor,
+      enableFeedback: enableFeedback,
+      horizontalTitleGap: horizontalTitleGap,
+      minVerticalPadding: minVerticalPadding,
+      minLeadingWidth: minLeadingWidth ?? (fontSize + UiConstants.point),
+      titleAlignment: titleAlignment,
+    ),
+  );
 }

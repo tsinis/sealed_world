@@ -1,12 +1,14 @@
 part of "basic_picker.dart";
 
 class _BasicPickerState<T extends IsoTranslated> extends State<BasicPicker<T>> {
+  // ignore: omit_obvious_property_types, conflicts with DCM here.
   TextEditingController _controller = TextEditingController();
 
   @override
   void initState() {
     super.initState();
-    _controller = widget.textController ??
+    _controller =
+        widget.textController ??
         widget.searchBar?.controller ??
         TextEditingController();
   }
@@ -34,35 +36,44 @@ class _BasicPickerState<T extends IsoTranslated> extends State<BasicPicker<T>> {
       cacheExtent: widget.cacheExtent ?? theme?.cacheExtent,
       chosen: widget.chosen,
       clipBehavior: widget.clipBehavior ?? theme?.clipBehavior ?? Clip.hardEdge,
-      crossAxisAlignment: widget.crossAxisAlignment ??
+      crossAxisAlignment:
+          widget.crossAxisAlignment ??
           theme?.crossAxisAlignment ??
           CrossAxisAlignment.center,
       direction: widget.direction ?? theme?.direction ?? Axis.vertical,
       disabled: widget.disabled,
-      dragStartBehavior: widget.dragStartBehavior ??
+      dragStartBehavior:
+          widget.dragStartBehavior ??
           theme?.dragStartBehavior ??
           DragStartBehavior.start,
       emptyStatePlaceholder: widget.emptyStatePlaceholder,
-      header: (widget.showHeader ?? theme?.showHeader ?? true)
-          ? (widget.header ??
-              theme?.header ??
-              AdaptiveSearchTextField(
-                _controller,
-                copyFrom: widget.searchBar ?? theme?.searchBar,
-                padding: widget.searchBarPadding ??
-                    theme?.searchBarPadding ??
-                    UiConstants.padding,
-                showClearButton:
-                    widget.showClearButton ?? theme?.showClearButton ?? true,
-              ))
-          : null,
-      itemBuilder: (itemProperties, {isDense}) =>
-          widget.itemBuilder?.call(itemProperties, isDense: isDense) ??
-          widget.defaultBuilder(context, itemProperties, isDense: isDense),
-      keyboardDismissBehavior: widget.keyboardDismissBehavior ??
+      header:
+          (widget.showHeader ?? theme?.showHeader ?? true)
+              ? (widget.header ??
+                  theme?.header ??
+                  AdaptiveSearchTextField(
+                    _controller,
+                    copyFrom: widget.searchBar ?? theme?.searchBar,
+                    padding:
+                        widget.searchBarPadding ??
+                        theme?.searchBarPadding ??
+                        UiConstants.padding,
+                    showClearButton:
+                        widget.showClearButton ??
+                        theme?.showClearButton ??
+                        true,
+                  ))
+              : null,
+      itemBuilder:
+          (itemProperties, {isDense}) =>
+              widget.itemBuilder?.call(itemProperties, isDense: isDense) ??
+              widget.defaultBuilder(context, itemProperties, isDense: isDense),
+      keyboardDismissBehavior:
+          widget.keyboardDismissBehavior ??
           theme?.keyboardDismissBehavior ??
           ScrollViewKeyboardDismissBehavior.manual,
-      mainAxisAlignment: widget.mainAxisAlignment ??
+      mainAxisAlignment:
+          widget.mainAxisAlignment ??
           theme?.mainAxisAlignment ??
           MainAxisAlignment.start,
       mainAxisSize:
@@ -79,7 +90,8 @@ class _BasicPickerState<T extends IsoTranslated> extends State<BasicPicker<T>> {
       sort: widget.sort,
       textBaseline: widget.textBaseline ?? theme?.textBaseline,
       textDirection: widget.textDirection ?? theme?.textDirection,
-      verticalDirection: widget.verticalDirection ??
+      verticalDirection:
+          widget.verticalDirection ??
           theme?.verticalDirection ??
           VerticalDirection.down,
       caseSensitiveSearch: widget.caseSensitiveSearch,

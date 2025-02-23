@@ -153,16 +153,14 @@ class SearchableIndexedListViewBuilder<T extends Object>
     AnimationController? transitionAnimationController,
     Offset? anchorPoint,
     double? heightFactor = 0.66,
-  }) async =>
-      null;
+  }) async => null;
 
   @override
   Future<T?>? showInSearch(
     BuildContext context, {
     String? query = "",
     bool useRootNavigator = false,
-  }) =>
-      null;
+  }) => null;
 
   @override
   Future<T?>? showInDialog(
@@ -196,12 +194,13 @@ class SearchableIndexedListViewBuilder<T extends Object>
     Color? shadowColor,
     Color? surfaceTintColor,
     String? semanticLabel,
-    EdgeInsets insetPadding =
-        const EdgeInsets.symmetric(vertical: 24, horizontal: 40),
+    EdgeInsets insetPadding = const EdgeInsets.symmetric(
+      vertical: 24,
+      horizontal: 40,
+    ),
     Clip clipBehavior = Clip.none,
     ShapeBorder? shape,
     AlignmentGeometry? alignment,
     bool scrollable = false,
-  }) =>
-      null;
+  }) => null;
 }

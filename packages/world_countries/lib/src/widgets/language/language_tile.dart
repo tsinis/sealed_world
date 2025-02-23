@@ -95,31 +95,35 @@ class LanguageTile extends ListItemTile<NaturalLanguage> {
     super.visualDensity,
     super.excludeSemantics,
   }) : super(
-          language.item,
-          isChosen: language.isChosen,
-          isDisabled: language.isDisabled,
-          semanticsIdentifier: language.item.semanticIdentifier,
-          title: title ??
-              Text(
-                "${language.item.name} (${language.item.codeShort})",
-                overflow: TextOverflow.ellipsis,
-              ),
-          minLeadingWidth: minLeadingWidth,
-          leading: leading ??
-              ConstrainedBox(
-                constraints:
-                    UiConstants.constraints.copyWith(minWidth: minLeadingWidth),
-                child: Padding(
-                  padding: const EdgeInsets.only(top: UiConstants.point),
-                  child: Builder(
-                    builder: (context) => Text(
-                      language.item.code,
-                      style: context.theme.textTheme.titleMedium,
-                      textAlign: TextAlign.center,
-                    ),
-                  ),
-                ),
-              ),
-          subtitle: subtitle ?? Text(language.item.namesNative.first),
-        );
+         language.item,
+         isChosen: language.isChosen,
+         isDisabled: language.isDisabled,
+         semanticsIdentifier: language.item.semanticIdentifier,
+         title:
+             title ??
+             Text(
+               "${language.item.name} (${language.item.codeShort})",
+               overflow: TextOverflow.ellipsis,
+             ),
+         minLeadingWidth: minLeadingWidth,
+         leading:
+             leading ??
+             ConstrainedBox(
+               constraints: UiConstants.constraints.copyWith(
+                 minWidth: minLeadingWidth,
+               ),
+               child: Padding(
+                 padding: const EdgeInsets.only(top: UiConstants.point),
+                 child: Builder(
+                   builder:
+                       (context) => Text(
+                         language.item.code,
+                         style: context.theme.textTheme.titleMedium,
+                         textAlign: TextAlign.center,
+                       ),
+                 ),
+               ),
+             ),
+         subtitle: subtitle ?? Text(language.item.namesNative.first),
+       );
 }

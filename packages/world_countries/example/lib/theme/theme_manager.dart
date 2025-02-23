@@ -16,8 +16,8 @@ class _ThemeManagerState extends State<ThemeManager> {
 
   @override
   Widget build(BuildContext context) => ThemeProvider(
-        _colors,
-        onColorsChange: (colors) => setState(() => _colors = colors),
-        child: widget.child,
-      );
+    _colors,
+    onColorsChange: (colors) => setState(() => _colors = colors),
+    child: widget.child,
+  );
 }

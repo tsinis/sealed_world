@@ -11,14 +11,15 @@ class FloatingButton extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) => GestureDetector(
-        onLongPress: () => onPressed(isLong: true),
-        // ignore: prefer-action-button-tooltip, we need long-press here.
-        child: FloatingActionButton(
-          heroTag: "FAB",
-          onPressed: () => onPressed(isLong: false),
-          child: AnimatedBuilder(
-            animation: controller,
-            builder: (_, __) => AnimatedSwitcher(
+    onLongPress: () => onPressed(isLong: true),
+    // ignore: prefer-action-button-tooltip, we need long-press here.
+    child: FloatingActionButton(
+      heroTag: "FAB",
+      onPressed: () => onPressed(isLong: false),
+      child: AnimatedBuilder(
+        animation: controller,
+        builder:
+            (_, _) => AnimatedSwitcher(
               duration: UiConstants.duration,
               switchInCurve: UiConstants.switchInCurve,
               switchOutCurve: UiConstants.switchOutCurve,
@@ -27,7 +28,7 @@ class FloatingButton extends StatelessWidget {
                 key: ValueKey(controller.currentData),
               ),
             ),
-          ),
-        ),
-      );
+      ),
+    ),
+  );
 }

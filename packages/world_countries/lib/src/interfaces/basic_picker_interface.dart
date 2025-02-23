@@ -25,7 +25,7 @@ import "../models/locale/typed_locale.dart";
 /// a coherent picker experience.
 abstract interface class BasicPickerInterface<T extends TypedLocale> {
   const BasicPickerInterface( // coverage:ignore-line
-      {
+  {
     this.searchBarPadding = UiConstants.padding,
     this.showClearButton = true,
     this.searchBar,

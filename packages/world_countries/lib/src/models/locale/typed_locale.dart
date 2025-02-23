@@ -38,12 +38,12 @@ class TypedLocale extends Locale implements BasicTypedLocale {
     this.currencyTranslations = const {},
     this.languageTranslations = const {},
     String? regionalCode,
-  })  : assert(
-          regionalCode == null || country == null,
-          "Cannot provide both `regionalCode` and `country` at the same time",
-        ),
-        _regionalCode = regionalCode,
-        super(" ", " ");
+  }) : assert(
+         regionalCode == null || country == null,
+         "Cannot provide both `regionalCode` and `country` at the same time",
+       ),
+       _regionalCode = regionalCode,
+       super(" ", " ");
 
   /// Creates an instance of [TypedLocale] from subtags.
   ///
@@ -57,16 +57,16 @@ class TypedLocale extends Locale implements BasicTypedLocale {
     this.currencyTranslations = const {},
     this.languageTranslations = const {},
     String? regionalCode,
-  })  : assert(
-          regionalCode == null || country == null,
-          "Cannot provide both `regionalCode` and `country` at the same time",
-        ),
-        _regionalCode = regionalCode,
-        super.fromSubtags(
-          languageCode: language.codeShort.toLowerCase(),
-          scriptCode: script?.code,
-          countryCode: country?.codeShort ?? regionalCode,
-        );
+  }) : assert(
+         regionalCode == null || country == null,
+         "Cannot provide both `regionalCode` and `country` at the same time",
+       ),
+       _regionalCode = regionalCode,
+       super.fromSubtags(
+         languageCode: language.codeShort.toLowerCase(),
+         scriptCode: script?.code,
+         countryCode: country?.codeShort ?? regionalCode,
+       );
 
   /// Creates an instance of [TypedLocale] with implicit translations cache
   /// creation.
@@ -84,17 +84,16 @@ class TypedLocale extends Locale implements BasicTypedLocale {
     Iterable<FiatCurrency>? currencies = FiatCurrency.list,
     Iterable<WorldCountry>? countries = WorldCountry.list,
     String? regionalCode,
-  }) =>
-      TypedLocale(
-        language,
-        country: country,
-        script: script,
-        regionalCode: regionalCode,
-      ).copyWithTranslationsCache(
-        languages: languages,
-        currencies: currencies,
-        countries: countries,
-      );
+  }) => TypedLocale(
+    language,
+    country: country,
+    script: script,
+    regionalCode: regionalCode,
+  ).copyWithTranslationsCache(
+    languages: languages,
+    currencies: currencies,
+    countries: countries,
+  );
 
   @override
   final NaturalLanguage language;
@@ -136,16 +135,15 @@ class TypedLocale extends Locale implements BasicTypedLocale {
     Map<FiatCurrency, String>? currencyTranslations,
     Map<NaturalLanguage, String>? languageTranslations,
     String? regionalCode,
-  }) =>
-      TypedLocale(
-        language ?? this.language,
-        country: country ?? this.country,
-        script: script ?? this.script,
-        countryTranslations: countryTranslations ?? this.countryTranslations,
-        currencyTranslations: currencyTranslations ?? this.currencyTranslations,
-        languageTranslations: languageTranslations ?? this.languageTranslations,
-        regionalCode: regionalCode ?? _regionalCode,
-      );
+  }) => TypedLocale(
+    language ?? this.language,
+    country: country ?? this.country,
+    script: script ?? this.script,
+    countryTranslations: countryTranslations ?? this.countryTranslations,
+    currencyTranslations: currencyTranslations ?? this.currencyTranslations,
+    languageTranslations: languageTranslations ?? this.languageTranslations,
+    regionalCode: regionalCode ?? _regionalCode,
+  );
 
   @override
   String toJson({JsonCodec codec = const JsonCodec()}) =>
@@ -156,12 +154,13 @@ class TypedLocale extends Locale implements BasicTypedLocale {
 
   @keepToString
   @override
-  String toString({bool short = true}) => short
-      ? toUnicodeLocaleId()
-      : "TypedLocale(${language.runtimeType}()"
-          "${country == null ? '' : ', country: ${country.runtimeType}()'}"
-          '''${countryCode == null || country != null ? '' : ', countryCode: "$countryCode"'}'''
-          "${script == null ? '' : ', script: ${script.runtimeType}()'})";
+  String toString({bool short = true}) =>
+      short
+          ? toUnicodeLocaleId()
+          : "TypedLocale(${language.runtimeType}()"
+              "${country == null ? '' : ', country: ${country.runtimeType}()'}"
+              '''${countryCode == null || country != null ? '' : ', countryCode: "$countryCode"'}'''
+              "${script == null ? '' : ', script: ${script.runtimeType}()'})";
 
   final String? _regionalCode;
 }

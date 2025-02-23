@@ -76,8 +76,10 @@ abstract interface class MaterialContextInterface<T extends Object> {
     Color? shadowColor,
     Color? surfaceTintColor,
     String? semanticLabel,
-    EdgeInsets insetPadding =
-        const EdgeInsets.symmetric(vertical: 24, horizontal: 40),
+    EdgeInsets insetPadding = const EdgeInsets.symmetric(
+      vertical: 24,
+      horizontal: 40,
+    ),
     Clip clipBehavior = Clip.none,
     ShapeBorder? shape,
     AlignmentGeometry? alignment,

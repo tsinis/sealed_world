@@ -7,75 +7,66 @@ import "package:world_countries/src/models/locale/typed_locale.dart";
 import "package:world_flags/world_flags.dart";
 
 void main() => group("WorldCountryExtension ", () {
-      final value = WorldCountry.list.first;
+  final value = WorldCountry.list.first;
 
-      group("toLocale", () {
-        test(
-          "should return correct $Locale instance with codeShort",
-          () => expect(
-            value.toLocale(),
-            Locale(
-              value.languages.first.codeShort.toLowerCase(),
-              value.codeShort,
-            ),
-          ),
-        );
+  group("toLocale", () {
+    test(
+      "should return correct $Locale instance with codeShort",
+      () => expect(
+        value.toLocale(),
+        Locale(value.languages.first.codeShort.toLowerCase(), value.codeShort),
+      ),
+    );
 
-        test(
-          "should return correct $Locale instance with all properties",
-          () {
-            final language = NaturalLanguage.list.first;
-            const scriptCode = "scriptCode";
-            expect(
-              value.toLocale(language: language, scriptCode: scriptCode),
-              Locale.fromSubtags(
-                languageCode: language.codeShort.toLowerCase(),
-                scriptCode: scriptCode,
-                countryCode: value.codeShort,
-              ),
-            );
-          },
-        );
-      });
-
-      group("toIsoLocale", () {
-        test(
-          "should return correct $TypedLocale instance",
-          () => expect(
-            value.toIsoLocale(),
-            TypedLocale(
-              value.languages.first,
-              country: value,
-              script: value.languages.first.scripts.first,
-            ),
-          ),
-        );
-
-        test(
-          "should return correct $TypedLocale instance with all properties",
-          () {
-            final convertedLocale = value.toIsoLocale(
-              language: NaturalLanguage.list.first,
-              script: Script.list.first,
-            );
-            expect(
-              convertedLocale,
-              TypedLocale(
-                NaturalLanguage.list.first,
-                country: value,
-                script: Script.list.first,
-              ),
-            );
-
-            expect(
-              convertedLocale,
-              TypedLocale.fromSubtags(
-                language: NaturalLanguage.list.first,
-                country: value,
-                script: Script.list.first,
-              ),
-            );
-          },
-        );
-      });
+    test("should return correct $Locale instance with all properties", () {
+      final language = NaturalLanguage.list.first;
+      const scriptCode = "scriptCode";
+      expect(
+        value.toLocale(language: language, scriptCode: scriptCode),
+        Locale.fromSubtags(
+          languageCode: language.codeShort.toLowerCase(),
+          scriptCode: scriptCode,
+          countryCode: value.codeShort,
+        ),
+      );
     });
+  });
+
+  group("toIsoLocale", () {
+    test(
+      "should return correct $TypedLocale instance",
+      () => expect(
+        value.toIsoLocale(),
+        TypedLocale(
+          value.languages.first,
+          country: value,
+          script: value.languages.first.scripts.first,
+        ),
+      ),
+    );
+
+    test("should return correct $TypedLocale instance with all properties", () {
+      final convertedLocale = value.toIsoLocale(
+        language: NaturalLanguage.list.first,
+        script: Script.list.first,
+      );
+      expect(
+        convertedLocale,
+        TypedLocale(
+          NaturalLanguage.list.first,
+          country: value,
+          script: Script.list.first,
+        ),
+      );
+
+      expect(
+        convertedLocale,
+        TypedLocale.fromSubtags(
+          language: NaturalLanguage.list.first,
+          country: value,
+          script: Script.list.first,
+        ),
+      );
+    });
+  });
+});

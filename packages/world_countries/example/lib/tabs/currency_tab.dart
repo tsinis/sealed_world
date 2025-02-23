@@ -18,84 +18,84 @@ final class CurrencyTab extends WorldDataTab<BasicLocale, FiatCurrency> {
 
   @override
   Widget build(BuildContext context) => TabBody(
-        title: Text(
-          data.name,
-          style: context.theme.textTheme.headlineSmall,
-          textAlign: TextAlign.center,
-        ),
-        children: <DescriptionTile>[
-          DescriptionTile.fromIterable(
-            data.namesNative,
-            icon: Icons.badge_outlined,
-            description: "Native Name(s)",
-          ),
-          DescriptionTile(
-            data.code,
-            icon: Icons.looks_3_outlined,
-            description:
-                """Code: ${IsoStandardized.standardAcronym} ${FiatCurrency.standardCodeName}""",
-          ),
-          DescriptionTile(
-            data.codeNumeric,
-            icon: Icons.pin_outlined,
-            description:
-                """Code: ${IsoStandardized.standardAcronym} ${FiatCurrency.standardCodeNumericName}""",
-          ),
-          DescriptionTile(
-            data.symbol,
-            icon: Icons.euro_symbol_outlined,
-            description: "Symbol",
-          ),
-          DescriptionTile(
-            data.subunit,
-            icon: Icons.payments_outlined,
-            description: "Subunit",
-          ),
-          DescriptionTile(
-            data.subunitToUnit.toString(),
-            icon: Icons.savings_outlined,
-            description: "Subunits in Unit",
-          ),
-          DescriptionTile(
-            data.disambiguateSymbol,
-            icon: Icons.key_outlined,
-            description: "Disambiguate Symbol",
-          ),
-          DescriptionTile(
-            data.htmlEntity,
-            icon: Icons.html_outlined,
-            description: "HTML Entity",
-          ),
-          DescriptionTile(
-            data.priority.toString(),
-            icon: Icons.scale_outlined,
-            description: "Priority",
-          ),
-          DescriptionTile.fromBool(
-            isTrue: data.unitFirst,
-            icon: Icons.first_page_outlined,
-            description: "Unit First",
-          ),
-          DescriptionTile.fromIterable(
-            data.alternateSymbols,
-            icon: Icons.monetization_on_outlined,
-            description: "Alt. Symbols",
-          ),
-          DescriptionTile(
-            data.decimalMark,
-            icon: Icons.money_outlined,
-            description: "Decimal Mark",
-          ),
-          DescriptionTile(
-            data.thousandsSeparator,
-            icon: Icons.space_bar_outlined,
-            description: "Thousands Separator",
-          ),
-          DescriptionTile(
-            data.smallestDenomination.toString(),
-            icon: Icons.eject_outlined,
-            description: "Smallest Denomination",
-          ),
-        ],
-      );
+    title: Text(
+      data.name,
+      style: context.theme.textTheme.headlineSmall,
+      textAlign: TextAlign.center,
+    ),
+    children: <DescriptionTile>[
+      DescriptionTile.fromIterable(
+        data.namesNative,
+        icon: Icons.badge_outlined,
+        description: "Native Name(s)",
+      ),
+      DescriptionTile(
+        data.code,
+        icon: Icons.looks_3_outlined,
+        description:
+            """Code: ${IsoStandardized.standardAcronym} ${FiatCurrency.standardCodeName}""",
+      ),
+      DescriptionTile(
+        data.codeNumeric,
+        icon: Icons.pin_outlined,
+        description:
+            """Code: ${IsoStandardized.standardAcronym} ${FiatCurrency.standardCodeNumericName}""",
+      ),
+      DescriptionTile(
+        data.symbol,
+        icon: Icons.euro_symbol_outlined,
+        description: "Symbol",
+      ),
+      DescriptionTile(
+        data.subunit,
+        icon: Icons.payments_outlined,
+        description: "Subunit",
+      ),
+      DescriptionTile(
+        data.subunitToUnit.toString(),
+        icon: Icons.savings_outlined,
+        description: "Subunits in Unit",
+      ),
+      DescriptionTile(
+        data.disambiguateSymbol,
+        icon: Icons.key_outlined,
+        description: "Disambiguate Symbol",
+      ),
+      DescriptionTile(
+        data.htmlEntity,
+        icon: Icons.html_outlined,
+        description: "HTML Entity",
+      ),
+      DescriptionTile(
+        data.priority.toString(),
+        icon: Icons.scale_outlined,
+        description: "Priority",
+      ),
+      DescriptionTile.fromBool(
+        isTrue: data.unitFirst,
+        icon: Icons.first_page_outlined,
+        description: "Unit First",
+      ),
+      DescriptionTile.fromIterable(
+        data.alternateSymbols,
+        icon: Icons.monetization_on_outlined,
+        description: "Alt. Symbols",
+      ),
+      DescriptionTile(
+        data.decimalMark,
+        icon: Icons.money_outlined,
+        description: "Decimal Mark",
+      ),
+      DescriptionTile(
+        data.thousandsSeparator,
+        icon: Icons.space_bar_outlined,
+        description: "Thousands Separator",
+      ),
+      DescriptionTile(
+        data.smallestDenomination.toString(),
+        icon: Icons.eject_outlined,
+        description: "Smallest Denomination",
+      ),
+    ],
+  );
 }

@@ -95,42 +95,40 @@ class PickersThemeData extends ThemeExtension<PickersThemeData>
     double? cacheExtent,
     DragStartBehavior? dragStartBehavior,
     ScrollViewKeyboardDismissBehavior? keyboardDismissBehavior,
-  }) =>
-      PickersThemeData(
-        addRepaintBoundaries: addRepaintBoundaries ?? this.addRepaintBoundaries,
-        addSemanticIndexes: addSemanticIndexes ?? this.addSemanticIndexes,
-        cacheExtent: cacheExtent ?? this.cacheExtent,
-        clipBehavior: clipBehavior ?? this.clipBehavior,
-        crossAxisAlignment: crossAxisAlignment ?? this.crossAxisAlignment,
-        direction: direction ?? this.direction,
-        dragStartBehavior: dragStartBehavior ?? this.dragStartBehavior,
-        header: header ?? this.header,
-        keyboardDismissBehavior:
-            keyboardDismissBehavior ?? this.keyboardDismissBehavior,
-        mainAxisAlignment: mainAxisAlignment ?? this.mainAxisAlignment,
-        mainAxisSize: mainAxisSize ?? this.mainAxisSize,
-        padding: padding ?? this.padding,
-        physics: physics ?? this.physics,
-        primary: primary ?? this.primary,
-        reverse: reverse ?? this.reverse,
-        separator: separator ?? this.separator,
-        showHeader: showHeader ?? this.showHeader,
-        shrinkWrap: shrinkWrap ?? this.shrinkWrap,
-        textBaseline: textBaseline ?? this.textBaseline,
-        textDirection: textDirection ?? this.textDirection,
-        verticalDirection: verticalDirection ?? this.verticalDirection,
-        searchBarPadding: searchBarPadding ?? this.searchBarPadding,
-        showClearButton: showClearButton ?? this.showClearButton,
-        searchBar: searchBar ?? this.searchBar,
-        translation: translation ?? this.translation,
-      );
+  }) => PickersThemeData(
+    addRepaintBoundaries: addRepaintBoundaries ?? this.addRepaintBoundaries,
+    addSemanticIndexes: addSemanticIndexes ?? this.addSemanticIndexes,
+    cacheExtent: cacheExtent ?? this.cacheExtent,
+    clipBehavior: clipBehavior ?? this.clipBehavior,
+    crossAxisAlignment: crossAxisAlignment ?? this.crossAxisAlignment,
+    direction: direction ?? this.direction,
+    dragStartBehavior: dragStartBehavior ?? this.dragStartBehavior,
+    header: header ?? this.header,
+    keyboardDismissBehavior:
+        keyboardDismissBehavior ?? this.keyboardDismissBehavior,
+    mainAxisAlignment: mainAxisAlignment ?? this.mainAxisAlignment,
+    mainAxisSize: mainAxisSize ?? this.mainAxisSize,
+    padding: padding ?? this.padding,
+    physics: physics ?? this.physics,
+    primary: primary ?? this.primary,
+    reverse: reverse ?? this.reverse,
+    separator: separator ?? this.separator,
+    showHeader: showHeader ?? this.showHeader,
+    shrinkWrap: shrinkWrap ?? this.shrinkWrap,
+    textBaseline: textBaseline ?? this.textBaseline,
+    textDirection: textDirection ?? this.textDirection,
+    verticalDirection: verticalDirection ?? this.verticalDirection,
+    searchBarPadding: searchBarPadding ?? this.searchBarPadding,
+    showClearButton: showClearButton ?? this.showClearButton,
+    searchBar: searchBar ?? this.searchBar,
+    translation: translation ?? this.translation,
+  );
 
   @override
   ThemeExtension<PickersThemeData> lerp(
     covariant ThemeExtension<PickersThemeData>? other,
     double t,
-  ) =>
-      this;
+  ) => this;
 
   @override
   final bool showClearButton;

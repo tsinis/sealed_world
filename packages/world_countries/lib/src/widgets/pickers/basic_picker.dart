@@ -149,9 +149,9 @@ abstract class BasicPicker<T extends IsoTranslated>
   @protected
   @mustCallSuper
   Iterable<String> defaultSearch(T item, BuildContext context) => [
-        _maybeNameTranslation(item, context) ??
-            item.commonNameFor(const BasicTypedLocale(LangEng())),
-      ];
+    _maybeNameTranslation(item, context) ??
+        item.commonNameFor(const BasicTypedLocale(LangEng())),
+  ];
 
   /// Returns the name translation of the item (if exists) in form
   /// of [Text] widget.
@@ -222,10 +222,10 @@ abstract class BasicPicker<T extends IsoTranslated>
     AnimationController? transitionAnimationController,
     Offset? anchorPoint,
     double? heightFactor = 0.66,
-  }) =>
-      showModalBottomSheet<T>(
-        context: context,
-        builder: (newContext) => Padding(
+  }) => showModalBottomSheet<T>(
+    context: context,
+    builder:
+        (newContext) => Padding(
           padding: newContext.media.viewInsets,
           child: FractionallySizedBox(
             heightFactor: heightFactor,
@@ -234,22 +234,22 @@ abstract class BasicPicker<T extends IsoTranslated>
             ),
           ),
         ),
-        backgroundColor: backgroundColor,
-        elevation: elevation,
-        shape: shape,
-        clipBehavior: clipBehavior,
-        constraints: constraints,
-        barrierColor: barrierColor,
-        isScrollControlled: isScrollControlled,
-        useRootNavigator: useRootNavigator,
-        isDismissible: isDismissible,
-        enableDrag: enableDrag,
-        showDragHandle: showDragHandle,
-        useSafeArea: useSafeArea,
-        routeSettings: routeSettings,
-        transitionAnimationController: transitionAnimationController,
-        anchorPoint: anchorPoint,
-      );
+    backgroundColor: backgroundColor,
+    elevation: elevation,
+    shape: shape,
+    clipBehavior: clipBehavior,
+    constraints: constraints,
+    barrierColor: barrierColor,
+    isScrollControlled: isScrollControlled,
+    useRootNavigator: useRootNavigator,
+    isDismissible: isDismissible,
+    enableDrag: enableDrag,
+    showDragHandle: showDragHandle,
+    useSafeArea: useSafeArea,
+    routeSettings: routeSettings,
+    transitionAnimationController: transitionAnimationController,
+    anchorPoint: anchorPoint,
+  );
 
   @override
   Future<T?> showInSearch(
@@ -277,11 +277,12 @@ abstract class BasicPicker<T extends IsoTranslated>
 
     delegate = ImplicitSearchDelegate<T>(
       items,
-      resultsBuilder: (newContext, items) => copyWith(
-        items: items,
-        onSelect: closeOnSelect,
-        showSearchBar: false,
-      ),
+      resultsBuilder:
+          (newContext, items) => copyWith(
+            items: items,
+            onSelect: closeOnSelect,
+            showSearchBar: false,
+          ),
       searchIn: searchIn ?? defaultSearch,
       appBarBottom: appBarBottom,
       appBarThemeData: appBarThemeData,
@@ -357,16 +358,18 @@ abstract class BasicPicker<T extends IsoTranslated>
     Color? shadowColor,
     Color? surfaceTintColor,
     String? semanticLabel,
-    EdgeInsets insetPadding =
-        const EdgeInsets.symmetric(vertical: 24, horizontal: 40),
+    EdgeInsets insetPadding = const EdgeInsets.symmetric(
+      vertical: 24,
+      horizontal: 40,
+    ),
     Clip clipBehavior = Clip.none,
     ShapeBorder? shape,
     AlignmentGeometry? alignment,
     bool scrollable = false,
-  }) =>
-      showDialog(
-        context: context,
-        builder: (newContext) => AlertDialog(
+  }) => showDialog(
+    context: context,
+    builder:
+        (newContext) => AlertDialog(
           iconPadding: iconPadding,
           iconColor: iconColor,
           title: title,
@@ -398,18 +401,17 @@ abstract class BasicPicker<T extends IsoTranslated>
           alignment: alignment,
           scrollable: scrollable,
         ),
-        barrierDismissible: barrierDismissible,
-        barrierColor: barrierColor,
-        barrierLabel: barrierLabel,
-        useSafeArea: useSafeArea,
-        useRootNavigator: useRootNavigator,
-        routeSettings: routeSettings,
-        anchorPoint: anchorPoint,
-        traversalEdgeBehavior: traversalEdgeBehavior,
-      );
+    barrierDismissible: barrierDismissible,
+    barrierColor: barrierColor,
+    barrierLabel: barrierLabel,
+    useSafeArea: useSafeArea,
+    useRootNavigator: useRootNavigator,
+    routeSettings: routeSettings,
+    anchorPoint: anchorPoint,
+    traversalEdgeBehavior: traversalEdgeBehavior,
+  );
 
   @required
-
   /// Creates a copy of this picker with the given fields replaced with the new
   /// values.
   BasicPicker<T> copyWith({
@@ -450,7 +452,7 @@ abstract class BasicPicker<T extends IsoTranslated>
     VerticalDirection? verticalDirection,
     Iterable<String> Function(T item, BuildContext context)? searchIn,
     Widget? Function(ItemProperties<T> itemProperties, {bool? isDense})?
-        itemBuilder,
+    itemBuilder,
     TypedLocale? translation,
   });
 }

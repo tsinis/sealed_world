@@ -1,3 +1,5 @@
+// ignore_for_file: avoid_futureor_void, it's just an example app.
+
 import "dart:async" show FutureOr;
 
 import "package:flutter/foundation.dart";
@@ -18,9 +20,9 @@ import "../widgets/menu_button.dart";
 
 class MainPage extends StatefulWidget {
   MainPage(this._data, {AsyncValueSetter<String>? navigate, super.key})
-      : _country = CountryTab(_data.country, navigate),
-        _currency = CurrencyTab(_data.currency, navigate),
-        _lang = LanguageTab(_data.language, navigate);
+    : _country = CountryTab(_data.country, navigate),
+      _currency = CurrencyTab(_data.currency, navigate),
+      _lang = LanguageTab(_data.language, navigate);
 
   final ParsedData _data;
 
@@ -51,18 +53,17 @@ class _MainPageState extends State<MainPage>
   FutureOr<Iterable<Widget>> _handleAnchor(
     BuildContext context,
     SearchController controller,
-  ) =>
-      widget
-          ._mapPickers(_controller.currentData)
-          .searchSuggestions(context, controller);
+  ) => widget
+      ._mapPickers(_controller.currentData)
+      .searchSuggestions(context, controller);
 
   @override
   void didUpdateWidget(MainPage oldWidget) {
     super.didUpdateWidget(oldWidget);
     WidgetsBinding.instance.addPostFrameCallback(
-      (_) => ThemeProvider.of(context)
-          ?.onColorsChange
-          ?.call(widget._data.country.flagStripeColors),
+      (_) => ThemeProvider.of(
+        context, // ignore: unnecessary-trailing-comma, broken after Dart 3.7.0.
+      )?.onColorsChange?.call(widget._data.country.flagStripeColors),
     );
   }
 
@@ -74,65 +75,67 @@ class _MainPageState extends State<MainPage>
 
   @override
   Widget build(BuildContext context) => DefaultTabController(
-        length: _controller.length,
-        child: Scaffold(
-          appBar: AppBar(
-            title: const Text("Try long press too :)"),
-            actions: [
-              SearchAnchor(
-                isFullScreen: false,
-                viewConstraints:
-                    const BoxConstraints(minWidth: 220, maxWidth: 320),
-                builder: (_, controller) => GestureDetector(
+    length: _controller.length,
+    child: Scaffold(
+      appBar: AppBar(
+        title: const Text("Try long press too :)"),
+        actions: [
+          SearchAnchor(
+            isFullScreen: false,
+            viewConstraints: const BoxConstraints(minWidth: 220, maxWidth: 320),
+            builder:
+                (_, controller) => GestureDetector(
                   onLongPress: _handleAppBarSearch,
                   child: IconButton(
                     onPressed: controller.openView,
-                    icon:
-                        const Icon(Icons.search, semanticLabel: "search_icon"),
+                    icon: const Icon(
+                      Icons.search,
+                      semanticLabel: "search_icon",
+                    ),
                   ),
                 ),
-                suggestionsBuilder: _handleAnchor,
-              ),
-              const MenuButton(),
-            ],
-            bottom: TabBar(
-              tabs: List.unmodifiable(
-                WorldData.values.map((tab) => Tab(text: tab.label)),
-              ),
-              controller: _controller,
-            ),
-            centerTitle: false,
+            suggestionsBuilder: _handleAnchor,
           ),
-          body: kProfileMode
+          const MenuButton(),
+        ],
+        bottom: TabBar(
+          tabs: List.unmodifiable(
+            WorldData.values.map((tab) => Tab(text: tab.label)),
+          ),
+          controller: _controller,
+        ),
+        centerTitle: false,
+      ),
+      body:
+          kProfileMode
               ? null
               : DecoratedBox(
-                  decoration: FunctionalPlatform.maybeWhenConst(
-                    orElse: BoxDecoration(
-                      image: DecorationImage(
-                        image: Assets.images.background.provider(),
-                        fit: BoxFit.cover,
-                      ),
+                decoration: FunctionalPlatform.maybeWhenConst(
+                  orElse: BoxDecoration(
+                    image: DecorationImage(
+                      image: Assets.images.background.provider(),
+                      fit: BoxFit.cover,
                     ),
-                    web: const BoxDecoration(),
                   ),
-                  child: Align(
-                    alignment: Alignment.topCenter,
-                    child: SizedBox(
-                      width: 300,
-                      child: TabBarView(
-                        controller: _controller,
-                        children: [
-                          widget._country,
-                          widget._currency,
-                          widget._lang,
-                        ],
-                      ),
+                  web: const BoxDecoration(),
+                ),
+                child: Align(
+                  alignment: Alignment.topCenter,
+                  child: SizedBox(
+                    width: 300,
+                    child: TabBarView(
+                      controller: _controller,
+                      children: [
+                        widget._country,
+                        widget._currency,
+                        widget._lang,
+                      ],
                     ),
                   ),
                 ),
-          floatingActionButton:
-              FloatingButton(_controller, onPressed: _handleFab),
-          backgroundColor: context.theme.colorScheme.surfaceContainerHighest,
-        ),
-      );
+              ),
+      floatingActionButton: FloatingButton(_controller, onPressed: _handleFab),
+      backgroundColor: context.theme.colorScheme.surfaceContainerHighest,
+    ),
+  );
 }

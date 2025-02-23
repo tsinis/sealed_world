@@ -23,56 +23,54 @@ class TabBody extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) => Column(
-        mainAxisAlignment: MainAxisAlignment.center,
-        children: [
-          ColoredBox(
-            color:
-                context.theme.colorScheme.onSecondary.withValues(alpha: 1 / 2),
-            child: Stack(
-              alignment: Alignment.topCenter,
-              children: [
-                ClipRect(
-                  child: Container(
-                    padding: titlePadding,
-                    width: double.infinity,
-                    margin: titleMargin,
-                    child: FunctionalPlatform.maybeWhenConst(
-                      orElse: BackdropFilter(
-                        filter: ImageFilter.blur(
-                          sigmaX: UiConstants.point,
-                          sigmaY: UiConstants.point,
-                        ),
-                        child: title,
-                      ),
-                      web: title,
-                    ),
-                  ),
-                ),
-                titleOverlay,
-              ],
-            ),
-          ),
-          Expanded(
-            child: ClipRect(
-              child: ColoredBox(
-                color:
-                    context.theme.colorScheme.surface.withValues(alpha: 1 / 2),
+    mainAxisAlignment: MainAxisAlignment.center,
+    children: [
+      ColoredBox(
+        color: context.theme.colorScheme.onSecondary.withValues(alpha: 1 / 2),
+        child: Stack(
+          alignment: Alignment.topCenter,
+          children: [
+            ClipRect(
+              child: Container(
+                padding: titlePadding,
+                width: double.infinity,
+                margin: titleMargin,
                 child: FunctionalPlatform.maybeWhenConst(
                   orElse: BackdropFilter(
                     filter: ImageFilter.blur(
                       sigmaX: UiConstants.point,
                       sigmaY: UiConstants.point,
                     ),
-                    child: ListView(
-                      physics: const ClampingScrollPhysics(),
-                      children: children,
-                    ),
+                    child: title,
                   ),
-                  web: ListView(children: children),
+                  web: title,
                 ),
               ),
             ),
+            titleOverlay,
+          ],
+        ),
+      ),
+      Expanded(
+        child: ClipRect(
+          child: ColoredBox(
+            color: context.theme.colorScheme.surface.withValues(alpha: 1 / 2),
+            child: FunctionalPlatform.maybeWhenConst(
+              orElse: BackdropFilter(
+                filter: ImageFilter.blur(
+                  sigmaX: UiConstants.point,
+                  sigmaY: UiConstants.point,
+                ),
+                child: ListView(
+                  physics: const ClampingScrollPhysics(),
+                  children: children,
+                ),
+              ),
+              web: ListView(children: children),
+            ),
           ),
-        ],
-      );
+        ),
+      ),
+    ],
+  );
 }

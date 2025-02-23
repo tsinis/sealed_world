@@ -17,15 +17,15 @@ class _SearchableInterfaceTest implements SearchableInterface<String> {
 }
 
 void main() => group("$SearchableInterface", () {
-      test(
-        "constructor",
-        () => expect(
-          _SearchableInterfaceTest(
-            searchIn: (_, __) => const [],
-            caseSensitiveSearch: true,
-            startWithSearch: false,
-          ).startWithSearch,
-          isFalse,
-        ),
-      );
-    });
+  test(
+    "constructor",
+    () => expect(
+      _SearchableInterfaceTest(
+        searchIn: (_, _) => const [],
+        caseSensitiveSearch: true,
+        startWithSearch: false,
+      ).startWithSearch,
+      isFalse,
+    ),
+  );
+});

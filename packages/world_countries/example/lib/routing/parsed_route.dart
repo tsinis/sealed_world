@@ -47,14 +47,15 @@ class ParsedRoute {
 
   @override
   int get hashCode => hash4(
-        path,
-        pathTemplate,
-        _mapEquality.hash(parameters),
-        _mapEquality.hash(queryParameters),
-      );
+    path,
+    pathTemplate,
+    _mapEquality.hash(parameters),
+    _mapEquality.hash(queryParameters),
+  );
 
   @override
-  String toString() => "<ParsedRoute "
+  String toString() =>
+      "<ParsedRoute "
       "template: $pathTemplate "
       "path: $path "
       "parameters: $parameters "
