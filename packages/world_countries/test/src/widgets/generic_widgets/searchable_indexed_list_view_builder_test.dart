@@ -26,18 +26,12 @@ void main() => group("$SearchableIndexedListViewBuilder", () {
   ) async {
     final controller = TextEditingController();
     await tester.pumpMaterialApp(
-      Theme(
-        data: ThemeData(
-          extensions: const <ThemeExtension>[
-            PickersThemeData(showHeader: null),
-          ],
-        ),
-        child: SearchableIndexedListViewBuilder(
-          const [1, 2, 3, 4, 5, 6],
-          searchIn: (i, _) => ["$i"],
-          textController: controller,
-        ),
+      SearchableIndexedListViewBuilder(
+        const [1, 2, 3, 4, 5, 6],
+        searchIn: (i, _) => ["$i"],
+        textController: controller,
       ),
+      const PickersThemeData(showHeader: null),
     );
     expect(find.byType(SearchListListenableBuilder<int>), findsOneWidget);
     expect(find.byType(IndexedListViewBuilder), findsNothing);
@@ -49,18 +43,12 @@ void main() => group("$SearchableIndexedListViewBuilder", () {
   ) async {
     final controller = TextEditingController();
     await tester.pumpMaterialApp(
-      Theme(
-        data: ThemeData(
-          extensions: const <ThemeExtension>[
-            PickersThemeData(showHeader: null),
-          ],
-        ),
-        child: SearchableIndexedListViewBuilder(
-          const [1, 2, 3, 4, 5],
-          searchIn: (i, _) => ["$i"],
-          textController: controller,
-        ),
+      SearchableIndexedListViewBuilder(
+        const [1, 2, 3, 4, 5],
+        searchIn: (i, _) => ["$i"],
+        textController: controller,
       ),
+      const PickersThemeData(showHeader: null),
     );
     expect(find.byType(SearchListListenableBuilder<int>), findsNothing);
     expect(find.byType(IndexedListViewBuilder<int>), findsOneWidget);

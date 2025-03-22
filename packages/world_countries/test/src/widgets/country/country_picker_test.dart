@@ -2,6 +2,9 @@
 
 import "package:flutter/material.dart";
 import "package:flutter_test/flutter_test.dart";
+import "package:world_countries/src/helpers/typed_locale_delegate.dart";
+import "package:world_countries/src/models/locale/typed_locale.dart";
+import "package:world_countries/src/theme/pickers_theme_data.dart";
 import "package:world_countries/src/theme/tile_theme_data/country_tile_theme_data.dart";
 import "package:world_countries/src/widgets/country/country_picker.dart";
 import "package:world_countries/src/widgets/country/country_tile.dart";
@@ -78,6 +81,78 @@ void main() => group("$CountryPicker", () {
       testSelection: false,
     ),
   );
+
+  testWidgets("throws assert on empty $TypedLocale in theme", (tester) async {
+    bool assertionThrown = false;
+    final originalOnError = FlutterError.onError;
+
+    FlutterError.onError = (details) {
+      if (details.exception is AssertionError &&
+          details.exception.toString().contains(
+            "The $TypedLocale passed to the `translation` parameter in "
+            "$PickersThemeData lacks a translation",
+          )) {
+        assertionThrown = true;
+      } else {
+        originalOnError?.call(details);
+      }
+    };
+
+    try {
+      await tester.pumpMaterialApp(
+        const CountryPicker(),
+        const PickersThemeData(translation: TypedLocale(LangEng())),
+      );
+
+      expect(assertionThrown, isTrue);
+    } finally {
+      FlutterError.onError = originalOnError;
+    }
+  });
+
+  testWidgets("throws assert on empty $TypedLocale in picker", (tester) async {
+    bool assertionThrown = false;
+    final originalOnError = FlutterError.onError;
+
+    FlutterError.onError = (details) {
+      if (details.exception is AssertionError &&
+          details.exception.toString().contains(
+            "The $TypedLocale passed to the `translation` parameter in the "
+            "$CountryPicker lacks a",
+          )) {
+        assertionThrown = true;
+      } else {
+        originalOnError?.call(details);
+      }
+    };
+
+    try {
+      await tester.pumpMaterialApp(
+        const CountryPicker(translation: TypedLocale(LangEng())),
+      );
+
+      expect(assertionThrown, isTrue);
+    } finally {
+      FlutterError.onError = originalOnError;
+    }
+  });
+
+  testWidgets("throw assert on empty $TypedLocaleDelegate", (tester) async {
+    await tester.pumpMaterialApp(
+      SearchAnchor.bar(
+        suggestionsBuilder: const CountryPicker().searchSuggestions,
+      ),
+      null,
+      const TypedLocaleDelegate.selectiveCache(),
+    );
+    final tile = find.byType(CountryTile);
+    expect(tile, findsNothing);
+
+    await expectLater(
+      tester.tapAndSettle(find.byIcon(Icons.search)),
+      throwsAssertionError,
+    );
+  });
 
   testWidgets("searchSuggestions()", (tester) async {
     await tester.pumpMaterialApp(

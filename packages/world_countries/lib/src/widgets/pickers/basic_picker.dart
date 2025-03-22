@@ -220,7 +220,7 @@ abstract class BasicPicker<T extends IsoTranslated>
       "${TranslationMap<T>} translations map includes a key value pair for the "
       "{${item.runtimeType}(): '${item.internationalName} translation'} there."
       " Consider adding `localizationsDelegates: const [TypedLocaleDelegate()]`"
-      " to enable device locale-based automatic translation maps caching.",
+      " in the app to enable device locale-based auto. translation maps cache.",
     );
 
     assert(
