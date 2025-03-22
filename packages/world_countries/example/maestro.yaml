@@ -1,4 +1,4 @@
-appId: world.countries.example
+appId: world.countries.world_countries_example
 ---
 - launchApp
 - extendedWaitUntil:
