@@ -97,9 +97,12 @@ void main() => group("$CurrencyPicker", () {
       SearchAnchor.bar(
         suggestionsBuilder: const CurrencyPicker().searchSuggestions,
       ),
+      null,
+      const TypedLocaleDelegate(asyncTranslationCacheProcessing: false),
     );
     final tile = find.byType(CurrencyTile);
     expect(tile, findsNothing);
+    await tester.pumpAndSettle();
     await tester.tapAndSettle(find.byIcon(Icons.search));
     expect(tile, findsWidgets);
     await tester.tapAndSettle(tile.first);

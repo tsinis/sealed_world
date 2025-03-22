@@ -97,9 +97,12 @@ void main() => group("$LanguagePicker", () {
       SearchAnchor.bar(
         suggestionsBuilder: const LanguagePicker().searchSuggestions,
       ),
+      null,
+      const TypedLocaleDelegate(asyncTranslationCacheProcessing: false),
     );
     final tile = find.byType(LanguageTile);
     expect(tile, findsNothing);
+    await tester.pumpAndSettle();
     await tester.tapAndSettle(find.byIcon(Icons.search));
     expect(tile, findsWidgets);
     await tester.tapAndSettle(tile.first);

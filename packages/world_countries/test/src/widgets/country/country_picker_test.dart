@@ -137,21 +137,33 @@ void main() => group("$CountryPicker", () {
     }
   });
 
-  testWidgets("throw assert on empty $TypedLocaleDelegate", (tester) async {
-    await tester.pumpMaterialApp(
-      SearchAnchor.bar(
-        suggestionsBuilder: const CountryPicker().searchSuggestions,
-      ),
-      null,
-      const TypedLocaleDelegate.selectiveCache(),
-    );
-    final tile = find.byType(CountryTile);
-    expect(tile, findsNothing);
+  testWidgets("throws assert on empty $TypedLocaleDelegate", (tester) async {
+    bool assertionThrown = false;
+    final originalOnError = FlutterError.onError;
 
-    await expectLater(
-      tester.tapAndSettle(find.byIcon(Icons.search)),
-      throwsAssertionError,
-    );
+    FlutterError.onError = (details) {
+      if (details.exception is AssertionError &&
+          details.exception.toString().contains(
+            """The $TypedLocaleDelegate passed to the app's `localizationsDelegates`""",
+          )) {
+        assertionThrown = true;
+      } else {
+        originalOnError?.call(details);
+      }
+    };
+
+    try {
+      await tester.pumpMaterialApp(
+        const CountryPicker(),
+        null,
+        const TypedLocaleDelegate.selectiveCache(),
+      );
+      await tester.pump();
+
+      expect(assertionThrown, isTrue);
+    } finally {
+      FlutterError.onError = originalOnError;
+    }
   });
 
   testWidgets("searchSuggestions()", (tester) async {
