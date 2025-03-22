@@ -31,6 +31,9 @@ class TypedLocale extends Locale implements BasicTypedLocale {
   ///
   /// The [language] parameter is required.
   /// The [country] and [script] parameters are optional.
+  /// The [countryTranslations], [currencyTranslations], and
+  /// [languageTranslations] parameters are optional.
+  /// The [regionalCode] parameter is optional.
   const TypedLocale(
     this.language, {
     this.country,
@@ -50,6 +53,9 @@ class TypedLocale extends Locale implements BasicTypedLocale {
   ///
   /// The [language] parameter is required.
   /// The [country] and [script] parameters are optional.
+  /// The [countryTranslations], [currencyTranslations], and
+  /// [languageTranslations] parameters are optional.
+  /// The [regionalCode] parameter is optional.
   TypedLocale.fromSubtags({
     required this.language,
     this.country,

@@ -13,10 +13,13 @@ import "../../constants/ui_constants.dart";
 import "../../extensions/build_context_extension.dart";
 import "../../extensions/duration_extension.dart";
 import "../../extensions/world_countries_build_context_extension.dart";
+import "../../helpers/typed_locale_delegate.dart";
 import "../../interfaces/basic_picker_interface.dart";
 import "../../mixins/compare_search_mixin.dart";
 import "../../models/item_properties.dart";
 import "../../models/locale/typed_locale.dart";
+import "../../models/typedefs.dart";
+import "../../theme/pickers_theme_data.dart";
 import "../adaptive/adaptive_search_text_field.dart";
 import "../generic_widgets/implicit_search_delegate.dart";
 import "../generic_widgets/searchable_indexed_list_view_builder.dart";
@@ -149,8 +152,7 @@ abstract class BasicPicker<T extends IsoTranslated>
   @protected
   @mustCallSuper
   Iterable<String> defaultSearch(T item, BuildContext context) => [
-    _maybeNameTranslation(item, context) ??
-        item.commonNameFor(const BasicTypedLocale(LangEng())),
+    _maybeNameTranslation(item, context) ?? item.internationalName,
   ];
 
   /// Returns the name translation of the item (if exists) in form
@@ -189,10 +191,55 @@ abstract class BasicPicker<T extends IsoTranslated>
   }
 
   String? _maybeNameTranslation(T item, BuildContext context) {
-    final locale =
-        translation ?? context.pickersTheme?.translation ?? context.maybeLocale;
+    final direct = translation;
+    final global = context.maybeLocale;
+    final theme = context.pickersTheme?.translation;
 
-    return locale == null ? null : nameTranslationCache(item, locale);
+    if (direct == null && theme == null && global == null) return null;
+    String? result;
+
+    if (direct != null) {
+      result = nameTranslationCache(item, direct);
+      if (result != null) return result;
+    }
+
+    if (theme != null) {
+      result = nameTranslationCache(item, theme);
+      if (result != null) return result;
+    }
+
+    if (global != null) {
+      result = nameTranslationCache(item, global);
+      if (result != null) return result;
+    }
+
+    assert(
+      direct == null,
+      "The $TypedLocale passed to the `translation` parameter in the "
+      "$this lacks a translation for item: $item. Verify that the provided "
+      "${TranslationMap<T>} translations map includes a key value pair for the "
+      "{${item.runtimeType}(): '${item.internationalName} translation'} there."
+      " Consider adding `localizationsDelegates: const [TypedLocaleDelegate()]`"
+      " to enable device locale-based automatic translation maps caching.",
+    );
+
+    assert(
+      theme == null,
+      "The $TypedLocale passed to the `translation` parameter in "
+      "$PickersThemeData lacks a translation for item: $item. Verify that the "
+      "${TranslationMap<T>} translations map includes a key value pair for the "
+      "{${item.runtimeType}(): '${item.internationalName} translation'} there.",
+    );
+
+    assert(
+      global == null,
+      "The $TypedLocaleDelegate passed to the app's `localizationsDelegates` "
+      "parameter lacks a translation for item: $item. Verify that the "
+      "translation cache includes a key value pair for the "
+      "{${item.runtimeType}(): '${item.internationalName} translation'} there.",
+    );
+
+    return result;
   }
 
   /// Returns translated common name of the item (if exists).
