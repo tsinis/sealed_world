@@ -7,6 +7,7 @@ import "package:flutter/foundation.dart" show immutable, required;
 import "package:world_flags/world_flags.dart";
 
 import "../../extensions/typed_locale_extension.dart";
+import "../typedefs.dart";
 
 /// A class representing a typed locale with optional country and script.
 ///
@@ -105,13 +106,13 @@ class TypedLocale extends Locale implements BasicTypedLocale {
   final Script? script;
 
   /// Common country names translations for the current locale.
-  final Map<WorldCountry, String> countryTranslations;
+  final TranslationMap<WorldCountry> countryTranslations;
 
   /// Common currency names translations for the current locale.
-  final Map<FiatCurrency, String> currencyTranslations;
+  final TranslationMap<FiatCurrency> currencyTranslations;
 
   /// Common language names translations for the current locale.
-  final Map<NaturalLanguage, String> languageTranslations;
+  final TranslationMap<NaturalLanguage> languageTranslations;
 
   @override
   String? get countryCode =>
@@ -126,14 +127,14 @@ class TypedLocale extends Locale implements BasicTypedLocale {
   /// Returns a copy of the [TypedLocale] object with the specified properties.
   /// {@macro copy_with_method}
   @required
-  // ignore: long-parameter-list, class has 6 properties.
+  // ignore: long-parameter-list, class has 7 properties.
   TypedLocale copyWith({
     NaturalLanguage? language,
     WorldCountry? country,
     Script? script,
-    Map<WorldCountry, String>? countryTranslations,
-    Map<FiatCurrency, String>? currencyTranslations,
-    Map<NaturalLanguage, String>? languageTranslations,
+    TranslationMap<WorldCountry>? countryTranslations,
+    TranslationMap<FiatCurrency>? currencyTranslations,
+    TranslationMap<NaturalLanguage>? languageTranslations,
     String? regionalCode,
   }) => TypedLocale(
     language ?? this.language,
