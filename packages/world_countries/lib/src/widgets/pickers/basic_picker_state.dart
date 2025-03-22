@@ -25,6 +25,20 @@ class _BasicPickerState<T extends IsoTranslated> extends State<BasicPicker<T>> {
   // ignore: avoid-high-cyclomatic-complexity, build methods are typically long.
   Widget build(BuildContext context) {
     final theme = context.pickersTheme;
+    final maybeSearchBar = widget.searchBar ?? theme?.searchBar;
+    final adaptiveTextField =
+        (widget.showHeader ?? theme?.showHeader ?? true)
+            ? AdaptiveSearchTextField(
+              _controller,
+              copyFrom: maybeSearchBar,
+              padding:
+                  widget.searchBarPadding ??
+                  theme?.searchBarPadding ??
+                  UiConstants.padding,
+              showClearButton:
+                  widget.showClearButton ?? theme?.showClearButton ?? true,
+            )
+            : null;
 
     return SearchableIndexedListViewBuilder<T>(
       widget.items,
@@ -48,22 +62,11 @@ class _BasicPickerState<T extends IsoTranslated> extends State<BasicPicker<T>> {
           DragStartBehavior.start,
       emptyStatePlaceholder: widget.emptyStatePlaceholder,
       header:
-          (widget.showHeader ?? theme?.showHeader ?? true)
-              ? (widget.header ??
-                  theme?.header ??
-                  AdaptiveSearchTextField(
-                    _controller,
-                    copyFrom: widget.searchBar ?? theme?.searchBar,
-                    padding:
-                        widget.searchBarPadding ??
-                        theme?.searchBarPadding ??
-                        UiConstants.padding,
-                    showClearButton:
-                        widget.showClearButton ??
-                        theme?.showClearButton ??
-                        true,
-                  ))
-              : null,
+          adaptiveTextField == null
+              ? null
+              : maybeSearchBar == null
+              ? (widget.header ?? theme?.header ?? adaptiveTextField)
+              : adaptiveTextField,
       itemBuilder:
           (itemProperties, {isDense}) =>
               widget.itemBuilder?.call(itemProperties, isDense: isDense) ??
