@@ -6,7 +6,7 @@ import "package:flutter/gestures.dart";
 import "package:flutter/material.dart";
 import "package:flutter/services.dart";
 
-import "../../helpers.dart";
+import "../helpers/name_text_input.dart" show NameTextInput;
 
 /// Extension providing `copyWith` functionality for [TextField] class.
 extension TextFieldExtension on TextField? {

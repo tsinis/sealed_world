@@ -71,6 +71,9 @@ You can use provided widgets directly, or just use their methods:
 
 ### L10N
 
+> [!WARNING]
+> Adding `TypedLocaleDelegate` to your app is essential for both proper localization AND optimized search functionality in pickers. It automatically caches translations based on the user's locale, significantly improving search performance.
+
 For automatic translations of the pickers just add delegate to your app widget:
 
 ```dart
@@ -108,7 +111,7 @@ void main() => runApp(
         localizationsDelegates: const [
           GlobalMaterialLocalizations.delegate,
           GlobalCupertinoLocalizations.delegate,
-          TypedLocaleDelegate(
+          TypedLocaleDelegate( // ! Don't forget to add this delegate too !
             localeMapResolution: [
               /// Just as an example, Brazil could be mapped to Euro Portuguese.
               LocaleEntry(

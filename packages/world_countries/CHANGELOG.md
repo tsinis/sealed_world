@@ -1,3 +1,18 @@
+## 3.3.0
+
+DOCUMENTATION
+
+- Highlight importance of `TypedLocaleDelegate` usage in app's `localizationsDelegates`, for pickers L10N and improved search functionality.
+
+REFACTOR
+
+- Enhanced translation fallback mechanism in pickers. Previously, translations would only use the first available locale. Now, the system tries multiple sources in sequence:
+  1. Direct `translation` provided to the picker.
+  2. Theme-level `translation` from `PickersThemeData`.
+  3. Global app translation from localizationsDelegates via `TypedLocaleDelegate`.
+- Added assertion messages to help developers identify missing translations more easily.
+- Improved translation debugging through more descriptive error messages.
+
 ## 3.2.0
 
 - This is maintenance release without significant changes for the users, that aims to fix dropped pub score after Flutter v3.29.0.
@@ -50,6 +65,7 @@ BREAKING CHANGES
 - Generic and `base` keyword on `TypedLocale` class are removed, you can still use new `regionalCode` parameter to provide non-typed region/country info there.
 - The default `toString()` implementation of `BasicLocale` now uses Flutter's `Locale`-like output format. You can still access the old output by setting the `short` flag to `false`.
 - The `sealed_country_translations` library is removed. Migrate to the [l10n_countries](https://pub.dev/packages/l10n_countries) package or use `l10n` getter in ISO objects that provides the same data without holding all translations in memory. This sub-library and its content (except for supported locales lists - they will be moved to the main library) will be removed in the next major package version.
+- From now on you most like will need to explicitly provide a `localizationsDelegates: const [TypedLocaleDelegate()],` to your app, for pickers L10N and improved search.
 - Country translation methods requires `BasicTypedLocale` instead of `BasicLocale`, if you didn't used country value - this change will not affect you, same applies to `TypedLocale`. If you provided non-typed country data there - please change from:
 
 ```dart
