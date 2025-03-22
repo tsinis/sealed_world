@@ -2,7 +2,7 @@
 
 DOCUMENTATION
 
-- Highlight importance of `TypedLocaleDelegate` usage in app's `localizationsDelegates`, for pickers L10N and improved search functionality.
+- Highlight [importance](https://github.com/tsinis/sealed_world/issues/313) of `TypedLocaleDelegate` usage in app's `localizationsDelegates`, for pickers L10N and improved search functionality. Thanks @wildsurfer!
 
 REFACTOR
 
@@ -65,7 +65,7 @@ BREAKING CHANGES
 - Generic and `base` keyword on `TypedLocale` class are removed, you can still use new `regionalCode` parameter to provide non-typed region/country info there.
 - The default `toString()` implementation of `BasicLocale` now uses Flutter's `Locale`-like output format. You can still access the old output by setting the `short` flag to `false`.
 - The `sealed_country_translations` library is removed. Migrate to the [l10n_countries](https://pub.dev/packages/l10n_countries) package or use `l10n` getter in ISO objects that provides the same data without holding all translations in memory. This sub-library and its content (except for supported locales lists - they will be moved to the main library) will be removed in the next major package version.
-- From now on you most like will need to explicitly provide a `localizationsDelegates: const [TypedLocaleDelegate()],` to your app, for pickers L10N and improved search.
+- From now on, you will most likely need to explicitly provide a `localizationsDelegates: const [TypedLocaleDelegate()],` to your app, for pickers L10N and improved search.
 - Country translation methods requires `BasicTypedLocale` instead of `BasicLocale`, if you didn't used country value - this change will not affect you, same applies to `TypedLocale`. If you provided non-typed country data there - please change from:
 
 ```dart
