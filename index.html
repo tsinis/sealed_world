@@ -1,15 +1,30 @@
 <!DOCTYPE html>
 <html>
   <head>
+    <!--
+    If you are serving your web app in a path other than the root, change the
+    href value below to reflect the base path you are serving from.
+
+    The path provided below has to start and end with a slash "/" in order for
+    it to work correctly.
+
+    For more details:
+    * https://developer.mozilla.org/en-US/docs/Web/HTML/Element/base
+
+    This is a placeholder for base href that will be replaced by the value of
+    the `--base-href` argument provided to `flutter build`.
+  -->
     <base href="/sealed_world/" />
+
     <meta charset="UTF-8" />
     <meta content="IE=Edge" http-equiv="X-UA-Compatible" />
     <meta
       name="description"
       content="An example project for sealed_world packages."
     />
+
     <!-- iOS meta tags & icons -->
-    <meta name="apple-mobile-web-app-capable" content="yes" />
+    <meta name="mobile-web-app-capable" content="yes" />
     <meta name="apple-mobile-web-app-status-bar-style" content="black" />
     <meta name="apple-mobile-web-app-title" content="Sealed World" />
     <link rel="apple-touch-icon" href="icons/Icon-192.png" />
@@ -19,186 +34,8 @@
 
     <title>Sealed World</title>
     <link rel="manifest" href="manifest.json" />
-
-    <!-- Fonts -->
-    <link
-      href="https://fonts.googleapis.com/css?family=Roboto:400"
-      rel="stylesheet"
-      media="all"
-    />
-
-    <!-- Renderer specifier -->
-    <script>
-      let searchParams = new URLSearchParams(window.location.search);
-      if (searchParams.has("renderer")) {
-        window.flutterWebRenderer = searchParams.get("renderer");
-        console.log(
-          searchParams.get("renderer") + " renderer requested in the URL"
-        );
-      }
-      // The value below is injected by flutter build, do not touch.
-      const serviceWorkerVersion = "2373157372";
-    </script>
-
-    <script src="flutter.js" defer></script>
   </head>
-
   <body>
-    <style>
-      body {
-        background-color: #000000;
-      }
-    </style>
-
-    <!-- Background -->
-    <style>
-      body.light {
-        background-color: #999999;
-      }
-
-      body.dark {
-        background-color: #383838;
-      }
-    </style>
-    <script>
-      var queryParams = new URLSearchParams(window.location.search);
-
-      // Set the theme from the URL param, with fallback to user preference if no theme is
-      // specified.
-      var theme = queryParams.get("brightness");
-      theme ||= window.matchMedia("(prefers-color-scheme: dark)").matches
-        ? "dark"
-        : "light";
-      document.body.classList.add(theme);
-    </script>
-
-    <!-- Loading indicator -->
-    <div id="loading">
-      <style>
-        body {
-          inset: 0;
-          overflow: hidden;
-          margin: 0;
-          padding: 0;
-          position: fixed;
-        }
-
-        #loading {
-          align-items: center;
-          display: flex;
-          flex-direction: column;
-          height: 100%;
-          justify-content: center;
-          width: 100%;
-        }
-
-        #loading img {
-          animation: 1s ease-in-out 0s infinite alternate breathe;
-          opacity: 0.66;
-          transition: opacity 0.4s;
-        }
-
-        #loading.main_done img {
-          opacity: 1;
-        }
-
-        #loading.init_done img {
-          animation: 0.33s ease-in-out 0s 1 forwards zoom;
-          opacity: 0.05;
-        }
-
-        #loading .warning {
-          font-size: 18px;
-          text-align: center;
-          margin-top: 64px;
-          display: none;
-          color: white;
-          font-family: "Robot", sans-serif;
-        }
-
-        body.light #loading .warning {
-          color: black;
-        }
-
-        #loading.show-warning .warning {
-          display: block;
-        }
-
-        #loading .warning a {
-          text-decoration: none;
-          color: inherit;
-        }
-
-        @keyframes breathe {
-          from {
-            transform: scale(1);
-          }
-
-          to {
-            transform: scale(0.95);
-          }
-        }
-
-        @keyframes zoom {
-          from {
-            transform: scale(1);
-          }
-
-          to {
-            transform: scale(0.01);
-          }
-        }
-      </style>
-      <img src="icons/loader.gif" alt="Loading..." width="80" height="80" />
-      <div class="warning">
-        <a
-          href="https://docs.flutter.dev/platform-integration/web/wasm#load-it-in-a-browser"
-          target="_blank"
-          style="text-decoration: none; color: inherit"
-        >
-          Only Chrome v119+ is supported.
-        </a>
-      </div>
-    </div>
-
-    <script>
-      document.addEventListener("DOMContentLoaded", function () {
-        var loading = document.querySelector("#loading");
-        var isChrome = typeof chrome !== "undefined";
-        var userAgent = navigator.userAgent;
-        var hasProperVersion =
-          isChrome && parseInt(userAgent.split("Chrome/")[1]) >= 119;
-
-        if (!isChrome || !hasProperVersion) {
-          loading.classList.add("show-warning");
-        } else {
-          _flutter.loader
-            .loadEntrypoint({
-              serviceWorker: { serviceWorkerVersion: serviceWorkerVersion },
-            })
-            .then(function (engineInitializer) {
-              loading.classList.add("main_done");
-              // https://github.com/flutter/flutter/issues/119536#issuecomment-1500477408
-              return engineInitializer.initializeEngine({
-                useColorEmoji: true,
-                canvasKitVariant: "chromium",
-              });
-            })
-            .then(function (appRunner) {
-              loading.classList.add("init_done");
-              return appRunner.runApp();
-            })
-            .then(function (app) {
-              // Wait a few milliseconds so users can see the zoom animation
-              // before getting rid of the "loading" div.
-              window.setTimeout(function () {
-                loading.remove();
-              }, 200);
-            });
-        }
-      });
-    </script>
-
-    <!-- App -->
+    <script src="flutter_bootstrap.js" async></script>
   </body>
 </html>
