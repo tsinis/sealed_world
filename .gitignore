@@ -22,7 +22,6 @@ doc/api/
 
 # Miscellaneous
 *.class
-*.lock
 *.log
 *.pyc
 *.swp
@@ -63,7 +62,6 @@ version
 .packages.generated
 
 # Flutter/Dart/Pub related
-pubspec.lock
 .dart_tool/
 .flutter-plugins
 .flutter-plugins-dependencies
@@ -76,7 +74,10 @@ linked_*.ds
 unlinked.ds
 unlinked_spec.ds
 
-# Windows thumbnail cache files
+# Apple related
+Podfile.lock
+
+# Microsoft related
 Thumbs.db
 Thumbs.db:encryptable
 ehthumbs.db
@@ -109,7 +110,6 @@ coverage_badge.svg
 nohup.out
 
 # Platfroms except Flutter examples
-!packages/*/example/pubspec.lock
 macos/
 !packages/*/example/macos
 windows/

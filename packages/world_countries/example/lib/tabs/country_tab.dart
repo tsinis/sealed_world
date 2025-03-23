@@ -22,7 +22,7 @@ final class CountryTab extends WorldDataTab<BasicTypedLocale, WorldCountry> {
   @override
   Widget build(BuildContext context) => TabBody(
     title: Text(
-      data.commonNameFor(const BasicTypedLocale(LangEng())),
+      data.internationalName,
       style: context.theme.textTheme.headlineSmall,
       textAlign: TextAlign.center,
     ),

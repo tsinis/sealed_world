@@ -23,7 +23,6 @@ extension WidgetTesterExtension on WidgetTester {
     textBaseline: TextBaseline.alphabetic,
     textDirection: TextDirection.ltr,
     searchBarPadding: EdgeInsets.zero,
-    translation: TypedLocale(LangEng()),
   );
 
   Future<BuildContext> contextExtractor([
@@ -37,12 +36,12 @@ extension WidgetTesterExtension on WidgetTester {
   Future<MaterialApp> pumpMaterialApp(
     Widget child, [
     ThemeExtension? theme,
+    TypedLocaleDelegate? delegate,
   ]) async {
     final app = MaterialApp(
       home: Scaffold(body: child),
-      theme: ThemeData(
-        extensions: <ThemeExtension>[if (theme != null) theme, pickersTheme],
-      ),
+      localizationsDelegates: delegate == null ? null : [delegate],
+      theme: ThemeData(extensions: <ThemeExtension>[theme ?? pickersTheme]),
     );
     await pumpWidget(app);
 
@@ -150,12 +149,6 @@ extension WidgetTesterExtension on WidgetTester {
                 ),
           ),
         ),
-        localizationsDelegates: [
-          if (inDialog ?? false)
-            const TypedLocaleDelegate.selectiveCache()
-          else
-            const TypedLocaleDelegate(),
-        ],
         supportedLocales: supportedLocales,
       ),
     );

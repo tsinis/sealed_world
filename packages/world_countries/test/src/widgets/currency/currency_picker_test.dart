@@ -1,6 +1,7 @@
 // ignore_for_file: unnecessary_async, missing-test-assertion
 import "package:flutter/material.dart";
 import "package:flutter_test/flutter_test.dart";
+import "package:world_countries/src/helpers/typed_locale_delegate.dart";
 import "package:world_countries/src/theme/tile_theme_data/currency_tile_theme_data.dart";
 import "package:world_countries/src/widgets/currency/currency_picker.dart";
 import "package:world_countries/src/widgets/currency/currency_tile.dart";
@@ -74,14 +75,34 @@ void main() => group("$CurrencyPicker", () {
     ),
   );
 
+  testWidgets("throw assert on empty $TypedLocaleDelegate", (tester) async {
+    await tester.pumpMaterialApp(
+      SearchAnchor.bar(
+        suggestionsBuilder: const CurrencyPicker().searchSuggestions,
+      ),
+      null,
+      const TypedLocaleDelegate.selectiveCache(),
+    );
+    final tile = find.byType(CurrencyTile);
+    expect(tile, findsNothing);
+
+    await expectLater(
+      tester.tapAndSettle(find.byIcon(Icons.search)),
+      throwsAssertionError,
+    );
+  });
+
   testWidgets("searchSuggestions()", (tester) async {
     await tester.pumpMaterialApp(
       SearchAnchor.bar(
         suggestionsBuilder: const CurrencyPicker().searchSuggestions,
       ),
+      null,
+      const TypedLocaleDelegate(asyncTranslationCacheProcessing: false),
     );
     final tile = find.byType(CurrencyTile);
     expect(tile, findsNothing);
+    await tester.pumpAndSettle();
     await tester.tapAndSettle(find.byIcon(Icons.search));
     expect(tile, findsWidgets);
     await tester.tapAndSettle(tile.first);
