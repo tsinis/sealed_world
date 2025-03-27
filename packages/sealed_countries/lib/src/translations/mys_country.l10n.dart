@@ -151,7 +151,7 @@ import "../model/country/submodels/country_name.dart";
 /// - Yoruba
 /// - Zhuang (Chuang)
 /// - Zulu.
-const mysCountryTranslations = [
+const mysCountryTranslations = <TranslatedName>[
   CountryName(language: LangEng(), official: "Malaysia", common: "Malaysia"),
   CountryName(language: LangSrp(), official: "Малезија", common: "Малезија"),
   CountryName(language: LangAra(), official: "ماليزيا", common: "ماليزيا"),

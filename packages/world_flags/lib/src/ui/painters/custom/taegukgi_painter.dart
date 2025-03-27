@@ -13,7 +13,8 @@ final class TaegukgiPainter extends CustomElementsPainter {
   @override
   double get originalAspectRatio => flagKorProperties.aspectRatio;
 
-  static const _radians = -123 * pi / 180;
+// ignore: avoid-explicit-type-declaration, vs specify_nonobvious_property_types.
+  static const double _radians = -123 * pi / 180;
 
   @override
   FlagParentBounds? paintFlagElements(Canvas canvas, Size size) {

@@ -327,7 +327,7 @@ class Script extends WritingSystem
   /// Script.codeMap['Latn']; // ScriptLatn().
   /// ```
   static const codeMap =
-      UpperCaseIsoMap(scriptCodeMap, exactLength: codeLength);
+      UpperCaseIsoMap<Script>(scriptCodeMap, exactLength: codeLength);
 
   /// A tree-shakable constant map containing numeric script (ISO 15924 Numeric)
   /// codes and their associated [Script] objects, for a O(1) access time.
@@ -337,7 +337,7 @@ class Script extends WritingSystem
   /// ```dart
   /// Script.codeNumericMap[215.toString()]; // ScriptLatn().
   /// ```
-  static const codeNumericMap = UpperCaseIsoMap(scriptCodeOtherMap);
+  static const codeNumericMap = UpperCaseIsoMap<Script>(scriptCodeOtherMap);
 
   /// A tree-shakable combined map of [codeMap] and [codeNumericMap], providing
   /// a unified view of script codes and their [Script] objects, for a O(1)
@@ -348,7 +348,7 @@ class Script extends WritingSystem
   /// ```dart
   /// Script.map['Latn']; // ScriptLatn().
   /// ```
-  static const map = UpperCaseIsoMap(
+  static const map = UpperCaseIsoMap<Script>(
     {...scriptCodeMap, ...scriptCodeOtherMap},
     exactLength: null, // ignore: avoid-passing-default-values, is not default.
     maxLength: codeLength,
@@ -357,5 +357,6 @@ class Script extends WritingSystem
 
   /// A tree-shakable list of all the scripts currently supported
   /// by the [Script] class.
-  static const list = scriptList;
+// ignore: avoid-explicit-type-declaration, vs specify_nonobvious_property_types.
+  static const List<Script> list = scriptList;
 }

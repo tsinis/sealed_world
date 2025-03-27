@@ -202,7 +202,7 @@ export "src/translations/zwl_currency.l10n.dart";
 /// - Luxembourgish (Letzeburgesch) (LTZ)
 /// That are not listed in Material one, and much more.
 // ignore: prefer-static-class, to follow pattern from languages.
-const kSealedCurrenciesSupportedLanguages = [
+const kSealedCurrenciesSupportedLanguages = <NaturalLanguage>[
   LangAfr(),
   LangAmh(),
   LangAra(),

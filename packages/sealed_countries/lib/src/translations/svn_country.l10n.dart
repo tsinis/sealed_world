@@ -152,7 +152,7 @@ import "../model/country/submodels/country_name.dart";
 /// - Yoruba
 /// - Zhuang (Chuang)
 /// - Zulu.
-const svnCountryTranslations = [
+const svnCountryTranslations = <TranslatedName>[
   CountryName(
     language: LangEng(),
     official: "Republic of Slovenia",

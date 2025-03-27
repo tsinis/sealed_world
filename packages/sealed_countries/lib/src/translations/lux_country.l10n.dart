@@ -154,7 +154,7 @@ import "../model/country/submodels/country_name.dart";
 /// - Yoruba
 /// - Zhuang (Chuang)
 /// - Zulu.
-const luxCountryTranslations = [
+const luxCountryTranslations = <TranslatedName>[
   CountryName(
     language: LangEng(),
     official: "Grand Duchy of Luxembourg",

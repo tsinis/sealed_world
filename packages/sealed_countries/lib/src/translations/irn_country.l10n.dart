@@ -145,7 +145,7 @@ import "../model/country/submodels/country_name.dart";
 /// - Yoruba
 /// - Zhuang (Chuang)
 /// - Zulu.
-const irnCountryTranslations = [
+const irnCountryTranslations = <TranslatedName>[
   CountryName(
     language: LangEng(),
     official: "Islamic Republic of Iran",

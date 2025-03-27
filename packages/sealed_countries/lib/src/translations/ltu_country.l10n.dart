@@ -163,7 +163,7 @@ import "../model/country/submodels/country_name.dart";
 /// - Yoruba
 /// - Zhuang (Chuang)
 /// - Zulu.
-const ltuCountryTranslations = [
+const ltuCountryTranslations = <TranslatedName>[
   CountryName(
     language: LangEng(),
     official: "Republic of Lithuania",

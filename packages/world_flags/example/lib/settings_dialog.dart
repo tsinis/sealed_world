@@ -26,7 +26,7 @@ class SettingsDialog extends StatefulWidget {
 }
 
 class _SettingsDialogState extends State<SettingsDialog> {
-  final _opacity = ValueNotifier(1 / 2);
+  final _opacity = ValueNotifier<double>(1 / 2);
 
   WorldCountry get _country => widget.country;
 

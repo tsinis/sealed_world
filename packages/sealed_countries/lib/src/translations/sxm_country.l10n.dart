@@ -119,7 +119,7 @@ import "../model/country/submodels/country_name.dart";
 /// - Xhosa
 /// - Yoruba
 /// - Zulu.
-const sxmCountryTranslations = [
+const sxmCountryTranslations = <TranslatedName>[
   CountryName(
     language: LangEng(),
     official: "Sint Maarten",

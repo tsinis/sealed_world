@@ -137,7 +137,7 @@ import "../model/country/submodels/country_name.dart";
 /// - Yoruba
 /// - Zhuang (Chuang)
 /// - Zulu.
-const mdvCountryTranslations = [
+const mdvCountryTranslations = <TranslatedName>[
   CountryName(
     language: LangEng(),
     official: "Republic of the Maldives",

@@ -135,7 +135,7 @@ import "../model/country/submodels/country_name.dart";
 /// - Yoruba
 /// - Zhuang (Chuang)
 /// - Zulu.
-const lieCountryTranslations = [
+const lieCountryTranslations = <TranslatedName>[
   CountryName(
     language: LangEng(),
     official: "Principality of Liechtenstein",

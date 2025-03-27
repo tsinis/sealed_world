@@ -30,7 +30,8 @@ class Main extends StatefulWidget {
 }
 
 class _MainState extends State<Main> {
-  static const _size = kMinInteractiveDimension / 2;
+  // ignore: specify_nonobvious_property_types, a double as it's divided by 2.0.
+  static const _size = kMinInteractiveDimension / 2.0;
   final _aspectRatio = ValueNotifier<double?>(null);
 
   @override

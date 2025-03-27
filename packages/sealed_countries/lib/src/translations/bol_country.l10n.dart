@@ -153,7 +153,7 @@ import "../model/country/submodels/country_name.dart";
 /// - Yoruba
 /// - Zhuang (Chuang)
 /// - Zulu.
-const bolCountryTranslations = [
+const bolCountryTranslations = <TranslatedName>[
   CountryName(
     language: LangEng(),
     official: "Plurinational State of Bolivia",

@@ -136,7 +136,7 @@ import "../model/country/submodels/country_name.dart";
 /// - Yiddish
 /// - Yoruba
 /// - Zulu.
-const fsmCountryTranslations = [
+const fsmCountryTranslations = <TranslatedName>[
   CountryName(
     language: LangEng(),
     official: "Federated States of Micronesia",

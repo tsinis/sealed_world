@@ -164,7 +164,7 @@ import "../model/country/submodels/country_name.dart";
 /// - Yoruba
 /// - Zhuang (Chuang)
 /// - Zulu.
-const gbrCountryTranslations = [
+const gbrCountryTranslations = <TranslatedName>[
   CountryName(
     language: LangEng(),
     official: "United Kingdom of Great Britain and Northern Ireland",

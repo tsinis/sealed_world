@@ -142,7 +142,7 @@ import "../model/country/submodels/country_name.dart";
 /// - Yoruba
 /// - Zhuang (Chuang)
 /// - Zulu.
-const senCountryTranslations = [
+const senCountryTranslations = <TranslatedName>[
   CountryName(
     language: LangEng(),
     official: "Republic of Senegal",

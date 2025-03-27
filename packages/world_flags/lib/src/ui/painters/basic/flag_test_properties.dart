@@ -1,6 +1,6 @@
-// ignore_for_file: prefer-static-class
+// ignore_for_file: omit_obvious_property_types, prefer-static-class
 
-import "package:flutter/material.dart";
+import "package:flutter/material.dart" show TextStyle, visibleForTesting;
 
 /// A flag to control anti-aliasing for flag elements.
 ///

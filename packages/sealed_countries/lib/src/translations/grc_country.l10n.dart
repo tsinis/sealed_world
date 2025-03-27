@@ -157,7 +157,7 @@ import "../model/country/submodels/country_name.dart";
 /// - Yoruba
 /// - Zhuang (Chuang)
 /// - Zulu.
-const grcCountryTranslations = [
+const grcCountryTranslations = <TranslatedName>[
   CountryName(
     language: LangEng(),
     official: "Hellenic Republic",

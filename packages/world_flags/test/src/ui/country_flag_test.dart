@@ -1,4 +1,4 @@
-// ignore_for_file: missing-test-assertion, tested in flagGolden method.
+// ignore_for_file: unnecessary_async, missing-test-assertion, flagGolden method
 
 import "package:arabic_font/arabic_font.dart";
 import "package:flutter/material.dart";

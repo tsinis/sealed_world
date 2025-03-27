@@ -131,7 +131,7 @@ import "../model/country/submodels/country_name.dart";
 /// - Yoruba
 /// - Zhuang (Chuang)
 /// - Zulu.
-const gumCountryTranslations = [
+const gumCountryTranslations = <TranslatedName>[
   CountryName(language: LangEng(), official: "Guam", common: "Guam"),
   CountryName(language: LangSrp(), official: "Гуам", common: "Гуам"),
   CountryName(language: LangAra(), official: "غوام", common: "غوام"),

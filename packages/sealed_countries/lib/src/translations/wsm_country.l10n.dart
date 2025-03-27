@@ -133,7 +133,7 @@ import "../model/country/submodels/country_name.dart";
 /// - Yoruba
 /// - Zhuang (Chuang)
 /// - Zulu.
-const wsmCountryTranslations = [
+const wsmCountryTranslations = <TranslatedName>[
   CountryName(
     language: LangEng(),
     official: "Independent State of Samoa",

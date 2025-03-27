@@ -152,7 +152,7 @@ import "../model/country/submodels/country_name.dart";
 /// - Yoruba
 /// - Zhuang (Chuang)
 /// - Zulu.
-const codCountryTranslations = [
+const codCountryTranslations = <TranslatedName>[
   CountryName(
     language: LangEng(),
     official: "Democratic Republic of the Congo",

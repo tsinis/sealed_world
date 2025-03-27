@@ -147,7 +147,7 @@ import "../model/country/submodels/country_name.dart";
 /// - Yoruba
 /// - Zhuang (Chuang)
 /// - Zulu.
-const venCountryTranslations = [
+const venCountryTranslations = <TranslatedName>[
   CountryName(
     language: LangEng(),
     official: "Bolivarian Republic of Venezuela",

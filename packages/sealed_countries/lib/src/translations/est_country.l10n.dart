@@ -151,7 +151,7 @@ import "../model/country/submodels/country_name.dart";
 /// - Yoruba
 /// - Zhuang (Chuang)
 /// - Zulu.
-const estCountryTranslations = [
+const estCountryTranslations = <TranslatedName>[
   CountryName(
     language: LangEng(),
     official: "Republic of Estonia",

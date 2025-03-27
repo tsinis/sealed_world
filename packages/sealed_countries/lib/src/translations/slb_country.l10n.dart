@@ -144,7 +144,7 @@ import "../model/country/submodels/country_name.dart";
 /// - Yiddish
 /// - Yoruba
 /// - Zulu.
-const slbCountryTranslations = [
+const slbCountryTranslations = <TranslatedName>[
   CountryName(
     language: LangEng(),
     official: "Solomon Islands",

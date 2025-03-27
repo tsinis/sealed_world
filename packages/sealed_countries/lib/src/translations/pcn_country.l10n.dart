@@ -133,7 +133,7 @@ import "../model/country/submodels/country_name.dart";
 /// - Yiddish
 /// - Yoruba
 /// - Zulu.
-const pcnCountryTranslations = [
+const pcnCountryTranslations = <TranslatedName>[
   CountryName(
     language: LangEng(),
     official: "Pitcairn Group of Islands",

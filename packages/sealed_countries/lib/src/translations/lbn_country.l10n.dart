@@ -154,7 +154,7 @@ import "../model/country/submodels/country_name.dart";
 /// - Yoruba
 /// - Zhuang (Chuang)
 /// - Zulu.
-const lbnCountryTranslations = [
+const lbnCountryTranslations = <TranslatedName>[
   CountryName(
     language: LangEng(),
     official: "Lebanese Republic",

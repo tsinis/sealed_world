@@ -121,7 +121,7 @@ import "../model/country/submodels/country_name.dart";
 /// - Xhosa
 /// - Yoruba
 /// - Zulu.
-const hmdCountryTranslations = [
+const hmdCountryTranslations = <TranslatedName>[
   CountryName(
     language: LangEng(),
     official: "Heard Island and McDonald Islands",

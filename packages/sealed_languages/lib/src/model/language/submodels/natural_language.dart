@@ -401,7 +401,8 @@ class NaturalLanguage extends Language
   /// ```dart
   /// NaturalLanguage.codeMap[' eng']; // LangEng().
   /// ```
-  static const codeMap = UpperCaseIsoMap(naturalLanguageCodeMap);
+  static const codeMap =
+      UpperCaseIsoMap<NaturalLanguage>(naturalLanguageCodeMap);
 
   /// A tree-shakable constant map containing short language (ISO 639-1) codes
   /// and their associated [NaturalLanguage] objects, for a O(1) access time.
@@ -411,7 +412,7 @@ class NaturalLanguage extends Language
   /// ```dart
   /// NaturalLanguage.codeShortMap['en ']; // LangEng().
   /// ```
-  static const codeShortMap = UpperCaseIsoMap(
+  static const codeShortMap = UpperCaseIsoMap<NaturalLanguage>(
     naturalLanguageCodeOtherMap,
     exactLength: IsoStandardized.codeShortLength,
   );
@@ -425,12 +426,13 @@ class NaturalLanguage extends Language
   /// ```dart
   /// NaturalLanguage.map[' en ']; // LangEng().
   /// ```
-  static const map = UpperCaseIsoMap(
+  static const map = UpperCaseIsoMap<NaturalLanguage>(
     {...naturalLanguageCodeMap, ...naturalLanguageCodeOtherMap},
     exactLength: null, // ignore: avoid-passing-default-values, is not default.
   );
 
   /// A tree-shakable list of all the natural languages currently
   /// supported by the [NaturalLanguage] class.
-  static const list = naturalLanguageList;
+// ignore: avoid-explicit-type-declaration, vs specify_nonobvious_property_types.
+  static const List<NaturalLanguage> list = naturalLanguageList;
 }

@@ -146,7 +146,7 @@ import "../model/country/submodels/country_name.dart";
 /// - Yiddish
 /// - Yoruba
 /// - Zulu.
-const eriCountryTranslations = [
+const eriCountryTranslations = <TranslatedName>[
   CountryName(
     language: LangEng(),
     official: "State of Eritrea",

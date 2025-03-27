@@ -157,7 +157,7 @@ import "../model/country/submodels/country_name.dart";
 /// - Yoruba
 /// - Zhuang (Chuang)
 /// - Zulu.
-const vatCountryTranslations = [
+const vatCountryTranslations = <TranslatedName>[
   CountryName(
     language: LangEng(),
     official: "Vatican City State",

@@ -132,7 +132,7 @@ import "../model/country/submodels/country_name.dart";
 /// - Xhosa
 /// - Yoruba
 /// - Zulu.
-const asmCountryTranslations = [
+const asmCountryTranslations = <TranslatedName>[
   CountryName(
     language: LangEng(),
     official: "American Samoa",

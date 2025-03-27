@@ -163,7 +163,7 @@ import "../model/country/submodels/country_name.dart";
 /// - Yoruba
 /// - Zhuang (Chuang)
 /// - Zulu.
-const belCountryTranslations = [
+const belCountryTranslations = <TranslatedName>[
   CountryName(
     language: LangEng(),
     official: "Kingdom of Belgium",

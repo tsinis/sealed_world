@@ -156,7 +156,7 @@ import "../model/country/submodels/country_name.dart";
 /// - Yoruba
 /// - Zhuang (Chuang)
 /// - Zulu.
-const dnkCountryTranslations = [
+const dnkCountryTranslations = <TranslatedName>[
   CountryName(
     language: LangEng(),
     official: "Kingdom of Denmark",

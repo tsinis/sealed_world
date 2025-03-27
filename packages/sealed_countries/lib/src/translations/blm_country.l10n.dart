@@ -123,7 +123,7 @@ import "../model/country/submodels/country_name.dart";
 /// - Xhosa
 /// - Yoruba
 /// - Zulu.
-const blmCountryTranslations = [
+const blmCountryTranslations = <TranslatedName>[
   CountryName(
     language: LangEng(),
     official: "Collectivity of Saint Barthélemy",

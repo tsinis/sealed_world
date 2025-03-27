@@ -3,7 +3,7 @@ import "../data/fiat_currencies.data.dart";
 import "../model/currency/currency.dart";
 
 /// List of all standard [FiatCurrency] sorted by code.
-const fiatCurrencyList = [
+const fiatCurrencyList = <FiatCurrency>[
   FiatAed(),
   FiatAfn(),
   FiatAll(),
@@ -166,7 +166,7 @@ const fiatCurrencyList = [
 ];
 
 /// Map of [FiatCurrency] standard codes.
-const fiatCurrencyCodeMap = {
+const fiatCurrencyCodeMap = <String, FiatCurrency>{
   "AED": FiatAed(),
   "AFN": FiatAfn(),
   "ALL": FiatAll(),
@@ -342,7 +342,7 @@ const fiatCurrencyCodeMap = {
 };
 
 /// Map of [FiatCurrency] other codes.
-const fiatCurrencyCodeOtherMap = {
+const fiatCurrencyCodeOtherMap = <String, FiatCurrency>{
   "008": FiatAll(),
   "012": FiatDzd(),
   "032": FiatArs(),

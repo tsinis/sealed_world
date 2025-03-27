@@ -150,7 +150,7 @@ import "../model/country/submodels/country_name.dart";
 /// - Yiddish
 /// - Yoruba
 /// - Zulu.
-const mozCountryTranslations = [
+const mozCountryTranslations = <TranslatedName>[
   CountryName(
     language: LangEng(),
     official: "Republic of Mozambique",

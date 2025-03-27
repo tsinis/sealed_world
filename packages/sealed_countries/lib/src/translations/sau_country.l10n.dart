@@ -151,7 +151,7 @@ import "../model/country/submodels/country_name.dart";
 /// - Yoruba
 /// - Zhuang (Chuang)
 /// - Zulu.
-const sauCountryTranslations = [
+const sauCountryTranslations = <TranslatedName>[
   CountryName(
     language: LangEng(),
     official: "Kingdom of Saudi Arabia",

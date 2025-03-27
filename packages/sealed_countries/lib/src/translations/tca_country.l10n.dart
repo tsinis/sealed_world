@@ -135,7 +135,7 @@ import "../model/country/submodels/country_name.dart";
 /// - Xhosa
 /// - Yoruba
 /// - Zulu.
-const tcaCountryTranslations = [
+const tcaCountryTranslations = <TranslatedName>[
   CountryName(
     language: LangEng(),
     official: "Turks and Caicos Islands",

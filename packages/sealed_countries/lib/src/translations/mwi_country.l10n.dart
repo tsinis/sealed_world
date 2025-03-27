@@ -140,7 +140,7 @@ import "../model/country/submodels/country_name.dart";
 /// - Yoruba
 /// - Zhuang (Chuang)
 /// - Zulu.
-const mwiCountryTranslations = [
+const mwiCountryTranslations = <TranslatedName>[
   CountryName(
     language: LangEng(),
     official: "Republic of Malawi",

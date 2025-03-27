@@ -134,7 +134,7 @@ import "../model/country/submodels/country_name.dart";
 /// - Yiddish
 /// - Yoruba
 /// - Zulu.
-const froCountryTranslations = [
+const froCountryTranslations = <TranslatedName>[
   CountryName(
     language: LangEng(),
     official: "Faroe Islands",

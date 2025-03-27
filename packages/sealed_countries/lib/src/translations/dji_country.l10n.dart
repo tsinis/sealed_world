@@ -147,7 +147,7 @@ import "../model/country/submodels/country_name.dart";
 /// - Yiddish
 /// - Yoruba
 /// - Zulu.
-const djiCountryTranslations = [
+const djiCountryTranslations = <TranslatedName>[
   CountryName(
     language: LangEng(),
     official: "Republic of Djibouti",

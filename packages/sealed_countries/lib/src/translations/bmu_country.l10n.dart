@@ -134,7 +134,7 @@ import "../model/country/submodels/country_name.dart";
 /// - Yoruba
 /// - Zhuang (Chuang)
 /// - Zulu.
-const bmuCountryTranslations = [
+const bmuCountryTranslations = <TranslatedName>[
   CountryName(language: LangEng(), official: "Bermuda", common: "Bermuda"),
   CountryName(language: LangSrp(), official: "Бермуда", common: "Бермуда"),
   CountryName(language: LangAra(), official: "برمودا", common: "برمودا"),

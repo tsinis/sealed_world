@@ -123,7 +123,7 @@ import "../model/country/submodels/country_name.dart";
 /// - Xhosa
 /// - Yoruba
 /// - Zulu.
-const mafCountryTranslations = [
+const mafCountryTranslations = <TranslatedName>[
   CountryName(
     language: LangEng(),
     official: "Saint Martin",

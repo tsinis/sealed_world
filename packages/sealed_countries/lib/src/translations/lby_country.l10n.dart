@@ -151,7 +151,7 @@ import "../model/country/submodels/country_name.dart";
 /// - Yoruba
 /// - Zhuang (Chuang)
 /// - Zulu.
-const lbyCountryTranslations = [
+const lbyCountryTranslations = <TranslatedName>[
   CountryName(language: LangEng(), official: "State of Libya", common: "Libya"),
   CountryName(language: LangSrp(), official: "Држава Либија", common: "Либија"),
   CountryName(language: LangAra(), official: "دولة ليبيا", common: "‏ليبيا"),

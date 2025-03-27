@@ -130,7 +130,7 @@ import "../model/country/submodels/country_name.dart";
 /// - Xhosa
 /// - Yoruba
 /// - Zulu.
-const iotCountryTranslations = [
+const iotCountryTranslations = <TranslatedName>[
   CountryName(
     language: LangEng(),
     official: "British Indian Ocean Territory",

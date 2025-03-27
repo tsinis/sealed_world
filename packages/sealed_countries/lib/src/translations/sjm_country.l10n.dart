@@ -122,7 +122,7 @@ import "../model/country/submodels/country_name.dart";
 /// - Xhosa
 /// - Yoruba
 /// - Zulu.
-const sjmCountryTranslations = [
+const sjmCountryTranslations = <TranslatedName>[
   CountryName(
     language: LangEng(),
     official: "Svalbard og Jan Mayen",

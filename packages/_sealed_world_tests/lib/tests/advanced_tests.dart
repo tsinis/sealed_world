@@ -1,4 +1,4 @@
-// ignore_for_file: prefer-static-class, long-parameter-list
+// ignore_for_file: unnecessary_async, prefer-static-class, long-parameter-list
 import "dart:async";
 import "dart:math";
 

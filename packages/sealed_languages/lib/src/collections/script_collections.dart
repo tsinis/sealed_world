@@ -3,7 +3,7 @@ import "../data/scripts.data.dart";
 import "../model/script/writing_system.dart";
 
 /// List of all standard [Script] sorted by code.
-const scriptList = [
+const scriptList = <Script>[
   ScriptAdlm(),
   ScriptAfak(),
   ScriptAghb(),
@@ -220,7 +220,7 @@ const scriptList = [
 ];
 
 /// Map of [Script] standard codes.
-const scriptCodeMap = {
+const scriptCodeMap = <String, Script>{
   "ADLM": ScriptAdlm(),
   "AFAK": ScriptAfak(),
   "AGHB": ScriptAghb(),
@@ -437,7 +437,7 @@ const scriptCodeMap = {
 };
 
 /// Map of [Script] other codes.
-const scriptCodeOtherMap = {
+const scriptCodeOtherMap = <String, Script>{
   "015": ScriptPcun(),
   "016": ScriptPelm(),
   "020": ScriptXsux(),

@@ -135,7 +135,7 @@ import "../model/country/submodels/country_name.dart";
 /// - Yiddish
 /// - Yoruba
 /// - Zulu.
-const flkCountryTranslations = [
+const flkCountryTranslations = <TranslatedName>[
   CountryName(
     language: LangEng(),
     official: "Falkland Islands",

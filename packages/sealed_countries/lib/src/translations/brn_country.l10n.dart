@@ -149,7 +149,7 @@ import "../model/country/submodels/country_name.dart";
 /// - Yoruba
 /// - Zhuang (Chuang)
 /// - Zulu.
-const brnCountryTranslations = [
+const brnCountryTranslations = <TranslatedName>[
   CountryName(
     language: LangEng(),
     official: "Nation of Brunei, Abode of Peace",

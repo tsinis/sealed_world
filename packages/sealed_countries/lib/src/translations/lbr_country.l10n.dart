@@ -146,7 +146,7 @@ import "../model/country/submodels/country_name.dart";
 /// - Yoruba
 /// - Zhuang (Chuang)
 /// - Zulu.
-const lbrCountryTranslations = [
+const lbrCountryTranslations = <TranslatedName>[
   CountryName(
     language: LangEng(),
     official: "Republic of Liberia",

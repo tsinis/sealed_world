@@ -164,7 +164,7 @@ import "../model/country/submodels/country_name.dart";
 /// - Yoruba
 /// - Zhuang (Chuang)
 /// - Zulu.
-const bihCountryTranslations = [
+const bihCountryTranslations = <TranslatedName>[
   CountryName(
     language: LangEng(),
     official: "Bosnia and Herzegovina",

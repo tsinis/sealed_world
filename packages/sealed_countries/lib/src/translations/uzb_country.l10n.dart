@@ -149,7 +149,7 @@ import "../model/country/submodels/country_name.dart";
 /// - Yoruba
 /// - Zhuang (Chuang)
 /// - Zulu.
-const uzbCountryTranslations = [
+const uzbCountryTranslations = <TranslatedName>[
   CountryName(
     language: LangEng(),
     official: "Republic of Uzbekistan",

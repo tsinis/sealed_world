@@ -123,7 +123,7 @@ import "../model/country/submodels/country_name.dart";
 /// - Xhosa
 /// - Yoruba
 /// - Zulu.
-const cxrCountryTranslations = [
+const cxrCountryTranslations = <TranslatedName>[
   CountryName(
     language: LangEng(),
     official: "Territory of Christmas Island",

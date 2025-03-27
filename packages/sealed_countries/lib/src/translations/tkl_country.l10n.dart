@@ -129,7 +129,7 @@ import "../model/country/submodels/country_name.dart";
 /// - Xhosa
 /// - Yoruba
 /// - Zulu.
-const tklCountryTranslations = [
+const tklCountryTranslations = <TranslatedName>[
   CountryName(language: LangEng(), official: "Tokelau", common: "Tokelau"),
   CountryName(language: LangSrp(), official: "Токелау", common: "Токелау"),
   CountryName(language: LangAra(), official: "توكيلاو", common: "توكيلاو"),

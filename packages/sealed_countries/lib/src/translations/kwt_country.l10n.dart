@@ -148,7 +148,7 @@ import "../model/country/submodels/country_name.dart";
 /// - Yoruba
 /// - Zhuang (Chuang)
 /// - Zulu.
-const kwtCountryTranslations = [
+const kwtCountryTranslations = <TranslatedName>[
   CountryName(
     language: LangEng(),
     official: "State of Kuwait",

@@ -152,7 +152,7 @@ import "../model/country/submodels/country_name.dart";
 /// - Yoruba
 /// - Zhuang (Chuang)
 /// - Zulu.
-const andCountryTranslations = [
+const andCountryTranslations = <TranslatedName>[
   CountryName(
     language: LangEng(),
     official: "Principality of Andorra",

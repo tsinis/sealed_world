@@ -148,7 +148,7 @@ import "../model/country/submodels/country_name.dart";
 /// - Yoruba
 /// - Zhuang (Chuang)
 /// - Zulu.
-const ngaCountryTranslations = [
+const ngaCountryTranslations = <TranslatedName>[
   CountryName(
     language: LangEng(),
     official: "Federal Republic of Nigeria",

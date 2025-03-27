@@ -151,7 +151,7 @@ import "../model/country/submodels/country_name.dart";
 /// - Yoruba
 /// - Zhuang (Chuang)
 /// - Zulu.
-const cmrCountryTranslations = [
+const cmrCountryTranslations = <TranslatedName>[
   CountryName(
     language: LangEng(),
     official: "Republic of Cameroon",

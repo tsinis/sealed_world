@@ -25,7 +25,7 @@ class ThemeProvider<T extends List<Color>> extends InheritedWidget {
   ThemeData get theme {
     final seedColor =
         _flagColors.firstOrNull?.withValues(alpha: 1) ?? _whiteColor;
-    final brightness = ThemeData.estimateBrightnessForColor(seedColor);
+    final colorBrightness = ThemeData.estimateBrightnessForColor(seedColor);
 
     return ThemeData(
       colorScheme: ColorScheme.fromSeed(
@@ -35,7 +35,7 @@ class ThemeProvider<T extends List<Color>> extends InheritedWidget {
       ),
       floatingActionButtonTheme: FloatingActionButtonThemeData(
         foregroundColor:
-            brightness == Brightness.dark ? _whiteColor : Colors.black,
+            colorBrightness == Brightness.dark ? _whiteColor : Colors.black,
         backgroundColor: seedColor,
       ),
     );

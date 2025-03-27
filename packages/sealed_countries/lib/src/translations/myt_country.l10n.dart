@@ -131,7 +131,7 @@ import "../model/country/submodels/country_name.dart";
 /// - Yiddish
 /// - Yoruba
 /// - Zulu.
-const mytCountryTranslations = [
+const mytCountryTranslations = <TranslatedName>[
   CountryName(
     language: LangEng(),
     official: "Department of Mayotte",

@@ -152,7 +152,7 @@ import "../model/country/submodels/country_name.dart";
 /// - Yoruba
 /// - Zhuang (Chuang)
 /// - Zulu.
-const marCountryTranslations = [
+const marCountryTranslations = <TranslatedName>[
   CountryName(
     language: LangEng(),
     official: "Kingdom of Morocco",

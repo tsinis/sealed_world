@@ -130,7 +130,7 @@ import "../model/country/submodels/country_name.dart";
 /// - Xhosa
 /// - Yoruba
 /// - Zulu.
-const mnpCountryTranslations = [
+const mnpCountryTranslations = <TranslatedName>[
   CountryName(
     language: LangEng(),
     official: "Commonwealth of the Northern Mariana Islands",

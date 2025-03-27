@@ -128,7 +128,7 @@ import "../model/country/submodels/country_name.dart";
 /// - Yoruba
 /// - Zhuang (Chuang)
 /// - Zulu.
-const macCountryTranslations = [
+const macCountryTranslations = <TranslatedName>[
   CountryName(
     language: LangEng(),
     official:

@@ -131,7 +131,7 @@ import "../model/country/submodels/country_name.dart";
 /// - Yiddish
 /// - Yoruba
 /// - Zulu.
-const reuCountryTranslations = [
+const reuCountryTranslations = <TranslatedName>[
   CountryName(
     language: LangEng(),
     official: "Réunion Island",

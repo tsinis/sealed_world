@@ -1,3 +1,5 @@
+// ignore_for_file: specify_nonobvious_property_types, those are doubles.
+
 import "dart:math";
 import "dart:ui";
 

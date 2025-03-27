@@ -156,7 +156,7 @@ import "../model/country/submodels/country_name.dart";
 /// - Yoruba
 /// - Zhuang (Chuang)
 /// - Zulu.
-const prkCountryTranslations = [
+const prkCountryTranslations = <TranslatedName>[
   CountryName(
     language: LangEng(),
     official: "Democratic People's Republic of Korea",

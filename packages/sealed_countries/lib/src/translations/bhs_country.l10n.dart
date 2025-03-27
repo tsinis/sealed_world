@@ -152,7 +152,7 @@ import "../model/country/submodels/country_name.dart";
 /// - Yoruba
 /// - Zhuang (Chuang)
 /// - Zulu.
-const bhsCountryTranslations = [
+const bhsCountryTranslations = <TranslatedName>[
   CountryName(
     language: LangEng(),
     official: "Commonwealth of the Bahamas",

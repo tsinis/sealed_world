@@ -551,7 +551,7 @@ class WorldCountry extends Country
   /// ```dart
   /// WorldCountry.codeMap['AFG']; // CountryAfg().
   /// ```
-  static const codeMap = UpperCaseIsoMap(worldCountryCodeMap);
+  static const codeMap = UpperCaseIsoMap<WorldCountry>(worldCountryCodeMap);
 
   /// A tree-shakable constant map containing numeric country
   /// (ISO 3166-1 Numeric) codes and their associated [WorldCountry] objects,
@@ -562,7 +562,8 @@ class WorldCountry extends Country
   /// ```dart
   /// WorldCountry.codeNumericMap[204]; // CountryBen().
   /// ```
-  static const codeNumericMap = UpperCaseIsoMap(worldCountryCodeNumericMap);
+  static const codeNumericMap =
+      UpperCaseIsoMap<WorldCountry>(worldCountryCodeNumericMap);
 
   /// A tree-shakable constant map containing country (ISO 3166-1 Alpha-2) codes
   /// and their associated [WorldCountry] objects, for a O(1) access time.
@@ -572,7 +573,7 @@ class WorldCountry extends Country
   /// ```dart
   /// WorldCountry.codeShortMap['BF']; // CountryBfa().
   /// ```
-  static const codeShortMap = UpperCaseIsoMap(
+  static const codeShortMap = UpperCaseIsoMap<WorldCountry>(
     worldCountryCodeOtherMap,
     exactLength: IsoStandardized.codeShortLength,
   );
@@ -586,7 +587,7 @@ class WorldCountry extends Country
   /// ```dart
   /// WorldCountry.map[204]; // CountryBen().
   /// ```
-  static const map = UpperCaseIsoMap(
+  static const map = UpperCaseIsoMap<WorldCountry>(
     {
       ...worldCountryCodeMap,
       ...worldCountryCodeOtherMap,
@@ -597,7 +598,8 @@ class WorldCountry extends Country
 
   /// A list of all the countries currently supported
   /// by the [WorldCountry] class.
-  static const list = worldCountryList;
+// ignore: avoid-explicit-type-declaration, vs specify_nonobvious_property_types.
+  static const List<WorldCountry> list = worldCountryList;
 
   final List<Demonyms>? _demonyms;
   final List<NaturalLanguage>? _languages;

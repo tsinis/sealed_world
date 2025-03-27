@@ -144,7 +144,7 @@ import "../model/country/submodels/country_name.dart";
 /// - Yoruba
 /// - Zhuang (Chuang)
 /// - Zulu.
-const guyCountryTranslations = [
+const guyCountryTranslations = <TranslatedName>[
   CountryName(
     language: LangEng(),
     official: "Co-operative Republic of Guyana",

@@ -126,7 +126,7 @@ import "../model/country/submodels/country_name.dart";
 /// - Yiddish
 /// - Yoruba
 /// - Zulu.
-const jeyCountryTranslations = [
+const jeyCountryTranslations = <TranslatedName>[
   CountryName(
     language: LangEng(),
     official: "Bailiwick of Jersey",
