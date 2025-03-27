@@ -15,13 +15,13 @@ final class VirPainter extends CustomElementsPainter {
   double get originalAspectRatio => flagVirProperties.aspectRatio;
 
   TextSpan _letterCreator(String letter, double fontSize) => TextSpan(
-        text: letter,
-        style: flagTextStyleOverride.copyWith(
-          color: customColors.last,
-          fontSize: fontSize * 0.4,
-          fontWeight: FontWeight.w500,
-        ),
-      );
+    text: letter,
+    style: flagTextStyleOverride.copyWith(
+      color: customColors.last,
+      fontSize: fontSize * 0.4,
+      fontWeight: FontWeight.w500,
+    ),
+  );
 
   @override
   FlagParentBounds? paintFlagElements(Canvas canvas, Size size) {

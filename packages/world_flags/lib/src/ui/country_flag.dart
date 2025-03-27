@@ -40,6 +40,7 @@ class CountryFlag extends StatelessWidget implements DecoratedFlagInterface {
   /// - [child]: A widget to display in the foreground of the flag.
   const CountryFlag.simplified(
     this.country, {
+
     /// Map of non-official or alternative flags of the countries.
     // ignore: avoid-nullable-parameters-with-default-values, breaking change.
     Map<WorldCountry, BasicFlag>? alternativeMap =
@@ -53,8 +54,8 @@ class CountryFlag extends StatelessWidget implements DecoratedFlagInterface {
     this.orElse,
     this.child,
     super.key,
-  })  : _map = smallSimplifiedFlagsMap,
-        _alternativeMap = alternativeMap;
+  }) : _map = smallSimplifiedFlagsMap,
+       _alternativeMap = alternativeMap;
 
   /// Creates a [CountryFlag] widget with a custom flag representation.
   ///
@@ -73,6 +74,7 @@ class CountryFlag extends StatelessWidget implements DecoratedFlagInterface {
   const CountryFlag.custom(
     this.country,
     this._map, {
+
     /// Map of non-official or alternative flags of the countries.
     Map<WorldCountry, BasicFlag>? alternativeMap,
     this.height,
@@ -128,14 +130,15 @@ class CountryFlag extends StatelessWidget implements DecoratedFlagInterface {
 
   @override
   Widget build(BuildContext context) => SizedBox(
-        width: width ?? context.flagTheme?.width,
-        height: height ?? context.flagTheme?.height,
-        child: _basicFlag?.copyWith(
-              aspectRatio: aspectRatio,
-              decoration: decoration,
-              decorationPosition: decorationPosition,
-              foregroundWidget: child,
-            ) ??
-            orElse,
-      );
+    width: width ?? context.flagTheme?.width,
+    height: height ?? context.flagTheme?.height,
+    child:
+        _basicFlag?.copyWith(
+          aspectRatio: aspectRatio,
+          decoration: decoration,
+          decorationPosition: decorationPosition,
+          foregroundWidget: child,
+        ) ??
+        orElse,
+  );
 }

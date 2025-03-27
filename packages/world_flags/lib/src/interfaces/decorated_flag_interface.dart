@@ -15,12 +15,8 @@ abstract interface class DecoratedFlagInterface {
   ///  [DecorationPosition.foreground] if not provided.
   /// - [padding]: The padding around the flag.
   const DecoratedFlagInterface( // coverage:ignore-line
-      {
-    this.aspectRatio,
-    this.decoration,
-    this.decorationPosition,
-    this.padding,
-  });
+  // ignore: require_trailing_commas, prefer-trailing-comma, formatting broken.
+  {this.aspectRatio, this.decoration, this.decorationPosition, this.padding});
 
   /// The specified aspect ratio of the flag.
   final double? aspectRatio;

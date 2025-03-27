@@ -17,23 +17,27 @@ final class MoonPainter extends ElementsPainter {
     final moon = shapeType<Moon>() ?? const Moon();
     final center = calculateCenter(size);
     final widthFactor = property.widthFactor;
-    final radius = widthFactor == null
-        ? calculateSize(size)
-        : (size.width * widthFactor) / 2;
+    final radius =
+        widthFactor == null
+            ? calculateSize(size)
+            : (size.width * widthFactor) / 2;
 
     final mainRect = Rect.fromCircle(center: center, radius: radius);
     final mainPath = Path()..addOval(mainRect);
     final x = moon.offset.dx;
     final y = moon.offset.dy;
-    final secondCenter = widthFactor == null
-        ? Offset(center.dx + x * radius, center.dy + y * radius)
-        : Offset(
-            center.dx + x * radius * widthFactor,
-            center.dy + y * radius * property.heightFactor * aspectRatio,
-          );
+    final secondCenter =
+        widthFactor == null
+            ? Offset(center.dx + x * radius, center.dy + y * radius)
+            : Offset(
+              center.dx + x * radius * widthFactor,
+              center.dy + y * radius * property.heightFactor * aspectRatio,
+            );
 
-    final secondRect =
-        Rect.fromCircle(center: secondCenter, radius: moon.radius * radius);
+    final secondRect = Rect.fromCircle(
+      center: secondCenter,
+      radius: moon.radius * radius,
+    );
     final secondPath = Path()..addOval(secondRect);
     final path = Path.combine(PathOperation.difference, mainPath, secondPath);
     canvas.drawPath(path, paintCreator());

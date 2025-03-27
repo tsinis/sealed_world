@@ -13,13 +13,14 @@ final class NplPainter extends CustomElementsPainter {
   FlagParentBounds? paintFlagElements(Canvas canvas, Size size) {
     final height = size.height;
     final width = size.width;
-    final path = Path()
-      ..moveTo(width * 0.03, height * 0.05)
-      ..lineTo(width * 0.87, height * 0.48)
-      ..lineTo(width * 0.28, height * 0.48)
-      ..lineTo(width * 0.87, height * 0.97)
-      ..lineTo(width * 0.03, height * 0.97)
-      ..close();
+    final path =
+        Path()
+          ..moveTo(width * 0.03, height * 0.05)
+          ..lineTo(width * 0.87, height * 0.48)
+          ..lineTo(width * 0.28, height * 0.48)
+          ..lineTo(width * 0.87, height * 0.97)
+          ..lineTo(width * 0.03, height * 0.97)
+          ..close();
 
     canvas
       ..drawPath(

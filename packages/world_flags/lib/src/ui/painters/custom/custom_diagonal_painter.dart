@@ -10,14 +10,14 @@ final class CustomDiagonalPainter extends MultiElementPainter {
   /// The [properties] parameter specifies the properties of the elements.
   /// The [aspectRatio] parameter specifies the aspect ratio of the elements.
   const CustomDiagonalPainter.vertical(super.properties, super.aspectRatio)
-      : _isHorizontal = false;
+    : _isHorizontal = false;
 
   /// Creates a [CustomDiagonalPainter] for horizontal diagonal elements.
   ///
   /// The [properties] parameter specifies the properties of the elements.
   /// The [aspectRatio] parameter specifies the aspect ratio of the elements.
   const CustomDiagonalPainter.horizontal(super.properties, super.aspectRatio)
-      : _isHorizontal = true;
+    : _isHorizontal = true;
 
   final bool _isHorizontal;
 

@@ -1142,11 +1142,7 @@ const flagSenProperties = FlagProperties(
   ],
   stripeOrientation: StripeOrientation.vertical,
   elementsProperties: [
-    ElementsProperties(
-      Color(0xff0b7226),
-      shape: Star(),
-      heightFactor: 4 / 12,
-    ),
+    ElementsProperties(Color(0xff0b7226), shape: Star(), heightFactor: 4 / 12),
   ],
   url: "https://www.vexilla-mundi.com/senegal/senegal_sheet.png",
 );

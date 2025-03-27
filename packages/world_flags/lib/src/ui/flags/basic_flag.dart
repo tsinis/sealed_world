@@ -90,18 +90,24 @@ class BasicFlag extends StatelessWidget implements DecoratedFlagInterface {
       padding: padding ?? theme?.padding ?? EdgeInsets.zero,
       child: DecoratedBox(
         decoration: boxDecoration ?? const BoxDecoration(),
-        position: decorationPosition ??
+        position:
+            decorationPosition ??
             theme?.decorationPosition ??
             DecorationPosition.foreground,
         child: AspectRatio(
-          aspectRatio:
-              _boxRatio(boxDecoration, aspectRatio ?? theme?.aspectRatio),
+          aspectRatio: _boxRatio(
+            boxDecoration,
+            aspectRatio ?? theme?.aspectRatio,
+          ),
           child: CustomPaint(
-            painter: backgroundPainter ??
+            painter:
+                backgroundPainter ??
                 StripesPainter(properties, boxDecoration, _elementsPainter),
-            foregroundPainter: foregroundPainter ??
+            foregroundPainter:
+                foregroundPainter ??
                 foregroundPainterBuilder?.call(_elements, _flagAspectRatio),
-            child: foregroundWidget ??
+            child:
+                foregroundWidget ??
                 foregroundWidgetBuilder?.call(_elements, _flagAspectRatio),
           ),
         ),

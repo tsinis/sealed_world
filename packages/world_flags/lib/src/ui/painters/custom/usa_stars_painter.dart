@@ -18,8 +18,10 @@ final class UsaStarsPainter extends MultiElementPainter {
 
   @override
   FlagParentBounds? paintFlagElements(Canvas canvas, Size size) {
-    final parent =
-        RectanglePainter([properties.first], aspectRatio).paint(canvas, size);
+    final parent = RectanglePainter([
+      properties.first,
+      // ignore: require_trailing_commas, prefer-trailing-comma, new dart format
+    ], aspectRatio).paint(canvas, size);
     if (parent == null) return parent;
     final paint = paintCreator(customProperties.mainColor);
     final parentSize = parent.bounds.size;

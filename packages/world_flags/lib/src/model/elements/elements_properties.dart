@@ -46,14 +46,14 @@ class ElementsProperties {
     this.widthFactor,
     this.angle,
     this.child,
-  })  : assert(
-          widthFactor == null || widthFactor >= 0,
-          "`widthFactor` must be null or greater than or equal to 0",
-        ),
-        assert(
-          heightFactor >= 0,
-          "`heightFactor` must be greater than or equal to 0",
-        );
+  }) : assert(
+         widthFactor == null || widthFactor >= 0,
+         "`widthFactor` must be null or greater than or equal to 0",
+       ),
+       assert(
+         heightFactor >= 0,
+         "`heightFactor` must be greater than or equal to 0",
+       );
 
   /// The distance fraction in the horizontal/vertical direction (of the
   /// center).
@@ -95,7 +95,8 @@ class ElementsProperties {
   final ElementsProperties? child;
 
   @override
-  String toString() => "ElementsProperties($mainColor, "
+  String toString() =>
+      "ElementsProperties($mainColor, "
       "${shape == null ? '' : 'shape: ${shape.runtimeType}(), '}"
       "heightFactor: $heightFactor, "
       "${widthFactor == null ? '' : 'widthFactor: $widthFactor, '}"

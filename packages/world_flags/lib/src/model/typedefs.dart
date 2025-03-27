@@ -15,10 +15,8 @@ typedef ElementsProps = List<ElementsProperties>;
 /// The function returns an instance of [T], which extends [CustomPainter], or
 /// null.
 @optionalTypeArgs
-typedef FlagPainterBuilder<T extends CustomPainter> = T? Function(
-  ElementsProps? properties,
-  double aspectRatio,
-);
+typedef FlagPainterBuilder<T extends CustomPainter> =
+    T? Function(ElementsProps? properties, double aspectRatio);
 
 /// A type definition for a function that builds a [Widget] for a flag.
 ///
@@ -29,10 +27,8 @@ typedef FlagPainterBuilder<T extends CustomPainter> = T? Function(
 ///
 /// The function returns an instance of [T], which extends [Widget], or null.
 @optionalTypeArgs
-typedef FlagWidgetBuilder<T extends Widget> = T? Function(
-  ElementsProps? properties,
-  double aspectRatio,
-);
+typedef FlagWidgetBuilder<T extends Widget> =
+    T? Function(ElementsProps? properties, double aspectRatio);
 
 /// A type definition for a record that holds the parent bounds of a flag
 /// element.
@@ -42,8 +38,5 @@ typedef FlagWidgetBuilder<T extends Widget> = T? Function(
 /// - `bounds`: The [Rect] that defines the bounds of the flag element.
 /// - `child`: An optional [ElementsProperties] that defines the properties of
 ///   the child element.
-typedef FlagParentBounds = ({
-  Rect bounds,
-  Canvas canvas,
-  ElementsProperties? child,
-});
+typedef FlagParentBounds =
+    ({Rect bounds, Canvas canvas, ElementsProperties? child});

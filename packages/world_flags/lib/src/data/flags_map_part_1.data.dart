@@ -18,11 +18,7 @@ const flagHndProperties = FlagProperties(
   ],
   aspectRatio: 2,
   elementsProperties: [
-    ElementsProperties(
-      Color(0xff00bce4),
-      shape: Star(),
-      heightFactor: 4 / 36,
-    ),
+    ElementsProperties(Color(0xff00bce4), shape: Star(), heightFactor: 4 / 36),
     ElementsProperties(
       Color(0xff00bce4),
       shape: Star(),

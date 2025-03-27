@@ -13,15 +13,14 @@ extension $ShapeExtension on Shape {
     T Function()? rectangle,
     T Function()? moon,
     T Function()? diagonalLine,
-  }) =>
-      switch (this) {
-        Star() => star?.call() ?? orElse(),
-        Triangle() => triangle?.call() ?? orElse(),
-        Ellipse() => ellipse?.call() ?? orElse(),
-        Rectangle() => rectangle?.call() ?? orElse(),
-        Moon() => moon?.call() ?? orElse(),
-        DiagonalLine() => diagonalLine?.call() ?? orElse(),
-      };
+  }) => switch (this) {
+    Star() => star?.call() ?? orElse(),
+    Triangle() => triangle?.call() ?? orElse(),
+    Ellipse() => ellipse?.call() ?? orElse(),
+    Rectangle() => rectangle?.call() ?? orElse(),
+    Moon() => moon?.call() ?? orElse(),
+    DiagonalLine() => diagonalLine?.call() ?? orElse(),
+  };
 
   T when<T>({
     required T Function() star,
@@ -30,15 +29,14 @@ extension $ShapeExtension on Shape {
     required T Function() rectangle,
     required T Function() moon,
     required T Function() diagonalLine,
-  }) =>
-      switch (this) {
-        Star() => star(),
-        Triangle() => triangle(),
-        Ellipse() => ellipse(),
-        Rectangle() => rectangle(),
-        Moon() => moon(),
-        DiagonalLine() => diagonalLine(),
-      };
+  }) => switch (this) {
+    Star() => star(),
+    Triangle() => triangle(),
+    Ellipse() => ellipse(),
+    Rectangle() => rectangle(),
+    Moon() => moon(),
+    DiagonalLine() => diagonalLine(),
+  };
 
   T whenConst<T>({
     required T star,
@@ -47,15 +45,14 @@ extension $ShapeExtension on Shape {
     required T rectangle,
     required T moon,
     required T diagonalLine,
-  }) =>
-      switch (this) {
-        Star() => star,
-        Triangle() => triangle,
-        Ellipse() => ellipse,
-        Rectangle() => rectangle,
-        Moon() => moon,
-        DiagonalLine() => diagonalLine,
-      };
+  }) => switch (this) {
+    Star() => star,
+    Triangle() => triangle,
+    Ellipse() => ellipse,
+    Rectangle() => rectangle,
+    Moon() => moon,
+    DiagonalLine() => diagonalLine,
+  };
 
   T maybeWhenConst<T>({
     required T orElse,
@@ -65,15 +62,14 @@ extension $ShapeExtension on Shape {
     T? rectangle,
     T? moon,
     T? diagonalLine,
-  }) =>
-      switch (this) {
-        Star() => star ?? orElse,
-        Triangle() => triangle ?? orElse,
-        Ellipse() => ellipse ?? orElse,
-        Rectangle() => rectangle ?? orElse,
-        Moon() => moon ?? orElse,
-        DiagonalLine() => diagonalLine ?? orElse,
-      };
+  }) => switch (this) {
+    Star() => star ?? orElse,
+    Triangle() => triangle ?? orElse,
+    Ellipse() => ellipse ?? orElse,
+    Rectangle() => rectangle ?? orElse,
+    Moon() => moon ?? orElse,
+    DiagonalLine() => diagonalLine ?? orElse,
+  };
 
   T? whenOrNull<T>({
     T Function()? star,
@@ -82,15 +78,14 @@ extension $ShapeExtension on Shape {
     T Function()? rectangle,
     T Function()? moon,
     T Function()? diagonalLine,
-  }) =>
-      switch (this) {
-        Star() => star?.call(),
-        Triangle() => triangle?.call(),
-        Ellipse() => ellipse?.call(),
-        Rectangle() => rectangle?.call(),
-        Moon() => moon?.call(),
-        DiagonalLine() => diagonalLine?.call(),
-      };
+  }) => switch (this) {
+    Star() => star?.call(),
+    Triangle() => triangle?.call(),
+    Ellipse() => ellipse?.call(),
+    Rectangle() => rectangle?.call(),
+    Moon() => moon?.call(),
+    DiagonalLine() => diagonalLine?.call(),
+  };
 
   T? whenConstOrNull<T>({
     T? star,
@@ -99,13 +94,12 @@ extension $ShapeExtension on Shape {
     T? rectangle,
     T? moon,
     T? diagonalLine,
-  }) =>
-      switch (this) {
-        Star() => star,
-        Triangle() => triangle,
-        Ellipse() => ellipse,
-        Rectangle() => rectangle,
-        Moon() => moon,
-        DiagonalLine() => diagonalLine,
-      };
+  }) => switch (this) {
+    Star() => star,
+    Triangle() => triangle,
+    Ellipse() => ellipse,
+    Rectangle() => rectangle,
+    Moon() => moon,
+    DiagonalLine() => diagonalLine,
+  };
 }
