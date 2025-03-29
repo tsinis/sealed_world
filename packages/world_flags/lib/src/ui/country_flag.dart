@@ -1,3 +1,5 @@
+// ignore_for_file: avoid-passing-default-values
+
 import "package:flutter/foundation.dart";
 import "package:flutter/widgets.dart";
 import "package:sealed_countries/sealed_countries.dart";
@@ -148,6 +150,7 @@ class CountryFlag extends StatelessWidget implements DecoratedFlagInterface {
           "aspectRatio",
           aspectRatio,
           ifNull: "$theme flag's aspect ratio (${_basicFlag?.flagAspectRatio})",
+          defaultValue: null,
         ),
       )
       ..add(
@@ -169,6 +172,7 @@ class CountryFlag extends StatelessWidget implements DecoratedFlagInterface {
           "decoration",
           decoration,
           ifNull: "$theme const $BoxDecoration() otherwise",
+          defaultValue: null,
         ),
       )
       ..add(
@@ -176,6 +180,7 @@ class CountryFlag extends StatelessWidget implements DecoratedFlagInterface {
           "decorationPosition",
           decorationPosition,
           ifNull: "$theme ${DecorationPosition.foreground} otherwise",
+          defaultValue: null,
         ),
       )
       ..add(
@@ -183,9 +188,9 @@ class CountryFlag extends StatelessWidget implements DecoratedFlagInterface {
           "padding",
           padding,
           ifNull: "$theme ${EdgeInsets.zero} otherwise",
+          defaultValue: null,
         ),
       )
-      ..add(DiagnosticsProperty<Key>("key", key))
       ..add(
         FlagProperty(
           "any ${country.internationalName} country flag found",

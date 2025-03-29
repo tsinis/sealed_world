@@ -1,3 +1,5 @@
+// ignore_for_file: avoid-passing-default-values
+
 import "package:flutter/foundation.dart";
 import "package:flutter/widgets.dart";
 
@@ -16,6 +18,7 @@ import "../painters/basic/stripes_painter.dart";
 /// interface for decorated flags. It allows for various customizations such as
 /// aspect ratio, decoration, padding, and custom painters for background and
 /// foreground elements.
+@immutable
 class BasicFlag extends StatelessWidget implements DecoratedFlagInterface {
   /// Creates a new instance of [BasicFlag].
   ///
@@ -41,8 +44,8 @@ class BasicFlag extends StatelessWidget implements DecoratedFlagInterface {
     this.foregroundPainterBuilder,
     this.foregroundWidget,
     this.foregroundWidgetBuilder,
-    super.key,
     this.padding,
+    super.key,
   });
 
   @override
@@ -98,7 +101,7 @@ class BasicFlag extends StatelessWidget implements DecoratedFlagInterface {
           "aspectRatio",
           aspectRatio,
           ifNull: "$theme flag's aspect ratio ($flagAspectRatio)",
-          defaultValue: flagAspectRatio,
+          defaultValue: null,
         ),
       )
       ..add(
@@ -106,7 +109,7 @@ class BasicFlag extends StatelessWidget implements DecoratedFlagInterface {
           "decoration",
           decoration,
           ifNull: "$theme const $BoxDecoration() otherwise",
-          defaultValue: const BoxDecoration(),
+          defaultValue: null,
         ),
       )
       ..add(
@@ -114,7 +117,7 @@ class BasicFlag extends StatelessWidget implements DecoratedFlagInterface {
           "decorationPosition",
           decorationPosition,
           ifNull: "$theme ${DecorationPosition.foreground} otherwise",
-          defaultValue: DecorationPosition.foreground,
+          defaultValue: null,
         ),
       )
       ..add(
@@ -122,10 +125,9 @@ class BasicFlag extends StatelessWidget implements DecoratedFlagInterface {
           "padding",
           padding,
           ifNull: "$theme ${EdgeInsets.zero} otherwise",
-          defaultValue: EdgeInsets.zero,
+          defaultValue: null,
         ),
       )
-      ..add(DiagnosticsProperty<Key>("key", key))
       ..add(
         ObjectFlagProperty<CustomPainter>(
           "backgroundPainter",
