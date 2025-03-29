@@ -63,6 +63,8 @@ export "src/data/alternative_flags_map.data.dart";
 export "src/data/flags_map_part_1.data.dart";
 export "src/data/flags_map_part_2.data.dart";
 export "src/data/flags_map_part_3.data.dart";
+export "src/debug/flag_properties_property.dart";
+export "src/debug/iso_diagnostics_property.dart";
 export "src/helpers/extensions/basic_flag_extension_copy_with.dart";
 export "src/helpers/extensions/box_decoration_extension.dart";
 export "src/helpers/extensions/flag_extension.dart";

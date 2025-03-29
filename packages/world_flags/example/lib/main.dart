@@ -74,7 +74,7 @@ class _MainState extends State<Main> {
           );
         },
         separatorBuilder:
-            (_, __) => const Divider(
+            (_, _) => const Divider(
               height: 1,
               color: Color.fromARGB(33, 133, 133, 133),
             ),
