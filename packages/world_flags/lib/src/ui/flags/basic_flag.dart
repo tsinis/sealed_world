@@ -1,5 +1,7 @@
+import "package:flutter/foundation.dart";
 import "package:flutter/widgets.dart";
 
+import "../../debug/flag_properties_property.dart";
 import "../../helpers/extensions/box_decoration_extension.dart";
 import "../../helpers/extensions/world_flags_build_context_extension.dart";
 import "../../interfaces/decorated_flag_interface.dart";
@@ -73,13 +75,119 @@ class BasicFlag extends StatelessWidget implements DecoratedFlagInterface {
   /// A builder for the foreground painter.
   final FlagPainterBuilder? foregroundPainterBuilder;
 
-  double get _flagAspectRatio => properties.aspectRatio;
+  /// The original aspect ratio of the flag.
+  double get flagAspectRatio => properties.aspectRatio;
+
   ElementsProps? get _elements => properties.elementsProperties;
   CustomPainter? get _elementsPainter =>
-      elementsBuilder?.call(_elements, _flagAspectRatio);
+      elementsBuilder?.call(_elements, flagAspectRatio);
 
   double _boxRatio(BoxDecoration? boxDecoration, double? ratio) =>
-      boxDecoration.isCircle ? 1 : (ratio ?? _flagAspectRatio);
+      boxDecoration.isCircle ? 1 : (ratio ?? flagAspectRatio);
+
+  @override
+  // ignore: avoid-shadowing, it's default name in debugFillProperties.
+  void debugFillProperties(DiagnosticPropertiesBuilder properties) {
+    super.debugFillProperties(properties);
+    const theme = "not provided, using value from FlagThemeData or";
+
+    properties
+      ..add(FlagPropertiesProperty(this.properties))
+      ..add(
+        DoubleProperty(
+          "aspectRatio",
+          aspectRatio,
+          ifNull: "$theme flag's aspect ratio ($flagAspectRatio)",
+          defaultValue: flagAspectRatio,
+        ),
+      )
+      ..add(
+        DiagnosticsProperty<BoxDecoration>(
+          "decoration",
+          decoration,
+          ifNull: "$theme const $BoxDecoration() otherwise",
+          defaultValue: const BoxDecoration(),
+        ),
+      )
+      ..add(
+        DiagnosticsProperty<DecorationPosition>(
+          "decorationPosition",
+          decorationPosition,
+          ifNull: "$theme ${DecorationPosition.foreground} otherwise",
+          defaultValue: DecorationPosition.foreground,
+        ),
+      )
+      ..add(
+        DiagnosticsProperty<EdgeInsetsGeometry>(
+          "padding",
+          padding,
+          ifNull: "$theme ${EdgeInsets.zero} otherwise",
+          defaultValue: EdgeInsets.zero,
+        ),
+      )
+      ..add(DiagnosticsProperty<Key>("key", key))
+      ..add(
+        ObjectFlagProperty<CustomPainter>(
+          "backgroundPainter",
+          backgroundPainter,
+          ifNull: "using default $StripesPainter",
+        ),
+      )
+      ..add(
+        ObjectFlagProperty<FlagPainterBuilder>(
+          "elementsBuilder",
+          elementsBuilder,
+          ifNull: "no custom elements builder",
+        ),
+      )
+      ..add(
+        ObjectFlagProperty<CustomPainter>(
+          "foregroundPainter",
+          foregroundPainter,
+          ifNull: "no foreground painter or using builder",
+        ),
+      )
+      ..add(
+        ObjectFlagProperty<FlagPainterBuilder>(
+          "foregroundPainterBuilder",
+          foregroundPainterBuilder,
+          ifNull: "no foreground painter builder",
+        ),
+      )
+      ..add(
+        ObjectFlagProperty<Widget>(
+          "foregroundWidget",
+          foregroundWidget,
+          ifNull: "no foreground widget or using builder",
+        ),
+      )
+      ..add(
+        ObjectFlagProperty<FlagWidgetBuilder>(
+          "foregroundWidgetBuilder",
+          foregroundWidgetBuilder,
+          ifNull: "no foreground widget builder",
+        ),
+      )
+      ..add(
+        FlagProperty(
+          "has elements painter",
+          value: _elementsPainter != null,
+          ifTrue: "yes",
+          ifFalse: "no custom elements painter",
+        ),
+      )
+      ..add(
+        DiagnosticsProperty<ElementsProps>(
+          "elements",
+          _elements,
+          ifNull: "no elements properties",
+        ),
+      );
+  }
+
+  @override
+  String toStringShort() =>
+      key == null ? super.toStringShort() : "BasicFlag($key)";
 
   @override
   Widget build(BuildContext context) {
@@ -88,27 +196,30 @@ class BasicFlag extends StatelessWidget implements DecoratedFlagInterface {
 
     return Padding(
       padding: padding ?? theme?.padding ?? EdgeInsets.zero,
-      child: DecoratedBox(
-        decoration: boxDecoration ?? const BoxDecoration(),
-        position:
-            decorationPosition ??
-            theme?.decorationPosition ??
-            DecorationPosition.foreground,
-        child: AspectRatio(
-          aspectRatio: _boxRatio(
-            boxDecoration,
-            aspectRatio ?? theme?.aspectRatio,
-          ),
-          child: CustomPaint(
-            painter:
-                backgroundPainter ??
-                StripesPainter(properties, boxDecoration, _elementsPainter),
-            foregroundPainter:
-                foregroundPainter ??
-                foregroundPainterBuilder?.call(_elements, _flagAspectRatio),
-            child:
-                foregroundWidget ??
-                foregroundWidgetBuilder?.call(_elements, _flagAspectRatio),
+      child: Semantics(
+        image: true,
+        child: DecoratedBox(
+          decoration: boxDecoration ?? const BoxDecoration(),
+          position:
+              decorationPosition ??
+              theme?.decorationPosition ??
+              DecorationPosition.foreground,
+          child: AspectRatio(
+            aspectRatio: _boxRatio(
+              boxDecoration,
+              aspectRatio ?? theme?.aspectRatio,
+            ),
+            child: CustomPaint(
+              painter:
+                  backgroundPainter ??
+                  StripesPainter(properties, boxDecoration, _elementsPainter),
+              foregroundPainter:
+                  foregroundPainter ??
+                  foregroundPainterBuilder?.call(_elements, flagAspectRatio),
+              child:
+                  foregroundWidget ??
+                  foregroundWidgetBuilder?.call(_elements, flagAspectRatio),
+            ),
           ),
         ),
       ),
