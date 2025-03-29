@@ -26,7 +26,7 @@ Each flag is a vector-based `CustomPainter`, ensuring precise, scalable, and stu
 - **Easy to Use**: Simplified API for adding flags with minimal code.
 - **Pure Dart**: As these are code-based flags, developers can easily access and manipulate flag colors, aspect ratios, and other properties like any other Dart object.
 
-> Package provides 250 small and simplified world country flags, but at the same time, **more than 2/3** of these flags can be used as full-dimensional flags.
+> The package provides 250 small and simplified world country flags, and **more than 2/3** of these flags can also be used as full-dimensional flags.
 
 ## Getting Started
 

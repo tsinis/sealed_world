@@ -55,10 +55,10 @@ BasicTypedLocale(*, regionalCode: "US"); // or BasicTypedLocale(*, country: Coun
 
 NEW FEATURES
 
-- Updated postal code pattern a format for Paraguay.
+- Updated the postal code pattern format for Paraguay.
 - Updated International Olympic Committee (IOC) country code for Bahrain.
 - Improvements of `toString()` method implementations in models and addressing new lints + DCM reports.
-- Added "polski" to the [Polish](https://github.com/tsinis/sealed_world/issues/221) language `namesNative` array.
+- Added "polski" to the [Polish](https://github.com/tsinis/sealed_world/issues/221) language's `namesNative` array.
 
 ## 1.5.0
 
