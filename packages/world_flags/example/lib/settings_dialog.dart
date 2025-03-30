@@ -86,36 +86,39 @@ class _SettingsDialogState extends State<SettingsDialog> {
                         child: Opacity(opacity: opacityValue, child: flag),
                       ),
                     ),
-                    bottomNavigationBar: Column(
-                      mainAxisSize: MainAxisSize.min,
-                      children: [
-                        ListTile(
-                          title: Text(
-                            """${ratio == null ? "(Original) " : ""}Aspect Ratio:""",
+                    bottomNavigationBar: SliderTheme(
+                      data: SliderTheme.of(bc).copyWith(year2023: false),
+                      child: Column(
+                        mainAxisSize: MainAxisSize.min,
+                        children: [
+                          ListTile(
+                            title: Text(
+                              """${ratio == null ? "(Original) " : ""}Aspect Ratio:""",
+                            ),
+                            subtitle: Slider(
+                              value:
+                                  ratio ??
+                                  _country.flagProperties?.aspectRatio ??
+                                  FlagConstants.minAspectRatio,
+                              onChanged:
+                                  (newRatio) =>
+                                      widget.aspectRatio.value = newRatio,
+                              min: FlagConstants.minAspectRatio,
+                              max: FlagConstants.maxAspectRatio,
+                            ),
                           ),
-                          subtitle: Slider(
-                            value:
-                                ratio ??
-                                _country.flagProperties?.aspectRatio ??
-                                FlagConstants.minAspectRatio,
-                            onChanged:
-                                (newRatio) =>
-                                    widget.aspectRatio.value = newRatio,
-                            min: FlagConstants.minAspectRatio,
-                            max: FlagConstants.maxAspectRatio,
+                          ListTile(
+                            title: const Text("Opacity:"),
+                            subtitle: Slider(
+                              value: opacityValue,
+                              onChanged:
+                                  (newOpacity) => _opacity.value = newOpacity,
+                              divisions: 10,
+                              label: _opacityLabel,
+                            ),
                           ),
-                        ),
-                        ListTile(
-                          title: const Text("Opacity:"),
-                          subtitle: Slider(
-                            value: opacityValue,
-                            onChanged:
-                                (newOpacity) => _opacity.value = newOpacity,
-                            divisions: 10,
-                            label: _opacityLabel,
-                          ),
-                        ),
-                      ],
+                        ],
+                      ),
                     ),
                   ),
               child: CountryFlag.simplified(_country, aspectRatio: ratio),
