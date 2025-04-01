@@ -1,6 +1,6 @@
 ## 3.4.0
 
-This is DevEx release without significant changes for the users, that aims to improve developer experience when working with flags in DevTools.
+This is a DevEx release without significant changes for the users, that aims to improve developer experience when working with flags in DevTools.
 
 NEW FEATURES
 
