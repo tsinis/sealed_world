@@ -74131,7 +74131,7 @@ class CompiledApp {
 "© ",
 " Roman Cinis",
 "world_countries",
-"3.3.0",
+"3.4.0",
 "Zatvori",
 "Zapri",
 "تړل",
