@@ -15,9 +15,9 @@ REFACTOR
 
 ## 3.2.0
 
-- This is maintenance release without significant changes for the users, that aims to fix dropped pub score after Flutter v3.29.0.
+This is maintenance release without significant changes for the users, that aims to fix dropped pub score after Flutter v3.29.0.
 
-REFACTOR
+CHORE
 
 - Dart SDK bumped to v3.7.0.
 - Code is formatted with new Dart formatter.

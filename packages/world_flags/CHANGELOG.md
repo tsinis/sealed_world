@@ -1,3 +1,17 @@
+## 2.2.0
+
+This is maintenance release without significant changes for the users, that aims to improve DevEx when working with flags in DevTools.
+
+NEW FEATURES
+
+- To enhance debugging, all widgets within this package now override `debugFillProperties`, providing detailed flag property information, including values and rationales. Crucially, this allows you to visualize emoji flags directly in dev tools, replacing generic widget names.
+
+CHORE
+
+- Dart SDK bumped to v3.7.0.
+- Code is formatted with new Dart formatter.
+- Example app runners update.
+
 ## 2.1.0
 
 REFACTOR
