@@ -1,3 +1,15 @@
+## 3.4.0
+
+This is a DevEx release without significant changes for the users, that aims to improve developer experience when working with flags in DevTools.
+
+NEW FEATURES
+
+- To enhance debugging, widgets like `CountryFlag`, `BasicFlag`, `MaybeWidget`, etc. now override `debugFillProperties`, providing detailed information, including values and rationales. Crucially, this allows you to visualize emoji flags directly in dev tools, replacing generic widget names.
+
+CHORE
+
+- Example app runners update.
+
 ## 3.3.0
 
 DOCUMENTATION
