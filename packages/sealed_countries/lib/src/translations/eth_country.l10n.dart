@@ -161,7 +161,7 @@ import "../model/country/submodels/country_name.dart";
 /// - Yoruba
 /// - Zhuang (Chuang)
 /// - Zulu.
-const ethCountryTranslations = [
+const ethCountryTranslations = <TranslatedName>[
   CountryName(
     language: LangEng(),
     official: "Federal Democratic Republic of Ethiopia",

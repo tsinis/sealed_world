@@ -121,7 +121,7 @@ import "../model/country/submodels/country_name.dart";
 /// - Xhosa
 /// - Yoruba
 /// - Zulu.
-const umiCountryTranslations = [
+const umiCountryTranslations = <TranslatedName>[
   CountryName(
     language: LangEng(),
     official: "United States Minor Outlying Islands",

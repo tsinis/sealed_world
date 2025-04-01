@@ -13,8 +13,8 @@ final class UnionJackPainter extends SimpleShieldPainter {
   /// The [properties] parameter specifies the properties of the shield. The
   /// [aspectRatio] parameter specifies the aspect ratio of the shield.
   const UnionJackPainter.half(super.properties, super.aspectRatio)
-      : _isFull = false,
-        super.outlinedWithoutDividers();
+    : _isFull = false,
+      super.outlinedWithoutDividers();
 
   /// Creates a [UnionJackPainter] with a half Union Jack without outline and
   /// dividers.
@@ -22,26 +22,24 @@ final class UnionJackPainter extends SimpleShieldPainter {
   /// The [properties] parameter specifies the properties of the shield. The
   /// [aspectRatio] parameter specifies the aspect ratio of the shield.
   const UnionJackPainter.halfWithoutOutline(super.properties, super.aspectRatio)
-      : _isFull = false,
-        super.withoutDividers();
+    : _isFull = false,
+      super.withoutDividers();
 
   /// Creates a [UnionJackPainter] with a half Union Jack with dividers.
   ///
   /// The [properties] parameter specifies the properties of the shield. The
   /// [aspectRatio] parameter specifies the aspect ratio of the shield.
-  const UnionJackPainter.halfWithDividers(
-    super.properties,
-    super.aspectRatio,
-  )   : _isFull = false,
-        super.withDividers();
+  const UnionJackPainter.halfWithDividers(super.properties, super.aspectRatio)
+    : _isFull = false,
+      super.withDividers();
 
   /// Creates a [UnionJackPainter] with a full Union Jack without dividers.
   ///
   /// The [properties] parameter specifies the properties of the shield. The
   /// [aspectRatio] parameter specifies the aspect ratio of the shield.
   const UnionJackPainter.full(super.properties, super.aspectRatio)
-      : _isFull = true,
-        super.withoutDividers();
+    : _isFull = true,
+      super.withoutDividers();
 
   final bool _isFull;
 
@@ -77,9 +75,10 @@ final class UnionJackPainter extends SimpleShieldPainter {
     final length = sqrt(width * width + height * height);
     final line = Rect.fromLTWH(-length / 2, -thickness / 2, length, thickness);
     final whitePaint = paintCreator(_whiteColor);
-    final redPaint = Paint()
-      ..color = _redColor
-      ..strokeWidth = thickness / 3;
+    final redPaint =
+        Paint()
+          ..color = _redColor
+          ..strokeWidth = thickness / 3;
 
     canvas
       ..drawRect(rect, paintCreator(_blueColor))

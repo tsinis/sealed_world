@@ -3,7 +3,7 @@ import "../data/regional_bloc/regional_bloc.data.dart";
 import "../model/regional_bloc/world_bloc.dart";
 
 /// List of all standard [RegionalBloc] sorted by code.
-const regionalBlocList = [
+const regionalBlocList = <RegionalBloc>[
   BlocAL(),
   BlocASEAN(),
   BlocAU(),
@@ -20,7 +20,7 @@ const regionalBlocList = [
 ];
 
 /// Map of [RegionalBloc] standard acronyms.
-const regionalBlocAcronymMap = {
+const regionalBlocAcronymMap = <String, RegionalBloc>{
   "AL": BlocAL(),
   "ASEAN": BlocASEAN(),
   "AU": BlocAU(),

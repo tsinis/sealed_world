@@ -56,9 +56,6 @@ class CurrencyPicker extends BasicPicker<FiatCurrency> {
     super.translation,
   }) : super(currencies);
 
-  /// Returns the list of fiat currencies being displayed by this widget.
-  Iterable<FiatCurrency> get currencies => items;
-
   @override
   Widget defaultBuilder(
     BuildContext context,
@@ -142,7 +139,7 @@ class CurrencyPicker extends BasicPicker<FiatCurrency> {
     itemBuilder,
     TypedLocale? translation,
   }) => CurrencyPicker(
-    currencies: items ?? currencies,
+    currencies: items ?? this.items,
     addAutomaticKeepAlives:
         addAutomaticKeepAlives ?? this.addAutomaticKeepAlives,
     addRepaintBoundaries: addRepaintBoundaries ?? this.addRepaintBoundaries,

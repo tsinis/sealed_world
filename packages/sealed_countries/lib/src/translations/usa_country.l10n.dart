@@ -167,7 +167,7 @@ import "../model/country/submodels/country_name.dart";
 /// - Yoruba
 /// - Zhuang (Chuang)
 /// - Zulu.
-const usaCountryTranslations = [
+const usaCountryTranslations = <TranslatedName>[
   CountryName(
     language: LangEng(),
     official: "United States of America",

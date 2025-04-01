@@ -120,7 +120,7 @@ import "../model/country/submodels/country_name.dart";
 /// - Xhosa
 /// - Yoruba
 /// - Zulu.
-const atfCountryTranslations = [
+const atfCountryTranslations = <TranslatedName>[
   CountryName(
     language: LangEng(),
     official: "Territory of the French Southern and Antarctic Lands",

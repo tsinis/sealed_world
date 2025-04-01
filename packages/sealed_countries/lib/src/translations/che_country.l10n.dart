@@ -154,7 +154,7 @@ import "../model/country/submodels/country_name.dart";
 /// - Yoruba
 /// - Zhuang (Chuang)
 /// - Zulu.
-const cheCountryTranslations = [
+const cheCountryTranslations = <TranslatedName>[
   CountryName(
     language: LangEng(),
     official: "Swiss Confederation",

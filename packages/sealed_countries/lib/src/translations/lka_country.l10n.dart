@@ -146,7 +146,7 @@ import "../model/country/submodels/country_name.dart";
 /// - Yoruba
 /// - Zhuang (Chuang)
 /// - Zulu.
-const lkaCountryTranslations = [
+const lkaCountryTranslations = <TranslatedName>[
   CountryName(
     language: LangEng(),
     official: "Democratic Socialist Republic of Sri Lanka",

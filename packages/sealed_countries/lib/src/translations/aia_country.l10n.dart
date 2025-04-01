@@ -138,7 +138,7 @@ import "../model/country/submodels/country_name.dart";
 /// - Yoruba
 /// - Zhuang (Chuang)
 /// - Zulu.
-const aiaCountryTranslations = [
+const aiaCountryTranslations = <TranslatedName>[
   CountryName(language: LangEng(), official: "Anguilla", common: "Anguilla"),
   CountryName(language: LangSrp(), official: "Ангвила", common: "Ангвила"),
   CountryName(language: LangAra(), official: "أنغويلا", common: "أنغويلا"),

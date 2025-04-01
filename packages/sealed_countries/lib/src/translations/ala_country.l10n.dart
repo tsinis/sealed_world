@@ -123,7 +123,7 @@ import "../model/country/submodels/country_name.dart";
 /// - Xhosa
 /// - Yoruba
 /// - Zulu.
-const alaCountryTranslations = [
+const alaCountryTranslations = <TranslatedName>[
   CountryName(
     language: LangEng(),
     official: "Åland Islands",

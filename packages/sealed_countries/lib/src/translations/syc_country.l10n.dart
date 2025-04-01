@@ -147,7 +147,7 @@ import "../model/country/submodels/country_name.dart";
 /// - Yiddish
 /// - Yoruba
 /// - Zulu.
-const sycCountryTranslations = [
+const sycCountryTranslations = <TranslatedName>[
   CountryName(
     language: LangEng(),
     official: "Republic of Seychelles",

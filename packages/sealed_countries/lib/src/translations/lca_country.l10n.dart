@@ -136,7 +136,7 @@ import "../model/country/submodels/country_name.dart";
 /// - Xhosa
 /// - Yoruba
 /// - Zulu.
-const lcaCountryTranslations = [
+const lcaCountryTranslations = <TranslatedName>[
   CountryName(
     language: LangEng(),
     official: "Saint Lucia",

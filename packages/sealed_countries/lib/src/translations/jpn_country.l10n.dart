@@ -160,7 +160,7 @@ import "../model/country/submodels/country_name.dart";
 /// - Yoruba
 /// - Zhuang (Chuang)
 /// - Zulu.
-const jpnCountryTranslations = [
+const jpnCountryTranslations = <TranslatedName>[
   CountryName(language: LangEng(), official: "Japan", common: "Japan"),
   CountryName(language: LangSrp(), official: "Јапан", common: "Јапан"),
   CountryName(language: LangAra(), official: "اليابان", common: "اليابان"),

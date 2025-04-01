@@ -26,6 +26,6 @@ dev_dependencies:
   _sealed_world_tests:
     path: ../_sealed_world_tests
   coverage: ^1.11.1 # From Google
-  dart_code_metrics_presets: ^2.20.0
+  dart_code_metrics_presets: ^2.21.0
   lints: ^5.1.1 # From Google
   test: ^1.25.8 # From Google

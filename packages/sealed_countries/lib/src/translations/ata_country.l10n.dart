@@ -125,7 +125,7 @@ import "../model/country/submodels/country_name.dart";
 /// - Yiddish
 /// - Yoruba
 /// - Zulu.
-const ataCountryTranslations = [
+const ataCountryTranslations = <TranslatedName>[
   CountryName(
     language: LangEng(),
     official: "Antarctica",

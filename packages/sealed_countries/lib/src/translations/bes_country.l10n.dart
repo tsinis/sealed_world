@@ -117,7 +117,7 @@ import "../model/country/submodels/country_name.dart";
 /// - Xhosa
 /// - Yoruba
 /// - Zulu.
-const besCountryTranslations = [
+const besCountryTranslations = <TranslatedName>[
   CountryName(
     language: LangEng(),
     official: "Bonaire, Sint Eust,atius and Saba",

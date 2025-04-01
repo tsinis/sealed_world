@@ -70,7 +70,7 @@ class Continent extends SubRegion {
 
   /// A list of all the continents currently
   /// supported by the [Continent] class.
-  static const list = [
+  static const list = <Continent>[
     /// General continents.
     Africa(),
     Americas(),

@@ -141,7 +141,7 @@ import "../model/country/submodels/country_name.dart";
 /// - Yoruba
 /// - Zhuang (Chuang)
 /// - Zulu.
-const gibCountryTranslations = [
+const gibCountryTranslations = <TranslatedName>[
   CountryName(language: LangEng(), official: "Gibraltar", common: "Gibraltar"),
   CountryName(language: LangSrp(), official: "Гибралтар", common: "Гибралтар"),
   CountryName(language: LangAra(), official: "جبل طارق", common: "جبل طارق"),

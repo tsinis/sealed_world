@@ -123,7 +123,7 @@ import "../model/country/submodels/country_name.dart";
 /// - Xhosa
 /// - Yoruba
 /// - Zulu.
-const cckCountryTranslations = [
+const cckCountryTranslations = <TranslatedName>[
   CountryName(
     language: LangEng(),
     official: "Territory of the Cocos (Keeling) Islands",

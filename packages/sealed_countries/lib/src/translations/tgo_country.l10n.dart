@@ -141,7 +141,7 @@ import "../model/country/submodels/country_name.dart";
 /// - Yoruba
 /// - Zhuang (Chuang)
 /// - Zulu.
-const tgoCountryTranslations = [
+const tgoCountryTranslations = <TranslatedName>[
   CountryName(
     language: LangEng(),
     official: "Togolese Republic",

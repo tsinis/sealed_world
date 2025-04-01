@@ -154,7 +154,7 @@ import "../model/country/submodels/country_name.dart";
 /// - Yoruba
 /// - Zhuang (Chuang)
 /// - Zulu.
-const swzCountryTranslations = [
+const swzCountryTranslations = <TranslatedName>[
   CountryName(
     language: LangEng(),
     official: "Kingdom of Eswatini",

@@ -135,7 +135,7 @@ import "../model/country/submodels/country_name.dart";
 /// - Yiddish
 /// - Yoruba
 /// - Zulu.
-const msrCountryTranslations = [
+const msrCountryTranslations = <TranslatedName>[
   CountryName(
     language: LangEng(),
     official: "Montserrat",

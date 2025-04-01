@@ -5,7 +5,7 @@ import "../data/other_world_countries.data.dart";
 import "../model/country/country.dart";
 
 /// List of all standard [WorldCountry] sorted by code.
-const worldCountryList = [
+const worldCountryList = <WorldCountry>[
   CountryAbw(),
   CountryAfg(),
   CountryAgo(),
@@ -259,7 +259,7 @@ const worldCountryList = [
 ];
 
 /// Map of [WorldCountry] standard codes.
-const worldCountryCodeMap = {
+const worldCountryCodeMap = <String, WorldCountry>{
   "ABW": CountryAbw(),
   "AFG": CountryAfg(),
   "AGO": CountryAgo(),
@@ -513,7 +513,7 @@ const worldCountryCodeMap = {
 };
 
 /// Map of [WorldCountry] other codes.
-const worldCountryCodeOtherMap = {
+const worldCountryCodeOtherMap = <String, WorldCountry>{
   "AW": CountryAbw(),
   "AF": CountryAfg(),
   "AO": CountryAgo(),
@@ -767,7 +767,7 @@ const worldCountryCodeOtherMap = {
 };
 
 /// Map of [WorldCountry] numeric codes.
-const worldCountryCodeNumericMap = {
+const worldCountryCodeNumericMap = <String, WorldCountry>{
   "533": CountryAbw(),
   "004": CountryAfg(),
   "024": CountryAgo(),

@@ -132,7 +132,7 @@ import "../model/country/submodels/country_name.dart";
 /// - Yiddish
 /// - Yoruba
 /// - Zulu.
-const nfkCountryTranslations = [
+const nfkCountryTranslations = <TranslatedName>[
   CountryName(
     language: LangEng(),
     official: "Territory of Norfolk Island",

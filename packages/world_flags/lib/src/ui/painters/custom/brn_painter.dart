@@ -15,19 +15,21 @@ final class BrnPainter extends MultiElementPainter {
     final bottomLeft = Offset(0, size.height * 0.51);
     final bottomRight = Offset(size.width, size.height * 0.93);
 
-    final whitePath = Path()
-      ..moveTo(midLeft.dx, midLeft.dy)
-      ..lineTo(topLeft.dx, topLeft.dy)
-      ..lineTo(topRight.dx, topRight.dy)
-      ..lineTo(midRight.dx, midRight.dy)
-      ..close();
+    final whitePath =
+        Path()
+          ..moveTo(midLeft.dx, midLeft.dy)
+          ..lineTo(topLeft.dx, topLeft.dy)
+          ..lineTo(topRight.dx, topRight.dy)
+          ..lineTo(midRight.dx, midRight.dy)
+          ..close();
 
-    final blackPath = Path()
-      ..moveTo(midLeft.dx, midLeft.dy)
-      ..lineTo(bottomLeft.dx, bottomLeft.dy)
-      ..lineTo(bottomRight.dx, bottomRight.dy)
-      ..lineTo(midRight.dx, midRight.dy)
-      ..close();
+    final blackPath =
+        Path()
+          ..moveTo(midLeft.dx, midLeft.dy)
+          ..lineTo(bottomLeft.dx, bottomLeft.dy)
+          ..lineTo(bottomRight.dx, bottomRight.dy)
+          ..lineTo(midRight.dx, midRight.dy)
+          ..close();
 
     canvas
       ..drawPath(whitePath, paintCreator())

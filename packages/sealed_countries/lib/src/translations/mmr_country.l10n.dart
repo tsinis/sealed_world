@@ -147,7 +147,7 @@ import "../model/country/submodels/country_name.dart";
 /// - Yoruba
 /// - Zhuang (Chuang)
 /// - Zulu.
-const mmrCountryTranslations = [
+const mmrCountryTranslations = <TranslatedName>[
   CountryName(
     language: LangEng(),
     official: "Republic of the Union of Myanmar",

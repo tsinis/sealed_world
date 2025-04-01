@@ -26,12 +26,12 @@ abstract base class ElementsPainter extends CustomPainter {
   /// at least one element.
   /// - [aspectRatio]: The aspect ratio of the flag.
   const ElementsPainter(ElementsProps? properties, this.aspectRatio)
-      : assert(aspectRatio > 0, "`aspectRatio` must be greater than 0"),
-        assert(
-          properties != null && properties.length > 0,
-          "`properties` must contain at least one element.",
-        ),
-        _properties = properties;
+    : assert(aspectRatio > 0, "`aspectRatio` must be greater than 0"),
+      assert(
+        properties != null && properties.length > 0,
+        "`properties` must contain at least one element.",
+      ),
+      _properties = properties;
 
   /// The aspect ratio of the flag.
   final double aspectRatio;
@@ -91,10 +91,11 @@ abstract base class ElementsPainter extends CustomPainter {
   ///
   /// Returns a configured [Paint] object.
   @protected
-  // ignore: avoid-returning-cascades, it's ok for a shorthand method.
-  Paint paintCreator([Color? color]) => Paint()
-    ..color = color ?? property.mainColor
-    ..isAntiAlias = flagAntiAliasOverride;
+  Paint paintCreator([Color? color]) =>
+      // ignore: avoid-returning-cascades, it's ok for a shorthand method.
+      Paint()
+        ..color = color ?? property.mainColor
+        ..isAntiAlias = flagAntiAliasOverride;
 
   /// Retrieves the shape type if it matches the specified type [T].
   ///

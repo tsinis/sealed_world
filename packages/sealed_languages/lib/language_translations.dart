@@ -10,7 +10,7 @@
 )
 library sealed_language_translations;
 
-import "src/data/natural_languages.data.dart";
+import "sealed_languages.dart";
 
 export "src/translations/aar_language.l10n.dart";
 export "src/translations/abk_language.l10n.dart";
@@ -218,7 +218,7 @@ export "src/translations/zul_language.l10n.dart";
 /// - Tonga (TON)
 /// - Uyghur (UIG)
 /// That are not listed in Material one, and much more.
-const kSealedLanguagesSupportedLanguages = [
+const kSealedLanguagesSupportedLanguages = <NaturalLanguage>[
   LangAfr(),
   LangAmh(),
   LangAra(),
@@ -313,7 +313,7 @@ const kSealedLanguagesSupportedLanguages = [
 /// Missing "FIL" (Filipino Pilipino, but mapped to Tagalog "tl") and
 /// "GSW" (Swiss German Alemannic Alsatian, but mapped to Swiss German "de_CH")
 /// languages.
-const kMaterialSupportedLanguagesSealed = [
+const kMaterialSupportedLanguagesSealed = <NaturalLanguage>[
   LangAfr(),
   LangAmh(),
   LangAra(),
@@ -403,7 +403,7 @@ const kMaterialSupportedLanguagesSealed = [
 ///
 /// The only difference from the [kMaterialSupportedLanguagesSealed] list
 /// is the additional [LangPus] (Pashto (Pushto) language) in Material locales.
-const kCupertinoSupportedLanguagesSealed = [
+const kCupertinoSupportedLanguagesSealed = <NaturalLanguage>[
   LangAfr(),
   LangAmh(),
   LangAra(),

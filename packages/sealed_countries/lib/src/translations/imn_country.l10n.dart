@@ -132,7 +132,7 @@ import "../model/country/submodels/country_name.dart";
 /// - Xhosa
 /// - Yoruba
 /// - Zulu.
-const imnCountryTranslations = [
+const imnCountryTranslations = <TranslatedName>[
   CountryName(
     language: LangEng(),
     official: "Isle of Man",

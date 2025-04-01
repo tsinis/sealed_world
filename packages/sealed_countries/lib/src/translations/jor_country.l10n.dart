@@ -150,7 +150,7 @@ import "../model/country/submodels/country_name.dart";
 /// - Yoruba
 /// - Zhuang (Chuang)
 /// - Zulu.
-const jorCountryTranslations = [
+const jorCountryTranslations = <TranslatedName>[
   CountryName(
     language: LangEng(),
     official: "Hashemite Kingdom of Jordan",

@@ -142,7 +142,7 @@ import "../model/country/submodels/country_name.dart";
 /// - Yiddish
 /// - Yoruba
 /// - Zulu.
-const cokCountryTranslations = [
+const cokCountryTranslations = <TranslatedName>[
   CountryName(
     language: LangEng(),
     official: "Cook Islands",

@@ -219,7 +219,7 @@ class PhoneCodePicker extends CountryPicker {
     itemBuilder,
     TypedLocale? translation,
   }) => PhoneCodePicker(
-    countries: items ?? countries,
+    countries: items ?? this.items,
     addAutomaticKeepAlives:
         addAutomaticKeepAlives ?? this.addAutomaticKeepAlives,
     addRepaintBoundaries: addRepaintBoundaries ?? this.addRepaintBoundaries,

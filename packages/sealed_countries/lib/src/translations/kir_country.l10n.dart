@@ -133,7 +133,7 @@ import "../model/country/submodels/country_name.dart";
 /// - Yiddish
 /// - Yoruba
 /// - Zulu.
-const kirCountryTranslations = [
+const kirCountryTranslations = <TranslatedName>[
   CountryName(
     language: LangEng(),
     official: "Independent and Sovereign Republic of Kiribati",

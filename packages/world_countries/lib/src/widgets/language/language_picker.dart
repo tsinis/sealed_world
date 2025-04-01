@@ -56,9 +56,6 @@ class LanguagePicker extends BasicPicker<NaturalLanguage> {
     super.translation,
   }) : super(languages);
 
-  /// Returns the list of natural languages being displayed by this widget.
-  Iterable<NaturalLanguage> get languages => items;
-
   @override
   Widget defaultBuilder(
     BuildContext context,
@@ -141,7 +138,7 @@ class LanguagePicker extends BasicPicker<NaturalLanguage> {
     itemBuilder,
     TypedLocale? translation,
   }) => LanguagePicker(
-    languages: items ?? languages,
+    languages: items ?? this.items,
     addAutomaticKeepAlives:
         addAutomaticKeepAlives ?? this.addAutomaticKeepAlives,
     addRepaintBoundaries: addRepaintBoundaries ?? this.addRepaintBoundaries,

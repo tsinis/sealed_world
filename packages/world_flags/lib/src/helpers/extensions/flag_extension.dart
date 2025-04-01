@@ -19,8 +19,8 @@ extension FlagExtension on WorldCountry {
 
   /// Retrieves the stripe colors of the flag from [FlagProperties].
   List<Color> get flagStripeColors => List.unmodifiable(
-        flagProperties?.stripeColors.map((stripe) => stripe.color) ?? const [],
-      );
+    flagProperties?.stripeColors.map((stripe) => stripe.color) ?? const [],
+  );
 
   /// Retrieves the element colors of the flag from [FlagProperties]. If the
   /// elements have custom properties, their additional colors are included.

@@ -1,3 +1,4 @@
+import "package:flutter/foundation.dart" show DiagnosticPropertiesBuilder;
 import "package:flutter/material.dart";
 import "package:flutter_test/flutter_test.dart";
 import "package:world_countries/src/widgets/helpers/maybe_widget.dart";
@@ -5,6 +6,14 @@ import "package:world_countries/src/widgets/helpers/maybe_widget.dart";
 void main() => group("$MaybeWidget", () {
   const testValue = "Test";
   const fallbackText = "Fallback";
+
+  test("debugFillProperties", () {
+    final builder = DiagnosticPropertiesBuilder();
+    expect(builder.properties.any((prop) => prop.name == "value"), isFalse);
+
+    const MaybeWidget(testValue, Text.new).debugFillProperties(builder);
+    expect(builder.properties.any((prop) => prop.name == "value"), isTrue);
+  });
 
   testWidgets("renders orElse when value is null", (tester) async {
     await tester.pumpWidget(

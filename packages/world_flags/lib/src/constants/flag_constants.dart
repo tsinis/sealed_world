@@ -1,3 +1,5 @@
+// ignore_for_file: specify_nonobvious_property_types, those are doubles.
+
 /// A class containing constants related to flag aspect ratios.
 ///
 /// This class provides default, minimum, and maximum aspect ratios for flags.

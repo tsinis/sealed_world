@@ -123,7 +123,7 @@ import "../model/country/submodels/country_name.dart";
 /// - Xhosa
 /// - Yoruba
 /// - Zulu.
-const bvtCountryTranslations = [
+const bvtCountryTranslations = <TranslatedName>[
   CountryName(
     language: LangEng(),
     official: "Bouvet Island",

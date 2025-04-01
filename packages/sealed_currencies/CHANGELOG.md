@@ -40,7 +40,7 @@ BREAKING CHANGES
 NEW FEATURES
 
 - Improvements of `toString()` method implementations in models and addressing new lints + DCM reports.
-- Added "polski" to the [Polish](https://github.com/tsinis/sealed_world/issues/221) language `namesNative` array.
+- Added "polski" to the [Polish](https://github.com/tsinis/sealed_world/issues/221) language's `namesNative` array.
 
 ## 1.5.0
 

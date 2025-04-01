@@ -131,7 +131,7 @@ import "../model/country/submodels/country_name.dart";
 /// - Yiddish
 /// - Yoruba
 /// - Zulu.
-const glpCountryTranslations = [
+const glpCountryTranslations = <TranslatedName>[
   CountryName(
     language: LangEng(),
     official: "Guadeloupe",

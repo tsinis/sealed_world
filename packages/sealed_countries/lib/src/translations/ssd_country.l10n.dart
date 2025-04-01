@@ -135,7 +135,7 @@ import "../model/country/submodels/country_name.dart";
 /// - Yoruba
 /// - Zhuang (Chuang)
 /// - Zulu.
-const ssdCountryTranslations = [
+const ssdCountryTranslations = <TranslatedName>[
   CountryName(
     language: LangEng(),
     official: "Republic of South Sudan",

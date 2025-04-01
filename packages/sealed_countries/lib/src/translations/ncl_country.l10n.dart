@@ -133,7 +133,7 @@ import "../model/country/submodels/country_name.dart";
 /// - Yiddish
 /// - Yoruba
 /// - Zulu.
-const nclCountryTranslations = [
+const nclCountryTranslations = <TranslatedName>[
   CountryName(
     language: LangEng(),
     official: "New Caledonia",

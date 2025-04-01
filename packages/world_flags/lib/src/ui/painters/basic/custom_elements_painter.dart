@@ -51,19 +51,17 @@ abstract base class CustomElementsPainter<T extends FlagParentBounds>
   /// This method calculates the adjusted size of the child element using the
   /// [originalAspectRatio], [minRatio], and the size of the parent bounds.
   ///
-  /// - [childSize]: The size of the child element.
-  /// - [parent]: The parent bounds. If null, the [childSize] is used.
+  /// - [size]: The size of the child element.
   /// - [minRatio]: The minimum ratio to use for adjustment. Defaults to 1.1.
   ///
   /// Returns the adjusted size of the child element.
   @protected
-  Size ratioAdjustedSize(Size childSize, {T? parent, double minRatio = 1.1}) {
-    final size = parent?.bounds.size ?? childSize; // Coverage isn't triggered?
+  Size ratioAdjustedSize(Size size, {double minRatio = 1.1}) {
     final originalRatio = originalAspectRatio;
     if (originalRatio == null) return size;
     final currentAspectRatio = calculateAspectRatio(size);
     final adjustedRatio = min(minRatio, currentAspectRatio / originalRatio);
-    final heightFactor = parent?.child?.heightFactor ?? property.heightFactor;
+    final heightFactor = property.heightFactor;
     final height = size.height * heightFactor * adjustedRatio;
     final width = size.width * (property.widthFactor ?? 1);
 

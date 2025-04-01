@@ -135,7 +135,7 @@ import "../model/country/submodels/country_name.dart";
 /// - Yiddish
 /// - Yoruba
 /// - Zulu.
-const ttoCountryTranslations = [
+const ttoCountryTranslations = <TranslatedName>[
   CountryName(
     language: LangEng(),
     official: "Republic of Trinidad and Tobago",

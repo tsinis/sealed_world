@@ -143,7 +143,7 @@ import "../model/country/submodels/country_name.dart";
 /// - Yiddish
 /// - Yoruba
 /// - Zulu.
-const sleCountryTranslations = [
+const sleCountryTranslations = <TranslatedName>[
   CountryName(
     language: LangEng(),
     official: "Republic of Sierra Leone",

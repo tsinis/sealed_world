@@ -133,7 +133,7 @@ import "../model/country/submodels/country_name.dart";
 /// - Yiddish
 /// - Yoruba
 /// - Zulu.
-const mtqCountryTranslations = [
+const mtqCountryTranslations = <TranslatedName>[
   CountryName(
     language: LangEng(),
     official: "Martinique",

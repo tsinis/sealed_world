@@ -10,11 +10,11 @@ import "../basic/flag_test_properties.dart";
 final class ShahadaPainter extends CustomElementsPainter {
   /// Creates a new instance of [ShahadaPainter] for the Saudi Arabia flag.
   const ShahadaPainter.sau(super.properties, super.aspectRatio)
-      : _hasSabre = true;
+    : _hasSabre = true;
 
   /// Creates a new instance of [ShahadaPainter] for the Afghanistan flag.
   const ShahadaPainter.afg(super.properties, super.aspectRatio)
-      : _hasSabre = false;
+    : _hasSabre = false;
 
   final bool _hasSabre;
 

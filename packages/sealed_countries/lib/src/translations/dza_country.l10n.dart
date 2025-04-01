@@ -158,7 +158,7 @@ import "../model/country/submodels/country_name.dart";
 /// - Yoruba
 /// - Zhuang (Chuang)
 /// - Zulu.
-const dzaCountryTranslations = [
+const dzaCountryTranslations = <TranslatedName>[
   CountryName(
     language: LangEng(),
     official: "People's Democratic Republic of Algeria",

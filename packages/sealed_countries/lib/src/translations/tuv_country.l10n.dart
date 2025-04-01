@@ -133,7 +133,7 @@ import "../model/country/submodels/country_name.dart";
 /// - Yiddish
 /// - Yoruba
 /// - Zulu.
-const tuvCountryTranslations = [
+const tuvCountryTranslations = <TranslatedName>[
   CountryName(language: LangEng(), official: "Tuvalu", common: "Tuvalu"),
   CountryName(language: LangSrp(), official: "Тувалу", common: "Тувалу"),
   CountryName(language: LangAra(), official: "توفالو", common: "توفالو"),

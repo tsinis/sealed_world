@@ -12,8 +12,8 @@ final class SimpleShieldPainter extends MultiElementPainter {
   const SimpleShieldPainter.outlinedWithDividers(
     super.properties,
     super.aspectRatio,
-  )   : _showDividers = true,
-        _showOutline = true;
+  ) : _showDividers = true,
+      _showOutline = true;
 
   /// Creates a [SimpleShieldPainter] with an outlined shield without dividers.
   ///
@@ -22,8 +22,8 @@ final class SimpleShieldPainter extends MultiElementPainter {
   const SimpleShieldPainter.outlinedWithoutDividers(
     super.properties,
     super.aspectRatio,
-  )   : _showDividers = false,
-        _showOutline = true;
+  ) : _showDividers = false,
+      _showOutline = true;
 
   /// Creates a [SimpleShieldPainter] with a shield with dividers but without an
   /// outline.
@@ -31,8 +31,8 @@ final class SimpleShieldPainter extends MultiElementPainter {
   /// The [properties] parameter specifies the properties of the shield. The
   /// [aspectRatio] parameter specifies the aspect ratio of the shield.
   const SimpleShieldPainter.withDividers(super.properties, super.aspectRatio)
-      : _showDividers = true,
-        _showOutline = false;
+    : _showDividers = true,
+      _showOutline = false;
 
   /// Creates a [SimpleShieldPainter] with a shield without dividers and
   /// outline.
@@ -40,8 +40,8 @@ final class SimpleShieldPainter extends MultiElementPainter {
   /// The [properties] parameter specifies the properties of the shield. The
   /// [aspectRatio] parameter specifies the aspect ratio of the shield.
   const SimpleShieldPainter.withoutDividers(super.properties, super.aspectRatio)
-      : _showDividers = false,
-        _showOutline = false;
+    : _showDividers = false,
+      _showOutline = false;
 
   final bool _showDividers;
   final bool _showOutline;

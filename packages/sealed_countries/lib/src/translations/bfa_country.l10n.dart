@@ -146,7 +146,7 @@ import "../model/country/submodels/country_name.dart";
 /// - Yiddish
 /// - Yoruba
 /// - Zulu.
-const bfaCountryTranslations = [
+const bfaCountryTranslations = <TranslatedName>[
   CountryName(
     language: LangEng(),
     official: "Burkina Faso",

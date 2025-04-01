@@ -124,9 +124,10 @@ class RegionalBloc extends WorldBloc {
   }
 
   /// A map of all the regional blocs with their corresponding acronyms.
-  static const map = UpperCaseMap(regionalBlocAcronymMap);
+  static const map = UpperCaseMap<RegionalBloc>(regionalBlocAcronymMap);
 
   /// A list of all the regional blocs currently
   /// supported by the [RegionalBloc] class.
-  static const list = regionalBlocList;
+  // ignore: avoid-explicit-type-declaration, vs specify_nonobvious_property_types.
+  static const List<RegionalBloc> list = regionalBlocList;
 }

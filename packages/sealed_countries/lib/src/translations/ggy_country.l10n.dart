@@ -126,7 +126,7 @@ import "../model/country/submodels/country_name.dart";
 /// - Yiddish
 /// - Yoruba
 /// - Zulu.
-const ggyCountryTranslations = [
+const ggyCountryTranslations = <TranslatedName>[
   CountryName(
     language: LangEng(),
     official: "Bailiwick of Guernsey",

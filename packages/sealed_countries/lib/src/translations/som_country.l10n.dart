@@ -149,7 +149,7 @@ import "../model/country/submodels/country_name.dart";
 /// - Yoruba
 /// - Zhuang (Chuang)
 /// - Zulu.
-const somCountryTranslations = [
+const somCountryTranslations = <TranslatedName>[
   CountryName(
     language: LangEng(),
     official: "Federal Republic of Somalia",

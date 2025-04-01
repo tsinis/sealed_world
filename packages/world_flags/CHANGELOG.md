@@ -1,3 +1,17 @@
+## 2.2.0
+
+This is maintenance release without significant changes for the users, that aims to improve DevEx when working with flags in DevTools.
+
+NEW FEATURES
+
+- To enhance debugging, all widgets within this package now override `debugFillProperties`, providing detailed flag property information, including values and rationales. Crucially, this allows you to visualize emoji flags directly in dev tools, replacing generic widget names.
+
+CHORE
+
+- Dart SDK bumped to v3.7.0.
+- Code is formatted with new Dart formatter.
+- Example app runners update.
+
 ## 2.1.0
 
 REFACTOR
@@ -56,10 +70,10 @@ BasicTypedLocale(*, regionalCode: "US"); // or BasicTypedLocale(*, country: Coun
 
 NEW FEATURES
 
-- Updated postal code pattern a format for Paraguay.
+- Updated the postal code pattern format for Paraguay.
 - Updated International Olympic Committee (IOC) country code for Bahrain.
 - Improvements of `toString()` method implementations in models and addressing new lints + DCM reports.
-- Added "polski" to the [Polish](https://github.com/tsinis/sealed_world/issues/221) language `namesNative` array.
+- Added "polski" to the [Polish](https://github.com/tsinis/sealed_world/issues/221) language's `namesNative` array.
 
 ## 1.1.0
 

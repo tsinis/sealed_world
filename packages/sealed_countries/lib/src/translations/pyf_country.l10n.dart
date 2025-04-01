@@ -133,7 +133,7 @@ import "../model/country/submodels/country_name.dart";
 /// - Yiddish
 /// - Yoruba
 /// - Zulu.
-const pyfCountryTranslations = [
+const pyfCountryTranslations = <TranslatedName>[
   CountryName(
     language: LangEng(),
     official: "French Polynesia",

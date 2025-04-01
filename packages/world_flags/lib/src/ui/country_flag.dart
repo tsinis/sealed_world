@@ -1,9 +1,13 @@
+// ignore_for_file: avoid-passing-default-values
+
+import "package:flutter/foundation.dart";
 import "package:flutter/widgets.dart";
 import "package:sealed_countries/sealed_countries.dart";
 
 // ignore: avoid-importing-entrypoint-exports, only shows maps.
 import "../../world_flags.dart"
     show smallSimplifiedAlternativeFlagsMap, smallSimplifiedFlagsMap;
+import "../debug/iso_diagnostics_property.dart";
 import "../helpers/extensions/basic_flag_extension_copy_with.dart";
 import "../helpers/extensions/world_flags_build_context_extension.dart";
 import "../interfaces/decorated_flag_interface.dart";
@@ -40,6 +44,7 @@ class CountryFlag extends StatelessWidget implements DecoratedFlagInterface {
   /// - [child]: A widget to display in the foreground of the flag.
   const CountryFlag.simplified(
     this.country, {
+
     /// Map of non-official or alternative flags of the countries.
     // ignore: avoid-nullable-parameters-with-default-values, breaking change.
     Map<WorldCountry, BasicFlag>? alternativeMap =
@@ -53,8 +58,8 @@ class CountryFlag extends StatelessWidget implements DecoratedFlagInterface {
     this.orElse,
     this.child,
     super.key,
-  })  : _map = smallSimplifiedFlagsMap,
-        _alternativeMap = alternativeMap;
+  }) : _map = smallSimplifiedFlagsMap,
+       _alternativeMap = alternativeMap;
 
   /// Creates a [CountryFlag] widget with a custom flag representation.
   ///
@@ -73,6 +78,7 @@ class CountryFlag extends StatelessWidget implements DecoratedFlagInterface {
   const CountryFlag.custom(
     this.country,
     this._map, {
+
     /// Map of non-official or alternative flags of the countries.
     Map<WorldCountry, BasicFlag>? alternativeMap,
     this.height,
@@ -127,15 +133,123 @@ class CountryFlag extends StatelessWidget implements DecoratedFlagInterface {
   BasicFlag? get _basicFlag => _alternativeMap?[country] ?? _map[country];
 
   @override
-  Widget build(BuildContext context) => SizedBox(
-        width: width ?? context.flagTheme?.width,
-        height: height ?? context.flagTheme?.height,
-        child: _basicFlag?.copyWith(
-              aspectRatio: aspectRatio,
-              decoration: decoration,
-              decorationPosition: decorationPosition,
-              foregroundWidget: child,
-            ) ??
-            orElse,
+  String toStringShort() => "CountryFlag(${country.emoji})";
+
+  @override
+  void debugFillProperties(DiagnosticPropertiesBuilder properties) {
+    super.debugFillProperties(properties);
+    const theme = "not provided, using value from FlagThemeData or";
+    const ifNull = "$theme null, if theme is also not provided";
+
+    properties
+      ..add(IsoDiagnosticsProperty(country, additionalData: country.emoji))
+      ..add(DoubleProperty("width", width, ifNull: ifNull))
+      ..add(DoubleProperty("height", height, ifNull: ifNull))
+      ..add(
+        DoubleProperty(
+          "aspectRatio",
+          aspectRatio,
+          ifNull: "$theme flag's aspect ratio (${_basicFlag?.flagAspectRatio})",
+          defaultValue: null,
+        ),
+      )
+      ..add(
+        ObjectFlagProperty<Widget>(
+          "child",
+          child,
+          ifNull: "no foreground widget",
+        ),
+      )
+      ..add(
+        ObjectFlagProperty<Widget>(
+          "orElse",
+          orElse,
+          ifNull: "no fallback widget",
+        ),
+      )
+      ..add(
+        DiagnosticsProperty<BoxDecoration>(
+          "decoration",
+          decoration,
+          ifNull: "$theme const $BoxDecoration() otherwise",
+          defaultValue: null,
+        ),
+      )
+      ..add(
+        DiagnosticsProperty<DecorationPosition>(
+          "decorationPosition",
+          decorationPosition,
+          ifNull: "$theme ${DecorationPosition.foreground} otherwise",
+          defaultValue: null,
+        ),
+      )
+      ..add(
+        DiagnosticsProperty<EdgeInsetsGeometry>(
+          "padding",
+          padding,
+          ifNull: "$theme ${EdgeInsets.zero} otherwise",
+          defaultValue: null,
+        ),
+      )
+      ..add(
+        FlagProperty(
+          "any ${country.internationalName} country flag found",
+          value: _basicFlag != null,
+          ifTrue: "yes",
+          ifFalse: "not found in both maps",
+        ),
+      )
+      ..add(
+        FlagProperty(
+          "uses alternative flag for this ${country.internationalName} country",
+          value: _alternativeMap?[country] != null,
+          ifTrue: "yes",
+          ifFalse: "no",
+        ),
+      )
+      ..add(
+        DiagnosticsProperty<int>(
+          "total flags available in _map",
+          _map.length,
+          description: "${_map.length} flags in main map",
+        ),
+      )
+      ..add(
+        DiagnosticsProperty<int>(
+          "total flags available in _alternativeMap",
+          _map.length,
+          description: "${_alternativeMap?.length} flags in alt. map",
+        ),
+      )
+      ..add(
+        IterableProperty<WorldCountry>(
+          "_alternativeMap",
+          _alternativeMap?.keys,
+          ifEmpty: "empty alternative flags map provided",
+          ifNull: "no alternative flags map provided",
+        ),
+      )
+      ..add(
+        IterableProperty<WorldCountry>(
+          "_map",
+          _map.keys,
+          ifEmpty: "empty flags map provided",
+        ),
       );
+  }
+
+  @override
+  Widget build(BuildContext context) => SizedBox(
+    width: width ?? context.flagTheme?.width,
+    height: height ?? context.flagTheme?.height,
+    child:
+        _basicFlag?.copyWith(
+          aspectRatio: aspectRatio,
+          decoration: decoration,
+          decorationPosition: decorationPosition,
+          foregroundWidget: child,
+          key: Key(country.emoji),
+        ) ??
+        orElse,
+  );
 }

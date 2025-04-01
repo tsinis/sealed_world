@@ -146,7 +146,7 @@ import "../model/country/submodels/country_name.dart";
 /// - Yoruba
 /// - Zhuang (Chuang)
 /// - Zulu.
-const omnCountryTranslations = [
+const omnCountryTranslations = <TranslatedName>[
   CountryName(
     language: LangEng(),
     official: "Sultanate of Oman",

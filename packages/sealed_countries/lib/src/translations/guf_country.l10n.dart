@@ -134,7 +134,7 @@ import "../model/country/submodels/country_name.dart";
 /// - Yiddish
 /// - Yoruba
 /// - Zulu.
-const gufCountryTranslations = [
+const gufCountryTranslations = <TranslatedName>[
   CountryName(language: LangEng(), official: "Guiana", common: "French Guiana"),
   CountryName(
     language: LangSrp(),

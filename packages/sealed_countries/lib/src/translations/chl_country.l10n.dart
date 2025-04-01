@@ -164,7 +164,7 @@ import "../model/country/submodels/country_name.dart";
 /// - Yoruba
 /// - Zhuang (Chuang)
 /// - Zulu.
-const chlCountryTranslations = [
+const chlCountryTranslations = <TranslatedName>[
   CountryName(
     language: LangEng(),
     official: "Republic of Chile",

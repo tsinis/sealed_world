@@ -1,4 +1,5 @@
-// ignore_for_file: prefer-static-class, avoid-long-files
+// ignore_for_file: specify_nonobvious_property_types, prefer-static-class
+// ignore_for_file: avoid-long-files, it's TODO!
 import "dart:ui";
 
 import "../model/colors_properties.dart";
@@ -17,11 +18,7 @@ const flagHndProperties = FlagProperties(
   ],
   aspectRatio: 2,
   elementsProperties: [
-    ElementsProperties(
-      Color(0xff00bce4),
-      shape: Star(),
-      heightFactor: 4 / 36,
-    ),
+    ElementsProperties(Color(0xff00bce4), shape: Star(), heightFactor: 4 / 36),
     ElementsProperties(
       Color(0xff00bce4),
       shape: Star(),

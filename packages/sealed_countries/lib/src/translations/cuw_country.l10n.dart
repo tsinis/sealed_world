@@ -121,7 +121,7 @@ import "../model/country/submodels/country_name.dart";
 /// - Yiddish
 /// - Yoruba
 /// - Zulu.
-const cuwCountryTranslations = [
+const cuwCountryTranslations = <TranslatedName>[
   CountryName(
     language: LangEng(),
     official: "WorldCountry of Curaçao",

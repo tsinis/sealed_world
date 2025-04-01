@@ -148,7 +148,7 @@ import "../model/country/submodels/country_name.dart";
 /// - Yoruba
 /// - Zhuang (Chuang)
 /// - Zulu.
-const gtmCountryTranslations = [
+const gtmCountryTranslations = <TranslatedName>[
   CountryName(
     language: LangEng(),
     official: "Republic of Guatemala",

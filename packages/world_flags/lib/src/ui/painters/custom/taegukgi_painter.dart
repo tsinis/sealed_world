@@ -13,7 +13,8 @@ final class TaegukgiPainter extends CustomElementsPainter {
   @override
   double get originalAspectRatio => flagKorProperties.aspectRatio;
 
-  static const _radians = -123 * pi / 180;
+  // ignore: avoid-explicit-type-declaration, vs specify_nonobvious_property_types.
+  static const double _radians = -123 * pi / 180;
 
   @override
   FlagParentBounds? paintFlagElements(Canvas canvas, Size size) {
@@ -68,28 +69,32 @@ final class TaegukgiPainter extends CustomElementsPainter {
       ..restore();
 
     _drawTrigram(
-      canvas, size,
+      canvas,
+      size,
       Offset(size.width * 0.71, size.height * 0.29),
       [false, false, false], // Heaven - ☰ (3 solid bars).
       _radians,
     );
 
     _drawTrigram(
-      canvas, size,
+      canvas,
+      size,
       Offset(size.width * 0.29, size.height * 0.29),
       [true, false, true], // Earth - ☷ (2 broken bars).
       -_radians,
     );
 
     _drawTrigram(
-      canvas, size,
+      canvas,
+      size,
       Offset(size.width * 0.8, size.height * 0.8),
       [false, true, false], // Water - ☵ (1 broken bar in the middle).
       -_radians,
     );
 
     _drawTrigram(
-      canvas, size,
+      canvas,
+      size,
       Offset(size.width * 0.2, size.height * 0.8),
       [true, true, true], // Fire - ☲ (3 broken bars).
       _radians,

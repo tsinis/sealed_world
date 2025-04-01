@@ -133,7 +133,7 @@ import "../model/country/submodels/country_name.dart";
 /// - Xhosa
 /// - Yoruba
 /// - Zulu.
-const wlfCountryTranslations = [
+const wlfCountryTranslations = <TranslatedName>[
   CountryName(
     language: LangEng(),
     official: "Territory of the Wallis and Futuna Islands",

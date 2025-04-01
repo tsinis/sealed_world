@@ -3,7 +3,7 @@ import "../data/natural_languages.data.dart";
 import "../model/language/language.dart";
 
 /// List of all standard [NaturalLanguage] sorted by code.
-const naturalLanguageList = [
+const naturalLanguageList = <NaturalLanguage>[
   LangAar(),
   LangAbk(),
   LangAfr(),
@@ -191,7 +191,7 @@ const naturalLanguageList = [
 ];
 
 /// Map of [NaturalLanguage] standard codes.
-const naturalLanguageCodeMap = {
+const naturalLanguageCodeMap = <String, NaturalLanguage>{
   "AAR": LangAar(),
   "ABK": LangAbk(),
   "AFR": LangAfr(),
@@ -379,7 +379,7 @@ const naturalLanguageCodeMap = {
 };
 
 /// Map of [NaturalLanguage] other codes.
-const naturalLanguageCodeOtherMap = {
+const naturalLanguageCodeOtherMap = <String, NaturalLanguage>{
   "AA": LangAar(),
   "AB": LangAbk(),
   "AE": LangAve(),

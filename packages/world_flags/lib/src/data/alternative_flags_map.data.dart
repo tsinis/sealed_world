@@ -26,10 +26,6 @@ const flagGufPropertiesAlt = FlagProperties(
   [ColorsProperties(Color(0xffFCDD09)), ColorsProperties(Color(0xff078930))],
   stripeOrientation: StripeOrientation.diagonalTopLeftToBottomRight,
   elementsProperties: [
-    ElementsProperties(
-      Color(0xffDA121A),
-      shape: Star(),
-      heightFactor: 1 / 3,
-    ),
+    ElementsProperties(Color(0xffDA121A), shape: Star(), heightFactor: 1 / 3),
   ],
 );

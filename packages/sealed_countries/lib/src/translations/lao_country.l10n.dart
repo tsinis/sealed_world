@@ -144,7 +144,7 @@ import "../model/country/submodels/country_name.dart";
 /// - Yoruba
 /// - Zhuang (Chuang)
 /// - Zulu.
-const laoCountryTranslations = [
+const laoCountryTranslations = <TranslatedName>[
   CountryName(
     language: LangEng(),
     official: "Lao People's Democratic Republic",

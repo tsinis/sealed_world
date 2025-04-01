@@ -136,7 +136,7 @@ import "../model/country/submodels/country_name.dart";
 /// - Yoruba
 /// - Zhuang (Chuang)
 /// - Zulu.
-const shnCountryTranslations = [
+const shnCountryTranslations = <TranslatedName>[
   CountryName(
     language: LangEng(),
     official: "Saint Helena, Ascension and Tristan da Cunha",

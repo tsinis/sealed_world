@@ -156,7 +156,7 @@ import "../model/country/submodels/country_name.dart";
 /// - Yoruba
 /// - Zhuang (Chuang)
 /// - Zulu.
-const hunCountryTranslations = [
+const hunCountryTranslations = <TranslatedName>[
   CountryName(language: LangEng(), official: "Hungary", common: "Hungary"),
   CountryName(language: LangSrp(), official: "Мађарска", common: "Мађарска"),
   CountryName(

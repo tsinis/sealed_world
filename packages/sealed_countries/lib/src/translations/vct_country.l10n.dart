@@ -135,7 +135,7 @@ import "../model/country/submodels/country_name.dart";
 /// - Xhosa
 /// - Yoruba
 /// - Zulu.
-const vctCountryTranslations = [
+const vctCountryTranslations = <TranslatedName>[
   CountryName(
     language: LangEng(),
     official: "Saint Vincent and the Grenadines",

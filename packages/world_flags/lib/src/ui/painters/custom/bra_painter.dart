@@ -27,25 +27,28 @@ final class BraPainter extends MultiElementPainter {
       ovalRect.bottom * 1.08 - ovalRect.height * 1 / 2,
     );
 
-    final arc = Path()
-      ..moveTo(startPoint.dx, startPoint.dy)
-      ..quadraticBezierTo(
-        controlPoint.dx,
-        controlPoint.dy,
-        endPoint.dx,
-        endPoint.dy,
-      );
-    final path = Path()
-      ..moveTo(width / 2, 0)
-      ..lineTo(width / 2 + width / 2, height / 2)
-      ..lineTo(width / 2, height / 2 + height / 2)
-      ..lineTo(0, height / 2)
-      ..close();
+    final arc =
+        Path()
+          ..moveTo(startPoint.dx, startPoint.dy)
+          ..quadraticBezierTo(
+            controlPoint.dx,
+            controlPoint.dy,
+            endPoint.dx,
+            endPoint.dy,
+          );
+    final path =
+        Path()
+          ..moveTo(width / 2, 0)
+          ..lineTo(width / 2 + width / 2, height / 2)
+          ..lineTo(width / 2, height / 2 + height / 2)
+          ..lineTo(0, height / 2)
+          ..close();
 
-    final arcPaint = Paint()
-      ..color = customColors[1]
-      ..style = PaintingStyle.stroke
-      ..strokeWidth = height / 20;
+    final arcPaint =
+        Paint()
+          ..color = customColors[1]
+          ..style = PaintingStyle.stroke
+          ..strokeWidth = height / 20;
 
     canvas
       ..save()

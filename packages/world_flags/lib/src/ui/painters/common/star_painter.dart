@@ -1,3 +1,5 @@
+// ignore_for_file: specify_nonobvious_property_types, those are doubles.
+
 import "dart:math";
 import "dart:ui";
 
@@ -26,9 +28,11 @@ final class StarPainter extends ElementsPainter {
 
     for (int i = 0; i <= star.points * 2; i += 1) {
       final radiusFactor = i.isEven ? star.radiusFactor : 1;
-      final x = center.dx +
+      final x =
+          center.dx +
           radius * radiusFactor * cos(i * radiansPerPoint + _startRadians);
-      final y = center.dy +
+      final y =
+          center.dy +
           radius * radiusFactor * sin(i * radiansPerPoint + _startRadians);
       i == 0 ? path.moveTo(x, y) : path.lineTo(x, y);
     }

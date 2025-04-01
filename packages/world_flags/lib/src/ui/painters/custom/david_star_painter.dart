@@ -11,10 +11,11 @@ final class DavidStarPainter extends CustomElementsPainter {
 
   @override
   FlagParentBounds? paintFlagElements(Canvas canvas, Size size) {
-    final paint = Paint()
-      ..color = property.mainColor
-      ..style = PaintingStyle.stroke
-      ..strokeWidth = size.height / 28;
+    final paint =
+        Paint()
+          ..color = property.mainColor
+          ..style = PaintingStyle.stroke
+          ..strokeWidth = size.height / 28;
     final center = Offset(size.width / 2, size.height / 2);
     final radius = min(size.width, size.height) / 5.5;
 
@@ -29,7 +30,7 @@ final class DavidStarPainter extends CustomElementsPainter {
     return null;
   }
 
-// ignore: long-parameter-list, TODO? Refactor later.
+  // ignore: long-parameter-list, TODO? Refactor later.
   static void _drawTriangle(
     Canvas canvas,
     Offset center,

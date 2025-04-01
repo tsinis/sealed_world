@@ -123,7 +123,7 @@ import "../model/country/submodels/country_name.dart";
 /// - Xhosa
 /// - Yoruba
 /// - Zulu.
-const sgsCountryTranslations = [
+const sgsCountryTranslations = <TranslatedName>[
   CountryName(
     language: LangEng(),
     official: "South Georgia and the South Sandwich Islands",

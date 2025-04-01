@@ -130,7 +130,7 @@ import "../model/country/submodels/country_name.dart";
 /// - Yoruba
 /// - Zhuang (Chuang)
 /// - Zulu.
-const pseCountryTranslations = [
+const pseCountryTranslations = <TranslatedName>[
   CountryName(
     language: LangEng(),
     official: "State of Palestine",

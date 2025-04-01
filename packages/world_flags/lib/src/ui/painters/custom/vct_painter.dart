@@ -18,12 +18,13 @@ final class VctPainter extends CustomElementsPainter {
     final height = adjustedSize.height / 2;
     final width = adjustedSize.width / 2;
 
-    final path = Path()
-      ..moveTo(width, 0)
-      ..lineTo(width * 2, height)
-      ..lineTo(width, height * 2)
-      ..lineTo(0, height)
-      ..close();
+    final path =
+        Path()
+          ..moveTo(width, 0)
+          ..lineTo(width * 2, height)
+          ..lineTo(width, height * 2)
+          ..lineTo(0, height)
+          ..close();
 
     for (final prop in properties) {
       final horizontal = size.width / 2 - width + prop.offset.dx * width * 2;

@@ -151,7 +151,7 @@ import "../model/country/submodels/country_name.dart";
 /// - Yoruba
 /// - Zhuang (Chuang)
 /// - Zulu.
-const kgzCountryTranslations = [
+const kgzCountryTranslations = <TranslatedName>[
   CountryName(
     language: LangEng(),
     official: "Kyrgyz Republic",

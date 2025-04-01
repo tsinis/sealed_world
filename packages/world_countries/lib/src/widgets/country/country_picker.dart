@@ -99,9 +99,6 @@ class CountryPicker extends BasicPicker<WorldCountry> {
     super.translation,
   }) : super(countries);
 
-  /// The list of countries to display.
-  Iterable<WorldCountry> get countries => items;
-
   @override
   Widget defaultBuilder(
     BuildContext context,
@@ -192,7 +189,7 @@ class CountryPicker extends BasicPicker<WorldCountry> {
     itemBuilder,
     TypedLocale? translation,
   }) => CountryPicker(
-    countries: items ?? countries,
+    countries: items ?? this.items,
     addAutomaticKeepAlives:
         addAutomaticKeepAlives ?? this.addAutomaticKeepAlives,
     addRepaintBoundaries: addRepaintBoundaries ?? this.addRepaintBoundaries,

@@ -15,24 +15,28 @@ final class MhlPainter extends MultiElementPainter {
     final end = Offset(0, size.height - offsetFromEdges);
     final orange = paintCreator(customColors.last);
 
-    final orangePath = Path()
-      ..moveTo(start.dx, start.dy)
-      ..lineTo(topRightBelow.dx, topRightBelow.dy)
-      ..lineTo(rightEdgeBottom.dx, rightEdgeBottom.dy)
-      ..lineTo(end.dx, end.dy)
-      ..close();
+    final orangePath =
+        Path()
+          ..moveTo(start.dx, start.dy)
+          ..lineTo(topRightBelow.dx, topRightBelow.dy)
+          ..lineTo(rightEdgeBottom.dx, rightEdgeBottom.dy)
+          ..lineTo(end.dx, end.dy)
+          ..close();
 
     final offsetUnderEnd = size.height * (property.heightFactor / 2);
-    final rightBottomUnder =
-        Offset(size.width, rightEdgeBottom.dy + size.height * biggerFactor);
+    final rightBottomUnder = Offset(
+      size.width,
+      rightEdgeBottom.dy + size.height * biggerFactor,
+    );
     final endUnder = Offset(end.dx, end.dy + offsetUnderEnd);
 
-    final whitePath = Path()
-      ..moveTo(end.dx, end.dy)
-      ..lineTo(rightEdgeBottom.dx, rightEdgeBottom.dy)
-      ..lineTo(rightBottomUnder.dx, rightBottomUnder.dy)
-      ..lineTo(endUnder.dx, endUnder.dy)
-      ..close();
+    final whitePath =
+        Path()
+          ..moveTo(end.dx, end.dy)
+          ..lineTo(rightEdgeBottom.dx, rightEdgeBottom.dy)
+          ..lineTo(rightBottomUnder.dx, rightBottomUnder.dy)
+          ..lineTo(endUnder.dx, endUnder.dy)
+          ..close();
 
     canvas
       ..drawPath(orangePath, orange)

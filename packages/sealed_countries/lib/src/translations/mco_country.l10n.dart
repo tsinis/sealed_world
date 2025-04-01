@@ -151,7 +151,7 @@ import "../model/country/submodels/country_name.dart";
 /// - Yoruba
 /// - Zhuang (Chuang)
 /// - Zulu.
-const mcoCountryTranslations = [
+const mcoCountryTranslations = <TranslatedName>[
   CountryName(
     language: LangEng(),
     official: "Principality of Monaco",

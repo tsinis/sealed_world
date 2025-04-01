@@ -136,7 +136,7 @@ import "../model/country/submodels/country_name.dart";
 /// - Yiddish
 /// - Yoruba
 /// - Zulu.
-const cymCountryTranslations = [
+const cymCountryTranslations = <TranslatedName>[
   CountryName(
     language: LangEng(),
     official: "Cayman Islands",

@@ -133,7 +133,7 @@ import "../model/country/submodels/country_name.dart";
 /// - Yoruba
 /// - Zhuang (Chuang)
 /// - Zulu.
-const grdCountryTranslations = [
+const grdCountryTranslations = <TranslatedName>[
   CountryName(language: LangEng(), official: "Grenada", common: "Grenada"),
   CountryName(language: LangSrp(), official: "Гренада", common: "Гренада"),
   CountryName(language: LangAra(), official: "غرينادا", common: "غرينادا"),

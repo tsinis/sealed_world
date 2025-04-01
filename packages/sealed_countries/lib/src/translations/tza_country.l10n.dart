@@ -143,7 +143,7 @@ import "../model/country/submodels/country_name.dart";
 /// - Yoruba
 /// - Zhuang (Chuang)
 /// - Zulu.
-const tzaCountryTranslations = [
+const tzaCountryTranslations = <TranslatedName>[
   CountryName(
     language: LangEng(),
     official: "United Republic of Tanzania",

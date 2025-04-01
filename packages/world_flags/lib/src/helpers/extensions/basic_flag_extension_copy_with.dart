@@ -42,21 +42,20 @@ extension BasicFlagExtensionCopyWith<T extends BasicFlag> on T {
     FlagPainterBuilder? foregroundPainterBuilder,
     FlagWidgetBuilder? foregroundWidgetBuilder,
     Key? key,
-  }) =>
-      BasicFlag(
-        properties ?? this.properties,
-        aspectRatio: aspectRatio ?? this.aspectRatio,
-        decoration: decoration ?? this.decoration,
-        decorationPosition: decorationPosition ?? this.decorationPosition,
-        padding: padding ?? this.padding,
-        elementsBuilder: elementsBuilder ?? this.elementsBuilder,
-        backgroundPainter: backgroundPainter ?? this.backgroundPainter,
-        foregroundPainter: foregroundPainter ?? this.foregroundPainter,
-        foregroundWidget: foregroundWidget ?? this.foregroundWidget,
-        foregroundPainterBuilder:
-            foregroundPainterBuilder ?? this.foregroundPainterBuilder,
-        foregroundWidgetBuilder:
-            foregroundWidgetBuilder ?? this.foregroundWidgetBuilder,
-        key: key ?? this.key,
-      );
+  }) => BasicFlag(
+    properties ?? this.properties,
+    aspectRatio: aspectRatio ?? this.aspectRatio,
+    decoration: decoration ?? this.decoration,
+    decorationPosition: decorationPosition ?? this.decorationPosition,
+    padding: padding ?? this.padding,
+    elementsBuilder: elementsBuilder ?? this.elementsBuilder,
+    backgroundPainter: backgroundPainter ?? this.backgroundPainter,
+    foregroundPainter: foregroundPainter ?? this.foregroundPainter,
+    foregroundWidget: foregroundWidget ?? this.foregroundWidget,
+    foregroundPainterBuilder:
+        foregroundPainterBuilder ?? this.foregroundPainterBuilder,
+    foregroundWidgetBuilder:
+        foregroundWidgetBuilder ?? this.foregroundWidgetBuilder,
+    key: key ?? this.key,
+  );
 }

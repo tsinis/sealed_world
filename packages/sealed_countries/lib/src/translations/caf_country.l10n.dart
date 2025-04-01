@@ -149,7 +149,7 @@ import "../model/country/submodels/country_name.dart";
 /// - Yiddish
 /// - Yoruba
 /// - Zulu.
-const cafCountryTranslations = [
+const cafCountryTranslations = <TranslatedName>[
   CountryName(
     language: LangEng(),
     official: "Central African Republic",

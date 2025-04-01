@@ -137,7 +137,7 @@ import "../model/country/submodels/country_name.dart";
 /// - Xhosa
 /// - Yoruba
 /// - Zulu.
-const knaCountryTranslations = [
+const knaCountryTranslations = <TranslatedName>[
   CountryName(
     language: LangEng(),
     official: "Federation of Saint Christopher and Nevis",

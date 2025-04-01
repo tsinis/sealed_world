@@ -145,7 +145,7 @@ import "../model/country/submodels/country_name.dart";
 /// - Yoruba
 /// - Zhuang (Chuang)
 /// - Zulu.
-const srbCountryTranslations = [
+const srbCountryTranslations = <TranslatedName>[
   CountryName(
     language: LangEng(),
     official: "Republic of Serbia",

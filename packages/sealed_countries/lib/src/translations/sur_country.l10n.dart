@@ -144,7 +144,7 @@ import "../model/country/submodels/country_name.dart";
 /// - Yoruba
 /// - Zhuang (Chuang)
 /// - Zulu.
-const surCountryTranslations = [
+const surCountryTranslations = <TranslatedName>[
   CountryName(
     language: LangEng(),
     official: "Republic of Suriname",

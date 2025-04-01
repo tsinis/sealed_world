@@ -135,7 +135,7 @@ import "../model/country/submodels/country_name.dart";
 /// - Yiddish
 /// - Yoruba
 /// - Zulu.
-const mhlCountryTranslations = [
+const mhlCountryTranslations = <TranslatedName>[
   CountryName(
     language: LangEng(),
     official: "Republic of the Marshall Islands",

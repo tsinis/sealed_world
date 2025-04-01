@@ -50,9 +50,9 @@ class FlagProperties {
     this.elementsProperties,
     this.url = "",
   }) : assert(
-          stripeColors != const <ColorsProperties>[],
-          "`stripeColors` should not be empty!",
-        );
+         stripeColors != const <ColorsProperties>[],
+         "`stripeColors` should not be empty!",
+       );
 
   /// The list of colors for the stripes of the flag.
   final List<ColorsProperties> stripeColors;

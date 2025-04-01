@@ -1,4 +1,4 @@
-// ignore_for_file: avoid-unused-ignores, avoid-continue
+// ignore_for_file: avoid-unused-ignores, avoid-continue, avoid-unused-ignores
 
 import "package:change_case/change_case.dart";
 import "package:sealed_languages/sealed_languages.dart";

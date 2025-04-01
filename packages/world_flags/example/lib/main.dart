@@ -30,7 +30,8 @@ class Main extends StatefulWidget {
 }
 
 class _MainState extends State<Main> {
-  static const _size = kMinInteractiveDimension / 2;
+  // ignore: specify_nonobvious_property_types, a double as it's divided by 2.0.
+  static const _size = kMinInteractiveDimension / 2.0;
   final _aspectRatio = ValueNotifier<double?>(null);
 
   @override
@@ -41,42 +42,45 @@ class _MainState extends State<Main> {
 
   @override
   Widget build(BuildContext context) => Material(
-        color: Theme.of(context).scaffoldBackgroundColor,
-        child: SafeArea(
-          minimum: const EdgeInsets.all(_size / 2),
-          child: ListView.separated(
-            itemBuilder: (bc, index) {
-              final country = WorldCountry.list[index];
-              final isFull = fullFlags.contains(country);
-              final style =
-                  TextStyle(color: isFull ? null : Theme.of(bc).disabledColor);
+    color: Theme.of(context).scaffoldBackgroundColor,
+    child: SafeArea(
+      minimum: const EdgeInsets.all(_size / 2),
+      child: ListView.separated(
+        itemBuilder: (bc, index) {
+          final country = WorldCountry.list[index];
+          final isFull = fullFlags.contains(country);
+          final style = TextStyle(
+            color: isFull ? null : Theme.of(bc).disabledColor,
+          );
 
-              return ListTile(
-                leading:
-                    Text(country.code, style: style.copyWith(fontSize: 16)),
-                title: Text(country.internationalName, style: style),
-                subtitle: Text(country.namesNative.first.common, style: style),
-                trailing: ValueListenableBuilder(
-                  valueListenable: _aspectRatio,
-                  builder: (_, ratio, __) => CountryFlag.simplified(
+          return ListTile(
+            leading: Text(country.code, style: style.copyWith(fontSize: 16)),
+            title: Text(country.internationalName, style: style),
+            subtitle: Text(country.namesNative.first.common, style: style),
+            trailing: ValueListenableBuilder(
+              valueListenable: _aspectRatio,
+              builder:
+                  (_, ratio, _) => CountryFlag.simplified(
                     country,
                     height: _size,
                     aspectRatio: ratio,
                   ),
-                ),
-                onTap: isFull
+            ),
+            onTap:
+                isFull
                     ? () => SettingsDialog.show(_aspectRatio, bc, country)
                     : null,
-                minLeadingWidth: _size * 1.5,
-              );
-            },
-            separatorBuilder: (_, __) => const Divider(
+            minLeadingWidth: _size * 1.5,
+          );
+        },
+        separatorBuilder:
+            (_, _) => const Divider(
               height: 1,
               color: Color.fromARGB(33, 133, 133, 133),
             ),
-            itemCount: WorldCountry.list.length,
-            clipBehavior: Clip.none,
-          ),
-        ),
-      );
+        itemCount: WorldCountry.list.length,
+        clipBehavior: Clip.none,
+      ),
+    ),
+  );
 }

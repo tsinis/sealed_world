@@ -133,7 +133,7 @@ import "../model/country/submodels/country_name.dart";
 /// - Xhosa
 /// - Yoruba
 /// - Zulu.
-const spmCountryTranslations = [
+const spmCountryTranslations = <TranslatedName>[
   CountryName(
     language: LangEng(),
     official: "Saint Pierre and Miquelon",

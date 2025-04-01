@@ -138,7 +138,7 @@ import "../model/country/submodels/country_name.dart";
 /// - Yoruba
 /// - Zhuang (Chuang)
 /// - Zulu.
-const cpvCountryTranslations = [
+const cpvCountryTranslations = <TranslatedName>[
   CountryName(
     language: LangEng(),
     official: "Republic of Cabo Verde",

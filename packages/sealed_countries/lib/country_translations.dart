@@ -312,7 +312,7 @@ export "src/translations/zwe_country.l10n.dart";
 /// - Yoruba (YOR)
 /// That are not listed in Material one, and much more.
 // ignore: prefer-static-class, to follow pattern from languages.
-const kSealedCountriesSupportedLanguages = [
+const kSealedCountriesSupportedLanguages = <NaturalLanguage>[
   LangAbk(),
   LangAfr(),
   LangAmh(),

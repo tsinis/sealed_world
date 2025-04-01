@@ -148,7 +148,7 @@ import "../model/country/submodels/country_name.dart";
 /// - Yoruba
 /// - Zhuang (Chuang)
 /// - Zulu.
-const tunCountryTranslations = [
+const tunCountryTranslations = <TranslatedName>[
   CountryName(
     language: LangEng(),
     official: "Tunisian Republic",

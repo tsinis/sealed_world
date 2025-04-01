@@ -164,7 +164,7 @@ import "../model/country/submodels/country_name.dart";
 /// - Yoruba
 /// - Zhuang (Chuang)
 /// - Zulu.
-const egyCountryTranslations = [
+const egyCountryTranslations = <TranslatedName>[
   CountryName(
     language: LangEng(),
     official: "Arab Republic of Egypt",

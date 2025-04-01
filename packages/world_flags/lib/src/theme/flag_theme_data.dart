@@ -29,13 +29,13 @@ class FlagThemeData extends ThemeExtension<FlagThemeData>
     this.padding,
     this.height,
     this.width,
-  })  : assert(
-          aspectRatio == null || aspectRatio > 0,
-          "`aspectRatio` must be greater than 0",
-        ),
-        assert(height == null || height > 0, "`height` must be greater than 0"),
-        assert(width == null || width > 0, "`width` must be greater than 0"),
-        _aspectRatio = aspectRatio;
+  }) : assert(
+         aspectRatio == null || aspectRatio > 0,
+         "`aspectRatio` must be greater than 0",
+       ),
+       assert(height == null || height > 0, "`height` must be greater than 0"),
+       assert(width == null || width > 0, "`width` must be greater than 0"),
+       _aspectRatio = aspectRatio;
 
   @override
   final BoxDecoration? decoration;
@@ -84,18 +84,18 @@ class FlagThemeData extends ThemeExtension<FlagThemeData>
     EdgeInsetsGeometry? padding,
     double? height,
     double? width,
-  }) =>
-      FlagThemeData(
-        aspectRatio: aspectRatio ?? _aspectRatio,
-        decoration: decoration ?? this.decoration,
-        decorationPosition: decorationPosition ?? this.decorationPosition,
-        padding: padding ?? this.padding,
-        height: height ?? this.height,
-        width: width ?? this.width,
-      );
+  }) => FlagThemeData(
+    aspectRatio: aspectRatio ?? _aspectRatio,
+    decoration: decoration ?? this.decoration,
+    decorationPosition: decorationPosition ?? this.decorationPosition,
+    padding: padding ?? this.padding,
+    height: height ?? this.height,
+    width: width ?? this.width,
+  );
 
   @override
-  String toString() => "FlagThemeData(aspectRatio: $_aspectRatio, "
+  String toString() =>
+      "FlagThemeData(aspectRatio: $_aspectRatio, "
       "${decoration == null ? '' : 'decoration: $decoration, '}"
       """${decorationPosition == null ? '' : 'decorationPosition: $decorationPosition, '}"""
       "${padding == null ? '' : 'padding: $padding, '}"
@@ -128,6 +128,5 @@ class FlagThemeData extends ThemeExtension<FlagThemeData>
   FlagThemeData lerp(
     covariant ThemeExtension<FlagThemeData>? other,
     double t,
-  ) =>
-      this;
+  ) => this;
 }

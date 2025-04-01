@@ -149,7 +149,7 @@ import "../model/country/submodels/country_name.dart";
 /// - Yoruba
 /// - Zhuang (Chuang)
 /// - Zulu.
-const yemCountryTranslations = [
+const yemCountryTranslations = <TranslatedName>[
   CountryName(
     language: LangEng(),
     official: "Republic of Yemen",

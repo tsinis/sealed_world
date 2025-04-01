@@ -138,7 +138,7 @@ import "../model/country/submodels/country_name.dart";
 /// - Yiddish
 /// - Yoruba
 /// - Zulu.
-const stpCountryTranslations = [
+const stpCountryTranslations = <TranslatedName>[
   CountryName(
     language: LangEng(),
     official: "Democratic Republic of São Tomé and Príncipe",

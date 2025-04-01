@@ -408,7 +408,7 @@ class FiatCurrency extends Currency
   /// ```dart
   /// FiatCurrency.codeMap['USD']; // FiatUsd().
   /// ```
-  static const codeMap = UpperCaseIsoMap(fiatCurrencyCodeMap);
+  static const codeMap = UpperCaseIsoMap<FiatCurrency>(fiatCurrencyCodeMap);
 
   /// A tree-shakable constant map containing 3-digit numeric currency
   /// (ISO 4217 Numeric) codes and their associated [FiatCurrency] objects,
@@ -419,7 +419,8 @@ class FiatCurrency extends Currency
   /// ```dart
   /// FiatCurrency.codeNumericMap[840.toString()]; // FiatUsd().
   /// ```
-  static const codeNumericMap = UpperCaseIsoMap(fiatCurrencyCodeOtherMap);
+  static const codeNumericMap =
+      UpperCaseIsoMap<FiatCurrency>(fiatCurrencyCodeOtherMap);
 
   /// A tree-shakable combined map of [codeMap] and [codeNumericMap], providing
   /// a unified view of currency codes (ISO 4217) and their [FiatCurrency
@@ -430,20 +431,26 @@ class FiatCurrency extends Currency
   /// ```dart
   /// FiatCurrency.map['usd']; // FiatUsd().
   /// ```
-  static const map =
-      UpperCaseIsoMap({...fiatCurrencyCodeMap, ...fiatCurrencyCodeOtherMap});
+  static const map = UpperCaseIsoMap<FiatCurrency>(
+    {
+      ...fiatCurrencyCodeMap,
+      // ignore: unnecessary-trailing-comma, against new dart 3.7.0 formatting.
+      ...fiatCurrencyCodeOtherMap,
+    },
+  );
 
   /// A list of the regular currencies currently supported by the [FiatCurrency]
   /// class. For a full list with non-regular currencies please
   /// use [listExtended].
-  static const list = fiatCurrencyList;
+// ignore: avoid-explicit-type-declaration, vs specify_nonobvious_property_types.
+  static const List<FiatCurrency> list = fiatCurrencyList;
 
   /// A list of special purpose fiat currencies (currencies that are
   /// not being used in the regular transactional currencies list).
   ///
   /// This list contains instances of various [FiatCurrency] subclasses
   /// that represent special purpose fiat currencies.
-  static const specialPurposeList = [
+  static const specialPurposeList = <FiatCurrency>[
     FiatXag(),
     FiatXau(),
     FiatXba(),
@@ -459,7 +466,7 @@ class FiatCurrency extends Currency
   /// A list of all currencies currently supported by the
   /// [FiatCurrency] class. This is combination of [FiatCurrency.list]
   /// plus all currencies from the [FiatCurrency.specialPurposeList].
-  static const listExtended = [...list, ...specialPurposeList];
+  static const listExtended = <FiatCurrency>[...list, ...specialPurposeList];
 
   final List<TranslatedName>? _translations;
 }

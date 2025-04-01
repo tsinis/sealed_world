@@ -4,6 +4,7 @@ import "package:sealed_countries/sealed_countries.dart";
 import "../data/flags_map_part_1.data.dart";
 import "../data/flags_map_part_2.data.dart";
 import "../data/flags_map_part_3.data.dart";
+import "../model/flag_properties.dart";
 
 /// A map containing properties for the official ISO 3166 country flags.
 ///
@@ -19,7 +20,7 @@ import "../data/flags_map_part_3.data.dart";
 ///   print('Nepal flag properties: $nepalProperties');
 /// }
 /// ```
-const flagPropertiesMap = {
+const flagPropertiesMap = <WorldCountry, FlagProperties>{
   CountryAbw(): flagAbwProperties,
   CountryAfg(): flagAfgProperties,
   CountryAgo(): flagAgoProperties,
@@ -288,7 +289,7 @@ const flagPropertiesMap = {
 /// This list is useful for applications that need to display high-quality
 /// flag images at various sizes, ensuring that the flags in this list
 /// maintain their visual integrity in any scale.
-const fullFlags = [
+const fullFlags = <WorldCountry>[
   CountryAbw(),
   CountryAgo(), // TODO!
   CountryAla(),

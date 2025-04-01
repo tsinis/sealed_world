@@ -146,7 +146,7 @@ import "../model/country/submodels/country_name.dart";
 /// - Yoruba
 /// - Zhuang (Chuang)
 /// - Zulu.
-const twnCountryTranslations = [
+const twnCountryTranslations = <TranslatedName>[
   CountryName(
     language: LangEng(),
     official: "Republic of China (Taiwan)",

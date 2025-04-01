@@ -151,7 +151,7 @@ import "../model/country/submodels/country_name.dart";
 /// - Yiddish
 /// - Yoruba
 /// - Zulu.
-const cogCountryTranslations = [
+const cogCountryTranslations = <TranslatedName>[
   CountryName(
     language: LangEng(),
     official: "Republic of the Congo",

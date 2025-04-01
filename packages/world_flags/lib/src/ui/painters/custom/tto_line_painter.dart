@@ -14,22 +14,27 @@ final class TtoLinePainter extends CustomElementsPainter {
     final height = size.height;
     final heightFactor = property.heightFactor;
     final widthFactor = property.widthFactor ?? 1;
-    final blackPaint = Paint()
-      ..color = customColors.firstOrNull ?? const Color(0xff000000);
+    final blackPaint =
+        Paint()..color = customColors.firstOrNull ?? const Color(0xff000000);
 
-    final whitePath = Path()
-      ..moveTo(0, 0)
-      ..lineTo(width * heightFactor, 0)
-      ..lineTo(width, height)
-      ..lineTo(width - (width * heightFactor), height)
-      ..close();
+    final whitePath =
+        Path()
+          ..moveTo(0, 0)
+          ..lineTo(width * heightFactor, 0)
+          ..lineTo(width, height)
+          ..lineTo(width - (width * heightFactor), height)
+          ..close();
 
-    final blackPath = Path()
-      ..moveTo(width * widthFactor, 0)
-      ..lineTo(width * heightFactor - (width * widthFactor), 0)
-      ..lineTo(width - (width * widthFactor), height)
-      ..lineTo(width - (width * heightFactor) + (width * widthFactor), height)
-      ..close();
+    final blackPath =
+        Path()
+          ..moveTo(width * widthFactor, 0)
+          ..lineTo(width * heightFactor - (width * widthFactor), 0)
+          ..lineTo(width - (width * widthFactor), height)
+          ..lineTo(
+            width - (width * heightFactor) + (width * widthFactor),
+            height,
+          )
+          ..close();
 
     canvas
       ..drawPath(whitePath, paintCreator())

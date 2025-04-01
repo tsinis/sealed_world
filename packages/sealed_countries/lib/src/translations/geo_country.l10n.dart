@@ -150,7 +150,7 @@ import "../model/country/submodels/country_name.dart";
 /// - Yoruba
 /// - Zhuang (Chuang)
 /// - Zulu.
-const geoCountryTranslations = [
+const geoCountryTranslations = <TranslatedName>[
   CountryName(language: LangEng(), official: "Georgia", common: "Georgia"),
   CountryName(language: LangSrp(), official: "Грузија", common: "Грузија"),
   CountryName(language: LangAra(), official: "جورجيا", common: "جورجيا"),

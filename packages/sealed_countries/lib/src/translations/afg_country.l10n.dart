@@ -153,7 +153,7 @@ import "../model/country/submodels/country_name.dart";
 /// - Yoruba
 /// - Zhuang (Chuang)
 /// - Zulu.
-const afgCountryTranslations = [
+const afgCountryTranslations = <TranslatedName>[
   CountryName(
     language: LangEng(),
     official: "Islamic Republic of Afghanistan",

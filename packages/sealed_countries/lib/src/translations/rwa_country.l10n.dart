@@ -142,7 +142,7 @@ import "../model/country/submodels/country_name.dart";
 /// - Yoruba
 /// - Zhuang (Chuang)
 /// - Zulu.
-const rwaCountryTranslations = [
+const rwaCountryTranslations = <TranslatedName>[
   CountryName(
     language: LangEng(),
     official: "Republic of Rwanda",
