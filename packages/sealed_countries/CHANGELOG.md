@@ -1,3 +1,20 @@
+## 2.2.0
+
+This is maintenance release without significant changes for the users, that aims to improve documentation and DevEx.
+
+NEW FEATURES
+
+- Added the `regionalCode` getter to the `BasicTypedLocale` to provide a convenient alias for the `countryCode` property, improving consistency when working with regional locales.
+
+DOCUMENTATION
+
+- Update documentation for countries to use backticks for ISO codes formatting.
+
+CHORE
+
+- Dart SDK bumped to v3.7.0.
+- Code is formatted with new Dart formatter.
+
 ## 2.1.0
 
 REFACTOR
