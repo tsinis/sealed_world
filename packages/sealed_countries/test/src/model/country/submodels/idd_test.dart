@@ -7,50 +7,49 @@ import "package:test/test.dart";
 import "../../../test_data.dart";
 
 void main() => group("$Idd", () {
-      const value = Idd(root: TestData.integer, suffixes: [TestData.integer]);
+  const value = Idd(root: TestData.integer, suffixes: [TestData.integer]);
 
-      group("equality", () {
-        const other =
-            Idd(root: TestData.integer + 1, suffixes: [TestData.integer]);
-        final array = {value, other};
+  group("equality", () {
+    const other = Idd(root: TestData.integer + 1, suffixes: [TestData.integer]);
+    final array = {value, other};
 
-        test("basic", () {
-          expect(value, isNot(equals(other)));
-          expect(value, same(array.first));
-          expect(
-            value,
-            equals(Idd(root: array.first.root, suffixes: value.suffixes)),
-          );
-          expect(
-            array.first,
-            equals(Idd(root: value.root, suffixes: array.first.suffixes)),
-          );
-        });
-
-        test("with ${array.runtimeType}", () {
-          expect(array.length, 2);
-          array.addAll(List.of(array));
-          expect(array.length, 2);
-          array.add(Idd(root: value.root, suffixes: value.suffixes));
-          expect(array.length, 2);
-        });
-      });
-
-      group("asserts", () {
-        assertTest(
-          "not",
-          () => Idd(root: value.root, suffixes: value.suffixes),
-          shouldThrow: false,
-        );
-
-        assertTest(
-          "empty suffixes",
-          () => Idd(root: value.root, suffixes: const []),
-        );
-      });
-
-      test("toJson", () {
-        final json = value.toJson();
-        expect(value, json.parse(IddExtension.fromMap));
-      });
+    test("basic", () {
+      expect(value, isNot(equals(other)));
+      expect(value, same(array.first));
+      expect(
+        value,
+        equals(Idd(root: array.first.root, suffixes: value.suffixes)),
+      );
+      expect(
+        array.first,
+        equals(Idd(root: value.root, suffixes: array.first.suffixes)),
+      );
     });
+
+    test("with ${array.runtimeType}", () {
+      expect(array.length, 2);
+      array.addAll(List.of(array));
+      expect(array.length, 2);
+      array.add(Idd(root: value.root, suffixes: value.suffixes));
+      expect(array.length, 2);
+    });
+  });
+
+  group("asserts", () {
+    assertTest(
+      "not",
+      () => Idd(root: value.root, suffixes: value.suffixes),
+      shouldThrow: false,
+    );
+
+    assertTest(
+      "empty suffixes",
+      () => Idd(root: value.root, suffixes: const []),
+    );
+  });
+
+  test("toJson", () {
+    final json = value.toJson();
+    expect(value, json.parse(IddExtension.fromMap));
+  });
+});

@@ -7,92 +7,92 @@ import "package:test/test.dart";
 import "../../../test_data.dart";
 
 void main() => group("$Demonyms", () {
-      const value = Demonyms(
-        language: LangEng(),
-        female: TestData.string,
-        male: TestData.string,
+  const value = Demonyms(
+    language: LangEng(),
+    female: TestData.string,
+    male: TestData.string,
+  );
+
+  group("equality", () {
+    const other = Demonyms(
+      language: LangFra(),
+      female: TestData.string,
+      male: TestData.string,
+    );
+    final array = {value, other};
+
+    test("basic", () {
+      expect(value, isNot(equals(other)));
+      expect(value, same(array.first));
+      expect(
+        value,
+        equals(
+          Demonyms(
+            language: array.first.language,
+            female: value.female,
+            male: value.male,
+          ),
+        ),
       );
-
-      group("equality", () {
-        const other = Demonyms(
-          language: LangFra(),
-          female: TestData.string,
-          male: TestData.string,
-        );
-        final array = {value, other};
-
-        test("basic", () {
-          expect(value, isNot(equals(other)));
-          expect(value, same(array.first));
-          expect(
-            value,
-            equals(
-              Demonyms(
-                language: array.first.language,
-                female: value.female,
-                male: value.male,
-              ),
-            ),
-          );
-          expect(
-            array.first,
-            equals(
-              Demonyms(
-                language: value.language,
-                female: value.female,
-                male: value.male,
-              ),
-            ),
-          );
-        });
-
-        test("with ${array.runtimeType}", () {
-          expect(array.length, 2);
-          array.addAll(List.of(array));
-          expect(array.length, 2);
-          array.add(
-            Demonyms(
-              language: value.language,
-              female: value.female,
-              male: value.male,
-            ),
-          );
-          expect(array.length, 2);
-        });
-      });
-
-      group("asserts", () {
-        assertTest(
-          "not",
-          () => Demonyms(
+      expect(
+        array.first,
+        equals(
+          Demonyms(
             language: value.language,
             female: value.female,
             male: value.male,
           ),
-          shouldThrow: false,
-        );
-
-        assertTest(
-          "empty female",
-          () => Demonyms(
-            language: value.language,
-            female: TestData.emptyString,
-            male: value.male,
-          ),
-        );
-
-        assertTest(
-          "empty male",
-          () => Demonyms(
-            language: value.language,
-            female: value.female,
-            male: TestData.emptyString,
-          ),
-        );
-      });
-
-      test("toJson", () {
-        final json = value.toJson();
-        expect(value, json.parse(DemonymsExtension.fromMap));
-      });
+        ),
+      );
     });
+
+    test("with ${array.runtimeType}", () {
+      expect(array.length, 2);
+      array.addAll(List.of(array));
+      expect(array.length, 2);
+      array.add(
+        Demonyms(
+          language: value.language,
+          female: value.female,
+          male: value.male,
+        ),
+      );
+      expect(array.length, 2);
+    });
+  });
+
+  group("asserts", () {
+    assertTest(
+      "not",
+      () => Demonyms(
+        language: value.language,
+        female: value.female,
+        male: value.male,
+      ),
+      shouldThrow: false,
+    );
+
+    assertTest(
+      "empty female",
+      () => Demonyms(
+        language: value.language,
+        female: TestData.emptyString,
+        male: value.male,
+      ),
+    );
+
+    assertTest(
+      "empty male",
+      () => Demonyms(
+        language: value.language,
+        female: value.female,
+        male: TestData.emptyString,
+      ),
+    );
+  });
+
+  test("toJson", () {
+    final json = value.toJson();
+    expect(value, json.parse(DemonymsExtension.fromMap));
+  });
+});

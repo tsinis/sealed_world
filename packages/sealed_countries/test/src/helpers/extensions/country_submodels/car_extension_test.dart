@@ -5,19 +5,19 @@ import "package:test/test.dart";
 import "../../../test_data.dart";
 
 void main() => group("CarExtension", () {
-      const value = Car();
+  const value = Car();
 
-      group("copyWith", () {
-        test("with non-null values", () {
-          final copy = value.copyWith(sign: TestData.string);
-          expect(copy.sign, TestData.string);
-          expect(copy.isRightSide, value.isRightSide);
-        });
-
-        test("with null values", () {
-          final copy = value.copyWith();
-          expect(copy.sign, isNull);
-          expect(copy.isRightSide, value.isRightSide);
-        });
-      });
+  group("copyWith", () {
+    test("with non-null values", () {
+      final copy = value.copyWith(sign: TestData.string);
+      expect(copy.sign, TestData.string);
+      expect(copy.isRightSide, value.isRightSide);
     });
+
+    test("with null values", () {
+      final copy = value.copyWith();
+      expect(copy.sign, isNull);
+      expect(copy.isRightSide, value.isRightSide);
+    });
+  });
+});
