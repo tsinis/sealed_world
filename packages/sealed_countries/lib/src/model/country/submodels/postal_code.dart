@@ -24,8 +24,8 @@ final class PostalCode implements JsonEncodable<PostalCode> {
   ///
   /// The [format] and [regExpPattern] parameters must be non-empty strings.
   const PostalCode({this.format = "#####", this.regExpPattern = r"^(\d{5})$"})
-    : assert(format.length > 0, "`format` should not be empty!"),
-      assert(regExpPattern.length > 0, "`regExpPattern` should not be empty!");
+    : assert(regExpPattern.length > 0, "`regExpPattern` should not be empty!"),
+      assert(format.length > 0, "`format` should not be empty!");
 
   /// The format string for this [PostalCode] object.
   ///

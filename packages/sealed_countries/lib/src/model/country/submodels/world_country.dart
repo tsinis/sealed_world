@@ -84,8 +84,10 @@ class WorldCountry extends Country
          codeNumeric.length == IsoStandardized.codeLength,
          """`codeNumeric` should be exactly ${IsoStandardized.codeLength} characters long!""",
        ),
-       assert(emoji.length > 0, "`emoji` should not be empty!"),
+       assert(cioc == null || cioc.length > 0, "`cioc` should not be empty!"),
+       assert(fifa == null || fifa.length > 0, "`fifa` should not be empty!"),
        assert(tld != const <String>[], "`tld` should not be empty!"),
+       assert(emoji.length > 0, "`emoji` should not be empty!"),
        assert(
          altSpellings != const <String>[],
          "`altSpellings` should not be empty!",
@@ -94,8 +96,6 @@ class WorldCountry extends Country
          timezones != const <String>[],
          "`timezones` should not be empty!",
        ),
-       assert(cioc == null || cioc.length > 0, "`cioc` should not be empty!"),
-       assert(fifa == null || fifa.length > 0, "`fifa` should not be empty!"),
        assert(
          bordersCodes != const <String>[],
          "`bordersCodes` should not be empty!",
@@ -247,8 +247,7 @@ class WorldCountry extends Country
           ? map.findByCodeOrThrow(code)
           : code.toUpperCaseIsoCode().maybeMapIsoCode(
             orElse: (regular) => WorldCountry.fromCode(regular, countries),
-            numeric:
-                (numeric) => WorldCountry.fromCodeNumeric(numeric, countries),
+            numeric: (numb) => WorldCountry.fromCodeNumeric(numb, countries),
             short: (short) => WorldCountry.fromCodeShort(short, countries),
           );
 
