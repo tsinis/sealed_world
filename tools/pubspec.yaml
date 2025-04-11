@@ -1,15 +1,15 @@
 name: cli
 publish_to: none
 description: Command-line tools for a sealed_world ecosystem.
-version: 0.0.4
+version: 0.1.0
 
 resolution: workspace
 
 environment:
-  sdk: ^3.6.0
+  sdk: ^3.7.0
 
 dependencies:
-  args: ^2.6.0
+  args: ^2.7.0
   change_case: ^2.2.0
   collection: ^1.19.0
   path: ^1.9.0
