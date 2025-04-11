@@ -27,7 +27,7 @@ import "regional_bloc/regional_bloc.data.dart";
 class CountryAbw extends WorldCountry {
   /// Creates a instance of [CountryAbw] (Aruba country).
   ///
-  /// ISO 3166-1 Alpha-3 code: "ABW", ISO 3166-1 Alpha-2 code: "AW".
+  /// ISO 3166-1 Alpha-3 code: `ABW`, ISO 3166-1 Alpha-2 code: `AW`.
   const CountryAbw()
     : super(
         name: const CountryName(
@@ -82,7 +82,7 @@ class CountryAbw extends WorldCountry {
 class CountryAfg extends WorldCountry {
   /// Creates a instance of [CountryAfg] (Afghanistan country).
   ///
-  /// ISO 3166-1 Alpha-3 code: "AFG", ISO 3166-1 Alpha-2 code: "AF".
+  /// ISO 3166-1 Alpha-3 code: `AFG`, ISO 3166-1 Alpha-2 code: `AF`.
   const CountryAfg()
     : super(
         name: const CountryName(
@@ -148,7 +148,7 @@ class CountryAfg extends WorldCountry {
 class CountryAgo extends WorldCountry {
   /// Creates a instance of [CountryAgo] (Angola country).
   ///
-  /// ISO 3166-1 Alpha-3 code: "AGO", ISO 3166-1 Alpha-2 code: "AO".
+  /// ISO 3166-1 Alpha-3 code: `AGO`, ISO 3166-1 Alpha-2 code: `AO`.
   const CountryAgo()
     : super(
         name: const CountryName(
@@ -213,7 +213,7 @@ class CountryAgo extends WorldCountry {
 class CountryAia extends WorldCountry {
   /// Creates a instance of [CountryAia] (Anguilla country).
   ///
-  /// ISO 3166-1 Alpha-3 code: "AIA", ISO 3166-1 Alpha-2 code: "AI".
+  /// ISO 3166-1 Alpha-3 code: `AIA`, ISO 3166-1 Alpha-2 code: `AI`.
   const CountryAia()
     : super(
         name: const CountryName(
@@ -267,7 +267,7 @@ class CountryAia extends WorldCountry {
 class CountryAla extends WorldCountry {
   /// Creates a instance of [CountryAla] (Åland Islands country).
   ///
-  /// ISO 3166-1 Alpha-3 code: "ALA", ISO 3166-1 Alpha-2 code: "AX".
+  /// ISO 3166-1 Alpha-3 code: `ALA`, ISO 3166-1 Alpha-2 code: `AX`.
   const CountryAla()
     : super(
         name: const CountryName(
@@ -326,7 +326,7 @@ class CountryAla extends WorldCountry {
 class CountryAlb extends WorldCountry {
   /// Creates a instance of [CountryAlb] (Albania country).
   ///
-  /// ISO 3166-1 Alpha-3 code: "ALB", ISO 3166-1 Alpha-2 code: "AL".
+  /// ISO 3166-1 Alpha-3 code: `ALB`, ISO 3166-1 Alpha-2 code: `AL`.
   const CountryAlb()
     : super(
         name: const CountryName(
@@ -387,7 +387,7 @@ class CountryAlb extends WorldCountry {
 class CountryAnd extends WorldCountry {
   /// Creates a instance of [CountryAnd] (Andorra country).
   ///
-  /// ISO 3166-1 Alpha-3 code: "AND", ISO 3166-1 Alpha-2 code: "AD".
+  /// ISO 3166-1 Alpha-3 code: `AND`, ISO 3166-1 Alpha-2 code: `AD`.
   const CountryAnd()
     : super(
         name: const CountryName(
@@ -454,7 +454,7 @@ class CountryAnd extends WorldCountry {
 class CountryAre extends WorldCountry {
   /// Creates a instance of [CountryAre] (United Arab Emirates country).
   ///
-  /// ISO 3166-1 Alpha-3 code: "ARE", ISO 3166-1 Alpha-2 code: "AE".
+  /// ISO 3166-1 Alpha-3 code: `ARE`, ISO 3166-1 Alpha-2 code: `AE`.
   const CountryAre()
     : super(
         name: const CountryName(
@@ -516,7 +516,7 @@ class CountryAre extends WorldCountry {
 class CountryArg extends WorldCountry {
   /// Creates a instance of [CountryArg] (Argentina country).
   ///
-  /// ISO 3166-1 Alpha-3 code: "ARG", ISO 3166-1 Alpha-2 code: "AR".
+  /// ISO 3166-1 Alpha-3 code: `ARG`, ISO 3166-1 Alpha-2 code: `AR`.
   const CountryArg()
     : super(
         name: const CountryName(
@@ -586,7 +586,7 @@ class CountryArg extends WorldCountry {
 class CountryArm extends WorldCountry {
   /// Creates a instance of [CountryArm] (Armenia country).
   ///
-  /// ISO 3166-1 Alpha-3 code: "ARM", ISO 3166-1 Alpha-2 code: "AM".
+  /// ISO 3166-1 Alpha-3 code: `ARM`, ISO 3166-1 Alpha-2 code: `AM`.
   const CountryArm()
     : super(
         name: const CountryName(
@@ -657,7 +657,7 @@ class CountryArm extends WorldCountry {
 class CountryAsm extends WorldCountry {
   /// Creates a instance of [CountryAsm] (American Samoa country).
   ///
-  /// ISO 3166-1 Alpha-3 code: "ASM", ISO 3166-1 Alpha-2 code: "AS".
+  /// ISO 3166-1 Alpha-3 code: `ASM`, ISO 3166-1 Alpha-2 code: `AS`.
   const CountryAsm()
     : super(
         name: const CountryName(
@@ -731,7 +731,7 @@ class CountryAsm extends WorldCountry {
 class CountryAta extends WorldCountry {
   /// Creates a instance of [CountryAta] (Antarctica country).
   ///
-  /// ISO 3166-1 Alpha-3 code: "ATA", ISO 3166-1 Alpha-2 code: "AQ".
+  /// ISO 3166-1 Alpha-3 code: `ATA`, ISO 3166-1 Alpha-2 code: `AQ`.
   const CountryAta()
     : super(
         name: const CountryName(
@@ -793,7 +793,7 @@ class CountryAta extends WorldCountry {
 class CountryAtf extends WorldCountry {
   /// Creates a instance of [CountryAtf] (French Southern and Antarctic Lands country).
   ///
-  /// ISO 3166-1 Alpha-3 code: "ATF", ISO 3166-1 Alpha-2 code: "TF".
+  /// ISO 3166-1 Alpha-3 code: `ATF`, ISO 3166-1 Alpha-2 code: `TF`.
   const CountryAtf()
     : super(
         name: const CountryName(
@@ -851,7 +851,7 @@ class CountryAtf extends WorldCountry {
 class CountryAtg extends WorldCountry {
   /// Creates a instance of [CountryAtg] (Antigua and Barbuda country).
   ///
-  /// ISO 3166-1 Alpha-3 code: "ATG", ISO 3166-1 Alpha-2 code: "AG".
+  /// ISO 3166-1 Alpha-3 code: `ATG`, ISO 3166-1 Alpha-2 code: `AG`.
   const CountryAtg()
     : super(
         name: const CountryName(
@@ -918,7 +918,7 @@ class CountryAtg extends WorldCountry {
 class CountryAus extends WorldCountry {
   /// Creates a instance of [CountryAus] (Australia country).
   ///
-  /// ISO 3166-1 Alpha-3 code: "AUS", ISO 3166-1 Alpha-2 code: "AU".
+  /// ISO 3166-1 Alpha-3 code: `AUS`, ISO 3166-1 Alpha-2 code: `AU`.
   const CountryAus()
     : super(
         name: const CountryName(
@@ -989,7 +989,7 @@ class CountryAus extends WorldCountry {
 class CountryAut extends WorldCountry {
   /// Creates a instance of [CountryAut] (Austria country).
   ///
-  /// ISO 3166-1 Alpha-3 code: "AUT", ISO 3166-1 Alpha-2 code: "AT".
+  /// ISO 3166-1 Alpha-3 code: `AUT`, ISO 3166-1 Alpha-2 code: `AT`.
   const CountryAut()
     : super(
         name: const CountryName(
@@ -1064,7 +1064,7 @@ class CountryAut extends WorldCountry {
 class CountryAze extends WorldCountry {
   /// Creates a instance of [CountryAze] (Azerbaijan country).
   ///
-  /// ISO 3166-1 Alpha-3 code: "AZE", ISO 3166-1 Alpha-2 code: "AZ".
+  /// ISO 3166-1 Alpha-3 code: `AZE`, ISO 3166-1 Alpha-2 code: `AZ`.
   const CountryAze()
     : super(
         name: const CountryName(
@@ -1134,7 +1134,7 @@ class CountryAze extends WorldCountry {
 class CountryBdi extends WorldCountry {
   /// Creates a instance of [CountryBdi] (Burundi country).
   ///
-  /// ISO 3166-1 Alpha-3 code: "BDI", ISO 3166-1 Alpha-2 code: "BI".
+  /// ISO 3166-1 Alpha-3 code: `BDI`, ISO 3166-1 Alpha-2 code: `BI`.
   const CountryBdi()
     : super(
         name: const CountryName(
@@ -1206,7 +1206,7 @@ class CountryBdi extends WorldCountry {
 class CountryBel extends WorldCountry {
   /// Creates a instance of [CountryBel] (Belgium country).
   ///
-  /// ISO 3166-1 Alpha-3 code: "BEL", ISO 3166-1 Alpha-2 code: "BE".
+  /// ISO 3166-1 Alpha-3 code: `BEL`, ISO 3166-1 Alpha-2 code: `BE`.
   const CountryBel()
     : super(
         name: const CountryName(
@@ -1295,7 +1295,7 @@ class CountryBel extends WorldCountry {
 class CountryBen extends WorldCountry {
   /// Creates a instance of [CountryBen] (Benin country).
   ///
-  /// ISO 3166-1 Alpha-3 code: "BEN", ISO 3166-1 Alpha-2 code: "BJ".
+  /// ISO 3166-1 Alpha-3 code: `BEN`, ISO 3166-1 Alpha-2 code: `BJ`.
   const CountryBen()
     : super(
         name: const CountryName(
@@ -1356,7 +1356,7 @@ class CountryBen extends WorldCountry {
 class CountryBes extends WorldCountry {
   /// Creates a instance of [CountryBes] (Caribbean Netherlands country).
   ///
-  /// ISO 3166-1 Alpha-3 code: "BES", ISO 3166-1 Alpha-2 code: "BQ".
+  /// ISO 3166-1 Alpha-3 code: `BES`, ISO 3166-1 Alpha-2 code: `BQ`.
   const CountryBes()
     : super(
         name: const CountryName(
@@ -1413,7 +1413,7 @@ class CountryBes extends WorldCountry {
 class CountryBfa extends WorldCountry {
   /// Creates a instance of [CountryBfa] (Burkina Faso country).
   ///
-  /// ISO 3166-1 Alpha-3 code: "BFA", ISO 3166-1 Alpha-2 code: "BF".
+  /// ISO 3166-1 Alpha-3 code: `BFA`, ISO 3166-1 Alpha-2 code: `BF`.
   const CountryBfa()
     : super(
         name: const CountryName(
@@ -1475,7 +1475,7 @@ class CountryBfa extends WorldCountry {
 class CountryBgd extends WorldCountry {
   /// Creates a instance of [CountryBgd] (Bangladesh country).
   ///
-  /// ISO 3166-1 Alpha-3 code: "BGD", ISO 3166-1 Alpha-2 code: "BD".
+  /// ISO 3166-1 Alpha-3 code: `BGD`, ISO 3166-1 Alpha-2 code: `BD`.
   const CountryBgd()
     : super(
         name: const CountryName(
@@ -1543,7 +1543,7 @@ class CountryBgd extends WorldCountry {
 class CountryBgr extends WorldCountry {
   /// Creates a instance of [CountryBgr] (Bulgaria country).
   ///
-  /// ISO 3166-1 Alpha-3 code: "BGR", ISO 3166-1 Alpha-2 code: "BG".
+  /// ISO 3166-1 Alpha-3 code: `BGR`, ISO 3166-1 Alpha-2 code: `BG`.
   const CountryBgr()
     : super(
         name: const CountryName(
@@ -1612,7 +1612,7 @@ class CountryBgr extends WorldCountry {
 class CountryBhr extends WorldCountry {
   /// Creates a instance of [CountryBhr] (Bahrain country).
   ///
-  /// ISO 3166-1 Alpha-3 code: "BHR", ISO 3166-1 Alpha-2 code: "BH".
+  /// ISO 3166-1 Alpha-3 code: `BHR`, ISO 3166-1 Alpha-2 code: `BH`.
   const CountryBhr()
     : super(
         name: const CountryName(
@@ -1675,7 +1675,7 @@ class CountryBhr extends WorldCountry {
 class CountryBhs extends WorldCountry {
   /// Creates a instance of [CountryBhs] (Bahamas country).
   ///
-  /// ISO 3166-1 Alpha-3 code: "BHS", ISO 3166-1 Alpha-2 code: "BS".
+  /// ISO 3166-1 Alpha-3 code: `BHS`, ISO 3166-1 Alpha-2 code: `BS`.
   const CountryBhs()
     : super(
         name: const CountryName(
@@ -1734,7 +1734,7 @@ class CountryBhs extends WorldCountry {
 class CountryBih extends WorldCountry {
   /// Creates a instance of [CountryBih] (Bosnia and Herzegovina country).
   ///
-  /// ISO 3166-1 Alpha-3 code: "BIH", ISO 3166-1 Alpha-2 code: "BA".
+  /// ISO 3166-1 Alpha-3 code: `BIH`, ISO 3166-1 Alpha-2 code: `BA`.
   const CountryBih()
     : super(
         name: const CountryName(
@@ -1815,7 +1815,7 @@ class CountryBih extends WorldCountry {
 class CountryBlm extends WorldCountry {
   /// Creates a instance of [CountryBlm] (Saint Barthélemy country).
   ///
-  /// ISO 3166-1 Alpha-3 code: "BLM", ISO 3166-1 Alpha-2 code: "BL".
+  /// ISO 3166-1 Alpha-3 code: `BLM`, ISO 3166-1 Alpha-2 code: `BL`.
   const CountryBlm()
     : super(
         name: const CountryName(
@@ -1887,7 +1887,7 @@ class CountryBlm extends WorldCountry {
 class CountryBlr extends WorldCountry {
   /// Creates a instance of [CountryBlr] (Belarus country).
   ///
-  /// ISO 3166-1 Alpha-3 code: "BLR", ISO 3166-1 Alpha-2 code: "BY".
+  /// ISO 3166-1 Alpha-3 code: `BLR`, ISO 3166-1 Alpha-2 code: `BY`.
   const CountryBlr()
     : super(
         name: const CountryName(
@@ -1962,7 +1962,7 @@ class CountryBlr extends WorldCountry {
 class CountryBlz extends WorldCountry {
   /// Creates a instance of [CountryBlz] (Belize country).
   ///
-  /// ISO 3166-1 Alpha-3 code: "BLZ", ISO 3166-1 Alpha-2 code: "BZ".
+  /// ISO 3166-1 Alpha-3 code: `BLZ`, ISO 3166-1 Alpha-2 code: `BZ`.
   const CountryBlz()
     : super(
         name: const CountryName(
@@ -2020,7 +2020,7 @@ class CountryBlz extends WorldCountry {
 class CountryBmu extends WorldCountry {
   /// Creates a instance of [CountryBmu] (Bermuda country).
   ///
-  /// ISO 3166-1 Alpha-3 code: "BMU", ISO 3166-1 Alpha-2 code: "BM".
+  /// ISO 3166-1 Alpha-3 code: `BMU`, ISO 3166-1 Alpha-2 code: `BM`.
   const CountryBmu()
     : super(
         name: const CountryName(
@@ -2084,7 +2084,7 @@ class CountryBmu extends WorldCountry {
 class CountryBol extends WorldCountry {
   /// Creates a instance of [CountryBol] (Bolivia country).
   ///
-  /// ISO 3166-1 Alpha-3 code: "BOL", ISO 3166-1 Alpha-2 code: "BO".
+  /// ISO 3166-1 Alpha-3 code: `BOL`, ISO 3166-1 Alpha-2 code: `BO`.
   const CountryBol()
     : super(
         name: const CountryName(
@@ -2176,7 +2176,7 @@ class CountryBol extends WorldCountry {
 class CountryBra extends WorldCountry {
   /// Creates a instance of [CountryBra] (Brazil country).
   ///
-  /// ISO 3166-1 Alpha-3 code: "BRA", ISO 3166-1 Alpha-2 code: "BR".
+  /// ISO 3166-1 Alpha-3 code: `BRA`, ISO 3166-1 Alpha-2 code: `BR`.
   const CountryBra()
     : super(
         name: const CountryName(
@@ -2257,7 +2257,7 @@ class CountryBra extends WorldCountry {
 class CountryBrb extends WorldCountry {
   /// Creates a instance of [CountryBrb] (Barbados country).
   ///
-  /// ISO 3166-1 Alpha-3 code: "BRB", ISO 3166-1 Alpha-2 code: "BB".
+  /// ISO 3166-1 Alpha-3 code: `BRB`, ISO 3166-1 Alpha-2 code: `BB`.
   const CountryBrb()
     : super(
         name: const CountryName(
@@ -2316,7 +2316,7 @@ class CountryBrb extends WorldCountry {
 class CountryBrn extends WorldCountry {
   /// Creates a instance of [CountryBrn] (Brunei country).
   ///
-  /// ISO 3166-1 Alpha-3 code: "BRN", ISO 3166-1 Alpha-2 code: "BN".
+  /// ISO 3166-1 Alpha-3 code: `BRN`, ISO 3166-1 Alpha-2 code: `BN`.
   const CountryBrn()
     : super(
         name: const CountryName(
@@ -2385,7 +2385,7 @@ class CountryBrn extends WorldCountry {
 class CountryBtn extends WorldCountry {
   /// Creates a instance of [CountryBtn] (Bhutan country).
   ///
-  /// ISO 3166-1 Alpha-3 code: "BTN", ISO 3166-1 Alpha-2 code: "BT".
+  /// ISO 3166-1 Alpha-3 code: `BTN`, ISO 3166-1 Alpha-2 code: `BT`.
   const CountryBtn()
     : super(
         name: const CountryName(
@@ -2447,7 +2447,7 @@ class CountryBtn extends WorldCountry {
 class CountryBvt extends WorldCountry {
   /// Creates a instance of [CountryBvt] (Bouvet Island country).
   ///
-  /// ISO 3166-1 Alpha-3 code: "BVT", ISO 3166-1 Alpha-2 code: "BV".
+  /// ISO 3166-1 Alpha-3 code: `BVT`, ISO 3166-1 Alpha-2 code: `BV`.
   const CountryBvt()
     : super(
         name: const CountryName(
@@ -2500,7 +2500,7 @@ class CountryBvt extends WorldCountry {
 class CountryBwa extends WorldCountry {
   /// Creates a instance of [CountryBwa] (Botswana country).
   ///
-  /// ISO 3166-1 Alpha-3 code: "BWA", ISO 3166-1 Alpha-2 code: "BW".
+  /// ISO 3166-1 Alpha-3 code: `BWA`, ISO 3166-1 Alpha-2 code: `BW`.
   const CountryBwa()
     : super(
         name: const CountryName(
@@ -2571,7 +2571,7 @@ class CountryBwa extends WorldCountry {
 class CountryCaf extends WorldCountry {
   /// Creates a instance of [CountryCaf] (Central African Republic country).
   ///
-  /// ISO 3166-1 Alpha-3 code: "CAF", ISO 3166-1 Alpha-2 code: "CF".
+  /// ISO 3166-1 Alpha-3 code: `CAF`, ISO 3166-1 Alpha-2 code: `CF`.
   const CountryCaf()
     : super(
         name: const CountryName(
@@ -2650,7 +2650,7 @@ class CountryCaf extends WorldCountry {
 class CountryCan extends WorldCountry {
   /// Creates a instance of [CountryCan] (Canada country).
   ///
-  /// ISO 3166-1 Alpha-3 code: "CAN", ISO 3166-1 Alpha-2 code: "CA".
+  /// ISO 3166-1 Alpha-3 code: `CAN`, ISO 3166-1 Alpha-2 code: `CA`.
   const CountryCan()
     : super(
         name: const CountryName(
@@ -2758,7 +2758,7 @@ class CountryCan extends WorldCountry {
 class CountryCck extends WorldCountry {
   /// Creates a instance of [CountryCck] (Cocos (Keeling) Islands country).
   ///
-  /// ISO 3166-1 Alpha-3 code: "CCK", ISO 3166-1 Alpha-2 code: "CC".
+  /// ISO 3166-1 Alpha-3 code: `CCK`, ISO 3166-1 Alpha-2 code: `CC`.
   const CountryCck()
     : super(
         name: const CountryName(
@@ -2819,7 +2819,7 @@ class CountryCck extends WorldCountry {
 class CountryChe extends WorldCountry {
   /// Creates a instance of [CountryChe] (Switzerland country).
   ///
-  /// ISO 3166-1 Alpha-3 code: "CHE", ISO 3166-1 Alpha-2 code: "CH".
+  /// ISO 3166-1 Alpha-3 code: `CHE`, ISO 3166-1 Alpha-2 code: `CH`.
   const CountryChe()
     : super(
         name: const CountryName(
@@ -2910,7 +2910,7 @@ class CountryChe extends WorldCountry {
 class CountryChl extends WorldCountry {
   /// Creates a instance of [CountryChl] (Chile country).
   ///
-  /// ISO 3166-1 Alpha-3 code: "CHL", ISO 3166-1 Alpha-2 code: "CL".
+  /// ISO 3166-1 Alpha-3 code: `CHL`, ISO 3166-1 Alpha-2 code: `CL`.
   const CountryChl()
     : super(
         name: const CountryName(
@@ -2975,7 +2975,7 @@ class CountryChl extends WorldCountry {
 class CountryChn extends WorldCountry {
   /// Creates a instance of [CountryChn] (China country).
   ///
-  /// ISO 3166-1 Alpha-3 code: "CHN", ISO 3166-1 Alpha-2 code: "CN".
+  /// ISO 3166-1 Alpha-3 code: `CHN`, ISO 3166-1 Alpha-2 code: `CN`.
   const CountryChn()
     : super(
         name: const CountryName(
@@ -3059,7 +3059,7 @@ class CountryChn extends WorldCountry {
 class CountryCiv extends WorldCountry {
   /// Creates a instance of [CountryCiv] (Ivory Coast country).
   ///
-  /// ISO 3166-1 Alpha-3 code: "CIV", ISO 3166-1 Alpha-2 code: "CI".
+  /// ISO 3166-1 Alpha-3 code: `CIV`, ISO 3166-1 Alpha-2 code: `CI`.
   const CountryCiv()
     : super(
         name: const CountryName(
@@ -3126,7 +3126,7 @@ class CountryCiv extends WorldCountry {
 class CountryCmr extends WorldCountry {
   /// Creates a instance of [CountryCmr] (Cameroon country).
   ///
-  /// ISO 3166-1 Alpha-3 code: "CMR", ISO 3166-1 Alpha-2 code: "CM".
+  /// ISO 3166-1 Alpha-3 code: `CMR`, ISO 3166-1 Alpha-2 code: `CM`.
   const CountryCmr()
     : super(
         name: const CountryName(
@@ -3196,7 +3196,7 @@ class CountryCmr extends WorldCountry {
 class CountryCod extends WorldCountry {
   /// Creates a instance of [CountryCod] (DR Congo country).
   ///
-  /// ISO 3166-1 Alpha-3 code: "COD", ISO 3166-1 Alpha-2 code: "CD".
+  /// ISO 3166-1 Alpha-3 code: `COD`, ISO 3166-1 Alpha-2 code: `CD`.
   const CountryCod()
     : super(
         name: const CountryName(
@@ -3293,7 +3293,7 @@ class CountryCod extends WorldCountry {
 class CountryCog extends WorldCountry {
   /// Creates a instance of [CountryCog] (Republic of the Congo country).
   ///
-  /// ISO 3166-1 Alpha-3 code: "COG", ISO 3166-1 Alpha-2 code: "CG".
+  /// ISO 3166-1 Alpha-3 code: `COG`, ISO 3166-1 Alpha-2 code: `CG`.
   const CountryCog()
     : super(
         name: const CountryName(
@@ -3369,7 +3369,7 @@ class CountryCog extends WorldCountry {
 class CountryCok extends WorldCountry {
   /// Creates a instance of [CountryCok] (Cook Islands country).
   ///
-  /// ISO 3166-1 Alpha-3 code: "COK", ISO 3166-1 Alpha-2 code: "CK".
+  /// ISO 3166-1 Alpha-3 code: `COK`, ISO 3166-1 Alpha-2 code: `CK`.
   const CountryCok()
     : super(
         name: const CountryName(
@@ -3432,7 +3432,7 @@ class CountryCok extends WorldCountry {
 class CountryCol extends WorldCountry {
   /// Creates a instance of [CountryCol] (Colombia country).
   ///
-  /// ISO 3166-1 Alpha-3 code: "COL", ISO 3166-1 Alpha-2 code: "CO".
+  /// ISO 3166-1 Alpha-3 code: `COL`, ISO 3166-1 Alpha-2 code: `CO`.
   const CountryCol()
     : super(
         name: const CountryName(
@@ -3497,7 +3497,7 @@ class CountryCol extends WorldCountry {
 class CountryCom extends WorldCountry {
   /// Creates a instance of [CountryCom] (Comoros country).
   ///
-  /// ISO 3166-1 Alpha-3 code: "COM", ISO 3166-1 Alpha-2 code: "KM".
+  /// ISO 3166-1 Alpha-3 code: `COM`, ISO 3166-1 Alpha-2 code: `KM`.
   const CountryCom()
     : super(
         name: const CountryName(
@@ -3568,7 +3568,7 @@ class CountryCom extends WorldCountry {
 class CountryCpv extends WorldCountry {
   /// Creates a instance of [CountryCpv] (Cape Verde country).
   ///
-  /// ISO 3166-1 Alpha-3 code: "CPV", ISO 3166-1 Alpha-2 code: "CV".
+  /// ISO 3166-1 Alpha-3 code: `CPV`, ISO 3166-1 Alpha-2 code: `CV`.
   const CountryCpv()
     : super(
         name: const CountryName(
@@ -3636,7 +3636,7 @@ class CountryCpv extends WorldCountry {
 class CountryCri extends WorldCountry {
   /// Creates a instance of [CountryCri] (Costa Rica country).
   ///
-  /// ISO 3166-1 Alpha-3 code: "CRI", ISO 3166-1 Alpha-2 code: "CR".
+  /// ISO 3166-1 Alpha-3 code: `CRI`, ISO 3166-1 Alpha-2 code: `CR`.
   const CountryCri()
     : super(
         name: const CountryName(
@@ -3705,7 +3705,7 @@ class CountryCri extends WorldCountry {
 class CountryCub extends WorldCountry {
   /// Creates a instance of [CountryCub] (Cuba country).
   ///
-  /// ISO 3166-1 Alpha-3 code: "CUB", ISO 3166-1 Alpha-2 code: "CU".
+  /// ISO 3166-1 Alpha-3 code: `CUB`, ISO 3166-1 Alpha-2 code: `CU`.
   const CountryCub()
     : super(
         name: const CountryName(
@@ -3766,7 +3766,7 @@ class CountryCub extends WorldCountry {
 class CountryCuw extends WorldCountry {
   /// Creates a instance of [CountryCuw] (Curaçao country).
   ///
-  /// ISO 3166-1 Alpha-3 code: "CUW", ISO 3166-1 Alpha-2 code: "CW".
+  /// ISO 3166-1 Alpha-3 code: `CUW`, ISO 3166-1 Alpha-2 code: `CW`.
   const CountryCuw()
     : super(
         name: const CountryName(
@@ -3836,7 +3836,7 @@ class CountryCuw extends WorldCountry {
 class CountryCxr extends WorldCountry {
   /// Creates a instance of [CountryCxr] (Christmas Island country).
   ///
-  /// ISO 3166-1 Alpha-3 code: "CXR", ISO 3166-1 Alpha-2 code: "CX".
+  /// ISO 3166-1 Alpha-3 code: `CXR`, ISO 3166-1 Alpha-2 code: `CX`.
   const CountryCxr()
     : super(
         name: const CountryName(
@@ -3900,7 +3900,7 @@ class CountryCxr extends WorldCountry {
 class CountryCym extends WorldCountry {
   /// Creates a instance of [CountryCym] (Cayman Islands country).
   ///
-  /// ISO 3166-1 Alpha-3 code: "CYM", ISO 3166-1 Alpha-2 code: "KY".
+  /// ISO 3166-1 Alpha-3 code: `CYM`, ISO 3166-1 Alpha-2 code: `KY`.
   const CountryCym()
     : super(
         name: const CountryName(
@@ -3959,7 +3959,7 @@ class CountryCym extends WorldCountry {
 class CountryCyp extends WorldCountry {
   /// Creates a instance of [CountryCyp] (Cyprus country).
   ///
-  /// ISO 3166-1 Alpha-3 code: "CYP", ISO 3166-1 Alpha-2 code: "CY".
+  /// ISO 3166-1 Alpha-3 code: `CYP`, ISO 3166-1 Alpha-2 code: `CY`.
   const CountryCyp()
     : super(
         name: const CountryName(
@@ -4035,7 +4035,7 @@ class CountryCyp extends WorldCountry {
 class CountryCze extends WorldCountry {
   /// Creates a instance of [CountryCze] (Czechia country).
   ///
-  /// ISO 3166-1 Alpha-3 code: "CZE", ISO 3166-1 Alpha-2 code: "CZ".
+  /// ISO 3166-1 Alpha-3 code: `CZE`, ISO 3166-1 Alpha-2 code: `CZ`.
   const CountryCze()
     : super(
         name: const CountryName(
@@ -4098,7 +4098,7 @@ class CountryCze extends WorldCountry {
 class CountryDeu extends WorldCountry {
   /// Creates a instance of [CountryDeu] (Germany country).
   ///
-  /// ISO 3166-1 Alpha-3 code: "DEU", ISO 3166-1 Alpha-2 code: "DE".
+  /// ISO 3166-1 Alpha-3 code: `DEU`, ISO 3166-1 Alpha-2 code: `DE`.
   const CountryDeu()
     : super(
         name: const CountryName(
@@ -4174,7 +4174,7 @@ class CountryDeu extends WorldCountry {
 class CountryDji extends WorldCountry {
   /// Creates a instance of [CountryDji] (Djibouti country).
   ///
-  /// ISO 3166-1 Alpha-3 code: "DJI", ISO 3166-1 Alpha-2 code: "DJ".
+  /// ISO 3166-1 Alpha-3 code: `DJI`, ISO 3166-1 Alpha-2 code: `DJ`.
   const CountryDji()
     : super(
         name: const CountryName(
@@ -4248,7 +4248,7 @@ class CountryDji extends WorldCountry {
 class CountryDma extends WorldCountry {
   /// Creates a instance of [CountryDma] (Dominica country).
   ///
-  /// ISO 3166-1 Alpha-3 code: "DMA", ISO 3166-1 Alpha-2 code: "DM".
+  /// ISO 3166-1 Alpha-3 code: `DMA`, ISO 3166-1 Alpha-2 code: `DM`.
   const CountryDma()
     : super(
         name: const CountryName(
@@ -4310,7 +4310,7 @@ class CountryDma extends WorldCountry {
 class CountryDnk extends WorldCountry {
   /// Creates a instance of [CountryDnk] (Denmark country).
   ///
-  /// ISO 3166-1 Alpha-3 code: "DNK", ISO 3166-1 Alpha-2 code: "DK".
+  /// ISO 3166-1 Alpha-3 code: `DNK`, ISO 3166-1 Alpha-2 code: `DK`.
   const CountryDnk()
     : super(
         name: const CountryName(
@@ -4386,7 +4386,7 @@ class CountryDnk extends WorldCountry {
 class CountryDom extends WorldCountry {
   /// Creates a instance of [CountryDom] (Dominican Republic country).
   ///
-  /// ISO 3166-1 Alpha-3 code: "DOM", ISO 3166-1 Alpha-2 code: "DO".
+  /// ISO 3166-1 Alpha-3 code: `DOM`, ISO 3166-1 Alpha-2 code: `DO`.
   const CountryDom()
     : super(
         name: const CountryName(
@@ -4448,7 +4448,7 @@ class CountryDom extends WorldCountry {
 class CountryDza extends WorldCountry {
   /// Creates a instance of [CountryDza] (Algeria country).
   ///
-  /// ISO 3166-1 Alpha-3 code: "DZA", ISO 3166-1 Alpha-2 code: "DZ".
+  /// ISO 3166-1 Alpha-3 code: `DZA`, ISO 3166-1 Alpha-2 code: `DZ`.
   const CountryDza()
     : super(
         name: const CountryName(
@@ -4511,7 +4511,7 @@ class CountryDza extends WorldCountry {
 class CountryEcu extends WorldCountry {
   /// Creates a instance of [CountryEcu] (Ecuador country).
   ///
-  /// ISO 3166-1 Alpha-3 code: "ECU", ISO 3166-1 Alpha-2 code: "EC".
+  /// ISO 3166-1 Alpha-3 code: `ECU`, ISO 3166-1 Alpha-2 code: `EC`.
   const CountryEcu()
     : super(
         name: const CountryName(
@@ -4580,7 +4580,7 @@ class CountryEcu extends WorldCountry {
 class CountryEgy extends WorldCountry {
   /// Creates a instance of [CountryEgy] (Egypt country).
   ///
-  /// ISO 3166-1 Alpha-3 code: "EGY", ISO 3166-1 Alpha-2 code: "EG".
+  /// ISO 3166-1 Alpha-3 code: `EGY`, ISO 3166-1 Alpha-2 code: `EG`.
   const CountryEgy()
     : super(
         name: const CountryName(
@@ -4643,7 +4643,7 @@ class CountryEgy extends WorldCountry {
 class CountryEri extends WorldCountry {
   /// Creates a instance of [CountryEri] (Eritrea country).
   ///
-  /// ISO 3166-1 Alpha-3 code: "ERI", ISO 3166-1 Alpha-2 code: "ER".
+  /// ISO 3166-1 Alpha-3 code: `ERI`, ISO 3166-1 Alpha-2 code: `ER`.
   const CountryEri()
     : super(
         name: const CountryName(
@@ -4720,7 +4720,7 @@ class CountryEri extends WorldCountry {
 class CountryEsh extends WorldCountry {
   /// Creates a instance of [CountryEsh] (Western Sahara country).
   ///
-  /// ISO 3166-1 Alpha-3 code: "ESH", ISO 3166-1 Alpha-2 code: "EH".
+  /// ISO 3166-1 Alpha-3 code: `ESH`, ISO 3166-1 Alpha-2 code: `EH`.
   const CountryEsh()
     : super(
         name: const CountryName(
@@ -4780,7 +4780,7 @@ class CountryEsh extends WorldCountry {
 class CountryEsp extends WorldCountry {
   /// Creates a instance of [CountryEsp] (Spain country).
   ///
-  /// ISO 3166-1 Alpha-3 code: "ESP", ISO 3166-1 Alpha-2 code: "ES".
+  /// ISO 3166-1 Alpha-3 code: `ESP`, ISO 3166-1 Alpha-2 code: `ES`.
   const CountryEsp()
     : super(
         name: const CountryName(
@@ -4842,7 +4842,7 @@ class CountryEsp extends WorldCountry {
 class CountryEst extends WorldCountry {
   /// Creates a instance of [CountryEst] (Estonia country).
   ///
-  /// ISO 3166-1 Alpha-3 code: "EST", ISO 3166-1 Alpha-2 code: "EE".
+  /// ISO 3166-1 Alpha-3 code: `EST`, ISO 3166-1 Alpha-2 code: `EE`.
   const CountryEst()
     : super(
         name: const CountryName(
@@ -4909,7 +4909,7 @@ class CountryEst extends WorldCountry {
 class CountryEth extends WorldCountry {
   /// Creates a instance of [CountryEth] (Ethiopia country).
   ///
-  /// ISO 3166-1 Alpha-3 code: "ETH", ISO 3166-1 Alpha-2 code: "ET".
+  /// ISO 3166-1 Alpha-3 code: `ETH`, ISO 3166-1 Alpha-2 code: `ET`.
   const CountryEth()
     : super(
         name: const CountryName(
@@ -4980,7 +4980,7 @@ class CountryEth extends WorldCountry {
 class CountryFin extends WorldCountry {
   /// Creates a instance of [CountryFin] (Finland country).
   ///
-  /// ISO 3166-1 Alpha-3 code: "FIN", ISO 3166-1 Alpha-2 code: "FI".
+  /// ISO 3166-1 Alpha-3 code: `FIN`, ISO 3166-1 Alpha-2 code: `FI`.
   const CountryFin()
     : super(
         name: const CountryName(
@@ -5053,7 +5053,7 @@ class CountryFin extends WorldCountry {
 class CountryFji extends WorldCountry {
   /// Creates a instance of [CountryFji] (Fiji country).
   ///
-  /// ISO 3166-1 Alpha-3 code: "FJI", ISO 3166-1 Alpha-2 code: "FJ".
+  /// ISO 3166-1 Alpha-3 code: `FJI`, ISO 3166-1 Alpha-2 code: `FJ`.
   const CountryFji()
     : super(
         name: const CountryName(
@@ -5122,7 +5122,7 @@ class CountryFji extends WorldCountry {
 class CountryFlk extends WorldCountry {
   /// Creates a instance of [CountryFlk] (Falkland Islands country).
   ///
-  /// ISO 3166-1 Alpha-3 code: "FLK", ISO 3166-1 Alpha-2 code: "FK".
+  /// ISO 3166-1 Alpha-3 code: `FLK`, ISO 3166-1 Alpha-2 code: `FK`.
   const CountryFlk()
     : super(
         name: const CountryName(
@@ -5189,7 +5189,7 @@ class CountryFlk extends WorldCountry {
 class CountryFra extends WorldCountry {
   /// Creates a instance of [CountryFra] (France country).
   ///
-  /// ISO 3166-1 Alpha-3 code: "FRA", ISO 3166-1 Alpha-2 code: "FR".
+  /// ISO 3166-1 Alpha-3 code: `FRA`, ISO 3166-1 Alpha-2 code: `FR`.
   const CountryFra()
     : super(
         name: const CountryName(
@@ -5273,7 +5273,7 @@ class CountryFra extends WorldCountry {
 class CountryFro extends WorldCountry {
   /// Creates a instance of [CountryFro] (Faroe Islands country).
   ///
-  /// ISO 3166-1 Alpha-3 code: "FRO", ISO 3166-1 Alpha-2 code: "FO".
+  /// ISO 3166-1 Alpha-3 code: `FRO`, ISO 3166-1 Alpha-2 code: `FO`.
   const CountryFro()
     : super(
         name: const CountryName(
@@ -5332,7 +5332,7 @@ class CountryFro extends WorldCountry {
 class CountryFsm extends WorldCountry {
   /// Creates a instance of [CountryFsm] (Micronesia country).
   ///
-  /// ISO 3166-1 Alpha-3 code: "FSM", ISO 3166-1 Alpha-2 code: "FM".
+  /// ISO 3166-1 Alpha-3 code: `FSM`, ISO 3166-1 Alpha-2 code: `FM`.
   const CountryFsm()
     : super(
         name: const CountryName(
@@ -5394,7 +5394,7 @@ class CountryFsm extends WorldCountry {
 class CountryGab extends WorldCountry {
   /// Creates a instance of [CountryGab] (Gabon country).
   ///
-  /// ISO 3166-1 Alpha-3 code: "GAB", ISO 3166-1 Alpha-2 code: "GA".
+  /// ISO 3166-1 Alpha-3 code: `GAB`, ISO 3166-1 Alpha-2 code: `GA`.
   const CountryGab()
     : super(
         name: const CountryName(
@@ -5455,7 +5455,7 @@ class CountryGab extends WorldCountry {
 class CountryGbr extends WorldCountry {
   /// Creates a instance of [CountryGbr] (United Kingdom country).
   ///
-  /// ISO 3166-1 Alpha-3 code: "GBR", ISO 3166-1 Alpha-2 code: "GB".
+  /// ISO 3166-1 Alpha-3 code: `GBR`, ISO 3166-1 Alpha-2 code: `GB`.
   const CountryGbr()
     : super(
         name: const CountryName(
@@ -5528,7 +5528,7 @@ class CountryGbr extends WorldCountry {
 class CountryGeo extends WorldCountry {
   /// Creates a instance of [CountryGeo] (Georgia country).
   ///
-  /// ISO 3166-1 Alpha-3 code: "GEO", ISO 3166-1 Alpha-2 code: "GE".
+  /// ISO 3166-1 Alpha-3 code: `GEO`, ISO 3166-1 Alpha-2 code: `GE`.
   const CountryGeo()
     : super(
         name: const CountryName(
@@ -5591,7 +5591,7 @@ class CountryGeo extends WorldCountry {
 class CountryGgy extends WorldCountry {
   /// Creates a instance of [CountryGgy] (Guernsey country).
   ///
-  /// ISO 3166-1 Alpha-3 code: "GGY", ISO 3166-1 Alpha-2 code: "GG".
+  /// ISO 3166-1 Alpha-3 code: `GGY`, ISO 3166-1 Alpha-2 code: `GG`.
   const CountryGgy()
     : super(
         name: const CountryName(
@@ -5666,7 +5666,7 @@ class CountryGgy extends WorldCountry {
 class CountryGha extends WorldCountry {
   /// Creates a instance of [CountryGha] (Ghana country).
   ///
-  /// ISO 3166-1 Alpha-3 code: "GHA", ISO 3166-1 Alpha-2 code: "GH".
+  /// ISO 3166-1 Alpha-3 code: `GHA`, ISO 3166-1 Alpha-2 code: `GH`.
   const CountryGha()
     : super(
         name: const CountryName(
@@ -5725,7 +5725,7 @@ class CountryGha extends WorldCountry {
 class CountryGib extends WorldCountry {
   /// Creates a instance of [CountryGib] (Gibraltar country).
   ///
-  /// ISO 3166-1 Alpha-3 code: "GIB", ISO 3166-1 Alpha-2 code: "GI".
+  /// ISO 3166-1 Alpha-3 code: `GIB`, ISO 3166-1 Alpha-2 code: `GI`.
   const CountryGib()
     : super(
         name: const CountryName(
@@ -5790,7 +5790,7 @@ class CountryGib extends WorldCountry {
 class CountryGin extends WorldCountry {
   /// Creates a instance of [CountryGin] (Guinea country).
   ///
-  /// ISO 3166-1 Alpha-3 code: "GIN", ISO 3166-1 Alpha-2 code: "GN".
+  /// ISO 3166-1 Alpha-3 code: `GIN`, ISO 3166-1 Alpha-2 code: `GN`.
   const CountryGin()
     : super(
         name: const CountryName(
@@ -5855,7 +5855,7 @@ class CountryGin extends WorldCountry {
 class CountryGlp extends WorldCountry {
   /// Creates a instance of [CountryGlp] (Guadeloupe country).
   ///
-  /// ISO 3166-1 Alpha-3 code: "GLP", ISO 3166-1 Alpha-2 code: "GP".
+  /// ISO 3166-1 Alpha-3 code: `GLP`, ISO 3166-1 Alpha-2 code: `GP`.
   const CountryGlp()
     : super(
         name: const CountryName(
@@ -5917,7 +5917,7 @@ class CountryGlp extends WorldCountry {
 class CountryGmb extends WorldCountry {
   /// Creates a instance of [CountryGmb] (Gambia country).
   ///
-  /// ISO 3166-1 Alpha-3 code: "GMB", ISO 3166-1 Alpha-2 code: "GM".
+  /// ISO 3166-1 Alpha-3 code: `GMB`, ISO 3166-1 Alpha-2 code: `GM`.
   const CountryGmb()
     : super(
         name: const CountryName(
@@ -5978,7 +5978,7 @@ class CountryGmb extends WorldCountry {
 class CountryGnb extends WorldCountry {
   /// Creates a instance of [CountryGnb] (Guinea-Bissau country).
   ///
-  /// ISO 3166-1 Alpha-3 code: "GNB", ISO 3166-1 Alpha-2 code: "GW".
+  /// ISO 3166-1 Alpha-3 code: `GNB`, ISO 3166-1 Alpha-2 code: `GW`.
   const CountryGnb()
     : super(
         name: const CountryName(
@@ -6056,7 +6056,7 @@ class CountryGnb extends WorldCountry {
 class CountryGnq extends WorldCountry {
   /// Creates a instance of [CountryGnq] (Equatorial Guinea country).
   ///
-  /// ISO 3166-1 Alpha-3 code: "GNQ", ISO 3166-1 Alpha-2 code: "GQ".
+  /// ISO 3166-1 Alpha-3 code: `GNQ`, ISO 3166-1 Alpha-2 code: `GQ`.
   const CountryGnq()
     : super(
         name: const CountryName(
@@ -6142,7 +6142,7 @@ class CountryGnq extends WorldCountry {
 class CountryGrc extends WorldCountry {
   /// Creates a instance of [CountryGrc] (Greece country).
   ///
-  /// ISO 3166-1 Alpha-3 code: "GRC", ISO 3166-1 Alpha-2 code: "GR".
+  /// ISO 3166-1 Alpha-3 code: `GRC`, ISO 3166-1 Alpha-2 code: `GR`.
   const CountryGrc()
     : super(
         name: const CountryName(
@@ -6209,7 +6209,7 @@ class CountryGrc extends WorldCountry {
 class CountryGrd extends WorldCountry {
   /// Creates a instance of [CountryGrd] (Grenada country).
   ///
-  /// ISO 3166-1 Alpha-3 code: "GRD", ISO 3166-1 Alpha-2 code: "GD".
+  /// ISO 3166-1 Alpha-3 code: `GRD`, ISO 3166-1 Alpha-2 code: `GD`.
   const CountryGrd()
     : super(
         name: const CountryName(
@@ -6264,7 +6264,7 @@ class CountryGrd extends WorldCountry {
 class CountryGrl extends WorldCountry {
   /// Creates a instance of [CountryGrl] (Greenland country).
   ///
-  /// ISO 3166-1 Alpha-3 code: "GRL", ISO 3166-1 Alpha-2 code: "GL".
+  /// ISO 3166-1 Alpha-3 code: `GRL`, ISO 3166-1 Alpha-2 code: `GL`.
   const CountryGrl()
     : super(
         name: const CountryName(
@@ -6329,7 +6329,7 @@ class CountryGrl extends WorldCountry {
 class CountryGtm extends WorldCountry {
   /// Creates a instance of [CountryGtm] (Guatemala country).
   ///
-  /// ISO 3166-1 Alpha-3 code: "GTM", ISO 3166-1 Alpha-2 code: "GT".
+  /// ISO 3166-1 Alpha-3 code: `GTM`, ISO 3166-1 Alpha-2 code: `GT`.
   const CountryGtm()
     : super(
         name: const CountryName(
@@ -6393,7 +6393,7 @@ class CountryGtm extends WorldCountry {
 class CountryGuf extends WorldCountry {
   /// Creates a instance of [CountryGuf] (French Guiana country).
   ///
-  /// ISO 3166-1 Alpha-3 code: "GUF", ISO 3166-1 Alpha-2 code: "GF".
+  /// ISO 3166-1 Alpha-3 code: `GUF`, ISO 3166-1 Alpha-2 code: `GF`.
   const CountryGuf()
     : super(
         name: const CountryName(
@@ -6454,7 +6454,7 @@ class CountryGuf extends WorldCountry {
 class CountryGum extends WorldCountry {
   /// Creates a instance of [CountryGum] (Guam country).
   ///
-  /// ISO 3166-1 Alpha-3 code: "GUM", ISO 3166-1 Alpha-2 code: "GU".
+  /// ISO 3166-1 Alpha-3 code: `GUM`, ISO 3166-1 Alpha-2 code: `GU`.
   const CountryGum()
     : super(
         name: const CountryName(
@@ -6518,7 +6518,7 @@ class CountryGum extends WorldCountry {
 class CountryGuy extends WorldCountry {
   /// Creates a instance of [CountryGuy] (Guyana country).
   ///
-  /// ISO 3166-1 Alpha-3 code: "GUY", ISO 3166-1 Alpha-2 code: "GY".
+  /// ISO 3166-1 Alpha-3 code: `GUY`, ISO 3166-1 Alpha-2 code: `GY`.
   const CountryGuy()
     : super(
         name: const CountryName(
@@ -6579,7 +6579,7 @@ class CountryGuy extends WorldCountry {
 class CountryHkg extends WorldCountry {
   /// Creates a instance of [CountryHkg] (Hong Kong country).
   ///
-  /// ISO 3166-1 Alpha-3 code: "HKG", ISO 3166-1 Alpha-2 code: "HK".
+  /// ISO 3166-1 Alpha-3 code: `HKG`, ISO 3166-1 Alpha-2 code: `HK`.
   const CountryHkg()
     : super(
         name: const CountryName(
@@ -6642,7 +6642,7 @@ class CountryHkg extends WorldCountry {
 class CountryHmd extends WorldCountry {
   /// Creates a instance of [CountryHmd] (Heard Island and McDonald Islands country).
   ///
-  /// ISO 3166-1 Alpha-3 code: "HMD", ISO 3166-1 Alpha-2 code: "HM".
+  /// ISO 3166-1 Alpha-3 code: `HMD`, ISO 3166-1 Alpha-2 code: `HM`.
   const CountryHmd()
     : super(
         name: const CountryName(
@@ -6695,7 +6695,7 @@ class CountryHmd extends WorldCountry {
 class CountryHnd extends WorldCountry {
   /// Creates a instance of [CountryHnd] (Honduras country).
   ///
-  /// ISO 3166-1 Alpha-3 code: "HND", ISO 3166-1 Alpha-2 code: "HN".
+  /// ISO 3166-1 Alpha-3 code: `HND`, ISO 3166-1 Alpha-2 code: `HN`.
   const CountryHnd()
     : super(
         name: const CountryName(
@@ -6764,7 +6764,7 @@ class CountryHnd extends WorldCountry {
 class CountryHrv extends WorldCountry {
   /// Creates a instance of [CountryHrv] (Croatia country).
   ///
-  /// ISO 3166-1 Alpha-3 code: "HRV", ISO 3166-1 Alpha-2 code: "HR".
+  /// ISO 3166-1 Alpha-3 code: `HRV`, ISO 3166-1 Alpha-2 code: `HR`.
   const CountryHrv()
     : super(
         name: const CountryName(
@@ -6832,7 +6832,7 @@ class CountryHrv extends WorldCountry {
 class CountryHti extends WorldCountry {
   /// Creates a instance of [CountryHti] (Haiti country).
   ///
-  /// ISO 3166-1 Alpha-3 code: "HTI", ISO 3166-1 Alpha-2 code: "HT".
+  /// ISO 3166-1 Alpha-3 code: `HTI`, ISO 3166-1 Alpha-2 code: `HT`.
   const CountryHti()
     : super(
         name: const CountryName(
@@ -6907,7 +6907,7 @@ class CountryHti extends WorldCountry {
 class CountryHun extends WorldCountry {
   /// Creates a instance of [CountryHun] (Hungary country).
   ///
-  /// ISO 3166-1 Alpha-3 code: "HUN", ISO 3166-1 Alpha-2 code: "HU".
+  /// ISO 3166-1 Alpha-3 code: `HUN`, ISO 3166-1 Alpha-2 code: `HU`.
   const CountryHun()
     : super(
         name: const CountryName(
@@ -6973,7 +6973,7 @@ class CountryHun extends WorldCountry {
 class CountryIdn extends WorldCountry {
   /// Creates a instance of [CountryIdn] (Indonesia country).
   ///
-  /// ISO 3166-1 Alpha-3 code: "IDN", ISO 3166-1 Alpha-2 code: "ID".
+  /// ISO 3166-1 Alpha-3 code: `IDN`, ISO 3166-1 Alpha-2 code: `ID`.
   const CountryIdn()
     : super(
         name: const CountryName(
@@ -7039,7 +7039,7 @@ class CountryIdn extends WorldCountry {
 class CountryImn extends WorldCountry {
   /// Creates a instance of [CountryImn] (Isle of Man country).
   ///
-  /// ISO 3166-1 Alpha-3 code: "IMN", ISO 3166-1 Alpha-2 code: "IM".
+  /// ISO 3166-1 Alpha-3 code: `IMN`, ISO 3166-1 Alpha-2 code: `IM`.
   const CountryImn()
     : super(
         name: const CountryName(
@@ -7107,7 +7107,7 @@ class CountryImn extends WorldCountry {
 class CountryInd extends WorldCountry {
   /// Creates a instance of [CountryInd] (India country).
   ///
-  /// ISO 3166-1 Alpha-3 code: "IND", ISO 3166-1 Alpha-2 code: "IN".
+  /// ISO 3166-1 Alpha-3 code: `IND`, ISO 3166-1 Alpha-2 code: `IN`.
   const CountryInd()
     : super(
         name: const CountryName(
@@ -7188,7 +7188,7 @@ class CountryInd extends WorldCountry {
 class CountryIot extends WorldCountry {
   /// Creates a instance of [CountryIot] (British Indian Ocean Territory country).
   ///
-  /// ISO 3166-1 Alpha-3 code: "IOT", ISO 3166-1 Alpha-2 code: "IO".
+  /// ISO 3166-1 Alpha-3 code: `IOT`, ISO 3166-1 Alpha-2 code: `IO`.
   const CountryIot()
     : super(
         name: const CountryName(
@@ -7247,7 +7247,7 @@ class CountryIot extends WorldCountry {
 class CountryIrl extends WorldCountry {
   /// Creates a instance of [CountryIrl] (Ireland country).
   ///
-  /// ISO 3166-1 Alpha-3 code: "IRL", ISO 3166-1 Alpha-2 code: "IE".
+  /// ISO 3166-1 Alpha-3 code: `IRL`, ISO 3166-1 Alpha-2 code: `IE`.
   const CountryIrl()
     : super(
         name: const CountryName(
@@ -7323,7 +7323,7 @@ class CountryIrl extends WorldCountry {
 class CountryIrn extends WorldCountry {
   /// Creates a instance of [CountryIrn] (Iran country).
   ///
-  /// ISO 3166-1 Alpha-3 code: "IRN", ISO 3166-1 Alpha-2 code: "IR".
+  /// ISO 3166-1 Alpha-3 code: `IRN`, ISO 3166-1 Alpha-2 code: `IR`.
   const CountryIrn()
     : super(
         name: const CountryName(
@@ -7392,7 +7392,7 @@ class CountryIrn extends WorldCountry {
 class CountryIrq extends WorldCountry {
   /// Creates a instance of [CountryIrq] (Iraq country).
   ///
-  /// ISO 3166-1 Alpha-3 code: "IRQ", ISO 3166-1 Alpha-2 code: "IQ".
+  /// ISO 3166-1 Alpha-3 code: `IRQ`, ISO 3166-1 Alpha-2 code: `IQ`.
   const CountryIrq()
     : super(
         name: const CountryName(
@@ -7455,7 +7455,7 @@ class CountryIrq extends WorldCountry {
 class CountryIsl extends WorldCountry {
   /// Creates a instance of [CountryIsl] (Iceland country).
   ///
-  /// ISO 3166-1 Alpha-3 code: "ISL", ISO 3166-1 Alpha-2 code: "IS".
+  /// ISO 3166-1 Alpha-3 code: `ISL`, ISO 3166-1 Alpha-2 code: `IS`.
   const CountryIsl()
     : super(
         name: const CountryName(
@@ -7520,7 +7520,7 @@ class CountryIsl extends WorldCountry {
 class CountryIsr extends WorldCountry {
   /// Creates a instance of [CountryIsr] (Israel country).
   ///
-  /// ISO 3166-1 Alpha-3 code: "ISR", ISO 3166-1 Alpha-2 code: "IL".
+  /// ISO 3166-1 Alpha-3 code: `ISR`, ISO 3166-1 Alpha-2 code: `IL`.
   const CountryIsr()
     : super(
         name: const CountryName(
@@ -7582,7 +7582,7 @@ class CountryIsr extends WorldCountry {
 class CountryIta extends WorldCountry {
   /// Creates a instance of [CountryIta] (Italy country).
   ///
-  /// ISO 3166-1 Alpha-3 code: "ITA", ISO 3166-1 Alpha-2 code: "IT".
+  /// ISO 3166-1 Alpha-3 code: `ITA`, ISO 3166-1 Alpha-2 code: `IT`.
   const CountryIta()
     : super(
         name: const CountryName(
@@ -7642,7 +7642,7 @@ class CountryIta extends WorldCountry {
 class CountryJam extends WorldCountry {
   /// Creates a instance of [CountryJam] (Jamaica country).
   ///
-  /// ISO 3166-1 Alpha-3 code: "JAM", ISO 3166-1 Alpha-2 code: "JM".
+  /// ISO 3166-1 Alpha-3 code: `JAM`, ISO 3166-1 Alpha-2 code: `JM`.
   const CountryJam()
     : super(
         name: const CountryName(
@@ -7698,7 +7698,7 @@ class CountryJam extends WorldCountry {
 class CountryJey extends WorldCountry {
   /// Creates a instance of [CountryJey] (Jersey country).
   ///
-  /// ISO 3166-1 Alpha-3 code: "JEY", ISO 3166-1 Alpha-2 code: "JE".
+  /// ISO 3166-1 Alpha-3 code: `JEY`, ISO 3166-1 Alpha-2 code: `JE`.
   const CountryJey()
     : super(
         name: const CountryName(
@@ -7774,7 +7774,7 @@ class CountryJey extends WorldCountry {
 class CountryJor extends WorldCountry {
   /// Creates a instance of [CountryJor] (Jordan country).
   ///
-  /// ISO 3166-1 Alpha-3 code: "JOR", ISO 3166-1 Alpha-2 code: "JO".
+  /// ISO 3166-1 Alpha-3 code: `JOR`, ISO 3166-1 Alpha-2 code: `JO`.
   const CountryJor()
     : super(
         name: const CountryName(
@@ -7841,7 +7841,7 @@ class CountryJor extends WorldCountry {
 class CountryJpn extends WorldCountry {
   /// Creates a instance of [CountryJpn] (Japan country).
   ///
-  /// ISO 3166-1 Alpha-3 code: "JPN", ISO 3166-1 Alpha-2 code: "JP".
+  /// ISO 3166-1 Alpha-3 code: `JPN`, ISO 3166-1 Alpha-2 code: `JP`.
   const CountryJpn()
     : super(
         name: const CountryName(
@@ -7899,7 +7899,7 @@ class CountryJpn extends WorldCountry {
 class CountryKaz extends WorldCountry {
   /// Creates a instance of [CountryKaz] (Kazakhstan country).
   ///
-  /// ISO 3166-1 Alpha-3 code: "KAZ", ISO 3166-1 Alpha-2 code: "KZ".
+  /// ISO 3166-1 Alpha-3 code: `KAZ`, ISO 3166-1 Alpha-2 code: `KZ`.
   const CountryKaz()
     : super(
         name: const CountryName(
@@ -7983,7 +7983,7 @@ class CountryKaz extends WorldCountry {
 class CountryKen extends WorldCountry {
   /// Creates a instance of [CountryKen] (Kenya country).
   ///
-  /// ISO 3166-1 Alpha-3 code: "KEN", ISO 3166-1 Alpha-2 code: "KE".
+  /// ISO 3166-1 Alpha-3 code: `KEN`, ISO 3166-1 Alpha-2 code: `KE`.
   const CountryKen()
     : super(
         name: const CountryName(
@@ -8050,7 +8050,7 @@ class CountryKen extends WorldCountry {
 class CountryKgz extends WorldCountry {
   /// Creates a instance of [CountryKgz] (Kyrgyzstan country).
   ///
-  /// ISO 3166-1 Alpha-3 code: "KGZ", ISO 3166-1 Alpha-2 code: "KG".
+  /// ISO 3166-1 Alpha-3 code: `KGZ`, ISO 3166-1 Alpha-2 code: `KG`.
   const CountryKgz()
     : super(
         name: const CountryName(
@@ -8127,7 +8127,7 @@ class CountryKgz extends WorldCountry {
 class CountryKhm extends WorldCountry {
   /// Creates a instance of [CountryKhm] (Cambodia country).
   ///
-  /// ISO 3166-1 Alpha-3 code: "KHM", ISO 3166-1 Alpha-2 code: "KH".
+  /// ISO 3166-1 Alpha-3 code: `KHM`, ISO 3166-1 Alpha-2 code: `KH`.
   const CountryKhm()
     : super(
         name: const CountryName(
@@ -8188,7 +8188,7 @@ class CountryKhm extends WorldCountry {
 class CountryKir extends WorldCountry {
   /// Creates a instance of [CountryKir] (Kiribati country).
   ///
-  /// ISO 3166-1 Alpha-3 code: "KIR", ISO 3166-1 Alpha-2 code: "KI".
+  /// ISO 3166-1 Alpha-3 code: `KIR`, ISO 3166-1 Alpha-2 code: `KI`.
   const CountryKir()
     : super(
         name: const CountryName(
@@ -8249,7 +8249,7 @@ class CountryKir extends WorldCountry {
 class CountryKna extends WorldCountry {
   /// Creates a instance of [CountryKna] (Saint Kitts and Nevis country).
   ///
-  /// ISO 3166-1 Alpha-3 code: "KNA", ISO 3166-1 Alpha-2 code: "KN".
+  /// ISO 3166-1 Alpha-3 code: `KNA`, ISO 3166-1 Alpha-2 code: `KN`.
   const CountryKna()
     : super(
         name: const CountryName(
@@ -8316,7 +8316,7 @@ class CountryKna extends WorldCountry {
 class CountryKor extends WorldCountry {
   /// Creates a instance of [CountryKor] (South Korea country).
   ///
-  /// ISO 3166-1 Alpha-3 code: "KOR", ISO 3166-1 Alpha-2 code: "KR".
+  /// ISO 3166-1 Alpha-3 code: `KOR`, ISO 3166-1 Alpha-2 code: `KR`.
   const CountryKor()
     : super(
         name: const CountryName(
@@ -8381,7 +8381,7 @@ class CountryKor extends WorldCountry {
 class CountryKwt extends WorldCountry {
   /// Creates a instance of [CountryKwt] (Kuwait country).
   ///
-  /// ISO 3166-1 Alpha-3 code: "KWT", ISO 3166-1 Alpha-2 code: "KW".
+  /// ISO 3166-1 Alpha-3 code: `KWT`, ISO 3166-1 Alpha-2 code: `KW`.
   const CountryKwt()
     : super(
         name: const CountryName(
@@ -8439,7 +8439,7 @@ class CountryKwt extends WorldCountry {
 class CountryLao extends WorldCountry {
   /// Creates a instance of [CountryLao] (Laos country).
   ///
-  /// ISO 3166-1 Alpha-3 code: "LAO", ISO 3166-1 Alpha-2 code: "LA".
+  /// ISO 3166-1 Alpha-3 code: `LAO`, ISO 3166-1 Alpha-2 code: `LA`.
   const CountryLao()
     : super(
         name: const CountryName(
@@ -8507,7 +8507,7 @@ class CountryLao extends WorldCountry {
 class CountryLbn extends WorldCountry {
   /// Creates a instance of [CountryLbn] (Lebanon country).
   ///
-  /// ISO 3166-1 Alpha-3 code: "LBN", ISO 3166-1 Alpha-2 code: "LB".
+  /// ISO 3166-1 Alpha-3 code: `LBN`, ISO 3166-1 Alpha-2 code: `LB`.
   const CountryLbn()
     : super(
         name: const CountryName(
@@ -8581,7 +8581,7 @@ class CountryLbn extends WorldCountry {
 class CountryLbr extends WorldCountry {
   /// Creates a instance of [CountryLbr] (Liberia country).
   ///
-  /// ISO 3166-1 Alpha-3 code: "LBR", ISO 3166-1 Alpha-2 code: "LR".
+  /// ISO 3166-1 Alpha-3 code: `LBR`, ISO 3166-1 Alpha-2 code: `LR`.
   const CountryLbr()
     : super(
         name: const CountryName(
@@ -8646,7 +8646,7 @@ class CountryLbr extends WorldCountry {
 class CountryLby extends WorldCountry {
   /// Creates a instance of [CountryLby] (Libya country).
   ///
-  /// ISO 3166-1 Alpha-3 code: "LBY", ISO 3166-1 Alpha-2 code: "LY".
+  /// ISO 3166-1 Alpha-3 code: `LBY`, ISO 3166-1 Alpha-2 code: `LY`.
   const CountryLby()
     : super(
         name: const CountryName(
@@ -8705,7 +8705,7 @@ class CountryLby extends WorldCountry {
 class CountryLca extends WorldCountry {
   /// Creates a instance of [CountryLca] (Saint Lucia country).
   ///
-  /// ISO 3166-1 Alpha-3 code: "LCA", ISO 3166-1 Alpha-2 code: "LC".
+  /// ISO 3166-1 Alpha-3 code: `LCA`, ISO 3166-1 Alpha-2 code: `LC`.
   const CountryLca()
     : super(
         name: const CountryName(
@@ -8767,7 +8767,7 @@ class CountryLca extends WorldCountry {
 class CountryLie extends WorldCountry {
   /// Creates a instance of [CountryLie] (Liechtenstein country).
   ///
-  /// ISO 3166-1 Alpha-3 code: "LIE", ISO 3166-1 Alpha-2 code: "LI".
+  /// ISO 3166-1 Alpha-3 code: `LIE`, ISO 3166-1 Alpha-2 code: `LI`.
   const CountryLie()
     : super(
         name: const CountryName(
@@ -8842,7 +8842,7 @@ class CountryLie extends WorldCountry {
 class CountryLka extends WorldCountry {
   /// Creates a instance of [CountryLka] (Sri Lanka country).
   ///
-  /// ISO 3166-1 Alpha-3 code: "LKA", ISO 3166-1 Alpha-2 code: "LK".
+  /// ISO 3166-1 Alpha-3 code: `LKA`, ISO 3166-1 Alpha-2 code: `LK`.
   const CountryLka()
     : super(
         name: const CountryName(
@@ -8913,7 +8913,7 @@ class CountryLka extends WorldCountry {
 class CountryLso extends WorldCountry {
   /// Creates a instance of [CountryLso] (Lesotho country).
   ///
-  /// ISO 3166-1 Alpha-3 code: "LSO", ISO 3166-1 Alpha-2 code: "LS".
+  /// ISO 3166-1 Alpha-3 code: `LSO`, ISO 3166-1 Alpha-2 code: `LS`.
   const CountryLso()
     : super(
         name: const CountryName(
@@ -8984,7 +8984,7 @@ class CountryLso extends WorldCountry {
 class CountryLtu extends WorldCountry {
   /// Creates a instance of [CountryLtu] (Lithuania country).
   ///
-  /// ISO 3166-1 Alpha-3 code: "LTU", ISO 3166-1 Alpha-2 code: "LT".
+  /// ISO 3166-1 Alpha-3 code: `LTU`, ISO 3166-1 Alpha-2 code: `LT`.
   const CountryLtu()
     : super(
         name: const CountryName(
@@ -9053,7 +9053,7 @@ class CountryLtu extends WorldCountry {
 class CountryLux extends WorldCountry {
   /// Creates a instance of [CountryLux] (Luxembourg country).
   ///
-  /// ISO 3166-1 Alpha-3 code: "LUX", ISO 3166-1 Alpha-2 code: "LU".
+  /// ISO 3166-1 Alpha-3 code: `LUX`, ISO 3166-1 Alpha-2 code: `LU`.
   const CountryLux()
     : super(
         name: const CountryName(
@@ -9143,7 +9143,7 @@ class CountryLux extends WorldCountry {
 class CountryLva extends WorldCountry {
   /// Creates a instance of [CountryLva] (Latvia country).
   ///
-  /// ISO 3166-1 Alpha-3 code: "LVA", ISO 3166-1 Alpha-2 code: "LV".
+  /// ISO 3166-1 Alpha-3 code: `LVA`, ISO 3166-1 Alpha-2 code: `LV`.
   const CountryLva()
     : super(
         name: const CountryName(
@@ -9206,7 +9206,7 @@ class CountryLva extends WorldCountry {
 class CountryMac extends WorldCountry {
   /// Creates a instance of [CountryMac] (Macau country).
   ///
-  /// ISO 3166-1 Alpha-3 code: "MAC", ISO 3166-1 Alpha-2 code: "MO".
+  /// ISO 3166-1 Alpha-3 code: `MAC`, ISO 3166-1 Alpha-2 code: `MO`.
   const CountryMac()
     : super(
         name: const CountryName(
@@ -9270,7 +9270,7 @@ class CountryMac extends WorldCountry {
 class CountryMaf extends WorldCountry {
   /// Creates a instance of [CountryMaf] (Saint Martin country).
   ///
-  /// ISO 3166-1 Alpha-3 code: "MAF", ISO 3166-1 Alpha-2 code: "MF".
+  /// ISO 3166-1 Alpha-3 code: `MAF`, ISO 3166-1 Alpha-2 code: `MF`.
   const CountryMaf()
     : super(
         name: const CountryName(
@@ -9343,7 +9343,7 @@ class CountryMaf extends WorldCountry {
 class CountryMar extends WorldCountry {
   /// Creates a instance of [CountryMar] (Morocco country).
   ///
-  /// ISO 3166-1 Alpha-3 code: "MAR", ISO 3166-1 Alpha-2 code: "MA".
+  /// ISO 3166-1 Alpha-3 code: `MAR`, ISO 3166-1 Alpha-2 code: `MA`.
   const CountryMar()
     : super(
         name: const CountryName(
@@ -9409,7 +9409,7 @@ class CountryMar extends WorldCountry {
 class CountryMco extends WorldCountry {
   /// Creates a instance of [CountryMco] (Monaco country).
   ///
-  /// ISO 3166-1 Alpha-3 code: "MCO", ISO 3166-1 Alpha-2 code: "MC".
+  /// ISO 3166-1 Alpha-3 code: `MCO`, ISO 3166-1 Alpha-2 code: `MC`.
   const CountryMco()
     : super(
         name: const CountryName(
@@ -9471,7 +9471,7 @@ class CountryMco extends WorldCountry {
 class CountryMda extends WorldCountry {
   /// Creates a instance of [CountryMda] (Moldova country).
   ///
-  /// ISO 3166-1 Alpha-3 code: "MDA", ISO 3166-1 Alpha-2 code: "MD".
+  /// ISO 3166-1 Alpha-3 code: `MDA`, ISO 3166-1 Alpha-2 code: `MD`.
   const CountryMda()
     : super(
         name: const CountryName(
@@ -9542,7 +9542,7 @@ class CountryMda extends WorldCountry {
 class CountryMdg extends WorldCountry {
   /// Creates a instance of [CountryMdg] (Madagascar country).
   ///
-  /// ISO 3166-1 Alpha-3 code: "MDG", ISO 3166-1 Alpha-2 code: "MG".
+  /// ISO 3166-1 Alpha-3 code: `MDG`, ISO 3166-1 Alpha-2 code: `MG`.
   const CountryMdg()
     : super(
         name: const CountryName(
@@ -9616,7 +9616,7 @@ class CountryMdg extends WorldCountry {
 class CountryMdv extends WorldCountry {
   /// Creates a instance of [CountryMdv] (Maldives country).
   ///
-  /// ISO 3166-1 Alpha-3 code: "MDV", ISO 3166-1 Alpha-2 code: "MV".
+  /// ISO 3166-1 Alpha-3 code: `MDV`, ISO 3166-1 Alpha-2 code: `MV`.
   const CountryMdv()
     : super(
         name: const CountryName(
@@ -9681,7 +9681,7 @@ class CountryMdv extends WorldCountry {
 class CountryMex extends WorldCountry {
   /// Creates a instance of [CountryMex] (Mexico country).
   ///
-  /// ISO 3166-1 Alpha-3 code: "MEX", ISO 3166-1 Alpha-2 code: "MX".
+  /// ISO 3166-1 Alpha-3 code: `MEX`, ISO 3166-1 Alpha-2 code: `MX`.
   const CountryMex()
     : super(
         name: const CountryName(
@@ -9748,7 +9748,7 @@ class CountryMex extends WorldCountry {
 class CountryMhl extends WorldCountry {
   /// Creates a instance of [CountryMhl] (Marshall Islands country).
   ///
-  /// ISO 3166-1 Alpha-3 code: "MHL", ISO 3166-1 Alpha-2 code: "MH".
+  /// ISO 3166-1 Alpha-3 code: `MHL`, ISO 3166-1 Alpha-2 code: `MH`.
   const CountryMhl()
     : super(
         name: const CountryName(
@@ -9813,7 +9813,7 @@ class CountryMhl extends WorldCountry {
 class CountryMkd extends WorldCountry {
   /// Creates a instance of [CountryMkd] (North Macedonia country).
   ///
-  /// ISO 3166-1 Alpha-3 code: "MKD", ISO 3166-1 Alpha-2 code: "MK".
+  /// ISO 3166-1 Alpha-3 code: `MKD`, ISO 3166-1 Alpha-2 code: `MK`.
   const CountryMkd()
     : super(
         name: const CountryName(
@@ -9883,7 +9883,7 @@ class CountryMkd extends WorldCountry {
 class CountryMli extends WorldCountry {
   /// Creates a instance of [CountryMli] (Mali country).
   ///
-  /// ISO 3166-1 Alpha-3 code: "MLI", ISO 3166-1 Alpha-2 code: "ML".
+  /// ISO 3166-1 Alpha-3 code: `MLI`, ISO 3166-1 Alpha-2 code: `ML`.
   const CountryMli()
     : super(
         name: const CountryName(
@@ -9943,7 +9943,7 @@ class CountryMli extends WorldCountry {
 class CountryMlt extends WorldCountry {
   /// Creates a instance of [CountryMlt] (Malta country).
   ///
-  /// ISO 3166-1 Alpha-3 code: "MLT", ISO 3166-1 Alpha-2 code: "MT".
+  /// ISO 3166-1 Alpha-3 code: `MLT`, ISO 3166-1 Alpha-2 code: `MT`.
   const CountryMlt()
     : super(
         name: const CountryName(
@@ -10012,7 +10012,7 @@ class CountryMlt extends WorldCountry {
 class CountryMmr extends WorldCountry {
   /// Creates a instance of [CountryMmr] (Myanmar country).
   ///
-  /// ISO 3166-1 Alpha-3 code: "MMR", ISO 3166-1 Alpha-2 code: "MM".
+  /// ISO 3166-1 Alpha-3 code: `MMR`, ISO 3166-1 Alpha-2 code: `MM`.
   const CountryMmr()
     : super(
         name: const CountryName(
@@ -10079,7 +10079,7 @@ class CountryMmr extends WorldCountry {
 class CountryMne extends WorldCountry {
   /// Creates a instance of [CountryMne] (Montenegro country).
   ///
-  /// ISO 3166-1 Alpha-3 code: "MNE", ISO 3166-1 Alpha-2 code: "ME".
+  /// ISO 3166-1 Alpha-3 code: `MNE`, ISO 3166-1 Alpha-2 code: `ME`.
   const CountryMne()
     : super(
         name: const CountryName(
@@ -10141,7 +10141,7 @@ class CountryMne extends WorldCountry {
 class CountryMng extends WorldCountry {
   /// Creates a instance of [CountryMng] (Mongolia country).
   ///
-  /// ISO 3166-1 Alpha-3 code: "MNG", ISO 3166-1 Alpha-2 code: "MN".
+  /// ISO 3166-1 Alpha-3 code: `MNG`, ISO 3166-1 Alpha-2 code: `MN`.
   const CountryMng()
     : super(
         name: const CountryName(
@@ -10205,7 +10205,7 @@ class CountryMng extends WorldCountry {
 class CountryMnp extends WorldCountry {
   /// Creates a instance of [CountryMnp] (Northern Mariana Islands country).
   ///
-  /// ISO 3166-1 Alpha-3 code: "MNP", ISO 3166-1 Alpha-2 code: "MP".
+  /// ISO 3166-1 Alpha-3 code: `MNP`, ISO 3166-1 Alpha-2 code: `MP`.
   const CountryMnp()
     : super(
         name: const CountryName(
@@ -10272,7 +10272,7 @@ class CountryMnp extends WorldCountry {
 class CountryMoz extends WorldCountry {
   /// Creates a instance of [CountryMoz] (Mozambique country).
   ///
-  /// ISO 3166-1 Alpha-3 code: "MOZ", ISO 3166-1 Alpha-2 code: "MZ".
+  /// ISO 3166-1 Alpha-3 code: `MOZ`, ISO 3166-1 Alpha-2 code: `MZ`.
   const CountryMoz()
     : super(
         name: const CountryName(
@@ -10341,7 +10341,7 @@ class CountryMoz extends WorldCountry {
 class CountryMrt extends WorldCountry {
   /// Creates a instance of [CountryMrt] (Mauritania country).
   ///
-  /// ISO 3166-1 Alpha-3 code: "MRT", ISO 3166-1 Alpha-2 code: "MR".
+  /// ISO 3166-1 Alpha-3 code: `MRT`, ISO 3166-1 Alpha-2 code: `MR`.
   const CountryMrt()
     : super(
         name: const CountryName(
@@ -10406,7 +10406,7 @@ class CountryMrt extends WorldCountry {
 class CountryMsr extends WorldCountry {
   /// Creates a instance of [CountryMsr] (Montserrat country).
   ///
-  /// ISO 3166-1 Alpha-3 code: "MSR", ISO 3166-1 Alpha-2 code: "MS".
+  /// ISO 3166-1 Alpha-3 code: `MSR`, ISO 3166-1 Alpha-2 code: `MS`.
   const CountryMsr()
     : super(
         name: const CountryName(
@@ -10474,7 +10474,7 @@ class CountryMsr extends WorldCountry {
 class CountryMtq extends WorldCountry {
   /// Creates a instance of [CountryMtq] (Martinique country).
   ///
-  /// ISO 3166-1 Alpha-3 code: "MTQ", ISO 3166-1 Alpha-2 code: "MQ".
+  /// ISO 3166-1 Alpha-3 code: `MTQ`, ISO 3166-1 Alpha-2 code: `MQ`.
   const CountryMtq()
     : super(
         name: const CountryName(
@@ -10536,7 +10536,7 @@ class CountryMtq extends WorldCountry {
 class CountryMus extends WorldCountry {
   /// Creates a instance of [CountryMus] (Mauritius country).
   ///
-  /// ISO 3166-1 Alpha-3 code: "MUS", ISO 3166-1 Alpha-2 code: "MU".
+  /// ISO 3166-1 Alpha-3 code: `MUS`, ISO 3166-1 Alpha-2 code: `MU`.
   const CountryMus()
     : super(
         name: const CountryName(
@@ -10605,7 +10605,7 @@ class CountryMus extends WorldCountry {
 class CountryMwi extends WorldCountry {
   /// Creates a instance of [CountryMwi] (Malawi country).
   ///
-  /// ISO 3166-1 Alpha-3 code: "MWI", ISO 3166-1 Alpha-2 code: "MW".
+  /// ISO 3166-1 Alpha-3 code: `MWI`, ISO 3166-1 Alpha-2 code: `MW`.
   const CountryMwi()
     : super(
         name: const CountryName(
@@ -10672,7 +10672,7 @@ class CountryMwi extends WorldCountry {
 class CountryMys extends WorldCountry {
   /// Creates a instance of [CountryMys] (Malaysia country).
   ///
-  /// ISO 3166-1 Alpha-3 code: "MYS", ISO 3166-1 Alpha-2 code: "MY".
+  /// ISO 3166-1 Alpha-3 code: `MYS`, ISO 3166-1 Alpha-2 code: `MY`.
   const CountryMys()
     : super(
         name: const CountryName(
@@ -10732,7 +10732,7 @@ class CountryMys extends WorldCountry {
 class CountryMyt extends WorldCountry {
   /// Creates a instance of [CountryMyt] (Mayotte country).
   ///
-  /// ISO 3166-1 Alpha-3 code: "MYT", ISO 3166-1 Alpha-2 code: "YT".
+  /// ISO 3166-1 Alpha-3 code: `MYT`, ISO 3166-1 Alpha-2 code: `YT`.
   const CountryMyt()
     : super(
         name: const CountryName(
@@ -10797,7 +10797,7 @@ class CountryMyt extends WorldCountry {
 class CountryNam extends WorldCountry {
   /// Creates a instance of [CountryNam] (Namibia country).
   ///
-  /// ISO 3166-1 Alpha-3 code: "NAM", ISO 3166-1 Alpha-2 code: "NA".
+  /// ISO 3166-1 Alpha-3 code: `NAM`, ISO 3166-1 Alpha-2 code: `NA`.
   const CountryNam()
     : super(
         name: const CountryName(
@@ -10885,7 +10885,7 @@ class CountryNam extends WorldCountry {
 class CountryNcl extends WorldCountry {
   /// Creates a instance of [CountryNcl] (New Caledonia country).
   ///
-  /// ISO 3166-1 Alpha-3 code: "NCL", ISO 3166-1 Alpha-2 code: "NC".
+  /// ISO 3166-1 Alpha-3 code: `NCL`, ISO 3166-1 Alpha-2 code: `NC`.
   const CountryNcl()
     : super(
         name: const CountryName(
@@ -10952,7 +10952,7 @@ class CountryNcl extends WorldCountry {
 class CountryNer extends WorldCountry {
   /// Creates a instance of [CountryNer] (Niger country).
   ///
-  /// ISO 3166-1 Alpha-3 code: "NER", ISO 3166-1 Alpha-2 code: "NE".
+  /// ISO 3166-1 Alpha-3 code: `NER`, ISO 3166-1 Alpha-2 code: `NE`.
   const CountryNer()
     : super(
         name: const CountryName(
@@ -11018,7 +11018,7 @@ class CountryNer extends WorldCountry {
 class CountryNfk extends WorldCountry {
   /// Creates a instance of [CountryNfk] (Norfolk Island country).
   ///
-  /// ISO 3166-1 Alpha-3 code: "NFK", ISO 3166-1 Alpha-2 code: "NF".
+  /// ISO 3166-1 Alpha-3 code: `NFK`, ISO 3166-1 Alpha-2 code: `NF`.
   const CountryNfk()
     : super(
         name: const CountryName(
@@ -11084,7 +11084,7 @@ class CountryNfk extends WorldCountry {
 class CountryNga extends WorldCountry {
   /// Creates a instance of [CountryNga] (Nigeria country).
   ///
-  /// ISO 3166-1 Alpha-3 code: "NGA", ISO 3166-1 Alpha-2 code: "NG".
+  /// ISO 3166-1 Alpha-3 code: `NGA`, ISO 3166-1 Alpha-2 code: `NG`.
   const CountryNga()
     : super(
         name: const CountryName(
@@ -11152,7 +11152,7 @@ class CountryNga extends WorldCountry {
 class CountryNic extends WorldCountry {
   /// Creates a instance of [CountryNic] (Nicaragua country).
   ///
-  /// ISO 3166-1 Alpha-3 code: "NIC", ISO 3166-1 Alpha-2 code: "NI".
+  /// ISO 3166-1 Alpha-3 code: `NIC`, ISO 3166-1 Alpha-2 code: `NI`.
   const CountryNic()
     : super(
         name: const CountryName(
@@ -11225,7 +11225,7 @@ class CountryNic extends WorldCountry {
 class CountryNiu extends WorldCountry {
   /// Creates a instance of [CountryNiu] (Niue country).
   ///
-  /// ISO 3166-1 Alpha-3 code: "NIU", ISO 3166-1 Alpha-2 code: "NU".
+  /// ISO 3166-1 Alpha-3 code: `NIU`, ISO 3166-1 Alpha-2 code: `NU`.
   const CountryNiu()
     : super(
         name: const CountryName(
@@ -11279,7 +11279,7 @@ class CountryNiu extends WorldCountry {
 class CountryNld extends WorldCountry {
   /// Creates a instance of [CountryNld] (Netherlands country).
   ///
-  /// ISO 3166-1 Alpha-3 code: "NLD", ISO 3166-1 Alpha-2 code: "NL".
+  /// ISO 3166-1 Alpha-3 code: `NLD`, ISO 3166-1 Alpha-2 code: `NL`.
   const CountryNld()
     : super(
         name: const CountryName(
@@ -11344,7 +11344,7 @@ class CountryNld extends WorldCountry {
 class CountryNor extends WorldCountry {
   /// Creates a instance of [CountryNor] (Norway country).
   ///
-  /// ISO 3166-1 Alpha-3 code: "NOR", ISO 3166-1 Alpha-2 code: "NO".
+  /// ISO 3166-1 Alpha-3 code: `NOR`, ISO 3166-1 Alpha-2 code: `NO`.
   const CountryNor()
     : super(
         name: const CountryName(
@@ -11419,7 +11419,7 @@ class CountryNor extends WorldCountry {
 class CountryNpl extends WorldCountry {
   /// Creates a instance of [CountryNpl] (Nepal country).
   ///
-  /// ISO 3166-1 Alpha-3 code: "NPL", ISO 3166-1 Alpha-2 code: "NP".
+  /// ISO 3166-1 Alpha-3 code: `NPL`, ISO 3166-1 Alpha-2 code: `NP`.
   const CountryNpl()
     : super(
         name: const CountryName(
@@ -11487,7 +11487,7 @@ class CountryNpl extends WorldCountry {
 class CountryNru extends WorldCountry {
   /// Creates a instance of [CountryNru] (Nauru country).
   ///
-  /// ISO 3166-1 Alpha-3 code: "NRU", ISO 3166-1 Alpha-2 code: "NR".
+  /// ISO 3166-1 Alpha-3 code: `NRU`, ISO 3166-1 Alpha-2 code: `NR`.
   const CountryNru()
     : super(
         name: const CountryName(
@@ -11555,7 +11555,7 @@ class CountryNru extends WorldCountry {
 class CountryNzl extends WorldCountry {
   /// Creates a instance of [CountryNzl] (New Zealand country).
   ///
-  /// ISO 3166-1 Alpha-3 code: "NZL", ISO 3166-1 Alpha-2 code: "NZ".
+  /// ISO 3166-1 Alpha-3 code: `NZL`, ISO 3166-1 Alpha-2 code: `NZ`.
   const CountryNzl()
     : super(
         name: const CountryName(
@@ -11631,7 +11631,7 @@ class CountryNzl extends WorldCountry {
 class CountryOmn extends WorldCountry {
   /// Creates a instance of [CountryOmn] (Oman country).
   ///
-  /// ISO 3166-1 Alpha-3 code: "OMN", ISO 3166-1 Alpha-2 code: "OM".
+  /// ISO 3166-1 Alpha-3 code: `OMN`, ISO 3166-1 Alpha-2 code: `OM`.
   const CountryOmn()
     : super(
         name: const CountryName(
@@ -11692,7 +11692,7 @@ class CountryOmn extends WorldCountry {
 class CountryPak extends WorldCountry {
   /// Creates a instance of [CountryPak] (Pakistan country).
   ///
-  /// ISO 3166-1 Alpha-3 code: "PAK", ISO 3166-1 Alpha-2 code: "PK".
+  /// ISO 3166-1 Alpha-3 code: `PAK`, ISO 3166-1 Alpha-2 code: `PK`.
   const CountryPak()
     : super(
         name: const CountryName(
@@ -11764,7 +11764,7 @@ class CountryPak extends WorldCountry {
 class CountryPan extends WorldCountry {
   /// Creates a instance of [CountryPan] (Panama country).
   ///
-  /// ISO 3166-1 Alpha-3 code: "PAN", ISO 3166-1 Alpha-2 code: "PA".
+  /// ISO 3166-1 Alpha-3 code: `PAN`, ISO 3166-1 Alpha-2 code: `PA`.
   const CountryPan()
     : super(
         name: const CountryName(
@@ -11825,7 +11825,7 @@ class CountryPan extends WorldCountry {
 class CountryPcn extends WorldCountry {
   /// Creates a instance of [CountryPcn] (Pitcairn Islands country).
   ///
-  /// ISO 3166-1 Alpha-3 code: "PCN", ISO 3166-1 Alpha-2 code: "PN".
+  /// ISO 3166-1 Alpha-3 code: `PCN`, ISO 3166-1 Alpha-2 code: `PN`.
   const CountryPcn()
     : super(
         name: const CountryName(
@@ -11891,7 +11891,7 @@ class CountryPcn extends WorldCountry {
 class CountryPer extends WorldCountry {
   /// Creates a instance of [CountryPer] (Peru country).
   ///
-  /// ISO 3166-1 Alpha-3 code: "PER", ISO 3166-1 Alpha-2 code: "PE".
+  /// ISO 3166-1 Alpha-3 code: `PER`, ISO 3166-1 Alpha-2 code: `PE`.
   const CountryPer()
     : super(
         name: const CountryName(
@@ -11963,7 +11963,7 @@ class CountryPer extends WorldCountry {
 class CountryPhl extends WorldCountry {
   /// Creates a instance of [CountryPhl] (Philippines country).
   ///
-  /// ISO 3166-1 Alpha-3 code: "PHL", ISO 3166-1 Alpha-2 code: "PH".
+  /// ISO 3166-1 Alpha-3 code: `PHL`, ISO 3166-1 Alpha-2 code: `PH`.
   const CountryPhl()
     : super(
         name: const CountryName(
@@ -12036,7 +12036,7 @@ class CountryPhl extends WorldCountry {
 class CountryPlw extends WorldCountry {
   /// Creates a instance of [CountryPlw] (Palau country).
   ///
-  /// ISO 3166-1 Alpha-3 code: "PLW", ISO 3166-1 Alpha-2 code: "PW".
+  /// ISO 3166-1 Alpha-3 code: `PLW`, ISO 3166-1 Alpha-2 code: `PW`.
   const CountryPlw()
     : super(
         name: const CountryName(
@@ -12096,7 +12096,7 @@ class CountryPlw extends WorldCountry {
 class CountryPng extends WorldCountry {
   /// Creates a instance of [CountryPng] (Papua New Guinea country).
   ///
-  /// ISO 3166-1 Alpha-3 code: "PNG", ISO 3166-1 Alpha-2 code: "PG".
+  /// ISO 3166-1 Alpha-3 code: `PNG`, ISO 3166-1 Alpha-2 code: `PG`.
   const CountryPng()
     : super(
         name: const CountryName(
@@ -12172,7 +12172,7 @@ class CountryPng extends WorldCountry {
 class CountryPol extends WorldCountry {
   /// Creates a instance of [CountryPol] (Poland country).
   ///
-  /// ISO 3166-1 Alpha-3 code: "POL", ISO 3166-1 Alpha-2 code: "PL".
+  /// ISO 3166-1 Alpha-3 code: `POL`, ISO 3166-1 Alpha-2 code: `PL`.
   const CountryPol()
     : super(
         name: const CountryName(
@@ -12236,7 +12236,7 @@ class CountryPol extends WorldCountry {
 class CountryPri extends WorldCountry {
   /// Creates a instance of [CountryPri] (Puerto Rico country).
   ///
-  /// ISO 3166-1 Alpha-3 code: "PRI", ISO 3166-1 Alpha-2 code: "PR".
+  /// ISO 3166-1 Alpha-3 code: `PRI`, ISO 3166-1 Alpha-2 code: `PR`.
   const CountryPri()
     : super(
         name: const CountryName(
@@ -12309,7 +12309,7 @@ class CountryPri extends WorldCountry {
 class CountryPrk extends WorldCountry {
   /// Creates a instance of [CountryPrk] (North Korea country).
   ///
-  /// ISO 3166-1 Alpha-3 code: "PRK", ISO 3166-1 Alpha-2 code: "KP".
+  /// ISO 3166-1 Alpha-3 code: `PRK`, ISO 3166-1 Alpha-2 code: `KP`.
   const CountryPrk()
     : super(
         name: const CountryName(
@@ -12376,7 +12376,7 @@ class CountryPrk extends WorldCountry {
 class CountryPrt extends WorldCountry {
   /// Creates a instance of [CountryPrt] (Portugal country).
   ///
-  /// ISO 3166-1 Alpha-3 code: "PRT", ISO 3166-1 Alpha-2 code: "PT".
+  /// ISO 3166-1 Alpha-3 code: `PRT`, ISO 3166-1 Alpha-2 code: `PT`.
   const CountryPrt()
     : super(
         name: const CountryName(
@@ -12446,7 +12446,7 @@ class CountryPrt extends WorldCountry {
 class CountryPry extends WorldCountry {
   /// Creates a instance of [CountryPry] (Paraguay country).
   ///
-  /// ISO 3166-1 Alpha-3 code: "PRY", ISO 3166-1 Alpha-2 code: "PY".
+  /// ISO 3166-1 Alpha-3 code: `PRY`, ISO 3166-1 Alpha-2 code: `PY`.
   const CountryPry()
     : super(
         name: const CountryName(
@@ -12522,7 +12522,7 @@ class CountryPry extends WorldCountry {
 class CountryPse extends WorldCountry {
   /// Creates a instance of [CountryPse] (Palestine country).
   ///
-  /// ISO 3166-1 Alpha-3 code: "PSE", ISO 3166-1 Alpha-2 code: "PS".
+  /// ISO 3166-1 Alpha-3 code: `PSE`, ISO 3166-1 Alpha-2 code: `PS`.
   const CountryPse()
     : super(
         name: const CountryName(
@@ -12587,7 +12587,7 @@ class CountryPse extends WorldCountry {
 class CountryPyf extends WorldCountry {
   /// Creates a instance of [CountryPyf] (French Polynesia country).
   ///
-  /// ISO 3166-1 Alpha-3 code: "PYF", ISO 3166-1 Alpha-2 code: "PF".
+  /// ISO 3166-1 Alpha-3 code: `PYF`, ISO 3166-1 Alpha-2 code: `PF`.
   const CountryPyf()
     : super(
         name: const CountryName(
@@ -12654,7 +12654,7 @@ class CountryPyf extends WorldCountry {
 class CountryQat extends WorldCountry {
   /// Creates a instance of [CountryQat] (Qatar country).
   ///
-  /// ISO 3166-1 Alpha-3 code: "QAT", ISO 3166-1 Alpha-2 code: "QA".
+  /// ISO 3166-1 Alpha-3 code: `QAT`, ISO 3166-1 Alpha-2 code: `QA`.
   const CountryQat()
     : super(
         name: const CountryName(
@@ -12709,7 +12709,7 @@ class CountryQat extends WorldCountry {
 class CountryReu extends WorldCountry {
   /// Creates a instance of [CountryReu] (Réunion country).
   ///
-  /// ISO 3166-1 Alpha-3 code: "REU", ISO 3166-1 Alpha-2 code: "RE".
+  /// ISO 3166-1 Alpha-3 code: `REU`, ISO 3166-1 Alpha-2 code: `RE`.
   const CountryReu()
     : super(
         name: const CountryName(
@@ -12770,7 +12770,7 @@ class CountryReu extends WorldCountry {
 class CountryRou extends WorldCountry {
   /// Creates a instance of [CountryRou] (Romania country).
   ///
-  /// ISO 3166-1 Alpha-3 code: "ROU", ISO 3166-1 Alpha-2 code: "RO".
+  /// ISO 3166-1 Alpha-3 code: `ROU`, ISO 3166-1 Alpha-2 code: `RO`.
   const CountryRou()
     : super(
         name: const CountryName(
@@ -12831,7 +12831,7 @@ class CountryRou extends WorldCountry {
 class CountryRus extends WorldCountry {
   /// Creates a instance of [CountryRus] (Russia country).
   ///
-  /// ISO 3166-1 Alpha-3 code: "RUS", ISO 3166-1 Alpha-2 code: "RU".
+  /// ISO 3166-1 Alpha-3 code: `RUS`, ISO 3166-1 Alpha-2 code: `RU`.
   const CountryRus()
     : super(
         name: const CountryName(
@@ -12925,7 +12925,7 @@ class CountryRus extends WorldCountry {
 class CountryRwa extends WorldCountry {
   /// Creates a instance of [CountryRwa] (Rwanda country).
   ///
-  /// ISO 3166-1 Alpha-3 code: "RWA", ISO 3166-1 Alpha-2 code: "RW".
+  /// ISO 3166-1 Alpha-3 code: `RWA`, ISO 3166-1 Alpha-2 code: `RW`.
   const CountryRwa()
     : super(
         name: const CountryName(
@@ -13006,7 +13006,7 @@ class CountryRwa extends WorldCountry {
 class CountrySau extends WorldCountry {
   /// Creates a instance of [CountrySau] (Saudi Arabia country).
   ///
-  /// ISO 3166-1 Alpha-3 code: "SAU", ISO 3166-1 Alpha-2 code: "SA".
+  /// ISO 3166-1 Alpha-3 code: `SAU`, ISO 3166-1 Alpha-2 code: `SA`.
   const CountrySau()
     : super(
         name: const CountryName(
@@ -13077,7 +13077,7 @@ class CountrySau extends WorldCountry {
 class CountrySdn extends WorldCountry {
   /// Creates a instance of [CountrySdn] (Sudan country).
   ///
-  /// ISO 3166-1 Alpha-3 code: "SDN", ISO 3166-1 Alpha-2 code: "SD".
+  /// ISO 3166-1 Alpha-3 code: `SDN`, ISO 3166-1 Alpha-2 code: `SD`.
   const CountrySdn()
     : super(
         name: const CountryName(
@@ -13148,7 +13148,7 @@ class CountrySdn extends WorldCountry {
 class CountrySen extends WorldCountry {
   /// Creates a instance of [CountrySen] (Senegal country).
   ///
-  /// ISO 3166-1 Alpha-3 code: "SEN", ISO 3166-1 Alpha-2 code: "SN".
+  /// ISO 3166-1 Alpha-3 code: `SEN`, ISO 3166-1 Alpha-2 code: `SN`.
   const CountrySen()
     : super(
         name: const CountryName(
@@ -13214,7 +13214,7 @@ class CountrySen extends WorldCountry {
 class CountrySgp extends WorldCountry {
   /// Creates a instance of [CountrySgp] (Singapore country).
   ///
-  /// ISO 3166-1 Alpha-3 code: "SGP", ISO 3166-1 Alpha-2 code: "SG".
+  /// ISO 3166-1 Alpha-3 code: `SGP`, ISO 3166-1 Alpha-2 code: `SG`.
   const CountrySgp()
     : super(
         name: const CountryName(
@@ -13297,7 +13297,7 @@ class CountrySgp extends WorldCountry {
 class CountrySgs extends WorldCountry {
   /// Creates a instance of [CountrySgs] (South Georgia country).
   ///
-  /// ISO 3166-1 Alpha-3 code: "SGS", ISO 3166-1 Alpha-2 code: "GS".
+  /// ISO 3166-1 Alpha-3 code: `SGS`, ISO 3166-1 Alpha-2 code: `GS`.
   const CountrySgs()
     : super(
         name: const CountryName(
@@ -13362,7 +13362,7 @@ class CountrySgs extends WorldCountry {
 class CountryShn extends WorldCountry {
   /// Creates a instance of [CountryShn] (Saint Helena, Ascension and Tristan da Cunha country).
   ///
-  /// ISO 3166-1 Alpha-3 code: "SHN", ISO 3166-1 Alpha-2 code: "SH".
+  /// ISO 3166-1 Alpha-3 code: `SHN`, ISO 3166-1 Alpha-2 code: `SH`.
   const CountryShn()
     : super(
         name: const CountryName(
@@ -13437,7 +13437,7 @@ class CountryShn extends WorldCountry {
 class CountrySjm extends WorldCountry {
   /// Creates a instance of [CountrySjm] (Svalbard and Jan Mayen country).
   ///
-  /// ISO 3166-1 Alpha-3 code: "SJM", ISO 3166-1 Alpha-2 code: "SJ".
+  /// ISO 3166-1 Alpha-3 code: `SJM`, ISO 3166-1 Alpha-2 code: `SJ`.
   const CountrySjm()
     : super(
         name: const CountryName(
@@ -13494,7 +13494,7 @@ class CountrySjm extends WorldCountry {
 class CountrySlb extends WorldCountry {
   /// Creates a instance of [CountrySlb] (Solomon Islands country).
   ///
-  /// ISO 3166-1 Alpha-3 code: "SLB", ISO 3166-1 Alpha-2 code: "SB".
+  /// ISO 3166-1 Alpha-3 code: `SLB`, ISO 3166-1 Alpha-2 code: `SB`.
   const CountrySlb()
     : super(
         name: const CountryName(
@@ -13556,7 +13556,7 @@ class CountrySlb extends WorldCountry {
 class CountrySle extends WorldCountry {
   /// Creates a instance of [CountrySle] (Sierra Leone country).
   ///
-  /// ISO 3166-1 Alpha-3 code: "SLE", ISO 3166-1 Alpha-2 code: "SL".
+  /// ISO 3166-1 Alpha-3 code: `SLE`, ISO 3166-1 Alpha-2 code: `SL`.
   const CountrySle()
     : super(
         name: const CountryName(
@@ -13625,7 +13625,7 @@ class CountrySle extends WorldCountry {
 class CountrySlv extends WorldCountry {
   /// Creates a instance of [CountrySlv] (El Salvador country).
   ///
-  /// ISO 3166-1 Alpha-3 code: "SLV", ISO 3166-1 Alpha-2 code: "SV".
+  /// ISO 3166-1 Alpha-3 code: `SLV`, ISO 3166-1 Alpha-2 code: `SV`.
   const CountrySlv()
     : super(
         name: const CountryName(
@@ -13694,7 +13694,7 @@ class CountrySlv extends WorldCountry {
 class CountrySmr extends WorldCountry {
   /// Creates a instance of [CountrySmr] (San Marino country).
   ///
-  /// ISO 3166-1 Alpha-3 code: "SMR", ISO 3166-1 Alpha-2 code: "SM".
+  /// ISO 3166-1 Alpha-3 code: `SMR`, ISO 3166-1 Alpha-2 code: `SM`.
   const CountrySmr()
     : super(
         name: const CountryName(
@@ -13765,7 +13765,7 @@ class CountrySmr extends WorldCountry {
 class CountrySom extends WorldCountry {
   /// Creates a instance of [CountrySom] (Somalia country).
   ///
-  /// ISO 3166-1 Alpha-3 code: "SOM", ISO 3166-1 Alpha-2 code: "SO".
+  /// ISO 3166-1 Alpha-3 code: `SOM`, ISO 3166-1 Alpha-2 code: `SO`.
   const CountrySom()
     : super(
         name: const CountryName(
@@ -13841,7 +13841,7 @@ class CountrySom extends WorldCountry {
 class CountrySpm extends WorldCountry {
   /// Creates a instance of [CountrySpm] (Saint Pierre and Miquelon country).
   ///
-  /// ISO 3166-1 Alpha-3 code: "SPM", ISO 3166-1 Alpha-2 code: "PM".
+  /// ISO 3166-1 Alpha-3 code: `SPM`, ISO 3166-1 Alpha-2 code: `PM`.
   const CountrySpm()
     : super(
         name: const CountryName(
@@ -13911,7 +13911,7 @@ class CountrySpm extends WorldCountry {
 class CountrySrb extends WorldCountry {
   /// Creates a instance of [CountrySrb] (Serbia country).
   ///
-  /// ISO 3166-1 Alpha-3 code: "SRB", ISO 3166-1 Alpha-2 code: "RS".
+  /// ISO 3166-1 Alpha-3 code: `SRB`, ISO 3166-1 Alpha-2 code: `RS`.
   const CountrySrb()
     : super(
         name: const CountryName(
@@ -13983,7 +13983,7 @@ class CountrySrb extends WorldCountry {
 class CountrySsd extends WorldCountry {
   /// Creates a instance of [CountrySsd] (South Sudan country).
   ///
-  /// ISO 3166-1 Alpha-3 code: "SSD", ISO 3166-1 Alpha-2 code: "SS".
+  /// ISO 3166-1 Alpha-3 code: `SSD`, ISO 3166-1 Alpha-2 code: `SS`.
   const CountrySsd()
     : super(
         name: const CountryName(
@@ -14052,7 +14052,7 @@ class CountrySsd extends WorldCountry {
 class CountryStp extends WorldCountry {
   /// Creates a instance of [CountryStp] (São Tomé and Príncipe country).
   ///
-  /// ISO 3166-1 Alpha-3 code: "STP", ISO 3166-1 Alpha-2 code: "ST".
+  /// ISO 3166-1 Alpha-3 code: `STP`, ISO 3166-1 Alpha-2 code: `ST`.
   const CountryStp()
     : super(
         name: const CountryName(
@@ -14117,7 +14117,7 @@ class CountryStp extends WorldCountry {
 class CountrySur extends WorldCountry {
   /// Creates a instance of [CountrySur] (Suriname country).
   ///
-  /// ISO 3166-1 Alpha-3 code: "SUR", ISO 3166-1 Alpha-2 code: "SR".
+  /// ISO 3166-1 Alpha-3 code: `SUR`, ISO 3166-1 Alpha-2 code: `SR`.
   const CountrySur()
     : super(
         name: const CountryName(
@@ -14184,7 +14184,7 @@ class CountrySur extends WorldCountry {
 class CountrySvk extends WorldCountry {
   /// Creates a instance of [CountrySvk] (Slovakia country).
   ///
-  /// ISO 3166-1 Alpha-3 code: "SVK", ISO 3166-1 Alpha-2 code: "SK".
+  /// ISO 3166-1 Alpha-3 code: `SVK`, ISO 3166-1 Alpha-2 code: `SK`.
   const CountrySvk()
     : super(
         name: const CountryName(
@@ -14247,7 +14247,7 @@ class CountrySvk extends WorldCountry {
 class CountrySvn extends WorldCountry {
   /// Creates a instance of [CountrySvn] (Slovenia country).
   ///
-  /// ISO 3166-1 Alpha-3 code: "SVN", ISO 3166-1 Alpha-2 code: "SI".
+  /// ISO 3166-1 Alpha-3 code: `SVN`, ISO 3166-1 Alpha-2 code: `SI`.
   const CountrySvn()
     : super(
         name: const CountryName(
@@ -14316,7 +14316,7 @@ class CountrySvn extends WorldCountry {
 class CountrySwe extends WorldCountry {
   /// Creates a instance of [CountrySwe] (Sweden country).
   ///
-  /// ISO 3166-1 Alpha-3 code: "SWE", ISO 3166-1 Alpha-2 code: "SE".
+  /// ISO 3166-1 Alpha-3 code: `SWE`, ISO 3166-1 Alpha-2 code: `SE`.
   const CountrySwe()
     : super(
         name: const CountryName(
@@ -14381,7 +14381,7 @@ class CountrySwe extends WorldCountry {
 class CountrySwz extends WorldCountry {
   /// Creates a instance of [CountrySwz] (Eswatini country).
   ///
-  /// ISO 3166-1 Alpha-3 code: "SWZ", ISO 3166-1 Alpha-2 code: "SZ".
+  /// ISO 3166-1 Alpha-3 code: `SWZ`, ISO 3166-1 Alpha-2 code: `SZ`.
   const CountrySwz()
     : super(
         name: const CountryName(
@@ -14461,7 +14461,7 @@ class CountrySwz extends WorldCountry {
 class CountrySxm extends WorldCountry {
   /// Creates a instance of [CountrySxm] (Sint Maarten country).
   ///
-  /// ISO 3166-1 Alpha-3 code: "SXM", ISO 3166-1 Alpha-2 code: "SX".
+  /// ISO 3166-1 Alpha-3 code: `SXM`, ISO 3166-1 Alpha-2 code: `SX`.
   const CountrySxm()
     : super(
         name: const CountryName(
@@ -14542,7 +14542,7 @@ class CountrySxm extends WorldCountry {
 class CountrySyc extends WorldCountry {
   /// Creates a instance of [CountrySyc] (Seychelles country).
   ///
-  /// ISO 3166-1 Alpha-3 code: "SYC", ISO 3166-1 Alpha-2 code: "SC".
+  /// ISO 3166-1 Alpha-3 code: `SYC`, ISO 3166-1 Alpha-2 code: `SC`.
   const CountrySyc()
     : super(
         name: const CountryName(
@@ -14612,7 +14612,7 @@ class CountrySyc extends WorldCountry {
 class CountrySyr extends WorldCountry {
   /// Creates a instance of [CountrySyr] (Syria country).
   ///
-  /// ISO 3166-1 Alpha-3 code: "SYR", ISO 3166-1 Alpha-2 code: "SY".
+  /// ISO 3166-1 Alpha-3 code: `SYR`, ISO 3166-1 Alpha-2 code: `SY`.
   const CountrySyr()
     : super(
         name: const CountryName(
@@ -14677,7 +14677,7 @@ class CountrySyr extends WorldCountry {
 class CountryTca extends WorldCountry {
   /// Creates a instance of [CountryTca] (Turks and Caicos Islands country).
   ///
-  /// ISO 3166-1 Alpha-3 code: "TCA", ISO 3166-1 Alpha-2 code: "TC".
+  /// ISO 3166-1 Alpha-3 code: `TCA`, ISO 3166-1 Alpha-2 code: `TC`.
   const CountryTca()
     : super(
         name: const CountryName(
@@ -14743,7 +14743,7 @@ class CountryTca extends WorldCountry {
 class CountryTcd extends WorldCountry {
   /// Creates a instance of [CountryTcd] (Chad country).
   ///
-  /// ISO 3166-1 Alpha-3 code: "TCD", ISO 3166-1 Alpha-2 code: "TD".
+  /// ISO 3166-1 Alpha-3 code: `TCD`, ISO 3166-1 Alpha-2 code: `TD`.
   const CountryTcd()
     : super(
         name: const CountryName(
@@ -14809,7 +14809,7 @@ class CountryTcd extends WorldCountry {
 class CountryTgo extends WorldCountry {
   /// Creates a instance of [CountryTgo] (Togo country).
   ///
-  /// ISO 3166-1 Alpha-3 code: "TGO", ISO 3166-1 Alpha-2 code: "TG".
+  /// ISO 3166-1 Alpha-3 code: `TGO`, ISO 3166-1 Alpha-2 code: `TG`.
   const CountryTgo()
     : super(
         name: const CountryName(
@@ -14871,7 +14871,7 @@ class CountryTgo extends WorldCountry {
 class CountryTha extends WorldCountry {
   /// Creates a instance of [CountryTha] (Thailand country).
   ///
-  /// ISO 3166-1 Alpha-3 code: "THA", ISO 3166-1 Alpha-2 code: "TH".
+  /// ISO 3166-1 Alpha-3 code: `THA`, ISO 3166-1 Alpha-2 code: `TH`.
   const CountryTha()
     : super(
         name: const CountryName(
@@ -14940,7 +14940,7 @@ class CountryTha extends WorldCountry {
 class CountryTjk extends WorldCountry {
   /// Creates a instance of [CountryTjk] (Tajikistan country).
   ///
-  /// ISO 3166-1 Alpha-3 code: "TJK", ISO 3166-1 Alpha-2 code: "TJ".
+  /// ISO 3166-1 Alpha-3 code: `TJK`, ISO 3166-1 Alpha-2 code: `TJ`.
   const CountryTjk()
     : super(
         name: const CountryName(
@@ -15015,7 +15015,7 @@ class CountryTjk extends WorldCountry {
 class CountryTkl extends WorldCountry {
   /// Creates a instance of [CountryTkl] (Tokelau country).
   ///
-  /// ISO 3166-1 Alpha-3 code: "TKL", ISO 3166-1 Alpha-2 code: "TK".
+  /// ISO 3166-1 Alpha-3 code: `TKL`, ISO 3166-1 Alpha-2 code: `TK`.
   const CountryTkl()
     : super(
         name: const CountryName(
@@ -15069,7 +15069,7 @@ class CountryTkl extends WorldCountry {
 class CountryTkm extends WorldCountry {
   /// Creates a instance of [CountryTkm] (Turkmenistan country).
   ///
-  /// ISO 3166-1 Alpha-3 code: "TKM", ISO 3166-1 Alpha-2 code: "TM".
+  /// ISO 3166-1 Alpha-3 code: `TKM`, ISO 3166-1 Alpha-2 code: `TM`.
   const CountryTkm()
     : super(
         name: const CountryName(
@@ -15138,7 +15138,7 @@ class CountryTkm extends WorldCountry {
 class CountryTls extends WorldCountry {
   /// Creates a instance of [CountryTls] (Timor-Leste country).
   ///
-  /// ISO 3166-1 Alpha-3 code: "TLS", ISO 3166-1 Alpha-2 code: "TL".
+  /// ISO 3166-1 Alpha-3 code: `TLS`, ISO 3166-1 Alpha-2 code: `TL`.
   const CountryTls()
     : super(
         name: const CountryName(
@@ -15212,7 +15212,7 @@ class CountryTls extends WorldCountry {
 class CountryTon extends WorldCountry {
   /// Creates a instance of [CountryTon] (Tonga country).
   ///
-  /// ISO 3166-1 Alpha-3 code: "TON", ISO 3166-1 Alpha-2 code: "TO".
+  /// ISO 3166-1 Alpha-3 code: `TON`, ISO 3166-1 Alpha-2 code: `TO`.
   const CountryTon()
     : super(
         name: const CountryName(
@@ -15275,7 +15275,7 @@ class CountryTon extends WorldCountry {
 class CountryTto extends WorldCountry {
   /// Creates a instance of [CountryTto] (Trinidad and Tobago country).
   ///
-  /// ISO 3166-1 Alpha-3 code: "TTO", ISO 3166-1 Alpha-2 code: "TT".
+  /// ISO 3166-1 Alpha-3 code: `TTO`, ISO 3166-1 Alpha-2 code: `TT`.
   const CountryTto()
     : super(
         name: const CountryName(
@@ -15335,7 +15335,7 @@ class CountryTto extends WorldCountry {
 class CountryTun extends WorldCountry {
   /// Creates a instance of [CountryTun] (Tunisia country).
   ///
-  /// ISO 3166-1 Alpha-3 code: "TUN", ISO 3166-1 Alpha-2 code: "TN".
+  /// ISO 3166-1 Alpha-3 code: `TUN`, ISO 3166-1 Alpha-2 code: `TN`.
   const CountryTun()
     : super(
         name: const CountryName(
@@ -15402,7 +15402,7 @@ class CountryTun extends WorldCountry {
 class CountryTur extends WorldCountry {
   /// Creates a instance of [CountryTur] (Turkey country).
   ///
-  /// ISO 3166-1 Alpha-3 code: "TUR", ISO 3166-1 Alpha-2 code: "TR".
+  /// ISO 3166-1 Alpha-3 code: `TUR`, ISO 3166-1 Alpha-2 code: `TR`.
   const CountryTur()
     : super(
         name: const CountryName(
@@ -15476,7 +15476,7 @@ class CountryTur extends WorldCountry {
 class CountryTuv extends WorldCountry {
   /// Creates a instance of [CountryTuv] (Tuvalu country).
   ///
-  /// ISO 3166-1 Alpha-3 code: "TUV", ISO 3166-1 Alpha-2 code: "TV".
+  /// ISO 3166-1 Alpha-3 code: `TUV`, ISO 3166-1 Alpha-2 code: `TV`.
   const CountryTuv()
     : super(
         name: const CountryName(
@@ -15529,7 +15529,7 @@ class CountryTuv extends WorldCountry {
 class CountryTwn extends WorldCountry {
   /// Creates a instance of [CountryTwn] (Taiwan country).
   ///
-  /// ISO 3166-1 Alpha-3 code: "TWN", ISO 3166-1 Alpha-2 code: "TW".
+  /// ISO 3166-1 Alpha-3 code: `TWN`, ISO 3166-1 Alpha-2 code: `TW`.
   const CountryTwn()
     : super(
         name: const CountryName(
@@ -15592,7 +15592,7 @@ class CountryTwn extends WorldCountry {
 class CountryTza extends WorldCountry {
   /// Creates a instance of [CountryTza] (Tanzania country).
   ///
-  /// ISO 3166-1 Alpha-3 code: "TZA", ISO 3166-1 Alpha-2 code: "TZ".
+  /// ISO 3166-1 Alpha-3 code: `TZA`, ISO 3166-1 Alpha-2 code: `TZ`.
   const CountryTza()
     : super(
         name: const CountryName(
@@ -15672,7 +15672,7 @@ class CountryTza extends WorldCountry {
 class CountryUga extends WorldCountry {
   /// Creates a instance of [CountryUga] (Uganda country).
   ///
-  /// ISO 3166-1 Alpha-3 code: "UGA", ISO 3166-1 Alpha-2 code: "UG".
+  /// ISO 3166-1 Alpha-3 code: `UGA`, ISO 3166-1 Alpha-2 code: `UG`.
   const CountryUga()
     : super(
         name: const CountryName(
@@ -15739,7 +15739,7 @@ class CountryUga extends WorldCountry {
 class CountryUkr extends WorldCountry {
   /// Creates a instance of [CountryUkr] (Ukraine country).
   ///
-  /// ISO 3166-1 Alpha-3 code: "UKR", ISO 3166-1 Alpha-2 code: "UA".
+  /// ISO 3166-1 Alpha-3 code: `UKR`, ISO 3166-1 Alpha-2 code: `UA`.
   const CountryUkr()
     : super(
         name: const CountryName(
@@ -15793,7 +15793,7 @@ class CountryUkr extends WorldCountry {
 class CountryUmi extends WorldCountry {
   /// Creates a instance of [CountryUmi] (United States Minor Outlying Islands country).
   ///
-  /// ISO 3166-1 Alpha-3 code: "UMI", ISO 3166-1 Alpha-2 code: "UM".
+  /// ISO 3166-1 Alpha-3 code: `UMI`, ISO 3166-1 Alpha-2 code: `UM`.
   const CountryUmi()
     : super(
         name: const CountryName(
@@ -15854,7 +15854,7 @@ class CountryUmi extends WorldCountry {
 class CountryUry extends WorldCountry {
   /// Creates a instance of [CountryUry] (Uruguay country).
   ///
-  /// ISO 3166-1 Alpha-3 code: "URY", ISO 3166-1 Alpha-2 code: "UY".
+  /// ISO 3166-1 Alpha-3 code: `URY`, ISO 3166-1 Alpha-2 code: `UY`.
   const CountryUry()
     : super(
         name: const CountryName(
@@ -15920,7 +15920,7 @@ class CountryUry extends WorldCountry {
 class CountryUsa extends WorldCountry {
   /// Creates a instance of [CountryUsa] (United States country).
   ///
-  /// ISO 3166-1 Alpha-3 code: "USA", ISO 3166-1 Alpha-2 code: "US".
+  /// ISO 3166-1 Alpha-3 code: `USA`, ISO 3166-1 Alpha-2 code: `US`.
   const CountryUsa()
     : super(
         name: const CountryName(
@@ -16319,7 +16319,7 @@ class CountryUsa extends WorldCountry {
 class CountryUzb extends WorldCountry {
   /// Creates a instance of [CountryUzb] (Uzbekistan country).
   ///
-  /// ISO 3166-1 Alpha-3 code: "UZB", ISO 3166-1 Alpha-2 code: "UZ".
+  /// ISO 3166-1 Alpha-3 code: `UZB`, ISO 3166-1 Alpha-2 code: `UZ`.
   const CountryUzb()
     : super(
         name: const CountryName(
@@ -16393,7 +16393,7 @@ class CountryUzb extends WorldCountry {
 class CountryVat extends WorldCountry {
   /// Creates a instance of [CountryVat] (Vatican City country).
   ///
-  /// ISO 3166-1 Alpha-3 code: "VAT", ISO 3166-1 Alpha-2 code: "VA".
+  /// ISO 3166-1 Alpha-3 code: `VAT`, ISO 3166-1 Alpha-2 code: `VA`.
   const CountryVat()
     : super(
         name: const CountryName(
@@ -16461,7 +16461,7 @@ class CountryVat extends WorldCountry {
 class CountryVct extends WorldCountry {
   /// Creates a instance of [CountryVct] (Saint Vincent and the Grenadines country).
   ///
-  /// ISO 3166-1 Alpha-3 code: "VCT", ISO 3166-1 Alpha-2 code: "VC".
+  /// ISO 3166-1 Alpha-3 code: `VCT`, ISO 3166-1 Alpha-2 code: `VC`.
   const CountryVct()
     : super(
         name: const CountryName(
@@ -16524,7 +16524,7 @@ class CountryVct extends WorldCountry {
 class CountryVen extends WorldCountry {
   /// Creates a instance of [CountryVen] (Venezuela country).
   ///
-  /// ISO 3166-1 Alpha-3 code: "VEN", ISO 3166-1 Alpha-2 code: "VE".
+  /// ISO 3166-1 Alpha-3 code: `VEN`, ISO 3166-1 Alpha-2 code: `VE`.
   const CountryVen()
     : super(
         name: const CountryName(
@@ -16594,7 +16594,7 @@ class CountryVen extends WorldCountry {
 class CountryVgb extends WorldCountry {
   /// Creates a instance of [CountryVgb] (British Virgin Islands country).
   ///
-  /// ISO 3166-1 Alpha-3 code: "VGB", ISO 3166-1 Alpha-2 code: "VG".
+  /// ISO 3166-1 Alpha-3 code: `VGB`, ISO 3166-1 Alpha-2 code: `VG`.
   const CountryVgb()
     : super(
         name: const CountryName(
@@ -16656,7 +16656,7 @@ class CountryVgb extends WorldCountry {
 class CountryVir extends WorldCountry {
   /// Creates a instance of [CountryVir] (United States Virgin Islands country).
   ///
-  /// ISO 3166-1 Alpha-3 code: "VIR", ISO 3166-1 Alpha-2 code: "VI".
+  /// ISO 3166-1 Alpha-3 code: `VIR`, ISO 3166-1 Alpha-2 code: `VI`.
   const CountryVir()
     : super(
         name: const CountryName(
@@ -16719,7 +16719,7 @@ class CountryVir extends WorldCountry {
 class CountryVnm extends WorldCountry {
   /// Creates a instance of [CountryVnm] (Vietnam country).
   ///
-  /// ISO 3166-1 Alpha-3 code: "VNM", ISO 3166-1 Alpha-2 code: "VN".
+  /// ISO 3166-1 Alpha-3 code: `VNM`, ISO 3166-1 Alpha-2 code: `VN`.
   const CountryVnm()
     : super(
         name: const CountryName(
@@ -16789,7 +16789,7 @@ class CountryVnm extends WorldCountry {
 class CountryVut extends WorldCountry {
   /// Creates a instance of [CountryVut] (Vanuatu country).
   ///
-  /// ISO 3166-1 Alpha-3 code: "VUT", ISO 3166-1 Alpha-2 code: "VU".
+  /// ISO 3166-1 Alpha-3 code: `VUT`, ISO 3166-1 Alpha-2 code: `VU`.
   const CountryVut()
     : super(
         name: const CountryName(
@@ -16866,7 +16866,7 @@ class CountryVut extends WorldCountry {
 class CountryWlf extends WorldCountry {
   /// Creates a instance of [CountryWlf] (Wallis and Futuna country).
   ///
-  /// ISO 3166-1 Alpha-3 code: "WLF", ISO 3166-1 Alpha-2 code: "WF".
+  /// ISO 3166-1 Alpha-3 code: `WLF`, ISO 3166-1 Alpha-2 code: `WF`.
   const CountryWlf()
     : super(
         name: const CountryName(
@@ -16932,7 +16932,7 @@ class CountryWlf extends WorldCountry {
 class CountryWsm extends WorldCountry {
   /// Creates a instance of [CountryWsm] (Samoa country).
   ///
-  /// ISO 3166-1 Alpha-3 code: "WSM", ISO 3166-1 Alpha-2 code: "WS".
+  /// ISO 3166-1 Alpha-3 code: `WSM`, ISO 3166-1 Alpha-2 code: `WS`.
   const CountryWsm()
     : super(
         name: const CountryName(
@@ -16999,7 +16999,7 @@ class CountryWsm extends WorldCountry {
 class CountryYem extends WorldCountry {
   /// Creates a instance of [CountryYem] (Yemen country).
   ///
-  /// ISO 3166-1 Alpha-3 code: "YEM", ISO 3166-1 Alpha-2 code: "YE".
+  /// ISO 3166-1 Alpha-3 code: `YEM`, ISO 3166-1 Alpha-2 code: `YE`.
   const CountryYem()
     : super(
         name: const CountryName(
@@ -17065,7 +17065,7 @@ class CountryYem extends WorldCountry {
 class CountryZaf extends WorldCountry {
   /// Creates a instance of [CountryZaf] (South Africa country).
   ///
-  /// ISO 3166-1 Alpha-3 code: "ZAF", ISO 3166-1 Alpha-2 code: "ZA".
+  /// ISO 3166-1 Alpha-3 code: `ZAF`, ISO 3166-1 Alpha-2 code: `ZA`.
   const CountryZaf()
     : super(
         name: const CountryName(
@@ -17199,7 +17199,7 @@ class CountryZaf extends WorldCountry {
 class CountryZmb extends WorldCountry {
   /// Creates a instance of [CountryZmb] (Zambia country).
   ///
-  /// ISO 3166-1 Alpha-3 code: "ZMB", ISO 3166-1 Alpha-2 code: "ZM".
+  /// ISO 3166-1 Alpha-3 code: `ZMB`, ISO 3166-1 Alpha-2 code: `ZM`.
   const CountryZmb()
     : super(
         name: const CountryName(
@@ -17271,7 +17271,7 @@ class CountryZmb extends WorldCountry {
 class CountryZwe extends WorldCountry {
   /// Creates a instance of [CountryZwe] (Zimbabwe country).
   ///
-  /// ISO 3166-1 Alpha-3 code: "ZWE", ISO 3166-1 Alpha-2 code: "ZW".
+  /// ISO 3166-1 Alpha-3 code: `ZWE`, ISO 3166-1 Alpha-2 code: `ZW`.
   const CountryZwe()
     : super(
         name: const CountryName(

@@ -25,7 +25,7 @@ import "regional_bloc/regional_bloc.data.dart";
 class CountryUnk extends WorldCountry {
   /// Creates a instance of [CountryUnk] (Kosovo country).
   ///
-  /// ISO 3166-1 Alpha-3 code: "UNK", ISO 3166-1 Alpha-2 code: "XK".
+  /// ISO 3166-1 Alpha-3 code: `UNK`, ISO 3166-1 Alpha-2 code: `XK`.
   const CountryUnk()
     : super.permissive(
         name: const CountryName(
