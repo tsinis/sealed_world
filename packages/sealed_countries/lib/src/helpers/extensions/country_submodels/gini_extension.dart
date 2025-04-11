@@ -24,16 +24,14 @@ extension GiniExtension on Gini {
 
   /// {@macro copy_with_method}
   Gini copyWith({int? year, double? coefficient}) => Gini(
-        year: year ?? this.year,
-        coefficient: coefficient ?? this.coefficient,
-      );
+    year: year ?? this.year,
+    coefficient: coefficient ?? this.coefficient,
+  );
 
   /// {@macro to_map_method}
   Map<String, num> toMap() => {"coefficient": coefficient, "year": year};
 
   /// {@macro from_map_method}
-  static Gini fromMap(JsonMap map) => Gini(
-        year: map["year"] as int,
-        coefficient: map["coefficient"] as double,
-      );
+  static Gini fromMap(JsonMap map) =>
+      Gini(year: map["year"] as int, coefficient: map["coefficient"] as double);
 }

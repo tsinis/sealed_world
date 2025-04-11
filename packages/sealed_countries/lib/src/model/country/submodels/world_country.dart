@@ -72,42 +72,42 @@ class WorldCountry extends Country
     List<NaturalLanguage>? languages,
     List<CountryName>? namesNative,
     List<TranslatedName>? translations,
-  })  : assert(
-          code.length == IsoStandardized.codeLength,
-          """`code` should be exactly ${IsoStandardized.codeLength} characters long!""",
-        ),
-        assert(
-          codeShort.length == IsoStandardized.codeShortLength,
-          """`codeShort` should be exactly ${IsoStandardized.codeShortLength} characters long!""",
-        ),
-        assert(
-          codeNumeric.length == IsoStandardized.codeLength,
-          """`codeNumeric` should be exactly ${IsoStandardized.codeLength} characters long!""",
-        ),
-        assert(emoji.length > 0, "`emoji` should not be empty!"),
-        assert(tld != const <String>[], "`tld` should not be empty!"),
-        assert(
-          altSpellings != const <String>[],
-          "`altSpellings` should not be empty!",
-        ),
-        assert(
-          timezones != const <String>[],
-          "`timezones` should not be empty!",
-        ),
-        assert(cioc == null || cioc.length > 0, "`cioc` should not be empty!"),
-        assert(fifa == null || fifa.length > 0, "`fifa` should not be empty!"),
-        assert(
-          bordersCodes != const <String>[],
-          "`bordersCodes` should not be empty!",
-        ),
-        assert(
-          regionalBlocs != const <RegionalBloc>[],
-          "`regionalBlocs` should not be empty!",
-        ),
-        _namesNative = namesNative,
-        _demonyms = demonyms,
-        _languages = languages,
-        _translations = translations;
+  }) : assert(
+         code.length == IsoStandardized.codeLength,
+         """`code` should be exactly ${IsoStandardized.codeLength} characters long!""",
+       ),
+       assert(
+         codeShort.length == IsoStandardized.codeShortLength,
+         """`codeShort` should be exactly ${IsoStandardized.codeShortLength} characters long!""",
+       ),
+       assert(
+         codeNumeric.length == IsoStandardized.codeLength,
+         """`codeNumeric` should be exactly ${IsoStandardized.codeLength} characters long!""",
+       ),
+       assert(emoji.length > 0, "`emoji` should not be empty!"),
+       assert(tld != const <String>[], "`tld` should not be empty!"),
+       assert(
+         altSpellings != const <String>[],
+         "`altSpellings` should not be empty!",
+       ),
+       assert(
+         timezones != const <String>[],
+         "`timezones` should not be empty!",
+       ),
+       assert(cioc == null || cioc.length > 0, "`cioc` should not be empty!"),
+       assert(fifa == null || fifa.length > 0, "`fifa` should not be empty!"),
+       assert(
+         bordersCodes != const <String>[],
+         "`bordersCodes` should not be empty!",
+       ),
+       assert(
+         regionalBlocs != const <RegionalBloc>[],
+         "`regionalBlocs` should not be empty!",
+       ),
+       _namesNative = namesNative,
+       _demonyms = demonyms,
+       _languages = languages,
+       _translations = translations;
 
   /// {@macro permissive_constructor}
   /// {@macro country_constructor}
@@ -145,10 +145,10 @@ class WorldCountry extends Country
     List<NaturalLanguage>? languages,
     List<CountryName> namesNative = const [],
     List<TranslatedName>? translations,
-  })  : _namesNative = namesNative,
-        _demonyms = demonyms,
-        _languages = languages,
-        _translations = translations;
+  }) : _namesNative = namesNative,
+       _demonyms = demonyms,
+       _languages = languages,
+       _translations = translations;
 
   /// Returns an [WorldCountry] object from the given [code]
   /// ISO 3166-1 Alpha-3 code.
@@ -209,8 +209,9 @@ class WorldCountry extends Country
     if (countries == null) return codeNumericMap.findByCodeOrThrow(codeNumeric);
     final trimmedCode = codeNumeric.toUpperCaseIsoCode();
 
-    return countries
-        .firstIsoWhere((country) => country.codeNumeric == trimmedCode);
+    return countries.firstIsoWhere(
+      (country) => country.codeNumeric == trimmedCode,
+    );
   }
 
   /// Returns an instance of the [WorldCountry] class from any valid
@@ -245,11 +246,11 @@ class WorldCountry extends Country
       countries == null
           ? map.findByCodeOrThrow(code)
           : code.toUpperCaseIsoCode().maybeMapIsoCode(
-                orElse: (regular) => WorldCountry.fromCode(regular, countries),
-                numeric: (numeric) =>
-                    WorldCountry.fromCodeNumeric(numeric, countries),
-                short: (short) => WorldCountry.fromCodeShort(short, countries),
-              );
+            orElse: (regular) => WorldCountry.fromCode(regular, countries),
+            numeric:
+                (numeric) => WorldCountry.fromCodeNumeric(numeric, countries),
+            short: (short) => WorldCountry.fromCodeShort(short, countries),
+          );
 
   /// The top level domain names for the country.
   final List<String> tld;
@@ -362,30 +363,31 @@ class WorldCountry extends Country
       TypedLocalizationDelegate(mapper: () => CountriesLocaleMapper().localize);
 
   @override
-  String toString({bool short = true}) => short
-      ? super.toString()
-      : 'WorldCountry(name: $name, tld: ${jsonEncode(tld)}, code: "$code", '
-          'codeNumeric: "$codeNumeric", codeShort: "$codeShort", '
-          '${cioc == null ? '' : 'cioc: "$cioc", '}independent: $independent, '
-          "unMember: $unMember, idd: $idd, "
-          "altSpellings: ${jsonEncode(altSpellings)}, "
-          "continent: ${continent.runtimeType}(), "
-          """${subregion == null ? '' : 'subregion: ${subregion.runtimeType}(), '}"""
-          "latLng: $latLng, landlocked: $landlocked, "
-          """${bordersCodes == null ? '' : 'bordersCodes: ${jsonEncode(bordersCodes)}, '}"""
-          'areaMetric: $areaMetric, emoji: "$emoji", maps: $maps, '
-          "population: $population,${gini == null ? ' ' : 'gini: $gini, '}"
-          '${fifa == null ? '' : 'fifa: "$fifa", '}car: $car, '
-          "timezones: ${jsonEncode(timezones)}, hasCoatOfArms: $hasCoatOfArms, "
-          "startOfWeek: $startOfWeek, "
-          "${postalCode == null ? '' : 'postalCode: $postalCode, '});"
-          """${currencies == null ? '' : '@override List<FiatCurrency> get currencies => const ${currencies?.toInstancesString()}; '} """
-          """${capitalInfo == null ? '' : '@override CapitalInfo get capitalInfo => const ${capitalInfo?.toString(short: false)}; '} """
-          """${regionalBlocs == null ? '' : '@override List<RegionalBloc> get regionalBlocs => const ${regionalBlocs?.toInstancesString()}; '} """
-          "@override List<Demonyms> get demonyms => const $demonyms; "
-          "@override List<CountryName> get namesNative => const $namesNative; "
-          "@override "
-          """List<NaturalLanguage> get languages => const ${languages.toInstancesString()}""";
+  String toString({bool short = true}) =>
+      short
+          ? super.toString()
+          : 'WorldCountry(name: $name, tld: ${jsonEncode(tld)}, code: "$code", '
+              'codeNumeric: "$codeNumeric", codeShort: "$codeShort", '
+              '''${cioc == null ? '' : 'cioc: "$cioc", '}independent: $independent, '''
+              "unMember: $unMember, idd: $idd, "
+              "altSpellings: ${jsonEncode(altSpellings)}, "
+              "continent: ${continent.runtimeType}(), "
+              """${subregion == null ? '' : 'subregion: ${subregion.runtimeType}(), '}"""
+              "latLng: $latLng, landlocked: $landlocked, "
+              """${bordersCodes == null ? '' : 'bordersCodes: ${jsonEncode(bordersCodes)}, '}"""
+              'areaMetric: $areaMetric, emoji: "$emoji", maps: $maps, '
+              "population: $population,${gini == null ? ' ' : 'gini: $gini, '}"
+              '${fifa == null ? '' : 'fifa: "$fifa", '}car: $car, '
+              """timezones: ${jsonEncode(timezones)}, hasCoatOfArms: $hasCoatOfArms, """
+              "startOfWeek: $startOfWeek, "
+              "${postalCode == null ? '' : 'postalCode: $postalCode, '});"
+              """${currencies == null ? '' : '@override List<FiatCurrency> get currencies => const ${currencies?.toInstancesString()}; '} """
+              """${capitalInfo == null ? '' : '@override CapitalInfo get capitalInfo => const ${capitalInfo?.toString(short: false)}; '} """
+              """${regionalBlocs == null ? '' : '@override List<RegionalBloc> get regionalBlocs => const ${regionalBlocs?.toInstancesString()}; '} """
+              "@override List<Demonyms> get demonyms => const $demonyms; "
+              """@override List<CountryName> get namesNative => const $namesNative; """
+              "@override "
+              """List<NaturalLanguage> get languages => const ${languages.toInstancesString()}""";
 
   @override
   String toJson({JsonCodec codec = const JsonCodec()}) => codec.encode(toMap());
@@ -431,9 +433,9 @@ class WorldCountry extends Country
     Iterable<WorldCountry>? countries,
   ]) {
     if (countries == null) return codeMap.maybeFindByCode(code);
-    final string = code
-        ?.toUpperCaseIsoCode()
-        .maybeToValidIsoCode(exactLength: IsoStandardized.codeLength);
+    final string = code?.toUpperCaseIsoCode().maybeToValidIsoCode(
+      exactLength: IsoStandardized.codeLength,
+    );
 
     return countries.firstIsoWhereCodeOrNull(string);
   }
@@ -455,9 +457,9 @@ class WorldCountry extends Country
     Iterable<WorldCountry>? countries,
   ]) {
     if (countries == null) return codeShortMap.maybeFindByCode(codeShort);
-    final string = codeShort
-        ?.toUpperCaseIsoCode()
-        .maybeToValidIsoCode(exactLength: IsoStandardized.codeShortLength);
+    final string = codeShort?.toUpperCaseIsoCode().maybeToValidIsoCode(
+      exactLength: IsoStandardized.codeShortLength,
+    );
 
     return countries.firstIsoWhereCodeOtherOrNull(string);
   }
@@ -480,11 +482,12 @@ class WorldCountry extends Country
   ]) {
     if (countries == null) return codeNumericMap.maybeFindByCode(codeNumeric);
     final trimmedCode = codeNumeric.toUpperCaseIsoCode().maybeToValidIsoCode(
-          exactLength: IsoStandardized.codeLength,
-        );
+      exactLength: IsoStandardized.codeLength,
+    );
 
-    return countries
-        .firstIsoWhereOrNull((country) => country.codeNumeric == trimmedCode);
+    return countries.firstIsoWhereOrNull(
+      (country) => country.codeNumeric == trimmedCode,
+    );
   }
 
   /// Returns a [WorldCountry] instance that corresponds to the given code, or
@@ -522,13 +525,12 @@ class WorldCountry extends Country
       countries == null
           ? map.maybeFindByCode(code)
           : code?.toUpperCaseIsoCode().maybeMapIsoCode(
-                orElse: (regular) =>
-                    WorldCountry.maybeFromCode(regular, countries),
-                numeric: (numeric) =>
+            orElse: (regular) => WorldCountry.maybeFromCode(regular, countries),
+            numeric:
+                (numeric) =>
                     WorldCountry.maybeFromCodeNumeric(numeric, countries),
-                short: (short) =>
-                    WorldCountry.maybeFromCodeShort(short, countries),
-              );
+            short: (short) => WorldCountry.maybeFromCodeShort(short, countries),
+          );
 
   /// The general standard ISO code for countries, defined as ISO 3166-1.
   static const standardGeneralName = "3166-1";
@@ -562,8 +564,9 @@ class WorldCountry extends Country
   /// ```dart
   /// WorldCountry.codeNumericMap[204]; // CountryBen().
   /// ```
-  static const codeNumericMap =
-      UpperCaseIsoMap<WorldCountry>(worldCountryCodeNumericMap);
+  static const codeNumericMap = UpperCaseIsoMap<WorldCountry>(
+    worldCountryCodeNumericMap,
+  );
 
   /// A tree-shakable constant map containing country (ISO 3166-1 Alpha-2) codes
   /// and their associated [WorldCountry] objects, for a O(1) access time.
@@ -598,7 +601,7 @@ class WorldCountry extends Country
 
   /// A list of all the countries currently supported
   /// by the [WorldCountry] class.
-// ignore: avoid-explicit-type-declaration, vs specify_nonobvious_property_types.
+  // ignore: avoid-explicit-type-declaration, vs specify_nonobvious_property_types.
   static const List<WorldCountry> list = worldCountryList;
 
   final List<Demonyms>? _demonyms;

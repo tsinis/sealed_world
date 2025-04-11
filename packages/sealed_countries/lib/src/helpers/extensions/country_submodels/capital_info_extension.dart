@@ -13,17 +13,19 @@ import "lat_lng_extension.dart";
 extension CapitalInfoExtension on CapitalInfo {
   /// {@macro copy_with_method}
   CapitalInfo copyWith({Capital? capital, LatLng? latLng}) => CapitalInfo(
-        capital: capital ?? this.capital,
-        latLng: latLng ?? this.latLng,
-      );
+    capital: capital ?? this.capital,
+    latLng: latLng ?? this.latLng,
+  );
 
   /// {@macro to_map_method}
-  JsonObjectMap toMap() =>
-      {"capital": capital.toMap(), "latLng": latLng.toMap()};
+  JsonObjectMap toMap() => {
+    "capital": capital.toMap(),
+    "latLng": latLng.toMap(),
+  };
 
   /// {@macro from_map_method}
   static CapitalInfo fromMap(JsonMap map) => CapitalInfo(
-        capital: CapitalExtension.fromMap(map["capital"] as JsonMap),
-        latLng: LatLngExtension.fromMap(map["latLng"] as JsonMap),
-      );
+    capital: CapitalExtension.fromMap(map["capital"] as JsonMap),
+    latLng: LatLngExtension.fromMap(map["latLng"] as JsonMap),
+  );
 }

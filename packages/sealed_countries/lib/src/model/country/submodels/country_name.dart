@@ -30,14 +30,15 @@ final class CountryName extends TranslatedName {
     required NaturalLanguage language,
     required String official,
     required String common,
-  })  : assert(official.length > 0, "`official` should not be empty!"),
-        assert(common.length > 0, "`common` should not be empty!"),
-        super(language, name: common, fullName: official);
+  }) : assert(official.length > 0, "`official` should not be empty!"),
+       assert(common.length > 0, "`common` should not be empty!"),
+       super(language, name: common, fullName: official);
 
   @override
-  String toString({bool short = true}) => short
-      ? '''CountryName(language: ${language.runtimeType}(), official: "$official", common: "$common")'''
-      : '''CountryName(language: $language, official: "$official", common: "$common")''';
+  String toString({bool short = true}) =>
+      short
+          ? '''CountryName(language: ${language.runtimeType}(), official: "$official", common: "$common")'''
+          : '''CountryName(language: $language, official: "$official", common: "$common")''';
 
   @override
   String toJson({JsonCodec codec = const JsonCodec()}) => codec.encode(toMap());

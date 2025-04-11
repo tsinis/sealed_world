@@ -29,21 +29,23 @@ extension DemonymsExtension on Demonyms {
     NaturalLanguage? language,
     String? female,
     String? male,
-  }) =>
-      Demonyms(
-        language: language ?? this.language,
-        female: female ?? this.female,
-        male: male ?? this.male,
-      );
+  }) => Demonyms(
+    language: language ?? this.language,
+    female: female ?? this.female,
+    male: male ?? this.male,
+  );
 
   /// {@macro to_map_method}
-  JsonObjectMap toMap() =>
-      {"female": female, "language": language.code, "male": male};
+  JsonObjectMap toMap() => {
+    "female": female,
+    "language": language.code,
+    "male": male,
+  };
 
   /// {@macro from_map_method}
   static Demonyms fromMap(JsonMap map) => Demonyms(
-        language: NaturalLanguage.fromCode(map["language"].toString()),
-        female: map["female"].toString(),
-        male: map["male"].toString(),
-      );
+    language: NaturalLanguage.fromCode(map["language"].toString()),
+    female: map["female"].toString(),
+    male: map["male"].toString(),
+  );
 }

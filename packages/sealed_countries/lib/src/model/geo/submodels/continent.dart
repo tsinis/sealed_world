@@ -40,8 +40,8 @@ class Continent extends SubRegion {
 
   /// Creates a new [Continent] object from its name.
   factory Continent.fromName(String name) => list.firstWhere(
-        (region) => region.name.toUpperCase() == name.toUpperCaseIsoCode(),
-      );
+    (region) => region.name.toUpperCase() == name.toUpperCaseIsoCode(),
+  );
 
   /// Creates a new [Continent] object from a value.
   ///

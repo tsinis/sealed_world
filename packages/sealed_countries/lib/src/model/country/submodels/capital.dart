@@ -26,16 +26,13 @@ final class Capital implements JsonEncodable<Capital> {
   ///
   /// The [name] parameter must not be empty.
   const Capital(String name, {this.deJure, this.third})
-      : deFacto = name,
-        assert(name.length > 0, "`name` of capital should not be empty!"),
-        assert(
-          deJure == null || deJure.length > 0,
-          "`deJure` should not be empty!",
-        ),
-        assert(
-          third == null || third.length > 0,
-          "`third` should not be empty!",
-        );
+    : deFacto = name,
+      assert(name.length > 0, "`name` of capital should not be empty!"),
+      assert(
+        deJure == null || deJure.length > 0,
+        "`deJure` should not be empty!",
+      ),
+      assert(third == null || third.length > 0, "`third` should not be empty!");
 
   /// The de facto name of this capital.
   final String deFacto;
@@ -47,10 +44,11 @@ final class Capital implements JsonEncodable<Capital> {
   final String? third;
 
   @override
-  String toString({bool short = true}) => short
-      ? "Capital($deFacto)"
-      : 'Capital("$deFacto"${deJure == null ? '' : ', deJure: "$deJure"'}'
-          '${third == null ? '' : ', third: "$third"'})';
+  String toString({bool short = true}) =>
+      short
+          ? "Capital($deFacto)"
+          : 'Capital("$deFacto"${deJure == null ? '' : ', deJure: "$deJure"'}'
+              '${third == null ? '' : ', third: "$third"'})';
 
   @override
   String toJson({JsonCodec codec = const JsonCodec()}) => codec.encode(toMap());

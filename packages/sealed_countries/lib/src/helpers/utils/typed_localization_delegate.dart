@@ -55,11 +55,10 @@ class TypedLocalizationDelegate
     Iterable<NaturalLanguage>? languages,
     LocaleMapFunction<String> Function()? mapper,
     Iterable<Script>? scripts,
-  }) =>
-      TypedLocalizationDelegate(
-        countries: countries ?? this.countries,
-        languages: languages ?? this.languages,
-        mapper: mapper ?? this.mapper,
-        scripts: scripts ?? this.scripts,
-      );
+  }) => TypedLocalizationDelegate(
+    countries: countries ?? this.countries,
+    languages: languages ?? this.languages,
+    mapper: mapper ?? this.mapper,
+    scripts: scripts ?? this.scripts,
+  );
 }

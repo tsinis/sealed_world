@@ -22,11 +22,11 @@ final class Maps implements JsonEncodable<Maps> {
   /// The [googleMaps] and [openStreetMaps] parameters must be non-empty
   /// strings.
   const Maps({required this.googleMaps, required this.openStreetMaps})
-      : assert(googleMaps.length > 0, "`googleMaps` should not be empty!"),
-        assert(
-          openStreetMaps.length > 0,
-          "`openStreetMaps` should not be empty!",
-        );
+    : assert(googleMaps.length > 0, "`googleMaps` should not be empty!"),
+      assert(
+        openStreetMaps.length > 0,
+        "`openStreetMaps` should not be empty!",
+      );
 
   /// The Google Maps ID for this [Maps] object.
   final String googleMaps;
