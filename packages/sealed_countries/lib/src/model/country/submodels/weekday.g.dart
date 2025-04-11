@@ -19,16 +19,15 @@ extension WeekdayFunctionalExtension on Weekday {
     required R Function(Weekday friday) friday,
     required R Function(Weekday saturday) saturday,
     required R Function(Weekday sunday) sunday,
-  }) =>
-      switch (this) {
-        Weekday.monday => monday(this),
-        Weekday.tuesday => tuesday(this),
-        Weekday.wednesday => wednesday(this),
-        Weekday.thursday => thursday(this),
-        Weekday.friday => friday(this),
-        Weekday.saturday => saturday(this),
-        Weekday.sunday => sunday(this),
-      };
+  }) => switch (this) {
+    Weekday.monday => monday(this),
+    Weekday.tuesday => tuesday(this),
+    Weekday.wednesday => wednesday(this),
+    Weekday.thursday => thursday(this),
+    Weekday.friday => friday(this),
+    Weekday.saturday => saturday(this),
+    Weekday.sunday => sunday(this),
+  };
 
   R maybeMap<R>({
     required R Function(Weekday weekday) orElse,
@@ -39,16 +38,15 @@ extension WeekdayFunctionalExtension on Weekday {
     R Function(Weekday friday)? friday,
     R Function(Weekday saturday)? saturday,
     R Function(Weekday sunday)? sunday,
-  }) =>
-      switch (this) {
-        Weekday.monday => monday?.call(this) ?? orElse(this),
-        Weekday.tuesday => tuesday?.call(this) ?? orElse(this),
-        Weekday.wednesday => wednesday?.call(this) ?? orElse(this),
-        Weekday.thursday => thursday?.call(this) ?? orElse(this),
-        Weekday.friday => friday?.call(this) ?? orElse(this),
-        Weekday.saturday => saturday?.call(this) ?? orElse(this),
-        Weekday.sunday => sunday?.call(this) ?? orElse(this),
-      };
+  }) => switch (this) {
+    Weekday.monday => monday?.call(this) ?? orElse(this),
+    Weekday.tuesday => tuesday?.call(this) ?? orElse(this),
+    Weekday.wednesday => wednesday?.call(this) ?? orElse(this),
+    Weekday.thursday => thursday?.call(this) ?? orElse(this),
+    Weekday.friday => friday?.call(this) ?? orElse(this),
+    Weekday.saturday => saturday?.call(this) ?? orElse(this),
+    Weekday.sunday => sunday?.call(this) ?? orElse(this),
+  };
 
   R maybeWhen<R>({
     required R Function() orElse,
@@ -59,16 +57,15 @@ extension WeekdayFunctionalExtension on Weekday {
     R Function()? friday,
     R Function()? saturday,
     R Function()? sunday,
-  }) =>
-      switch (this) {
-        Weekday.monday => monday?.call() ?? orElse(),
-        Weekday.tuesday => tuesday?.call() ?? orElse(),
-        Weekday.wednesday => wednesday?.call() ?? orElse(),
-        Weekday.thursday => thursday?.call() ?? orElse(),
-        Weekday.friday => friday?.call() ?? orElse(),
-        Weekday.saturday => saturday?.call() ?? orElse(),
-        Weekday.sunday => sunday?.call() ?? orElse(),
-      };
+  }) => switch (this) {
+    Weekday.monday => monday?.call() ?? orElse(),
+    Weekday.tuesday => tuesday?.call() ?? orElse(),
+    Weekday.wednesday => wednesday?.call() ?? orElse(),
+    Weekday.thursday => thursday?.call() ?? orElse(),
+    Weekday.friday => friday?.call() ?? orElse(),
+    Weekday.saturday => saturday?.call() ?? orElse(),
+    Weekday.sunday => sunday?.call() ?? orElse(),
+  };
 
   R when<R>({
     required R Function() monday,
@@ -78,16 +75,15 @@ extension WeekdayFunctionalExtension on Weekday {
     required R Function() friday,
     required R Function() saturday,
     required R Function() sunday,
-  }) =>
-      switch (this) {
-        Weekday.monday => monday(),
-        Weekday.tuesday => tuesday(),
-        Weekday.wednesday => wednesday(),
-        Weekday.thursday => thursday(),
-        Weekday.friday => friday(),
-        Weekday.saturday => saturday(),
-        Weekday.sunday => sunday(),
-      };
+  }) => switch (this) {
+    Weekday.monday => monday(),
+    Weekday.tuesday => tuesday(),
+    Weekday.wednesday => wednesday(),
+    Weekday.thursday => thursday(),
+    Weekday.friday => friday(),
+    Weekday.saturday => saturday(),
+    Weekday.sunday => sunday(),
+  };
 
   R? whenOrNull<R>({
     R Function()? monday,
@@ -98,14 +94,13 @@ extension WeekdayFunctionalExtension on Weekday {
     R Function()? saturday,
     R Function()? sunday,
     R Function()? orElse,
-  }) =>
-      switch (this) {
-        Weekday.monday => monday?.call() ?? orElse?.call(),
-        Weekday.tuesday => tuesday?.call() ?? orElse?.call(),
-        Weekday.wednesday => wednesday?.call() ?? orElse?.call(),
-        Weekday.thursday => thursday?.call() ?? orElse?.call(),
-        Weekday.friday => friday?.call() ?? orElse?.call(),
-        Weekday.saturday => saturday?.call() ?? orElse?.call(),
-        Weekday.sunday => sunday?.call() ?? orElse?.call(),
-      };
+  }) => switch (this) {
+    Weekday.monday => monday?.call() ?? orElse?.call(),
+    Weekday.tuesday => tuesday?.call() ?? orElse?.call(),
+    Weekday.wednesday => wednesday?.call() ?? orElse?.call(),
+    Weekday.thursday => thursday?.call() ?? orElse?.call(),
+    Weekday.friday => friday?.call() ?? orElse?.call(),
+    Weekday.saturday => saturday?.call() ?? orElse?.call(),
+    Weekday.sunday => sunday?.call() ?? orElse?.call(),
+  };
 }

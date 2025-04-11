@@ -22,7 +22,7 @@ final class Car implements JsonEncodable<Car> {
   ///
   /// The [sign] parameter may be `null` or a non-empty string.
   const Car({this.sign, this.isRightSide = true})
-      : assert(sign == null || sign.length > 0, "`sign` should not be empty!");
+    : assert(sign == null || sign.length > 0, "`sign` should not be empty!");
 
   /// Indicates whether the car is right-side or left-side drive.
   final bool isRightSide;

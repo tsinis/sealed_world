@@ -49,8 +49,8 @@ class RegionalBloc extends WorldBloc {
 
   /// Creates a new [RegionalBloc] object from its name.
   factory RegionalBloc.fromName(String name) => list.firstWhere(
-        (bloc) => bloc.name.toUpperCase() == name.toUpperCaseIsoCode(),
-      );
+    (bloc) => bloc.name.toUpperCase() == name.toUpperCaseIsoCode(),
+  );
 
   /// Other acronyms of the regional bloc.
   final List<String>? otherAcronyms;
@@ -63,11 +63,12 @@ class RegionalBloc extends WorldBloc {
   String get acronym => super.acronym!;
 
   @override
-  String toString({bool short = true}) => short
-      ? super.toString()
-      : 'RegionalBloc(acronym: "$acronym", name: "$name", '
-          "otherAcronyms: ${jsonEncode(otherAcronyms)}, "
-          "otherNames: ${jsonEncode(otherNames)})";
+  String toString({bool short = true}) =>
+      short
+          ? super.toString()
+          : 'RegionalBloc(acronym: "$acronym", name: "$name", '
+              "otherAcronyms: ${jsonEncode(otherAcronyms)}, "
+              "otherNames: ${jsonEncode(otherNames)})";
 
   /// Creates a new [RegionalBloc] object from its acronym.
   ///

@@ -30,8 +30,8 @@ final class Demonyms implements JsonEncodable<Demonyms> {
     required this.language,
     required this.female,
     required this.male,
-  })  : assert(female.length > 0, "`female` value should not be empty!"),
-        assert(male.length > 0, "`male` value should not be empty!");
+  }) : assert(female.length > 0, "`female` value should not be empty!"),
+       assert(male.length > 0, "`male` value should not be empty!");
 
   /// The natural language of this demonym.
   final NaturalLanguage language;
@@ -43,9 +43,10 @@ final class Demonyms implements JsonEncodable<Demonyms> {
   final String male;
 
   @override
-  String toString({bool short = true}) => short
-      ? '''Demonyms(language: ${language.runtimeType}(), female: "$female", male: "$male")'''
-      : 'Demonyms(language: $language, female: "$female", male: "$male")';
+  String toString({bool short = true}) =>
+      short
+          ? '''Demonyms(language: ${language.runtimeType}(), female: "$female", male: "$male")'''
+          : 'Demonyms(language: $language, female: "$female", male: "$male")';
 
   @override
   String toJson({JsonCodec codec = const JsonCodec()}) => codec.encode(toMap());

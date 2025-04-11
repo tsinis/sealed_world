@@ -13,11 +13,11 @@ class BasicTypedLocale extends BasicLocale {
     this.country,
     super.script,
     String? regionalCode,
-  })  : assert(
-          regionalCode == null || country == null,
-          "Cannot provide both `regionalCode` and `country` at the same time",
-        ),
-        super(countryCode: regionalCode);
+  }) : assert(
+         regionalCode == null || country == null,
+         "Cannot provide both `regionalCode` and `country` at the same time",
+       ),
+       super(countryCode: regionalCode);
 
   /// The optional country information of type [WorldCountry]. Has higher
   /// priority than primitive-typed `regionalCode` aka [countryCode].
@@ -27,10 +27,11 @@ class BasicTypedLocale extends BasicLocale {
   String? get countryCode => country?.codeShort ?? super.countryCode;
 
   @override
-  String toString({bool short = true}) => short
-      ? toUnicodeLocaleId()
-      : "BasicTypedLocale(${language.runtimeType}()"
-          "${country == null ? '' : ', country: ${country.runtimeType}()'}"
-          '''${countryCode == null || country != null ? '' : ', countryCode: "$countryCode"'}'''
-          "${script == null ? '' : ', script: ${script.runtimeType}()'})";
+  String toString({bool short = true}) =>
+      short
+          ? toUnicodeLocaleId()
+          : "BasicTypedLocale(${language.runtimeType}()"
+              "${country == null ? '' : ', country: ${country.runtimeType}()'}"
+              '''${countryCode == null || country != null ? '' : ', countryCode: "$countryCode"'}'''
+              "${script == null ? '' : ', script: ${script.runtimeType}()'})";
 }

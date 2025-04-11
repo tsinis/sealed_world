@@ -7,19 +7,21 @@ import "../../../model/country/submodels/maps.dart";
 extension MapsExtension on Maps {
   /// {@macro copy_with_method}
   Maps copyWith({String? googleMaps, String? openStreetMaps}) => Maps(
-        googleMaps: googleMaps ?? this.googleMaps,
-        openStreetMaps: openStreetMaps ?? this.openStreetMaps,
-      );
+    googleMaps: googleMaps ?? this.googleMaps,
+    openStreetMaps: openStreetMaps ?? this.openStreetMaps,
+  );
 
   /// {@macro to_map_method}
-  Map<String, String> toMap() =>
-      {"googleMaps": googleMaps, "openStreetMaps": openStreetMaps};
+  Map<String, String> toMap() => {
+    "googleMaps": googleMaps,
+    "openStreetMaps": openStreetMaps,
+  };
 
   /// {@macro from_map_method}
   static Maps fromMap(JsonMap map) => Maps(
-        googleMaps: map["googleMaps"].toString(),
-        openStreetMaps: map["openStreetMaps"].toString(),
-      );
+    googleMaps: map["googleMaps"].toString(),
+    openStreetMaps: map["openStreetMaps"].toString(),
+  );
 
   /// Returns the full Google Maps URL for this [Maps] object.
   ///

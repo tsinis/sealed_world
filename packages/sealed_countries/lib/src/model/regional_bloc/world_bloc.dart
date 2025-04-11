@@ -16,11 +16,11 @@ sealed class WorldBloc implements Named<String> {
   /// The [name] and [acronym] parameters are required and must not be empty
   /// (if provided).
   const WorldBloc({required this.name, this.acronym})
-      : assert(name.length > 0, "`name` should not be empty!"),
-        assert(
-          acronym == null || acronym.length > 0,
-          "`acronym` should not be empty!",
-        );
+    : assert(name.length > 0, "`name` should not be empty!"),
+      assert(
+        acronym == null || acronym.length > 0,
+        "`acronym` should not be empty!",
+      );
 
   /// The acronym of the bloc.
   final String? acronym;
@@ -30,7 +30,8 @@ sealed class WorldBloc implements Named<String> {
   final String name;
 
   @override
-  String toString({bool short = true}) => short
-      ? 'WorldBloc(name: "$name")'
-      : '''WorldBloc(name: "$name"${acronym == null ? '' : ', acronym: "$acronym"'})''';
+  String toString({bool short = true}) =>
+      short
+          ? 'WorldBloc(name: "$name")'
+          : '''WorldBloc(name: "$name"${acronym == null ? '' : ', acronym: "$acronym"'})''';
 }

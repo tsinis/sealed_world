@@ -17,23 +17,22 @@ extension RegionalBlocFunctional on RegionalBloc {
     required R Function(RegionalBloc blocPA) blocPA,
     required R Function(RegionalBloc blocSAARC) blocSAARC,
     required R Function(RegionalBloc blocUSAN) blocUSAN,
-  }) =>
-      switch (this) {
-        BlocAL() => blocAL(this),
-        BlocASEAN() => blocASEAN(this),
-        BlocAU() => blocAU(this),
-        BlocCAIS() => blocCAIS(this),
-        BlocCARICOM() => blocCARICOM(this),
-        BlocCEFTA() => blocCEFTA(this),
-        BlocEEU() => blocEEU(this),
-        BlocEFTA() => blocEFTA(this),
-        BlocEU() => blocEU(this),
-        BlocNAFTA() => blocNAFTA(this),
-        BlocPA() => blocPA(this),
-        BlocSAARC() => blocSAARC(this),
-        BlocUSAN() => blocUSAN(this),
-        _ => throw ArgumentError("Unknown value: $this", name),
-      };
+  }) => switch (this) {
+    BlocAL() => blocAL(this),
+    BlocASEAN() => blocASEAN(this),
+    BlocAU() => blocAU(this),
+    BlocCAIS() => blocCAIS(this),
+    BlocCARICOM() => blocCARICOM(this),
+    BlocCEFTA() => blocCEFTA(this),
+    BlocEEU() => blocEEU(this),
+    BlocEFTA() => blocEFTA(this),
+    BlocEU() => blocEU(this),
+    BlocNAFTA() => blocNAFTA(this),
+    BlocPA() => blocPA(this),
+    BlocSAARC() => blocSAARC(this),
+    BlocUSAN() => blocUSAN(this),
+    _ => throw ArgumentError("Unknown value: $this", name),
+  };
 
   R maybeMap<R>({
     required R Function(RegionalBloc regionalBloc) orElse,
@@ -50,23 +49,22 @@ extension RegionalBlocFunctional on RegionalBloc {
     R Function(RegionalBloc blocPA)? blocPA,
     R Function(RegionalBloc blocSAARC)? blocSAARC,
     R Function(RegionalBloc blocUSAN)? blocUSAN,
-  }) =>
-      switch (this) {
-        BlocAL() => blocAL?.call(this) ?? orElse(this),
-        BlocASEAN() => blocASEAN?.call(this) ?? orElse(this),
-        BlocAU() => blocAU?.call(this) ?? orElse(this),
-        BlocCAIS() => blocCAIS?.call(this) ?? orElse(this),
-        BlocCARICOM() => blocCARICOM?.call(this) ?? orElse(this),
-        BlocCEFTA() => blocCEFTA?.call(this) ?? orElse(this),
-        BlocEEU() => blocEEU?.call(this) ?? orElse(this),
-        BlocEFTA() => blocEFTA?.call(this) ?? orElse(this),
-        BlocEU() => blocEU?.call(this) ?? orElse(this),
-        BlocNAFTA() => blocNAFTA?.call(this) ?? orElse(this),
-        BlocPA() => blocPA?.call(this) ?? orElse(this),
-        BlocSAARC() => blocSAARC?.call(this) ?? orElse(this),
-        BlocUSAN() => blocUSAN?.call(this) ?? orElse(this),
-        _ => orElse(this),
-      };
+  }) => switch (this) {
+    BlocAL() => blocAL?.call(this) ?? orElse(this),
+    BlocASEAN() => blocASEAN?.call(this) ?? orElse(this),
+    BlocAU() => blocAU?.call(this) ?? orElse(this),
+    BlocCAIS() => blocCAIS?.call(this) ?? orElse(this),
+    BlocCARICOM() => blocCARICOM?.call(this) ?? orElse(this),
+    BlocCEFTA() => blocCEFTA?.call(this) ?? orElse(this),
+    BlocEEU() => blocEEU?.call(this) ?? orElse(this),
+    BlocEFTA() => blocEFTA?.call(this) ?? orElse(this),
+    BlocEU() => blocEU?.call(this) ?? orElse(this),
+    BlocNAFTA() => blocNAFTA?.call(this) ?? orElse(this),
+    BlocPA() => blocPA?.call(this) ?? orElse(this),
+    BlocSAARC() => blocSAARC?.call(this) ?? orElse(this),
+    BlocUSAN() => blocUSAN?.call(this) ?? orElse(this),
+    _ => orElse(this),
+  };
 
   R maybeWhen<R>({
     required R Function() orElse,
@@ -83,23 +81,22 @@ extension RegionalBlocFunctional on RegionalBloc {
     R Function()? blocPA,
     R Function()? blocSAARC,
     R Function()? blocUSAN,
-  }) =>
-      switch (this) {
-        BlocAL() => blocAL?.call() ?? orElse(),
-        BlocASEAN() => blocASEAN?.call() ?? orElse(),
-        BlocAU() => blocAU?.call() ?? orElse(),
-        BlocCAIS() => blocCAIS?.call() ?? orElse(),
-        BlocCARICOM() => blocCARICOM?.call() ?? orElse(),
-        BlocCEFTA() => blocCEFTA?.call() ?? orElse(),
-        BlocEEU() => blocEEU?.call() ?? orElse(),
-        BlocEFTA() => blocEFTA?.call() ?? orElse(),
-        BlocEU() => blocEU?.call() ?? orElse(),
-        BlocNAFTA() => blocNAFTA?.call() ?? orElse(),
-        BlocPA() => blocPA?.call() ?? orElse(),
-        BlocSAARC() => blocSAARC?.call() ?? orElse(),
-        BlocUSAN() => blocUSAN?.call() ?? orElse(),
-        _ => orElse(),
-      };
+  }) => switch (this) {
+    BlocAL() => blocAL?.call() ?? orElse(),
+    BlocASEAN() => blocASEAN?.call() ?? orElse(),
+    BlocAU() => blocAU?.call() ?? orElse(),
+    BlocCAIS() => blocCAIS?.call() ?? orElse(),
+    BlocCARICOM() => blocCARICOM?.call() ?? orElse(),
+    BlocCEFTA() => blocCEFTA?.call() ?? orElse(),
+    BlocEEU() => blocEEU?.call() ?? orElse(),
+    BlocEFTA() => blocEFTA?.call() ?? orElse(),
+    BlocEU() => blocEU?.call() ?? orElse(),
+    BlocNAFTA() => blocNAFTA?.call() ?? orElse(),
+    BlocPA() => blocPA?.call() ?? orElse(),
+    BlocSAARC() => blocSAARC?.call() ?? orElse(),
+    BlocUSAN() => blocUSAN?.call() ?? orElse(),
+    _ => orElse(),
+  };
 
   R when<R>({
     required R Function() blocAL,
@@ -115,23 +112,22 @@ extension RegionalBlocFunctional on RegionalBloc {
     required R Function() blocPA,
     required R Function() blocSAARC,
     required R Function() blocUSAN,
-  }) =>
-      switch (this) {
-        BlocAL() => blocAL(),
-        BlocASEAN() => blocASEAN(),
-        BlocAU() => blocAU(),
-        BlocCAIS() => blocCAIS(),
-        BlocCARICOM() => blocCARICOM(),
-        BlocCEFTA() => blocCEFTA(),
-        BlocEEU() => blocEEU(),
-        BlocEFTA() => blocEFTA(),
-        BlocEU() => blocEU(),
-        BlocNAFTA() => blocNAFTA(),
-        BlocPA() => blocPA(),
-        BlocSAARC() => blocSAARC(),
-        BlocUSAN() => blocUSAN(),
-        _ => throw ArgumentError("Unknown value: $this", name),
-      };
+  }) => switch (this) {
+    BlocAL() => blocAL(),
+    BlocASEAN() => blocASEAN(),
+    BlocAU() => blocAU(),
+    BlocCAIS() => blocCAIS(),
+    BlocCARICOM() => blocCARICOM(),
+    BlocCEFTA() => blocCEFTA(),
+    BlocEEU() => blocEEU(),
+    BlocEFTA() => blocEFTA(),
+    BlocEU() => blocEU(),
+    BlocNAFTA() => blocNAFTA(),
+    BlocPA() => blocPA(),
+    BlocSAARC() => blocSAARC(),
+    BlocUSAN() => blocUSAN(),
+    _ => throw ArgumentError("Unknown value: $this", name),
+  };
 
   R? maybeWhenOrNull<R>({
     R Function()? blocAL,
@@ -148,21 +144,20 @@ extension RegionalBlocFunctional on RegionalBloc {
     R Function()? blocSAARC,
     R Function()? blocUSAN,
     R Function()? orElse,
-  }) =>
-      switch (this) {
-        BlocAL() => blocAL?.call() ?? orElse?.call(),
-        BlocASEAN() => blocASEAN?.call() ?? orElse?.call(),
-        BlocAU() => blocAU?.call() ?? orElse?.call(),
-        BlocCAIS() => blocCAIS?.call() ?? orElse?.call(),
-        BlocCARICOM() => blocCARICOM?.call() ?? orElse?.call(),
-        BlocCEFTA() => blocCEFTA?.call() ?? orElse?.call(),
-        BlocEEU() => blocEEU?.call() ?? orElse?.call(),
-        BlocEFTA() => blocEFTA?.call() ?? orElse?.call(),
-        BlocEU() => blocEU?.call() ?? orElse?.call(),
-        BlocNAFTA() => blocNAFTA?.call() ?? orElse?.call(),
-        BlocPA() => blocPA?.call() ?? orElse?.call(),
-        BlocSAARC() => blocSAARC?.call() ?? orElse?.call(),
-        BlocUSAN() => blocUSAN?.call() ?? orElse?.call(),
-        _ => orElse?.call(),
-      };
+  }) => switch (this) {
+    BlocAL() => blocAL?.call() ?? orElse?.call(),
+    BlocASEAN() => blocASEAN?.call() ?? orElse?.call(),
+    BlocAU() => blocAU?.call() ?? orElse?.call(),
+    BlocCAIS() => blocCAIS?.call() ?? orElse?.call(),
+    BlocCARICOM() => blocCARICOM?.call() ?? orElse?.call(),
+    BlocCEFTA() => blocCEFTA?.call() ?? orElse?.call(),
+    BlocEEU() => blocEEU?.call() ?? orElse?.call(),
+    BlocEFTA() => blocEFTA?.call() ?? orElse?.call(),
+    BlocEU() => blocEU?.call() ?? orElse?.call(),
+    BlocNAFTA() => blocNAFTA?.call() ?? orElse?.call(),
+    BlocPA() => blocPA?.call() ?? orElse?.call(),
+    BlocSAARC() => blocSAARC?.call() ?? orElse?.call(),
+    BlocUSAN() => blocUSAN?.call() ?? orElse?.call(),
+    _ => orElse?.call(),
+  };
 }

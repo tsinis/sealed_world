@@ -17,19 +17,22 @@ extension CapitalExtension on Capital {
 
   /// {@macro copy_with_method}
   Capital copyWith({String? deFacto, String? deJure, String? third}) => Capital(
-        deFacto ?? this.deFacto,
-        deJure: deJure ?? this.deJure,
-        third: third ?? this.third,
-      );
+    deFacto ?? this.deFacto,
+    deJure: deJure ?? this.deJure,
+    third: third ?? this.third,
+  );
 
   /// {@macro to_map_method}
-  Map<String, String?> toMap() =>
-      {"deFacto": deFacto, "deJure": deJure, "third": third};
+  Map<String, String?> toMap() => {
+    "deFacto": deFacto,
+    "deJure": deJure,
+    "third": third,
+  };
 
   /// {@macro from_map_method}
   static Capital fromMap(JsonMap map) => Capital(
-        map["deFacto"].toString(),
-        deJure: map["deJure"]?.toString(),
-        third: map["third"]?.toString(),
-      );
+    map["deFacto"].toString(),
+    deJure: map["deJure"]?.toString(),
+    third: map["third"]?.toString(),
+  );
 }

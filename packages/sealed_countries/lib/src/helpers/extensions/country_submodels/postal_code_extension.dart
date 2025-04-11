@@ -28,28 +28,29 @@ extension PostalCodeExtension on PostalCode {
     bool dotAll = false,
     bool multiLine = false,
     bool unicode = false,
-  }) =>
-      RegExp(
-        regExpPattern,
-        multiLine: multiLine,
-        caseSensitive: caseSensitive,
-        unicode: unicode,
-        dotAll: dotAll,
-      );
+  }) => RegExp(
+    regExpPattern,
+    multiLine: multiLine,
+    caseSensitive: caseSensitive,
+    unicode: unicode,
+    dotAll: dotAll,
+  );
 
   /// {@macro copy_with_method}
   PostalCode copyWith({String? format, String? regExpPattern}) => PostalCode(
-        format: format ?? this.format,
-        regExpPattern: regExpPattern ?? this.regExpPattern,
-      );
+    format: format ?? this.format,
+    regExpPattern: regExpPattern ?? this.regExpPattern,
+  );
 
   /// {@macro to_map_method}
-  Map<String, String> toMap() =>
-      {"format": format, "regExpPattern": regExpPattern};
+  Map<String, String> toMap() => {
+    "format": format,
+    "regExpPattern": regExpPattern,
+  };
 
   /// {@macro from_map_method}
   static PostalCode fromMap(JsonMap map) => PostalCode(
-        format: map["format"].toString(),
-        regExpPattern: map["regExpPattern"].toString(),
-      );
+    format: map["format"].toString(),
+    regExpPattern: map["regExpPattern"].toString(),
+  );
 }

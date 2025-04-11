@@ -28,12 +28,11 @@ extension WorldCountryNames on WorldCountry {
   String namesOfficialNative({
     String separator = "/",
     bool skipFirst = false,
-  }) =>
-      _namesNativeBuilder(
-        (countryName) => countryName.official,
-        separator: separator,
-        skipFirst: skipFirst,
-      );
+  }) => _namesNativeBuilder(
+    (countryName) => countryName.official,
+    separator: separator,
+    skipFirst: skipFirst,
+  );
 
   String _namesNativeBuilder(
     String Function(CountryName countryName) toName, {

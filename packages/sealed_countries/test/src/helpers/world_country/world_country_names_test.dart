@@ -3,69 +3,71 @@ import "package:sealed_countries/src/model/country/country.dart";
 import "package:test/test.dart";
 
 void main() => group("WorldCountryNames", () {
-      group("namesCommonNative", () {
-        final country =
-            WorldCountry.list.firstWhere((cnt) => cnt.namesNative.length > 1);
+  group("namesCommonNative", () {
+    final country = WorldCountry.list.firstWhere(
+      (cnt) => cnt.namesNative.length > 1,
+    );
 
-        test(
-          "separator",
-          () => expect(
-            country.namesCommonNative(separator: "-"),
-            """${country.namesNative.first.name}-${country.namesNative.last.name}""",
-          ),
+    test(
+      "separator",
+      () => expect(
+        country.namesCommonNative(separator: "-"),
+        """${country.namesNative.first.name}-${country.namesNative.last.name}""",
+      ),
+    );
+
+    group("skipFirst", () {
+      test(
+        "with multiple names",
+        () => expect(
+          country.namesCommonNative(skipFirst: true),
+          country.namesNative.last.name,
+        ),
+      );
+
+      test("with single name", () {
+        final singleNameCountry = WorldCountry.list.firstWhere(
+          (cnt) => cnt.namesNative.length == 1,
         );
-
-        group("skipFirst", () {
-          test(
-            "with multiple names",
-            () => expect(
-              country.namesCommonNative(skipFirst: true),
-              country.namesNative.last.name,
-            ),
-          );
-
-          test("with single name", () {
-            final singleNameCountry = WorldCountry.list.firstWhere(
-              (cnt) => cnt.namesNative.length == 1,
-            );
-            expect(
-              singleNameCountry.namesCommonNative(skipFirst: true),
-              singleNameCountry.namesNative.first.name,
-            );
-          });
-        });
-      });
-
-      group("namesOfficialNative", () {
-        final country =
-            WorldCountry.list.firstWhere((cnt) => cnt.namesNative.length > 1);
-
-        test(
-          "separator",
-          () => expect(
-            country.namesOfficialNative(separator: "-"),
-            """${country.namesNative.first.fullName}-${country.namesNative.last.fullName}""",
-          ),
+        expect(
+          singleNameCountry.namesCommonNative(skipFirst: true),
+          singleNameCountry.namesNative.first.name,
         );
-
-        group("skipFirst", () {
-          test(
-            "with multiple names",
-            () => expect(
-              country.namesOfficialNative(skipFirst: true),
-              country.namesNative.last.fullName,
-            ),
-          );
-
-          test("with single name", () {
-            final singleNameCountry = WorldCountry.list.firstWhere(
-              (cnt) => cnt.namesNative.length == 1,
-            );
-            expect(
-              singleNameCountry.namesOfficialNative(skipFirst: true),
-              singleNameCountry.namesNative.first.fullName,
-            );
-          });
-        });
       });
     });
+  });
+
+  group("namesOfficialNative", () {
+    final country = WorldCountry.list.firstWhere(
+      (cnt) => cnt.namesNative.length > 1,
+    );
+
+    test(
+      "separator",
+      () => expect(
+        country.namesOfficialNative(separator: "-"),
+        """${country.namesNative.first.fullName}-${country.namesNative.last.fullName}""",
+      ),
+    );
+
+    group("skipFirst", () {
+      test(
+        "with multiple names",
+        () => expect(
+          country.namesOfficialNative(skipFirst: true),
+          country.namesNative.last.fullName,
+        ),
+      );
+
+      test("with single name", () {
+        final singleNameCountry = WorldCountry.list.firstWhere(
+          (cnt) => cnt.namesNative.length == 1,
+        );
+        expect(
+          singleNameCountry.namesOfficialNative(skipFirst: true),
+          singleNameCountry.namesNative.first.fullName,
+        );
+      });
+    });
+  });
+});

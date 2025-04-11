@@ -48,7 +48,7 @@ extension IddExtension on Idd {
 
   /// {@macro from_map_method}
   static Idd fromMap(JsonMap map) => Idd(
-        root: map["root"] as int,
-        suffixes: List<int>.unmodifiable(map["suffixes"] as List),
-      );
+    root: map["root"] as int,
+    suffixes: List<int>.unmodifiable(map["suffixes"] as List),
+  );
 }

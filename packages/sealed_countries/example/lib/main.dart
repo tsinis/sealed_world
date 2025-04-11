@@ -52,24 +52,29 @@ void main() {
 /// Creates a instance of the custom country with permissive constructor.
 class _CountryCustom extends WorldCountry {
   const _CountryCustom()
-      : super.permissive(
-          name: const CountryName(
-            language: LangEng(),
-            official: "Unknown",
-            common: "Unknown",
-          ),
-          code: "UNK",
-        );
+    : super.permissive(
+        name: const CountryName(
+          language: LangEng(),
+          official: "Unknown",
+          common: "Unknown",
+        ),
+        code: "UNK",
+      );
 
   @override
   TypedLocalizationDelegate get l10n => super.l10n.copyWith(
-        mapper: () => CountriesLocaleMapper(
-          other: {
-            /// From the `l10n_countries` package.
-            "en": IsoLocaleMapper(
-              other: {code: "Unknown country", "$code+": "Unknown rich name"},
-            ),
-          },
-        ).localize,
-      );
+    mapper:
+        () =>
+            CountriesLocaleMapper(
+              other: {
+                /// From the `l10n_countries` package.
+                "en": IsoLocaleMapper(
+                  other: {
+                    code: "Unknown country",
+                    "$code+": "Unknown rich name",
+                  },
+                ),
+              },
+            ).localize,
+  );
 }

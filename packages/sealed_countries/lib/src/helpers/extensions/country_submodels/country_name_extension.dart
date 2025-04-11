@@ -14,27 +14,26 @@ extension CountryNameExtension on CountryName {
 
   /// {@macro to_map_method}
   static CountryName fromMap(JsonMap map) => CountryName(
-        language: NaturalLanguage.fromCode(map["language"].toString()),
-        official: map["official"].toString(),
-        common: map["common"].toString(),
-      );
+    language: NaturalLanguage.fromCode(map["language"].toString()),
+    official: map["official"].toString(),
+    common: map["common"].toString(),
+  );
 
   /// {@macro copy_with_method}
   CountryName copyWith({
     NaturalLanguage? language,
     String? official,
     String? common,
-  }) =>
-      CountryName(
-        language: language ?? this.language,
-        official: official ?? this.official,
-        common: common ?? name,
-      );
+  }) => CountryName(
+    language: language ?? this.language,
+    official: official ?? this.official,
+    common: common ?? name,
+  );
 
   /// {@macro to_map_method}
   JsonObjectMap toMap() => {
-        "common": name,
-        "language": language.code,
-        "official": fullName,
-      };
+    "common": name,
+    "language": language.code,
+    "official": fullName,
+  };
 }
