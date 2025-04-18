@@ -163,6 +163,7 @@ void main() => group("TranslatedExtension", () {
             value.translation(
               const BasicLocale(abkhazia, countryCode: nonExistCode),
             ),
+            // ignore: avoid-misused-test-matchers, it could be an exception.
             isNotNull,
           );
         }

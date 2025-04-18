@@ -49,6 +49,7 @@ void main() => group("$CountryName", () {
     test("with ${array.runtimeType}", () {
       expect(array.length, 2);
       array.addAll(List.of(array));
+      // ignore: avoid-duplicate-test-assertions, this is mutable array.
       expect(array.length, 2);
       array.add(
         CountryName(
@@ -57,6 +58,7 @@ void main() => group("$CountryName", () {
           common: value.common,
         ),
       );
+      // ignore: avoid-duplicate-test-assertions, this is mutable array.
       expect(array.length, 2);
     });
   });

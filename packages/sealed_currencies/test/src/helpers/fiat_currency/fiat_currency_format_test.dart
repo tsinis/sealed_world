@@ -1,3 +1,5 @@
+// ignore_for_file: prefer-digit-separators, TODO: Until Dart 3.7.0
+
 import "package:sealed_currencies/src/helpers/fiat_currency/fiat_currency_format.dart";
 import "package:sealed_currencies/src/helpers/fiat_currency/fiat_currency_getters.dart";
 import "package:sealed_currencies/src/model/currency/currency.dart";

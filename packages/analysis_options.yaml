@@ -551,7 +551,6 @@ linter:
     package_names: true
     package_prefixed_library_names: true
     parameter_assignments: true
-    prefer-assigning-await-expressions: true
     prefer_adjacent_string_concatenation: true
     prefer_asserts_in_initializer_lists: true
     prefer_asserts_with_message: true
@@ -592,7 +591,6 @@ linter:
     prefer_void_to_null: true
     provide_deprecation_message: true
     public_member_api_docs: true
-    record-fields-ordering: true
     recursive_getters: true
     require_trailing_commas: true
     secure_pubspec_urls: true
