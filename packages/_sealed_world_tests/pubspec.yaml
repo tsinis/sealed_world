@@ -16,5 +16,5 @@ dependencies:
   test: ^1.25.8 # Specific version for the flags package. From Google
 
 dev_dependencies:
-  dart_code_metrics_presets: ^2.21.0
-  lints: ^5.1.1 # From Google
+  dart_code_metrics_presets: any # Constrained in the CLI tools package.
+  lints: any # From Google. Constrained in the CLI tools package.
