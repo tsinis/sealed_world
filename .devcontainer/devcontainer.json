@@ -27,6 +27,10 @@
     "5555": {
       "label": "ADB connection port",
       "onAutoForward": "notify"
+    },
+    "8080": {
+      "label": "Flutter web",
+      "onAutoForward": "notify"
     }
   },
   "remoteUser": "root"
