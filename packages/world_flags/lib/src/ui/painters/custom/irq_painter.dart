@@ -3,7 +3,6 @@ import "package:flutter/rendering.dart";
 import "../../../data/flags_map_part_3.data.dart";
 import "../../../model/typedefs.dart";
 import "../basic/custom_elements_painter.dart";
-import "../basic/flag_test_properties.dart";
 
 /// Painter for the Iraq flag.
 final class IrqPainter extends CustomElementsPainter {
@@ -15,25 +14,390 @@ final class IrqPainter extends CustomElementsPainter {
 
   @override
   FlagParentBounds? paintFlagElements(Canvas canvas, Size size) {
-    final adjustedSize = ratioAdjustedSize(size, minRatio: 1);
-    final center = calculateCenter(size);
-    final height = adjustedSize.height;
-    final width = adjustedSize.width;
-    final textSpan = TextSpan(
-      text: "الله اكبر", //ignore: avoid-non-ascii-symbols, text on the flag.
-      style: flagTextStyleOverride.copyWith(
-        color: property.mainColor,
-        fontSize: height,
-        fontWeight: FontWeight.bold,
-      ),
-    );
+    final path = Path();
+    final width = size.width;
+    final height = size.height;
 
-    final text = TextPainter(text: textSpan, textDirection: TextDirection.rtl)
-      ..layout();
-    text.paint(
-      canvas,
-      Offset((width - text.width) / 2, center.dy - text.height / 2),
-    );
+    path
+      ..moveTo(width / 2, height * 0.57)
+      ..lineTo(width * 0.33, height * 0.57)
+      ..cubicTo(
+        width * 0.33,
+        height * 0.59,
+        width * 0.31,
+        height * 0.6,
+        width * 0.3,
+        height * 0.6,
+      )
+      ..cubicTo(
+        width * 0.32,
+        height * 0.58,
+        width * 0.32,
+        height * 0.56,
+        width * 0.31,
+        height * 0.53,
+      )
+      ..cubicTo(
+        width * 0.31,
+        height * 0.52,
+        width * 0.32,
+        height * 0.52,
+        width * 0.32,
+        height * 0.51,
+      )
+      ..cubicTo(
+        width * 0.32,
+        height * 0.54,
+        width * 0.34,
+        height * 0.53,
+        width * 0.35,
+        height * 0.53,
+      )
+      ..cubicTo(
+        width * 0.35,
+        height * 0.53,
+        width * 0.35,
+        height * 0.52,
+        width * 0.35,
+        height * 0.51,
+      )
+      ..cubicTo(
+        width * 0.36,
+        height * 0.51,
+        width * 0.36,
+        height * 0.51,
+        width * 0.37,
+        height * 0.5,
+      )
+      ..lineTo(width * 0.37, height * 0.53)
+      ..lineTo(width * 0.48, height * 0.53)
+      ..lineTo(width * 0.48, height * 0.51)
+      ..cubicTo(
+        width * 0.48,
+        height * 0.5,
+        width * 0.48,
+        height * 0.5,
+        width * 0.47,
+        height * 0.5,
+      )
+      ..cubicTo(
+        width * 0.47,
+        height * 0.51,
+        width * 0.47,
+        height * 0.51,
+        width * 0.47,
+        height * 0.51,
+      )
+      ..lineTo(width * 0.47, height * 0.52)
+      ..cubicTo(
+        width * 0.47,
+        height * 0.52,
+        width * 0.47,
+        height * 0.53,
+        width * 0.47,
+        height * 0.53,
+      )
+      ..lineTo(width * 0.38, height * 0.53)
+      ..lineTo(width * 0.38, height * 0.5)
+      ..lineTo(width * 0.45, height * 0.41)
+      ..cubicTo(
+        width * 0.45,
+        height * 0.42,
+        width * 0.45,
+        height * 0.43,
+        width * 0.46,
+        height * 0.43,
+      )
+      ..cubicTo(
+        width * 0.45,
+        height * 0.43,
+        width * 0.45,
+        height * 0.43,
+        width * 0.45,
+        height * 0.43,
+      )
+      ..lineTo(width * 0.4, height * 0.51)
+      ..lineTo(width * 0.46, height * 0.51)
+      ..cubicTo(
+        width * 0.46,
+        height * 0.49,
+        width * 0.47,
+        height * 0.49,
+        width * 0.48,
+        height * 0.48,
+      )
+      ..cubicTo(
+        width * 0.48,
+        height * 0.49,
+        width * 0.49,
+        height * 0.49,
+        width * 0.49,
+        height * 0.51,
+      )
+      ..lineTo(width * 0.49, height * 0.57)
+      ..moveTo(width * 0.51, height * 0.57)
+      ..lineTo(width * 0.51, height * 0.41)
+      ..cubicTo(
+        width * 0.51,
+        height * 0.42,
+        width * 0.52,
+        height * 0.42,
+        width * 0.52,
+        height * 0.42,
+      )
+      ..cubicTo(
+        width * 0.52,
+        height * 0.43,
+        width * 0.52,
+        height * 0.43,
+        width * 0.52,
+        height * 0.44,
+      )
+      ..lineTo(width * 0.52, height * 0.53)
+      ..cubicTo(
+        width * 0.53,
+        height * 0.54,
+        width * 0.53,
+        height * 0.53,
+        width * 0.53,
+        height * 0.53,
+      )
+      ..cubicTo(
+        width * 0.53,
+        height * 0.54,
+        width * 0.54,
+        height * 0.56,
+        width * 0.54,
+        height * 0.57,
+      )
+      ..lineTo(width * 0.51, height * 0.57)
+      ..moveTo(width * 0.62, height * 0.46)
+      ..lineTo(width * 0.63, height * 0.45)
+      ..lineTo(width * 0.63, height * 0.53)
+      ..lineTo(width * 0.64, height * 0.53)
+      ..lineTo(width * 0.64, height * 0.44)
+      ..cubicTo(
+        width * 0.64,
+        height * 0.43,
+        width * 0.65,
+        height * 0.42,
+        width * 0.65,
+        height * 0.42,
+      )
+      ..lineTo(width * 0.65, height * 0.57)
+      ..lineTo(width * 0.57, height * 0.57)
+      ..cubicTo(
+        width * 0.57,
+        height * 0.54,
+        width * 0.57,
+        height * 0.51,
+        width * 0.59,
+        height * 0.51,
+      )
+      ..lineTo(width * 0.59, height * 0.5)
+      ..cubicTo(
+        width * 0.59,
+        height * 0.5,
+        width * 0.59,
+        height * 0.5,
+        width * 0.59,
+        height * 0.5,
+      )
+      ..lineTo(width * 0.61, height * 0.48)
+      ..lineTo(width * 0.61, height * 0.53)
+      ..lineTo(width * 0.62, height * 0.53)
+      ..lineTo(width * 0.62, height * 0.46)
+      ..moveTo(width * 0.61, height * 0.42)
+      ..cubicTo(
+        width * 0.61,
+        height * 0.42,
+        width * 0.61,
+        height * 0.41,
+        width * 0.61,
+        height * 0.4,
+      )
+      ..cubicTo(
+        width * 0.61,
+        height * 0.4,
+        width * 0.61,
+        height * 0.4,
+        width * 0.61,
+        height * 0.4,
+      )
+      ..cubicTo(
+        width * 0.61,
+        height * 0.4,
+        width * 0.61,
+        height * 0.42,
+        width * 0.61,
+        height * 0.42,
+      )
+      ..lineTo(width * 0.61, height * 0.42)
+      ..moveTo(width * 0.6, height * 0.44)
+      ..cubicTo(
+        width * 0.59,
+        height * 0.43,
+        width * 0.59,
+        height * 0.43,
+        width * 0.6,
+        height * 0.43,
+      )
+      ..cubicTo(
+        width * 0.6,
+        height * 0.44,
+        width * 0.61,
+        height * 0.43,
+        width * 0.61,
+        height * 0.43,
+      )
+      ..lineTo(width * 0.62, height * 0.43)
+      ..cubicTo(
+        width * 0.62,
+        height * 0.43,
+        width * 0.63,
+        height * 0.43,
+        width * 0.63,
+        height * 0.42,
+      )
+      ..cubicTo(
+        width * 0.63,
+        height * 0.42,
+        width * 0.63,
+        height * 0.42,
+        width * 0.63,
+        height * 0.42,
+      )
+      ..cubicTo(
+        width * 0.63,
+        height * 0.44,
+        width * 0.62,
+        height * 0.44,
+        width * 0.62,
+        height * 0.44,
+      )
+      ..cubicTo(
+        width * 0.61,
+        height * 0.43,
+        width * 0.61,
+        height * 0.43,
+        width * 0.61,
+        height * 0.44,
+      )
+      ..cubicTo(
+        width * 0.61,
+        height * 0.44,
+        width * 0.6,
+        height * 0.44,
+        width * 0.6,
+        height * 0.44,
+      )
+      ..lineTo(width * 0.6, height * 0.44)
+      ..moveTo(width * 0.66, height * 0.57)
+      ..lineTo(width * 0.66, height * 0.41)
+      ..cubicTo(
+        width * 0.67,
+        height * 0.42,
+        width * 0.68,
+        height * 0.42,
+        width * 0.68,
+        height * 0.42,
+      )
+      ..cubicTo(
+        width * 0.68,
+        height * 0.43,
+        width * 0.68,
+        height * 0.43,
+        width * 0.68,
+        height * 0.44,
+      )
+      ..lineTo(width * 0.68, height * 0.53)
+      ..cubicTo(
+        width * 0.69,
+        height * 0.54,
+        width * 0.69,
+        height * 0.53,
+        width * 0.69,
+        height * 0.53,
+      )
+      ..cubicTo(
+        width * 0.69,
+        height * 0.54,
+        width * 0.7,
+        height * 0.56,
+        width * 0.7,
+        height * 0.57,
+      )
+      ..lineTo(width * 0.66, height * 0.57)
+      ..moveTo(width * 0.35, height * 0.59)
+      ..cubicTo(
+        width * 0.35,
+        height * 0.58,
+        width * 0.35,
+        height * 0.58,
+        width * 0.35,
+        height * 0.58,
+      )
+      ..cubicTo(
+        width * 0.35,
+        height * 0.58,
+        width * 0.36,
+        height * 0.59,
+        width * 0.36,
+        height * 0.59,
+      )
+      ..cubicTo(
+        width * 0.36,
+        height * 0.59,
+        width * 0.35,
+        height * 0.6,
+        width * 0.35,
+        height * 0.59,
+      )
+      ..cubicTo(
+        width * 0.35,
+        height * 0.59,
+        width * 0.35,
+        height * 0.59,
+        width * 0.35,
+        height * 0.59,
+      )
+      ..lineTo(width * 0.35, height * 0.59)
+      ..moveTo(width * 0.59, height * 0.53)
+      ..cubicTo(
+        width * 0.59,
+        height * 0.53,
+        width * 0.59,
+        height * 0.54,
+        width * 0.59,
+        height * 0.53,
+      )
+      ..cubicTo(
+        width * 0.59,
+        height * 0.53,
+        width * 0.59,
+        height * 0.53,
+        width * 0.59,
+        height * 0.53,
+      )
+      ..cubicTo(
+        width * 0.59,
+        height * 0.53,
+        width * 0.59,
+        height * 0.52,
+        width * 0.59,
+        height * 0.53,
+      )
+      ..cubicTo(
+        width * 0.59,
+        height * 0.53,
+        width * 0.59,
+        height * 0.53,
+        width * 0.59,
+        height * 0.53,
+      )
+      ..lineTo(width * 0.59, height * 0.53)
+      ..close();
+    canvas.drawPath(path, paintCreator());
 
     return null;
   }
