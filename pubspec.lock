@@ -17,14 +17,6 @@ packages:
       url: "https://pub.dev"
     source: hosted
     version: "7.3.0"
-  arabic_font:
-    dependency: transitive
-    description:
-      name: arabic_font
-      sha256: cfdf74e27f7c9f6228592c658344b24493f9b505920d9faf4d0a9c118552e61f
-      url: "https://pub.dev"
-    source: hosted
-    version: "0.0.9"
   archive:
     dependency: transitive
     description:
