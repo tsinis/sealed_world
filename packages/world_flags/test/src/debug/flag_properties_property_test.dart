@@ -87,7 +87,7 @@ void main() => group("$FlagPropertiesProperty", () {
       final property = FlagPropertiesProperty(flagWithoutElements);
       final string = property.valueToString();
 
-      expect(string, contains("aspectRatio: 2.0"));
+      expect(string, contains("aspectRatio: 2"));
       expect(string, contains("stripeOrientation: vertical"));
       expect(string, contains("stripeColors: 3"));
       expect(string, contains("has no foreground elementsProperties"));

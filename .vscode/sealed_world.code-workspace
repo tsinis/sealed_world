@@ -438,7 +438,7 @@
       {
         "label": "Update Goldens",
         "type": "shell",
-        "command": "flutter test --update-goldens",
+        "command": "flutter test --platform=chrome --update-goldens",
         "presentation": { "reveal": "always" },
         "problemMatcher": []
       },
