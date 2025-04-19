@@ -1,6 +1,3 @@
-@TestOn("chrome")
-library world_flags;
-
 // ignore_for_file: unnecessary_async, missing-test-assertion, flagGolden method
 import "package:flutter/foundation.dart";
 import "package:flutter/material.dart";
