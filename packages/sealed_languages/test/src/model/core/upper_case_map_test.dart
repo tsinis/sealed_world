@@ -112,14 +112,6 @@ void main() => group("$UpperCaseMap", () {
         );
 
         test(
-          "addEntries",
-          () => expect(
-            () => map.addEntries(defaultMap.entries),
-            throwsUnsupportedError,
-          ),
-        );
-
-        test(
           "putIfAbsent",
           () => expect(
             () => map.putIfAbsent(nonEng, () => TestData.cn),

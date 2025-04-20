@@ -1,7 +1,7 @@
 name: world_flags_example
 description: A world_flags package example application.
 publish_to: none
-version: 2.2.0
+version: 2.3.0
 
 resolution: workspace
 
@@ -15,8 +15,8 @@ dependencies:
     path: ../
 
 dev_dependencies:
-  dart_code_metrics_presets: ^2.21.0
-  lints: ^5.1.1 # From Google
+  dart_code_metrics_presets: any # Constrained in the CLI tools package
+  lints: any # From Google. Constrained in the CLI tools package
 
 flutter:
   disable-swift-package-manager: false

@@ -13,10 +13,10 @@ void main() => group("$CurrenciesLocaleMapper", () {
       setUp(() => mapper = CurrenciesLocaleMapper());
 
       group("constructor", () {
-        test("creates instance with default data", () {
-          expect(mapper, isNotNull);
-          expect(mapper.map.length, 161);
-        });
+        test(
+          "creates instance with default data",
+          () => expect(mapper.map.length, 161),
+        );
 
         test("allows adding custom translations", () {
           final customMapper = CurrenciesLocaleMapper(

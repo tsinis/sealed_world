@@ -3,7 +3,6 @@ import "package:flutter/rendering.dart";
 import "../../../data/flags_map_part_1.data.dart";
 import "../../../model/typedefs.dart";
 import "../basic/custom_elements_painter.dart";
-import "../basic/flag_test_properties.dart";
 import "../multi_element_painter.dart";
 
 /// Painter for the U.S. Virgin Islands flag.
@@ -14,14 +13,35 @@ final class VirPainter extends CustomElementsPainter {
   @override
   double get originalAspectRatio => flagVirProperties.aspectRatio;
 
-  TextSpan _letterCreator(String letter, double fontSize) => TextSpan(
-    text: letter,
-    style: flagTextStyleOverride.copyWith(
-      color: customColors.last,
-      fontSize: fontSize * 0.4,
-      fontWeight: FontWeight.w500,
-    ),
-  );
+  Path _createVPath(double height) {
+    final path = Path();
+    final letterHeight = height * 0.25;
+    final letterWidth = letterHeight * 0.8;
+
+    path
+      ..moveTo(0, 0)
+      ..lineTo(letterWidth / 2, letterHeight)
+      ..lineTo(letterWidth, 0);
+
+    return path;
+  }
+
+  Path _createIPath(double height) {
+    final path = Path();
+    final letterHeight = height * 0.25;
+    final letterWidth = letterHeight * 0.15;
+    final midPoint = letterWidth / 2;
+
+    path
+      ..moveTo(0, 0)
+      ..lineTo(letterWidth, 0)
+      ..moveTo(midPoint, 0)
+      ..lineTo(midPoint, letterHeight)
+      ..moveTo(0, letterHeight)
+      ..lineTo(letterWidth, letterHeight);
+
+    return path;
+  }
 
   @override
   FlagParentBounds? paintFlagElements(Canvas canvas, Size size) {
@@ -29,17 +49,26 @@ final class VirPainter extends CustomElementsPainter {
     final center = calculateCenter(size);
     final height = adjustedSize.height;
     final width = adjustedSize.width;
+    final letterHeight = height / 8;
+    final strokeWidth = letterHeight / 3;
+    final vPath = _createVPath(height);
+    final iPath = _createIPath(height);
+    final paint =
+        paintCreator(customColors.last)
+          ..style = PaintingStyle.stroke
+          ..strokeWidth = strokeWidth
+          ..strokeCap = StrokeCap.square;
+    final vPaint = paint..strokeJoin = StrokeJoin.bevel;
 
-    final vLetter = _letterCreator("V", height);
-    final vText = TextPainter(text: vLetter, textDirection: TextDirection.ltr)
-      ..layout();
-    vText.paint(canvas, Offset(width * 0.06, center.dy - vText.height / 2));
-
-    // ignore: avoid-similar-names, it will be replaced in next refactoring.
-    final iLetter = _letterCreator("I", height);
-    final iText = TextPainter(text: iLetter, textDirection: TextDirection.ltr)
-      ..layout();
-    iText.paint(canvas, Offset(width * 1.46, center.dy - iText.height / 2));
+    canvas
+      ..save()
+      ..translate(width * 0.1, center.dy - letterHeight)
+      ..drawPath(vPath, vPaint)
+      ..restore()
+      ..save()
+      ..translate(width * 1.5, center.dy - letterHeight)
+      ..drawPath(iPath, paint)
+      ..restore();
 
     return SimpleBirdPainter.mda(properties, aspectRatio).paint(canvas, size);
   }

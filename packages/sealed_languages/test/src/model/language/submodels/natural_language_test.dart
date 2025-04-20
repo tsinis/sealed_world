@@ -85,8 +85,10 @@ void main() => group("$NaturalLanguage", () {
         test("with ${array.runtimeType}", () {
           expect(array.length, 2);
           array.addAll(List.of(array));
+          // ignore: avoid-duplicate-test-assertions, this is mutable array.
           expect(array.length, 2);
           array.add(NaturalLanguage.fromName(array.last.name));
+          // ignore: avoid-duplicate-test-assertions, this is mutable array.
           expect(array.length, 2);
         });
       });

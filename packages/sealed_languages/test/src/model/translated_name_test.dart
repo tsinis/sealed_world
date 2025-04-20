@@ -59,6 +59,7 @@ void main() => group("$TranslatedName", () {
         test("with ${array.runtimeType}", () {
           expect(array.length, 2);
           array.addAll(List.of(array));
+          // ignore: avoid-duplicate-test-assertions, this is mutable array.
           expect(array.length, 2);
           array.add(
             TranslatedName(
@@ -67,6 +68,7 @@ void main() => group("$TranslatedName", () {
               fullName: value.fullName,
             ),
           );
+          // ignore: avoid-duplicate-test-assertions, this is mutable array.
           expect(array.length, 2);
         });
       });

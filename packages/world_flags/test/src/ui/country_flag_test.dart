@@ -1,6 +1,4 @@
 // ignore_for_file: unnecessary_async, missing-test-assertion, flagGolden method
-
-import "package:arabic_font/arabic_font.dart";
 import "package:flutter/foundation.dart";
 import "package:flutter/material.dart";
 import "package:flutter_test/flutter_test.dart";
@@ -12,13 +10,8 @@ import "../../helpers/flag_type.dart";
 void main() => group("$CountryFlag", () {
   const value = CountryDeu();
   const countryFlag = CountryFlag.custom(value, {}, orElse: FlutterLogo());
-  // ignore: prefer-extracting-function-callbacks, it's a test.
-  setUpAll(() {
-    flagAntiAliasOverride = true;
-    flagTextStyleOverride = const ArabicTextStyle(
-      arabicFont: ArabicFont.lateef,
-    );
-  });
+
+  setUpAll(() => flagAntiAliasOverride = true);
 
   test(
     "toStringShort",

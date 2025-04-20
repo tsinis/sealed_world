@@ -1,3 +1,5 @@
+// ignore_for_file: avoid-top-level-members-in-tests
+
 const firstCode = "RUS"; // ignore: prefer-static-class, just for test.
 
 // ignore: prefer-correct-identifier-length, just for test.

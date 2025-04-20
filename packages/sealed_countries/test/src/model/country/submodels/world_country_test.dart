@@ -101,7 +101,8 @@ void main() => group("$WorldCountry", () {
         expect(element.maps.googleMaps, isNotEmpty);
         expect(element.maps.openStreetMaps, isNotEmpty);
         expect(element.emoji, isNotEmpty);
-        expect(element.latLng, isNotNull);
+        expect(element.latLng.longitude, isA<double>());
+        expect(element.latLng.latitude, isA<double>());
         expect(element.translations, isNotEmpty);
         expect(element.languages, isNotEmpty);
         expect(element.continent.name, isNotEmpty);
@@ -151,8 +152,10 @@ void main() => group("$WorldCountry", () {
     test("with ${array.runtimeType}", () {
       expect(array.length, 2);
       array.addAll(List.of(array));
+      // ignore: avoid-duplicate-test-assertions, this is mutable array.
       expect(array.length, 2);
       array.add(WorldCountry.fromCodeShort(value.codeShort));
+      // ignore: avoid-duplicate-test-assertions, this is mutable array.
       expect(array.length, 2);
     });
   });
@@ -1105,6 +1108,7 @@ void main() => group("$WorldCountry", () {
           country.translation(
             const BasicTypedLocale(language, regionalCode: nonExistCode),
           ),
+          // ignore: avoid-misused-test-matchers, could be also exception.
           isNotNull,
         );
       }

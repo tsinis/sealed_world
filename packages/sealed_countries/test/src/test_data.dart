@@ -1,3 +1,4 @@
+// ignore: avoid-top-level-members-in-tests, it's just a test data class.
 abstract final class TestData {
   const TestData._();
 

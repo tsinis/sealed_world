@@ -2,7 +2,7 @@
 // https://gitlab.com/restcountries/restcountries, which is
 // licensed under the Mozilla Public License Version 2.0.
 
-// ignore_for_file: lines_longer_than_80_chars, alt-spellings, avoid-suspicious-super-overrides
+// ignore_for_file: lines_longer_than_80_chars, alt-spellings, avoid-suspicious-super-overrides, prefer-digit-separators
 
 import "package:sealed_currencies/sealed_currencies.dart";
 

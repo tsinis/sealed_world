@@ -107,8 +107,10 @@ void main() => group("$FiatCurrency", () {
         test("with ${array.runtimeType}", () {
           expect(array.length, 2);
           array.addAll(List.of(array));
+          // ignore: avoid-duplicate-test-assertions, this is mutable array.
           expect(array.length, 2);
           array.add(FiatCurrency.fromName(array.last.name));
+          // ignore: avoid-duplicate-test-assertions, this is mutable array.
           expect(array.length, 2);
         });
       });
@@ -721,6 +723,7 @@ void main() => group("$FiatCurrency", () {
               currency.translation(
                 const BasicLocale(abkhazia, countryCode: nonExistCode),
               ),
+              // ignore: avoid-misused-test-matchers, it could be an exception.
               isNotNull,
             );
           }

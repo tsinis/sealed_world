@@ -27,8 +27,10 @@ void main() => group("$PostalCode", () {
     test("with ${array.runtimeType}", () {
       expect(array.length, 2);
       array.addAll(List.of(array));
+      // ignore: avoid-duplicate-test-assertions, this is mutable array.
       expect(array.length, 2);
       array.add(PostalCode(format: value.format));
+      // ignore: avoid-duplicate-test-assertions, this is mutable array.
       expect(array.length, 2);
     });
   });

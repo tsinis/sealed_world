@@ -18,6 +18,7 @@ void main() => group("$LocalizationDelegate", () {
         "constructor",
         () => test(
           "creates instance with null parameters",
+          // ignore: avoid-misused-test-matchers, just to trigger the test.
           () => expect(const LocalizationDelegate(), isNotNull),
         ),
       );

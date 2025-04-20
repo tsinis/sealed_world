@@ -25,10 +25,12 @@ void main() => group("$LatLng", () {
     test("with ${array.runtimeType}", () {
       expect(array.length, 2);
       array.addAll(List.of(array));
+      // ignore: avoid-duplicate-test-assertions, this is mutable array.
       expect(array.length, 2);
       array.add(
         LatLng.named(latitude: value.latitude, longitude: value.longitude),
       );
+      // ignore: avoid-duplicate-test-assertions, this is mutable array.
       expect(array.length, 2);
     });
   });

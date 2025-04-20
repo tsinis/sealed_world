@@ -54,7 +54,7 @@ abstract class BasicPicker<T extends IsoTranslated>
   /// * [emptyStatePlaceholder] is the widget to display when the list is empty.
   /// * [header] is the optional header to display above the list.
   /// * [itemBuilder] is the builder function for the items.
-  /// * `key` is the optional key to use for the widget.
+  /// * [key] is the optional key to use for the widget.
   /// * [keyboardDismissBehavior] is the keyboard dismiss behavior for the list.
   /// * [mainAxisAlignment] is the main axis alignment for the list.
   /// * [mainAxisSize] is the main axis size for the list.
@@ -317,9 +317,9 @@ abstract class BasicPicker<T extends IsoTranslated>
     // ignore: avoid-late-keyword, avoid-unnecessary-local-late, it's not.
     late final ImplicitSearchDelegate<T> delegate;
     // ignore: avoid-local-functions, lazy delegate.
-    void closeOnSelect(T selected) {
-      delegate.close(context, selected);
-      onSelect?.call(result = selected);
+    void closeOnSelect(T select) {
+      delegate.close(context, select);
+      onSelect?.call(result = select); //ignore:avoid-nested-assignments,it's it
     }
 
     delegate = ImplicitSearchDelegate<T>(

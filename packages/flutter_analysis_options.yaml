@@ -63,6 +63,9 @@ dart_code_metrics:
     - proper-super-calls
     - use-closest-build-context
     - use-setstate-synchronously
+    - pass-existing-future-to-future-builder
+    - pass-existing-stream-to-stream-builder
+    - prefer-compute-over-isolate-run
 
 linter:
   rules:

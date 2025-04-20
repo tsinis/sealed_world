@@ -17,14 +17,6 @@ packages:
       url: "https://pub.dev"
     source: hosted
     version: "7.3.0"
-  arabic_font:
-    dependency: transitive
-    description:
-      name: arabic_font
-      sha256: cfdf74e27f7c9f6228592c658344b24493f9b505920d9faf4d0a9c118552e61f
-      url: "https://pub.dev"
-    source: hosted
-    version: "0.0.9"
   archive:
     dependency: transitive
     description:
@@ -221,10 +213,10 @@ packages:
     dependency: transitive
     description:
       name: dart_code_metrics_presets
-      sha256: "75bd627851fd3693bd19d846896fb7d04c0045bbb50911478c52ac1ec29c1359"
+      sha256: "30b7bcaec9de4e8c5f7a41eea7f8e2fa52ad30729f4435a3b4fcf460abb327fe"
       url: "https://pub.dev"
     source: hosted
-    version: "2.21.0"
+    version: "2.22.0"
   dart_style:
     dependency: transitive
     description:

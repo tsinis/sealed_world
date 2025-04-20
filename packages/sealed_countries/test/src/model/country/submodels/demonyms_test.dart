@@ -49,6 +49,7 @@ void main() => group("$Demonyms", () {
     test("with ${array.runtimeType}", () {
       expect(array.length, 2);
       array.addAll(List.of(array));
+      // ignore: avoid-duplicate-test-assertions, this is mutable array.
       expect(array.length, 2);
       array.add(
         Demonyms(
@@ -57,6 +58,7 @@ void main() => group("$Demonyms", () {
           male: value.male,
         ),
       );
+      // ignore: avoid-duplicate-test-assertions, this is mutable array.
       expect(array.length, 2);
     });
   });

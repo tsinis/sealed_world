@@ -84,7 +84,6 @@ void main() => group("UpperCaseIsoMapExtension", () {
 
         test("should interpret keys as ISO standardized codes", () {
           expect(map[eng], isNotNull);
-          expect(map.findByCodeOrThrow(eng), isNotNull);
           expect(map.findByCodeOrThrow(eng).name, equals("English"));
         });
       });
