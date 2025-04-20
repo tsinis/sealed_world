@@ -11,7 +11,7 @@ DOCUMENTATION
 REFACTOR
 
 - Replaced text-based flag rendering with vector path drawing for Iraq, Afghanistan, Saudi Arabia and U.S. Virgin Islands flags, improving rendering consistency on all platforms.
-- Deprecated unused and visible for tests only text style properties in flag painter APIs.
+- Deprecated `flagTextStyleOverride` getter and setter (visible for testing) as text-based painters were removed.
 
 ## 2.2.0
 
