@@ -1,3 +1,18 @@
+## 2.3.0
+
+NEW FEATURES
+
+- Added the `regionalCode` getter to the `BasicTypedLocale` to provide a convenient alias for the `countryCode` property, improving consistency when working with regional locales.
+
+DOCUMENTATION
+
+- Update documentation for countries to use backticks for ISO code formatting.
+
+REFACTOR
+
+- Replaced text-based flag rendering with vector path drawing for Iraq, Afghanistan, Saudi Arabia and U.S. Virgin Islands flags, improving rendering consistency on all platforms.
+- Deprecated unused and visible for tests only text style properties in flag painter APIs.
+
 ## 2.2.0
 
 This is maintenance release without significant changes for the users, that aims to improve DevEx when working with flags in DevTools.

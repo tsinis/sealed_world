@@ -23,7 +23,7 @@ class SearchListListenableBuilder<T extends Object>
   ///   case-sensitive search.
   /// * [startWithSearch] is a boolean indicating whether to search from the
   ///   beginning of the string.
-  /// * `key` is the optional key to use for the widget.
+  /// * [key] is the optional key to use for the widget.
   const SearchListListenableBuilder({
     required this.builder,
     required this.items,

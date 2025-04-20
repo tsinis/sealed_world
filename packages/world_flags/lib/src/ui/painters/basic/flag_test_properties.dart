@@ -25,12 +25,12 @@ bool _doAntiAlias = false;
 /// squares instead of real characters. With this setter you can specify
 /// different font family for your tests.
 @visibleForTesting
-@Deprecated("Package doesn't user text based painters anymore.")
+@Deprecated("Package doesn't use text based painters anymore.")
 set flagTextStyleOverride(TextStyle value) => _textStyle = value;
 
 /// Retrieves the current value of the font family that is used for flag's
 /// custom text elements (i.e. AFG, SAU, IRQ, VIR flags).
-@Deprecated("Package doesn't user text based painters anymore.")
+@Deprecated("Package doesn't use text based painters anymore.")
 TextStyle get flagTextStyleOverride => _textStyle;
 
 TextStyle _textStyle = const TextStyle();
