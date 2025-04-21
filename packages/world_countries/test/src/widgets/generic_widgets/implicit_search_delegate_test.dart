@@ -10,6 +10,7 @@ void main() => group("$ImplicitSearchDelegate", () {
     resultsBuilder: (_, _) => const SizedBox(),
     searchIn: (i, _) => [i.toString()],
     resultValidator: (_) => false,
+    searchMap: const <int, Set<String>>{},
   );
 
   testWidgets("buildResults", (tester) async {

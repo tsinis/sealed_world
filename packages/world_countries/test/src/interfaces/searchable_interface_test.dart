@@ -7,6 +7,7 @@ class _SearchableInterfaceTest implements SearchableInterface<String> {
     required this.searchIn,
     this.caseSensitiveSearch = false,
     this.startWithSearch = true,
+    this.onSearchResultsBuilder,
   });
   @override
   final Iterable<String> Function(String item, BuildContext context) searchIn;
@@ -14,6 +15,9 @@ class _SearchableInterfaceTest implements SearchableInterface<String> {
   final bool caseSensitiveSearch;
   @override
   final bool startWithSearch;
+  @override
+  final Iterable<String> Function(String query, Map<String, Set<String>> map)?
+  onSearchResultsBuilder;
 }
 
 void main() => group("$SearchableInterface", () {
@@ -24,6 +28,7 @@ void main() => group("$SearchableInterface", () {
         searchIn: (_, _) => const [],
         caseSensitiveSearch: true,
         startWithSearch: false,
+        onSearchResultsBuilder: (_, _) => const [],
       ).startWithSearch,
       isFalse,
     ),
