@@ -9,6 +9,7 @@ import "package:world_countries/src/models/locale/typed_locale.dart";
 import "package:world_flags/world_flags.dart";
 
 void main() => group("$TypedLocaleDelegate", () {
+  const locale = Locale("en");
   const english = LangEng();
   const delegate = TypedLocaleDelegate();
 
@@ -23,13 +24,72 @@ void main() => group("$TypedLocaleDelegate", () {
   );
 
   test("asyncTranslationCacheProcessing set to false", () async {
-    const locale = Locale("en");
     final asyncLoad = delegate.load(locale);
     final syncLoad = const TypedLocaleDelegate(
       asyncTranslationCacheProcessing: false,
     ).load(locale);
 
     expect(await asyncLoad, await syncLoad);
+  });
+
+  group("l10nFormatter", () {
+    const matchWord = "Test";
+
+    test("should be used when formatting translations async", () async {
+      final delegateWithFormatter = TypedLocaleDelegate(
+        l10nFormatter: (_, _) => matchWord,
+      );
+
+      final typedLocale = await delegateWithFormatter.load(locale);
+
+      expect(typedLocale?.countryTranslations.values, everyElement(matchWord));
+      expect(typedLocale?.currencyTranslations.values, everyElement(matchWord));
+      expect(typedLocale?.languageTranslations.values, everyElement(matchWord));
+    });
+
+    test("should be used when formatting translations sync", () async {
+      final delegateWithFormatter = TypedLocaleDelegate(
+        l10nFormatter: (_, _) => matchWord,
+        asyncTranslationCacheProcessing: false,
+      );
+
+      final typedLocale = await delegateWithFormatter.load(locale);
+
+      expect(typedLocale?.countryTranslations.values, everyElement(matchWord));
+      expect(typedLocale?.currencyTranslations.values, everyElement(matchWord));
+      expect(typedLocale?.languageTranslations.values, everyElement(matchWord));
+    });
+
+    test("should only format countries", () async {
+      final delegateWithFormatter = TypedLocaleDelegate(
+        l10nFormatter:
+            (iso, _) => iso.key is WorldCountry ? matchWord : iso.value,
+      );
+
+      final typedLocale = await delegateWithFormatter.load(locale);
+
+      expect(typedLocale?.countryTranslations.values, everyElement(matchWord));
+      expect(
+        typedLocale?.currencyTranslations.values,
+        isNot(everyElement(matchWord)),
+      );
+      expect(
+        typedLocale?.languageTranslations.values,
+        isNot(everyElement(matchWord)),
+      );
+    });
+
+    test("should handle exception during formatting", () async {
+      final delegateWithFormatter = TypedLocaleDelegate(
+        l10nFormatter: (_, _) => throw AssertionError(),
+        asyncTranslationCacheProcessing: false,
+      );
+
+      await expectLater(
+        delegateWithFormatter.load(locale),
+        throwsAssertionError,
+      );
+    });
   });
 
   group("isSupported", () {
