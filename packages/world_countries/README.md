@@ -256,7 +256,7 @@ TypedLocaleDelegate(
 
 #### How to use fuzzy or similar search functionality?
 
-For example, use custom `onSearchResultsBuilder` in your picker. Here, fuzzy matching is performed using `extractAllSorted` from your favorite fuzzy search package, add it's import and:
+For example, use custom `onSearchResultsBuilder` in your picker. Here, fuzzy matching is performed using `extractAllSorted` from your favorite fuzzy search package, add its import and:
 
 ```dart
 onSearchResultsBuilder: (query, map) =>

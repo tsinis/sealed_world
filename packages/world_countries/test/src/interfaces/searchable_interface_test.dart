@@ -1,6 +1,7 @@
 import "package:flutter/widgets.dart" show BuildContext;
 import "package:flutter_test/flutter_test.dart";
 import "package:world_countries/src/interfaces/searchable_interface.dart";
+import "package:world_countries/src/models/typedefs.dart";
 
 class _SearchableInterfaceTest implements SearchableInterface<String> {
   const _SearchableInterfaceTest({
@@ -16,7 +17,7 @@ class _SearchableInterfaceTest implements SearchableInterface<String> {
   @override
   final bool startWithSearch;
   @override
-  final Iterable<String> Function(String query, Map<String, Set<String>> map)?
+  final Iterable<String> Function(String query, SearchMap<String> map)?
   onSearchResultsBuilder;
 }
 

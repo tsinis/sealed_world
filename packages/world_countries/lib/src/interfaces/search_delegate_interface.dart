@@ -80,7 +80,7 @@ abstract class SearchDelegateInterface<T extends Object>
   /// A function that takes a `BuildContext` and an [UnmodifiableListView] of
   /// items and returns a widget to display as the search results.
   final Widget Function(BuildContext context, UnmodifiableListView<T> items)
-  resultsBuilder;
+  resultsBuilder; // TODO: Improve with query param in the next major release.
 
   /// A boolean indicating whether to show the clear button on the search field.
   final bool? showClearButton;
