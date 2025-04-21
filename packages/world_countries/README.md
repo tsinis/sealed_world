@@ -82,8 +82,6 @@ MaterialApp(localizationsDelegates: [TypedLocaleDelegate()])
 
 Then you can also extract this delegate data from the context via `context.maybeLocale` getter, in any place of your app (from a `BuildContext`).
 
-Also, you can force pickers to use a specific locale instead, by providing translation parameter to it (for example, `translation: TypedLocale.withTranslationsCache(LangEng())`, will show names in English).
-
 > The package also provides access to `TypedLocale` class that allows you to work with a type-safe versions of default [Locale](https://api.flutter.dev/flutter/dart-ui/Locale-class.html). You can also utilize it in `maybeCommonNameFor()` and `commonNameFor()` methods (you can use with country/currency/language data).
 
 ### Example
@@ -243,6 +241,35 @@ CountryPicker(
 );
 ```
 
+#### How to format/adjust automatic global translations of ISO objects in my app?
+
+For instance, you may want to capitalize all French currencies names in auto. translations. You enhance the `TypedLocaleDelegate` with a custom `l10nFormatter` as follows:
+
+```dart
+TypedLocaleDelegate(
+  l10nFormatter: (l10n, locale) =>
+      locale.language.isFra && l10n.key is FiatCurrency
+          ? l10n.value.toUpperCase() // Format French currency names only.
+          : l10n.value, // Don't change other translations.
+)
+```
+
+#### How to use fuzzy or similar search functionality?
+
+For example, use custom `onSearchResultsBuilder` in your picker. Here, fuzzy matching is performed using `extractAllSorted` from your favorite fuzzy search package, add it's import and:
+
+```dart
+onSearchResultsBuilder: (query, map) =>
+    query.isNotEmpty
+        ? extractAllSorted(
+            choices: map.entries.toList(growable: false),
+            getter: (iso) => iso.value.first, // I.e. fuzzy search on ISO object L10N.
+            query: query,
+            cutoff: 50,
+          ).map((result) => result.choice.key)
+        : items, // Original items or `map.keys` etc.
+```
+
 #### Why should I use this package over any other country/currency/language picker package?
 
 - **Every flag is a Widget**: This package doesn't use heavy SVG or any other assets to show country flags in the pickers. All flags are declarative-style optimized `CustomPainter`s. That means that you don't have to worry about pre-caching, increased app size, platform-dependent look of the flags, etc. And since it's a widget - you can always change its look - shape, decoration, aspect ratio, etc. Just ask yourself for example - how you can easily change the aspect ratio of asset-based flags without stretching/shrinking them.
@@ -257,3 +284,4 @@ CountryPicker(
 - **Lightweight**: This package keeps under 500 KB, ensuring it fits within the pub cache limit. This leads to quick, low-bandwidth downloads and faster caching, minimizing resource impact.
 - **Industry adopted**: This package is actively used in production by numerous European companies, ensuring its efficacy and robustness in real-world scenarios.
 - **MIT license**: This package and sources are released under the MIT license, which is a permissive license that allows users to use, modify, and distribute the code with minimal restrictions. The MIT license is considered better than most other open-source licenses because it provides flexibility and allows users to incorporate the code into their projects without worrying about legal implications.
+- **Customizability**: It also allows you to provide your own search algorithm and custom l10n formatter, etc., offering a fully tailored picker experience.
