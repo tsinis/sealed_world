@@ -24,3 +24,9 @@ typedef IsoLocale = TypedLocale;
 
 /// A typedef representing a [Map] of translations for [IsoTranslated] items.
 typedef TranslationMap<T extends IsoTranslated> = Map<T, String>;
+
+/// A typedef representing a [Map] of [T] and a set of [String].
+/// This is used for search functionality, where [T] is the type of the
+/// items being searched, and the set of [String] represents the search
+/// terms associated with each item.
+typedef SearchMap<T extends Object> = Map<T, Set<String>>;

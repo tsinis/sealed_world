@@ -47,6 +47,7 @@ class PhoneCodePicker extends CountryPicker {
     super.searchBar,
     super.searchBarPadding,
     super.searchIn,
+    super.onSearchResultsBuilder,
     super.separator,
     super.showClearButton,
     super.showSearchBar,
@@ -212,6 +213,11 @@ class PhoneCodePicker extends CountryPicker {
     VerticalDirection? verticalDirection,
     Iterable<String> Function(WorldCountry country, BuildContext context)?
     searchIn,
+    Iterable<WorldCountry> Function(
+      String query,
+      Map<WorldCountry, Set<String>> map,
+    )?
+    onSearchResultsBuilder,
     Widget? Function(
       ItemProperties<WorldCountry> itemProperties, {
       bool? isDense,
@@ -249,6 +255,8 @@ class PhoneCodePicker extends CountryPicker {
     searchBar: searchBar ?? this.searchBar,
     searchBarPadding: searchBarPadding ?? this.searchBarPadding,
     searchIn: searchIn ?? this.searchIn,
+    onSearchResultsBuilder:
+        onSearchResultsBuilder ?? this.onSearchResultsBuilder,
     separator: separator ?? this.separator,
     showClearButton: showClearButton ?? this.showClearButton,
     showSearchBar: showSearchBar ?? showHeader,

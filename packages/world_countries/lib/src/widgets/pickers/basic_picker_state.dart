@@ -99,6 +99,7 @@ class _BasicPickerState<T extends IsoTranslated> extends State<BasicPicker<T>> {
           VerticalDirection.down,
       caseSensitiveSearch: widget.caseSensitiveSearch,
       searchIn: widget.searchIn ?? widget.defaultSearch,
+      onSearchResultsBuilder: widget.onSearchResultsBuilder,
       startWithSearch: widget.startWithSearch,
       textController: _controller,
     );

@@ -44,6 +44,7 @@ class CurrencyPicker extends BasicPicker<FiatCurrency> {
     super.searchBar,
     super.searchBarPadding,
     super.searchIn,
+    super.onSearchResultsBuilder,
     super.separator,
     super.showClearButton,
     super.showSearchBar,
@@ -132,6 +133,11 @@ class CurrencyPicker extends BasicPicker<FiatCurrency> {
     VerticalDirection? verticalDirection,
     Iterable<String> Function(FiatCurrency currency, BuildContext context)?
     searchIn,
+    Iterable<FiatCurrency> Function(
+      String query,
+      Map<FiatCurrency, Set<String>> map,
+    )?
+    onSearchResultsBuilder,
     Widget? Function(
       ItemProperties<FiatCurrency> itemProperties, {
       bool? isDense,
@@ -169,6 +175,8 @@ class CurrencyPicker extends BasicPicker<FiatCurrency> {
     searchBar: searchBar ?? this.searchBar,
     searchBarPadding: searchBarPadding ?? this.searchBarPadding,
     searchIn: searchIn ?? this.searchIn,
+    onSearchResultsBuilder:
+        onSearchResultsBuilder ?? this.onSearchResultsBuilder,
     separator: separator ?? this.separator,
     showClearButton: showClearButton ?? this.showClearButton,
     showSearchBar: showSearchBar ?? showHeader,

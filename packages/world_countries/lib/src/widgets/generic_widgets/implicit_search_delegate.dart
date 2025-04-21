@@ -3,6 +3,7 @@ import "dart:collection";
 import "package:flutter/material.dart";
 
 import "../../extensions/build_context_extension.dart";
+import "../../extensions/iterable_search_map_extension.dart";
 import "../../interfaces/search_delegate_interface.dart";
 import "../../mixins/compare_search_mixin.dart";
 import "../buttons/clear_button.dart";
@@ -20,6 +21,8 @@ class ImplicitSearchDelegate<T extends Object>
   ///   search results.
   /// * [searchIn] is a function that takes an item and returns an iterable of
   ///   strings to search in.
+  /// * [onSearchResultsBuilder] is the optional function to customize the build
+  ///   of the search results.
   /// * [appBarBottom] is a widget to display at the bottom of the search page's
   ///   app bar.
   /// * [appBarThemeData] is the theme data to use for the search page's app
@@ -59,12 +62,13 @@ class ImplicitSearchDelegate<T extends Object>
     super.showClearButton,
     super.startWithSearch,
     super.textInputAction,
+    super.onSearchResultsBuilder,
+    super.searchMap,
   });
 
   @override
   ThemeData appBarTheme(BuildContext context) =>
-      // ignore: avoid-non-null-assertion, null-checked already.
-      appBarThemeData == null ? super.appBarTheme(context) : appBarThemeData!;
+      appBarThemeData ?? super.appBarTheme(context);
 
   @override
   List<Widget> buildActions(BuildContext context) => [
@@ -142,10 +146,19 @@ class ImplicitSearchDelegate<T extends Object>
     UnmodifiableListView<T>? items,
   ]) => resultsBuilder(context, items ?? _filteredItems(context));
 
-  UnmodifiableListView<T> _filteredItems(BuildContext context) =>
-      UnmodifiableListView(
+  UnmodifiableListView<T> _filteredItems(BuildContext context) {
+    if (searchMap.isEmpty) {
+      return UnmodifiableListView(
         items.where((i) => searchIn(i, context).toSet().any(_hasSameText)),
       );
+    }
+
+    final filteredItems =
+        onSearchResultsBuilder?.call(query.trim(), searchMap) ??
+        items.searchResults(searchMap, _hasSameText);
+
+    return UnmodifiableListView(filteredItems);
+  }
 
   bool _hasSameText(String itemText) => compareWithInput(query, itemText);
 

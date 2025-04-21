@@ -82,6 +82,7 @@ class _SearchableIndexedListViewBuilderState<T extends Object>
           items: widget.items,
           // ignore: avoid-non-null-assertion, null-checked on build first line.
           searchIn: widget.searchIn!,
+          onSearchResultsBuilder: widget.onSearchResultsBuilder,
           // ignore: avoid-non-null-assertion, null-checked on build first line.
           textController: widget.textController!,
           caseSensitiveSearch: widget.caseSensitiveSearch,

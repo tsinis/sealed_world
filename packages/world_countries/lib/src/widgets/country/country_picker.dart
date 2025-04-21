@@ -47,6 +47,8 @@ class CountryPicker extends BasicPicker<WorldCountry> {
   /// * [searchBarPadding] is the padding to apply to the search bar.
   /// * [searchIn] is the optional function to extract search strings from the
   ///   items.
+  /// * [onSearchResultsBuilder] is the optional function to customize the build
+  ///   of the search results.
   /// * [separator] is the optional separator to display between items.
   /// * [showClearButton] is a boolean indicating whether to show a clear button
   ///   in the search bar.
@@ -87,6 +89,7 @@ class CountryPicker extends BasicPicker<WorldCountry> {
     super.searchBar,
     super.searchBarPadding,
     super.searchIn,
+    super.onSearchResultsBuilder,
     super.separator,
     super.showClearButton,
     super.showSearchBar,
@@ -182,6 +185,11 @@ class CountryPicker extends BasicPicker<WorldCountry> {
     VerticalDirection? verticalDirection,
     Iterable<String> Function(WorldCountry country, BuildContext context)?
     searchIn,
+    Iterable<WorldCountry> Function(
+      String query,
+      Map<WorldCountry, Set<String>> map,
+    )?
+    onSearchResultsBuilder,
     Widget? Function(
       ItemProperties<WorldCountry> itemProperties, {
       bool? isDense,
@@ -219,6 +227,8 @@ class CountryPicker extends BasicPicker<WorldCountry> {
     searchBar: searchBar ?? this.searchBar,
     searchBarPadding: searchBarPadding ?? this.searchBarPadding,
     searchIn: searchIn ?? this.searchIn,
+    onSearchResultsBuilder:
+        onSearchResultsBuilder ?? this.onSearchResultsBuilder,
     separator: separator ?? this.separator,
     showClearButton: showClearButton ?? this.showClearButton,
     showSearchBar: showSearchBar ?? showHeader,

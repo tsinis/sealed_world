@@ -5,6 +5,7 @@ import "package:flutter/material.dart"
 import "package:flutter/widgets.dart";
 
 import "../constants/ui_constants.dart";
+import "../models/typedefs.dart";
 import "searchable_interface.dart";
 
 /// An interface for a search delegate.
@@ -19,6 +20,8 @@ abstract class SearchDelegateInterface<T extends Object>
   ///   search results.
   /// * [searchIn] is a function that takes an item and returns an iterable of
   ///   strings to search in.
+  /// * [onSearchResultsBuilder] is the optional function to customize the build
+  ///   of the search results.
   /// * [resultValidator] is a function that takes an item and returns a boolean
   ///   indicating whether the item should be included in the search results.
   /// * [showClearButton] is a boolean indicating whether to show the clear
@@ -50,6 +53,8 @@ abstract class SearchDelegateInterface<T extends Object>
     this.startWithSearch = true,
     this.backIconButton,
     this.clearIconButton,
+    this.onSearchResultsBuilder,
+    this.searchMap = const {},
   });
 
   /// A function that takes an item and returns a boolean indicating whether the
@@ -93,4 +98,10 @@ abstract class SearchDelegateInterface<T extends Object>
   /// in.
   @override
   final Iterable<String> Function(T item, BuildContext context) searchIn;
+
+  @override
+  final Iterable<T> Function(String query, SearchMap<T> map)?
+  onSearchResultsBuilder;
+
+  final SearchMap<T> searchMap; // TODO: Mandatory in the next major release.
 }
