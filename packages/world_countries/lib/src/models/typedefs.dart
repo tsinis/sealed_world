@@ -30,3 +30,10 @@ typedef TranslationMap<T extends IsoTranslated> = Map<T, String>;
 /// items being searched, and the set of [String] represents the search
 /// terms associated with each item.
 typedef SearchMap<T extends Object> = Map<T, Set<String>>;
+
+/// A typedef representing a function that formats a translation
+/// for a specific [TypedLocale] and [IsoTranslated] item.
+/// The function takes a [MapEntry] of [IsoTranslated] and its translation
+/// as a [String], and returns a formatted [String] for the given locale.
+typedef L10NFormatter<T extends TypedLocale, Iso extends IsoTranslated> =
+    String Function(MapEntry<Iso, String> translation, T locale);

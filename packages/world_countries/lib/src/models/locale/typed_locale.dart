@@ -81,6 +81,16 @@ class TypedLocale extends Locale implements BasicTypedLocale {
   /// The [language] parameter is required. The [country] and [script]
   /// parameters are optional.
   ///
+  /// The [languages], [currencies], and [countries] parameters specify which
+  /// ISO objects will be cached in the translations.
+  ///
+  /// The [regionalCode] parameter is optional and can be used instead of
+  /// providing a [country] parameter.
+  ///
+  /// The [l10nFormatter] parameter is optional. If provided, it customizes how
+  /// ISO translations are formatted. It takes a [TypedLocale] and an
+  /// [IsoTranslated] object as input and returns a formatted string.
+  ///
   /// {@macro typed_locale_with_translations_cache}
   ///
   factory TypedLocale.withTranslationsCache(
@@ -91,6 +101,7 @@ class TypedLocale extends Locale implements BasicTypedLocale {
     Iterable<FiatCurrency>? currencies = FiatCurrency.list,
     Iterable<WorldCountry>? countries = WorldCountry.list,
     String? regionalCode,
+    L10NFormatter<TypedLocale, IsoTranslated>? l10nFormatter,
   }) => TypedLocale(
     language,
     country: country,
@@ -100,6 +111,7 @@ class TypedLocale extends Locale implements BasicTypedLocale {
     languages: languages,
     currencies: currencies,
     countries: countries,
+    l10nFormatter: l10nFormatter,
   );
 
   @override

@@ -3,6 +3,7 @@ import "dart:ui" show Locale;
 import "package:world_flags/world_flags.dart";
 
 import "../models/locale/typed_locale.dart";
+import "../models/typedefs.dart";
 import "duration_extension.dart";
 
 /// An extension on [TypedLocale] that provides utilities to manage translation
@@ -59,13 +60,14 @@ extension TypedLocaleExtension<T extends TypedLocale> on T {
     Iterable<NaturalLanguage>? languages,
     Iterable<FiatCurrency>? currencies,
     Iterable<WorldCountry>? countries,
+    L10NFormatter<T, IsoTranslated>? l10nFormatter,
   }) {
-    final translation = _itemsToTranslate(languages, currencies, countries);
+    final l10n = _itemsToTranslate(languages, currencies, countries);
 
     return _copyWithTranslationMaps(
-      _cache(translation.languages),
-      _cache(translation.currencies),
-      _cache(translation.countries),
+      _cache(l10n.languages, l10nFormatter),
+      _cache(l10n.currencies, l10nFormatter),
+      _cache(l10n.countries, l10nFormatter),
     );
   }
 
@@ -79,27 +81,64 @@ extension TypedLocaleExtension<T extends TypedLocale> on T {
     Iterable<NaturalLanguage>? languages,
     Iterable<FiatCurrency>? currencies,
     Iterable<WorldCountry>? countries,
+    L10NFormatter<T, IsoTranslated>? l10nFormatter,
   }) async {
-    final translation = _itemsToTranslate(languages, currencies, countries);
-    final languageMap = await _cacheAsync(translation.languages);
-    final currencyMap = await _cacheAsync(translation.currencies);
-    final countryMap = await _cacheAsync(translation.countries);
+    final l10n = _itemsToTranslate(languages, currencies, countries);
+    final languageMap = await _cacheAsync(l10n.languages, l10nFormatter);
+    final currencyMap = await _cacheAsync(l10n.currencies, l10nFormatter);
+    final countryMap = await _cacheAsync(l10n.countries, l10nFormatter);
 
     return _copyWithTranslationMaps(languageMap, currencyMap, countryMap);
   }
 
-  Map<R, String>? _cache<R extends IsoTranslated>(Iterable<R> iso) =>
-      iso.isEmpty
-          ? null
-          : iso.commonNamesMap(options: LocaleMappingOptions(mainLocale: this));
+  Map<R, String>? _cache<R extends IsoTranslated>(
+    Iterable<R> iso,
+    L10NFormatter<T, R>? l10nFormatter,
+  ) {
+    if (iso.isEmpty) return null;
+
+    final l10nMap = iso.commonNamesMap(
+      options: LocaleMappingOptions(mainLocale: this),
+    );
+    if (l10nFormatter == null) return l10nMap;
+
+    return _formatTranslation(l10nMap, l10nFormatter);
+  }
 
   Future<Map<R, String>?> _cacheAsync<R extends IsoTranslated>(
-    Iterable<R> iso,
-  ) async {
+    Iterable<R> iso, [
+    L10NFormatter<T, R>? l10nFormatter,
+  ]) async {
     if (iso.isEmpty) return null;
-    await Duration.zero.sleep;
+    await Duration.zero.sleep; // ignore: prefer-moving-to-variable, redundant .
 
-    return iso.commonNamesMap(options: LocaleMappingOptions(mainLocale: this));
+    final l10nMap = iso.commonNamesMap(
+      options: LocaleMappingOptions(mainLocale: this),
+    );
+
+    if (l10nFormatter == null) return l10nMap;
+    await Duration.zero.sleep; // ignore: prefer-moving-to-variable, redundant .
+
+    return _formatTranslation(l10nMap, l10nFormatter);
+  }
+
+  Map<R, String> _formatTranslation<R extends IsoTranslated>(
+    Map<R, String> originalMap,
+    L10NFormatter<T, R> l10nFormatter,
+  ) {
+    try {
+      return originalMap.map(
+        (iso, l10n) => MapEntry(iso, l10nFormatter(MapEntry(iso, l10n), this)),
+      );
+      // ignore: avoid_catches_without_on_clauses, should catch anything.
+    } catch (error, stackTrace) {
+      assert(
+        false, //ignore: avoid-constant-assert-conditions, should always trigger
+        "Error formatting translation map: $originalMap, $error on $stackTrace",
+      );
+
+      return originalMap;
+    }
   }
 
   T _copyWithTranslationMaps(
