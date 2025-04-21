@@ -42,20 +42,20 @@ class _MainPageState extends State<MainPage>
   // ignore: avoid-late-keyword, we need lazy data value first.
   late final _controller = TabsDataController(widget._data.value, vsync: this);
 
-  FutureOr<void> _handleFab({bool isLong = false}) {
-    final pick = widget._mapPickers(_controller.currentData);
-    isLong ? pick.showInDialog(context) : pick.showInModalBottomSheet(context);
-  }
+  // ignore: avoid-returning-widgets, it's just shorthand in the example app.
+  BasicPicker get _picker => widget._mapPickers(_controller.currentData);
 
-  FutureOr<void> _handleAppBarSearch() =>
-      widget._mapPickers(_controller.currentData).showInSearch(context);
+  FutureOr<void> _handleFab({bool isLong = false}) =>
+      isLong
+          ? _picker.showInDialog(context)
+          : _picker.showInModalBottomSheet(context);
+
+  FutureOr<void> _handleAppBarSearch() => _picker.showInSearch(context);
 
   FutureOr<Iterable<Widget>> _handleAnchor(
     BuildContext context,
     SearchController controller,
-  ) => widget
-      ._mapPickers(_controller.currentData)
-      .searchSuggestions(context, controller);
+  ) => _picker.searchSuggestions(context, controller);
 
   @override
   void didUpdateWidget(MainPage oldWidget) {
