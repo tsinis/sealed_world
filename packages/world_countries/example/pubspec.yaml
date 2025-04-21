@@ -1,4 +1,4 @@
-version: 3.4.0
+version: 3.5.0
 name: world_countries_example
 description: A world_countries example application.
 publish_to: none
@@ -17,6 +17,7 @@ dependencies:
     sdk: flutter
   path_to_regexp: ^0.4.0
   quiver: ^3.2.2 # From Google
+  rapidfuzz: ^0.1.1
   world_countries:
     path: ../
 

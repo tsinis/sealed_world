@@ -10,6 +10,7 @@ import "../../interfaces/material_context_interface.dart";
 import "../../interfaces/searchable_interface.dart";
 import "../../mixins/popped_mixin.dart";
 import "../../mixins/properties_convertible_mixin.dart";
+import "../../models/typedefs.dart";
 import "../base_widgets/stateful_indexed_list_view.dart";
 import "indexed_list_view_builder.dart";
 import "search_list_listenable_builder.dart";
@@ -64,6 +65,8 @@ class SearchableIndexedListViewBuilder<T extends Object>
   ///   bar.
   /// * [searchIn] is the optional function to extract search strings from the
   ///   items.
+  /// * [onSearchResultsBuilder] is the optional function to customize the build
+  ///   of the search results.
   /// * [caseSensitiveSearch] is a boolean indicating whether the search is
   ///   case-sensitive.
   /// * [startWithSearch] is a boolean indicating whether the search should only
@@ -108,6 +111,7 @@ class SearchableIndexedListViewBuilder<T extends Object>
     this.searchIn,
     this.startWithSearch = true,
     this.textController,
+    this.onSearchResultsBuilder,
 
     /// If not specified uses `PickersThemeData.showHeader` and fallbacks to
     /// items count condition `if (items.length > 5)`, according to the Hick's
@@ -129,6 +133,10 @@ class SearchableIndexedListViewBuilder<T extends Object>
   /// A boolean indicating whether to start search with the search string.
   @override
   final bool startWithSearch;
+
+  @override
+  final Iterable<T> Function(String query, SearchMap<T> map)?
+  onSearchResultsBuilder;
 
   @override
   State<SearchableIndexedListViewBuilder<T>> createState() =>

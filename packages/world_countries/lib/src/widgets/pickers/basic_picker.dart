@@ -1,4 +1,4 @@
-// ignore_for_file: avoid-unnecessary-nullable-return-type
+// ignore_for_file: avoid-unnecessary-nullable-return-type, avoid-long-files
 
 // ignore: lines_longer_than_80_chars, Might be a breaking change.
 // ignore_for_file: long-parameter-list, avoid-nullable-parameters-with-default-values, prefer-correct-handler-name
@@ -12,6 +12,7 @@ import "package:world_flags/world_flags.dart";
 import "../../constants/ui_constants.dart";
 import "../../extensions/build_context_extension.dart";
 import "../../extensions/duration_extension.dart";
+import "../../extensions/iterable_search_map_extension.dart";
 import "../../extensions/world_countries_build_context_extension.dart";
 import "../../helpers/typed_locale_delegate.dart";
 import "../../interfaces/basic_picker_interface.dart";
@@ -113,6 +114,7 @@ abstract class BasicPicker<T extends IsoTranslated>
     super.textBaseline,
     super.textDirection,
     super.verticalDirection,
+    super.onSearchResultsBuilder,
     this.searchBar,
     this.searchBarPadding, // Default: EdgeInsets.only(left:8, top:8, right:8).
     this.showClearButton = true,
@@ -170,11 +172,16 @@ abstract class BasicPicker<T extends IsoTranslated>
     // SDK bug fixed in v3.27.0: https://github.com/flutter/flutter/pull/155219
     SearchController controller,
   ) {
-    final x = items.where(
-      (item) => (searchIn?.call(item, context) ?? defaultSearch(item, context))
-          .toSet()
-          .any((itemText) => compareWithTextInput(controller, itemText)),
-    );
+    final text = controller.text.trim();
+    final map = items.searchMap(context, searchIn ?? defaultSearch);
+    final x =
+        text.isNotEmpty
+            ? (onSearchResultsBuilder?.call(text, map) ??
+                items.searchResults(
+                  map,
+                  (itemText) => compareWithTextInput(controller, itemText),
+                ))
+            : items;
 
     return List<Widget>.generate(
       x.length,
@@ -314,6 +321,7 @@ abstract class BasicPicker<T extends IsoTranslated>
     ThemeData? appBarThemeData,
   }) async {
     T? result;
+    final searchMap = items.searchMap(context, searchIn ?? defaultSearch);
     // ignore: avoid-late-keyword, avoid-unnecessary-local-late, it's not.
     late final ImplicitSearchDelegate<T> delegate;
     // ignore: avoid-local-functions, lazy delegate.
@@ -325,12 +333,15 @@ abstract class BasicPicker<T extends IsoTranslated>
     delegate = ImplicitSearchDelegate<T>(
       items,
       resultsBuilder:
-          (newContext, items) => copyWith(
+          (_, items) => copyWith(
+            key: onSearchResultsBuilder == null ? null : ValueKey(items.length),
             items: items,
             onSelect: closeOnSelect,
             showSearchBar: false,
           ),
       searchIn: searchIn ?? defaultSearch,
+      searchMap: searchMap,
+      onSearchResultsBuilder: onSearchResultsBuilder,
       appBarBottom: appBarBottom,
       appBarThemeData: appBarThemeData,
       backIconButton: backIconButton,
@@ -498,6 +509,8 @@ abstract class BasicPicker<T extends IsoTranslated>
     TextDirection? textDirection,
     VerticalDirection? verticalDirection,
     Iterable<String> Function(T item, BuildContext context)? searchIn,
+    Iterable<T> Function(String query, SearchMap<T> map)?
+    onSearchResultsBuilder,
     Widget? Function(ItemProperties<T> itemProperties, {bool? isDense})?
     itemBuilder,
     TypedLocale? translation,

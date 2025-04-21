@@ -45,6 +45,9 @@ class TypedLocaleDelegate implements LocalizationsDelegate<TypedLocale?> {
   /// it sets the languages for translation cache.
   /// The [asyncTranslationCacheProcessing] parameter is optional. If provided,
   /// it sets the async translation cache processing. Default to `true`.
+  /// The [l10nFormatter] parameter is optional. If provided, it customizes how
+  /// ISO translations are formatted. It takes a [TypedLocale] and an
+  /// [IsoTranslated] as input and returns a formatted string.
   const TypedLocaleDelegate({
     this.fallbackLanguage,
     this.localeMapResolution = defaultLocaleMapResolution,
@@ -53,10 +56,12 @@ class TypedLocaleDelegate implements LocalizationsDelegate<TypedLocale?> {
     Iterable<FiatCurrency> currenciesForTranslationCache = FiatCurrency.list,
     Iterable<NaturalLanguage> languagesForTranslationCache =
         NaturalLanguage.list,
+    L10NFormatter<TypedLocale, IsoTranslated>? l10nFormatter,
   }) : _asyncTranslationCacheProcessing = asyncTranslationCacheProcessing,
        _countriesForTranslationCache = countriesForTranslationCache,
        _currenciesForTranslationCache = currenciesForTranslationCache,
-       _languagesForTranslationCache = languagesForTranslationCache;
+       _languagesForTranslationCache = languagesForTranslationCache,
+       _l10nFormatter = l10nFormatter;
 
   /// Creates an instance of [TypedLocaleDelegate] without translations caching.
   /// This is useful when you don't want to cache the translations for the
@@ -75,6 +80,9 @@ class TypedLocaleDelegate implements LocalizationsDelegate<TypedLocale?> {
   /// it sets the languages for translation cache.
   /// The [asyncTranslationCacheProcessing] parameter is optional. If provided,
   /// it sets the async translation cache processing. Default to `true`.
+  /// The [l10nFormatter] parameter is optional. If provided, it customizes how
+  /// ISO translations are formatted. It takes a [TypedLocale] and an
+  /// [IsoTranslated] as input and returns a formatted string.
   const TypedLocaleDelegate.selectiveCache({
     this.fallbackLanguage,
     this.localeMapResolution = defaultLocaleMapResolution,
@@ -82,10 +90,12 @@ class TypedLocaleDelegate implements LocalizationsDelegate<TypedLocale?> {
     Iterable<WorldCountry> countriesForTranslationCache = const {},
     Iterable<FiatCurrency> currenciesForTranslationCache = const {},
     Iterable<NaturalLanguage> languagesForTranslationCache = const {},
+    L10NFormatter<TypedLocale, IsoTranslated>? l10nFormatter,
   }) : _asyncTranslationCacheProcessing = asyncTranslationCacheProcessing,
        _countriesForTranslationCache = countriesForTranslationCache,
        _currenciesForTranslationCache = currenciesForTranslationCache,
-       _languagesForTranslationCache = languagesForTranslationCache;
+       _languagesForTranslationCache = languagesForTranslationCache,
+       _l10nFormatter = l10nFormatter;
 
   /// A constant list of [LocaleEntry] objects that define the default
   /// resolution for locale mapping.
@@ -129,6 +139,14 @@ class TypedLocaleDelegate implements LocalizationsDelegate<TypedLocale?> {
   final Iterable<FiatCurrency> _currenciesForTranslationCache;
   final Iterable<NaturalLanguage> _languagesForTranslationCache;
 
+  /// A formatter for customizing how ISO translations are formatted.
+  ///
+  /// When provided, this formatter is used to customize the string
+  /// representation of ISO object translations. It takes a [TypedLocale] and an
+  /// [IsoTranslated] object as input and returns a formatted string.
+  // ignore: prefer-correct-callback-field-name, it's not a builder.
+  final L10NFormatter<TypedLocale, IsoTranslated>? _l10nFormatter;
+
   @override
   bool isSupported(Locale locale) => _toTypedLocale(locale) != null;
 
@@ -146,11 +164,13 @@ class TypedLocaleDelegate implements LocalizationsDelegate<TypedLocale?> {
           languages: _languagesForTranslationCache,
           currencies: _currenciesForTranslationCache,
           countries: _countriesForTranslationCache,
+          l10nFormatter: _l10nFormatter,
         )
         : typedLocale?.copyWithTranslationsCache(
           languages: _languagesForTranslationCache,
           currencies: _currenciesForTranslationCache,
           countries: _countriesForTranslationCache,
+          l10nFormatter: _l10nFormatter,
         );
   }
 
@@ -165,7 +185,8 @@ class TypedLocaleDelegate implements LocalizationsDelegate<TypedLocale?> {
       "asyncTranslationCacheProcessing: $_asyncTranslationCacheProcessing, "
       "countriesForTranslationCache: $_countriesForTranslationCache, "
       "currenciesForTranslationCache: $_currenciesForTranslationCache, "
-      "languagesForTranslationCache: $_languagesForTranslationCache,)";
+      "languagesForTranslationCache: $_languagesForTranslationCache, "
+      "l10nFormatter: ${_l10nFormatter.runtimeType},)";
 
   @override
   Type get type => TypedLocale;

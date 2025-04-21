@@ -14,7 +14,7 @@ class AboutAppDialog extends StatelessWidget {
   @override
   Widget build(BuildContext context) => AboutDialog(
     applicationName: "world_countries",
-    applicationVersion: "3.4.0",
+    applicationVersion: "3.5.0",
     applicationIcon: SizedBox.square(
       dimension: 48,
       child: DecoratedBox(

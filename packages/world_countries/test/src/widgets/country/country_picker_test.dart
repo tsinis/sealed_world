@@ -166,19 +166,102 @@ void main() => group("$CountryPicker", () {
     }
   });
 
-  testWidgets("searchSuggestions()", (tester) async {
-    await tester.pumpMaterialApp(
-      SearchAnchor.bar(
-        suggestionsBuilder: const CountryPicker().searchSuggestions,
-      ),
-    );
-    final tile = find.byType(CountryTile);
-    expect(tile, findsNothing);
-    await tester.tapAndSettle(find.byIcon(Icons.search));
-    expect(tile, findsWidgets);
-    await tester.tapAndSettle(tile.first);
-    // ignore: avoid-duplicate-test-assertions, tile will be missing after.
-    expect(tile, findsNothing);
+  group("searchSuggestions()", () {
+    const firstCountry = CountryPrk();
+    const lastCountry = CountryKor();
+    const neverFoundCountry = CountryAbw();
+
+    testWidgets("tap on tile", (tester) async {
+      await tester.pumpMaterialApp(
+        SearchAnchor.bar(
+          suggestionsBuilder: const CountryPicker().searchSuggestions,
+        ),
+      );
+      final tile = find.byType(CountryTile);
+      expect(tile, findsNothing);
+      await tester.tapAndSettle(find.byIcon(Icons.search));
+      expect(tile, findsWidgets);
+      await tester.tapAndSettle(tile.first);
+      // ignore: avoid-duplicate-test-assertions, tile will be missing after.
+      expect(tile, findsNothing);
+    });
+
+    testWidgets("default search", (tester) async {
+      await tester.pumpMaterialApp(
+        SearchAnchor.bar(
+          suggestionsBuilder: const CountryPicker().searchSuggestions,
+        ),
+      );
+
+      final tile = find.byType(CountryFlag);
+      expect(tile, findsNothing);
+      await tester.tapAndSettle(find.byIcon(Icons.search));
+      await tester.enterText(
+        find.byType(TextField).first,
+        firstCountry.internationalName,
+      );
+      await tester.pumpAndSettle();
+      expect(
+        find.byWidgetPredicate(
+          (widget) => widget is CountryFlag && widget.country == firstCountry,
+        ),
+        findsWidgets,
+      );
+      expect(
+        find.byWidgetPredicate(
+          (widget) => widget is CountryFlag && widget.country == lastCountry,
+        ),
+        findsNothing,
+      );
+      expect(
+        find.byWidgetPredicate(
+          (widget) =>
+              widget is CountryFlag && widget.country == neverFoundCountry,
+        ),
+        findsNothing,
+      );
+    });
+
+    testWidgets("with onSearchResultsBuilder", (tester) async {
+      await tester.pumpMaterialApp(
+        SearchAnchor.bar(
+          suggestionsBuilder:
+              CountryPicker(
+                onSearchResultsBuilder:
+                    (query, _) =>
+                        query.isEmpty ? const [] : [firstCountry, lastCountry],
+              ).searchSuggestions,
+        ),
+      );
+
+      final tile = find.byType(CountryFlag);
+      expect(tile, findsNothing);
+      await tester.tapAndSettle(find.byIcon(Icons.search));
+      await tester.enterText(
+        find.byType(TextField).first,
+        firstCountry.internationalName,
+      );
+      await tester.pumpAndSettle();
+      expect(
+        find.byWidgetPredicate(
+          (widget) => widget is CountryFlag && widget.country == firstCountry,
+        ),
+        findsWidgets,
+      );
+      expect(
+        find.byWidgetPredicate(
+          (widget) => widget is CountryFlag && widget.country == lastCountry,
+        ),
+        findsWidgets,
+      );
+      expect(
+        find.byWidgetPredicate(
+          (widget) =>
+              widget is CountryFlag && widget.country == neverFoundCountry,
+        ),
+        findsNothing,
+      );
+    });
   });
 
   testWidgets("in $WidgetsApp with sorted countries", (tester) async {

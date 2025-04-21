@@ -44,6 +44,7 @@ class LanguagePicker extends BasicPicker<NaturalLanguage> {
     super.searchBar,
     super.searchBarPadding,
     super.searchIn,
+    super.onSearchResultsBuilder,
     super.separator,
     super.showClearButton,
     super.showSearchBar,
@@ -131,6 +132,11 @@ class LanguagePicker extends BasicPicker<NaturalLanguage> {
     VerticalDirection? verticalDirection,
     Iterable<String> Function(NaturalLanguage language, BuildContext context)?
     searchIn,
+    Iterable<NaturalLanguage> Function(
+      String query,
+      Map<NaturalLanguage, Set<String>> map,
+    )?
+    onSearchResultsBuilder,
     Widget? Function(
       ItemProperties<NaturalLanguage> itemProperties, {
       bool? isDense,
@@ -168,6 +174,8 @@ class LanguagePicker extends BasicPicker<NaturalLanguage> {
     searchBar: searchBar ?? this.searchBar,
     searchBarPadding: searchBarPadding ?? this.searchBarPadding,
     searchIn: searchIn ?? this.searchIn,
+    onSearchResultsBuilder:
+        onSearchResultsBuilder ?? this.onSearchResultsBuilder,
     separator: separator ?? this.separator,
     showClearButton: showClearButton ?? this.showClearButton,
     showSearchBar: showSearchBar ?? showHeader,

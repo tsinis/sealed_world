@@ -589,6 +589,14 @@ packages:
       url: "https://pub.dev"
     source: hosted
     version: "3.2.2"
+  rapidfuzz:
+    dependency: transitive
+    description:
+      name: rapidfuzz
+      sha256: "1003dde982acfdf7c06d1c0c75ec5c5657261ba505ac5f33f309ea10e9db04a3"
+      url: "https://pub.dev"
+    source: hosted
+    version: "0.1.1"
   rw_git:
     dependency: transitive
     description:
