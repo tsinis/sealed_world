@@ -103,5 +103,7 @@ abstract class SearchDelegateInterface<T extends Object>
   final Iterable<T> Function(String query, SearchMap<T> map)?
   onSearchResultsBuilder;
 
+  /// A map of search results to their corresponding items. That can be used to
+  /// cache the search results for performance optimization.
   final SearchMap<T> searchMap; // TODO: Mandatory in the next major release.
 }
