@@ -1,3 +1,27 @@
+## 3.5.0
+
+NEW FEATURES
+
+- Added support for [custom search result building](https://github.com/tsinis/sealed_world/tree/main/packages/world_countries#how-to-use-fuzzy-or-similar-search-functionality) in all pickers and searchable widgets via a new `onSearchResultsBuilder` parameter, enabling advanced search algorithms like fuzzy search.
+- Introduced customizable localization formatting for ISO translations with a new [L10N formatter callback](https://github.com/tsinis/sealed_world/tree/main/packages/world_countries#how-to-formatadjust-automatic-global-translations-of-iso-objects-in-my-app). [Kudos to @MaxLap](https://github.com/tsinis/sealed_world/discussions/325).
+- Added the `regionalCode` getter to the `BasicTypedLocale` to provide a convenient alias for the `countryCode` property, improving consistency when working with regional locales.
+
+DOCUMENTATION
+
+- Update dartdoc documentation for countries to use backticks for ISO code formatting.
+- Enhanced documentation with new FAQ sections and detailed examples on customizing search and localization.
+
+REFACTOR
+
+- Search performance has been significantly improved in pickers (that feature a search bar) and the search delegate, by implementing search map caching.
+- Replaced text-based flag rendering with vector path drawing for Iraq, Afghanistan, Saudi Arabia and U.S. Virgin Islands flags, improving rendering consistency on all platforms.
+- Deprecated `flagTextStyleOverride` getter and setter (visible for testing) as text-based painters were removed.
+
+TESTS
+
+- Updated goldens for Iraq, Afghanistan, Saudi Arabia and U.S. Virgin Islands flags.
+- Expanded test coverage for custom search algorithms and localization formatting features.
+
 ## 3.4.0
 
 This is a DevEx release without significant changes for the users, that aims to improve developer experience when working with flags in DevTools.
