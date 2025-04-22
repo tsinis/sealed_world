@@ -22,12 +22,13 @@ jobs:
   assign:
     runs-on: ubuntu-latest
     timeout-minutes: 4
-    if: ${{ github.event.pull_request.assignee == null && join(github.event.pull_request.assignees) == '' }}
+    if: github.actor != 'dependabot[bot]'
     steps:
       - name: ✍🏻 Add Reviewer and Author Assign
-        uses: kentaro-m/auto-assign-action@v2.0.0
-        with:
-          configuration-path: ".github/workflows/config/auto-assign.yaml"
+        uses: devmyong/auto-assign@v1.0.0
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+          PR_NUMBER: ${{ github.event.number }}
 
   pr-title:
     runs-on: ubuntu-latest

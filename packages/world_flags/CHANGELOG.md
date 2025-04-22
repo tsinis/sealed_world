@@ -6,7 +6,7 @@ NEW FEATURES
 
 DOCUMENTATION
 
-- Update documentation for countries to use backticks for ISO code formatting.
+- Update dartdoc documentation for countries to use backticks for ISO code formatting.
 
 REFACTOR
 

@@ -36,4 +36,4 @@ typedef SearchMap<T extends Object> = Map<T, Set<String>>;
 /// The function takes a [MapEntry] of [IsoTranslated] and its translation
 /// as a [String], and returns a formatted [String] for the given locale.
 typedef L10NFormatter<T extends TypedLocale, Iso extends IsoTranslated> =
-    String Function(MapEntry<Iso, String> translation, T locale);
+    String Function(MapEntry<Iso, String> l10n, T locale);
