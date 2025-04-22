@@ -1,8 +1,0 @@
-runOnDraft: false
-addAssignees: true
-addReviewers: true
-reviewers:
-  - tsinis
-skipKeywords:
-  - wip
-  - draft

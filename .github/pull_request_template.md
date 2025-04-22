@@ -2,7 +2,7 @@
 
   Thanks for contributing!
 
-  Please describe your changes below and a general summary in the title.
+  Please describe your changes below, and provide a general summary in the title.
 
 -->
 
@@ -29,7 +29,7 @@ Please look at the following checklist to ensure that your PR can be accepted qu
 
 <!--- Please put an `x` in all the boxes that apply: -->
 
-- [ ] Data come from open-source resources with MIT License (if presented).
+- [ ] Data comes from open-source resources with the MIT License (if presented).
 - [ ] New code is documented and the data source is referenced (if presented).
 - [ ] Existing tests are up to date with these changes.
 - [ ] New code is fully tested (if presented).
