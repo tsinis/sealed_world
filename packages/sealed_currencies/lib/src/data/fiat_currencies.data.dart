@@ -2303,7 +2303,7 @@ class FiatSdg extends FiatCurrency {
       : super(
           code: "SDG",
           name: "Sudanese Pound",
-          symbol: "£",
+          symbol: "ج.س",
           disambiguateSymbol: "SDG",
           codeNumeric: "938",
           namesNative: const ["جنيه سوداني"],
