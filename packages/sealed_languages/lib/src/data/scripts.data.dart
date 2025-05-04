@@ -4,7 +4,7 @@ import "../model/script/writing_system.dart";
 class ScriptAdlm extends Script {
   /// Creates a instance of [ScriptAdlm] (Adlam script).
   ///
-  /// ISO 15924 Alpha code: "Adlm", ISO 15924 Numeric code: "166".
+  /// ISO 15924 Alpha code: `Adlm`, ISO 15924 Numeric code: `166`.
   const ScriptAdlm()
       : super(
           name: "Adlam",
@@ -19,7 +19,7 @@ class ScriptAdlm extends Script {
 class ScriptAfak extends Script {
   /// Creates a instance of [ScriptAfak] (Afaka script).
   ///
-  /// ISO 15924 Alpha code: "Afak", ISO 15924 Numeric code: "439".
+  /// ISO 15924 Alpha code: `Afak`, ISO 15924 Numeric code: `439`.
   const ScriptAfak()
       : super(
           name: "Afaka",
@@ -33,7 +33,7 @@ class ScriptAfak extends Script {
 class ScriptAghb extends Script {
   /// Creates a instance of [ScriptAghb] (Caucasian Albanian script).
   ///
-  /// ISO 15924 Alpha code: "Aghb", ISO 15924 Numeric code: "239".
+  /// ISO 15924 Alpha code: `Aghb`, ISO 15924 Numeric code: `239`.
   const ScriptAghb()
       : super(
           name: "Caucasian Albanian",
@@ -48,7 +48,7 @@ class ScriptAghb extends Script {
 class ScriptAhom extends Script {
   /// Creates a instance of [ScriptAhom] (Ahom, Tai Ahom script).
   ///
-  /// ISO 15924 Alpha code: "Ahom", ISO 15924 Numeric code: "338".
+  /// ISO 15924 Alpha code: `Ahom`, ISO 15924 Numeric code: `338`.
   const ScriptAhom()
       : super(
           name: "Ahom, Tai Ahom",
@@ -63,7 +63,7 @@ class ScriptAhom extends Script {
 class ScriptArab extends Script {
   /// Creates a instance of [ScriptArab] (Arabic script).
   ///
-  /// ISO 15924 Alpha code: "Arab", ISO 15924 Numeric code: "160".
+  /// ISO 15924 Alpha code: `Arab`, ISO 15924 Numeric code: `160`.
   const ScriptArab()
       : super(
           name: "Arabic",
@@ -78,7 +78,7 @@ class ScriptArab extends Script {
 class ScriptAran extends Script {
   /// Creates a instance of [ScriptAran] (Arabic (Nastaliq variant) script).
   ///
-  /// ISO 15924 Alpha code: "Aran", ISO 15924 Numeric code: "161".
+  /// ISO 15924 Alpha code: `Aran`, ISO 15924 Numeric code: `161`.
   const ScriptAran()
       : super(
           name: "Arabic (Nastaliq variant)",
@@ -92,7 +92,7 @@ class ScriptAran extends Script {
 class ScriptArmi extends Script {
   /// Creates a instance of [ScriptArmi] (Imperial Aramaic script).
   ///
-  /// ISO 15924 Alpha code: "Armi", ISO 15924 Numeric code: "124".
+  /// ISO 15924 Alpha code: `Armi`, ISO 15924 Numeric code: `124`.
   const ScriptArmi()
       : super(
           name: "Imperial Aramaic",
@@ -107,7 +107,7 @@ class ScriptArmi extends Script {
 class ScriptArmn extends Script {
   /// Creates a instance of [ScriptArmn] (Armenian script).
   ///
-  /// ISO 15924 Alpha code: "Armn", ISO 15924 Numeric code: "230".
+  /// ISO 15924 Alpha code: `Armn`, ISO 15924 Numeric code: `230`.
   const ScriptArmn()
       : super(
           name: "Armenian",
@@ -122,7 +122,7 @@ class ScriptArmn extends Script {
 class ScriptAvst extends Script {
   /// Creates a instance of [ScriptAvst] (Avestan script).
   ///
-  /// ISO 15924 Alpha code: "Avst", ISO 15924 Numeric code: "134".
+  /// ISO 15924 Alpha code: `Avst`, ISO 15924 Numeric code: `134`.
   const ScriptAvst()
       : super(
           name: "Avestan",
@@ -137,7 +137,7 @@ class ScriptAvst extends Script {
 class ScriptBali extends Script {
   /// Creates a instance of [ScriptBali] (Balinese script).
   ///
-  /// ISO 15924 Alpha code: "Bali", ISO 15924 Numeric code: "360".
+  /// ISO 15924 Alpha code: `Bali`, ISO 15924 Numeric code: `360`.
   const ScriptBali()
       : super(
           name: "Balinese",
@@ -152,7 +152,7 @@ class ScriptBali extends Script {
 class ScriptBamu extends Script {
   /// Creates a instance of [ScriptBamu] (Bamum script).
   ///
-  /// ISO 15924 Alpha code: "Bamu", ISO 15924 Numeric code: "435".
+  /// ISO 15924 Alpha code: `Bamu`, ISO 15924 Numeric code: `435`.
   const ScriptBamu()
       : super(
           name: "Bamum",
@@ -167,7 +167,7 @@ class ScriptBamu extends Script {
 class ScriptBass extends Script {
   /// Creates a instance of [ScriptBass] (Bassa Vah script).
   ///
-  /// ISO 15924 Alpha code: "Bass", ISO 15924 Numeric code: "259".
+  /// ISO 15924 Alpha code: `Bass`, ISO 15924 Numeric code: `259`.
   const ScriptBass()
       : super(
           name: "Bassa Vah",
@@ -182,7 +182,7 @@ class ScriptBass extends Script {
 class ScriptBatk extends Script {
   /// Creates a instance of [ScriptBatk] (Batak script).
   ///
-  /// ISO 15924 Alpha code: "Batk", ISO 15924 Numeric code: "365".
+  /// ISO 15924 Alpha code: `Batk`, ISO 15924 Numeric code: `365`.
   const ScriptBatk()
       : super(
           name: "Batak",
@@ -197,7 +197,7 @@ class ScriptBatk extends Script {
 class ScriptBeng extends Script {
   /// Creates a instance of [ScriptBeng] (Bengali (Bangla) script).
   ///
-  /// ISO 15924 Alpha code: "Beng", ISO 15924 Numeric code: "325".
+  /// ISO 15924 Alpha code: `Beng`, ISO 15924 Numeric code: `325`.
   const ScriptBeng()
       : super(
           name: "Bengali (Bangla)",
@@ -212,7 +212,7 @@ class ScriptBeng extends Script {
 class ScriptBhks extends Script {
   /// Creates a instance of [ScriptBhks] (Bhaiksuki script).
   ///
-  /// ISO 15924 Alpha code: "Bhks", ISO 15924 Numeric code: "334".
+  /// ISO 15924 Alpha code: `Bhks`, ISO 15924 Numeric code: `334`.
   const ScriptBhks()
       : super(
           name: "Bhaiksuki",
@@ -227,7 +227,7 @@ class ScriptBhks extends Script {
 class ScriptBlis extends Script {
   /// Creates a instance of [ScriptBlis] (Blissymbols script).
   ///
-  /// ISO 15924 Alpha code: "Blis", ISO 15924 Numeric code: "550".
+  /// ISO 15924 Alpha code: `Blis`, ISO 15924 Numeric code: `550`.
   const ScriptBlis()
       : super(
           name: "Blissymbols",
@@ -241,7 +241,7 @@ class ScriptBlis extends Script {
 class ScriptBopo extends Script {
   /// Creates a instance of [ScriptBopo] (Bopomofo script).
   ///
-  /// ISO 15924 Alpha code: "Bopo", ISO 15924 Numeric code: "285".
+  /// ISO 15924 Alpha code: `Bopo`, ISO 15924 Numeric code: `285`.
   const ScriptBopo()
       : super(
           name: "Bopomofo",
@@ -256,7 +256,7 @@ class ScriptBopo extends Script {
 class ScriptBrah extends Script {
   /// Creates a instance of [ScriptBrah] (Brahmi script).
   ///
-  /// ISO 15924 Alpha code: "Brah", ISO 15924 Numeric code: "300".
+  /// ISO 15924 Alpha code: `Brah`, ISO 15924 Numeric code: `300`.
   const ScriptBrah()
       : super(
           name: "Brahmi",
@@ -271,7 +271,7 @@ class ScriptBrah extends Script {
 class ScriptBrai extends Script {
   /// Creates a instance of [ScriptBrai] (Braille script).
   ///
-  /// ISO 15924 Alpha code: "Brai", ISO 15924 Numeric code: "570".
+  /// ISO 15924 Alpha code: `Brai`, ISO 15924 Numeric code: `570`.
   const ScriptBrai()
       : super(
           name: "Braille",
@@ -286,7 +286,7 @@ class ScriptBrai extends Script {
 class ScriptBugi extends Script {
   /// Creates a instance of [ScriptBugi] (Buginese script).
   ///
-  /// ISO 15924 Alpha code: "Bugi", ISO 15924 Numeric code: "367".
+  /// ISO 15924 Alpha code: `Bugi`, ISO 15924 Numeric code: `367`.
   const ScriptBugi()
       : super(
           name: "Buginese",
@@ -301,7 +301,7 @@ class ScriptBugi extends Script {
 class ScriptBuhd extends Script {
   /// Creates a instance of [ScriptBuhd] (Buhid script).
   ///
-  /// ISO 15924 Alpha code: "Buhd", ISO 15924 Numeric code: "372".
+  /// ISO 15924 Alpha code: `Buhd`, ISO 15924 Numeric code: `372`.
   const ScriptBuhd()
       : super(
           name: "Buhid",
@@ -316,7 +316,7 @@ class ScriptBuhd extends Script {
 class ScriptCakm extends Script {
   /// Creates a instance of [ScriptCakm] (Chakma script).
   ///
-  /// ISO 15924 Alpha code: "Cakm", ISO 15924 Numeric code: "349".
+  /// ISO 15924 Alpha code: `Cakm`, ISO 15924 Numeric code: `349`.
   const ScriptCakm()
       : super(
           name: "Chakma",
@@ -332,7 +332,7 @@ class ScriptCans extends Script {
   /// Creates a instance of [ScriptCans]
   /// (Unified Canadian Aboriginal Syllabics script).
   ///
-  /// ISO 15924 Alpha code: "Cans", ISO 15924 Numeric code: "440".
+  /// ISO 15924 Alpha code: `Cans`, ISO 15924 Numeric code: `440`.
   const ScriptCans()
       : super(
           name: "Unified Canadian Aboriginal Syllabics",
@@ -347,7 +347,7 @@ class ScriptCans extends Script {
 class ScriptCari extends Script {
   /// Creates a instance of [ScriptCari] (Carian script).
   ///
-  /// ISO 15924 Alpha code: "Cari", ISO 15924 Numeric code: "201".
+  /// ISO 15924 Alpha code: `Cari`, ISO 15924 Numeric code: `201`.
   const ScriptCari()
       : super(
           name: "Carian",
@@ -362,7 +362,7 @@ class ScriptCari extends Script {
 class ScriptCham extends Script {
   /// Creates a instance of [ScriptCham] (Cham script).
   ///
-  /// ISO 15924 Alpha code: "Cham", ISO 15924 Numeric code: "358".
+  /// ISO 15924 Alpha code: `Cham`, ISO 15924 Numeric code: `358`.
   const ScriptCham()
       : super(
           name: "Cham",
@@ -377,7 +377,7 @@ class ScriptCham extends Script {
 class ScriptCher extends Script {
   /// Creates a instance of [ScriptCher] (Cherokee script).
   ///
-  /// ISO 15924 Alpha code: "Cher", ISO 15924 Numeric code: "445".
+  /// ISO 15924 Alpha code: `Cher`, ISO 15924 Numeric code: `445`.
   const ScriptCher()
       : super(
           name: "Cherokee",
@@ -392,7 +392,7 @@ class ScriptCher extends Script {
 class ScriptChrs extends Script {
   /// Creates a instance of [ScriptChrs] (Chorasmian script).
   ///
-  /// ISO 15924 Alpha code: "Chrs", ISO 15924 Numeric code: "109".
+  /// ISO 15924 Alpha code: `Chrs`, ISO 15924 Numeric code: `109`.
   const ScriptChrs()
       : super(
           name: "Chorasmian",
@@ -407,7 +407,7 @@ class ScriptChrs extends Script {
 class ScriptCirt extends Script {
   /// Creates a instance of [ScriptCirt] (Cirth script).
   ///
-  /// ISO 15924 Alpha code: "Cirt", ISO 15924 Numeric code: "291".
+  /// ISO 15924 Alpha code: `Cirt`, ISO 15924 Numeric code: `291`.
   const ScriptCirt()
       : super(
           name: "Cirth",
@@ -421,7 +421,7 @@ class ScriptCirt extends Script {
 class ScriptCopt extends Script {
   /// Creates a instance of [ScriptCopt] (Coptic script).
   ///
-  /// ISO 15924 Alpha code: "Copt", ISO 15924 Numeric code: "204".
+  /// ISO 15924 Alpha code: `Copt`, ISO 15924 Numeric code: `204`.
   const ScriptCopt()
       : super(
           name: "Coptic",
@@ -436,7 +436,7 @@ class ScriptCopt extends Script {
 class ScriptCpmn extends Script {
   /// Creates a instance of [ScriptCpmn] (Cypro-Minoan script).
   ///
-  /// ISO 15924 Alpha code: "Cpmn", ISO 15924 Numeric code: "402".
+  /// ISO 15924 Alpha code: `Cpmn`, ISO 15924 Numeric code: `402`.
   const ScriptCpmn()
       : super(
           name: "Cypro-Minoan",
@@ -451,7 +451,7 @@ class ScriptCpmn extends Script {
 class ScriptCprt extends Script {
   /// Creates a instance of [ScriptCprt] (Cypriot syllabary script).
   ///
-  /// ISO 15924 Alpha code: "Cprt", ISO 15924 Numeric code: "403".
+  /// ISO 15924 Alpha code: `Cprt`, ISO 15924 Numeric code: `403`.
   const ScriptCprt()
       : super(
           name: "Cypriot syllabary",
@@ -466,7 +466,7 @@ class ScriptCprt extends Script {
 class ScriptCyrl extends Script {
   /// Creates a instance of [ScriptCyrl] (Cyrillic script).
   ///
-  /// ISO 15924 Alpha code: "Cyrl", ISO 15924 Numeric code: "220".
+  /// ISO 15924 Alpha code: `Cyrl`, ISO 15924 Numeric code: `220`.
   const ScriptCyrl()
       : super(
           name: "Cyrillic",
@@ -482,7 +482,7 @@ class ScriptCyrs extends Script {
   /// Creates a instance of [ScriptCyrs]
   /// (Cyrillic (Old Church Slavonic variant) script).
   ///
-  /// ISO 15924 Alpha code: "Cyrs", ISO 15924 Numeric code: "221".
+  /// ISO 15924 Alpha code: `Cyrs`, ISO 15924 Numeric code: `221`.
   const ScriptCyrs()
       : super(
           name: "Cyrillic (Old Church Slavonic variant)",
@@ -496,7 +496,7 @@ class ScriptCyrs extends Script {
 class ScriptDeva extends Script {
   /// Creates a instance of [ScriptDeva] (Devanagari (Nagari) script).
   ///
-  /// ISO 15924 Alpha code: "Deva", ISO 15924 Numeric code: "315".
+  /// ISO 15924 Alpha code: `Deva`, ISO 15924 Numeric code: `315`.
   const ScriptDeva()
       : super(
           name: "Devanagari (Nagari)",
@@ -511,7 +511,7 @@ class ScriptDeva extends Script {
 class ScriptDiak extends Script {
   /// Creates a instance of [ScriptDiak] (Dives Akuru script).
   ///
-  /// ISO 15924 Alpha code: "Diak", ISO 15924 Numeric code: "342".
+  /// ISO 15924 Alpha code: `Diak`, ISO 15924 Numeric code: `342`.
   const ScriptDiak()
       : super(
           name: "Dives Akuru",
@@ -526,7 +526,7 @@ class ScriptDiak extends Script {
 class ScriptDogr extends Script {
   /// Creates a instance of [ScriptDogr] (Dogra script).
   ///
-  /// ISO 15924 Alpha code: "Dogr", ISO 15924 Numeric code: "328".
+  /// ISO 15924 Alpha code: `Dogr`, ISO 15924 Numeric code: `328`.
   const ScriptDogr()
       : super(
           name: "Dogra",
@@ -541,7 +541,7 @@ class ScriptDogr extends Script {
 class ScriptDsrt extends Script {
   /// Creates a instance of [ScriptDsrt] (Deseret (Mormon) script).
   ///
-  /// ISO 15924 Alpha code: "Dsrt", ISO 15924 Numeric code: "250".
+  /// ISO 15924 Alpha code: `Dsrt`, ISO 15924 Numeric code: `250`.
   const ScriptDsrt()
       : super(
           name: "Deseret (Mormon)",
@@ -557,7 +557,7 @@ class ScriptDupl extends Script {
   /// Creates a instance of [ScriptDupl]
   /// (Duployan shorthand, Duployan stenography script).
   ///
-  /// ISO 15924 Alpha code: "Dupl", ISO 15924 Numeric code: "755".
+  /// ISO 15924 Alpha code: `Dupl`, ISO 15924 Numeric code: `755`.
   const ScriptDupl()
       : super(
           name: "Duployan shorthand, Duployan stenography",
@@ -572,7 +572,7 @@ class ScriptDupl extends Script {
 class ScriptEgyd extends Script {
   /// Creates a instance of [ScriptEgyd] (Egyptian demotic script).
   ///
-  /// ISO 15924 Alpha code: "Egyd", ISO 15924 Numeric code: "070".
+  /// ISO 15924 Alpha code: `Egyd`, ISO 15924 Numeric code: `070`.
   const ScriptEgyd()
       : super(
           name: "Egyptian demotic",
@@ -586,7 +586,7 @@ class ScriptEgyd extends Script {
 class ScriptEgyh extends Script {
   /// Creates a instance of [ScriptEgyh] (Egyptian hieratic script).
   ///
-  /// ISO 15924 Alpha code: "Egyh", ISO 15924 Numeric code: "060".
+  /// ISO 15924 Alpha code: `Egyh`, ISO 15924 Numeric code: `060`.
   const ScriptEgyh()
       : super(
           name: "Egyptian hieratic",
@@ -600,7 +600,7 @@ class ScriptEgyh extends Script {
 class ScriptEgyp extends Script {
   /// Creates a instance of [ScriptEgyp] (Egyptian hieroglyphs script).
   ///
-  /// ISO 15924 Alpha code: "Egyp", ISO 15924 Numeric code: "050".
+  /// ISO 15924 Alpha code: `Egyp`, ISO 15924 Numeric code: `050`.
   const ScriptEgyp()
       : super(
           name: "Egyptian hieroglyphs",
@@ -615,7 +615,7 @@ class ScriptEgyp extends Script {
 class ScriptElba extends Script {
   /// Creates a instance of [ScriptElba] (Elbasan script).
   ///
-  /// ISO 15924 Alpha code: "Elba", ISO 15924 Numeric code: "226".
+  /// ISO 15924 Alpha code: `Elba`, ISO 15924 Numeric code: `226`.
   const ScriptElba()
       : super(
           name: "Elbasan",
@@ -630,7 +630,7 @@ class ScriptElba extends Script {
 class ScriptElym extends Script {
   /// Creates a instance of [ScriptElym] (Elymaic script).
   ///
-  /// ISO 15924 Alpha code: "Elym", ISO 15924 Numeric code: "128".
+  /// ISO 15924 Alpha code: `Elym`, ISO 15924 Numeric code: `128`.
   const ScriptElym()
       : super(
           name: "Elymaic",
@@ -645,7 +645,7 @@ class ScriptElym extends Script {
 class ScriptEthi extends Script {
   /// Creates a instance of [ScriptEthi] (Ethiopic (Geʻez) script).
   ///
-  /// ISO 15924 Alpha code: "Ethi", ISO 15924 Numeric code: "430".
+  /// ISO 15924 Alpha code: `Ethi`, ISO 15924 Numeric code: `430`.
   const ScriptEthi()
       : super(
           name: "Ethiopic (Geʻez)",
@@ -661,7 +661,7 @@ class ScriptGeok extends Script {
   /// Creates a instance of [ScriptGeok]
   /// (Khutsuri (Asomtavruli and Nuskhuri) script).
   ///
-  /// ISO 15924 Alpha code: "Geok", ISO 15924 Numeric code: "241".
+  /// ISO 15924 Alpha code: `Geok`, ISO 15924 Numeric code: `241`.
   const ScriptGeok()
       : super(
           name: "Khutsuri (Asomtavruli and Nuskhuri)",
@@ -677,7 +677,7 @@ class ScriptGeor extends Script {
   /// Creates a instance of [ScriptGeor]
   /// (Georgian (Mkhedruli and Mtavruli) script).
   ///
-  /// ISO 15924 Alpha code: "Geor", ISO 15924 Numeric code: "240".
+  /// ISO 15924 Alpha code: `Geor`, ISO 15924 Numeric code: `240`.
   const ScriptGeor()
       : super(
           name: "Georgian (Mkhedruli and Mtavruli)",
@@ -692,7 +692,7 @@ class ScriptGeor extends Script {
 class ScriptGlag extends Script {
   /// Creates a instance of [ScriptGlag] (Glagolitic script).
   ///
-  /// ISO 15924 Alpha code: "Glag", ISO 15924 Numeric code: "225".
+  /// ISO 15924 Alpha code: `Glag`, ISO 15924 Numeric code: `225`.
   const ScriptGlag()
       : super(
           name: "Glagolitic",
@@ -707,7 +707,7 @@ class ScriptGlag extends Script {
 class ScriptGong extends Script {
   /// Creates a instance of [ScriptGong] (Gunjala Gondi script).
   ///
-  /// ISO 15924 Alpha code: "Gong", ISO 15924 Numeric code: "312".
+  /// ISO 15924 Alpha code: `Gong`, ISO 15924 Numeric code: `312`.
   const ScriptGong()
       : super(
           name: "Gunjala Gondi",
@@ -722,7 +722,7 @@ class ScriptGong extends Script {
 class ScriptGonm extends Script {
   /// Creates a instance of [ScriptGonm] (Masaram Gondi script).
   ///
-  /// ISO 15924 Alpha code: "Gonm", ISO 15924 Numeric code: "313".
+  /// ISO 15924 Alpha code: `Gonm`, ISO 15924 Numeric code: `313`.
   const ScriptGonm()
       : super(
           name: "Masaram Gondi",
@@ -737,7 +737,7 @@ class ScriptGonm extends Script {
 class ScriptGoth extends Script {
   /// Creates a instance of [ScriptGoth] (Gothic script).
   ///
-  /// ISO 15924 Alpha code: "Goth", ISO 15924 Numeric code: "206".
+  /// ISO 15924 Alpha code: `Goth`, ISO 15924 Numeric code: `206`.
   const ScriptGoth()
       : super(
           name: "Gothic",
@@ -752,7 +752,7 @@ class ScriptGoth extends Script {
 class ScriptGran extends Script {
   /// Creates a instance of [ScriptGran] (Grantha script).
   ///
-  /// ISO 15924 Alpha code: "Gran", ISO 15924 Numeric code: "343".
+  /// ISO 15924 Alpha code: `Gran`, ISO 15924 Numeric code: `343`.
   const ScriptGran()
       : super(
           name: "Grantha",
@@ -767,7 +767,7 @@ class ScriptGran extends Script {
 class ScriptGrek extends Script {
   /// Creates a instance of [ScriptGrek] (Greek script).
   ///
-  /// ISO 15924 Alpha code: "Grek", ISO 15924 Numeric code: "200".
+  /// ISO 15924 Alpha code: `Grek`, ISO 15924 Numeric code: `200`.
   const ScriptGrek()
       : super(
           name: "Greek",
@@ -782,7 +782,7 @@ class ScriptGrek extends Script {
 class ScriptGujr extends Script {
   /// Creates a instance of [ScriptGujr] (Gujarati script).
   ///
-  /// ISO 15924 Alpha code: "Gujr", ISO 15924 Numeric code: "320".
+  /// ISO 15924 Alpha code: `Gujr`, ISO 15924 Numeric code: `320`.
   const ScriptGujr()
       : super(
           name: "Gujarati",
@@ -797,7 +797,7 @@ class ScriptGujr extends Script {
 class ScriptGuru extends Script {
   /// Creates a instance of [ScriptGuru] (Gurmukhi script).
   ///
-  /// ISO 15924 Alpha code: "Guru", ISO 15924 Numeric code: "310".
+  /// ISO 15924 Alpha code: `Guru`, ISO 15924 Numeric code: `310`.
   const ScriptGuru()
       : super(
           name: "Gurmukhi",
@@ -814,7 +814,7 @@ class ScriptHanb extends Script {
   /// Creates a instance of [ScriptHanb]
   /// (Han with Bopomofo (alias for Han + Bopomofo) script).
   ///
-  /// ISO 15924 Alpha code: "Hanb", ISO 15924 Numeric code: "503".
+  /// ISO 15924 Alpha code: `Hanb`, ISO 15924 Numeric code: `503`.
   const ScriptHanb()
       : super(
           name: "Han with Bopomofo (alias for Han + Bopomofo)",
@@ -828,7 +828,7 @@ class ScriptHanb extends Script {
 class ScriptHang extends Script {
   /// Creates a instance of [ScriptHang] (Hangul (Hangŭl, Hangeul) script).
   ///
-  /// ISO 15924 Alpha code: "Hang", ISO 15924 Numeric code: "286".
+  /// ISO 15924 Alpha code: `Hang`, ISO 15924 Numeric code: `286`.
   const ScriptHang()
       : super(
           name: "Hangul (Hangŭl, Hangeul)",
@@ -843,7 +843,7 @@ class ScriptHang extends Script {
 class ScriptHani extends Script {
   /// Creates a instance of [ScriptHani] (Han (Hanzi, Kanji, Hanja) script).
   ///
-  /// ISO 15924 Alpha code: "Hani", ISO 15924 Numeric code: "500".
+  /// ISO 15924 Alpha code: `Hani`, ISO 15924 Numeric code: `500`.
   const ScriptHani()
       : super(
           name: "Han (Hanzi, Kanji, Hanja)",
@@ -858,7 +858,7 @@ class ScriptHani extends Script {
 class ScriptHano extends Script {
   /// Creates a instance of [ScriptHano] (Hanunoo (Hanunóo) script).
   ///
-  /// ISO 15924 Alpha code: "Hano", ISO 15924 Numeric code: "371".
+  /// ISO 15924 Alpha code: `Hano`, ISO 15924 Numeric code: `371`.
   const ScriptHano()
       : super(
           name: "Hanunoo (Hanunóo)",
@@ -873,7 +873,7 @@ class ScriptHano extends Script {
 class ScriptHans extends Script {
   /// Creates a instance of [ScriptHans] (Han (Simplified variant) script).
   ///
-  /// ISO 15924 Alpha code: "Hans", ISO 15924 Numeric code: "501".
+  /// ISO 15924 Alpha code: `Hans`, ISO 15924 Numeric code: `501`.
   const ScriptHans()
       : super(
           name: "Han (Simplified variant)",
@@ -887,7 +887,7 @@ class ScriptHans extends Script {
 class ScriptHant extends Script {
   /// Creates a instance of [ScriptHant] (Han (Traditional variant) script).
   ///
-  /// ISO 15924 Alpha code: "Hant", ISO 15924 Numeric code: "502".
+  /// ISO 15924 Alpha code: `Hant`, ISO 15924 Numeric code: `502`.
   const ScriptHant()
       : super(
           name: "Han (Traditional variant)",
@@ -901,7 +901,7 @@ class ScriptHant extends Script {
 class ScriptHatr extends Script {
   /// Creates a instance of [ScriptHatr] (Hatran script).
   ///
-  /// ISO 15924 Alpha code: "Hatr", ISO 15924 Numeric code: "127".
+  /// ISO 15924 Alpha code: `Hatr`, ISO 15924 Numeric code: `127`.
   const ScriptHatr()
       : super(
           name: "Hatran",
@@ -916,7 +916,7 @@ class ScriptHatr extends Script {
 class ScriptHebr extends Script {
   /// Creates a instance of [ScriptHebr] (Hebrew script).
   ///
-  /// ISO 15924 Alpha code: "Hebr", ISO 15924 Numeric code: "125".
+  /// ISO 15924 Alpha code: `Hebr`, ISO 15924 Numeric code: `125`.
   const ScriptHebr()
       : super(
           name: "Hebrew",
@@ -931,7 +931,7 @@ class ScriptHebr extends Script {
 class ScriptHira extends Script {
   /// Creates a instance of [ScriptHira] (Hiragana script).
   ///
-  /// ISO 15924 Alpha code: "Hira", ISO 15924 Numeric code: "410".
+  /// ISO 15924 Alpha code: `Hira`, ISO 15924 Numeric code: `410`.
   const ScriptHira()
       : super(
           name: "Hiragana",
@@ -948,7 +948,7 @@ class ScriptHluw extends Script {
   /// Creates a instance of [ScriptHluw] (Anatolian Hieroglyphs
   /// (Luwian Hieroglyphs, Hittite Hieroglyphs) script).
   ///
-  /// ISO 15924 Alpha code: "Hluw", ISO 15924 Numeric code: "080".
+  /// ISO 15924 Alpha code: `Hluw`, ISO 15924 Numeric code: `080`.
   const ScriptHluw()
       : super(
           name:
@@ -964,7 +964,7 @@ class ScriptHluw extends Script {
 class ScriptHmng extends Script {
   /// Creates a instance of [ScriptHmng] (Pahawh Hmong script).
   ///
-  /// ISO 15924 Alpha code: "Hmng", ISO 15924 Numeric code: "450".
+  /// ISO 15924 Alpha code: `Hmng`, ISO 15924 Numeric code: `450`.
   const ScriptHmng()
       : super(
           name: "Pahawh Hmong",
@@ -979,7 +979,7 @@ class ScriptHmng extends Script {
 class ScriptHmnp extends Script {
   /// Creates a instance of [ScriptHmnp] (Nyiakeng Puachue Hmong script).
   ///
-  /// ISO 15924 Alpha code: "Hmnp", ISO 15924 Numeric code: "451".
+  /// ISO 15924 Alpha code: `Hmnp`, ISO 15924 Numeric code: `451`.
   const ScriptHmnp()
       : super(
           name: "Nyiakeng Puachue Hmong",
@@ -996,7 +996,7 @@ class ScriptHrkt extends Script {
   /// Creates a instance of [ScriptHrkt] (Japanese syllabaries
   /// (alias for Hiragana + Katakana) script).
   ///
-  /// ISO 15924 Alpha code: "Hrkt", ISO 15924 Numeric code: "412".
+  /// ISO 15924 Alpha code: `Hrkt`, ISO 15924 Numeric code: `412`.
   const ScriptHrkt()
       : super(
           name: "Japanese syllabaries (alias for Hiragana + Katakana)",
@@ -1012,7 +1012,7 @@ class ScriptHung extends Script {
   /// Creates a instance of [ScriptHung] (Old Hungarian
   /// (Hungarian Runic) script).
   ///
-  /// ISO 15924 Alpha code: "Hung", ISO 15924 Numeric code: "176".
+  /// ISO 15924 Alpha code: `Hung`, ISO 15924 Numeric code: `176`.
   const ScriptHung()
       : super(
           name: "Old Hungarian (Hungarian Runic)",
@@ -1027,7 +1027,7 @@ class ScriptHung extends Script {
 class ScriptInds extends Script {
   /// Creates a instance of [ScriptInds] (Indus (Harappan) script).
   ///
-  /// ISO 15924 Alpha code: "Inds", ISO 15924 Numeric code: "610".
+  /// ISO 15924 Alpha code: `Inds`, ISO 15924 Numeric code: `610`.
   const ScriptInds()
       : super(
           name: "Indus (Harappan)",
@@ -1042,7 +1042,7 @@ class ScriptItal extends Script {
   /// Creates a instance of [ScriptItal] (Old Italic
   /// (Etruscan, Oscan, etc.) script).
   ///
-  /// ISO 15924 Alpha code: "Ital", ISO 15924 Numeric code: "210".
+  /// ISO 15924 Alpha code: `Ital`, ISO 15924 Numeric code: `210`.
   const ScriptItal()
       : super(
           name: "Old Italic (Etruscan, Oscan, etc.)",
@@ -1058,7 +1058,7 @@ class ScriptJamo extends Script {
   /// Creates a instance of [ScriptJamo] (Jamo
   /// (alias for Jamo subset of Hangul) script).
   ///
-  /// ISO 15924 Alpha code: "Jamo", ISO 15924 Numeric code: "284".
+  /// ISO 15924 Alpha code: `Jamo`, ISO 15924 Numeric code: `284`.
   const ScriptJamo()
       : super(
           name: "Jamo (alias for Jamo subset of Hangul)",
@@ -1072,7 +1072,7 @@ class ScriptJamo extends Script {
 class ScriptJava extends Script {
   /// Creates a instance of [ScriptJava] (Javanese script).
   ///
-  /// ISO 15924 Alpha code: "Java", ISO 15924 Numeric code: "361".
+  /// ISO 15924 Alpha code: `Java`, ISO 15924 Numeric code: `361`.
   const ScriptJava()
       : super(
           name: "Javanese",
@@ -1089,7 +1089,7 @@ class ScriptJpan extends Script {
   /// Creates a instance of [ScriptJpan] (Japanese
   /// (alias for Han + Hiragana + Katakana) script).
   ///
-  /// ISO 15924 Alpha code: "Jpan", ISO 15924 Numeric code: "413".
+  /// ISO 15924 Alpha code: `Jpan`, ISO 15924 Numeric code: `413`.
   const ScriptJpan()
       : super(
           name: "Japanese (alias for Han + Hiragana + Katakana)",
@@ -1103,7 +1103,7 @@ class ScriptJpan extends Script {
 class ScriptJurc extends Script {
   /// Creates a instance of [ScriptJurc] (Jurchen script).
   ///
-  /// ISO 15924 Alpha code: "Jurc", ISO 15924 Numeric code: "510".
+  /// ISO 15924 Alpha code: `Jurc`, ISO 15924 Numeric code: `510`.
   const ScriptJurc()
       : super(
           name: "Jurchen",
@@ -1117,7 +1117,7 @@ class ScriptJurc extends Script {
 class ScriptKali extends Script {
   /// Creates a instance of [ScriptKali] (Kayah Li script).
   ///
-  /// ISO 15924 Alpha code: "Kali", ISO 15924 Numeric code: "357".
+  /// ISO 15924 Alpha code: `Kali`, ISO 15924 Numeric code: `357`.
   const ScriptKali()
       : super(
           name: "Kayah Li",
@@ -1132,7 +1132,7 @@ class ScriptKali extends Script {
 class ScriptKana extends Script {
   /// Creates a instance of [ScriptKana] (Katakana script).
   ///
-  /// ISO 15924 Alpha code: "Kana", ISO 15924 Numeric code: "411".
+  /// ISO 15924 Alpha code: `Kana`, ISO 15924 Numeric code: `411`.
   const ScriptKana()
       : super(
           name: "Katakana",
@@ -1147,7 +1147,7 @@ class ScriptKana extends Script {
 class ScriptKawi extends Script {
   /// Creates a instance of [ScriptKawi] (Kawi script).
   ///
-  /// ISO 15924 Alpha code: "Kawi", ISO 15924 Numeric code: "368".
+  /// ISO 15924 Alpha code: `Kawi`, ISO 15924 Numeric code: `368`.
   const ScriptKawi()
       : super(
           name: "Kawi",
@@ -1161,7 +1161,7 @@ class ScriptKawi extends Script {
 class ScriptKhar extends Script {
   /// Creates a instance of [ScriptKhar] (Kharoshthi script).
   ///
-  /// ISO 15924 Alpha code: "Khar", ISO 15924 Numeric code: "305".
+  /// ISO 15924 Alpha code: `Khar`, ISO 15924 Numeric code: `305`.
   const ScriptKhar()
       : super(
           name: "Kharoshthi",
@@ -1176,7 +1176,7 @@ class ScriptKhar extends Script {
 class ScriptKhmr extends Script {
   /// Creates a instance of [ScriptKhmr] (Khmer script).
   ///
-  /// ISO 15924 Alpha code: "Khmr", ISO 15924 Numeric code: "355".
+  /// ISO 15924 Alpha code: `Khmr`, ISO 15924 Numeric code: `355`.
   const ScriptKhmr()
       : super(
           name: "Khmer",
@@ -1191,7 +1191,7 @@ class ScriptKhmr extends Script {
 class ScriptKhoj extends Script {
   /// Creates a instance of [ScriptKhoj] (Khojki script).
   ///
-  /// ISO 15924 Alpha code: "Khoj", ISO 15924 Numeric code: "322".
+  /// ISO 15924 Alpha code: `Khoj`, ISO 15924 Numeric code: `322`.
   const ScriptKhoj()
       : super(
           name: "Khojki",
@@ -1206,7 +1206,7 @@ class ScriptKhoj extends Script {
 class ScriptKitl extends Script {
   /// Creates a instance of [ScriptKitl] (Khitan large script script).
   ///
-  /// ISO 15924 Alpha code: "Kitl", ISO 15924 Numeric code: "505".
+  /// ISO 15924 Alpha code: `Kitl`, ISO 15924 Numeric code: `505`.
   const ScriptKitl()
       : super(
           name: "Khitan large script",
@@ -1220,7 +1220,7 @@ class ScriptKitl extends Script {
 class ScriptKits extends Script {
   /// Creates a instance of [ScriptKits] (Khitan small script script).
   ///
-  /// ISO 15924 Alpha code: "Kits", ISO 15924 Numeric code: "288".
+  /// ISO 15924 Alpha code: `Kits`, ISO 15924 Numeric code: `288`.
   const ScriptKits()
       : super(
           name: "Khitan small script",
@@ -1235,7 +1235,7 @@ class ScriptKits extends Script {
 class ScriptKnda extends Script {
   /// Creates a instance of [ScriptKnda] (Kannada script).
   ///
-  /// ISO 15924 Alpha code: "Knda", ISO 15924 Numeric code: "345".
+  /// ISO 15924 Alpha code: `Knda`, ISO 15924 Numeric code: `345`.
   const ScriptKnda()
       : super(
           name: "Kannada",
@@ -1251,7 +1251,7 @@ class ScriptKore extends Script {
   /// Creates a instance of [ScriptKore] (Korean (alias for Hangul + Han)
   /// script).
   ///
-  /// ISO 15924 Alpha code: "Kore", ISO 15924 Numeric code: "287".
+  /// ISO 15924 Alpha code: `Kore`, ISO 15924 Numeric code: `287`.
   const ScriptKore()
       : super(
           name: "Korean (alias for Hangul + Han)",
@@ -1265,7 +1265,7 @@ class ScriptKore extends Script {
 class ScriptKpel extends Script {
   /// Creates a instance of [ScriptKpel] (Kpelle script).
   ///
-  /// ISO 15924 Alpha code: "Kpel", ISO 15924 Numeric code: "436".
+  /// ISO 15924 Alpha code: `Kpel`, ISO 15924 Numeric code: `436`.
   const ScriptKpel()
       : super(
           name: "Kpelle",
@@ -1279,7 +1279,7 @@ class ScriptKpel extends Script {
 class ScriptKthi extends Script {
   /// Creates a instance of [ScriptKthi] (Kaithi script).
   ///
-  /// ISO 15924 Alpha code: "Kthi", ISO 15924 Numeric code: "317".
+  /// ISO 15924 Alpha code: `Kthi`, ISO 15924 Numeric code: `317`.
   const ScriptKthi()
       : super(
           name: "Kaithi",
@@ -1294,7 +1294,7 @@ class ScriptKthi extends Script {
 class ScriptLana extends Script {
   /// Creates a instance of [ScriptLana] (Tai Tham (Lanna) script).
   ///
-  /// ISO 15924 Alpha code: "Lana", ISO 15924 Numeric code: "351".
+  /// ISO 15924 Alpha code: `Lana`, ISO 15924 Numeric code: `351`.
   const ScriptLana()
       : super(
           name: "Tai Tham (Lanna)",
@@ -1309,7 +1309,7 @@ class ScriptLana extends Script {
 class ScriptLaoo extends Script {
   /// Creates a instance of [ScriptLaoo] (Lao script).
   ///
-  /// ISO 15924 Alpha code: "Laoo", ISO 15924 Numeric code: "356".
+  /// ISO 15924 Alpha code: `Laoo`, ISO 15924 Numeric code: `356`.
   const ScriptLaoo()
       : super(
           name: "Lao",
@@ -1324,7 +1324,7 @@ class ScriptLaoo extends Script {
 class ScriptLatf extends Script {
   /// Creates a instance of [ScriptLatf] (Latin (Fraktur variant) script).
   ///
-  /// ISO 15924 Alpha code: "Latf", ISO 15924 Numeric code: "217".
+  /// ISO 15924 Alpha code: `Latf`, ISO 15924 Numeric code: `217`.
   const ScriptLatf()
       : super(
           name: "Latin (Fraktur variant)",
@@ -1338,7 +1338,7 @@ class ScriptLatf extends Script {
 class ScriptLatg extends Script {
   /// Creates a instance of [ScriptLatg] (Latin (Gaelic variant) script).
   ///
-  /// ISO 15924 Alpha code: "Latg", ISO 15924 Numeric code: "216".
+  /// ISO 15924 Alpha code: `Latg`, ISO 15924 Numeric code: `216`.
   const ScriptLatg()
       : super(
           name: "Latin (Gaelic variant)",
@@ -1352,7 +1352,7 @@ class ScriptLatg extends Script {
 class ScriptLatn extends Script {
   /// Creates a instance of [ScriptLatn] (Latin script).
   ///
-  /// ISO 15924 Alpha code: "Latn", ISO 15924 Numeric code: "215".
+  /// ISO 15924 Alpha code: `Latn`, ISO 15924 Numeric code: `215`.
   const ScriptLatn()
       : super(
           name: "Latin",
@@ -1367,7 +1367,7 @@ class ScriptLatn extends Script {
 class ScriptLeke extends Script {
   /// Creates a instance of [ScriptLeke] (Leke script).
   ///
-  /// ISO 15924 Alpha code: "Leke", ISO 15924 Numeric code: "364".
+  /// ISO 15924 Alpha code: `Leke`, ISO 15924 Numeric code: `364`.
   const ScriptLeke()
       : super(
           name: "Leke",
@@ -1381,7 +1381,7 @@ class ScriptLeke extends Script {
 class ScriptLepc extends Script {
   /// Creates a instance of [ScriptLepc] (Lepcha (Róng) script).
   ///
-  /// ISO 15924 Alpha code: "Lepc", ISO 15924 Numeric code: "335".
+  /// ISO 15924 Alpha code: `Lepc`, ISO 15924 Numeric code: `335`.
   const ScriptLepc()
       : super(
           name: "Lepcha (Róng)",
@@ -1396,7 +1396,7 @@ class ScriptLepc extends Script {
 class ScriptLimb extends Script {
   /// Creates a instance of [ScriptLimb] (Limbu script).
   ///
-  /// ISO 15924 Alpha code: "Limb", ISO 15924 Numeric code: "336".
+  /// ISO 15924 Alpha code: `Limb`, ISO 15924 Numeric code: `336`.
   const ScriptLimb()
       : super(
           name: "Limbu",
@@ -1411,7 +1411,7 @@ class ScriptLimb extends Script {
 class ScriptLina extends Script {
   /// Creates a instance of [ScriptLina] (Linear A script).
   ///
-  /// ISO 15924 Alpha code: "Lina", ISO 15924 Numeric code: "400".
+  /// ISO 15924 Alpha code: `Lina`, ISO 15924 Numeric code: `400`.
   const ScriptLina()
       : super(
           name: "Linear A",
@@ -1426,7 +1426,7 @@ class ScriptLina extends Script {
 class ScriptLinb extends Script {
   /// Creates a instance of [ScriptLinb] (Linear B script).
   ///
-  /// ISO 15924 Alpha code: "Linb", ISO 15924 Numeric code: "401".
+  /// ISO 15924 Alpha code: `Linb`, ISO 15924 Numeric code: `401`.
   const ScriptLinb()
       : super(
           name: "Linear B",
@@ -1441,7 +1441,7 @@ class ScriptLinb extends Script {
 class ScriptLisu extends Script {
   /// Creates a instance of [ScriptLisu] (Lisu (Fraser) script).
   ///
-  /// ISO 15924 Alpha code: "Lisu", ISO 15924 Numeric code: "399".
+  /// ISO 15924 Alpha code: `Lisu`, ISO 15924 Numeric code: `399`.
   const ScriptLisu()
       : super(
           name: "Lisu (Fraser)",
@@ -1456,7 +1456,7 @@ class ScriptLisu extends Script {
 class ScriptLoma extends Script {
   /// Creates a instance of [ScriptLoma] (Loma script).
   ///
-  /// ISO 15924 Alpha code: "Loma", ISO 15924 Numeric code: "437".
+  /// ISO 15924 Alpha code: `Loma`, ISO 15924 Numeric code: `437`.
   const ScriptLoma()
       : super(
           name: "Loma",
@@ -1470,7 +1470,7 @@ class ScriptLoma extends Script {
 class ScriptLyci extends Script {
   /// Creates a instance of [ScriptLyci] (Lycian script).
   ///
-  /// ISO 15924 Alpha code: "Lyci", ISO 15924 Numeric code: "202".
+  /// ISO 15924 Alpha code: `Lyci`, ISO 15924 Numeric code: `202`.
   const ScriptLyci()
       : super(
           name: "Lycian",
@@ -1485,7 +1485,7 @@ class ScriptLyci extends Script {
 class ScriptLydi extends Script {
   /// Creates a instance of [ScriptLydi] (Lydian script).
   ///
-  /// ISO 15924 Alpha code: "Lydi", ISO 15924 Numeric code: "116".
+  /// ISO 15924 Alpha code: `Lydi`, ISO 15924 Numeric code: `116`.
   const ScriptLydi()
       : super(
           name: "Lydian",
@@ -1500,7 +1500,7 @@ class ScriptLydi extends Script {
 class ScriptMahj extends Script {
   /// Creates a instance of [ScriptMahj] (Mahajani script).
   ///
-  /// ISO 15924 Alpha code: "Mahj", ISO 15924 Numeric code: "314".
+  /// ISO 15924 Alpha code: `Mahj`, ISO 15924 Numeric code: `314`.
   const ScriptMahj()
       : super(
           name: "Mahajani",
@@ -1515,7 +1515,7 @@ class ScriptMahj extends Script {
 class ScriptMaka extends Script {
   /// Creates a instance of [ScriptMaka] (Makasar script).
   ///
-  /// ISO 15924 Alpha code: "Maka", ISO 15924 Numeric code: "366".
+  /// ISO 15924 Alpha code: `Maka`, ISO 15924 Numeric code: `366`.
   const ScriptMaka()
       : super(
           name: "Makasar",
@@ -1530,7 +1530,7 @@ class ScriptMaka extends Script {
 class ScriptMand extends Script {
   /// Creates a instance of [ScriptMand] (Mandaic, Mandaean script).
   ///
-  /// ISO 15924 Alpha code: "Mand", ISO 15924 Numeric code: "140".
+  /// ISO 15924 Alpha code: `Mand`, ISO 15924 Numeric code: `140`.
   const ScriptMand()
       : super(
           name: "Mandaic, Mandaean",
@@ -1545,7 +1545,7 @@ class ScriptMand extends Script {
 class ScriptMani extends Script {
   /// Creates a instance of [ScriptMani] (Manichaean script).
   ///
-  /// ISO 15924 Alpha code: "Mani", ISO 15924 Numeric code: "139".
+  /// ISO 15924 Alpha code: `Mani`, ISO 15924 Numeric code: `139`.
   const ScriptMani()
       : super(
           name: "Manichaean",
@@ -1560,7 +1560,7 @@ class ScriptMani extends Script {
 class ScriptMarc extends Script {
   /// Creates a instance of [ScriptMarc] (Marchen script).
   ///
-  /// ISO 15924 Alpha code: "Marc", ISO 15924 Numeric code: "332".
+  /// ISO 15924 Alpha code: `Marc`, ISO 15924 Numeric code: `332`.
   const ScriptMarc()
       : super(
           name: "Marchen",
@@ -1575,7 +1575,7 @@ class ScriptMarc extends Script {
 class ScriptMaya extends Script {
   /// Creates a instance of [ScriptMaya] (Mayan hieroglyphs script).
   ///
-  /// ISO 15924 Alpha code: "Maya", ISO 15924 Numeric code: "090".
+  /// ISO 15924 Alpha code: `Maya`, ISO 15924 Numeric code: `090`.
   const ScriptMaya()
       : super(
           name: "Mayan hieroglyphs",
@@ -1590,7 +1590,7 @@ class ScriptMedf extends Script {
   /// Creates a instance of [ScriptMedf] (Medefaidrin (Oberi Okaime,
   /// Oberi Ɔkaimɛ) script).
   ///
-  /// ISO 15924 Alpha code: "Medf", ISO 15924 Numeric code: "265".
+  /// ISO 15924 Alpha code: `Medf`, ISO 15924 Numeric code: `265`.
   const ScriptMedf()
       : super(
           name: "Medefaidrin (Oberi Okaime, Oberi Ɔkaimɛ)",
@@ -1605,7 +1605,7 @@ class ScriptMedf extends Script {
 class ScriptMend extends Script {
   /// Creates a instance of [ScriptMend] (Mende Kikakui script).
   ///
-  /// ISO 15924 Alpha code: "Mend", ISO 15924 Numeric code: "438".
+  /// ISO 15924 Alpha code: `Mend`, ISO 15924 Numeric code: `438`.
   const ScriptMend()
       : super(
           name: "Mende Kikakui",
@@ -1620,7 +1620,7 @@ class ScriptMend extends Script {
 class ScriptMerc extends Script {
   /// Creates a instance of [ScriptMerc] (Meroitic Cursive script).
   ///
-  /// ISO 15924 Alpha code: "Merc", ISO 15924 Numeric code: "101".
+  /// ISO 15924 Alpha code: `Merc`, ISO 15924 Numeric code: `101`.
   const ScriptMerc()
       : super(
           name: "Meroitic Cursive",
@@ -1635,7 +1635,7 @@ class ScriptMerc extends Script {
 class ScriptMero extends Script {
   /// Creates a instance of [ScriptMero] (Meroitic Hieroglyphs script).
   ///
-  /// ISO 15924 Alpha code: "Mero", ISO 15924 Numeric code: "100".
+  /// ISO 15924 Alpha code: `Mero`, ISO 15924 Numeric code: `100`.
   const ScriptMero()
       : super(
           name: "Meroitic Hieroglyphs",
@@ -1650,7 +1650,7 @@ class ScriptMero extends Script {
 class ScriptMlym extends Script {
   /// Creates a instance of [ScriptMlym] (Malayalam script).
   ///
-  /// ISO 15924 Alpha code: "Mlym", ISO 15924 Numeric code: "347".
+  /// ISO 15924 Alpha code: `Mlym`, ISO 15924 Numeric code: `347`.
   const ScriptMlym()
       : super(
           name: "Malayalam",
@@ -1665,7 +1665,7 @@ class ScriptMlym extends Script {
 class ScriptModi extends Script {
   /// Creates a instance of [ScriptModi] (Modi, Moḍī script).
   ///
-  /// ISO 15924 Alpha code: "Modi", ISO 15924 Numeric code: "324".
+  /// ISO 15924 Alpha code: `Modi`, ISO 15924 Numeric code: `324`.
   const ScriptModi()
       : super(
           name: "Modi, Moḍī",
@@ -1680,7 +1680,7 @@ class ScriptModi extends Script {
 class ScriptMong extends Script {
   /// Creates a instance of [ScriptMong] (Mongolian script).
   ///
-  /// ISO 15924 Alpha code: "Mong", ISO 15924 Numeric code: "145".
+  /// ISO 15924 Alpha code: `Mong`, ISO 15924 Numeric code: `145`.
   const ScriptMong()
       : super(
           name: "Mongolian",
@@ -1696,7 +1696,7 @@ class ScriptMoon extends Script {
   /// Creates a instance of [ScriptMoon] (Moon (Moon code, Moon script,
   /// Moon type) script).
   ///
-  /// ISO 15924 Alpha code: "Moon", ISO 15924 Numeric code: "218".
+  /// ISO 15924 Alpha code: `Moon`, ISO 15924 Numeric code: `218`.
   const ScriptMoon()
       : super(
           name: "Moon (Moon code, Moon script, Moon type)",
@@ -1710,7 +1710,7 @@ class ScriptMoon extends Script {
 class ScriptMroo extends Script {
   /// Creates a instance of [ScriptMroo] (Mro, Mru script).
   ///
-  /// ISO 15924 Alpha code: "Mroo", ISO 15924 Numeric code: "264".
+  /// ISO 15924 Alpha code: `Mroo`, ISO 15924 Numeric code: `264`.
   const ScriptMroo()
       : super(
           name: "Mro, Mru",
@@ -1726,7 +1726,7 @@ class ScriptMtei extends Script {
   /// Creates a instance of [ScriptMtei] (Meitei Mayek (Meithei,
   /// Meetei) script).
   ///
-  /// ISO 15924 Alpha code: "Mtei", ISO 15924 Numeric code: "337".
+  /// ISO 15924 Alpha code: `Mtei`, ISO 15924 Numeric code: `337`.
   const ScriptMtei()
       : super(
           name: "Meitei Mayek (Meithei, Meetei)",
@@ -1741,7 +1741,7 @@ class ScriptMtei extends Script {
 class ScriptMult extends Script {
   /// Creates a instance of [ScriptMult] (Multani script).
   ///
-  /// ISO 15924 Alpha code: "Mult", ISO 15924 Numeric code: "323".
+  /// ISO 15924 Alpha code: `Mult`, ISO 15924 Numeric code: `323`.
   const ScriptMult()
       : super(
           name: "Multani",
@@ -1756,7 +1756,7 @@ class ScriptMult extends Script {
 class ScriptMymr extends Script {
   /// Creates a instance of [ScriptMymr] (Myanmar (Burmese) script).
   ///
-  /// ISO 15924 Alpha code: "Mymr", ISO 15924 Numeric code: "350".
+  /// ISO 15924 Alpha code: `Mymr`, ISO 15924 Numeric code: `350`.
   const ScriptMymr()
       : super(
           name: "Myanmar (Burmese)",
@@ -1771,7 +1771,7 @@ class ScriptMymr extends Script {
 class ScriptNagm extends Script {
   /// Creates a instance of [ScriptNagm] (Nag Mundari script).
   ///
-  /// ISO 15924 Alpha code: "Nagm", ISO 15924 Numeric code: "295".
+  /// ISO 15924 Alpha code: `Nagm`, ISO 15924 Numeric code: `295`.
   const ScriptNagm()
       : super(
           name: "Nag Mundari",
@@ -1785,7 +1785,7 @@ class ScriptNagm extends Script {
 class ScriptNand extends Script {
   /// Creates a instance of [ScriptNand] (Nandinagari script).
   ///
-  /// ISO 15924 Alpha code: "Nand", ISO 15924 Numeric code: "311".
+  /// ISO 15924 Alpha code: `Nand`, ISO 15924 Numeric code: `311`.
   const ScriptNand()
       : super(
           name: "Nandinagari",
@@ -1802,7 +1802,7 @@ class ScriptNarb extends Script {
   /// Creates a instance of [ScriptNarb] (Old North Arabian
   /// (Ancient North Arabian) script).
   ///
-  /// ISO 15924 Alpha code: "Narb", ISO 15924 Numeric code: "106".
+  /// ISO 15924 Alpha code: `Narb`, ISO 15924 Numeric code: `106`.
   const ScriptNarb()
       : super(
           name: "Old North Arabian (Ancient North Arabian)",
@@ -1817,7 +1817,7 @@ class ScriptNarb extends Script {
 class ScriptNbat extends Script {
   /// Creates a instance of [ScriptNbat] (Nabataean script).
   ///
-  /// ISO 15924 Alpha code: "Nbat", ISO 15924 Numeric code: "159".
+  /// ISO 15924 Alpha code: `Nbat`, ISO 15924 Numeric code: `159`.
   const ScriptNbat()
       : super(
           name: "Nabataean",
@@ -1833,7 +1833,7 @@ class ScriptNewa extends Script {
   /// Creates a instance of [ScriptNewa] (Newa, Newar, Newari,
   /// Nepāla lipi script).
   ///
-  /// ISO 15924 Alpha code: "Newa", ISO 15924 Numeric code: "333".
+  /// ISO 15924 Alpha code: `Newa`, ISO 15924 Numeric code: `333`.
   const ScriptNewa()
       : super(
           name: "Newa, Newar, Newari, Nepāla lipi",
@@ -1850,7 +1850,7 @@ class ScriptNkdb extends Script {
   /// Creates a instance of [ScriptNkdb] (Naxi Dongba (na²¹ɕi³³ to³³ba²¹,
   /// Nakhi Tomba) script).
   ///
-  /// ISO 15924 Alpha code: "Nkdb", ISO 15924 Numeric code: "085".
+  /// ISO 15924 Alpha code: `Nkdb`, ISO 15924 Numeric code: `085`.
   const ScriptNkdb()
       : super(
           name: "Naxi Dongba (na²¹ɕi³³ to³³ba²¹, Nakhi Tomba)",
@@ -1866,7 +1866,7 @@ class ScriptNkgb extends Script {
   /// Creates a instance of [ScriptNkgb] (Naxi Geba (na²¹ɕi³³ gʌ²¹ba²¹,
   /// 'Na-'Khi ²Ggŏ-¹baw, Nakhi Geba) script).
   ///
-  /// ISO 15924 Alpha code: "Nkgb", ISO 15924 Numeric code: "420".
+  /// ISO 15924 Alpha code: `Nkgb`, ISO 15924 Numeric code: `420`.
   const ScriptNkgb()
       : super(
           name: "Naxi Geba (na²¹ɕi³³ gʌ²¹ba²¹, 'Na-'Khi ²Ggŏ-¹baw, Nakhi Geba)",
@@ -1880,7 +1880,7 @@ class ScriptNkgb extends Script {
 class ScriptNkoo extends Script {
   /// Creates a instance of [ScriptNkoo] (N’Ko script).
   ///
-  /// ISO 15924 Alpha code: "Nkoo", ISO 15924 Numeric code: "165".
+  /// ISO 15924 Alpha code: `Nkoo`, ISO 15924 Numeric code: `165`.
   const ScriptNkoo()
       : super(
           name: "N’Ko",
@@ -1895,7 +1895,7 @@ class ScriptNkoo extends Script {
 class ScriptNshu extends Script {
   /// Creates a instance of [ScriptNshu] (Nüshu script).
   ///
-  /// ISO 15924 Alpha code: "Nshu", ISO 15924 Numeric code: "499".
+  /// ISO 15924 Alpha code: `Nshu`, ISO 15924 Numeric code: `499`.
   const ScriptNshu()
       : super(
           name: "Nüshu",
@@ -1910,7 +1910,7 @@ class ScriptNshu extends Script {
 class ScriptOgam extends Script {
   /// Creates a instance of [ScriptOgam] (Ogham script).
   ///
-  /// ISO 15924 Alpha code: "Ogam", ISO 15924 Numeric code: "212".
+  /// ISO 15924 Alpha code: `Ogam`, ISO 15924 Numeric code: `212`.
   const ScriptOgam()
       : super(
           name: "Ogham",
@@ -1926,7 +1926,7 @@ class ScriptOlck extends Script {
   /// Creates a instance of [ScriptOlck] (Ol Chiki (Ol Cemet’,
   /// Ol, Santali) script).
   ///
-  /// ISO 15924 Alpha code: "Olck", ISO 15924 Numeric code: "261".
+  /// ISO 15924 Alpha code: `Olck`, ISO 15924 Numeric code: `261`.
   const ScriptOlck()
       : super(
           name: "Ol Chiki (Ol Cemet’, Ol, Santali)",
@@ -1941,7 +1941,7 @@ class ScriptOlck extends Script {
 class ScriptOrkh extends Script {
   /// Creates a instance of [ScriptOrkh] (Old Turkic, Orkhon Runic script).
   ///
-  /// ISO 15924 Alpha code: "Orkh", ISO 15924 Numeric code: "175".
+  /// ISO 15924 Alpha code: `Orkh`, ISO 15924 Numeric code: `175`.
   const ScriptOrkh()
       : super(
           name: "Old Turkic, Orkhon Runic",
@@ -1956,7 +1956,7 @@ class ScriptOrkh extends Script {
 class ScriptOrya extends Script {
   /// Creates a instance of [ScriptOrya] (Oriya (Odia) script).
   ///
-  /// ISO 15924 Alpha code: "Orya", ISO 15924 Numeric code: "327".
+  /// ISO 15924 Alpha code: `Orya`, ISO 15924 Numeric code: `327`.
   const ScriptOrya()
       : super(
           name: "Oriya (Odia)",
@@ -1971,7 +1971,7 @@ class ScriptOrya extends Script {
 class ScriptOsge extends Script {
   /// Creates a instance of [ScriptOsge] (Osage script).
   ///
-  /// ISO 15924 Alpha code: "Osge", ISO 15924 Numeric code: "219".
+  /// ISO 15924 Alpha code: `Osge`, ISO 15924 Numeric code: `219`.
   const ScriptOsge()
       : super(
           name: "Osage",
@@ -1986,7 +1986,7 @@ class ScriptOsge extends Script {
 class ScriptOsma extends Script {
   /// Creates a instance of [ScriptOsma] (Osmanya script).
   ///
-  /// ISO 15924 Alpha code: "Osma", ISO 15924 Numeric code: "260".
+  /// ISO 15924 Alpha code: `Osma`, ISO 15924 Numeric code: `260`.
   const ScriptOsma()
       : super(
           name: "Osmanya",
@@ -2001,7 +2001,7 @@ class ScriptOsma extends Script {
 class ScriptOugr extends Script {
   /// Creates a instance of [ScriptOugr] (Old Uyghur script).
   ///
-  /// ISO 15924 Alpha code: "Ougr", ISO 15924 Numeric code: "143".
+  /// ISO 15924 Alpha code: `Ougr`, ISO 15924 Numeric code: `143`.
   const ScriptOugr()
       : super(
           name: "Old Uyghur",
@@ -2016,7 +2016,7 @@ class ScriptOugr extends Script {
 class ScriptPalm extends Script {
   /// Creates a instance of [ScriptPalm] (Palmyrene script).
   ///
-  /// ISO 15924 Alpha code: "Palm", ISO 15924 Numeric code: "126".
+  /// ISO 15924 Alpha code: `Palm`, ISO 15924 Numeric code: `126`.
   const ScriptPalm()
       : super(
           name: "Palmyrene",
@@ -2031,7 +2031,7 @@ class ScriptPalm extends Script {
 class ScriptPauc extends Script {
   /// Creates a instance of [ScriptPauc] (Pau Cin Hau script).
   ///
-  /// ISO 15924 Alpha code: "Pauc", ISO 15924 Numeric code: "263".
+  /// ISO 15924 Alpha code: `Pauc`, ISO 15924 Numeric code: `263`.
   const ScriptPauc()
       : super(
           name: "Pau Cin Hau",
@@ -2046,7 +2046,7 @@ class ScriptPauc extends Script {
 class ScriptPcun extends Script {
   /// Creates a instance of [ScriptPcun] (Proto-Cuneiform script).
   ///
-  /// ISO 15924 Alpha code: "Pcun", ISO 15924 Numeric code: "015".
+  /// ISO 15924 Alpha code: `Pcun`, ISO 15924 Numeric code: `015`.
   const ScriptPcun()
       : super(
           name: "Proto-Cuneiform",
@@ -2060,7 +2060,7 @@ class ScriptPcun extends Script {
 class ScriptPelm extends Script {
   /// Creates a instance of [ScriptPelm] (Proto-Elamite script).
   ///
-  /// ISO 15924 Alpha code: "Pelm", ISO 15924 Numeric code: "016".
+  /// ISO 15924 Alpha code: `Pelm`, ISO 15924 Numeric code: `016`.
   const ScriptPelm()
       : super(
           name: "Proto-Elamite",
@@ -2074,7 +2074,7 @@ class ScriptPelm extends Script {
 class ScriptPerm extends Script {
   /// Creates a instance of [ScriptPerm] (Old Permic script).
   ///
-  /// ISO 15924 Alpha code: "Perm", ISO 15924 Numeric code: "227".
+  /// ISO 15924 Alpha code: `Perm`, ISO 15924 Numeric code: `227`.
   const ScriptPerm()
       : super(
           name: "Old Permic",
@@ -2089,7 +2089,7 @@ class ScriptPerm extends Script {
 class ScriptPhag extends Script {
   /// Creates a instance of [ScriptPhag] (Phags-pa script).
   ///
-  /// ISO 15924 Alpha code: "Phag", ISO 15924 Numeric code: "331".
+  /// ISO 15924 Alpha code: `Phag`, ISO 15924 Numeric code: `331`.
   const ScriptPhag()
       : super(
           name: "Phags-pa",
@@ -2104,7 +2104,7 @@ class ScriptPhag extends Script {
 class ScriptPhli extends Script {
   /// Creates a instance of [ScriptPhli] (Inscriptional Pahlavi script).
   ///
-  /// ISO 15924 Alpha code: "Phli", ISO 15924 Numeric code: "131".
+  /// ISO 15924 Alpha code: `Phli`, ISO 15924 Numeric code: `131`.
   const ScriptPhli()
       : super(
           name: "Inscriptional Pahlavi",
@@ -2119,7 +2119,7 @@ class ScriptPhli extends Script {
 class ScriptPhlp extends Script {
   /// Creates a instance of [ScriptPhlp] (Psalter Pahlavi script).
   ///
-  /// ISO 15924 Alpha code: "Phlp", ISO 15924 Numeric code: "132".
+  /// ISO 15924 Alpha code: `Phlp`, ISO 15924 Numeric code: `132`.
   const ScriptPhlp()
       : super(
           name: "Psalter Pahlavi",
@@ -2134,7 +2134,7 @@ class ScriptPhlp extends Script {
 class ScriptPhlv extends Script {
   /// Creates a instance of [ScriptPhlv] (Book Pahlavi script).
   ///
-  /// ISO 15924 Alpha code: "Phlv", ISO 15924 Numeric code: "133".
+  /// ISO 15924 Alpha code: `Phlv`, ISO 15924 Numeric code: `133`.
   const ScriptPhlv()
       : super(
           name: "Book Pahlavi",
@@ -2148,7 +2148,7 @@ class ScriptPhlv extends Script {
 class ScriptPhnx extends Script {
   /// Creates a instance of [ScriptPhnx] (Phoenician script).
   ///
-  /// ISO 15924 Alpha code: "Phnx", ISO 15924 Numeric code: "115".
+  /// ISO 15924 Alpha code: `Phnx`, ISO 15924 Numeric code: `115`.
   const ScriptPhnx()
       : super(
           name: "Phoenician",
@@ -2163,7 +2163,7 @@ class ScriptPhnx extends Script {
 class ScriptPiqd extends Script {
   /// Creates a instance of [ScriptPiqd] (Klingon (KLI pIqaD) script).
   ///
-  /// ISO 15924 Alpha code: "Piqd", ISO 15924 Numeric code: "293".
+  /// ISO 15924 Alpha code: `Piqd`, ISO 15924 Numeric code: `293`.
   const ScriptPiqd()
       : super(
           name: "Klingon (KLI pIqaD)",
@@ -2177,7 +2177,7 @@ class ScriptPiqd extends Script {
 class ScriptPlrd extends Script {
   /// Creates a instance of [ScriptPlrd] (Miao (Pollard) script).
   ///
-  /// ISO 15924 Alpha code: "Plrd", ISO 15924 Numeric code: "282".
+  /// ISO 15924 Alpha code: `Plrd`, ISO 15924 Numeric code: `282`.
   const ScriptPlrd()
       : super(
           name: "Miao (Pollard)",
@@ -2192,7 +2192,7 @@ class ScriptPlrd extends Script {
 class ScriptPrti extends Script {
   /// Creates a instance of [ScriptPrti] (Inscriptional Parthian script).
   ///
-  /// ISO 15924 Alpha code: "Prti", ISO 15924 Numeric code: "130".
+  /// ISO 15924 Alpha code: `Prti`, ISO 15924 Numeric code: `130`.
   const ScriptPrti()
       : super(
           name: "Inscriptional Parthian",
@@ -2207,7 +2207,7 @@ class ScriptPrti extends Script {
 class ScriptPsin extends Script {
   /// Creates a instance of [ScriptPsin] (Proto-Sinaitic script).
   ///
-  /// ISO 15924 Alpha code: "Psin", ISO 15924 Numeric code: "103".
+  /// ISO 15924 Alpha code: `Psin`, ISO 15924 Numeric code: `103`.
   const ScriptPsin()
       : super(
           name: "Proto-Sinaitic",
@@ -2222,7 +2222,7 @@ class ScriptQaaa extends Script {
   /// Creates a instance of [ScriptQaaa] (Reserved for private use (start)
   /// script).
   ///
-  /// ISO 15924 Alpha code: "Qaaa", ISO 15924 Numeric code: "900".
+  /// ISO 15924 Alpha code: `Qaaa`, ISO 15924 Numeric code: `900`.
   const ScriptQaaa()
       : super(
           name: "Reserved for private use (start)",
@@ -2237,7 +2237,7 @@ class ScriptQabx extends Script {
   /// Creates a instance of [ScriptQabx] (Reserved for private use (end)
   /// script).
   ///
-  /// ISO 15924 Alpha code: "Qabx", ISO 15924 Numeric code: "949".
+  /// ISO 15924 Alpha code: `Qabx`, ISO 15924 Numeric code: `949`.
   const ScriptQabx()
       : super(
           name: "Reserved for private use (end)",
@@ -2251,7 +2251,7 @@ class ScriptQabx extends Script {
 class ScriptRanj extends Script {
   /// Creates a instance of [ScriptRanj] (Ranjana script).
   ///
-  /// ISO 15924 Alpha code: "Ranj", ISO 15924 Numeric code: "303".
+  /// ISO 15924 Alpha code: `Ranj`, ISO 15924 Numeric code: `303`.
   const ScriptRanj()
       : super(
           name: "Ranjana",
@@ -2265,7 +2265,7 @@ class ScriptRanj extends Script {
 class ScriptRjng extends Script {
   /// Creates a instance of [ScriptRjng] (Rejang (Redjang, Kaganga) script).
   ///
-  /// ISO 15924 Alpha code: "Rjng", ISO 15924 Numeric code: "363".
+  /// ISO 15924 Alpha code: `Rjng`, ISO 15924 Numeric code: `363`.
   const ScriptRjng()
       : super(
           name: "Rejang (Redjang, Kaganga)",
@@ -2280,7 +2280,7 @@ class ScriptRjng extends Script {
 class ScriptRohg extends Script {
   /// Creates a instance of [ScriptRohg] (Hanifi Rohingya script).
   ///
-  /// ISO 15924 Alpha code: "Rohg", ISO 15924 Numeric code: "167".
+  /// ISO 15924 Alpha code: `Rohg`, ISO 15924 Numeric code: `167`.
   const ScriptRohg()
       : super(
           name: "Hanifi Rohingya",
@@ -2295,7 +2295,7 @@ class ScriptRohg extends Script {
 class ScriptRoro extends Script {
   /// Creates a instance of [ScriptRoro] (Rongorongo script).
   ///
-  /// ISO 15924 Alpha code: "Roro", ISO 15924 Numeric code: "620".
+  /// ISO 15924 Alpha code: `Roro`, ISO 15924 Numeric code: `620`.
   const ScriptRoro()
       : super(
           name: "Rongorongo",
@@ -2309,7 +2309,7 @@ class ScriptRoro extends Script {
 class ScriptRunr extends Script {
   /// Creates a instance of [ScriptRunr] (Runic script).
   ///
-  /// ISO 15924 Alpha code: "Runr", ISO 15924 Numeric code: "211".
+  /// ISO 15924 Alpha code: `Runr`, ISO 15924 Numeric code: `211`.
   const ScriptRunr()
       : super(
           name: "Runic",
@@ -2324,7 +2324,7 @@ class ScriptRunr extends Script {
 class ScriptSamr extends Script {
   /// Creates a instance of [ScriptSamr] (Samaritan script).
   ///
-  /// ISO 15924 Alpha code: "Samr", ISO 15924 Numeric code: "123".
+  /// ISO 15924 Alpha code: `Samr`, ISO 15924 Numeric code: `123`.
   const ScriptSamr()
       : super(
           name: "Samaritan",
@@ -2339,7 +2339,7 @@ class ScriptSamr extends Script {
 class ScriptSara extends Script {
   /// Creates a instance of [ScriptSara] (Sarati script).
   ///
-  /// ISO 15924 Alpha code: "Sara", ISO 15924 Numeric code: "292".
+  /// ISO 15924 Alpha code: `Sara`, ISO 15924 Numeric code: `292`.
   const ScriptSara()
       : super(
           name: "Sarati",
@@ -2353,7 +2353,7 @@ class ScriptSara extends Script {
 class ScriptSarb extends Script {
   /// Creates a instance of [ScriptSarb] (Old South Arabian script).
   ///
-  /// ISO 15924 Alpha code: "Sarb", ISO 15924 Numeric code: "105".
+  /// ISO 15924 Alpha code: `Sarb`, ISO 15924 Numeric code: `105`.
   const ScriptSarb()
       : super(
           name: "Old South Arabian",
@@ -2368,7 +2368,7 @@ class ScriptSarb extends Script {
 class ScriptSaur extends Script {
   /// Creates a instance of [ScriptSaur] (Saurashtra script).
   ///
-  /// ISO 15924 Alpha code: "Saur", ISO 15924 Numeric code: "344".
+  /// ISO 15924 Alpha code: `Saur`, ISO 15924 Numeric code: `344`.
   const ScriptSaur()
       : super(
           name: "Saurashtra",
@@ -2383,7 +2383,7 @@ class ScriptSaur extends Script {
 class ScriptSgnw extends Script {
   /// Creates a instance of [ScriptSgnw] (SignWriting script).
   ///
-  /// ISO 15924 Alpha code: "Sgnw", ISO 15924 Numeric code: "095".
+  /// ISO 15924 Alpha code: `Sgnw`, ISO 15924 Numeric code: `095`.
   const ScriptSgnw()
       : super(
           name: "SignWriting",
@@ -2398,7 +2398,7 @@ class ScriptSgnw extends Script {
 class ScriptShaw extends Script {
   /// Creates a instance of [ScriptShaw] (Shavian (Shaw) script).
   ///
-  /// ISO 15924 Alpha code: "Shaw", ISO 15924 Numeric code: "281".
+  /// ISO 15924 Alpha code: `Shaw`, ISO 15924 Numeric code: `281`.
   const ScriptShaw()
       : super(
           name: "Shavian (Shaw)",
@@ -2413,7 +2413,7 @@ class ScriptShaw extends Script {
 class ScriptShrd extends Script {
   /// Creates a instance of [ScriptShrd] (Sharada, Śāradā script).
   ///
-  /// ISO 15924 Alpha code: "Shrd", ISO 15924 Numeric code: "319".
+  /// ISO 15924 Alpha code: `Shrd`, ISO 15924 Numeric code: `319`.
   const ScriptShrd()
       : super(
           name: "Sharada, Śāradā",
@@ -2428,7 +2428,7 @@ class ScriptShrd extends Script {
 class ScriptShui extends Script {
   /// Creates a instance of [ScriptShui] (Shuishu script).
   ///
-  /// ISO 15924 Alpha code: "Shui", ISO 15924 Numeric code: "530".
+  /// ISO 15924 Alpha code: `Shui`, ISO 15924 Numeric code: `530`.
   const ScriptShui()
       : super(
           name: "Shuishu",
@@ -2443,7 +2443,7 @@ class ScriptSidd extends Script {
   /// Creates a instance of [ScriptSidd] (Siddham, Siddhaṃ,
   /// Siddhamātṛkā script).
   ///
-  /// ISO 15924 Alpha code: "Sidd", ISO 15924 Numeric code: "302".
+  /// ISO 15924 Alpha code: `Sidd`, ISO 15924 Numeric code: `302`.
   const ScriptSidd()
       : super(
           name: "Siddham, Siddhaṃ, Siddhamātṛkā",
@@ -2458,7 +2458,7 @@ class ScriptSidd extends Script {
 class ScriptSind extends Script {
   /// Creates a instance of [ScriptSind] (Khudawadi, Sindhi script).
   ///
-  /// ISO 15924 Alpha code: "Sind", ISO 15924 Numeric code: "318".
+  /// ISO 15924 Alpha code: `Sind`, ISO 15924 Numeric code: `318`.
   const ScriptSind()
       : super(
           name: "Khudawadi, Sindhi",
@@ -2473,7 +2473,7 @@ class ScriptSind extends Script {
 class ScriptSinh extends Script {
   /// Creates a instance of [ScriptSinh] (Sinhala script).
   ///
-  /// ISO 15924 Alpha code: "Sinh", ISO 15924 Numeric code: "348".
+  /// ISO 15924 Alpha code: `Sinh`, ISO 15924 Numeric code: `348`.
   const ScriptSinh()
       : super(
           name: "Sinhala",
@@ -2488,7 +2488,7 @@ class ScriptSinh extends Script {
 class ScriptSogd extends Script {
   /// Creates a instance of [ScriptSogd] (Sogdian script).
   ///
-  /// ISO 15924 Alpha code: "Sogd", ISO 15924 Numeric code: "141".
+  /// ISO 15924 Alpha code: `Sogd`, ISO 15924 Numeric code: `141`.
   const ScriptSogd()
       : super(
           name: "Sogdian",
@@ -2503,7 +2503,7 @@ class ScriptSogd extends Script {
 class ScriptSogo extends Script {
   /// Creates a instance of [ScriptSogo] (Old Sogdian script).
   ///
-  /// ISO 15924 Alpha code: "Sogo", ISO 15924 Numeric code: "142".
+  /// ISO 15924 Alpha code: `Sogo`, ISO 15924 Numeric code: `142`.
   const ScriptSogo()
       : super(
           name: "Old Sogdian",
@@ -2518,7 +2518,7 @@ class ScriptSogo extends Script {
 class ScriptSora extends Script {
   /// Creates a instance of [ScriptSora] (Sora Sompeng script).
   ///
-  /// ISO 15924 Alpha code: "Sora", ISO 15924 Numeric code: "398".
+  /// ISO 15924 Alpha code: `Sora`, ISO 15924 Numeric code: `398`.
   const ScriptSora()
       : super(
           name: "Sora Sompeng",
@@ -2533,7 +2533,7 @@ class ScriptSora extends Script {
 class ScriptSoyo extends Script {
   /// Creates a instance of [ScriptSoyo] (Soyombo script).
   ///
-  /// ISO 15924 Alpha code: "Soyo", ISO 15924 Numeric code: "329".
+  /// ISO 15924 Alpha code: `Soyo`, ISO 15924 Numeric code: `329`.
   const ScriptSoyo()
       : super(
           name: "Soyombo",
@@ -2548,7 +2548,7 @@ class ScriptSoyo extends Script {
 class ScriptSund extends Script {
   /// Creates a instance of [ScriptSund] (Sundanese script).
   ///
-  /// ISO 15924 Alpha code: "Sund", ISO 15924 Numeric code: "362".
+  /// ISO 15924 Alpha code: `Sund`, ISO 15924 Numeric code: `362`.
   const ScriptSund()
       : super(
           name: "Sundanese",
@@ -2563,7 +2563,7 @@ class ScriptSund extends Script {
 class ScriptSunu extends Script {
   /// Creates a instance of [ScriptSunu] (Sunuwar script).
   ///
-  /// ISO 15924 Alpha code: "Sunu", ISO 15924 Numeric code: "274".
+  /// ISO 15924 Alpha code: `Sunu`, ISO 15924 Numeric code: `274`.
   const ScriptSunu()
       : super(
           name: "Sunuwar",
@@ -2577,7 +2577,7 @@ class ScriptSunu extends Script {
 class ScriptSylo extends Script {
   /// Creates a instance of [ScriptSylo] (Syloti Nagri script).
   ///
-  /// ISO 15924 Alpha code: "Sylo", ISO 15924 Numeric code: "316".
+  /// ISO 15924 Alpha code: `Sylo`, ISO 15924 Numeric code: `316`.
   const ScriptSylo()
       : super(
           name: "Syloti Nagri",
@@ -2592,7 +2592,7 @@ class ScriptSylo extends Script {
 class ScriptSyrc extends Script {
   /// Creates a instance of [ScriptSyrc] (Syriac script).
   ///
-  /// ISO 15924 Alpha code: "Syrc", ISO 15924 Numeric code: "135".
+  /// ISO 15924 Alpha code: `Syrc`, ISO 15924 Numeric code: `135`.
   const ScriptSyrc()
       : super(
           name: "Syriac",
@@ -2607,7 +2607,7 @@ class ScriptSyrc extends Script {
 class ScriptSyre extends Script {
   /// Creates a instance of [ScriptSyre] (Syriac (Estrangelo variant) script).
   ///
-  /// ISO 15924 Alpha code: "Syre", ISO 15924 Numeric code: "138".
+  /// ISO 15924 Alpha code: `Syre`, ISO 15924 Numeric code: `138`.
   const ScriptSyre()
       : super(
           name: "Syriac (Estrangelo variant)",
@@ -2621,7 +2621,7 @@ class ScriptSyre extends Script {
 class ScriptSyrj extends Script {
   /// Creates a instance of [ScriptSyrj] (Syriac (Western variant) script).
   ///
-  /// ISO 15924 Alpha code: "Syrj", ISO 15924 Numeric code: "137".
+  /// ISO 15924 Alpha code: `Syrj`, ISO 15924 Numeric code: `137`.
   const ScriptSyrj()
       : super(
           name: "Syriac (Western variant)",
@@ -2635,7 +2635,7 @@ class ScriptSyrj extends Script {
 class ScriptSyrn extends Script {
   /// Creates a instance of [ScriptSyrn] (Syriac (Eastern variant) script).
   ///
-  /// ISO 15924 Alpha code: "Syrn", ISO 15924 Numeric code: "136".
+  /// ISO 15924 Alpha code: `Syrn`, ISO 15924 Numeric code: `136`.
   const ScriptSyrn()
       : super(
           name: "Syriac (Eastern variant)",
@@ -2649,7 +2649,7 @@ class ScriptSyrn extends Script {
 class ScriptTagb extends Script {
   /// Creates a instance of [ScriptTagb] (Tagbanwa script).
   ///
-  /// ISO 15924 Alpha code: "Tagb", ISO 15924 Numeric code: "373".
+  /// ISO 15924 Alpha code: `Tagb`, ISO 15924 Numeric code: `373`.
   const ScriptTagb()
       : super(
           name: "Tagbanwa",
@@ -2664,7 +2664,7 @@ class ScriptTagb extends Script {
 class ScriptTakr extends Script {
   /// Creates a instance of [ScriptTakr] (Takri, Ṭākrī, Ṭāṅkrī script).
   ///
-  /// ISO 15924 Alpha code: "Takr", ISO 15924 Numeric code: "321".
+  /// ISO 15924 Alpha code: `Takr`, ISO 15924 Numeric code: `321`.
   const ScriptTakr()
       : super(
           name: "Takri, Ṭākrī, Ṭāṅkrī",
@@ -2679,7 +2679,7 @@ class ScriptTakr extends Script {
 class ScriptTale extends Script {
   /// Creates a instance of [ScriptTale] (Tai Le script).
   ///
-  /// ISO 15924 Alpha code: "Tale", ISO 15924 Numeric code: "353".
+  /// ISO 15924 Alpha code: `Tale`, ISO 15924 Numeric code: `353`.
   const ScriptTale()
       : super(
           name: "Tai Le",
@@ -2694,7 +2694,7 @@ class ScriptTale extends Script {
 class ScriptTalu extends Script {
   /// Creates a instance of [ScriptTalu] (New Tai Lue script).
   ///
-  /// ISO 15924 Alpha code: "Talu", ISO 15924 Numeric code: "354".
+  /// ISO 15924 Alpha code: `Talu`, ISO 15924 Numeric code: `354`.
   const ScriptTalu()
       : super(
           name: "New Tai Lue",
@@ -2709,7 +2709,7 @@ class ScriptTalu extends Script {
 class ScriptTaml extends Script {
   /// Creates a instance of [ScriptTaml] (Tamil script).
   ///
-  /// ISO 15924 Alpha code: "Taml", ISO 15924 Numeric code: "346".
+  /// ISO 15924 Alpha code: `Taml`, ISO 15924 Numeric code: `346`.
   const ScriptTaml()
       : super(
           name: "Tamil",
@@ -2724,7 +2724,7 @@ class ScriptTaml extends Script {
 class ScriptTang extends Script {
   /// Creates a instance of [ScriptTang] (Tangut script).
   ///
-  /// ISO 15924 Alpha code: "Tang", ISO 15924 Numeric code: "520".
+  /// ISO 15924 Alpha code: `Tang`, ISO 15924 Numeric code: `520`.
   const ScriptTang()
       : super(
           name: "Tangut",
@@ -2739,7 +2739,7 @@ class ScriptTang extends Script {
 class ScriptTavt extends Script {
   /// Creates a instance of [ScriptTavt] (Tai Viet script).
   ///
-  /// ISO 15924 Alpha code: "Tavt", ISO 15924 Numeric code: "359".
+  /// ISO 15924 Alpha code: `Tavt`, ISO 15924 Numeric code: `359`.
   const ScriptTavt()
       : super(
           name: "Tai Viet",
@@ -2754,7 +2754,7 @@ class ScriptTavt extends Script {
 class ScriptTelu extends Script {
   /// Creates a instance of [ScriptTelu] (Telugu script).
   ///
-  /// ISO 15924 Alpha code: "Telu", ISO 15924 Numeric code: "340".
+  /// ISO 15924 Alpha code: `Telu`, ISO 15924 Numeric code: `340`.
   const ScriptTelu()
       : super(
           name: "Telugu",
@@ -2769,7 +2769,7 @@ class ScriptTelu extends Script {
 class ScriptTeng extends Script {
   /// Creates a instance of [ScriptTeng] (Tengwar script).
   ///
-  /// ISO 15924 Alpha code: "Teng", ISO 15924 Numeric code: "290".
+  /// ISO 15924 Alpha code: `Teng`, ISO 15924 Numeric code: `290`.
   const ScriptTeng()
       : super(
           name: "Tengwar",
@@ -2783,7 +2783,7 @@ class ScriptTeng extends Script {
 class ScriptTfng extends Script {
   /// Creates a instance of [ScriptTfng] (Tifinagh (Berber) script).
   ///
-  /// ISO 15924 Alpha code: "Tfng", ISO 15924 Numeric code: "120".
+  /// ISO 15924 Alpha code: `Tfng`, ISO 15924 Numeric code: `120`.
   const ScriptTfng()
       : super(
           name: "Tifinagh (Berber)",
@@ -2798,7 +2798,7 @@ class ScriptTfng extends Script {
 class ScriptTglg extends Script {
   /// Creates a instance of [ScriptTglg] (Tagalog (Baybayin, Alibata) script).
   ///
-  /// ISO 15924 Alpha code: "Tglg", ISO 15924 Numeric code: "370".
+  /// ISO 15924 Alpha code: `Tglg`, ISO 15924 Numeric code: `370`.
   const ScriptTglg()
       : super(
           name: "Tagalog (Baybayin, Alibata)",
@@ -2813,7 +2813,7 @@ class ScriptTglg extends Script {
 class ScriptThaa extends Script {
   /// Creates a instance of [ScriptThaa] (Thaana script).
   ///
-  /// ISO 15924 Alpha code: "Thaa", ISO 15924 Numeric code: "170".
+  /// ISO 15924 Alpha code: `Thaa`, ISO 15924 Numeric code: `170`.
   const ScriptThaa()
       : super(
           name: "Thaana",
@@ -2828,7 +2828,7 @@ class ScriptThaa extends Script {
 class ScriptThai extends Script {
   /// Creates a instance of [ScriptThai] (Thai script).
   ///
-  /// ISO 15924 Alpha code: "Thai", ISO 15924 Numeric code: "352".
+  /// ISO 15924 Alpha code: `Thai`, ISO 15924 Numeric code: `352`.
   const ScriptThai()
       : super(
           name: "Thai",
@@ -2843,7 +2843,7 @@ class ScriptThai extends Script {
 class ScriptTibt extends Script {
   /// Creates a instance of [ScriptTibt] (Tibetan script).
   ///
-  /// ISO 15924 Alpha code: "Tibt", ISO 15924 Numeric code: "330".
+  /// ISO 15924 Alpha code: `Tibt`, ISO 15924 Numeric code: `330`.
   const ScriptTibt()
       : super(
           name: "Tibetan",
@@ -2858,7 +2858,7 @@ class ScriptTibt extends Script {
 class ScriptTirh extends Script {
   /// Creates a instance of [ScriptTirh] (Tirhuta script).
   ///
-  /// ISO 15924 Alpha code: "Tirh", ISO 15924 Numeric code: "326".
+  /// ISO 15924 Alpha code: `Tirh`, ISO 15924 Numeric code: `326`.
   const ScriptTirh()
       : super(
           name: "Tirhuta",
@@ -2873,7 +2873,7 @@ class ScriptTirh extends Script {
 class ScriptTnsa extends Script {
   /// Creates a instance of [ScriptTnsa] (Tangsa script).
   ///
-  /// ISO 15924 Alpha code: "Tnsa", ISO 15924 Numeric code: "275".
+  /// ISO 15924 Alpha code: `Tnsa`, ISO 15924 Numeric code: `275`.
   const ScriptTnsa()
       : super(
           name: "Tangsa",
@@ -2888,7 +2888,7 @@ class ScriptTnsa extends Script {
 class ScriptToto extends Script {
   /// Creates a instance of [ScriptToto] (Toto script).
   ///
-  /// ISO 15924 Alpha code: "Toto", ISO 15924 Numeric code: "294".
+  /// ISO 15924 Alpha code: `Toto`, ISO 15924 Numeric code: `294`.
   const ScriptToto()
       : super(
           name: "Toto",
@@ -2903,7 +2903,7 @@ class ScriptToto extends Script {
 class ScriptUgar extends Script {
   /// Creates a instance of [ScriptUgar] (Ugaritic script).
   ///
-  /// ISO 15924 Alpha code: "Ugar", ISO 15924 Numeric code: "040".
+  /// ISO 15924 Alpha code: `Ugar`, ISO 15924 Numeric code: `040`.
   const ScriptUgar()
       : super(
           name: "Ugaritic",
@@ -2918,7 +2918,7 @@ class ScriptUgar extends Script {
 class ScriptVaii extends Script {
   /// Creates a instance of [ScriptVaii] (Vai script).
   ///
-  /// ISO 15924 Alpha code: "Vaii", ISO 15924 Numeric code: "470".
+  /// ISO 15924 Alpha code: `Vaii`, ISO 15924 Numeric code: `470`.
   const ScriptVaii()
       : super(
           name: "Vai",
@@ -2933,7 +2933,7 @@ class ScriptVaii extends Script {
 class ScriptVisp extends Script {
   /// Creates a instance of [ScriptVisp] (Visible Speech script).
   ///
-  /// ISO 15924 Alpha code: "Visp", ISO 15924 Numeric code: "280".
+  /// ISO 15924 Alpha code: `Visp`, ISO 15924 Numeric code: `280`.
   const ScriptVisp()
       : super(
           name: "Visible Speech",
@@ -2947,7 +2947,7 @@ class ScriptVisp extends Script {
 class ScriptVith extends Script {
   /// Creates a instance of [ScriptVith] (Vithkuqi script).
   ///
-  /// ISO 15924 Alpha code: "Vith", ISO 15924 Numeric code: "228".
+  /// ISO 15924 Alpha code: `Vith`, ISO 15924 Numeric code: `228`.
   const ScriptVith()
       : super(
           name: "Vithkuqi",
@@ -2962,7 +2962,7 @@ class ScriptVith extends Script {
 class ScriptWara extends Script {
   /// Creates a instance of [ScriptWara] (Warang Citi (Varang Kshiti) script).
   ///
-  /// ISO 15924 Alpha code: "Wara", ISO 15924 Numeric code: "262".
+  /// ISO 15924 Alpha code: `Wara`, ISO 15924 Numeric code: `262`.
   const ScriptWara()
       : super(
           name: "Warang Citi (Varang Kshiti)",
@@ -2977,7 +2977,7 @@ class ScriptWara extends Script {
 class ScriptWcho extends Script {
   /// Creates a instance of [ScriptWcho] (Wancho script).
   ///
-  /// ISO 15924 Alpha code: "Wcho", ISO 15924 Numeric code: "283".
+  /// ISO 15924 Alpha code: `Wcho`, ISO 15924 Numeric code: `283`.
   const ScriptWcho()
       : super(
           name: "Wancho",
@@ -2992,7 +2992,7 @@ class ScriptWcho extends Script {
 class ScriptWole extends Script {
   /// Creates a instance of [ScriptWole] (Woleai script).
   ///
-  /// ISO 15924 Alpha code: "Wole", ISO 15924 Numeric code: "480".
+  /// ISO 15924 Alpha code: `Wole`, ISO 15924 Numeric code: `480`.
   const ScriptWole()
       : super(
           name: "Woleai",
@@ -3006,7 +3006,7 @@ class ScriptWole extends Script {
 class ScriptXpeo extends Script {
   /// Creates a instance of [ScriptXpeo] (Old Persian script).
   ///
-  /// ISO 15924 Alpha code: "Xpeo", ISO 15924 Numeric code: "030".
+  /// ISO 15924 Alpha code: `Xpeo`, ISO 15924 Numeric code: `030`.
   const ScriptXpeo()
       : super(
           name: "Old Persian",
@@ -3021,7 +3021,7 @@ class ScriptXpeo extends Script {
 class ScriptXsux extends Script {
   /// Creates a instance of [ScriptXsux] (Cuneiform, Sumero-Akkadian script).
   ///
-  /// ISO 15924 Alpha code: "Xsux", ISO 15924 Numeric code: "020".
+  /// ISO 15924 Alpha code: `Xsux`, ISO 15924 Numeric code: `020`.
   const ScriptXsux()
       : super(
           name: "Cuneiform, Sumero-Akkadian",
@@ -3036,7 +3036,7 @@ class ScriptXsux extends Script {
 class ScriptYezi extends Script {
   /// Creates a instance of [ScriptYezi] (Yezidi script).
   ///
-  /// ISO 15924 Alpha code: "Yezi", ISO 15924 Numeric code: "192".
+  /// ISO 15924 Alpha code: `Yezi`, ISO 15924 Numeric code: `192`.
   const ScriptYezi()
       : super(
           name: "Yezidi",
@@ -3051,7 +3051,7 @@ class ScriptYezi extends Script {
 class ScriptYiii extends Script {
   /// Creates a instance of [ScriptYiii] (Yi script).
   ///
-  /// ISO 15924 Alpha code: "Yiii", ISO 15924 Numeric code: "460".
+  /// ISO 15924 Alpha code: `Yiii`, ISO 15924 Numeric code: `460`.
   const ScriptYiii()
       : super(
           name: "Yi",
@@ -3068,7 +3068,7 @@ class ScriptZanb extends Script {
   /// Creates a instance of [ScriptZanb] (Zanabazar Square (Zanabazarin
   /// Dörböljin Useg, Xewtee Dörböljin Bicig, Horizontal Square Script) script).
   ///
-  /// ISO 15924 Alpha code: "Zanb", ISO 15924 Numeric code: "339".
+  /// ISO 15924 Alpha code: `Zanb`, ISO 15924 Numeric code: `339`.
   const ScriptZanb()
       : super(
           name:
@@ -3084,7 +3084,7 @@ class ScriptZanb extends Script {
 class ScriptZinh extends Script {
   /// Creates a instance of [ScriptZinh] (Code for inherited script script).
   ///
-  /// ISO 15924 Alpha code: "Zinh", ISO 15924 Numeric code: "994".
+  /// ISO 15924 Alpha code: `Zinh`, ISO 15924 Numeric code: `994`.
   const ScriptZinh()
       : super(
           name: "Code for inherited script",
@@ -3099,7 +3099,7 @@ class ScriptZinh extends Script {
 class ScriptZmth extends Script {
   /// Creates a instance of [ScriptZmth] (Mathematical notation script).
   ///
-  /// ISO 15924 Alpha code: "Zmth", ISO 15924 Numeric code: "995".
+  /// ISO 15924 Alpha code: `Zmth`, ISO 15924 Numeric code: `995`.
   const ScriptZmth()
       : super(
           name: "Mathematical notation",
@@ -3113,7 +3113,7 @@ class ScriptZmth extends Script {
 class ScriptZsye extends Script {
   /// Creates a instance of [ScriptZsye] (Symbols (Emoji variant) script).
   ///
-  /// ISO 15924 Alpha code: "Zsye", ISO 15924 Numeric code: "993".
+  /// ISO 15924 Alpha code: `Zsye`, ISO 15924 Numeric code: `993`.
   const ScriptZsye()
       : super(
           name: "Symbols (Emoji variant)",
@@ -3127,7 +3127,7 @@ class ScriptZsye extends Script {
 class ScriptZsym extends Script {
   /// Creates a instance of [ScriptZsym] (Symbols script).
   ///
-  /// ISO 15924 Alpha code: "Zsym", ISO 15924 Numeric code: "996".
+  /// ISO 15924 Alpha code: `Zsym`, ISO 15924 Numeric code: `996`.
   const ScriptZsym()
       : super(
           name: "Symbols",
@@ -3141,7 +3141,7 @@ class ScriptZsym extends Script {
 class ScriptZxxx extends Script {
   /// Creates a instance of [ScriptZxxx] (Code for unwritten documents script).
   ///
-  /// ISO 15924 Alpha code: "Zxxx", ISO 15924 Numeric code: "997".
+  /// ISO 15924 Alpha code: `Zxxx`, ISO 15924 Numeric code: `997`.
   const ScriptZxxx()
       : super(
           name: "Code for unwritten documents",
@@ -3155,7 +3155,7 @@ class ScriptZxxx extends Script {
 class ScriptZyyy extends Script {
   /// Creates a instance of [ScriptZyyy] (Code for undetermined script script).
   ///
-  /// ISO 15924 Alpha code: "Zyyy", ISO 15924 Numeric code: "998".
+  /// ISO 15924 Alpha code: `Zyyy`, ISO 15924 Numeric code: `998`.
   const ScriptZyyy()
       : super(
           name: "Code for undetermined script",
@@ -3170,7 +3170,7 @@ class ScriptZyyy extends Script {
 class ScriptZzzz extends Script {
   /// Creates a instance of [ScriptZzzz] (Code for uncoded script script).
   ///
-  /// ISO 15924 Alpha code: "Zzzz", ISO 15924 Numeric code: "999".
+  /// ISO 15924 Alpha code: `Zzzz`, ISO 15924 Numeric code: `999`.
   const ScriptZzzz()
       : super(
           name: "Code for uncoded script",
