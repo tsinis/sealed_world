@@ -4,7 +4,7 @@ import "../model/currency/currency.dart";
 class FiatAed extends FiatCurrency {
   /// Creates a instance of [FiatAed] (United Arab Emirates Dirham currency).
   ///
-  /// ISO 4217 Alpha code: "AED", ISO 4217 Numeric code: "784".
+  /// ISO 4217 Alpha code: `AED`, ISO 4217 Numeric code: `784`.
   const FiatAed()
       : super(
           code: "AED",
@@ -22,7 +22,7 @@ class FiatAed extends FiatCurrency {
 class FiatAfn extends FiatCurrency {
   /// Creates a instance of [FiatAfn] (Afghan Afghani currency).
   ///
-  /// ISO 4217 Alpha code: "AFN", ISO 4217 Numeric code: "971".
+  /// ISO 4217 Alpha code: `AFN`, ISO 4217 Numeric code: `971`.
   const FiatAfn()
       : super(
           code: "AFN",
@@ -40,7 +40,7 @@ class FiatAfn extends FiatCurrency {
 class FiatAll extends FiatCurrency {
   /// Creates a instance of [FiatAll] (Albanian Lek currency).
   ///
-  /// ISO 4217 Alpha code: "ALL", ISO 4217 Numeric code: "008".
+  /// ISO 4217 Alpha code: `ALL`, ISO 4217 Numeric code: `008`.
   const FiatAll()
       : super(
           code: "ALL",
@@ -59,7 +59,7 @@ class FiatAll extends FiatCurrency {
 class FiatAmd extends FiatCurrency {
   /// Creates a instance of [FiatAmd] (Armenian Dram currency).
   ///
-  /// ISO 4217 Alpha code: "AMD", ISO 4217 Numeric code: "051".
+  /// ISO 4217 Alpha code: `AMD`, ISO 4217 Numeric code: `051`.
   const FiatAmd()
       : super(
           code: "AMD",
@@ -77,7 +77,7 @@ class FiatAmd extends FiatCurrency {
 class FiatAng extends FiatCurrency {
   /// Creates a instance of [FiatAng] (Netherlands Antillean Guilder currency).
   ///
-  /// ISO 4217 Alpha code: "ANG", ISO 4217 Numeric code: "532".
+  /// ISO 4217 Alpha code: `ANG`, ISO 4217 Numeric code: `532`.
   const FiatAng()
       : super(
           code: "ANG",
@@ -98,7 +98,7 @@ class FiatAng extends FiatCurrency {
 class FiatAoa extends FiatCurrency {
   /// Creates a instance of [FiatAoa] (Angolan Kwanza currency).
   ///
-  /// ISO 4217 Alpha code: "AOA", ISO 4217 Numeric code: "973".
+  /// ISO 4217 Alpha code: `AOA`, ISO 4217 Numeric code: `973`.
   const FiatAoa()
       : super(
           code: "AOA",
@@ -115,7 +115,7 @@ class FiatAoa extends FiatCurrency {
 class FiatArs extends FiatCurrency {
   /// Creates a instance of [FiatArs] (Argentine Peso currency).
   ///
-  /// ISO 4217 Alpha code: "ARS", ISO 4217 Numeric code: "032".
+  /// ISO 4217 Alpha code: `ARS`, ISO 4217 Numeric code: `032`.
   const FiatArs()
       : super(
           code: "ARS",
@@ -137,7 +137,7 @@ class FiatArs extends FiatCurrency {
 class FiatAud extends FiatCurrency {
   /// Creates a instance of [FiatAud] (Australian Dollar currency).
   ///
-  /// ISO 4217 Alpha code: "AUD", ISO 4217 Numeric code: "036".
+  /// ISO 4217 Alpha code: `AUD`, ISO 4217 Numeric code: `036`.
   const FiatAud()
       : super(
           code: "AUD",
@@ -159,7 +159,7 @@ class FiatAud extends FiatCurrency {
 class FiatAwg extends FiatCurrency {
   /// Creates a instance of [FiatAwg] (Aruban Florin currency).
   ///
-  /// ISO 4217 Alpha code: "AWG", ISO 4217 Numeric code: "533".
+  /// ISO 4217 Alpha code: `AWG`, ISO 4217 Numeric code: `533`.
   const FiatAwg()
       : super(
           code: "AWG",
@@ -178,7 +178,7 @@ class FiatAwg extends FiatCurrency {
 class FiatAzn extends FiatCurrency {
   /// Creates a instance of [FiatAzn] (Azerbaijani Manat currency).
   ///
-  /// ISO 4217 Alpha code: "AZN", ISO 4217 Numeric code: "944".
+  /// ISO 4217 Alpha code: `AZN`, ISO 4217 Numeric code: `944`.
   const FiatAzn()
       : super(
           code: "AZN",
@@ -196,7 +196,7 @@ class FiatAzn extends FiatCurrency {
 class FiatBam extends FiatCurrency {
   /// Creates a instance of [FiatBam] (Convertible Mark currency).
   ///
-  /// ISO 4217 Alpha code: "BAM", ISO 4217 Numeric code: "977".
+  /// ISO 4217 Alpha code: `BAM`, ISO 4217 Numeric code: `977`.
   const FiatBam()
       : super(
           code: "BAM",
@@ -215,7 +215,7 @@ class FiatBam extends FiatCurrency {
 class FiatBbd extends FiatCurrency {
   /// Creates a instance of [FiatBbd] (Barbadian Dollar currency).
   ///
-  /// ISO 4217 Alpha code: "BBD", ISO 4217 Numeric code: "052".
+  /// ISO 4217 Alpha code: `BBD`, ISO 4217 Numeric code: `052`.
   const FiatBbd()
       : super(
           code: "BBD",
@@ -235,7 +235,7 @@ class FiatBbd extends FiatCurrency {
 class FiatBdt extends FiatCurrency {
   /// Creates a instance of [FiatBdt] (Bangladeshi Taka currency).
   ///
-  /// ISO 4217 Alpha code: "BDT", ISO 4217 Numeric code: "050".
+  /// ISO 4217 Alpha code: `BDT`, ISO 4217 Numeric code: `050`.
   const FiatBdt()
       : super(
           code: "BDT",
@@ -253,7 +253,7 @@ class FiatBdt extends FiatCurrency {
 class FiatBgn extends FiatCurrency {
   /// Creates a instance of [FiatBgn] (Bulgarian Lev currency).
   ///
-  /// ISO 4217 Alpha code: "BGN", ISO 4217 Numeric code: "975".
+  /// ISO 4217 Alpha code: `BGN`, ISO 4217 Numeric code: `975`.
   const FiatBgn()
       : super(
           code: "BGN",
@@ -270,7 +270,7 @@ class FiatBgn extends FiatCurrency {
 class FiatBhd extends FiatCurrency {
   /// Creates a instance of [FiatBhd] (Bahraini Dinar currency).
   ///
-  /// ISO 4217 Alpha code: "BHD", ISO 4217 Numeric code: "048".
+  /// ISO 4217 Alpha code: `BHD`, ISO 4217 Numeric code: `048`.
   const FiatBhd()
       : super(
           code: "BHD",
@@ -290,7 +290,7 @@ class FiatBhd extends FiatCurrency {
 class FiatBif extends FiatCurrency {
   /// Creates a instance of [FiatBif] (Burundian Franc currency).
   ///
-  /// ISO 4217 Alpha code: "BIF", ISO 4217 Numeric code: "108".
+  /// ISO 4217 Alpha code: `BIF`, ISO 4217 Numeric code: `108`.
   const FiatBif()
       : super(
           code: "BIF",
@@ -310,7 +310,7 @@ class FiatBif extends FiatCurrency {
 class FiatBmd extends FiatCurrency {
   /// Creates a instance of [FiatBmd] (Bermudian Dollar currency).
   ///
-  /// ISO 4217 Alpha code: "BMD", ISO 4217 Numeric code: "060".
+  /// ISO 4217 Alpha code: `BMD`, ISO 4217 Numeric code: `060`.
   const FiatBmd()
       : super(
           code: "BMD",
@@ -330,7 +330,7 @@ class FiatBmd extends FiatCurrency {
 class FiatBnd extends FiatCurrency {
   /// Creates a instance of [FiatBnd] (Brunei Dollar currency).
   ///
-  /// ISO 4217 Alpha code: "BND", ISO 4217 Numeric code: "096".
+  /// ISO 4217 Alpha code: `BND`, ISO 4217 Numeric code: `096`.
   const FiatBnd()
       : super(
           code: "BND",
@@ -350,7 +350,7 @@ class FiatBnd extends FiatCurrency {
 class FiatBob extends FiatCurrency {
   /// Creates a instance of [FiatBob] (Bolivian Boliviano currency).
   ///
-  /// ISO 4217 Alpha code: "BOB", ISO 4217 Numeric code: "068".
+  /// ISO 4217 Alpha code: `BOB`, ISO 4217 Numeric code: `068`.
   const FiatBob()
       : super(
           code: "BOB",
@@ -369,7 +369,7 @@ class FiatBob extends FiatCurrency {
 class FiatBrl extends FiatCurrency {
   /// Creates a instance of [FiatBrl] (Brazilian Real currency).
   ///
-  /// ISO 4217 Alpha code: "BRL", ISO 4217 Numeric code: "986".
+  /// ISO 4217 Alpha code: `BRL`, ISO 4217 Numeric code: `986`.
   const FiatBrl()
       : super(
           code: "BRL",
@@ -390,7 +390,7 @@ class FiatBrl extends FiatCurrency {
 class FiatBsd extends FiatCurrency {
   /// Creates a instance of [FiatBsd] (Bahamian Dollar currency).
   ///
-  /// ISO 4217 Alpha code: "BSD", ISO 4217 Numeric code: "044".
+  /// ISO 4217 Alpha code: `BSD`, ISO 4217 Numeric code: `044`.
   const FiatBsd()
       : super(
           code: "BSD",
@@ -410,7 +410,7 @@ class FiatBsd extends FiatCurrency {
 class FiatBtn extends FiatCurrency {
   /// Creates a instance of [FiatBtn] (Bhutanese Ngultrum currency).
   ///
-  /// ISO 4217 Alpha code: "BTN", ISO 4217 Numeric code: "064".
+  /// ISO 4217 Alpha code: `BTN`, ISO 4217 Numeric code: `064`.
   const FiatBtn()
       : super(
           code: "BTN",
@@ -428,7 +428,7 @@ class FiatBtn extends FiatCurrency {
 class FiatBwp extends FiatCurrency {
   /// Creates a instance of [FiatBwp] (Botswanan Pula currency).
   ///
-  /// ISO 4217 Alpha code: "BWP", ISO 4217 Numeric code: "072".
+  /// ISO 4217 Alpha code: `BWP`, ISO 4217 Numeric code: `072`.
   const FiatBwp()
       : super(
           code: "BWP",
@@ -446,7 +446,7 @@ class FiatBwp extends FiatCurrency {
 class FiatByn extends FiatCurrency {
   /// Creates a instance of [FiatByn] (Belarusian Ruble currency).
   ///
-  /// ISO 4217 Alpha code: "BYN", ISO 4217 Numeric code: "933".
+  /// ISO 4217 Alpha code: `BYN`, ISO 4217 Numeric code: `933`.
   const FiatByn()
       : super(
           code: "BYN",
@@ -466,7 +466,7 @@ class FiatByn extends FiatCurrency {
 class FiatBzd extends FiatCurrency {
   /// Creates a instance of [FiatBzd] (Belize Dollar currency).
   ///
-  /// ISO 4217 Alpha code: "BZD", ISO 4217 Numeric code: "084".
+  /// ISO 4217 Alpha code: `BZD`, ISO 4217 Numeric code: `084`.
   const FiatBzd()
       : super(
           code: "BZD",
@@ -486,7 +486,7 @@ class FiatBzd extends FiatCurrency {
 class FiatCad extends FiatCurrency {
   /// Creates a instance of [FiatCad] (Canadian Dollar currency).
   ///
-  /// ISO 4217 Alpha code: "CAD", ISO 4217 Numeric code: "124".
+  /// ISO 4217 Alpha code: `CAD`, ISO 4217 Numeric code: `124`.
   const FiatCad()
       : super(
           code: "CAD",
@@ -508,7 +508,7 @@ class FiatCad extends FiatCurrency {
 class FiatCdf extends FiatCurrency {
   /// Creates a instance of [FiatCdf] (Congolese Franc currency).
   ///
-  /// ISO 4217 Alpha code: "CDF", ISO 4217 Numeric code: "976".
+  /// ISO 4217 Alpha code: `CDF`, ISO 4217 Numeric code: `976`.
   const FiatCdf()
       : super(
           code: "CDF",
@@ -526,7 +526,7 @@ class FiatCdf extends FiatCurrency {
 class FiatChf extends FiatCurrency {
   /// Creates a instance of [FiatChf] (Swiss Franc currency).
   ///
-  /// ISO 4217 Alpha code: "CHF", ISO 4217 Numeric code: "756".
+  /// ISO 4217 Alpha code: `CHF`, ISO 4217 Numeric code: `756`.
   const FiatChf()
       : super(
           code: "CHF",
@@ -547,7 +547,7 @@ class FiatChf extends FiatCurrency {
 class FiatClf extends FiatCurrency {
   /// Creates a instance of [FiatClf] (Chilean Unit of Account (UF) currency).
   ///
-  /// ISO 4217 Alpha code: "CLF", ISO 4217 Numeric code: "990".
+  /// ISO 4217 Alpha code: `CLF`, ISO 4217 Numeric code: `990`.
   const FiatClf()
       : super(
           code: "CLF",
@@ -569,7 +569,7 @@ class FiatClf extends FiatCurrency {
 class FiatClp extends FiatCurrency {
   /// Creates a instance of [FiatClp] (Chilean Peso currency).
   ///
-  /// ISO 4217 Alpha code: "CLP", ISO 4217 Numeric code: "152".
+  /// ISO 4217 Alpha code: `CLP`, ISO 4217 Numeric code: `152`.
   const FiatClp()
       : super(
           code: "CLP",
@@ -591,7 +591,7 @@ class FiatClp extends FiatCurrency {
 class FiatCny extends FiatCurrency {
   /// Creates a instance of [FiatCny] (Chinese Renminbi Yuan currency).
   ///
-  /// ISO 4217 Alpha code: "CNY", ISO 4217 Numeric code: "156".
+  /// ISO 4217 Alpha code: `CNY`, ISO 4217 Numeric code: `156`.
   const FiatCny()
       : super(
           code: "CNY",
@@ -610,7 +610,7 @@ class FiatCny extends FiatCurrency {
 class FiatCop extends FiatCurrency {
   /// Creates a instance of [FiatCop] (Colombian Peso currency).
   ///
-  /// ISO 4217 Alpha code: "COP", ISO 4217 Numeric code: "170".
+  /// ISO 4217 Alpha code: `COP`, ISO 4217 Numeric code: `170`.
   const FiatCop()
       : super(
           code: "COP",
@@ -633,7 +633,7 @@ class FiatCop extends FiatCurrency {
 class FiatCrc extends FiatCurrency {
   /// Creates a instance of [FiatCrc] (Costa Rican Colón currency).
   ///
-  /// ISO 4217 Alpha code: "CRC", ISO 4217 Numeric code: "188".
+  /// ISO 4217 Alpha code: `CRC`, ISO 4217 Numeric code: `188`.
   const FiatCrc()
       : super(
           code: "CRC",
@@ -655,7 +655,7 @@ class FiatCrc extends FiatCurrency {
 class FiatCuc extends FiatCurrency {
   /// Creates a instance of [FiatCuc] (Cuban Convertible Peso currency).
   ///
-  /// ISO 4217 Alpha code: "CUC", ISO 4217 Numeric code: "931".
+  /// ISO 4217 Alpha code: `CUC`, ISO 4217 Numeric code: `931`.
   const FiatCuc()
       : super(
           code: "CUC",
@@ -673,7 +673,7 @@ class FiatCuc extends FiatCurrency {
 class FiatCup extends FiatCurrency {
   /// Creates a instance of [FiatCup] (Cuban Peso currency).
   ///
-  /// ISO 4217 Alpha code: "CUP", ISO 4217 Numeric code: "192".
+  /// ISO 4217 Alpha code: `CUP`, ISO 4217 Numeric code: `192`.
   const FiatCup()
       : super(
           code: "CUP",
@@ -693,7 +693,7 @@ class FiatCup extends FiatCurrency {
 class FiatCve extends FiatCurrency {
   /// Creates a instance of [FiatCve] (Cape Verdean Escudo currency).
   ///
-  /// ISO 4217 Alpha code: "CVE", ISO 4217 Numeric code: "132".
+  /// ISO 4217 Alpha code: `CVE`, ISO 4217 Numeric code: `132`.
   const FiatCve()
       : super(
           code: "CVE",
@@ -712,7 +712,7 @@ class FiatCve extends FiatCurrency {
 class FiatCzk extends FiatCurrency {
   /// Creates a instance of [FiatCzk] (Czech Koruna currency).
   ///
-  /// ISO 4217 Alpha code: "CZK", ISO 4217 Numeric code: "203".
+  /// ISO 4217 Alpha code: `CZK`, ISO 4217 Numeric code: `203`.
   const FiatCzk()
       : super(
           code: "CZK",
@@ -731,7 +731,7 @@ class FiatCzk extends FiatCurrency {
 class FiatDjf extends FiatCurrency {
   /// Creates a instance of [FiatDjf] (Djiboutian Franc currency).
   ///
-  /// ISO 4217 Alpha code: "DJF", ISO 4217 Numeric code: "262".
+  /// ISO 4217 Alpha code: `DJF`, ISO 4217 Numeric code: `262`.
   const FiatDjf()
       : super(
           code: "DJF",
@@ -749,7 +749,7 @@ class FiatDjf extends FiatCurrency {
 class FiatDkk extends FiatCurrency {
   /// Creates a instance of [FiatDkk] (Danish Krone currency).
   ///
-  /// ISO 4217 Alpha code: "DKK", ISO 4217 Numeric code: "208".
+  /// ISO 4217 Alpha code: `DKK`, ISO 4217 Numeric code: `208`.
   const FiatDkk()
       : super(
           code: "DKK",
@@ -770,7 +770,7 @@ class FiatDkk extends FiatCurrency {
 class FiatDop extends FiatCurrency {
   /// Creates a instance of [FiatDop] (Dominican Peso currency).
   ///
-  /// ISO 4217 Alpha code: "DOP", ISO 4217 Numeric code: "214".
+  /// ISO 4217 Alpha code: `DOP`, ISO 4217 Numeric code: `214`.
   const FiatDop()
       : super(
           code: "DOP",
@@ -791,7 +791,7 @@ class FiatDop extends FiatCurrency {
 class FiatDzd extends FiatCurrency {
   /// Creates a instance of [FiatDzd] (Algerian Dinar currency).
   ///
-  /// ISO 4217 Alpha code: "DZD", ISO 4217 Numeric code: "012".
+  /// ISO 4217 Alpha code: `DZD`, ISO 4217 Numeric code: `012`.
   const FiatDzd()
       : super(
           code: "DZD",
@@ -809,7 +809,7 @@ class FiatDzd extends FiatCurrency {
 class FiatEgp extends FiatCurrency {
   /// Creates a instance of [FiatEgp] (Egyptian Pound currency).
   ///
-  /// ISO 4217 Alpha code: "EGP", ISO 4217 Numeric code: "818".
+  /// ISO 4217 Alpha code: `EGP`, ISO 4217 Numeric code: `818`.
   const FiatEgp()
       : super(
           code: "EGP",
@@ -829,7 +829,7 @@ class FiatEgp extends FiatCurrency {
 class FiatErn extends FiatCurrency {
   /// Creates a instance of [FiatErn] (Eritrean Nakfa currency).
   ///
-  /// ISO 4217 Alpha code: "ERN", ISO 4217 Numeric code: "232".
+  /// ISO 4217 Alpha code: `ERN`, ISO 4217 Numeric code: `232`.
   const FiatErn()
       : super(
           code: "ERN",
@@ -845,7 +845,7 @@ class FiatErn extends FiatCurrency {
 class FiatEtb extends FiatCurrency {
   /// Creates a instance of [FiatEtb] (Ethiopian Birr currency).
   ///
-  /// ISO 4217 Alpha code: "ETB", ISO 4217 Numeric code: "230".
+  /// ISO 4217 Alpha code: `ETB`, ISO 4217 Numeric code: `230`.
   const FiatEtb()
       : super(
           code: "ETB",
@@ -862,7 +862,7 @@ class FiatEtb extends FiatCurrency {
 class FiatEur extends FiatCurrency {
   /// Creates a instance of [FiatEur] (Euro currency).
   ///
-  /// ISO 4217 Alpha code: "EUR", ISO 4217 Numeric code: "978".
+  /// ISO 4217 Alpha code: `EUR`, ISO 4217 Numeric code: `978`.
   const FiatEur()
       : super(
           code: "EUR",
@@ -883,7 +883,7 @@ class FiatEur extends FiatCurrency {
 class FiatFjd extends FiatCurrency {
   /// Creates a instance of [FiatFjd] (Fijian Dollar currency).
   ///
-  /// ISO 4217 Alpha code: "FJD", ISO 4217 Numeric code: "242".
+  /// ISO 4217 Alpha code: `FJD`, ISO 4217 Numeric code: `242`.
   const FiatFjd()
       : super(
           code: "FJD",
@@ -903,7 +903,7 @@ class FiatFjd extends FiatCurrency {
 class FiatFkp extends FiatCurrency {
   /// Creates a instance of [FiatFkp] (Falkland Pound currency).
   ///
-  /// ISO 4217 Alpha code: "FKP", ISO 4217 Numeric code: "238".
+  /// ISO 4217 Alpha code: `FKP`, ISO 4217 Numeric code: `238`.
   const FiatFkp()
       : super(
           code: "FKP",
@@ -922,7 +922,7 @@ class FiatFkp extends FiatCurrency {
 class FiatGbp extends FiatCurrency {
   /// Creates a instance of [FiatGbp] (British Pound currency).
   ///
-  /// ISO 4217 Alpha code: "GBP", ISO 4217 Numeric code: "826".
+  /// ISO 4217 Alpha code: `GBP`, ISO 4217 Numeric code: `826`.
   const FiatGbp()
       : super(
           code: "GBP",
@@ -941,7 +941,7 @@ class FiatGbp extends FiatCurrency {
 class FiatGel extends FiatCurrency {
   /// Creates a instance of [FiatGel] (Georgian Lari currency).
   ///
-  /// ISO 4217 Alpha code: "GEL", ISO 4217 Numeric code: "981".
+  /// ISO 4217 Alpha code: `GEL`, ISO 4217 Numeric code: `981`.
   const FiatGel()
       : super(
           code: "GEL",
@@ -958,7 +958,7 @@ class FiatGel extends FiatCurrency {
 class FiatGhs extends FiatCurrency {
   /// Creates a instance of [FiatGhs] (Ghanaian Cedi currency).
   ///
-  /// ISO 4217 Alpha code: "GHS", ISO 4217 Numeric code: "936".
+  /// ISO 4217 Alpha code: `GHS`, ISO 4217 Numeric code: `936`.
   const FiatGhs()
       : super(
           code: "GHS",
@@ -977,7 +977,7 @@ class FiatGhs extends FiatCurrency {
 class FiatGip extends FiatCurrency {
   /// Creates a instance of [FiatGip] (Gibraltar Pound currency).
   ///
-  /// ISO 4217 Alpha code: "GIP", ISO 4217 Numeric code: "292".
+  /// ISO 4217 Alpha code: `GIP`, ISO 4217 Numeric code: `292`.
   const FiatGip()
       : super(
           code: "GIP",
@@ -996,7 +996,7 @@ class FiatGip extends FiatCurrency {
 class FiatGmd extends FiatCurrency {
   /// Creates a instance of [FiatGmd] (Gambian Dalasi currency).
   ///
-  /// ISO 4217 Alpha code: "GMD", ISO 4217 Numeric code: "270".
+  /// ISO 4217 Alpha code: `GMD`, ISO 4217 Numeric code: `270`.
   const FiatGmd()
       : super(
           code: "GMD",
@@ -1012,7 +1012,7 @@ class FiatGmd extends FiatCurrency {
 class FiatGnf extends FiatCurrency {
   /// Creates a instance of [FiatGnf] (Guinean Franc currency).
   ///
-  /// ISO 4217 Alpha code: "GNF", ISO 4217 Numeric code: "324".
+  /// ISO 4217 Alpha code: `GNF`, ISO 4217 Numeric code: `324`.
   const FiatGnf()
       : super(
           code: "GNF",
@@ -1032,7 +1032,7 @@ class FiatGnf extends FiatCurrency {
 class FiatGtq extends FiatCurrency {
   /// Creates a instance of [FiatGtq] (Guatemalan Quetzal currency).
   ///
-  /// ISO 4217 Alpha code: "GTQ", ISO 4217 Numeric code: "320".
+  /// ISO 4217 Alpha code: `GTQ`, ISO 4217 Numeric code: `320`.
   const FiatGtq()
       : super(
           code: "GTQ",
@@ -1049,7 +1049,7 @@ class FiatGtq extends FiatCurrency {
 class FiatGyd extends FiatCurrency {
   /// Creates a instance of [FiatGyd] (Guyanaese Dollar currency).
   ///
-  /// ISO 4217 Alpha code: "GYD", ISO 4217 Numeric code: "328".
+  /// ISO 4217 Alpha code: `GYD`, ISO 4217 Numeric code: `328`.
   const FiatGyd()
       : super(
           code: "GYD",
@@ -1069,7 +1069,7 @@ class FiatGyd extends FiatCurrency {
 class FiatHkd extends FiatCurrency {
   /// Creates a instance of [FiatHkd] (Hong Kong Dollar currency).
   ///
-  /// ISO 4217 Alpha code: "HKD", ISO 4217 Numeric code: "344".
+  /// ISO 4217 Alpha code: `HKD`, ISO 4217 Numeric code: `344`.
   const FiatHkd()
       : super(
           code: "HKD",
@@ -1090,7 +1090,7 @@ class FiatHkd extends FiatCurrency {
 class FiatHnl extends FiatCurrency {
   /// Creates a instance of [FiatHnl] (Honduran Lempira currency).
   ///
-  /// ISO 4217 Alpha code: "HNL", ISO 4217 Numeric code: "340".
+  /// ISO 4217 Alpha code: `HNL`, ISO 4217 Numeric code: `340`.
   const FiatHnl()
       : super(
           code: "HNL",
@@ -1109,7 +1109,7 @@ class FiatHnl extends FiatCurrency {
 class FiatHrk extends FiatCurrency {
   /// Creates a instance of [FiatHrk] (Croatian Kuna currency).
   ///
-  /// ISO 4217 Alpha code: "HRK", ISO 4217 Numeric code: "191".
+  /// ISO 4217 Alpha code: `HRK`, ISO 4217 Numeric code: `191`.
   @Deprecated("Use `FiatEur()` instead")
   const FiatHrk()
       : super(
@@ -1128,7 +1128,7 @@ class FiatHrk extends FiatCurrency {
 class FiatHtg extends FiatCurrency {
   /// Creates a instance of [FiatHtg] (Haitian Gourde currency).
   ///
-  /// ISO 4217 Alpha code: "HTG", ISO 4217 Numeric code: "332".
+  /// ISO 4217 Alpha code: `HTG`, ISO 4217 Numeric code: `332`.
   const FiatHtg()
       : super(
           code: "HTG",
@@ -1145,7 +1145,7 @@ class FiatHtg extends FiatCurrency {
 class FiatHuf extends FiatCurrency {
   /// Creates a instance of [FiatHuf] (Hungarian Forint currency).
   ///
-  /// ISO 4217 Alpha code: "HUF", ISO 4217 Numeric code: "348".
+  /// ISO 4217 Alpha code: `HUF`, ISO 4217 Numeric code: `348`.
   const FiatHuf()
       : super(
           code: "HUF",
@@ -1164,7 +1164,7 @@ class FiatHuf extends FiatCurrency {
 class FiatIdr extends FiatCurrency {
   /// Creates a instance of [FiatIdr] (Indonesian Rupiah currency).
   ///
-  /// ISO 4217 Alpha code: "IDR", ISO 4217 Numeric code: "360".
+  /// ISO 4217 Alpha code: `IDR`, ISO 4217 Numeric code: `360`.
   const FiatIdr()
       : super(
           code: "IDR",
@@ -1184,7 +1184,7 @@ class FiatIdr extends FiatCurrency {
 class FiatIls extends FiatCurrency {
   /// Creates a instance of [FiatIls] (Israeli New Shekel currency).
   ///
-  /// ISO 4217 Alpha code: "ILS", ISO 4217 Numeric code: "376".
+  /// ISO 4217 Alpha code: `ILS`, ISO 4217 Numeric code: `376`.
   const FiatIls()
       : super(
           code: "ILS",
@@ -1204,7 +1204,7 @@ class FiatIls extends FiatCurrency {
 class FiatInr extends FiatCurrency {
   /// Creates a instance of [FiatInr] (Indian Rupee currency).
   ///
-  /// ISO 4217 Alpha code: "INR", ISO 4217 Numeric code: "356".
+  /// ISO 4217 Alpha code: `INR`, ISO 4217 Numeric code: `356`.
   const FiatInr()
       : super(
           code: "INR",
@@ -1224,7 +1224,7 @@ class FiatInr extends FiatCurrency {
 class FiatIqd extends FiatCurrency {
   /// Creates a instance of [FiatIqd] (Iraqi Dinar currency).
   ///
-  /// ISO 4217 Alpha code: "IQD", ISO 4217 Numeric code: "368".
+  /// ISO 4217 Alpha code: `IQD`, ISO 4217 Numeric code: `368`.
   const FiatIqd()
       : super(
           code: "IQD",
@@ -1242,7 +1242,7 @@ class FiatIqd extends FiatCurrency {
 class FiatIrr extends FiatCurrency {
   /// Creates a instance of [FiatIrr] (Iranian Rial currency).
   ///
-  /// ISO 4217 Alpha code: "IRR", ISO 4217 Numeric code: "364".
+  /// ISO 4217 Alpha code: `IRR`, ISO 4217 Numeric code: `364`.
   const FiatIrr()
       : super(
           code: "IRR",
@@ -1260,7 +1260,7 @@ class FiatIrr extends FiatCurrency {
 class FiatIsk extends FiatCurrency {
   /// Creates a instance of [FiatIsk] (Icelandic Króna currency).
   ///
-  /// ISO 4217 Alpha code: "ISK", ISO 4217 Numeric code: "352".
+  /// ISO 4217 Alpha code: `ISK`, ISO 4217 Numeric code: `352`.
   const FiatIsk()
       : super(
           code: "ISK",
@@ -1279,7 +1279,7 @@ class FiatIsk extends FiatCurrency {
 class FiatJmd extends FiatCurrency {
   /// Creates a instance of [FiatJmd] (Jamaican Dollar currency).
   ///
-  /// ISO 4217 Alpha code: "JMD", ISO 4217 Numeric code: "388".
+  /// ISO 4217 Alpha code: `JMD`, ISO 4217 Numeric code: `388`.
   const FiatJmd()
       : super(
           code: "JMD",
@@ -1299,7 +1299,7 @@ class FiatJmd extends FiatCurrency {
 class FiatJod extends FiatCurrency {
   /// Creates a instance of [FiatJod] (Jordanian Dinar currency).
   ///
-  /// ISO 4217 Alpha code: "JOD", ISO 4217 Numeric code: "400".
+  /// ISO 4217 Alpha code: `JOD`, ISO 4217 Numeric code: `400`.
   const FiatJod()
       : super(
           code: "JOD",
@@ -1319,7 +1319,7 @@ class FiatJod extends FiatCurrency {
 class FiatJpy extends FiatCurrency {
   /// Creates a instance of [FiatJpy] (Japanese Yen currency).
   ///
-  /// ISO 4217 Alpha code: "JPY", ISO 4217 Numeric code: "392".
+  /// ISO 4217 Alpha code: `JPY`, ISO 4217 Numeric code: `392`.
   const FiatJpy()
       : super(
           code: "JPY",
@@ -1339,7 +1339,7 @@ class FiatJpy extends FiatCurrency {
 class FiatKes extends FiatCurrency {
   /// Creates a instance of [FiatKes] (Kenyan Shilling currency).
   ///
-  /// ISO 4217 Alpha code: "KES", ISO 4217 Numeric code: "404".
+  /// ISO 4217 Alpha code: `KES`, ISO 4217 Numeric code: `404`.
   const FiatKes()
       : super(
           code: "KES",
@@ -1358,7 +1358,7 @@ class FiatKes extends FiatCurrency {
 class FiatKgs extends FiatCurrency {
   /// Creates a instance of [FiatKgs] (Kyrgystani Som currency).
   ///
-  /// ISO 4217 Alpha code: "KGS", ISO 4217 Numeric code: "417".
+  /// ISO 4217 Alpha code: `KGS`, ISO 4217 Numeric code: `417`.
   const FiatKgs()
       : super(
           code: "KGS",
@@ -1375,7 +1375,7 @@ class FiatKgs extends FiatCurrency {
 class FiatKhr extends FiatCurrency {
   /// Creates a instance of [FiatKhr] (Cambodian Riel currency).
   ///
-  /// ISO 4217 Alpha code: "KHR", ISO 4217 Numeric code: "116".
+  /// ISO 4217 Alpha code: `KHR`, ISO 4217 Numeric code: `116`.
   const FiatKhr()
       : super(
           code: "KHR",
@@ -1393,7 +1393,7 @@ class FiatKhr extends FiatCurrency {
 class FiatKmf extends FiatCurrency {
   /// Creates a instance of [FiatKmf] (Comorian Franc currency).
   ///
-  /// ISO 4217 Alpha code: "KMF", ISO 4217 Numeric code: "174".
+  /// ISO 4217 Alpha code: `KMF`, ISO 4217 Numeric code: `174`.
   const FiatKmf()
       : super(
           code: "KMF",
@@ -1413,7 +1413,7 @@ class FiatKmf extends FiatCurrency {
 class FiatKpw extends FiatCurrency {
   /// Creates a instance of [FiatKpw] (North Korean Won currency).
   ///
-  /// ISO 4217 Alpha code: "KPW", ISO 4217 Numeric code: "408".
+  /// ISO 4217 Alpha code: `KPW`, ISO 4217 Numeric code: `408`.
   const FiatKpw()
       : super(
           code: "KPW",
@@ -1430,7 +1430,7 @@ class FiatKpw extends FiatCurrency {
 class FiatKrw extends FiatCurrency {
   /// Creates a instance of [FiatKrw] (South Korean Won currency).
   ///
-  /// ISO 4217 Alpha code: "KRW", ISO 4217 Numeric code: "410".
+  /// ISO 4217 Alpha code: `KRW`, ISO 4217 Numeric code: `410`.
   const FiatKrw()
       : super(
           code: "KRW",
@@ -1448,7 +1448,7 @@ class FiatKrw extends FiatCurrency {
 class FiatKwd extends FiatCurrency {
   /// Creates a instance of [FiatKwd] (Kuwaiti Dinar currency).
   ///
-  /// ISO 4217 Alpha code: "KWD", ISO 4217 Numeric code: "414".
+  /// ISO 4217 Alpha code: `KWD`, ISO 4217 Numeric code: `414`.
   const FiatKwd()
       : super(
           code: "KWD",
@@ -1468,7 +1468,7 @@ class FiatKwd extends FiatCurrency {
 class FiatKyd extends FiatCurrency {
   /// Creates a instance of [FiatKyd] (Cayman Islands Dollar currency).
   ///
-  /// ISO 4217 Alpha code: "KYD", ISO 4217 Numeric code: "136".
+  /// ISO 4217 Alpha code: `KYD`, ISO 4217 Numeric code: `136`.
   const FiatKyd()
       : super(
           code: "KYD",
@@ -1488,7 +1488,7 @@ class FiatKyd extends FiatCurrency {
 class FiatKzt extends FiatCurrency {
   /// Creates a instance of [FiatKzt] (Kazakhstani Tenge currency).
   ///
-  /// ISO 4217 Alpha code: "KZT", ISO 4217 Numeric code: "398".
+  /// ISO 4217 Alpha code: `KZT`, ISO 4217 Numeric code: `398`.
   const FiatKzt()
       : super(
           code: "KZT",
@@ -1505,7 +1505,7 @@ class FiatKzt extends FiatCurrency {
 class FiatLak extends FiatCurrency {
   /// Creates a instance of [FiatLak] (Laotian Kip currency).
   ///
-  /// ISO 4217 Alpha code: "LAK", ISO 4217 Numeric code: "418".
+  /// ISO 4217 Alpha code: `LAK`, ISO 4217 Numeric code: `418`.
   const FiatLak()
       : super(
           code: "LAK",
@@ -1524,7 +1524,7 @@ class FiatLak extends FiatCurrency {
 class FiatLbp extends FiatCurrency {
   /// Creates a instance of [FiatLbp] (Lebanese Pound currency).
   ///
-  /// ISO 4217 Alpha code: "LBP", ISO 4217 Numeric code: "422".
+  /// ISO 4217 Alpha code: `LBP`, ISO 4217 Numeric code: `422`.
   const FiatLbp()
       : super(
           code: "LBP",
@@ -1544,7 +1544,7 @@ class FiatLbp extends FiatCurrency {
 class FiatLkr extends FiatCurrency {
   /// Creates a instance of [FiatLkr] (Sri Lankan Rupee currency).
   ///
-  /// ISO 4217 Alpha code: "LKR", ISO 4217 Numeric code: "144".
+  /// ISO 4217 Alpha code: `LKR`, ISO 4217 Numeric code: `144`.
   const FiatLkr()
       : super(
           code: "LKR",
@@ -1564,7 +1564,7 @@ class FiatLkr extends FiatCurrency {
 class FiatLrd extends FiatCurrency {
   /// Creates a instance of [FiatLrd] (Liberian Dollar currency).
   ///
-  /// ISO 4217 Alpha code: "LRD", ISO 4217 Numeric code: "430".
+  /// ISO 4217 Alpha code: `LRD`, ISO 4217 Numeric code: `430`.
   const FiatLrd()
       : super(
           code: "LRD",
@@ -1584,7 +1584,7 @@ class FiatLrd extends FiatCurrency {
 class FiatLsl extends FiatCurrency {
   /// Creates a instance of [FiatLsl] (Lesotho Loti currency).
   ///
-  /// ISO 4217 Alpha code: "LSL", ISO 4217 Numeric code: "426".
+  /// ISO 4217 Alpha code: `LSL`, ISO 4217 Numeric code: `426`.
   const FiatLsl()
       : super(
           code: "LSL",
@@ -1602,7 +1602,7 @@ class FiatLsl extends FiatCurrency {
 class FiatLyd extends FiatCurrency {
   /// Creates a instance of [FiatLyd] (Libyan Dinar currency).
   ///
-  /// ISO 4217 Alpha code: "LYD", ISO 4217 Numeric code: "434".
+  /// ISO 4217 Alpha code: `LYD`, ISO 4217 Numeric code: `434`.
   const FiatLyd()
       : super(
           code: "LYD",
@@ -1621,7 +1621,7 @@ class FiatLyd extends FiatCurrency {
 class FiatMad extends FiatCurrency {
   /// Creates a instance of [FiatMad] (Moroccan Dirham currency).
   ///
-  /// ISO 4217 Alpha code: "MAD", ISO 4217 Numeric code: "504".
+  /// ISO 4217 Alpha code: `MAD`, ISO 4217 Numeric code: `504`.
   const FiatMad()
       : super(
           code: "MAD",
@@ -1637,7 +1637,7 @@ class FiatMad extends FiatCurrency {
 class FiatMdl extends FiatCurrency {
   /// Creates a instance of [FiatMdl] (Moldovan Leu currency).
   ///
-  /// ISO 4217 Alpha code: "MDL", ISO 4217 Numeric code: "498".
+  /// ISO 4217 Alpha code: `MDL`, ISO 4217 Numeric code: `498`.
   const FiatMdl()
       : super(
           code: "MDL",
@@ -1654,7 +1654,7 @@ class FiatMdl extends FiatCurrency {
 class FiatMga extends FiatCurrency {
   /// Creates a instance of [FiatMga] (Malagasy Ariary currency).
   ///
-  /// ISO 4217 Alpha code: "MGA", ISO 4217 Numeric code: "969".
+  /// ISO 4217 Alpha code: `MGA`, ISO 4217 Numeric code: `969`.
   const FiatMga()
       : super(
           code: "MGA",
@@ -1672,7 +1672,7 @@ class FiatMga extends FiatCurrency {
 class FiatMkd extends FiatCurrency {
   /// Creates a instance of [FiatMkd] (Macedonian Denar currency).
   ///
-  /// ISO 4217 Alpha code: "MKD", ISO 4217 Numeric code: "807".
+  /// ISO 4217 Alpha code: `MKD`, ISO 4217 Numeric code: `807`.
   const FiatMkd()
       : super(
           code: "MKD",
@@ -1689,7 +1689,7 @@ class FiatMkd extends FiatCurrency {
 class FiatMmk extends FiatCurrency {
   /// Creates a instance of [FiatMmk] (Myanmar Kyat currency).
   ///
-  /// ISO 4217 Alpha code: "MMK", ISO 4217 Numeric code: "104".
+  /// ISO 4217 Alpha code: `MMK`, ISO 4217 Numeric code: `104`.
   const FiatMmk()
       : super(
           code: "MMK",
@@ -1707,7 +1707,7 @@ class FiatMmk extends FiatCurrency {
 class FiatMnt extends FiatCurrency {
   /// Creates a instance of [FiatMnt] (Mongolian Tugrik currency).
   ///
-  /// ISO 4217 Alpha code: "MNT", ISO 4217 Numeric code: "496".
+  /// ISO 4217 Alpha code: `MNT`, ISO 4217 Numeric code: `496`.
   const FiatMnt()
       : super(
           code: "MNT",
@@ -1725,7 +1725,7 @@ class FiatMnt extends FiatCurrency {
 class FiatMop extends FiatCurrency {
   /// Creates a instance of [FiatMop] (Macanese Pataca currency).
   ///
-  /// ISO 4217 Alpha code: "MOP", ISO 4217 Numeric code: "446".
+  /// ISO 4217 Alpha code: `MOP`, ISO 4217 Numeric code: `446`.
   const FiatMop()
       : super(
           code: "MOP",
@@ -1743,7 +1743,7 @@ class FiatMop extends FiatCurrency {
 class FiatMru extends FiatCurrency {
   /// Creates a instance of [FiatMru] (Mauritanian Ouguiya currency).
   ///
-  /// ISO 4217 Alpha code: "MRU", ISO 4217 Numeric code: "929".
+  /// ISO 4217 Alpha code: `MRU`, ISO 4217 Numeric code: `929`.
   const FiatMru()
       : super(
           code: "MRU",
@@ -1760,7 +1760,7 @@ class FiatMru extends FiatCurrency {
 class FiatMur extends FiatCurrency {
   /// Creates a instance of [FiatMur] (Mauritian Rupee currency).
   ///
-  /// ISO 4217 Alpha code: "MUR", ISO 4217 Numeric code: "480".
+  /// ISO 4217 Alpha code: `MUR`, ISO 4217 Numeric code: `480`.
   const FiatMur()
       : super(
           code: "MUR",
@@ -1779,7 +1779,7 @@ class FiatMur extends FiatCurrency {
 class FiatMvr extends FiatCurrency {
   /// Creates a instance of [FiatMvr] (Maldivian Rufiyaa currency).
   ///
-  /// ISO 4217 Alpha code: "MVR", ISO 4217 Numeric code: "462".
+  /// ISO 4217 Alpha code: `MVR`, ISO 4217 Numeric code: `462`.
   const FiatMvr()
       : super(
           code: "MVR",
@@ -1795,7 +1795,7 @@ class FiatMvr extends FiatCurrency {
 class FiatMwk extends FiatCurrency {
   /// Creates a instance of [FiatMwk] (Malawian Kwacha currency).
   ///
-  /// ISO 4217 Alpha code: "MWK", ISO 4217 Numeric code: "454".
+  /// ISO 4217 Alpha code: `MWK`, ISO 4217 Numeric code: `454`.
   const FiatMwk()
       : super(
           code: "MWK",
@@ -1811,7 +1811,7 @@ class FiatMwk extends FiatCurrency {
 class FiatMxn extends FiatCurrency {
   /// Creates a instance of [FiatMxn] (Mexican Peso currency).
   ///
-  /// ISO 4217 Alpha code: "MXN", ISO 4217 Numeric code: "484".
+  /// ISO 4217 Alpha code: `MXN`, ISO 4217 Numeric code: `484`.
   const FiatMxn()
       : super(
           code: "MXN",
@@ -1832,7 +1832,7 @@ class FiatMxn extends FiatCurrency {
 class FiatMyr extends FiatCurrency {
   /// Creates a instance of [FiatMyr] (Malaysian Ringgit currency).
   ///
-  /// ISO 4217 Alpha code: "MYR", ISO 4217 Numeric code: "458".
+  /// ISO 4217 Alpha code: `MYR`, ISO 4217 Numeric code: `458`.
   const FiatMyr()
       : super(
           code: "MYR",
@@ -1850,7 +1850,7 @@ class FiatMyr extends FiatCurrency {
 class FiatMzn extends FiatCurrency {
   /// Creates a instance of [FiatMzn] (Mozambican Metical currency).
   ///
-  /// ISO 4217 Alpha code: "MZN", ISO 4217 Numeric code: "943".
+  /// ISO 4217 Alpha code: `MZN`, ISO 4217 Numeric code: `943`.
   const FiatMzn()
       : super(
           code: "MZN",
@@ -1870,7 +1870,7 @@ class FiatMzn extends FiatCurrency {
 class FiatNad extends FiatCurrency {
   /// Creates a instance of [FiatNad] (Namibian Dollar currency).
   ///
-  /// ISO 4217 Alpha code: "NAD", ISO 4217 Numeric code: "516".
+  /// ISO 4217 Alpha code: `NAD`, ISO 4217 Numeric code: `516`.
   const FiatNad()
       : super(
           code: "NAD",
@@ -1890,7 +1890,7 @@ class FiatNad extends FiatCurrency {
 class FiatNgn extends FiatCurrency {
   /// Creates a instance of [FiatNgn] (Nigerian Naira currency).
   ///
-  /// ISO 4217 Alpha code: "NGN", ISO 4217 Numeric code: "566".
+  /// ISO 4217 Alpha code: `NGN`, ISO 4217 Numeric code: `566`.
   const FiatNgn()
       : super(
           code: "NGN",
@@ -1909,7 +1909,7 @@ class FiatNgn extends FiatCurrency {
 class FiatNio extends FiatCurrency {
   /// Creates a instance of [FiatNio] (Nicaraguan Córdoba currency).
   ///
-  /// ISO 4217 Alpha code: "NIO", ISO 4217 Numeric code: "558".
+  /// ISO 4217 Alpha code: `NIO`, ISO 4217 Numeric code: `558`.
   const FiatNio()
       : super(
           code: "NIO",
@@ -1928,7 +1928,7 @@ class FiatNio extends FiatCurrency {
 class FiatNok extends FiatCurrency {
   /// Creates a instance of [FiatNok] (Norwegian Krone currency).
   ///
-  /// ISO 4217 Alpha code: "NOK", ISO 4217 Numeric code: "578".
+  /// ISO 4217 Alpha code: `NOK`, ISO 4217 Numeric code: `578`.
   const FiatNok()
       : super(
           code: "NOK",
@@ -1950,7 +1950,7 @@ class FiatNok extends FiatCurrency {
 class FiatNpr extends FiatCurrency {
   /// Creates a instance of [FiatNpr] (Nepalese Rupee currency).
   ///
-  /// ISO 4217 Alpha code: "NPR", ISO 4217 Numeric code: "524".
+  /// ISO 4217 Alpha code: `NPR`, ISO 4217 Numeric code: `524`.
   const FiatNpr()
       : super(
           code: "NPR",
@@ -1970,7 +1970,7 @@ class FiatNpr extends FiatCurrency {
 class FiatNzd extends FiatCurrency {
   /// Creates a instance of [FiatNzd] (New Zealand Dollar currency).
   ///
-  /// ISO 4217 Alpha code: "NZD", ISO 4217 Numeric code: "554".
+  /// ISO 4217 Alpha code: `NZD`, ISO 4217 Numeric code: `554`.
   const FiatNzd()
       : super(
           code: "NZD",
@@ -1991,7 +1991,7 @@ class FiatNzd extends FiatCurrency {
 class FiatOmr extends FiatCurrency {
   /// Creates a instance of [FiatOmr] (Omani Rial currency).
   ///
-  /// ISO 4217 Alpha code: "OMR", ISO 4217 Numeric code: "512".
+  /// ISO 4217 Alpha code: `OMR`, ISO 4217 Numeric code: `512`.
   const FiatOmr()
       : super(
           code: "OMR",
@@ -2011,7 +2011,7 @@ class FiatOmr extends FiatCurrency {
 class FiatPab extends FiatCurrency {
   /// Creates a instance of [FiatPab] (Panamanian Balboa currency).
   ///
-  /// ISO 4217 Alpha code: "PAB", ISO 4217 Numeric code: "590".
+  /// ISO 4217 Alpha code: `PAB`, ISO 4217 Numeric code: `590`.
   const FiatPab()
       : super(
           code: "PAB",
@@ -2028,7 +2028,7 @@ class FiatPab extends FiatCurrency {
 class FiatPen extends FiatCurrency {
   /// Creates a instance of [FiatPen] (Peruvian Sol currency).
   ///
-  /// ISO 4217 Alpha code: "PEN", ISO 4217 Numeric code: "604".
+  /// ISO 4217 Alpha code: `PEN`, ISO 4217 Numeric code: `604`.
   const FiatPen()
       : super(
           code: "PEN",
@@ -2048,7 +2048,7 @@ class FiatPen extends FiatCurrency {
 class FiatPgk extends FiatCurrency {
   /// Creates a instance of [FiatPgk] (Papua New Guinean Kina currency).
   ///
-  /// ISO 4217 Alpha code: "PGK", ISO 4217 Numeric code: "598".
+  /// ISO 4217 Alpha code: `PGK`, ISO 4217 Numeric code: `598`.
   const FiatPgk()
       : super(
           code: "PGK",
@@ -2066,7 +2066,7 @@ class FiatPgk extends FiatCurrency {
 class FiatPhp extends FiatCurrency {
   /// Creates a instance of [FiatPhp] (Philippine Peso currency).
   ///
-  /// ISO 4217 Alpha code: "PHP", ISO 4217 Numeric code: "608".
+  /// ISO 4217 Alpha code: `PHP`, ISO 4217 Numeric code: `608`.
   const FiatPhp()
       : super(
           code: "PHP",
@@ -2085,7 +2085,7 @@ class FiatPhp extends FiatCurrency {
 class FiatPkr extends FiatCurrency {
   /// Creates a instance of [FiatPkr] (Pakistani Rupee currency).
   ///
-  /// ISO 4217 Alpha code: "PKR", ISO 4217 Numeric code: "586".
+  /// ISO 4217 Alpha code: `PKR`, ISO 4217 Numeric code: `586`.
   const FiatPkr()
       : super(
           code: "PKR",
@@ -2106,7 +2106,7 @@ class FiatPkr extends FiatCurrency {
 class FiatPln extends FiatCurrency {
   /// Creates a instance of [FiatPln] (Polish Zloty currency).
   ///
-  /// ISO 4217 Alpha code: "PLN", ISO 4217 Numeric code: "985".
+  /// ISO 4217 Alpha code: `PLN`, ISO 4217 Numeric code: `985`.
   const FiatPln()
       : super(
           code: "PLN",
@@ -2125,7 +2125,7 @@ class FiatPln extends FiatCurrency {
 class FiatPyg extends FiatCurrency {
   /// Creates a instance of [FiatPyg] (Paraguayan Guarani currency).
   ///
-  /// ISO 4217 Alpha code: "PYG", ISO 4217 Numeric code: "600".
+  /// ISO 4217 Alpha code: `PYG`, ISO 4217 Numeric code: `600`.
   const FiatPyg()
       : super(
           code: "PYG",
@@ -2145,7 +2145,7 @@ class FiatPyg extends FiatCurrency {
 class FiatQar extends FiatCurrency {
   /// Creates a instance of [FiatQar] (Qatari Riyal currency).
   ///
-  /// ISO 4217 Alpha code: "QAR", ISO 4217 Numeric code: "634".
+  /// ISO 4217 Alpha code: `QAR`, ISO 4217 Numeric code: `634`.
   const FiatQar()
       : super(
           code: "QAR",
@@ -2163,7 +2163,7 @@ class FiatQar extends FiatCurrency {
 class FiatRon extends FiatCurrency {
   /// Creates a instance of [FiatRon] (Romanian Leu currency).
   ///
-  /// ISO 4217 Alpha code: "RON", ISO 4217 Numeric code: "946".
+  /// ISO 4217 Alpha code: `RON`, ISO 4217 Numeric code: `946`.
   const FiatRon()
       : super(
           code: "RON",
@@ -2181,7 +2181,7 @@ class FiatRon extends FiatCurrency {
 class FiatRsd extends FiatCurrency {
   /// Creates a instance of [FiatRsd] (Serbian Dinar currency).
   ///
-  /// ISO 4217 Alpha code: "RSD", ISO 4217 Numeric code: "941".
+  /// ISO 4217 Alpha code: `RSD`, ISO 4217 Numeric code: `941`.
   const FiatRsd()
       : super(
           code: "RSD",
@@ -2200,7 +2200,7 @@ class FiatRsd extends FiatCurrency {
 class FiatRub extends FiatCurrency {
   /// Creates a instance of [FiatRub] (Russian Ruble currency).
   ///
-  /// ISO 4217 Alpha code: "RUB", ISO 4217 Numeric code: "643".
+  /// ISO 4217 Alpha code: `RUB`, ISO 4217 Numeric code: `643`.
   const FiatRub()
       : super(
           code: "RUB",
@@ -2220,7 +2220,7 @@ class FiatRub extends FiatCurrency {
 class FiatRwf extends FiatCurrency {
   /// Creates a instance of [FiatRwf] (Rwandan Franc currency).
   ///
-  /// ISO 4217 Alpha code: "RWF", ISO 4217 Numeric code: "646".
+  /// ISO 4217 Alpha code: `RWF`, ISO 4217 Numeric code: `646`.
   const FiatRwf()
       : super(
           code: "RWF",
@@ -2239,7 +2239,7 @@ class FiatRwf extends FiatCurrency {
 class FiatSar extends FiatCurrency {
   /// Creates a instance of [FiatSar] (Saudi Riyal currency).
   ///
-  /// ISO 4217 Alpha code: "SAR", ISO 4217 Numeric code: "682".
+  /// ISO 4217 Alpha code: `SAR`, ISO 4217 Numeric code: `682`.
   const FiatSar()
       : super(
           code: "SAR",
@@ -2259,7 +2259,7 @@ class FiatSar extends FiatCurrency {
 class FiatSbd extends FiatCurrency {
   /// Creates a instance of [FiatSbd] (Solomon Islands Dollar currency).
   ///
-  /// ISO 4217 Alpha code: "SBD", ISO 4217 Numeric code: "090".
+  /// ISO 4217 Alpha code: `SBD`, ISO 4217 Numeric code: `090`.
   const FiatSbd()
       : super(
           code: "SBD",
@@ -2279,7 +2279,7 @@ class FiatSbd extends FiatCurrency {
 class FiatScr extends FiatCurrency {
   /// Creates a instance of [FiatScr] (Seychellois Rupee currency).
   ///
-  /// ISO 4217 Alpha code: "SCR", ISO 4217 Numeric code: "690".
+  /// ISO 4217 Alpha code: `SCR`, ISO 4217 Numeric code: `690`.
   const FiatScr()
       : super(
           code: "SCR",
@@ -2298,7 +2298,7 @@ class FiatScr extends FiatCurrency {
 class FiatSdg extends FiatCurrency {
   /// Creates a instance of [FiatSdg] (Sudanese Pound currency).
   ///
-  /// ISO 4217 Alpha code: "SDG", ISO 4217 Numeric code: "938".
+  /// ISO 4217 Alpha code: `SDG`, ISO 4217 Numeric code: `938`.
   const FiatSdg()
       : super(
           code: "SDG",
@@ -2316,7 +2316,7 @@ class FiatSdg extends FiatCurrency {
 class FiatSek extends FiatCurrency {
   /// Creates a instance of [FiatSek] (Swedish Krona currency).
   ///
-  /// ISO 4217 Alpha code: "SEK", ISO 4217 Numeric code: "752".
+  /// ISO 4217 Alpha code: `SEK`, ISO 4217 Numeric code: `752`.
   const FiatSek()
       : super(
           code: "SEK",
@@ -2337,7 +2337,7 @@ class FiatSek extends FiatCurrency {
 class FiatSgd extends FiatCurrency {
   /// Creates a instance of [FiatSgd] (Singapore Dollar currency).
   ///
-  /// ISO 4217 Alpha code: "SGD", ISO 4217 Numeric code: "702".
+  /// ISO 4217 Alpha code: `SGD`, ISO 4217 Numeric code: `702`.
   const FiatSgd()
       : super(
           code: "SGD",
@@ -2357,7 +2357,7 @@ class FiatSgd extends FiatCurrency {
 class FiatShp extends FiatCurrency {
   /// Creates a instance of [FiatShp] (St. Helena Pound currency).
   ///
-  /// ISO 4217 Alpha code: "SHP", ISO 4217 Numeric code: "654".
+  /// ISO 4217 Alpha code: `SHP`, ISO 4217 Numeric code: `654`.
   const FiatShp()
       : super(
           code: "SHP",
@@ -2375,7 +2375,7 @@ class FiatShp extends FiatCurrency {
 class FiatSle extends FiatCurrency {
   /// Creates a instance of [FiatSle] (Sierra Leonean Leone currency).
   ///
-  /// ISO 4217 Alpha code: "SLE", ISO 4217 Numeric code: "925".
+  /// ISO 4217 Alpha code: `SLE`, ISO 4217 Numeric code: `925`.
   const FiatSle()
       : super(
           code: "SLE",
@@ -2393,7 +2393,7 @@ class FiatSle extends FiatCurrency {
 class FiatSll extends FiatCurrency {
   /// Creates a instance of [FiatSll] (Sierra Leonean Leone (Old) currency).
   ///
-  /// ISO 4217 Alpha code: "SLL", ISO 4217 Numeric code: "694".
+  /// ISO 4217 Alpha code: `SLL`, ISO 4217 Numeric code: `694`.
   const FiatSll()
       : super(
           code: "SLL",
@@ -2411,7 +2411,7 @@ class FiatSll extends FiatCurrency {
 class FiatSos extends FiatCurrency {
   /// Creates a instance of [FiatSos] (Somali Shilling currency).
   ///
-  /// ISO 4217 Alpha code: "SOS", ISO 4217 Numeric code: "706".
+  /// ISO 4217 Alpha code: `SOS`, ISO 4217 Numeric code: `706`.
   const FiatSos()
       : super(
           code: "SOS",
@@ -2428,7 +2428,7 @@ class FiatSos extends FiatCurrency {
 class FiatSrd extends FiatCurrency {
   /// Creates a instance of [FiatSrd] (Surinamese Dollar currency).
   ///
-  /// ISO 4217 Alpha code: "SRD", ISO 4217 Numeric code: "968".
+  /// ISO 4217 Alpha code: `SRD`, ISO 4217 Numeric code: `968`.
   const FiatSrd()
       : super(
           code: "SRD",
@@ -2445,7 +2445,7 @@ class FiatSrd extends FiatCurrency {
 class FiatSsp extends FiatCurrency {
   /// Creates a instance of [FiatSsp] (South Sudanese Pound currency).
   ///
-  /// ISO 4217 Alpha code: "SSP", ISO 4217 Numeric code: "728".
+  /// ISO 4217 Alpha code: `SSP`, ISO 4217 Numeric code: `728`.
   const FiatSsp()
       : super(
           code: "SSP",
@@ -2465,7 +2465,7 @@ class FiatStn extends FiatCurrency {
   /// Creates a instance of [FiatStn] (São Tomé and Príncipe Second Dobra
   /// currency).
   ///
-  /// ISO 4217 Alpha code: "STN", ISO 4217 Numeric code: "930".
+  /// ISO 4217 Alpha code: `STN`, ISO 4217 Numeric code: `930`.
   const FiatStn()
       : super(
           code: "STN",
@@ -2483,7 +2483,7 @@ class FiatStn extends FiatCurrency {
 class FiatSvc extends FiatCurrency {
   /// Creates a instance of [FiatSvc] (Salvadoran Colón currency).
   ///
-  /// ISO 4217 Alpha code: "SVC", ISO 4217 Numeric code: "222".
+  /// ISO 4217 Alpha code: `SVC`, ISO 4217 Numeric code: `222`.
   const FiatSvc()
       : super(
           code: "SVC",
@@ -2502,7 +2502,7 @@ class FiatSvc extends FiatCurrency {
 class FiatSyp extends FiatCurrency {
   /// Creates a instance of [FiatSyp] (Syrian Pound currency).
   ///
-  /// ISO 4217 Alpha code: "SYP", ISO 4217 Numeric code: "760".
+  /// ISO 4217 Alpha code: `SYP`, ISO 4217 Numeric code: `760`.
   const FiatSyp()
       : super(
           code: "SYP",
@@ -2521,7 +2521,7 @@ class FiatSyp extends FiatCurrency {
 class FiatSzl extends FiatCurrency {
   /// Creates a instance of [FiatSzl] (Swazi Lilangeni currency).
   ///
-  /// ISO 4217 Alpha code: "SZL", ISO 4217 Numeric code: "748".
+  /// ISO 4217 Alpha code: `SZL`, ISO 4217 Numeric code: `748`.
   const FiatSzl()
       : super(
           code: "SZL",
@@ -2539,7 +2539,7 @@ class FiatSzl extends FiatCurrency {
 class FiatThb extends FiatCurrency {
   /// Creates a instance of [FiatThb] (Thai Baht currency).
   ///
-  /// ISO 4217 Alpha code: "THB", ISO 4217 Numeric code: "764".
+  /// ISO 4217 Alpha code: `THB`, ISO 4217 Numeric code: `764`.
   const FiatThb()
       : super(
           code: "THB",
@@ -2557,7 +2557,7 @@ class FiatThb extends FiatCurrency {
 class FiatTjs extends FiatCurrency {
   /// Creates a instance of [FiatTjs] (Tajikistani Somoni currency).
   ///
-  /// ISO 4217 Alpha code: "TJS", ISO 4217 Numeric code: "972".
+  /// ISO 4217 Alpha code: `TJS`, ISO 4217 Numeric code: `972`.
   const FiatTjs()
       : super(
           code: "TJS",
@@ -2573,7 +2573,7 @@ class FiatTjs extends FiatCurrency {
 class FiatTmt extends FiatCurrency {
   /// Creates a instance of [FiatTmt] (Turkmenistani Manat currency).
   ///
-  /// ISO 4217 Alpha code: "TMT", ISO 4217 Numeric code: "934".
+  /// ISO 4217 Alpha code: `TMT`, ISO 4217 Numeric code: `934`.
   const FiatTmt()
       : super(
           code: "TMT",
@@ -2589,7 +2589,7 @@ class FiatTmt extends FiatCurrency {
 class FiatTnd extends FiatCurrency {
   /// Creates a instance of [FiatTnd] (Tunisian Dinar currency).
   ///
-  /// ISO 4217 Alpha code: "TND", ISO 4217 Numeric code: "788".
+  /// ISO 4217 Alpha code: `TND`, ISO 4217 Numeric code: `788`.
   const FiatTnd()
       : super(
           code: "TND",
@@ -2608,7 +2608,7 @@ class FiatTnd extends FiatCurrency {
 class FiatTop extends FiatCurrency {
   /// Creates a instance of [FiatTop] (Tongan Paʻanga currency).
   ///
-  /// ISO 4217 Alpha code: "TOP", ISO 4217 Numeric code: "776".
+  /// ISO 4217 Alpha code: `TOP`, ISO 4217 Numeric code: `776`.
   const FiatTop()
       : super(
           code: "TOP",
@@ -2626,7 +2626,7 @@ class FiatTop extends FiatCurrency {
 class FiatTry extends FiatCurrency {
   /// Creates a instance of [FiatTry] (Turkish Lira currency).
   ///
-  /// ISO 4217 Alpha code: "TRY", ISO 4217 Numeric code: "949".
+  /// ISO 4217 Alpha code: `TRY`, ISO 4217 Numeric code: `949`.
   const FiatTry()
       : super(
           code: "TRY",
@@ -2647,7 +2647,7 @@ class FiatTry extends FiatCurrency {
 class FiatTtd extends FiatCurrency {
   /// Creates a instance of [FiatTtd] (Trinidad & Tobago Dollar currency).
   ///
-  /// ISO 4217 Alpha code: "TTD", ISO 4217 Numeric code: "780".
+  /// ISO 4217 Alpha code: `TTD`, ISO 4217 Numeric code: `780`.
   const FiatTtd()
       : super(
           code: "TTD",
@@ -2666,7 +2666,7 @@ class FiatTtd extends FiatCurrency {
 class FiatTwd extends FiatCurrency {
   /// Creates a instance of [FiatTwd] (New Taiwan Dollar currency).
   ///
-  /// ISO 4217 Alpha code: "TWD", ISO 4217 Numeric code: "901".
+  /// ISO 4217 Alpha code: `TWD`, ISO 4217 Numeric code: `901`.
   const FiatTwd()
       : super(
           code: "TWD",
@@ -2687,7 +2687,7 @@ class FiatTwd extends FiatCurrency {
 class FiatTzs extends FiatCurrency {
   /// Creates a instance of [FiatTzs] (Tanzanian Shilling currency).
   ///
-  /// ISO 4217 Alpha code: "TZS", ISO 4217 Numeric code: "834".
+  /// ISO 4217 Alpha code: `TZS`, ISO 4217 Numeric code: `834`.
   const FiatTzs()
       : super(
           code: "TZS",
@@ -2705,7 +2705,7 @@ class FiatTzs extends FiatCurrency {
 class FiatUah extends FiatCurrency {
   /// Creates a instance of [FiatUah] (Ukrainian Hryvnia currency).
   ///
-  /// ISO 4217 Alpha code: "UAH", ISO 4217 Numeric code: "980".
+  /// ISO 4217 Alpha code: `UAH`, ISO 4217 Numeric code: `980`.
   const FiatUah()
       : super(
           code: "UAH",
@@ -2722,7 +2722,7 @@ class FiatUah extends FiatCurrency {
 class FiatUgx extends FiatCurrency {
   /// Creates a instance of [FiatUgx] (Ugandan Shilling currency).
   ///
-  /// ISO 4217 Alpha code: "UGX", ISO 4217 Numeric code: "800".
+  /// ISO 4217 Alpha code: `UGX`, ISO 4217 Numeric code: `800`.
   const FiatUgx()
       : super(
           code: "UGX",
@@ -2740,7 +2740,7 @@ class FiatUgx extends FiatCurrency {
 class FiatUsd extends FiatCurrency {
   /// Creates a instance of [FiatUsd] (United States Dollar currency).
   ///
-  /// ISO 4217 Alpha code: "USD", ISO 4217 Numeric code: "840".
+  /// ISO 4217 Alpha code: `USD`, ISO 4217 Numeric code: `840`.
   const FiatUsd()
       : super(
           code: "USD",
@@ -2761,7 +2761,7 @@ class FiatUsd extends FiatCurrency {
 class FiatUyu extends FiatCurrency {
   /// Creates a instance of [FiatUyu] (Uruguayan Peso currency).
   ///
-  /// ISO 4217 Alpha code: "UYU", ISO 4217 Numeric code: "858".
+  /// ISO 4217 Alpha code: `UYU`, ISO 4217 Numeric code: `858`.
   const FiatUyu()
       : super(
           code: "UYU",
@@ -2783,7 +2783,7 @@ class FiatUyu extends FiatCurrency {
 class FiatUzs extends FiatCurrency {
   /// Creates a instance of [FiatUzs] (Uzbekistani Som currency).
   ///
-  /// ISO 4217 Alpha code: "UZS", ISO 4217 Numeric code: "860".
+  /// ISO 4217 Alpha code: `UZS`, ISO 4217 Numeric code: `860`.
   const FiatUzs()
       : super(
           code: "UZS",
@@ -2801,7 +2801,7 @@ class FiatUzs extends FiatCurrency {
 class FiatVes extends FiatCurrency {
   /// Creates a instance of [FiatVes] (Venezuelan Bolívar Soberano currency).
   ///
-  /// ISO 4217 Alpha code: "VES", ISO 4217 Numeric code: "928".
+  /// ISO 4217 Alpha code: `VES`, ISO 4217 Numeric code: `928`.
   const FiatVes()
       : super(
           code: "VES",
@@ -2821,7 +2821,7 @@ class FiatVes extends FiatCurrency {
 class FiatVnd extends FiatCurrency {
   /// Creates a instance of [FiatVnd] (Vietnamese Dong currency).
   ///
-  /// ISO 4217 Alpha code: "VND", ISO 4217 Numeric code: "704".
+  /// ISO 4217 Alpha code: `VND`, ISO 4217 Numeric code: `704`.
   const FiatVnd()
       : super(
           code: "VND",
@@ -2842,7 +2842,7 @@ class FiatVnd extends FiatCurrency {
 class FiatVuv extends FiatCurrency {
   /// Creates a instance of [FiatVuv] (Vanuatu Vatu currency).
   ///
-  /// ISO 4217 Alpha code: "VUV", ISO 4217 Numeric code: "548".
+  /// ISO 4217 Alpha code: `VUV`, ISO 4217 Numeric code: `548`.
   const FiatVuv()
       : super(
           code: "VUV",
@@ -2859,7 +2859,7 @@ class FiatVuv extends FiatCurrency {
 class FiatWst extends FiatCurrency {
   /// Creates a instance of [FiatWst] (Samoan Tala currency).
   ///
-  /// ISO 4217 Alpha code: "WST", ISO 4217 Numeric code: "882".
+  /// ISO 4217 Alpha code: `WST`, ISO 4217 Numeric code: `882`.
   const FiatWst()
       : super(
           code: "WST",
@@ -2878,7 +2878,7 @@ class FiatWst extends FiatCurrency {
 class FiatXaf extends FiatCurrency {
   /// Creates a instance of [FiatXaf] (Central African Cfa Franc currency).
   ///
-  /// ISO 4217 Alpha code: "XAF", ISO 4217 Numeric code: "950".
+  /// ISO 4217 Alpha code: `XAF`, ISO 4217 Numeric code: `950`.
   const FiatXaf()
       : super(
           code: "XAF",
@@ -2898,7 +2898,7 @@ class FiatXaf extends FiatCurrency {
 class FiatXag extends FiatCurrency {
   /// Creates a instance of [FiatXag] (Silver (Troy Ounce) currency).
   ///
-  /// ISO 4217 Alpha code: "XAG", ISO 4217 Numeric code: "961".
+  /// ISO 4217 Alpha code: `XAG`, ISO 4217 Numeric code: `961`.
   const FiatXag()
       : super(
           code: "XAG",
@@ -2917,7 +2917,7 @@ class FiatXag extends FiatCurrency {
 class FiatXau extends FiatCurrency {
   /// Creates a instance of [FiatXau] (Gold (Troy Ounce) currency).
   ///
-  /// ISO 4217 Alpha code: "XAU", ISO 4217 Numeric code: "959".
+  /// ISO 4217 Alpha code: `XAU`, ISO 4217 Numeric code: `959`.
   const FiatXau()
       : super(
           code: "XAU",
@@ -2936,7 +2936,7 @@ class FiatXau extends FiatCurrency {
 class FiatXba extends FiatCurrency {
   /// Creates a instance of [FiatXba] (European Composite Unit currency).
   ///
-  /// ISO 4217 Alpha code: "XBA", ISO 4217 Numeric code: "955".
+  /// ISO 4217 Alpha code: `XBA`, ISO 4217 Numeric code: `955`.
   const FiatXba()
       : super(
           code: "XBA",
@@ -2953,7 +2953,7 @@ class FiatXba extends FiatCurrency {
 class FiatXbb extends FiatCurrency {
   /// Creates a instance of [FiatXbb] (European Monetary Unit currency).
   ///
-  /// ISO 4217 Alpha code: "XBB", ISO 4217 Numeric code: "956".
+  /// ISO 4217 Alpha code: `XBB`, ISO 4217 Numeric code: `956`.
   const FiatXbb()
       : super(
           code: "XBB",
@@ -2970,7 +2970,7 @@ class FiatXbb extends FiatCurrency {
 class FiatXbc extends FiatCurrency {
   /// Creates a instance of [FiatXbc] (European Unit of Account 9 currency).
   ///
-  /// ISO 4217 Alpha code: "XBC", ISO 4217 Numeric code: "957".
+  /// ISO 4217 Alpha code: `XBC`, ISO 4217 Numeric code: `957`.
   const FiatXbc()
       : super(
           code: "XBC",
@@ -2987,7 +2987,7 @@ class FiatXbc extends FiatCurrency {
 class FiatXbd extends FiatCurrency {
   /// Creates a instance of [FiatXbd] (European Unit of Account 17 currency).
   ///
-  /// ISO 4217 Alpha code: "XBD", ISO 4217 Numeric code: "958".
+  /// ISO 4217 Alpha code: `XBD`, ISO 4217 Numeric code: `958`.
   const FiatXbd()
       : super(
           code: "XBD",
@@ -3004,7 +3004,7 @@ class FiatXbd extends FiatCurrency {
 class FiatXcd extends FiatCurrency {
   /// Creates a instance of [FiatXcd] (East Caribbean Dollar currency).
   ///
-  /// ISO 4217 Alpha code: "XCD", ISO 4217 Numeric code: "951".
+  /// ISO 4217 Alpha code: `XCD`, ISO 4217 Numeric code: `951`.
   const FiatXcd()
       : super(
           code: "XCD",
@@ -3024,7 +3024,7 @@ class FiatXcd extends FiatCurrency {
 class FiatXdr extends FiatCurrency {
   /// Creates a instance of [FiatXdr] (Special Drawing Rights currency).
   ///
-  /// ISO 4217 Alpha code: "XDR", ISO 4217 Numeric code: "960".
+  /// ISO 4217 Alpha code: `XDR`, ISO 4217 Numeric code: `960`.
   const FiatXdr()
       : super(
           code: "XDR",
@@ -3043,7 +3043,7 @@ class FiatXdr extends FiatCurrency {
 class FiatXof extends FiatCurrency {
   /// Creates a instance of [FiatXof] (West African Cfa Franc currency).
   ///
-  /// ISO 4217 Alpha code: "XOF", ISO 4217 Numeric code: "952".
+  /// ISO 4217 Alpha code: `XOF`, ISO 4217 Numeric code: `952`.
   const FiatXof()
       : super(
           code: "XOF",
@@ -3063,7 +3063,7 @@ class FiatXof extends FiatCurrency {
 class FiatXpd extends FiatCurrency {
   /// Creates a instance of [FiatXpd] (Palladium currency).
   ///
-  /// ISO 4217 Alpha code: "XPD", ISO 4217 Numeric code: "964".
+  /// ISO 4217 Alpha code: `XPD`, ISO 4217 Numeric code: `964`.
   const FiatXpd()
       : super(
           code: "XPD",
@@ -3082,7 +3082,7 @@ class FiatXpd extends FiatCurrency {
 class FiatXpf extends FiatCurrency {
   /// Creates a instance of [FiatXpf] (Cfp Franc currency).
   ///
-  /// ISO 4217 Alpha code: "XPF", ISO 4217 Numeric code: "953".
+  /// ISO 4217 Alpha code: `XPF`, ISO 4217 Numeric code: `953`.
   const FiatXpf()
       : super(
           code: "XPF",
@@ -3101,7 +3101,7 @@ class FiatXpf extends FiatCurrency {
 class FiatXpt extends FiatCurrency {
   /// Creates a instance of [FiatXpt] (Platinum currency).
   ///
-  /// ISO 4217 Alpha code: "XPT", ISO 4217 Numeric code: "962".
+  /// ISO 4217 Alpha code: `XPT`, ISO 4217 Numeric code: `962`.
   const FiatXpt()
       : super(
           code: "XPT",
@@ -3120,7 +3120,7 @@ class FiatXts extends FiatCurrency {
   /// Creates a instance of [FiatXts] (Codes specifically reserved for testing
   /// purposes currency).
   ///
-  /// ISO 4217 Alpha code: "XTS", ISO 4217 Numeric code: "963".
+  /// ISO 4217 Alpha code: `XTS`, ISO 4217 Numeric code: `963`.
   const FiatXts()
       : super(
           code: "XTS",
@@ -3136,7 +3136,7 @@ class FiatXts extends FiatCurrency {
 class FiatYer extends FiatCurrency {
   /// Creates a instance of [FiatYer] (Yemeni Rial currency).
   ///
-  /// ISO 4217 Alpha code: "YER", ISO 4217 Numeric code: "886".
+  /// ISO 4217 Alpha code: `YER`, ISO 4217 Numeric code: `886`.
   const FiatYer()
       : super(
           code: "YER",
@@ -3154,7 +3154,7 @@ class FiatYer extends FiatCurrency {
 class FiatZar extends FiatCurrency {
   /// Creates a instance of [FiatZar] (South African Rand currency).
   ///
-  /// ISO 4217 Alpha code: "ZAR", ISO 4217 Numeric code: "710".
+  /// ISO 4217 Alpha code: `ZAR`, ISO 4217 Numeric code: `710`.
   const FiatZar()
       : super(
           code: "ZAR",
@@ -3175,7 +3175,7 @@ class FiatZar extends FiatCurrency {
 class FiatZmw extends FiatCurrency {
   /// Creates a instance of [FiatZmw] (Zambian Kwacha currency).
   ///
-  /// ISO 4217 Alpha code: "ZMW", ISO 4217 Numeric code: "967".
+  /// ISO 4217 Alpha code: `ZMW`, ISO 4217 Numeric code: `967`.
   const FiatZmw()
       : super(
           code: "ZMW",
@@ -3194,7 +3194,7 @@ class FiatZmw extends FiatCurrency {
 class FiatZwl extends FiatCurrency {
   /// Creates a instance of [FiatZwl] (Zimbabwean Dollar currency).
   ///
-  /// ISO 4217 Alpha code: "ZWL", ISO 4217 Numeric code: "932".
+  /// ISO 4217 Alpha code: `ZWL`, ISO 4217 Numeric code: `932`.
   const FiatZwl()
       : super(
           code: "ZWL",
