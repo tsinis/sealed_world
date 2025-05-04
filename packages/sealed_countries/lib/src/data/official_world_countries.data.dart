@@ -2776,7 +2776,7 @@ class CountryCck extends WorldCountry {
         altSpellings: const ["CC", "Keeling Islands", "Cocos Islands"],
         continent: const Oceania(),
         subregion: const AustraliaAndNewZealand(),
-        latLng: const LatLng(12.1642, 96.871),
+        latLng: const LatLng(-12.1642, 96.871),
         areaMetric: 14,
         emoji: "🇨🇨",
         maps: const Maps(
@@ -5076,7 +5076,7 @@ class CountryFji extends WorldCountry {
         ],
         continent: const Oceania(),
         subregion: const Melanesia(),
-        latLng: const LatLng(17.7134, 178.065),
+        latLng: const LatLng(-17.7134, 178.065),
         areaMetric: 18272,
         emoji: "🇫🇯",
         maps: const Maps(
@@ -6659,7 +6659,7 @@ class CountryHmd extends WorldCountry {
         idd: const Idd(root: 6, suffixes: [72]),
         altSpellings: const ["HM", "Heard Island and McDonald Islands"],
         continent: const Antarctica(),
-        latLng: const LatLng(53.0818, 73.5042),
+        latLng: const LatLng(-53.0818, 73.5042),
         areaMetric: 412,
         emoji: "🇭🇲",
         maps: const Maps(
@@ -9293,7 +9293,7 @@ class CountryMaf extends WorldCountry {
         ],
         continent: const Americas(),
         subregion: const Caribbean(),
-        latLng: const LatLng(18.0708, 63.0501),
+        latLng: const LatLng(18.0708, -63.0501),
         bordersCodes: const ["Sxm"],
         areaMetric: 53,
         emoji: "🇲🇫",
@@ -12610,7 +12610,7 @@ class CountryPyf extends WorldCountry {
         ],
         continent: const Oceania(),
         subregion: const Polynesia(),
-        latLng: const LatLng(17.6797, 149.4068),
+        latLng: const LatLng(-17.6797, -149.4068),
         areaMetric: 4167,
         emoji: "🇵🇫",
         maps: const Maps(
