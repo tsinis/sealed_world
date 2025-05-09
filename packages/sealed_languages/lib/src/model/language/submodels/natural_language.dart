@@ -4,7 +4,8 @@ part of "../language.dart";
 class NaturalLanguage extends Language
     implements
         IsoTranslated<TranslatedName, String, BasicLocale>,
-        JsonEncodable<NaturalLanguage> {
+        JsonEncodable<NaturalLanguage>,
+        Comparable<NaturalLanguage> {
   /// {@template natural_language_constructor}
   /// Creates a new instance of the [NaturalLanguage] class.
   ///
@@ -312,6 +313,9 @@ class NaturalLanguage extends Language
 
   @override
   String toJson({JsonCodec codec = const JsonCodec()}) => codec.encode(toMap());
+
+  @override
+  int compareTo(NaturalLanguage other) => code.compareTo(other.code);
 
   /// Returns a [NaturalLanguage] object whose [code] or the value returned by
   /// [where] matches the specified [value], or `null` if no such object exists
