@@ -33,6 +33,12 @@ void main() => group("BasicLocaleExtension", () {
         });
       });
 
+      test("regionalCode", () {
+        final copy = value.copyWith(countryCode: string);
+        expect(copy.regionalCode, copy.countryCode);
+        expect(copy.regionalCode, string);
+      });
+
       test(
         "toTranslatedName",
         () => expect(
