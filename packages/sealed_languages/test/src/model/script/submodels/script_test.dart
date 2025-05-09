@@ -19,6 +19,7 @@ void main() => group("$Script", () {
       test("interfaces", () {
         expect(value, isA<IsoStandardized>());
         expect(value, isA<JsonEncodable>());
+        expect(value, isA<Comparable<IsoStandardized>>());
       });
 
       assertTest(
