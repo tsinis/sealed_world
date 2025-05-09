@@ -34,6 +34,10 @@ extension BasicLocaleExtension on BasicLocale {
         script: Script.maybeFromCode(map["script"]),
       );
 
+  /// An alias for the [countryCode].
+  /// Returns regional/country code of the locale.
+  String? get regionalCode => countryCode;
+
   /// Returns `true` if the locale has no country code specified.
   bool get hasNoCountry => countryCode == null;
 
