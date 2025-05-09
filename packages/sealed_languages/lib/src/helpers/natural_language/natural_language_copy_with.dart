@@ -4,7 +4,7 @@ import "../../model/script/writing_system.dart";
 
 /// Extension on [NaturalLanguage] that provides a `copyWith` method for
 /// creating a new instance of [NaturalLanguage] with updated properties.
-extension NaturalLanguageCopyWith on NaturalLanguage {
+extension NaturalLanguageCopyWith<T extends NaturalLanguage> on T {
   /// Creates a new instance of [NaturalLanguage] with updated properties.
   ///
   /// The optional named parameters can be used to specify new values for the
