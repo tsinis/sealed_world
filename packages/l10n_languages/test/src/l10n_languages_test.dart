@@ -29,17 +29,17 @@ void main() => group("$LanguagesLocaleMapper", () {
       group("localize", () {
         test(
           "returns empty map for empty input",
-          () => expect(mapper.localize({}), isEmpty),
+          () => expect(mapper.localize(const {}), isEmpty),
         );
 
         test("localizes single code with main locale", () {
-          final result = mapper.localize({"ENG"}, mainLocale: "cs");
+          final result = mapper.localize(const {"ENG"}, mainLocale: "cs");
           expect(result.values.single, "angličtina");
         });
 
         test("uses fallback locale when main locale missing", () {
           final result = mapper.localize(
-            {"ENG"},
+            const {"ENG"},
             mainLocale: "00",
             fallbackLocale: "de",
           );
@@ -47,13 +47,13 @@ void main() => group("$LanguagesLocaleMapper", () {
         });
 
         test("uses language fallback when specific locale not found", () {
-          final result = mapper.localize({"ENG"}, mainLocale: "en_US");
+          final result = mapper.localize(const {"ENG"}, mainLocale: "en_US");
           expect(result.values.single, "English");
         });
 
         test("handles multiple ISO codes", () {
           final result = mapper.localize(
-            {"ENG", "RUS", "DEU"},
+            const {"ENG", "RUS", "DEU"},
             mainLocale: "sk",
           );
           expect(result.length, greaterThanOrEqualTo(3));
@@ -65,16 +65,54 @@ void main() => group("$LanguagesLocaleMapper", () {
 
         test("handles non-existent ISO codes gracefully", () {
           final result = mapper.localize(
-            {"NON", "EXISTENT"},
+            const {"NON", "EXISTENT"},
             mainLocale: "en",
           );
           expect(result, isEmpty);
         });
 
         test("cleans up internal maps after use", () {
-          final result = mapper.localize({"ENG"}, mainLocale: "en");
+          final result = mapper.localize(const {"ENG"}, mainLocale: "en");
           expect(mapper.map, isEmpty);
           expect(result, isNotEmpty);
+        });
+      });
+
+      group("formatter", () {
+        test("applies formatter to all translations", () {
+          final result = mapper.localize(
+            const {"ENG", "RUS"},
+            mainLocale: "en",
+            formatter: (_, l10n) => l10n.toUpperCase(),
+          );
+          expect(result[(isoCode: "ENG", locale: "en")], "ENGLISH");
+          expect(result[(isoCode: "RUS", locale: "en")], "RUSSIAN");
+        });
+
+        test("formatter can use locale and iso code for custom logic", () {
+          final result = mapper.localize(
+            const {"ENG", "RUS"},
+            mainLocale: "fr",
+            formatter: (iso, l10n) => iso.locale == "fr" ? "[$l10n]" : l10n,
+          );
+          expect(result[(isoCode: "ENG", locale: "fr")], startsWith("["));
+          expect(result[(isoCode: "RUS", locale: "fr")], startsWith("["));
+        });
+
+        test("formatter can selectively format based on iso code", () {
+          final result = mapper.localize(
+            const {"ENG", "RUS"},
+            mainLocale: "en",
+            formatter: (iso, l10n) =>
+                iso.isoCode.startsWith("EN") ? l10n.toLowerCase() : l10n,
+          );
+          expect(result[(isoCode: "ENG", locale: "en")], "english");
+          expect(result[(isoCode: "RUS", locale: "en")], "Russian");
+        });
+
+        test("formatter is not applied if not provided", () {
+          final result = mapper.localize(const {"ENG"}, mainLocale: "en");
+          expect(result[(isoCode: "ENG", locale: "en")], "English");
         });
       });
 
@@ -83,7 +121,7 @@ void main() => group("$LanguagesLocaleMapper", () {
           final customMapper = LanguagesLocaleMapper(
             other: {
               "mock": IsoLocaleMapper(
-                other: {
+                other: const {
                   "DEU": "German",
                   "ENG": "English",
                   "ENG+": "English Language",
@@ -110,7 +148,7 @@ void main() => group("$LanguagesLocaleMapper", () {
           );
 
           final result = customMapper.localize(
-            {"ENG"},
+            const {"ENG"},
             mainLocale: "mock",
             altSymbol: "+",
           );
@@ -139,7 +177,7 @@ void main() => group("$LanguagesLocaleMapper", () {
           );
 
           final result = customMapper.localize(
-            {"ENG"},
+            const {"ENG"},
             mainLocale: "en",
             fallbackLocale: "de",
             altSymbol: "+",

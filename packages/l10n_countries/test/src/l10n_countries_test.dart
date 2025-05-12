@@ -29,17 +29,17 @@ void main() => group("$CountriesLocaleMapper", () {
       group("localize", () {
         test(
           "returns empty map for empty input",
-          () => expect(mapper.localize({}), isEmpty),
+          () => expect(mapper.localize(const {}), isEmpty),
         );
 
         test("localizes single code with main locale", () {
-          final result = mapper.localize({"USA"}, mainLocale: "bs");
+          final result = mapper.localize(const {"USA"}, mainLocale: "bs");
           expect(result.values.single, "Sjedinjene Države");
         });
 
         test("uses fallback locale when main locale missing", () {
           final result = mapper.localize(
-            {"USA"},
+            const {"USA"},
             mainLocale: "00",
             fallbackLocale: "bs",
           );
@@ -47,13 +47,13 @@ void main() => group("$CountriesLocaleMapper", () {
         });
 
         test("uses language fallback when specific locale not found", () {
-          final result = mapper.localize({"USA"}, mainLocale: "bs_Latn");
+          final result = mapper.localize(const {"USA"}, mainLocale: "bs_Latn");
           expect(result.values.single, "Sjedinjene Države");
         });
 
         test("handles multiple ISO codes", () {
           final result =
-              mapper.localize({"USA", "RUS", "DEU"}, mainLocale: "bs");
+              mapper.localize(const {"USA", "RUS", "DEU"}, mainLocale: "bs");
           expect(
             result.values,
             const ["Sjedinjene Države", "Rusija", "Njemačka"],
@@ -61,12 +61,13 @@ void main() => group("$CountriesLocaleMapper", () {
         });
 
         test("handles non-existent ISO codes gracefully", () {
-          final result = mapper.localize({"XYZ", "ABC"}, mainLocale: "en");
+          final result =
+              mapper.localize(const {"XYZ", "ABC"}, mainLocale: "en");
           expect(result, isEmpty);
         });
 
         test("cleans up internal maps after use", () {
-          final result = mapper.localize({"USA"}, mainLocale: "en");
+          final result = mapper.localize(const {"USA"}, mainLocale: "en");
           expect(mapper.map, isEmpty);
           expect(result, isNotEmpty);
         });
@@ -77,7 +78,7 @@ void main() => group("$CountriesLocaleMapper", () {
           final customMapper = CountriesLocaleMapper(
             other: {
               "mock": IsoLocaleMapper(
-                other: {
+                other: const {
                   "DEU": "Germany",
                   "USA": "United States",
                   "USA+": "United States of America",
@@ -107,7 +108,7 @@ void main() => group("$CountriesLocaleMapper", () {
           );
 
           final result = customMapper.localize(
-            {"USA"},
+            const {"USA"},
             mainLocale: "mock",
             altSymbol: "+",
           );
@@ -136,7 +137,7 @@ void main() => group("$CountriesLocaleMapper", () {
           );
 
           final result = customMapper.localize(
-            {"USA"},
+            const {"USA"},
             mainLocale: "en",
             fallbackLocale: "de",
             altSymbol: "+",
@@ -148,6 +149,44 @@ void main() => group("$CountriesLocaleMapper", () {
           expect(result[(isoCode: "USA+", locale: "en")], "United States");
           expect(result[(isoCode: "USA", locale: "de")], "USA");
           expect(result[(isoCode: "USA+", locale: "de")], "Vereinigte Staaten");
+        });
+      });
+
+      group("formatter", () {
+        test("applies formatter to all translations", () {
+          final result = mapper.localize(
+            const {"USA", "RUS"},
+            mainLocale: "en",
+            formatter: (_, l10n) => l10n.toUpperCase(),
+          );
+          expect(result[(isoCode: "USA", locale: "en")], "UNITED STATES");
+          expect(result[(isoCode: "RUS", locale: "en")], "RUSSIA");
+        });
+
+        test("formatter can use locale and iso code for custom logic", () {
+          final result = mapper.localize(
+            const {"USA", "RUS"},
+            mainLocale: "fr",
+            formatter: (iso, l10n) => iso.locale == "fr" ? "[$l10n]" : l10n,
+          );
+          expect(result[(isoCode: "USA", locale: "fr")], startsWith("["));
+          expect(result[(isoCode: "RUS", locale: "fr")], startsWith("["));
+        });
+
+        test("formatter can selectively format based on iso code", () {
+          final result = mapper.localize(
+            const {"USA", "RUS"},
+            mainLocale: "en",
+            formatter: (iso, l10n) =>
+                iso.isoCode.startsWith("US") ? l10n.toLowerCase() : l10n,
+          );
+          expect(result[(isoCode: "USA", locale: "en")], "united states");
+          expect(result[(isoCode: "RUS", locale: "en")], "Russia");
+        });
+
+        test("formatter is not applied if not provided", () {
+          final result = mapper.localize(const {"USA"}, mainLocale: "en");
+          expect(result[(isoCode: "USA", locale: "en")], "United States");
         });
       });
 

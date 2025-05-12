@@ -18,11 +18,10 @@ class L10NDataGenerator {
 
   Future<void> generate(String path) async {
     final directory = Directory(path);
-    final io = IoUtils(directory)
-      ..copyFile(
-        "../packages/l10n_languages/lib/src/iso_locale_mapper.dart",
-        directory,
-      );
+    final io = IoUtils(directory)..copyFile(
+      "../packages/l10n_languages/lib/src/iso_locale_mapper.dart",
+      directory,
+    );
 
     final locales = <String>{};
 
@@ -113,8 +112,9 @@ class $pascalCaseName extends IsoLocaleMapper<String> {
       final localImportBuffer = StringBuffer();
 
       if (typedLocales.length < 2) {
-        localImportBuffer
-            .write("// ignore_for_file: avoid-unnecessary-collections\n");
+        localImportBuffer.write(
+          "// ignore_for_file: avoid-unnecessary-collections\n",
+        );
       }
 
       localImportBuffer
@@ -148,6 +148,7 @@ class $pascalCaseName extends IsoLocaleMapper<String> {
   /// - [mainLocale]: Optional primary locale for translations.
   /// - [useLanguageFallback]: Whether to try language-only codes if specified
   /// locale not found (i.e. 'en_US' -> 'en').
+  /// - [formatter]: Optional callback to modify each translation.
   ///
   /// Returns a [Map] containing the localized names for the provided ISO
   /// codes.
@@ -162,6 +163,7 @@ class $pascalCaseName extends IsoLocaleMapper<String> {
     Object? fallbackLocale,
     Object? mainLocale,
     bool useLanguageFallback = true,
+    String Function(LocaleKey isoLocale, String l10n)? formatter,
   }) {
     if (isoCodes.isEmpty) return const {};
     final locale = mainLocale?.toString();
@@ -182,8 +184,18 @@ class $pascalCaseName extends IsoLocaleMapper<String> {
 
     return switch (localeData.length) {
       0 => const {},
-      1 => _fromSingle(isoCodes, localeData.entries.first, altSymbol ?? symbol),
-      _ => _fromMultiple(isoCodes, localeData, altSymbol ?? symbol),
+      1 => _fromSingle(
+          isoCodes,
+          localeData.entries.first,
+          altSymbol ?? symbol,
+          formatter,
+        ),
+      _ => _fromMultiple(
+          isoCodes,
+          localeData,
+          altSymbol ?? symbol,
+          formatter,
+        ),
     };
   }
 
@@ -191,25 +203,38 @@ class $pascalCaseName extends IsoLocaleMapper<String> {
       // ignore: avoid-substring, locale should has no emoji.
       {locale, if (useLanguageFallback) locale.substring(0, 2)};
 
+  MapEntry<LocaleKey, String> _mapSingle(
+    String Function(LocaleKey isoLocale, String l10n)? formatter,
+    String locale, {
+    required String code,
+    required String l10n,
+  }) {
+    final isoLocale = (isoCode: code, locale: locale);
+
+    return MapEntry(isoLocale, formatter?.call(isoLocale, l10n) ?? l10n);
+  }
+
   LocaleMap _fromSingle(
     Set<String> codes,
     MapEntry<String, IsoLocaleMapper<String>> localeEntry,
     String altSymbol,
+    String Function(LocaleKey isoLocale, String l10n)? formatter,
   ) {
     final locale = localeEntry.key;
-    final results = localeEntry.value
-        .extract(codes, altSymbol: altSymbol)
-        .map((code, l10n) => MapEntry((isoCode: code, locale: locale), l10n));
+    final results = localeEntry.value.extract(codes, altSymbol: altSymbol).map(
+          (code, l10n) => _mapSingle(formatter, locale, code: code, l10n: l10n),
+        );
     localeEntry.value.map.clear();
     map.clear();
 
-    return Map.unmodifiable(results);
+    return LocaleMap.unmodifiable(results);
   }
 
   LocaleMap _fromMultiple(
     Set<String> codes,
     Map<String, IsoLocaleMapper<String>> localesData,
     String altSymbol,
+    String Function(LocaleKey isoLocale, String l10n)? formatter,
   ) {
     final results = <LocaleKey, String>{};
 
@@ -221,7 +246,10 @@ class $pascalCaseName extends IsoLocaleMapper<String> {
         final key = (isoCode: code, locale: localeEntry.key);
         if (results[key] == null) {
           final l10n = translations[code];
-          if (l10n != null) results[key] = l10n;
+          if (l10n != null) {
+            final mainLocale = (isoCode: code, locale: localeEntry.key);
+            results[key] = formatter?.call(mainLocale, l10n) ?? l10n;
+          }
         }
 
         final secondary = altKey(code, altSymbol);
@@ -232,14 +260,17 @@ class $pascalCaseName extends IsoLocaleMapper<String> {
         if (results[alternative] != null) continue;
 
         final altL10n = translations[secondary];
-        if (altL10n != null) results[alternative] = altL10n;
+        if (altL10n != null) {
+          final altLocale = (isoCode: code, locale: localeEntry.key);
+          results[alternative] = formatter?.call(altLocale, altL10n) ?? altL10n;
+        }
       }
 
       localeEntry.value.map.clear();
     }
     map.clear();
 
-    return Map.unmodifiable(results);
+    return LocaleMap.unmodifiable(results);
   }
 }
 
