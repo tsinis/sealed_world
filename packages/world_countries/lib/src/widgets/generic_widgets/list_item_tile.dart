@@ -30,11 +30,13 @@ class ListItemTile<T extends Object> extends ListTile {
     super.horizontalTitleGap,
     super.hoverColor,
     super.iconColor,
+    super.internalAddSemanticForOnTap,
     super.isThreeLine,
     super.key,
     super.leading,
     super.leadingAndTrailingTextStyle,
     super.minLeadingWidth,
+    super.minTileHeight,
     super.minVerticalPadding,
     super.mouseCursor,
     super.onFocusChange,
@@ -59,12 +61,10 @@ class ListItemTile<T extends Object> extends ListTile {
   // ignore: specify_nonobvious_property_types, it's obvious...
   static const fontSize = UiConstants.point * 3;
 
+  final T _item;
+
   /// The callback function to call when the tile is pressed.
   final ValueSetter<T>? onPressed;
-
-  /// The item to display in the list tile.
-  @protected
-  final T _item;
 
   /// Whether to exclude subtitle and leading from semantics tree.
   final bool excludeSemantics;
@@ -73,6 +73,9 @@ class ListItemTile<T extends Object> extends ListTile {
   /// tools that work by querying the accessibility hierarchy, such as Android
   /// UI Automator, iOS XCUITest, or Appium. It's not exposed to users.
   final String? semanticsIdentifier;
+
+  /// The item to display in the list tile.
+  T get item => _item;
 
   @override
   Widget build(BuildContext context) => Material(
@@ -102,7 +105,7 @@ class ListItemTile<T extends Object> extends ListTile {
           leadingAndTrailingTextStyle ?? const TextStyle(fontSize: fontSize),
       contentPadding: contentPadding,
       enabled: enabled,
-      onTap: enabled ? () => onPressed?.call(_item) : null,
+      onTap: enabled ? () => onPressed?.call(item) : null,
       onLongPress: onLongPress,
       onFocusChange: onFocusChange,
       mouseCursor: mouseCursor,

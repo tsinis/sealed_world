@@ -20,6 +20,7 @@ export "src/helpers/extensions/country_submodels/lat_lng_extension.dart";
 export "src/helpers/extensions/country_submodels/maps_extension.dart";
 export "src/helpers/extensions/country_submodels/postal_code_extension.dart";
 export "src/helpers/extensions/country_submodels/weekday_extension.dart";
+export "src/helpers/extensions/iso_standardized_world_country_extension.dart";
 export "src/helpers/utils/typed_localization_delegate.dart";
 export "src/helpers/world_country/world_country_copy_with.dart";
 export "src/helpers/world_country/world_country_date_time.dart";

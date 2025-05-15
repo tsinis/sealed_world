@@ -16,8 +16,9 @@ class BoolGettersGenerator {
 
   Future<void> generate(Package package) async {
     final type = package.type.toString();
-    final currentFileDir =
-        Directory(join(Directory.current.parent.path, package.fullPath));
+    final currentFileDir = Directory(
+      join(Directory.current.parent.path, package.fullPath),
+    );
     final currentFilePath = join(
       currentFileDir.path,
       "model/${package.dataRepresent.toLowerCase()}/submodels/${type.toSnakeCase()}.g.dart",
@@ -34,7 +35,7 @@ class BoolGettersGenerator {
         )
         ..write("\n")
         ..write("bool get is${item.code.toSentenceCase()}")
-        ..write("=> this == const ${item.runtimeType}();")
+        ..write("=> const ${item.runtimeType}().isSameAs(this);")
         ..write("\n");
     }
     buffer.write("}");

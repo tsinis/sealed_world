@@ -1879,554 +1879,554 @@ extension NaturalLanguageFunctional on NaturalLanguage {
 
 extension NaturalLanguageBoolGetters on NaturalLanguage? {
   /// Checks if this [NaturalLanguage] instance is Afar.
-  bool get isAar => this == const LangAar();
+  bool get isAar => const LangAar().isSameAs(this);
 
   /// Checks if this [NaturalLanguage] instance is Abkhaz.
-  bool get isAbk => this == const LangAbk();
+  bool get isAbk => const LangAbk().isSameAs(this);
 
   /// Checks if this [NaturalLanguage] instance is Afrikaans.
-  bool get isAfr => this == const LangAfr();
+  bool get isAfr => const LangAfr().isSameAs(this);
 
   /// Checks if this [NaturalLanguage] instance is Akan.
-  bool get isAka => this == const LangAka();
+  bool get isAka => const LangAka().isSameAs(this);
 
   /// Checks if this [NaturalLanguage] instance is Amharic.
-  bool get isAmh => this == const LangAmh();
+  bool get isAmh => const LangAmh().isSameAs(this);
 
   /// Checks if this [NaturalLanguage] instance is Arabic.
-  bool get isAra => this == const LangAra();
+  bool get isAra => const LangAra().isSameAs(this);
 
   /// Checks if this [NaturalLanguage] instance is Aragonese.
-  bool get isArg => this == const LangArg();
+  bool get isArg => const LangArg().isSameAs(this);
 
   /// Checks if this [NaturalLanguage] instance is Assamese.
-  bool get isAsm => this == const LangAsm();
+  bool get isAsm => const LangAsm().isSameAs(this);
 
   /// Checks if this [NaturalLanguage] instance is Avaric.
-  bool get isAva => this == const LangAva();
+  bool get isAva => const LangAva().isSameAs(this);
 
   /// Checks if this [NaturalLanguage] instance is Avestan.
-  bool get isAve => this == const LangAve();
+  bool get isAve => const LangAve().isSameAs(this);
 
   /// Checks if this [NaturalLanguage] instance is Aymara.
-  bool get isAym => this == const LangAym();
+  bool get isAym => const LangAym().isSameAs(this);
 
   /// Checks if this [NaturalLanguage] instance is Azerbaijani.
-  bool get isAze => this == const LangAze();
+  bool get isAze => const LangAze().isSameAs(this);
 
   /// Checks if this [NaturalLanguage] instance is Bashkir.
-  bool get isBak => this == const LangBak();
+  bool get isBak => const LangBak().isSameAs(this);
 
   /// Checks if this [NaturalLanguage] instance is Bambara.
-  bool get isBam => this == const LangBam();
+  bool get isBam => const LangBam().isSameAs(this);
 
   /// Checks if this [NaturalLanguage] instance is Belarusian.
-  bool get isBel => this == const LangBel();
+  bool get isBel => const LangBel().isSameAs(this);
 
   /// Checks if this [NaturalLanguage] instance is Bengali (Bangla).
-  bool get isBen => this == const LangBen();
+  bool get isBen => const LangBen().isSameAs(this);
 
   /// Checks if this [NaturalLanguage] instance is Bihari.
-  bool get isBih => this == const LangBih();
+  bool get isBih => const LangBih().isSameAs(this);
 
   /// Checks if this [NaturalLanguage] instance is Bislama.
-  bool get isBis => this == const LangBis();
+  bool get isBis => const LangBis().isSameAs(this);
 
   /// Checks if this [NaturalLanguage] instance is Tibetan Standard.
-  bool get isBod => this == const LangBod();
+  bool get isBod => const LangBod().isSameAs(this);
 
   /// Checks if this [NaturalLanguage] instance is Bosnian.
-  bool get isBos => this == const LangBos();
+  bool get isBos => const LangBos().isSameAs(this);
 
   /// Checks if this [NaturalLanguage] instance is Breton.
-  bool get isBre => this == const LangBre();
+  bool get isBre => const LangBre().isSameAs(this);
 
   /// Checks if this [NaturalLanguage] instance is Bulgarian.
-  bool get isBul => this == const LangBul();
+  bool get isBul => const LangBul().isSameAs(this);
 
   /// Checks if this [NaturalLanguage] instance is Catalan.
-  bool get isCat => this == const LangCat();
+  bool get isCat => const LangCat().isSameAs(this);
 
   /// Checks if this [NaturalLanguage] instance is Czech.
-  bool get isCes => this == const LangCes();
+  bool get isCes => const LangCes().isSameAs(this);
 
   /// Checks if this [NaturalLanguage] instance is Chamorro.
-  bool get isCha => this == const LangCha();
+  bool get isCha => const LangCha().isSameAs(this);
 
   /// Checks if this [NaturalLanguage] instance is Chechen.
-  bool get isChe => this == const LangChe();
+  bool get isChe => const LangChe().isSameAs(this);
 
   /// Checks if this [NaturalLanguage] instance is (Old) Church Slavonic.
-  bool get isChu => this == const LangChu();
+  bool get isChu => const LangChu().isSameAs(this);
 
   /// Checks if this [NaturalLanguage] instance is Chuvash.
-  bool get isChv => this == const LangChv();
+  bool get isChv => const LangChv().isSameAs(this);
 
   /// Checks if this [NaturalLanguage] instance is Cornish.
-  bool get isCor => this == const LangCor();
+  bool get isCor => const LangCor().isSameAs(this);
 
   /// Checks if this [NaturalLanguage] instance is Corsican.
-  bool get isCos => this == const LangCos();
+  bool get isCos => const LangCos().isSameAs(this);
 
   /// Checks if this [NaturalLanguage] instance is Cree.
-  bool get isCre => this == const LangCre();
+  bool get isCre => const LangCre().isSameAs(this);
 
   /// Checks if this [NaturalLanguage] instance is Welsh.
-  bool get isCym => this == const LangCym();
+  bool get isCym => const LangCym().isSameAs(this);
 
   /// Checks if this [NaturalLanguage] instance is Danish.
-  bool get isDan => this == const LangDan();
+  bool get isDan => const LangDan().isSameAs(this);
 
   /// Checks if this [NaturalLanguage] instance is German.
-  bool get isDeu => this == const LangDeu();
+  bool get isDeu => const LangDeu().isSameAs(this);
 
   /// Checks if this [NaturalLanguage] instance is Divehi (Dhivehi/Maldivian).
-  bool get isDiv => this == const LangDiv();
+  bool get isDiv => const LangDiv().isSameAs(this);
 
   /// Checks if this [NaturalLanguage] instance is Dzongkha.
-  bool get isDzo => this == const LangDzo();
+  bool get isDzo => const LangDzo().isSameAs(this);
 
   /// Checks if this [NaturalLanguage] instance is Greek (modern).
-  bool get isEll => this == const LangEll();
+  bool get isEll => const LangEll().isSameAs(this);
 
   /// Checks if this [NaturalLanguage] instance is English.
-  bool get isEng => this == const LangEng();
+  bool get isEng => const LangEng().isSameAs(this);
 
   /// Checks if this [NaturalLanguage] instance is Esperanto.
-  bool get isEpo => this == const LangEpo();
+  bool get isEpo => const LangEpo().isSameAs(this);
 
   /// Checks if this [NaturalLanguage] instance is Estonian.
-  bool get isEst => this == const LangEst();
+  bool get isEst => const LangEst().isSameAs(this);
 
   /// Checks if this [NaturalLanguage] instance is Basque.
-  bool get isEus => this == const LangEus();
+  bool get isEus => const LangEus().isSameAs(this);
 
   /// Checks if this [NaturalLanguage] instance is Ewe.
-  bool get isEwe => this == const LangEwe();
+  bool get isEwe => const LangEwe().isSameAs(this);
 
   /// Checks if this [NaturalLanguage] instance is Faroese.
-  bool get isFao => this == const LangFao();
+  bool get isFao => const LangFao().isSameAs(this);
 
   /// Checks if this [NaturalLanguage] instance is Persian (Farsi).
-  bool get isFas => this == const LangFas();
+  bool get isFas => const LangFas().isSameAs(this);
 
   /// Checks if this [NaturalLanguage] instance is Fijian.
-  bool get isFij => this == const LangFij();
+  bool get isFij => const LangFij().isSameAs(this);
 
   /// Checks if this [NaturalLanguage] instance is Finnish.
-  bool get isFin => this == const LangFin();
+  bool get isFin => const LangFin().isSameAs(this);
 
   /// Checks if this [NaturalLanguage] instance is French.
-  bool get isFra => this == const LangFra();
+  bool get isFra => const LangFra().isSameAs(this);
 
   /// Checks if this [NaturalLanguage] instance is Western Frisian.
-  bool get isFry => this == const LangFry();
+  bool get isFry => const LangFry().isSameAs(this);
 
   /// Checks if this [NaturalLanguage] instance is Fula (Fulah/Pulaar/Pular).
-  bool get isFul => this == const LangFul();
+  bool get isFul => const LangFul().isSameAs(this);
 
   /// Checks if this [NaturalLanguage] instance is (Scottish) Gaelic.
-  bool get isGla => this == const LangGla();
+  bool get isGla => const LangGla().isSameAs(this);
 
   /// Checks if this [NaturalLanguage] instance is Irish.
-  bool get isGle => this == const LangGle();
+  bool get isGle => const LangGle().isSameAs(this);
 
   /// Checks if this [NaturalLanguage] instance is Galician.
-  bool get isGlg => this == const LangGlg();
+  bool get isGlg => const LangGlg().isSameAs(this);
 
   /// Checks if this [NaturalLanguage] instance is Manx.
-  bool get isGlv => this == const LangGlv();
+  bool get isGlv => const LangGlv().isSameAs(this);
 
   /// Checks if this [NaturalLanguage] instance is Guaraní.
-  bool get isGrn => this == const LangGrn();
+  bool get isGrn => const LangGrn().isSameAs(this);
 
   /// Checks if this [NaturalLanguage] instance is Gujarati.
-  bool get isGuj => this == const LangGuj();
+  bool get isGuj => const LangGuj().isSameAs(this);
 
   /// Checks if this [NaturalLanguage] instance is Haitian (Haitian Creole).
-  bool get isHat => this == const LangHat();
+  bool get isHat => const LangHat().isSameAs(this);
 
   /// Checks if this [NaturalLanguage] instance is Hausa.
-  bool get isHau => this == const LangHau();
+  bool get isHau => const LangHau().isSameAs(this);
 
   /// Checks if this [NaturalLanguage] instance is Hebrew (modern).
-  bool get isHeb => this == const LangHeb();
+  bool get isHeb => const LangHeb().isSameAs(this);
 
   /// Checks if this [NaturalLanguage] instance is Herero.
-  bool get isHer => this == const LangHer();
+  bool get isHer => const LangHer().isSameAs(this);
 
   /// Checks if this [NaturalLanguage] instance is Hindi.
-  bool get isHin => this == const LangHin();
+  bool get isHin => const LangHin().isSameAs(this);
 
   /// Checks if this [NaturalLanguage] instance is Hiri Motu.
-  bool get isHmo => this == const LangHmo();
+  bool get isHmo => const LangHmo().isSameAs(this);
 
   /// Checks if this [NaturalLanguage] instance is Croatian.
-  bool get isHrv => this == const LangHrv();
+  bool get isHrv => const LangHrv().isSameAs(this);
 
   /// Checks if this [NaturalLanguage] instance is Hungarian.
-  bool get isHun => this == const LangHun();
+  bool get isHun => const LangHun().isSameAs(this);
 
   /// Checks if this [NaturalLanguage] instance is Armenian.
-  bool get isHye => this == const LangHye();
+  bool get isHye => const LangHye().isSameAs(this);
 
   /// Checks if this [NaturalLanguage] instance is Igbo.
-  bool get isIbo => this == const LangIbo();
+  bool get isIbo => const LangIbo().isSameAs(this);
 
   /// Checks if this [NaturalLanguage] instance is Ido.
-  bool get isIdo => this == const LangIdo();
+  bool get isIdo => const LangIdo().isSameAs(this);
 
   /// Checks if this [NaturalLanguage] instance is Nuosu.
-  bool get isIii => this == const LangIii();
+  bool get isIii => const LangIii().isSameAs(this);
 
   /// Checks if this [NaturalLanguage] instance is Inuktitut.
-  bool get isIku => this == const LangIku();
+  bool get isIku => const LangIku().isSameAs(this);
 
   /// Checks if this [NaturalLanguage] instance is Interlingue.
-  bool get isIle => this == const LangIle();
+  bool get isIle => const LangIle().isSameAs(this);
 
   /// Checks if this [NaturalLanguage] instance is Interlingua.
-  bool get isIna => this == const LangIna();
+  bool get isIna => const LangIna().isSameAs(this);
 
   /// Checks if this [NaturalLanguage] instance is Indonesian.
-  bool get isInd => this == const LangInd();
+  bool get isInd => const LangInd().isSameAs(this);
 
   /// Checks if this [NaturalLanguage] instance is Inupiaq.
-  bool get isIpk => this == const LangIpk();
+  bool get isIpk => const LangIpk().isSameAs(this);
 
   /// Checks if this [NaturalLanguage] instance is Icelandic.
-  bool get isIsl => this == const LangIsl();
+  bool get isIsl => const LangIsl().isSameAs(this);
 
   /// Checks if this [NaturalLanguage] instance is Italian.
-  bool get isIta => this == const LangIta();
+  bool get isIta => const LangIta().isSameAs(this);
 
   /// Checks if this [NaturalLanguage] instance is Javanese.
-  bool get isJav => this == const LangJav();
+  bool get isJav => const LangJav().isSameAs(this);
 
   /// Checks if this [NaturalLanguage] instance is Japanese.
-  bool get isJpn => this == const LangJpn();
+  bool get isJpn => const LangJpn().isSameAs(this);
 
   /// Checks if this [NaturalLanguage] instance is Kalaallisut (Greenlandic).
-  bool get isKal => this == const LangKal();
+  bool get isKal => const LangKal().isSameAs(this);
 
   /// Checks if this [NaturalLanguage] instance is Kannada.
-  bool get isKan => this == const LangKan();
+  bool get isKan => const LangKan().isSameAs(this);
 
   /// Checks if this [NaturalLanguage] instance is Kashmiri.
-  bool get isKas => this == const LangKas();
+  bool get isKas => const LangKas().isSameAs(this);
 
   /// Checks if this [NaturalLanguage] instance is Georgian.
-  bool get isKat => this == const LangKat();
+  bool get isKat => const LangKat().isSameAs(this);
 
   /// Checks if this [NaturalLanguage] instance is Kanuri.
-  bool get isKau => this == const LangKau();
+  bool get isKau => const LangKau().isSameAs(this);
 
   /// Checks if this [NaturalLanguage] instance is Kazakh.
-  bool get isKaz => this == const LangKaz();
+  bool get isKaz => const LangKaz().isSameAs(this);
 
   /// Checks if this [NaturalLanguage] instance is Khmer.
-  bool get isKhm => this == const LangKhm();
+  bool get isKhm => const LangKhm().isSameAs(this);
 
   /// Checks if this [NaturalLanguage] instance is Kikuyu (Gikuyu).
-  bool get isKik => this == const LangKik();
+  bool get isKik => const LangKik().isSameAs(this);
 
   /// Checks if this [NaturalLanguage] instance is Kinyarwanda.
-  bool get isKin => this == const LangKin();
+  bool get isKin => const LangKin().isSameAs(this);
 
   /// Checks if this [NaturalLanguage] instance is Kyrgyz.
-  bool get isKir => this == const LangKir();
+  bool get isKir => const LangKir().isSameAs(this);
 
   /// Checks if this [NaturalLanguage] instance is Komi.
-  bool get isKom => this == const LangKom();
+  bool get isKom => const LangKom().isSameAs(this);
 
   /// Checks if this [NaturalLanguage] instance is Kongo.
-  bool get isKon => this == const LangKon();
+  bool get isKon => const LangKon().isSameAs(this);
 
   /// Checks if this [NaturalLanguage] instance is Korean.
-  bool get isKor => this == const LangKor();
+  bool get isKor => const LangKor().isSameAs(this);
 
   /// Checks if this [NaturalLanguage] instance is Kwanyama (Kuanyama).
-  bool get isKua => this == const LangKua();
+  bool get isKua => const LangKua().isSameAs(this);
 
   /// Checks if this [NaturalLanguage] instance is Kurdish.
-  bool get isKur => this == const LangKur();
+  bool get isKur => const LangKur().isSameAs(this);
 
   /// Checks if this [NaturalLanguage] instance is Lao.
-  bool get isLao => this == const LangLao();
+  bool get isLao => const LangLao().isSameAs(this);
 
   /// Checks if this [NaturalLanguage] instance is Latin.
-  bool get isLat => this == const LangLat();
+  bool get isLat => const LangLat().isSameAs(this);
 
   /// Checks if this [NaturalLanguage] instance is Latvian.
-  bool get isLav => this == const LangLav();
+  bool get isLav => const LangLav().isSameAs(this);
 
   /// Checks if this [NaturalLanguage] instance is Limburgish (Limburgan/Limburger).
-  bool get isLim => this == const LangLim();
+  bool get isLim => const LangLim().isSameAs(this);
 
   /// Checks if this [NaturalLanguage] instance is Lingala.
-  bool get isLin => this == const LangLin();
+  bool get isLin => const LangLin().isSameAs(this);
 
   /// Checks if this [NaturalLanguage] instance is Lithuanian.
-  bool get isLit => this == const LangLit();
+  bool get isLit => const LangLit().isSameAs(this);
 
   /// Checks if this [NaturalLanguage] instance is Luxembourgish (Letzeburgesch).
-  bool get isLtz => this == const LangLtz();
+  bool get isLtz => const LangLtz().isSameAs(this);
 
   /// Checks if this [NaturalLanguage] instance is Luba-Katanga.
-  bool get isLub => this == const LangLub();
+  bool get isLub => const LangLub().isSameAs(this);
 
   /// Checks if this [NaturalLanguage] instance is Ganda.
-  bool get isLug => this == const LangLug();
+  bool get isLug => const LangLug().isSameAs(this);
 
   /// Checks if this [NaturalLanguage] instance is Marshallese.
-  bool get isMah => this == const LangMah();
+  bool get isMah => const LangMah().isSameAs(this);
 
   /// Checks if this [NaturalLanguage] instance is Malayalam.
-  bool get isMal => this == const LangMal();
+  bool get isMal => const LangMal().isSameAs(this);
 
   /// Checks if this [NaturalLanguage] instance is Marathi (Marāṭhī).
-  bool get isMar => this == const LangMar();
+  bool get isMar => const LangMar().isSameAs(this);
 
   /// Checks if this [NaturalLanguage] instance is Macedonian.
-  bool get isMkd => this == const LangMkd();
+  bool get isMkd => const LangMkd().isSameAs(this);
 
   /// Checks if this [NaturalLanguage] instance is Malagasy.
-  bool get isMlg => this == const LangMlg();
+  bool get isMlg => const LangMlg().isSameAs(this);
 
   /// Checks if this [NaturalLanguage] instance is Maltese.
-  bool get isMlt => this == const LangMlt();
+  bool get isMlt => const LangMlt().isSameAs(this);
 
   /// Checks if this [NaturalLanguage] instance is Mongolian.
-  bool get isMon => this == const LangMon();
+  bool get isMon => const LangMon().isSameAs(this);
 
   /// Checks if this [NaturalLanguage] instance is Māori.
-  bool get isMri => this == const LangMri();
+  bool get isMri => const LangMri().isSameAs(this);
 
   /// Checks if this [NaturalLanguage] instance is Malay.
-  bool get isMsa => this == const LangMsa();
+  bool get isMsa => const LangMsa().isSameAs(this);
 
   /// Checks if this [NaturalLanguage] instance is Burmese.
-  bool get isMya => this == const LangMya();
+  bool get isMya => const LangMya().isSameAs(this);
 
   /// Checks if this [NaturalLanguage] instance is Nauruan.
-  bool get isNau => this == const LangNau();
+  bool get isNau => const LangNau().isSameAs(this);
 
   /// Checks if this [NaturalLanguage] instance is Navajo (Navaho).
-  bool get isNav => this == const LangNav();
+  bool get isNav => const LangNav().isSameAs(this);
 
   /// Checks if this [NaturalLanguage] instance is Southern Ndebele.
-  bool get isNbl => this == const LangNbl();
+  bool get isNbl => const LangNbl().isSameAs(this);
 
   /// Checks if this [NaturalLanguage] instance is Northern Ndebele.
-  bool get isNde => this == const LangNde();
+  bool get isNde => const LangNde().isSameAs(this);
 
   /// Checks if this [NaturalLanguage] instance is Ndonga.
-  bool get isNdo => this == const LangNdo();
+  bool get isNdo => const LangNdo().isSameAs(this);
 
   /// Checks if this [NaturalLanguage] instance is Nepali.
-  bool get isNep => this == const LangNep();
+  bool get isNep => const LangNep().isSameAs(this);
 
   /// Checks if this [NaturalLanguage] instance is Dutch.
-  bool get isNld => this == const LangNld();
+  bool get isNld => const LangNld().isSameAs(this);
 
   /// Checks if this [NaturalLanguage] instance is Norwegian Nynorsk.
-  bool get isNno => this == const LangNno();
+  bool get isNno => const LangNno().isSameAs(this);
 
   /// Checks if this [NaturalLanguage] instance is Norwegian Bokmål.
-  bool get isNob => this == const LangNob();
+  bool get isNob => const LangNob().isSameAs(this);
 
   /// Checks if this [NaturalLanguage] instance is Norwegian.
-  bool get isNor => this == const LangNor();
+  bool get isNor => const LangNor().isSameAs(this);
 
   /// Checks if this [NaturalLanguage] instance is Chichewa (Chewa/Nyanja).
-  bool get isNya => this == const LangNya();
+  bool get isNya => const LangNya().isSameAs(this);
 
   /// Checks if this [NaturalLanguage] instance is Occitan.
-  bool get isOci => this == const LangOci();
+  bool get isOci => const LangOci().isSameAs(this);
 
   /// Checks if this [NaturalLanguage] instance is Ojibwe (Ojibwa).
-  bool get isOji => this == const LangOji();
+  bool get isOji => const LangOji().isSameAs(this);
 
   /// Checks if this [NaturalLanguage] instance is Oriya.
-  bool get isOri => this == const LangOri();
+  bool get isOri => const LangOri().isSameAs(this);
 
   /// Checks if this [NaturalLanguage] instance is Oromo.
-  bool get isOrm => this == const LangOrm();
+  bool get isOrm => const LangOrm().isSameAs(this);
 
   /// Checks if this [NaturalLanguage] instance is Ossetian (Ossetic).
-  bool get isOss => this == const LangOss();
+  bool get isOss => const LangOss().isSameAs(this);
 
   /// Checks if this [NaturalLanguage] instance is (Eastern) Punjabi.
-  bool get isPan => this == const LangPan();
+  bool get isPan => const LangPan().isSameAs(this);
 
   /// Checks if this [NaturalLanguage] instance is Pāli.
-  bool get isPli => this == const LangPli();
+  bool get isPli => const LangPli().isSameAs(this);
 
   /// Checks if this [NaturalLanguage] instance is Polish.
-  bool get isPol => this == const LangPol();
+  bool get isPol => const LangPol().isSameAs(this);
 
   /// Checks if this [NaturalLanguage] instance is Portuguese.
-  bool get isPor => this == const LangPor();
+  bool get isPor => const LangPor().isSameAs(this);
 
   /// Checks if this [NaturalLanguage] instance is Pashto (Pushto).
-  bool get isPus => this == const LangPus();
+  bool get isPus => const LangPus().isSameAs(this);
 
   /// Checks if this [NaturalLanguage] instance is Quechua.
-  bool get isQue => this == const LangQue();
+  bool get isQue => const LangQue().isSameAs(this);
 
   /// Checks if this [NaturalLanguage] instance is Romansh.
-  bool get isRoh => this == const LangRoh();
+  bool get isRoh => const LangRoh().isSameAs(this);
 
   /// Checks if this [NaturalLanguage] instance is Romanian.
-  bool get isRon => this == const LangRon();
+  bool get isRon => const LangRon().isSameAs(this);
 
   /// Checks if this [NaturalLanguage] instance is Kirundi.
-  bool get isRun => this == const LangRun();
+  bool get isRun => const LangRun().isSameAs(this);
 
   /// Checks if this [NaturalLanguage] instance is Russian.
-  bool get isRus => this == const LangRus();
+  bool get isRus => const LangRus().isSameAs(this);
 
   /// Checks if this [NaturalLanguage] instance is Sango.
-  bool get isSag => this == const LangSag();
+  bool get isSag => const LangSag().isSameAs(this);
 
   /// Checks if this [NaturalLanguage] instance is Sanskrit (Saṁskṛta).
-  bool get isSan => this == const LangSan();
+  bool get isSan => const LangSan().isSameAs(this);
 
   /// Checks if this [NaturalLanguage] instance is Sinhalese (Sinhala).
-  bool get isSin => this == const LangSin();
+  bool get isSin => const LangSin().isSameAs(this);
 
   /// Checks if this [NaturalLanguage] instance is Slovak.
-  bool get isSlk => this == const LangSlk();
+  bool get isSlk => const LangSlk().isSameAs(this);
 
   /// Checks if this [NaturalLanguage] instance is Slovene.
-  bool get isSlv => this == const LangSlv();
+  bool get isSlv => const LangSlv().isSameAs(this);
 
   /// Checks if this [NaturalLanguage] instance is Northern Sami.
-  bool get isSme => this == const LangSme();
+  bool get isSme => const LangSme().isSameAs(this);
 
   /// Checks if this [NaturalLanguage] instance is Samoan.
-  bool get isSmo => this == const LangSmo();
+  bool get isSmo => const LangSmo().isSameAs(this);
 
   /// Checks if this [NaturalLanguage] instance is Shona.
-  bool get isSna => this == const LangSna();
+  bool get isSna => const LangSna().isSameAs(this);
 
   /// Checks if this [NaturalLanguage] instance is Sindhi.
-  bool get isSnd => this == const LangSnd();
+  bool get isSnd => const LangSnd().isSameAs(this);
 
   /// Checks if this [NaturalLanguage] instance is Somali.
-  bool get isSom => this == const LangSom();
+  bool get isSom => const LangSom().isSameAs(this);
 
   /// Checks if this [NaturalLanguage] instance is Southern Sotho.
-  bool get isSot => this == const LangSot();
+  bool get isSot => const LangSot().isSameAs(this);
 
   /// Checks if this [NaturalLanguage] instance is Spanish.
-  bool get isSpa => this == const LangSpa();
+  bool get isSpa => const LangSpa().isSameAs(this);
 
   /// Checks if this [NaturalLanguage] instance is Albanian.
-  bool get isSqi => this == const LangSqi();
+  bool get isSqi => const LangSqi().isSameAs(this);
 
   /// Checks if this [NaturalLanguage] instance is Sardinian.
-  bool get isSrd => this == const LangSrd();
+  bool get isSrd => const LangSrd().isSameAs(this);
 
   /// Checks if this [NaturalLanguage] instance is Serbian.
-  bool get isSrp => this == const LangSrp();
+  bool get isSrp => const LangSrp().isSameAs(this);
 
   /// Checks if this [NaturalLanguage] instance is Swati.
-  bool get isSsw => this == const LangSsw();
+  bool get isSsw => const LangSsw().isSameAs(this);
 
   /// Checks if this [NaturalLanguage] instance is Sundanese.
-  bool get isSun => this == const LangSun();
+  bool get isSun => const LangSun().isSameAs(this);
 
   /// Checks if this [NaturalLanguage] instance is Swahili.
-  bool get isSwa => this == const LangSwa();
+  bool get isSwa => const LangSwa().isSameAs(this);
 
   /// Checks if this [NaturalLanguage] instance is Swedish.
-  bool get isSwe => this == const LangSwe();
+  bool get isSwe => const LangSwe().isSameAs(this);
 
   /// Checks if this [NaturalLanguage] instance is Tahitian.
-  bool get isTah => this == const LangTah();
+  bool get isTah => const LangTah().isSameAs(this);
 
   /// Checks if this [NaturalLanguage] instance is Tamil.
-  bool get isTam => this == const LangTam();
+  bool get isTam => const LangTam().isSameAs(this);
 
   /// Checks if this [NaturalLanguage] instance is Tatar.
-  bool get isTat => this == const LangTat();
+  bool get isTat => const LangTat().isSameAs(this);
 
   /// Checks if this [NaturalLanguage] instance is Telugu.
-  bool get isTel => this == const LangTel();
+  bool get isTel => const LangTel().isSameAs(this);
 
   /// Checks if this [NaturalLanguage] instance is Tajik.
-  bool get isTgk => this == const LangTgk();
+  bool get isTgk => const LangTgk().isSameAs(this);
 
   /// Checks if this [NaturalLanguage] instance is Tagalog.
-  bool get isTgl => this == const LangTgl();
+  bool get isTgl => const LangTgl().isSameAs(this);
 
   /// Checks if this [NaturalLanguage] instance is Thai.
-  bool get isTha => this == const LangTha();
+  bool get isTha => const LangTha().isSameAs(this);
 
   /// Checks if this [NaturalLanguage] instance is Tigrinya.
-  bool get isTir => this == const LangTir();
+  bool get isTir => const LangTir().isSameAs(this);
 
   /// Checks if this [NaturalLanguage] instance is Tonga (Tonga Islands).
-  bool get isTon => this == const LangTon();
+  bool get isTon => const LangTon().isSameAs(this);
 
   /// Checks if this [NaturalLanguage] instance is Tswana.
-  bool get isTsn => this == const LangTsn();
+  bool get isTsn => const LangTsn().isSameAs(this);
 
   /// Checks if this [NaturalLanguage] instance is Tsonga.
-  bool get isTso => this == const LangTso();
+  bool get isTso => const LangTso().isSameAs(this);
 
   /// Checks if this [NaturalLanguage] instance is Turkmen.
-  bool get isTuk => this == const LangTuk();
+  bool get isTuk => const LangTuk().isSameAs(this);
 
   /// Checks if this [NaturalLanguage] instance is Turkish.
-  bool get isTur => this == const LangTur();
+  bool get isTur => const LangTur().isSameAs(this);
 
   /// Checks if this [NaturalLanguage] instance is Twi.
-  bool get isTwi => this == const LangTwi();
+  bool get isTwi => const LangTwi().isSameAs(this);
 
   /// Checks if this [NaturalLanguage] instance is Uyghur.
-  bool get isUig => this == const LangUig();
+  bool get isUig => const LangUig().isSameAs(this);
 
   /// Checks if this [NaturalLanguage] instance is Ukrainian.
-  bool get isUkr => this == const LangUkr();
+  bool get isUkr => const LangUkr().isSameAs(this);
 
   /// Checks if this [NaturalLanguage] instance is Urdu.
-  bool get isUrd => this == const LangUrd();
+  bool get isUrd => const LangUrd().isSameAs(this);
 
   /// Checks if this [NaturalLanguage] instance is Uzbek.
-  bool get isUzb => this == const LangUzb();
+  bool get isUzb => const LangUzb().isSameAs(this);
 
   /// Checks if this [NaturalLanguage] instance is Venda.
-  bool get isVen => this == const LangVen();
+  bool get isVen => const LangVen().isSameAs(this);
 
   /// Checks if this [NaturalLanguage] instance is Vietnamese.
-  bool get isVie => this == const LangVie();
+  bool get isVie => const LangVie().isSameAs(this);
 
   /// Checks if this [NaturalLanguage] instance is Volapük.
-  bool get isVol => this == const LangVol();
+  bool get isVol => const LangVol().isSameAs(this);
 
   /// Checks if this [NaturalLanguage] instance is Walloon.
-  bool get isWln => this == const LangWln();
+  bool get isWln => const LangWln().isSameAs(this);
 
   /// Checks if this [NaturalLanguage] instance is Wolof.
-  bool get isWol => this == const LangWol();
+  bool get isWol => const LangWol().isSameAs(this);
 
   /// Checks if this [NaturalLanguage] instance is Xhosa.
-  bool get isXho => this == const LangXho();
+  bool get isXho => const LangXho().isSameAs(this);
 
   /// Checks if this [NaturalLanguage] instance is Yiddish.
-  bool get isYid => this == const LangYid();
+  bool get isYid => const LangYid().isSameAs(this);
 
   /// Checks if this [NaturalLanguage] instance is Yoruba.
-  bool get isYor => this == const LangYor();
+  bool get isYor => const LangYor().isSameAs(this);
 
   /// Checks if this [NaturalLanguage] instance is Zhuang (Chuang).
-  bool get isZha => this == const LangZha();
+  bool get isZha => const LangZha().isSameAs(this);
 
   /// Checks if this [NaturalLanguage] instance is Chinese.
-  bool get isZho => this == const LangZho();
+  bool get isZho => const LangZho().isSameAs(this);
 
   /// Checks if this [NaturalLanguage] instance is Zulu.
-  bool get isZul => this == const LangZul();
+  bool get isZul => const LangZul().isSameAs(this);
 }

@@ -30,17 +30,17 @@ void main() => group("$CurrenciesLocaleMapper", () {
       group("localize", () {
         test(
           "returns empty map for empty input",
-          () => expect(mapper.localize({}), isEmpty),
+          () => expect(mapper.localize(const {}), isEmpty),
         );
 
         test("localizes single code with main locale", () {
-          final result = mapper.localize({"USD"}, mainLocale: "cs");
+          final result = mapper.localize(const {"USD"}, mainLocale: "cs");
           expect(result.values.single, "americký dolar");
         });
 
         test("uses fallback locale when main locale missing", () {
           final result = mapper.localize(
-            {"USD"},
+            const {"USD"},
             mainLocale: "00",
             fallbackLocale: "de",
           );
@@ -48,13 +48,13 @@ void main() => group("$CurrenciesLocaleMapper", () {
         });
 
         test("uses language fallback when specific locale not found", () {
-          final result = mapper.localize({"USD"}, mainLocale: "en_US");
+          final result = mapper.localize(const {"USD"}, mainLocale: "en_US");
           expect(result.values.single, "US Dollar");
         });
 
         test("handles multiple ISO codes", () {
           final result = mapper.localize(
-            {"USD", "RUB", "EUR"},
+            const {"USD", "RUB", "EUR"},
             mainLocale: "sk",
           );
           expect(result.length, greaterThanOrEqualTo(3));
@@ -65,12 +65,13 @@ void main() => group("$CurrenciesLocaleMapper", () {
         });
 
         test("handles non-existent ISO codes gracefully", () {
-          final result = mapper.localize({"XYZ", "ABC"}, mainLocale: "en");
+          final result =
+              mapper.localize(const {"XYZ", "ABC"}, mainLocale: "en");
           expect(result, isEmpty);
         });
 
         test("cleans up internal maps after use", () {
-          final result = mapper.localize({"USD"}, mainLocale: "en");
+          final result = mapper.localize(const {"USD"}, mainLocale: "en");
           expect(mapper.map, isEmpty);
           expect(result, isNotEmpty);
         });
@@ -81,7 +82,11 @@ void main() => group("$CurrenciesLocaleMapper", () {
           final customMapper = CurrenciesLocaleMapper(
             other: {
               "mock": IsoLocaleMapper(
-                other: {"EUR": "Euro", "USD": "Dollar", "USD+": "US Dollar"},
+                other: const {
+                  "EUR": "Euro",
+                  "USD": "Dollar",
+                  "USD+": "US Dollar",
+                },
               ),
             },
           );
@@ -104,7 +109,7 @@ void main() => group("$CurrenciesLocaleMapper", () {
           );
 
           final result = customMapper.localize(
-            {"USD"},
+            const {"USD"},
             mainLocale: "mock",
             altSymbol: "+",
           );
@@ -133,7 +138,7 @@ void main() => group("$CurrenciesLocaleMapper", () {
           );
 
           final result = customMapper.localize(
-            {"USD"},
+            const {"USD"},
             mainLocale: "en",
             fallbackLocale: "de",
             altSymbol: "+",
@@ -145,6 +150,44 @@ void main() => group("$CurrenciesLocaleMapper", () {
           expect(result[(isoCode: "USD+", locale: "en")], "US Dollar");
           expect(result[(isoCode: "USD", locale: "de")], "Dollar");
           expect(result[(isoCode: "USD+", locale: "de")], "US-Dollar");
+        });
+      });
+
+      group("formatter", () {
+        test("applies formatter to all translations", () {
+          final result = mapper.localize(
+            const {"USD", "RUB"},
+            mainLocale: "en",
+            formatter: (_, l10n) => l10n.toUpperCase(),
+          );
+          expect(result[(isoCode: "USD", locale: "en")], "US DOLLAR");
+          expect(result[(isoCode: "RUB", locale: "en")], "RUSSIAN RUBLE");
+        });
+
+        test("formatter can use locale and iso code for custom logic", () {
+          final result = mapper.localize(
+            const {"USD", "RUB"},
+            mainLocale: "fr",
+            formatter: (iso, l10n) => iso.locale == "fr" ? "[$l10n]" : l10n,
+          );
+          expect(result[(isoCode: "USD", locale: "fr")], startsWith("["));
+          expect(result[(isoCode: "RUB", locale: "fr")], startsWith("["));
+        });
+
+        test("formatter can selectively format based on iso code", () {
+          final result = mapper.localize(
+            const {"USD", "RUB"},
+            mainLocale: "en",
+            formatter: (iso, l10n) =>
+                iso.isoCode.startsWith("US") ? l10n.toLowerCase() : l10n,
+          );
+          expect(result[(isoCode: "USD", locale: "en")], "us dollar");
+          expect(result[(isoCode: "RUB", locale: "en")], "Russian Ruble");
+        });
+
+        test("formatter is not applied if not provided", () {
+          final result = mapper.localize(const {"USD"}, mainLocale: "en");
+          expect(result[(isoCode: "USD", locale: "en")], "US Dollar");
         });
       });
 

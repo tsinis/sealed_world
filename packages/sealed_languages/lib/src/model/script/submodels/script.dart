@@ -2,7 +2,10 @@ part of "../writing_system.dart";
 
 /// A class that represents a script used in writing systems.
 class Script extends WritingSystem
-    implements IsoStandardized<String>, JsonEncodable<Script> {
+    implements
+        IsoStandardized<String>,
+        JsonEncodable<Script>,
+        Comparable<Script> {
   /// {@template script_constructor}
   /// Creates a new instance of the [Script] class.
   ///
@@ -181,6 +184,9 @@ class Script extends WritingSystem
 
   @override
   String toJson({JsonCodec codec = const JsonCodec()}) => codec.encode(toMap());
+
+  @override
+  int compareTo(Script other) => code.compareTo(other.code);
 
   /// Returns a [Script] instance that corresponds to the given value.
   ///
