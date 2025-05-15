@@ -13330,7 +13330,7 @@ class CountrySgs extends WorldCountry {
         hasCoatOfArms: false,
       );
   @override
-  List<FiatCurrency> get currencies => const [FiatShp()];
+  List<FiatCurrency> get currencies => const [FiatGbp()];
   @override
   CapitalInfo get capitalInfo => const CapitalInfo(
     capital: Capital("King Edward Point"),
