@@ -1663,7 +1663,7 @@ class FiatMga extends FiatCurrency {
           codeNumeric: "969",
           namesNative: const ["ariary malgache"],
           subunit: "Iraimbilanja",
-          subunitToUnit: 1,
+          subunitToUnit: 5,
           unitFirst: true,
         );
 }
