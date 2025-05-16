@@ -18,7 +18,7 @@ import "../../model/regional_bloc/world_bloc.dart";
 /// Extension that adds a [copyWith] method to the [WorldCountry] class.
 /// This method returns a new instance of [WorldCountry] with the specified
 /// properties updated.
-extension WorldCountryCopyWith on WorldCountry {
+extension WorldCountryCopyWith<T extends WorldCountry> on T {
   /// {@macro copy_with_method}
   WorldCountry copyWith({
     CountryName? name,

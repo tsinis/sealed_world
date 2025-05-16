@@ -1,3 +1,30 @@
+## 2.2.0
+
+NEW FEATURES
+
+- Enhance ISO standardized classes with `Comparable` interface and update bool getters.
+- Add regional code alias and new ISO standardized extensions for type checking.
+- Update symbol for Sudanese pound to "ج.س".
+
+CHORE
+
+- Dart SDK bumped to v3.8.0.
+- Code is formatted with new Dart formatter.
+
+REFACTOR
+
+- Make copy-with extensions generic for ISO standardized classes.
+
+DOCUMENTATION
+
+- Improved documentation in README.
+- Update dartdoc in ISO standardized classes instances to use backticks.
+
+TEST
+
+- Add tests for comparable boolean getters in ISO standardized classes.
+- Add unit tests for regional code and ISO standardized extensions.
+
 ## 2.1.0
 
 REFACTOR
