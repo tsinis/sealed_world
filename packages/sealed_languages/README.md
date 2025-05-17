@@ -9,7 +9,7 @@
 [![License MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
 [![Pub package](https://img.shields.io/pub/v/sealed_languages.svg)](https://pub.dev/packages/sealed_languages)
 
-This ISO-driven, pure Dart, fully tested and dependency-free package provides information about world languages in the form of compile-time, tree-shakable constant sealed classes. Contains the **all 184 languages with ISO 639-1 codes**, also provides ISO 639-2 codes, their English, native names, language family info, language name translations, etc. For Flutter ready widgets (like language picker) please use [world_countries](https://pub.dev/packages/world_countries) package.
+This ISO-driven, pure Dart, fully tested and dependency-free package provides information about world languages in the form of compile-time, tree-shakable constant classes with a sealed origin. Contains the **all 184 languages with ISO 639-1 codes**, also provides ISO 639-2 codes, their English, native names, language family info, language name translations, etc. For Flutter ready widgets (like language picker) please use [world_countries](https://pub.dev/packages/world_countries) package.
 
 ### Features
 
@@ -26,9 +26,23 @@ This ISO-driven, pure Dart, fully tested and dependency-free package provides in
 | isRightToLeft     | No           | A boolean value specifying whether the language is written right-to-left.                | false                                             |
 | translations      | **Yes**      | A list of `TranslatedName`s representing the language name translations.                 | **140+** translations for a English language name |
 
-Compile time constant list of all languages accessible via `NaturalLanguage.list` and more over, the **NaturalLanguage** class provides the following methods/constructors:
+<details>
+<summary><strong>Script class</strong> (click to expand)</summary>
 
-- `permissive` - allows the creation of custom class instances that are not fully compatible with the ISO standard.
+**Script** class provides the following information about writing systems:
+
+| **Field**   | **Required** | **Description**                                                      | **Example for ScriptLatn** |
+| ----------- | ------------ | -------------------------------------------------------------------- | -------------------------- |
+| name        | **Yes**      | A non-empty string representing the English name of the script.      | "Latin"                    |
+| code        | **Yes**      | A four-letter string representing the ISO 15924 code for the script. | "Latn"                     |
+| codeNumeric | **Yes**      | A three-digit string representing the ISO 15924 numeric code.        | "215"                      |
+| date        | **Yes**      | A string representing the date of addition of the script.            | "2004-05-01"               |
+| pva         | No           | A string representing the property value alias for the script.       | "Latin"                    |
+
+</details>
+
+Compile-time constant list of all languages accessible via `NaturalLanguage.list` and more over, the **NaturalLanguage** class provides the following methods/constructors:
+
 - `maybeFromValue` - returns a language instance if the value matches the provided value, otherwise returns `null`.
 - `maybeFromAnyCode` - returns a language instance if the value matches any ISO code, otherwise returns `null`.
 - `maybeFromCode` - returns a language instance if the value matches the provided ISO 639-2 code, otherwise returns `null`.
@@ -37,8 +51,9 @@ Compile time constant list of all languages accessible via `NaturalLanguage.list
 - `fromCodeShort` - returns a language instance if the value matches the provided ISO 639-1 code code.
 - `fromAnyCode` - returns a language instance if the value matches the provided ISO 639-1 or ISO 639-2 codes.
 - `fromName` - returns a language instance if the value matches the provided name.
+- `permissive` - allows the creation of custom class instances that are not fully compatible with the ISO standard.
 
-and (thanks to sealed nature of the class) functional-style like methods: `whenOrNull`, `maybeWhen`, `when`, `map`, `maybeMap` and `is*` boolean getters. You can also find a lot of common method you may know from Dart ecosystem - `toString` overrides, `copyWith`, `toJson`, etc. Also a compile time const, tree-shakable, code `map`s (for a 0(1) access time code mapping), `list` and much more.
+and functional-style like methods: `whenOrNull`, `maybeWhen`, `when`, `map`, `maybeMap` and `is*` boolean getters. You can also find a lot of common method you may know from Dart ecosystem - `toString` overrides, `copyWith`, `toJson`, `compareTo`, etc. Also a compile-time const, tree-shakable, code `map`s (for a 0(1) access time code mapping), `list` and much more.
 
 > Translations: Use `maybeCommonNameFor()` or `commonNameFor()` methods to get translations for specific locale.
 
@@ -59,7 +74,7 @@ import 'package:sealed_languages/sealed_languages.dart';
 
 ### Usage
 
-Use `NaturalLanguage` class to get information about languages. Either construct a new instance directly or with use of the class factory constructors/static methods or select one from the `NaturalLanguage.list` constant.
+Use `NaturalLanguage` class to get information about languages. Either construct a new instance directly with a `const` keyword or with use of the class factory constructors/static methods or select one from the `NaturalLanguage.list` constant.
 
 ```dart
   const eng = "Eng";
@@ -102,19 +117,23 @@ Use `NaturalLanguage` class to get information about languages. Either construct
   }
 ```
 
+> [!IMPORTANT]
+> For specific ISO instances and their collections, e.g., `const value = LangEng(), const items = [LangEng()]` — prioritize compile-time constant references over `var/final` to ensure canonicalization and benefit from compiler optimizations.
+
 For more usage examples, please see the `/example` folder.
 
 ### FAQ
 
 #### Why should I use this package over any other language-related package?
 
-- **Sealed classes**: This package provides data in the form of sealed classes, allowing you to create your own instances and work with them as with existing ones (for example this is not possible with enums or regular classes (without losing it's sealed nature), you can also override existing or add new data, etc.).
+- **Sealed classes**: This package provides data via classes with a sealed origin, defining specific permitted direct subclasses. This lets you use instances of these subclasses and customize their data or behavior (e.g., overriding methods), offering more structured flexibility than enums or standard open classes.
 - **No 3rd-party dependencies**: This package has no third-party dependencies, ensuring that you won't have any issues or conflicts with other dependencies (no even `meta` here, because of that).
 - **Rich data**: This package offers far more data than any other package + tons of translations (all [GlobalMaterialLocalizations](https://api.flutter.dev/flutter/flutter_localizations/GlobalMaterialLocalizations-class.html) and [GlobalCupertinoLocalizations](https://api.flutter.dev/flutter/flutter_localizations/GlobalCupertinoLocalizations-class.html) locales and more).
 - **Type-safe**: The contracts and types in this package are exceptionally strong, ensuring that your code is strongly typed and well-defined.
 - **High code coverage**: The code in this package has 100% code coverage, with more than 1.5K tests, providing confidence in its reliability and stability.
 - **Comprehensive documentation**: This package provides full documentation for every non-code generated public member, usually with examples, ensuring clarity and ease of use.
 - **Lightweight**: This package keeps under 500 KB, ensuring it fits within the pub cache limit. This leads to quick, low-bandwidth downloads and faster caching, minimizing resource impact.
+- **Mirrored Repository**: The GitHub repository, including all package tags, is mirrored on [GitLab](https://gitlab.com/tsinis/sealed_world/), providing an alternative access point should GitHub become unavailable.
 - **Industry adopted**: This package is actively used in production by numerous European companies, ensuring its efficacy and robustness in real-world scenarios.
 - **MIT license**: This package and sources are released under the MIT license, which is a permissive license that allows users to use, modify, and distribute the code with minimal restrictions. The MIT license is considered better than most other open-source licenses because it provides flexibility and allows users to incorporate the code into their projects without worrying about legal implications.
 

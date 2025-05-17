@@ -123,7 +123,7 @@ REFACTOR
 NEW FEATURES
 
 - `codeOther` is no longer nullable (in all `IsoStandardized` classes).
-- Added new compile time constant and case-insensitive code maps (`UpperCaseIsoMap`s) in every ISO class (accessible as static constants via `.map`, `.codeMap`, `.codeShort` etc.).
+- Added new compile-time constant and case-insensitive code maps (`UpperCaseIsoMap`s) in every ISO class (accessible as static constants via `.map`, `.codeMap`, `.codeShort` etc.).
 - Factory constructors and methods now using those maps if no (optional) array is provided there.
 - Factory constructors and methods in `IsoStandardized` classes now allow non-String inputs - any `Object`, for example you can now use `StringBuffer` or `Enum` instances directly:
 

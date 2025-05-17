@@ -9,7 +9,7 @@
 [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
 [![Pub package](https://img.shields.io/pub/v/sealed_countries.svg)](https://pub.dev/packages/sealed_countries)
 
-This ISO-driven, fully tested and pure Dart package provides information about world countries in the form of compile-time, tree-shakable constant sealed classes. Contains the all 249+1 countries with ISO 3166 codes, their English, native names, emoji flags, capitals, population, postal codes, phone codes, [languages (and scripts)](https://github.com/tsinis/sealed_world/tree/main/packages/sealed_languages), [currencies](https://github.com/tsinis/sealed_world/tree/main/packages/sealed_currencies), country/currency/language name translations, etc. For Flutter ready widgets, please use [world_countries](https://pub.dev/packages/world_countries) package.
+This ISO-driven, fully tested and pure Dart package provides information about world countries in the form of compile-time, tree-shakable constant classes with a sealed origin. Contains the all 249+1 countries with ISO 3166 codes, their English, native names, emoji flags, capitals, population, postal codes, phone codes, [languages (and scripts)](https://github.com/tsinis/sealed_world/tree/main/packages/sealed_languages), [currencies](https://github.com/tsinis/sealed_world/tree/main/packages/sealed_currencies), country/currency/language name translations, etc. For Flutter ready widgets, please use [world_countries](https://pub.dev/packages/world_countries) package.
 
 ### Features
 
@@ -51,9 +51,8 @@ This ISO-driven, fully tested and pure Dart package provides information about w
 | regionalBlocs | No           | The regional blocs of the country.                               | [`BlocEU`()]                                                                                                                                                                       |
 | translations  | **Yes[^1]**  | The translations of the country name.                            | List of **135+** `TranslatedName`s in different languages                                                                                                                          |
 
-Compile time constant list of all countries accessible via `WorldCountry.list` and more over, the **WorldCountry** class provides the following methods/constructors:
+Compile-time constant list of all countries accessible via `WorldCountry.list` and more over, the **WorldCountry** class provides the following methods/constructors:
 
-- `permissive` - allows the creation of custom class instances that are not fully compatible with the ISO standard.
 - `maybeFromAnyCode` - returns a country instance if the value matches any ISO 3166 code, otherwise returns `null`.
 - `fromAnyCode` - returns a country instance if the value matches any ISO 4217 code.
 - `maybeFromValue` - returns a country instance if the value matches the provided value, otherwise returns `null`.
@@ -63,8 +62,9 @@ Compile time constant list of all countries accessible via `WorldCountry.list` a
 - `maybeFromCode` - returns a country instance if the value matches the provided ISO 3166-1 Alpha-3 code, otherwise returns `null`.
 - `maybeFromCodeShort` - returns a country instance if the value matches the provided ISO 3166-1 Alpha-2 code, otherwise returns `null`.
 - `maybeFromCodeNumeric` - returns a country instance if the value matches the provided ISO 3166-1 numeric code, otherwise returns `null`.
+- `permissive` - allows the creation of custom class instances that are not fully compatible with the ISO standard.
 
-and (thanks to sealed nature of the class) functional-style like methods: `whenOrNull`, `maybeWhen`, `when`, `map`, `maybeMap` and `is*` boolean getters. You can also find a lot of common method you may know from Dart ecosystem - `toString` overrides, `copyWith`, `toJson`, etc. Also a compile time const, tree-shakable, case case insensitive code `map`s (for a 0(1) access time code mapping), `list` and much more.
+and functional-style like methods: `whenOrNull`, `maybeWhen`, `when`, `map`, `maybeMap` and `is*` boolean getters. You can also find a lot of common method you may know from Dart ecosystem - `toString` overrides, `copyWith`, `toJson`, `compareTo`, etc. Also a compile-time const, tree-shakable, case case insensitive code `map`s (for a 0(1) access time code mapping), `list` and much more.
 
 > Translations: Use `maybeCommonNameFor()` or `commonNameFor()` methods to get translations for specific locale.
 
@@ -85,7 +85,7 @@ import 'package:sealed_countries/sealed_countries.dart';
 
 ### Usage
 
-Use `WorldCountry` class to get information about countries. Either construct a new instance directly or with use of the class factory constructors/static methods, or select one from the `WorldCountry.list` constant.
+Use `WorldCountry` class to get information about countries. Either construct a new instance directly with a `const` keyword or with use of the class factory constructors/static methods, or select one from the `WorldCountry.list` constant.
 
 ```dart
   print(WorldCountry.list.length); // Prints: "250".
@@ -114,18 +114,22 @@ Use `WorldCountry` class to get information about countries. Either construct a 
   }
 ```
 
+> [!IMPORTANT]
+> For specific ISO instances and their collections, e.g., `const value = CountryChn(), const items = [CountryChn()]` — prioritize compile-time constant references over `var/final` to ensure canonicalization and benefit from compiler optimizations.
+
 For more usage examples, please see the `/example` folder.
 
 ### FAQ
 
 #### Why should I use this package over any other country-related package?
 
-- **Sealed classes**: This package provides data in the form of sealed classes, allowing you to create your own instances and work with them as with existing ones (for example this is not possible with enums or regular classes (without losing it's sealed nature), you can also override existing or add new data, etc.).
+- **Sealed classes**: This package provides data via classes with a sealed origin, defining specific permitted direct subclasses. This lets you use instances of these subclasses and customize their data or behavior (e.g., overriding methods), offering more structured flexibility than enums or standard open classes.
 - **No 3rd-party dependencies**: This package has no third-party dependencies, ensuring that you won't have any issues or conflicts with other dependencies (no even `meta` here, because of that).
 - **Rich data**: This package offers far more data than any other package + tons of translations (all [GlobalMaterialLocalizations](https://api.flutter.dev/flutter/flutter_localizations/GlobalMaterialLocalizations-class.html) and [GlobalCupertinoLocalizations](https://api.flutter.dev/flutter/flutter_localizations/GlobalCupertinoLocalizations-class.html) locales and more).
 - **Type-safe**: The contracts and types in this package are exceptionally strong, ensuring that your code is strongly typed and well-defined.
 - **High code coverage**: The code in this package has 100% code coverage, with more than 1K (+2K in underlying packages) tests, providing confidence in its reliability and stability.
 - **Comprehensive documentation**: This package provides full documentation for every non-code generated public member, usually with examples, ensuring clarity and ease of use.
+- **Mirrored Repository**: The GitHub repository, including all package tags, is mirrored on [GitLab](https://gitlab.com/tsinis/sealed_world/), providing an alternative access point should GitHub become unavailable.
 - **Industry adopted**: This package is actively used in production by numerous European companies, ensuring its efficacy and robustness in real-world scenarios.
 - **MIT license**: This package and sources are released under the MIT license, which is a permissive license that allows users to use, modify, and distribute the code with minimal restrictions. The MIT license is considered better than most other open-source licenses because it provides flexibility and allows users to incorporate the code into their projects without worrying about legal implications.
 
