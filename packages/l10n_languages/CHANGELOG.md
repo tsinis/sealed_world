@@ -6,8 +6,8 @@ NEW FEATURES
 
 CHORE
 
-- Dart SDK bumped to v3.8.0.
-- Code is formatted with new Dart formatter.
+- The Dart SDK was bumped to v3.8.0.
+- Code has been formatted with the new Dart formatter.
 
 DOCUMENTATION
 

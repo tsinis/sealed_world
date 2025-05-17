@@ -9,7 +9,7 @@
 [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
 [![Pub package](https://img.shields.io/pub/v/sealed_countries.svg)](https://pub.dev/packages/sealed_countries)
 
-This ISO-driven, fully tested and pure Dart package provides information about world countries in the form of compile-time, tree-shakable constant classes with a sealed origin. Contains the all 249+1 countries with ISO 3166 codes, their English, native names, emoji flags, capitals, population, postal codes, phone codes, [languages (and scripts)](https://github.com/tsinis/sealed_world/tree/main/packages/sealed_languages), [currencies](https://github.com/tsinis/sealed_world/tree/main/packages/sealed_currencies), country/currency/language name translations, etc. For Flutter ready widgets, please use [world_countries](https://pub.dev/packages/world_countries) package.
+This ISO-driven, fully tested and pure Dart package provides information about world countries in the form of compile-time, tree-shakable constant classes with a sealed origin. Contains all 249+1 countries with ISO 3166 codes, their English, native names, emoji flags, capitals, population, postal codes, phone codes, [languages (and scripts)](https://github.com/tsinis/sealed_world/tree/main/packages/sealed_languages), [currencies](https://github.com/tsinis/sealed_world/tree/main/packages/sealed_currencies), country/currency/language name translations, etc. For Flutter ready widgets, please use [world_countries](https://pub.dev/packages/world_countries) package.
 
 ### Features
 
@@ -51,7 +51,7 @@ This ISO-driven, fully tested and pure Dart package provides information about w
 | regionalBlocs | No           | The regional blocs of the country.                               | [`BlocEU`()]                                                                                                                                                                       |
 | translations  | **Yes[^1]**  | The translations of the country name.                            | List of **135+** `TranslatedName`s in different languages                                                                                                                          |
 
-Compile-time constant list of all countries accessible via `WorldCountry.list` and more over, the **WorldCountry** class provides the following methods/constructors:
+Provides a compile-time constant of all countries accessible via `WorldCountry.list` moreover, the **WorldCountry** class provides the following methods/constructors:
 
 - `maybeFromAnyCode` - returns a country instance if the value matches any ISO 3166 code, otherwise returns `null`.
 - `fromAnyCode` - returns a country instance if the value matches any ISO 4217 code.
@@ -64,7 +64,7 @@ Compile-time constant list of all countries accessible via `WorldCountry.list` a
 - `maybeFromCodeNumeric` - returns a country instance if the value matches the provided ISO 3166-1 numeric code, otherwise returns `null`.
 - `permissive` - allows the creation of custom class instances that are not fully compatible with the ISO standard.
 
-and functional-style like methods: `whenOrNull`, `maybeWhen`, `when`, `map`, `maybeMap` and `is*` boolean getters. You can also find a lot of common method you may know from Dart ecosystem - `toString` overrides, `copyWith`, `toJson`, `compareTo`, etc. Also a compile-time const, tree-shakable, case case insensitive code `map`s (for a 0(1) access time code mapping), `list` and much more.
+and functional-style like methods: `whenOrNull`, `maybeWhen`, `when`, `map`, `maybeMap` and `is*` boolean getters. You can also find many common methodsyou may know from Dart ecosystem - `toString` overrides, `copyWith`, `toJson`, `compareTo`, etc. Also, a compile-time const, tree-shakable, case-insensitive code `map`s (for a 0(1) access time code mapping), `list` and much more.
 
 > Translations: Use `maybeCommonNameFor()` or `commonNameFor()` methods to get translations for specific locale.
 
@@ -85,7 +85,7 @@ import 'package:sealed_countries/sealed_countries.dart';
 
 ### Usage
 
-Use `WorldCountry` class to get information about countries. Either construct a new instance directly with a `const` keyword or with use of the class factory constructors/static methods, or select one from the `WorldCountry.list` constant.
+Use the `WorldCountry` class to get information about countries. Either construct a new instance directly with `const` keyword or with use of the class factory constructors/static methods, or select one from the `WorldCountry.list` constant.
 
 ```dart
   print(WorldCountry.list.length); // Prints: "250".
@@ -123,7 +123,7 @@ For more usage examples, please see the `/example` folder.
 
 #### Why should I use this package over any other country-related package?
 
-- **Sealed classes**: This package provides data via classes with a sealed origin, defining specific permitted direct subclasses. This lets you use instances of these subclasses and customize their data or behavior (e.g., overriding methods), offering more structured flexibility than enums or standard open classes.
+- **Classes with a sealed origin**: This package provides data via classes with a sealed origin, defining specific permitted direct subclasses. This lets you use instances of these subclasses and customize their data or behavior (e.g., overriding methods), offering more structured flexibility than enums or standard open classes.
 - **No 3rd-party dependencies**: This package has no third-party dependencies, ensuring that you won't have any issues or conflicts with other dependencies (no even `meta` here, because of that).
 - **Rich data**: This package offers far more data than any other package + tons of translations (all [GlobalMaterialLocalizations](https://api.flutter.dev/flutter/flutter_localizations/GlobalMaterialLocalizations-class.html) and [GlobalCupertinoLocalizations](https://api.flutter.dev/flutter/flutter_localizations/GlobalCupertinoLocalizations-class.html) locales and more).
 - **Type-safe**: The contracts and types in this package are exceptionally strong, ensuring that your code is strongly typed and well-defined.

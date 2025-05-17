@@ -41,7 +41,7 @@ This ISO-driven, pure Dart, fully tested and dependency-free package provides in
 
 </details>
 
-Compile-time constant list of all languages accessible via `NaturalLanguage.list` and more over, the **NaturalLanguage** class provides the following methods/constructors:
+Provides a compile-time constant of all languages accessible via `NaturalLanguage.list` moreover, the **NaturalLanguage** class provides the following methods/constructors:
 
 - `maybeFromValue` - returns a language instance if the value matches the provided value, otherwise returns `null`.
 - `maybeFromAnyCode` - returns a language instance if the value matches any ISO code, otherwise returns `null`.
@@ -53,7 +53,7 @@ Compile-time constant list of all languages accessible via `NaturalLanguage.list
 - `fromName` - returns a language instance if the value matches the provided name.
 - `permissive` - allows the creation of custom class instances that are not fully compatible with the ISO standard.
 
-and functional-style like methods: `whenOrNull`, `maybeWhen`, `when`, `map`, `maybeMap` and `is*` boolean getters. You can also find a lot of common method you may know from Dart ecosystem - `toString` overrides, `copyWith`, `toJson`, `compareTo`, etc. Also a compile-time const, tree-shakable, code `map`s (for a 0(1) access time code mapping), `list` and much more.
+and functional-style like methods: `whenOrNull`, `maybeWhen`, `when`, `map`, `maybeMap` and `is*` boolean getters. You can also find many common methodsyou may know from Dart ecosystem - `toString` overrides, `copyWith`, `toJson`, `compareTo`, etc. Also, a compile-time const, tree-shakable, code `map`s (for a 0(1) access time code mapping), `list` and much more.
 
 > Translations: Use `maybeCommonNameFor()` or `commonNameFor()` methods to get translations for specific locale.
 
@@ -74,7 +74,7 @@ import 'package:sealed_languages/sealed_languages.dart';
 
 ### Usage
 
-Use `NaturalLanguage` class to get information about languages. Either construct a new instance directly with a `const` keyword or with use of the class factory constructors/static methods or select one from the `NaturalLanguage.list` constant.
+Use the `NaturalLanguage` class to get information about languages. Either construct a new instance directly with `const` keyword or with use of the class factory constructors/static methods or select one from the `NaturalLanguage.list` constant.
 
 ```dart
   const eng = "Eng";
@@ -126,7 +126,7 @@ For more usage examples, please see the `/example` folder.
 
 #### Why should I use this package over any other language-related package?
 
-- **Sealed classes**: This package provides data via classes with a sealed origin, defining specific permitted direct subclasses. This lets you use instances of these subclasses and customize their data or behavior (e.g., overriding methods), offering more structured flexibility than enums or standard open classes.
+- **Classes with a sealed origin**: This package provides data via classes with a sealed origin, defining specific permitted direct subclasses. This lets you use instances of these subclasses and customize their data or behavior (e.g., overriding methods), offering more structured flexibility than enums or standard open classes.
 - **No 3rd-party dependencies**: This package has no third-party dependencies, ensuring that you won't have any issues or conflicts with other dependencies (no even `meta` here, because of that).
 - **Rich data**: This package offers far more data than any other package + tons of translations (all [GlobalMaterialLocalizations](https://api.flutter.dev/flutter/flutter_localizations/GlobalMaterialLocalizations-class.html) and [GlobalCupertinoLocalizations](https://api.flutter.dev/flutter/flutter_localizations/GlobalCupertinoLocalizations-class.html) locales and more).
 - **Type-safe**: The contracts and types in this package are exceptionally strong, ensuring that your code is strongly typed and well-defined.

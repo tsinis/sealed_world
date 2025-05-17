@@ -9,7 +9,7 @@
 [![License MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
 [![Pub package](https://img.shields.io/pub/v/sealed_currencies.svg)](https://pub.dev/packages/sealed_currencies)
 
-This ISO-driven, pure Dart, fully tested and 3rd-party dependency-free package provides information about world currencies in the form of compile-time, tree-shakable constant classes with a sealed origin. Contains the all actively used 169[^1] currencies with ISO letter 4217 codes, also provides ISO 4217 numeric codes, their English, native names, units, subunits, currency name translations, etc. For Flutter ready widgets (like currency picker) please use [world_countries](https://pub.dev/packages/world_countries) package.
+This ISO-driven, pure Dart, fully tested and 3rd-party dependency-free package provides information about world currencies in the form of compile-time, tree-shakable constant classes with a sealed origin. Contains all actively used 169[^1] currencies with ISO letter 4217 codes, also provides ISO 4217 numeric codes, their English, native names, units, subunits, currency name translations, etc. For Flutter ready widgets (like currency picker) please use [world_countries](https://pub.dev/packages/world_countries) package.
 
 ### Features
 
@@ -34,7 +34,7 @@ This ISO-driven, pure Dart, fully tested and 3rd-party dependency-free package p
 | thousandsSeparator   | **Yes**                     | The character used to separate thousands grouping of the whole unit.                    | "."                                            |
 | translations         | **Yes** (for built-in data) | A list of `TranslatedName`s representing the currency name translations.                | **115+** translations for a Euro currency name |
 
-Compile-time constant list of all currencies accessible via `FiatCurrency.list` and more over, the **FiatCurrency** class provides the following methods/constructors:
+Provides a compile-time constant of all currencies accessible via `FiatCurrency.list` moreover, the **FiatCurrency** class provides the following methods/constructors:
 
 - `maybeFromValue` - returns a currency instance if the value matches the provided value, otherwise returns `null`.
 - `maybeFromAnyCode` - returns a currency instance if the value matches any ISO 4217 code, otherwise returns `null`.
@@ -46,7 +46,7 @@ Compile-time constant list of all currencies accessible via `FiatCurrency.list` 
 - `fromName` - returns a currency instance if the value matches the provided English name.
 - `permissive` - allows the creation of custom class instances that are not fully compatible with the ISO standard.
 
-and functional-style like methods: `whenOrNull`, `maybeWhen`, `when`, `map`, `maybeMap` and `is*` boolean getters. You can also find a lot of common method you may know from Dart ecosystem - `toString` overrides, `copyWith`, `toJson`, `compareTo`, etc. Also a compile-time const, tree-shakable, case case insensitive code `map`s (for a 0(1) access time code mapping), `list` and much more.
+and functional-style like methods: `whenOrNull`, `maybeWhen`, `when`, `map`, `maybeMap` and `is*` boolean getters. You can also find many common methodsyou may know from Dart ecosystem - `toString` overrides, `copyWith`, `toJson`, `compareTo`, etc. Also, a compile-time const, tree-shakable, case-insensitive code `map`s (for a 0(1) access time code mapping), `list` and much more.
 
 > Translations: Use `maybeCommonNameFor()` or `commonNameFor()` methods to get translations for specific locale.
 
@@ -67,7 +67,7 @@ import 'package:sealed_currencies/sealed_currencies.dart';
 
 ### Usage
 
-Use `FiatCurrency` class to get information about currencies. Either construct a new instance directly with a `const` keyword or with use of the class factory constructors/static methods or select one from the `FiatCurrency.list` constant.
+Use the `FiatCurrency` class to get information about currencies. Either construct a new instance directly with `const` keyword or with use of the class factory constructors/static methods or select one from the `FiatCurrency.list` constant.
 
 ```dart
   print(FiatCurrency.listExtended.length); // Prints: "169".
@@ -114,7 +114,7 @@ For more usage examples, please see the `/example` folder.
 
 #### Why should I use this package over any other currency-related package?
 
-- **Sealed classes**: This package provides data via classes with a sealed origin, defining specific permitted direct subclasses. This lets you use instances of these subclasses and customize their data or behavior (e.g., overriding methods), offering more structured flexibility than enums or standard open classes.
+- **Classes with a sealed origin**: This package provides data via classes with a sealed origin, defining specific permitted direct subclasses. This lets you use instances of these subclasses and customize their data or behavior (e.g., overriding methods), offering more structured flexibility than enums or standard open classes.
 - **No 3rd-party dependencies**: This package has no third-party dependencies, ensuring that you won't have any issues or conflicts with other dependencies (no even `meta` here, because of that).
 - **Rich data**: This package offers far more data than any other package + tons of translations (all [GlobalMaterialLocalizations](https://api.flutter.dev/flutter/flutter_localizations/GlobalMaterialLocalizations-class.html) and [GlobalCupertinoLocalizations](https://api.flutter.dev/flutter/flutter_localizations/GlobalCupertinoLocalizations-class.html) locales and more).
 - **Type-safe**: The contracts and types in this package are exceptionally strong, ensuring that your code is strongly typed and well-defined.

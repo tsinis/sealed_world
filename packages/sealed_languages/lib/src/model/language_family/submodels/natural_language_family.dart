@@ -68,7 +68,7 @@ class NaturalLanguageFamily extends LanguageFamily {
     return null;
   }
 
-  /// A list of the all natural language families currently
+  /// A list of all natural language families currently
   /// supported by the [NaturalLanguageFamily] class.
   static const list = <NaturalLanguageFamily>[
     AfroAsiatic(),

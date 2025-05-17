@@ -9,8 +9,8 @@ NEW FEATURES
 
 CHORE
 
-- Dart SDK bumped to v3.8.0.
-- Code is formatted with new Dart formatter.
+- The Dart SDK was bumped to v3.8.0.
+- Code has been formatted with the new Dart formatter.
 - Correct latitude values for several [countries](https://gitlab.com/restcountries/restcountries/-/merge_requests/78).
 - Update currency for South Georgia to [GBP](https://gitlab.com/restcountries/restcountries/-/merge_requests/79).
 
