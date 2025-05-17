@@ -4,7 +4,7 @@ import "../../model/currency/currency.dart";
 
 /// Extension on [FiatCurrency] that provides a `copyWith` method for
 /// creating a new instance of [FiatCurrency] with updated properties.
-extension FiatCurrencyCopyWith on FiatCurrency {
+extension FiatCurrencyCopyWith<T extends FiatCurrency> on T {
   /// Creates a new instance of [FiatCurrency] with updated properties.
   ///
   /// The optional named parameters can be used to specify new values for the

@@ -1,3 +1,38 @@
+## 3.6.0
+
+NEW FEATURES
+
+- Add additional `ListTile` super parameters to the `ListItemTile` widget.
+- Add extension for enhanced functionality of `ListItemTile`.
+- Enhance ISO standardized classes with `Comparable` interface and update bool getters.
+- Add regional code alias and new ISO standardized extensions for type checking.
+- Add formatter callback to localization packages for custom translation logic.
+- Add official country translations for the [Indonesian language](https://gitlab.com/restcountries/restcountries/-/merge_requests/76).
+- Update symbol for Sudanese pound to "ج.س".
+
+CHORE
+
+- The Dart SDK was bumped to v3.8.0.
+- Code has been formatted with the new Dart formatter.
+- Correct latitude values for several [countries](https://gitlab.com/restcountries/restcountries/-/merge_requests/78).
+- Update currency for South Georgia to [GBP](https://gitlab.com/restcountries/restcountries/-/merge_requests/79).
+
+REFACTOR
+
+- Make copy-with extensions generic for ISO standardized classes.
+- Improve `ListItemTile` structure for direct item property access.
+
+DOCUMENTATION
+
+- Improved documentation in README.
+- Update dartdoc in ISO standardized classes instances to use backticks.
+
+TEST
+
+- Add tests for comparable boolean getters in ISO standardized classes.
+- Add unit tests for regional code and ISO standardized extensions.
+- Add unit tests for `ListItemTile` extension functionality.
+
 ## 3.5.0
 
 NEW FEATURES
@@ -56,7 +91,7 @@ This is maintenance release without significant changes for the users, that aims
 CHORE
 
 - Dart SDK bumped to v3.7.0.
-- Code is formatted with new Dart formatter.
+- Code has been formatted with the new Dart formatter.
 - Deprecated `scribbleEnabled` is replaced with `stylusHandwritingEnabled` parameter in `AdaptiveSearchTextField`.
 
 ## 3.1.0
@@ -253,7 +288,7 @@ NEW FEATURES
 - `PickersThemeData.showHeader` is now nullable.
 - Fix thousands separator for [CHF](https://github.com/RubyMoney/money/pull/1072).
 - `codeOther` is no longer nullable (in all `IsoStandardized` classes).
-- Added new compile time constant and case-insensitive code maps (`UpperCaseIsoMap`s) in every ISO class (accessible as static constants via `.map`, `.codeMap`, `.codeNumericMap`, etc.).
+- Added new compile-time constant and case-insensitive code maps (`UpperCaseIsoMap`s) in every ISO class (accessible as static constants via `.map`, `.codeMap`, `.codeNumericMap`, etc.).
 - Factory constructors and methods now using those maps if no (optional) array is provided there.
 - Factory constructors and methods in `IsoStandardized` classes now allow non-String inputs - any `Object`, for example you can now use `StringBuffer` or `Enum` instances directly:
 
@@ -454,7 +489,7 @@ DOCUMENTATION
 BREAKING CHANGES
 
 - `WorldCountry.list` is now sorted alphabetically by the (3 letter) `code`.
-- Compile time static const. data in lists are now sorted alphabetically by the (3 letter) code.
+- Compile-time static const. data in lists are now sorted alphabetically by the (3 letter) code.
 
 ## 0.2.2
 

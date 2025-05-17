@@ -1,3 +1,33 @@
+## 2.3.0
+
+NEW FEATURES
+
+- Enhance ISO standardized classes with `Comparable` interface and update bool getters.
+- Add regional code alias and new ISO standardized extensions for type checking.
+- Add official country translations for the [Indonesian language](https://gitlab.com/restcountries/restcountries/-/merge_requests/76).
+- Update symbol for Sudanese pound to "ج.س".
+
+CHORE
+
+- The Dart SDK was bumped to v3.8.0.
+- Code has been formatted with the new Dart formatter.
+- Correct latitude values for several [countries](https://gitlab.com/restcountries/restcountries/-/merge_requests/78).
+- Update currency for South Georgia to [GBP](https://gitlab.com/restcountries/restcountries/-/merge_requests/79).
+
+REFACTOR
+
+- Make copy-with extensions generic for ISO standardized classes.
+
+DOCUMENTATION
+
+- Improved documentation in README.
+- Update dartdoc in ISO standardized classes instances to use backticks.
+
+TEST
+
+- Add tests for comparable boolean getters in ISO standardized classes.
+- Add unit tests for regional code and ISO standardized extensions.
+
 ## 2.2.0
 
 This is a maintenance release without significant changes for the users, which aims to improve documentation and DevEx.
@@ -130,7 +160,7 @@ NEW FEATURES
 
 - Fix thousands separator for [CHF](https://github.com/RubyMoney/money/pull/1072).
 - `codeOther` is no longer nullable (in all `IsoStandardized` classes).
-- Added new compile time constant and case-insensitive code maps (`UpperCaseIsoMap`s) in every ISO class (accessible as static constants via `.map`, `.codeMap`, `.codeNumericMap`, etc.).
+- Added new compile-time constant and case-insensitive code maps (`UpperCaseIsoMap`s) in every ISO class (accessible as static constants via `.map`, `.codeMap`, `.codeNumericMap`, etc.).
 - Factory constructors and methods now using those maps if no (optional) array is provided there.
 - Factory constructors and methods in `IsoStandardized` classes now allow non-String inputs - any `Object`, for example you can now use `StringBuffer` or `Enum` instances directly:
 

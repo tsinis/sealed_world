@@ -11,7 +11,7 @@ class ColorUtils {
   /// [RegExp] pattern for validation complete HEX color [String], allows only:
   ///
   /// * exactly 6 or 8 digits in HEX format,
-  /// * only Latin A-F characters, case insensitive,
+  /// * only Latin A-F characters, case-insensitive,
   /// * and integer numbers 0,1,2,3,4,5,6,7,8,9,
   /// * with optional hash (`#`) symbol at the beginning (not calculated in
   ///   length).
@@ -38,10 +38,14 @@ class ColorUtils {
   };
 
   Set<Color> extractColorsFromSvg(String svgContent) {
-    final fillPattern =
-        RegExp('fill\\s*=\\s*["\']?([^"\']*)["\']?', caseSensitive: false);
-    final strokePattern =
-        RegExp('stroke\\s*=\\s*["\']?([^"\']*)["\']?', caseSensitive: false);
+    final fillPattern = RegExp(
+      'fill\\s*=\\s*["\']?([^"\']*)["\']?',
+      caseSensitive: false,
+    );
+    final strokePattern = RegExp(
+      'stroke\\s*=\\s*["\']?([^"\']*)["\']?',
+      caseSensitive: false,
+    );
 
     final fills = fillPattern.allMatches(svgContent);
     final strokes = strokePattern.allMatches(svgContent);
@@ -73,7 +77,7 @@ class ColorUtils {
   ///
   /// Where: A stands for Alpha, R for Red, G for Green, and B for blue color.
   /// It will only accept 3/6/8 long HEXs with an optional hash (`#`) at the
-  /// beginning. Allowed characters are Latin A-F case insensitive and numbers
+  /// beginning. Allowed characters are Latin A-F case-insensitive and numbers
   /// 0-9. Optional [enableAlpha] can be provided (it's `true` by default). If
   /// it's set to `false` transparency information (alpha channel) will be
   /// removed.

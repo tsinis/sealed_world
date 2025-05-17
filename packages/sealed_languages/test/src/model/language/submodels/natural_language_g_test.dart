@@ -10,12 +10,12 @@ void main() {
   var varValue = LangDeu(); // ignore: prefer-type-over-var, it's a test.
 
   group("NaturalLanguageBoolGetters", () {
-    test("boolean getter should work for compile time const", () {
+    test("boolean getter should work for compile-time const", () {
       expect(value.isAar, isFalse);
       expect(value.isDeu, isTrue);
     });
 
-    test("boolean getter should work for non-compile time const", () {
+    test("boolean getter should work for non-compile-time const", () {
       expect(nonConst.isAar, isFalse);
       expect(nonConst.isDeu, isTrue);
     });
@@ -39,7 +39,7 @@ void main() {
   });
 
   group("NaturalLanguageFunctional", () {
-    test("boolean getter should work for compile time const", () {
+    test("boolean getter should work for compile-time const", () {
       final maybeWhen = value.maybeWhen(
         langDeu: () => true,
         orElse: () => false,
@@ -47,7 +47,7 @@ void main() {
       expect(maybeWhen, isTrue);
     });
 
-    test("boolean getter should work for non-compile time const", () {
+    test("boolean getter should work for non-compile-time const", () {
       final whenOrNull = nonConst.whenOrNull(langDeu: () => true);
       expect(whenOrNull, isTrue);
     });

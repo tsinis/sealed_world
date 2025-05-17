@@ -43,7 +43,7 @@ const $className()""")
         ..write(";\n")
         ..write(
           /// It's not possible to use a self-referencing data in
-          /// compile time constant constructor :-/.
+          /// compile-time constant constructor :-/.
           package.whenConstOrNull(
                 sealedLanguages: """
   \n@override

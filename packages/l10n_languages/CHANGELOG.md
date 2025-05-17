@@ -1,3 +1,18 @@
+## 1.1.0
+
+NEW FEATURES
+
+- Add formatter callback for custom translation logic.
+
+CHORE
+
+- The Dart SDK was bumped to v3.8.0.
+- Code has been formatted with the new Dart formatter.
+
+DOCUMENTATION
+
+- Improved documentation in README.
+
 ## 1.0.0
 
 🎉 First stable release!

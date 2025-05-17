@@ -10,12 +10,12 @@ void main() {
   var varValue = ScriptAdlm(); // ignore: prefer-type-over-var, it's a test.
 
   group("ScriptBoolGetters", () {
-    test("boolean getter should work for compile time const", () {
+    test("boolean getter should work for compile-time const", () {
       expect(value.isLatn, isFalse);
       expect(value.isAdlm, isTrue);
     });
 
-    test("boolean getter should work for non-compile time const", () {
+    test("boolean getter should work for non-compile-time const", () {
       expect(nonConst.isLatn, isFalse);
       expect(nonConst.isAdlm, isTrue);
     });
@@ -39,7 +39,7 @@ void main() {
   });
 
   group("ScriptFunctional", () {
-    test("boolean getter should work for compile time const", () {
+    test("boolean getter should work for compile-time const", () {
       final maybeWhen = value.maybeWhen(
         scriptAdlm: () => true,
         orElse: () => false,
@@ -47,7 +47,7 @@ void main() {
       expect(maybeWhen, isTrue);
     });
 
-    test("boolean getter should work for non-compile time const", () {
+    test("boolean getter should work for non-compile-time const", () {
       final whenOrNull = nonConst.whenOrNull(scriptAdlm: () => true);
       expect(whenOrNull, isTrue);
     });
