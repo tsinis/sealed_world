@@ -25,7 +25,7 @@ jobs:
           fail: false
 
       - name: 🪄 Spell check
-        uses: check-spelling/check-spelling@v0.0.24
+        uses: check-spelling/check-spelling@v0.0.25
         if: false # TODO? Revert back to ${{ github.repository_owner == 'tsinis' && github.actor == 'tsinis' }} after fix.
         with:
           config: .github/workflows/config/spell-check
