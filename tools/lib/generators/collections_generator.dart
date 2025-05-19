@@ -27,7 +27,8 @@ class CollectionsGenerator {
     );
     final currentImports = _code.readContentUntilFound(currentFilePath);
     final camelCaseType = type.toCamelCase();
-    final buffer = StringBuffer(currentImports)..write("""
+    final buffer = StringBuffer(currentImports)
+      ..write("""
     /// List of all standard [$type] sorted by code.
     const ${camelCaseType}List = [
     """);
@@ -52,8 +53,9 @@ class CollectionsGenerator {
     """);
 
     for (final item in items) {
-      buffer
-          .write('"${item.codeOther.toUpperCase()}": ${item.runtimeType}(),\n');
+      buffer.write(
+        '"${item.codeOther.toUpperCase()}": ${item.runtimeType}(),\n',
+      );
     }
     buffer.write("};\n");
 

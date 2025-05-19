@@ -25,7 +25,7 @@ sealed class WritingSystem implements Named<String> {
   /// The [name] parameter is a non-empty string that represents the name of
   /// the writing system.
   const WritingSystem({required this.name})
-      : assert(name.length > 0, "`name` should not be empty!");
+    : assert(name.length > 0, "`name` should not be empty!");
 
   @override
   final String name;

@@ -14,10 +14,13 @@ class DataListGenerator {
   static const _dart = DartUtils();
 
   Future<void> generate(Package package) async {
-    final currentFileDir =
-        Directory(join(Directory.current.parent.path, package.fullPath));
-    final currentFilePath =
-        join(currentFileDir.path, "data/${package.dataFilePrefix}.data.dart");
+    final currentFileDir = Directory(
+      join(Directory.current.parent.path, package.fullPath),
+    );
+    final currentFilePath = join(
+      currentFileDir.path,
+      "data/${package.dataFilePrefix}.data.dart",
+    );
     final currentImports = _code.readContentUntilFound(currentFilePath);
     final buffer = StringBuffer(currentImports);
     final type = package.type.toString();

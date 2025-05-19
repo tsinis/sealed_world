@@ -165,10 +165,9 @@ class WorldCountry extends Country
   factory WorldCountry.fromCode(
     Object code, [
     Iterable<WorldCountry>? countries,
-  ]) =>
-      countries == null
-          ? codeMap.findByCodeOrThrow(code)
-          : countries.firstIsoWhereCode(code.toUpperCaseIsoCode());
+  ]) => countries == null
+      ? codeMap.findByCodeOrThrow(code)
+      : countries.firstIsoWhereCode(code.toUpperCaseIsoCode());
 
   /// Returns an [WorldCountry] object from the given [codeShort]
   /// ISO 3166-1 Alpha-2 code.
@@ -185,10 +184,9 @@ class WorldCountry extends Country
   factory WorldCountry.fromCodeShort(
     Object codeShort, [
     Iterable<WorldCountry>? countries,
-  ]) =>
-      countries == null
-          ? codeShortMap.findByCodeOrThrow(codeShort)
-          : countries.firstIsoWhereCodeOther(codeShort.toUpperCaseIsoCode());
+  ]) => countries == null
+      ? codeShortMap.findByCodeOrThrow(codeShort)
+      : countries.firstIsoWhereCodeOther(codeShort.toUpperCaseIsoCode());
 
   /// Returns an [WorldCountry] object from the given ISO 3166-1 code.
   ///
@@ -242,14 +240,13 @@ class WorldCountry extends Country
   factory WorldCountry.fromAnyCode(
     Object code, [
     Iterable<WorldCountry>? countries,
-  ]) =>
-      countries == null
-          ? map.findByCodeOrThrow(code)
-          : code.toUpperCaseIsoCode().maybeMapIsoCode(
-            orElse: (regular) => WorldCountry.fromCode(regular, countries),
-            numeric: (numb) => WorldCountry.fromCodeNumeric(numb, countries),
-            short: (short) => WorldCountry.fromCodeShort(short, countries),
-          );
+  ]) => countries == null
+      ? map.findByCodeOrThrow(code)
+      : code.toUpperCaseIsoCode().maybeMapIsoCode(
+          orElse: (regular) => WorldCountry.fromCode(regular, countries),
+          numeric: (numb) => WorldCountry.fromCodeNumeric(numb, countries),
+          short: (short) => WorldCountry.fromCodeShort(short, countries),
+        );
 
   /// The top level domain names for the country.
   final List<String> tld;
@@ -362,31 +359,30 @@ class WorldCountry extends Country
       TypedLocalizationDelegate(mapper: () => CountriesLocaleMapper().localize);
 
   @override
-  String toString({bool short = true}) =>
-      short
-          ? super.toString()
-          : 'WorldCountry(name: $name, tld: ${jsonEncode(tld)}, code: "$code", '
-              'codeNumeric: "$codeNumeric", codeShort: "$codeShort", '
-              '''${cioc == null ? '' : 'cioc: "$cioc", '}independent: $independent, '''
-              "unMember: $unMember, idd: $idd, "
-              "altSpellings: ${jsonEncode(altSpellings)}, "
-              "continent: ${continent.runtimeType}(), "
-              """${subregion == null ? '' : 'subregion: ${subregion.runtimeType}(), '}"""
-              "latLng: $latLng, landlocked: $landlocked, "
-              """${bordersCodes == null ? '' : 'bordersCodes: ${jsonEncode(bordersCodes)}, '}"""
-              'areaMetric: $areaMetric, emoji: "$emoji", maps: $maps, '
-              "population: $population,${gini == null ? ' ' : 'gini: $gini, '}"
-              '${fifa == null ? '' : 'fifa: "$fifa", '}car: $car, '
-              """timezones: ${jsonEncode(timezones)}, hasCoatOfArms: $hasCoatOfArms, """
-              "startOfWeek: $startOfWeek, "
-              "${postalCode == null ? '' : 'postalCode: $postalCode, '});"
-              """${currencies == null ? '' : '@override List<FiatCurrency> get currencies => const ${currencies?.toInstancesString()}; '} """
-              """${capitalInfo == null ? '' : '@override CapitalInfo get capitalInfo => const ${capitalInfo?.toString(short: false)}; '} """
-              """${regionalBlocs == null ? '' : '@override List<RegionalBloc> get regionalBlocs => const ${regionalBlocs?.toInstancesString()}; '} """
-              "@override List<Demonyms> get demonyms => const $demonyms; "
-              """@override List<CountryName> get namesNative => const $namesNative; """
-              "@override "
-              """List<NaturalLanguage> get languages => const ${languages.toInstancesString()}""";
+  String toString({bool short = true}) => short
+      ? super.toString()
+      : 'WorldCountry(name: $name, tld: ${jsonEncode(tld)}, code: "$code", '
+            'codeNumeric: "$codeNumeric", codeShort: "$codeShort", '
+            '''${cioc == null ? '' : 'cioc: "$cioc", '}independent: $independent, '''
+            "unMember: $unMember, idd: $idd, "
+            "altSpellings: ${jsonEncode(altSpellings)}, "
+            "continent: ${continent.runtimeType}(), "
+            """${subregion == null ? '' : 'subregion: ${subregion.runtimeType}(), '}"""
+            "latLng: $latLng, landlocked: $landlocked, "
+            """${bordersCodes == null ? '' : 'bordersCodes: ${jsonEncode(bordersCodes)}, '}"""
+            'areaMetric: $areaMetric, emoji: "$emoji", maps: $maps, '
+            "population: $population,${gini == null ? ' ' : 'gini: $gini, '}"
+            '${fifa == null ? '' : 'fifa: "$fifa", '}car: $car, '
+            """timezones: ${jsonEncode(timezones)}, hasCoatOfArms: $hasCoatOfArms, """
+            "startOfWeek: $startOfWeek, "
+            "${postalCode == null ? '' : 'postalCode: $postalCode, '});"
+            """${currencies == null ? '' : '@override List<FiatCurrency> get currencies => const ${currencies?.toInstancesString()}; '} """
+            """${capitalInfo == null ? '' : '@override CapitalInfo get capitalInfo => const ${capitalInfo?.toString(short: false)}; '} """
+            """${regionalBlocs == null ? '' : '@override List<RegionalBloc> get regionalBlocs => const ${regionalBlocs?.toInstancesString()}; '} """
+            "@override List<Demonyms> get demonyms => const $demonyms; "
+            """@override List<CountryName> get namesNative => const $namesNative; """
+            "@override "
+            """List<NaturalLanguage> get languages => const ${languages.toInstancesString()}""";
 
   @override
   String toJson({JsonCodec codec = const JsonCodec()}) => codec.encode(toMap());
@@ -520,16 +516,14 @@ class WorldCountry extends Country
   static WorldCountry? maybeFromAnyCode(
     Object? code, [
     Iterable<WorldCountry>? countries,
-  ]) =>
-      countries == null
-          ? map.maybeFindByCode(code)
-          : code?.toUpperCaseIsoCode().maybeMapIsoCode(
-            orElse: (regular) => WorldCountry.maybeFromCode(regular, countries),
-            numeric:
-                (numeric) =>
-                    WorldCountry.maybeFromCodeNumeric(numeric, countries),
-            short: (short) => WorldCountry.maybeFromCodeShort(short, countries),
-          );
+  ]) => countries == null
+      ? map.maybeFindByCode(code)
+      : code?.toUpperCaseIsoCode().maybeMapIsoCode(
+          orElse: (regular) => WorldCountry.maybeFromCode(regular, countries),
+          numeric: (numeric) =>
+              WorldCountry.maybeFromCodeNumeric(numeric, countries),
+          short: (short) => WorldCountry.maybeFromCodeShort(short, countries),
+        );
 
   /// The general standard ISO code for countries, defined as ISO 3166-1.
   static const standardGeneralName = "3166-1";

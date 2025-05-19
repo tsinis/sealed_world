@@ -22,11 +22,11 @@ final class _IsoStandardizedTest implements IsoStandardized {
 }
 
 void main() => group("$IsoStandardized", () {
-      const instance = _IsoStandardizedTest(name: "name", code: "code");
-      test("constructor", () => expect(instance.name, "name"));
+  const instance = _IsoStandardizedTest(name: "name", code: "code");
+  test("constructor", () => expect(instance.name, "name"));
 
-      test(
-        "internationalName",
-        () => expect(instance.internationalName, instance.name),
-      );
-    });
+  test(
+    "internationalName",
+    () => expect(instance.internationalName, instance.name),
+  );
+});

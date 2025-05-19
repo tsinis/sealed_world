@@ -35,5 +35,5 @@ class ProgrammingLanguage extends Language {
   String toString({bool short = true}) => short
       ? super.toString()
       : 'ProgrammingLanguage(name: "$name", isCompiled: $isCompiled, '
-          "isLowLevel: $isLowLevel)";
+            "isLowLevel: $isLowLevel)";
 }

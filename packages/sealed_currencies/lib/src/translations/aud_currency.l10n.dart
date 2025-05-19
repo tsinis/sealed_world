@@ -120,11 +120,7 @@ const audCurrencyTranslations = [
   TranslatedName(LangBen(), name: "অস্ট্রেলিয়ান ডলার"),
   TranslatedName(LangBre(), name: "dollar Aostralia"),
   TranslatedName(LangBos(), name: "Australijski dolar"),
-  TranslatedName(
-    LangBos(),
-    name: "Аустралијски долар",
-    script: ScriptCyrl(),
-  ),
+  TranslatedName(LangBos(), name: "Аустралијски долар", script: ScriptCyrl()),
   TranslatedName(LangCat(), name: "dòlar australià"),
   TranslatedName(LangChe(), name: "Австралин доллар"),
   TranslatedName(LangCes(), name: "australský dolar"),

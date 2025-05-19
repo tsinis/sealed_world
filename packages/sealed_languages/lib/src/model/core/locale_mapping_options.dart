@@ -43,7 +43,8 @@ class LocaleMappingOptions<T extends Object> {
   final bool useLanguageFallback;
 
   @override
-  String toString() => 'LocaleMappingOptions(altSymbol: "$altSymbol", '
+  String toString() =>
+      'LocaleMappingOptions(altSymbol: "$altSymbol", '
       '${fallbackLocale == null ? '' : ', fallbackLocale: "$fallbackLocale"'}'
       "localizeFullNames: $localizeFullNames, "
       '${mainLocale == null ? '' : ', mainLocale: "$mainLocale" '}'

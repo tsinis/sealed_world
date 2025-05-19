@@ -45,10 +45,9 @@ class _MainPageState extends State<MainPage>
   // ignore: avoid-returning-widgets, it's just shorthand in the example app.
   BasicPicker get _picker => widget._mapPickers(_controller.currentData);
 
-  FutureOr<void> _handleFab({bool isLong = false}) =>
-      isLong
-          ? _picker.showInDialog(context)
-          : _picker.showInModalBottomSheet(context);
+  FutureOr<void> _handleFab({bool isLong = false}) => isLong
+      ? _picker.showInDialog(context)
+      : _picker.showInModalBottomSheet(context);
 
   FutureOr<void> _handleAppBarSearch() => _picker.showInSearch(context);
 
@@ -83,17 +82,13 @@ class _MainPageState extends State<MainPage>
           SearchAnchor(
             isFullScreen: false,
             viewConstraints: const BoxConstraints(minWidth: 220, maxWidth: 320),
-            builder:
-                (_, controller) => GestureDetector(
-                  onLongPress: _handleAppBarSearch,
-                  child: IconButton(
-                    onPressed: controller.openView,
-                    icon: const Icon(
-                      Icons.search,
-                      semanticLabel: "search_icon",
-                    ),
-                  ),
-                ),
+            builder: (_, controller) => GestureDetector(
+              onLongPress: _handleAppBarSearch,
+              child: IconButton(
+                onPressed: controller.openView,
+                icon: const Icon(Icons.search, semanticLabel: "search_icon"),
+              ),
+            ),
             suggestionsBuilder: _handleAnchor,
           ),
           const MenuButton(),
@@ -106,34 +101,29 @@ class _MainPageState extends State<MainPage>
         ),
         centerTitle: false,
       ),
-      body:
-          kProfileMode
-              ? null
-              : DecoratedBox(
-                decoration: FunctionalPlatform.maybeWhenConst(
-                  orElse: BoxDecoration(
-                    image: DecorationImage(
-                      image: Assets.images.background.provider(),
-                      fit: BoxFit.cover,
-                    ),
+      body: kProfileMode
+          ? null
+          : DecoratedBox(
+              decoration: FunctionalPlatform.maybeWhenConst(
+                orElse: BoxDecoration(
+                  image: DecorationImage(
+                    image: Assets.images.background.provider(),
+                    fit: BoxFit.cover,
                   ),
-                  web: const BoxDecoration(),
                 ),
-                child: Align(
-                  alignment: Alignment.topCenter,
-                  child: SizedBox(
-                    width: 300,
-                    child: TabBarView(
-                      controller: _controller,
-                      children: [
-                        widget._country,
-                        widget._currency,
-                        widget._lang,
-                      ],
-                    ),
+                web: const BoxDecoration(),
+              ),
+              child: Align(
+                alignment: Alignment.topCenter,
+                child: SizedBox(
+                  width: 300,
+                  child: TabBarView(
+                    controller: _controller,
+                    children: [widget._country, widget._currency, widget._lang],
                   ),
                 ),
               ),
+            ),
       floatingActionButton: FloatingButton(_controller, onPressed: _handleFab),
       backgroundColor: context.theme.colorScheme.surfaceContainerHighest,
     ),

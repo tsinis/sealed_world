@@ -24,7 +24,8 @@ class BoolGettersGenerator {
       "model/${package.dataRepresent.toLowerCase()}/submodels/${type.toSnakeCase()}.g.dart",
     );
     final currentImports = _code.readContentUntilFound(currentFilePath);
-    final buffer = StringBuffer(currentImports)..write("""
+    final buffer = StringBuffer(currentImports)
+      ..write("""
     extension ${type}BoolGetters on $type? {
     """);
 

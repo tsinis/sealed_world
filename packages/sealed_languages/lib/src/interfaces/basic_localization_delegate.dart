@@ -15,8 +15,10 @@ import "iso_standardized.dart";
 /// Type parameters:
 /// - [L]: Type of locale extending [BasicLocale].
 /// - [T]: Type of translated name extending [TranslatedName].
-abstract class BasicLocalizationDelegate<L extends BasicLocale,
-    T extends TranslatedName> {
+abstract class BasicLocalizationDelegate<
+  L extends BasicLocale,
+  T extends TranslatedName
+> {
   /// Creates a [BasicLocalizationDelegate] instance.
   ///
   /// Parameters:
@@ -73,8 +75,11 @@ abstract class BasicLocalizationDelegate<L extends BasicLocale,
   /// Gets the compiled regular expression for parsing locale identifiers.
   ///
   /// Returns a case-insensitive [RegExp] with Unicode support.
-  static final localePattern =
-      RegExp(unicodeLocale, caseSensitive: false, unicode: true);
+  static final localePattern = RegExp(
+    unicodeLocale,
+    caseSensitive: false,
+    unicode: true,
+  );
 
   /// Parses a locale identifier string into a locale object.
   ///
@@ -148,12 +153,12 @@ abstract class BasicLocalizationDelegate<L extends BasicLocale,
     LocaleMappingOptions<L> options,
   ) =>
       mapper?.call().call(
-            isoCodes.map((iso) => iso.code).toSet(),
-            altSymbol: options.localizeFullNames ? null : "",
-            fallbackLocale: options.fallbackLocale?.toUnicodeLocaleId(),
-            mainLocale: options.mainLocale?.toUnicodeLocaleId(),
-            useLanguageFallback: options.useLanguageFallback,
-          ) ??
+        isoCodes.map((iso) => iso.code).toSet(),
+        altSymbol: options.localizeFullNames ? null : "",
+        fallbackLocale: options.fallbackLocale?.toUnicodeLocaleId(),
+        mainLocale: options.mainLocale?.toUnicodeLocaleId(),
+        useLanguageFallback: options.useLanguageFallback,
+      ) ??
       const {};
 
   T? _maybeToTranslatedName(

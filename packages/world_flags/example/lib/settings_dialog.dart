@@ -48,81 +48,71 @@ class _SettingsDialogState extends State<SettingsDialog> {
       padding: const EdgeInsets.all(16),
       child: ValueListenableBuilder(
         valueListenable: widget.aspectRatio,
-        builder:
-            (_, ratio, _) => ValueListenableBuilder(
-              valueListenable: _opacity,
-              builder:
-                  (bc, opacityValue, flag) => Scaffold(
-                    appBar: AppBar(
-                      leading: const SizedBox.shrink(),
-                      actions: [
-                        IconButton(
-                          icon: const Text(
-                            "✕", // ignore: avoid-non-ascii-symbols, it's example.
-                            style: TextStyle(
-                              fontSize: 20,
-                              fontWeight: FontWeight.bold,
-                            ),
-                          ),
-                          onPressed: Navigator.of(bc).pop,
-                        ),
-                      ],
-                      title: SelectableText(
-                        "${_country.internationalName} (${_country.code}) "
-                        "Settings",
-                        textAlign: TextAlign.center,
-                      ),
+        builder: (_, ratio, _) => ValueListenableBuilder(
+          valueListenable: _opacity,
+          builder: (bc, opacityValue, flag) => Scaffold(
+            appBar: AppBar(
+              leading: const SizedBox.shrink(),
+              actions: [
+                IconButton(
+                  icon: const Text(
+                    "✕", // ignore: avoid-non-ascii-symbols, it's example.
+                    style: TextStyle(fontSize: 20, fontWeight: FontWeight.bold),
+                  ),
+                  onPressed: Navigator.of(bc).pop,
+                ),
+              ],
+              title: SelectableText(
+                "${_country.internationalName} (${_country.code}) "
+                "Settings",
+                textAlign: TextAlign.center,
+              ),
+            ),
+            body: Center(
+              child: DecoratedBox(
+                decoration: BoxDecoration(
+                  image: DecorationImage(
+                    image: NetworkImage(_country.flagPngUrl(), scale: 0.1),
+                  ),
+                ),
+                child: Opacity(opacity: opacityValue, child: flag),
+              ),
+            ),
+            bottomNavigationBar: SliderTheme(
+              data: SliderTheme.of(bc).copyWith(year2023: false),
+              child: Column(
+                mainAxisSize: MainAxisSize.min,
+                children: [
+                  ListTile(
+                    title: Text(
+                      """${ratio == null ? "(Original) " : ""}Aspect Ratio:""",
                     ),
-                    body: Center(
-                      child: DecoratedBox(
-                        decoration: BoxDecoration(
-                          image: DecorationImage(
-                            image: NetworkImage(
-                              _country.flagPngUrl(),
-                              scale: 0.1,
-                            ),
-                          ),
-                        ),
-                        child: Opacity(opacity: opacityValue, child: flag),
-                      ),
-                    ),
-                    bottomNavigationBar: SliderTheme(
-                      data: SliderTheme.of(bc).copyWith(year2023: false),
-                      child: Column(
-                        mainAxisSize: MainAxisSize.min,
-                        children: [
-                          ListTile(
-                            title: Text(
-                              """${ratio == null ? "(Original) " : ""}Aspect Ratio:""",
-                            ),
-                            subtitle: Slider(
-                              value:
-                                  ratio ??
-                                  _country.flagProperties?.aspectRatio ??
-                                  FlagConstants.minAspectRatio,
-                              onChanged:
-                                  (newRatio) =>
-                                      widget.aspectRatio.value = newRatio,
-                              min: FlagConstants.minAspectRatio,
-                              max: FlagConstants.maxAspectRatio,
-                            ),
-                          ),
-                          ListTile(
-                            title: const Text("Opacity:"),
-                            subtitle: Slider(
-                              value: opacityValue,
-                              onChanged:
-                                  (newOpacity) => _opacity.value = newOpacity,
-                              divisions: 10,
-                              label: _opacityLabel,
-                            ),
-                          ),
-                        ],
-                      ),
+                    subtitle: Slider(
+                      value:
+                          ratio ??
+                          _country.flagProperties?.aspectRatio ??
+                          FlagConstants.minAspectRatio,
+                      onChanged: (newRatio) =>
+                          widget.aspectRatio.value = newRatio,
+                      min: FlagConstants.minAspectRatio,
+                      max: FlagConstants.maxAspectRatio,
                     ),
                   ),
-              child: CountryFlag.simplified(_country, aspectRatio: ratio),
+                  ListTile(
+                    title: const Text("Opacity:"),
+                    subtitle: Slider(
+                      value: opacityValue,
+                      onChanged: (newOpacity) => _opacity.value = newOpacity,
+                      divisions: 10,
+                      label: _opacityLabel,
+                    ),
+                  ),
+                ],
+              ),
             ),
+          ),
+          child: CountryFlag.simplified(_country, aspectRatio: ratio),
+        ),
       ),
     ),
   );

@@ -27,12 +27,9 @@ mixin PropertiesConvertibleMixin<T extends Object>
     BuildContext context,
     int index,
   ) {
-    final sortedItems =
-        sort == null
-            ? filtered
-            : List<T>.unmodifiable(
-              filtered.toList(growable: false)..sort(sort),
-            );
+    final sortedItems = sort == null
+        ? filtered
+        : List<T>.unmodifiable(filtered.toList(growable: false)..sort(sort));
     final item = sortedItems.elementAt(index);
     final isChosen = chosen?.contains(item) ?? false;
     final isDisabled = disabled?.contains(item) ?? false;

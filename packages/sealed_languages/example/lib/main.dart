@@ -59,8 +59,9 @@ void main() {
     maybeCzech?.maybeCommonNameFor(const BasicLocale(LangPor())),
   ); // Prints "tcheco".
   print(
-    maybeCzech
-        ?.maybeCommonNameFor(const BasicLocale(LangPor(), countryCode: "PT")),
+    maybeCzech?.maybeCommonNameFor(
+      const BasicLocale(LangPor(), countryCode: "PT"),
+    ),
   ); // Prints "checo".
 
   // Distinguishes script in translations.
@@ -68,8 +69,9 @@ void main() {
     maybeCzech?.commonNameFor(const BasicLocale(LangSrp())),
   ); // Prints "чешки".
   print(
-    maybeCzech
-        ?.commonNameFor(const BasicLocale(LangSrp(), script: ScriptLatn())),
+    maybeCzech?.commonNameFor(
+      const BasicLocale(LangSrp(), script: ScriptLatn()),
+    ),
   ); // Prints "češki".
 
   const customLang = _LangCustom();
@@ -86,13 +88,13 @@ class _LangCustom extends NaturalLanguage {
 
   @override
   LocalizationDelegate get l10n => super.l10n.copyWith(
-        mapper: () => LanguagesLocaleMapper(
-          other: {
-            /// From the `l10n_languages` package.
-            "en": IsoLocaleMapper(
-              other: {code: "$name lang", "$code+": "$name rich language name"},
-            ),
-          },
-        ).localize,
-      );
+    mapper: () => LanguagesLocaleMapper(
+      other: {
+        /// From the `l10n_languages` package.
+        "en": IsoLocaleMapper(
+          other: {code: "$name lang", "$code+": "$name rich language name"},
+        ),
+      },
+    ).localize,
+  );
 }

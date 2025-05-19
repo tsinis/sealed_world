@@ -116,21 +116,20 @@ class CountryTile extends ListItemTile<WorldCountry> {
            child:
                leading ??
                Builder(
-                 builder:
-                     (context) => CountryFlag.simplified(
-                       country.item,
-                       height: context.flagTheme?.height ?? leadingFlagHeight,
-                       aspectRatio:
-                           context.flagTheme?.aspectRatio ??
-                           FlagConstants.defaultAspectRatio,
-                       decoration:
-                           context.flagTheme?.decoration ??
-                           const BoxDecoration(
-                             borderRadius: BorderRadius.all(
-                               Radius.circular(UiConstants.point / 2),
-                             ),
-                           ),
-                     ),
+                 builder: (context) => CountryFlag.simplified(
+                   country.item,
+                   height: context.flagTheme?.height ?? leadingFlagHeight,
+                   aspectRatio:
+                       context.flagTheme?.aspectRatio ??
+                       FlagConstants.defaultAspectRatio,
+                   decoration:
+                       context.flagTheme?.decoration ??
+                       const BoxDecoration(
+                         borderRadius: BorderRadius.all(
+                           Radius.circular(UiConstants.point / 2),
+                         ),
+                       ),
+                 ),
                ),
          ),
          subtitle: subtitle ?? Text(country.item.namesNative.first.common),
@@ -194,19 +193,18 @@ class CountryTile extends ListItemTile<WorldCountry> {
          leading:
              leading ??
              Builder(
-               builder:
-                   (context) => CountryFlag.simplified(
-                     country.item,
-                     height: context.flagTheme?.height ?? leadingFlagHeight,
-                     aspectRatio:
-                         context.flagTheme?.aspectRatio ??
-                         FlagConstants.defaultAspectRatio,
-                     decoration:
-                         context.flagTheme?.decoration ??
-                         const BoxDecoration(
-                           borderRadius: BorderRadius.all(Radius.circular(3)),
-                         ),
-                   ),
+               builder: (context) => CountryFlag.simplified(
+                 country.item,
+                 height: context.flagTheme?.height ?? leadingFlagHeight,
+                 aspectRatio:
+                     context.flagTheme?.aspectRatio ??
+                     FlagConstants.defaultAspectRatio,
+                 decoration:
+                     context.flagTheme?.decoration ??
+                     const BoxDecoration(
+                       borderRadius: BorderRadius.all(Radius.circular(3)),
+                     ),
+               ),
              ),
        );
 }

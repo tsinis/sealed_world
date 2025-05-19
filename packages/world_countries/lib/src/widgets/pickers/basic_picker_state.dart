@@ -26,19 +26,18 @@ class _BasicPickerState<T extends IsoTranslated> extends State<BasicPicker<T>> {
   Widget build(BuildContext context) {
     final theme = context.pickersTheme;
     final maybeSearchBar = widget.searchBar ?? theme?.searchBar;
-    final adaptiveTextField =
-        (widget.showHeader ?? theme?.showHeader ?? true)
-            ? AdaptiveSearchTextField(
-              _controller,
-              copyFrom: maybeSearchBar,
-              padding:
-                  widget.searchBarPadding ??
-                  theme?.searchBarPadding ??
-                  UiConstants.padding,
-              showClearButton:
-                  widget.showClearButton ?? theme?.showClearButton ?? true,
-            )
-            : null;
+    final adaptiveTextField = (widget.showHeader ?? theme?.showHeader ?? true)
+        ? AdaptiveSearchTextField(
+            _controller,
+            copyFrom: maybeSearchBar,
+            padding:
+                widget.searchBarPadding ??
+                theme?.searchBarPadding ??
+                UiConstants.padding,
+            showClearButton:
+                widget.showClearButton ?? theme?.showClearButton ?? true,
+          )
+        : null;
 
     return SearchableIndexedListViewBuilder<T>(
       widget.items,
@@ -61,16 +60,14 @@ class _BasicPickerState<T extends IsoTranslated> extends State<BasicPicker<T>> {
           theme?.dragStartBehavior ??
           DragStartBehavior.start,
       emptyStatePlaceholder: widget.emptyStatePlaceholder,
-      header:
-          adaptiveTextField == null
-              ? null
-              : maybeSearchBar == null
-              ? (widget.header ?? theme?.header ?? adaptiveTextField)
-              : adaptiveTextField,
-      itemBuilder:
-          (itemProperties, {isDense}) =>
-              widget.itemBuilder?.call(itemProperties, isDense: isDense) ??
-              widget.defaultBuilder(context, itemProperties, isDense: isDense),
+      header: adaptiveTextField == null
+          ? null
+          : maybeSearchBar == null
+          ? (widget.header ?? theme?.header ?? adaptiveTextField)
+          : adaptiveTextField,
+      itemBuilder: (itemProperties, {isDense}) =>
+          widget.itemBuilder?.call(itemProperties, isDense: isDense) ??
+          widget.defaultBuilder(context, itemProperties, isDense: isDense),
       keyboardDismissBehavior:
           widget.keyboardDismissBehavior ??
           theme?.keyboardDismissBehavior ??

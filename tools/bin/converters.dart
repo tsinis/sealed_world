@@ -25,7 +25,8 @@ void main(List<String> args) {
       if (language == null) return;
 
       final phpContent = file.readAsStringSync();
-      final translations = package.whenOrNull(
+      final translations =
+          package.whenOrNull(
             sealedCurrencies: () =>
                 PhpConverter.extractL10nFromLists(phpContent),
           ) ??

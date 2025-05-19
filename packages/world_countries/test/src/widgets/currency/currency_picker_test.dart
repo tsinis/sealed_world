@@ -35,9 +35,8 @@ void main() => group("$CurrencyPicker", () {
       const CurrencyPicker(),
       (item) => item.translations.first.common,
       theme: CurrencyTileThemeData(
-        builder:
-            (properties, {isDense}) =>
-                Text(properties.item.translations.first.common),
+        builder: (properties, {isDense}) =>
+            Text(properties.item.translations.first.common),
       ),
     ),
   );

@@ -24,24 +24,20 @@ abstract base class WorldDataTab<
     super.key,
   }) : picker = dataPicker.copyWith(
          chosen: [data],
-         onSearchResultsBuilder:
-             (query, map) =>
-                 query.isNotEmpty
-                     ? extractAllSorted(
-                       choices: map.entries.toList(growable: false),
-                       getter: (iso) => iso.value.first,
-                       query: query,
-                       cutoff: 50,
-                     ).map((result) => result.choice.key)
-                     : items,
+         onSearchResultsBuilder: (query, map) => query.isNotEmpty
+             ? extractAllSorted(
+                 choices: map.entries.toList(growable: false),
+                 getter: (iso) => iso.value.first,
+                 query: query,
+                 cutoff: 50,
+               ).map((result) => result.choice.key)
+             : items,
          disabled: items.isNotEmpty ? [items.first] : null,
-         onSelect:
-             (i) =>
-                 data != i && nav != null
-                     ? unawaited(
-                       nav(type.path + Constants.slash + i.code.toLowerCase()),
-                     )
-                     : null,
+         onSelect: (i) => data != i && nav != null
+             ? unawaited(
+                 nav(type.path + Constants.slash + i.code.toLowerCase()),
+               )
+             : null,
        );
 
   @protected

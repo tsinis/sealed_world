@@ -63,12 +63,11 @@ class RegionalBloc extends WorldBloc {
   String get acronym => super.acronym!;
 
   @override
-  String toString({bool short = true}) =>
-      short
-          ? super.toString()
-          : 'RegionalBloc(acronym: "$acronym", name: "$name", '
-              "otherAcronyms: ${jsonEncode(otherAcronyms)}, "
-              "otherNames: ${jsonEncode(otherNames)})";
+  String toString({bool short = true}) => short
+      ? super.toString()
+      : 'RegionalBloc(acronym: "$acronym", name: "$name", '
+            "otherAcronyms: ${jsonEncode(otherAcronyms)}, "
+            "otherNames: ${jsonEncode(otherNames)})";
 
   /// Creates a new [RegionalBloc] object from its acronym.
   ///

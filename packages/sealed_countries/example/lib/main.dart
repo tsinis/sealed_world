@@ -63,18 +63,13 @@ class _CountryCustom extends WorldCountry {
 
   @override
   TypedLocalizationDelegate get l10n => super.l10n.copyWith(
-    mapper:
-        () =>
-            CountriesLocaleMapper(
-              other: {
-                /// From the `l10n_countries` package.
-                "en": IsoLocaleMapper(
-                  other: {
-                    code: "Unknown country",
-                    "$code+": "Unknown rich name",
-                  },
-                ),
-              },
-            ).localize,
+    mapper: () => CountriesLocaleMapper(
+      other: {
+        /// From the `l10n_countries` package.
+        "en": IsoLocaleMapper(
+          other: {code: "Unknown country", "$code+": "Unknown rich name"},
+        ),
+      },
+    ).localize,
   );
 }

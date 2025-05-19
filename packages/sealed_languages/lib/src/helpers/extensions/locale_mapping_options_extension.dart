@@ -23,12 +23,11 @@ extension LocaleMappingOptionsExtension<T extends Object>
     bool? localizeFullNames,
     T? mainLocale,
     bool? useLanguageFallback,
-  }) =>
-      LocaleMappingOptions<T>(
-        altSymbol: altSymbol ?? this.altSymbol,
-        fallbackLocale: fallbackLocale ?? this.fallbackLocale,
-        localizeFullNames: localizeFullNames ?? this.localizeFullNames,
-        mainLocale: mainLocale ?? this.mainLocale,
-        useLanguageFallback: useLanguageFallback ?? this.useLanguageFallback,
-      );
+  }) => LocaleMappingOptions<T>(
+    altSymbol: altSymbol ?? this.altSymbol,
+    fallbackLocale: fallbackLocale ?? this.fallbackLocale,
+    localizeFullNames: localizeFullNames ?? this.localizeFullNames,
+    mainLocale: mainLocale ?? this.mainLocale,
+    useLanguageFallback: useLanguageFallback ?? this.useLanguageFallback,
+  );
 }

@@ -8,13 +8,13 @@ class LangAar extends NaturalLanguage {
   ///
   /// ISO 639-2/T code: `AAR`, ISO 639-1 code: `AA`.
   const LangAar()
-      : super(
-          name: "Afar",
-          code: "AAR",
-          codeShort: "AA",
-          namesNative: const ["Afaraf"],
-          family: const AfroAsiatic(),
-        );
+    : super(
+        name: "Afar",
+        code: "AAR",
+        codeShort: "AA",
+        namesNative: const ["Afaraf"],
+        family: const AfroAsiatic(),
+      );
 }
 
 /// A class that represents the Abkhaz language.
@@ -23,14 +23,14 @@ class LangAbk extends NaturalLanguage {
   ///
   /// ISO 639-2/T code: `ABK`, ISO 639-1 code: `AB`.
   const LangAbk()
-      : super(
-          name: "Abkhaz",
-          code: "ABK",
-          codeShort: "AB",
-          namesNative: const ["аҧсуа бызшәа", "аҧсшәа"],
-          family: const NorthwestCaucasian(),
-          scripts: const {ScriptCyrl()},
-        );
+    : super(
+        name: "Abkhaz",
+        code: "ABK",
+        codeShort: "AB",
+        namesNative: const ["аҧсуа бызшәа", "аҧсшәа"],
+        family: const NorthwestCaucasian(),
+        scripts: const {ScriptCyrl()},
+      );
 }
 
 /// A class that represents the Afrikaans language.
@@ -39,13 +39,13 @@ class LangAfr extends NaturalLanguage {
   ///
   /// ISO 639-2/T code: `AFR`, ISO 639-1 code: `AF`.
   const LangAfr()
-      : super(
-          name: "Afrikaans",
-          code: "AFR",
-          codeShort: "AF",
-          namesNative: const ["Afrikaans"],
-          family: const IndoEuropean(),
-        );
+    : super(
+        name: "Afrikaans",
+        code: "AFR",
+        codeShort: "AF",
+        namesNative: const ["Afrikaans"],
+        family: const IndoEuropean(),
+      );
 }
 
 /// A class that represents the Akan language.
@@ -54,13 +54,13 @@ class LangAka extends NaturalLanguage {
   ///
   /// ISO 639-2/T code: `AKA`, ISO 639-1 code: `AK`.
   const LangAka()
-      : super(
-          name: "Akan",
-          code: "AKA",
-          codeShort: "AK",
-          namesNative: const ["Akan"],
-          family: const NigerCongo(),
-        );
+    : super(
+        name: "Akan",
+        code: "AKA",
+        codeShort: "AK",
+        namesNative: const ["Akan"],
+        family: const NigerCongo(),
+      );
 }
 
 /// A class that represents the Amharic language.
@@ -69,14 +69,14 @@ class LangAmh extends NaturalLanguage {
   ///
   /// ISO 639-2/T code: `AMH`, ISO 639-1 code: `AM`.
   const LangAmh()
-      : super(
-          name: "Amharic",
-          code: "AMH",
-          codeShort: "AM",
-          namesNative: const ["አማርኛ"],
-          family: const AfroAsiatic(),
-          scripts: const {ScriptEthi()},
-        );
+    : super(
+        name: "Amharic",
+        code: "AMH",
+        codeShort: "AM",
+        namesNative: const ["አማርኛ"],
+        family: const AfroAsiatic(),
+        scripts: const {ScriptEthi()},
+      );
 }
 
 /// A class that represents the Arabic language.
@@ -85,15 +85,15 @@ class LangAra extends NaturalLanguage {
   ///
   /// ISO 639-2/T code: `ARA`, ISO 639-1 code: `AR`.
   const LangAra()
-      : super(
-          name: "Arabic",
-          code: "ARA",
-          codeShort: "AR",
-          namesNative: const ["العربية"],
-          family: const AfroAsiatic(),
-          isRightToLeft: true,
-          scripts: const {ScriptArab()},
-        );
+    : super(
+        name: "Arabic",
+        code: "ARA",
+        codeShort: "AR",
+        namesNative: const ["العربية"],
+        family: const AfroAsiatic(),
+        isRightToLeft: true,
+        scripts: const {ScriptArab()},
+      );
 }
 
 /// A class that represents the Aragonese language.
@@ -102,13 +102,13 @@ class LangArg extends NaturalLanguage {
   ///
   /// ISO 639-2/T code: `ARG`, ISO 639-1 code: `AN`.
   const LangArg()
-      : super(
-          name: "Aragonese",
-          code: "ARG",
-          codeShort: "AN",
-          namesNative: const ["aragonés"],
-          family: const IndoEuropean(),
-        );
+    : super(
+        name: "Aragonese",
+        code: "ARG",
+        codeShort: "AN",
+        namesNative: const ["aragonés"],
+        family: const IndoEuropean(),
+      );
 }
 
 /// A class that represents the Assamese language.
@@ -117,14 +117,14 @@ class LangAsm extends NaturalLanguage {
   ///
   /// ISO 639-2/T code: `ASM`, ISO 639-1 code: `AS`.
   const LangAsm()
-      : super(
-          name: "Assamese",
-          code: "ASM",
-          codeShort: "AS",
-          namesNative: const ["অসমীয়া"],
-          family: const IndoEuropean(),
-          scripts: const {ScriptBeng()},
-        );
+    : super(
+        name: "Assamese",
+        code: "ASM",
+        codeShort: "AS",
+        namesNative: const ["অসমীয়া"],
+        family: const IndoEuropean(),
+        scripts: const {ScriptBeng()},
+      );
 }
 
 /// A class that represents the Avaric language.
@@ -133,14 +133,14 @@ class LangAva extends NaturalLanguage {
   ///
   /// ISO 639-2/T code: `AVA`, ISO 639-1 code: `AV`.
   const LangAva()
-      : super(
-          name: "Avaric",
-          code: "AVA",
-          codeShort: "AV",
-          namesNative: const ["авар мацӀ", "магӀарул мацӀ"],
-          family: const NortheastCaucasian(),
-          scripts: const {ScriptCyrl()},
-        );
+    : super(
+        name: "Avaric",
+        code: "AVA",
+        codeShort: "AV",
+        namesNative: const ["авар мацӀ", "магӀарул мацӀ"],
+        family: const NortheastCaucasian(),
+        scripts: const {ScriptCyrl()},
+      );
 }
 
 /// A class that represents the Avestan language.
@@ -149,14 +149,14 @@ class LangAve extends NaturalLanguage {
   ///
   /// ISO 639-2/T code: `AVE`, ISO 639-1 code: `AE`.
   const LangAve()
-      : super(
-          name: "Avestan",
-          code: "AVE",
-          codeShort: "AE",
-          namesNative: const ["avesta"],
-          family: const IndoEuropean(),
-          scripts: const {ScriptAvst()},
-        );
+    : super(
+        name: "Avestan",
+        code: "AVE",
+        codeShort: "AE",
+        namesNative: const ["avesta"],
+        family: const IndoEuropean(),
+        scripts: const {ScriptAvst()},
+      );
 }
 
 /// A class that represents the Aymara language.
@@ -165,13 +165,13 @@ class LangAym extends NaturalLanguage {
   ///
   /// ISO 639-2/T code: `AYM`, ISO 639-1 code: `AY`.
   const LangAym()
-      : super(
-          name: "Aymara",
-          code: "AYM",
-          codeShort: "AY",
-          namesNative: const ["aymar aru"],
-          family: const Aymaran(),
-        );
+    : super(
+        name: "Aymara",
+        code: "AYM",
+        codeShort: "AY",
+        namesNative: const ["aymar aru"],
+        family: const Aymaran(),
+      );
 }
 
 /// A class that represents the Azerbaijani language.
@@ -180,14 +180,14 @@ class LangAze extends NaturalLanguage {
   ///
   /// ISO 639-2/T code: `AZE`, ISO 639-1 code: `AZ`.
   const LangAze()
-      : super(
-          name: "Azerbaijani",
-          code: "AZE",
-          codeShort: "AZ",
-          namesNative: const ["azərbaycan dili"],
-          family: const Turkic(),
-          scripts: const {ScriptArab(), ScriptLatn(), ScriptCyrl()},
-        );
+    : super(
+        name: "Azerbaijani",
+        code: "AZE",
+        codeShort: "AZ",
+        namesNative: const ["azərbaycan dili"],
+        family: const Turkic(),
+        scripts: const {ScriptArab(), ScriptLatn(), ScriptCyrl()},
+      );
 }
 
 /// A class that represents the Bashkir language.
@@ -196,14 +196,14 @@ class LangBak extends NaturalLanguage {
   ///
   /// ISO 639-2/T code: `BAK`, ISO 639-1 code: `BA`.
   const LangBak()
-      : super(
-          name: "Bashkir",
-          code: "BAK",
-          codeShort: "BA",
-          namesNative: const ["башҡорт теле"],
-          family: const Turkic(),
-          scripts: const {ScriptCyrl()},
-        );
+    : super(
+        name: "Bashkir",
+        code: "BAK",
+        codeShort: "BA",
+        namesNative: const ["башҡорт теле"],
+        family: const Turkic(),
+        scripts: const {ScriptCyrl()},
+      );
 }
 
 /// A class that represents the Bambara language.
@@ -212,13 +212,13 @@ class LangBam extends NaturalLanguage {
   ///
   /// ISO 639-2/T code: `BAM`, ISO 639-1 code: `BM`.
   const LangBam()
-      : super(
-          name: "Bambara",
-          code: "BAM",
-          codeShort: "BM",
-          namesNative: const ["bamanankan"],
-          family: const NigerCongo(),
-        );
+    : super(
+        name: "Bambara",
+        code: "BAM",
+        codeShort: "BM",
+        namesNative: const ["bamanankan"],
+        family: const NigerCongo(),
+      );
 }
 
 /// A class that represents the Belarusian language.
@@ -227,14 +227,14 @@ class LangBel extends NaturalLanguage {
   ///
   /// ISO 639-2/T code: `BEL`, ISO 639-1 code: `BE`.
   const LangBel()
-      : super(
-          name: "Belarusian",
-          code: "BEL",
-          codeShort: "BE",
-          namesNative: const ["беларуская мова"],
-          family: const IndoEuropean(),
-          scripts: const {ScriptCyrl()},
-        );
+    : super(
+        name: "Belarusian",
+        code: "BEL",
+        codeShort: "BE",
+        namesNative: const ["беларуская мова"],
+        family: const IndoEuropean(),
+        scripts: const {ScriptCyrl()},
+      );
 }
 
 /// A class that represents the Bengali (Bangla) language.
@@ -243,14 +243,14 @@ class LangBen extends NaturalLanguage {
   ///
   /// ISO 639-2/T code: `BEN`, ISO 639-1 code: `BN`.
   const LangBen()
-      : super(
-          name: "Bengali (Bangla)",
-          code: "BEN",
-          codeShort: "BN",
-          namesNative: const ["বাংলা"],
-          family: const IndoEuropean(),
-          scripts: const {ScriptBeng()},
-        );
+    : super(
+        name: "Bengali (Bangla)",
+        code: "BEN",
+        codeShort: "BN",
+        namesNative: const ["বাংলা"],
+        family: const IndoEuropean(),
+        scripts: const {ScriptBeng()},
+      );
 }
 
 /// A class that represents the Bihari language.
@@ -259,14 +259,14 @@ class LangBih extends NaturalLanguage {
   ///
   /// ISO 639-2/T code: `BIH`, ISO 639-1 code: `BH`.
   const LangBih()
-      : super(
-          name: "Bihari",
-          code: "BIH",
-          codeShort: "BH",
-          namesNative: const ["भोजपुरी"],
-          family: const IndoEuropean(),
-          scripts: const {ScriptDeva(), ScriptBhks()},
-        );
+    : super(
+        name: "Bihari",
+        code: "BIH",
+        codeShort: "BH",
+        namesNative: const ["भोजपुरी"],
+        family: const IndoEuropean(),
+        scripts: const {ScriptDeva(), ScriptBhks()},
+      );
 }
 
 /// A class that represents the Bislama language.
@@ -275,13 +275,13 @@ class LangBis extends NaturalLanguage {
   ///
   /// ISO 639-2/T code: `BIS`, ISO 639-1 code: `BI`.
   const LangBis()
-      : super(
-          name: "Bislama",
-          code: "BIS",
-          codeShort: "BI",
-          namesNative: const ["Bislama"],
-          family: const Creole(),
-        );
+    : super(
+        name: "Bislama",
+        code: "BIS",
+        codeShort: "BI",
+        namesNative: const ["Bislama"],
+        family: const Creole(),
+      );
 }
 
 /// A class that represents the Tibetan Standard language.
@@ -290,15 +290,15 @@ class LangBod extends NaturalLanguage {
   ///
   /// ISO 639-2/T code: `BOD`, ISO 639-1 code: `BO`.
   const LangBod()
-      : super(
-          name: "Tibetan Standard",
-          code: "BOD",
-          codeShort: "BO",
-          namesNative: const ["བོད་ཡིག"],
-          bibliographicCode: "TIB",
-          family: const SinoTibetan(),
-          scripts: const {ScriptTibt()},
-        );
+    : super(
+        name: "Tibetan Standard",
+        code: "BOD",
+        codeShort: "BO",
+        namesNative: const ["བོད་ཡིག"],
+        bibliographicCode: "TIB",
+        family: const SinoTibetan(),
+        scripts: const {ScriptTibt()},
+      );
 }
 
 /// A class that represents the Bosnian language.
@@ -307,14 +307,14 @@ class LangBos extends NaturalLanguage {
   ///
   /// ISO 639-2/T code: `BOS`, ISO 639-1 code: `BS`.
   const LangBos()
-      : super(
-          name: "Bosnian",
-          code: "BOS",
-          codeShort: "BS",
-          namesNative: const ["bosanski jezik"],
-          family: const IndoEuropean(),
-          scripts: const {ScriptLatn(), ScriptCyrl()},
-        );
+    : super(
+        name: "Bosnian",
+        code: "BOS",
+        codeShort: "BS",
+        namesNative: const ["bosanski jezik"],
+        family: const IndoEuropean(),
+        scripts: const {ScriptLatn(), ScriptCyrl()},
+      );
 }
 
 /// A class that represents the Breton language.
@@ -323,13 +323,13 @@ class LangBre extends NaturalLanguage {
   ///
   /// ISO 639-2/T code: `BRE`, ISO 639-1 code: `BR`.
   const LangBre()
-      : super(
-          name: "Breton",
-          code: "BRE",
-          codeShort: "BR",
-          namesNative: const ["brezhoneg"],
-          family: const IndoEuropean(),
-        );
+    : super(
+        name: "Breton",
+        code: "BRE",
+        codeShort: "BR",
+        namesNative: const ["brezhoneg"],
+        family: const IndoEuropean(),
+      );
 }
 
 /// A class that represents the Bulgarian language.
@@ -338,14 +338,14 @@ class LangBul extends NaturalLanguage {
   ///
   /// ISO 639-2/T code: `BUL`, ISO 639-1 code: `BG`.
   const LangBul()
-      : super(
-          name: "Bulgarian",
-          code: "BUL",
-          codeShort: "BG",
-          namesNative: const ["български език"],
-          family: const IndoEuropean(),
-          scripts: const {ScriptCyrl()},
-        );
+    : super(
+        name: "Bulgarian",
+        code: "BUL",
+        codeShort: "BG",
+        namesNative: const ["български език"],
+        family: const IndoEuropean(),
+        scripts: const {ScriptCyrl()},
+      );
 }
 
 /// A class that represents the Catalan language.
@@ -354,13 +354,13 @@ class LangCat extends NaturalLanguage {
   ///
   /// ISO 639-2/T code: `CAT`, ISO 639-1 code: `CA`.
   const LangCat()
-      : super(
-          name: "Catalan",
-          code: "CAT",
-          codeShort: "CA",
-          namesNative: const ["català"],
-          family: const IndoEuropean(),
-        );
+    : super(
+        name: "Catalan",
+        code: "CAT",
+        codeShort: "CA",
+        namesNative: const ["català"],
+        family: const IndoEuropean(),
+      );
 }
 
 /// A class that represents the Czech language.
@@ -369,14 +369,14 @@ class LangCes extends NaturalLanguage {
   ///
   /// ISO 639-2/T code: `CES`, ISO 639-1 code: `CS`.
   const LangCes()
-      : super(
-          name: "Czech",
-          code: "CES",
-          codeShort: "CS",
-          namesNative: const ["čeština"],
-          bibliographicCode: "CZE",
-          family: const IndoEuropean(),
-        );
+    : super(
+        name: "Czech",
+        code: "CES",
+        codeShort: "CS",
+        namesNative: const ["čeština"],
+        bibliographicCode: "CZE",
+        family: const IndoEuropean(),
+      );
 }
 
 /// A class that represents the Chamorro language.
@@ -385,13 +385,13 @@ class LangCha extends NaturalLanguage {
   ///
   /// ISO 639-2/T code: `CHA`, ISO 639-1 code: `CH`.
   const LangCha()
-      : super(
-          name: "Chamorro",
-          code: "CHA",
-          codeShort: "CH",
-          namesNative: const ["Chamoru"],
-          family: const Austronesian(),
-        );
+    : super(
+        name: "Chamorro",
+        code: "CHA",
+        codeShort: "CH",
+        namesNative: const ["Chamoru"],
+        family: const Austronesian(),
+      );
 }
 
 /// A class that represents the Chechen language.
@@ -400,14 +400,14 @@ class LangChe extends NaturalLanguage {
   ///
   /// ISO 639-2/T code: `CHE`, ISO 639-1 code: `CE`.
   const LangChe()
-      : super(
-          name: "Chechen",
-          code: "CHE",
-          codeShort: "CE",
-          namesNative: const ["нохчийн мотт"],
-          family: const NortheastCaucasian(),
-          scripts: const {ScriptCyrl()},
-        );
+    : super(
+        name: "Chechen",
+        code: "CHE",
+        codeShort: "CE",
+        namesNative: const ["нохчийн мотт"],
+        family: const NortheastCaucasian(),
+        scripts: const {ScriptCyrl()},
+      );
 }
 
 /// A class that represents the (Old) Church Slavonic language.
@@ -416,14 +416,14 @@ class LangChu extends NaturalLanguage {
   ///
   /// ISO 639-2/T code: `CHU`, ISO 639-1 code: `CU`.
   const LangChu()
-      : super(
-          name: "(Old) Church Slavonic",
-          code: "CHU",
-          codeShort: "CU",
-          namesNative: const ["ѩзыкъ словѣньскъ"],
-          family: const IndoEuropean(),
-          scripts: const {ScriptCyrs()},
-        );
+    : super(
+        name: "(Old) Church Slavonic",
+        code: "CHU",
+        codeShort: "CU",
+        namesNative: const ["ѩзыкъ словѣньскъ"],
+        family: const IndoEuropean(),
+        scripts: const {ScriptCyrs()},
+      );
 }
 
 /// A class that represents the Chuvash language.
@@ -432,14 +432,14 @@ class LangChv extends NaturalLanguage {
   ///
   /// ISO 639-2/T code: `CHV`, ISO 639-1 code: `CV`.
   const LangChv()
-      : super(
-          name: "Chuvash",
-          code: "CHV",
-          codeShort: "CV",
-          namesNative: const ["чӑваш чӗлхи"],
-          family: const Turkic(),
-          scripts: const {ScriptCyrl()},
-        );
+    : super(
+        name: "Chuvash",
+        code: "CHV",
+        codeShort: "CV",
+        namesNative: const ["чӑваш чӗлхи"],
+        family: const Turkic(),
+        scripts: const {ScriptCyrl()},
+      );
 }
 
 /// A class that represents the Cornish language.
@@ -448,13 +448,13 @@ class LangCor extends NaturalLanguage {
   ///
   /// ISO 639-2/T code: `COR`, ISO 639-1 code: `KW`.
   const LangCor()
-      : super(
-          name: "Cornish",
-          code: "COR",
-          codeShort: "KW",
-          namesNative: const ["Kernewek"],
-          family: const IndoEuropean(),
-        );
+    : super(
+        name: "Cornish",
+        code: "COR",
+        codeShort: "KW",
+        namesNative: const ["Kernewek"],
+        family: const IndoEuropean(),
+      );
 }
 
 /// A class that represents the Corsican language.
@@ -463,13 +463,13 @@ class LangCos extends NaturalLanguage {
   ///
   /// ISO 639-2/T code: `COS`, ISO 639-1 code: `CO`.
   const LangCos()
-      : super(
-          name: "Corsican",
-          code: "COS",
-          codeShort: "CO",
-          namesNative: const ["corsu", "lingua corsa"],
-          family: const IndoEuropean(),
-        );
+    : super(
+        name: "Corsican",
+        code: "COS",
+        codeShort: "CO",
+        namesNative: const ["corsu", "lingua corsa"],
+        family: const IndoEuropean(),
+      );
 }
 
 /// A class that represents the Cree language.
@@ -478,13 +478,13 @@ class LangCre extends NaturalLanguage {
   ///
   /// ISO 639-2/T code: `CRE`, ISO 639-1 code: `CR`.
   const LangCre()
-      : super(
-          name: "Cree",
-          code: "CRE",
-          codeShort: "CR",
-          namesNative: const ["ᓀᐦᐃᔭᐍᐏᐣ"],
-          family: const Algonquian(),
-        );
+    : super(
+        name: "Cree",
+        code: "CRE",
+        codeShort: "CR",
+        namesNative: const ["ᓀᐦᐃᔭᐍᐏᐣ"],
+        family: const Algonquian(),
+      );
 }
 
 /// A class that represents the Welsh language.
@@ -493,14 +493,14 @@ class LangCym extends NaturalLanguage {
   ///
   /// ISO 639-2/T code: `CYM`, ISO 639-1 code: `CY`.
   const LangCym()
-      : super(
-          name: "Welsh",
-          code: "CYM",
-          codeShort: "CY",
-          namesNative: const ["Cymraeg"],
-          bibliographicCode: "WEL",
-          family: const IndoEuropean(),
-        );
+    : super(
+        name: "Welsh",
+        code: "CYM",
+        codeShort: "CY",
+        namesNative: const ["Cymraeg"],
+        bibliographicCode: "WEL",
+        family: const IndoEuropean(),
+      );
 }
 
 /// A class that represents the Danish language.
@@ -509,13 +509,13 @@ class LangDan extends NaturalLanguage {
   ///
   /// ISO 639-2/T code: `DAN`, ISO 639-1 code: `DA`.
   const LangDan()
-      : super(
-          name: "Danish",
-          code: "DAN",
-          codeShort: "DA",
-          namesNative: const ["dansk"],
-          family: const IndoEuropean(),
-        );
+    : super(
+        name: "Danish",
+        code: "DAN",
+        codeShort: "DA",
+        namesNative: const ["dansk"],
+        family: const IndoEuropean(),
+      );
 }
 
 /// A class that represents the German language.
@@ -524,14 +524,14 @@ class LangDeu extends NaturalLanguage {
   ///
   /// ISO 639-2/T code: `DEU`, ISO 639-1 code: `DE`.
   const LangDeu()
-      : super(
-          name: "German",
-          code: "DEU",
-          codeShort: "DE",
-          namesNative: const ["Deutsch"],
-          bibliographicCode: "GER",
-          family: const IndoEuropean(),
-        );
+    : super(
+        name: "German",
+        code: "DEU",
+        codeShort: "DE",
+        namesNative: const ["Deutsch"],
+        bibliographicCode: "GER",
+        family: const IndoEuropean(),
+      );
 }
 
 /// A class that represents the Divehi (Dhivehi/Maldivian) language.
@@ -540,15 +540,15 @@ class LangDiv extends NaturalLanguage {
   ///
   /// ISO 639-2/T code: `DIV`, ISO 639-1 code: `DV`.
   const LangDiv()
-      : super(
-          name: "Divehi (Dhivehi/Maldivian)",
-          code: "DIV",
-          codeShort: "DV",
-          namesNative: const ["ދިވެހި"],
-          family: const IndoEuropean(),
-          isRightToLeft: true,
-          scripts: const {ScriptThaa()},
-        );
+    : super(
+        name: "Divehi (Dhivehi/Maldivian)",
+        code: "DIV",
+        codeShort: "DV",
+        namesNative: const ["ދިވެހި"],
+        family: const IndoEuropean(),
+        isRightToLeft: true,
+        scripts: const {ScriptThaa()},
+      );
 }
 
 /// A class that represents the Dzongkha language.
@@ -557,14 +557,14 @@ class LangDzo extends NaturalLanguage {
   ///
   /// ISO 639-2/T code: `DZO`, ISO 639-1 code: `DZ`.
   const LangDzo()
-      : super(
-          name: "Dzongkha",
-          code: "DZO",
-          codeShort: "DZ",
-          namesNative: const ["རྫོང་ཁ"],
-          family: const SinoTibetan(),
-          scripts: const {ScriptTibt()},
-        );
+    : super(
+        name: "Dzongkha",
+        code: "DZO",
+        codeShort: "DZ",
+        namesNative: const ["རྫོང་ཁ"],
+        family: const SinoTibetan(),
+        scripts: const {ScriptTibt()},
+      );
 }
 
 /// A class that represents the Greek (modern) language.
@@ -573,15 +573,15 @@ class LangEll extends NaturalLanguage {
   ///
   /// ISO 639-2/T code: `ELL`, ISO 639-1 code: `EL`.
   const LangEll()
-      : super(
-          name: "Greek (modern)",
-          code: "ELL",
-          codeShort: "EL",
-          namesNative: const ["ελληνικά"],
-          bibliographicCode: "GRE",
-          family: const IndoEuropean(),
-          scripts: const {ScriptGrek()},
-        );
+    : super(
+        name: "Greek (modern)",
+        code: "ELL",
+        codeShort: "EL",
+        namesNative: const ["ελληνικά"],
+        bibliographicCode: "GRE",
+        family: const IndoEuropean(),
+        scripts: const {ScriptGrek()},
+      );
 }
 
 /// A class that represents the English language.
@@ -590,13 +590,13 @@ class LangEng extends NaturalLanguage {
   ///
   /// ISO 639-2/T code: `ENG`, ISO 639-1 code: `EN`.
   const LangEng()
-      : super(
-          name: "English",
-          code: "ENG",
-          codeShort: "EN",
-          namesNative: const ["English"],
-          family: const IndoEuropean(),
-        );
+    : super(
+        name: "English",
+        code: "ENG",
+        codeShort: "EN",
+        namesNative: const ["English"],
+        family: const IndoEuropean(),
+      );
 }
 
 /// A class that represents the Esperanto language.
@@ -605,13 +605,13 @@ class LangEpo extends NaturalLanguage {
   ///
   /// ISO 639-2/T code: `EPO`, ISO 639-1 code: `EO`.
   const LangEpo()
-      : super(
-          name: "Esperanto",
-          code: "EPO",
-          codeShort: "EO",
-          namesNative: const ["Esperanto"],
-          family: const Constructed(),
-        );
+    : super(
+        name: "Esperanto",
+        code: "EPO",
+        codeShort: "EO",
+        namesNative: const ["Esperanto"],
+        family: const Constructed(),
+      );
 }
 
 /// A class that represents the Estonian language.
@@ -620,13 +620,13 @@ class LangEst extends NaturalLanguage {
   ///
   /// ISO 639-2/T code: `EST`, ISO 639-1 code: `ET`.
   const LangEst()
-      : super(
-          name: "Estonian",
-          code: "EST",
-          codeShort: "ET",
-          namesNative: const ["eesti", "eesti keel"],
-          family: const Uralic(),
-        );
+    : super(
+        name: "Estonian",
+        code: "EST",
+        codeShort: "ET",
+        namesNative: const ["eesti", "eesti keel"],
+        family: const Uralic(),
+      );
 }
 
 /// A class that represents the Basque language.
@@ -635,14 +635,14 @@ class LangEus extends NaturalLanguage {
   ///
   /// ISO 639-2/T code: `EUS`, ISO 639-1 code: `EU`.
   const LangEus()
-      : super(
-          name: "Basque",
-          code: "EUS",
-          codeShort: "EU",
-          namesNative: const ["euskara", "euskera"],
-          bibliographicCode: "BAQ",
-          family: const LanguageIsolate(),
-        );
+    : super(
+        name: "Basque",
+        code: "EUS",
+        codeShort: "EU",
+        namesNative: const ["euskara", "euskera"],
+        bibliographicCode: "BAQ",
+        family: const LanguageIsolate(),
+      );
 }
 
 /// A class that represents the Ewe language.
@@ -651,13 +651,13 @@ class LangEwe extends NaturalLanguage {
   ///
   /// ISO 639-2/T code: `EWE`, ISO 639-1 code: `EE`.
   const LangEwe()
-      : super(
-          name: "Ewe",
-          code: "EWE",
-          codeShort: "EE",
-          namesNative: const ["Eʋegbe"],
-          family: const NigerCongo(),
-        );
+    : super(
+        name: "Ewe",
+        code: "EWE",
+        codeShort: "EE",
+        namesNative: const ["Eʋegbe"],
+        family: const NigerCongo(),
+      );
 }
 
 /// A class that represents the Faroese language.
@@ -666,13 +666,13 @@ class LangFao extends NaturalLanguage {
   ///
   /// ISO 639-2/T code: `FAO`, ISO 639-1 code: `FO`.
   const LangFao()
-      : super(
-          name: "Faroese",
-          code: "FAO",
-          codeShort: "FO",
-          namesNative: const ["føroyskt"],
-          family: const IndoEuropean(),
-        );
+    : super(
+        name: "Faroese",
+        code: "FAO",
+        codeShort: "FO",
+        namesNative: const ["føroyskt"],
+        family: const IndoEuropean(),
+      );
 }
 
 /// A class that represents the Persian (Farsi) language.
@@ -681,16 +681,16 @@ class LangFas extends NaturalLanguage {
   ///
   /// ISO 639-2/T code: `FAS`, ISO 639-1 code: `FA`.
   const LangFas()
-      : super(
-          name: "Persian (Farsi)",
-          code: "FAS",
-          codeShort: "FA",
-          namesNative: const ["فارسی"],
-          bibliographicCode: "PER",
-          family: const IndoEuropean(),
-          isRightToLeft: true,
-          scripts: const {ScriptArab()},
-        );
+    : super(
+        name: "Persian (Farsi)",
+        code: "FAS",
+        codeShort: "FA",
+        namesNative: const ["فارسی"],
+        bibliographicCode: "PER",
+        family: const IndoEuropean(),
+        isRightToLeft: true,
+        scripts: const {ScriptArab()},
+      );
 }
 
 /// A class that represents the Fijian language.
@@ -699,13 +699,13 @@ class LangFij extends NaturalLanguage {
   ///
   /// ISO 639-2/T code: `FIJ`, ISO 639-1 code: `FJ`.
   const LangFij()
-      : super(
-          name: "Fijian",
-          code: "FIJ",
-          codeShort: "FJ",
-          namesNative: const ["vosa Vakaviti"],
-          family: const Austronesian(),
-        );
+    : super(
+        name: "Fijian",
+        code: "FIJ",
+        codeShort: "FJ",
+        namesNative: const ["vosa Vakaviti"],
+        family: const Austronesian(),
+      );
 }
 
 /// A class that represents the Finnish language.
@@ -714,13 +714,13 @@ class LangFin extends NaturalLanguage {
   ///
   /// ISO 639-2/T code: `FIN`, ISO 639-1 code: `FI`.
   const LangFin()
-      : super(
-          name: "Finnish",
-          code: "FIN",
-          codeShort: "FI",
-          namesNative: const ["suomi", "suomen kieli"],
-          family: const Uralic(),
-        );
+    : super(
+        name: "Finnish",
+        code: "FIN",
+        codeShort: "FI",
+        namesNative: const ["suomi", "suomen kieli"],
+        family: const Uralic(),
+      );
 }
 
 /// A class that represents the French language.
@@ -729,14 +729,14 @@ class LangFra extends NaturalLanguage {
   ///
   /// ISO 639-2/T code: `FRA`, ISO 639-1 code: `FR`.
   const LangFra()
-      : super(
-          name: "French",
-          code: "FRA",
-          codeShort: "FR",
-          namesNative: const ["français", "langue française"],
-          bibliographicCode: "FRE",
-          family: const IndoEuropean(),
-        );
+    : super(
+        name: "French",
+        code: "FRA",
+        codeShort: "FR",
+        namesNative: const ["français", "langue française"],
+        bibliographicCode: "FRE",
+        family: const IndoEuropean(),
+      );
 }
 
 /// A class that represents the Western Frisian language.
@@ -745,13 +745,13 @@ class LangFry extends NaturalLanguage {
   ///
   /// ISO 639-2/T code: `FRY`, ISO 639-1 code: `FY`.
   const LangFry()
-      : super(
-          name: "Western Frisian",
-          code: "FRY",
-          codeShort: "FY",
-          namesNative: const ["Frysk"],
-          family: const IndoEuropean(),
-        );
+    : super(
+        name: "Western Frisian",
+        code: "FRY",
+        codeShort: "FY",
+        namesNative: const ["Frysk"],
+        family: const IndoEuropean(),
+      );
 }
 
 /// A class that represents the Fula (Fulah/Pulaar/Pular) language.
@@ -760,13 +760,13 @@ class LangFul extends NaturalLanguage {
   ///
   /// ISO 639-2/T code: `FUL`, ISO 639-1 code: `FF`.
   const LangFul()
-      : super(
-          name: "Fula (Fulah/Pulaar/Pular)",
-          code: "FUL",
-          codeShort: "FF",
-          namesNative: const ["Fulfulde", "Pulaar", "Pular"],
-          family: const NigerCongo(),
-        );
+    : super(
+        name: "Fula (Fulah/Pulaar/Pular)",
+        code: "FUL",
+        codeShort: "FF",
+        namesNative: const ["Fulfulde", "Pulaar", "Pular"],
+        family: const NigerCongo(),
+      );
 }
 
 /// A class that represents the (Scottish) Gaelic language.
@@ -775,13 +775,13 @@ class LangGla extends NaturalLanguage {
   ///
   /// ISO 639-2/T code: `GLA`, ISO 639-1 code: `GD`.
   const LangGla()
-      : super(
-          name: "(Scottish) Gaelic",
-          code: "GLA",
-          codeShort: "GD",
-          namesNative: const ["Gàidhlig"],
-          family: const IndoEuropean(),
-        );
+    : super(
+        name: "(Scottish) Gaelic",
+        code: "GLA",
+        codeShort: "GD",
+        namesNative: const ["Gàidhlig"],
+        family: const IndoEuropean(),
+      );
 }
 
 /// A class that represents the Irish language.
@@ -790,13 +790,13 @@ class LangGle extends NaturalLanguage {
   ///
   /// ISO 639-2/T code: `GLE`, ISO 639-1 code: `GA`.
   const LangGle()
-      : super(
-          name: "Irish",
-          code: "GLE",
-          codeShort: "GA",
-          namesNative: const ["Gaeilge"],
-          family: const IndoEuropean(),
-        );
+    : super(
+        name: "Irish",
+        code: "GLE",
+        codeShort: "GA",
+        namesNative: const ["Gaeilge"],
+        family: const IndoEuropean(),
+      );
 }
 
 /// A class that represents the Galician language.
@@ -805,13 +805,13 @@ class LangGlg extends NaturalLanguage {
   ///
   /// ISO 639-2/T code: `GLG`, ISO 639-1 code: `GL`.
   const LangGlg()
-      : super(
-          name: "Galician",
-          code: "GLG",
-          codeShort: "GL",
-          namesNative: const ["galego"],
-          family: const IndoEuropean(),
-        );
+    : super(
+        name: "Galician",
+        code: "GLG",
+        codeShort: "GL",
+        namesNative: const ["galego"],
+        family: const IndoEuropean(),
+      );
 }
 
 /// A class that represents the Manx language.
@@ -820,13 +820,13 @@ class LangGlv extends NaturalLanguage {
   ///
   /// ISO 639-2/T code: `GLV`, ISO 639-1 code: `GV`.
   const LangGlv()
-      : super(
-          name: "Manx",
-          code: "GLV",
-          codeShort: "GV",
-          namesNative: const ["Gaelg", "Gailck"],
-          family: const IndoEuropean(),
-        );
+    : super(
+        name: "Manx",
+        code: "GLV",
+        codeShort: "GV",
+        namesNative: const ["Gaelg", "Gailck"],
+        family: const IndoEuropean(),
+      );
 }
 
 /// A class that represents the Guaraní language.
@@ -835,13 +835,13 @@ class LangGrn extends NaturalLanguage {
   ///
   /// ISO 639-2/T code: `GRN`, ISO 639-1 code: `GN`.
   const LangGrn()
-      : super(
-          name: "Guaraní",
-          code: "GRN",
-          codeShort: "GN",
-          namesNative: const ["Avañe'ẽ"],
-          family: const Tupian(),
-        );
+    : super(
+        name: "Guaraní",
+        code: "GRN",
+        codeShort: "GN",
+        namesNative: const ["Avañe'ẽ"],
+        family: const Tupian(),
+      );
 }
 
 /// A class that represents the Gujarati language.
@@ -850,14 +850,14 @@ class LangGuj extends NaturalLanguage {
   ///
   /// ISO 639-2/T code: `GUJ`, ISO 639-1 code: `GU`.
   const LangGuj()
-      : super(
-          name: "Gujarati",
-          code: "GUJ",
-          codeShort: "GU",
-          namesNative: const ["ગુજરાતી"],
-          family: const IndoEuropean(),
-          scripts: const {ScriptGujr()},
-        );
+    : super(
+        name: "Gujarati",
+        code: "GUJ",
+        codeShort: "GU",
+        namesNative: const ["ગુજરાતી"],
+        family: const IndoEuropean(),
+        scripts: const {ScriptGujr()},
+      );
 }
 
 /// A class that represents the Haitian (Haitian Creole) language.
@@ -866,13 +866,13 @@ class LangHat extends NaturalLanguage {
   ///
   /// ISO 639-2/T code: `HAT`, ISO 639-1 code: `HT`.
   const LangHat()
-      : super(
-          name: "Haitian (Haitian Creole)",
-          code: "HAT",
-          codeShort: "HT",
-          namesNative: const ["Kreyòl ayisyen"],
-          family: const Creole(),
-        );
+    : super(
+        name: "Haitian (Haitian Creole)",
+        code: "HAT",
+        codeShort: "HT",
+        namesNative: const ["Kreyòl ayisyen"],
+        family: const Creole(),
+      );
 }
 
 /// A class that represents the Hausa language.
@@ -881,14 +881,14 @@ class LangHau extends NaturalLanguage {
   ///
   /// ISO 639-2/T code: `HAU`, ISO 639-1 code: `HA`.
   const LangHau()
-      : super(
-          name: "Hausa",
-          code: "HAU",
-          codeShort: "HA",
-          namesNative: const ["(Hausa) هَوُسَ"],
-          family: const AfroAsiatic(),
-          isRightToLeft: true,
-        );
+    : super(
+        name: "Hausa",
+        code: "HAU",
+        codeShort: "HA",
+        namesNative: const ["(Hausa) هَوُسَ"],
+        family: const AfroAsiatic(),
+        isRightToLeft: true,
+      );
 }
 
 /// A class that represents the Hebrew (modern) language.
@@ -897,15 +897,15 @@ class LangHeb extends NaturalLanguage {
   ///
   /// ISO 639-2/T code: `HEB`, ISO 639-1 code: `HE`.
   const LangHeb()
-      : super(
-          name: "Hebrew (modern)",
-          code: "HEB",
-          codeShort: "HE",
-          namesNative: const ["עברית"],
-          family: const AfroAsiatic(),
-          isRightToLeft: true,
-          scripts: const {ScriptHebr()},
-        );
+    : super(
+        name: "Hebrew (modern)",
+        code: "HEB",
+        codeShort: "HE",
+        namesNative: const ["עברית"],
+        family: const AfroAsiatic(),
+        isRightToLeft: true,
+        scripts: const {ScriptHebr()},
+      );
 }
 
 /// A class that represents the Herero language.
@@ -914,13 +914,13 @@ class LangHer extends NaturalLanguage {
   ///
   /// ISO 639-2/T code: `HER`, ISO 639-1 code: `HZ`.
   const LangHer()
-      : super(
-          name: "Herero",
-          code: "HER",
-          codeShort: "HZ",
-          namesNative: const ["Otjiherero"],
-          family: const NigerCongo(),
-        );
+    : super(
+        name: "Herero",
+        code: "HER",
+        codeShort: "HZ",
+        namesNative: const ["Otjiherero"],
+        family: const NigerCongo(),
+      );
 }
 
 /// A class that represents the Hindi language.
@@ -929,14 +929,14 @@ class LangHin extends NaturalLanguage {
   ///
   /// ISO 639-2/T code: `HIN`, ISO 639-1 code: `HI`.
   const LangHin()
-      : super(
-          name: "Hindi",
-          code: "HIN",
-          codeShort: "HI",
-          namesNative: const ["हिन्दी", "हिंदी"],
-          family: const IndoEuropean(),
-          scripts: const {ScriptDeva()},
-        );
+    : super(
+        name: "Hindi",
+        code: "HIN",
+        codeShort: "HI",
+        namesNative: const ["हिन्दी", "हिंदी"],
+        family: const IndoEuropean(),
+        scripts: const {ScriptDeva()},
+      );
 }
 
 /// A class that represents the Hiri Motu language.
@@ -945,13 +945,13 @@ class LangHmo extends NaturalLanguage {
   ///
   /// ISO 639-2/T code: `HMO`, ISO 639-1 code: `HO`.
   const LangHmo()
-      : super(
-          name: "Hiri Motu",
-          code: "HMO",
-          codeShort: "HO",
-          namesNative: const ["Hiri Motu"],
-          family: const Austronesian(),
-        );
+    : super(
+        name: "Hiri Motu",
+        code: "HMO",
+        codeShort: "HO",
+        namesNative: const ["Hiri Motu"],
+        family: const Austronesian(),
+      );
 }
 
 /// A class that represents the Croatian language.
@@ -960,13 +960,13 @@ class LangHrv extends NaturalLanguage {
   ///
   /// ISO 639-2/T code: `HRV`, ISO 639-1 code: `HR`.
   const LangHrv()
-      : super(
-          name: "Croatian",
-          code: "HRV",
-          codeShort: "HR",
-          namesNative: const ["hrvatski jezik"],
-          family: const IndoEuropean(),
-        );
+    : super(
+        name: "Croatian",
+        code: "HRV",
+        codeShort: "HR",
+        namesNative: const ["hrvatski jezik"],
+        family: const IndoEuropean(),
+      );
 }
 
 /// A class that represents the Hungarian language.
@@ -975,13 +975,13 @@ class LangHun extends NaturalLanguage {
   ///
   /// ISO 639-2/T code: `HUN`, ISO 639-1 code: `HU`.
   const LangHun()
-      : super(
-          name: "Hungarian",
-          code: "HUN",
-          codeShort: "HU",
-          namesNative: const ["magyar"],
-          family: const Uralic(),
-        );
+    : super(
+        name: "Hungarian",
+        code: "HUN",
+        codeShort: "HU",
+        namesNative: const ["magyar"],
+        family: const Uralic(),
+      );
 }
 
 /// A class that represents the Armenian language.
@@ -990,15 +990,15 @@ class LangHye extends NaturalLanguage {
   ///
   /// ISO 639-2/T code: `HYE`, ISO 639-1 code: `HY`.
   const LangHye()
-      : super(
-          name: "Armenian",
-          code: "HYE",
-          codeShort: "HY",
-          namesNative: const ["Հայերեն"],
-          bibliographicCode: "ARM",
-          family: const IndoEuropean(),
-          scripts: const {ScriptArmn()},
-        );
+    : super(
+        name: "Armenian",
+        code: "HYE",
+        codeShort: "HY",
+        namesNative: const ["Հայերեն"],
+        bibliographicCode: "ARM",
+        family: const IndoEuropean(),
+        scripts: const {ScriptArmn()},
+      );
 }
 
 /// A class that represents the Igbo language.
@@ -1007,13 +1007,13 @@ class LangIbo extends NaturalLanguage {
   ///
   /// ISO 639-2/T code: `IBO`, ISO 639-1 code: `IG`.
   const LangIbo()
-      : super(
-          name: "Igbo",
-          code: "IBO",
-          codeShort: "IG",
-          namesNative: const ["Asụsụ Igbo"],
-          family: const NigerCongo(),
-        );
+    : super(
+        name: "Igbo",
+        code: "IBO",
+        codeShort: "IG",
+        namesNative: const ["Asụsụ Igbo"],
+        family: const NigerCongo(),
+      );
 }
 
 /// A class that represents the Ido language.
@@ -1022,13 +1022,13 @@ class LangIdo extends NaturalLanguage {
   ///
   /// ISO 639-2/T code: `IDO`, ISO 639-1 code: `IO`.
   const LangIdo()
-      : super(
-          name: "Ido",
-          code: "IDO",
-          codeShort: "IO",
-          namesNative: const ["Ido"],
-          family: const Constructed(),
-        );
+    : super(
+        name: "Ido",
+        code: "IDO",
+        codeShort: "IO",
+        namesNative: const ["Ido"],
+        family: const Constructed(),
+      );
 }
 
 /// A class that represents the Nuosu language.
@@ -1037,14 +1037,14 @@ class LangIii extends NaturalLanguage {
   ///
   /// ISO 639-2/T code: `III`, ISO 639-1 code: `II`.
   const LangIii()
-      : super(
-          name: "Nuosu",
-          code: "III",
-          codeShort: "II",
-          namesNative: const ["ꆈꌠ꒿ Nuosuhxop"],
-          family: const SinoTibetan(),
-          scripts: const {ScriptYiii()},
-        );
+    : super(
+        name: "Nuosu",
+        code: "III",
+        codeShort: "II",
+        namesNative: const ["ꆈꌠ꒿ Nuosuhxop"],
+        family: const SinoTibetan(),
+        scripts: const {ScriptYiii()},
+      );
 }
 
 /// A class that represents the Inuktitut language.
@@ -1053,13 +1053,13 @@ class LangIku extends NaturalLanguage {
   ///
   /// ISO 639-2/T code: `IKU`, ISO 639-1 code: `IU`.
   const LangIku()
-      : super(
-          name: "Inuktitut",
-          code: "IKU",
-          codeShort: "IU",
-          namesNative: const ["ᐃᓄᒃᑎᑐᑦ"],
-          family: const EskimoAleut(),
-        );
+    : super(
+        name: "Inuktitut",
+        code: "IKU",
+        codeShort: "IU",
+        namesNative: const ["ᐃᓄᒃᑎᑐᑦ"],
+        family: const EskimoAleut(),
+      );
 }
 
 /// A class that represents the Interlingue language.
@@ -1068,13 +1068,13 @@ class LangIle extends NaturalLanguage {
   ///
   /// ISO 639-2/T code: `ILE`, ISO 639-1 code: `IE`.
   const LangIle()
-      : super(
-          name: "Interlingue",
-          code: "ILE",
-          codeShort: "IE",
-          namesNative: const ["Interlingue", "Occidental"],
-          family: const Constructed(),
-        );
+    : super(
+        name: "Interlingue",
+        code: "ILE",
+        codeShort: "IE",
+        namesNative: const ["Interlingue", "Occidental"],
+        family: const Constructed(),
+      );
 }
 
 /// A class that represents the Interlingua language.
@@ -1083,13 +1083,13 @@ class LangIna extends NaturalLanguage {
   ///
   /// ISO 639-2/T code: `INA`, ISO 639-1 code: `IA`.
   const LangIna()
-      : super(
-          name: "Interlingua",
-          code: "INA",
-          codeShort: "IA",
-          namesNative: const ["Interlingua"],
-          family: const Constructed(),
-        );
+    : super(
+        name: "Interlingua",
+        code: "INA",
+        codeShort: "IA",
+        namesNative: const ["Interlingua"],
+        family: const Constructed(),
+      );
 }
 
 /// A class that represents the Indonesian language.
@@ -1098,13 +1098,13 @@ class LangInd extends NaturalLanguage {
   ///
   /// ISO 639-2/T code: `IND`, ISO 639-1 code: `ID`.
   const LangInd()
-      : super(
-          name: "Indonesian",
-          code: "IND",
-          codeShort: "ID",
-          namesNative: const ["Bahasa Indonesia"],
-          family: const Austronesian(),
-        );
+    : super(
+        name: "Indonesian",
+        code: "IND",
+        codeShort: "ID",
+        namesNative: const ["Bahasa Indonesia"],
+        family: const Austronesian(),
+      );
 }
 
 /// A class that represents the Inupiaq language.
@@ -1113,13 +1113,13 @@ class LangIpk extends NaturalLanguage {
   ///
   /// ISO 639-2/T code: `IPK`, ISO 639-1 code: `IK`.
   const LangIpk()
-      : super(
-          name: "Inupiaq",
-          code: "IPK",
-          codeShort: "IK",
-          namesNative: const ["Iñupiaq", "Iñupiatun"],
-          family: const EskimoAleut(),
-        );
+    : super(
+        name: "Inupiaq",
+        code: "IPK",
+        codeShort: "IK",
+        namesNative: const ["Iñupiaq", "Iñupiatun"],
+        family: const EskimoAleut(),
+      );
 }
 
 /// A class that represents the Icelandic language.
@@ -1128,14 +1128,14 @@ class LangIsl extends NaturalLanguage {
   ///
   /// ISO 639-2/T code: `ISL`, ISO 639-1 code: `IS`.
   const LangIsl()
-      : super(
-          name: "Icelandic",
-          code: "ISL",
-          codeShort: "IS",
-          namesNative: const ["Íslenska"],
-          bibliographicCode: "ICE",
-          family: const IndoEuropean(),
-        );
+    : super(
+        name: "Icelandic",
+        code: "ISL",
+        codeShort: "IS",
+        namesNative: const ["Íslenska"],
+        bibliographicCode: "ICE",
+        family: const IndoEuropean(),
+      );
 }
 
 /// A class that represents the Italian language.
@@ -1144,13 +1144,13 @@ class LangIta extends NaturalLanguage {
   ///
   /// ISO 639-2/T code: `ITA`, ISO 639-1 code: `IT`.
   const LangIta()
-      : super(
-          name: "Italian",
-          code: "ITA",
-          codeShort: "IT",
-          namesNative: const ["Italiano"],
-          family: const IndoEuropean(),
-        );
+    : super(
+        name: "Italian",
+        code: "ITA",
+        codeShort: "IT",
+        namesNative: const ["Italiano"],
+        family: const IndoEuropean(),
+      );
 }
 
 /// A class that represents the Javanese language.
@@ -1159,13 +1159,13 @@ class LangJav extends NaturalLanguage {
   ///
   /// ISO 639-2/T code: `JAV`, ISO 639-1 code: `JV`.
   const LangJav()
-      : super(
-          name: "Javanese",
-          code: "JAV",
-          codeShort: "JV",
-          namesNative: const ["ꦧꦱꦗꦮ", "Basa Jawa"],
-          family: const Austronesian(),
-        );
+    : super(
+        name: "Javanese",
+        code: "JAV",
+        codeShort: "JV",
+        namesNative: const ["ꦧꦱꦗꦮ", "Basa Jawa"],
+        family: const Austronesian(),
+      );
 }
 
 /// A class that represents the Japanese language.
@@ -1174,14 +1174,14 @@ class LangJpn extends NaturalLanguage {
   ///
   /// ISO 639-2/T code: `JPN`, ISO 639-1 code: `JA`.
   const LangJpn()
-      : super(
-          name: "Japanese",
-          code: "JPN",
-          codeShort: "JA",
-          namesNative: const ["日本語 (にほんご)"],
-          family: const Japonic(),
-          scripts: const {ScriptJpan()},
-        );
+    : super(
+        name: "Japanese",
+        code: "JPN",
+        codeShort: "JA",
+        namesNative: const ["日本語 (にほんご)"],
+        family: const Japonic(),
+        scripts: const {ScriptJpan()},
+      );
 }
 
 /// A class that represents the Kalaallisut (Greenlandic) language.
@@ -1190,13 +1190,13 @@ class LangKal extends NaturalLanguage {
   ///
   /// ISO 639-2/T code: `KAL`, ISO 639-1 code: `KL`.
   const LangKal()
-      : super(
-          name: "Kalaallisut (Greenlandic)",
-          code: "KAL",
-          codeShort: "KL",
-          namesNative: const ["kalaallisut", "kalaallit oqaasii"],
-          family: const EskimoAleut(),
-        );
+    : super(
+        name: "Kalaallisut (Greenlandic)",
+        code: "KAL",
+        codeShort: "KL",
+        namesNative: const ["kalaallisut", "kalaallit oqaasii"],
+        family: const EskimoAleut(),
+      );
 }
 
 /// A class that represents the Kannada language.
@@ -1205,14 +1205,14 @@ class LangKan extends NaturalLanguage {
   ///
   /// ISO 639-2/T code: `KAN`, ISO 639-1 code: `KN`.
   const LangKan()
-      : super(
-          name: "Kannada",
-          code: "KAN",
-          codeShort: "KN",
-          namesNative: const ["ಕನ್ನಡ"],
-          family: const Dravidian(),
-          scripts: const {ScriptKnda()},
-        );
+    : super(
+        name: "Kannada",
+        code: "KAN",
+        codeShort: "KN",
+        namesNative: const ["ಕನ್ನಡ"],
+        family: const Dravidian(),
+        scripts: const {ScriptKnda()},
+      );
 }
 
 /// A class that represents the Kashmiri language.
@@ -1221,15 +1221,15 @@ class LangKas extends NaturalLanguage {
   ///
   /// ISO 639-2/T code: `KAS`, ISO 639-1 code: `KS`.
   const LangKas()
-      : super(
-          name: "Kashmiri",
-          code: "KAS",
-          codeShort: "KS",
-          namesNative: const ["कश्मीरी", "كشميري‎"],
-          family: const IndoEuropean(),
-          isRightToLeft: true,
-          scripts: const {ScriptDeva()},
-        );
+    : super(
+        name: "Kashmiri",
+        code: "KAS",
+        codeShort: "KS",
+        namesNative: const ["कश्मीरी", "كشميري‎"],
+        family: const IndoEuropean(),
+        isRightToLeft: true,
+        scripts: const {ScriptDeva()},
+      );
 }
 
 /// A class that represents the Georgian language.
@@ -1238,15 +1238,15 @@ class LangKat extends NaturalLanguage {
   ///
   /// ISO 639-2/T code: `KAT`, ISO 639-1 code: `KA`.
   const LangKat()
-      : super(
-          name: "Georgian",
-          code: "KAT",
-          codeShort: "KA",
-          namesNative: const ["ქართული"],
-          bibliographicCode: "GEO",
-          family: const SouthCaucasian(),
-          scripts: const {ScriptGeor()},
-        );
+    : super(
+        name: "Georgian",
+        code: "KAT",
+        codeShort: "KA",
+        namesNative: const ["ქართული"],
+        bibliographicCode: "GEO",
+        family: const SouthCaucasian(),
+        scripts: const {ScriptGeor()},
+      );
 }
 
 /// A class that represents the Kanuri language.
@@ -1255,13 +1255,13 @@ class LangKau extends NaturalLanguage {
   ///
   /// ISO 639-2/T code: `KAU`, ISO 639-1 code: `KR`.
   const LangKau()
-      : super(
-          name: "Kanuri",
-          code: "KAU",
-          codeShort: "KR",
-          namesNative: const ["Kanuri"],
-          family: const NiloSaharan(),
-        );
+    : super(
+        name: "Kanuri",
+        code: "KAU",
+        codeShort: "KR",
+        namesNative: const ["Kanuri"],
+        family: const NiloSaharan(),
+      );
 }
 
 /// A class that represents the Kazakh language.
@@ -1270,14 +1270,14 @@ class LangKaz extends NaturalLanguage {
   ///
   /// ISO 639-2/T code: `KAZ`, ISO 639-1 code: `KK`.
   const LangKaz()
-      : super(
-          name: "Kazakh",
-          code: "KAZ",
-          codeShort: "KK",
-          namesNative: const ["қазақ тілі"],
-          family: const Turkic(),
-          scripts: const {ScriptCyrl()},
-        );
+    : super(
+        name: "Kazakh",
+        code: "KAZ",
+        codeShort: "KK",
+        namesNative: const ["қазақ тілі"],
+        family: const Turkic(),
+        scripts: const {ScriptCyrl()},
+      );
 }
 
 /// A class that represents the Khmer language.
@@ -1286,14 +1286,14 @@ class LangKhm extends NaturalLanguage {
   ///
   /// ISO 639-2/T code: `KHM`, ISO 639-1 code: `KM`.
   const LangKhm()
-      : super(
-          name: "Khmer",
-          code: "KHM",
-          codeShort: "KM",
-          namesNative: const ["ខ្មែរ", "ខេមរភាសា", "ភាសាខ្មែរ"],
-          family: const Austroasiatic(),
-          scripts: const {ScriptKhmr()},
-        );
+    : super(
+        name: "Khmer",
+        code: "KHM",
+        codeShort: "KM",
+        namesNative: const ["ខ្មែរ", "ខេមរភាសា", "ភាសាខ្មែរ"],
+        family: const Austroasiatic(),
+        scripts: const {ScriptKhmr()},
+      );
 }
 
 /// A class that represents the Kikuyu (Gikuyu) language.
@@ -1302,13 +1302,13 @@ class LangKik extends NaturalLanguage {
   ///
   /// ISO 639-2/T code: `KIK`, ISO 639-1 code: `KI`.
   const LangKik()
-      : super(
-          name: "Kikuyu (Gikuyu)",
-          code: "KIK",
-          codeShort: "KI",
-          namesNative: const ["Gĩkũyũ"],
-          family: const NigerCongo(),
-        );
+    : super(
+        name: "Kikuyu (Gikuyu)",
+        code: "KIK",
+        codeShort: "KI",
+        namesNative: const ["Gĩkũyũ"],
+        family: const NigerCongo(),
+      );
 }
 
 /// A class that represents the Kinyarwanda language.
@@ -1317,13 +1317,13 @@ class LangKin extends NaturalLanguage {
   ///
   /// ISO 639-2/T code: `KIN`, ISO 639-1 code: `RW`.
   const LangKin()
-      : super(
-          name: "Kinyarwanda",
-          code: "KIN",
-          codeShort: "RW",
-          namesNative: const ["Ikinyarwanda"],
-          family: const NigerCongo(),
-        );
+    : super(
+        name: "Kinyarwanda",
+        code: "KIN",
+        codeShort: "RW",
+        namesNative: const ["Ikinyarwanda"],
+        family: const NigerCongo(),
+      );
 }
 
 /// A class that represents the Kyrgyz language.
@@ -1332,14 +1332,14 @@ class LangKir extends NaturalLanguage {
   ///
   /// ISO 639-2/T code: `KIR`, ISO 639-1 code: `KY`.
   const LangKir()
-      : super(
-          name: "Kyrgyz",
-          code: "KIR",
-          codeShort: "KY",
-          namesNative: const ["Кыргызча", "Кыргыз тили"],
-          family: const Turkic(),
-          scripts: const {ScriptCyrl()},
-        );
+    : super(
+        name: "Kyrgyz",
+        code: "KIR",
+        codeShort: "KY",
+        namesNative: const ["Кыргызча", "Кыргыз тили"],
+        family: const Turkic(),
+        scripts: const {ScriptCyrl()},
+      );
 }
 
 /// A class that represents the Komi language.
@@ -1348,14 +1348,14 @@ class LangKom extends NaturalLanguage {
   ///
   /// ISO 639-2/T code: `KOM`, ISO 639-1 code: `KV`.
   const LangKom()
-      : super(
-          name: "Komi",
-          code: "KOM",
-          codeShort: "KV",
-          namesNative: const ["коми кыв"],
-          family: const Uralic(),
-          scripts: const {ScriptCyrl()},
-        );
+    : super(
+        name: "Komi",
+        code: "KOM",
+        codeShort: "KV",
+        namesNative: const ["коми кыв"],
+        family: const Uralic(),
+        scripts: const {ScriptCyrl()},
+      );
 }
 
 /// A class that represents the Kongo language.
@@ -1364,13 +1364,13 @@ class LangKon extends NaturalLanguage {
   ///
   /// ISO 639-2/T code: `KON`, ISO 639-1 code: `KG`.
   const LangKon()
-      : super(
-          name: "Kongo",
-          code: "KON",
-          codeShort: "KG",
-          namesNative: const ["Kikongo"],
-          family: const NigerCongo(),
-        );
+    : super(
+        name: "Kongo",
+        code: "KON",
+        codeShort: "KG",
+        namesNative: const ["Kikongo"],
+        family: const NigerCongo(),
+      );
 }
 
 /// A class that represents the Korean language.
@@ -1379,14 +1379,14 @@ class LangKor extends NaturalLanguage {
   ///
   /// ISO 639-2/T code: `KOR`, ISO 639-1 code: `KO`.
   const LangKor()
-      : super(
-          name: "Korean",
-          code: "KOR",
-          codeShort: "KO",
-          namesNative: const ["한국어"],
-          family: const Koreanic(),
-          scripts: const {ScriptKore()},
-        );
+    : super(
+        name: "Korean",
+        code: "KOR",
+        codeShort: "KO",
+        namesNative: const ["한국어"],
+        family: const Koreanic(),
+        scripts: const {ScriptKore()},
+      );
 }
 
 /// A class that represents the Kwanyama (Kuanyama) language.
@@ -1395,13 +1395,13 @@ class LangKua extends NaturalLanguage {
   ///
   /// ISO 639-2/T code: `KUA`, ISO 639-1 code: `KJ`.
   const LangKua()
-      : super(
-          name: "Kwanyama (Kuanyama)",
-          code: "KUA",
-          codeShort: "KJ",
-          namesNative: const ["Kuanyama"],
-          family: const NigerCongo(),
-        );
+    : super(
+        name: "Kwanyama (Kuanyama)",
+        code: "KUA",
+        codeShort: "KJ",
+        namesNative: const ["Kuanyama"],
+        family: const NigerCongo(),
+      );
 }
 
 /// A class that represents the Kurdish language.
@@ -1410,15 +1410,15 @@ class LangKur extends NaturalLanguage {
   ///
   /// ISO 639-2/T code: `KUR`, ISO 639-1 code: `KU`.
   const LangKur()
-      : super(
-          name: "Kurdish",
-          code: "KUR",
-          codeShort: "KU",
-          namesNative: const ["Kurdî", "كوردی‎"],
-          family: const IndoEuropean(),
-          isRightToLeft: true,
-          scripts: const {ScriptArab(), ScriptLatn()},
-        );
+    : super(
+        name: "Kurdish",
+        code: "KUR",
+        codeShort: "KU",
+        namesNative: const ["Kurdî", "كوردی‎"],
+        family: const IndoEuropean(),
+        isRightToLeft: true,
+        scripts: const {ScriptArab(), ScriptLatn()},
+      );
 }
 
 /// A class that represents the Lao language.
@@ -1427,14 +1427,14 @@ class LangLao extends NaturalLanguage {
   ///
   /// ISO 639-2/T code: `LAO`, ISO 639-1 code: `LO`.
   const LangLao()
-      : super(
-          name: "Lao",
-          code: "LAO",
-          codeShort: "LO",
-          namesNative: const ["ພາສາລາວ"],
-          family: const TaiKadai(),
-          scripts: const {ScriptLaoo()},
-        );
+    : super(
+        name: "Lao",
+        code: "LAO",
+        codeShort: "LO",
+        namesNative: const ["ພາສາລາວ"],
+        family: const TaiKadai(),
+        scripts: const {ScriptLaoo()},
+      );
 }
 
 /// A class that represents the Latin language.
@@ -1443,13 +1443,13 @@ class LangLat extends NaturalLanguage {
   ///
   /// ISO 639-2/T code: `LAT`, ISO 639-1 code: `LA`.
   const LangLat()
-      : super(
-          name: "Latin",
-          code: "LAT",
-          codeShort: "LA",
-          namesNative: const ["latine", "lingua latina"],
-          family: const IndoEuropean(),
-        );
+    : super(
+        name: "Latin",
+        code: "LAT",
+        codeShort: "LA",
+        namesNative: const ["latine", "lingua latina"],
+        family: const IndoEuropean(),
+      );
 }
 
 /// A class that represents the Latvian language.
@@ -1458,13 +1458,13 @@ class LangLav extends NaturalLanguage {
   ///
   /// ISO 639-2/T code: `LAV`, ISO 639-1 code: `LV`.
   const LangLav()
-      : super(
-          name: "Latvian",
-          code: "LAV",
-          codeShort: "LV",
-          namesNative: const ["latviešu valoda"],
-          family: const IndoEuropean(),
-        );
+    : super(
+        name: "Latvian",
+        code: "LAV",
+        codeShort: "LV",
+        namesNative: const ["latviešu valoda"],
+        family: const IndoEuropean(),
+      );
 }
 
 /// A class that represents the Limburgish (Limburgan/Limburger) language.
@@ -1473,13 +1473,13 @@ class LangLim extends NaturalLanguage {
   ///
   /// ISO 639-2/T code: `LIM`, ISO 639-1 code: `LI`.
   const LangLim()
-      : super(
-          name: "Limburgish (Limburgan/Limburger)",
-          code: "LIM",
-          codeShort: "LI",
-          namesNative: const ["Limburgs"],
-          family: const IndoEuropean(),
-        );
+    : super(
+        name: "Limburgish (Limburgan/Limburger)",
+        code: "LIM",
+        codeShort: "LI",
+        namesNative: const ["Limburgs"],
+        family: const IndoEuropean(),
+      );
 }
 
 /// A class that represents the Lingala language.
@@ -1488,13 +1488,13 @@ class LangLin extends NaturalLanguage {
   ///
   /// ISO 639-2/T code: `LIN`, ISO 639-1 code: `LN`.
   const LangLin()
-      : super(
-          name: "Lingala",
-          code: "LIN",
-          codeShort: "LN",
-          namesNative: const ["Lingála"],
-          family: const NigerCongo(),
-        );
+    : super(
+        name: "Lingala",
+        code: "LIN",
+        codeShort: "LN",
+        namesNative: const ["Lingála"],
+        family: const NigerCongo(),
+      );
 }
 
 /// A class that represents the Lithuanian language.
@@ -1503,13 +1503,13 @@ class LangLit extends NaturalLanguage {
   ///
   /// ISO 639-2/T code: `LIT`, ISO 639-1 code: `LT`.
   const LangLit()
-      : super(
-          name: "Lithuanian",
-          code: "LIT",
-          codeShort: "LT",
-          namesNative: const ["lietuvių kalba"],
-          family: const IndoEuropean(),
-        );
+    : super(
+        name: "Lithuanian",
+        code: "LIT",
+        codeShort: "LT",
+        namesNative: const ["lietuvių kalba"],
+        family: const IndoEuropean(),
+      );
 }
 
 /// A class that represents the Luxembourgish (Letzeburgesch) language.
@@ -1518,13 +1518,13 @@ class LangLtz extends NaturalLanguage {
   ///
   /// ISO 639-2/T code: `LTZ`, ISO 639-1 code: `LB`.
   const LangLtz()
-      : super(
-          name: "Luxembourgish (Letzeburgesch)",
-          code: "LTZ",
-          codeShort: "LB",
-          namesNative: const ["Lëtzebuergesch"],
-          family: const IndoEuropean(),
-        );
+    : super(
+        name: "Luxembourgish (Letzeburgesch)",
+        code: "LTZ",
+        codeShort: "LB",
+        namesNative: const ["Lëtzebuergesch"],
+        family: const IndoEuropean(),
+      );
 }
 
 /// A class that represents the Luba-Katanga language.
@@ -1533,13 +1533,13 @@ class LangLub extends NaturalLanguage {
   ///
   /// ISO 639-2/T code: `LUB`, ISO 639-1 code: `LU`.
   const LangLub()
-      : super(
-          name: "Luba-Katanga",
-          code: "LUB",
-          codeShort: "LU",
-          namesNative: const ["Tshiluba"],
-          family: const NigerCongo(),
-        );
+    : super(
+        name: "Luba-Katanga",
+        code: "LUB",
+        codeShort: "LU",
+        namesNative: const ["Tshiluba"],
+        family: const NigerCongo(),
+      );
 }
 
 /// A class that represents the Ganda language.
@@ -1548,13 +1548,13 @@ class LangLug extends NaturalLanguage {
   ///
   /// ISO 639-2/T code: `LUG`, ISO 639-1 code: `LG`.
   const LangLug()
-      : super(
-          name: "Ganda",
-          code: "LUG",
-          codeShort: "LG",
-          namesNative: const ["Luganda"],
-          family: const NigerCongo(),
-        );
+    : super(
+        name: "Ganda",
+        code: "LUG",
+        codeShort: "LG",
+        namesNative: const ["Luganda"],
+        family: const NigerCongo(),
+      );
 }
 
 /// A class that represents the Marshallese language.
@@ -1563,13 +1563,13 @@ class LangMah extends NaturalLanguage {
   ///
   /// ISO 639-2/T code: `MAH`, ISO 639-1 code: `MH`.
   const LangMah()
-      : super(
-          name: "Marshallese",
-          code: "MAH",
-          codeShort: "MH",
-          namesNative: const ["Kajin M̧ajeļ"],
-          family: const Austronesian(),
-        );
+    : super(
+        name: "Marshallese",
+        code: "MAH",
+        codeShort: "MH",
+        namesNative: const ["Kajin M̧ajeļ"],
+        family: const Austronesian(),
+      );
 }
 
 /// A class that represents the Malayalam language.
@@ -1578,14 +1578,14 @@ class LangMal extends NaturalLanguage {
   ///
   /// ISO 639-2/T code: `MAL`, ISO 639-1 code: `ML`.
   const LangMal()
-      : super(
-          name: "Malayalam",
-          code: "MAL",
-          codeShort: "ML",
-          namesNative: const ["മലയാളം"],
-          family: const Dravidian(),
-          scripts: const {ScriptMlym()},
-        );
+    : super(
+        name: "Malayalam",
+        code: "MAL",
+        codeShort: "ML",
+        namesNative: const ["മലയാളം"],
+        family: const Dravidian(),
+        scripts: const {ScriptMlym()},
+      );
 }
 
 /// A class that represents the Marathi (Marāṭhī) language.
@@ -1594,14 +1594,14 @@ class LangMar extends NaturalLanguage {
   ///
   /// ISO 639-2/T code: `MAR`, ISO 639-1 code: `MR`.
   const LangMar()
-      : super(
-          name: "Marathi (Marāṭhī)",
-          code: "MAR",
-          codeShort: "MR",
-          namesNative: const ["मराठी"],
-          family: const IndoEuropean(),
-          scripts: const {ScriptDeva()},
-        );
+    : super(
+        name: "Marathi (Marāṭhī)",
+        code: "MAR",
+        codeShort: "MR",
+        namesNative: const ["मराठी"],
+        family: const IndoEuropean(),
+        scripts: const {ScriptDeva()},
+      );
 }
 
 /// A class that represents the Macedonian language.
@@ -1610,15 +1610,15 @@ class LangMkd extends NaturalLanguage {
   ///
   /// ISO 639-2/T code: `MKD`, ISO 639-1 code: `MK`.
   const LangMkd()
-      : super(
-          name: "Macedonian",
-          code: "MKD",
-          codeShort: "MK",
-          namesNative: const ["македонски јазик"],
-          bibliographicCode: "MAC",
-          family: const IndoEuropean(),
-          scripts: const {ScriptCyrl()},
-        );
+    : super(
+        name: "Macedonian",
+        code: "MKD",
+        codeShort: "MK",
+        namesNative: const ["македонски јазик"],
+        bibliographicCode: "MAC",
+        family: const IndoEuropean(),
+        scripts: const {ScriptCyrl()},
+      );
 }
 
 /// A class that represents the Malagasy language.
@@ -1627,13 +1627,13 @@ class LangMlg extends NaturalLanguage {
   ///
   /// ISO 639-2/T code: `MLG`, ISO 639-1 code: `MG`.
   const LangMlg()
-      : super(
-          name: "Malagasy",
-          code: "MLG",
-          codeShort: "MG",
-          namesNative: const ["fiteny malagasy"],
-          family: const Austronesian(),
-        );
+    : super(
+        name: "Malagasy",
+        code: "MLG",
+        codeShort: "MG",
+        namesNative: const ["fiteny malagasy"],
+        family: const Austronesian(),
+      );
 }
 
 /// A class that represents the Maltese language.
@@ -1642,13 +1642,13 @@ class LangMlt extends NaturalLanguage {
   ///
   /// ISO 639-2/T code: `MLT`, ISO 639-1 code: `MT`.
   const LangMlt()
-      : super(
-          name: "Maltese",
-          code: "MLT",
-          codeShort: "MT",
-          namesNative: const ["Malti"],
-          family: const AfroAsiatic(),
-        );
+    : super(
+        name: "Maltese",
+        code: "MLT",
+        codeShort: "MT",
+        namesNative: const ["Malti"],
+        family: const AfroAsiatic(),
+      );
 }
 
 /// A class that represents the Mongolian language.
@@ -1657,14 +1657,14 @@ class LangMon extends NaturalLanguage {
   ///
   /// ISO 639-2/T code: `MON`, ISO 639-1 code: `MN`.
   const LangMon()
-      : super(
-          name: "Mongolian",
-          code: "MON",
-          codeShort: "MN",
-          namesNative: const ["Монгол хэл"],
-          family: const Mongolic(),
-          scripts: const {ScriptCyrl()},
-        );
+    : super(
+        name: "Mongolian",
+        code: "MON",
+        codeShort: "MN",
+        namesNative: const ["Монгол хэл"],
+        family: const Mongolic(),
+        scripts: const {ScriptCyrl()},
+      );
 }
 
 /// A class that represents the Māori language.
@@ -1673,14 +1673,14 @@ class LangMri extends NaturalLanguage {
   ///
   /// ISO 639-2/T code: `MRI`, ISO 639-1 code: `MI`.
   const LangMri()
-      : super(
-          name: "Māori",
-          code: "MRI",
-          codeShort: "MI",
-          namesNative: const ["te reo Māori"],
-          bibliographicCode: "MAO",
-          family: const Austronesian(),
-        );
+    : super(
+        name: "Māori",
+        code: "MRI",
+        codeShort: "MI",
+        namesNative: const ["te reo Māori"],
+        bibliographicCode: "MAO",
+        family: const Austronesian(),
+      );
 }
 
 /// A class that represents the Malay language.
@@ -1689,15 +1689,15 @@ class LangMsa extends NaturalLanguage {
   ///
   /// ISO 639-2/T code: `MSA`, ISO 639-1 code: `MS`.
   const LangMsa()
-      : super(
-          name: "Malay",
-          code: "MSA",
-          codeShort: "MS",
-          namesNative: const ["bahasa Melayu", "بهاس ملايو‎"],
-          bibliographicCode: "MAY",
-          family: const Austronesian(),
-          scripts: const {ScriptArab()},
-        );
+    : super(
+        name: "Malay",
+        code: "MSA",
+        codeShort: "MS",
+        namesNative: const ["bahasa Melayu", "بهاس ملايو‎"],
+        bibliographicCode: "MAY",
+        family: const Austronesian(),
+        scripts: const {ScriptArab()},
+      );
 }
 
 /// A class that represents the Burmese language.
@@ -1706,15 +1706,15 @@ class LangMya extends NaturalLanguage {
   ///
   /// ISO 639-2/T code: `MYA`, ISO 639-1 code: `MY`.
   const LangMya()
-      : super(
-          name: "Burmese",
-          code: "MYA",
-          codeShort: "MY",
-          namesNative: const ["ဗမာစာ"],
-          bibliographicCode: "BUR",
-          family: const SinoTibetan(),
-          scripts: const {ScriptMymr()},
-        );
+    : super(
+        name: "Burmese",
+        code: "MYA",
+        codeShort: "MY",
+        namesNative: const ["ဗမာစာ"],
+        bibliographicCode: "BUR",
+        family: const SinoTibetan(),
+        scripts: const {ScriptMymr()},
+      );
 }
 
 /// A class that represents the Nauruan language.
@@ -1723,13 +1723,13 @@ class LangNau extends NaturalLanguage {
   ///
   /// ISO 639-2/T code: `NAU`, ISO 639-1 code: `NA`.
   const LangNau()
-      : super(
-          name: "Nauruan",
-          code: "NAU",
-          codeShort: "NA",
-          namesNative: const ["Dorerin Naoero"],
-          family: const Austronesian(),
-        );
+    : super(
+        name: "Nauruan",
+        code: "NAU",
+        codeShort: "NA",
+        namesNative: const ["Dorerin Naoero"],
+        family: const Austronesian(),
+      );
 }
 
 /// A class that represents the Navajo (Navaho) language.
@@ -1738,13 +1738,13 @@ class LangNav extends NaturalLanguage {
   ///
   /// ISO 639-2/T code: `NAV`, ISO 639-1 code: `NV`.
   const LangNav()
-      : super(
-          name: "Navajo (Navaho)",
-          code: "NAV",
-          codeShort: "NV",
-          namesNative: const ["Diné bizaad"],
-          family: const DeneYeniseian(),
-        );
+    : super(
+        name: "Navajo (Navaho)",
+        code: "NAV",
+        codeShort: "NV",
+        namesNative: const ["Diné bizaad"],
+        family: const DeneYeniseian(),
+      );
 }
 
 /// A class that represents the Southern Ndebele language.
@@ -1753,13 +1753,13 @@ class LangNbl extends NaturalLanguage {
   ///
   /// ISO 639-2/T code: `NBL`, ISO 639-1 code: `NR`.
   const LangNbl()
-      : super(
-          name: "Southern Ndebele",
-          code: "NBL",
-          codeShort: "NR",
-          namesNative: const ["isiNdebele"],
-          family: const NigerCongo(),
-        );
+    : super(
+        name: "Southern Ndebele",
+        code: "NBL",
+        codeShort: "NR",
+        namesNative: const ["isiNdebele"],
+        family: const NigerCongo(),
+      );
 }
 
 /// A class that represents the Northern Ndebele language.
@@ -1768,13 +1768,13 @@ class LangNde extends NaturalLanguage {
   ///
   /// ISO 639-2/T code: `NDE`, ISO 639-1 code: `ND`.
   const LangNde()
-      : super(
-          name: "Northern Ndebele",
-          code: "NDE",
-          codeShort: "ND",
-          namesNative: const ["isiNdebele"],
-          family: const NigerCongo(),
-        );
+    : super(
+        name: "Northern Ndebele",
+        code: "NDE",
+        codeShort: "ND",
+        namesNative: const ["isiNdebele"],
+        family: const NigerCongo(),
+      );
 }
 
 /// A class that represents the Ndonga language.
@@ -1783,13 +1783,13 @@ class LangNdo extends NaturalLanguage {
   ///
   /// ISO 639-2/T code: `NDO`, ISO 639-1 code: `NG`.
   const LangNdo()
-      : super(
-          name: "Ndonga",
-          code: "NDO",
-          codeShort: "NG",
-          namesNative: const ["Owambo"],
-          family: const NigerCongo(),
-        );
+    : super(
+        name: "Ndonga",
+        code: "NDO",
+        codeShort: "NG",
+        namesNative: const ["Owambo"],
+        family: const NigerCongo(),
+      );
 }
 
 /// A class that represents the Nepali language.
@@ -1798,14 +1798,14 @@ class LangNep extends NaturalLanguage {
   ///
   /// ISO 639-2/T code: `NEP`, ISO 639-1 code: `NE`.
   const LangNep()
-      : super(
-          name: "Nepali",
-          code: "NEP",
-          codeShort: "NE",
-          namesNative: const ["नेपाली"],
-          family: const IndoEuropean(),
-          scripts: const {ScriptDeva()},
-        );
+    : super(
+        name: "Nepali",
+        code: "NEP",
+        codeShort: "NE",
+        namesNative: const ["नेपाली"],
+        family: const IndoEuropean(),
+        scripts: const {ScriptDeva()},
+      );
 }
 
 /// A class that represents the Dutch language.
@@ -1814,14 +1814,14 @@ class LangNld extends NaturalLanguage {
   ///
   /// ISO 639-2/T code: `NLD`, ISO 639-1 code: `NL`.
   const LangNld()
-      : super(
-          name: "Dutch",
-          code: "NLD",
-          codeShort: "NL",
-          namesNative: const ["Nederlands", "Vlaams"],
-          bibliographicCode: "DUT",
-          family: const IndoEuropean(),
-        );
+    : super(
+        name: "Dutch",
+        code: "NLD",
+        codeShort: "NL",
+        namesNative: const ["Nederlands", "Vlaams"],
+        bibliographicCode: "DUT",
+        family: const IndoEuropean(),
+      );
 }
 
 /// A class that represents the Norwegian Nynorsk language.
@@ -1830,13 +1830,13 @@ class LangNno extends NaturalLanguage {
   ///
   /// ISO 639-2/T code: `NNO`, ISO 639-1 code: `NN`.
   const LangNno()
-      : super(
-          name: "Norwegian Nynorsk",
-          code: "NNO",
-          codeShort: "NN",
-          namesNative: const ["Norsk nynorsk"],
-          family: const IndoEuropean(),
-        );
+    : super(
+        name: "Norwegian Nynorsk",
+        code: "NNO",
+        codeShort: "NN",
+        namesNative: const ["Norsk nynorsk"],
+        family: const IndoEuropean(),
+      );
 }
 
 /// A class that represents the Norwegian Bokmål language.
@@ -1845,13 +1845,13 @@ class LangNob extends NaturalLanguage {
   ///
   /// ISO 639-2/T code: `NOB`, ISO 639-1 code: `NB`.
   const LangNob()
-      : super(
-          name: "Norwegian Bokmål",
-          code: "NOB",
-          codeShort: "NB",
-          namesNative: const ["Norsk bokmål"],
-          family: const IndoEuropean(),
-        );
+    : super(
+        name: "Norwegian Bokmål",
+        code: "NOB",
+        codeShort: "NB",
+        namesNative: const ["Norsk bokmål"],
+        family: const IndoEuropean(),
+      );
 }
 
 /// A class that represents the Norwegian language.
@@ -1860,13 +1860,13 @@ class LangNor extends NaturalLanguage {
   ///
   /// ISO 639-2/T code: `NOR`, ISO 639-1 code: `NO`.
   const LangNor()
-      : super(
-          name: "Norwegian",
-          code: "NOR",
-          codeShort: "NO",
-          namesNative: const ["Norsk"],
-          family: const IndoEuropean(),
-        );
+    : super(
+        name: "Norwegian",
+        code: "NOR",
+        codeShort: "NO",
+        namesNative: const ["Norsk"],
+        family: const IndoEuropean(),
+      );
 }
 
 /// A class that represents the Chichewa (Chewa/Nyanja) language.
@@ -1875,13 +1875,13 @@ class LangNya extends NaturalLanguage {
   ///
   /// ISO 639-2/T code: `NYA`, ISO 639-1 code: `NY`.
   const LangNya()
-      : super(
-          name: "Chichewa (Chewa/Nyanja)",
-          code: "NYA",
-          codeShort: "NY",
-          namesNative: const ["chiCheŵa", "chinyanja"],
-          family: const NigerCongo(),
-        );
+    : super(
+        name: "Chichewa (Chewa/Nyanja)",
+        code: "NYA",
+        codeShort: "NY",
+        namesNative: const ["chiCheŵa", "chinyanja"],
+        family: const NigerCongo(),
+      );
 }
 
 /// A class that represents the Occitan language.
@@ -1890,13 +1890,13 @@ class LangOci extends NaturalLanguage {
   ///
   /// ISO 639-2/T code: `OCI`, ISO 639-1 code: `OC`.
   const LangOci()
-      : super(
-          name: "Occitan",
-          code: "OCI",
-          codeShort: "OC",
-          namesNative: const ["occitan", "lenga d'òc"],
-          family: const IndoEuropean(),
-        );
+    : super(
+        name: "Occitan",
+        code: "OCI",
+        codeShort: "OC",
+        namesNative: const ["occitan", "lenga d'òc"],
+        family: const IndoEuropean(),
+      );
 }
 
 /// A class that represents the Ojibwe (Ojibwa) language.
@@ -1905,13 +1905,13 @@ class LangOji extends NaturalLanguage {
   ///
   /// ISO 639-2/T code: `OJI`, ISO 639-1 code: `OJ`.
   const LangOji()
-      : super(
-          name: "Ojibwe (Ojibwa)",
-          code: "OJI",
-          codeShort: "OJ",
-          namesNative: const ["ᐊᓂᔑᓈᐯᒧᐎᓐ"],
-          family: const Algonquian(),
-        );
+    : super(
+        name: "Ojibwe (Ojibwa)",
+        code: "OJI",
+        codeShort: "OJ",
+        namesNative: const ["ᐊᓂᔑᓈᐯᒧᐎᓐ"],
+        family: const Algonquian(),
+      );
 }
 
 /// A class that represents the Oriya language.
@@ -1920,14 +1920,14 @@ class LangOri extends NaturalLanguage {
   ///
   /// ISO 639-2/T code: `ORI`, ISO 639-1 code: `OR`.
   const LangOri()
-      : super(
-          name: "Oriya",
-          code: "ORI",
-          codeShort: "OR",
-          namesNative: const ["ଓଡ଼ିଆ"],
-          family: const IndoEuropean(),
-          scripts: const {ScriptOrya()},
-        );
+    : super(
+        name: "Oriya",
+        code: "ORI",
+        codeShort: "OR",
+        namesNative: const ["ଓଡ଼ିଆ"],
+        family: const IndoEuropean(),
+        scripts: const {ScriptOrya()},
+      );
 }
 
 /// A class that represents the Oromo language.
@@ -1936,13 +1936,13 @@ class LangOrm extends NaturalLanguage {
   ///
   /// ISO 639-2/T code: `ORM`, ISO 639-1 code: `OM`.
   const LangOrm()
-      : super(
-          name: "Oromo",
-          code: "ORM",
-          codeShort: "OM",
-          namesNative: const ["Afaan Oromoo"],
-          family: const AfroAsiatic(),
-        );
+    : super(
+        name: "Oromo",
+        code: "ORM",
+        codeShort: "OM",
+        namesNative: const ["Afaan Oromoo"],
+        family: const AfroAsiatic(),
+      );
 }
 
 /// A class that represents the Ossetian (Ossetic) language.
@@ -1951,14 +1951,14 @@ class LangOss extends NaturalLanguage {
   ///
   /// ISO 639-2/T code: `OSS`, ISO 639-1 code: `OS`.
   const LangOss()
-      : super(
-          name: "Ossetian (Ossetic)",
-          code: "OSS",
-          codeShort: "OS",
-          namesNative: const ["ирон æвзаг"],
-          family: const IndoEuropean(),
-          scripts: const {ScriptCyrl()},
-        );
+    : super(
+        name: "Ossetian (Ossetic)",
+        code: "OSS",
+        codeShort: "OS",
+        namesNative: const ["ирон æвзаг"],
+        family: const IndoEuropean(),
+        scripts: const {ScriptCyrl()},
+      );
 }
 
 /// A class that represents the (Eastern) Punjabi language.
@@ -1967,14 +1967,14 @@ class LangPan extends NaturalLanguage {
   ///
   /// ISO 639-2/T code: `PAN`, ISO 639-1 code: `PA`.
   const LangPan()
-      : super(
-          name: "(Eastern) Punjabi",
-          code: "PAN",
-          codeShort: "PA",
-          namesNative: const ["ਪੰਜਾਬੀ"],
-          family: const IndoEuropean(),
-          scripts: const {ScriptGuru()},
-        );
+    : super(
+        name: "(Eastern) Punjabi",
+        code: "PAN",
+        codeShort: "PA",
+        namesNative: const ["ਪੰਜਾਬੀ"],
+        family: const IndoEuropean(),
+        scripts: const {ScriptGuru()},
+      );
 }
 
 /// A class that represents the Pāli language.
@@ -1983,20 +1983,20 @@ class LangPli extends NaturalLanguage {
   ///
   /// ISO 639-2/T code: `PLI`, ISO 639-1 code: `PI`.
   const LangPli()
-      : super(
-          name: "Pāli",
-          code: "PLI",
-          codeShort: "PI",
-          namesNative: const ["पाऴि"],
-          family: const IndoEuropean(),
-          scripts: const {
-            ScriptLatn(),
-            ScriptBrah(),
-            ScriptKhar(),
-            ScriptKhmr(),
-            ScriptThai(),
-          },
-        );
+    : super(
+        name: "Pāli",
+        code: "PLI",
+        codeShort: "PI",
+        namesNative: const ["पाऴि"],
+        family: const IndoEuropean(),
+        scripts: const {
+          ScriptLatn(),
+          ScriptBrah(),
+          ScriptKhar(),
+          ScriptKhmr(),
+          ScriptThai(),
+        },
+      );
 }
 
 /// A class that represents the Polish language.
@@ -2005,13 +2005,13 @@ class LangPol extends NaturalLanguage {
   ///
   /// ISO 639-2/T code: `POL`, ISO 639-1 code: `PL`.
   const LangPol()
-      : super(
-          name: "Polish",
-          code: "POL",
-          codeShort: "PL",
-          namesNative: const ["polski", "polszczyzna"],
-          family: const IndoEuropean(),
-        );
+    : super(
+        name: "Polish",
+        code: "POL",
+        codeShort: "PL",
+        namesNative: const ["polski", "polszczyzna"],
+        family: const IndoEuropean(),
+      );
 }
 
 /// A class that represents the Portuguese language.
@@ -2020,13 +2020,13 @@ class LangPor extends NaturalLanguage {
   ///
   /// ISO 639-2/T code: `POR`, ISO 639-1 code: `PT`.
   const LangPor()
-      : super(
-          name: "Portuguese",
-          code: "POR",
-          codeShort: "PT",
-          namesNative: const ["Português"],
-          family: const IndoEuropean(),
-        );
+    : super(
+        name: "Portuguese",
+        code: "POR",
+        codeShort: "PT",
+        namesNative: const ["Português"],
+        family: const IndoEuropean(),
+      );
 }
 
 /// A class that represents the Pashto (Pushto) language.
@@ -2035,15 +2035,15 @@ class LangPus extends NaturalLanguage {
   ///
   /// ISO 639-2/T code: `PUS`, ISO 639-1 code: `PS`.
   const LangPus()
-      : super(
-          name: "Pashto (Pushto)",
-          code: "PUS",
-          codeShort: "PS",
-          namesNative: const ["پښتو"],
-          family: const IndoEuropean(),
-          isRightToLeft: true,
-          scripts: const {ScriptArab()},
-        );
+    : super(
+        name: "Pashto (Pushto)",
+        code: "PUS",
+        codeShort: "PS",
+        namesNative: const ["پښتو"],
+        family: const IndoEuropean(),
+        isRightToLeft: true,
+        scripts: const {ScriptArab()},
+      );
 }
 
 /// A class that represents the Quechua language.
@@ -2052,13 +2052,13 @@ class LangQue extends NaturalLanguage {
   ///
   /// ISO 639-2/T code: `QUE`, ISO 639-1 code: `QU`.
   const LangQue()
-      : super(
-          name: "Quechua",
-          code: "QUE",
-          codeShort: "QU",
-          namesNative: const ["Runa Simi", "Kichwa"],
-          family: const Quechuan(),
-        );
+    : super(
+        name: "Quechua",
+        code: "QUE",
+        codeShort: "QU",
+        namesNative: const ["Runa Simi", "Kichwa"],
+        family: const Quechuan(),
+      );
 }
 
 /// A class that represents the Romansh language.
@@ -2067,13 +2067,13 @@ class LangRoh extends NaturalLanguage {
   ///
   /// ISO 639-2/T code: `ROH`, ISO 639-1 code: `RM`.
   const LangRoh()
-      : super(
-          name: "Romansh",
-          code: "ROH",
-          codeShort: "RM",
-          namesNative: const ["rumantsch grischun"],
-          family: const IndoEuropean(),
-        );
+    : super(
+        name: "Romansh",
+        code: "ROH",
+        codeShort: "RM",
+        namesNative: const ["rumantsch grischun"],
+        family: const IndoEuropean(),
+      );
 }
 
 /// A class that represents the Romanian language.
@@ -2082,14 +2082,14 @@ class LangRon extends NaturalLanguage {
   ///
   /// ISO 639-2/T code: `RON`, ISO 639-1 code: `RO`.
   const LangRon()
-      : super(
-          name: "Romanian",
-          code: "RON",
-          codeShort: "RO",
-          namesNative: const ["Română"],
-          bibliographicCode: "RUM",
-          family: const IndoEuropean(),
-        );
+    : super(
+        name: "Romanian",
+        code: "RON",
+        codeShort: "RO",
+        namesNative: const ["Română"],
+        bibliographicCode: "RUM",
+        family: const IndoEuropean(),
+      );
 }
 
 /// A class that represents the Kirundi language.
@@ -2098,13 +2098,13 @@ class LangRun extends NaturalLanguage {
   ///
   /// ISO 639-2/T code: `RUN`, ISO 639-1 code: `RN`.
   const LangRun()
-      : super(
-          name: "Kirundi",
-          code: "RUN",
-          codeShort: "RN",
-          namesNative: const ["Ikirundi"],
-          family: const NigerCongo(),
-        );
+    : super(
+        name: "Kirundi",
+        code: "RUN",
+        codeShort: "RN",
+        namesNative: const ["Ikirundi"],
+        family: const NigerCongo(),
+      );
 }
 
 /// A class that represents the Russian language.
@@ -2113,14 +2113,14 @@ class LangRus extends NaturalLanguage {
   ///
   /// ISO 639-2/T code: `RUS`, ISO 639-1 code: `RU`.
   const LangRus()
-      : super(
-          name: "Russian",
-          code: "RUS",
-          codeShort: "RU",
-          namesNative: const ["Русский"],
-          family: const IndoEuropean(),
-          scripts: const {ScriptCyrl()},
-        );
+    : super(
+        name: "Russian",
+        code: "RUS",
+        codeShort: "RU",
+        namesNative: const ["Русский"],
+        family: const IndoEuropean(),
+        scripts: const {ScriptCyrl()},
+      );
 }
 
 /// A class that represents the Sango language.
@@ -2129,13 +2129,13 @@ class LangSag extends NaturalLanguage {
   ///
   /// ISO 639-2/T code: `SAG`, ISO 639-1 code: `SG`.
   const LangSag()
-      : super(
-          name: "Sango",
-          code: "SAG",
-          codeShort: "SG",
-          namesNative: const ["yângâ tî sängö"],
-          family: const Creole(),
-        );
+    : super(
+        name: "Sango",
+        code: "SAG",
+        codeShort: "SG",
+        namesNative: const ["yângâ tî sängö"],
+        family: const Creole(),
+      );
 }
 
 /// A class that represents the Sanskrit (Saṁskṛta) language.
@@ -2144,14 +2144,14 @@ class LangSan extends NaturalLanguage {
   ///
   /// ISO 639-2/T code: `SAN`, ISO 639-1 code: `SA`.
   const LangSan()
-      : super(
-          name: "Sanskrit (Saṁskṛta)",
-          code: "SAN",
-          codeShort: "SA",
-          namesNative: const ["संस्कृतम्"],
-          family: const IndoEuropean(),
-          scripts: const {ScriptDeva()},
-        );
+    : super(
+        name: "Sanskrit (Saṁskṛta)",
+        code: "SAN",
+        codeShort: "SA",
+        namesNative: const ["संस्कृतम्"],
+        family: const IndoEuropean(),
+        scripts: const {ScriptDeva()},
+      );
 }
 
 /// A class that represents the Sinhalese (Sinhala) language.
@@ -2160,14 +2160,14 @@ class LangSin extends NaturalLanguage {
   ///
   /// ISO 639-2/T code: `SIN`, ISO 639-1 code: `SI`.
   const LangSin()
-      : super(
-          name: "Sinhalese (Sinhala)",
-          code: "SIN",
-          codeShort: "SI",
-          namesNative: const ["සිංහල"],
-          family: const IndoEuropean(),
-          scripts: const {ScriptSinh()},
-        );
+    : super(
+        name: "Sinhalese (Sinhala)",
+        code: "SIN",
+        codeShort: "SI",
+        namesNative: const ["සිංහල"],
+        family: const IndoEuropean(),
+        scripts: const {ScriptSinh()},
+      );
 }
 
 /// A class that represents the Slovak language.
@@ -2176,14 +2176,14 @@ class LangSlk extends NaturalLanguage {
   ///
   /// ISO 639-2/T code: `SLK`, ISO 639-1 code: `SK`.
   const LangSlk()
-      : super(
-          name: "Slovak",
-          code: "SLK",
-          codeShort: "SK",
-          namesNative: const ["slovenčina"],
-          bibliographicCode: "SLO",
-          family: const IndoEuropean(),
-        );
+    : super(
+        name: "Slovak",
+        code: "SLK",
+        codeShort: "SK",
+        namesNative: const ["slovenčina"],
+        bibliographicCode: "SLO",
+        family: const IndoEuropean(),
+      );
 }
 
 /// A class that represents the Slovene language.
@@ -2192,13 +2192,13 @@ class LangSlv extends NaturalLanguage {
   ///
   /// ISO 639-2/T code: `SLV`, ISO 639-1 code: `SL`.
   const LangSlv()
-      : super(
-          name: "Slovene",
-          code: "SLV",
-          codeShort: "SL",
-          namesNative: const ["slovenščina"],
-          family: const IndoEuropean(),
-        );
+    : super(
+        name: "Slovene",
+        code: "SLV",
+        codeShort: "SL",
+        namesNative: const ["slovenščina"],
+        family: const IndoEuropean(),
+      );
 }
 
 /// A class that represents the Northern Sami language.
@@ -2207,13 +2207,13 @@ class LangSme extends NaturalLanguage {
   ///
   /// ISO 639-2/T code: `SME`, ISO 639-1 code: `SE`.
   const LangSme()
-      : super(
-          name: "Northern Sami",
-          code: "SME",
-          codeShort: "SE",
-          namesNative: const ["Davvisámegiella"],
-          family: const Uralic(),
-        );
+    : super(
+        name: "Northern Sami",
+        code: "SME",
+        codeShort: "SE",
+        namesNative: const ["Davvisámegiella"],
+        family: const Uralic(),
+      );
 }
 
 /// A class that represents the Samoan language.
@@ -2222,13 +2222,13 @@ class LangSmo extends NaturalLanguage {
   ///
   /// ISO 639-2/T code: `SMO`, ISO 639-1 code: `SM`.
   const LangSmo()
-      : super(
-          name: "Samoan",
-          code: "SMO",
-          codeShort: "SM",
-          namesNative: const ["gagana fa'a Samoa"],
-          family: const Austronesian(),
-        );
+    : super(
+        name: "Samoan",
+        code: "SMO",
+        codeShort: "SM",
+        namesNative: const ["gagana fa'a Samoa"],
+        family: const Austronesian(),
+      );
 }
 
 /// A class that represents the Shona language.
@@ -2237,13 +2237,13 @@ class LangSna extends NaturalLanguage {
   ///
   /// ISO 639-2/T code: `SNA`, ISO 639-1 code: `SN`.
   const LangSna()
-      : super(
-          name: "Shona",
-          code: "SNA",
-          codeShort: "SN",
-          namesNative: const ["chiShona"],
-          family: const NigerCongo(),
-        );
+    : super(
+        name: "Shona",
+        code: "SNA",
+        codeShort: "SN",
+        namesNative: const ["chiShona"],
+        family: const NigerCongo(),
+      );
 }
 
 /// A class that represents the Sindhi language.
@@ -2252,15 +2252,15 @@ class LangSnd extends NaturalLanguage {
   ///
   /// ISO 639-2/T code: `SND`, ISO 639-1 code: `SD`.
   const LangSnd()
-      : super(
-          name: "Sindhi",
-          code: "SND",
-          codeShort: "SD",
-          namesNative: const ["सिन्धी", "سنڌي، سندھی‎"],
-          family: const IndoEuropean(),
-          isRightToLeft: true,
-          scripts: const {ScriptDeva()},
-        );
+    : super(
+        name: "Sindhi",
+        code: "SND",
+        codeShort: "SD",
+        namesNative: const ["सिन्धी", "سنڌي، سندھی‎"],
+        family: const IndoEuropean(),
+        isRightToLeft: true,
+        scripts: const {ScriptDeva()},
+      );
 }
 
 /// A class that represents the Somali language.
@@ -2269,13 +2269,13 @@ class LangSom extends NaturalLanguage {
   ///
   /// ISO 639-2/T code: `SOM`, ISO 639-1 code: `SO`.
   const LangSom()
-      : super(
-          name: "Somali",
-          code: "SOM",
-          codeShort: "SO",
-          namesNative: const ["Soomaaliga"],
-          family: const AfroAsiatic(),
-        );
+    : super(
+        name: "Somali",
+        code: "SOM",
+        codeShort: "SO",
+        namesNative: const ["Soomaaliga"],
+        family: const AfroAsiatic(),
+      );
 }
 
 /// A class that represents the Southern Sotho language.
@@ -2284,13 +2284,13 @@ class LangSot extends NaturalLanguage {
   ///
   /// ISO 639-2/T code: `SOT`, ISO 639-1 code: `ST`.
   const LangSot()
-      : super(
-          name: "Southern Sotho",
-          code: "SOT",
-          codeShort: "ST",
-          namesNative: const ["Sesotho"],
-          family: const NigerCongo(),
-        );
+    : super(
+        name: "Southern Sotho",
+        code: "SOT",
+        codeShort: "ST",
+        namesNative: const ["Sesotho"],
+        family: const NigerCongo(),
+      );
 }
 
 /// A class that represents the Spanish language.
@@ -2299,13 +2299,13 @@ class LangSpa extends NaturalLanguage {
   ///
   /// ISO 639-2/T code: `SPA`, ISO 639-1 code: `ES`.
   const LangSpa()
-      : super(
-          name: "Spanish",
-          code: "SPA",
-          codeShort: "ES",
-          namesNative: const ["Español"],
-          family: const IndoEuropean(),
-        );
+    : super(
+        name: "Spanish",
+        code: "SPA",
+        codeShort: "ES",
+        namesNative: const ["Español"],
+        family: const IndoEuropean(),
+      );
 }
 
 /// A class that represents the Albanian language.
@@ -2314,14 +2314,14 @@ class LangSqi extends NaturalLanguage {
   ///
   /// ISO 639-2/T code: `SQI`, ISO 639-1 code: `SQ`.
   const LangSqi()
-      : super(
-          name: "Albanian",
-          code: "SQI",
-          codeShort: "SQ",
-          namesNative: const ["Shqip"],
-          bibliographicCode: "ALB",
-          family: const IndoEuropean(),
-        );
+    : super(
+        name: "Albanian",
+        code: "SQI",
+        codeShort: "SQ",
+        namesNative: const ["Shqip"],
+        bibliographicCode: "ALB",
+        family: const IndoEuropean(),
+      );
 }
 
 /// A class that represents the Sardinian language.
@@ -2330,13 +2330,13 @@ class LangSrd extends NaturalLanguage {
   ///
   /// ISO 639-2/T code: `SRD`, ISO 639-1 code: `SC`.
   const LangSrd()
-      : super(
-          name: "Sardinian",
-          code: "SRD",
-          codeShort: "SC",
-          namesNative: const ["sardu"],
-          family: const IndoEuropean(),
-        );
+    : super(
+        name: "Sardinian",
+        code: "SRD",
+        codeShort: "SC",
+        namesNative: const ["sardu"],
+        family: const IndoEuropean(),
+      );
 }
 
 /// A class that represents the Serbian language.
@@ -2345,14 +2345,14 @@ class LangSrp extends NaturalLanguage {
   ///
   /// ISO 639-2/T code: `SRP`, ISO 639-1 code: `SR`.
   const LangSrp()
-      : super(
-          name: "Serbian",
-          code: "SRP",
-          codeShort: "SR",
-          namesNative: const ["српски језик"],
-          family: const IndoEuropean(),
-          scripts: const {ScriptCyrl(), ScriptLatn()},
-        );
+    : super(
+        name: "Serbian",
+        code: "SRP",
+        codeShort: "SR",
+        namesNative: const ["српски језик"],
+        family: const IndoEuropean(),
+        scripts: const {ScriptCyrl(), ScriptLatn()},
+      );
 }
 
 /// A class that represents the Swati language.
@@ -2361,13 +2361,13 @@ class LangSsw extends NaturalLanguage {
   ///
   /// ISO 639-2/T code: `SSW`, ISO 639-1 code: `SS`.
   const LangSsw()
-      : super(
-          name: "Swati",
-          code: "SSW",
-          codeShort: "SS",
-          namesNative: const ["SiSwati"],
-          family: const NigerCongo(),
-        );
+    : super(
+        name: "Swati",
+        code: "SSW",
+        codeShort: "SS",
+        namesNative: const ["SiSwati"],
+        family: const NigerCongo(),
+      );
 }
 
 /// A class that represents the Sundanese language.
@@ -2376,13 +2376,13 @@ class LangSun extends NaturalLanguage {
   ///
   /// ISO 639-2/T code: `SUN`, ISO 639-1 code: `SU`.
   const LangSun()
-      : super(
-          name: "Sundanese",
-          code: "SUN",
-          codeShort: "SU",
-          namesNative: const ["Basa Sunda"],
-          family: const Austronesian(),
-        );
+    : super(
+        name: "Sundanese",
+        code: "SUN",
+        codeShort: "SU",
+        namesNative: const ["Basa Sunda"],
+        family: const Austronesian(),
+      );
 }
 
 /// A class that represents the Swahili language.
@@ -2391,13 +2391,13 @@ class LangSwa extends NaturalLanguage {
   ///
   /// ISO 639-2/T code: `SWA`, ISO 639-1 code: `SW`.
   const LangSwa()
-      : super(
-          name: "Swahili",
-          code: "SWA",
-          codeShort: "SW",
-          namesNative: const ["Kiswahili"],
-          family: const NigerCongo(),
-        );
+    : super(
+        name: "Swahili",
+        code: "SWA",
+        codeShort: "SW",
+        namesNative: const ["Kiswahili"],
+        family: const NigerCongo(),
+      );
 }
 
 /// A class that represents the Swedish language.
@@ -2406,13 +2406,13 @@ class LangSwe extends NaturalLanguage {
   ///
   /// ISO 639-2/T code: `SWE`, ISO 639-1 code: `SV`.
   const LangSwe()
-      : super(
-          name: "Swedish",
-          code: "SWE",
-          codeShort: "SV",
-          namesNative: const ["svenska"],
-          family: const IndoEuropean(),
-        );
+    : super(
+        name: "Swedish",
+        code: "SWE",
+        codeShort: "SV",
+        namesNative: const ["svenska"],
+        family: const IndoEuropean(),
+      );
 }
 
 /// A class that represents the Tahitian language.
@@ -2421,13 +2421,13 @@ class LangTah extends NaturalLanguage {
   ///
   /// ISO 639-2/T code: `TAH`, ISO 639-1 code: `TY`.
   const LangTah()
-      : super(
-          name: "Tahitian",
-          code: "TAH",
-          codeShort: "TY",
-          namesNative: const ["Reo Tahiti"],
-          family: const Austronesian(),
-        );
+    : super(
+        name: "Tahitian",
+        code: "TAH",
+        codeShort: "TY",
+        namesNative: const ["Reo Tahiti"],
+        family: const Austronesian(),
+      );
 }
 
 /// A class that represents the Tamil language.
@@ -2436,14 +2436,14 @@ class LangTam extends NaturalLanguage {
   ///
   /// ISO 639-2/T code: `TAM`, ISO 639-1 code: `TA`.
   const LangTam()
-      : super(
-          name: "Tamil",
-          code: "TAM",
-          codeShort: "TA",
-          namesNative: const ["தமிழ்"],
-          family: const Dravidian(),
-          scripts: const {ScriptTaml()},
-        );
+    : super(
+        name: "Tamil",
+        code: "TAM",
+        codeShort: "TA",
+        namesNative: const ["தமிழ்"],
+        family: const Dravidian(),
+        scripts: const {ScriptTaml()},
+      );
 }
 
 /// A class that represents the Tatar language.
@@ -2452,14 +2452,14 @@ class LangTat extends NaturalLanguage {
   ///
   /// ISO 639-2/T code: `TAT`, ISO 639-1 code: `TT`.
   const LangTat()
-      : super(
-          name: "Tatar",
-          code: "TAT",
-          codeShort: "TT",
-          namesNative: const ["татар теле", "tatar tele"],
-          family: const Turkic(),
-          scripts: const {ScriptCyrl()},
-        );
+    : super(
+        name: "Tatar",
+        code: "TAT",
+        codeShort: "TT",
+        namesNative: const ["татар теле", "tatar tele"],
+        family: const Turkic(),
+        scripts: const {ScriptCyrl()},
+      );
 }
 
 /// A class that represents the Telugu language.
@@ -2468,14 +2468,14 @@ class LangTel extends NaturalLanguage {
   ///
   /// ISO 639-2/T code: `TEL`, ISO 639-1 code: `TE`.
   const LangTel()
-      : super(
-          name: "Telugu",
-          code: "TEL",
-          codeShort: "TE",
-          namesNative: const ["తెలుగు"],
-          family: const Dravidian(),
-          scripts: const {ScriptTelu()},
-        );
+    : super(
+        name: "Telugu",
+        code: "TEL",
+        codeShort: "TE",
+        namesNative: const ["తెలుగు"],
+        family: const Dravidian(),
+        scripts: const {ScriptTelu()},
+      );
 }
 
 /// A class that represents the Tajik language.
@@ -2484,14 +2484,14 @@ class LangTgk extends NaturalLanguage {
   ///
   /// ISO 639-2/T code: `TGK`, ISO 639-1 code: `TG`.
   const LangTgk()
-      : super(
-          name: "Tajik",
-          code: "TGK",
-          codeShort: "TG",
-          namesNative: const ["тоҷикӣ", "تاجیکی‎", "toçikī"],
-          family: const IndoEuropean(),
-          scripts: const {ScriptCyrl()},
-        );
+    : super(
+        name: "Tajik",
+        code: "TGK",
+        codeShort: "TG",
+        namesNative: const ["тоҷикӣ", "تاجیکی‎", "toçikī"],
+        family: const IndoEuropean(),
+        scripts: const {ScriptCyrl()},
+      );
 }
 
 /// A class that represents the Tagalog language.
@@ -2500,13 +2500,13 @@ class LangTgl extends NaturalLanguage {
   ///
   /// ISO 639-2/T code: `TGL`, ISO 639-1 code: `TL`.
   const LangTgl()
-      : super(
-          name: "Tagalog",
-          code: "TGL",
-          codeShort: "TL",
-          namesNative: const ["Wikang Tagalog"],
-          family: const Austronesian(),
-        );
+    : super(
+        name: "Tagalog",
+        code: "TGL",
+        codeShort: "TL",
+        namesNative: const ["Wikang Tagalog"],
+        family: const Austronesian(),
+      );
 }
 
 /// A class that represents the Thai language.
@@ -2515,14 +2515,14 @@ class LangTha extends NaturalLanguage {
   ///
   /// ISO 639-2/T code: `THA`, ISO 639-1 code: `TH`.
   const LangTha()
-      : super(
-          name: "Thai",
-          code: "THA",
-          codeShort: "TH",
-          namesNative: const ["ไทย"],
-          family: const TaiKadai(),
-          scripts: const {ScriptThai()},
-        );
+    : super(
+        name: "Thai",
+        code: "THA",
+        codeShort: "TH",
+        namesNative: const ["ไทย"],
+        family: const TaiKadai(),
+        scripts: const {ScriptThai()},
+      );
 }
 
 /// A class that represents the Tigrinya language.
@@ -2531,14 +2531,14 @@ class LangTir extends NaturalLanguage {
   ///
   /// ISO 639-2/T code: `TIR`, ISO 639-1 code: `TI`.
   const LangTir()
-      : super(
-          name: "Tigrinya",
-          code: "TIR",
-          codeShort: "TI",
-          namesNative: const ["ትግርኛ"],
-          family: const AfroAsiatic(),
-          scripts: const {ScriptEthi()},
-        );
+    : super(
+        name: "Tigrinya",
+        code: "TIR",
+        codeShort: "TI",
+        namesNative: const ["ትግርኛ"],
+        family: const AfroAsiatic(),
+        scripts: const {ScriptEthi()},
+      );
 }
 
 /// A class that represents the Tonga (Tonga Islands) language.
@@ -2547,13 +2547,13 @@ class LangTon extends NaturalLanguage {
   ///
   /// ISO 639-2/T code: `TON`, ISO 639-1 code: `TO`.
   const LangTon()
-      : super(
-          name: "Tonga (Tonga Islands)",
-          code: "TON",
-          codeShort: "TO",
-          namesNative: const ["faka Tonga"],
-          family: const Austronesian(),
-        );
+    : super(
+        name: "Tonga (Tonga Islands)",
+        code: "TON",
+        codeShort: "TO",
+        namesNative: const ["faka Tonga"],
+        family: const Austronesian(),
+      );
 }
 
 /// A class that represents the Tswana language.
@@ -2562,13 +2562,13 @@ class LangTsn extends NaturalLanguage {
   ///
   /// ISO 639-2/T code: `TSN`, ISO 639-1 code: `TN`.
   const LangTsn()
-      : super(
-          name: "Tswana",
-          code: "TSN",
-          codeShort: "TN",
-          namesNative: const ["Setswana"],
-          family: const NigerCongo(),
-        );
+    : super(
+        name: "Tswana",
+        code: "TSN",
+        codeShort: "TN",
+        namesNative: const ["Setswana"],
+        family: const NigerCongo(),
+      );
 }
 
 /// A class that represents the Tsonga language.
@@ -2577,13 +2577,13 @@ class LangTso extends NaturalLanguage {
   ///
   /// ISO 639-2/T code: `TSO`, ISO 639-1 code: `TS`.
   const LangTso()
-      : super(
-          name: "Tsonga",
-          code: "TSO",
-          codeShort: "TS",
-          namesNative: const ["Xitsonga"],
-          family: const NigerCongo(),
-        );
+    : super(
+        name: "Tsonga",
+        code: "TSO",
+        codeShort: "TS",
+        namesNative: const ["Xitsonga"],
+        family: const NigerCongo(),
+      );
 }
 
 /// A class that represents the Turkmen language.
@@ -2592,13 +2592,13 @@ class LangTuk extends NaturalLanguage {
   ///
   /// ISO 639-2/T code: `TUK`, ISO 639-1 code: `TK`.
   const LangTuk()
-      : super(
-          name: "Turkmen",
-          code: "TUK",
-          codeShort: "TK",
-          namesNative: const ["Türkmen", "Түркмен"],
-          family: const Turkic(),
-        );
+    : super(
+        name: "Turkmen",
+        code: "TUK",
+        codeShort: "TK",
+        namesNative: const ["Türkmen", "Түркмен"],
+        family: const Turkic(),
+      );
 }
 
 /// A class that represents the Turkish language.
@@ -2607,13 +2607,13 @@ class LangTur extends NaturalLanguage {
   ///
   /// ISO 639-2/T code: `TUR`, ISO 639-1 code: `TR`.
   const LangTur()
-      : super(
-          name: "Turkish",
-          code: "TUR",
-          codeShort: "TR",
-          namesNative: const ["Türkçe"],
-          family: const Turkic(),
-        );
+    : super(
+        name: "Turkish",
+        code: "TUR",
+        codeShort: "TR",
+        namesNative: const ["Türkçe"],
+        family: const Turkic(),
+      );
 }
 
 /// A class that represents the Twi language.
@@ -2622,13 +2622,13 @@ class LangTwi extends NaturalLanguage {
   ///
   /// ISO 639-2/T code: `TWI`, ISO 639-1 code: `TW`.
   const LangTwi()
-      : super(
-          name: "Twi",
-          code: "TWI",
-          codeShort: "TW",
-          namesNative: const ["Twi"],
-          family: const NigerCongo(),
-        );
+    : super(
+        name: "Twi",
+        code: "TWI",
+        codeShort: "TW",
+        namesNative: const ["Twi"],
+        family: const NigerCongo(),
+      );
 }
 
 /// A class that represents the Uyghur language.
@@ -2637,14 +2637,14 @@ class LangUig extends NaturalLanguage {
   ///
   /// ISO 639-2/T code: `UIG`, ISO 639-1 code: `UG`.
   const LangUig()
-      : super(
-          name: "Uyghur",
-          code: "UIG",
-          codeShort: "UG",
-          namesNative: const ["ئۇيغۇرچە‎", "Uyghurche"],
-          family: const Turkic(),
-          scripts: const {ScriptArab()},
-        );
+    : super(
+        name: "Uyghur",
+        code: "UIG",
+        codeShort: "UG",
+        namesNative: const ["ئۇيغۇرچە‎", "Uyghurche"],
+        family: const Turkic(),
+        scripts: const {ScriptArab()},
+      );
 }
 
 /// A class that represents the Ukrainian language.
@@ -2653,14 +2653,14 @@ class LangUkr extends NaturalLanguage {
   ///
   /// ISO 639-2/T code: `UKR`, ISO 639-1 code: `UK`.
   const LangUkr()
-      : super(
-          name: "Ukrainian",
-          code: "UKR",
-          codeShort: "UK",
-          namesNative: const ["Українська"],
-          family: const IndoEuropean(),
-          scripts: const {ScriptCyrl()},
-        );
+    : super(
+        name: "Ukrainian",
+        code: "UKR",
+        codeShort: "UK",
+        namesNative: const ["Українська"],
+        family: const IndoEuropean(),
+        scripts: const {ScriptCyrl()},
+      );
 }
 
 /// A class that represents the Urdu language.
@@ -2669,15 +2669,15 @@ class LangUrd extends NaturalLanguage {
   ///
   /// ISO 639-2/T code: `URD`, ISO 639-1 code: `UR`.
   const LangUrd()
-      : super(
-          name: "Urdu",
-          code: "URD",
-          codeShort: "UR",
-          namesNative: const ["اردو"],
-          family: const IndoEuropean(),
-          isRightToLeft: true,
-          scripts: const {ScriptArab()},
-        );
+    : super(
+        name: "Urdu",
+        code: "URD",
+        codeShort: "UR",
+        namesNative: const ["اردو"],
+        family: const IndoEuropean(),
+        isRightToLeft: true,
+        scripts: const {ScriptArab()},
+      );
 }
 
 /// A class that represents the Uzbek language.
@@ -2686,13 +2686,13 @@ class LangUzb extends NaturalLanguage {
   ///
   /// ISO 639-2/T code: `UZB`, ISO 639-1 code: `UZ`.
   const LangUzb()
-      : super(
-          name: "Uzbek",
-          code: "UZB",
-          codeShort: "UZ",
-          namesNative: const ["Ўзбек", "أۇزبېك‎", "Oʻzbek"],
-          family: const Turkic(),
-        );
+    : super(
+        name: "Uzbek",
+        code: "UZB",
+        codeShort: "UZ",
+        namesNative: const ["Ўзбек", "أۇزبېك‎", "Oʻzbek"],
+        family: const Turkic(),
+      );
 }
 
 /// A class that represents the Venda language.
@@ -2701,13 +2701,13 @@ class LangVen extends NaturalLanguage {
   ///
   /// ISO 639-2/T code: `VEN`, ISO 639-1 code: `VE`.
   const LangVen()
-      : super(
-          name: "Venda",
-          code: "VEN",
-          codeShort: "VE",
-          namesNative: const ["Tshivenḓa"],
-          family: const NigerCongo(),
-        );
+    : super(
+        name: "Venda",
+        code: "VEN",
+        codeShort: "VE",
+        namesNative: const ["Tshivenḓa"],
+        family: const NigerCongo(),
+      );
 }
 
 /// A class that represents the Vietnamese language.
@@ -2716,13 +2716,13 @@ class LangVie extends NaturalLanguage {
   ///
   /// ISO 639-2/T code: `VIE`, ISO 639-1 code: `VI`.
   const LangVie()
-      : super(
-          name: "Vietnamese",
-          code: "VIE",
-          codeShort: "VI",
-          namesNative: const ["Tiếng Việt"],
-          family: const Austroasiatic(),
-        );
+    : super(
+        name: "Vietnamese",
+        code: "VIE",
+        codeShort: "VI",
+        namesNative: const ["Tiếng Việt"],
+        family: const Austroasiatic(),
+      );
 }
 
 /// A class that represents the Volapük language.
@@ -2731,13 +2731,13 @@ class LangVol extends NaturalLanguage {
   ///
   /// ISO 639-2/T code: `VOL`, ISO 639-1 code: `VO`.
   const LangVol()
-      : super(
-          name: "Volapük",
-          code: "VOL",
-          codeShort: "VO",
-          namesNative: const ["Volapük"],
-          family: const Constructed(),
-        );
+    : super(
+        name: "Volapük",
+        code: "VOL",
+        codeShort: "VO",
+        namesNative: const ["Volapük"],
+        family: const Constructed(),
+      );
 }
 
 /// A class that represents the Walloon language.
@@ -2746,13 +2746,13 @@ class LangWln extends NaturalLanguage {
   ///
   /// ISO 639-2/T code: `WLN`, ISO 639-1 code: `WA`.
   const LangWln()
-      : super(
-          name: "Walloon",
-          code: "WLN",
-          codeShort: "WA",
-          namesNative: const ["walon"],
-          family: const IndoEuropean(),
-        );
+    : super(
+        name: "Walloon",
+        code: "WLN",
+        codeShort: "WA",
+        namesNative: const ["walon"],
+        family: const IndoEuropean(),
+      );
 }
 
 /// A class that represents the Wolof language.
@@ -2761,13 +2761,13 @@ class LangWol extends NaturalLanguage {
   ///
   /// ISO 639-2/T code: `WOL`, ISO 639-1 code: `WO`.
   const LangWol()
-      : super(
-          name: "Wolof",
-          code: "WOL",
-          codeShort: "WO",
-          namesNative: const ["Wollof"],
-          family: const NigerCongo(),
-        );
+    : super(
+        name: "Wolof",
+        code: "WOL",
+        codeShort: "WO",
+        namesNative: const ["Wollof"],
+        family: const NigerCongo(),
+      );
 }
 
 /// A class that represents the Xhosa language.
@@ -2776,13 +2776,13 @@ class LangXho extends NaturalLanguage {
   ///
   /// ISO 639-2/T code: `XHO`, ISO 639-1 code: `XH`.
   const LangXho()
-      : super(
-          name: "Xhosa",
-          code: "XHO",
-          codeShort: "XH",
-          namesNative: const ["isiXhosa"],
-          family: const NigerCongo(),
-        );
+    : super(
+        name: "Xhosa",
+        code: "XHO",
+        codeShort: "XH",
+        namesNative: const ["isiXhosa"],
+        family: const NigerCongo(),
+      );
 }
 
 /// A class that represents the Yiddish language.
@@ -2791,15 +2791,15 @@ class LangYid extends NaturalLanguage {
   ///
   /// ISO 639-2/T code: `YID`, ISO 639-1 code: `YI`.
   const LangYid()
-      : super(
-          name: "Yiddish",
-          code: "YID",
-          codeShort: "YI",
-          namesNative: const ["ייִדיש"],
-          family: const IndoEuropean(),
-          isRightToLeft: true,
-          scripts: const {ScriptHebr()},
-        );
+    : super(
+        name: "Yiddish",
+        code: "YID",
+        codeShort: "YI",
+        namesNative: const ["ייִדיש"],
+        family: const IndoEuropean(),
+        isRightToLeft: true,
+        scripts: const {ScriptHebr()},
+      );
 }
 
 /// A class that represents the Yoruba language.
@@ -2808,13 +2808,13 @@ class LangYor extends NaturalLanguage {
   ///
   /// ISO 639-2/T code: `YOR`, ISO 639-1 code: `YO`.
   const LangYor()
-      : super(
-          name: "Yoruba",
-          code: "YOR",
-          codeShort: "YO",
-          namesNative: const ["Yorùbá"],
-          family: const NigerCongo(),
-        );
+    : super(
+        name: "Yoruba",
+        code: "YOR",
+        codeShort: "YO",
+        namesNative: const ["Yorùbá"],
+        family: const NigerCongo(),
+      );
 }
 
 /// A class that represents the Zhuang (Chuang) language.
@@ -2823,13 +2823,13 @@ class LangZha extends NaturalLanguage {
   ///
   /// ISO 639-2/T code: `ZHA`, ISO 639-1 code: `ZA`.
   const LangZha()
-      : super(
-          name: "Zhuang (Chuang)",
-          code: "ZHA",
-          codeShort: "ZA",
-          namesNative: const ["Saɯ cueŋƅ", "Saw cuengh"],
-          family: const TaiKadai(),
-        );
+    : super(
+        name: "Zhuang (Chuang)",
+        code: "ZHA",
+        codeShort: "ZA",
+        namesNative: const ["Saɯ cueŋƅ", "Saw cuengh"],
+        family: const TaiKadai(),
+      );
 }
 
 /// A class that represents the Chinese language.
@@ -2838,20 +2838,15 @@ class LangZho extends NaturalLanguage {
   ///
   /// ISO 639-2/T code: `ZHO`, ISO 639-1 code: `ZH`.
   const LangZho()
-      : super(
-          name: "Chinese",
-          code: "ZHO",
-          codeShort: "ZH",
-          namesNative: const ["中文 (Zhōngwén)", "汉语", "漢語"],
-          bibliographicCode: "CHI",
-          family: const SinoTibetan(),
-          scripts: const {
-            ScriptHans(),
-            ScriptHant(),
-            ScriptBopo(),
-            ScriptLatn(),
-          },
-        );
+    : super(
+        name: "Chinese",
+        code: "ZHO",
+        codeShort: "ZH",
+        namesNative: const ["中文 (Zhōngwén)", "汉语", "漢語"],
+        bibliographicCode: "CHI",
+        family: const SinoTibetan(),
+        scripts: const {ScriptHans(), ScriptHant(), ScriptBopo(), ScriptLatn()},
+      );
 }
 
 /// A class that represents the Zulu language.
@@ -2860,11 +2855,11 @@ class LangZul extends NaturalLanguage {
   ///
   /// ISO 639-2/T code: `ZUL`, ISO 639-1 code: `ZU`.
   const LangZul()
-      : super(
-          name: "Zulu",
-          code: "ZUL",
-          codeShort: "ZU",
-          namesNative: const ["isiZulu"],
-          family: const NigerCongo(),
-        );
+    : super(
+        name: "Zulu",
+        code: "ZUL",
+        codeShort: "ZU",
+        namesNative: const ["isiZulu"],
+        family: const NigerCongo(),
+      );
 }

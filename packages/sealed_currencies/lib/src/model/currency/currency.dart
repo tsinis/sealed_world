@@ -41,12 +41,12 @@ sealed class Currency implements Named<String> {
     required this.name,
     required this.thousandsSeparator,
     this.symbol,
-  })  : assert(code.length > 0, "`code` should not be empty!"),
-        assert(name.length > 0, "`name` should not be empty!"),
-        assert(
-          symbol == null || symbol.length > 0,
-          "`symbol` should not be empty!",
-        );
+  }) : assert(code.length > 0, "`code` should not be empty!"),
+       assert(name.length > 0, "`name` should not be empty!"),
+       assert(
+         symbol == null || symbol.length > 0,
+         "`symbol` should not be empty!",
+       );
 
   /// The standardized code for the currency.
   ///

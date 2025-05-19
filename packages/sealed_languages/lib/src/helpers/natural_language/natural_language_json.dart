@@ -42,17 +42,17 @@ extension NaturalLanguageJson on NaturalLanguage {
   /// final english = NaturalLanguageJson.fromMap(jsonMap);
   /// ```
   static NaturalLanguage fromMap(JsonMap map) => NaturalLanguage(
-        name: map["name"].toString(),
-        codeShort: map["codeShort"].toString(),
-        namesNative: List<String>.unmodifiable(map["namesNative"] as List),
-        code: map["code"].toString(),
-        bibliographicCode: map["bibliographicCode"]?.toString(),
-        family: NaturalLanguageFamily.fromName(map["family"].toString()),
-        isRightToLeft: map["isRightToLeft"] as bool,
-        scripts: (map["scripts"] as List<Object?>)
-            .fromIsoList(Script.fromCode)
-            .toSet(),
-      );
+    name: map["name"].toString(),
+    codeShort: map["codeShort"].toString(),
+    namesNative: List<String>.unmodifiable(map["namesNative"] as List),
+    code: map["code"].toString(),
+    bibliographicCode: map["bibliographicCode"]?.toString(),
+    family: NaturalLanguageFamily.fromName(map["family"].toString()),
+    isRightToLeft: map["isRightToLeft"] as bool,
+    scripts: (map["scripts"] as List<Object?>)
+        .fromIsoList(Script.fromCode)
+        .toSet(),
+  );
 
   /// Converts the [NaturalLanguage] object to a JSON map.
   ///
@@ -74,15 +74,16 @@ extension NaturalLanguageJson on NaturalLanguage {
   /// final jsonMap = LangEng().toMap();
   /// ```
   JsonObjectMap toMap() => {
-        "bibliographicCode": bibliographicCode,
-        "code": code,
-        "codeShort": codeShort,
-        "family": family.name,
-        "isRightToLeft": isRightToLeft,
-        "name": name,
-        "namesNative": namesNative,
-        "scripts": scripts.toIsoList(),
-        "translations":
-            translations.map((l10n) => l10n.toMap()).toList(growable: false),
-      };
+    "bibliographicCode": bibliographicCode,
+    "code": code,
+    "codeShort": codeShort,
+    "family": family.name,
+    "isRightToLeft": isRightToLeft,
+    "name": name,
+    "namesNative": namesNative,
+    "scripts": scripts.toIsoList(),
+    "translations": translations
+        .map((l10n) => l10n.toMap())
+        .toList(growable: false),
+  };
 }

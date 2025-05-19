@@ -196,11 +196,7 @@ const kydCurrencyTranslations = [
   TranslatedName(LangUkr(), name: "долар Кайманових островів"),
   TranslatedName(LangUrd(), name: "کیمین آئلینڈز ڈالر"),
   TranslatedName(LangUzb(), name: "Kayman orollari dollari"),
-  TranslatedName(
-    LangUzb(),
-    name: "Кайман ороли Доллари",
-    script: ScriptCyrl(),
-  ),
+  TranslatedName(LangUzb(), name: "Кайман ороли Доллари", script: ScriptCyrl()),
   TranslatedName(LangVie(), name: "Đô la Quần đảo Cayman"),
   TranslatedName(LangZho(), name: "开曼元"),
   TranslatedName(

@@ -116,11 +116,7 @@ const bobCurrencyTranslations = [
   TranslatedName(LangBen(), name: "বলিভিয়ানো"),
   TranslatedName(LangBre(), name: "boliviano Bolivia"),
   TranslatedName(LangBos(), name: "Bolivijski boliviano"),
-  TranslatedName(
-    LangBos(),
-    name: "Боливијски Боливиано",
-    script: ScriptCyrl(),
-  ),
+  TranslatedName(LangBos(), name: "Боливијски Боливиано", script: ScriptCyrl()),
   TranslatedName(LangCat(), name: "bolivià"),
   TranslatedName(LangChe(), name: "Боливин боливиано"),
   TranslatedName(LangCes(), name: "bolivijský boliviano"),

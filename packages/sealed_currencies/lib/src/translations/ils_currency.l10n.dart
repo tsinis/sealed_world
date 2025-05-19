@@ -103,11 +103,7 @@ const ilsCurrencyTranslations = [
   TranslatedName(LangBen(), name: "ইস্রাইলি নতুন শেকেল"),
   TranslatedName(LangBre(), name: "shekel nevez Israel"),
   TranslatedName(LangBos(), name: "Izraelski novi šekel"),
-  TranslatedName(
-    LangBos(),
-    name: "Израелски нови шекел",
-    script: ScriptCyrl(),
-  ),
+  TranslatedName(LangBos(), name: "Израелски нови шекел", script: ScriptCyrl()),
   TranslatedName(LangCat(), name: "nou xéquel israelià"),
   TranslatedName(LangChe(), name: "Израилан керла шекель"),
   TranslatedName(LangCes(), name: "izraelský nový šekel"),

@@ -174,14 +174,13 @@ abstract class BasicPicker<T extends IsoTranslated>
   ) {
     final text = controller.text.trim();
     final map = items.searchMap(context, searchIn ?? defaultSearch);
-    final x =
-        text.isNotEmpty
-            ? (onSearchResultsBuilder?.call(text, map) ??
-                items.searchResults(
-                  map,
-                  (itemText) => compareWithTextInput(controller, itemText),
-                ))
-            : items;
+    final x = text.isNotEmpty
+        ? (onSearchResultsBuilder?.call(text, map) ??
+              items.searchResults(
+                map,
+                (itemText) => compareWithTextInput(controller, itemText),
+              ))
+        : items;
 
     return List<Widget>.generate(
       x.length,
@@ -278,16 +277,15 @@ abstract class BasicPicker<T extends IsoTranslated>
     double? heightFactor = 0.66,
   }) => showModalBottomSheet<T>(
     context: context,
-    builder:
-        (newContext) => Padding(
-          padding: newContext.media.viewInsets,
-          child: FractionallySizedBox(
-            heightFactor: heightFactor,
-            child: copyWith(
-              onSelect: (selected) => maybeSelectAndPop(selected, newContext),
-            ),
-          ),
+    builder: (newContext) => Padding(
+      padding: newContext.media.viewInsets,
+      child: FractionallySizedBox(
+        heightFactor: heightFactor,
+        child: copyWith(
+          onSelect: (selected) => maybeSelectAndPop(selected, newContext),
         ),
+      ),
+    ),
     backgroundColor: backgroundColor,
     elevation: elevation,
     shape: shape,
@@ -332,13 +330,12 @@ abstract class BasicPicker<T extends IsoTranslated>
 
     delegate = ImplicitSearchDelegate<T>(
       items,
-      resultsBuilder:
-          (_, items) => copyWith(
-            key: onSearchResultsBuilder == null ? null : ValueKey(items.length),
-            items: items,
-            onSelect: closeOnSelect,
-            showSearchBar: false,
-          ),
+      resultsBuilder: (_, items) => copyWith(
+        key: onSearchResultsBuilder == null ? null : ValueKey(items.length),
+        items: items,
+        onSelect: closeOnSelect,
+        showSearchBar: false,
+      ),
       searchIn: searchIn ?? defaultSearch,
       searchMap: searchMap,
       onSearchResultsBuilder: onSearchResultsBuilder,
@@ -426,39 +423,38 @@ abstract class BasicPicker<T extends IsoTranslated>
     bool scrollable = false,
   }) => showDialog(
     context: context,
-    builder:
-        (newContext) => AlertDialog(
-          iconPadding: iconPadding,
-          iconColor: iconColor,
-          title: title,
-          titlePadding: titlePadding,
-          titleTextStyle: titleTextStyle,
-          content: SizedBox(
-            width: double.maxFinite,
-            child: copyWith(
-              onSelect: (selected) => maybeSelectAndPop(selected, newContext),
-            ),
-          ),
-          contentPadding: contentPadding,
-          contentTextStyle: contentTextStyle,
-          actions: actions,
-          actionsPadding: actionsPadding,
-          actionsAlignment: actionsAlignment,
-          actionsOverflowAlignment: actionsOverflowAlignment,
-          actionsOverflowDirection: actionsOverflowDirection,
-          actionsOverflowButtonSpacing: actionsOverflowButtonSpacing,
-          buttonPadding: buttonPadding,
-          backgroundColor: backgroundColor,
-          elevation: elevation,
-          shadowColor: shadowColor,
-          surfaceTintColor: surfaceTintColor,
-          semanticLabel: semanticLabel,
-          insetPadding: insetPadding,
-          clipBehavior: clipBehavior,
-          shape: shape,
-          alignment: alignment,
-          scrollable: scrollable,
+    builder: (newContext) => AlertDialog(
+      iconPadding: iconPadding,
+      iconColor: iconColor,
+      title: title,
+      titlePadding: titlePadding,
+      titleTextStyle: titleTextStyle,
+      content: SizedBox(
+        width: double.maxFinite,
+        child: copyWith(
+          onSelect: (selected) => maybeSelectAndPop(selected, newContext),
         ),
+      ),
+      contentPadding: contentPadding,
+      contentTextStyle: contentTextStyle,
+      actions: actions,
+      actionsPadding: actionsPadding,
+      actionsAlignment: actionsAlignment,
+      actionsOverflowAlignment: actionsOverflowAlignment,
+      actionsOverflowDirection: actionsOverflowDirection,
+      actionsOverflowButtonSpacing: actionsOverflowButtonSpacing,
+      buttonPadding: buttonPadding,
+      backgroundColor: backgroundColor,
+      elevation: elevation,
+      shadowColor: shadowColor,
+      surfaceTintColor: surfaceTintColor,
+      semanticLabel: semanticLabel,
+      insetPadding: insetPadding,
+      clipBehavior: clipBehavior,
+      shape: shape,
+      alignment: alignment,
+      scrollable: scrollable,
+    ),
     barrierDismissible: barrierDismissible,
     barrierColor: barrierColor,
     barrierLabel: barrierLabel,

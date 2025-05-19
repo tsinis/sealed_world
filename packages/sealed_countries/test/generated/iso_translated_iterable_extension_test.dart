@@ -9,8 +9,9 @@ import "package:test/test.dart";
 
 void main() => group("IsoTranslatedIterableExtension", tags: "generated", () {
   const parser = TypedLocalizationDelegate();
-  final locales =
-      CountriesLocaleMapper().map.keys.map(parser.parseLocale).nonNulls;
+  final locales = CountriesLocaleMapper().map.keys
+      .map(parser.parseLocale)
+      .nonNulls;
 
   const noFallbackMap = {
     "aa": 3,

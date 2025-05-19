@@ -44,7 +44,8 @@ final class JsonUtils {
       final itemFromCode = _instanceFromCode(item.code);
       if (itemFromCode == null) continue; // Might be more items in the source.
       print("\nExtracting translations for: ${itemFromCode.name}\n");
-      final english = englishData[itemFromCode] ??
+      final english =
+          englishData[itemFromCode] ??
           item.translation(const BasicLocale(eng)).name;
       final translations = package.translations(item.code).toSet();
       if (translations.isEmpty)
@@ -58,8 +59,9 @@ final class JsonUtils {
         final translationForLang = translation[itemFromCode];
         if (lang == null || translationForLang == null) continue;
         if (translationForLang == english) continue;
-        final containsWithFullName =
-            translations.any((e) => e.language == lang && e.fullName != null);
+        final containsWithFullName = translations.any(
+          (e) => e.language == lang && e.fullName != null,
+        );
         final containsWithSameLocale = translations.any(
           (e) =>
               e.language == lang && e.script == null && e.countryCode == null,
@@ -146,12 +148,10 @@ const ${varFileName.toCamelCase()} = [
           """${translationCode}_${dataType.toLowerCase()}.l10n.${PathConstants.dart}""";
       final filePath = join(translation, fileNameFull);
       paths.add(fileNameFull);
-      final buffer = StringBuffer(
-        """
+      final buffer = StringBuffer("""
 ${_dartDoc(translations, itemFromCode.name, dataType)}.
 const ${varFileName.toCamelCase()} = [
-""",
-      );
+""");
       for (final element in translations) buffer.write("$element,\n");
       buffer.write("];");
       io.writeContentToFile(filePath, buffer);
@@ -171,7 +171,8 @@ const ${varFileName.toCamelCase()} = [
     final itemName = name is TranslatedName ? name.common : name.toString();
     final sorted = List.of(translations.map((e) => e.language.name))..sort();
     // ignore: avoid-passing-self-as-argument, it's CLI tool.
-    final import = package.whenConstOrNull(sealedCountries: package.dirName) ??
+    final import =
+        package.whenConstOrNull(sealedCountries: package.dirName) ??
         Package.sealedLanguages.dirName;
 
     final buffer = StringBuffer('import "package:$import/$import.dart";\n')
@@ -220,10 +221,10 @@ const ${varFileName.toCamelCase()} = [
   }
 
   IsoStandardized<Object>? _instanceFromCode(String code) => package.when(
-        sealedLanguages: () => _convertCodeToLang(code),
-        sealedCurrencies: () => _convertCodeToCurrency(code),
-        sealedCountries: () => _convertCodeToCountry(code),
-      );
+    sealedLanguages: () => _convertCodeToLang(code),
+    sealedCurrencies: () => _convertCodeToCurrency(code),
+    sealedCountries: () => _convertCodeToCountry(code),
+  );
 
   WorldCountry? _convertCodeToCountry(String rawCode) {
     final countryCode = rawCode.toUpperCase().trim();
@@ -264,7 +265,7 @@ const ${varFileName.toCamelCase()} = [
   }
 
   ({String? countryCode, String languageCode, String? scriptCode})
-      _extractLocaleCode(String code) {
+  _extractLocaleCode(String code) {
     final regex = RegExp("^([A-Z]+)(?:_([A-Z]+))?(?:_([A-Z]+))?");
 
     final match = regex.firstMatch(code.toUpperCase());

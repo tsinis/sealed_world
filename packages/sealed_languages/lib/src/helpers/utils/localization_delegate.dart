@@ -26,8 +26,7 @@ class LocalizationDelegate
     NaturalLanguage language,
     Script? script,
     String? countryCode,
-  ) =>
-      BasicLocale(language, script: script, countryCode: countryCode);
+  ) => BasicLocale(language, script: script, countryCode: countryCode);
 
   @override // coverage:ignore-line
   TranslatedName toTranslation(BasicLocale locale, String name, String? alt) =>
@@ -38,10 +37,9 @@ class LocalizationDelegate
     Iterable<NaturalLanguage>? languages,
     LocaleMapFunction<String> Function()? mapper,
     Iterable<Script>? scripts,
-  }) =>
-      LocalizationDelegate(
-        languages: languages ?? this.languages,
-        mapper: mapper ?? this.mapper,
-        scripts: scripts ?? this.scripts,
-      );
+  }) => LocalizationDelegate(
+    languages: languages ?? this.languages,
+    mapper: mapper ?? this.mapper,
+    scripts: scripts ?? this.scripts,
+  );
 }

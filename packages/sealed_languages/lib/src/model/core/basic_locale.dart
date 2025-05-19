@@ -12,12 +12,12 @@ class BasicLocale implements JsonEncodable<BasicLocale> {
   /// The [language] parameter is required.
   /// The [countryCode] and [script] parameters are optional.
   const BasicLocale(this.language, {String? countryCode, this.script})
-      : assert(
-          countryCode == null ||
-              countryCode.length >= IsoStandardized.codeShortLength,
-          """`countryCode` have to be at least ${IsoStandardized.codeShortLength} characters long!""",
-        ),
-        _countryCode = countryCode;
+    : assert(
+        countryCode == null ||
+            countryCode.length >= IsoStandardized.codeShortLength,
+        """`countryCode` have to be at least ${IsoStandardized.codeShortLength} characters long!""",
+      ),
+      _countryCode = countryCode;
 
   /// The [NaturalLanguage] representing the language of the locale.
   final NaturalLanguage language;
@@ -42,6 +42,6 @@ class BasicLocale implements JsonEncodable<BasicLocale> {
   String toString({bool short = true}) => short
       ? toUnicodeLocaleId()
       : "BasicLocale(${language.runtimeType}()"
-          '${_countryCode == null ? '' : ', countryCode: "$countryCode"'}'
-          "${script == null ? '' : ', script: ${script.runtimeType}()'})";
+            '${_countryCode == null ? '' : ', countryCode: "$countryCode"'}'
+            "${script == null ? '' : ', script: ${script.runtimeType}()'})";
 }

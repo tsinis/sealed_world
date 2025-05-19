@@ -116,11 +116,7 @@ const myrCurrencyTranslations = [
   TranslatedName(LangBen(), name: "মালয়েশিয়ান রিঙ্গিৎ"),
   TranslatedName(LangBre(), name: "ringgit Malaysia"),
   TranslatedName(LangBos(), name: "Malezijski ringit"),
-  TranslatedName(
-    LangBos(),
-    name: "Малезијски ринггит",
-    script: ScriptCyrl(),
-  ),
+  TranslatedName(LangBos(), name: "Малезијски ринггит", script: ScriptCyrl()),
   TranslatedName(LangCat(), name: "ringgit de Malàisia"),
   TranslatedName(LangChe(), name: "Малайзин ринггит"),
   TranslatedName(LangCes(), name: "malajsijský ringgit"),

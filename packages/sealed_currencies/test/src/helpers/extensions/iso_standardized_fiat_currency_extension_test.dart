@@ -7,25 +7,25 @@ import "package:sealed_languages/src/model/script/writing_system.dart";
 import "package:test/test.dart";
 
 void main() => group("IsoStandardizedFiatCurrencyExtension", () {
-      // ignore: avoid-explicit-type-declaration, it's tests.
-      const IsoStandardized? nullValue = null;
-      const script = ScriptLatn();
-      const currency = FiatEur();
+  // ignore: avoid-explicit-type-declaration, it's tests.
+  const IsoStandardized? nullValue = null;
+  const script = ScriptLatn();
+  const currency = FiatEur();
 
-      group("isFiatCurrency", () {
-        test(
-          "returns true for $FiatCurrency instances",
-          () => expect(currency.isFiatCurrency, isTrue),
-        );
+  group("isFiatCurrency", () {
+    test(
+      "returns true for $FiatCurrency instances",
+      () => expect(currency.isFiatCurrency, isTrue),
+    );
 
-        test(
-          "returns false for $Script instances",
-          () => expect(script.isFiatCurrency, isFalse),
-        );
+    test(
+      "returns false for $Script instances",
+      () => expect(script.isFiatCurrency, isFalse),
+    );
 
-        test(
-          "returns false for null values",
-          () => expect(nullValue.isFiatCurrency, isFalse),
-        );
-      });
-    });
+    test(
+      "returns false for null values",
+      () => expect(nullValue.isFiatCurrency, isFalse),
+    );
+  });
+});

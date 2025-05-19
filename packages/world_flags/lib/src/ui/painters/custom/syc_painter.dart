@@ -20,27 +20,24 @@ final class SycPainter extends CustomElementsPainter {
     final twoThirdsRight = Offset(size.width, size.height * 2 / 3);
     final twoThirdsTop = Offset(size.width * 2 / 3, 0);
 
-    final yellowPath =
-        Path()
-          ..moveTo(bottomLeft.dx, bottomLeft.dy)
-          ..lineTo(topRight.dx, topRight.dy)
-          ..lineTo(oneThirdTop.dx, oneThirdTop.dy)
-          ..close();
+    final yellowPath = Path()
+      ..moveTo(bottomLeft.dx, bottomLeft.dy)
+      ..lineTo(topRight.dx, topRight.dy)
+      ..lineTo(oneThirdTop.dx, oneThirdTop.dy)
+      ..close();
 
-    final whitePath =
-        Path()
-          ..moveTo(bottomLeft.dx, bottomLeft.dy)
-          ..lineTo(topRight.dx, topRight.dy)
-          ..lineTo(twoThirdsRight.dx, twoThirdsRight.dy)
-          ..close();
+    final whitePath = Path()
+      ..moveTo(bottomLeft.dx, bottomLeft.dy)
+      ..lineTo(topRight.dx, topRight.dy)
+      ..lineTo(twoThirdsRight.dx, twoThirdsRight.dy)
+      ..close();
 
-    final redPath =
-        Path()
-          ..moveTo(bottomLeft.dx, bottomLeft.dy)
-          ..lineTo(twoThirdsTop.dx, twoThirdsTop.dy)
-          ..lineTo(topRight.dx, topRight.dy)
-          ..lineTo(oneThirdRight.dx, oneThirdRight.dy)
-          ..close();
+    final redPath = Path()
+      ..moveTo(bottomLeft.dx, bottomLeft.dy)
+      ..lineTo(twoThirdsTop.dx, twoThirdsTop.dy)
+      ..lineTo(topRight.dx, topRight.dy)
+      ..lineTo(oneThirdRight.dx, oneThirdRight.dy)
+      ..close();
 
     canvas
       ..drawPath(yellowPath, yellow)

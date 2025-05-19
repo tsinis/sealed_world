@@ -115,11 +115,7 @@ const pygCurrencyTranslations = [
   TranslatedName(LangBen(), name: "প্যারাগুয়ান গুয়ারানি"),
   TranslatedName(LangBre(), name: "guarani Paraguay"),
   TranslatedName(LangBos(), name: "Paragvajski gvarani"),
-  TranslatedName(
-    LangBos(),
-    name: "Парагвајски гуарни",
-    script: ScriptCyrl(),
-  ),
+  TranslatedName(LangBos(), name: "Парагвајски гуарни", script: ScriptCyrl()),
   TranslatedName(LangCat(), name: "guaraní paraguaià"),
   TranslatedName(LangChe(), name: "Парагвайн гуарани"),
   TranslatedName(LangCes(), name: "paraguajské guarani"),

@@ -116,11 +116,7 @@ const afnCurrencyTranslations = [
   TranslatedName(LangBen(), name: "আফগান আফগানি"),
   TranslatedName(LangBre(), name: "afghani Afghanistan"),
   TranslatedName(LangBos(), name: "Afganistanski afgan"),
-  TranslatedName(
-    LangBos(),
-    name: "Авганистански авган",
-    script: ScriptCyrl(),
-  ),
+  TranslatedName(LangBos(), name: "Авганистански авган", script: ScriptCyrl()),
   TranslatedName(LangCat(), name: "afgani afganès"),
   TranslatedName(LangChe(), name: "ОвхӀан-пачхьалкхан афгани"),
   TranslatedName(LangCes(), name: "afghánský afghán"),

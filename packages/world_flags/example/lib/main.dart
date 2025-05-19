@@ -59,25 +59,20 @@ class _MainState extends State<Main> {
             subtitle: Text(country.namesNative.first.common, style: style),
             trailing: ValueListenableBuilder(
               valueListenable: _aspectRatio,
-              builder:
-                  (_, ratio, _) => CountryFlag.simplified(
-                    country,
-                    height: _size,
-                    aspectRatio: ratio,
-                  ),
+              builder: (_, ratio, _) => CountryFlag.simplified(
+                country,
+                height: _size,
+                aspectRatio: ratio,
+              ),
             ),
-            onTap:
-                isFull
-                    ? () => SettingsDialog.show(_aspectRatio, bc, country)
-                    : null,
+            onTap: isFull
+                ? () => SettingsDialog.show(_aspectRatio, bc, country)
+                : null,
             minLeadingWidth: _size * 1.5,
           );
         },
-        separatorBuilder:
-            (_, _) => const Divider(
-              height: 1,
-              color: Color.fromARGB(33, 133, 133, 133),
-            ),
+        separatorBuilder: (_, _) =>
+            const Divider(height: 1, color: Color.fromARGB(33, 133, 133, 133)),
         itemCount: WorldCountry.list.length,
         clipBehavior: Clip.none,
       ),

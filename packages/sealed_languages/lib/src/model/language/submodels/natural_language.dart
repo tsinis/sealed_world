@@ -32,24 +32,24 @@ class NaturalLanguage extends Language
     this.family = const IndoEuropean(),
     this.isRightToLeft = false,
     this.scripts = const {ScriptLatn()},
-  })  : assert(
-          code.length == IsoStandardized.codeLength,
-          """`code` should be exactly ${IsoStandardized.codeLength} characters long!""",
-        ),
-        assert(
-          codeShort.length == IsoStandardized.codeShortLength,
-          """`codeShort` should be exactly ${IsoStandardized.codeShortLength} characters long!""",
-        ),
-        assert(
-          namesNative != const <String>[],
-          "`namesNative` should not be empty!",
-        ),
-        assert(scripts != const <Script>{}, "`scripts` should not be empty!"),
-        assert(
-          bibliographicCode == null ||
-              bibliographicCode.length == IsoStandardized.codeLength,
-          """`bibliographicCode` should be exactly ${IsoStandardized.codeLength} characters long!""",
-        );
+  }) : assert(
+         code.length == IsoStandardized.codeLength,
+         """`code` should be exactly ${IsoStandardized.codeLength} characters long!""",
+       ),
+       assert(
+         codeShort.length == IsoStandardized.codeShortLength,
+         """`codeShort` should be exactly ${IsoStandardized.codeShortLength} characters long!""",
+       ),
+       assert(
+         namesNative != const <String>[],
+         "`namesNative` should not be empty!",
+       ),
+       assert(scripts != const <Script>{}, "`scripts` should not be empty!"),
+       assert(
+         bibliographicCode == null ||
+             bibliographicCode.length == IsoStandardized.codeLength,
+         """`bibliographicCode` should be exactly ${IsoStandardized.codeLength} characters long!""",
+       );
 
   /// {@template permissive_constructor}
   /// Creates an instance of the class with relaxed constraints.
@@ -132,10 +132,9 @@ class NaturalLanguage extends Language
   factory NaturalLanguage.fromCode(
     Object code, [
     Iterable<NaturalLanguage>? languages,
-  ]) =>
-      languages == null
-          ? codeMap.findByCodeOrThrow(code)
-          : languages.firstIsoWhereCode(code.toUpperCaseIsoCode());
+  ]) => languages == null
+      ? codeMap.findByCodeOrThrow(code)
+      : languages.firstIsoWhereCode(code.toUpperCaseIsoCode());
 
   /// Returns an instance of the [NaturalLanguage] class from a two-letter
   /// ISO 639-1 code.
@@ -151,10 +150,9 @@ class NaturalLanguage extends Language
   factory NaturalLanguage.fromCodeShort(
     Object codeShort, [
     Iterable<NaturalLanguage>? languages,
-  ]) =>
-      languages == null
-          ? codeShortMap.findByCodeOrThrow(codeShort)
-          : languages.firstIsoWhereCodeOther(codeShort.toUpperCaseIsoCode());
+  ]) => languages == null
+      ? codeShortMap.findByCodeOrThrow(codeShort)
+      : languages.firstIsoWhereCodeOther(codeShort.toUpperCaseIsoCode());
 
   /// Returns an instance of the [NaturalLanguage] class from the name of the
   /// language.
@@ -204,15 +202,12 @@ class NaturalLanguage extends Language
   factory NaturalLanguage.fromAnyCode(
     Object code, [
     Iterable<NaturalLanguage>? languages,
-  ]) =>
-      languages == null
-          ? map.findByCodeOrThrow(code)
-          : code.toUpperCaseIsoCode().maybeMapIsoCode(
-                orElse: (regular) =>
-                    NaturalLanguage.fromCode(regular, languages),
-                short: (short) =>
-                    NaturalLanguage.fromCodeShort(short, languages),
-              );
+  ]) => languages == null
+      ? map.findByCodeOrThrow(code)
+      : code.toUpperCaseIsoCode().maybeMapIsoCode(
+          orElse: (regular) => NaturalLanguage.fromCode(regular, languages),
+          short: (short) => NaturalLanguage.fromCodeShort(short, languages),
+        );
 
   /// Returns an instance of the [NaturalLanguage] class from a three-letter
   /// Terminological ISO 639-2 code if it exists. Returns `null` otherwise.
@@ -226,14 +221,13 @@ class NaturalLanguage extends Language
   static NaturalLanguage? maybeFromCode(
     Object? code, [
     Iterable<NaturalLanguage>? languages,
-  ]) =>
-      languages == null
-          ? codeMap.maybeFindByCode(code)
-          : languages.firstIsoWhereCodeOrNull(
-              code
-                  ?.toUpperCaseIsoCode()
-                  .maybeToValidIsoCode(exactLength: IsoStandardized.codeLength),
-            );
+  ]) => languages == null
+      ? codeMap.maybeFindByCode(code)
+      : languages.firstIsoWhereCodeOrNull(
+          code?.toUpperCaseIsoCode().maybeToValidIsoCode(
+            exactLength: IsoStandardized.codeLength,
+          ),
+        );
 
   /// Returns an instance of the [NaturalLanguage] class from a three-letter
   /// Terminological ISO 639-2 code if it exists. Returns `null` otherwise.
@@ -247,14 +241,13 @@ class NaturalLanguage extends Language
   static NaturalLanguage? maybeFromCodeShort(
     Object? codeShort, [
     Iterable<NaturalLanguage>? languages,
-  ]) =>
-      languages == null
-          ? codeShortMap.maybeFindByCode(codeShort)
-          : languages.firstIsoWhereCodeOtherOrNull(
-              codeShort?.toUpperCaseIsoCode().maybeToValidIsoCode(
-                    exactLength: IsoStandardized.codeShortLength,
-                  ),
-            );
+  ]) => languages == null
+      ? codeShortMap.maybeFindByCode(codeShort)
+      : languages.firstIsoWhereCodeOtherOrNull(
+          codeShort?.toUpperCaseIsoCode().maybeToValidIsoCode(
+            exactLength: IsoStandardized.codeShortLength,
+          ),
+        );
 
   /// A three-letter string representing the Terminological ISO 639-2 code for
   /// the language.
@@ -306,10 +299,10 @@ class NaturalLanguage extends Language
   String toString({bool short = true}) => short
       ? super.toString()
       : 'NaturalLanguage(name: "$name", code: "$code", '
-          'codeShort: "$codeShort", namesNative: ${jsonEncode(namesNative)}, '
-          '''${bibliographicCode == null ? '' : 'bibliographicCode: "$bibliographicCode", '}'''
-          "family: ${family.runtimeType}(), isRightToLeft: $isRightToLeft, "
-          "scripts: ${scripts.toUniqueInstancesString()},)";
+            'codeShort: "$codeShort", namesNative: ${jsonEncode(namesNative)}, '
+            '''${bibliographicCode == null ? '' : 'bibliographicCode: "$bibliographicCode", '}'''
+            "family: ${family.runtimeType}(), isRightToLeft: $isRightToLeft, "
+            "scripts: ${scripts.toUniqueInstancesString()},)";
 
   @override
   String toJson({JsonCodec codec = const JsonCodec()}) => codec.encode(toMap());
@@ -375,13 +368,12 @@ class NaturalLanguage extends Language
   static NaturalLanguage? maybeFromAnyCode(
     Object? code, [
     Iterable<NaturalLanguage>? languages,
-  ]) =>
-      languages == null
-          ? map.maybeFindByCode(code)
-          : code?.toUpperCaseIsoCode().maybeMapIsoCode(
-                orElse: (regular) => maybeFromCode(regular, languages),
-                short: (short) => maybeFromCodeShort(short, languages),
-              );
+  ]) => languages == null
+      ? map.maybeFindByCode(code)
+      : code?.toUpperCaseIsoCode().maybeMapIsoCode(
+          orElse: (regular) => maybeFromCode(regular, languages),
+          short: (short) => maybeFromCodeShort(short, languages),
+        );
 
   /// The general standard ISO code for languages, defined as ISO 639.
   static const standardGeneralName = "639";
@@ -405,8 +397,9 @@ class NaturalLanguage extends Language
   /// ```dart
   /// NaturalLanguage.codeMap[' eng']; // LangEng().
   /// ```
-  static const codeMap =
-      UpperCaseIsoMap<NaturalLanguage>(naturalLanguageCodeMap);
+  static const codeMap = UpperCaseIsoMap<NaturalLanguage>(
+    naturalLanguageCodeMap,
+  );
 
   /// A tree-shakable constant map containing short language (ISO 639-1) codes
   /// and their associated [NaturalLanguage] objects, for a O(1) access time.
@@ -437,6 +430,6 @@ class NaturalLanguage extends Language
 
   /// A tree-shakable list of all the natural languages currently
   /// supported by the [NaturalLanguage] class.
-// ignore: avoid-explicit-type-declaration, vs specify_nonobvious_property_types.
+  // ignore: avoid-explicit-type-declaration, vs specify_nonobvious_property_types.
   static const List<NaturalLanguage> list = naturalLanguageList;
 }

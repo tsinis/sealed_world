@@ -28,12 +28,11 @@ final class TrianglePainter extends ElementsPainter {
     final horizontal = (size.width / 2) * (property.offset.dx + 1);
     final vertical = (size.height / 2) * (property.offset.dy + 1);
 
-    final path =
-        Path()
-          ..moveTo(horizontal, vertical)
-          ..lineTo(horizontal + width, vertical + height / 2)
-          ..lineTo(horizontal, vertical + height)
-          ..close();
+    final path = Path()
+      ..moveTo(horizontal, vertical)
+      ..lineTo(horizontal + width, vertical + height / 2)
+      ..lineTo(horizontal, vertical + height)
+      ..close();
     canvas.drawPath(path, paintCreator());
 
     return (canvas: canvas, bounds: path.getBounds(), child: property.child);
@@ -48,12 +47,11 @@ final class TrianglePainter extends ElementsPainter {
         size.width - ((size.width / 2) * (1 - property.offset.dx));
     final vertical = (size.height / 2) * (property.offset.dy + 1);
 
-    final path =
-        Path()
-          ..moveTo(horizontal, vertical)
-          ..lineTo(horizontal - width, vertical + height / 2)
-          ..lineTo(horizontal, vertical + height)
-          ..close();
+    final path = Path()
+      ..moveTo(horizontal, vertical)
+      ..lineTo(horizontal - width, vertical + height / 2)
+      ..lineTo(horizontal, vertical + height)
+      ..close();
     canvas.drawPath(path, paintCreator());
 
     return (canvas: canvas, bounds: path.getBounds(), child: property.child);
@@ -66,12 +64,11 @@ final class TrianglePainter extends ElementsPainter {
     final vertical =
         (size.height / 2) * (property.offset.dy + 1) - (height / 2);
 
-    final path =
-        Path()
-          ..moveTo(horizontal, vertical)
-          ..lineTo(horizontal + width, vertical)
-          ..lineTo(horizontal + width / 2, vertical + height)
-          ..close();
+    final path = Path()
+      ..moveTo(horizontal, vertical)
+      ..lineTo(horizontal + width, vertical)
+      ..lineTo(horizontal + width / 2, vertical + height)
+      ..close();
     canvas.drawPath(path, paintCreator());
 
     return (canvas: canvas, bounds: path.getBounds(), child: property.child);
@@ -83,12 +80,11 @@ final class TrianglePainter extends ElementsPainter {
     final horizontal = size.width * property.offset.dx;
     final vertical = size.height * (property.offset.dy + 1) / 2 - height;
 
-    final path =
-        Path()
-          ..moveTo(horizontal, vertical + height)
-          ..lineTo(horizontal + width, vertical + height)
-          ..lineTo(horizontal + width / 2, vertical)
-          ..close();
+    final path = Path()
+      ..moveTo(horizontal, vertical + height)
+      ..lineTo(horizontal + width, vertical + height)
+      ..lineTo(horizontal + width / 2, vertical)
+      ..close();
     canvas.drawPath(path, paintCreator());
 
     return (canvas: canvas, bounds: path.getBounds(), child: property.child);

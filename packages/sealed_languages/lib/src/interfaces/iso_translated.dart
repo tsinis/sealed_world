@@ -15,9 +15,12 @@ part of "translated.dart";
 /// creating a new (custom) instance of [IsoTranslated], but it's recommended
 /// to use [l10n] override instead.
 abstract interface class IsoTranslated<
-    T extends TranslatedName,
-    N extends Object,
-    L extends BasicLocale> extends Translated<T> implements IsoStandardized<N> {
+  T extends TranslatedName,
+  N extends Object,
+  L extends BasicLocale
+>
+    extends Translated<T>
+    implements IsoStandardized<N> {
   /// Creates a new instance of the [IsoTranslated] object.
   ///
   /// The [translations] parameter isn't required and could be provided when

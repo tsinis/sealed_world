@@ -24,15 +24,15 @@ class Script extends WritingSystem
     required this.codeNumeric,
     required this.date,
     this.pva,
-  })  : assert(
-          code.length == codeLength,
-          "`code` should be exactly $codeLength characters long!",
-        ),
-        assert(pva == null || pva.length > 0, "`pva` should not be empty!"),
-        assert(
-          codeNumeric.length == IsoStandardized.codeLength,
-          """`codeNumeric` should be exactly ${IsoStandardized.codeLength} characters long!""",
-        );
+  }) : assert(
+         code.length == codeLength,
+         "`code` should be exactly $codeLength characters long!",
+       ),
+       assert(pva == null || pva.length > 0, "`pva` should not be empty!"),
+       assert(
+         codeNumeric.length == IsoStandardized.codeLength,
+         """`codeNumeric` should be exactly ${IsoStandardized.codeLength} characters long!""",
+       );
 
   /// {@macro permissive_constructor}
   /// {@macro script_constructor}
@@ -58,8 +58,9 @@ class Script extends WritingSystem
   // ignore: avoid-non-empty-constructor-bodies, more clear for factory methods.
   factory Script.fromCode(Object code, [Iterable<Script>? scripts]) {
     if (scripts == null) return codeMap.findByCodeOrThrow(code);
-    String? validCode =
-        code.toUpperCaseIsoCode().maybeToValidIsoCode(exactLength: codeLength);
+    String? validCode = code.toUpperCaseIsoCode().maybeToValidIsoCode(
+      exactLength: codeLength,
+    );
     if (validCode == null) {
       throw StateError(
         "Provided $code isn't a valid $standardCodeName code. "
@@ -93,10 +94,9 @@ class Script extends WritingSystem
   factory Script.fromCodeNumeric(
     Object codeNumeric, [
     Iterable<Script>? scripts,
-  ]) =>
-      scripts == null
-          ? codeNumericMap.findByCodeOrThrow(codeNumeric)
-          : scripts.firstIsoWhereCodeOther(codeNumeric.toUpperCaseIsoCode());
+  ]) => scripts == null
+      ? codeNumericMap.findByCodeOrThrow(codeNumeric)
+      : scripts.firstIsoWhereCodeOther(codeNumeric.toUpperCaseIsoCode());
 
   /// Creates a new instance of the [Script] class from the name of the script.
   ///
@@ -109,8 +109,9 @@ class Script extends WritingSystem
   factory Script.fromName(Object name, [Iterable<Script> scripts = list]) {
     final upperCaseName = name.toUpperCaseIsoCode();
 
-    return scripts
-        .firstIsoWhere((script) => script.name.toUpperCase() == upperCaseName);
+    return scripts.firstIsoWhere(
+      (script) => script.name.toUpperCase() == upperCaseName,
+    );
   }
 
   /// Returns an instance of the [Script] class from any valid ISO 15924 code.
@@ -137,13 +138,13 @@ class Script extends WritingSystem
   /// resulting [Script] instance is assigned to the `script` variable.
   factory Script.fromAnyCode(Object code, [Iterable<Script>? scripts]) =>
       scripts == null
-          ? map.findByCodeOrThrow(code)
-          : code.toUpperCaseIsoCode().maybeMapIsoCode(
-                orElse: (regular) => Script.fromCode(regular, scripts),
-                numeric: (numeric) => Script.fromCodeNumeric(numeric, scripts),
-                maxLength: codeLength,
-                minLength: IsoStandardized.codeLength,
-              );
+      ? map.findByCodeOrThrow(code)
+      : code.toUpperCaseIsoCode().maybeMapIsoCode(
+          orElse: (regular) => Script.fromCode(regular, scripts),
+          numeric: (numeric) => Script.fromCodeNumeric(numeric, scripts),
+          maxLength: codeLength,
+          minLength: IsoStandardized.codeLength,
+        );
 
   /// The regular length of the ISO code (4). However, it's important to note
   /// that this length is not standardized for all ISO codes. Typically it is
@@ -180,7 +181,7 @@ class Script extends WritingSystem
   String toString({bool short = true}) => short
       ? super.toString()
       : 'Script(name: "$name", code: "$code", codeNumeric: "$codeNumeric", '
-          'date: "$date"${pva == null ? '' : ', pva: "$pva"'},)';
+            'date: "$date"${pva == null ? '' : ', pva: "$pva"'},)';
 
   @override
   String toJson({JsonCodec codec = const JsonCodec()}) => codec.encode(toMap());
@@ -239,13 +240,13 @@ class Script extends WritingSystem
   /// `script` variable.
   static Script? maybeFromAnyCode(Object? code, [Iterable<Script>? scripts]) =>
       scripts == null
-          ? map.maybeFindByCode(code)
-          : code?.toUpperCaseIsoCode().maybeMapIsoCode(
-                orElse: (regular) => maybeFromCode(regular, scripts),
-                numeric: (numeric) => maybeFromCodeNumeric(numeric, scripts),
-                maxLength: codeLength,
-                minLength: IsoStandardized.codeLength,
-              );
+      ? map.maybeFindByCode(code)
+      : code?.toUpperCaseIsoCode().maybeMapIsoCode(
+          orElse: (regular) => maybeFromCode(regular, scripts),
+          numeric: (numeric) => maybeFromCodeNumeric(numeric, scripts),
+          maxLength: codeLength,
+          minLength: IsoStandardized.codeLength,
+        );
 
   /// Returns an instance of the [Script] class from a four-character ISO
   /// 15924 code if it exists. Returns `null` otherwise.
@@ -267,8 +268,9 @@ class Script extends WritingSystem
   /// `script` variable.
   static Script? maybeFromCode(Object? code, [Iterable<Script>? scripts]) {
     if (scripts == null) return codeMap.maybeFindByCode(code);
-    String? string =
-        code?.toUpperCaseIsoCode().maybeToValidIsoCode(exactLength: codeLength);
+    String? string = code?.toUpperCaseIsoCode().maybeToValidIsoCode(
+      exactLength: codeLength,
+    );
     if (string == null) return null;
     string = formatToStandardCode(string);
 
@@ -297,9 +299,9 @@ class Script extends WritingSystem
     Iterable<Script>? scripts,
   ]) {
     if (scripts == null) return codeNumericMap.maybeFindByCode(codeNumeric);
-    final string = codeNumeric
-        ?.toUpperCaseIsoCode()
-        .maybeToValidIsoCode(exactLength: IsoStandardized.codeLength);
+    final string = codeNumeric?.toUpperCaseIsoCode().maybeToValidIsoCode(
+      exactLength: IsoStandardized.codeLength,
+    );
 
     return scripts.firstIsoWhereCodeOtherOrNull(string);
   }
@@ -332,8 +334,10 @@ class Script extends WritingSystem
   /// ```dart
   /// Script.codeMap['Latn']; // ScriptLatn().
   /// ```
-  static const codeMap =
-      UpperCaseIsoMap<Script>(scriptCodeMap, exactLength: codeLength);
+  static const codeMap = UpperCaseIsoMap<Script>(
+    scriptCodeMap,
+    exactLength: codeLength,
+  );
 
   /// A tree-shakable constant map containing numeric script (ISO 15924 Numeric)
   /// codes and their associated [Script] objects, for a O(1) access time.
@@ -363,6 +367,6 @@ class Script extends WritingSystem
 
   /// A tree-shakable list of all the scripts currently supported
   /// by the [Script] class.
-// ignore: avoid-explicit-type-declaration, vs specify_nonobvious_property_types.
+  // ignore: avoid-explicit-type-declaration, vs specify_nonobvious_property_types.
   static const List<Script> list = scriptList;
 }

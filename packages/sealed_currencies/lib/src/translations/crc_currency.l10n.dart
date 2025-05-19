@@ -115,11 +115,7 @@ const crcCurrencyTranslations = [
   TranslatedName(LangBen(), name: "কোস্টা রিকা কোলোন"),
   TranslatedName(LangBre(), name: "colón Costa Rica"),
   TranslatedName(LangBos(), name: "Kostarikanski kolon"),
-  TranslatedName(
-    LangBos(),
-    name: "Костарикански колон",
-    script: ScriptCyrl(),
-  ),
+  TranslatedName(LangBos(), name: "Костарикански колон", script: ScriptCyrl()),
   TranslatedName(LangCat(), name: "colón costa-riqueny"),
   TranslatedName(LangChe(), name: "Костарикан колон"),
   TranslatedName(LangCes(), name: "kostarický colón"),

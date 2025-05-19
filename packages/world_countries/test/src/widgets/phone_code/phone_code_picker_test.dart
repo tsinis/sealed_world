@@ -36,9 +36,8 @@ void main() => group("$PhoneCodePicker", () {
       const PhoneCodePicker(),
       (item) => item.translations.first.common,
       theme: CountryTileThemeData(
-        builder:
-            (properties, {isDense}) =>
-                Text(properties.item.translations.first.common),
+        builder: (properties, {isDense}) =>
+            Text(properties.item.translations.first.common),
       ),
     ),
   );

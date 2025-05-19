@@ -18,16 +18,15 @@ class FloatingButton extends StatelessWidget {
       onPressed: () => onPressed(isLong: false),
       child: AnimatedBuilder(
         animation: controller,
-        builder:
-            (_, _) => AnimatedSwitcher(
-              duration: UiConstants.duration,
-              switchInCurve: UiConstants.switchInCurve,
-              switchOutCurve: UiConstants.switchOutCurve,
-              child: Icon(
-                controller.currentData.icon,
-                key: ValueKey(controller.currentData),
-              ),
-            ),
+        builder: (_, _) => AnimatedSwitcher(
+          duration: UiConstants.duration,
+          switchInCurve: UiConstants.switchInCurve,
+          switchOutCurve: UiConstants.switchOutCurve,
+          child: Icon(
+            controller.currentData.icon,
+            key: ValueKey(controller.currentData),
+          ),
+        ),
       ),
     ),
   );

@@ -79,16 +79,16 @@ extension SealedWorldNullableIterableIsoExtension<T extends IsoStandardized>
   /// Returns the first [IsoStandardized] element in the collection that has the
   /// given regular [code], or `null` if there is no such element.
   T? firstIsoWhereCodeOrNull(Object? code) => _mapTrimmedCode(
-        (output) => firstIsoWhereOrNull((iso) => iso.code == output),
-        code,
-      );
+    (output) => firstIsoWhereOrNull((iso) => iso.code == output),
+    code,
+  );
 
   /// Returns the first [IsoStandardized] element in the collection that has the
   /// given other [codeOther], or `null` if there is no such element.
   T? firstIsoWhereCodeOtherOrNull(Object? codeOther) => _mapTrimmedCode(
-        (output) => firstIsoWhereOrNull((iso) => iso.codeOther == output),
-        codeOther,
-      );
+    (output) => firstIsoWhereOrNull((iso) => iso.codeOther == output),
+    codeOther,
+  );
 
   /// The first [IsoStandardized] element satisfying [test], or `null` if there
   /// are none. If [assertNotEmpty] is set to `true` (default to `false`),

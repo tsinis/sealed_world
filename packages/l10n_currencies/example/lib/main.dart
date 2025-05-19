@@ -12,8 +12,11 @@ void main() {
 
   /// Localize the codes with an optional main locale (e.g., "sk" for Slovak),
   /// and an optional fallback locale (e.g., "cs" for Czech).
-  final localized =
-      mapper.localize(isoCodes, mainLocale: "sk", fallbackLocale: "cs");
+  final localized = mapper.localize(
+    isoCodes,
+    mainLocale: "sk",
+    fallbackLocale: "cs",
+  );
 
   print("Names count: ${localized.length}"); // Prints: "Names count: 6".
 

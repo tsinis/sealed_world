@@ -35,7 +35,7 @@ sealed class Language implements Named<String> {
   /// The [name] parameter is required and should be a non-empty string
   /// representing the name of the language.
   const Language({required this.name})
-      : assert(name.length > 0, "`name` should not be empty!");
+    : assert(name.length > 0, "`name` should not be empty!");
 
   /// The name of the language.
   @override

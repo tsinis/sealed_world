@@ -9,12 +9,11 @@ extension ScriptCopyWith<T extends Script> on T {
     String? date,
     String? name,
     String? pva,
-  }) =>
-      Script(
-        name: name ?? this.name,
-        code: code ?? this.code,
-        codeNumeric: codeNumeric ?? this.codeNumeric,
-        date: date ?? this.date,
-        pva: pva ?? this.pva,
-      );
+  }) => Script(
+    name: name ?? this.name,
+    code: code ?? this.code,
+    codeNumeric: codeNumeric ?? this.codeNumeric,
+    date: date ?? this.date,
+    pva: pva ?? this.pva,
+  );
 }

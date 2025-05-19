@@ -96,11 +96,7 @@ const zwlCurrencyTranslations = [
   TranslatedName(LangBen(), name: "জিম্বাবুয়ে ডলার (২০০৯)"),
   TranslatedName(LangBre(), name: "dollar Zimbabwe"),
   TranslatedName(LangBos(), name: "Zimbabvejski dolar"),
-  TranslatedName(
-    LangBos(),
-    name: "Зимбабвеански долар",
-    script: ScriptCyrl(),
-  ),
+  TranslatedName(LangBos(), name: "Зимбабвеански долар", script: ScriptCyrl()),
   TranslatedName(LangCat(), name: "dòlar zimbabuès"),
   TranslatedName(LangCes(), name: "zimbabwský dolar"),
   TranslatedName(LangCym(), name: "Doler Zimbabwe"),

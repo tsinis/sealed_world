@@ -116,11 +116,7 @@ const aznCurrencyTranslations = [
   TranslatedName(LangBen(), name: "আজারবাইজান মানাত"),
   TranslatedName(LangBre(), name: "manat Azerbaidjan"),
   TranslatedName(LangBos(), name: "Azerbejdžanski manat"),
-  TranslatedName(
-    LangBos(),
-    name: "Азербејџански манат",
-    script: ScriptCyrl(),
-  ),
+  TranslatedName(LangBos(), name: "Азербејџански манат", script: ScriptCyrl()),
   TranslatedName(LangCat(), name: "manat azerbaidjanès"),
   TranslatedName(LangChe(), name: "Азербайджанан манат"),
   TranslatedName(LangCes(), name: "ázerbájdžánský manat"),

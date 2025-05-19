@@ -104,11 +104,7 @@ const nzdCurrencyTranslations = [
   TranslatedName(LangBen(), name: "নিউজিল্যান্ড ডলার"),
   TranslatedName(LangBre(), name: "dollar Zeland-Nevez"),
   TranslatedName(LangBos(), name: "Novozelandski dolar"),
-  TranslatedName(
-    LangBos(),
-    name: "Новозеландски долар",
-    script: ScriptCyrl(),
-  ),
+  TranslatedName(LangBos(), name: "Новозеландски долар", script: ScriptCyrl()),
   TranslatedName(LangCat(), name: "dòlar neozelandès"),
   TranslatedName(LangChe(), name: "Керла Зеландин доллар"),
   TranslatedName(LangCes(), name: "novozélandský dolar"),

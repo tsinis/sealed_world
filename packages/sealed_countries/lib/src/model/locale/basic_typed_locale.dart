@@ -27,11 +27,10 @@ class BasicTypedLocale extends BasicLocale {
   String? get countryCode => country?.codeShort ?? super.countryCode;
 
   @override
-  String toString({bool short = true}) =>
-      short
-          ? toUnicodeLocaleId()
-          : "BasicTypedLocale(${language.runtimeType}()"
-              "${country == null ? '' : ', country: ${country.runtimeType}()'}"
-              '''${countryCode == null || country != null ? '' : ', countryCode: "$countryCode"'}'''
-              "${script == null ? '' : ', script: ${script.runtimeType}()'})";
+  String toString({bool short = true}) => short
+      ? toUnicodeLocaleId()
+      : "BasicTypedLocale(${language.runtimeType}()"
+            "${country == null ? '' : ', country: ${country.runtimeType}()'}"
+            '''${countryCode == null || country != null ? '' : ', countryCode: "$countryCode"'}'''
+            "${script == null ? '' : ', script: ${script.runtimeType}()'})";
 }

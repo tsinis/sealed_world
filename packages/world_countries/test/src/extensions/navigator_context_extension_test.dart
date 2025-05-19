@@ -27,11 +27,10 @@ void main() => group("NavigatorContextExtension", () {
     final route = MaterialPageRoute<Object>(builder: (_) => Container());
     await tester.pumpMaterialApp(
       Builder(
-        builder:
-            (context) => ElevatedButton(
-              onPressed: () async => context.push(route),
-              child: const Text("Push route"),
-            ),
+        builder: (context) => ElevatedButton(
+          onPressed: () async => context.push(route),
+          child: const Text("Push route"),
+        ),
       ),
     );
     await tester.tapAndSettle(find.byType(ElevatedButton));
@@ -46,11 +45,10 @@ void main() => group("NavigatorContextExtension", () {
     final route = MaterialPageRoute<Object>(builder: (_) => Container());
     await tester.pumpMaterialApp(
       Builder(
-        builder:
-            (context) => ElevatedButton(
-              onPressed: () async => context.push(route),
-              child: const Text("Push route"),
-            ),
+        builder: (context) => ElevatedButton(
+          onPressed: () async => context.push(route),
+          child: const Text("Push route"),
+        ),
       ),
     );
     await tester.tapAndSettle(find.byType(ElevatedButton));
@@ -71,14 +69,13 @@ void main() => group("NavigatorContextExtension", () {
 
     await tester.pumpMaterialApp(
       Builder(
-        builder:
-            (context) => ElevatedButton(
-              onPressed: () async {
-                await context.push(routeFirst);
-                await context.push(routeSecond);
-              },
-              child: const Text("Push routes"),
-            ),
+        builder: (context) => ElevatedButton(
+          onPressed: () async {
+            await context.push(routeFirst);
+            await context.push(routeSecond);
+          },
+          child: const Text("Push routes"),
+        ),
       ),
     );
     await tester.tapAndSettle(find.byType(ElevatedButton));

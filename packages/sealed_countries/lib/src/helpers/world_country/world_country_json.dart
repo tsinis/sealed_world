@@ -94,47 +94,40 @@ extension WorldCountryJson on WorldCountry {
         (d) => DemonymsExtension.fromMap(d as JsonMap),
       ),
     ),
-    currencies:
-        map["currencies"] is List
-            ? (map["currencies"] as List<Object?>)
-                .fromIsoList(FiatCurrency.fromCode)
-                .toList(growable: false)
-            : null,
-    capitalInfo:
-        map["capitalInfo"] == null
-            ? null
-            : CapitalInfoExtension.fromMap(map["capitalInfo"] as JsonMap),
+    currencies: map["currencies"] is List
+        ? (map["currencies"] as List<Object?>)
+              .fromIsoList(FiatCurrency.fromCode)
+              .toList(growable: false)
+        : null,
+    capitalInfo: map["capitalInfo"] == null
+        ? null
+        : CapitalInfoExtension.fromMap(map["capitalInfo"] as JsonMap),
     car: CarExtension.fromMap(map["car"] as JsonMap),
     cioc: map["cioc"]?.toString(),
     fifa: map["fifa"]?.toString(),
-    gini:
-        map["gini"] == null
-            ? null
-            : GiniExtension.fromMap(map["gini"] as JsonMap),
+    gini: map["gini"] == null
+        ? null
+        : GiniExtension.fromMap(map["gini"] as JsonMap),
     hasCoatOfArms: map["hasCoatOfArms"] as bool,
     independent: map["independent"] as bool,
     landlocked: map["landlocked"] as bool,
-    postalCode:
-        map["postalCode"] == null
-            ? null
-            : PostalCodeExtension.fromMap(map["postalCode"] as JsonMap),
-    bordersCodes:
-        map["bordersCodes"] is List
-            ? List<String>.unmodifiable(map["bordersCodes"] as List)
-            : null,
+    postalCode: map["postalCode"] == null
+        ? null
+        : PostalCodeExtension.fromMap(map["postalCode"] as JsonMap),
+    bordersCodes: map["bordersCodes"] is List
+        ? List<String>.unmodifiable(map["bordersCodes"] as List)
+        : null,
     startOfWeek: Weekday.fromMap(map["startOfWeek"] as JsonMap),
-    subregion:
-        map["subregion"] is String
-            ? Continent.maybeFromValue(map["subregion"] as String)
-            : null,
+    subregion: map["subregion"] is String
+        ? Continent.maybeFromValue(map["subregion"] as String)
+        : null,
     unMember: map["unMember"] as bool,
-    regionalBlocs:
-        map["regionalBlocs"] is List
-            ? List<RegionalBloc>.from(
-              (map["regionalBlocs"] as List).map(
-                (rb) => RegionalBloc.fromAcronym("$rb"),
-              ),
-            )
-            : null,
+    regionalBlocs: map["regionalBlocs"] is List
+        ? List<RegionalBloc>.from(
+            (map["regionalBlocs"] as List).map(
+              (rb) => RegionalBloc.fromAcronym("$rb"),
+            ),
+          )
+        : null,
   );
 }

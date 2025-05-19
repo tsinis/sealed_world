@@ -71,11 +71,9 @@ class LanguagePicker extends BasicPicker<NaturalLanguage> {
         itemProperties,
         title: itemNameTranslated(itemProperties.item, itemProperties.context),
         dense: isDense,
-        onPressed:
-            (language) =>
-                (isDense ?? false)
-                    ? maybeSelectAndPop(language, itemProperties.context)
-                    : onSelect?.call(language),
+        onPressed: (language) => (isDense ?? false)
+            ? maybeSelectAndPop(language, itemProperties.context)
+            : onSelect?.call(language),
         visualDensity: (isDense ?? false) ? VisualDensity.compact : null,
       );
 

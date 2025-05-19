@@ -79,12 +79,12 @@ void main() {
 /// ```
 // ignore: prefer-static-class, just for example.
 bool? isVikingKrone(FiatCurrency currency) => currency.whenOrNull(
-      fiatCzk: () => false,
-      fiatDkk: () => true,
-      fiatIsk: () => true,
-      fiatNok: () => true,
-      fiatSek: () => true,
-    );
+  fiatCzk: () => false,
+  fiatDkk: () => true,
+  fiatIsk: () => true,
+  fiatNok: () => true,
+  fiatSek: () => true,
+);
 
 /// Creates a instance of the custom currency with permissive constructor.
 class _FiatCustom extends FiatCurrency {
@@ -92,13 +92,13 @@ class _FiatCustom extends FiatCurrency {
 
   @override
   LocalizationDelegate get l10n => super.l10n.copyWith(
-        mapper: () => CurrenciesLocaleMapper(
-          other: {
-            /// From the `l10n_currencies` package.
-            "en": IsoLocaleMapper(
-              other: {code: "$name currency", "$code+": "$name rich name"},
-            ),
-          },
-        ).localize,
-      );
+    mapper: () => CurrenciesLocaleMapper(
+      other: {
+        /// From the `l10n_currencies` package.
+        "en": IsoLocaleMapper(
+          other: {code: "$name currency", "$code+": "$name rich name"},
+        ),
+      },
+    ).localize,
+  );
 }

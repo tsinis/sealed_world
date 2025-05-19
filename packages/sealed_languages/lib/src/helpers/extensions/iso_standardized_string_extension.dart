@@ -59,12 +59,11 @@ extension IsoStandardizedStringExtension on String {
     int? exactLength,
     int maxLength = IsoStandardized.codeLength,
     int minLength = IsoStandardized.codeShortLength,
-  }) =>
-      maybeToValidIsoCode(
-        maxLength: maxLength,
-        minLength: minLength,
-        exactLength: exactLength,
-      )?.toUpperCase();
+  }) => maybeToValidIsoCode(
+    maxLength: maxLength,
+    minLength: minLength,
+    exactLength: exactLength,
+  )?.toUpperCase();
 
   /// Maps the ISO code of a string to a value based on the code's length and
   /// type.
@@ -99,7 +98,7 @@ extension IsoStandardizedStringExtension on String {
   ///
   /// print(result); // Prints "orElse"
   /// ```.
-// ignore: long-parameter-list, avoid-unnecessary-extends, all but 1 required.
+  // ignore: long-parameter-list, avoid-unnecessary-extends, all but 1 required.
   T maybeMapIsoCode<T extends Object?>({
     required T Function(String input) orElse,
     int maxLength = IsoStandardized.codeLength,

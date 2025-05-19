@@ -102,17 +102,18 @@ class TypedLocale extends Locale implements BasicTypedLocale {
     Iterable<WorldCountry>? countries = WorldCountry.list,
     String? regionalCode,
     L10NFormatter<TypedLocale, IsoTranslated>? l10nFormatter,
-  }) => TypedLocale(
-    language,
-    country: country,
-    script: script,
-    regionalCode: regionalCode,
-  ).copyWithTranslationsCache(
-    languages: languages,
-    currencies: currencies,
-    countries: countries,
-    l10nFormatter: l10nFormatter,
-  );
+  }) =>
+      TypedLocale(
+        language,
+        country: country,
+        script: script,
+        regionalCode: regionalCode,
+      ).copyWithTranslationsCache(
+        languages: languages,
+        currencies: currencies,
+        countries: countries,
+        l10nFormatter: l10nFormatter,
+      );
 
   @override
   final NaturalLanguage language;
@@ -173,13 +174,12 @@ class TypedLocale extends Locale implements BasicTypedLocale {
 
   @keepToString
   @override
-  String toString({bool short = true}) =>
-      short
-          ? toUnicodeLocaleId()
-          : "TypedLocale(${language.runtimeType}()"
-              "${country == null ? '' : ', country: ${country.runtimeType}()'}"
-              '''${countryCode == null || country != null ? '' : ', countryCode: "$countryCode"'}'''
-              "${script == null ? '' : ', script: ${script.runtimeType}()'})";
+  String toString({bool short = true}) => short
+      ? toUnicodeLocaleId()
+      : "TypedLocale(${language.runtimeType}()"
+            "${country == null ? '' : ', country: ${country.runtimeType}()'}"
+            '''${countryCode == null || country != null ? '' : ', countryCode: "$countryCode"'}'''
+            "${script == null ? '' : ', script: ${script.runtimeType}()'})";
 
   final String? _regionalCode;
 }

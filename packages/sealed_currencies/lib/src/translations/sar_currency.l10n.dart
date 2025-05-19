@@ -220,11 +220,7 @@ const sarCurrencyTranslations = [
   TranslatedName(LangUzb(), name: "Saudiya Arabistoni riyoli"),
   TranslatedName(LangVie(), name: "Riyal Ả Rập Xê-út"),
   TranslatedName(LangYor(), name: "Riya ti Orílẹ́ède Saudi"),
-  TranslatedName(
-    LangYor(),
-    name: "Riya ti Orílɛ́ède Saudi",
-    countryCode: "BJ",
-  ),
+  TranslatedName(LangYor(), name: "Riya ti Orílɛ́ède Saudi", countryCode: "BJ"),
   TranslatedName(LangZho(), name: "沙特里亚尔"),
   TranslatedName(LangZho(), name: "沙特阿拉伯里亞爾", countryCode: "HK"),
   TranslatedName(LangZho(), name: "沙烏地里亞爾", script: ScriptHant()),

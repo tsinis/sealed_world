@@ -62,8 +62,8 @@ void main() => group("$TypedLocaleDelegate", () {
 
     test("should only format countries", () async {
       final delegateWithFormatter = TypedLocaleDelegate(
-        l10nFormatter:
-            (iso, _) => iso.key is WorldCountry ? matchWord : iso.value,
+        l10nFormatter: (iso, _) =>
+            iso.key is WorldCountry ? matchWord : iso.value,
       );
 
       final typedLocale = await delegateWithFormatter.load(locale);

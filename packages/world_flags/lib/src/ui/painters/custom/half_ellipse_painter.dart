@@ -12,14 +12,13 @@ final class HalfEllipsePainter extends MultiElementPainter {
     final rect = Rect.fromCircle(center: center, radius: radius);
     final firstColor = property.mainColor;
     final lastColor = customColors.firstOrNull ?? firstColor.withAlpha(0);
-    final paint =
-        Paint()
-          ..shader = LinearGradient(
-            begin: Alignment.topCenter,
-            end: Alignment.bottomCenter,
-            colors: [firstColor, lastColor],
-            stops: const [0.5, 0.5],
-          ).createShader(rect);
+    final paint = Paint()
+      ..shader = LinearGradient(
+        begin: Alignment.topCenter,
+        end: Alignment.bottomCenter,
+        colors: [firstColor, lastColor],
+        stops: const [0.5, 0.5],
+      ).createShader(rect);
 
     canvas.drawOval(rect, paint);
 
