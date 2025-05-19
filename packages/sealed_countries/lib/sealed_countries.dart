@@ -8,7 +8,6 @@ export "src/data/geo/continents.data.dart";
 export "src/data/official_world_countries.data.dart";
 export "src/data/other_world_countries.data.dart";
 export "src/data/regional_bloc/regional_bloc.data.dart";
-export "src/helpers/extensions/basic_typed_locale_extension.dart";
 export "src/helpers/extensions/country_submodels/capital_extension.dart";
 export "src/helpers/extensions/country_submodels/capital_info_extension.dart";
 export "src/helpers/extensions/country_submodels/car_extension.dart";
