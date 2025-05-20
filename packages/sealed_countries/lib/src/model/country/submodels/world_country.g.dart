@@ -2534,752 +2534,752 @@ extension WorldCountryFunctional on WorldCountry {
 
 extension WorldCountryBoolGetters on WorldCountry? {
   /// Checks if this [WorldCountry] instance is Aruba.
-  bool get isAbw => this == const CountryAbw();
+  bool get isAbw => const CountryAbw().isSameAs(this);
 
   /// Checks if this [WorldCountry] instance is Afghanistan.
-  bool get isAfg => this == const CountryAfg();
+  bool get isAfg => const CountryAfg().isSameAs(this);
 
   /// Checks if this [WorldCountry] instance is Angola.
-  bool get isAgo => this == const CountryAgo();
+  bool get isAgo => const CountryAgo().isSameAs(this);
 
   /// Checks if this [WorldCountry] instance is Anguilla.
-  bool get isAia => this == const CountryAia();
+  bool get isAia => const CountryAia().isSameAs(this);
 
   /// Checks if this [WorldCountry] instance is Åland Islands.
-  bool get isAla => this == const CountryAla();
+  bool get isAla => const CountryAla().isSameAs(this);
 
   /// Checks if this [WorldCountry] instance is Albania.
-  bool get isAlb => this == const CountryAlb();
+  bool get isAlb => const CountryAlb().isSameAs(this);
 
   /// Checks if this [WorldCountry] instance is Andorra.
-  bool get isAnd => this == const CountryAnd();
+  bool get isAnd => const CountryAnd().isSameAs(this);
 
   /// Checks if this [WorldCountry] instance is United Arab Emirates.
-  bool get isAre => this == const CountryAre();
+  bool get isAre => const CountryAre().isSameAs(this);
 
   /// Checks if this [WorldCountry] instance is Argentina.
-  bool get isArg => this == const CountryArg();
+  bool get isArg => const CountryArg().isSameAs(this);
 
   /// Checks if this [WorldCountry] instance is Armenia.
-  bool get isArm => this == const CountryArm();
+  bool get isArm => const CountryArm().isSameAs(this);
 
   /// Checks if this [WorldCountry] instance is American Samoa.
-  bool get isAsm => this == const CountryAsm();
+  bool get isAsm => const CountryAsm().isSameAs(this);
 
   /// Checks if this [WorldCountry] instance is Antarctica.
-  bool get isAta => this == const CountryAta();
+  bool get isAta => const CountryAta().isSameAs(this);
 
   /// Checks if this [WorldCountry] instance is French Southern and Antarctic Lands.
-  bool get isAtf => this == const CountryAtf();
+  bool get isAtf => const CountryAtf().isSameAs(this);
 
   /// Checks if this [WorldCountry] instance is Antigua and Barbuda.
-  bool get isAtg => this == const CountryAtg();
+  bool get isAtg => const CountryAtg().isSameAs(this);
 
   /// Checks if this [WorldCountry] instance is Australia.
-  bool get isAus => this == const CountryAus();
+  bool get isAus => const CountryAus().isSameAs(this);
 
   /// Checks if this [WorldCountry] instance is Austria.
-  bool get isAut => this == const CountryAut();
+  bool get isAut => const CountryAut().isSameAs(this);
 
   /// Checks if this [WorldCountry] instance is Azerbaijan.
-  bool get isAze => this == const CountryAze();
+  bool get isAze => const CountryAze().isSameAs(this);
 
   /// Checks if this [WorldCountry] instance is Burundi.
-  bool get isBdi => this == const CountryBdi();
+  bool get isBdi => const CountryBdi().isSameAs(this);
 
   /// Checks if this [WorldCountry] instance is Belgium.
-  bool get isBel => this == const CountryBel();
+  bool get isBel => const CountryBel().isSameAs(this);
 
   /// Checks if this [WorldCountry] instance is Benin.
-  bool get isBen => this == const CountryBen();
+  bool get isBen => const CountryBen().isSameAs(this);
 
   /// Checks if this [WorldCountry] instance is Caribbean Netherlands.
-  bool get isBes => this == const CountryBes();
+  bool get isBes => const CountryBes().isSameAs(this);
 
   /// Checks if this [WorldCountry] instance is Burkina Faso.
-  bool get isBfa => this == const CountryBfa();
+  bool get isBfa => const CountryBfa().isSameAs(this);
 
   /// Checks if this [WorldCountry] instance is Bangladesh.
-  bool get isBgd => this == const CountryBgd();
+  bool get isBgd => const CountryBgd().isSameAs(this);
 
   /// Checks if this [WorldCountry] instance is Bulgaria.
-  bool get isBgr => this == const CountryBgr();
+  bool get isBgr => const CountryBgr().isSameAs(this);
 
   /// Checks if this [WorldCountry] instance is Bahrain.
-  bool get isBhr => this == const CountryBhr();
+  bool get isBhr => const CountryBhr().isSameAs(this);
 
   /// Checks if this [WorldCountry] instance is Bahamas.
-  bool get isBhs => this == const CountryBhs();
+  bool get isBhs => const CountryBhs().isSameAs(this);
 
   /// Checks if this [WorldCountry] instance is Bosnia and Herzegovina.
-  bool get isBih => this == const CountryBih();
+  bool get isBih => const CountryBih().isSameAs(this);
 
   /// Checks if this [WorldCountry] instance is Saint Barthélemy.
-  bool get isBlm => this == const CountryBlm();
+  bool get isBlm => const CountryBlm().isSameAs(this);
 
   /// Checks if this [WorldCountry] instance is Belarus.
-  bool get isBlr => this == const CountryBlr();
+  bool get isBlr => const CountryBlr().isSameAs(this);
 
   /// Checks if this [WorldCountry] instance is Belize.
-  bool get isBlz => this == const CountryBlz();
+  bool get isBlz => const CountryBlz().isSameAs(this);
 
   /// Checks if this [WorldCountry] instance is Bermuda.
-  bool get isBmu => this == const CountryBmu();
+  bool get isBmu => const CountryBmu().isSameAs(this);
 
   /// Checks if this [WorldCountry] instance is Bolivia.
-  bool get isBol => this == const CountryBol();
+  bool get isBol => const CountryBol().isSameAs(this);
 
   /// Checks if this [WorldCountry] instance is Brazil.
-  bool get isBra => this == const CountryBra();
+  bool get isBra => const CountryBra().isSameAs(this);
 
   /// Checks if this [WorldCountry] instance is Barbados.
-  bool get isBrb => this == const CountryBrb();
+  bool get isBrb => const CountryBrb().isSameAs(this);
 
   /// Checks if this [WorldCountry] instance is Brunei.
-  bool get isBrn => this == const CountryBrn();
+  bool get isBrn => const CountryBrn().isSameAs(this);
 
   /// Checks if this [WorldCountry] instance is Bhutan.
-  bool get isBtn => this == const CountryBtn();
+  bool get isBtn => const CountryBtn().isSameAs(this);
 
   /// Checks if this [WorldCountry] instance is Bouvet Island.
-  bool get isBvt => this == const CountryBvt();
+  bool get isBvt => const CountryBvt().isSameAs(this);
 
   /// Checks if this [WorldCountry] instance is Botswana.
-  bool get isBwa => this == const CountryBwa();
+  bool get isBwa => const CountryBwa().isSameAs(this);
 
   /// Checks if this [WorldCountry] instance is Central African Republic.
-  bool get isCaf => this == const CountryCaf();
+  bool get isCaf => const CountryCaf().isSameAs(this);
 
   /// Checks if this [WorldCountry] instance is Canada.
-  bool get isCan => this == const CountryCan();
+  bool get isCan => const CountryCan().isSameAs(this);
 
   /// Checks if this [WorldCountry] instance is Cocos (Keeling) Islands.
-  bool get isCck => this == const CountryCck();
+  bool get isCck => const CountryCck().isSameAs(this);
 
   /// Checks if this [WorldCountry] instance is Switzerland.
-  bool get isChe => this == const CountryChe();
+  bool get isChe => const CountryChe().isSameAs(this);
 
   /// Checks if this [WorldCountry] instance is Chile.
-  bool get isChl => this == const CountryChl();
+  bool get isChl => const CountryChl().isSameAs(this);
 
   /// Checks if this [WorldCountry] instance is China.
-  bool get isChn => this == const CountryChn();
+  bool get isChn => const CountryChn().isSameAs(this);
 
   /// Checks if this [WorldCountry] instance is Ivory Coast.
-  bool get isCiv => this == const CountryCiv();
+  bool get isCiv => const CountryCiv().isSameAs(this);
 
   /// Checks if this [WorldCountry] instance is Cameroon.
-  bool get isCmr => this == const CountryCmr();
+  bool get isCmr => const CountryCmr().isSameAs(this);
 
   /// Checks if this [WorldCountry] instance is DR Congo.
-  bool get isCod => this == const CountryCod();
+  bool get isCod => const CountryCod().isSameAs(this);
 
   /// Checks if this [WorldCountry] instance is Republic of the Congo.
-  bool get isCog => this == const CountryCog();
+  bool get isCog => const CountryCog().isSameAs(this);
 
   /// Checks if this [WorldCountry] instance is Cook Islands.
-  bool get isCok => this == const CountryCok();
+  bool get isCok => const CountryCok().isSameAs(this);
 
   /// Checks if this [WorldCountry] instance is Colombia.
-  bool get isCol => this == const CountryCol();
+  bool get isCol => const CountryCol().isSameAs(this);
 
   /// Checks if this [WorldCountry] instance is Comoros.
-  bool get isCom => this == const CountryCom();
+  bool get isCom => const CountryCom().isSameAs(this);
 
   /// Checks if this [WorldCountry] instance is Cape Verde.
-  bool get isCpv => this == const CountryCpv();
+  bool get isCpv => const CountryCpv().isSameAs(this);
 
   /// Checks if this [WorldCountry] instance is Costa Rica.
-  bool get isCri => this == const CountryCri();
+  bool get isCri => const CountryCri().isSameAs(this);
 
   /// Checks if this [WorldCountry] instance is Cuba.
-  bool get isCub => this == const CountryCub();
+  bool get isCub => const CountryCub().isSameAs(this);
 
   /// Checks if this [WorldCountry] instance is Curaçao.
-  bool get isCuw => this == const CountryCuw();
+  bool get isCuw => const CountryCuw().isSameAs(this);
 
   /// Checks if this [WorldCountry] instance is Christmas Island.
-  bool get isCxr => this == const CountryCxr();
+  bool get isCxr => const CountryCxr().isSameAs(this);
 
   /// Checks if this [WorldCountry] instance is Cayman Islands.
-  bool get isCym => this == const CountryCym();
+  bool get isCym => const CountryCym().isSameAs(this);
 
   /// Checks if this [WorldCountry] instance is Cyprus.
-  bool get isCyp => this == const CountryCyp();
+  bool get isCyp => const CountryCyp().isSameAs(this);
 
   /// Checks if this [WorldCountry] instance is Czechia.
-  bool get isCze => this == const CountryCze();
+  bool get isCze => const CountryCze().isSameAs(this);
 
   /// Checks if this [WorldCountry] instance is Germany.
-  bool get isDeu => this == const CountryDeu();
+  bool get isDeu => const CountryDeu().isSameAs(this);
 
   /// Checks if this [WorldCountry] instance is Djibouti.
-  bool get isDji => this == const CountryDji();
+  bool get isDji => const CountryDji().isSameAs(this);
 
   /// Checks if this [WorldCountry] instance is Dominica.
-  bool get isDma => this == const CountryDma();
+  bool get isDma => const CountryDma().isSameAs(this);
 
   /// Checks if this [WorldCountry] instance is Denmark.
-  bool get isDnk => this == const CountryDnk();
+  bool get isDnk => const CountryDnk().isSameAs(this);
 
   /// Checks if this [WorldCountry] instance is Dominican Republic.
-  bool get isDom => this == const CountryDom();
+  bool get isDom => const CountryDom().isSameAs(this);
 
   /// Checks if this [WorldCountry] instance is Algeria.
-  bool get isDza => this == const CountryDza();
+  bool get isDza => const CountryDza().isSameAs(this);
 
   /// Checks if this [WorldCountry] instance is Ecuador.
-  bool get isEcu => this == const CountryEcu();
+  bool get isEcu => const CountryEcu().isSameAs(this);
 
   /// Checks if this [WorldCountry] instance is Egypt.
-  bool get isEgy => this == const CountryEgy();
+  bool get isEgy => const CountryEgy().isSameAs(this);
 
   /// Checks if this [WorldCountry] instance is Eritrea.
-  bool get isEri => this == const CountryEri();
+  bool get isEri => const CountryEri().isSameAs(this);
 
   /// Checks if this [WorldCountry] instance is Western Sahara.
-  bool get isEsh => this == const CountryEsh();
+  bool get isEsh => const CountryEsh().isSameAs(this);
 
   /// Checks if this [WorldCountry] instance is Spain.
-  bool get isEsp => this == const CountryEsp();
+  bool get isEsp => const CountryEsp().isSameAs(this);
 
   /// Checks if this [WorldCountry] instance is Estonia.
-  bool get isEst => this == const CountryEst();
+  bool get isEst => const CountryEst().isSameAs(this);
 
   /// Checks if this [WorldCountry] instance is Ethiopia.
-  bool get isEth => this == const CountryEth();
+  bool get isEth => const CountryEth().isSameAs(this);
 
   /// Checks if this [WorldCountry] instance is Finland.
-  bool get isFin => this == const CountryFin();
+  bool get isFin => const CountryFin().isSameAs(this);
 
   /// Checks if this [WorldCountry] instance is Fiji.
-  bool get isFji => this == const CountryFji();
+  bool get isFji => const CountryFji().isSameAs(this);
 
   /// Checks if this [WorldCountry] instance is Falkland Islands.
-  bool get isFlk => this == const CountryFlk();
+  bool get isFlk => const CountryFlk().isSameAs(this);
 
   /// Checks if this [WorldCountry] instance is France.
-  bool get isFra => this == const CountryFra();
+  bool get isFra => const CountryFra().isSameAs(this);
 
   /// Checks if this [WorldCountry] instance is Faroe Islands.
-  bool get isFro => this == const CountryFro();
+  bool get isFro => const CountryFro().isSameAs(this);
 
   /// Checks if this [WorldCountry] instance is Micronesia.
-  bool get isFsm => this == const CountryFsm();
+  bool get isFsm => const CountryFsm().isSameAs(this);
 
   /// Checks if this [WorldCountry] instance is Gabon.
-  bool get isGab => this == const CountryGab();
+  bool get isGab => const CountryGab().isSameAs(this);
 
   /// Checks if this [WorldCountry] instance is United Kingdom.
-  bool get isGbr => this == const CountryGbr();
+  bool get isGbr => const CountryGbr().isSameAs(this);
 
   /// Checks if this [WorldCountry] instance is Georgia.
-  bool get isGeo => this == const CountryGeo();
+  bool get isGeo => const CountryGeo().isSameAs(this);
 
   /// Checks if this [WorldCountry] instance is Guernsey.
-  bool get isGgy => this == const CountryGgy();
+  bool get isGgy => const CountryGgy().isSameAs(this);
 
   /// Checks if this [WorldCountry] instance is Ghana.
-  bool get isGha => this == const CountryGha();
+  bool get isGha => const CountryGha().isSameAs(this);
 
   /// Checks if this [WorldCountry] instance is Gibraltar.
-  bool get isGib => this == const CountryGib();
+  bool get isGib => const CountryGib().isSameAs(this);
 
   /// Checks if this [WorldCountry] instance is Guinea.
-  bool get isGin => this == const CountryGin();
+  bool get isGin => const CountryGin().isSameAs(this);
 
   /// Checks if this [WorldCountry] instance is Guadeloupe.
-  bool get isGlp => this == const CountryGlp();
+  bool get isGlp => const CountryGlp().isSameAs(this);
 
   /// Checks if this [WorldCountry] instance is Gambia.
-  bool get isGmb => this == const CountryGmb();
+  bool get isGmb => const CountryGmb().isSameAs(this);
 
   /// Checks if this [WorldCountry] instance is Guinea-Bissau.
-  bool get isGnb => this == const CountryGnb();
+  bool get isGnb => const CountryGnb().isSameAs(this);
 
   /// Checks if this [WorldCountry] instance is Equatorial Guinea.
-  bool get isGnq => this == const CountryGnq();
+  bool get isGnq => const CountryGnq().isSameAs(this);
 
   /// Checks if this [WorldCountry] instance is Greece.
-  bool get isGrc => this == const CountryGrc();
+  bool get isGrc => const CountryGrc().isSameAs(this);
 
   /// Checks if this [WorldCountry] instance is Grenada.
-  bool get isGrd => this == const CountryGrd();
+  bool get isGrd => const CountryGrd().isSameAs(this);
 
   /// Checks if this [WorldCountry] instance is Greenland.
-  bool get isGrl => this == const CountryGrl();
+  bool get isGrl => const CountryGrl().isSameAs(this);
 
   /// Checks if this [WorldCountry] instance is Guatemala.
-  bool get isGtm => this == const CountryGtm();
+  bool get isGtm => const CountryGtm().isSameAs(this);
 
   /// Checks if this [WorldCountry] instance is French Guiana.
-  bool get isGuf => this == const CountryGuf();
+  bool get isGuf => const CountryGuf().isSameAs(this);
 
   /// Checks if this [WorldCountry] instance is Guam.
-  bool get isGum => this == const CountryGum();
+  bool get isGum => const CountryGum().isSameAs(this);
 
   /// Checks if this [WorldCountry] instance is Guyana.
-  bool get isGuy => this == const CountryGuy();
+  bool get isGuy => const CountryGuy().isSameAs(this);
 
   /// Checks if this [WorldCountry] instance is Hong Kong.
-  bool get isHkg => this == const CountryHkg();
+  bool get isHkg => const CountryHkg().isSameAs(this);
 
   /// Checks if this [WorldCountry] instance is Heard Island and McDonald Islands.
-  bool get isHmd => this == const CountryHmd();
+  bool get isHmd => const CountryHmd().isSameAs(this);
 
   /// Checks if this [WorldCountry] instance is Honduras.
-  bool get isHnd => this == const CountryHnd();
+  bool get isHnd => const CountryHnd().isSameAs(this);
 
   /// Checks if this [WorldCountry] instance is Croatia.
-  bool get isHrv => this == const CountryHrv();
+  bool get isHrv => const CountryHrv().isSameAs(this);
 
   /// Checks if this [WorldCountry] instance is Haiti.
-  bool get isHti => this == const CountryHti();
+  bool get isHti => const CountryHti().isSameAs(this);
 
   /// Checks if this [WorldCountry] instance is Hungary.
-  bool get isHun => this == const CountryHun();
+  bool get isHun => const CountryHun().isSameAs(this);
 
   /// Checks if this [WorldCountry] instance is Indonesia.
-  bool get isIdn => this == const CountryIdn();
+  bool get isIdn => const CountryIdn().isSameAs(this);
 
   /// Checks if this [WorldCountry] instance is Isle of Man.
-  bool get isImn => this == const CountryImn();
+  bool get isImn => const CountryImn().isSameAs(this);
 
   /// Checks if this [WorldCountry] instance is India.
-  bool get isInd => this == const CountryInd();
+  bool get isInd => const CountryInd().isSameAs(this);
 
   /// Checks if this [WorldCountry] instance is British Indian Ocean Territory.
-  bool get isIot => this == const CountryIot();
+  bool get isIot => const CountryIot().isSameAs(this);
 
   /// Checks if this [WorldCountry] instance is Ireland.
-  bool get isIrl => this == const CountryIrl();
+  bool get isIrl => const CountryIrl().isSameAs(this);
 
   /// Checks if this [WorldCountry] instance is Iran.
-  bool get isIrn => this == const CountryIrn();
+  bool get isIrn => const CountryIrn().isSameAs(this);
 
   /// Checks if this [WorldCountry] instance is Iraq.
-  bool get isIrq => this == const CountryIrq();
+  bool get isIrq => const CountryIrq().isSameAs(this);
 
   /// Checks if this [WorldCountry] instance is Iceland.
-  bool get isIsl => this == const CountryIsl();
+  bool get isIsl => const CountryIsl().isSameAs(this);
 
   /// Checks if this [WorldCountry] instance is Israel.
-  bool get isIsr => this == const CountryIsr();
+  bool get isIsr => const CountryIsr().isSameAs(this);
 
   /// Checks if this [WorldCountry] instance is Italy.
-  bool get isIta => this == const CountryIta();
+  bool get isIta => const CountryIta().isSameAs(this);
 
   /// Checks if this [WorldCountry] instance is Jamaica.
-  bool get isJam => this == const CountryJam();
+  bool get isJam => const CountryJam().isSameAs(this);
 
   /// Checks if this [WorldCountry] instance is Jersey.
-  bool get isJey => this == const CountryJey();
+  bool get isJey => const CountryJey().isSameAs(this);
 
   /// Checks if this [WorldCountry] instance is Jordan.
-  bool get isJor => this == const CountryJor();
+  bool get isJor => const CountryJor().isSameAs(this);
 
   /// Checks if this [WorldCountry] instance is Japan.
-  bool get isJpn => this == const CountryJpn();
+  bool get isJpn => const CountryJpn().isSameAs(this);
 
   /// Checks if this [WorldCountry] instance is Kazakhstan.
-  bool get isKaz => this == const CountryKaz();
+  bool get isKaz => const CountryKaz().isSameAs(this);
 
   /// Checks if this [WorldCountry] instance is Kenya.
-  bool get isKen => this == const CountryKen();
+  bool get isKen => const CountryKen().isSameAs(this);
 
   /// Checks if this [WorldCountry] instance is Kyrgyzstan.
-  bool get isKgz => this == const CountryKgz();
+  bool get isKgz => const CountryKgz().isSameAs(this);
 
   /// Checks if this [WorldCountry] instance is Cambodia.
-  bool get isKhm => this == const CountryKhm();
+  bool get isKhm => const CountryKhm().isSameAs(this);
 
   /// Checks if this [WorldCountry] instance is Kiribati.
-  bool get isKir => this == const CountryKir();
+  bool get isKir => const CountryKir().isSameAs(this);
 
   /// Checks if this [WorldCountry] instance is Saint Kitts and Nevis.
-  bool get isKna => this == const CountryKna();
+  bool get isKna => const CountryKna().isSameAs(this);
 
   /// Checks if this [WorldCountry] instance is South Korea.
-  bool get isKor => this == const CountryKor();
+  bool get isKor => const CountryKor().isSameAs(this);
 
   /// Checks if this [WorldCountry] instance is Kuwait.
-  bool get isKwt => this == const CountryKwt();
+  bool get isKwt => const CountryKwt().isSameAs(this);
 
   /// Checks if this [WorldCountry] instance is Laos.
-  bool get isLao => this == const CountryLao();
+  bool get isLao => const CountryLao().isSameAs(this);
 
   /// Checks if this [WorldCountry] instance is Lebanon.
-  bool get isLbn => this == const CountryLbn();
+  bool get isLbn => const CountryLbn().isSameAs(this);
 
   /// Checks if this [WorldCountry] instance is Liberia.
-  bool get isLbr => this == const CountryLbr();
+  bool get isLbr => const CountryLbr().isSameAs(this);
 
   /// Checks if this [WorldCountry] instance is Libya.
-  bool get isLby => this == const CountryLby();
+  bool get isLby => const CountryLby().isSameAs(this);
 
   /// Checks if this [WorldCountry] instance is Saint Lucia.
-  bool get isLca => this == const CountryLca();
+  bool get isLca => const CountryLca().isSameAs(this);
 
   /// Checks if this [WorldCountry] instance is Liechtenstein.
-  bool get isLie => this == const CountryLie();
+  bool get isLie => const CountryLie().isSameAs(this);
 
   /// Checks if this [WorldCountry] instance is Sri Lanka.
-  bool get isLka => this == const CountryLka();
+  bool get isLka => const CountryLka().isSameAs(this);
 
   /// Checks if this [WorldCountry] instance is Lesotho.
-  bool get isLso => this == const CountryLso();
+  bool get isLso => const CountryLso().isSameAs(this);
 
   /// Checks if this [WorldCountry] instance is Lithuania.
-  bool get isLtu => this == const CountryLtu();
+  bool get isLtu => const CountryLtu().isSameAs(this);
 
   /// Checks if this [WorldCountry] instance is Luxembourg.
-  bool get isLux => this == const CountryLux();
+  bool get isLux => const CountryLux().isSameAs(this);
 
   /// Checks if this [WorldCountry] instance is Latvia.
-  bool get isLva => this == const CountryLva();
+  bool get isLva => const CountryLva().isSameAs(this);
 
   /// Checks if this [WorldCountry] instance is Macau.
-  bool get isMac => this == const CountryMac();
+  bool get isMac => const CountryMac().isSameAs(this);
 
   /// Checks if this [WorldCountry] instance is Saint Martin.
-  bool get isMaf => this == const CountryMaf();
+  bool get isMaf => const CountryMaf().isSameAs(this);
 
   /// Checks if this [WorldCountry] instance is Morocco.
-  bool get isMar => this == const CountryMar();
+  bool get isMar => const CountryMar().isSameAs(this);
 
   /// Checks if this [WorldCountry] instance is Monaco.
-  bool get isMco => this == const CountryMco();
+  bool get isMco => const CountryMco().isSameAs(this);
 
   /// Checks if this [WorldCountry] instance is Moldova.
-  bool get isMda => this == const CountryMda();
+  bool get isMda => const CountryMda().isSameAs(this);
 
   /// Checks if this [WorldCountry] instance is Madagascar.
-  bool get isMdg => this == const CountryMdg();
+  bool get isMdg => const CountryMdg().isSameAs(this);
 
   /// Checks if this [WorldCountry] instance is Maldives.
-  bool get isMdv => this == const CountryMdv();
+  bool get isMdv => const CountryMdv().isSameAs(this);
 
   /// Checks if this [WorldCountry] instance is Mexico.
-  bool get isMex => this == const CountryMex();
+  bool get isMex => const CountryMex().isSameAs(this);
 
   /// Checks if this [WorldCountry] instance is Marshall Islands.
-  bool get isMhl => this == const CountryMhl();
+  bool get isMhl => const CountryMhl().isSameAs(this);
 
   /// Checks if this [WorldCountry] instance is North Macedonia.
-  bool get isMkd => this == const CountryMkd();
+  bool get isMkd => const CountryMkd().isSameAs(this);
 
   /// Checks if this [WorldCountry] instance is Mali.
-  bool get isMli => this == const CountryMli();
+  bool get isMli => const CountryMli().isSameAs(this);
 
   /// Checks if this [WorldCountry] instance is Malta.
-  bool get isMlt => this == const CountryMlt();
+  bool get isMlt => const CountryMlt().isSameAs(this);
 
   /// Checks if this [WorldCountry] instance is Myanmar.
-  bool get isMmr => this == const CountryMmr();
+  bool get isMmr => const CountryMmr().isSameAs(this);
 
   /// Checks if this [WorldCountry] instance is Montenegro.
-  bool get isMne => this == const CountryMne();
+  bool get isMne => const CountryMne().isSameAs(this);
 
   /// Checks if this [WorldCountry] instance is Mongolia.
-  bool get isMng => this == const CountryMng();
+  bool get isMng => const CountryMng().isSameAs(this);
 
   /// Checks if this [WorldCountry] instance is Northern Mariana Islands.
-  bool get isMnp => this == const CountryMnp();
+  bool get isMnp => const CountryMnp().isSameAs(this);
 
   /// Checks if this [WorldCountry] instance is Mozambique.
-  bool get isMoz => this == const CountryMoz();
+  bool get isMoz => const CountryMoz().isSameAs(this);
 
   /// Checks if this [WorldCountry] instance is Mauritania.
-  bool get isMrt => this == const CountryMrt();
+  bool get isMrt => const CountryMrt().isSameAs(this);
 
   /// Checks if this [WorldCountry] instance is Montserrat.
-  bool get isMsr => this == const CountryMsr();
+  bool get isMsr => const CountryMsr().isSameAs(this);
 
   /// Checks if this [WorldCountry] instance is Martinique.
-  bool get isMtq => this == const CountryMtq();
+  bool get isMtq => const CountryMtq().isSameAs(this);
 
   /// Checks if this [WorldCountry] instance is Mauritius.
-  bool get isMus => this == const CountryMus();
+  bool get isMus => const CountryMus().isSameAs(this);
 
   /// Checks if this [WorldCountry] instance is Malawi.
-  bool get isMwi => this == const CountryMwi();
+  bool get isMwi => const CountryMwi().isSameAs(this);
 
   /// Checks if this [WorldCountry] instance is Malaysia.
-  bool get isMys => this == const CountryMys();
+  bool get isMys => const CountryMys().isSameAs(this);
 
   /// Checks if this [WorldCountry] instance is Mayotte.
-  bool get isMyt => this == const CountryMyt();
+  bool get isMyt => const CountryMyt().isSameAs(this);
 
   /// Checks if this [WorldCountry] instance is Namibia.
-  bool get isNam => this == const CountryNam();
+  bool get isNam => const CountryNam().isSameAs(this);
 
   /// Checks if this [WorldCountry] instance is New Caledonia.
-  bool get isNcl => this == const CountryNcl();
+  bool get isNcl => const CountryNcl().isSameAs(this);
 
   /// Checks if this [WorldCountry] instance is Niger.
-  bool get isNer => this == const CountryNer();
+  bool get isNer => const CountryNer().isSameAs(this);
 
   /// Checks if this [WorldCountry] instance is Norfolk Island.
-  bool get isNfk => this == const CountryNfk();
+  bool get isNfk => const CountryNfk().isSameAs(this);
 
   /// Checks if this [WorldCountry] instance is Nigeria.
-  bool get isNga => this == const CountryNga();
+  bool get isNga => const CountryNga().isSameAs(this);
 
   /// Checks if this [WorldCountry] instance is Nicaragua.
-  bool get isNic => this == const CountryNic();
+  bool get isNic => const CountryNic().isSameAs(this);
 
   /// Checks if this [WorldCountry] instance is Niue.
-  bool get isNiu => this == const CountryNiu();
+  bool get isNiu => const CountryNiu().isSameAs(this);
 
   /// Checks if this [WorldCountry] instance is Netherlands.
-  bool get isNld => this == const CountryNld();
+  bool get isNld => const CountryNld().isSameAs(this);
 
   /// Checks if this [WorldCountry] instance is Norway.
-  bool get isNor => this == const CountryNor();
+  bool get isNor => const CountryNor().isSameAs(this);
 
   /// Checks if this [WorldCountry] instance is Nepal.
-  bool get isNpl => this == const CountryNpl();
+  bool get isNpl => const CountryNpl().isSameAs(this);
 
   /// Checks if this [WorldCountry] instance is Nauru.
-  bool get isNru => this == const CountryNru();
+  bool get isNru => const CountryNru().isSameAs(this);
 
   /// Checks if this [WorldCountry] instance is New Zealand.
-  bool get isNzl => this == const CountryNzl();
+  bool get isNzl => const CountryNzl().isSameAs(this);
 
   /// Checks if this [WorldCountry] instance is Oman.
-  bool get isOmn => this == const CountryOmn();
+  bool get isOmn => const CountryOmn().isSameAs(this);
 
   /// Checks if this [WorldCountry] instance is Pakistan.
-  bool get isPak => this == const CountryPak();
+  bool get isPak => const CountryPak().isSameAs(this);
 
   /// Checks if this [WorldCountry] instance is Panama.
-  bool get isPan => this == const CountryPan();
+  bool get isPan => const CountryPan().isSameAs(this);
 
   /// Checks if this [WorldCountry] instance is Pitcairn Islands.
-  bool get isPcn => this == const CountryPcn();
+  bool get isPcn => const CountryPcn().isSameAs(this);
 
   /// Checks if this [WorldCountry] instance is Peru.
-  bool get isPer => this == const CountryPer();
+  bool get isPer => const CountryPer().isSameAs(this);
 
   /// Checks if this [WorldCountry] instance is Philippines.
-  bool get isPhl => this == const CountryPhl();
+  bool get isPhl => const CountryPhl().isSameAs(this);
 
   /// Checks if this [WorldCountry] instance is Palau.
-  bool get isPlw => this == const CountryPlw();
+  bool get isPlw => const CountryPlw().isSameAs(this);
 
   /// Checks if this [WorldCountry] instance is Papua New Guinea.
-  bool get isPng => this == const CountryPng();
+  bool get isPng => const CountryPng().isSameAs(this);
 
   /// Checks if this [WorldCountry] instance is Poland.
-  bool get isPol => this == const CountryPol();
+  bool get isPol => const CountryPol().isSameAs(this);
 
   /// Checks if this [WorldCountry] instance is Puerto Rico.
-  bool get isPri => this == const CountryPri();
+  bool get isPri => const CountryPri().isSameAs(this);
 
   /// Checks if this [WorldCountry] instance is North Korea.
-  bool get isPrk => this == const CountryPrk();
+  bool get isPrk => const CountryPrk().isSameAs(this);
 
   /// Checks if this [WorldCountry] instance is Portugal.
-  bool get isPrt => this == const CountryPrt();
+  bool get isPrt => const CountryPrt().isSameAs(this);
 
   /// Checks if this [WorldCountry] instance is Paraguay.
-  bool get isPry => this == const CountryPry();
+  bool get isPry => const CountryPry().isSameAs(this);
 
   /// Checks if this [WorldCountry] instance is Palestine.
-  bool get isPse => this == const CountryPse();
+  bool get isPse => const CountryPse().isSameAs(this);
 
   /// Checks if this [WorldCountry] instance is French Polynesia.
-  bool get isPyf => this == const CountryPyf();
+  bool get isPyf => const CountryPyf().isSameAs(this);
 
   /// Checks if this [WorldCountry] instance is Qatar.
-  bool get isQat => this == const CountryQat();
+  bool get isQat => const CountryQat().isSameAs(this);
 
   /// Checks if this [WorldCountry] instance is Réunion.
-  bool get isReu => this == const CountryReu();
+  bool get isReu => const CountryReu().isSameAs(this);
 
   /// Checks if this [WorldCountry] instance is Romania.
-  bool get isRou => this == const CountryRou();
+  bool get isRou => const CountryRou().isSameAs(this);
 
   /// Checks if this [WorldCountry] instance is Russia.
-  bool get isRus => this == const CountryRus();
+  bool get isRus => const CountryRus().isSameAs(this);
 
   /// Checks if this [WorldCountry] instance is Rwanda.
-  bool get isRwa => this == const CountryRwa();
+  bool get isRwa => const CountryRwa().isSameAs(this);
 
   /// Checks if this [WorldCountry] instance is Saudi Arabia.
-  bool get isSau => this == const CountrySau();
+  bool get isSau => const CountrySau().isSameAs(this);
 
   /// Checks if this [WorldCountry] instance is Sudan.
-  bool get isSdn => this == const CountrySdn();
+  bool get isSdn => const CountrySdn().isSameAs(this);
 
   /// Checks if this [WorldCountry] instance is Senegal.
-  bool get isSen => this == const CountrySen();
+  bool get isSen => const CountrySen().isSameAs(this);
 
   /// Checks if this [WorldCountry] instance is Singapore.
-  bool get isSgp => this == const CountrySgp();
+  bool get isSgp => const CountrySgp().isSameAs(this);
 
   /// Checks if this [WorldCountry] instance is South Georgia.
-  bool get isSgs => this == const CountrySgs();
+  bool get isSgs => const CountrySgs().isSameAs(this);
 
   /// Checks if this [WorldCountry] instance is Saint Helena, Ascension and Tristan da Cunha.
-  bool get isShn => this == const CountryShn();
+  bool get isShn => const CountryShn().isSameAs(this);
 
   /// Checks if this [WorldCountry] instance is Svalbard and Jan Mayen.
-  bool get isSjm => this == const CountrySjm();
+  bool get isSjm => const CountrySjm().isSameAs(this);
 
   /// Checks if this [WorldCountry] instance is Solomon Islands.
-  bool get isSlb => this == const CountrySlb();
+  bool get isSlb => const CountrySlb().isSameAs(this);
 
   /// Checks if this [WorldCountry] instance is Sierra Leone.
-  bool get isSle => this == const CountrySle();
+  bool get isSle => const CountrySle().isSameAs(this);
 
   /// Checks if this [WorldCountry] instance is El Salvador.
-  bool get isSlv => this == const CountrySlv();
+  bool get isSlv => const CountrySlv().isSameAs(this);
 
   /// Checks if this [WorldCountry] instance is San Marino.
-  bool get isSmr => this == const CountrySmr();
+  bool get isSmr => const CountrySmr().isSameAs(this);
 
   /// Checks if this [WorldCountry] instance is Somalia.
-  bool get isSom => this == const CountrySom();
+  bool get isSom => const CountrySom().isSameAs(this);
 
   /// Checks if this [WorldCountry] instance is Saint Pierre and Miquelon.
-  bool get isSpm => this == const CountrySpm();
+  bool get isSpm => const CountrySpm().isSameAs(this);
 
   /// Checks if this [WorldCountry] instance is Serbia.
-  bool get isSrb => this == const CountrySrb();
+  bool get isSrb => const CountrySrb().isSameAs(this);
 
   /// Checks if this [WorldCountry] instance is South Sudan.
-  bool get isSsd => this == const CountrySsd();
+  bool get isSsd => const CountrySsd().isSameAs(this);
 
   /// Checks if this [WorldCountry] instance is São Tomé and Príncipe.
-  bool get isStp => this == const CountryStp();
+  bool get isStp => const CountryStp().isSameAs(this);
 
   /// Checks if this [WorldCountry] instance is Suriname.
-  bool get isSur => this == const CountrySur();
+  bool get isSur => const CountrySur().isSameAs(this);
 
   /// Checks if this [WorldCountry] instance is Slovakia.
-  bool get isSvk => this == const CountrySvk();
+  bool get isSvk => const CountrySvk().isSameAs(this);
 
   /// Checks if this [WorldCountry] instance is Slovenia.
-  bool get isSvn => this == const CountrySvn();
+  bool get isSvn => const CountrySvn().isSameAs(this);
 
   /// Checks if this [WorldCountry] instance is Sweden.
-  bool get isSwe => this == const CountrySwe();
+  bool get isSwe => const CountrySwe().isSameAs(this);
 
   /// Checks if this [WorldCountry] instance is Eswatini.
-  bool get isSwz => this == const CountrySwz();
+  bool get isSwz => const CountrySwz().isSameAs(this);
 
   /// Checks if this [WorldCountry] instance is Sint Maarten.
-  bool get isSxm => this == const CountrySxm();
+  bool get isSxm => const CountrySxm().isSameAs(this);
 
   /// Checks if this [WorldCountry] instance is Seychelles.
-  bool get isSyc => this == const CountrySyc();
+  bool get isSyc => const CountrySyc().isSameAs(this);
 
   /// Checks if this [WorldCountry] instance is Syria.
-  bool get isSyr => this == const CountrySyr();
+  bool get isSyr => const CountrySyr().isSameAs(this);
 
   /// Checks if this [WorldCountry] instance is Turks and Caicos Islands.
-  bool get isTca => this == const CountryTca();
+  bool get isTca => const CountryTca().isSameAs(this);
 
   /// Checks if this [WorldCountry] instance is Chad.
-  bool get isTcd => this == const CountryTcd();
+  bool get isTcd => const CountryTcd().isSameAs(this);
 
   /// Checks if this [WorldCountry] instance is Togo.
-  bool get isTgo => this == const CountryTgo();
+  bool get isTgo => const CountryTgo().isSameAs(this);
 
   /// Checks if this [WorldCountry] instance is Thailand.
-  bool get isTha => this == const CountryTha();
+  bool get isTha => const CountryTha().isSameAs(this);
 
   /// Checks if this [WorldCountry] instance is Tajikistan.
-  bool get isTjk => this == const CountryTjk();
+  bool get isTjk => const CountryTjk().isSameAs(this);
 
   /// Checks if this [WorldCountry] instance is Tokelau.
-  bool get isTkl => this == const CountryTkl();
+  bool get isTkl => const CountryTkl().isSameAs(this);
 
   /// Checks if this [WorldCountry] instance is Turkmenistan.
-  bool get isTkm => this == const CountryTkm();
+  bool get isTkm => const CountryTkm().isSameAs(this);
 
   /// Checks if this [WorldCountry] instance is Timor-Leste.
-  bool get isTls => this == const CountryTls();
+  bool get isTls => const CountryTls().isSameAs(this);
 
   /// Checks if this [WorldCountry] instance is Tonga.
-  bool get isTon => this == const CountryTon();
+  bool get isTon => const CountryTon().isSameAs(this);
 
   /// Checks if this [WorldCountry] instance is Trinidad and Tobago.
-  bool get isTto => this == const CountryTto();
+  bool get isTto => const CountryTto().isSameAs(this);
 
   /// Checks if this [WorldCountry] instance is Tunisia.
-  bool get isTun => this == const CountryTun();
+  bool get isTun => const CountryTun().isSameAs(this);
 
   /// Checks if this [WorldCountry] instance is Turkey.
-  bool get isTur => this == const CountryTur();
+  bool get isTur => const CountryTur().isSameAs(this);
 
   /// Checks if this [WorldCountry] instance is Tuvalu.
-  bool get isTuv => this == const CountryTuv();
+  bool get isTuv => const CountryTuv().isSameAs(this);
 
   /// Checks if this [WorldCountry] instance is Taiwan.
-  bool get isTwn => this == const CountryTwn();
+  bool get isTwn => const CountryTwn().isSameAs(this);
 
   /// Checks if this [WorldCountry] instance is Tanzania.
-  bool get isTza => this == const CountryTza();
+  bool get isTza => const CountryTza().isSameAs(this);
 
   /// Checks if this [WorldCountry] instance is Uganda.
-  bool get isUga => this == const CountryUga();
+  bool get isUga => const CountryUga().isSameAs(this);
 
   /// Checks if this [WorldCountry] instance is Ukraine.
-  bool get isUkr => this == const CountryUkr();
+  bool get isUkr => const CountryUkr().isSameAs(this);
 
   /// Checks if this [WorldCountry] instance is United States Minor Outlying Islands.
-  bool get isUmi => this == const CountryUmi();
+  bool get isUmi => const CountryUmi().isSameAs(this);
 
   /// Checks if this [WorldCountry] instance is Uruguay.
-  bool get isUry => this == const CountryUry();
+  bool get isUry => const CountryUry().isSameAs(this);
 
   /// Checks if this [WorldCountry] instance is United States.
-  bool get isUsa => this == const CountryUsa();
+  bool get isUsa => const CountryUsa().isSameAs(this);
 
   /// Checks if this [WorldCountry] instance is Uzbekistan.
-  bool get isUzb => this == const CountryUzb();
+  bool get isUzb => const CountryUzb().isSameAs(this);
 
   /// Checks if this [WorldCountry] instance is Vatican City.
-  bool get isVat => this == const CountryVat();
+  bool get isVat => const CountryVat().isSameAs(this);
 
   /// Checks if this [WorldCountry] instance is Saint Vincent and the Grenadines.
-  bool get isVct => this == const CountryVct();
+  bool get isVct => const CountryVct().isSameAs(this);
 
   /// Checks if this [WorldCountry] instance is Venezuela.
-  bool get isVen => this == const CountryVen();
+  bool get isVen => const CountryVen().isSameAs(this);
 
   /// Checks if this [WorldCountry] instance is British Virgin Islands.
-  bool get isVgb => this == const CountryVgb();
+  bool get isVgb => const CountryVgb().isSameAs(this);
 
   /// Checks if this [WorldCountry] instance is United States Virgin Islands.
-  bool get isVir => this == const CountryVir();
+  bool get isVir => const CountryVir().isSameAs(this);
 
   /// Checks if this [WorldCountry] instance is Vietnam.
-  bool get isVnm => this == const CountryVnm();
+  bool get isVnm => const CountryVnm().isSameAs(this);
 
   /// Checks if this [WorldCountry] instance is Vanuatu.
-  bool get isVut => this == const CountryVut();
+  bool get isVut => const CountryVut().isSameAs(this);
 
   /// Checks if this [WorldCountry] instance is Wallis and Futuna.
-  bool get isWlf => this == const CountryWlf();
+  bool get isWlf => const CountryWlf().isSameAs(this);
 
   /// Checks if this [WorldCountry] instance is Samoa.
-  bool get isWsm => this == const CountryWsm();
+  bool get isWsm => const CountryWsm().isSameAs(this);
 
   /// Checks if this [WorldCountry] instance is Yemen.
-  bool get isYem => this == const CountryYem();
+  bool get isYem => const CountryYem().isSameAs(this);
 
   /// Checks if this [WorldCountry] instance is South Africa.
-  bool get isZaf => this == const CountryZaf();
+  bool get isZaf => const CountryZaf().isSameAs(this);
 
   /// Checks if this [WorldCountry] instance is Zambia.
-  bool get isZmb => this == const CountryZmb();
+  bool get isZmb => const CountryZmb().isSameAs(this);
 
   /// Checks if this [WorldCountry] instance is Zimbabwe.
-  bool get isZwe => this == const CountryZwe();
+  bool get isZwe => const CountryZwe().isSameAs(this);
 
   /// Checks if this [WorldCountry] instance is Kosovo.
-  bool get isUnk => this == const CountryUnk();
+  bool get isUnk => const CountryUnk().isSameAs(this);
 }

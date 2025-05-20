@@ -99,7 +99,7 @@ Use the `WorldCountry` class to get information about countries. Either construc
   );
   print(europeanCountries); // Prints a list of European countries.
 
-  // Prints German translations of all available regular currencies.
+  // Prints German translations of all available regular countries.
   final germanNames = WorldCountry.list.commonNamesMap(
     options: const LocaleMappingOptions(
       mainLocale: BasicTypedLocale(LangDeu()),
