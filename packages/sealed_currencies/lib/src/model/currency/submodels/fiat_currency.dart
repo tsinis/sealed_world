@@ -430,7 +430,6 @@ class FiatCurrency extends Currency
   /// ```
   static const map = UpperCaseIsoMap<FiatCurrency>({
     ...fiatCurrencyCodeMap,
-    // ignore: unnecessary-trailing-comma, against new dart 3.7.0 formatting.
     ...fiatCurrencyCodeOtherMap,
   });
 

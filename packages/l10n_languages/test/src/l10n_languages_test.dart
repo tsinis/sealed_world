@@ -52,20 +52,14 @@ void main() => group("$LanguagesLocaleMapper", () {
     });
 
     test("handles multiple ISO codes", () {
-      final result = mapper.localize(const {
-        "ENG",
-        "RUS",
-        "DEU",
-      }, mainLocale: "sk");
+      const codes = {"ENG", "RUS", "DEU"};
+      final result = mapper.localize(codes, mainLocale: "sk");
       expect(result.length, greaterThanOrEqualTo(3));
       expect(result.values, containsAll(["angličtina", "ruština", "nemčina"]));
     });
 
     test("handles non-existent ISO codes gracefully", () {
-      final result = mapper.localize(const {
-        "NON",
-        "EXISTENT",
-      }, mainLocale: "en");
+      final result = mapper.localize(const {"NO", "EXIST"}, mainLocale: "en");
       expect(result, isEmpty);
     });
 

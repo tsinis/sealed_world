@@ -170,8 +170,8 @@ const ${varFileName.toCamelCase()} = [
   String _dartDoc(Set<TranslatedName> translations, Object name, String type) {
     final itemName = name is TranslatedName ? name.common : name.toString();
     final sorted = List.of(translations.map((e) => e.language.name))..sort();
-    // ignore: avoid-passing-self-as-argument, it's CLI tool.
     final import =
+        // ignore: avoid-passing-self-as-argument, it's CLI tool.
         package.whenConstOrNull(sealedCountries: package.dirName) ??
         Package.sealedLanguages.dirName;
 

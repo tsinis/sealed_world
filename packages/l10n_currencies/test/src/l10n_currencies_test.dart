@@ -53,11 +53,8 @@ void main() => group("$CurrenciesLocaleMapper", () {
     });
 
     test("handles multiple ISO codes", () {
-      final result = mapper.localize(const {
-        "USD",
-        "RUB",
-        "EUR",
-      }, mainLocale: "sk");
+      const codes = {"USD", "RUB", "EUR"};
+      final result = mapper.localize(codes, mainLocale: "sk");
       expect(result.length, greaterThanOrEqualTo(3));
       expect(
         result.values,

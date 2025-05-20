@@ -52,11 +52,8 @@ void main() => group("$CountriesLocaleMapper", () {
     });
 
     test("handles multiple ISO codes", () {
-      final result = mapper.localize(const {
-        "USA",
-        "RUS",
-        "DEU",
-      }, mainLocale: "bs");
+      const codes = {"USA", "RUS", "DEU"};
+      final result = mapper.localize(codes, mainLocale: "bs");
       expect(result.values, const ["Sjedinjene Države", "Rusija", "Njemačka"]);
     });
 
