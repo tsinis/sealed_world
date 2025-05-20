@@ -416,9 +416,9 @@ final class IrqPainter extends CustomElementsPainter {
       )
       ..lineTo(width * 0.59, height * 0.53)
       ..close();
-    canvas.drawPath(path, paintCreator());
-
-    canvas.restore();
+    canvas
+      ..drawPath(path, paintCreator())
+      ..restore();
 
     return null;
   }
