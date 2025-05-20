@@ -5,7 +5,7 @@ import "package:test/test.dart";
 
 void main() {
   const value = LangDeu();
-  final nonConst = LangDeu(); //ignore: prefer_const_constructors, it's test.
+  final nonConst = LangDeu(); // ignore: prefer_const_constructors, it's test.
   // ignore: prefer_final_locals, prefer_const_constructors, it's a test.
   var varValue = LangDeu(); // ignore: prefer-type-over-var, it's a test.
 
@@ -53,7 +53,7 @@ void main() {
     });
 
     test("boolean getter should work var declaration", () {
-      final maybeMap = value.maybeMap(
+      final maybeMap = varValue.maybeMap(
         langDeu: (_) => true,
         orElse: (_) => false,
       );
