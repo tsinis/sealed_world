@@ -27,7 +27,8 @@ part of "../country.dart";
 class WorldCountry extends Country
     implements
         IsoTranslated<TranslatedName, CountryName, BasicTypedLocale>,
-        JsonEncodable<WorldCountry> {
+        JsonEncodable<WorldCountry>,
+        Comparable<WorldCountry> {
   /// {@template country_constructor}
   /// Creates a new [WorldCountry] object with the given properties.
   ///
@@ -386,6 +387,9 @@ class WorldCountry extends Country
 
   @override
   String toJson({JsonCodec codec = const JsonCodec()}) => codec.encode(toMap());
+
+  @override
+  int compareTo(WorldCountry other) => code.compareTo(other.code);
 
   /// Returns a [WorldCountry] object that represents the country with the given
   /// [value].
