@@ -9,7 +9,8 @@ part of "../currency.dart";
 class FiatCurrency extends Currency
     implements
         IsoTranslated<TranslatedName, String, BasicLocale>,
-        JsonEncodable<FiatCurrency> {
+        JsonEncodable<FiatCurrency>,
+        Comparable<FiatCurrency> {
   /// {@template currency_constructor}
   /// Creates a new instance of [FiatCurrency].
   ///
@@ -265,6 +266,9 @@ class FiatCurrency extends Currency
 
   @override
   String toJson({JsonCodec codec = const JsonCodec()}) => codec.encode(toMap());
+
+  @override
+  int compareTo(FiatCurrency other) => code.compareTo(other.code);
 
   /// Returns a [FiatCurrency] object whose [code] or the value returned by
   /// [where] matches the specified [value], or `null` if no such object exists

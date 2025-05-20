@@ -6,6 +6,7 @@ export "src/data/natural_languages.data.dart";
 export "src/data/scripts.data.dart";
 export "src/helpers/extensions/basic_locale_extension.dart";
 export "src/helpers/extensions/iso_comparable_extension.dart";
+export "src/helpers/extensions/iso_standardized_language_script_extension.dart";
 export "src/helpers/extensions/iso_standardized_string_extension.dart";
 export "src/helpers/extensions/iso_translated_iterable_extension.dart";
 export "src/helpers/extensions/locale_mapping_options_extension.dart";
