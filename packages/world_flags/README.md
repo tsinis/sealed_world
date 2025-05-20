@@ -30,7 +30,7 @@ Each flag is a vector-based `CustomPainter`, ensuring precise, scalable, and stu
 
 ## Getting Started
 
-To use this package, you will need Flutter version 3.27.1+. Add `world_flags` as a dependency in your `pubspec.yaml` file.
+To use this package, you will need Flutter version 3.32+. Add `world_flags` as a dependency in your `pubspec.yaml` file.
 
 ```yaml
 dependencies:
