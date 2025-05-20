@@ -1,4 +1,4 @@
-// ignore_for_file: avoid_print, avoid-non-ascii-symbols
+// ignore_for_file: avoid-non-ascii-symbols
 import "package:cli/constants/path_constants.dart";
 import "package:cli/generators/l10n_test_generator.dart";
 import "package:cli/utils/args_parser.dart";

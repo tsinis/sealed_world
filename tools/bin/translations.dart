@@ -1,4 +1,4 @@
-// ignore_for_file: avoid_print, avoid-non-ascii-symbols
+// ignore_for_file: avoid-non-ascii-symbols
 import "package:change_case/change_case.dart";
 import "package:cli/constants/path_constants.dart";
 import "package:cli/generators/helpers/extensions/package_associations_extension.dart";
