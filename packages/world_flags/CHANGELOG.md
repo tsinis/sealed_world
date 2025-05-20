@@ -2,6 +2,7 @@
 
 NEW FEATURES
 
+- Imporive Iraq flag painer aspect ratio change handling.
 - Enhance ISO standardized classes with `Comparable` interface and update bool getters.
 - Add regional code alias and new ISO standardized extensions for type checking.
 - Add official country translations for the [Indonesian language](https://gitlab.com/restcountries/restcountries/-/merge_requests/76).
