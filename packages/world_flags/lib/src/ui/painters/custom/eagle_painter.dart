@@ -17,7 +17,7 @@ final class EaglePainter extends CustomElementsPainter {
   FlagParentBounds paintFlagElements(Canvas canvas, Size size) {
     MultiElementPainter(
       List.unmodifiable(properties.skip(1)),
-      aspectRatio, // ignore: require_trailing_commas, new dart format.
+      aspectRatio, // ignore: unnecessary-trailing-comma, new dart format.
     ).paint(canvas, size);
 
     final adjustedSize = ratioAdjustedSize(size, minRatio: 2);

@@ -30,7 +30,7 @@ final class AgoPainter extends CustomElementsPainter {
 
     final star = StarPainter([
       starProperties,
-      // ignore: require_trailing_commas, prefer-trailing-comma, new dart format
+      // ignore: prefer-trailing-comma, new dart format
     ], aspectRatio).paintFlagElements(canvas, size);
     final center = star.bounds.center;
 

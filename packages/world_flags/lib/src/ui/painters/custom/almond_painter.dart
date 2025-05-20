@@ -30,7 +30,7 @@ final class AlmondPainter extends CustomElementsPainter {
     /// TODO? Refactor with .save() and .restore() methods.
     MultiElementPainter(
       List.unmodifiable(properties.skip(1)),
-      aspectRatio, // ignore: require_trailing_commas, new dart format.
+      aspectRatio, // ignore: unnecessary-trailing-comma, new dart format.
     ).paint(canvas, size);
 
     final center = calculateCenter(size);

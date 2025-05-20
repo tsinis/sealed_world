@@ -24,12 +24,12 @@ bool _doAntiAlias = false;
 /// Flutter Golden tests are using Ahem font family by default. It's showing
 /// squares instead of real characters. With this setter you can specify
 /// different font family for your tests.
-@visibleForTesting
+@visibleForTesting // coverage:ignore-line
 @Deprecated("Ineffective (text painters removed).")
 set flagTextStyleOverride(TextStyle value) => _textStyle = value;
 
 /// Retrieves the current value of the font family that is used for flag's text.
 @Deprecated("Ineffective (text painters removed).") // coverage:ignore-line
-TextStyle get flagTextStyleOverride => _textStyle;
+TextStyle get flagTextStyleOverride => _textStyle; // coverage:ignore-line
 
-TextStyle _textStyle = const TextStyle();
+TextStyle _textStyle = const TextStyle(); // coverage:ignore-line

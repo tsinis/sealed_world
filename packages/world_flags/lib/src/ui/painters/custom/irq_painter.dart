@@ -14,9 +14,28 @@ final class IrqPainter extends CustomElementsPainter {
 
   @override
   FlagParentBounds? paintFlagElements(Canvas canvas, Size size) {
+    const width = 1.0;
+    final ratio = calculateAspectRatio(size);
+    final wordBoxHeight = width / originalAspectRatio;
+
+    double verticalCoordinate = 0;
+    double horizontalCoordinate = 0;
+    final scale = ratio > originalAspectRatio
+        ? size.height / wordBoxHeight
+        : size.width;
+    if (ratio > originalAspectRatio) {
+      horizontalCoordinate = (size.width - width * scale) / 2;
+    } else {
+      verticalCoordinate = (size.height - wordBoxHeight * scale) / 2;
+    }
+
+    canvas
+      ..save()
+      ..translate(horizontalCoordinate, verticalCoordinate)
+      ..scale(scale, scale);
+
     final path = Path();
-    final width = size.width;
-    final height = size.height;
+    final height = wordBoxHeight;
 
     path
       ..moveTo(width / 2, height * 0.57)
@@ -397,7 +416,9 @@ final class IrqPainter extends CustomElementsPainter {
       )
       ..lineTo(width * 0.59, height * 0.53)
       ..close();
-    canvas.drawPath(path, paintCreator());
+    canvas
+      ..drawPath(path, paintCreator())
+      ..restore();
 
     return null;
   }

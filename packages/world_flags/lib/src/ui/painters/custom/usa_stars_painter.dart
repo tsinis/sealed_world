@@ -20,7 +20,7 @@ final class UsaStarsPainter extends MultiElementPainter {
   FlagParentBounds? paintFlagElements(Canvas canvas, Size size) {
     final parent = RectanglePainter([
       properties.first,
-      // ignore: require_trailing_commas, prefer-trailing-comma, new dart format
+      // ignore: prefer-trailing-comma, new dart format
     ], aspectRatio).paint(canvas, size);
     if (parent == null) return parent;
     final paint = paintCreator(customProperties.mainColor);
