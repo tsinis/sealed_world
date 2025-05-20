@@ -1,4 +1,4 @@
-// ignore_for_file: unnecessary_async, missing-test-assertion, flagGolden method
+// ignore_for_file: missing-test-assertion, flagGolden method
 
 import "package:flutter/foundation.dart";
 import "package:flutter/material.dart";

@@ -174,7 +174,7 @@ final class MacPainter extends CustomElementsPainter {
 
     return StarPainter([
       properties.last,
-      // ignore: require_trailing_commas, prefer-trailing-comma, new dart format
+      // ignore: prefer-trailing-comma, new dart format
     ], aspectRatio).paintFlagElements(canvas, adjustedSize);
   }
 }
