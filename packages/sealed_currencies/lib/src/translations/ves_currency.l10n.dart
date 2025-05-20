@@ -201,11 +201,7 @@ const vesCurrencyTranslations = [
   TranslatedName(LangUkr(), name: "венесуельський болівар"),
   TranslatedName(LangUrd(), name: "وینزویلا بولیور"),
   TranslatedName(LangUzb(), name: "Venesuela bolivari"),
-  TranslatedName(
-    LangUzb(),
-    name: "Венесуэла боливари",
-    script: ScriptCyrl(),
-  ),
+  TranslatedName(LangUzb(), name: "Венесуэла боливари", script: ScriptCyrl()),
   TranslatedName(LangVie(), name: "Bolívar Venezuela"),
   TranslatedName(LangZho(), name: "委内瑞拉玻利瓦尔"),
   TranslatedName(LangZho(), name: "委內瑞拉玻利瓦", script: ScriptHant()),

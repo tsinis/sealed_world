@@ -38,9 +38,8 @@ void main() => group("$CountryPicker", () {
       const CountryPicker(),
       (item) => item.translations.first.common,
       theme: CountryTileThemeData(
-        builder:
-            (properties, {isDense}) =>
-                Text(properties.item.translations.first.common),
+        builder: (properties, {isDense}) =>
+            Text(properties.item.translations.first.common),
       ),
     ),
   );
@@ -225,12 +224,10 @@ void main() => group("$CountryPicker", () {
     testWidgets("with onSearchResultsBuilder", (tester) async {
       await tester.pumpMaterialApp(
         SearchAnchor.bar(
-          suggestionsBuilder:
-              CountryPicker(
-                onSearchResultsBuilder:
-                    (query, _) =>
-                        query.isEmpty ? const [] : [firstCountry, lastCountry],
-              ).searchSuggestions,
+          suggestionsBuilder: CountryPicker(
+            onSearchResultsBuilder: (query, _) =>
+                query.isEmpty ? const [] : [firstCountry, lastCountry],
+          ).searchSuggestions,
         ),
       );
 

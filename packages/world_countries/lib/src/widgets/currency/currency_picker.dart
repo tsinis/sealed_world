@@ -71,11 +71,9 @@ class CurrencyPicker extends BasicPicker<FiatCurrency> {
         itemProperties,
         title: itemNameTranslated(itemProperties.item, itemProperties.context),
         dense: isDense,
-        onPressed:
-            (currency) =>
-                (isDense ?? false)
-                    ? maybeSelectAndPop(currency, itemProperties.context)
-                    : onSelect?.call(currency),
+        onPressed: (currency) => (isDense ?? false)
+            ? maybeSelectAndPop(currency, itemProperties.context)
+            : onSelect?.call(currency),
         visualDensity: (isDense ?? false) ? VisualDensity.compact : null,
       );
 

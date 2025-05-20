@@ -46,35 +46,35 @@ class FiatCurrency extends Currency
     super.decimalMark = dot,
     super.thousandsSeparator = ",",
     List<TranslatedName>? translations,
-  })  : assert(
-          code.length == IsoStandardized.codeLength,
-          """`code` should be exactly ${IsoStandardized.codeLength} characters long!""",
-        ),
-        assert(
-          codeNumeric.length == IsoStandardized.codeLength,
-          """`codeNumeric` should be exactly ${IsoStandardized.codeLength} characters long!""",
-        ),
-        assert(
-          namesNative != const <String>[],
-          "`namesNative` should not be empty!",
-        ),
-        assert(
-          htmlEntity == null || htmlEntity.length > 0,
-          "`htmlEntity` should not be empty!",
-        ),
-        assert(
-          subunit == null || subunit.length > 0,
-          "`subunit` should not be empty!",
-        ),
-        assert(
-          alternateSymbols != const <String>[],
-          "`alternateSymbols` should not be empty!",
-        ),
-        assert(
-          smallestDenomination >= 0,
-          "`smallestDenomination` should not be negative!",
-        ),
-        _translations = translations;
+  }) : assert(
+         code.length == IsoStandardized.codeLength,
+         """`code` should be exactly ${IsoStandardized.codeLength} characters long!""",
+       ),
+       assert(
+         codeNumeric.length == IsoStandardized.codeLength,
+         """`codeNumeric` should be exactly ${IsoStandardized.codeLength} characters long!""",
+       ),
+       assert(
+         namesNative != const <String>[],
+         "`namesNative` should not be empty!",
+       ),
+       assert(
+         htmlEntity == null || htmlEntity.length > 0,
+         "`htmlEntity` should not be empty!",
+       ),
+       assert(
+         subunit == null || subunit.length > 0,
+         "`subunit` should not be empty!",
+       ),
+       assert(
+         alternateSymbols != const <String>[],
+         "`alternateSymbols` should not be empty!",
+       ),
+       assert(
+         smallestDenomination >= 0,
+         "`smallestDenomination` should not be negative!",
+       ),
+       _translations = translations;
 
   /// {@macro permissive_constructor}
   /// {@macro currency_constructor}
@@ -111,10 +111,9 @@ class FiatCurrency extends Currency
   factory FiatCurrency.fromCode(
     Object code, [
     Iterable<FiatCurrency>? currencies,
-  ]) =>
-      currencies == null
-          ? codeMap.findByCodeOrThrow(code)
-          : currencies.firstIsoWhereCode(code.toUpperCaseIsoCode());
+  ]) => currencies == null
+      ? codeMap.findByCodeOrThrow(code)
+      : currencies.firstIsoWhereCode(code.toUpperCaseIsoCode());
 
   /// Returns a [FiatCurrency] instance from an numeric ISO 4217 code.
   ///
@@ -130,10 +129,9 @@ class FiatCurrency extends Currency
   factory FiatCurrency.fromCodeNumeric(
     Object codeNumeric, [
     Iterable<FiatCurrency>? currencies,
-  ]) =>
-      currencies == null
-          ? codeNumericMap.findByCodeOrThrow(codeNumeric)
-          : currencies.firstIsoWhereCodeOther(codeNumeric.toUpperCaseIsoCode());
+  ]) => currencies == null
+      ? codeNumericMap.findByCodeOrThrow(codeNumeric)
+      : currencies.firstIsoWhereCodeOther(codeNumeric.toUpperCaseIsoCode());
 
   /// Returns a [FiatCurrency] instance from a currency name.
   ///
@@ -185,15 +183,14 @@ class FiatCurrency extends Currency
   factory FiatCurrency.fromAnyCode(
     Object code, [
     Iterable<FiatCurrency>? currencies,
-  ]) =>
-      currencies == null
-          ? map.findByCodeOrThrow(code)
-          : code.toUpperCaseIsoCode().maybeMapIsoCode(
-                orElse: (regular) => FiatCurrency.fromCode(regular, currencies),
-                numeric: (numeric) =>
-                    FiatCurrency.fromCodeNumeric(numeric, currencies),
-                minLength: IsoStandardized.codeLength,
-              );
+  ]) => currencies == null
+      ? map.findByCodeOrThrow(code)
+      : code.toUpperCaseIsoCode().maybeMapIsoCode(
+          orElse: (regular) => FiatCurrency.fromCode(regular, currencies),
+          numeric: (numeric) =>
+              FiatCurrency.fromCodeNumeric(numeric, currencies),
+          minLength: IsoStandardized.codeLength,
+        );
 
   /// Alternative symbols for this currency or `null` if no such symbols exists.
   final List<String>? alternateSymbols;
@@ -254,17 +251,17 @@ class FiatCurrency extends Currency
   String toString({bool short = true}) => short
       ? super.toString()
       : 'FiatCurrency(code: "$code", name: "$name", '
-          'decimalMark: "$decimalMark", '
-          'thousandsSeparator: "$thousandsSeparator", '
-          '${symbol == null ? '' : 'symbol: r"$symbol", '}'
-          '''${alternateSymbols == null ? '' : 'alternateSymbols: ${jsonEncode(alternateSymbols)}, '}'''
-          '''${disambiguateSymbol == null ? '' : 'disambiguateSymbol: r"$disambiguateSymbol", '}'''
-          '${htmlEntity == null ? '' : 'htmlEntity: r"$htmlEntity", '}'
-          'codeNumeric: "$codeNumeric", '
-          "namesNative: ${jsonEncode(namesNative)}, "
-          "priority: $priority, smallestDenomination: $smallestDenomination, "
-          '${subunit == null ? '' : 'subunit: "$subunit", '}'
-          "subunitToUnit: $subunitToUnit, unitFirst: $unitFirst,)";
+            'decimalMark: "$decimalMark", '
+            'thousandsSeparator: "$thousandsSeparator", '
+            '${symbol == null ? '' : 'symbol: r"$symbol", '}'
+            '''${alternateSymbols == null ? '' : 'alternateSymbols: ${jsonEncode(alternateSymbols)}, '}'''
+            '''${disambiguateSymbol == null ? '' : 'disambiguateSymbol: r"$disambiguateSymbol", '}'''
+            '${htmlEntity == null ? '' : 'htmlEntity: r"$htmlEntity", '}'
+            'codeNumeric: "$codeNumeric", '
+            "namesNative: ${jsonEncode(namesNative)}, "
+            "priority: $priority, smallestDenomination: $smallestDenomination, "
+            '${subunit == null ? '' : 'subunit: "$subunit", '}'
+            "subunitToUnit: $subunitToUnit, unitFirst: $unitFirst,)";
 
   @override
   String toJson({JsonCodec codec = const JsonCodec()}) => codec.encode(toMap());
@@ -334,14 +331,13 @@ class FiatCurrency extends Currency
   static FiatCurrency? maybeFromAnyCode(
     Object? code, [
     Iterable<FiatCurrency>? currencies,
-  ]) =>
-      currencies == null
-          ? map.maybeFindByCode(code)
-          : code?.toUpperCaseIsoCode().maybeMapIsoCode(
-                orElse: (regular) => maybeFromCode(regular, currencies),
-                numeric: (numeric) => maybeFromCodeNumeric(numeric, currencies),
-                minLength: IsoStandardized.codeLength,
-              );
+  ]) => currencies == null
+      ? map.maybeFindByCode(code)
+      : code?.toUpperCaseIsoCode().maybeMapIsoCode(
+          orElse: (regular) => maybeFromCode(regular, currencies),
+          numeric: (numeric) => maybeFromCodeNumeric(numeric, currencies),
+          minLength: IsoStandardized.codeLength,
+        );
 
   /// Returns a [FiatCurrency] instance from an letter ISO 4217 code, or
   /// `null` if no such instance exists.
@@ -360,9 +356,9 @@ class FiatCurrency extends Currency
     Iterable<FiatCurrency>? currencies,
   ]) {
     if (currencies == null) return codeMap.maybeFindByCode(code);
-    final string = code
-        ?.toUpperCaseIsoCode()
-        .maybeToValidIsoCode(exactLength: IsoStandardized.codeLength);
+    final string = code?.toUpperCaseIsoCode().maybeToValidIsoCode(
+      exactLength: IsoStandardized.codeLength,
+    );
 
     return currencies.firstIsoWhereCodeOrNull(string);
   }
@@ -383,9 +379,9 @@ class FiatCurrency extends Currency
     Iterable<FiatCurrency>? currencies,
   ]) {
     if (currencies == null) return codeNumericMap.maybeFindByCode(codeNumeric);
-    final string = codeNumeric
-        ?.toUpperCaseIsoCode()
-        .maybeToValidIsoCode(exactLength: IsoStandardized.codeLength);
+    final string = codeNumeric?.toUpperCaseIsoCode().maybeToValidIsoCode(
+      exactLength: IsoStandardized.codeLength,
+    );
 
     return currencies.firstIsoWhereCodeOtherOrNull(string);
   }
@@ -419,8 +415,9 @@ class FiatCurrency extends Currency
   /// ```dart
   /// FiatCurrency.codeNumericMap[840.toString()]; // FiatUsd().
   /// ```
-  static const codeNumericMap =
-      UpperCaseIsoMap<FiatCurrency>(fiatCurrencyCodeOtherMap);
+  static const codeNumericMap = UpperCaseIsoMap<FiatCurrency>(
+    fiatCurrencyCodeOtherMap,
+  );
 
   /// A tree-shakable combined map of [codeMap] and [codeNumericMap], providing
   /// a unified view of currency codes (ISO 4217) and their [FiatCurrency
@@ -431,18 +428,15 @@ class FiatCurrency extends Currency
   /// ```dart
   /// FiatCurrency.map['usd']; // FiatUsd().
   /// ```
-  static const map = UpperCaseIsoMap<FiatCurrency>(
-    {
-      ...fiatCurrencyCodeMap,
-      // ignore: unnecessary-trailing-comma, against new dart 3.7.0 formatting.
-      ...fiatCurrencyCodeOtherMap,
-    },
-  );
+  static const map = UpperCaseIsoMap<FiatCurrency>({
+    ...fiatCurrencyCodeMap,
+    ...fiatCurrencyCodeOtherMap,
+  });
 
   /// A list of the regular currencies currently supported by the [FiatCurrency]
   /// class. For a full list with non-regular currencies please
   /// use [listExtended].
-// ignore: avoid-explicit-type-declaration, vs specify_nonobvious_property_types.
+  // ignore: avoid-explicit-type-declaration, vs specify_nonobvious_property_types.
   static const List<FiatCurrency> list = fiatCurrencyList;
 
   /// A list of special purpose fiat currencies (currencies that are

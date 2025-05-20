@@ -191,11 +191,7 @@ const xcdCurrencyTranslations = [
   TranslatedName(LangUkr(), name: "східнокарибський долар"),
   TranslatedName(LangUrd(), name: "مشرقی کریبیا کا ڈالر"),
   TranslatedName(LangUzb(), name: "Sharqiy Karib dollari"),
-  TranslatedName(
-    LangUzb(),
-    name: "Шарқий Кариб доллари",
-    script: ScriptCyrl(),
-  ),
+  TranslatedName(LangUzb(), name: "Шарқий Кариб доллари", script: ScriptCyrl()),
   TranslatedName(LangVie(), name: "Đô la Đông Caribê"),
   TranslatedName(LangZho(), name: "东加勒比元"),
   TranslatedName(LangZho(), name: "東加勒比元", countryCode: "HK"),

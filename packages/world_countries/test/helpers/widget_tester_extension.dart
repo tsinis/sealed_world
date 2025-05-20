@@ -80,10 +80,9 @@ extension WidgetTesterExtension on WidgetTester {
     ThemeExtension? theme,
   }) async {
     T? selected;
-    final testPicker =
-        testSelection
-            ? picker.copyWith(onSelect: (item) => selected = item)
-            : picker;
+    final testPicker = testSelection
+        ? picker.copyWith(onSelect: (item) => selected = item)
+        : picker;
     await pumpWidget(
       MaterialApp(
         home: Scaffold(body: testPicker),
@@ -133,20 +132,16 @@ extension WidgetTesterExtension on WidgetTester {
       MaterialApp(
         home: Scaffold(
           body: Builder(
-            builder:
-                (context) => Center(
-                  child: IconButton(
-                    onPressed:
-                        () => switch (inDialog) {
-                          true => unawaited(testPicker.showInDialog(context)),
-                          false => unawaited(testPicker.showInSearch(context)),
-                          null => unawaited(
-                            testPicker.showInModalBottomSheet(context),
-                          ),
-                        },
-                    icon: const Icon(Icons.search),
-                  ),
-                ),
+            builder: (context) => Center(
+              child: IconButton(
+                onPressed: () => switch (inDialog) {
+                  true => unawaited(testPicker.showInDialog(context)),
+                  false => unawaited(testPicker.showInSearch(context)),
+                  null => unawaited(testPicker.showInModalBottomSheet(context)),
+                },
+                icon: const Icon(Icons.search),
+              ),
+            ),
           ),
         ),
         supportedLocales: supportedLocales,

@@ -22,18 +22,16 @@ void performanceTest(
   Object? tags,
   Map<String, Object?>? onPlatform,
   int retry = _defaultRetryCount,
-}) =>
-    test(
-      description,
-      body,
-      testOn: testOn,
-      timeout:
-          timeout ?? Timeout(Duration(milliseconds: durationLimit.toInt())),
-      skip: skip,
-      tags: tags,
-      onPlatform: onPlatform,
-      retry: retry,
-    );
+}) => test(
+  description,
+  body,
+  testOn: testOn,
+  timeout: timeout ?? Timeout(Duration(milliseconds: durationLimit.toInt())),
+  skip: skip,
+  tags: tags,
+  onPlatform: onPlatform,
+  retry: retry,
+);
 
 /// Returns a random item from the provided [iterable] to test against.
 @isTest
@@ -48,18 +46,17 @@ void randomElementTest<T extends Object>(
   Object? tags,
   Map<String, Object?>? onPlatform,
   int retry = _defaultRetryCount,
-}) =>
-    performanceTest(
-      description,
-      () async => body(randomIterableItem(iterable)),
-      durationLimit: durationLimit,
-      testOn: testOn,
-      timeout: timeout,
-      skip: skip,
-      tags: tags,
-      onPlatform: onPlatform,
-      retry: retry,
-    );
+}) => performanceTest(
+  description,
+  () async => body(randomIterableItem(iterable)),
+  durationLimit: durationLimit,
+  testOn: testOn,
+  timeout: timeout,
+  skip: skip,
+  tags: tags,
+  onPlatform: onPlatform,
+  retry: retry,
+);
 
 /// Returns a random item from the provided [iterable].
 @visibleForTesting
@@ -79,23 +76,22 @@ void assertTest(
   Object? tags,
   Map<String, Object?>? onPlatform,
   int? retry,
-}) =>
-    test(
-      description,
-      () async {
-        expect(
-          createInstance,
-          shouldThrow
-              ? throwsA(isA<AssertionError>())
-              : isNot(throwsA(isA<AssertionError>())),
-        );
-
-        return alsoExpect?.call();
-      },
-      testOn: testOn,
-      timeout: timeout,
-      skip: skip,
-      tags: tags,
-      onPlatform: onPlatform,
-      retry: retry,
+}) => test(
+  description,
+  () async {
+    expect(
+      createInstance,
+      shouldThrow
+          ? throwsA(isA<AssertionError>())
+          : isNot(throwsA(isA<AssertionError>())),
     );
+
+    return alsoExpect?.call();
+  },
+  testOn: testOn,
+  timeout: timeout,
+  skip: skip,
+  tags: tags,
+  onPlatform: onPlatform,
+  retry: retry,
+);

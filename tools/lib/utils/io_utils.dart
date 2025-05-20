@@ -82,10 +82,9 @@ final class IoUtils {
     Directory value, {
     required void Function(File file, String filename) withFile,
     String format = PathConstants.json,
-  }) =>
-      value.listSync(recursive: true).forEach((file) {
-        if (file is! File) return;
-        final name = basename(file.path);
-        if (name.endsWith(".$format")) withFile(file, withoutExtension(name));
-      });
+  }) => value.listSync(recursive: true).forEach((file) {
+    if (file is! File) return;
+    final name = basename(file.path);
+    if (name.endsWith(".$format")) withFile(file, withoutExtension(name));
+  });
 }

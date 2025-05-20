@@ -651,17 +651,12 @@ class CountriesLocaleMapper extends IsoLocaleMapper<IsoLocaleMapper<String>> {
     return switch (localeData.length) {
       0 => const {},
       1 => _fromSingle(
-          isoCodes,
-          localeData.entries.first,
-          altSymbol ?? symbol,
-          formatter,
-        ),
-      _ => _fromMultiple(
-          isoCodes,
-          localeData,
-          altSymbol ?? symbol,
-          formatter,
-        ),
+        isoCodes,
+        localeData.entries.first,
+        altSymbol ?? symbol,
+        formatter,
+      ),
+      _ => _fromMultiple(isoCodes, localeData, altSymbol ?? symbol, formatter),
     };
   }
 
@@ -687,7 +682,9 @@ class CountriesLocaleMapper extends IsoLocaleMapper<IsoLocaleMapper<String>> {
     String Function(LocaleKey isoLocale, String l10n)? formatter,
   ) {
     final locale = localeEntry.key;
-    final results = localeEntry.value.extract(codes, altSymbol: altSymbol).map(
+    final results = localeEntry.value
+        .extract(codes, altSymbol: altSymbol)
+        .map(
           (code, l10n) => _mapSingle(formatter, locale, code: code, l10n: l10n),
         );
     localeEntry.value.map.clear();
@@ -705,8 +702,10 @@ class CountriesLocaleMapper extends IsoLocaleMapper<IsoLocaleMapper<String>> {
     final results = <LocaleKey, String>{};
 
     for (final localeEntry in localesData.entries) {
-      final translations =
-          localeEntry.value.extract(codes, altSymbol: altSymbol);
+      final translations = localeEntry.value.extract(
+        codes,
+        altSymbol: altSymbol,
+      );
 
       for (final code in codes) {
         final key = (isoCode: code, locale: localeEntry.key);

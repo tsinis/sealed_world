@@ -25,8 +25,10 @@ void main() {
     () => group("firstIsoWhereOrNull", () {
       List<Script>? noList;
       test("with null iterable and assertNotEmpty: false", () {
-        final result =
-            noList.firstIsoWhereOrNull((_) => true, assertNotEmpty: false);
+        final result = noList.firstIsoWhereOrNull(
+          (_) => true,
+          assertNotEmpty: false,
+        );
         expect(result, isNull);
       });
 

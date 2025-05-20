@@ -115,11 +115,7 @@ const bamCurrencyTranslations = [
   TranslatedName(LangBen(), name: "বসনিয়া এবং হার্জেগোভিনা মার্ক"),
   TranslatedName(LangBre(), name: "mark kemmadus Bosnia ha Herzegovina"),
   TranslatedName(LangBos(), name: "Bosanskohercegovačka konvertibilna marka"),
-  TranslatedName(
-    LangBos(),
-    name: "Конвертибилна марка",
-    script: ScriptCyrl(),
-  ),
+  TranslatedName(LangBos(), name: "Конвертибилна марка", script: ScriptCyrl()),
   TranslatedName(LangCat(), name: "marc convertible de Bòsnia i Hercegovina"),
   TranslatedName(LangChe(), name: "Боснин а, Герцеговинан а хийцалун марка"),
   TranslatedName(LangCes(), name: "bosenská konvertibilní marka"),

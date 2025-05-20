@@ -122,61 +122,58 @@ class _IndexedListViewBuilderState<T extends Object>
             duration: UiConstants.duration,
             switchInCurve: UiConstants.switchInCurve,
             switchOutCurve: UiConstants.switchOutCurve,
-            child:
-                widget.items.isEmpty
-                    ? widget.emptyStatePlaceholder
-                    // ignore: avoid-shrink-wrap-in-lists, it's false by default.
-                    : ListView.separated(
-                      scrollDirection:
-                          widget.direction ?? theme?.direction ?? Axis.vertical,
-                      reverse: widget.reverse ?? theme?.reverse ?? false,
-                      controller: widget.scrollController,
-                      primary: widget.primary ?? theme?.primary,
-                      physics: widget.physics ?? theme?.physics,
-                      shrinkWrap:
-                          widget.shrinkWrap ?? theme?.shrinkWrap ?? false,
-                      padding: widget.padding ?? theme?.padding,
-                      itemBuilder: (newContext, index) {
-                        final properties = widget.properties(newContext, index);
-                        final child = widget.itemBuilder?.call(properties);
-                        if (child == null) return null;
-                        if (properties.isDisabled) return child;
+            child: widget.items.isEmpty
+                ? widget.emptyStatePlaceholder
+                // ignore: avoid-shrink-wrap-in-lists, it's false by default.
+                : ListView.separated(
+                    scrollDirection:
+                        widget.direction ?? theme?.direction ?? Axis.vertical,
+                    reverse: widget.reverse ?? theme?.reverse ?? false,
+                    controller: widget.scrollController,
+                    primary: widget.primary ?? theme?.primary,
+                    physics: widget.physics ?? theme?.physics,
+                    shrinkWrap: widget.shrinkWrap ?? theme?.shrinkWrap ?? false,
+                    padding: widget.padding ?? theme?.padding,
+                    itemBuilder: (newContext, index) {
+                      final properties = widget.properties(newContext, index);
+                      final child = widget.itemBuilder?.call(properties);
+                      if (child == null) return null;
+                      if (properties.isDisabled) return child;
 
-                        return GestureDetector(
-                          onTap: () => widget.onSelect?.call(properties.item),
-                          child: child,
-                        );
-                      },
-                      separatorBuilder:
-                          (_, _) =>
-                              widget.separator ??
-                              theme?.separator ??
-                              UiConstants.separator,
-                      itemCount: widget.items.length,
-                      addAutomaticKeepAlives: widget.addAutomaticKeepAlives,
-                      addRepaintBoundaries:
-                          widget.addRepaintBoundaries ??
-                          theme?.addRepaintBoundaries ??
-                          true,
-                      addSemanticIndexes:
-                          widget.addSemanticIndexes ??
-                          theme?.addSemanticIndexes ??
-                          true,
-                      cacheExtent: widget.cacheExtent ?? theme?.cacheExtent,
-                      dragStartBehavior:
-                          widget.dragStartBehavior ??
-                          theme?.dragStartBehavior ??
-                          DragStartBehavior.start,
-                      keyboardDismissBehavior:
-                          widget.keyboardDismissBehavior ??
-                          theme?.keyboardDismissBehavior ??
-                          ScrollViewKeyboardDismissBehavior.manual,
-                      restorationId: widget.restorationId,
-                      clipBehavior:
-                          widget.clipBehavior ??
-                          theme?.clipBehavior ??
-                          Clip.hardEdge,
-                    ),
+                      return GestureDetector(
+                        onTap: () => widget.onSelect?.call(properties.item),
+                        child: child,
+                      );
+                    },
+                    separatorBuilder: (_, _) =>
+                        widget.separator ??
+                        theme?.separator ??
+                        UiConstants.separator,
+                    itemCount: widget.items.length,
+                    addAutomaticKeepAlives: widget.addAutomaticKeepAlives,
+                    addRepaintBoundaries:
+                        widget.addRepaintBoundaries ??
+                        theme?.addRepaintBoundaries ??
+                        true,
+                    addSemanticIndexes:
+                        widget.addSemanticIndexes ??
+                        theme?.addSemanticIndexes ??
+                        true,
+                    cacheExtent: widget.cacheExtent ?? theme?.cacheExtent,
+                    dragStartBehavior:
+                        widget.dragStartBehavior ??
+                        theme?.dragStartBehavior ??
+                        DragStartBehavior.start,
+                    keyboardDismissBehavior:
+                        widget.keyboardDismissBehavior ??
+                        theme?.keyboardDismissBehavior ??
+                        ScrollViewKeyboardDismissBehavior.manual,
+                    restorationId: widget.restorationId,
+                    clipBehavior:
+                        widget.clipBehavior ??
+                        theme?.clipBehavior ??
+                        Clip.hardEdge,
+                  ),
           ),
         ),
       ],

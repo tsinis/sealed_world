@@ -115,12 +115,11 @@ class LanguageTile extends ListItemTile<NaturalLanguage> {
                child: Padding(
                  padding: const EdgeInsets.only(top: UiConstants.point),
                  child: Builder(
-                   builder:
-                       (context) => Text(
-                         language.item.code,
-                         style: context.theme.textTheme.titleMedium,
-                         textAlign: TextAlign.center,
-                       ),
+                   builder: (context) => Text(
+                     language.item.code,
+                     style: context.theme.textTheme.titleMedium,
+                     textAlign: TextAlign.center,
+                   ),
                  ),
                ),
              ),

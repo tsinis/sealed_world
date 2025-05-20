@@ -30,7 +30,7 @@ extension FiatCurrencyFormat on FiatCurrency {
   }
 
   String _formatThousands(String value) => value.replaceAllMapped(
-        RegExp(r"(\d)(?=(\d{3})+(?!\d))"),
-        (match) => "${match[1]}$thousandsSeparator",
-      );
+    RegExp(r"(\d)(?=(\d{3})+(?!\d))"),
+    (match) => "${match[1]}$thousandsSeparator",
+  );
 }

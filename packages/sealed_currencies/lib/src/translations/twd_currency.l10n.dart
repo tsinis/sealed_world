@@ -103,11 +103,7 @@ const twdCurrencyTranslations = [
   TranslatedName(LangBen(), name: "নতুন তাইওয়ান ডলার"),
   TranslatedName(LangBre(), name: "dollar nevez Taiwan"),
   TranslatedName(LangBos(), name: "Novi tajvanski dolar"),
-  TranslatedName(
-    LangBos(),
-    name: "Нови тајвански долар",
-    script: ScriptCyrl(),
-  ),
+  TranslatedName(LangBos(), name: "Нови тајвански долар", script: ScriptCyrl()),
   TranslatedName(LangCat(), name: "nou dòlar de Taiwan"),
   TranslatedName(LangChe(), name: "Тайванан керла доллар"),
   TranslatedName(LangCes(), name: "tchajwanský dolar"),

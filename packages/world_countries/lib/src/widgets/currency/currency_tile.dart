@@ -121,12 +121,11 @@ class CurrencyTile extends ListItemTile<FiatCurrency> {
                child: Padding(
                  padding: const EdgeInsets.only(top: UiConstants.point),
                  child: Builder(
-                   builder:
-                       (context) => Text(
-                         currency.item.unit,
-                         style: context.theme.textTheme.titleMedium,
-                         textAlign: TextAlign.center,
-                       ),
+                   builder: (context) => Text(
+                     currency.item.unit,
+                     style: context.theme.textTheme.titleMedium,
+                     textAlign: TextAlign.center,
+                   ),
                  ),
                ),
              ),

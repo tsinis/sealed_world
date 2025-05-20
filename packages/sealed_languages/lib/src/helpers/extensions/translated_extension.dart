@@ -37,8 +37,12 @@ import "../../model/translated_name.dart";
 /// `script`, and a default `orElse` language if no translation is found. It
 /// returns the translation as a [TranslatedName] object. If no translation is
 /// found for the specified language, it falls back to the `orElse` language.
-extension TranslatedExtension<T extends TranslatedName, L extends BasicLocale,
-    N extends Object> on IsoTranslated<T, N, L> {
+extension TranslatedExtension<
+  T extends TranslatedName,
+  L extends BasicLocale,
+  N extends Object
+>
+    on IsoTranslated<T, N, L> {
   /// Returns a localized common name for this object.
   ///
   /// Parameters:
@@ -92,18 +96,17 @@ extension TranslatedExtension<T extends TranslatedName, L extends BasicLocale,
     B? fallbackLocale,
     bool useLanguageFallback = true,
     String? orElse,
-  }) =>
-      mainLocale == null
-          ? null
-          : (l10n.commonNamesMap(
-                {this},
-                options: LocaleMappingOptions<B>(
-                  mainLocale: mainLocale,
-                  fallbackLocale: fallbackLocale,
-                  useLanguageFallback: useLanguageFallback,
-                ),
-              )[this] ??
-              orElse);
+  }) => mainLocale == null
+      ? null
+      : (l10n.commonNamesMap(
+              {this},
+              options: LocaleMappingOptions<B>(
+                mainLocale: mainLocale,
+                fallbackLocale: fallbackLocale,
+                useLanguageFallback: useLanguageFallback,
+              ),
+            )[this] ??
+            orElse);
 
   /// Retrieves the translation for the specified locale [BasicLocale] with
   /// required `language` parameter. This method might be expensive so it's
@@ -176,11 +179,11 @@ extension TranslatedExtension<T extends TranslatedName, L extends BasicLocale,
       0 => null,
       1 => filtered.first,
       _ => _maybeTranslation(
-          filtered,
-          useLanguageFallback: useLanguageFallback,
-          countryCode: locale.countryCode,
-          script: locale.script,
-        ),
+        filtered,
+        useLanguageFallback: useLanguageFallback,
+        countryCode: locale.countryCode,
+        script: locale.script,
+      ),
     };
   }
 

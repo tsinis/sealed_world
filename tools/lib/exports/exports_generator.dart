@@ -15,13 +15,15 @@ sealed class ExportsGenerator {
     else
       print("Generating ${selectedPackage.dirName} exports...");
 
-    final package = selectedPackage ??
+    final package =
+        selectedPackage ??
         Package.sealedLanguages; // TODO(tsinis): Remove, no issue related.
     final packageDirName = package.dirName;
     final sourcePath =
         "configs/${packageDirName}_exports.${PathConstants.yaml}";
-    final packageDirectory =
-        Directory("../${PathConstants.packages}/$packageDirName");
+    final packageDirectory = Directory(
+      "../${PathConstants.packages}/$packageDirName",
+    );
 
     final io = IoUtils();
     final copy = io.copyFile(

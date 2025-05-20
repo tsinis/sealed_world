@@ -161,17 +161,17 @@ class TypedLocaleDelegate implements LocalizationsDelegate<TypedLocale?> {
 
     return _asyncTranslationCacheProcessing
         ? await typedLocale?.copyWithTranslationsCacheAsync(
-          languages: _languagesForTranslationCache,
-          currencies: _currenciesForTranslationCache,
-          countries: _countriesForTranslationCache,
-          l10nFormatter: _l10nFormatter,
-        )
+            languages: _languagesForTranslationCache,
+            currencies: _currenciesForTranslationCache,
+            countries: _countriesForTranslationCache,
+            l10nFormatter: _l10nFormatter,
+          )
         : typedLocale?.copyWithTranslationsCache(
-          languages: _languagesForTranslationCache,
-          currencies: _currenciesForTranslationCache,
-          countries: _countriesForTranslationCache,
-          l10nFormatter: _l10nFormatter,
-        );
+            languages: _languagesForTranslationCache,
+            currencies: _currenciesForTranslationCache,
+            countries: _countriesForTranslationCache,
+            l10nFormatter: _l10nFormatter,
+          );
   }
 
   @override

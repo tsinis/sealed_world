@@ -10,11 +10,11 @@ final class DartUtils {
   }
 
   Future<void> pub(List<String> arguments, {bool isGlobal = false}) => run([
-        "pub",
-        // ignore: avoid-empty-spread, it's CLI tool.
-        if (isGlobal) "global" else ...[],
-        ...arguments,
-      ]);
+    "pub",
+    // ignore: avoid-empty-spread, it's CLI tool.
+    if (isGlobal) "global" else ...[],
+    ...arguments,
+  ]);
 
   Future<void> pubGet() => pub(["get"]);
 

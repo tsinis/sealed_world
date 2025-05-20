@@ -23,14 +23,13 @@ extension TranslatedNameExtension on TranslatedName {
     NaturalLanguage? language,
     String? name,
     Script? script,
-  }) =>
-      TranslatedName(
-        language ?? this.language,
-        name: name ?? this.name,
-        fullName: fullName ?? this.fullName,
-        countryCode: countryCode ?? this.countryCode,
-        script: script ?? this.script,
-      );
+  }) => TranslatedName(
+    language ?? this.language,
+    name: name ?? this.name,
+    fullName: fullName ?? this.fullName,
+    countryCode: countryCode ?? this.countryCode,
+    script: script ?? this.script,
+  );
 
   /// {@template from_map_method}
   /// Creates a new instance of this object from a JSON like map.
@@ -39,25 +38,25 @@ extension TranslatedNameExtension on TranslatedName {
   /// of this object.
   /// {@endtemplate}
   static TranslatedName fromMap(JsonMap map) => TranslatedName(
-        NaturalLanguage.fromCode(map["language"].toString()),
-        name: map["name"].toString(),
-        fullName: map["fullName"]?.toString(),
-        countryCode: map["countryCode"]?.toString(),
-        script: map["script"] is String
-            ? Script.fromCode(map["script"].toString())
-            : null,
-      );
+    NaturalLanguage.fromCode(map["language"].toString()),
+    name: map["name"].toString(),
+    fullName: map["fullName"]?.toString(),
+    countryCode: map["countryCode"]?.toString(),
+    script: map["script"] is String
+        ? Script.fromCode(map["script"].toString())
+        : null,
+  );
 
   /// {@template to_map_method}
   /// Converts this object object to a JSON like map.
   /// {@endtemplate}
   JsonObjectMap toMap() => {
-        "countryCode": countryCode,
-        "fullName": fullName,
-        "language": language.code,
-        "name": name,
-        "script": script?.code,
-      };
+    "countryCode": countryCode,
+    "fullName": fullName,
+    "language": language.code,
+    "name": name,
+    "script": script?.code,
+  };
 
   /// Just an alias for the [name] property.
   ///

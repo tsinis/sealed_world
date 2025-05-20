@@ -35,9 +35,8 @@ void main() => group("$LanguagePicker", () {
       const LanguagePicker(),
       (item) => item.translations.first.common,
       theme: LanguageTileThemeData(
-        builder:
-            (properties, {isDense}) =>
-                Text(properties.item.translations.first.common),
+        builder: (properties, {isDense}) =>
+            Text(properties.item.translations.first.common),
       ),
     ),
   );
@@ -118,11 +117,10 @@ void main() => group("$LanguagePicker", () {
 
     await tester.pumpMaterialApp(
       Builder(
-        builder:
-            (context) => IconButton(
-              onPressed: () async => picker.showInSearch(context),
-              icon: const Icon(searchIcon),
-            ),
+        builder: (context) => IconButton(
+          onPressed: () async => picker.showInSearch(context),
+          icon: const Icon(searchIcon),
+        ),
       ),
     );
     await tester.pumpAndSettle();

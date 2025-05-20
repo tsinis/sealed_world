@@ -22,16 +22,16 @@ class TranslatedName extends BasicLocale implements Named<String> {
     this.fullName,
     super.countryCode,
     super.script,
-  })  : assert(name.length > 0, "`name` should not be empty!"),
-        assert(
-          fullName == null || fullName.length > 0,
-          "`fullName` should not be empty!",
-        ),
-        assert(
-          countryCode == null ||
-              countryCode.length >= IsoStandardized.codeShortLength,
-          """`countryCode` have to be at least ${IsoStandardized.codeShortLength} characters long!""",
-        );
+  }) : assert(name.length > 0, "`name` should not be empty!"),
+       assert(
+         fullName == null || fullName.length > 0,
+         "`fullName` should not be empty!",
+       ),
+       assert(
+         countryCode == null ||
+             countryCode.length >= IsoStandardized.codeShortLength,
+         """`countryCode` have to be at least ${IsoStandardized.codeShortLength} characters long!""",
+       );
 
   /// Represents the full/official translation.
   ///
@@ -50,9 +50,9 @@ class TranslatedName extends BasicLocale implements Named<String> {
   String toString({bool short = true}) => short
       ? name
       : 'TranslatedName(${language.runtimeType}(), name: "$name"'
-          '${fullName == null ? '' : ', fullName: "$fullName"'}'
-          '${countryCode == null ? '' : ', countryCode: "$countryCode"'}'
-          '${script == null ? '' : ', script: ${script.runtimeType}()'})';
+            '${fullName == null ? '' : ', fullName: "$fullName"'}'
+            '${countryCode == null ? '' : ', countryCode: "$countryCode"'}'
+            '${script == null ? '' : ', script: ${script.runtimeType}()'})';
 
   @override
   String toJson({JsonCodec codec = const JsonCodec()}) => codec.encode(toMap());

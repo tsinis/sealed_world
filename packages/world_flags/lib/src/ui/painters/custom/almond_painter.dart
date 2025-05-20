@@ -21,10 +21,9 @@ final class AlmondPainter extends CustomElementsPainter {
   final bool _isVertical;
 
   @override
-  double get originalAspectRatio =>
-      _isVertical
-          ? flagGumProperties.aspectRatio
-          : flagSwzProperties.aspectRatio;
+  double get originalAspectRatio => _isVertical
+      ? flagGumProperties.aspectRatio
+      : flagSwzProperties.aspectRatio;
 
   @override
   FlagParentBounds paintFlagElements(Canvas canvas, Size size) {
@@ -41,29 +40,22 @@ final class AlmondPainter extends CustomElementsPainter {
     final topCenter = Offset(width / 2, 0);
     final bottomCenter = Offset(width / 2, height);
 
-    final path =
-        Path()
-          ..moveTo(topCenter.dx, topCenter.dy)
-          ..quadraticBezierTo(0, height / 4, 0, height / 2)
-          ..quadraticBezierTo(
-            0,
-            height * 3 / 4,
-            bottomCenter.dx,
-            bottomCenter.dy,
-          )
-          ..quadraticBezierTo(width, height * 3 / 4, width, height / 2)
-          ..quadraticBezierTo(width, height / 4, topCenter.dx, topCenter.dy);
+    final path = Path()
+      ..moveTo(topCenter.dx, topCenter.dy)
+      ..quadraticBezierTo(0, height / 4, 0, height / 2)
+      ..quadraticBezierTo(0, height * 3 / 4, bottomCenter.dx, bottomCenter.dy)
+      ..quadraticBezierTo(width, height * 3 / 4, width, height / 2)
+      ..quadraticBezierTo(width, height / 4, topCenter.dx, topCenter.dy);
 
     final bounds = path.getBounds();
 
-    final paint =
-        Paint()
-          ..shader = LinearGradient(
-            begin: Alignment.topCenter,
-            end: Alignment.bottomCenter,
-            colors: [customColors.first, customColors.last],
-            stops: _isVertical ? const [0.7, 0.8] : const [0.5, 0.5],
-          ).createShader(bounds);
+    final paint = Paint()
+      ..shader = LinearGradient(
+        begin: Alignment.topCenter,
+        end: Alignment.bottomCenter,
+        colors: [customColors.first, customColors.last],
+        stops: _isVertical ? const [0.7, 0.8] : const [0.5, 0.5],
+      ).createShader(bounds);
 
     if (_isVertical) {
       canvas

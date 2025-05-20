@@ -200,11 +200,7 @@ const nioCurrencyTranslations = [
   TranslatedName(LangUkr(), name: "нікарагуанська кордоба"),
   TranslatedName(LangUrd(), name: "نکارا گوا کا کورڈوبا"),
   TranslatedName(LangUzb(), name: "Nikaragua kordobasi"),
-  TranslatedName(
-    LangUzb(),
-    name: "Никарагуа кордобаси",
-    script: ScriptCyrl(),
-  ),
+  TranslatedName(LangUzb(), name: "Никарагуа кордобаси", script: ScriptCyrl()),
   TranslatedName(LangVie(), name: "Córdoba Nicaragua"),
   TranslatedName(LangZho(), name: "尼加拉瓜科多巴"),
   TranslatedName(LangZho(), name: "尼加拉瓜金科多巴", script: ScriptHant()),

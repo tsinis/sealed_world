@@ -34,8 +34,9 @@ class ThemeProvider<T extends List<Color>> extends InheritedWidget {
         secondary: _flagColors.elementAtOrNull(1),
       ),
       floatingActionButtonTheme: FloatingActionButtonThemeData(
-        foregroundColor:
-            colorBrightness == Brightness.dark ? _whiteColor : Colors.black,
+        foregroundColor: colorBrightness == Brightness.dark
+            ? _whiteColor
+            : Colors.black,
         backgroundColor: seedColor,
       ),
     );

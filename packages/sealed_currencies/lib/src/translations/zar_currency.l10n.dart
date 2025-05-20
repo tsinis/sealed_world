@@ -128,11 +128,7 @@ const zarCurrencyTranslations = [
   TranslatedName(LangBen(), name: "দক্ষিণ আফ্রিকান রেন্ড"),
   TranslatedName(LangBre(), name: "rand Suafrika"),
   TranslatedName(LangBos(), name: "Južnoafrički rand"),
-  TranslatedName(
-    LangBos(),
-    name: "Јужно-афрички ранд",
-    script: ScriptCyrl(),
-  ),
+  TranslatedName(LangBos(), name: "Јужно-афрички ранд", script: ScriptCyrl()),
   TranslatedName(LangCat(), name: "rand sud-africà"),
   TranslatedName(LangChe(), name: "Къилба-Африкин рэнд"),
   TranslatedName(LangCes(), name: "jihoafrický rand"),

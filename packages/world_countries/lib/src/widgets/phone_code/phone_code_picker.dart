@@ -127,30 +127,28 @@ class PhoneCodePicker extends CountryPicker {
               mainAxisSize: MainAxisSize.min,
               children: [
                 Builder(
-                  builder:
-                      (newContext) => CountryFlag.simplified(
-                        itemProperties.item,
-                        height: 18,
-                        aspectRatio:
-                            newContext.flagTheme?.aspectRatio ??
-                            FlagConstants.defaultAspectRatio,
-                        decoration:
-                            newContext.flagTheme?.decoration ??
-                            const BoxDecoration(
-                              borderRadius: BorderRadius.all(
-                                Radius.circular(UiConstants.point / 2),
-                              ),
-                            ),
-                      ),
+                  builder: (newContext) => CountryFlag.simplified(
+                    itemProperties.item,
+                    height: 18,
+                    aspectRatio:
+                        newContext.flagTheme?.aspectRatio ??
+                        FlagConstants.defaultAspectRatio,
+                    decoration:
+                        newContext.flagTheme?.decoration ??
+                        const BoxDecoration(
+                          borderRadius: BorderRadius.all(
+                            Radius.circular(UiConstants.point / 2),
+                          ),
+                        ),
+                  ),
                 ),
                 Padding(
                   padding: const EdgeInsets.only(right: UiConstants.point / 2),
                   child: Builder(
-                    builder:
-                        (newContext) => Text(
-                          itemProperties.item.idd.phoneCode(),
-                          style: newContext.theme.textTheme.labelSmall,
-                        ),
+                    builder: (newContext) => Text(
+                      itemProperties.item.idd.phoneCode(),
+                      style: newContext.theme.textTheme.labelSmall,
+                    ),
                   ),
                 ),
               ],
@@ -158,11 +156,9 @@ class PhoneCodePicker extends CountryPicker {
           ),
         ),
         title: itemNameTranslated(itemProperties.item, itemProperties.context),
-        onPressed:
-            (phone) =>
-                (isDense ?? false)
-                    ? maybeSelectAndPop(phone, itemProperties.context)
-                    : onSelect?.call(phone),
+        onPressed: (phone) => (isDense ?? false)
+            ? maybeSelectAndPop(phone, itemProperties.context)
+            : onSelect?.call(phone),
         visualDensity: (isDense ?? false) ? VisualDensity.compact : null,
       );
 

@@ -14,6 +14,6 @@ extension LatLngExtension on LatLng {
 
   /// {@macro from_map_method}
   static LatLng fromMap(JsonMap map) =>
-  // ignore: avoid-type-casts, it's JSON map.
-  LatLng(map["latitude"] as double, map["longitude"] as double);
+      // ignore: avoid-type-casts, it's JSON map.
+      LatLng(map["latitude"] as double, map["longitude"] as double);
 }

@@ -26,9 +26,9 @@ class CryptoCurrency extends Currency {
     super.symbol,
     super.thousandsSeparator = ",",
   }) : assert(
-          proofType == null || proofType.length > 0,
-          "`proofType` should not be empty!",
-        );
+         proofType == null || proofType.length > 0,
+         "`proofType` should not be empty!",
+       );
 
   /// Indicates whether this cryptocurrency can be mined.
   final bool isMinable;
@@ -51,10 +51,10 @@ class CryptoCurrency extends Currency {
   String toString({bool short = true}) => short
       ? super.toString()
       : 'CryptoCurrency(code: "$code", name: "$name", '
-          'decimalMark: "$decimalMark", '
-          'thousandsSeparator: "$thousandsSeparator", '
-          '${symbol == null ? '' : 'symbol: r"$symbol", '}'
-          "isMinable: $isMinable, isFork: $isFork, "
-          '${proofType == null ? '' : 'proofType: "$proofType", '}'
-          '${dateAdded == null ? '' : 'dateAdded: "$dateAdded"'})';
+            'decimalMark: "$decimalMark", '
+            'thousandsSeparator: "$thousandsSeparator", '
+            '${symbol == null ? '' : 'symbol: r"$symbol", '}'
+            "isMinable: $isMinable, isFork: $isFork, "
+            '${proofType == null ? '' : 'proofType: "$proofType", '}'
+            '${dateAdded == null ? '' : 'dateAdded: "$dateAdded"'})';
 }

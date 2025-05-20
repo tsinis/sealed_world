@@ -79,11 +79,11 @@ typedef LocaleMap = Map<IsoLocaleKey, String>;
 ///   (isoCode: 'USA', locale: 'es'): 'Estados Unidos',
 /// }
 /// ```
-typedef LocaleMapFunction<T extends Object> = Map<IsoLocaleKey, String>
-    Function(
-  Set<String> isoCodes, {
-  bool useLanguageFallback,
-  String? altSymbol,
-  T? mainLocale,
-  T? fallbackLocale,
-});
+typedef LocaleMapFunction<T extends Object> =
+    Map<IsoLocaleKey, String> Function(
+      Set<String> isoCodes, {
+      bool useLanguageFallback,
+      String? altSymbol,
+      T? mainLocale,
+      T? fallbackLocale,
+    });

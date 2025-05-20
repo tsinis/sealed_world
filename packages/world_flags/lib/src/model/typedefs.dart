@@ -38,5 +38,8 @@ typedef FlagWidgetBuilder<T extends Widget> =
 /// - `bounds`: The [Rect] that defines the bounds of the flag element.
 /// - `child`: An optional [ElementsProperties] that defines the properties of
 ///   the child element.
-typedef FlagParentBounds =
-    ({Rect bounds, Canvas canvas, ElementsProperties? child});
+typedef FlagParentBounds = ({
+  Rect bounds,
+  Canvas canvas,
+  ElementsProperties? child,
+});

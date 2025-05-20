@@ -29,15 +29,14 @@ extension NaturalLanguageCopyWith<T extends NaturalLanguage> on T {
     String? name,
     List<String>? namesNative,
     Set<Script>? scripts,
-  }) =>
-      NaturalLanguage(
-        name: name ?? this.name,
-        codeShort: codeShort ?? this.codeShort,
-        namesNative: namesNative ?? this.namesNative,
-        code: code ?? this.code,
-        bibliographicCode: bibliographicCode ?? this.bibliographicCode,
-        family: family ?? this.family,
-        isRightToLeft: isRightToLeft ?? this.isRightToLeft,
-        scripts: scripts ?? this.scripts,
-      );
+  }) => NaturalLanguage(
+    name: name ?? this.name,
+    codeShort: codeShort ?? this.codeShort,
+    namesNative: namesNative ?? this.namesNative,
+    code: code ?? this.code,
+    bibliographicCode: bibliographicCode ?? this.bibliographicCode,
+    family: family ?? this.family,
+    isRightToLeft: isRightToLeft ?? this.isRightToLeft,
+    scripts: scripts ?? this.scripts,
+  );
 }

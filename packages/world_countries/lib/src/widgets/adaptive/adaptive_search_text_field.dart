@@ -58,8 +58,9 @@ class _AdaptiveSearchTextFieldState extends State<AdaptiveSearchTextField> {
       widget.copyFrom?.decoration ??
       UiConstants.inputDecoration.copyWith(
         hintText: context.materialL10n.searchFieldLabel,
-        suffixIcon:
-            (widget.showClearButton ?? true) ? ClearButton(controller) : null,
+        suffixIcon: (widget.showClearButton ?? true)
+            ? ClearButton(controller)
+            : null,
       );
 
   TextStyle? get textStyle => context.theme.textTheme.titleMedium;
@@ -67,36 +68,32 @@ class _AdaptiveSearchTextFieldState extends State<AdaptiveSearchTextField> {
   @override
   Widget build(BuildContext context) => Padding(
     padding: widget.padding ?? EdgeInsets.zero,
-    child:
-        context.hasMaterialL10n
-            ? Material(
-              type: MaterialType.transparency,
-              child: widget.copyFrom.copyWith(
-                controller,
-                decoration: decoration,
+    child: context.hasMaterialL10n
+        ? Material(
+            type: MaterialType.transparency,
+            child: widget.copyFrom.copyWith(controller, decoration: decoration),
+          )
+        : DecoratedBox(
+            decoration: BoxDecoration(
+              border: Border.fromBorderSide(
+                BorderSide(color: textStyle?.color ?? UiConstants.color),
               ),
-            )
-            : DecoratedBox(
-              decoration: BoxDecoration(
-                border: Border.fromBorderSide(
-                  BorderSide(color: textStyle?.color ?? UiConstants.color),
-                ),
-                borderRadius: const BorderRadius.all(
-                  Radius.circular(UiConstants.point / 2),
-                ),
-              ),
-              child: Padding(
-                padding: const EdgeInsets.all(UiConstants.point),
-                child: EditableText(
-                  controller: controller,
-                  focusNode: focusNode,
-                  style: textStyle ?? const TextStyle(),
-                  cursorColor: textStyle?.color ?? UiConstants.color,
-                  backgroundCursorColor: Colors.transparent,
-                  textInputAction: UiConstants.textInputAction,
-                  inputFormatters: NameTextInput.formatters,
-                ),
+              borderRadius: const BorderRadius.all(
+                Radius.circular(UiConstants.point / 2),
               ),
             ),
+            child: Padding(
+              padding: const EdgeInsets.all(UiConstants.point),
+              child: EditableText(
+                controller: controller,
+                focusNode: focusNode,
+                style: textStyle ?? const TextStyle(),
+                cursorColor: textStyle?.color ?? UiConstants.color,
+                backgroundCursorColor: Colors.transparent,
+                textInputAction: UiConstants.textInputAction,
+                inputFormatters: NameTextInput.formatters,
+              ),
+            ),
+          ),
   );
 }

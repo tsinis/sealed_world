@@ -54,9 +54,9 @@ class IsoDiagnosticsProperty<Iso extends IsoStandardized>
 
   static String _toString<T extends IsoStandardized>(T? iso, String data) =>
       iso == null
-          ? "null"
-          : "$data ${iso.internationalName} ${iso.code}/${iso.codeOther}"
-              .trimLeft();
+      ? "null"
+      : "$data ${iso.internationalName} ${iso.code}/${iso.codeOther}"
+            .trimLeft();
 
   @override
   Map<String, Object?> toJsonMap(DiagnosticsSerializationDelegate delegate) {

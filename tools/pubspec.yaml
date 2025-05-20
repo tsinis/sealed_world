@@ -6,12 +6,12 @@ description: Command-line tools for a sealed_world ecosystem.
 resolution: workspace
 
 environment:
-  sdk: ^3.7.0
+  sdk: ^3.8.0
 
 dependencies:
   args: ^2.7.0
   change_case: ^2.2.0
-  collection: ^1.19.0
+  collection: ^1.19.1
   path: ^1.9.0
   pure_dart_ui: ^0.1.10
   rw_git: ^1.0.3
@@ -23,6 +23,6 @@ dependencies:
   yaml: ^3.1.3
 
 dev_dependencies:
-  build_runner: ^2.4.14 # From Google
+  build_runner: ^2.4.15 # From Google
   dart_code_metrics_presets: ^2.22.0 # DCM. Defines top level dependency constraint.
-  lints: ^5.1.1 # From Google. Defines top level dependency constraint.
+  lints: ^6.0.0 # From Google. Defines top level dependency constraint.

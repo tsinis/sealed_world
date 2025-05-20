@@ -86,10 +86,10 @@ class UpperCaseIsoMap<V extends IsoStandardized> extends UpperCaseMap<V> {
 
   T? _map<T extends Object>(Object? key, T? Function(String isoCode) mapper) {
     final code = key?.toUpperCaseIsoCode().maybeToValidIsoCode(
-          maxLength: maxLength,
-          minLength: minLength,
-          exactLength: exactLength,
-        );
+      maxLength: maxLength,
+      minLength: minLength,
+      exactLength: exactLength,
+    );
 
     return code == null ? null : mapper(code);
   }

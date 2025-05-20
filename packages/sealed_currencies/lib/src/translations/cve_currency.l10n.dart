@@ -127,11 +127,7 @@ const cveCurrencyTranslations = [
   TranslatedName(LangBen(), name: "কেপ ভার্দে এসকুডো"),
   TranslatedName(LangBre(), name: "escudo Kab Glas"),
   TranslatedName(LangBos(), name: "Zelenortski eskudo"),
-  TranslatedName(
-    LangBos(),
-    name: "Зеленортски ескудо",
-    script: ScriptCyrl(),
-  ),
+  TranslatedName(LangBos(), name: "Зеленортски ескудо", script: ScriptCyrl()),
   TranslatedName(LangCat(), name: "escut de Cap Verd"),
   TranslatedName(LangChe(), name: "Кабо-Верден эскудо"),
   TranslatedName(LangCes(), name: "kapverdské escudo"),

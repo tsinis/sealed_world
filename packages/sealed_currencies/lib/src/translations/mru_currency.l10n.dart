@@ -128,11 +128,7 @@ const mruCurrencyTranslations = [
   TranslatedName(LangBen(), name: "মৌরিতানিয়ান ওউগুইয়া"),
   TranslatedName(LangBre(), name: "ouguiya Maouritania"),
   TranslatedName(LangBos(), name: "Mauritanijska ugvija"),
-  TranslatedName(
-    LangBos(),
-    name: "Мауританијска угвија",
-    script: ScriptCyrl(),
-  ),
+  TranslatedName(LangBos(), name: "Мауританијска угвија", script: ScriptCyrl()),
   TranslatedName(LangCat(), name: "ouguiya maurità"),
   TranslatedName(LangChe(), name: "Мавританин уги"),
   TranslatedName(LangCes(), name: "mauritánská ouguiya"),

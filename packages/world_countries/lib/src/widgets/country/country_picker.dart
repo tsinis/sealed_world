@@ -118,18 +118,17 @@ class CountryPicker extends BasicPicker<WorldCountry> {
 
     return (isDense ?? false)
         ? CountryTile.simple(
-          itemProperties,
-          title: maybeNameTitle,
-          onPressed:
-              (country) =>
-              // ignore: prefer-correct-handler-name, breaking change.
-              maybeSelectAndPop(country, itemProperties.context),
-        )
+            itemProperties,
+            title: maybeNameTitle,
+            onPressed: (country) =>
+                // ignore: prefer-correct-handler-name, breaking change.
+                maybeSelectAndPop(country, itemProperties.context),
+          )
         : CountryTile.fromProperties(
-          itemProperties,
-          title: maybeNameTitle,
-          onPressed: onSelect,
-        );
+            itemProperties,
+            title: maybeNameTitle,
+            onPressed: onSelect,
+          );
   }
 
   @override

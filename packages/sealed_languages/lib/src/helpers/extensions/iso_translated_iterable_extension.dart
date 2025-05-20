@@ -11,10 +11,12 @@ import "translated_extension.dart";
 /// a given locale. The cache map can be used to quickly lookup the
 /// translation for an [IsoTranslated] object.
 extension IsoTranslatedIterableExtension<
-    L extends BasicLocale,
-    T extends TranslatedName,
-    N extends Object,
-    I extends IsoTranslated<T, N, L>> on Iterable<I> {
+  L extends BasicLocale,
+  T extends TranslatedName,
+  N extends Object,
+  I extends IsoTranslated<T, N, L>
+>
+    on Iterable<I> {
   /// Generates a cache map of common name translations for the given [locale].
   ///
   /// The cache map is a [Map] where the keys are [IsoTranslated] objects and
@@ -38,8 +40,10 @@ extension IsoTranslatedIterableExtension<
   /// );
   /// print(cache[const LangAfr()]); // "Afrikaans"
   /// ```
-  @Deprecated("Please use `commonNamesMap` instead - it provides more efficient"
-      " lookup, consumes less memory and has more `options` to define.")
+  @Deprecated(
+    "Please use `commonNamesMap` instead - it provides more efficient"
+    " lookup, consumes less memory and has more `options` to define.",
+  )
   Map<I, String> commonNamesCacheMap(
     L locale, {
     bool useLanguageFallback = true,
@@ -77,6 +81,5 @@ extension IsoTranslatedIterableExtension<
   /// ```
   Map<I, String> commonNamesMap<B extends L>({
     required LocaleMappingOptions<B> options,
-  }) =>
-      isEmpty ? const {} : first.l10n.commonNamesMap(this, options: options);
+  }) => isEmpty ? const {} : first.l10n.commonNamesMap(this, options: options);
 }

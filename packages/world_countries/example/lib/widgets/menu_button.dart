@@ -7,15 +7,14 @@ class MenuButton extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) => PopupMenuButton<String>(
-    itemBuilder:
-        (bc) => [
-          PopupMenuItem(
-            onTap: () => const AboutAppDialog().show(bc),
-            child: const Align(
-              alignment: Alignment.centerRight,
-              child: Text("About"),
-            ),
-          ),
-        ],
+    itemBuilder: (bc) => [
+      PopupMenuItem(
+        onTap: () => const AboutAppDialog().show(bc),
+        child: const Align(
+          alignment: Alignment.centerRight,
+          child: Text("About"),
+        ),
+      ),
+    ],
   );
 }

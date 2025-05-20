@@ -115,11 +115,7 @@ const idrCurrencyTranslations = [
   TranslatedName(LangBen(), name: "ইন্দোনেশিয়ান রুপিয়াহ"),
   TranslatedName(LangBre(), name: "roupi Indonezia"),
   TranslatedName(LangBos(), name: "Indonežanska rupija"),
-  TranslatedName(
-    LangBos(),
-    name: "Индонезијска рупиа",
-    script: ScriptCyrl(),
-  ),
+  TranslatedName(LangBos(), name: "Индонезијска рупиа", script: ScriptCyrl()),
   TranslatedName(LangCat(), name: "rupia indonèsia"),
   TranslatedName(LangChe(), name: "Индонезин рупи"),
   TranslatedName(LangCes(), name: "indonéská rupie"),

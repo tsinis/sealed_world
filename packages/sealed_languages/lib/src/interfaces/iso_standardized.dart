@@ -40,7 +40,7 @@ abstract interface class IsoStandardized<Name extends Object> {
   /// The [name], [code] and  [codeOther] parameters are required.
   /// The [namesNative] parameter is optional.
   const IsoStandardized( // coverage:ignore-line
-      {
+  {
     required this.name,
     required this.code,
     required this.codeOther,

@@ -129,11 +129,7 @@ const tzsCurrencyTranslations = [
   TranslatedName(LangBen(), name: "তাঞ্জনিয়া শিলিং"),
   TranslatedName(LangBre(), name: "shilling Tanzania"),
   TranslatedName(LangBos(), name: "Tanzanijski šiling"),
-  TranslatedName(
-    LangBos(),
-    name: "Танзанијски шилинг",
-    script: ScriptCyrl(),
-  ),
+  TranslatedName(LangBos(), name: "Танзанијски шилинг", script: ScriptCyrl()),
   TranslatedName(LangCat(), name: "xíling tanzà"),
   TranslatedName(LangChe(), name: "Танзанин шиллинг"),
   TranslatedName(LangCes(), name: "tanzanský šilink"),

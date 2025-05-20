@@ -36,8 +36,8 @@ const map = {
         //   colors.map((c) => ColorsProperties.fromIntColor(c.value)).toList(),
         // );
         buffer.write("\n/// $countryName: ${country.codeShort}.\n")
-            // ..write("${country.runtimeType}(): $properties,")
-            ;
+        // ..write("${country.runtimeType}(): $properties,")
+        ;
         i += 1;
       },
       format: ColorUtils.svgFormat,
