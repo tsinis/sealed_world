@@ -51,6 +51,7 @@ class PickersThemeData extends ThemeExtension<PickersThemeData>
     this.showClearButton = true,
     this.searchBar,
     this.translation,
+    this.spacing = 0,
   });
 
   /// Creates a copy of this theme data but with the given fields replaced with
@@ -95,6 +96,7 @@ class PickersThemeData extends ThemeExtension<PickersThemeData>
     double? cacheExtent,
     DragStartBehavior? dragStartBehavior,
     ScrollViewKeyboardDismissBehavior? keyboardDismissBehavior,
+    double? spacing,
   }) => PickersThemeData(
     addRepaintBoundaries: addRepaintBoundaries ?? this.addRepaintBoundaries,
     addSemanticIndexes: addSemanticIndexes ?? this.addSemanticIndexes,
@@ -122,6 +124,7 @@ class PickersThemeData extends ThemeExtension<PickersThemeData>
     showClearButton: showClearButton ?? this.showClearButton,
     searchBar: searchBar ?? this.searchBar,
     translation: translation ?? this.translation,
+    spacing: spacing ?? this.spacing,
   );
 
   @override
@@ -204,4 +207,7 @@ class PickersThemeData extends ThemeExtension<PickersThemeData>
 
   @override
   final ScrollViewKeyboardDismissBehavior keyboardDismissBehavior;
+
+  @override
+  final double spacing;
 }

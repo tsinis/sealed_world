@@ -33,6 +33,8 @@ abstract interface class MaterialContextInterface<T extends Object> {
     AnimationController? transitionAnimationController,
     Offset? anchorPoint,
     double? heightFactor = 0.66,
+    AnimationStyle? sheetAnimationStyle,
+    bool? requestFocus,
   });
 
   /// Twin of a Material's [showSearch] function.
@@ -83,5 +85,7 @@ abstract interface class MaterialContextInterface<T extends Object> {
     Clip clipBehavior = Clip.none,
     ShapeBorder? shape,
     AlignmentGeometry? alignment,
+    bool? requestFocus,
+    AnimationStyle? animationStyle,
   });
 }

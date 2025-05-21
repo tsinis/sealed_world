@@ -45,6 +45,8 @@ abstract class SearchDelegateInterface<T extends Object>
     super.searchFieldLabel,
     super.searchFieldStyle,
     super.textInputAction = UiConstants.textInputAction,
+    super.autocorrect, // Default to true.
+    super.enableSuggestions, // Default to true.
     this.appBarBottom,
     this.appBarThemeData,
     this.caseSensitiveSearch = false,

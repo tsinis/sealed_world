@@ -99,6 +99,7 @@ class CountryPicker extends BasicPicker<WorldCountry> {
     super.textBaseline,
     super.textDirection,
     super.verticalDirection,
+    super.spacing,
     super.translation,
   }) : super(countries);
 
@@ -145,7 +146,7 @@ class CountryPicker extends BasicPicker<WorldCountry> {
       });
 
   @override
-  // ignore: avoid-incomplete-copy-with, items is covering countries.
+  // ignore: avoid-incomplete-copy-with, avoid-high-cyclomatic-complexity, a lot of params.
   CountryPicker copyWith({
     Iterable<WorldCountry>? items,
     bool? addAutomaticKeepAlives,
@@ -194,6 +195,7 @@ class CountryPicker extends BasicPicker<WorldCountry> {
       bool? isDense,
     })?
     itemBuilder,
+    double? spacing,
     TypedLocale? translation,
   }) => CountryPicker(
     countries: items ?? this.items,
@@ -237,6 +239,7 @@ class CountryPicker extends BasicPicker<WorldCountry> {
     textBaseline: textBaseline ?? this.textBaseline,
     textDirection: textDirection ?? this.textDirection,
     verticalDirection: verticalDirection ?? this.verticalDirection,
+    spacing: spacing ?? this.spacing,
     translation: translation ?? this.translation,
   );
 }

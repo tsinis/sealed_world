@@ -40,6 +40,7 @@ abstract interface class IndexedListViewInterface {
     this.textBaseline,
     this.textDirection,
     this.verticalDirection, // Default to: VerticalDirection.down.
+    this.spacing, // Default to: 0.0.
   });
 
   /// A widget to display between each item in the list.
@@ -199,4 +200,7 @@ abstract interface class IndexedListViewInterface {
 
   /// {@macro flutter.widgets.scroll_view.keyboardDismissBehavior}
   final ScrollViewKeyboardDismissBehavior? keyboardDismissBehavior;
+
+  /// {@macro flutter.rendering.RenderFlex.spacing}
+  final double? spacing;
 }

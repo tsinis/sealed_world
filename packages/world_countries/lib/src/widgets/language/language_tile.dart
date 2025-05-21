@@ -17,7 +17,7 @@ class LanguageTile extends ListItemTile<NaturalLanguage> {
   /// * All other parameters are optional and are passed
   /// to the superclass constructor.
   const LanguageTile(
-    super._item, {
+    super.item, {
     super.autofocus,
     super.chosenIcon,
     super.contentPadding,

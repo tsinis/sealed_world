@@ -115,6 +115,7 @@ abstract class BasicPicker<T extends IsoTranslated>
     super.textDirection,
     super.verticalDirection,
     super.onSearchResultsBuilder,
+    super.spacing,
     this.searchBar,
     this.searchBarPadding, // Default: EdgeInsets.only(left:8, top:8, right:8).
     this.showClearButton = true,
@@ -275,6 +276,8 @@ abstract class BasicPicker<T extends IsoTranslated>
     AnimationController? transitionAnimationController,
     Offset? anchorPoint,
     double? heightFactor = 0.66,
+    AnimationStyle? sheetAnimationStyle,
+    bool? requestFocus,
   }) => showModalBottomSheet<T>(
     context: context,
     builder: (newContext) => Padding(
@@ -301,6 +304,8 @@ abstract class BasicPicker<T extends IsoTranslated>
     routeSettings: routeSettings,
     transitionAnimationController: transitionAnimationController,
     anchorPoint: anchorPoint,
+    sheetAnimationStyle: sheetAnimationStyle,
+    requestFocus: requestFocus,
   );
 
   @override
@@ -317,6 +322,9 @@ abstract class BasicPicker<T extends IsoTranslated>
     TextInputType? keyboardType,
     TextInputAction textInputAction = UiConstants.textInputAction,
     ThemeData? appBarThemeData,
+    bool maintainState = false,
+    bool autocorrect = true,
+    bool enableSuggestions = true,
   }) async {
     T? result;
     final searchMap = items.searchMap(context, searchIn ?? defaultSearch);
@@ -360,6 +368,8 @@ abstract class BasicPicker<T extends IsoTranslated>
       showClearButton: showClearButton ?? true,
       startWithSearch: startWithSearch,
       textInputAction: textInputAction,
+      autocorrect: autocorrect,
+      enableSuggestions: enableSuggestions,
     );
 
     // ignore: avoid-local-functions, to not create overhead.
@@ -375,6 +385,7 @@ abstract class BasicPicker<T extends IsoTranslated>
       delegate: delegate,
       query: query,
       useRootNavigator: useRootNavigator,
+      maintainState: maintainState,
     );
 
     return popResult ?? result;
@@ -421,6 +432,8 @@ abstract class BasicPicker<T extends IsoTranslated>
     ShapeBorder? shape,
     AlignmentGeometry? alignment,
     bool scrollable = false,
+    bool? requestFocus,
+    AnimationStyle? animationStyle,
   }) => showDialog(
     context: context,
     builder: (newContext) => AlertDialog(
@@ -463,6 +476,8 @@ abstract class BasicPicker<T extends IsoTranslated>
     routeSettings: routeSettings,
     anchorPoint: anchorPoint,
     traversalEdgeBehavior: traversalEdgeBehavior,
+    requestFocus: requestFocus,
+    animationStyle: animationStyle,
   );
 
   @required
@@ -509,6 +524,7 @@ abstract class BasicPicker<T extends IsoTranslated>
     onSearchResultsBuilder,
     Widget? Function(ItemProperties<T> itemProperties, {bool? isDense})?
     itemBuilder,
+    double? spacing,
     TypedLocale? translation,
   });
 }

@@ -17,7 +17,7 @@ class CurrencyTile extends ListItemTile<FiatCurrency> {
   /// * All other parameters are optional and are passed to the superclass
   /// constructor.
   const CurrencyTile(
-    super._item, {
+    super.item, {
     super.autofocus,
     super.chosenIcon,
     super.contentPadding,

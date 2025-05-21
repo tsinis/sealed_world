@@ -107,6 +107,7 @@ class SearchableIndexedListViewBuilder<T extends Object>
     super.textBaseline,
     super.textDirection,
     super.verticalDirection,
+    super.spacing,
     this.caseSensitiveSearch = false,
     this.searchIn,
     this.startWithSearch = true,
@@ -161,6 +162,8 @@ class SearchableIndexedListViewBuilder<T extends Object>
     AnimationController? transitionAnimationController,
     Offset? anchorPoint,
     double? heightFactor = 0.66,
+    AnimationStyle? sheetAnimationStyle,
+    bool? requestFocus,
   }) async => null;
 
   @override
@@ -210,5 +213,7 @@ class SearchableIndexedListViewBuilder<T extends Object>
     ShapeBorder? shape,
     AlignmentGeometry? alignment,
     bool scrollable = false,
+    bool? requestFocus,
+    AnimationStyle? animationStyle,
   }) => null;
 }

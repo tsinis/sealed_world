@@ -54,6 +54,7 @@ class CurrencyPicker extends BasicPicker<FiatCurrency> {
     super.textBaseline,
     super.textDirection,
     super.verticalDirection,
+    super.spacing,
     super.translation,
   }) : super(currencies);
 
@@ -92,7 +93,7 @@ class CurrencyPicker extends BasicPicker<FiatCurrency> {
       locale.currencyTranslations[item];
 
   @override
-  // ignore: avoid-incomplete-copy-with, items is covering currencies.
+  // ignore: avoid-incomplete-copy-with, avoid-high-cyclomatic-complexity, a lot of params.
   CurrencyPicker copyWith({
     Iterable<FiatCurrency>? items,
     bool? addAutomaticKeepAlives,
@@ -141,6 +142,7 @@ class CurrencyPicker extends BasicPicker<FiatCurrency> {
       bool? isDense,
     })?
     itemBuilder,
+    double? spacing,
     TypedLocale? translation,
   }) => CurrencyPicker(
     currencies: items ?? this.items,
@@ -184,6 +186,7 @@ class CurrencyPicker extends BasicPicker<FiatCurrency> {
     textBaseline: textBaseline ?? this.textBaseline,
     textDirection: textDirection ?? this.textDirection,
     verticalDirection: verticalDirection ?? this.verticalDirection,
+    spacing: spacing ?? this.spacing,
     translation: translation ?? this.translation,
   );
 }
