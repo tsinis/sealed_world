@@ -12,7 +12,7 @@ dependencies:
   args: ^2.7.0
   change_case: ^2.2.0
   collection: ^1.19.1
-  path: ^1.9.0
+  path: ^1.9.1
   pure_dart_ui: ^0.1.10
   rw_git: ^1.0.3
   sealed_countries:

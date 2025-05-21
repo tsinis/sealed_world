@@ -36,11 +36,6 @@ updates:
     labels:
       - "dependencies"
       - "dart"
-    allow:
-      - dependency-type: "direct"
-    ignore:
-      - dependency-name: "*"
-        update-types: ["version-update:semver-major"]
     open-pull-requests-limit: 5
 
   - package-ecosystem: "pub"
@@ -59,11 +54,6 @@ updates:
     labels:
       - "dependencies"
       - "dart"
-    allow:
-      - dependency-type: "direct"
-    ignore:
-      - dependency-name: "*"
-        update-types: ["version-update:semver-major"]
     open-pull-requests-limit: 5
 
   - package-ecosystem: "pub"
@@ -82,11 +72,6 @@ updates:
     labels:
       - "dependencies"
       - "dart"
-    allow:
-      - dependency-type: "direct"
-    ignore:
-      - dependency-name: "*"
-        update-types: ["version-update:semver-major"]
     open-pull-requests-limit: 5
 
   - package-ecosystem: "pub"
@@ -105,11 +90,6 @@ updates:
     labels:
       - "dependencies"
       - "dart"
-    allow:
-      - dependency-type: "direct"
-    ignore:
-      - dependency-name: "*"
-        update-types: ["version-update:semver-major"]
     open-pull-requests-limit: 5
 
   - package-ecosystem: "pub"
@@ -128,11 +108,6 @@ updates:
     labels:
       - "dependencies"
       - "dart"
-    allow:
-      - dependency-type: "direct"
-    ignore:
-      - dependency-name: "*"
-        update-types: ["version-update:semver-major"]
     open-pull-requests-limit: 5
 
   - package-ecosystem: "pub"
@@ -151,11 +126,6 @@ updates:
     labels:
       - "dependencies"
       - "dart"
-    allow:
-      - dependency-type: "direct"
-    ignore:
-      - dependency-name: "*"
-        update-types: ["version-update:semver-major"]
     open-pull-requests-limit: 5
 
   - package-ecosystem: "pub"
@@ -174,11 +144,6 @@ updates:
     labels:
       - "dependencies"
       - "dart"
-    allow:
-      - dependency-type: "direct"
-    ignore:
-      - dependency-name: "*"
-        update-types: ["version-update:semver-major"]
     open-pull-requests-limit: 5
 
   - package-ecosystem: "pub"
@@ -197,11 +162,6 @@ updates:
     labels:
       - "dependencies"
       - "dart"
-    allow:
-      - dependency-type: "direct"
-    ignore:
-      - dependency-name: "*"
-        update-types: ["version-update:semver-major"]
     open-pull-requests-limit: 5
 
   # Maintain dependencies for Android examples
