@@ -476,7 +476,7 @@
       {
         "label": "Build Android-ARM64 (Profile)",
         "type": "shell",
-        "command": "flutter build apk --profile --target-platform=android-arm64 --split-per-abi && open build/app/outputs/apk/profile",
+        "command": "fvm flutter build apk --profile --target-platform=android-arm64 --split-per-abi && open build/app/outputs/apk/profile",
         "options": { "cwd": "${fileWorkspaceFolder}/example" },
         "presentation": { "reveal": "always" },
         "problemMatcher": []
