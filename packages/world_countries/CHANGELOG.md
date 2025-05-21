@@ -8,12 +8,13 @@ NEW FEATURES
 - Add regional code alias and new ISO standardized extensions for type checking.
 - Add formatter callback to localization packages for custom translation logic.
 - Add official country translations for the [Indonesian language](https://gitlab.com/restcountries/restcountries/-/merge_requests/76).
-- Update symbol for Sudanese pound to "ج.س".
 
 CHORE
 
 - The Dart SDK was bumped to v3.8.0.
 - Code has been formatted with the new Dart formatter.
+- Flag of Syria update.
+- Update symbol for Sudanese pound to "ج.س".
 - Correct latitude values for several [countries](https://gitlab.com/restcountries/restcountries/-/merge_requests/78).
 - Update currency for South Georgia to [GBP](https://gitlab.com/restcountries/restcountries/-/merge_requests/79).
 
