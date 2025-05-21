@@ -305,16 +305,6 @@
       },
       {
         "type": "shell",
-        "command": "flutter gen-l10n",
-        "label": "Flutter Generate L10N",
-        "presentation": {
-          "reveal": "never",
-          "revealProblems": "onProblem",
-          "close": true
-        }
-      },
-      {
-        "type": "shell",
         "command": "flutter analyze",
         "label": "Flutter Analyze"
       },
@@ -476,7 +466,7 @@
       {
         "label": "Build Android-ARM64 (Profile)",
         "type": "shell",
-        "command": "flutter build apk --profile --target-platform=android-arm64 --split-per-abi && open build/app/outputs/apk/profile",
+        "command": "fvm flutter build apk --profile --target-platform=android-arm64 --split-per-abi && open build/app/outputs/apk/profile",
         "options": { "cwd": "${fileWorkspaceFolder}/example" },
         "presentation": { "reveal": "always" },
         "problemMatcher": []

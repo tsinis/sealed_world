@@ -8,13 +8,13 @@ import "../../constants/ui_constants.dart";
 class ListItemTile<T extends Object> extends ListTile {
   /// Constructor for the [ListItemTile] class.
   ///
-  /// * [_item] is the item to display in the list tile.
+  /// * [item] is the item to display in the list tile.
   /// * [onPressed] is the callback function to call when the tile is pressed.
   /// * [chosenIcon] is the icon to display when the tile is selected.
   /// * [isChosen] is a boolean indicating whether the tile is selected.
   /// * [isDisabled] is a boolean indicating whether the tile is disabled.
   const ListItemTile(
-    this._item, {
+    this.item, {
     this.onPressed,
     this.excludeSemantics = true,
     this.semanticsIdentifier,
@@ -61,7 +61,8 @@ class ListItemTile<T extends Object> extends ListTile {
   // ignore: specify_nonobvious_property_types, it's obvious...
   static const fontSize = UiConstants.point * 3;
 
-  final T _item;
+  /// The item to display in the list tile.
+  final T item;
 
   /// The callback function to call when the tile is pressed.
   final ValueSetter<T>? onPressed;
@@ -73,9 +74,6 @@ class ListItemTile<T extends Object> extends ListTile {
   /// tools that work by querying the accessibility hierarchy, such as Android
   /// UI Automator, iOS XCUITest, or Appium. It's not exposed to users.
   final String? semanticsIdentifier;
-
-  /// The item to display in the list tile.
-  T get item => _item;
 
   @override
   Widget build(BuildContext context) => Material(

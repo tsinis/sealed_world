@@ -99,6 +99,7 @@ class _BasicPickerState<T extends IsoTranslated> extends State<BasicPicker<T>> {
       onSearchResultsBuilder: widget.onSearchResultsBuilder,
       startWithSearch: widget.startWithSearch,
       textController: _controller,
+      spacing: widget.spacing ?? theme?.spacing ?? 0.0,
     );
   }
 }

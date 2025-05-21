@@ -54,6 +54,7 @@ class LanguagePicker extends BasicPicker<NaturalLanguage> {
     super.textBaseline,
     super.textDirection,
     super.verticalDirection,
+    super.spacing,
     super.translation,
   }) : super(languages);
 
@@ -91,7 +92,7 @@ class LanguagePicker extends BasicPicker<NaturalLanguage> {
       locale.languageTranslations[item];
 
   @override
-  // ignore: avoid-incomplete-copy-with, items is covering languages.
+  // ignore: avoid-incomplete-copy-with, avoid-high-cyclomatic-complexity, a lot of params.
   LanguagePicker copyWith({
     Iterable<NaturalLanguage>? items,
     bool? addAutomaticKeepAlives,
@@ -140,6 +141,7 @@ class LanguagePicker extends BasicPicker<NaturalLanguage> {
       bool? isDense,
     })?
     itemBuilder,
+    double? spacing,
     TypedLocale? translation,
   }) => LanguagePicker(
     languages: items ?? this.items,
@@ -184,5 +186,6 @@ class LanguagePicker extends BasicPicker<NaturalLanguage> {
     textDirection: textDirection ?? this.textDirection,
     verticalDirection: verticalDirection ?? this.verticalDirection,
     translation: translation ?? this.translation,
+    spacing: spacing ?? this.spacing,
   );
 }

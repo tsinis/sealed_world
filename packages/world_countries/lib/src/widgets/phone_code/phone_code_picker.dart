@@ -57,6 +57,7 @@ class PhoneCodePicker extends CountryPicker {
     super.textBaseline,
     super.textDirection,
     super.verticalDirection,
+    super.spacing,
     super.translation,
   });
 
@@ -104,6 +105,7 @@ class PhoneCodePicker extends CountryPicker {
         textBaseline: picker.textBaseline,
         textDirection: picker.textDirection,
         verticalDirection: picker.verticalDirection,
+        spacing: picker.spacing,
         translation: picker.translation,
       );
 
@@ -170,7 +172,7 @@ class PhoneCodePicker extends CountryPicker {
       });
 
   @override
-  // ignore: avoid-incomplete-copy-with, items is covering countries.
+  // ignore: avoid-incomplete-copy-with, avoid-high-cyclomatic-complexity, a lot of params.
   PhoneCodePicker copyWith({
     Iterable<WorldCountry>? items,
     bool? addAutomaticKeepAlives,
@@ -219,6 +221,7 @@ class PhoneCodePicker extends CountryPicker {
       bool? isDense,
     })?
     itemBuilder,
+    double? spacing,
     TypedLocale? translation,
   }) => PhoneCodePicker(
     countries: items ?? this.items,
@@ -263,5 +266,6 @@ class PhoneCodePicker extends CountryPicker {
     textDirection: textDirection ?? this.textDirection,
     verticalDirection: verticalDirection ?? this.verticalDirection,
     translation: translation ?? this.translation,
+    spacing: spacing ?? this.spacing,
   );
 }

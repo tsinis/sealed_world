@@ -1,3 +1,9 @@
+## 2.4.1
+
+CHORE
+
+- Flag of Syria update.
+
 ## 2.4.0
 
 NEW FEATURES
@@ -6,7 +12,6 @@ NEW FEATURES
 - Enhance ISO standardized classes with `Comparable` interface and update bool getters.
 - Add regional code alias and new ISO standardized extensions for type checking.
 - Add official country translations for the [Indonesian language](https://gitlab.com/restcountries/restcountries/-/merge_requests/76).
-- Update symbol for Sudanese pound to "ج.س".
 
 CHORE
 
@@ -14,6 +19,7 @@ CHORE
 - Code has been formatted with the new Dart formatter.
 - Correct latitude values for several [countries](https://gitlab.com/restcountries/restcountries/-/merge_requests/78).
 - Update currency for South Georgia to [GBP](https://gitlab.com/restcountries/restcountries/-/merge_requests/79).
+- Update symbol for Sudanese pound to "ج.س".
 
 REFACTOR
 

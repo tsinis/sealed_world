@@ -1150,21 +1150,27 @@ const flagSenProperties = FlagProperties(
 /// Flag properties of country Syria (SY).
 const flagSyrProperties = FlagProperties(
   [
-    ColorsProperties(Color(0xffce1126)),
+    ColorsProperties(Color(0xff007a3d)),
     ColorsProperties(Color(0xffffffff)),
     ColorsProperties(Color(0xff000000)),
   ],
   elementsProperties: [
     ElementsProperties(
-      Color(0xff007a3d),
+      Color(0xffce1126),
       shape: Star(),
-      offset: Offset(-1 / 3, 0.03),
+      offset: Offset(-1 / 2, 0.025),
       heightFactor: 3 / 11,
     ),
     ElementsProperties(
-      Color(0xff007a3d),
+      Color(0xffce1126),
       shape: Star(),
-      offset: Offset(1 / 3, 0.03),
+      offset: Offset(0, 0.025),
+      heightFactor: 3 / 11,
+    ),
+    ElementsProperties(
+      Color(0xffce1126),
+      shape: Star(),
+      offset: Offset(1 / 2, 0.025),
       heightFactor: 3 / 11,
     ),
   ],

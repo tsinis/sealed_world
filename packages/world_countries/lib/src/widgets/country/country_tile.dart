@@ -16,7 +16,7 @@ class CountryTile extends ListItemTile<WorldCountry> {
   /// * All other parameters are optional and are passed to the superclass
   /// constructor.
   const CountryTile(
-    super._item, {
+    super.item, {
     super.autofocus,
     super.chosenIcon,
     super.contentPadding,

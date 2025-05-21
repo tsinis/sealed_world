@@ -60,6 +60,7 @@ abstract class StatefulIndexedListView<T extends Object> extends StatefulWidget
     this.textBaseline,
     this.textDirection,
     this.verticalDirection, // Default to: VerticalDirection.down.
+    this.spacing,
     super.key,
   });
 
@@ -177,4 +178,7 @@ abstract class StatefulIndexedListView<T extends Object> extends StatefulWidget
 
   @override
   final ScrollViewKeyboardDismissBehavior? keyboardDismissBehavior;
+
+  @override
+  final double? spacing;
 }

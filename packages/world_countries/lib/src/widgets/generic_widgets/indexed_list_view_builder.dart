@@ -82,6 +82,7 @@ class IndexedListViewBuilder<T extends Object>
     super.textBaseline,
     super.textDirection,
     super.verticalDirection,
+    super.spacing,
   });
 
   @override
@@ -114,6 +115,7 @@ class _IndexedListViewBuilderState<T extends Object>
           theme?.verticalDirection ??
           VerticalDirection.down,
       textBaseline: widget.textBaseline ?? theme?.textBaseline,
+      spacing: widget.spacing ?? theme?.spacing ?? 0.0,
       children: [
         if (header != null && (widget.showHeader ?? theme?.showHeader ?? true))
           header,

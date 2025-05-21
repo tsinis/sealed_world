@@ -40,11 +40,15 @@ class ImplicitSearchDelegate<T extends Object>
   ///   search field.
   /// * [searchFieldLabel] is the label to use for the search field.
   /// * [searchFieldStyle] is the style to use for the search field.
-  /// * `showClearButton` is a boolean indicating whether to show the clear
+  /// * [showClearButton] is a boolean indicating whether to show the clear
   ///   button on the search field.
-  /// * `startWithSearch` is a boolean indicating whether the search field
+  /// * [startWithSearch] is a boolean indicating whether the search field
   ///   should search only by starting with the search string.
   /// * [textInputAction] is the text input action to use for the search field.
+  /// * [autocorrect] is a boolean indicating whether to enable autocorrect for
+  ///   the search field.
+  /// * [enableSuggestions] is a boolean indicating whether to enable
+  ///   suggestions for the search field.
   ImplicitSearchDelegate(
     super.items, {
     required super.resultsBuilder,
@@ -62,6 +66,8 @@ class ImplicitSearchDelegate<T extends Object>
     super.showClearButton,
     super.startWithSearch,
     super.textInputAction,
+    super.autocorrect,
+    super.enableSuggestions,
     super.onSearchResultsBuilder,
     super.searchMap,
   });
