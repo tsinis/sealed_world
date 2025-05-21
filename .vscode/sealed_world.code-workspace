@@ -305,16 +305,6 @@
       },
       {
         "type": "shell",
-        "command": "flutter gen-l10n",
-        "label": "Flutter Generate L10N",
-        "presentation": {
-          "reveal": "never",
-          "revealProblems": "onProblem",
-          "close": true
-        }
-      },
-      {
-        "type": "shell",
         "command": "flutter analyze",
         "label": "Flutter Analyze"
       },

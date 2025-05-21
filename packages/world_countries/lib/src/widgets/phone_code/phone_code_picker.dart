@@ -105,6 +105,7 @@ class PhoneCodePicker extends CountryPicker {
         textBaseline: picker.textBaseline,
         textDirection: picker.textDirection,
         verticalDirection: picker.verticalDirection,
+        spacing: picker.spacing,
         translation: picker.translation,
       );
 
