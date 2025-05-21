@@ -3,6 +3,7 @@
 NEW FEATURES
 
 - Add additional `ListTile` super parameters to the `ListItemTile` widget.
+- Introduce `spacing` and new Flutter 3.32.0 parameters (in `show*` methods) in pickers.
 - Add extension for enhanced functionality of `ListItemTile`.
 - Enhance ISO standardized classes with `Comparable` interface and update bool getters.
 - Add regional code alias and new ISO standardized extensions for type checking.

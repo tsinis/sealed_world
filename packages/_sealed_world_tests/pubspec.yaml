@@ -12,8 +12,8 @@ environment:
   sdk: ^3.8.0
 
 dependencies:
-  meta: ^1.15.0 # Specific version for the flags package. From Google
-  test: ^1.25.8 # Specific version for the flags package. From Google
+  meta: ^1.16.0 # Specific version for the flags package. From Google
+  test: ^1.25.15 # Specific version for the flags package. From Google
 
 dev_dependencies:
   dart_code_metrics_presets: any # Constrained in the CLI tools package
