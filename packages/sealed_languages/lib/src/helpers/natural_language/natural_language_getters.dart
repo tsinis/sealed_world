@@ -1,8 +1,28 @@
+import "../../data/natural_languages.data.dart";
 import "../../model/language/language.dart";
 
 /// Provides convenient getters for ISO 639 language codes
 /// on a [NaturalLanguage] class.
 extension NaturalLanguageGetters on NaturalLanguage {
+  static const _constructedLanguages = <NaturalLanguage>[
+    LangEpo(),
+    LangIle(),
+    LangIna(),
+    LangIdo(),
+    LangVol(),
+  ];
+
+  /// Returns boolean indicating whether this [NaturalLanguage] is a constructed
+  /// language.
+  ///
+  /// ```dart
+  /// const esperanto = LangEpo();
+  /// print(esperanto.isConstructed); // true
+  /// const english = LangEng();
+  /// print(english.isConstructed); // false
+  /// ```
+  bool get isConstructed => _constructedLanguages.contains(this);
+
   /// Returns the ISO 639-1 language code for a [NaturalLanguage].
   ///
   /// Provides same data as [codeShort].
