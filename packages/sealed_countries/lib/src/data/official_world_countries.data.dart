@@ -4973,7 +4973,13 @@ class CountryEth extends WorldCountry {
     ),
   ];
   @override
-  List<NaturalLanguage> get languages => const [LangAmh()];
+  List<NaturalLanguage> get languages => const [
+    LangAmh(),
+    LangAar(),
+    LangOrm(),
+    LangSom(),
+    LangTir(),
+  ];
 }
 
 /// A class that represents the Finland country.
@@ -7448,7 +7454,7 @@ class CountryIrq extends WorldCountry {
     ),
   ];
   @override
-  List<NaturalLanguage> get languages => const [LangAra()];
+  List<NaturalLanguage> get languages => const [LangAra(), LangKur()];
 }
 
 /// A class that represents the Iceland country.
