@@ -23,7 +23,7 @@ extension IterableByCountryPopulationExtension<T extends Object>
   /// * [itemsForCountry] - Function that extracts items of type [T] from a
   ///   country. Returns `null` or empty iterable if the country has no
   ///   associated items.
-  /// * [unnoficialMap] - Map containing unofficial associations between items
+  /// * [unofficialMap] - Map containing unofficial associations between items
   ///   and countries (e.g., historical usage, special relationships).
   /// * [countries] - The collection of countries to consider for mapping.
   ///   Defaults to all world countries.
@@ -37,11 +37,11 @@ extension IterableByCountryPopulationExtension<T extends Object>
   ///    associations
   /// 3. **Official Mapping**: For each country, extract associated items using
   ///    [itemsForCountry]
-  /// 4. **Unofficial Addition**: Add countries from [unnoficialMap] at the
+  /// 4. **Unofficial Addition**: Add countries from [unofficialMap] at the
   ///    beginning of the list if they're not already included.
   Map<T, List<WorldCountry>> byPopulationCountryMap(
     Iterable<T>? Function(WorldCountry country) itemsForCountry,
-    Map<T, Iterable<WorldCountry>> unnoficialMap, {
+    Map<T, Iterable<WorldCountry>> unofficialMap, {
     required Iterable<WorldCountry> countries,
     Map<T, Iterable<WorldCountry>> custom = const {},
   }) {
@@ -59,7 +59,7 @@ extension IterableByCountryPopulationExtension<T extends Object>
       map[item] ??= const <WorldCountry>[];
       for (final country in sortedCountries) {
         // ignore: move-variable-outside-iteration, not really as being updated.
-        final existing = map[item] ?? <WorldCountry>[];
+        final existing = map[item] ?? const [];
         if (existing.contains(country)) continue;
 
         final items = itemsForCountry(country);
@@ -67,8 +67,8 @@ extension IterableByCountryPopulationExtension<T extends Object>
         if (items.contains(item)) {
           map[item] = [...existing, country];
         } else {
-          final unofficials = unnoficialMap[item] ?? const [];
-          for (final unoff in unofficials) {
+          final unofficialCountries = unofficialMap[item] ?? const [];
+          for (final unoff in unofficialCountries) {
             if (!existing.contains(unoff)) map[item] = [unoff, ...existing];
           }
         }

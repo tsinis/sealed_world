@@ -12,7 +12,7 @@ const unofficialLanguagesCountryMap = <NaturalLanguage, List<WorldCountry>>{
     CountryRus(),
   ],
   LangAka(): [CountryGha()], // https://wikipedia.org/wiki/Akan_language
-  LangArg(): [CountryEsp()], //https://wikipedia.org/wiki/Aragonese_language
+  LangArg(): [CountryEsp()], // https://wikipedia.org/wiki/Aragonese_language
   LangAsm(): [CountryInd()], // https://wikipedia.org/wiki/Assamese_language
   LangAva(): [CountryRus()], // https://wikipedia.org/wiki/Avar_language
   LangAve(): [CountryIrn()], // https://wikipedia.org/wiki/Avestan
@@ -67,7 +67,6 @@ const unofficialLanguagesCountryMap = <NaturalLanguage, List<WorldCountry>>{
     CountryNer(),
   ],
   LangIbo(): [CountryNga()], // https://wikipedia.org/wiki/Igbo_language
-
   LangIii(): [CountryChn()], // https://wikipedia.org/wiki/Nuosu_language
   LangIku(): [CountryCan()], // https://wikipedia.org/wiki/Inuktitut
   LangIpk(): [

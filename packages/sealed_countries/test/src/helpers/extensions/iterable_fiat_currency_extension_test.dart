@@ -1,7 +1,8 @@
 import "dart:io";
 
-import "package:sealed_countries/sealed_countries.dart";
+import "package:sealed_countries/src/data/official_world_countries.data.dart";
 import "package:sealed_countries/src/helpers/extensions/iterable_fiat_currency_extension.dart";
+import "package:sealed_currencies/sealed_currencies.dart";
 import "package:test/test.dart";
 
 void main() => group("IterableFiatCurrencyExtension", () {
@@ -50,8 +51,8 @@ void main() => group("IterableFiatCurrencyExtension", () {
         readmeFile.readAsStringSync(),
         newContent,
         reason:
-            "${readmeFile.path} was updated. Please review and commit the changes"
-            " if they are correct.",
+            "${readmeFile.path} was updated. Please review and commit "
+            "the changes if they are correct.",
         skip: false,
       );
 

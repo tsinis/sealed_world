@@ -47,6 +47,6 @@ extension IterableFiatCurrencyExtension on Iterable<FiatCurrency> {
     );
     if (mapper == null) return map;
 
-    return map.map((lang, country) => MapEntry(lang, mapper(lang, country)));
+    return map.map((fiat, country) => MapEntry(fiat, mapper(fiat, country)));
   }
 }
