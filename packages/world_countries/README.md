@@ -11,7 +11,7 @@
 
 ![Example](https://raw.githubusercontent.com/tsinis/sealed_world/main/packages/world_countries/doc/example.gif)
 
-This ISO-driven and fully tested package provides information about world countries, currencies, languages, etc. in the form of compile-time, tree-shakable constant classes with a sealed origin and customizable pickers. This is a Flutter wrapper on top of the [sealed_countries](https://pub.dev/packages/sealed_countries) package, that extends all the [country](https://github.com/tsinis/sealed_world/tree/main/packages/sealed_countries)/[currency](https://github.com/tsinis/sealed_world/tree/main/packages/sealed_currencies)/[language](https://github.com/tsinis/sealed_world/tree/main/packages/sealed_languages) data, like codes, names, translations, etc. (for example different flag look) and provides ready-to use widgets for showing countries, languages, currencies lists and pickers. Country flags are created with optimized CustomPainters with a help of underlying [world_flags](https://pub.dev/packages/world_flags) package.
+This ISO-driven and fully tested package provides information about world countries, currencies, languages, etc. in the form of compile-time, tree-shakable constant classes with a sealed origin and customizable pickers. This is a Flutter wrapper on top of the [sealed_countries](https://pub.dev/packages/sealed_countries) package, that extends all the [country](https://github.com/tsinis/sealed_world/tree/main/packages/sealed_countries)/[currency](https://github.com/tsinis/sealed_world/tree/main/packages/sealed_currencies)/[language](https://github.com/tsinis/sealed_world/tree/main/packages/sealed_languages) data, like codes, names, translations, etc. (for example different flag look) and provides ready-to-use widgets for showing countries, languages, currencies lists and pickers. Country flags are created with optimized CustomPainters with a help of underlying [world_flags](https://pub.dev/packages/world_flags) package.
 
 ### Table of Contents
 
@@ -53,7 +53,7 @@ To preview the demo from the example, you can visit [this web page](https://tsin
 
 ### Getting started
 
-To use this package, you will need Flutter version 3.27.1+. Add `world_countries` as a dependency in your `pubspec.yaml` file.
+To use this package, you will need a stable Flutter SDK. Add `world_countries` as a dependency in your `pubspec.yaml` file.
 
 ```yaml
 dependencies:
@@ -82,7 +82,7 @@ MaterialApp(localizationsDelegates: [TypedLocaleDelegate()])
 
 Then you can also extract this delegate data from the context via `context.maybeLocale` getter, in any place of your app (from a `BuildContext`).
 
-> The package also provides access to `TypedLocale` class that allows you to work with a type-safe versions of default [Locale](https://api.flutter.dev/flutter/dart-ui/Locale-class.html). You can also utilize it in `maybeCommonNameFor()` and `commonNameFor()` methods (you can use with country/currency/language data).
+> The package also provides access to the `TypedLocale` class, allowing you to work with type-safe versions of default [Locale](https://api.flutter.dev/flutter/dart-ui/Locale-class.html). These `maybeCommonNameFor()` and `commonNameFor()` methods can also be used with country, currency, or language data.
 
 ### Example
 
@@ -146,7 +146,7 @@ class _MainPageState extends State<MainPage>
   late CountryPicker picker = widget.basicPicker.copyWith(onSelect: onSelect);
 
   void onSelect(WorldCountry newCountry) {
-    debugPrint("New country selected: $selectedCountry");
+    debugPrint("New country selected: $newCountry");
     setState(
       () => picker = picker.copyWith(
         // A copyWith methods in every picker.
@@ -228,7 +228,7 @@ If you have any issues or suggestions for the package, please file them in the G
 
 ### References and credits
 
-This package is licensed under the MIT license. See [LICENSE](./LICENSE) for details. This package dependencies are under their respective licenses (that can be found in their respective folders under LICENSE and NOTICE files).
+This package is licensed under the MIT license (see [LICENSE](./LICENSE) for details). Its dependencies are under their respective licenses, which can be found in the corresponding `LICENSE` and `NOTICE` files.
 
 ---
 
@@ -246,7 +246,7 @@ CountryPicker(
 
 #### How to format/adjust automatic global translations of ISO objects in my app?
 
-For instance, you may want to capitalize all French currencies names in auto. translations. You enhance the `TypedLocaleDelegate` with a custom `l10nFormatter` as follows:
+For instance, you may want to capitalize all French currency names in auto-translations. You enhance the `TypedLocaleDelegate` with a custom `l10nFormatter` as follows:
 
 ```dart
 TypedLocaleDelegate(
@@ -279,7 +279,7 @@ onSearchResultsBuilder: (query, map) =>
 - **Fully accessible**: All pickers are meticulously crafted with accessibility in mind, ensuring seamless integration with screen readers and assistive technologies.
 - **Up-to-date flags**: This package ensures accurate and timely flag representations, reflecting current designs. Unlike other packages or emoji/font sets that often use outdated flags, this package offers flags with the most recent designs (such as the Afghan flag from 2013 is shown here correctly with a design from year 2021, or the Syrian flag is displayed with a design from year 2025, etc.).
 - **Classes with a sealed origin**: This package provides data via classes with a sealed origin, defining specific permitted direct subclasses. This lets you use instances of these subclasses and customize their data or behavior (e.g., overriding methods), offering more structured flexibility than enums or standard open classes.
-- **No 3rd-party dependencies**: This package has no third-party dependencies, ensuring that you won't have any issues or conflicts with other dependencies.
+- **No external 3rd-party dependencies**: This package has no external third-party dependencies. It relies on the Flutter SDK and other packages within the `sealed_world` monorepo, ensuring controlled and consistent integration.
 - **Rich data**: This package offers far more data than any other package + tons of translations (all [GlobalMaterialLocalizations](https://api.flutter.dev/flutter/flutter_localizations/GlobalMaterialLocalizations-class.html) and [GlobalCupertinoLocalizations](https://api.flutter.dev/flutter/flutter_localizations/GlobalCupertinoLocalizations-class.html) locales and more).
 - **Type-safe**: The contracts and types in this package are exceptionally strong, ensuring that your code is strongly typed and well-defined.
 - **High code coverage**: The code in this package boasts nearly **_100% test coverage, with almost 5K tests_** (150+ in this package, 4.8K+ in underlying Dart packages) ensuring reliability and stability.
