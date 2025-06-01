@@ -82,7 +82,7 @@ MaterialApp(localizationsDelegates: [TypedLocaleDelegate()])
 
 Then you can also extract this delegate data from the context via `context.maybeLocale` getter, in any place of your app (from a `BuildContext`).
 
-> The package also provides access to `TypedLocale` class that allows you to work with a type-safe versions of default [Locale](https://api.flutter.dev/flutter/dart-ui/Locale-class.html). These `maybeCommonNameFor()` and `commonNameFor()` methods can also be used with country, currency, or language data.
+> The package also provides access to the `TypedLocale` class, allowing you to work with type-safe versions of default [Locale](https://api.flutter.dev/flutter/dart-ui/Locale-class.html). These `maybeCommonNameFor()` and `commonNameFor()` methods can also be used with country, currency, or language data.
 
 ### Example
 
@@ -228,7 +228,7 @@ If you have any issues or suggestions for the package, please file them in the G
 
 ### References and credits
 
-This package is licensed under the MIT license. See [LICENSE](./LICENSE) for details. This package dependencies are under their respective licenses (that can be found in their respective folders under LICENSE and NOTICE files).
+This package is licensed under the MIT license (see [LICENSE](./LICENSE) for details). Its dependencies are under their respective licenses, which can be found in the corresponding `LICENSE` and `NOTICE` files.
 
 ---
 
