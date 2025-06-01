@@ -85,7 +85,7 @@ import 'package:sealed_countries/sealed_countries.dart';
 
 ### Usage
 
-Use the `WorldCountry` class to get information about countries. Either construct a new instance directly with `const` keyword or with use of the class factory constructors/static methods, or select one from the `WorldCountry.list` constant.
+To get information about countries, use the `WorldCountry` class. You can construct instances directly (using `const`), use the class's factory constructors or static methods, or select a country from the `WorldCountry.list` constant.
 
 ```dart
   print(WorldCountry.list.length); // Prints: "250".

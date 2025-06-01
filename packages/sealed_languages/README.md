@@ -24,7 +24,7 @@ This ISO-driven, pure Dart, fully tested and dependency-free package provides in
 | bibliographicCode | No           | A three-letter string representing the ISO 639-2/B Bibliographic code for the language.  | `null`                                            |
 | family            | No           | The language family to which the language belongs.                                       | `LanguageFamily`(name: "Indo-European")           |
 | isRightToLeft     | No           | A boolean value specifying whether the language is written right-to-left.                | false                                             |
-| translations      | **Yes**      | A list of `TranslatedName`s representing the language name translations.                 | **140+** translations for a English language name |
+| translations      | **Yes**      | A list of `TranslatedName`s representing the language name translations.                 | **140+** translations for an English language name |
 
 <details>
 <summary><strong>Script class</strong> (click to expand)</summary>
@@ -74,7 +74,7 @@ import 'package:sealed_languages/sealed_languages.dart';
 
 ### Usage
 
-Use the `NaturalLanguage` class to get information about languages. Either construct a new instance directly with `const` keyword or with use of the class factory constructors/static methods or select one from the `NaturalLanguage.list` constant.
+To get information about languages, use the `NaturalLanguage` class. You can construct instances directly (using `const`), use the class's factory constructors or static methods, or select a language from the `NaturalLanguage.list` constant.
 
 ```dart
   const eng = "Eng";

@@ -17,7 +17,7 @@ This ISO-driven, pure Dart, fully tested and 3rd-party dependency-free package p
 
 | **Field**            | **Required**                | **Description**                                                                         | **Example for FiatEur**                        |
 | -------------------- | --------------------------- | --------------------------------------------------------------------------------------- | ---------------------------------------------- |
-| code                 | **Yes**                     | The international 3-numeric non-empty letter code as defined by the ISO 4217 standard.  | "EUR"                                          |
+| code                 | **Yes**                     | The international 3-letter non-empty alphabetic code as defined by the ISO 4217 standard.  | "EUR"                                          |
 | name                 | **Yes**                     | The English name of the currency.                                                       | "Euro"                                         |
 | namesNative          | **Yes**                     | The native names of the currency in different locales.                                  | ["Euro"]                                       |
 | codeNumeric          | **Yes**                     | The international 3-numeric non-empty numeric code as defined by the ISO 4217 standard. | "978"                                          |
@@ -67,7 +67,7 @@ import 'package:sealed_currencies/sealed_currencies.dart';
 
 ### Usage
 
-Use the `FiatCurrency` class to get information about currencies. Either construct a new instance directly with `const` keyword or with use of the class factory constructors/static methods or select one from the `FiatCurrency.list` constant.
+To get information about currencies, use the `FiatCurrency` class. You can construct instances directly (using `const`), use the class's factory constructors or static methods, or select a currency from the `FiatCurrency.list` constant.
 
 ```dart
   print(FiatCurrency.listExtended.length); // Prints: "169".

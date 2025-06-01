@@ -12,7 +12,7 @@ Flutter WASM: To preview this example, you can visit [this web page](https://tsi
 
 ## How to run it
 
-Flutter (version 3.32 or higher) is assumed to be installed. After that, all you have to do is run those commands from the terminal/command line from the project's root folder:
+Flutter SDK (stable version) is assumed to be installed. After that, all you have to do is run those commands from the terminal/command line from the project's root folder:
 
 ```shell
 flutter pub get
