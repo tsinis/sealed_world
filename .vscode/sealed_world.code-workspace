@@ -330,7 +330,7 @@
       },
       {
         "type": "shell",
-        "command": "genhtml coverage/lcov.info -o coverage/",
+        "command": "genhtml coverage/lcov.info -o coverage/ --dark-mode",
         "label": "Generate Coverage",
         "dependsOn": "Remove Generated Files from Coverage",
         "presentation": {
