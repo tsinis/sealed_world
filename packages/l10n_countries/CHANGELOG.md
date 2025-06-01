@@ -1,3 +1,10 @@
+## 1.1.1
+
+CHORE
+
+- The Dart SDK was bumped to v3.8.1.
+- Update German and English translations.
+
 ## 1.1.0
 
 NEW FEATURES
