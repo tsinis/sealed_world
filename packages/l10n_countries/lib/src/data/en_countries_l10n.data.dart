@@ -116,7 +116,7 @@ class EnCountriesL10N extends IsoLocaleMapper<String> {
       "CUB": "Cuba",
       "CUB+": "Republic of Cuba",
       "CUW": "Curaçao",
-      "CUW+": "WorldCountry of Curaçao",
+      "CUW+": "Country of Curaçao",
       "CXR": "Christmas Island",
       "CXR+": "Territory of Christmas Island",
       "CYM": "Cayman Islands",

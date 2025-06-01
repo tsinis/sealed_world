@@ -26,12 +26,12 @@ This ISO-driven, fully tested and pure Dart package provides information about w
 | cioc          | No           | The International Olympic Committee code of the country.         | "IRL"                                                                                                                                                                              |
 | independent   | **Yes**      | Whether the country is an independent state.                     | true                                                                                                                                                                               |
 | unMember      | **Yes**      | Whether the country is a member of the United Nations.           | true                                                                                                                                                                               |
-| currencies    | **Yes[^1]**  | The currencies used in the country.                              | [[FiatEur()](https://github.com/tsinis/sealed_world/tree/main/packages/sealed_currencies#features)]                                                                                |
+| currencies    | **Yes[^1]**  | The currencies used in the country.                              | [FiatEur()](https://github.com/tsinis/sealed_world/tree/main/packages/sealed_currencies#features)                                                                                |
 | idd           | **Yes**      | The international direct dialing codes for the country.          | `Idd`(root: 3, suffixes: [53])                                                                                                                                                     |
 | altSpellings  | **Yes**      | The alternate spellings of the country name.                     | ["IE", "Éire", "Republic of Ireland", "Poblacht na hÉireann"]                                                                                                                      |
 | continent     | **Yes**      | The continent where the country is located.                      | `Europe`()                                                                                                                                                                         |
 | subregion     | No           | The subregion where the country is located.                      | `NorthernEurope`()                                                                                                                                                                 |
-| languages     | **Yes[^1]**  | The official languages spoken in the country.                    | [[LangEng()](https://github.com/tsinis/sealed_world/tree/main/packages/sealed_languages#features), `LangGle`()]                                                                    |
+| languages     | **Yes[^1]**  | The official languages spoken in the country.                    | [LangEng()](https://github.com/tsinis/sealed_world/tree/main/packages/sealed_languages#features), LangGle()]                                                                    |
 | latLng        | **Yes**      | The geographic coordinates of the country.                       | `LatLng`(53, -8)                                                                                                                                                                   |
 | landlocked    | **Yes**      | Whether the country is landlocked.                               | false                                                                                                                                                                              |
 | bordersCodes  | No           | The codes of the countries that share borders with this country. | ["GBR"]                                                                                                                                                                            |
@@ -85,7 +85,7 @@ import 'package:sealed_countries/sealed_countries.dart';
 
 ### Usage
 
-Use the `WorldCountry` class to get information about countries. Either construct a new instance directly with `const` keyword or with use of the class factory constructors/static methods, or select one from the `WorldCountry.list` constant.
+To get information about countries, use the `WorldCountry` class. You can construct instances directly (using `const`), use the class's factory constructors or static methods, or select a country from the `WorldCountry.list` constant.
 
 ```dart
   print(WorldCountry.list.length); // Prints: "250".

@@ -30,7 +30,7 @@ Each flag is a vector-based `CustomPainter`, ensuring precise, scalable, and stu
 
 ## Getting Started
 
-To use this package, you will need Flutter version 3.32+. Add `world_flags` as a dependency in your `pubspec.yaml` file.
+To use this package, you will need Flutter version 3.32 or later. Add `world_flags` as a dependency in your `pubspec.yaml` file.
 
 ```yaml
 dependencies:
@@ -127,17 +127,17 @@ If you have any issues or suggestions for the package, please file them in the G
 
 ### References and credits
 
-This package is licensed under the MIT license. See [LICENSE](./LICENSE) for details. These package dependency are under their respective licenses (that can be found in their respective folders under LICENSE and NOTICE files).
+This package is licensed under the MIT license. See [LICENSE](./LICENSE) for details. This package's dependencies are under their respective licenses (that can be found in their respective folders under LICENSE and NOTICE files).
 
 ### FAQ
 
 #### Why should I use this package over any other country flag package?
 
 - **Every flag is a Widget**: This package doesn't use heavy SVG or any other assets, all flags are declarative-style optimized `CustomPainter`s. That means that you **_don't have to worry about pre-caching, increased app size, platform-dependent look of the flags_**, etc. And since it's a widget - you can always change its look - shape, decoration, aspect ratio, etc. Just ask yourself for example - how you can easily change the aspect ratio of asset-based flags without stretching/shrinking them.
-- **Up-to-date flags**: This package ensures accurate and timely flag representations, reflecting current designs. Unlike other packages or emoji/font sets that often use outdated flags, this package offers flags with the most recent designs (such as the Afghan flag from 2013 is shown here correctly with a design from year 2021, or the Syrian flag is displayed with a design from year 2025, etc.).
+- **Up-to-date flags**: This package ensures accurate and timely flag representations, reflecting current designs. Unlike other packages or emoji/font sets that often use outdated flags, this package offers flags with the most recent designs (such as the Afghan flag, updated to reflect its post-2013 design correctly).
 - **Custom flags**: Package provides multiple classes and simple API to create your own flags.
 - **Classes with a sealed origin**: This package provides data via classes with a sealed origin, defining specific permitted direct subclasses. This lets you use instances of these subclasses and customize their data or behavior (e.g., overriding methods), offering more structured flexibility than enums or standard open classes.
-- **No 3rd-party dependencies**: This package has no third-party dependencies, ensuring that you won't have any issues or conflicts with other dependencies.
+- **No external 3rd-party dependencies**: This package has no external third-party dependencies. It relies on the Flutter SDK and other packages within the `sealed_world` monorepo, ensuring controlled and consistent integration.
 - **Rich data**: This package offers far more data than any other package + tons of translations (all [GlobalMaterialLocalizations](https://api.flutter.dev/flutter/flutter_localizations/GlobalMaterialLocalizations-class.html) and [GlobalCupertinoLocalizations](https://api.flutter.dev/flutter/flutter_localizations/GlobalCupertinoLocalizations-class.html) locales and more).
 - **Type-safe**: The contracts and types in this package are exceptionally strong, ensuring that your code is strongly typed and well-defined.
 - **High code coverage**: The code in this package has almost 100% code coverage, with **_more than 1.6K (+3.2K in underlying Dart packages) tests_**, providing confidence in its reliability and stability.
