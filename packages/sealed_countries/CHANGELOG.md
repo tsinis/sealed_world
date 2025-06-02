@@ -1,3 +1,20 @@
+## 2.4.0
+
+NEW FEATURES
+
+- Added new collections and extensions for mapping currencies and languages to countries (via `byCountryMap` method), including support for unofficial and constructed languages.
+- Introduced methods to prioritize and customize country associations for languages and currencies.
+
+CHORE
+
+- The Dart SDK was bumped to v3.8.1.
+- Update German and English translations (for multiple countries).
+- Updated official `languages` lists for Ethiopia and Iraq to reflect additional recognized languages.
+
+DOCUMENTATION
+
+- Added auto-generated markdown tables listing global [currencies](./lib/src/collections/README.currencies.md) and [languages](./lib/src/collections/README.languages.md) with their associated countries.
+
 ## 2.3.0
 
 NEW FEATURES
