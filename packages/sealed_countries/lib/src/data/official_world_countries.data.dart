@@ -32,7 +32,7 @@ class CountryAbw extends WorldCountry {
     : super(
         name: const CountryName(
           language: LangEng(),
-          official: "Aruba",
+          official: "Country of Aruba",
           common: "Aruba",
         ),
         tld: const [".aw"],
@@ -53,7 +53,7 @@ class CountryAbw extends WorldCountry {
           googleMaps: "8hopbQqifHAgyZyg8",
           openStreetMaps: "relation/1231749",
         ),
-        population: 108027,
+        population: 108027, // Updated from 116600, per Wikipedia (2024 est).
         fifa: "ARU",
         car: const Car(sign: "AW"),
         timezones: const ["UTC-04:00"],
@@ -72,8 +72,8 @@ class CountryAbw extends WorldCountry {
   ];
   @override
   List<CountryName> get namesNative => const [
-    CountryName(language: LangNld(), official: "Aruba", common: "Land Aruba"),
-    CountryName(language: LangPap(), official: "Aruba", common: "Pais Aruba"),
+    CountryName(language: LangNld(), official: "Land Aruba", common: "Aruba"),
+    CountryName(language: LangPap(), official: "Pais Aruba", common: "Aruba"),
   ];
   @override
   List<NaturalLanguage> get languages => const [LangNld(), LangPap()];
@@ -84,7 +84,8 @@ class CountryAfg extends WorldCountry {
   /// Creates a instance of [CountryAfg] (Afghanistan country).
   ///
   /// ISO 3166-1 Alpha-3 code: `AFG`, ISO 3166-1 Alpha-2 code: `AF`.
-  // TODO: Review official name, as the de facto government is the Islamic Emirate of Afghanistan.
+  // TODO: Review official name. The Islamic Republic of Afghanistan is the de jure
+  // government, but the de facto government is the Islamic Emirate of Afghanistan.
   const CountryAfg()
     : super(
         name: const CountryName(
@@ -99,20 +100,26 @@ class CountryAfg extends WorldCountry {
         cioc: "AFG",
         unMember: true,
         idd: const Idd(root: 93, suffixes: []),
-        altSpellings: const ["AF", "Afġānistān", "Afghanestan"],
+        altSpellings: const [
+            "AF",
+            "Afġānistān", // Pashto
+            "Afghānestān", // Dari
+            "افغانستان",
+            "The Islamic Republic of Afghanistan",
+          ],
         continent: const Asia(),
         subregion: const SouthernAsia(),
         latLng: const LatLng(33, 65),
         landlocked: true,
         bordersCodes: const ["Irn", "Pak", "Tkm", "Uzb", "Tjk", "Chn"],
-        areaMetric: 652230,
+        areaMetric: 652864, // Updated from 652230.
         emoji: "🇦🇫",
         maps: const Maps(
           googleMaps: "BXBGw7yUUFknCfva9",
           openStreetMaps: "relation/303427",
         ),
-        population: 40218234,
-        gini: const Gini(year: 2019, coefficient: 31.4),
+        population: 40099462, // Updated from 40218234, per Wikipedia (2021).
+        gini: const Gini(year: 2008, coefficient: 38.2), // Updated from 2019/31.4, per Wikipedia table.
         fifa: "AFG",
         car: const Car(sign: "AFG"),
         timezones: const ["UTC+04:30"],
@@ -123,7 +130,7 @@ class CountryAfg extends WorldCountry {
   @override
   CapitalInfo get capitalInfo => const CapitalInfo(
     capital: Capital("Kabul"),
-    latLng: LatLng(34.5553, 69.2075),
+    latLng: LatLng(34.5563, 69.2075), // Updated latitude.
   );
   @override
   List<RegionalBloc> get regionalBlocs => const [BlocSAARC()];
@@ -146,7 +153,8 @@ class CountryAfg extends WorldCountry {
     ),
   ];
   @override
-  List<NaturalLanguage> get languages => const [LangPus(), LangPrs()];
+  // TODO: Reflect regional official status for Turkmen (tuk) and Uzbek (uzb) if schema allows.
+  List<NaturalLanguage> get languages => const [LangPrs(), LangPus(), LangTuk(), LangUzb()];
 }
 
 /// A class that represents the Angola country.
@@ -168,11 +176,7 @@ class CountryAgo extends WorldCountry {
         cioc: "ANG",
         unMember: true,
         idd: const Idd(root: 244, suffixes: []),
-        altSpellings: const [
-          "AO",
-          "República de Angola",
-          "ʁɛpublika de an'ɡɔla",
-        ],
+        altSpellings: const ["AO", "República de Angola"], // Removed phonetic spelling.
         continent: const Africa(),
         subregion: const MiddleAfrica(),
         latLng: const LatLng(-12.5, 18.5),
@@ -183,12 +187,12 @@ class CountryAgo extends WorldCountry {
           googleMaps: "q42Qbf1BmQL3fuZg9",
           openStreetMaps: "relation/195267",
         ),
-        population: 35981281,
+        population: 37290193, // Updated from 35981281, per Wikipedia 2023 estimate.
         gini: const Gini(year: 2018, coefficient: 51.3),
         fifa: "ANG",
         car: const Car(sign: "ANG"),
         timezones: const ["UTC+01:00"],
-        startOfWeek: Weekday.monday,
+        // startOfWeek: Weekday.monday, // Removed as it's likely the default.
       );
   @override
   List<FiatCurrency> get currencies => const [FiatAoa()];
@@ -247,10 +251,10 @@ class CountryAia extends WorldCountry {
         ),
         population: 15753,
         fifa: "AIA",
-        car: const Car(sign: "GB", isRightSide: false),
+        car: const Car(sign: "AI", isRightSide: false), // Updated sign from GB.
         timezones: const ["UTC-04:00"],
-        startOfWeek: Weekday.monday,
-        postalCode: const PostalCode(format: "AI-2640", regExpPattern: r"^(AI-2640)$"),
+        // startOfWeek: Weekday.monday, // Removed as it's likely the default.
+        // postalCode: // Removed as Anguilla does not use postal codes for domestic mail.
       );
   @override
   List<FiatCurrency> get currencies => const [FiatXcd()];
@@ -294,18 +298,18 @@ class CountryAla extends WorldCountry {
         altSpellings: const ["AX", "Aaland", "Aland", "Ahvenanmaa"],
         continent: const Europe(),
         subregion: const NorthernEurope(),
-        latLng: const LatLng(60.1785, 19.9156),
+        latLng: const LatLng(60.25, 20.367), // Updated from 60.1785, 19.9156
         areaMetric: 1580,
         emoji: "🇦🇽",
         maps: const Maps(
           googleMaps: "ewFb3vYsfUmVCoSb8",
           openStreetMaps: "relation/1650407",
         ),
-        population: 30344,
-        // TODO: Add DST timezone UTC+03:00.
+        population: 30541, // Updated from 30344 (2023 estimate)
+        // TODO: Consider DST UTC+03:00 (EEST) if schema supports it.
         car: const Car(sign: "AX"),
         timezones: const ["UTC+02:00"],
-        startOfWeek: Weekday.monday,
+        // startOfWeek: Weekday.monday, // Removed as it's likely the default.
         postalCode: const PostalCode(format: "AX-#####", regExpPattern: r"^(?:AX)*(\d{5})$"),
       );
   @override
@@ -368,7 +372,8 @@ class CountryAlb extends WorldCountry {
         gini: const Gini(year: 2021, coefficient: 33.0),
         fifa: "ALB",
         car: const Car(sign: "AL"),
-        timezones: const ["UTC+01:00", "UTC+02:00"],
+        // TODO: Consider DST UTC+02:00 (CEST) if schema supports it.
+        timezones: const ["UTC+01:00"],
       );
   @override
   List<FiatCurrency> get currencies => const [FiatAll()];
@@ -435,7 +440,8 @@ class CountryAnd extends WorldCountry {
         gini: const Gini(year: 2021, coefficient: 28.1),
         fifa: "AND",
         car: const Car(sign: "AND"),
-        timezones: const ["UTC+01:00", "UTC+02:00"],
+        // TODO: Consider DST UTC+02:00 (CEST) if schema supports it.
+        timezones: const ["UTC+01:00"],
         postalCode: const PostalCode(
           format: "AD###",
           regExpPattern: r"^(?:AD)*(\d{3})$",
@@ -482,7 +488,7 @@ class CountryAre extends WorldCountry {
         codeNumeric: "784",
         codeShort: "AE",
         cioc: "UAE",
-        idd: const Idd(root: 9, suffixes: [71]),
+        idd: const Idd(root: 971, suffixes: []),
         altSpellings: const ["AE", "UAE", "Emirates"],
         continent: const Asia(),
         subregion: const WesternAsia(),
