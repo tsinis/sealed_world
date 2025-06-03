@@ -42,20 +42,20 @@ class CountryAbw extends WorldCountry {
         cioc: "ARU",
         independent: false,
         unMember: false,
-        idd: const Idd(root: 2, suffixes: [97]),
-        altSpellings: const ["AW"],
+        idd: const Idd(root: 297, suffixes: []),
+        altSpellings: const ["AW", "Aruba"],
         continent: const Americas(),
         subregion: const Caribbean(),
-        latLng: const LatLng(12.5, -69.96666666),
+        latLng: const LatLng(12.5211, -69.9683),
         areaMetric: 180,
         emoji: "🇦🇼",
         maps: const Maps(
           googleMaps: "8hopbQqifHAgyZyg8",
           openStreetMaps: "relation/1231749",
         ),
-        population: 106766,
+        population: 108027,
         fifa: "ARU",
-        car: const Car(sign: "A"),
+        car: const Car(sign: "AW"),
         timezones: const ["UTC-04:00"],
       );
   @override
@@ -63,7 +63,7 @@ class CountryAbw extends WorldCountry {
   @override
   CapitalInfo get capitalInfo => const CapitalInfo(
     capital: Capital("Oranjestad"),
-    latLng: LatLng(12.52, -70.03),
+    latLng: LatLng(12.51861, -70.03583),
   );
   @override
   List<Demonyms> get demonyms => const [
@@ -72,10 +72,11 @@ class CountryAbw extends WorldCountry {
   ];
   @override
   List<CountryName> get namesNative => const [
-    CountryName(language: LangNld(), official: "Aruba", common: "Aruba"),
+    CountryName(language: LangNld(), official: "Aruba", common: "Land Aruba"),
+    CountryName(language: LangPap(), official: "Aruba", common: "Pais Aruba"),
   ];
   @override
-  List<NaturalLanguage> get languages => const [LangNld()];
+  List<NaturalLanguage> get languages => const [LangNld(), LangPap()];
 }
 
 /// A class that represents the Afghanistan country.
@@ -83,6 +84,7 @@ class CountryAfg extends WorldCountry {
   /// Creates a instance of [CountryAfg] (Afghanistan country).
   ///
   /// ISO 3166-1 Alpha-3 code: `AFG`, ISO 3166-1 Alpha-2 code: `AF`.
+  // TODO: Review official name, as the de facto government is the Islamic Emirate of Afghanistan.
   const CountryAfg()
     : super(
         name: const CountryName(
@@ -95,8 +97,9 @@ class CountryAfg extends WorldCountry {
         codeNumeric: "004",
         codeShort: "AF",
         cioc: "AFG",
-        idd: const Idd(root: 9, suffixes: [3]),
-        altSpellings: const ["AF", "Afġānistān"],
+        unMember: true,
+        idd: const Idd(root: 93, suffixes: []),
+        altSpellings: const ["AF", "Afġānistān", "Afghanestan"],
         continent: const Asia(),
         subregion: const SouthernAsia(),
         latLng: const LatLng(33, 65),
@@ -109,16 +112,18 @@ class CountryAfg extends WorldCountry {
           openStreetMaps: "relation/303427",
         ),
         population: 40218234,
+        gini: const Gini(year: 2019, coefficient: 31.4),
         fifa: "AFG",
         car: const Car(sign: "AFG"),
         timezones: const ["UTC+04:30"],
+        startOfWeek: Weekday.saturday,
       );
   @override
   List<FiatCurrency> get currencies => const [FiatAfn()];
   @override
   CapitalInfo get capitalInfo => const CapitalInfo(
     capital: Capital("Kabul"),
-    latLng: LatLng(34.52, 69.18),
+    latLng: LatLng(34.5553, 69.2075),
   );
   @override
   List<RegionalBloc> get regionalBlocs => const [BlocSAARC()];
@@ -135,13 +140,13 @@ class CountryAfg extends WorldCountry {
       common: "افغانستان",
     ),
     CountryName(
-      language: LangTuk(),
-      official: "Owganystan Yslam Respublikasy",
-      common: "Owganystan",
+      language: LangPrs(),
+      official: "جمهوری اسلامی افغانستان",
+      common: "افغانستان",
     ),
   ];
   @override
-  List<NaturalLanguage> get languages => const [LangPus(), LangTuk()];
+  List<NaturalLanguage> get languages => const [LangPus(), LangPrs()];
 }
 
 /// A class that represents the Angola country.
@@ -161,7 +166,8 @@ class CountryAgo extends WorldCountry {
         codeNumeric: "024",
         codeShort: "AO",
         cioc: "ANG",
-        idd: const Idd(root: 2, suffixes: [44]),
+        unMember: true,
+        idd: const Idd(root: 244, suffixes: []),
         altSpellings: const [
           "AO",
           "República de Angola",
@@ -177,18 +183,19 @@ class CountryAgo extends WorldCountry {
           googleMaps: "q42Qbf1BmQL3fuZg9",
           openStreetMaps: "relation/195267",
         ),
-        population: 32866268,
+        population: 35981281,
         gini: const Gini(year: 2018, coefficient: 51.3),
         fifa: "ANG",
         car: const Car(sign: "ANG"),
         timezones: const ["UTC+01:00"],
+        startOfWeek: Weekday.monday,
       );
   @override
   List<FiatCurrency> get currencies => const [FiatAoa()];
   @override
   CapitalInfo get capitalInfo => const CapitalInfo(
     capital: Capital("Luanda"),
-    latLng: LatLng(-8.83, 13.22),
+    latLng: const LatLng(-8.838333, 13.234444),
   );
   @override
   List<RegionalBloc> get regionalBlocs => const [BlocAU()];
@@ -231,24 +238,26 @@ class CountryAia extends WorldCountry {
         altSpellings: const ["AI"],
         continent: const Americas(),
         subregion: const Caribbean(),
-        latLng: const LatLng(18.25, -63.16666666),
+        latLng: const LatLng(18.2206, -63.0686),
         areaMetric: 91,
         emoji: "🇦🇮",
         maps: const Maps(
           googleMaps: "3KgLnEyN7amdno2p9",
           openStreetMaps: "relation/2177161",
         ),
-        population: 13452,
+        population: 15753,
         fifa: "AIA",
         car: const Car(sign: "GB", isRightSide: false),
         timezones: const ["UTC-04:00"],
+        startOfWeek: Weekday.monday,
+        postalCode: const PostalCode(format: "AI-2640", regExpPattern: r"^(AI-2640)$"),
       );
   @override
   List<FiatCurrency> get currencies => const [FiatXcd()];
   @override
   CapitalInfo get capitalInfo => const CapitalInfo(
     capital: Capital("The Valley"),
-    latLng: LatLng(18.22, -63.05),
+    latLng: const LatLng(18.2171, -63.0585),
   );
   @override
   List<Demonyms> get demonyms => const [
@@ -281,33 +290,36 @@ class CountryAla extends WorldCountry {
         codeShort: "AX",
         independent: false,
         unMember: false,
-        idd: const Idd(root: 3, suffixes: [5818]),
+        idd: const Idd(root: 358, suffixes: [18]),
         altSpellings: const ["AX", "Aaland", "Aland", "Ahvenanmaa"],
         continent: const Europe(),
         subregion: const NorthernEurope(),
-        latLng: const LatLng(60.116667, 19.9),
+        latLng: const LatLng(60.1785, 19.9156),
         areaMetric: 1580,
         emoji: "🇦🇽",
         maps: const Maps(
           googleMaps: "ewFb3vYsfUmVCoSb8",
           openStreetMaps: "relation/1650407",
         ),
-        population: 29458,
-        car: const Car(),
+        population: 30344,
+        // TODO: Add DST timezone UTC+03:00.
+        car: const Car(sign: "AX"),
         timezones: const ["UTC+02:00"],
+        startOfWeek: Weekday.monday,
+        postalCode: const PostalCode(format: "AX-#####", regExpPattern: r"^(?:AX)*(\d{5})$"),
       );
   @override
   List<FiatCurrency> get currencies => const [FiatEur()];
   @override
   CapitalInfo get capitalInfo => const CapitalInfo(
     capital: Capital("Mariehamn"),
-    latLng: LatLng(60.12, 19.9),
+    latLng: const LatLng(60.0971, 19.9348),
   );
   @override
   List<RegionalBloc> get regionalBlocs => const [BlocEU()];
   @override
   List<Demonyms> get demonyms => const [
-    Demonyms(language: LangEng(), female: "Ålandish", male: "Ålandish"),
+    Demonyms(language: LangEng(), female: "Ålander", male: "Ålander"),
     Demonyms(language: LangFra(), female: "Ålandaise", male: "Ålandais"),
   ];
   @override
@@ -339,30 +351,31 @@ class CountryAlb extends WorldCountry {
         codeNumeric: "008",
         codeShort: "AL",
         cioc: "ALB",
-        idd: const Idd(root: 3, suffixes: [55]),
+        unMember: true,
+        idd: const Idd(root: 355, suffixes: []),
         altSpellings: const ["AL", "Shqipëri", "Shqipëria", "Shqipnia"],
         continent: const Europe(),
-        subregion: const SouthwestEurope(),
+        subregion: const SoutheastEurope(),
         latLng: const LatLng(41, 20),
-        bordersCodes: const ["Mne", "Grc", "Mkd", "Unk"],
+        bordersCodes: const ["Mne", "Grc", "Mkd"],
         areaMetric: 28748,
         emoji: "🇦🇱",
         maps: const Maps(
           googleMaps: "BzN9cTuj68ZA8SyZ8",
           openStreetMaps: "relation/53292",
         ),
-        population: 2837743,
-        gini: const Gini(year: 2017, coefficient: 33.2),
+        population: 2402113,
+        gini: const Gini(year: 2021, coefficient: 33.0),
         fifa: "ALB",
         car: const Car(sign: "AL"),
-        timezones: const ["UTC+01:00"],
+        timezones: const ["UTC+01:00", "UTC+02:00"],
       );
   @override
   List<FiatCurrency> get currencies => const [FiatAll()];
   @override
   CapitalInfo get capitalInfo => const CapitalInfo(
     capital: Capital("Tirana"),
-    latLng: LatLng(41.32, 19.82),
+    latLng: LatLng(41.317, 19.817),
   );
   @override
   List<RegionalBloc> get regionalBlocs => const [BlocCEFTA()];
@@ -400,7 +413,8 @@ class CountryAnd extends WorldCountry {
         codeNumeric: "020",
         codeShort: "AD",
         cioc: "AND",
-        idd: const Idd(root: 3, suffixes: [76]),
+        unMember: true,
+        idd: const Idd(root: 376, suffixes: []),
         altSpellings: const [
           "AD",
           "Principality of Andorra",
@@ -411,16 +425,17 @@ class CountryAnd extends WorldCountry {
         latLng: const LatLng(42.5, 1.5),
         landlocked: true,
         bordersCodes: const ["Fra", "Esp"],
-        areaMetric: 468,
+        areaMetric: 467.63,
         emoji: "🇦🇩",
         maps: const Maps(
-          googleMaps: "JqAnacWE2qEznKgw7",
+          googleMaps: "https://goo.gl/maps/JqAnacFF2qOutL1r9",
           openStreetMaps: "relation/9407",
         ),
-        population: 77265,
+        population: 80088,
+        gini: const Gini(year: 2021, coefficient: 28.1),
         fifa: "AND",
         car: const Car(sign: "AND"),
-        timezones: const ["UTC+01:00"],
+        timezones: const ["UTC+01:00", "UTC+02:00"],
         postalCode: const PostalCode(
           format: "AD###",
           regExpPattern: r"^(?:AD)*(\d{3})$",
@@ -431,7 +446,7 @@ class CountryAnd extends WorldCountry {
   @override
   CapitalInfo get capitalInfo => const CapitalInfo(
     capital: Capital("Andorra la Vella"),
-    latLng: LatLng(42.5, 1.52),
+    latLng: LatLng(42.507, 1.522),
   );
   @override
   List<Demonyms> get demonyms => const [
@@ -479,8 +494,9 @@ class CountryAre extends WorldCountry {
           googleMaps: "AZZTDA6GzVAnKMVd8",
           openStreetMaps: "relation/307763",
         ),
-        population: 9890400,
+        population: 11027129,
         gini: const Gini(year: 2018, coefficient: 26),
+        // TODO: Add HDI (Human Development Index) data: 0.940 (2023). Requires Hdi class/field.
         fifa: "UAE",
         car: const Car(sign: "UAE"),
         timezones: const ["UTC+04:00"],
@@ -491,7 +507,7 @@ class CountryAre extends WorldCountry {
   @override
   CapitalInfo get capitalInfo => const CapitalInfo(
     capital: Capital("Abu Dhabi"),
-    latLng: LatLng(24.47, 54.37),
+    latLng: LatLng(24.467, 54.367),
   );
   @override
   List<RegionalBloc> get regionalBlocs => const [BlocAL()];
