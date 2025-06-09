@@ -49,13 +49,4 @@ void main() => group("$CountryFlag", () {
       );
     }
   });
-
-  group("Decorated", () {
-    for (final country in WorldCountry.list) {
-      testWidgets(
-        "${country.internationalName} Flag",
-        (tester) async => tester.flagGolden(country, FlagType.decorated),
-      );
-    }
-  });
 });

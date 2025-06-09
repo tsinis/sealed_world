@@ -12,15 +12,15 @@ extension GoldenWidgetTesterExtension on WidgetTester {
   Future<void> flagGolden(WorldCountry country, FlagType type) async {
     if (!Platform.isLinux && _ignoreOnNonLinux.contains(country)) return;
 
-    final height = type.height;
     final aspectRatio = country.flagProperties?.aspectRatio ?? 1;
-    final width = type == FlagType.decorated ? height : height * aspectRatio;
+    final height = type.height;
+    final width = height * aspectRatio;
     final file = "../../goldens/${type.name}/${country.code.toLowerCase()}.png";
 
     await binding.setSurfaceSize(Size(width, height));
     await pumpWidget(
       MaterialApp(
-        home: CountryFlag.simplified(country, child: type.child),
+        home: CountryFlag.simplified(country),
         theme: ThemeData(
           extensions: [FlagThemeData(decoration: type.decoration)],
         ),

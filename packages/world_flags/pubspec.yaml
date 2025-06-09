@@ -1,4 +1,4 @@
-version: 2.4.1
+version: 2.5.0
 name: world_flags
 description: Country flags made with Flutter - every flag is a Widget, without any assets.
 maintainer: Roman Cinis
@@ -18,12 +18,12 @@ screenshots:
 resolution: workspace
 
 environment:
-  sdk: ^3.8.0
+  sdk: ^3.8.1
 
 dependencies:
   flutter:
     sdk: flutter
-  sealed_countries: ^2.3.0
+  sealed_countries: ^2.4.0
 
 dev_dependencies:
   _sealed_world_tests:
@@ -31,5 +31,4 @@ dev_dependencies:
   dart_code_metrics_presets: any # Constrained in the CLI tools package
   flutter_test: # From Google
     sdk: flutter
-  golden_toolkit: ^0.15.0 # From eBay, TODO? Replace with another package?
   lints: any # From Google. Constrained in the CLI tools package
