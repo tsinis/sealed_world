@@ -43,7 +43,7 @@ jobs:
 
       - name: 🐦 Setup Flutter
         if: ${{ inputs.is_flutter }}
-        uses: subosito/flutter-action@v2.19.0
+        uses: subosito/flutter-action@v2.20.0
         with:
           cache: true
           channel: "stable"
