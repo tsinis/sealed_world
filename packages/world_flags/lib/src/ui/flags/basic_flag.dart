@@ -9,6 +9,7 @@ import "../../helpers/extensions/world_flags_build_context_extension.dart";
 import "../../interfaces/decorated_flag_interface.dart";
 import "../../model/flag_properties.dart";
 import "../../model/typedefs.dart";
+import "../decorated_flag_widget.dart";
 import "../painters/basic/stripes_painter.dart";
 
 /// A widget that represents a basic flag with customizable properties,
@@ -16,10 +17,10 @@ import "../painters/basic/stripes_painter.dart";
 ///
 /// This class implements [DecoratedFlagInterface] to provide a consistent
 /// interface for decorated flags. It allows for various customizations such as
-/// aspect ratio, decoration, padding, and custom painters for background and
-/// foreground elements.
+/// aspect ratio, decoration, padding, height, width, and custom painters
+/// for background and foreground elements.
 @immutable
-class BasicFlag extends StatelessWidget implements DecoratedFlagInterface {
+class BasicFlag extends DecoratedFlagWidget {
   /// Creates a new instance of [BasicFlag].
   ///
   /// - [properties]: The properties of the flag.
@@ -30,32 +31,30 @@ class BasicFlag extends StatelessWidget implements DecoratedFlagInterface {
   /// - [elementsBuilder]: A builder for the elements of the flag.
   /// - [backgroundPainter]: A custom painter for the background of the flag.
   /// - [foregroundPainter]: A custom painter for the foreground of the flag.
-  /// - [foregroundWidget]: A widget to display in the foreground of the flag.
   /// - [foregroundPainterBuilder]: A builder for the foreground painter.
   /// - [foregroundWidgetBuilder]: A builder for the foreground widget.
+  /// - [height]: The height of the flag. If `null`, the height from the flag
+  /// theme is used.
+  /// - [width]: The width of the flag. If `null`, the width from the flag theme
+  /// is used.
+  /// - [child]: A widget to display in the foreground of the flag.
   const BasicFlag(
     this.properties, {
-    this.aspectRatio,
+    super.aspectRatio,
     this.backgroundPainter,
-    this.decoration,
-    this.decorationPosition,
+    super.decoration,
+    super.decorationPosition,
     this.elementsBuilder,
     this.foregroundPainter,
     this.foregroundPainterBuilder,
-    this.foregroundWidget,
+    @Deprecated("Use `child` instead") Widget? foregroundWidget,
     this.foregroundWidgetBuilder,
-    this.padding,
+    super.padding,
+    super.height,
+    super.width,
+    Widget? child,
     super.key,
-  });
-
-  @override
-  final double? aspectRatio;
-  @override
-  final BoxDecoration? decoration;
-  @override
-  final DecorationPosition? decorationPosition;
-  @override
-  final EdgeInsetsGeometry? padding;
+  }) : super(child: foregroundWidget ?? child);
 
   /// The properties of the flag.
   final FlagProperties properties;
@@ -69,14 +68,15 @@ class BasicFlag extends StatelessWidget implements DecoratedFlagInterface {
   /// A custom painter for the foreground of the flag.
   final CustomPainter? foregroundPainter;
 
-  /// A widget to display in the foreground of the flag.
-  final Widget? foregroundWidget;
-
   /// A builder for the foreground widget.
   final FlagWidgetBuilder? foregroundWidgetBuilder;
 
   /// A builder for the foreground painter.
   final FlagPainterBuilder? foregroundPainterBuilder;
+
+  @Deprecated("Use `child` instead")
+  /// A widget to display in the foreground of the flag.
+  Widget? get foregroundWidget => child;
 
   /// The original aspect ratio of the flag.
   double get flagAspectRatio => properties.aspectRatio;
@@ -93,9 +93,12 @@ class BasicFlag extends StatelessWidget implements DecoratedFlagInterface {
   void debugFillProperties(DiagnosticPropertiesBuilder properties) {
     super.debugFillProperties(properties);
     const theme = "not provided, using value from FlagThemeData or";
+    const ifNull = "$theme null, if theme is also not provided";
 
     properties
       ..add(FlagPropertiesProperty(this.properties))
+      ..add(DoubleProperty("width", width, ifNull: ifNull))
+      ..add(DoubleProperty("height", height, ifNull: ifNull))
       ..add(
         DoubleProperty(
           "aspectRatio",
@@ -157,18 +160,14 @@ class BasicFlag extends StatelessWidget implements DecoratedFlagInterface {
         ),
       )
       ..add(
-        ObjectFlagProperty<Widget>(
-          "foregroundWidget",
-          foregroundWidget,
-          ifNull: "no foreground widget or using builder",
-        ),
-      )
-      ..add(
         ObjectFlagProperty<FlagWidgetBuilder>(
           "foregroundWidgetBuilder",
           foregroundWidgetBuilder,
           ifNull: "no foreground widget builder",
         ),
+      )
+      ..add(
+        ObjectFlagProperty<Widget>("child", child, ifNull: "no child widget"),
       )
       ..add(
         FlagProperty(
@@ -198,29 +197,34 @@ class BasicFlag extends StatelessWidget implements DecoratedFlagInterface {
 
     return Padding(
       padding: padding ?? theme?.padding ?? EdgeInsets.zero,
-      child: Semantics(
-        image: true,
-        child: DecoratedBox(
-          decoration: boxDecoration ?? const BoxDecoration(),
-          position:
-              decorationPosition ??
-              theme?.decorationPosition ??
-              DecorationPosition.foreground,
-          child: AspectRatio(
-            aspectRatio: _boxRatio(
-              boxDecoration,
-              aspectRatio ?? theme?.aspectRatio,
-            ),
-            child: CustomPaint(
-              painter:
-                  backgroundPainter ??
-                  StripesPainter(properties, boxDecoration, _elementsPainter),
-              foregroundPainter:
-                  foregroundPainter ??
-                  foregroundPainterBuilder?.call(_elements, flagAspectRatio),
-              child:
-                  foregroundWidget ??
-                  foregroundWidgetBuilder?.call(_elements, flagAspectRatio),
+      child: SizedBox(
+        height: height ?? theme?.height,
+        width: width ?? theme?.width,
+        child: Semantics(
+          image: true,
+          child: DecoratedBox(
+            decoration: boxDecoration ?? const BoxDecoration(),
+            position:
+                decorationPosition ??
+                theme?.decorationPosition ??
+                DecorationPosition.foreground,
+            child: AspectRatio(
+              aspectRatio: _boxRatio(
+                boxDecoration,
+                aspectRatio ?? theme?.aspectRatio,
+              ),
+              child: CustomPaint(
+                painter:
+                    backgroundPainter ??
+                    StripesPainter(properties, boxDecoration, _elementsPainter),
+                foregroundPainter:
+                    foregroundPainter ??
+                    foregroundPainterBuilder?.call(_elements, flagAspectRatio),
+                child:
+                    child ??
+                    foregroundWidgetBuilder?.call(_elements, flagAspectRatio) ??
+                    theme?.child,
+              ),
             ),
           ),
         ),

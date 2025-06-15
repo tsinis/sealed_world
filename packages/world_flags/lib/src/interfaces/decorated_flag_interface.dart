@@ -1,11 +1,12 @@
 import "package:flutter/rendering.dart";
+import "package:flutter/widgets.dart" show Widget;
 
 /// An abstract interface class that defines the properties for a decorated
 /// flag.
 ///
 /// This interface provides a consistent way to define and access the properties
 /// of a decorated flag, including its aspect ratio, decoration, decoration
-/// position, and padding.
+/// position, padding, height, and width.
 abstract interface class DecoratedFlagInterface {
   /// Creates a new instance of [DecoratedFlagInterface].
   ///
@@ -14,9 +15,21 @@ abstract interface class DecoratedFlagInterface {
   /// - [decorationPosition]: The position of the decoration. Defaults to
   ///  [DecorationPosition.foreground] if not provided.
   /// - [padding]: The padding around the flag.
+  /// - [height]: The height of the flag. If null, the height from the flag
+  /// theme is used.
+  /// - [width]: The width of the flag. If null, the width from the flag theme
+  /// is used.
+  /// - [child]: A widget to display in the foreground of the flag.
   const DecoratedFlagInterface( // coverage:ignore-line
-  // ignore: prefer-trailing-comma, formatting broken.
-  {this.aspectRatio, this.decoration, this.decorationPosition, this.padding});
+  {
+    this.aspectRatio,
+    this.decoration,
+    this.decorationPosition,
+    this.padding,
+    this.width,
+    this.height,
+    this.child,
+  });
 
   /// The specified aspect ratio of the flag.
   final double? aspectRatio;
@@ -38,4 +51,17 @@ abstract interface class DecoratedFlagInterface {
   /// This defines the space around the flag's content, providing padding
   /// between the content and the flag's edges.
   final EdgeInsetsGeometry? padding;
+
+  /// The width of the flag.
+  ///
+  /// If `null`, the width from the flag theme is used.
+  final double? width;
+
+  /// The height of the flag.
+  ///
+  /// If `null`, the height from the flag theme is used.
+  final double? height;
+
+  /// A widget to display in the foreground of the flag.
+  final Widget? child;
 }

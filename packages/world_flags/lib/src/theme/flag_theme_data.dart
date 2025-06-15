@@ -22,6 +22,7 @@ class FlagThemeData extends ThemeExtension<FlagThemeData>
   /// - [padding]: The padding around the flag.
   /// - [height]: The height of the flag.
   /// - [width]: The width of the flag.
+  /// - [child]: A widget to display in the foreground of the flag.
   const FlagThemeData({
     double? aspectRatio,
     this.decoration,
@@ -29,6 +30,7 @@ class FlagThemeData extends ThemeExtension<FlagThemeData>
     this.padding,
     this.height,
     this.width,
+    this.child,
   }) : assert(
          aspectRatio == null || aspectRatio > 0,
          "`aspectRatio` must be greater than 0",
@@ -47,10 +49,15 @@ class FlagThemeData extends ThemeExtension<FlagThemeData>
   final EdgeInsetsGeometry? padding;
 
   /// The height of the flag.
+  @override
   final double? height;
 
   /// The width of the flag.
+  @override
   final double? width;
+
+  @override
+  final Widget? child;
 
   /// The specified aspect ratio of the flag.
   final double? _aspectRatio;
@@ -76,6 +83,7 @@ class FlagThemeData extends ThemeExtension<FlagThemeData>
   /// - [padding]: The padding around the flag.
   /// - [height]: The height of the flag.
   /// - [width]: The width of the flag.
+  /// - [child]: A widget to display in the foreground of the flag.
   @override
   FlagThemeData copyWith({
     double? aspectRatio,
@@ -84,6 +92,7 @@ class FlagThemeData extends ThemeExtension<FlagThemeData>
     EdgeInsetsGeometry? padding,
     double? height,
     double? width,
+    Widget? child,
   }) => FlagThemeData(
     aspectRatio: aspectRatio ?? _aspectRatio,
     decoration: decoration ?? this.decoration,
@@ -91,6 +100,7 @@ class FlagThemeData extends ThemeExtension<FlagThemeData>
     padding: padding ?? this.padding,
     height: height ?? this.height,
     width: width ?? this.width,
+    child: child ?? this.child,
   );
 
   @override
@@ -100,7 +110,8 @@ class FlagThemeData extends ThemeExtension<FlagThemeData>
       """${decorationPosition == null ? '' : 'decorationPosition: $decorationPosition, '}"""
       "${padding == null ? '' : 'padding: $padding, '}"
       "${height == null ? '' : 'height: $height, '}"
-      "${width == null ? '' : 'width: $width,'})";
+      "${width == null ? '' : 'width: $width, '}"
+      "${child == null ? '' : 'child: $child,'})";
 
   @override
   bool operator ==(Object other) {
@@ -112,7 +123,8 @@ class FlagThemeData extends ThemeExtension<FlagThemeData>
         other.decorationPosition == decorationPosition &&
         other.padding == padding &&
         other.height == height &&
-        other.width == width;
+        other.width == width &&
+        other.child == child;
   }
 
   @override
@@ -122,7 +134,8 @@ class FlagThemeData extends ThemeExtension<FlagThemeData>
       decorationPosition.hashCode ^
       padding.hashCode ^
       height.hashCode ^
-      width.hashCode;
+      width.hashCode ^
+      child.hashCode;
 
   @override // coverage:ignore-line
   FlagThemeData lerp(

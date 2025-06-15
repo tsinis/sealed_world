@@ -29,6 +29,12 @@ extension BasicFlagExtensionCopyWith<T extends BasicFlag> on T {
   /// - [foregroundWidget]: A widget to display in the foreground of the flag.
   /// - [foregroundPainterBuilder]: A builder for the foreground painter.
   /// - [foregroundWidgetBuilder]: A builder for the foreground widget.
+  /// - [height]: The height of the flag. If `null`, the height from the flag
+  /// theme is used.
+  /// - [width]: The width of the flag. If `null`, the width from the flag theme
+  /// is used.
+  /// - [child]: A widget to display in the foreground of the flag.
+  /// - [key]: The key for the widget.
   BasicFlag copyWith({
     FlagProperties? properties,
     double? aspectRatio,
@@ -38,9 +44,12 @@ extension BasicFlagExtensionCopyWith<T extends BasicFlag> on T {
     FlagPainterBuilder? elementsBuilder,
     CustomPainter? backgroundPainter,
     CustomPainter? foregroundPainter,
-    Widget? foregroundWidget,
+    @Deprecated("Use `child` instead") Widget? foregroundWidget,
     FlagPainterBuilder? foregroundPainterBuilder,
     FlagWidgetBuilder? foregroundWidgetBuilder,
+    double? height,
+    double? width,
+    Widget? child,
     Key? key,
   }) => BasicFlag(
     properties ?? this.properties,
@@ -51,11 +60,13 @@ extension BasicFlagExtensionCopyWith<T extends BasicFlag> on T {
     elementsBuilder: elementsBuilder ?? this.elementsBuilder,
     backgroundPainter: backgroundPainter ?? this.backgroundPainter,
     foregroundPainter: foregroundPainter ?? this.foregroundPainter,
-    foregroundWidget: foregroundWidget ?? this.foregroundWidget,
     foregroundPainterBuilder:
         foregroundPainterBuilder ?? this.foregroundPainterBuilder,
     foregroundWidgetBuilder:
         foregroundWidgetBuilder ?? this.foregroundWidgetBuilder,
+    height: height ?? this.height,
+    width: width ?? this.width,
     key: key ?? this.key,
+    child: child ?? foregroundWidget ?? this.child,
   );
 }
