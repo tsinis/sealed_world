@@ -32,6 +32,17 @@ class Main extends StatefulWidget {
 class _MainState extends State<Main> {
   // ignore: specify_nonobvious_property_types, a double as it's divided by 2.0.
   static const _size = kMinInteractiveDimension / 2.0;
+  static const _items = <IsoTranslated, BasicFlag>{
+    CountryAfg(): BasicFlag(
+      flagAfgPropertiesAlt,
+      elementsBuilder: ShahadaPainter.afg,
+    ),
+    ...uniqueSimplifiedFlagsMap,
+    CountryGuf(): StarFlag(flagGufPropertiesAlt),
+    FiatEur(): StarFlag(flagEurProperties),
+    ...smallSimplifiedLanguageFlagsMap,
+  };
+
   final _aspectRatio = ValueNotifier<double?>(null);
 
   @override
@@ -47,33 +58,34 @@ class _MainState extends State<Main> {
       minimum: const EdgeInsets.all(_size / 2),
       child: ListView.separated(
         itemBuilder: (bc, index) {
-          final country = WorldCountry.list[index];
-          final isFull = fullFlags.contains(country);
+          final item = _items.keys.elementAt(index);
+          final isFull = fullFlags.contains(item);
           final style = TextStyle(
             color: isFull ? null : Theme.of(bc).disabledColor,
           );
+          final firstNative = item.namesNative?.firstOrNull;
+          final nativeName = firstNative is CountryName
+              ? firstNative.name
+              : firstNative?.toString();
 
           return ListTile(
-            leading: Text(country.code, style: style.copyWith(fontSize: 16)),
-            title: Text(country.internationalName, style: style),
-            subtitle: Text(country.namesNative.first.common, style: style),
+            title: Text(item.internationalName, style: style),
+            leading: Text(item.code, style: style.copyWith(fontSize: 16)),
+            subtitle: Text.rich(TextSpan(text: nativeName), style: style),
             trailing: ValueListenableBuilder(
               valueListenable: _aspectRatio,
-              builder: (_, ratio, _) => CountryFlag.simplified(
-                country,
-                height: _size,
-                aspectRatio: ratio,
-              ),
+              builder: (_, ratio, _) =>
+                  IsoFlag(item, _items, height: _size, aspectRatio: ratio),
             ),
-            onTap: isFull
-                ? () => SettingsDialog.show(_aspectRatio, bc, country)
+            onTap: isFull && item is WorldCountry
+                ? () => SettingsDialog.show(_aspectRatio, bc, item)
                 : null,
             minLeadingWidth: _size * 1.5,
           );
         },
         separatorBuilder: (_, _) =>
             const Divider(height: 1, color: Color.fromARGB(33, 133, 133, 133)),
-        itemCount: WorldCountry.list.length,
+        itemCount: _items.length,
         clipBehavior: Clip.none,
       ),
     ),
