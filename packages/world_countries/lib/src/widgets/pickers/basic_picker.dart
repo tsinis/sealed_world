@@ -120,6 +120,7 @@ abstract class BasicPicker<T extends IsoTranslated>
     this.searchBarPadding, // Default: EdgeInsets.only(left:8, top:8, right:8).
     this.showClearButton = true,
     this.translation,
+    this.flagsMap = const {},
   }) : super(header: searchBar);
 
   /// A boolean indicating whether to show a clear button in the search bar.
@@ -137,6 +138,9 @@ abstract class BasicPicker<T extends IsoTranslated>
   /// The local to use for translations.
   @override
   final TypedLocale? translation;
+
+  @override
+  final Map<T, BasicFlag> flagsMap;
 
   /// Returns the default builder for the items.
   /// It also has an optional parameter `isDense`, which indicates whether the
@@ -526,5 +530,6 @@ abstract class BasicPicker<T extends IsoTranslated>
     itemBuilder,
     double? spacing,
     TypedLocale? translation,
+    Map<IsoTranslated, BasicFlag>? flagsMap,
   });
 }

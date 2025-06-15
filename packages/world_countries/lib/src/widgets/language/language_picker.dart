@@ -56,6 +56,7 @@ class LanguagePicker extends BasicPicker<NaturalLanguage> {
     super.verticalDirection,
     super.spacing,
     super.translation,
+    super.flagsMap,
   }) : super(languages);
 
   @override
@@ -72,6 +73,9 @@ class LanguagePicker extends BasicPicker<NaturalLanguage> {
         itemProperties,
         title: itemNameTranslated(itemProperties.item, itemProperties.context),
         dense: isDense,
+        leading: flagsMap[itemProperties.item]?.copyWith(
+          height: (isDense ?? false) ? 16 : 18,
+        ),
         onPressed: (language) => (isDense ?? false)
             ? maybeSelectAndPop(language, itemProperties.context)
             : onSelect?.call(language),
@@ -143,6 +147,7 @@ class LanguagePicker extends BasicPicker<NaturalLanguage> {
     itemBuilder,
     double? spacing,
     TypedLocale? translation,
+    covariant Map<NaturalLanguage, BasicFlag>? flagsMap,
   }) => LanguagePicker(
     languages: items ?? this.items,
     addAutomaticKeepAlives:
@@ -187,5 +192,6 @@ class LanguagePicker extends BasicPicker<NaturalLanguage> {
     verticalDirection: verticalDirection ?? this.verticalDirection,
     translation: translation ?? this.translation,
     spacing: spacing ?? this.spacing,
+    flagsMap: flagsMap ?? this.flagsMap,
   );
 }
