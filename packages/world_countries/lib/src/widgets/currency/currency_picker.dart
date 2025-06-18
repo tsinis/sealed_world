@@ -73,9 +73,7 @@ class CurrencyPicker extends BasicPicker<FiatCurrency> {
         itemProperties,
         title: itemNameTranslated(itemProperties.item, itemProperties.context),
         dense: isDense,
-        leading: flagsMap[itemProperties.item]?.copyWith(
-          height: (isDense ?? false) ? 16 : 18,
-        ),
+        leading: flagsMap[itemProperties.item],
         onPressed: (currency) => (isDense ?? false)
             ? maybeSelectAndPop(currency, itemProperties.context)
             : onSelect?.call(currency),
@@ -148,7 +146,7 @@ class CurrencyPicker extends BasicPicker<FiatCurrency> {
     itemBuilder,
     double? spacing,
     TypedLocale? translation,
-    covariant Map<FiatCurrency, BasicFlag>? flagsMap,
+    Map<FiatCurrency, BasicFlag>? flagsMap,
   }) => CurrencyPicker(
     currencies: items ?? this.items,
     addAutomaticKeepAlives:

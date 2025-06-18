@@ -225,7 +225,7 @@ class PhoneCodePicker extends CountryPicker {
     itemBuilder,
     double? spacing,
     TypedLocale? translation,
-    covariant Map<WorldCountry, BasicFlag>? flagsMap,
+    Map<WorldCountry, BasicFlag>? flagsMap,
   }) => PhoneCodePicker(
     countries: items ?? this.items,
     addAutomaticKeepAlives:

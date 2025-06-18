@@ -530,6 +530,6 @@ abstract class BasicPicker<T extends IsoTranslated>
     itemBuilder,
     double? spacing,
     TypedLocale? translation,
-    Map<IsoTranslated, BasicFlag>? flagsMap,
+    Map<T, BasicFlag>? flagsMap,
   });
 }

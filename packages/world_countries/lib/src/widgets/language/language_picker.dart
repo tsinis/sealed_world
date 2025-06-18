@@ -73,9 +73,7 @@ class LanguagePicker extends BasicPicker<NaturalLanguage> {
         itemProperties,
         title: itemNameTranslated(itemProperties.item, itemProperties.context),
         dense: isDense,
-        leading: flagsMap[itemProperties.item]?.copyWith(
-          height: (isDense ?? false) ? 16 : 18,
-        ),
+        leading: flagsMap[itemProperties.item],
         onPressed: (language) => (isDense ?? false)
             ? maybeSelectAndPop(language, itemProperties.context)
             : onSelect?.call(language),
@@ -147,7 +145,7 @@ class LanguagePicker extends BasicPicker<NaturalLanguage> {
     itemBuilder,
     double? spacing,
     TypedLocale? translation,
-    covariant Map<NaturalLanguage, BasicFlag>? flagsMap,
+    Map<NaturalLanguage, BasicFlag>? flagsMap,
   }) => LanguagePicker(
     languages: items ?? this.items,
     addAutomaticKeepAlives:

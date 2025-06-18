@@ -198,7 +198,8 @@ class TypedLocaleDelegate implements LocalizationsDelegate<TypedLocale?> {
       _maybeResolutionLocale(locale) ??
       locale.maybeToTypedLocale(fallbackLanguage);
 
-  /// Returns the [TypedLocale] associated with the given [BuildContext].
+  /// Returns the [TypedLocale] associated with the given [BuildContext] or
+  /// `null` if the [BuildContext] does not contain a [TypedLocale].
   ///
   /// The [context] parameter is the [BuildContext] from which
   /// the [TypedLocale] is retrieved.
@@ -209,6 +210,26 @@ class TypedLocaleDelegate implements LocalizationsDelegate<TypedLocale?> {
   /// final typedLocale = TypedLocaleDelegate.maybeOf(context);
   /// // or just as final typedLocale = context.maybeLocale;
   /// ```
-  static TypedLocale? maybeOf(BuildContext context) =>
+  static TypedLocale? maybeOf(BuildContext context) {
+    try {
+      return Localizations.of<TypedLocale?>(context, TypedLocale);
+      // ignore: avoid_catches_without_on_clauses, for DevEx, there is `of`.
+    } catch (_) {
+      return null;
+    }
+  }
+
+  /// Returns the [TypedLocale] associated with the given [BuildContext].
+  ///
+  /// The [context] parameter is the [BuildContext] from which
+  /// the [TypedLocale] is retrieved.
+  ///
+  /// Example usage:
+  ///
+  /// ```dart
+  /// final typedLocale = TypedLocaleDelegate.of(context);
+  /// // or just as final typedLocale = context.maybeLocale;
+  /// ```
+  static TypedLocale? of(BuildContext context) =>
       Localizations.of<TypedLocale?>(context, TypedLocale);
 }

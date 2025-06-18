@@ -201,7 +201,7 @@ class CountryPicker extends BasicPicker<WorldCountry> {
     itemBuilder,
     double? spacing,
     TypedLocale? translation,
-    covariant Map<WorldCountry, BasicFlag>? flagsMap,
+    Map<WorldCountry, BasicFlag>? flagsMap,
   }) => CountryPicker(
     countries: items ?? this.items,
     addAutomaticKeepAlives:
