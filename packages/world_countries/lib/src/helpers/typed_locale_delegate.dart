@@ -207,7 +207,7 @@ class TypedLocaleDelegate implements LocalizationsDelegate<TypedLocale?> {
   /// Example usage:
   ///
   /// ```dart
-  /// final typedLocale = TypedLocaleDelegate.maybeOf(context);
+  /// final maybeTypedLocale = TypedLocaleDelegate.maybeOf(context);
   /// // or just as final typedLocale = context.maybeLocale;
   /// ```
   static TypedLocale? maybeOf(BuildContext context) {
@@ -222,13 +222,13 @@ class TypedLocaleDelegate implements LocalizationsDelegate<TypedLocale?> {
   /// Returns the [TypedLocale] associated with the given [BuildContext].
   ///
   /// The [context] parameter is the [BuildContext] from which
-  /// the [TypedLocale] is retrieved.
+  /// the [TypedLocale] is retrieved. If the [TypedLocale] is not found or not
+  /// available, it might throw an exception, consider using `maybeOf` instead.
   ///
   /// Example usage:
   ///
   /// ```dart
   /// final typedLocale = TypedLocaleDelegate.of(context);
-  /// // or just as final typedLocale = context.maybeLocale;
   /// ```
   static TypedLocale? of(BuildContext context) =>
       Localizations.of<TypedLocale?>(context, TypedLocale);
