@@ -56,7 +56,7 @@ class CurrencyPicker extends BasicPicker<FiatCurrency> {
     super.verticalDirection,
     super.spacing,
     super.translation,
-    super.flagsMap = const {FiatEur(): StarFlag(flagEurProperties)},
+    super.flagsMap,
   }) : super(currencies);
 
   @override
