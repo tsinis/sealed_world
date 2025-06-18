@@ -24,11 +24,12 @@ screenshots:
 resolution: workspace
 
 environment:
-  sdk: ^3.8.0
+  sdk: ^3.8.1
 
 dependencies:
   flutter:
     sdk: flutter
+  meta: ^1.16.0 # Same as in Flutter SDK.
   world_flags: ^2.4.1
 
 dev_dependencies:
