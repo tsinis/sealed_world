@@ -835,6 +835,7 @@ const flagCypProperties = FlagProperties(
 );
 
 /// Flag properties of country Afghanistan (AF).
+@Deprecated("This is no longer valid, use `flagAfgPropertiesAlt` instead.")
 const flagAfgProperties = FlagProperties(
   [
     ColorsProperties(Color(0xff000000)),
