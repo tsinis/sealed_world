@@ -72,10 +72,12 @@ class IsoFlag<T extends IsoStandardized, F extends BasicFlag>
   /// A widget to display if the flag is not found in the map.
   final Widget? orElse;
 
-  F? get _basicFlag => _alternativeMap?[item] ?? _map[item];
-
   @override
   String toStringShort() => "IsoFlag($debugLabel)";
+
+  /// Returns the [BasicFlag] for the specified item from the main map
+  /// or the alternative map if available.
+  F? get basicFlag => _alternativeMap?[item] ?? _map[item];
 
   /// Returns a debug label for the flag, which is the ISO code by default.
   @protected
@@ -95,7 +97,7 @@ class IsoFlag<T extends IsoStandardized, F extends BasicFlag>
         DoubleProperty(
           "aspectRatio",
           aspectRatio,
-          ifNull: "$theme flag's aspect ratio (${_basicFlag?.flagAspectRatio})",
+          ifNull: "$theme flag's aspect ratio (${basicFlag?.flagAspectRatio})",
           defaultValue: null,
         ),
       )
@@ -140,7 +142,7 @@ class IsoFlag<T extends IsoStandardized, F extends BasicFlag>
       ..add(
         FlagProperty(
           "any ${item.internationalName} item flag found",
-          value: _basicFlag != null,
+          value: basicFlag != null,
           ifTrue: "yes",
           ifFalse: "not found in both maps",
         ),
@@ -186,7 +188,7 @@ class IsoFlag<T extends IsoStandardized, F extends BasicFlag>
 
   @override
   Widget build(BuildContext context) =>
-      _basicFlag?.copyWith(
+      basicFlag?.copyWith(
         key: Key(debugLabel),
         aspectRatio: aspectRatio,
         decoration: decoration,
