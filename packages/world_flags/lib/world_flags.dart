@@ -538,6 +538,7 @@ const uniqueSimplifiedFlagsMap = <WorldCountry, BasicFlag>{
 /// final usaFlag = smallSimplifiedFlagsMap[const CountryUsa()];
 /// ```
 const smallSimplifiedFlagsMap = <WorldCountry, BasicFlag>{
+  // ignore: deprecated_member_use_from_same_package, TODO: for the next release
   CountryAfg(): EllipseFlag(flagAfgProperties),
   ...uniqueSimplifiedFlagsMap,
   CountryGuf(): BasicFlag(flagGufProperties),

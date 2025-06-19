@@ -2,8 +2,8 @@ import "dart:math";
 
 import "package:flutter/rendering.dart";
 
+import "../../../data/alternative_flags_map.data.dart";
 import "../../../data/flags_map_part_1.data.dart";
-import "../../../data/flags_map_part_2.data.dart";
 import "../../../model/typedefs.dart";
 import "../basic/custom_elements_painter.dart";
 
@@ -20,8 +20,9 @@ final class ShahadaPainter extends CustomElementsPainter {
   final bool _hasSabre;
 
   @override
-  double get originalAspectRatio =>
-      _hasSabre ? flagSauProperties.aspectRatio : flagAfgProperties.aspectRatio;
+  double get originalAspectRatio => _hasSabre
+      ? flagSauProperties.aspectRatio
+      : flagAfgPropertiesAlt.aspectRatio;
 
   @override
   FlagParentBounds paintFlagElements(Canvas canvas, Size size) {

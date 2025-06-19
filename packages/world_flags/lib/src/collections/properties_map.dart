@@ -22,6 +22,7 @@ import "../model/flag_properties.dart";
 /// ```
 const flagPropertiesMap = <WorldCountry, FlagProperties>{
   CountryAbw(): flagAbwProperties,
+  // ignore: deprecated_member_use_from_same_package, TODO: for the next release
   CountryAfg(): flagAfgProperties,
   CountryAgo(): flagAgoProperties,
   CountryAia(): flagAiaProperties,

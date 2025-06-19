@@ -1,12 +1,13 @@
 import "package:flutter/foundation.dart" show PlatformDispatcher;
 import "package:flutter/widgets.dart";
-import "package:meta/meta.dart" show experimental, internal;
+import "package:meta/meta.dart";
 import "package:world_flags/world_flags.dart";
 
 import "../../constants/ui_constants.dart";
 import "../../extensions/world_countries_build_context_extension.dart";
 import "basic_picker.dart";
 
+@sealed
 @internal
 @experimental
 base class BasePickerFlagState<
@@ -24,6 +25,7 @@ base class BasePickerFlagState<
   WorldCountry? get _maybeLocaleCountry => context.maybeLocale?.country;
 
   @protected
+  @mustBeOverridden
   Map<I, List<WorldCountry>> get itemsMap => const {};
 
   @protected
