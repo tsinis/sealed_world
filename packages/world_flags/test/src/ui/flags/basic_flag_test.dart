@@ -9,6 +9,7 @@ void main() => group("$BasicFlag", () {
   const basicFlag = BasicFlag(
     FlagProperties([ColorsProperties(Color(0xFFFFFFFF))]),
     key: Key("key"),
+    child: Text("Flag Child"),
   );
 
   test(
@@ -23,4 +24,10 @@ void main() => group("$BasicFlag", () {
     basicFlag.debugFillProperties(builder);
     expect(builder.properties.any((prop) => prop.name == "padding"), isTrue);
   });
+
+  test(
+    "foregroundWidget",
+    // ignore: deprecated_member_use_from_same_package, TODO! to be removed soon
+    () => expect(basicFlag.foregroundWidget, basicFlag.child),
+  );
 });

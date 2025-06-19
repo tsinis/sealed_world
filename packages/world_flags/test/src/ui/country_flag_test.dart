@@ -1,52 +1,46 @@
-// ignore_for_file: unnecessary_async, missing-test-assertion, flagGolden method
+import "package:_sealed_world_tests/sealed_world_tests.dart";
 import "package:flutter/foundation.dart";
 import "package:flutter/material.dart";
 import "package:flutter_test/flutter_test.dart";
 import "package:world_flags/world_flags.dart";
 
-import "../../helpers/extensions/golden_widget_tester_extension.dart";
-import "../../helpers/flag_type.dart";
-
 void main() => group("$CountryFlag", () {
   const value = CountryDeu();
-  const countryFlag = CountryFlag.custom(value, {}, orElse: FlutterLogo());
+  const flag = CountryFlag.custom(value, {}, orElse: FlutterLogo());
 
   setUpAll(() => flagAntiAliasOverride = true);
 
   test(
     "toStringShort",
-    () => expect(countryFlag.toStringShort(), "$CountryFlag(${value.emoji})"),
+    () => expect(flag.toStringShort(), "$CountryFlag(${value.emoji})"),
+  );
+
+  assertTest("zero height", () => CountryFlag.simplified(value, height: 0));
+  assertTest("zero width", () => CountryFlag.simplified(value, width: 0));
+  assertTest(
+    "zero aspectRatio",
+    () => CountryFlag.simplified(value, aspectRatio: 0),
   );
 
   test("debugFillProperties", () {
     final builder = DiagnosticPropertiesBuilder();
     expect(builder.properties.any((prop) => prop.name == "padding"), isFalse);
 
-    countryFlag.debugFillProperties(builder);
+    flag.debugFillProperties(builder);
     expect(builder.properties.any((prop) => prop.name == "padding"), isTrue);
   });
 
   testWidgets("custom constructor", (tester) async {
-    await tester.pumpWidget(const MaterialApp(home: countryFlag));
+    await tester.pumpWidget(const MaterialApp(home: flag));
 
     expect(find.byType(FlutterLogo), findsOneWidget);
   });
 
-  group("Full", () {
-    for (final country in fullFlags) {
-      testWidgets(
-        "${country.internationalName} Flag",
-        (tester) async => tester.flagGolden(country, FlagType.full),
-      );
-    }
-  });
+  testWidgets("simplified constructor", (tester) async {
+    await tester.pumpWidget(
+      const MaterialApp(home: CountryFlag.simplified(value)),
+    );
 
-  group("Simplified", () {
-    for (final country in WorldCountry.list) {
-      testWidgets(
-        "${country.internationalName} Flag",
-        (tester) async => tester.flagGolden(country, FlagType.simplified),
-      );
-    }
+    expect(find.byType(FlutterLogo), findsNothing);
   });
 });

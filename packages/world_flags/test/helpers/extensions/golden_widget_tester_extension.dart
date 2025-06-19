@@ -9,28 +9,40 @@ import "../flag_type.dart";
 
 // ignore: avoid-top-level-members-in-tests, it's not a test, but extension.
 extension GoldenWidgetTesterExtension on WidgetTester {
-  Future<void> flagGolden(WorldCountry country, FlagType type) async {
-    if (!Platform.isLinux && _ignoreOnNonLinux.contains(country)) return;
+  static const _items = <IsoTranslated, BasicFlag>{
+    ...uniqueSimplifiedFlagsMap,
+    ...smallSimplifiedAlternativeFlagsMap,
+    FiatEur(): StarFlag(flagEurProperties),
+    ...smallSimplifiedLanguageFlagsMap,
+  };
 
-    final aspectRatio = country.flagProperties?.aspectRatio ?? 1;
+  Future<void> flagGolden<T extends IsoTranslated>(T iso, FlagType type) async {
+    if (!Platform.isLinux && _ignoreOnNonLinux.contains(iso)) return;
+
+    final aspectRatio = iso is WorldCountry
+        ? (iso.flagProperties?.aspectRatio ?? 1)
+        : FlagConstants.defaultAspectRatio;
     final height = type.height;
     final width = height * aspectRatio;
-    final file = "../../goldens/${type.name}/${country.code.toLowerCase()}.png";
+    final file = "../../goldens/${type.name}/${iso.code.toLowerCase()}.png";
 
     await binding.setSurfaceSize(Size(width, height));
     await pumpWidget(
       MaterialApp(
-        home: CountryFlag.simplified(country),
+        home: IsoFlag(iso, _items),
         theme: ThemeData(
           extensions: [FlagThemeData(decoration: type.decoration)],
         ),
       ),
     );
 
-    return expectLater(find.byType(CountryFlag), matchesGoldenFile(file));
+    return expectLater(
+      find.byType(IsoFlag<T, BasicFlag>),
+      matchesGoldenFile(file),
+    );
   }
 
-  static const _ignoreOnNonLinux = <WorldCountry>[
+  static const _ignoreOnNonLinux = <IsoTranslated>[
     CountryAia(),
     CountryAnd(),
     CountryBmu(),
