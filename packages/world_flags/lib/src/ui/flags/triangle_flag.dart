@@ -21,7 +21,7 @@ class TriangleFlag extends BasicFlag {
   /// - [padding]: The padding around the flag.
   /// - [backgroundPainter]: A custom painter for the background of the flag.
   /// - [foregroundPainter]: A custom painter for the foreground of the flag.
-  /// - [foregroundWidget]: A widget to display in the foreground of the flag.
+  /// - [child]: A widget to display in the foreground of the flag.
   /// - [foregroundWidgetBuilder]: A builder for the foreground widget.
   const TriangleFlag(
     super.properties, {
@@ -34,5 +34,6 @@ class TriangleFlag extends BasicFlag {
     super.foregroundWidgetBuilder,
     super.key,
     super.padding,
+    super.child,
   }) : super(elementsBuilder: TrianglePainter.new); // coverage:ignore-line
 }

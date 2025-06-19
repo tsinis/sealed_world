@@ -54,7 +54,7 @@ class BasicFlag extends DecoratedFlagWidget {
     super.width,
     Widget? child,
     super.key,
-  }) : super(child: foregroundWidget ?? child);
+  }) : super(child: child ?? foregroundWidget);
 
   /// The properties of the flag.
   final FlagProperties properties;

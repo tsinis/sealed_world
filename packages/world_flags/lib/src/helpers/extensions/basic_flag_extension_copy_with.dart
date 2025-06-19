@@ -26,7 +26,6 @@ extension BasicFlagExtensionCopyWith<T extends BasicFlag> on T {
   /// - [elementsBuilder]: A builder for the elements of the flag.
   /// - [backgroundPainter]: A custom painter for the background of the flag.
   /// - [foregroundPainter]: A custom painter for the foreground of the flag.
-  /// - [foregroundWidget]: A widget to display in the foreground of the flag.
   /// - [foregroundPainterBuilder]: A builder for the foreground painter.
   /// - [foregroundWidgetBuilder]: A builder for the foreground widget.
   /// - [height]: The height of the flag. If `null`, the height from the flag

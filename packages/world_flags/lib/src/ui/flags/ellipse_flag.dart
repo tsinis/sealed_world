@@ -21,7 +21,7 @@ class EllipseFlag extends BasicFlag {
   /// - [padding]: The padding around the flag.
   /// - [backgroundPainter]: A custom painter for the background of the flag.
   /// - [foregroundPainter]: A custom painter for the foreground of the flag.
-  /// - [foregroundWidget]: A widget to display in the foreground of the flag.
+  /// - [child]: A widget to display in the foreground of the flag.
   /// - [foregroundWidgetBuilder]: A builder for the foreground widget.
   const EllipseFlag(
     super.properties, {
@@ -34,5 +34,6 @@ class EllipseFlag extends BasicFlag {
     super.foregroundWidgetBuilder,
     super.key,
     super.padding,
+    super.child,
   }) : super(elementsBuilder: EllipsePainter.new); // coverage:ignore-line
 }
