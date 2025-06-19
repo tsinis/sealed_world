@@ -1,4 +1,4 @@
-import "package:flutter/foundation.dart" show PlatformDispatcher;
+import "package:flutter/foundation.dart" show PlatformDispatcher, mapEquals;
 import "package:flutter/widgets.dart";
 import "package:meta/meta.dart";
 import "package:world_flags/world_flags.dart";
@@ -80,6 +80,15 @@ base class BasePickerFlagState<
         if (firstOne != null) _flagsMap[key] = mapper(firstOne, key, countries);
       }
     }
+  }
+
+  @override
+  void didUpdateWidget(T oldWidget) {
+    super.didUpdateWidget(oldWidget);
+    if (mapEquals(_flagsMap, oldWidget.flagsMap)) return;
+    _flagsMap
+      ..clear()
+      ..addAll(oldWidget.flagsMap);
   }
 
   @override
