@@ -8,6 +8,8 @@ import "package:world_countries/src/helpers/typed_locale_delegate.dart";
 import "package:world_countries/src/models/locale/typed_locale.dart";
 import "package:world_flags/world_flags.dart";
 
+import "../../helpers/widget_tester_extension.dart";
+
 void main() => group("$TypedLocaleDelegate", () {
   const locale = Locale("en");
   const english = LangEng();
@@ -121,6 +123,16 @@ void main() => group("$TypedLocaleDelegate", () {
         await fallbackDelegate.load(const Locale("00")),
         const TypedLocale(english),
       );
+    });
+
+    testWidgets("TypedLocaleDelegate.of", (tester) async {
+      final context = await tester.contextExtractor();
+      expect(TypedLocaleDelegate.of(context), isNull);
+    });
+
+    testWidgets("TypedLocaleDelegate.maybeOf", (tester) async {
+      final context = await tester.contextExtractor();
+      expect(TypedLocaleDelegate.maybeOf(context), isNull);
     });
   });
 });
