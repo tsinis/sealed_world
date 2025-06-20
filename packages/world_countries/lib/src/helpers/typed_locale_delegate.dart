@@ -1,4 +1,5 @@
 import "package:flutter/widgets.dart";
+import "package:meta/meta.dart";
 import "package:world_flags/world_flags.dart";
 
 import "../extensions/locale_extension.dart";
@@ -49,11 +50,14 @@ class TypedLocaleDelegate implements LocalizationsDelegate<TypedLocale?> {
   /// ISO translations are formatted. It takes a [TypedLocale] and an
   /// [IsoTranslated] as input and returns a formatted string.
   const TypedLocaleDelegate({
-    this.fallbackLanguage,
-    this.localeMapResolution = defaultLocaleMapResolution,
+    @mustBeConst this.fallbackLanguage,
+    @mustBeConst this.localeMapResolution = defaultLocaleMapResolution,
     bool asyncTranslationCacheProcessing = true,
+    @mustBeConst
     Iterable<WorldCountry> countriesForTranslationCache = WorldCountry.list,
+    @mustBeConst
     Iterable<FiatCurrency> currenciesForTranslationCache = FiatCurrency.list,
+    @mustBeConst
     Iterable<NaturalLanguage> languagesForTranslationCache =
         NaturalLanguage.list,
     L10NFormatter<TypedLocale, IsoTranslated>? l10nFormatter,
@@ -84,11 +88,13 @@ class TypedLocaleDelegate implements LocalizationsDelegate<TypedLocale?> {
   /// ISO translations are formatted. It takes a [TypedLocale] and an
   /// [IsoTranslated] as input and returns a formatted string.
   const TypedLocaleDelegate.selectiveCache({
-    this.fallbackLanguage,
-    this.localeMapResolution = defaultLocaleMapResolution,
+    @mustBeConst this.fallbackLanguage,
+    @mustBeConst this.localeMapResolution = defaultLocaleMapResolution,
     bool asyncTranslationCacheProcessing = true,
-    Iterable<WorldCountry> countriesForTranslationCache = const {},
+    @mustBeConst Iterable<WorldCountry> countriesForTranslationCache = const {},
+    @mustBeConst
     Iterable<FiatCurrency> currenciesForTranslationCache = const {},
+    @mustBeConst
     Iterable<NaturalLanguage> languagesForTranslationCache = const {},
     L10NFormatter<TypedLocale, IsoTranslated>? l10nFormatter,
   }) : _asyncTranslationCacheProcessing = asyncTranslationCacheProcessing,
