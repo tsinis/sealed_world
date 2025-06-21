@@ -135,7 +135,7 @@ class CurrencyPicker extends BasicPicker<FiatCurrency> {
     /// An optional custom function to map or transform a [BasicFlag] for a
     /// given currency. This function allows you to override the default flag
     /// appearance or logic for each currency and its associated countries. If
-    /// not provided, a default flag mapping will be used (simmilar to country
+    /// not provided, a default flag mapping will be used (similar to country
     /// picker).
     BasicFlag Function(
       BasicFlag flag,
