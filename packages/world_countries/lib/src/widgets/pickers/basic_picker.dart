@@ -7,7 +7,6 @@ import "dart:async" show FutureOr, unawaited;
 
 import "package:flutter/gestures.dart" show DragStartBehavior;
 import "package:flutter/material.dart";
-import "package:meta/meta.dart" show mustBeConst;
 import "package:world_flags/world_flags.dart";
 
 import "../../constants/ui_constants.dart";
@@ -121,7 +120,7 @@ abstract class BasicPicker<T extends IsoTranslated>
     this.searchBarPadding, // Default: EdgeInsets.only(left:8, top:8, right:8).
     this.showClearButton = true,
     this.translation,
-    @mustBeConst this.flagsMap = const {},
+    this.flagsMap = const {},
   }) : super(header: searchBar);
 
   /// A boolean indicating whether to show a clear button in the search bar.
