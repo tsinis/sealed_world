@@ -108,6 +108,7 @@ class PhoneCodePicker extends CountryPicker {
         verticalDirection: picker.verticalDirection,
         spacing: picker.spacing,
         translation: picker.translation,
+        flagsMap: picker.flagsMap,
       );
 
   @override
