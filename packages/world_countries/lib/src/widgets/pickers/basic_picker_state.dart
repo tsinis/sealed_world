@@ -8,9 +8,7 @@ class _BasicPickerState<T extends IsoTranslated> extends State<BasicPicker<T>> {
   void initState() {
     super.initState();
     _controller =
-        widget.textController ??
-        widget.searchBar?.controller ??
-        TextEditingController();
+        widget.textController ?? widget.searchBar?.controller ?? _controller;
   }
 
   @override

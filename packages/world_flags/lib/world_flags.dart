@@ -8,6 +8,7 @@ import "src/data/alternative_flags_map.data.dart";
 import "src/data/flags_map_part_1.data.dart";
 import "src/data/flags_map_part_2.data.dart";
 import "src/data/flags_map_part_3.data.dart";
+import "src/data/other_iso_flags_map.dart";
 import "src/ui/flags/basic_flag.dart";
 import "src/ui/flags/ellipse_flag.dart";
 import "src/ui/flags/moon_flag.dart";
@@ -63,10 +64,13 @@ export "src/data/alternative_flags_map.data.dart";
 export "src/data/flags_map_part_1.data.dart";
 export "src/data/flags_map_part_2.data.dart";
 export "src/data/flags_map_part_3.data.dart";
+export "src/data/other_iso_flags_map.dart";
 export "src/debug/flag_properties_property.dart";
 export "src/debug/iso_diagnostics_property.dart";
 export "src/helpers/extensions/basic_flag_extension_copy_with.dart";
 export "src/helpers/extensions/box_decoration_extension.dart";
+export "src/helpers/extensions/country_flag_extension.dart";
+export "src/helpers/extensions/decorated_flag_interface_extension.dart";
 export "src/helpers/extensions/flag_extension.dart";
 export "src/helpers/extensions/world_flags_build_context_extension.dart";
 export "src/interfaces/decorated_flag_interface.dart";
@@ -79,6 +83,7 @@ export "src/model/stripe_orientation.dart";
 export "src/model/typedefs.dart";
 export "src/theme/flag_theme_data.dart";
 export "src/ui/country_flag.dart";
+export "src/ui/decorated_flag_widget.dart";
 export "src/ui/flags/basic_flag.dart";
 export "src/ui/flags/ellipse_flag.dart";
 export "src/ui/flags/moon_flag.dart";
@@ -86,6 +91,7 @@ export "src/ui/flags/multi_element_flag.dart";
 export "src/ui/flags/rectangle_flag.dart";
 export "src/ui/flags/star_flag.dart";
 export "src/ui/flags/triangle_flag.dart";
+export "src/ui/iso_flag.dart";
 export "src/ui/painters/basic/custom_elements_painter.dart";
 export "src/ui/painters/basic/elements_painter.dart";
 export "src/ui/painters/basic/flag_test_properties.dart";
@@ -136,19 +142,20 @@ export "src/ui/painters/custom/vct_painter.dart";
 export "src/ui/painters/custom/vir_painter.dart";
 export "src/ui/painters/multi_element_painter.dart";
 
-/// A map that associates country objects with simplified flag representations.
+/// A map that associates country objects (excluding Afghanistan and French
+/// Guiana - because they have alternative flag representations) with simplified
+/// flag representations.
 ///
 /// This map is used to provide simplified flag representations for various
 /// countries. Each entry in the map consists of a country as the key and a
-/// list of flag elements as the value.
+/// country flag as the value.
 ///
 /// Example usage:
 /// ```dart
-/// final usaFlagElements = smallSimplifiedFlagsMap[const CountryUsa()];
+/// final usaFlag = uniqueSimplifiedFlagsMap[const CountryUsa()];
 /// ```
-const smallSimplifiedFlagsMap = <WorldCountry, BasicFlag>{
+const uniqueSimplifiedFlagsMap = <WorldCountry, BasicFlag>{
   CountryAbw(): StarFlag(flagAbwProperties),
-  CountryAfg(): EllipseFlag(flagAfgProperties),
   CountryAgo(): BasicFlag(flagAgoProperties, elementsBuilder: AgoPainter.new),
   CountryAia(): BasicFlag(
     flagAiaProperties,
@@ -291,7 +298,6 @@ const smallSimplifiedFlagsMap = <WorldCountry, BasicFlag>{
     elementsBuilder: HalfEllipsePainter.new,
   ),
   CountryGtm(): EllipseFlag(flagGtmProperties),
-  CountryGuf(): BasicFlag(flagGufProperties),
   CountryGum(): BasicFlag(
     flagGumProperties,
     elementsBuilder: AlmondPainter.gum,
@@ -522,6 +528,23 @@ const smallSimplifiedFlagsMap = <WorldCountry, BasicFlag>{
   ),
 };
 
+/// A map that associates country objects with simplified flag representations.
+///
+/// This map is used to provide simplified flag representations for various
+/// countries. Each entry in the map consists of a country as the key and a
+/// country flag as the value.
+///
+/// Example usage:
+/// ```dart
+/// final usaFlag = smallSimplifiedFlagsMap[const CountryUsa()];
+/// ```
+const smallSimplifiedFlagsMap = <WorldCountry, BasicFlag>{
+  // ignore: deprecated_member_use_from_same_package, TODO: for the next release
+  CountryAfg(): EllipseFlag(flagAfgProperties),
+  ...uniqueSimplifiedFlagsMap,
+  CountryGuf(): BasicFlag(flagGufProperties),
+};
+
 /// Alternative flags for specific countries. As an alternative for flags from
 /// the [smallSimplifiedFlagsMap]. For example Afghanistan flag is no longer
 /// using the old version but rather using the new flag properties (after 2021).
@@ -533,4 +556,22 @@ const smallSimplifiedAlternativeFlagsMap = <WorldCountry, BasicFlag>{
     elementsBuilder: ShahadaPainter.afg,
   ),
   CountryGuf(): StarFlag(flagGufPropertiesAlt),
+};
+
+/// A map that associates language objects with simplified flag representations.
+///
+/// This map is used to provide simplified flag representations for constructed
+/// languages. Each entry in the map consists of a language as the key and a
+/// flag as the value.
+///
+/// Example usage:
+/// ```dart
+/// final esperantoFlag = smallSimplifiedFlagsMap[const LangEpo()];
+/// ```
+const smallSimplifiedLanguageFlagsMap = <NaturalLanguage, BasicFlag>{
+  LangEpo(): RectangleFlag(flagEpoProperties),
+  LangIdo(): StarFlag(flagIdoProperties),
+  LangIle(): EllipseFlag(flagIleProperties),
+  LangIna(): StarFlag(flagInaProperties),
+  LangVol(): RectangleFlag(flagVolProperties),
 };

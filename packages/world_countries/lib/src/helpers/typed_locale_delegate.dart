@@ -1,4 +1,5 @@
 import "package:flutter/widgets.dart";
+import "package:meta/meta.dart";
 import "package:world_flags/world_flags.dart";
 
 import "../extensions/locale_extension.dart";
@@ -49,11 +50,14 @@ class TypedLocaleDelegate implements LocalizationsDelegate<TypedLocale?> {
   /// ISO translations are formatted. It takes a [TypedLocale] and an
   /// [IsoTranslated] as input and returns a formatted string.
   const TypedLocaleDelegate({
-    this.fallbackLanguage,
-    this.localeMapResolution = defaultLocaleMapResolution,
+    @mustBeConst this.fallbackLanguage,
+    @mustBeConst this.localeMapResolution = defaultLocaleMapResolution,
     bool asyncTranslationCacheProcessing = true,
+    @mustBeConst
     Iterable<WorldCountry> countriesForTranslationCache = WorldCountry.list,
+    @mustBeConst
     Iterable<FiatCurrency> currenciesForTranslationCache = FiatCurrency.list,
+    @mustBeConst
     Iterable<NaturalLanguage> languagesForTranslationCache =
         NaturalLanguage.list,
     L10NFormatter<TypedLocale, IsoTranslated>? l10nFormatter,
@@ -84,11 +88,13 @@ class TypedLocaleDelegate implements LocalizationsDelegate<TypedLocale?> {
   /// ISO translations are formatted. It takes a [TypedLocale] and an
   /// [IsoTranslated] as input and returns a formatted string.
   const TypedLocaleDelegate.selectiveCache({
-    this.fallbackLanguage,
-    this.localeMapResolution = defaultLocaleMapResolution,
+    @mustBeConst this.fallbackLanguage,
+    @mustBeConst this.localeMapResolution = defaultLocaleMapResolution,
     bool asyncTranslationCacheProcessing = true,
-    Iterable<WorldCountry> countriesForTranslationCache = const {},
+    @mustBeConst Iterable<WorldCountry> countriesForTranslationCache = const {},
+    @mustBeConst
     Iterable<FiatCurrency> currenciesForTranslationCache = const {},
+    @mustBeConst
     Iterable<NaturalLanguage> languagesForTranslationCache = const {},
     L10NFormatter<TypedLocale, IsoTranslated>? l10nFormatter,
   }) : _asyncTranslationCacheProcessing = asyncTranslationCacheProcessing,
@@ -198,7 +204,8 @@ class TypedLocaleDelegate implements LocalizationsDelegate<TypedLocale?> {
       _maybeResolutionLocale(locale) ??
       locale.maybeToTypedLocale(fallbackLanguage);
 
-  /// Returns the [TypedLocale] associated with the given [BuildContext].
+  /// Returns the [TypedLocale] associated with the given [BuildContext] or
+  /// `null` if the [BuildContext] does not contain a [TypedLocale].
   ///
   /// The [context] parameter is the [BuildContext] from which
   /// the [TypedLocale] is retrieved.
@@ -206,9 +213,29 @@ class TypedLocaleDelegate implements LocalizationsDelegate<TypedLocale?> {
   /// Example usage:
   ///
   /// ```dart
-  /// final typedLocale = TypedLocaleDelegate.maybeOf(context);
+  /// final maybeTypedLocale = TypedLocaleDelegate.maybeOf(context);
   /// // or just as final typedLocale = context.maybeLocale;
   /// ```
-  static TypedLocale? maybeOf(BuildContext context) =>
+  static TypedLocale? maybeOf(BuildContext context) {
+    try {
+      return Localizations.of<TypedLocale?>(context, TypedLocale);
+      // ignore: avoid_catches_without_on_clauses, for DevEx, there is `of`.
+    } catch (_) {
+      return null;
+    }
+  }
+
+  /// Returns the [TypedLocale] associated with the given [BuildContext].
+  ///
+  /// The [context] parameter is the [BuildContext] from which
+  /// the [TypedLocale] is retrieved. If the [TypedLocale] is not found or not
+  /// available, it might throw an exception, consider using `maybeOf` instead.
+  ///
+  /// Example usage:
+  ///
+  /// ```dart
+  /// final typedLocale = TypedLocaleDelegate.of(context);
+  /// ```
+  static TypedLocale? of(BuildContext context) =>
       Localizations.of<TypedLocale?>(context, TypedLocale);
 }

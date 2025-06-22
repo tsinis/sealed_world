@@ -2,6 +2,7 @@
 
 import "package:flutter/material.dart";
 
+import "../helpers/extensions/decorated_flag_interface_extension.dart";
 import "../interfaces/decorated_flag_interface.dart";
 
 /// A class that defines the theme data for a flag, including its aspect ratio,
@@ -22,6 +23,7 @@ class FlagThemeData extends ThemeExtension<FlagThemeData>
   /// - [padding]: The padding around the flag.
   /// - [height]: The height of the flag.
   /// - [width]: The width of the flag.
+  /// - [child]: A widget to display in the foreground of the flag.
   const FlagThemeData({
     double? aspectRatio,
     this.decoration,
@@ -29,6 +31,7 @@ class FlagThemeData extends ThemeExtension<FlagThemeData>
     this.padding,
     this.height,
     this.width,
+    this.child,
   }) : assert(
          aspectRatio == null || aspectRatio > 0,
          "`aspectRatio` must be greater than 0",
@@ -47,10 +50,15 @@ class FlagThemeData extends ThemeExtension<FlagThemeData>
   final EdgeInsetsGeometry? padding;
 
   /// The height of the flag.
+  @override
   final double? height;
 
   /// The width of the flag.
+  @override
   final double? width;
+
+  @override
+  final Widget? child;
 
   /// The specified aspect ratio of the flag.
   final double? _aspectRatio;
@@ -63,10 +71,6 @@ class FlagThemeData extends ThemeExtension<FlagThemeData>
   /// The specified aspect ratio of the flag.
   double? get specifiedAspectRatio => _aspectRatio;
 
-  /// The calculated aspect ratio of the flag based on its width and height.
-  double? get calculatedAspectRatio =>
-      width == null || height == null ? null : (width ?? 1) / (height ?? 1);
-
   /// Creates a copy of this [FlagThemeData] but with the given fields replaced
   /// with the new values.
   ///
@@ -76,6 +80,7 @@ class FlagThemeData extends ThemeExtension<FlagThemeData>
   /// - [padding]: The padding around the flag.
   /// - [height]: The height of the flag.
   /// - [width]: The width of the flag.
+  /// - [child]: A widget to display in the foreground of the flag.
   @override
   FlagThemeData copyWith({
     double? aspectRatio,
@@ -84,6 +89,7 @@ class FlagThemeData extends ThemeExtension<FlagThemeData>
     EdgeInsetsGeometry? padding,
     double? height,
     double? width,
+    Widget? child,
   }) => FlagThemeData(
     aspectRatio: aspectRatio ?? _aspectRatio,
     decoration: decoration ?? this.decoration,
@@ -91,6 +97,7 @@ class FlagThemeData extends ThemeExtension<FlagThemeData>
     padding: padding ?? this.padding,
     height: height ?? this.height,
     width: width ?? this.width,
+    child: child ?? this.child,
   );
 
   @override
@@ -100,7 +107,8 @@ class FlagThemeData extends ThemeExtension<FlagThemeData>
       """${decorationPosition == null ? '' : 'decorationPosition: $decorationPosition, '}"""
       "${padding == null ? '' : 'padding: $padding, '}"
       "${height == null ? '' : 'height: $height, '}"
-      "${width == null ? '' : 'width: $width,'})";
+      "${width == null ? '' : 'width: $width, '}"
+      "${child == null ? '' : 'child: $child,'})";
 
   @override
   bool operator ==(Object other) {
@@ -112,7 +120,8 @@ class FlagThemeData extends ThemeExtension<FlagThemeData>
         other.decorationPosition == decorationPosition &&
         other.padding == padding &&
         other.height == height &&
-        other.width == width;
+        other.width == width &&
+        other.child == child;
   }
 
   @override
@@ -122,7 +131,8 @@ class FlagThemeData extends ThemeExtension<FlagThemeData>
       decorationPosition.hashCode ^
       padding.hashCode ^
       height.hashCode ^
-      width.hashCode;
+      width.hashCode ^
+      child.hashCode;
 
   @override // coverage:ignore-line
   FlagThemeData lerp(

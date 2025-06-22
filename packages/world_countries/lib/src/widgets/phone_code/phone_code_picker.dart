@@ -59,6 +59,7 @@ class PhoneCodePicker extends CountryPicker {
     super.verticalDirection,
     super.spacing,
     super.translation,
+    super.flagsMap,
   });
 
   /// Constructor for the [PhoneCodePicker] class that uses a [CountryPicker]
@@ -107,6 +108,7 @@ class PhoneCodePicker extends CountryPicker {
         verticalDirection: picker.verticalDirection,
         spacing: picker.spacing,
         translation: picker.translation,
+        flagsMap: picker.flagsMap,
       );
 
   @override
@@ -128,29 +130,26 @@ class PhoneCodePicker extends CountryPicker {
             child: Column(
               mainAxisSize: MainAxisSize.min,
               children: [
-                Builder(
-                  builder: (newContext) => CountryFlag.simplified(
-                    itemProperties.item,
-                    height: 18,
-                    aspectRatio:
-                        newContext.flagTheme?.aspectRatio ??
-                        FlagConstants.defaultAspectRatio,
-                    decoration:
-                        newContext.flagTheme?.decoration ??
-                        const BoxDecoration(
-                          borderRadius: BorderRadius.all(
-                            Radius.circular(UiConstants.point / 2),
+                flagsMap[itemProperties.item] ??
+                    CountryFlag.simplified(
+                      itemProperties.item,
+                      height: 18,
+                      aspectRatio:
+                          context.flagTheme?.aspectRatio ??
+                          FlagConstants.defaultAspectRatio,
+                      decoration:
+                          context.flagTheme?.decoration ??
+                          const BoxDecoration(
+                            borderRadius: BorderRadius.all(
+                              Radius.circular(UiConstants.point / 2),
+                            ),
                           ),
-                        ),
-                  ),
-                ),
+                    ),
                 Padding(
                   padding: const EdgeInsets.only(right: UiConstants.point / 2),
-                  child: Builder(
-                    builder: (newContext) => Text(
-                      itemProperties.item.idd.phoneCode(),
-                      style: newContext.theme.textTheme.labelSmall,
-                    ),
+                  child: Text(
+                    itemProperties.item.idd.phoneCode(),
+                    style: context.theme.textTheme.labelSmall,
                   ),
                 ),
               ],
@@ -223,6 +222,7 @@ class PhoneCodePicker extends CountryPicker {
     itemBuilder,
     double? spacing,
     TypedLocale? translation,
+    Map<WorldCountry, BasicFlag>? flagsMap,
   }) => PhoneCodePicker(
     countries: items ?? this.items,
     addAutomaticKeepAlives:
@@ -267,5 +267,6 @@ class PhoneCodePicker extends CountryPicker {
     verticalDirection: verticalDirection ?? this.verticalDirection,
     translation: translation ?? this.translation,
     spacing: spacing ?? this.spacing,
+    flagsMap: flagsMap ?? this.flagsMap,
   );
 }

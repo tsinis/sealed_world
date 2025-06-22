@@ -15,8 +15,8 @@ const flagAfgPropertiesAlt = FlagProperties(
   elementsProperties: [
     CustomElementsProperties(
       Color(0xff000000),
-      offset: Offset(-0.5, 0.1),
-      heightFactor: 0.34,
+      heightFactor: 0.55,
+      widthFactor: 1.4,
     ),
   ],
 );

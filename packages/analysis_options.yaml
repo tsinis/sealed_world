@@ -65,6 +65,7 @@ dart_code_metrics:
     - avoid-adjacent-strings: false # It's not being used on one line strings.
     - avoid-collection-equality-checks: false # Doesn't work for models exclude.
     - avoid-collection-mutating-methods: false # Mostly false positives.
+    - avoid-continue: false # Just a matter of style.
     - avoid-duplicate-collection-elements: false # They are being used on purpose.
     - avoid-ignoring-return-values: false # Mostly, collection methods are ignored.
     - avoid-inferrable-type-arguments: false # Against prefer-explicit-type-arguments.
@@ -159,9 +160,6 @@ dart_code_metrics:
           - "**/translations/**.l10n.dart"
     - prefer-class-destructuring:
         min-occurrences: 4
-    - avoid-continue:
-        exclude:
-          - test/**
 
     # Enabled:
     - avoid-accessing-collections-by-constant-index

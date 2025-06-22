@@ -57,7 +57,7 @@ final class MultiElementPainter extends CustomElementsPainter {
   ///
   /// Returns a [FlagParentBounds] object representing the bounds of the painted
   /// elements.
-  @override
+  @override // coverage:ignore-line
   FlagParentBounds? paintFlagElements(Canvas canvas, Size size) => null;
 
   /// Paints the flag elements on the given canvas and size.

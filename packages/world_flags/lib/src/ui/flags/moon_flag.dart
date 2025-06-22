@@ -21,8 +21,9 @@ class MoonFlag extends BasicFlag {
   /// - [padding]: The padding around the flag.
   /// - [backgroundPainter]: A custom painter for the background of the flag.
   /// - [foregroundPainter]: A custom painter for the foreground of the flag.
-  /// - [foregroundWidget]: A widget to display in the foreground of the flag.
+  /// - [child]: A widget to display in the foreground of the flag.
   /// - [foregroundWidgetBuilder]: A builder for the foreground widget.
+  /// - [key]: The key for the widget.
   const MoonFlag(
     super.properties, {
     super.aspectRatio,
@@ -34,5 +35,6 @@ class MoonFlag extends BasicFlag {
     super.foregroundWidgetBuilder,
     super.key,
     super.padding,
+    super.child,
   }) : super(elementsBuilder: MoonPainter.new); // coverage:ignore-line
 }

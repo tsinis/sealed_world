@@ -60,6 +60,7 @@ class CountryPicker extends BasicPicker<WorldCountry> {
   /// * [textDirection] is the text direction for the items.
   /// * [verticalDirection] is the vertical direction for the items.
   /// * [translation] is the optional natural language to use for translations.
+  /// * [flagsMap] is the optional map of flags to use for the [countries].
   const CountryPicker({
     Iterable<WorldCountry> countries = WorldCountry.list,
     super.addAutomaticKeepAlives,
@@ -101,6 +102,7 @@ class CountryPicker extends BasicPicker<WorldCountry> {
     super.verticalDirection,
     super.spacing,
     super.translation,
+    super.flagsMap,
   }) : super(countries);
 
   @override
@@ -121,6 +123,7 @@ class CountryPicker extends BasicPicker<WorldCountry> {
         ? CountryTile.simple(
             itemProperties,
             title: maybeNameTitle,
+            leading: flagsMap[itemProperties.item],
             onPressed: (country) =>
                 // ignore: prefer-correct-handler-name, breaking change.
                 maybeSelectAndPop(country, itemProperties.context),
@@ -128,6 +131,7 @@ class CountryPicker extends BasicPicker<WorldCountry> {
         : CountryTile.fromProperties(
             itemProperties,
             title: maybeNameTitle,
+            leading: flagsMap[itemProperties.item],
             onPressed: onSelect,
           );
   }
@@ -197,6 +201,7 @@ class CountryPicker extends BasicPicker<WorldCountry> {
     itemBuilder,
     double? spacing,
     TypedLocale? translation,
+    Map<WorldCountry, BasicFlag>? flagsMap,
   }) => CountryPicker(
     countries: items ?? this.items,
     addAutomaticKeepAlives:
@@ -241,5 +246,6 @@ class CountryPicker extends BasicPicker<WorldCountry> {
     verticalDirection: verticalDirection ?? this.verticalDirection,
     spacing: spacing ?? this.spacing,
     translation: translation ?? this.translation,
+    flagsMap: flagsMap ?? this.flagsMap,
   );
 }

@@ -72,10 +72,17 @@ class _SettingsDialogState extends State<SettingsDialog> {
               child: DecoratedBox(
                 decoration: BoxDecoration(
                   image: DecorationImage(
-                    image: NetworkImage(_country.flagPngUrl(), scale: 0.1),
+                    fit: BoxFit.fitHeight,
+                    image: NetworkImage(_country.flagPngUrl()),
                   ),
                 ),
-                child: Opacity(opacity: opacityValue, child: flag),
+                child: AspectRatio(
+                  aspectRatio:
+                      ratio ??
+                      _country.flagProperties?.aspectRatio ??
+                      FlagConstants.defaultAspectRatio,
+                  child: Opacity(opacity: opacityValue, child: flag),
+                ),
               ),
             ),
             bottomNavigationBar: SliderTheme(

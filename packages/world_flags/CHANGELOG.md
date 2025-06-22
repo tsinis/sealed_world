@@ -1,3 +1,28 @@
+## 2.5.0
+
+FIX
+
+- Adjust height and width factors for Afghanistan flag properties and update `ShahadaPainter` translation logic.
+
+NEW FEATURES
+
+- Added new flag definitions for international and constructed languages (e.g., European Union, Esperanto, Ido, Interlingue, Interlingua, Volapük).
+- Introduce `IsoFlag` widget and `DecoratedFlagWidget` base class.
+- Unified flag widget interfaces to support foreground child widgets, explicit sizing, and improved decoration options.
+- Added `height` and `width` parameters to the `BasicFlag`.
+- Added new collections and extensions for mapping currencies and languages to countries (via `byCountryMap` method), including support for unofficial and constructed languages.
+- Introduced methods to prioritize and customize country associations for languages and currencies.
+- Improved diagnostics and theming for flag widgets, including support for custom overlay widgets.
+- Added new extension methods and interfaces for easier flag and country data access.
+
+CHORE
+
+- The Dart SDK was bumped to v3.8.1.
+- Deprecated outdated Afghanistan flag and updated references to its alternative.
+- Deprecated `foregroundWidget` parameter in flag widgets, in favor of `child` one.
+- Update German and English translations (for multiple countries).
+- Updated official `languages` lists for Ethiopia and Iraq to reflect additional recognized languages.
+
 ## 2.4.1
 
 CHORE

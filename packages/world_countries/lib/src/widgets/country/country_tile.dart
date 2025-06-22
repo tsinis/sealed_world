@@ -114,7 +114,7 @@ class CountryTile extends ListItemTile<WorldCountry> {
          leading: Padding(
            padding: const EdgeInsets.only(top: UiConstants.point),
            child:
-               leading ??
+               leading ?? // TODO? Remove padding if `isDense`.
                Builder(
                  builder: (context) => CountryFlag.simplified(
                    country.item,
