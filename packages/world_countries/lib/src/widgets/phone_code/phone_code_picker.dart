@@ -126,36 +126,32 @@ class PhoneCodePicker extends CountryPicker {
           constraints: UiConstants.constraints,
           child: FittedBox(
             fit: BoxFit.scaleDown,
-            child: Builder(
-              builder: (bc) => Column(
-                mainAxisSize: MainAxisSize.min,
-                children: [
-                  flagsMap[itemProperties.item]?.copyWith(height: 18) ??
-                      CountryFlag.simplified(
-                        itemProperties.item,
-                        height: 18,
-                        aspectRatio:
-                            bc.flagTheme?.aspectRatio ??
-                            FlagConstants.defaultAspectRatio,
-                        decoration:
-                            bc.flagTheme?.decoration ??
-                            const BoxDecoration(
-                              borderRadius: BorderRadius.all(
-                                Radius.circular(UiConstants.point / 2),
-                              ),
+            child: Column(
+              mainAxisSize: MainAxisSize.min,
+              children: [
+                flagsMap[itemProperties.item] ??
+                    CountryFlag.simplified(
+                      itemProperties.item,
+                      height: 18,
+                      aspectRatio:
+                          context.flagTheme?.aspectRatio ??
+                          FlagConstants.defaultAspectRatio,
+                      decoration:
+                          context.flagTheme?.decoration ??
+                          const BoxDecoration(
+                            borderRadius: BorderRadius.all(
+                              Radius.circular(UiConstants.point / 2),
                             ),
-                      ),
-                  Padding(
-                    padding: const EdgeInsets.only(
-                      right: UiConstants.point / 2,
+                          ),
                     ),
-                    child: Text(
-                      itemProperties.item.idd.phoneCode(),
-                      style: bc.theme.textTheme.labelSmall,
-                    ),
+                Padding(
+                  padding: const EdgeInsets.only(right: UiConstants.point / 2),
+                  child: Text(
+                    itemProperties.item.idd.phoneCode(),
+                    style: context.theme.textTheme.labelSmall,
                   ),
-                ],
-              ),
+                ),
+              ],
             ),
           ),
         ),

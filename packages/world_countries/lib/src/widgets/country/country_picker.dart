@@ -123,7 +123,7 @@ class CountryPicker extends BasicPicker<WorldCountry> {
         ? CountryTile.simple(
             itemProperties,
             title: maybeNameTitle,
-            leading: flagsMap[itemProperties.item]?.copyWith(height: 16),
+            leading: flagsMap[itemProperties.item],
             onPressed: (country) =>
                 // ignore: prefer-correct-handler-name, breaking change.
                 maybeSelectAndPop(country, itemProperties.context),
@@ -131,7 +131,7 @@ class CountryPicker extends BasicPicker<WorldCountry> {
         : CountryTile.fromProperties(
             itemProperties,
             title: maybeNameTitle,
-            leading: flagsMap[itemProperties.item]?.copyWith(height: 18),
+            leading: flagsMap[itemProperties.item],
             onPressed: onSelect,
           );
   }
