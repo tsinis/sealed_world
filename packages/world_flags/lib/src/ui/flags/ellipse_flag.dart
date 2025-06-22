@@ -23,6 +23,7 @@ class EllipseFlag extends BasicFlag {
   /// - [foregroundPainter]: A custom painter for the foreground of the flag.
   /// - [child]: A widget to display in the foreground of the flag.
   /// - [foregroundWidgetBuilder]: A builder for the foreground widget.
+  /// - [key]: The key for the widget.
   const EllipseFlag(
     super.properties, {
     super.aspectRatio,

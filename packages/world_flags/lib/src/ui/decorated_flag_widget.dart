@@ -8,7 +8,7 @@ import "../interfaces/decorated_flag_interface.dart";
 ///
 /// The [DecoratedFlagWidget] widget can be used to a flag. It supports various
 /// customization options such as height, width, aspect ratio, decoration
-/// (and it's position), padding, and a child widget.
+/// (and its position), padding, and a child widget.
 abstract class DecoratedFlagWidget extends StatelessWidget
     implements DecoratedFlagInterface {
   /// Creates a [DecoratedFlagWidget] widget with a simple flag representation.
@@ -17,12 +17,12 @@ abstract class DecoratedFlagWidget extends StatelessWidget
   /// - [decoration]: The decoration to paint behind the flag.
   /// - [decorationPosition]: The position of the decoration.
   /// - [padding]: The padding around the flag.
-  /// - [child]: A widget to display in the foreground of the flag.
   /// - [width]: The width of the flag. If `null`, the width from the flag theme
   ///  is used.
   /// - [height]: The height of the flag. If `null`, the height from the flag
   ///  theme is used.
   /// - [child]: A widget to display in the foreground of the flag.
+  /// - [key]: The key for the widget.
   const DecoratedFlagWidget({
     this.aspectRatio,
     this.decoration,

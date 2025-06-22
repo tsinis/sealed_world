@@ -13,7 +13,7 @@ import "flags/basic_flag.dart";
 ///
 /// The [IsoFlag] widget can be used to display either a simplified or a
 /// custom flag for a specified ISO object. It supports various customization
-/// options such as height, width, aspect ratio, decoration (and it's position),
+/// options such as height, width, aspect ratio, decoration (and its position),
 /// padding, and a child widget.
 ///
 /// Example usage:

@@ -1,3 +1,4 @@
+import "package:flutter/foundation.dart" show immutable;
 import "package:flutter/rendering.dart";
 import "package:flutter/widgets.dart" show Widget;
 
@@ -7,6 +8,7 @@ import "package:flutter/widgets.dart" show Widget;
 /// This interface provides a consistent way to define and access the properties
 /// of a decorated flag, including its aspect ratio, decoration, decoration
 /// position, padding, height, and width.
+@immutable
 abstract interface class DecoratedFlagInterface {
   /// Creates a new instance of [DecoratedFlagInterface].
   ///

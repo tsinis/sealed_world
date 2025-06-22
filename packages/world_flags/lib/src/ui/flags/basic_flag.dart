@@ -5,8 +5,8 @@ import "package:flutter/widgets.dart";
 
 import "../../debug/flag_properties_property.dart";
 import "../../helpers/extensions/box_decoration_extension.dart";
+import "../../helpers/extensions/decorated_flag_interface_extension.dart";
 import "../../helpers/extensions/world_flags_build_context_extension.dart";
-import "../../interfaces/decorated_flag_interface.dart";
 import "../../model/flag_properties.dart";
 import "../../model/typedefs.dart";
 import "../decorated_flag_widget.dart";
@@ -15,7 +15,7 @@ import "../painters/basic/stripes_painter.dart";
 /// A widget that represents a basic flag with customizable properties,
 /// decorations, and elements.
 ///
-/// This class implements [DecoratedFlagInterface] to provide a consistent
+/// This class extends [DecoratedFlagWidget] to provide a consistent
 /// interface for decorated flags. It allows for various customizations such as
 /// aspect ratio, decoration, padding, height, width, and custom painters
 /// for background and foreground elements.
@@ -38,6 +38,7 @@ class BasicFlag extends DecoratedFlagWidget {
   /// - [width]: The width of the flag. If `null`, the width from the flag theme
   /// is used.
   /// - [child]: A widget to display in the foreground of the flag.
+  /// - [key]: The key for the widget.
   const BasicFlag(
     this.properties, {
     super.aspectRatio,
@@ -211,7 +212,7 @@ class BasicFlag extends DecoratedFlagWidget {
             child: AspectRatio(
               aspectRatio: _boxRatio(
                 boxDecoration,
-                aspectRatio ?? theme?.aspectRatio,
+                aspectRatio ?? calculatedAspectRatio ?? theme?.aspectRatio,
               ),
               child: CustomPaint(
                 painter:

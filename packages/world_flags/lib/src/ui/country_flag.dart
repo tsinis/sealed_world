@@ -12,7 +12,7 @@ import "iso_flag.dart";
 ///
 /// The [CountryFlag] widget can be used to display either a simplified or a
 /// custom flag for a specified country. It supports various customization
-/// options such as height, width, aspect ratio, decoration (and it's position),
+/// options such as height, width, aspect ratio, decoration (and its position),
 /// padding, and a child widget.
 ///
 /// Example usage:
@@ -37,6 +37,7 @@ class CountryFlag extends IsoFlag<WorldCountry, BasicFlag> {
   /// - [width]: The width of the flag. If `null`, the width from the flag theme
   ///  is used.
   /// - [child]: A widget to display in the foreground of the flag.
+  /// - [key]: The key for the widget.
   const CountryFlag.simplified(
     WorldCountry country, {
     super.alternativeMap = smallSimplifiedAlternativeFlagsMap,
@@ -49,7 +50,7 @@ class CountryFlag extends IsoFlag<WorldCountry, BasicFlag> {
     super.orElse,
     super.child,
     super.key,
-  }) : super(country, smallSimplifiedFlagsMap); // TODO! Check asserts.
+  }) : super(country, smallSimplifiedFlagsMap);
 
   /// Creates a [CountryFlag] widget with a custom flag representation.
   ///
@@ -66,6 +67,7 @@ class CountryFlag extends IsoFlag<WorldCountry, BasicFlag> {
   /// - [width]: The width of the flag. If `null`, the width from the flag theme
   /// is used.
   /// - [child]: A widget to display in the foreground of the flag.
+  /// - [key]: The key for the widget.
   const CountryFlag.custom(
     super.item,
     super._map, {

@@ -2,6 +2,7 @@
 
 import "package:flutter/material.dart";
 
+import "../helpers/extensions/decorated_flag_interface_extension.dart";
 import "../interfaces/decorated_flag_interface.dart";
 
 /// A class that defines the theme data for a flag, including its aspect ratio,
@@ -69,10 +70,6 @@ class FlagThemeData extends ThemeExtension<FlagThemeData>
 
   /// The specified aspect ratio of the flag.
   double? get specifiedAspectRatio => _aspectRatio;
-
-  /// The calculated aspect ratio of the flag based on its width and height.
-  double? get calculatedAspectRatio =>
-      width == null || height == null ? null : (width ?? 1) / (height ?? 1);
 
   /// Creates a copy of this [FlagThemeData] but with the given fields replaced
   /// with the new values.
