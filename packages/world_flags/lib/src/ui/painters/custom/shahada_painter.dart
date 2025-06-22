@@ -45,7 +45,7 @@ final class ShahadaPainter extends CustomElementsPainter {
     canvas
       ..save()
       ..translate(
-        width * 0.25,
+        width * (_hasSabre ? 1 / 4 : 0.1),
         center.dy * 0.92 / (_hasSabre ? ratio : max(1.2, ratio)),
       );
     _paintShahada(canvas, height, width / 2, paint);

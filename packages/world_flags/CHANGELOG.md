@@ -1,5 +1,9 @@
 ## 2.5.0
 
+FIX
+
+- Adjust height and width factors for Afghanistan flag properties and update `ShahadaPainter` translation logic.
+
 NEW FEATURES
 
 - Added new flag definitions for international and constructed languages (e.g., European Union, Esperanto, Ido, Interlingue, Interlingua, Volapük).

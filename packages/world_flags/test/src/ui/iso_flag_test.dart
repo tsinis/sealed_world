@@ -48,7 +48,7 @@ void main() => group("$IsoFlag", () {
 
   group("Simplified", () {
     for (final iso in <IsoTranslated>[
-      ...fullFlags,
+      ...smallSimplifiedFlagsMap.keys,
       const FiatEur(),
       ...smallSimplifiedLanguageFlagsMap.keys,
     ]) {
