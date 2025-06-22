@@ -43,4 +43,27 @@ void main() => group("$CountryFlag", () {
 
     expect(find.byType(FlutterLogo), findsNothing);
   });
+
+  testWidgets("circle flag decoration", (tester) async {
+    await tester.pumpWidget(
+      MaterialApp(
+        home: const CountryFlag.simplified(value).basicFlag?.copyWith(
+          decoration: const BoxDecoration(shape: BoxShape.circle),
+        ),
+      ),
+    );
+    await tester.pumpAndSettle();
+
+    expect(find.byType(FlutterLogo), findsNothing);
+    expect(
+      find.byWidgetPredicate(
+        (widget) =>
+            widget is DecoratedBox &&
+            widget.decoration is BoxDecoration &&
+            // ignore: avoid-type-casts, it's just a test.
+            (widget.decoration as BoxDecoration).shape == BoxShape.circle,
+      ),
+      findsOneWidget,
+    );
+  });
 });
