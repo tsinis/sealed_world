@@ -1,3 +1,32 @@
+## 3.7.0
+
+FIX
+
+- Adjust height and width factors for Afghanistan flag properties and update `ShahadaPainter` translation logic.
+
+NEW FEATURES
+
+- Introduced adaptive flag selection for language and currency pickers (via `.adaptiveFlag` constructor), automatically displaying the most relevant flag based on locale or user context. For example - they automatically show the most relevant flag based on the user's device locale, like showing the Austrian flag 🇦🇹 for the German language if the user is in Austria.
+- All pickers now support customizable flag maps and adaptive flag logic for enhanced visual customization (via `flagsMap` parameter).
+- `ClearButton` now extends `IconButton` so it supports all its super parameters, plus several params from the `AnimatedCrossFade` widget.
+- Added new flag definitions for international and constructed languages (e.g., European Union, Esperanto, Ido, Interlingue, Interlingua, Volapük).
+- Introduce `IsoFlag` widget and `DecoratedFlagWidget` base class.
+- Unified flag widget interfaces to support foreground child widgets, explicit sizing, and improved decoration options.
+- Added `height` and `width` parameters to the `BasicFlag`.
+- Added new collections and extensions for mapping currencies and languages to countries (via `byCountryMap` method), including support for unofficial and constructed languages.
+- Introduced methods to prioritize and customize country associations for languages and currencies.
+- Improved diagnostics and theming for flag widgets, including support for custom overlay widgets.
+- Added new extension methods and interfaces for easier flag and country data access.
+
+CHORE
+
+- The Dart SDK was bumped to v3.8.1.
+- The `meta` package has been added as an explicit dependency, but it has the same version constraints as the current stable Flutter SDK version (3.32.4).
+- Deprecated outdated Afghanistan flag and updated references to its alternative.
+- Deprecated `foregroundWidget` parameter in flag widgets, in favor of `child` one.
+- Update German and English translations (for multiple countries).
+- Updated official `languages` lists for Ethiopia and Iraq to reflect additional recognized languages.
+
 ## 3.6.0
 
 NEW FEATURES

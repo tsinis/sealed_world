@@ -213,6 +213,9 @@ class _MainPageState extends State<MainPage>
 
 For more usage examples, please see the `/example` folder.
 
+> [!TIP]
+> For a smarter flag display, use the experimental `.adaptiveFlags` constructors, in currency and language picker. For example - they automatically show the most relevant flag based on the user's device locale, like showing the Austrian flag 🇦🇹 for the German language if the user is in Austria.
+
 ### Data
 
 Pickers are providing a lot of info about the countries/languages/currencies:
