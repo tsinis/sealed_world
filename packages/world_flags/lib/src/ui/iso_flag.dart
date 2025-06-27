@@ -58,16 +58,19 @@ class IsoFlag<T extends IsoStandardized, F extends BasicFlag>
     super.key,
   }) : _alternativeMap = alternativeMap;
 
+  final Map<T, F> _map;
+  final Map<T, F>? _alternativeMap;
+
   /// The item for which the flag is to be displayed.
   final T item;
 
   /// A map of flags for ISO objects.
   ///
   /// This map is used to look up the flag for the specified [item].
-  final Map<T, F> _map;
+  Map<T, F> get map => _map;
 
   /// Map of non-official or alternative flags of the ISO objects.
-  final Map<T, F>? _alternativeMap;
+  Map<T, F>? get alternativeMap => _alternativeMap;
 
   /// A widget to display if the flag is not found in the map.
   final Widget? orElse;
@@ -170,17 +173,17 @@ class IsoFlag<T extends IsoStandardized, F extends BasicFlag>
         ),
       )
       ..add(
-        IterableProperty<T>(
-          "_alternativeMap",
-          _alternativeMap?.keys,
+        DiagnosticsProperty<Map<T, F>?>(
+          "alternativeMap",
+          alternativeMap,
           ifEmpty: "empty alternative flags map provided",
           ifNull: "no alternative flags map provided",
         ),
       )
       ..add(
-        IterableProperty<T>(
-          "_map",
-          _map.keys,
+        DiagnosticsProperty<Map<T, F>>(
+          "map",
+          map,
           ifEmpty: "empty flags map provided",
         ),
       );

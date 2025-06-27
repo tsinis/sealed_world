@@ -72,6 +72,7 @@ export "src/helpers/extensions/box_decoration_extension.dart";
 export "src/helpers/extensions/country_flag_extension.dart";
 export "src/helpers/extensions/decorated_flag_interface_extension.dart";
 export "src/helpers/extensions/flag_extension.dart";
+export "src/helpers/extensions/iso_flag_extension.dart";
 export "src/helpers/extensions/world_flags_build_context_extension.dart";
 export "src/interfaces/decorated_flag_interface.dart";
 export "src/model/colors_properties.dart";
