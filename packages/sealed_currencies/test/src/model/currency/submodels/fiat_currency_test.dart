@@ -678,7 +678,6 @@ void main() => group("$FiatCurrency", () {
           const BasicLocale(abkhazia, countryCode: nonExistCode),
           useLanguageFallback: false,
         );
-        // ignore: avoid-continue, it's just a test.
         if (maybeMissing != null) continue;
         count += 1;
         expect(
@@ -739,14 +738,11 @@ void main() => group("$FiatCurrency", () {
         ..sort((a, b) => a.code.compareTo(b.code));
 
       expect(sortedLanguages, containsAll(kMaterialSupportedLanguagesSealed));
-
       expect(sortedLanguages, containsAll(kCupertinoSupportedLanguagesSealed));
-
       expect(sortedLanguages, kSealedCurrenciesSupportedLanguages);
 
       for (final currency in FiatCurrency.list) {
         for (final l10n in kSealedCurrenciesSupportedLanguages) {
-          // ignore: avoid-continue, it's just a test.
           if (l10n == const LangEng()) continue;
           expect(
             currency.translation(BasicLocale(l10n)),

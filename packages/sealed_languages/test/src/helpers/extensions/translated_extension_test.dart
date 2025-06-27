@@ -140,7 +140,6 @@ void main() => group("TranslatedExtension", () {
         const BasicLocale(abkhazia, countryCode: nonExistCode),
         useLanguageFallback: false,
       );
-      // ignore: avoid-continue, it's just a test.
       if (maybeMissing != null) continue;
       count += 1;
       expect(
@@ -181,14 +180,11 @@ void main() => group("TranslatedExtension", () {
       ..sort((a, b) => a.code.compareTo(b.code));
 
     expect(sortedLanguages, kSealedLanguagesSupportedLanguages);
-
     expect(sortedLanguages, containsAll(kMaterialSupportedLanguagesSealed));
-
     expect(sortedLanguages, containsAll(kCupertinoSupportedLanguagesSealed));
 
     for (final language in NaturalLanguage.list) {
       for (final l10n in kSealedLanguagesSupportedLanguages) {
-        // ignore: avoid-continue, it's just a test.
         if (l10n == const LangEng()) continue;
         expect(
           language.translation(BasicLocale(l10n)),

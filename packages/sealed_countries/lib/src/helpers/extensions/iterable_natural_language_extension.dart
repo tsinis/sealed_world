@@ -1,5 +1,3 @@
-// ignore_for_file: avoid-continue
-
 import "package:sealed_currencies/sealed_currencies.dart";
 
 import "../../collections/natural_language_country_collections.dart";

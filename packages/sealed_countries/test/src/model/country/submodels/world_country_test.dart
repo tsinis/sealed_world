@@ -1101,7 +1101,6 @@ void main() => group("$WorldCountry", () {
           const BasicTypedLocale(language, regionalCode: nonExistCode),
           useLanguageFallback: false,
         );
-        // ignore: avoid-continue, it's just a test.
         if (maybeMissing != null) continue;
         count += 1;
         expect(
@@ -1166,7 +1165,6 @@ void main() => group("$WorldCountry", () {
 
       for (final country in WorldCountry.list) {
         for (final l10n in kSealedCountriesSupportedLanguages) {
-          // ignore: avoid-continue, it's just a test.
           if (l10n == const LangEng()) continue;
           expect(
             country.translation(BasicTypedLocale(l10n)),
