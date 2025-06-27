@@ -4,6 +4,7 @@ import "dart:ui";
 
 import "../model/colors_properties.dart";
 import "../model/elements/elements_properties.dart";
+import "../model/flag_elements_type.dart";
 import "../model/flag_properties.dart";
 import "../model/shape.dart";
 
@@ -90,6 +91,7 @@ const flagEurProperties = FlagProperties(
 /// Flag properties of language Esperanto (EPO).
 const flagEpoProperties = FlagProperties(
   [ColorsProperties(Color(0xff009900))],
+  baseElementType: FlagElementsType.rectangle,
   elementsProperties: [
     ElementsProperties(
       Color(0xffffffff),
@@ -110,6 +112,7 @@ const flagEpoProperties = FlagProperties(
 /// Flag properties of Ido (IDO).
 const flagIdoProperties = FlagProperties(
   [ColorsProperties(Color(0xff197dc8))],
+  baseElementType: FlagElementsType.star,
   elementsProperties: [
     ElementsProperties(
       Color(0xffffffff),
@@ -132,6 +135,7 @@ const flagIdoProperties = FlagProperties(
 /// Flag properties of Interlingue (ILE).
 const flagIleProperties = FlagProperties(
   [ColorsProperties(Color(0xffFFFF00))],
+  baseElementType: FlagElementsType.ellipse,
   elementsProperties: [
     ElementsProperties(
       Color(0xff000000),
@@ -156,6 +160,7 @@ const flagIleProperties = FlagProperties(
 /// Flag properties of Interlingua (INA).
 const flagInaProperties = FlagProperties(
   [ColorsProperties(Color(0xff0000FF)), ColorsProperties(Color(0xffFF0000))],
+  baseElementType: FlagElementsType.star,
   elementsProperties: [
     ElementsProperties(
       Color(0xffffffff),
@@ -169,6 +174,7 @@ const flagInaProperties = FlagProperties(
 /// Flag properties of Volapük (VOL).
 const flagVolProperties = FlagProperties(
   [ColorsProperties(Color(0xff660066))],
+  baseElementType: FlagElementsType.rectangle,
   elementsProperties: [
     ElementsProperties(
       Color(0xffFFF55F),

@@ -78,6 +78,7 @@ export "src/interfaces/decorated_flag_interface.dart";
 export "src/model/colors_properties.dart";
 export "src/model/elements/custom_elements_properties.dart";
 export "src/model/elements/elements_properties.dart";
+export "src/model/flag_elements_type.dart";
 export "src/model/flag_properties.dart";
 export "src/model/shape.dart";
 export "src/model/stripe_orientation.dart";
