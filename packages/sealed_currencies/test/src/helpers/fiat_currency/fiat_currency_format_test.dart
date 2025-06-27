@@ -1,5 +1,3 @@
-// ignore_for_file: prefer-digit-separators, TODO: Until Dart 3.7.0
-
 import "package:sealed_currencies/src/helpers/fiat_currency/fiat_currency_format.dart";
 import "package:sealed_currencies/src/helpers/fiat_currency/fiat_currency_getters.dart";
 import "package:sealed_currencies/src/model/currency/currency.dart";
@@ -68,10 +66,13 @@ void main() => group("FiatCurrencyFormat", () {
       expect(valueWithoutDot.format(100), "${valueWithoutDot.unit} 100");
       expect(valueWithoutDot.format(1000), "${valueWithoutDot.unit} 1.000");
       expect(valueWithoutDot.format(10000), "${valueWithoutDot.unit} 10.000");
-      expect(valueWithoutDot.format(100000), "${valueWithoutDot.unit} 100.000");
+      expect(
+        valueWithoutDot.format(100_000),
+        "${valueWithoutDot.unit} 100.000",
+      );
 
       expect(
-        valueWithoutDot.format(1000000),
+        valueWithoutDot.format(1_000_000),
         "${valueWithoutDot.unit} 1.000.000",
       );
     });
