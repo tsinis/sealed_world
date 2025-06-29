@@ -87,7 +87,7 @@ class FlagProperties {
   @visibleForTesting
   final String url;
 
-  /// The base flag's element type. Its typically corresponds to the flag's
+  /// The base flag's element type. It typically corresponds to the flag's
   /// [elementsProperties] first shape, but it can be different (e.g.
   /// multi-element).
   ///
@@ -105,5 +105,5 @@ class FlagProperties {
       "FlagProperties($stripeColors, aspectRatio: $aspectRatio, "
       "stripeOrientation: $stripeOrientation, url: $url"
       """${elementsProperties == null ? '' : ', elementsProperties: $elementsProperties'}"""
-      """${baseElementType == null ? '' : ', baseElementType: $baseElementType'},)""";
+      """${baseElementType == null ? '' : ', baseElementType: $baseElementType'})""";
 }

@@ -343,7 +343,7 @@ const flagSdnProperties = FlagProperties(
     ColorsProperties(Color(0xff000000)),
   ],
   aspectRatio: 2,
-  baseElementType: FlagElementsType.star,
+  baseElementType: FlagElementsType.triangle,
   elementsProperties: [
     ElementsProperties(
       Color(0xff007229),
