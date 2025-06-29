@@ -7,6 +7,7 @@ import "package:flutter_test/flutter_test.dart";
 import "package:world_flags/src/debug/flag_properties_property.dart";
 import "package:world_flags/src/model/colors_properties.dart";
 import "package:world_flags/src/model/elements/elements_properties.dart";
+import "package:world_flags/src/model/flag_elements_type.dart";
 import "package:world_flags/src/model/flag_properties.dart";
 import "package:world_flags/src/model/shape.dart";
 import "package:world_flags/src/model/stripe_orientation.dart";
@@ -15,6 +16,7 @@ void main() => group("$FlagPropertiesProperty", () {
   const withElements = FlagProperties(
     [ColorsProperties(Color(0xFF000000)), ColorsProperties(Color(0xFFFFFFFF))],
     elementsProperties: [ElementsProperties(Color(0xFF000000), shape: Star())],
+    baseElementType: FlagElementsType.star,
   );
 
   const flagWithoutElements = FlagProperties(
@@ -53,7 +55,8 @@ void main() => group("$FlagPropertiesProperty", () {
       final json = property.toJsonMap(const DiagnosticsSerializationDelegate());
 
       expect(json["aspectRatio"], 1.5);
-      expect(json["orientation"], withElements.stripeOrientation.toString());
+      expect(json["orientation"], withElements.stripeOrientation.name);
+      expect(json["baseElementType"], withElements.baseElementType?.name);
       expect(json["stripesCount"], 2);
       expect(json["elementsCount"], 1);
     });
@@ -63,9 +66,10 @@ void main() => group("$FlagPropertiesProperty", () {
       final json = property.toJsonMap(const DiagnosticsSerializationDelegate());
 
       expect(json["aspectRatio"], 2.0);
+      expect(json["orientation"], flagWithoutElements.stripeOrientation.name);
       expect(
-        json["orientation"],
-        flagWithoutElements.stripeOrientation.toString(),
+        json["baseElementType"],
+        flagWithoutElements.baseElementType?.name,
       );
       expect(json["stripesCount"], 3);
       expect(json.containsKey("elementsCount"), isFalse);
@@ -79,6 +83,7 @@ void main() => group("$FlagPropertiesProperty", () {
 
       expect(string, contains("aspectRatio: 1.5"));
       expect(string, contains("stripeOrientation: horizontal"));
+      expect(string, contains("baseElementType: star"));
       expect(string, contains("stripeColors: 2"));
       expect(string, contains("elementsProperties: 1"));
     });
@@ -89,6 +94,7 @@ void main() => group("$FlagPropertiesProperty", () {
 
       expect(string, contains("aspectRatio: 2"));
       expect(string, contains("stripeOrientation: vertical"));
+      expect(string, contains("baseElementType: null"));
       expect(string, contains("stripeColors: 3"));
       expect(string, contains("has no foreground elementsProperties"));
     });

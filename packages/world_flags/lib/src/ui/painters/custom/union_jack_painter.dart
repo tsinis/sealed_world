@@ -81,6 +81,7 @@ final class UnionJackPainter extends SimpleShieldPainter {
 
     canvas
       ..drawRect(rect, paintCreator(_blueColor))
+      // ignore: deprecated_member_use_from_same_package, it's TODO!
       ..clipRect(rect, doAntiAlias: flagAntiAliasOverride)
       ..save()
       ..translate(width / 2, height / 2)

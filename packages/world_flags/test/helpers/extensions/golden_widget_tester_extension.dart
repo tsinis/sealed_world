@@ -17,8 +17,6 @@ extension GoldenWidgetTesterExtension on WidgetTester {
   };
 
   Future<void> flagGolden<T extends IsoTranslated>(T iso, FlagType type) async {
-    if (!Platform.isLinux && _ignoreOnNonLinux.contains(iso)) return;
-
     final aspectRatio = iso is WorldCountry
         ? (iso.flagProperties?.aspectRatio ?? 1)
         : FlagConstants.defaultAspectRatio;
@@ -39,6 +37,8 @@ extension GoldenWidgetTesterExtension on WidgetTester {
     return expectLater(
       find.byType(IsoFlag<T, BasicFlag>),
       matchesGoldenFile(file),
+      skip: !Platform.isLinux && _ignoreOnNonLinux.contains(iso),
+      reason: "Non-Linux platforms rendering those flags slightly differently",
     );
   }
 

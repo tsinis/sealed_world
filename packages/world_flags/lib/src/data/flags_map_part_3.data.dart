@@ -5,6 +5,7 @@ import "../constants/flag_constants.dart";
 import "../model/colors_properties.dart";
 import "../model/elements/custom_elements_properties.dart";
 import "../model/elements/elements_properties.dart";
+import "../model/flag_elements_type.dart";
 import "../model/flag_properties.dart";
 import "../model/shape.dart";
 import "../model/stripe_orientation.dart";
@@ -63,6 +64,7 @@ const flagIotProperties = FlagProperties(
 const flagGrdProperties = FlagProperties(
   [ColorsProperties(Color(0xff009739))],
   aspectRatio: 5 / 3,
+  baseElementType: FlagElementsType.multiElement,
   elementsProperties: [
     ElementsProperties(
       Color(0xffFFD100),
@@ -384,6 +386,7 @@ const flagNamProperties = FlagProperties(
     ColorsProperties(Color(0xff009A44), ratio: 210),
   ],
   stripeOrientation: StripeOrientation.diagonalBottomLeftToTopRight,
+  baseElementType: FlagElementsType.star,
   elementsProperties: [
     ElementsProperties(
       Color(0xffFFCD00),
@@ -416,6 +419,7 @@ const flagMozProperties = FlagProperties(
     ColorsProperties(Color(0xffffffff)),
     ColorsProperties(Color(0xffFFD100), ratio: 10),
   ],
+  baseElementType: FlagElementsType.triangle,
   elementsProperties: [
     ElementsProperties(
       Color(0xffE4002B),
@@ -469,6 +473,7 @@ const flagMmrProperties = FlagProperties(
     ColorsProperties(Color(0xff34b233)),
     ColorsProperties(Color(0xffea2839)),
   ],
+  baseElementType: FlagElementsType.star,
   elementsProperties: [
     ElementsProperties(
       Color(0xffffffff),
@@ -489,6 +494,7 @@ const flagCafProperties = FlagProperties(
     ColorsProperties(Color(0xff289728)),
     ColorsProperties(Color(0xffffce00)),
   ],
+  baseElementType: FlagElementsType.multiElement,
   elementsProperties: [
     ElementsProperties(
       Color(0xffd21034),
@@ -558,6 +564,7 @@ const flagVgbProperties = FlagProperties(
 const flagTonProperties = FlagProperties(
   [ColorsProperties(Color(0xffc10000))],
   aspectRatio: 2,
+  baseElementType: FlagElementsType.multiElement,
   elementsProperties: [
     ElementsProperties(
       Color(0xffffffff),
@@ -588,6 +595,7 @@ const flagTonProperties = FlagProperties(
 /// Flag properties of country Tunisia (TN).
 const flagTunProperties = FlagProperties(
   [ColorsProperties(Color(0xffe70013))],
+  baseElementType: FlagElementsType.ellipse,
   elementsProperties: [
     ElementsProperties(
       Color(0xffffffff),
@@ -634,6 +642,7 @@ const flagAlaProperties = FlagProperties(
     ColorsProperties(Color(0xff0064AD), ratio: 60),
   ],
   aspectRatio: 26 / 17,
+  baseElementType: FlagElementsType.multiElement,
   elementsProperties: [
     ElementsProperties(
       Color(0xffFFD300),
@@ -686,6 +695,7 @@ const flagJorProperties = FlagProperties(
     ColorsProperties(Color(0xff007a3d)),
   ],
   aspectRatio: 2,
+  baseElementType: FlagElementsType.triangle,
   elementsProperties: [
     ElementsProperties(
       Color(0xffce1126),
@@ -722,6 +732,7 @@ const flagGhaProperties = FlagProperties(
     ColorsProperties(Color(0xffFCD20F)),
     ColorsProperties(Color(0xff006B3D)),
   ],
+  baseElementType: FlagElementsType.star,
   elementsProperties: [
     ElementsProperties(
       Color(0xff000000),
@@ -773,6 +784,7 @@ const flagSmrProperties = FlagProperties(
 /// Flag properties of country Panama (PA).
 const flagPanProperties = FlagProperties(
   [ColorsProperties(Color(0xffDA121A)), ColorsProperties(Color(0xff072357))],
+  baseElementType: FlagElementsType.multiElement,
   elementsProperties: [
     ElementsProperties(
       Color(0xffffffff),
@@ -869,6 +881,7 @@ const flagSwzProperties = FlagProperties(
 const flagPlwProperties = FlagProperties(
   [ColorsProperties(Color(0xff4aadd6))],
   aspectRatio: 8 / 5,
+  baseElementType: FlagElementsType.ellipse,
   elementsProperties: [
     ElementsProperties(
       Color(0xffffde00),
@@ -910,6 +923,7 @@ const flagGibProperties = FlagProperties(
     ColorsProperties(Color(0xffda000c), ratio: 38),
   ],
   aspectRatio: 2,
+  baseElementType: FlagElementsType.multiElement,
   elementsProperties: [
     ElementsProperties(
       Color(0xfff8d80e),
@@ -965,6 +979,7 @@ const flagGibProperties = FlagProperties(
 const flagFsmProperties = FlagProperties(
   [ColorsProperties(Color(0xff6797d6))],
   aspectRatio: 19 / 10,
+  baseElementType: FlagElementsType.star,
   elementsProperties: [
     ElementsProperties(
       Color(0xffffffff),
@@ -1073,6 +1088,7 @@ const flagFroProperties = FlagProperties(
     ColorsProperties(Color(0xffFFFFFF), ratio: 6),
   ],
   aspectRatio: 11 / 8,
+  baseElementType: FlagElementsType.multiElement,
   elementsProperties: [
     ElementsProperties(
       Color(0xff005EB9),
@@ -1141,6 +1157,7 @@ const flagSenProperties = FlagProperties(
     ColorsProperties(Color(0xffbc0000)),
   ],
   stripeOrientation: StripeOrientation.vertical,
+  baseElementType: FlagElementsType.star,
   elementsProperties: [
     ElementsProperties(Color(0xff0b7226), shape: Star(), heightFactor: 4 / 12),
   ],
@@ -1154,6 +1171,7 @@ const flagSyrProperties = FlagProperties(
     ColorsProperties(Color(0xffffffff)),
     ColorsProperties(Color(0xff000000)),
   ],
+  baseElementType: FlagElementsType.multiElement,
   elementsProperties: [
     ElementsProperties(
       Color(0xffce1126),
@@ -1181,6 +1199,7 @@ const flagSyrProperties = FlagProperties(
 /// Flag properties of country Sint Maarten (SX).
 const flagSxmProperties = FlagProperties(
   [ColorsProperties(Color(0xffed2939)), ColorsProperties(Color(0xff002395))],
+  baseElementType: FlagElementsType.triangle,
   elementsProperties: [
     ElementsProperties(
       Color(0xffffffff),
@@ -1236,6 +1255,7 @@ const flagPrtProperties = FlagProperties(
 /// Flag properties of country Somalia (SO).
 const flagSomProperties = FlagProperties(
   [ColorsProperties(Color(0xff418FDE))],
+  baseElementType: FlagElementsType.star,
   elementsProperties: [
     ElementsProperties(Color(0xffffffff), shape: Star(), heightFactor: 0.4),
   ],
@@ -1246,6 +1266,7 @@ const flagSomProperties = FlagProperties(
 const flagJamProperties = FlagProperties(
   [ColorsProperties(Color(0xff000000))],
   aspectRatio: 2,
+  baseElementType: FlagElementsType.multiElement,
   elementsProperties: [
     ElementsProperties(
       Color(0xff009B3A),
@@ -1392,6 +1413,7 @@ const flagComProperties = FlagProperties(
     ColorsProperties(Color(0xff003DA5)),
   ],
   aspectRatio: 5 / 3,
+  baseElementType: FlagElementsType.triangle,
   elementsProperties: [
     ElementsProperties(
       Color(0xff239e46),
@@ -1471,6 +1493,7 @@ const flagIrnProperties = FlagProperties(
 const flagGuyProperties = FlagProperties(
   [ColorsProperties(Color(0xff399408))],
   aspectRatio: 5 / 3,
+  baseElementType: FlagElementsType.multiElement,
   elementsProperties: [
     ElementsProperties(
       Color(0xffffffff),
@@ -1723,6 +1746,7 @@ const flagIslProperties = FlagProperties(
     ColorsProperties(Color(0xff02529C), ratio: 7),
   ],
   aspectRatio: 25 / 18,
+  baseElementType: FlagElementsType.multiElement,
   elementsProperties: [
     ElementsProperties(
       Color(0xffffffff),
@@ -1837,6 +1861,7 @@ const flagKnaProperties = FlagProperties(
     ColorsProperties(Color(0xffc70000), ratio: 420),
   ],
   stripeOrientation: StripeOrientation.diagonalBottomLeftToTopRight,
+  baseElementType: FlagElementsType.multiElement,
   elementsProperties: [
     ElementsProperties(
       Color(0xff000000),
@@ -1916,6 +1941,7 @@ const flagFinProperties = FlagProperties(
     ColorsProperties(Color(0xffffffff), ratio: 4),
   ],
   aspectRatio: 18 / 11,
+  baseElementType: FlagElementsType.rectangle,
   elementsProperties: [
     ElementsProperties(
       Color(0xff002f6c),
@@ -1949,6 +1975,7 @@ const flagPseProperties = FlagProperties(
     ColorsProperties(Color(0xff009736)),
   ],
   aspectRatio: 2,
+  baseElementType: FlagElementsType.triangle,
   elementsProperties: [
     ElementsProperties(
       Color(0xffEE2A35),
@@ -1970,6 +1997,7 @@ const flagPriProperties = FlagProperties(
     ColorsProperties(Color(0xffffffff)),
     ColorsProperties(Color(0xffed0000)),
   ],
+  baseElementType: FlagElementsType.triangle,
   elementsProperties: [
     ElementsProperties(
       Color(0xff0050f0),
@@ -2034,6 +2062,7 @@ const flagQatProperties = FlagProperties(
   ],
   aspectRatio: FlagConstants.maxAspectRatio,
   stripeOrientation: StripeOrientation.vertical,
+  baseElementType: FlagElementsType.multiElement,
   elementsProperties: [
     ElementsProperties(
       Color(0xffffffff),
@@ -2122,6 +2151,7 @@ const flagGrlProperties = FlagProperties(
 const flagHtiProperties = FlagProperties(
   [ColorsProperties(Color(0xff00209f)), ColorsProperties(Color(0xffd21034))],
   aspectRatio: 5 / 3,
+  baseElementType: FlagElementsType.rectangle,
   elementsProperties: [
     ElementsProperties(
       Color(0xffffffff),
@@ -2177,6 +2207,7 @@ const flagAbwProperties = FlagProperties(
     ColorsProperties(Color(0xffF7D417)),
     ColorsProperties(Color(0xff418FDE), ratio: 3),
   ],
+  baseElementType: FlagElementsType.star,
   elementsProperties: [
     ElementsProperties(
       Color(0xffffffff),
@@ -2199,6 +2230,7 @@ const flagAbwProperties = FlagProperties(
 const flagCheProperties = FlagProperties(
   [ColorsProperties(Color(0xffff0000))],
   aspectRatio: 1,
+  baseElementType: FlagElementsType.multiElement,
   elementsProperties: [
     ElementsProperties(
       Color(0xffffffff),
@@ -2227,6 +2259,7 @@ const flagMcoProperties = FlagProperties(
 const flagMltProperties = FlagProperties(
   [ColorsProperties(Color(0xffffffff)), ColorsProperties(Color(0xffCF142B))],
   stripeOrientation: StripeOrientation.vertical,
+  baseElementType: FlagElementsType.multiElement,
   elementsProperties: [
     ElementsProperties(
       Color(0xffffffff),
@@ -2302,6 +2335,7 @@ const flagMltProperties = FlagProperties(
 const flagLcaProperties = FlagProperties(
   [ColorsProperties(Color(0xff65cfff))],
   aspectRatio: 2,
+  baseElementType: FlagElementsType.rectangle,
   elementsProperties: [
     ElementsProperties(
       Color(0xff65cfff),

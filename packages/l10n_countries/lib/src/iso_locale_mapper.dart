@@ -51,7 +51,7 @@ class IsoLocaleMapper<V extends Object> {
       final value = map[key];
       if (value != null) results[key] = value;
       final secondary = altKey(key, altSymbol);
-      if (secondary == null) continue; // ignore: avoid-continue, more readable.
+      if (secondary == null) continue;
 
       final altValue = map[secondary];
       if (altValue != null) results[secondary] = altValue;

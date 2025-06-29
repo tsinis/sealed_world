@@ -67,12 +67,14 @@ class StripesPainter<T extends CustomPainter> extends CustomPainter {
       final radius = size.height / 2;
       final circle = Rect.fromCircle(center: rect.center, radius: radius);
       final rRect = RRect.fromRectAndRadius(circle, Radius.circular(radius));
+      // ignore: deprecated_member_use_from_same_package, it's TODO!
       canvas.clipRRect(rRect, doAntiAlias: flagAntiAliasOverride);
     } else if (borderRadius != BorderRadius.zero) {
       final rad = borderRadius.resolve(TextDirection.ltr);
+      // ignore: deprecated_member_use_from_same_package, it's TODO!
       canvas.clipRRect(rad.toRRect(rect), doAntiAlias: flagAntiAliasOverride);
     } else {
-      canvas.clipRect(rect, doAntiAlias: flagAntiAliasOverride);
+      canvas.clipRect(rect, doAntiAlias: false); // Straight rectangle.
     }
   }
 
@@ -81,7 +83,12 @@ class StripesPainter<T extends CustomPainter> extends CustomPainter {
     for (final colorProperty in properties.stripeColors) {
       final stripeSize = size.width * colorProperty.ratio / totalRatio;
       final stripe = Rect.fromLTWH(position, 0, stripeSize, size.height);
-      canvas.drawRect(stripe, Paint()..color = colorProperty.color);
+      canvas.drawRect(
+        stripe,
+        Paint()
+          ..color = colorProperty.color
+          ..isAntiAlias = false,
+      );
       position += stripeSize;
     }
   }
@@ -91,7 +98,12 @@ class StripesPainter<T extends CustomPainter> extends CustomPainter {
     for (final colorProperty in properties.stripeColors) {
       final stripeSize = size.height * colorProperty.ratio / totalRatio;
       final stripe = Rect.fromLTWH(0, position, size.width, stripeSize);
-      canvas.drawRect(stripe, Paint()..color = colorProperty.color);
+      canvas.drawRect(
+        stripe,
+        Paint()
+          ..color = colorProperty.color
+          ..isAntiAlias = false,
+      );
       position += stripeSize;
     }
   }

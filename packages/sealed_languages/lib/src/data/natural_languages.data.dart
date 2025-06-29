@@ -155,6 +155,7 @@ class LangAve extends NaturalLanguage {
         codeShort: "AE",
         namesNative: const ["avesta"],
         family: const IndoEuropean(),
+        isRightToLeft: true, // https://en.wikipedia.org/wiki/Avestan_alphabet
         scripts: const {ScriptAvst()},
       );
 }
@@ -265,7 +266,7 @@ class LangBih extends NaturalLanguage {
         codeShort: "BH",
         namesNative: const ["भोजपुरी"],
         family: const IndoEuropean(),
-        scripts: const {ScriptDeva(), ScriptBhks()},
+        scripts: const {ScriptDeva()},
       );
 }
 
@@ -766,6 +767,11 @@ class LangFul extends NaturalLanguage {
         codeShort: "FF",
         namesNative: const ["Fulfulde", "Pulaar", "Pular"],
         family: const NigerCongo(),
+        scripts: const {
+          ScriptLatn(),
+          ScriptAdlm(),
+          ScriptArab(), // Reference: https://en.wikipedia.org/wiki/Fula_language#Writing_systems
+        },
       );
 }
 
@@ -885,9 +891,12 @@ class LangHau extends NaturalLanguage {
         name: "Hausa",
         code: "HAU",
         codeShort: "HA",
-        namesNative: const ["(Hausa) هَوُسَ"],
+        namesNative: const ["Hausa", "هَوُسَ"],
         family: const AfroAsiatic(),
-        isRightToLeft: true,
+        scripts: const {
+          ScriptLatn(),
+          ScriptArab(), // Reference: https://en.wikipedia.org/wiki/Hausa_language#Writing_system
+        },
       );
 }
 
@@ -1165,6 +1174,10 @@ class LangJav extends NaturalLanguage {
         codeShort: "JV",
         namesNative: const ["ꦧꦱꦗꦮ", "Basa Jawa"],
         family: const Austronesian(),
+        scripts: const {
+          ScriptLatn(),
+          ScriptJava(), // Reference: https://en.wikipedia.org/wiki/Javanese_language#Writing_system
+        },
       );
 }
 
@@ -1228,7 +1241,7 @@ class LangKas extends NaturalLanguage {
         namesNative: const ["कश्मीरी", "كشميري‎"],
         family: const IndoEuropean(),
         isRightToLeft: true,
-        scripts: const {ScriptDeva()},
+        scripts: const {ScriptArab(), ScriptDeva()},
       );
 }
 
@@ -1261,6 +1274,10 @@ class LangKau extends NaturalLanguage {
         codeShort: "KR",
         namesNative: const ["Kanuri"],
         family: const NiloSaharan(),
+        scripts: const {
+          ScriptLatn(),
+          ScriptArab(), // Reference: https://en.wikipedia.org/wiki/Kanuri_language
+        },
       );
 }
 
@@ -1276,7 +1293,11 @@ class LangKaz extends NaturalLanguage {
         codeShort: "KK",
         namesNative: const ["қазақ тілі"],
         family: const Turkic(),
-        scripts: const {ScriptCyrl()},
+        scripts: const {
+          ScriptCyrl(),
+          ScriptLatn(),
+          ScriptArab(), // Reference: https://en.wikipedia.org/wiki/Kazakh_language#Writing_system
+        },
       );
 }
 
@@ -1338,7 +1359,10 @@ class LangKir extends NaturalLanguage {
         codeShort: "KY",
         namesNative: const ["Кыргызча", "Кыргыз тили"],
         family: const Turkic(),
-        scripts: const {ScriptCyrl()},
+        scripts: const {
+          ScriptCyrl(),
+          ScriptArab(), // Reference: https://en.wikipedia.org/wiki/Kyrgyz_language#Writing_system
+        },
       );
 }
 
@@ -1416,8 +1440,7 @@ class LangKur extends NaturalLanguage {
         codeShort: "KU",
         namesNative: const ["Kurdî", "كوردی‎"],
         family: const IndoEuropean(),
-        isRightToLeft: true,
-        scripts: const {ScriptArab(), ScriptLatn()},
+        scripts: const {ScriptArab(), ScriptLatn(), ScriptCyrl()},
       );
 }
 
@@ -1663,7 +1686,10 @@ class LangMon extends NaturalLanguage {
         codeShort: "MN",
         namesNative: const ["Монгол хэл"],
         family: const Mongolic(),
-        scripts: const {ScriptCyrl()},
+        scripts: const {
+          ScriptCyrl(),
+          ScriptMong(), // Reference: https://en.wikipedia.org/wiki/Mongolian_language#Writing_system
+        },
       );
 }
 
@@ -1696,7 +1722,10 @@ class LangMsa extends NaturalLanguage {
         namesNative: const ["bahasa Melayu", "بهاس ملايو‎"],
         bibliographicCode: "MAY",
         family: const Austronesian(),
-        scripts: const {ScriptArab()},
+        scripts: const {
+          ScriptLatn(),
+          ScriptArab(), // Reference: https://en.wikipedia.org/wiki/Malay_language#Writing_system
+        },
       );
 }
 
@@ -1991,10 +2020,12 @@ class LangPli extends NaturalLanguage {
         family: const IndoEuropean(),
         scripts: const {
           ScriptLatn(),
-          ScriptBrah(),
-          ScriptKhar(),
           ScriptKhmr(),
           ScriptThai(),
+          ScriptDeva(),
+          ScriptMymr(),
+          ScriptSinh(),
+          ScriptLaoo(), // Reference: https://en.wikipedia.org/wiki/P%C4%81li#Writing_system
         },
       );
 }
@@ -2150,7 +2181,18 @@ class LangSan extends NaturalLanguage {
         codeShort: "SA",
         namesNative: const ["संस्कृतम्"],
         family: const IndoEuropean(),
-        scripts: const {ScriptDeva()},
+        scripts: const {
+          ScriptDeva(),
+          ScriptBeng(),
+          ScriptGujr(),
+          ScriptKnda(),
+          ScriptMlym(),
+          ScriptOrya(),
+          ScriptTelu(),
+          ScriptThai(),
+          ScriptLatn(),
+          // Reference: https://en.wikipedia.org/wiki/Sanskrit#Writing_system
+        },
       );
 }
 
@@ -2259,7 +2301,7 @@ class LangSnd extends NaturalLanguage {
         namesNative: const ["सिन्धी", "سنڌي، سندھی‎"],
         family: const IndoEuropean(),
         isRightToLeft: true,
-        scripts: const {ScriptDeva()},
+        scripts: const {ScriptArab(), ScriptDeva()},
       );
 }
 
@@ -2382,6 +2424,10 @@ class LangSun extends NaturalLanguage {
         codeShort: "SU",
         namesNative: const ["Basa Sunda"],
         family: const Austronesian(),
+        scripts: const {
+          ScriptLatn(),
+          ScriptSund(), // Reference: https://en.wikipedia.org/wiki/Sundanese_language#Writing_system
+        },
       );
 }
 
@@ -2458,7 +2504,11 @@ class LangTat extends NaturalLanguage {
         codeShort: "TT",
         namesNative: const ["татар теле", "tatar tele"],
         family: const Turkic(),
-        scripts: const {ScriptCyrl()},
+        scripts: const {
+          ScriptCyrl(),
+          ScriptLatn(),
+          ScriptArab(), // Reference: https://en.wikipedia.org/wiki/Tatar_language#Writing_system
+        },
       );
 }
 
@@ -2598,6 +2648,10 @@ class LangTuk extends NaturalLanguage {
         codeShort: "TK",
         namesNative: const ["Türkmen", "Түркмен"],
         family: const Turkic(),
+        scripts: const {
+          ScriptLatn(),
+          ScriptCyrl(), // Reference: https://en.wikipedia.org/wiki/Turkmen_language#Alphabet
+        },
       );
 }
 
@@ -2643,7 +2697,11 @@ class LangUig extends NaturalLanguage {
         codeShort: "UG",
         namesNative: const ["ئۇيغۇرچە‎", "Uyghurche"],
         family: const Turkic(),
-        scripts: const {ScriptArab()},
+        scripts: const {
+          ScriptArab(),
+          ScriptLatn(),
+          ScriptCyrl(), // Reference: https://en.wikipedia.org/wiki/Uyghur_language#Writing_system
+        },
       );
 }
 
@@ -2692,6 +2750,11 @@ class LangUzb extends NaturalLanguage {
         codeShort: "UZ",
         namesNative: const ["Ўзбек", "أۇزبېك‎", "Oʻzbek"],
         family: const Turkic(),
+        scripts: const {
+          ScriptLatn(),
+          ScriptCyrl(),
+          ScriptArab(), // Reference: https://en.wikipedia.org/wiki/Uzbek_language#Writing_systems
+        },
       );
 }
 
@@ -2767,6 +2830,10 @@ class LangWol extends NaturalLanguage {
         codeShort: "WO",
         namesNative: const ["Wollof"],
         family: const NigerCongo(),
+        scripts: const {
+          ScriptLatn(),
+          ScriptArab(), // Reference: https://en.wikipedia.org/wiki/Wolof_language#Writing_system
+        },
       );
 }
 
@@ -2845,7 +2912,7 @@ class LangZho extends NaturalLanguage {
         namesNative: const ["中文 (Zhōngwén)", "汉语", "漢語"],
         bibliographicCode: "CHI",
         family: const SinoTibetan(),
-        scripts: const {ScriptHans(), ScriptHant(), ScriptBopo(), ScriptLatn()},
+        scripts: const {ScriptHans(), ScriptHant(), ScriptLatn()},
       );
 }
 

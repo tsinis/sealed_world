@@ -718,10 +718,9 @@ class CountriesLocaleMapper extends IsoLocaleMapper<IsoLocaleMapper<String>> {
         }
 
         final secondary = altKey(code, altSymbol);
-        if (secondary == null) continue; // ignore: avoid-continue, early exit.
+        if (secondary == null) continue;
 
         final alternative = (isoCode: secondary, locale: localeEntry.key);
-        // ignore: avoid-continue, also early exit.
         if (results[alternative] != null) continue;
 
         final altL10n = translations[secondary];

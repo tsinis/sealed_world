@@ -83,8 +83,7 @@ abstract base class ElementsPainter extends CustomPainter {
 
   /// Creates a [Paint] object with the specified [color].
   ///
-  /// If no [color] is provided, the `property.mainColor` is used. The paint
-  /// object is configured with anti-aliasing based on [flagAntiAliasOverride].
+  /// If no [color] is provided, the `property.mainColor` is used.
   ///
   /// - [color]: The color to use for the paint. If null, `property.mainColor`
   /// is used.
@@ -95,6 +94,7 @@ abstract base class ElementsPainter extends CustomPainter {
       // ignore: avoid-returning-cascades, it's ok for a shorthand method.
       Paint()
         ..color = color ?? property.mainColor
+        // ignore: deprecated_member_use_from_same_package, it's TODO!
         ..isAntiAlias = flagAntiAliasOverride;
 
   /// Retrieves the shape type if it matches the specified type [T].

@@ -63,24 +63,29 @@ class _MainState extends State<Main> {
           final style = TextStyle(
             color: isFull ? null : Theme.of(bc).disabledColor,
           );
-          final firstNative = item.namesNative?.firstOrNull;
-          final nativeName = firstNative is CountryName
-              ? firstNative.name
-              : firstNative?.toString();
 
-          return ListTile(
-            title: Text(item.internationalName, style: style),
-            leading: Text(item.code, style: style.copyWith(fontSize: 16)),
-            subtitle: Text.rich(TextSpan(text: nativeName), style: style),
-            trailing: ValueListenableBuilder(
-              valueListenable: _aspectRatio,
-              builder: (_, ratio, _) =>
-                  IsoFlag(item, _items, height: _size, aspectRatio: ratio),
-            ),
+          return InkWell(
             onTap: isFull && item is WorldCountry
                 ? () => SettingsDialog.show(_aspectRatio, bc, item)
                 : null,
-            minLeadingWidth: _size * 1.5,
+            child: Row(
+              mainAxisAlignment: MainAxisAlignment.spaceBetween,
+              children: [
+                Flexible(child: Text(item.internationalName, style: style)),
+                ValueListenableBuilder(
+                  valueListenable: _aspectRatio,
+                  builder: (_, aspectRatio, flag) => flag is IsoFlag
+                      ? flag.copyWith(aspectRatio: aspectRatio)
+                      : const SizedBox.shrink(),
+                  child: IsoFlag(
+                    item,
+                    _items,
+                    height: _size,
+                    padding: const EdgeInsets.all(8),
+                  ),
+                ),
+              ],
+            ),
           );
         },
         separatorBuilder: (_, _) =>

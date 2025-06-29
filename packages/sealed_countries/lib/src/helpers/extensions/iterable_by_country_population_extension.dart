@@ -1,5 +1,3 @@
-// ignore_for_file: avoid-continue
-
 import "../../model/country/country.dart";
 
 /// Extension on [Iterable] that provides functionality to map items to
