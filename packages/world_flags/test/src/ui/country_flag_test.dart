@@ -8,8 +8,6 @@ void main() => group("$CountryFlag", () {
   const value = CountryDeu();
   const flag = CountryFlag.custom(value, {}, orElse: FlutterLogo());
 
-  setUpAll(() => flagAntiAliasOverride = true);
-
   test(
     "toStringShort",
     () => expect(flag.toStringShort(), "$CountryFlag(${value.emoji})"),

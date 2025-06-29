@@ -13,8 +13,6 @@ void main() => group("$IsoFlag", () {
   const map = <WorldCountry, BasicFlag>{};
   const flag = IsoFlag(value, map, orElse: FlutterLogo());
 
-  setUpAll(() => flagAntiAliasOverride = true);
-
   test(
     "toStringShort",
     () => expect(flag.toStringShort(), "IsoFlag(${value.code})"),
