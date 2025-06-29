@@ -105,5 +105,5 @@ class FlagProperties {
       "FlagProperties($stripeColors, aspectRatio: $aspectRatio, "
       "stripeOrientation: $stripeOrientation, url: $url"
       """${elementsProperties == null ? '' : ', elementsProperties: $elementsProperties'}"""
-      "${baseElementType == null ? '' : ', baseElementType: $baseElementType'},)";
+      """${baseElementType == null ? '' : ', baseElementType: $baseElementType'},)""";
 }
