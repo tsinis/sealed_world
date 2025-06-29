@@ -64,7 +64,7 @@ class FlagProperties {
              (elementsProperties != null &&
                  elementsProperties != const <ElementsProperties>[]),
          "If `baseElementType` is specified, `elementsProperties` must not be "
-         "'null or empty!",
+         "null or empty!",
        );
 
   /// The list of colors for the stripes of the flag.
