@@ -6,7 +6,7 @@ import "package:flutter/material.dart" show TextStyle, visibleForTesting;
 ///
 /// This flag is used to enable or disable anti-aliasing for flag elements. It
 /// is primarily used in golden tests where anti-aliasing is set to true.
-@visibleForTesting
+@visibleForTesting // coverage:ignore-line
 @Deprecated("Ineffective (anti-aliasing is defined on element painters level).")
 // Ignoring because of against wrong_number_of_parameters_for_setter.
 // ignore: avoid_positional_boolean_parameters, prefer-named-boolean-parameters

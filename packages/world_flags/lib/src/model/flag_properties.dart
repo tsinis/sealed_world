@@ -87,7 +87,7 @@ class FlagProperties {
   @visibleForTesting
   final String url;
 
-  /// The base flag's element type. It's typically coresponds to the flag's
+  /// The base flag's element type. Its typically corresponds to the flag's
   /// [elementsProperties] first shape, but it can be different (e.g.
   /// multi-element).
   ///
