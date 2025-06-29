@@ -48,12 +48,12 @@ void main() => group("FiatCurrencyFormat", () {
         "${valueWithoutDot.unit} 10.000,9999",
       );
       expect(
-        valueWithoutDot.format(100000.9999),
+        valueWithoutDot.format(100_000.9999),
         "${valueWithoutDot.unit} 100.000,9999",
       );
 
       expect(
-        valueWithoutDot.format(1000000.9999),
+        valueWithoutDot.format(1_000_000.9999),
         "${valueWithoutDot.unit} 1.000.000,9999",
       );
     });
