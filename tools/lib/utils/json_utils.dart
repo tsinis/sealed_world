@@ -212,8 +212,6 @@ const ${varFileName.toCamelCase()} = [
 
   void _fixCurrencyData(Map<IsoStandardized?, String?> mapToUpdate) {
     final maybeZwl = mapToUpdate[const FiatZwl()];
-    final maybeSll = mapToUpdate[const FiatSll()];
-    if (maybeSll != null) mapToUpdate[const FiatSle()] = maybeSll;
     if (maybeZwl == null) return;
     final withoutYear = maybeZwl.replaceFirst(RegExp(r"\(\d{4}\)"), "");
     mapToUpdate[const FiatZwl()] = withoutYear.trim();
