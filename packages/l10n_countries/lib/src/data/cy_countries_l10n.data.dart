@@ -116,7 +116,7 @@ class CyCountriesL10N extends IsoLocaleMapper<String> {
       "CUB": "Ciwba",
       "CUB+": "Gweriniaeth Ciwba",
       "CUW": "Curaçao",
-      "CUW+": "WorldCountry of Curaçao",
+      "CUW+": "Country of Curaçao",
       "CXR": "Ynys y Nadolig",
       "CXR+": "Tiriogaeth yr Ynys y Nadolig",
       "CYM": "Ynysoedd Cayman",
