@@ -9978,8 +9978,8 @@ class CountryMlt extends WorldCountry {
           googleMaps: "skXCqguxDxxEKVk47",
           openStreetMaps: "relation/365307",
         ),
-        population: 525285,
-        gini: const Gini(year: 2018, coefficient: 28.7),
+        population: 519562, // https://en.wikipedia.org/wiki/Malta
+        gini: const Gini(year: 2020, coefficient: 31.4),
         fifa: "MLT",
         car: const Car(sign: "M", isRightSide: false),
         timezones: const ["UTC+01:00"],
@@ -9993,7 +9993,7 @@ class CountryMlt extends WorldCountry {
   @override
   CapitalInfo get capitalInfo => const CapitalInfo(
     capital: Capital("Valletta"),
-    latLng: LatLng(35.88, 14.5),
+    latLng: LatLng(35.89, 14.51), // https://en.wikipedia.org/wiki/Malta
   );
   @override
   List<RegionalBloc> get regionalBlocs => const [BlocEU()];
@@ -10011,7 +10011,7 @@ class CountryMlt extends WorldCountry {
     ),
     CountryName(
       language: LangMlt(),
-      official: "Repubblika ta ' Malta",
+      official: "Repubblika ta' Malta", // https://en.wikipedia.org/wiki/Malta
       common: "Malta",
     ),
   ];
@@ -10045,7 +10045,7 @@ class CountryMmr extends WorldCountry {
         ],
         continent: const Asia(),
         subregion: const SouthEasternAsia(),
-        latLng: const LatLng(22, 98),
+        latLng: const LatLng(22, 96), // https://en.wikipedia.org/wiki/Myanmar
         bordersCodes: const ["Bgd", "Chn", "Ind", "Lao", "Tha"],
         areaMetric: 676578,
         emoji: "🇲🇲",
@@ -10053,7 +10053,7 @@ class CountryMmr extends WorldCountry {
           googleMaps: "4jrZyJkDERUfHyp26",
           openStreetMaps: "relation/50371",
         ),
-        population: 54409794,
+        population: 55770232,
         gini: const Gini(year: 2017, coefficient: 30.7),
         fifa: "MYA",
         car: const Car(sign: "BUR"),
@@ -10109,16 +10109,16 @@ class CountryMne extends WorldCountry {
         subregion: const SouthwestEurope(),
         latLng: const LatLng(42.5, 19.3),
         bordersCodes: const ["Alb", "Bih", "Hrv", "Srb", "Unk"],
-        areaMetric: 13812,
+        areaMetric: 13883, // https://en.wikipedia.org/wiki/Montenegro
         emoji: "🇲🇪",
         maps: const Maps(
           googleMaps: "4THX1fM7WqANuPbB8",
           openStreetMaps: "relation/53296",
         ),
-        population: 621718,
-        gini: const Gini(year: 2016, coefficient: 38.5),
+        population: 623633,
+        gini: const Gini(year: 2023, coefficient: 29.4),
         fifa: "MNE",
-        car: const Car(sign: "SCG"),
+        car: const Car(sign: "MNE"), // https://en.wikipedia.org/wiki/Montenegro
         timezones: const ["UTC+01:00"],
         postalCode: const PostalCode(),
       );
@@ -10143,6 +10143,11 @@ class CountryMne extends WorldCountry {
       official: "Црна Гора",
       common: "Црна Гора",
     ),
+    CountryName(
+      language: LangSrp(),
+      official: "Crna Gora", // https://en.wikipedia.org/wiki/Montenegro
+      common: "Crna Gora", // https://en.wikipedia.org/wiki/Montenegro
+    ),
   ];
   @override
   List<NaturalLanguage> get languages => const [LangSrp()];
@@ -10160,7 +10165,7 @@ class CountryMng extends WorldCountry {
           official: "Mongolia",
           common: "Mongolia",
         ),
-        tld: const [".mn"],
+        tld: const [".mn", ".мон"], // https://en.wikipedia.org/wiki/Mongolia
         code: "MNG",
         codeNumeric: "496",
         codeShort: "MN",
@@ -10169,16 +10174,16 @@ class CountryMng extends WorldCountry {
         altSpellings: const ["MN"],
         continent: const Asia(),
         subregion: const EasternAsia(),
-        latLng: const LatLng(46, 105),
+        latLng: const LatLng(48, 106), // https://en.wikipedia.org/wiki/Mongolia
         landlocked: true,
         bordersCodes: const ["Chn", "Rus"],
-        areaMetric: 1564110,
+        areaMetric: 1564116, // https://en.wikipedia.org/wiki/Mongolia
         emoji: "🇲🇳",
         maps: const Maps(
           googleMaps: "A1X7bMCKThBDNjzH6",
           openStreetMaps: "relation/161033",
         ),
-        population: 3278292,
+        population: 3504741,
         gini: const Gini(year: 2018, coefficient: 32.7),
         fifa: "MNG",
         car: const Car(sign: "MGL"),
@@ -10192,8 +10197,8 @@ class CountryMng extends WorldCountry {
   List<FiatCurrency> get currencies => const [FiatMnt()];
   @override
   CapitalInfo get capitalInfo => const CapitalInfo(
-    capital: Capital("Ulan Bator"),
-    latLng: LatLng(47.92, 106.91),
+    capital: Capital("Ulaanbaatar"), // https://en.wikipedia.org/wiki/Mongolia
+    latLng: LatLng(47.91, 106.88), // https://en.wikipedia.org/wiki/Ulaanbaatar
   );
   @override
   List<Demonyms> get demonyms => const [
@@ -10235,17 +10240,18 @@ class CountryMnp extends WorldCountry {
           "MP",
           "Commonwealth of the Northern Mariana Islands",
           "Sankattan Siha Na Islas Mariånas",
+          "Commonwealth Téél Falúw kka Efáng llól Marianas", // https://en.wikipedia.org/wiki/Northern_Mariana_Islands
         ],
         continent: const Oceania(),
         subregion: const Micronesia(),
-        latLng: const LatLng(15.2, 145.75),
+        latLng: const LatLng(16.71, 145.78),
         areaMetric: 464,
         emoji: "🇲🇵",
         maps: const Maps(
           googleMaps: "cpZ67knoRAcfu1417",
           openStreetMaps: "relation/306004",
         ),
-        population: 57557,
+        population: 47329,
         car: const Car(sign: "USA"),
         timezones: const ["UTC+10:00"],
         hasCoatOfArms: false,
@@ -10255,12 +10261,20 @@ class CountryMnp extends WorldCountry {
   @override
   CapitalInfo get capitalInfo => const CapitalInfo(
     capital: Capital("Saipan"),
-    latLng: LatLng(15.2, 145.75),
+    latLng: LatLng(15.19, 145.74),
   );
   @override
   List<Demonyms> get demonyms => const [
-    Demonyms(language: LangEng(), female: "American", male: "American"),
-    Demonyms(language: LangFra(), female: "Américaine", male: "Américan"),
+    Demonyms(
+      language: LangEng(),
+      female: "Northern Mariana Islander",
+      male: "Northern Mariana Islander",
+    ), // https://en.wikipedia.org/wiki/Northern_Mariana_Islands
+    Demonyms(
+      language: LangFra(),
+      female: "Nord-Marianaise",
+      male: "Nord-Marianais",
+    ),
   ];
   @override
   List<CountryName> get namesNative => const [
@@ -15415,11 +15429,12 @@ class CountryTur extends WorldCountry {
   /// Creates a instance of [CountryTur] (Turkey country).
   ///
   /// ISO 3166-1 Alpha-3 code: `TUR`, ISO 3166-1 Alpha-2 code: `TR`.
+  // https://en.wikipedia.org/wiki/Turkey
   const CountryTur()
     : super(
         name: const CountryName(
           language: LangEng(),
-          official: "Republic of Turkey",
+          official: "Republic of Türkiye",
           common: "Turkey",
         ),
         tld: const [".tr"],
@@ -15453,8 +15468,8 @@ class CountryTur extends WorldCountry {
           googleMaps: "dXFFraiUDfcB6Quk6",
           openStreetMaps: "relation/174737",
         ),
-        population: 84339067,
-        gini: const Gini(year: 2019, coefficient: 41.9),
+        population: 85664944,
+        gini: const Gini(year: 2021, coefficient: 44.4),
         fifa: "TUR",
         car: const Car(sign: "TR"),
         timezones: const ["UTC+03:00"],
@@ -15465,7 +15480,7 @@ class CountryTur extends WorldCountry {
   @override
   CapitalInfo get capitalInfo => const CapitalInfo(
     capital: Capital("Ankara"),
-    latLng: LatLng(39.93, 32.87),
+    latLng: LatLng(39.917, 32.85),
   );
   @override
   List<Demonyms> get demonyms => const [
@@ -15489,6 +15504,7 @@ class CountryTuv extends WorldCountry {
   /// Creates a instance of [CountryTuv] (Tuvalu country).
   ///
   /// ISO 3166-1 Alpha-3 code: `TUV`, ISO 3166-1 Alpha-2 code: `TV`.
+  // https://en.wikipedia.org/wiki/Tuvalu
   const CountryTuv()
     : super(
         name: const CountryName(
@@ -15512,8 +15528,8 @@ class CountryTuv extends WorldCountry {
           googleMaps: "LbuUxtkgm1dfN1Pn6",
           openStreetMaps: "relation/2177266",
         ),
-        population: 11792,
-        gini: const Gini(year: 2010, coefficient: 39.1),
+        population: 10643,
+        gini: const Gini(year: 2022, coefficient: 39),
         car: const Car(sign: "TUV", isRightSide: false),
         timezones: const ["UTC+12:00"],
       );
@@ -17284,6 +17300,7 @@ class CountryZwe extends WorldCountry {
   /// Creates a instance of [CountryZwe] (Zimbabwe country).
   ///
   /// ISO 3166-1 Alpha-3 code: `ZWE`, ISO 3166-1 Alpha-2 code: `ZW`.
+  // https://en.wikipedia.org/wiki/Zimbabwe
   const CountryZwe()
     : super(
         name: const CountryName(
@@ -17302,14 +17319,14 @@ class CountryZwe extends WorldCountry {
         subregion: const SouthernAfrica(),
         latLng: const LatLng(-20, 30),
         landlocked: true,
-        bordersCodes: const ["Bwa", "Moz", "Zaf", "Tur"],
+        bordersCodes: const ["Bwa", "Moz", "Zaf", "Zmb"],
         areaMetric: 390757,
         emoji: "🇿🇼",
         maps: const Maps(
           googleMaps: "M26BqdwQctqxXS65A",
           openStreetMaps: "relation/195272",
         ),
-        population: 14862927,
+        population: 15178957,
         gini: const Gini(year: 2019, coefficient: 50.3),
         fifa: "ZIM",
         car: const Car(sign: "ZW", isRightSide: false),
@@ -17337,24 +17354,39 @@ class CountryZwe extends WorldCountry {
       common: "Zimbabwe",
     ),
     CountryName(
+      language: LangSna(),
+      official: "Nyika yeZimbabwe",
+      common: "yeZimbabwe",
+    ),
+    CountryName(
+      language: LangNde(),
+      official: "Ilizwe laseZimbabwe",
+      common: "laseZimbabwe",
+    ),
+    CountryName(
+      language: LangNya(),
+      official: "Dziko la Zimbabwe",
+      common: "Zimbabwe",
+    ),
+    CountryName(
       language: LangTsn(),
-      official: "Republic of Zimbabwe",
+      official: "Lefatshe la Zimbabwe",
       common: "Zimbabwe",
     ),
     CountryName(
       language: LangTso(),
-      official: "Republic of Zimbabwe",
+      official: "Riphabliki ra Zimbabwe",
       common: "Zimbabwe",
     ),
     CountryName(
       language: LangVen(),
-      official: "Republic of Zimbabwe",
+      official: "Riphabuḽiki ya Zimbabwe",
       common: "Zimbabwe",
     ),
     CountryName(
       language: LangXho(),
-      official: "Republic of Zimbabwe",
-      common: "Zimbabwe",
+      official: "IRiphabhlikhi yaseZimbabwe",
+      common: "yaseZimbabwe",
     ),
   ];
   @override
