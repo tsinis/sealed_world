@@ -1165,7 +1165,7 @@ class CountryBdi extends WorldCountry {
           googleMaps: "RXPWoRrB9tfrJpUG7",
           openStreetMaps: "relation/195269",
         ),
-        population: 13162952,
+        population: 14_151_540,
         gini: const Gini(year: 2013, coefficient: 38.6),
         fifa: "BDI",
         car: const Car(sign: "RU"),
@@ -3286,13 +3286,7 @@ class CountryCod extends WorldCountry {
     ),
   ];
   @override
-  List<NaturalLanguage> get languages => const [
-    LangFra(),
-    LangKon(),
-    LangLin(),
-    LangSwa(),
-    LangLub(),
-  ];
+  List<NaturalLanguage> get languages => const [LangFra()];
 }
 
 /// A class that represents the Republic of the Congo country.
@@ -7586,7 +7580,7 @@ class CountryIsr extends WorldCountry {
     CountryName(language: LangHeb(), official: "מדינת ישראל", common: "ישראל"),
   ];
   @override
-  List<NaturalLanguage> get languages => const [LangAra(), LangHeb()];
+  List<NaturalLanguage> get languages => const [LangHeb()];
 }
 
 /// A class that represents the Italy country.
@@ -15726,7 +15720,7 @@ class CountryUga extends WorldCountry {
           googleMaps: "Y7812hFiGa8LD9N68",
           openStreetMaps: "relation/192796",
         ),
-        population: 45741000,
+        population: 49_283_041,
         gini: const Gini(year: 2016, coefficient: 42.8),
         fifa: "UGA",
         car: const Car(sign: "EAU", isRightSide: false),
