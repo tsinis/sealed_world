@@ -2,7 +2,6 @@
 import "package:cli/constants/path_constants.dart";
 import "package:cli/converters/php_converter.dart";
 import "package:cli/generators/helpers/extensions/package_associations_extension.dart";
-import "package:cli/models/package.dart";
 import "package:cli/utils/args_parser.dart";
 import "package:cli/utils/io_utils.dart";
 import "package:cli/utils/json_utils.dart";

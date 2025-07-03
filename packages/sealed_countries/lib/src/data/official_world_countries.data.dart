@@ -87,7 +87,7 @@ class CountryAfg extends WorldCountry {
     : super(
         name: const CountryName(
           language: LangEng(),
-          official: "Islamic Republic of Afghanistan",
+          official: "Islamic Emirate of Afghanistan",
           common: "Afghanistan",
         ),
         tld: const [".af"],
@@ -131,17 +131,17 @@ class CountryAfg extends WorldCountry {
   List<CountryName> get namesNative => const [
     CountryName(
       language: LangPus(),
-      official: "د افغانستان اسلامي جمهوریت",
+      official: "د افغانستان اسلامي امارت",
       common: "افغانستان",
     ),
     CountryName(
       language: LangTuk(),
-      official: "Owganystan Yslam Respublikasy",
+      official: "Owganystan Yslam Emirligi",
       common: "Owganystan",
     ),
   ];
   @override
-  List<NaturalLanguage> get languages => const [LangPus(), LangTuk()];
+  List<NaturalLanguage> get languages => const [LangPus()];
 }
 
 /// A class that represents the Angola country.
@@ -177,7 +177,7 @@ class CountryAgo extends WorldCountry {
           googleMaps: "q42Qbf1BmQL3fuZg9",
           openStreetMaps: "relation/195267",
         ),
-        population: 32866268,
+        population: 35981281,
         gini: const Gini(year: 2018, coefficient: 51.3),
         fifa: "ANG",
         car: const Car(sign: "ANG"),
@@ -238,7 +238,7 @@ class CountryAia extends WorldCountry {
           googleMaps: "3KgLnEyN7amdno2p9",
           openStreetMaps: "relation/2177161",
         ),
-        population: 13452,
+        population: 15753,
         fifa: "AIA",
         car: const Car(sign: "GB", isRightSide: false),
         timezones: const ["UTC-04:00"],
@@ -292,8 +292,8 @@ class CountryAla extends WorldCountry {
           googleMaps: "ewFb3vYsfUmVCoSb8",
           openStreetMaps: "relation/1650407",
         ),
-        population: 29458,
-        car: const Car(),
+        population: 30541,
+        car: const Car(sign: "FIN"),
         timezones: const ["UTC+02:00"],
       );
   @override
@@ -417,7 +417,7 @@ class CountryAnd extends WorldCountry {
           googleMaps: "JqAnacWE2qEznKgw7",
           openStreetMaps: "relation/9407",
         ),
-        population: 77265,
+        population: 79034,
         fifa: "AND",
         car: const Car(sign: "AND"),
         timezones: const ["UTC+01:00"],
@@ -505,7 +505,7 @@ class CountryAre extends WorldCountry {
     CountryName(
       language: LangAra(),
       official: "الإمارات العربية المتحدة",
-      common: "دولة الإمارات العربية المتحدة",
+      common: "الإمارات",
     ),
   ];
   @override
@@ -541,7 +541,7 @@ class CountryArg extends WorldCountry {
           googleMaps: "Z9DXNxhf2o93kvyc6",
           openStreetMaps: "relation/286393",
         ),
-        population: 45376763,
+        population: 46044703,
         gini: const Gini(year: 2019, coefficient: 42.9),
         fifa: "ARG",
         car: const Car(sign: "RA"),
@@ -618,7 +618,7 @@ class CountryArm extends WorldCountry {
           openStreetMaps: "relation/364066",
         ),
         population: 2963234,
-        gini: const Gini(year: 2019, coefficient: 29.9),
+        gini: const Gini(year: 2022, coefficient: 27.9),
         fifa: "ARM",
         car: const Car(sign: "AM"),
         timezones: const ["UTC+04:00"],
@@ -688,7 +688,7 @@ class CountryAsm extends WorldCountry {
           googleMaps: "Re9ePMjwP1sFCBFA6",
           openStreetMaps: "relation/2177187",
         ),
-        population: 55197,
+        population: 49710,
         fifa: "ASA",
         car: const Car(sign: "USA"),
         timezones: const ["UTC-11:00"],
@@ -875,7 +875,7 @@ class CountryAtg extends WorldCountry {
           googleMaps: "fnye4wGJ1RzC9jpX9",
           openStreetMaps: "relation/536900",
         ),
-        population: 97928,
+        population: 100772,
         fifa: "ATG",
         car: const Car(sign: "AG", isRightSide: false),
         timezones: const ["UTC-04:00"],
@@ -942,7 +942,7 @@ class CountryAus extends WorldCountry {
           googleMaps: "DcjaDa7UbhnZTndH6",
           openStreetMaps: "relation/80500",
         ),
-        population: 25687041,
+        population: 25890773,
         gini: const Gini(year: 2014, coefficient: 34.4),
         fifa: "AUS",
         car: const Car(sign: "AUS", isRightSide: false),
@@ -1024,7 +1024,7 @@ class CountryAut extends WorldCountry {
           googleMaps: "pCWpWQhznHyRzQcu9",
           openStreetMaps: "relation/16239",
         ),
-        population: 8917205,
+        population: 9027999,
         gini: const Gini(year: 2018, coefficient: 30.8),
         fifa: "AUT",
         car: const Car(sign: "A"),
@@ -1095,7 +1095,7 @@ class CountryAze extends WorldCountry {
           openStreetMaps: "relation/364110",
         ),
         population: 10110116,
-        gini: const Gini(year: 2005, coefficient: 26.6),
+        gini: const Gini(year: 2008, coefficient: 33.7),
         fifa: "AZE",
         car: const Car(sign: "AZ"),
         timezones: const ["UTC+04:00"],
@@ -1165,7 +1165,7 @@ class CountryBdi extends WorldCountry {
           googleMaps: "RXPWoRrB9tfrJpUG7",
           openStreetMaps: "relation/195269",
         ),
-        population: 11890781,
+        population: 14_151_540,
         gini: const Gini(year: 2013, coefficient: 38.6),
         fifa: "BDI",
         car: const Car(sign: "RU"),
@@ -1194,12 +1194,17 @@ class CountryBdi extends WorldCountry {
     ),
     CountryName(
       language: LangRun(),
-      official: "Republika y'Uburundi ",
+      official: "Repubulika y’Uburundi",
       common: "Uburundi",
     ),
   ];
   @override
-  List<NaturalLanguage> get languages => const [LangFra(), LangRun()];
+  List<NaturalLanguage> get languages => const [
+    LangFra(),
+    LangRun(),
+    LangEng(),
+    LangSwa(),
+  ];
 }
 
 /// A class that represents the Belgium country.
@@ -1241,7 +1246,7 @@ class CountryBel extends WorldCountry {
           googleMaps: "UQQzat85TCtPRXAL8",
           openStreetMaps: "relation/52411",
         ),
-        population: 11555997,
+        population: 11812354,
         gini: const Gini(year: 2018, coefficient: 27.2),
         fifa: "BEL",
         car: const Car(sign: "B"),
@@ -1320,7 +1325,7 @@ class CountryBen extends WorldCountry {
           googleMaps: "uMw1BsHEXQYgVFFu6",
           openStreetMaps: "relation/192784",
         ),
-        population: 12123198,
+        population: 13754688,
         gini: const Gini(year: 2015, coefficient: 47.8),
         fifa: "BEN",
         car: const Car(sign: "DY"),
@@ -1381,7 +1386,7 @@ class CountryBes extends WorldCountry {
           googleMaps: "4XVes1P6uEDTz77WA",
           openStreetMaps: "relation/1216720",
         ),
-        population: 25987,
+        population: 30397,
         car: const Car(),
         timezones: const ["UTC-04:00"],
       );
@@ -1439,7 +1444,7 @@ class CountryBfa extends WorldCountry {
           googleMaps: "rKRmpcMbFher2ozb7",
           openStreetMaps: "relation/192783",
         ),
-        population: 20903278,
+        population: 22489126,
         gini: const Gini(year: 2014, coefficient: 35.3),
         fifa: "BFA",
         car: const Car(sign: "BF"),
@@ -1463,7 +1468,7 @@ class CountryBfa extends WorldCountry {
   List<CountryName> get namesNative => const [
     CountryName(
       language: LangFra(),
-      official: "République du Burkina",
+      official: "Burkina Faso",
       common: "Burkina Faso",
     ),
   ];
@@ -1504,7 +1509,7 @@ class CountryBgd extends WorldCountry {
           googleMaps: "op6gmLbHcvv6rLhH6",
           openStreetMaps: "relation/184640",
         ),
-        population: 164689383,
+        population: 169828911,
         gini: const Gini(year: 2016, coefficient: 32.4),
         fifa: "BAN",
         car: const Car(sign: "BD", isRightSide: false),
@@ -1531,7 +1536,7 @@ class CountryBgd extends WorldCountry {
   List<CountryName> get namesNative => const [
     CountryName(
       language: LangBen(),
-      official: "বাংলাদেশ গণপ্রজাতন্ত্রী",
+      official: "গণপ্রজাতন্ত্রী বাংলাদেশ",
       common: "বাংলাদেশ",
     ),
   ];
@@ -1572,8 +1577,8 @@ class CountryBgr extends WorldCountry {
           googleMaps: "F5uAhDGWzc3BrHfm9",
           openStreetMaps: "relation/186382",
         ),
-        population: 6927288,
-        gini: const Gini(year: 2018, coefficient: 41.3),
+        population: 6519789,
+        gini: const Gini(year: 2022, coefficient: 38.2),
         fifa: "BUL",
         car: const Car(sign: "BG"),
         timezones: const ["UTC+02:00"],
@@ -1636,7 +1641,7 @@ class CountryBhr extends WorldCountry {
           googleMaps: "5Zue99Zc6vFBHxzJ7",
           openStreetMaps: "relation/378734",
         ),
-        population: 1701583,
+        population: 1501635,
         fifa: "BHR",
         car: const Car(sign: "BRN"),
         timezones: const ["UTC+03:00"],
@@ -1699,7 +1704,7 @@ class CountryBhs extends WorldCountry {
           googleMaps: "1YzRs1BZrG8p8pmVA",
           openStreetMaps: "relation/547469",
         ),
-        population: 393248,
+        population: 412628,
         fifa: "BAH",
         car: const Car(sign: "BS", isRightSide: false),
         timezones: const ["UTC-05:00"],
@@ -1839,13 +1844,13 @@ class CountryBlm extends WorldCountry {
         continent: const Americas(),
         subregion: const Caribbean(),
         latLng: const LatLng(18.5, -63.41666666),
-        areaMetric: 21,
+        areaMetric: 25,
         emoji: "🇧🇱",
         maps: const Maps(
           googleMaps: "Mc7GqH466S7AAk297",
           openStreetMaps: "relation/7552779",
         ),
-        population: 4255,
+        population: 9961,
         car: const Car(sign: "F"),
         timezones: const ["UTC-04:00"],
         hasCoatOfArms: false,
@@ -1919,7 +1924,7 @@ class CountryBlr extends WorldCountry {
           googleMaps: "PJUDU3EBPSszCQcu6",
           openStreetMaps: "relation/59065",
         ),
-        population: 9398861,
+        population: 9109280,
         gini: const Gini(year: 2019, coefficient: 25.3),
         fifa: "BLR",
         car: const Car(sign: "BY"),
@@ -1987,7 +1992,7 @@ class CountryBlz extends WorldCountry {
           googleMaps: "jdCccpdLodm1uTmo9",
           openStreetMaps: "relation/287827",
         ),
-        population: 397621,
+        population: 397483,
         gini: const Gini(year: 1999, coefficient: 53.3),
         fifa: "BLZ",
         car: const Car(sign: "BH"),
@@ -2051,7 +2056,7 @@ class CountryBmu extends WorldCountry {
           googleMaps: "NLsRGNjTzDghTtAJA",
           openStreetMaps: "relation/1993208",
         ),
-        population: 63903,
+        population: 63779,
         fifa: "BER",
         car: const Car(sign: "GB", isRightSide: false),
         timezones: const ["UTC-04:00"],
@@ -2120,7 +2125,7 @@ class CountryBol extends WorldCountry {
           googleMaps: "9DfnyfbxNM2g5U9b9",
           openStreetMaps: "relation/252645",
         ),
-        population: 11673029,
+        population: 11312620,
         gini: const Gini(year: 2019, coefficient: 41.6),
         fifa: "BOL",
         car: const Car(sign: "BOL"),
@@ -2217,8 +2222,8 @@ class CountryBra extends WorldCountry {
           googleMaps: "waCKk21HeeqFzkNC9",
           openStreetMaps: "relation/59470",
         ),
-        population: 212559409,
-        gini: const Gini(year: 2019, coefficient: 53.4),
+        population: 203080756,
+        gini: const Gini(year: 2022, coefficient: 52),
         fifa: "BRA",
         car: const Car(sign: "BR"),
         timezones: const ["UTC-05:00", "UTC-04:00", "UTC-03:00", "UTC-02:00"],
@@ -2346,7 +2351,7 @@ class CountryBrn extends WorldCountry {
           googleMaps: "4jb4CqBXhr8vNh579",
           openStreetMaps: "relation/2103120",
         ),
-        population: 437483,
+        population: 417256,
         fifa: "BRU",
         car: const Car(sign: "BRU", isRightSide: false),
         timezones: const ["UTC+08:00"],
@@ -2373,7 +2378,7 @@ class CountryBrn extends WorldCountry {
   List<CountryName> get namesNative => const [
     CountryName(
       language: LangMsa(),
-      official: "Nation of Brunei, Abode Damai",
+      official: "Negara Brunei Darussalam",
       common: "Negara Brunei Darussalam",
     ),
   ];
@@ -2530,7 +2535,7 @@ class CountryBwa extends WorldCountry {
           googleMaps: "E364KeLy6N4JwxwQ8",
           openStreetMaps: "relation/1889339",
         ),
-        population: 2351625,
+        population: 2359609,
         gini: const Gini(year: 2015, coefficient: 53.3),
         fifa: "BOT",
         car: const Car(sign: "BW", isRightSide: false),
@@ -2601,7 +2606,7 @@ class CountryCaf extends WorldCountry {
           googleMaps: "51V8dsi2rGYC9n3c9",
           openStreetMaps: "relation/192790",
         ),
-        population: 4829764,
+        population: 5650957,
         gini: const Gini(year: 2008, coefficient: 56.2),
         fifa: "CTA",
         car: const Car(sign: "RCA"),
@@ -2712,8 +2717,8 @@ class CountryCan extends WorldCountry {
           googleMaps: "jmEVLugreeqiZXxbA",
           openStreetMaps: "relation/1428125",
         ),
-        population: 38005238,
-        gini: const Gini(year: 2017, coefficient: 33.3),
+        population: 36991981,
+        gini: const Gini(year: 2020, coefficient: 29.9),
         fifa: "CAN",
         car: const Car(sign: "CDN"),
         timezones: const [
@@ -2852,7 +2857,7 @@ class CountryChe extends WorldCountry {
           googleMaps: "uVuZcXaxSx5jLyEC9",
           openStreetMaps: "relation/51701",
         ),
-        population: 8654622,
+        population: 8327126,
         gini: const Gini(year: 2018, coefficient: 33.1),
         fifa: "SUI",
         car: const Car(sign: "CH"),
@@ -2935,7 +2940,7 @@ class CountryChl extends WorldCountry {
           googleMaps: "XboxyNHh2fAjCPNn9",
           openStreetMaps: "relation/167454",
         ),
-        population: 19116209,
+        population: 19629590,
         gini: const Gini(year: 2017, coefficient: 44.4),
         fifa: "CHI",
         car: const Car(sign: "RCH"),
@@ -3025,7 +3030,7 @@ class CountryChn extends WorldCountry {
           googleMaps: "p9qC6vgiFRRXzvGi7",
           openStreetMaps: "relation/270056",
         ),
-        population: 1402112000,
+        population: 1408280000,
         gini: const Gini(year: 2016, coefficient: 38.5),
         fifa: "CHN",
         car: const Car(sign: "RC"),
@@ -3090,7 +3095,7 @@ class CountryCiv extends WorldCountry {
           googleMaps: "wKsmN7f5qAeNtGjP6",
           openStreetMaps: "relation/192779",
         ),
-        population: 26378275,
+        population: 29389150,
         gini: const Gini(year: 2015, coefficient: 41.5),
         fifa: "CIV",
         car: const Car(sign: "CI"),
@@ -3155,7 +3160,7 @@ class CountryCmr extends WorldCountry {
           googleMaps: "JqiipHgFboG3rBJh9",
           openStreetMaps: "relation/192830",
         ),
-        population: 26545864,
+        population: 30966105,
         gini: const Gini(year: 2014, coefficient: 46.6),
         fifa: "CMR",
         car: const Car(sign: "CAM"),
@@ -3237,7 +3242,7 @@ class CountryCod extends WorldCountry {
           googleMaps: "KfhNVn6VqdZXWu8n9",
           openStreetMaps: "relation/192795",
         ),
-        population: 108407721,
+        population: 112832473,
         gini: const Gini(year: 2012, coefficient: 42.1),
         fifa: "COD",
         car: const Car(sign: "CGO"),
@@ -3281,12 +3286,7 @@ class CountryCod extends WorldCountry {
     ),
   ];
   @override
-  List<NaturalLanguage> get languages => const [
-    LangFra(),
-    LangKon(),
-    LangLin(),
-    LangSwa(),
-  ];
+  List<NaturalLanguage> get languages => const [LangFra()];
 }
 
 /// A class that represents the Republic of the Congo country.
@@ -3318,7 +3318,7 @@ class CountryCog extends WorldCountry {
           googleMaps: "Phf5dDDKdfCtuBTb6",
           openStreetMaps: "relation/192794",
         ),
-        population: 5657000,
+        population: 6142180,
         gini: const Gini(year: 2011, coefficient: 48.9),
         fifa: "CGO",
         car: const Car(sign: "RCB"),
@@ -3461,8 +3461,8 @@ class CountryCol extends WorldCountry {
           googleMaps: "RdwTG8e7gPwS62oR6",
           openStreetMaps: "relation/120027",
         ),
-        population: 50882884,
-        gini: const Gini(year: 2019, coefficient: 51.3),
+        population: 52695952,
+        gini: const Gini(year: 2023, coefficient: 53.9),
         fifa: "COL",
         car: const Car(sign: "CO"),
         timezones: const ["UTC-05:00"],
@@ -3596,7 +3596,7 @@ class CountryCpv extends WorldCountry {
           googleMaps: "Kc9vy5ChjuiAgMfXA",
           openStreetMaps: "relation/535774",
         ),
-        population: 555988,
+        population: 593149,
         gini: const Gini(year: 2015, coefficient: 42.4),
         fifa: "CPV",
         car: const Car(sign: "CV"),
@@ -3665,7 +3665,7 @@ class CountryCri extends WorldCountry {
           googleMaps: "RFiwytjvNrpfKN7k6",
           openStreetMaps: "relation/287667",
         ),
-        population: 5094114,
+        population: 5044197,
         gini: const Gini(year: 2019, coefficient: 48.2),
         fifa: "CRC",
         car: const Car(sign: "CR"),
@@ -3729,7 +3729,7 @@ class CountryCub extends WorldCountry {
           googleMaps: "1dDw1QfZspfMUTm99",
           openStreetMaps: "relation/307833",
         ),
-        population: 11326616,
+        population: 11089511,
         fifa: "CUB",
         car: const Car(sign: "C"),
         timezones: const ["UTC-05:00"],
@@ -3771,7 +3771,7 @@ class CountryCuw extends WorldCountry {
     : super(
         name: const CountryName(
           language: LangEng(),
-          official: "WorldCountry of Curaçao",
+          official: "Country of Curaçao",
           common: "Curaçao",
         ),
         tld: const [".cw"],
@@ -3798,7 +3798,7 @@ class CountryCuw extends WorldCountry {
           googleMaps: "9D3hTeA3qKaRT7S16",
           openStreetMaps: "relation/1216719",
         ),
-        population: 155014,
+        population: 155826,
         fifa: "CUW",
         car: const Car(sign: "CW"),
         timezones: const ["UTC-04:00"],
@@ -3819,7 +3819,7 @@ class CountryCuw extends WorldCountry {
   List<CountryName> get namesNative => const [
     CountryName(
       language: LangEng(),
-      official: "WorldCountry of Curaçao",
+      official: "Country of Curaçao",
       common: "Curaçao",
     ),
     CountryName(
@@ -3861,7 +3861,7 @@ class CountryCxr extends WorldCountry {
           googleMaps: "ZC17hHsQZpShN5wk9",
           openStreetMaps: "relation/6365444",
         ),
-        population: 2072,
+        population: 1692,
         car: const Car(sign: "AUS", isRightSide: false),
         timezones: const ["UTC+07:00"],
         postalCode: const PostalCode(
@@ -3926,7 +3926,7 @@ class CountryCym extends WorldCountry {
           googleMaps: "P3ZVXX3LH63t91hL8",
           openStreetMaps: "relation/7269765",
         ),
-        population: 65720,
+        population: 87866,
         fifa: "CAY",
         car: const Car(sign: "GB", isRightSide: false),
         timezones: const ["UTC-05:00"],
@@ -3990,7 +3990,7 @@ class CountryCyp extends WorldCountry {
           googleMaps: "77hPBRdLid8yD5Bm7",
           openStreetMaps: "relation/307787",
         ),
-        population: 1207361,
+        population: 923272,
         gini: const Gini(year: 2018, coefficient: 32.7),
         fifa: "CYP",
         car: const Car(sign: "CY", isRightSide: false),
@@ -4018,7 +4018,7 @@ class CountryCyp extends WorldCountry {
   List<CountryName> get namesNative => const [
     CountryName(
       language: LangEll(),
-      official: "Δημοκρατία της Κύπρος",
+      official: "Κυπριακή Δημοκρατία",
       common: "Κύπρος",
     ),
     CountryName(
@@ -4061,7 +4061,7 @@ class CountryCze extends WorldCountry {
           googleMaps: "47dmgeXMZyhDHyQW8",
           openStreetMaps: "relation/51684",
         ),
-        population: 10698896,
+        population: 10524167,
         gini: const Gini(year: 2018, coefficient: 25),
         fifa: "CZE",
         car: const Car(sign: "CZ"),
@@ -4137,10 +4137,10 @@ class CountryDeu extends WorldCountry {
           googleMaps: "mD9FBMq1nvXUBrkv6",
           openStreetMaps: "relation/51477",
         ),
-        population: 83240525,
+        population: 82719540,
         gini: const Gini(year: 2016, coefficient: 31.9),
         fifa: "GER",
-        car: const Car(sign: "DY"),
+        car: const Car(sign: "D"),
         timezones: const ["UTC+01:00"],
         postalCode: const PostalCode(),
       );
@@ -4207,7 +4207,7 @@ class CountryDji extends WorldCountry {
           googleMaps: "V1HWfzN3bS1kwf4C6",
           openStreetMaps: "relation/192801",
         ),
-        population: 988002,
+        population: 1066809,
         gini: const Gini(year: 2017, coefficient: 41.6),
         fifa: "DJI",
         car: const Car(sign: "DJI"),
@@ -4224,7 +4224,7 @@ class CountryDji extends WorldCountry {
   List<RegionalBloc> get regionalBlocs => const [BlocAU(), BlocAL()];
   @override
   List<Demonyms> get demonyms => const [
-    Demonyms(language: LangEng(), female: "Djibouti", male: "Djibouti"),
+    Demonyms(language: LangEng(), female: "Djiboutian", male: "Djiboutian"),
     Demonyms(language: LangFra(), female: "Djiboutienne", male: "Djiboutien"),
   ];
   @override
@@ -4340,7 +4340,7 @@ class CountryDnk extends WorldCountry {
           googleMaps: "UddGPN7hAyrtpFiT6",
           openStreetMaps: "relation/50046",
         ),
-        population: 5831404,
+        population: 6001008,
         gini: const Gini(year: 2018, coefficient: 28.2),
         fifa: "DEN",
         car: const Car(sign: "DK"),
@@ -4411,8 +4411,8 @@ class CountryDom extends WorldCountry {
           googleMaps: "soxooTHxEeiAbn3UA",
           openStreetMaps: "relation/307828",
         ),
-        population: 10847904,
-        gini: const Gini(year: 2019, coefficient: 41.9),
+        population: 11532151,
+        gini: const Gini(year: 2022, coefficient: 37),
         fifa: "DOM",
         car: const Car(sign: "DOM"),
         timezones: const ["UTC-04:00"],
@@ -4473,7 +4473,7 @@ class CountryDza extends WorldCountry {
           googleMaps: "RsAyAfyaiNVb8DpW8",
           openStreetMaps: "relation/192756",
         ),
-        population: 44700000,
+        population: 47400000,
         gini: const Gini(year: 2011, coefficient: 27.6),
         fifa: "ALG",
         car: const Car(sign: "DZ"),
@@ -4534,13 +4534,13 @@ class CountryEcu extends WorldCountry {
         subregion: const SouthAmerica(),
         latLng: const LatLng(-2, -77.5),
         bordersCodes: const ["Col", "Per"],
-        areaMetric: 276841,
+        areaMetric: 283561,
         emoji: "🇪🇨",
         maps: const Maps(
           googleMaps: "TbX8hUW4gcbRPZiK7",
           openStreetMaps: "relation/108089",
         ),
-        population: 17643060,
+        population: 16938986,
         gini: const Gini(year: 2019, coefficient: 45.7),
         fifa: "ECU",
         car: const Car(sign: "EC"),
@@ -4605,7 +4605,7 @@ class CountryEgy extends WorldCountry {
           googleMaps: "uoDRhXbsqjG6L7VG7",
           openStreetMaps: "relation/1473947",
         ),
-        population: 102334403,
+        population: 109450000,
         gini: const Gini(year: 2017, coefficient: 31.5),
         fifa: "EGY",
         car: const Car(sign: "ET"),
@@ -4746,7 +4746,7 @@ class CountryEsh extends WorldCountry {
           googleMaps: "7nU3mB69vP6zQp7A8",
           openStreetMaps: "relation/5441968",
         ),
-        population: 510713,
+        population: 565581,
         car: const Car(),
         timezones: const ["UTC+00:00"],
         hasCoatOfArms: false,
@@ -4805,8 +4805,8 @@ class CountryEsp extends WorldCountry {
           googleMaps: "138JaXW8EZzRVitY9",
           openStreetMaps: "relation/1311341",
         ),
-        population: 47351567,
-        gini: const Gini(year: 2018, coefficient: 34.7),
+        population: 49153849,
+        gini: const Gini(year: 2022, coefficient: 33.6),
         fifa: "ESP",
         car: const Car(sign: "E"),
         timezones: const ["UTC+00:00", "UTC+01:00"],
@@ -4872,7 +4872,7 @@ class CountryEst extends WorldCountry {
           googleMaps: "6SsynwGUodL1sDvq8",
           openStreetMaps: "relation/79510",
         ),
-        population: 1331057,
+        population: 1331824,
         gini: const Gini(year: 2018, coefficient: 30.3),
         fifa: "EST",
         car: const Car(sign: "EST"),
@@ -4940,7 +4940,7 @@ class CountryEth extends WorldCountry {
           googleMaps: "2Q4hQWCbhuZLj3fG6",
           openStreetMaps: "relation/192800",
         ),
-        population: 114963583,
+        population: 109499000,
         gini: const Gini(year: 2015, coefficient: 35),
         fifa: "ETH",
         car: const Car(sign: "ETH"),
@@ -5089,8 +5089,8 @@ class CountryFji extends WorldCountry {
           googleMaps: "r9fhDqoLZdg1zmE99",
           openStreetMaps: "relation/571747",
         ),
-        population: 896444,
-        gini: const Gini(year: 2013, coefficient: 36.7),
+        population: 926276,
+        gini: const Gini(year: 2019, coefficient: 30.7),
         fifa: "FIJ",
         car: const Car(sign: "FJI", isRightSide: false),
         timezones: const ["UTC+12:00"],
@@ -5229,7 +5229,7 @@ class CountryFra extends WorldCountry {
           googleMaps: "g7QxxSFsWyTPKuzd7",
           openStreetMaps: "relation/1403916",
         ),
-        population: 67391582,
+        population: 68605616,
         gini: const Gini(year: 2018, coefficient: 32.4),
         fifa: "FRA",
         car: const Car(sign: "F"),
@@ -5304,7 +5304,7 @@ class CountryFro extends WorldCountry {
           googleMaps: "6sTru4SmHdEVcNkM6",
           openStreetMaps: "relation/52939",
         ),
-        population: 48865,
+        population: 48346,
         fifa: "FRO",
         car: const Car(sign: "FO"),
         timezones: const ["UTC+00:00"],
@@ -5366,7 +5366,7 @@ class CountryFsm extends WorldCountry {
           googleMaps: "LLcnofC5LxZsJXTo8",
           openStreetMaps: "relation/571802",
         ),
-        population: 115021,
+        population: 104468,
         gini: const Gini(year: 2013, coefficient: 40.1),
         car: const Car(sign: "FSM"),
         timezones: const ["UTC+10:00", "UTC+11:00"],
@@ -5425,7 +5425,7 @@ class CountryGab extends WorldCountry {
           googleMaps: "vyRSkqw1H1fnq4ry6",
           openStreetMaps: "relation/192793",
         ),
-        population: 2225728,
+        population: 2397368,
         gini: const Gini(year: 2017, coefficient: 38),
         fifa: "GAB",
         car: const Car(sign: "G"),
@@ -5626,7 +5626,7 @@ class CountryGgy extends WorldCountry {
           googleMaps: "6kXnQU5QvEZMD9VB7",
           openStreetMaps: "relation/270009",
         ),
-        population: 62999,
+        population: 63950,
         car: const Car(sign: "GBG", isRightSide: false),
         timezones: const ["UTC+00:00"],
         postalCode: const PostalCode(
@@ -5697,7 +5697,7 @@ class CountryGha extends WorldCountry {
           googleMaps: "Avy5RSmdsXFBaiXq8",
           openStreetMaps: "relation/192781",
         ),
-        population: 31072945,
+        population: 35039451,
         gini: const Gini(year: 2016, coefficient: 43.5),
         fifa: "GHA",
         car: const Car(sign: "GH"),
@@ -5773,7 +5773,7 @@ class CountryGib extends WorldCountry {
   List<RegionalBloc> get regionalBlocs => const [BlocEU()];
   @override
   List<Demonyms> get demonyms => const [
-    Demonyms(language: LangEng(), female: "Gibraltar", male: "Gibraltar"),
+    Demonyms(language: LangEng(), female: "Gibraltarian", male: "Gibraltarian"),
     Demonyms(
       language: LangFra(),
       female: "Gibraltarienne",
@@ -5825,7 +5825,7 @@ class CountryGin extends WorldCountry {
           googleMaps: "8J5oM5sA4Ayr1ZYGA",
           openStreetMaps: "relation/192778",
         ),
-        population: 13132792,
+        population: 13986179,
         gini: const Gini(year: 2012, coefficient: 33.7),
         fifa: "GUI",
         car: const Car(sign: "RG"),
@@ -5886,7 +5886,7 @@ class CountryGlp extends WorldCountry {
           googleMaps: "Dy9R2EufJtoWm8UN9",
           openStreetMaps: "relation/7109289",
         ),
-        population: 400132,
+        population: 378561,
         car: const Car(sign: "F"),
         timezones: const ["UTC-04:00"],
         postalCode: const PostalCode(regExpPattern: r"^((97|98)\d{3})$"),
@@ -5948,7 +5948,7 @@ class CountryGmb extends WorldCountry {
           googleMaps: "bbGBCxxtfD2A9Z4m6",
           openStreetMaps: "relation/192774",
         ),
-        population: 2416664,
+        population: 2422712,
         gini: const Gini(year: 2015, coefficient: 35.9),
         fifa: "GAM",
         car: const Car(sign: "WAG"),
@@ -6014,7 +6014,7 @@ class CountryGnb extends WorldCountry {
           googleMaps: "5Wyaz17miUc1zLc67",
           openStreetMaps: "relation/192776",
         ),
-        population: 1967998,
+        population: 2080000,
         gini: const Gini(year: 2010, coefficient: 50.7),
         fifa: "GNB",
         car: const Car(sign: "RGB"),
@@ -6093,7 +6093,7 @@ class CountryGnq extends WorldCountry {
           googleMaps: "ucWfFd8aW1FbGMva9",
           openStreetMaps: "relation/192791",
         ),
-        population: 1402985,
+        population: 1795834,
         fifa: "EQG",
         car: const Car(sign: "GQ"),
         timezones: const ["UTC+01:00"],
@@ -6178,8 +6178,8 @@ class CountryGrc extends WorldCountry {
           googleMaps: "LHGcAvuRyD2iKECC6",
           openStreetMaps: "relation/192307",
         ),
-        population: 10715549,
-        gini: const Gini(year: 2018, coefficient: 32.9),
+        population: 10400720,
+        gini: const Gini(year: 2024, coefficient: 31.8),
         fifa: "GRE",
         car: const Car(sign: "GR"),
         timezones: const ["UTC+02:00"],
@@ -6239,7 +6239,7 @@ class CountryGrd extends WorldCountry {
           googleMaps: "rqWyfUAt4xhvk1Zy9",
           openStreetMaps: "relation/550727",
         ),
-        population: 112519,
+        population: 114621,
         fifa: "GRN",
         car: const Car(sign: "WG", isRightSide: false),
         timezones: const ["UTC-04:00"],
@@ -6249,7 +6249,7 @@ class CountryGrd extends WorldCountry {
   @override
   CapitalInfo get capitalInfo => const CapitalInfo(
     capital: Capital("St. George's"),
-    latLng: LatLng(32.38, -64.68),
+    latLng: LatLng(12.056, -61.7484),
   );
   @override
   List<RegionalBloc> get regionalBlocs => const [BlocCAIS()];
@@ -6360,7 +6360,7 @@ class CountryGtm extends WorldCountry {
           googleMaps: "JoRAbem4Hxb9FYbVA",
           openStreetMaps: "relation/1521463",
         ),
-        population: 16858333,
+        population: 17980803,
         gini: const Gini(year: 2014, coefficient: 48.3),
         fifa: "GUA",
         car: const Car(sign: "GCA"),
@@ -6404,8 +6404,8 @@ class CountryGuf extends WorldCountry {
     : super(
         name: const CountryName(
           language: LangEng(),
-          official: "Guiana",
-          common: "French Guiana",
+          official: "French Guiana",
+          common: "Guiana",
         ),
         tld: const [".gf"],
         code: "GUF",
@@ -6425,7 +6425,7 @@ class CountryGuf extends WorldCountry {
           googleMaps: "NJawFwMzG7YtCrVP7",
           openStreetMaps: "relation/2502058",
         ),
-        population: 254541,
+        population: 292354,
         car: const Car(sign: "F"),
         timezones: const ["UTC-03:00"],
         postalCode: const PostalCode(regExpPattern: r"^((97|98)3\d{2})$"),
@@ -6465,7 +6465,7 @@ class CountryGum extends WorldCountry {
     : super(
         name: const CountryName(
           language: LangEng(),
-          official: "Guam",
+          official: "Territory of Guam",
           common: "Guam",
         ),
         tld: const [".gu"],
@@ -6486,7 +6486,7 @@ class CountryGum extends WorldCountry {
           googleMaps: "Xfnq2i279b18cH3C9",
           openStreetMaps: "relation/306001",
         ),
-        population: 168783,
+        population: 168801,
         fifa: "GUM",
         car: const Car(sign: "USA"),
         timezones: const ["UTC+10:00"],
@@ -6509,15 +6509,14 @@ class CountryGum extends WorldCountry {
   @override
   List<CountryName> get namesNative => const [
     CountryName(language: LangCha(), official: "Guåhån", common: "Guåhån"),
-    CountryName(language: LangEng(), official: "Guam", common: "Guam"),
-    CountryName(language: LangSpa(), official: "Guam", common: "Guam"),
+    CountryName(
+      language: LangEng(),
+      official: "Territory of Guam",
+      common: "Guam",
+    ),
   ];
   @override
-  List<NaturalLanguage> get languages => const [
-    LangCha(),
-    LangEng(),
-    LangSpa(),
-  ];
+  List<NaturalLanguage> get languages => const [LangCha(), LangEng()];
 }
 
 /// A class that represents the Guyana country.
@@ -6549,7 +6548,7 @@ class CountryGuy extends WorldCountry {
           googleMaps: "DFsme2xEeugUAsCx5",
           openStreetMaps: "relation/287083",
         ),
-        population: 786559,
+        population: 835986,
         gini: const Gini(year: 1998, coefficient: 45.1),
         fifa: "GUY",
         car: const Car(sign: "GUY", isRightSide: false),
@@ -6730,7 +6729,7 @@ class CountryHnd extends WorldCountry {
           googleMaps: "BbeJK8Sk2VkMHbdF8",
           openStreetMaps: "relation/287670",
         ),
-        population: 9904608,
+        population: 9571352,
         gini: const Gini(year: 2019, coefficient: 48.2),
         fifa: "HON",
         car: const Car(sign: "HN"),
@@ -6800,7 +6799,7 @@ class CountryHrv extends WorldCountry {
           googleMaps: "qSG6xTKUmrYpwmGQ6",
           openStreetMaps: "relation/214885",
         ),
-        population: 4047200,
+        population: 3871833,
         gini: const Gini(year: 2018, coefficient: 29.7),
         fifa: "CRO",
         car: const Car(sign: "HR"),
@@ -6868,7 +6867,7 @@ class CountryHti extends WorldCountry {
           googleMaps: "9o13xtjuUdqFnHbn9",
           openStreetMaps: "relation/307829",
         ),
-        population: 11402533,
+        population: 11724763,
         gini: const Gini(year: 2012, coefficient: 41.1),
         fifa: "HAI",
         car: const Car(sign: "RH"),
@@ -6939,7 +6938,7 @@ class CountryHun extends WorldCountry {
           googleMaps: "9gfPupm5bffixiFJ6",
           openStreetMaps: "relation/21335",
         ),
-        population: 9749763,
+        population: 9603634,
         gini: const Gini(year: 2018, coefficient: 29.6),
         fifa: "HUN",
         car: const Car(sign: "H"),
@@ -7008,7 +7007,7 @@ class CountryIdn extends WorldCountry {
           googleMaps: "9gfPupm5bffixiFJ6",
           openStreetMaps: "relation/21335",
         ),
-        population: 273523621,
+        population: 284973643,
         gini: const Gini(year: 2019, coefficient: 38.2),
         fifa: "IDN",
         car: const Car(sign: "RI", isRightSide: false),
@@ -7101,7 +7100,7 @@ class CountryImn extends WorldCountry {
     ),
     CountryName(
       language: LangGlv(),
-      official: "Ellan Vannin or Mannin",
+      official: "Ellan Vannin",
       common: "Mannin",
     ),
   ];
@@ -7144,7 +7143,7 @@ class CountryInd extends WorldCountry {
           googleMaps: "WSk3fLwG4vtPQetp7",
           openStreetMaps: "relation/304716",
         ),
-        population: 1380004385,
+        population: 1428627663,
         gini: const Gini(year: 2011, coefficient: 35.7),
         fifa: "IND",
         car: const Car(sign: "IND", isRightSide: false),
@@ -7235,7 +7234,7 @@ class CountryIot extends WorldCountry {
   List<RegionalBloc> get regionalBlocs => const [BlocAU()];
   @override
   List<Demonyms> get demonyms => const [
-    Demonyms(language: LangEng(), female: "Indian", male: "Indian"),
+    Demonyms(language: LangEng(), female: "British", male: "British"),
   ];
   @override
   List<CountryName> get namesNative => const [
@@ -7283,7 +7282,7 @@ class CountryIrl extends WorldCountry {
           googleMaps: "hxd1BKxgpchStzQC6",
           openStreetMaps: "relation/62273",
         ),
-        population: 4994724,
+        population: 7185600,
         gini: const Gini(year: 2017, coefficient: 31.4),
         fifa: "IRL",
         car: const Car(sign: "IRL", isRightSide: false),
@@ -7359,7 +7358,7 @@ class CountryIrn extends WorldCountry {
           googleMaps: "dMgEGuacBPGYQnjY7",
           openStreetMaps: "relation/304938",
         ),
-        population: 83992953,
+        population: 92417681,
         gini: const Gini(year: 2018, coefficient: 42),
         fifa: "IRN",
         car: const Car(sign: "IR"),
@@ -7423,7 +7422,7 @@ class CountryIrq extends WorldCountry {
           googleMaps: "iL8Bmy1sUCW9fUk18",
           openStreetMaps: "relation/304934",
         ),
-        population: 40222503,
+        population: 46118793,
         gini: const Gini(year: 2012, coefficient: 29.5),
         fifa: "IRQ",
         car: const Car(sign: "IRQ"),
@@ -7490,7 +7489,7 @@ class CountryIsl extends WorldCountry {
           googleMaps: "WxFWSQuc3oamNxoE6",
           openStreetMaps: "relation/299133",
         ),
-        population: 366425,
+        population: 389444,
         gini: const Gini(year: 2017, coefficient: 26.1),
         fifa: "ISL",
         car: const Car(sign: "IS"),
@@ -7551,8 +7550,8 @@ class CountryIsr extends WorldCountry {
           googleMaps: "6UY1AH8XeafVwdC97",
           openStreetMaps: "relation/1473946",
         ),
-        population: 9216900,
-        gini: const Gini(year: 2016, coefficient: 39),
+        population: 10094000,
+        gini: const Gini(year: 2021, coefficient: 37.9),
         fifa: "ISR",
         car: const Car(sign: "IL"),
         timezones: const ["UTC+02:00"],
@@ -7581,7 +7580,7 @@ class CountryIsr extends WorldCountry {
     CountryName(language: LangHeb(), official: "מדינת ישראל", common: "ישראל"),
   ];
   @override
-  List<NaturalLanguage> get languages => const [LangAra(), LangHeb()];
+  List<NaturalLanguage> get languages => const [LangHeb()];
 }
 
 /// A class that represents the Italy country.
@@ -7613,8 +7612,8 @@ class CountryIta extends WorldCountry {
           googleMaps: "8M1K27TDj7StTRTq8",
           openStreetMaps: "relation/365331",
         ),
-        population: 59554023,
-        gini: const Gini(year: 2017, coefficient: 35.9),
+        population: 58934177,
+        gini: const Gini(year: 2020, coefficient: 32.5),
         fifa: "ITA",
         car: const Car(sign: "I"),
         timezones: const ["UTC+01:00"],
@@ -7734,7 +7733,7 @@ class CountryJey extends WorldCountry {
           googleMaps: "rXG8GZZtsqK92kTCA",
           openStreetMaps: "relation/367988",
         ),
-        population: 100800,
+        population: 103267,
         car: const Car(sign: "GBJ", isRightSide: false),
         timezones: const ["UTC+01:00"],
         postalCode: const PostalCode(
@@ -7809,7 +7808,7 @@ class CountryJor extends WorldCountry {
           googleMaps: "ko1dzSDKg8Gsi9A98",
           openStreetMaps: "relation/184818",
         ),
-        population: 10203140,
+        population: 11484805,
         gini: const Gini(year: 2010, coefficient: 33.7),
         fifa: "JOR",
         car: const Car(sign: "HKJ"),
@@ -7871,7 +7870,7 @@ class CountryJpn extends WorldCountry {
           googleMaps: "NGTLSCSrA8bMrvnX9",
           openStreetMaps: "relation/382313",
         ),
-        population: 125836021,
+        population: 126146099,
         gini: const Gini(year: 2013, coefficient: 32.9),
         fifa: "JPN",
         car: const Car(sign: "J", isRightSide: false),
@@ -7895,7 +7894,7 @@ class CountryJpn extends WorldCountry {
   ];
   @override
   List<CountryName> get namesNative => const [
-    CountryName(language: LangJpn(), official: "日本", common: "日本"),
+    CountryName(language: LangJpn(), official: "日本国", common: "日本"),
   ];
   @override
   List<NaturalLanguage> get languages => const [LangJpn()];
@@ -7940,7 +7939,7 @@ class CountryKaz extends WorldCountry {
           googleMaps: "8VohJGu7ShuzZYyeA",
           openStreetMaps: "relation/214665",
         ),
-        population: 18754440,
+        population: 20286084,
         gini: const Gini(year: 2018, coefficient: 27.8),
         fifa: "KAZ",
         car: const Car(sign: "KZ"),
@@ -7954,8 +7953,8 @@ class CountryKaz extends WorldCountry {
   List<FiatCurrency> get currencies => const [FiatKzt()];
   @override
   CapitalInfo get capitalInfo => const CapitalInfo(
-    capital: Capital("Nur-Sultan"),
-    latLng: LatLng(51.16, 71.45),
+    capital: Capital("Astana"),
+    latLng: LatLng(51.1, 71.26),
   );
   @override
   List<RegionalBloc> get regionalBlocs => const [BlocEEU()];
@@ -8014,7 +8013,7 @@ class CountryKen extends WorldCountry {
           googleMaps: "Ni9M7wcCxf8bJHLX8",
           openStreetMaps: "relation/192798",
         ),
-        population: 53771300,
+        population: 52428290,
         gini: const Gini(year: 2015, coefficient: 40.8),
         fifa: "KEN",
         car: const Car(sign: "EAK", isRightSide: false),
@@ -8044,7 +8043,7 @@ class CountryKen extends WorldCountry {
     ),
     CountryName(
       language: LangSwa(),
-      official: "Republic of Kenya",
+      official: "Jamhuri ya Kenya",
       common: "Kenya",
     ),
   ];
@@ -8088,7 +8087,7 @@ class CountryKgz extends WorldCountry {
           googleMaps: "SKG8BSMMQVvxkRkB7",
           openStreetMaps: "relation/178009",
         ),
-        population: 6591600,
+        population: 7037590,
         gini: const Gini(year: 2019, coefficient: 29.7),
         fifa: "KGZ",
         car: const Car(sign: "KS"),
@@ -8158,7 +8157,7 @@ class CountryKhm extends WorldCountry {
           googleMaps: "nztQtFSrUXZymJaW8",
           openStreetMaps: "relation/49898",
         ),
-        population: 16718971,
+        population: 17638801,
         fifa: "CAM",
         car: const Car(sign: "K"),
         timezones: const ["UTC+07:00"],
@@ -8183,7 +8182,7 @@ class CountryKhm extends WorldCountry {
     CountryName(
       language: LangKhm(),
       official: "ព្រះរាជាណាចក្រកម្ពុជា",
-      common: "Kâmpŭchéa",
+      common: "កម្ពុជា",
     ),
   ];
   @override
@@ -8222,7 +8221,7 @@ class CountryKir extends WorldCountry {
           googleMaps: "NBfYvrndW4skAimw9",
           openStreetMaps: "relation/571178",
         ),
-        population: 119446,
+        population: 121388,
         gini: const Gini(year: 2006, coefficient: 37),
         car: const Car(sign: "KIR", isRightSide: false),
         timezones: const ["UTC+12:00", "UTC+13:00", "UTC+14:00"],
@@ -8279,7 +8278,7 @@ class CountryKna extends WorldCountry {
           googleMaps: "qiaVwcLVTXX3eoTNA",
           openStreetMaps: "relation/536899",
         ),
-        population: 53192,
+        population: 47606,
         fifa: "SKN",
         car: const Car(sign: "KN", isRightSide: false),
         timezones: const ["UTC-04:00"],
@@ -8476,7 +8475,7 @@ class CountryLao extends WorldCountry {
           googleMaps: "F3asVB7sRKgSnwbE7",
           openStreetMaps: "relation/49903",
         ),
-        population: 7275556,
+        population: 7953556,
         gini: const Gini(year: 2018, coefficient: 38.8),
         fifa: "LAO",
         car: const Car(sign: "LAO"),
@@ -8501,8 +8500,8 @@ class CountryLao extends WorldCountry {
   List<CountryName> get namesNative => const [
     CountryName(
       language: LangLao(),
-      official: "ສາທາລະນະ ຊາທິປະໄຕ ຄົນລາວ ຂອງ",
-      common: "ສປປລາວ",
+      official: "ສາທາລະນະລັດ ປະຊາທິປະໄຕ ປະຊາຊົນລາວ",
+      common: "ປະເທດລາວ",
     ),
   ];
   @override
@@ -8542,7 +8541,7 @@ class CountryLbn extends WorldCountry {
           googleMaps: "Sz5VCU8UFBqMyTdc9",
           openStreetMaps: "relation/184843",
         ),
-        population: 6825442,
+        population: 5364482,
         gini: const Gini(year: 2011, coefficient: 31.8),
         fifa: "LBN",
         car: const Car(sign: "RL"),
@@ -8612,7 +8611,7 @@ class CountryLbr extends WorldCountry {
           googleMaps: "4VsHsc2oeGeRL3wg6",
           openStreetMaps: "relation/192780",
         ),
-        population: 5057677,
+        population: 5437249,
         gini: const Gini(year: 2016, coefficient: 35.3),
         fifa: "LBR",
         car: const Car(sign: "LB"),
@@ -8630,7 +8629,7 @@ class CountryLbr extends WorldCountry {
     latLng: LatLng(6.3, -10.8),
   );
   @override
-  List<RegionalBloc> get regionalBlocs => const [BlocAU(), BlocAL()];
+  List<RegionalBloc> get regionalBlocs => const [BlocAU()];
   @override
   List<Demonyms> get demonyms => const [
     Demonyms(language: LangEng(), female: "Liberian", male: "Liberian"),
@@ -8677,7 +8676,7 @@ class CountryLby extends WorldCountry {
           googleMaps: "eLgGnaQWcJEdYRMy5",
           openStreetMaps: "relation/192758",
         ),
-        population: 6871287,
+        population: 7361263,
         fifa: "LBY",
         car: const Car(sign: "LAR"),
         timezones: const ["UTC+01:00"],
@@ -8803,7 +8802,7 @@ class CountryLie extends WorldCountry {
           googleMaps: "KNuHeiJzAPodwM7y6",
           openStreetMaps: "relation/1155955",
         ),
-        population: 38137,
+        population: 41232,
         fifa: "LIE",
         car: const Car(sign: "FL"),
         timezones: const ["UTC+01:00"],
@@ -8945,7 +8944,7 @@ class CountryLso extends WorldCountry {
           googleMaps: "H8gJi5mL4Cmd1SF28",
           openStreetMaps: "relation/2093234",
         ),
-        population: 2142252,
+        population: 2210646,
         gini: const Gini(year: 2017, coefficient: 44.9),
         fifa: "LES",
         car: const Car(sign: "LS", isRightSide: false),
@@ -8978,7 +8977,7 @@ class CountryLso extends WorldCountry {
     ),
     CountryName(
       language: LangSot(),
-      official: "Kingdom of Lesotho",
+      official: "Muso oa Lesotho",
       common: "Lesotho",
     ),
   ];
@@ -9019,7 +9018,7 @@ class CountryLtu extends WorldCountry {
           googleMaps: "dd1s9rrLjrK2G8yY6",
           openStreetMaps: "relation/72596",
         ),
-        population: 2794700,
+        population: 2897430,
         gini: const Gini(year: 2018, coefficient: 35.7),
         fifa: "LTU",
         car: const Car(sign: "LT"),
@@ -9047,7 +9046,7 @@ class CountryLtu extends WorldCountry {
   List<CountryName> get namesNative => const [
     CountryName(
       language: LangLit(),
-      official: "Lietuvos Respublikos",
+      official: "Lietuvos Respublika",
       common: "Lietuva",
     ),
   ];
@@ -9091,8 +9090,8 @@ class CountryLux extends WorldCountry {
           googleMaps: "L6b2AgndgHprt2Ko9",
           openStreetMaps: "relation/2171347#map=10/49.8167/6.1335",
         ),
-        population: 632275,
-        gini: const Gini(year: 2018, coefficient: 35.4),
+        population: 681973,
+        gini: const Gini(year: 2023, coefficient: 30.6),
         fifa: "LUX",
         car: const Car(sign: "L"),
         timezones: const ["UTC+01:00"],
@@ -9174,7 +9173,7 @@ class CountryLva extends WorldCountry {
           googleMaps: "iQpUkH7ghq31ZtXe9",
           openStreetMaps: "relation/72594",
         ),
-        population: 1901548,
+        population: 1842226,
         gini: const Gini(year: 2018, coefficient: 35.1),
         fifa: "LVA",
         car: const Car(sign: "LV"),
@@ -9200,7 +9199,7 @@ class CountryLva extends WorldCountry {
   List<CountryName> get namesNative => const [
     CountryName(
       language: LangLav(),
-      official: "Latvijas Republikas",
+      official: "Latvijas Republika",
       common: "Latvija",
     ),
   ];
@@ -9246,7 +9245,7 @@ class CountryMac extends WorldCountry {
           googleMaps: "whymRdk3dZFfAAs4A",
           openStreetMaps: "relation/1867188",
         ),
-        population: 649342,
+        population: 712651,
         fifa: "MAC",
         car: const Car(sign: "MO", isRightSide: false),
         timezones: const ["UTC+08:00"],
@@ -9281,7 +9280,7 @@ class CountryMaf extends WorldCountry {
     : super(
         name: const CountryName(
           language: LangEng(),
-          official: "Saint Martin",
+          official: "Collectivity of Saint Martin",
           common: "Saint Martin",
         ),
         tld: const [".fr", ".gp"],
@@ -9307,7 +9306,7 @@ class CountryMaf extends WorldCountry {
           googleMaps: "P9ho9QuJ9EAR28JEA",
           openStreetMaps: "relation/63064",
         ),
-        population: 38659,
+        population: 31477,
         car: const Car(sign: "F"),
         timezones: const ["UTC-04:00"],
         hasCoatOfArms: false,
@@ -9337,7 +9336,7 @@ class CountryMaf extends WorldCountry {
   List<CountryName> get namesNative => const [
     CountryName(
       language: LangFra(),
-      official: "Saint-Martin",
+      official: "Collectivité de Saint-Martin",
       common: "Saint-Martin",
     ),
   ];
@@ -9378,7 +9377,7 @@ class CountryMar extends WorldCountry {
           googleMaps: "6oMv3dyBZg3iaXQ5A",
           openStreetMaps: "relation/3630439",
         ),
-        population: 36910558,
+        population: 36828330,
         gini: const Gini(year: 2013, coefficient: 39.5),
         fifa: "MAR",
         car: const Car(sign: "MA"),
@@ -9444,7 +9443,7 @@ class CountryMco extends WorldCountry {
           googleMaps: "DGpndDot28bYdXYn7",
           openStreetMaps: "relation/1124039",
         ),
-        population: 39244,
+        population: 38423,
         car: const Car(sign: "MC"),
         timezones: const ["UTC+01:00"],
         postalCode: const PostalCode(),
@@ -9577,7 +9576,7 @@ class CountryMdg extends WorldCountry {
           googleMaps: "AHQh2ABBaFW6Ngj26",
           openStreetMaps: "relation/447325",
         ),
-        population: 27691019,
+        population: 31964956,
         gini: const Gini(year: 2012, coefficient: 42.6),
         fifa: "MAD",
         car: const Car(sign: "RM"),
@@ -9668,7 +9667,7 @@ class CountryMdv extends WorldCountry {
   List<RegionalBloc> get regionalBlocs => const [BlocSAARC()];
   @override
   List<Demonyms> get demonyms => const [
-    Demonyms(language: LangEng(), female: "Maldivan", male: "Maldivan"),
+    Demonyms(language: LangEng(), female: "Maldivian", male: "Maldivian"),
     Demonyms(language: LangFra(), female: "Maldivienne", male: "Maldivien"),
   ];
   @override
@@ -9676,7 +9675,7 @@ class CountryMdv extends WorldCountry {
     CountryName(
       language: LangDiv(),
       official: "ދިވެހިރާއްޖޭގެ ޖުމްހޫރިއްޔާ",
-      common: "ދިވެހިރާއްޖޭގެ",
+      common: "ދިވެހިރާއްޖެ",
     ),
   ];
   @override
@@ -9782,7 +9781,7 @@ class CountryMhl extends WorldCountry {
           googleMaps: "A4xLi1XvcX88gi3W8",
           openStreetMaps: "relation/571771",
         ),
-        population: 59194,
+        population: 42418,
         car: const Car(sign: "MH"),
         timezones: const ["UTC+12:00"],
       );
@@ -9807,7 +9806,7 @@ class CountryMhl extends WorldCountry {
     ),
     CountryName(
       language: LangMah(),
-      official: "Republic of the Marshall Islands",
+      official: "Aolepān Aorōkin M̧ajeļ",
       common: "M̧ajeļ",
     ),
   ];
@@ -9851,7 +9850,7 @@ class CountryMkd extends WorldCountry {
           googleMaps: "55Q8MEnF6ACdu3q79",
           openStreetMaps: "relation/53293",
         ),
-        population: 2077132,
+        population: 1836713,
         gini: const Gini(year: 2018, coefficient: 33),
         fifa: "MKD",
         car: const Car(sign: "MK"),
@@ -9882,7 +9881,7 @@ class CountryMkd extends WorldCountry {
     ),
   ];
   @override
-  List<NaturalLanguage> get languages => const [LangMkd()];
+  List<NaturalLanguage> get languages => const [LangMkd(), LangSqi()];
 }
 
 /// A class that represents the Mali country.
@@ -9915,7 +9914,7 @@ class CountryMli extends WorldCountry {
           googleMaps: "u9mYJkCB19wyuzh27",
           openStreetMaps: "relation/192785",
         ),
-        population: 20250834,
+        population: 21990607,
         gini: const Gini(year: 2009, coefficient: 33),
         fifa: "MLI",
         car: const Car(sign: "RMM"),
@@ -9973,8 +9972,8 @@ class CountryMlt extends WorldCountry {
           googleMaps: "skXCqguxDxxEKVk47",
           openStreetMaps: "relation/365307",
         ),
-        population: 525285,
-        gini: const Gini(year: 2018, coefficient: 28.7),
+        population: 519562, // https://en.wikipedia.org/wiki/Malta
+        gini: const Gini(year: 2020, coefficient: 31.4),
         fifa: "MLT",
         car: const Car(sign: "M", isRightSide: false),
         timezones: const ["UTC+01:00"],
@@ -9988,7 +9987,7 @@ class CountryMlt extends WorldCountry {
   @override
   CapitalInfo get capitalInfo => const CapitalInfo(
     capital: Capital("Valletta"),
-    latLng: LatLng(35.88, 14.5),
+    latLng: LatLng(35.89, 14.51), // https://en.wikipedia.org/wiki/Malta
   );
   @override
   List<RegionalBloc> get regionalBlocs => const [BlocEU()];
@@ -10006,7 +10005,7 @@ class CountryMlt extends WorldCountry {
     ),
     CountryName(
       language: LangMlt(),
-      official: "Repubblika ta ' Malta",
+      official: "Repubblika ta' Malta", // https://en.wikipedia.org/wiki/Malta
       common: "Malta",
     ),
   ];
@@ -10040,7 +10039,7 @@ class CountryMmr extends WorldCountry {
         ],
         continent: const Asia(),
         subregion: const SouthEasternAsia(),
-        latLng: const LatLng(22, 98),
+        latLng: const LatLng(22, 96), // https://en.wikipedia.org/wiki/Myanmar
         bordersCodes: const ["Bgd", "Chn", "Ind", "Lao", "Tha"],
         areaMetric: 676578,
         emoji: "🇲🇲",
@@ -10048,7 +10047,7 @@ class CountryMmr extends WorldCountry {
           googleMaps: "4jrZyJkDERUfHyp26",
           openStreetMaps: "relation/50371",
         ),
-        population: 54409794,
+        population: 55770232,
         gini: const Gini(year: 2017, coefficient: 30.7),
         fifa: "MYA",
         car: const Car(sign: "BUR"),
@@ -10104,16 +10103,16 @@ class CountryMne extends WorldCountry {
         subregion: const SouthwestEurope(),
         latLng: const LatLng(42.5, 19.3),
         bordersCodes: const ["Alb", "Bih", "Hrv", "Srb", "Unk"],
-        areaMetric: 13812,
+        areaMetric: 13883, // https://en.wikipedia.org/wiki/Montenegro
         emoji: "🇲🇪",
         maps: const Maps(
           googleMaps: "4THX1fM7WqANuPbB8",
           openStreetMaps: "relation/53296",
         ),
-        population: 621718,
-        gini: const Gini(year: 2016, coefficient: 38.5),
+        population: 623633,
+        gini: const Gini(year: 2023, coefficient: 29.4),
         fifa: "MNE",
-        car: const Car(sign: "SCG"),
+        car: const Car(sign: "MNE"), // https://en.wikipedia.org/wiki/Montenegro
         timezones: const ["UTC+01:00"],
         postalCode: const PostalCode(),
       );
@@ -10138,6 +10137,11 @@ class CountryMne extends WorldCountry {
       official: "Црна Гора",
       common: "Црна Гора",
     ),
+    CountryName(
+      language: LangSrp(),
+      official: "Crna Gora", // https://en.wikipedia.org/wiki/Montenegro
+      common: "Crna Gora", // https://en.wikipedia.org/wiki/Montenegro
+    ),
   ];
   @override
   List<NaturalLanguage> get languages => const [LangSrp()];
@@ -10155,7 +10159,7 @@ class CountryMng extends WorldCountry {
           official: "Mongolia",
           common: "Mongolia",
         ),
-        tld: const [".mn"],
+        tld: const [".mn", ".мон"], // https://en.wikipedia.org/wiki/Mongolia
         code: "MNG",
         codeNumeric: "496",
         codeShort: "MN",
@@ -10164,16 +10168,16 @@ class CountryMng extends WorldCountry {
         altSpellings: const ["MN"],
         continent: const Asia(),
         subregion: const EasternAsia(),
-        latLng: const LatLng(46, 105),
+        latLng: const LatLng(48, 106), // https://en.wikipedia.org/wiki/Mongolia
         landlocked: true,
         bordersCodes: const ["Chn", "Rus"],
-        areaMetric: 1564110,
+        areaMetric: 1564116, // https://en.wikipedia.org/wiki/Mongolia
         emoji: "🇲🇳",
         maps: const Maps(
           googleMaps: "A1X7bMCKThBDNjzH6",
           openStreetMaps: "relation/161033",
         ),
-        population: 3278292,
+        population: 3504741,
         gini: const Gini(year: 2018, coefficient: 32.7),
         fifa: "MNG",
         car: const Car(sign: "MGL"),
@@ -10187,8 +10191,8 @@ class CountryMng extends WorldCountry {
   List<FiatCurrency> get currencies => const [FiatMnt()];
   @override
   CapitalInfo get capitalInfo => const CapitalInfo(
-    capital: Capital("Ulan Bator"),
-    latLng: LatLng(47.92, 106.91),
+    capital: Capital("Ulaanbaatar"), // https://en.wikipedia.org/wiki/Mongolia
+    latLng: LatLng(47.91, 106.88), // https://en.wikipedia.org/wiki/Ulaanbaatar
   );
   @override
   List<Demonyms> get demonyms => const [
@@ -10230,17 +10234,18 @@ class CountryMnp extends WorldCountry {
           "MP",
           "Commonwealth of the Northern Mariana Islands",
           "Sankattan Siha Na Islas Mariånas",
+          "Commonwealth Téél Falúw kka Efáng llól Marianas", // https://en.wikipedia.org/wiki/Northern_Mariana_Islands
         ],
         continent: const Oceania(),
         subregion: const Micronesia(),
-        latLng: const LatLng(15.2, 145.75),
+        latLng: const LatLng(16.71, 145.78),
         areaMetric: 464,
         emoji: "🇲🇵",
         maps: const Maps(
           googleMaps: "cpZ67knoRAcfu1417",
           openStreetMaps: "relation/306004",
         ),
-        population: 57557,
+        population: 47329,
         car: const Car(sign: "USA"),
         timezones: const ["UTC+10:00"],
         hasCoatOfArms: false,
@@ -10250,12 +10255,20 @@ class CountryMnp extends WorldCountry {
   @override
   CapitalInfo get capitalInfo => const CapitalInfo(
     capital: Capital("Saipan"),
-    latLng: LatLng(15.2, 145.75),
+    latLng: LatLng(15.19, 145.74),
   );
   @override
   List<Demonyms> get demonyms => const [
-    Demonyms(language: LangEng(), female: "American", male: "American"),
-    Demonyms(language: LangFra(), female: "Américaine", male: "Américan"),
+    Demonyms(
+      language: LangEng(),
+      female: "Northern Mariana Islander",
+      male: "Northern Mariana Islander",
+    ), // https://en.wikipedia.org/wiki/Northern_Mariana_Islands
+    Demonyms(
+      language: LangFra(),
+      female: "Nord-Marianaise",
+      male: "Nord-Marianais",
+    ),
   ];
   @override
   List<CountryName> get namesNative => const [
@@ -13594,7 +13607,8 @@ class CountrySle extends WorldCountry {
         timezones: const ["UTC+00:00"],
       );
   @override
-  List<FiatCurrency> get currencies => const [FiatSll()];
+  // ignore: deprecated_member_use, it's TODO!
+  List<FiatCurrency> get currencies => const [FiatSll(), FiatSle()];
   @override
   CapitalInfo get capitalInfo => const CapitalInfo(
     capital: Capital("Freetown"),
@@ -15409,11 +15423,12 @@ class CountryTur extends WorldCountry {
   /// Creates a instance of [CountryTur] (Turkey country).
   ///
   /// ISO 3166-1 Alpha-3 code: `TUR`, ISO 3166-1 Alpha-2 code: `TR`.
+  // https://en.wikipedia.org/wiki/Turkey
   const CountryTur()
     : super(
         name: const CountryName(
           language: LangEng(),
-          official: "Republic of Turkey",
+          official: "Republic of Türkiye",
           common: "Turkey",
         ),
         tld: const [".tr"],
@@ -15447,8 +15462,8 @@ class CountryTur extends WorldCountry {
           googleMaps: "dXFFraiUDfcB6Quk6",
           openStreetMaps: "relation/174737",
         ),
-        population: 84339067,
-        gini: const Gini(year: 2019, coefficient: 41.9),
+        population: 85664944,
+        gini: const Gini(year: 2021, coefficient: 44.4),
         fifa: "TUR",
         car: const Car(sign: "TR"),
         timezones: const ["UTC+03:00"],
@@ -15459,7 +15474,7 @@ class CountryTur extends WorldCountry {
   @override
   CapitalInfo get capitalInfo => const CapitalInfo(
     capital: Capital("Ankara"),
-    latLng: LatLng(39.93, 32.87),
+    latLng: LatLng(39.917, 32.85),
   );
   @override
   List<Demonyms> get demonyms => const [
@@ -15483,6 +15498,7 @@ class CountryTuv extends WorldCountry {
   /// Creates a instance of [CountryTuv] (Tuvalu country).
   ///
   /// ISO 3166-1 Alpha-3 code: `TUV`, ISO 3166-1 Alpha-2 code: `TV`.
+  // https://en.wikipedia.org/wiki/Tuvalu
   const CountryTuv()
     : super(
         name: const CountryName(
@@ -15506,8 +15522,8 @@ class CountryTuv extends WorldCountry {
           googleMaps: "LbuUxtkgm1dfN1Pn6",
           openStreetMaps: "relation/2177266",
         ),
-        population: 11792,
-        gini: const Gini(year: 2010, coefficient: 39.1),
+        population: 10643,
+        gini: const Gini(year: 2022, coefficient: 39),
         car: const Car(sign: "TUV", isRightSide: false),
         timezones: const ["UTC+12:00"],
       );
@@ -15704,7 +15720,7 @@ class CountryUga extends WorldCountry {
           googleMaps: "Y7812hFiGa8LD9N68",
           openStreetMaps: "relation/192796",
         ),
-        population: 45741000,
+        population: 49_283_041,
         gini: const Gini(year: 2016, coefficient: 42.8),
         fifa: "UGA",
         car: const Car(sign: "EAU", isRightSide: false),
@@ -17278,6 +17294,7 @@ class CountryZwe extends WorldCountry {
   /// Creates a instance of [CountryZwe] (Zimbabwe country).
   ///
   /// ISO 3166-1 Alpha-3 code: `ZWE`, ISO 3166-1 Alpha-2 code: `ZW`.
+  // https://en.wikipedia.org/wiki/Zimbabwe
   const CountryZwe()
     : super(
         name: const CountryName(
@@ -17296,14 +17313,14 @@ class CountryZwe extends WorldCountry {
         subregion: const SouthernAfrica(),
         latLng: const LatLng(-20, 30),
         landlocked: true,
-        bordersCodes: const ["Bwa", "Moz", "Zaf", "Tur"],
+        bordersCodes: const ["Bwa", "Moz", "Zaf", "Zmb"],
         areaMetric: 390757,
         emoji: "🇿🇼",
         maps: const Maps(
           googleMaps: "M26BqdwQctqxXS65A",
           openStreetMaps: "relation/195272",
         ),
-        population: 14862927,
+        population: 15178957,
         gini: const Gini(year: 2019, coefficient: 50.3),
         fifa: "ZIM",
         car: const Car(sign: "ZW", isRightSide: false),
@@ -17331,24 +17348,39 @@ class CountryZwe extends WorldCountry {
       common: "Zimbabwe",
     ),
     CountryName(
+      language: LangSna(),
+      official: "Nyika yeZimbabwe",
+      common: "yeZimbabwe",
+    ),
+    CountryName(
+      language: LangNde(),
+      official: "Ilizwe laseZimbabwe",
+      common: "laseZimbabwe",
+    ),
+    CountryName(
+      language: LangNya(),
+      official: "Dziko la Zimbabwe",
+      common: "Zimbabwe",
+    ),
+    CountryName(
       language: LangTsn(),
-      official: "Republic of Zimbabwe",
+      official: "Lefatshe la Zimbabwe",
       common: "Zimbabwe",
     ),
     CountryName(
       language: LangTso(),
-      official: "Republic of Zimbabwe",
+      official: "Riphabliki ra Zimbabwe",
       common: "Zimbabwe",
     ),
     CountryName(
       language: LangVen(),
-      official: "Republic of Zimbabwe",
+      official: "Riphabuḽiki ya Zimbabwe",
       common: "Zimbabwe",
     ),
     CountryName(
       language: LangXho(),
-      official: "Republic of Zimbabwe",
-      common: "Zimbabwe",
+      official: "IRiphabhlikhi yaseZimbabwe",
+      common: "yaseZimbabwe",
     ),
   ];
   @override

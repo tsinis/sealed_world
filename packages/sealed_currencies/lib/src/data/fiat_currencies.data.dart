@@ -1661,7 +1661,7 @@ class FiatMga extends FiatCurrency {
         name: "Malagasy Ariary",
         symbol: "Ar",
         codeNumeric: "969",
-        namesNative: const ["ariary malgache"],
+        namesNative: const ["ariary malagasy", "ariary malgache"],
         subunit: "Iraimbilanja",
         subunitToUnit: 5,
         unitFirst: true,
@@ -1980,7 +1980,7 @@ class FiatNzd extends FiatCurrency {
         disambiguateSymbol: r"NZ$",
         htmlEntity: r"$",
         codeNumeric: "554",
-        namesNative: const ["New Zealand dollar"],
+        namesNative: const ["New Zealand dollar", "tāra o Aotearoa"],
         smallestDenomination: 10,
         subunit: "Cent",
         unitFirst: true,
@@ -2347,7 +2347,12 @@ class FiatSgd extends FiatCurrency {
         disambiguateSymbol: r"S$",
         htmlEntity: r"$",
         codeNumeric: "702",
-        namesNative: const ["Singapore dollar"],
+        namesNative: const [
+          "Singapore dollar",
+          "Singapura Dolar",
+          "新加坡元",
+          "சிங்கப்பூர் வெள்ளி",
+        ],
         subunit: "Cent",
         unitFirst: true,
       );
@@ -2394,6 +2399,7 @@ class FiatSll extends FiatCurrency {
   /// Creates a instance of [FiatSll] (Sierra Leonean Leone (Old) currency).
   ///
   /// ISO 4217 Alpha code: `SLL`, ISO 4217 Numeric code: `694`.
+  @Deprecated("Use `FiatSle()` instead")
   const FiatSll()
     : super(
         code: "SLL",
@@ -2419,7 +2425,7 @@ class FiatSos extends FiatCurrency {
         symbol: "Sh",
         alternateSymbols: const ["Sh.So"],
         codeNumeric: "706",
-        namesNative: const ["Shilin soomaali"],
+        namesNative: const ["Shilin soomaali", "شلن صومالي"],
         subunit: "Cent",
       );
 }
@@ -2484,6 +2490,7 @@ class FiatSvc extends FiatCurrency {
   /// Creates a instance of [FiatSvc] (Salvadoran Colón currency).
   ///
   /// ISO 4217 Alpha code: `SVC`, ISO 4217 Numeric code: `222`.
+  @Deprecated("Use `FiatUsd()` instead")
   const FiatSvc()
     : super(
         code: "SVC",

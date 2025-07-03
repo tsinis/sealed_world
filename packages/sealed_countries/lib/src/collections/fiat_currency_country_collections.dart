@@ -9,6 +9,5 @@ import "../model/country/country.dart";
 const unofficialCurrenciesCountryMap = <FiatCurrency, List<WorldCountry>>{
   FiatHrk(): [CountryHrv()], // ignore: deprecated_member_use, it's TODO!
   FiatClf(): [CountryChl()],
-  FiatSle(): [CountrySle()],
-  FiatSvc(): [CountrySlv()],
+  FiatSvc(): [CountrySlv()], // ignore: deprecated_member_use, it's TODO!
 };

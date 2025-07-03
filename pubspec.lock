@@ -589,14 +589,6 @@ packages:
       url: "https://pub.dev"
     source: hosted
     version: "1.0.3"
-  select_annotation:
-    dependency: transitive
-    description:
-      name: select_annotation
-      sha256: "77260425a2a8660a41fe8944ec16d487f0efac8f2456c9463c964dec892bf22a"
-      url: "https://pub.dev"
-    source: hosted
-    version: "0.2.0"
   shelf:
     dependency: transitive
     description:

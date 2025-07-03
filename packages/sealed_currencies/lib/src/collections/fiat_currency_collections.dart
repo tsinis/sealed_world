@@ -61,7 +61,7 @@ const fiatCurrencyList = <FiatCurrency>[
   FiatGyd(),
   FiatHkd(),
   FiatHnl(),
-  FiatHrk(), // ignore: deprecated_member_use_from_same_package, until 2025.
+  FiatHrk(), // ignore: deprecated_member_use_from_same_package, TODO! End of 2025.
   FiatHtg(),
   FiatHuf(),
   FiatIdr(),
@@ -129,12 +129,12 @@ const fiatCurrencyList = <FiatCurrency>[
   FiatSgd(),
   FiatShp(),
   FiatSle(),
-  FiatSll(),
+  FiatSll(), // ignore: deprecated_member_use_from_same_package, TODO! End of 2025.
   FiatSos(),
   FiatSrd(),
   FiatSsp(),
   FiatStn(),
-  FiatSvc(),
+  FiatSvc(), // ignore: deprecated_member_use_from_same_package, TODO! End of 2025.
   FiatSyp(),
   FiatSzl(),
   FiatThb(),
@@ -225,7 +225,7 @@ const fiatCurrencyCodeMap = <String, FiatCurrency>{
   "HKD": FiatHkd(),
   "HNL": FiatHnl(),
   "HRK":
-      FiatHrk(), // ignore: deprecated_member_use_from_same_package, until 2025.
+      FiatHrk(), // ignore: deprecated_member_use_from_same_package, TODO! End of 2025.
   "HTG": FiatHtg(),
   "HUF": FiatHuf(),
   "IDR": FiatIdr(),
@@ -293,12 +293,14 @@ const fiatCurrencyCodeMap = <String, FiatCurrency>{
   "SGD": FiatSgd(),
   "SHP": FiatShp(),
   "SLE": FiatSle(),
-  "SLL": FiatSll(),
+  "SLL":
+      FiatSll(), // ignore: deprecated_member_use_from_same_package, TODO! End of 2025.
   "SOS": FiatSos(),
   "SRD": FiatSrd(),
   "SSP": FiatSsp(),
   "STN": FiatStn(),
-  "SVC": FiatSvc(),
+  "SVC":
+      FiatSvc(), // ignore: deprecated_member_use_from_same_package, TODO! End of 2025.
   "SYP": FiatSyp(),
   "SZL": FiatSzl(),
   "THB": FiatThb(),
@@ -372,12 +374,13 @@ const fiatCurrencyCodeOtherMap = <String, FiatCurrency>{
   "174": FiatKmf(),
   "188": FiatCrc(),
   "191":
-      FiatHrk(), // ignore: deprecated_member_use_from_same_package, until 2025.
+      FiatHrk(), // ignore: deprecated_member_use_from_same_package, TODO! End of 2025.
   "192": FiatCup(),
   "203": FiatCzk(),
   "208": FiatDkk(),
   "214": FiatDop(),
-  "222": FiatSvc(),
+  "222":
+      FiatSvc(), // ignore: deprecated_member_use_from_same_package, TODO! End of 2025.
   "230": FiatEtb(),
   "232": FiatErn(),
   "238": FiatFkp(),
@@ -443,7 +446,8 @@ const fiatCurrencyCodeOtherMap = <String, FiatCurrency>{
   "654": FiatShp(),
   "682": FiatSar(),
   "690": FiatScr(),
-  "694": FiatSll(),
+  "694":
+      FiatSll(), // ignore: deprecated_member_use_from_same_package, TODO! End of 2025.
   "702": FiatSgd(),
   "704": FiatVnd(),
   "706": FiatSos(),
