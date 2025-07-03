@@ -76,8 +76,7 @@ extension IterableNaturalLanguageExtension on Iterable<NaturalLanguage> {
   /// - African Regional Languages.
   /// For certain African languages, uses reverse population order to highlight
   /// smaller countries where the language has special cultural significance:
-  /// - Swahili variants (Swati, Swahili)
-  /// - Regional languages (Guarani, Somali, Setswana, Turkmen)
+  /// - Regional languages (Guarani, Somali, Setswana, Swati)
   ///
   /// - Constructed Languages.
   /// Returns empty lists for artificial/constructed languages that aren't tied
@@ -95,9 +94,7 @@ extension IterableNaturalLanguageExtension on Iterable<NaturalLanguage> {
     const LangGrn() ||
     const LangSom() ||
     const LangSsw() ||
-    const LangSwa() ||
-    const LangTsn() ||
-    const LangTuk() => countries.reversed.toList(growable: false),
+    const LangTsn() => countries.reversed.toList(growable: false),
     const LangEng() => _changeFirst(const CountryGbr(), countries),
     const LangFra() => _changeFirst(const CountryFra(), countries),
     const LangPor() => _changeFirst(const CountryPrt(), countries),

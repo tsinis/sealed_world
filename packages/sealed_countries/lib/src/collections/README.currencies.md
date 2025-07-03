@@ -7,7 +7,7 @@
 | ANG | Netherlands Antillean Guilder | 🇨🇼 Curaçao | 🇸🇽 |
 | AOA | Angolan Kwanza | 🇦🇴 Angola |  |
 | ARS | Argentine Peso | 🇦🇷 Argentina |  |
-| AUD | Australian Dollar | 🇦🇺 Australia | 🇰🇮🇹🇻🇳🇷🇳🇫🇨🇽🇨🇨 |
+| AUD | Australian Dollar | 🇦🇺 Australia | 🇰🇮🇳🇷🇹🇻🇳🇫🇨🇽🇨🇨 |
 | AWG | Aruban Florin | 🇦🇼 Aruba |  |
 | AZN | Azerbaijani Manat | 🇦🇿 Azerbaijan |  |
 | BAM | Convertible Mark | 🇧🇦 Bosnia and Herzegovina |  |
@@ -44,7 +44,7 @@
 | EGP | Egyptian Pound | 🇪🇬 Egypt | 🇵🇸 |
 | ERN | Eritrean Nakfa | 🇪🇷 Eritrea |  |
 | ETB | Ethiopian Birr | 🇪🇹 Ethiopia |  |
-| EUR | Euro | 🇩🇪 Germany | 🇫🇷🇮🇹🇪🇸🇳🇱🇧🇪🇬🇷🇵🇹🇦🇹🇫🇮🇸🇰🇮🇪🇭🇷🇱🇹🇸🇮🇱🇻🇽🇰🇪🇪🇨🇾🇷🇪🇱🇺🇲🇪🇲🇹🇬🇵🇲🇶🇬🇫🇾🇹🇦🇩🇲🇨🇲🇫🇸🇲🇦🇽🇵🇲🇧🇱🇻🇦🇹🇫 |
+| EUR | Euro | 🇩🇪 Germany | 🇫🇷🇮🇹🇪🇸🇳🇱🇧🇪🇬🇷🇵🇹🇦🇹🇮🇪🇫🇮🇸🇰🇭🇷🇱🇹🇸🇮🇱🇻🇽🇰🇪🇪🇨🇾🇷🇪🇱🇺🇲🇪🇲🇹🇬🇵🇲🇶🇬🇫🇾🇹🇦🇩🇲🇨🇸🇲🇲🇫🇦🇽🇧🇱🇵🇲🇻🇦🇹🇫 |
 | FJD | Fijian Dollar | 🇫🇯 Fiji |  |
 | FKP | Falkland Pound | 🇫🇰 Falkland Islands |  |
 | GBP | British Pound | 🇬🇧 United Kingdom | 🇿🇼🇯🇪🇮🇲🇬🇬🇸🇭🇬🇸 |
@@ -144,7 +144,7 @@
 | TZS | Tanzanian Shilling | 🇹🇿 Tanzania |  |
 | UAH | Ukrainian Hryvnia | 🇺🇦 Ukraine |  |
 | UGX | Ugandan Shilling | 🇺🇬 Uganda |  |
-| USD | United States Dollar | 🇺🇸 United States | 🇪🇨🇰🇭🇸🇻🇵🇦🇵🇷🇹🇱🇧🇸🇬🇺🇫🇲🇻🇮🇲🇭🇲🇵🇦🇸🇹🇨🇻🇬🇧🇶🇵🇼🇮🇴🇺🇲 |
+| USD | United States Dollar | 🇺🇸 United States | 🇰🇭🇪🇨🇸🇻🇵🇦🇵🇷🇹🇱🇧🇸🇬🇺🇻🇮🇫🇲🇦🇸🇲🇵🇲🇭🇹🇨🇧🇶🇻🇬🇵🇼🇮🇴🇺🇲 |
 | UYU | Uruguayan Peso | 🇺🇾 Uruguay |  |
 | UZS | Uzbekistani Som | 🇺🇿 Uzbekistan |  |
 | VES | Venezuelan Bolívar Soberano | 🇻🇪 Venezuela |  |
