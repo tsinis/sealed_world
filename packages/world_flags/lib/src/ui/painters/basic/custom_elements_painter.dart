@@ -59,6 +59,7 @@ abstract base class CustomElementsPainter<T extends FlagParentBounds>
   Size ratioAdjustedSize(Size size, {double minRatio = 1.1}) {
     final originalRatio = originalAspectRatio;
     if (originalRatio == null) return size;
+
     final currentAspectRatio = calculateAspectRatio(size);
     final adjustedRatio = min(minRatio, currentAspectRatio / originalRatio);
     final heightFactor = property.heightFactor;

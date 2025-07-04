@@ -61,6 +61,7 @@ const flagDmaProperties = FlagProperties(
   ],
   aspectRatio: 2,
   baseElementType: FlagElementsType.multiElement,
+  isSimplified: true,
   elementsProperties: [
     ElementsProperties(
       Color(0xffffffff),
@@ -219,6 +220,7 @@ const flagPhlProperties = FlagProperties(
   [ColorsProperties(Color(0xff0038a8)), ColorsProperties(Color(0xffce1126))],
   aspectRatio: 2,
   baseElementType: FlagElementsType.multiElement,
+  isSimplified: true,
   elementsProperties: [
     ElementsProperties(
       Color(0xffffffff),
@@ -468,6 +470,7 @@ const flagJpnProperties = FlagProperties(
 const flagJeyProperties = FlagProperties(
   [ColorsProperties(Color(0xffffffff))],
   aspectRatio: 5 / 3,
+  isSimplified: true,
   elementsProperties: [
     CustomElementsProperties(
       Color(0xffcf142b),
@@ -506,6 +509,7 @@ const flagGumProperties = FlagProperties(
     ColorsProperties(Color(0xffC62139)),
   ],
   aspectRatio: 41 / 22,
+  isSimplified: true,
   elementsProperties: [
     CustomElementsProperties(
       Color(0xffC62139),
@@ -679,6 +683,7 @@ const flagDomProperties = FlagProperties(
     ColorsProperties(Color(0xffce1126), ratio: 2),
   ],
   baseElementType: FlagElementsType.multiElement,
+  isSimplified: true,
   elementsProperties: [
     ElementsProperties(
       Color(0xff002d62),
@@ -735,6 +740,7 @@ const flagGtmProperties = FlagProperties(
   aspectRatio: 8 / 5,
   stripeOrientation: StripeOrientation.vertical,
   baseElementType: FlagElementsType.ellipse,
+  isSimplified: true,
   elementsProperties: [
     ElementsProperties(
       Color(0xff67923d),
@@ -841,6 +847,7 @@ const flagGgyProperties = FlagProperties(
     ColorsProperties(Color(0xffffffff), ratio: 15),
   ],
   baseElementType: FlagElementsType.multiElement,
+  isSimplified: true,
   elementsProperties: [
     ElementsProperties(
       Color(0xffe8112d),
@@ -965,6 +972,7 @@ const flagPryProperties = FlagProperties(
   ],
   aspectRatio: 20 / 11,
   baseElementType: FlagElementsType.ellipse,
+  isSimplified: true,
   elementsProperties: [
     ElementsProperties(
       Color(0xff000000),
@@ -1011,6 +1019,7 @@ const flagPryProperties = FlagProperties(
 const flagPcnProperties = FlagProperties(
   [ColorsProperties(Color(0xff012169))],
   aspectRatio: 2,
+  isSimplified: true,
   elementsProperties: [
     CustomElementsProperties(
       Color(0xfff7e017),
@@ -1112,6 +1121,7 @@ const flagGnqProperties = FlagProperties(
     ColorsProperties(Color(0xffffffff)),
     ColorsProperties(Color(0xffe32118)),
   ],
+  isSimplified: true,
   elementsProperties: [
     CustomElementsProperties(
       Color(0xFFB0B0B0),
@@ -1158,6 +1168,7 @@ const flagKorProperties = FlagProperties(
 const flagImnProperties = FlagProperties(
   [ColorsProperties(Color(0xffCF142B))],
   aspectRatio: 2,
+  isSimplified: true,
   elementsProperties: [
     CustomElementsProperties(
       Color(0xffffffff),
@@ -1196,6 +1207,7 @@ const flagKgzProperties = FlagProperties(
   [ColorsProperties(Color(0xffff0000))],
   aspectRatio: 5 / 3,
   baseElementType: FlagElementsType.star,
+  isSimplified: true,
   elementsProperties: [
     ElementsProperties(
       Color(0xffFFED00),
@@ -1237,6 +1249,7 @@ const flagKgzProperties = FlagProperties(
 /// Flag properties of country Hong Kong (HK).
 const flagHkgProperties = FlagProperties(
   [ColorsProperties(Color(0xffec1b2e))],
+  isSimplified: true,
   elementsProperties: [
     CustomElementsProperties(
       Color(0xffffffff),
@@ -1279,6 +1292,7 @@ const flagPrkProperties = FlagProperties(
 /// Flag properties of country Saudi Arabia (SA).
 const flagSauProperties = FlagProperties(
   [ColorsProperties(Color(0xff005430))],
+  isSimplified: true,
   elementsProperties: [
     CustomElementsProperties(
       Color(0xffffffff),
@@ -1299,6 +1313,7 @@ const flagSlvProperties = FlagProperties(
   ],
   aspectRatio: 335 / 189,
   baseElementType: FlagElementsType.ellipse,
+  isSimplified: true,
   elementsProperties: [
     ElementsProperties(
       Color(0xffFCE300),
@@ -1367,6 +1382,7 @@ const flagSrbProperties = FlagProperties(
     ColorsProperties(Color(0xff0c4076)),
     ColorsProperties(Color(0xffffffff)),
   ],
+  isSimplified: true,
   elementsProperties: [
     CustomElementsProperties(
       Color(0xffffffff),
@@ -1699,6 +1715,7 @@ const flagHmdProperties = flagAusProperties; // TODO!
 const flagBrnProperties = FlagProperties(
   [ColorsProperties(Color(0xfff7e017))],
   aspectRatio: 2,
+  isSimplified: true,
   elementsProperties: [
     CustomElementsProperties(
       Color(0xffffffff),
@@ -1737,6 +1754,7 @@ const flagBlrProperties = FlagProperties(
     ColorsProperties(Color(0xff009739)),
   ],
   aspectRatio: 2,
+  isSimplified: true,
   elementsProperties: [
     CustomElementsProperties(
       Color(0xffffffff),
@@ -1775,6 +1793,7 @@ const flagUgaProperties = FlagProperties(
     ColorsProperties(Color(0xffFCDC04)),
     ColorsProperties(Color(0xffD90000)),
   ],
+  isSimplified: true,
   elementsProperties: [
     ElementsProperties(
       Color(0xffffffff),
@@ -1808,6 +1827,7 @@ const flagUgaProperties = FlagProperties(
 const flagTcaProperties = FlagProperties(
   [ColorsProperties(Color(0xff012169))],
   aspectRatio: 2,
+  isSimplified: true,
   elementsProperties: [
     CustomElementsProperties(
       Color(0xfffcd116),
@@ -2001,6 +2021,7 @@ const flagLsoProperties = FlagProperties(
     ColorsProperties(Color(0xffffffff), ratio: 100),
     ColorsProperties(Color(0xff009543), ratio: 75),
   ],
+  isSimplified: true,
   elementsProperties: [
     CustomElementsProperties(
       Color(0xff000000),
@@ -2022,6 +2043,7 @@ const flagMwiProperties = FlagProperties(
     ColorsProperties(Color(0xfff41408)),
     ColorsProperties(Color(0xff21873b)),
   ],
+  isSimplified: true,
   elementsProperties: [
     CustomElementsProperties(
       Color(0xfff41408),
@@ -2047,6 +2069,7 @@ const flagNldProperties = FlagProperties(
 /// Flag properties of country United States Virgin Islands (VI).
 const flagVirProperties = FlagProperties(
   [ColorsProperties(Color(0xffffffff))],
+  isSimplified: true,
   elementsProperties: [
     CustomElementsProperties(
       Color(0xfff4c53d),
@@ -2097,6 +2120,7 @@ const flagCivProperties = FlagProperties(
 const flagBmuProperties = FlagProperties(
   [ColorsProperties(Color(0xffcf142b))],
   aspectRatio: 2,
+  isSimplified: true,
   elementsProperties: [
     CustomElementsProperties(
       Color(0xffffffff),
@@ -2133,6 +2157,7 @@ const flagBlzProperties = FlagProperties(
   ],
   aspectRatio: 5 / 3,
   baseElementType: FlagElementsType.multiElement,
+  isSimplified: true,
   elementsProperties: [
     ElementsProperties(
       Color(0xffffffff),

@@ -54,6 +54,7 @@ class FlagProperties {
     this.stripeOrientation = StripeOrientation.horizontal,
     this.baseElementType,
     this.elementsProperties,
+    this.isSimplified = false,
     this.url = "",
   }) : assert(
          stripeColors != const <ColorsProperties>[],
@@ -83,6 +84,13 @@ class FlagProperties {
   /// The orientation of the stripes (horizontal, vertical and diagonals).
   final StripeOrientation stripeOrientation;
 
+  /// Indicates whether the flag is simplified (e.g. elements are not detailed).
+  /// If `true`, the flag is simplified, meaning it may not include all
+  /// details or elements, so it's not suitable for rendering in bigger sizes.
+  /// If `false`, the flag is not simplified, meaning it includes all details
+  /// and elements, so it's suitable for rendering in any size.
+  final bool isSimplified;
+
   /// A URL associated with the flag, used for testing purposes.
   @visibleForTesting
   final String url;
@@ -103,7 +111,8 @@ class FlagProperties {
   @override
   String toString() =>
       "FlagProperties($stripeColors, aspectRatio: $aspectRatio, "
-      "stripeOrientation: $stripeOrientation, url: $url"
+      "stripeOrientation: $stripeOrientation, isSimplified: $isSimplified"
       """${elementsProperties == null ? '' : ', elementsProperties: $elementsProperties'}"""
-      """${baseElementType == null ? '' : ', baseElementType: $baseElementType'})""";
+      "${baseElementType == null ? '' : ', baseElementType: $baseElementType'}"
+      ", url: $url)";
 }

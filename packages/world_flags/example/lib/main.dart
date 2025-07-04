@@ -59,7 +59,7 @@ class _MainState extends State<Main> {
       child: ListView.separated(
         itemBuilder: (bc, index) {
           final item = _items.keys.elementAt(index);
-          final isFull = fullFlags.contains(item);
+          final isFull = !(_items[item]?.properties.isSimplified ?? false);
           final style = TextStyle(
             color: isFull ? null : Theme.of(bc).disabledColor,
           );
