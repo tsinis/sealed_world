@@ -119,7 +119,7 @@ class StripesPainter<T extends CustomPainter> extends CustomPainter {
       ..translate(-diagonalLength, -height * 2);
 
     double position = 0;
-    final paint = Paint()..isAntiAlias = false;
+    final paint = Paint();
     for (final colorProperty in properties.stripeColors) {
       final stripeSize = diagonalLength * 2 * colorProperty.ratio / totalRatio;
       final stripe = Rect.fromLTWH(position, 0, stripeSize, height * 4);
