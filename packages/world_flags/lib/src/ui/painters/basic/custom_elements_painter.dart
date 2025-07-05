@@ -52,7 +52,7 @@ abstract base class CustomElementsPainter<T extends FlagParentBounds>
   /// [originalAspectRatio], [minRatio], and the size of the parent bounds.
   ///
   /// - [size]: The size of the child element.
-  /// - [minRatio]: The minimum ratio to use for adjustment. Defaults to 1.1.
+  /// - [minRatio]: The minimum ratio to use for adjustment. Defaults to `1.1`.
   ///
   /// Returns the adjusted size of the child element.
   @protected

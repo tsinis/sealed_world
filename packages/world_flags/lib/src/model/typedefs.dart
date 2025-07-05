@@ -13,7 +13,7 @@ typedef ElementsProps = List<ElementsProperties>;
 /// - [aspectRatio]: The aspect ratio of the flag.
 ///
 /// The function returns an instance of [T], which extends [CustomPainter], or
-/// null.
+/// `null`.
 @optionalTypeArgs
 typedef FlagPainterBuilder<T extends CustomPainter> =
     T? Function(ElementsProps? properties, double aspectRatio);
