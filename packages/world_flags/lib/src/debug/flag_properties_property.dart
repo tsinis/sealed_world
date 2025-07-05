@@ -49,6 +49,8 @@ class FlagPropertiesProperty extends DiagnosticsProperty<FlagProperties> {
     json["aspectRatio"] = value?.aspectRatio;
     json["orientation"] = value?.stripeOrientation.name;
     json["stripesCount"] = value?.stripeColors.length;
+    json["isSimplified"] = value?.isSimplified;
+
     if (value?.baseElementType != null) {
       json["baseElementType"] = value?.baseElementType?.name;
     }
@@ -66,10 +68,9 @@ class FlagPropertiesProperty extends DiagnosticsProperty<FlagProperties> {
 
     final buffer = StringBuffer("aspectRatio: ${flag.aspectRatio}\n")
       ..write("stripeOrientation: ${flag.stripeOrientation.name}\n")
-      ..write("baseElementType: ${flag.baseElementType?.name}\n");
-
-    final colorCount = flag.stripeColors.length;
-    buffer.write("stripeColors: $colorCount\n");
+      ..write("baseElementType: ${flag.baseElementType?.name}\n")
+      ..write("stripeColors: ${flag.stripeColors.length}\n")
+      ..write("isSimplified: ${flag.isSimplified}\n");
 
     if (flag.elementsProperties?.isNotEmpty ?? false) {
       final elementCount = flag.elementsProperties?.length;

@@ -43,6 +43,7 @@ const flagMnpProperties = FlagProperties(
   [ColorsProperties(Color(0xff0033A1))],
   aspectRatio: 2,
   baseElementType: FlagElementsType.multiElement,
+  isSimplified: true,
   elementsProperties: [
     CustomElementsProperties(
       Color(0xffffffff),
@@ -113,6 +114,7 @@ const flagAndProperties = FlagProperties(
   ],
   aspectRatio: 10 / 7,
   stripeOrientation: StripeOrientation.vertical,
+  isSimplified: true,
   elementsProperties: [
     CustomElementsProperties(
       Color(0xffc6aa76),
@@ -156,6 +158,7 @@ const flagChlProperties = FlagProperties(
 const flagAsmProperties = FlagProperties(
   [ColorsProperties(Color(0xff00205b))],
   aspectRatio: 2,
+  isSimplified: true,
   elementsProperties: [
     CustomElementsProperties(
       Color(0xffffd100),
@@ -466,6 +469,7 @@ const flagLbnProperties = FlagProperties(
     ColorsProperties(Color(0xffffffff), ratio: 2),
     ColorsProperties(Color(0xffee161f)),
   ],
+  isSimplified: true,
   elementsProperties: [
     CustomElementsProperties(
       Color(0xff00a850),
@@ -486,6 +490,7 @@ const flagMdaProperties = FlagProperties(
   ],
   aspectRatio: 2,
   stripeOrientation: StripeOrientation.vertical,
+  isSimplified: true,
   elementsProperties: [
     CustomElementsProperties(
       Color.fromARGB(255, 113, 55, 13),
@@ -510,6 +515,7 @@ const flagMdaProperties = FlagProperties(
 const flagMsrProperties = FlagProperties(
   [ColorsProperties(Color(0xff012169))],
   aspectRatio: 2,
+  isSimplified: true,
   elementsProperties: [
     CustomElementsProperties(
       Color(0xff00a2bd),
@@ -569,6 +575,7 @@ const flagCxrProperties = FlagProperties(
   aspectRatio: 2,
   stripeOrientation: StripeOrientation.diagonalTopLeftToBottomRight,
   baseElementType: FlagElementsType.multiElement,
+  isSimplified: true,
   elementsProperties: [
     ElementsProperties(
       Color(0xffffffff),
@@ -715,6 +722,7 @@ const flagVnmProperties = FlagProperties(
 /// Flag properties of country Zambia (ZM).
 const flagZmbProperties = FlagProperties(
   [ColorsProperties(Color(0xff009E49))],
+  isSimplified: true,
   elementsProperties: [
     CustomElementsProperties(
       Color(0xffFCAD56),
@@ -859,6 +867,7 @@ const flagAfgProperties = FlagProperties(
   ],
   stripeOrientation: StripeOrientation.vertical,
   baseElementType: FlagElementsType.ellipse,
+  isSimplified: true,
   elementsProperties: [
     ElementsProperties(
       Color.fromARGB(100, 255, 255, 255),
@@ -891,6 +900,7 @@ const flagOmnProperties = FlagProperties(
   ],
   aspectRatio: 2,
   baseElementType: FlagElementsType.multiElement,
+  isSimplified: true,
   elementsProperties: [
     ElementsProperties(
       Color(0xffef2d29),
@@ -949,6 +959,7 @@ const flagNicProperties = FlagProperties(
   ],
   aspectRatio: 5 / 3,
   baseElementType: FlagElementsType.ellipse,
+  isSimplified: true,
   elementsProperties: [
     ElementsProperties(
       Color(0xffc8a400),
@@ -1017,6 +1028,7 @@ const flagMneProperties = FlagProperties(
     ColorsProperties(Color(0xffd3ae3b)),
   ],
   aspectRatio: 2,
+  isSimplified: true,
   elementsProperties: [
     CustomElementsProperties(
       Color(0xffd3ae3b),
@@ -1079,6 +1091,7 @@ const flagCckProperties = FlagProperties(
   [ColorsProperties(Color(0xff008000))],
   aspectRatio: 2,
   baseElementType: FlagElementsType.multiElement,
+  isSimplified: true,
   elementsProperties: [
     ElementsProperties(
       Color(0xffffe000),
@@ -1226,6 +1239,7 @@ const flagVutProperties = FlagProperties(
     ColorsProperties(Color(0xff009543), ratio: 15),
   ],
   baseElementType: FlagElementsType.multiElement,
+  isSimplified: true,
   elementsProperties: [
     ElementsProperties(
       Color(0xff000000),
@@ -1293,6 +1307,7 @@ const flagUryProperties = FlagProperties(
     ColorsProperties(Color(0xffffffff)),
   ],
   baseElementType: FlagElementsType.rectangle,
+  isSimplified: true,
   elementsProperties: [
     ElementsProperties(
       Color(0xffffffff),
@@ -1386,6 +1401,7 @@ const flagZweProperties = FlagProperties(
   ],
   aspectRatio: 2,
   baseElementType: FlagElementsType.triangle,
+  isSimplified: true,
   elementsProperties: [
     ElementsProperties(
       Color(0xff000000),
@@ -1701,6 +1717,7 @@ const flagVatProperties = FlagProperties(
   [ColorsProperties(Color(0xffffe000)), ColorsProperties(Color(0xffffffff))],
   aspectRatio: 1,
   stripeOrientation: StripeOrientation.vertical,
+  isSimplified: true,
   elementsProperties: [
     CustomElementsProperties(
       Color(0xffce9d09),
@@ -2032,6 +2049,7 @@ const flagCpvProperties = FlagProperties(
 const flagAiaProperties = FlagProperties(
   [ColorsProperties(Color(0xff012169))],
   aspectRatio: 2,
+  isSimplified: true,
   elementsProperties: [
     CustomElementsProperties(
       Color(0xffffffff),
@@ -2055,6 +2073,7 @@ const flagAiaProperties = FlagProperties(
 const flagBraProperties = FlagProperties(
   [ColorsProperties(Color(0xff229e45))],
   aspectRatio: 10 / 7,
+  isSimplified: true,
   elementsProperties: [
     CustomElementsProperties(
       Color(0xfff8e509),
@@ -2102,6 +2121,7 @@ const flagNfkProperties = FlagProperties(
   ],
   aspectRatio: 2,
   stripeOrientation: StripeOrientation.vertical,
+  isSimplified: true,
   elementsProperties: [
     CustomElementsProperties(
       Color(0xff007833),
@@ -2167,6 +2187,7 @@ const flagMngProperties = FlagProperties(
   aspectRatio: 2,
   stripeOrientation: StripeOrientation.vertical,
   baseElementType: FlagElementsType.multiElement,
+  isSimplified: true,
   elementsProperties: [
     ElementsProperties(
       Color(0xffffd900),
@@ -2244,6 +2265,7 @@ const flagMngProperties = FlagProperties(
 const flagNiuProperties = FlagProperties(
   [ColorsProperties(Color(0xfffedd00))],
   aspectRatio: 2,
+  isSimplified: true,
   elementsProperties: [
     CustomElementsProperties(
       Color(0xfffedd00),
@@ -2391,6 +2413,7 @@ const flagCriProperties = FlagProperties(
     ColorsProperties(Color(0xff001489)),
   ],
   aspectRatio: 5 / 3,
+  isSimplified: true,
   elementsProperties: [
     CustomElementsProperties(
       Color(0xffffffff),
@@ -2445,6 +2468,7 @@ const flagTlsProperties = FlagProperties(
 /// Flag properties of country Turkmenistan (TM).
 const flagTkmProperties = FlagProperties(
   [ColorsProperties(Color(0xff00853A))],
+  isSimplified: true,
   elementsProperties: [
     ElementsProperties(
       Color(0xffffffff),

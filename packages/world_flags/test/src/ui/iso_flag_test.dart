@@ -31,11 +31,14 @@ void main() => group("$IsoFlag", () {
   });
 
   group("Full", () {
-    for (final iso in const <IsoTranslated>[
-      ...fullFlags,
-      FiatEur(),
-      LangEpo(),
-      LangIdo(),
+    final nonSimplified = WorldCountry.list.where(
+      (country) => !(country.flagProperties?.isSimplified ?? false),
+    );
+    for (final iso in <IsoTranslated>[
+      ...nonSimplified,
+      const FiatEur(),
+      const LangEpo(),
+      const LangIdo(),
     ]) {
       testWidgets(
         "${iso.internationalName} Flag",

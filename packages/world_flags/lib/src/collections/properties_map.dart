@@ -290,10 +290,12 @@ const flagPropertiesMap = <WorldCountry, FlagProperties>{
 /// This list is useful for applications that need to display high-quality
 /// flag images at various sizes, ensuring that the flags in this list
 /// maintain their visual integrity in any scale.
+@Deprecated("Please use `!flagProperties.isSimplified` instead.")
 const fullFlags = <WorldCountry>[
   CountryAbw(),
   CountryAgo(), // TODO!
   CountryAla(),
+  CountryAlb(),
   CountryAre(),
   CountryArg(), // TODO!
   CountryArm(),
@@ -370,6 +372,7 @@ const fullFlags = <WorldCountry>[
   CountryJam(),
   CountryJor(),
   CountryJpn(),
+  CountryKen(),
   CountryKna(), // TODO!
   CountryKor(),
   CountryKwt(),

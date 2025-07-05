@@ -80,30 +80,24 @@ class StripesPainter<T extends CustomPainter> extends CustomPainter {
 
   void _drawVerticalStripes(Canvas canvas, Size size, int totalRatio) {
     double position = 0;
+    final paint = Paint()..isAntiAlias = false;
     for (final colorProperty in properties.stripeColors) {
       final stripeSize = size.width * colorProperty.ratio / totalRatio;
       final stripe = Rect.fromLTWH(position, 0, stripeSize, size.height);
-      canvas.drawRect(
-        stripe,
-        Paint()
-          ..color = colorProperty.color
-          ..isAntiAlias = false,
-      );
+      paint.color = colorProperty.color;
+      canvas.drawRect(stripe, paint);
       position += stripeSize;
     }
   }
 
   void _drawHorizontalStripes(Canvas canvas, Size size, int totalRatio) {
     double position = 0;
+    final paint = Paint()..isAntiAlias = false;
     for (final colorProperty in properties.stripeColors) {
       final stripeSize = size.height * colorProperty.ratio / totalRatio;
       final stripe = Rect.fromLTWH(0, position, size.width, stripeSize);
-      canvas.drawRect(
-        stripe,
-        Paint()
-          ..color = colorProperty.color
-          ..isAntiAlias = false,
-      );
+      paint.color = colorProperty.color;
+      canvas.drawRect(stripe, paint);
       position += stripeSize;
     }
   }
@@ -125,10 +119,12 @@ class StripesPainter<T extends CustomPainter> extends CustomPainter {
       ..translate(-diagonalLength, -height * 2);
 
     double position = 0;
+    final paint = Paint();
     for (final colorProperty in properties.stripeColors) {
       final stripeSize = diagonalLength * 2 * colorProperty.ratio / totalRatio;
       final stripe = Rect.fromLTWH(position, 0, stripeSize, height * 4);
-      canvas.drawRect(stripe, Paint()..color = colorProperty.color);
+      paint.color = colorProperty.color;
+      canvas.drawRect(stripe, paint);
       position += stripeSize;
     }
 

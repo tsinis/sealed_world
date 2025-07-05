@@ -28,6 +28,7 @@ const flagIotProperties = FlagProperties(
     ColorsProperties(Color(0xffffffff)),
   ],
   aspectRatio: 2,
+  isSimplified: true,
   elementsProperties: [
     CustomElementsProperties(
       Color(0xff000063),
@@ -65,6 +66,7 @@ const flagGrdProperties = FlagProperties(
   [ColorsProperties(Color(0xff009739))],
   aspectRatio: 5 / 3,
   baseElementType: FlagElementsType.multiElement,
+  isSimplified: true,
   elementsProperties: [
     ElementsProperties(
       Color(0xffFFD100),
@@ -174,6 +176,7 @@ const flagGrdProperties = FlagProperties(
 const flagSgsProperties = FlagProperties(
   [ColorsProperties(Color(0xff012169))],
   aspectRatio: 2,
+  isSimplified: true,
   elementsProperties: [
     CustomElementsProperties(
       Color(0xffffffff),
@@ -252,6 +255,7 @@ const flagLkaProperties = FlagProperties(
   ],
   aspectRatio: 2,
   stripeOrientation: StripeOrientation.vertical,
+  isSimplified: true,
   elementsProperties: [
     CustomElementsProperties(
       Color(0xffF7B718),
@@ -305,6 +309,7 @@ const flagLkaProperties = FlagProperties(
 /// Flag properties of country Macau (MO).
 const flagMacProperties = FlagProperties(
   [ColorsProperties(Color(0xff067662))],
+  isSimplified: true,
   elementsProperties: [
     CustomElementsProperties(
       Color(0xffffffff),
@@ -359,6 +364,7 @@ const flagMexProperties = FlagProperties(
   ],
   aspectRatio: 7 / 4,
   stripeOrientation: StripeOrientation.vertical,
+  isSimplified: true,
   elementsProperties: [
     CustomElementsProperties(
       Color(0xff9CA168),
@@ -420,6 +426,7 @@ const flagMozProperties = FlagProperties(
     ColorsProperties(Color(0xffFFD100), ratio: 10),
   ],
   baseElementType: FlagElementsType.triangle,
+  isSimplified: true,
   elementsProperties: [
     ElementsProperties(
       Color(0xffE4002B),
@@ -453,6 +460,7 @@ const flagMozProperties = FlagProperties(
 const flagLieProperties = FlagProperties(
   [ColorsProperties(Color(0xff002780)), ColorsProperties(Color(0xffCF0921))],
   aspectRatio: 5 / 3,
+  isSimplified: true,
   elementsProperties: [
     CustomElementsProperties(
       Color(0xffffd83d),
@@ -535,6 +543,7 @@ const flagBrbProperties = FlagProperties(
 const flagVgbProperties = FlagProperties(
   [ColorsProperties(Color(0xff012169))],
   aspectRatio: 2,
+  isSimplified: true,
   elementsProperties: [
     CustomElementsProperties(
       Color(0xff006129),
@@ -748,6 +757,7 @@ const flagGhaProperties = FlagProperties(
 const flagSmrProperties = FlagProperties(
   [ColorsProperties(Color(0xffffffff)), ColorsProperties(Color(0xff19b6ef))],
   aspectRatio: 4 / 3,
+  isSimplified: true,
   elementsProperties: [
     CustomElementsProperties(
       Color(0xffe9bf00),
@@ -826,6 +836,7 @@ const flagSwzProperties = FlagProperties(
     ColorsProperties(Color(0xffffd900)),
     ColorsProperties(Color(0xff3e5eb9), ratio: 3),
   ],
+  isSimplified: true,
   elementsProperties: [
     CustomElementsProperties(
       Color(0xffffffff),
@@ -924,6 +935,7 @@ const flagGibProperties = FlagProperties(
   ],
   aspectRatio: 2,
   baseElementType: FlagElementsType.multiElement,
+  isSimplified: true,
   elementsProperties: [
     ElementsProperties(
       Color(0xfff8d80e),
@@ -1020,6 +1032,7 @@ const flagKhmProperties = FlagProperties(
     ColorsProperties(Color(0xff032ea1)),
   ],
   aspectRatio: 25 / 16,
+  isSimplified: true,
   elementsProperties: [
     CustomElementsProperties(
       Color(0xffffffff),
@@ -1039,6 +1052,7 @@ const flagEthProperties = FlagProperties(
     ColorsProperties(Color(0xffef2118)),
   ],
   aspectRatio: 2,
+  isSimplified: true,
   elementsProperties: [
     ElementsProperties(
       Color(0xff006bc6),
@@ -1118,6 +1132,7 @@ const flagEcuProperties = FlagProperties(
     ColorsProperties(Color(0xff034ea2)),
     ColorsProperties(Color(0xffed1c24)),
   ],
+  isSimplified: true,
   elementsProperties: [
     CustomElementsProperties(
       Color(0xff808080),
@@ -1200,6 +1215,7 @@ const flagSyrProperties = FlagProperties(
 const flagSxmProperties = FlagProperties(
   [ColorsProperties(Color(0xffed2939)), ColorsProperties(Color(0xff002395))],
   baseElementType: FlagElementsType.triangle,
+  isSimplified: true,
   elementsProperties: [
     ElementsProperties(
       Color(0xffffffff),
@@ -1233,6 +1249,7 @@ const flagPrtProperties = FlagProperties(
     ColorsProperties(Color(0xffff0000), ratio: 3),
   ],
   stripeOrientation: StripeOrientation.vertical,
+  isSimplified: true,
   elementsProperties: [
     CustomElementsProperties(
       Color(0xffffff00),
@@ -1305,6 +1322,7 @@ const flagHrvProperties = FlagProperties(
     ColorsProperties(Color(0xff171796)),
   ],
   aspectRatio: 2,
+  isSimplified: true,
   elementsProperties: [
     CustomElementsProperties(
       Color(0xffff0000),
@@ -1335,6 +1353,7 @@ const flagKirProperties = FlagProperties(
     ColorsProperties(Color(0xff005989), ratio: 18),
   ],
   aspectRatio: 2,
+  isSimplified: true,
   elementsProperties: [
     CustomElementsProperties(
       Color(0xfffec74a),
@@ -1357,6 +1376,7 @@ const flagKirProperties = FlagProperties(
 const flagKazProperties = FlagProperties(
   [ColorsProperties(Color(0xff00abc2))],
   aspectRatio: 2,
+  isSimplified: true,
   elementsProperties: [
     CustomElementsProperties(
       Color(0xffffec2d),
@@ -1464,6 +1484,7 @@ const flagIrnProperties = FlagProperties(
     ColorsProperties(Color(0xffda0000)),
   ],
   aspectRatio: 7 / 4,
+  isSimplified: true,
   elementsProperties: [
     CustomElementsProperties(
       Color(0xffda0000),
@@ -1542,6 +1563,7 @@ const flagGinProperties = FlagProperties(
 const flagFjiProperties = FlagProperties(
   [ColorsProperties(Color(0xff62b5e5))],
   aspectRatio: 2,
+  isSimplified: true,
   elementsProperties: [
     CustomElementsProperties(
       Color(0xffd21034),
@@ -1653,6 +1675,7 @@ const flagPyfProperties = FlagProperties(
     ColorsProperties(Color(0xffffffff), ratio: 2),
     ColorsProperties(Color(0xffff0000)),
   ],
+  isSimplified: true,
   elementsProperties: [
     CustomElementsProperties(
       Color(0xffff0000),
@@ -1691,6 +1714,7 @@ const flagPyfProperties = FlagProperties(
 const flagFlkProperties = FlagProperties(
   [ColorsProperties(Color(0xff012169))],
   aspectRatio: 2,
+  isSimplified: true,
   elementsProperties: [
     CustomElementsProperties(
       Color(0xff0072c4),
@@ -1727,6 +1751,7 @@ const flagEgyProperties = FlagProperties(
     ColorsProperties(Color(0xffffffff)),
     ColorsProperties(Color(0xff000000)),
   ],
+  isSimplified: true,
   elementsProperties: [
     CustomElementsProperties(
       Color.fromARGB(50, 190, 145, 0),
@@ -1781,6 +1806,7 @@ const flagIdnProperties = FlagProperties(
 const flagCymProperties = FlagProperties(
   [ColorsProperties(Color(0xff012169))],
   aspectRatio: 2,
+  isSimplified: true,
   elementsProperties: [
     CustomElementsProperties(
       Color(0xff000066),
@@ -1814,6 +1840,7 @@ const flagEspProperties = FlagProperties(
     ColorsProperties(Color(0xffFABD00), ratio: 2),
     ColorsProperties(Color(0xffAD1519)),
   ],
+  isSimplified: true,
   elementsProperties: [
     CustomElementsProperties(
       Color(0xffad1519),
@@ -1847,6 +1874,7 @@ const flagIrqProperties = FlagProperties(
     ColorsProperties(Color(0xffffffff)),
     ColorsProperties(Color(0xff000000)),
   ],
+  isSimplified: true,
   elementsProperties: [
     CustomElementsProperties(Color(0xff017b3d), heightFactor: 1 / 4),
   ],
@@ -2024,6 +2052,7 @@ const flagSvnProperties = FlagProperties(
     ColorsProperties(Color(0xffFF0000)),
   ],
   aspectRatio: 2,
+  isSimplified: true,
   elementsProperties: [
     CustomElementsProperties(
       Color(0xffFF0000),
@@ -2152,6 +2181,7 @@ const flagHtiProperties = FlagProperties(
   [ColorsProperties(Color(0xff00209f)), ColorsProperties(Color(0xffd21034))],
   aspectRatio: 5 / 3,
   baseElementType: FlagElementsType.rectangle,
+  isSimplified: true,
   elementsProperties: [
     ElementsProperties(
       Color(0xffffffff),
@@ -2186,6 +2216,7 @@ const flagHtiProperties = FlagProperties(
 const flagBtnProperties = FlagProperties(
   [ColorsProperties(Color(0xffFFCC33)), ColorsProperties(Color(0xffff4e12))],
   stripeOrientation: StripeOrientation.diagonalBottomLeftToTopRight,
+  isSimplified: true,
   elementsProperties: [
     CustomElementsProperties(
       Color(0xff000000),
@@ -2260,6 +2291,7 @@ const flagMltProperties = FlagProperties(
   [ColorsProperties(Color(0xffffffff)), ColorsProperties(Color(0xffCF142B))],
   stripeOrientation: StripeOrientation.vertical,
   baseElementType: FlagElementsType.multiElement,
+  isSimplified: true,
   elementsProperties: [
     ElementsProperties(
       Color(0xffffffff),

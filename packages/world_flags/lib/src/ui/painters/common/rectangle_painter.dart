@@ -13,6 +13,11 @@ final class RectanglePainter extends ElementsPainter {
   const RectanglePainter(super.properties, super.aspectRatio);
 
   @override
+  Paint paintCreator([Color? color]) =>
+      // ignore: avoid-returning-cascades, it's ok for a shorthand method.
+      super.paintCreator(color)..isAntiAlias = false;
+
+  @override
   FlagParentBounds paintFlagElements(Canvas canvas, Size size) {
     final maybeAspectRatio = shapeType<Rectangle>()?.aspectRatio;
     final width = size.width;

@@ -136,6 +136,7 @@ const flagIdoProperties = FlagProperties(
 const flagIleProperties = FlagProperties(
   [ColorsProperties(Color(0xffFFFF00))],
   baseElementType: FlagElementsType.ellipse,
+  isSimplified: true,
   elementsProperties: [
     ElementsProperties(
       Color(0xff000000),
@@ -161,6 +162,7 @@ const flagIleProperties = FlagProperties(
 const flagInaProperties = FlagProperties(
   [ColorsProperties(Color(0xff0000FF)), ColorsProperties(Color(0xffFF0000))],
   baseElementType: FlagElementsType.star,
+  isSimplified: true,
   elementsProperties: [
     ElementsProperties(
       Color(0xffffffff),
@@ -175,6 +177,7 @@ const flagInaProperties = FlagProperties(
 const flagVolProperties = FlagProperties(
   [ColorsProperties(Color(0xff660066))],
   baseElementType: FlagElementsType.rectangle,
+  isSimplified: true,
   elementsProperties: [
     ElementsProperties(
       Color(0xffFFF55F),

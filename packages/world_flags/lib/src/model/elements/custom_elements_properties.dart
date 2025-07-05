@@ -57,4 +57,12 @@ class CustomElementsProperties extends ElementsProperties {
   /// This list can be used to specify secondary colors or other [Color]
   /// variations for the flag element.
   final List<Color> otherColors;
+
+  @override
+  String toString() =>
+      "CustomElementsProperties($mainColor, "
+      "heightFactor: $heightFactor, otherColors: $otherColors, "
+      "${widthFactor == null ? '' : 'widthFactor: $widthFactor, '}"
+      "${angle == null ? '' : 'angle: $angle, '}offset: $offset,"
+      "${child == null ? '' : ' child: $child,'})";
 }
