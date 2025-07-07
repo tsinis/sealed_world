@@ -201,7 +201,11 @@ const iotCountryTranslations = <TranslatedName>[
     official: "イギリス領インド洋地域",
     common: "イギリス領インド洋地域",
   ),
-  CountryName(language: LangKor(), official: "인도 공화국", common: "인도"),
+  CountryName(
+    language: LangKor(),
+    official: "영국령 인도양 지역",
+    common: "영국령 인도양 지역",
+  ),
   CountryName(
     language: LangNld(),
     official: "Brits Indische Oceaan Territorium",
