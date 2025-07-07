@@ -167,7 +167,9 @@ dart_code_metrics:
     - avoid-assigning-to-static-field
     - avoid-assignments-as-conditions
     - avoid-async-call-in-sync-function
+    - avoid-banned-exports
     - avoid-barrel-files
+    - avoid-bitwise-operators-with-booleans
     - avoid-bottom-type-in-patterns
     - avoid-bottom-type-in-records
     - avoid-cascade-after-if-null
@@ -183,6 +185,8 @@ dart_code_metrics:
     - avoid-constant-assert-conditions
     - avoid-contradictory-expressions
     - avoid-declaring-call-method
+    - avoid-default-tostring
+    - avoid-deprecated-usage
     - avoid-double-slash-imports
     - avoid-duplicate-cascades
     - avoid-duplicate-collection-elements
@@ -279,7 +283,9 @@ dart_code_metrics:
     - avoid-similar-names
     - avoid-single-field-destructuring
     - avoid-slow-collection-methods
+    - avoid-stream-tostring
     - avoid-substring
+    - avoid-suspicious-global-references
     - avoid-suspicious-super-overrides
     - avoid-throw-in-catch-block
     - avoid-throw-objects-without-tostring
@@ -303,16 +309,21 @@ dart_code_metrics:
     - avoid-unnecessary-futures
     - avoid-unnecessary-getter
     - avoid-unnecessary-if
+    - avoid-unnecessary-length-check
     - avoid-unnecessary-local-late
     - avoid-unnecessary-negations
+    - avoid-unnecessary-null-aware-elements
+    - avoid-unnecessary-nullable-fields
     - avoid-unnecessary-nullable-return-type
     - avoid-unnecessary-overrides
     - avoid-unnecessary-patterns
     - avoid-unnecessary-reassignment
     - avoid-unnecessary-return
+    - avoid-unnecessary-statements
     - avoid-unnecessary-super
     - avoid-unnecessary-type-assertions
     - avoid-unnecessary-type-casts
+    - avoid-unreachable-for-loop
     - avoid-unrelated-type-assertions
     - avoid-unrelated-type-casts
     - avoid-unsafe-collection-methods
@@ -335,6 +346,7 @@ dart_code_metrics:
     - match-getter-setter-field-names
     - match-lib-folder-structure
     - match-positional-field-names-on-assignment
+    - max-imports
     - missing-test-assertion
     - move-records-to-typedefs
     - move-variable-closer-to-its-usage
@@ -351,6 +363,7 @@ dart_code_metrics:
     - no-equal-switch-expression-cases
     - no-equal-then-else
     - no-object-declaration
+    - pass-correct-accepted-type
     - pattern-fields-ordering
     - prefer-abstract-final-static-class
     - prefer-add-all
@@ -363,6 +376,8 @@ dart_code_metrics:
     - prefer-bytes-builder
     - prefer-commenting-analyzer-ignores
     - prefer-commenting-future-delayed
+    - prefer-commenting-pubspec-ignores
+    - prefer-compound-assignment-operators
     - prefer-conditional-expressions
     - prefer-contains
     - prefer-correct-callback-field-name
@@ -394,12 +409,14 @@ dart_code_metrics:
     - prefer-match-file-name
     - prefer-moving-to-variable
     - prefer-named-boolean-parameters
+    - prefer-null-aware-elements
     - prefer-null-aware-spread
     - prefer-overriding-parent-equality
     - prefer-parentheses-with-if-null
     - prefer-prefixed-global-constants
     - prefer-private-extension-type-field
     - prefer-public-exception-classes
+    - prefer-pushing-conditional-expressions
     - prefer-redirecting-superclass-constructor
     - prefer-return-await
     - prefer-returning-conditional-expressions
@@ -407,6 +424,7 @@ dart_code_metrics:
     - prefer-simpler-patterns-null-check
     - prefer-single-declaration-per-file
     - prefer-specific-cases-first
+    - prefer-specifying-future-value-type
     - prefer-switch-expression
     - prefer-switch-with-enums
     - prefer-switch-with-sealed-classes
