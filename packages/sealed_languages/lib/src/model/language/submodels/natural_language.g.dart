@@ -2,7 +2,9 @@
 
 part of "../language.dart";
 
+@Deprecated('Please use pattern matching with switch expressions instead.')
 extension NaturalLanguageFunctional on NaturalLanguage {
+  @Deprecated('Please use pattern matching with switch expressions instead.')
   R map<R>({
     required R Function(NaturalLanguage langAar) langAar,
     required R Function(NaturalLanguage langAbk) langAbk,
@@ -375,7 +377,7 @@ extension NaturalLanguageFunctional on NaturalLanguage {
     LangZul() => langZul(this),
     _ => throw ArgumentError("Unknown value: $this", name),
   };
-
+  @Deprecated('Please use pattern matching with switch expressions instead.')
   R maybeMap<R>({
     required R Function(NaturalLanguage language) orElse,
     R Function(NaturalLanguage langAar)? langAar,
@@ -750,6 +752,7 @@ extension NaturalLanguageFunctional on NaturalLanguage {
     _ => orElse(this),
   };
 
+  @Deprecated('Please use pattern matching with switch expressions instead.')
   R maybeWhen<R>({
     required R Function() orElse,
     R Function()? langAar,
@@ -1124,6 +1127,7 @@ extension NaturalLanguageFunctional on NaturalLanguage {
     _ => orElse(),
   };
 
+  @Deprecated('Please use pattern matching with switch expressions instead.')
   R when<R>({
     required R Function() langAar,
     required R Function() langAbk,
@@ -1497,6 +1501,7 @@ extension NaturalLanguageFunctional on NaturalLanguage {
     _ => throw ArgumentError("Unknown value: $this", name),
   };
 
+  @Deprecated('Please use pattern matching with switch expressions instead.')
   R? whenOrNull<R>({
     R Function()? langAar,
     R Function()? langAbk,
@@ -1872,556 +1877,741 @@ extension NaturalLanguageFunctional on NaturalLanguage {
   };
 }
 
+@Deprecated('Please use == operator or isSameAs() instead.')
 extension NaturalLanguageBoolGetters on NaturalLanguage? {
   /// Checks if this [NaturalLanguage] instance is Afar.
+  @Deprecated('Please use == operator or isSameAs() instead.')
   bool get isAar => const LangAar().isSameAs(this);
 
   /// Checks if this [NaturalLanguage] instance is Abkhaz.
+  @Deprecated('Please use == operator or isSameAs() instead.')
   bool get isAbk => const LangAbk().isSameAs(this);
 
   /// Checks if this [NaturalLanguage] instance is Afrikaans.
+  @Deprecated('Please use == operator or isSameAs() instead.')
   bool get isAfr => const LangAfr().isSameAs(this);
 
   /// Checks if this [NaturalLanguage] instance is Akan.
+  @Deprecated('Please use == operator or isSameAs() instead.')
   bool get isAka => const LangAka().isSameAs(this);
 
   /// Checks if this [NaturalLanguage] instance is Amharic.
+  @Deprecated('Please use == operator or isSameAs() instead.')
   bool get isAmh => const LangAmh().isSameAs(this);
 
   /// Checks if this [NaturalLanguage] instance is Arabic.
+  @Deprecated('Please use == operator or isSameAs() instead.')
   bool get isAra => const LangAra().isSameAs(this);
 
   /// Checks if this [NaturalLanguage] instance is Aragonese.
+  @Deprecated('Please use == operator or isSameAs() instead.')
   bool get isArg => const LangArg().isSameAs(this);
 
   /// Checks if this [NaturalLanguage] instance is Assamese.
+  @Deprecated('Please use == operator or isSameAs() instead.')
   bool get isAsm => const LangAsm().isSameAs(this);
 
   /// Checks if this [NaturalLanguage] instance is Avaric.
+  @Deprecated('Please use == operator or isSameAs() instead.')
   bool get isAva => const LangAva().isSameAs(this);
 
   /// Checks if this [NaturalLanguage] instance is Avestan.
+  @Deprecated('Please use == operator or isSameAs() instead.')
   bool get isAve => const LangAve().isSameAs(this);
 
   /// Checks if this [NaturalLanguage] instance is Aymara.
+  @Deprecated('Please use == operator or isSameAs() instead.')
   bool get isAym => const LangAym().isSameAs(this);
 
   /// Checks if this [NaturalLanguage] instance is Azerbaijani.
+  @Deprecated('Please use == operator or isSameAs() instead.')
   bool get isAze => const LangAze().isSameAs(this);
 
   /// Checks if this [NaturalLanguage] instance is Bashkir.
+  @Deprecated('Please use == operator or isSameAs() instead.')
   bool get isBak => const LangBak().isSameAs(this);
 
   /// Checks if this [NaturalLanguage] instance is Bambara.
+  @Deprecated('Please use == operator or isSameAs() instead.')
   bool get isBam => const LangBam().isSameAs(this);
 
   /// Checks if this [NaturalLanguage] instance is Belarusian.
+  @Deprecated('Please use == operator or isSameAs() instead.')
   bool get isBel => const LangBel().isSameAs(this);
 
   /// Checks if this [NaturalLanguage] instance is Bengali (Bangla).
+  @Deprecated('Please use == operator or isSameAs() instead.')
   bool get isBen => const LangBen().isSameAs(this);
 
   /// Checks if this [NaturalLanguage] instance is Bihari.
+  @Deprecated('Please use == operator or isSameAs() instead.')
   bool get isBih => const LangBih().isSameAs(this);
 
   /// Checks if this [NaturalLanguage] instance is Bislama.
+  @Deprecated('Please use == operator or isSameAs() instead.')
   bool get isBis => const LangBis().isSameAs(this);
 
   /// Checks if this [NaturalLanguage] instance is Tibetan Standard.
+  @Deprecated('Please use == operator or isSameAs() instead.')
   bool get isBod => const LangBod().isSameAs(this);
 
   /// Checks if this [NaturalLanguage] instance is Bosnian.
+  @Deprecated('Please use == operator or isSameAs() instead.')
   bool get isBos => const LangBos().isSameAs(this);
 
   /// Checks if this [NaturalLanguage] instance is Breton.
+  @Deprecated('Please use == operator or isSameAs() instead.')
   bool get isBre => const LangBre().isSameAs(this);
 
   /// Checks if this [NaturalLanguage] instance is Bulgarian.
+  @Deprecated('Please use == operator or isSameAs() instead.')
   bool get isBul => const LangBul().isSameAs(this);
 
   /// Checks if this [NaturalLanguage] instance is Catalan.
+  @Deprecated('Please use == operator or isSameAs() instead.')
   bool get isCat => const LangCat().isSameAs(this);
 
   /// Checks if this [NaturalLanguage] instance is Czech.
+  @Deprecated('Please use == operator or isSameAs() instead.')
   bool get isCes => const LangCes().isSameAs(this);
 
   /// Checks if this [NaturalLanguage] instance is Chamorro.
+  @Deprecated('Please use == operator or isSameAs() instead.')
   bool get isCha => const LangCha().isSameAs(this);
 
   /// Checks if this [NaturalLanguage] instance is Chechen.
+  @Deprecated('Please use == operator or isSameAs() instead.')
   bool get isChe => const LangChe().isSameAs(this);
 
   /// Checks if this [NaturalLanguage] instance is (Old) Church Slavonic.
+  @Deprecated('Please use == operator or isSameAs() instead.')
   bool get isChu => const LangChu().isSameAs(this);
 
   /// Checks if this [NaturalLanguage] instance is Chuvash.
+  @Deprecated('Please use == operator or isSameAs() instead.')
   bool get isChv => const LangChv().isSameAs(this);
 
   /// Checks if this [NaturalLanguage] instance is Cornish.
+  @Deprecated('Please use == operator or isSameAs() instead.')
   bool get isCor => const LangCor().isSameAs(this);
 
   /// Checks if this [NaturalLanguage] instance is Corsican.
+  @Deprecated('Please use == operator or isSameAs() instead.')
   bool get isCos => const LangCos().isSameAs(this);
 
   /// Checks if this [NaturalLanguage] instance is Cree.
+  @Deprecated('Please use == operator or isSameAs() instead.')
   bool get isCre => const LangCre().isSameAs(this);
 
   /// Checks if this [NaturalLanguage] instance is Welsh.
+  @Deprecated('Please use == operator or isSameAs() instead.')
   bool get isCym => const LangCym().isSameAs(this);
 
   /// Checks if this [NaturalLanguage] instance is Danish.
+  @Deprecated('Please use == operator or isSameAs() instead.')
   bool get isDan => const LangDan().isSameAs(this);
 
   /// Checks if this [NaturalLanguage] instance is German.
+  @Deprecated('Please use == operator or isSameAs() instead.')
   bool get isDeu => const LangDeu().isSameAs(this);
 
   /// Checks if this [NaturalLanguage] instance is Divehi (Dhivehi/Maldivian).
+  @Deprecated('Please use == operator or isSameAs() instead.')
   bool get isDiv => const LangDiv().isSameAs(this);
 
   /// Checks if this [NaturalLanguage] instance is Dzongkha.
+  @Deprecated('Please use == operator or isSameAs() instead.')
   bool get isDzo => const LangDzo().isSameAs(this);
 
   /// Checks if this [NaturalLanguage] instance is Greek (modern).
+  @Deprecated('Please use == operator or isSameAs() instead.')
   bool get isEll => const LangEll().isSameAs(this);
 
   /// Checks if this [NaturalLanguage] instance is English.
+  @Deprecated('Please use == operator or isSameAs() instead.')
   bool get isEng => const LangEng().isSameAs(this);
 
   /// Checks if this [NaturalLanguage] instance is Esperanto.
+  @Deprecated('Please use == operator or isSameAs() instead.')
   bool get isEpo => const LangEpo().isSameAs(this);
 
   /// Checks if this [NaturalLanguage] instance is Estonian.
+  @Deprecated('Please use == operator or isSameAs() instead.')
   bool get isEst => const LangEst().isSameAs(this);
 
   /// Checks if this [NaturalLanguage] instance is Basque.
+  @Deprecated('Please use == operator or isSameAs() instead.')
   bool get isEus => const LangEus().isSameAs(this);
 
   /// Checks if this [NaturalLanguage] instance is Ewe.
+  @Deprecated('Please use == operator or isSameAs() instead.')
   bool get isEwe => const LangEwe().isSameAs(this);
 
   /// Checks if this [NaturalLanguage] instance is Faroese.
+  @Deprecated('Please use == operator or isSameAs() instead.')
   bool get isFao => const LangFao().isSameAs(this);
 
   /// Checks if this [NaturalLanguage] instance is Persian (Farsi).
+  @Deprecated('Please use == operator or isSameAs() instead.')
   bool get isFas => const LangFas().isSameAs(this);
 
   /// Checks if this [NaturalLanguage] instance is Fijian.
+  @Deprecated('Please use == operator or isSameAs() instead.')
   bool get isFij => const LangFij().isSameAs(this);
 
   /// Checks if this [NaturalLanguage] instance is Finnish.
+  @Deprecated('Please use == operator or isSameAs() instead.')
   bool get isFin => const LangFin().isSameAs(this);
 
   /// Checks if this [NaturalLanguage] instance is French.
+  @Deprecated('Please use == operator or isSameAs() instead.')
   bool get isFra => const LangFra().isSameAs(this);
 
   /// Checks if this [NaturalLanguage] instance is Western Frisian.
+  @Deprecated('Please use == operator or isSameAs() instead.')
   bool get isFry => const LangFry().isSameAs(this);
 
   /// Checks if this [NaturalLanguage] instance is Fula (Fulah/Pulaar/Pular).
+  @Deprecated('Please use == operator or isSameAs() instead.')
   bool get isFul => const LangFul().isSameAs(this);
 
   /// Checks if this [NaturalLanguage] instance is (Scottish) Gaelic.
+  @Deprecated('Please use == operator or isSameAs() instead.')
   bool get isGla => const LangGla().isSameAs(this);
 
   /// Checks if this [NaturalLanguage] instance is Irish.
+  @Deprecated('Please use == operator or isSameAs() instead.')
   bool get isGle => const LangGle().isSameAs(this);
 
   /// Checks if this [NaturalLanguage] instance is Galician.
+  @Deprecated('Please use == operator or isSameAs() instead.')
   bool get isGlg => const LangGlg().isSameAs(this);
 
   /// Checks if this [NaturalLanguage] instance is Manx.
+  @Deprecated('Please use == operator or isSameAs() instead.')
   bool get isGlv => const LangGlv().isSameAs(this);
 
   /// Checks if this [NaturalLanguage] instance is Guaraní.
+  @Deprecated('Please use == operator or isSameAs() instead.')
   bool get isGrn => const LangGrn().isSameAs(this);
 
   /// Checks if this [NaturalLanguage] instance is Gujarati.
+  @Deprecated('Please use == operator or isSameAs() instead.')
   bool get isGuj => const LangGuj().isSameAs(this);
 
   /// Checks if this [NaturalLanguage] instance is Haitian (Haitian Creole).
+  @Deprecated('Please use == operator or isSameAs() instead.')
   bool get isHat => const LangHat().isSameAs(this);
 
   /// Checks if this [NaturalLanguage] instance is Hausa.
+  @Deprecated('Please use == operator or isSameAs() instead.')
   bool get isHau => const LangHau().isSameAs(this);
 
   /// Checks if this [NaturalLanguage] instance is Hebrew (modern).
+  @Deprecated('Please use == operator or isSameAs() instead.')
   bool get isHeb => const LangHeb().isSameAs(this);
 
   /// Checks if this [NaturalLanguage] instance is Herero.
+  @Deprecated('Please use == operator or isSameAs() instead.')
   bool get isHer => const LangHer().isSameAs(this);
 
   /// Checks if this [NaturalLanguage] instance is Hindi.
+  @Deprecated('Please use == operator or isSameAs() instead.')
   bool get isHin => const LangHin().isSameAs(this);
 
   /// Checks if this [NaturalLanguage] instance is Hiri Motu.
+  @Deprecated('Please use == operator or isSameAs() instead.')
   bool get isHmo => const LangHmo().isSameAs(this);
 
   /// Checks if this [NaturalLanguage] instance is Croatian.
+  @Deprecated('Please use == operator or isSameAs() instead.')
   bool get isHrv => const LangHrv().isSameAs(this);
 
   /// Checks if this [NaturalLanguage] instance is Hungarian.
+  @Deprecated('Please use == operator or isSameAs() instead.')
   bool get isHun => const LangHun().isSameAs(this);
 
   /// Checks if this [NaturalLanguage] instance is Armenian.
+  @Deprecated('Please use == operator or isSameAs() instead.')
   bool get isHye => const LangHye().isSameAs(this);
 
   /// Checks if this [NaturalLanguage] instance is Igbo.
+  @Deprecated('Please use == operator or isSameAs() instead.')
   bool get isIbo => const LangIbo().isSameAs(this);
 
   /// Checks if this [NaturalLanguage] instance is Ido.
+  @Deprecated('Please use == operator or isSameAs() instead.')
   bool get isIdo => const LangIdo().isSameAs(this);
 
   /// Checks if this [NaturalLanguage] instance is Nuosu.
+  @Deprecated('Please use == operator or isSameAs() instead.')
   bool get isIii => const LangIii().isSameAs(this);
 
   /// Checks if this [NaturalLanguage] instance is Inuktitut.
+  @Deprecated('Please use == operator or isSameAs() instead.')
   bool get isIku => const LangIku().isSameAs(this);
 
   /// Checks if this [NaturalLanguage] instance is Interlingue.
+  @Deprecated('Please use == operator or isSameAs() instead.')
   bool get isIle => const LangIle().isSameAs(this);
 
   /// Checks if this [NaturalLanguage] instance is Interlingua.
+  @Deprecated('Please use == operator or isSameAs() instead.')
   bool get isIna => const LangIna().isSameAs(this);
 
   /// Checks if this [NaturalLanguage] instance is Indonesian.
+  @Deprecated('Please use == operator or isSameAs() instead.')
   bool get isInd => const LangInd().isSameAs(this);
 
   /// Checks if this [NaturalLanguage] instance is Inupiaq.
+  @Deprecated('Please use == operator or isSameAs() instead.')
   bool get isIpk => const LangIpk().isSameAs(this);
 
   /// Checks if this [NaturalLanguage] instance is Icelandic.
+  @Deprecated('Please use == operator or isSameAs() instead.')
   bool get isIsl => const LangIsl().isSameAs(this);
 
   /// Checks if this [NaturalLanguage] instance is Italian.
+  @Deprecated('Please use == operator or isSameAs() instead.')
   bool get isIta => const LangIta().isSameAs(this);
 
   /// Checks if this [NaturalLanguage] instance is Javanese.
+  @Deprecated('Please use == operator or isSameAs() instead.')
   bool get isJav => const LangJav().isSameAs(this);
 
   /// Checks if this [NaturalLanguage] instance is Japanese.
+  @Deprecated('Please use == operator or isSameAs() instead.')
   bool get isJpn => const LangJpn().isSameAs(this);
 
   /// Checks if this [NaturalLanguage] instance is Kalaallisut (Greenlandic).
+  @Deprecated('Please use == operator or isSameAs() instead.')
   bool get isKal => const LangKal().isSameAs(this);
 
   /// Checks if this [NaturalLanguage] instance is Kannada.
+  @Deprecated('Please use == operator or isSameAs() instead.')
   bool get isKan => const LangKan().isSameAs(this);
 
   /// Checks if this [NaturalLanguage] instance is Kashmiri.
+  @Deprecated('Please use == operator or isSameAs() instead.')
   bool get isKas => const LangKas().isSameAs(this);
 
   /// Checks if this [NaturalLanguage] instance is Georgian.
+  @Deprecated('Please use == operator or isSameAs() instead.')
   bool get isKat => const LangKat().isSameAs(this);
 
   /// Checks if this [NaturalLanguage] instance is Kanuri.
+  @Deprecated('Please use == operator or isSameAs() instead.')
   bool get isKau => const LangKau().isSameAs(this);
 
   /// Checks if this [NaturalLanguage] instance is Kazakh.
+  @Deprecated('Please use == operator or isSameAs() instead.')
   bool get isKaz => const LangKaz().isSameAs(this);
 
   /// Checks if this [NaturalLanguage] instance is Khmer.
+  @Deprecated('Please use == operator or isSameAs() instead.')
   bool get isKhm => const LangKhm().isSameAs(this);
 
   /// Checks if this [NaturalLanguage] instance is Kikuyu (Gikuyu).
+  @Deprecated('Please use == operator or isSameAs() instead.')
   bool get isKik => const LangKik().isSameAs(this);
 
   /// Checks if this [NaturalLanguage] instance is Kinyarwanda.
+  @Deprecated('Please use == operator or isSameAs() instead.')
   bool get isKin => const LangKin().isSameAs(this);
 
   /// Checks if this [NaturalLanguage] instance is Kyrgyz.
+  @Deprecated('Please use == operator or isSameAs() instead.')
   bool get isKir => const LangKir().isSameAs(this);
 
   /// Checks if this [NaturalLanguage] instance is Komi.
+  @Deprecated('Please use == operator or isSameAs() instead.')
   bool get isKom => const LangKom().isSameAs(this);
 
   /// Checks if this [NaturalLanguage] instance is Kongo.
+  @Deprecated('Please use == operator or isSameAs() instead.')
   bool get isKon => const LangKon().isSameAs(this);
 
   /// Checks if this [NaturalLanguage] instance is Korean.
+  @Deprecated('Please use == operator or isSameAs() instead.')
   bool get isKor => const LangKor().isSameAs(this);
 
   /// Checks if this [NaturalLanguage] instance is Kwanyama (Kuanyama).
+  @Deprecated('Please use == operator or isSameAs() instead.')
   bool get isKua => const LangKua().isSameAs(this);
 
   /// Checks if this [NaturalLanguage] instance is Kurdish.
+  @Deprecated('Please use == operator or isSameAs() instead.')
   bool get isKur => const LangKur().isSameAs(this);
 
   /// Checks if this [NaturalLanguage] instance is Lao.
+  @Deprecated('Please use == operator or isSameAs() instead.')
   bool get isLao => const LangLao().isSameAs(this);
 
   /// Checks if this [NaturalLanguage] instance is Latin.
+  @Deprecated('Please use == operator or isSameAs() instead.')
   bool get isLat => const LangLat().isSameAs(this);
 
   /// Checks if this [NaturalLanguage] instance is Latvian.
+  @Deprecated('Please use == operator or isSameAs() instead.')
   bool get isLav => const LangLav().isSameAs(this);
 
   /// Checks if this [NaturalLanguage] instance is Limburgish (Limburgan/Limburger).
+  @Deprecated('Please use == operator or isSameAs() instead.')
   bool get isLim => const LangLim().isSameAs(this);
 
   /// Checks if this [NaturalLanguage] instance is Lingala.
+  @Deprecated('Please use == operator or isSameAs() instead.')
   bool get isLin => const LangLin().isSameAs(this);
 
   /// Checks if this [NaturalLanguage] instance is Lithuanian.
+  @Deprecated('Please use == operator or isSameAs() instead.')
   bool get isLit => const LangLit().isSameAs(this);
 
   /// Checks if this [NaturalLanguage] instance is Luxembourgish (Letzeburgesch).
+  @Deprecated('Please use == operator or isSameAs() instead.')
   bool get isLtz => const LangLtz().isSameAs(this);
 
   /// Checks if this [NaturalLanguage] instance is Luba-Katanga.
+  @Deprecated('Please use == operator or isSameAs() instead.')
   bool get isLub => const LangLub().isSameAs(this);
 
   /// Checks if this [NaturalLanguage] instance is Ganda.
+  @Deprecated('Please use == operator or isSameAs() instead.')
   bool get isLug => const LangLug().isSameAs(this);
 
   /// Checks if this [NaturalLanguage] instance is Marshallese.
+  @Deprecated('Please use == operator or isSameAs() instead.')
   bool get isMah => const LangMah().isSameAs(this);
 
   /// Checks if this [NaturalLanguage] instance is Malayalam.
+  @Deprecated('Please use == operator or isSameAs() instead.')
   bool get isMal => const LangMal().isSameAs(this);
 
   /// Checks if this [NaturalLanguage] instance is Marathi (Marāṭhī).
+  @Deprecated('Please use == operator or isSameAs() instead.')
   bool get isMar => const LangMar().isSameAs(this);
 
   /// Checks if this [NaturalLanguage] instance is Macedonian.
+  @Deprecated('Please use == operator or isSameAs() instead.')
   bool get isMkd => const LangMkd().isSameAs(this);
 
   /// Checks if this [NaturalLanguage] instance is Malagasy.
+  @Deprecated('Please use == operator or isSameAs() instead.')
   bool get isMlg => const LangMlg().isSameAs(this);
 
   /// Checks if this [NaturalLanguage] instance is Maltese.
+  @Deprecated('Please use == operator or isSameAs() instead.')
   bool get isMlt => const LangMlt().isSameAs(this);
 
   /// Checks if this [NaturalLanguage] instance is Mongolian.
+  @Deprecated('Please use == operator or isSameAs() instead.')
   bool get isMon => const LangMon().isSameAs(this);
 
   /// Checks if this [NaturalLanguage] instance is Māori.
+  @Deprecated('Please use == operator or isSameAs() instead.')
   bool get isMri => const LangMri().isSameAs(this);
 
   /// Checks if this [NaturalLanguage] instance is Malay.
+  @Deprecated('Please use == operator or isSameAs() instead.')
   bool get isMsa => const LangMsa().isSameAs(this);
 
   /// Checks if this [NaturalLanguage] instance is Burmese.
+  @Deprecated('Please use == operator or isSameAs() instead.')
   bool get isMya => const LangMya().isSameAs(this);
 
   /// Checks if this [NaturalLanguage] instance is Nauruan.
+  @Deprecated('Please use == operator or isSameAs() instead.')
   bool get isNau => const LangNau().isSameAs(this);
 
   /// Checks if this [NaturalLanguage] instance is Navajo (Navaho).
+  @Deprecated('Please use == operator or isSameAs() instead.')
   bool get isNav => const LangNav().isSameAs(this);
 
   /// Checks if this [NaturalLanguage] instance is Southern Ndebele.
+  @Deprecated('Please use == operator or isSameAs() instead.')
   bool get isNbl => const LangNbl().isSameAs(this);
 
   /// Checks if this [NaturalLanguage] instance is Northern Ndebele.
+  @Deprecated('Please use == operator or isSameAs() instead.')
   bool get isNde => const LangNde().isSameAs(this);
 
   /// Checks if this [NaturalLanguage] instance is Ndonga.
+  @Deprecated('Please use == operator or isSameAs() instead.')
   bool get isNdo => const LangNdo().isSameAs(this);
 
   /// Checks if this [NaturalLanguage] instance is Nepali.
+  @Deprecated('Please use == operator or isSameAs() instead.')
   bool get isNep => const LangNep().isSameAs(this);
 
   /// Checks if this [NaturalLanguage] instance is Dutch.
+  @Deprecated('Please use == operator or isSameAs() instead.')
   bool get isNld => const LangNld().isSameAs(this);
 
   /// Checks if this [NaturalLanguage] instance is Norwegian Nynorsk.
+  @Deprecated('Please use == operator or isSameAs() instead.')
   bool get isNno => const LangNno().isSameAs(this);
 
   /// Checks if this [NaturalLanguage] instance is Norwegian Bokmål.
+  @Deprecated('Please use == operator or isSameAs() instead.')
   bool get isNob => const LangNob().isSameAs(this);
 
   /// Checks if this [NaturalLanguage] instance is Norwegian.
+  @Deprecated('Please use == operator or isSameAs() instead.')
   bool get isNor => const LangNor().isSameAs(this);
 
   /// Checks if this [NaturalLanguage] instance is Chichewa (Chewa/Nyanja).
+  @Deprecated('Please use == operator or isSameAs() instead.')
   bool get isNya => const LangNya().isSameAs(this);
 
   /// Checks if this [NaturalLanguage] instance is Occitan.
+  @Deprecated('Please use == operator or isSameAs() instead.')
   bool get isOci => const LangOci().isSameAs(this);
 
   /// Checks if this [NaturalLanguage] instance is Ojibwe (Ojibwa).
+  @Deprecated('Please use == operator or isSameAs() instead.')
   bool get isOji => const LangOji().isSameAs(this);
 
   /// Checks if this [NaturalLanguage] instance is Oriya.
+  @Deprecated('Please use == operator or isSameAs() instead.')
   bool get isOri => const LangOri().isSameAs(this);
 
   /// Checks if this [NaturalLanguage] instance is Oromo.
+  @Deprecated('Please use == operator or isSameAs() instead.')
   bool get isOrm => const LangOrm().isSameAs(this);
 
   /// Checks if this [NaturalLanguage] instance is Ossetian (Ossetic).
+  @Deprecated('Please use == operator or isSameAs() instead.')
   bool get isOss => const LangOss().isSameAs(this);
 
   /// Checks if this [NaturalLanguage] instance is (Eastern) Punjabi.
+  @Deprecated('Please use == operator or isSameAs() instead.')
   bool get isPan => const LangPan().isSameAs(this);
 
   /// Checks if this [NaturalLanguage] instance is Pāli.
+  @Deprecated('Please use == operator or isSameAs() instead.')
   bool get isPli => const LangPli().isSameAs(this);
 
   /// Checks if this [NaturalLanguage] instance is Polish.
+  @Deprecated('Please use == operator or isSameAs() instead.')
   bool get isPol => const LangPol().isSameAs(this);
 
   /// Checks if this [NaturalLanguage] instance is Portuguese.
+  @Deprecated('Please use == operator or isSameAs() instead.')
   bool get isPor => const LangPor().isSameAs(this);
 
   /// Checks if this [NaturalLanguage] instance is Pashto (Pushto).
+  @Deprecated('Please use == operator or isSameAs() instead.')
   bool get isPus => const LangPus().isSameAs(this);
 
   /// Checks if this [NaturalLanguage] instance is Quechua.
+  @Deprecated('Please use == operator or isSameAs() instead.')
   bool get isQue => const LangQue().isSameAs(this);
 
   /// Checks if this [NaturalLanguage] instance is Romansh.
+  @Deprecated('Please use == operator or isSameAs() instead.')
   bool get isRoh => const LangRoh().isSameAs(this);
 
   /// Checks if this [NaturalLanguage] instance is Romanian.
+  @Deprecated('Please use == operator or isSameAs() instead.')
   bool get isRon => const LangRon().isSameAs(this);
 
   /// Checks if this [NaturalLanguage] instance is Kirundi.
+  @Deprecated('Please use == operator or isSameAs() instead.')
   bool get isRun => const LangRun().isSameAs(this);
 
   /// Checks if this [NaturalLanguage] instance is Russian.
+  @Deprecated('Please use == operator or isSameAs() instead.')
   bool get isRus => const LangRus().isSameAs(this);
 
   /// Checks if this [NaturalLanguage] instance is Sango.
+  @Deprecated('Please use == operator or isSameAs() instead.')
   bool get isSag => const LangSag().isSameAs(this);
 
   /// Checks if this [NaturalLanguage] instance is Sanskrit (Saṁskṛta).
+  @Deprecated('Please use == operator or isSameAs() instead.')
   bool get isSan => const LangSan().isSameAs(this);
 
   /// Checks if this [NaturalLanguage] instance is Sinhalese (Sinhala).
+  @Deprecated('Please use == operator or isSameAs() instead.')
   bool get isSin => const LangSin().isSameAs(this);
 
   /// Checks if this [NaturalLanguage] instance is Slovak.
+  @Deprecated('Please use == operator or isSameAs() instead.')
   bool get isSlk => const LangSlk().isSameAs(this);
 
   /// Checks if this [NaturalLanguage] instance is Slovene.
+  @Deprecated('Please use == operator or isSameAs() instead.')
   bool get isSlv => const LangSlv().isSameAs(this);
 
   /// Checks if this [NaturalLanguage] instance is Northern Sami.
+  @Deprecated('Please use == operator or isSameAs() instead.')
   bool get isSme => const LangSme().isSameAs(this);
 
   /// Checks if this [NaturalLanguage] instance is Samoan.
+  @Deprecated('Please use == operator or isSameAs() instead.')
   bool get isSmo => const LangSmo().isSameAs(this);
 
   /// Checks if this [NaturalLanguage] instance is Shona.
+  @Deprecated('Please use == operator or isSameAs() instead.')
   bool get isSna => const LangSna().isSameAs(this);
 
   /// Checks if this [NaturalLanguage] instance is Sindhi.
+  @Deprecated('Please use == operator or isSameAs() instead.')
   bool get isSnd => const LangSnd().isSameAs(this);
 
   /// Checks if this [NaturalLanguage] instance is Somali.
+  @Deprecated('Please use == operator or isSameAs() instead.')
   bool get isSom => const LangSom().isSameAs(this);
 
   /// Checks if this [NaturalLanguage] instance is Southern Sotho.
+  @Deprecated('Please use == operator or isSameAs() instead.')
   bool get isSot => const LangSot().isSameAs(this);
 
   /// Checks if this [NaturalLanguage] instance is Spanish.
+  @Deprecated('Please use == operator or isSameAs() instead.')
   bool get isSpa => const LangSpa().isSameAs(this);
 
   /// Checks if this [NaturalLanguage] instance is Albanian.
+  @Deprecated('Please use == operator or isSameAs() instead.')
   bool get isSqi => const LangSqi().isSameAs(this);
 
   /// Checks if this [NaturalLanguage] instance is Sardinian.
+  @Deprecated('Please use == operator or isSameAs() instead.')
   bool get isSrd => const LangSrd().isSameAs(this);
 
   /// Checks if this [NaturalLanguage] instance is Serbian.
+  @Deprecated('Please use == operator or isSameAs() instead.')
   bool get isSrp => const LangSrp().isSameAs(this);
 
   /// Checks if this [NaturalLanguage] instance is Swati.
+  @Deprecated('Please use == operator or isSameAs() instead.')
   bool get isSsw => const LangSsw().isSameAs(this);
 
   /// Checks if this [NaturalLanguage] instance is Sundanese.
+  @Deprecated('Please use == operator or isSameAs() instead.')
   bool get isSun => const LangSun().isSameAs(this);
 
   /// Checks if this [NaturalLanguage] instance is Swahili.
+  @Deprecated('Please use == operator or isSameAs() instead.')
   bool get isSwa => const LangSwa().isSameAs(this);
 
   /// Checks if this [NaturalLanguage] instance is Swedish.
+  @Deprecated('Please use == operator or isSameAs() instead.')
   bool get isSwe => const LangSwe().isSameAs(this);
 
   /// Checks if this [NaturalLanguage] instance is Tahitian.
+  @Deprecated('Please use == operator or isSameAs() instead.')
   bool get isTah => const LangTah().isSameAs(this);
 
   /// Checks if this [NaturalLanguage] instance is Tamil.
+  @Deprecated('Please use == operator or isSameAs() instead.')
   bool get isTam => const LangTam().isSameAs(this);
 
   /// Checks if this [NaturalLanguage] instance is Tatar.
+  @Deprecated('Please use == operator or isSameAs() instead.')
   bool get isTat => const LangTat().isSameAs(this);
 
   /// Checks if this [NaturalLanguage] instance is Telugu.
+  @Deprecated('Please use == operator or isSameAs() instead.')
   bool get isTel => const LangTel().isSameAs(this);
 
   /// Checks if this [NaturalLanguage] instance is Tajik.
+  @Deprecated('Please use == operator or isSameAs() instead.')
   bool get isTgk => const LangTgk().isSameAs(this);
 
   /// Checks if this [NaturalLanguage] instance is Tagalog.
+  @Deprecated('Please use == operator or isSameAs() instead.')
   bool get isTgl => const LangTgl().isSameAs(this);
 
   /// Checks if this [NaturalLanguage] instance is Thai.
+  @Deprecated('Please use == operator or isSameAs() instead.')
   bool get isTha => const LangTha().isSameAs(this);
 
   /// Checks if this [NaturalLanguage] instance is Tigrinya.
+  @Deprecated('Please use == operator or isSameAs() instead.')
   bool get isTir => const LangTir().isSameAs(this);
 
   /// Checks if this [NaturalLanguage] instance is Tonga (Tonga Islands).
+  @Deprecated('Please use == operator or isSameAs() instead.')
   bool get isTon => const LangTon().isSameAs(this);
 
   /// Checks if this [NaturalLanguage] instance is Tswana.
+  @Deprecated('Please use == operator or isSameAs() instead.')
   bool get isTsn => const LangTsn().isSameAs(this);
 
   /// Checks if this [NaturalLanguage] instance is Tsonga.
+  @Deprecated('Please use == operator or isSameAs() instead.')
   bool get isTso => const LangTso().isSameAs(this);
 
   /// Checks if this [NaturalLanguage] instance is Turkmen.
+  @Deprecated('Please use == operator or isSameAs() instead.')
   bool get isTuk => const LangTuk().isSameAs(this);
 
   /// Checks if this [NaturalLanguage] instance is Turkish.
+  @Deprecated('Please use == operator or isSameAs() instead.')
   bool get isTur => const LangTur().isSameAs(this);
 
   /// Checks if this [NaturalLanguage] instance is Twi.
+  @Deprecated('Please use == operator or isSameAs() instead.')
   bool get isTwi => const LangTwi().isSameAs(this);
 
   /// Checks if this [NaturalLanguage] instance is Uyghur.
+  @Deprecated('Please use == operator or isSameAs() instead.')
   bool get isUig => const LangUig().isSameAs(this);
 
   /// Checks if this [NaturalLanguage] instance is Ukrainian.
+  @Deprecated('Please use == operator or isSameAs() instead.')
   bool get isUkr => const LangUkr().isSameAs(this);
 
   /// Checks if this [NaturalLanguage] instance is Urdu.
+  @Deprecated('Please use == operator or isSameAs() instead.')
   bool get isUrd => const LangUrd().isSameAs(this);
 
   /// Checks if this [NaturalLanguage] instance is Uzbek.
+  @Deprecated('Please use == operator or isSameAs() instead.')
   bool get isUzb => const LangUzb().isSameAs(this);
 
   /// Checks if this [NaturalLanguage] instance is Venda.
+  @Deprecated('Please use == operator or isSameAs() instead.')
   bool get isVen => const LangVen().isSameAs(this);
 
   /// Checks if this [NaturalLanguage] instance is Vietnamese.
+  @Deprecated('Please use == operator or isSameAs() instead.')
   bool get isVie => const LangVie().isSameAs(this);
 
   /// Checks if this [NaturalLanguage] instance is Volapük.
+  @Deprecated('Please use == operator or isSameAs() instead.')
   bool get isVol => const LangVol().isSameAs(this);
 
   /// Checks if this [NaturalLanguage] instance is Walloon.
+  @Deprecated('Please use == operator or isSameAs() instead.')
   bool get isWln => const LangWln().isSameAs(this);
 
   /// Checks if this [NaturalLanguage] instance is Wolof.
+  @Deprecated('Please use == operator or isSameAs() instead.')
   bool get isWol => const LangWol().isSameAs(this);
 
   /// Checks if this [NaturalLanguage] instance is Xhosa.
+  @Deprecated('Please use == operator or isSameAs() instead.')
   bool get isXho => const LangXho().isSameAs(this);
 
   /// Checks if this [NaturalLanguage] instance is Yiddish.
+  @Deprecated('Please use == operator or isSameAs() instead.')
   bool get isYid => const LangYid().isSameAs(this);
 
   /// Checks if this [NaturalLanguage] instance is Yoruba.
+  @Deprecated('Please use == operator or isSameAs() instead.')
   bool get isYor => const LangYor().isSameAs(this);
 
   /// Checks if this [NaturalLanguage] instance is Zhuang (Chuang).
+  @Deprecated('Please use == operator or isSameAs() instead.')
   bool get isZha => const LangZha().isSameAs(this);
 
   /// Checks if this [NaturalLanguage] instance is Chinese.
+  @Deprecated('Please use == operator or isSameAs() instead.')
   bool get isZho => const LangZho().isSameAs(this);
 
   /// Checks if this [NaturalLanguage] instance is Zulu.
+  @Deprecated('Please use == operator or isSameAs() instead.')
   bool get isZul => const LangZul().isSameAs(this);
 }

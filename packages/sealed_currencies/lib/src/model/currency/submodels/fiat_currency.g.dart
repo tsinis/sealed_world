@@ -2,7 +2,9 @@
 
 part of "../currency.dart";
 
+@Deprecated('Please use pattern matching with switch expressions instead.')
 extension FiatCurrencyFunctional on FiatCurrency {
+  @Deprecated('Please use pattern matching with switch expressions instead.')
   R map<R>({
     required R Function(FiatCurrency fiatAed) fiatAed,
     required R Function(FiatCurrency fiatAfn) fiatAfn,
@@ -346,6 +348,7 @@ extension FiatCurrencyFunctional on FiatCurrency {
     _ => throw ArgumentError("Unknown value: $this", name),
   };
 
+  @Deprecated('Please use pattern matching with switch expressions instead.')
   R maybeMap<R>({
     required R Function(FiatCurrency currency) orElse,
     R Function(FiatCurrency fiatAed)? fiatAed,
@@ -690,6 +693,7 @@ extension FiatCurrencyFunctional on FiatCurrency {
     _ => orElse(this),
   };
 
+  @Deprecated('Please use pattern matching with switch expressions instead.')
   R maybeWhen<R>({
     required R Function() orElse,
     R Function()? fiatAed,
@@ -1034,6 +1038,7 @@ extension FiatCurrencyFunctional on FiatCurrency {
     _ => orElse(),
   };
 
+  @Deprecated('Please use pattern matching with switch expressions instead.')
   R when<R>({
     required R Function() fiatAed,
     required R Function() fiatAfn,
@@ -1377,6 +1382,7 @@ extension FiatCurrencyFunctional on FiatCurrency {
     _ => throw ArgumentError("Unknown value: $this", name),
   };
 
+  @Deprecated('Please use pattern matching with switch expressions instead.')
   R? whenOrNull<R>({
     R Function()? fiatAed,
     R Function()? fiatAfn,
@@ -1722,478 +1728,637 @@ extension FiatCurrencyFunctional on FiatCurrency {
   };
 }
 
+@Deprecated('Please use == operator or isSameAs() instead.')
 extension FiatCurrencyBoolGetters on FiatCurrency? {
   /// Checks if this [FiatCurrency] instance is United Arab Emirates Dirham.
+  @Deprecated('Please use == operator or isSameAs() instead.')
   bool get isAed => const FiatAed().isSameAs(this);
 
   /// Checks if this [FiatCurrency] instance is Afghan Afghani.
+  @Deprecated('Please use == operator or isSameAs() instead.')
   bool get isAfn => const FiatAfn().isSameAs(this);
 
   /// Checks if this [FiatCurrency] instance is Albanian Lek.
+  @Deprecated('Please use == operator or isSameAs() instead.')
   bool get isAll => const FiatAll().isSameAs(this);
 
   /// Checks if this [FiatCurrency] instance is Armenian Dram.
+  @Deprecated('Please use == operator or isSameAs() instead.')
   bool get isAmd => const FiatAmd().isSameAs(this);
 
   /// Checks if this [FiatCurrency] instance is Netherlands Antillean Guilder.
+  @Deprecated('Please use == operator or isSameAs() instead.')
   bool get isAng => const FiatAng().isSameAs(this);
 
   /// Checks if this [FiatCurrency] instance is Angolan Kwanza.
+  @Deprecated('Please use == operator or isSameAs() instead.')
   bool get isAoa => const FiatAoa().isSameAs(this);
 
   /// Checks if this [FiatCurrency] instance is Argentine Peso.
+  @Deprecated('Please use == operator or isSameAs() instead.')
   bool get isArs => const FiatArs().isSameAs(this);
 
   /// Checks if this [FiatCurrency] instance is Australian Dollar.
+  @Deprecated('Please use == operator or isSameAs() instead.')
   bool get isAud => const FiatAud().isSameAs(this);
 
   /// Checks if this [FiatCurrency] instance is Aruban Florin.
+  @Deprecated('Please use == operator or isSameAs() instead.')
   bool get isAwg => const FiatAwg().isSameAs(this);
 
   /// Checks if this [FiatCurrency] instance is Azerbaijani Manat.
+  @Deprecated('Please use == operator or isSameAs() instead.')
   bool get isAzn => const FiatAzn().isSameAs(this);
 
   /// Checks if this [FiatCurrency] instance is Convertible Mark.
+  @Deprecated('Please use == operator or isSameAs() instead.')
   bool get isBam => const FiatBam().isSameAs(this);
 
   /// Checks if this [FiatCurrency] instance is Barbadian Dollar.
+  @Deprecated('Please use == operator or isSameAs() instead.')
   bool get isBbd => const FiatBbd().isSameAs(this);
 
   /// Checks if this [FiatCurrency] instance is Bangladeshi Taka.
+  @Deprecated('Please use == operator or isSameAs() instead.')
   bool get isBdt => const FiatBdt().isSameAs(this);
 
   /// Checks if this [FiatCurrency] instance is Bulgarian Lev.
+  @Deprecated('Please use == operator or isSameAs() instead.')
   bool get isBgn => const FiatBgn().isSameAs(this);
 
   /// Checks if this [FiatCurrency] instance is Bahraini Dinar.
+  @Deprecated('Please use == operator or isSameAs() instead.')
   bool get isBhd => const FiatBhd().isSameAs(this);
 
   /// Checks if this [FiatCurrency] instance is Burundian Franc.
+  @Deprecated('Please use == operator or isSameAs() instead.')
   bool get isBif => const FiatBif().isSameAs(this);
 
   /// Checks if this [FiatCurrency] instance is Bermudian Dollar.
+  @Deprecated('Please use == operator or isSameAs() instead.')
   bool get isBmd => const FiatBmd().isSameAs(this);
 
   /// Checks if this [FiatCurrency] instance is Brunei Dollar.
+  @Deprecated('Please use == operator or isSameAs() instead.')
   bool get isBnd => const FiatBnd().isSameAs(this);
 
   /// Checks if this [FiatCurrency] instance is Bolivian Boliviano.
+  @Deprecated('Please use == operator or isSameAs() instead.')
   bool get isBob => const FiatBob().isSameAs(this);
 
   /// Checks if this [FiatCurrency] instance is Brazilian Real.
+  @Deprecated('Please use == operator or isSameAs() instead.')
   bool get isBrl => const FiatBrl().isSameAs(this);
 
   /// Checks if this [FiatCurrency] instance is Bahamian Dollar.
+  @Deprecated('Please use == operator or isSameAs() instead.')
   bool get isBsd => const FiatBsd().isSameAs(this);
 
   /// Checks if this [FiatCurrency] instance is Bhutanese Ngultrum.
+  @Deprecated('Please use == operator or isSameAs() instead.')
   bool get isBtn => const FiatBtn().isSameAs(this);
 
   /// Checks if this [FiatCurrency] instance is Botswanan Pula.
+  @Deprecated('Please use == operator or isSameAs() instead.')
   bool get isBwp => const FiatBwp().isSameAs(this);
 
   /// Checks if this [FiatCurrency] instance is Belarusian Ruble.
+  @Deprecated('Please use == operator or isSameAs() instead.')
   bool get isByn => const FiatByn().isSameAs(this);
 
   /// Checks if this [FiatCurrency] instance is Belize Dollar.
+  @Deprecated('Please use == operator or isSameAs() instead.')
   bool get isBzd => const FiatBzd().isSameAs(this);
 
   /// Checks if this [FiatCurrency] instance is Canadian Dollar.
+  @Deprecated('Please use == operator or isSameAs() instead.')
   bool get isCad => const FiatCad().isSameAs(this);
 
   /// Checks if this [FiatCurrency] instance is Congolese Franc.
+  @Deprecated('Please use == operator or isSameAs() instead.')
   bool get isCdf => const FiatCdf().isSameAs(this);
 
   /// Checks if this [FiatCurrency] instance is Swiss Franc.
+  @Deprecated('Please use == operator or isSameAs() instead.')
   bool get isChf => const FiatChf().isSameAs(this);
 
   /// Checks if this [FiatCurrency] instance is Chilean Unit of Account (UF).
+  @Deprecated('Please use == operator or isSameAs() instead.')
   bool get isClf => const FiatClf().isSameAs(this);
 
   /// Checks if this [FiatCurrency] instance is Chilean Peso.
+  @Deprecated('Please use == operator or isSameAs() instead.')
   bool get isClp => const FiatClp().isSameAs(this);
 
   /// Checks if this [FiatCurrency] instance is Chinese Renminbi Yuan.
+  @Deprecated('Please use == operator or isSameAs() instead.')
   bool get isCny => const FiatCny().isSameAs(this);
 
   /// Checks if this [FiatCurrency] instance is Colombian Peso.
+  @Deprecated('Please use == operator or isSameAs() instead.')
   bool get isCop => const FiatCop().isSameAs(this);
 
   /// Checks if this [FiatCurrency] instance is Costa Rican Colón.
+  @Deprecated('Please use == operator or isSameAs() instead.')
   bool get isCrc => const FiatCrc().isSameAs(this);
 
   /// Checks if this [FiatCurrency] instance is Cuban Convertible Peso.
+  @Deprecated('Please use == operator or isSameAs() instead.')
   bool get isCuc => const FiatCuc().isSameAs(this);
 
   /// Checks if this [FiatCurrency] instance is Cuban Peso.
+  @Deprecated('Please use == operator or isSameAs() instead.')
   bool get isCup => const FiatCup().isSameAs(this);
 
   /// Checks if this [FiatCurrency] instance is Cape Verdean Escudo.
+  @Deprecated('Please use == operator or isSameAs() instead.')
   bool get isCve => const FiatCve().isSameAs(this);
 
   /// Checks if this [FiatCurrency] instance is Czech Koruna.
+  @Deprecated('Please use == operator or isSameAs() instead.')
   bool get isCzk => const FiatCzk().isSameAs(this);
 
   /// Checks if this [FiatCurrency] instance is Djiboutian Franc.
+  @Deprecated('Please use == operator or isSameAs() instead.')
   bool get isDjf => const FiatDjf().isSameAs(this);
 
   /// Checks if this [FiatCurrency] instance is Danish Krone.
+  @Deprecated('Please use == operator or isSameAs() instead.')
   bool get isDkk => const FiatDkk().isSameAs(this);
 
   /// Checks if this [FiatCurrency] instance is Dominican Peso.
+  @Deprecated('Please use == operator or isSameAs() instead.')
   bool get isDop => const FiatDop().isSameAs(this);
 
   /// Checks if this [FiatCurrency] instance is Algerian Dinar.
+  @Deprecated('Please use == operator or isSameAs() instead.')
   bool get isDzd => const FiatDzd().isSameAs(this);
 
   /// Checks if this [FiatCurrency] instance is Egyptian Pound.
+  @Deprecated('Please use == operator or isSameAs() instead.')
   bool get isEgp => const FiatEgp().isSameAs(this);
 
   /// Checks if this [FiatCurrency] instance is Eritrean Nakfa.
+  @Deprecated('Please use == operator or isSameAs() instead.')
   bool get isErn => const FiatErn().isSameAs(this);
 
   /// Checks if this [FiatCurrency] instance is Ethiopian Birr.
+  @Deprecated('Please use == operator or isSameAs() instead.')
   bool get isEtb => const FiatEtb().isSameAs(this);
 
   /// Checks if this [FiatCurrency] instance is Euro.
+  @Deprecated('Please use == operator or isSameAs() instead.')
   bool get isEur => const FiatEur().isSameAs(this);
 
   /// Checks if this [FiatCurrency] instance is Fijian Dollar.
+  @Deprecated('Please use == operator or isSameAs() instead.')
   bool get isFjd => const FiatFjd().isSameAs(this);
 
   /// Checks if this [FiatCurrency] instance is Falkland Pound.
+  @Deprecated('Please use == operator or isSameAs() instead.')
   bool get isFkp => const FiatFkp().isSameAs(this);
 
   /// Checks if this [FiatCurrency] instance is British Pound.
+  @Deprecated('Please use == operator or isSameAs() instead.')
   bool get isGbp => const FiatGbp().isSameAs(this);
 
   /// Checks if this [FiatCurrency] instance is Georgian Lari.
+  @Deprecated('Please use == operator or isSameAs() instead.')
   bool get isGel => const FiatGel().isSameAs(this);
 
   /// Checks if this [FiatCurrency] instance is Ghanaian Cedi.
+  @Deprecated('Please use == operator or isSameAs() instead.')
   bool get isGhs => const FiatGhs().isSameAs(this);
 
   /// Checks if this [FiatCurrency] instance is Gibraltar Pound.
+  @Deprecated('Please use == operator or isSameAs() instead.')
   bool get isGip => const FiatGip().isSameAs(this);
 
   /// Checks if this [FiatCurrency] instance is Gambian Dalasi.
+  @Deprecated('Please use == operator or isSameAs() instead.')
   bool get isGmd => const FiatGmd().isSameAs(this);
 
   /// Checks if this [FiatCurrency] instance is Guinean Franc.
+  @Deprecated('Please use == operator or isSameAs() instead.')
   bool get isGnf => const FiatGnf().isSameAs(this);
 
   /// Checks if this [FiatCurrency] instance is Guatemalan Quetzal.
+  @Deprecated('Please use == operator or isSameAs() instead.')
   bool get isGtq => const FiatGtq().isSameAs(this);
 
   /// Checks if this [FiatCurrency] instance is Guyanaese Dollar.
+  @Deprecated('Please use == operator or isSameAs() instead.')
   bool get isGyd => const FiatGyd().isSameAs(this);
 
   /// Checks if this [FiatCurrency] instance is Hong Kong Dollar.
+  @Deprecated('Please use == operator or isSameAs() instead.')
   bool get isHkd => const FiatHkd().isSameAs(this);
 
   /// Checks if this [FiatCurrency] instance is Honduran Lempira.
+  @Deprecated('Please use == operator or isSameAs() instead.')
   bool get isHnl => const FiatHnl().isSameAs(this);
 
   /// Checks if this [FiatCurrency] instance is Haitian Gourde.
+  @Deprecated('Please use == operator or isSameAs() instead.')
   bool get isHtg => const FiatHtg().isSameAs(this);
 
   /// Checks if this [FiatCurrency] instance is Hungarian Forint.
+  @Deprecated('Please use == operator or isSameAs() instead.')
   bool get isHuf => const FiatHuf().isSameAs(this);
 
   /// Checks if this [FiatCurrency] instance is Indonesian Rupiah.
+  @Deprecated('Please use == operator or isSameAs() instead.')
   bool get isIdr => const FiatIdr().isSameAs(this);
 
   /// Checks if this [FiatCurrency] instance is Israeli New Shekel.
+  @Deprecated('Please use == operator or isSameAs() instead.')
   bool get isIls => const FiatIls().isSameAs(this);
 
   /// Checks if this [FiatCurrency] instance is Indian Rupee.
+  @Deprecated('Please use == operator or isSameAs() instead.')
   bool get isInr => const FiatInr().isSameAs(this);
 
   /// Checks if this [FiatCurrency] instance is Iraqi Dinar.
+  @Deprecated('Please use == operator or isSameAs() instead.')
   bool get isIqd => const FiatIqd().isSameAs(this);
 
   /// Checks if this [FiatCurrency] instance is Iranian Rial.
+  @Deprecated('Please use == operator or isSameAs() instead.')
   bool get isIrr => const FiatIrr().isSameAs(this);
 
   /// Checks if this [FiatCurrency] instance is Icelandic Króna.
+  @Deprecated('Please use == operator or isSameAs() instead.')
   bool get isIsk => const FiatIsk().isSameAs(this);
 
   /// Checks if this [FiatCurrency] instance is Jamaican Dollar.
+  @Deprecated('Please use == operator or isSameAs() instead.')
   bool get isJmd => const FiatJmd().isSameAs(this);
 
   /// Checks if this [FiatCurrency] instance is Jordanian Dinar.
+  @Deprecated('Please use == operator or isSameAs() instead.')
   bool get isJod => const FiatJod().isSameAs(this);
 
   /// Checks if this [FiatCurrency] instance is Japanese Yen.
+  @Deprecated('Please use == operator or isSameAs() instead.')
   bool get isJpy => const FiatJpy().isSameAs(this);
 
   /// Checks if this [FiatCurrency] instance is Kenyan Shilling.
+  @Deprecated('Please use == operator or isSameAs() instead.')
   bool get isKes => const FiatKes().isSameAs(this);
 
   /// Checks if this [FiatCurrency] instance is Kyrgystani Som.
+  @Deprecated('Please use == operator or isSameAs() instead.')
   bool get isKgs => const FiatKgs().isSameAs(this);
 
   /// Checks if this [FiatCurrency] instance is Cambodian Riel.
+  @Deprecated('Please use == operator or isSameAs() instead.')
   bool get isKhr => const FiatKhr().isSameAs(this);
 
   /// Checks if this [FiatCurrency] instance is Comorian Franc.
+  @Deprecated('Please use == operator or isSameAs() instead.')
   bool get isKmf => const FiatKmf().isSameAs(this);
 
   /// Checks if this [FiatCurrency] instance is North Korean Won.
+  @Deprecated('Please use == operator or isSameAs() instead.')
   bool get isKpw => const FiatKpw().isSameAs(this);
 
   /// Checks if this [FiatCurrency] instance is South Korean Won.
+  @Deprecated('Please use == operator or isSameAs() instead.')
   bool get isKrw => const FiatKrw().isSameAs(this);
 
   /// Checks if this [FiatCurrency] instance is Kuwaiti Dinar.
+  @Deprecated('Please use == operator or isSameAs() instead.')
   bool get isKwd => const FiatKwd().isSameAs(this);
 
   /// Checks if this [FiatCurrency] instance is Cayman Islands Dollar.
+  @Deprecated('Please use == operator or isSameAs() instead.')
   bool get isKyd => const FiatKyd().isSameAs(this);
 
   /// Checks if this [FiatCurrency] instance is Kazakhstani Tenge.
+  @Deprecated('Please use == operator or isSameAs() instead.')
   bool get isKzt => const FiatKzt().isSameAs(this);
 
   /// Checks if this [FiatCurrency] instance is Laotian Kip.
+  @Deprecated('Please use == operator or isSameAs() instead.')
   bool get isLak => const FiatLak().isSameAs(this);
 
   /// Checks if this [FiatCurrency] instance is Lebanese Pound.
+  @Deprecated('Please use == operator or isSameAs() instead.')
   bool get isLbp => const FiatLbp().isSameAs(this);
 
   /// Checks if this [FiatCurrency] instance is Sri Lankan Rupee.
+  @Deprecated('Please use == operator or isSameAs() instead.')
   bool get isLkr => const FiatLkr().isSameAs(this);
 
   /// Checks if this [FiatCurrency] instance is Liberian Dollar.
+  @Deprecated('Please use == operator or isSameAs() instead.')
   bool get isLrd => const FiatLrd().isSameAs(this);
 
   /// Checks if this [FiatCurrency] instance is Lesotho Loti.
+  @Deprecated('Please use == operator or isSameAs() instead.')
   bool get isLsl => const FiatLsl().isSameAs(this);
 
   /// Checks if this [FiatCurrency] instance is Libyan Dinar.
+  @Deprecated('Please use == operator or isSameAs() instead.')
   bool get isLyd => const FiatLyd().isSameAs(this);
 
   /// Checks if this [FiatCurrency] instance is Moroccan Dirham.
+  @Deprecated('Please use == operator or isSameAs() instead.')
   bool get isMad => const FiatMad().isSameAs(this);
 
   /// Checks if this [FiatCurrency] instance is Moldovan Leu.
+  @Deprecated('Please use == operator or isSameAs() instead.')
   bool get isMdl => const FiatMdl().isSameAs(this);
 
   /// Checks if this [FiatCurrency] instance is Malagasy Ariary.
+  @Deprecated('Please use == operator or isSameAs() instead.')
   bool get isMga => const FiatMga().isSameAs(this);
 
   /// Checks if this [FiatCurrency] instance is Macedonian Denar.
+  @Deprecated('Please use == operator or isSameAs() instead.')
   bool get isMkd => const FiatMkd().isSameAs(this);
 
   /// Checks if this [FiatCurrency] instance is Myanmar Kyat.
+  @Deprecated('Please use == operator or isSameAs() instead.')
   bool get isMmk => const FiatMmk().isSameAs(this);
 
   /// Checks if this [FiatCurrency] instance is Mongolian Tugrik.
+  @Deprecated('Please use == operator or isSameAs() instead.')
   bool get isMnt => const FiatMnt().isSameAs(this);
 
   /// Checks if this [FiatCurrency] instance is Macanese Pataca.
+  @Deprecated('Please use == operator or isSameAs() instead.')
   bool get isMop => const FiatMop().isSameAs(this);
 
   /// Checks if this [FiatCurrency] instance is Mauritanian Ouguiya.
+  @Deprecated('Please use == operator or isSameAs() instead.')
   bool get isMru => const FiatMru().isSameAs(this);
 
   /// Checks if this [FiatCurrency] instance is Mauritian Rupee.
+  @Deprecated('Please use == operator or isSameAs() instead.')
   bool get isMur => const FiatMur().isSameAs(this);
 
   /// Checks if this [FiatCurrency] instance is Maldivian Rufiyaa.
+  @Deprecated('Please use == operator or isSameAs() instead.')
   bool get isMvr => const FiatMvr().isSameAs(this);
 
   /// Checks if this [FiatCurrency] instance is Malawian Kwacha.
+  @Deprecated('Please use == operator or isSameAs() instead.')
   bool get isMwk => const FiatMwk().isSameAs(this);
 
   /// Checks if this [FiatCurrency] instance is Mexican Peso.
+  @Deprecated('Please use == operator or isSameAs() instead.')
   bool get isMxn => const FiatMxn().isSameAs(this);
 
   /// Checks if this [FiatCurrency] instance is Malaysian Ringgit.
+  @Deprecated('Please use == operator or isSameAs() instead.')
   bool get isMyr => const FiatMyr().isSameAs(this);
 
   /// Checks if this [FiatCurrency] instance is Mozambican Metical.
+  @Deprecated('Please use == operator or isSameAs() instead.')
   bool get isMzn => const FiatMzn().isSameAs(this);
 
   /// Checks if this [FiatCurrency] instance is Namibian Dollar.
+  @Deprecated('Please use == operator or isSameAs() instead.')
   bool get isNad => const FiatNad().isSameAs(this);
 
   /// Checks if this [FiatCurrency] instance is Nigerian Naira.
+  @Deprecated('Please use == operator or isSameAs() instead.')
   bool get isNgn => const FiatNgn().isSameAs(this);
 
   /// Checks if this [FiatCurrency] instance is Nicaraguan Córdoba.
+  @Deprecated('Please use == operator or isSameAs() instead.')
   bool get isNio => const FiatNio().isSameAs(this);
 
   /// Checks if this [FiatCurrency] instance is Norwegian Krone.
+  @Deprecated('Please use == operator or isSameAs() instead.')
   bool get isNok => const FiatNok().isSameAs(this);
 
   /// Checks if this [FiatCurrency] instance is Nepalese Rupee.
+  @Deprecated('Please use == operator or isSameAs() instead.')
   bool get isNpr => const FiatNpr().isSameAs(this);
 
   /// Checks if this [FiatCurrency] instance is New Zealand Dollar.
+  @Deprecated('Please use == operator or isSameAs() instead.')
   bool get isNzd => const FiatNzd().isSameAs(this);
 
   /// Checks if this [FiatCurrency] instance is Omani Rial.
+  @Deprecated('Please use == operator or isSameAs() instead.')
   bool get isOmr => const FiatOmr().isSameAs(this);
 
   /// Checks if this [FiatCurrency] instance is Panamanian Balboa.
+  @Deprecated('Please use == operator or isSameAs() instead.')
   bool get isPab => const FiatPab().isSameAs(this);
 
   /// Checks if this [FiatCurrency] instance is Peruvian Sol.
+  @Deprecated('Please use == operator or isSameAs() instead.')
   bool get isPen => const FiatPen().isSameAs(this);
 
   /// Checks if this [FiatCurrency] instance is Papua New Guinean Kina.
+  @Deprecated('Please use == operator or isSameAs() instead.')
   bool get isPgk => const FiatPgk().isSameAs(this);
 
   /// Checks if this [FiatCurrency] instance is Philippine Peso.
+  @Deprecated('Please use == operator or isSameAs() instead.')
   bool get isPhp => const FiatPhp().isSameAs(this);
 
   /// Checks if this [FiatCurrency] instance is Pakistani Rupee.
+  @Deprecated('Please use == operator or isSameAs() instead.')
   bool get isPkr => const FiatPkr().isSameAs(this);
 
   /// Checks if this [FiatCurrency] instance is Polish Zloty.
+  @Deprecated('Please use == operator or isSameAs() instead.')
   bool get isPln => const FiatPln().isSameAs(this);
 
   /// Checks if this [FiatCurrency] instance is Paraguayan Guarani.
+  @Deprecated('Please use == operator or isSameAs() instead.')
   bool get isPyg => const FiatPyg().isSameAs(this);
 
   /// Checks if this [FiatCurrency] instance is Qatari Riyal.
+  @Deprecated('Please use == operator or isSameAs() instead.')
   bool get isQar => const FiatQar().isSameAs(this);
 
   /// Checks if this [FiatCurrency] instance is Romanian Leu.
+  @Deprecated('Please use == operator or isSameAs() instead.')
   bool get isRon => const FiatRon().isSameAs(this);
 
   /// Checks if this [FiatCurrency] instance is Serbian Dinar.
+  @Deprecated('Please use == operator or isSameAs() instead.')
   bool get isRsd => const FiatRsd().isSameAs(this);
 
   /// Checks if this [FiatCurrency] instance is Russian Ruble.
+  @Deprecated('Please use == operator or isSameAs() instead.')
   bool get isRub => const FiatRub().isSameAs(this);
 
   /// Checks if this [FiatCurrency] instance is Rwandan Franc.
+  @Deprecated('Please use == operator or isSameAs() instead.')
   bool get isRwf => const FiatRwf().isSameAs(this);
 
   /// Checks if this [FiatCurrency] instance is Saudi Riyal.
+  @Deprecated('Please use == operator or isSameAs() instead.')
   bool get isSar => const FiatSar().isSameAs(this);
 
   /// Checks if this [FiatCurrency] instance is Solomon Islands Dollar.
+  @Deprecated('Please use == operator or isSameAs() instead.')
   bool get isSbd => const FiatSbd().isSameAs(this);
 
   /// Checks if this [FiatCurrency] instance is Seychellois Rupee.
+  @Deprecated('Please use == operator or isSameAs() instead.')
   bool get isScr => const FiatScr().isSameAs(this);
 
   /// Checks if this [FiatCurrency] instance is Sudanese Pound.
+  @Deprecated('Please use == operator or isSameAs() instead.')
   bool get isSdg => const FiatSdg().isSameAs(this);
 
   /// Checks if this [FiatCurrency] instance is Swedish Krona.
+  @Deprecated('Please use == operator or isSameAs() instead.')
   bool get isSek => const FiatSek().isSameAs(this);
 
   /// Checks if this [FiatCurrency] instance is Singapore Dollar.
+  @Deprecated('Please use == operator or isSameAs() instead.')
   bool get isSgd => const FiatSgd().isSameAs(this);
 
   /// Checks if this [FiatCurrency] instance is St. Helena Pound.
+  @Deprecated('Please use == operator or isSameAs() instead.')
   bool get isShp => const FiatShp().isSameAs(this);
 
   /// Checks if this [FiatCurrency] instance is Sierra Leonean Leone.
+  @Deprecated('Please use == operator or isSameAs() instead.')
   bool get isSle => const FiatSle().isSameAs(this);
 
   /// Checks if this [FiatCurrency] instance is Sierra Leonean Leone (Old).
+  @Deprecated('Please use == operator or isSameAs() instead.')
   bool get isSll => const FiatSll().isSameAs(this);
 
   /// Checks if this [FiatCurrency] instance is Somali Shilling.
+  @Deprecated('Please use == operator or isSameAs() instead.')
   bool get isSos => const FiatSos().isSameAs(this);
 
   /// Checks if this [FiatCurrency] instance is Surinamese Dollar.
+  @Deprecated('Please use == operator or isSameAs() instead.')
   bool get isSrd => const FiatSrd().isSameAs(this);
 
   /// Checks if this [FiatCurrency] instance is South Sudanese Pound.
+  @Deprecated('Please use == operator or isSameAs() instead.')
   bool get isSsp => const FiatSsp().isSameAs(this);
 
   /// Checks if this [FiatCurrency] instance is São Tomé and Príncipe Second Dobra.
+  @Deprecated('Please use == operator or isSameAs() instead.')
   bool get isStn => const FiatStn().isSameAs(this);
 
   /// Checks if this [FiatCurrency] instance is Salvadoran Colón.
+  @Deprecated('Please use == operator or isSameAs() instead.')
   bool get isSvc => const FiatSvc().isSameAs(this);
 
   /// Checks if this [FiatCurrency] instance is Syrian Pound.
+  @Deprecated('Please use == operator or isSameAs() instead.')
   bool get isSyp => const FiatSyp().isSameAs(this);
 
   /// Checks if this [FiatCurrency] instance is Swazi Lilangeni.
+  @Deprecated('Please use == operator or isSameAs() instead.')
   bool get isSzl => const FiatSzl().isSameAs(this);
 
   /// Checks if this [FiatCurrency] instance is Thai Baht.
+  @Deprecated('Please use == operator or isSameAs() instead.')
   bool get isThb => const FiatThb().isSameAs(this);
 
   /// Checks if this [FiatCurrency] instance is Tajikistani Somoni.
+  @Deprecated('Please use == operator or isSameAs() instead.')
   bool get isTjs => const FiatTjs().isSameAs(this);
 
   /// Checks if this [FiatCurrency] instance is Turkmenistani Manat.
+  @Deprecated('Please use == operator or isSameAs() instead.')
   bool get isTmt => const FiatTmt().isSameAs(this);
 
   /// Checks if this [FiatCurrency] instance is Tunisian Dinar.
+  @Deprecated('Please use == operator or isSameAs() instead.')
   bool get isTnd => const FiatTnd().isSameAs(this);
 
   /// Checks if this [FiatCurrency] instance is Tongan Paʻanga.
+  @Deprecated('Please use == operator or isSameAs() instead.')
   bool get isTop => const FiatTop().isSameAs(this);
 
   /// Checks if this [FiatCurrency] instance is Turkish Lira.
+  @Deprecated('Please use == operator or isSameAs() instead.')
   bool get isTry => const FiatTry().isSameAs(this);
 
   /// Checks if this [FiatCurrency] instance is Trinidad & Tobago Dollar.
+  @Deprecated('Please use == operator or isSameAs() instead.')
   bool get isTtd => const FiatTtd().isSameAs(this);
 
   /// Checks if this [FiatCurrency] instance is New Taiwan Dollar.
+  @Deprecated('Please use == operator or isSameAs() instead.')
   bool get isTwd => const FiatTwd().isSameAs(this);
 
   /// Checks if this [FiatCurrency] instance is Tanzanian Shilling.
+  @Deprecated('Please use == operator or isSameAs() instead.')
   bool get isTzs => const FiatTzs().isSameAs(this);
 
   /// Checks if this [FiatCurrency] instance is Ukrainian Hryvnia.
+  @Deprecated('Please use == operator or isSameAs() instead.')
   bool get isUah => const FiatUah().isSameAs(this);
 
   /// Checks if this [FiatCurrency] instance is Ugandan Shilling.
+  @Deprecated('Please use == operator or isSameAs() instead.')
   bool get isUgx => const FiatUgx().isSameAs(this);
 
   /// Checks if this [FiatCurrency] instance is United States Dollar.
+  @Deprecated('Please use == operator or isSameAs() instead.')
   bool get isUsd => const FiatUsd().isSameAs(this);
 
   /// Checks if this [FiatCurrency] instance is Uruguayan Peso.
+  @Deprecated('Please use == operator or isSameAs() instead.')
   bool get isUyu => const FiatUyu().isSameAs(this);
 
   /// Checks if this [FiatCurrency] instance is Uzbekistani Som.
+  @Deprecated('Please use == operator or isSameAs() instead.')
   bool get isUzs => const FiatUzs().isSameAs(this);
 
   /// Checks if this [FiatCurrency] instance is Venezuelan Bolívar Soberano.
+  @Deprecated('Please use == operator or isSameAs() instead.')
   bool get isVes => const FiatVes().isSameAs(this);
 
   /// Checks if this [FiatCurrency] instance is Vietnamese Dong.
+  @Deprecated('Please use == operator or isSameAs() instead.')
   bool get isVnd => const FiatVnd().isSameAs(this);
 
   /// Checks if this [FiatCurrency] instance is Vanuatu Vatu.
+  @Deprecated('Please use == operator or isSameAs() instead.')
   bool get isVuv => const FiatVuv().isSameAs(this);
 
   /// Checks if this [FiatCurrency] instance is Samoan Tala.
+  @Deprecated('Please use == operator or isSameAs() instead.')
   bool get isWst => const FiatWst().isSameAs(this);
 
   /// Checks if this [FiatCurrency] instance is Central African Cfa Franc.
+  @Deprecated('Please use == operator or isSameAs() instead.')
   bool get isXaf => const FiatXaf().isSameAs(this);
 
   /// Checks if this [FiatCurrency] instance is East Caribbean Dollar.
+  @Deprecated('Please use == operator or isSameAs() instead.')
   bool get isXcd => const FiatXcd().isSameAs(this);
 
   /// Checks if this [FiatCurrency] instance is West African Cfa Franc.
+  @Deprecated('Please use == operator or isSameAs() instead.')
   bool get isXof => const FiatXof().isSameAs(this);
 
   /// Checks if this [FiatCurrency] instance is Cfp Franc.
+  @Deprecated('Please use == operator or isSameAs() instead.')
   bool get isXpf => const FiatXpf().isSameAs(this);
 
   /// Checks if this [FiatCurrency] instance is Yemeni Rial.
+  @Deprecated('Please use == operator or isSameAs() instead.')
   bool get isYer => const FiatYer().isSameAs(this);
 
   /// Checks if this [FiatCurrency] instance is South African Rand.
+  @Deprecated('Please use == operator or isSameAs() instead.')
   bool get isZar => const FiatZar().isSameAs(this);
 
   /// Checks if this [FiatCurrency] instance is Zambian Kwacha.
+  @Deprecated('Please use == operator or isSameAs() instead.')
   bool get isZmw => const FiatZmw().isSameAs(this);
 
   /// Checks if this [FiatCurrency] instance is Zimbabwean Dollar.
+  @Deprecated('Please use == operator or isSameAs() instead.')
   bool get isZwl => const FiatZwl().isSameAs(this);
 }

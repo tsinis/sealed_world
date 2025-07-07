@@ -2,7 +2,9 @@
 
 part of "world_bloc.dart";
 
+@Deprecated('Please use pattern matching with switch expressions instead.')
 extension RegionalBlocFunctional on RegionalBloc {
+  @Deprecated('Please use pattern matching with switch expressions instead.')
   R map<R>({
     required R Function(RegionalBloc blocAL) blocAL,
     required R Function(RegionalBloc blocASEAN) blocASEAN,
@@ -34,6 +36,7 @@ extension RegionalBlocFunctional on RegionalBloc {
     _ => throw ArgumentError("Unknown value: $this", name),
   };
 
+  @Deprecated('Please use pattern matching with switch expressions instead.')
   R maybeMap<R>({
     required R Function(RegionalBloc regionalBloc) orElse,
     R Function(RegionalBloc blocAL)? blocAL,
@@ -66,6 +69,7 @@ extension RegionalBlocFunctional on RegionalBloc {
     _ => orElse(this),
   };
 
+  @Deprecated('Please use pattern matching with switch expressions instead.')
   R maybeWhen<R>({
     required R Function() orElse,
     R Function()? blocAL,
@@ -98,6 +102,7 @@ extension RegionalBlocFunctional on RegionalBloc {
     _ => orElse(),
   };
 
+  @Deprecated('Please use pattern matching with switch expressions instead.')
   R when<R>({
     required R Function() blocAL,
     required R Function() blocASEAN,
@@ -129,6 +134,7 @@ extension RegionalBlocFunctional on RegionalBloc {
     _ => throw ArgumentError("Unknown value: $this", name),
   };
 
+  @Deprecated('Please use pattern matching with switch expressions instead.')
   R? maybeWhenOrNull<R>({
     R Function()? blocAL,
     R Function()? blocASEAN,

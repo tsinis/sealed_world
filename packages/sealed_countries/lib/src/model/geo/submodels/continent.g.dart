@@ -2,7 +2,9 @@
 
 part of "continent.dart";
 
+@Deprecated('Please use pattern matching with switch expressions instead.')
 extension ContinentFunctional on Continent {
+  @Deprecated('Please use pattern matching with switch expressions instead.')
   R map<R>({
     required R Function(Continent europe) europe,
     required R Function(Continent africa) africa,
@@ -20,6 +22,7 @@ extension ContinentFunctional on Continent {
     _ => throw ArgumentError("Unknown value: $this", name),
   };
 
+  @Deprecated('Please use pattern matching with switch expressions instead.')
   R maybeMap<R>({
     required R Function(Continent continent) orElse,
     R Function(Continent europe)? europe,
@@ -38,6 +41,7 @@ extension ContinentFunctional on Continent {
     _ => orElse(this),
   };
 
+  @Deprecated('Please use pattern matching with switch expressions instead.')
   R maybeWhen<R>({
     required R Function() orElse,
     R Function()? europe,
@@ -56,6 +60,7 @@ extension ContinentFunctional on Continent {
     _ => orElse(),
   };
 
+  @Deprecated('Please use pattern matching with switch expressions instead.')
   R when<R>({
     required R Function() europe,
     required R Function() africa,
@@ -73,6 +78,7 @@ extension ContinentFunctional on Continent {
     _ => throw ArgumentError("Unknown value: $this", name),
   };
 
+  @Deprecated('Please use pattern matching with switch expressions instead.')
   R? whenOrNull<R>({
     R Function()? europe,
     R Function()? africa,

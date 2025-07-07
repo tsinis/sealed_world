@@ -2,7 +2,9 @@
 
 part of "../language_family.dart";
 
+@Deprecated('Please use pattern matching with switch expressions instead.')
 extension NaturalLanguageFamilyFunctional on NaturalLanguageFamily {
+  @Deprecated('Please use pattern matching with switch expressions instead.')
   R map<R>({
     required R Function(NaturalLanguageFamily afroAsiatic) afroAsiatic,
     required R Function(NaturalLanguageFamily algonquian) algonquian,
@@ -62,6 +64,7 @@ extension NaturalLanguageFamilyFunctional on NaturalLanguageFamily {
     _ => throw ArgumentError("Unknown value: $this", name),
   };
 
+  @Deprecated('Please use pattern matching with switch expressions instead.')
   R maybeMap<R>({
     required R Function(NaturalLanguageFamily family) orElse,
     R Function(NaturalLanguageFamily afroAsiatic)? afroAsiatic,
@@ -120,6 +123,7 @@ extension NaturalLanguageFamilyFunctional on NaturalLanguageFamily {
     _ => orElse(this),
   };
 
+  @Deprecated('Please use pattern matching with switch expressions instead.')
   R maybeWhen<R>({
     required R Function() orElse,
     R Function()? afroAsiatic,
@@ -178,6 +182,7 @@ extension NaturalLanguageFamilyFunctional on NaturalLanguageFamily {
     _ => orElse(),
   };
 
+  @Deprecated('Please use pattern matching with switch expressions instead.')
   R when<R>({
     required R Function() afroAsiatic,
     required R Function() algonquian,
@@ -235,6 +240,7 @@ extension NaturalLanguageFamilyFunctional on NaturalLanguageFamily {
     _ => throw ArgumentError("Unknown value: $this", name),
   };
 
+  @Deprecated('Please use pattern matching with switch expressions instead.')
   R? whenOrNull<R>({
     R Function()? afroAsiatic,
     R Function()? algonquian,
