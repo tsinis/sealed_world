@@ -12,6 +12,7 @@ extension IsoStandardizedWorldCountryExtension on IsoStandardized? {
   ///
   /// This getter can be used to check if an [IsoStandardized] object
   /// represents a world country.
+  @Deprecated("Please use `mapWhenOrNull` or `is WorldCountry` check instead.")
   bool get isWorldCountry => this is WorldCountry;
 
   /// Pattern-matching helper for ISO types.
