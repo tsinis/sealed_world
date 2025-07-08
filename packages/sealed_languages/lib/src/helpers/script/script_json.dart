@@ -14,7 +14,7 @@ extension ScriptJson on Script {
   );
 
   /// {@macro from_map_method}
-  JsonObjectMap toMap() => {
+  Map<String, String?> toMap() => {
     "code": code,
     "codeNumeric": codeNumeric,
     "date": date,
