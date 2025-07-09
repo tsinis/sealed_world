@@ -66,15 +66,19 @@ dart_code_metrics:
     - avoid-collection-equality-checks: false # Doesn't work for models exclude.
     - avoid-collection-mutating-methods: false # Mostly false positives.
     - avoid-continue: false # Just a matter of style.
+    - avoid-default-tostring: false # Doesn't make sense here.
+    - avoid-deprecated-usage: false # Using default deprecated_member_use_from_same_package.
     - avoid-duplicate-collection-elements: false # They are being used on purpose.
     - avoid-ignoring-return-values: false # Mostly, collection methods are ignored.
     - avoid-inferrable-type-arguments: false # Against prefer-explicit-type-arguments.
     - avoid-long-files: false # A lot of data and collections.
     - avoid-long-functions: false # Cannot get exclude to work with tests...
     - avoid-nullable-interpolation: false # Doesn't work for toString() methods.
+    - avoid-unnecessary-nullable-fields: false # Fields could be nullable + has default values.
     - avoid-unsafe-collection-methods: false # They are being used on purpose.
     - enum-constants-ordering: false # This might be a breaking change.
     - match-getter-setter-field-names: false # Most of those are just aliases.
+    - max-imports: false # Sadly not very suitable for the packages.
     - no-empty-string: false # This will be a breaking change.
     - no-equal-arguments: false # Not our use-case here.
     - no-magic-number: false # Packages contain a lot of numbers.
@@ -185,8 +189,6 @@ dart_code_metrics:
     - avoid-constant-assert-conditions
     - avoid-contradictory-expressions
     - avoid-declaring-call-method
-    - avoid-default-tostring
-    - avoid-deprecated-usage
     - avoid-double-slash-imports
     - avoid-duplicate-cascades
     - avoid-duplicate-collection-elements
@@ -346,7 +348,6 @@ dart_code_metrics:
     - match-getter-setter-field-names
     - match-lib-folder-structure
     - match-positional-field-names-on-assignment
-    - max-imports
     - missing-test-assertion
     - move-records-to-typedefs
     - move-variable-closer-to-its-usage
@@ -517,7 +518,6 @@ linter:
     dangling_library_doc_comments: true
     depend_on_referenced_packages: true
     deprecated_consistency: true
-    deprecated_member_use_from_same_package: true
     directives_ordering: true
     discarded_futures: true
     do_not_use_environment: true

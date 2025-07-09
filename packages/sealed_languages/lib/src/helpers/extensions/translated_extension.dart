@@ -196,7 +196,7 @@ extension TranslatedExtension<
       if (countryCode != null && l10n.countryCode != countryCode) continue;
       if (script != null && l10n.script != script) continue;
 
-      return l10n; // ignore: avoid-unconditional-break, conditions were met.
+      return l10n;
     }
 
     return useLanguageFallback ? translations.firstOrNull : null;

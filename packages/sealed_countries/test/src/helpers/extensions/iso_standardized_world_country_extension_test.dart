@@ -1,4 +1,5 @@
 // ignore_for_file: prefer-explicit-type-arguments
+// ignore_for_file: deprecated_member_use_from_same_package, it's TODO!
 
 import "package:sealed_countries/src/data/official_world_countries.data.dart";
 import "package:sealed_countries/src/helpers/extensions/iso_standardized_world_country_extension.dart";
