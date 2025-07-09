@@ -25,7 +25,7 @@ environment:
 dev_dependencies:
   _sealed_world_tests:
     path: ../_sealed_world_tests
-  coverage: ^1.11.1 # From Google
+  coverage: any # From Google. Constrained in the CLI tools package
   dart_code_metrics_presets: any # Constrained in the CLI tools package
   lints: any # From Google. Constrained in the CLI tools package
-  test: ^1.25.8 # From Google
+  test: ^1.25.15 # From Google

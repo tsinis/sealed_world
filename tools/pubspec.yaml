@@ -22,5 +22,6 @@ dependencies:
   yaml: ^3.1.3
 
 dev_dependencies:
+  coverage: ^1.15.0 # From Google. Defines top level dependency constraint.
   dart_code_metrics_presets: ^2.24.0 # DCM. Defines top level dependency constraint.
   lints: ^6.0.0 # From Google. Defines top level dependency constraint.
