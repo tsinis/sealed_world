@@ -86,7 +86,7 @@ extension WidgetTesterExtension on WidgetTester {
     await pumpWidget(
       MaterialApp(
         home: Scaffold(body: testPicker),
-        theme: ThemeData(extensions: [if (theme != null) theme, pickersTheme]),
+        theme: ThemeData(extensions: [?theme, pickersTheme]),
       ),
     );
     if (testPicker.showClearButton ?? true) {
