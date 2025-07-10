@@ -28,7 +28,6 @@ dependencies:
 dev_dependencies:
   _sealed_world_tests:
     path: ../_sealed_world_tests
-  dart_code_metrics_presets: any # Constrained in the CLI tools package
+  dart_code_metrics_presets: any # Constrained in the workspace pubspec.yaml
   flutter_test: # From Google
     sdk: flutter
-  lints: any # From Google. Constrained in the CLI tools package

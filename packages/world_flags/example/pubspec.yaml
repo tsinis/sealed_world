@@ -15,8 +15,7 @@ dependencies:
     path: ../
 
 dev_dependencies:
-  dart_code_metrics_presets: any # Constrained in the CLI tools package
-  lints: any # From Google. Constrained in the CLI tools package
+  dart_code_metrics_presets: any # Constrained in the workspace pubspec.yaml
 
 flutter:
   disable-swift-package-manager: false
