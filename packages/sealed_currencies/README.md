@@ -46,7 +46,7 @@ Provides a compile-time constant of all currencies accessible via `FiatCurrency.
 - `fromName` - returns a currency instance if the value matches the provided English name.
 - `permissive` - allows the creation of custom class instances that are not fully compatible with the ISO standard.
 
-You can also find many common methods you may know from Dart ecosystem - `toString` overrides, `copyWith`, `toJson`, `compareTo`, etc. Also, a compile-time const, tree-shakable, case-insensitive code `map`s (for a 0(1) access time code mapping), `list` and much more.
+You can also find many common methods you may know from Dart ecosystem - `toString` overrides, `copyWith`, `toJson`, `compareTo`, etc. Also, a compile-time const, tree-shakable, case-insensitive code `map`s (for O(1)-time code look-ups), `list`, and much more.
 
 > Translations: Use `maybeCommonNameFor()` or `commonNameFor()` methods to get translations for specific locale.
 

@@ -518,6 +518,7 @@ linter:
     dangling_library_doc_comments: true
     depend_on_referenced_packages: true
     deprecated_consistency: true
+    deprecated_member_use_from_same_package: true
     directives_ordering: true
     discarded_futures: true
     do_not_use_environment: true
