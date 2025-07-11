@@ -31,7 +31,5 @@ dependencies:
 dev_dependencies:
   _sealed_world_tests:
     path: ../_sealed_world_tests
-  coverage: ^1.14.0 # From Google
-  dart_code_metrics_presets: any # Constrained in the CLI tools package
-  lints: any # From Google. Constrained in the CLI tools package
-  test: ^1.25.15 # From Google
+  dart_code_metrics_presets: any # Constrained in the workspace pubspec.yaml
+  test: any # Constrained in the workspace pubspec.yaml

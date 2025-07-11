@@ -2,7 +2,9 @@
 
 part of "../country.dart";
 
+@Deprecated('Please use pattern matching with switch expressions instead.')
 extension WorldCountryFunctional on WorldCountry {
+  @Deprecated('Please use pattern matching with switch expressions instead.')
   R map<R>({
     required R Function(WorldCountry countryAbw) countryAbw,
     required R Function(WorldCountry countryAfg) countryAfg,
@@ -508,6 +510,7 @@ extension WorldCountryFunctional on WorldCountry {
     _ => throw ArgumentError("Unknown value: $this", name.name),
   };
 
+  @Deprecated('Please use pattern matching with switch expressions instead.')
   R maybeMap<R>({
     required R Function(WorldCountry country) orElse,
     R Function(WorldCountry countryAbw)? countryAbw,
@@ -1014,6 +1017,7 @@ extension WorldCountryFunctional on WorldCountry {
     _ => orElse(this),
   };
 
+  @Deprecated('Please use pattern matching with switch expressions instead.')
   R maybeWhen<R>({
     required R Function() orElse,
     R Function()? countryAbw,
@@ -1520,6 +1524,7 @@ extension WorldCountryFunctional on WorldCountry {
     _ => orElse(),
   };
 
+  @Deprecated('Please use pattern matching with switch expressions instead.')
   R when<R>({
     required R Function() countryAbw,
     required R Function() countryAfg,
@@ -2025,6 +2030,7 @@ extension WorldCountryFunctional on WorldCountry {
     _ => throw ArgumentError("Unknown value: $this", name.name),
   };
 
+  @Deprecated('Please use pattern matching with switch expressions instead.')
   R? whenOrNull<R>({
     R Function()? countryAbw,
     R Function()? countryAfg,
@@ -2532,754 +2538,1005 @@ extension WorldCountryFunctional on WorldCountry {
   };
 }
 
+@Deprecated('Please use == operator or isSameAs() instead.')
 extension WorldCountryBoolGetters on WorldCountry? {
   /// Checks if this [WorldCountry] instance is Aruba.
+  @Deprecated('Please use == operator or isSameAs() instead.')
   bool get isAbw => const CountryAbw().isSameAs(this);
 
   /// Checks if this [WorldCountry] instance is Afghanistan.
+  @Deprecated('Please use == operator or isSameAs() instead.')
   bool get isAfg => const CountryAfg().isSameAs(this);
 
   /// Checks if this [WorldCountry] instance is Angola.
+  @Deprecated('Please use == operator or isSameAs() instead.')
   bool get isAgo => const CountryAgo().isSameAs(this);
 
   /// Checks if this [WorldCountry] instance is Anguilla.
+  @Deprecated('Please use == operator or isSameAs() instead.')
   bool get isAia => const CountryAia().isSameAs(this);
 
   /// Checks if this [WorldCountry] instance is Åland Islands.
+  @Deprecated('Please use == operator or isSameAs() instead.')
   bool get isAla => const CountryAla().isSameAs(this);
 
   /// Checks if this [WorldCountry] instance is Albania.
+  @Deprecated('Please use == operator or isSameAs() instead.')
   bool get isAlb => const CountryAlb().isSameAs(this);
 
   /// Checks if this [WorldCountry] instance is Andorra.
+  @Deprecated('Please use == operator or isSameAs() instead.')
   bool get isAnd => const CountryAnd().isSameAs(this);
 
   /// Checks if this [WorldCountry] instance is United Arab Emirates.
+  @Deprecated('Please use == operator or isSameAs() instead.')
   bool get isAre => const CountryAre().isSameAs(this);
 
   /// Checks if this [WorldCountry] instance is Argentina.
+  @Deprecated('Please use == operator or isSameAs() instead.')
   bool get isArg => const CountryArg().isSameAs(this);
 
   /// Checks if this [WorldCountry] instance is Armenia.
+  @Deprecated('Please use == operator or isSameAs() instead.')
   bool get isArm => const CountryArm().isSameAs(this);
 
   /// Checks if this [WorldCountry] instance is American Samoa.
+  @Deprecated('Please use == operator or isSameAs() instead.')
   bool get isAsm => const CountryAsm().isSameAs(this);
 
   /// Checks if this [WorldCountry] instance is Antarctica.
+  @Deprecated('Please use == operator or isSameAs() instead.')
   bool get isAta => const CountryAta().isSameAs(this);
 
   /// Checks if this [WorldCountry] instance is French Southern and Antarctic Lands.
+  @Deprecated('Please use == operator or isSameAs() instead.')
   bool get isAtf => const CountryAtf().isSameAs(this);
 
   /// Checks if this [WorldCountry] instance is Antigua and Barbuda.
+  @Deprecated('Please use == operator or isSameAs() instead.')
   bool get isAtg => const CountryAtg().isSameAs(this);
 
   /// Checks if this [WorldCountry] instance is Australia.
+  @Deprecated('Please use == operator or isSameAs() instead.')
   bool get isAus => const CountryAus().isSameAs(this);
 
   /// Checks if this [WorldCountry] instance is Austria.
+  @Deprecated('Please use == operator or isSameAs() instead.')
   bool get isAut => const CountryAut().isSameAs(this);
 
   /// Checks if this [WorldCountry] instance is Azerbaijan.
+  @Deprecated('Please use == operator or isSameAs() instead.')
   bool get isAze => const CountryAze().isSameAs(this);
 
   /// Checks if this [WorldCountry] instance is Burundi.
+  @Deprecated('Please use == operator or isSameAs() instead.')
   bool get isBdi => const CountryBdi().isSameAs(this);
 
   /// Checks if this [WorldCountry] instance is Belgium.
+  @Deprecated('Please use == operator or isSameAs() instead.')
   bool get isBel => const CountryBel().isSameAs(this);
 
   /// Checks if this [WorldCountry] instance is Benin.
+  @Deprecated('Please use == operator or isSameAs() instead.')
   bool get isBen => const CountryBen().isSameAs(this);
 
   /// Checks if this [WorldCountry] instance is Caribbean Netherlands.
+  @Deprecated('Please use == operator or isSameAs() instead.')
   bool get isBes => const CountryBes().isSameAs(this);
 
   /// Checks if this [WorldCountry] instance is Burkina Faso.
+  @Deprecated('Please use == operator or isSameAs() instead.')
   bool get isBfa => const CountryBfa().isSameAs(this);
 
   /// Checks if this [WorldCountry] instance is Bangladesh.
+  @Deprecated('Please use == operator or isSameAs() instead.')
   bool get isBgd => const CountryBgd().isSameAs(this);
 
   /// Checks if this [WorldCountry] instance is Bulgaria.
+  @Deprecated('Please use == operator or isSameAs() instead.')
   bool get isBgr => const CountryBgr().isSameAs(this);
 
   /// Checks if this [WorldCountry] instance is Bahrain.
+  @Deprecated('Please use == operator or isSameAs() instead.')
   bool get isBhr => const CountryBhr().isSameAs(this);
 
   /// Checks if this [WorldCountry] instance is Bahamas.
+  @Deprecated('Please use == operator or isSameAs() instead.')
   bool get isBhs => const CountryBhs().isSameAs(this);
 
   /// Checks if this [WorldCountry] instance is Bosnia and Herzegovina.
+  @Deprecated('Please use == operator or isSameAs() instead.')
   bool get isBih => const CountryBih().isSameAs(this);
 
   /// Checks if this [WorldCountry] instance is Saint Barthélemy.
+  @Deprecated('Please use == operator or isSameAs() instead.')
   bool get isBlm => const CountryBlm().isSameAs(this);
 
   /// Checks if this [WorldCountry] instance is Belarus.
+  @Deprecated('Please use == operator or isSameAs() instead.')
   bool get isBlr => const CountryBlr().isSameAs(this);
 
   /// Checks if this [WorldCountry] instance is Belize.
+  @Deprecated('Please use == operator or isSameAs() instead.')
   bool get isBlz => const CountryBlz().isSameAs(this);
 
   /// Checks if this [WorldCountry] instance is Bermuda.
+  @Deprecated('Please use == operator or isSameAs() instead.')
   bool get isBmu => const CountryBmu().isSameAs(this);
 
   /// Checks if this [WorldCountry] instance is Bolivia.
+  @Deprecated('Please use == operator or isSameAs() instead.')
   bool get isBol => const CountryBol().isSameAs(this);
 
   /// Checks if this [WorldCountry] instance is Brazil.
+  @Deprecated('Please use == operator or isSameAs() instead.')
   bool get isBra => const CountryBra().isSameAs(this);
 
   /// Checks if this [WorldCountry] instance is Barbados.
+  @Deprecated('Please use == operator or isSameAs() instead.')
   bool get isBrb => const CountryBrb().isSameAs(this);
 
   /// Checks if this [WorldCountry] instance is Brunei.
+  @Deprecated('Please use == operator or isSameAs() instead.')
   bool get isBrn => const CountryBrn().isSameAs(this);
 
   /// Checks if this [WorldCountry] instance is Bhutan.
+  @Deprecated('Please use == operator or isSameAs() instead.')
   bool get isBtn => const CountryBtn().isSameAs(this);
 
   /// Checks if this [WorldCountry] instance is Bouvet Island.
+  @Deprecated('Please use == operator or isSameAs() instead.')
   bool get isBvt => const CountryBvt().isSameAs(this);
 
   /// Checks if this [WorldCountry] instance is Botswana.
+  @Deprecated('Please use == operator or isSameAs() instead.')
   bool get isBwa => const CountryBwa().isSameAs(this);
 
   /// Checks if this [WorldCountry] instance is Central African Republic.
+  @Deprecated('Please use == operator or isSameAs() instead.')
   bool get isCaf => const CountryCaf().isSameAs(this);
 
   /// Checks if this [WorldCountry] instance is Canada.
+  @Deprecated('Please use == operator or isSameAs() instead.')
   bool get isCan => const CountryCan().isSameAs(this);
 
   /// Checks if this [WorldCountry] instance is Cocos (Keeling) Islands.
+  @Deprecated('Please use == operator or isSameAs() instead.')
   bool get isCck => const CountryCck().isSameAs(this);
 
   /// Checks if this [WorldCountry] instance is Switzerland.
+  @Deprecated('Please use == operator or isSameAs() instead.')
   bool get isChe => const CountryChe().isSameAs(this);
 
   /// Checks if this [WorldCountry] instance is Chile.
+  @Deprecated('Please use == operator or isSameAs() instead.')
   bool get isChl => const CountryChl().isSameAs(this);
 
   /// Checks if this [WorldCountry] instance is China.
+  @Deprecated('Please use == operator or isSameAs() instead.')
   bool get isChn => const CountryChn().isSameAs(this);
 
   /// Checks if this [WorldCountry] instance is Ivory Coast.
+  @Deprecated('Please use == operator or isSameAs() instead.')
   bool get isCiv => const CountryCiv().isSameAs(this);
 
   /// Checks if this [WorldCountry] instance is Cameroon.
+  @Deprecated('Please use == operator or isSameAs() instead.')
   bool get isCmr => const CountryCmr().isSameAs(this);
 
   /// Checks if this [WorldCountry] instance is DR Congo.
+  @Deprecated('Please use == operator or isSameAs() instead.')
   bool get isCod => const CountryCod().isSameAs(this);
 
   /// Checks if this [WorldCountry] instance is Republic of the Congo.
+  @Deprecated('Please use == operator or isSameAs() instead.')
   bool get isCog => const CountryCog().isSameAs(this);
 
   /// Checks if this [WorldCountry] instance is Cook Islands.
+  @Deprecated('Please use == operator or isSameAs() instead.')
   bool get isCok => const CountryCok().isSameAs(this);
 
   /// Checks if this [WorldCountry] instance is Colombia.
+  @Deprecated('Please use == operator or isSameAs() instead.')
   bool get isCol => const CountryCol().isSameAs(this);
 
   /// Checks if this [WorldCountry] instance is Comoros.
+  @Deprecated('Please use == operator or isSameAs() instead.')
   bool get isCom => const CountryCom().isSameAs(this);
 
   /// Checks if this [WorldCountry] instance is Cape Verde.
+  @Deprecated('Please use == operator or isSameAs() instead.')
   bool get isCpv => const CountryCpv().isSameAs(this);
 
   /// Checks if this [WorldCountry] instance is Costa Rica.
+  @Deprecated('Please use == operator or isSameAs() instead.')
   bool get isCri => const CountryCri().isSameAs(this);
 
   /// Checks if this [WorldCountry] instance is Cuba.
+  @Deprecated('Please use == operator or isSameAs() instead.')
   bool get isCub => const CountryCub().isSameAs(this);
 
   /// Checks if this [WorldCountry] instance is Curaçao.
+  @Deprecated('Please use == operator or isSameAs() instead.')
   bool get isCuw => const CountryCuw().isSameAs(this);
 
   /// Checks if this [WorldCountry] instance is Christmas Island.
+  @Deprecated('Please use == operator or isSameAs() instead.')
   bool get isCxr => const CountryCxr().isSameAs(this);
 
   /// Checks if this [WorldCountry] instance is Cayman Islands.
+  @Deprecated('Please use == operator or isSameAs() instead.')
   bool get isCym => const CountryCym().isSameAs(this);
 
   /// Checks if this [WorldCountry] instance is Cyprus.
+  @Deprecated('Please use == operator or isSameAs() instead.')
   bool get isCyp => const CountryCyp().isSameAs(this);
 
   /// Checks if this [WorldCountry] instance is Czechia.
+  @Deprecated('Please use == operator or isSameAs() instead.')
   bool get isCze => const CountryCze().isSameAs(this);
 
   /// Checks if this [WorldCountry] instance is Germany.
+  @Deprecated('Please use == operator or isSameAs() instead.')
   bool get isDeu => const CountryDeu().isSameAs(this);
 
   /// Checks if this [WorldCountry] instance is Djibouti.
+  @Deprecated('Please use == operator or isSameAs() instead.')
   bool get isDji => const CountryDji().isSameAs(this);
 
   /// Checks if this [WorldCountry] instance is Dominica.
+  @Deprecated('Please use == operator or isSameAs() instead.')
   bool get isDma => const CountryDma().isSameAs(this);
 
   /// Checks if this [WorldCountry] instance is Denmark.
+  @Deprecated('Please use == operator or isSameAs() instead.')
   bool get isDnk => const CountryDnk().isSameAs(this);
 
   /// Checks if this [WorldCountry] instance is Dominican Republic.
+  @Deprecated('Please use == operator or isSameAs() instead.')
   bool get isDom => const CountryDom().isSameAs(this);
 
   /// Checks if this [WorldCountry] instance is Algeria.
+  @Deprecated('Please use == operator or isSameAs() instead.')
   bool get isDza => const CountryDza().isSameAs(this);
 
   /// Checks if this [WorldCountry] instance is Ecuador.
+  @Deprecated('Please use == operator or isSameAs() instead.')
   bool get isEcu => const CountryEcu().isSameAs(this);
 
   /// Checks if this [WorldCountry] instance is Egypt.
+  @Deprecated('Please use == operator or isSameAs() instead.')
   bool get isEgy => const CountryEgy().isSameAs(this);
 
   /// Checks if this [WorldCountry] instance is Eritrea.
+  @Deprecated('Please use == operator or isSameAs() instead.')
   bool get isEri => const CountryEri().isSameAs(this);
 
   /// Checks if this [WorldCountry] instance is Western Sahara.
+  @Deprecated('Please use == operator or isSameAs() instead.')
   bool get isEsh => const CountryEsh().isSameAs(this);
 
   /// Checks if this [WorldCountry] instance is Spain.
+  @Deprecated('Please use == operator or isSameAs() instead.')
   bool get isEsp => const CountryEsp().isSameAs(this);
 
   /// Checks if this [WorldCountry] instance is Estonia.
+  @Deprecated('Please use == operator or isSameAs() instead.')
   bool get isEst => const CountryEst().isSameAs(this);
 
   /// Checks if this [WorldCountry] instance is Ethiopia.
+  @Deprecated('Please use == operator or isSameAs() instead.')
   bool get isEth => const CountryEth().isSameAs(this);
 
   /// Checks if this [WorldCountry] instance is Finland.
+  @Deprecated('Please use == operator or isSameAs() instead.')
   bool get isFin => const CountryFin().isSameAs(this);
 
   /// Checks if this [WorldCountry] instance is Fiji.
+  @Deprecated('Please use == operator or isSameAs() instead.')
   bool get isFji => const CountryFji().isSameAs(this);
 
   /// Checks if this [WorldCountry] instance is Falkland Islands.
+  @Deprecated('Please use == operator or isSameAs() instead.')
   bool get isFlk => const CountryFlk().isSameAs(this);
 
   /// Checks if this [WorldCountry] instance is France.
+  @Deprecated('Please use == operator or isSameAs() instead.')
   bool get isFra => const CountryFra().isSameAs(this);
 
   /// Checks if this [WorldCountry] instance is Faroe Islands.
+  @Deprecated('Please use == operator or isSameAs() instead.')
   bool get isFro => const CountryFro().isSameAs(this);
 
   /// Checks if this [WorldCountry] instance is Micronesia.
+  @Deprecated('Please use == operator or isSameAs() instead.')
   bool get isFsm => const CountryFsm().isSameAs(this);
 
   /// Checks if this [WorldCountry] instance is Gabon.
+  @Deprecated('Please use == operator or isSameAs() instead.')
   bool get isGab => const CountryGab().isSameAs(this);
 
   /// Checks if this [WorldCountry] instance is United Kingdom.
+  @Deprecated('Please use == operator or isSameAs() instead.')
   bool get isGbr => const CountryGbr().isSameAs(this);
 
   /// Checks if this [WorldCountry] instance is Georgia.
+  @Deprecated('Please use == operator or isSameAs() instead.')
   bool get isGeo => const CountryGeo().isSameAs(this);
 
   /// Checks if this [WorldCountry] instance is Guernsey.
+  @Deprecated('Please use == operator or isSameAs() instead.')
   bool get isGgy => const CountryGgy().isSameAs(this);
 
   /// Checks if this [WorldCountry] instance is Ghana.
+  @Deprecated('Please use == operator or isSameAs() instead.')
   bool get isGha => const CountryGha().isSameAs(this);
 
   /// Checks if this [WorldCountry] instance is Gibraltar.
+  @Deprecated('Please use == operator or isSameAs() instead.')
   bool get isGib => const CountryGib().isSameAs(this);
 
   /// Checks if this [WorldCountry] instance is Guinea.
+  @Deprecated('Please use == operator or isSameAs() instead.')
   bool get isGin => const CountryGin().isSameAs(this);
 
   /// Checks if this [WorldCountry] instance is Guadeloupe.
+  @Deprecated('Please use == operator or isSameAs() instead.')
   bool get isGlp => const CountryGlp().isSameAs(this);
 
   /// Checks if this [WorldCountry] instance is Gambia.
+  @Deprecated('Please use == operator or isSameAs() instead.')
   bool get isGmb => const CountryGmb().isSameAs(this);
 
   /// Checks if this [WorldCountry] instance is Guinea-Bissau.
+  @Deprecated('Please use == operator or isSameAs() instead.')
   bool get isGnb => const CountryGnb().isSameAs(this);
 
   /// Checks if this [WorldCountry] instance is Equatorial Guinea.
+  @Deprecated('Please use == operator or isSameAs() instead.')
   bool get isGnq => const CountryGnq().isSameAs(this);
 
   /// Checks if this [WorldCountry] instance is Greece.
+  @Deprecated('Please use == operator or isSameAs() instead.')
   bool get isGrc => const CountryGrc().isSameAs(this);
 
   /// Checks if this [WorldCountry] instance is Grenada.
+  @Deprecated('Please use == operator or isSameAs() instead.')
   bool get isGrd => const CountryGrd().isSameAs(this);
 
   /// Checks if this [WorldCountry] instance is Greenland.
+  @Deprecated('Please use == operator or isSameAs() instead.')
   bool get isGrl => const CountryGrl().isSameAs(this);
 
   /// Checks if this [WorldCountry] instance is Guatemala.
+  @Deprecated('Please use == operator or isSameAs() instead.')
   bool get isGtm => const CountryGtm().isSameAs(this);
 
   /// Checks if this [WorldCountry] instance is French Guiana.
+  @Deprecated('Please use == operator or isSameAs() instead.')
   bool get isGuf => const CountryGuf().isSameAs(this);
 
   /// Checks if this [WorldCountry] instance is Guam.
+  @Deprecated('Please use == operator or isSameAs() instead.')
   bool get isGum => const CountryGum().isSameAs(this);
 
   /// Checks if this [WorldCountry] instance is Guyana.
+  @Deprecated('Please use == operator or isSameAs() instead.')
   bool get isGuy => const CountryGuy().isSameAs(this);
 
   /// Checks if this [WorldCountry] instance is Hong Kong.
+  @Deprecated('Please use == operator or isSameAs() instead.')
   bool get isHkg => const CountryHkg().isSameAs(this);
 
   /// Checks if this [WorldCountry] instance is Heard Island and McDonald Islands.
+  @Deprecated('Please use == operator or isSameAs() instead.')
   bool get isHmd => const CountryHmd().isSameAs(this);
 
   /// Checks if this [WorldCountry] instance is Honduras.
+  @Deprecated('Please use == operator or isSameAs() instead.')
   bool get isHnd => const CountryHnd().isSameAs(this);
 
   /// Checks if this [WorldCountry] instance is Croatia.
+  @Deprecated('Please use == operator or isSameAs() instead.')
   bool get isHrv => const CountryHrv().isSameAs(this);
 
   /// Checks if this [WorldCountry] instance is Haiti.
+  @Deprecated('Please use == operator or isSameAs() instead.')
   bool get isHti => const CountryHti().isSameAs(this);
 
   /// Checks if this [WorldCountry] instance is Hungary.
+  @Deprecated('Please use == operator or isSameAs() instead.')
   bool get isHun => const CountryHun().isSameAs(this);
 
   /// Checks if this [WorldCountry] instance is Indonesia.
+  @Deprecated('Please use == operator or isSameAs() instead.')
   bool get isIdn => const CountryIdn().isSameAs(this);
 
   /// Checks if this [WorldCountry] instance is Isle of Man.
+  @Deprecated('Please use == operator or isSameAs() instead.')
   bool get isImn => const CountryImn().isSameAs(this);
 
   /// Checks if this [WorldCountry] instance is India.
+  @Deprecated('Please use == operator or isSameAs() instead.')
   bool get isInd => const CountryInd().isSameAs(this);
 
   /// Checks if this [WorldCountry] instance is British Indian Ocean Territory.
+  @Deprecated('Please use == operator or isSameAs() instead.')
   bool get isIot => const CountryIot().isSameAs(this);
 
   /// Checks if this [WorldCountry] instance is Ireland.
+  @Deprecated('Please use == operator or isSameAs() instead.')
   bool get isIrl => const CountryIrl().isSameAs(this);
 
   /// Checks if this [WorldCountry] instance is Iran.
+  @Deprecated('Please use == operator or isSameAs() instead.')
   bool get isIrn => const CountryIrn().isSameAs(this);
 
   /// Checks if this [WorldCountry] instance is Iraq.
+  @Deprecated('Please use == operator or isSameAs() instead.')
   bool get isIrq => const CountryIrq().isSameAs(this);
 
   /// Checks if this [WorldCountry] instance is Iceland.
+  @Deprecated('Please use == operator or isSameAs() instead.')
   bool get isIsl => const CountryIsl().isSameAs(this);
 
   /// Checks if this [WorldCountry] instance is Israel.
+  @Deprecated('Please use == operator or isSameAs() instead.')
   bool get isIsr => const CountryIsr().isSameAs(this);
 
   /// Checks if this [WorldCountry] instance is Italy.
+  @Deprecated('Please use == operator or isSameAs() instead.')
   bool get isIta => const CountryIta().isSameAs(this);
 
   /// Checks if this [WorldCountry] instance is Jamaica.
+  @Deprecated('Please use == operator or isSameAs() instead.')
   bool get isJam => const CountryJam().isSameAs(this);
 
   /// Checks if this [WorldCountry] instance is Jersey.
+  @Deprecated('Please use == operator or isSameAs() instead.')
   bool get isJey => const CountryJey().isSameAs(this);
 
   /// Checks if this [WorldCountry] instance is Jordan.
+  @Deprecated('Please use == operator or isSameAs() instead.')
   bool get isJor => const CountryJor().isSameAs(this);
 
   /// Checks if this [WorldCountry] instance is Japan.
+  @Deprecated('Please use == operator or isSameAs() instead.')
   bool get isJpn => const CountryJpn().isSameAs(this);
 
   /// Checks if this [WorldCountry] instance is Kazakhstan.
+  @Deprecated('Please use == operator or isSameAs() instead.')
   bool get isKaz => const CountryKaz().isSameAs(this);
 
   /// Checks if this [WorldCountry] instance is Kenya.
+  @Deprecated('Please use == operator or isSameAs() instead.')
   bool get isKen => const CountryKen().isSameAs(this);
 
   /// Checks if this [WorldCountry] instance is Kyrgyzstan.
+  @Deprecated('Please use == operator or isSameAs() instead.')
   bool get isKgz => const CountryKgz().isSameAs(this);
 
   /// Checks if this [WorldCountry] instance is Cambodia.
+  @Deprecated('Please use == operator or isSameAs() instead.')
   bool get isKhm => const CountryKhm().isSameAs(this);
 
   /// Checks if this [WorldCountry] instance is Kiribati.
+  @Deprecated('Please use == operator or isSameAs() instead.')
   bool get isKir => const CountryKir().isSameAs(this);
 
   /// Checks if this [WorldCountry] instance is Saint Kitts and Nevis.
+  @Deprecated('Please use == operator or isSameAs() instead.')
   bool get isKna => const CountryKna().isSameAs(this);
 
   /// Checks if this [WorldCountry] instance is South Korea.
+  @Deprecated('Please use == operator or isSameAs() instead.')
   bool get isKor => const CountryKor().isSameAs(this);
 
   /// Checks if this [WorldCountry] instance is Kuwait.
+  @Deprecated('Please use == operator or isSameAs() instead.')
   bool get isKwt => const CountryKwt().isSameAs(this);
 
   /// Checks if this [WorldCountry] instance is Laos.
+  @Deprecated('Please use == operator or isSameAs() instead.')
   bool get isLao => const CountryLao().isSameAs(this);
 
   /// Checks if this [WorldCountry] instance is Lebanon.
+  @Deprecated('Please use == operator or isSameAs() instead.')
   bool get isLbn => const CountryLbn().isSameAs(this);
 
   /// Checks if this [WorldCountry] instance is Liberia.
+  @Deprecated('Please use == operator or isSameAs() instead.')
   bool get isLbr => const CountryLbr().isSameAs(this);
 
   /// Checks if this [WorldCountry] instance is Libya.
+  @Deprecated('Please use == operator or isSameAs() instead.')
   bool get isLby => const CountryLby().isSameAs(this);
 
   /// Checks if this [WorldCountry] instance is Saint Lucia.
+  @Deprecated('Please use == operator or isSameAs() instead.')
   bool get isLca => const CountryLca().isSameAs(this);
 
   /// Checks if this [WorldCountry] instance is Liechtenstein.
+  @Deprecated('Please use == operator or isSameAs() instead.')
   bool get isLie => const CountryLie().isSameAs(this);
 
   /// Checks if this [WorldCountry] instance is Sri Lanka.
+  @Deprecated('Please use == operator or isSameAs() instead.')
   bool get isLka => const CountryLka().isSameAs(this);
 
   /// Checks if this [WorldCountry] instance is Lesotho.
+  @Deprecated('Please use == operator or isSameAs() instead.')
   bool get isLso => const CountryLso().isSameAs(this);
 
   /// Checks if this [WorldCountry] instance is Lithuania.
+  @Deprecated('Please use == operator or isSameAs() instead.')
   bool get isLtu => const CountryLtu().isSameAs(this);
 
   /// Checks if this [WorldCountry] instance is Luxembourg.
+  @Deprecated('Please use == operator or isSameAs() instead.')
   bool get isLux => const CountryLux().isSameAs(this);
 
   /// Checks if this [WorldCountry] instance is Latvia.
+  @Deprecated('Please use == operator or isSameAs() instead.')
   bool get isLva => const CountryLva().isSameAs(this);
 
   /// Checks if this [WorldCountry] instance is Macau.
+  @Deprecated('Please use == operator or isSameAs() instead.')
   bool get isMac => const CountryMac().isSameAs(this);
 
   /// Checks if this [WorldCountry] instance is Saint Martin.
+  @Deprecated('Please use == operator or isSameAs() instead.')
   bool get isMaf => const CountryMaf().isSameAs(this);
 
   /// Checks if this [WorldCountry] instance is Morocco.
+  @Deprecated('Please use == operator or isSameAs() instead.')
   bool get isMar => const CountryMar().isSameAs(this);
 
   /// Checks if this [WorldCountry] instance is Monaco.
+  @Deprecated('Please use == operator or isSameAs() instead.')
   bool get isMco => const CountryMco().isSameAs(this);
 
   /// Checks if this [WorldCountry] instance is Moldova.
+  @Deprecated('Please use == operator or isSameAs() instead.')
   bool get isMda => const CountryMda().isSameAs(this);
 
   /// Checks if this [WorldCountry] instance is Madagascar.
+  @Deprecated('Please use == operator or isSameAs() instead.')
   bool get isMdg => const CountryMdg().isSameAs(this);
 
   /// Checks if this [WorldCountry] instance is Maldives.
+  @Deprecated('Please use == operator or isSameAs() instead.')
   bool get isMdv => const CountryMdv().isSameAs(this);
 
   /// Checks if this [WorldCountry] instance is Mexico.
+  @Deprecated('Please use == operator or isSameAs() instead.')
   bool get isMex => const CountryMex().isSameAs(this);
 
   /// Checks if this [WorldCountry] instance is Marshall Islands.
+  @Deprecated('Please use == operator or isSameAs() instead.')
   bool get isMhl => const CountryMhl().isSameAs(this);
 
   /// Checks if this [WorldCountry] instance is North Macedonia.
+  @Deprecated('Please use == operator or isSameAs() instead.')
   bool get isMkd => const CountryMkd().isSameAs(this);
 
   /// Checks if this [WorldCountry] instance is Mali.
+  @Deprecated('Please use == operator or isSameAs() instead.')
   bool get isMli => const CountryMli().isSameAs(this);
 
   /// Checks if this [WorldCountry] instance is Malta.
+  @Deprecated('Please use == operator or isSameAs() instead.')
   bool get isMlt => const CountryMlt().isSameAs(this);
 
   /// Checks if this [WorldCountry] instance is Myanmar.
+  @Deprecated('Please use == operator or isSameAs() instead.')
   bool get isMmr => const CountryMmr().isSameAs(this);
 
   /// Checks if this [WorldCountry] instance is Montenegro.
+  @Deprecated('Please use == operator or isSameAs() instead.')
   bool get isMne => const CountryMne().isSameAs(this);
 
   /// Checks if this [WorldCountry] instance is Mongolia.
+  @Deprecated('Please use == operator or isSameAs() instead.')
   bool get isMng => const CountryMng().isSameAs(this);
 
   /// Checks if this [WorldCountry] instance is Northern Mariana Islands.
+  @Deprecated('Please use == operator or isSameAs() instead.')
   bool get isMnp => const CountryMnp().isSameAs(this);
 
   /// Checks if this [WorldCountry] instance is Mozambique.
+  @Deprecated('Please use == operator or isSameAs() instead.')
   bool get isMoz => const CountryMoz().isSameAs(this);
 
   /// Checks if this [WorldCountry] instance is Mauritania.
+  @Deprecated('Please use == operator or isSameAs() instead.')
   bool get isMrt => const CountryMrt().isSameAs(this);
 
   /// Checks if this [WorldCountry] instance is Montserrat.
+  @Deprecated('Please use == operator or isSameAs() instead.')
   bool get isMsr => const CountryMsr().isSameAs(this);
 
   /// Checks if this [WorldCountry] instance is Martinique.
+  @Deprecated('Please use == operator or isSameAs() instead.')
   bool get isMtq => const CountryMtq().isSameAs(this);
 
   /// Checks if this [WorldCountry] instance is Mauritius.
+  @Deprecated('Please use == operator or isSameAs() instead.')
   bool get isMus => const CountryMus().isSameAs(this);
 
   /// Checks if this [WorldCountry] instance is Malawi.
+  @Deprecated('Please use == operator or isSameAs() instead.')
   bool get isMwi => const CountryMwi().isSameAs(this);
 
   /// Checks if this [WorldCountry] instance is Malaysia.
+  @Deprecated('Please use == operator or isSameAs() instead.')
   bool get isMys => const CountryMys().isSameAs(this);
 
   /// Checks if this [WorldCountry] instance is Mayotte.
+  @Deprecated('Please use == operator or isSameAs() instead.')
   bool get isMyt => const CountryMyt().isSameAs(this);
 
   /// Checks if this [WorldCountry] instance is Namibia.
+  @Deprecated('Please use == operator or isSameAs() instead.')
   bool get isNam => const CountryNam().isSameAs(this);
 
   /// Checks if this [WorldCountry] instance is New Caledonia.
+  @Deprecated('Please use == operator or isSameAs() instead.')
   bool get isNcl => const CountryNcl().isSameAs(this);
 
   /// Checks if this [WorldCountry] instance is Niger.
+  @Deprecated('Please use == operator or isSameAs() instead.')
   bool get isNer => const CountryNer().isSameAs(this);
 
   /// Checks if this [WorldCountry] instance is Norfolk Island.
+  @Deprecated('Please use == operator or isSameAs() instead.')
   bool get isNfk => const CountryNfk().isSameAs(this);
 
   /// Checks if this [WorldCountry] instance is Nigeria.
+  @Deprecated('Please use == operator or isSameAs() instead.')
   bool get isNga => const CountryNga().isSameAs(this);
 
   /// Checks if this [WorldCountry] instance is Nicaragua.
+  @Deprecated('Please use == operator or isSameAs() instead.')
   bool get isNic => const CountryNic().isSameAs(this);
 
   /// Checks if this [WorldCountry] instance is Niue.
+  @Deprecated('Please use == operator or isSameAs() instead.')
   bool get isNiu => const CountryNiu().isSameAs(this);
 
   /// Checks if this [WorldCountry] instance is Netherlands.
+  @Deprecated('Please use == operator or isSameAs() instead.')
   bool get isNld => const CountryNld().isSameAs(this);
 
   /// Checks if this [WorldCountry] instance is Norway.
+  @Deprecated('Please use == operator or isSameAs() instead.')
   bool get isNor => const CountryNor().isSameAs(this);
 
   /// Checks if this [WorldCountry] instance is Nepal.
+  @Deprecated('Please use == operator or isSameAs() instead.')
   bool get isNpl => const CountryNpl().isSameAs(this);
 
   /// Checks if this [WorldCountry] instance is Nauru.
+  @Deprecated('Please use == operator or isSameAs() instead.')
   bool get isNru => const CountryNru().isSameAs(this);
 
   /// Checks if this [WorldCountry] instance is New Zealand.
+  @Deprecated('Please use == operator or isSameAs() instead.')
   bool get isNzl => const CountryNzl().isSameAs(this);
 
   /// Checks if this [WorldCountry] instance is Oman.
+  @Deprecated('Please use == operator or isSameAs() instead.')
   bool get isOmn => const CountryOmn().isSameAs(this);
 
   /// Checks if this [WorldCountry] instance is Pakistan.
+  @Deprecated('Please use == operator or isSameAs() instead.')
   bool get isPak => const CountryPak().isSameAs(this);
 
   /// Checks if this [WorldCountry] instance is Panama.
+  @Deprecated('Please use == operator or isSameAs() instead.')
   bool get isPan => const CountryPan().isSameAs(this);
 
   /// Checks if this [WorldCountry] instance is Pitcairn Islands.
+  @Deprecated('Please use == operator or isSameAs() instead.')
   bool get isPcn => const CountryPcn().isSameAs(this);
 
   /// Checks if this [WorldCountry] instance is Peru.
+  @Deprecated('Please use == operator or isSameAs() instead.')
   bool get isPer => const CountryPer().isSameAs(this);
 
   /// Checks if this [WorldCountry] instance is Philippines.
+  @Deprecated('Please use == operator or isSameAs() instead.')
   bool get isPhl => const CountryPhl().isSameAs(this);
 
   /// Checks if this [WorldCountry] instance is Palau.
+  @Deprecated('Please use == operator or isSameAs() instead.')
   bool get isPlw => const CountryPlw().isSameAs(this);
 
   /// Checks if this [WorldCountry] instance is Papua New Guinea.
+  @Deprecated('Please use == operator or isSameAs() instead.')
   bool get isPng => const CountryPng().isSameAs(this);
 
   /// Checks if this [WorldCountry] instance is Poland.
+  @Deprecated('Please use == operator or isSameAs() instead.')
   bool get isPol => const CountryPol().isSameAs(this);
 
   /// Checks if this [WorldCountry] instance is Puerto Rico.
+  @Deprecated('Please use == operator or isSameAs() instead.')
   bool get isPri => const CountryPri().isSameAs(this);
 
   /// Checks if this [WorldCountry] instance is North Korea.
+  @Deprecated('Please use == operator or isSameAs() instead.')
   bool get isPrk => const CountryPrk().isSameAs(this);
 
   /// Checks if this [WorldCountry] instance is Portugal.
+  @Deprecated('Please use == operator or isSameAs() instead.')
   bool get isPrt => const CountryPrt().isSameAs(this);
 
   /// Checks if this [WorldCountry] instance is Paraguay.
+  @Deprecated('Please use == operator or isSameAs() instead.')
   bool get isPry => const CountryPry().isSameAs(this);
 
   /// Checks if this [WorldCountry] instance is Palestine.
+  @Deprecated('Please use == operator or isSameAs() instead.')
   bool get isPse => const CountryPse().isSameAs(this);
 
   /// Checks if this [WorldCountry] instance is French Polynesia.
+  @Deprecated('Please use == operator or isSameAs() instead.')
   bool get isPyf => const CountryPyf().isSameAs(this);
 
   /// Checks if this [WorldCountry] instance is Qatar.
+  @Deprecated('Please use == operator or isSameAs() instead.')
   bool get isQat => const CountryQat().isSameAs(this);
 
   /// Checks if this [WorldCountry] instance is Réunion.
+  @Deprecated('Please use == operator or isSameAs() instead.')
   bool get isReu => const CountryReu().isSameAs(this);
 
   /// Checks if this [WorldCountry] instance is Romania.
+  @Deprecated('Please use == operator or isSameAs() instead.')
   bool get isRou => const CountryRou().isSameAs(this);
 
   /// Checks if this [WorldCountry] instance is Russia.
+  @Deprecated('Please use == operator or isSameAs() instead.')
   bool get isRus => const CountryRus().isSameAs(this);
 
   /// Checks if this [WorldCountry] instance is Rwanda.
+  @Deprecated('Please use == operator or isSameAs() instead.')
   bool get isRwa => const CountryRwa().isSameAs(this);
 
   /// Checks if this [WorldCountry] instance is Saudi Arabia.
+  @Deprecated('Please use == operator or isSameAs() instead.')
   bool get isSau => const CountrySau().isSameAs(this);
 
   /// Checks if this [WorldCountry] instance is Sudan.
+  @Deprecated('Please use == operator or isSameAs() instead.')
   bool get isSdn => const CountrySdn().isSameAs(this);
 
   /// Checks if this [WorldCountry] instance is Senegal.
+  @Deprecated('Please use == operator or isSameAs() instead.')
   bool get isSen => const CountrySen().isSameAs(this);
 
   /// Checks if this [WorldCountry] instance is Singapore.
+  @Deprecated('Please use == operator or isSameAs() instead.')
   bool get isSgp => const CountrySgp().isSameAs(this);
 
   /// Checks if this [WorldCountry] instance is South Georgia.
+  @Deprecated('Please use == operator or isSameAs() instead.')
   bool get isSgs => const CountrySgs().isSameAs(this);
 
   /// Checks if this [WorldCountry] instance is Saint Helena, Ascension and Tristan da Cunha.
+  @Deprecated('Please use == operator or isSameAs() instead.')
   bool get isShn => const CountryShn().isSameAs(this);
 
   /// Checks if this [WorldCountry] instance is Svalbard and Jan Mayen.
+  @Deprecated('Please use == operator or isSameAs() instead.')
   bool get isSjm => const CountrySjm().isSameAs(this);
 
   /// Checks if this [WorldCountry] instance is Solomon Islands.
+  @Deprecated('Please use == operator or isSameAs() instead.')
   bool get isSlb => const CountrySlb().isSameAs(this);
 
   /// Checks if this [WorldCountry] instance is Sierra Leone.
+  @Deprecated('Please use == operator or isSameAs() instead.')
   bool get isSle => const CountrySle().isSameAs(this);
 
   /// Checks if this [WorldCountry] instance is El Salvador.
+  @Deprecated('Please use == operator or isSameAs() instead.')
   bool get isSlv => const CountrySlv().isSameAs(this);
 
   /// Checks if this [WorldCountry] instance is San Marino.
+  @Deprecated('Please use == operator or isSameAs() instead.')
   bool get isSmr => const CountrySmr().isSameAs(this);
 
   /// Checks if this [WorldCountry] instance is Somalia.
+  @Deprecated('Please use == operator or isSameAs() instead.')
   bool get isSom => const CountrySom().isSameAs(this);
 
   /// Checks if this [WorldCountry] instance is Saint Pierre and Miquelon.
+  @Deprecated('Please use == operator or isSameAs() instead.')
   bool get isSpm => const CountrySpm().isSameAs(this);
 
   /// Checks if this [WorldCountry] instance is Serbia.
+  @Deprecated('Please use == operator or isSameAs() instead.')
   bool get isSrb => const CountrySrb().isSameAs(this);
 
   /// Checks if this [WorldCountry] instance is South Sudan.
+  @Deprecated('Please use == operator or isSameAs() instead.')
   bool get isSsd => const CountrySsd().isSameAs(this);
 
   /// Checks if this [WorldCountry] instance is São Tomé and Príncipe.
+  @Deprecated('Please use == operator or isSameAs() instead.')
   bool get isStp => const CountryStp().isSameAs(this);
 
   /// Checks if this [WorldCountry] instance is Suriname.
+  @Deprecated('Please use == operator or isSameAs() instead.')
   bool get isSur => const CountrySur().isSameAs(this);
 
   /// Checks if this [WorldCountry] instance is Slovakia.
+  @Deprecated('Please use == operator or isSameAs() instead.')
   bool get isSvk => const CountrySvk().isSameAs(this);
 
   /// Checks if this [WorldCountry] instance is Slovenia.
+  @Deprecated('Please use == operator or isSameAs() instead.')
   bool get isSvn => const CountrySvn().isSameAs(this);
 
   /// Checks if this [WorldCountry] instance is Sweden.
+  @Deprecated('Please use == operator or isSameAs() instead.')
   bool get isSwe => const CountrySwe().isSameAs(this);
 
   /// Checks if this [WorldCountry] instance is Eswatini.
+  @Deprecated('Please use == operator or isSameAs() instead.')
   bool get isSwz => const CountrySwz().isSameAs(this);
 
   /// Checks if this [WorldCountry] instance is Sint Maarten.
+  @Deprecated('Please use == operator or isSameAs() instead.')
   bool get isSxm => const CountrySxm().isSameAs(this);
 
   /// Checks if this [WorldCountry] instance is Seychelles.
+  @Deprecated('Please use == operator or isSameAs() instead.')
   bool get isSyc => const CountrySyc().isSameAs(this);
 
   /// Checks if this [WorldCountry] instance is Syria.
+  @Deprecated('Please use == operator or isSameAs() instead.')
   bool get isSyr => const CountrySyr().isSameAs(this);
 
   /// Checks if this [WorldCountry] instance is Turks and Caicos Islands.
+  @Deprecated('Please use == operator or isSameAs() instead.')
   bool get isTca => const CountryTca().isSameAs(this);
 
   /// Checks if this [WorldCountry] instance is Chad.
+  @Deprecated('Please use == operator or isSameAs() instead.')
   bool get isTcd => const CountryTcd().isSameAs(this);
 
   /// Checks if this [WorldCountry] instance is Togo.
+  @Deprecated('Please use == operator or isSameAs() instead.')
   bool get isTgo => const CountryTgo().isSameAs(this);
 
   /// Checks if this [WorldCountry] instance is Thailand.
+  @Deprecated('Please use == operator or isSameAs() instead.')
   bool get isTha => const CountryTha().isSameAs(this);
 
   /// Checks if this [WorldCountry] instance is Tajikistan.
+  @Deprecated('Please use == operator or isSameAs() instead.')
   bool get isTjk => const CountryTjk().isSameAs(this);
 
   /// Checks if this [WorldCountry] instance is Tokelau.
+  @Deprecated('Please use == operator or isSameAs() instead.')
   bool get isTkl => const CountryTkl().isSameAs(this);
 
   /// Checks if this [WorldCountry] instance is Turkmenistan.
+  @Deprecated('Please use == operator or isSameAs() instead.')
   bool get isTkm => const CountryTkm().isSameAs(this);
 
   /// Checks if this [WorldCountry] instance is Timor-Leste.
+  @Deprecated('Please use == operator or isSameAs() instead.')
   bool get isTls => const CountryTls().isSameAs(this);
 
   /// Checks if this [WorldCountry] instance is Tonga.
+  @Deprecated('Please use == operator or isSameAs() instead.')
   bool get isTon => const CountryTon().isSameAs(this);
 
   /// Checks if this [WorldCountry] instance is Trinidad and Tobago.
+  @Deprecated('Please use == operator or isSameAs() instead.')
   bool get isTto => const CountryTto().isSameAs(this);
 
   /// Checks if this [WorldCountry] instance is Tunisia.
+  @Deprecated('Please use == operator or isSameAs() instead.')
   bool get isTun => const CountryTun().isSameAs(this);
 
   /// Checks if this [WorldCountry] instance is Turkey.
+  @Deprecated('Please use == operator or isSameAs() instead.')
   bool get isTur => const CountryTur().isSameAs(this);
 
   /// Checks if this [WorldCountry] instance is Tuvalu.
+  @Deprecated('Please use == operator or isSameAs() instead.')
   bool get isTuv => const CountryTuv().isSameAs(this);
 
   /// Checks if this [WorldCountry] instance is Taiwan.
+  @Deprecated('Please use == operator or isSameAs() instead.')
   bool get isTwn => const CountryTwn().isSameAs(this);
 
   /// Checks if this [WorldCountry] instance is Tanzania.
+  @Deprecated('Please use == operator or isSameAs() instead.')
   bool get isTza => const CountryTza().isSameAs(this);
 
   /// Checks if this [WorldCountry] instance is Uganda.
+  @Deprecated('Please use == operator or isSameAs() instead.')
   bool get isUga => const CountryUga().isSameAs(this);
 
   /// Checks if this [WorldCountry] instance is Ukraine.
+  @Deprecated('Please use == operator or isSameAs() instead.')
   bool get isUkr => const CountryUkr().isSameAs(this);
 
   /// Checks if this [WorldCountry] instance is United States Minor Outlying Islands.
+  @Deprecated('Please use == operator or isSameAs() instead.')
   bool get isUmi => const CountryUmi().isSameAs(this);
 
   /// Checks if this [WorldCountry] instance is Uruguay.
+  @Deprecated('Please use == operator or isSameAs() instead.')
   bool get isUry => const CountryUry().isSameAs(this);
 
   /// Checks if this [WorldCountry] instance is United States.
+  @Deprecated('Please use == operator or isSameAs() instead.')
   bool get isUsa => const CountryUsa().isSameAs(this);
 
   /// Checks if this [WorldCountry] instance is Uzbekistan.
+  @Deprecated('Please use == operator or isSameAs() instead.')
   bool get isUzb => const CountryUzb().isSameAs(this);
 
   /// Checks if this [WorldCountry] instance is Vatican City.
+  @Deprecated('Please use == operator or isSameAs() instead.')
   bool get isVat => const CountryVat().isSameAs(this);
 
   /// Checks if this [WorldCountry] instance is Saint Vincent and the Grenadines.
+  @Deprecated('Please use == operator or isSameAs() instead.')
   bool get isVct => const CountryVct().isSameAs(this);
 
   /// Checks if this [WorldCountry] instance is Venezuela.
+  @Deprecated('Please use == operator or isSameAs() instead.')
   bool get isVen => const CountryVen().isSameAs(this);
 
   /// Checks if this [WorldCountry] instance is British Virgin Islands.
+  @Deprecated('Please use == operator or isSameAs() instead.')
   bool get isVgb => const CountryVgb().isSameAs(this);
 
   /// Checks if this [WorldCountry] instance is United States Virgin Islands.
+  @Deprecated('Please use == operator or isSameAs() instead.')
   bool get isVir => const CountryVir().isSameAs(this);
 
   /// Checks if this [WorldCountry] instance is Vietnam.
+  @Deprecated('Please use == operator or isSameAs() instead.')
   bool get isVnm => const CountryVnm().isSameAs(this);
 
   /// Checks if this [WorldCountry] instance is Vanuatu.
+  @Deprecated('Please use == operator or isSameAs() instead.')
   bool get isVut => const CountryVut().isSameAs(this);
 
   /// Checks if this [WorldCountry] instance is Wallis and Futuna.
+  @Deprecated('Please use == operator or isSameAs() instead.')
   bool get isWlf => const CountryWlf().isSameAs(this);
 
   /// Checks if this [WorldCountry] instance is Samoa.
+  @Deprecated('Please use == operator or isSameAs() instead.')
   bool get isWsm => const CountryWsm().isSameAs(this);
 
   /// Checks if this [WorldCountry] instance is Yemen.
+  @Deprecated('Please use == operator or isSameAs() instead.')
   bool get isYem => const CountryYem().isSameAs(this);
 
   /// Checks if this [WorldCountry] instance is South Africa.
+  @Deprecated('Please use == operator or isSameAs() instead.')
   bool get isZaf => const CountryZaf().isSameAs(this);
 
   /// Checks if this [WorldCountry] instance is Zambia.
+  @Deprecated('Please use == operator or isSameAs() instead.')
   bool get isZmb => const CountryZmb().isSameAs(this);
 
   /// Checks if this [WorldCountry] instance is Zimbabwe.
+  @Deprecated('Please use == operator or isSameAs() instead.')
   bool get isZwe => const CountryZwe().isSameAs(this);
 
   /// Checks if this [WorldCountry] instance is Kosovo.
+  @Deprecated('Please use == operator or isSameAs() instead.')
   bool get isUnk => const CountryUnk().isSameAs(this);
 }

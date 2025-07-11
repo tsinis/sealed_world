@@ -42,6 +42,12 @@ analyzer:
     - dart_code_metrics
 
 dart_code_metrics:
+  exclude:
+    dependencies:
+      - example/pubspec.yaml
+    metrics:
+      - "**/test/**"
+      - "**/example/**"
   extends:
     - package:dart_code_metrics_presets/dart_all.yaml
   anti-patterns:
@@ -59,6 +65,7 @@ dart_code_metrics:
     source-lines-of-code: 60
   metrics-exclude:
     - test/**
+    - example/**
   rules:
     # Disabled:
     - arguments-ordering: false # This will be a breaking change.
@@ -66,15 +73,19 @@ dart_code_metrics:
     - avoid-collection-equality-checks: false # Doesn't work for models exclude.
     - avoid-collection-mutating-methods: false # Mostly false positives.
     - avoid-continue: false # Just a matter of style.
+    - avoid-default-tostring: false # Doesn't make sense here.
+    - avoid-deprecated-usage: false # Using default deprecated_member_use_from_same_package.
     - avoid-duplicate-collection-elements: false # They are being used on purpose.
     - avoid-ignoring-return-values: false # Mostly, collection methods are ignored.
     - avoid-inferrable-type-arguments: false # Against prefer-explicit-type-arguments.
     - avoid-long-files: false # A lot of data and collections.
     - avoid-long-functions: false # Cannot get exclude to work with tests...
     - avoid-nullable-interpolation: false # Doesn't work for toString() methods.
+    - avoid-unnecessary-nullable-fields: false # Fields could be nullable + has default values.
     - avoid-unsafe-collection-methods: false # They are being used on purpose.
     - enum-constants-ordering: false # This might be a breaking change.
     - match-getter-setter-field-names: false # Most of those are just aliases.
+    - max-imports: false # Sadly not very suitable for the packages.
     - no-empty-string: false # This will be a breaking change.
     - no-equal-arguments: false # Not our use-case here.
     - no-magic-number: false # Packages contain a lot of numbers.
@@ -167,7 +178,9 @@ dart_code_metrics:
     - avoid-assigning-to-static-field
     - avoid-assignments-as-conditions
     - avoid-async-call-in-sync-function
+    - avoid-banned-exports
     - avoid-barrel-files
+    - avoid-bitwise-operators-with-booleans
     - avoid-bottom-type-in-patterns
     - avoid-bottom-type-in-records
     - avoid-cascade-after-if-null
@@ -279,7 +292,9 @@ dart_code_metrics:
     - avoid-similar-names
     - avoid-single-field-destructuring
     - avoid-slow-collection-methods
+    - avoid-stream-tostring
     - avoid-substring
+    - avoid-suspicious-global-references
     - avoid-suspicious-super-overrides
     - avoid-throw-in-catch-block
     - avoid-throw-objects-without-tostring
@@ -303,16 +318,20 @@ dart_code_metrics:
     - avoid-unnecessary-futures
     - avoid-unnecessary-getter
     - avoid-unnecessary-if
+    - avoid-unnecessary-length-check
     - avoid-unnecessary-local-late
     - avoid-unnecessary-negations
+    - avoid-unnecessary-null-aware-elements
     - avoid-unnecessary-nullable-return-type
     - avoid-unnecessary-overrides
     - avoid-unnecessary-patterns
     - avoid-unnecessary-reassignment
     - avoid-unnecessary-return
+    - avoid-unnecessary-statements
     - avoid-unnecessary-super
     - avoid-unnecessary-type-assertions
     - avoid-unnecessary-type-casts
+    - avoid-unreachable-for-loop
     - avoid-unrelated-type-assertions
     - avoid-unrelated-type-casts
     - avoid-unsafe-collection-methods
@@ -351,6 +370,7 @@ dart_code_metrics:
     - no-equal-switch-expression-cases
     - no-equal-then-else
     - no-object-declaration
+    - pass-correct-accepted-type
     - pattern-fields-ordering
     - prefer-abstract-final-static-class
     - prefer-add-all
@@ -363,6 +383,8 @@ dart_code_metrics:
     - prefer-bytes-builder
     - prefer-commenting-analyzer-ignores
     - prefer-commenting-future-delayed
+    - prefer-commenting-pubspec-ignores
+    - prefer-compound-assignment-operators
     - prefer-conditional-expressions
     - prefer-contains
     - prefer-correct-callback-field-name
@@ -394,12 +416,14 @@ dart_code_metrics:
     - prefer-match-file-name
     - prefer-moving-to-variable
     - prefer-named-boolean-parameters
+    - prefer-null-aware-elements
     - prefer-null-aware-spread
     - prefer-overriding-parent-equality
     - prefer-parentheses-with-if-null
     - prefer-prefixed-global-constants
     - prefer-private-extension-type-field
     - prefer-public-exception-classes
+    - prefer-pushing-conditional-expressions
     - prefer-redirecting-superclass-constructor
     - prefer-return-await
     - prefer-returning-conditional-expressions
@@ -407,6 +431,7 @@ dart_code_metrics:
     - prefer-simpler-patterns-null-check
     - prefer-single-declaration-per-file
     - prefer-specific-cases-first
+    - prefer-specifying-future-value-type
     - prefer-switch-expression
     - prefer-switch-with-enums
     - prefer-switch-with-sealed-classes

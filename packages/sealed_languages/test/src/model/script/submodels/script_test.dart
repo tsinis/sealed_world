@@ -29,6 +29,8 @@ void main() => group("$Script", () {
     alsoExpect: () => expect(const _ScriptTest().code, isEmpty),
   );
 
+  test("compareTo", () => expect(value.compareTo(array.last), isNot(isZero)));
+
   group("fields", () {
     for (final element in Script.list) {
       test("of $Script: ${element.name}", () {

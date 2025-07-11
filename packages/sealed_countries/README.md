@@ -64,7 +64,7 @@ Provides a compile-time constant of all countries accessible via `WorldCountry.l
 - `maybeFromCodeNumeric` - returns a country instance if the value matches the provided ISO 3166-1 numeric code, otherwise returns `null`.
 - `permissive` - allows the creation of custom class instances that are not fully compatible with the ISO standard.
 
-and functional-style like methods: `whenOrNull`, `maybeWhen`, `when`, `map`, `maybeMap` and `is*` boolean getters. You can also find many common methodsyou may know from Dart ecosystem - `toString` overrides, `copyWith`, `toJson`, `compareTo`, etc. Also, a compile-time const, tree-shakable, case-insensitive code `map`s (for a 0(1) access time code mapping), `list` and much more.
+You can also find many common methods you may know from Dart ecosystem - `toString` overrides, `copyWith`, `toJson`, `compareTo`, etc. Also, a compile-time const, tree-shakable, case-insensitive code `map`s (for O(1)-time code look-ups), `list`, and much more.
 
 > Translations: Use `maybeCommonNameFor()` or `commonNameFor()` methods to get translations for specific locale.
 
@@ -92,7 +92,6 @@ To get information about countries, use the `WorldCountry` class. You can constr
 
   final country = WorldCountry.fromCode("MEX");
   print(country.name.common); // Prints: "Mexico".
-  print(country.isMex); // Prints: true.
 
   final europeanCountries = WorldCountry.list.where(
     (cnt) => cnt.continent is Europe,

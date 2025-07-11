@@ -50,7 +50,7 @@ extension TranslatedNameExtension on TranslatedName {
   /// {@template to_map_method}
   /// Converts this object object to a JSON like map.
   /// {@endtemplate}
-  JsonObjectMap toMap() => {
+  Map<String, String?> toMap() => {
     "countryCode": countryCode,
     "fullName": fullName,
     "language": language.code,

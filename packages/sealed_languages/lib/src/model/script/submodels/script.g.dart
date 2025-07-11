@@ -2,7 +2,9 @@
 
 part of "../writing_system.dart";
 
+@Deprecated('Please use pattern matching with switch expressions instead.')
 extension ScriptFunctional on Script {
+  @Deprecated('Please use pattern matching with switch expressions instead.')
   R map<R>({
     required R Function(Script scriptAdlm) scriptAdlm,
     required R Function(Script scriptAfak) scriptAfak,
@@ -434,6 +436,7 @@ extension ScriptFunctional on Script {
     _ => throw ArgumentError("Unknown value: $this", name),
   };
 
+  @Deprecated('Please use pattern matching with switch expressions instead.')
   R maybeMap<R>({
     required R Function(Script script) orElse,
     R Function(Script scriptAdlm)? scriptAdlm,
@@ -866,6 +869,7 @@ extension ScriptFunctional on Script {
     _ => throw ArgumentError("Unknown value: $this", name),
   };
 
+  @Deprecated('Please use pattern matching with switch expressions instead.')
   R when<R>({
     required R Function() scriptAdlm,
     required R Function() scriptAfak,
@@ -1297,6 +1301,7 @@ extension ScriptFunctional on Script {
     _ => throw ArgumentError("Unknown value: $this", name),
   };
 
+  @Deprecated('Please use pattern matching with switch expressions instead.')
   R? maybeWhen<R>({
     required R Function() orElse,
     R Function()? scriptAdlm,
@@ -1729,6 +1734,7 @@ extension ScriptFunctional on Script {
     _ => orElse(),
   };
 
+  @Deprecated('Please use pattern matching with switch expressions instead.')
   R? whenOrNull<R>({
     R Function()? scriptAdlm,
     R Function()? scriptAfak,
@@ -2162,643 +2168,857 @@ extension ScriptFunctional on Script {
   };
 }
 
+@Deprecated('Please use == operator or isSameAs() instead.')
 extension ScriptBoolGetters on Script? {
   /// Checks if this [Script] instance is Adlam.
+  @Deprecated('Please use == operator or isSameAs() instead.')
   bool get isAdlm => const ScriptAdlm().isSameAs(this);
 
   /// Checks if this [Script] instance is Afaka.
+  @Deprecated('Please use == operator or isSameAs() instead.')
   bool get isAfak => const ScriptAfak().isSameAs(this);
 
   /// Checks if this [Script] instance is Caucasian Albanian.
+  @Deprecated('Please use == operator or isSameAs() instead.')
   bool get isAghb => const ScriptAghb().isSameAs(this);
 
   /// Checks if this [Script] instance is Ahom, Tai Ahom.
+  @Deprecated('Please use == operator or isSameAs() instead.')
   bool get isAhom => const ScriptAhom().isSameAs(this);
 
   /// Checks if this [Script] instance is Arabic.
+  @Deprecated('Please use == operator or isSameAs() instead.')
   bool get isArab => const ScriptArab().isSameAs(this);
 
   /// Checks if this [Script] instance is Arabic (Nastaliq variant).
+  @Deprecated('Please use == operator or isSameAs() instead.')
   bool get isAran => const ScriptAran().isSameAs(this);
 
   /// Checks if this [Script] instance is Imperial Aramaic.
+  @Deprecated('Please use == operator or isSameAs() instead.')
   bool get isArmi => const ScriptArmi().isSameAs(this);
 
   /// Checks if this [Script] instance is Armenian.
+  @Deprecated('Please use == operator or isSameAs() instead.')
   bool get isArmn => const ScriptArmn().isSameAs(this);
 
   /// Checks if this [Script] instance is Avestan.
+  @Deprecated('Please use == operator or isSameAs() instead.')
   bool get isAvst => const ScriptAvst().isSameAs(this);
 
   /// Checks if this [Script] instance is Balinese.
+  @Deprecated('Please use == operator or isSameAs() instead.')
   bool get isBali => const ScriptBali().isSameAs(this);
 
   /// Checks if this [Script] instance is Bamum.
+  @Deprecated('Please use == operator or isSameAs() instead.')
   bool get isBamu => const ScriptBamu().isSameAs(this);
 
   /// Checks if this [Script] instance is Bassa Vah.
+  @Deprecated('Please use == operator or isSameAs() instead.')
   bool get isBass => const ScriptBass().isSameAs(this);
 
   /// Checks if this [Script] instance is Batak.
+  @Deprecated('Please use == operator or isSameAs() instead.')
   bool get isBatk => const ScriptBatk().isSameAs(this);
 
   /// Checks if this [Script] instance is Bengali (Bangla).
+  @Deprecated('Please use == operator or isSameAs() instead.')
   bool get isBeng => const ScriptBeng().isSameAs(this);
 
   /// Checks if this [Script] instance is Bhaiksuki.
+  @Deprecated('Please use == operator or isSameAs() instead.')
   bool get isBhks => const ScriptBhks().isSameAs(this);
 
   /// Checks if this [Script] instance is Blissymbols.
+  @Deprecated('Please use == operator or isSameAs() instead.')
   bool get isBlis => const ScriptBlis().isSameAs(this);
 
   /// Checks if this [Script] instance is Bopomofo.
+  @Deprecated('Please use == operator or isSameAs() instead.')
   bool get isBopo => const ScriptBopo().isSameAs(this);
 
   /// Checks if this [Script] instance is Brahmi.
+  @Deprecated('Please use == operator or isSameAs() instead.')
   bool get isBrah => const ScriptBrah().isSameAs(this);
 
   /// Checks if this [Script] instance is Braille.
+  @Deprecated('Please use == operator or isSameAs() instead.')
   bool get isBrai => const ScriptBrai().isSameAs(this);
 
   /// Checks if this [Script] instance is Buginese.
+  @Deprecated('Please use == operator or isSameAs() instead.')
   bool get isBugi => const ScriptBugi().isSameAs(this);
 
   /// Checks if this [Script] instance is Buhid.
+  @Deprecated('Please use == operator or isSameAs() instead.')
   bool get isBuhd => const ScriptBuhd().isSameAs(this);
 
   /// Checks if this [Script] instance is Chakma.
+  @Deprecated('Please use == operator or isSameAs() instead.')
   bool get isCakm => const ScriptCakm().isSameAs(this);
 
   /// Checks if this [Script] instance is Unified Canadian Aboriginal Syllabics.
+  @Deprecated('Please use == operator or isSameAs() instead.')
   bool get isCans => const ScriptCans().isSameAs(this);
 
   /// Checks if this [Script] instance is Carian.
+  @Deprecated('Please use == operator or isSameAs() instead.')
   bool get isCari => const ScriptCari().isSameAs(this);
 
   /// Checks if this [Script] instance is Cham.
+  @Deprecated('Please use == operator or isSameAs() instead.')
   bool get isCham => const ScriptCham().isSameAs(this);
 
   /// Checks if this [Script] instance is Cherokee.
+  @Deprecated('Please use == operator or isSameAs() instead.')
   bool get isCher => const ScriptCher().isSameAs(this);
 
   /// Checks if this [Script] instance is Chorasmian.
+  @Deprecated('Please use == operator or isSameAs() instead.')
   bool get isChrs => const ScriptChrs().isSameAs(this);
 
   /// Checks if this [Script] instance is Cirth.
+  @Deprecated('Please use == operator or isSameAs() instead.')
   bool get isCirt => const ScriptCirt().isSameAs(this);
 
   /// Checks if this [Script] instance is Coptic.
+  @Deprecated('Please use == operator or isSameAs() instead.')
   bool get isCopt => const ScriptCopt().isSameAs(this);
 
   /// Checks if this [Script] instance is Cypro-Minoan.
+  @Deprecated('Please use == operator or isSameAs() instead.')
   bool get isCpmn => const ScriptCpmn().isSameAs(this);
 
   /// Checks if this [Script] instance is Cypriot syllabary.
+  @Deprecated('Please use == operator or isSameAs() instead.')
   bool get isCprt => const ScriptCprt().isSameAs(this);
 
   /// Checks if this [Script] instance is Cyrillic.
+  @Deprecated('Please use == operator or isSameAs() instead.')
   bool get isCyrl => const ScriptCyrl().isSameAs(this);
 
   /// Checks if this [Script] instance is Cyrillic (Old Church Slavonic variant).
+  @Deprecated('Please use == operator or isSameAs() instead.')
   bool get isCyrs => const ScriptCyrs().isSameAs(this);
 
   /// Checks if this [Script] instance is Devanagari (Nagari).
+  @Deprecated('Please use == operator or isSameAs() instead.')
   bool get isDeva => const ScriptDeva().isSameAs(this);
 
   /// Checks if this [Script] instance is Dives Akuru.
+  @Deprecated('Please use == operator or isSameAs() instead.')
   bool get isDiak => const ScriptDiak().isSameAs(this);
 
   /// Checks if this [Script] instance is Dogra.
+  @Deprecated('Please use == operator or isSameAs() instead.')
   bool get isDogr => const ScriptDogr().isSameAs(this);
 
   /// Checks if this [Script] instance is Deseret (Mormon).
+  @Deprecated('Please use == operator or isSameAs() instead.')
   bool get isDsrt => const ScriptDsrt().isSameAs(this);
 
   /// Checks if this [Script] instance is Duployan shorthand, Duployan stenography.
+  @Deprecated('Please use == operator or isSameAs() instead.')
   bool get isDupl => const ScriptDupl().isSameAs(this);
 
   /// Checks if this [Script] instance is Egyptian demotic.
+  @Deprecated('Please use == operator or isSameAs() instead.')
   bool get isEgyd => const ScriptEgyd().isSameAs(this);
 
   /// Checks if this [Script] instance is Egyptian hieratic.
+  @Deprecated('Please use == operator or isSameAs() instead.')
   bool get isEgyh => const ScriptEgyh().isSameAs(this);
 
   /// Checks if this [Script] instance is Egyptian hieroglyphs.
+  @Deprecated('Please use == operator or isSameAs() instead.')
   bool get isEgyp => const ScriptEgyp().isSameAs(this);
 
   /// Checks if this [Script] instance is Elbasan.
+  @Deprecated('Please use == operator or isSameAs() instead.')
   bool get isElba => const ScriptElba().isSameAs(this);
 
   /// Checks if this [Script] instance is Elymaic.
+  @Deprecated('Please use == operator or isSameAs() instead.')
   bool get isElym => const ScriptElym().isSameAs(this);
 
   /// Checks if this [Script] instance is Ethiopic (Geʻez).
+  @Deprecated('Please use == operator or isSameAs() instead.')
   bool get isEthi => const ScriptEthi().isSameAs(this);
 
   /// Checks if this [Script] instance is Khutsuri (Asomtavruli and Nuskhuri).
+  @Deprecated('Please use == operator or isSameAs() instead.')
   bool get isGeok => const ScriptGeok().isSameAs(this);
 
   /// Checks if this [Script] instance is Georgian (Mkhedruli and Mtavruli).
+  @Deprecated('Please use == operator or isSameAs() instead.')
   bool get isGeor => const ScriptGeor().isSameAs(this);
 
   /// Checks if this [Script] instance is Glagolitic.
+  @Deprecated('Please use == operator or isSameAs() instead.')
   bool get isGlag => const ScriptGlag().isSameAs(this);
 
   /// Checks if this [Script] instance is Gunjala Gondi.
+  @Deprecated('Please use == operator or isSameAs() instead.')
   bool get isGong => const ScriptGong().isSameAs(this);
 
   /// Checks if this [Script] instance is Masaram Gondi.
+  @Deprecated('Please use == operator or isSameAs() instead.')
   bool get isGonm => const ScriptGonm().isSameAs(this);
 
   /// Checks if this [Script] instance is Gothic.
+  @Deprecated('Please use == operator or isSameAs() instead.')
   bool get isGoth => const ScriptGoth().isSameAs(this);
 
   /// Checks if this [Script] instance is Grantha.
+  @Deprecated('Please use == operator or isSameAs() instead.')
   bool get isGran => const ScriptGran().isSameAs(this);
 
   /// Checks if this [Script] instance is Greek.
+  @Deprecated('Please use == operator or isSameAs() instead.')
   bool get isGrek => const ScriptGrek().isSameAs(this);
 
   /// Checks if this [Script] instance is Gujarati.
+  @Deprecated('Please use == operator or isSameAs() instead.')
   bool get isGujr => const ScriptGujr().isSameAs(this);
 
   /// Checks if this [Script] instance is Gurmukhi.
+  @Deprecated('Please use == operator or isSameAs() instead.')
   bool get isGuru => const ScriptGuru().isSameAs(this);
 
   /// Checks if this [Script] instance is Han with Bopomofo (alias for Han + Bopomofo).
+  @Deprecated('Please use == operator or isSameAs() instead.')
   bool get isHanb => const ScriptHanb().isSameAs(this);
 
   /// Checks if this [Script] instance is Hangul (Hangŭl, Hangeul).
+  @Deprecated('Please use == operator or isSameAs() instead.')
   bool get isHang => const ScriptHang().isSameAs(this);
 
   /// Checks if this [Script] instance is Han (Hanzi, Kanji, Hanja).
+  @Deprecated('Please use == operator or isSameAs() instead.')
   bool get isHani => const ScriptHani().isSameAs(this);
 
   /// Checks if this [Script] instance is Hanunoo (Hanunóo).
+  @Deprecated('Please use == operator or isSameAs() instead.')
   bool get isHano => const ScriptHano().isSameAs(this);
 
   /// Checks if this [Script] instance is Han (Simplified variant).
+  @Deprecated('Please use == operator or isSameAs() instead.')
   bool get isHans => const ScriptHans().isSameAs(this);
 
   /// Checks if this [Script] instance is Han (Traditional variant).
+  @Deprecated('Please use == operator or isSameAs() instead.')
   bool get isHant => const ScriptHant().isSameAs(this);
 
   /// Checks if this [Script] instance is Hatran.
+  @Deprecated('Please use == operator or isSameAs() instead.')
   bool get isHatr => const ScriptHatr().isSameAs(this);
 
   /// Checks if this [Script] instance is Hebrew.
+  @Deprecated('Please use == operator or isSameAs() instead.')
   bool get isHebr => const ScriptHebr().isSameAs(this);
 
   /// Checks if this [Script] instance is Hiragana.
+  @Deprecated('Please use == operator or isSameAs() instead.')
   bool get isHira => const ScriptHira().isSameAs(this);
 
   /// Checks if this [Script] instance is Anatolian Hieroglyphs (Luwian Hieroglyphs, Hittite Hieroglyphs).
+  @Deprecated('Please use == operator or isSameAs() instead.')
   bool get isHluw => const ScriptHluw().isSameAs(this);
 
   /// Checks if this [Script] instance is Pahawh Hmong.
+  @Deprecated('Please use == operator or isSameAs() instead.')
   bool get isHmng => const ScriptHmng().isSameAs(this);
 
   /// Checks if this [Script] instance is Nyiakeng Puachue Hmong.
+  @Deprecated('Please use == operator or isSameAs() instead.')
   bool get isHmnp => const ScriptHmnp().isSameAs(this);
 
   /// Checks if this [Script] instance is Japanese syllabaries (alias for Hiragana + Katakana).
+  @Deprecated('Please use == operator or isSameAs() instead.')
   bool get isHrkt => const ScriptHrkt().isSameAs(this);
 
   /// Checks if this [Script] instance is Old Hungarian (Hungarian Runic).
+  @Deprecated('Please use == operator or isSameAs() instead.')
   bool get isHung => const ScriptHung().isSameAs(this);
 
   /// Checks if this [Script] instance is Indus (Harappan).
+  @Deprecated('Please use == operator or isSameAs() instead.')
   bool get isInds => const ScriptInds().isSameAs(this);
 
   /// Checks if this [Script] instance is Old Italic (Etruscan, Oscan, etc.).
+  @Deprecated('Please use == operator or isSameAs() instead.')
   bool get isItal => const ScriptItal().isSameAs(this);
 
   /// Checks if this [Script] instance is Jamo (alias for Jamo subset of Hangul).
+  @Deprecated('Please use == operator or isSameAs() instead.')
   bool get isJamo => const ScriptJamo().isSameAs(this);
 
   /// Checks if this [Script] instance is Javanese.
+  @Deprecated('Please use == operator or isSameAs() instead.')
   bool get isJava => const ScriptJava().isSameAs(this);
 
   /// Checks if this [Script] instance is Japanese (alias for Han + Hiragana + Katakana).
+  @Deprecated('Please use == operator or isSameAs() instead.')
   bool get isJpan => const ScriptJpan().isSameAs(this);
 
   /// Checks if this [Script] instance is Jurchen.
+  @Deprecated('Please use == operator or isSameAs() instead.')
   bool get isJurc => const ScriptJurc().isSameAs(this);
 
   /// Checks if this [Script] instance is Kayah Li.
+  @Deprecated('Please use == operator or isSameAs() instead.')
   bool get isKali => const ScriptKali().isSameAs(this);
 
   /// Checks if this [Script] instance is Katakana.
+  @Deprecated('Please use == operator or isSameAs() instead.')
   bool get isKana => const ScriptKana().isSameAs(this);
 
   /// Checks if this [Script] instance is Kawi.
+  @Deprecated('Please use == operator or isSameAs() instead.')
   bool get isKawi => const ScriptKawi().isSameAs(this);
 
   /// Checks if this [Script] instance is Kharoshthi.
+  @Deprecated('Please use == operator or isSameAs() instead.')
   bool get isKhar => const ScriptKhar().isSameAs(this);
 
   /// Checks if this [Script] instance is Khmer.
+  @Deprecated('Please use == operator or isSameAs() instead.')
   bool get isKhmr => const ScriptKhmr().isSameAs(this);
 
   /// Checks if this [Script] instance is Khojki.
+  @Deprecated('Please use == operator or isSameAs() instead.')
   bool get isKhoj => const ScriptKhoj().isSameAs(this);
 
   /// Checks if this [Script] instance is Khitan large script.
+  @Deprecated('Please use == operator or isSameAs() instead.')
   bool get isKitl => const ScriptKitl().isSameAs(this);
 
   /// Checks if this [Script] instance is Khitan small script.
+  @Deprecated('Please use == operator or isSameAs() instead.')
   bool get isKits => const ScriptKits().isSameAs(this);
 
   /// Checks if this [Script] instance is Kannada.
+  @Deprecated('Please use == operator or isSameAs() instead.')
   bool get isKnda => const ScriptKnda().isSameAs(this);
 
   /// Checks if this [Script] instance is Korean (alias for Hangul + Han).
+  @Deprecated('Please use == operator or isSameAs() instead.')
   bool get isKore => const ScriptKore().isSameAs(this);
 
   /// Checks if this [Script] instance is Kpelle.
+  @Deprecated('Please use == operator or isSameAs() instead.')
   bool get isKpel => const ScriptKpel().isSameAs(this);
 
   /// Checks if this [Script] instance is Kaithi.
+  @Deprecated('Please use == operator or isSameAs() instead.')
   bool get isKthi => const ScriptKthi().isSameAs(this);
 
   /// Checks if this [Script] instance is Tai Tham (Lanna).
+  @Deprecated('Please use == operator or isSameAs() instead.')
   bool get isLana => const ScriptLana().isSameAs(this);
 
   /// Checks if this [Script] instance is Lao.
+  @Deprecated('Please use == operator or isSameAs() instead.')
   bool get isLaoo => const ScriptLaoo().isSameAs(this);
 
   /// Checks if this [Script] instance is Latin (Fraktur variant).
+  @Deprecated('Please use == operator or isSameAs() instead.')
   bool get isLatf => const ScriptLatf().isSameAs(this);
 
   /// Checks if this [Script] instance is Latin (Gaelic variant).
+  @Deprecated('Please use == operator or isSameAs() instead.')
   bool get isLatg => const ScriptLatg().isSameAs(this);
 
   /// Checks if this [Script] instance is Latin.
+  @Deprecated('Please use == operator or isSameAs() instead.')
   bool get isLatn => const ScriptLatn().isSameAs(this);
 
   /// Checks if this [Script] instance is Leke.
+  @Deprecated('Please use == operator or isSameAs() instead.')
   bool get isLeke => const ScriptLeke().isSameAs(this);
 
   /// Checks if this [Script] instance is Lepcha (Róng).
+  @Deprecated('Please use == operator or isSameAs() instead.')
   bool get isLepc => const ScriptLepc().isSameAs(this);
 
   /// Checks if this [Script] instance is Limbu.
+  @Deprecated('Please use == operator or isSameAs() instead.')
   bool get isLimb => const ScriptLimb().isSameAs(this);
 
   /// Checks if this [Script] instance is Linear A.
+  @Deprecated('Please use == operator or isSameAs() instead.')
   bool get isLina => const ScriptLina().isSameAs(this);
 
   /// Checks if this [Script] instance is Linear B.
+  @Deprecated('Please use == operator or isSameAs() instead.')
   bool get isLinb => const ScriptLinb().isSameAs(this);
 
   /// Checks if this [Script] instance is Lisu (Fraser).
+  @Deprecated('Please use == operator or isSameAs() instead.')
   bool get isLisu => const ScriptLisu().isSameAs(this);
 
   /// Checks if this [Script] instance is Loma.
+  @Deprecated('Please use == operator or isSameAs() instead.')
   bool get isLoma => const ScriptLoma().isSameAs(this);
 
   /// Checks if this [Script] instance is Lycian.
+  @Deprecated('Please use == operator or isSameAs() instead.')
   bool get isLyci => const ScriptLyci().isSameAs(this);
 
   /// Checks if this [Script] instance is Lydian.
+  @Deprecated('Please use == operator or isSameAs() instead.')
   bool get isLydi => const ScriptLydi().isSameAs(this);
 
   /// Checks if this [Script] instance is Mahajani.
+  @Deprecated('Please use == operator or isSameAs() instead.')
   bool get isMahj => const ScriptMahj().isSameAs(this);
 
   /// Checks if this [Script] instance is Makasar.
+  @Deprecated('Please use == operator or isSameAs() instead.')
   bool get isMaka => const ScriptMaka().isSameAs(this);
 
   /// Checks if this [Script] instance is Mandaic, Mandaean.
+  @Deprecated('Please use == operator or isSameAs() instead.')
   bool get isMand => const ScriptMand().isSameAs(this);
 
   /// Checks if this [Script] instance is Manichaean.
+  @Deprecated('Please use == operator or isSameAs() instead.')
   bool get isMani => const ScriptMani().isSameAs(this);
 
   /// Checks if this [Script] instance is Marchen.
+  @Deprecated('Please use == operator or isSameAs() instead.')
   bool get isMarc => const ScriptMarc().isSameAs(this);
 
   /// Checks if this [Script] instance is Mayan hieroglyphs.
+  @Deprecated('Please use == operator or isSameAs() instead.')
   bool get isMaya => const ScriptMaya().isSameAs(this);
 
   /// Checks if this [Script] instance is Medefaidrin (Oberi Okaime, Oberi Ɔkaimɛ).
+  @Deprecated('Please use == operator or isSameAs() instead.')
   bool get isMedf => const ScriptMedf().isSameAs(this);
 
   /// Checks if this [Script] instance is Mende Kikakui.
+  @Deprecated('Please use == operator or isSameAs() instead.')
   bool get isMend => const ScriptMend().isSameAs(this);
 
   /// Checks if this [Script] instance is Meroitic Cursive.
+  @Deprecated('Please use == operator or isSameAs() instead.')
   bool get isMerc => const ScriptMerc().isSameAs(this);
 
   /// Checks if this [Script] instance is Meroitic Hieroglyphs.
+  @Deprecated('Please use == operator or isSameAs() instead.')
   bool get isMero => const ScriptMero().isSameAs(this);
 
   /// Checks if this [Script] instance is Malayalam.
+  @Deprecated('Please use == operator or isSameAs() instead.')
   bool get isMlym => const ScriptMlym().isSameAs(this);
 
   /// Checks if this [Script] instance is Modi, Moḍī.
+  @Deprecated('Please use == operator or isSameAs() instead.')
   bool get isModi => const ScriptModi().isSameAs(this);
 
   /// Checks if this [Script] instance is Mongolian.
+  @Deprecated('Please use == operator or isSameAs() instead.')
   bool get isMong => const ScriptMong().isSameAs(this);
 
   /// Checks if this [Script] instance is Moon (Moon code, Moon script, Moon type).
+  @Deprecated('Please use == operator or isSameAs() instead.')
   bool get isMoon => const ScriptMoon().isSameAs(this);
 
   /// Checks if this [Script] instance is Mro, Mru.
+  @Deprecated('Please use == operator or isSameAs() instead.')
   bool get isMroo => const ScriptMroo().isSameAs(this);
 
   /// Checks if this [Script] instance is Meitei Mayek (Meithei, Meetei).
+  @Deprecated('Please use == operator or isSameAs() instead.')
   bool get isMtei => const ScriptMtei().isSameAs(this);
 
   /// Checks if this [Script] instance is Multani.
+  @Deprecated('Please use == operator or isSameAs() instead.')
   bool get isMult => const ScriptMult().isSameAs(this);
 
   /// Checks if this [Script] instance is Myanmar (Burmese).
+  @Deprecated('Please use == operator or isSameAs() instead.')
   bool get isMymr => const ScriptMymr().isSameAs(this);
 
   /// Checks if this [Script] instance is Nag Mundari.
+  @Deprecated('Please use == operator or isSameAs() instead.')
   bool get isNagm => const ScriptNagm().isSameAs(this);
 
   /// Checks if this [Script] instance is Nandinagari.
+  @Deprecated('Please use == operator or isSameAs() instead.')
   bool get isNand => const ScriptNand().isSameAs(this);
 
   /// Checks if this [Script] instance is Old North Arabian (Ancient North Arabian).
+  @Deprecated('Please use == operator or isSameAs() instead.')
   bool get isNarb => const ScriptNarb().isSameAs(this);
 
   /// Checks if this [Script] instance is Nabataean.
+  @Deprecated('Please use == operator or isSameAs() instead.')
   bool get isNbat => const ScriptNbat().isSameAs(this);
 
   /// Checks if this [Script] instance is Newa, Newar, Newari, Nepāla lipi.
+  @Deprecated('Please use == operator or isSameAs() instead.')
   bool get isNewa => const ScriptNewa().isSameAs(this);
 
   /// Checks if this [Script] instance is Naxi Dongba (na²¹ɕi³³ to³³ba²¹, Nakhi Tomba).
+  @Deprecated('Please use == operator or isSameAs() instead.')
   bool get isNkdb => const ScriptNkdb().isSameAs(this);
 
   /// Checks if this [Script] instance is Naxi Geba (na²¹ɕi³³ gʌ²¹ba²¹, 'Na-'Khi ²Ggŏ-¹baw, Nakhi Geba).
+  @Deprecated('Please use == operator or isSameAs() instead.')
   bool get isNkgb => const ScriptNkgb().isSameAs(this);
 
   /// Checks if this [Script] instance is N’Ko.
+  @Deprecated('Please use == operator or isSameAs() instead.')
   bool get isNkoo => const ScriptNkoo().isSameAs(this);
 
   /// Checks if this [Script] instance is Nüshu.
+  @Deprecated('Please use == operator or isSameAs() instead.')
   bool get isNshu => const ScriptNshu().isSameAs(this);
 
   /// Checks if this [Script] instance is Ogham.
+  @Deprecated('Please use == operator or isSameAs() instead.')
   bool get isOgam => const ScriptOgam().isSameAs(this);
 
   /// Checks if this [Script] instance is Ol Chiki (Ol Cemet’, Ol, Santali).
+  @Deprecated('Please use == operator or isSameAs() instead.')
   bool get isOlck => const ScriptOlck().isSameAs(this);
 
   /// Checks if this [Script] instance is Old Turkic, Orkhon Runic.
+  @Deprecated('Please use == operator or isSameAs() instead.')
   bool get isOrkh => const ScriptOrkh().isSameAs(this);
 
   /// Checks if this [Script] instance is Oriya (Odia).
+  @Deprecated('Please use == operator or isSameAs() instead.')
   bool get isOrya => const ScriptOrya().isSameAs(this);
 
   /// Checks if this [Script] instance is Osage.
+  @Deprecated('Please use == operator or isSameAs() instead.')
   bool get isOsge => const ScriptOsge().isSameAs(this);
 
   /// Checks if this [Script] instance is Osmanya.
+  @Deprecated('Please use == operator or isSameAs() instead.')
   bool get isOsma => const ScriptOsma().isSameAs(this);
 
   /// Checks if this [Script] instance is Old Uyghur.
+  @Deprecated('Please use == operator or isSameAs() instead.')
   bool get isOugr => const ScriptOugr().isSameAs(this);
 
   /// Checks if this [Script] instance is Palmyrene.
+  @Deprecated('Please use == operator or isSameAs() instead.')
   bool get isPalm => const ScriptPalm().isSameAs(this);
 
   /// Checks if this [Script] instance is Pau Cin Hau.
+  @Deprecated('Please use == operator or isSameAs() instead.')
   bool get isPauc => const ScriptPauc().isSameAs(this);
 
   /// Checks if this [Script] instance is Proto-Cuneiform.
+  @Deprecated('Please use == operator or isSameAs() instead.')
   bool get isPcun => const ScriptPcun().isSameAs(this);
 
   /// Checks if this [Script] instance is Proto-Elamite.
+  @Deprecated('Please use == operator or isSameAs() instead.')
   bool get isPelm => const ScriptPelm().isSameAs(this);
 
   /// Checks if this [Script] instance is Old Permic.
+  @Deprecated('Please use == operator or isSameAs() instead.')
   bool get isPerm => const ScriptPerm().isSameAs(this);
 
   /// Checks if this [Script] instance is Phags-pa.
+  @Deprecated('Please use == operator or isSameAs() instead.')
   bool get isPhag => const ScriptPhag().isSameAs(this);
 
   /// Checks if this [Script] instance is Inscriptional Pahlavi.
+  @Deprecated('Please use == operator or isSameAs() instead.')
   bool get isPhli => const ScriptPhli().isSameAs(this);
 
   /// Checks if this [Script] instance is Psalter Pahlavi.
+  @Deprecated('Please use == operator or isSameAs() instead.')
   bool get isPhlp => const ScriptPhlp().isSameAs(this);
 
   /// Checks if this [Script] instance is Book Pahlavi.
+  @Deprecated('Please use == operator or isSameAs() instead.')
   bool get isPhlv => const ScriptPhlv().isSameAs(this);
 
   /// Checks if this [Script] instance is Phoenician.
+  @Deprecated('Please use == operator or isSameAs() instead.')
   bool get isPhnx => const ScriptPhnx().isSameAs(this);
 
   /// Checks if this [Script] instance is Klingon (KLI pIqaD).
+  @Deprecated('Please use == operator or isSameAs() instead.')
   bool get isPiqd => const ScriptPiqd().isSameAs(this);
 
   /// Checks if this [Script] instance is Miao (Pollard).
+  @Deprecated('Please use == operator or isSameAs() instead.')
   bool get isPlrd => const ScriptPlrd().isSameAs(this);
 
   /// Checks if this [Script] instance is Inscriptional Parthian.
+  @Deprecated('Please use == operator or isSameAs() instead.')
   bool get isPrti => const ScriptPrti().isSameAs(this);
 
   /// Checks if this [Script] instance is Proto-Sinaitic.
+  @Deprecated('Please use == operator or isSameAs() instead.')
   bool get isPsin => const ScriptPsin().isSameAs(this);
 
   /// Checks if this [Script] instance is Reserved for private use (start).
+  @Deprecated('Please use == operator or isSameAs() instead.')
   bool get isQaaa => const ScriptQaaa().isSameAs(this);
 
   /// Checks if this [Script] instance is Reserved for private use (end).
+  @Deprecated('Please use == operator or isSameAs() instead.')
   bool get isQabx => const ScriptQabx().isSameAs(this);
 
   /// Checks if this [Script] instance is Ranjana.
+  @Deprecated('Please use == operator or isSameAs() instead.')
   bool get isRanj => const ScriptRanj().isSameAs(this);
 
   /// Checks if this [Script] instance is Rejang (Redjang, Kaganga).
+  @Deprecated('Please use == operator or isSameAs() instead.')
   bool get isRjng => const ScriptRjng().isSameAs(this);
 
   /// Checks if this [Script] instance is Hanifi Rohingya.
+  @Deprecated('Please use == operator or isSameAs() instead.')
   bool get isRohg => const ScriptRohg().isSameAs(this);
 
   /// Checks if this [Script] instance is Rongorongo.
+  @Deprecated('Please use == operator or isSameAs() instead.')
   bool get isRoro => const ScriptRoro().isSameAs(this);
 
   /// Checks if this [Script] instance is Runic.
+  @Deprecated('Please use == operator or isSameAs() instead.')
   bool get isRunr => const ScriptRunr().isSameAs(this);
 
   /// Checks if this [Script] instance is Samaritan.
+  @Deprecated('Please use == operator or isSameAs() instead.')
   bool get isSamr => const ScriptSamr().isSameAs(this);
 
   /// Checks if this [Script] instance is Sarati.
+  @Deprecated('Please use == operator or isSameAs() instead.')
   bool get isSara => const ScriptSara().isSameAs(this);
 
   /// Checks if this [Script] instance is Old South Arabian.
+  @Deprecated('Please use == operator or isSameAs() instead.')
   bool get isSarb => const ScriptSarb().isSameAs(this);
 
   /// Checks if this [Script] instance is Saurashtra.
+  @Deprecated('Please use == operator or isSameAs() instead.')
   bool get isSaur => const ScriptSaur().isSameAs(this);
 
   /// Checks if this [Script] instance is SignWriting.
+  @Deprecated('Please use == operator or isSameAs() instead.')
   bool get isSgnw => const ScriptSgnw().isSameAs(this);
 
   /// Checks if this [Script] instance is Shavian (Shaw).
+  @Deprecated('Please use == operator or isSameAs() instead.')
   bool get isShaw => const ScriptShaw().isSameAs(this);
 
   /// Checks if this [Script] instance is Sharada, Śāradā.
+  @Deprecated('Please use == operator or isSameAs() instead.')
   bool get isShrd => const ScriptShrd().isSameAs(this);
 
   /// Checks if this [Script] instance is Shuishu.
+  @Deprecated('Please use == operator or isSameAs() instead.')
   bool get isShui => const ScriptShui().isSameAs(this);
 
   /// Checks if this [Script] instance is Siddham, Siddhaṃ, Siddhamātṛkā.
+  @Deprecated('Please use == operator or isSameAs() instead.')
   bool get isSidd => const ScriptSidd().isSameAs(this);
 
   /// Checks if this [Script] instance is Khudawadi, Sindhi.
+  @Deprecated('Please use == operator or isSameAs() instead.')
   bool get isSind => const ScriptSind().isSameAs(this);
 
   /// Checks if this [Script] instance is Sinhala.
+  @Deprecated('Please use == operator or isSameAs() instead.')
   bool get isSinh => const ScriptSinh().isSameAs(this);
 
   /// Checks if this [Script] instance is Sogdian.
+  @Deprecated('Please use == operator or isSameAs() instead.')
   bool get isSogd => const ScriptSogd().isSameAs(this);
 
   /// Checks if this [Script] instance is Old Sogdian.
+  @Deprecated('Please use == operator or isSameAs() instead.')
   bool get isSogo => const ScriptSogo().isSameAs(this);
 
   /// Checks if this [Script] instance is Sora Sompeng.
+  @Deprecated('Please use == operator or isSameAs() instead.')
   bool get isSora => const ScriptSora().isSameAs(this);
 
   /// Checks if this [Script] instance is Soyombo.
+  @Deprecated('Please use == operator or isSameAs() instead.')
   bool get isSoyo => const ScriptSoyo().isSameAs(this);
 
   /// Checks if this [Script] instance is Sundanese.
+  @Deprecated('Please use == operator or isSameAs() instead.')
   bool get isSund => const ScriptSund().isSameAs(this);
 
   /// Checks if this [Script] instance is Sunuwar.
+  @Deprecated('Please use == operator or isSameAs() instead.')
   bool get isSunu => const ScriptSunu().isSameAs(this);
 
   /// Checks if this [Script] instance is Syloti Nagri.
+  @Deprecated('Please use == operator or isSameAs() instead.')
   bool get isSylo => const ScriptSylo().isSameAs(this);
 
   /// Checks if this [Script] instance is Syriac.
+  @Deprecated('Please use == operator or isSameAs() instead.')
   bool get isSyrc => const ScriptSyrc().isSameAs(this);
 
   /// Checks if this [Script] instance is Syriac (Estrangelo variant).
+  @Deprecated('Please use == operator or isSameAs() instead.')
   bool get isSyre => const ScriptSyre().isSameAs(this);
 
   /// Checks if this [Script] instance is Syriac (Western variant).
+  @Deprecated('Please use == operator or isSameAs() instead.')
   bool get isSyrj => const ScriptSyrj().isSameAs(this);
 
   /// Checks if this [Script] instance is Syriac (Eastern variant).
+  @Deprecated('Please use == operator or isSameAs() instead.')
   bool get isSyrn => const ScriptSyrn().isSameAs(this);
 
   /// Checks if this [Script] instance is Tagbanwa.
+  @Deprecated('Please use == operator or isSameAs() instead.')
   bool get isTagb => const ScriptTagb().isSameAs(this);
 
   /// Checks if this [Script] instance is Takri, Ṭākrī, Ṭāṅkrī.
+  @Deprecated('Please use == operator or isSameAs() instead.')
   bool get isTakr => const ScriptTakr().isSameAs(this);
 
   /// Checks if this [Script] instance is Tai Le.
+  @Deprecated('Please use == operator or isSameAs() instead.')
   bool get isTale => const ScriptTale().isSameAs(this);
 
   /// Checks if this [Script] instance is New Tai Lue.
+  @Deprecated('Please use == operator or isSameAs() instead.')
   bool get isTalu => const ScriptTalu().isSameAs(this);
 
   /// Checks if this [Script] instance is Tamil.
+  @Deprecated('Please use == operator or isSameAs() instead.')
   bool get isTaml => const ScriptTaml().isSameAs(this);
 
   /// Checks if this [Script] instance is Tangut.
+  @Deprecated('Please use == operator or isSameAs() instead.')
   bool get isTang => const ScriptTang().isSameAs(this);
 
   /// Checks if this [Script] instance is Tai Viet.
+  @Deprecated('Please use == operator or isSameAs() instead.')
   bool get isTavt => const ScriptTavt().isSameAs(this);
 
   /// Checks if this [Script] instance is Telugu.
+  @Deprecated('Please use == operator or isSameAs() instead.')
   bool get isTelu => const ScriptTelu().isSameAs(this);
 
   /// Checks if this [Script] instance is Tengwar.
+  @Deprecated('Please use == operator or isSameAs() instead.')
   bool get isTeng => const ScriptTeng().isSameAs(this);
 
   /// Checks if this [Script] instance is Tifinagh (Berber).
+  @Deprecated('Please use == operator or isSameAs() instead.')
   bool get isTfng => const ScriptTfng().isSameAs(this);
 
   /// Checks if this [Script] instance is Tagalog (Baybayin, Alibata).
+  @Deprecated('Please use == operator or isSameAs() instead.')
   bool get isTglg => const ScriptTglg().isSameAs(this);
 
   /// Checks if this [Script] instance is Thaana.
+  @Deprecated('Please use == operator or isSameAs() instead.')
   bool get isThaa => const ScriptThaa().isSameAs(this);
 
   /// Checks if this [Script] instance is Thai.
+  @Deprecated('Please use == operator or isSameAs() instead.')
   bool get isThai => const ScriptThai().isSameAs(this);
 
   /// Checks if this [Script] instance is Tibetan.
+  @Deprecated('Please use == operator or isSameAs() instead.')
   bool get isTibt => const ScriptTibt().isSameAs(this);
 
   /// Checks if this [Script] instance is Tirhuta.
+  @Deprecated('Please use == operator or isSameAs() instead.')
   bool get isTirh => const ScriptTirh().isSameAs(this);
 
   /// Checks if this [Script] instance is Tangsa.
+  @Deprecated('Please use == operator or isSameAs() instead.')
   bool get isTnsa => const ScriptTnsa().isSameAs(this);
 
   /// Checks if this [Script] instance is Toto.
+  @Deprecated('Please use == operator or isSameAs() instead.')
   bool get isToto => const ScriptToto().isSameAs(this);
 
   /// Checks if this [Script] instance is Ugaritic.
+  @Deprecated('Please use == operator or isSameAs() instead.')
   bool get isUgar => const ScriptUgar().isSameAs(this);
 
   /// Checks if this [Script] instance is Vai.
+  @Deprecated('Please use == operator or isSameAs() instead.')
   bool get isVaii => const ScriptVaii().isSameAs(this);
 
   /// Checks if this [Script] instance is Visible Speech.
+  @Deprecated('Please use == operator or isSameAs() instead.')
   bool get isVisp => const ScriptVisp().isSameAs(this);
 
   /// Checks if this [Script] instance is Vithkuqi.
+  @Deprecated('Please use == operator or isSameAs() instead.')
   bool get isVith => const ScriptVith().isSameAs(this);
 
   /// Checks if this [Script] instance is Warang Citi (Varang Kshiti).
+  @Deprecated('Please use == operator or isSameAs() instead.')
   bool get isWara => const ScriptWara().isSameAs(this);
 
   /// Checks if this [Script] instance is Wancho.
+  @Deprecated('Please use == operator or isSameAs() instead.')
   bool get isWcho => const ScriptWcho().isSameAs(this);
 
   /// Checks if this [Script] instance is Woleai.
+  @Deprecated('Please use == operator or isSameAs() instead.')
   bool get isWole => const ScriptWole().isSameAs(this);
 
   /// Checks if this [Script] instance is Old Persian.
+  @Deprecated('Please use == operator or isSameAs() instead.')
   bool get isXpeo => const ScriptXpeo().isSameAs(this);
 
   /// Checks if this [Script] instance is Cuneiform, Sumero-Akkadian.
+  @Deprecated('Please use == operator or isSameAs() instead.')
   bool get isXsux => const ScriptXsux().isSameAs(this);
 
   /// Checks if this [Script] instance is Yezidi.
+  @Deprecated('Please use == operator or isSameAs() instead.')
   bool get isYezi => const ScriptYezi().isSameAs(this);
 
   /// Checks if this [Script] instance is Yi.
+  @Deprecated('Please use == operator or isSameAs() instead.')
   bool get isYiii => const ScriptYiii().isSameAs(this);
 
   /// Checks if this [Script] instance is Zanabazar Square (Zanabazarin Dörböljin Useg, Xewtee Dörböljin Bicig, Horizontal Square Script).
+  @Deprecated('Please use == operator or isSameAs() instead.')
   bool get isZanb => const ScriptZanb().isSameAs(this);
 
   /// Checks if this [Script] instance is Code for inherited script.
+  @Deprecated('Please use == operator or isSameAs() instead.')
   bool get isZinh => const ScriptZinh().isSameAs(this);
 
   /// Checks if this [Script] instance is Mathematical notation.
+  @Deprecated('Please use == operator or isSameAs() instead.')
   bool get isZmth => const ScriptZmth().isSameAs(this);
 
   /// Checks if this [Script] instance is Symbols (Emoji variant).
+  @Deprecated('Please use == operator or isSameAs() instead.')
   bool get isZsye => const ScriptZsye().isSameAs(this);
 
   /// Checks if this [Script] instance is Symbols.
+  @Deprecated('Please use == operator or isSameAs() instead.')
   bool get isZsym => const ScriptZsym().isSameAs(this);
 
   /// Checks if this [Script] instance is Code for unwritten documents.
+  @Deprecated('Please use == operator or isSameAs() instead.')
   bool get isZxxx => const ScriptZxxx().isSameAs(this);
 
   /// Checks if this [Script] instance is Code for undetermined script.
+  @Deprecated('Please use == operator or isSameAs() instead.')
   bool get isZyyy => const ScriptZyyy().isSameAs(this);
 
   /// Checks if this [Script] instance is Code for uncoded script.
+  @Deprecated('Please use == operator or isSameAs() instead.')
   bool get isZzzz => const ScriptZzzz().isSameAs(this);
 }

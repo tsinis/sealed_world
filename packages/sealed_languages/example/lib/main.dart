@@ -16,7 +16,7 @@ void main() {
   const eng = "Eng";
   final fromCode = NaturalLanguage.fromCode(eng);
   print("${fromCode.name}: ${fromCode.codeShort}"); // Prints: "English: EN".
-  print(fromCode.isEng); // Prints: "true".
+  print(fromCode == const LangEng()); // Prints: "true".
 
   /// For a O(1) access time, you can use: .map, .codeMap or .codeShortMap.
   print(fromCode == NaturalLanguage.map[eng]); // Prints: "true".
@@ -35,10 +35,6 @@ void main() {
 
   // This will print: "Native name: čeština".
   print("Native name: ${maybeCzech?.namesNative.first}");
-
-  // Contains functional style methods (when, whenOrNull, map, etc).
-  print(maybeCzech?.maybeWhen(orElse: () => "Hey!", langCes: () => "Ahoj!"));
-
   print(NaturalLanguage.list.length); // Prints: "184".
 
   /// Translations:

@@ -32,6 +32,8 @@ void main() => group("$WorldCountry", () {
     alsoExpect: () => expect(WorldCountry.list.last.tld, isEmpty),
   );
 
+  test("compareTo", () => expect(value.compareTo(array.first), isNot(isZero)));
+
   group("fields", () {
     final officialCountries = WorldCountry.list.where(
       (country) => country.isOfficiallyAssigned,

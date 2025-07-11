@@ -12,6 +12,7 @@ extension IsoStandardizedWorldCountryExtension on IsoStandardized? {
   ///
   /// This getter can be used to check if an [IsoStandardized] object
   /// represents a world country.
+  @Deprecated("Please use `mapWhenOrNull` or `is WorldCountry` check instead.")
   bool get isWorldCountry => this is WorldCountry;
 
   /// Pattern-matching helper for ISO types.
@@ -22,13 +23,18 @@ extension IsoStandardizedWorldCountryExtension on IsoStandardized? {
     T? Function(FiatCurrency currency)? currency,
     T? Function(NaturalLanguage language)? language,
     T? Function(Script script)? script,
+    T? Function(IsoStandardized iso)? orElse,
   }) {
     final iso = this;
-    if (iso is WorldCountry) return country?.call(iso);
-    if (iso is FiatCurrency) return currency?.call(iso);
-    if (iso is NaturalLanguage) return language?.call(iso);
-    if (iso is Script) return script?.call(iso);
 
-    return null;
+    if (iso == null) return null;
+    final elseResult = orElse?.call(iso);
+
+    if (iso is WorldCountry) return country?.call(iso) ?? elseResult;
+    if (iso is FiatCurrency) return currency?.call(iso) ?? elseResult;
+    if (iso is NaturalLanguage) return language?.call(iso) ?? elseResult;
+    if (iso is Script) return script?.call(iso) ?? elseResult;
+
+    return elseResult;
   }
 }

@@ -2,15 +2,24 @@
 
 part of "weekday.dart";
 
+@Deprecated('Please use pattern matching with switch expressions instead.')
 extension WeekdayFunctionalExtension on Weekday {
+  @Deprecated('Please use == operator instead.')
   bool get isMonday => this == Weekday.monday;
+  @Deprecated('Please use == operator instead.')
   bool get isTuesday => this == Weekday.tuesday;
+  @Deprecated('Please use == operator instead.')
   bool get isWednesday => this == Weekday.wednesday;
+  @Deprecated('Please use == operator instead.')
   bool get isThursday => this == Weekday.thursday;
+  @Deprecated('Please use == operator instead.')
   bool get isFriday => this == Weekday.friday;
+  @Deprecated('Please use == operator instead.')
   bool get isSaturday => this == Weekday.saturday;
+  @Deprecated('Please use == operator instead.')
   bool get isSunday => this == Weekday.sunday;
 
+  @Deprecated('Please use pattern matching with switch expressions instead.')
   R map<R>({
     required R Function(Weekday monday) monday,
     required R Function(Weekday tuesday) tuesday,
@@ -29,6 +38,7 @@ extension WeekdayFunctionalExtension on Weekday {
     Weekday.sunday => sunday(this),
   };
 
+  @Deprecated('Please use pattern matching with switch expressions instead.')
   R maybeMap<R>({
     required R Function(Weekday weekday) orElse,
     R Function(Weekday monday)? monday,
@@ -48,6 +58,7 @@ extension WeekdayFunctionalExtension on Weekday {
     Weekday.sunday => sunday?.call(this) ?? orElse(this),
   };
 
+  @Deprecated('Please use pattern matching with switch expressions instead.')
   R maybeWhen<R>({
     required R Function() orElse,
     R Function()? monday,
@@ -67,6 +78,7 @@ extension WeekdayFunctionalExtension on Weekday {
     Weekday.sunday => sunday?.call() ?? orElse(),
   };
 
+  @Deprecated('Please use pattern matching with switch expressions instead.')
   R when<R>({
     required R Function() monday,
     required R Function() tuesday,
@@ -85,6 +97,7 @@ extension WeekdayFunctionalExtension on Weekday {
     Weekday.sunday => sunday(),
   };
 
+  @Deprecated('Please use pattern matching with switch expressions instead.')
   R? whenOrNull<R>({
     R Function()? monday,
     R Function()? tuesday,

@@ -1,4 +1,5 @@
 // ignore_for_file: prefer-explicit-type-arguments
+// ignore_for_file: deprecated_member_use_from_same_package, it's TODO!
 
 import "package:sealed_countries/src/data/official_world_countries.data.dart";
 import "package:sealed_countries/src/helpers/extensions/iso_standardized_world_country_extension.dart";
@@ -74,12 +75,27 @@ void main() => group("IsoStandardizedWorldCountryExtension", () {
 
     test("returns null if no matching callback is provided", () {
       expect(country.mapWhenOrNull(), isNull);
-      expect(script.mapWhenOrNull(), isNull);
+      expect(script.mapWhenOrNull(language: (_) => "fail"), isNull);
     });
 
-    test(
-      "returns null for null instance",
-      () => expect(
+    test("returns orElse value if no matching callback is provided", () {
+      final result = country.mapWhenOrNull(
+        language: (_) => "fail",
+        orElse: (iso) => "orElse:${iso.code}",
+      );
+      expect(result, "orElse:ABW");
+    });
+
+    test("returns specific value even if orElse is provided", () {
+      final result = script.mapWhenOrNull(
+        script: (iso) => "script:${iso.code}",
+        orElse: (_) => "fail",
+      );
+      expect(result, "script:Latn");
+    });
+
+    test("returns null for null instance", () {
+      expect(
         nullValue.mapWhenOrNull(
           country: (_) => "fail",
           currency: (_) => "fail",
@@ -87,7 +103,8 @@ void main() => group("IsoStandardizedWorldCountryExtension", () {
           script: (_) => "fail",
         ),
         isNull,
-      ),
-    );
+      );
+      expect(nullValue.mapWhenOrNull(orElse: (_) => "fail"), isNull);
+    });
   });
 });

@@ -13,10 +13,10 @@ packages:
     dependency: transitive
     description:
       name: analyzer
-      sha256: f6154230675c44a191f2e20d16eeceb4aa18b30ca732db4efaf94c6a7d43cfa6
+      sha256: de617bfdc64f3d8b00835ec2957441ceca0a29cdf7881f7ab231bc14f71159c0
       url: "https://pub.dev"
     source: hosted
-    version: "7.5.2"
+    version: "7.5.6"
   archive:
     dependency: transitive
     description:
@@ -194,7 +194,7 @@ packages:
     source: hosted
     version: "3.1.2"
   coverage:
-    dependency: transitive
+    dependency: "direct dev"
     description:
       name: coverage
       sha256: aa07dbe5f2294c827b7edb9a87bba44a9c15a3cc81bc8da2ca19b37322d30080
@@ -210,13 +210,13 @@ packages:
     source: hosted
     version: "3.0.6"
   dart_code_metrics_presets:
-    dependency: transitive
+    dependency: "direct dev"
     description:
       name: dart_code_metrics_presets
-      sha256: "30b7bcaec9de4e8c5f7a41eea7f8e2fa52ad30729f4435a3b4fcf460abb327fe"
+      sha256: f1bab78d6e02e08948bef84d637e0d19ee7122ceb4b52b9ea77fe87ec5e9e588
       url: "https://pub.dev"
     source: hosted
-    version: "2.22.0"
+    version: "2.24.0"
   dart_style:
     dependency: transitive
     description:
@@ -438,7 +438,7 @@ packages:
     source: hosted
     version: "3.0.1"
   lints:
-    dependency: transitive
+    dependency: "direct dev"
     description:
       name: lints
       sha256: a5e2b223cb7c9c8efdc663ef484fdd95bb243bff242ef5b13e26883547fce9a0
@@ -691,7 +691,7 @@ packages:
     source: hosted
     version: "1.2.2"
   test:
-    dependency: transitive
+    dependency: "direct dev"
     description:
       name: test
       sha256: "301b213cd241ca982e9ba50266bd3f5bd1ea33f1455554c5abb85d1be0e2d87e"

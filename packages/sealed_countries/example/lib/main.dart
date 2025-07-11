@@ -7,7 +7,7 @@ void main() {
 
   final country = WorldCountry.fromCode("MEX");
   print(country.name.common); // Prints: "Mexico".
-  print(country.isMex); // Prints: true.
+  print(country == const CountryMex()); // Prints: true.
 
   final europeanCountries = WorldCountry.list.where(
     (cnt) => cnt.continent is Europe,

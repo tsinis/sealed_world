@@ -1,5 +1,5 @@
 // ignore_for_file: prefer-moving-to-variable, avoid_redundant_argument_values
-import "dart:io"; // Due to platform differences in golden tests.
+import "dart:io" show Platform;
 
 import "package:flutter/material.dart";
 import "package:flutter_test/flutter_test.dart";
@@ -17,12 +17,12 @@ extension GoldenWidgetTesterExtension on WidgetTester {
   };
 
   Future<void> flagGolden<T extends IsoTranslated>(T iso, FlagType type) async {
-    final aspectRatio = iso is WorldCountry
-        ? (iso.flagProperties?.aspectRatio ?? 1)
-        : FlagConstants.defaultAspectRatio;
+    final aspectRatio = iso.mapWhenOrNull(
+      country: (country) => country.flagProperties?.aspectRatio,
+    );
     final height = type.height;
-    final width = height * aspectRatio;
-    final file = "../../goldens/${type.name}/${iso.code.toLowerCase()}.png";
+    final width = height * (aspectRatio ?? FlagConstants.defaultAspectRatio);
+    final filePath = "../../goldens/${type.name}/${iso.code.toLowerCase()}.png";
 
     await binding.setSurfaceSize(Size(width, height));
     await pumpWidget(
@@ -36,16 +36,15 @@ extension GoldenWidgetTesterExtension on WidgetTester {
 
     return expectLater(
       find.byType(IsoFlag<T, BasicFlag>),
-      matchesGoldenFile(file),
+      matchesGoldenFile(filePath),
       skip: !Platform.isLinux && _ignoreOnNonLinux.contains(iso),
       reason: "Non-Linux platforms rendering those flags slightly differently",
     );
   }
 
-  static const _ignoreOnNonLinux = <IsoTranslated>[
+  static const _ignoreOnNonLinux = <IsoTranslated>{
     CountryAia(),
     CountryAnd(),
-    CountryBmu(),
     CountryBmu(),
     CountryEcu(),
     CountryFji(),
@@ -55,7 +54,6 @@ extension GoldenWidgetTesterExtension on WidgetTester {
     CountryMsr(),
     CountryPcn(),
     CountrySgs(),
-    CountrySlv(),
     CountryTca(),
-  ];
+  };
 }

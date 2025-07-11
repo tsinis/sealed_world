@@ -15,15 +15,15 @@ This ISO-driven, pure Dart, fully tested and dependency-free package provides in
 
 **NaturalLanguage** class provides the following information about languages:
 
-| **Field**         | **Required** | **Description**                                                                          | **Example for LangEng**                           |
-| ----------------- | ------------ | ---------------------------------------------------------------------------------------- | ------------------------------------------------- |
-| name              | **Yes**      | A non-empty string representing the English name of the natural language.                | "English"                                         |
-| code              | **Yes**      | A three-letter string representing the ISO 639-2/T Terminological code for the language. | "ENG"                                             |
-| codeShort         | **Yes**      | A two-letter string representing the ISO 639-1 code for the language.                    | "EN"                                              |
-| namesNative       | **Yes**      | A list of non-empty strings representing the language's native names.                    | ["English"]                                       |
-| bibliographicCode | No           | A three-letter string representing the ISO 639-2/B Bibliographic code for the language.  | `null`                                            |
-| family            | No           | The language family to which the language belongs.                                       | `LanguageFamily`(name: "Indo-European")           |
-| isRightToLeft     | No           | A boolean value specifying whether the language is written right-to-left.                | false                                             |
+| **Field**         | **Required** | **Description**                                                                          | **Example for LangEng**                            |
+| ----------------- | ------------ | ---------------------------------------------------------------------------------------- | -------------------------------------------------- |
+| name              | **Yes**      | A non-empty string representing the English name of the natural language.                | "English"                                          |
+| code              | **Yes**      | A three-letter string representing the ISO 639-2/T Terminological code for the language. | "ENG"                                              |
+| codeShort         | **Yes**      | A two-letter string representing the ISO 639-1 code for the language.                    | "EN"                                               |
+| namesNative       | **Yes**      | A list of non-empty strings representing the language's native names.                    | ["English"]                                        |
+| bibliographicCode | No           | A three-letter string representing the ISO 639-2/B Bibliographic code for the language.  | `null`                                             |
+| family            | No           | The language family to which the language belongs.                                       | `LanguageFamily`(name: "Indo-European")            |
+| isRightToLeft     | No           | A boolean value specifying whether the language is written right-to-left.                | false                                              |
 | translations      | **Yes**      | A list of `TranslatedName`s representing the language name translations.                 | **140+** translations for an English language name |
 
 <details>
@@ -53,7 +53,7 @@ Provides a compile-time constant of all languages accessible via `NaturalLanguag
 - `fromName` - returns a language instance if the value matches the provided name.
 - `permissive` - allows the creation of custom class instances that are not fully compatible with the ISO standard.
 
-and functional-style like methods: `whenOrNull`, `maybeWhen`, `when`, `map`, `maybeMap` and `is*` boolean getters. You can also find many common methodsyou may know from Dart ecosystem - `toString` overrides, `copyWith`, `toJson`, `compareTo`, etc. Also, a compile-time const, tree-shakable, code `map`s (for a 0(1) access time code mapping), `list` and much more.
+You can also find many common methods you may know from Dart ecosystem - `toString` overrides, `copyWith`, `toJson`, `compareTo`, etc. Also, a compile-time const, tree-shakable, code `map`s (for O(1)-time code look-ups), `list`, and much more.
 
 > Translations: Use `maybeCommonNameFor()` or `commonNameFor()` methods to get translations for specific locale.
 
@@ -81,7 +81,6 @@ To get information about languages, use the `NaturalLanguage` class. You can con
   final fromCode = NaturalLanguage.fromCode(eng);
   /// Equivalent of NaturalLanguage.map[eng];
   print("${fromCode.name}: ${fromCode.codeShort}"); // Prints: "English: EN".
-  print(fromCode.isEng); // Prints: "true".
 
   final script = Script.fromCodeNumeric(215);
   /// Equivalent of Script.codeNumericMap["215"];

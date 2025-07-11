@@ -13,7 +13,7 @@ void main() {
     "Euro",
     where: (currency) => currency.namesNative.first,
   );
-  print(maybeEuro.isEur); // Prints: true.
+  print(maybeEuro == const FiatEur()); // Prints: true.
   print(maybeEuro?.toString(short: false));
   /*
   Prints: "FiatCurrency(code: "EUR", name: "Euro", decimalMark: ",",
@@ -21,21 +21,6 @@ void main() {
   namesNative: ["Euro"], priority: 2, smallestDenomination: 1, subunit: "Cent",
   subunitToUnit: 100, unitFirst: true,)".
   */
-
-  print(isVikingKrone(const FiatNok())); // Prints: true.
-  print(isVikingKrone(serbianDinar)); // Prints: null.
-  print(isVikingKrone(const FiatCzk())); // Prints: false.
-
-  FiatCurrency.list
-      .where((currency) => currency.symbol?.contains("kr") ?? false)
-      .forEach(print);
-  // Prints:
-  // Currency(code: DKK)
-  // Currency(code: ISK)
-  // Currency(code: NOK)
-  // Currency(code: SEK).
-
-  serbianDinar.toJson(); // Converts currency to a valid JSON.
 
   /// Translations:
   // Prints German translations of all available regular currencies.
@@ -61,30 +46,6 @@ void main() {
     customFiat.commonNameFor(const BasicLocale(LangEng())),
   ); // Prints "Custom currency".
 }
-
-/// [Currency] is a sealed class, it means
-/// this `whenOrNull` can be used same way as switch:
-/// ```dart
-/// switch (currency) {
-///  case FiatDkk():
-///  case FiatIsk():
-///  case FiatNok():
-///  case FiatSek():
-///    return true;
-///  case FiatCzk():
-///    return false;
-///  default:
-///    return null;
-///}
-/// ```
-// ignore: prefer-static-class, just for example.
-bool? isVikingKrone(FiatCurrency currency) => currency.whenOrNull(
-  fiatCzk: () => false,
-  fiatDkk: () => true,
-  fiatIsk: () => true,
-  fiatNok: () => true,
-  fiatSek: () => true,
-);
 
 /// Creates a instance of the custom currency with permissive constructor.
 class _FiatCustom extends FiatCurrency {

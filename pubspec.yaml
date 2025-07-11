@@ -8,11 +8,11 @@ topics:
   - countries
   - currencies
   - languages
-  - sealed
+  - scripts
   - iso
 
 environment:
-  sdk: ^3.8.0
+  sdk: ^3.8.1
 
 workspace:
   - tools # Command-line tools for public packages.
@@ -31,3 +31,9 @@ workspace:
 
   - packages/world_flags/example # Example for the world_flags package.
   - packages/world_countries/example # Example for the world_countries package.
+
+dev_dependencies:
+  coverage: 1.14.1 # From Google. Defines top level dependency constraint.
+  dart_code_metrics_presets: ^2.24.0 # DCM. Defines top level dependency constraint.
+  lints: ^6.0.0 # From Google. Defines top level dependency constraint.
+  test: ^1.25.15 # From Google. Defines top level dependency constraint.

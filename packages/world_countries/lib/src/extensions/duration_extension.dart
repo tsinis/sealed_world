@@ -43,7 +43,6 @@ extension DurationExtension on Duration {
   /// });
   /// ```
   Future<T> delayed<T>([FutureOr<T> Function()? callback]) =>
-      // ignore: prefer-commenting-future-delayed, it's developer-facing.
       Future<T>.delayed(this, callback);
 
   /// A convenience getter that returns a `Future<void>` which completes after

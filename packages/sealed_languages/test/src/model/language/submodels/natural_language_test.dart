@@ -35,6 +35,8 @@ void main() => group("$NaturalLanguage", () {
     alsoExpect: () => expect(const _NaturalLanguageTest().code, isEmpty),
   );
 
+  test("compareTo", () => expect(value.compareTo(array.last), isNot(isZero)));
+
   group("fields", () {
     for (final element in NaturalLanguage.list) {
       test("of $NaturalLanguage: ${element.name}", () {

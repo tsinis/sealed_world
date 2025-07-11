@@ -36,7 +36,7 @@ extension DemonymsExtension on Demonyms {
   );
 
   /// {@macro to_map_method}
-  JsonObjectMap toMap() => {
+  Map<String, String> toMap() => {
     "female": female,
     "language": language.code,
     "male": male,

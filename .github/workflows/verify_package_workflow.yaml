@@ -65,20 +65,15 @@ jobs:
         if: ${{ github.event_name == 'pull_request' }}
         run: dart pub publish --dry-run
 
-      # - name: 🧮 Calculate PANA score
-      #   if: false # ${{ github.event_name == 'pull_request' }} # Disabled due to outdated Pana in action
-      #   uses: axel-op/dart-package-analyzer@v3
-      #   id: analysis
-      #   with:
-      #     githubToken: ${{ secrets.GITHUB_TOKEN }}
-      #     relativePath: ${{ env.relative_path }}
-
-      # - name: 📈 Check Pub score
-      #   if: false # ${{ github.event_name == 'pull_request' }} # Disabled due to outdated Pana in action
-      #   uses: fujidaiti/dart-package-inspector@v2.0.4
-      #   with:
-      #     report: ${{ steps.analysis.outputs.json_output }}
-      #     min-pub-points: 150
+      - name: 🧮 Check PANA score
+        if: ${{ github.event_name == 'pull_request' }}
+        run: |
+          dart pub global activate pana
+          sudo apt-get install webp
+          PANA=$(pana . --no-warning); PANA_SCORE=$(echo $PANA | sed -n "s/.*Points: \([0-9]*\)\/\([0-9]*\)./\1\/\2/p")
+          echo "score: $PANA_SCORE"
+          IFS='/' read -ra SCORE_ARR <<< "$PANA_SCORE"; SCORE=${SCORE_ARR[0]}
+          if (( SCORE < 160 )); then echo "Minimum score of 160 was not met! Got $SCORE."; exit 1; fi
 
       - name: 📥 Install DCM
         if: ${{ github.event_name == 'pull_request' }}
@@ -88,7 +83,18 @@ jobs:
 
       - name: 🔎 Dart Code Metrics
         if: ${{ github.event_name == 'pull_request' }}
-        run: dcm analyze . --verbose --fatal-style --fatal-warnings --reporter=github
+        uses: CQLabs/dcm-action@v2.0.1
+        with:
+          ci-key: oss
+          email: oss
+          github-token: ${{ secrets.GITHUB_TOKEN }}
+          package-name: ${{ inputs.package_name }}
+          folders: ${{ env.relative_path }}
+          exclude: '{"**/example/**/*.dart", "**/*.g.dart"}'
+          fatal-found: true
+          analyze-assets: true
+          check-exports-completeness: true
+          check-unused-files: ${{ inputs.is_flutter }}
 
       - name: 🛂 Set up file system write permissions
         run: sudo chown -R runner:runner $(pwd) && sudo chmod -R 777 $(pwd)

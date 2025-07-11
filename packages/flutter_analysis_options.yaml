@@ -28,6 +28,7 @@ dart_code_metrics:
     - avoid-late-context
     - avoid-missing-controller
     - avoid-missing-image-alt
+    - avoid-mounted-in-setstate
     - avoid-recursive-widget-calls
     - avoid-shrink-wrap-in-lists
     - avoid-single-child-column-or-row
@@ -42,9 +43,12 @@ dart_code_metrics:
     - check-for-equals-in-render-object-setters
     - consistent-update-render-object
     - dispose-fields
+    - pass-existing-future-to-future-builder
+    - pass-existing-stream-to-stream-builder
     - prefer-action-button-tooltip
     - prefer-align-over-container
     - prefer-center-over-align
+    - prefer-compute-over-isolate-run
     - prefer-const-border-radius
     - prefer-container
     - prefer-correct-edge-insets-constructor
@@ -53,6 +57,7 @@ dart_code_metrics:
     - prefer-extracting-callbacks
     - prefer-for-loop-in-children
     - prefer-padding-over-container
+    - prefer-single-setstate
     - prefer-single-widget-per-file
     - prefer-sized-box-square
     - prefer-sliver-prefix
@@ -63,9 +68,6 @@ dart_code_metrics:
     - proper-super-calls
     - use-closest-build-context
     - use-setstate-synchronously
-    - pass-existing-future-to-future-builder
-    - pass-existing-stream-to-stream-builder
-    - prefer-compute-over-isolate-run
 
 linter:
   rules:
