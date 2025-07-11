@@ -98,10 +98,8 @@ jobs:
           exclude: '{"**/example/**/*.dart", "**/*.g.dart"}'
           fatal-found: true
           analyze-assets: true
-          calculate-metrics: true
-          check-dependencies: ${{ !inputs.is_flutter }}
-          check-unused-files: ${{ inputs.is_flutter }}
-          ignored-packages: test
+          check-exports-completeness: true
+          check-unused-files: ${{ inputs.is_flutter }}]
 
       - name: 🛂 Set up file system write permissions
         run: sudo chown -R runner:runner $(pwd) && sudo chmod -R 777 $(pwd)

@@ -42,6 +42,12 @@ analyzer:
     - dart_code_metrics
 
 dart_code_metrics:
+  exclude:
+    dependencies:
+      - example/pubspec.yaml
+    metrics:
+      - "**/test/**"
+      - "**/example/**"
   extends:
     - package:dart_code_metrics_presets/dart_all.yaml
   anti-patterns:
@@ -59,6 +65,7 @@ dart_code_metrics:
     source-lines-of-code: 60
   metrics-exclude:
     - test/**
+    - example/**
   rules:
     # Disabled:
     - arguments-ordering: false # This will be a breaking change.
