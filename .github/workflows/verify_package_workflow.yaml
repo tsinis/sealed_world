@@ -65,8 +65,8 @@ jobs:
         if: ${{ github.event_name == 'pull_request' }}
         run: dart pub publish --dry-run
 
-      - name: 🧮 Calculate PANA score
-        if: false # ${{ github.event_name == 'pull_request' }} # Disabled due to outdated Pana in action
+      - name: 🧮 Check PANA score
+        if: ${{ github.event_name == 'pull_request' }}
         run: |
           dart pub global activate pana
           sudo apt-get install webp
