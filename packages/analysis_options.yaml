@@ -322,7 +322,6 @@ dart_code_metrics:
     - avoid-unnecessary-local-late
     - avoid-unnecessary-negations
     - avoid-unnecessary-null-aware-elements
-    - avoid-unnecessary-nullable-fields
     - avoid-unnecessary-nullable-return-type
     - avoid-unnecessary-overrides
     - avoid-unnecessary-patterns

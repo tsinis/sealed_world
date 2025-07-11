@@ -99,7 +99,7 @@ jobs:
           fatal-found: true
           analyze-assets: true
           check-exports-completeness: true
-          check-unused-files: ${{ inputs.is_flutter }}]
+          check-unused-files: ${{ inputs.is_flutter }}
 
       - name: 🛂 Set up file system write permissions
         run: sudo chown -R runner:runner $(pwd) && sudo chmod -R 777 $(pwd)
