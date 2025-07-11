@@ -88,7 +88,20 @@ jobs:
 
       - name: 🔎 Dart Code Metrics
         if: ${{ github.event_name == 'pull_request' }}
-        run: dcm analyze . --verbose --fatal-style --fatal-warnings --reporter=github
+        uses: CQLabs/dcm-action@v2.0.1
+        with:
+          ci-key: oss
+          email: oss
+          github-token: ${{ secrets.GITHUB_TOKEN }}
+          package-name: ${{ inputs.package_name }}
+          folders: ${{ env.relative_path }}
+          exclude: "{**/example/**/*.dart, **/*.g.dart}"
+          fatal-found: true
+          analyze-assets: true
+          calculate-metrics: true
+          check-dependencies: ${{ !inputs.is_flutter }}
+          check-unused-files: ${{ inputs.is_flutter }}
+          ignored-packages: test
 
       - name: 🛂 Set up file system write permissions
         run: sudo chown -R runner:runner $(pwd) && sudo chmod -R 777 $(pwd)

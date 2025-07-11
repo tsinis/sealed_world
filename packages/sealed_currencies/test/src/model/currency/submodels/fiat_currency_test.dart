@@ -76,6 +76,8 @@ void main() => group("$FiatCurrency", () {
     }
   });
 
+  test("compareTo", () => expect(value.compareTo(array.last), isNot(isZero)));
+
   group("maps O(1) access time check", () {
     for (final element in FiatCurrency.listExtended) {
       performanceTest("of $FiatCurrency: ${element.name}", () {
