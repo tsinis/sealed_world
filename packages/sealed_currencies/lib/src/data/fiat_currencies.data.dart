@@ -1156,7 +1156,6 @@ class FiatHuf extends FiatCurrency {
         codeNumeric: "348",
         namesNative: const ["Magyar forint"],
         smallestDenomination: 5,
-        subunitToUnit: 1,
       );
 }
 
