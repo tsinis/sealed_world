@@ -33,7 +33,7 @@ We use GitHub Issues to track public bugs. Report a bug by [opening a new issue]
 
 ## Write bug reports with detail, background, and sample code
 
-[This is an example](http://stackoverflow.com/q/12488905/180626) of a bug report, and I think it's not a bad model. Here's [another great example from Craig Hockenberry](http://www.openradar.me/11905408).
+[This is an example](http://www.openradar.me/11905408) of a bug report, and I think it's not a bad model.
 
 **Great Bug Reports** tend to have:
 

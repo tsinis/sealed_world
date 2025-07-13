@@ -15,8 +15,8 @@
   "dictionaries": ["en_US", "softwareTerms", "dart_dictionary"],
   "dictionaryDefinitions": [
     {
-      "name": "globe_dictionary",
-      "path": "./.github/workflows/config/spell-check/globe_dictionary.txt",
+      "name": "dart_dictionary",
+      "path": "./.github/workflows/config/spell-check/dart_dictionary.txt",
       "addWords": true
     }
   ]

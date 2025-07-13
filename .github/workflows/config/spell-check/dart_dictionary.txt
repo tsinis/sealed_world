@@ -1,8 +1,7 @@
-# Keywords/terms specific to this Dart/Flutter package ecosystem
+# Keywords/terms specific to this Dart/Flutter and this package ecosystem
 dartdoc
 pubspec
 unawaited
-endtemplate
 gitignores
 writeln
 Stderrs
@@ -576,7 +575,6 @@ codecov
 codefactor
 cpanel
 cyclomatic
-dartdoc
 dartlang
 demonyms
 deps
@@ -627,7 +625,6 @@ nok
 opensource
 openstreetmap
 plugins
-pubspec
 pyc
 regexps
 rfc
@@ -643,7 +640,6 @@ tearoffs
 timezones
 todo
 tsinis
-unawaited
 unicode
 unprocessable
 uri

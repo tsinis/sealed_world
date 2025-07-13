@@ -82,6 +82,7 @@ void main() => group("PlatformDispatcherExtension", () {
 
   group("firstScriptOrNull", () {
     testWidgets("should return null when locales is empty", (tester) async {
+      tester.platformDispatcher.localesTestValue = const [];
       expect(tester.platformDispatcher.firstScriptOrNull, isNull);
     });
 
