@@ -1,7 +1,6 @@
-import "dart:ui";
-
 // ignore: depend_on_referenced_packages, to match original code.
 import "package:collection/collection.dart";
+import "package:flutter/widgets.dart";
 import "package:world_countries/world_countries.dart";
 
 import "../../model/constants.dart";
@@ -73,7 +72,7 @@ class RouteParseUtils {
   }) {
     final country =
         maybeCountry ??
-        PlatformDispatcher.instance.locale.maybeCountry ??
+        WidgetsBinding.instance.platformDispatcher.firstCountryOrNull ??
         fallbackCountry;
 
     return ParsedData(

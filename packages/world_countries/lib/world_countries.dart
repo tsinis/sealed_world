@@ -11,6 +11,7 @@ export "src/extensions/natural_language_extension.dart";
 export "src/extensions/pickers/country_picker_extension.dart";
 export "src/extensions/pickers/currency_picker_extension.dart";
 export "src/extensions/pickers/language_picker_extension.dart";
+export "src/extensions/platform_dispatcher_extension.dart";
 export "src/extensions/typed_locale_extension.dart";
 export "src/extensions/world_countries_build_context_extension.dart";
 export "src/extensions/world_country_extension.dart";

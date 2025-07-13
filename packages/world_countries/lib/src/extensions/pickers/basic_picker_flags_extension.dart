@@ -4,6 +4,7 @@ import "package:meta/meta.dart";
 import "package:world_flags/world_flags.dart";
 
 import "../../constants/ui_constants.dart";
+import "../platform_dispatcher_extension.dart";
 
 @internal
 extension BasicPickerFlagsExtension<T extends IsoTranslated>
@@ -19,7 +20,9 @@ extension BasicPickerFlagsExtension<T extends IsoTranslated>
     BasicFlag Function(BasicFlag flag, T, List<WorldCountry>?)? flagsMapper,
     WorldCountry? localeCountry,
   }) {
-    final country = localeCountry ?? _countryFromPlatform;
+    final country =
+        localeCountry ??
+        WidgetsBinding.instance.platformDispatcher.firstCountryOrNull;
     final mapper = flagsMapper ?? _defaultFlagsMapper;
     final flagMap = Map<T, BasicFlag>.of(this);
     final localeFlag = _countryFlags[country];
@@ -46,16 +49,6 @@ extension BasicPickerFlagsExtension<T extends IsoTranslated>
     }
 
     return flagMap;
-  }
-
-  WorldCountry? get _countryFromPlatform {
-    for (final locale in WidgetsBinding.instance.platformDispatcher.locales) {
-      if (locale.countryCode?.length == IsoStandardized.codeShortLength) {
-        return WorldCountry.maybeFromCodeShort(locale.countryCode);
-      }
-    }
-
-    return null;
   }
 
   BasicFlag _defaultFlagsMapper(BasicFlag flag, T _, List<WorldCountry>? _) =>
