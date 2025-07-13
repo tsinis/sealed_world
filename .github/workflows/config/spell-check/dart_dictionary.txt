@@ -1,3 +1,13 @@
+# Keywords/terms specific to this Dart/Flutter and this package ecosystem
+dartdoc
+pubspec
+unawaited
+gitignores
+writeln
+Stderrs
+srcset
+appbar
+wireframe
 Abk
 Abw
 Amh
@@ -510,7 +520,6 @@ Swe
 Swz
 Sxm
 Syc
-TODO
 Tah
 Tca
 Tcd
@@ -565,7 +574,6 @@ codecov
 codefactor
 cpanel
 cyclomatic
-dartdoc
 dartlang
 demonyms
 deps
@@ -616,7 +624,6 @@ nok
 opensource
 openstreetmap
 plugins
-pubspec
 pyc
 regexps
 rfc
@@ -630,9 +637,7 @@ svn
 swp
 tearoffs
 timezones
-todo
 tsinis
-unawaited
 unicode
 unprocessable
 uri
@@ -646,3 +651,4 @@ workflows
 www
 xcuserdata
 web
+subtags

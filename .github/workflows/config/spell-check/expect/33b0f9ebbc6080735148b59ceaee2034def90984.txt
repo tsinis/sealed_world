@@ -1,9 +1,0 @@
-Ahoj
-cze
-encodable
-Gbr
-Google
-RSD
-svn
-swp
-todo
