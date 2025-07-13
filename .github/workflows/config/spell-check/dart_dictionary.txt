@@ -520,7 +520,6 @@ Swe
 Swz
 Sxm
 Syc
-TODO
 Tah
 Tca
 Tcd
@@ -638,7 +637,6 @@ svn
 swp
 tearoffs
 timezones
-todo
 tsinis
 unicode
 unprocessable
