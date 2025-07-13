@@ -1,0 +1,23 @@
+{
+  "version": "0.2",
+  "language": "en",
+  "flagWords": ["teh", "hte"],
+  "ignorePaths": [
+    ".github/**",
+    "**/macos/**",
+    "**/windows/**",
+    "**/linux/**",
+    "**/web/**",
+    "**/ios/**",
+    "**/android/**"
+  ],
+  "ignoreRegExpList": ["\\#[\\w\\-]+"],
+  "dictionaries": ["en_US", "softwareTerms", "dart_dictionary"],
+  "dictionaryDefinitions": [
+    {
+      "name": "globe_dictionary",
+      "path": "./.github/workflows/config/spell-check/globe_dictionary.txt",
+      "addWords": true
+    }
+  ]
+}

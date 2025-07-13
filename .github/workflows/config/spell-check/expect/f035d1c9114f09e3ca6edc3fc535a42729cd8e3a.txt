@@ -1,4 +1,0 @@
-Entrypoint
-UTF
-wasm
-webassembly

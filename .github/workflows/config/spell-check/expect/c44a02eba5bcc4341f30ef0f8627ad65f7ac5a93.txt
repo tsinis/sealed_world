@@ -1,3 +1,0 @@
-COLR
-mixins
-Validator
