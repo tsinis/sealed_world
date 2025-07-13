@@ -9,7 +9,8 @@
     "**/linux/**",
     "**/web/**",
     "**/ios/**",
-    "**/android/**"
+    "**/android/**",
+    "**/*.*.dart"
   ],
   "ignoreRegExpList": ["\\#[\\w\\-]+"],
   "dictionaries": ["en_US", "softwareTerms", "dart_dictionary"],
