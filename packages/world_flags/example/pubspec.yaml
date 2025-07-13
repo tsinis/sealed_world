@@ -18,5 +18,4 @@ dev_dependencies:
   dart_code_metrics_presets: any # Constrained in the workspace pubspec.yaml
 
 flutter:
-  disable-swift-package-manager: false
   uses-material-design: true
