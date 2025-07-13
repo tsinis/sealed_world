@@ -9,8 +9,6 @@ updates:
       day: "sunday"
       time: "09:00"
       timezone: "Europe/Vienna"
-    reviewers:
-      - "tsinis"
     commit-message:
       prefix: "chore"
       include: "scope"
@@ -28,8 +26,6 @@ updates:
       day: "sunday"
       time: "09:00"
       timezone: "Europe/Vienna"
-    reviewers:
-      - "tsinis"
     commit-message:
       prefix: "chore"
       include: "scope"
@@ -46,8 +42,6 @@ updates:
       day: "sunday"
       time: "09:00"
       timezone: "Europe/Vienna"
-    reviewers:
-      - "tsinis"
     commit-message:
       prefix: "chore"
       include: "scope"
@@ -64,8 +58,6 @@ updates:
       day: "sunday"
       time: "09:00"
       timezone: "Europe/Vienna"
-    reviewers:
-      - "tsinis"
     commit-message:
       prefix: "chore"
       include: "scope"
@@ -82,8 +74,6 @@ updates:
       day: "sunday"
       time: "09:00"
       timezone: "Europe/Vienna"
-    reviewers:
-      - "tsinis"
     commit-message:
       prefix: "chore"
       include: "scope"
@@ -100,8 +90,6 @@ updates:
       day: "sunday"
       time: "09:00"
       timezone: "Europe/Vienna"
-    reviewers:
-      - "tsinis"
     commit-message:
       prefix: "chore"
       include: "scope"
@@ -118,8 +106,6 @@ updates:
       day: "sunday"
       time: "09:00"
       timezone: "Europe/Vienna"
-    reviewers:
-      - "tsinis"
     commit-message:
       prefix: "chore"
       include: "scope"
@@ -136,8 +122,6 @@ updates:
       day: "sunday"
       time: "09:00"
       timezone: "Europe/Vienna"
-    reviewers:
-      - "tsinis"
     commit-message:
       prefix: "chore"
       include: "scope"
@@ -154,8 +138,6 @@ updates:
       day: "sunday"
       time: "09:00"
       timezone: "Europe/Vienna"
-    reviewers:
-      - "tsinis"
     commit-message:
       prefix: "chore"
       include: "scope"
@@ -172,14 +154,11 @@ updates:
       day: "sunday"
       time: "09:00"
       timezone: "Europe/Vienna"
-    reviewers:
-      - "tsinis"
     commit-message:
       prefix: "chore"
       include: "scope"
     labels:
       - "dependencies"
-      - "android"
     ignore:
       - dependency-name: "*"
         update-types: ["version-update:semver-major"]
@@ -192,14 +171,11 @@ updates:
       day: "sunday"
       time: "09:00"
       timezone: "Europe/Vienna"
-    reviewers:
-      - "tsinis"
     commit-message:
       prefix: "chore"
       include: "scope"
     labels:
       - "dependencies"
-      - "android"
     ignore:
       - dependency-name: "*"
         update-types: ["version-update:semver-major"]
