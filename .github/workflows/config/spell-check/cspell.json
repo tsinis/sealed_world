@@ -16,7 +16,7 @@
   "dictionaryDefinitions": [
     {
       "name": "dart_dictionary",
-      "path": "./.github/workflows/config/spell-check/dart_dictionary.txt",
+      "path": ".github/workflows/config/spell-check/dart_dictionary.txt",
       "addWords": true
     }
   ]
