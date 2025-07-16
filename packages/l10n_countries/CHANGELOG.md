@@ -1,4 +1,9 @@
-## 1.1.1
+## 1.2.0
+
+FIX
+
+- Corrected Welsh official country name for Curaçao.
+- Corrected Korean localization for British Indian Ocean Territory.
 
 CHORE
 

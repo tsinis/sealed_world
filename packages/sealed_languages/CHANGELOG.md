@@ -1,3 +1,30 @@
+## 2.3.0
+
+NEW FEATURES
+
+- Updated language metadata to better reflect writing systems and script directionality for [many](https://github.com/tsinis/sealed_world/pull/360/files) languages.
+
+REFACTOR
+
+- Deprecated functional-style pattern matching methods and boolean type-check getters across ISO/sealed models. Users are advised to use switch expressions or direct equality/type checks instead.
+- Deprecated extensions providing `is*` getters in favor of direct type checks.
+- Standardized method return types for map serialization to use stronger, standard Dart Map types.
+- Simplified code by removing redundant comments and improving null-aware syntax usage.
+
+CHORE
+
+- The Dart SDK was bumped to v3.8.1.
+- Refined static analysis and linting rules, including enabling and disabling specific Dart Code Metrics rules.
+
+DOCUMENTATION
+
+- Improved formatting, fixed typos, and updated usage examples in README.
+
+TEST
+
+- Removed outdated test files related to deprecated APIs.
+- Added or updated test cases to cover new behaviors and deprecation handling.
+
 ## 2.2.0
 
 NEW FEATURES

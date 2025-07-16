@@ -1,3 +1,49 @@
+## 2.6.0
+
+FIX
+
+- Updated country [data](https://github.com/tsinis/sealed_world/pull/361/files) with recent population, Gini, and capital information.
+- Fixed demonyms, borders, and native names for select countries.
+- Corrected Welsh official country name for Curaçao.
+- Corrected Korean localization for British Indian Ocean Territory.
+- Corrected `subunitToUnit` value for Hungarian Forint.
+
+NEW FEATURES
+
+- Flag anti-aliasing is not smarter - it's defined on element painters level, so and rectangle elements are no logner anti-aliased.
+- Added `copyWith` extension for `IsoFlag`, also exposed flag data maps `map` and `alternativeMap` via public getters for easier access.
+- Added a new property `FlagElementsType? baseElementType` to flag data `FlagProperties` indicating the base geometric or symbolic element of each flag, enhancing metadata and classification.
+- Also added an `isSimplified` property to flag definitions, allowing users to distinguish between simplified and fully detailed flags.
+- Updated language metadata to better reflect writing systems and script directionality for [many](https://github.com/tsinis/sealed_world/pull/360/files) languages.
+
+REFACTOR
+
+- Deprecated ineffective anti-aliasing override `flagAntiAliasOverride` properties and improved anti-aliasing handling in flag rendering.
+- Optimized flag painting performance for stripes and stars, reducing redundant object creation and improving rendering efficiency.
+- Deprecated `fullFlags` list in favor of new `isSimplified` property.
+- Marked certain currencies as [deprecated](https://github.com/tsinis/sealed_world/pull/361/files) and updated related comments.
+- Corrected country and language associations in documentation for currencies and languages.
+- Deprecated functional-style pattern matching methods and boolean type-check getters across ISO/sealed models. Users are advised to use switch expressions or direct equality/type checks instead.
+- Deprecated extensions providing `is*` getters in favor of direct type checks.
+- Standardized method return types for map serialization to use stronger, standard Dart Map types.
+- Simplified code by removing redundant comments and improving null-aware syntax usage.
+
+CHORE
+
+- The Dart SDK was bumped to v3.8.1.
+- Refined static analysis and linting rules, including enabling and disabling specific Dart Code Metrics rules.
+
+DOCUMENTATION
+
+- Improved code and API documentation for clarity and accuracy.
+- Improved formatting, fixed typos, and updated usage examples in README.
+
+TEST
+
+- Improved test handling for platform-specific golden image comparisons by skipping only the assertion step on unsupported platforms.
+- Removed outdated test files related to deprecated APIs.
+- Added or updated test cases to cover new behaviors and deprecation handling.
+
 ## 2.5.0
 
 FIX
