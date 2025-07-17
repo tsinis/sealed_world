@@ -5,7 +5,7 @@ FIX
 - Updated country [data](https://github.com/tsinis/sealed_world/pull/361/files) with recent population, Gini, and capital information.
 - Fixed demonyms, borders, and native names for select countries.
 - Corrected Welsh official country name for Curaçao.
-- Corrected Korean localization for British Indian Ocean Territory.
+- Corrected Korean localization for British Indian Ocean Territory, Dominica, Mongolia, Wallis and Futuna and South Georgia.
 - Corrected `subunitToUnit` value for Hungarian Forint.
 
 NEW FEATURES
