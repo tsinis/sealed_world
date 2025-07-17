@@ -61,7 +61,7 @@ class _MainPageState extends State<MainPage>
     super.didUpdateWidget(oldWidget);
     WidgetsBinding.instance.addPostFrameCallback(
       (_) => ThemeProvider.of(
-        context, // ignore: unnecessary-trailing-comma, broken after Dart 3.7.0.
+        context, // Dart v3.7 formatting.
       )?.onColorsChange?.call(widget._data.country.flagStripeColors),
     );
   }
