@@ -3,7 +3,7 @@
 FIX
 
 - Corrected Welsh official country name for Curaçao.
-- Corrected Korean localization for British Indian Ocean Territory, Dominica, Mongolia, and South Georgia.
+- Corrected Korean localization for British Indian Ocean Territory, Dominica, Mongolia, Wallis and Futuna and South Georgia.
 
 CHORE
 
