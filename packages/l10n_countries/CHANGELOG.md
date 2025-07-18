@@ -5,6 +5,8 @@ FIX
 - Corrected Welsh official country name for Curaçao.
 - Corrected Korean localization for British Indian Ocean Territory, Dominica, Mongolia, Wallis and Futuna and South Georgia.
 
+## 1.1.1
+
 CHORE
 
 - The Dart SDK was bumped to v3.8.1.

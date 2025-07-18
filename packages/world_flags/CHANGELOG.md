@@ -10,7 +10,7 @@ FIX
 
 NEW FEATURES
 
-- Flag anti-aliasing is not smarter - it's defined on element painters level, so and rectangle elements are no logner anti-aliased.
+- Flag anti-aliasing is now smarter - it's defined on element painters level, so rectangle elements are no longer anti-aliased.
 - Added `copyWith` extension for `IsoFlag`, also exposed flag data maps `map` and `alternativeMap` via public getters for easier access.
 - Added a new property `FlagElementsType? baseElementType` to flag data `FlagProperties` indicating the base geometric or symbolic element of each flag, enhancing metadata and classification.
 - Also added an `isSimplified` property to flag definitions, allowing users to distinguish between simplified and fully detailed flags.

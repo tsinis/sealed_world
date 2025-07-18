@@ -9,7 +9,7 @@ This project enables the visual presentation of "Sealed World" data, which inclu
 Flutter WASM: To preview this example, you can visit [this web page](https://tsin.is/sealed_world) using any web browser with WASM GC support. Please allow up to 10 seconds for initial fonts and data caching.
 
 > [!NOTE]
-> Please keep in mind that demo was built with Flutter WASM which is in very early alpha stage, so performance might be affected.
+> Please keep in mind that the demo was built with Flutter WASM which is in very early alpha stage, so performance might be affected.
 
 ## How to run it
 
