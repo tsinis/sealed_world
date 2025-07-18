@@ -13,11 +13,27 @@
     "**/*.*.dart"
   ],
   "ignoreRegExpList": ["\\#[\\w\\-]+"],
-  "dictionaries": ["en_US", "softwareTerms", "dart_dictionary"],
+  "dictionaries": [
+    "en_US",
+    "softwareTerms",
+    "dart_dictionary",
+    "iso_dictionary",
+    "nicknames_dictionary"
+  ],
   "dictionaryDefinitions": [
     {
       "name": "dart_dictionary",
       "path": "dart_dictionary.txt",
+      "addWords": true
+    },
+    {
+      "name": "iso_dictionary",
+      "path": "iso_dictionary.txt",
+      "addWords": true
+    },
+    {
+      "name": "nicknames_dictionary",
+      "path": "nicknames_dictionary.txt",
       "addWords": true
     }
   ]
