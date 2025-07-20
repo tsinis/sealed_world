@@ -83,7 +83,7 @@ jobs:
 
       - name: 🔎 Dart Code Metrics (Author)
         if: ${{ github.event_name == 'pull_request' && github.actor == 'tsinis' }}
-        uses: CQLabs/dcm-action@v2.0.1
+        uses: CQLabs/dcm-action@v2.0.2
         with:
           ci-key: oss
           email: oss
