@@ -6,7 +6,7 @@ import "package:world_countries/src/extensions/world_country_extension.dart";
 import "package:world_countries/src/models/locale/typed_locale.dart";
 import "package:world_flags/world_flags.dart";
 
-void main() => group("WorldCountryExtension ", () {
+void main() => group("WorldCountryExtension", () {
   final value = WorldCountry.list.first;
 
   group("toLocale", () {

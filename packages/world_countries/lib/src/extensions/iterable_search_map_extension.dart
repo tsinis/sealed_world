@@ -1,4 +1,5 @@
 import "package:flutter/material.dart";
+import "package:meta/meta.dart" show internal;
 
 import "../models/typedefs.dart";
 
@@ -8,6 +9,7 @@ import "../models/typedefs.dart";
 /// This extension helps with implementing search functionality by creating
 /// searchable mappings from objects to search terms and filtering objects based
 /// on search criteria.
+@internal
 extension IterableSearchMapExtension<T extends Object> on Iterable<T> {
   /// Creates an unmodifiable search map from this iterable.
   ///

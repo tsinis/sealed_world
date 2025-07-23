@@ -3,7 +3,7 @@ import "package:flutter_test/flutter_test.dart";
 import "package:world_countries/src/extensions/natural_language_extension.dart";
 import "package:world_flags/world_flags.dart";
 
-void main() => group("NaturalLanguageExtension ", () {
+void main() => group("NaturalLanguageExtension", () {
   final value = NaturalLanguage.list.first;
 
   group("toLocale", () {

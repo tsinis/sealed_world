@@ -4,7 +4,7 @@ import "package:world_countries/src/extensions/locale_extension.dart";
 import "package:world_countries/src/models/locale/typed_locale.dart";
 import "package:world_flags/world_flags.dart";
 
-void main() => group("LocaleExtension ", () {
+void main() => group("LocaleExtension", () {
   const usa = CountryUsa();
   const english = LangEng();
   const latin = ScriptLatn();
