@@ -1,0 +1,46 @@
+name: update_golden_tests
+
+on:
+  workflow_dispatch:
+    inputs:
+      branch:
+        description: 'Branch to update golden tests for'
+        required: true
+        default: 'main'
+        type: string
+
+jobs:
+  update-goldens:
+    name: 🖼️ Update Golden Test Files
+    runs-on: ubuntu-latest
+    timeout-minutes: 20
+    permissions:
+      contents: write
+    steps:
+      - name: 📚 Git checkout
+        uses: actions/checkout@v4.2.2
+        with:
+          ref: ${{ inputs.branch }}
+          token: ${{ secrets.GITHUB_TOKEN }}
+          fetch-depth: 0
+
+      - name: 🐦 Setup Flutter
+        uses: subosito/flutter-action@v2.21.0
+        with:
+          cache: true
+          channel: "stable"
+
+      - name: 📦 Install dependencies
+        working-directory: packages/world_flags
+        run: flutter pub get
+
+      - name: ️🧪 Update golden tests
+        working-directory: packages/world_flags
+        run: flutter test --update-goldens
+
+      - name: 🚀 Commit updated golden files
+        uses: stefanzweifel/git-auto-commit-action@v6.0.1
+        with:
+            branch: ${{ inputs.branch }}
+            file_pattern: 'packages/world_flags/test/goldens/*'
+            commit_message: 'chore(test): update golden test files for `world_flags` package'
