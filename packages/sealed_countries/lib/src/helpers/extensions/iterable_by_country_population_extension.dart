@@ -1,3 +1,5 @@
+import "package:sealed_currencies/sealed_currencies.dart" show IsoStandardized;
+
 import "../../model/country/country.dart";
 
 /// Extension on [Iterable] that provides functionality to map items to
@@ -7,17 +9,17 @@ import "../../model/country/country.dart";
 /// currencies, languages, etc.) with countries based on their usage patterns
 /// while respecting population-based ordering.
 ///
-/// The generic type [T] must extend [Object] and represents any item that can
-/// be associated with countries through some mapping function.
-extension IterableByCountryPopulationExtension<T extends Object>
+/// The generic type [T] must extend [IsoStandardized] and represents any item
+/// that can be associated with countries through some mapping function.
+extension IterableByCountryPopulationExtension<T extends IsoStandardized>
     on Iterable<T> {
   /// Maps each item in this iterable to a list of countries sorted by
   /// population.
   ///
-  /// This method creates a mapping from items of type [T] to lists of
-  /// countries, where countries are ordered by population in descending order
-  /// (most populous first). The mapping process considers official
-  /// associations, unofficial relationships, and custom overrides:
+  /// This method creates a mapping from items of type [IsoStandardized] to
+  /// lists of countries, where countries are ordered by population in
+  /// descending order (most populous first). The mapping process considers
+  /// official associations, unofficial relationships, and custom overrides:
   /// * [itemsForCountry] - Function that extracts items of type [T] from a
   ///   country. Returns `null` or empty iterable if the country has no
   ///   associated items.

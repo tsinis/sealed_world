@@ -3,21 +3,9 @@ import "../data/regional_bloc/regional_bloc.data.dart";
 import "../model/regional_bloc/world_bloc.dart";
 
 /// List of all standard [RegionalBloc] sorted by code.
-const regionalBlocList = <RegionalBloc>[
-  BlocAL(),
-  BlocASEAN(),
-  BlocAU(),
-  BlocCAIS(),
-  BlocCARICOM(),
-  BlocCEFTA(),
-  BlocEEU(),
-  BlocEFTA(),
-  BlocEU(),
-  BlocNAFTA(),
-  BlocPA(),
-  BlocSAARC(),
-  BlocUSAN(),
-];
+@Deprecated("Use `RegionalBloc.list` instead.")
+// ignore: avoid-explicit-type-declaration, deperecated member.
+const List<RegionalBloc> regionalBlocList = RegionalBloc.list;
 
 /// Map of [RegionalBloc] standard acronyms.
 const regionalBlocAcronymMap = <String, RegionalBloc>{

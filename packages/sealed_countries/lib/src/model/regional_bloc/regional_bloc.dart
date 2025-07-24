@@ -130,6 +130,20 @@ class RegionalBloc extends WorldBloc {
 
   /// A list of all the regional blocs currently
   /// supported by the [RegionalBloc] class.
-  // ignore: avoid-explicit-type-declaration, vs specify_nonobvious_property_types.
-  static const List<RegionalBloc> list = regionalBlocList;
+  // ignore_for_file: avoid-referencing-subclasses, transition to sealed class.
+  static const list = <RegionalBloc>[
+    BlocAL(),
+    BlocASEAN(),
+    BlocAU(),
+    BlocCAIS(),
+    BlocCARICOM(),
+    BlocCEFTA(),
+    BlocEEU(),
+    BlocEFTA(),
+    BlocEU(),
+    BlocNAFTA(),
+    BlocPA(),
+    BlocSAARC(),
+    BlocUSAN(),
+  ];
 }
