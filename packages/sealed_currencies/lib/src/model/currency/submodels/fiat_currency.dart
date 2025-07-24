@@ -114,7 +114,7 @@ class FiatCurrency extends Currency
     Iterable<FiatCurrency>? currencies,
   ]) => currencies == null
       ? codeMap.findByCodeOrThrow(code)
-      : currencies.firstIsoWhereCode(code.toUpperCaseIsoCode());
+      : currencies.firstIsoWhereCode(IsoObject(code).toUpperCaseCode());
 
   /// Returns a [FiatCurrency] instance from an numeric ISO 4217 code.
   ///
@@ -132,7 +132,9 @@ class FiatCurrency extends Currency
     Iterable<FiatCurrency>? currencies,
   ]) => currencies == null
       ? codeNumericMap.findByCodeOrThrow(codeNumeric)
-      : currencies.firstIsoWhereCodeOther(codeNumeric.toUpperCaseIsoCode());
+      : currencies.firstIsoWhereCodeOther(
+          IsoObject(codeNumeric).toUpperCaseCode(),
+        );
 
   /// Returns a [FiatCurrency] instance from a currency name.
   ///
@@ -150,7 +152,7 @@ class FiatCurrency extends Currency
     Iterable<FiatCurrency> currencies = listExtended,
     // ignore: avoid-non-empty-constructor-bodies, more clear for factory methods.
   ]) {
-    final upperCaseName = name.toUpperCaseIsoCode();
+    final upperCaseName = IsoObject.maybe(name)?.toUpperCaseCode();
 
     return currencies.firstIsoWhere(
       (currency) => currency.name.toUpperCase() == upperCaseName,
@@ -186,7 +188,7 @@ class FiatCurrency extends Currency
     Iterable<FiatCurrency>? currencies,
   ]) => currencies == null
       ? map.findByCodeOrThrow(code)
-      : code.toUpperCaseIsoCode().maybeMapIsoCode(
+      : IsoObject(code).toUpperCaseCode().maybeMapIsoCode(
           orElse: (regular) => FiatCurrency.fromCode(regular, currencies),
           numeric: (numeric) =>
               FiatCurrency.fromCodeNumeric(numeric, currencies),
@@ -337,7 +339,7 @@ class FiatCurrency extends Currency
     Iterable<FiatCurrency>? currencies,
   ]) => currencies == null
       ? map.maybeFindByCode(code)
-      : code?.toUpperCaseIsoCode().maybeMapIsoCode(
+      : IsoObject.maybe(code)?.toUpperCaseCode().maybeMapIsoCode(
           orElse: (regular) => maybeFromCode(regular, currencies),
           numeric: (numeric) => maybeFromCodeNumeric(numeric, currencies),
           minLength: IsoStandardized.codeLength,
@@ -360,7 +362,7 @@ class FiatCurrency extends Currency
     Iterable<FiatCurrency>? currencies,
   ]) {
     if (currencies == null) return codeMap.maybeFindByCode(code);
-    final string = code?.toUpperCaseIsoCode().maybeToValidIsoCode(
+    final string = IsoObject.maybe(code)?.toUpperCaseCode().maybeToValidIsoCode(
       exactLength: IsoStandardized.codeLength,
     );
 
@@ -383,9 +385,10 @@ class FiatCurrency extends Currency
     Iterable<FiatCurrency>? currencies,
   ]) {
     if (currencies == null) return codeNumericMap.maybeFindByCode(codeNumeric);
-    final string = codeNumeric?.toUpperCaseIsoCode().maybeToValidIsoCode(
-      exactLength: IsoStandardized.codeLength,
-    );
+
+    final string = IsoObject.maybe(codeNumeric)
+        ?.toUpperCaseCode()
+        .maybeToValidIsoCode(exactLength: IsoStandardized.codeLength);
 
     return currencies.firstIsoWhereCodeOtherOrNull(string);
   }

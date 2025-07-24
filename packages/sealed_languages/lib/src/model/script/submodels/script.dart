@@ -58,9 +58,10 @@ class Script extends WritingSystem
   // ignore: avoid-non-empty-constructor-bodies, more clear for factory methods.
   factory Script.fromCode(Object code, [Iterable<Script>? scripts]) {
     if (scripts == null) return codeMap.findByCodeOrThrow(code);
-    String? validCode = code.toUpperCaseIsoCode().maybeToValidIsoCode(
-      exactLength: codeLength,
-    );
+
+    String? validCode = IsoObject(
+      code, // Dart 3.8 formatting style.
+    ).toUpperCaseCode().maybeToValidIsoCode(exactLength: codeLength);
     if (validCode == null) {
       throw StateError(
         "Provided $code isn't a valid $standardCodeName code. "
@@ -96,7 +97,9 @@ class Script extends WritingSystem
     Iterable<Script>? scripts,
   ]) => scripts == null
       ? codeNumericMap.findByCodeOrThrow(codeNumeric)
-      : scripts.firstIsoWhereCodeOther(codeNumeric.toUpperCaseIsoCode());
+      : scripts.firstIsoWhereCodeOther(
+          IsoObject(codeNumeric).toUpperCaseCode(),
+        );
 
   /// Creates a new instance of the [Script] class from the name of the script.
   ///
@@ -107,7 +110,7 @@ class Script extends WritingSystem
   /// or throws a [StateError] if no such instance exists.
   // ignore: avoid-non-empty-constructor-bodies, more clear for factory methods.
   factory Script.fromName(Object name, [Iterable<Script> scripts = list]) {
-    final upperCaseName = name.toUpperCaseIsoCode();
+    final upperCaseName = IsoObject(name).toUpperCaseCode();
 
     return scripts.firstIsoWhere(
       (script) => script.name.toUpperCase() == upperCaseName,
@@ -139,7 +142,7 @@ class Script extends WritingSystem
   factory Script.fromAnyCode(Object code, [Iterable<Script>? scripts]) =>
       scripts == null
       ? map.findByCodeOrThrow(code)
-      : code.toUpperCaseIsoCode().maybeMapIsoCode(
+      : IsoObject(code).toUpperCaseCode().maybeMapIsoCode(
           orElse: (regular) => Script.fromCode(regular, scripts),
           numeric: (numeric) => Script.fromCodeNumeric(numeric, scripts),
           maxLength: codeLength,
@@ -241,7 +244,7 @@ class Script extends WritingSystem
   static Script? maybeFromAnyCode(Object? code, [Iterable<Script>? scripts]) =>
       scripts == null
       ? map.maybeFindByCode(code)
-      : code?.toUpperCaseIsoCode().maybeMapIsoCode(
+      : IsoObject.maybe(code)?.toUpperCaseCode().maybeMapIsoCode(
           orElse: (regular) => maybeFromCode(regular, scripts),
           numeric: (numeric) => maybeFromCodeNumeric(numeric, scripts),
           maxLength: codeLength,
@@ -268,9 +271,10 @@ class Script extends WritingSystem
   /// `script` variable.
   static Script? maybeFromCode(Object? code, [Iterable<Script>? scripts]) {
     if (scripts == null) return codeMap.maybeFindByCode(code);
-    String? string = code?.toUpperCaseIsoCode().maybeToValidIsoCode(
-      exactLength: codeLength,
-    );
+
+    String? string = IsoObject.maybe(
+      code, // Dart 3.8 formatting style.
+    )?.toUpperCaseCode().maybeToValidIsoCode(exactLength: codeLength);
     if (string == null) return null;
     string = formatToStandardCode(string);
 
@@ -299,9 +303,10 @@ class Script extends WritingSystem
     Iterable<Script>? scripts,
   ]) {
     if (scripts == null) return codeNumericMap.maybeFindByCode(codeNumeric);
-    final string = codeNumeric?.toUpperCaseIsoCode().maybeToValidIsoCode(
-      exactLength: IsoStandardized.codeLength,
-    );
+
+    final string = IsoObject.maybe(codeNumeric)
+        ?.toUpperCaseCode()
+        .maybeToValidIsoCode(exactLength: IsoStandardized.codeLength);
 
     return scripts.firstIsoWhereCodeOtherOrNull(string);
   }

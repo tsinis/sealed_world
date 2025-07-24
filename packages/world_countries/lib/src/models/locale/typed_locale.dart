@@ -135,7 +135,7 @@ class TypedLocale extends Locale implements BasicTypedLocale {
 
   @override
   String? get countryCode =>
-      country?.codeShort ?? _regionalCode?.toUpperCaseIsoCode();
+      country?.codeShort ?? IsoString.maybe(_regionalCode)?.toUpperCaseCode();
 
   @override
   String get languageCode => language.codeShort.toLowerCase();

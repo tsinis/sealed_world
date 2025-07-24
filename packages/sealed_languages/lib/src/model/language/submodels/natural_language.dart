@@ -134,7 +134,7 @@ class NaturalLanguage extends Language
     Iterable<NaturalLanguage>? languages,
   ]) => languages == null
       ? codeMap.findByCodeOrThrow(code)
-      : languages.firstIsoWhereCode(code.toUpperCaseIsoCode());
+      : languages.firstIsoWhereCode(IsoObject(code).toUpperCaseCode());
 
   /// Returns an instance of the [NaturalLanguage] class from a two-letter
   /// ISO 639-1 code.
@@ -152,7 +152,9 @@ class NaturalLanguage extends Language
     Iterable<NaturalLanguage>? languages,
   ]) => languages == null
       ? codeShortMap.findByCodeOrThrow(codeShort)
-      : languages.firstIsoWhereCodeOther(codeShort.toUpperCaseIsoCode());
+      : languages.firstIsoWhereCodeOther(
+          IsoObject(codeShort).toUpperCaseCode(),
+        );
 
   /// Returns an instance of the [NaturalLanguage] class from the name of the
   /// language.
@@ -168,7 +170,7 @@ class NaturalLanguage extends Language
     Iterable<NaturalLanguage> languages = list,
     // ignore: avoid-non-empty-constructor-bodies, more clear for factory methods.
   ]) {
-    final upperCaseName = name.toUpperCaseIsoCode();
+    final upperCaseName = IsoObject(name).toUpperCaseCode();
 
     return languages.firstIsoWhere(
       (language) => language.name.toUpperCase() == upperCaseName,
@@ -204,7 +206,7 @@ class NaturalLanguage extends Language
     Iterable<NaturalLanguage>? languages,
   ]) => languages == null
       ? map.findByCodeOrThrow(code)
-      : code.toUpperCaseIsoCode().maybeMapIsoCode(
+      : IsoObject(code).toUpperCaseCode().maybeMapIsoCode(
           orElse: (regular) => NaturalLanguage.fromCode(regular, languages),
           short: (short) => NaturalLanguage.fromCodeShort(short, languages),
         );
@@ -224,7 +226,7 @@ class NaturalLanguage extends Language
   ]) => languages == null
       ? codeMap.maybeFindByCode(code)
       : languages.firstIsoWhereCodeOrNull(
-          code?.toUpperCaseIsoCode().maybeToValidIsoCode(
+          IsoObject.maybe(code)?.toUpperCaseCode().maybeToValidIsoCode(
             exactLength: IsoStandardized.codeLength,
           ),
         );
@@ -244,7 +246,7 @@ class NaturalLanguage extends Language
   ]) => languages == null
       ? codeShortMap.maybeFindByCode(codeShort)
       : languages.firstIsoWhereCodeOtherOrNull(
-          codeShort?.toUpperCaseIsoCode().maybeToValidIsoCode(
+          IsoObject.maybe(codeShort)?.toUpperCaseCode().maybeToValidIsoCode(
             exactLength: IsoStandardized.codeShortLength,
           ),
         );
@@ -370,7 +372,7 @@ class NaturalLanguage extends Language
     Iterable<NaturalLanguage>? languages,
   ]) => languages == null
       ? map.maybeFindByCode(code)
-      : code?.toUpperCaseIsoCode().maybeMapIsoCode(
+      : IsoObject.maybe(code)?.toUpperCaseCode().maybeMapIsoCode(
           orElse: (regular) => maybeFromCode(regular, languages),
           short: (short) => maybeFromCodeShort(short, languages),
         );

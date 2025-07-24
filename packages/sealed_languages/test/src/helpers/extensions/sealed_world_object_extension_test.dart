@@ -1,3 +1,5 @@
+// ignore_for_file: deprecated_member_use_from_same_package, it's TODO!
+
 import "package:sealed_languages/src/helpers/extensions/sealed_world_object_extension.dart";
 import "package:test/test.dart";
 

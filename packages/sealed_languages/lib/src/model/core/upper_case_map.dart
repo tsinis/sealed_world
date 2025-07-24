@@ -1,6 +1,6 @@
 import "dart:collection" show MapBase, MapView;
 
-import "../../helpers/extensions/sealed_world_object_extension.dart";
+import "../../helpers/extensions/iso_object_extension_type.dart";
 
 /// An uppercase key map that uses trimmed uppercase string keys.
 ///
@@ -69,9 +69,8 @@ class UpperCaseMap<V extends Object> extends MapView<String, V> {
   @override
   String toString() => MapBase.mapToString(this);
 
-  T? _map<T extends Object>(Object? key, T? Function(String stringKey) mapper) {
-    final stringKey = key?.toUpperCaseIsoCode();
-
-    return stringKey == null ? null : mapper(stringKey);
-  }
+  T? _map<T extends Object>(
+    Object? key,
+    T? Function(String stringKey) mapper,
+  ) => key == null ? null : mapper(IsoObject(key).toUpperCaseCode());
 }

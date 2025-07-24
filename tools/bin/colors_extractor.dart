@@ -22,7 +22,7 @@ const map = {
       withFile: (file, name) {
         if (name.length > 2) return;
         // ignore: avoid-substring, no emoji here.
-        final countryCode = name.substring(0, 2).toUpperCaseIsoCode();
+        final countryCode = IsoString(name.substring(0, 2)).toUpperCaseCode();
         final country = WorldCountry.maybeFromCodeShort(countryCode);
         if (country == null) return;
         final countryName = country.internationalName;
