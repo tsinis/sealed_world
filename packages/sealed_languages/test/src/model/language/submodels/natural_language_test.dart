@@ -1,7 +1,8 @@
+import "dart:convert";
+
 import "package:_sealed_world_tests/sealed_world_tests.dart";
 // ignore: deprecated_member_use_from_same_package, it's TODO!
 import "package:sealed_languages/language_translations.dart";
-import "package:sealed_languages/src/helpers/extensions/sealed_world_json_string_extension.dart";
 import "package:sealed_languages/src/helpers/natural_language/natural_language_json.dart";
 import "package:sealed_languages/src/interfaces/iso_standardized.dart";
 import "package:sealed_languages/src/interfaces/json_encodable.dart";
@@ -320,18 +321,18 @@ void main() => group("$NaturalLanguage", () {
       test("compared to $NaturalLanguage: ${element.name}", () {
         final json = element.toJson();
         expect(json, isNotEmpty);
-        final decoded = json.tryParse(NaturalLanguageJson.fromMap);
-        expect(
-          decoded?.toString(short: false),
-          json.parse(NaturalLanguageJson.fromMap).toString(short: false),
+        final decoded = NaturalLanguageJson.fromMap(
+          // ignore: avoid-type-casts, it's a test.
+          jsonDecode(json) as Map<String, Object?>,
         );
-        expect(element.bibliographicCode, decoded?.bibliographicCode);
-        expect(element.family, decoded?.family);
-        expect(element.codeShort, decoded?.codeShort);
-        expect(element.isRightToLeft, decoded?.isRightToLeft);
-        expect(element.namesNative, decoded?.namesNative);
-        expect(element.code, decoded?.code);
-        expect(element.scripts, decoded?.scripts);
+
+        expect(element.bibliographicCode, decoded.bibliographicCode);
+        expect(element.family, decoded.family);
+        expect(element.codeShort, decoded.codeShort);
+        expect(element.isRightToLeft, decoded.isRightToLeft);
+        expect(element.namesNative, decoded.namesNative);
+        expect(element.code, decoded.code);
+        expect(element.scripts, decoded.scripts);
       });
     }
   });

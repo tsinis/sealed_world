@@ -1,8 +1,10 @@
+// coverage:ignore-file
 import "dart:convert";
 
 import "../../typedefs/typedefs.dart";
 
 /// Extension on [String] that provides methods for parsing JSON strings.
+@Deprecated("Use SDK tool (jsonDecode(json) as Map<String, dynamic>) instead")
 extension SealedWorldJsonStringExtension on String {
   /// Parses the JSON string into an object of type [T].
   ///
@@ -16,6 +18,7 @@ extension SealedWorldJsonStringExtension on String {
   /// final jsonString = '{"name": "John", "age": 30}';
   /// final person = jsonString.parse(Person.fromJson);
   /// ```
+  @Deprecated("Use SDK tool (jsonDecode(json) as Map<String, dynamic>) instead")
   T parse<T>(
     T Function(JsonMap map) fromJson, {
     JsonCodec codec = const JsonCodec(),
@@ -38,6 +41,7 @@ extension SealedWorldJsonStringExtension on String {
   /// final jsonString = '{"name": "John", "age": 30}';
   /// final maybePerson = jsonString.tryParse(Person.fromJson);
   /// ```
+  @Deprecated("Use SDK tool (jsonDecode(json) as Map<String, dynamic>) instead")
   T? tryParse<T>(T? Function(JsonMap map)? fromJson, {JsonCodec? codec}) {
     final decoderCodec = codec ?? const JsonCodec();
     try {

@@ -1,6 +1,7 @@
+import "dart:convert";
+
 import "package:sealed_countries/src/helpers/extensions/country_submodels/lat_lng_extension.dart";
 import "package:sealed_countries/src/model/country/submodels/lat_lng.dart";
-import "package:sealed_currencies/sealed_currencies.dart";
 import "package:test/test.dart";
 
 import "../../../test_data.dart";
@@ -37,6 +38,10 @@ void main() => group("$LatLng", () {
 
   test("toJson", () {
     final json = value.toJson();
-    expect(value, json.parse(LatLngExtension.fromMap));
+    expect(
+      value,
+      // ignore: avoid-type-casts, it's a test.
+      LatLngExtension.fromMap(jsonDecode(json) as Map<String, Object?>),
+    );
   });
 });
