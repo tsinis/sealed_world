@@ -6,6 +6,8 @@ NEW FEATURES
 
 REFACTOR
 
+- Standardized code normalization using new ISO code extension types, replacing older string and object extension methods.
+- Deprecated legacy constant lists in favor of centralized static lists for ISO classes.
 - Deprecated functional-style pattern matching methods and boolean type-check getters across ISO/sealed models. Users are advised to use switch expressions or direct equality/type checks instead.
 - Deprecated extensions providing `is*` getters in favor of direct type checks.
 - Standardized method return types for map serialization to use stronger, standard Dart Map types.

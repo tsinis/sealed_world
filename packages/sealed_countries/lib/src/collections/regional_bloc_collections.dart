@@ -4,7 +4,7 @@ import "../model/regional_bloc/world_bloc.dart";
 
 /// List of all standard [RegionalBloc] sorted by code.
 @Deprecated("Use `RegionalBloc.list` instead.")
-// ignore: avoid-explicit-type-declaration, deperecated member.
+// ignore: avoid-explicit-type-declaration, deprecated member.
 const List<RegionalBloc> regionalBlocList = RegionalBloc.list;
 
 /// Map of [RegionalBloc] standard acronyms.

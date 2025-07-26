@@ -27,7 +27,7 @@ import "sealed_world_object_extension.dart";
 ///   print(IsoObject(buffer).toUpperCaseCode()); // Outputs: ENG
 /// }
 /// ```
-// ignore: prefer-match-file-name, doesn't respect keywoards + "IsoObject".
+// ignore: prefer-match-file-name, doesn't respect keywords + "IsoObject".
 extension type const IsoObject._(Object _value) implements Object {
   /// Creates an ISO code wrapper for any [Object] value.
   const IsoObject(Object value) : this._(value);

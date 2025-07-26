@@ -4,7 +4,7 @@ import "../model/language/language.dart";
 
 /// List of all standard [NaturalLanguage] sorted by code.
 @Deprecated("Use `NaturalLanguage.list` instead.")
-// ignore: avoid-explicit-type-declaration, deperecated member.
+// ignore: avoid-explicit-type-declaration, deprecated member.
 const List<NaturalLanguage> naturalLanguageList = NaturalLanguage.list;
 
 /// Map of [NaturalLanguage] standard codes.

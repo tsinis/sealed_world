@@ -4,7 +4,7 @@ import "../model/currency/currency.dart";
 
 /// List of all standard [FiatCurrency] sorted by code.
 @Deprecated("Use `FiatCurrency.list` instead.")
-// ignore: avoid-explicit-type-declaration, deperecated member.
+// ignore: avoid-explicit-type-declaration, deprecated member.
 const List<FiatCurrency> fiatCurrencyList = FiatCurrency.list;
 
 /// Map of [FiatCurrency] standard codes.

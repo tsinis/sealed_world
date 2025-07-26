@@ -15,7 +15,7 @@
 ///   print(IsoString(buffer).toUpperCaseCode()); // Outputs: ENG
 /// }
 /// ```
-// ignore: prefer-match-file-name, doesn't respect keywoards + "IsoString".
+// ignore: prefer-match-file-name, doesn't respect keywords + "IsoString".
 extension type const IsoString._(String _value) implements String {
   /// Creates an ISO code wrapper for any [String] value.
   const IsoString(String value) : this._(value);

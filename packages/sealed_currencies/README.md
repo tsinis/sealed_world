@@ -9,7 +9,7 @@
 [![License MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
 [![Pub package](https://img.shields.io/pub/v/sealed_currencies.svg)](https://pub.dev/packages/sealed_currencies)
 
-This ISO-driven, pure Dart, fully tested and 3rd-party dependency-free package provides information about world currencies in the form of compile-time, tree-shakable constant classes with a sealed origin. Contains all actively used 169[^1] currencies with ISO letter 4217 codes, also provides ISO 4217 numeric codes, their English, native names, units, subunits, currency name translations, etc. For Flutter ready widgets (like currency picker) please use [world_countries](https://pub.dev/packages/world_countries) package.
+This ISO-driven, pure Dart, fully tested and 3rd-party dependency-free package provides information about world currencies in the form of compile-time, tree-shakable constant classes with a sealed origin. Contains all actively used 169<sup>1</sup> currencies with ISO letter 4217 codes, also provides ISO 4217 numeric codes, their English, native names, units, subunits, currency name translations, etc. For Flutter ready widgets (like currency picker) please use [world_countries](https://pub.dev/packages/world_countries) package.
 
 ### Features
 
@@ -19,7 +19,7 @@ This ISO-driven, pure Dart, fully tested and 3rd-party dependency-free package p
 | -------------------- | --------------------------- | ----------------------------------------------------------------------------------------- | ---------------------------------------------- |
 | code                 | **Yes**                     | The international 3-letter non-empty alphabetic code as defined by the ISO 4217 standard. | "EUR"                                          |
 | name                 | **Yes**                     | The English name of the currency.                                                         | "Euro"                                         |
-| namesNative          | **Yes**                     | The native names of the currency in different locales.                                    | ["Euro"]                                       |
+| namesNative          | **Yes**                     | The native names of the currency in different locales.                                    | `["Euro"]`                                     |
 | codeNumeric          | **Yes**                     | The international 3-numeric non-empty numeric code as defined by the ISO 4217 standard.   | "978"                                          |
 | alternateSymbols     | No                          | Alternative symbols for this currency or `null` if no such symbols exists.                | `null`                                         |
 | disambiguateSymbol   | No                          | Alternative currency used if symbol is ambiguous, or `null` if no such symbol exists.     | `null`                                         |
@@ -134,8 +134,9 @@ If you have any issues or suggestions for the package, please file them in the G
 
 - [ISO](https://www.iso.org/iso-4217-currency-codes.html)
 - [Wikipedia](https://wikipedia.org/wiki/ISO_4217)
-- [Data Source](https://github.com/RubyMoney/money)[^2]
+- [Data Source](https://github.com/RubyMoney/money)<sup>2</sup>
 - [Project Roadmap](https://github.com/users/tsinis/projects/1)
 
-[^1]: Doesn't contain complementary funds, etc. currency codes: BOV, CHE, CHW, COU, MXV, USN, UYI, UYW, VED, XSU, XUA, XXX.
-[^2]: Translated JSON data to Dart language (following Effective Dart: Style guidelines), modified, added additional data and functionality.
+<sup>1</sup> Doesn't contain complementary funds, etc. currency codes: BOV, CHE, CHW, COU, MXV, USN, UYI, UYW, VED, XSU, XUA, XXX.
+
+<sup>2</sup> Translated JSON data to Dart language (following Effective Dart: Style guidelines), modified, added additional data and functionality.
