@@ -186,6 +186,8 @@ Intelli
 Interlingue
 Iot
 Ipk
+Irlandais
+Irlandaise
 Irn
 Irq
 Isr
@@ -226,6 +228,7 @@ Koreanic
 Kpel
 Kthi
 Kwt
+Kxgpch
 LAOO
 LATF
 LATG
@@ -388,6 +391,7 @@ Phnx
 Piqd
 Plrd
 Plw
+Poblacht
 Portuguesa
 Prk
 Prt
@@ -657,6 +661,7 @@ polski
 português
 ptq
 ptr
+serbski
 tne
 tostring
 txa
@@ -665,4 +670,6 @@ xbc
 xox
 ycn
 zwk
+Éire
+Éireann
 čeština
