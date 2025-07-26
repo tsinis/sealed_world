@@ -87,8 +87,8 @@ class TypedLocale extends Locale implements BasicTypedLocale {
   /// The [regionalCode] parameter is optional and can be used instead of
   /// providing a [country] parameter.
   ///
-  /// The [l10nFormatter] parameter is optional. If provided, it customizes how
-  /// ISO translations are formatted. It takes a [TypedLocale] and an
+  /// The [l10nFormatter] parameter is optional. If provided, it customizes
+  /// how ISO translations are formatted. It takes a [TypedLocale] and an
   /// [IsoTranslated] object as input and returns a formatted string.
   ///
   /// {@macro typed_locale_with_translations_cache}
