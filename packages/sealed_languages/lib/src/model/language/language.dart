@@ -31,7 +31,7 @@ part "submodels/programming_language.dart";
 sealed class Language implements Named<String> {
   /// Creates a new instance of the [Language] class.
   ///
-  /// The [name] parameter is required and should be a non-empty string
+  /// The [name] parameter is required and should be a non-empty [String]
   /// representing the name of the language.
   const Language({required this.name})
     : assert(name.length > 0, "`name` should not be empty!");
