@@ -1,4 +1,4 @@
-/// An enum representing the base element shape on a flag.
+/// An [Enum] representing the base element shape on a flag.
 enum FlagElementsType {
   /// A flag with an ellipse shape element.
   ellipse,
