@@ -23,6 +23,8 @@ REFACTOR
 - Deprecated `fullFlags` list in favor of new `isSimplified` property.
 - Marked certain currencies as [deprecated](https://github.com/tsinis/sealed_world/pull/361/files) and updated related comments.
 - Corrected country and language associations in documentation for currencies and languages.
+- Standardized code normalization using new ISO code extension types, replacing older string and object extension methods.
+- Deprecated legacy constant lists in favor of centralized static lists for ISO classes.
 - Deprecated functional-style pattern matching methods and boolean type-check getters across ISO/sealed models. Users are advised to use switch expressions or direct equality/type checks instead.
 - Deprecated extensions providing `is*` getters in favor of direct type checks.
 - Standardized method return types for map serialization to use stronger, standard Dart Map types.
