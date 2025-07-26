@@ -424,9 +424,16 @@
         "presentation": { "revealProblems": "onProblem", "close": true }
       },
       {
-        "label": "Update Goldens",
+        "label": "Update Goldens (Local)",
         "type": "shell",
         "command": "flutter test --update-goldens",
+        "presentation": { "reveal": "always" },
+        "problemMatcher": []
+      },
+      {
+        "label": "Update Goldens (Remote)",
+        "type": "shell",
+        "command": "CURRENT_BRANCH=$(git branch --show-current); echo \"Triggering golden test update for branch: $CURRENT_BRANCH\"; gh workflow run update_goldens.yaml --field branch=\"$CURRENT_BRANCH\"",
         "presentation": { "reveal": "always" },
         "problemMatcher": []
       },
