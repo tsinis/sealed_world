@@ -4,6 +4,12 @@ import "package:test/test.dart";
 import "../../test_data.dart";
 
 void main() => group("IsoObject", () {
+  test("isIsoAlphaRegularCode", () {
+    expect(IsoObject(TestData.values.first).isIsoAlphaRegularCode, isTrue);
+    expect(const IsoObject("Latn").isIsoAlphaRegularCode, isTrue);
+    expect(const IsoObject("L").isIsoAlphaRegularCode, isFalse);
+  });
+
   group("toUpperCaseCode", () {
     test(
       "from $Null",
