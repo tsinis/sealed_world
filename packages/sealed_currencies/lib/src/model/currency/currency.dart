@@ -25,8 +25,8 @@ part "submodels/fiat_currency.g.dart";
 /// which provide additional properties specific to fiat and crypto currencies,
 /// respectively.
 ///
-/// The [code] parameter should not be empty. The [name] parameter should not be
-/// empty. The [symbol] parameter should not be empty if it is provided.
+/// The [code] parameter should not be empty. The [name] parameter should not
+/// be empty. The [symbol] parameter should not be empty if it is provided.
 sealed class Currency implements Named<String> {
   /// Creates a new instance of [Currency].
   ///
