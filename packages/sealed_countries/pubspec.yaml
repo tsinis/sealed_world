@@ -25,8 +25,8 @@ environment:
   sdk: ^3.8.1
 
 dependencies:
-  l10n_countries: ^1.1.1
-  sealed_currencies: ^2.2.0
+  l10n_countries: ^1.2.0
+  sealed_currencies: ^2.3.0
 
 dev_dependencies:
   _sealed_world_tests:
