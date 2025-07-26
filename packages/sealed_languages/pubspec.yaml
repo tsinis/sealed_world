@@ -25,7 +25,7 @@ environment:
   sdk: ^3.8.1
 
 dependencies:
-  l10n_languages: ^1.1.0
+  l10n_languages: ^1.2.0
 
 dev_dependencies:
   _sealed_world_tests:
