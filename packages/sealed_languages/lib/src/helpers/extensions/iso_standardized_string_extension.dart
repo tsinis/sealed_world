@@ -1,7 +1,17 @@
 import "../../interfaces/iso_standardized.dart";
+import "iso_object_extension_type.dart";
 
 /// Extension on [String] providing additional functionality
 /// for ISO standardized strings.
+///
+/// **Note:** This extension is internal and deprecated. Use [IsoObject]
+/// extension type instead for better type safety and to avoid polluting the
+/// global [String] scope.
+@Deprecated(
+  "Use `IsoObject` extension type instead. "
+  "This extension will become internal in a future version.",
+)
+// TODO! Remove export.
 extension IsoStandardizedStringExtension on String {
   /// Checks if the string is a valid ISO code.
   ///
@@ -12,6 +22,12 @@ extension IsoStandardizedStringExtension on String {
   ///
   /// In terms of this package, it means that it is a valid
   /// ISO `code` (not `codeOther`).
+  ///
+  /// **Deprecated:** Use [IsoObject] extension type instead:
+  /// ```dart
+  /// IsoObject(yourString).isIsoAlphaRegularCode
+  /// ```
+  @Deprecated("Use `IsoObject(string).isIsoAlphaRegularCode` instead.")
   bool get isIsoAlphaRegularCode =>
       RegExp(r"^[a-z]{3,}$", caseSensitive: false).hasMatch(this);
 
@@ -28,6 +44,12 @@ extension IsoStandardizedStringExtension on String {
   /// print(' en '.maybeToValidIsoCode()); // Prints: "en"
   /// print(' e'.maybeToValidIsoCode()); // Prints: null
   /// ```
+  ///
+  /// **Deprecated:** Use [IsoObject] extension type instead:
+  /// ```dart
+  /// IsoObject(yourString).maybeToValidIsoCode()
+  /// ```
+  @Deprecated("Use `IsoObject(string).maybeToValidIsoCode()` instead.")
   String? maybeToValidIsoCode({
     int? exactLength,
     int maxLength = IsoStandardized.codeLength,
@@ -55,6 +77,12 @@ extension IsoStandardizedStringExtension on String {
   /// print(' eng '.maybeToValidIsoCode()); // Prints: "ENG"
   /// print('english'.maybeToValidIsoCode()); // Prints: null
   /// ```
+  ///
+  /// **Deprecated:** Use [IsoObject] extension type instead:
+  /// ```dart
+  /// IsoObject(yourString).maybeToValidIsoUppercaseCode()
+  /// ```
+  @Deprecated("Use `IsoObject(string).maybeToValidIsoUpperCaseCode()` instead.")
   String? maybeToValidIsoUppercaseCode({
     int? exactLength,
     int maxLength = IsoStandardized.codeLength,
@@ -98,7 +126,13 @@ extension IsoStandardizedStringExtension on String {
   ///
   /// print(result); // Prints "orElse"
   /// ```.
-  // ignore: long-parameter-list, avoid-unnecessary-extends, all but 1 required.
+  ///
+  /// **Deprecated:** Use [IsoObject] extension type instead:
+  /// ```dart
+  /// IsoObject(yourString).maybeMapIsoCode(...)
+  /// ```
+  @Deprecated("Use `IsoObject(string).maybeMapIsoCode()` instead.")
+  // ignore: avoid-unnecessary-extends, otherwise it will be dynamic, so and void.
   T maybeMapIsoCode<T extends Object?>({
     required T Function(String input) orElse,
     int maxLength = IsoStandardized.codeLength,

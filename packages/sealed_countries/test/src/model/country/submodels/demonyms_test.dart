@@ -1,3 +1,5 @@
+import "dart:convert";
+
 import "package:_sealed_world_tests/sealed_world_tests.dart";
 import "package:sealed_countries/src/helpers/extensions/country_submodels/demonyms_extension.dart";
 import "package:sealed_countries/src/model/country/submodels/demonyms.dart";
@@ -95,6 +97,10 @@ void main() => group("$Demonyms", () {
 
   test("toJson", () {
     final json = value.toJson();
-    expect(value, json.parse(DemonymsExtension.fromMap));
+    expect(
+      value,
+      // ignore: avoid-type-casts, it's a test.
+      DemonymsExtension.fromMap(jsonDecode(json) as Map<String, Object?>),
+    );
   });
 });

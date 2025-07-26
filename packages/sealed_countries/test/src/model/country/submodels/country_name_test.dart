@@ -1,3 +1,5 @@
+import "dart:convert";
+
 import "package:_sealed_world_tests/sealed_world_tests.dart";
 import "package:sealed_countries/src/helpers/extensions/country_submodels/country_name_extension.dart";
 import "package:sealed_countries/src/model/country/submodels/country_name.dart";
@@ -95,6 +97,10 @@ void main() => group("$CountryName", () {
 
   test("toJson", () {
     final json = value.toJson();
-    expect(value, json.parse(CountryNameExtension.fromMap));
+    expect(
+      value,
+      // ignore: avoid-type-casts, it's a test.
+      CountryNameExtension.fromMap(jsonDecode(json) as Map<String, Object?>),
+    );
   });
 });

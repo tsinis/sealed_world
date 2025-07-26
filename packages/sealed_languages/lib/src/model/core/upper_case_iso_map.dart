@@ -1,5 +1,4 @@
-import "../../helpers/extensions/iso_standardized_string_extension.dart";
-import "../../helpers/extensions/sealed_world_object_extension.dart";
+import "../../helpers/extensions/iso_object_extension_type.dart";
 import "../../interfaces/iso_standardized.dart";
 import "upper_case_map.dart";
 
@@ -85,7 +84,7 @@ class UpperCaseIsoMap<V extends IsoStandardized> extends UpperCaseMap<V> {
   bool containsKey(Object? key) => _map(key, super.containsKey) ?? false;
 
   T? _map<T extends Object>(Object? key, T? Function(String isoCode) mapper) {
-    final code = key?.toUpperCaseIsoCode().maybeToValidIsoCode(
+    final code = IsoObject.maybe(key)?.maybeToValidIsoUpperCaseCode(
       maxLength: maxLength,
       minLength: minLength,
       exactLength: exactLength,

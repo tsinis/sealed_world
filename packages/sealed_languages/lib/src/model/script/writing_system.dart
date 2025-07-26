@@ -1,9 +1,8 @@
 import "../../collections/script_collections.dart";
 import "../../data/scripts.data.dart";
 import "../../helpers/extensions/iso_comparable_extension.dart";
-import "../../helpers/extensions/iso_standardized_string_extension.dart";
+import "../../helpers/extensions/iso_object_extension_type.dart";
 import "../../helpers/extensions/sealed_world_iterable_extension.dart";
-import "../../helpers/extensions/sealed_world_object_extension.dart";
 import "../../helpers/extensions/upper_case_iso_map_extension.dart";
 import "../../helpers/script/script_json.dart";
 import "../../interfaces/iso_standardized.dart";

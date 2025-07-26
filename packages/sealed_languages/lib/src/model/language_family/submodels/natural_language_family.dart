@@ -29,14 +29,15 @@ class NaturalLanguageFamily extends LanguageFamily {
   /// print(family); // Prints: LanguageFamily(name: Indo-European).
   /// ```
   factory NaturalLanguageFamily.fromName(
-    String name, [
+    Object name, [
     Iterable<NaturalLanguageFamily> families = list,
     // ignore: avoid-non-empty-constructor-bodies, more clear for factory methods.
   ]) {
     assert(families.isNotEmpty, "`families` should not be empty!");
+    final upperCaseName = IsoObject(name).toUpperCaseCode();
 
     return families.firstWhere(
-      (family) => family.name.toUpperCase() == name.toUpperCaseIsoCode(),
+      (family) => family.name.toUpperCase() == upperCaseName,
     );
   }
 

@@ -168,7 +168,7 @@ class WorldCountry extends Country
     Iterable<WorldCountry>? countries,
   ]) => countries == null
       ? codeMap.findByCodeOrThrow(code)
-      : countries.firstIsoWhereCode(code.toUpperCaseIsoCode());
+      : countries.firstIsoWhereCode(code);
 
   /// Returns an [WorldCountry] object from the given [codeShort]
   /// ISO 3166-1 Alpha-2 code.
@@ -187,7 +187,7 @@ class WorldCountry extends Country
     Iterable<WorldCountry>? countries,
   ]) => countries == null
       ? codeShortMap.findByCodeOrThrow(codeShort)
-      : countries.firstIsoWhereCodeOther(codeShort.toUpperCaseIsoCode());
+      : countries.firstIsoWhereCodeOther(codeShort);
 
   /// Returns an [WorldCountry] object from the given ISO 3166-1 code.
   ///
@@ -206,7 +206,8 @@ class WorldCountry extends Country
     // ignore: avoid-non-empty-constructor-bodies, more clear for factory methods.
   ]) {
     if (countries == null) return codeNumericMap.findByCodeOrThrow(codeNumeric);
-    final trimmedCode = codeNumeric.toUpperCaseIsoCode();
+
+    final trimmedCode = IsoObject(codeNumeric).toCode();
 
     return countries.firstIsoWhere(
       (country) => country.codeNumeric == trimmedCode,
@@ -243,7 +244,7 @@ class WorldCountry extends Country
     Iterable<WorldCountry>? countries,
   ]) => countries == null
       ? map.findByCodeOrThrow(code)
-      : code.toUpperCaseIsoCode().maybeMapIsoCode(
+      : IsoObject(code).maybeMapIsoCode(
           orElse: (regular) => WorldCountry.fromCode(regular, countries),
           numeric: (numb) => WorldCountry.fromCodeNumeric(numb, countries),
           short: (short) => WorldCountry.fromCodeShort(short, countries),
@@ -432,11 +433,12 @@ class WorldCountry extends Country
     Iterable<WorldCountry>? countries,
   ]) {
     if (countries == null) return codeMap.maybeFindByCode(code);
-    final string = code?.toUpperCaseIsoCode().maybeToValidIsoCode(
-      exactLength: IsoStandardized.codeLength,
-    );
 
-    return countries.firstIsoWhereCodeOrNull(string);
+    final string = IsoObject.maybe(
+      code, // Dart 3.7+ formatting.
+    )?.maybeToValidIsoUpperCaseCode(exactLength: IsoStandardized.codeLength);
+
+    return countries.firstIsoWhereCodeOrNull(string, toUpperCase: false);
   }
 
   /// Returns an [WorldCountry] object from the given [codeShort]
@@ -456,11 +458,12 @@ class WorldCountry extends Country
     Iterable<WorldCountry>? countries,
   ]) {
     if (countries == null) return codeShortMap.maybeFindByCode(codeShort);
-    final string = codeShort?.toUpperCaseIsoCode().maybeToValidIsoCode(
+
+    final string = IsoObject.maybe(codeShort)?.maybeToValidIsoUpperCaseCode(
       exactLength: IsoStandardized.codeShortLength,
     );
 
-    return countries.firstIsoWhereCodeOtherOrNull(string);
+    return countries.firstIsoWhereCodeOtherOrNull(string, toUpperCase: false);
   }
 
   /// Returns an [WorldCountry] object from the given [codeNumeric] ISO 3166-1
@@ -480,9 +483,9 @@ class WorldCountry extends Country
     Iterable<WorldCountry>? countries,
   ]) {
     if (countries == null) return codeNumericMap.maybeFindByCode(codeNumeric);
-    final trimmedCode = codeNumeric.toUpperCaseIsoCode().maybeToValidIsoCode(
-      exactLength: IsoStandardized.codeLength,
-    );
+    final trimmedCode = IsoObject(
+      codeNumeric, // Dart 3.7+ formatting.
+    ).maybeToValidIsoCode(exactLength: IsoStandardized.codeLength);
 
     return countries.firstIsoWhereOrNull(
       (country) => country.codeNumeric == trimmedCode,
@@ -522,10 +525,9 @@ class WorldCountry extends Country
     Iterable<WorldCountry>? countries,
   ]) => countries == null
       ? map.maybeFindByCode(code)
-      : code?.toUpperCaseIsoCode().maybeMapIsoCode(
+      : IsoObject.maybe(code)?.maybeMapIsoCode(
           orElse: (regular) => WorldCountry.maybeFromCode(regular, countries),
-          numeric: (numeric) =>
-              WorldCountry.maybeFromCodeNumeric(numeric, countries),
+          numeric: (numb) => WorldCountry.maybeFromCodeNumeric(numb, countries),
           short: (short) => WorldCountry.maybeFromCodeShort(short, countries),
         );
 
@@ -598,8 +600,259 @@ class WorldCountry extends Country
 
   /// A list of all the countries currently supported
   /// by the [WorldCountry] class.
-  // ignore: avoid-explicit-type-declaration, vs specify_nonobvious_property_types.
-  static const List<WorldCountry> list = worldCountryList;
+  // ignore_for_file: avoid-referencing-subclasses, transition to sealed class.
+  static const list = <WorldCountry>[
+    CountryAbw(),
+    CountryAfg(),
+    CountryAgo(),
+    CountryAia(),
+    CountryAla(),
+    CountryAlb(),
+    CountryAnd(),
+    CountryAre(),
+    CountryArg(),
+    CountryArm(),
+    CountryAsm(),
+    CountryAta(),
+    CountryAtf(),
+    CountryAtg(),
+    CountryAus(),
+    CountryAut(),
+    CountryAze(),
+    CountryBdi(),
+    CountryBel(),
+    CountryBen(),
+    CountryBes(),
+    CountryBfa(),
+    CountryBgd(),
+    CountryBgr(),
+    CountryBhr(),
+    CountryBhs(),
+    CountryBih(),
+    CountryBlm(),
+    CountryBlr(),
+    CountryBlz(),
+    CountryBmu(),
+    CountryBol(),
+    CountryBra(),
+    CountryBrb(),
+    CountryBrn(),
+    CountryBtn(),
+    CountryBvt(),
+    CountryBwa(),
+    CountryCaf(),
+    CountryCan(),
+    CountryCck(),
+    CountryChe(),
+    CountryChl(),
+    CountryChn(),
+    CountryCiv(),
+    CountryCmr(),
+    CountryCod(),
+    CountryCog(),
+    CountryCok(),
+    CountryCol(),
+    CountryCom(),
+    CountryCpv(),
+    CountryCri(),
+    CountryCub(),
+    CountryCuw(),
+    CountryCxr(),
+    CountryCym(),
+    CountryCyp(),
+    CountryCze(),
+    CountryDeu(),
+    CountryDji(),
+    CountryDma(),
+    CountryDnk(),
+    CountryDom(),
+    CountryDza(),
+    CountryEcu(),
+    CountryEgy(),
+    CountryEri(),
+    CountryEsh(),
+    CountryEsp(),
+    CountryEst(),
+    CountryEth(),
+    CountryFin(),
+    CountryFji(),
+    CountryFlk(),
+    CountryFra(),
+    CountryFro(),
+    CountryFsm(),
+    CountryGab(),
+    CountryGbr(),
+    CountryGeo(),
+    CountryGgy(),
+    CountryGha(),
+    CountryGib(),
+    CountryGin(),
+    CountryGlp(),
+    CountryGmb(),
+    CountryGnb(),
+    CountryGnq(),
+    CountryGrc(),
+    CountryGrd(),
+    CountryGrl(),
+    CountryGtm(),
+    CountryGuf(),
+    CountryGum(),
+    CountryGuy(),
+    CountryHkg(),
+    CountryHmd(),
+    CountryHnd(),
+    CountryHrv(),
+    CountryHti(),
+    CountryHun(),
+    CountryIdn(),
+    CountryImn(),
+    CountryInd(),
+    CountryIot(),
+    CountryIrl(),
+    CountryIrn(),
+    CountryIrq(),
+    CountryIsl(),
+    CountryIsr(),
+    CountryIta(),
+    CountryJam(),
+    CountryJey(),
+    CountryJor(),
+    CountryJpn(),
+    CountryKaz(),
+    CountryKen(),
+    CountryKgz(),
+    CountryKhm(),
+    CountryKir(),
+    CountryKna(),
+    CountryKor(),
+    CountryKwt(),
+    CountryLao(),
+    CountryLbn(),
+    CountryLbr(),
+    CountryLby(),
+    CountryLca(),
+    CountryLie(),
+    CountryLka(),
+    CountryLso(),
+    CountryLtu(),
+    CountryLux(),
+    CountryLva(),
+    CountryMac(),
+    CountryMaf(),
+    CountryMar(),
+    CountryMco(),
+    CountryMda(),
+    CountryMdg(),
+    CountryMdv(),
+    CountryMex(),
+    CountryMhl(),
+    CountryMkd(),
+    CountryMli(),
+    CountryMlt(),
+    CountryMmr(),
+    CountryMne(),
+    CountryMng(),
+    CountryMnp(),
+    CountryMoz(),
+    CountryMrt(),
+    CountryMsr(),
+    CountryMtq(),
+    CountryMus(),
+    CountryMwi(),
+    CountryMys(),
+    CountryMyt(),
+    CountryNam(),
+    CountryNcl(),
+    CountryNer(),
+    CountryNfk(),
+    CountryNga(),
+    CountryNic(),
+    CountryNiu(),
+    CountryNld(),
+    CountryNor(),
+    CountryNpl(),
+    CountryNru(),
+    CountryNzl(),
+    CountryOmn(),
+    CountryPak(),
+    CountryPan(),
+    CountryPcn(),
+    CountryPer(),
+    CountryPhl(),
+    CountryPlw(),
+    CountryPng(),
+    CountryPol(),
+    CountryPri(),
+    CountryPrk(),
+    CountryPrt(),
+    CountryPry(),
+    CountryPse(),
+    CountryPyf(),
+    CountryQat(),
+    CountryReu(),
+    CountryRou(),
+    CountryRus(),
+    CountryRwa(),
+    CountrySau(),
+    CountrySdn(),
+    CountrySen(),
+    CountrySgp(),
+    CountrySgs(),
+    CountryShn(),
+    CountrySjm(),
+    CountrySlb(),
+    CountrySle(),
+    CountrySlv(),
+    CountrySmr(),
+    CountrySom(),
+    CountrySpm(),
+    CountrySrb(),
+    CountrySsd(),
+    CountryStp(),
+    CountrySur(),
+    CountrySvk(),
+    CountrySvn(),
+    CountrySwe(),
+    CountrySwz(),
+    CountrySxm(),
+    CountrySyc(),
+    CountrySyr(),
+    CountryTca(),
+    CountryTcd(),
+    CountryTgo(),
+    CountryTha(),
+    CountryTjk(),
+    CountryTkl(),
+    CountryTkm(),
+    CountryTls(),
+    CountryTon(),
+    CountryTto(),
+    CountryTun(),
+    CountryTur(),
+    CountryTuv(),
+    CountryTwn(),
+    CountryTza(),
+    CountryUga(),
+    CountryUkr(),
+    CountryUmi(),
+    CountryUry(),
+    CountryUsa(),
+    CountryUzb(),
+    CountryVat(),
+    CountryVct(),
+    CountryVen(),
+    CountryVgb(),
+    CountryVir(),
+    CountryVnm(),
+    CountryVut(),
+    CountryWlf(),
+    CountryWsm(),
+    CountryYem(),
+    CountryZaf(),
+    CountryZmb(),
+    CountryZwe(),
+    CountryUnk(),
+  ];
 
   final List<Demonyms>? _demonyms;
   final List<NaturalLanguage>? _languages;

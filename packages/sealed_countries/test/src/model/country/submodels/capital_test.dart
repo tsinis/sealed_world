@@ -1,7 +1,8 @@
+import "dart:convert";
+
 import "package:_sealed_world_tests/sealed_world_tests.dart";
 import "package:sealed_countries/src/helpers/extensions/country_submodels/capital_extension.dart";
 import "package:sealed_countries/src/model/country/submodels/capital.dart";
-import "package:sealed_currencies/sealed_currencies.dart";
 import "package:test/test.dart";
 
 import "../../../test_data.dart";
@@ -57,6 +58,10 @@ void main() => group("$Capital", () {
 
   test("toJson", () {
     final json = value.toJson();
-    expect(value, json.parse(CapitalExtension.fromMap));
+    expect(
+      value,
+      // ignore: avoid-type-casts, it's a test.
+      CapitalExtension.fromMap(jsonDecode(json) as Map<String, Object?>),
+    );
   });
 });

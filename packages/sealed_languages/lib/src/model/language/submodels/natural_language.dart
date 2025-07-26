@@ -134,7 +134,7 @@ class NaturalLanguage extends Language
     Iterable<NaturalLanguage>? languages,
   ]) => languages == null
       ? codeMap.findByCodeOrThrow(code)
-      : languages.firstIsoWhereCode(code.toUpperCaseIsoCode());
+      : languages.firstIsoWhereCode(code);
 
   /// Returns an instance of the [NaturalLanguage] class from a two-letter
   /// ISO 639-1 code.
@@ -152,7 +152,7 @@ class NaturalLanguage extends Language
     Iterable<NaturalLanguage>? languages,
   ]) => languages == null
       ? codeShortMap.findByCodeOrThrow(codeShort)
-      : languages.firstIsoWhereCodeOther(codeShort.toUpperCaseIsoCode());
+      : languages.firstIsoWhereCodeOther(codeShort);
 
   /// Returns an instance of the [NaturalLanguage] class from the name of the
   /// language.
@@ -168,7 +168,7 @@ class NaturalLanguage extends Language
     Iterable<NaturalLanguage> languages = list,
     // ignore: avoid-non-empty-constructor-bodies, more clear for factory methods.
   ]) {
-    final upperCaseName = name.toUpperCaseIsoCode();
+    final upperCaseName = IsoObject(name).toUpperCaseCode();
 
     return languages.firstIsoWhere(
       (language) => language.name.toUpperCase() == upperCaseName,
@@ -204,7 +204,7 @@ class NaturalLanguage extends Language
     Iterable<NaturalLanguage>? languages,
   ]) => languages == null
       ? map.findByCodeOrThrow(code)
-      : code.toUpperCaseIsoCode().maybeMapIsoCode(
+      : IsoObject(code).maybeMapIsoCode(
           orElse: (regular) => NaturalLanguage.fromCode(regular, languages),
           short: (short) => NaturalLanguage.fromCodeShort(short, languages),
         );
@@ -224,7 +224,7 @@ class NaturalLanguage extends Language
   ]) => languages == null
       ? codeMap.maybeFindByCode(code)
       : languages.firstIsoWhereCodeOrNull(
-          code?.toUpperCaseIsoCode().maybeToValidIsoCode(
+          IsoObject.maybe(code)?.maybeToValidIsoUpperCaseCode(
             exactLength: IsoStandardized.codeLength,
           ),
         );
@@ -244,7 +244,7 @@ class NaturalLanguage extends Language
   ]) => languages == null
       ? codeShortMap.maybeFindByCode(codeShort)
       : languages.firstIsoWhereCodeOtherOrNull(
-          codeShort?.toUpperCaseIsoCode().maybeToValidIsoCode(
+          IsoObject.maybe(codeShort)?.maybeToValidIsoUpperCaseCode(
             exactLength: IsoStandardized.codeShortLength,
           ),
         );
@@ -370,7 +370,7 @@ class NaturalLanguage extends Language
     Iterable<NaturalLanguage>? languages,
   ]) => languages == null
       ? map.maybeFindByCode(code)
-      : code?.toUpperCaseIsoCode().maybeMapIsoCode(
+      : IsoObject.maybe(code)?.maybeMapIsoCode(
           orElse: (regular) => maybeFromCode(regular, languages),
           short: (short) => maybeFromCodeShort(short, languages),
         );
@@ -430,6 +430,191 @@ class NaturalLanguage extends Language
 
   /// A tree-shakable list of all the natural languages currently
   /// supported by the [NaturalLanguage] class.
-  // ignore: avoid-explicit-type-declaration, vs specify_nonobvious_property_types.
-  static const List<NaturalLanguage> list = naturalLanguageList;
+  // ignore_for_file: avoid-referencing-subclasses, transition to sealed class.
+  static const list = <NaturalLanguage>[
+    LangAar(),
+    LangAbk(),
+    LangAfr(),
+    LangAka(),
+    LangAmh(),
+    LangAra(),
+    LangArg(),
+    LangAsm(),
+    LangAva(),
+    LangAve(),
+    LangAym(),
+    LangAze(),
+    LangBak(),
+    LangBam(),
+    LangBel(),
+    LangBen(),
+    LangBih(),
+    LangBis(),
+    LangBod(),
+    LangBos(),
+    LangBre(),
+    LangBul(),
+    LangCat(),
+    LangCes(),
+    LangCha(),
+    LangChe(),
+    LangChu(),
+    LangChv(),
+    LangCor(),
+    LangCos(),
+    LangCre(),
+    LangCym(),
+    LangDan(),
+    LangDeu(),
+    LangDiv(),
+    LangDzo(),
+    LangEll(),
+    LangEng(),
+    LangEpo(),
+    LangEst(),
+    LangEus(),
+    LangEwe(),
+    LangFao(),
+    LangFas(),
+    LangFij(),
+    LangFin(),
+    LangFra(),
+    LangFry(),
+    LangFul(),
+    LangGla(),
+    LangGle(),
+    LangGlg(),
+    LangGlv(),
+    LangGrn(),
+    LangGuj(),
+    LangHat(),
+    LangHau(),
+    LangHeb(),
+    LangHer(),
+    LangHin(),
+    LangHmo(),
+    LangHrv(),
+    LangHun(),
+    LangHye(),
+    LangIbo(),
+    LangIdo(),
+    LangIii(),
+    LangIku(),
+    LangIle(),
+    LangIna(),
+    LangInd(),
+    LangIpk(),
+    LangIsl(),
+    LangIta(),
+    LangJav(),
+    LangJpn(),
+    LangKal(),
+    LangKan(),
+    LangKas(),
+    LangKat(),
+    LangKau(),
+    LangKaz(),
+    LangKhm(),
+    LangKik(),
+    LangKin(),
+    LangKir(),
+    LangKom(),
+    LangKon(),
+    LangKor(),
+    LangKua(),
+    LangKur(),
+    LangLao(),
+    LangLat(),
+    LangLav(),
+    LangLim(),
+    LangLin(),
+    LangLit(),
+    LangLtz(),
+    LangLub(),
+    LangLug(),
+    LangMah(),
+    LangMal(),
+    LangMar(),
+    LangMkd(),
+    LangMlg(),
+    LangMlt(),
+    LangMon(),
+    LangMri(),
+    LangMsa(),
+    LangMya(),
+    LangNau(),
+    LangNav(),
+    LangNbl(),
+    LangNde(),
+    LangNdo(),
+    LangNep(),
+    LangNld(),
+    LangNno(),
+    LangNob(),
+    LangNor(),
+    LangNya(),
+    LangOci(),
+    LangOji(),
+    LangOri(),
+    LangOrm(),
+    LangOss(),
+    LangPan(),
+    LangPli(),
+    LangPol(),
+    LangPor(),
+    LangPus(),
+    LangQue(),
+    LangRoh(),
+    LangRon(),
+    LangRun(),
+    LangRus(),
+    LangSag(),
+    LangSan(),
+    LangSin(),
+    LangSlk(),
+    LangSlv(),
+    LangSme(),
+    LangSmo(),
+    LangSna(),
+    LangSnd(),
+    LangSom(),
+    LangSot(),
+    LangSpa(),
+    LangSqi(),
+    LangSrd(),
+    LangSrp(),
+    LangSsw(),
+    LangSun(),
+    LangSwa(),
+    LangSwe(),
+    LangTah(),
+    LangTam(),
+    LangTat(),
+    LangTel(),
+    LangTgk(),
+    LangTgl(),
+    LangTha(),
+    LangTir(),
+    LangTon(),
+    LangTsn(),
+    LangTso(),
+    LangTuk(),
+    LangTur(),
+    LangTwi(),
+    LangUig(),
+    LangUkr(),
+    LangUrd(),
+    LangUzb(),
+    LangVen(),
+    LangVie(),
+    LangVol(),
+    LangWln(),
+    LangWol(),
+    LangXho(),
+    LangYid(),
+    LangYor(),
+    LangZha(),
+    LangZho(),
+    LangZul(),
+  ];
 }

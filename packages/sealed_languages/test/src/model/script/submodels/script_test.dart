@@ -1,7 +1,8 @@
 // ignore_for_file: avoid-returning-void
 
+import "dart:convert";
+
 import "package:_sealed_world_tests/sealed_world_tests.dart";
-import "package:sealed_languages/src/helpers/extensions/sealed_world_json_string_extension.dart";
 import "package:sealed_languages/src/helpers/script/script_json.dart";
 import "package:sealed_languages/src/interfaces/iso_standardized.dart";
 import "package:sealed_languages/src/interfaces/json_encodable.dart";
@@ -297,16 +298,16 @@ void main() => group("$Script", () {
       test("compared to $Script: ${element.name}", () {
         final json = element.toJson();
         expect(json, isNotEmpty);
-        final decoded = json.tryParse(ScriptJson.fromMap);
-        expect(
-          decoded?.toString(short: false),
-          json.parse(ScriptJson.fromMap).toString(short: false),
+        final decoded = ScriptJson.fromMap(
+          // ignore: avoid-type-casts, it's a test.
+          jsonDecode(json) as Map<String, Object?>,
         );
-        expect(element.codeOther, decoded?.codeNumeric);
-        expect(element.code, decoded?.code);
-        expect(element.name, decoded?.name);
-        expect(element.date, decoded?.date);
-        expect(element.pva, decoded?.pva);
+
+        expect(element.codeOther, decoded.codeNumeric);
+        expect(element.code, decoded.code);
+        expect(element.name, decoded.name);
+        expect(element.date, decoded.date);
+        expect(element.pva, decoded.pva);
       });
     }
   });

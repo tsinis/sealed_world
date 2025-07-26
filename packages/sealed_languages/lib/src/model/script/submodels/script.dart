@@ -58,9 +58,10 @@ class Script extends WritingSystem
   // ignore: avoid-non-empty-constructor-bodies, more clear for factory methods.
   factory Script.fromCode(Object code, [Iterable<Script>? scripts]) {
     if (scripts == null) return codeMap.findByCodeOrThrow(code);
-    String? validCode = code.toUpperCaseIsoCode().maybeToValidIsoCode(
-      exactLength: codeLength,
-    );
+
+    String? validCode = IsoObject(
+      code, // Dart 3.7+ formatting.
+    ).maybeToValidIsoCode(exactLength: codeLength);
     if (validCode == null) {
       throw StateError(
         "Provided $code isn't a valid $standardCodeName code. "
@@ -96,7 +97,7 @@ class Script extends WritingSystem
     Iterable<Script>? scripts,
   ]) => scripts == null
       ? codeNumericMap.findByCodeOrThrow(codeNumeric)
-      : scripts.firstIsoWhereCodeOther(codeNumeric.toUpperCaseIsoCode());
+      : scripts.firstIsoWhereCodeOther(codeNumeric);
 
   /// Creates a new instance of the [Script] class from the name of the script.
   ///
@@ -107,7 +108,7 @@ class Script extends WritingSystem
   /// or throws a [StateError] if no such instance exists.
   // ignore: avoid-non-empty-constructor-bodies, more clear for factory methods.
   factory Script.fromName(Object name, [Iterable<Script> scripts = list]) {
-    final upperCaseName = name.toUpperCaseIsoCode();
+    final upperCaseName = IsoObject(name).toUpperCaseCode();
 
     return scripts.firstIsoWhere(
       (script) => script.name.toUpperCase() == upperCaseName,
@@ -139,7 +140,7 @@ class Script extends WritingSystem
   factory Script.fromAnyCode(Object code, [Iterable<Script>? scripts]) =>
       scripts == null
       ? map.findByCodeOrThrow(code)
-      : code.toUpperCaseIsoCode().maybeMapIsoCode(
+      : IsoObject(code).maybeMapIsoCode(
           orElse: (regular) => Script.fromCode(regular, scripts),
           numeric: (numeric) => Script.fromCodeNumeric(numeric, scripts),
           maxLength: codeLength,
@@ -241,7 +242,7 @@ class Script extends WritingSystem
   static Script? maybeFromAnyCode(Object? code, [Iterable<Script>? scripts]) =>
       scripts == null
       ? map.maybeFindByCode(code)
-      : code?.toUpperCaseIsoCode().maybeMapIsoCode(
+      : IsoObject.maybe(code)?.maybeMapIsoCode(
           orElse: (regular) => maybeFromCode(regular, scripts),
           numeric: (numeric) => maybeFromCodeNumeric(numeric, scripts),
           maxLength: codeLength,
@@ -268,9 +269,10 @@ class Script extends WritingSystem
   /// `script` variable.
   static Script? maybeFromCode(Object? code, [Iterable<Script>? scripts]) {
     if (scripts == null) return codeMap.maybeFindByCode(code);
-    String? string = code?.toUpperCaseIsoCode().maybeToValidIsoCode(
-      exactLength: codeLength,
-    );
+
+    String? string = IsoObject.maybe(
+      code, // Dart 3.7+ formatting.
+    )?.maybeToValidIsoCode(exactLength: codeLength);
     if (string == null) return null;
     string = formatToStandardCode(string);
 
@@ -299,11 +301,12 @@ class Script extends WritingSystem
     Iterable<Script>? scripts,
   ]) {
     if (scripts == null) return codeNumericMap.maybeFindByCode(codeNumeric);
-    final string = codeNumeric?.toUpperCaseIsoCode().maybeToValidIsoCode(
-      exactLength: IsoStandardized.codeLength,
-    );
 
-    return scripts.firstIsoWhereCodeOtherOrNull(string);
+    final string = IsoObject.maybe(
+      codeNumeric, // Dart 3.7+ formatting.
+    )?.maybeToValidIsoCode(exactLength: IsoStandardized.codeLength);
+
+    return scripts.firstIsoWhereCodeOtherOrNull(string, toUpperCase: false);
   }
 
   /// Formats the given [input] to a standard four-character ISO 15924 code.
@@ -367,6 +370,220 @@ class Script extends WritingSystem
 
   /// A tree-shakable list of all the scripts currently supported
   /// by the [Script] class.
-  // ignore: avoid-explicit-type-declaration, vs specify_nonobvious_property_types.
-  static const List<Script> list = scriptList;
+  // ignore_for_file: avoid-referencing-subclasses, transition to sealed class.
+  static const list = <Script>[
+    ScriptAdlm(),
+    ScriptAfak(),
+    ScriptAghb(),
+    ScriptAhom(),
+    ScriptArab(),
+    ScriptAran(),
+    ScriptArmi(),
+    ScriptArmn(),
+    ScriptAvst(),
+    ScriptBali(),
+    ScriptBamu(),
+    ScriptBass(),
+    ScriptBatk(),
+    ScriptBeng(),
+    ScriptBhks(),
+    ScriptBlis(),
+    ScriptBopo(),
+    ScriptBrah(),
+    ScriptBrai(),
+    ScriptBugi(),
+    ScriptBuhd(),
+    ScriptCakm(),
+    ScriptCans(),
+    ScriptCari(),
+    ScriptCham(),
+    ScriptCher(),
+    ScriptChrs(),
+    ScriptCirt(),
+    ScriptCopt(),
+    ScriptCpmn(),
+    ScriptCprt(),
+    ScriptCyrl(),
+    ScriptCyrs(),
+    ScriptDeva(),
+    ScriptDiak(),
+    ScriptDogr(),
+    ScriptDsrt(),
+    ScriptDupl(),
+    ScriptEgyd(),
+    ScriptEgyh(),
+    ScriptEgyp(),
+    ScriptElba(),
+    ScriptElym(),
+    ScriptEthi(),
+    ScriptGeok(),
+    ScriptGeor(),
+    ScriptGlag(),
+    ScriptGong(),
+    ScriptGonm(),
+    ScriptGoth(),
+    ScriptGran(),
+    ScriptGrek(),
+    ScriptGujr(),
+    ScriptGuru(),
+    ScriptHanb(),
+    ScriptHang(),
+    ScriptHani(),
+    ScriptHano(),
+    ScriptHans(),
+    ScriptHant(),
+    ScriptHatr(),
+    ScriptHebr(),
+    ScriptHira(),
+    ScriptHluw(),
+    ScriptHmng(),
+    ScriptHmnp(),
+    ScriptHrkt(),
+    ScriptHung(),
+    ScriptInds(),
+    ScriptItal(),
+    ScriptJamo(),
+    ScriptJava(),
+    ScriptJpan(),
+    ScriptJurc(),
+    ScriptKali(),
+    ScriptKana(),
+    ScriptKawi(),
+    ScriptKhar(),
+    ScriptKhmr(),
+    ScriptKhoj(),
+    ScriptKitl(),
+    ScriptKits(),
+    ScriptKnda(),
+    ScriptKore(),
+    ScriptKpel(),
+    ScriptKthi(),
+    ScriptLana(),
+    ScriptLaoo(),
+    ScriptLatf(),
+    ScriptLatg(),
+    ScriptLatn(),
+    ScriptLeke(),
+    ScriptLepc(),
+    ScriptLimb(),
+    ScriptLina(),
+    ScriptLinb(),
+    ScriptLisu(),
+    ScriptLoma(),
+    ScriptLyci(),
+    ScriptLydi(),
+    ScriptMahj(),
+    ScriptMaka(),
+    ScriptMand(),
+    ScriptMani(),
+    ScriptMarc(),
+    ScriptMaya(),
+    ScriptMedf(),
+    ScriptMend(),
+    ScriptMerc(),
+    ScriptMero(),
+    ScriptMlym(),
+    ScriptModi(),
+    ScriptMong(),
+    ScriptMoon(),
+    ScriptMroo(),
+    ScriptMtei(),
+    ScriptMult(),
+    ScriptMymr(),
+    ScriptNagm(),
+    ScriptNand(),
+    ScriptNarb(),
+    ScriptNbat(),
+    ScriptNewa(),
+    ScriptNkdb(),
+    ScriptNkgb(),
+    ScriptNkoo(),
+    ScriptNshu(),
+    ScriptOgam(),
+    ScriptOlck(),
+    ScriptOrkh(),
+    ScriptOrya(),
+    ScriptOsge(),
+    ScriptOsma(),
+    ScriptOugr(),
+    ScriptPalm(),
+    ScriptPauc(),
+    ScriptPcun(),
+    ScriptPelm(),
+    ScriptPerm(),
+    ScriptPhag(),
+    ScriptPhli(),
+    ScriptPhlp(),
+    ScriptPhlv(),
+    ScriptPhnx(),
+    ScriptPiqd(),
+    ScriptPlrd(),
+    ScriptPrti(),
+    ScriptPsin(),
+    ScriptQaaa(),
+    ScriptQabx(),
+    ScriptRanj(),
+    ScriptRjng(),
+    ScriptRohg(),
+    ScriptRoro(),
+    ScriptRunr(),
+    ScriptSamr(),
+    ScriptSara(),
+    ScriptSarb(),
+    ScriptSaur(),
+    ScriptSgnw(),
+    ScriptShaw(),
+    ScriptShrd(),
+    ScriptShui(),
+    ScriptSidd(),
+    ScriptSind(),
+    ScriptSinh(),
+    ScriptSogd(),
+    ScriptSogo(),
+    ScriptSora(),
+    ScriptSoyo(),
+    ScriptSund(),
+    ScriptSunu(),
+    ScriptSylo(),
+    ScriptSyrc(),
+    ScriptSyre(),
+    ScriptSyrj(),
+    ScriptSyrn(),
+    ScriptTagb(),
+    ScriptTakr(),
+    ScriptTale(),
+    ScriptTalu(),
+    ScriptTaml(),
+    ScriptTang(),
+    ScriptTavt(),
+    ScriptTelu(),
+    ScriptTeng(),
+    ScriptTfng(),
+    ScriptTglg(),
+    ScriptThaa(),
+    ScriptThai(),
+    ScriptTibt(),
+    ScriptTirh(),
+    ScriptTnsa(),
+    ScriptToto(),
+    ScriptUgar(),
+    ScriptVaii(),
+    ScriptVisp(),
+    ScriptVith(),
+    ScriptWara(),
+    ScriptWcho(),
+    ScriptWole(),
+    ScriptXpeo(),
+    ScriptXsux(),
+    ScriptYezi(),
+    ScriptYiii(),
+    ScriptZanb(),
+    ScriptZinh(),
+    ScriptZmth(),
+    ScriptZsye(),
+    ScriptZsym(),
+    ScriptZxxx(),
+    ScriptZyyy(),
+    ScriptZzzz(),
+  ];
 }

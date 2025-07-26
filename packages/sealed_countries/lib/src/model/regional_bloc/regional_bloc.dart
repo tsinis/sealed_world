@@ -41,16 +41,19 @@ class RegionalBloc extends WorldBloc {
     Iterable<RegionalBloc>? blocs,
     // ignore: avoid-non-empty-constructor-bodies, more clear for factory methods.
   ]) {
-    final string = acronym.toUpperCaseIsoCode();
+    final string = IsoObject.maybe(acronym)?.toUpperCaseCode();
     if (blocs == null) return map[string]!;
 
     return list.firstWhere((bloc) => bloc.acronym == string);
   }
 
   /// Creates a new [RegionalBloc] object from its name.
-  factory RegionalBloc.fromName(String name) => list.firstWhere(
-    (bloc) => bloc.name.toUpperCase() == name.toUpperCaseIsoCode(),
-  );
+  // ignore: avoid-non-empty-constructor-bodies, false positive, it's factory...
+  factory RegionalBloc.fromName(String name) {
+    final upperCaseName = IsoObject(name).toUpperCaseCode();
+
+    return list.firstWhere((bloc) => bloc.name.toUpperCase() == upperCaseName);
+  }
 
   /// Other acronyms of the regional bloc.
   final List<String>? otherAcronyms;
@@ -86,8 +89,7 @@ class RegionalBloc extends WorldBloc {
     Object? acronym, [
     Iterable<RegionalBloc>? blocs,
   ]) {
-    if (acronym == null) return null;
-    final string = acronym.toUpperCaseIsoCode();
+    final string = IsoObject.maybe(acronym)?.toUpperCaseCode();
     if (blocs == null) return map[string];
 
     for (final bloc in blocs) {
@@ -128,6 +130,20 @@ class RegionalBloc extends WorldBloc {
 
   /// A list of all the regional blocs currently
   /// supported by the [RegionalBloc] class.
-  // ignore: avoid-explicit-type-declaration, vs specify_nonobvious_property_types.
-  static const List<RegionalBloc> list = regionalBlocList;
+  // ignore_for_file: avoid-referencing-subclasses, transition to sealed class.
+  static const list = <RegionalBloc>[
+    BlocAL(),
+    BlocASEAN(),
+    BlocAU(),
+    BlocCAIS(),
+    BlocCARICOM(),
+    BlocCEFTA(),
+    BlocEEU(),
+    BlocEFTA(),
+    BlocEU(),
+    BlocNAFTA(),
+    BlocPA(),
+    BlocSAARC(),
+    BlocUSAN(),
+  ];
 }

@@ -1,6 +1,8 @@
 /// Provides data for world languages in the form of sealed classes.
 library sealed_languages;
 
+export "/src/helpers/extensions/iso_object_extension_type.dart";
+export "/src/helpers/extensions/iso_string_extension_type.dart";
 export "src/data/natural_language_families.data.dart";
 export "src/data/natural_languages.data.dart";
 export "src/data/scripts.data.dart";

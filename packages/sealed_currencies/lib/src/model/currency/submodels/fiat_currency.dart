@@ -114,7 +114,7 @@ class FiatCurrency extends Currency
     Iterable<FiatCurrency>? currencies,
   ]) => currencies == null
       ? codeMap.findByCodeOrThrow(code)
-      : currencies.firstIsoWhereCode(code.toUpperCaseIsoCode());
+      : currencies.firstIsoWhereCode(code);
 
   /// Returns a [FiatCurrency] instance from an numeric ISO 4217 code.
   ///
@@ -132,7 +132,7 @@ class FiatCurrency extends Currency
     Iterable<FiatCurrency>? currencies,
   ]) => currencies == null
       ? codeNumericMap.findByCodeOrThrow(codeNumeric)
-      : currencies.firstIsoWhereCodeOther(codeNumeric.toUpperCaseIsoCode());
+      : currencies.firstIsoWhereCodeOther(codeNumeric);
 
   /// Returns a [FiatCurrency] instance from a currency name.
   ///
@@ -150,7 +150,7 @@ class FiatCurrency extends Currency
     Iterable<FiatCurrency> currencies = listExtended,
     // ignore: avoid-non-empty-constructor-bodies, more clear for factory methods.
   ]) {
-    final upperCaseName = name.toUpperCaseIsoCode();
+    final upperCaseName = IsoObject.maybe(name)?.toUpperCaseCode();
 
     return currencies.firstIsoWhere(
       (currency) => currency.name.toUpperCase() == upperCaseName,
@@ -186,10 +186,9 @@ class FiatCurrency extends Currency
     Iterable<FiatCurrency>? currencies,
   ]) => currencies == null
       ? map.findByCodeOrThrow(code)
-      : code.toUpperCaseIsoCode().maybeMapIsoCode(
+      : IsoObject(code).maybeMapIsoCode(
           orElse: (regular) => FiatCurrency.fromCode(regular, currencies),
-          numeric: (numeric) =>
-              FiatCurrency.fromCodeNumeric(numeric, currencies),
+          numeric: (numb) => FiatCurrency.fromCodeNumeric(numb, currencies),
           minLength: IsoStandardized.codeLength,
         );
 
@@ -337,7 +336,7 @@ class FiatCurrency extends Currency
     Iterable<FiatCurrency>? currencies,
   ]) => currencies == null
       ? map.maybeFindByCode(code)
-      : code?.toUpperCaseIsoCode().maybeMapIsoCode(
+      : IsoObject.maybe(code)?.maybeMapIsoCode(
           orElse: (regular) => maybeFromCode(regular, currencies),
           numeric: (numeric) => maybeFromCodeNumeric(numeric, currencies),
           minLength: IsoStandardized.codeLength,
@@ -360,11 +359,12 @@ class FiatCurrency extends Currency
     Iterable<FiatCurrency>? currencies,
   ]) {
     if (currencies == null) return codeMap.maybeFindByCode(code);
-    final string = code?.toUpperCaseIsoCode().maybeToValidIsoCode(
-      exactLength: IsoStandardized.codeLength,
-    );
 
-    return currencies.firstIsoWhereCodeOrNull(string);
+    final string = IsoObject.maybe(
+      code, // Dart 3.7+ formatting.
+    )?.maybeToValidIsoUpperCaseCode(exactLength: IsoStandardized.codeLength);
+
+    return currencies.firstIsoWhereCodeOrNull(string, toUpperCase: false);
   }
 
   /// Returns a [FiatCurrency] instance from an numeric ISO 4217 code, or
@@ -383,11 +383,12 @@ class FiatCurrency extends Currency
     Iterable<FiatCurrency>? currencies,
   ]) {
     if (currencies == null) return codeNumericMap.maybeFindByCode(codeNumeric);
-    final string = codeNumeric?.toUpperCaseIsoCode().maybeToValidIsoCode(
-      exactLength: IsoStandardized.codeLength,
-    );
 
-    return currencies.firstIsoWhereCodeOtherOrNull(string);
+    final string = IsoObject.maybe(
+      codeNumeric, // Dart 3.7+ formatting.
+    )?.maybeToValidIsoCode(exactLength: IsoStandardized.codeLength);
+
+    return currencies.firstIsoWhereCodeOtherOrNull(string, toUpperCase: false);
   }
 
   /// The general standard ISO code for currencies, defined as ISO 4217.
@@ -437,12 +438,6 @@ class FiatCurrency extends Currency
     ...fiatCurrencyCodeOtherMap,
   });
 
-  /// A list of the regular currencies currently supported by the [FiatCurrency]
-  /// class. For a full list with non-regular currencies please
-  /// use [listExtended].
-  // ignore: avoid-explicit-type-declaration, vs specify_nonobvious_property_types.
-  static const List<FiatCurrency> list = fiatCurrencyList;
-
   /// A list of special purpose fiat currencies (currencies that are
   /// not being used in the regular transactional currencies list).
   ///
@@ -459,6 +454,171 @@ class FiatCurrency extends Currency
     FiatXpd(),
     FiatXpt(),
     FiatXts(),
+  ];
+
+  /// A list of the regular currencies currently supported by the [FiatCurrency]
+  /// class. For a full list with non-regular currencies please
+  /// use [listExtended].
+  static const list = <FiatCurrency>[
+    FiatAed(),
+    FiatAfn(),
+    FiatAll(),
+    FiatAmd(),
+    FiatAng(),
+    FiatAoa(),
+    FiatArs(),
+    FiatAud(),
+    FiatAwg(),
+    FiatAzn(),
+    FiatBam(),
+    FiatBbd(),
+    FiatBdt(),
+    FiatBgn(),
+    FiatBhd(),
+    FiatBif(),
+    FiatBmd(),
+    FiatBnd(),
+    FiatBob(),
+    FiatBrl(),
+    FiatBsd(),
+    FiatBtn(),
+    FiatBwp(),
+    FiatByn(),
+    FiatBzd(),
+    FiatCad(),
+    FiatCdf(),
+    FiatChf(),
+    FiatClf(),
+    FiatClp(),
+    FiatCny(),
+    FiatCop(),
+    FiatCrc(),
+    FiatCuc(),
+    FiatCup(),
+    FiatCve(),
+    FiatCzk(),
+    FiatDjf(),
+    FiatDkk(),
+    FiatDop(),
+    FiatDzd(),
+    FiatEgp(),
+    FiatErn(),
+    FiatEtb(),
+    FiatEur(),
+    FiatFjd(),
+    FiatFkp(),
+    FiatGbp(),
+    FiatGel(),
+    FiatGhs(),
+    FiatGip(),
+    FiatGmd(),
+    FiatGnf(),
+    FiatGtq(),
+    FiatGyd(),
+    FiatHkd(),
+    FiatHnl(),
+    FiatHrk(), // ignore: deprecated_member_use_from_same_package, TODO! End of 2025.
+    FiatHtg(),
+    FiatHuf(),
+    FiatIdr(),
+    FiatIls(),
+    FiatInr(),
+    FiatIqd(),
+    FiatIrr(),
+    FiatIsk(),
+    FiatJmd(),
+    FiatJod(),
+    FiatJpy(),
+    FiatKes(),
+    FiatKgs(),
+    FiatKhr(),
+    FiatKmf(),
+    FiatKpw(),
+    FiatKrw(),
+    FiatKwd(),
+    FiatKyd(),
+    FiatKzt(),
+    FiatLak(),
+    FiatLbp(),
+    FiatLkr(),
+    FiatLrd(),
+    FiatLsl(),
+    FiatLyd(),
+    FiatMad(),
+    FiatMdl(),
+    FiatMga(),
+    FiatMkd(),
+    FiatMmk(),
+    FiatMnt(),
+    FiatMop(),
+    FiatMru(),
+    FiatMur(),
+    FiatMvr(),
+    FiatMwk(),
+    FiatMxn(),
+    FiatMyr(),
+    FiatMzn(),
+    FiatNad(),
+    FiatNgn(),
+    FiatNio(),
+    FiatNok(),
+    FiatNpr(),
+    FiatNzd(),
+    FiatOmr(),
+    FiatPab(),
+    FiatPen(),
+    FiatPgk(),
+    FiatPhp(),
+    FiatPkr(),
+    FiatPln(),
+    FiatPyg(),
+    FiatQar(),
+    FiatRon(),
+    FiatRsd(),
+    FiatRub(),
+    FiatRwf(),
+    FiatSar(),
+    FiatSbd(),
+    FiatScr(),
+    FiatSdg(),
+    FiatSek(),
+    FiatSgd(),
+    FiatShp(),
+    FiatSle(),
+    FiatSll(), // ignore: deprecated_member_use_from_same_package, TODO! End of 2025.
+    FiatSos(),
+    FiatSrd(),
+    FiatSsp(),
+    FiatStn(),
+    FiatSvc(), // ignore: deprecated_member_use_from_same_package, TODO! End of 2025.
+    FiatSyp(),
+    FiatSzl(),
+    FiatThb(),
+    FiatTjs(),
+    FiatTmt(),
+    FiatTnd(),
+    FiatTop(),
+    FiatTry(),
+    FiatTtd(),
+    FiatTwd(),
+    FiatTzs(),
+    FiatUah(),
+    FiatUgx(),
+    FiatUsd(),
+    FiatUyu(),
+    FiatUzs(),
+    FiatVes(),
+    FiatVnd(),
+    FiatVuv(),
+    FiatWst(),
+    FiatXaf(),
+    FiatXcd(),
+    FiatXof(),
+    FiatXpf(),
+    FiatYer(),
+    FiatZar(),
+    FiatZmw(),
+    FiatZwl(),
   ];
 
   /// A list of all currencies currently supported by the

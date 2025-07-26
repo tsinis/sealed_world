@@ -1,6 +1,7 @@
+import "dart:convert";
+
 import "package:_sealed_world_tests/sealed_world_tests.dart";
 import "package:sealed_languages/src/helpers/extensions/basic_locale_extension.dart";
-import "package:sealed_languages/src/helpers/extensions/sealed_world_json_string_extension.dart";
 import "package:sealed_languages/src/model/core/basic_locale.dart";
 import "package:sealed_languages/src/model/language/language.dart";
 import "package:sealed_languages/src/model/script/writing_system.dart";
@@ -33,10 +34,13 @@ void main() => group("$BasicLocale", () {
 
   test("toJson", () {
     final json = value.toJson();
-    final parsed = json.parse(BasicLocaleExtension.fromMap);
-    expect(value.countryCode, parsed.countryCode);
-    expect(value.language, parsed.language);
-    expect(value.script, parsed.script);
+    final decoded = BasicLocaleExtension.fromMap(
+      // ignore: avoid-type-casts, it's a test.
+      jsonDecode(json) as Map<String, Object?>,
+    );
+    expect(value.countryCode, decoded.countryCode);
+    expect(value.language, decoded.language);
+    expect(value.script, decoded.script);
   });
 
   group("toString", () {

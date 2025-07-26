@@ -20,7 +20,7 @@ This ISO-driven, pure Dart, fully tested and dependency-free package provides in
 | name              | **Yes**      | A non-empty string representing the English name of the natural language.                | "English"                                          |
 | code              | **Yes**      | A three-letter string representing the ISO 639-2/T Terminological code for the language. | "ENG"                                              |
 | codeShort         | **Yes**      | A two-letter string representing the ISO 639-1 code for the language.                    | "EN"                                               |
-| namesNative       | **Yes**      | A list of non-empty strings representing the language's native names.                    | ["English"]                                        |
+| namesNative       | **Yes**      | A list of non-empty strings representing the language's native names.                    | `["English"]`                                      |
 | bibliographicCode | No           | A three-letter string representing the ISO 639-2/B Bibliographic code for the language.  | `null`                                             |
 | family            | No           | The language family to which the language belongs.                                       | `LanguageFamily`(name: "Indo-European")            |
 | isRightToLeft     | No           | A boolean value specifying whether the language is written right-to-left.                | false                                              |
@@ -145,7 +145,7 @@ If you have any issues or suggestions for the package, please file them in the G
 
 - [ISO](https://www.iso.org/iso-639-language-codes.html)
 - [Wikipedia](https://wikipedia.org/wiki/List_of_ISO_639-1_codes)
-- [Data Source](https://github.com/haliaeetus/iso-639)[^1]
+- [Data Source](https://github.com/haliaeetus/iso-639)<sup>1</sup>
 - [Project Roadmap](https://github.com/users/tsinis/projects/1)
 
-[^1]: Translated JSON data to Dart language (following Effective Dart: Style guidelines), modified, added additional data and functionality.
+<sup>1</sup> Translated JSON data to Dart language (following Effective Dart: Style guidelines), modified, added additional data and functionality.

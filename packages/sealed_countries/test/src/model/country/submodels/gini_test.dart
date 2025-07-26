@@ -1,7 +1,8 @@
+import "dart:convert";
+
 import "package:_sealed_world_tests/sealed_world_tests.dart";
 import "package:sealed_countries/src/helpers/extensions/country_submodels/gini_extension.dart";
 import "package:sealed_countries/src/model/country/submodels/gini.dart";
-import "package:sealed_currencies/sealed_currencies.dart";
 import "package:test/test.dart";
 
 import "../../../test_data.dart";
@@ -77,6 +78,10 @@ void main() => group("$Gini", () {
 
   test("toJson", () {
     final json = value.toJson();
-    expect(value, json.parse(GiniExtension.fromMap));
+    expect(
+      value,
+      // ignore: avoid-type-casts, it's a test.
+      GiniExtension.fromMap(jsonDecode(json) as Map<String, Object?>),
+    );
   });
 });

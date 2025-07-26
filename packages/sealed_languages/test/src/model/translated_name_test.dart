@@ -1,5 +1,6 @@
+import "dart:convert";
+
 import "package:_sealed_world_tests/sealed_world_tests.dart";
-import "package:sealed_languages/src/helpers/extensions/sealed_world_json_string_extension.dart";
 import "package:sealed_languages/src/helpers/extensions/translated_name_extension.dart";
 import "package:sealed_languages/src/model/language/language.dart";
 import "package:sealed_languages/src/model/script/writing_system.dart";
@@ -101,6 +102,10 @@ void main() => group("$TranslatedName", () {
 
   test("toJson", () {
     final json = value.toJson();
-    expect(value, json.parse(TranslatedNameExtension.fromMap));
+    expect(
+      value,
+      // ignore: avoid-type-casts, it's a test.
+      TranslatedNameExtension.fromMap(jsonDecode(json) as Map<String, Object?>),
+    );
   });
 });

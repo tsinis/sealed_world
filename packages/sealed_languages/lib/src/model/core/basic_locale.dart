@@ -1,5 +1,5 @@
 import "../../helpers/extensions/basic_locale_extension.dart";
-import "../../helpers/extensions/sealed_world_object_extension.dart";
+import "../../helpers/extensions/iso_string_extension_type.dart";
 import "../../interfaces/iso_standardized.dart";
 import "../../interfaces/json_encodable.dart";
 import "../language/language.dart";
@@ -33,7 +33,7 @@ class BasicLocale implements JsonEncodable<BasicLocale> {
   ///
   /// This is expected to be UPPERCASE registered two-letter ISO 3166-1 Alpha-2
   /// string code of the country.
-  String? get countryCode => _countryCode?.toUpperCaseIsoCode();
+  String? get countryCode => IsoString.maybe(_countryCode)?.toUpperCaseCode();
 
   @override
   String toJson({JsonCodec codec = const JsonCodec()}) => codec.encode(toMap());

@@ -1,5 +1,5 @@
 import "../../interfaces/iso_standardized.dart";
-import "iso_standardized_string_extension.dart";
+import "iso_object_extension_type.dart";
 
 /// Extension on [Iterable] class to provide helper methods for working
 /// with Iterables.
@@ -51,19 +51,19 @@ extension SealedWorldIterableIsoExtension<T extends IsoStandardized>
       _getFirstIsoOrThrow(test, firstIsoWhereOrNull);
 
   /// Returns the first [IsoStandardized] element in the collection that has the
-  /// given regular [code], or throws a [StateError] if no matching element
-  /// is found.
-  T firstIsoWhereCode(String code) =>
+  /// given regular UPPERCASE [code], or throws a [StateError] if no matching
+  /// element is found.
+  T firstIsoWhereCode(Object code) =>
       _getFirstIsoOrThrow(code, firstIsoWhereCodeOrNull);
 
   /// Returns the first [IsoStandardized] element in the collection that has the
-  /// given regular [codeOther], or throws a [StateError] if no matching element
-  /// is found.
-  T firstIsoWhereCodeOther(String codeOther) =>
+  /// given regular UPPERCASE [codeOther], or throws a [StateError] if no
+  /// matching element is found.
+  T firstIsoWhereCodeOther(Object codeOther) =>
       _getFirstIsoOrThrow(codeOther, firstIsoWhereCodeOtherOrNull);
 
-  T _getFirstIsoOrThrow<S>(S value, T? Function(S) getIsoOrNullFunc) {
-    final maybeMatchingIso = getIsoOrNullFunc(value);
+  T _getFirstIsoOrThrow<S extends Object>(S value, T? Function(S) isoOrNull) {
+    final maybeMatchingIso = isoOrNull(value);
     if (maybeMatchingIso != null) return maybeMatchingIso;
     throw StateError(
       "No matching ISO $T element was found for the input! Consider using the"
@@ -78,16 +78,26 @@ extension SealedWorldNullableIterableIsoExtension<T extends IsoStandardized>
     on Iterable<T>? {
   /// Returns the first [IsoStandardized] element in the collection that has the
   /// given regular [code], or `null` if there is no such element.
-  T? firstIsoWhereCodeOrNull(Object? code) => _mapTrimmedCode(
-    (output) => firstIsoWhereOrNull((iso) => iso.code == output),
-    code,
-  );
+  /// If [toUpperCase] is set to `true` (default), the code is converted to
+  /// UPPERCASE before matching.
+  T? firstIsoWhereCodeOrNull(Object? code, {bool toUpperCase = true}) =>
+      _mapTrimmedCode(
+        (output) => firstIsoWhereOrNull((iso) => iso.code == output),
+        code,
+        toUpperCase: toUpperCase,
+      );
 
   /// Returns the first [IsoStandardized] element in the collection that has the
   /// given other [codeOther], or `null` if there is no such element.
-  T? firstIsoWhereCodeOtherOrNull(Object? codeOther) => _mapTrimmedCode(
+  /// If [toUpperCase] is set to `true` (default), the code is converted to
+  /// UPPERCASE before matching.
+  T? firstIsoWhereCodeOtherOrNull(
+    Object? codeOther, {
+    bool toUpperCase = true,
+  }) => _mapTrimmedCode(
     (output) => firstIsoWhereOrNull((iso) => iso.codeOther == output),
     codeOther,
+    toUpperCase: toUpperCase,
   );
 
   /// The first [IsoStandardized] element satisfying [test], or `null` if there
@@ -107,8 +117,17 @@ extension SealedWorldNullableIterableIsoExtension<T extends IsoStandardized>
     return null;
   }
 
-  T? _mapTrimmedCode(T? Function(String output) mapper, Object? input) {
-    final code = input?.toString().maybeToValidIsoCode();
+  T? _mapTrimmedCode(
+    T? Function(String output) mapper,
+    Object? input, {
+    required bool toUpperCase,
+  }) {
+    final isoObject = IsoObject.maybe(input);
+    if (isoObject == null) return null;
+
+    final code = toUpperCase
+        ? isoObject.maybeToValidIsoUpperCaseCode()
+        : isoObject.maybeToValidIsoCode();
 
     return code == null ? null : mapper(code);
   }
