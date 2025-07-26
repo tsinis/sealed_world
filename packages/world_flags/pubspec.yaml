@@ -23,7 +23,7 @@ environment:
 dependencies:
   flutter:
     sdk: flutter
-  sealed_countries: ^2.4.0
+  sealed_countries: ^2.5.0
 
 dev_dependencies:
   _sealed_world_tests:
