@@ -114,7 +114,7 @@ class FiatCurrency extends Currency
     Iterable<FiatCurrency>? currencies,
   ]) => currencies == null
       ? codeMap.findByCodeOrThrow(code)
-      : currencies.firstIsoWhereCode(IsoObject(code).toUpperCaseCode());
+      : currencies.firstIsoWhereCode(code);
 
   /// Returns a [FiatCurrency] instance from an numeric ISO 4217 code.
   ///
@@ -132,9 +132,7 @@ class FiatCurrency extends Currency
     Iterable<FiatCurrency>? currencies,
   ]) => currencies == null
       ? codeNumericMap.findByCodeOrThrow(codeNumeric)
-      : currencies.firstIsoWhereCodeOther(
-          IsoObject(codeNumeric).toUpperCaseCode(),
-        );
+      : currencies.firstIsoWhereCodeOther(codeNumeric);
 
   /// Returns a [FiatCurrency] instance from a currency name.
   ///
@@ -188,10 +186,9 @@ class FiatCurrency extends Currency
     Iterable<FiatCurrency>? currencies,
   ]) => currencies == null
       ? map.findByCodeOrThrow(code)
-      : IsoObject(code).toUpperCaseCode().maybeMapIsoCode(
+      : IsoObject(code).maybeMapIsoCode(
           orElse: (regular) => FiatCurrency.fromCode(regular, currencies),
-          numeric: (numeric) =>
-              FiatCurrency.fromCodeNumeric(numeric, currencies),
+          numeric: (numb) => FiatCurrency.fromCodeNumeric(numb, currencies),
           minLength: IsoStandardized.codeLength,
         );
 
@@ -339,7 +336,7 @@ class FiatCurrency extends Currency
     Iterable<FiatCurrency>? currencies,
   ]) => currencies == null
       ? map.maybeFindByCode(code)
-      : IsoObject.maybe(code)?.toUpperCaseCode().maybeMapIsoCode(
+      : IsoObject.maybe(code)?.maybeMapIsoCode(
           orElse: (regular) => maybeFromCode(regular, currencies),
           numeric: (numeric) => maybeFromCodeNumeric(numeric, currencies),
           minLength: IsoStandardized.codeLength,
@@ -362,11 +359,12 @@ class FiatCurrency extends Currency
     Iterable<FiatCurrency>? currencies,
   ]) {
     if (currencies == null) return codeMap.maybeFindByCode(code);
-    final string = IsoObject.maybe(code)?.toUpperCaseCode().maybeToValidIsoCode(
-      exactLength: IsoStandardized.codeLength,
-    );
 
-    return currencies.firstIsoWhereCodeOrNull(string);
+    final string = IsoObject.maybe(
+      code, // Dart 3.7+ formatting.
+    )?.maybeToValidIsoUpperCaseCode(exactLength: IsoStandardized.codeLength);
+
+    return currencies.firstIsoWhereCodeOrNull(string, toUpperCase: false);
   }
 
   /// Returns a [FiatCurrency] instance from an numeric ISO 4217 code, or
@@ -386,11 +384,11 @@ class FiatCurrency extends Currency
   ]) {
     if (currencies == null) return codeNumericMap.maybeFindByCode(codeNumeric);
 
-    final string = IsoObject.maybe(codeNumeric)
-        ?.toUpperCaseCode()
-        .maybeToValidIsoCode(exactLength: IsoStandardized.codeLength);
+    final string = IsoObject.maybe(
+      codeNumeric, // Dart 3.7+ formatting.
+    )?.maybeToValidIsoCode(exactLength: IsoStandardized.codeLength);
 
-    return currencies.firstIsoWhereCodeOtherOrNull(string);
+    return currencies.firstIsoWhereCodeOtherOrNull(string, toUpperCase: false);
   }
 
   /// The general standard ISO code for currencies, defined as ISO 4217.

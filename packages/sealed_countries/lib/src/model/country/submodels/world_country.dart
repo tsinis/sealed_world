@@ -168,7 +168,7 @@ class WorldCountry extends Country
     Iterable<WorldCountry>? countries,
   ]) => countries == null
       ? codeMap.findByCodeOrThrow(code)
-      : countries.firstIsoWhereCode(IsoObject(code).toUpperCaseCode());
+      : countries.firstIsoWhereCode(code);
 
   /// Returns an [WorldCountry] object from the given [codeShort]
   /// ISO 3166-1 Alpha-2 code.
@@ -187,9 +187,7 @@ class WorldCountry extends Country
     Iterable<WorldCountry>? countries,
   ]) => countries == null
       ? codeShortMap.findByCodeOrThrow(codeShort)
-      : countries.firstIsoWhereCodeOther(
-          IsoObject(codeShort).toUpperCaseCode(),
-        );
+      : countries.firstIsoWhereCodeOther(codeShort);
 
   /// Returns an [WorldCountry] object from the given ISO 3166-1 code.
   ///
@@ -208,7 +206,8 @@ class WorldCountry extends Country
     // ignore: avoid-non-empty-constructor-bodies, more clear for factory methods.
   ]) {
     if (countries == null) return codeNumericMap.findByCodeOrThrow(codeNumeric);
-    final trimmedCode = IsoObject(codeNumeric).toUpperCaseCode();
+
+    final trimmedCode = IsoObject(codeNumeric).toCode();
 
     return countries.firstIsoWhere(
       (country) => country.codeNumeric == trimmedCode,
@@ -245,7 +244,7 @@ class WorldCountry extends Country
     Iterable<WorldCountry>? countries,
   ]) => countries == null
       ? map.findByCodeOrThrow(code)
-      : IsoObject(code).toUpperCaseCode().maybeMapIsoCode(
+      : IsoObject(code).maybeMapIsoCode(
           orElse: (regular) => WorldCountry.fromCode(regular, countries),
           numeric: (numb) => WorldCountry.fromCodeNumeric(numb, countries),
           short: (short) => WorldCountry.fromCodeShort(short, countries),
@@ -434,11 +433,12 @@ class WorldCountry extends Country
     Iterable<WorldCountry>? countries,
   ]) {
     if (countries == null) return codeMap.maybeFindByCode(code);
-    final string = IsoObject.maybe(code)?.toUpperCaseCode().maybeToValidIsoCode(
-      exactLength: IsoStandardized.codeLength,
-    );
 
-    return countries.firstIsoWhereCodeOrNull(string);
+    final string = IsoObject.maybe(
+      code, // Dart 3.7+ formatting.
+    )?.maybeToValidIsoUpperCaseCode(exactLength: IsoStandardized.codeLength);
+
+    return countries.firstIsoWhereCodeOrNull(string, toUpperCase: false);
   }
 
   /// Returns an [WorldCountry] object from the given [codeShort]
@@ -458,11 +458,12 @@ class WorldCountry extends Country
     Iterable<WorldCountry>? countries,
   ]) {
     if (countries == null) return codeShortMap.maybeFindByCode(codeShort);
-    final string = IsoObject.maybe(codeShort)
-        ?.toUpperCaseCode()
-        .maybeToValidIsoCode(exactLength: IsoStandardized.codeShortLength);
 
-    return countries.firstIsoWhereCodeOtherOrNull(string);
+    final string = IsoObject.maybe(codeShort)?.maybeToValidIsoUpperCaseCode(
+      exactLength: IsoStandardized.codeShortLength,
+    );
+
+    return countries.firstIsoWhereCodeOtherOrNull(string, toUpperCase: false);
   }
 
   /// Returns an [WorldCountry] object from the given [codeNumeric] ISO 3166-1
@@ -482,9 +483,9 @@ class WorldCountry extends Country
     Iterable<WorldCountry>? countries,
   ]) {
     if (countries == null) return codeNumericMap.maybeFindByCode(codeNumeric);
-    final trimmedCode = IsoObject(codeNumeric)
-        .toUpperCaseCode()
-        .maybeToValidIsoCode(exactLength: IsoStandardized.codeLength);
+    final trimmedCode = IsoObject(
+      codeNumeric, // Dart 3.7+ formatting.
+    ).maybeToValidIsoCode(exactLength: IsoStandardized.codeLength);
 
     return countries.firstIsoWhereOrNull(
       (country) => country.codeNumeric == trimmedCode,
@@ -524,10 +525,9 @@ class WorldCountry extends Country
     Iterable<WorldCountry>? countries,
   ]) => countries == null
       ? map.maybeFindByCode(code)
-      : IsoObject.maybe(code)?.toUpperCaseCode().maybeMapIsoCode(
+      : IsoObject.maybe(code)?.maybeMapIsoCode(
           orElse: (regular) => WorldCountry.maybeFromCode(regular, countries),
-          numeric: (numeric) =>
-              WorldCountry.maybeFromCodeNumeric(numeric, countries),
+          numeric: (numb) => WorldCountry.maybeFromCodeNumeric(numb, countries),
           short: (short) => WorldCountry.maybeFromCodeShort(short, countries),
         );
 

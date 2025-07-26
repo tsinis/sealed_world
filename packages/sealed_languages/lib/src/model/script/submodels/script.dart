@@ -60,8 +60,8 @@ class Script extends WritingSystem
     if (scripts == null) return codeMap.findByCodeOrThrow(code);
 
     String? validCode = IsoObject(
-      code, // Dart 3.8 formatting style.
-    ).toUpperCaseCode().maybeToValidIsoCode(exactLength: codeLength);
+      code, // Dart 3.7+ formatting.
+    ).maybeToValidIsoCode(exactLength: codeLength);
     if (validCode == null) {
       throw StateError(
         "Provided $code isn't a valid $standardCodeName code. "
@@ -97,9 +97,7 @@ class Script extends WritingSystem
     Iterable<Script>? scripts,
   ]) => scripts == null
       ? codeNumericMap.findByCodeOrThrow(codeNumeric)
-      : scripts.firstIsoWhereCodeOther(
-          IsoObject(codeNumeric).toUpperCaseCode(),
-        );
+      : scripts.firstIsoWhereCodeOther(codeNumeric);
 
   /// Creates a new instance of the [Script] class from the name of the script.
   ///
@@ -142,7 +140,7 @@ class Script extends WritingSystem
   factory Script.fromAnyCode(Object code, [Iterable<Script>? scripts]) =>
       scripts == null
       ? map.findByCodeOrThrow(code)
-      : IsoObject(code).toUpperCaseCode().maybeMapIsoCode(
+      : IsoObject(code).maybeMapIsoCode(
           orElse: (regular) => Script.fromCode(regular, scripts),
           numeric: (numeric) => Script.fromCodeNumeric(numeric, scripts),
           maxLength: codeLength,
@@ -244,7 +242,7 @@ class Script extends WritingSystem
   static Script? maybeFromAnyCode(Object? code, [Iterable<Script>? scripts]) =>
       scripts == null
       ? map.maybeFindByCode(code)
-      : IsoObject.maybe(code)?.toUpperCaseCode().maybeMapIsoCode(
+      : IsoObject.maybe(code)?.maybeMapIsoCode(
           orElse: (regular) => maybeFromCode(regular, scripts),
           numeric: (numeric) => maybeFromCodeNumeric(numeric, scripts),
           maxLength: codeLength,
@@ -273,8 +271,8 @@ class Script extends WritingSystem
     if (scripts == null) return codeMap.maybeFindByCode(code);
 
     String? string = IsoObject.maybe(
-      code, // Dart 3.8 formatting style.
-    )?.toUpperCaseCode().maybeToValidIsoCode(exactLength: codeLength);
+      code, // Dart 3.7+ formatting.
+    )?.maybeToValidIsoCode(exactLength: codeLength);
     if (string == null) return null;
     string = formatToStandardCode(string);
 
@@ -304,11 +302,11 @@ class Script extends WritingSystem
   ]) {
     if (scripts == null) return codeNumericMap.maybeFindByCode(codeNumeric);
 
-    final string = IsoObject.maybe(codeNumeric)
-        ?.toUpperCaseCode()
-        .maybeToValidIsoCode(exactLength: IsoStandardized.codeLength);
+    final string = IsoObject.maybe(
+      codeNumeric, // Dart 3.7+ formatting.
+    )?.maybeToValidIsoCode(exactLength: IsoStandardized.codeLength);
 
-    return scripts.firstIsoWhereCodeOtherOrNull(string);
+    return scripts.firstIsoWhereCodeOtherOrNull(string, toUpperCase: false);
   }
 
   /// Formats the given [input] to a standard four-character ISO 15924 code.
