@@ -433,7 +433,7 @@
       {
         "label": "Update Goldens (Remote)",
         "type": "shell",
-        "command": "CURRENT_BRANCH=$(git branch --show-current); echo \"Triggering golden test update for branch: $CURRENT_BRANCH\"; gh workflow run update_goldens.yaml --field branch=\"$CURRENT_BRANCH\"",
+        "command": "CURRENT_BRANCH=$(git branch --show-current); echo \"Triggering golden test update for branch: $CURRENT_BRANCH\"; gh workflow run update_goldens.yaml --field branch=\"$CURRENT_BRANCH\"; echo \"Checking workflow runs...\"; gh run list --workflow=\"update_goldens.yaml\"",
         "presentation": { "reveal": "always" },
         "problemMatcher": []
       },
