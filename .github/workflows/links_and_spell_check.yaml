@@ -28,7 +28,7 @@ jobs:
 
 
       - name: 🪄 Spell check
-        uses: streetsidesoftware/cspell-action@v7.1.2
+        uses: streetsidesoftware/cspell-action@v7.2.0
         with:
           config: .github/workflows/config/spell-check/cspell.json
           incremental_files_only: true
