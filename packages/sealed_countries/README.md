@@ -54,7 +54,7 @@ This ISO-driven, fully tested and pure Dart package provides information about w
 Provides a compile-time constant of all countries accessible via `WorldCountry.list` moreover, the **WorldCountry** class provides the following methods/constructors:
 
 - `maybeFromAnyCode` - returns a country instance if the value matches any ISO 3166 code, otherwise returns `null`.
-- `fromAnyCode` - returns a country instance if the value matches any ISO 4217 code.
+- `fromAnyCode` - returns a country instance if the value matches any ISO 3166 code.
 - `maybeFromValue` - returns a country instance if the value matches the provided value, otherwise returns `null`.
 - `fromCode` - returns a country instance if the value matches the provided ISO 3166-1 Alpha-3 code.
 - `fromCodeShort` - returns a country instance if the value matches the provided ISO 3166-1 Alpha-2 code.
@@ -119,6 +119,23 @@ To get information about countries, use the `WorldCountry` class. You can constr
 For more usage examples, please see the `/example` folder.
 
 ### FAQ
+
+#### How do I get all countries using a specific currency?
+
+- **Quick/simple way (more suitable for a single currency):** `.where`
+
+  ```dart
+  final usdCountries = WorldCountry.list.where( // All countries using USD.
+    (country) => country.currencies?.contains(const FiatUsd()) ?? false,
+  );
+  ```
+
+- **Advanced (more suitable for multiple currencies, [sorted by population](https://github.com/tsinis/sealed_world/blob/main/packages/sealed_countries/lib/src/collections/README.currencies.md)):** `.byCountryMap()`
+
+  ```dart
+  final map = const [FiatUsd(), FiatEur()].byCountryMap(); // All countries using USD or EUR.
+  final allCountries = {for (final list in map.values) ...list};
+  ```
 
 #### Why should I use this package over any other country-related package?
 
