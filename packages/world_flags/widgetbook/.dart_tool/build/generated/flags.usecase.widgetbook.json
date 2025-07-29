@@ -2,7 +2,10 @@
   {
     "name": "EUR",
     "componentName": "IsoFlag",
+    "useCaseName": "EUR Flag",
     "navPath": "Flags/IsoFlag/EUR",
+    "importStatement": "import 'package:world_flags/world_flags.dart';",
+    "componentImportStatement": "",
     "designLink": "https://your-design-link.com",
     "knobsConfigs": {
       "height": {
