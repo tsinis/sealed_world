@@ -30,5 +30,8 @@ jobs:
         working-directory: packages/world_flags/widgetbook
         run: flutter build web -t lib/main.dart
 
+      - name: Move up and list files
+        run: pwd && ls -al && ls -al ..
+
       - name: 🛫 Push Widgetbook Build
-        run: widgetbook cloud build push --path packages/world_flags/widgetbook --api-key ${{ secrets.WIDGETBOOK_API_KEY }}
+        run: cd .. && widgetbook cloud build push --path packages/world_flags/widgetbook --api-key ${{ secrets.WIDGETBOOK_API_KEY }}
