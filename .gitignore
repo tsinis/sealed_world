@@ -124,6 +124,7 @@ android/
 !packages/*/example/android
 .metadata
 !packages/*/example/.metadata
+!packages/*/widgetbook/web
 
 # Flutter Version Management
 .fvm
