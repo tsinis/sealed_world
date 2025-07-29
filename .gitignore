@@ -127,7 +127,7 @@ android/
 
 # Widgetbook
 !packages/*/widgetbook/web
-!packages/*/widgetbook/.dart_tool/build/generated/.gitkeep
+!packages/*/widgetbook/.dart_tool/build/generated/flags.usecase.widgetbook.json
 
 # Flutter Version Management
 .fvm

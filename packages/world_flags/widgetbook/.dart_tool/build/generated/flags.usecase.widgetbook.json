@@ -1,0 +1,87 @@
+[
+  {
+    "name": "EUR",
+    "componentName": "IsoFlag",
+    "navPath": "Flags/IsoFlag/EUR",
+    "designLink": "https://your-design-link.com",
+    "knobsConfigs": {
+      "height": {
+        "type": "int",
+        "label": "height",
+        "description": "The height of the flag",
+        "min": 1,
+        "max": 80,
+        "initialValue": 40
+      },
+      "width": {
+        "type": "intOrNull",
+        "label": "width",
+        "description": "The width of the flag",
+        "min": 1,
+        "max": 815,
+        "initialValue": 60
+      },
+      "aspectRatio": {
+        "type": "double",
+        "label": "aspectRatio",
+        "description": "The aspect ratio of the flag, uncheck width to use this",
+        "min": 1.0,
+        "max": 2.0,
+        "initialValue": 1.5
+      },
+      "decoration borderRadius": {
+        "type": "double",
+        "label": "decoration borderRadius",
+        "description": "The border radius of the flag's decoration",
+        "max": 40,
+        "initialValue": 4
+      },
+      "decoration boxShadow blurRadius": {
+        "type": "double",
+        "label": "decoration boxShadow blurRadius",
+        "description": "The blur radius of the flag's decoration",
+        "max": 32,
+        "initialValue": 16
+      },
+      "decoration boxShadow spreadRadius": {
+        "type": "double",
+        "label": "decoration boxShadow spreadRadius",
+        "description": "The spread radius of the flag's decoration",
+        "max": 16
+      },
+      "decoration color": {
+        "type": "color",
+        "label": "decoration color",
+        "description": "The color of the flag's decoration",
+        "initialValue": "#B0B0B0"
+      },
+      "decoration boxShadow offsetX": {
+        "type": "double",
+        "label": "decoration boxShadow offsetX",
+        "description": "The horizontal offset of the flag's shadow",
+        "min": -16,
+        "max": 16
+      },
+      "decoration boxShadow offsetY": {
+        "type": "double",
+        "label": "decoration boxShadow offsetY",
+        "description": "The vertical offset of the flag's shadow",
+        "min": -16,
+        "max": 16,
+        "initialValue": 8
+      },
+      "decoration border width": {
+        "type": "double",
+        "label": "decoration border width",
+        "description": "The border width of the flag's decoration",
+        "max": 3,
+        "initialValue": 1
+      },
+      "child": {
+        "type": "boolean",
+        "label": "child",
+        "description": "Whether to show the child widget or not"
+      }
+    }
+  }
+]
