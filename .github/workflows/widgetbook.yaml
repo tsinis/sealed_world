@@ -31,5 +31,4 @@ jobs:
         run: flutter build web -t lib/main.dart
 
       - name: 🛫 Push Widgetbook Build
-        working-directory: packages/world_flags/widgetbook
-        run: widgetbook cloud build push --api-key ${{ secrets.WIDGETBOOK_API_KEY }}
+        run: widgetbook cloud build push --path packages/world_flags/widgetbook --api-key ${{ secrets.WIDGETBOOK_API_KEY }}
