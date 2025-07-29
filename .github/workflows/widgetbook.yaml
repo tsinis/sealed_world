@@ -4,6 +4,7 @@ on:
   push:
     paths:
       - "packages/world_flags/lib/**"
+      - "packages/world_flags/widgetbook/**"
       - ".github/workflows/widgetbook.yaml"
 
 jobs:
