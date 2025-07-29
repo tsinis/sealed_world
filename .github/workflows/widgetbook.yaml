@@ -1,0 +1,34 @@
+name: widgetbook
+
+on:
+  push:
+    paths:
+      - "packages/world_flags/lib/**"
+      - ".github/workflows/widgetbook.yaml"
+
+jobs:
+  widgetbook-cloud-hosting:
+    name: 🌐 Widgetbook Cloud Hosting
+    runs-on: ubuntu-latest
+    timeout-minutes: 24
+    steps:
+      - name: 📚 Git checkout
+        uses: actions/checkout@v4.2.2
+
+      - name: 🐦 Setup Flutter
+        uses: subosito/flutter-action@v2.21.0
+
+      - name: 📦 Install dependencies
+        working-directory: packages/world_flags/widgetbook
+        run: flutter pub get
+
+      - name: 📥 Install Widgetbook CLI
+        run: dart pub global activate widgetbook_cli
+
+      - name: 🛠️ Build for web
+        working-directory: packages/world_flags/widgetbook
+        run: flutter build web -t lib/main.dart
+
+      - name: 🛫 Push Widgetbook Build
+        working-directory: packages/world_flags/widgetbook
+        run: widgetbook cloud build push --api-key ${{ secrets.WIDGETBOOK_API_KEY }}

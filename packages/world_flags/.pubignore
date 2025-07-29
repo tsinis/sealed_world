@@ -5,4 +5,5 @@ example/macos/**
 example/windows/**
 example/linux/**
 example/.vscode/**
+widgetbook/**
 doc/example.gif
