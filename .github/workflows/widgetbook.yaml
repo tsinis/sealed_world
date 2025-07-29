@@ -31,11 +31,10 @@ jobs:
         run: flutter build web -t lib/main.dart
 
       - name: Create test file in generated dir
-        run: echo "hello" > packages/world_flags/widgetbook/.dart_tool/build/generated/main.dart
+        run: echo "hello" > packages/world_flags/widgetbook/.dart_tool/build/generated/.widgetbook.json
 
       - name: List files in generated dir
         run: ls -al packages/world_flags/widgetbook/.dart_tool/build/generated/
 
       - name: 🛫 Push Widgetbook Build
-        working-directory: packages/world_flags/widgetbook
-        run: widgetbook cloud build push --api-key ${{ secrets.WIDGETBOOK_API_KEY }}
+        run: widgetbook cloud build push --path packages/world_flags/widgetbook --api-key ${{ secrets.WIDGETBOOK_API_KEY }}
