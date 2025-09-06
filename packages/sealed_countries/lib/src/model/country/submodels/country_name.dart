@@ -13,7 +13,7 @@ import "../../../helpers/extensions/country_submodels/country_name_extension.dar
 /// Example usage:
 ///
 /// ```dart
-/// final countryName = CountryName(
+/// const countryName = CountryName(
 ///   language: LangSlk(),
 ///   official: "Slovenská republika",
 ///   common: "Slovensko",
@@ -36,8 +36,8 @@ final class CountryName extends TranslatedName {
 
   @override
   String toString({bool short = true}) => short
-      ? '''CountryName(language: ${language.runtimeType}(), official: "$official", common: "$common")'''
-      : '''CountryName(language: $language, official: "$official", common: "$common")''';
+      ? name
+      : '''CountryName(language: ${language.runtimeType}(), official: "$official", common: "$common")''';
 
   @override
   String toJson({JsonCodec codec = const JsonCodec()}) => codec.encode(toMap());
