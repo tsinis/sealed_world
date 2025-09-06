@@ -8,10 +8,8 @@ import "../../helpers/widget_tester_extension.dart";
 
 void main() => group("NavigatorContextExtension", () {
   // ignore: avoid-local-functions, it's test group.
-  Future<BuildContext> contextExtractor(
-    WidgetTester tester, [
-    Widget child = const SizedBox(),
-  ]) async {
+  Future<BuildContext> contextExtractor(WidgetTester tester) async {
+    const child = SizedBox();
     await tester.pumpMaterialApp(child);
 
     return tester.element(find.byType(child.runtimeType));

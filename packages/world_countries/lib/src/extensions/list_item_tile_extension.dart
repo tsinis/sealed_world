@@ -57,6 +57,7 @@ extension ListItemTileExtension<T extends Object> on ListItemTile<T> {
     double? minLeadingWidth,
     double? minTileHeight,
     ListTileTitleAlignment? titleAlignment,
+    WidgetStatesController? statesController,
   }) => ListItemTile<T>(
     item ?? this.item,
     onPressed: onPressed ?? this.onPressed,
@@ -100,5 +101,6 @@ extension ListItemTileExtension<T extends Object> on ListItemTile<T> {
     titleAlignment: titleAlignment ?? this.titleAlignment,
     internalAddSemanticForOnTap:
         internalAddSemanticForOnTap ?? this.internalAddSemanticForOnTap,
+    statesController: statesController ?? this.statesController,
   );
 }

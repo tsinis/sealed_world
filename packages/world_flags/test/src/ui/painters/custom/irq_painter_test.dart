@@ -30,8 +30,8 @@ class _IrqPainterTest implements Canvas {
   _IrqPainterTest(this.size);
 
   final Size size;
-  int restoreCount = 0; // ignore: omit_obvious_property_types, could be double.
-  int saveCount = 0; // ignore: omit_obvious_property_types, could be double.
+  int restoreCount = 0;
+  int saveCount = 0;
 
   @override
   void save() => saveCount += 1;

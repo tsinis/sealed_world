@@ -1,7 +1,6 @@
 part of "basic_picker.dart";
 
 class _BasicPickerState<T extends IsoTranslated> extends State<BasicPicker<T>> {
-  // ignore: omit_obvious_property_types, conflicts with DCM here.
   TextEditingController _controller = TextEditingController();
 
   @override
