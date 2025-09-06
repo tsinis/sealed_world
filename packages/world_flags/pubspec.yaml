@@ -1,4 +1,4 @@
-version: 2.6.0
+version: 2.7.0
 name: world_flags
 description: Country flags made with Flutter - every flag is a Widget, without any assets.
 maintainer: Roman Cinis
@@ -18,7 +18,7 @@ screenshots:
 resolution: workspace
 
 environment:
-  sdk: ^3.8.1
+  sdk: ^3.9.2
 
 dependencies:
   flutter:

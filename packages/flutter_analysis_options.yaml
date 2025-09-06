@@ -47,9 +47,11 @@ dart_code_metrics:
     - pass-existing-stream-to-stream-builder
     - prefer-action-button-tooltip
     - prefer-align-over-container
+    - prefer-async-callback
     - prefer-center-over-align
     - prefer-compute-over-isolate-run
     - prefer-const-border-radius
+    - prefer-constrained-box-over-container
     - prefer-container
     - prefer-correct-edge-insets-constructor
     - prefer-dedicated-media-query-methods
@@ -65,6 +67,7 @@ dart_code_metrics:
     - prefer-text-rich
     - prefer-transform-over-container
     - prefer-using-list-view
+    - prefer-void-callback
     - proper-super-calls
     - use-closest-build-context
     - use-setstate-synchronously

@@ -261,6 +261,7 @@ dart_code_metrics:
     - avoid-nested-switch-expressions
     - avoid-nested-switches
     - avoid-nested-try-statements
+    - avoid-never-passed-parameters
     - avoid-non-ascii-symbols
     - avoid-non-final-exception-class-fields
     - avoid-non-null-assertion
@@ -318,10 +319,13 @@ dart_code_metrics:
     - avoid-unnecessary-futures
     - avoid-unnecessary-getter
     - avoid-unnecessary-if
+    - avoid-unnecessary-late-fields
     - avoid-unnecessary-length-check
     - avoid-unnecessary-local-late
+    - avoid-unnecessary-local-variable
     - avoid-unnecessary-negations
     - avoid-unnecessary-null-aware-elements
+    - avoid-unnecessary-nullable-parameters
     - avoid-unnecessary-nullable-return-type
     - avoid-unnecessary-overrides
     - avoid-unnecessary-patterns
@@ -343,6 +347,7 @@ dart_code_metrics:
     - avoid-unused-parameters
     - avoid-weak-cryptographic-algorithms
     - avoid-wildcard-cases-with-enums
+    - avoid-wildcard-cases-with-sealed-classes
     - binary-expression-operand-order
     - dispose-class-fields
     - double-literal-format
@@ -426,6 +431,7 @@ dart_code_metrics:
     - prefer-pushing-conditional-expressions
     - prefer-redirecting-superclass-constructor
     - prefer-return-await
+    - prefer-returning-condition
     - prefer-returning-conditional-expressions
     - prefer-simpler-boolean-expressions
     - prefer-simpler-patterns-null-check
@@ -458,6 +464,7 @@ linter:
     flutter_style_todos: false # Not a Flutter team.
     omit_local_variable_types: false # Conflicts with: prefer-type-over-var
     omit_obvious_local_variable_types: false # Conflicts with: omit_local_variable_types and prefer-type-over-var.
+    omit_obvious_property_types: false # Conflicts with: type_annotate_public_apis.
     prefer_final_parameters: false # Conflicts with: avoid_final_parameters.
     prefer_single_quotes: false # Conflicts with: prefer_double_quotes.
     specify_nonobvious_local_variable_types: false # Conflicts with: avoid-explicit-type-declaration.
@@ -566,7 +573,6 @@ linter:
     noop_primitive_operations: true
     null_check_on_nullable_type_parameter: true
     null_closures: true
-    omit_obvious_property_types: true
     one_member_abstracts: true
     only_throw_errors: true
     overridden_fields: true
