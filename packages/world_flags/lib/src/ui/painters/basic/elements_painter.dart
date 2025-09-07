@@ -159,14 +159,14 @@ abstract base class ElementsPainter extends CustomPainter {
   @protected
   // ignore: prefer-typedefs-for-callbacks, Might be a breaking change.
   ElementsPainter Function(ElementsProps?, double) painter(Shape child) =>
-      child.whenConst(
-        star: StarPainter.new,
-        triangle: TrianglePainter.new,
-        ellipse: EllipsePainter.new,
-        rectangle: RectanglePainter.new,
-        moon: MoonPainter.new,
-        diagonalLine: DiagonalLinePainter.new,
-      );
+      switch (child) {
+        Star() => StarPainter.new,
+        Triangle() => TrianglePainter.new,
+        Ellipse() => EllipsePainter.new,
+        Rectangle() => RectanglePainter.new,
+        Moon() => MoonPainter.new,
+        DiagonalLine() => DiagonalLinePainter.new,
+      };
 
   /// Calculates the size of the element based on the provided [size].
   ///

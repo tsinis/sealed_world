@@ -4,7 +4,9 @@
 
 part of 'shape.dart';
 
+@Deprecated("Shape is a sealed class, use switch (shape) statement instead")
 extension $ShapeExtension on Shape {
+  @Deprecated("Shape is a sealed class, use switch (shape) statement instead")
   T maybeWhen<T>({
     required T Function() orElse,
     T Function()? star,
@@ -22,6 +24,7 @@ extension $ShapeExtension on Shape {
     DiagonalLine() => diagonalLine?.call() ?? orElse(),
   };
 
+  @Deprecated("Shape is a sealed class, use switch (shape) statement instead")
   T when<T>({
     required T Function() star,
     required T Function() triangle,
@@ -38,6 +41,7 @@ extension $ShapeExtension on Shape {
     DiagonalLine() => diagonalLine(),
   };
 
+  @Deprecated("Shape is a sealed class, use switch (shape) statement instead")
   T whenConst<T>({
     required T star,
     required T triangle,
@@ -54,6 +58,7 @@ extension $ShapeExtension on Shape {
     DiagonalLine() => diagonalLine,
   };
 
+  @Deprecated("Shape is a sealed class, use switch (shape) statement instead")
   T maybeWhenConst<T>({
     required T orElse,
     T? star,
@@ -71,6 +76,7 @@ extension $ShapeExtension on Shape {
     DiagonalLine() => diagonalLine ?? orElse,
   };
 
+  @Deprecated("Shape is a sealed class, use switch (shape) statement instead")
   T? whenOrNull<T>({
     T Function()? star,
     T Function()? triangle,
@@ -87,6 +93,7 @@ extension $ShapeExtension on Shape {
     DiagonalLine() => diagonalLine?.call(),
   };
 
+  @Deprecated("Shape is a sealed class, use switch (shape) statement instead")
   T? whenConstOrNull<T>({
     T? star,
     T? triangle,
