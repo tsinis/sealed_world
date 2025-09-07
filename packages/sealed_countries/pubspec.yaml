@@ -1,4 +1,4 @@
-version: 2.5.1
+version: 2.6.0
 name: sealed_countries
 description: Provides data for world countries in the form of sealed classes.
 maintainer: Roman Cinis

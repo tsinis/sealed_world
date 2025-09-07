@@ -48,6 +48,7 @@ Provides a compile-time constant of all currencies accessible via `FiatCurrency.
 
 You can also find many common methods you may know from Dart ecosystem - `toString` overrides, `copyWith`, `toJson`, `compareTo`, etc. Also, a compile-time const, tree-shakable, case-insensitive code `map`s (for O(1)-time code look-ups), `list`, and much more.
 
+> [!TIP]
 > Translations: Use `maybeCommonNameFor()` or `commonNameFor()` methods to get translations for specific locale.
 
 ### Getting started
