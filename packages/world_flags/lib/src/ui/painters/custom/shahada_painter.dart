@@ -51,7 +51,7 @@ final class ShahadaPainter extends CustomElementsPainter {
     _paintShahada(canvas, height, width / 2, paint);
     canvas.restore();
 
-    if (_hasSabre) canvas.drawRect(rectangle, paint);
+    if (_hasSabre) canvas.drawRect(rectangle, paint..isAntiAlias = false);
 
     return (canvas: canvas, bounds: rectangle, child: property.child);
   }

@@ -48,11 +48,17 @@ class _SettingsDialogState extends State<SettingsDialog> {
       padding: const EdgeInsets.all(16),
       child: ValueListenableBuilder(
         valueListenable: widget.aspectRatio,
-        builder: (_, ratio, _) => ValueListenableBuilder(
+        child: SelectableText(
+          "${_country.internationalName} (${_country.code}) "
+          "Settings",
+          textAlign: TextAlign.center,
+        ),
+        builder: (_, ratio, title) => ValueListenableBuilder(
           valueListenable: _opacity,
           builder: (bc, opacityValue, flag) => Scaffold(
             appBar: AppBar(
-              leading: const SizedBox.shrink(),
+              automaticallyImplyLeading: false,
+              forceMaterialTransparency: true,
               actions: [
                 IconButton(
                   icon: const Text(
@@ -62,11 +68,7 @@ class _SettingsDialogState extends State<SettingsDialog> {
                   onPressed: Navigator.of(bc).pop,
                 ),
               ],
-              title: SelectableText(
-                "${_country.internationalName} (${_country.code}) "
-                "Settings",
-                textAlign: TextAlign.center,
-              ),
+              title: title,
             ),
             body: Center(
               child: DecoratedBox(

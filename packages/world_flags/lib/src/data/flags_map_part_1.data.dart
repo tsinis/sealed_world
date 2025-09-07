@@ -846,24 +846,12 @@ const flagGgyProperties = FlagProperties(
     ColorsProperties(Color(0xffe8112d), ratio: 10),
     ColorsProperties(Color(0xffffffff), ratio: 15),
   ],
-  baseElementType: FlagElementsType.multiElement,
-  isSimplified: true,
   elementsProperties: [
-    ElementsProperties(
+    CustomElementsProperties(
       Color(0xffe8112d),
-      shape: Rectangle(aspectRatio: 10 / 40),
-      child: ElementsProperties(
-        Color(0xfff9dd16),
-        shape: Rectangle(aspectRatio: 0.1),
-        heightFactor: 0.75,
-      ),
+      otherColors: [Color(0xfff9dd16)],
+      heightFactor: 0.75,
     ),
-    ElementsProperties(
-      Color(0xfff9dd16),
-      shape: Rectangle(aspectRatio: 9),
-      heightFactor: 0.08,
-    ),
-    CustomElementsProperties(Color(0xfff9dd16), heightFactor: 0.8),
   ],
   url: "https://www.vexilla-mundi.com/guernsey/guernsey_sheet.png",
 );

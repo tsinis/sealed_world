@@ -11,9 +11,9 @@
 
 # Every country flag is a Widget
 
-Flutter library for compact and visually appealing country flag icons. Optimized for rendering sizes from 18 to 48 pixels (height), these flags draw inspiration from circle-flags, OpenMoji, and Twemoji. Over two-thirds of the flags in this library are also suitable for full-scale use.
+The first and only collection of declaratively defined **world flags**. Flags adapt to any size and shape while preserving their true proportions. Optimized for rendering sizes from 18 to 48 pixels (height), these flags draw inspiration from circle-flags, OpenMoji, and Twemoji. Over two-thirds of the flags in this library are also suitable for full-scale use.
 
-Each flag is a vector-based `CustomPainter`, ensuring precise, scalable, and stunning results. Following official color standards and using a declarative design, world_flags allows easy customization of flag shapes, decorations, and aspect ratios without losing quality or breaking flag element proportions.
+Each flag is a vector-based `CustomPainter`, ensuring precise, scalable, and stunning results. Following official color standards and using a declarative design, `world_flags` allows easy customization of flag shapes, decorations, and aspect ratios without losing quality or breaking flag element proportions.
 
 ![Example](https://raw.githubusercontent.com/tsinis/sealed_world/main/packages/world_flags/doc/example.gif)
 
@@ -26,6 +26,7 @@ Each flag is a vector-based `CustomPainter`, ensuring precise, scalable, and stu
 - **Easy to Use**: Simplified API for adding flags with minimal code.
 - **Pure Dart**: As these are code-based flags, developers can easily access and manipulate flag colors, aspect ratios, and other properties like any other Dart object.
 
+> [!NOTE]
 > The package provides 250 small and simplified world country flags, and **more than 2/3** of these flags can also be used as full-dimensional flags.
 
 ## Getting Started

@@ -898,7 +898,7 @@ const flagOmnProperties = FlagProperties(
     ColorsProperties(Color(0xffef2d29)),
     ColorsProperties(Color(0xff009025)),
   ],
-  aspectRatio: 2,
+  aspectRatio: 7 / 4,
   baseElementType: FlagElementsType.multiElement,
   isSimplified: true,
   elementsProperties: [

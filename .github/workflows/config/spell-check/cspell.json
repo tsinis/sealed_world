@@ -18,7 +18,8 @@
     "softwareTerms",
     "dart_dictionary",
     "iso_dictionary",
-    "nicknames_dictionary"
+    "nicknames_dictionary",
+    "other_dictionary"
   ],
   "dictionaryDefinitions": [
     {
@@ -34,6 +35,11 @@
     {
       "name": "nicknames_dictionary",
       "path": "nicknames_dictionary.txt",
+      "addWords": true
+    },
+    {
+      "name": "other_dictionary",
+      "path": "other_dictionary.txt",
       "addWords": true
     }
   ]

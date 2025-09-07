@@ -54,6 +54,7 @@ class ListItemTile<T extends Object> extends ListTile {
     super.titleAlignment,
     super.titleTextStyle,
     super.visualDensity,
+    super.statesController,
   }) : super(selected: isChosen, enabled: !isDisabled, trailing: chosenIcon);
 
   /// Default font size.
@@ -120,6 +121,7 @@ class ListItemTile<T extends Object> extends ListTile {
       minVerticalPadding: minVerticalPadding,
       minLeadingWidth: minLeadingWidth ?? (fontSize + UiConstants.point),
       titleAlignment: titleAlignment,
+      statesController: statesController,
     ),
   );
 }

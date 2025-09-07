@@ -28,6 +28,7 @@ import "src/ui/painters/custom/david_star_painter.dart";
 import "src/ui/painters/custom/eagle_painter.dart";
 import "src/ui/painters/custom/eri_painter.dart";
 import "src/ui/painters/custom/esp_painter.dart";
+import "src/ui/painters/custom/ggy_painter.dart";
 import "src/ui/painters/custom/hkg_painter.dart";
 import "src/ui/painters/custom/hrv_painter.dart";
 import "src/ui/painters/custom/imn_painter.dart";
@@ -116,6 +117,7 @@ export "src/ui/painters/custom/david_star_painter.dart";
 export "src/ui/painters/custom/eagle_painter.dart";
 export "src/ui/painters/custom/eri_painter.dart";
 export "src/ui/painters/custom/esp_painter.dart";
+export "src/ui/painters/custom/ggy_painter.dart";
 export "src/ui/painters/custom/hkg_painter.dart";
 export "src/ui/painters/custom/hrv_painter.dart";
 export "src/ui/painters/custom/imn_painter.dart";
@@ -282,7 +284,7 @@ const uniqueSimplifiedFlagsMap = <WorldCountry, BasicFlag>{
     elementsBuilder: UnionJackPainter.full,
   ),
   CountryGeo(): BasicFlag(flagGeoProperties, elementsBuilder: GeoPainter.new),
-  CountryGgy(): MultiElementFlag(flagGgyProperties),
+  CountryGgy(): BasicFlag(flagGgyProperties, elementsBuilder: GgyPainter.new),
   CountryGha(): StarFlag(flagGhaProperties),
   CountryGib(): MultiElementFlag(flagGibProperties),
   CountryGin(): BasicFlag(flagGinProperties),

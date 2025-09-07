@@ -4,7 +4,7 @@ import "../widgets/generic_widgets/list_item_tile.dart";
 
 /// Extension on [ListItemTile] to provide additional functionality.
 extension ListItemTileExtension<T extends Object> on ListItemTile<T> {
-  /// A boolean indicating whether the tile is selected (or favorited).
+  /// A boolean indicating whether the tile is selected (or marked as favorite).
   bool get isChosen => selected;
 
   /// A boolean indicating whether the tile is disabled.
@@ -57,6 +57,7 @@ extension ListItemTileExtension<T extends Object> on ListItemTile<T> {
     double? minLeadingWidth,
     double? minTileHeight,
     ListTileTitleAlignment? titleAlignment,
+    WidgetStatesController? statesController,
   }) => ListItemTile<T>(
     item ?? this.item,
     onPressed: onPressed ?? this.onPressed,
@@ -100,5 +101,6 @@ extension ListItemTileExtension<T extends Object> on ListItemTile<T> {
     titleAlignment: titleAlignment ?? this.titleAlignment,
     internalAddSemanticForOnTap:
         internalAddSemanticForOnTap ?? this.internalAddSemanticForOnTap,
+    statesController: statesController ?? this.statesController,
   );
 }

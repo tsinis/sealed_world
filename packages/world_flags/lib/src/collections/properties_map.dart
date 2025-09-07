@@ -351,6 +351,7 @@ const fullFlags = <WorldCountry>[
   CountryGab(),
   CountryGbr(),
   CountryGeo(),
+  CountryGgy(),
   CountryGha(),
   CountryGin(),
   CountryGlp(), // TODO?

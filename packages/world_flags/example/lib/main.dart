@@ -52,47 +52,37 @@ class _MainState extends State<Main> {
   }
 
   @override
-  Widget build(BuildContext context) => Material(
-    color: Theme.of(context).scaffoldBackgroundColor,
-    child: SafeArea(
-      minimum: const EdgeInsets.all(_size / 2),
+  Widget build(BuildContext context) {
+    final disabled = Theme.of(context).disabledColor;
+
+    return Material(
+      color: Theme.of(context).scaffoldBackgroundColor,
       child: ListView.separated(
         itemBuilder: (bc, index) {
           final item = _items.keys.elementAt(index);
-          final isFull = !(_items[item]?.properties.isSimplified ?? false);
-          final style = TextStyle(
-            color: isFull ? null : Theme.of(bc).disabledColor,
-          );
+          final isSimplified = _items[item]?.properties.isSimplified ?? true;
+          final style = TextStyle(color: isSimplified ? disabled : null);
 
-          return InkWell(
-            onTap: isFull && item is WorldCountry
+          return ListTile(
+            title: Text(item.internationalName, style: style),
+            subtitle: Text("${item.name}", style: TextStyle(color: disabled)),
+            onTap: !isSimplified && item is WorldCountry
                 ? () => SettingsDialog.show(_aspectRatio, bc, item)
                 : null,
-            child: Row(
-              mainAxisAlignment: MainAxisAlignment.spaceBetween,
-              children: [
-                Flexible(child: Text(item.internationalName, style: style)),
-                ValueListenableBuilder(
-                  valueListenable: _aspectRatio,
-                  builder: (_, aspectRatio, flag) => flag is IsoFlag
-                      ? flag.copyWith(aspectRatio: aspectRatio)
-                      : const SizedBox.shrink(),
-                  child: IsoFlag(
-                    item,
-                    _items,
-                    height: _size,
-                    padding: const EdgeInsets.all(8),
-                  ),
-                ),
-              ],
+            trailing: ValueListenableBuilder(
+              valueListenable: _aspectRatio,
+              builder: (_, aspectRatio, flag) => flag is IsoFlag
+                  ? flag.copyWith(aspectRatio: aspectRatio)
+                  : const SizedBox.shrink(),
+              child: IsoFlag(item, _items, height: _size),
             ),
           );
         },
         separatorBuilder: (_, _) =>
-            const Divider(height: 1, color: Color.fromARGB(33, 133, 133, 133)),
+            Divider(height: 1, color: disabled.withValues(alpha: 0.1)),
         itemCount: _items.length,
         clipBehavior: Clip.none,
       ),
-    ),
-  );
+    );
+  }
 }

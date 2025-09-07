@@ -17,7 +17,7 @@ sealed class Shape {
 ///
 /// Triangles are commonly used in flag designs to represent various symbolic
 /// meanings.
-class Triangle implements Shape {
+final class Triangle implements Shape {
   /// Creates a new instance of [Triangle].
   const Triangle();
 }
@@ -26,7 +26,7 @@ class Triangle implements Shape {
 ///
 /// Rectangles are often used in flags to represent the flag's background or as
 /// a part of the flag's design.
-class Rectangle implements Shape {
+final class Rectangle implements Shape {
   /// Creates a new instance of [Rectangle].
   ///
   /// The [aspectRatio] parameter is optional and specifies the width to height
@@ -45,7 +45,7 @@ class Rectangle implements Shape {
 ///
 /// Stars are commonly used in flags to represent states, regions, or other
 /// symbolic meanings.
-class Star implements Shape {
+final class Star implements Shape {
   /// Creates a new instance of [Star].
   ///
   /// The [points] parameter specifies the number of points on the star. The
@@ -69,7 +69,7 @@ class Star implements Shape {
 ///
 /// Ellipses are used in flags to represent various symbolic meanings and can be
 /// used as part of the flag's design.
-class Ellipse implements Shape {
+final class Ellipse implements Shape {
   /// Creates a new instance of [Ellipse].
   const Ellipse();
 }
@@ -78,7 +78,7 @@ class Ellipse implements Shape {
 ///
 /// Moons are commonly used in flags to represent various symbolic meanings,
 /// often related to cultural or religious significance.
-class Moon implements Shape {
+final class Moon implements Shape {
   /// Creates a new instance of [Moon].
   ///
   /// The [radius] parameter specifies the relative radius of the second circle.
@@ -98,7 +98,7 @@ class Moon implements Shape {
 ///
 /// Diagonal lines are used in flags to represent various symbolic meanings and
 /// can be used as part of the flag's design.
-class DiagonalLine implements Shape {
+final class DiagonalLine implements Shape {
   /// Creates a new instance of [DiagonalLine].
   ///
   /// The [isTopRightToBottomLeft] parameter specifies the direction of the

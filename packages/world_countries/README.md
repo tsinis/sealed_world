@@ -45,6 +45,7 @@ Or you can just create your own pickers by extending `BasicPicker`.
 
 To preview the demo from the example, you can visit [this web page](https://tsin.is/sealed_world) using the **Chrome** browser (version **119** or higher). Please allow up 10 seconds for initial fonts and data caching.
 
+> [!IMPORTANT]
 > Note: Please keep in mind that the demo was built with Flutter WASM which is in very early alpha stage, so performance might be affected.
 
 [![Open in GitHub Codespaces](https://github.com/codespaces/badge.svg)](https://codespaces.new/tsinis/sealed_world?hide_repo_select=true&ref=main)
@@ -82,6 +83,7 @@ MaterialApp(localizationsDelegates: [TypedLocaleDelegate()])
 
 Then you can also extract this delegate data from the context via `context.maybeLocale` getter, in any place of your app (from a `BuildContext`).
 
+> [!TIP]
 > The package also provides access to the `TypedLocale` class, allowing you to work with type-safe versions of default [Locale](https://api.flutter.dev/flutter/dart-ui/Locale-class.html). These `maybeCommonNameFor()` and `commonNameFor()` methods can also be used with country, currency, or language data.
 
 ### Example

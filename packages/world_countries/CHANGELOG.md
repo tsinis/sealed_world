@@ -1,3 +1,7 @@
+## 3.9.0
+
+TODO!
+
 ## 3.8.0
 
 FIX
@@ -313,7 +317,7 @@ NEW FEATURES
 - 🦾 Countries translations now also support all `GlobalMaterialLocalization` + `GlobalCupertinoLocalizations` locales.
 - The `locale` parameter in the `maybeTranslation` method is now nullable.
 - The `permissive` constructors are now even more permissive, only `name` and `code` parameters remain required.
-- Changed Vatican city `unMember` field to `false` and fix Cape Verde coordinates [Link](https://gitlab.com/restcountries/restcountries/-/merge_requests/70)
+- Changed Vatican city `unMember` field to `false` and fix Cape Verde coordinates [Link to MR](https://gitlab.com/restcountries/restcountries/-/merge_requests/70)
 - Added new `DurationExtension` to the `helpers` library.
 - Added new `TypedLocaleExtension` with a `copyWithTranslationsCache(Async)` method.
 - Added `asyncTranslationCacheProcessing` parameter for the `TypedLocaleDelegate`.
@@ -573,7 +577,7 @@ BREAKING CHANGES
 
 ## 0.2.2
 
-- Renamed BuildContextExtensions > BuildContextExtension
+- Renamed `BuildContextExtensions` > `BuildContextExtension`
 - Added extensions for [Locale](https://api.flutter.dev/flutter/dart-ui/Locale-class.html)
 
 REFACTOR

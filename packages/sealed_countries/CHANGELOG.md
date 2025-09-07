@@ -1,3 +1,13 @@
+## 2.6.0
+
+FIX
+
+- `CountryName`'s short flag (`true`) in `toString()` override returns `common` name, same way, as in parent's (`TranslatedName` class) override.
+
+CHORE
+
+- The Dart SDK was bumped to v3.9.2.
+
 ## 2.5.0
 
 FIX
@@ -173,7 +183,7 @@ NEW FEATURES
 - 🦾 Countries translations now also support all `GlobalMaterialLocalization` + `GlobalCupertinoLocalizations` locales.
 - The `locale` parameter in the `maybeTranslation` method is now nullable.
 - The `permissive` constructors are now even more permissive, only `name` and `code` parameters remain required.
-- Changed Vatican city `unMember` field to `false` and fix Cape Verde coordinates [Link](https://gitlab.com/restcountries/restcountries/-/merge_requests/70)
+- Changed Vatican city `unMember` field to `false` and fix Cape Verde coordinates [Link to MR](https://gitlab.com/restcountries/restcountries/-/merge_requests/70)
 
 ## 1.4.0
 

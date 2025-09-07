@@ -81,9 +81,13 @@ extension TextFieldExtension on TextField? {
     EditableTextContextMenuBuilder? contextMenuBuilder,
     bool? canRequestFocus,
     UndoHistoryController? undoController,
+    bool? selectAllOnFocus,
+    List<Locale>? hintLocales,
   }) {
-    // ignore: avoid-missing-controller, controller is required.
-    final textField = this ?? const TextField();
+    final textField =
+        this ??
+        // ignore: avoid-missing-controller, controller is required.
+        const TextField(textCapitalization: TextCapitalization.sentences);
 
     return TextField(
       key: key ?? textField.key,
@@ -102,10 +106,7 @@ extension TextFieldExtension on TextField? {
           textInputAction ??
           textField.textInputAction ??
           TextInputAction.search,
-      textCapitalization:
-          textCapitalization ??
-          this?.textCapitalization ??
-          TextCapitalization.sentences,
+      textCapitalization: textCapitalization ?? textField.textCapitalization,
       style: style ?? textField.style,
       strutStyle: strutStyle ?? textField.strutStyle,
       textAlign: textAlign ?? textField.textAlign,
@@ -173,6 +174,8 @@ extension TextFieldExtension on TextField? {
       contextMenuBuilder: contextMenuBuilder ?? textField.contextMenuBuilder,
       canRequestFocus: canRequestFocus ?? textField.canRequestFocus,
       undoController: undoController ?? textField.undoController,
+      selectAllOnFocus: selectAllOnFocus ?? textField.selectAllOnFocus,
+      hintLocales: hintLocales ?? textField.hintLocales,
     );
   }
 }
