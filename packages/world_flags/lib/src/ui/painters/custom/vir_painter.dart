@@ -13,7 +13,7 @@ final class VirPainter extends CustomElementsPainter {
   @override
   double get originalAspectRatio => flagVirProperties.aspectRatio;
 
-  Path _createVPath(double height) {
+  static Path _createVPath(double height) {
     final path = Path();
     final letterHeight = height * 0.25;
     final letterWidth = letterHeight * 0.8;
@@ -26,7 +26,7 @@ final class VirPainter extends CustomElementsPainter {
     return path;
   }
 
-  Path _createIPath(double height) {
+  static Path _createIPath(double height) {
     final path = Path();
     final letterHeight = height * 0.25;
     final letterWidth = letterHeight * 0.15;
