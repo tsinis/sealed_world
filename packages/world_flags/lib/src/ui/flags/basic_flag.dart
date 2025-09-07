@@ -90,6 +90,7 @@ class BasicFlag extends DecoratedFlagWidget {
       boxDecoration.isCircle ? 1 : (ratio ?? flagAspectRatio);
 
   @override
+  @mustCallSuper
   // ignore: avoid-shadowing, it's default name in debugFillProperties.
   void debugFillProperties(DiagnosticPropertiesBuilder properties) {
     super.debugFillProperties(properties);

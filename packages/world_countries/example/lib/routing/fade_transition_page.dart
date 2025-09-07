@@ -22,6 +22,7 @@ class FadeTransitionPage<T> extends Page<T> {
       PageBasedFadeTransitionRoute<T>(this);
 }
 
+// ignore: prefer-single-declaration-per-file, it's original sample code.
 class PageBasedFadeTransitionRoute<T> extends PageRoute<T> {
   PageBasedFadeTransitionRoute(this._page) : super(settings: _page);
 

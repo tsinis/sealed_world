@@ -56,7 +56,12 @@ final class ShahadaPainter extends CustomElementsPainter {
     return (canvas: canvas, bounds: rectangle, child: property.child);
   }
 
-  void _paintShahada(Canvas canvas, double height, double width, Paint paint) {
+  static void _paintShahada(
+    Canvas canvas,
+    double height,
+    double width,
+    Paint paint,
+  ) {
     final path = Path()
       ..moveTo(width, height * 0.59)
       ..cubicTo(

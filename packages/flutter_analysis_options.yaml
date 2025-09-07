@@ -4,9 +4,9 @@ dart_code_metrics:
   extends:
     - package:dart_code_metrics_presets/flutter_all.yaml
   rules:
-    # Disabled:
-    - avoid-duplicate-cascades: false # Conflicts with CustomPainters.
-    # Enabled:
+    - avoid-duplicate-cascades:
+        exclude:
+          - "**/ui/painters/**"
     - avoid-long-files:
         exclude:
           - lib/**/*_painter.dart
@@ -18,59 +18,59 @@ dart_code_metrics:
           - path
     - prefer-widget-private-members:
         ignore-static: true
-    - always-remove-listener
-    - avoid-border-all
-    - avoid-empty-setstate
-    - avoid-expanded-as-spacer
-    - avoid-flexible-outside-flex
-    - avoid-incorrect-image-opacity
-    - avoid-inherited-widget-in-initstate
-    - avoid-late-context
-    - avoid-missing-controller
-    - avoid-missing-image-alt
-    - avoid-mounted-in-setstate
-    - avoid-recursive-widget-calls
-    - avoid-shrink-wrap-in-lists
-    - avoid-single-child-column-or-row
-    - avoid-state-constructors
-    - avoid-stateless-widget-initialized-fields
-    - avoid-undisposed-instances
-    - avoid-unnecessary-gesture-detector
-    - avoid-unnecessary-overrides-in-state
-    - avoid-unnecessary-setstate
-    - avoid-unnecessary-stateful-widgets
-    - avoid-wrapping-in-padding
-    - check-for-equals-in-render-object-setters
-    - consistent-update-render-object
-    - dispose-fields
-    - pass-existing-future-to-future-builder
-    - pass-existing-stream-to-stream-builder
-    - prefer-action-button-tooltip
-    - prefer-align-over-container
-    - prefer-async-callback
-    - prefer-center-over-align
-    - prefer-compute-over-isolate-run
-    - prefer-const-border-radius
-    - prefer-constrained-box-over-container
-    - prefer-container
-    - prefer-correct-edge-insets-constructor
-    - prefer-dedicated-media-query-methods
-    - prefer-define-hero-tag
-    - prefer-extracting-callbacks
-    - prefer-for-loop-in-children
-    - prefer-padding-over-container
-    - prefer-single-setstate
-    - prefer-single-widget-per-file
-    - prefer-sized-box-square
-    - prefer-sliver-prefix
-    - prefer-spacing
-    - prefer-text-rich
-    - prefer-transform-over-container
-    - prefer-using-list-view
-    - prefer-void-callback
-    - proper-super-calls
-    - use-closest-build-context
-    - use-setstate-synchronously
+    - always-remove-listener: true
+    - avoid-border-all: true
+    - avoid-empty-setstate: true
+    - avoid-expanded-as-spacer: true
+    - avoid-flexible-outside-flex: true
+    - avoid-incorrect-image-opacity: true
+    - avoid-inherited-widget-in-initstate: true
+    - avoid-late-context: true
+    - avoid-missing-controller: true
+    - avoid-missing-image-alt: true
+    - avoid-mounted-in-setstate: true
+    - avoid-recursive-widget-calls: true
+    - avoid-shrink-wrap-in-lists: true
+    - avoid-single-child-column-or-row: true
+    - avoid-state-constructors: true
+    - avoid-stateless-widget-initialized-fields: true
+    - avoid-undisposed-instances: true
+    - avoid-unnecessary-gesture-detector: true
+    - avoid-unnecessary-overrides-in-state: true
+    - avoid-unnecessary-setstate: true
+    - avoid-unnecessary-stateful-widgets: true
+    - avoid-wrapping-in-padding: true
+    - check-for-equals-in-render-object-setters: true
+    - consistent-update-render-object: true
+    - dispose-fields: true
+    - pass-existing-future-to-future-builder: true
+    - pass-existing-stream-to-stream-builder: true
+    - prefer-action-button-tooltip: true
+    - prefer-align-over-container: true
+    - prefer-async-callback: true
+    - prefer-center-over-align: true
+    - prefer-compute-over-isolate-run: true
+    - prefer-const-border-radius: true
+    - prefer-constrained-box-over-container: true
+    - prefer-container: true
+    - prefer-correct-edge-insets-constructor: true
+    - prefer-dedicated-media-query-methods: true
+    - prefer-define-hero-tag: true
+    - prefer-extracting-callbacks: true
+    - prefer-for-loop-in-children: true
+    - prefer-padding-over-container: true
+    - prefer-single-setstate: true
+    - prefer-single-widget-per-file: true
+    - prefer-sized-box-square: true
+    - prefer-sliver-prefix: true
+    - prefer-spacing: true
+    - prefer-text-rich: true
+    - prefer-transform-over-container: true
+    - prefer-using-list-view: true
+    - prefer-void-callback: true
+    - proper-super-calls: true
+    - use-closest-build-context: true
+    - use-setstate-synchronously: true
 
 linter:
   rules:

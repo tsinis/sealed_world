@@ -26,6 +26,7 @@ abstract base class CustomElementsPainter<T extends FlagParentBounds>
   /// This getter can be overridden by subclasses to provide a specific aspect
   /// ratio. It's not specified by default.
   @protected // coverage:ignore-line
+  @visibleForOverriding // coverage:ignore-line
   double? get originalAspectRatio => null;
 
   /// Retrieves the custom properties of the elements to be painted.

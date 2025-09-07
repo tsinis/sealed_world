@@ -61,6 +61,7 @@ abstract base class ElementsPainter extends CustomPainter {
   /// Returns a [FlagParentBounds] object representing the bounds of the painted
   /// elements.
   @protected
+  @visibleForOverriding
   FlagParentBounds? paintFlagElements(Canvas canvas, Size size);
 
   /// Paints the flag elements on the given canvas and size.

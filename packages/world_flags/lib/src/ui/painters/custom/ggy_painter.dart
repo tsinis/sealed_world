@@ -3,7 +3,6 @@
 // ignore_for_file: lines_longer_than_80_chars, avoid-similar-names
 import "dart:ui";
 
-import "../../../data/flags_map_part_1.data.dart";
 import "../../../model/typedefs.dart";
 import "../basic/custom_elements_painter.dart";
 
@@ -15,9 +14,6 @@ import "../basic/custom_elements_painter.dart";
 final class GgyPainter extends CustomElementsPainter {
   /// Creates a painter for the Guernsey flag.
   const GgyPainter(super.properties, super.aspectRatio);
-
-  @override
-  double get originalAspectRatio => flagGgyProperties.aspectRatio;
 
   @override
   FlagParentBounds paintFlagElements(Canvas canvas, Size size) {

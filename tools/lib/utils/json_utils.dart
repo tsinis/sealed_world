@@ -191,7 +191,7 @@ const ${varFileName.toCamelCase()} = [
     return _convertLanguageMap(map);
   }
 
-  JsonObjectMap _sortMapByKeyLength(JsonObjectMap map) {
+  static JsonObjectMap _sortMapByKeyLength(JsonObjectMap map) {
     final sortedKeys = map.keys.toList(growable: false)
       ..sort((a, b) => b.length.compareTo(a.length));
 
@@ -210,7 +210,7 @@ const ${varFileName.toCamelCase()} = [
     return Map.unmodifiable(nullMap);
   }
 
-  void _fixCurrencyData(Map<IsoStandardized?, String?> mapToUpdate) {
+  static void _fixCurrencyData(Map<IsoStandardized?, String?> mapToUpdate) {
     final maybeZwl = mapToUpdate[const FiatZwl()];
     if (maybeZwl == null) return;
     final withoutYear = maybeZwl.replaceFirst(RegExp(r"\(\d{4}\)"), "");
@@ -223,7 +223,7 @@ const ${varFileName.toCamelCase()} = [
     sealedCountries: () => _convertCodeToCountry(code),
   );
 
-  WorldCountry? _convertCodeToCountry(String rawCode) {
+  static WorldCountry? _convertCodeToCountry(String rawCode) {
     final countryCode = rawCode.toUpperCase().trim();
 
     return WorldCountry.maybeFromValue(
@@ -235,7 +235,7 @@ const ${varFileName.toCamelCase()} = [
   }
 
   /// Missing: XAG, XAU, XBA, XBB, XBC, XBD, XDR, XPD, XPT, XTS.
-  FiatCurrency? _convertCodeToCurrency(String rawCode) {
+  static FiatCurrency? _convertCodeToCurrency(String rawCode) {
     final code = rawCode.toUpperCase().trim();
     FiatCurrency? fiat = FiatCurrency.maybeFromAnyCode(code);
     if (fiat != null) return fiat;
@@ -261,7 +261,7 @@ const ${varFileName.toCamelCase()} = [
     return language;
   }
 
-  ({String? countryCode, String languageCode, String? scriptCode})
+  static ({String? countryCode, String languageCode, String? scriptCode})
   _extractLocaleCode(String code) {
     final regex = RegExp("^([A-Z]+)(?:_([A-Z]+))?(?:_([A-Z]+))?");
 
