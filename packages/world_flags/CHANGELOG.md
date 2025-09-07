@@ -7,7 +7,7 @@ NEW FEATURES
 REFACTOR
 
 - Made `Shape` implementations `final`; added deprecations for legacy helpers (to be replaced with modern `switch` expressions).
-- Selectively disable anti-aliasing for axis-aligned rects (e.g., BLR bg, SAU sabre) to avoid blur; keep AA for diagonals.
+- Selectively disable anti-aliasing for axis-aligned rectangles (e.g., BLR vertical line, SAU sabre) to avoid blur; keep AA for diagonals.
 
 FIX
 
