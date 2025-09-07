@@ -95,6 +95,17 @@ void main() => group("$CountryName", () {
     );
   });
 
+  test("toString", () {
+    expect(
+      value.toString(short: false).toUpperCase(),
+      contains(value.language.code),
+    );
+    expect(
+      value.toString().toUpperCase(),
+      isNot(contains(value.language.code)),
+    );
+  });
+
   test("toJson", () {
     final json = value.toJson();
     expect(

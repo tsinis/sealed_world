@@ -5,10 +5,12 @@ on:
     branches: [main]
     paths:
       - "packages/**/*.dart"
+      - "packages/**/pubspec.yaml"
   pull_request:
     branches: [main]
     paths:
       - "packages/**/*.dart"
+      - "packages/**/pubspec.yaml"
       - ".github/workflows/verify_packages.yaml"
 
 jobs:

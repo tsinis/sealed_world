@@ -149,7 +149,7 @@ abstract base class ElementsPainter extends CustomPainter {
 
   /// Retrieves the appropriate painter for the given child shape.
   ///
-  /// This method uses the `Shape.whenConst` method to get the appropriate
+  /// This method uses the [Shape] switch expression to get the appropriate
   /// painter for the specified [child] shape.
   ///
   /// - [child]: The shape of the child element.
