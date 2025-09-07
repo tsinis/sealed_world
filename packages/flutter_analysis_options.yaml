@@ -4,9 +4,9 @@ dart_code_metrics:
   extends:
     - package:dart_code_metrics_presets/flutter_all.yaml
   rules:
-    # Disabled:
-    - avoid-duplicate-cascades: false # Conflicts with CustomPainters.
-    # Enabled:
+    - avoid-duplicate-cascades:
+        exclude:
+          - "**/ui/painters/**"
     - avoid-long-files:
         exclude:
           - lib/**/*_painter.dart

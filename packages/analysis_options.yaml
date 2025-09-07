@@ -91,7 +91,7 @@ dart_code_metrics:
     - no-magic-string: false # Packages contain a lot of strings.
     - parameters-ordering: false # This will be a breaking change.
     - prefer-boolean-prefixes: false # This will be a breaking change.
-    - prefer-correct-throws: false # No meta in Dart packages.
+    - prefer-correct-throws: false # No DCM annotations or Meta in Dart packages.
     - prefer-explicit-parameter-names: false # This will be dev. defined.
     - prefer-prefixed-global-constants: false # This will be a breaking change.
     - prefer-test-matchers: false # Introduces coupling in tests.
