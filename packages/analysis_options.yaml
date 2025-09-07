@@ -70,7 +70,6 @@ dart_code_metrics:
     # Disabled:
     - arguments-ordering: false # This will be a breaking change.
     - avoid-adjacent-strings: false # It's not being used on one line strings.
-    - avoid-collection-equality-checks: false # Doesn't work for models exclude.
     - avoid-collection-mutating-methods: false # Mostly false positives.
     - avoid-continue: false # Just a matter of style.
     - avoid-default-tostring: false # Doesn't make sense here.
@@ -95,10 +94,11 @@ dart_code_metrics:
     - prefer-correct-throws: false # No meta in Dart packages.
     - prefer-explicit-parameter-names: false # This will be dev. defined.
     - prefer-prefixed-global-constants: false # This will be a breaking change.
-    - prefer-single-declaration-per-file: false # Data is stored in one file.
-    - prefer-static-method: false # This has a lot of false positives now (Jan 2025).
     - prefer-test-matchers: false # Introduces coupling in tests.
     # Enabled:
+    - avoid-collection-equality-checks:
+        exclude:
+          - "**/model/**"
     - avoid-high-cyclomatic-complexity:
         threshold: 40
     - prefer-named-parameters:
@@ -110,6 +110,8 @@ dart_code_metrics:
         # bc for BuildContext, a and b are convenient for sorting, e for the element,
         # k for key, v for value.
         exceptions: ["a", "b", "e", "i", "k", "v", "x", "y", "io", "bc", "sb"]
+    - prefer-static-method:
+        ignore-public: true
     - avoid-long-parameter-list:
         ignore-optional: true
     - avoid-type-casts:
@@ -171,287 +173,267 @@ dart_code_metrics:
           - "**/translations/**.l10n.dart"
     - prefer-class-destructuring:
         min-occurrences: 4
+    - prefer-single-declaration-per-file:
+        exclude:
+          - "**/data/**.data.dart"
+          - "**/test/**"
 
     # Enabled:
-    - avoid-accessing-collections-by-constant-index
-    - avoid-accessing-other-classes-private-members
-    - avoid-assigning-to-static-field
-    - avoid-assignments-as-conditions
-    - avoid-async-call-in-sync-function
-    - avoid-banned-exports
-    - avoid-barrel-files
-    - avoid-bitwise-operators-with-booleans
-    - avoid-bottom-type-in-patterns
-    - avoid-bottom-type-in-records
-    - avoid-cascade-after-if-null
-    - avoid-casting-to-extension-type
-    - avoid-collapsible-if
-    - avoid-collection-equality-checks
-    - avoid-collection-methods-with-unrelated-types
-    - avoid-collection-mutating-methods
-    - avoid-commented-out-code
-    - avoid-complex-arithmetic-expressions
-    - avoid-complex-loop-conditions
-    - avoid-conditions-with-boolean-literals
-    - avoid-constant-assert-conditions
-    - avoid-contradictory-expressions
-    - avoid-declaring-call-method
-    - avoid-double-slash-imports
-    - avoid-duplicate-cascades
-    - avoid-duplicate-collection-elements
-    - avoid-duplicate-constant-values
-    - avoid-duplicate-exports
-    - avoid-duplicate-initializers
-    - avoid-duplicate-map-keys
-    - avoid-duplicate-mixins
-    - avoid-duplicate-named-imports
-    - avoid-duplicate-patterns
-    - avoid-duplicate-switch-case-conditions
-    - avoid-duplicate-test-assertions
-    - avoid-dynamic
-    - avoid-empty-spread
-    - avoid-empty-test-groups
-    - avoid-enum-values-by-index
-    - avoid-equal-expressions
-    - avoid-excessive-expressions
-    - avoid-explicit-pattern-field-name
-    - avoid-explicit-type-declaration
-    - avoid-extensions-on-records
-    - avoid-function-type-in-records
-    - avoid-future-ignore
-    - avoid-future-tostring
-    - avoid-generics-shadowing
-    - avoid-global-state
-    - avoid-high-cyclomatic-complexity
-    - avoid-identical-exception-handling-blocks
-    - avoid-if-with-many-branches
-    - avoid-implicitly-nullable-extension-types
-    - avoid-importing-entrypoint-exports
-    - avoid-incomplete-copy-with
-    - avoid-inconsistent-digit-separators
-    - avoid-incorrect-uri
-    - avoid-inferrable-type-arguments
-    - avoid-inverted-boolean-checks
-    - avoid-keywords-in-wildcard-pattern
-    - avoid-late-final-reassignment
-    - avoid-local-functions
-    - avoid-long-files
-    - avoid-long-functions
-    - avoid-long-parameter-list
-    - avoid-long-records
-    - avoid-map-keys-contains
-    - avoid-missed-calls
-    - avoid-missing-completer-stack-trace
-    - avoid-missing-enum-constant-in-map
-    - avoid-missing-interpolation
-    - avoid-misused-set-literals
-    - avoid-misused-test-matchers
-    - avoid-misused-wildcard-pattern
-    - avoid-mixing-named-and-positional-fields
-    - avoid-multi-assignment
-    - avoid-mutating-parameters
-    - avoid-negated-conditions
-    - avoid-negations-in-equality-checks
-    - avoid-nested-assignments
-    - avoid-nested-conditional-expressions
-    - avoid-nested-extension-types
-    - avoid-nested-futures
-    - avoid-nested-records
-    - avoid-nested-streams-and-futures
-    - avoid-nested-switch-expressions
-    - avoid-nested-switches
-    - avoid-nested-try-statements
-    - avoid-never-passed-parameters
-    - avoid-non-ascii-symbols
-    - avoid-non-final-exception-class-fields
-    - avoid-non-null-assertion
-    - avoid-not-encodable-in-to-json
-    - avoid-nullable-interpolation
-    - avoid-nullable-parameters-with-default-values
-    - avoid-nullable-tostring
-    - avoid-one-field-records
-    - avoid-only-rethrow
-    - avoid-passing-async-when-sync-expected
-    - avoid-passing-default-values
-    - avoid-passing-self-as-argument
-    - avoid-positional-record-field-access
-    - avoid-recursive-calls
-    - avoid-recursive-tostring
-    - avoid-redundant-async
-    - avoid-redundant-else
-    - avoid-redundant-positional-field-name
-    - avoid-redundant-pragma-inline
-    - avoid-referencing-discarded-variables
-    - avoid-referencing-subclasses
-    - avoid-renaming-representation-getters
-    - avoid-returning-cascades
-    - avoid-returning-void
-    - avoid-self-assignment
-    - avoid-self-compare
-    - avoid-shadowed-extension-methods
-    - avoid-shadowing
-    - avoid-similar-names
-    - avoid-single-field-destructuring
-    - avoid-slow-collection-methods
-    - avoid-stream-tostring
-    - avoid-substring
-    - avoid-suspicious-global-references
-    - avoid-suspicious-super-overrides
-    - avoid-throw-in-catch-block
-    - avoid-throw-objects-without-tostring
-    - avoid-top-level-members-in-tests
-    - avoid-type-casts
-    - avoid-unassigned-late-fields
-    - avoid-unassigned-stream-subscriptions
-    - avoid-uncaught-future-errors
-    - avoid-unconditional-break
-    - avoid-unknown-pragma
-    - avoid-unnecessary-block
-    - avoid-unnecessary-call
-    - avoid-unnecessary-compare-to
-    - avoid-unnecessary-conditionals
-    - avoid-unnecessary-constructor
-    - avoid-unnecessary-continue
-    - avoid-unnecessary-digit-separators
-    - avoid-unnecessary-enum-arguments
-    - avoid-unnecessary-enum-prefix
-    - avoid-unnecessary-extends
-    - avoid-unnecessary-futures
-    - avoid-unnecessary-getter
-    - avoid-unnecessary-if
-    - avoid-unnecessary-late-fields
-    - avoid-unnecessary-length-check
-    - avoid-unnecessary-local-late
-    - avoid-unnecessary-local-variable
-    - avoid-unnecessary-negations
-    - avoid-unnecessary-null-aware-elements
-    - avoid-unnecessary-nullable-parameters
-    - avoid-unnecessary-nullable-return-type
-    - avoid-unnecessary-overrides
-    - avoid-unnecessary-patterns
-    - avoid-unnecessary-reassignment
-    - avoid-unnecessary-return
-    - avoid-unnecessary-statements
-    - avoid-unnecessary-super
-    - avoid-unnecessary-type-assertions
-    - avoid-unnecessary-type-casts
-    - avoid-unreachable-for-loop
-    - avoid-unrelated-type-assertions
-    - avoid-unrelated-type-casts
-    - avoid-unsafe-collection-methods
-    - avoid-unsafe-reduce
-    - avoid-unused-after-null-check
-    - avoid-unused-assignment
-    - avoid-unused-generics
-    - avoid-unused-instances
-    - avoid-unused-parameters
-    - avoid-weak-cryptographic-algorithms
-    - avoid-wildcard-cases-with-enums
-    - avoid-wildcard-cases-with-sealed-classes
-    - binary-expression-operand-order
-    - dispose-class-fields
-    - double-literal-format
-    - format-comment
-    - function-always-returns-null
-    - function-always-returns-same-value
-    - handle-throwing-invocations
-    - map-keys-ordering
-    - match-getter-setter-field-names
-    - match-lib-folder-structure
-    - match-positional-field-names-on-assignment
-    - missing-test-assertion
-    - move-records-to-typedefs
-    - move-variable-closer-to-its-usage
-    - move-variable-outside-iteration
-    - newline-before-case
-    - newline-before-method
-    - newline-before-return
-    - no-boolean-literal-compare
-    - no-empty-block
-    - no-equal-arguments
-    - no-equal-conditions
-    - no-equal-nested-conditions
-    - no-equal-switch-case
-    - no-equal-switch-expression-cases
-    - no-equal-then-else
-    - no-object-declaration
-    - pass-correct-accepted-type
-    - pattern-fields-ordering
-    - prefer-abstract-final-static-class
-    - prefer-add-all
-    - prefer-addition-subtraction-assignments
-    - prefer-any-or-every
-    - prefer-assigning-await-expressions
-    - prefer-async-await
-    - prefer-boolean-prefixes
-    - prefer-both-inlining-annotations
-    - prefer-bytes-builder
-    - prefer-commenting-analyzer-ignores
-    - prefer-commenting-future-delayed
-    - prefer-commenting-pubspec-ignores
-    - prefer-compound-assignment-operators
-    - prefer-conditional-expressions
-    - prefer-contains
-    - prefer-correct-callback-field-name
-    - prefer-correct-error-name
-    - prefer-correct-for-loop-increment
-    - prefer-correct-future-return-type
-    - prefer-correct-handler-name
-    - prefer-correct-json-casts
-    - prefer-correct-setter-parameter-name
-    - prefer-correct-stream-return-type
-    - prefer-correct-switch-length
-    - prefer-correct-test-file-name
-    - prefer-correct-type-name
-    - prefer-declaring-const-constructor
-    - prefer-digit-separators
-    - prefer-early-return
-    - prefer-enums-by-name
-    - prefer-expect-later
-    - prefer-explicit-function-type
-    - prefer-explicit-parameter-names
-    - prefer-explicit-type-arguments
-    - prefer-extracting-function-callbacks
-    - prefer-first
-    - prefer-for-in
-    - prefer-getter-over-method
-    - prefer-immediate-return
-    - prefer-iterable-of
-    - prefer-last
-    - prefer-match-file-name
-    - prefer-moving-to-variable
-    - prefer-named-boolean-parameters
-    - prefer-null-aware-elements
-    - prefer-null-aware-spread
-    - prefer-overriding-parent-equality
-    - prefer-parentheses-with-if-null
-    - prefer-prefixed-global-constants
-    - prefer-private-extension-type-field
-    - prefer-public-exception-classes
-    - prefer-pushing-conditional-expressions
-    - prefer-redirecting-superclass-constructor
-    - prefer-return-await
-    - prefer-returning-condition
-    - prefer-returning-conditional-expressions
-    - prefer-simpler-boolean-expressions
-    - prefer-simpler-patterns-null-check
-    - prefer-single-declaration-per-file
-    - prefer-specific-cases-first
-    - prefer-specifying-future-value-type
-    - prefer-switch-expression
-    - prefer-switch-with-enums
-    - prefer-switch-with-sealed-classes
-    - prefer-trailing-comma
-    - prefer-type-over-var
-    - prefer-typedefs-for-callbacks
-    - prefer-unique-test-names
-    - prefer-unwrapping-future-or
-    - prefer-visible-for-testing-on-members
-    - prefer-wildcard-pattern
-    - record-fields-ordering
-    - unnecessary-trailing-comma
-    - use-existing-destructuring
-    - use-existing-variable
+    - avoid-accessing-collections-by-constant-index: true
+    - avoid-accessing-other-classes-private-members: true
+    - avoid-assigning-to-static-field: true
+    - avoid-assignments-as-conditions: true
+    - avoid-async-call-in-sync-function: true
+    - avoid-banned-exports: true
+    - avoid-barrel-files: true
+    - avoid-bitwise-operators-with-booleans: true
+    - avoid-bottom-type-in-patterns: true
+    - avoid-bottom-type-in-records: true
+    - avoid-cascade-after-if-null: true
+    - avoid-casting-to-extension-type: true
+    - avoid-collapsible-if: true
+    - avoid-collection-methods-with-unrelated-types: true
+    - avoid-commented-out-code: true
+    - avoid-complex-arithmetic-expressions: true
+    - avoid-complex-loop-conditions: true
+    - avoid-conditions-with-boolean-literals: true
+    - avoid-constant-assert-conditions: true
+    - avoid-contradictory-expressions: true
+    - avoid-declaring-call-method: true
+    - avoid-double-slash-imports: true
+    - avoid-duplicate-cascades: true
+    - avoid-duplicate-constant-values: true
+    - avoid-duplicate-exports: true
+    - avoid-duplicate-initializers: true
+    - avoid-duplicate-map-keys: true
+    - avoid-duplicate-mixins: true
+    - avoid-duplicate-named-imports: true
+    - avoid-duplicate-patterns: true
+    - avoid-duplicate-switch-case-conditions: true
+    - avoid-duplicate-test-assertions: true
+    - avoid-dynamic: true
+    - avoid-empty-spread: true
+    - avoid-empty-test-groups: true
+    - avoid-enum-values-by-index: true
+    - avoid-equal-expressions: true
+    - avoid-excessive-expressions: true
+    - avoid-explicit-pattern-field-name: true
+    - avoid-explicit-type-declaration: true
+    - avoid-extensions-on-records: true
+    - avoid-function-type-in-records: true
+    - avoid-future-ignore: true
+    - avoid-future-tostring: true
+    - avoid-generics-shadowing: true
+    - avoid-global-state: true
+    - avoid-identical-exception-handling-blocks: true
+    - avoid-if-with-many-branches: true
+    - avoid-implicitly-nullable-extension-types: true
+    - avoid-importing-entrypoint-exports: true
+    - avoid-incomplete-copy-with: true
+    - avoid-inconsistent-digit-separators: true
+    - avoid-incorrect-uri: true
+    - avoid-inverted-boolean-checks: true
+    - avoid-keywords-in-wildcard-pattern: true
+    - avoid-late-final-reassignment: true
+    - avoid-local-functions: true
+    - avoid-long-records: true
+    - avoid-map-keys-contains: true
+    - avoid-missed-calls: true
+    - avoid-missing-completer-stack-trace: true
+    - avoid-missing-enum-constant-in-map: true
+    - avoid-missing-interpolation: true
+    - avoid-misused-set-literals: true
+    - avoid-misused-test-matchers: true
+    - avoid-misused-wildcard-pattern: true
+    - avoid-mixing-named-and-positional-fields: true
+    - avoid-multi-assignment: true
+    - avoid-mutating-parameters: true
+    - avoid-negated-conditions: true
+    - avoid-negations-in-equality-checks: true
+    - avoid-nested-assignments: true
+    - avoid-nested-extension-types: true
+    - avoid-nested-futures: true
+    - avoid-nested-records: true
+    - avoid-nested-streams-and-futures: true
+    - avoid-nested-switch-expressions: true
+    - avoid-nested-switches: true
+    - avoid-nested-try-statements: true
+    - avoid-never-passed-parameters: true
+    - avoid-non-final-exception-class-fields: true
+    - avoid-non-null-assertion: true
+    - avoid-not-encodable-in-to-json: true
+    - avoid-nullable-parameters-with-default-values: true
+    - avoid-nullable-tostring: true
+    - avoid-one-field-records: true
+    - avoid-only-rethrow: true
+    - avoid-passing-default-values: true
+    - avoid-passing-self-as-argument: true
+    - avoid-positional-record-field-access: true
+    - avoid-recursive-calls: true
+    - avoid-recursive-tostring: true
+    - avoid-redundant-else: true
+    - avoid-redundant-positional-field-name: true
+    - avoid-redundant-pragma-inline: true
+    - avoid-referencing-discarded-variables: true
+    - avoid-referencing-subclasses: true
+    - avoid-renaming-representation-getters: true
+    - avoid-returning-cascades: true
+    - avoid-returning-void: true
+    - avoid-self-assignment: true
+    - avoid-self-compare: true
+    - avoid-shadowed-extension-methods: true
+    - avoid-shadowing: true
+    - avoid-similar-names: true
+    - avoid-single-field-destructuring: true
+    - avoid-slow-collection-methods: true
+    - avoid-stream-tostring: true
+    - avoid-substring: true
+    - avoid-suspicious-global-references: true
+    - avoid-suspicious-super-overrides: true
+    - avoid-throw-in-catch-block: true
+    - avoid-throw-objects-without-tostring: true
+    - avoid-top-level-members-in-tests: true
+    - avoid-type-casts: true
+    - avoid-unassigned-late-fields: true
+    - avoid-unassigned-stream-subscriptions: true
+    - avoid-uncaught-future-errors: true
+    - avoid-unconditional-break: true
+    - avoid-unknown-pragma: true
+    - avoid-unnecessary-block: true
+    - avoid-unnecessary-call: true
+    - avoid-unnecessary-compare-to: true
+    - avoid-unnecessary-conditionals: true
+    - avoid-unnecessary-constructor: true
+    - avoid-unnecessary-continue: true
+    - avoid-unnecessary-digit-separators: true
+    - avoid-unnecessary-enum-arguments: true
+    - avoid-unnecessary-enum-prefix: true
+    - avoid-unnecessary-extends: true
+    - avoid-unnecessary-futures: true
+    - avoid-unnecessary-getter: true
+    - avoid-unnecessary-if: true
+    - avoid-unnecessary-late-fields: true
+    - avoid-unnecessary-length-check: true
+    - avoid-unnecessary-local-late: true
+    - avoid-unnecessary-local-variable: true
+    - avoid-unnecessary-negations: true
+    - avoid-unnecessary-null-aware-elements: true
+    - avoid-unnecessary-nullable-parameters: true
+    - avoid-unnecessary-nullable-return-type: true
+    - avoid-unnecessary-overrides: true
+    - avoid-unnecessary-patterns: true
+    - avoid-unnecessary-reassignment: true
+    - avoid-unnecessary-return: true
+    - avoid-unnecessary-statements: true
+    - avoid-unnecessary-super: true
+    - avoid-unnecessary-type-assertions: true
+    - avoid-unnecessary-type-casts: true
+    - avoid-unreachable-for-loop: true
+    - avoid-unrelated-type-assertions: true
+    - avoid-unrelated-type-casts: true
+    - avoid-unsafe-reduce: true
+    - avoid-unused-after-null-check: true
+    - avoid-unused-assignment: true
+    - avoid-unused-generics: true
+    - avoid-unused-instances: true
+    - avoid-unused-parameters: true
+    - avoid-weak-cryptographic-algorithms: true
+    - avoid-wildcard-cases-with-enums: true
+    - avoid-wildcard-cases-with-sealed-classes: true
+    - binary-expression-operand-order: true
+    - dispose-class-fields: true
+    - double-literal-format: true
+    - function-always-returns-null: true
+    - function-always-returns-same-value: true
+    - handle-throwing-invocations: true
+    - map-keys-ordering: true
+    - match-lib-folder-structure: true
+    - match-positional-field-names-on-assignment: true
+    - move-records-to-typedefs: true
+    - move-variable-closer-to-its-usage: true
+    - move-variable-outside-iteration: true
+    - newline-before-case: true
+    - newline-before-method: true
+    - newline-before-return: true
+    - no-boolean-literal-compare: true
+    - no-empty-block: true
+    - no-equal-conditions: true
+    - no-equal-nested-conditions: true
+    - no-equal-switch-case: true
+    - no-equal-switch-expression-cases: true
+    - no-equal-then-else: true
+    - no-object-declaration: true
+    - pass-correct-accepted-type: true
+    - pattern-fields-ordering: true
+    - prefer-abstract-final-static-class: true
+    - prefer-add-all: true
+    - prefer-addition-subtraction-assignments: true
+    - prefer-any-or-every: true
+    - prefer-assigning-await-expressions: true
+    - prefer-async-await: true
+    - prefer-both-inlining-annotations: true
+    - prefer-bytes-builder: true
+    - prefer-commenting-analyzer-ignores: true
+    - prefer-commenting-future-delayed: true
+    - prefer-commenting-pubspec-ignores: true
+    - prefer-compound-assignment-operators: true
+    - prefer-conditional-expressions: true
+    - prefer-contains: true
+    - prefer-correct-callback-field-name: true
+    - prefer-correct-error-name: true
+    - prefer-correct-for-loop-increment: true
+    - prefer-correct-future-return-type: true
+    - prefer-correct-handler-name: true
+    - prefer-correct-json-casts: true
+    - prefer-correct-setter-parameter-name: true
+    - prefer-correct-stream-return-type: true
+    - prefer-correct-switch-length: true
+    - prefer-correct-test-file-name: true
+    - prefer-correct-type-name: true
+    - prefer-declaring-const-constructor: true
+    - prefer-digit-separators: true
+    - prefer-early-return: true
+    - prefer-enums-by-name: true
+    - prefer-expect-later: true
+    - prefer-explicit-function-type: true
+    - prefer-explicit-type-arguments: true
+    - prefer-extracting-function-callbacks: true
+    - prefer-first: true
+    - prefer-for-in: true
+    - prefer-getter-over-method: true
+    - prefer-immediate-return: true
+    - prefer-iterable-of: true
+    - prefer-last: true
+    - prefer-moving-to-variable: true
+    - prefer-named-boolean-parameters: true
+    - prefer-null-aware-elements: true
+    - prefer-null-aware-spread: true
+    - prefer-overriding-parent-equality: true
+    - prefer-parentheses-with-if-null: true
+    - prefer-private-extension-type-field: true
+    - prefer-public-exception-classes: true
+    - prefer-pushing-conditional-expressions: true
+    - prefer-redirecting-superclass-constructor: true
+    - prefer-return-await: true
+    - prefer-returning-condition: true
+    - prefer-returning-conditional-expressions: true
+    - prefer-simpler-boolean-expressions: true
+    - prefer-simpler-patterns-null-check: true
+    - prefer-specific-cases-first: true
+    - prefer-specifying-future-value-type: true
+    - prefer-switch-expression: true
+    - prefer-switch-with-enums: true
+    - prefer-switch-with-sealed-classes: true
+    - prefer-trailing-comma: true
+    - prefer-type-over-var: true
+    - prefer-unique-test-names: true
+    - prefer-unwrapping-future-or: true
+    - prefer-visible-for-testing-on-members: true
+    - prefer-wildcard-pattern: true
+    - record-fields-ordering: true
+    - unnecessary-trailing-comma: true
+    - use-existing-destructuring: true
+    - use-existing-variable: true
 
 linter:
   rules:

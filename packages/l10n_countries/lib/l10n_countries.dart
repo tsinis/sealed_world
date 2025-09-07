@@ -660,11 +660,14 @@ class CountriesLocaleMapper extends IsoLocaleMapper<IsoLocaleMapper<String>> {
     };
   }
 
-  Set<String> _localesSet(String locale, {required bool useLanguageFallback}) =>
+  static Set<String> _localesSet(
+    String locale, {
+    required bool useLanguageFallback,
+  }) =>
       // ignore: avoid-substring, locale should has no emoji.
       {locale, if (useLanguageFallback) locale.substring(0, 2)};
 
-  MapEntry<LocaleKey, String> _mapSingle(
+  static MapEntry<LocaleKey, String> _mapSingle(
     String Function(LocaleKey isoLocale, String l10n)? formatter,
     String locale, {
     required String code,

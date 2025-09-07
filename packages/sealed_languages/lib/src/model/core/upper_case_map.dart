@@ -69,7 +69,7 @@ class UpperCaseMap<V extends Object> extends MapView<String, V> {
   @override
   String toString() => MapBase.mapToString(this);
 
-  T? _map<T extends Object>(
+  static T? _map<T extends Object>(
     Object? key,
     T? Function(String stringKey) mapper,
   ) => key == null ? null : mapper(IsoObject(key).toUpperCaseCode());

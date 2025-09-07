@@ -41,6 +41,7 @@ class RouteState extends ChangeNotifier {
 }
 
 /// Provides the current [RouteState] to descendant widgets in the tree.
+// ignore: prefer-single-declaration-per-file, it's original sample code.
 class RouteStateScope extends InheritedNotifier<RouteState> {
   const RouteStateScope({
     required super.notifier,

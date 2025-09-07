@@ -1,3 +1,5 @@
+// ignore_for_file: prefer-single-declaration-per-file
+
 import "../../interfaces/iso_standardized.dart";
 import "iso_object_extension_type.dart";
 

@@ -18,5 +18,6 @@ void main() => group("$PickersThemeData", () {
     expect(copy.showHeader, isFalse);
   });
 
+  // ignore: avoid-passing-self-as-argument, it's a test.
   test("lerp", () => expect(original.lerp(original, 1), original));
 });
