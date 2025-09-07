@@ -186,7 +186,7 @@ final class BlrPainter extends CustomElementsPainter {
 
     canvas
       ..translate(center.dx - bounds.center.dx, center.dy - bounds.center.dy)
-      ..drawRect(rect, paintCreator())
+      ..drawRect(rect, paintCreator()..isAntiAlias = false)
       ..drawPath(path, redPaint)
       ..drawPath(path2, redPaint)
       ..drawPath(

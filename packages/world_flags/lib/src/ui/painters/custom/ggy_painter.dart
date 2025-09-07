@@ -13,7 +13,7 @@ import "../basic/custom_elements_painter.dart";
 /// 1. Red broad cross reaching the edges (proportions from 36x24 construction).
 /// 2. Yellow flared cross with triangular ends centered within the red cross.
 final class GgyPainter extends CustomElementsPainter {
-  /// Creates a painter for the Guernsey flag using a 36x24 reference grid.
+  /// Creates a painter for the Guernsey flag.
   const GgyPainter(super.properties, super.aspectRatio);
 
   @override
@@ -23,14 +23,10 @@ final class GgyPainter extends CustomElementsPainter {
   FlagParentBounds paintFlagElements(Canvas canvas, Size size) {
     final width = size.width;
     final height = size.height;
+    final redThickness = height * (1 - property.heightFactor);
     final squareSide = height * property.heightFactor; // 0.75 * height.
     final left = (width - squareSide) / 2;
     final top = (height - squareSide) / 2;
-    final yellow = paintCreator(customColors.first);
-    // Red vertical bar: keep thickness tied to height so it remains constant
-    // visually when width stretches. Original construction: bar width = 6 on a
-    // 24-high grid -> 6/24 = 0.25 of height; centered horizontally.
-    final redThickness = height * 6 / 24; // = Height * 1/4.
 
     // ignore: avoid-local-functions, for simplicity and clarity.
     Offset points(double x, double y) => Offset(
@@ -86,9 +82,9 @@ final class GgyPainter extends CustomElementsPainter {
     canvas
       ..drawRect(
         Rect.fromLTWH((width - redThickness) / 2, 0, redThickness, height),
-        paintCreator(),
+        paintCreator()..isAntiAlias = false,
       )
-      ..drawPath(yellowPath, yellow);
+      ..drawPath(yellowPath, paintCreator(customColors.first));
 
     return (
       canvas: canvas,

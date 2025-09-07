@@ -60,7 +60,7 @@ final class PinePainter extends CustomElementsPainter {
         center.dx - bounds.center.dx,
         center.dy - bounds.center.dy * 1.1,
       )
-      ..drawRect(rectangle, paint)
+      ..drawRect(rectangle, paint..isAntiAlias = false)
       ..drawPath(path, paint);
 
     return (canvas: canvas, bounds: bounds, child: property.child);
