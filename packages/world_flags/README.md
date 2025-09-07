@@ -11,9 +11,9 @@
 
 # Every country flag is a Widget
 
-Flutter library for compact and visually appealing country flag icons. Optimized for rendering sizes from 18 to 48 pixels (height), these flags draw inspiration from circle-flags, OpenMoji, and Twemoji. Over two-thirds of the flags in this library are also suitable for full-scale use.
+The **world**'s first and only declarative **flag** package for Flutter. Flags adapt to any size and shape while preserving their true proportions. Optimized for rendering sizes from 18 to 48 pixels (height), these flags draw inspiration from circle-flags, OpenMoji, and Twemoji. Over two-thirds of the flags in this library are also suitable for full-scale use.
 
-Each flag is a vector-based `CustomPainter`, ensuring precise, scalable, and stunning results. Following official color standards and using a declarative design, world_flags allows easy customization of flag shapes, decorations, and aspect ratios without losing quality or breaking flag element proportions.
+Each flag is a vector-based `CustomPainter`, ensuring precise, scalable, and stunning results. Following official color standards and using a declarative design, `world_flags` allows easy customization of flag shapes, decorations, and aspect ratios without losing quality or breaking flag element proportions.
 
 ![Example](https://raw.githubusercontent.com/tsinis/sealed_world/main/packages/world_flags/doc/example.gif)
 
