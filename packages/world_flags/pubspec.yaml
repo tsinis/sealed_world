@@ -1,6 +1,6 @@
 version: 2.7.0
 name: world_flags
-description: The world's only declarative library for all ISO flags. No assets, no stretch.
+description: The first and only collection of declaratively defined world flags. No assets.
 maintainer: Roman Cinis
 repository: https://github.com/tsinis/sealed_world/tree/main/packages/world_flags
 issue_tracker: https://github.com/tsinis/sealed_world/issues
