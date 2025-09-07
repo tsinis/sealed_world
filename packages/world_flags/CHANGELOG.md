@@ -2,7 +2,7 @@
 
 NEW FEATURES
 
-- Added Guernsey flag painter (GgyPainter) and export, it's no longer a "simplified" flag.
+- Added Guernsey flag painter (`GgyPainter`) and export, sp GGY is no longer a "simplified" flag.
 
 REFACTOR
 
