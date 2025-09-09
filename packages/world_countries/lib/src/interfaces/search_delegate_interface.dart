@@ -61,7 +61,7 @@ abstract class SearchDelegateInterface<T extends Object>
 
   /// A function that takes an item and returns a boolean indicating whether the
   /// item should be included in the search results.
-  // ignore:  prefer-correct-callback-field-name, Might be a breaking change.
+  // ignore: prefer-correct-callback-field-name, Might be a breaking change.
   final bool Function(T item)? resultValidator;
 
   /// A widget to display at the bottom of the search page's app bar.

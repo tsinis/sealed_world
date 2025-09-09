@@ -126,7 +126,7 @@ class _IndexedListViewBuilderState<T extends Object>
             switchOutCurve: UiConstants.switchOutCurve,
             child: widget.items.isEmpty
                 ? widget.emptyStatePlaceholder
-                // ignore: avoid-shrink-wrap-in-lists, it's false by default.
+                // ignore: avoid-shrink-wrap-in-lists, it's `false` by default.
                 : ListView.separated(
                     scrollDirection:
                         widget.direction ?? theme?.direction ?? Axis.vertical,

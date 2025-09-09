@@ -36,15 +36,14 @@ extension LocaleExtension on Locale? {
     final language = maybeLanguage ?? fallbackLanguage;
     final country = WorldCountry.maybeFromCodeShort(this?.countryCode);
 
-    // ignore: avoid-negated-conditions, due to line length.
-    return language != null
-        ? TypedLocale(
+    return language == null
+        ? null
+        : TypedLocale(
             language,
             regionalCode: country == null ? this?.countryCode : null,
             country: country,
             script: maybeScript,
-          )
-        : null;
+          );
   }
 
   /// Determines the script of the [Locale] instance (if has a valid
