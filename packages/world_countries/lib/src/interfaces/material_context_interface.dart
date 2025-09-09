@@ -1,9 +1,12 @@
 // ignore_for_file: long-parameter-list
 import "package:flutter/material.dart";
+import "package:meta/meta.dart";
 
 import "../constants/ui_constants.dart";
 
 /// An interface for a Material Design pickers.
+/// Interface defining material context display helpers.
+@immutable
 abstract interface class MaterialContextInterface<T extends Object> {
   // ignore: format-comment, ends with macros.
   /// Twin of a Material's [showModalBottomSheet] function.
@@ -15,6 +18,7 @@ abstract interface class MaterialContextInterface<T extends Object> {
   /// [heightFactor]
   /// {@macro flutter.widgets.basic.fractionallySizedBox.heightFactor}
   @optionalTypeArgs
+  @useResult
   Future<T?> showInModalBottomSheet(
     BuildContext context, {
     Color? backgroundColor,
@@ -39,6 +43,7 @@ abstract interface class MaterialContextInterface<T extends Object> {
 
   /// Twin of a Material's [showSearch] function.
   @optionalTypeArgs
+  @useResult
   Future<T?>? showInSearch(
     BuildContext context, {
     String? query = "",
@@ -47,6 +52,7 @@ abstract interface class MaterialContextInterface<T extends Object> {
 
   /// Twin of a Material's [showDialog] function.
   @optionalTypeArgs
+  @useResult
   Future<T?>? showInDialog(
     BuildContext context, {
     bool barrierDismissible = true,

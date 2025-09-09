@@ -1,5 +1,6 @@
 import "dart:ui" show Locale;
 
+import "package:meta/meta.dart" show useResult;
 import "package:world_flags/world_flags.dart";
 
 import "../models/locale/typed_locale.dart";
@@ -11,11 +12,13 @@ import "duration_extension.dart";
 extension TypedLocaleExtension<T extends TypedLocale> on T {
   /// Returns typed locale in the more basic (parent) type [BasicLocale],
   /// without translations and other additional properties.
+  @useResult
   BasicLocale get asBasicLocale =>
       BasicLocale(language, countryCode: countryCode, script: script);
 
   /// Returns typed locale in the more basic (parent) type [BasicTypedLocale],
   /// without translations and other additional properties.
+  @useResult
   BasicTypedLocale get asBasicTypedLocale => BasicTypedLocale(
     language,
     country: country,
@@ -24,6 +27,7 @@ extension TypedLocaleExtension<T extends TypedLocale> on T {
   );
 
   /// Returns a weak typed (String-based) SDK locale representation of [Locale].
+  @useResult
   Locale get asLocale => Locale.fromSubtags(
     languageCode: languageCode,
     countryCode: countryCode,
@@ -56,6 +60,7 @@ extension TypedLocaleExtension<T extends TypedLocale> on T {
   /// {@endtemplate}
   ///
   /// Returns a new instance of [TypedLocale] with updated translation caches.
+  @useResult
   T copyWithTranslationsCache({
     Iterable<NaturalLanguage>? languages,
     Iterable<FiatCurrency>? currencies,
@@ -77,6 +82,7 @@ extension TypedLocaleExtension<T extends TypedLocale> on T {
   /// {@macro typed_locale_with_translations_cache}
   ///
   /// Returns a [Future] that completes with a new instance of [TypedLocale].
+  @useResult
   Future<T> copyWithTranslationsCacheAsync({
     Iterable<NaturalLanguage>? languages,
     Iterable<FiatCurrency>? currencies,

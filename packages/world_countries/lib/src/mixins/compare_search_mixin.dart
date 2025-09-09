@@ -1,4 +1,5 @@
 import "package:flutter/widgets.dart" show TextEditingController, protected;
+import "package:meta/meta.dart" show useResult;
 
 import "../interfaces/searchable_interface.dart";
 
@@ -16,6 +17,7 @@ mixin CompareSearchMixin<T extends Object> on SearchableInterface<T> {
   /// Returns a boolean indicating whether the item's text matches the search
   /// query.
   @protected
+  @useResult
   bool compareWithInput(String input, String itemText) {
     final item = caseSensitiveSearch ? itemText : itemText.toLowerCase();
     final text = caseSensitiveSearch ? input : input.toLowerCase();
@@ -30,6 +32,7 @@ mixin CompareSearchMixin<T extends Object> on SearchableInterface<T> {
   ///
   /// Returns a boolean indicating whether the item's text matches the search
   /// query.
+  @useResult
   bool compareWithTextInput(TextEditingController controller, String item) =>
       compareWithInput(controller.text, item);
 }

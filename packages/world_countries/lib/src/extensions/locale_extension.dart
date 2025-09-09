@@ -1,5 +1,6 @@
 import "dart:ui";
 
+import "package:meta/meta.dart" show useResult;
 import "package:world_flags/world_flags.dart";
 
 import "../models/locale/typed_locale.dart";
@@ -30,6 +31,7 @@ extension LocaleExtension on Locale? {
   /// // typedLocale is equal to: TypedLocale(LangEng(), country: CountryUsa()).
   /// final typedLocale = locale.maybeToTypedLocale();
   /// ```
+  @useResult
   TypedLocale? maybeToTypedLocale([NaturalLanguage? fallbackLanguage]) {
     final language = maybeLanguage ?? fallbackLanguage;
     final country = WorldCountry.maybeFromCodeShort(this?.countryCode);
@@ -50,6 +52,7 @@ extension LocaleExtension on Locale? {
   ///
   /// This method will return a [Script] instance if the [scriptCode] contains
   /// a valid script code. Otherwise, it will return `null`.
+  @useResult
   Script? get maybeScript => Script.maybeFromAnyCode(this?.scriptCode);
 
   /// Retrieves the associated [NaturalLanguage] from the [Locale] object.
@@ -64,6 +67,7 @@ extension LocaleExtension on Locale? {
   /// final language = englishLocale.maybeLanguage;
   /// print(language); // Prints: Language(name: English) (LangEng)
   /// ```
+  @useResult
   NaturalLanguage? get maybeLanguage =>
       NaturalLanguage.maybeFromAnyCode(this?.languageCode);
 
@@ -80,6 +84,7 @@ extension LocaleExtension on Locale? {
   /// final country = usEnglishLocale.maybeCountry;
   /// print(country); // Prints: Country(name: United States) (CountryUsa)
   /// ```
+  @useResult
   WorldCountry? get maybeCountry =>
       WorldCountry.maybeFromAnyCode(this?.countryCode);
 }

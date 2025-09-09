@@ -32,6 +32,7 @@ import "../models/typedefs.dart";
 ///       ],
 ///     );
 /// ```
+@immutable
 class TypedLocaleDelegate implements LocalizationsDelegate<TypedLocale?> {
   /// Creates an instance of [TypedLocaleDelegate].
   ///
@@ -154,6 +155,7 @@ class TypedLocaleDelegate implements LocalizationsDelegate<TypedLocale?> {
   final L10NFormatter<TypedLocale, IsoTranslated>? _l10nFormatter;
 
   @override
+  @useResult
   bool isSupported(Locale locale) => _toTypedLocale(locale) != null;
 
   @override
@@ -216,6 +218,7 @@ class TypedLocaleDelegate implements LocalizationsDelegate<TypedLocale?> {
   /// final maybeTypedLocale = TypedLocaleDelegate.maybeOf(context);
   /// // or just as final typedLocale = context.maybeLocale;
   /// ```
+  @useResult
   static TypedLocale? maybeOf(BuildContext context) {
     try {
       return Localizations.of<TypedLocale?>(context, TypedLocale);
@@ -236,6 +239,7 @@ class TypedLocaleDelegate implements LocalizationsDelegate<TypedLocale?> {
   /// ```dart
   /// final typedLocale = TypedLocaleDelegate.of(context);
   /// ```
+  @useResult
   static TypedLocale? of(BuildContext context) =>
       Localizations.of<TypedLocale?>(context, TypedLocale);
 }

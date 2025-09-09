@@ -2,6 +2,7 @@
 
 import "package:flutter/foundation.dart";
 import "package:flutter/widgets.dart" show BuildContext;
+import "package:meta/meta.dart" show useResult;
 
 /// Immutable class that represents the properties of an item in a list.
 @immutable
@@ -74,6 +75,7 @@ class ItemProperties<T extends Object> {
   ///   disabled.
   @optionalTypeArgs
   // ignore: long-parameter-list, class has 5 properties.
+  @useResult
   ItemProperties<T> copyWith({
     BuildContext? context,
     T? item,

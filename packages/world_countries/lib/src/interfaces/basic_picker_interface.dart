@@ -24,6 +24,8 @@ import "../models/locale/typed_locale.dart";
 ///
 /// Implementing classes should provide behavior for these properties to create
 /// a coherent picker experience.
+/// Immutable contract for basic picker configuration objects.
+@immutable
 abstract interface class BasicPickerInterface<T extends TypedLocale> {
   const BasicPickerInterface( // coverage:ignore-line
   {
