@@ -1,4 +1,3 @@
-// ignore_for_file: long-parameter-list
 import "package:flutter/material.dart";
 import "package:meta/meta.dart";
 

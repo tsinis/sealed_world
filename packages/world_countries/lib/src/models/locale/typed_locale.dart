@@ -146,7 +146,6 @@ class TypedLocale extends Locale implements BasicTypedLocale {
   /// Returns a copy of the [TypedLocale] object with the specified properties.
   /// {@macro copy_with_method}
   @required
-  // ignore: long-parameter-list, class has 7 properties.
   TypedLocale copyWith({
     NaturalLanguage? language,
     WorldCountry? country,

@@ -1,7 +1,5 @@
 // ignore_for_file: avoid-unnecessary-nullable-return-type, avoid-long-files
-
-// ignore: lines_longer_than_80_chars, Might be a breaking change.
-// ignore_for_file: long-parameter-list, avoid-nullable-parameters-with-default-values, prefer-correct-handler-name
+// ignore_for_file: avoid-nullable-parameters-with-default-values
 
 import "dart:async" show FutureOr, unawaited;
 
@@ -342,12 +340,14 @@ abstract class BasicPicker<T extends IsoTranslated>
 
     delegate = ImplicitSearchDelegate<T>(
       items,
+      // ignore: prefer-correct-handler-name, breaking change.
       resultsBuilder: (_, items) => copyWith(
         key: onSearchResultsBuilder == null ? null : ValueKey(items.length),
         items: items,
         onSelect: closeOnSelect,
         showSearchBar: false,
       ),
+      // ignore: prefer-correct-handler-name, breaking change.
       searchIn: searchIn ?? defaultSearch,
       searchMap: searchMap,
       onSearchResultsBuilder: onSearchResultsBuilder,

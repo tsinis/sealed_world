@@ -1,4 +1,3 @@
-// ignore_for_file: long-parameter-list, Flutter supports 6+ platforms.
 import "package:flutter/foundation.dart"
     show TargetPlatform, defaultTargetPlatform, kIsWeb;
 
