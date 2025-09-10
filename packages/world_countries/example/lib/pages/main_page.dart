@@ -39,11 +39,20 @@ class MainPage extends StatefulWidget {
 
 class _MainPageState extends State<MainPage>
     with SingleTickerProviderStateMixin {
+  static void _postFrameCallback(VoidCallback callback) =>
+      WidgetsBinding.instance.addPostFrameCallback((_) => callback());
+
   // ignore: avoid-late-keyword, we need lazy data value first.
   late final _controller = TabsDataController(widget._data.value, vsync: this);
 
   // ignore: avoid-returning-widgets, it's just shorthand in the example app.
   BasicPicker get _picker => widget._mapPickers(_controller.currentData);
+
+  @override
+  void initState() {
+    super.initState();
+    if (!kProfileMode) _postFrameCallback(_showLongPressHint);
+  }
 
   FutureOr<void> _handleFab({bool isLong = false}) => isLong
       ? _picker.showInDialog(context)
@@ -51,16 +60,22 @@ class _MainPageState extends State<MainPage>
 
   FutureOr<void> _handleAppBarSearch() => _picker.showInSearch(context);
 
-  FutureOr<Iterable<Widget>> _handleAnchor(
-    BuildContext context,
-    SearchController controller,
-  ) => _picker.searchSuggestions(context, controller);
+  void _showLongPressHint() {
+    final messenger = mounted ? ScaffoldMessenger.maybeOf(context) : null;
+    messenger?.showSnackBar(
+      const SnackBar(
+        showCloseIcon: true,
+        duration: Duration(days: DateTime.daysPerWeek),
+        content: Text("Long-press the icon buttons to view alternative inputs"),
+      ),
+    );
+  }
 
   @override
   void didUpdateWidget(MainPage oldWidget) {
     super.didUpdateWidget(oldWidget);
-    WidgetsBinding.instance.addPostFrameCallback(
-      (_) => ThemeProvider.of(
+    _postFrameCallback(
+      () => ThemeProvider.of(
         context, // Dart v3.7 formatting.
       )?.onColorsChange?.call(widget._data.country.flagStripeColors),
     );
@@ -77,7 +92,7 @@ class _MainPageState extends State<MainPage>
     length: _controller.length,
     child: Scaffold(
       appBar: AppBar(
-        title: const Text("Try long press too :)"),
+        title: const Text("sealed_world"),
         actions: [
           SearchAnchor(
             isFullScreen: false,
@@ -89,7 +104,7 @@ class _MainPageState extends State<MainPage>
                 icon: const Icon(Icons.search, semanticLabel: "search_icon"),
               ),
             ),
-            suggestionsBuilder: _handleAnchor,
+            suggestionsBuilder: _picker.searchSuggestions,
           ),
           const MenuButton(),
         ],
