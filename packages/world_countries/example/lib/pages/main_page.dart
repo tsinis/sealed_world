@@ -9,6 +9,7 @@ import "package:world_countries/world_countries.dart";
 import "../assets/assets.gen.dart";
 import "../model/parsed_data.dart";
 import "../model/world_data.dart";
+import "../notifications/notifications_center.dart";
 import "../tabs/country_tab.dart";
 import "../tabs/currency_tab.dart";
 import "../tabs/language_tab.dart";
@@ -23,9 +24,6 @@ class MainPage extends StatefulWidget {
     : _country = CountryTab(_data.country, navigate),
       _currency = CurrencyTab(_data.currency, navigate),
       _lang = LanguageTab(_data.language, navigate);
-
-  static void _markHintShown() => _longPressHintShown = true;
-  static bool _longPressHintShown = kProfileMode;
 
   final ParsedData _data;
   final WorldDataTab<BasicTypedLocale, WorldCountry> _country;
@@ -63,10 +61,11 @@ class _MainPageState extends State<MainPage>
   FutureOr<void> _handleAppBarSearch() => _picker.showInSearch(context);
 
   void _showLongPressHint() {
+    final notificationsCenter = NotificationsCenter.instance;
     final messenger = mounted ? ScaffoldMessenger.maybeOf(context) : null;
-    if (MainPage._longPressHintShown || messenger == null) return;
+    if (notificationsCenter.longPressHintShown || messenger == null) return;
 
-    MainPage._markHintShown();
+    notificationsCenter.markLongPressHintShown();
     messenger.showSnackBar(
       const SnackBar(
         showCloseIcon: true,
