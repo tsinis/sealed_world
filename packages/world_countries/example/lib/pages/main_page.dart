@@ -24,8 +24,10 @@ class MainPage extends StatefulWidget {
       _currency = CurrencyTab(_data.currency, navigate),
       _lang = LanguageTab(_data.language, navigate);
 
-  final ParsedData _data;
+  static void _markHintShown() => _longPressHintShown = true;
+  static bool _longPressHintShown = kProfileMode;
 
+  final ParsedData _data;
   final WorldDataTab<BasicTypedLocale, WorldCountry> _country;
   final WorldDataTab<BasicLocale, FiatCurrency> _currency;
   final WorldDataTab<BasicLocale, NaturalLanguage> _lang;
@@ -51,7 +53,7 @@ class _MainPageState extends State<MainPage>
   @override
   void initState() {
     super.initState();
-    if (!kProfileMode) _postFrameCallback(_showLongPressHint);
+    _postFrameCallback(_showLongPressHint);
   }
 
   FutureOr<void> _handleFab({bool isLong = false}) => isLong
@@ -62,7 +64,10 @@ class _MainPageState extends State<MainPage>
 
   void _showLongPressHint() {
     final messenger = mounted ? ScaffoldMessenger.maybeOf(context) : null;
-    messenger?.showSnackBar(
+    if (MainPage._longPressHintShown || messenger == null) return;
+
+    MainPage._markHintShown();
+    messenger.showSnackBar(
       const SnackBar(
         showCloseIcon: true,
         duration: Duration(days: DateTime.daysPerWeek),
