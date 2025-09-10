@@ -4,17 +4,19 @@ import "package:flutter/material.dart";
 
 import "../../assets/assets.gen.dart";
 
-class AboutAppDialog extends StatelessWidget {
-  const AboutAppDialog({super.key});
+final class AboutAppDialog extends StatelessWidget {
+  const AboutAppDialog._();
 
-  // ignore: prefer-widget-private-members, being used outside of the class.
-  void show(BuildContext context) =>
-      unawaited(showDialog(context: context, builder: (_) => this));
+  static void show(BuildContext context) => unawaited(
+    showDialog(context: context, builder: (_) => const AboutAppDialog._()),
+  );
 
   @override
   Widget build(BuildContext context) => AboutDialog(
+    // ignore: avoid-non-ascii-symbols, it's localized for most countries.
+    applicationLegalese: "© ${DateTime.now().year} Roman Cinis",
     applicationName: "world_countries",
-    applicationVersion: "3.8.0",
+    applicationVersion: "3.9.0",
     applicationIcon: SizedBox.square(
       dimension: 48,
       child: DecoratedBox(
@@ -25,7 +27,14 @@ class AboutAppDialog extends StatelessWidget {
         ),
       ),
     ),
-    // ignore: avoid-non-ascii-symbols, it's localized for most countries.
-    applicationLegalese: "© ${DateTime.now().year} Roman Cinis",
+    children: const [
+      Padding(
+        padding: EdgeInsets.only(top: 16),
+        child: SelectableText(
+          "github.com/tsinis/sealed_world",
+          textAlign: TextAlign.center,
+        ),
+      ),
+    ],
   );
 }
