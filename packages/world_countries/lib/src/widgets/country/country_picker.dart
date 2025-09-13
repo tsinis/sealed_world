@@ -124,6 +124,7 @@ class CountryPicker extends BasicPicker<WorldCountry> {
             itemProperties,
             title: maybeNameTitle,
             leading: flagsMap[itemProperties.item],
+            titleAlignment: ListTileTitleAlignment.titleHeight,
             onPressed: (country) =>
                 // ignore: prefer-correct-handler-name, breaking change.
                 maybeSelectAndPop(country, itemProperties.context),

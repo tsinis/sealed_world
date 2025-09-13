@@ -1,8 +1,10 @@
 import "package:flutter/widgets.dart";
+import "package:meta/meta.dart" show useResult;
 
 /// A set of useful extensions related to [Navigator] for [BuildContext].
 extension NavigatorContextExtension on BuildContext {
   /// Returns the nearest [NavigatorState] instance for the current context.
+  @useResult
   NavigatorState get navigator => Navigator.of(this);
 
   /// Pops the current route off the navigation stack and returns to the

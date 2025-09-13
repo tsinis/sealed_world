@@ -1,3 +1,4 @@
+import "package:meta/meta.dart" show useResult;
 import "package:world_flags/world_flags.dart" show IsoStandardized;
 
 /// Extension methods for [IsoStandardized] class, that can be used in the
@@ -13,5 +14,6 @@ extension IsoSemanticsExtension on IsoStandardized {
   /// - tapOn:
   ///    id: "ISO-ESP" # Tap on Spanish tile.
   /// ```
+  @useResult
   String get semanticIdentifier => "${IsoStandardized.standardAcronym}-$code";
 }

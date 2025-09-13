@@ -1,5 +1,5 @@
 import "package:flutter/material.dart";
-import "package:meta/meta.dart" show internal;
+import "package:meta/meta.dart" show internal, useResult;
 
 import "../models/typedefs.dart";
 
@@ -20,6 +20,7 @@ extension IterableSearchMapExtension<T extends Object> on Iterable<T> {
   /// terms.
   ///
   /// Returns a [SearchMap] that maps each item to its searchable terms.
+  @useResult
   SearchMap<T> searchMap(
     BuildContext context,
     Iterable<String> Function(T, BuildContext) search,
@@ -35,6 +36,7 @@ extension IterableSearchMapExtension<T extends Object> on Iterable<T> {
   /// [map] is the search map containing items and their searchable terms.
   /// [test] is a function that tests if a search term matches the search
   /// criteria.
+  @useResult
   Iterable<T> searchResults(SearchMap<T> map, bool Function(String) test) =>
       where((item) => map[item]?.any(test) ?? false);
 }

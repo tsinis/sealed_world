@@ -1,5 +1,6 @@
 import "dart:ui" show Locale, PlatformDispatcher;
 
+import "package:meta/meta.dart" show useResult;
 import "package:world_flags/world_flags.dart";
 
 /// An extension on [PlatformDispatcher] that provides convenient methods for
@@ -22,6 +23,7 @@ extension PlatformDispatcherExtension on PlatformDispatcher {
   /// final country = PlatformDispatcher.instance.firstCountryOrNull;
   /// print(country?.code); // Prints country code, e.g., "USA".
   /// ```
+  @useResult
   WorldCountry? get firstCountryOrNull => _firstWhereCode(
     WorldCountry.maybeFromCodeShort,
     codeFromLocale: (locale) => locale.countryCode,
@@ -40,6 +42,7 @@ extension PlatformDispatcherExtension on PlatformDispatcher {
   /// final language = PlatformDispatcher.instance.firstLanguageOrNull;
   /// print(language?.code); // Prints language code, e.g., "ENG".
   /// ```
+  @useResult
   NaturalLanguage? get firstLanguageOrNull => _firstWhereCode(
     NaturalLanguage.maybeFromCodeShort,
     codeFromLocale: (locale) => locale.languageCode,
@@ -57,6 +60,7 @@ extension PlatformDispatcherExtension on PlatformDispatcher {
   /// final script = PlatformDispatcher.instance.firstScriptOrNull;
   /// print(script?.code); // Prints script code, e.g., "Latn".
   /// ```
+  @useResult
   Script? get firstScriptOrNull => _firstWhereCode(
     Script.maybeFromCode,
     codeFromLocale: (locale) => locale.scriptCode,
@@ -78,6 +82,7 @@ extension PlatformDispatcherExtension on PlatformDispatcher {
   /// print(typedLocale.language.internationalName);
   /// print(typedLocale.country?.code);
   /// ```
+  @useResult
   BasicTypedLocale? get maybeLocale {
     final language = NaturalLanguage.maybeFromCodeShort(locale.languageCode);
     if (language == null) return null;

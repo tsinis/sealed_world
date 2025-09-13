@@ -26,8 +26,12 @@ enum WorldData {
   String get pathTemplate => "$path${Constants.slash}:${Constants.code}";
   String? get label => name.toBeginningOfSentenceCase;
 
-  static List<String> get paths => List.unmodifiable(
-    // ignore: avoid-slow-collection-methods, to simplify example code.
-    WorldData.values.expand((tab) => [tab.path, tab.pathTemplate]),
-  );
+  static final paths = List<String>.unmodifiable([
+    for (final tab in WorldData.values) ...[
+      tab.path,
+      tab.pathTemplate,
+      tab.path + Constants.settingsSuffix,
+      tab.pathTemplate + Constants.settingsSuffix,
+    ],
+  ]);
 }

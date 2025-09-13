@@ -1,4 +1,5 @@
 import "package:flutter/material.dart";
+import "package:meta/meta.dart";
 
 /// A set of useful extensions for [BuildContext].
 extension BuildContextExtension on BuildContext {
@@ -8,10 +9,12 @@ extension BuildContextExtension on BuildContext {
   /// ```dart
   /// String ok = context.materialL10n.okButtonLabel;
   /// ```
+  @useResult
   MaterialLocalizations get materialL10n => MaterialLocalizations.of(this);
 
   /// Returns `true` if the current [BuildContext] has a [MaterialLocalizations]
   /// instance associated with it.
+  @useResult
   bool get hasMaterialL10n =>
       Localizations.of<MaterialLocalizations?>(this, MaterialLocalizations) !=
       null;
@@ -22,6 +25,7 @@ extension BuildContextExtension on BuildContext {
   /// ```dart
   /// context.focus.requestFocus();
   /// ```
+  @useResult
   FocusScopeNode get focus => FocusScope.of(this);
 
   /// Returns the nearest [MediaQueryData] instance for the current context.
@@ -30,6 +34,7 @@ extension BuildContextExtension on BuildContext {
   /// ```dart
   /// Size size = context.media.size;
   /// ```
+  @useResult
   MediaQueryData get media => MediaQuery.of(this);
 
   /// Returns the padding from the nearest [MediaQueryData] instance for the
@@ -39,6 +44,7 @@ extension BuildContextExtension on BuildContext {
   /// ```dart
   /// EdgeInsets padding = context.padding;
   /// ```
+  @useResult
   EdgeInsets get padding => MediaQuery.paddingOf(this);
 
   /// Returns the [ThemeData] instance for the current context.
@@ -47,6 +53,7 @@ extension BuildContextExtension on BuildContext {
   /// ```dart
   /// Color primaryColor = context.theme.primaryColor;
   /// ```
+  @useResult
   ThemeData get theme => Theme.of(this);
 
   /// Returns the nearest [ScaffoldState] instance for the current context.

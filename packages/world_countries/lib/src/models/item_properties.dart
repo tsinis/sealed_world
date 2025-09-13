@@ -2,6 +2,7 @@
 
 import "package:flutter/foundation.dart";
 import "package:flutter/widgets.dart" show BuildContext;
+import "package:meta/meta.dart" show useResult;
 
 /// Immutable class that represents the properties of an item in a list.
 @immutable
@@ -42,7 +43,6 @@ class ItemProperties<T extends Object> {
     if (identical(this, other)) return true;
 
     return other is ItemProperties<T> &&
-        other.context == context &&
         other.index == index &&
         other.isDisabled == isDisabled &&
         other.isChosen == isChosen &&
@@ -50,12 +50,7 @@ class ItemProperties<T extends Object> {
   }
 
   @override
-  int get hashCode =>
-      context.hashCode ^
-      index.hashCode ^
-      isDisabled.hashCode ^
-      isChosen.hashCode ^
-      item.hashCode;
+  int get hashCode => Object.hash(index, item, isDisabled, isChosen);
 
   @override
   String toString() =>
@@ -73,7 +68,7 @@ class ItemProperties<T extends Object> {
   /// * [isDisabled] is the new boolean indicating whether the item is currently
   ///   disabled.
   @optionalTypeArgs
-  // ignore: long-parameter-list, class has 5 properties.
+  @useResult
   ItemProperties<T> copyWith({
     BuildContext? context,
     T? item,

@@ -16,6 +16,15 @@ void main() => group("$TypedLocaleDelegate", () {
   const delegate = TypedLocaleDelegate();
 
   test(
+    "selectiveCache constructor",
+    () => expect(
+      // ignore: prefer_const_constructors, a non-const constructor test.
+      TypedLocaleDelegate.selectiveCache(),
+      isA<TypedLocaleDelegate>(),
+    ),
+  );
+
+  test(
     "shouldReload",
     () => expect(delegate.shouldReload(const TypedLocaleDelegate()), isFalse),
   );
@@ -132,6 +141,7 @@ void main() => group("$TypedLocaleDelegate", () {
 
     testWidgets("TypedLocaleDelegate.maybeOf", (tester) async {
       final context = await tester.contextExtractor();
+      // ignore: deprecated_member_use_from_same_package, it's a TODO!
       expect(TypedLocaleDelegate.maybeOf(context), isNull);
     });
   });

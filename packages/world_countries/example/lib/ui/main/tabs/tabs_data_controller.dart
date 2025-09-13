@@ -1,6 +1,6 @@
 import "package:flutter/material.dart" show TabController;
 
-import "../model/world_data.dart";
+import "../../../model/world_data.dart";
 
 class TabsDataController extends TabController {
   TabsDataController(WorldData initial, {required super.vsync})

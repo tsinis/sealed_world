@@ -1,4 +1,5 @@
 import "package:flutter/material.dart";
+import "package:meta/meta.dart" show useResult;
 import "package:world_flags/world_flags.dart";
 
 import "../../models/item_properties.dart";
@@ -27,11 +28,13 @@ base class BaseTileThemeData<T extends IsoTranslated>
 
   @override
   @optionalTypeArgs
+  @useResult
   BaseTileThemeData<T> copyWith({
     Widget Function(ItemProperties<T> itemProperties, {bool? isDense})? builder,
   }) => BaseTileThemeData<T>(builder: builder ?? this.builder);
 
   @override
+  @useResult
   BaseTileThemeData<T> lerp(
     covariant ThemeExtension<BaseTileThemeData<T>>? other,
     double t,

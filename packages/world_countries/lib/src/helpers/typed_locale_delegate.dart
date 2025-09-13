@@ -32,6 +32,7 @@ import "../models/typedefs.dart";
 ///       ],
 ///     );
 /// ```
+@immutable
 class TypedLocaleDelegate implements LocalizationsDelegate<TypedLocale?> {
   /// Creates an instance of [TypedLocaleDelegate].
   ///
@@ -154,6 +155,7 @@ class TypedLocaleDelegate implements LocalizationsDelegate<TypedLocale?> {
   final L10NFormatter<TypedLocale, IsoTranslated>? _l10nFormatter;
 
   @override
+  @useResult
   bool isSupported(Locale locale) => _toTypedLocale(locale) != null;
 
   @override
@@ -213,29 +215,25 @@ class TypedLocaleDelegate implements LocalizationsDelegate<TypedLocale?> {
   /// Example usage:
   ///
   /// ```dart
-  /// final maybeTypedLocale = TypedLocaleDelegate.maybeOf(context);
+  /// final maybeTypedLocale = TypedLocaleDelegate.of(context);
   /// // or just as final typedLocale = context.maybeLocale;
   /// ```
-  static TypedLocale? maybeOf(BuildContext context) {
-    try {
-      return Localizations.of<TypedLocale?>(context, TypedLocale);
-      // ignore: avoid_catches_without_on_clauses, for DevEx, there is `of`.
-    } catch (_) {
-      return null;
-    }
-  }
+  @Deprecated("Please use `TypedLocaleDelegate.of(context)` instead.")
+  static TypedLocale? maybeOf(BuildContext context) => of(context);
 
-  /// Returns the [TypedLocale] associated with the given [BuildContext].
+  /// Returns the [TypedLocale] associated with the given [BuildContext] or
+  /// `null` if the [BuildContext] does not contain a [TypedLocale].
   ///
   /// The [context] parameter is the [BuildContext] from which
-  /// the [TypedLocale] is retrieved. If the [TypedLocale] is not found or not
-  /// available, it might throw an exception, consider using `maybeOf` instead.
+  /// the [TypedLocale] is retrieved.
   ///
   /// Example usage:
   ///
   /// ```dart
   /// final typedLocale = TypedLocaleDelegate.of(context);
+  /// // or just as final typedLocale = context.maybeLocale;
   /// ```
+  @useResult
   static TypedLocale? of(BuildContext context) =>
-      Localizations.of<TypedLocale?>(context, TypedLocale);
+      Localizations.of<TypedLocale>(context, TypedLocale);
 }

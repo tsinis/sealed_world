@@ -143,7 +143,7 @@ extension type const IsoObject._(Object _value) implements Object {
   ///
   /// print(result); // Prints "orElse"
   /// ```.
-  // ignore: long-parameter-list, avoid-unnecessary-extends, all but 1 required.
+  // ignore: avoid-unnecessary-extends, all but 1 required.
   T maybeMapIsoCode<T extends Object?>({
     required T Function(String input) orElse,
     int maxLength = IsoStandardized.codeLength,

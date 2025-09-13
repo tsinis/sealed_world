@@ -12,17 +12,19 @@ final class ParsedData {
     required this.currency,
     required this.language,
     required this.value,
+    this.isSettings = false,
   });
 
   final WorldCountry country;
   final FiatCurrency currency;
   final NaturalLanguage language;
   final WorldData value;
+  final bool isSettings;
 
   @override
   String toString() =>
       "ParsedData(country: $country, currency: $currency, "
-      "language: $language, value: $value)";
+      "language: $language, value: $value, isSettings: $isSettings)";
 
   @override
   bool operator ==(Object other) {
@@ -32,10 +34,11 @@ final class ParsedData {
         other.country == country &&
         other.currency == currency &&
         other.language == language &&
-        other.value == value;
+        other.value == value &&
+        other.isSettings == isSettings;
   }
 
   @override
   int get hashCode =>
-      country.hashCode ^ currency.hashCode ^ language.hashCode ^ value.hashCode;
+      Object.hash(country, currency, language, value, isSettings);
 }

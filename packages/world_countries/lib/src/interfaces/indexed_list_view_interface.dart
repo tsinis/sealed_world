@@ -11,6 +11,8 @@ import "package:flutter/widgets.dart";
 /// This widget is designed to be highly customizable. The appearance and
 /// behavior of the list can be customized by passing in optional parameters
 /// to the constructor.
+/// Immutable configuration interface for indexed list views.
+@immutable
 abstract interface class IndexedListViewInterface {
   /// Creates an [IndexedListViewInterface] with the given parameters.
   ///

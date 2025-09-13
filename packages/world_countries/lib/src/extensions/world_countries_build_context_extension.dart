@@ -16,7 +16,7 @@ extension WorldCountriesBuildContextExtension on BuildContext {
   /// the current context does not have a [TypedLocale] (for example, because
   /// [TypedLocaleDelegate] is not provided in the [MaterialApp]'s
   /// `localizationsDelegates` list or locale was not detected).
-  TypedLocale? get maybeLocale => TypedLocaleDelegate.maybeOf(this);
+  TypedLocale? get maybeLocale => TypedLocaleDelegate.of(this);
 
   /// Retrieves the closest [PickersThemeData] in the current context.
   ///

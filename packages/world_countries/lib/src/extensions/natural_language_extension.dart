@@ -1,5 +1,6 @@
 import "dart:ui";
 
+import "package:meta/meta.dart" show factory, useResult;
 import "package:world_flags/world_flags.dart";
 
 /// Extension on [NaturalLanguage] to convert it to a [Locale].
@@ -17,6 +18,8 @@ extension NaturalLanguageExtension on NaturalLanguage {
   /// final locale = language.toLocale(countryCode: 'US');
   /// print(locale); // Prints: en_US
   /// ```
+  @factory
+  @useResult
   Locale toLocale({String? countryCode, String? scriptCode}) =>
       Locale.fromSubtags(
         languageCode: codeShort.toLowerCase(),

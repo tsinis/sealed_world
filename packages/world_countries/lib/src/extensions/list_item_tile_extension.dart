@@ -1,4 +1,5 @@
 import "package:flutter/material.dart";
+import "package:meta/meta.dart" show useResult;
 
 import "../widgets/generic_widgets/list_item_tile.dart";
 
@@ -15,6 +16,7 @@ extension ListItemTileExtension<T extends Object> on ListItemTile<T> {
 
   /// Returns a copy of this [ListItemTile] with the given fields replaced by
   /// new values.
+  @useResult
   // ignore: avoid-high-cyclomatic-complexity, widgets have many properties.
   ListItemTile<T> copyWith({
     T? item,

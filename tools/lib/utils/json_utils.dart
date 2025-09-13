@@ -107,6 +107,7 @@ const ${varFileName.toCamelCase()} = [
     final paths = <String>[];
     final io = IoUtils()..createDirectory(translation);
     final dataType = package.dataRepresent;
+    // ignore: avoid-unnecessary-collections, it's just a CLI helper tool.
     for (final item in [package.dataList.last]) {
       final itemFromCode = _instanceFromCode(item.code);
       if (itemFromCode == null) continue; // Might be more items in the source.

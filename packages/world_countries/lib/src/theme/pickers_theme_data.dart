@@ -1,5 +1,6 @@
 import "package:flutter/gestures.dart";
 import "package:flutter/material.dart";
+import "package:meta/meta.dart" show useResult;
 import "package:world_flags/world_flags.dart";
 
 import "../constants/ui_constants.dart";
@@ -23,6 +24,7 @@ import "../models/locale/typed_locale.dart";
 ///   showClearButton: false,
 /// );
 /// ```
+@immutable
 class PickersThemeData extends ThemeExtension<PickersThemeData>
     implements IndexedListViewInterface, BasicPickerInterface {
   /// Creates a [PickersThemeData] instance with the given properties.
@@ -71,7 +73,7 @@ class PickersThemeData extends ThemeExtension<PickersThemeData>
   /// final newTheme = pickerTheme.copyWith(padding: EdgeInsets.all(16));
   /// ```
   @override
-  // ignore: long-parameter-list, a lot of parameters here.
+  @useResult
   PickersThemeData copyWith({
     bool? showClearButton,
     TextField? searchBar,
@@ -132,6 +134,7 @@ class PickersThemeData extends ThemeExtension<PickersThemeData>
   );
 
   @override
+  @useResult
   ThemeExtension<PickersThemeData> lerp(
     covariant ThemeExtension<PickersThemeData>? other,
     double t,
