@@ -2,7 +2,7 @@ import "dart:async";
 
 import "package:flutter/material.dart";
 
-import "../../assets/assets.gen.dart";
+import "../../../assets/assets.gen.dart";
 
 final class AboutAppDialog extends StatelessWidget {
   const AboutAppDialog._();

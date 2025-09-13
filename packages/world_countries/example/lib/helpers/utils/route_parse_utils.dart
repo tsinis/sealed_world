@@ -7,8 +7,9 @@ import "../../model/constants.dart";
 import "../../model/parsed_data.dart";
 import "../../model/world_data.dart";
 import "../../routing/parsed_route.dart";
+import "../extensions/parsed_route_settings_extension.dart"; // For settings helpers.
 
-class RouteParseUtils {
+final class RouteParseUtils {
   const RouteParseUtils({
     this.fallbackCountry = const CountrySrb(),
     this.fallbackCurrency = const FiatEur(),
@@ -18,9 +19,17 @@ class RouteParseUtils {
   final FiatCurrency fallbackCurrency;
 
   ParsedData parseRoute(ParsedRoute route) {
+    final isSettings = route.isSettingsRoute;
+    final effectivePathTemplate = isSettings
+        ? route.pathTemplate.replaceFirst(Constants.settingsSuffix, "")
+        : route.pathTemplate;
+
     final code = route.parameters[Constants.code]?.toUpperCase() ?? "";
-    if (code.isEmpty) return _returnWithoutCode(route.pathTemplate);
-    if (route.pathTemplate == WorldData.country.pathTemplate) {
+    if (code.isEmpty) {
+      return _returnWithoutCode(effectivePathTemplate, isSettings: isSettings);
+    }
+
+    if (effectivePathTemplate == WorldData.country.pathTemplate) {
       final country = _maybeData(
         code,
         onCode: WorldCountry.maybeFromAnyCode,
@@ -30,8 +39,12 @@ class RouteParseUtils {
         ),
       );
 
-      return _returnFromCountryData(country, data: WorldData.country);
-    } else if (route.pathTemplate == WorldData.currency.pathTemplate) {
+      return _returnFromCountryData(
+        country,
+        data: WorldData.country,
+        isSettings: isSettings,
+      );
+    } else if (effectivePathTemplate == WorldData.currency.pathTemplate) {
       final currency = _maybeData(
         code,
         onCode: FiatCurrency.maybeFromAnyCode,
@@ -41,8 +54,8 @@ class RouteParseUtils {
         ),
       );
 
-      return _returnFromCurrencyData(currency);
-    } else if (route.pathTemplate == WorldData.language.pathTemplate) {
+      return _returnFromCurrencyData(currency, isSettings: isSettings);
+    } else if (effectivePathTemplate == WorldData.language.pathTemplate) {
       final language = _maybeData(
         code,
         onCode: NaturalLanguage.maybeFromAnyCode,
@@ -52,10 +65,10 @@ class RouteParseUtils {
         ),
       );
 
-      return _returnFromLanguageData(language);
+      return _returnFromLanguageData(language, isSettings: isSettings);
     }
 
-    return _returnFromCountryData(null);
+    return _returnFromCountryData(null, isSettings: isSettings);
   }
 
   static T? _maybeData<T extends IsoStandardized>(
@@ -66,6 +79,7 @@ class RouteParseUtils {
 
   ParsedData _returnFromCountryData(
     WorldCountry? maybeCountry, {
+    required bool isSettings,
     FiatCurrency? maybeCurrency,
     NaturalLanguage? maybeLanguage,
     WorldData? data,
@@ -80,11 +94,17 @@ class RouteParseUtils {
       currency: maybeCurrency ?? country.currencies?.first ?? fallbackCurrency,
       language: maybeLanguage ?? country.languages.first,
       value: data ?? WorldData.values.first,
+      isSettings: isSettings,
     );
   }
 
-  ParsedData _returnFromCurrencyData(FiatCurrency? maybeCurrency) {
-    if (maybeCurrency == null) return _returnFromCountryData(null);
+  ParsedData _returnFromCurrencyData(
+    FiatCurrency? maybeCurrency, {
+    required bool isSettings,
+  }) {
+    if (maybeCurrency == null) {
+      return _returnFromCountryData(null, isSettings: isSettings);
+    }
 
     final maybeCountry = WorldCountry.list.firstWhereOrNull(
       (country) => country.currencies?.contains(maybeCurrency) ?? false,
@@ -94,11 +114,17 @@ class RouteParseUtils {
       maybeCountry,
       maybeCurrency: maybeCurrency,
       data: WorldData.currency,
+      isSettings: isSettings,
     );
   }
 
-  ParsedData _returnFromLanguageData(NaturalLanguage? maybeLanguage) {
-    if (maybeLanguage == null) return _returnFromCountryData(null);
+  ParsedData _returnFromLanguageData(
+    NaturalLanguage? maybeLanguage, {
+    required bool isSettings,
+  }) {
+    if (maybeLanguage == null) {
+      return _returnFromCountryData(null, isSettings: isSettings);
+    }
 
     final maybeCountry = WorldCountry.list.firstWhereOrNull(
       (country) => country.languages.contains(maybeLanguage),
@@ -108,14 +134,18 @@ class RouteParseUtils {
       maybeCountry,
       maybeLanguage: maybeLanguage,
       data: WorldData.language,
+      isSettings: isSettings,
     );
   }
 
-  ParsedData _returnWithoutCode(String pathTemplate) {
+  ParsedData _returnWithoutCode(
+    String pathTemplate, {
+    required bool isSettings,
+  }) {
     WorldData? data;
     if (pathTemplate == WorldData.currency.path) data = WorldData.currency;
     if (pathTemplate == WorldData.language.path) data = WorldData.language;
 
-    return _returnFromCountryData(null, data: data);
+    return _returnFromCountryData(null, data: data, isSettings: isSettings);
   }
 }

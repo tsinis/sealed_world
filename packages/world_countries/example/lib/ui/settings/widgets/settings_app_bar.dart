@@ -1,0 +1,23 @@
+import "package:flutter/material.dart";
+
+class SettingsAppBar extends StatelessWidget implements PreferredSizeWidget {
+  const SettingsAppBar({this.onReset, super.key});
+
+  final VoidCallback? onReset;
+
+  @override
+  Size get preferredSize => const Size.fromHeight(kToolbarHeight);
+
+  @override
+  Widget build(BuildContext context) => AppBar(
+    title: const Text("Flag Settings"),
+    leading: const BackButton(),
+    actions: [
+      IconButton(
+        icon: const Icon(Icons.restore_rounded),
+        onPressed: onReset,
+        tooltip: "Reset",
+      ),
+    ],
+  );
+}

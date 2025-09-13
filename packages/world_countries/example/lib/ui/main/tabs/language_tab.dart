@@ -1,15 +1,15 @@
 import "package:flutter/material.dart";
 import "package:world_countries/world_countries.dart";
 
-import "../model/world_data.dart";
-import "../widgets/abstractions/world_data_tab.dart";
+import "../../../model/world_data.dart";
+import "../abstractions/world_data_tab.dart";
 import "../widgets/description_tile.dart";
 import "../widgets/tab_body.dart";
 
 final class LanguageTab extends WorldDataTab<BasicLocale, NaturalLanguage> {
   LanguageTab(
     super.data,
-    super.nav, {
+    super.go, {
     super.dataPicker = const LanguagePicker(),
     super.items = NaturalLanguage.list,
     super.type = WorldData.language,

@@ -4,10 +4,10 @@ import "package:world_countries/helpers.dart";
 import "../tabs/tabs_data_controller.dart";
 
 class FloatingButton extends StatelessWidget {
-  const FloatingButton(this.controller, {required this.onPressed, super.key});
+  const FloatingButton(this._controller, {required this.onPressed, super.key});
 
   final void Function({bool isLong}) onPressed;
-  final TabsDataController controller;
+  final TabsDataController _controller;
 
   @override
   Widget build(BuildContext context) => GestureDetector(
@@ -17,14 +17,14 @@ class FloatingButton extends StatelessWidget {
       heroTag: "FAB",
       onPressed: () => onPressed(isLong: false),
       child: AnimatedBuilder(
-        animation: controller,
+        animation: _controller,
         builder: (_, _) => AnimatedSwitcher(
           duration: UiConstants.duration,
           switchInCurve: UiConstants.switchInCurve,
           switchOutCurve: UiConstants.switchOutCurve,
           child: Icon(
-            controller.currentData.icon,
-            key: ValueKey(controller.currentData),
+            _controller.currentData.icon,
+            key: ValueKey(_controller.currentData),
           ),
         ),
       ),

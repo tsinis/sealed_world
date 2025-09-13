@@ -6,24 +6,24 @@ import "package:flutter/foundation.dart";
 import "package:flutter/material.dart";
 import "package:world_countries/world_countries.dart";
 
-import "../assets/assets.gen.dart";
-import "../model/parsed_data.dart";
-import "../model/world_data.dart";
-import "../notifications/notifications_center.dart";
-import "../tabs/country_tab.dart";
-import "../tabs/currency_tab.dart";
-import "../tabs/language_tab.dart";
-import "../tabs/tabs_data_controller.dart";
-import "../theme/theme_provider.dart";
-import "../widgets/abstractions/world_data_tab.dart";
-import "../widgets/floating_button.dart";
-import "../widgets/menu_button.dart";
+import "../../assets/assets.gen.dart";
+import "../../model/parsed_data.dart";
+import "../../model/world_data.dart";
+import "../../notifications/notifications_center.dart";
+import "../../theme/theme_provider.dart";
+import "abstractions/world_data_tab.dart";
+import "tabs/country_tab.dart";
+import "tabs/currency_tab.dart";
+import "tabs/language_tab.dart";
+import "tabs/tabs_data_controller.dart";
+import "widgets/floating_button.dart";
+import "widgets/menu_button.dart";
 
 class MainPage extends StatefulWidget {
-  MainPage(this._data, {AsyncValueSetter<String>? navigate, super.key})
-    : _country = CountryTab(_data.country, navigate),
-      _currency = CurrencyTab(_data.currency, navigate),
-      _lang = LanguageTab(_data.language, navigate);
+  MainPage(this._data, {AsyncValueSetter<String>? go, super.key})
+    : _country = CountryTab(_data.country, go),
+      _currency = CurrencyTab(_data.currency, go),
+      _lang = LanguageTab(_data.language, go);
 
   final ParsedData _data;
   final WorldDataTab<BasicTypedLocale, WorldCountry> _country;
@@ -79,7 +79,7 @@ class _MainPageState extends State<MainPage>
   void didUpdateWidget(MainPage oldWidget) {
     super.didUpdateWidget(oldWidget);
     _postFrameCallback(
-      () => ThemeProvider.of(
+      () => ThemeProvider.maybeOf(
         context, // Dart v3.7 formatting.
       )?.onColorsChange?.call(widget._data.country.flagStripeColors),
     );
@@ -108,7 +108,9 @@ class _MainPageState extends State<MainPage>
                 icon: const Icon(Icons.search, semanticLabel: "search_icon"),
               ),
             ),
-            suggestionsBuilder: _picker.searchSuggestions,
+            suggestionsBuilder: (_, search) =>
+                // ignore: use-closest-build-context, on purpose.
+                _picker.searchSuggestions(context, search),
           ),
           const MenuButton(),
         ],

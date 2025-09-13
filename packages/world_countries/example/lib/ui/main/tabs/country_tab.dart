@@ -3,16 +3,16 @@
 import "package:flutter/material.dart";
 import "package:world_countries/world_countries.dart";
 
-import "../assets/fonts.gen.dart";
-import "../model/world_data.dart";
-import "../widgets/abstractions/world_data_tab.dart";
+import "../../../assets/fonts.gen.dart";
+import "../../../model/world_data.dart";
+import "../abstractions/world_data_tab.dart";
 import "../widgets/description_tile.dart";
 import "../widgets/tab_body.dart";
 
 final class CountryTab extends WorldDataTab<BasicTypedLocale, WorldCountry> {
   CountryTab(
     super.data,
-    super.nav, {
+    super.go, {
     super.dataPicker = const CountryPicker(), // Or for example PhoneCodePicker.
     super.items = WorldCountry.list,
     super.type = WorldData.country,

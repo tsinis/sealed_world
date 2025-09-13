@@ -12,7 +12,7 @@ class ThemeProvider<T extends List<Color>> extends InheritedWidget {
   // ignore: specify_nonobvious_property_types, just an example app.
   static const _whiteColor = Colors.white;
 
-  static ThemeProvider? of(BuildContext context) =>
+  static ThemeProvider? maybeOf(BuildContext context) =>
       context.dependOnInheritedWidgetOfExactType<ThemeProvider>();
 
   final T _flagColors;
