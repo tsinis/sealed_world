@@ -10,14 +10,15 @@ import "widgets/sliders/border_radius_slider.dart";
 class SettingsPage extends StatelessWidget {
   const SettingsPage(this._controller, this._country, {super.key});
 
+  static const _fallback = CountryFlag.simplified(CountryGbr(), height: 180);
+
   final FlagThemeController _controller;
   final WorldCountry? _country;
 
   @override
   Widget build(BuildContext context) {
-    final maybeFlag = _country == null
-        ? null
-        : CountryFlag.simplified(_country, height: 180);
+    final flag = _fallback.copyWith(item: _country);
+    final flagProps = flag.basicFlag?.properties;
 
     return Theme(
       data: ThemeData(
@@ -53,19 +54,15 @@ class SettingsPage extends StatelessWidget {
                 padding:
                     const EdgeInsets.all(8) + const EdgeInsets.only(top: 16),
                 children: [
-                  MaybeWidget(
-                    maybeFlag,
-                    (flag) => Center(
-                      child: flag.copyWith(
-                        aspectRatio: theme.specifiedAspectRatio,
-                        decoration: scaledDecoration,
-                      ),
-                    ),
+                  Center(
+                    child:
+                        ((flagProps?.isSimplified ?? true) ? _fallback : flag)
+                            .copyWith(
+                              aspectRatio: theme.specifiedAspectRatio,
+                              decoration: scaledDecoration,
+                            ),
                   ),
-                  AspectRatioSlider(
-                    _controller,
-                    originalRatio: maybeFlag?.basicFlag?.properties.aspectRatio,
-                  ),
+                  AspectRatioSlider(_controller, flagProps?.aspectRatio),
                   BorderRadiusSlider(_controller),
                 ],
               );

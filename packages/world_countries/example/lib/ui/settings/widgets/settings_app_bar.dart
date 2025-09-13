@@ -15,8 +15,8 @@ class SettingsAppBar extends StatelessWidget implements PreferredSizeWidget {
     actions: [
       IconButton(
         icon: const Icon(Icons.restore_rounded),
+        tooltip: "Reset to default settings",
         onPressed: onReset,
-        tooltip: "Reset",
       ),
     ],
   );
