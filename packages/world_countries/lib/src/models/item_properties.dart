@@ -51,12 +51,7 @@ class ItemProperties<T extends Object> {
   }
 
   @override
-  int get hashCode =>
-      context.hashCode ^
-      index.hashCode ^
-      isDisabled.hashCode ^
-      isChosen.hashCode ^
-      item.hashCode;
+  int get hashCode => Object.hash(index, item, context, isDisabled, isChosen);
 
   @override
   String toString() =>

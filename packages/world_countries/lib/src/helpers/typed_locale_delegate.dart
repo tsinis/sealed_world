@@ -221,7 +221,7 @@ class TypedLocaleDelegate implements LocalizationsDelegate<TypedLocale?> {
   @useResult
   static TypedLocale? maybeOf(BuildContext context) {
     try {
-      return Localizations.of<TypedLocale?>(context, TypedLocale);
+      return of(context);
       // ignore: avoid_catches_without_on_clauses, for DevEx, there is `of`.
     } catch (_) {
       return null;
@@ -241,5 +241,5 @@ class TypedLocaleDelegate implements LocalizationsDelegate<TypedLocale?> {
   /// ```
   @useResult
   static TypedLocale? of(BuildContext context) =>
-      Localizations.of<TypedLocale?>(context, TypedLocale);
+      Localizations.of<TypedLocale>(context, TypedLocale);
 }
