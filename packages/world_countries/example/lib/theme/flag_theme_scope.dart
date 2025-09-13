@@ -1,10 +1,9 @@
 import "package:flutter/widgets.dart";
-import "package:world_countries/world_countries.dart" show FlagThemeData;
 
 import "flag_theme_controller.dart";
 
 /// Inherited notifier providing access to [FlagThemeController]. Wrap a subtree
-/// with this to allow updating [FlagThemeData] dynamically.
+/// with this to allow updating `FlagThemeData` dynamically.
 class FlagThemeScope extends InheritedNotifier<FlagThemeController> {
   const FlagThemeScope(
     FlagThemeController notifier, {

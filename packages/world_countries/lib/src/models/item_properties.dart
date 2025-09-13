@@ -43,7 +43,6 @@ class ItemProperties<T extends Object> {
     if (identical(this, other)) return true;
 
     return other is ItemProperties<T> &&
-        other.context == context &&
         other.index == index &&
         other.isDisabled == isDisabled &&
         other.isChosen == isChosen &&
@@ -51,7 +50,7 @@ class ItemProperties<T extends Object> {
   }
 
   @override
-  int get hashCode => Object.hash(index, item, context, isDisabled, isChosen);
+  int get hashCode => Object.hash(index, item, isDisabled, isChosen);
 
   @override
   String toString() =>

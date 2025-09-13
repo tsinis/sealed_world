@@ -26,18 +26,12 @@ enum WorldData {
   String get pathTemplate => "$path${Constants.slash}:${Constants.code}";
   String? get label => name.toBeginningOfSentenceCase;
 
-  static List<String> get paths {
-    final list = <String>[];
-
-    for (final tab in WorldData.values) {
-      list.addAll([
-        tab.path,
-        tab.pathTemplate,
-        tab.path + Constants.settingsSuffix,
-        tab.pathTemplate + Constants.settingsSuffix,
-      ]);
-    }
-
-    return List.unmodifiable(list);
-  }
+  static final paths = List<String>.unmodifiable([
+    for (final tab in WorldData.values) ...[
+      tab.path,
+      tab.pathTemplate,
+      tab.path + Constants.settingsSuffix,
+      tab.pathTemplate + Constants.settingsSuffix,
+    ],
+  ]);
 }
