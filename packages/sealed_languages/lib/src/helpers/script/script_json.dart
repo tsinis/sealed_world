@@ -4,7 +4,7 @@ import "../../typedefs/typedefs.dart";
 /// Extension on [Script] that provides methods for converting
 /// [Script] objects to and from JSON maps.
 extension ScriptJson on Script {
-  /// {@macro from_json_method}
+  /// {@macro from_map_method}
   static Script fromMap(JsonMap map) => Script(
     name: map["name"].toString(),
     code: map["code"].toString(),
@@ -13,7 +13,7 @@ extension ScriptJson on Script {
     pva: map["pva"]?.toString(),
   );
 
-  /// {@macro from_map_method}
+  /// {@macro to_map_method}
   Map<String, String?> toMap() => {
     "code": code,
     "codeNumeric": codeNumeric,
