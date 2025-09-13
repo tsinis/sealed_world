@@ -12,10 +12,6 @@ class FlagThemeScope extends InheritedNotifier<FlagThemeController> {
     super.key,
   }) : super(notifier: notifier);
 
-  static FlagThemeController? maybeOf(BuildContext context) {
-    final scope = context.dependOnInheritedWidgetOfExactType<FlagThemeScope>();
-    final notifier = scope?.notifier;
-
-    return notifier is FlagThemeController ? notifier : null;
-  }
+  static FlagThemeController? maybeOf(BuildContext context) =>
+      context.dependOnInheritedWidgetOfExactType<FlagThemeScope>()?.notifier;
 }

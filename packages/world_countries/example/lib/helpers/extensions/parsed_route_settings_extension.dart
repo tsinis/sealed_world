@@ -1,5 +1,3 @@
-import "package:flutter/widgets.dart";
-
 import "../../model/constants.dart";
 import "../../routing/parsed_route.dart";
 
@@ -10,11 +8,8 @@ extension ParsedRouteSettingsExtension on ParsedRoute {
   String get pathWithSettings =>
       isSettingsRoute ? path : path + Constants.settingsSuffix;
 
-  String get pathWithoutSettings {
-    if (!isSettingsRoute) return path;
-
-    return path.characters
-        .getRange(0, path.length - Constants.settingsSuffix.length)
-        .toString();
-  }
+  String get pathWithoutSettings => isSettingsRoute
+      // ignore: avoid-substring, no emojis here.
+      ? path.substring(0, path.length - Constants.settingsSuffix.length)
+      : path;
 }

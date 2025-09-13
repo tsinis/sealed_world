@@ -33,6 +33,7 @@ enum WorldData {
       list.addAll([
         tab.path,
         tab.pathTemplate,
+        tab.path + Constants.settingsSuffix,
         tab.pathTemplate + Constants.settingsSuffix,
       ]);
     }

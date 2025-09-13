@@ -39,9 +39,6 @@ class MainPage extends StatefulWidget {
 
 class _MainPageState extends State<MainPage>
     with SingleTickerProviderStateMixin {
-  static void _postFrameCallback(VoidCallback callback) =>
-      WidgetsBinding.instance.addPostFrameCallback((_) => callback());
-
   // ignore: avoid-late-keyword, we need lazy data value first.
   late final _controller = TabsDataController(widget._data.value, vsync: this);
 
@@ -53,6 +50,9 @@ class _MainPageState extends State<MainPage>
     super.initState();
     _postFrameCallback(_showLongPressHint);
   }
+
+  void _postFrameCallback(VoidCallback callback) => WidgetsBinding.instance
+      .addPostFrameCallback((_) => mounted ? callback() : null);
 
   FutureOr<void> _handleFab({bool isLong = false}) => isLong
       ? _picker.showInDialog(context)
@@ -69,7 +69,7 @@ class _MainPageState extends State<MainPage>
     messenger.showSnackBar(
       const SnackBar(
         showCloseIcon: true,
-        duration: Duration(days: DateTime.daysPerWeek),
+        duration: Duration(minutes: 1),
         content: Text("Long-press the icon buttons to view alternative inputs"),
       ),
     );

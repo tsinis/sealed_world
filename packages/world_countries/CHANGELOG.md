@@ -2,17 +2,19 @@
 
 NEW FEATURES
 
-- Added Guernsey flag painter (`GgyPainter`) and export, so GGY is no longer a "simplified" flag.
 - List tiles support Material state controllers.
 - Text fields gain select-all-on-focus and locale-specific hint options.
+- Added Guernsey flag painter (`GgyPainter`) and export, so GGY is no longer a "simplified" flag.
 
 REFACTOR
 
+- Deprecated static method `TypedLocaleDelegate.maybeOf(context)` in favor of `TypedLocaleDelegate.of(context)`.
 - Made `Shape` implementations `final`; added deprecations for legacy helpers (to be replaced with modern `switch` expressions).
 - Selectively disable anti-aliasing for axis-aligned rectangles (e.g., BLR vertical line, SAU sabre) to avoid blur; keep AA for diagonals.
 
 FIX
 
+- Corrected the dense `CountryTile` title alignment so it centers with the flag.
 - Oman flag default aspect ratio corrected (from 2 to 7/4).
 - Fixed white rectangle position in Belarusian flag (on smaller sizes).
 - `CountryName`'s short flag (`true`) in `toString()` override returns `common` name, same way, as in parent's (`TranslatedName` class) override.
@@ -20,6 +22,10 @@ FIX
 CHORE
 
 - The Dart SDK was bumped to v3.9.2.
+
+DOCUMENTATION
+
+- Improved example app and demo website (with Settings menu).
 
 ## 3.8.0
 

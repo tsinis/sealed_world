@@ -20,16 +20,16 @@ final class RouteParseUtils {
 
   ParsedData parseRoute(ParsedRoute route) {
     final isSettings = route.isSettingsRoute;
-    final effectivePathTemplate = isSettings
+    final pathTemplate = isSettings
         ? route.pathTemplate.replaceFirst(Constants.settingsSuffix, "")
         : route.pathTemplate;
 
     final code = route.parameters[Constants.code]?.toUpperCase() ?? "";
     if (code.isEmpty) {
-      return _returnWithoutCode(effectivePathTemplate, isSettings: isSettings);
+      return _returnWithoutCode(pathTemplate, isSettings: isSettings);
     }
 
-    if (effectivePathTemplate == WorldData.country.pathTemplate) {
+    if (pathTemplate == WorldData.country.pathTemplate) {
       final country = _maybeData(
         code,
         onCode: WorldCountry.maybeFromAnyCode,
@@ -44,7 +44,7 @@ final class RouteParseUtils {
         data: WorldData.country,
         isSettings: isSettings,
       );
-    } else if (effectivePathTemplate == WorldData.currency.pathTemplate) {
+    } else if (pathTemplate == WorldData.currency.pathTemplate) {
       final currency = _maybeData(
         code,
         onCode: FiatCurrency.maybeFromAnyCode,
@@ -55,7 +55,7 @@ final class RouteParseUtils {
       );
 
       return _returnFromCurrencyData(currency, isSettings: isSettings);
-    } else if (effectivePathTemplate == WorldData.language.pathTemplate) {
+    } else if (pathTemplate == WorldData.language.pathTemplate) {
       final language = _maybeData(
         code,
         onCode: NaturalLanguage.maybeFromAnyCode,
