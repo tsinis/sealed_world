@@ -16,6 +16,15 @@ void main() => group("$TypedLocaleDelegate", () {
   const delegate = TypedLocaleDelegate();
 
   test(
+    "selectiveCache constructor",
+    () => expect(
+      // ignore: prefer_const_constructors, a non-const constructor test.
+      TypedLocaleDelegate.selectiveCache(),
+      isA<TypedLocaleDelegate>(),
+    ),
+  );
+
+  test(
     "shouldReload",
     () => expect(delegate.shouldReload(const TypedLocaleDelegate()), isFalse),
   );

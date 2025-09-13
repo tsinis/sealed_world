@@ -7,6 +7,20 @@ void main() => group("$MaybeWidget", () {
   const testValue = "Test";
   const fallbackText = "Fallback";
 
+  test(
+    "main constructor",
+    () =>
+        expect(MaybeWidget(null, (_) => const SizedBox()), isA<MaybeWidget>()),
+  );
+
+  test(
+    "offstage constructor",
+    () => expect(
+      MaybeWidget.offstage(null, (_) => const SizedBox()),
+      isA<MaybeWidget>(),
+    ),
+  );
+
   test("debugFillProperties", () {
     final builder = DiagnosticPropertiesBuilder();
     expect(builder.properties.any((prop) => prop.name == "value"), isFalse);
