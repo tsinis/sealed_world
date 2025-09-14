@@ -4,6 +4,7 @@ import "package:world_countries/world_countries.dart";
 import "../../theme/flag_theme_controller.dart";
 import "../main/abstractions/world_data_tab.dart";
 import "widgets/settings_app_bar.dart";
+import "widgets/settings_section_header.dart";
 import "widgets/sliders/aspect_ratio_slider.dart";
 import "widgets/sliders/border_radius_slider.dart";
 import "widgets/sliders/border_width_slider.dart";
@@ -40,6 +41,8 @@ class SettingsPage extends StatelessWidget {
       child: Scaffold(
         appBar: SettingsAppBar(onReset: _controller.reset),
         body: SafeArea(
+          right: false,
+          left: false,
           child: AnimatedBuilder(
             animation: _controller,
             builder: (bc, _) {
@@ -90,12 +93,18 @@ class SettingsPage extends StatelessWidget {
                     ),
                   ),
                   AspectRatioSlider(_controller, flagProps?.aspectRatio),
+                  const SettingsSectionHeader("Border"),
                   BorderRadiusSlider(_controller),
+                  const Divider(),
                   BorderWidthSlider(_controller),
-                  ShadowOffsetVerticalSlider(_controller),
-                  ShadowOffsetHorizontalSlider(_controller),
+                  const SettingsSectionHeader("Shadow"),
                   ShadowSpreadSlider(_controller),
+                  const Divider(),
                   ShadowBlurSlider(_controller),
+                  const Divider(),
+                  ShadowOffsetVerticalSlider(_controller),
+                  const Divider(),
+                  ShadowOffsetHorizontalSlider(_controller),
                 ],
               );
             },

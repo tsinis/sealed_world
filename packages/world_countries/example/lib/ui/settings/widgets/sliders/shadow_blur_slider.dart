@@ -6,7 +6,7 @@ import "../../settings_tile_slider.dart";
 final class ShadowBlurSlider extends SettingsTileSlider {
   const ShadowBlurSlider(super.flagTheme, {super.key})
     : super(
-        name: "Shadow Blur",
+        name: "Blur",
         max: 3,
         divisions: 30,
         icon: Icons.blur_circular_rounded,

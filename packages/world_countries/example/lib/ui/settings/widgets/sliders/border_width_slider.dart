@@ -7,12 +7,7 @@ import "../../settings_tile_slider.dart";
 /// settings). Controller stores logical width directly.
 final class BorderWidthSlider extends SettingsTileSlider {
   const BorderWidthSlider(super.flagTheme, {super.key})
-    : super(
-        name: "Border Width",
-        icon: Icons.border_style,
-        divisions: 18,
-        max: 3,
-      );
+    : super(name: "Width", icon: Icons.border_style, divisions: 18, max: 3);
 
   @override
   double get value => flagTheme.borderWidth;

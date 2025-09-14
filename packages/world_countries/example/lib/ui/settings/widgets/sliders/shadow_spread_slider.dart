@@ -5,12 +5,7 @@ import "../../settings_tile_slider.dart";
 
 final class ShadowSpreadSlider extends SettingsTileSlider {
   const ShadowSpreadSlider(super.flagTheme, {super.key})
-    : super(
-        name: "Shadow Spread",
-        max: 3,
-        divisions: 30,
-        icon: Icons.blur_on_rounded,
-      );
+    : super(name: "Spread", max: 3, divisions: 30, icon: Icons.blur_on_rounded);
 
   @override
   double get value => flagTheme.shadowSpread;

@@ -6,6 +6,7 @@ import "../../settings_tile_slider.dart";
 final class AspectRatioSlider extends SettingsTileSlider {
   const AspectRatioSlider(super.flagTheme, double? originalRatio, {super.key})
     : super(
+        divisions: 180,
         fractionDigits: 2,
         name: "Aspect Ratio",
         secondaryTrackValue: originalRatio,
