@@ -31,8 +31,8 @@ class SettingsPage extends StatelessWidget {
       child: Scaffold(
         appBar: SettingsAppBar(onReset: _controller.reset),
         body: SafeArea(
-          child: ListenableBuilder(
-            listenable: _controller,
+          child: AnimatedBuilder(
+            animation: _controller,
             builder: (bc, _) {
               final theme = _controller.theme;
               final decoration = theme.decoration;
@@ -51,8 +51,8 @@ class SettingsPage extends StatelessWidget {
               );
 
               return ListView(
-                padding:
-                    const EdgeInsets.all(8) + const EdgeInsets.only(top: 16),
+                padding: const EdgeInsets.only(top: 32),
+                clipBehavior: Clip.none,
                 children: [
                   Center(
                     child:

@@ -6,13 +6,13 @@ abstract base class SettingsTileSlider extends StatelessWidget {
   const SettingsTileSlider(
     this.flagTheme, {
     required this.name,
-    this.icon,
-    this.minVerticalPadding,
-    this.secondaryTrackValue,
     this.divisions = 19,
     this.fractionDigits = 2,
     this.max = 1,
     this.min = 0,
+    this.minVerticalPadding = 0,
+    this.secondaryTrackValue,
+    this.icon,
     super.key,
   });
 
@@ -24,7 +24,7 @@ abstract base class SettingsTileSlider extends StatelessWidget {
   final IconData? icon;
   final double max;
   final double min;
-  final double? minVerticalPadding;
+  final double minVerticalPadding;
   final double? secondaryTrackValue;
 
   @protected
@@ -34,29 +34,26 @@ abstract base class SettingsTileSlider extends StatelessWidget {
   void handleChange([double? newValue]);
 
   @override
-  Widget build(BuildContext context) {
-    final label = value.toStringAsFixed(fractionDigits);
-
-    return ListTile(
-      subtitle: Text("$name: $label"),
-      contentPadding: const EdgeInsets.only(left: 8),
-      titleAlignment: ListTileTitleAlignment.top,
-      minVerticalPadding: minVerticalPadding,
-      trailing: IconButton(
-        onPressed: handleChange,
-        tooltip: "Original $name",
-        icon: Icon(icon),
-      ),
-      title: Slider(
-        max: max,
-        min: min,
-        label: label,
-        divisions: divisions,
-        onChanged: handleChange,
-        padding: EdgeInsets.zero,
-        secondaryTrackValue: secondaryTrackValue,
-        value: value,
-      ),
-    );
-  }
+  Widget build(BuildContext context) => ListTile(
+    titleAlignment: ListTileTitleAlignment.center,
+    minVerticalPadding: minVerticalPadding,
+    visualDensity: VisualDensity.compact,
+    title: Text(name),
+    leading: IconButton(
+      tooltip: "Original $name",
+      padding: EdgeInsets.zero,
+      onPressed: handleChange,
+      icon: Icon(icon),
+    ),
+    subtitle: Slider(
+      divisions: divisions,
+      max: max,
+      min: min,
+      onChanged: handleChange,
+      padding: const EdgeInsets.only(right: 16),
+      label: value.toStringAsFixed(fractionDigits),
+      secondaryTrackValue: secondaryTrackValue,
+      value: value,
+    ),
+  );
 }

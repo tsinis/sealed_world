@@ -10,6 +10,8 @@ class SettingsAppBar extends StatelessWidget implements PreferredSizeWidget {
 
   @override
   Widget build(BuildContext context) => AppBar(
+    animateColor: true,
+    forceMaterialTransparency: true,
     title: const Text("Flag Settings"),
     leading: const BackButton(),
     actions: [
