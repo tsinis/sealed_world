@@ -7,7 +7,6 @@ final class BorderRadiusSlider extends SettingsTileSlider {
     : super(
         name: "Border Radius",
         divisions: 18,
-        fractionDigits: 1,
         icon: Icons.rounded_corner_rounded,
         max: 9,
       );
@@ -16,6 +15,5 @@ final class BorderRadiusSlider extends SettingsTileSlider {
   double get value => flagTheme.borderRadius;
 
   @override
-  void handleChange([double? newValue]) =>
-      flagTheme.borderRadius = newValue ?? 0;
+  void handleChange([double? newValue]) => flagTheme.borderRadius = newValue;
 }

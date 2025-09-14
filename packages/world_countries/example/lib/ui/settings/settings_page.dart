@@ -7,11 +7,19 @@ import "widgets/settings_app_bar.dart";
 import "widgets/sliders/aspect_ratio_slider.dart";
 import "widgets/sliders/border_radius_slider.dart";
 import "widgets/sliders/border_width_slider.dart";
+import "widgets/sliders/shadow_blur_slider.dart";
+import "widgets/sliders/shadow_offset_horizontal_slider.dart";
+import "widgets/sliders/shadow_offset_vertical_slider.dart";
+import "widgets/sliders/shadow_spread_slider.dart";
 
 class SettingsPage extends StatelessWidget {
   const SettingsPage(this._controller, this._country, {super.key});
 
-  static const _fallback = CountryFlag.simplified(CountryGbr(), height: 180);
+  static const _fallback = CountryFlag.simplified(
+    CountryGbr(),
+    height: 180,
+    decorationPosition: DecorationPosition.background,
+  );
 
   final FlagThemeController _controller;
   final WorldCountry? _country;
@@ -38,17 +46,32 @@ class SettingsPage extends StatelessWidget {
               final theme = _controller.theme;
               final decoration = theme.decoration;
               final border = decoration?.border;
+              // Apply UI-only scaling (x10) for border & shadow visualization.
+              final shadow = decoration?.boxShadow?.firstOrNull;
+              final scaledShadows = shadow == null
+                  ? null
+                  : [
+                      shadow.copyWith(
+                        blurRadius: shadow.blurRadius * 10,
+                        spreadRadius: shadow.spreadRadius * 10,
+                        offset: Offset(
+                          shadow.offset.dx * 10,
+                          shadow.offset.dy * 10,
+                        ),
+                      ),
+                    ];
               final scaledDecoration = decoration?.copyWith(
                 borderRadius: BorderRadius.all(
                   Radius.circular(_controller.borderRadius * 10),
                 ),
                 border: Border.all(
                   strokeAlign: FlagThemeController.defaultBorder.strokeAlign,
-                  width: (border?.top.width ?? 0) * 10,
+                  width: _controller.borderWidth * 10,
                   color:
                       border?.top.color ??
                       FlagThemeController.defaultBorder.color,
                 ),
+                boxShadow: scaledShadows,
               );
 
               return ListView(
@@ -69,6 +92,10 @@ class SettingsPage extends StatelessWidget {
                   AspectRatioSlider(_controller, flagProps?.aspectRatio),
                   BorderRadiusSlider(_controller),
                   BorderWidthSlider(_controller),
+                  ShadowOffsetVerticalSlider(_controller),
+                  ShadowOffsetHorizontalSlider(_controller),
+                  ShadowSpreadSlider(_controller),
+                  ShadowBlurSlider(_controller),
                 ],
               );
             },
