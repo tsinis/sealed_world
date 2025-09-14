@@ -26,6 +26,7 @@ class FlagThemeController extends ChangeNotifier {
       _theme.specifiedAspectRatio ?? FlagConstants.defaultAspectRatio;
   double get borderRadius =>
       _theme.decoration?.borderRadius?.resolve(null).topRight.x ?? 0;
+  double get borderWidth => _theme.decoration?.border?.top.width ?? 1;
 
   void reset() => _setTheme();
 
@@ -38,6 +39,12 @@ class FlagThemeController extends ChangeNotifier {
       borderRadius: value == null
           ? _defaultBorderRadius
           : BorderRadius.all(Radius.circular(value)),
+    ),
+  );
+
+  set borderWidth(double? value) => _setDecoration(
+    _theme.decoration?.copyWith(
+      border: Border.fromBorderSide(defaultBorder.copyWith(width: value ?? 1)),
     ),
   );
 

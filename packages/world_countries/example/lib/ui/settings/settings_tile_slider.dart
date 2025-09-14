@@ -7,10 +7,9 @@ abstract base class SettingsTileSlider extends StatelessWidget {
     this.flagTheme, {
     required this.name,
     this.divisions = 19,
-    this.fractionDigits = 2,
+    this.fractionDigits = 1,
     this.max = 1,
     this.min = 0,
-    this.minVerticalPadding = 0,
     this.secondaryTrackValue,
     this.icon,
     super.key,
@@ -24,7 +23,6 @@ abstract base class SettingsTileSlider extends StatelessWidget {
   final IconData? icon;
   final double max;
   final double min;
-  final double minVerticalPadding;
   final double? secondaryTrackValue;
 
   @protected
@@ -36,7 +34,6 @@ abstract base class SettingsTileSlider extends StatelessWidget {
   @override
   Widget build(BuildContext context) => ListTile(
     titleAlignment: ListTileTitleAlignment.center,
-    minVerticalPadding: minVerticalPadding,
     visualDensity: VisualDensity.compact,
     title: Text(name),
     leading: IconButton(
