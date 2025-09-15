@@ -1,6 +1,6 @@
 import "package:flutter/material.dart";
 
-import "../../settings_tile_slider.dart";
+import "settings_tile_slider.dart";
 
 /// Slider controlling the border stroke width.
 /// UI shows width * 10 (same scaling approach as border radius usage in

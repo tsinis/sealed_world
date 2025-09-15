@@ -1,7 +1,7 @@
 import "package:flutter/material.dart";
 
 import "../../../../helpers/extensions/shadows_flag_theme_controller_extension.dart";
-import "../../settings_tile_slider.dart";
+import "settings_tile_slider.dart";
 
 final class ShadowOffsetVerticalSlider extends SettingsTileSlider {
   const ShadowOffsetVerticalSlider(super.flagTheme, {super.key})

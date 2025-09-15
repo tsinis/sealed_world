@@ -1,16 +1,11 @@
 import "package:flutter/material.dart";
 
 import "../../../../helpers/extensions/shadows_flag_theme_controller_extension.dart";
-import "../../settings_tile_slider.dart";
+import "settings_tile_slider.dart";
 
 final class ShadowBlurSlider extends SettingsTileSlider {
   const ShadowBlurSlider(super.flagTheme, {super.key})
-    : super(
-        name: "Blur",
-        max: 3,
-        divisions: 30,
-        icon: Icons.blur_circular_rounded,
-      );
+    : super(name: "Blur", max: 3, divisions: 30, icon: Icons.blur_circular);
 
   @override
   double get value => flagTheme.shadowBlur;

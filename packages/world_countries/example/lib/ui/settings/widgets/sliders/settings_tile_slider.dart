@@ -1,7 +1,7 @@
 import "package:flutter/material.dart";
 import "package:world_countries/helpers.dart";
 
-import "../../../../theme/flag_theme_controller.dart";
+import "../../../../../../theme/flag_theme_controller.dart";
 
 abstract base class SettingsTileSlider extends StatelessWidget {
   const SettingsTileSlider(
@@ -35,8 +35,11 @@ abstract base class SettingsTileSlider extends StatelessWidget {
   @override
   Widget build(BuildContext context) => ListTile(
     contentPadding: const EdgeInsets.only(left: 12, right: 12, bottom: 6),
-    title: Text(name, style: context.theme.textTheme.titleLarge),
     titleAlignment: ListTileTitleAlignment.center,
+    title: Text(
+      name,
+      style: context.theme.textTheme.titleLarge?.copyWith(fontSize: 20),
+    ),
     leading: IconButton(
       tooltip: "Original $name",
       padding: EdgeInsets.zero,

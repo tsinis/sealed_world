@@ -1,7 +1,7 @@
 import "package:flutter/material.dart";
 import "package:world_countries/world_countries.dart";
 
-import "../../settings_tile_slider.dart";
+import "settings_tile_slider.dart";
 
 final class AspectRatioSlider extends SettingsTileSlider {
   const AspectRatioSlider(super.flagTheme, double? originalRatio, {super.key})

@@ -1,6 +1,6 @@
 import "package:flutter/material.dart";
 
-import "../../settings_tile_slider.dart";
+import "settings_tile_slider.dart";
 
 final class BorderRadiusSlider extends SettingsTileSlider {
   const BorderRadiusSlider(super.flagTheme, {super.key})
