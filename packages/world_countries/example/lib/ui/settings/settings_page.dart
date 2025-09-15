@@ -41,8 +41,8 @@ class SettingsPage extends StatelessWidget {
       ),
       child: Scaffold(
         body: SafeArea(
-          right: false,
           left: false,
+          right: false,
           child: CustomScrollView(
             physics: const ClampingScrollPhysics(),
             slivers: [
