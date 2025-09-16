@@ -25,7 +25,7 @@ class ScaledCountryFlag extends StatelessWidget {
       final decoration = _controller.theme.decoration;
       final shadow = decoration?.boxShadow?.firstOrNull;
       final borderWidth = _controller.borderWidth;
-      final color = decoration?.color;
+      final color = _controller.borderColor;
 
       return SliverSettingsAppBar(
         (isSimplified ? fallback : _flag).copyWith(

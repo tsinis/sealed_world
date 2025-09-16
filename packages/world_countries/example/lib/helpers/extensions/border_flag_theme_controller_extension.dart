@@ -7,6 +7,7 @@ import "../../theme/flag_theme_controller.dart";
 
 extension BorderFlagThemeControllerExtension on FlagThemeController {
   BorderSide? get border => theme.decoration?.border?.top;
+  Color? get borderColor => border?.color;
   double? get borderWidth => border?.width;
   double get borderRadius =>
       theme.decoration?.borderRadius?.resolve(null).topRight.x ?? 0;
@@ -19,6 +20,17 @@ extension BorderFlagThemeControllerExtension on FlagThemeController {
     ),
   );
 
+  set borderColor(Color? value) {
+    final decoration = theme.decoration;
+    final width = border?.width ?? borderWidth ?? 1;
+    final side = (border ?? FlagThemeController.defaultBorder).copyWith(
+      color: value ?? FlagThemeController.defaultBorder.color,
+      width: width <= 0 ? 1.0 : width,
+    );
+
+    setDecoration(decoration?.copyWith(border: Border.fromBorderSide(side)));
+  }
+
   set borderWidth(double? value) {
     final decoration = theme.decoration;
     final width = value ?? 1;
@@ -27,7 +39,10 @@ extension BorderFlagThemeControllerExtension on FlagThemeController {
       setDecoration(
         decoration?.copyWith(
           border: Border.fromBorderSide(
-            FlagThemeController.defaultBorder.copyWith(width: width),
+            FlagThemeController.defaultBorder.copyWith(
+              color: borderColor,
+              width: width,
+            ),
           ),
         ),
       );

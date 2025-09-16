@@ -4,6 +4,7 @@ import "package:world_countries/world_countries.dart";
 import "../../theme/flag_theme_controller.dart";
 import "../main/abstractions/world_data_tab.dart";
 import "widgets/appbar/scaled_country_flag.dart";
+import "widgets/border_color_chips.dart";
 import "widgets/settings_section_header.dart";
 import "widgets/sliders/aspect_ratio_slider.dart";
 import "widgets/sliders/border_radius_slider.dart";
@@ -57,6 +58,7 @@ class SettingsPage extends StatelessWidget {
                     BorderRadiusSlider(_controller),
                     const Divider(),
                     BorderWidthSlider(_controller),
+                    BorderColorChips(_controller),
                     const SettingsSectionHeader("Shadow"),
                     ShadowSpreadSlider(_controller),
                     const Divider(),
