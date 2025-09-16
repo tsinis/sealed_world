@@ -30,6 +30,12 @@ final class BorderColorChips extends StatelessWidget {
     "Brown": Colors.brown,
   };
 
+  static Color? _foregroundColor(int index) => switch (index) {
+    0 => Colors.black,
+    2 => Colors.white,
+    _ => null,
+  };
+
   final FlagThemeController _controller;
 
   @override
@@ -45,18 +51,17 @@ final class BorderColorChips extends StatelessWidget {
         padding: const EdgeInsets.symmetric(horizontal: 16),
         separatorBuilder: (_, _) => const SizedBox(width: 8),
         itemBuilder: (bc, index) {
-          final foregroundColor = index == 0 ? Colors.black : null;
           final color = _palette.entries.elementAt(index);
-          final selectedColor = color.value;
-          final isSelected = _controller.borderColor == selectedColor;
+          final foregroundColor = _foregroundColor(index);
+          final isSelected = _controller.borderColor == color.value;
 
           return ChoiceChip(
-            backgroundColor: selectedColor.withValues(alpha: 1 / 2),
+            backgroundColor: color.value.withValues(alpha: 1 / 2),
             checkmarkColor: foregroundColor,
             labelStyle: TextStyle(color: foregroundColor),
             label: Text(color.key, textAlign: TextAlign.center),
-            onSelected: (_) => _controller.borderColor = selectedColor,
-            selectedColor: selectedColor,
+            onSelected: (_) => _controller.borderColor = color.value,
+            selectedColor: color.value,
             selected: isSelected,
             side: isSelected
                 ? BorderSide(color: bc.theme.colorScheme.secondary, width: 2)
