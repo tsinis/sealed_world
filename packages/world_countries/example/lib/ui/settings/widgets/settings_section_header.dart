@@ -19,12 +19,6 @@ final class SettingsSectionHeader extends StatelessWidget {
   @override
   Widget build(BuildContext context) => Padding(
     padding: padding,
-    child: Text(
-      title,
-      style: context.theme.textTheme.titleMedium?.copyWith(
-        color: context.theme.colorScheme.onSecondaryContainer,
-        fontWeight: FontWeight.w400,
-      ),
-    ),
+    child: Text(title, style: context.theme.textTheme.titleSmall),
   );
 }

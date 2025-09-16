@@ -11,6 +11,7 @@ import "widgets/sliders/border_width_slider.dart";
 import "widgets/sliders/shadow_blur_slider.dart";
 import "widgets/sliders/shadow_offset_horizontal_slider.dart";
 import "widgets/sliders/shadow_offset_vertical_slider.dart";
+import "widgets/sliders/shadow_opacity_slider.dart";
 import "widgets/sliders/shadow_spread_slider.dart";
 
 class SettingsPage extends StatelessWidget {
@@ -60,6 +61,8 @@ class SettingsPage extends StatelessWidget {
                     ShadowSpreadSlider(_controller),
                     const Divider(),
                     ShadowBlurSlider(_controller),
+                    const Divider(),
+                    ShadowOpacitySlider(_controller),
                     const Divider(),
                     ShadowOffsetVerticalSlider(_controller),
                     const Divider(),

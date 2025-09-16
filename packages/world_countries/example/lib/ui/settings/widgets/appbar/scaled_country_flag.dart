@@ -23,17 +23,20 @@ class ScaledCountryFlag extends StatelessWidget {
       final isSimplified = _flag.basicFlag?.properties.isSimplified ?? true;
       final decoration = _controller.theme.decoration;
       final shadow = decoration?.boxShadow?.firstOrNull;
+      final borderWidth = _controller.borderWidth;
       final scaledDecoration = decoration?.copyWith(
         borderRadius: BorderRadius.all(
           Radius.circular(_controller.borderRadius * scale),
         ),
-        border: Border.all(
-          strokeAlign: FlagThemeController.defaultBorder.strokeAlign,
-          width: _controller.borderWidth * scale,
-          color:
-              decoration.border?.top.color ?? // TODO!
-              FlagThemeController.defaultBorder.color,
-        ),
+        border: borderWidth == null
+            ? null
+            : Border.all(
+                strokeAlign: FlagThemeController.defaultBorder.strokeAlign,
+                width: borderWidth * scale,
+                color:
+                    decoration.border?.top.color ?? // TODO!
+                    FlagThemeController.defaultBorder.color,
+              ),
         boxShadow: [
           ?shadow?.copyWith(
             blurRadius: shadow.blurRadius * scale,

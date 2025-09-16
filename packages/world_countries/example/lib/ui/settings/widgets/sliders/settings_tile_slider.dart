@@ -27,7 +27,7 @@ abstract base class SettingsTileSlider extends StatelessWidget {
   final double? secondaryTrackValue;
 
   @protected
-  double get value;
+  double? get value;
 
   @protected
   void handleChange([double? newValue]);
@@ -35,11 +35,8 @@ abstract base class SettingsTileSlider extends StatelessWidget {
   @override
   Widget build(BuildContext context) => ListTile(
     contentPadding: const EdgeInsets.only(left: 12, right: 12, bottom: 6),
+    title: Text(name, style: context.theme.textTheme.titleMedium),
     titleAlignment: ListTileTitleAlignment.center,
-    title: Text(
-      name,
-      style: context.theme.textTheme.titleLarge?.copyWith(fontSize: 20),
-    ),
     leading: IconButton(
       tooltip: "Original $name",
       padding: EdgeInsets.zero,
@@ -52,9 +49,9 @@ abstract base class SettingsTileSlider extends StatelessWidget {
       min: min,
       onChanged: handleChange,
       padding: const EdgeInsets.only(right: 16),
-      label: value.toStringAsFixed(fractionDigits),
+      label: value?.toStringAsFixed(fractionDigits),
       secondaryTrackValue: secondaryTrackValue,
-      value: value,
+      value: value ?? min,
     ),
   );
 }

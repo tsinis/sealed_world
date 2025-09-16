@@ -10,7 +10,7 @@ final class BorderWidthSlider extends SettingsTileSlider {
     : super(name: "Width", icon: Icons.border_style, divisions: 18, max: 3);
 
   @override
-  double get value => flagTheme.borderWidth;
+  double? get value => flagTheme.borderWidth;
 
   @override
   void handleChange([double? newValue]) => flagTheme.borderWidth = newValue;

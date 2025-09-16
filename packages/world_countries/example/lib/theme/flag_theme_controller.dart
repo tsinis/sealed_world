@@ -28,7 +28,7 @@ class FlagThemeController extends ChangeNotifier {
       _theme.specifiedAspectRatio ?? FlagConstants.defaultAspectRatio;
   double get borderRadius =>
       _theme.decoration?.borderRadius?.resolve(null).topRight.x ?? 0;
-  double get borderWidth => _theme.decoration?.border?.top.width ?? 1;
+  double? get borderWidth => _theme.decoration?.border?.top.width;
   FlagThemeData get theme => _theme;
 
   void reset() => _setTheme();
@@ -45,11 +45,24 @@ class FlagThemeController extends ChangeNotifier {
     ),
   );
 
-  set borderWidth(double? value) => setDecoration(
-    _theme.decoration?.copyWith(
-      border: Border.fromBorderSide(defaultBorder.copyWith(width: value ?? 1)),
-    ),
-  );
+  set borderWidth(double? value) {
+    final width = value ?? 1;
+    final decoration = _theme.decoration;
+    if (width > 0) {
+      setDecoration(
+        decoration?.copyWith(
+          border: Border.fromBorderSide(defaultBorder.copyWith(width: width)),
+        ),
+      );
+    } else {
+      setDecoration(
+        BoxDecoration(
+          borderRadius: decoration?.borderRadius,
+          boxShadow: decoration?.boxShadow,
+        ),
+      );
+    }
+  }
 
   void setDecoration(BoxDecoration? decoration) =>
       _setTheme(_theme.copyWith(decoration: decoration));
