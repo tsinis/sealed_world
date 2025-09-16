@@ -54,20 +54,17 @@ class SettingsPage extends StatelessWidget {
                   crossAxisAlignment: CrossAxisAlignment.stretch,
                   children: [
                     AspectRatioSlider(_controller, flagProps?.aspectRatio),
+
                     const SettingsSectionHeader("Border"),
                     BorderRadiusSlider(_controller),
-                    const Divider(),
                     BorderWidthSlider(_controller),
                     BorderColorChips(_controller),
+
                     const SettingsSectionHeader("Shadow"),
                     ShadowSpreadSlider(_controller),
-                    const Divider(),
                     ShadowBlurSlider(_controller),
-                    const Divider(),
                     ShadowOpacitySlider(_controller),
-                    const Divider(),
                     ShadowOffsetVerticalSlider(_controller),
-                    const Divider(),
                     ShadowOffsetHorizontalSlider(_controller),
                   ],
                 ),
