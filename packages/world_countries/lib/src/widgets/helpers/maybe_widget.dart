@@ -128,6 +128,62 @@ class MaybeWidget<T extends Object> extends StatelessWidget {
     return maybeChild == null ? const [] : [maybeChild];
   }
 
+  /// Conditional widget builder that returns `null` when [value] is `null`.
+  ///
+  /// This lightweight utility mirrors the ergonomics of the main [MaybeWidget]
+  /// widget for the specific scenario where you only need a nullable widget
+  /// result (e.g. for nullable `child:` inputs, or inside a [Column]/[Row]/
+  /// [Stack] children list, or in a collection literal with spread / if
+  /// expressions) instead of inserting an always-present placeholder like
+  /// [SizedBox.shrink].
+  ///
+  /// When the provided [value] is:
+  /// * `null`  - the method returns `null` (allowing you to naturally skip the
+  ///   widget in list literals without extra `if` checks).
+  /// * non-`null` - the optional [builder] is invoked and its result returned.
+  ///   If [builder] itself is omitted or returns `null`, the overall result is
+  ///   also `null`.
+  ///
+  /// Generics:
+  /// * [T] represents the (non-null) value type expected by [builder].
+  /// * [W] represents the widget subtype you expect the [builder] to return. By
+  ///   default the compiler will usually infer `W` for you (e.g. [Widget],
+  ///   [Text], [Icon], etc.).
+  ///
+  /// Use cases include concise, allocation-free conditional widget inclusion:
+  ///
+  /// ```dart
+  /// Column(
+  ///   children: [
+  ///     const Text('Header'),
+  ///     ?MaybeWidget.orNull(subtitle, Text.new), // Add a subtitle if exists.
+  ///   ],
+  /// );
+  /// ```
+  ///
+  /// Simple example with inference:
+  /// ```dart
+  /// final trailing = MaybeWidget.orNull<DateTime, Text>(
+  ///   lastEdited,
+  ///   (dt) => Text(timeAgo(dt)),
+  /// );
+  /// ```
+  ///
+  /// If you do not need a specialized widget subtype you can omit the generic
+  /// arguments entirely and let inference work:
+  /// ```dart
+  /// final maybeChip = MaybeWidget.orNull(tag, (t) => Chip(label: Text(t)));
+  /// ```
+  ///
+  /// Returns `null` when [value] is `null` or when [builder] is `null`.
+  ///
+  /// See also: [MaybeWidget]: the widget counterpart when you need a concrete
+  /// fallback placeholder in the tree.
+  static W? orNull<W extends Widget, T extends Object>(
+    T? value,
+    W? Function(T)? builder,
+  ) => value == null ? null : builder?.call(value);
+
   /// The builder function to call with a non-null [value].
   final Widget Function(T) _builder;
 
@@ -162,9 +218,6 @@ class MaybeWidget<T extends Object> extends StatelessWidget {
   }
 
   @override
-  Widget build(BuildContext context) {
-    final valueToMap = value;
-
-    return valueToMap == null ? orElse : _builder(valueToMap);
-  }
+  Widget build(BuildContext context) =>
+      MaybeWidget.orNull(value, _builder) ?? orElse;
 }
