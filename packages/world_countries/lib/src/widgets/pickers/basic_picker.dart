@@ -22,6 +22,7 @@ import "../../theme/pickers_theme_data.dart";
 import "../adaptive/adaptive_search_text_field.dart";
 import "../generic_widgets/implicit_search_delegate.dart";
 import "../generic_widgets/searchable_indexed_list_view_builder.dart";
+import "../helpers/maybe_widget.dart";
 
 part "basic_picker_state.dart";
 
@@ -162,11 +163,10 @@ abstract class BasicPicker<T extends IsoTranslated>
 
   /// Returns the name translation of the item (if exists) in form
   /// of [Text] widget.
-  Text? itemNameTranslated(T item, BuildContext context) {
-    final title = _maybeNameTranslation(item, context);
-
-    return title == null ? null : Text(title, overflow: TextOverflow.ellipsis);
-  }
+  Text? itemNameTranslated(T item, BuildContext context) => MaybeWidget.orNull(
+    _maybeNameTranslation(item, context),
+    (title) => Text(title, overflow: TextOverflow.ellipsis),
+  );
 
   /// Called to get the suggestion list for the search view (typically in
   /// [SearchAnchor] widgets).
