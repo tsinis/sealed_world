@@ -3,7 +3,7 @@ library helpers;
 
 export "src/constants/ui_constants.dart";
 export "src/extensions/build_context_extension.dart";
-export "src/extensions/duration_extension.dart";
+export "src/extensions/core/duration_extension.dart";
 export "src/extensions/world_countries_build_context_extension.dart";
 export "src/helpers/functional_platform.dart";
 export "src/helpers/name_text_input.dart";

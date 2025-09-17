@@ -3,7 +3,7 @@ import "dart:ui";
 import "package:meta/meta.dart" show useResult;
 import "package:world_flags/world_flags.dart";
 
-import "../models/locale/typed_locale.dart";
+import "../../models/locale/typed_locale.dart";
 
 /// Extension on [Locale] that provides utility methods for retrieving language
 /// and country information from a [Locale] object.

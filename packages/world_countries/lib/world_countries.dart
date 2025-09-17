@@ -4,9 +4,9 @@ library world_countries;
 
 export "package:world_flags/world_flags.dart";
 
+export "src/extensions/core/locale_extension.dart";
 export "src/extensions/iso_semantics_extension.dart";
 export "src/extensions/list_item_tile_extension.dart";
-export "src/extensions/locale_extension.dart";
 export "src/extensions/natural_language_extension.dart";
 export "src/extensions/pickers/country_picker_extension.dart";
 export "src/extensions/pickers/currency_picker_extension.dart";

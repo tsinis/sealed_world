@@ -5,7 +5,7 @@ import "package:world_flags/world_flags.dart";
 
 import "../models/locale/typed_locale.dart";
 import "../models/typedefs.dart";
-import "duration_extension.dart";
+import "core/duration_extension.dart";
 
 /// An extension on [TypedLocale] that provides utilities to manage translation
 /// caches and transforms to other locale types.
