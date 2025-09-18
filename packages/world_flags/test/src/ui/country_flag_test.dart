@@ -13,6 +13,14 @@ void main() => group("$CountryFlag", () {
     () => expect(flag.toStringShort(), "$CountryFlag(${value.emoji})"),
   );
 
+  test(
+    "custom constructor",
+    () => expect(
+      CountryFlag.custom(WorldCountry.fromCode(value.code), const {}),
+      isA<CountryFlag>(),
+    ),
+  );
+
   assertTest("zero height", () => CountryFlag.simplified(value, height: 0));
   assertTest("zero width", () => CountryFlag.simplified(value, width: 0));
   assertTest(
