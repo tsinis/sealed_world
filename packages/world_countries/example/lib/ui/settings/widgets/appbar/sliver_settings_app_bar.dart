@@ -45,7 +45,7 @@ class SliverSettingsAppBar extends StatelessWidget {
           titleSpacing: 4,
           pinned: true,
           title: IgnorePointer(
-            ignoring: toolbarOpacity == 0,
+            ignoring: toolbarOpacity.isZero,
             child: AnimatedOpacity(
               curve: Curves.easeOut,
               opacity: toolbarOpacity,

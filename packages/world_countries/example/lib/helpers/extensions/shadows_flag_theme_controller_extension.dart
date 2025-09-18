@@ -2,6 +2,7 @@
 // ignore_for_file: prefer-class-destructuring
 
 import "package:flutter/material.dart";
+import "package:world_countries/helpers.dart";
 
 import "../../theme/flag_theme_controller.dart";
 
@@ -38,10 +39,10 @@ extension ShadowsFlagThemeControllerExtension on FlagThemeController {
     final baseOpacity = opacity ?? basic.color.a;
 
     final defaultLike =
-        newBlur == 0 &&
-        newSpread == 0 &&
-        newDx == 0 &&
-        newDy == 0 &&
+        newBlur.isZero &&
+        newSpread.isZero &&
+        newDx.isZero &&
+        newDy.isZero &&
         baseOpacity == 1;
     if (defaultLike && current == null) return;
 
