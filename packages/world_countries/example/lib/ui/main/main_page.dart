@@ -69,7 +69,7 @@ class _MainPageState extends State<MainPage>
     messenger.showSnackBar(
       const SnackBar(
         showCloseIcon: true,
-        duration: Duration(minutes: 1),
+        duration: Duration(seconds: 30),
         content: Text("Long-press the icon buttons to view alternative inputs"),
       ),
     );

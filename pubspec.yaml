@@ -2,6 +2,7 @@ name: sealed_world
 publish_to: none
 description: Workspace for sealed_world ecosystem
 maintainer: Roman Cinis
+homepage: https://tsin.is/sealed_world/
 repository: https://github.com/tsinis/sealed_world
 issue_tracker: https://github.com/tsinis/sealed_world/issues
 topics:
