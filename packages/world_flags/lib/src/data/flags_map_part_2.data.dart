@@ -362,6 +362,7 @@ const flagArgProperties = FlagProperties(
     ColorsProperties(Color(0xff74acdf)),
   ],
   aspectRatio: 8 / 5,
+  isSimplified: null,
   baseElementType: FlagElementsType.star,
   elementsProperties: [
     ElementsProperties(
@@ -469,7 +470,7 @@ const flagLbnProperties = FlagProperties(
     ColorsProperties(Color(0xffffffff), ratio: 2),
     ColorsProperties(Color(0xffee161f)),
   ],
-  isSimplified: true,
+  isSimplified: null,
   elementsProperties: [
     CustomElementsProperties(
       Color(0xff00a850),
@@ -722,7 +723,7 @@ const flagVnmProperties = FlagProperties(
 /// Flag properties of country Zambia (ZM).
 const flagZmbProperties = FlagProperties(
   [ColorsProperties(Color(0xff009E49))],
-  isSimplified: true,
+  isSimplified: null,
   elementsProperties: [
     CustomElementsProperties(
       Color(0xffFCAD56),
@@ -959,7 +960,7 @@ const flagNicProperties = FlagProperties(
   ],
   aspectRatio: 5 / 3,
   baseElementType: FlagElementsType.ellipse,
-  isSimplified: true,
+  isSimplified: null,
   elementsProperties: [
     ElementsProperties(
       Color(0xffc8a400),
@@ -1239,7 +1240,7 @@ const flagVutProperties = FlagProperties(
     ColorsProperties(Color(0xff009543), ratio: 15),
   ],
   baseElementType: FlagElementsType.multiElement,
-  isSimplified: true,
+  isSimplified: null,
   elementsProperties: [
     ElementsProperties(
       Color(0xff000000),
@@ -1307,7 +1308,7 @@ const flagUryProperties = FlagProperties(
     ColorsProperties(Color(0xffffffff)),
   ],
   baseElementType: FlagElementsType.rectangle,
-  isSimplified: true,
+  isSimplified: null,
   elementsProperties: [
     ElementsProperties(
       Color(0xffffffff),
@@ -1717,7 +1718,7 @@ const flagVatProperties = FlagProperties(
   [ColorsProperties(Color(0xffffe000)), ColorsProperties(Color(0xffffffff))],
   aspectRatio: 1,
   stripeOrientation: StripeOrientation.vertical,
-  isSimplified: true,
+  isSimplified: null,
   elementsProperties: [
     CustomElementsProperties(
       Color(0xffce9d09),
@@ -2121,14 +2122,8 @@ const flagNfkProperties = FlagProperties(
   ],
   aspectRatio: 2,
   stripeOrientation: StripeOrientation.vertical,
-  isSimplified: true,
-  elementsProperties: [
-    CustomElementsProperties(
-      Color(0xff007833),
-      heightFactor: 78 / 92,
-      widthFactor: 0.3,
-    ),
-  ],
+  isSimplified: null,
+  elementsProperties: [CustomElementsProperties(Color(0xff007833))],
   url: "https://www.vexilla-mundi.com/norfolk_island/norfolk_island_sheet.png",
 );
 
@@ -2187,7 +2182,7 @@ const flagMngProperties = FlagProperties(
   aspectRatio: 2,
   stripeOrientation: StripeOrientation.vertical,
   baseElementType: FlagElementsType.multiElement,
-  isSimplified: true,
+  isSimplified: null,
   elementsProperties: [
     ElementsProperties(
       Color(0xffffd900),
@@ -2615,6 +2610,7 @@ const flagVenProperties = FlagProperties(
 const flagAlbProperties = FlagProperties(
   [ColorsProperties(Color(0xffff0000))],
   aspectRatio: 7 / 5,
+  isSimplified: null,
   elementsProperties: [
     CustomElementsProperties(
       Color(0xff000000),

@@ -4,6 +4,7 @@ description: Sealed world data in form of Flutter widgets (country, phone, curre
 maintainer: Roman Cinis
 repository: https://github.com/tsinis/sealed_world/tree/main/packages/world_countries
 issue_tracker: https://github.com/tsinis/sealed_world/issues
+homepage: https://tsin.is/sealed_world/
 topics:
   - picker
   - sealed

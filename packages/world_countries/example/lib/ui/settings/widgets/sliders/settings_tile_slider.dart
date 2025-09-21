@@ -1,0 +1,57 @@
+import "package:flutter/material.dart";
+import "package:world_countries/helpers.dart";
+
+import "../../../../../../theme/flag_theme_controller.dart";
+
+abstract base class SettingsTileSlider extends StatelessWidget {
+  const SettingsTileSlider(
+    this.flagTheme, {
+    required this.name,
+    this.divisions = 19,
+    this.fractionDigits = 1,
+    this.max = 1,
+    this.min = 0,
+    this.secondaryTrackValue,
+    this.icon,
+    super.key,
+  });
+
+  final FlagThemeController flagTheme;
+  final String name;
+
+  final int? divisions;
+  final int fractionDigits;
+  final IconData? icon;
+  final double max;
+  final double min;
+  final double? secondaryTrackValue;
+
+  @protected
+  double? get value;
+
+  @protected
+  void handleChange([double? newValue]);
+
+  @override
+  Widget build(BuildContext context) => ListTile(
+    contentPadding: const EdgeInsets.only(left: 12, right: 12, bottom: 6),
+    title: Text(name, style: context.theme.textTheme.titleMedium),
+    titleAlignment: ListTileTitleAlignment.center,
+    leading: IconButton(
+      tooltip: "Original $name",
+      padding: EdgeInsets.zero,
+      onPressed: handleChange,
+      icon: Icon(icon),
+    ),
+    subtitle: Slider(
+      divisions: divisions,
+      max: max,
+      min: min,
+      onChanged: handleChange,
+      padding: const EdgeInsets.only(right: 16),
+      label: value?.toStringAsFixed(fractionDigits),
+      secondaryTrackValue: secondaryTrackValue,
+      value: value ?? min,
+    ),
+  );
+}

@@ -11,7 +11,7 @@
 
 # Every country flag is a Widget
 
-The first and only collection of declaratively defined **world flags**. Flags adapt to any size and shape while preserving their true proportions. Optimized for rendering sizes from 18 to 48 pixels (height), these flags draw inspiration from circle-flags, OpenMoji, and Twemoji. Over two-thirds of the flags in this library are also suitable for full-scale use.
+The first and only collection of declaratively defined **world flags**. Flags adapt to any size and shape while preserving their true proportions. Enjoy **more than 250 widget-based flags**, designed for clarity, performance, and flexibility.
 
 Each flag is a vector-based `CustomPainter`, ensuring precise, scalable, and stunning results. Following official color standards and using a declarative design, `world_flags` allows easy customization of flag shapes, decorations, and aspect ratios without losing quality or breaking flag element proportions.
 
@@ -26,8 +26,8 @@ Each flag is a vector-based `CustomPainter`, ensuring precise, scalable, and stu
 - **Easy to Use**: Simplified API for adding flags with minimal code.
 - **Pure Dart**: As these are code-based flags, developers can easily access and manipulate flag colors, aspect ratios, and other properties like any other Dart object.
 
-> [!NOTE]
-> The package provides 250 small and simplified world country flags, and **more than 2/3** of these flags can also be used as full-dimensional flags.
+> [!TIP]
+> All flags are optimized for rendering sizes from 18 to 48 pixels (height), inspired by OpenMoji, Twemoji and circle-flags. At the same time **more than 200 flags** are designed for crisp, full-size rendering and **look stunning at any scale**.
 
 ## Getting Started
 
@@ -121,6 +121,13 @@ class _MainState extends State<Main> {
 
 For more usage examples, please see the `/example` folder.
 
+### Demo
+
+To preview flag modifications you can also visit [this web page](https://tsin.is/sealed_world/#/country/gbr/settings) using the **Chrome** or **Firefox** browser (version **120** or higher). Please allow up 10 seconds for initial fonts and data caching.
+
+> [!IMPORTANT]
+> Note: Please keep in mind that the demo was built with Flutter WASM which is in very early alpha stage, so performance might be affected.
+
 ### Additional information
 
 For more information on using this package, check out the API documentation.
@@ -141,9 +148,9 @@ This package is licensed under the MIT license (see [LICENSE](./LICENSE) for det
 - **No external 3rd-party dependencies**: This package has no external third-party dependencies. It relies on the Flutter SDK and other packages within the `sealed_world` monorepo, ensuring controlled and consistent integration.
 - **Rich data**: This package offers far more data than any other package + tons of translations (all [GlobalMaterialLocalizations](https://api.flutter.dev/flutter/flutter_localizations/GlobalMaterialLocalizations-class.html) and [GlobalCupertinoLocalizations](https://api.flutter.dev/flutter/flutter_localizations/GlobalCupertinoLocalizations-class.html) locales and more).
 - **Type-safe**: The contracts and types in this package are exceptionally strong, ensuring that your code is strongly typed and well-defined.
-- **High code coverage**: The code in this package has almost 100% code coverage, with **_more than 1.6K (+3.2K in underlying Dart packages) tests_**, providing confidence in its reliability and stability.
+- **High code coverage**: The code in this package has 100% code coverage, with **_more than 1.6K (+3.2K in underlying Dart packages) tests_**, providing confidence in its reliability and stability.
 - **Comprehensive documentation**: This package provides full documentation for every non-code generated public member, usually with examples, ensuring clarity and ease of use.
-- **Lightweight**: This package keeps under 500 KB, ensuring it fits within the pub cache limit. This leads to quick, low-bandwidth downloads and faster caching, minimizing resource impact.
+- **Lightweight**: This package keeps **under 500 KB**, ensuring it fits within the pub cache limit. This leads to quick, low-bandwidth downloads and faster caching, minimizing resource impact. Asset‑based (SVG/JPG/TTF) flag sets typically cannot achieve this size without aggressive optimization.
 - **Mirrored Repository**: The GitHub repository, including all package tags, is mirrored on [GitLab](https://gitlab.com/tsinis/sealed_world/), providing an alternative access point should GitHub become unavailable.
 - **Industry adopted**: This package is actively used in production by numerous European companies, ensuring its efficacy and robustness in real-world scenarios.
 - **MIT license**: This package and sources are released under the MIT license, which is a permissive license that allows users to use, modify, and distribute the code with minimal restrictions. The MIT license is considered better than most other open-source licenses because it provides flexibility and allows users to incorporate the code into their projects without worrying about legal implications.

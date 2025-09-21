@@ -80,5 +80,15 @@ void main() => group("$FlagThemeData", () {
       "negative aspectRatio",
       () => FlagThemeData(aspectRatio: negative),
     );
+
+    group("copyWith asserts", () {
+      const data = FlagThemeData();
+      assertTest("negative width", () => data.copyWith(width: negative));
+      assertTest("negative height", () => data.copyWith(height: negative));
+      assertTest(
+        "negative aspectRatio",
+        () => data.copyWith(aspectRatio: negative),
+      );
+    });
   });
 });

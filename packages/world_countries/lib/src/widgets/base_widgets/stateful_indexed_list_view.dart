@@ -1,5 +1,5 @@
 import "package:flutter/gestures.dart" show DragStartBehavior;
-import "package:flutter/widgets.dart";
+import "package:flutter/material.dart";
 
 import "../../constants/ui_constants.dart";
 import "../../interfaces/indexed_list_view_interface.dart";

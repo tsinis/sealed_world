@@ -6,7 +6,7 @@ description: Command-line tools for a sealed_world ecosystem.
 resolution: workspace
 
 environment:
-  sdk: ^3.8.1
+  sdk: ^3.9.2
 
 dependencies:
   args: ^2.7.0

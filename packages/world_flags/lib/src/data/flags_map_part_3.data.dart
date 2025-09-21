@@ -66,7 +66,7 @@ const flagGrdProperties = FlagProperties(
   [ColorsProperties(Color(0xff009739))],
   aspectRatio: 5 / 3,
   baseElementType: FlagElementsType.multiElement,
-  isSimplified: true,
+  isSimplified: null,
   elementsProperties: [
     ElementsProperties(
       Color(0xffFFD100),
@@ -255,7 +255,7 @@ const flagLkaProperties = FlagProperties(
   ],
   aspectRatio: 2,
   stripeOrientation: StripeOrientation.vertical,
-  isSimplified: true,
+  isSimplified: null,
   elementsProperties: [
     CustomElementsProperties(
       Color(0xffF7B718),
@@ -1052,7 +1052,7 @@ const flagEthProperties = FlagProperties(
     ColorsProperties(Color(0xffef2118)),
   ],
   aspectRatio: 2,
-  isSimplified: true,
+  isSimplified: null,
   elementsProperties: [
     ElementsProperties(
       Color(0xff006bc6),
@@ -1322,7 +1322,7 @@ const flagHrvProperties = FlagProperties(
     ColorsProperties(Color(0xff171796)),
   ],
   aspectRatio: 2,
-  isSimplified: true,
+  isSimplified: null,
   elementsProperties: [
     CustomElementsProperties(
       Color(0xffff0000),
@@ -1484,7 +1484,7 @@ const flagIrnProperties = FlagProperties(
     ColorsProperties(Color(0xffda0000)),
   ],
   aspectRatio: 7 / 4,
-  isSimplified: true,
+  isSimplified: null,
   elementsProperties: [
     CustomElementsProperties(
       Color(0xffda0000),
@@ -1593,6 +1593,7 @@ const flagFjiProperties = FlagProperties(
 const flagPngProperties = FlagProperties(
   [ColorsProperties(Color(0xff000000)), ColorsProperties(Color(0xffff0000))],
   aspectRatio: 4 / 3,
+  isSimplified: null,
   stripeOrientation: StripeOrientation.diagonalTopLeftToBottomRight,
   elementsProperties: [
     CustomElementsProperties(
@@ -1840,7 +1841,7 @@ const flagEspProperties = FlagProperties(
     ColorsProperties(Color(0xffFABD00), ratio: 2),
     ColorsProperties(Color(0xffAD1519)),
   ],
-  isSimplified: true,
+  isSimplified: null,
   elementsProperties: [
     CustomElementsProperties(
       Color(0xffad1519),
@@ -1874,7 +1875,7 @@ const flagIrqProperties = FlagProperties(
     ColorsProperties(Color(0xffffffff)),
     ColorsProperties(Color(0xff000000)),
   ],
-  isSimplified: true,
+  isSimplified: null,
   elementsProperties: [
     CustomElementsProperties(Color(0xff017b3d), heightFactor: 1 / 4),
   ],
@@ -2052,7 +2053,7 @@ const flagSvnProperties = FlagProperties(
     ColorsProperties(Color(0xffFF0000)),
   ],
   aspectRatio: 2,
-  isSimplified: true,
+  isSimplified: null,
   elementsProperties: [
     CustomElementsProperties(
       Color(0xffFF0000),
@@ -2291,7 +2292,7 @@ const flagMltProperties = FlagProperties(
   [ColorsProperties(Color(0xffffffff)), ColorsProperties(Color(0xffCF142B))],
   stripeOrientation: StripeOrientation.vertical,
   baseElementType: FlagElementsType.multiElement,
-  isSimplified: true,
+  isSimplified: null,
   elementsProperties: [
     ElementsProperties(
       Color(0xffffffff),

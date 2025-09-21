@@ -4,8 +4,8 @@ import "package:flutter_test/flutter_test.dart";
 import "package:world_countries/src/widgets/helpers/maybe_widget.dart";
 
 void main() => group("$MaybeWidget", () {
-  const testValue = "Test";
   const fallbackText = "Fallback";
+  const testValue = "Test";
 
   test(
     "main constructor",
@@ -31,8 +31,9 @@ void main() => group("$MaybeWidget", () {
 
   testWidgets("renders orElse when value is null", (tester) async {
     await tester.pumpWidget(
-      const MaterialApp(
-        home: MaybeWidget<String>(null, Text.new, orElse: Text(fallbackText)),
+      const Directionality(
+        textDirection: TextDirection.ltr,
+        child: MaybeWidget<String>(null, Text.new, orElse: Text(fallbackText)),
       ),
     );
     expect(find.text(fallbackText), findsOneWidget);
@@ -40,8 +41,9 @@ void main() => group("$MaybeWidget", () {
 
   testWidgets("renders _map with non-null value", (tester) async {
     await tester.pumpWidget(
-      const MaterialApp(
-        home: MaybeWidget<String>(
+      const Directionality(
+        textDirection: TextDirection.ltr,
+        child: MaybeWidget<String>(
           testValue,
           Text.new,
           orElse: Text(fallbackText),
@@ -55,8 +57,9 @@ void main() => group("$MaybeWidget", () {
     tester,
   ) async {
     await tester.pumpWidget(
-      MaterialApp(
-        home: MaybeWidget<String>.identifiable(
+      Directionality(
+        textDirection: TextDirection.ltr,
+        child: MaybeWidget<String>.identifiable(
           null,
           Text.new,
           orElse: const Text(testValue),
@@ -69,7 +72,10 @@ void main() => group("$MaybeWidget", () {
   group("offstage", () {
     testWidgets("renders $Offstage when value is null", (tester) async {
       await tester.pumpWidget(
-        const MaterialApp(home: MaybeWidget<String>.offstage(null, Text.new)),
+        const Directionality(
+          textDirection: TextDirection.ltr,
+          child: MaybeWidget<String>.offstage(null, Text.new),
+        ),
       );
       expect(find.byType(Text), findsNothing);
       expect(
@@ -156,5 +162,42 @@ void main() => group("$MaybeWidget", () {
       );
       expect(() => result.add(const Text("new")), throwsUnsupportedError);
     });
+  });
+
+  group("orNull", () {
+    test(
+      "returns null when value is null (builder provided)",
+      () => expect(MaybeWidget.orNull<Text, String>(null, Text.new), isNull),
+    );
+
+    test(
+      "returns null when value is null and builder is null",
+      () => expect(MaybeWidget.orNull<Text, String>(null, null), isNull),
+    );
+
+    testWidgets("invokes builder when value non-null", (tester) async {
+      final maybeWidget = MaybeWidget.orNull<Text, String>(testValue, Text.new);
+      expect(maybeWidget?.data, testValue);
+      await tester.pumpWidget(
+        Directionality(
+          textDirection: TextDirection.ltr,
+          child: SizedBox(child: maybeWidget),
+        ),
+      );
+      expect(find.text(testValue), findsOneWidget);
+    });
+
+    test(
+      "builder may return null leading to null result",
+      () => expect(
+        MaybeWidget.orNull<Text, String>(testValue, (_) => null),
+        isNull,
+      ),
+    );
+
+    test(
+      "generic inference works without explicit type args",
+      () => expect(MaybeWidget.orNull(testValue, Text.new), isA<Text>()),
+    );
   });
 });

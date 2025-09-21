@@ -32,7 +32,7 @@ void main() => group("$IsoFlag", () {
 
   group("Full", () {
     final nonSimplified = WorldCountry.list.where(
-      (country) => !(country.flagProperties?.isSimplified ?? false),
+      (country) => country.flagProperties?.isSimplified == false,
     );
     for (final iso in <IsoTranslated>[
       ...nonSimplified,

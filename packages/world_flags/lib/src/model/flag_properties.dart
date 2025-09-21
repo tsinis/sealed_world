@@ -85,11 +85,40 @@ class FlagProperties {
   final StripeOrientation stripeOrientation;
 
   /// Indicates whether the flag is simplified (e.g. elements are not detailed).
-  /// If `true`, the flag is simplified, meaning it may not include all
-  /// details or elements, so it's not suitable for rendering in bigger sizes.
-  /// If `false`, the flag is not simplified, meaning it includes all details
-  /// and elements, so it's suitable for rendering in any size.
-  final bool isSimplified;
+  ///
+  /// - If `true`, the flag is simplified and omits detailed elements such as
+  ///   coats of arms or complex badges. This is typical for flags like British
+  ///   Indian Ocean Territory, Gibraltar, Norfolk Island, and so on, where the
+  ///   "simplified" version removes intricate symbols for clarity at small
+  ///   sizes and fast rendering.
+  ///
+  /// - If `false`, the flag is shown in its full, official form, including all
+  ///   details and elements. This is used for flags such as Russia, Austria,
+  ///   USA, etc., following the official construction sheet. This is suitable
+  ///   for any size and required for strict official representation.
+  ///
+  /// - If `null`, the flag is not simplified, but its use for strict official
+  ///   representation is not recommended (it may miss minor details).
+  ///   The decision to use this version is left to the developer, depending on
+  ///   the context and requirements. For example, the Dominican Republic (DOM)
+  ///   flag is often rendered without the coat of arms due to its complexity
+  ///   and small size. This version matches "the Official Civil Flag" used by
+  ///   civilians and in non-governmental contexts (such as apps, websites, or
+  ///   everyday displays), and is widely accepted for these purposes. Only
+  ///   government or strictly official uses require the full version with the
+  ///   coat of arms. For most non-official applications, this version is
+  ///   totally valid and appropriate. Ultimately, the developer decides which
+  ///   version to use based on the specific use case. For example:
+  ///
+  /// ```dart
+  ///   final isNotOfficial = flagOptions?.isSimplified ?? true;
+  ///   if (isNotOfficial) {
+  ///     // Renders the simplified flag version (e.g., for smaller icons).
+  ///   } else {
+  ///     // Renders bigger flag with full details (e.g., for official use).
+  ///   }
+  /// ```
+  final bool? isSimplified;
 
   /// A URL associated with the flag, used for testing purposes.
   @visibleForTesting

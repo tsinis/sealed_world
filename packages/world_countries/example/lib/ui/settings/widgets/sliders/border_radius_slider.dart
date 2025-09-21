@@ -1,13 +1,13 @@
 import "package:flutter/material.dart";
 
-import "../../settings_tile_slider.dart";
+import "../../../../helpers/extensions/border_flag_theme_controller_extension.dart";
+import "settings_tile_slider.dart";
 
 final class BorderRadiusSlider extends SettingsTileSlider {
   const BorderRadiusSlider(super.flagTheme, {super.key})
     : super(
-        name: "Border Radius",
+        name: "Radius",
         divisions: 18,
-        fractionDigits: 1,
         icon: Icons.rounded_corner_rounded,
         max: 9,
       );
@@ -16,6 +16,5 @@ final class BorderRadiusSlider extends SettingsTileSlider {
   double get value => flagTheme.borderRadius;
 
   @override
-  void handleChange([double? newValue]) =>
-      flagTheme.borderRadius = newValue ?? 0;
+  void handleChange([double? newValue]) => flagTheme.borderRadius = newValue;
 }

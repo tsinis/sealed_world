@@ -118,5 +118,13 @@ void main() => group("$TypedLocale", () {
       expect(copy.country, value.country);
       expect(copy.script, value.script);
     });
+
+    assertTest(
+      "copyWith assert when provided both regionalCode and country",
+      () => value.copyWith(
+        country: WorldCountry.list.first,
+        regionalCode: string,
+      ),
+    );
   });
 });
