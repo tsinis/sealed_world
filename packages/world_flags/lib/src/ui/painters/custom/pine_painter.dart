@@ -1384,7 +1384,6 @@ final class PinePainter extends CustomElementsPainter {
         height * 0.74,
       )
       ..lineTo(width * 0.49, height * 0.73)
-      ..lineTo(width * 0.49, height * 0.73)
       ..close();
 
     final bounds = path.getBounds();

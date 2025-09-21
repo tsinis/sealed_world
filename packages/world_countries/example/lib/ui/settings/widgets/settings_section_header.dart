@@ -17,8 +17,11 @@ final class SettingsSectionHeader extends StatelessWidget {
   final EdgeInsetsGeometry padding;
 
   @override
-  Widget build(BuildContext context) => Padding(
-    padding: padding,
-    child: Text(title, style: context.theme.textTheme.titleSmall),
+  Widget build(BuildContext context) => Semantics(
+    header: true,
+    child: Padding(
+      padding: padding,
+      child: Text(title, style: context.theme.textTheme.titleSmall),
+    ),
   );
 }

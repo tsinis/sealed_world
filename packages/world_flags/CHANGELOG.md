@@ -1,6 +1,18 @@
 ## 2.8.0
 
-TODO!
+NEW FEATURES
+
+- Improve Norfolk Island (NF) flag.
+
+REFACTOR
+
+- Added assert statements to `copyWith` methods for validation.
+- Updated flag properties from `isSimplified: true` to `isSimplified: null` across multiple countries.
+
+DOCUMENTATION
+
+- Added website with flags demo (to `pubspec.yaml` and `README.md`).
+- Enhanced documentation for isSimplified property with detailed explanations.
 
 ## 2.7.0
 

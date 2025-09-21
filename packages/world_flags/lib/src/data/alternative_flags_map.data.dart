@@ -9,7 +9,7 @@ import "../model/flag_properties.dart";
 import "../model/shape.dart";
 import "../model/stripe_orientation.dart";
 
-/// Alternative flag properties of country Afganistan (AF).
+/// Alternative flag properties of country Afghanistan (AF).
 const flagAfgPropertiesAlt = FlagProperties(
   [ColorsProperties(Color(0xffffffff))],
   aspectRatio: 2,

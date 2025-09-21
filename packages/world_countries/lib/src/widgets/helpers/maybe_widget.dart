@@ -163,7 +163,7 @@ class MaybeWidget<T extends Object> extends StatelessWidget {
   ///
   /// Simple example with inference:
   /// ```dart
-  /// final trailing = MaybeWidget.orNull<DateTime, Text>(
+  /// final trailing = MaybeWidget.orNull<Text, DateTime>(
   ///   lastEdited,
   ///   (dt) => Text(timeAgo(dt)),
   /// );
