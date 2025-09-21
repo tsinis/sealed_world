@@ -1,3 +1,7 @@
+## 2.8.0
+
+TODO!
+
 ## 2.7.0
 
 NEW FEATURES
@@ -282,7 +286,6 @@ New full flags:
 - North Macedonia (MKD)
 - Barbados (BRB)
 - Eritrea (ERI)
-- Papua New Guinea (PNG)
 - Slovakia (SVK)
 - Tajikistan (TJK)
 
