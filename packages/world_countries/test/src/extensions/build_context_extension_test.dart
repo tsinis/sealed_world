@@ -40,11 +40,47 @@ void main() => group("BuildContextExtension", () {
     expect(context.scaffold.isDrawerOpen, isFalse);
   });
 
+  testWidgets("maybeScaffold (present)", (tester) async {
+    final context = await tester.contextExtractor();
+    expect(context.maybeScaffold, isA<ScaffoldState>());
+  });
+
+  testWidgets(
+    "maybeScaffold (absent)",
+    (tester) => tester.pumpWidget(
+      Builder(
+        builder: (context) {
+          expect(context.maybeScaffold, isNull);
+
+          return const SizedBox();
+        },
+      ),
+    ),
+  );
+
   testWidgets("messenger", (tester) async {
     final context = await tester.contextExtractor();
     expect(context.messenger, isA<ScaffoldMessengerState>());
     expect(context.messenger.mounted, isTrue);
   });
+
+  testWidgets("maybeMessenger (present)", (tester) async {
+    final context = await tester.contextExtractor();
+    expect(context.maybeMessenger, isA<ScaffoldMessengerState>());
+  });
+
+  testWidgets(
+    "maybeMessenger (absent)",
+    (tester) => tester.pumpWidget(
+      Builder(
+        builder: (context) {
+          expect(context.maybeMessenger, isNull);
+
+          return const SizedBox();
+        },
+      ),
+    ),
+  );
 
   testWidgets("showSnackBar", (tester) async {
     const message = "Hello, World!";

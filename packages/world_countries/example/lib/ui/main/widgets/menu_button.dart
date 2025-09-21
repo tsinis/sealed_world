@@ -23,7 +23,7 @@ class MenuButton extends StatelessWidget {
               unawaited(routeState.go(routeState.route.pathWithSettings)),
           child: Align(
             alignment: Alignment.centerRight,
-            child: MaybeWidget(
+            child: MaybeWidget.orNull(
               Constants.settings.toBeginningOfSentenceCase,
               Text.new,
             ),

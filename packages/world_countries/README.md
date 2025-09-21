@@ -43,7 +43,7 @@ Or you can just create your own pickers by extending `BasicPicker`.
 
 ### Demo
 
-To preview the demo from the example, you can visit [this web page](https://tsin.is/sealed_world) using the **Chrome** browser (version **119** or higher). Please allow up 10 seconds for initial fonts and data caching.
+To preview the demo from the example, you can visit [this web page](https://tsin.is/sealed_world) using the **Chrome** or **Firefox** browser (version **120** or higher). Please allow up 10 seconds for initial fonts and data caching.
 
 > [!IMPORTANT]
 > Note: Please keep in mind that the demo was built with Flutter WASM which is in very early alpha stage, so performance might be affected.

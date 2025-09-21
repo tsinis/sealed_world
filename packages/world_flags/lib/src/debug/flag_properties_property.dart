@@ -49,8 +49,7 @@ class FlagPropertiesProperty extends DiagnosticsProperty<FlagProperties> {
     json["aspectRatio"] = value?.aspectRatio;
     json["orientation"] = value?.stripeOrientation.name;
     json["stripesCount"] = value?.stripeColors.length;
-    json["isSimplified"] = value?.isSimplified;
-
+    if (value?.isSimplified != null) json["isSimplified"] = value?.isSimplified;
     if (value?.baseElementType != null) {
       json["baseElementType"] = value?.baseElementType?.name;
     }

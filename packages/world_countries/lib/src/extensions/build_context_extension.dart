@@ -64,6 +64,21 @@ extension BuildContextExtension on BuildContext {
   /// ```
   ScaffoldState get scaffold => Scaffold.of(this);
 
+  /// Returns the nearest [ScaffoldState] instance for the current context or
+  /// `null` if no [Scaffold] ancestor is found.
+  ///
+  /// This is the nullable variant of [scaffold] that uses [Scaffold.maybeOf]
+  /// instead of [Scaffold.of]. It allows you to safely attempt scaffold
+  /// operations in widget trees where a [Scaffold] might not be present (for
+  /// example inside isolated subtrees or tests) without throwing.
+  ///
+  /// Example usage:
+  /// ```dart
+  /// context.maybeScaffold?.showSnackBar(const SnackBar(content: Text('Hi!')));
+  /// ```
+  @useResult
+  ScaffoldState? get maybeScaffold => Scaffold.maybeOf(this);
+
   /// Returns the nearest [ScaffoldMessengerState] instance for the current
   /// context.
   ///
@@ -72,6 +87,22 @@ extension BuildContextExtension on BuildContext {
   /// ScaffoldMessengerState messenger = context.messenger;
   /// ```
   ScaffoldMessengerState get messenger => ScaffoldMessenger.of(this);
+
+  /// Returns the nearest [ScaffoldMessengerState] for the current context or
+  /// `null` if no [ScaffoldMessenger] ancestor is found.
+  ///
+  /// This is the nullable variant of [messenger] that uses
+  /// [ScaffoldMessenger.maybeOf]. Prefer this when displaying a [SnackBar] from
+  /// a context where you are not certain a [ScaffoldMessenger] exists.
+  ///
+  /// Example usage:
+  /// ```dart
+  /// context.maybeMessenger?.showSnackBar(
+  ///   const SnackBar(content: Text('Optional messenger')),
+  /// );
+  /// ```
+  @useResult
+  ScaffoldMessengerState? get maybeMessenger => ScaffoldMessenger.maybeOf(this);
 
   /// Shows a [SnackBar] at the bottom of the screen.
   ///

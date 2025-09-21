@@ -60,7 +60,7 @@ class _MainState extends State<Main> {
       child: ListView.separated(
         itemBuilder: (bc, index) {
           final item = _items.keys.elementAt(index);
-          final isSimplified = _items[item]?.properties.isSimplified ?? true;
+          final isSimplified = _items[item]?.properties.isSimplified ?? false;
           final style = TextStyle(color: isSimplified ? disabled : null);
 
           return ListTile(

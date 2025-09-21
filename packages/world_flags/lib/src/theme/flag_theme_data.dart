@@ -32,12 +32,12 @@ class FlagThemeData extends ThemeExtension<FlagThemeData>
     this.height,
     this.width,
     this.child,
-  }) : assert(
+  }) : assert(height == null || height > 0, "`height` must be greater than 0"),
+       assert(width == null || width > 0, "`width` must be greater than 0"),
+       assert(
          aspectRatio == null || aspectRatio > 0,
          "`aspectRatio` must be greater than 0",
        ),
-       assert(height == null || height > 0, "`height` must be greater than 0"),
-       assert(width == null || width > 0, "`width` must be greater than 0"),
        _aspectRatio = aspectRatio;
 
   @override
@@ -90,15 +90,24 @@ class FlagThemeData extends ThemeExtension<FlagThemeData>
     double? height,
     double? width,
     Widget? child,
-  }) => FlagThemeData(
-    aspectRatio: aspectRatio ?? _aspectRatio,
-    decoration: decoration ?? this.decoration,
-    decorationPosition: decorationPosition ?? this.decorationPosition,
-    padding: padding ?? this.padding,
-    height: height ?? this.height,
-    width: width ?? this.width,
-    child: child ?? this.child,
-  );
+  }) {
+    assert(height == null || height > 0, "`height` must be greater than 0");
+    assert(width == null || width > 0, "`width` must be greater than 0");
+    assert(
+      aspectRatio == null || aspectRatio > 0,
+      "`aspectRatio` must be greater than 0",
+    );
+
+    return FlagThemeData(
+      aspectRatio: aspectRatio ?? _aspectRatio,
+      decoration: decoration ?? this.decoration,
+      decorationPosition: decorationPosition ?? this.decorationPosition,
+      padding: padding ?? this.padding,
+      height: height ?? this.height,
+      width: width ?? this.width,
+      child: child ?? this.child,
+    );
+  }
 
   @override
   String toString() =>
