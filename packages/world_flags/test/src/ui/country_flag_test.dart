@@ -14,7 +14,7 @@ void main() => group("$CountryFlag", () {
   );
 
   test(
-    "custom constructor",
+    "custom constructor type check",
     () => expect(
       CountryFlag.custom(WorldCountry.fromCode(value.code), const {}),
       isA<CountryFlag>(),
