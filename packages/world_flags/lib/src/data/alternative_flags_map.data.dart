@@ -13,7 +13,7 @@ import "../model/stripe_orientation.dart";
 const flagAfgPropertiesAlt = FlagProperties(
   [ColorsProperties(Color(0xffffffff))],
   aspectRatio: 2,
-  isSimplified: true,
+  isSimplified: null,
   elementsProperties: [
     CustomElementsProperties(
       Color(0xff000000),

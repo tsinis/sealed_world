@@ -21,7 +21,7 @@ class ScaledCountryFlag extends StatelessWidget {
   Widget build(BuildContext context) => AnimatedBuilder(
     animation: _controller,
     builder: (_, _) {
-      final isSimplified = _flag.basicFlag?.properties.isSimplified ?? true;
+      final isSimplified = _flag.basicFlag?.properties.isSimplified ?? false;
       final decoration = _controller.theme.decoration;
       final shadow = decoration?.boxShadow?.firstOrNull;
       final borderWidth = _controller.borderWidth;
