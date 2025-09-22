@@ -21,10 +21,11 @@ sealed class FunctionalPlatform {
     R? iOS,
     R? linux,
     R? macOS,
-    R? web,
+    R? web, // IO is not available on Web.
     R? windows,
   }) {
-    if (kIsWeb) return web ?? orElse; // IO is not available on Web.
+    // To cover this line just run tests with `flutter test --platform chrome`.
+    if (kIsWeb) return web ?? orElse; // coverage:ignore-line
 
     return switch (defaultTargetPlatform) {
       TargetPlatform.android => android ?? orElse,
