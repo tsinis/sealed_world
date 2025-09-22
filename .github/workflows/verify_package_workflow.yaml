@@ -50,7 +50,7 @@ jobs:
           cache-key: "flutter-:os:-:channel:-:version:-:arch:-:hash:"
 
       - name: 📦 Install dependencies
-        run: dart pub get
+        run: dart pub upgrade && dart pub get
 
       - name: 🕵️ Analyze code
         uses: ValentinVignal/action-dart-analyze@v1.1

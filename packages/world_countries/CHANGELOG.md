@@ -1,3 +1,26 @@
+## 3.9.2
+
+NEW FEATURES
+
+- `MaybeWidget` gains a new optional `buildWhen` predicate parameter (all constructors) allowing additional conditional logic beyond simple null checks. When provided and returns `false`, the widget (or list / nullable result) is skipped and the fallback (`orElse` / empty list / `null`) is used.
+- New static factory `MaybeWidget.orNull` - builds and returns a widget only when the provided value is non-`null` (and an optional `buildWhen` predicate, if supplied, returns `true`); otherwise it returns `null` (instead of inserting an empty placeholder). This is ideal for concise conditional inclusion in collection literals or nullable child parameters.
+- Improve Norfolk Island (NF) flag.
+- Added `isZero` getter on `num?` (in helpers library).
+- Added nullable `maybeScaffold` and `maybeMessenger` getters (in extensions on `BuildContext`, helpers library).
+
+REFACTOR
+
+- Adjust title alignment in default `searchSuggestions` builder (with new `ListTile` parameters, provided in Flutter SDK v3.35.4).
+- Multiple improvements in metadata - including `@useResult` (and other) annotations and updated interfaces.
+- Added assert statements to `copyWith` methods for validation.
+- Updated flag properties from `isSimplified: true` to `isSimplified: null` across multiple countries.
+
+DOCUMENTATION
+
+- Improve example/demo web. Revamped Settings page with Material 3, sliver app bar, toolbar with reset, and a scaled flag preview. Added new controls for aspect ratio, border (radius, width, color) and shadow (spread, blur, opacity, offsets).
+- Added demo website to `homepage` in `pubspec.yaml`.
+- Enhanced documentation for flag's `isSimplified` property with detailed explanations.
+
 ## 3.9.0
 
 NEW FEATURES

@@ -53,6 +53,116 @@ void main() => group("$MaybeWidget", () {
     expect(find.text(testValue), findsOneWidget);
   });
 
+  group("buildWhen", () {
+    testWidgets("renders builder when predicate returns true", (tester) async {
+      await tester.pumpWidget(
+        const Directionality(
+          textDirection: TextDirection.ltr,
+          child: MaybeWidget(
+            testValue,
+            Text.new,
+            buildWhen: _nonEmpty,
+            orElse: Text(fallbackText),
+          ),
+        ),
+      );
+      expect(find.text(testValue), findsOneWidget);
+      expect(find.text(fallbackText), findsNothing);
+    });
+
+    testWidgets("renders orElse when predicate returns false", (tester) async {
+      await tester.pumpWidget(
+        const Directionality(
+          textDirection: TextDirection.ltr,
+          child: MaybeWidget(
+            testValue,
+            Text.new,
+            buildWhen: _alwaysFalse,
+            orElse: Text(fallbackText),
+          ),
+        ),
+      );
+      expect(find.text(testValue), findsNothing);
+      expect(find.text(fallbackText), findsOneWidget);
+    });
+
+    testWidgets("predicate not provided behaves like null-check only", (
+      tester,
+    ) async {
+      await tester.pumpWidget(
+        const Directionality(
+          textDirection: TextDirection.ltr,
+          child: MaybeWidget(testValue, Text.new, orElse: Text(fallbackText)),
+        ),
+      );
+      expect(find.text(testValue), findsOneWidget);
+    });
+
+    testWidgets("builder not invoked when predicate false", (tester) async {
+      bool called = false;
+      await tester.pumpWidget(
+        Directionality(
+          textDirection: TextDirection.ltr,
+          child: MaybeWidget(
+            testValue,
+            (v) {
+              called = true; // Should not run.
+
+              return Text(v);
+            },
+            buildWhen: _alwaysFalse,
+            orElse: const Text(fallbackText),
+          ),
+        ),
+      );
+      expect(called, isFalse);
+      expect(find.text(fallbackText), findsOneWidget);
+    });
+
+    test("predicate true: builder selected", () {
+      final widget = MaybeWidget(
+        testValue,
+        (_) => const SizedBox(),
+        buildWhen: (v) => v == testValue,
+        orElse: const Text(fallbackText),
+      );
+      expect(widget.buildWhen?.call(testValue), isTrue);
+    });
+
+    test("predicate false: orElse fallback", () {
+      final widget = MaybeWidget(
+        testValue,
+        (_) => const SizedBox(),
+        buildWhen: (value) => value != testValue,
+      );
+      expect(widget.buildWhen?.call(testValue), isFalse);
+    });
+
+    test("predicate absent defaults to allowing build", () {
+      final widget = MaybeWidget(testValue, (_) => const Text("OK"));
+      expect(widget.buildWhen, isNull);
+    });
+
+    test("predicate not invoked when value is null (no side effects)", () {
+      bool invoked = false;
+      final widget = MaybeWidget(
+        null,
+        (_) => const SizedBox(),
+        buildWhen: (_) {
+          invoked = true; // Should remain `false` after constructor (no build).
+
+          return true;
+        },
+      );
+      expect(widget.buildWhen, isNotNull);
+      expect(
+        invoked,
+        isFalse,
+        reason: "No build() call performed yet; predicate must not have run",
+      );
+    });
+  });
+
   testWidgets("renders orElse when value is null in identifiable constructor", (
     tester,
   ) async {
@@ -162,6 +272,33 @@ void main() => group("$MaybeWidget", () {
       );
       expect(() => result.add(const Text("new")), throwsUnsupportedError);
     });
+
+    test("buildWhen false yields empty list (child)", () {
+      final result = MaybeWidget.list(
+        testValue,
+        child: Text.new,
+        buildWhen: _alwaysFalse,
+      );
+      expect(result, isEmpty);
+    });
+
+    test("buildWhen true yields list (child)", () {
+      final result = MaybeWidget.list(
+        testValue,
+        child: Text.new,
+        buildWhen: (_) => true,
+      );
+      expect(result.single, isA<Text>());
+    });
+
+    test("buildWhen false yields empty list (children)", () {
+      final result = MaybeWidget.list(
+        testValue,
+        children: (v) => [Text(v)],
+        buildWhen: _alwaysFalse,
+      );
+      expect(result, isEmpty);
+    });
   });
 
   group("orNull", () {
@@ -199,5 +336,27 @@ void main() => group("$MaybeWidget", () {
       "generic inference works without explicit type args",
       () => expect(MaybeWidget.orNull(testValue, Text.new), isA<Text>()),
     );
+
+    test("buildWhen false returns null (orNull)", () {
+      final result = MaybeWidget.orNull(
+        testValue,
+        Text.new,
+        buildWhen: _alwaysFalse,
+      );
+      expect(result, isNull);
+    });
+
+    test("buildWhen true returns widget (orNull)", () {
+      final result = MaybeWidget.orNull(
+        testValue,
+        Text.new,
+        buildWhen: (_) => true,
+      );
+      expect(result, isA<Text>());
+    });
   });
 });
+
+// Predicate helpers for `buildWhen` tests.
+bool _nonEmpty(String v) => v.isNotEmpty;
+bool _alwaysFalse(Object _) => false;
