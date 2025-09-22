@@ -12,13 +12,17 @@ class MaybeWidget<T extends Object> extends StatelessWidget {
   /// * [value] is the value to check for null.
   /// * [_builder] is the builder function to call with a non-null [value].
   /// * [orElse] is the widget to display if [value] is null.
+  /// * [buildWhen] optional predicate; if provided and returns `true` the
+  ///   builder runs, if it returns `false` [orElse] is used. When omitted only
+  ///   the null-check is applied.
   /// * [key] is the key for the widget.
   /// Example:
   ///
   /// ```dart
   /// MaybeWidget(
-  ///  nullableValue,
-  ///  (nonNullValue) => Text(nonNullValue.toString()),
+  ///  nullableText,
+  ///  (text) => Text(text),
+  ///  buildWhen: (text) => text.trim().isNotEmpty, // Only for non-empty text.
   ///  orElse: const Icon(Icons.text_decrease),
   /// ),
   /// ```
@@ -26,6 +30,7 @@ class MaybeWidget<T extends Object> extends StatelessWidget {
     this.value,
     this._builder, {
     this.orElse = const SizedBox.shrink(),
+    this.buildWhen,
     super.key,
   });
 
@@ -38,6 +43,9 @@ class MaybeWidget<T extends Object> extends StatelessWidget {
   /// * [value] is the value to check for null.
   /// * [_builder] is the builder function to call with a non-null [value].
   /// * [orElse] is the widget to display if [value] is null.
+  /// * [buildWhen] optional predicate; if provided and returns `true` the
+  ///   builder runs, if it returns `false` [orElse] is used. When omitted only
+  ///   the null-check is applied.
   /// * [key] is the key for the widget.
   /// If [key] is not provided, a null-check key will be calculated and used.
   ///
@@ -56,6 +64,7 @@ class MaybeWidget<T extends Object> extends StatelessWidget {
     this.value,
     this._builder, {
     this.orElse = const SizedBox.shrink(),
+    this.buildWhen,
     Key? key,
   }) : super(key: key ?? ValueKey<bool>(value != null));
 
@@ -68,6 +77,9 @@ class MaybeWidget<T extends Object> extends StatelessWidget {
   /// * [value] is the value to check for `null`.
   /// * [_builder] is the builder function to call with a non-null [value].
   /// * [orElse] defaults to [Offstage] when [value] is `null`.
+  /// * [buildWhen] optional predicate; if provided and returns `true` the
+  ///   builder runs, if it returns `false` [orElse] (the Offstage widget unless
+  ///   overridden) is used. When omitted only the null-check is applied.
   /// * [key] is the key for the widget.
   ///
   /// Example:
@@ -82,6 +94,7 @@ class MaybeWidget<T extends Object> extends StatelessWidget {
     this.value,
     this._builder, {
     this.orElse = const Offstage(),
+    this.buildWhen,
     super.key,
   });
 
@@ -97,6 +110,9 @@ class MaybeWidget<T extends Object> extends StatelessWidget {
   /// * [value] - The nullable value to check
   /// * [child] - Optional callback to create a single widget
   /// * [children] - Optional callback to create multiple widgets
+  /// * [buildWhen] - Optional predicate; if provided and returns `false`, an
+  ///   empty list is returned even when [value] is non-null. When omitted the
+  ///   list is built purely based on nullability.
   ///
   /// Example with single child:
   /// ```dart
@@ -116,14 +132,26 @@ class MaybeWidget<T extends Object> extends StatelessWidget {
   ///   ],
   /// )
   /// ```
+  ///
+  /// Example using [buildWhen]:
+  /// ```dart
+  /// // Only include widgets when the user is active.
+  /// MaybeWidget.list(
+  ///   maybeUser,
+  ///   child: (user) => Text(user.name),
+  ///   buildWhen: (user) => user.isActive,
+  /// );
+  /// ```
   static List<Widget> list<T extends Object>(
     T? value, {
     Widget? Function(T)? child,
     Iterable<Widget?> Function(T)? children,
+    bool Function(T value)? buildWhen,
   }) {
-    if (value == null) return const [];
-    if (children != null) return List.unmodifiable(children(value).nonNulls);
-    final maybeChild = child?.call(value);
+    final maybeVal = _passes(value, buildWhen);
+    if (maybeVal == null) return const [];
+    if (children != null) return List.unmodifiable(children(maybeVal).nonNulls);
+    final maybeChild = child?.call(maybeVal);
 
     return maybeChild == null ? const [] : [maybeChild];
   }
@@ -132,8 +160,8 @@ class MaybeWidget<T extends Object> extends StatelessWidget {
   ///
   /// This lightweight utility mirrors the ergonomics of the main [MaybeWidget]
   /// widget for the specific scenario where you only need a nullable widget
-  /// result (e.g. for nullable `child:` inputs, or inside a [Column]/[Row]/
-  /// [Stack] children list, or in a collection literal with spread / if
+  /// result (e.g. for nullable `child:` inputs, or inside a [Flex]/[Stack]/etc.
+  /// children list, or in a collection literal with spread / if
   /// expressions) instead of inserting an always-present placeholder like
   /// [SizedBox.shrink].
   ///
@@ -177,15 +205,53 @@ class MaybeWidget<T extends Object> extends StatelessWidget {
   ///
   /// Returns `null` when [value] is `null` or when [builder] is `null`.
   ///
+  /// * [buildWhen] - Optional predicate; if provided and returns `false` the
+  ///   method returns `null` even if [value] is non-null. When omitted only the
+  ///   null-check on [value] is applied.
+  ///
+  /// Example:
+  /// ```dart
+  /// final subtitle = MaybeWidget.orNull<Text, String>(
+  ///   maybeSubtitle,
+  ///   Text.new,
+  ///   buildWhen: (s) => s.trim().isNotEmpty,
+  /// );
+  /// ```
+  ///
   /// See also: [MaybeWidget]: the widget counterpart when you need a concrete
   /// fallback placeholder in the tree.
   static W? orNull<W extends Widget, T extends Object>(
     T? value,
-    W? Function(T)? builder,
-  ) => value == null ? null : builder?.call(value);
+    W? Function(T)? builder, {
+    bool Function(T value)? buildWhen,
+  }) {
+    final maybeValue = _passes(value, buildWhen);
+
+    return maybeValue == null ? null : builder?.call(maybeValue);
+  }
+
+  /// Shared predicate evaluation so static helpers & instance build follow
+  /// identical semantics.
+  ///
+  /// Applies the predicate and returns the non-null value if it "passes",
+  /// otherwise returns `null`.
+  static T? _passes<T extends Object>(T? value, bool Function(T)? predicate) {
+    if (value == null) return null;
+    if (predicate == null || predicate(value)) return value;
+
+    return null;
+  }
 
   /// The builder function to call with a non-null [value].
   final Widget Function(T) _builder;
+
+  /// Optional predicate that must return `true` for the builder to be used.
+  ///
+  /// If omitted, only the null-check on [value] is applied. When provided, the
+  /// [value] must be non-null AND the predicate returns `true` for the builder
+  /// to run; otherwise [orElse] (or `null` for [orNull]) is used.
+  final bool Function(T)?
+  buildWhen; // ignore: prefer-correct-callback-field-name, SDK like.
 
   /// The widget to display if [value] is null.
   final Widget orElse;
@@ -214,10 +280,18 @@ class MaybeWidget<T extends Object> extends StatelessWidget {
           style: DiagnosticsTreeStyle.shallow,
           level: DiagnosticLevel.fine,
         ),
+      )
+      ..add(
+        FlagProperty(
+          "hasBuildWhen",
+          value: buildWhen != null,
+          ifTrue: "custom predicate provided",
+          ifFalse: "no predicate (null-check only)",
+        ),
       );
   }
 
   @override
   Widget build(BuildContext context) =>
-      MaybeWidget.orNull(value, _builder) ?? orElse;
+      MaybeWidget.orNull(value, _builder, buildWhen: buildWhen) ?? orElse;
 }
