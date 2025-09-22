@@ -10,6 +10,7 @@ NEW FEATURES
 
 REFACTOR
 
+- Adjust title alignment in default `searchSuggestions` builder (with new `ListTile` parameters, provided in Flutter SDK v3.35.4).
 - Multiple improvements in metadata - including `@useResult` (and other) annotations and updated interfaces.
 - Added assert statements to `copyWith` methods for validation.
 - Updated flag properties from `isSimplified: true` to `isSimplified: null` across multiple countries.
