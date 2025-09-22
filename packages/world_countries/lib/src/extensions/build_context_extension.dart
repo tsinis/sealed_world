@@ -25,7 +25,6 @@ extension BuildContextExtension on BuildContext {
   /// ```dart
   /// context.focus.requestFocus();
   /// ```
-  @useResult
   FocusScopeNode get focus => FocusScope.of(this);
 
   /// Returns the nearest [MediaQueryData] instance for the current context.
@@ -76,7 +75,6 @@ extension BuildContextExtension on BuildContext {
   /// ```dart
   /// context.maybeScaffold?.showSnackBar(const SnackBar(content: Text('Hi!')));
   /// ```
-  @useResult
   ScaffoldState? get maybeScaffold => Scaffold.maybeOf(this);
 
   /// Returns the nearest [ScaffoldMessengerState] instance for the current
@@ -101,7 +99,6 @@ extension BuildContextExtension on BuildContext {
   ///   const SnackBar(content: Text('Optional messenger')),
   /// );
   /// ```
-  @useResult
   ScaffoldMessengerState? get maybeMessenger => ScaffoldMessenger.maybeOf(this);
 
   /// Shows a [SnackBar] at the bottom of the screen.
