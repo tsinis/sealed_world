@@ -8,6 +8,7 @@ import "package:flutter/services.dart";
 import "package:world_countries/helpers.dart";
 import "package:world_countries/world_countries.dart";
 
+import "../../../notifications/notifications_center.dart";
 import "../../../theme/flag_theme_scope.dart";
 
 class CodeCopyPreview extends StatelessWidget {
@@ -135,6 +136,16 @@ class _CopyButton extends StatefulWidget {
 
 class _CopyButtonState extends State<_CopyButton> {
   bool _isCopied = false;
+
+  static Future<void> _markSettingsMenuAccessed() => kTabScrollDuration.delayed(
+    NotificationsCenter.instance.markSettingsMenuAccessed,
+  );
+
+  @override
+  void initState() {
+    super.initState();
+    unawaited(_markSettingsMenuAccessed());
+  }
 
   void _handleCopy() {
     if (widget.payload.isEmpty) return;
