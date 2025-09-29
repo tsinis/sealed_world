@@ -95,7 +95,7 @@ class SkCountriesL10N extends IsoLocaleMapper<String> {
       "CHL+": "Čílska republika",
       "CHN": "Čína",
       "CHN+": "Čínska ľudová republika",
-      "CIV": "Pobržie Slonoviny",
+      "CIV": "Pobrežie Slonoviny",
       "CIV+": "Republika Pobrežie Slonoviny",
       "CMR": "Kamerun",
       "CMR+": "Kamerunská republika",
