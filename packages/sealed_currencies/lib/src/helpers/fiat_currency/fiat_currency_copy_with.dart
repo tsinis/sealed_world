@@ -43,7 +43,12 @@ extension FiatCurrencyCopyWith<T extends FiatCurrency> on T {
     final newHtmlEntity = htmlEntity ?? this.htmlEntity;
     final newNamesNative = namesNative ?? this.namesNative;
     final newSubunit = subunit ?? this.subunit;
+    final newSymbol = symbol ?? this.symbol;
 
+    assert(
+      newSymbol == null || newSymbol.length > 0,
+      "`symbol` should not be empty!",
+    );
     assert(newNamesNative.isNotEmpty, "`namesNative` should not be empty!");
     assert(
       newCode.length == IsoStandardized.codeLength,

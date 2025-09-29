@@ -49,7 +49,17 @@ void main() => group("FiatCurrencyCopyWith", () {
   });
 
   group("asserts", () {
-    assertTest("not", () => element.copyWith(name: "Test"), shouldThrow: false);
+    assertTest(
+      "not",
+      () => element.copyWith(
+        name: "Test",
+        symbol: "A",
+        htmlEntity: "B",
+        subunit: "C",
+      ),
+      shouldThrow: false,
+    );
+    assertTest("empty symbol", () => element.copyWith(symbol: ""));
     assertTest("empty htmlEntity", () => element.copyWith(htmlEntity: ""));
     assertTest("empty subunit", () => element.copyWith(subunit: ""));
     assertTest("code length", () => element.copyWith(code: "TOOLONG"));
