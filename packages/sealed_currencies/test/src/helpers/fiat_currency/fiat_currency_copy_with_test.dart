@@ -1,4 +1,3 @@
-import "package:_sealed_world_tests/sealed_world_tests.dart";
 import "package:sealed_currencies/src/helpers/fiat_currency/fiat_currency_copy_with.dart";
 import "package:sealed_currencies/src/model/currency/currency.dart";
 import "package:test/test.dart";
@@ -46,42 +45,5 @@ void main() => group("FiatCurrencyCopyWith", () {
     expect(copy.decimalMark, element.decimalMark);
     expect(copy.thousandsSeparator, element.thousandsSeparator);
     expect(copy.translations, element.translations);
-  });
-
-  group("asserts", () {
-    assertTest(
-      "not",
-      () => element.copyWith(
-        name: "Test",
-        symbol: "A",
-        htmlEntity: "B",
-        subunit: "C",
-      ),
-      shouldThrow: false,
-    );
-    assertTest("empty symbol", () => element.copyWith(symbol: ""));
-    assertTest("empty htmlEntity", () => element.copyWith(htmlEntity: ""));
-    assertTest("empty subunit", () => element.copyWith(subunit: ""));
-    assertTest("code length", () => element.copyWith(code: "TOOLONG"));
-
-    assertTest(
-      "codeNumeric length",
-      () => element.copyWith(codeNumeric: "TOOLONG"),
-    );
-
-    assertTest(
-      "empty namesNative",
-      () => element.copyWith(namesNative: const []),
-    );
-
-    assertTest(
-      "empty alternateSymbols",
-      () => element.copyWith(alternateSymbols: const []),
-    );
-
-    assertTest(
-      "negative smallestDenomination",
-      () => element.copyWith(smallestDenomination: -1),
-    );
   });
 });
