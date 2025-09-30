@@ -8869,7 +8869,6 @@ class CountryLka extends WorldCountry {
         continent: const Asia(),
         subregion: const SouthernAsia(),
         latLng: const LatLng(7, 81),
-        bordersCodes: const ["Ind"],
         areaMetric: 65610,
         emoji: "🇱🇰",
         maps: const Maps(
