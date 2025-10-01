@@ -1,6 +1,6 @@
 import "../iso_locale_mapper.dart";
 
-/// Contains 159 translation(s).
+/// Contains 161 translation(s).
 /// Provides translations for the Amharic language
 /// locale.
 class AmCurrenciesL10N extends IsoLocaleMapper<String> {
@@ -160,11 +160,13 @@ class AmCurrenciesL10N extends IsoLocaleMapper<String> {
       "WST": "ሳሞአን ታላ",
       "XAF": "የመካከለኛው አፍሪካ ሴፋ ፍራንክ",
       "XCD": "የምዕራብ ካሪብያን ዶላር",
+      "XCG": "የካሪቢያን ጊልደር",
       "XOF": "የምዕራብ አፍሪካ ሴፋ ፍራንክ",
       "XPF": "ሲ ኤፍ ፒ ፍራንክ",
       "YER": "የየመን ሪአል",
       "ZAR": "የደቡብ አፍሪካ ራንድ",
       "ZMW": "የዛምቢያ ክዋቻ",
+      "ZWG": "የዚምባብዌ ወርቅ",
       "ZWL": "ዚምባብዌ ዶላር",
     });
   }

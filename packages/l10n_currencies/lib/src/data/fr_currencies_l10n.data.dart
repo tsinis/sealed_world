@@ -1,6 +1,6 @@
 import "../iso_locale_mapper.dart";
 
-/// Contains 159 translation(s).
+/// Contains 161 translation(s).
 /// Provides translations for the French language
 /// locale.
 class FrCurrenciesL10N extends IsoLocaleMapper<String> {
@@ -160,11 +160,13 @@ class FrCurrenciesL10N extends IsoLocaleMapper<String> {
       "WST": "tala samoan",
       "XAF": "franc CFA (BEAC)",
       "XCD": "dollar des Caraïbes orientales",
+      "XCG": "florin caribéen",
       "XOF": "franc CFA (BCEAO)",
       "XPF": "franc CFP",
       "YER": "rial yéménite",
       "ZAR": "rand sud-africain",
       "ZMW": "kwacha zambien",
+      "ZWG": "or du Zimbabwe",
       "ZWL": "dollar zimbabwéen",
     });
   }

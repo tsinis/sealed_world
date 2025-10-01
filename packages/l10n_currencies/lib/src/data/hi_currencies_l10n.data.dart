@@ -1,6 +1,6 @@
 import "../iso_locale_mapper.dart";
 
-/// Contains 159 translation(s).
+/// Contains 161 translation(s).
 /// Provides translations for the Hindi language
 /// locale.
 class HiCurrenciesL10N extends IsoLocaleMapper<String> {
@@ -160,11 +160,13 @@ class HiCurrenciesL10N extends IsoLocaleMapper<String> {
       "WST": "समोआई ताला",
       "XAF": "[CFA] फ़्रैंक [BEAC]",
       "XCD": "पूर्वी कैरिबियाई डॉलर",
+      "XCG": "कैरीबियन गिल्डर",
       "XOF": "पश्चिमी अफ़्रीकी CFA फ्रैंक",
       "XPF": "[CFP] फ़्रैंक",
       "YER": "यमनी रियाल",
       "ZAR": "दक्षिण अफ़्रीकी रैंड",
       "ZMW": "ज़ाम्बियन क्वाचा",
+      "ZWG": "ज़िंबाब्वियन गोल्ड",
       "ZWL": "जिम्बाब्वे डॉलर",
     });
   }

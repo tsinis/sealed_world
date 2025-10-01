@@ -1,6 +1,6 @@
 import "../iso_locale_mapper.dart";
 
-/// Contains 159 translation(s).
+/// Contains 161 translation(s).
 /// Provides translations for the Romansh language
 /// locale.
 class RmCurrenciesL10N extends IsoLocaleMapper<String> {
@@ -160,11 +160,13 @@ class RmCurrenciesL10N extends IsoLocaleMapper<String> {
       "WST": "tala da la Samoa",
       "XAF": "franc CFA BEAC",
       "XCD": "dollar da la Caribica Orientala",
+      "XCG": "flurin caribic",
       "XOF": "franc CFA BCEAO",
       "XPF": "franc CFP",
       "YER": "rial dal Jemen",
       "ZAR": "rand sidafrican",
       "ZMW": "kwacha da la sambia",
+      "ZWG": "aur dal Simbabwe",
       "ZWL": "dollar dal Simbabwe",
     });
   }

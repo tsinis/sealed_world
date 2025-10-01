@@ -1,6 +1,6 @@
 import "../iso_locale_mapper.dart";
 
-/// Contains 159 translation(s).
+/// Contains 161 translation(s).
 /// Provides translations for the Telugu language
 /// locale.
 class TeCurrenciesL10N extends IsoLocaleMapper<String> {
@@ -160,11 +160,13 @@ class TeCurrenciesL10N extends IsoLocaleMapper<String> {
       "WST": "సమోయన్ తాలా",
       "XAF": "సెంట్రల్ ఆఫ్రికన్ సిఎఫ్‌ఎ ఫ్రాంక్",
       "XCD": "తూర్పు కరీబియన్ డాలర్",
+      "XCG": "కరీబియన్ గిల్‌డర్",
       "XOF": "పశ్చిమ ఆఫ్రికన్ సిఏఫ్ఏ ఫ్రాంక్",
       "XPF": "సిఎఫ్‌పి ఫ్రాంక్",
       "YER": "ఎమునీ రీయల్",
       "ZAR": "దక్షిణ ఆఫ్రికా ర్యాండ్",
       "ZMW": "జాంబియన్ క్వాచా",
+      "ZWG": "జింబాబ్వేయన్ గోల్డ్",
       "ZWL": "జింబాబ్వే డాలర్",
     });
   }

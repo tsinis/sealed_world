@@ -1,6 +1,6 @@
 import "../iso_locale_mapper.dart";
 
-/// Contains 159 translation(s).
+/// Contains 161 translation(s).
 /// Provides translations for the Pashto (Pushto) language
 /// locale.
 class PsCurrenciesL10N extends IsoLocaleMapper<String> {
@@ -160,11 +160,13 @@ class PsCurrenciesL10N extends IsoLocaleMapper<String> {
       "WST": "سموون تالا",
       "XAF": "منځنۍ افريقايي سي اف اې فرانک",
       "XCD": "ختيځ کارېبين ډالر",
+      "XCG": "د کارابین ګیلډر",
       "XOF": "لوېديځ افريقايي سي اف اې فرانک",
       "XPF": "CFP فرانک",
       "YER": "يمني ريال",
       "ZAR": "جنوبي افريقاېي رنډ",
       "ZMW": "زيمبي کواچا",
+      "ZWG": "د زمبابوې سره زر",
       "ZWL": "د زیمبابوې ډالر",
     });
   }

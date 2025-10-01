@@ -1,6 +1,6 @@
 import "../iso_locale_mapper.dart";
 
-/// Contains 159 translation(s).
+/// Contains 161 translation(s).
 /// Provides translations for the Burmese language
 /// locale.
 class MyCurrenciesL10N extends IsoLocaleMapper<String> {
@@ -160,11 +160,13 @@ class MyCurrenciesL10N extends IsoLocaleMapper<String> {
       "WST": "ဆမိုအား ထားလာ",
       "XAF": "ကင်မရွန်းဖရန့်",
       "XCD": "အရှေ့ကာရစ်ဘီယံဒေါ်လာ",
+      "XCG": "ကာရစ်ဘီယံ ဂင်းဒါး",
       "XOF": "ဖရန့်",
       "XPF": "CFP ဖရန့်",
       "YER": "ယီမင်ရီအော်လ်",
       "ZAR": "တောင်အဖရိက ရန်း",
       "ZMW": "ဇင်ဘာဘွေခွါးချာ",
+      "ZWG": "ဇင်ဘာဘွေ ရွှေ",
       "ZWL": "ဇင်ဘာဘွေ ဒေါ်လာ",
     });
   }

@@ -1,6 +1,6 @@
 import "../iso_locale_mapper.dart";
 
-/// Contains 159 translation(s).
+/// Contains 161 translation(s).
 /// Provides translations for the Greek (modern) language
 /// locale.
 class ElCurrenciesL10N extends IsoLocaleMapper<String> {
@@ -160,11 +160,13 @@ class ElCurrenciesL10N extends IsoLocaleMapper<String> {
       "WST": "Τάλα Σαμόα",
       "XAF": "Φράγκο CFA Κεντρικής Αφρικής",
       "XCD": "Δολάριο Ανατολικής Καραϊβικής",
+      "XCG": "γκίλντα Καραϊβικής",
       "XOF": "Φράγκο CFA Δυτικής Αφρικής",
       "XPF": "Φράγκο CFP",
       "YER": "Ριάλ Υεμένης",
       "ZAR": "Ραντ Νότιας Αφρικής",
       "ZMW": "Κουάτσα Ζάμπιας",
+      "ZWG": "Χρυσός της Ζιμπάμπουε",
       "ZWL": "Δολάριο Ζιμπάμπουε",
     });
   }

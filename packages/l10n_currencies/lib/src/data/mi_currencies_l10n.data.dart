@@ -1,6 +1,6 @@
 import "../iso_locale_mapper.dart";
 
-/// Contains 135 translation(s).
+/// Contains 137 translation(s).
 /// Provides translations for the Māori language
 /// locale.
 class MiCurrenciesL10N extends IsoLocaleMapper<String> {
@@ -139,9 +139,11 @@ class MiCurrenciesL10N extends IsoLocaleMapper<String> {
       "VES": "Bolivar Penehūera",
       "VUV": "Vatu Whenuatū",
       "WST": "Tala Hāmoa",
+      "XCG": "Guilder Karapīana",
       "YER": "Rial Īmene",
       "ZAR": "Rand Āwherika ki te Tonga",
       "ZMW": "Kwacha Tāmipia",
+      "ZWG": "Kōura Timuwawe",
     });
   }
 }

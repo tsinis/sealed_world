@@ -1,6 +1,6 @@
 import "../iso_locale_mapper.dart";
 
-/// Contains 159 translation(s).
+/// Contains 161 translation(s).
 /// Provides translations for the Turkish language
 /// locale.
 class TrCurrenciesL10N extends IsoLocaleMapper<String> {
@@ -160,11 +160,13 @@ class TrCurrenciesL10N extends IsoLocaleMapper<String> {
       "WST": "Samoa Talası",
       "XAF": "CFA Frangı BEAC",
       "XCD": "Doğu Karayip Doları",
+      "XCG": "Karayip guldeni",
       "XOF": "CFA Frangı BCEAO",
       "XPF": "CFP Frangı",
       "YER": "Yemen Riyali",
       "ZAR": "Güney Afrika Randı",
       "ZMW": "Zambiya Kvaçası",
+      "ZWG": "Zimbabve altını",
       "ZWL": "Zimbabve Doları",
     });
   }

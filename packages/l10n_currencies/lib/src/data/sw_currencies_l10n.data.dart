@@ -1,6 +1,6 @@
 import "../iso_locale_mapper.dart";
 
-/// Contains 159 translation(s).
+/// Contains 161 translation(s).
 /// Provides translations for the Swahili language
 /// locale.
 class SwCurrenciesL10N extends IsoLocaleMapper<String> {
@@ -160,11 +160,13 @@ class SwCurrenciesL10N extends IsoLocaleMapper<String> {
       "WST": "Tala ya Samoa",
       "XAF": "Faranga ya Afrika ya Kati CFA",
       "XCD": "Dola ya Karibea ya Mashariki",
+      "XCG": "Guilder ya Karibe",
       "XOF": "Faranga ya Afrika Magharibi CFA",
       "XPF": "Faranga ya CFP",
       "YER": "Rial ya Yemeni",
       "ZAR": "Randi ya Afrika Kusini",
       "ZMW": "Kwacha ya Zambia",
+      "ZWG": "Dhahabu ya Zimbabwe",
       "ZWL": "Zimbabwe Dollar",
     });
   }

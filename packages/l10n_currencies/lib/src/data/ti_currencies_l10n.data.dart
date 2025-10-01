@@ -1,6 +1,6 @@
 import "../iso_locale_mapper.dart";
 
-/// Contains 10 translation(s).
+/// Contains 12 translation(s).
 /// Provides translations for the Tigrinya language
 /// locale.
 class TiCurrenciesL10N extends IsoLocaleMapper<String> {
@@ -17,6 +17,8 @@ class TiCurrenciesL10N extends IsoLocaleMapper<String> {
       "JPY": "የጃፓን የን",
       "RUB": "የራሻ ሩብል",
       "USD": "የአሜሪካን ዶላር",
+      "XCG": "ካሪብያን ጊልደር",
+      "ZWG": "ዚምባብወ ወርቂ",
     });
   }
 }

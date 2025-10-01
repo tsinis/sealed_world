@@ -1,6 +1,6 @@
 import "../iso_locale_mapper.dart";
 
-/// Contains 159 translation(s).
+/// Contains 161 translation(s).
 /// Provides translations for the Finnish language
 /// locale.
 class FiCurrenciesL10N extends IsoLocaleMapper<String> {
@@ -160,11 +160,13 @@ class FiCurrenciesL10N extends IsoLocaleMapper<String> {
       "WST": "Samoan tala",
       "XAF": "CFA-frangi BEAC",
       "XCD": "Itä-Karibian dollari",
+      "XCG": "Karibian guldeni",
       "XOF": "CFA-frangi BCEAO",
       "XPF": "CFP-frangi",
       "YER": "Jemenin rial",
       "ZAR": "Etelä-Afrikan randi",
       "ZMW": "Sambian kwacha",
+      "ZWG": "Zimbabwen kulta",
       "ZWL": "Zimbabwen dollari",
     });
   }

@@ -1,6 +1,6 @@
 import "../iso_locale_mapper.dart";
 
-/// Contains 159 translation(s).
+/// Contains 161 translation(s).
 /// Provides translations for the Estonian language
 /// locale.
 class EtCurrenciesL10N extends IsoLocaleMapper<String> {
@@ -160,11 +160,13 @@ class EtCurrenciesL10N extends IsoLocaleMapper<String> {
       "WST": "Samoa taala",
       "XAF": "Kesk-Aafrika CFA frank",
       "XCD": "Ida-Kariibi dollar",
+      "XCG": "Kariibi kulden",
       "XOF": "Lääne-Aafrika CFA frank",
       "XPF": "CFP frank",
       "YER": "Jeemeni riaal",
       "ZAR": "Lõuna-Aafrika rand",
       "ZMW": "Sambia kvatša",
+      "ZWG": "Zimbabwe kuld",
       "ZWL": "Zimbabwe dollar",
     });
   }

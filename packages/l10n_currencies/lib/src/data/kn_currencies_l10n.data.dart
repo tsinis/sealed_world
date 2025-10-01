@@ -1,6 +1,6 @@
 import "../iso_locale_mapper.dart";
 
-/// Contains 159 translation(s).
+/// Contains 161 translation(s).
 /// Provides translations for the Kannada language
 /// locale.
 class KnCurrenciesL10N extends IsoLocaleMapper<String> {
@@ -160,11 +160,13 @@ class KnCurrenciesL10N extends IsoLocaleMapper<String> {
       "WST": "ಸಮೋನ್ ತಲಾ",
       "XAF": "CFA ಫ್ರಾಂಕ್ BEAC",
       "XCD": "ಪೂರ್ವ ಕೆರೀಬಿಯನ್ ಡಾಲರ್",
+      "XCG": "ಕೆರೆಬಿಯನ್ ಗಿಲ್ಡರ್",
       "XOF": "ಪಶ್ಚಿಮ ಆಫ್ರಿಕಾದ [CFA] ಫ್ರಾಂಕ್",
       "XPF": "[CFP] ಫ್ರಾಂಕ್",
       "YER": "ಯೆಮೆನಿ ರಿಯಲ್",
       "ZAR": "ದಕ್ಷಿಣ ಆಫ್ರಿಕನ್ ರಾಂಡ್",
       "ZMW": "ಜಾಂಬಿಯಾ ಕ್ವಾಚ",
+      "ZWG": "ಜಿಂಬಾಬ್ವಿಯನ್ ಗೋಲ್ಡ್",
       "ZWL": "ಜಿಂಬಾಬ್ವೆ ಡಾಲರ್",
     });
   }

@@ -1,6 +1,6 @@
 import "../iso_locale_mapper.dart";
 
-/// Contains 159 translation(s).
+/// Contains 161 translation(s).
 /// Provides translations for the Nepali language
 /// locale.
 class NeCurrenciesL10N extends IsoLocaleMapper<String> {
@@ -160,11 +160,13 @@ class NeCurrenciesL10N extends IsoLocaleMapper<String> {
       "WST": "सामोआन ताला",
       "XAF": "सीएफ्‌ए फ्रान्क बीइएसी",
       "XCD": "पूर्वी क्यारिबियन डलर",
+      "XCG": "क्यारिबियन गिल्डर",
       "XOF": "सीएफ्‌ए फ्रान्क बीसीइएओ",
       "XPF": "सीएफ्‌पी फ्रान्क",
       "YER": "येमेनी रियाल",
       "ZAR": "दक्षिण अफ्रिकी र्‍यान्ड",
       "ZMW": "जाम्बियाली क्वाचा",
+      "ZWG": "जिम्बाबेली सुन",
       "ZWL": "जिम्बाब्वे डलर",
     });
   }

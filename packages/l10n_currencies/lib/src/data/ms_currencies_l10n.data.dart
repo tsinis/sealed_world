@@ -1,6 +1,6 @@
 import "../iso_locale_mapper.dart";
 
-/// Contains 159 translation(s).
+/// Contains 161 translation(s).
 /// Provides translations for the Malay language
 /// locale.
 class MsCurrenciesL10N extends IsoLocaleMapper<String> {
@@ -160,11 +160,13 @@ class MsCurrenciesL10N extends IsoLocaleMapper<String> {
       "WST": "Tala Samoa",
       "XAF": "Franc CFA BEAC",
       "XCD": "Dolar Caribbean Timur",
+      "XCG": "Guilder Caribbean",
       "XOF": "Franc CFA BCEAO",
       "XPF": "Franc CFP",
       "YER": "Rial Yaman",
       "ZAR": "Rand Afrika Selatan",
       "ZMW": "Kwacha Zambia",
+      "ZWG": "Emas Zimbabwe",
       "ZWL": "Dolar Zimbabwe",
     });
   }

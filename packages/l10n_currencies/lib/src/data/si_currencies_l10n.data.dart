@@ -1,6 +1,6 @@
 import "../iso_locale_mapper.dart";
 
-/// Contains 159 translation(s).
+/// Contains 161 translation(s).
 /// Provides translations for the Sinhalese (Sinhala) language
 /// locale.
 class SiCurrenciesL10N extends IsoLocaleMapper<String> {
@@ -160,11 +160,13 @@ class SiCurrenciesL10N extends IsoLocaleMapper<String> {
       "WST": "සැමෝවා ටාලා",
       "XAF": "සිෆ්එ ෆ්රෑන්ක් බිඊඑසි",
       "XCD": "නැගෙනහිර කැරිබියානු ඩොලර්",
+      "XCG": "කැරිබියානු ගිල්ඩර්",
       "XOF": "සිෆ්එ ෆ්රෑන්ක් බිසීඊඑඔ",
       "XPF": "ප්‍රංශ පොලිනීසියානු ෆ්‍රෑන්ක්",
       "YER": "යේමන රියාල්",
       "ZAR": "දකුණු අප්‍රිකානු රැන්ඩ්",
       "ZMW": "සැම්බියානු ක්වාචා",
+      "ZWG": "සිම්බාබ්වේ රත්තරන්",
       "ZWL": "සිම්බාබ්වේ ඩොලරය",
     });
   }

@@ -1,6 +1,6 @@
 import "../iso_locale_mapper.dart";
 
-/// Contains 159 translation(s).
+/// Contains 161 translation(s).
 /// Provides translations for the (Eastern) Punjabi language
 /// locale.
 class PaCurrenciesL10N extends IsoLocaleMapper<String> {
@@ -160,11 +160,13 @@ class PaCurrenciesL10N extends IsoLocaleMapper<String> {
       "WST": "ਸਾਮੋਆਈ ਤਾਲਾ",
       "XAF": "ਕੇਂਦਰੀ ਅਫ਼ਰੀਕੀ [CFA] ਫ੍ਰੈਂਕ",
       "XCD": "ਪੂਰਬੀ ਕੈਰੇਬੀਅਨ ਡਾਲਰ",
+      "XCG": "ਕੈਰੇਬੀਅਨ ਗਿਲਡਰ",
       "XOF": "ਪੱਛਮੀ ਅਫ਼ਰੀਕੀ (CFA) ਫ੍ਰੈਂਕ",
       "XPF": "ਫ੍ਰੈਂਕ (CFP)",
       "YER": "ਯਮਨੀ ਰਿਆਲ",
       "ZAR": "ਦੱਖਣੀ ਅਫਰੀਕੀ ਰੈਂਡ",
       "ZMW": "ਜ਼ਾਮਬੀਆਈ ਕਵਾਚਾ",
+      "ZWG": "ਜ਼ਿੰਬਾਬਵੀ ਗੋਲਡ",
       "ZWL": "ਜਿੰਬਾਬਵੇ ਡਾਲਰ",
     });
   }

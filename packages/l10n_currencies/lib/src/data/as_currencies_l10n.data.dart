@@ -1,6 +1,6 @@
 import "../iso_locale_mapper.dart";
 
-/// Contains 159 translation(s).
+/// Contains 161 translation(s).
 /// Provides translations for the Assamese language
 /// locale.
 class AsCurrenciesL10N extends IsoLocaleMapper<String> {
@@ -160,11 +160,13 @@ class AsCurrenciesL10N extends IsoLocaleMapper<String> {
       "WST": "ছামোৱান টালা",
       "XAF": "মধ্য আফ্ৰিকান CFA ফ্ৰেংক",
       "XCD": "ইষ্ট কেৰিবিয়ান ডলাৰ",
+      "XCG": "কেৰিবীয়ান গিল্ডাৰ",
       "XOF": "পশ্চিম আফ্ৰিকান CFA ফ্ৰেংক",
       "XPF": "CFP ফ্ৰেংক",
       "YER": "য়েমেনী ৰিয়েল",
       "ZAR": "দক্ষিণ আফ্ৰিকাৰ ৰাণ্ড",
       "ZMW": "জাম্বিয়ান কোৱাচা",
+      "ZWG": "জিম্বাৱীয় সোণ",
       "ZWL": "জিম্বাবুৱেৰ ডলাৰ",
     });
   }

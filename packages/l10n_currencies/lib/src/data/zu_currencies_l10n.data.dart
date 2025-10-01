@@ -1,6 +1,6 @@
 import "../iso_locale_mapper.dart";
 
-/// Contains 159 translation(s).
+/// Contains 161 translation(s).
 /// Provides translations for the Zulu language
 /// locale.
 class ZuCurrenciesL10N extends IsoLocaleMapper<String> {
@@ -160,11 +160,13 @@ class ZuCurrenciesL10N extends IsoLocaleMapper<String> {
       "WST": "i-Samoan Tala",
       "XAF": "i-Central African CFA Franc",
       "XCD": "i-East Caribbean Dollar",
+      "XCG": "Caribbean guilder",
       "XOF": "i-West African CFA Franc",
       "XPF": "i-CFP Franc",
       "YER": "i-Yemeni Rial",
       "ZAR": "i-South African Rand",
       "ZMW": "i-Zambian Kwacha",
+      "ZWG": "Zimbabwean Gold",
       "ZWL": "I-Zimbabwe Dollar",
     });
   }

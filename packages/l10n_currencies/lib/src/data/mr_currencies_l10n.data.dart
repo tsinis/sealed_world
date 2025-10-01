@@ -1,6 +1,6 @@
 import "../iso_locale_mapper.dart";
 
-/// Contains 159 translation(s).
+/// Contains 161 translation(s).
 /// Provides translations for the Marathi (Marāṭhī) language
 /// locale.
 class MrCurrenciesL10N extends IsoLocaleMapper<String> {
@@ -160,11 +160,13 @@ class MrCurrenciesL10N extends IsoLocaleMapper<String> {
       "WST": "सामोअन टाला",
       "XAF": "मध्य आफ्रिकन [CFA] फ्रँक",
       "XCD": "पूर्व कॅरीबियन डॉलर",
+      "XCG": "कॅरेबियब गिल्डर",
       "XOF": "पश्चिम आफ्रिकन [CFA] फ्रँक",
       "XPF": "[CFP] फ्रँक",
       "YER": "येमेनी रियाल",
       "ZAR": "दक्षिण आफ्रिकी रँड",
       "ZMW": "झांबियन क्वाचा",
+      "ZWG": "झिंबाब्वेयन गोल्ड",
       "ZWL": "झिम्बाब्वे डॉलर",
     });
   }

@@ -1,6 +1,6 @@
 import "../iso_locale_mapper.dart";
 
-/// Contains 159 translation(s).
+/// Contains 161 translation(s).
 /// Provides translations for the Welsh language
 /// locale.
 class CyCurrenciesL10N extends IsoLocaleMapper<String> {
@@ -160,11 +160,13 @@ class CyCurrenciesL10N extends IsoLocaleMapper<String> {
       "WST": "Tala Samoa",
       "XAF": "Ffranc CFA Canol Affrica",
       "XCD": "Doler Dwyrain y Caribî",
+      "XCG": "guilder Caribïaidd",
       "XOF": "Ffranc CFA Gorllewin Affrica",
       "XPF": "Ffranc CFP",
       "YER": "Rial Yemen",
       "ZAR": "Rand De Affrica",
       "ZMW": "Kwacha Zambia",
+      "ZWG": "Zimbabwean Gold",
       "ZWL": "Doler Zimbabwe",
     });
   }

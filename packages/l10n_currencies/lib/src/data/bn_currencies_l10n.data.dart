@@ -1,6 +1,6 @@
 import "../iso_locale_mapper.dart";
 
-/// Contains 159 translation(s).
+/// Contains 161 translation(s).
 /// Provides translations for the Bengali (Bangla) language
 /// locale.
 class BnCurrenciesL10N extends IsoLocaleMapper<String> {
@@ -160,11 +160,13 @@ class BnCurrenciesL10N extends IsoLocaleMapper<String> {
       "WST": "সামোয়ান টালা",
       "XAF": "মধ্য আফ্রিকান [CFA] ফ্র্যাঙ্ক",
       "XCD": "পূর্ব ক্যারাবিয়ান ডলার",
+      "XCG": "ক্যারিবিয়ান গিল্ডার",
       "XOF": "পশ্চিম আফ্রিকান [CFA] ফ্র্যাঙ্ক",
       "XPF": "সিএফপি ফ্র্যাঙ্ক",
       "YER": "ইয়েমেনি রিয়াল",
       "ZAR": "দক্ষিণ আফ্রিকান রেন্ড",
       "ZMW": "জাম্বিয়ান কওয়াচা",
+      "ZWG": "জিম্বাবায়েন গোল্ড",
       "ZWL": "জিম্বাবুয়ে ডলার (২০০৯)",
     });
   }

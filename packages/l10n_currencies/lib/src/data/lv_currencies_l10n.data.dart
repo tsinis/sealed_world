@@ -1,6 +1,6 @@
 import "../iso_locale_mapper.dart";
 
-/// Contains 159 translation(s).
+/// Contains 161 translation(s).
 /// Provides translations for the Latvian language
 /// locale.
 class LvCurrenciesL10N extends IsoLocaleMapper<String> {
@@ -160,11 +160,13 @@ class LvCurrenciesL10N extends IsoLocaleMapper<String> {
       "WST": "Samoa tala",
       "XAF": "Centrālāfrikas CFA franks",
       "XCD": "Austrumkarību dolārs",
+      "XCG": "Karību guldenis",
       "XOF": "Rietumāfrikas CFA franks",
       "XPF": "CFP franks",
       "YER": "Jemenas riāls",
       "ZAR": "Dienvidāfrikas rends",
       "ZMW": "Zambijas kvača",
+      "ZWG": "Zimbabves zelts",
       "ZWL": "Zimbabves dolārs",
     });
   }

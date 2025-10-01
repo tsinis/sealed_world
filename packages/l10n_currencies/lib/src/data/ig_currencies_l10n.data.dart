@@ -1,6 +1,6 @@
 import "../iso_locale_mapper.dart";
 
-/// Contains 135 translation(s).
+/// Contains 137 translation(s).
 /// Provides translations for the Igbo language
 /// locale.
 class IgCurrenciesL10N extends IsoLocaleMapper<String> {
@@ -139,9 +139,11 @@ class IgCurrenciesL10N extends IsoLocaleMapper<String> {
       "VES": "Ego Bolivar obodo Venezuela",
       "VUV": "Ego Vatu obodo Vanuatu",
       "WST": "Ego Tala obodo Samoa",
+      "XCG": "Ego Guilder Caribbean",
       "YER": "Ego Rial obodo Yemeni",
       "ZAR": "Ego Rand obodo South Africa",
       "ZMW": "Ego Kwacha Obodo Zambia",
+      "ZWG": "Ego Ọlaọcha Zimbabwe",
     });
   }
 }

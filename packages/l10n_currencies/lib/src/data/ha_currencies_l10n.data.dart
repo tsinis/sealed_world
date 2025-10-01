@@ -1,6 +1,6 @@
 import "../iso_locale_mapper.dart";
 
-/// Contains 145 translation(s).
+/// Contains 147 translation(s).
 /// Provides translations for the Hausa language
 /// locale.
 class HaCurrenciesL10N extends IsoLocaleMapper<String> {
@@ -148,10 +148,12 @@ class HaCurrenciesL10N extends IsoLocaleMapper<String> {
       "VUV": "Vatu da ƙasar Vanuatu",
       "WST": "Tala na ƙasar Samoa",
       "XAF": "Kuɗin Sefa na Afirka Ta Tsakiya",
+      "XCG": "Guilder na Caribbean",
       "XOF": "Kuɗin Sefa na Afirka Ta Yamma",
       "YER": "Riyal ɗin Yemen",
       "ZAR": "Kuɗin Afirka Ta Kudu",
       "ZMW": "Kuɗin Zambiya",
+      "ZWG": "Zinaren Zimbabwe",
     });
   }
 }

@@ -1,6 +1,6 @@
 import "../iso_locale_mapper.dart";
 
-/// Contains 134 translation(s).
+/// Contains 136 translation(s).
 /// Provides translations for the Interlingua language
 /// locale.
 class IaCurrenciesL10N extends IsoLocaleMapper<String> {
@@ -138,9 +138,11 @@ class IaCurrenciesL10N extends IsoLocaleMapper<String> {
       "VES": "bolivar venezuelan",
       "VUV": "vatu vanuatuan",
       "WST": "tala samoan",
+      "XCG": "florino caribe",
       "YER": "rial yemeni",
       "ZAR": "rand sudafrican",
       "ZMW": "kwacha zambian",
+      "ZWG": "auro de Zimbwabwe",
     });
   }
 }

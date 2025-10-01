@@ -1,6 +1,6 @@
 import "../iso_locale_mapper.dart";
 
-/// Contains 159 translation(s).
+/// Contains 161 translation(s).
 /// Provides translations for the Malayalam language
 /// locale.
 class MlCurrenciesL10N extends IsoLocaleMapper<String> {
@@ -160,11 +160,13 @@ class MlCurrenciesL10N extends IsoLocaleMapper<String> {
       "WST": "സമോവൻ താല",
       "XAF": "മദ്ധ്യ ആഫ്രിക്കൻ [CFA] ഫ്രാങ്ക്",
       "XCD": "കിഴക്കൻ കരീബിയൻ ഡോളർ",
+      "XCG": "കരീബിയൻ ഗിൽഡർ",
       "XOF": "പശ്ചിമ ആഫ്രിക്കൻ [CFA] ഫ്രാങ്ക്",
       "XPF": "CFP ഫ്രാങ്ക്",
       "YER": "യെമനി റിയാൽ",
       "ZAR": "ദക്ഷിണാഫ്രിക്കൻ റാൻഡ്",
       "ZMW": "സാംബിയൻ ക്വാച്ച",
+      "ZWG": "സിംബാബ്‌വെയൻ ഗോൾഡ്",
       "ZWL": "സിംബാബ്‌വേയൻ ഡോളർ",
     });
   }

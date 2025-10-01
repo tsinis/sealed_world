@@ -1,6 +1,6 @@
 import "../iso_locale_mapper.dart";
 
-/// Contains 159 translation(s).
+/// Contains 161 translation(s).
 /// Provides translations for the Belarusian language
 /// locale.
 class BeCurrenciesL10N extends IsoLocaleMapper<String> {
@@ -160,11 +160,13 @@ class BeCurrenciesL10N extends IsoLocaleMapper<String> {
       "WST": "самаанская тала",
       "XAF": "цэнтральнаафрыканскі франк КФА",
       "XCD": "усходнекарыбскі долар",
+      "XCG": "карыбскі гульдэн",
       "XOF": "заходнеафрыканскі франк КФА",
       "XPF": "французскі ціхаакіянскі франк",
       "YER": "еменскі рыал",
       "ZAR": "паўднёваафрыканскі ранд",
       "ZMW": "замбійская квача",
+      "ZWG": "зімбабвійскі залаты",
       "ZWL": "даляр Зімбабвэ",
     });
   }

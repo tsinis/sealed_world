@@ -1,6 +1,6 @@
 import "../iso_locale_mapper.dart";
 
-/// Contains 159 translation(s).
+/// Contains 161 translation(s).
 /// Provides translations for the Macedonian language
 /// locale.
 class MkCurrenciesL10N extends IsoLocaleMapper<String> {
@@ -160,11 +160,13 @@ class MkCurrenciesL10N extends IsoLocaleMapper<String> {
       "WST": "Самоанска тала",
       "XAF": "Централноафрикански франк",
       "XCD": "Источно карибиски долар",
+      "XCG": "Карипски гулден",
       "XOF": "Западноафрикански франк",
       "XPF": "ЦФП франк",
       "YER": "Јеменски риал",
       "ZAR": "Јужноафрикански ранд",
       "ZMW": "Замбијска квача",
+      "ZWG": "Зимбабвеско злато",
       "ZWL": "Зимбабвиски долар",
     });
   }

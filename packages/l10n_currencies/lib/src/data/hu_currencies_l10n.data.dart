@@ -1,6 +1,6 @@
 import "../iso_locale_mapper.dart";
 
-/// Contains 159 translation(s).
+/// Contains 161 translation(s).
 /// Provides translations for the Hungarian language
 /// locale.
 class HuCurrenciesL10N extends IsoLocaleMapper<String> {
@@ -160,11 +160,13 @@ class HuCurrenciesL10N extends IsoLocaleMapper<String> {
       "WST": "nyugat-szamoai tala",
       "XAF": "CFA frank BEAC",
       "XCD": "kelet-karibi dollár",
+      "XCG": "karibi forint",
       "XOF": "CFA frank BCEAO",
       "XPF": "csendes-óceáni valutaközösségi frank",
       "YER": "jemeni rial",
       "ZAR": "dél-afrikai rand",
       "ZMW": "zambiai kwacha",
+      "ZWG": "zimbabwei arany",
       "ZWL": "Zimbabwei dollár",
     });
   }
