@@ -1588,6 +1588,7 @@ class CountryBgr extends WorldCountry {
         ),
       );
   @override
+  // ignore: deprecated_member_use, TODO! End of 2025.
   List<FiatCurrency> get currencies => const [FiatBgn()];
   @override
   CapitalInfo get capitalInfo => const CapitalInfo(

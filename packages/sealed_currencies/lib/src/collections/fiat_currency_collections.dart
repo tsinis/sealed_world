@@ -22,7 +22,8 @@ const fiatCurrencyCodeMap = <String, FiatCurrency>{
   "BAM": FiatBam(),
   "BBD": FiatBbd(),
   "BDT": FiatBdt(),
-  "BGN": FiatBgn(),
+  "BGN":
+      FiatBgn(), // ignore: deprecated_member_use_from_same_package, TODO! End of 2025.
   "BHD": FiatBhd(),
   "BIF": FiatBif(),
   "BMD": FiatBmd(),
@@ -350,7 +351,8 @@ const fiatCurrencyCodeOtherMap = <String, FiatCurrency>{
   "971": FiatAfn(),
   "972": FiatTjs(),
   "973": FiatAoa(),
-  "975": FiatBgn(),
+  "975":
+      FiatBgn(), // ignore: deprecated_member_use_from_same_package, TODO! End of 2025.
   "976": FiatCdf(),
   "977": FiatBam(),
   "978": FiatEur(),

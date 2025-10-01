@@ -254,6 +254,7 @@ class FiatBgn extends FiatCurrency {
   /// Creates a instance of [FiatBgn] (Bulgarian Lev currency).
   ///
   /// ISO 4217 Alpha code: `BGN`, ISO 4217 Numeric code: `975`.
+  @Deprecated("Use `FiatEur()` instead (From 2026)")
   const FiatBgn()
     : super(
         code: "BGN",

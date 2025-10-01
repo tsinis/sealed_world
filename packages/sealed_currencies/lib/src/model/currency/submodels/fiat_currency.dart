@@ -473,7 +473,7 @@ class FiatCurrency extends Currency
     FiatBam(),
     FiatBbd(),
     FiatBdt(),
-    FiatBgn(),
+    FiatBgn(), // ignore: deprecated_member_use_from_same_package, TODO! End of 2025.
     FiatBhd(),
     FiatBif(),
     FiatBmd(),
