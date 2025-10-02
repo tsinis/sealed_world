@@ -17,7 +17,7 @@ void main(List<String> args) {
 
   final currencyCode = args.first.toUpperCase().trim();
 
-  if (currencyCode.length != 3) {
+  if (currencyCode.length != IsoStandardized.codeLength) {
     print("Error: Currency code must be exactly 3 letters.");
     exit(1);
   }
