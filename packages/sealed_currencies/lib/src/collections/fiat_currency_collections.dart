@@ -171,8 +171,9 @@ const fiatCurrencyCodeMap = <String, FiatCurrency>{
   "YER": FiatYer(),
   "ZAR": FiatZar(),
   "ZMW": FiatZmw(),
-  "ZWL": FiatZwl(),
-
+  "ZWG": FiatZwg(),
+  "ZWL":
+      FiatZwl(), // ignore: deprecated_member_use_from_same_package, TODO! End of 2025.
   // ignore: map-keys-ordering, Special purpose currencies.
   "XAG": FiatXag(),
   "XAU": FiatXau(),
@@ -316,12 +317,14 @@ const fiatCurrencyCodeOtherMap = <String, FiatCurrency>{
   "882": FiatWst(),
   "886": FiatYer(),
   "901": FiatTwd(),
+  "924": FiatZwg(),
   "925": FiatSle(),
   "928": FiatVes(),
   "929": FiatMru(),
   "930": FiatStn(),
   "931": FiatCuc(),
-  "932": FiatZwl(),
+  "932":
+      FiatZwl(), // ignore: deprecated_member_use_from_same_package, TODO! End of 2025.
   "933": FiatByn(),
   "934": FiatTmt(),
   "936": FiatGhs(),

@@ -3197,11 +3197,29 @@ class FiatZmw extends FiatCurrency {
       );
 }
 
+/// A class that represents the Zimbabwe Gold currency.
+class FiatZwg extends FiatCurrency {
+  /// Creates a instance of [FiatZwg] (Zimbabwe Gold currency).
+  ///
+  /// ISO 4217 Alpha code: `ZWG`, ISO 4217 Numeric code: `924`.
+  const FiatZwg()
+    : super(
+        code: "ZWG",
+        name: "Zimbabwe Gold",
+        symbol: "ZiG",
+        disambiguateSymbol: "ZWG",
+        codeNumeric: "924",
+        namesNative: const ["Zimbabwe Gold"],
+        subunit: "cent",
+      );
+}
+
 /// A class that represents the Zimbabwean Dollar currency.
 class FiatZwl extends FiatCurrency {
   /// Creates a instance of [FiatZwl] (Zimbabwean Dollar currency).
   ///
   /// ISO 4217 Alpha code: `ZWL`, ISO 4217 Numeric code: `932`.
+  @Deprecated("Use `FiatZwg()` instead")
   const FiatZwl()
     : super(
         code: "ZWL",

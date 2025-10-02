@@ -203,19 +203,9 @@ const ${varFileName.toCamelCase()} = [
     final sortedMap = _sortMapByKeyLength(json);
     final nullMap = sortedMap.map(
       (code, l10n) => MapEntry(_instanceFromCode(code), l10n?.toString()),
-    );
-
-    if (package == Package.sealedCurrencies) _fixCurrencyData(nullMap);
-    nullMap.removeWhere((key, value) => key == null || value == null);
+    )..removeWhere((key, value) => key == null || value == null);
 
     return Map.unmodifiable(nullMap);
-  }
-
-  static void _fixCurrencyData(Map<IsoStandardized?, String?> mapToUpdate) {
-    final maybeZwl = mapToUpdate[const FiatZwl()];
-    if (maybeZwl == null) return;
-    final withoutYear = maybeZwl.replaceFirst(RegExp(r"\(\d{4}\)"), "");
-    mapToUpdate[const FiatZwl()] = withoutYear.trim();
   }
 
   IsoStandardized<Object>? _instanceFromCode(String code) => package.when(

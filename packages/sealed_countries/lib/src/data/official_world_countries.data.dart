@@ -17327,7 +17327,8 @@ class CountryZwe extends WorldCountry {
         timezones: const ["UTC+02:00"],
       );
   @override
-  List<FiatCurrency> get currencies => const [FiatGbp(), FiatZwl()];
+  // ignore: deprecated_member_use, it's TODO! End of 2025.
+  List<FiatCurrency> get currencies => const [FiatGbp(), FiatZwg(), FiatZwl()];
   @override
   CapitalInfo get capitalInfo => const CapitalInfo(
     capital: Capital("Harare"),

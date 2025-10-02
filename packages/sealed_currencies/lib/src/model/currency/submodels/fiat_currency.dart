@@ -618,7 +618,8 @@ class FiatCurrency extends Currency
     FiatYer(),
     FiatZar(),
     FiatZmw(),
-    FiatZwl(),
+    FiatZwg(),
+    FiatZwl(), // ignore: deprecated_member_use_from_same_package, TODO! End of 2025.
   ];
 
   /// A list of all currencies currently supported by the
