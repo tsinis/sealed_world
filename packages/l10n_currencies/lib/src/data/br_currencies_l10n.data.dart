@@ -1,6 +1,6 @@
 import "../iso_locale_mapper.dart";
 
-/// Contains 159 translation(s).
+/// Contains 161 translation(s).
 /// Provides translations for the Breton language
 /// locale.
 class BrCurrenciesL10N extends IsoLocaleMapper<String> {
@@ -160,11 +160,13 @@ class BrCurrenciesL10N extends IsoLocaleMapper<String> {
       "WST": "tala Samoa",
       "XAF": "lur CFA Kreizafrika",
       "XCD": "dollar Karib ar reter",
+      "XCG": "gilden Karib",
       "XOF": "lur CFA Afrika ar Cʼhornôg",
       "XPF": "lur CFP",
       "YER": "rial Yemen",
       "ZAR": "rand Suafrika",
       "ZMW": "kwacha Zambia",
+      "ZWG": "Aour Zimbabwe",
       "ZWL": "dollar Zimbabwe",
     });
   }

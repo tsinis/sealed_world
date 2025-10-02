@@ -1,6 +1,6 @@
 import "../iso_locale_mapper.dart";
 
-/// Contains 159 translation(s).
+/// Contains 161 translation(s).
 /// Provides translations for the Norwegian Nynorsk language
 /// locale.
 class NnCurrenciesL10N extends IsoLocaleMapper<String> {
@@ -160,11 +160,13 @@ class NnCurrenciesL10N extends IsoLocaleMapper<String> {
       "WST": "vestsamoisk tala",
       "XAF": "CFA franc BEAC",
       "XCD": "austkaribisk dollar",
+      "XCG": "karibisk gylden",
       "XOF": "CFA franc BCEAO",
       "XPF": "CFP franc",
       "YER": "jemenittisk rial",
       "ZAR": "sørafrikansk rand",
       "ZMW": "zambisk kwacha",
+      "ZWG": "zimbabwisk gull",
       "ZWL": "zimbabwisk dollar",
     });
   }

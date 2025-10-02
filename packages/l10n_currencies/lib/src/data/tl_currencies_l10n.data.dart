@@ -1,6 +1,6 @@
 import "../iso_locale_mapper.dart";
 
-/// Contains 159 translation(s).
+/// Contains 161 translation(s).
 /// Provides translations for the Tagalog language
 /// locale.
 class TlCurrenciesL10N extends IsoLocaleMapper<String> {
@@ -160,11 +160,13 @@ class TlCurrenciesL10N extends IsoLocaleMapper<String> {
       "WST": "Samoan Tala",
       "XAF": "CFA Franc BEAC",
       "XCD": "Dolyar ng Silangang Caribbean",
+      "XCG": "Guilder ng Caribbean",
       "XOF": "CFA Franc ng Kanlurang Africa",
       "XPF": "Prangko CFP",
       "YER": "Yemeni Rial",
       "ZAR": "Rand ng Timog Africa",
       "ZMW": "Zambian Kwacha",
+      "ZWG": "Zimbabwe Gold",
       "ZWL": "Dolyar ng Zimbabwe",
     });
   }

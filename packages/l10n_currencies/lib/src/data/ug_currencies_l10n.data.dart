@@ -1,6 +1,6 @@
 import "../iso_locale_mapper.dart";
 
-/// Contains 159 translation(s).
+/// Contains 161 translation(s).
 /// Provides translations for the Uyghur language
 /// locale.
 class UgCurrenciesL10N extends IsoLocaleMapper<String> {
@@ -160,11 +160,13 @@ class UgCurrenciesL10N extends IsoLocaleMapper<String> {
       "WST": "ساموئا تالاسى",
       "XAF": "ئافرىقا قىتئەسى پۇل-مۇئامىلە ئىتتىپاقى فرانكى",
       "XCD": "شەرقىي كارىب دوللىرى",
+      "XCG": "كاريبى گىلدىرى",
       "XOF": "ئافرىقا قىتئەسى پۇل-مۇئامىلە ئىتتىپاقى فرانكى (BCEAO)",
       "XPF": "تىنچ ئوكيان پۇل-مۇئامىلە ئورتاق گەۋدىسى فرانكى",
       "YER": "يەمەن رىيالى",
       "ZAR": "جەنۇبىي ئافرىقا راندى",
       "ZMW": "زامبىيە كۋاچاسى",
+      "ZWG": "زىمبابۋې گولدى",
       "ZWL": "زىمبابۋې دوللىرى",
     });
   }
