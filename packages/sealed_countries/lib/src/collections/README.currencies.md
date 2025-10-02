@@ -153,11 +153,13 @@
 | WST | Samoan Tala | 🇼🇸 Samoa |  |
 | XAF | Central African Cfa Franc | 🇨🇲 Cameroon | 🇹🇩🇨🇬🇨🇫🇬🇦🇬🇶 |
 | XCD | East Caribbean Dollar | 🇱🇨 Saint Lucia | 🇬🇩🇻🇨🇦🇬🇩🇲🇰🇳🇦🇮🇲🇸 |
+| XCG | Caribbean Guilder | 🇨🇼 Curaçao | 🇸🇽 |
 | XOF | West African Cfa Franc | 🇨🇮 Ivory Coast | 🇳🇪🇧🇫🇲🇱🇸🇳🇧🇯🇹🇬🇬🇼 |
 | XPF | Cfp Franc | 🇵🇫 French Polynesia | 🇳🇨🇼🇫 |
 | YER | Yemeni Rial | 🇾🇪 Yemen |  |
 | ZAR | South African Rand | 🇿🇦 South Africa | 🇳🇦🇱🇸🇸🇿 |
 | ZMW | Zambian Kwacha | 🇿🇲 Zambia |  |
+| ZWG | Zimbabwe Gold | 🇿🇼 Zimbabwe |  |
 | ZWL | Zimbabwean Dollar | 🇿🇼 Zimbabwe |  |
 
 > Generated (by test) file, do not edit manually.
