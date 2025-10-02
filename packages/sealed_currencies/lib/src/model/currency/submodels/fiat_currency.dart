@@ -464,7 +464,7 @@ class FiatCurrency extends Currency
     FiatAfn(),
     FiatAll(),
     FiatAmd(),
-    FiatAng(),
+    FiatAng(), // ignore: deprecated_member_use_from_same_package, TODO! End of 2025.
     FiatAoa(),
     FiatArs(),
     FiatAud(),
@@ -613,6 +613,7 @@ class FiatCurrency extends Currency
     FiatWst(),
     FiatXaf(),
     FiatXcd(),
+    FiatXcg(),
     FiatXof(),
     FiatXpf(),
     FiatYer(),

@@ -13,7 +13,8 @@ const fiatCurrencyCodeMap = <String, FiatCurrency>{
   "AFN": FiatAfn(),
   "ALL": FiatAll(),
   "AMD": FiatAmd(),
-  "ANG": FiatAng(),
+  "ANG":
+      FiatAng(), // ignore: deprecated_member_use_from_same_package, TODO! End of 2025.
   "AOA": FiatAoa(),
   "ARS": FiatArs(),
   "AUD": FiatAud(),
@@ -166,6 +167,7 @@ const fiatCurrencyCodeMap = <String, FiatCurrency>{
   "WST": FiatWst(),
   "XAF": FiatXaf(),
   "XCD": FiatXcd(),
+  "XCG": FiatXcg(),
   "XOF": FiatXof(),
   "XPF": FiatXpf(),
   "YER": FiatYer(),
@@ -271,7 +273,7 @@ const fiatCurrencyCodeOtherMap = <String, FiatCurrency>{
   "512": FiatOmr(),
   "516": FiatNad(),
   "524": FiatNpr(),
-  "532": FiatAng(),
+  "532": FiatXcg(),
   "533": FiatAwg(),
   "548": FiatVuv(),
   "554": FiatNzd(),

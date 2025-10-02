@@ -3805,7 +3805,8 @@ class CountryCuw extends WorldCountry {
         timezones: const ["UTC-04:00"],
       );
   @override
-  List<FiatCurrency> get currencies => const [FiatAng()];
+  // ignore: deprecated_member_use, it's TODO!
+  List<FiatCurrency> get currencies => const [FiatXcg(), FiatAng()];
   @override
   CapitalInfo get capitalInfo => const CapitalInfo(
     capital: Capital("Willemstad"),
@@ -14512,8 +14513,8 @@ class CountrySxm extends WorldCountry {
         timezones: const ["UTC-04:00"],
         hasCoatOfArms: false,
       );
-  @override
-  List<FiatCurrency> get currencies => const [FiatAng()];
+  // ignore: deprecated_member_use, it's TODO!
+  List<FiatCurrency> get currencies => const [FiatXcg(), FiatAng()];
   @override
   CapitalInfo get capitalInfo => const CapitalInfo(
     capital: Capital("Philipsburg"),

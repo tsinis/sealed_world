@@ -3,6 +3,8 @@
 import "package:_sealed_world_tests/sealed_world_tests.dart";
 // ignore: deprecated_member_use_from_same_package, it's TODO!
 import "package:sealed_currencies/currency_translations.dart";
+import "package:sealed_currencies/src/data/fiat_currencies.data.dart"
+    show FiatAng;
 import "package:sealed_currencies/src/helpers/fiat_currency/fiat_currency_json.dart";
 import "package:sealed_currencies/src/model/currency/currency.dart";
 import "package:sealed_languages/sealed_languages.dart";
@@ -83,7 +85,13 @@ void main() => group("$FiatCurrency", () {
       performanceTest("of $FiatCurrency: ${element.name}", () {
         expect(FiatCurrency.map[element.code], element);
         expect(FiatCurrency.codeMap[element.code], element);
-        expect(FiatCurrency.codeNumericMap[element.codeNumeric], element);
+        expect(
+          FiatCurrency.codeNumericMap[element.codeNumeric],
+          element,
+          // ignore: deprecated_member_use_from_same_package, it's TODO!
+          skip: element == const FiatAng(),
+          reason: "XCG reuses same numeric code as ANG",
+        );
       });
     }
   });

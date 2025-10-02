@@ -78,6 +78,7 @@ class FiatAng extends FiatCurrency {
   /// Creates a instance of [FiatAng] (Netherlands Antillean Guilder currency).
   ///
   /// ISO 4217 Alpha code: `ANG`, ISO 4217 Numeric code: `532`.
+  @Deprecated("Use `FiatXcg()` instead")
   const FiatAng()
     : super(
         code: "ANG",
@@ -3023,6 +3024,25 @@ class FiatXcd extends FiatCurrency {
         codeNumeric: "951",
         namesNative: const ["East Caribbean dollar"],
         subunit: "Cent",
+        unitFirst: true,
+      );
+}
+
+/// A class that represents the Caribbean Guilder currency.
+class FiatXcg extends FiatCurrency {
+  /// Creates a instance of [FiatXcg] (Caribbean Guilder currency).
+  ///
+  /// ISO 4217 Alpha code: `XCG`, ISO 4217 Numeric code: `532`.
+  const FiatXcg()
+    : super(
+        code: "XCG",
+        name: "Caribbean Guilder",
+        symbol: "Cg",
+        codeNumeric: "532",
+        namesNative: const ["Caribische gulden", "florin karibense"],
+        subunit: "Cent",
+        decimalMark: ",",
+        thousandsSeparator: ".",
         unitFirst: true,
       );
 }
