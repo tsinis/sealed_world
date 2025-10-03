@@ -146,7 +146,9 @@ class PhoneCodePicker extends CountryPicker {
                           ),
                     ),
                 Padding(
-                  padding: const EdgeInsets.only(right: UiConstants.point / 2),
+                  padding: const EdgeInsetsDirectional.only(
+                    end: UiConstants.point / 2,
+                  ),
                   child: Text(
                     itemProperties.item.idd.phoneCode(),
                     style: context.theme.textTheme.labelSmall,
