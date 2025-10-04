@@ -1,3 +1,23 @@
+## 2.4.0
+
+NEW FEATURES
+
+- Adds support for XCG (Caribbean Guilder) and ZWG (Zimbabwean Gold) currencies with translations (across 100+ locales each).
+- Deprecates `ANG`, `BGN`, and `ZWL` currencies with appropriate migration paths.
+
+FIX
+
+- Corrected English currency name for `KGS` to "Kyrgyzstani Som".
+- Corrected English currency name for `GYD` to "Guyanese Dollar".
+
+DOCUMENTATION
+
+- Improved documentation in README.
+
+CHORE
+
+- The Dart SDK was bumped to v3.9.2.
+
 ## 2.3.0
 
 FIX
