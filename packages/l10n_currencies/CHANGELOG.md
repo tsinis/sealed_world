@@ -6,7 +6,7 @@ NEW FEATURES
 
 FIX
 
-- Corrected English currency name for `KGS` to "Kyrgy**z**stani Som".
+- Corrected English currency name for `KGS` to "Kyrgyzstani Som".
 - Corrected English currency name for `GYD` to "Guyanese Dollar".
 
 DOCUMENTATION
