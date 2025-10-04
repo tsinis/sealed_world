@@ -1,3 +1,13 @@
+## 2.4.0
+
+DOCUMENTATION
+
+- Improved documentation in README.
+
+CHORE
+
+- The Dart SDK was bumped to v3.9.2.
+
 ## 2.3.0
 
 NEW FEATURES

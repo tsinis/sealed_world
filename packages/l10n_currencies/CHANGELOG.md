@@ -1,3 +1,17 @@
+## 1.3.0
+
+NEW FEATURES
+
+- Expanded currency localization by adding translations for XCG (Caribbean guilder) and ZWG (Zimbabwean Gold) across 100+ locales (each).
+
+DOCUMENTATION
+
+- Improved documentation in README.
+
+CHORE
+
+- The Dart SDK was bumped to v3.9.2.
+
 ## 1.2.0
 
 CHORE
