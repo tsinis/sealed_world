@@ -1,6 +1,6 @@
 import "../iso_locale_mapper.dart";
 
-/// Contains 159 translation(s).
+/// Contains 161 translation(s).
 /// Provides translations for the Kyrgyz language
 /// locale.
 class KyCurrenciesL10N extends IsoLocaleMapper<String> {
@@ -160,11 +160,13 @@ class KyCurrenciesL10N extends IsoLocaleMapper<String> {
       "WST": "Самоа таласы",
       "XAF": "Борбордук Африка КФА франкы",
       "XCD": "чыгыш кариб доллары",
+      "XCG": "Кариб гулдени",
       "XOF": "КФА франкы",
       "XPF": "КФП франкы",
       "YER": "Йемен риалы",
       "ZAR": "Түштүк Африка ранды",
       "ZMW": "Замбия квачасы",
+      "ZWG": "Зимбабве алтыны",
       "ZWL": "Зимбабве доллары",
     });
   }

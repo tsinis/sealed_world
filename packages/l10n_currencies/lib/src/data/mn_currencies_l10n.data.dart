@@ -1,6 +1,6 @@
 import "../iso_locale_mapper.dart";
 
-/// Contains 159 translation(s).
+/// Contains 161 translation(s).
 /// Provides translations for the Mongolian language
 /// locale.
 class MnCurrenciesL10N extends IsoLocaleMapper<String> {
@@ -160,11 +160,13 @@ class MnCurrenciesL10N extends IsoLocaleMapper<String> {
       "WST": "самоагийн тала",
       "XAF": "төв африкийн франк",
       "XCD": "зүүн карибийн доллар",
+      "XCG": "Карибын гулдер",
       "XOF": "баруун африкийн франк",
       "XPF": "францын колоний франк",
       "YER": "йемен риал",
       "ZAR": "өмнөд африкийн ранд",
       "ZMW": "замби квача",
+      "ZWG": "Зимбабвегийн гоулд",
       "ZWL": "Замбабив Доллар",
     });
   }

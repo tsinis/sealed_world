@@ -1,6 +1,6 @@
 import "../iso_locale_mapper.dart";
 
-/// Contains 159 translation(s).
+/// Contains 161 translation(s).
 /// Provides translations for the Tamil language
 /// locale.
 class TaCurrenciesL10N extends IsoLocaleMapper<String> {
@@ -160,11 +160,13 @@ class TaCurrenciesL10N extends IsoLocaleMapper<String> {
       "WST": "சமோவான் தாலா",
       "XAF": "மத்திய ஆப்பிரிக்க CFA ஃப்ராங்க்",
       "XCD": "கிழக்கு கரீபியன் டாலர்",
+      "XCG": "கரீபியன் கில்டர்",
       "XOF": "மேற்கு ஆப்பிரிக்க CFA ஃப்ராங்க்",
       "XPF": "ஃப்ராங்க் (CFP)",
       "YER": "ஏமனி ரியால்",
       "ZAR": "தென் ஆப்ரிக்க ராண்ட்",
       "ZMW": "ஸாம்பியன் குவாச்சா",
+      "ZWG": "ஜிம்பாப்வே தங்கம்",
       "ZWL": "ஜிம்பாப்வே டாலர்",
     });
   }

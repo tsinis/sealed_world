@@ -1,6 +1,6 @@
 import "../iso_locale_mapper.dart";
 
-/// Contains 159 translation(s).
+/// Contains 161 translation(s).
 /// Provides translations for the Thai language
 /// locale.
 class ThCurrenciesL10N extends IsoLocaleMapper<String> {
@@ -160,11 +160,13 @@ class ThCurrenciesL10N extends IsoLocaleMapper<String> {
       "WST": "ทาลาซามัว",
       "XAF": "ฟรังก์เซฟาธนาคารรัฐแอฟริกากลาง",
       "XCD": "ดอลลาร์แคริบเบียนตะวันออก",
+      "XCG": "กิลเดอร์แคริบเบียน",
       "XOF": "ฟรังก์เซฟาธนาคารกลางรัฐแอฟริกาตะวันตก",
       "XPF": "ฟรังก์ซีเอฟพี",
       "YER": "เรียลเยเมน",
       "ZAR": "แรนด์แอฟริกาใต้",
       "ZMW": "ควาชาแซมเบีย",
+      "ZWG": "ทองซิมบับเว",
       "ZWL": "ดอลลาร์ซิมบับเว",
     });
   }

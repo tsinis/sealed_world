@@ -1,6 +1,6 @@
 import "../iso_locale_mapper.dart";
 
-/// Contains 159 translation(s).
+/// Contains 161 translation(s).
 /// Provides translations for the Lithuanian language
 /// locale.
 class LtCurrenciesL10N extends IsoLocaleMapper<String> {
@@ -160,11 +160,13 @@ class LtCurrenciesL10N extends IsoLocaleMapper<String> {
       "WST": "Samoa tala",
       "XAF": "CFA BEAC frankas",
       "XCD": "Rytų Karibų doleris",
+      "XCG": "Karibų guldenas",
       "XOF": "CFA BCEAO frankas",
       "XPF": "CFP frankas",
       "YER": "Jemeno rialas",
       "ZAR": "Pietų Afrikos Respublikos randas",
       "ZMW": "Zambijos kvača",
+      "ZWG": "Zimbabvės auksas",
       "ZWL": "Zimbabvės doleris",
     });
   }

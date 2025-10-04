@@ -1,6 +1,6 @@
 import "../iso_locale_mapper.dart";
 
-/// Contains 159 translation(s).
+/// Contains 161 translation(s).
 /// Provides translations for the Luxembourgish (Letzeburgesch) language
 /// locale.
 class LbCurrenciesL10N extends IsoLocaleMapper<String> {
@@ -160,11 +160,13 @@ class LbCurrenciesL10N extends IsoLocaleMapper<String> {
       "WST": "Samoaneschen Tala",
       "XAF": "CFA-Frang (BEAC)",
       "XCD": "Ostkaribeschen Dollar",
+      "XCG": "Karibesche Gulden",
       "XOF": "CFA-Frang (BCEAO)",
       "XPF": "CFP-Frang",
       "YER": "Jemen-Rial",
       "ZAR": "Südafrikanesche Rand",
       "ZMW": "Kwacha",
+      "ZWG": "Simbabweesche Gold",
       "ZWL": "Simbabwe-Dollar",
     });
   }

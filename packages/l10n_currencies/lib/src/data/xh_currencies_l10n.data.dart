@@ -1,6 +1,6 @@
 import "../iso_locale_mapper.dart";
 
-/// Contains 134 translation(s).
+/// Contains 136 translation(s).
 /// Provides translations for the Xhosa language
 /// locale.
 class XhCurrenciesL10N extends IsoLocaleMapper<String> {
@@ -139,8 +139,10 @@ class XhCurrenciesL10N extends IsoLocaleMapper<String> {
       "VES": "I-Bolívar yaseVenezuela",
       "VUV": "I-Vatu yaseVanuatu",
       "WST": "I-Tala yaseSamoa",
+      "XCG": "I-Guilder yaseCaribbean",
       "YER": "I-Rial yaseYemen",
       "ZMW": "I-Kwacha yaseZambi",
+      "ZWG": "IGolide yaseZimbabwe",
     });
   }
 }

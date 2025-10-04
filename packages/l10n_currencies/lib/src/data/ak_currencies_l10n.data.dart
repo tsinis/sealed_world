@@ -1,6 +1,6 @@
 import "../iso_locale_mapper.dart";
 
-/// Contains 50 translation(s).
+/// Contains 52 translation(s).
 /// Provides translations for the Akan language
 /// locale.
 class AkCurrenciesL10N extends IsoLocaleMapper<String> {
@@ -55,8 +55,10 @@ class AkCurrenciesL10N extends IsoLocaleMapper<String> {
       "UGX": "Uganda Hyelen",
       "USD": "Amɛrika Dɔla",
       "XAF": "Sefa",
+      "XCG": "Karibiafoᴐ giida",
       "ZAR": "Afrika Anaafo Rand",
       "ZMW": "Zambia Kwacha",
+      "ZWG": "Zimbabwe sika kᴐkᴐᴐ",
     });
   }
 }

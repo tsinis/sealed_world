@@ -1,3 +1,17 @@
+## 1.3.0
+
+FIX
+
+- Corrected Slovak country name for `CIV` to "Pobrežie Slonoviny".
+
+DOCUMENTATION
+
+- Improved documentation in README.
+
+CHORE
+
+- The Dart SDK was bumped to v3.9.2.
+
 ## 1.2.0
 
 FIX

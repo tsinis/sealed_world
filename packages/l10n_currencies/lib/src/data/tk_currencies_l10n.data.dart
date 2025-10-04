@@ -1,6 +1,6 @@
 import "../iso_locale_mapper.dart";
 
-/// Contains 138 translation(s).
+/// Contains 140 translation(s).
 /// Provides translations for the Turkmen language
 /// locale.
 class TkCurrenciesL10N extends IsoLocaleMapper<String> {
@@ -142,9 +142,11 @@ class TkCurrenciesL10N extends IsoLocaleMapper<String> {
       "VES": "Wenesuela boliwary",
       "VUV": "Wanuatu watusy",
       "WST": "Samoa talasy",
+      "XCG": "karib guldeni",
       "YER": "Ýemen rialy",
       "ZAR": "Günorta Afrika rendi",
       "ZMW": "Zambiýa kwaçasy",
+      "ZWG": "Zimbabwe altyny",
     });
   }
 }

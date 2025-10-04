@@ -1,6 +1,6 @@
 import "../iso_locale_mapper.dart";
 
-/// Contains 159 translation(s).
+/// Contains 161 translation(s).
 /// Provides translations for the Dutch language
 /// locale.
 class NlCurrenciesL10N extends IsoLocaleMapper<String> {
@@ -160,11 +160,13 @@ class NlCurrenciesL10N extends IsoLocaleMapper<String> {
       "WST": "Samoaanse tala",
       "XAF": "CFA-frank",
       "XCD": "Oost-Caribische dollar",
+      "XCG": "Caribische gulden",
       "XOF": "CFA-franc BCEAO",
       "XPF": "CFP-frank",
       "YER": "Jemenitische rial",
       "ZAR": "Zuid-Afrikaanse rand",
       "ZMW": "Zambiaanse kwacha",
+      "ZWG": "Zimbabwe Gold",
       "ZWL": "Zimbabwaanse dollar",
     });
   }

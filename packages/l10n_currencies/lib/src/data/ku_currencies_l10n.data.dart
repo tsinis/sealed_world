@@ -1,6 +1,6 @@
 import "../iso_locale_mapper.dart";
 
-/// Contains 134 translation(s).
+/// Contains 136 translation(s).
 /// Provides translations for the Kurdish language
 /// locale.
 class KuCurrenciesL10N extends IsoLocaleMapper<String> {
@@ -138,9 +138,11 @@ class KuCurrenciesL10N extends IsoLocaleMapper<String> {
       "VES": "bolîvarê venezuelayî",
       "VUV": "vatûyê vanûatûyî",
       "WST": "talayê somonî",
+      "XCG": "guldenê karayîbî",
       "YER": "riyalê yemenî",
       "ZAR": "randê afrîkaya başûrî",
       "ZMW": "kwaçayê zambiyayî",
+      "ZWG": "zêrê zîmbabweyî",
     });
   }
 }

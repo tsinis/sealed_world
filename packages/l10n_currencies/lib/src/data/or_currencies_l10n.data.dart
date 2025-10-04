@@ -1,6 +1,6 @@
 import "../iso_locale_mapper.dart";
 
-/// Contains 159 translation(s).
+/// Contains 161 translation(s).
 /// Provides translations for the Oriya language
 /// locale.
 class OrCurrenciesL10N extends IsoLocaleMapper<String> {
@@ -160,11 +160,13 @@ class OrCurrenciesL10N extends IsoLocaleMapper<String> {
       "WST": "ସାମୋୟିୟ ତାଲା",
       "XAF": "କେନ୍ଦ୍ର ଆଫ୍ରିକା CFA ଫ୍ରାଙ୍କ",
       "XCD": "ପୂର୍ବ କାରିବିଆନ ଡଲାର",
+      "XCG": "କ‍୍ୟାରବିଅନ୍‌ ଗିଲ୍ଡର୍‌",
       "XOF": "ପଶ୍ଚିମ ଆଫ୍ରିକା CFA ଫ୍ରାଙ୍କ",
       "XPF": "Cfp ଫ୍ରାଙ୍କ୍",
       "YER": "ୟେମେନି ରିଆଲ୍",
       "ZAR": "ଦକ୍ଷିଣ ଆଫ୍ରିକିୟ ରାଣ୍ଡ୍",
       "ZMW": "ଜାମ୍ବୀୟ କ୍ୱାଚା",
+      "ZWG": "ଜିମ୍ବାୱିଅନ୍‌ ଗୋଲ୍ଡ୍‌",
       "ZWL": "ଜିମ୍ବାୱେ ଡଲାର",
     });
   }

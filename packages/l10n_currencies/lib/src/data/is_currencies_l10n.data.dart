@@ -1,6 +1,6 @@
 import "../iso_locale_mapper.dart";
 
-/// Contains 159 translation(s).
+/// Contains 161 translation(s).
 /// Provides translations for the Icelandic language
 /// locale.
 class IsCurrenciesL10N extends IsoLocaleMapper<String> {
@@ -160,11 +160,13 @@ class IsCurrenciesL10N extends IsoLocaleMapper<String> {
       "WST": "Samóatala",
       "XAF": "miðafrískur franki",
       "XCD": "austurkarabískur dalur",
+      "XCG": "Karíbahafsgyllini",
       "XOF": "vesturafrískur franki",
       "XPF": "pólinesískur franki",
       "YER": "jemenskt ríal",
       "ZAR": "suðurafrískt rand",
       "ZMW": "sambísk kvaka",
+      "ZWG": "simbabveskt gold",
       "ZWL": "Simbabveskur dalur",
     });
   }

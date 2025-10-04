@@ -1,6 +1,6 @@
 import "../iso_locale_mapper.dart";
 
-/// Contains 159 translation(s).
+/// Contains 161 translation(s).
 /// Provides translations for the English language
 /// locale.
 class EnCurrenciesL10N extends IsoLocaleMapper<String> {
@@ -61,7 +61,7 @@ class EnCurrenciesL10N extends IsoLocaleMapper<String> {
       "GMD": "Gambian Dalasi",
       "GNF": "Guinean Franc",
       "GTQ": "Guatemalan Quetzal",
-      "GYD": "Guyanaese Dollar",
+      "GYD": "Guyanese Dollar",
       "HKD": "Hong Kong Dollar",
       "HNL": "Honduran Lempira",
       "HRK": "Croatian Kuna",
@@ -77,7 +77,7 @@ class EnCurrenciesL10N extends IsoLocaleMapper<String> {
       "JOD": "Jordanian Dinar",
       "JPY": "Japanese Yen",
       "KES": "Kenyan Shilling",
-      "KGS": "Kyrgystani Som",
+      "KGS": "Kyrgyzstani Som",
       "KHR": "Cambodian Riel",
       "KMF": "Comorian Franc",
       "KPW": "North Korean Won",
@@ -160,11 +160,13 @@ class EnCurrenciesL10N extends IsoLocaleMapper<String> {
       "WST": "Samoan Tala",
       "XAF": "Central African CFA Franc",
       "XCD": "East Caribbean Dollar",
+      "XCG": "Caribbean guilder",
       "XOF": "West African CFA Franc",
       "XPF": "CFP Franc",
       "YER": "Yemeni Rial",
       "ZAR": "South African Rand",
       "ZMW": "Zambian Kwacha",
+      "ZWG": "Zimbabwean Gold",
       "ZWL": "Zimbabwean Dollar",
     });
   }

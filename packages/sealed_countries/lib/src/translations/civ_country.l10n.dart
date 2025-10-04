@@ -246,7 +246,7 @@ const civCountryTranslations = <TranslatedName>[
   CountryName(
     language: LangSlk(),
     official: "Republika Pobrežie Slonoviny",
-    common: "Pobržie Slonoviny",
+    common: "Pobrežie Slonoviny",
   ),
   CountryName(
     language: LangSpa(),

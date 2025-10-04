@@ -13,7 +13,8 @@ const fiatCurrencyCodeMap = <String, FiatCurrency>{
   "AFN": FiatAfn(),
   "ALL": FiatAll(),
   "AMD": FiatAmd(),
-  "ANG": FiatAng(),
+  "ANG":
+      FiatAng(), // ignore: deprecated_member_use_from_same_package, TODO! End of 2025.
   "AOA": FiatAoa(),
   "ARS": FiatArs(),
   "AUD": FiatAud(),
@@ -22,7 +23,8 @@ const fiatCurrencyCodeMap = <String, FiatCurrency>{
   "BAM": FiatBam(),
   "BBD": FiatBbd(),
   "BDT": FiatBdt(),
-  "BGN": FiatBgn(),
+  "BGN":
+      FiatBgn(), // ignore: deprecated_member_use_from_same_package, TODO! End of 2025.
   "BHD": FiatBhd(),
   "BIF": FiatBif(),
   "BMD": FiatBmd(),
@@ -165,13 +167,15 @@ const fiatCurrencyCodeMap = <String, FiatCurrency>{
   "WST": FiatWst(),
   "XAF": FiatXaf(),
   "XCD": FiatXcd(),
+  "XCG": FiatXcg(),
   "XOF": FiatXof(),
   "XPF": FiatXpf(),
   "YER": FiatYer(),
   "ZAR": FiatZar(),
   "ZMW": FiatZmw(),
-  "ZWL": FiatZwl(),
-
+  "ZWG": FiatZwg(),
+  "ZWL":
+      FiatZwl(), // ignore: deprecated_member_use_from_same_package, TODO! End of 2025.
   // ignore: map-keys-ordering, Special purpose currencies.
   "XAG": FiatXag(),
   "XAU": FiatXau(),
@@ -269,7 +273,7 @@ const fiatCurrencyCodeOtherMap = <String, FiatCurrency>{
   "512": FiatOmr(),
   "516": FiatNad(),
   "524": FiatNpr(),
-  "532": FiatAng(),
+  "532": FiatXcg(),
   "533": FiatAwg(),
   "548": FiatVuv(),
   "554": FiatNzd(),
@@ -315,12 +319,14 @@ const fiatCurrencyCodeOtherMap = <String, FiatCurrency>{
   "882": FiatWst(),
   "886": FiatYer(),
   "901": FiatTwd(),
+  "924": FiatZwg(),
   "925": FiatSle(),
   "928": FiatVes(),
   "929": FiatMru(),
   "930": FiatStn(),
   "931": FiatCuc(),
-  "932": FiatZwl(),
+  "932":
+      FiatZwl(), // ignore: deprecated_member_use_from_same_package, TODO! End of 2025.
   "933": FiatByn(),
   "934": FiatTmt(),
   "936": FiatGhs(),
@@ -350,7 +356,8 @@ const fiatCurrencyCodeOtherMap = <String, FiatCurrency>{
   "971": FiatAfn(),
   "972": FiatTjs(),
   "973": FiatAoa(),
-  "975": FiatBgn(),
+  "975":
+      FiatBgn(), // ignore: deprecated_member_use_from_same_package, TODO! End of 2025.
   "976": FiatCdf(),
   "977": FiatBam(),
   "978": FiatEur(),

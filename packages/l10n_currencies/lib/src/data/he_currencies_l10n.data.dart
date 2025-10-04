@@ -1,6 +1,6 @@
 import "../iso_locale_mapper.dart";
 
-/// Contains 159 translation(s).
+/// Contains 161 translation(s).
 /// Provides translations for the Hebrew (modern) language
 /// locale.
 class HeCurrenciesL10N extends IsoLocaleMapper<String> {
@@ -160,11 +160,13 @@ class HeCurrenciesL10N extends IsoLocaleMapper<String> {
       "WST": "טאלה סמואי",
       "XAF": "פרנק CFA BEAC",
       "XCD": "דולר מזרח קריבי",
+      "XCG": "גילדר של הקריביים",
       "XOF": "פרנק CFA BCEAO",
       "XPF": "פרנק פולינזיה הצרפתית",
       "YER": "ריאל תימני",
       "ZAR": "ראנד דרום אפריקאי",
       "ZMW": "קוואצ׳ה זמבית",
+      "ZWG": "זהב של זימבבואה",
       "ZWL": "דולר זימבבואי",
     });
   }

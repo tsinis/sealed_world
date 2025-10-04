@@ -1588,6 +1588,7 @@ class CountryBgr extends WorldCountry {
         ),
       );
   @override
+  // ignore: deprecated_member_use, TODO! End of 2025.
   List<FiatCurrency> get currencies => const [FiatBgn()];
   @override
   CapitalInfo get capitalInfo => const CapitalInfo(
@@ -3804,7 +3805,8 @@ class CountryCuw extends WorldCountry {
         timezones: const ["UTC-04:00"],
       );
   @override
-  List<FiatCurrency> get currencies => const [FiatAng()];
+  // ignore: deprecated_member_use, it's TODO!
+  List<FiatCurrency> get currencies => const [FiatXcg(), FiatAng()];
   @override
   CapitalInfo get capitalInfo => const CapitalInfo(
     capital: Capital("Willemstad"),
@@ -8869,7 +8871,6 @@ class CountryLka extends WorldCountry {
         continent: const Asia(),
         subregion: const SouthernAsia(),
         latLng: const LatLng(7, 81),
-        bordersCodes: const ["Ind"],
         areaMetric: 65610,
         emoji: "🇱🇰",
         maps: const Maps(
@@ -14512,8 +14513,8 @@ class CountrySxm extends WorldCountry {
         timezones: const ["UTC-04:00"],
         hasCoatOfArms: false,
       );
-  @override
-  List<FiatCurrency> get currencies => const [FiatAng()];
+  // ignore: deprecated_member_use, it's TODO!
+  List<FiatCurrency> get currencies => const [FiatXcg(), FiatAng()];
   @override
   CapitalInfo get capitalInfo => const CapitalInfo(
     capital: Capital("Philipsburg"),
@@ -17327,7 +17328,8 @@ class CountryZwe extends WorldCountry {
         timezones: const ["UTC+02:00"],
       );
   @override
-  List<FiatCurrency> get currencies => const [FiatGbp(), FiatZwl()];
+  // ignore: deprecated_member_use, it's TODO! End of 2025.
+  List<FiatCurrency> get currencies => const [FiatGbp(), FiatZwg(), FiatZwl()];
   @override
   CapitalInfo get capitalInfo => const CapitalInfo(
     capital: Capital("Harare"),

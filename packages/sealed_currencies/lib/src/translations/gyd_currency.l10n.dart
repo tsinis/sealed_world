@@ -1,6 +1,6 @@
 import "package:sealed_languages/sealed_languages.dart";
 
-/// Provides 108 translations for a Guyanaese Dollar currency:
+/// Provides 108 translations for a Guyanese Dollar currency:
 /// - (Eastern) Punjabi
 /// - (Scottish) Gaelic
 /// - Afrikaans
@@ -105,7 +105,7 @@ import "package:sealed_languages/sealed_languages.dart";
 /// - Yoruba
 /// - Zulu.
 const gydCurrencyTranslations = [
-  TranslatedName(LangEng(), name: "Guyanaese Dollar"),
+  TranslatedName(LangEng(), name: "Guyanese Dollar"),
   TranslatedName(LangAfr(), name: "Guyanese dollar"),
   TranslatedName(LangAmh(), name: "የጉየና ዶላር"),
   TranslatedName(LangAra(), name: "دولار غيانا"),

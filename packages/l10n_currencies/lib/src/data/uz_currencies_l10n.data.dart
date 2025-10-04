@@ -1,6 +1,6 @@
 import "../iso_locale_mapper.dart";
 
-/// Contains 159 translation(s).
+/// Contains 161 translation(s).
 /// Provides translations for the Uzbek language
 /// locale.
 class UzCurrenciesL10N extends IsoLocaleMapper<String> {
@@ -160,11 +160,13 @@ class UzCurrenciesL10N extends IsoLocaleMapper<String> {
       "WST": "Samoa talasi",
       "XAF": "Markaziy Afrika CFA franki",
       "XCD": "Sharqiy Karib dollari",
+      "XCG": "Karib guldeni",
       "XOF": "G‘arbiy Afrika CFA franki",
       "XPF": "Fransuz Polineziyasi franki",
       "YER": "Yaman riyoli",
       "ZAR": "Janubiy Afrika rendi",
       "ZMW": "Zambiya kvachasi",
+      "ZWG": "Zimbabve oltini",
       "ZWL": "Zimbabve dollari",
     });
   }

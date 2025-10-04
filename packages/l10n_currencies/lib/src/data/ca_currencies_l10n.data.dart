@@ -1,6 +1,6 @@
 import "../iso_locale_mapper.dart";
 
-/// Contains 159 translation(s).
+/// Contains 161 translation(s).
 /// Provides translations for the Catalan language
 /// locale.
 class CaCurrenciesL10N extends IsoLocaleMapper<String> {
@@ -160,11 +160,13 @@ class CaCurrenciesL10N extends IsoLocaleMapper<String> {
       "WST": "tala samoà",
       "XAF": "franc CFA BEAC",
       "XCD": "dòlar del Carib Oriental",
+      "XCG": "florí caribeny",
       "XOF": "franc CFA BCEAO",
       "XPF": "franc CFP",
       "YER": "rial iemenita",
       "ZAR": "rand sud-africà",
       "ZMW": "kwacha zambià",
+      "ZWG": "or de Zimbàbue",
       "ZWL": "dòlar zimbabuès",
     });
   }

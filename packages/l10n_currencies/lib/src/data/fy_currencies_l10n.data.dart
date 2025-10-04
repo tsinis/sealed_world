@@ -1,6 +1,6 @@
 import "../iso_locale_mapper.dart";
 
-/// Contains 159 translation(s).
+/// Contains 161 translation(s).
 /// Provides translations for the Western Frisian language
 /// locale.
 class FyCurrenciesL10N extends IsoLocaleMapper<String> {
@@ -160,11 +160,13 @@ class FyCurrenciesL10N extends IsoLocaleMapper<String> {
       "WST": "Samoaanske tala",
       "XAF": "CFA-frank",
       "XCD": "East-Karibyske dollar",
+      "XCG": "Karibyske gûne",
       "XOF": "CFA-franc BCEAO",
       "XPF": "CFP-franc",
       "YER": "Jemenityske rial",
       "ZAR": "Sûd-Afrikaanske rand",
       "ZMW": "Sambiaanske kwacha",
+      "ZWG": "Simbabwaansk goud",
       "ZWL": "Simbabwaanske dollar",
     });
   }

@@ -1,6 +1,6 @@
 import "../iso_locale_mapper.dart";
 
-/// Contains 159 translation(s).
+/// Contains 161 translation(s).
 /// Provides translations for the Gujarati language
 /// locale.
 class GuCurrenciesL10N extends IsoLocaleMapper<String> {
@@ -160,11 +160,13 @@ class GuCurrenciesL10N extends IsoLocaleMapper<String> {
       "WST": "સમોઅન તાલા",
       "XAF": "મધ્ય આફ્રિકન [CFA] ફ્રેંક",
       "XCD": "ઇસ્ટ કેરિબિયન ડોલર",
+      "XCG": "કૅરિબિયન ગિલ્ડર",
       "XOF": "પશ્ચિમી આફ્રિકન [CFA] ફ્રેંક",
       "XPF": "[CFP] ફ્રેંક",
       "YER": "યેમેની રિઆલ",
       "ZAR": "દક્ષિણ આફ્રિકી રેંડ",
       "ZMW": "ઝામ્બિયન ક્વાચા",
+      "ZWG": "ઝીંબાબિયન ગોલ્ડ",
       "ZWL": "ઝિમ્બાબ્વે ડૉલર",
     });
   }

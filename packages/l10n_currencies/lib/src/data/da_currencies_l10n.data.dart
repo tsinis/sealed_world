@@ -1,6 +1,6 @@
 import "../iso_locale_mapper.dart";
 
-/// Contains 159 translation(s).
+/// Contains 161 translation(s).
 /// Provides translations for the Danish language
 /// locale.
 class DaCurrenciesL10N extends IsoLocaleMapper<String> {
@@ -160,11 +160,13 @@ class DaCurrenciesL10N extends IsoLocaleMapper<String> {
       "WST": "samoansk tala",
       "XAF": "CFA-franc (BEAC)",
       "XCD": "østkaribisk dollar",
+      "XCG": "caribiske gylden",
       "XOF": "CFA-franc BCEAO",
       "XPF": "CFP-franc",
       "YER": "yemenitisk rial",
       "ZAR": "sydafrikansk rand",
       "ZMW": "zambisk kwacha",
+      "ZWG": "Zimbabwe Gold",
       "ZWL": "Zimbabwisk dollar",
     });
   }

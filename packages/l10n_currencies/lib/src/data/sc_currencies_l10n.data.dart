@@ -1,6 +1,6 @@
 import "../iso_locale_mapper.dart";
 
-/// Contains 138 translation(s).
+/// Contains 140 translation(s).
 /// Provides translations for the Sardinian language
 /// locale.
 class ScCurrenciesL10N extends IsoLocaleMapper<String> {
@@ -141,9 +141,11 @@ class ScCurrenciesL10N extends IsoLocaleMapper<String> {
       "VES": "bolivar venezuelanu",
       "VUV": "vatu de Vanuatu",
       "WST": "tala samoana",
+      "XCG": "fiorinu caraìbicu",
       "YER": "rial yemenita",
       "ZAR": "rand sudafricanu",
       "ZMW": "kwacha zambiana",
+      "ZWG": "oru de Zimbabwe",
       "ZWL": "dòllaru zimbabweanu",
     });
   }

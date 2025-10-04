@@ -22,7 +22,7 @@ screenshots:
 resolution: workspace
 
 environment:
-  sdk: ^3.8.1
+  sdk: ^3.9.2
 
 dependencies:
   l10n_currencies: ^1.2.0

@@ -1,6 +1,6 @@
 import "../iso_locale_mapper.dart";
 
-/// Contains 134 translation(s).
+/// Contains 136 translation(s).
 /// Provides translations for the Javanese language
 /// locale.
 class JvCurrenciesL10N extends IsoLocaleMapper<String> {
@@ -138,9 +138,11 @@ class JvCurrenciesL10N extends IsoLocaleMapper<String> {
       "VES": "Bolivar Venezuela",
       "VUV": "Vatu Vanuatu",
       "WST": "Tala Samoa",
+      "XCG": "Guilder Karibia",
       "YER": "Rial Yaman",
       "ZAR": "Rand Afrika Kidul",
       "ZMW": "Kwacha Sambia",
+      "ZWG": "Emas Zimbabwe",
     });
   }
 }

@@ -1,6 +1,6 @@
 import "../iso_locale_mapper.dart";
 
-/// Contains 159 translation(s).
+/// Contains 161 translation(s).
 /// Provides translations for the Slovene language
 /// locale.
 class SlCurrenciesL10N extends IsoLocaleMapper<String> {
@@ -160,11 +160,13 @@ class SlCurrenciesL10N extends IsoLocaleMapper<String> {
       "WST": "samoanska tala",
       "XAF": "CFA frank BEAC",
       "XCD": "vzhodnokaribski dolar",
+      "XCG": "karibski gulden",
       "XOF": "zahodnoafriški frank CFA",
       "XPF": "CFP frank",
       "YER": "jemenski rial",
       "ZAR": "južnoafriški rand",
       "ZMW": "zambijska kvača",
+      "ZWG": "zimbabvejsko zlato",
       "ZWL": "zimbabvejski dolar",
     });
   }

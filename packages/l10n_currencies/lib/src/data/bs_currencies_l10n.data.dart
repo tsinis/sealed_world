@@ -1,6 +1,6 @@
 import "../iso_locale_mapper.dart";
 
-/// Contains 158 translation(s).
+/// Contains 160 translation(s).
 /// Provides translations for the Bosnian language
 /// locale.
 class BsCurrenciesL10N extends IsoLocaleMapper<String> {
@@ -159,11 +159,13 @@ class BsCurrenciesL10N extends IsoLocaleMapper<String> {
       "WST": "Samoanska tala",
       "XAF": "Centralnoafrički franak (CFA)",
       "XCD": "Istočnokaripski dolar",
+      "XCG": "karipski gulden",
       "XOF": "Zapadnoafrički franak (CFA)",
       "XPF": "Franak (CFP)",
       "YER": "Jemenski rijal",
       "ZAR": "Južnoafrički rand",
       "ZMW": "Zambijska kvača",
+      "ZWG": "zimbabveansko zlato",
       "ZWL": "Zimbabvejski dolar",
     });
   }

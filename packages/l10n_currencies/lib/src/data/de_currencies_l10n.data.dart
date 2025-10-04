@@ -1,6 +1,6 @@
 import "../iso_locale_mapper.dart";
 
-/// Contains 159 translation(s).
+/// Contains 161 translation(s).
 /// Provides translations for the German language
 /// locale.
 class DeCurrenciesL10N extends IsoLocaleMapper<String> {
@@ -160,11 +160,13 @@ class DeCurrenciesL10N extends IsoLocaleMapper<String> {
       "WST": "Samoanischer Tala",
       "XAF": "CFA-Franc (BEAC)",
       "XCD": "Ostkaribischer Dollar",
+      "XCG": "Karibischer Gulden",
       "XOF": "CFA-Franc (BCEAO)",
       "XPF": "CFP-Franc",
       "YER": "Jemen-Rial",
       "ZAR": "Südafrikanischer Rand",
       "ZMW": "Kwacha",
+      "ZWG": "Simbabwe-Gold",
       "ZWL": "Simbabwe-Dollar",
     });
   }

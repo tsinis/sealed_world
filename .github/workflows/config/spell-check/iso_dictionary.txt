@@ -15,6 +15,7 @@ Aghb
 Ahom
 Amh
 Aran
+Ariary
 Armi
 Armn
 Asm
@@ -47,7 +48,9 @@ Blm
 Blr
 Blz
 Bmu
+Bolívar
 Bopo
+Botswanan
 Brah
 Brai
 Brb
@@ -79,9 +82,11 @@ Cirt
 Cmr
 Codesand
 Cok
+Colón
 Cpmn
 Cpv
 Cri
+Cunha
 Cupertino
 Cuw
 Cxr
@@ -95,6 +100,7 @@ DUPL
 Deu
 Diak
 Dji
+Djiboutian
 Dma
 Dnk
 Dogr
@@ -113,6 +119,7 @@ Egyp
 Elym
 Epo
 Esh
+Eswatini
 Ethi
 Eus
 Fao
@@ -150,6 +157,7 @@ Gtm
 Guf
 Guj
 Gujr
+Guyanaese
 HANB
 HANI
 HANO
@@ -213,6 +221,7 @@ KTHI
 Kadai
 Kau
 Kawi
+Kazakhstani
 Kgz
 Khar
 Khm
@@ -229,6 +238,8 @@ Kpel
 Kthi
 Kwt
 Kxgpch
+Kyrgystani
+Kyrgyzstani
 LAOO
 LATF
 LATG
@@ -246,6 +257,7 @@ Lbn
 Lbr
 Lby
 Leke
+Leonean
 Lepc
 Linb
 Lisu
@@ -379,6 +391,7 @@ PRTI
 PSIN
 Pak
 Pauc
+Paʻanga
 Pcn
 Pcun
 Pelm
@@ -392,10 +405,12 @@ Piqd
 Plrd
 Plw
 Poblacht
+Pobrežie
 Portuguesa
 Prk
 Prt
 Prti
+Príncipe
 Pse
 Psin
 Pyf
@@ -416,9 +431,12 @@ RRF
 RUNPATH
 RUNR
 Ranj
+Renminbi
 República
 Resync
 Reu
+Rica
+Rican
 Rjng
 Roh
 Rohg
@@ -457,6 +475,7 @@ Samr
 Sarb
 Saur
 Sdn
+Seychellois
 Sgnw
 Sgp
 Sgs
@@ -470,14 +489,17 @@ Sjm
 Slb
 Sle
 Slk
+Slonoviny
 Slv
 Sme
 Smo
 Smr
 Sna
 Snd
+Soberano
 Sogd
 Sogo
+Somoni
 Soyo
 Spm
 Sqi
@@ -519,6 +541,7 @@ TIRH
 TNSA
 Tagb
 Tah
+Tajikistani
 Takr
 Talu
 Taml
@@ -543,10 +566,12 @@ Tkl
 Tkm
 Tls
 Tnsa
+Tomé
 Tsn
 Tso
 Tto
 Tuk
+Turkmenistani
 Tuv
 Twn
 Tza
@@ -565,6 +590,7 @@ Uninitialize
 Unk
 Usd
 Uzb
+Uzbekistani
 VAII
 VERSIONINFO
 VFT
@@ -580,6 +606,7 @@ Vam
 Vct
 Vdr
 Vem
+Verdean
 Vgb
 Vir
 Visp

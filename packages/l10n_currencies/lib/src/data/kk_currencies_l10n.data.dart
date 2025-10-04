@@ -1,6 +1,6 @@
 import "../iso_locale_mapper.dart";
 
-/// Contains 159 translation(s).
+/// Contains 161 translation(s).
 /// Provides translations for the Kazakh language
 /// locale.
 class KkCurrenciesL10N extends IsoLocaleMapper<String> {
@@ -160,11 +160,13 @@ class KkCurrenciesL10N extends IsoLocaleMapper<String> {
       "WST": "Самоа таласы",
       "XAF": "КФА ВЕАС франкі",
       "XCD": "Шығыс Кариб доллары",
+      "XCG": "Кариб гульдені",
       "XOF": "КФА ВСЕАО франкі",
       "XPF": "КФП франкі",
       "YER": "Йемен риалы",
       "ZAR": "Оңтүстік Африка рэнді",
       "ZMW": "Замбия квачасы",
+      "ZWG": "Зимбабве алтыны",
       "ZWL": "Зимбабведегі доллар",
     });
   }

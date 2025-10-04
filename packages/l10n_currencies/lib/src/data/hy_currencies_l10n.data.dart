@@ -1,6 +1,6 @@
 import "../iso_locale_mapper.dart";
 
-/// Contains 159 translation(s).
+/// Contains 161 translation(s).
 /// Provides translations for the Armenian language
 /// locale.
 class HyCurrenciesL10N extends IsoLocaleMapper<String> {
@@ -160,11 +160,13 @@ class HyCurrenciesL10N extends IsoLocaleMapper<String> {
       "WST": "Սամոական տալա",
       "XAF": "Կենտրոնական Աֆրիկայի ԿՖԱ ֆրանկ",
       "XCD": "Արևելակարիբյան դոլար",
+      "XCG": "կարիբյան գուլդեն",
       "XOF": "Արևմտյան Աֆրիկայի ԿՖԱ ֆրանկ",
       "XPF": "ԿՊՖ ֆրանկ",
       "YER": "Եմենական ռիալ",
       "ZAR": "Հարավաֆրիկյան ռանդ",
       "ZMW": "Զամբիական կվաչա",
+      "ZWG": "Զիմբաբվեի ոսկի",
       "ZWL": "Զիմբաբվեյան դոլար",
     });
   }

@@ -1,6 +1,6 @@
 import "../iso_locale_mapper.dart";
 
-/// Contains 159 translation(s).
+/// Contains 161 translation(s).
 /// Provides translations for the Ukrainian language
 /// locale.
 class UkCurrenciesL10N extends IsoLocaleMapper<String> {
@@ -160,11 +160,13 @@ class UkCurrenciesL10N extends IsoLocaleMapper<String> {
       "WST": "самоанська тала",
       "XAF": "центральноафриканський франк",
       "XCD": "східнокарибський долар",
+      "XCG": "карибський гульден",
       "XOF": "західноафриканський франк",
       "XPF": "французький тихоокеанський франк",
       "YER": "єменський ріал",
       "ZAR": "південноафриканський ранд",
       "ZMW": "замбійська квача",
+      "ZWG": "зімбабвійський золотий",
       "ZWL": "зімбабвійський долар",
     });
   }

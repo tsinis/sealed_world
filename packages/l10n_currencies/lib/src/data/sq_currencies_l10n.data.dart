@@ -1,6 +1,6 @@
 import "../iso_locale_mapper.dart";
 
-/// Contains 159 translation(s).
+/// Contains 161 translation(s).
 /// Provides translations for the Albanian language
 /// locale.
 class SqCurrenciesL10N extends IsoLocaleMapper<String> {
@@ -160,11 +160,13 @@ class SqCurrenciesL10N extends IsoLocaleMapper<String> {
       "WST": "Tala samoane",
       "XAF": "Franga kamerunase",
       "XCD": "Dollari i Karaibeve Lindore",
+      "XCG": "Gilder karaibian",
       "XOF": "Franga e Bregut të Fildishtë",
       "XPF": "Franga franceze e Polinezisë",
       "YER": "Riali i Jemenit",
       "ZAR": "Randi afrikano-jugor",
       "ZMW": "Kuaça e Zambikut",
+      "ZWG": "Ari i Zimbabves",
       "ZWL": "Dollar Zimbabve",
     });
   }

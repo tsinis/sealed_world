@@ -1,6 +1,6 @@
 import "../iso_locale_mapper.dart";
 
-/// Contains 159 translation(s).
+/// Contains 161 translation(s).
 /// Provides translations for the Khmer language
 /// locale.
 class KmCurrenciesL10N extends IsoLocaleMapper<String> {
@@ -160,11 +160,13 @@ class KmCurrenciesL10N extends IsoLocaleMapper<String> {
       "WST": "តាឡា​សាម័រ",
       "XAF": "ហ្វ្រង់ CFA អាហ្វ្រិកកណ្តាល",
       "XCD": "ដុល្លារ​ការ៉ាប៊ីន​ខាង​កើត",
+      "XCG": "ហ្គីលឌ័រការីបៀន",
       "XOF": "ហ្វ្រង់ CFA អាហ្វ្រិកខាងលិច",
       "XPF": "ហ្វ្រង់ CFP",
       "YER": "រៀល​យេម៉ែន",
       "ZAR": "រ៉ង់អាហ្វ្រិកខាងត្បូង",
       "ZMW": "ក្វាចាហ្សំប៊ី",
+      "ZWG": "ហ្កូលស៊ីមបាវ៉េ",
       "ZWL": "ដុល្លារហ្ស៊ីមបាវ៉េ",
     });
   }

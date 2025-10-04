@@ -78,6 +78,7 @@ class FiatAng extends FiatCurrency {
   /// Creates a instance of [FiatAng] (Netherlands Antillean Guilder currency).
   ///
   /// ISO 4217 Alpha code: `ANG`, ISO 4217 Numeric code: `532`.
+  @Deprecated("Use `FiatXcg()` instead")
   const FiatAng()
     : super(
         code: "ANG",
@@ -254,6 +255,7 @@ class FiatBgn extends FiatCurrency {
   /// Creates a instance of [FiatBgn] (Bulgarian Lev currency).
   ///
   /// ISO 4217 Alpha code: `BGN`, ISO 4217 Numeric code: `975`.
+  @Deprecated("Use `FiatEur()` instead (From 2026)")
   const FiatBgn()
     : super(
         code: "BGN",
@@ -1045,15 +1047,15 @@ class FiatGtq extends FiatCurrency {
       );
 }
 
-/// A class that represents the Guyanaese Dollar currency.
+/// A class that represents the Guyanese Dollar currency.
 class FiatGyd extends FiatCurrency {
-  /// Creates a instance of [FiatGyd] (Guyanaese Dollar currency).
+  /// Creates a instance of [FiatGyd] (Guyanese Dollar currency).
   ///
   /// ISO 4217 Alpha code: `GYD`, ISO 4217 Numeric code: `328`.
   const FiatGyd()
     : super(
         code: "GYD",
-        name: "Guyanaese Dollar",
+        name: "Guyanese Dollar",
         symbol: r"$",
         alternateSymbols: const [r"G$"],
         disambiguateSymbol: r"G$",
@@ -1353,15 +1355,15 @@ class FiatKes extends FiatCurrency {
       );
 }
 
-/// A class that represents the Kyrgystani Som currency.
+/// A class that represents the Kyrgyzstani Som currency.
 class FiatKgs extends FiatCurrency {
-  /// Creates a instance of [FiatKgs] (Kyrgystani Som currency).
+  /// Creates a instance of [FiatKgs] (Kyrgyzstani Som currency).
   ///
   /// ISO 4217 Alpha code: `KGS`, ISO 4217 Numeric code: `417`.
   const FiatKgs()
     : super(
         code: "KGS",
-        name: "Kyrgystani Som",
+        name: "Kyrgyzstani Som",
         symbol: "som",
         alternateSymbols: const ["сом"],
         codeNumeric: "417",
@@ -3026,6 +3028,25 @@ class FiatXcd extends FiatCurrency {
       );
 }
 
+/// A class that represents the Caribbean Guilder currency.
+class FiatXcg extends FiatCurrency {
+  /// Creates a instance of [FiatXcg] (Caribbean Guilder currency).
+  ///
+  /// ISO 4217 Alpha code: `XCG`, ISO 4217 Numeric code: `532`.
+  const FiatXcg()
+    : super(
+        code: "XCG",
+        name: "Caribbean Guilder",
+        symbol: "Cg",
+        codeNumeric: "532",
+        namesNative: const ["Caribische gulden", "florin karibense"],
+        subunit: "Cent",
+        decimalMark: ",",
+        thousandsSeparator: ".",
+        unitFirst: true,
+      );
+}
+
 /// A class that represents the Special Drawing Rights currency.
 class FiatXdr extends FiatCurrency {
   /// Creates a instance of [FiatXdr] (Special Drawing Rights currency).
@@ -3196,11 +3217,29 @@ class FiatZmw extends FiatCurrency {
       );
 }
 
+/// A class that represents the Zimbabwe Gold currency.
+class FiatZwg extends FiatCurrency {
+  /// Creates a instance of [FiatZwg] (Zimbabwe Gold currency).
+  ///
+  /// ISO 4217 Alpha code: `ZWG`, ISO 4217 Numeric code: `924`.
+  const FiatZwg()
+    : super(
+        code: "ZWG",
+        name: "Zimbabwe Gold",
+        symbol: "ZiG",
+        disambiguateSymbol: "ZWG",
+        codeNumeric: "924",
+        namesNative: const ["Zimbabwe Gold"],
+        subunit: "cent",
+      );
+}
+
 /// A class that represents the Zimbabwean Dollar currency.
 class FiatZwl extends FiatCurrency {
   /// Creates a instance of [FiatZwl] (Zimbabwean Dollar currency).
   ///
   /// ISO 4217 Alpha code: `ZWL`, ISO 4217 Numeric code: `932`.
+  @Deprecated("Use `FiatZwg()` instead")
   const FiatZwl()
     : super(
         code: "ZWL",

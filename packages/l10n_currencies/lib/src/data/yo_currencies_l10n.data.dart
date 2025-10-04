@@ -1,6 +1,6 @@
 import "../iso_locale_mapper.dart";
 
-/// Contains 144 translation(s).
+/// Contains 146 translation(s).
 /// Provides translations for the Yoruba language
 /// locale.
 class YoCurrenciesL10N extends IsoLocaleMapper<String> {
@@ -147,10 +147,12 @@ class YoCurrenciesL10N extends IsoLocaleMapper<String> {
       "VUV": "Fátù Vanuatu",
       "WST": "Tálà Sàmóà",
       "XAF": "Faransi ti Orílẹ́ède BEKA",
+      "XCG": "Owó ìlú Kùrásọ̀ àti Saint Mátìnì",
       "XOF": "Faransi ti Orílẹ́ède BIKEAO",
       "YER": "Ráyò Yẹ́mẹ̀nì",
       "ZAR": "Randi ti Orílẹ́ède Ariwa Afirika",
       "ZMW": "Kawaṣa ti Orílẹ́ède Saabia",
+      "ZWG": "Owó ìlú Sìnbábúwè",
     });
   }
 }

@@ -1,6 +1,6 @@
 import "../iso_locale_mapper.dart";
 
-/// Contains 136 translation(s).
+/// Contains 138 translation(s).
 /// Provides translations for the Somali language
 /// locale.
 class SoCurrenciesL10N extends IsoLocaleMapper<String> {
@@ -140,9 +140,11 @@ class SoCurrenciesL10N extends IsoLocaleMapper<String> {
       "VES": "Bolifarada Fenesuwela",
       "VUV": "Fatu Fanuatu",
       "WST": "Tala Samao",
+      "XCG": "Galdhalayda Kariibiyaanka",
       "YER": "Riyaalka Yemen",
       "ZAR": "Randka Koonfur Afrika",
       "ZMW": "Kawajada Sambiya",
+      "ZWG": "Dahabka Zimbabwe",
     });
   }
 }

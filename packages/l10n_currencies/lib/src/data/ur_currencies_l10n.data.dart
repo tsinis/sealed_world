@@ -1,6 +1,6 @@
 import "../iso_locale_mapper.dart";
 
-/// Contains 159 translation(s).
+/// Contains 161 translation(s).
 /// Provides translations for the Urdu language
 /// locale.
 class UrCurrenciesL10N extends IsoLocaleMapper<String> {
@@ -160,11 +160,13 @@ class UrCurrenciesL10N extends IsoLocaleMapper<String> {
       "WST": "ساموآ کا ٹالا",
       "XAF": "وسطی افریقی [CFA] فرانک",
       "XCD": "مشرقی کریبیا کا ڈالر",
+      "XCG": "کیریبین گلڈر",
       "XOF": "مغربی افریقی [CFA] فرانک",
       "XPF": "CFP فرانک",
       "YER": "یمنی ریال",
       "ZAR": "جنوبی افریقی رانڈ",
       "ZMW": "زامبیائی کواچا",
+      "ZWG": "زمبابوے گولڈ",
       "ZWL": "زمبابوے ڈالر",
     });
   }

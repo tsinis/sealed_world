@@ -154,24 +154,15 @@ class TypedLocale extends Locale implements BasicTypedLocale {
     TranslationMap<FiatCurrency>? currencyTranslations,
     TranslationMap<NaturalLanguage>? languageTranslations,
     String? regionalCode,
-  }) {
-    final newCountry = country ?? this.country;
-    final newRegion = regionalCode ?? _regionalCode;
-    assert(
-      newRegion == null || newCountry == null,
-      "Cannot provide both `regionalCode` and `country` at the same time",
-    );
-
-    return TypedLocale(
-      language ?? this.language,
-      country: newCountry,
-      script: script ?? this.script,
-      countryTranslations: countryTranslations ?? this.countryTranslations,
-      currencyTranslations: currencyTranslations ?? this.currencyTranslations,
-      languageTranslations: languageTranslations ?? this.languageTranslations,
-      regionalCode: newRegion,
-    );
-  }
+  }) => TypedLocale(
+    language ?? this.language,
+    country: country ?? this.country,
+    script: script ?? this.script,
+    countryTranslations: countryTranslations ?? this.countryTranslations,
+    currencyTranslations: currencyTranslations ?? this.currencyTranslations,
+    languageTranslations: languageTranslations ?? this.languageTranslations,
+    regionalCode: regionalCode ?? _regionalCode,
+  );
 
   @override
   String toJson({JsonCodec codec = const JsonCodec()}) =>

@@ -9,7 +9,7 @@
 [![License MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
 [![Pub package](https://img.shields.io/pub/v/sealed_currencies.svg)](https://pub.dev/packages/sealed_currencies)
 
-This ISO-driven, pure Dart, fully tested and 3rd-party dependency-free package provides information about world currencies in the form of compile-time, tree-shakable constant classes with a sealed origin. Contains all actively used 169<sup>1</sup> currencies with ISO letter 4217 codes, also provides ISO 4217 numeric codes, their English, native names, units, subunits, currency name translations, etc. For Flutter ready widgets (like currency picker) please use [world_countries](https://pub.dev/packages/world_countries) package.
+This ISO-driven, pure Dart, fully tested and 3rd-party dependency-free package provides information about world currencies in the form of compile-time, tree-shakable constant classes with a sealed origin. Contains all actively used 171<sup>1</sup> currencies with ISO letter 4217 codes, also provides ISO 4217 numeric codes, their English, native names, units, subunits, currency name translations, etc. For Flutter ready widgets (like currency picker) please use [world_countries](https://pub.dev/packages/world_countries) package.
 
 ### Features
 
@@ -71,7 +71,7 @@ import 'package:sealed_currencies/sealed_currencies.dart';
 To get information about currencies, use the `FiatCurrency` class. You can construct instances directly (using `const`), use the class's factory constructors or static methods, or select a currency from the `FiatCurrency.list` constant.
 
 ```dart
-  print(FiatCurrency.listExtended.length); // Prints: "169".
+  print(FiatCurrency.listExtended.length); // Prints: "171".
 
   final serbianDinar = FiatCurrency.fromCode("Rsd");
   print(serbianDinar.name); // Prints: "Serbian Dinar".
@@ -121,7 +121,7 @@ For more usage examples, please see the `/example` folder.
 - **Type-safe**: The contracts and types in this package are exceptionally strong, ensuring that your code is strongly typed and well-defined.
 - **High code coverage**: The code in this package has 100% code coverage, with more than 0.5K (+1.5K in underlying packages) tests, providing confidence in its reliability and stability.
 - **Comprehensive documentation**: This package provides full documentation for every non-code generated public member, usually with examples, ensuring clarity and ease of use.
-- **Lightweight**: This package keeps under 500 KB, ensuring it fits within the pub cache limit. This leads to quick, low-bandwidth downloads and faster caching, minimizing resource impact.
+- **Lightweight**: This package keeps **under 500 KB**, ensuring it fits within the pub cache limit. This leads to quick, low-bandwidth downloads and faster caching, minimizing resource impact.
 - **Mirrored Repository**: The GitHub repository, including all package tags, is mirrored on [GitLab](https://gitlab.com/tsinis/sealed_world/), providing an alternative access point should GitHub become unavailable.
 - **Industry adopted**: This package is actively used in production by numerous European companies, ensuring its efficacy and robustness in real-world scenarios.
 - **MIT license**: This package and sources are released under the MIT license, which is a permissive license that allows users to use, modify, and distribute the code with minimal restrictions. The MIT license is considered better than most other open-source licenses because it provides flexibility and allows users to incorporate the code into their projects without worrying about legal implications.

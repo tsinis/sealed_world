@@ -1,6 +1,6 @@
 import "../iso_locale_mapper.dart";
 
-/// Contains 134 translation(s).
+/// Contains 136 translation(s).
 /// Provides translations for the Chuvash language
 /// locale.
 class CvCurrenciesL10N extends IsoLocaleMapper<String> {
@@ -138,9 +138,11 @@ class CvCurrenciesL10N extends IsoLocaleMapper<String> {
       "VES": "Венесуэла боливарӗ",
       "VUV": "Вануату ватуйӗ",
       "WST": "Самоа тали",
+      "XCG": "Кариб гульденӗ",
       "YER": "Йемен риалӗ",
       "ZAR": "Кӑнтӑр Африка рэндӗ",
       "ZMW": "Замби квачи",
+      "ZWG": "Зимбабве ылтӑнӗ",
     });
   }
 }

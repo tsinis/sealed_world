@@ -31,7 +31,7 @@ dependencies:
   flutter:
     sdk: flutter
   meta: ^1.16.0 # Same as in Flutter SDK.
-  world_flags: ^2.7.0
+  world_flags: ^2.8.0
 
 dev_dependencies:
   _sealed_world_tests:

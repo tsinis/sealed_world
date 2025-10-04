@@ -54,7 +54,7 @@
 | GMD | Gambian Dalasi | 🇬🇲 Gambia |  |
 | GNF | Guinean Franc | 🇬🇳 Guinea |  |
 | GTQ | Guatemalan Quetzal | 🇬🇹 Guatemala |  |
-| GYD | Guyanaese Dollar | 🇬🇾 Guyana |  |
+| GYD | Guyanese Dollar | 🇬🇾 Guyana |  |
 | HKD | Hong Kong Dollar | 🇭🇰 Hong Kong |  |
 | HNL | Honduran Lempira | 🇭🇳 Honduras |  |
 | HRK | Croatian Kuna | 🇭🇷 Croatia |  |
@@ -70,7 +70,7 @@
 | JOD | Jordanian Dinar | 🇯🇴 Jordan | 🇵🇸 |
 | JPY | Japanese Yen | 🇯🇵 Japan |  |
 | KES | Kenyan Shilling | 🇰🇪 Kenya |  |
-| KGS | Kyrgystani Som | 🇰🇬 Kyrgyzstan |  |
+| KGS | Kyrgyzstani Som | 🇰🇬 Kyrgyzstan |  |
 | KHR | Cambodian Riel | 🇰🇭 Cambodia |  |
 | KMF | Comorian Franc | 🇰🇲 Comoros |  |
 | KPW | North Korean Won | 🇰🇵 North Korea |  |
@@ -153,11 +153,13 @@
 | WST | Samoan Tala | 🇼🇸 Samoa |  |
 | XAF | Central African Cfa Franc | 🇨🇲 Cameroon | 🇹🇩🇨🇬🇨🇫🇬🇦🇬🇶 |
 | XCD | East Caribbean Dollar | 🇱🇨 Saint Lucia | 🇬🇩🇻🇨🇦🇬🇩🇲🇰🇳🇦🇮🇲🇸 |
+| XCG | Caribbean Guilder | 🇨🇼 Curaçao | 🇸🇽 |
 | XOF | West African Cfa Franc | 🇨🇮 Ivory Coast | 🇳🇪🇧🇫🇲🇱🇸🇳🇧🇯🇹🇬🇬🇼 |
 | XPF | Cfp Franc | 🇵🇫 French Polynesia | 🇳🇨🇼🇫 |
 | YER | Yemeni Rial | 🇾🇪 Yemen |  |
 | ZAR | South African Rand | 🇿🇦 South Africa | 🇳🇦🇱🇸🇸🇿 |
 | ZMW | Zambian Kwacha | 🇿🇲 Zambia |  |
+| ZWG | Zimbabwe Gold | 🇿🇼 Zimbabwe |  |
 | ZWL | Zimbabwean Dollar | 🇿🇼 Zimbabwe |  |
 
 > Generated (by test) file, do not edit manually.

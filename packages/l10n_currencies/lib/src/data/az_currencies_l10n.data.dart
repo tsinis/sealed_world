@@ -1,6 +1,6 @@
 import "../iso_locale_mapper.dart";
 
-/// Contains 159 translation(s).
+/// Contains 161 translation(s).
 /// Provides translations for the Azerbaijani language
 /// locale.
 class AzCurrenciesL10N extends IsoLocaleMapper<String> {
@@ -160,11 +160,13 @@ class AzCurrenciesL10N extends IsoLocaleMapper<String> {
       "WST": "Samoa Talası",
       "XAF": "Kamerun Frankı",
       "XCD": "Şərqi Karib Dolları",
+      "XCG": "Karib gilderi",
       "XOF": "Fil Dişi Sahili Frankı",
       "XPF": "Fransız Polineziyası Frankı",
       "YER": "Yəmən Rialı",
       "ZAR": "Cənubi Afrika Randı",
       "ZMW": "Zambiya Kvaçası",
+      "ZWG": "Zimbabve Qızılı",
       "ZWL": "Zimbabve Dolları",
     });
   }

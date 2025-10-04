@@ -1,6 +1,6 @@
 import "../iso_locale_mapper.dart";
 
-/// Contains 159 translation(s).
+/// Contains 161 translation(s).
 /// Provides translations for the Afrikaans language
 /// locale.
 class AfCurrenciesL10N extends IsoLocaleMapper<String> {
@@ -160,11 +160,13 @@ class AfCurrenciesL10N extends IsoLocaleMapper<String> {
       "WST": "Samoaanse tala",
       "XAF": "CFA frank BEAC",
       "XCD": "Oos-Karibbiese dollar",
+      "XCG": "Karibiese gulde",
       "XOF": "CFA frank BCEAO",
       "XPF": "CFP-frank",
       "YER": "Jemenitiese rial",
       "ZAR": "Suid-Afrikaanse rand",
       "ZMW": "Zambiese kwacha",
+      "ZWG": "Zimbabwiese goud",
       "ZWL": "Zimbabwiese dollar",
     });
   }
