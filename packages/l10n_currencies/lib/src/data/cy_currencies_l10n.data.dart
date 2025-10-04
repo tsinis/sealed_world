@@ -160,13 +160,13 @@ class CyCurrenciesL10N extends IsoLocaleMapper<String> {
       "WST": "Tala Samoa",
       "XAF": "Ffranc CFA Canol Affrica",
       "XCD": "Doler Dwyrain y Caribî",
-      "XCG": "guilder Caribïaidd",
+      "XCG": "Guilder Caribïaidd",
       "XOF": "Ffranc CFA Gorllewin Affrica",
       "XPF": "Ffranc CFP",
       "YER": "Rial Yemen",
       "ZAR": "Rand De Affrica",
       "ZMW": "Kwacha Zambia",
-      "ZWG": "Zimbabwean Gold",
+      "ZWG": "Aur Zimbabwe",
       "ZWL": "Doler Zimbabwe",
     });
   }

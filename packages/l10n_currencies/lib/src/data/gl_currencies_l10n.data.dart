@@ -160,13 +160,13 @@ class GlCurrenciesL10N extends IsoLocaleMapper<String> {
       "WST": "Tala samoano",
       "XAF": "Franco CFA (BEAC)",
       "XCD": "Dólar do Caribe Oriental",
-      "XCG": "florín caribeño",
+      "XCG": "Florín caribeño",
       "XOF": "Franco CFA (BCEAO)",
       "XPF": "Franco CFP",
       "YER": "Rial iemení",
       "ZAR": "Rand surafricano",
       "ZMW": "Kwacha zambiano",
-      "ZWG": "ouro de Zimbabwe",
+      "ZWG": "Ouro de Zimbabwe",
       "ZWL": "Dólar de Zimbabwe",
     });
   }

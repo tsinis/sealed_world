@@ -160,7 +160,7 @@ class RoCurrenciesL10N extends IsoLocaleMapper<String> {
       "WST": "tala samoană",
       "XAF": "franc CFA BEAC",
       "XCD": "dolar din Caraibele de Est",
-      "XCG": "gulden caraib",
+      "XCG": "gulden caraibic",
       "XOF": "franc CFA BCEAO",
       "XPF": "franc CFP",
       "YER": "rial yemenit",

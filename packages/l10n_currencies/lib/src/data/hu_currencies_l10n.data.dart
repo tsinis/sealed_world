@@ -160,7 +160,7 @@ class HuCurrenciesL10N extends IsoLocaleMapper<String> {
       "WST": "nyugat-szamoai tala",
       "XAF": "CFA frank BEAC",
       "XCD": "kelet-karibi dollár",
-      "XCG": "karibi forint",
+      "XCG": "karibi gulden",
       "XOF": "CFA frank BCEAO",
       "XPF": "csendes-óceáni valutaközösségi frank",
       "YER": "jemeni rial",

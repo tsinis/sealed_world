@@ -142,7 +142,7 @@ class XhCurrenciesL10N extends IsoLocaleMapper<String> {
       "XCG": "ICaribbean guilder",
       "YER": "I-Rial yaseYemen",
       "ZMW": "I-Kwacha yaseZambi",
-      "ZWG": "IZimbabwean Gold",
+      "ZWG": "IGolide yaseZimbabwe",
     });
   }
 }

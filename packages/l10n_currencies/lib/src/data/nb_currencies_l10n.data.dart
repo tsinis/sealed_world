@@ -160,7 +160,7 @@ class NbCurrenciesL10N extends IsoLocaleMapper<String> {
       "WST": "samoanske tala",
       "XAF": "sentralafrikanske CFA-franc",
       "XCD": "østkaribiske dollar",
-      "XCG": "karibisk gylden",
+      "XCG": "karibisk gulden",
       "XOF": "vestafrikanske CFA-franc",
       "XPF": "CFP-franc",
       "YER": "jemenittiske rialer",

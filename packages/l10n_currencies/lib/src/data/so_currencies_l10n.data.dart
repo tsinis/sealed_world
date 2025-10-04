@@ -140,7 +140,7 @@ class SoCurrenciesL10N extends IsoLocaleMapper<String> {
       "VES": "Bolifarada Fenesuwela",
       "VUV": "Fatu Fanuatu",
       "WST": "Tala Samao",
-      "XCG": "Caribbean guilder",
+      "XCG": "Galdhalayda Kariibiyaanka",
       "YER": "Riyaalka Yemen",
       "ZAR": "Randka Koonfur Afrika",
       "ZMW": "Kawajada Sambiya",

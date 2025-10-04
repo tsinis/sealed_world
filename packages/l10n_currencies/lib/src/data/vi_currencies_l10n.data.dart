@@ -160,13 +160,13 @@ class ViCurrenciesL10N extends IsoLocaleMapper<String> {
       "WST": "Tala Samoa",
       "XAF": "Franc CFA Trung Phi",
       "XCD": "Đô la Đông Caribê",
-      "XCG": "Guilder Caribe",
+      "XCG": "Đồng Guilder Caribe",
       "XOF": "Franc CFA Tây Phi",
       "XPF": "Franc CFP",
       "YER": "Rial Yemen",
       "ZAR": "Rand Nam Phi",
       "ZMW": "Kwacha Zambia",
-      "ZWG": "Zimbabwean Gold",
+      "ZWG": "Đồng Vàng Zimbabwe",
       "ZWL": "Đồng Đô la Zimbabwe",
     });
   }

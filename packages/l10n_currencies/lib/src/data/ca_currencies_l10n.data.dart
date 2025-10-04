@@ -160,7 +160,7 @@ class CaCurrenciesL10N extends IsoLocaleMapper<String> {
       "WST": "tala samoà",
       "XAF": "franc CFA BEAC",
       "XCD": "dòlar del Carib Oriental",
-      "XCG": "florí de les Antilles",
+      "XCG": "florí caribeny",
       "XOF": "franc CFA BCEAO",
       "XPF": "franc CFP",
       "YER": "rial iemenita",

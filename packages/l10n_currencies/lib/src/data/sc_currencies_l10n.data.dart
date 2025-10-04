@@ -145,6 +145,7 @@ class ScCurrenciesL10N extends IsoLocaleMapper<String> {
       "YER": "rial yemenita",
       "ZAR": "rand sudafricanu",
       "ZMW": "kwacha zambiana",
+      "ZWG": "oru de Zimbabwe",
       "ZWL": "dòllaru zimbabweanu",
     });
   }

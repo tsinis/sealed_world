@@ -160,7 +160,7 @@ class SqCurrenciesL10N extends IsoLocaleMapper<String> {
       "WST": "Tala samoane",
       "XAF": "Franga kamerunase",
       "XCD": "Dollari i Karaibeve Lindore",
-      "XCG": "gilder karaibian",
+      "XCG": "Gilder karaibian",
       "XOF": "Franga e Bregut të Fildishtë",
       "XPF": "Franga franceze e Polinezisë",
       "YER": "Riali i Jemenit",

@@ -160,7 +160,7 @@ class MrCurrenciesL10N extends IsoLocaleMapper<String> {
       "WST": "सामोअन टाला",
       "XAF": "मध्य आफ्रिकन [CFA] फ्रँक",
       "XCD": "पूर्व कॅरीबियन डॉलर",
-      "XCG": "कॅरेबियब गिल्डर",
+      "XCG": "कॅरिबियन गिल्डर",
       "XOF": "पश्चिम आफ्रिकन [CFA] फ्रँक",
       "XPF": "[CFP] फ्रँक",
       "YER": "येमेनी रियाल",
