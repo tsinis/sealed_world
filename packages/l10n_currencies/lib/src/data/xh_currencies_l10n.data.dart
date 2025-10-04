@@ -139,7 +139,7 @@ class XhCurrenciesL10N extends IsoLocaleMapper<String> {
       "VES": "I-Bolívar yaseVenezuela",
       "VUV": "I-Vatu yaseVanuatu",
       "WST": "I-Tala yaseSamoa",
-      "XCG": "ICaribbean guilder",
+      "XCG": "I-Guilder yaseCaribbean",
       "YER": "I-Rial yaseYemen",
       "ZMW": "I-Kwacha yaseZambi",
       "ZWG": "IGolide yaseZimbabwe",

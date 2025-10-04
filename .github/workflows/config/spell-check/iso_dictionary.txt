@@ -83,7 +83,6 @@ Cmr
 Codesand
 Cok
 Colón
-Colón
 Cpmn
 Cpv
 Cri
@@ -240,6 +239,7 @@ Kthi
 Kwt
 Kxgpch
 Kyrgystani
+Kyrgyzstani
 LAOO
 LATF
 LATG
@@ -257,7 +257,6 @@ Lbn
 Lbr
 Lby
 Leke
-Leonean
 Leonean
 Lepc
 Linb
@@ -406,11 +405,11 @@ Piqd
 Plrd
 Plw
 Poblacht
+Pobrežie
 Portuguesa
 Prk
 Prt
 Prti
-Príncipe
 Príncipe
 Pse
 Psin
@@ -490,6 +489,7 @@ Sjm
 Slb
 Sle
 Slk
+Slonoviny
 Slv
 Sme
 Smo
@@ -566,7 +566,6 @@ Tkl
 Tkm
 Tls
 Tnsa
-Tomé
 Tomé
 Tsn
 Tso

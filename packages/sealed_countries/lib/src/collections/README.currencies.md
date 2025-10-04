@@ -54,7 +54,7 @@
 | GMD | Gambian Dalasi | 🇬🇲 Gambia |  |
 | GNF | Guinean Franc | 🇬🇳 Guinea |  |
 | GTQ | Guatemalan Quetzal | 🇬🇹 Guatemala |  |
-| GYD | Guyanaese Dollar | 🇬🇾 Guyana |  |
+| GYD | Guyanese Dollar | 🇬🇾 Guyana |  |
 | HKD | Hong Kong Dollar | 🇭🇰 Hong Kong |  |
 | HNL | Honduran Lempira | 🇭🇳 Honduras |  |
 | HRK | Croatian Kuna | 🇭🇷 Croatia |  |
@@ -70,7 +70,7 @@
 | JOD | Jordanian Dinar | 🇯🇴 Jordan | 🇵🇸 |
 | JPY | Japanese Yen | 🇯🇵 Japan |  |
 | KES | Kenyan Shilling | 🇰🇪 Kenya |  |
-| KGS | Kyrgystani Som | 🇰🇬 Kyrgyzstan |  |
+| KGS | Kyrgyzstani Som | 🇰🇬 Kyrgyzstan |  |
 | KHR | Cambodian Riel | 🇰🇭 Cambodia |  |
 | KMF | Comorian Franc | 🇰🇲 Comoros |  |
 | KPW | North Korean Won | 🇰🇵 North Korea |  |

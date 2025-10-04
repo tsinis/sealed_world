@@ -4,6 +4,11 @@ NEW FEATURES
 
 - Expanded currency localization by adding translations for XCG (Caribbean guilder) and ZWG (Zimbabwean Gold) across 100+ locales (each).
 
+FIX
+
+- Corrected English currency name for `KGS` to "Kyrgy**z**stani Som".
+- Corrected English currency name for `GYD` to "Guyanese Dollar".
+
 DOCUMENTATION
 
 - Improved documentation in README.

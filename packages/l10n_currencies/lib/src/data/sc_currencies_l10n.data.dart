@@ -1,6 +1,6 @@
 import "../iso_locale_mapper.dart";
 
-/// Contains 139 translation(s).
+/// Contains 140 translation(s).
 /// Provides translations for the Sardinian language
 /// locale.
 class ScCurrenciesL10N extends IsoLocaleMapper<String> {

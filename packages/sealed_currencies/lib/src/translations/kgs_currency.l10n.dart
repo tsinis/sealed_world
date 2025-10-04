@@ -1,6 +1,6 @@
 import "package:sealed_languages/sealed_languages.dart";
 
-/// Provides 108 translations for a Kyrgystani Som currency:
+/// Provides 108 translations for a Kyrgyzstani Som currency:
 /// - (Eastern) Punjabi
 /// - (Scottish) Gaelic
 /// - Afrikaans
@@ -105,7 +105,7 @@ import "package:sealed_languages/sealed_languages.dart";
 /// - Yoruba
 /// - Zulu.
 const kgsCurrencyTranslations = [
-  TranslatedName(LangEng(), name: "Kyrgystani Som"),
+  TranslatedName(LangEng(), name: "Kyrgyzstani Som"),
   TranslatedName(LangAfr(), name: "Kirgisiese som"),
   TranslatedName(LangAmh(), name: "የኪርጊስታን ሶም"),
   TranslatedName(LangAra(), name: "سوم قيرغستاني"),

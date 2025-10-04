@@ -1047,15 +1047,15 @@ class FiatGtq extends FiatCurrency {
       );
 }
 
-/// A class that represents the Guyanaese Dollar currency.
+/// A class that represents the Guyanese Dollar currency.
 class FiatGyd extends FiatCurrency {
-  /// Creates a instance of [FiatGyd] (Guyanaese Dollar currency).
+  /// Creates a instance of [FiatGyd] (Guyanese Dollar currency).
   ///
   /// ISO 4217 Alpha code: `GYD`, ISO 4217 Numeric code: `328`.
   const FiatGyd()
     : super(
         code: "GYD",
-        name: "Guyanaese Dollar",
+        name: "Guyanese Dollar",
         symbol: r"$",
         alternateSymbols: const [r"G$"],
         disambiguateSymbol: r"G$",
@@ -1355,15 +1355,15 @@ class FiatKes extends FiatCurrency {
       );
 }
 
-/// A class that represents the Kyrgystani Som currency.
+/// A class that represents the Kyrgyzstani Som currency.
 class FiatKgs extends FiatCurrency {
-  /// Creates a instance of [FiatKgs] (Kyrgystani Som currency).
+  /// Creates a instance of [FiatKgs] (Kyrgyzstani Som currency).
   ///
   /// ISO 4217 Alpha code: `KGS`, ISO 4217 Numeric code: `417`.
   const FiatKgs()
     : super(
         code: "KGS",
-        name: "Kyrgystani Som",
+        name: "Kyrgyzstani Som",
         symbol: "som",
         alternateSymbols: const ["сом"],
         codeNumeric: "417",
