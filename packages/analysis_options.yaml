@@ -94,7 +94,7 @@ dart_code_metrics:
     - prefer-correct-throws: false # No DCM annotations or Meta in Dart packages.
     - prefer-explicit-parameter-names: false # This will be dev. defined.
     - prefer-prefixed-global-constants: false # This will be a breaking change.
-    - prefer-test-matchers: false # Introduces coupling in tests.
+    - prefer-test-matchers: false # Matter of style + introduces coupling in tests.
     # Enabled:
     - avoid-collection-equality-checks:
         exclude:
@@ -179,6 +179,7 @@ dart_code_metrics:
           - "**/test/**"
 
     # Enabled:
+    - add-resolution-workspace: true
     - avoid-accessing-collections-by-constant-index: true
     - avoid-accessing-other-classes-private-members: true
     - avoid-assigning-to-static-field: true
@@ -198,6 +199,8 @@ dart_code_metrics:
     - avoid-complex-loop-conditions: true
     - avoid-conditions-with-boolean-literals: true
     - avoid-constant-assert-conditions: true
+    - avoid-constant-conditions: true
+    - avoid-constant-switches: true
     - avoid-contradictory-expressions: true
     - avoid-declaring-call-method: true
     - avoid-double-slash-imports: true
@@ -331,22 +334,26 @@ dart_code_metrics:
     - avoid-unreachable-for-loop: true
     - avoid-unrelated-type-assertions: true
     - avoid-unrelated-type-casts: true
+    - avoid-unremovable-callbacks-in-listeners: true
     - avoid-unsafe-reduce: true
     - avoid-unused-after-null-check: true
     - avoid-unused-assignment: true
     - avoid-unused-generics: true
     - avoid-unused-instances: true
+    - avoid-unused-local-variable: true
     - avoid-unused-parameters: true
     - avoid-weak-cryptographic-algorithms: true
     - avoid-wildcard-cases-with-enums: true
     - avoid-wildcard-cases-with-sealed-classes: true
     - binary-expression-operand-order: true
+    - dependencies-ordering: true
     - dispose-class-fields: true
     - double-literal-format: true
     - function-always-returns-null: true
     - function-always-returns-same-value: true
     - handle-throwing-invocations: true
     - map-keys-ordering: true
+    - match-base-class-default-value: true
     - match-lib-folder-structure: true
     - match-positional-field-names-on-assignment: true
     - move-records-to-typedefs: true
@@ -354,6 +361,7 @@ dart_code_metrics:
     - move-variable-outside-iteration: true
     - newline-before-case: true
     - newline-before-method: true
+    - newline-before-pubspec-entry: true
     - newline-before-return: true
     - no-boolean-literal-compare: true
     - no-empty-block: true
@@ -389,6 +397,7 @@ dart_code_metrics:
     - prefer-correct-stream-return-type: true
     - prefer-correct-switch-length: true
     - prefer-correct-test-file-name: true
+    - prefer-correct-topics: true
     - prefer-correct-type-name: true
     - prefer-declaring-const-constructor: true
     - prefer-digit-separators: true
@@ -424,12 +433,14 @@ dart_code_metrics:
     - prefer-switch-expression: true
     - prefer-switch-with-enums: true
     - prefer-switch-with-sealed-classes: true
+    - prefer-test-structure: true
     - prefer-trailing-comma: true
     - prefer-type-over-var: true
     - prefer-unique-test-names: true
     - prefer-unwrapping-future-or: true
     - prefer-visible-for-testing-on-members: true
     - prefer-wildcard-pattern: true
+    - pubspec-ordering: true
     - record-fields-ordering: true
     - unnecessary-trailing-comma: true
     - use-existing-destructuring: true
