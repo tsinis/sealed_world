@@ -91,7 +91,7 @@ class BasicFlag extends DecoratedFlagWidget {
 
   @override
   @mustCallSuper
-  // ignore: avoid-shadowing, it's default name in debugFillProperties.
+  // ignore: avoid-shadowing, avoid-long-functions, default debugFillProperties.
   void debugFillProperties(DiagnosticPropertiesBuilder properties) {
     super.debugFillProperties(properties);
     const theme = "not provided, using value from FlagThemeData or";

@@ -17,7 +17,6 @@ class IsoLocaleMapper<V extends Object> {
   ///
   /// Parameters:
   /// - [other]: Optional initial mapping data.
-  // ignore: prefer-declaring-const-constructor, map is runtime mutable.
   IsoLocaleMapper({Map<String, V>? other}) : map = other ?? {};
 
   /// The internal mapping between ISO codes and their values.

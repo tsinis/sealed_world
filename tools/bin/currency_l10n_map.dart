@@ -1,4 +1,4 @@
-// ignore_for_file: avoid_print, prefer-for-in, it's a CLI utility script.
+// ignore_for_file: avoid_print, prefer-for-in, avoid-long-functions
 
 import "dart:io";
 

@@ -43,13 +43,12 @@ final class CustomDiagonalPainter extends MultiElementPainter {
     path.close();
 
     if (outlineColor != null) {
-      final strokeWidth = (property.widthFactor ?? 1) * height;
       canvas.drawPath(
         path,
         Paint()
           ..color = outlineColor
           ..style = PaintingStyle.stroke
-          ..strokeWidth = strokeWidth,
+          ..strokeWidth = (property.widthFactor ?? 1) * height,
       );
     }
     canvas.drawPath(path, paintCreator());

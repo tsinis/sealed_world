@@ -87,6 +87,7 @@ class IsoFlag<T extends IsoStandardized, F extends BasicFlag>
   String get debugLabel => item.code;
 
   @override
+  // ignore: avoid-long-functions, a lot of properties to show.
   void debugFillProperties(DiagnosticPropertiesBuilder properties) {
     super.debugFillProperties(properties);
     const theme = "not provided, using value from FlagThemeData or";

@@ -83,6 +83,7 @@ extension TextFieldExtension on TextField? {
     UndoHistoryController? undoController,
     bool? selectAllOnFocus,
     List<Locale>? hintLocales,
+    // ignore: avoid-long-functions, text field has many parameters.
   }) {
     final textField =
         this ??

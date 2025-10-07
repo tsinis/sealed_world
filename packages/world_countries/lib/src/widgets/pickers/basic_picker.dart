@@ -313,7 +313,8 @@ abstract class BasicPicker<T extends IsoTranslated>
   @override
   Future<T?> showInSearch(
     BuildContext context, {
-    String? query = "",
+    String? query =
+        "", // ignore: match-base-class-default-value, false positive.
     bool useRootNavigator = false,
     String? searchFieldLabel,
     TextStyle? searchFieldStyle,
@@ -327,6 +328,7 @@ abstract class BasicPicker<T extends IsoTranslated>
     bool maintainState = false,
     bool autocorrect = true,
     bool enableSuggestions = true,
+    // ignore: avoid-long-functions, a lot of parameters here.
   }) async {
     T? result;
     final searchMap = items.searchMap(context, searchIn ?? defaultSearch);

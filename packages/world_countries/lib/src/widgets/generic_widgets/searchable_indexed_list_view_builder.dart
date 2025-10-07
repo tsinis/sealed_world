@@ -168,7 +168,8 @@ class SearchableIndexedListViewBuilder<T extends Object>
   @override
   Future<T?>? showInSearch(
     BuildContext context, {
-    String? query = "",
+    String? query =
+        "", // ignore: match-base-class-default-value, false positive.
     bool useRootNavigator = false,
   }) => null;
 
