@@ -58,6 +58,6 @@ sealed class Translated<T extends TranslatedName> {
   /// // Recommended: Using commonName* methods
   /// final translation = isoObject.commonNameFor(const BasicLocale(LangEng()));
   /// ```
-  @Deprecated('Use `l10n` getter instead')
+  @Deprecated("Use `l10n` getter instead")
   List<T> get translations => _translations ?? []; // coverage:ignore-line
 }

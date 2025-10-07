@@ -135,7 +135,7 @@ extension TranslatedExtension<
   ///   orElse: const LangEng(), // Default language if no translation is found.
   /// );
   /// ```
-  @Deprecated('Use `commonNameFor`/`maybeCommonName` methods instead.')
+  @Deprecated("Use `commonNameFor`/`maybeCommonName` methods instead.")
   T translation<B extends L>(
     B locale, {
     NaturalLanguage orElse = const LangEng(),
@@ -167,7 +167,7 @@ extension TranslatedExtension<
   /// // language if no matching translation is found.
   /// );
   /// ```
-  @Deprecated('Use `commonNameFor`/`maybeCommonName` methods instead.')
+  @Deprecated("Use `commonNameFor`/`maybeCommonName` methods instead.")
   T? maybeTranslation<B extends L>(
     B? locale, {
     bool useLanguageFallback = true,
