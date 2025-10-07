@@ -1,3 +1,10 @@
+## 1.3.1
+
+CHORE
+
+- Lower Dart SDK constraint from ^3.9.2 to ^3.9.0
+- Enable and fix 10 new DCM rules (from the 1.32.0: October Update)
+
 ## 1.3.0
 
 FIX
