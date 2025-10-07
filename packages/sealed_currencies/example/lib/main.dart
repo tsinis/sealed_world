@@ -49,6 +49,7 @@ void main() {
 
 /// Creates a instance of the custom currency with permissive constructor.
 class _FiatCustom extends FiatCurrency {
+  // ignore: deprecated_member_use_from_same_package, it's TODO!
   const _FiatCustom() : super.permissive(code: "123", name: "Custom");
 
   @override

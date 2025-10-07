@@ -12,6 +12,7 @@ import "package:sealed_languages/src/model/language/language.dart";
 import "package:test/test.dart";
 
 class _NaturalLanguageTest extends NaturalLanguage {
+  // ignore: deprecated_member_use_from_same_package, it's TODO!
   const _NaturalLanguageTest() : super.permissive(name: " ", code: "");
 }
 

@@ -62,7 +62,6 @@ Provides a compile-time constant of all countries accessible via `WorldCountry.l
 - `maybeFromCode` - returns a country instance if the value matches the provided ISO 3166-1 Alpha-3 code, otherwise returns `null`.
 - `maybeFromCodeShort` - returns a country instance if the value matches the provided ISO 3166-1 Alpha-2 code, otherwise returns `null`.
 - `maybeFromCodeNumeric` - returns a country instance if the value matches the provided ISO 3166-1 numeric code, otherwise returns `null`.
-- `permissive` - allows the creation of custom class instances that are not fully compatible with the ISO standard.
 
 You can also find many common methods you may know from Dart ecosystem - `toString` overrides, `copyWith`, `toJson`, `compareTo`, etc. Also, a compile-time const, tree-shakable, case-insensitive code `map`s (for O(1)-time code look-ups), `list`, and much more.
 

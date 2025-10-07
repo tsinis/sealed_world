@@ -11,6 +11,7 @@ import "package:sealed_languages/sealed_languages.dart";
 import "package:test/test.dart";
 
 class _FiatCurrencyTest extends FiatCurrency {
+  // ignore: deprecated_member_use_from_same_package, it's TODO!
   const _FiatCurrencyTest() : super.permissive(code: "123", name: " ");
 }
 

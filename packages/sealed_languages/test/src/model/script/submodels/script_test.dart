@@ -10,6 +10,7 @@ import "package:sealed_languages/src/model/script/writing_system.dart";
 import "package:test/test.dart";
 
 class _ScriptTest extends Script {
+  // ignore: deprecated_member_use_from_same_package, it's TODO!
   const _ScriptTest() : super.permissive(name: " ", code: "");
 }
 

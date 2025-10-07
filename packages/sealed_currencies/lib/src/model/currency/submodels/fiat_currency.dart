@@ -46,7 +46,7 @@ class FiatCurrency extends Currency
     super.symbol,
     super.decimalMark = dot,
     super.thousandsSeparator = ",",
-    List<TranslatedName>? translations,
+    List<TranslatedName>? translations, // TODO! Deprecate.
   }) : assert(
          code.length == IsoStandardized.codeLength,
          """`code` should be exactly ${IsoStandardized.codeLength} characters long!""",
@@ -79,6 +79,7 @@ class FiatCurrency extends Currency
 
   /// {@macro permissive_constructor}
   /// {@macro currency_constructor}
+  @Deprecated("Use existing instance(s) and `copyWith` method instead")
   const FiatCurrency.permissive({
     required super.code,
     required super.name,

@@ -36,6 +36,7 @@ class Script extends WritingSystem
 
   /// {@macro permissive_constructor}
   /// {@macro script_constructor}
+  @Deprecated("Use the default constructor and `copyWith` method instead")
   const Script.permissive({
     required super.name,
     required this.code,

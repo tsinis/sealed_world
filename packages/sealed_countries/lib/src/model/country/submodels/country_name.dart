@@ -4,6 +4,8 @@ import "../../../helpers/extensions/country_submodels/country_name_extension.dar
 
 /// A class that represents the name of a country in a particular language.
 ///
+/// The main difference to the super [TranslatedName] class is that the
+/// [official] (`fullName`) must be provided and cannot be empty.
 /// The [CountryName] class is a simple value object that represents the name of
 /// a country in a particular language. It consists of a [NaturalLanguage]
 /// object that represents the language, and two [String] values that represent

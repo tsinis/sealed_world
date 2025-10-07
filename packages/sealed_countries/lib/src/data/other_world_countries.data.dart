@@ -27,6 +27,7 @@ class CountryUnk extends WorldCountry {
   ///
   /// ISO 3166-1 Alpha-3 code: `UNK`, ISO 3166-1 Alpha-2 code: `XK`.
   const CountryUnk()
+    // ignore: deprecated_member_use_from_same_package, it's TODO!
     : super.permissive(
         name: const CountryName(
           language: LangEng(),
@@ -56,6 +57,7 @@ class CountryUnk extends WorldCountry {
         fifa: "KVX",
         car: const Car(sign: "CS"),
         timezones: const ["UTC+01:00"],
+        // TODO! tld: const [], // No official top-level domain.
       );
   @override
   List<FiatCurrency> get currencies => const [FiatEur()];
