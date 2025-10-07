@@ -1,7 +1,7 @@
 // ignore_for_file: deprecated_member_use, it's TODO!
+// ignore_for_file: deprecated_member_use_from_same_package, it's TODO!
 
 import "package:_sealed_world_tests/sealed_world_tests.dart";
-// ignore: deprecated_member_use_from_same_package, it's TODO!
 import "package:sealed_currencies/currency_translations.dart";
 import "package:sealed_currencies/src/data/fiat_currencies.data.dart"
     show FiatAng;
@@ -11,7 +11,6 @@ import "package:sealed_languages/sealed_languages.dart";
 import "package:test/test.dart";
 
 class _FiatCurrencyTest extends FiatCurrency {
-  // ignore: deprecated_member_use_from_same_package, it's TODO!
   const _FiatCurrencyTest() : super.permissive(code: "123", name: " ");
 }
 
@@ -89,7 +88,6 @@ void main() => group("$FiatCurrency", () {
         expect(
           FiatCurrency.codeNumericMap[element.codeNumeric],
           element,
-          // ignore: deprecated_member_use_from_same_package, it's TODO!
           skip: element == const FiatAng(),
           reason: "XCG reuses same numeric code as ANG",
         );

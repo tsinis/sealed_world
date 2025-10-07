@@ -46,7 +46,7 @@ class FiatCurrency extends Currency
     super.symbol,
     super.decimalMark = dot,
     super.thousandsSeparator = ",",
-    List<TranslatedName>? translations, // TODO! Deprecate.
+    @deprecated List<TranslatedName>? translations,
   }) : assert(
          code.length == IsoStandardized.codeLength,
          """`code` should be exactly ${IsoStandardized.codeLength} characters long!""",
@@ -96,7 +96,7 @@ class FiatCurrency extends Currency
     super.symbol,
     super.decimalMark = dot,
     super.thousandsSeparator = ",",
-    List<TranslatedName>? translations,
+    @deprecated List<TranslatedName>? translations,
   }) : _translations = translations;
 
   /// Returns a [FiatCurrency] instance from an letter ISO 4217 code.

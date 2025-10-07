@@ -1,6 +1,6 @@
 // ignore_for_file: avoid-non-ascii-symbols
+// ignore_for_file: deprecated_member_use_from_same_package, it's TODO!
 
-// ignore: deprecated_member_use_from_same_package, it's TODO!
 import "package:sealed_languages/language_translations.dart";
 import "package:sealed_languages/src/data/natural_languages.data.dart";
 import "package:sealed_languages/src/data/scripts.data.dart";

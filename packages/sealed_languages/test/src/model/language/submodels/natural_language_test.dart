@@ -26,7 +26,6 @@ void main() => group("$NaturalLanguage", () {
     expect(value, isA<JsonEncodable>());
     expect(value, isA<Language>());
     expect(value, isA<Named>());
-    expect(value, isA<Translated>());
     expect(value, isA<Comparable<IsoStandardized>>());
   });
 

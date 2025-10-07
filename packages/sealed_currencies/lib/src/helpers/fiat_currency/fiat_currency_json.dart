@@ -25,6 +25,7 @@ extension FiatCurrencyJson on FiatCurrency {
     subunitToUnit: map["subunitToUnit"] as int,
     symbol: map["symbol"]?.toString(),
     thousandsSeparator: map["thousandsSeparator"].toString(),
+    // ignore: deprecated_member_use_from_same_package, waits for removal.
     translations: List.unmodifiable(
       (map["translations"] as List).map(
         (l10n) => TranslatedNameExtension.fromMap(l10n as JsonMap),

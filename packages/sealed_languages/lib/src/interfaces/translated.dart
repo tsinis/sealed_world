@@ -31,6 +31,7 @@ part "iso_translated.dart";
 /// representing the translated names of the country. The [Translated] interface
 /// is used to ensure that the `TranslatedObject` class has the required
 /// translations.
+@deprecated
 sealed class Translated<T extends TranslatedName> {
   /// Creates a new instance of the [Translated] object.
   ///
@@ -57,5 +58,6 @@ sealed class Translated<T extends TranslatedName> {
   /// // Recommended: Using commonName* methods
   /// final translation = isoObject.commonNameFor(const BasicLocale(LangEng()));
   /// ```
+  @Deprecated('Use `l10n` getter instead')
   List<T> get translations => _translations ?? []; // coverage:ignore-line
 }

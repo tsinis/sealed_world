@@ -1,6 +1,6 @@
 part of "translated.dart";
 
-/// An abstract interface class that extends [Translated] and implements
+/// An abstract interface class that extends `Translated` and implements
 /// [IsoStandardized].
 ///
 /// This class is used to represent a standardized ISO object that has been
@@ -10,23 +10,21 @@ part of "translated.dart";
 /// The [T] type parameter represents the translated name of the item.
 /// The [N] type parameter represents the name of the ISO object.
 /// The [L] type parameter represents the basic locale used for localization.
-///
-/// The [translations] parameter is optional and could be provided when
-/// creating a new (custom) instance of [IsoTranslated], but it's recommended
-/// to use [l10n] override instead.
 abstract interface class IsoTranslated<
   T extends TranslatedName,
   N extends Object,
   L extends BasicLocale
 >
-    extends Translated<T>
+    extends
+        // ignore: deprecated_member_use_from_same_package, it's TODO!
+        Translated<T>
     implements IsoStandardized<N> {
   /// Creates a new instance of the [IsoTranslated] object.
   ///
   /// The [translations] parameter isn't required and could be provided when
   /// creating a new (custom) instance. It represents the translations
   /// of the item's name into multiple languages.
-  const IsoTranslated({super.translations}); // coverage:ignore-line
+  const IsoTranslated({@deprecated super.translations}); // coverage:ignore-line
 
   /// Returns the [BasicLocalizationDelegate] used for handling translations.
   ///
