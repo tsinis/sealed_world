@@ -47,6 +47,7 @@ class TranslatedName extends BasicLocale implements Named<String> {
   final String name;
 
   @override
+  // TODO! Make `short` nullable in the next major release.
   String toString({bool short = true}) => short
       ? name
       : 'TranslatedName(${language.runtimeType}(), name: "$name"'

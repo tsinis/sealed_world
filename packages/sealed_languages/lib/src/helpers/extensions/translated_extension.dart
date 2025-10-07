@@ -137,7 +137,6 @@ extension TranslatedExtension<
   /// ```
   @Deprecated('Use `commonNameFor`/`maybeCommonName` methods instead.')
   T translation<B extends L>(
-    // TODO! Deprecate.
     B locale, {
     NaturalLanguage orElse = const LangEng(),
   }) =>

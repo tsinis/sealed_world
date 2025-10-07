@@ -1,6 +1,5 @@
 // ignore_for_file: avoid_print, prefer-match-file-name
 
-import "package:l10n_currencies/l10n_currencies.dart";
 import "package:sealed_currencies/sealed_currencies.dart";
 
 void main() {
@@ -38,29 +37,4 @@ void main() {
   print(
     serbianDinar.maybeCommonNameFor(const BasicLocale(LangPol())),
   ); // Prints Polish name of RSD: "dinar serbski".
-
-  const customFiat = _FiatCustom();
-
-  print(customFiat.name); // Prints "Custom".
-  print(
-    customFiat.commonNameFor(const BasicLocale(LangEng())),
-  ); // Prints "Custom currency".
-}
-
-/// Creates a instance of the custom currency with permissive constructor.
-class _FiatCustom extends FiatCurrency {
-  // ignore: deprecated_member_use_from_same_package, it's TODO!
-  const _FiatCustom() : super.permissive(code: "123", name: "Custom");
-
-  @override
-  LocalizationDelegate get l10n => super.l10n.copyWith(
-    mapper: () => CurrenciesLocaleMapper(
-      other: {
-        /// From the `l10n_currencies` package.
-        "en": IsoLocaleMapper(
-          other: {code: "$name currency", "$code+": "$name rich name"},
-        ),
-      },
-    ).localize,
-  );
 }
