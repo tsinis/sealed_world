@@ -6,6 +6,10 @@ on:
     paths:
       - "packages/**"
 
+concurrency:
+  group: ${{ github.workflow }}
+  cancel-in-progress: false
+
 jobs:
   mirror-to-gitlab:
     name: 💾 Backup to GitLab

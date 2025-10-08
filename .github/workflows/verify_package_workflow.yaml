@@ -50,7 +50,7 @@ jobs:
           cache-key: "flutter-:os:-:channel:-:version:-:arch:-:hash:"
 
       - name: 📦 Install dependencies
-        run: dart pub upgrade && dart pub get
+        run: dart pub upgrade
 
       - name: 🕵️ Analyze code
         uses: ValentinVignal/action-dart-analyze@v1.1
@@ -113,7 +113,7 @@ jobs:
           dart test test/src --fail-fast --coverage=coverage
           dart run coverage:format_coverage -c -l -i coverage -o coverage/lcov.info --report-on=lib
 
-      - name: 🧪 Run Flutter tests
+      - name: 🔬 Run Flutter tests
         if: ${{ inputs.is_flutter }}
         run: flutter test --coverage --no-pub
 

@@ -8,8 +8,13 @@ permissions:
   contents: read
   pull-requests: write
 
+concurrency:
+  group: ${{ github.workflow }}-${{ github.event.pull_request.number || github.ref }}
+  cancel-in-progress: true
+
 jobs:
   spell-check:
+    name: 🔗🪄 Check Links & Spelling
     runs-on: ubuntu-latest
     timeout-minutes: 10
     steps:
@@ -23,9 +28,8 @@ jobs:
         uses: tcort/github-action-markdown-link-check@v1.1.0
         with:
           base-branch: main
-          use-quiet-mode: 'yes'
-          check-modified-files-only: 'yes'
-
+          use-quiet-mode: "yes"
+          check-modified-files-only: "yes"
 
       - name: 🪄 Spell check
         uses: streetsidesoftware/cspell-action@v7.2.0

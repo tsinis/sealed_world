@@ -5,6 +5,7 @@ on:
 
 jobs:
   stale:
+    name: 🔒 Close Stale Items
     runs-on: ubuntu-latest
     timeout-minutes: 4
     permissions:

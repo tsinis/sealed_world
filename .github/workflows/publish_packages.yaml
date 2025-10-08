@@ -8,6 +8,7 @@ on:
 
 jobs:
   publish:
+    name: 📦 Publish Package
     if: github.ref_type == 'tag'
     uses: ./.github/workflows/publish_to_pub_workflow.yaml
     permissions:

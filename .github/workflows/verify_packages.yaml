@@ -13,6 +13,10 @@ on:
       - "packages/**/pubspec.yaml"
       - ".github/workflows/verify_packages.yaml"
 
+concurrency:
+  group: ${{ github.workflow }}-${{ github.event.pull_request.number || github.ref }}
+  cancel-in-progress: true
+
 jobs:
   detect-packages:
     name: 🔍 Detect Changed Packages
@@ -39,7 +43,7 @@ jobs:
             echo "packages=$PACKAGES" >> $GITHUB_OUTPUT
 
   verify-packages:
-    name: Verify ${{ matrix.package }}
+    name: ✅ Verify ${{ matrix.package }}
     needs: detect-packages
     if: fromJson(needs.detect-packages.outputs.packages)[0] != null
     strategy:

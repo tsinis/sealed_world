@@ -8,6 +8,10 @@ on:
       - ".github/workflows/world_countries.yaml"
       - ".github/workflows/deploy_example_web.yaml"
 
+concurrency:
+  group: ${{ github.workflow }}
+  cancel-in-progress: true
+
 jobs:
   deploy:
     name: 🚀 Deploy example website
