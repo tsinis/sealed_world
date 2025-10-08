@@ -11,6 +11,11 @@ on:
         default: false
         type: boolean
 
+permissions:
+  contents: read
+  pull-requests: write
+  id-token: write
+
 jobs:
   verify-package:
     env:
@@ -50,7 +55,7 @@ jobs:
           cache-key: "flutter-:os:-:channel:-:version:-:arch:-:hash:"
 
       - name: 📦 Install dependencies
-        run: dart pub upgrade
+        run: dart pub get
 
       - name: 🕵️ Analyze code
         uses: ValentinVignal/action-dart-analyze@v1.1

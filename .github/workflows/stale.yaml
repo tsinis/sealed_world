@@ -3,14 +3,15 @@ on:
   schedule:
     - cron: "30 20 * * *"
 
+permissions:
+  issues: write
+  pull-requests: write
+
 jobs:
   stale:
     name: 🔒 Close Stale Items
     runs-on: ubuntu-latest
     timeout-minutes: 4
-    permissions:
-      issues: write
-      pull-requests: write
     steps:
       - name: 🔒 Close Stale Issues and PRs
         uses: actions/stale@v10.1.0
