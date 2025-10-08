@@ -6,11 +6,16 @@ on:
     tags:
       - '[a-z0-9]+_[a-z]+-v[0-9]+\.[0-9]+\.[0-9]+'
 
+permissions:
+  contents: read
+
 jobs:
   publish:
+    name: 📦 Publish Package
     if: github.ref_type == 'tag'
     uses: ./.github/workflows/publish_to_pub_workflow.yaml
     permissions:
+      contents: read
       id-token: write
     with:
       tag: ${{ github.ref_name }}

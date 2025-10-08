@@ -1,8 +1,10 @@
 # Other keywords/terms
 Anglický
 Angličtina
+Pushto
 Ruský
 Ruština
+Uyghur
 appium
 checo
 jazyk

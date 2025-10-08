@@ -31,12 +31,13 @@ part "iso_translated.dart";
 /// representing the translated names of the country. The [Translated] interface
 /// is used to ensure that the `TranslatedObject` class has the required
 /// translations.
-@deprecated
+@Deprecated("Translations are now provided via `l10n`")
 sealed class Translated<T extends TranslatedName> {
   /// Creates a new instance of the [Translated] object.
   ///
   /// The [translations] parameter is required and represents a list of objects
   /// that implement the [TranslatedName] interface.
+  @Deprecated("Translations are now provided via `l10n`") //coverage:ignore-line
   const Translated({List<T>? translations}) // coverage:ignore-line
     : _translations = translations;
 
