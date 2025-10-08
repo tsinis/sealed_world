@@ -4,6 +4,10 @@
 // https://github.com/umpirsky/language-list project (from Saša Stamenković).
 // Both projects are licensed under the MIT License.
 
+/// **DEPRECATED:** Language translations for `sealed_languages`.
+///
+/// Please migrate to `package:l10n_languages` instead.
+/// This library is kept for backward compatibility only.
 @Deprecated(
   "Please migrate to `package:l10n_languages/l10n_languages.dart` package.",
 )

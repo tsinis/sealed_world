@@ -24,7 +24,9 @@ abstract interface class IsoTranslated<
   /// The [translations] parameter isn't required and could be provided when
   /// creating a new (custom) instance. It represents the translations
   /// of the item's name into multiple languages.
-  const IsoTranslated({@deprecated super.translations}); // coverage:ignore-line
+  const IsoTranslated( // coverage:ignore-line
+  // ignore: prefer-trailing-comma, broken by Dart 3.8.0 formatter.
+  {@Deprecated("Translations are now provided via `l10n`") super.translations});
 
   /// Returns the [BasicLocalizationDelegate] used for handling translations.
   ///
