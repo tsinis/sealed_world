@@ -37,6 +37,7 @@ sealed class Translated<T extends TranslatedName> {
   ///
   /// The [translations] parameter is required and represents a list of objects
   /// that implement the [TranslatedName] interface.
+  @deprecated
   const Translated({List<T>? translations}) // coverage:ignore-line
     : _translations = translations;
 

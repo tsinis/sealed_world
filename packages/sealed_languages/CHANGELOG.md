@@ -1,3 +1,13 @@
+## 2.4.1
+
+REFACTOR
+
+- Marked `permissive` constructors and translation-related parameters as deprecated; deprecated a translation interface and related extension methods.
+
+CHORE
+
+- Enable and fix 10 new Dart Code Metrics rules (from the 1.32.0: October Update)
+
 ## 2.4.0
 
 DOCUMENTATION
