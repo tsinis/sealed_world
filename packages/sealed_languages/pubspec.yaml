@@ -1,4 +1,4 @@
-version: 2.4.0
+version: 2.4.1
 name: sealed_languages
 description: Provides data for world languages in the form of sealed classes.
 maintainer: Roman Cinis
