@@ -15,6 +15,7 @@ jobs:
     if: github.ref_type == 'tag'
     uses: ./.github/workflows/publish_to_pub_workflow.yaml
     permissions:
+      contents: read
       id-token: write
     with:
       tag: ${{ github.ref_name }}
