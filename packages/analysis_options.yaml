@@ -664,6 +664,7 @@ linter:
     unreachable_from_main: true
     unrelated_type_equality_checks: true
     unsafe_html: true
+    unsafe_variance: true
     use_enums: true
     use_function_type_syntax_for_parameters: true
     use_if_null_to_convert_nulls_to_bools: true
