@@ -52,6 +52,7 @@ jobs:
     permissions:
       contents: read
       pull-requests: write
+      checks: write
       id-token: write
     strategy:
       fail-fast: false
