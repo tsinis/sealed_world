@@ -1,5 +1,4 @@
 // ignore_for_file: avoid_print, prefer-match-file-name
-import "package:l10n_languages/l10n_languages.dart"; // For custom ISO with L10N.
 import "package:sealed_languages/sealed_languages.dart";
 
 void main() {
@@ -69,28 +68,4 @@ void main() {
       const BasicLocale(LangSrp(), script: ScriptLatn()),
     ),
   ); // Prints "češki".
-
-  const customLang = _LangCustom();
-
-  print(customLang.name); // Prints "Custom".
-  print(
-    customLang.commonNameFor(const BasicLocale(LangEng())),
-  ); // Prints "Custom lang".
-}
-
-/// Creates a instance of the custom language with permissive constructor.
-class _LangCustom extends NaturalLanguage {
-  const _LangCustom() : super.permissive(name: "Custom", code: "CUSTOM");
-
-  @override
-  LocalizationDelegate get l10n => super.l10n.copyWith(
-    mapper: () => LanguagesLocaleMapper(
-      other: {
-        /// From the `l10n_languages` package.
-        "en": IsoLocaleMapper(
-          other: {code: "$name lang", "$code+": "$name rich language name"},
-        ),
-      },
-    ).localize,
-  );
 }

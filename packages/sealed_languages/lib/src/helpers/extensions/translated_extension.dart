@@ -1,3 +1,5 @@
+// ignore_for_file: deprecated_member_use_from_same_package, it's TODO!
+
 import "../../data/natural_languages.data.dart";
 import "../../interfaces/translated.dart";
 import "../../model/core/basic_locale.dart";
@@ -133,6 +135,7 @@ extension TranslatedExtension<
   ///   orElse: const LangEng(), // Default language if no translation is found.
   /// );
   /// ```
+  @Deprecated("Use `commonNameFor`/`maybeCommonName` methods instead.")
   T translation<B extends L>(
     B locale, {
     NaturalLanguage orElse = const LangEng(),
@@ -164,6 +167,7 @@ extension TranslatedExtension<
   /// // language if no matching translation is found.
   /// );
   /// ```
+  @Deprecated("Use `commonNameFor`/`maybeCommonName` methods instead.")
   T? maybeTranslation<B extends L>(
     B? locale, {
     bool useLanguageFallback = true,

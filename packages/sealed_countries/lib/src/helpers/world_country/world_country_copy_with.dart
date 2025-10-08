@@ -71,6 +71,7 @@ extension WorldCountryCopyWith<T extends WorldCountry> on T {
     population: population ?? this.population,
     timezones: timezones ?? this.timezones,
     tld: tld ?? this.tld,
+    // ignore: deprecated_member_use_from_same_package, param is deprecated.
     translations: List.unmodifiable(translations ?? this.translations),
     demonyms: demonyms ?? this.demonyms,
     currencies: currencies ?? this.currencies,

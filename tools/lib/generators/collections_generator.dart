@@ -13,6 +13,7 @@ class CollectionsGenerator {
   static const _code = CodeUtils();
   static const _dart = DartUtils();
 
+  // ignore: avoid-long-functions, it's just a CLI tool, not production code.
   Future<void> generate(Package? package) async {
     final type = package?.type.toString() ?? "$Script";
     final currentFileDir = Directory(

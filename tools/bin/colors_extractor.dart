@@ -1,7 +1,6 @@
 // ignore_for_file: avoid_print, avoid-non-ascii-symbols
 import "package:cli/utils/color_utils.dart";
 import "package:cli/utils/io_utils.dart";
-import "package:cli/utils/json_utils.dart";
 import "package:sealed_countries/sealed_countries.dart";
 
 /// Usage: `dart run :colors_extractor`.
@@ -17,7 +16,7 @@ const map = {
   """);
   io
     ..forFileInDirectory(
-      Directory(join(JsonUtils.defaultDataDirPath, "flags")),
+      Directory(join("json", "flags")),
       // ignore: prefer-extracting-function-callbacks, it's CLI tool, not prod.
       withFile: (file, name) {
         if (name.length > 2) return;

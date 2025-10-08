@@ -33,13 +33,14 @@ extension FiatCurrencyCopyWith<T extends FiatCurrency> on T {
     int? subunitToUnit,
     String? symbol,
     String? thousandsSeparator,
-    List<TranslatedName>? translations,
+    @deprecated List<TranslatedName>? translations,
     bool? unitFirst,
   }) => FiatCurrency(
     code: code ?? this.code,
     name: name ?? this.name,
     namesNative: namesNative ?? this.namesNative,
     codeNumeric: codeNumeric ?? this.codeNumeric,
+    // ignore: deprecated_member_use_from_same_package, param is deprecated.
     translations: translations ?? this.translations,
     alternateSymbols: alternateSymbols ?? this.alternateSymbols,
     disambiguateSymbol: disambiguateSymbol ?? this.disambiguateSymbol,

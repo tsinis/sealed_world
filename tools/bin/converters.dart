@@ -4,7 +4,6 @@ import "package:cli/converters/php_converter.dart";
 import "package:cli/generators/helpers/extensions/package_associations_extension.dart";
 import "package:cli/utils/args_parser.dart";
 import "package:cli/utils/io_utils.dart";
-import "package:cli/utils/json_utils.dart";
 import "package:sealed_languages/sealed_languages.dart";
 
 /// Usage: `dart run :converters sealed_countries`.
@@ -14,7 +13,7 @@ void main(List<String> args) {
   final io = IoUtils();
   int i = 0;
   io.forFileInDirectory(
-    Directory(join(JsonUtils.defaultDataDirPath, package.dataRepresentPlural)),
+    Directory(join("json", package.dataRepresentPlural)),
     format: PhpConverter.format,
     // ignore: prefer-extracting-function-callbacks, it's CLI tool, not prod.
     withFile: (file, name) {
@@ -32,7 +31,7 @@ void main(List<String> args) {
           PhpConverter.extractL10nFromSimpleMap(phpContent);
 
       final path = join(
-        JsonUtils.defaultDataDirPath,
+        "json",
         language.codeShort.toLowerCase(),
         "${package.dataRepresent.toLowerCase()}.${PathConstants.json}",
       );

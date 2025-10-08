@@ -22,12 +22,6 @@ extension PackageAssociationsExtension on Package {
     sealedCountries: WorldCountry.list,
   );
 
-  List<TranslatedName> translations(String code) => when(
-    sealedLanguages: () => NaturalLanguage.fromCode(code),
-    sealedCurrencies: () => FiatCurrency.fromCode(code),
-    sealedCountries: () => WorldCountry.fromCode(code),
-  ).translations;
-
   String get dataFilePrefix => whenConst(
     sealedLanguages: "${type.toString().toSnakeCase()}s",
     sealedCurrencies: "fiat_currencies",

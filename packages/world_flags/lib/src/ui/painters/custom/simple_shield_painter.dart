@@ -81,12 +81,10 @@ final class SimpleShieldPainter extends MultiElementPainter {
       ..lineTo(0, half);
 
     if (_showOutline) {
-      final strokeWidth = height * _lineFactor;
-
       paint
         ..color = otherColors?.last ?? _fallback
         ..style = PaintingStyle.stroke
-        ..strokeWidth = strokeWidth;
+        ..strokeWidth = height * _lineFactor;
       canvas.drawPath(path, paint);
     }
 

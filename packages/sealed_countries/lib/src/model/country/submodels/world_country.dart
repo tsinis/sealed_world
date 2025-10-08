@@ -72,7 +72,7 @@ class WorldCountry extends Country
     List<Demonyms>? demonyms,
     List<NaturalLanguage>? languages,
     List<CountryName>? namesNative,
-    List<TranslatedName>? translations,
+    @deprecated List<TranslatedName>? translations,
   }) : assert(
          code.length == IsoStandardized.codeLength,
          """`code` should be exactly ${IsoStandardized.codeLength} characters long!""",
@@ -112,6 +112,7 @@ class WorldCountry extends Country
 
   /// {@macro permissive_constructor}
   /// {@macro country_constructor}
+  @Deprecated("Use the default constructor and `copyWith` method instead")
   const WorldCountry.permissive({
     required super.name,
     required this.code,
@@ -145,7 +146,7 @@ class WorldCountry extends Country
     List<Demonyms> demonyms = const [],
     List<NaturalLanguage>? languages,
     List<CountryName> namesNative = const [],
-    List<TranslatedName>? translations,
+    @deprecated List<TranslatedName>? translations,
   }) : _namesNative = namesNative,
        _demonyms = demonyms,
        _languages = languages,

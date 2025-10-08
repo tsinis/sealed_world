@@ -27,6 +27,7 @@ class CodeCopyPreview extends StatelessWidget {
     return "Color(0x${value.toRadixString(16).padLeft(6, '0')})";
   }
 
+  // ignore: avoid-long-functions, it's just an example.
   String _flagThemeSnippet(FlagThemeData? theme) {
     if (theme == null) return "";
 
