@@ -16,7 +16,7 @@ class ThemeProvider<T extends List<Color>> extends InheritedWidget {
       context.dependOnInheritedWidgetOfExactType<ThemeProvider>();
 
   final T _flagColors;
-  final ValueSetter<T>? onColorsChange;
+  final ValueSetter<T>? onColorsChange; // ignore: unsafe_variance, just example
 
   @override
   bool updateShouldNotify(ThemeProvider oldWidget) =>

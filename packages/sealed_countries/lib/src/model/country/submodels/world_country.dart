@@ -72,7 +72,8 @@ class WorldCountry extends Country
     List<Demonyms>? demonyms,
     List<NaturalLanguage>? languages,
     List<CountryName>? namesNative,
-    @deprecated List<TranslatedName>? translations,
+    @Deprecated("Translations are now provided via `l10n`")
+    List<TranslatedName>? translations,
   }) : assert(
          code.length == IsoStandardized.codeLength,
          """`code` should be exactly ${IsoStandardized.codeLength} characters long!""",
@@ -146,7 +147,7 @@ class WorldCountry extends Country
     List<Demonyms> demonyms = const [],
     List<NaturalLanguage>? languages,
     List<CountryName> namesNative = const [],
-    @deprecated List<TranslatedName>? translations,
+    List<TranslatedName>? translations,
   }) : _namesNative = namesNative,
        _demonyms = demonyms,
        _languages = languages,

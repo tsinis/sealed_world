@@ -1,3 +1,4 @@
+![Created](https://img.shields.io/github/created-at/tsinis/sealed_world)
 [![CodeFactor](https://www.codefactor.io/repository/github/tsinis/sealed_world/badge)](https://www.codefactor.io/repository/github/tsinis/sealed_world)
 [![Codecov](https://codecov.io/github/tsinis/sealed_world/branch/main/graph/badge.svg)](https://app.codecov.io/github/tsinis/sealed_world/flags)
 [![CodeRabbit](https://img.shields.io/coderabbit/prs/github/tsinis/sealed_world?logo=vowpalwabbit&logoColor=orange&color=dark-green)](https://coderabbit.ai)
@@ -5,15 +6,28 @@
 [![CI checks](https://github.com/tsinis/sealed_world/actions/workflows/verify_packages.yaml/badge.svg)](https://github.com/tsinis/sealed_world/actions/workflows/verify_packages.yaml)
 [![Last commit](https://img.shields.io/github/last-commit/tsinis/sealed_world)](https://github.com/tsinis/sealed_world/commits)
 [![GitHub stars](https://img.shields.io/github/stars/tsinis/sealed_world?style=flat&color=green)](https://github.com/tsinis/sealed_world/stargazers)
-[![License MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
+![License](https://img.shields.io/github/license/tsinis/sealed_world)
+![Commits](https://img.shields.io/github/commit-activity/m/tsinis/sealed_world)
 
 ## Sealed World
 
 A pure Dart, fully tested and ISO-driven ecosystem for the world's data in the form of compile-time, tree-shakable constant classes with a sealed origin.
 
 [![Open in GitHub Codespaces](https://github.com/codespaces/badge.svg)](https://codespaces.new/tsinis/sealed_world?hide_repo_select=true&ref=main)
-<a href="https://idx.google.com/import?url=https%3A%2F%2Fgithub.com%2Ftsinis%2Fsealed_world%2Ftree%2Fmain%2Fpackages%2Fworld_countries%2Fexample">
-<img height="32" alt="Open in IDX" src="https://cdn.idx.dev/btn/open_dark_32.svg"> </a>
+<a href="https://studio.firebase.google.com/new?template=https%3A%2F%2Fgithub.com%2Ftsinis%2Fsealed_world%2Ftree%2Fmainpackages%2Fworld_countries%2Fexample%2F">
+<picture>
+<source
+      media="(prefers-color-scheme: dark)"
+      srcset="https://cdn.firebasestudio.dev/btn/open_dark_32.svg">
+<source
+      media="(prefers-color-scheme: light)"
+      srcset="https://cdn.firebasestudio.dev/btn/open_light_32.svg">
+<img
+      height="32"
+      alt="Open in Firebase Studio"
+      src="https://cdn.firebasestudio.dev/btn/open_dark_32.svg">
+</picture>
+</a>
 
 > [!TIP]
 > Flutter packages use **world** prefix, Dart packages use **sealed** prefix for core functionality and **l10n** prefix for localization maps.
