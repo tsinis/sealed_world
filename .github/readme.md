@@ -15,6 +15,7 @@ A pure Dart, fully tested and ISO-driven ecosystem for the world's data in the f
 
 [![Open in GitHub Codespaces](https://github.com/codespaces/badge.svg)](https://codespaces.new/tsinis/sealed_world?hide_repo_select=true&ref=main)
 <a href="https://studio.firebase.google.com/new?template=https://github.com/tsinis/sealed_world/tree/main/packages/world_countries/example/">
+
 <picture>
 <source
       media="(prefers-color-scheme: dark)"
