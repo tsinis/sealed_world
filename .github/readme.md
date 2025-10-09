@@ -14,7 +14,7 @@
 A pure Dart, fully tested and ISO-driven ecosystem for the world's data in the form of compile-time, tree-shakable constant classes with a sealed origin.
 
 [![Open in GitHub Codespaces](https://github.com/codespaces/badge.svg)](https://codespaces.new/tsinis/sealed_world?hide_repo_select=true&ref=main)
-<a href="https://studio.firebase.google.com/new?template=https%3A%2F%2Fgithub.com%2Ftsinis%2Fsealed_world%2Ftree%2Fmainpackages%2Fworld_countries%2Fexample%2F">
+<a href="https://studio.firebase.google.com/new?template=https://github.com/tsinis/sealed_world/tree/main/packages/world_countries/example/">
 <picture>
 <source
       media="(prefers-color-scheme: dark)"
