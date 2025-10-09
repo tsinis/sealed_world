@@ -1,0 +1,30 @@
+{
+  "name": "World Countries Example",
+  "description": "A Flutter example app showcasing world countries, flags, currencies, and languages with pickers",
+  "categories": ["Mobile"],
+  "icon": "https://www.gstatic.com/images/branding/productlogos/flutter/v6/192px.svg",
+  "publisher": "Roman Cinis",
+  "host": {
+    "virtualization": "true"
+  },
+  "params": [
+    {
+      "id": "platform",
+      "name": "Target Platform",
+      "type": "enum",
+      "default": "web",
+      "options": {
+        "web": "Web",
+        "android": "Android"
+      },
+      "required": true
+    },
+    {
+      "id": "includeFirebase",
+      "name": "Include Firebase Tools",
+      "type": "boolean",
+      "default": false,
+      "required": false
+    }
+  ]
+}
