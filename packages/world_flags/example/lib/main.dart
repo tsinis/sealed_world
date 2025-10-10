@@ -52,37 +52,35 @@ class _MainState extends State<Main> {
   }
 
   @override
-  Widget build(BuildContext context) {
-    final disabled = Theme.of(context).disabledColor;
+  Widget build(BuildContext context) => Material(
+    color: Theme.of(context).scaffoldBackgroundColor,
+    child: ListView.separated(
+      itemBuilder: (bc, index) {
+        final item = _items.keys.elementAt(index);
+        final isSimplified = _items[item]?.properties.isSimplified ?? true;
 
-    return Material(
-      color: Theme.of(context).scaffoldBackgroundColor,
-      child: ListView.separated(
-        itemBuilder: (bc, index) {
-          final item = _items.keys.elementAt(index);
-          final isSimplified = _items[item]?.properties.isSimplified ?? false;
-          final style = TextStyle(color: isSimplified ? disabled : null);
-
-          return ListTile(
-            title: Text(item.internationalName, style: style),
-            subtitle: Text("${item.name}", style: TextStyle(color: disabled)),
-            onTap: !isSimplified && item is WorldCountry
-                ? () => SettingsDialog.show(_aspectRatio, bc, item)
-                : null,
-            trailing: ValueListenableBuilder(
-              valueListenable: _aspectRatio,
-              builder: (_, aspectRatio, flag) => flag is IsoFlag
-                  ? flag.copyWith(aspectRatio: aspectRatio)
-                  : const SizedBox.shrink(),
-              child: IsoFlag(item, _items, height: _size),
-            ),
-          );
-        },
-        separatorBuilder: (_, _) =>
-            Divider(height: 1, color: disabled.withValues(alpha: 0.1)),
-        itemCount: _items.length,
-        clipBehavior: Clip.none,
+        return ListTile(
+          enabled: !isSimplified,
+          title: Text(item.internationalName),
+          subtitle: Text("${item.namesNative?.first}"),
+          onTap: item is WorldCountry
+              ? () => SettingsDialog.show(_aspectRatio, bc, item)
+              : null,
+          trailing: ValueListenableBuilder(
+            valueListenable: _aspectRatio,
+            builder: (_, aspectRatio, flag) => flag is IsoFlag
+                ? flag.copyWith(aspectRatio: aspectRatio)
+                : const SizedBox.shrink(),
+            child: IsoFlag(item, _items, height: _size),
+          ),
+        );
+      },
+      separatorBuilder: (bc, _) => Divider(
+        color: Theme.of(bc).disabledColor.withValues(alpha: 0.1),
+        height: 1,
       ),
-    );
-  }
+      itemCount: _items.length,
+      clipBehavior: Clip.none,
+    ),
+  );
 }

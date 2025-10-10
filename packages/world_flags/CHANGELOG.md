@@ -1,3 +1,28 @@
+## 2.9.0
+
+NEW FEATURES
+
+- Adds support for `XCG` (Caribbean Guilder) and `ZWG` (Zimbabwean Gold) currencies with translations (across 100+ locales each).
+- Deprecates `ANG`, `BGN`, and `ZWL` currencies with appropriate migration paths.
+
+FIX
+
+- Corrected Slovak country name for `CIV` to "Pobrežie Slonoviny".
+- Corrected English currency name for `KGS` to "Kyrgyzstani Som".
+- Corrected English currency name for `GYD` to "Guyanese Dollar".
+
+REFACTOR
+
+- Marked `permissive` ISO constructors and translation-related parameters as deprecated; deprecated a translation interface and related extension methods.
+
+CHORE
+
+- Enable and fix 10 new Dart Code Metrics rules (from the 1.32.0: October Update).
+
+DOCUMENTATION
+
+- Improved documentation in README.
+
 ## 2.8.0
 
 NEW FEATURES
@@ -6,13 +31,12 @@ NEW FEATURES
 
 REFACTOR
 
-- Added assert statements to `copyWith` methods for validation.
 - Updated flag properties from `isSimplified: true` to `isSimplified: null` across multiple countries.
 
 DOCUMENTATION
 
 - Added website with flags demo (to `pubspec.yaml` and `README.md`).
-- Enhanced documentation for isSimplified property with detailed explanations.
+- Enhanced documentation for `isSimplified` property with detailed explanations.
 
 ## 2.7.0
 

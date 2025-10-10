@@ -1,4 +1,4 @@
-version: 2.8.0
+version: 2.9.0
 name: world_flags
 description: The first and only collection of declaratively defined world flags. No assets.
 maintainer: Roman Cinis
@@ -24,7 +24,7 @@ environment:
 dependencies:
   flutter:
     sdk: flutter
-  sealed_countries: ^2.6.0
+  sealed_countries: ^2.7.1
 
 dev_dependencies:
   _sealed_world_tests:
