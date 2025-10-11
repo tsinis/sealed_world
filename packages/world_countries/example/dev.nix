@@ -1,12 +1,11 @@
 # To learn more about how to use Nix to configure your environment
-# see: https://developers.google.com/idx/guides/customize-idx-env
+# see: https://firebase.google.com/docs/studio/customize-workspace
 { pkgs, ... }: {
   # Which nixpkgs channel to use.
-  channel = "unstable"; # or "stable-24.05"
+  channel = "stable-24.05"; # or "unstable"
   # Use https://search.nixos.org/packages to find packages
   packages = [
-    pkgs.nodePackages.firebase-tools
-    pkgs.jdk17
+    pkgs.jdk21
     pkgs.unzip
   ];
   # Sets environment variables in the workspace

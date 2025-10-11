@@ -1,4 +1,4 @@
-{pkgs, sample ? "none", template ? "app", blank ? false, platforms ? "web,android", ...}: {
+{pkgs, branch ? "main", repo ? "https://github.com/tsinis/sealed_world", ...}: {
     packages = [
         pkgs.curl
         pkgs.gnutar
@@ -8,10 +8,16 @@
         pkgs.flutter
     ];
     bootstrap = ''
-        flutter create "$out" --template="${template}" --platforms="${platforms}" ${if sample == "none" then "" else "--sample=${sample}"} ${if blank then "-e" else ""}
-        mkdir "$out"/.idx
-        cp ${./dev.nix} "$out"/.idx/dev.nix
-        install --mode u+rw ${./dev.nix} "$out"/.idx/dev.nix
+        mkdir "$out"
+        git clone --depth 1 -b "${branch}" "${repo}" "$out/temp_repo"
+        cp -rf "$out/temp_repo/packages/world_countries/." "$out/"
+        rm -rf "$out/temp_repo"
+        chmod -R +w "$out"
+        rm -f "$out/idx-template.nix" "$out/idx-template.json"
+        mkdir -p "$out"/.idx
+        if [ -f ${./dev.nix} ]; then
+            install --mode u+rw ${./dev.nix} "$out"/.idx/dev.nix
+        fi
         chmod -R u+w "$out"
     '';
 }
