@@ -1,3 +1,28 @@
+## 3.9.3
+
+NEW FEATURES
+
+- Adds support for `XCG` (Caribbean Guilder) and `ZWG` (Zimbabwean Gold) currencies with translations (across 100+ locales each).
+- Deprecates `ANG`, `BGN`, and `ZWL` currencies with appropriate migration paths.
+
+FIX
+
+- Corrected Slovak country name for `CIV` to "Pobrežie Slonoviny".
+- Corrected English currency name for `KGS` to "Kyrgyzstani Som".
+- Corrected English currency name for `GYD` to "Guyanese Dollar".
+
+REFACTOR
+
+- Marked `permissive` ISO constructors and translation-related parameters as deprecated; deprecated a translation interface and related extension methods.
+
+CHORE
+
+- Enable and fix 10 new Dart Code Metrics rules (from the 1.32.0: October Update).
+
+DOCUMENTATION
+
+- Improved documentation in README.
+
 ## 3.9.2
 
 NEW FEATURES
