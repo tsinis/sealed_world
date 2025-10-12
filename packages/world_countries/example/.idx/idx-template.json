@@ -2,7 +2,7 @@
   "name": "World Countries Example",
   "description": "A Flutter example app showcasing world countries, flags, currencies, and languages with pickers",
   "categories": ["Mobile"],
-  "icon": "https://www.gstatic.com/images/branding/productlogos/flutter/v6/192px.svg",
+  "icon": "https://raw.githubusercontent.com/tsinis/sealed_world/refs/heads/main/packages/world_countries/example/web/icons/Icon-192.png",
   "publisher": "Roman Cinis",
   "host": {
     "virtualization": "true"
