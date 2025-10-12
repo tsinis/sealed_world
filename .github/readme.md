@@ -83,34 +83,34 @@ graph TB
     click world_countries "https://github.com/tsinis/sealed_world/tree/main/packages/world_countries"
 ```
 
-## Versioning and Release Policy
+### Versioning and Release Policy
 
 This section explains how the ecosystem handles SDK pinning, semantic versioning, and release cadence, and why this approach benefits users and contributors.
 
-### SDK Compatibility and Pinning
+#### SDK Compatibility and Pinning
 
 - Pinning to the Dart version bundled with Flutter stable ensures local developer environments match CI, minimizing SDK mismatches and hard-to-reproduce issues. The Flutter SDK archive lists each Flutter stable release together with its bundled Dart version [Flutter SDK archive](https://docs.flutter.dev/install/archive).
 - Production packages target Dart stable rather than beta/dev, in line with Dart's guidance to use stable for building and deploying apps [Get the Dart SDK](https://dart.dev/get-dart).
 - Formatter and workspace changes introduced around Dart 3.7/3.8 can create large diffs when mixing pre/post language versions. Dart 3.8 includes a rewritten/updated formatter behavior; formatting changes apply when the package opts into the newer language version [Announcing Dart 3.8](https://blog.dart.dev/announcing-dart-3-8-724eaaec9f47), [Breaking changes (formatter behavior >=3.8)](https://dart.dev/resources/breaking-changes).
 
-### Semantic Versioning
+#### Semantic Versioning
 
 - Semantic Versioning is followed: MAJOR for breaking changes, MINOR for new features, PATCH for bug fixes [Semantic Versioning](https://semver.org/).
 - Dart's pub ecosystem applies SemVer for resolution and documents conventions including pre-1.0 handling and "next breaking" logic [Package versioning](https://dart.dev/tools/pub/versioning).
 
-### Release Cadence
+#### Release Cadence
 
 - Major releases: approximately once per year, potentially including breaking changes; aligned after Flutter/Dart stable cycles to reduce churn [Semantic Versioning](https://semver.org/).
 - Minor releases: about once per month for feature additions (especially for Flutter-facing packages), without breaking changes [Package versioning](https://dart.dev/tools/pub/versioning).
 - Patch releases: as needed for fixes and docs, with no API changes [Package versioning](https://dart.dev/tools/pub/versioning).
 
-### Deprecation-First Policy
+#### Deprecation-First Policy
 
 - Most breaking changes are introduced via deprecation first, with warnings and migration time provided before removal. This mirrors Dart and Flutter practices of listing deprecations alongside breaking changes and offering migration guides [Breaking changes and deprecations (Dart)](https://dart.dev/resources/breaking-changes), [Flutter breaking changes and migration guides](https://docs.flutter.dev/release/breaking-changes).
 - Deprecated APIs are removed only after reaching end of life in a subsequent stable release cycle, consistent with Flutter's deprecation policy and examples across releases (e.g., removals after 3.7, 3.13, 3.19).
 - Migration guidance is linked in release notes for major removals, reducing friction and helping teams adopt changes in predictable windows [Flutter breaking changes and migration guides](https://docs.flutter.dev/release/breaking-changes).
 
-### Rationale
+#### Rationale
 
 - Aligning with Flutter stable's Dart ensures consistent environments across CI and contributors, reducing surprise failures and easing support [Flutter SDK archive](https://docs.flutter.dev/install/archive).
 
