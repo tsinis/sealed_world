@@ -5,7 +5,7 @@
   channel = "stable-25.05"; # or "unstable"
   # Use https://search.nixos.org/packages to find packages
   packages = [
-    pkgs.jdk23
+    pkgs.jdk24
     pkgs.unzip
   ];
   # Sets environment variables in the workspace
