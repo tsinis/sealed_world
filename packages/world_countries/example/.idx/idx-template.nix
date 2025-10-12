@@ -13,12 +13,11 @@
         cp -rf "$out/temp_repo/." "$out/"
         rm -rf "$out/temp_repo"
         chmod -R +w "$out"
-        rm -f "$out/packages/world_countries/example/idx-template.nix"
-        rm -f "$out/packages/world_countries/example/idx-template.json"
-        rm -f "$out/packages/world_countries/example/dev.nix"
-        mkdir -p "$out/packages/world_countries/example/.idx"
+        rm -rf "$out/packages/world_countries/example/.idx/idx-template.nix"
+        rm -rf "$out/packages/world_countries/example/.idx/idx-template.json"
+        mkdir -p "$out/.idx"
         if [ -f ${./dev.nix} ]; then
-            install --mode u+rw ${./dev.nix} "$out/packages/world_countries/example/.idx/dev.nix"
+            install --mode u+rw ${./dev.nix} "$out/.idx/dev.nix"
         fi
         chmod -R u+w "$out"
     '';
