@@ -21,8 +21,7 @@
     workspace = {
       # Runs when a workspace is first created with this `dev.nix` file
       onCreate = {
-        upgradeFlutter = "flutter upgrade";
-        installDependencies = "cd packages/world_countries/example && flutter pub get";
+        installDependencies = "cd packages/world_countries/example && flutter upgrade && flutter pub get";
       };
       # Optionally run when the workspace is (re)started
       onStart = {
