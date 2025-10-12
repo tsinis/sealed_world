@@ -2,7 +2,7 @@
 # see: https://firebase.google.com/docs/studio/customize-workspace
 { pkgs, ... }: {
   # Which nixpkgs channel to use.
-  channel = "stable-24.11"; # or "unstable"
+  channel = "stable-25.05"; # or "unstable"
   # Use https://search.nixos.org/packages to find packages
   packages = [
     pkgs.jdk24
@@ -21,7 +21,12 @@
     workspace = {
       # Runs when a workspace is first created with this `dev.nix` file
       onCreate = {
-        installDependencies = "flutter pub get";
+        upgradeFlutter = "flutter upgrade";
+        installDependencies = "cd packages/world_countries/example && flutter pub get";
+      };
+      # Optionally run when the workspace is (re)started
+      onStart = {
+        syncDependencies = "cd packages/world_countries/example && flutter pub get";
       };
     };
     # Enable previews and customize configuration
@@ -31,10 +36,12 @@
         web = {
           command = ["flutter" "run" "--machine" "-d" "web-server" "--web-hostname" "0.0.0.0" "--web-port" "$PORT"];
           manager = "flutter";
+          cwd = "packages/world_countries/example";
         };
         android = {
           command = ["flutter" "run" "--machine" "-d" "android" "-d" "localhost:5555"];
           manager = "flutter";
+          cwd = "packages/world_countries/example";
         };
       };
     };
