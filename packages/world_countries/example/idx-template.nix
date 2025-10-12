@@ -18,7 +18,7 @@
         rm -f "$out/packages/world_countries/example/dev.nix"
         mkdir -p "$out/packages/world_countries/example/.idx"
         if [ -f ${./dev.nix} ]; then
-            install --mode u+rw ${./dev.nix} "$out/packages/world_countries/example/.idx/dev.nix
+            install --mode u+rw ${./dev.nix} "$out/packages/world_countries/example/.idx/dev.nix"
         fi
         chmod -R u+w "$out"
     '';
