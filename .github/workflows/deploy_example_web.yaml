@@ -4,7 +4,7 @@ on:
   push:
     branches: [main]
     paths:
-      - "packages/world_countries/**"
+      - "packages/world_countries/**/*.dart"
       - ".github/workflows/world_countries.yaml"
       - ".github/workflows/deploy_example_web.yaml"
 
