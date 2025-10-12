@@ -49,7 +49,7 @@ To preview the demo from the example, you can visit [this web page](https://tsin
 > Note: Please keep in mind that the demo was built with Flutter WASM which is in very early alpha stage, so performance might be affected.
 
 [![Open in GitHub Codespaces](https://github.com/codespaces/badge.svg)](https://codespaces.new/tsinis/sealed_world?hide_repo_select=true&ref=main)
-[![Open in Firebase Studio](https://cdn.firebasestudio.dev/btn/open_dark_32.svg)](https://studio.firebase.google.com/new?template=https://github.com/tsinis/sealed_world/tree/main/packages/world_countries/example)
+[![Open in Firebase Studio](https://cdn.firebasestudio.dev/btn/open_dark_32.svg)](https://studio.firebase.google.com/new?template=https://github.com/tsinis/sealed_world/tree/main/packages/world_countries/example/.idx)
 
 ### Getting started
 
