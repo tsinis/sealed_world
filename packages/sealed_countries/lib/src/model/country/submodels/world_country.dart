@@ -365,7 +365,7 @@ class WorldCountry extends Country
   @override
   String toString({bool short = true}) => short
       ? super.toString()
-      : 'WorldCountry(name: $name, tld: ${jsonEncode(tld)}, code: "$code", '
+      : 'WorldCountry(name: ${name.toString(short: short)}, tld: ${jsonEncode(tld)}, code: "$code", '
             'codeNumeric: "$codeNumeric", codeShort: "$codeShort", '
             '''${cioc == null ? '' : 'cioc: "$cioc", '}independent: $independent, '''
             "unMember: $unMember, idd: $idd, "
@@ -381,10 +381,10 @@ class WorldCountry extends Country
             "startOfWeek: $startOfWeek, "
             "${postalCode == null ? '' : 'postalCode: $postalCode, '});"
             """${currencies == null ? '' : '@override List<FiatCurrency> get currencies => const ${currencies?.toInstancesString()}; '} """
-            """${capitalInfo == null ? '' : '@override CapitalInfo get capitalInfo => const ${capitalInfo?.toString(short: false)}; '} """
+            """${capitalInfo == null ? '' : '@override CapitalInfo get capitalInfo => const ${capitalInfo?.toString(short: short)}; '} """
             """${regionalBlocs == null ? '' : '@override List<RegionalBloc> get regionalBlocs => const ${regionalBlocs?.toInstancesString()}; '} """
             "@override List<Demonyms> get demonyms => const $demonyms; "
-            """@override List<CountryName> get namesNative => const $namesNative; """
+            """@override List<CountryName> get namesNative => const ${namesNative.map((e) => e.toString(short: short)).toList()}; """
             "@override "
             """List<NaturalLanguage> get languages => const ${languages.toInstancesString()}""";
 
