@@ -2,7 +2,6 @@ import "package:change_case/change_case.dart";
 import "package:sealed_languages/sealed_languages.dart";
 
 import "../models/package.dart";
-import "../utils/code_utils.dart";
 import "../utils/dart_utils.dart";
 import "../utils/io_utils.dart";
 import "helpers/extensions/package_associations_extension.dart";
@@ -10,59 +9,83 @@ import "helpers/extensions/package_associations_extension.dart";
 class DataListGenerator {
   const DataListGenerator();
 
-  static const _code = CodeUtils();
   static const _dart = DartUtils();
 
+  // ignore: avoid-long-functions, it's just a CLI tool.
   Future<void> generate(Package package) async {
     final currentFileDir = Directory(
       join(Directory.current.parent.path, package.fullPath),
     );
-    final currentFilePath = join(
-      currentFileDir.path,
-      "data/${package.dataFilePrefix}.data.dart",
+    final isoDataDir = Directory(
+      join(currentFileDir.path, "data", package.dataRepresentPlural),
     );
-    final currentImports = _code.readContentUntilFound(currentFilePath);
-    final buffer = StringBuffer(currentImports);
+
+    // Create the iso data directory if it doesn't exist.
+    if (!isoDataDir.existsSync()) {
+      isoDataDir.createSync(recursive: true);
+    }
+
     final type = package.type.toString();
 
     for (final item in package.dataList) {
       final code = item.code.toPascalCase();
+      final lowerCaseCode = code.toLowerCase();
       final itemString = item.toString(short: false);
       final className = "${package.classPrefix}$code";
       final superBody = itemString.replaceFirst(type, ": super");
       final setsBody = superBody.replaceAll(": {", ": const {");
       final classBody = setsBody.replaceAll(": [", ": const [");
       final itemName = item.internationalName;
+      final factoryName = "_${code}Factory";
 
-      buffer
-        ..write("""
-/// A class that represents the $itemName ${package.dataRepresent}.
+      final buffer =
+          StringBuffer("""
+// Those classes are based on data from the restcountries project
+// https://gitlab.com/restcountries/restcountries, which is
+// licensed under the Mozilla Public License Version 2.0.
+
+// ignore_for_file: prefer-digit-separators
+
+part of "../../model/country/country.dart";
+
+/// A class that represents the the $itemName ${package.dataRepresent}.
 class $className extends $type {
+/// {@template sealed_world.${package.dataRepresentPlural}_${lowerCaseCode}_constructor}}
 /// Creates a instance of [$className] ($itemName ${package.dataRepresent}).
 ///
 /// ${IsoStandardized.standardAcronym} ${package.isoCodeAssociated} code: `${item.code}`, ${IsoStandardized.standardAcronym} ${package.isoCodeOtherAssociated} code: `${item.codeOther}`.
-const $className()""")
-        ..write(classBody)
-        ..write(";\n")
-        ..write(
-          /// It's not possible to use a self-referencing data in
-          /// compile-time constant constructor :-/.
-          package.whenConstOrNull(
-                sealedLanguages: """
+/// {@endtemplate}
+const factory $className() = $factoryName;
+
+const $className._()""")
+            ..write(classBody)
+            ..write(";\n")
+            ..write(
+              /// It's not possible to use a self-referencing data in
+              /// compile-time constant constructor :-/.
+              package.whenConstOrNull(
+                    sealedLanguages: """
   \n@override
-  List<$TranslatedName> get translations => ${item.code.toLowerCase()}${Language}Translations;""",
-              ) ??
-              "",
-        )
-        ..write("\n}\n");
+  List<$TranslatedName> get translations => $lowerCaseCode${Language}Translations;""",
+                  ) ??
+                  "",
+            )
+            ..write("\n}\n")
+            ..write("""
+extension type const $factoryName._($className _) implements $className {
+  const $factoryName() : this._(const $className._());
+}
+""");
+
+      final filePath = join(isoDataDir.path, "$lowerCaseCode.data.dart");
+      if (lowerCaseCode != "unk")
+        IoUtils().writeContentToFile(filePath, buffer);
+      print('Finished "part "$filePath";'); // ignore: avoid_print, CLI tool.
     }
 
-    IoUtils()
-      ..writeContentToFile(currentFilePath, buffer)
-      ..directory = currentFileDir;
+    IoUtils().directory = currentFileDir;
 
+    await _dart.dcm(directory: isoDataDir.path);
     await _dart.fixFormat();
-
-    return _dart.fixFormat();
   }
 }
