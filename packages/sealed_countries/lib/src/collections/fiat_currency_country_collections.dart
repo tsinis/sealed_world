@@ -1,7 +1,6 @@
 // ignore_for_file: prefer-static-class, it's referenced as static in extension.
 import "package:sealed_currencies/sealed_currencies.dart";
 
-import "../data/official_world_countries.data.dart";
 import "../model/country/country.dart";
 
 /// Collection of currencies and their associated (unofficial) countries (based

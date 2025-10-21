@@ -365,21 +365,21 @@ class WorldCountry extends Country
   @override
   String toString({bool short = true}) => short
       ? super.toString()
-      : 'WorldCountry(name: ${name.toString(short: short)}, tld: ${jsonEncode(tld)}, code: "$code", '
+      : 'WorldCountry(name: const ${name.toString(short: short)}, tld: ${jsonEncode(tld)}, code: "$code", '
             'codeNumeric: "$codeNumeric", codeShort: "$codeShort", '
             '''${cioc == null ? '' : 'cioc: "$cioc", '}independent: $independent, '''
-            "unMember: $unMember, idd: $idd, "
+            "unMember: $unMember, idd: const $idd, "
             "altSpellings: ${jsonEncode(altSpellings)}, "
-            "continent: ${continent.runtimeType}(), "
-            """${subregion == null ? '' : 'subregion: ${subregion.runtimeType}(), '}"""
-            "latLng: $latLng, landlocked: $landlocked, "
+            "continent: const ${continent.runtimeType}(), "
+            """${subregion == null ? '' : 'subregion: const ${subregion.runtimeType}(), '}"""
+            "latLng: const $latLng, landlocked: $landlocked, "
             """${bordersCodes == null ? '' : 'bordersCodes: ${jsonEncode(bordersCodes)}, '}"""
-            'areaMetric: $areaMetric, emoji: "$emoji", maps: $maps, '
-            "population: $population,${gini == null ? ' ' : 'gini: $gini, '}"
-            '${fifa == null ? '' : 'fifa: "$fifa", '}car: $car, '
+            'areaMetric: $areaMetric, emoji: "$emoji", maps: const $maps, '
+            "population: $population,${gini == null ? ' ' : 'gini: const $gini, '}"
+            '${fifa == null ? '' : 'fifa: "$fifa", '}car: const $car, '
             """timezones: ${jsonEncode(timezones)}, hasCoatOfArms: $hasCoatOfArms, """
             "startOfWeek: $startOfWeek, "
-            "${postalCode == null ? '' : 'postalCode: $postalCode, '});"
+            "${postalCode == null ? '' : 'postalCode: const $postalCode, '});"
             """${currencies == null ? '' : '@override List<FiatCurrency> get currencies => const ${currencies?.toInstancesString()}; '} """
             """${capitalInfo == null ? '' : '@override CapitalInfo get capitalInfo => const ${capitalInfo?.toString(short: short)}; '} """
             """${regionalBlocs == null ? '' : '@override List<RegionalBloc> get regionalBlocs => const ${regionalBlocs?.toInstancesString()}; '} """

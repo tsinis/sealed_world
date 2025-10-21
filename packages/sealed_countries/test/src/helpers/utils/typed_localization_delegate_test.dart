@@ -1,5 +1,5 @@
-import "package:sealed_countries/src/data/official_world_countries.data.dart";
 import "package:sealed_countries/src/helpers/utils/typed_localization_delegate.dart";
+import "package:sealed_countries/src/model/country/country.dart";
 import "package:sealed_currencies/sealed_currencies.dart";
 import "package:test/test.dart";
 

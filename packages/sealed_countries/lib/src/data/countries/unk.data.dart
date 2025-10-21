@@ -2,31 +2,20 @@
 // https://gitlab.com/restcountries/restcountries, which is
 // licensed under the Mozilla Public License Version 2.0.
 
-// ignore_for_file: avoid-suspicious-super-overrides
+// ignore_for_file: prefer-digit-separators
 
-import "package:sealed_currencies/sealed_currencies.dart";
+part of "../../model/country/country.dart";
 
-import "../model/country/country.dart";
-import "../model/country/submodels/capital.dart";
-import "../model/country/submodels/capital_info.dart";
-import "../model/country/submodels/car.dart";
-import "../model/country/submodels/country_name.dart";
-import "../model/country/submodels/demonyms.dart";
-import "../model/country/submodels/gini.dart";
-import "../model/country/submodels/idd.dart";
-import "../model/country/submodels/lat_lng.dart";
-import "../model/country/submodels/maps.dart";
-import "../model/regional_bloc/world_bloc.dart";
-import "geo/continental_sections.data.dart";
-import "geo/continents.data.dart";
-import "regional_bloc/regional_bloc.data.dart";
-
-/// A class that represents the Kosovo country.
+/// A class that represents the the Kosovo country.
 class CountryUnk extends WorldCountry {
+  /// {@template sealed_world.countries_unk_constructor}}
   /// Creates a instance of [CountryUnk] (Kosovo country).
   ///
   /// ISO 3166-1 Alpha-3 code: `UNK`, ISO 3166-1 Alpha-2 code: `XK`.
-  const CountryUnk()
+  /// {@endtemplate}
+  const factory CountryUnk() = _UnkFactory;
+
+  const CountryUnk._()
     // ignore: deprecated_member_use_from_same_package, it's TODO!
     : super.permissive(
         name: const CountryName(
@@ -88,4 +77,8 @@ class CountryUnk extends WorldCountry {
   ];
   @override
   List<NaturalLanguage> get languages => const [LangSrp(), LangSqi()];
+}
+
+extension type const _UnkFactory._(CountryUnk _) implements CountryUnk {
+  const _UnkFactory() : this._(const CountryUnk._());
 }
