@@ -325,7 +325,7 @@
       },
       {
         "type": "shell",
-        "command": "lcov -r coverage/lcov.info '*/*.g.dart' '*/*.l10n.dart' '*/*.data.dart' -o coverage/lcov.info --ignore-errors unused",
+        "command": "lcov -r coverage/lcov.info '*/*.g.dart' '*/*.l10n.dart' -o coverage/lcov.info --ignore-errors unused",
         "label": "Remove Generated Files from Coverage",
         "presentation": {
           "reveal": "never",
