@@ -44,7 +44,7 @@
 | EGP | Egyptian Pound | 🇪🇬 Egypt | 🇵🇸 |
 | ERN | Eritrean Nakfa | 🇪🇷 Eritrea |  |
 | ETB | Ethiopian Birr | 🇪🇹 Ethiopia |  |
-| EUR | Euro | 🇩🇪 Germany | 🇫🇷🇮🇹🇪🇸🇳🇱🇧🇪🇬🇷🇵🇹🇦🇹🇮🇪🇫🇮🇸🇰🇭🇷🇱🇹🇸🇮🇱🇻🇽🇰🇪🇪🇨🇾🇷🇪🇱🇺🇲🇪🇲🇹🇬🇵🇲🇶🇬🇫🇾🇹🇦🇩🇲🇨🇸🇲🇲🇫🇦🇽🇧🇱🇵🇲🇻🇦🇹🇫 |
+| EUR | Euro | 🇩🇪 Germany | 🇫🇷🇮🇹🇪🇸🇳🇱🇧🇪🇬🇷🇵🇹🇦🇹🇮🇪🇧🇬🇫🇮🇸🇰🇭🇷🇱🇹🇸🇮🇱🇻🇽🇰🇪🇪🇨🇾🇷🇪🇱🇺🇲🇪🇲🇹🇬🇵🇲🇶🇬🇫🇾🇹🇦🇩🇲🇨🇸🇲🇲🇫🇦🇽🇧🇱🇵🇲🇻🇦🇹🇫 |
 | FJD | Fijian Dollar | 🇫🇯 Fiji |  |
 | FKP | Falkland Pound | 🇫🇰 Falkland Islands |  |
 | GBP | British Pound | 🇬🇧 United Kingdom | 🇿🇼🇯🇪🇮🇲🇬🇬🇸🇭🇬🇸 |
