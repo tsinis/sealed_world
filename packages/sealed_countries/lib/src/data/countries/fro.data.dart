@@ -6,9 +6,13 @@
 
 part of "../../model/country/country.dart";
 
+extension type const _FroFactory._(CountryFro _) implements CountryFro {
+  const _FroFactory() : this._(const CountryFro._());
+}
+
 /// A class that represents the the Faroe Islands country.
 class CountryFro extends WorldCountry {
-  /// {@template sealed_world.countries_fro_constructor}}
+  /// {@template sealed_world.country_fro_constructor}
   /// Creates a instance of [CountryFro] (Faroe Islands country).
   ///
   /// ISO 3166-1 Alpha-3 code: `FRO`, ISO 3166-1 Alpha-2 code: `FO`.
@@ -67,8 +71,4 @@ class CountryFro extends WorldCountry {
   ];
   @override
   List<NaturalLanguage> get languages => const [LangDan(), LangFao()];
-}
-
-extension type const _FroFactory._(CountryFro _) implements CountryFro {
-  const _FroFactory() : this._(const CountryFro._());
 }

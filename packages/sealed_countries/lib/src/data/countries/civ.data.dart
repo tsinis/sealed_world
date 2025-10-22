@@ -6,9 +6,13 @@
 
 part of "../../model/country/country.dart";
 
+extension type const _CivFactory._(CountryCiv _) implements CountryCiv {
+  const _CivFactory() : this._(const CountryCiv._());
+}
+
 /// A class that represents the the Ivory Coast country.
 class CountryCiv extends WorldCountry {
-  /// {@template sealed_world.countries_civ_constructor}}
+  /// {@template sealed_world.country_civ_constructor}
   /// Creates a instance of [CountryCiv] (Ivory Coast country).
   ///
   /// ISO 3166-1 Alpha-3 code: `CIV`, ISO 3166-1 Alpha-2 code: `CI`.
@@ -75,8 +79,4 @@ class CountryCiv extends WorldCountry {
   ];
   @override
   List<NaturalLanguage> get languages => const [LangFra()];
-}
-
-extension type const _CivFactory._(CountryCiv _) implements CountryCiv {
-  const _CivFactory() : this._(const CountryCiv._());
 }

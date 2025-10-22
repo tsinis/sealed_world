@@ -6,9 +6,13 @@
 
 part of "../../model/country/country.dart";
 
+extension type const _ArmFactory._(CountryArm _) implements CountryArm {
+  const _ArmFactory() : this._(const CountryArm._());
+}
+
 /// A class that represents the the Armenia country.
 class CountryArm extends WorldCountry {
-  /// {@template sealed_world.countries_arm_constructor}}
+  /// {@template sealed_world.country_arm_constructor}
   /// Creates a instance of [CountryArm] (Armenia country).
   ///
   /// ISO 3166-1 Alpha-3 code: `ARM`, ISO 3166-1 Alpha-2 code: `AM`.
@@ -79,8 +83,4 @@ class CountryArm extends WorldCountry {
   ];
   @override
   List<NaturalLanguage> get languages => const [LangHye()];
-}
-
-extension type const _ArmFactory._(CountryArm _) implements CountryArm {
-  const _ArmFactory() : this._(const CountryArm._());
 }

@@ -6,9 +6,13 @@
 
 part of "../../model/country/country.dart";
 
+extension type const _SgpFactory._(CountrySgp _) implements CountrySgp {
+  const _SgpFactory() : this._(const CountrySgp._());
+}
+
 /// A class that represents the the Singapore country.
 class CountrySgp extends WorldCountry {
-  /// {@template sealed_world.countries_sgp_constructor}}
+  /// {@template sealed_world.country_sgp_constructor}
   /// Creates a instance of [CountrySgp] (Singapore country).
   ///
   /// ISO 3166-1 Alpha-3 code: `SGP`, ISO 3166-1 Alpha-2 code: `SG`.
@@ -91,8 +95,4 @@ class CountrySgp extends WorldCountry {
     LangMsa(),
     LangTam(),
   ];
-}
-
-extension type const _SgpFactory._(CountrySgp _) implements CountrySgp {
-  const _SgpFactory() : this._(const CountrySgp._());
 }

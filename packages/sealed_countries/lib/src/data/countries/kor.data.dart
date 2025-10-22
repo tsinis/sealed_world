@@ -6,9 +6,13 @@
 
 part of "../../model/country/country.dart";
 
+extension type const _KorFactory._(CountryKor _) implements CountryKor {
+  const _KorFactory() : this._(const CountryKor._());
+}
+
 /// A class that represents the the South Korea country.
 class CountryKor extends WorldCountry {
-  /// {@template sealed_world.countries_kor_constructor}}
+  /// {@template sealed_world.country_kor_constructor}
   /// Creates a instance of [CountryKor] (South Korea country).
   ///
   /// ISO 3166-1 Alpha-3 code: `KOR`, ISO 3166-1 Alpha-2 code: `KR`.
@@ -73,8 +77,4 @@ class CountryKor extends WorldCountry {
   ];
   @override
   List<NaturalLanguage> get languages => const [LangKor()];
-}
-
-extension type const _KorFactory._(CountryKor _) implements CountryKor {
-  const _KorFactory() : this._(const CountryKor._());
 }

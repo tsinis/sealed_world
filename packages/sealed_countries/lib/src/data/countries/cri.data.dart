@@ -6,9 +6,13 @@
 
 part of "../../model/country/country.dart";
 
+extension type const _CriFactory._(CountryCri _) implements CountryCri {
+  const _CriFactory() : this._(const CountryCri._());
+}
+
 /// A class that represents the the Costa Rica country.
 class CountryCri extends WorldCountry {
-  /// {@template sealed_world.countries_cri_constructor}}
+  /// {@template sealed_world.country_cri_constructor}
   /// Creates a instance of [CountryCri] (Costa Rica country).
   ///
   /// ISO 3166-1 Alpha-3 code: `CRI`, ISO 3166-1 Alpha-2 code: `CR`.
@@ -77,8 +81,4 @@ class CountryCri extends WorldCountry {
   ];
   @override
   List<NaturalLanguage> get languages => const [LangSpa()];
-}
-
-extension type const _CriFactory._(CountryCri _) implements CountryCri {
-  const _CriFactory() : this._(const CountryCri._());
 }

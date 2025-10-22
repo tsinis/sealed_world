@@ -6,9 +6,13 @@
 
 part of "../../model/country/country.dart";
 
+extension type const _LbrFactory._(CountryLbr _) implements CountryLbr {
+  const _LbrFactory() : this._(const CountryLbr._());
+}
+
 /// A class that represents the the Liberia country.
 class CountryLbr extends WorldCountry {
-  /// {@template sealed_world.countries_lbr_constructor}}
+  /// {@template sealed_world.country_lbr_constructor}
   /// Creates a instance of [CountryLbr] (Liberia country).
   ///
   /// ISO 3166-1 Alpha-3 code: `LBR`, ISO 3166-1 Alpha-2 code: `LR`.
@@ -73,8 +77,4 @@ class CountryLbr extends WorldCountry {
   ];
   @override
   List<NaturalLanguage> get languages => const [LangEng()];
-}
-
-extension type const _LbrFactory._(CountryLbr _) implements CountryLbr {
-  const _LbrFactory() : this._(const CountryLbr._());
 }

@@ -6,9 +6,13 @@
 
 part of "../../model/country/country.dart";
 
+extension type const _WsmFactory._(CountryWsm _) implements CountryWsm {
+  const _WsmFactory() : this._(const CountryWsm._());
+}
+
 /// A class that represents the the Samoa country.
 class CountryWsm extends WorldCountry {
-  /// {@template sealed_world.countries_wsm_constructor}}
+  /// {@template sealed_world.country_wsm_constructor}
   /// Creates a instance of [CountryWsm] (Samoa country).
   ///
   /// ISO 3166-1 Alpha-3 code: `WSM`, ISO 3166-1 Alpha-2 code: `WS`.
@@ -75,8 +79,4 @@ class CountryWsm extends WorldCountry {
   ];
   @override
   List<NaturalLanguage> get languages => const [LangEng(), LangSmo()];
-}
-
-extension type const _WsmFactory._(CountryWsm _) implements CountryWsm {
-  const _WsmFactory() : this._(const CountryWsm._());
 }

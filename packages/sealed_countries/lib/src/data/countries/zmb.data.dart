@@ -6,9 +6,13 @@
 
 part of "../../model/country/country.dart";
 
+extension type const _ZmbFactory._(CountryZmb _) implements CountryZmb {
+  const _ZmbFactory() : this._(const CountryZmb._());
+}
+
 /// A class that represents the the Zambia country.
 class CountryZmb extends WorldCountry {
-  /// {@template sealed_world.countries_zmb_constructor}}
+  /// {@template sealed_world.country_zmb_constructor}
   /// Creates a instance of [CountryZmb] (Zambia country).
   ///
   /// ISO 3166-1 Alpha-3 code: `ZMB`, ISO 3166-1 Alpha-2 code: `ZM`.
@@ -80,8 +84,4 @@ class CountryZmb extends WorldCountry {
   ];
   @override
   List<NaturalLanguage> get languages => const [LangEng()];
-}
-
-extension type const _ZmbFactory._(CountryZmb _) implements CountryZmb {
-  const _ZmbFactory() : this._(const CountryZmb._());
 }

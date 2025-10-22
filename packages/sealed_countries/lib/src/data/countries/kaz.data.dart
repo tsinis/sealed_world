@@ -6,9 +6,13 @@
 
 part of "../../model/country/country.dart";
 
+extension type const _KazFactory._(CountryKaz _) implements CountryKaz {
+  const _KazFactory() : this._(const CountryKaz._());
+}
+
 /// A class that represents the the Kazakhstan country.
 class CountryKaz extends WorldCountry {
-  /// {@template sealed_world.countries_kaz_constructor}}
+  /// {@template sealed_world.country_kaz_constructor}
   /// Creates a instance of [CountryKaz] (Kazakhstan country).
   ///
   /// ISO 3166-1 Alpha-3 code: `KAZ`, ISO 3166-1 Alpha-2 code: `KZ`.
@@ -92,8 +96,4 @@ class CountryKaz extends WorldCountry {
   ];
   @override
   List<NaturalLanguage> get languages => const [LangKaz(), LangRus()];
-}
-
-extension type const _KazFactory._(CountryKaz _) implements CountryKaz {
-  const _KazFactory() : this._(const CountryKaz._());
 }

@@ -6,9 +6,13 @@
 
 part of "../../model/country/country.dart";
 
+extension type const _HmdFactory._(CountryHmd _) implements CountryHmd {
+  const _HmdFactory() : this._(const CountryHmd._());
+}
+
 /// A class that represents the the Heard Island and McDonald Islands country.
 class CountryHmd extends WorldCountry {
-  /// {@template sealed_world.countries_hmd_constructor}}
+  /// {@template sealed_world.country_hmd_constructor}
   /// Creates a instance of [CountryHmd] (Heard Island and McDonald Islands country).
   ///
   /// ISO 3166-1 Alpha-3 code: `HMD`, ISO 3166-1 Alpha-2 code: `HM`.
@@ -61,8 +65,4 @@ class CountryHmd extends WorldCountry {
   ];
   @override
   List<NaturalLanguage> get languages => const [LangEng()];
-}
-
-extension type const _HmdFactory._(CountryHmd _) implements CountryHmd {
-  const _HmdFactory() : this._(const CountryHmd._());
 }

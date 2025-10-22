@@ -6,9 +6,13 @@
 
 part of "../../model/country/country.dart";
 
+extension type const _DzaFactory._(CountryDza _) implements CountryDza {
+  const _DzaFactory() : this._(const CountryDza._());
+}
+
 /// A class that represents the the Algeria country.
 class CountryDza extends WorldCountry {
-  /// {@template sealed_world.countries_dza_constructor}}
+  /// {@template sealed_world.country_dza_constructor}
   /// Creates a instance of [CountryDza] (Algeria country).
   ///
   /// ISO 3166-1 Alpha-3 code: `DZA`, ISO 3166-1 Alpha-2 code: `DZ`.
@@ -71,8 +75,4 @@ class CountryDza extends WorldCountry {
   ];
   @override
   List<NaturalLanguage> get languages => const [LangAra()];
-}
-
-extension type const _DzaFactory._(CountryDza _) implements CountryDza {
-  const _DzaFactory() : this._(const CountryDza._());
 }

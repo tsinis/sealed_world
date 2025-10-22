@@ -6,9 +6,13 @@
 
 part of "../../model/country/country.dart";
 
+extension type const _AreFactory._(CountryAre _) implements CountryAre {
+  const _AreFactory() : this._(const CountryAre._());
+}
+
 /// A class that represents the the United Arab Emirates country.
 class CountryAre extends WorldCountry {
-  /// {@template sealed_world.countries_are_constructor}}
+  /// {@template sealed_world.country_are_constructor}
   /// Creates a instance of [CountryAre] (United Arab Emirates country).
   ///
   /// ISO 3166-1 Alpha-3 code: `ARE`, ISO 3166-1 Alpha-2 code: `AE`.
@@ -70,8 +74,4 @@ class CountryAre extends WorldCountry {
   ];
   @override
   List<NaturalLanguage> get languages => const [LangAra()];
-}
-
-extension type const _AreFactory._(CountryAre _) implements CountryAre {
-  const _AreFactory() : this._(const CountryAre._());
 }

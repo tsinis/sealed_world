@@ -6,9 +6,13 @@
 
 part of "../../model/country/country.dart";
 
+extension type const _BenFactory._(CountryBen _) implements CountryBen {
+  const _BenFactory() : this._(const CountryBen._());
+}
+
 /// A class that represents the the Benin country.
 class CountryBen extends WorldCountry {
-  /// {@template sealed_world.countries_ben_constructor}}
+  /// {@template sealed_world.country_ben_constructor}
   /// Creates a instance of [CountryBen] (Benin country).
   ///
   /// ISO 3166-1 Alpha-3 code: `BEN`, ISO 3166-1 Alpha-2 code: `BJ`.
@@ -69,8 +73,4 @@ class CountryBen extends WorldCountry {
   ];
   @override
   List<NaturalLanguage> get languages => const [LangFra()];
-}
-
-extension type const _BenFactory._(CountryBen _) implements CountryBen {
-  const _BenFactory() : this._(const CountryBen._());
 }

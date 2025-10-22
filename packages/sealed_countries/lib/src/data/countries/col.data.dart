@@ -6,9 +6,13 @@
 
 part of "../../model/country/country.dart";
 
+extension type const _ColFactory._(CountryCol _) implements CountryCol {
+  const _ColFactory() : this._(const CountryCol._());
+}
+
 /// A class that represents the the Colombia country.
 class CountryCol extends WorldCountry {
-  /// {@template sealed_world.countries_col_constructor}}
+  /// {@template sealed_world.country_col_constructor}
   /// Creates a instance of [CountryCol] (Colombia country).
   ///
   /// ISO 3166-1 Alpha-3 code: `COL`, ISO 3166-1 Alpha-2 code: `CO`.
@@ -73,8 +77,4 @@ class CountryCol extends WorldCountry {
   ];
   @override
   List<NaturalLanguage> get languages => const [LangSpa()];
-}
-
-extension type const _ColFactory._(CountryCol _) implements CountryCol {
-  const _ColFactory() : this._(const CountryCol._());
 }

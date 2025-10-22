@@ -6,9 +6,13 @@
 
 part of "../../model/country/country.dart";
 
+extension type const _BelFactory._(CountryBel _) implements CountryBel {
+  const _BelFactory() : this._(const CountryBel._());
+}
+
 /// A class that represents the the Belgium country.
 class CountryBel extends WorldCountry {
-  /// {@template sealed_world.countries_bel_constructor}}
+  /// {@template sealed_world.country_bel_constructor}
   /// Creates a instance of [CountryBel] (Belgium country).
   ///
   /// ISO 3166-1 Alpha-3 code: `BEL`, ISO 3166-1 Alpha-2 code: `BE`.
@@ -97,8 +101,4 @@ class CountryBel extends WorldCountry {
     LangFra(),
     LangNld(),
   ];
-}
-
-extension type const _BelFactory._(CountryBel _) implements CountryBel {
-  const _BelFactory() : this._(const CountryBel._());
 }

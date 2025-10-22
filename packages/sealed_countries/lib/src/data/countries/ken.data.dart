@@ -6,9 +6,13 @@
 
 part of "../../model/country/country.dart";
 
+extension type const _KenFactory._(CountryKen _) implements CountryKen {
+  const _KenFactory() : this._(const CountryKen._());
+}
+
 /// A class that represents the the Kenya country.
 class CountryKen extends WorldCountry {
-  /// {@template sealed_world.countries_ken_constructor}}
+  /// {@template sealed_world.country_ken_constructor}
   /// Creates a instance of [CountryKen] (Kenya country).
   ///
   /// ISO 3166-1 Alpha-3 code: `KEN`, ISO 3166-1 Alpha-2 code: `KE`.
@@ -75,8 +79,4 @@ class CountryKen extends WorldCountry {
   ];
   @override
   List<NaturalLanguage> get languages => const [LangEng(), LangSwa()];
-}
-
-extension type const _KenFactory._(CountryKen _) implements CountryKen {
-  const _KenFactory() : this._(const CountryKen._());
 }

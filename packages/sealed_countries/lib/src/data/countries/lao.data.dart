@@ -6,9 +6,13 @@
 
 part of "../../model/country/country.dart";
 
+extension type const _LaoFactory._(CountryLao _) implements CountryLao {
+  const _LaoFactory() : this._(const CountryLao._());
+}
+
 /// A class that represents the the Laos country.
 class CountryLao extends WorldCountry {
-  /// {@template sealed_world.countries_lao_constructor}}
+  /// {@template sealed_world.country_lao_constructor}
   /// Creates a instance of [CountryLao] (Laos country).
   ///
   /// ISO 3166-1 Alpha-3 code: `LAO`, ISO 3166-1 Alpha-2 code: `LA`.
@@ -76,8 +80,4 @@ class CountryLao extends WorldCountry {
   ];
   @override
   List<NaturalLanguage> get languages => const [LangLao()];
-}
-
-extension type const _LaoFactory._(CountryLao _) implements CountryLao {
-  const _LaoFactory() : this._(const CountryLao._());
 }

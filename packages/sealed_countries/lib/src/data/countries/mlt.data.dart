@@ -6,9 +6,13 @@
 
 part of "../../model/country/country.dart";
 
+extension type const _MltFactory._(CountryMlt _) implements CountryMlt {
+  const _MltFactory() : this._(const CountryMlt._());
+}
+
 /// A class that represents the the Malta country.
 class CountryMlt extends WorldCountry {
-  /// {@template sealed_world.countries_mlt_constructor}}
+  /// {@template sealed_world.country_mlt_constructor}
   /// Creates a instance of [CountryMlt] (Malta country).
   ///
   /// ISO 3166-1 Alpha-3 code: `MLT`, ISO 3166-1 Alpha-2 code: `MT`.
@@ -77,8 +81,4 @@ class CountryMlt extends WorldCountry {
   ];
   @override
   List<NaturalLanguage> get languages => const [LangEng(), LangMlt()];
-}
-
-extension type const _MltFactory._(CountryMlt _) implements CountryMlt {
-  const _MltFactory() : this._(const CountryMlt._());
 }

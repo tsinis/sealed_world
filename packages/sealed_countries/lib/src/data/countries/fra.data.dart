@@ -6,9 +6,13 @@
 
 part of "../../model/country/country.dart";
 
+extension type const _FraFactory._(CountryFra _) implements CountryFra {
+  const _FraFactory() : this._(const CountryFra._());
+}
+
 /// A class that represents the the France country.
 class CountryFra extends WorldCountry {
-  /// {@template sealed_world.countries_fra_constructor}}
+  /// {@template sealed_world.country_fra_constructor}
   /// Creates a instance of [CountryFra] (France country).
   ///
   /// ISO 3166-1 Alpha-3 code: `FRA`, ISO 3166-1 Alpha-2 code: `FR`.
@@ -92,8 +96,4 @@ class CountryFra extends WorldCountry {
   ];
   @override
   List<NaturalLanguage> get languages => const [LangFra()];
-}
-
-extension type const _FraFactory._(CountryFra _) implements CountryFra {
-  const _FraFactory() : this._(const CountryFra._());
 }

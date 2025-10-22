@@ -6,9 +6,13 @@
 
 part of "../../model/country/country.dart";
 
+extension type const _SvnFactory._(CountrySvn _) implements CountrySvn {
+  const _SvnFactory() : this._(const CountrySvn._());
+}
+
 /// A class that represents the the Slovenia country.
 class CountrySvn extends WorldCountry {
-  /// {@template sealed_world.countries_svn_constructor}}
+  /// {@template sealed_world.country_svn_constructor}
   /// Creates a instance of [CountrySvn] (Slovenia country).
   ///
   /// ISO 3166-1 Alpha-3 code: `SVN`, ISO 3166-1 Alpha-2 code: `SI`.
@@ -77,8 +81,4 @@ class CountrySvn extends WorldCountry {
   ];
   @override
   List<NaturalLanguage> get languages => const [LangSlv()];
-}
-
-extension type const _SvnFactory._(CountrySvn _) implements CountrySvn {
-  const _SvnFactory() : this._(const CountrySvn._());
 }

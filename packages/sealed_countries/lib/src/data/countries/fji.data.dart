@@ -6,9 +6,13 @@
 
 part of "../../model/country/country.dart";
 
+extension type const _FjiFactory._(CountryFji _) implements CountryFji {
+  const _FjiFactory() : this._(const CountryFji._());
+}
+
 /// A class that represents the the Fiji country.
 class CountryFji extends WorldCountry {
-  /// {@template sealed_world.countries_fji_constructor}}
+  /// {@template sealed_world.country_fji_constructor}
   /// Creates a instance of [CountryFji] (Fiji country).
   ///
   /// ISO 3166-1 Alpha-3 code: `FJI`, ISO 3166-1 Alpha-2 code: `FJ`.
@@ -77,8 +81,4 @@ class CountryFji extends WorldCountry {
   ];
   @override
   List<NaturalLanguage> get languages => const [LangEng(), LangFij()];
-}
-
-extension type const _FjiFactory._(CountryFji _) implements CountryFji {
-  const _FjiFactory() : this._(const CountryFji._());
 }

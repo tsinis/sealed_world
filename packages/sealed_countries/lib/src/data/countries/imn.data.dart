@@ -6,9 +6,13 @@
 
 part of "../../model/country/country.dart";
 
+extension type const _ImnFactory._(CountryImn _) implements CountryImn {
+  const _ImnFactory() : this._(const CountryImn._());
+}
+
 /// A class that represents the the Isle of Man country.
 class CountryImn extends WorldCountry {
-  /// {@template sealed_world.countries_imn_constructor}}
+  /// {@template sealed_world.country_imn_constructor}
   /// Creates a instance of [CountryImn] (Isle of Man country).
   ///
   /// ISO 3166-1 Alpha-3 code: `IMN`, ISO 3166-1 Alpha-2 code: `IM`.
@@ -76,8 +80,4 @@ class CountryImn extends WorldCountry {
   ];
   @override
   List<NaturalLanguage> get languages => const [LangEng(), LangGlv()];
-}
-
-extension type const _ImnFactory._(CountryImn _) implements CountryImn {
-  const _ImnFactory() : this._(const CountryImn._());
 }

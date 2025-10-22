@@ -6,9 +6,13 @@
 
 part of "../../model/country/country.dart";
 
+extension type const _SwzFactory._(CountrySwz _) implements CountrySwz {
+  const _SwzFactory() : this._(const CountrySwz._());
+}
+
 /// A class that represents the the Eswatini country.
 class CountrySwz extends WorldCountry {
-  /// {@template sealed_world.countries_swz_constructor}}
+  /// {@template sealed_world.country_swz_constructor}
   /// Creates a instance of [CountrySwz] (Eswatini country).
   ///
   /// ISO 3166-1 Alpha-3 code: `SWZ`, ISO 3166-1 Alpha-2 code: `SZ`.
@@ -88,8 +92,4 @@ class CountrySwz extends WorldCountry {
   ];
   @override
   List<NaturalLanguage> get languages => const [LangEng(), LangSsw()];
-}
-
-extension type const _SwzFactory._(CountrySwz _) implements CountrySwz {
-  const _SwzFactory() : this._(const CountrySwz._());
 }

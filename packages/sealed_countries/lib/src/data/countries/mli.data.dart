@@ -6,9 +6,13 @@
 
 part of "../../model/country/country.dart";
 
+extension type const _MliFactory._(CountryMli _) implements CountryMli {
+  const _MliFactory() : this._(const CountryMli._());
+}
+
 /// A class that represents the the Mali country.
 class CountryMli extends WorldCountry {
-  /// {@template sealed_world.countries_mli_constructor}}
+  /// {@template sealed_world.country_mli_constructor}
   /// Creates a instance of [CountryMli] (Mali country).
   ///
   /// ISO 3166-1 Alpha-3 code: `MLI`, ISO 3166-1 Alpha-2 code: `ML`.
@@ -49,8 +53,10 @@ class CountryMli extends WorldCountry {
   @override
   List<FiatCurrency> get currencies => const [FiatXof()];
   @override
-  CapitalInfo get capitalInfo =>
-      const CapitalInfo(capital: Capital("Bamako"), latLng: LatLng(12.65, -8));
+  CapitalInfo get capitalInfo => const CapitalInfo(
+    capital: Capital("Bamako"),
+    latLng: LatLng(12.65, -8),
+  );
   @override
   List<RegionalBloc> get regionalBlocs => const [BlocAU()];
   @override
@@ -68,8 +74,4 @@ class CountryMli extends WorldCountry {
   ];
   @override
   List<NaturalLanguage> get languages => const [LangFra()];
-}
-
-extension type const _MliFactory._(CountryMli _) implements CountryMli {
-  const _MliFactory() : this._(const CountryMli._());
 }

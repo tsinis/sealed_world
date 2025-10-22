@@ -6,9 +6,13 @@
 
 part of "../../model/country/country.dart";
 
+extension type const _KgzFactory._(CountryKgz _) implements CountryKgz {
+  const _KgzFactory() : this._(const CountryKgz._());
+}
+
 /// A class that represents the the Kyrgyzstan country.
 class CountryKgz extends WorldCountry {
-  /// {@template sealed_world.countries_kgz_constructor}}
+  /// {@template sealed_world.country_kgz_constructor}
   /// Creates a instance of [CountryKgz] (Kyrgyzstan country).
   ///
   /// ISO 3166-1 Alpha-3 code: `KGZ`, ISO 3166-1 Alpha-2 code: `KG`.
@@ -85,8 +89,4 @@ class CountryKgz extends WorldCountry {
   ];
   @override
   List<NaturalLanguage> get languages => const [LangKir(), LangRus()];
-}
-
-extension type const _KgzFactory._(CountryKgz _) implements CountryKgz {
-  const _KgzFactory() : this._(const CountryKgz._());
 }

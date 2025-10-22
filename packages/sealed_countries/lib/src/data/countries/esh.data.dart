@@ -6,9 +6,13 @@
 
 part of "../../model/country/country.dart";
 
+extension type const _EshFactory._(CountryEsh _) implements CountryEsh {
+  const _EshFactory() : this._(const CountryEsh._());
+}
+
 /// A class that represents the the Western Sahara country.
 class CountryEsh extends WorldCountry {
-  /// {@template sealed_world.countries_esh_constructor}}
+  /// {@template sealed_world.country_esh_constructor}
   /// Creates a instance of [CountryEsh] (Western Sahara country).
   ///
   /// ISO 3166-1 Alpha-3 code: `ESH`, ISO 3166-1 Alpha-2 code: `EH`.
@@ -68,8 +72,4 @@ class CountryEsh extends WorldCountry {
   ];
   @override
   List<NaturalLanguage> get languages => const [LangSpa()];
-}
-
-extension type const _EshFactory._(CountryEsh _) implements CountryEsh {
-  const _EshFactory() : this._(const CountryEsh._());
 }

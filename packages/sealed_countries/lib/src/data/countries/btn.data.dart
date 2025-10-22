@@ -6,9 +6,13 @@
 
 part of "../../model/country/country.dart";
 
+extension type const _BtnFactory._(CountryBtn _) implements CountryBtn {
+  const _BtnFactory() : this._(const CountryBtn._());
+}
+
 /// A class that represents the the Bhutan country.
 class CountryBtn extends WorldCountry {
-  /// {@template sealed_world.countries_btn_constructor}}
+  /// {@template sealed_world.country_btn_constructor}
   /// Creates a instance of [CountryBtn] (Bhutan country).
   ///
   /// ISO 3166-1 Alpha-3 code: `BTN`, ISO 3166-1 Alpha-2 code: `BT`.
@@ -70,8 +74,4 @@ class CountryBtn extends WorldCountry {
   ];
   @override
   List<NaturalLanguage> get languages => const [LangDzo()];
-}
-
-extension type const _BtnFactory._(CountryBtn _) implements CountryBtn {
-  const _BtnFactory() : this._(const CountryBtn._());
 }

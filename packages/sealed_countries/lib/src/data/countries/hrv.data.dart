@@ -6,9 +6,13 @@
 
 part of "../../model/country/country.dart";
 
+extension type const _HrvFactory._(CountryHrv _) implements CountryHrv {
+  const _HrvFactory() : this._(const CountryHrv._());
+}
+
 /// A class that represents the the Croatia country.
 class CountryHrv extends WorldCountry {
-  /// {@template sealed_world.countries_hrv_constructor}}
+  /// {@template sealed_world.country_hrv_constructor}
   /// Creates a instance of [CountryHrv] (Croatia country).
   ///
   /// ISO 3166-1 Alpha-3 code: `HRV`, ISO 3166-1 Alpha-2 code: `HR`.
@@ -76,8 +80,4 @@ class CountryHrv extends WorldCountry {
   ];
   @override
   List<NaturalLanguage> get languages => const [LangHrv()];
-}
-
-extension type const _HrvFactory._(CountryHrv _) implements CountryHrv {
-  const _HrvFactory() : this._(const CountryHrv._());
 }

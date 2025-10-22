@@ -6,9 +6,13 @@
 
 part of "../../model/country/country.dart";
 
+extension type const _JamFactory._(CountryJam _) implements CountryJam {
+  const _JamFactory() : this._(const CountryJam._());
+}
+
 /// A class that represents the the Jamaica country.
 class CountryJam extends WorldCountry {
-  /// {@template sealed_world.countries_jam_constructor}}
+  /// {@template sealed_world.country_jam_constructor}
   /// Creates a instance of [CountryJam] (Jamaica country).
   ///
   /// ISO 3166-1 Alpha-3 code: `JAM`, ISO 3166-1 Alpha-2 code: `JM`.
@@ -64,8 +68,4 @@ class CountryJam extends WorldCountry {
   ];
   @override
   List<NaturalLanguage> get languages => const [LangEng()];
-}
-
-extension type const _JamFactory._(CountryJam _) implements CountryJam {
-  const _JamFactory() : this._(const CountryJam._());
 }

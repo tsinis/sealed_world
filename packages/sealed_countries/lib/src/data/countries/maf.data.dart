@@ -6,9 +6,13 @@
 
 part of "../../model/country/country.dart";
 
+extension type const _MafFactory._(CountryMaf _) implements CountryMaf {
+  const _MafFactory() : this._(const CountryMaf._());
+}
+
 /// A class that represents the the Saint Martin country.
 class CountryMaf extends WorldCountry {
-  /// {@template sealed_world.countries_maf_constructor}}
+  /// {@template sealed_world.country_maf_constructor}
   /// Creates a instance of [CountryMaf] (Saint Martin country).
   ///
   /// ISO 3166-1 Alpha-3 code: `MAF`, ISO 3166-1 Alpha-2 code: `MF`.
@@ -81,8 +85,4 @@ class CountryMaf extends WorldCountry {
   ];
   @override
   List<NaturalLanguage> get languages => const [LangFra()];
-}
-
-extension type const _MafFactory._(CountryMaf _) implements CountryMaf {
-  const _MafFactory() : this._(const CountryMaf._());
 }

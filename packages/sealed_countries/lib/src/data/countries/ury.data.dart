@@ -6,9 +6,13 @@
 
 part of "../../model/country/country.dart";
 
+extension type const _UryFactory._(CountryUry _) implements CountryUry {
+  const _UryFactory() : this._(const CountryUry._());
+}
+
 /// A class that represents the the Uruguay country.
 class CountryUry extends WorldCountry {
-  /// {@template sealed_world.countries_ury_constructor}}
+  /// {@template sealed_world.country_ury_constructor}
   /// Creates a instance of [CountryUry] (Uruguay country).
   ///
   /// ISO 3166-1 Alpha-3 code: `URY`, ISO 3166-1 Alpha-2 code: `UY`.
@@ -74,8 +78,4 @@ class CountryUry extends WorldCountry {
   ];
   @override
   List<NaturalLanguage> get languages => const [LangSpa()];
-}
-
-extension type const _UryFactory._(CountryUry _) implements CountryUry {
-  const _UryFactory() : this._(const CountryUry._());
 }

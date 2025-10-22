@@ -6,9 +6,13 @@
 
 part of "../../model/country/country.dart";
 
+extension type const _AgoFactory._(CountryAgo _) implements CountryAgo {
+  const _AgoFactory() : this._(const CountryAgo._());
+}
+
 /// A class that represents the the Angola country.
 class CountryAgo extends WorldCountry {
-  /// {@template sealed_world.countries_ago_constructor}}
+  /// {@template sealed_world.country_ago_constructor}
   /// Creates a instance of [CountryAgo] (Angola country).
   ///
   /// ISO 3166-1 Alpha-3 code: `AGO`, ISO 3166-1 Alpha-2 code: `AO`.
@@ -73,8 +77,4 @@ class CountryAgo extends WorldCountry {
   ];
   @override
   List<NaturalLanguage> get languages => const [LangPor()];
-}
-
-extension type const _AgoFactory._(CountryAgo _) implements CountryAgo {
-  const _AgoFactory() : this._(const CountryAgo._());
 }

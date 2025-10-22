@@ -6,9 +6,13 @@
 
 part of "../../model/country/country.dart";
 
+extension type const _NplFactory._(CountryNpl _) implements CountryNpl {
+  const _NplFactory() : this._(const CountryNpl._());
+}
+
 /// A class that represents the the Nepal country.
 class CountryNpl extends WorldCountry {
-  /// {@template sealed_world.countries_npl_constructor}}
+  /// {@template sealed_world.country_npl_constructor}
   /// Creates a instance of [CountryNpl] (Nepal country).
   ///
   /// ISO 3166-1 Alpha-3 code: `NPL`, ISO 3166-1 Alpha-2 code: `NP`.
@@ -76,8 +80,4 @@ class CountryNpl extends WorldCountry {
   ];
   @override
   List<NaturalLanguage> get languages => const [LangNep()];
-}
-
-extension type const _NplFactory._(CountryNpl _) implements CountryNpl {
-  const _NplFactory() : this._(const CountryNpl._());
 }

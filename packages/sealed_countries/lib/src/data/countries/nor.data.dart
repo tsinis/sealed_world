@@ -6,9 +6,13 @@
 
 part of "../../model/country/country.dart";
 
+extension type const _NorFactory._(CountryNor _) implements CountryNor {
+  const _NorFactory() : this._(const CountryNor._());
+}
+
 /// A class that represents the the Norway country.
 class CountryNor extends WorldCountry {
-  /// {@template sealed_world.countries_nor_constructor}}
+  /// {@template sealed_world.country_nor_constructor}
   /// Creates a instance of [CountryNor] (Norway country).
   ///
   /// ISO 3166-1 Alpha-3 code: `NOR`, ISO 3166-1 Alpha-2 code: `NO`.
@@ -83,8 +87,4 @@ class CountryNor extends WorldCountry {
   ];
   @override
   List<NaturalLanguage> get languages => const [LangNno(), LangNob()];
-}
-
-extension type const _NorFactory._(CountryNor _) implements CountryNor {
-  const _NorFactory() : this._(const CountryNor._());
 }

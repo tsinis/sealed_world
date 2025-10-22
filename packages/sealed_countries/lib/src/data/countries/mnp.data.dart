@@ -6,9 +6,13 @@
 
 part of "../../model/country/country.dart";
 
+extension type const _MnpFactory._(CountryMnp _) implements CountryMnp {
+  const _MnpFactory() : this._(const CountryMnp._());
+}
+
 /// A class that represents the the Northern Mariana Islands country.
 class CountryMnp extends WorldCountry {
-  /// {@template sealed_world.countries_mnp_constructor}}
+  /// {@template sealed_world.country_mnp_constructor}
   /// Creates a instance of [CountryMnp] (Northern Mariana Islands country).
   ///
   /// ISO 3166-1 Alpha-3 code: `MNP`, ISO 3166-1 Alpha-2 code: `MP`.
@@ -84,8 +88,4 @@ class CountryMnp extends WorldCountry {
   ];
   @override
   List<NaturalLanguage> get languages => const [LangCha(), LangEng()];
-}
-
-extension type const _MnpFactory._(CountryMnp _) implements CountryMnp {
-  const _MnpFactory() : this._(const CountryMnp._());
 }

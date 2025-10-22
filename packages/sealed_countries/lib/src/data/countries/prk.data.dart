@@ -6,9 +6,13 @@
 
 part of "../../model/country/country.dart";
 
+extension type const _PrkFactory._(CountryPrk _) implements CountryPrk {
+  const _PrkFactory() : this._(const CountryPrk._());
+}
+
 /// A class that represents the the North Korea country.
 class CountryPrk extends WorldCountry {
-  /// {@template sealed_world.countries_prk_constructor}}
+  /// {@template sealed_world.country_prk_constructor}
   /// Creates a instance of [CountryPrk] (North Korea country).
   ///
   /// ISO 3166-1 Alpha-3 code: `PRK`, ISO 3166-1 Alpha-2 code: `KP`.
@@ -75,8 +79,4 @@ class CountryPrk extends WorldCountry {
   ];
   @override
   List<NaturalLanguage> get languages => const [LangKor()];
-}
-
-extension type const _PrkFactory._(CountryPrk _) implements CountryPrk {
-  const _PrkFactory() : this._(const CountryPrk._());
 }

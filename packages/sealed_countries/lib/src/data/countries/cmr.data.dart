@@ -6,9 +6,13 @@
 
 part of "../../model/country/country.dart";
 
+extension type const _CmrFactory._(CountryCmr _) implements CountryCmr {
+  const _CmrFactory() : this._(const CountryCmr._());
+}
+
 /// A class that represents the the Cameroon country.
 class CountryCmr extends WorldCountry {
-  /// {@template sealed_world.countries_cmr_constructor}}
+  /// {@template sealed_world.country_cmr_constructor}
   /// Creates a instance of [CountryCmr] (Cameroon country).
   ///
   /// ISO 3166-1 Alpha-3 code: `CMR`, ISO 3166-1 Alpha-2 code: `CM`.
@@ -78,8 +82,4 @@ class CountryCmr extends WorldCountry {
   ];
   @override
   List<NaturalLanguage> get languages => const [LangEng(), LangFra()];
-}
-
-extension type const _CmrFactory._(CountryCmr _) implements CountryCmr {
-  const _CmrFactory() : this._(const CountryCmr._());
 }

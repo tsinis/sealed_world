@@ -6,9 +6,13 @@
 
 part of "../../model/country/country.dart";
 
+extension type const _LbnFactory._(CountryLbn _) implements CountryLbn {
+  const _LbnFactory() : this._(const CountryLbn._());
+}
+
 /// A class that represents the the Lebanon country.
 class CountryLbn extends WorldCountry {
-  /// {@template sealed_world.countries_lbn_constructor}}
+  /// {@template sealed_world.country_lbn_constructor}
   /// Creates a instance of [CountryLbn] (Lebanon country).
   ///
   /// ISO 3166-1 Alpha-3 code: `LBN`, ISO 3166-1 Alpha-2 code: `LB`.
@@ -82,8 +86,4 @@ class CountryLbn extends WorldCountry {
   ];
   @override
   List<NaturalLanguage> get languages => const [LangAra(), LangFra()];
-}
-
-extension type const _LbnFactory._(CountryLbn _) implements CountryLbn {
-  const _LbnFactory() : this._(const CountryLbn._());
 }

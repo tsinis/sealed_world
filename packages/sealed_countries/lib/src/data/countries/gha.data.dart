@@ -6,9 +6,13 @@
 
 part of "../../model/country/country.dart";
 
+extension type const _GhaFactory._(CountryGha _) implements CountryGha {
+  const _GhaFactory() : this._(const CountryGha._());
+}
+
 /// A class that represents the the Ghana country.
 class CountryGha extends WorldCountry {
-  /// {@template sealed_world.countries_gha_constructor}}
+  /// {@template sealed_world.country_gha_constructor}
   /// Creates a instance of [CountryGha] (Ghana country).
   ///
   /// ISO 3166-1 Alpha-3 code: `GHA`, ISO 3166-1 Alpha-2 code: `GH`.
@@ -67,8 +71,4 @@ class CountryGha extends WorldCountry {
   ];
   @override
   List<NaturalLanguage> get languages => const [LangEng()];
-}
-
-extension type const _GhaFactory._(CountryGha _) implements CountryGha {
-  const _GhaFactory() : this._(const CountryGha._());
 }

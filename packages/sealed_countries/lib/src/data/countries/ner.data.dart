@@ -6,9 +6,13 @@
 
 part of "../../model/country/country.dart";
 
+extension type const _NerFactory._(CountryNer _) implements CountryNer {
+  const _NerFactory() : this._(const CountryNer._());
+}
+
 /// A class that represents the the Niger country.
 class CountryNer extends WorldCountry {
-  /// {@template sealed_world.countries_ner_constructor}}
+  /// {@template sealed_world.country_ner_constructor}
   /// Creates a instance of [CountryNer] (Niger country).
   ///
   /// ISO 3166-1 Alpha-3 code: `NER`, ISO 3166-1 Alpha-2 code: `NE`.
@@ -74,8 +78,4 @@ class CountryNer extends WorldCountry {
   ];
   @override
   List<NaturalLanguage> get languages => const [LangFra()];
-}
-
-extension type const _NerFactory._(CountryNer _) implements CountryNer {
-  const _NerFactory() : this._(const CountryNer._());
 }

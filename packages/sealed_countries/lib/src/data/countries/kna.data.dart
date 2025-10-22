@@ -6,9 +6,13 @@
 
 part of "../../model/country/country.dart";
 
+extension type const _KnaFactory._(CountryKna _) implements CountryKna {
+  const _KnaFactory() : this._(const CountryKna._());
+}
+
 /// A class that represents the the Saint Kitts and Nevis country.
 class CountryKna extends WorldCountry {
-  /// {@template sealed_world.countries_kna_constructor}}
+  /// {@template sealed_world.country_kna_constructor}
   /// Creates a instance of [CountryKna] (Saint Kitts and Nevis country).
   ///
   /// ISO 3166-1 Alpha-3 code: `KNA`, ISO 3166-1 Alpha-2 code: `KN`.
@@ -75,8 +79,4 @@ class CountryKna extends WorldCountry {
   ];
   @override
   List<NaturalLanguage> get languages => const [LangEng()];
-}
-
-extension type const _KnaFactory._(CountryKna _) implements CountryKna {
-  const _KnaFactory() : this._(const CountryKna._());
 }

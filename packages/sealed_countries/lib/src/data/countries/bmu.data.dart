@@ -6,9 +6,13 @@
 
 part of "../../model/country/country.dart";
 
+extension type const _BmuFactory._(CountryBmu _) implements CountryBmu {
+  const _BmuFactory() : this._(const CountryBmu._());
+}
+
 /// A class that represents the the Bermuda country.
 class CountryBmu extends WorldCountry {
-  /// {@template sealed_world.countries_bmu_constructor}}
+  /// {@template sealed_world.country_bmu_constructor}
   /// Creates a instance of [CountryBmu] (Bermuda country).
   ///
   /// ISO 3166-1 Alpha-3 code: `BMU`, ISO 3166-1 Alpha-2 code: `BM`.
@@ -72,8 +76,4 @@ class CountryBmu extends WorldCountry {
   ];
   @override
   List<NaturalLanguage> get languages => const [LangEng()];
-}
-
-extension type const _BmuFactory._(CountryBmu _) implements CountryBmu {
-  const _BmuFactory() : this._(const CountryBmu._());
 }

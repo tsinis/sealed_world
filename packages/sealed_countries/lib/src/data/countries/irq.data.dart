@@ -6,9 +6,13 @@
 
 part of "../../model/country/country.dart";
 
+extension type const _IrqFactory._(CountryIrq _) implements CountryIrq {
+  const _IrqFactory() : this._(const CountryIrq._());
+}
+
 /// A class that represents the the Iraq country.
 class CountryIrq extends WorldCountry {
-  /// {@template sealed_world.countries_irq_constructor}}
+  /// {@template sealed_world.country_irq_constructor}
   /// Creates a instance of [CountryIrq] (Iraq country).
   ///
   /// ISO 3166-1 Alpha-3 code: `IRQ`, ISO 3166-1 Alpha-2 code: `IQ`.
@@ -71,8 +75,4 @@ class CountryIrq extends WorldCountry {
   ];
   @override
   List<NaturalLanguage> get languages => const [LangAra(), LangKur()];
-}
-
-extension type const _IrqFactory._(CountryIrq _) implements CountryIrq {
-  const _IrqFactory() : this._(const CountryIrq._());
 }

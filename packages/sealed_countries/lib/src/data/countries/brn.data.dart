@@ -6,9 +6,13 @@
 
 part of "../../model/country/country.dart";
 
+extension type const _BrnFactory._(CountryBrn _) implements CountryBrn {
+  const _BrnFactory() : this._(const CountryBrn._());
+}
+
 /// A class that represents the the Brunei country.
 class CountryBrn extends WorldCountry {
-  /// {@template sealed_world.countries_brn_constructor}}
+  /// {@template sealed_world.country_brn_constructor}
   /// Creates a instance of [CountryBrn] (Brunei country).
   ///
   /// ISO 3166-1 Alpha-3 code: `BRN`, ISO 3166-1 Alpha-2 code: `BN`.
@@ -77,8 +81,4 @@ class CountryBrn extends WorldCountry {
   ];
   @override
   List<NaturalLanguage> get languages => const [LangMsa()];
-}
-
-extension type const _BrnFactory._(CountryBrn _) implements CountryBrn {
-  const _BrnFactory() : this._(const CountryBrn._());
 }

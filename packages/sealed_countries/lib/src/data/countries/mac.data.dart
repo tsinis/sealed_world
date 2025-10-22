@@ -6,9 +6,13 @@
 
 part of "../../model/country/country.dart";
 
+extension type const _MacFactory._(CountryMac _) implements CountryMac {
+  const _MacFactory() : this._(const CountryMac._());
+}
+
 /// A class that represents the the Macau country.
 class CountryMac extends WorldCountry {
-  /// {@template sealed_world.countries_mac_constructor}}
+  /// {@template sealed_world.country_mac_constructor}
   /// Creates a instance of [CountryMac] (Macau country).
   ///
   /// ISO 3166-1 Alpha-3 code: `MAC`, ISO 3166-1 Alpha-2 code: `MO`.
@@ -72,8 +76,4 @@ class CountryMac extends WorldCountry {
   ];
   @override
   List<NaturalLanguage> get languages => const [LangPor(), LangZho()];
-}
-
-extension type const _MacFactory._(CountryMac _) implements CountryMac {
-  const _MacFactory() : this._(const CountryMac._());
 }

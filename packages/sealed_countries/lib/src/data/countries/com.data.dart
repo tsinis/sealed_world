@@ -6,9 +6,13 @@
 
 part of "../../model/country/country.dart";
 
+extension type const _ComFactory._(CountryCom _) implements CountryCom {
+  const _ComFactory() : this._(const CountryCom._());
+}
+
 /// A class that represents the the Comoros country.
 class CountryCom extends WorldCountry {
-  /// {@template sealed_world.countries_com_constructor}}
+  /// {@template sealed_world.country_com_constructor}
   /// Creates a instance of [CountryCom] (Comoros country).
   ///
   /// ISO 3166-1 Alpha-3 code: `COM`, ISO 3166-1 Alpha-2 code: `KM`.
@@ -79,8 +83,4 @@ class CountryCom extends WorldCountry {
   ];
   @override
   List<NaturalLanguage> get languages => const [LangAra(), LangFra()];
-}
-
-extension type const _ComFactory._(CountryCom _) implements CountryCom {
-  const _ComFactory() : this._(const CountryCom._());
 }

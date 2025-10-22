@@ -6,9 +6,13 @@
 
 part of "../../model/country/country.dart";
 
+extension type const _ThaFactory._(CountryTha _) implements CountryTha {
+  const _ThaFactory() : this._(const CountryTha._());
+}
+
 /// A class that represents the the Thailand country.
 class CountryTha extends WorldCountry {
-  /// {@template sealed_world.countries_tha_constructor}}
+  /// {@template sealed_world.country_tha_constructor}
   /// Creates a instance of [CountryTha] (Thailand country).
   ///
   /// ISO 3166-1 Alpha-3 code: `THA`, ISO 3166-1 Alpha-2 code: `TH`.
@@ -77,8 +81,4 @@ class CountryTha extends WorldCountry {
   ];
   @override
   List<NaturalLanguage> get languages => const [LangTha()];
-}
-
-extension type const _ThaFactory._(CountryTha _) implements CountryTha {
-  const _ThaFactory() : this._(const CountryTha._());
 }

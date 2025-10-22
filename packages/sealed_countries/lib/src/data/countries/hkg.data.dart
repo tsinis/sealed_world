@@ -6,9 +6,13 @@
 
 part of "../../model/country/country.dart";
 
+extension type const _HkgFactory._(CountryHkg _) implements CountryHkg {
+  const _HkgFactory() : this._(const CountryHkg._());
+}
+
 /// A class that represents the the Hong Kong country.
 class CountryHkg extends WorldCountry {
-  /// {@template sealed_world.countries_hkg_constructor}}
+  /// {@template sealed_world.country_hkg_constructor}
   /// Creates a instance of [CountryHkg] (Hong Kong country).
   ///
   /// ISO 3166-1 Alpha-3 code: `HKG`, ISO 3166-1 Alpha-2 code: `HK`.
@@ -71,8 +75,4 @@ class CountryHkg extends WorldCountry {
   ];
   @override
   List<NaturalLanguage> get languages => const [LangEng(), LangZho()];
-}
-
-extension type const _HkgFactory._(CountryHkg _) implements CountryHkg {
-  const _HkgFactory() : this._(const CountryHkg._());
 }

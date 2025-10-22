@@ -6,9 +6,13 @@
 
 part of "../../model/country/country.dart";
 
+extension type const _CubFactory._(CountryCub _) implements CountryCub {
+  const _CubFactory() : this._(const CountryCub._());
+}
+
 /// A class that represents the the Cuba country.
 class CountryCub extends WorldCountry {
-  /// {@template sealed_world.countries_cub_constructor}}
+  /// {@template sealed_world.country_cub_constructor}
   /// Creates a instance of [CountryCub] (Cuba country).
   ///
   /// ISO 3166-1 Alpha-3 code: `CUB`, ISO 3166-1 Alpha-2 code: `CU`.
@@ -69,8 +73,4 @@ class CountryCub extends WorldCountry {
   ];
   @override
   List<NaturalLanguage> get languages => const [LangSpa()];
-}
-
-extension type const _CubFactory._(CountryCub _) implements CountryCub {
-  const _CubFactory() : this._(const CountryCub._());
 }

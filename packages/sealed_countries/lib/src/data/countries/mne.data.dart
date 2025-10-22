@@ -6,9 +6,13 @@
 
 part of "../../model/country/country.dart";
 
+extension type const _MneFactory._(CountryMne _) implements CountryMne {
+  const _MneFactory() : this._(const CountryMne._());
+}
+
 /// A class that represents the the Montenegro country.
 class CountryMne extends WorldCountry {
-  /// {@template sealed_world.countries_mne_constructor}}
+  /// {@template sealed_world.country_mne_constructor}
   /// Creates a instance of [CountryMne] (Montenegro country).
   ///
   /// ISO 3166-1 Alpha-3 code: `MNE`, ISO 3166-1 Alpha-2 code: `ME`.
@@ -75,8 +79,4 @@ class CountryMne extends WorldCountry {
   ];
   @override
   List<NaturalLanguage> get languages => const [LangSrp()];
-}
-
-extension type const _MneFactory._(CountryMne _) implements CountryMne {
-  const _MneFactory() : this._(const CountryMne._());
 }

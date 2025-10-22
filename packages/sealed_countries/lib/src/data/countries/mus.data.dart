@@ -6,9 +6,13 @@
 
 part of "../../model/country/country.dart";
 
+extension type const _MusFactory._(CountryMus _) implements CountryMus {
+  const _MusFactory() : this._(const CountryMus._());
+}
+
 /// A class that represents the the Mauritius country.
 class CountryMus extends WorldCountry {
-  /// {@template sealed_world.countries_mus_constructor}}
+  /// {@template sealed_world.country_mus_constructor}
   /// Creates a instance of [CountryMus] (Mauritius country).
   ///
   /// ISO 3166-1 Alpha-3 code: `MUS`, ISO 3166-1 Alpha-2 code: `MU`.
@@ -77,8 +81,4 @@ class CountryMus extends WorldCountry {
   ];
   @override
   List<NaturalLanguage> get languages => const [LangEng(), LangFra()];
-}
-
-extension type const _MusFactory._(CountryMus _) implements CountryMus {
-  const _MusFactory() : this._(const CountryMus._());
 }

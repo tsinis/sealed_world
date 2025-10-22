@@ -6,9 +6,13 @@
 
 part of "../../model/country/country.dart";
 
+extension type const _EriFactory._(CountryEri _) implements CountryEri {
+  const _EriFactory() : this._(const CountryEri._());
+}
+
 /// A class that represents the the Eritrea country.
 class CountryEri extends WorldCountry {
-  /// {@template sealed_world.countries_eri_constructor}}
+  /// {@template sealed_world.country_eri_constructor}
   /// Creates a instance of [CountryEri] (Eritrea country).
   ///
   /// ISO 3166-1 Alpha-3 code: `ERI`, ISO 3166-1 Alpha-2 code: `ER`.
@@ -85,8 +89,4 @@ class CountryEri extends WorldCountry {
     LangEng(),
     LangTir(),
   ];
-}
-
-extension type const _EriFactory._(CountryEri _) implements CountryEri {
-  const _EriFactory() : this._(const CountryEri._());
 }

@@ -6,9 +6,13 @@
 
 part of "../../model/country/country.dart";
 
+extension type const _TonFactory._(CountryTon _) implements CountryTon {
+  const _TonFactory() : this._(const CountryTon._());
+}
+
 /// A class that represents the the Tonga country.
 class CountryTon extends WorldCountry {
-  /// {@template sealed_world.countries_ton_constructor}}
+  /// {@template sealed_world.country_ton_constructor}
   /// Creates a instance of [CountryTon] (Tonga country).
   ///
   /// ISO 3166-1 Alpha-3 code: `TON`, ISO 3166-1 Alpha-2 code: `TO`.
@@ -71,8 +75,4 @@ class CountryTon extends WorldCountry {
   ];
   @override
   List<NaturalLanguage> get languages => const [LangEng(), LangTon()];
-}
-
-extension type const _TonFactory._(CountryTon _) implements CountryTon {
-  const _TonFactory() : this._(const CountryTon._());
 }

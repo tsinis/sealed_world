@@ -6,9 +6,13 @@
 
 part of "../../model/country/country.dart";
 
+extension type const _TzaFactory._(CountryTza _) implements CountryTza {
+  const _TzaFactory() : this._(const CountryTza._());
+}
+
 /// A class that represents the the Tanzania country.
 class CountryTza extends WorldCountry {
-  /// {@template sealed_world.countries_tza_constructor}}
+  /// {@template sealed_world.country_tza_constructor}
   /// Creates a instance of [CountryTza] (Tanzania country).
   ///
   /// ISO 3166-1 Alpha-3 code: `TZA`, ISO 3166-1 Alpha-2 code: `TZ`.
@@ -88,8 +92,4 @@ class CountryTza extends WorldCountry {
   ];
   @override
   List<NaturalLanguage> get languages => const [LangEng(), LangSwa()];
-}
-
-extension type const _TzaFactory._(CountryTza _) implements CountryTza {
-  const _TzaFactory() : this._(const CountryTza._());
 }

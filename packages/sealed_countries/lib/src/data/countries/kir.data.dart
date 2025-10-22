@@ -6,9 +6,13 @@
 
 part of "../../model/country/country.dart";
 
+extension type const _KirFactory._(CountryKir _) implements CountryKir {
+  const _KirFactory() : this._(const CountryKir._());
+}
+
 /// A class that represents the the Kiribati country.
 class CountryKir extends WorldCountry {
-  /// {@template sealed_world.countries_kir_constructor}}
+  /// {@template sealed_world.country_kir_constructor}
   /// Creates a instance of [CountryKir] (Kiribati country).
   ///
   /// ISO 3166-1 Alpha-3 code: `KIR`, ISO 3166-1 Alpha-2 code: `KI`.
@@ -69,8 +73,4 @@ class CountryKir extends WorldCountry {
   ];
   @override
   List<NaturalLanguage> get languages => const [LangEng()];
-}
-
-extension type const _KirFactory._(CountryKir _) implements CountryKir {
-  const _KirFactory() : this._(const CountryKir._());
 }

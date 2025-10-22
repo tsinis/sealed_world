@@ -6,9 +6,13 @@
 
 part of "../../model/country/country.dart";
 
+extension type const _PyfFactory._(CountryPyf _) implements CountryPyf {
+  const _PyfFactory() : this._(const CountryPyf._());
+}
+
 /// A class that represents the the French Polynesia country.
 class CountryPyf extends WorldCountry {
-  /// {@template sealed_world.countries_pyf_constructor}}
+  /// {@template sealed_world.country_pyf_constructor}
   /// Creates a instance of [CountryPyf] (French Polynesia country).
   ///
   /// ISO 3166-1 Alpha-3 code: `PYF`, ISO 3166-1 Alpha-2 code: `PF`.
@@ -75,8 +79,4 @@ class CountryPyf extends WorldCountry {
   ];
   @override
   List<NaturalLanguage> get languages => const [LangFra()];
-}
-
-extension type const _PyfFactory._(CountryPyf _) implements CountryPyf {
-  const _PyfFactory() : this._(const CountryPyf._());
 }

@@ -6,9 +6,13 @@
 
 part of "../../model/country/country.dart";
 
+extension type const _ChlFactory._(CountryChl _) implements CountryChl {
+  const _ChlFactory() : this._(const CountryChl._());
+}
+
 /// A class that represents the the Chile country.
 class CountryChl extends WorldCountry {
-  /// {@template sealed_world.countries_chl_constructor}}
+  /// {@template sealed_world.country_chl_constructor}
   /// Creates a instance of [CountryChl] (Chile country).
   ///
   /// ISO 3166-1 Alpha-3 code: `CHL`, ISO 3166-1 Alpha-2 code: `CL`.
@@ -73,8 +77,4 @@ class CountryChl extends WorldCountry {
   ];
   @override
   List<NaturalLanguage> get languages => const [LangSpa()];
-}
-
-extension type const _ChlFactory._(CountryChl _) implements CountryChl {
-  const _ChlFactory() : this._(const CountryChl._());
 }

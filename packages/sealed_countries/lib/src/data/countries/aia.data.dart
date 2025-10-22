@@ -6,9 +6,13 @@
 
 part of "../../model/country/country.dart";
 
+extension type const _AiaFactory._(CountryAia _) implements CountryAia {
+  const _AiaFactory() : this._(const CountryAia._());
+}
+
 /// A class that represents the the Anguilla country.
 class CountryAia extends WorldCountry {
-  /// {@template sealed_world.countries_aia_constructor}}
+  /// {@template sealed_world.country_aia_constructor}
   /// Creates a instance of [CountryAia] (Anguilla country).
   ///
   /// ISO 3166-1 Alpha-3 code: `AIA`, ISO 3166-1 Alpha-2 code: `AI`.
@@ -62,8 +66,4 @@ class CountryAia extends WorldCountry {
   ];
   @override
   List<NaturalLanguage> get languages => const [LangEng()];
-}
-
-extension type const _AiaFactory._(CountryAia _) implements CountryAia {
-  const _AiaFactory() : this._(const CountryAia._());
 }

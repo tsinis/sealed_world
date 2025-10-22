@@ -6,9 +6,13 @@
 
 part of "../../model/country/country.dart";
 
+extension type const _ShnFactory._(CountryShn _) implements CountryShn {
+  const _ShnFactory() : this._(const CountryShn._());
+}
+
 /// A class that represents the the Saint Helena, Ascension and Tristan da Cunha country.
 class CountryShn extends WorldCountry {
-  /// {@template sealed_world.countries_shn_constructor}}
+  /// {@template sealed_world.country_shn_constructor}
   /// Creates a instance of [CountryShn] (Saint Helena, Ascension and Tristan da Cunha country).
   ///
   /// ISO 3166-1 Alpha-3 code: `SHN`, ISO 3166-1 Alpha-2 code: `SH`.
@@ -83,8 +87,4 @@ class CountryShn extends WorldCountry {
   ];
   @override
   List<NaturalLanguage> get languages => const [LangEng()];
-}
-
-extension type const _ShnFactory._(CountryShn _) implements CountryShn {
-  const _ShnFactory() : this._(const CountryShn._());
 }

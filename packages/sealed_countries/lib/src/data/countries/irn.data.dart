@@ -6,9 +6,13 @@
 
 part of "../../model/country/country.dart";
 
+extension type const _IrnFactory._(CountryIrn _) implements CountryIrn {
+  const _IrnFactory() : this._(const CountryIrn._());
+}
+
 /// A class that represents the the Iran country.
 class CountryIrn extends WorldCountry {
-  /// {@template sealed_world.countries_irn_constructor}}
+  /// {@template sealed_world.country_irn_constructor}
   /// Creates a instance of [CountryIrn] (Iran country).
   ///
   /// ISO 3166-1 Alpha-3 code: `IRN`, ISO 3166-1 Alpha-2 code: `IR`.
@@ -77,8 +81,4 @@ class CountryIrn extends WorldCountry {
   ];
   @override
   List<NaturalLanguage> get languages => const [LangFas()];
-}
-
-extension type const _IrnFactory._(CountryIrn _) implements CountryIrn {
-  const _IrnFactory() : this._(const CountryIrn._());
 }

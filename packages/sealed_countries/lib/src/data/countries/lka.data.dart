@@ -6,9 +6,13 @@
 
 part of "../../model/country/country.dart";
 
+extension type const _LkaFactory._(CountryLka _) implements CountryLka {
+  const _LkaFactory() : this._(const CountryLka._());
+}
+
 /// A class that represents the the Sri Lanka country.
 class CountryLka extends WorldCountry {
-  /// {@template sealed_world.countries_lka_constructor}}
+  /// {@template sealed_world.country_lka_constructor}
   /// Creates a instance of [CountryLka] (Sri Lanka country).
   ///
   /// ISO 3166-1 Alpha-3 code: `LKA`, ISO 3166-1 Alpha-2 code: `LK`.
@@ -78,8 +82,4 @@ class CountryLka extends WorldCountry {
   ];
   @override
   List<NaturalLanguage> get languages => const [LangSin(), LangTam()];
-}
-
-extension type const _LkaFactory._(CountryLka _) implements CountryLka {
-  const _LkaFactory() : this._(const CountryLka._());
 }

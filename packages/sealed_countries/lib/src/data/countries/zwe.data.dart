@@ -6,9 +6,13 @@
 
 part of "../../model/country/country.dart";
 
+extension type const _ZweFactory._(CountryZwe _) implements CountryZwe {
+  const _ZweFactory() : this._(const CountryZwe._());
+}
+
 /// A class that represents the the Zimbabwe country.
 class CountryZwe extends WorldCountry {
-  /// {@template sealed_world.countries_zwe_constructor}}
+  /// {@template sealed_world.country_zwe_constructor}
   /// Creates a instance of [CountryZwe] (Zimbabwe country).
   ///
   /// ISO 3166-1 Alpha-3 code: `ZWE`, ISO 3166-1 Alpha-2 code: `ZW`.
@@ -116,8 +120,4 @@ class CountryZwe extends WorldCountry {
     LangVen(),
     LangXho(),
   ];
-}
-
-extension type const _ZweFactory._(CountryZwe _) implements CountryZwe {
-  const _ZweFactory() : this._(const CountryZwe._());
 }

@@ -6,9 +6,13 @@
 
 part of "../../model/country/country.dart";
 
+extension type const _VenFactory._(CountryVen _) implements CountryVen {
+  const _VenFactory() : this._(const CountryVen._());
+}
+
 /// A class that represents the the Venezuela country.
 class CountryVen extends WorldCountry {
-  /// {@template sealed_world.countries_ven_constructor}}
+  /// {@template sealed_world.country_ven_constructor}
   /// Creates a instance of [CountryVen] (Venezuela country).
   ///
   /// ISO 3166-1 Alpha-3 code: `VEN`, ISO 3166-1 Alpha-2 code: `VE`.
@@ -78,8 +82,4 @@ class CountryVen extends WorldCountry {
   ];
   @override
   List<NaturalLanguage> get languages => const [LangSpa()];
-}
-
-extension type const _VenFactory._(CountryVen _) implements CountryVen {
-  const _VenFactory() : this._(const CountryVen._());
 }

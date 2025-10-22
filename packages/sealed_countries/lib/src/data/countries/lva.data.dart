@@ -6,9 +6,13 @@
 
 part of "../../model/country/country.dart";
 
+extension type const _LvaFactory._(CountryLva _) implements CountryLva {
+  const _LvaFactory() : this._(const CountryLva._());
+}
+
 /// A class that represents the the Latvia country.
 class CountryLva extends WorldCountry {
-  /// {@template sealed_world.countries_lva_constructor}}
+  /// {@template sealed_world.country_lva_constructor}
   /// Creates a instance of [CountryLva] (Latvia country).
   ///
   /// ISO 3166-1 Alpha-3 code: `LVA`, ISO 3166-1 Alpha-2 code: `LV`.
@@ -71,8 +75,4 @@ class CountryLva extends WorldCountry {
   ];
   @override
   List<NaturalLanguage> get languages => const [LangLav()];
-}
-
-extension type const _LvaFactory._(CountryLva _) implements CountryLva {
-  const _LvaFactory() : this._(const CountryLva._());
 }

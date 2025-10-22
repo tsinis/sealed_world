@@ -6,9 +6,13 @@
 
 part of "../../model/country/country.dart";
 
+extension type const _MsrFactory._(CountryMsr _) implements CountryMsr {
+  const _MsrFactory() : this._(const CountryMsr._());
+}
+
 /// A class that represents the the Montserrat country.
 class CountryMsr extends WorldCountry {
-  /// {@template sealed_world.countries_msr_constructor}}
+  /// {@template sealed_world.country_msr_constructor}
   /// Creates a instance of [CountryMsr] (Montserrat country).
   ///
   /// ISO 3166-1 Alpha-3 code: `MSR`, ISO 3166-1 Alpha-2 code: `MS`.
@@ -76,8 +80,4 @@ class CountryMsr extends WorldCountry {
   ];
   @override
   List<NaturalLanguage> get languages => const [LangEng()];
-}
-
-extension type const _MsrFactory._(CountryMsr _) implements CountryMsr {
-  const _MsrFactory() : this._(const CountryMsr._());
 }

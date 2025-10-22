@@ -6,9 +6,13 @@
 
 part of "../../model/country/country.dart";
 
+extension type const _SyrFactory._(CountrySyr _) implements CountrySyr {
+  const _SyrFactory() : this._(const CountrySyr._());
+}
+
 /// A class that represents the the Syria country.
 class CountrySyr extends WorldCountry {
-  /// {@template sealed_world.countries_syr_constructor}}
+  /// {@template sealed_world.country_syr_constructor}
   /// Creates a instance of [CountrySyr] (Syria country).
   ///
   /// ISO 3166-1 Alpha-3 code: `SYR`, ISO 3166-1 Alpha-2 code: `SY`.
@@ -73,8 +77,4 @@ class CountrySyr extends WorldCountry {
   ];
   @override
   List<NaturalLanguage> get languages => const [LangAra()];
-}
-
-extension type const _SyrFactory._(CountrySyr _) implements CountrySyr {
-  const _SyrFactory() : this._(const CountrySyr._());
 }

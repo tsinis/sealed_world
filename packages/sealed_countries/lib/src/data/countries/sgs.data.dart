@@ -6,9 +6,13 @@
 
 part of "../../model/country/country.dart";
 
+extension type const _SgsFactory._(CountrySgs _) implements CountrySgs {
+  const _SgsFactory() : this._(const CountrySgs._());
+}
+
 /// A class that represents the the South Georgia country.
 class CountrySgs extends WorldCountry {
-  /// {@template sealed_world.countries_sgs_constructor}}
+  /// {@template sealed_world.country_sgs_constructor}
   /// Creates a instance of [CountrySgs] (South Georgia country).
   ///
   /// ISO 3166-1 Alpha-3 code: `SGS`, ISO 3166-1 Alpha-2 code: `GS`.
@@ -73,8 +77,4 @@ class CountrySgs extends WorldCountry {
   ];
   @override
   List<NaturalLanguage> get languages => const [LangEng()];
-}
-
-extension type const _SgsFactory._(CountrySgs _) implements CountrySgs {
-  const _SgsFactory() : this._(const CountrySgs._());
 }

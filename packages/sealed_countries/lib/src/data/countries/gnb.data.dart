@@ -6,9 +6,13 @@
 
 part of "../../model/country/country.dart";
 
+extension type const _GnbFactory._(CountryGnb _) implements CountryGnb {
+  const _GnbFactory() : this._(const CountryGnb._());
+}
+
 /// A class that represents the the Guinea-Bissau country.
 class CountryGnb extends WorldCountry {
-  /// {@template sealed_world.countries_gnb_constructor}}
+  /// {@template sealed_world.country_gnb_constructor}
   /// Creates a instance of [CountryGnb] (Guinea-Bissau country).
   ///
   /// ISO 3166-1 Alpha-3 code: `GNB`, ISO 3166-1 Alpha-2 code: `GW`.
@@ -86,8 +90,4 @@ class CountryGnb extends WorldCountry {
   ];
   @override
   List<NaturalLanguage> get languages => const [LangPor()];
-}
-
-extension type const _GnbFactory._(CountryGnb _) implements CountryGnb {
-  const _GnbFactory() : this._(const CountryGnb._());
 }

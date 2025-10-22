@@ -6,9 +6,13 @@
 
 part of "../../model/country/country.dart";
 
+extension type const _SjmFactory._(CountrySjm _) implements CountrySjm {
+  const _SjmFactory() : this._(const CountrySjm._());
+}
+
 /// A class that represents the the Svalbard and Jan Mayen country.
 class CountrySjm extends WorldCountry {
-  /// {@template sealed_world.countries_sjm_constructor}}
+  /// {@template sealed_world.country_sjm_constructor}
   /// Creates a instance of [CountrySjm] (Svalbard and Jan Mayen country).
   ///
   /// ISO 3166-1 Alpha-3 code: `SJM`, ISO 3166-1 Alpha-2 code: `SJ`.
@@ -65,8 +69,4 @@ class CountrySjm extends WorldCountry {
   ];
   @override
   List<NaturalLanguage> get languages => const [LangNor()];
-}
-
-extension type const _SjmFactory._(CountrySjm _) implements CountrySjm {
-  const _SjmFactory() : this._(const CountrySjm._());
 }

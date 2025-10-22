@@ -6,9 +6,13 @@
 
 part of "../../model/country/country.dart";
 
+extension type const _BgrFactory._(CountryBgr _) implements CountryBgr {
+  const _BgrFactory() : this._(const CountryBgr._());
+}
+
 /// A class that represents the the Bulgaria country.
 class CountryBgr extends WorldCountry {
-  /// {@template sealed_world.countries_bgr_constructor}}
+  /// {@template sealed_world.country_bgr_constructor}
   /// Creates a instance of [CountryBgr] (Bulgaria country).
   ///
   /// ISO 3166-1 Alpha-3 code: `BGR`, ISO 3166-1 Alpha-2 code: `BG`.
@@ -78,8 +82,4 @@ class CountryBgr extends WorldCountry {
   ];
   @override
   List<NaturalLanguage> get languages => const [LangBul()];
-}
-
-extension type const _BgrFactory._(CountryBgr _) implements CountryBgr {
-  const _BgrFactory() : this._(const CountryBgr._());
 }

@@ -6,9 +6,13 @@
 
 part of "../../model/country/country.dart";
 
+extension type const _SvkFactory._(CountrySvk _) implements CountrySvk {
+  const _SvkFactory() : this._(const CountrySvk._());
+}
+
 /// A class that represents the the Slovakia country.
 class CountrySvk extends WorldCountry {
-  /// {@template sealed_world.countries_svk_constructor}}
+  /// {@template sealed_world.country_svk_constructor}
   /// Creates a instance of [CountrySvk] (Slovakia country).
   ///
   /// ISO 3166-1 Alpha-3 code: `SVK`, ISO 3166-1 Alpha-2 code: `SK`.
@@ -71,8 +75,4 @@ class CountrySvk extends WorldCountry {
   ];
   @override
   List<NaturalLanguage> get languages => const [LangSlk()];
-}
-
-extension type const _SvkFactory._(CountrySvk _) implements CountrySvk {
-  const _SvkFactory() : this._(const CountrySvk._());
 }

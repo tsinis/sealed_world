@@ -6,9 +6,13 @@
 
 part of "../../model/country/country.dart";
 
+extension type const _CpvFactory._(CountryCpv _) implements CountryCpv {
+  const _CpvFactory() : this._(const CountryCpv._());
+}
+
 /// A class that represents the the Cape Verde country.
 class CountryCpv extends WorldCountry {
-  /// {@template sealed_world.countries_cpv_constructor}}
+  /// {@template sealed_world.country_cpv_constructor}
   /// Creates a instance of [CountryCpv] (Cape Verde country).
   ///
   /// ISO 3166-1 Alpha-3 code: `CPV`, ISO 3166-1 Alpha-2 code: `CV`.
@@ -76,8 +80,4 @@ class CountryCpv extends WorldCountry {
   ];
   @override
   List<NaturalLanguage> get languages => const [LangPor()];
-}
-
-extension type const _CpvFactory._(CountryCpv _) implements CountryCpv {
-  const _CpvFactory() : this._(const CountryCpv._());
 }

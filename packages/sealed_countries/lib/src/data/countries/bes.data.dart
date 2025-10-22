@@ -6,9 +6,13 @@
 
 part of "../../model/country/country.dart";
 
+extension type const _BesFactory._(CountryBes _) implements CountryBes {
+  const _BesFactory() : this._(const CountryBes._());
+}
+
 /// A class that represents the the Caribbean Netherlands country.
 class CountryBes extends WorldCountry {
-  /// {@template sealed_world.countries_bes_constructor}}
+  /// {@template sealed_world.country_bes_constructor}
   /// Creates a instance of [CountryBes] (Caribbean Netherlands country).
   ///
   /// ISO 3166-1 Alpha-3 code: `BES`, ISO 3166-1 Alpha-2 code: `BQ`.
@@ -65,8 +69,4 @@ class CountryBes extends WorldCountry {
   ];
   @override
   List<NaturalLanguage> get languages => const [LangEng(), LangNld()];
-}
-
-extension type const _BesFactory._(CountryBes _) implements CountryBes {
-  const _BesFactory() : this._(const CountryBes._());
 }

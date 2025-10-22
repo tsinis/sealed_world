@@ -6,9 +6,13 @@
 
 part of "../../model/country/country.dart";
 
+extension type const _IotFactory._(CountryIot _) implements CountryIot {
+  const _IotFactory() : this._(const CountryIot._());
+}
+
 /// A class that represents the the British Indian Ocean Territory country.
 class CountryIot extends WorldCountry {
-  /// {@template sealed_world.countries_iot_constructor}}
+  /// {@template sealed_world.country_iot_constructor}
   /// Creates a instance of [CountryIot] (British Indian Ocean Territory country).
   ///
   /// ISO 3166-1 Alpha-3 code: `IOT`, ISO 3166-1 Alpha-2 code: `IO`.
@@ -67,8 +71,4 @@ class CountryIot extends WorldCountry {
   ];
   @override
   List<NaturalLanguage> get languages => const [LangEng()];
-}
-
-extension type const _IotFactory._(CountryIot _) implements CountryIot {
-  const _IotFactory() : this._(const CountryIot._());
 }

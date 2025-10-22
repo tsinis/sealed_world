@@ -6,9 +6,13 @@
 
 part of "../../model/country/country.dart";
 
+extension type const _MhlFactory._(CountryMhl _) implements CountryMhl {
+  const _MhlFactory() : this._(const CountryMhl._());
+}
+
 /// A class that represents the the Marshall Islands country.
 class CountryMhl extends WorldCountry {
-  /// {@template sealed_world.countries_mhl_constructor}}
+  /// {@template sealed_world.country_mhl_constructor}
   /// Creates a instance of [CountryMhl] (Marshall Islands country).
   ///
   /// ISO 3166-1 Alpha-3 code: `MHL`, ISO 3166-1 Alpha-2 code: `MH`.
@@ -73,8 +77,4 @@ class CountryMhl extends WorldCountry {
   ];
   @override
   List<NaturalLanguage> get languages => const [LangEng(), LangMah()];
-}
-
-extension type const _MhlFactory._(CountryMhl _) implements CountryMhl {
-  const _MhlFactory() : this._(const CountryMhl._());
 }

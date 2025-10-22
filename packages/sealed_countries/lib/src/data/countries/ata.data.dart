@@ -6,9 +6,13 @@
 
 part of "../../model/country/country.dart";
 
+extension type const _AtaFactory._(CountryAta _) implements CountryAta {
+  const _AtaFactory() : this._(const CountryAta._());
+}
+
 /// A class that represents the the Antarctica country.
 class CountryAta extends WorldCountry {
-  /// {@template sealed_world.countries_ata_constructor}}
+  /// {@template sealed_world.country_ata_constructor}
   /// Creates a instance of [CountryAta] (Antarctica country).
   ///
   /// ISO 3166-1 Alpha-3 code: `ATA`, ISO 3166-1 Alpha-2 code: `AQ`.
@@ -70,8 +74,4 @@ class CountryAta extends WorldCountry {
   ];
   @override
   List<NaturalLanguage> get languages => const [LangEng()];
-}
-
-extension type const _AtaFactory._(CountryAta _) implements CountryAta {
-  const _AtaFactory() : this._(const CountryAta._());
 }

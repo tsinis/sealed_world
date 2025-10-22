@@ -6,9 +6,13 @@
 
 part of "../../model/country/country.dart";
 
+extension type const _SauFactory._(CountrySau _) implements CountrySau {
+  const _SauFactory() : this._(const CountrySau._());
+}
+
 /// A class that represents the the Saudi Arabia country.
 class CountrySau extends WorldCountry {
-  /// {@template sealed_world.countries_sau_constructor}}
+  /// {@template sealed_world.country_sau_constructor}
   /// Creates a instance of [CountrySau] (Saudi Arabia country).
   ///
   /// ISO 3166-1 Alpha-3 code: `SAU`, ISO 3166-1 Alpha-2 code: `SA`.
@@ -79,8 +83,4 @@ class CountrySau extends WorldCountry {
   ];
   @override
   List<NaturalLanguage> get languages => const [LangAra()];
-}
-
-extension type const _SauFactory._(CountrySau _) implements CountrySau {
-  const _SauFactory() : this._(const CountrySau._());
 }

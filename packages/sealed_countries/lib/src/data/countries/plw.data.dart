@@ -6,9 +6,13 @@
 
 part of "../../model/country/country.dart";
 
+extension type const _PlwFactory._(CountryPlw _) implements CountryPlw {
+  const _PlwFactory() : this._(const CountryPlw._());
+}
+
 /// A class that represents the the Palau country.
 class CountryPlw extends WorldCountry {
-  /// {@template sealed_world.countries_plw_constructor}}
+  /// {@template sealed_world.country_plw_constructor}
   /// Creates a instance of [CountryPlw] (Palau country).
   ///
   /// ISO 3166-1 Alpha-3 code: `PLW`, ISO 3166-1 Alpha-2 code: `PW`.
@@ -68,8 +72,4 @@ class CountryPlw extends WorldCountry {
   ];
   @override
   List<NaturalLanguage> get languages => const [LangEng()];
-}
-
-extension type const _PlwFactory._(CountryPlw _) implements CountryPlw {
-  const _PlwFactory() : this._(const CountryPlw._());
 }

@@ -6,9 +6,13 @@
 
 part of "../../model/country/country.dart";
 
+extension type const _AusFactory._(CountryAus _) implements CountryAus {
+  const _AusFactory() : this._(const CountryAus._());
+}
+
 /// A class that represents the the Australia country.
 class CountryAus extends WorldCountry {
-  /// {@template sealed_world.countries_aus_constructor}}
+  /// {@template sealed_world.country_aus_constructor}
   /// Creates a instance of [CountryAus] (Australia country).
   ///
   /// ISO 3166-1 Alpha-3 code: `AUS`, ISO 3166-1 Alpha-2 code: `AU`.
@@ -79,8 +83,4 @@ class CountryAus extends WorldCountry {
   ];
   @override
   List<NaturalLanguage> get languages => const [LangEng()];
-}
-
-extension type const _AusFactory._(CountryAus _) implements CountryAus {
-  const _AusFactory() : this._(const CountryAus._());
 }

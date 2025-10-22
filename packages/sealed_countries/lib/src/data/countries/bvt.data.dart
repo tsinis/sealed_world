@@ -6,9 +6,13 @@
 
 part of "../../model/country/country.dart";
 
+extension type const _BvtFactory._(CountryBvt _) implements CountryBvt {
+  const _BvtFactory() : this._(const CountryBvt._());
+}
+
 /// A class that represents the the Bouvet Island country.
 class CountryBvt extends WorldCountry {
-  /// {@template sealed_world.countries_bvt_constructor}}
+  /// {@template sealed_world.country_bvt_constructor}
   /// Creates a instance of [CountryBvt] (Bouvet Island country).
   ///
   /// ISO 3166-1 Alpha-3 code: `BVT`, ISO 3166-1 Alpha-2 code: `BV`.
@@ -61,8 +65,4 @@ class CountryBvt extends WorldCountry {
   ];
   @override
   List<NaturalLanguage> get languages => const [LangNor()];
-}
-
-extension type const _BvtFactory._(CountryBvt _) implements CountryBvt {
-  const _BvtFactory() : this._(const CountryBvt._());
 }

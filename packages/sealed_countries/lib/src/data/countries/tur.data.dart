@@ -6,9 +6,13 @@
 
 part of "../../model/country/country.dart";
 
+extension type const _TurFactory._(CountryTur _) implements CountryTur {
+  const _TurFactory() : this._(const CountryTur._());
+}
+
 /// A class that represents the the Turkey country.
 class CountryTur extends WorldCountry {
-  /// {@template sealed_world.countries_tur_constructor}}
+  /// {@template sealed_world.country_tur_constructor}
   /// Creates a instance of [CountryTur] (Turkey country).
   ///
   /// ISO 3166-1 Alpha-3 code: `TUR`, ISO 3166-1 Alpha-2 code: `TR`.
@@ -82,8 +86,4 @@ class CountryTur extends WorldCountry {
   ];
   @override
   List<NaturalLanguage> get languages => const [LangTur()];
-}
-
-extension type const _TurFactory._(CountryTur _) implements CountryTur {
-  const _TurFactory() : this._(const CountryTur._());
 }

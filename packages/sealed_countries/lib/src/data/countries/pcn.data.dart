@@ -6,9 +6,13 @@
 
 part of "../../model/country/country.dart";
 
+extension type const _PcnFactory._(CountryPcn _) implements CountryPcn {
+  const _PcnFactory() : this._(const CountryPcn._());
+}
+
 /// A class that represents the the Pitcairn Islands country.
 class CountryPcn extends WorldCountry {
-  /// {@template sealed_world.countries_pcn_constructor}}
+  /// {@template sealed_world.country_pcn_constructor}
   /// Creates a instance of [CountryPcn] (Pitcairn Islands country).
   ///
   /// ISO 3166-1 Alpha-3 code: `PCN`, ISO 3166-1 Alpha-2 code: `PN`.
@@ -74,8 +78,4 @@ class CountryPcn extends WorldCountry {
   ];
   @override
   List<NaturalLanguage> get languages => const [LangEng()];
-}
-
-extension type const _PcnFactory._(CountryPcn _) implements CountryPcn {
-  const _PcnFactory() : this._(const CountryPcn._());
 }

@@ -6,9 +6,13 @@
 
 part of "../../model/country/country.dart";
 
+extension type const _HndFactory._(CountryHnd _) implements CountryHnd {
+  const _HndFactory() : this._(const CountryHnd._());
+}
+
 /// A class that represents the the Honduras country.
 class CountryHnd extends WorldCountry {
-  /// {@template sealed_world.countries_hnd_constructor}}
+  /// {@template sealed_world.country_hnd_constructor}
   /// Creates a instance of [CountryHnd] (Honduras country).
   ///
   /// ISO 3166-1 Alpha-3 code: `HND`, ISO 3166-1 Alpha-2 code: `HN`.
@@ -77,8 +81,4 @@ class CountryHnd extends WorldCountry {
   ];
   @override
   List<NaturalLanguage> get languages => const [LangSpa()];
-}
-
-extension type const _HndFactory._(CountryHnd _) implements CountryHnd {
-  const _HndFactory() : this._(const CountryHnd._());
 }

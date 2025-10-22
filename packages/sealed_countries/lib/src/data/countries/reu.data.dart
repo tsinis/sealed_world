@@ -6,9 +6,13 @@
 
 part of "../../model/country/country.dart";
 
+extension type const _ReuFactory._(CountryReu _) implements CountryReu {
+  const _ReuFactory() : this._(const CountryReu._());
+}
+
 /// A class that represents the the Réunion country.
 class CountryReu extends WorldCountry {
-  /// {@template sealed_world.countries_reu_constructor}}
+  /// {@template sealed_world.country_reu_constructor}
   /// Creates a instance of [CountryReu] (Réunion country).
   ///
   /// ISO 3166-1 Alpha-3 code: `REU`, ISO 3166-1 Alpha-2 code: `RE`.
@@ -69,8 +73,4 @@ class CountryReu extends WorldCountry {
   ];
   @override
   List<NaturalLanguage> get languages => const [LangFra()];
-}
-
-extension type const _ReuFactory._(CountryReu _) implements CountryReu {
-  const _ReuFactory() : this._(const CountryReu._());
 }

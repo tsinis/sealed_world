@@ -6,9 +6,13 @@
 
 part of "../../model/country/country.dart";
 
+extension type const _UgaFactory._(CountryUga _) implements CountryUga {
+  const _UgaFactory() : this._(const CountryUga._());
+}
+
 /// A class that represents the the Uganda country.
 class CountryUga extends WorldCountry {
-  /// {@template sealed_world.countries_uga_constructor}}
+  /// {@template sealed_world.country_uga_constructor}
   /// Creates a instance of [CountryUga] (Uganda country).
   ///
   /// ISO 3166-1 Alpha-3 code: `UGA`, ISO 3166-1 Alpha-2 code: `UG`.
@@ -75,8 +79,4 @@ class CountryUga extends WorldCountry {
   ];
   @override
   List<NaturalLanguage> get languages => const [LangEng(), LangSwa()];
-}
-
-extension type const _UgaFactory._(CountryUga _) implements CountryUga {
-  const _UgaFactory() : this._(const CountryUga._());
 }

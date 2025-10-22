@@ -6,9 +6,13 @@
 
 part of "../../model/country/country.dart";
 
+extension type const _AlaFactory._(CountryAla _) implements CountryAla {
+  const _AlaFactory() : this._(const CountryAla._());
+}
+
 /// A class that represents the the Åland Islands country.
 class CountryAla extends WorldCountry {
-  /// {@template sealed_world.countries_ala_constructor}}
+  /// {@template sealed_world.country_ala_constructor}
   /// Creates a instance of [CountryAla] (Åland Islands country).
   ///
   /// ISO 3166-1 Alpha-3 code: `ALA`, ISO 3166-1 Alpha-2 code: `AX`.
@@ -67,8 +71,4 @@ class CountryAla extends WorldCountry {
   ];
   @override
   List<NaturalLanguage> get languages => const [LangSwe()];
-}
-
-extension type const _AlaFactory._(CountryAla _) implements CountryAla {
-  const _AlaFactory() : this._(const CountryAla._());
 }

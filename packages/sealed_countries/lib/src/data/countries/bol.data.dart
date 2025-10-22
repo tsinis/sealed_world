@@ -6,9 +6,13 @@
 
 part of "../../model/country/country.dart";
 
+extension type const _BolFactory._(CountryBol _) implements CountryBol {
+  const _BolFactory() : this._(const CountryBol._());
+}
+
 /// A class that represents the the Bolivia country.
 class CountryBol extends WorldCountry {
-  /// {@template sealed_world.countries_bol_constructor}}
+  /// {@template sealed_world.country_bol_constructor}
   /// Creates a instance of [CountryBol] (Bolivia country).
   ///
   /// ISO 3166-1 Alpha-3 code: `BOL`, ISO 3166-1 Alpha-2 code: `BO`.
@@ -100,8 +104,4 @@ class CountryBol extends WorldCountry {
     LangQue(),
     LangSpa(),
   ];
-}
-
-extension type const _BolFactory._(CountryBol _) implements CountryBol {
-  const _BolFactory() : this._(const CountryBol._());
 }

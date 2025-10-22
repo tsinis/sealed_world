@@ -6,9 +6,13 @@
 
 part of "../../model/country/country.dart";
 
+extension type const _ArgFactory._(CountryArg _) implements CountryArg {
+  const _ArgFactory() : this._(const CountryArg._());
+}
+
 /// A class that represents the the Argentina country.
 class CountryArg extends WorldCountry {
-  /// {@template sealed_world.countries_arg_constructor}}
+  /// {@template sealed_world.country_arg_constructor}
   /// Creates a instance of [CountryArg] (Argentina country).
   ///
   /// ISO 3166-1 Alpha-3 code: `ARG`, ISO 3166-1 Alpha-2 code: `AR`.
@@ -78,8 +82,4 @@ class CountryArg extends WorldCountry {
   ];
   @override
   List<NaturalLanguage> get languages => const [LangGrn(), LangSpa()];
-}
-
-extension type const _ArgFactory._(CountryArg _) implements CountryArg {
-  const _ArgFactory() : this._(const CountryArg._());
 }

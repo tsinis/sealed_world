@@ -6,9 +6,13 @@
 
 part of "../../model/country/country.dart";
 
+extension type const _ChnFactory._(CountryChn _) implements CountryChn {
+  const _ChnFactory() : this._(const CountryChn._());
+}
+
 /// A class that represents the the China country.
 class CountryChn extends WorldCountry {
-  /// {@template sealed_world.countries_chn_constructor}}
+  /// {@template sealed_world.country_chn_constructor}
   /// Creates a instance of [CountryChn] (China country).
   ///
   /// ISO 3166-1 Alpha-3 code: `CHN`, ISO 3166-1 Alpha-2 code: `CN`.
@@ -92,8 +96,4 @@ class CountryChn extends WorldCountry {
   ];
   @override
   List<NaturalLanguage> get languages => const [LangZho()];
-}
-
-extension type const _ChnFactory._(CountryChn _) implements CountryChn {
-  const _ChnFactory() : this._(const CountryChn._());
 }

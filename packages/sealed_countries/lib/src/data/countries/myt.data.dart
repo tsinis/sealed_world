@@ -6,9 +6,13 @@
 
 part of "../../model/country/country.dart";
 
+extension type const _MytFactory._(CountryMyt _) implements CountryMyt {
+  const _MytFactory() : this._(const CountryMyt._());
+}
+
 /// A class that represents the the Mayotte country.
 class CountryMyt extends WorldCountry {
-  /// {@template sealed_world.countries_myt_constructor}}
+  /// {@template sealed_world.country_myt_constructor}
   /// Creates a instance of [CountryMyt] (Mayotte country).
   ///
   /// ISO 3166-1 Alpha-3 code: `MYT`, ISO 3166-1 Alpha-2 code: `YT`.
@@ -73,8 +77,4 @@ class CountryMyt extends WorldCountry {
   ];
   @override
   List<NaturalLanguage> get languages => const [LangFra()];
-}
-
-extension type const _MytFactory._(CountryMyt _) implements CountryMyt {
-  const _MytFactory() : this._(const CountryMyt._());
 }

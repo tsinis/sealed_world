@@ -8,7 +8,7 @@ part of "../../model/country/country.dart";
 
 /// A class that represents the the Kosovo country.
 class CountryUnk extends WorldCountry {
-  /// {@template sealed_world.countries_unk_constructor}}
+  /// {@template sealed_world.country_unk_constructor}
   /// Creates a instance of [CountryUnk] (Kosovo country).
   ///
   /// ISO 3166-1 Alpha-3 code: `UNK`, ISO 3166-1 Alpha-2 code: `XK`.

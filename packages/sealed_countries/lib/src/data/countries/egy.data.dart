@@ -6,9 +6,13 @@
 
 part of "../../model/country/country.dart";
 
+extension type const _EgyFactory._(CountryEgy _) implements CountryEgy {
+  const _EgyFactory() : this._(const CountryEgy._());
+}
+
 /// A class that represents the the Egypt country.
 class CountryEgy extends WorldCountry {
-  /// {@template sealed_world.countries_egy_constructor}}
+  /// {@template sealed_world.country_egy_constructor}
   /// Creates a instance of [CountryEgy] (Egypt country).
   ///
   /// ISO 3166-1 Alpha-3 code: `EGY`, ISO 3166-1 Alpha-2 code: `EG`.
@@ -71,8 +75,4 @@ class CountryEgy extends WorldCountry {
   ];
   @override
   List<NaturalLanguage> get languages => const [LangAra()];
-}
-
-extension type const _EgyFactory._(CountryEgy _) implements CountryEgy {
-  const _EgyFactory() : this._(const CountryEgy._());
 }

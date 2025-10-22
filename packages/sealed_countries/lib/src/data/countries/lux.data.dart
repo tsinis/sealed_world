@@ -6,9 +6,13 @@
 
 part of "../../model/country/country.dart";
 
+extension type const _LuxFactory._(CountryLux _) implements CountryLux {
+  const _LuxFactory() : this._(const CountryLux._());
+}
+
 /// A class that represents the the Luxembourg country.
 class CountryLux extends WorldCountry {
-  /// {@template sealed_world.countries_lux_constructor}}
+  /// {@template sealed_world.country_lux_constructor}
   /// Creates a instance of [CountryLux] (Luxembourg country).
   ///
   /// ISO 3166-1 Alpha-3 code: `LUX`, ISO 3166-1 Alpha-2 code: `LU`.
@@ -98,8 +102,4 @@ class CountryLux extends WorldCountry {
     LangFra(),
     LangLtz(),
   ];
-}
-
-extension type const _LuxFactory._(CountryLux _) implements CountryLux {
-  const _LuxFactory() : this._(const CountryLux._());
 }

@@ -6,9 +6,13 @@
 
 part of "../../model/country/country.dart";
 
+extension type const _PrtFactory._(CountryPrt _) implements CountryPrt {
+  const _PrtFactory() : this._(const CountryPrt._());
+}
+
 /// A class that represents the the Portugal country.
 class CountryPrt extends WorldCountry {
-  /// {@template sealed_world.countries_prt_constructor}}
+  /// {@template sealed_world.country_prt_constructor}
   /// Creates a instance of [CountryPrt] (Portugal country).
   ///
   /// ISO 3166-1 Alpha-3 code: `PRT`, ISO 3166-1 Alpha-2 code: `PT`.
@@ -78,8 +82,4 @@ class CountryPrt extends WorldCountry {
   ];
   @override
   List<NaturalLanguage> get languages => const [LangPor()];
-}
-
-extension type const _PrtFactory._(CountryPrt _) implements CountryPrt {
-  const _PrtFactory() : this._(const CountryPrt._());
 }

@@ -6,9 +6,13 @@
 
 part of "../../model/country/country.dart";
 
+extension type const _NldFactory._(CountryNld _) implements CountryNld {
+  const _NldFactory() : this._(const CountryNld._());
+}
+
 /// A class that represents the the Netherlands country.
 class CountryNld extends WorldCountry {
-  /// {@template sealed_world.countries_nld_constructor}}
+  /// {@template sealed_world.country_nld_constructor}
   /// Creates a instance of [CountryNld] (Netherlands country).
   ///
   /// ISO 3166-1 Alpha-3 code: `NLD`, ISO 3166-1 Alpha-2 code: `NL`.
@@ -73,8 +77,4 @@ class CountryNld extends WorldCountry {
   ];
   @override
   List<NaturalLanguage> get languages => const [LangNld()];
-}
-
-extension type const _NldFactory._(CountryNld _) implements CountryNld {
-  const _NldFactory() : this._(const CountryNld._());
 }

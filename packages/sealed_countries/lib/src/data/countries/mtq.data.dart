@@ -6,9 +6,13 @@
 
 part of "../../model/country/country.dart";
 
+extension type const _MtqFactory._(CountryMtq _) implements CountryMtq {
+  const _MtqFactory() : this._(const CountryMtq._());
+}
+
 /// A class that represents the the Martinique country.
 class CountryMtq extends WorldCountry {
-  /// {@template sealed_world.countries_mtq_constructor}}
+  /// {@template sealed_world.country_mtq_constructor}
   /// Creates a instance of [CountryMtq] (Martinique country).
   ///
   /// ISO 3166-1 Alpha-3 code: `MTQ`, ISO 3166-1 Alpha-2 code: `MQ`.
@@ -70,8 +74,4 @@ class CountryMtq extends WorldCountry {
   ];
   @override
   List<NaturalLanguage> get languages => const [LangFra()];
-}
-
-extension type const _MtqFactory._(CountryMtq _) implements CountryMtq {
-  const _MtqFactory() : this._(const CountryMtq._());
 }

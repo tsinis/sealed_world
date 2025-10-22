@@ -6,9 +6,13 @@
 
 part of "../../model/country/country.dart";
 
+extension type const _GbrFactory._(CountryGbr _) implements CountryGbr {
+  const _GbrFactory() : this._(const CountryGbr._());
+}
+
 /// A class that represents the the United Kingdom country.
 class CountryGbr extends WorldCountry {
-  /// {@template sealed_world.countries_gbr_constructor}}
+  /// {@template sealed_world.country_gbr_constructor}
   /// Creates a instance of [CountryGbr] (United Kingdom country).
   ///
   /// ISO 3166-1 Alpha-3 code: `GBR`, ISO 3166-1 Alpha-2 code: `GB`.
@@ -81,8 +85,4 @@ class CountryGbr extends WorldCountry {
   ];
   @override
   List<NaturalLanguage> get languages => const [LangEng()];
-}
-
-extension type const _GbrFactory._(CountryGbr _) implements CountryGbr {
-  const _GbrFactory() : this._(const CountryGbr._());
 }

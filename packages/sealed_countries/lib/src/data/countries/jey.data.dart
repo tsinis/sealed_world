@@ -6,9 +6,13 @@
 
 part of "../../model/country/country.dart";
 
+extension type const _JeyFactory._(CountryJey _) implements CountryJey {
+  const _JeyFactory() : this._(const CountryJey._());
+}
+
 /// A class that represents the the Jersey country.
 class CountryJey extends WorldCountry {
-  /// {@template sealed_world.countries_jey_constructor}}
+  /// {@template sealed_world.country_jey_constructor}
   /// Creates a instance of [CountryJey] (Jersey country).
   ///
   /// ISO 3166-1 Alpha-3 code: `JEY`, ISO 3166-1 Alpha-2 code: `JE`.
@@ -84,8 +88,4 @@ class CountryJey extends WorldCountry {
   ];
   @override
   List<NaturalLanguage> get languages => const [LangEng(), LangFra()];
-}
-
-extension type const _JeyFactory._(CountryJey _) implements CountryJey {
-  const _JeyFactory() : this._(const CountryJey._());
 }

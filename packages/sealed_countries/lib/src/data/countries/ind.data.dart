@@ -6,9 +6,13 @@
 
 part of "../../model/country/country.dart";
 
+extension type const _IndFactory._(CountryInd _) implements CountryInd {
+  const _IndFactory() : this._(const CountryInd._());
+}
+
 /// A class that represents the the India country.
 class CountryInd extends WorldCountry {
-  /// {@template sealed_world.countries_ind_constructor}}
+  /// {@template sealed_world.country_ind_constructor}
   /// Creates a instance of [CountryInd] (India country).
   ///
   /// ISO 3166-1 Alpha-3 code: `IND`, ISO 3166-1 Alpha-2 code: `IN`.
@@ -89,8 +93,4 @@ class CountryInd extends WorldCountry {
     LangHin(),
     LangTam(),
   ];
-}
-
-extension type const _IndFactory._(CountryInd _) implements CountryInd {
-  const _IndFactory() : this._(const CountryInd._());
 }

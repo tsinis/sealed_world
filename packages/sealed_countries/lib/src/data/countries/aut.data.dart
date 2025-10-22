@@ -6,9 +6,13 @@
 
 part of "../../model/country/country.dart";
 
+extension type const _AutFactory._(CountryAut _) implements CountryAut {
+  const _AutFactory() : this._(const CountryAut._());
+}
+
 /// A class that represents the the Austria country.
 class CountryAut extends WorldCountry {
-  /// {@template sealed_world.countries_aut_constructor}}
+  /// {@template sealed_world.country_aut_constructor}
   /// Creates a instance of [CountryAut] (Austria country).
   ///
   /// ISO 3166-1 Alpha-3 code: `AUT`, ISO 3166-1 Alpha-2 code: `AT`.
@@ -83,8 +87,4 @@ class CountryAut extends WorldCountry {
   ];
   @override
   List<NaturalLanguage> get languages => const [LangDeu()];
-}
-
-extension type const _AutFactory._(CountryAut _) implements CountryAut {
-  const _AutFactory() : this._(const CountryAut._());
 }

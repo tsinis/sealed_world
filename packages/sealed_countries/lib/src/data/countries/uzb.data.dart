@@ -6,9 +6,13 @@
 
 part of "../../model/country/country.dart";
 
+extension type const _UzbFactory._(CountryUzb _) implements CountryUzb {
+  const _UzbFactory() : this._(const CountryUzb._());
+}
+
 /// A class that represents the the Uzbekistan country.
 class CountryUzb extends WorldCountry {
-  /// {@template sealed_world.countries_uzb_constructor}}
+  /// {@template sealed_world.country_uzb_constructor}
   /// Creates a instance of [CountryUzb] (Uzbekistan country).
   ///
   /// ISO 3166-1 Alpha-3 code: `UZB`, ISO 3166-1 Alpha-2 code: `UZ`.
@@ -82,8 +86,4 @@ class CountryUzb extends WorldCountry {
   ];
   @override
   List<NaturalLanguage> get languages => const [LangRus(), LangUzb()];
-}
-
-extension type const _UzbFactory._(CountryUzb _) implements CountryUzb {
-  const _UzbFactory() : this._(const CountryUzb._());
 }

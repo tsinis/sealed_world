@@ -6,9 +6,13 @@
 
 part of "../../model/country/country.dart";
 
+extension type const _GeoFactory._(CountryGeo _) implements CountryGeo {
+  const _GeoFactory() : this._(const CountryGeo._());
+}
+
 /// A class that represents the the Georgia country.
 class CountryGeo extends WorldCountry {
-  /// {@template sealed_world.countries_geo_constructor}}
+  /// {@template sealed_world.country_geo_constructor}
   /// Creates a instance of [CountryGeo] (Georgia country).
   ///
   /// ISO 3166-1 Alpha-3 code: `GEO`, ISO 3166-1 Alpha-2 code: `GE`.
@@ -71,8 +75,4 @@ class CountryGeo extends WorldCountry {
   ];
   @override
   List<NaturalLanguage> get languages => const [LangKat()];
-}
-
-extension type const _GeoFactory._(CountryGeo _) implements CountryGeo {
-  const _GeoFactory() : this._(const CountryGeo._());
 }

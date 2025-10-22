@@ -6,9 +6,13 @@
 
 part of "../../model/country/country.dart";
 
+extension type const _KwtFactory._(CountryKwt _) implements CountryKwt {
+  const _KwtFactory() : this._(const CountryKwt._());
+}
+
 /// A class that represents the the Kuwait country.
 class CountryKwt extends WorldCountry {
-  /// {@template sealed_world.countries_kwt_constructor}}
+  /// {@template sealed_world.country_kwt_constructor}
   /// Creates a instance of [CountryKwt] (Kuwait country).
   ///
   /// ISO 3166-1 Alpha-3 code: `KWT`, ISO 3166-1 Alpha-2 code: `KW`.
@@ -66,8 +70,4 @@ class CountryKwt extends WorldCountry {
   ];
   @override
   List<NaturalLanguage> get languages => const [LangAra()];
-}
-
-extension type const _KwtFactory._(CountryKwt _) implements CountryKwt {
-  const _KwtFactory() : this._(const CountryKwt._());
 }

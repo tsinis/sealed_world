@@ -6,9 +6,13 @@
 
 part of "../../model/country/country.dart";
 
+extension type const _NfkFactory._(CountryNfk _) implements CountryNfk {
+  const _NfkFactory() : this._(const CountryNfk._());
+}
+
 /// A class that represents the the Norfolk Island country.
 class CountryNfk extends WorldCountry {
-  /// {@template sealed_world.countries_nfk_constructor}}
+  /// {@template sealed_world.country_nfk_constructor}
   /// Creates a instance of [CountryNfk] (Norfolk Island country).
   ///
   /// ISO 3166-1 Alpha-3 code: `NFK`, ISO 3166-1 Alpha-2 code: `NF`.
@@ -74,8 +78,4 @@ class CountryNfk extends WorldCountry {
   ];
   @override
   List<NaturalLanguage> get languages => const [LangEng()];
-}
-
-extension type const _NfkFactory._(CountryNfk _) implements CountryNfk {
-  const _NfkFactory() : this._(const CountryNfk._());
 }

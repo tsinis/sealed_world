@@ -6,9 +6,13 @@
 
 part of "../../model/country/country.dart";
 
+extension type const _SurFactory._(CountrySur _) implements CountrySur {
+  const _SurFactory() : this._(const CountrySur._());
+}
+
 /// A class that represents the the Suriname country.
 class CountrySur extends WorldCountry {
-  /// {@template sealed_world.countries_sur_constructor}}
+  /// {@template sealed_world.country_sur_constructor}
   /// Creates a instance of [CountrySur] (Suriname country).
   ///
   /// ISO 3166-1 Alpha-3 code: `SUR`, ISO 3166-1 Alpha-2 code: `SR`.
@@ -75,8 +79,4 @@ class CountrySur extends WorldCountry {
   ];
   @override
   List<NaturalLanguage> get languages => const [LangNld()];
-}
-
-extension type const _SurFactory._(CountrySur _) implements CountrySur {
-  const _SurFactory() : this._(const CountrySur._());
 }

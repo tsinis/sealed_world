@@ -6,9 +6,13 @@
 
 part of "../../model/country/country.dart";
 
+extension type const _VnmFactory._(CountryVnm _) implements CountryVnm {
+  const _VnmFactory() : this._(const CountryVnm._());
+}
+
 /// A class that represents the the Vietnam country.
 class CountryVnm extends WorldCountry {
-  /// {@template sealed_world.countries_vnm_constructor}}
+  /// {@template sealed_world.country_vnm_constructor}
   /// Creates a instance of [CountryVnm] (Vietnam country).
   ///
   /// ISO 3166-1 Alpha-3 code: `VNM`, ISO 3166-1 Alpha-2 code: `VN`.
@@ -78,8 +82,4 @@ class CountryVnm extends WorldCountry {
   ];
   @override
   List<NaturalLanguage> get languages => const [LangVie()];
-}
-
-extension type const _VnmFactory._(CountryVnm _) implements CountryVnm {
-  const _VnmFactory() : this._(const CountryVnm._());
 }

@@ -6,9 +6,13 @@
 
 part of "../../model/country/country.dart";
 
+extension type const _SycFactory._(CountrySyc _) implements CountrySyc {
+  const _SycFactory() : this._(const CountrySyc._());
+}
+
 /// A class that represents the the Seychelles country.
 class CountrySyc extends WorldCountry {
-  /// {@template sealed_world.countries_syc_constructor}}
+  /// {@template sealed_world.country_syc_constructor}
   /// Creates a instance of [CountrySyc] (Seychelles country).
   ///
   /// ISO 3166-1 Alpha-3 code: `SYC`, ISO 3166-1 Alpha-2 code: `SC`.
@@ -78,8 +82,4 @@ class CountrySyc extends WorldCountry {
   ];
   @override
   List<NaturalLanguage> get languages => const [LangEng(), LangFra()];
-}
-
-extension type const _SycFactory._(CountrySyc _) implements CountrySyc {
-  const _SycFactory() : this._(const CountrySyc._());
 }

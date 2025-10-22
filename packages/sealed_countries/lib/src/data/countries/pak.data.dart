@@ -6,9 +6,13 @@
 
 part of "../../model/country/country.dart";
 
+extension type const _PakFactory._(CountryPak _) implements CountryPak {
+  const _PakFactory() : this._(const CountryPak._());
+}
+
 /// A class that represents the the Pakistan country.
 class CountryPak extends WorldCountry {
-  /// {@template sealed_world.countries_pak_constructor}}
+  /// {@template sealed_world.country_pak_constructor}
   /// Creates a instance of [CountryPak] (Pakistan country).
   ///
   /// ISO 3166-1 Alpha-3 code: `PAK`, ISO 3166-1 Alpha-2 code: `PK`.
@@ -80,8 +84,4 @@ class CountryPak extends WorldCountry {
   ];
   @override
   List<NaturalLanguage> get languages => const [LangEng(), LangUrd()];
-}
-
-extension type const _PakFactory._(CountryPak _) implements CountryPak {
-  const _PakFactory() : this._(const CountryPak._());
 }

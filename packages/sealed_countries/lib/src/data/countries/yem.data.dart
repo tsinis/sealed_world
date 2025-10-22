@@ -6,9 +6,13 @@
 
 part of "../../model/country/country.dart";
 
+extension type const _YemFactory._(CountryYem _) implements CountryYem {
+  const _YemFactory() : this._(const CountryYem._());
+}
+
 /// A class that represents the the Yemen country.
 class CountryYem extends WorldCountry {
-  /// {@template sealed_world.countries_yem_constructor}}
+  /// {@template sealed_world.country_yem_constructor}
   /// Creates a instance of [CountryYem] (Yemen country).
   ///
   /// ISO 3166-1 Alpha-3 code: `YEM`, ISO 3166-1 Alpha-2 code: `YE`.
@@ -74,8 +78,4 @@ class CountryYem extends WorldCountry {
   ];
   @override
   List<NaturalLanguage> get languages => const [LangAra()];
-}
-
-extension type const _YemFactory._(CountryYem _) implements CountryYem {
-  const _YemFactory() : this._(const CountryYem._());
 }

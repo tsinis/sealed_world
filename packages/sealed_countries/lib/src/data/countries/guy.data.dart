@@ -6,9 +6,13 @@
 
 part of "../../model/country/country.dart";
 
+extension type const _GuyFactory._(CountryGuy _) implements CountryGuy {
+  const _GuyFactory() : this._(const CountryGuy._());
+}
+
 /// A class that represents the the Guyana country.
 class CountryGuy extends WorldCountry {
-  /// {@template sealed_world.countries_guy_constructor}}
+  /// {@template sealed_world.country_guy_constructor}
   /// Creates a instance of [CountryGuy] (Guyana country).
   ///
   /// ISO 3166-1 Alpha-3 code: `GUY`, ISO 3166-1 Alpha-2 code: `GY`.
@@ -69,8 +73,4 @@ class CountryGuy extends WorldCountry {
   ];
   @override
   List<NaturalLanguage> get languages => const [LangEng()];
-}
-
-extension type const _GuyFactory._(CountryGuy _) implements CountryGuy {
-  const _GuyFactory() : this._(const CountryGuy._());
 }

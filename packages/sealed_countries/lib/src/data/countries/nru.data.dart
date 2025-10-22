@@ -6,9 +6,13 @@
 
 part of "../../model/country/country.dart";
 
+extension type const _NruFactory._(CountryNru _) implements CountryNru {
+  const _NruFactory() : this._(const CountryNru._());
+}
+
 /// A class that represents the the Nauru country.
 class CountryNru extends WorldCountry {
-  /// {@template sealed_world.countries_nru_constructor}}
+  /// {@template sealed_world.country_nru_constructor}
   /// Creates a instance of [CountryNru] (Nauru country).
   ///
   /// ISO 3166-1 Alpha-3 code: `NRU`, ISO 3166-1 Alpha-2 code: `NR`.
@@ -76,8 +80,4 @@ class CountryNru extends WorldCountry {
   ];
   @override
   List<NaturalLanguage> get languages => const [LangEng(), LangNau()];
-}
-
-extension type const _NruFactory._(CountryNru _) implements CountryNru {
-  const _NruFactory() : this._(const CountryNru._());
 }

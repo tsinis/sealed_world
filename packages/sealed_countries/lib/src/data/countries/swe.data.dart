@@ -6,9 +6,13 @@
 
 part of "../../model/country/country.dart";
 
+extension type const _SweFactory._(CountrySwe _) implements CountrySwe {
+  const _SweFactory() : this._(const CountrySwe._());
+}
+
 /// A class that represents the the Sweden country.
 class CountrySwe extends WorldCountry {
-  /// {@template sealed_world.countries_swe_constructor}}
+  /// {@template sealed_world.country_swe_constructor}
   /// Creates a instance of [CountrySwe] (Sweden country).
   ///
   /// ISO 3166-1 Alpha-3 code: `SWE`, ISO 3166-1 Alpha-2 code: `SE`.
@@ -73,8 +77,4 @@ class CountrySwe extends WorldCountry {
   ];
   @override
   List<NaturalLanguage> get languages => const [LangSwe()];
-}
-
-extension type const _SweFactory._(CountrySwe _) implements CountrySwe {
-  const _SweFactory() : this._(const CountrySwe._());
 }

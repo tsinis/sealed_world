@@ -6,9 +6,13 @@
 
 part of "../../model/country/country.dart";
 
+extension type const _BlmFactory._(CountryBlm _) implements CountryBlm {
+  const _BlmFactory() : this._(const CountryBlm._());
+}
+
 /// A class that represents the the Saint Barthélemy country.
 class CountryBlm extends WorldCountry {
-  /// {@template sealed_world.countries_blm_constructor}}
+  /// {@template sealed_world.country_blm_constructor}
   /// Creates a instance of [CountryBlm] (Saint Barthélemy country).
   ///
   /// ISO 3166-1 Alpha-3 code: `BLM`, ISO 3166-1 Alpha-2 code: `BL`.
@@ -80,8 +84,4 @@ class CountryBlm extends WorldCountry {
   ];
   @override
   List<NaturalLanguage> get languages => const [LangFra()];
-}
-
-extension type const _BlmFactory._(CountryBlm _) implements CountryBlm {
-  const _BlmFactory() : this._(const CountryBlm._());
 }

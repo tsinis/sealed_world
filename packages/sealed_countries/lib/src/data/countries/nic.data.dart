@@ -6,9 +6,13 @@
 
 part of "../../model/country/country.dart";
 
+extension type const _NicFactory._(CountryNic _) implements CountryNic {
+  const _NicFactory() : this._(const CountryNic._());
+}
+
 /// A class that represents the the Nicaragua country.
 class CountryNic extends WorldCountry {
-  /// {@template sealed_world.countries_nic_constructor}}
+  /// {@template sealed_world.country_nic_constructor}
   /// Creates a instance of [CountryNic] (Nicaragua country).
   ///
   /// ISO 3166-1 Alpha-3 code: `NIC`, ISO 3166-1 Alpha-2 code: `NI`.
@@ -81,8 +85,4 @@ class CountryNic extends WorldCountry {
   ];
   @override
   List<NaturalLanguage> get languages => const [LangSpa()];
-}
-
-extension type const _NicFactory._(CountryNic _) implements CountryNic {
-  const _NicFactory() : this._(const CountryNic._());
 }

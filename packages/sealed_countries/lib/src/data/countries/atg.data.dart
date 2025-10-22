@@ -6,9 +6,13 @@
 
 part of "../../model/country/country.dart";
 
+extension type const _AtgFactory._(CountryAtg _) implements CountryAtg {
+  const _AtgFactory() : this._(const CountryAtg._());
+}
+
 /// A class that represents the the Antigua and Barbuda country.
 class CountryAtg extends WorldCountry {
-  /// {@template sealed_world.countries_atg_constructor}}
+  /// {@template sealed_world.country_atg_constructor}
   /// Creates a instance of [CountryAtg] (Antigua and Barbuda country).
   ///
   /// ISO 3166-1 Alpha-3 code: `ATG`, ISO 3166-1 Alpha-2 code: `AG`.
@@ -75,8 +79,4 @@ class CountryAtg extends WorldCountry {
   ];
   @override
   List<NaturalLanguage> get languages => const [LangEng()];
-}
-
-extension type const _AtgFactory._(CountryAtg _) implements CountryAtg {
-  const _AtgFactory() : this._(const CountryAtg._());
 }

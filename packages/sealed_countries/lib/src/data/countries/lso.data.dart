@@ -6,9 +6,13 @@
 
 part of "../../model/country/country.dart";
 
+extension type const _LsoFactory._(CountryLso _) implements CountryLso {
+  const _LsoFactory() : this._(const CountryLso._());
+}
+
 /// A class that represents the the Lesotho country.
 class CountryLso extends WorldCountry {
-  /// {@template sealed_world.countries_lso_constructor}}
+  /// {@template sealed_world.country_lso_constructor}
   /// Creates a instance of [CountryLso] (Lesotho country).
   ///
   /// ISO 3166-1 Alpha-3 code: `LSO`, ISO 3166-1 Alpha-2 code: `LS`.
@@ -79,8 +83,4 @@ class CountryLso extends WorldCountry {
   ];
   @override
   List<NaturalLanguage> get languages => const [LangEng(), LangSot()];
-}
-
-extension type const _LsoFactory._(CountryLso _) implements CountryLso {
-  const _LsoFactory() : this._(const CountryLso._());
 }

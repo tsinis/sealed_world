@@ -6,9 +6,13 @@
 
 part of "../../model/country/country.dart";
 
+extension type const _UsaFactory._(CountryUsa _) implements CountryUsa {
+  const _UsaFactory() : this._(const CountryUsa._());
+}
+
 /// A class that represents the the United States country.
 class CountryUsa extends WorldCountry {
-  /// {@template sealed_world.countries_usa_constructor}}
+  /// {@template sealed_world.country_usa_constructor}
   /// Creates a instance of [CountryUsa] (United States country).
   ///
   /// ISO 3166-1 Alpha-3 code: `USA`, ISO 3166-1 Alpha-2 code: `US`.
@@ -407,8 +411,4 @@ class CountryUsa extends WorldCountry {
   ];
   @override
   List<NaturalLanguage> get languages => const [LangEng()];
-}
-
-extension type const _UsaFactory._(CountryUsa _) implements CountryUsa {
-  const _UsaFactory() : this._(const CountryUsa._());
 }

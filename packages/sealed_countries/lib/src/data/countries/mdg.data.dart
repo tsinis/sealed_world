@@ -6,9 +6,13 @@
 
 part of "../../model/country/country.dart";
 
+extension type const _MdgFactory._(CountryMdg _) implements CountryMdg {
+  const _MdgFactory() : this._(const CountryMdg._());
+}
+
 /// A class that represents the the Madagascar country.
 class CountryMdg extends WorldCountry {
-  /// {@template sealed_world.countries_mdg_constructor}}
+  /// {@template sealed_world.country_mdg_constructor}
   /// Creates a instance of [CountryMdg] (Madagascar country).
   ///
   /// ISO 3166-1 Alpha-3 code: `MDG`, ISO 3166-1 Alpha-2 code: `MG`.
@@ -82,8 +86,4 @@ class CountryMdg extends WorldCountry {
   ];
   @override
   List<NaturalLanguage> get languages => const [LangFra(), LangMlg()];
-}
-
-extension type const _MdgFactory._(CountryMdg _) implements CountryMdg {
-  const _MdgFactory() : this._(const CountryMdg._());
 }

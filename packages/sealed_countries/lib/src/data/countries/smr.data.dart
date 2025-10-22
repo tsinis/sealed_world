@@ -6,9 +6,13 @@
 
 part of "../../model/country/country.dart";
 
+extension type const _SmrFactory._(CountrySmr _) implements CountrySmr {
+  const _SmrFactory() : this._(const CountrySmr._());
+}
+
 /// A class that represents the the San Marino country.
 class CountrySmr extends WorldCountry {
-  /// {@template sealed_world.countries_smr_constructor}}
+  /// {@template sealed_world.country_smr_constructor}
   /// Creates a instance of [CountrySmr] (San Marino country).
   ///
   /// ISO 3166-1 Alpha-3 code: `SMR`, ISO 3166-1 Alpha-2 code: `SM`.
@@ -79,8 +83,4 @@ class CountrySmr extends WorldCountry {
   ];
   @override
   List<NaturalLanguage> get languages => const [LangIta()];
-}
-
-extension type const _SmrFactory._(CountrySmr _) implements CountrySmr {
-  const _SmrFactory() : this._(const CountrySmr._());
 }

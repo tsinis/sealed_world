@@ -6,9 +6,13 @@
 
 part of "../../model/country/country.dart";
 
+extension type const _EspFactory._(CountryEsp _) implements CountryEsp {
+  const _EspFactory() : this._(const CountryEsp._());
+}
+
 /// A class that represents the the Spain country.
 class CountryEsp extends WorldCountry {
-  /// {@template sealed_world.countries_esp_constructor}}
+  /// {@template sealed_world.country_esp_constructor}
   /// Creates a instance of [CountryEsp] (Spain country).
   ///
   /// ISO 3166-1 Alpha-3 code: `ESP`, ISO 3166-1 Alpha-2 code: `ES`.
@@ -70,8 +74,4 @@ class CountryEsp extends WorldCountry {
   ];
   @override
   List<NaturalLanguage> get languages => const [LangSpa()];
-}
-
-extension type const _EspFactory._(CountryEsp _) implements CountryEsp {
-  const _EspFactory() : this._(const CountryEsp._());
 }

@@ -6,9 +6,13 @@
 
 part of "../../model/country/country.dart";
 
+extension type const _ItaFactory._(CountryIta _) implements CountryIta {
+  const _ItaFactory() : this._(const CountryIta._());
+}
+
 /// A class that represents the the Italy country.
 class CountryIta extends WorldCountry {
-  /// {@template sealed_world.countries_ita_constructor}}
+  /// {@template sealed_world.country_ita_constructor}
   /// Creates a instance of [CountryIta] (Italy country).
   ///
   /// ISO 3166-1 Alpha-3 code: `ITA`, ISO 3166-1 Alpha-2 code: `IT`.
@@ -68,8 +72,4 @@ class CountryIta extends WorldCountry {
   ];
   @override
   List<NaturalLanguage> get languages => const [LangIta()];
-}
-
-extension type const _ItaFactory._(CountryIta _) implements CountryIta {
-  const _ItaFactory() : this._(const CountryIta._());
 }

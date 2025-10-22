@@ -6,9 +6,13 @@
 
 part of "../../model/country/country.dart";
 
+extension type const _MkdFactory._(CountryMkd _) implements CountryMkd {
+  const _MkdFactory() : this._(const CountryMkd._());
+}
+
 /// A class that represents the the North Macedonia country.
 class CountryMkd extends WorldCountry {
-  /// {@template sealed_world.countries_mkd_constructor}}
+  /// {@template sealed_world.country_mkd_constructor}
   /// Creates a instance of [CountryMkd] (North Macedonia country).
   ///
   /// ISO 3166-1 Alpha-3 code: `MKD`, ISO 3166-1 Alpha-2 code: `MK`.
@@ -59,8 +63,10 @@ class CountryMkd extends WorldCountry {
   @override
   List<FiatCurrency> get currencies => const [FiatMkd()];
   @override
-  CapitalInfo get capitalInfo =>
-      const CapitalInfo(capital: Capital("Skopje"), latLng: LatLng(42, 21.43));
+  CapitalInfo get capitalInfo => const CapitalInfo(
+    capital: Capital("Skopje"),
+    latLng: LatLng(42, 21.43),
+  );
   @override
   List<RegionalBloc> get regionalBlocs => const [BlocCEFTA()];
   @override
@@ -78,8 +84,4 @@ class CountryMkd extends WorldCountry {
   ];
   @override
   List<NaturalLanguage> get languages => const [LangMkd(), LangSqi()];
-}
-
-extension type const _MkdFactory._(CountryMkd _) implements CountryMkd {
-  const _MkdFactory() : this._(const CountryMkd._());
 }

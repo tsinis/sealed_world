@@ -6,9 +6,13 @@
 
 part of "../../model/country/country.dart";
 
+extension type const _PolFactory._(CountryPol _) implements CountryPol {
+  const _PolFactory() : this._(const CountryPol._());
+}
+
 /// A class that represents the the Poland country.
 class CountryPol extends WorldCountry {
-  /// {@template sealed_world.countries_pol_constructor}}
+  /// {@template sealed_world.country_pol_constructor}
   /// Creates a instance of [CountryPol] (Poland country).
   ///
   /// ISO 3166-1 Alpha-3 code: `POL`, ISO 3166-1 Alpha-2 code: `PL`.
@@ -53,8 +57,10 @@ class CountryPol extends WorldCountry {
   @override
   List<FiatCurrency> get currencies => const [FiatPln()];
   @override
-  CapitalInfo get capitalInfo =>
-      const CapitalInfo(capital: Capital("Warsaw"), latLng: LatLng(52.25, 21));
+  CapitalInfo get capitalInfo => const CapitalInfo(
+    capital: Capital("Warsaw"),
+    latLng: LatLng(52.25, 21),
+  );
   @override
   List<RegionalBloc> get regionalBlocs => const [BlocEU()];
   @override
@@ -72,8 +78,4 @@ class CountryPol extends WorldCountry {
   ];
   @override
   List<NaturalLanguage> get languages => const [LangPol()];
-}
-
-extension type const _PolFactory._(CountryPol _) implements CountryPol {
-  const _PolFactory() : this._(const CountryPol._());
 }

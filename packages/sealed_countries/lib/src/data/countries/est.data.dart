@@ -6,9 +6,13 @@
 
 part of "../../model/country/country.dart";
 
+extension type const _EstFactory._(CountryEst _) implements CountryEst {
+  const _EstFactory() : this._(const CountryEst._());
+}
+
 /// A class that represents the the Estonia country.
 class CountryEst extends WorldCountry {
-  /// {@template sealed_world.countries_est_constructor}}
+  /// {@template sealed_world.country_est_constructor}
   /// Creates a instance of [CountryEst] (Estonia country).
   ///
   /// ISO 3166-1 Alpha-3 code: `EST`, ISO 3166-1 Alpha-2 code: `EE`.
@@ -75,8 +79,4 @@ class CountryEst extends WorldCountry {
   ];
   @override
   List<NaturalLanguage> get languages => const [LangEst()];
-}
-
-extension type const _EstFactory._(CountryEst _) implements CountryEst {
-  const _EstFactory() : this._(const CountryEst._());
 }

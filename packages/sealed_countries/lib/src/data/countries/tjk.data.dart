@@ -6,9 +6,13 @@
 
 part of "../../model/country/country.dart";
 
+extension type const _TjkFactory._(CountryTjk _) implements CountryTjk {
+  const _TjkFactory() : this._(const CountryTjk._());
+}
+
 /// A class that represents the the Tajikistan country.
 class CountryTjk extends WorldCountry {
-  /// {@template sealed_world.countries_tjk_constructor}}
+  /// {@template sealed_world.country_tjk_constructor}
   /// Creates a instance of [CountryTjk] (Tajikistan country).
   ///
   /// ISO 3166-1 Alpha-3 code: `TJK`, ISO 3166-1 Alpha-2 code: `TJ`.
@@ -83,8 +87,4 @@ class CountryTjk extends WorldCountry {
   ];
   @override
   List<NaturalLanguage> get languages => const [LangRus(), LangTgk()];
-}
-
-extension type const _TjkFactory._(CountryTjk _) implements CountryTjk {
-  const _TjkFactory() : this._(const CountryTjk._());
 }

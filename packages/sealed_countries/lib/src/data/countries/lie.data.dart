@@ -6,9 +6,13 @@
 
 part of "../../model/country/country.dart";
 
+extension type const _LieFactory._(CountryLie _) implements CountryLie {
+  const _LieFactory() : this._(const CountryLie._());
+}
+
 /// A class that represents the the Liechtenstein country.
 class CountryLie extends WorldCountry {
-  /// {@template sealed_world.countries_lie_constructor}}
+  /// {@template sealed_world.country_lie_constructor}
   /// Creates a instance of [CountryLie] (Liechtenstein country).
   ///
   /// ISO 3166-1 Alpha-3 code: `LIE`, ISO 3166-1 Alpha-2 code: `LI`.
@@ -83,8 +87,4 @@ class CountryLie extends WorldCountry {
   ];
   @override
   List<NaturalLanguage> get languages => const [LangDeu()];
-}
-
-extension type const _LieFactory._(CountryLie _) implements CountryLie {
-  const _LieFactory() : this._(const CountryLie._());
 }

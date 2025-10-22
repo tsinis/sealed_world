@@ -6,9 +6,13 @@
 
 part of "../../model/country/country.dart";
 
+extension type const _TcaFactory._(CountryTca _) implements CountryTca {
+  const _TcaFactory() : this._(const CountryTca._());
+}
+
 /// A class that represents the the Turks and Caicos Islands country.
 class CountryTca extends WorldCountry {
-  /// {@template sealed_world.countries_tca_constructor}}
+  /// {@template sealed_world.country_tca_constructor}
   /// Creates a instance of [CountryTca] (Turks and Caicos Islands country).
   ///
   /// ISO 3166-1 Alpha-3 code: `TCA`, ISO 3166-1 Alpha-2 code: `TC`.
@@ -74,8 +78,4 @@ class CountryTca extends WorldCountry {
   ];
   @override
   List<NaturalLanguage> get languages => const [LangEng()];
-}
-
-extension type const _TcaFactory._(CountryTca _) implements CountryTca {
-  const _TcaFactory() : this._(const CountryTca._());
 }

@@ -6,9 +6,13 @@
 
 part of "../../model/country/country.dart";
 
+extension type const _GrcFactory._(CountryGrc _) implements CountryGrc {
+  const _GrcFactory() : this._(const CountryGrc._());
+}
+
 /// A class that represents the the Greece country.
 class CountryGrc extends WorldCountry {
-  /// {@template sealed_world.countries_grc_constructor}}
+  /// {@template sealed_world.country_grc_constructor}
   /// Creates a instance of [CountryGrc] (Greece country).
   ///
   /// ISO 3166-1 Alpha-3 code: `GRC`, ISO 3166-1 Alpha-2 code: `GR`.
@@ -75,8 +79,4 @@ class CountryGrc extends WorldCountry {
   ];
   @override
   List<NaturalLanguage> get languages => const [LangEll()];
-}
-
-extension type const _GrcFactory._(CountryGrc _) implements CountryGrc {
-  const _GrcFactory() : this._(const CountryGrc._());
 }

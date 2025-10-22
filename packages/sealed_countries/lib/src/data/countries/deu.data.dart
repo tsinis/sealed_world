@@ -6,9 +6,13 @@
 
 part of "../../model/country/country.dart";
 
+extension type const _DeuFactory._(CountryDeu _) implements CountryDeu {
+  const _DeuFactory() : this._(const CountryDeu._());
+}
+
 /// A class that represents the the Germany country.
 class CountryDeu extends WorldCountry {
-  /// {@template sealed_world.countries_deu_constructor}}
+  /// {@template sealed_world.country_deu_constructor}
   /// Creates a instance of [CountryDeu] (Germany country).
   ///
   /// ISO 3166-1 Alpha-3 code: `DEU`, ISO 3166-1 Alpha-2 code: `DE`.
@@ -84,8 +88,4 @@ class CountryDeu extends WorldCountry {
   ];
   @override
   List<NaturalLanguage> get languages => const [LangDeu()];
-}
-
-extension type const _DeuFactory._(CountryDeu _) implements CountryDeu {
-  const _DeuFactory() : this._(const CountryDeu._());
 }

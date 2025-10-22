@@ -6,9 +6,13 @@
 
 part of "../../model/country/country.dart";
 
+extension type const _PryFactory._(CountryPry _) implements CountryPry {
+  const _PryFactory() : this._(const CountryPry._());
+}
+
 /// A class that represents the the Paraguay country.
 class CountryPry extends WorldCountry {
-  /// {@template sealed_world.countries_pry_constructor}}
+  /// {@template sealed_world.country_pry_constructor}
   /// Creates a instance of [CountryPry] (Paraguay country).
   ///
   /// ISO 3166-1 Alpha-3 code: `PRY`, ISO 3166-1 Alpha-2 code: `PY`.
@@ -84,8 +88,4 @@ class CountryPry extends WorldCountry {
   ];
   @override
   List<NaturalLanguage> get languages => const [LangGrn(), LangSpa()];
-}
-
-extension type const _PryFactory._(CountryPry _) implements CountryPry {
-  const _PryFactory() : this._(const CountryPry._());
 }

@@ -6,9 +6,13 @@
 
 part of "../../model/country/country.dart";
 
+extension type const _BlzFactory._(CountryBlz _) implements CountryBlz {
+  const _BlzFactory() : this._(const CountryBlz._());
+}
+
 /// A class that represents the the Belize country.
 class CountryBlz extends WorldCountry {
-  /// {@template sealed_world.countries_blz_constructor}}
+  /// {@template sealed_world.country_blz_constructor}
   /// Creates a instance of [CountryBlz] (Belize country).
   ///
   /// ISO 3166-1 Alpha-3 code: `BLZ`, ISO 3166-1 Alpha-2 code: `BZ`.
@@ -66,8 +70,4 @@ class CountryBlz extends WorldCountry {
   ];
   @override
   List<NaturalLanguage> get languages => const [LangEng(), LangSpa()];
-}
-
-extension type const _BlzFactory._(CountryBlz _) implements CountryBlz {
-  const _BlzFactory() : this._(const CountryBlz._());
 }

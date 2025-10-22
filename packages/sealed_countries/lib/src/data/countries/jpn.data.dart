@@ -6,9 +6,13 @@
 
 part of "../../model/country/country.dart";
 
+extension type const _JpnFactory._(CountryJpn _) implements CountryJpn {
+  const _JpnFactory() : this._(const CountryJpn._());
+}
+
 /// A class that represents the the Japan country.
 class CountryJpn extends WorldCountry {
-  /// {@template sealed_world.countries_jpn_constructor}}
+  /// {@template sealed_world.country_jpn_constructor}
   /// Creates a instance of [CountryJpn] (Japan country).
   ///
   /// ISO 3166-1 Alpha-3 code: `JPN`, ISO 3166-1 Alpha-2 code: `JP`.
@@ -66,8 +70,4 @@ class CountryJpn extends WorldCountry {
   ];
   @override
   List<NaturalLanguage> get languages => const [LangJpn()];
-}
-
-extension type const _JpnFactory._(CountryJpn _) implements CountryJpn {
-  const _JpnFactory() : this._(const CountryJpn._());
 }

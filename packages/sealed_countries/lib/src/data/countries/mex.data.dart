@@ -6,9 +6,13 @@
 
 part of "../../model/country/country.dart";
 
+extension type const _MexFactory._(CountryMex _) implements CountryMex {
+  const _MexFactory() : this._(const CountryMex._());
+}
+
 /// A class that represents the the Mexico country.
 class CountryMex extends WorldCountry {
-  /// {@template sealed_world.countries_mex_constructor}}
+  /// {@template sealed_world.country_mex_constructor}
   /// Creates a instance of [CountryMex] (Mexico country).
   ///
   /// ISO 3166-1 Alpha-3 code: `MEX`, ISO 3166-1 Alpha-2 code: `MX`.
@@ -75,8 +79,4 @@ class CountryMex extends WorldCountry {
   ];
   @override
   List<NaturalLanguage> get languages => const [LangSpa()];
-}
-
-extension type const _MexFactory._(CountryMex _) implements CountryMex {
-  const _MexFactory() : this._(const CountryMex._());
 }

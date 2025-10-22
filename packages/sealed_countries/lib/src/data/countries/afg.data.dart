@@ -6,9 +6,13 @@
 
 part of "../../model/country/country.dart";
 
+extension type const _AfgFactory._(CountryAfg _) implements CountryAfg {
+  const _AfgFactory() : this._(const CountryAfg._());
+}
+
 /// A class that represents the the Afghanistan country.
 class CountryAfg extends WorldCountry {
-  /// {@template sealed_world.countries_afg_constructor}}
+  /// {@template sealed_world.country_afg_constructor}
   /// Creates a instance of [CountryAfg] (Afghanistan country).
   ///
   /// ISO 3166-1 Alpha-3 code: `AFG`, ISO 3166-1 Alpha-2 code: `AF`.
@@ -74,8 +78,4 @@ class CountryAfg extends WorldCountry {
   ];
   @override
   List<NaturalLanguage> get languages => const [LangPus()];
-}
-
-extension type const _AfgFactory._(CountryAfg _) implements CountryAfg {
-  const _AfgFactory() : this._(const CountryAfg._());
 }

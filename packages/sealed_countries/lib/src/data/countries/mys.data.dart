@@ -6,9 +6,13 @@
 
 part of "../../model/country/country.dart";
 
+extension type const _MysFactory._(CountryMys _) implements CountryMys {
+  const _MysFactory() : this._(const CountryMys._());
+}
+
 /// A class that represents the the Malaysia country.
 class CountryMys extends WorldCountry {
-  /// {@template sealed_world.countries_mys_constructor}}
+  /// {@template sealed_world.country_mys_constructor}
   /// Creates a instance of [CountryMys] (Malaysia country).
   ///
   /// ISO 3166-1 Alpha-3 code: `MYS`, ISO 3166-1 Alpha-2 code: `MY`.
@@ -68,8 +72,4 @@ class CountryMys extends WorldCountry {
   ];
   @override
   List<NaturalLanguage> get languages => const [LangEng(), LangMsa()];
-}
-
-extension type const _MysFactory._(CountryMys _) implements CountryMys {
-  const _MysFactory() : this._(const CountryMys._());
 }

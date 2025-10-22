@@ -6,9 +6,13 @@
 
 part of "../../model/country/country.dart";
 
+extension type const _BdiFactory._(CountryBdi _) implements CountryBdi {
+  const _BdiFactory() : this._(const CountryBdi._());
+}
+
 /// A class that represents the the Burundi country.
 class CountryBdi extends WorldCountry {
-  /// {@template sealed_world.countries_bdi_constructor}}
+  /// {@template sealed_world.country_bdi_constructor}
   /// Creates a instance of [CountryBdi] (Burundi country).
   ///
   /// ISO 3166-1 Alpha-3 code: `BDI`, ISO 3166-1 Alpha-2 code: `BI`.
@@ -85,8 +89,4 @@ class CountryBdi extends WorldCountry {
     LangEng(),
     LangSwa(),
   ];
-}
-
-extension type const _BdiFactory._(CountryBdi _) implements CountryBdi {
-  const _BdiFactory() : this._(const CountryBdi._());
 }

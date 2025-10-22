@@ -6,9 +6,13 @@
 
 part of "../../model/country/country.dart";
 
+extension type const _GinFactory._(CountryGin _) implements CountryGin {
+  const _GinFactory() : this._(const CountryGin._());
+}
+
 /// A class that represents the the Guinea country.
 class CountryGin extends WorldCountry {
-  /// {@template sealed_world.countries_gin_constructor}}
+  /// {@template sealed_world.country_gin_constructor}
   /// Creates a instance of [CountryGin] (Guinea country).
   ///
   /// ISO 3166-1 Alpha-3 code: `GIN`, ISO 3166-1 Alpha-2 code: `GN`.
@@ -73,8 +77,4 @@ class CountryGin extends WorldCountry {
   ];
   @override
   List<NaturalLanguage> get languages => const [LangFra()];
-}
-
-extension type const _GinFactory._(CountryGin _) implements CountryGin {
-  const _GinFactory() : this._(const CountryGin._());
 }

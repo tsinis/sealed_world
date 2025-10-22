@@ -6,9 +6,13 @@
 
 part of "../../model/country/country.dart";
 
+extension type const _CxrFactory._(CountryCxr _) implements CountryCxr {
+  const _CxrFactory() : this._(const CountryCxr._());
+}
+
 /// A class that represents the the Christmas Island country.
 class CountryCxr extends WorldCountry {
-  /// {@template sealed_world.countries_cxr_constructor}}
+  /// {@template sealed_world.country_cxr_constructor}
   /// Creates a instance of [CountryCxr] (Christmas Island country).
   ///
   /// ISO 3166-1 Alpha-3 code: `CXR`, ISO 3166-1 Alpha-2 code: `CX`.
@@ -72,8 +76,4 @@ class CountryCxr extends WorldCountry {
   ];
   @override
   List<NaturalLanguage> get languages => const [LangEng()];
-}
-
-extension type const _CxrFactory._(CountryCxr _) implements CountryCxr {
-  const _CxrFactory() : this._(const CountryCxr._());
 }

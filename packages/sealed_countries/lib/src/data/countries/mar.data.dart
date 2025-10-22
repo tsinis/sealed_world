@@ -6,9 +6,13 @@
 
 part of "../../model/country/country.dart";
 
+extension type const _MarFactory._(CountryMar _) implements CountryMar {
+  const _MarFactory() : this._(const CountryMar._());
+}
+
 /// A class that represents the the Morocco country.
 class CountryMar extends WorldCountry {
-  /// {@template sealed_world.countries_mar_constructor}}
+  /// {@template sealed_world.country_mar_constructor}
   /// Creates a instance of [CountryMar] (Morocco country).
   ///
   /// ISO 3166-1 Alpha-3 code: `MAR`, ISO 3166-1 Alpha-2 code: `MA`.
@@ -74,8 +78,4 @@ class CountryMar extends WorldCountry {
   ];
   @override
   List<NaturalLanguage> get languages => const [LangAra()];
-}
-
-extension type const _MarFactory._(CountryMar _) implements CountryMar {
-  const _MarFactory() : this._(const CountryMar._());
 }

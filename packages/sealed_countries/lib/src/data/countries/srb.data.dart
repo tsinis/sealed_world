@@ -6,9 +6,13 @@
 
 part of "../../model/country/country.dart";
 
+extension type const _SrbFactory._(CountrySrb _) implements CountrySrb {
+  const _SrbFactory() : this._(const CountrySrb._());
+}
+
 /// A class that represents the the Serbia country.
 class CountrySrb extends WorldCountry {
-  /// {@template sealed_world.countries_srb_constructor}}
+  /// {@template sealed_world.country_srb_constructor}
   /// Creates a instance of [CountrySrb] (Serbia country).
   ///
   /// ISO 3166-1 Alpha-3 code: `SRB`, ISO 3166-1 Alpha-2 code: `RS`.
@@ -80,8 +84,4 @@ class CountrySrb extends WorldCountry {
   ];
   @override
   List<NaturalLanguage> get languages => const [LangSrp()];
-}
-
-extension type const _SrbFactory._(CountrySrb _) implements CountrySrb {
-  const _SrbFactory() : this._(const CountrySrb._());
 }

@@ -6,9 +6,13 @@
 
 part of "../../model/country/country.dart";
 
+extension type const _CokFactory._(CountryCok _) implements CountryCok {
+  const _CokFactory() : this._(const CountryCok._());
+}
+
 /// A class that represents the the Cook Islands country.
 class CountryCok extends WorldCountry {
-  /// {@template sealed_world.countries_cok_constructor}}
+  /// {@template sealed_world.country_cok_constructor}
   /// Creates a instance of [CountryCok] (Cook Islands country).
   ///
   /// ISO 3166-1 Alpha-3 code: `COK`, ISO 3166-1 Alpha-2 code: `CK`.
@@ -71,8 +75,4 @@ class CountryCok extends WorldCountry {
   ];
   @override
   List<NaturalLanguage> get languages => const [LangEng()];
-}
-
-extension type const _CokFactory._(CountryCok _) implements CountryCok {
-  const _CokFactory() : this._(const CountryCok._());
 }

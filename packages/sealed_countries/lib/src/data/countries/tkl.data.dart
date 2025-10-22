@@ -6,9 +6,13 @@
 
 part of "../../model/country/country.dart";
 
+extension type const _TklFactory._(CountryTkl _) implements CountryTkl {
+  const _TklFactory() : this._(const CountryTkl._());
+}
+
 /// A class that represents the the Tokelau country.
 class CountryTkl extends WorldCountry {
-  /// {@template sealed_world.countries_tkl_constructor}}
+  /// {@template sealed_world.country_tkl_constructor}
   /// Creates a instance of [CountryTkl] (Tokelau country).
   ///
   /// ISO 3166-1 Alpha-3 code: `TKL`, ISO 3166-1 Alpha-2 code: `TK`.
@@ -62,8 +66,4 @@ class CountryTkl extends WorldCountry {
   ];
   @override
   List<NaturalLanguage> get languages => const [LangEng(), LangSmo()];
-}
-
-extension type const _TklFactory._(CountryTkl _) implements CountryTkl {
-  const _TklFactory() : this._(const CountryTkl._());
 }

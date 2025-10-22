@@ -6,9 +6,13 @@
 
 part of "../../model/country/country.dart";
 
+extension type const _IslFactory._(CountryIsl _) implements CountryIsl {
+  const _IslFactory() : this._(const CountryIsl._());
+}
+
 /// A class that represents the the Iceland country.
 class CountryIsl extends WorldCountry {
-  /// {@template sealed_world.countries_isl_constructor}}
+  /// {@template sealed_world.country_isl_constructor}
   /// Creates a instance of [CountryIsl] (Iceland country).
   ///
   /// ISO 3166-1 Alpha-3 code: `ISL`, ISO 3166-1 Alpha-2 code: `IS`.
@@ -73,8 +77,4 @@ class CountryIsl extends WorldCountry {
   ];
   @override
   List<NaturalLanguage> get languages => const [LangIsl()];
-}
-
-extension type const _IslFactory._(CountryIsl _) implements CountryIsl {
-  const _IslFactory() : this._(const CountryIsl._());
 }

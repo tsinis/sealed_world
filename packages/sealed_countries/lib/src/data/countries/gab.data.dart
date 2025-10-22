@@ -6,9 +6,13 @@
 
 part of "../../model/country/country.dart";
 
+extension type const _GabFactory._(CountryGab _) implements CountryGab {
+  const _GabFactory() : this._(const CountryGab._());
+}
+
 /// A class that represents the the Gabon country.
 class CountryGab extends WorldCountry {
-  /// {@template sealed_world.countries_gab_constructor}}
+  /// {@template sealed_world.country_gab_constructor}
   /// Creates a instance of [CountryGab] (Gabon country).
   ///
   /// ISO 3166-1 Alpha-3 code: `GAB`, ISO 3166-1 Alpha-2 code: `GA`.
@@ -69,8 +73,4 @@ class CountryGab extends WorldCountry {
   ];
   @override
   List<NaturalLanguage> get languages => const [LangFra()];
-}
-
-extension type const _GabFactory._(CountryGab _) implements CountryGab {
-  const _GabFactory() : this._(const CountryGab._());
 }

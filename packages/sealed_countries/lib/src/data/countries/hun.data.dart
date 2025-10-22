@@ -6,9 +6,13 @@
 
 part of "../../model/country/country.dart";
 
+extension type const _HunFactory._(CountryHun _) implements CountryHun {
+  const _HunFactory() : this._(const CountryHun._());
+}
+
 /// A class that represents the the Hungary country.
 class CountryHun extends WorldCountry {
-  /// {@template sealed_world.countries_hun_constructor}}
+  /// {@template sealed_world.country_hun_constructor}
   /// Creates a instance of [CountryHun] (Hungary country).
   ///
   /// ISO 3166-1 Alpha-3 code: `HUN`, ISO 3166-1 Alpha-2 code: `HU`.
@@ -74,8 +78,4 @@ class CountryHun extends WorldCountry {
   ];
   @override
   List<NaturalLanguage> get languages => const [LangHun()];
-}
-
-extension type const _HunFactory._(CountryHun _) implements CountryHun {
-  const _HunFactory() : this._(const CountryHun._());
 }

@@ -6,9 +6,13 @@
 
 part of "../../model/country/country.dart";
 
+extension type const _SsdFactory._(CountrySsd _) implements CountrySsd {
+  const _SsdFactory() : this._(const CountrySsd._());
+}
+
 /// A class that represents the the South Sudan country.
 class CountrySsd extends WorldCountry {
-  /// {@template sealed_world.countries_ssd_constructor}}
+  /// {@template sealed_world.country_ssd_constructor}
   /// Creates a instance of [CountrySsd] (South Sudan country).
   ///
   /// ISO 3166-1 Alpha-3 code: `SSD`, ISO 3166-1 Alpha-2 code: `SS`.
@@ -77,8 +81,4 @@ class CountrySsd extends WorldCountry {
   ];
   @override
   List<NaturalLanguage> get languages => const [LangEng()];
-}
-
-extension type const _SsdFactory._(CountrySsd _) implements CountrySsd {
-  const _SsdFactory() : this._(const CountrySsd._());
 }

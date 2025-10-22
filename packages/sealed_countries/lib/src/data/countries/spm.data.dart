@@ -6,9 +6,13 @@
 
 part of "../../model/country/country.dart";
 
+extension type const _SpmFactory._(CountrySpm _) implements CountrySpm {
+  const _SpmFactory() : this._(const CountrySpm._());
+}
+
 /// A class that represents the the Saint Pierre and Miquelon country.
 class CountrySpm extends WorldCountry {
-  /// {@template sealed_world.countries_spm_constructor}}
+  /// {@template sealed_world.country_spm_constructor}
   /// Creates a instance of [CountrySpm] (Saint Pierre and Miquelon country).
   ///
   /// ISO 3166-1 Alpha-3 code: `SPM`, ISO 3166-1 Alpha-2 code: `PM`.
@@ -78,8 +82,4 @@ class CountrySpm extends WorldCountry {
   ];
   @override
   List<NaturalLanguage> get languages => const [LangFra()];
-}
-
-extension type const _SpmFactory._(CountrySpm _) implements CountrySpm {
-  const _SpmFactory() : this._(const CountrySpm._());
 }

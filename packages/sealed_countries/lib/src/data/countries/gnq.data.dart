@@ -6,9 +6,13 @@
 
 part of "../../model/country/country.dart";
 
+extension type const _GnqFactory._(CountryGnq _) implements CountryGnq {
+  const _GnqFactory() : this._(const CountryGnq._());
+}
+
 /// A class that represents the the Equatorial Guinea country.
 class CountryGnq extends WorldCountry {
-  /// {@template sealed_world.countries_gnq_constructor}}
+  /// {@template sealed_world.country_gnq_constructor}
   /// Creates a instance of [CountryGnq] (Equatorial Guinea country).
   ///
   /// ISO 3166-1 Alpha-3 code: `GNQ`, ISO 3166-1 Alpha-2 code: `GQ`.
@@ -94,8 +98,4 @@ class CountryGnq extends WorldCountry {
     LangPor(),
     LangSpa(),
   ];
-}
-
-extension type const _GnqFactory._(CountryGnq _) implements CountryGnq {
-  const _GnqFactory() : this._(const CountryGnq._());
 }

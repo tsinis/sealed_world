@@ -6,9 +6,13 @@
 
 part of "../../model/country/country.dart";
 
+extension type const _OmnFactory._(CountryOmn _) implements CountryOmn {
+  const _OmnFactory() : this._(const CountryOmn._());
+}
+
 /// A class that represents the the Oman country.
 class CountryOmn extends WorldCountry {
-  /// {@template sealed_world.countries_omn_constructor}}
+  /// {@template sealed_world.country_omn_constructor}
   /// Creates a instance of [CountryOmn] (Oman country).
   ///
   /// ISO 3166-1 Alpha-3 code: `OMN`, ISO 3166-1 Alpha-2 code: `OM`.
@@ -69,8 +73,4 @@ class CountryOmn extends WorldCountry {
   ];
   @override
   List<NaturalLanguage> get languages => const [LangAra()];
-}
-
-extension type const _OmnFactory._(CountryOmn _) implements CountryOmn {
-  const _OmnFactory() : this._(const CountryOmn._());
 }

@@ -6,9 +6,13 @@
 
 part of "../../model/country/country.dart";
 
+extension type const _GrlFactory._(CountryGrl _) implements CountryGrl {
+  const _GrlFactory() : this._(const CountryGrl._());
+}
+
 /// A class that represents the the Greenland country.
 class CountryGrl extends WorldCountry {
-  /// {@template sealed_world.countries_grl_constructor}}
+  /// {@template sealed_world.country_grl_constructor}
   /// Creates a instance of [CountryGrl] (Greenland country).
   ///
   /// ISO 3166-1 Alpha-3 code: `GRL`, ISO 3166-1 Alpha-2 code: `GL`.
@@ -73,8 +77,4 @@ class CountryGrl extends WorldCountry {
   ];
   @override
   List<NaturalLanguage> get languages => const [LangKal()];
-}
-
-extension type const _GrlFactory._(CountryGrl _) implements CountryGrl {
-  const _GrlFactory() : this._(const CountryGrl._());
 }

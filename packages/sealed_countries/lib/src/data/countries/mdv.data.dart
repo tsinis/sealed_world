@@ -6,9 +6,13 @@
 
 part of "../../model/country/country.dart";
 
+extension type const _MdvFactory._(CountryMdv _) implements CountryMdv {
+  const _MdvFactory() : this._(const CountryMdv._());
+}
+
 /// A class that represents the the Maldives country.
 class CountryMdv extends WorldCountry {
-  /// {@template sealed_world.countries_mdv_constructor}}
+  /// {@template sealed_world.country_mdv_constructor}
   /// Creates a instance of [CountryMdv] (Maldives country).
   ///
   /// ISO 3166-1 Alpha-3 code: `MDV`, ISO 3166-1 Alpha-2 code: `MV`.
@@ -73,8 +77,4 @@ class CountryMdv extends WorldCountry {
   ];
   @override
   List<NaturalLanguage> get languages => const [LangDiv()];
-}
-
-extension type const _MdvFactory._(CountryMdv _) implements CountryMdv {
-  const _MdvFactory() : this._(const CountryMdv._());
 }

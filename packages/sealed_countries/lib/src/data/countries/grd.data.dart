@@ -6,9 +6,13 @@
 
 part of "../../model/country/country.dart";
 
+extension type const _GrdFactory._(CountryGrd _) implements CountryGrd {
+  const _GrdFactory() : this._(const CountryGrd._());
+}
+
 /// A class that represents the the Grenada country.
 class CountryGrd extends WorldCountry {
-  /// {@template sealed_world.countries_grd_constructor}}
+  /// {@template sealed_world.country_grd_constructor}
   /// Creates a instance of [CountryGrd] (Grenada country).
   ///
   /// ISO 3166-1 Alpha-3 code: `GRD`, ISO 3166-1 Alpha-2 code: `GD`.
@@ -63,8 +67,4 @@ class CountryGrd extends WorldCountry {
   ];
   @override
   List<NaturalLanguage> get languages => const [LangEng()];
-}
-
-extension type const _GrdFactory._(CountryGrd _) implements CountryGrd {
-  const _GrdFactory() : this._(const CountryGrd._());
 }

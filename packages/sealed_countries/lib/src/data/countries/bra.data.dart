@@ -6,9 +6,13 @@
 
 part of "../../model/country/country.dart";
 
+extension type const _BraFactory._(CountryBra _) implements CountryBra {
+  const _BraFactory() : this._(const CountryBra._());
+}
+
 /// A class that represents the the Brazil country.
 class CountryBra extends WorldCountry {
-  /// {@template sealed_world.countries_bra_constructor}}
+  /// {@template sealed_world.country_bra_constructor}
   /// Creates a instance of [CountryBra] (Brazil country).
   ///
   /// ISO 3166-1 Alpha-3 code: `BRA`, ISO 3166-1 Alpha-2 code: `BR`.
@@ -89,8 +93,4 @@ class CountryBra extends WorldCountry {
   ];
   @override
   List<NaturalLanguage> get languages => const [LangPor()];
-}
-
-extension type const _BraFactory._(CountryBra _) implements CountryBra {
-  const _BraFactory() : this._(const CountryBra._());
 }

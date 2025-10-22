@@ -6,9 +6,13 @@
 
 part of "../../model/country/country.dart";
 
+extension type const _VutFactory._(CountryVut _) implements CountryVut {
+  const _VutFactory() : this._(const CountryVut._());
+}
+
 /// A class that represents the the Vanuatu country.
 class CountryVut extends WorldCountry {
-  /// {@template sealed_world.countries_vut_constructor}}
+  /// {@template sealed_world.country_vut_constructor}
   /// Creates a instance of [CountryVut] (Vanuatu country).
   ///
   /// ISO 3166-1 Alpha-3 code: `VUT`, ISO 3166-1 Alpha-2 code: `VU`.
@@ -85,8 +89,4 @@ class CountryVut extends WorldCountry {
     LangEng(),
     LangFra(),
   ];
-}
-
-extension type const _VutFactory._(CountryVut _) implements CountryVut {
-  const _VutFactory() : this._(const CountryVut._());
 }

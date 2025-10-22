@@ -6,9 +6,13 @@
 
 part of "../../model/country/country.dart";
 
+extension type const _DnkFactory._(CountryDnk _) implements CountryDnk {
+  const _DnkFactory() : this._(const CountryDnk._());
+}
+
 /// A class that represents the the Denmark country.
 class CountryDnk extends WorldCountry {
-  /// {@template sealed_world.countries_dnk_constructor}}
+  /// {@template sealed_world.country_dnk_constructor}
   /// Creates a instance of [CountryDnk] (Denmark country).
   ///
   /// ISO 3166-1 Alpha-3 code: `DNK`, ISO 3166-1 Alpha-2 code: `DK`.
@@ -84,8 +88,4 @@ class CountryDnk extends WorldCountry {
   ];
   @override
   List<NaturalLanguage> get languages => const [LangDan()];
-}
-
-extension type const _DnkFactory._(CountryDnk _) implements CountryDnk {
-  const _DnkFactory() : this._(const CountryDnk._());
 }

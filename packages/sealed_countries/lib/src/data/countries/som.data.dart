@@ -6,9 +6,13 @@
 
 part of "../../model/country/country.dart";
 
+extension type const _SomFactory._(CountrySom _) implements CountrySom {
+  const _SomFactory() : this._(const CountrySom._());
+}
+
 /// A class that represents the the Somalia country.
 class CountrySom extends WorldCountry {
-  /// {@template sealed_world.countries_som_constructor}}
+  /// {@template sealed_world.country_som_constructor}
   /// Creates a instance of [CountrySom] (Somalia country).
   ///
   /// ISO 3166-1 Alpha-3 code: `SOM`, ISO 3166-1 Alpha-2 code: `SO`.
@@ -84,8 +88,4 @@ class CountrySom extends WorldCountry {
   ];
   @override
   List<NaturalLanguage> get languages => const [LangAra(), LangSom()];
-}
-
-extension type const _SomFactory._(CountrySom _) implements CountrySom {
-  const _SomFactory() : this._(const CountrySom._());
 }

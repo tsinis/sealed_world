@@ -6,9 +6,13 @@
 
 part of "../../model/country/country.dart";
 
+extension type const _AbwFactory._(CountryAbw _) implements CountryAbw {
+  const _AbwFactory() : this._(const CountryAbw._());
+}
+
 /// A class that represents the the Aruba country.
 class CountryAbw extends WorldCountry {
-  /// {@template sealed_world.countries_abw_constructor}}
+  /// {@template sealed_world.country_abw_constructor}
   /// Creates a instance of [CountryAbw] (Aruba country).
   ///
   /// ISO 3166-1 Alpha-3 code: `ABW`, ISO 3166-1 Alpha-2 code: `AW`.
@@ -63,8 +67,4 @@ class CountryAbw extends WorldCountry {
   ];
   @override
   List<NaturalLanguage> get languages => const [LangNld()];
-}
-
-extension type const _AbwFactory._(CountryAbw _) implements CountryAbw {
-  const _AbwFactory() : this._(const CountryAbw._());
 }

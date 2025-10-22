@@ -6,9 +6,13 @@
 
 part of "../../model/country/country.dart";
 
+extension type const _SenFactory._(CountrySen _) implements CountrySen {
+  const _SenFactory() : this._(const CountrySen._());
+}
+
 /// A class that represents the the Senegal country.
 class CountrySen extends WorldCountry {
-  /// {@template sealed_world.countries_sen_constructor}}
+  /// {@template sealed_world.country_sen_constructor}
   /// Creates a instance of [CountrySen] (Senegal country).
   ///
   /// ISO 3166-1 Alpha-3 code: `SEN`, ISO 3166-1 Alpha-2 code: `SN`.
@@ -74,8 +78,4 @@ class CountrySen extends WorldCountry {
   ];
   @override
   List<NaturalLanguage> get languages => const [LangFra()];
-}
-
-extension type const _SenFactory._(CountrySen _) implements CountrySen {
-  const _SenFactory() : this._(const CountrySen._());
 }

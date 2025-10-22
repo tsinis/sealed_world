@@ -6,9 +6,13 @@
 
 part of "../../model/country/country.dart";
 
+extension type const _BlrFactory._(CountryBlr _) implements CountryBlr {
+  const _BlrFactory() : this._(const CountryBlr._());
+}
+
 /// A class that represents the the Belarus country.
 class CountryBlr extends WorldCountry {
-  /// {@template sealed_world.countries_blr_constructor}}
+  /// {@template sealed_world.country_blr_constructor}
   /// Creates a instance of [CountryBlr] (Belarus country).
   ///
   /// ISO 3166-1 Alpha-3 code: `BLR`, ISO 3166-1 Alpha-2 code: `BY`.
@@ -83,8 +87,4 @@ class CountryBlr extends WorldCountry {
   ];
   @override
   List<NaturalLanguage> get languages => const [LangBel(), LangRus()];
-}
-
-extension type const _BlrFactory._(CountryBlr _) implements CountryBlr {
-  const _BlrFactory() : this._(const CountryBlr._());
 }

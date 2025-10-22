@@ -6,9 +6,13 @@
 
 part of "../../model/country/country.dart";
 
+extension type const _LcaFactory._(CountryLca _) implements CountryLca {
+  const _LcaFactory() : this._(const CountryLca._());
+}
+
 /// A class that represents the the Saint Lucia country.
 class CountryLca extends WorldCountry {
-  /// {@template sealed_world.countries_lca_constructor}}
+  /// {@template sealed_world.country_lca_constructor}
   /// Creates a instance of [CountryLca] (Saint Lucia country).
   ///
   /// ISO 3166-1 Alpha-3 code: `LCA`, ISO 3166-1 Alpha-2 code: `LC`.
@@ -47,8 +51,10 @@ class CountryLca extends WorldCountry {
   @override
   List<FiatCurrency> get currencies => const [FiatXcd()];
   @override
-  CapitalInfo get capitalInfo =>
-      const CapitalInfo(capital: Capital("Castries"), latLng: LatLng(14, -61));
+  CapitalInfo get capitalInfo => const CapitalInfo(
+    capital: Capital("Castries"),
+    latLng: LatLng(14, -61),
+  );
   @override
   List<RegionalBloc> get regionalBlocs => const [BlocCARICOM()];
   @override
@@ -70,8 +76,4 @@ class CountryLca extends WorldCountry {
   ];
   @override
   List<NaturalLanguage> get languages => const [LangEng()];
-}
-
-extension type const _LcaFactory._(CountryLca _) implements CountryLca {
-  const _LcaFactory() : this._(const CountryLca._());
 }

@@ -6,9 +6,13 @@
 
 part of "../../model/country/country.dart";
 
+extension type const _PngFactory._(CountryPng _) implements CountryPng {
+  const _PngFactory() : this._(const CountryPng._());
+}
+
 /// A class that represents the the Papua New Guinea country.
 class CountryPng extends WorldCountry {
-  /// {@template sealed_world.countries_png_constructor}}
+  /// {@template sealed_world.country_png_constructor}
   /// Creates a instance of [CountryPng] (Papua New Guinea country).
   ///
   /// ISO 3166-1 Alpha-3 code: `PNG`, ISO 3166-1 Alpha-2 code: `PG`.
@@ -84,8 +88,4 @@ class CountryPng extends WorldCountry {
   ];
   @override
   List<NaturalLanguage> get languages => const [LangEng(), LangHmo()];
-}
-
-extension type const _PngFactory._(CountryPng _) implements CountryPng {
-  const _PngFactory() : this._(const CountryPng._());
 }

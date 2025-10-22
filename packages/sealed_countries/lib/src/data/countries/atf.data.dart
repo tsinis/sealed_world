@@ -6,9 +6,13 @@
 
 part of "../../model/country/country.dart";
 
+extension type const _AtfFactory._(CountryAtf _) implements CountryAtf {
+  const _AtfFactory() : this._(const CountryAtf._());
+}
+
 /// A class that represents the the French Southern and Antarctic Lands country.
 class CountryAtf extends WorldCountry {
-  /// {@template sealed_world.countries_atf_constructor}}
+  /// {@template sealed_world.country_atf_constructor}
   /// Creates a instance of [CountryAtf] (French Southern and Antarctic Lands country).
   ///
   /// ISO 3166-1 Alpha-3 code: `ATF`, ISO 3166-1 Alpha-2 code: `TF`.
@@ -66,8 +70,4 @@ class CountryAtf extends WorldCountry {
   ];
   @override
   List<NaturalLanguage> get languages => const [LangFra()];
-}
-
-extension type const _AtfFactory._(CountryAtf _) implements CountryAtf {
-  const _AtfFactory() : this._(const CountryAtf._());
 }

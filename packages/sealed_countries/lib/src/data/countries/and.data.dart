@@ -6,9 +6,13 @@
 
 part of "../../model/country/country.dart";
 
+extension type const _AndFactory._(CountryAnd _) implements CountryAnd {
+  const _AndFactory() : this._(const CountryAnd._());
+}
+
 /// A class that represents the the Andorra country.
 class CountryAnd extends WorldCountry {
-  /// {@template sealed_world.countries_and_constructor}}
+  /// {@template sealed_world.country_and_constructor}
   /// Creates a instance of [CountryAnd] (Andorra country).
   ///
   /// ISO 3166-1 Alpha-3 code: `AND`, ISO 3166-1 Alpha-2 code: `AD`.
@@ -75,8 +79,4 @@ class CountryAnd extends WorldCountry {
   ];
   @override
   List<NaturalLanguage> get languages => const [LangCat()];
-}
-
-extension type const _AndFactory._(CountryAnd _) implements CountryAnd {
-  const _AndFactory() : this._(const CountryAnd._());
 }

@@ -6,9 +6,13 @@
 
 part of "../../model/country/country.dart";
 
+extension type const _ZafFactory._(CountryZaf _) implements CountryZaf {
+  const _ZafFactory() : this._(const CountryZaf._());
+}
+
 /// A class that represents the the South Africa country.
 class CountryZaf extends WorldCountry {
-  /// {@template sealed_world.countries_zaf_constructor}}
+  /// {@template sealed_world.country_zaf_constructor}
   /// Creates a instance of [CountryZaf] (South Africa country).
   ///
   /// ISO 3166-1 Alpha-3 code: `ZAF`, ISO 3166-1 Alpha-2 code: `ZA`.
@@ -142,8 +146,4 @@ class CountryZaf extends WorldCountry {
     LangXho(),
     LangZul(),
   ];
-}
-
-extension type const _ZafFactory._(CountryZaf _) implements CountryZaf {
-  const _ZafFactory() : this._(const CountryZaf._());
 }

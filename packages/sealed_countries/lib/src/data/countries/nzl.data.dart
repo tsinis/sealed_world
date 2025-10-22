@@ -6,9 +6,13 @@
 
 part of "../../model/country/country.dart";
 
+extension type const _NzlFactory._(CountryNzl _) implements CountryNzl {
+  const _NzlFactory() : this._(const CountryNzl._());
+}
+
 /// A class that represents the the New Zealand country.
 class CountryNzl extends WorldCountry {
-  /// {@template sealed_world.countries_nzl_constructor}}
+  /// {@template sealed_world.country_nzl_constructor}
   /// Creates a instance of [CountryNzl] (New Zealand country).
   ///
   /// ISO 3166-1 Alpha-3 code: `NZL`, ISO 3166-1 Alpha-2 code: `NZ`.
@@ -84,8 +88,4 @@ class CountryNzl extends WorldCountry {
   ];
   @override
   List<NaturalLanguage> get languages => const [LangEng(), LangMri()];
-}
-
-extension type const _NzlFactory._(CountryNzl _) implements CountryNzl {
-  const _NzlFactory() : this._(const CountryNzl._());
 }

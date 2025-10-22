@@ -6,9 +6,13 @@
 
 part of "../../model/country/country.dart";
 
+extension type const _CafFactory._(CountryCaf _) implements CountryCaf {
+  const _CafFactory() : this._(const CountryCaf._());
+}
+
 /// A class that represents the the Central African Republic country.
 class CountryCaf extends WorldCountry {
-  /// {@template sealed_world.countries_caf_constructor}}
+  /// {@template sealed_world.country_caf_constructor}
   /// Creates a instance of [CountryCaf] (Central African Republic country).
   ///
   /// ISO 3166-1 Alpha-3 code: `CAF`, ISO 3166-1 Alpha-2 code: `CF`.
@@ -87,8 +91,4 @@ class CountryCaf extends WorldCountry {
   ];
   @override
   List<NaturalLanguage> get languages => const [LangFra(), LangSag()];
-}
-
-extension type const _CafFactory._(CountryCaf _) implements CountryCaf {
-  const _CafFactory() : this._(const CountryCaf._());
 }

@@ -6,9 +6,13 @@
 
 part of "../../model/country/country.dart";
 
+extension type const _TunFactory._(CountryTun _) implements CountryTun {
+  const _TunFactory() : this._(const CountryTun._());
+}
+
 /// A class that represents the the Tunisia country.
 class CountryTun extends WorldCountry {
-  /// {@template sealed_world.countries_tun_constructor}}
+  /// {@template sealed_world.country_tun_constructor}
   /// Creates a instance of [CountryTun] (Tunisia country).
   ///
   /// ISO 3166-1 Alpha-3 code: `TUN`, ISO 3166-1 Alpha-2 code: `TN`.
@@ -75,8 +79,4 @@ class CountryTun extends WorldCountry {
   ];
   @override
   List<NaturalLanguage> get languages => const [LangAra()];
-}
-
-extension type const _TunFactory._(CountryTun _) implements CountryTun {
-  const _TunFactory() : this._(const CountryTun._());
 }

@@ -6,9 +6,13 @@
 
 part of "../../model/country/country.dart";
 
+extension type const _TwnFactory._(CountryTwn _) implements CountryTwn {
+  const _TwnFactory() : this._(const CountryTwn._());
+}
+
 /// A class that represents the the Taiwan country.
 class CountryTwn extends WorldCountry {
-  /// {@template sealed_world.countries_twn_constructor}}
+  /// {@template sealed_world.country_twn_constructor}
   /// Creates a instance of [CountryTwn] (Taiwan country).
   ///
   /// ISO 3166-1 Alpha-3 code: `TWN`, ISO 3166-1 Alpha-2 code: `TW`.
@@ -71,8 +75,4 @@ class CountryTwn extends WorldCountry {
   ];
   @override
   List<NaturalLanguage> get languages => const [LangZho()];
-}
-
-extension type const _TwnFactory._(CountryTwn _) implements CountryTwn {
-  const _TwnFactory() : this._(const CountryTwn._());
 }

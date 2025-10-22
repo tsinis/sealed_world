@@ -6,9 +6,13 @@
 
 part of "../../model/country/country.dart";
 
+extension type const _MwiFactory._(CountryMwi _) implements CountryMwi {
+  const _MwiFactory() : this._(const CountryMwi._());
+}
+
 /// A class that represents the the Malawi country.
 class CountryMwi extends WorldCountry {
-  /// {@template sealed_world.countries_mwi_constructor}}
+  /// {@template sealed_world.country_mwi_constructor}
   /// Creates a instance of [CountryMwi] (Malawi country).
   ///
   /// ISO 3166-1 Alpha-3 code: `MWI`, ISO 3166-1 Alpha-2 code: `MW`.
@@ -75,8 +79,4 @@ class CountryMwi extends WorldCountry {
   ];
   @override
   List<NaturalLanguage> get languages => const [LangEng(), LangNya()];
-}
-
-extension type const _MwiFactory._(CountryMwi _) implements CountryMwi {
-  const _MwiFactory() : this._(const CountryMwi._());
 }

@@ -6,9 +6,13 @@
 
 part of "../../model/country/country.dart";
 
+extension type const _FsmFactory._(CountryFsm _) implements CountryFsm {
+  const _FsmFactory() : this._(const CountryFsm._());
+}
+
 /// A class that represents the the Micronesia country.
 class CountryFsm extends WorldCountry {
-  /// {@template sealed_world.countries_fsm_constructor}}
+  /// {@template sealed_world.country_fsm_constructor}
   /// Creates a instance of [CountryFsm] (Micronesia country).
   ///
   /// ISO 3166-1 Alpha-3 code: `FSM`, ISO 3166-1 Alpha-2 code: `FM`.
@@ -70,8 +74,4 @@ class CountryFsm extends WorldCountry {
   ];
   @override
   List<NaturalLanguage> get languages => const [LangEng()];
-}
-
-extension type const _FsmFactory._(CountryFsm _) implements CountryFsm {
-  const _FsmFactory() : this._(const CountryFsm._());
 }

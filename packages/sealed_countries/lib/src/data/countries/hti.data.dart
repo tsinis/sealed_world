@@ -6,9 +6,13 @@
 
 part of "../../model/country/country.dart";
 
+extension type const _HtiFactory._(CountryHti _) implements CountryHti {
+  const _HtiFactory() : this._(const CountryHti._());
+}
+
 /// A class that represents the the Haiti country.
 class CountryHti extends WorldCountry {
-  /// {@template sealed_world.countries_hti_constructor}}
+  /// {@template sealed_world.country_hti_constructor}
   /// Creates a instance of [CountryHti] (Haiti country).
   ///
   /// ISO 3166-1 Alpha-3 code: `HTI`, ISO 3166-1 Alpha-2 code: `HT`.
@@ -83,8 +87,4 @@ class CountryHti extends WorldCountry {
   ];
   @override
   List<NaturalLanguage> get languages => const [LangFra(), LangHat()];
-}
-
-extension type const _HtiFactory._(CountryHti _) implements CountryHti {
-  const _HtiFactory() : this._(const CountryHti._());
 }

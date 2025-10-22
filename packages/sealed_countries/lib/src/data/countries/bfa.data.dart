@@ -6,9 +6,13 @@
 
 part of "../../model/country/country.dart";
 
+extension type const _BfaFactory._(CountryBfa _) implements CountryBfa {
+  const _BfaFactory() : this._(const CountryBfa._());
+}
+
 /// A class that represents the the Burkina Faso country.
 class CountryBfa extends WorldCountry {
-  /// {@template sealed_world.countries_bfa_constructor}}
+  /// {@template sealed_world.country_bfa_constructor}
   /// Creates a instance of [CountryBfa] (Burkina Faso country).
   ///
   /// ISO 3166-1 Alpha-3 code: `BFA`, ISO 3166-1 Alpha-2 code: `BF`.
@@ -70,8 +74,4 @@ class CountryBfa extends WorldCountry {
   ];
   @override
   List<NaturalLanguage> get languages => const [LangFra()];
-}
-
-extension type const _BfaFactory._(CountryBfa _) implements CountryBfa {
-  const _BfaFactory() : this._(const CountryBfa._());
 }

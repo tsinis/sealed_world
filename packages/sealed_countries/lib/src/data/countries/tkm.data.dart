@@ -6,9 +6,13 @@
 
 part of "../../model/country/country.dart";
 
+extension type const _TkmFactory._(CountryTkm _) implements CountryTkm {
+  const _TkmFactory() : this._(const CountryTkm._());
+}
+
 /// A class that represents the the Turkmenistan country.
 class CountryTkm extends WorldCountry {
-  /// {@template sealed_world.countries_tkm_constructor}}
+  /// {@template sealed_world.country_tkm_constructor}
   /// Creates a instance of [CountryTkm] (Turkmenistan country).
   ///
   /// ISO 3166-1 Alpha-3 code: `TKM`, ISO 3166-1 Alpha-2 code: `TM`.
@@ -77,8 +81,4 @@ class CountryTkm extends WorldCountry {
   ];
   @override
   List<NaturalLanguage> get languages => const [LangRus(), LangTuk()];
-}
-
-extension type const _TkmFactory._(CountryTkm _) implements CountryTkm {
-  const _TkmFactory() : this._(const CountryTkm._());
 }

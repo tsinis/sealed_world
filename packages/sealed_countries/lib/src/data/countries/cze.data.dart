@@ -6,9 +6,13 @@
 
 part of "../../model/country/country.dart";
 
+extension type const _CzeFactory._(CountryCze _) implements CountryCze {
+  const _CzeFactory() : this._(const CountryCze._());
+}
+
 /// A class that represents the the Czechia country.
 class CountryCze extends WorldCountry {
-  /// {@template sealed_world.countries_cze_constructor}}
+  /// {@template sealed_world.country_cze_constructor}
   /// Creates a instance of [CountryCze] (Czechia country).
   ///
   /// ISO 3166-1 Alpha-3 code: `CZE`, ISO 3166-1 Alpha-2 code: `CZ`.
@@ -71,8 +75,4 @@ class CountryCze extends WorldCountry {
   ];
   @override
   List<NaturalLanguage> get languages => const [LangCes()];
-}
-
-extension type const _CzeFactory._(CountryCze _) implements CountryCze {
-  const _CzeFactory() : this._(const CountryCze._());
 }

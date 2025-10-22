@@ -6,9 +6,13 @@
 
 part of "../../model/country/country.dart";
 
+extension type const _RouFactory._(CountryRou _) implements CountryRou {
+  const _RouFactory() : this._(const CountryRou._());
+}
+
 /// A class that represents the the Romania country.
 class CountryRou extends WorldCountry {
-  /// {@template sealed_world.countries_rou_constructor}}
+  /// {@template sealed_world.country_rou_constructor}
   /// Creates a instance of [CountryRou] (Romania country).
   ///
   /// ISO 3166-1 Alpha-3 code: `ROU`, ISO 3166-1 Alpha-2 code: `RO`.
@@ -69,8 +73,4 @@ class CountryRou extends WorldCountry {
   ];
   @override
   List<NaturalLanguage> get languages => const [LangRon()];
-}
-
-extension type const _RouFactory._(CountryRou _) implements CountryRou {
-  const _RouFactory() : this._(const CountryRou._());
 }

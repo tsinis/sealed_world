@@ -6,9 +6,13 @@
 
 part of "../../model/country/country.dart";
 
+extension type const _QatFactory._(CountryQat _) implements CountryQat {
+  const _QatFactory() : this._(const CountryQat._());
+}
+
 /// A class that represents the the Qatar country.
 class CountryQat extends WorldCountry {
-  /// {@template sealed_world.countries_qat_constructor}}
+  /// {@template sealed_world.country_qat_constructor}
   /// Creates a instance of [CountryQat] (Qatar country).
   ///
   /// ISO 3166-1 Alpha-3 code: `QAT`, ISO 3166-1 Alpha-2 code: `QA`.
@@ -63,8 +67,4 @@ class CountryQat extends WorldCountry {
   ];
   @override
   List<NaturalLanguage> get languages => const [LangAra()];
-}
-
-extension type const _QatFactory._(CountryQat _) implements CountryQat {
-  const _QatFactory() : this._(const CountryQat._());
 }

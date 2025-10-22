@@ -6,9 +6,13 @@
 
 part of "../../model/country/country.dart";
 
+extension type const _RusFactory._(CountryRus _) implements CountryRus {
+  const _RusFactory() : this._(const CountryRus._());
+}
+
 /// A class that represents the the Russia country.
 class CountryRus extends WorldCountry {
-  /// {@template sealed_world.countries_rus_constructor}}
+  /// {@template sealed_world.country_rus_constructor}
   /// Creates a instance of [CountryRus] (Russia country).
   ///
   /// ISO 3166-1 Alpha-3 code: `RUS`, ISO 3166-1 Alpha-2 code: `RU`.
@@ -102,8 +106,4 @@ class CountryRus extends WorldCountry {
   ];
   @override
   List<NaturalLanguage> get languages => const [LangRus()];
-}
-
-extension type const _RusFactory._(CountryRus _) implements CountryRus {
-  const _RusFactory() : this._(const CountryRus._());
 }

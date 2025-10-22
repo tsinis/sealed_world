@@ -6,9 +6,13 @@
 
 part of "../../model/country/country.dart";
 
+extension type const _McoFactory._(CountryMco _) implements CountryMco {
+  const _McoFactory() : this._(const CountryMco._());
+}
+
 /// A class that represents the the Monaco country.
 class CountryMco extends WorldCountry {
-  /// {@template sealed_world.countries_mco_constructor}}
+  /// {@template sealed_world.country_mco_constructor}
   /// Creates a instance of [CountryMco] (Monaco country).
   ///
   /// ISO 3166-1 Alpha-3 code: `MCO`, ISO 3166-1 Alpha-2 code: `MC`.
@@ -70,8 +74,4 @@ class CountryMco extends WorldCountry {
   ];
   @override
   List<NaturalLanguage> get languages => const [LangFra()];
-}
-
-extension type const _McoFactory._(CountryMco _) implements CountryMco {
-  const _McoFactory() : this._(const CountryMco._());
 }

@@ -6,9 +6,13 @@
 
 part of "../../model/country/country.dart";
 
+extension type const _IrlFactory._(CountryIrl _) implements CountryIrl {
+  const _IrlFactory() : this._(const CountryIrl._());
+}
+
 /// A class that represents the the Ireland country.
 class CountryIrl extends WorldCountry {
-  /// {@template sealed_world.countries_irl_constructor}}
+  /// {@template sealed_world.country_irl_constructor}
   /// Creates a instance of [CountryIrl] (Ireland country).
   ///
   /// ISO 3166-1 Alpha-3 code: `IRL`, ISO 3166-1 Alpha-2 code: `IE`.
@@ -84,8 +88,4 @@ class CountryIrl extends WorldCountry {
   ];
   @override
   List<NaturalLanguage> get languages => const [LangEng(), LangGle()];
-}
-
-extension type const _IrlFactory._(CountryIrl _) implements CountryIrl {
-  const _IrlFactory() : this._(const CountryIrl._());
 }

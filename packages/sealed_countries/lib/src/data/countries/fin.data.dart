@@ -6,9 +6,13 @@
 
 part of "../../model/country/country.dart";
 
+extension type const _FinFactory._(CountryFin _) implements CountryFin {
+  const _FinFactory() : this._(const CountryFin._());
+}
+
 /// A class that represents the the Finland country.
 class CountryFin extends WorldCountry {
-  /// {@template sealed_world.countries_fin_constructor}}
+  /// {@template sealed_world.country_fin_constructor}
   /// Creates a instance of [CountryFin] (Finland country).
   ///
   /// ISO 3166-1 Alpha-3 code: `FIN`, ISO 3166-1 Alpha-2 code: `FI`.
@@ -81,8 +85,4 @@ class CountryFin extends WorldCountry {
   ];
   @override
   List<NaturalLanguage> get languages => const [LangFin(), LangSwe()];
-}
-
-extension type const _FinFactory._(CountryFin _) implements CountryFin {
-  const _FinFactory() : this._(const CountryFin._());
 }

@@ -6,9 +6,13 @@
 
 part of "../../model/country/country.dart";
 
+extension type const _PerFactory._(CountryPer _) implements CountryPer {
+  const _PerFactory() : this._(const CountryPer._());
+}
+
 /// A class that represents the the Peru country.
 class CountryPer extends WorldCountry {
-  /// {@template sealed_world.countries_per_constructor}}
+  /// {@template sealed_world.country_per_constructor}
   /// Creates a instance of [CountryPer] (Peru country).
   ///
   /// ISO 3166-1 Alpha-3 code: `PER`, ISO 3166-1 Alpha-2 code: `PE`.
@@ -80,8 +84,4 @@ class CountryPer extends WorldCountry {
     LangQue(),
     LangSpa(),
   ];
-}
-
-extension type const _PerFactory._(CountryPer _) implements CountryPer {
-  const _PerFactory() : this._(const CountryPer._());
 }

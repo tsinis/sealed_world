@@ -6,9 +6,13 @@
 
 part of "../../model/country/country.dart";
 
+extension type const _MozFactory._(CountryMoz _) implements CountryMoz {
+  const _MozFactory() : this._(const CountryMoz._());
+}
+
 /// A class that represents the the Mozambique country.
 class CountryMoz extends WorldCountry {
-  /// {@template sealed_world.countries_moz_constructor}}
+  /// {@template sealed_world.country_moz_constructor}
   /// Creates a instance of [CountryMoz] (Mozambique country).
   ///
   /// ISO 3166-1 Alpha-3 code: `MOZ`, ISO 3166-1 Alpha-2 code: `MZ`.
@@ -77,8 +81,4 @@ class CountryMoz extends WorldCountry {
   ];
   @override
   List<NaturalLanguage> get languages => const [LangPor()];
-}
-
-extension type const _MozFactory._(CountryMoz _) implements CountryMoz {
-  const _MozFactory() : this._(const CountryMoz._());
 }
