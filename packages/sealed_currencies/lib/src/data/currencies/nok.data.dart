@@ -1,0 +1,31 @@
+part of "../../model/currency/currency.dart";
+
+extension type const _NokFactory._(FiatNok _) implements FiatNok {
+  const _NokFactory() : this._(const FiatNok._());
+}
+
+/// A class that represents the the Norwegian Krone currency.
+class FiatNok extends FiatCurrency {
+  /// {@template sealed_world.currency_nok_constructor}
+  /// Creates a instance of [FiatNok] (Norwegian Krone currency).
+  ///
+  /// ISO 4217 Alpha code: `NOK`, ISO 4217 Numeric code: `578`.
+  /// {@endtemplate}
+  const factory FiatNok() = _NokFactory;
+
+  const FiatNok._()
+    : super(
+        code: "NOK",
+        name: "Norwegian Krone",
+        decimalMark: ",",
+        thousandsSeparator: ".",
+        symbol: "kr",
+        alternateSymbols: const ["krone"],
+        disambiguateSymbol: "NOK",
+        htmlEntity: "kr",
+        codeNumeric: "578",
+        namesNative: const ["norsk krone"],
+        smallestDenomination: 100,
+        subunit: "Øre",
+      );
+}

@@ -1,6 +1,5 @@
 // ignore_for_file: deprecated_member_use_from_same_package, it's TODO!
 
-import "package:sealed_currencies/src/data/fiat_currencies.data.dart";
 import "package:sealed_currencies/src/helpers/extensions/iso_standardized_fiat_currency_extension.dart";
 import "package:sealed_currencies/src/model/currency/currency.dart";
 import "package:sealed_languages/src/data/scripts.data.dart";

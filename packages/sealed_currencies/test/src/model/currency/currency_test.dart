@@ -1,4 +1,3 @@
-import "package:sealed_currencies/src/data/fiat_currencies.data.dart";
 import "package:sealed_currencies/src/model/currency/currency.dart";
 import "package:test/test.dart";
 
