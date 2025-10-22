@@ -1,4 +1,3 @@
-import "package:change_case/change_case.dart";
 import "package:sealed_countries/sealed_countries.dart";
 
 import "../../../models/package.dart";
@@ -20,12 +19,6 @@ extension PackageAssociationsExtension on Package {
     sealedLanguages: NaturalLanguage.list,
     sealedCurrencies: FiatCurrency.list,
     sealedCountries: WorldCountry.list,
-  );
-
-  String get dataFilePrefix => whenConst(
-    sealedLanguages: "${type.toString().toSnakeCase()}s",
-    sealedCurrencies: "fiat_currencies",
-    sealedCountries: "official_world_countries",
   );
 
   String get dataRepresent => whenConst(

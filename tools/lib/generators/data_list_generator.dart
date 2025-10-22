@@ -50,7 +50,7 @@ part of "../../model/country/country.dart";
 
 /// A class that represents the the $itemName ${package.dataRepresent}.
 class $className extends $type {
-/// {@template sealed_world.${package.dataRepresentPlural}_${lowerCaseCode}_constructor}}
+/// {@template sealed_world.${package.dataRepresent}_${lowerCaseCode}_constructor}
 /// Creates a instance of [$className] ($itemName ${package.dataRepresent}).
 ///
 /// ${IsoStandardized.standardAcronym} ${package.isoCodeAssociated} code: `${item.code}`, ${IsoStandardized.standardAcronym} ${package.isoCodeOtherAssociated} code: `${item.codeOther}`.
