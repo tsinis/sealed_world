@@ -25,6 +25,13 @@ void main() => group("$FiatCurrency", () {
     expect(value, isA<Translated>());
   });
 
+  performanceTest("compile and non compile time constructors equality", () {
+    expect(FiatCurrency.aed(), FiatAed());
+    expect(FiatCurrency.aed(), const FiatAed());
+    expect(const FiatCurrency.aed(), FiatAed());
+    expect(const FiatCurrency.aed(), const FiatAed());
+  });
+
   assertTest(
     "permissive constructor",
     () => const _FiatCurrencyTest().codeNumeric,
@@ -112,6 +119,22 @@ void main() => group("$FiatCurrency", () {
       array.add(FiatCurrency.fromName(array.last.name));
       // ignore: avoid-duplicate-test-assertions, this is mutable array.
       expect(array.length, 2);
+    });
+
+    performanceTest("with ${Map<FiatCurrency, Object>}", () {
+      final map = <FiatCurrency, int>{
+        FiatAed(): 4,
+        const FiatAed(): 3,
+        FiatCurrency.aed(): 2,
+        // ignore: equal_keys_in_map, it's a test.
+        const FiatCurrency.aed(): 1,
+        FiatCurrency.fromCode("AED"): 0,
+      };
+      expect(map.entries.single.key, FiatAed());
+      expect(map.entries.single.key, const FiatAed());
+      expect(map.entries.single.key, FiatCurrency.aed());
+      expect(map.entries.single.key, const FiatCurrency.aed());
+      expect(map.entries.single.value, isZero);
     });
   });
 

@@ -25,7 +25,7 @@ void main() => group("$WorldCountry", () {
     expect(value, isA<Translated>());
   });
 
-  test("compile and non compile time constructors equality", () {
+  performanceTest("compile and non compile time constructors equality", () {
     expect(WorldCountry.abw(), CountryAbw());
     expect(WorldCountry.abw(), const CountryAbw());
     expect(const WorldCountry.abw(), CountryAbw());
@@ -166,7 +166,7 @@ void main() => group("$WorldCountry", () {
       expect(array.length, 2);
     });
 
-    test("with ${Map<WorldCountry, Object>}", () {
+    performanceTest("with ${Map<WorldCountry, Object>}", () {
       final map = <WorldCountry, int>{
         CountryAbw(): 4,
         const CountryAbw(): 3,
@@ -175,9 +175,11 @@ void main() => group("$WorldCountry", () {
         const WorldCountry.abw(): 1,
         WorldCountry.fromCode("ABW"): 0,
       };
-      expect(map.length, 1);
-      expect(map.entries.first.key, CountryAbw());
-      expect(map.entries.first.value, isZero);
+      expect(map.entries.single.key, CountryAbw());
+      expect(map.entries.single.key, const CountryAbw());
+      expect(map.entries.single.key, WorldCountry.abw());
+      expect(map.entries.single.key, const WorldCountry.abw());
+      expect(map.entries.single.value, isZero);
     });
   });
 
