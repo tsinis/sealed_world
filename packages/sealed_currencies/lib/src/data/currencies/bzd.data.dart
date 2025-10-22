@@ -4,7 +4,7 @@ extension type const _BzdFactory._(FiatBzd _) implements FiatBzd {
   const _BzdFactory() : this._(const FiatBzd._());
 }
 
-/// A class that represents the the Belize Dollar currency.
+/// A class that represents the Belize Dollar currency.
 class FiatBzd extends FiatCurrency {
   /// {@template sealed_world.currency_bzd_constructor}
   /// Creates a instance of [FiatBzd] (Belize Dollar currency).

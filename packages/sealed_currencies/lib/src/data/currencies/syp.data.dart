@@ -4,7 +4,7 @@ extension type const _SypFactory._(FiatSyp _) implements FiatSyp {
   const _SypFactory() : this._(const FiatSyp._());
 }
 
-/// A class that represents the the Syrian Pound currency.
+/// A class that represents the Syrian Pound currency.
 class FiatSyp extends FiatCurrency {
   /// {@template sealed_world.currency_syp_constructor}
   /// Creates a instance of [FiatSyp] (Syrian Pound currency).

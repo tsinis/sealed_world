@@ -10,7 +10,7 @@ extension type const _SleFactory._(CountrySle _) implements CountrySle {
   const _SleFactory() : this._(const CountrySle._());
 }
 
-/// A class that represents the the Sierra Leone country.
+/// A class that represents the Sierra Leone country.
 class CountrySle extends WorldCountry {
   /// {@template sealed_world.country_sle_constructor}
   /// Creates a instance of [CountrySle] (Sierra Leone country).

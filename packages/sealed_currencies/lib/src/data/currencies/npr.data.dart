@@ -4,7 +4,7 @@ extension type const _NprFactory._(FiatNpr _) implements FiatNpr {
   const _NprFactory() : this._(const FiatNpr._());
 }
 
-/// A class that represents the the Nepalese Rupee currency.
+/// A class that represents the Nepalese Rupee currency.
 class FiatNpr extends FiatCurrency {
   /// {@template sealed_world.currency_npr_constructor}
   /// Creates a instance of [FiatNpr] (Nepalese Rupee currency).

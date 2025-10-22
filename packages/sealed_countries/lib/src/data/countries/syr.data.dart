@@ -10,7 +10,7 @@ extension type const _SyrFactory._(CountrySyr _) implements CountrySyr {
   const _SyrFactory() : this._(const CountrySyr._());
 }
 
-/// A class that represents the the Syria country.
+/// A class that represents the Syria country.
 class CountrySyr extends WorldCountry {
   /// {@template sealed_world.country_syr_constructor}
   /// Creates a instance of [CountrySyr] (Syria country).

@@ -10,7 +10,7 @@ extension type const _BlzFactory._(CountryBlz _) implements CountryBlz {
   const _BlzFactory() : this._(const CountryBlz._());
 }
 
-/// A class that represents the the Belize country.
+/// A class that represents the Belize country.
 class CountryBlz extends WorldCountry {
   /// {@template sealed_world.country_blz_constructor}
   /// Creates a instance of [CountryBlz] (Belize country).

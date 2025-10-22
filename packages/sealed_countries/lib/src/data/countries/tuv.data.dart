@@ -10,7 +10,7 @@ extension type const _TuvFactory._(CountryTuv _) implements CountryTuv {
   const _TuvFactory() : this._(const CountryTuv._());
 }
 
-/// A class that represents the the Tuvalu country.
+/// A class that represents the Tuvalu country.
 class CountryTuv extends WorldCountry {
   /// {@template sealed_world.country_tuv_constructor}
   /// Creates a instance of [CountryTuv] (Tuvalu country).

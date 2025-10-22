@@ -10,7 +10,7 @@ extension type const _BesFactory._(CountryBes _) implements CountryBes {
   const _BesFactory() : this._(const CountryBes._());
 }
 
-/// A class that represents the the Caribbean Netherlands country.
+/// A class that represents the Caribbean Netherlands country.
 class CountryBes extends WorldCountry {
   /// {@template sealed_world.country_bes_constructor}
   /// Creates a instance of [CountryBes] (Caribbean Netherlands country).

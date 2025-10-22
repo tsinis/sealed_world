@@ -4,7 +4,7 @@ extension type const _XafFactory._(FiatXaf _) implements FiatXaf {
   const _XafFactory() : this._(const FiatXaf._());
 }
 
-/// A class that represents the the Central African Cfa Franc currency.
+/// A class that represents the Central African Cfa Franc currency.
 class FiatXaf extends FiatCurrency {
   /// {@template sealed_world.currency_xaf_constructor}
   /// Creates a instance of [FiatXaf] (Central African Cfa Franc currency).

@@ -10,7 +10,7 @@ extension type const _GlpFactory._(CountryGlp _) implements CountryGlp {
   const _GlpFactory() : this._(const CountryGlp._());
 }
 
-/// A class that represents the the Guadeloupe country.
+/// A class that represents the Guadeloupe country.
 class CountryGlp extends WorldCountry {
   /// {@template sealed_world.country_glp_constructor}
   /// Creates a instance of [CountryGlp] (Guadeloupe country).

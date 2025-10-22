@@ -10,7 +10,7 @@ extension type const _SomFactory._(CountrySom _) implements CountrySom {
   const _SomFactory() : this._(const CountrySom._());
 }
 
-/// A class that represents the the Somalia country.
+/// A class that represents the Somalia country.
 class CountrySom extends WorldCountry {
   /// {@template sealed_world.country_som_constructor}
   /// Creates a instance of [CountrySom] (Somalia country).

@@ -10,7 +10,7 @@ extension type const _FlkFactory._(CountryFlk _) implements CountryFlk {
   const _FlkFactory() : this._(const CountryFlk._());
 }
 
-/// A class that represents the the Falkland Islands country.
+/// A class that represents the Falkland Islands country.
 class CountryFlk extends WorldCountry {
   /// {@template sealed_world.country_flk_constructor}
   /// Creates a instance of [CountryFlk] (Falkland Islands country).

@@ -10,7 +10,7 @@ extension type const _MhlFactory._(CountryMhl _) implements CountryMhl {
   const _MhlFactory() : this._(const CountryMhl._());
 }
 
-/// A class that represents the the Marshall Islands country.
+/// A class that represents the Marshall Islands country.
 class CountryMhl extends WorldCountry {
   /// {@template sealed_world.country_mhl_constructor}
   /// Creates a instance of [CountryMhl] (Marshall Islands country).

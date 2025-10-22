@@ -4,7 +4,7 @@ extension type const _SzlFactory._(FiatSzl _) implements FiatSzl {
   const _SzlFactory() : this._(const FiatSzl._());
 }
 
-/// A class that represents the the Swazi Lilangeni currency.
+/// A class that represents the Swazi Lilangeni currency.
 class FiatSzl extends FiatCurrency {
   /// {@template sealed_world.currency_szl_constructor}
   /// Creates a instance of [FiatSzl] (Swazi Lilangeni currency).

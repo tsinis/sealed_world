@@ -10,7 +10,7 @@ extension type const _LsoFactory._(CountryLso _) implements CountryLso {
   const _LsoFactory() : this._(const CountryLso._());
 }
 
-/// A class that represents the the Lesotho country.
+/// A class that represents the Lesotho country.
 class CountryLso extends WorldCountry {
   /// {@template sealed_world.country_lso_constructor}
   /// Creates a instance of [CountryLso] (Lesotho country).

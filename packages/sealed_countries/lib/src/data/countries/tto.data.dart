@@ -10,7 +10,7 @@ extension type const _TtoFactory._(CountryTto _) implements CountryTto {
   const _TtoFactory() : this._(const CountryTto._());
 }
 
-/// A class that represents the the Trinidad and Tobago country.
+/// A class that represents the Trinidad and Tobago country.
 class CountryTto extends WorldCountry {
   /// {@template sealed_world.country_tto_constructor}
   /// Creates a instance of [CountryTto] (Trinidad and Tobago country).

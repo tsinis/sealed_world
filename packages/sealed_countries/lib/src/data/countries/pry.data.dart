@@ -10,7 +10,7 @@ extension type const _PryFactory._(CountryPry _) implements CountryPry {
   const _PryFactory() : this._(const CountryPry._());
 }
 
-/// A class that represents the the Paraguay country.
+/// A class that represents the Paraguay country.
 class CountryPry extends WorldCountry {
   /// {@template sealed_world.country_pry_constructor}
   /// Creates a instance of [CountryPry] (Paraguay country).

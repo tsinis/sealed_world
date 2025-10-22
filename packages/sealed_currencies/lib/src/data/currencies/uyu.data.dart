@@ -4,7 +4,7 @@ extension type const _UyuFactory._(FiatUyu _) implements FiatUyu {
   const _UyuFactory() : this._(const FiatUyu._());
 }
 
-/// A class that represents the the Uruguayan Peso currency.
+/// A class that represents the Uruguayan Peso currency.
 class FiatUyu extends FiatCurrency {
   /// {@template sealed_world.currency_uyu_constructor}
   /// Creates a instance of [FiatUyu] (Uruguayan Peso currency).

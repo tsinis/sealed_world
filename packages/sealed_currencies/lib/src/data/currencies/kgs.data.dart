@@ -4,7 +4,7 @@ extension type const _KgsFactory._(FiatKgs _) implements FiatKgs {
   const _KgsFactory() : this._(const FiatKgs._());
 }
 
-/// A class that represents the the Kyrgyzstani Som currency.
+/// A class that represents the Kyrgyzstani Som currency.
 class FiatKgs extends FiatCurrency {
   /// {@template sealed_world.currency_kgs_constructor}
   /// Creates a instance of [FiatKgs] (Kyrgyzstani Som currency).

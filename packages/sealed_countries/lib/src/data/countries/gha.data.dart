@@ -10,7 +10,7 @@ extension type const _GhaFactory._(CountryGha _) implements CountryGha {
   const _GhaFactory() : this._(const CountryGha._());
 }
 
-/// A class that represents the the Ghana country.
+/// A class that represents the Ghana country.
 class CountryGha extends WorldCountry {
   /// {@template sealed_world.country_gha_constructor}
   /// Creates a instance of [CountryGha] (Ghana country).

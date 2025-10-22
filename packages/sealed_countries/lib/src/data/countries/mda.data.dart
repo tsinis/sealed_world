@@ -10,7 +10,7 @@ extension type const _MdaFactory._(CountryMda _) implements CountryMda {
   const _MdaFactory() : this._(const CountryMda._());
 }
 
-/// A class that represents the the Moldova country.
+/// A class that represents the Moldova country.
 class CountryMda extends WorldCountry {
   /// {@template sealed_world.country_mda_constructor}
   /// Creates a instance of [CountryMda] (Moldova country).

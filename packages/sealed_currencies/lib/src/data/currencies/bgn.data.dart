@@ -6,7 +6,7 @@ extension type const _BgnFactory._(FiatBgn _) implements FiatBgn {
   const _BgnFactory() : this._(const FiatBgn._());
 }
 
-/// A class that represents the the Bulgarian Lev currency.
+/// A class that represents the Bulgarian Lev currency.
 @Deprecated("Use `FiatEur()` instead (From 2026)")
 class FiatBgn extends FiatCurrency {
   /// {@template sealed_world.currency_bgn_constructor}

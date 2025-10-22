@@ -10,7 +10,7 @@ extension type const _NorFactory._(CountryNor _) implements CountryNor {
   const _NorFactory() : this._(const CountryNor._());
 }
 
-/// A class that represents the the Norway country.
+/// A class that represents the Norway country.
 class CountryNor extends WorldCountry {
   /// {@template sealed_world.country_nor_constructor}
   /// Creates a instance of [CountryNor] (Norway country).

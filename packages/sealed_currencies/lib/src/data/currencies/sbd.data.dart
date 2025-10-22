@@ -4,7 +4,7 @@ extension type const _SbdFactory._(FiatSbd _) implements FiatSbd {
   const _SbdFactory() : this._(const FiatSbd._());
 }
 
-/// A class that represents the the Solomon Islands Dollar currency.
+/// A class that represents the Solomon Islands Dollar currency.
 class FiatSbd extends FiatCurrency {
   /// {@template sealed_world.currency_sbd_constructor}
   /// Creates a instance of [FiatSbd] (Solomon Islands Dollar currency).

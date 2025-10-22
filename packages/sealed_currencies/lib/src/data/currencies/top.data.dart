@@ -4,7 +4,7 @@ extension type const _TopFactory._(FiatTop _) implements FiatTop {
   const _TopFactory() : this._(const FiatTop._());
 }
 
-/// A class that represents the the Tongan Paʻanga currency.
+/// A class that represents the Tongan Paʻanga currency.
 class FiatTop extends FiatCurrency {
   /// {@template sealed_world.currency_top_constructor}
   /// Creates a instance of [FiatTop] (Tongan Paʻanga currency).

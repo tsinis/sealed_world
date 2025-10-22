@@ -4,7 +4,7 @@ extension type const _SarFactory._(FiatSar _) implements FiatSar {
   const _SarFactory() : this._(const FiatSar._());
 }
 
-/// A class that represents the the Saudi Riyal currency.
+/// A class that represents the Saudi Riyal currency.
 class FiatSar extends FiatCurrency {
   /// {@template sealed_world.currency_sar_constructor}
   /// Creates a instance of [FiatSar] (Saudi Riyal currency).

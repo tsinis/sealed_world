@@ -10,7 +10,7 @@ extension type const _VirFactory._(CountryVir _) implements CountryVir {
   const _VirFactory() : this._(const CountryVir._());
 }
 
-/// A class that represents the the United States Virgin Islands country.
+/// A class that represents the United States Virgin Islands country.
 class CountryVir extends WorldCountry {
   /// {@template sealed_world.country_vir_constructor}
   /// Creates a instance of [CountryVir] (United States Virgin Islands country).

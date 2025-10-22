@@ -4,7 +4,7 @@ extension type const _PgkFactory._(FiatPgk _) implements FiatPgk {
   const _PgkFactory() : this._(const FiatPgk._());
 }
 
-/// A class that represents the the Papua New Guinean Kina currency.
+/// A class that represents the Papua New Guinean Kina currency.
 class FiatPgk extends FiatCurrency {
   /// {@template sealed_world.currency_pgk_constructor}
   /// Creates a instance of [FiatPgk] (Papua New Guinean Kina currency).

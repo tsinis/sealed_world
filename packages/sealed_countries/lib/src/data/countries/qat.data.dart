@@ -10,7 +10,7 @@ extension type const _QatFactory._(CountryQat _) implements CountryQat {
   const _QatFactory() : this._(const CountryQat._());
 }
 
-/// A class that represents the the Qatar country.
+/// A class that represents the Qatar country.
 class CountryQat extends WorldCountry {
   /// {@template sealed_world.country_qat_constructor}
   /// Creates a instance of [CountryQat] (Qatar country).

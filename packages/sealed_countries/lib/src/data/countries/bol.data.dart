@@ -10,7 +10,7 @@ extension type const _BolFactory._(CountryBol _) implements CountryBol {
   const _BolFactory() : this._(const CountryBol._());
 }
 
-/// A class that represents the the Bolivia country.
+/// A class that represents the Bolivia country.
 class CountryBol extends WorldCountry {
   /// {@template sealed_world.country_bol_constructor}
   /// Creates a instance of [CountryBol] (Bolivia country).

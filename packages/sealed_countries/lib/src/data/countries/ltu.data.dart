@@ -10,7 +10,7 @@ extension type const _LtuFactory._(CountryLtu _) implements CountryLtu {
   const _LtuFactory() : this._(const CountryLtu._());
 }
 
-/// A class that represents the the Lithuania country.
+/// A class that represents the Lithuania country.
 class CountryLtu extends WorldCountry {
   /// {@template sealed_world.country_ltu_constructor}
   /// Creates a instance of [CountryLtu] (Lithuania country).

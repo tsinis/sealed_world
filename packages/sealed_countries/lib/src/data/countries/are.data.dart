@@ -10,7 +10,7 @@ extension type const _AreFactory._(CountryAre _) implements CountryAre {
   const _AreFactory() : this._(const CountryAre._());
 }
 
-/// A class that represents the the United Arab Emirates country.
+/// A class that represents the United Arab Emirates country.
 class CountryAre extends WorldCountry {
   /// {@template sealed_world.country_are_constructor}
   /// Creates a instance of [CountryAre] (United Arab Emirates country).

@@ -10,7 +10,7 @@ extension type const _KenFactory._(CountryKen _) implements CountryKen {
   const _KenFactory() : this._(const CountryKen._());
 }
 
-/// A class that represents the the Kenya country.
+/// A class that represents the Kenya country.
 class CountryKen extends WorldCountry {
   /// {@template sealed_world.country_ken_constructor}
   /// Creates a instance of [CountryKen] (Kenya country).

@@ -4,7 +4,7 @@ extension type const _IqdFactory._(FiatIqd _) implements FiatIqd {
   const _IqdFactory() : this._(const FiatIqd._());
 }
 
-/// A class that represents the the Iraqi Dinar currency.
+/// A class that represents the Iraqi Dinar currency.
 class FiatIqd extends FiatCurrency {
   /// {@template sealed_world.currency_iqd_constructor}
   /// Creates a instance of [FiatIqd] (Iraqi Dinar currency).

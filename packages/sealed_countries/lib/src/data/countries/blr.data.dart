@@ -10,7 +10,7 @@ extension type const _BlrFactory._(CountryBlr _) implements CountryBlr {
   const _BlrFactory() : this._(const CountryBlr._());
 }
 
-/// A class that represents the the Belarus country.
+/// A class that represents the Belarus country.
 class CountryBlr extends WorldCountry {
   /// {@template sealed_world.country_blr_constructor}
   /// Creates a instance of [CountryBlr] (Belarus country).

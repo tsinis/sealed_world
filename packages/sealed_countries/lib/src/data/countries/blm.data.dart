@@ -10,7 +10,7 @@ extension type const _BlmFactory._(CountryBlm _) implements CountryBlm {
   const _BlmFactory() : this._(const CountryBlm._());
 }
 
-/// A class that represents the the Saint Barthélemy country.
+/// A class that represents the Saint Barthélemy country.
 class CountryBlm extends WorldCountry {
   /// {@template sealed_world.country_blm_constructor}
   /// Creates a instance of [CountryBlm] (Saint Barthélemy country).

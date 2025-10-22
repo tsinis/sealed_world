@@ -4,7 +4,7 @@ extension type const _SdgFactory._(FiatSdg _) implements FiatSdg {
   const _SdgFactory() : this._(const FiatSdg._());
 }
 
-/// A class that represents the the Sudanese Pound currency.
+/// A class that represents the Sudanese Pound currency.
 class FiatSdg extends FiatCurrency {
   /// {@template sealed_world.currency_sdg_constructor}
   /// Creates a instance of [FiatSdg] (Sudanese Pound currency).

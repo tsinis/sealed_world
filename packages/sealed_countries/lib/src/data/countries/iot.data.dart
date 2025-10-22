@@ -10,7 +10,7 @@ extension type const _IotFactory._(CountryIot _) implements CountryIot {
   const _IotFactory() : this._(const CountryIot._());
 }
 
-/// A class that represents the the British Indian Ocean Territory country.
+/// A class that represents the British Indian Ocean Territory country.
 class CountryIot extends WorldCountry {
   /// {@template sealed_world.country_iot_constructor}
   /// Creates a instance of [CountryIot] (British Indian Ocean Territory country).

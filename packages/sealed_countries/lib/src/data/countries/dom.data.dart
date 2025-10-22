@@ -10,7 +10,7 @@ extension type const _DomFactory._(CountryDom _) implements CountryDom {
   const _DomFactory() : this._(const CountryDom._());
 }
 
-/// A class that represents the the Dominican Republic country.
+/// A class that represents the Dominican Republic country.
 class CountryDom extends WorldCountry {
   /// {@template sealed_world.country_dom_constructor}
   /// Creates a instance of [CountryDom] (Dominican Republic country).

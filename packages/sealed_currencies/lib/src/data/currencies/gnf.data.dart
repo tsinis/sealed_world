@@ -4,7 +4,7 @@ extension type const _GnfFactory._(FiatGnf _) implements FiatGnf {
   const _GnfFactory() : this._(const FiatGnf._());
 }
 
-/// A class that represents the the Guinean Franc currency.
+/// A class that represents the Guinean Franc currency.
 class FiatGnf extends FiatCurrency {
   /// {@template sealed_world.currency_gnf_constructor}
   /// Creates a instance of [FiatGnf] (Guinean Franc currency).

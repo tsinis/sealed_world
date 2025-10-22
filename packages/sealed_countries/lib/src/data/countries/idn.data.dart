@@ -10,7 +10,7 @@ extension type const _IdnFactory._(CountryIdn _) implements CountryIdn {
   const _IdnFactory() : this._(const CountryIdn._());
 }
 
-/// A class that represents the the Indonesia country.
+/// A class that represents the Indonesia country.
 class CountryIdn extends WorldCountry {
   /// {@template sealed_world.country_idn_constructor}
   /// Creates a instance of [CountryIdn] (Indonesia country).

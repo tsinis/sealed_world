@@ -4,7 +4,7 @@ extension type const _TzsFactory._(FiatTzs _) implements FiatTzs {
   const _TzsFactory() : this._(const FiatTzs._());
 }
 
-/// A class that represents the the Tanzanian Shilling currency.
+/// A class that represents the Tanzanian Shilling currency.
 class FiatTzs extends FiatCurrency {
   /// {@template sealed_world.currency_tzs_constructor}
   /// Creates a instance of [FiatTzs] (Tanzanian Shilling currency).

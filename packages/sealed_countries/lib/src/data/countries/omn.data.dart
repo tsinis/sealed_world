@@ -10,7 +10,7 @@ extension type const _OmnFactory._(CountryOmn _) implements CountryOmn {
   const _OmnFactory() : this._(const CountryOmn._());
 }
 
-/// A class that represents the the Oman country.
+/// A class that represents the Oman country.
 class CountryOmn extends WorldCountry {
   /// {@template sealed_world.country_omn_constructor}
   /// Creates a instance of [CountryOmn] (Oman country).

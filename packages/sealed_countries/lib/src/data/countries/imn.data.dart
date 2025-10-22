@@ -10,7 +10,7 @@ extension type const _ImnFactory._(CountryImn _) implements CountryImn {
   const _ImnFactory() : this._(const CountryImn._());
 }
 
-/// A class that represents the the Isle of Man country.
+/// A class that represents the Isle of Man country.
 class CountryImn extends WorldCountry {
   /// {@template sealed_world.country_imn_constructor}
   /// Creates a instance of [CountryImn] (Isle of Man country).

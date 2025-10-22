@@ -10,7 +10,7 @@ extension type const _SvkFactory._(CountrySvk _) implements CountrySvk {
   const _SvkFactory() : this._(const CountrySvk._());
 }
 
-/// A class that represents the the Slovakia country.
+/// A class that represents the Slovakia country.
 class CountrySvk extends WorldCountry {
   /// {@template sealed_world.country_svk_constructor}
   /// Creates a instance of [CountrySvk] (Slovakia country).

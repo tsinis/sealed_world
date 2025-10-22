@@ -10,7 +10,7 @@ extension type const _PseFactory._(CountryPse _) implements CountryPse {
   const _PseFactory() : this._(const CountryPse._());
 }
 
-/// A class that represents the the Palestine country.
+/// A class that represents the Palestine country.
 class CountryPse extends WorldCountry {
   /// {@template sealed_world.country_pse_constructor}
   /// Creates a instance of [CountryPse] (Palestine country).

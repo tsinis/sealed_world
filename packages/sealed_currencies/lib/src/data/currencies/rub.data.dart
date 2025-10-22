@@ -4,7 +4,7 @@ extension type const _RubFactory._(FiatRub _) implements FiatRub {
   const _RubFactory() : this._(const FiatRub._());
 }
 
-/// A class that represents the the Russian Ruble currency.
+/// A class that represents the Russian Ruble currency.
 class FiatRub extends FiatCurrency {
   /// {@template sealed_world.currency_rub_constructor}
   /// Creates a instance of [FiatRub] (Russian Ruble currency).

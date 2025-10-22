@@ -10,7 +10,7 @@ extension type const _GmbFactory._(CountryGmb _) implements CountryGmb {
   const _GmbFactory() : this._(const CountryGmb._());
 }
 
-/// A class that represents the the Gambia country.
+/// A class that represents the Gambia country.
 class CountryGmb extends WorldCountry {
   /// {@template sealed_world.country_gmb_constructor}
   /// Creates a instance of [CountryGmb] (Gambia country).

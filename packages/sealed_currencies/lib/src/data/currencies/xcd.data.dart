@@ -4,7 +4,7 @@ extension type const _XcdFactory._(FiatXcd _) implements FiatXcd {
   const _XcdFactory() : this._(const FiatXcd._());
 }
 
-/// A class that represents the the East Caribbean Dollar currency.
+/// A class that represents the East Caribbean Dollar currency.
 class FiatXcd extends FiatCurrency {
   /// {@template sealed_world.currency_xcd_constructor}
   /// Creates a instance of [FiatXcd] (East Caribbean Dollar currency).

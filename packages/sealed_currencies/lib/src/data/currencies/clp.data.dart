@@ -4,7 +4,7 @@ extension type const _ClpFactory._(FiatClp _) implements FiatClp {
   const _ClpFactory() : this._(const FiatClp._());
 }
 
-/// A class that represents the the Chilean Peso currency.
+/// A class that represents the Chilean Peso currency.
 class FiatClp extends FiatCurrency {
   /// {@template sealed_world.currency_clp_constructor}
   /// Creates a instance of [FiatClp] (Chilean Peso currency).

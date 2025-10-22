@@ -10,7 +10,7 @@ extension type const _ItaFactory._(CountryIta _) implements CountryIta {
   const _ItaFactory() : this._(const CountryIta._());
 }
 
-/// A class that represents the the Italy country.
+/// A class that represents the Italy country.
 class CountryIta extends WorldCountry {
   /// {@template sealed_world.country_ita_constructor}
   /// Creates a instance of [CountryIta] (Italy country).

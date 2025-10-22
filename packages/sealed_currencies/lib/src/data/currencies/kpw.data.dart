@@ -4,7 +4,7 @@ extension type const _KpwFactory._(FiatKpw _) implements FiatKpw {
   const _KpwFactory() : this._(const FiatKpw._());
 }
 
-/// A class that represents the the North Korean Won currency.
+/// A class that represents the North Korean Won currency.
 class FiatKpw extends FiatCurrency {
   /// {@template sealed_world.currency_kpw_constructor}
   /// Creates a instance of [FiatKpw] (North Korean Won currency).

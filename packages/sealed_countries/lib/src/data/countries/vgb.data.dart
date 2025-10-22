@@ -10,7 +10,7 @@ extension type const _VgbFactory._(CountryVgb _) implements CountryVgb {
   const _VgbFactory() : this._(const CountryVgb._());
 }
 
-/// A class that represents the the British Virgin Islands country.
+/// A class that represents the British Virgin Islands country.
 class CountryVgb extends WorldCountry {
   /// {@template sealed_world.country_vgb_constructor}
   /// Creates a instance of [CountryVgb] (British Virgin Islands country).

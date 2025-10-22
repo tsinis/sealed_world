@@ -10,7 +10,7 @@ extension type const _SrbFactory._(CountrySrb _) implements CountrySrb {
   const _SrbFactory() : this._(const CountrySrb._());
 }
 
-/// A class that represents the the Serbia country.
+/// A class that represents the Serbia country.
 class CountrySrb extends WorldCountry {
   /// {@template sealed_world.country_srb_constructor}
   /// Creates a instance of [CountrySrb] (Serbia country).

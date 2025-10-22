@@ -4,7 +4,7 @@ extension type const _AoaFactory._(FiatAoa _) implements FiatAoa {
   const _AoaFactory() : this._(const FiatAoa._());
 }
 
-/// A class that represents the the Angolan Kwanza currency.
+/// A class that represents the Angolan Kwanza currency.
 class FiatAoa extends FiatCurrency {
   /// {@template sealed_world.currency_aoa_constructor}
   /// Creates a instance of [FiatAoa] (Angolan Kwanza currency).

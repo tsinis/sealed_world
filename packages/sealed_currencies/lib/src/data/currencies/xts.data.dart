@@ -4,8 +4,8 @@ extension type const _XtsFactory._(FiatXts _) implements FiatXts {
   const _XtsFactory() : this._(const FiatXts._());
 }
 
-/// A class that represents the Codes specifically reserved for testing purposes
-/// currency.
+/// A class that represents the Codes specifically reserved for testing
+/// purposes currency.
 class FiatXts extends FiatCurrency {
   /// {@template sealed_world.currency_xts_constructor}
   /// Creates a instance of [FiatXts] (Codes specifically reserved for testing

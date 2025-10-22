@@ -10,7 +10,7 @@ extension type const _IrqFactory._(CountryIrq _) implements CountryIrq {
   const _IrqFactory() : this._(const CountryIrq._());
 }
 
-/// A class that represents the the Iraq country.
+/// A class that represents the Iraq country.
 class CountryIrq extends WorldCountry {
   /// {@template sealed_world.country_irq_constructor}
   /// Creates a instance of [CountryIrq] (Iraq country).

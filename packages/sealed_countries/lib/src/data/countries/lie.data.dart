@@ -10,7 +10,7 @@ extension type const _LieFactory._(CountryLie _) implements CountryLie {
   const _LieFactory() : this._(const CountryLie._());
 }
 
-/// A class that represents the the Liechtenstein country.
+/// A class that represents the Liechtenstein country.
 class CountryLie extends WorldCountry {
   /// {@template sealed_world.country_lie_constructor}
   /// Creates a instance of [CountryLie] (Liechtenstein country).

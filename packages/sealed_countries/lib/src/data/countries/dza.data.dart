@@ -10,7 +10,7 @@ extension type const _DzaFactory._(CountryDza _) implements CountryDza {
   const _DzaFactory() : this._(const CountryDza._());
 }
 
-/// A class that represents the the Algeria country.
+/// A class that represents the Algeria country.
 class CountryDza extends WorldCountry {
   /// {@template sealed_world.country_dza_constructor}
   /// Creates a instance of [CountryDza] (Algeria country).

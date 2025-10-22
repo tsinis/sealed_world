@@ -10,7 +10,7 @@ extension type const _NldFactory._(CountryNld _) implements CountryNld {
   const _NldFactory() : this._(const CountryNld._());
 }
 
-/// A class that represents the the Netherlands country.
+/// A class that represents the Netherlands country.
 class CountryNld extends WorldCountry {
   /// {@template sealed_world.country_nld_constructor}
   /// Creates a instance of [CountryNld] (Netherlands country).

@@ -4,7 +4,7 @@ extension type const _BobFactory._(FiatBob _) implements FiatBob {
   const _BobFactory() : this._(const FiatBob._());
 }
 
-/// A class that represents the the Bolivian Boliviano currency.
+/// A class that represents the Bolivian Boliviano currency.
 class FiatBob extends FiatCurrency {
   /// {@template sealed_world.currency_bob_constructor}
   /// Creates a instance of [FiatBob] (Bolivian Boliviano currency).

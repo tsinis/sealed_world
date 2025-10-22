@@ -10,7 +10,7 @@ extension type const _GinFactory._(CountryGin _) implements CountryGin {
   const _GinFactory() : this._(const CountryGin._());
 }
 
-/// A class that represents the the Guinea country.
+/// A class that represents the Guinea country.
 class CountryGin extends WorldCountry {
   /// {@template sealed_world.country_gin_constructor}
   /// Creates a instance of [CountryGin] (Guinea country).

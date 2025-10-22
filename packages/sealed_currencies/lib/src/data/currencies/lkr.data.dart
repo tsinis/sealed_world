@@ -4,7 +4,7 @@ extension type const _LkrFactory._(FiatLkr _) implements FiatLkr {
   const _LkrFactory() : this._(const FiatLkr._());
 }
 
-/// A class that represents the the Sri Lankan Rupee currency.
+/// A class that represents the Sri Lankan Rupee currency.
 class FiatLkr extends FiatCurrency {
   /// {@template sealed_world.currency_lkr_constructor}
   /// Creates a instance of [FiatLkr] (Sri Lankan Rupee currency).

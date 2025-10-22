@@ -10,7 +10,7 @@ extension type const _TzaFactory._(CountryTza _) implements CountryTza {
   const _TzaFactory() : this._(const CountryTza._());
 }
 
-/// A class that represents the the Tanzania country.
+/// A class that represents the Tanzania country.
 class CountryTza extends WorldCountry {
   /// {@template sealed_world.country_tza_constructor}
   /// Creates a instance of [CountryTza] (Tanzania country).

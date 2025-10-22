@@ -10,7 +10,7 @@ extension type const _AsmFactory._(CountryAsm _) implements CountryAsm {
   const _AsmFactory() : this._(const CountryAsm._());
 }
 
-/// A class that represents the the American Samoa country.
+/// A class that represents the American Samoa country.
 class CountryAsm extends WorldCountry {
   /// {@template sealed_world.country_asm_constructor}
   /// Creates a instance of [CountryAsm] (American Samoa country).

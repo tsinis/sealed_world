@@ -4,7 +4,7 @@ extension type const _GelFactory._(FiatGel _) implements FiatGel {
   const _GelFactory() : this._(const FiatGel._());
 }
 
-/// A class that represents the the Georgian Lari currency.
+/// A class that represents the Georgian Lari currency.
 class FiatGel extends FiatCurrency {
   /// {@template sealed_world.currency_gel_constructor}
   /// Creates a instance of [FiatGel] (Georgian Lari currency).

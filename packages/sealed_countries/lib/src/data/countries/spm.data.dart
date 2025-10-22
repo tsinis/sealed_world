@@ -10,7 +10,7 @@ extension type const _SpmFactory._(CountrySpm _) implements CountrySpm {
   const _SpmFactory() : this._(const CountrySpm._());
 }
 
-/// A class that represents the the Saint Pierre and Miquelon country.
+/// A class that represents the Saint Pierre and Miquelon country.
 class CountrySpm extends WorldCountry {
   /// {@template sealed_world.country_spm_constructor}
   /// Creates a instance of [CountrySpm] (Saint Pierre and Miquelon country).

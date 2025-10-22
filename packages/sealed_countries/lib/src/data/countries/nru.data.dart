@@ -10,7 +10,7 @@ extension type const _NruFactory._(CountryNru _) implements CountryNru {
   const _NruFactory() : this._(const CountryNru._());
 }
 
-/// A class that represents the the Nauru country.
+/// A class that represents the Nauru country.
 class CountryNru extends WorldCountry {
   /// {@template sealed_world.country_nru_constructor}
   /// Creates a instance of [CountryNru] (Nauru country).

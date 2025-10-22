@@ -10,7 +10,7 @@ extension type const _ThaFactory._(CountryTha _) implements CountryTha {
   const _ThaFactory() : this._(const CountryTha._());
 }
 
-/// A class that represents the the Thailand country.
+/// A class that represents the Thailand country.
 class CountryTha extends WorldCountry {
   /// {@template sealed_world.country_tha_constructor}
   /// Creates a instance of [CountryTha] (Thailand country).

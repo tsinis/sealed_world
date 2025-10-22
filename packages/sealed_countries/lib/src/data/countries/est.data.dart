@@ -10,7 +10,7 @@ extension type const _EstFactory._(CountryEst _) implements CountryEst {
   const _EstFactory() : this._(const CountryEst._());
 }
 
-/// A class that represents the the Estonia country.
+/// A class that represents the Estonia country.
 class CountryEst extends WorldCountry {
   /// {@template sealed_world.country_est_constructor}
   /// Creates a instance of [CountryEst] (Estonia country).

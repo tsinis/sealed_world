@@ -10,7 +10,7 @@ extension type const _CubFactory._(CountryCub _) implements CountryCub {
   const _CubFactory() : this._(const CountryCub._());
 }
 
-/// A class that represents the the Cuba country.
+/// A class that represents the Cuba country.
 class CountryCub extends WorldCountry {
   /// {@template sealed_world.country_cub_constructor}
   /// Creates a instance of [CountryCub] (Cuba country).

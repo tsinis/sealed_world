@@ -10,7 +10,7 @@ extension type const _MozFactory._(CountryMoz _) implements CountryMoz {
   const _MozFactory() : this._(const CountryMoz._());
 }
 
-/// A class that represents the the Mozambique country.
+/// A class that represents the Mozambique country.
 class CountryMoz extends WorldCountry {
   /// {@template sealed_world.country_moz_constructor}
   /// Creates a instance of [CountryMoz] (Mozambique country).

@@ -10,7 +10,7 @@ extension type const _MysFactory._(CountryMys _) implements CountryMys {
   const _MysFactory() : this._(const CountryMys._());
 }
 
-/// A class that represents the the Malaysia country.
+/// A class that represents the Malaysia country.
 class CountryMys extends WorldCountry {
   /// {@template sealed_world.country_mys_constructor}
   /// Creates a instance of [CountryMys] (Malaysia country).

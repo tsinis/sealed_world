@@ -10,7 +10,7 @@ extension type const _AtaFactory._(CountryAta _) implements CountryAta {
   const _AtaFactory() : this._(const CountryAta._());
 }
 
-/// A class that represents the the Antarctica country.
+/// A class that represents the Antarctica country.
 class CountryAta extends WorldCountry {
   /// {@template sealed_world.country_ata_constructor}
   /// Creates a instance of [CountryAta] (Antarctica country).

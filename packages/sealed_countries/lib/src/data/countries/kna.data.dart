@@ -10,7 +10,7 @@ extension type const _KnaFactory._(CountryKna _) implements CountryKna {
   const _KnaFactory() : this._(const CountryKna._());
 }
 
-/// A class that represents the the Saint Kitts and Nevis country.
+/// A class that represents the Saint Kitts and Nevis country.
 class CountryKna extends WorldCountry {
   /// {@template sealed_world.country_kna_constructor}
   /// Creates a instance of [CountryKna] (Saint Kitts and Nevis country).

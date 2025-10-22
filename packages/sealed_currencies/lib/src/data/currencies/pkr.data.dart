@@ -4,7 +4,7 @@ extension type const _PkrFactory._(FiatPkr _) implements FiatPkr {
   const _PkrFactory() : this._(const FiatPkr._());
 }
 
-/// A class that represents the the Pakistani Rupee currency.
+/// A class that represents the Pakistani Rupee currency.
 class FiatPkr extends FiatCurrency {
   /// {@template sealed_world.currency_pkr_constructor}
   /// Creates a instance of [FiatPkr] (Pakistani Rupee currency).

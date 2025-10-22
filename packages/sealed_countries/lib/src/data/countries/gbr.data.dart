@@ -10,7 +10,7 @@ extension type const _GbrFactory._(CountryGbr _) implements CountryGbr {
   const _GbrFactory() : this._(const CountryGbr._());
 }
 
-/// A class that represents the the United Kingdom country.
+/// A class that represents the United Kingdom country.
 class CountryGbr extends WorldCountry {
   /// {@template sealed_world.country_gbr_constructor}
   /// Creates a instance of [CountryGbr] (United Kingdom country).

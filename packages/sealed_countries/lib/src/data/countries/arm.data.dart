@@ -10,7 +10,7 @@ extension type const _ArmFactory._(CountryArm _) implements CountryArm {
   const _ArmFactory() : this._(const CountryArm._());
 }
 
-/// A class that represents the the Armenia country.
+/// A class that represents the Armenia country.
 class CountryArm extends WorldCountry {
   /// {@template sealed_world.country_arm_constructor}
   /// Creates a instance of [CountryArm] (Armenia country).

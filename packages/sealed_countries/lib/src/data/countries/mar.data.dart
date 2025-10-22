@@ -10,7 +10,7 @@ extension type const _MarFactory._(CountryMar _) implements CountryMar {
   const _MarFactory() : this._(const CountryMar._());
 }
 
-/// A class that represents the the Morocco country.
+/// A class that represents the Morocco country.
 class CountryMar extends WorldCountry {
   /// {@template sealed_world.country_mar_constructor}
   /// Creates a instance of [CountryMar] (Morocco country).

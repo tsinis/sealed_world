@@ -4,7 +4,7 @@ extension type const _MntFactory._(FiatMnt _) implements FiatMnt {
   const _MntFactory() : this._(const FiatMnt._());
 }
 
-/// A class that represents the the Mongolian Tugrik currency.
+/// A class that represents the Mongolian Tugrik currency.
 class FiatMnt extends FiatCurrency {
   /// {@template sealed_world.currency_mnt_constructor}
   /// Creates a instance of [FiatMnt] (Mongolian Tugrik currency).

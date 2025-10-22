@@ -4,7 +4,7 @@ extension type const _TwdFactory._(FiatTwd _) implements FiatTwd {
   const _TwdFactory() : this._(const FiatTwd._());
 }
 
-/// A class that represents the the New Taiwan Dollar currency.
+/// A class that represents the New Taiwan Dollar currency.
 class FiatTwd extends FiatCurrency {
   /// {@template sealed_world.currency_twd_constructor}
   /// Creates a instance of [FiatTwd] (New Taiwan Dollar currency).

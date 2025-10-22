@@ -10,7 +10,7 @@ extension type const _MusFactory._(CountryMus _) implements CountryMus {
   const _MusFactory() : this._(const CountryMus._());
 }
 
-/// A class that represents the the Mauritius country.
+/// A class that represents the Mauritius country.
 class CountryMus extends WorldCountry {
   /// {@template sealed_world.country_mus_constructor}
   /// Creates a instance of [CountryMus] (Mauritius country).

@@ -10,7 +10,7 @@ extension type const _AfgFactory._(CountryAfg _) implements CountryAfg {
   const _AfgFactory() : this._(const CountryAfg._());
 }
 
-/// A class that represents the the Afghanistan country.
+/// A class that represents the Afghanistan country.
 class CountryAfg extends WorldCountry {
   /// {@template sealed_world.country_afg_constructor}
   /// Creates a instance of [CountryAfg] (Afghanistan country).

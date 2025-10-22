@@ -10,7 +10,7 @@ extension type const _SxmFactory._(CountrySxm _) implements CountrySxm {
   const _SxmFactory() : this._(const CountrySxm._());
 }
 
-/// A class that represents the the Sint Maarten country.
+/// A class that represents the Sint Maarten country.
 class CountrySxm extends WorldCountry {
   /// {@template sealed_world.country_sxm_constructor}
   /// Creates a instance of [CountrySxm] (Sint Maarten country).

@@ -10,7 +10,7 @@ extension type const _McoFactory._(CountryMco _) implements CountryMco {
   const _McoFactory() : this._(const CountryMco._());
 }
 
-/// A class that represents the the Monaco country.
+/// A class that represents the Monaco country.
 class CountryMco extends WorldCountry {
   /// {@template sealed_world.country_mco_constructor}
   /// Creates a instance of [CountryMco] (Monaco country).

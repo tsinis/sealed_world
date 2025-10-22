@@ -10,7 +10,7 @@ extension type const _FsmFactory._(CountryFsm _) implements CountryFsm {
   const _FsmFactory() : this._(const CountryFsm._());
 }
 
-/// A class that represents the the Micronesia country.
+/// A class that represents the Micronesia country.
 class CountryFsm extends WorldCountry {
   /// {@template sealed_world.country_fsm_constructor}
   /// Creates a instance of [CountryFsm] (Micronesia country).

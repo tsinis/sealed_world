@@ -10,7 +10,7 @@ extension type const _EthFactory._(CountryEth _) implements CountryEth {
   const _EthFactory() : this._(const CountryEth._());
 }
 
-/// A class that represents the the Ethiopia country.
+/// A class that represents the Ethiopia country.
 class CountryEth extends WorldCountry {
   /// {@template sealed_world.country_eth_constructor}
   /// Creates a instance of [CountryEth] (Ethiopia country).

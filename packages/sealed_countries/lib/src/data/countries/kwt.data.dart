@@ -10,7 +10,7 @@ extension type const _KwtFactory._(CountryKwt _) implements CountryKwt {
   const _KwtFactory() : this._(const CountryKwt._());
 }
 
-/// A class that represents the the Kuwait country.
+/// A class that represents the Kuwait country.
 class CountryKwt extends WorldCountry {
   /// {@template sealed_world.country_kwt_constructor}
   /// Creates a instance of [CountryKwt] (Kuwait country).

@@ -4,7 +4,7 @@ extension type const _SrdFactory._(FiatSrd _) implements FiatSrd {
   const _SrdFactory() : this._(const FiatSrd._());
 }
 
-/// A class that represents the the Surinamese Dollar currency.
+/// A class that represents the Surinamese Dollar currency.
 class FiatSrd extends FiatCurrency {
   /// {@template sealed_world.currency_srd_constructor}
   /// Creates a instance of [FiatSrd] (Surinamese Dollar currency).

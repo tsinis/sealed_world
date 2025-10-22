@@ -10,7 +10,7 @@ extension type const _GnbFactory._(CountryGnb _) implements CountryGnb {
   const _GnbFactory() : this._(const CountryGnb._());
 }
 
-/// A class that represents the the Guinea-Bissau country.
+/// A class that represents the Guinea-Bissau country.
 class CountryGnb extends WorldCountry {
   /// {@template sealed_world.country_gnb_constructor}
   /// Creates a instance of [CountryGnb] (Guinea-Bissau country).

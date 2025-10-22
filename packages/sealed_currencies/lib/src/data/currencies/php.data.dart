@@ -4,7 +4,7 @@ extension type const _PhpFactory._(FiatPhp _) implements FiatPhp {
   const _PhpFactory() : this._(const FiatPhp._());
 }
 
-/// A class that represents the the Philippine Peso currency.
+/// A class that represents the Philippine Peso currency.
 class FiatPhp extends FiatCurrency {
   /// {@template sealed_world.currency_php_constructor}
   /// Creates a instance of [FiatPhp] (Philippine Peso currency).

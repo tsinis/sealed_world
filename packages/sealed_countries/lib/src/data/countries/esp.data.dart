@@ -10,7 +10,7 @@ extension type const _EspFactory._(CountryEsp _) implements CountryEsp {
   const _EspFactory() : this._(const CountryEsp._());
 }
 
-/// A class that represents the the Spain country.
+/// A class that represents the Spain country.
 class CountryEsp extends WorldCountry {
   /// {@template sealed_world.country_esp_constructor}
   /// Creates a instance of [CountryEsp] (Spain country).

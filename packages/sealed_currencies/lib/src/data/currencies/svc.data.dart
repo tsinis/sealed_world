@@ -6,7 +6,7 @@ extension type const _SvcFactory._(FiatSvc _) implements FiatSvc {
   const _SvcFactory() : this._(const FiatSvc._());
 }
 
-/// A class that represents the the Salvadoran Colón currency.
+/// A class that represents the Salvadoran Colón currency.
 @Deprecated("Use `FiatUsd()` instead")
 class FiatSvc extends FiatCurrency {
   /// {@template sealed_world.currency_svc_constructor}

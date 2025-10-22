@@ -10,7 +10,7 @@ extension type const _VenFactory._(CountryVen _) implements CountryVen {
   const _VenFactory() : this._(const CountryVen._());
 }
 
-/// A class that represents the the Venezuela country.
+/// A class that represents the Venezuela country.
 class CountryVen extends WorldCountry {
   /// {@template sealed_world.country_ven_constructor}
   /// Creates a instance of [CountryVen] (Venezuela country).

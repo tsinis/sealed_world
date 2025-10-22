@@ -4,7 +4,7 @@ extension type const _WstFactory._(FiatWst _) implements FiatWst {
   const _WstFactory() : this._(const FiatWst._());
 }
 
-/// A class that represents the the Samoan Tala currency.
+/// A class that represents the Samoan Tala currency.
 class FiatWst extends FiatCurrency {
   /// {@template sealed_world.currency_wst_constructor}
   /// Creates a instance of [FiatWst] (Samoan Tala currency).

@@ -4,7 +4,7 @@ extension type const _MmkFactory._(FiatMmk _) implements FiatMmk {
   const _MmkFactory() : this._(const FiatMmk._());
 }
 
-/// A class that represents the the Myanmar Kyat currency.
+/// A class that represents the Myanmar Kyat currency.
 class FiatMmk extends FiatCurrency {
   /// {@template sealed_world.currency_mmk_constructor}
   /// Creates a instance of [FiatMmk] (Myanmar Kyat currency).

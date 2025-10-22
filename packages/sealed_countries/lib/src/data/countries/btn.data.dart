@@ -10,7 +10,7 @@ extension type const _BtnFactory._(CountryBtn _) implements CountryBtn {
   const _BtnFactory() : this._(const CountryBtn._());
 }
 
-/// A class that represents the the Bhutan country.
+/// A class that represents the Bhutan country.
 class CountryBtn extends WorldCountry {
   /// {@template sealed_world.country_btn_constructor}
   /// Creates a instance of [CountryBtn] (Bhutan country).

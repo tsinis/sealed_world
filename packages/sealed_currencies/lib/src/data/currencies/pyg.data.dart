@@ -4,7 +4,7 @@ extension type const _PygFactory._(FiatPyg _) implements FiatPyg {
   const _PygFactory() : this._(const FiatPyg._());
 }
 
-/// A class that represents the the Paraguayan Guarani currency.
+/// A class that represents the Paraguayan Guarani currency.
 class FiatPyg extends FiatCurrency {
   /// {@template sealed_world.currency_pyg_constructor}
   /// Creates a instance of [FiatPyg] (Paraguayan Guarani currency).

@@ -4,7 +4,7 @@ extension type const _JmdFactory._(FiatJmd _) implements FiatJmd {
   const _JmdFactory() : this._(const FiatJmd._());
 }
 
-/// A class that represents the the Jamaican Dollar currency.
+/// A class that represents the Jamaican Dollar currency.
 class FiatJmd extends FiatCurrency {
   /// {@template sealed_world.currency_jmd_constructor}
   /// Creates a instance of [FiatJmd] (Jamaican Dollar currency).

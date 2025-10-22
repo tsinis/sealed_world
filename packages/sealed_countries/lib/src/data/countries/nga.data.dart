@@ -10,7 +10,7 @@ extension type const _NgaFactory._(CountryNga _) implements CountryNga {
   const _NgaFactory() : this._(const CountryNga._());
 }
 
-/// A class that represents the the Nigeria country.
+/// A class that represents the Nigeria country.
 class CountryNga extends WorldCountry {
   /// {@template sealed_world.country_nga_constructor}
   /// Creates a instance of [CountryNga] (Nigeria country).

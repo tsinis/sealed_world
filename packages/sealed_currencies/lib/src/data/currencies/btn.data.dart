@@ -4,7 +4,7 @@ extension type const _BtnFactory._(FiatBtn _) implements FiatBtn {
   const _BtnFactory() : this._(const FiatBtn._());
 }
 
-/// A class that represents the the Bhutanese Ngultrum currency.
+/// A class that represents the Bhutanese Ngultrum currency.
 class FiatBtn extends FiatCurrency {
   /// {@template sealed_world.currency_btn_constructor}
   /// Creates a instance of [FiatBtn] (Bhutanese Ngultrum currency).

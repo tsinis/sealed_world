@@ -4,7 +4,7 @@ extension type const _AllFactory._(FiatAll _) implements FiatAll {
   const _AllFactory() : this._(const FiatAll._());
 }
 
-/// A class that represents the the Albanian Lek currency.
+/// A class that represents the Albanian Lek currency.
 class FiatAll extends FiatCurrency {
   /// {@template sealed_world.currency_all_constructor}
   /// Creates a instance of [FiatAll] (Albanian Lek currency).

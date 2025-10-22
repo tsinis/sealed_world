@@ -4,7 +4,7 @@ extension type const _MvrFactory._(FiatMvr _) implements FiatMvr {
   const _MvrFactory() : this._(const FiatMvr._());
 }
 
-/// A class that represents the the Maldivian Rufiyaa currency.
+/// A class that represents the Maldivian Rufiyaa currency.
 class FiatMvr extends FiatCurrency {
   /// {@template sealed_world.currency_mvr_constructor}
   /// Creates a instance of [FiatMvr] (Maldivian Rufiyaa currency).

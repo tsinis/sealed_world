@@ -4,7 +4,7 @@ extension type const _ClfFactory._(FiatClf _) implements FiatClf {
   const _ClfFactory() : this._(const FiatClf._());
 }
 
-/// A class that represents the the Chilean Unit of Account (UF) currency.
+/// A class that represents the Chilean Unit of Account (UF) currency.
 class FiatClf extends FiatCurrency {
   /// {@template sealed_world.currency_clf_constructor}
   /// Creates a instance of [FiatClf] (Chilean Unit of Account (UF) currency).

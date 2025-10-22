@@ -10,7 +10,7 @@ extension type const _ComFactory._(CountryCom _) implements CountryCom {
   const _ComFactory() : this._(const CountryCom._());
 }
 
-/// A class that represents the the Comoros country.
+/// A class that represents the Comoros country.
 class CountryCom extends WorldCountry {
   /// {@template sealed_world.country_com_constructor}
   /// Creates a instance of [CountryCom] (Comoros country).

@@ -10,7 +10,7 @@ extension type const _TonFactory._(CountryTon _) implements CountryTon {
   const _TonFactory() : this._(const CountryTon._());
 }
 
-/// A class that represents the the Tonga country.
+/// A class that represents the Tonga country.
 class CountryTon extends WorldCountry {
   /// {@template sealed_world.country_ton_constructor}
   /// Creates a instance of [CountryTon] (Tonga country).

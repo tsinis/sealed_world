@@ -6,7 +6,7 @@
 
 part of "../../model/country/country.dart";
 
-/// A class that represents the the Kosovo country.
+/// A class that represents the Kosovo country.
 class CountryUnk extends WorldCountry {
   /// {@template sealed_world.country_unk_constructor}
   /// Creates a instance of [CountryUnk] (Kosovo country).

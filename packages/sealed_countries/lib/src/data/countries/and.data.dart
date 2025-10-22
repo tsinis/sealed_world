@@ -10,7 +10,7 @@ extension type const _AndFactory._(CountryAnd _) implements CountryAnd {
   const _AndFactory() : this._(const CountryAnd._());
 }
 
-/// A class that represents the the Andorra country.
+/// A class that represents the Andorra country.
 class CountryAnd extends WorldCountry {
   /// {@template sealed_world.country_and_constructor}
   /// Creates a instance of [CountryAnd] (Andorra country).

@@ -10,7 +10,7 @@ extension type const _GufFactory._(CountryGuf _) implements CountryGuf {
   const _GufFactory() : this._(const CountryGuf._());
 }
 
-/// A class that represents the the Guiana country.
+/// A class that represents the Guiana country.
 class CountryGuf extends WorldCountry {
   /// {@template sealed_world.country_guf_constructor}
   /// Creates a instance of [CountryGuf] (Guiana country).

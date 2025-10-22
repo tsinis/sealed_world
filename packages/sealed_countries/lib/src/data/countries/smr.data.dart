@@ -10,7 +10,7 @@ extension type const _SmrFactory._(CountrySmr _) implements CountrySmr {
   const _SmrFactory() : this._(const CountrySmr._());
 }
 
-/// A class that represents the the San Marino country.
+/// A class that represents the San Marino country.
 class CountrySmr extends WorldCountry {
   /// {@template sealed_world.country_smr_constructor}
   /// Creates a instance of [CountrySmr] (San Marino country).

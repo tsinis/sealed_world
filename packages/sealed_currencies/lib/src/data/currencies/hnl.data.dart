@@ -4,7 +4,7 @@ extension type const _HnlFactory._(FiatHnl _) implements FiatHnl {
   const _HnlFactory() : this._(const FiatHnl._());
 }
 
-/// A class that represents the the Honduran Lempira currency.
+/// A class that represents the Honduran Lempira currency.
 class FiatHnl extends FiatCurrency {
   /// {@template sealed_world.currency_hnl_constructor}
   /// Creates a instance of [FiatHnl] (Honduran Lempira currency).

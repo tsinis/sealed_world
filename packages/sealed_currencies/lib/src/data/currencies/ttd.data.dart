@@ -4,7 +4,7 @@ extension type const _TtdFactory._(FiatTtd _) implements FiatTtd {
   const _TtdFactory() : this._(const FiatTtd._());
 }
 
-/// A class that represents the the Trinidad & Tobago Dollar currency.
+/// A class that represents the Trinidad & Tobago Dollar currency.
 class FiatTtd extends FiatCurrency {
   /// {@template sealed_world.currency_ttd_constructor}
   /// Creates a instance of [FiatTtd] (Trinidad & Tobago Dollar currency).

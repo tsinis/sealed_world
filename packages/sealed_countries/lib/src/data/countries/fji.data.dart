@@ -10,7 +10,7 @@ extension type const _FjiFactory._(CountryFji _) implements CountryFji {
   const _FjiFactory() : this._(const CountryFji._());
 }
 
-/// A class that represents the the Fiji country.
+/// A class that represents the Fiji country.
 class CountryFji extends WorldCountry {
   /// {@template sealed_world.country_fji_constructor}
   /// Creates a instance of [CountryFji] (Fiji country).

@@ -10,7 +10,7 @@ extension type const _MnpFactory._(CountryMnp _) implements CountryMnp {
   const _MnpFactory() : this._(const CountryMnp._());
 }
 
-/// A class that represents the the Northern Mariana Islands country.
+/// A class that represents the Northern Mariana Islands country.
 class CountryMnp extends WorldCountry {
   /// {@template sealed_world.country_mnp_constructor}
   /// Creates a instance of [CountryMnp] (Northern Mariana Islands country).

@@ -4,7 +4,7 @@ extension type const _DkkFactory._(FiatDkk _) implements FiatDkk {
   const _DkkFactory() : this._(const FiatDkk._());
 }
 
-/// A class that represents the the Danish Krone currency.
+/// A class that represents the Danish Krone currency.
 class FiatDkk extends FiatCurrency {
   /// {@template sealed_world.currency_dkk_constructor}
   /// Creates a instance of [FiatDkk] (Danish Krone currency).

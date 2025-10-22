@@ -4,7 +4,7 @@ extension type const _MadFactory._(FiatMad _) implements FiatMad {
   const _MadFactory() : this._(const FiatMad._());
 }
 
-/// A class that represents the the Moroccan Dirham currency.
+/// A class that represents the Moroccan Dirham currency.
 class FiatMad extends FiatCurrency {
   /// {@template sealed_world.currency_mad_constructor}
   /// Creates a instance of [FiatMad] (Moroccan Dirham currency).

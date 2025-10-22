@@ -10,7 +10,7 @@ extension type const _NerFactory._(CountryNer _) implements CountryNer {
   const _NerFactory() : this._(const CountryNer._());
 }
 
-/// A class that represents the the Niger country.
+/// A class that represents the Niger country.
 class CountryNer extends WorldCountry {
   /// {@template sealed_world.country_ner_constructor}
   /// Creates a instance of [CountryNer] (Niger country).

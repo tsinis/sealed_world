@@ -4,7 +4,7 @@ extension type const _SosFactory._(FiatSos _) implements FiatSos {
   const _SosFactory() : this._(const FiatSos._());
 }
 
-/// A class that represents the the Somali Shilling currency.
+/// A class that represents the Somali Shilling currency.
 class FiatSos extends FiatCurrency {
   /// {@template sealed_world.currency_sos_constructor}
   /// Creates a instance of [FiatSos] (Somali Shilling currency).

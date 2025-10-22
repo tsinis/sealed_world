@@ -10,7 +10,7 @@ extension type const _PcnFactory._(CountryPcn _) implements CountryPcn {
   const _PcnFactory() : this._(const CountryPcn._());
 }
 
-/// A class that represents the the Pitcairn Islands country.
+/// A class that represents the Pitcairn Islands country.
 class CountryPcn extends WorldCountry {
   /// {@template sealed_world.country_pcn_constructor}
   /// Creates a instance of [CountryPcn] (Pitcairn Islands country).

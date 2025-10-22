@@ -10,7 +10,7 @@ extension type const _TcaFactory._(CountryTca _) implements CountryTca {
   const _TcaFactory() : this._(const CountryTca._());
 }
 
-/// A class that represents the the Turks and Caicos Islands country.
+/// A class that represents the Turks and Caicos Islands country.
 class CountryTca extends WorldCountry {
   /// {@template sealed_world.country_tca_constructor}
   /// Creates a instance of [CountryTca] (Turks and Caicos Islands country).

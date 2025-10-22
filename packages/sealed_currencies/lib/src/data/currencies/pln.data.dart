@@ -4,7 +4,7 @@ extension type const _PlnFactory._(FiatPln _) implements FiatPln {
   const _PlnFactory() : this._(const FiatPln._());
 }
 
-/// A class that represents the the Polish Zloty currency.
+/// A class that represents the Polish Zloty currency.
 class FiatPln extends FiatCurrency {
   /// {@template sealed_world.currency_pln_constructor}
   /// Creates a instance of [FiatPln] (Polish Zloty currency).

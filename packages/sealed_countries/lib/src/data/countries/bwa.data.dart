@@ -10,7 +10,7 @@ extension type const _BwaFactory._(CountryBwa _) implements CountryBwa {
   const _BwaFactory() : this._(const CountryBwa._());
 }
 
-/// A class that represents the the Botswana country.
+/// A class that represents the Botswana country.
 class CountryBwa extends WorldCountry {
   /// {@template sealed_world.country_bwa_constructor}
   /// Creates a instance of [CountryBwa] (Botswana country).

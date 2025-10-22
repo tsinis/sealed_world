@@ -10,7 +10,7 @@ extension type const _LaoFactory._(CountryLao _) implements CountryLao {
   const _LaoFactory() : this._(const CountryLao._());
 }
 
-/// A class that represents the the Laos country.
+/// A class that represents the Laos country.
 class CountryLao extends WorldCountry {
   /// {@template sealed_world.country_lao_constructor}
   /// Creates a instance of [CountryLao] (Laos country).

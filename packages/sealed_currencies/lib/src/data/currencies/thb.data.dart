@@ -4,7 +4,7 @@ extension type const _ThbFactory._(FiatThb _) implements FiatThb {
   const _ThbFactory() : this._(const FiatThb._());
 }
 
-/// A class that represents the the Thai Baht currency.
+/// A class that represents the Thai Baht currency.
 class FiatThb extends FiatCurrency {
   /// {@template sealed_world.currency_thb_constructor}
   /// Creates a instance of [FiatThb] (Thai Baht currency).

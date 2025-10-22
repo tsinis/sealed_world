@@ -10,7 +10,7 @@ extension type const _KazFactory._(CountryKaz _) implements CountryKaz {
   const _KazFactory() : this._(const CountryKaz._());
 }
 
-/// A class that represents the the Kazakhstan country.
+/// A class that represents the Kazakhstan country.
 class CountryKaz extends WorldCountry {
   /// {@template sealed_world.country_kaz_constructor}
   /// Creates a instance of [CountryKaz] (Kazakhstan country).

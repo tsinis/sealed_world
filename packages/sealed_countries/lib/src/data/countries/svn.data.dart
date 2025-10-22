@@ -10,7 +10,7 @@ extension type const _SvnFactory._(CountrySvn _) implements CountrySvn {
   const _SvnFactory() : this._(const CountrySvn._());
 }
 
-/// A class that represents the the Slovenia country.
+/// A class that represents the Slovenia country.
 class CountrySvn extends WorldCountry {
   /// {@template sealed_world.country_svn_constructor}
   /// Creates a instance of [CountrySvn] (Slovenia country).

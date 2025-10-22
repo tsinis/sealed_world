@@ -4,7 +4,7 @@ extension type const _KhrFactory._(FiatKhr _) implements FiatKhr {
   const _KhrFactory() : this._(const FiatKhr._());
 }
 
-/// A class that represents the the Cambodian Riel currency.
+/// A class that represents the Cambodian Riel currency.
 class FiatKhr extends FiatCurrency {
   /// {@template sealed_world.currency_khr_constructor}
   /// Creates a instance of [FiatKhr] (Cambodian Riel currency).

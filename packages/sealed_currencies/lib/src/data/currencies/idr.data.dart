@@ -4,7 +4,7 @@ extension type const _IdrFactory._(FiatIdr _) implements FiatIdr {
   const _IdrFactory() : this._(const FiatIdr._());
 }
 
-/// A class that represents the the Indonesian Rupiah currency.
+/// A class that represents the Indonesian Rupiah currency.
 class FiatIdr extends FiatCurrency {
   /// {@template sealed_world.currency_idr_constructor}
   /// Creates a instance of [FiatIdr] (Indonesian Rupiah currency).

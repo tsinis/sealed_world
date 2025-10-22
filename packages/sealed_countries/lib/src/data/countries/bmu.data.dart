@@ -10,7 +10,7 @@ extension type const _BmuFactory._(CountryBmu _) implements CountryBmu {
   const _BmuFactory() : this._(const CountryBmu._());
 }
 
-/// A class that represents the the Bermuda country.
+/// A class that represents the Bermuda country.
 class CountryBmu extends WorldCountry {
   /// {@template sealed_world.country_bmu_constructor}
   /// Creates a instance of [CountryBmu] (Bermuda country).

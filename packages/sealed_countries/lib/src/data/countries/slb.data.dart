@@ -10,7 +10,7 @@ extension type const _SlbFactory._(CountrySlb _) implements CountrySlb {
   const _SlbFactory() : this._(const CountrySlb._());
 }
 
-/// A class that represents the the Solomon Islands country.
+/// A class that represents the Solomon Islands country.
 class CountrySlb extends WorldCountry {
   /// {@template sealed_world.country_slb_constructor}
   /// Creates a instance of [CountrySlb] (Solomon Islands country).

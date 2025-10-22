@@ -10,7 +10,7 @@ extension type const _CypFactory._(CountryCyp _) implements CountryCyp {
   const _CypFactory() : this._(const CountryCyp._());
 }
 
-/// A class that represents the the Cyprus country.
+/// A class that represents the Cyprus country.
 class CountryCyp extends WorldCountry {
   /// {@template sealed_world.country_cyp_constructor}
   /// Creates a instance of [CountryCyp] (Cyprus country).

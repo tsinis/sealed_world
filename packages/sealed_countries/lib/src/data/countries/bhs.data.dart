@@ -10,7 +10,7 @@ extension type const _BhsFactory._(CountryBhs _) implements CountryBhs {
   const _BhsFactory() : this._(const CountryBhs._());
 }
 
-/// A class that represents the the Bahamas country.
+/// A class that represents the Bahamas country.
 class CountryBhs extends WorldCountry {
   /// {@template sealed_world.country_bhs_constructor}
   /// Creates a instance of [CountryBhs] (Bahamas country).

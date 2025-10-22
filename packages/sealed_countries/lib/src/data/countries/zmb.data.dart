@@ -10,7 +10,7 @@ extension type const _ZmbFactory._(CountryZmb _) implements CountryZmb {
   const _ZmbFactory() : this._(const CountryZmb._());
 }
 
-/// A class that represents the the Zambia country.
+/// A class that represents the Zambia country.
 class CountryZmb extends WorldCountry {
   /// {@template sealed_world.country_zmb_constructor}
   /// Creates a instance of [CountryZmb] (Zambia country).

@@ -4,7 +4,7 @@ extension type const _MurFactory._(FiatMur _) implements FiatMur {
   const _MurFactory() : this._(const FiatMur._());
 }
 
-/// A class that represents the the Mauritian Rupee currency.
+/// A class that represents the Mauritian Rupee currency.
 class FiatMur extends FiatCurrency {
   /// {@template sealed_world.currency_mur_constructor}
   /// Creates a instance of [FiatMur] (Mauritian Rupee currency).

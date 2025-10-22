@@ -4,7 +4,7 @@ extension type const _BmdFactory._(FiatBmd _) implements FiatBmd {
   const _BmdFactory() : this._(const FiatBmd._());
 }
 
-/// A class that represents the the Bermudian Dollar currency.
+/// A class that represents the Bermudian Dollar currency.
 class FiatBmd extends FiatCurrency {
   /// {@template sealed_world.currency_bmd_constructor}
   /// Creates a instance of [FiatBmd] (Bermudian Dollar currency).

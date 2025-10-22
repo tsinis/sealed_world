@@ -10,7 +10,7 @@ extension type const _CafFactory._(CountryCaf _) implements CountryCaf {
   const _CafFactory() : this._(const CountryCaf._());
 }
 
-/// A class that represents the the Central African Republic country.
+/// A class that represents the Central African Republic country.
 class CountryCaf extends WorldCountry {
   /// {@template sealed_world.country_caf_constructor}
   /// Creates a instance of [CountryCaf] (Central African Republic country).

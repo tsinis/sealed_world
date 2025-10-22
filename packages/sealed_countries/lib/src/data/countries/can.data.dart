@@ -10,7 +10,7 @@ extension type const _CanFactory._(CountryCan _) implements CountryCan {
   const _CanFactory() : this._(const CountryCan._());
 }
 
-/// A class that represents the the Canada country.
+/// A class that represents the Canada country.
 class CountryCan extends WorldCountry {
   /// {@template sealed_world.country_can_constructor}
   /// Creates a instance of [CountryCan] (Canada country).

@@ -10,7 +10,7 @@ extension type const _HrvFactory._(CountryHrv _) implements CountryHrv {
   const _HrvFactory() : this._(const CountryHrv._());
 }
 
-/// A class that represents the the Croatia country.
+/// A class that represents the Croatia country.
 class CountryHrv extends WorldCountry {
   /// {@template sealed_world.country_hrv_constructor}
   /// Creates a instance of [CountryHrv] (Croatia country).

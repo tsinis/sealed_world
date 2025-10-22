@@ -10,7 +10,7 @@ extension type const _PyfFactory._(CountryPyf _) implements CountryPyf {
   const _PyfFactory() : this._(const CountryPyf._());
 }
 
-/// A class that represents the the French Polynesia country.
+/// A class that represents the French Polynesia country.
 class CountryPyf extends WorldCountry {
   /// {@template sealed_world.country_pyf_constructor}
   /// Creates a instance of [CountryPyf] (French Polynesia country).

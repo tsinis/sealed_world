@@ -4,7 +4,7 @@ extension type const _BwpFactory._(FiatBwp _) implements FiatBwp {
   const _BwpFactory() : this._(const FiatBwp._());
 }
 
-/// A class that represents the the Botswanan Pula currency.
+/// A class that represents the Botswanan Pula currency.
 class FiatBwp extends FiatCurrency {
   /// {@template sealed_world.currency_bwp_constructor}
   /// Creates a instance of [FiatBwp] (Botswanan Pula currency).

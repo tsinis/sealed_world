@@ -10,7 +10,7 @@ extension type const _CymFactory._(CountryCym _) implements CountryCym {
   const _CymFactory() : this._(const CountryCym._());
 }
 
-/// A class that represents the the Cayman Islands country.
+/// A class that represents the Cayman Islands country.
 class CountryCym extends WorldCountry {
   /// {@template sealed_world.country_cym_constructor}
   /// Creates a instance of [CountryCym] (Cayman Islands country).

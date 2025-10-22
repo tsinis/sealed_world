@@ -4,7 +4,7 @@ extension type const _MgaFactory._(FiatMga _) implements FiatMga {
   const _MgaFactory() : this._(const FiatMga._());
 }
 
-/// A class that represents the the Malagasy Ariary currency.
+/// A class that represents the Malagasy Ariary currency.
 class FiatMga extends FiatCurrency {
   /// {@template sealed_world.currency_mga_constructor}
   /// Creates a instance of [FiatMga] (Malagasy Ariary currency).

@@ -10,7 +10,7 @@ extension type const _NclFactory._(CountryNcl _) implements CountryNcl {
   const _NclFactory() : this._(const CountryNcl._());
 }
 
-/// A class that represents the the New Caledonia country.
+/// A class that represents the New Caledonia country.
 class CountryNcl extends WorldCountry {
   /// {@template sealed_world.country_ncl_constructor}
   /// Creates a instance of [CountryNcl] (New Caledonia country).

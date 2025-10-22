@@ -10,7 +10,7 @@ extension type const _CivFactory._(CountryCiv _) implements CountryCiv {
   const _CivFactory() : this._(const CountryCiv._());
 }
 
-/// A class that represents the the Ivory Coast country.
+/// A class that represents the Ivory Coast country.
 class CountryCiv extends WorldCountry {
   /// {@template sealed_world.country_civ_constructor}
   /// Creates a instance of [CountryCiv] (Ivory Coast country).

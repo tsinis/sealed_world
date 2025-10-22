@@ -10,7 +10,7 @@ extension type const _VnmFactory._(CountryVnm _) implements CountryVnm {
   const _VnmFactory() : this._(const CountryVnm._());
 }
 
-/// A class that represents the the Vietnam country.
+/// A class that represents the Vietnam country.
 class CountryVnm extends WorldCountry {
   /// {@template sealed_world.country_vnm_constructor}
   /// Creates a instance of [CountryVnm] (Vietnam country).

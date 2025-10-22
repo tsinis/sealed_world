@@ -10,7 +10,7 @@ extension type const _SycFactory._(CountrySyc _) implements CountrySyc {
   const _SycFactory() : this._(const CountrySyc._());
 }
 
-/// A class that represents the the Seychelles country.
+/// A class that represents the Seychelles country.
 class CountrySyc extends WorldCountry {
   /// {@template sealed_world.country_syc_constructor}
   /// Creates a instance of [CountrySyc] (Seychelles country).

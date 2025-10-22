@@ -10,7 +10,7 @@ extension type const _FroFactory._(CountryFro _) implements CountryFro {
   const _FroFactory() : this._(const CountryFro._());
 }
 
-/// A class that represents the the Faroe Islands country.
+/// A class that represents the Faroe Islands country.
 class CountryFro extends WorldCountry {
   /// {@template sealed_world.country_fro_constructor}
   /// Creates a instance of [CountryFro] (Faroe Islands country).

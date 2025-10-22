@@ -4,7 +4,7 @@ extension type const _VndFactory._(FiatVnd _) implements FiatVnd {
   const _VndFactory() : this._(const FiatVnd._());
 }
 
-/// A class that represents the the Vietnamese Dong currency.
+/// A class that represents the Vietnamese Dong currency.
 class FiatVnd extends FiatCurrency {
   /// {@template sealed_world.currency_vnd_constructor}
   /// Creates a instance of [FiatVnd] (Vietnamese Dong currency).

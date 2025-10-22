@@ -4,7 +4,7 @@ extension type const _AwgFactory._(FiatAwg _) implements FiatAwg {
   const _AwgFactory() : this._(const FiatAwg._());
 }
 
-/// A class that represents the the Aruban Florin currency.
+/// A class that represents the Aruban Florin currency.
 class FiatAwg extends FiatCurrency {
   /// {@template sealed_world.currency_awg_constructor}
   /// Creates a instance of [FiatAwg] (Aruban Florin currency).

@@ -4,7 +4,7 @@ extension type const _AudFactory._(FiatAud _) implements FiatAud {
   const _AudFactory() : this._(const FiatAud._());
 }
 
-/// A class that represents the the Australian Dollar currency.
+/// A class that represents the Australian Dollar currency.
 class FiatAud extends FiatCurrency {
   /// {@template sealed_world.currency_aud_constructor}
   /// Creates a instance of [FiatAud] (Australian Dollar currency).

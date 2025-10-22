@@ -10,7 +10,7 @@ extension type const _NplFactory._(CountryNpl _) implements CountryNpl {
   const _NplFactory() : this._(const CountryNpl._());
 }
 
-/// A class that represents the the Nepal country.
+/// A class that represents the Nepal country.
 class CountryNpl extends WorldCountry {
   /// {@template sealed_world.country_npl_constructor}
   /// Creates a instance of [CountryNpl] (Nepal country).

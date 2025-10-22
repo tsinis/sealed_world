@@ -10,7 +10,7 @@ extension type const _WlfFactory._(CountryWlf _) implements CountryWlf {
   const _WlfFactory() : this._(const CountryWlf._());
 }
 
-/// A class that represents the the Wallis and Futuna country.
+/// A class that represents the Wallis and Futuna country.
 class CountryWlf extends WorldCountry {
   /// {@template sealed_world.country_wlf_constructor}
   /// Creates a instance of [CountryWlf] (Wallis and Futuna country).

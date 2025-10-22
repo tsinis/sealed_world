@@ -10,7 +10,7 @@ extension type const _KirFactory._(CountryKir _) implements CountryKir {
   const _KirFactory() : this._(const CountryKir._());
 }
 
-/// A class that represents the the Kiribati country.
+/// A class that represents the Kiribati country.
 class CountryKir extends WorldCountry {
   /// {@template sealed_world.country_kir_constructor}
   /// Creates a instance of [CountryKir] (Kiribati country).

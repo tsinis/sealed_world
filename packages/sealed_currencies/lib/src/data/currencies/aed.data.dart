@@ -4,7 +4,7 @@ extension type const _AedFactory._(FiatAed _) implements FiatAed {
   const _AedFactory() : this._(const FiatAed._());
 }
 
-/// A class that represents the the United Arab Emirates Dirham currency.
+/// A class that represents the United Arab Emirates Dirham currency.
 class FiatAed extends FiatCurrency {
   /// {@template sealed_world.currency_aed_constructor}
   /// Creates a instance of [FiatAed] (United Arab Emirates Dirham currency).

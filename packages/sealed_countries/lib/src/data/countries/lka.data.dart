@@ -10,7 +10,7 @@ extension type const _LkaFactory._(CountryLka _) implements CountryLka {
   const _LkaFactory() : this._(const CountryLka._());
 }
 
-/// A class that represents the the Sri Lanka country.
+/// A class that represents the Sri Lanka country.
 class CountryLka extends WorldCountry {
   /// {@template sealed_world.country_lka_constructor}
   /// Creates a instance of [CountryLka] (Sri Lanka country).

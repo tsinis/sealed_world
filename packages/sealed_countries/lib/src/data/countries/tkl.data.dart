@@ -10,7 +10,7 @@ extension type const _TklFactory._(CountryTkl _) implements CountryTkl {
   const _TklFactory() : this._(const CountryTkl._());
 }
 
-/// A class that represents the the Tokelau country.
+/// A class that represents the Tokelau country.
 class CountryTkl extends WorldCountry {
   /// {@template sealed_world.country_tkl_constructor}
   /// Creates a instance of [CountryTkl] (Tokelau country).

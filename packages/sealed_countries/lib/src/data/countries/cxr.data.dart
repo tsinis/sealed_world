@@ -10,7 +10,7 @@ extension type const _CxrFactory._(CountryCxr _) implements CountryCxr {
   const _CxrFactory() : this._(const CountryCxr._());
 }
 
-/// A class that represents the the Christmas Island country.
+/// A class that represents the Christmas Island country.
 class CountryCxr extends WorldCountry {
   /// {@template sealed_world.country_cxr_constructor}
   /// Creates a instance of [CountryCxr] (Christmas Island country).

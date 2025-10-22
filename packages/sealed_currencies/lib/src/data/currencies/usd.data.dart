@@ -4,7 +4,7 @@ extension type const _UsdFactory._(FiatUsd _) implements FiatUsd {
   const _UsdFactory() : this._(const FiatUsd._());
 }
 
-/// A class that represents the the United States Dollar currency.
+/// A class that represents the United States Dollar currency.
 class FiatUsd extends FiatCurrency {
   /// {@template sealed_world.currency_usd_constructor}
   /// Creates a instance of [FiatUsd] (United States Dollar currency).

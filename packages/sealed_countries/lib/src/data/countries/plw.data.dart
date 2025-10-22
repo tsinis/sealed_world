@@ -10,7 +10,7 @@ extension type const _PlwFactory._(CountryPlw _) implements CountryPlw {
   const _PlwFactory() : this._(const CountryPlw._());
 }
 
-/// A class that represents the the Palau country.
+/// A class that represents the Palau country.
 class CountryPlw extends WorldCountry {
   /// {@template sealed_world.country_plw_constructor}
   /// Creates a instance of [CountryPlw] (Palau country).

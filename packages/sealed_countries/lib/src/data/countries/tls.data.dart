@@ -10,7 +10,7 @@ extension type const _TlsFactory._(CountryTls _) implements CountryTls {
   const _TlsFactory() : this._(const CountryTls._());
 }
 
-/// A class that represents the the Timor-Leste country.
+/// A class that represents the Timor-Leste country.
 class CountryTls extends WorldCountry {
   /// {@template sealed_world.country_tls_constructor}
   /// Creates a instance of [CountryTls] (Timor-Leste country).

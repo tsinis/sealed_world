@@ -10,7 +10,7 @@ extension type const _MtqFactory._(CountryMtq _) implements CountryMtq {
   const _MtqFactory() : this._(const CountryMtq._());
 }
 
-/// A class that represents the the Martinique country.
+/// A class that represents the Martinique country.
 class CountryMtq extends WorldCountry {
   /// {@template sealed_world.country_mtq_constructor}
   /// Creates a instance of [CountryMtq] (Martinique country).

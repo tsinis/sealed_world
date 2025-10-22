@@ -10,7 +10,7 @@ extension type const _IrlFactory._(CountryIrl _) implements CountryIrl {
   const _IrlFactory() : this._(const CountryIrl._());
 }
 
-/// A class that represents the the Ireland country.
+/// A class that represents the Ireland country.
 class CountryIrl extends WorldCountry {
   /// {@template sealed_world.country_irl_constructor}
   /// Creates a instance of [CountryIrl] (Ireland country).

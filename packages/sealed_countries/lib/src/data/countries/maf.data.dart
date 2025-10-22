@@ -10,7 +10,7 @@ extension type const _MafFactory._(CountryMaf _) implements CountryMaf {
   const _MafFactory() : this._(const CountryMaf._());
 }
 
-/// A class that represents the the Saint Martin country.
+/// A class that represents the Saint Martin country.
 class CountryMaf extends WorldCountry {
   /// {@template sealed_world.country_maf_constructor}
   /// Creates a instance of [CountryMaf] (Saint Martin country).

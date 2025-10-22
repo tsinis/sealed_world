@@ -4,7 +4,7 @@ extension type const _SleFactory._(FiatSle _) implements FiatSle {
   const _SleFactory() : this._(const FiatSle._());
 }
 
-/// A class that represents the the Sierra Leonean Leone currency.
+/// A class that represents the Sierra Leonean Leone currency.
 class FiatSle extends FiatCurrency {
   /// {@template sealed_world.currency_sle_constructor}
   /// Creates a instance of [FiatSle] (Sierra Leonean Leone currency).

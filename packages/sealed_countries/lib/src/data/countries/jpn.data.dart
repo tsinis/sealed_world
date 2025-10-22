@@ -10,7 +10,7 @@ extension type const _JpnFactory._(CountryJpn _) implements CountryJpn {
   const _JpnFactory() : this._(const CountryJpn._());
 }
 
-/// A class that represents the the Japan country.
+/// A class that represents the Japan country.
 class CountryJpn extends WorldCountry {
   /// {@template sealed_world.country_jpn_constructor}
   /// Creates a instance of [CountryJpn] (Japan country).

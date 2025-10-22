@@ -4,7 +4,7 @@ extension type const _CadFactory._(FiatCad _) implements FiatCad {
   const _CadFactory() : this._(const FiatCad._());
 }
 
-/// A class that represents the the Canadian Dollar currency.
+/// A class that represents the Canadian Dollar currency.
 class FiatCad extends FiatCurrency {
   /// {@template sealed_world.currency_cad_constructor}
   /// Creates a instance of [FiatCad] (Canadian Dollar currency).

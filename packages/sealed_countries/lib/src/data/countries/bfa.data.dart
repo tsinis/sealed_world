@@ -10,7 +10,7 @@ extension type const _BfaFactory._(CountryBfa _) implements CountryBfa {
   const _BfaFactory() : this._(const CountryBfa._());
 }
 
-/// A class that represents the the Burkina Faso country.
+/// A class that represents the Burkina Faso country.
 class CountryBfa extends WorldCountry {
   /// {@template sealed_world.country_bfa_constructor}
   /// Creates a instance of [CountryBfa] (Burkina Faso country).

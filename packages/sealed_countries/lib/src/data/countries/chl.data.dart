@@ -10,7 +10,7 @@ extension type const _ChlFactory._(CountryChl _) implements CountryChl {
   const _ChlFactory() : this._(const CountryChl._());
 }
 
-/// A class that represents the the Chile country.
+/// A class that represents the Chile country.
 class CountryChl extends WorldCountry {
   /// {@template sealed_world.country_chl_constructor}
   /// Creates a instance of [CountryChl] (Chile country).

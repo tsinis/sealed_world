@@ -10,7 +10,7 @@ extension type const _AutFactory._(CountryAut _) implements CountryAut {
   const _AutFactory() : this._(const CountryAut._());
 }
 
-/// A class that represents the the Austria country.
+/// A class that represents the Austria country.
 class CountryAut extends WorldCountry {
   /// {@template sealed_world.country_aut_constructor}
   /// Creates a instance of [CountryAut] (Austria country).

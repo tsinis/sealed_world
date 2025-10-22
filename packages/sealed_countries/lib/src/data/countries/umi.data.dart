@@ -10,7 +10,7 @@ extension type const _UmiFactory._(CountryUmi _) implements CountryUmi {
   const _UmiFactory() : this._(const CountryUmi._());
 }
 
-/// A class that represents the the United States Minor Outlying Islands country.
+/// A class that represents the United States Minor Outlying Islands country.
 class CountryUmi extends WorldCountry {
   /// {@template sealed_world.country_umi_constructor}
   /// Creates a instance of [CountryUmi] (United States Minor Outlying Islands country).

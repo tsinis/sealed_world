@@ -4,7 +4,7 @@ extension type const _MwkFactory._(FiatMwk _) implements FiatMwk {
   const _MwkFactory() : this._(const FiatMwk._());
 }
 
-/// A class that represents the the Malawian Kwacha currency.
+/// A class that represents the Malawian Kwacha currency.
 class FiatMwk extends FiatCurrency {
   /// {@template sealed_world.currency_mwk_constructor}
   /// Creates a instance of [FiatMwk] (Malawian Kwacha currency).

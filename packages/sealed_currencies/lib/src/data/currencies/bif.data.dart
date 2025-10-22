@@ -4,7 +4,7 @@ extension type const _BifFactory._(FiatBif _) implements FiatBif {
   const _BifFactory() : this._(const FiatBif._());
 }
 
-/// A class that represents the the Burundian Franc currency.
+/// A class that represents the Burundian Franc currency.
 class FiatBif extends FiatCurrency {
   /// {@template sealed_world.currency_bif_constructor}
   /// Creates a instance of [FiatBif] (Burundian Franc currency).

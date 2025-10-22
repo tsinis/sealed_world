@@ -10,7 +10,7 @@ extension type const _SgpFactory._(CountrySgp _) implements CountrySgp {
   const _SgpFactory() : this._(const CountrySgp._());
 }
 
-/// A class that represents the the Singapore country.
+/// A class that represents the Singapore country.
 class CountrySgp extends WorldCountry {
   /// {@template sealed_world.country_sgp_constructor}
   /// Creates a instance of [CountrySgp] (Singapore country).

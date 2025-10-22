@@ -10,7 +10,7 @@ extension type const _DmaFactory._(CountryDma _) implements CountryDma {
   const _DmaFactory() : this._(const CountryDma._());
 }
 
-/// A class that represents the the Dominica country.
+/// A class that represents the Dominica country.
 class CountryDma extends WorldCountry {
   /// {@template sealed_world.country_dma_constructor}
   /// Creates a instance of [CountryDma] (Dominica country).

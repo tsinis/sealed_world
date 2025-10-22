@@ -10,7 +10,7 @@ extension type const _PngFactory._(CountryPng _) implements CountryPng {
   const _PngFactory() : this._(const CountryPng._());
 }
 
-/// A class that represents the the Papua New Guinea country.
+/// A class that represents the Papua New Guinea country.
 class CountryPng extends WorldCountry {
   /// {@template sealed_world.country_png_constructor}
   /// Creates a instance of [CountryPng] (Papua New Guinea country).

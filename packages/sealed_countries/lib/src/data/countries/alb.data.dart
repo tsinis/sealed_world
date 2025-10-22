@@ -10,7 +10,7 @@ extension type const _AlbFactory._(CountryAlb _) implements CountryAlb {
   const _AlbFactory() : this._(const CountryAlb._());
 }
 
-/// A class that represents the the Albania country.
+/// A class that represents the Albania country.
 class CountryAlb extends WorldCountry {
   /// {@template sealed_world.country_alb_constructor}
   /// Creates a instance of [CountryAlb] (Albania country).

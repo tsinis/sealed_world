@@ -10,7 +10,7 @@ extension type const _SsdFactory._(CountrySsd _) implements CountrySsd {
   const _SsdFactory() : this._(const CountrySsd._());
 }
 
-/// A class that represents the the South Sudan country.
+/// A class that represents the South Sudan country.
 class CountrySsd extends WorldCountry {
   /// {@template sealed_world.country_ssd_constructor}
   /// Creates a instance of [CountrySsd] (South Sudan country).

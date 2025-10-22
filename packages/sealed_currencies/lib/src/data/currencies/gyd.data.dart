@@ -4,7 +4,7 @@ extension type const _GydFactory._(FiatGyd _) implements FiatGyd {
   const _GydFactory() : this._(const FiatGyd._());
 }
 
-/// A class that represents the the Guyanese Dollar currency.
+/// A class that represents the Guyanese Dollar currency.
 class FiatGyd extends FiatCurrency {
   /// {@template sealed_world.currency_gyd_constructor}
   /// Creates a instance of [FiatGyd] (Guyanese Dollar currency).

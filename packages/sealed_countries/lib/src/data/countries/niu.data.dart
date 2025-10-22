@@ -10,7 +10,7 @@ extension type const _NiuFactory._(CountryNiu _) implements CountryNiu {
   const _NiuFactory() : this._(const CountryNiu._());
 }
 
-/// A class that represents the the Niue country.
+/// A class that represents the Niue country.
 class CountryNiu extends WorldCountry {
   /// {@template sealed_world.country_niu_constructor}
   /// Creates a instance of [CountryNiu] (Niue country).

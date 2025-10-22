@@ -6,7 +6,7 @@ extension type const _ZwlFactory._(FiatZwl _) implements FiatZwl {
   const _ZwlFactory() : this._(const FiatZwl._());
 }
 
-/// A class that represents the the Zimbabwean Dollar currency.
+/// A class that represents the Zimbabwean Dollar currency.
 @Deprecated("Use `FiatZwg()` instead")
 class FiatZwl extends FiatCurrency {
   /// {@template sealed_world.currency_zwl_constructor}

@@ -10,7 +10,7 @@ extension type const _CpvFactory._(CountryCpv _) implements CountryCpv {
   const _CpvFactory() : this._(const CountryCpv._());
 }
 
-/// A class that represents the the Cape Verde country.
+/// A class that represents the Cape Verde country.
 class CountryCpv extends WorldCountry {
   /// {@template sealed_world.country_cpv_constructor}
   /// Creates a instance of [CountryCpv] (Cape Verde country).

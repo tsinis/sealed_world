@@ -10,7 +10,7 @@ extension type const _GeoFactory._(CountryGeo _) implements CountryGeo {
   const _GeoFactory() : this._(const CountryGeo._());
 }
 
-/// A class that represents the the Georgia country.
+/// A class that represents the Georgia country.
 class CountryGeo extends WorldCountry {
   /// {@template sealed_world.country_geo_constructor}
   /// Creates a instance of [CountryGeo] (Georgia country).

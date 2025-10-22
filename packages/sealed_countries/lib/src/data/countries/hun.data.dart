@@ -10,7 +10,7 @@ extension type const _HunFactory._(CountryHun _) implements CountryHun {
   const _HunFactory() : this._(const CountryHun._());
 }
 
-/// A class that represents the the Hungary country.
+/// A class that represents the Hungary country.
 class CountryHun extends WorldCountry {
   /// {@template sealed_world.country_hun_constructor}
   /// Creates a instance of [CountryHun] (Hungary country).

@@ -4,7 +4,7 @@ extension type const _NioFactory._(FiatNio _) implements FiatNio {
   const _NioFactory() : this._(const FiatNio._());
 }
 
-/// A class that represents the the Nicaraguan Córdoba currency.
+/// A class that represents the Nicaraguan Córdoba currency.
 class FiatNio extends FiatCurrency {
   /// {@template sealed_world.currency_nio_constructor}
   /// Creates a instance of [FiatNio] (Nicaraguan Córdoba currency).

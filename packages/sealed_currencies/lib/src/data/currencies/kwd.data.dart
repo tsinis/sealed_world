@@ -4,7 +4,7 @@ extension type const _KwdFactory._(FiatKwd _) implements FiatKwd {
   const _KwdFactory() : this._(const FiatKwd._());
 }
 
-/// A class that represents the the Kuwaiti Dinar currency.
+/// A class that represents the Kuwaiti Dinar currency.
 class FiatKwd extends FiatCurrency {
   /// {@template sealed_world.currency_kwd_constructor}
   /// Creates a instance of [FiatKwd] (Kuwaiti Dinar currency).

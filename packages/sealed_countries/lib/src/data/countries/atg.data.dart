@@ -10,7 +10,7 @@ extension type const _AtgFactory._(CountryAtg _) implements CountryAtg {
   const _AtgFactory() : this._(const CountryAtg._());
 }
 
-/// A class that represents the the Antigua and Barbuda country.
+/// A class that represents the Antigua and Barbuda country.
 class CountryAtg extends WorldCountry {
   /// {@template sealed_world.country_atg_constructor}
   /// Creates a instance of [CountryAtg] (Antigua and Barbuda country).

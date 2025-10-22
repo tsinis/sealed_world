@@ -10,7 +10,7 @@ extension type const _YemFactory._(CountryYem _) implements CountryYem {
   const _YemFactory() : this._(const CountryYem._());
 }
 
-/// A class that represents the the Yemen country.
+/// A class that represents the Yemen country.
 class CountryYem extends WorldCountry {
   /// {@template sealed_world.country_yem_constructor}
   /// Creates a instance of [CountryYem] (Yemen country).

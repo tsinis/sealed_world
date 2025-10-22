@@ -10,7 +10,7 @@ extension type const _PakFactory._(CountryPak _) implements CountryPak {
   const _PakFactory() : this._(const CountryPak._());
 }
 
-/// A class that represents the the Pakistan country.
+/// A class that represents the Pakistan country.
 class CountryPak extends WorldCountry {
   /// {@template sealed_world.country_pak_constructor}
   /// Creates a instance of [CountryPak] (Pakistan country).

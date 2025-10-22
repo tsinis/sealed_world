@@ -10,7 +10,7 @@ extension type const _EcuFactory._(CountryEcu _) implements CountryEcu {
   const _EcuFactory() : this._(const CountryEcu._());
 }
 
-/// A class that represents the the Ecuador country.
+/// A class that represents the Ecuador country.
 class CountryEcu extends WorldCountry {
   /// {@template sealed_world.country_ecu_constructor}
   /// Creates a instance of [CountryEcu] (Ecuador country).

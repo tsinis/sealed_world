@@ -10,7 +10,7 @@ extension type const _HmdFactory._(CountryHmd _) implements CountryHmd {
   const _HmdFactory() : this._(const CountryHmd._());
 }
 
-/// A class that represents the the Heard Island and McDonald Islands country.
+/// A class that represents the Heard Island and McDonald Islands country.
 class CountryHmd extends WorldCountry {
   /// {@template sealed_world.country_hmd_constructor}
   /// Creates a instance of [CountryHmd] (Heard Island and McDonald Islands country).

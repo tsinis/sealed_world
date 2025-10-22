@@ -4,7 +4,7 @@ extension type const _DopFactory._(FiatDop _) implements FiatDop {
   const _DopFactory() : this._(const FiatDop._());
 }
 
-/// A class that represents the the Dominican Peso currency.
+/// A class that represents the Dominican Peso currency.
 class FiatDop extends FiatCurrency {
   /// {@template sealed_world.currency_dop_constructor}
   /// Creates a instance of [FiatDop] (Dominican Peso currency).

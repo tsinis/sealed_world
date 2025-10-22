@@ -10,7 +10,7 @@ extension type const _VatFactory._(CountryVat _) implements CountryVat {
   const _VatFactory() : this._(const CountryVat._());
 }
 
-/// A class that represents the the Vatican City country.
+/// A class that represents the Vatican City country.
 class CountryVat extends WorldCountry {
   /// {@template sealed_world.country_vat_constructor}
   /// Creates a instance of [CountryVat] (Vatican City country).

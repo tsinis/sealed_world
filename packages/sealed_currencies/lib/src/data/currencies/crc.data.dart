@@ -4,7 +4,7 @@ extension type const _CrcFactory._(FiatCrc _) implements FiatCrc {
   const _CrcFactory() : this._(const FiatCrc._());
 }
 
-/// A class that represents the the Costa Rican Colón currency.
+/// A class that represents the Costa Rican Colón currency.
 class FiatCrc extends FiatCurrency {
   /// {@template sealed_world.currency_crc_constructor}
   /// Creates a instance of [FiatCrc] (Costa Rican Colón currency).

@@ -10,7 +10,7 @@ extension type const _GrcFactory._(CountryGrc _) implements CountryGrc {
   const _GrcFactory() : this._(const CountryGrc._());
 }
 
-/// A class that represents the the Greece country.
+/// A class that represents the Greece country.
 class CountryGrc extends WorldCountry {
   /// {@template sealed_world.country_grc_constructor}
   /// Creates a instance of [CountryGrc] (Greece country).

@@ -10,7 +10,7 @@ extension type const _ArgFactory._(CountryArg _) implements CountryArg {
   const _ArgFactory() : this._(const CountryArg._());
 }
 
-/// A class that represents the the Argentina country.
+/// A class that represents the Argentina country.
 class CountryArg extends WorldCountry {
   /// {@template sealed_world.country_arg_constructor}
   /// Creates a instance of [CountryArg] (Argentina country).

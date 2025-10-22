@@ -10,7 +10,7 @@ extension type const _RwaFactory._(CountryRwa _) implements CountryRwa {
   const _RwaFactory() : this._(const CountryRwa._());
 }
 
-/// A class that represents the the Rwanda country.
+/// A class that represents the Rwanda country.
 class CountryRwa extends WorldCountry {
   /// {@template sealed_world.country_rwa_constructor}
   /// Creates a instance of [CountryRwa] (Rwanda country).

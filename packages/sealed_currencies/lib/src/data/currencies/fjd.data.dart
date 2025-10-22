@@ -4,7 +4,7 @@ extension type const _FjdFactory._(FiatFjd _) implements FiatFjd {
   const _FjdFactory() : this._(const FiatFjd._());
 }
 
-/// A class that represents the the Fijian Dollar currency.
+/// A class that represents the Fijian Dollar currency.
 class FiatFjd extends FiatCurrency {
   /// {@template sealed_world.currency_fjd_constructor}
   /// Creates a instance of [FiatFjd] (Fijian Dollar currency).

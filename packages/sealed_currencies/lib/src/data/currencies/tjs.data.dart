@@ -4,7 +4,7 @@ extension type const _TjsFactory._(FiatTjs _) implements FiatTjs {
   const _TjsFactory() : this._(const FiatTjs._());
 }
 
-/// A class that represents the the Tajikistani Somoni currency.
+/// A class that represents the Tajikistani Somoni currency.
 class FiatTjs extends FiatCurrency {
   /// {@template sealed_world.currency_tjs_constructor}
   /// Creates a instance of [FiatTjs] (Tajikistani Somoni currency).

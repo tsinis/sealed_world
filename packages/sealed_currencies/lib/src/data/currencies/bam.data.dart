@@ -4,7 +4,7 @@ extension type const _BamFactory._(FiatBam _) implements FiatBam {
   const _BamFactory() : this._(const FiatBam._());
 }
 
-/// A class that represents the the Convertible Mark currency.
+/// A class that represents the Convertible Mark currency.
 class FiatBam extends FiatCurrency {
   /// {@template sealed_world.currency_bam_constructor}
   /// Creates a instance of [FiatBam] (Convertible Mark currency).

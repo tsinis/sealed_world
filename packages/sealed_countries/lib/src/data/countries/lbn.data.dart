@@ -10,7 +10,7 @@ extension type const _LbnFactory._(CountryLbn _) implements CountryLbn {
   const _LbnFactory() : this._(const CountryLbn._());
 }
 
-/// A class that represents the the Lebanon country.
+/// A class that represents the Lebanon country.
 class CountryLbn extends WorldCountry {
   /// {@template sealed_world.country_lbn_constructor}
   /// Creates a instance of [CountryLbn] (Lebanon country).

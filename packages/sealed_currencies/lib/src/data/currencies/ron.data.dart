@@ -4,7 +4,7 @@ extension type const _RonFactory._(FiatRon _) implements FiatRon {
   const _RonFactory() : this._(const FiatRon._());
 }
 
-/// A class that represents the the Romanian Leu currency.
+/// A class that represents the Romanian Leu currency.
 class FiatRon extends FiatCurrency {
   /// {@template sealed_world.currency_ron_constructor}
   /// Creates a instance of [FiatRon] (Romanian Leu currency).

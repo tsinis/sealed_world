@@ -10,7 +10,7 @@ extension type const _GibFactory._(CountryGib _) implements CountryGib {
   const _GibFactory() : this._(const CountryGib._());
 }
 
-/// A class that represents the the Gibraltar country.
+/// A class that represents the Gibraltar country.
 class CountryGib extends WorldCountry {
   /// {@template sealed_world.country_gib_constructor}
   /// Creates a instance of [CountryGib] (Gibraltar country).

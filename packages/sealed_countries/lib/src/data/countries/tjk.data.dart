@@ -10,7 +10,7 @@ extension type const _TjkFactory._(CountryTjk _) implements CountryTjk {
   const _TjkFactory() : this._(const CountryTjk._());
 }
 
-/// A class that represents the the Tajikistan country.
+/// A class that represents the Tajikistan country.
 class CountryTjk extends WorldCountry {
   /// {@template sealed_world.country_tjk_constructor}
   /// Creates a instance of [CountryTjk] (Tajikistan country).

@@ -10,7 +10,7 @@ extension type const _DjiFactory._(CountryDji _) implements CountryDji {
   const _DjiFactory() : this._(const CountryDji._());
 }
 
-/// A class that represents the the Djibouti country.
+/// A class that represents the Djibouti country.
 class CountryDji extends WorldCountry {
   /// {@template sealed_world.country_dji_constructor}
   /// Creates a instance of [CountryDji] (Djibouti country).

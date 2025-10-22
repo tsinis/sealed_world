@@ -10,7 +10,7 @@ extension type const _PhlFactory._(CountryPhl _) implements CountryPhl {
   const _PhlFactory() : this._(const CountryPhl._());
 }
 
-/// A class that represents the the Philippines country.
+/// A class that represents the Philippines country.
 class CountryPhl extends WorldCountry {
   /// {@template sealed_world.country_phl_constructor}
   /// Creates a instance of [CountryPhl] (Philippines country).

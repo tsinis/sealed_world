@@ -4,7 +4,7 @@ extension type const _StnFactory._(FiatStn _) implements FiatStn {
   const _StnFactory() : this._(const FiatStn._());
 }
 
-/// A class that represents the the São Tomé and Príncipe Second Dobra currency.
+/// A class that represents the São Tomé and Príncipe Second Dobra currency.
 class FiatStn extends FiatCurrency {
   /// {@template sealed_world.currency_stn_constructor}
   /// Creates a instance of [FiatStn] (São Tomé and Príncipe Second Dobra currency).

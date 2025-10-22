@@ -10,7 +10,7 @@ extension type const _StpFactory._(CountryStp _) implements CountryStp {
   const _StpFactory() : this._(const CountryStp._());
 }
 
-/// A class that represents the the São Tomé and Príncipe country.
+/// A class that represents the São Tomé and Príncipe country.
 class CountryStp extends WorldCountry {
   /// {@template sealed_world.country_stp_constructor}
   /// Creates a instance of [CountryStp] (São Tomé and Príncipe country).

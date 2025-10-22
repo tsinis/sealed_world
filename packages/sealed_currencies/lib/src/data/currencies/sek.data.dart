@@ -4,7 +4,7 @@ extension type const _SekFactory._(FiatSek _) implements FiatSek {
   const _SekFactory() : this._(const FiatSek._());
 }
 
-/// A class that represents the the Swedish Krona currency.
+/// A class that represents the Swedish Krona currency.
 class FiatSek extends FiatCurrency {
   /// {@template sealed_world.currency_sek_constructor}
   /// Creates a instance of [FiatSek] (Swedish Krona currency).

@@ -10,7 +10,7 @@ extension type const _MneFactory._(CountryMne _) implements CountryMne {
   const _MneFactory() : this._(const CountryMne._());
 }
 
-/// A class that represents the the Montenegro country.
+/// A class that represents the Montenegro country.
 class CountryMne extends WorldCountry {
   /// {@template sealed_world.country_mne_constructor}
   /// Creates a instance of [CountryMne] (Montenegro country).

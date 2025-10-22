@@ -10,7 +10,7 @@ extension type const _PrkFactory._(CountryPrk _) implements CountryPrk {
   const _PrkFactory() : this._(const CountryPrk._());
 }
 
-/// A class that represents the the North Korea country.
+/// A class that represents the North Korea country.
 class CountryPrk extends WorldCountry {
   /// {@template sealed_world.country_prk_constructor}
   /// Creates a instance of [CountryPrk] (North Korea country).

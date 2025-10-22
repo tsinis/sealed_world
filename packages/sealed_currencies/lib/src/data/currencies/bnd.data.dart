@@ -4,7 +4,7 @@ extension type const _BndFactory._(FiatBnd _) implements FiatBnd {
   const _BndFactory() : this._(const FiatBnd._());
 }
 
-/// A class that represents the the Brunei Dollar currency.
+/// A class that represents the Brunei Dollar currency.
 class FiatBnd extends FiatCurrency {
   /// {@template sealed_world.currency_bnd_constructor}
   /// Creates a instance of [FiatBnd] (Brunei Dollar currency).

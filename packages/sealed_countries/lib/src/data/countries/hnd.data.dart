@@ -10,7 +10,7 @@ extension type const _HndFactory._(CountryHnd _) implements CountryHnd {
   const _HndFactory() : this._(const CountryHnd._());
 }
 
-/// A class that represents the the Honduras country.
+/// A class that represents the Honduras country.
 class CountryHnd extends WorldCountry {
   /// {@template sealed_world.country_hnd_constructor}
   /// Creates a instance of [CountryHnd] (Honduras country).

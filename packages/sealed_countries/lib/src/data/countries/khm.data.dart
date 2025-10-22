@@ -10,7 +10,7 @@ extension type const _KhmFactory._(CountryKhm _) implements CountryKhm {
   const _KhmFactory() : this._(const CountryKhm._());
 }
 
-/// A class that represents the the Cambodia country.
+/// A class that represents the Cambodia country.
 class CountryKhm extends WorldCountry {
   /// {@template sealed_world.country_khm_constructor}
   /// Creates a instance of [CountryKhm] (Cambodia country).

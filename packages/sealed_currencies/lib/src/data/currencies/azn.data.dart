@@ -4,7 +4,7 @@ extension type const _AznFactory._(FiatAzn _) implements FiatAzn {
   const _AznFactory() : this._(const FiatAzn._());
 }
 
-/// A class that represents the the Azerbaijani Manat currency.
+/// A class that represents the Azerbaijani Manat currency.
 class FiatAzn extends FiatCurrency {
   /// {@template sealed_world.currency_azn_constructor}
   /// Creates a instance of [FiatAzn] (Azerbaijani Manat currency).

@@ -10,7 +10,7 @@ extension type const _DnkFactory._(CountryDnk _) implements CountryDnk {
   const _DnkFactory() : this._(const CountryDnk._());
 }
 
-/// A class that represents the the Denmark country.
+/// A class that represents the Denmark country.
 class CountryDnk extends WorldCountry {
   /// {@template sealed_world.country_dnk_constructor}
   /// Creates a instance of [CountryDnk] (Denmark country).

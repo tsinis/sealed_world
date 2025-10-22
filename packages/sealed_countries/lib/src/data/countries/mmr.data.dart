@@ -10,7 +10,7 @@ extension type const _MmrFactory._(CountryMmr _) implements CountryMmr {
   const _MmrFactory() : this._(const CountryMmr._());
 }
 
-/// A class that represents the the Myanmar country.
+/// A class that represents the Myanmar country.
 class CountryMmr extends WorldCountry {
   /// {@template sealed_world.country_mmr_constructor}
   /// Creates a instance of [CountryMmr] (Myanmar country).

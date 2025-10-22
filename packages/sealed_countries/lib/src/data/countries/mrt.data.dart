@@ -10,7 +10,7 @@ extension type const _MrtFactory._(CountryMrt _) implements CountryMrt {
   const _MrtFactory() : this._(const CountryMrt._());
 }
 
-/// A class that represents the the Mauritania country.
+/// A class that represents the Mauritania country.
 class CountryMrt extends WorldCountry {
   /// {@template sealed_world.country_mrt_constructor}
   /// Creates a instance of [CountryMrt] (Mauritania country).

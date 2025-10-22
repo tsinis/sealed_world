@@ -10,7 +10,7 @@ extension type const _AiaFactory._(CountryAia _) implements CountryAia {
   const _AiaFactory() : this._(const CountryAia._());
 }
 
-/// A class that represents the the Anguilla country.
+/// A class that represents the Anguilla country.
 class CountryAia extends WorldCountry {
   /// {@template sealed_world.country_aia_constructor}
   /// Creates a instance of [CountryAia] (Anguilla country).

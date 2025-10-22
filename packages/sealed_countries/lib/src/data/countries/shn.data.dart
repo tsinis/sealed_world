@@ -10,7 +10,7 @@ extension type const _ShnFactory._(CountryShn _) implements CountryShn {
   const _ShnFactory() : this._(const CountryShn._());
 }
 
-/// A class that represents the the Saint Helena, Ascension and Tristan da Cunha country.
+/// A class that represents the Saint Helena, Ascension and Tristan da Cunha country.
 class CountryShn extends WorldCountry {
   /// {@template sealed_world.country_shn_constructor}
   /// Creates a instance of [CountryShn] (Saint Helena, Ascension and Tristan da Cunha country).

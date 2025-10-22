@@ -4,7 +4,7 @@ extension type const _CupFactory._(FiatCup _) implements FiatCup {
   const _CupFactory() : this._(const FiatCup._());
 }
 
-/// A class that represents the the Cuban Peso currency.
+/// A class that represents the Cuban Peso currency.
 class FiatCup extends FiatCurrency {
   /// {@template sealed_world.currency_cup_constructor}
   /// Creates a instance of [FiatCup] (Cuban Peso currency).

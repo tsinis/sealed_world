@@ -10,7 +10,7 @@ extension type const _JeyFactory._(CountryJey _) implements CountryJey {
   const _JeyFactory() : this._(const CountryJey._());
 }
 
-/// A class that represents the the Jersey country.
+/// A class that represents the Jersey country.
 class CountryJey extends WorldCountry {
   /// {@template sealed_world.country_jey_constructor}
   /// Creates a instance of [CountryJey] (Jersey country).

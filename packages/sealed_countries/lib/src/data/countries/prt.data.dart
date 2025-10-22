@@ -10,7 +10,7 @@ extension type const _PrtFactory._(CountryPrt _) implements CountryPrt {
   const _PrtFactory() : this._(const CountryPrt._());
 }
 
-/// A class that represents the the Portugal country.
+/// A class that represents the Portugal country.
 class CountryPrt extends WorldCountry {
   /// {@template sealed_world.country_prt_constructor}
   /// Creates a instance of [CountryPrt] (Portugal country).

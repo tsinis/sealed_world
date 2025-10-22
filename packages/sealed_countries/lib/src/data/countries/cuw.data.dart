@@ -10,7 +10,7 @@ extension type const _CuwFactory._(CountryCuw _) implements CountryCuw {
   const _CuwFactory() : this._(const CountryCuw._());
 }
 
-/// A class that represents the the Curaçao country.
+/// A class that represents the Curaçao country.
 class CountryCuw extends WorldCountry {
   /// {@template sealed_world.country_cuw_constructor}
   /// Creates a instance of [CountryCuw] (Curaçao country).

@@ -6,7 +6,7 @@ extension type const _AngFactory._(FiatAng _) implements FiatAng {
   const _AngFactory() : this._(const FiatAng._());
 }
 
-/// A class that represents the the Netherlands Antillean Guilder currency.
+/// A class that represents the Netherlands Antillean Guilder currency.
 @Deprecated("Use `FiatXcg()` instead")
 class FiatAng extends FiatCurrency {
   /// {@template sealed_world.currency_ang_constructor}

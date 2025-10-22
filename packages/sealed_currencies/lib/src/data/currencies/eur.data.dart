@@ -4,7 +4,7 @@ extension type const _EurFactory._(FiatEur _) implements FiatEur {
   const _EurFactory() : this._(const FiatEur._());
 }
 
-/// A class that represents the the Euro currency.
+/// A class that represents the Euro currency.
 class FiatEur extends FiatCurrency {
   /// {@template sealed_world.currency_eur_constructor}
   /// Creates a instance of [FiatEur] (Euro currency).

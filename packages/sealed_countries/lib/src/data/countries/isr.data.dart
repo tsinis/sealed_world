@@ -10,7 +10,7 @@ extension type const _IsrFactory._(CountryIsr _) implements CountryIsr {
   const _IsrFactory() : this._(const CountryIsr._());
 }
 
-/// A class that represents the the Israel country.
+/// A class that represents the Israel country.
 class CountryIsr extends WorldCountry {
   /// {@template sealed_world.country_isr_constructor}
   /// Creates a instance of [CountryIsr] (Israel country).

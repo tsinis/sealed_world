@@ -10,7 +10,7 @@ extension type const _TurFactory._(CountryTur _) implements CountryTur {
   const _TurFactory() : this._(const CountryTur._());
 }
 
-/// A class that represents the the Turkey country.
+/// A class that represents the Turkey country.
 class CountryTur extends WorldCountry {
   /// {@template sealed_world.country_tur_constructor}
   /// Creates a instance of [CountryTur] (Turkey country).

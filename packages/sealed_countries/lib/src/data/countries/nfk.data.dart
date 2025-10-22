@@ -10,7 +10,7 @@ extension type const _NfkFactory._(CountryNfk _) implements CountryNfk {
   const _NfkFactory() : this._(const CountryNfk._());
 }
 
-/// A class that represents the the Norfolk Island country.
+/// A class that represents the Norfolk Island country.
 class CountryNfk extends WorldCountry {
   /// {@template sealed_world.country_nfk_constructor}
   /// Creates a instance of [CountryNfk] (Norfolk Island country).

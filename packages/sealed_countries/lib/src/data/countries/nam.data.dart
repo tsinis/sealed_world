@@ -10,7 +10,7 @@ extension type const _NamFactory._(CountryNam _) implements CountryNam {
   const _NamFactory() : this._(const CountryNam._());
 }
 
-/// A class that represents the the Namibia country.
+/// A class that represents the Namibia country.
 class CountryNam extends WorldCountry {
   /// {@template sealed_world.country_nam_constructor}
   /// Creates a instance of [CountryNam] (Namibia country).

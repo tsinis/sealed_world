@@ -4,7 +4,7 @@ extension type const _BdtFactory._(FiatBdt _) implements FiatBdt {
   const _BdtFactory() : this._(const FiatBdt._());
 }
 
-/// A class that represents the the Bangladeshi Taka currency.
+/// A class that represents the Bangladeshi Taka currency.
 class FiatBdt extends FiatCurrency {
   /// {@template sealed_world.currency_bdt_constructor}
   /// Creates a instance of [FiatBdt] (Bangladeshi Taka currency).

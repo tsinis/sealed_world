@@ -10,7 +10,7 @@ extension type const _FraFactory._(CountryFra _) implements CountryFra {
   const _FraFactory() : this._(const CountryFra._());
 }
 
-/// A class that represents the the France country.
+/// A class that represents the France country.
 class CountryFra extends WorldCountry {
   /// {@template sealed_world.country_fra_constructor}
   /// Creates a instance of [CountryFra] (France country).

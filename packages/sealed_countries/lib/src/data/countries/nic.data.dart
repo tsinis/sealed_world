@@ -10,7 +10,7 @@ extension type const _NicFactory._(CountryNic _) implements CountryNic {
   const _NicFactory() : this._(const CountryNic._());
 }
 
-/// A class that represents the the Nicaragua country.
+/// A class that represents the Nicaragua country.
 class CountryNic extends WorldCountry {
   /// {@template sealed_world.country_nic_constructor}
   /// Creates a instance of [CountryNic] (Nicaragua country).

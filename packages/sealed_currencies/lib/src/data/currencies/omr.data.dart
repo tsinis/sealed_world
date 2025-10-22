@@ -4,7 +4,7 @@ extension type const _OmrFactory._(FiatOmr _) implements FiatOmr {
   const _OmrFactory() : this._(const FiatOmr._());
 }
 
-/// A class that represents the the Omani Rial currency.
+/// A class that represents the Omani Rial currency.
 class FiatOmr extends FiatCurrency {
   /// {@template sealed_world.currency_omr_constructor}
   /// Creates a instance of [FiatOmr] (Omani Rial currency).

@@ -10,7 +10,7 @@ extension type const _GnqFactory._(CountryGnq _) implements CountryGnq {
   const _GnqFactory() : this._(const CountryGnq._());
 }
 
-/// A class that represents the the Equatorial Guinea country.
+/// A class that represents the Equatorial Guinea country.
 class CountryGnq extends WorldCountry {
   /// {@template sealed_world.country_gnq_constructor}
   /// Creates a instance of [CountryGnq] (Equatorial Guinea country).

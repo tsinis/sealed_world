@@ -10,7 +10,7 @@ extension type const _PerFactory._(CountryPer _) implements CountryPer {
   const _PerFactory() : this._(const CountryPer._());
 }
 
-/// A class that represents the the Peru country.
+/// A class that represents the Peru country.
 class CountryPer extends WorldCountry {
   /// {@template sealed_world.country_per_constructor}
   /// Creates a instance of [CountryPer] (Peru country).

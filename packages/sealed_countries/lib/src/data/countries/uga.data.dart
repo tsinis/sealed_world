@@ -10,7 +10,7 @@ extension type const _UgaFactory._(CountryUga _) implements CountryUga {
   const _UgaFactory() : this._(const CountryUga._());
 }
 
-/// A class that represents the the Uganda country.
+/// A class that represents the Uganda country.
 class CountryUga extends WorldCountry {
   /// {@template sealed_world.country_uga_constructor}
   /// Creates a instance of [CountryUga] (Uganda country).

@@ -4,7 +4,7 @@ extension type const _NadFactory._(FiatNad _) implements FiatNad {
   const _NadFactory() : this._(const FiatNad._());
 }
 
-/// A class that represents the the Namibian Dollar currency.
+/// A class that represents the Namibian Dollar currency.
 class FiatNad extends FiatCurrency {
   /// {@template sealed_world.currency_nad_constructor}
   /// Creates a instance of [FiatNad] (Namibian Dollar currency).

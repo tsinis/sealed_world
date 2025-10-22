@@ -4,7 +4,7 @@ extension type const _MxnFactory._(FiatMxn _) implements FiatMxn {
   const _MxnFactory() : this._(const FiatMxn._());
 }
 
-/// A class that represents the the Mexican Peso currency.
+/// A class that represents the Mexican Peso currency.
 class FiatMxn extends FiatCurrency {
   /// {@template sealed_world.currency_mxn_constructor}
   /// Creates a instance of [FiatMxn] (Mexican Peso currency).

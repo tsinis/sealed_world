@@ -10,7 +10,7 @@ extension type const _TunFactory._(CountryTun _) implements CountryTun {
   const _TunFactory() : this._(const CountryTun._());
 }
 
-/// A class that represents the the Tunisia country.
+/// A class that represents the Tunisia country.
 class CountryTun extends WorldCountry {
   /// {@template sealed_world.country_tun_constructor}
   /// Creates a instance of [CountryTun] (Tunisia country).

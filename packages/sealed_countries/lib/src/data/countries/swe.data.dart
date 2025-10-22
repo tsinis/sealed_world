@@ -10,7 +10,7 @@ extension type const _SweFactory._(CountrySwe _) implements CountrySwe {
   const _SweFactory() : this._(const CountrySwe._());
 }
 
-/// A class that represents the the Sweden country.
+/// A class that represents the Sweden country.
 class CountrySwe extends WorldCountry {
   /// {@template sealed_world.country_swe_constructor}
   /// Creates a instance of [CountrySwe] (Sweden country).

@@ -4,7 +4,7 @@ extension type const _PabFactory._(FiatPab _) implements FiatPab {
   const _PabFactory() : this._(const FiatPab._());
 }
 
-/// A class that represents the the Panamanian Balboa currency.
+/// A class that represents the Panamanian Balboa currency.
 class FiatPab extends FiatCurrency {
   /// {@template sealed_world.currency_pab_constructor}
   /// Creates a instance of [FiatPab] (Panamanian Balboa currency).

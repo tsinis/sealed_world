@@ -10,7 +10,7 @@ extension type const _MdvFactory._(CountryMdv _) implements CountryMdv {
   const _MdvFactory() : this._(const CountryMdv._());
 }
 
-/// A class that represents the the Maldives country.
+/// A class that represents the Maldives country.
 class CountryMdv extends WorldCountry {
   /// {@template sealed_world.country_mdv_constructor}
   /// Creates a instance of [CountryMdv] (Maldives country).

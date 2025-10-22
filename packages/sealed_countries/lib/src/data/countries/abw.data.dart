@@ -10,7 +10,7 @@ extension type const _AbwFactory._(CountryAbw _) implements CountryAbw {
   const _AbwFactory() : this._(const CountryAbw._());
 }
 
-/// A class that represents the the Aruba country.
+/// A class that represents the Aruba country.
 class CountryAbw extends WorldCountry {
   /// {@template sealed_world.country_abw_constructor}
   /// Creates a instance of [CountryAbw] (Aruba country).

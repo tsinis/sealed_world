@@ -10,7 +10,7 @@ extension type const _AtfFactory._(CountryAtf _) implements CountryAtf {
   const _AtfFactory() : this._(const CountryAtf._());
 }
 
-/// A class that represents the the French Southern and Antarctic Lands country.
+/// A class that represents the French Southern and Antarctic Lands country.
 class CountryAtf extends WorldCountry {
   /// {@template sealed_world.country_atf_constructor}
   /// Creates a instance of [CountryAtf] (French Southern and Antarctic Lands country).

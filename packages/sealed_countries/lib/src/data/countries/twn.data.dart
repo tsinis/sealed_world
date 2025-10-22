@@ -10,7 +10,7 @@ extension type const _TwnFactory._(CountryTwn _) implements CountryTwn {
   const _TwnFactory() : this._(const CountryTwn._());
 }
 
-/// A class that represents the the Taiwan country.
+/// A class that represents the Taiwan country.
 class CountryTwn extends WorldCountry {
   /// {@template sealed_world.country_twn_constructor}
   /// Creates a instance of [CountryTwn] (Taiwan country).

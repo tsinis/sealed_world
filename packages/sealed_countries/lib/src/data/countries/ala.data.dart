@@ -10,7 +10,7 @@ extension type const _AlaFactory._(CountryAla _) implements CountryAla {
   const _AlaFactory() : this._(const CountryAla._());
 }
 
-/// A class that represents the the Åland Islands country.
+/// A class that represents the Åland Islands country.
 class CountryAla extends WorldCountry {
   /// {@template sealed_world.country_ala_constructor}
   /// Creates a instance of [CountryAla] (Åland Islands country).

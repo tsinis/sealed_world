@@ -10,7 +10,7 @@ extension type const _KorFactory._(CountryKor _) implements CountryKor {
   const _KorFactory() : this._(const CountryKor._());
 }
 
-/// A class that represents the the South Korea country.
+/// A class that represents the South Korea country.
 class CountryKor extends WorldCountry {
   /// {@template sealed_world.country_kor_constructor}
   /// Creates a instance of [CountryKor] (South Korea country).

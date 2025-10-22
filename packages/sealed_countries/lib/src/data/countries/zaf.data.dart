@@ -10,7 +10,7 @@ extension type const _ZafFactory._(CountryZaf _) implements CountryZaf {
   const _ZafFactory() : this._(const CountryZaf._());
 }
 
-/// A class that represents the the South Africa country.
+/// A class that represents the South Africa country.
 class CountryZaf extends WorldCountry {
   /// {@template sealed_world.country_zaf_constructor}
   /// Creates a instance of [CountryZaf] (South Africa country).

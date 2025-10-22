@@ -10,7 +10,7 @@ extension type const _EriFactory._(CountryEri _) implements CountryEri {
   const _EriFactory() : this._(const CountryEri._());
 }
 
-/// A class that represents the the Eritrea country.
+/// A class that represents the Eritrea country.
 class CountryEri extends WorldCountry {
   /// {@template sealed_world.country_eri_constructor}
   /// Creates a instance of [CountryEri] (Eritrea country).

@@ -10,7 +10,7 @@ extension type const _AusFactory._(CountryAus _) implements CountryAus {
   const _AusFactory() : this._(const CountryAus._());
 }
 
-/// A class that represents the the Australia country.
+/// A class that represents the Australia country.
 class CountryAus extends WorldCountry {
   /// {@template sealed_world.country_aus_constructor}
   /// Creates a instance of [CountryAus] (Australia country).

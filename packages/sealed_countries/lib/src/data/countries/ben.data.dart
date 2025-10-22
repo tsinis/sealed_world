@@ -10,7 +10,7 @@ extension type const _BenFactory._(CountryBen _) implements CountryBen {
   const _BenFactory() : this._(const CountryBen._());
 }
 
-/// A class that represents the the Benin country.
+/// A class that represents the Benin country.
 class CountryBen extends WorldCountry {
   /// {@template sealed_world.country_ben_constructor}
   /// Creates a instance of [CountryBen] (Benin country).

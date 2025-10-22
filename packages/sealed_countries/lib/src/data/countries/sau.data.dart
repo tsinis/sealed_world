@@ -10,7 +10,7 @@ extension type const _SauFactory._(CountrySau _) implements CountrySau {
   const _SauFactory() : this._(const CountrySau._());
 }
 
-/// A class that represents the the Saudi Arabia country.
+/// A class that represents the Saudi Arabia country.
 class CountrySau extends WorldCountry {
   /// {@template sealed_world.country_sau_constructor}
   /// Creates a instance of [CountrySau] (Saudi Arabia country).

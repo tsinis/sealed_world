@@ -10,7 +10,7 @@ extension type const _MdgFactory._(CountryMdg _) implements CountryMdg {
   const _MdgFactory() : this._(const CountryMdg._());
 }
 
-/// A class that represents the the Madagascar country.
+/// A class that represents the Madagascar country.
 class CountryMdg extends WorldCountry {
   /// {@template sealed_world.country_mdg_constructor}
   /// Creates a instance of [CountryMdg] (Madagascar country).

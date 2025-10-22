@@ -4,7 +4,7 @@ extension type const _UzsFactory._(FiatUzs _) implements FiatUzs {
   const _UzsFactory() : this._(const FiatUzs._());
 }
 
-/// A class that represents the the Uzbekistani Som currency.
+/// A class that represents the Uzbekistani Som currency.
 class FiatUzs extends FiatCurrency {
   /// {@template sealed_world.currency_uzs_constructor}
   /// Creates a instance of [FiatUzs] (Uzbekistani Som currency).

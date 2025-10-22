@@ -10,7 +10,7 @@ extension type const _NzlFactory._(CountryNzl _) implements CountryNzl {
   const _NzlFactory() : this._(const CountryNzl._());
 }
 
-/// A class that represents the the New Zealand country.
+/// A class that represents the New Zealand country.
 class CountryNzl extends WorldCountry {
   /// {@template sealed_world.country_nzl_constructor}
   /// Creates a instance of [CountryNzl] (New Zealand country).

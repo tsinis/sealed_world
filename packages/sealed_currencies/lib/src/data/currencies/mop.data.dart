@@ -4,7 +4,7 @@ extension type const _MopFactory._(FiatMop _) implements FiatMop {
   const _MopFactory() : this._(const FiatMop._());
 }
 
-/// A class that represents the the Macanese Pataca currency.
+/// A class that represents the Macanese Pataca currency.
 class FiatMop extends FiatCurrency {
   /// {@template sealed_world.currency_mop_constructor}
   /// Creates a instance of [FiatMop] (Macanese Pataca currency).

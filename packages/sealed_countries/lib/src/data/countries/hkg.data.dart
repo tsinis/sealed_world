@@ -10,7 +10,7 @@ extension type const _HkgFactory._(CountryHkg _) implements CountryHkg {
   const _HkgFactory() : this._(const CountryHkg._());
 }
 
-/// A class that represents the the Hong Kong country.
+/// A class that represents the Hong Kong country.
 class CountryHkg extends WorldCountry {
   /// {@template sealed_world.country_hkg_constructor}
   /// Creates a instance of [CountryHkg] (Hong Kong country).

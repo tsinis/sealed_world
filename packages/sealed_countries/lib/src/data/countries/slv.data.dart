@@ -10,7 +10,7 @@ extension type const _SlvFactory._(CountrySlv _) implements CountrySlv {
   const _SlvFactory() : this._(const CountrySlv._());
 }
 
-/// A class that represents the the El Salvador country.
+/// A class that represents the El Salvador country.
 class CountrySlv extends WorldCountry {
   /// {@template sealed_world.country_slv_constructor}
   /// Creates a instance of [CountrySlv] (El Salvador country).

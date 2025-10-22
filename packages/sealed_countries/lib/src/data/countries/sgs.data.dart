@@ -10,7 +10,7 @@ extension type const _SgsFactory._(CountrySgs _) implements CountrySgs {
   const _SgsFactory() : this._(const CountrySgs._());
 }
 
-/// A class that represents the the South Georgia country.
+/// A class that represents the South Georgia country.
 class CountrySgs extends WorldCountry {
   /// {@template sealed_world.country_sgs_constructor}
   /// Creates a instance of [CountrySgs] (South Georgia country).

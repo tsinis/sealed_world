@@ -10,7 +10,7 @@ extension type const _DeuFactory._(CountryDeu _) implements CountryDeu {
   const _DeuFactory() : this._(const CountryDeu._());
 }
 
-/// A class that represents the the Germany country.
+/// A class that represents the Germany country.
 class CountryDeu extends WorldCountry {
   /// {@template sealed_world.country_deu_constructor}
   /// Creates a instance of [CountryDeu] (Germany country).

@@ -10,7 +10,7 @@ extension type const _FinFactory._(CountryFin _) implements CountryFin {
   const _FinFactory() : this._(const CountryFin._());
 }
 
-/// A class that represents the the Finland country.
+/// A class that represents the Finland country.
 class CountryFin extends WorldCountry {
   /// {@template sealed_world.country_fin_constructor}
   /// Creates a instance of [CountryFin] (Finland country).

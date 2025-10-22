@@ -10,7 +10,7 @@ extension type const _PriFactory._(CountryPri _) implements CountryPri {
   const _PriFactory() : this._(const CountryPri._());
 }
 
-/// A class that represents the the Puerto Rico country.
+/// A class that represents the Puerto Rico country.
 class CountryPri extends WorldCountry {
   /// {@template sealed_world.country_pri_constructor}
   /// Creates a instance of [CountryPri] (Puerto Rico country).

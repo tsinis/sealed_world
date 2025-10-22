@@ -4,7 +4,7 @@ extension type const _CopFactory._(FiatCop _) implements FiatCop {
   const _CopFactory() : this._(const FiatCop._());
 }
 
-/// A class that represents the the Colombian Peso currency.
+/// A class that represents the Colombian Peso currency.
 class FiatCop extends FiatCurrency {
   /// {@template sealed_world.currency_cop_constructor}
   /// Creates a instance of [FiatCop] (Colombian Peso currency).

@@ -10,7 +10,7 @@ extension type const _GumFactory._(CountryGum _) implements CountryGum {
   const _GumFactory() : this._(const CountryGum._());
 }
 
-/// A class that represents the the Guam country.
+/// A class that represents the Guam country.
 class CountryGum extends WorldCountry {
   /// {@template sealed_world.country_gum_constructor}
   /// Creates a instance of [CountryGum] (Guam country).

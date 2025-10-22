@@ -4,7 +4,7 @@ extension type const _ZwgFactory._(FiatZwg _) implements FiatZwg {
   const _ZwgFactory() : this._(const FiatZwg._());
 }
 
-/// A class that represents the the Zimbabwe Gold currency.
+/// A class that represents the Zimbabwe Gold currency.
 class FiatZwg extends FiatCurrency {
   /// {@template sealed_world.currency_zwg_constructor}
   /// Creates a instance of [FiatZwg] (Zimbabwe Gold currency).

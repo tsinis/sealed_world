@@ -10,7 +10,7 @@ extension type const _TkmFactory._(CountryTkm _) implements CountryTkm {
   const _TkmFactory() : this._(const CountryTkm._());
 }
 
-/// A class that represents the the Turkmenistan country.
+/// A class that represents the Turkmenistan country.
 class CountryTkm extends WorldCountry {
   /// {@template sealed_world.country_tkm_constructor}
   /// Creates a instance of [CountryTkm] (Turkmenistan country).

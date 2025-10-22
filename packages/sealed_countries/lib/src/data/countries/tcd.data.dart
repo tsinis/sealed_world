@@ -10,7 +10,7 @@ extension type const _TcdFactory._(CountryTcd _) implements CountryTcd {
   const _TcdFactory() : this._(const CountryTcd._());
 }
 
-/// A class that represents the the Chad country.
+/// A class that represents the Chad country.
 class CountryTcd extends WorldCountry {
   /// {@template sealed_world.country_tcd_constructor}
   /// Creates a instance of [CountryTcd] (Chad country).

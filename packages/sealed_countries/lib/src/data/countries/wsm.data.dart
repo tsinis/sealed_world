@@ -10,7 +10,7 @@ extension type const _WsmFactory._(CountryWsm _) implements CountryWsm {
   const _WsmFactory() : this._(const CountryWsm._());
 }
 
-/// A class that represents the the Samoa country.
+/// A class that represents the Samoa country.
 class CountryWsm extends WorldCountry {
   /// {@template sealed_world.country_wsm_constructor}
   /// Creates a instance of [CountryWsm] (Samoa country).

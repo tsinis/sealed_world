@@ -4,7 +4,7 @@ extension type const _KmfFactory._(FiatKmf _) implements FiatKmf {
   const _KmfFactory() : this._(const FiatKmf._());
 }
 
-/// A class that represents the the Comorian Franc currency.
+/// A class that represents the Comorian Franc currency.
 class FiatKmf extends FiatCurrency {
   /// {@template sealed_world.currency_kmf_constructor}
   /// Creates a instance of [FiatKmf] (Comorian Franc currency).

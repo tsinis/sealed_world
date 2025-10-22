@@ -4,7 +4,7 @@ extension type const _UahFactory._(FiatUah _) implements FiatUah {
   const _UahFactory() : this._(const FiatUah._());
 }
 
-/// A class that represents the the Ukrainian Hryvnia currency.
+/// A class that represents the Ukrainian Hryvnia currency.
 class FiatUah extends FiatCurrency {
   /// {@template sealed_world.currency_uah_constructor}
   /// Creates a instance of [FiatUah] (Ukrainian Hryvnia currency).

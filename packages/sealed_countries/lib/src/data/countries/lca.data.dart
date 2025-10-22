@@ -10,7 +10,7 @@ extension type const _LcaFactory._(CountryLca _) implements CountryLca {
   const _LcaFactory() : this._(const CountryLca._());
 }
 
-/// A class that represents the the Saint Lucia country.
+/// A class that represents the Saint Lucia country.
 class CountryLca extends WorldCountry {
   /// {@template sealed_world.country_lca_constructor}
   /// Creates a instance of [CountryLca] (Saint Lucia country).
@@ -51,10 +51,8 @@ class CountryLca extends WorldCountry {
   @override
   List<FiatCurrency> get currencies => const [FiatXcd()];
   @override
-  CapitalInfo get capitalInfo => const CapitalInfo(
-    capital: Capital("Castries"),
-    latLng: LatLng(14, -61),
-  );
+  CapitalInfo get capitalInfo =>
+      const CapitalInfo(capital: Capital("Castries"), latLng: LatLng(14, -61));
   @override
   List<RegionalBloc> get regionalBlocs => const [BlocCARICOM()];
   @override

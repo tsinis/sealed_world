@@ -6,7 +6,7 @@ extension type const _SllFactory._(FiatSll _) implements FiatSll {
   const _SllFactory() : this._(const FiatSll._());
 }
 
-/// A class that represents the the Sierra Leonean Leone (Old) currency.
+/// A class that represents the Sierra Leonean Leone (Old) currency.
 @Deprecated("Use `FiatSle()` instead")
 class FiatSll extends FiatCurrency {
   /// {@template sealed_world.currency_sll_constructor}

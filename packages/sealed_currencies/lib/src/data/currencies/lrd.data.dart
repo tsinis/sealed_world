@@ -4,7 +4,7 @@ extension type const _LrdFactory._(FiatLrd _) implements FiatLrd {
   const _LrdFactory() : this._(const FiatLrd._());
 }
 
-/// A class that represents the the Liberian Dollar currency.
+/// A class that represents the Liberian Dollar currency.
 class FiatLrd extends FiatCurrency {
   /// {@template sealed_world.currency_lrd_constructor}
   /// Creates a instance of [FiatLrd] (Liberian Dollar currency).

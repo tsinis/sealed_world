@@ -10,7 +10,7 @@ extension type const _ColFactory._(CountryCol _) implements CountryCol {
   const _ColFactory() : this._(const CountryCol._());
 }
 
-/// A class that represents the the Colombia country.
+/// A class that represents the Colombia country.
 class CountryCol extends WorldCountry {
   /// {@template sealed_world.country_col_constructor}
   /// Creates a instance of [CountryCol] (Colombia country).

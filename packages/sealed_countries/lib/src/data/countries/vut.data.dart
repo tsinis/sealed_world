@@ -10,7 +10,7 @@ extension type const _VutFactory._(CountryVut _) implements CountryVut {
   const _VutFactory() : this._(const CountryVut._());
 }
 
-/// A class that represents the the Vanuatu country.
+/// A class that represents the Vanuatu country.
 class CountryVut extends WorldCountry {
   /// {@template sealed_world.country_vut_constructor}
   /// Creates a instance of [CountryVut] (Vanuatu country).

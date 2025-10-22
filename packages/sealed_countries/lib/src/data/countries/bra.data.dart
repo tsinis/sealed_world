@@ -10,7 +10,7 @@ extension type const _BraFactory._(CountryBra _) implements CountryBra {
   const _BraFactory() : this._(const CountryBra._());
 }
 
-/// A class that represents the the Brazil country.
+/// A class that represents the Brazil country.
 class CountryBra extends WorldCountry {
   /// {@template sealed_world.country_bra_constructor}
   /// Creates a instance of [CountryBra] (Brazil country).

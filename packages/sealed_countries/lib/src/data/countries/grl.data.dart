@@ -10,7 +10,7 @@ extension type const _GrlFactory._(CountryGrl _) implements CountryGrl {
   const _GrlFactory() : this._(const CountryGrl._());
 }
 
-/// A class that represents the the Greenland country.
+/// A class that represents the Greenland country.
 class CountryGrl extends WorldCountry {
   /// {@template sealed_world.country_grl_constructor}
   /// Creates a instance of [CountryGrl] (Greenland country).

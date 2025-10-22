@@ -10,7 +10,7 @@ extension type const _UryFactory._(CountryUry _) implements CountryUry {
   const _UryFactory() : this._(const CountryUry._());
 }
 
-/// A class that represents the the Uruguay country.
+/// A class that represents the Uruguay country.
 class CountryUry extends WorldCountry {
   /// {@template sealed_world.country_ury_constructor}
   /// Creates a instance of [CountryUry] (Uruguay country).

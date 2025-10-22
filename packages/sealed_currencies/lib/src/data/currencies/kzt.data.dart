@@ -4,7 +4,7 @@ extension type const _KztFactory._(FiatKzt _) implements FiatKzt {
   const _KztFactory() : this._(const FiatKzt._());
 }
 
-/// A class that represents the the Kazakhstani Tenge currency.
+/// A class that represents the Kazakhstani Tenge currency.
 class FiatKzt extends FiatCurrency {
   /// {@template sealed_world.currency_kzt_constructor}
   /// Creates a instance of [FiatKzt] (Kazakhstani Tenge currency).

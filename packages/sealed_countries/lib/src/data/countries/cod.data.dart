@@ -10,7 +10,7 @@ extension type const _CodFactory._(CountryCod _) implements CountryCod {
   const _CodFactory() : this._(const CountryCod._());
 }
 
-/// A class that represents the the DR Congo country.
+/// A class that represents the DR Congo country.
 class CountryCod extends WorldCountry {
   /// {@template sealed_world.country_cod_constructor}
   /// Creates a instance of [CountryCod] (DR Congo country).

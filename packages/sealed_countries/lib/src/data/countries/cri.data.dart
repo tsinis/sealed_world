@@ -10,7 +10,7 @@ extension type const _CriFactory._(CountryCri _) implements CountryCri {
   const _CriFactory() : this._(const CountryCri._());
 }
 
-/// A class that represents the the Costa Rica country.
+/// A class that represents the Costa Rica country.
 class CountryCri extends WorldCountry {
   /// {@template sealed_world.country_cri_constructor}
   /// Creates a instance of [CountryCri] (Costa Rica country).

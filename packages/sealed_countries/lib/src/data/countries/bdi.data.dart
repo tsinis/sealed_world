@@ -10,7 +10,7 @@ extension type const _BdiFactory._(CountryBdi _) implements CountryBdi {
   const _BdiFactory() : this._(const CountryBdi._());
 }
 
-/// A class that represents the the Burundi country.
+/// A class that represents the Burundi country.
 class CountryBdi extends WorldCountry {
   /// {@template sealed_world.country_bdi_constructor}
   /// Creates a instance of [CountryBdi] (Burundi country).

@@ -4,7 +4,7 @@ extension type const _GmdFactory._(FiatGmd _) implements FiatGmd {
   const _GmdFactory() : this._(const FiatGmd._());
 }
 
-/// A class that represents the the Gambian Dalasi currency.
+/// A class that represents the Gambian Dalasi currency.
 class FiatGmd extends FiatCurrency {
   /// {@template sealed_world.currency_gmd_constructor}
   /// Creates a instance of [FiatGmd] (Gambian Dalasi currency).

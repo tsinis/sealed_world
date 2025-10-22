@@ -4,7 +4,7 @@ extension type const _PenFactory._(FiatPen _) implements FiatPen {
   const _PenFactory() : this._(const FiatPen._());
 }
 
-/// A class that represents the the Peruvian Sol currency.
+/// A class that represents the Peruvian Sol currency.
 class FiatPen extends FiatCurrency {
   /// {@template sealed_world.currency_pen_constructor}
   /// Creates a instance of [FiatPen] (Peruvian Sol currency).

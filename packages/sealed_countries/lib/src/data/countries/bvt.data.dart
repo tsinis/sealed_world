@@ -10,7 +10,7 @@ extension type const _BvtFactory._(CountryBvt _) implements CountryBvt {
   const _BvtFactory() : this._(const CountryBvt._());
 }
 
-/// A class that represents the the Bouvet Island country.
+/// A class that represents the Bouvet Island country.
 class CountryBvt extends WorldCountry {
   /// {@template sealed_world.country_bvt_constructor}
   /// Creates a instance of [CountryBvt] (Bouvet Island country).

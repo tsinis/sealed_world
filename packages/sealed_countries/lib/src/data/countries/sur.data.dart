@@ -10,7 +10,7 @@ extension type const _SurFactory._(CountrySur _) implements CountrySur {
   const _SurFactory() : this._(const CountrySur._());
 }
 
-/// A class that represents the the Suriname country.
+/// A class that represents the Suriname country.
 class CountrySur extends WorldCountry {
   /// {@template sealed_world.country_sur_constructor}
   /// Creates a instance of [CountrySur] (Suriname country).

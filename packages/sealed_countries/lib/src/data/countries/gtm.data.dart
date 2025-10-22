@@ -10,7 +10,7 @@ extension type const _GtmFactory._(CountryGtm _) implements CountryGtm {
   const _GtmFactory() : this._(const CountryGtm._());
 }
 
-/// A class that represents the the Guatemala country.
+/// A class that represents the Guatemala country.
 class CountryGtm extends WorldCountry {
   /// {@template sealed_world.country_gtm_constructor}
   /// Creates a instance of [CountryGtm] (Guatemala country).

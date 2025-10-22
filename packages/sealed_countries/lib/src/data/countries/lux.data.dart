@@ -10,7 +10,7 @@ extension type const _LuxFactory._(CountryLux _) implements CountryLux {
   const _LuxFactory() : this._(const CountryLux._());
 }
 
-/// A class that represents the the Luxembourg country.
+/// A class that represents the Luxembourg country.
 class CountryLux extends WorldCountry {
   /// {@template sealed_world.country_lux_constructor}
   /// Creates a instance of [CountryLux] (Luxembourg country).

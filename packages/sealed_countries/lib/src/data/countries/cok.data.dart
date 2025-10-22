@@ -10,7 +10,7 @@ extension type const _CokFactory._(CountryCok _) implements CountryCok {
   const _CokFactory() : this._(const CountryCok._());
 }
 
-/// A class that represents the the Cook Islands country.
+/// A class that represents the Cook Islands country.
 class CountryCok extends WorldCountry {
   /// {@template sealed_world.country_cok_constructor}
   /// Creates a instance of [CountryCok] (Cook Islands country).

@@ -10,7 +10,7 @@ extension type const _MytFactory._(CountryMyt _) implements CountryMyt {
   const _MytFactory() : this._(const CountryMyt._());
 }
 
-/// A class that represents the the Mayotte country.
+/// A class that represents the Mayotte country.
 class CountryMyt extends WorldCountry {
   /// {@template sealed_world.country_myt_constructor}
   /// Creates a instance of [CountryMyt] (Mayotte country).

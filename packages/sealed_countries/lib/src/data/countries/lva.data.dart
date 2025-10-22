@@ -10,7 +10,7 @@ extension type const _LvaFactory._(CountryLva _) implements CountryLva {
   const _LvaFactory() : this._(const CountryLva._());
 }
 
-/// A class that represents the the Latvia country.
+/// A class that represents the Latvia country.
 class CountryLva extends WorldCountry {
   /// {@template sealed_world.country_lva_constructor}
   /// Creates a instance of [CountryLva] (Latvia country).

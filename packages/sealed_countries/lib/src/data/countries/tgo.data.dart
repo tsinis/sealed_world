@@ -10,7 +10,7 @@ extension type const _TgoFactory._(CountryTgo _) implements CountryTgo {
   const _TgoFactory() : this._(const CountryTgo._());
 }
 
-/// A class that represents the the Togo country.
+/// A class that represents the Togo country.
 class CountryTgo extends WorldCountry {
   /// {@template sealed_world.country_tgo_constructor}
   /// Creates a instance of [CountryTgo] (Togo country).

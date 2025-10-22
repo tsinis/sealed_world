@@ -10,7 +10,7 @@ extension type const _MacFactory._(CountryMac _) implements CountryMac {
   const _MacFactory() : this._(const CountryMac._());
 }
 
-/// A class that represents the the Macau country.
+/// A class that represents the Macau country.
 class CountryMac extends WorldCountry {
   /// {@template sealed_world.country_mac_constructor}
   /// Creates a instance of [CountryMac] (Macau country).

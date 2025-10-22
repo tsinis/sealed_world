@@ -4,7 +4,7 @@ extension type const _TryFactory._(FiatTry _) implements FiatTry {
   const _TryFactory() : this._(const FiatTry._());
 }
 
-/// A class that represents the the Turkish Lira currency.
+/// A class that represents the Turkish Lira currency.
 class FiatTry extends FiatCurrency {
   /// {@template sealed_world.currency_try_constructor}
   /// Creates a instance of [FiatTry] (Turkish Lira currency).

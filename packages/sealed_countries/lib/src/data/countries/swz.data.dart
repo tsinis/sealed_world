@@ -10,7 +10,7 @@ extension type const _SwzFactory._(CountrySwz _) implements CountrySwz {
   const _SwzFactory() : this._(const CountrySwz._());
 }
 
-/// A class that represents the the Eswatini country.
+/// A class that represents the Eswatini country.
 class CountrySwz extends WorldCountry {
   /// {@template sealed_world.country_swz_constructor}
   /// Creates a instance of [CountrySwz] (Eswatini country).

@@ -10,7 +10,7 @@ extension type const _GabFactory._(CountryGab _) implements CountryGab {
   const _GabFactory() : this._(const CountryGab._());
 }
 
-/// A class that represents the the Gabon country.
+/// A class that represents the Gabon country.
 class CountryGab extends WorldCountry {
   /// {@template sealed_world.country_gab_constructor}
   /// Creates a instance of [CountryGab] (Gabon country).

@@ -4,7 +4,7 @@ extension type const _SspFactory._(FiatSsp _) implements FiatSsp {
   const _SspFactory() : this._(const FiatSsp._());
 }
 
-/// A class that represents the the South Sudanese Pound currency.
+/// A class that represents the South Sudanese Pound currency.
 class FiatSsp extends FiatCurrency {
   /// {@template sealed_world.currency_ssp_constructor}
   /// Creates a instance of [FiatSsp] (South Sudanese Pound currency).

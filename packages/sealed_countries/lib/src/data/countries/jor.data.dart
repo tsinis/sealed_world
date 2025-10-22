@@ -10,7 +10,7 @@ extension type const _JorFactory._(CountryJor _) implements CountryJor {
   const _JorFactory() : this._(const CountryJor._());
 }
 
-/// A class that represents the the Jordan country.
+/// A class that represents the Jordan country.
 class CountryJor extends WorldCountry {
   /// {@template sealed_world.country_jor_constructor}
   /// Creates a instance of [CountryJor] (Jordan country).

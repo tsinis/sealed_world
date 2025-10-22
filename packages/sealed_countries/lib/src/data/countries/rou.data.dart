@@ -10,7 +10,7 @@ extension type const _RouFactory._(CountryRou _) implements CountryRou {
   const _RouFactory() : this._(const CountryRou._());
 }
 
-/// A class that represents the the Romania country.
+/// A class that represents the Romania country.
 class CountryRou extends WorldCountry {
   /// {@template sealed_world.country_rou_constructor}
   /// Creates a instance of [CountryRou] (Romania country).

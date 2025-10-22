@@ -4,7 +4,7 @@ extension type const _CucFactory._(FiatCuc _) implements FiatCuc {
   const _CucFactory() : this._(const FiatCuc._());
 }
 
-/// A class that represents the the Cuban Convertible Peso currency.
+/// A class that represents the Cuban Convertible Peso currency.
 class FiatCuc extends FiatCurrency {
   /// {@template sealed_world.currency_cuc_constructor}
   /// Creates a instance of [FiatCuc] (Cuban Convertible Peso currency).

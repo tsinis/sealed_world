@@ -6,7 +6,7 @@ extension type const _HrkFactory._(FiatHrk _) implements FiatHrk {
   const _HrkFactory() : this._(const FiatHrk._());
 }
 
-/// A class that represents the the Croatian Kuna currency.
+/// A class that represents the Croatian Kuna currency.
 @Deprecated("Use `FiatEur()` instead")
 class FiatHrk extends FiatCurrency {
   /// {@template sealed_world.currency_hrk_constructor}

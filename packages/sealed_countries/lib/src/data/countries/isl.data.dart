@@ -10,7 +10,7 @@ extension type const _IslFactory._(CountryIsl _) implements CountryIsl {
   const _IslFactory() : this._(const CountryIsl._());
 }
 
-/// A class that represents the the Iceland country.
+/// A class that represents the Iceland country.
 class CountryIsl extends WorldCountry {
   /// {@template sealed_world.country_isl_constructor}
   /// Creates a instance of [CountryIsl] (Iceland country).

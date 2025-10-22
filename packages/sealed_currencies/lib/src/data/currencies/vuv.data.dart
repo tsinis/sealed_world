@@ -4,7 +4,7 @@ extension type const _VuvFactory._(FiatVuv _) implements FiatVuv {
   const _VuvFactory() : this._(const FiatVuv._());
 }
 
-/// A class that represents the the Vanuatu Vatu currency.
+/// A class that represents the Vanuatu Vatu currency.
 class FiatVuv extends FiatCurrency {
   /// {@template sealed_world.currency_vuv_constructor}
   /// Creates a instance of [FiatVuv] (Vanuatu Vatu currency).

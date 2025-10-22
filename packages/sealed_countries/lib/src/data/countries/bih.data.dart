@@ -10,7 +10,7 @@ extension type const _BihFactory._(CountryBih _) implements CountryBih {
   const _BihFactory() : this._(const CountryBih._());
 }
 
-/// A class that represents the the Bosnia and Herzegovina country.
+/// A class that represents the Bosnia and Herzegovina country.
 class CountryBih extends WorldCountry {
   /// {@template sealed_world.country_bih_constructor}
   /// Creates a instance of [CountryBih] (Bosnia and Herzegovina country).

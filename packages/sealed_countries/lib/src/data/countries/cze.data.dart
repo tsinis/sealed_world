@@ -10,7 +10,7 @@ extension type const _CzeFactory._(CountryCze _) implements CountryCze {
   const _CzeFactory() : this._(const CountryCze._());
 }
 
-/// A class that represents the the Czechia country.
+/// A class that represents the Czechia country.
 class CountryCze extends WorldCountry {
   /// {@template sealed_world.country_cze_constructor}
   /// Creates a instance of [CountryCze] (Czechia country).

@@ -4,7 +4,7 @@ extension type const _NgnFactory._(FiatNgn _) implements FiatNgn {
   const _NgnFactory() : this._(const FiatNgn._());
 }
 
-/// A class that represents the the Nigerian Naira currency.
+/// A class that represents the Nigerian Naira currency.
 class FiatNgn extends FiatCurrency {
   /// {@template sealed_world.currency_ngn_constructor}
   /// Creates a instance of [FiatNgn] (Nigerian Naira currency).

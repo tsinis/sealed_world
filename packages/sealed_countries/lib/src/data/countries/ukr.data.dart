@@ -10,7 +10,7 @@ extension type const _UkrFactory._(CountryUkr _) implements CountryUkr {
   const _UkrFactory() : this._(const CountryUkr._());
 }
 
-/// A class that represents the the Ukraine country.
+/// A class that represents the Ukraine country.
 class CountryUkr extends WorldCountry {
   /// {@template sealed_world.country_ukr_constructor}
   /// Creates a instance of [CountryUkr] (Ukraine country).

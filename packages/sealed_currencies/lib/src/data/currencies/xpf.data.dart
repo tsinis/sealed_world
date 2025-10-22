@@ -4,7 +4,7 @@ extension type const _XpfFactory._(FiatXpf _) implements FiatXpf {
   const _XpfFactory() : this._(const FiatXpf._());
 }
 
-/// A class that represents the the Cfp Franc currency.
+/// A class that represents the Cfp Franc currency.
 class FiatXpf extends FiatCurrency {
   /// {@template sealed_world.currency_xpf_constructor}
   /// Creates a instance of [FiatXpf] (Cfp Franc currency).

@@ -4,7 +4,7 @@ extension type const _IrrFactory._(FiatIrr _) implements FiatIrr {
   const _IrrFactory() : this._(const FiatIrr._());
 }
 
-/// A class that represents the the Iranian Rial currency.
+/// A class that represents the Iranian Rial currency.
 class FiatIrr extends FiatCurrency {
   /// {@template sealed_world.currency_irr_constructor}
   /// Creates a instance of [FiatIrr] (Iranian Rial currency).

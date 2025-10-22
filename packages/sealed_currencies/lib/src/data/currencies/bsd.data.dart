@@ -4,7 +4,7 @@ extension type const _BsdFactory._(FiatBsd _) implements FiatBsd {
   const _BsdFactory() : this._(const FiatBsd._());
 }
 
-/// A class that represents the the Bahamian Dollar currency.
+/// A class that represents the Bahamian Dollar currency.
 class FiatBsd extends FiatCurrency {
   /// {@template sealed_world.currency_bsd_constructor}
   /// Creates a instance of [FiatBsd] (Bahamian Dollar currency).

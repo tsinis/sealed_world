@@ -4,7 +4,7 @@ extension type const _NzdFactory._(FiatNzd _) implements FiatNzd {
   const _NzdFactory() : this._(const FiatNzd._());
 }
 
-/// A class that represents the the New Zealand Dollar currency.
+/// A class that represents the New Zealand Dollar currency.
 class FiatNzd extends FiatCurrency {
   /// {@template sealed_world.currency_nzd_constructor}
   /// Creates a instance of [FiatNzd] (New Zealand Dollar currency).

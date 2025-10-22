@@ -10,7 +10,7 @@ extension type const _KgzFactory._(CountryKgz _) implements CountryKgz {
   const _KgzFactory() : this._(const CountryKgz._());
 }
 
-/// A class that represents the the Kyrgyzstan country.
+/// A class that represents the Kyrgyzstan country.
 class CountryKgz extends WorldCountry {
   /// {@template sealed_world.country_kgz_constructor}
   /// Creates a instance of [CountryKgz] (Kyrgyzstan country).

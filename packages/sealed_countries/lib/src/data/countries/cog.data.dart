@@ -10,7 +10,7 @@ extension type const _CogFactory._(CountryCog _) implements CountryCog {
   const _CogFactory() : this._(const CountryCog._());
 }
 
-/// A class that represents the the Republic of the Congo country.
+/// A class that represents the Republic of the Congo country.
 class CountryCog extends WorldCountry {
   /// {@template sealed_world.country_cog_constructor}
   /// Creates a instance of [CountryCog] (Republic of the Congo country).

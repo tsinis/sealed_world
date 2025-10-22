@@ -10,7 +10,7 @@ extension type const _AgoFactory._(CountryAgo _) implements CountryAgo {
   const _AgoFactory() : this._(const CountryAgo._());
 }
 
-/// A class that represents the the Angola country.
+/// A class that represents the Angola country.
 class CountryAgo extends WorldCountry {
   /// {@template sealed_world.country_ago_constructor}
   /// Creates a instance of [CountryAgo] (Angola country).

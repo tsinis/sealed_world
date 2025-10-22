@@ -10,7 +10,7 @@ extension type const _ReuFactory._(CountryReu _) implements CountryReu {
   const _ReuFactory() : this._(const CountryReu._());
 }
 
-/// A class that represents the the Réunion country.
+/// A class that represents the Réunion country.
 class CountryReu extends WorldCountry {
   /// {@template sealed_world.country_reu_constructor}
   /// Creates a instance of [CountryReu] (Réunion country).

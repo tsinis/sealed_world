@@ -10,7 +10,7 @@ extension type const _MwiFactory._(CountryMwi _) implements CountryMwi {
   const _MwiFactory() : this._(const CountryMwi._());
 }
 
-/// A class that represents the the Malawi country.
+/// A class that represents the Malawi country.
 class CountryMwi extends WorldCountry {
   /// {@template sealed_world.country_mwi_constructor}
   /// Creates a instance of [CountryMwi] (Malawi country).

@@ -4,7 +4,7 @@ extension type const _RsdFactory._(FiatRsd _) implements FiatRsd {
   const _RsdFactory() : this._(const FiatRsd._());
 }
 
-/// A class that represents the the Serbian Dinar currency.
+/// A class that represents the Serbian Dinar currency.
 class FiatRsd extends FiatCurrency {
   /// {@template sealed_world.currency_rsd_constructor}
   /// Creates a instance of [FiatRsd] (Serbian Dinar currency).

@@ -10,7 +10,7 @@ extension type const _SenFactory._(CountrySen _) implements CountrySen {
   const _SenFactory() : this._(const CountrySen._());
 }
 
-/// A class that represents the the Senegal country.
+/// A class that represents the Senegal country.
 class CountrySen extends WorldCountry {
   /// {@template sealed_world.country_sen_constructor}
   /// Creates a instance of [CountrySen] (Senegal country).

@@ -10,7 +10,7 @@ extension type const _GgyFactory._(CountryGgy _) implements CountryGgy {
   const _GgyFactory() : this._(const CountryGgy._());
 }
 
-/// A class that represents the the Guernsey country.
+/// A class that represents the Guernsey country.
 class CountryGgy extends WorldCountry {
   /// {@template sealed_world.country_ggy_constructor}
   /// Creates a instance of [CountryGgy] (Guernsey country).
