@@ -1,4 +1,4 @@
-// ignore_for_file: deprecated_member_use, it's TODO!
+// ignore_for_file: deprecated_member_use, avoid-duplicate-test-assertions
 // ignore_for_file: deprecated_member_use_from_same_package, it's TODO!
 
 import "package:_sealed_world_tests/sealed_world_tests.dart";
@@ -23,6 +23,13 @@ void main() => group("$WorldCountry", () {
     expect(value, isA<JsonEncodable>());
     expect(value, isA<Named>());
     expect(value, isA<Translated>());
+  });
+
+  test("compile and non compile time constructors equality", () {
+    expect(WorldCountry.abw(), CountryAbw());
+    expect(WorldCountry.abw(), const CountryAbw());
+    expect(const WorldCountry.abw(), CountryAbw());
+    expect(const WorldCountry.abw(), const CountryAbw());
   });
 
   assertTest(
@@ -154,11 +161,23 @@ void main() => group("$WorldCountry", () {
     test("with ${array.runtimeType}", () {
       expect(array.length, 2);
       array.addAll(List.of(array));
-      // ignore: avoid-duplicate-test-assertions, this is mutable array.
       expect(array.length, 2);
       array.add(WorldCountry.fromCodeShort(value.codeShort));
-      // ignore: avoid-duplicate-test-assertions, this is mutable array.
       expect(array.length, 2);
+    });
+
+    test("with ${Map<WorldCountry, Object>}", () {
+      final map = <WorldCountry, int>{
+        CountryAbw(): 4,
+        const CountryAbw(): 3,
+        WorldCountry.abw(): 2,
+        // ignore: equal_keys_in_map, it's a test.
+        const WorldCountry.abw(): 1,
+        WorldCountry.fromCode("ABW"): 0,
+      };
+      expect(map.length, 1);
+      expect(map.entries.first.key, CountryAbw());
+      expect(map.entries.first.value, isZero);
     });
   });
 
