@@ -1,3 +1,4 @@
+// ignore_for_file: avoid_print, it's just a CLI tool.
 import "package:change_case/change_case.dart";
 import "package:sealed_languages/sealed_languages.dart";
 
@@ -48,6 +49,10 @@ class DataListGenerator {
 
 part of "../../model/country/country.dart";
 
+extension type const $factoryName._($className _) implements $className {
+  const $factoryName() : this._(const $className._());
+}
+
 /// A class that represents the the $itemName ${package.dataRepresent}.
 class $className extends $type {
 /// {@template sealed_world.${package.dataRepresent}_${lowerCaseCode}_constructor}
@@ -70,22 +75,40 @@ const $className._()""")
                   ) ??
                   "",
             )
-            ..write("\n}\n")
-            ..write("""
-extension type const $factoryName._($className _) implements $className {
-  const $factoryName() : this._(const $className._());
-}
-""");
+            ..write("\n}\n");
 
       final filePath = join(isoDataDir.path, "$lowerCaseCode.data.dart");
       if (lowerCaseCode != "unk")
         IoUtils().writeContentToFile(filePath, buffer);
-      print('Finished "part "$filePath";'); // ignore: avoid_print, CLI tool.
+      print('Finished "part "$filePath";');
     }
 
     IoUtils().directory = currentFileDir;
 
-    await _dart.dcm(directory: isoDataDir.path);
+    print(
+      "Generated ${package.dataList.length} ${package.dataRepresent} for "
+      '"${package.name}".',
+    );
+
+    final directory = isoDataDir.path;
+    print("Ready to fix in directory: $directory");
+    await _dart.dcm(directory);
+    await _dart.fixFormat(directory);
+    print("Formatted generated ${package.dataRepresent}.");
+    await _dart.dcm(directory);
     await _dart.fixFormat();
+    print("DCM Fixed issues in the package");
+  }
+
+  void showConstructors(Package package) {
+    for (final country in package.dataList) {
+      final code = country.code.toLowerCase();
+      // ignore: avoid-substring, it's CLI.
+      final capitilize = "${code[0].toUpperCase()}${code.substring(1)}";
+      print("""
+/// {@macro sealed_world.${package.dataRepresent}_${code}_constructor}
+const factory ${package.type}.$code() = _${capitilize}Factory;\n
+""");
+    }
   }
 }

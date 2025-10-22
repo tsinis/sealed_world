@@ -26,15 +26,17 @@ final class DartUtils {
 
   Future<void> pubGet() => pub(const ["get"]);
 
-  Future<void> fixFormat() async {
-    await fixApply();
-    await format();
+  Future<void> fixFormat([String? directory]) async {
+    await fixApply(directory);
+    await format(directory);
   }
 
-  Future<void> fixApply() => run(const ["fix", "--apply"]);
+  Future<void> fixApply([String? directory]) =>
+      run(const ["fix", "--apply"], workingDir: directory);
 
-  Future<void> format() => run(const ["format", "."]);
+  Future<void> format([String? directory]) =>
+      run(const ["format", "."], workingDir: directory);
 
-  Future<void> dcm({String? directory}) =>
+  Future<void> dcm([String? directory]) =>
       run(const ["fix", "."], process: "dcm", workingDir: directory);
 }
