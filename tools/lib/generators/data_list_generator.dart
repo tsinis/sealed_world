@@ -22,10 +22,8 @@ class DataListGenerator {
     );
 
     // Create the iso data directory if it doesn't exist.
-    if (!isoDataDir.existsSync()) {
-      isoDataDir.createSync(recursive: true);
-    }
-
+    if (!isoDataDir.existsSync()) isoDataDir.createSync(recursive: true);
+    final dataRepresent = package.dataRepresent;
     final type = package.type.toString();
 
     for (final item in package.dataList) {
@@ -38,44 +36,47 @@ class DataListGenerator {
       final classBody = setsBody.replaceAll(": [", ": const [");
       final itemName = item.internationalName;
       final factoryName = "_${code}Factory";
-
-      final buffer =
-          StringBuffer("""
+      final buffer = StringBuffer();
+      if (package == Package.sealedCountries) {
+        buffer.write("""
 // Those classes are based on data from the restcountries project
 // https://gitlab.com/restcountries/restcountries, which is
 // licensed under the Mozilla Public License Version 2.0.
 
 // ignore_for_file: prefer-digit-separators
-
-part of "../../model/country/country.dart";
+""");
+      }
+      buffer
+        ..write("""
+part of "../../model/$dataRepresent/$dataRepresent.dart";
 
 extension type const $factoryName._($className _) implements $className {
   const $factoryName() : this._(const $className._());
 }
 
-/// A class that represents the the $itemName ${package.dataRepresent}.
+/// A class that represents the $itemName $dataRepresent.
 class $className extends $type {
-/// {@template sealed_world.${package.dataRepresent}_${lowerCaseCode}_constructor}
-/// Creates a instance of [$className] ($itemName ${package.dataRepresent}).
+/// {@template sealed_world.${dataRepresent}_${lowerCaseCode}_constructor}
+/// Creates a instance of [$className] ($itemName $dataRepresent).
 ///
 /// ${IsoStandardized.standardAcronym} ${package.isoCodeAssociated} code: `${item.code}`, ${IsoStandardized.standardAcronym} ${package.isoCodeOtherAssociated} code: `${item.codeOther}`.
 /// {@endtemplate}
 const factory $className() = $factoryName;
 
 const $className._()""")
-            ..write(classBody)
-            ..write(";\n")
-            ..write(
-              /// It's not possible to use a self-referencing data in
-              /// compile-time constant constructor :-/.
-              package.whenConstOrNull(
-                    sealedLanguages: """
+        ..write(classBody)
+        ..write(";\n")
+        ..write(
+          /// It's not possible to use a self-referencing data in
+          /// compile-time constant constructor :-/.
+          package.whenConstOrNull(
+                sealedLanguages: """
   \n@override
   List<$TranslatedName> get translations => $lowerCaseCode${Language}Translations;""",
-                  ) ??
-                  "",
-            )
-            ..write("\n}\n");
+              ) ??
+              "",
+        )
+        ..write("\n}\n");
 
       final filePath = join(isoDataDir.path, "$lowerCaseCode.data.dart");
       if (lowerCaseCode != "unk")
@@ -86,7 +87,7 @@ const $className._()""")
     IoUtils().directory = currentFileDir;
 
     print(
-      "Generated ${package.dataList.length} ${package.dataRepresent} for "
+      "Generated ${package.dataList.length} $dataRepresent for "
       '"${package.name}".',
     );
 
@@ -94,7 +95,7 @@ const $className._()""")
     print("Ready to fix in directory: $directory");
     await _dart.dcm(directory);
     await _dart.fixFormat(directory);
-    print("Formatted generated ${package.dataRepresent}.");
+    print("Formatted generated $dataRepresent.");
     await _dart.dcm(directory);
     await _dart.fixFormat();
     print("DCM Fixed issues in the package");

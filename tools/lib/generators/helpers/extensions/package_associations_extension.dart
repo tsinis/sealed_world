@@ -17,7 +17,7 @@ extension PackageAssociationsExtension on Package {
 
   List<IsoTranslated> get dataList => whenConst(
     sealedLanguages: NaturalLanguage.list,
-    sealedCurrencies: FiatCurrency.list,
+    sealedCurrencies: FiatCurrency.listExtended,
     sealedCountries: WorldCountry.list,
   );
 
