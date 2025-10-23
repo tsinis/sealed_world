@@ -2,7 +2,6 @@ import "package:l10n_languages/l10n_languages.dart" show LanguagesLocaleMapper;
 
 import "../../collections/natural_language_collections.dart";
 import "../../data/natural_language_families.data.dart";
-import "../../data/scripts.data.dart";
 import "../../helpers/extensions/iso_comparable_extension.dart";
 import "../../helpers/extensions/iso_object_extension_type.dart";
 import "../../helpers/extensions/sealed_world_iterable_extension.dart";

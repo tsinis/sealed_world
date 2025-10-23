@@ -2,7 +2,6 @@
 
 import "package:sealed_currencies/src/helpers/extensions/iso_standardized_fiat_currency_extension.dart";
 import "package:sealed_currencies/src/model/currency/currency.dart";
-import "package:sealed_languages/src/data/scripts.data.dart";
 import "package:sealed_languages/src/interfaces/iso_standardized.dart";
 import "package:sealed_languages/src/model/script/writing_system.dart";
 import "package:test/test.dart";

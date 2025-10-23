@@ -2,10 +2,10 @@
 // ignore_for_file: deprecated_member_use_from_same_package, it's TODO!
 
 import "package:sealed_languages/language_translations.dart";
-import "package:sealed_languages/src/data/scripts.data.dart";
 import "package:sealed_languages/src/helpers/extensions/translated_extension.dart";
 import "package:sealed_languages/src/model/core/basic_locale.dart";
 import "package:sealed_languages/src/model/language/language.dart";
+import "package:sealed_languages/src/model/script/writing_system.dart";
 import "package:test/test.dart";
 
 void main() => group("TranslatedExtension", () {
