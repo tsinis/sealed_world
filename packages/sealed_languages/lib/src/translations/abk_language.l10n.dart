@@ -1,5 +1,5 @@
-import "../data/natural_languages.data.dart";
 import "../data/scripts.data.dart";
+import "../model/language/language.dart";
 import "../model/translated_name.dart";
 
 /// Provides 110 translations for a Abkhaz language:

@@ -1,5 +1,5 @@
-import "../data/natural_languages.data.dart";
 import "../data/scripts.data.dart";
+import "../model/language/language.dart";
 import "../model/translated_name.dart";
 
 /// Provides 112 translations for a Tajik language:

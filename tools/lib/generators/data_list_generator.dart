@@ -65,18 +65,7 @@ const factory $className() = $factoryName;
 
 const $className._()""")
         ..write(classBody)
-        ..write(";\n")
-        ..write(
-          /// It's not possible to use a self-referencing data in
-          /// compile-time constant constructor :-/.
-          package.whenConstOrNull(
-                sealedLanguages: """
-  \n@override
-  List<$TranslatedName> get translations => $lowerCaseCode${Language}Translations;""",
-              ) ??
-              "",
-        )
-        ..write("\n}\n");
+        ..write(";\n\n}\n");
 
       final filePath = join(isoDataDir.path, "$lowerCaseCode.data.dart");
       if (lowerCaseCode != "unk")

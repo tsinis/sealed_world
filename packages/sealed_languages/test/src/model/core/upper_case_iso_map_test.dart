@@ -2,9 +2,9 @@
 
 import "dart:collection" show MapView;
 
-import "package:sealed_languages/src/data/natural_languages.data.dart";
 import "package:sealed_languages/src/interfaces/iso_standardized.dart";
 import "package:sealed_languages/src/model/core/upper_case_iso_map.dart";
+import "package:sealed_languages/src/model/language/language.dart";
 import "package:test/test.dart";
 
 void main() => group("$UpperCaseIsoMap", () {

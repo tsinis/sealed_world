@@ -1,0 +1,24 @@
+part of "../../model/language/language.dart";
+
+extension type const _NavFactory._(LangNav _) implements LangNav {
+  const _NavFactory() : this._(const LangNav._());
+}
+
+/// A class that represents the Navajo (Navaho) language.
+class LangNav extends NaturalLanguage {
+  /// {@template sealed_world.language_nav_constructor}
+  /// Creates a instance of [LangNav] (Navajo (Navaho) language).
+  ///
+  /// ISO 639-2/T code: `NAV`, ISO 639-1 code: `NV`.
+  /// {@endtemplate}
+  const factory LangNav() = _NavFactory;
+
+  const LangNav._()
+    : super(
+        name: "Navajo (Navaho)",
+        code: "NAV",
+        codeShort: "NV",
+        namesNative: const ["Diné bizaad"],
+        family: const DeneYeniseian(),
+      );
+}

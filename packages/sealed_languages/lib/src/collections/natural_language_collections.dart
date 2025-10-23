@@ -1,5 +1,4 @@
 // ignore_for_file: prefer-static-class, it's referenced as static in the model.
-import "../data/natural_languages.data.dart";
 import "../model/language/language.dart";
 
 /// List of all standard [NaturalLanguage] sorted by code.

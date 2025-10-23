@@ -302,8 +302,9 @@ class NaturalLanguage extends Language
       : 'NaturalLanguage(name: "$name", code: "$code", '
             'codeShort: "$codeShort", namesNative: ${jsonEncode(namesNative)}, '
             '''${bibliographicCode == null ? '' : 'bibliographicCode: "$bibliographicCode", '}'''
-            "family: ${family.runtimeType}(), isRightToLeft: $isRightToLeft, "
-            "scripts: ${scripts.toUniqueInstancesString()},)";
+            "family: const ${family.runtimeType}(), "
+            "isRightToLeft: $isRightToLeft, "
+            "scripts: const ${scripts.toUniqueInstancesString()},)";
 
   @override
   String toJson({JsonCodec codec = const JsonCodec()}) => codec.encode(toMap());
