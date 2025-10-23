@@ -29,6 +29,13 @@ void main() => group("$NaturalLanguage", () {
     expect(value, isA<Comparable<IsoStandardized>>());
   });
 
+  performanceTest("compile and non compile time constructors equality", () {
+    expect(NaturalLanguage.aar(), LangAar());
+    expect(NaturalLanguage.aar(), const LangAar());
+    expect(const NaturalLanguage.aar(), LangAar());
+    expect(const NaturalLanguage.aar(), const LangAar());
+  });
+
   assertTest(
     "permissive constructor",
     () => const _NaturalLanguageTest().code,
@@ -94,6 +101,22 @@ void main() => group("$NaturalLanguage", () {
       array.add(NaturalLanguage.fromName(array.last.name));
       // ignore: avoid-duplicate-test-assertions, this is mutable array.
       expect(array.length, 2);
+    });
+
+    performanceTest("with ${Map<NaturalLanguage, Object>}", () {
+      final map = <NaturalLanguage, int>{
+        LangAar(): 4,
+        const LangAar(): 3,
+        NaturalLanguage.aar(): 2,
+        // ignore: equal_keys_in_map, it's a test.
+        const NaturalLanguage.aar(): 1,
+        NaturalLanguage.fromCode("AAR"): 0,
+      };
+      expect(map.entries.single.key, LangAar());
+      expect(map.entries.single.key, const LangAar());
+      expect(map.entries.single.key, NaturalLanguage.aar());
+      expect(map.entries.single.key, const NaturalLanguage.aar());
+      expect(map.entries.single.value, isZero);
     });
   });
 
