@@ -15,7 +15,7 @@ class CollectionsGenerator {
 
   // ignore: avoid-long-functions, it's just a CLI tool, not production code.
   Future<void> generate(Package? package) async {
-    final type = package?.type.toString() ?? "$Script";
+    final type = package.type.toString();
     final currentFileDir = Directory(
       join(
         Directory.current.parent.path,
@@ -35,7 +35,7 @@ class CollectionsGenerator {
     """);
 
     // ignore: avoid-unnecessary-type-casts, it's a CLI, not production code.
-    final items = package?.dataList.cast<IsoStandardized>() ?? Script.list;
+    final items = package.dataList?.cast<IsoStandardized>() ?? Script.list;
     for (final item in items) buffer.write("${item.runtimeType}(),\n");
     buffer
       ..write("];\n")

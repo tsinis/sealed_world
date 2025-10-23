@@ -33,7 +33,7 @@ void main(List<String> args) {
       final path = join(
         "json",
         language.codeShort.toLowerCase(),
-        "${package.dataRepresent.toLowerCase()}.${PathConstants.json}",
+        "${package.dataRepresent?.toLowerCase()}.${PathConstants.json}",
       );
       final result = io.writeContentToFile(path, jsonEncode(translations));
       if (result != null) i += 1;

@@ -13,9 +13,12 @@ class DataListGenerator {
   static const _dart = DartUtils();
 
   // ignore: avoid-long-functions, it's just a CLI tool.
-  Future<void> generate(Package package) async {
+  Future<void> generate(Package? package) async {
     final currentFileDir = Directory(
-      join(Directory.current.parent.path, package.fullPath),
+      join(
+        Directory.current.parent.path,
+        (package ?? Package.sealedLanguages).fullPath,
+      ),
     );
     final isoDataDir = Directory(
       join(currentFileDir.path, "data", package.dataRepresentPlural),
@@ -23,10 +26,11 @@ class DataListGenerator {
 
     // Create the iso data directory if it doesn't exist.
     if (!isoDataDir.existsSync()) isoDataDir.createSync(recursive: true);
-    final dataRepresent = package.dataRepresent;
+    final dataRepresent = package.dataRepresent ?? "script";
     final type = package.type.toString();
+    final isoList = List<IsoStandardized>.of(package.dataList ?? Script.list);
 
-    for (final item in package.dataList) {
+    for (final item in isoList) {
       final code = item.code.toPascalCase();
       final lowerCaseCode = code.toLowerCase();
       final itemString = item.toString(short: false);
@@ -48,7 +52,7 @@ class DataListGenerator {
       }
       buffer
         ..write("""
-part of "../../model/$dataRepresent/$dataRepresent.dart";
+part of "../../model/$dataRepresent/${package.dataRepresent ?? "writing_system"}.dart";
 
 extension type const $factoryName._($className _) implements $className {
   const $factoryName() : this._(const $className._());
@@ -66,20 +70,14 @@ const factory $className() = $factoryName;
 const $className._()""")
         ..write(classBody)
         ..write(";\n\n}\n");
+      if (lowerCaseCode == "unk") continue;
 
       final filePath = join(isoDataDir.path, "$lowerCaseCode.data.dart");
-      if (lowerCaseCode != "unk")
-        IoUtils().writeContentToFile(filePath, buffer);
-      print('Finished "part "$filePath";');
+      IoUtils().writeContentToFile(filePath, buffer);
     }
 
     IoUtils().directory = currentFileDir;
-
-    print(
-      "Generated ${package.dataList.length} $dataRepresent for "
-      '"${package.name}".',
-    );
-
+    print("Generated ${isoList.length} $dataRepresent");
     final directory = isoDataDir.path;
     print("Ready to fix in directory: $directory");
     await _dart.dcm(directory);
@@ -91,7 +89,7 @@ const $className._()""")
   }
 
   void showConstructors(Package package) {
-    for (final country in package.dataList) {
+    for (final country in package.dataList ?? const <IsoTranslated>[]) {
       final code = country.code.toLowerCase();
       // ignore: avoid-substring, it's CLI.
       final capitilize = "${code[0].toUpperCase()}${code.substring(1)}";
