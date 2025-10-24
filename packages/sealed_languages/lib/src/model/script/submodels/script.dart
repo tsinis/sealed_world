@@ -45,6 +45,645 @@ class Script extends WritingSystem
     this.pva,
   });
 
+  /// {@macro sealed_world.script_adlm_constructor}
+  const factory Script.adlm() = _AdlmFactory;
+
+  /// {@macro sealed_world.script_afak_constructor}
+  const factory Script.afak() = _AfakFactory;
+
+  /// {@macro sealed_world.script_aghb_constructor}
+  const factory Script.aghb() = _AghbFactory;
+
+  /// {@macro sealed_world.script_ahom_constructor}
+  const factory Script.ahom() = _AhomFactory;
+
+  /// {@macro sealed_world.script_arab_constructor}
+  const factory Script.arab() = _ArabFactory;
+
+  /// {@macro sealed_world.script_aran_constructor}
+  const factory Script.aran() = _AranFactory;
+
+  /// {@macro sealed_world.script_armi_constructor}
+  const factory Script.armi() = _ArmiFactory;
+
+  /// {@macro sealed_world.script_armn_constructor}
+  const factory Script.armn() = _ArmnFactory;
+
+  /// {@macro sealed_world.script_avst_constructor}
+  const factory Script.avst() = _AvstFactory;
+
+  /// {@macro sealed_world.script_bali_constructor}
+  const factory Script.bali() = _BaliFactory;
+
+  /// {@macro sealed_world.script_bamu_constructor}
+  const factory Script.bamu() = _BamuFactory;
+
+  /// {@macro sealed_world.script_bass_constructor}
+  const factory Script.bass() = _BassFactory;
+
+  /// {@macro sealed_world.script_batk_constructor}
+  const factory Script.batk() = _BatkFactory;
+
+  /// {@macro sealed_world.script_beng_constructor}
+  const factory Script.beng() = _BengFactory;
+
+  /// {@macro sealed_world.script_bhks_constructor}
+  const factory Script.bhks() = _BhksFactory;
+
+  /// {@macro sealed_world.script_blis_constructor}
+  const factory Script.blis() = _BlisFactory;
+
+  /// {@macro sealed_world.script_bopo_constructor}
+  const factory Script.bopo() = _BopoFactory;
+
+  /// {@macro sealed_world.script_brah_constructor}
+  const factory Script.brah() = _BrahFactory;
+
+  /// {@macro sealed_world.script_brai_constructor}
+  const factory Script.brai() = _BraiFactory;
+
+  /// {@macro sealed_world.script_bugi_constructor}
+  const factory Script.bugi() = _BugiFactory;
+
+  /// {@macro sealed_world.script_buhd_constructor}
+  const factory Script.buhd() = _BuhdFactory;
+
+  /// {@macro sealed_world.script_cakm_constructor}
+  const factory Script.cakm() = _CakmFactory;
+
+  /// {@macro sealed_world.script_cans_constructor}
+  const factory Script.cans() = _CansFactory;
+
+  /// {@macro sealed_world.script_cari_constructor}
+  const factory Script.cari() = _CariFactory;
+
+  /// {@macro sealed_world.script_cham_constructor}
+  const factory Script.cham() = _ChamFactory;
+
+  /// {@macro sealed_world.script_cher_constructor}
+  const factory Script.cher() = _CherFactory;
+
+  /// {@macro sealed_world.script_chrs_constructor}
+  const factory Script.chrs() = _ChrsFactory;
+
+  /// {@macro sealed_world.script_cirt_constructor}
+  const factory Script.cirt() = _CirtFactory;
+
+  /// {@macro sealed_world.script_copt_constructor}
+  const factory Script.copt() = _CoptFactory;
+
+  /// {@macro sealed_world.script_cpmn_constructor}
+  const factory Script.cpmn() = _CpmnFactory;
+
+  /// {@macro sealed_world.script_cprt_constructor}
+  const factory Script.cprt() = _CprtFactory;
+
+  /// {@macro sealed_world.script_cyrl_constructor}
+  const factory Script.cyrl() = _CyrlFactory;
+
+  /// {@macro sealed_world.script_cyrs_constructor}
+  const factory Script.cyrs() = _CyrsFactory;
+
+  /// {@macro sealed_world.script_deva_constructor}
+  const factory Script.deva() = _DevaFactory;
+
+  /// {@macro sealed_world.script_diak_constructor}
+  const factory Script.diak() = _DiakFactory;
+
+  /// {@macro sealed_world.script_dogr_constructor}
+  const factory Script.dogr() = _DogrFactory;
+
+  /// {@macro sealed_world.script_dsrt_constructor}
+  const factory Script.dsrt() = _DsrtFactory;
+
+  /// {@macro sealed_world.script_dupl_constructor}
+  const factory Script.dupl() = _DuplFactory;
+
+  /// {@macro sealed_world.script_egyd_constructor}
+  const factory Script.egyd() = _EgydFactory;
+
+  /// {@macro sealed_world.script_egyh_constructor}
+  const factory Script.egyh() = _EgyhFactory;
+
+  /// {@macro sealed_world.script_egyp_constructor}
+  const factory Script.egyp() = _EgypFactory;
+
+  /// {@macro sealed_world.script_elba_constructor}
+  const factory Script.elba() = _ElbaFactory;
+
+  /// {@macro sealed_world.script_elym_constructor}
+  const factory Script.elym() = _ElymFactory;
+
+  /// {@macro sealed_world.script_ethi_constructor}
+  const factory Script.ethi() = _EthiFactory;
+
+  /// {@macro sealed_world.script_geok_constructor}
+  const factory Script.geok() = _GeokFactory;
+
+  /// {@macro sealed_world.script_geor_constructor}
+  const factory Script.geor() = _GeorFactory;
+
+  /// {@macro sealed_world.script_glag_constructor}
+  const factory Script.glag() = _GlagFactory;
+
+  /// {@macro sealed_world.script_gong_constructor}
+  const factory Script.gong() = _GongFactory;
+
+  /// {@macro sealed_world.script_gonm_constructor}
+  const factory Script.gonm() = _GonmFactory;
+
+  /// {@macro sealed_world.script_goth_constructor}
+  const factory Script.goth() = _GothFactory;
+
+  /// {@macro sealed_world.script_gran_constructor}
+  const factory Script.gran() = _GranFactory;
+
+  /// {@macro sealed_world.script_grek_constructor}
+  const factory Script.grek() = _GrekFactory;
+
+  /// {@macro sealed_world.script_gujr_constructor}
+  const factory Script.gujr() = _GujrFactory;
+
+  /// {@macro sealed_world.script_guru_constructor}
+  const factory Script.guru() = _GuruFactory;
+
+  /// {@macro sealed_world.script_hanb_constructor}
+  const factory Script.hanb() = _HanbFactory;
+
+  /// {@macro sealed_world.script_hang_constructor}
+  const factory Script.hang() = _HangFactory;
+
+  /// {@macro sealed_world.script_hani_constructor}
+  const factory Script.hani() = _HaniFactory;
+
+  /// {@macro sealed_world.script_hano_constructor}
+  const factory Script.hano() = _HanoFactory;
+
+  /// {@macro sealed_world.script_hans_constructor}
+  const factory Script.hans() = _HansFactory;
+
+  /// {@macro sealed_world.script_hant_constructor}
+  const factory Script.hant() = _HantFactory;
+
+  /// {@macro sealed_world.script_hatr_constructor}
+  const factory Script.hatr() = _HatrFactory;
+
+  /// {@macro sealed_world.script_hebr_constructor}
+  const factory Script.hebr() = _HebrFactory;
+
+  /// {@macro sealed_world.script_hira_constructor}
+  const factory Script.hira() = _HiraFactory;
+
+  /// {@macro sealed_world.script_hluw_constructor}
+  const factory Script.hluw() = _HluwFactory;
+
+  /// {@macro sealed_world.script_hmng_constructor}
+  const factory Script.hmng() = _HmngFactory;
+
+  /// {@macro sealed_world.script_hmnp_constructor}
+  const factory Script.hmnp() = _HmnpFactory;
+
+  /// {@macro sealed_world.script_hrkt_constructor}
+  const factory Script.hrkt() = _HrktFactory;
+
+  /// {@macro sealed_world.script_hung_constructor}
+  const factory Script.hung() = _HungFactory;
+
+  /// {@macro sealed_world.script_inds_constructor}
+  const factory Script.inds() = _IndsFactory;
+
+  /// {@macro sealed_world.script_ital_constructor}
+  const factory Script.ital() = _ItalFactory;
+
+  /// {@macro sealed_world.script_jamo_constructor}
+  const factory Script.jamo() = _JamoFactory;
+
+  /// {@macro sealed_world.script_java_constructor}
+  const factory Script.java() = _JavaFactory;
+
+  /// {@macro sealed_world.script_jpan_constructor}
+  const factory Script.jpan() = _JpanFactory;
+
+  /// {@macro sealed_world.script_jurc_constructor}
+  const factory Script.jurc() = _JurcFactory;
+
+  /// {@macro sealed_world.script_kali_constructor}
+  const factory Script.kali() = _KaliFactory;
+
+  /// {@macro sealed_world.script_kana_constructor}
+  const factory Script.kana() = _KanaFactory;
+
+  /// {@macro sealed_world.script_kawi_constructor}
+  const factory Script.kawi() = _KawiFactory;
+
+  /// {@macro sealed_world.script_khar_constructor}
+  const factory Script.khar() = _KharFactory;
+
+  /// {@macro sealed_world.script_khmr_constructor}
+  const factory Script.khmr() = _KhmrFactory;
+
+  /// {@macro sealed_world.script_khoj_constructor}
+  const factory Script.khoj() = _KhojFactory;
+
+  /// {@macro sealed_world.script_kitl_constructor}
+  const factory Script.kitl() = _KitlFactory;
+
+  /// {@macro sealed_world.script_kits_constructor}
+  const factory Script.kits() = _KitsFactory;
+
+  /// {@macro sealed_world.script_knda_constructor}
+  const factory Script.knda() = _KndaFactory;
+
+  /// {@macro sealed_world.script_kore_constructor}
+  const factory Script.kore() = _KoreFactory;
+
+  /// {@macro sealed_world.script_kpel_constructor}
+  const factory Script.kpel() = _KpelFactory;
+
+  /// {@macro sealed_world.script_kthi_constructor}
+  const factory Script.kthi() = _KthiFactory;
+
+  /// {@macro sealed_world.script_lana_constructor}
+  const factory Script.lana() = _LanaFactory;
+
+  /// {@macro sealed_world.script_laoo_constructor}
+  const factory Script.laoo() = _LaooFactory;
+
+  /// {@macro sealed_world.script_latf_constructor}
+  const factory Script.latf() = _LatfFactory;
+
+  /// {@macro sealed_world.script_latg_constructor}
+  const factory Script.latg() = _LatgFactory;
+
+  /// {@macro sealed_world.script_latn_constructor}
+  const factory Script.latn() = _LatnFactory;
+
+  /// {@macro sealed_world.script_leke_constructor}
+  const factory Script.leke() = _LekeFactory;
+
+  /// {@macro sealed_world.script_lepc_constructor}
+  const factory Script.lepc() = _LepcFactory;
+
+  /// {@macro sealed_world.script_limb_constructor}
+  const factory Script.limb() = _LimbFactory;
+
+  /// {@macro sealed_world.script_lina_constructor}
+  const factory Script.lina() = _LinaFactory;
+
+  /// {@macro sealed_world.script_linb_constructor}
+  const factory Script.linb() = _LinbFactory;
+
+  /// {@macro sealed_world.script_lisu_constructor}
+  const factory Script.lisu() = _LisuFactory;
+
+  /// {@macro sealed_world.script_loma_constructor}
+  const factory Script.loma() = _LomaFactory;
+
+  /// {@macro sealed_world.script_lyci_constructor}
+  const factory Script.lyci() = _LyciFactory;
+
+  /// {@macro sealed_world.script_lydi_constructor}
+  const factory Script.lydi() = _LydiFactory;
+
+  /// {@macro sealed_world.script_mahj_constructor}
+  const factory Script.mahj() = _MahjFactory;
+
+  /// {@macro sealed_world.script_maka_constructor}
+  const factory Script.maka() = _MakaFactory;
+
+  /// {@macro sealed_world.script_mand_constructor}
+  const factory Script.mand() = _MandFactory;
+
+  /// {@macro sealed_world.script_mani_constructor}
+  const factory Script.mani() = _ManiFactory;
+
+  /// {@macro sealed_world.script_marc_constructor}
+  const factory Script.marc() = _MarcFactory;
+
+  /// {@macro sealed_world.script_maya_constructor}
+  const factory Script.maya() = _MayaFactory;
+
+  /// {@macro sealed_world.script_medf_constructor}
+  const factory Script.medf() = _MedfFactory;
+
+  /// {@macro sealed_world.script_mend_constructor}
+  const factory Script.mend() = _MendFactory;
+
+  /// {@macro sealed_world.script_merc_constructor}
+  const factory Script.merc() = _MercFactory;
+
+  /// {@macro sealed_world.script_mero_constructor}
+  const factory Script.mero() = _MeroFactory;
+
+  /// {@macro sealed_world.script_mlym_constructor}
+  const factory Script.mlym() = _MlymFactory;
+
+  /// {@macro sealed_world.script_modi_constructor}
+  const factory Script.modi() = _ModiFactory;
+
+  /// {@macro sealed_world.script_mong_constructor}
+  const factory Script.mong() = _MongFactory;
+
+  /// {@macro sealed_world.script_moon_constructor}
+  const factory Script.moon() = _MoonFactory;
+
+  /// {@macro sealed_world.script_mroo_constructor}
+  const factory Script.mroo() = _MrooFactory;
+
+  /// {@macro sealed_world.script_mtei_constructor}
+  const factory Script.mtei() = _MteiFactory;
+
+  /// {@macro sealed_world.script_mult_constructor}
+  const factory Script.mult() = _MultFactory;
+
+  /// {@macro sealed_world.script_mymr_constructor}
+  const factory Script.mymr() = _MymrFactory;
+
+  /// {@macro sealed_world.script_nagm_constructor}
+  const factory Script.nagm() = _NagmFactory;
+
+  /// {@macro sealed_world.script_nand_constructor}
+  const factory Script.nand() = _NandFactory;
+
+  /// {@macro sealed_world.script_narb_constructor}
+  const factory Script.narb() = _NarbFactory;
+
+  /// {@macro sealed_world.script_nbat_constructor}
+  const factory Script.nbat() = _NbatFactory;
+
+  /// {@macro sealed_world.script_newa_constructor}
+  const factory Script.newa() = _NewaFactory;
+
+  /// {@macro sealed_world.script_nkdb_constructor}
+  const factory Script.nkdb() = _NkdbFactory;
+
+  /// {@macro sealed_world.script_nkgb_constructor}
+  const factory Script.nkgb() = _NkgbFactory;
+
+  /// {@macro sealed_world.script_nkoo_constructor}
+  const factory Script.nkoo() = _NkooFactory;
+
+  /// {@macro sealed_world.script_nshu_constructor}
+  const factory Script.nshu() = _NshuFactory;
+
+  /// {@macro sealed_world.script_ogam_constructor}
+  const factory Script.ogam() = _OgamFactory;
+
+  /// {@macro sealed_world.script_olck_constructor}
+  const factory Script.olck() = _OlckFactory;
+
+  /// {@macro sealed_world.script_orkh_constructor}
+  const factory Script.orkh() = _OrkhFactory;
+
+  /// {@macro sealed_world.script_orya_constructor}
+  const factory Script.orya() = _OryaFactory;
+
+  /// {@macro sealed_world.script_osge_constructor}
+  const factory Script.osge() = _OsgeFactory;
+
+  /// {@macro sealed_world.script_osma_constructor}
+  const factory Script.osma() = _OsmaFactory;
+
+  /// {@macro sealed_world.script_ougr_constructor}
+  const factory Script.ougr() = _OugrFactory;
+
+  /// {@macro sealed_world.script_palm_constructor}
+  const factory Script.palm() = _PalmFactory;
+
+  /// {@macro sealed_world.script_pauc_constructor}
+  const factory Script.pauc() = _PaucFactory;
+
+  /// {@macro sealed_world.script_pcun_constructor}
+  const factory Script.pcun() = _PcunFactory;
+
+  /// {@macro sealed_world.script_pelm_constructor}
+  const factory Script.pelm() = _PelmFactory;
+
+  /// {@macro sealed_world.script_perm_constructor}
+  const factory Script.perm() = _PermFactory;
+
+  /// {@macro sealed_world.script_phag_constructor}
+  const factory Script.phag() = _PhagFactory;
+
+  /// {@macro sealed_world.script_phli_constructor}
+  const factory Script.phli() = _PhliFactory;
+
+  /// {@macro sealed_world.script_phlp_constructor}
+  const factory Script.phlp() = _PhlpFactory;
+
+  /// {@macro sealed_world.script_phlv_constructor}
+  const factory Script.phlv() = _PhlvFactory;
+
+  /// {@macro sealed_world.script_phnx_constructor}
+  const factory Script.phnx() = _PhnxFactory;
+
+  /// {@macro sealed_world.script_piqd_constructor}
+  const factory Script.piqd() = _PiqdFactory;
+
+  /// {@macro sealed_world.script_plrd_constructor}
+  const factory Script.plrd() = _PlrdFactory;
+
+  /// {@macro sealed_world.script_prti_constructor}
+  const factory Script.prti() = _PrtiFactory;
+
+  /// {@macro sealed_world.script_psin_constructor}
+  const factory Script.psin() = _PsinFactory;
+
+  /// {@macro sealed_world.script_qaaa_constructor}
+  const factory Script.qaaa() = _QaaaFactory;
+
+  /// {@macro sealed_world.script_qabx_constructor}
+  const factory Script.qabx() = _QabxFactory;
+
+  /// {@macro sealed_world.script_ranj_constructor}
+  const factory Script.ranj() = _RanjFactory;
+
+  /// {@macro sealed_world.script_rjng_constructor}
+  const factory Script.rjng() = _RjngFactory;
+
+  /// {@macro sealed_world.script_rohg_constructor}
+  const factory Script.rohg() = _RohgFactory;
+
+  /// {@macro sealed_world.script_roro_constructor}
+  const factory Script.roro() = _RoroFactory;
+
+  /// {@macro sealed_world.script_runr_constructor}
+  const factory Script.runr() = _RunrFactory;
+
+  /// {@macro sealed_world.script_samr_constructor}
+  const factory Script.samr() = _SamrFactory;
+
+  /// {@macro sealed_world.script_sara_constructor}
+  const factory Script.sara() = _SaraFactory;
+
+  /// {@macro sealed_world.script_sarb_constructor}
+  const factory Script.sarb() = _SarbFactory;
+
+  /// {@macro sealed_world.script_saur_constructor}
+  const factory Script.saur() = _SaurFactory;
+
+  /// {@macro sealed_world.script_sgnw_constructor}
+  const factory Script.sgnw() = _SgnwFactory;
+
+  /// {@macro sealed_world.script_shaw_constructor}
+  const factory Script.shaw() = _ShawFactory;
+
+  /// {@macro sealed_world.script_shrd_constructor}
+  const factory Script.shrd() = _ShrdFactory;
+
+  /// {@macro sealed_world.script_shui_constructor}
+  const factory Script.shui() = _ShuiFactory;
+
+  /// {@macro sealed_world.script_sidd_constructor}
+  const factory Script.sidd() = _SiddFactory;
+
+  /// {@macro sealed_world.script_sind_constructor}
+  const factory Script.sind() = _SindFactory;
+
+  /// {@macro sealed_world.script_sinh_constructor}
+  const factory Script.sinh() = _SinhFactory;
+
+  /// {@macro sealed_world.script_sogd_constructor}
+  const factory Script.sogd() = _SogdFactory;
+
+  /// {@macro sealed_world.script_sogo_constructor}
+  const factory Script.sogo() = _SogoFactory;
+
+  /// {@macro sealed_world.script_sora_constructor}
+  const factory Script.sora() = _SoraFactory;
+
+  /// {@macro sealed_world.script_soyo_constructor}
+  const factory Script.soyo() = _SoyoFactory;
+
+  /// {@macro sealed_world.script_sund_constructor}
+  const factory Script.sund() = _SundFactory;
+
+  /// {@macro sealed_world.script_sunu_constructor}
+  const factory Script.sunu() = _SunuFactory;
+
+  /// {@macro sealed_world.script_sylo_constructor}
+  const factory Script.sylo() = _SyloFactory;
+
+  /// {@macro sealed_world.script_syrc_constructor}
+  const factory Script.syrc() = _SyrcFactory;
+
+  /// {@macro sealed_world.script_syre_constructor}
+  const factory Script.syre() = _SyreFactory;
+
+  /// {@macro sealed_world.script_syrj_constructor}
+  const factory Script.syrj() = _SyrjFactory;
+
+  /// {@macro sealed_world.script_syrn_constructor}
+  const factory Script.syrn() = _SyrnFactory;
+
+  /// {@macro sealed_world.script_tagb_constructor}
+  const factory Script.tagb() = _TagbFactory;
+
+  /// {@macro sealed_world.script_takr_constructor}
+  const factory Script.takr() = _TakrFactory;
+
+  /// {@macro sealed_world.script_tale_constructor}
+  const factory Script.tale() = _TaleFactory;
+
+  /// {@macro sealed_world.script_talu_constructor}
+  const factory Script.talu() = _TaluFactory;
+
+  /// {@macro sealed_world.script_taml_constructor}
+  const factory Script.taml() = _TamlFactory;
+
+  /// {@macro sealed_world.script_tang_constructor}
+  const factory Script.tang() = _TangFactory;
+
+  /// {@macro sealed_world.script_tavt_constructor}
+  const factory Script.tavt() = _TavtFactory;
+
+  /// {@macro sealed_world.script_telu_constructor}
+  const factory Script.telu() = _TeluFactory;
+
+  /// {@macro sealed_world.script_teng_constructor}
+  const factory Script.teng() = _TengFactory;
+
+  /// {@macro sealed_world.script_tfng_constructor}
+  const factory Script.tfng() = _TfngFactory;
+
+  /// {@macro sealed_world.script_tglg_constructor}
+  const factory Script.tglg() = _TglgFactory;
+
+  /// {@macro sealed_world.script_thaa_constructor}
+  const factory Script.thaa() = _ThaaFactory;
+
+  /// {@macro sealed_world.script_thai_constructor}
+  const factory Script.thai() = _ThaiFactory;
+
+  /// {@macro sealed_world.script_tibt_constructor}
+  const factory Script.tibt() = _TibtFactory;
+
+  /// {@macro sealed_world.script_tirh_constructor}
+  const factory Script.tirh() = _TirhFactory;
+
+  /// {@macro sealed_world.script_tnsa_constructor}
+  const factory Script.tnsa() = _TnsaFactory;
+
+  /// {@macro sealed_world.script_toto_constructor}
+  const factory Script.toto() = _TotoFactory;
+
+  /// {@macro sealed_world.script_ugar_constructor}
+  const factory Script.ugar() = _UgarFactory;
+
+  /// {@macro sealed_world.script_vaii_constructor}
+  const factory Script.vaii() = _VaiiFactory;
+
+  /// {@macro sealed_world.script_visp_constructor}
+  const factory Script.visp() = _VispFactory;
+
+  /// {@macro sealed_world.script_vith_constructor}
+  const factory Script.vith() = _VithFactory;
+
+  /// {@macro sealed_world.script_wara_constructor}
+  const factory Script.wara() = _WaraFactory;
+
+  /// {@macro sealed_world.script_wcho_constructor}
+  const factory Script.wcho() = _WchoFactory;
+
+  /// {@macro sealed_world.script_wole_constructor}
+  const factory Script.wole() = _WoleFactory;
+
+  /// {@macro sealed_world.script_xpeo_constructor}
+  const factory Script.xpeo() = _XpeoFactory;
+
+  /// {@macro sealed_world.script_xsux_constructor}
+  const factory Script.xsux() = _XsuxFactory;
+
+  /// {@macro sealed_world.script_yezi_constructor}
+  const factory Script.yezi() = _YeziFactory;
+
+  /// {@macro sealed_world.script_yiii_constructor}
+  const factory Script.yiii() = _YiiiFactory;
+
+  /// {@macro sealed_world.script_zanb_constructor}
+  const factory Script.zanb() = _ZanbFactory;
+
+  /// {@macro sealed_world.script_zinh_constructor}
+  const factory Script.zinh() = _ZinhFactory;
+
+  /// {@macro sealed_world.script_zmth_constructor}
+  const factory Script.zmth() = _ZmthFactory;
+
+  /// {@macro sealed_world.script_zsye_constructor}
+  const factory Script.zsye() = _ZsyeFactory;
+
+  /// {@macro sealed_world.script_zsym_constructor}
+  const factory Script.zsym() = _ZsymFactory;
+
+  /// {@macro sealed_world.script_zxxx_constructor}
+  const factory Script.zxxx() = _ZxxxFactory;
+
+  /// {@macro sealed_world.script_zyyy_constructor}
+  const factory Script.zyyy() = _ZyyyFactory;
+
+  /// {@macro sealed_world.script_zzzz_constructor}
+  const factory Script.zzzz() = _ZzzzFactory;
+
   /// Returns an instance of the [Script] class from a four-character ISO
   /// 15924 code.
   ///
