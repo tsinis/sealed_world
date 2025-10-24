@@ -88,15 +88,16 @@ const $className._()""")
     print("DCM Fixed issues in the package");
   }
 
-  void showConstructors(Package package) {
-    for (final country in package.dataList ?? const <IsoTranslated>[]) {
-      final code = country.code.toLowerCase();
+  void showConstructors(Package? package) {
+    final dataRepresent = package.dataRepresent ?? "script";
+    // ignore: avoid-explicit-type-declaration, not obvius in this case.
+    for (final IsoStandardized item in (package.dataList ?? Script.list)) {
+      final code = item.code.toLowerCase();
       // ignore: avoid-substring, it's CLI.
       final capitilize = "${code[0].toUpperCase()}${code.substring(1)}";
       print("""
-/// {@macro sealed_world.${package.dataRepresent}_${code}_constructor}
-const factory ${package.type}.$code() = _${capitilize}Factory;\n
-""");
+      /// {@macro sealed_world.${dataRepresent}_${code}_constructor}
+      const factory ${package.type}.$code() = _${capitilize}Factory;\n""");
     }
   }
 }
