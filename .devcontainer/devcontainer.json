@@ -33,5 +33,6 @@
       "onAutoForward": "notify"
     }
   },
+  "workspaceFolder": ".vscode/sealed_world.code-workspace",
   "remoteUser": "root"
 }
