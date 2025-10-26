@@ -67,10 +67,7 @@
       "pubspec.yaml": ".flutter-plugins, .packages, .dart_tool, .flutter-plugins-dependencies, .metadata, .packages, pubspec.lock, build.yaml, analysis_options.yaml, all_lint_rules.yaml, flutter_*.yaml, icons_launcher.yaml",
       ".gitignore": ".gitattributes, .gitmodules, .gitmessage, .pubignore, .mailmap, .git-blame*",
       "readme.*": "authors, backers.md, changelog*, citation*, code_of_conduct.md, codeowners, contributing.md, contributors, copying, credits, governance.md, history.md, license*, maintainers, readme*, security.md, sponsors.md",
-      "*.dart": "$(capture).g.dart, $(capture).freezed.dart, $(capture).select.dart, $(capture).config.dart",
-      "*.graphql": "$(capture).gql.dart, $(capture).*.gql.dart",
-      "schema.graphql": "schema.schema.gql.dart",
-      "firebase.json": ".firebaserc"
+      "*.dart": "$(capture).g.dart, $(capture).freezed.dart, $(capture).select.dart, $(capture).config.dart"
     },
     "editor.formatOnPaste": true,
     "editor.formatOnSave": true,
@@ -131,12 +128,9 @@
       "**/lib/**/*.data.dart",
       "**/lib/**/*.l10n.dart",
       "**/lib/**/*.g.dart",
-      "**/lib/**/*.freezed.dart",
-      "**/lib/**/*.select.dart",
       "**/.vscode/sealed_world.code-workspace"
     ],
     "files.readonlyInclude": { "**/*.g.dart": true },
-    "bracket-pair-colorizer-2.highlightActiveScope": true,
     "dart.renameFilesWithClasses": "prompt",
     "dart.flutterGenerateLocalizationsOnSave": "manualIfDirty",
     "dart.runPubGetOnNestedProjects": "both",
