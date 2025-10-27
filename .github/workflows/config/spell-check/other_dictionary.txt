@@ -10,6 +10,7 @@ checo
 jazyk
 ltwh
 republika
+restcountries
 slovensko
 slovenská
 taegukgi

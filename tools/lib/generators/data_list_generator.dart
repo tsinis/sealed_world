@@ -90,14 +90,14 @@ const $className._()""")
 
   void showConstructors(Package? package) {
     final dataRepresent = package.dataRepresent ?? "script";
-    // ignore: avoid-explicit-type-declaration, not obvius in this case.
+    // ignore: avoid-explicit-type-declaration, not obvious in this case.
     for (final IsoStandardized item in (package.dataList ?? Script.list)) {
       final code = item.code.toLowerCase();
       // ignore: avoid-substring, it's CLI.
-      final capitilize = "${code[0].toUpperCase()}${code.substring(1)}";
+      final capitalize = "${code[0].toUpperCase()}${code.substring(1)}";
       print("""
       /// {@macro sealed_world.${dataRepresent}_${code}_constructor}
-      const factory ${package.type}.$code() = _${capitilize}Factory;\n""");
+      const factory ${package.type}.$code() = _${capitalize}Factory;\n""");
     }
   }
 }
