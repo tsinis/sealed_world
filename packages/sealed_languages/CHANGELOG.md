@@ -1,3 +1,18 @@
+## 2.5.0
+
+NEW FEATURES
+
+- This version introduces named (Dart 3.10 dot-shorthand compatible) constructors for ISO classes, refactoring the ISO data files to use a factory constructor pattern with extension types. The changes transform the direct constructor calls into a more structured factory-based approach while maintaining backward compatibility. For example, instead of using `LangEng()`, you can now use `NaturalLanguage.eng()`. This change enhances code readability and aligns with modern Dart practices.
+
+```dart
+const language = LangEng(); // Old way (still supported).
+const language = NaturalLanguage.eng(); // New way, or just .eng() in Dart 3.10.
+
+print([NaturalLanguage.eng(), NaturalLanguage.fra()]); // Collections, 3.9 way.
+// You can also use the new dot-shorthand syntax introduced in Dart 3.10:
+print(<NaturalLanguage>[.eng(), .fra()]); // Collections, 3.10 way.
+```
+
 ## 2.4.1
 
 REFACTOR

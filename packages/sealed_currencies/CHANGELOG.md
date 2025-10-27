@@ -1,3 +1,18 @@
+## 2.5.0
+
+NEW FEATURES
+
+- This version introduces named (Dart 3.10 dot-shorthand compatible) constructors for ISO classes, refactoring the ISO data files to use a factory constructor pattern with extension types. The changes transform the direct constructor calls into a more structured factory-based approach while maintaining backward compatibility. For example, instead of using `FiatEur()`, you can now use `FiatCurrency.eur()`. This change enhances code readability and aligns with modern Dart practices.
+
+```dart
+const currency = FiatEur(); // Old way (still supported).
+const currency = FiatCurrency.eur(); // New way, or just .eur() in Dart 3.10.
+
+print([FiatCurrency.eur(), FiatCurrency.usd()]); // Collections, 3.9 way.
+// You can also use the new dot-shorthand syntax introduced in Dart 3.10:
+print(<FiatCurrency>[.eur(), .usd()]); // Collections, 3.10 way.
+```
+
 ## 2.4.1
 
 REFACTOR
