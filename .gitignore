@@ -131,3 +131,4 @@ android/
 # Other
 json/
 **/example/android/app/.cxx/*
+**/example/result*.json

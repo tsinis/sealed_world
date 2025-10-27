@@ -36,13 +36,13 @@ This ISO-driven, pure Dart, fully tested and 3rd-party dependency-free package p
 
 Provides a compile-time constant of all currencies accessible via `FiatCurrency.list` moreover, the **FiatCurrency** class provides the following methods/constructors:
 
-- `maybeFromValue` - returns a currency instance if the value matches the provided value, otherwise returns `null`.
 - `maybeFromAnyCode` - returns a currency instance if the value matches any ISO 4217 code, otherwise returns `null`.
 - `maybeFromCodeNumeric` - returns a currency instance if the value matches the provided ISO 4217 numeric code, otherwise returns `null`.
 - `maybeFromCode` - returns a currency instance if the value matches the provided ISO 4217 letter code, otherwise returns `null`.
 - `fromCode` - returns a currency instance if the value matches the provided ISO 4217 letter code.
 - `fromCodeNumeric` - returns a currency instance if the value matches the provided ISO 4217 numeric code.
 - `fromAnyCode` - returns a currency instance if the value matches any ISO 4217 code.
+- `maybeFromValue` - returns a currency instance if the value matches the provided value, otherwise returns `null`.
 - `fromName` - returns a currency instance if the value matches the provided English name.
 
 You can also find many common methods you may know from Dart ecosystem - `toString` overrides, `copyWith`, `toJson`, `compareTo`, etc. Also, a compile-time const, tree-shakable, case-insensitive code `map`s (for O(1)-time code look-ups), `list`, and much more.
@@ -67,7 +67,7 @@ import 'package:sealed_currencies/sealed_currencies.dart';
 
 ### Usage
 
-To get information about currencies, use the `FiatCurrency` class. You can construct instances directly (using `const`), use the class's factory constructors or static methods, or select a currency from the `FiatCurrency.list` constant.
+To get information about currencies, use the `FiatCurrency` class. Use the class's factory constructors or static methods, or select a currency from the `FiatCurrency.list` constant.
 
 ```dart
   print(FiatCurrency.listExtended.length); // Prints: "171".
@@ -105,8 +105,12 @@ To get information about currencies, use the `FiatCurrency` class. You can const
   ); // Prints common Polish name of RSD: "dinar serbski".
 ```
 
-> [!IMPORTANT]
-> For specific ISO instances and their collections, e.g., `const value = FiatEur(), const items = [FiatEur()]` — prioritize compile-time constant references over `var/final` to ensure canonicalization and benefit from compiler optimizations.
+> [!TIP]
+> Also supports Dart 3.10 dot-shorthands:
+
+```dart
+print(<FiatCurrency>[.eur(), .usd(), .czk(), .zwg(), .scr()].length); // 5.
+```
 
 For more usage examples, please see the `/example` folder.
 

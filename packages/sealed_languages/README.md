@@ -43,13 +43,13 @@ This ISO-driven, pure Dart, fully tested and dependency-free package provides in
 
 Provides a compile-time constant of all languages accessible via `NaturalLanguage.list` moreover, the **NaturalLanguage** class provides the following methods/constructors:
 
-- `maybeFromValue` - returns a language instance if the value matches the provided value, otherwise returns `null`.
 - `maybeFromAnyCode` - returns a language instance if the value matches any ISO code, otherwise returns `null`.
 - `maybeFromCode` - returns a language instance if the value matches the provided ISO 639-2 code, otherwise returns `null`.
 - `maybeFromCodeShort` - returns a language instance if the value matches the provided ISO 639-1 code code, otherwise returns `null`.
 - `fromCode` - returns a language instance if the value matches the provided ISO 639-2 code.
 - `fromCodeShort` - returns a language instance if the value matches the provided ISO 639-1 code code.
 - `fromAnyCode` - returns a language instance if the value matches the provided ISO 639-1 or ISO 639-2 codes.
+- `maybeFromValue` - returns a language instance if the value matches the provided value, otherwise returns `null`.
 - `fromName` - returns a language instance if the value matches the provided name.
 
 You can also find many common methods you may know from Dart ecosystem - `toString` overrides, `copyWith`, `toJson`, `compareTo`, etc. Also, a compile-time const, tree-shakable, code `map`s (for O(1)-time code look-ups), `list`, and much more.
@@ -74,7 +74,7 @@ import 'package:sealed_languages/sealed_languages.dart';
 
 ### Usage
 
-To get information about languages, use the `NaturalLanguage` class. You can construct instances directly (using `const`), use the class's factory constructors or static methods, or select a language from the `NaturalLanguage.list` constant.
+To get information about languages, use the `NaturalLanguage` class. Use the class's factory constructors or static methods, or select a language from the `NaturalLanguage.list` constant.
 
 ```dart
   const eng = "Eng";
@@ -116,8 +116,12 @@ To get information about languages, use the `NaturalLanguage` class. You can con
   }
 ```
 
-> [!IMPORTANT]
-> For specific ISO instances and their collections, e.g., `const value = LangEng(), const items = [LangEng()]` — prioritize compile-time constant references over `var/final` to ensure canonicalization and benefit from compiler optimizations.
+> [!TIP]
+> Also supports Dart 3.10 dot-shorthands:
+
+```dart
+print(<NaturalLanguage>[.zho(), .eng(), .spa(), .deu(), .fra()].length); // 5.
+```
 
 For more usage examples, please see the `/example` folder.
 
