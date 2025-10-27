@@ -1,0 +1,20 @@
+# For local usage first build the profile app on a physical device:
+# fvm flutter run --profile -d ZY227DW9LQ
+# Then run the maestro test with flashlight (both has to be installed first):
+# cd benchmarks/
+# flashlight test --bundleId world.countries.world_countries_example --testCommand "maestro test test.yaml" --beforeEachCommand "maestro test setup.yaml" --resultsTitle 3.9.3
+# And see the reports with:
+# flashlight report .
+appId: world.countries.world_countries_example
+---
+- assertVisible: "search_icon"
+- longPressOn: "search_icon"
+- waitForAnimationToEnd:
+    timeout: 1000
+- hideKeyboard
+- scrollUntilVisible:
+    element:
+      id: "ISO-UNK"
+    speed: 90
+    timeout: 30000
+    waitToSettleTimeoutMs: 100
