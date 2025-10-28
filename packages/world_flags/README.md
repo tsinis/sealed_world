@@ -116,9 +116,6 @@ class _MainState extends State<Main> {
 }
 ```
 
-> [!IMPORTANT]
-> For specific ISO instances and their collections, e.g., `const value = CountryChn(), const items = [CountryAut()]` — prioritize compile-time constant references over `var/final` to ensure canonicalization and benefit from compiler optimizations.
-
 For more usage examples, please see the `/example` folder.
 
 ### Demo
