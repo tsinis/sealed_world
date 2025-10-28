@@ -269,6 +269,7 @@ Loma
 Lso
 Ltu
 Ltz
+Lusophone
 Lva
 Lyci
 Lydi
