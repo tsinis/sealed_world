@@ -1,7 +1,6 @@
 // ignore_for_file: prefer-static-class, it's referenced as static in the model.
 // ignore_for_file: map-keys-ordering, Kosovo should be at the end.
-import "../data/official_world_countries.data.dart";
-import "../data/other_world_countries.data.dart";
+
 import "../model/country/country.dart";
 
 /// List of all standard [WorldCountry] sorted by code.

@@ -1,5 +1,4 @@
 // ignore_for_file: prefer-static-class, it's referenced as static in the model.
-import "../data/scripts.data.dart";
 import "../model/script/writing_system.dart";
 
 /// List of all standard [Script] sorted by code.

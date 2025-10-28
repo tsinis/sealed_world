@@ -55,13 +55,13 @@ Provides a compile-time constant of all countries accessible via `WorldCountry.l
 
 - `maybeFromAnyCode` - returns a country instance if the value matches any ISO 3166 code, otherwise returns `null`.
 - `fromAnyCode` - returns a country instance if the value matches any ISO 3166 code.
-- `maybeFromValue` - returns a country instance if the value matches the provided value, otherwise returns `null`.
 - `fromCode` - returns a country instance if the value matches the provided ISO 3166-1 Alpha-3 code.
 - `fromCodeShort` - returns a country instance if the value matches the provided ISO 3166-1 Alpha-2 code.
 - `fromCodeNumeric` - returns a country instance if the value matches the provided ISO 3166-1 numeric code.
 - `maybeFromCode` - returns a country instance if the value matches the provided ISO 3166-1 Alpha-3 code, otherwise returns `null`.
 - `maybeFromCodeShort` - returns a country instance if the value matches the provided ISO 3166-1 Alpha-2 code, otherwise returns `null`.
 - `maybeFromCodeNumeric` - returns a country instance if the value matches the provided ISO 3166-1 numeric code, otherwise returns `null`.
+- `maybeFromValue` - returns a country instance if the value matches the provided value, otherwise returns `null`.
 
 You can also find many common methods you may know from Dart ecosystem - `toString` overrides, `copyWith`, `toJson`, `compareTo`, etc. Also, a compile-time const, tree-shakable, case-insensitive code `map`s (for O(1)-time code look-ups), `list`, and much more.
 
@@ -85,7 +85,7 @@ import 'package:sealed_countries/sealed_countries.dart';
 
 ### Usage
 
-To get information about countries, use the `WorldCountry` class. You can construct instances directly (using `const`), use the class's factory constructors or static methods, or select a country from the `WorldCountry.list` constant.
+To get information about countries, use the `WorldCountry` class. Use the class's factory constructors or static methods, or select a country from the `WorldCountry.list` constant.
 
 ```dart
   print(WorldCountry.list.length); // Prints: "250".
@@ -113,8 +113,12 @@ To get information about countries, use the `WorldCountry` class. You can constr
   }
 ```
 
-> [!IMPORTANT]
-> For specific ISO instances and their collections, e.g., `const value = CountryChn(), const items = [CountryChn()]` — prioritize compile-time constant references over `var/final` to ensure canonicalization and benefit from compiler optimizations.
+> [!TIP]
+> Also supports Dart 3.10 dot-shorthands:
+
+```dart
+print(<WorldCountry>[.chn(), .ind(), .usa(), .bra(), .jpn()].length); // 5.
+```
 
 For more usage examples, please see the `/example` folder.
 

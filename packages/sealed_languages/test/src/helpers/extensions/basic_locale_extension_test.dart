@@ -1,4 +1,3 @@
-import "package:sealed_languages/src/data/natural_languages.data.dart";
 import "package:sealed_languages/src/helpers/extensions/basic_locale_extension.dart";
 import "package:sealed_languages/src/model/core/basic_locale.dart";
 import "package:sealed_languages/src/model/language/language.dart";

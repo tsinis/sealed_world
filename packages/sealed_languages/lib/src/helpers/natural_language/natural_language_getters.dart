@@ -1,4 +1,3 @@
-import "../../data/natural_languages.data.dart";
 import "../../model/language/language.dart";
 
 /// Provides convenient getters for ISO 639 language codes

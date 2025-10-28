@@ -3,8 +3,16 @@ import "dart:io";
 final class DartUtils {
   const DartUtils();
 
-  Future<void> run(List<String> arguments, [String process = "dart"]) async {
-    final result = await Process.run(process, arguments);
+  Future<void> run(
+    List<String> arguments, {
+    String process = "dart",
+    String? workingDir,
+  }) async {
+    final result = await Process.run(
+      process,
+      arguments,
+      workingDirectory: workingDir,
+    );
     // ignore: avoid_print, it's just a CLI tool, not a production code.
     if (result.exitCode != 0) print(result.stderr);
   }
@@ -16,16 +24,19 @@ final class DartUtils {
     ...arguments,
   ]);
 
-  Future<void> pubGet() => pub(["get"]);
+  Future<void> pubGet() => pub(const ["get"]);
 
-  Future<void> fixFormat() async {
-    await fixApply();
-    await format();
+  Future<void> fixFormat([String? directory]) async {
+    await fixApply(directory);
+    await format(directory);
   }
 
-  Future<void> fixApply() => run(["fix", "--apply"]);
+  Future<void> fixApply([String? directory]) =>
+      run(const ["fix", "--apply"], workingDir: directory);
 
-  Future<void> format() => run(["format", "."]);
+  Future<void> format([String? directory]) =>
+      run(const ["format", "."], workingDir: directory);
 
-  Future<void> dcm([String directory = "."]) => run(["fix", directory], "dcm");
+  Future<void> dcm([String? directory]) =>
+      run(const ["fix", "."], process: "dcm", workingDir: directory);
 }

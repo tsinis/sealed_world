@@ -1,57 +1,60 @@
-import "package:change_case/change_case.dart";
 import "package:sealed_countries/sealed_countries.dart";
 
 import "../../../models/package.dart";
 
-extension PackageAssociationsExtension on Package {
-  Type get type => whenConst(
-    sealedLanguages: NaturalLanguage,
-    sealedCurrencies: FiatCurrency,
-    sealedCountries: WorldCountry,
-  );
+extension PackageAssociationsExtension<T extends Package> on T? {
+  Type get type =>
+      this?.whenConst(
+        sealedLanguages: NaturalLanguage,
+        sealedCurrencies: FiatCurrency,
+        sealedCountries: WorldCountry,
+      ) ??
+      Script;
 
-  String get classPrefix => whenConst(
-    sealedLanguages: "Lang",
-    sealedCurrencies: "Fiat",
-    sealedCountries: "$Country",
-  );
+  String get classPrefix =>
+      this?.whenConst(
+        sealedLanguages: "Lang",
+        sealedCurrencies: "Fiat",
+        sealedCountries: "$Country",
+      ) ??
+      "$Script";
 
-  List<IsoTranslated> get dataList => whenConst(
+  List<IsoTranslated>? get dataList => this?.whenConst(
     sealedLanguages: NaturalLanguage.list,
-    sealedCurrencies: FiatCurrency.list,
+    sealedCurrencies: FiatCurrency.listExtended,
     sealedCountries: WorldCountry.list,
   );
 
-  String get dataFilePrefix => whenConst(
-    sealedLanguages: "${type.toString().toSnakeCase()}s",
-    sealedCurrencies: "fiat_currencies",
-    sealedCountries: "official_world_countries",
-  );
+  String? get dataRepresent => this
+      ?.whenConst(
+        sealedLanguages: Language,
+        sealedCurrencies: Currency,
+        sealedCountries: Country,
+      )
+      .toString()
+      .toLowerCase();
 
-  String get dataRepresent => whenConst(
-    sealedLanguages: Language,
-    sealedCurrencies: Currency,
-    sealedCountries: Country,
-  ).toString().toLowerCase();
+  String get dataRepresentPlural =>
+      this?.whenConst(
+        sealedLanguages: "languages",
+        sealedCurrencies: "currencies",
+        sealedCountries: "countries",
+      ) ??
+      "scripts";
 
-  String get dataRepresentPlural => whenConst(
-    sealedLanguages: "languages",
-    sealedCurrencies: "currencies",
-    sealedCountries: "countries",
-  );
+  String get isoCodeAssociated =>
+      this?.whenConst(
+        sealedLanguages: NaturalLanguage.standardCodeName,
+        sealedCurrencies: FiatCurrency.standardCodeName,
+        sealedCountries: WorldCountry.standardCodeName,
+      ) ??
+      Script.standardCodeName;
 
-  String get isoCodeAssociated => whenConst(
-    sealedLanguages: NaturalLanguage.standardCodeName,
-    sealedCurrencies: FiatCurrency.standardCodeName,
-    sealedCountries: WorldCountry.standardCodeName,
-  );
-
-  String get isoCodeOtherAssociated => whenConst(
-    sealedLanguages: NaturalLanguage.standardCodeShortName,
-    sealedCurrencies: FiatCurrency.standardCodeNumericName,
-    sealedCountries: WorldCountry.standardCodeShortName,
-  );
-
-  String get umpirskyRepoUrl =>
-      "https://github.com/umpirsky/$dataRepresent-list";
+  String get isoCodeOtherAssociated =>
+      this?.whenConst(
+        sealedLanguages: NaturalLanguage.standardCodeShortName,
+        sealedCurrencies: FiatCurrency.standardCodeNumericName,
+        sealedCountries: WorldCountry.standardCodeShortName,
+      ) ??
+      Script.standardCodeNumericName;
 }

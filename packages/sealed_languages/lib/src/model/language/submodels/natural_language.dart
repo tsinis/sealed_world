@@ -73,7 +73,10 @@ class NaturalLanguage extends Language
   /// the established ISO specifications and should be approached with caution.
   /// {@endtemplate}
   /// {@macro natural_language_constructor}
-  @Deprecated("Use the default constructor and `copyWith` method instead")
+  @Deprecated(
+    "Use concrete instance and `copyWith` method instead, this "
+    "constructor will be renamed to `custom` in future versions.",
+  )
   const NaturalLanguage.permissive({
     required super.name,
     required this.code,
@@ -84,6 +87,558 @@ class NaturalLanguage extends Language
     this.isRightToLeft = false,
     this.scripts = const {ScriptLatn()},
   });
+
+  /// {@macro sealed_world.language_aar_constructor}
+  const factory NaturalLanguage.aar() = _AarFactory;
+
+  /// {@macro sealed_world.language_abk_constructor}
+  const factory NaturalLanguage.abk() = _AbkFactory;
+
+  /// {@macro sealed_world.language_afr_constructor}
+  const factory NaturalLanguage.afr() = _AfrFactory;
+
+  /// {@macro sealed_world.language_aka_constructor}
+  const factory NaturalLanguage.aka() = _AkaFactory;
+
+  /// {@macro sealed_world.language_amh_constructor}
+  const factory NaturalLanguage.amh() = _AmhFactory;
+
+  /// {@macro sealed_world.language_ara_constructor}
+  const factory NaturalLanguage.ara() = _AraFactory;
+
+  /// {@macro sealed_world.language_arg_constructor}
+  const factory NaturalLanguage.arg() = _ArgFactory;
+
+  /// {@macro sealed_world.language_asm_constructor}
+  const factory NaturalLanguage.asm() = _AsmFactory;
+
+  /// {@macro sealed_world.language_ava_constructor}
+  const factory NaturalLanguage.ava() = _AvaFactory;
+
+  /// {@macro sealed_world.language_ave_constructor}
+  const factory NaturalLanguage.ave() = _AveFactory;
+
+  /// {@macro sealed_world.language_aym_constructor}
+  const factory NaturalLanguage.aym() = _AymFactory;
+
+  /// {@macro sealed_world.language_aze_constructor}
+  const factory NaturalLanguage.aze() = _AzeFactory;
+
+  /// {@macro sealed_world.language_bak_constructor}
+  const factory NaturalLanguage.bak() = _BakFactory;
+
+  /// {@macro sealed_world.language_bam_constructor}
+  const factory NaturalLanguage.bam() = _BamFactory;
+
+  /// {@macro sealed_world.language_bel_constructor}
+  const factory NaturalLanguage.bel() = _BelFactory;
+
+  /// {@macro sealed_world.language_ben_constructor}
+  const factory NaturalLanguage.ben() = _BenFactory;
+
+  /// {@macro sealed_world.language_bih_constructor}
+  const factory NaturalLanguage.bih() = _BihFactory;
+
+  /// {@macro sealed_world.language_bis_constructor}
+  const factory NaturalLanguage.bis() = _BisFactory;
+
+  /// {@macro sealed_world.language_bod_constructor}
+  const factory NaturalLanguage.bod() = _BodFactory;
+
+  /// {@macro sealed_world.language_bos_constructor}
+  const factory NaturalLanguage.bos() = _BosFactory;
+
+  /// {@macro sealed_world.language_bre_constructor}
+  const factory NaturalLanguage.bre() = _BreFactory;
+
+  /// {@macro sealed_world.language_bul_constructor}
+  const factory NaturalLanguage.bul() = _BulFactory;
+
+  /// {@macro sealed_world.language_cat_constructor}
+  const factory NaturalLanguage.cat() = _CatFactory;
+
+  /// {@macro sealed_world.language_ces_constructor}
+  const factory NaturalLanguage.ces() = _CesFactory;
+
+  /// {@macro sealed_world.language_cha_constructor}
+  const factory NaturalLanguage.cha() = _ChaFactory;
+
+  /// {@macro sealed_world.language_che_constructor}
+  const factory NaturalLanguage.che() = _CheFactory;
+
+  /// {@macro sealed_world.language_chu_constructor}
+  const factory NaturalLanguage.chu() = _ChuFactory;
+
+  /// {@macro sealed_world.language_chv_constructor}
+  const factory NaturalLanguage.chv() = _ChvFactory;
+
+  /// {@macro sealed_world.language_cor_constructor}
+  const factory NaturalLanguage.cor() = _CorFactory;
+
+  /// {@macro sealed_world.language_cos_constructor}
+  const factory NaturalLanguage.cos() = _CosFactory;
+
+  /// {@macro sealed_world.language_cre_constructor}
+  const factory NaturalLanguage.cre() = _CreFactory;
+
+  /// {@macro sealed_world.language_cym_constructor}
+  const factory NaturalLanguage.cym() = _CymFactory;
+
+  /// {@macro sealed_world.language_dan_constructor}
+  const factory NaturalLanguage.dan() = _DanFactory;
+
+  /// {@macro sealed_world.language_deu_constructor}
+  const factory NaturalLanguage.deu() = _DeuFactory;
+
+  /// {@macro sealed_world.language_div_constructor}
+  const factory NaturalLanguage.div() = _DivFactory;
+
+  /// {@macro sealed_world.language_dzo_constructor}
+  const factory NaturalLanguage.dzo() = _DzoFactory;
+
+  /// {@macro sealed_world.language_ell_constructor}
+  const factory NaturalLanguage.ell() = _EllFactory;
+
+  /// {@macro sealed_world.language_eng_constructor}
+  const factory NaturalLanguage.eng() = _EngFactory;
+
+  /// {@macro sealed_world.language_epo_constructor}
+  const factory NaturalLanguage.epo() = _EpoFactory;
+
+  /// {@macro sealed_world.language_est_constructor}
+  const factory NaturalLanguage.est() = _EstFactory;
+
+  /// {@macro sealed_world.language_eus_constructor}
+  const factory NaturalLanguage.eus() = _EusFactory;
+
+  /// {@macro sealed_world.language_ewe_constructor}
+  const factory NaturalLanguage.ewe() = _EweFactory;
+
+  /// {@macro sealed_world.language_fao_constructor}
+  const factory NaturalLanguage.fao() = _FaoFactory;
+
+  /// {@macro sealed_world.language_fas_constructor}
+  const factory NaturalLanguage.fas() = _FasFactory;
+
+  /// {@macro sealed_world.language_fij_constructor}
+  const factory NaturalLanguage.fij() = _FijFactory;
+
+  /// {@macro sealed_world.language_fin_constructor}
+  const factory NaturalLanguage.fin() = _FinFactory;
+
+  /// {@macro sealed_world.language_fra_constructor}
+  const factory NaturalLanguage.fra() = _FraFactory;
+
+  /// {@macro sealed_world.language_fry_constructor}
+  const factory NaturalLanguage.fry() = _FryFactory;
+
+  /// {@macro sealed_world.language_ful_constructor}
+  const factory NaturalLanguage.ful() = _FulFactory;
+
+  /// {@macro sealed_world.language_gla_constructor}
+  const factory NaturalLanguage.gla() = _GlaFactory;
+
+  /// {@macro sealed_world.language_gle_constructor}
+  const factory NaturalLanguage.gle() = _GleFactory;
+
+  /// {@macro sealed_world.language_glg_constructor}
+  const factory NaturalLanguage.glg() = _GlgFactory;
+
+  /// {@macro sealed_world.language_glv_constructor}
+  const factory NaturalLanguage.glv() = _GlvFactory;
+
+  /// {@macro sealed_world.language_grn_constructor}
+  const factory NaturalLanguage.grn() = _GrnFactory;
+
+  /// {@macro sealed_world.language_guj_constructor}
+  const factory NaturalLanguage.guj() = _GujFactory;
+
+  /// {@macro sealed_world.language_hat_constructor}
+  const factory NaturalLanguage.hat() = _HatFactory;
+
+  /// {@macro sealed_world.language_hau_constructor}
+  const factory NaturalLanguage.hau() = _HauFactory;
+
+  /// {@macro sealed_world.language_heb_constructor}
+  const factory NaturalLanguage.heb() = _HebFactory;
+
+  /// {@macro sealed_world.language_her_constructor}
+  const factory NaturalLanguage.her() = _HerFactory;
+
+  /// {@macro sealed_world.language_hin_constructor}
+  const factory NaturalLanguage.hin() = _HinFactory;
+
+  /// {@macro sealed_world.language_hmo_constructor}
+  const factory NaturalLanguage.hmo() = _HmoFactory;
+
+  /// {@macro sealed_world.language_hrv_constructor}
+  const factory NaturalLanguage.hrv() = _HrvFactory;
+
+  /// {@macro sealed_world.language_hun_constructor}
+  const factory NaturalLanguage.hun() = _HunFactory;
+
+  /// {@macro sealed_world.language_hye_constructor}
+  const factory NaturalLanguage.hye() = _HyeFactory;
+
+  /// {@macro sealed_world.language_ibo_constructor}
+  const factory NaturalLanguage.ibo() = _IboFactory;
+
+  /// {@macro sealed_world.language_ido_constructor}
+  const factory NaturalLanguage.ido() = _IdoFactory;
+
+  /// {@macro sealed_world.language_iii_constructor}
+  const factory NaturalLanguage.iii() = _IiiFactory;
+
+  /// {@macro sealed_world.language_iku_constructor}
+  const factory NaturalLanguage.iku() = _IkuFactory;
+
+  /// {@macro sealed_world.language_ile_constructor}
+  const factory NaturalLanguage.ile() = _IleFactory;
+
+  /// {@macro sealed_world.language_ina_constructor}
+  const factory NaturalLanguage.ina() = _InaFactory;
+
+  /// {@macro sealed_world.language_ind_constructor}
+  const factory NaturalLanguage.ind() = _IndFactory;
+
+  /// {@macro sealed_world.language_ipk_constructor}
+  const factory NaturalLanguage.ipk() = _IpkFactory;
+
+  /// {@macro sealed_world.language_isl_constructor}
+  const factory NaturalLanguage.isl() = _IslFactory;
+
+  /// {@macro sealed_world.language_ita_constructor}
+  const factory NaturalLanguage.ita() = _ItaFactory;
+
+  /// {@macro sealed_world.language_jav_constructor}
+  const factory NaturalLanguage.jav() = _JavFactory;
+
+  /// {@macro sealed_world.language_jpn_constructor}
+  const factory NaturalLanguage.jpn() = _JpnFactory;
+
+  /// {@macro sealed_world.language_kal_constructor}
+  const factory NaturalLanguage.kal() = _KalFactory;
+
+  /// {@macro sealed_world.language_kan_constructor}
+  const factory NaturalLanguage.kan() = _KanFactory;
+
+  /// {@macro sealed_world.language_kas_constructor}
+  const factory NaturalLanguage.kas() = _KasFactory;
+
+  /// {@macro sealed_world.language_kat_constructor}
+  const factory NaturalLanguage.kat() = _KatFactory;
+
+  /// {@macro sealed_world.language_kau_constructor}
+  const factory NaturalLanguage.kau() = _KauFactory;
+
+  /// {@macro sealed_world.language_kaz_constructor}
+  const factory NaturalLanguage.kaz() = _KazFactory;
+
+  /// {@macro sealed_world.language_khm_constructor}
+  const factory NaturalLanguage.khm() = _KhmFactory;
+
+  /// {@macro sealed_world.language_kik_constructor}
+  const factory NaturalLanguage.kik() = _KikFactory;
+
+  /// {@macro sealed_world.language_kin_constructor}
+  const factory NaturalLanguage.kin() = _KinFactory;
+
+  /// {@macro sealed_world.language_kir_constructor}
+  const factory NaturalLanguage.kir() = _KirFactory;
+
+  /// {@macro sealed_world.language_kom_constructor}
+  const factory NaturalLanguage.kom() = _KomFactory;
+
+  /// {@macro sealed_world.language_kon_constructor}
+  const factory NaturalLanguage.kon() = _KonFactory;
+
+  /// {@macro sealed_world.language_kor_constructor}
+  const factory NaturalLanguage.kor() = _KorFactory;
+
+  /// {@macro sealed_world.language_kua_constructor}
+  const factory NaturalLanguage.kua() = _KuaFactory;
+
+  /// {@macro sealed_world.language_kur_constructor}
+  const factory NaturalLanguage.kur() = _KurFactory;
+
+  /// {@macro sealed_world.language_lao_constructor}
+  const factory NaturalLanguage.lao() = _LaoFactory;
+
+  /// {@macro sealed_world.language_lat_constructor}
+  const factory NaturalLanguage.lat() = _LatFactory;
+
+  /// {@macro sealed_world.language_lav_constructor}
+  const factory NaturalLanguage.lav() = _LavFactory;
+
+  /// {@macro sealed_world.language_lim_constructor}
+  const factory NaturalLanguage.lim() = _LimFactory;
+
+  /// {@macro sealed_world.language_lin_constructor}
+  const factory NaturalLanguage.lin() = _LinFactory;
+
+  /// {@macro sealed_world.language_lit_constructor}
+  const factory NaturalLanguage.lit() = _LitFactory;
+
+  /// {@macro sealed_world.language_ltz_constructor}
+  const factory NaturalLanguage.ltz() = _LtzFactory;
+
+  /// {@macro sealed_world.language_lub_constructor}
+  const factory NaturalLanguage.lub() = _LubFactory;
+
+  /// {@macro sealed_world.language_lug_constructor}
+  const factory NaturalLanguage.lug() = _LugFactory;
+
+  /// {@macro sealed_world.language_mah_constructor}
+  const factory NaturalLanguage.mah() = _MahFactory;
+
+  /// {@macro sealed_world.language_mal_constructor}
+  const factory NaturalLanguage.mal() = _MalFactory;
+
+  /// {@macro sealed_world.language_mar_constructor}
+  const factory NaturalLanguage.mar() = _MarFactory;
+
+  /// {@macro sealed_world.language_mkd_constructor}
+  const factory NaturalLanguage.mkd() = _MkdFactory;
+
+  /// {@macro sealed_world.language_mlg_constructor}
+  const factory NaturalLanguage.mlg() = _MlgFactory;
+
+  /// {@macro sealed_world.language_mlt_constructor}
+  const factory NaturalLanguage.mlt() = _MltFactory;
+
+  /// {@macro sealed_world.language_mon_constructor}
+  const factory NaturalLanguage.mon() = _MonFactory;
+
+  /// {@macro sealed_world.language_mri_constructor}
+  const factory NaturalLanguage.mri() = _MriFactory;
+
+  /// {@macro sealed_world.language_msa_constructor}
+  const factory NaturalLanguage.msa() = _MsaFactory;
+
+  /// {@macro sealed_world.language_mya_constructor}
+  const factory NaturalLanguage.mya() = _MyaFactory;
+
+  /// {@macro sealed_world.language_nau_constructor}
+  const factory NaturalLanguage.nau() = _NauFactory;
+
+  /// {@macro sealed_world.language_nav_constructor}
+  const factory NaturalLanguage.nav() = _NavFactory;
+
+  /// {@macro sealed_world.language_nbl_constructor}
+  const factory NaturalLanguage.nbl() = _NblFactory;
+
+  /// {@macro sealed_world.language_nde_constructor}
+  const factory NaturalLanguage.nde() = _NdeFactory;
+
+  /// {@macro sealed_world.language_ndo_constructor}
+  const factory NaturalLanguage.ndo() = _NdoFactory;
+
+  /// {@macro sealed_world.language_nep_constructor}
+  const factory NaturalLanguage.nep() = _NepFactory;
+
+  /// {@macro sealed_world.language_nld_constructor}
+  const factory NaturalLanguage.nld() = _NldFactory;
+
+  /// {@macro sealed_world.language_nno_constructor}
+  const factory NaturalLanguage.nno() = _NnoFactory;
+
+  /// {@macro sealed_world.language_nob_constructor}
+  const factory NaturalLanguage.nob() = _NobFactory;
+
+  /// {@macro sealed_world.language_nor_constructor}
+  const factory NaturalLanguage.nor() = _NorFactory;
+
+  /// {@macro sealed_world.language_nya_constructor}
+  const factory NaturalLanguage.nya() = _NyaFactory;
+
+  /// {@macro sealed_world.language_oci_constructor}
+  const factory NaturalLanguage.oci() = _OciFactory;
+
+  /// {@macro sealed_world.language_oji_constructor}
+  const factory NaturalLanguage.oji() = _OjiFactory;
+
+  /// {@macro sealed_world.language_ori_constructor}
+  const factory NaturalLanguage.ori() = _OriFactory;
+
+  /// {@macro sealed_world.language_orm_constructor}
+  const factory NaturalLanguage.orm() = _OrmFactory;
+
+  /// {@macro sealed_world.language_oss_constructor}
+  const factory NaturalLanguage.oss() = _OssFactory;
+
+  /// {@macro sealed_world.language_pan_constructor}
+  const factory NaturalLanguage.pan() = _PanFactory;
+
+  /// {@macro sealed_world.language_pli_constructor}
+  const factory NaturalLanguage.pli() = _PliFactory;
+
+  /// {@macro sealed_world.language_pol_constructor}
+  const factory NaturalLanguage.pol() = _PolFactory;
+
+  /// {@macro sealed_world.language_por_constructor}
+  const factory NaturalLanguage.por() = _PorFactory;
+
+  /// {@macro sealed_world.language_pus_constructor}
+  const factory NaturalLanguage.pus() = _PusFactory;
+
+  /// {@macro sealed_world.language_que_constructor}
+  const factory NaturalLanguage.que() = _QueFactory;
+
+  /// {@macro sealed_world.language_roh_constructor}
+  const factory NaturalLanguage.roh() = _RohFactory;
+
+  /// {@macro sealed_world.language_ron_constructor}
+  const factory NaturalLanguage.ron() = _RonFactory;
+
+  /// {@macro sealed_world.language_run_constructor}
+  const factory NaturalLanguage.run() = _RunFactory;
+
+  /// {@macro sealed_world.language_rus_constructor}
+  const factory NaturalLanguage.rus() = _RusFactory;
+
+  /// {@macro sealed_world.language_sag_constructor}
+  const factory NaturalLanguage.sag() = _SagFactory;
+
+  /// {@macro sealed_world.language_san_constructor}
+  const factory NaturalLanguage.san() = _SanFactory;
+
+  /// {@macro sealed_world.language_sin_constructor}
+  const factory NaturalLanguage.sin() = _SinFactory;
+
+  /// {@macro sealed_world.language_slk_constructor}
+  const factory NaturalLanguage.slk() = _SlkFactory;
+
+  /// {@macro sealed_world.language_slv_constructor}
+  const factory NaturalLanguage.slv() = _SlvFactory;
+
+  /// {@macro sealed_world.language_sme_constructor}
+  const factory NaturalLanguage.sme() = _SmeFactory;
+
+  /// {@macro sealed_world.language_smo_constructor}
+  const factory NaturalLanguage.smo() = _SmoFactory;
+
+  /// {@macro sealed_world.language_sna_constructor}
+  const factory NaturalLanguage.sna() = _SnaFactory;
+
+  /// {@macro sealed_world.language_snd_constructor}
+  const factory NaturalLanguage.snd() = _SndFactory;
+
+  /// {@macro sealed_world.language_som_constructor}
+  const factory NaturalLanguage.som() = _SomFactory;
+
+  /// {@macro sealed_world.language_sot_constructor}
+  const factory NaturalLanguage.sot() = _SotFactory;
+
+  /// {@macro sealed_world.language_spa_constructor}
+  const factory NaturalLanguage.spa() = _SpaFactory;
+
+  /// {@macro sealed_world.language_sqi_constructor}
+  const factory NaturalLanguage.sqi() = _SqiFactory;
+
+  /// {@macro sealed_world.language_srd_constructor}
+  const factory NaturalLanguage.srd() = _SrdFactory;
+
+  /// {@macro sealed_world.language_srp_constructor}
+  const factory NaturalLanguage.srp() = _SrpFactory;
+
+  /// {@macro sealed_world.language_ssw_constructor}
+  const factory NaturalLanguage.ssw() = _SswFactory;
+
+  /// {@macro sealed_world.language_sun_constructor}
+  const factory NaturalLanguage.sun() = _SunFactory;
+
+  /// {@macro sealed_world.language_swa_constructor}
+  const factory NaturalLanguage.swa() = _SwaFactory;
+
+  /// {@macro sealed_world.language_swe_constructor}
+  const factory NaturalLanguage.swe() = _SweFactory;
+
+  /// {@macro sealed_world.language_tah_constructor}
+  const factory NaturalLanguage.tah() = _TahFactory;
+
+  /// {@macro sealed_world.language_tam_constructor}
+  const factory NaturalLanguage.tam() = _TamFactory;
+
+  /// {@macro sealed_world.language_tat_constructor}
+  const factory NaturalLanguage.tat() = _TatFactory;
+
+  /// {@macro sealed_world.language_tel_constructor}
+  const factory NaturalLanguage.tel() = _TelFactory;
+
+  /// {@macro sealed_world.language_tgk_constructor}
+  const factory NaturalLanguage.tgk() = _TgkFactory;
+
+  /// {@macro sealed_world.language_tgl_constructor}
+  const factory NaturalLanguage.tgl() = _TglFactory;
+
+  /// {@macro sealed_world.language_tha_constructor}
+  const factory NaturalLanguage.tha() = _ThaFactory;
+
+  /// {@macro sealed_world.language_tir_constructor}
+  const factory NaturalLanguage.tir() = _TirFactory;
+
+  /// {@macro sealed_world.language_ton_constructor}
+  const factory NaturalLanguage.ton() = _TonFactory;
+
+  /// {@macro sealed_world.language_tsn_constructor}
+  const factory NaturalLanguage.tsn() = _TsnFactory;
+
+  /// {@macro sealed_world.language_tso_constructor}
+  const factory NaturalLanguage.tso() = _TsoFactory;
+
+  /// {@macro sealed_world.language_tuk_constructor}
+  const factory NaturalLanguage.tuk() = _TukFactory;
+
+  /// {@macro sealed_world.language_tur_constructor}
+  const factory NaturalLanguage.tur() = _TurFactory;
+
+  /// {@macro sealed_world.language_twi_constructor}
+  const factory NaturalLanguage.twi() = _TwiFactory;
+
+  /// {@macro sealed_world.language_uig_constructor}
+  const factory NaturalLanguage.uig() = _UigFactory;
+
+  /// {@macro sealed_world.language_ukr_constructor}
+  const factory NaturalLanguage.ukr() = _UkrFactory;
+
+  /// {@macro sealed_world.language_urd_constructor}
+  const factory NaturalLanguage.urd() = _UrdFactory;
+
+  /// {@macro sealed_world.language_uzb_constructor}
+  const factory NaturalLanguage.uzb() = _UzbFactory;
+
+  /// {@macro sealed_world.language_ven_constructor}
+  const factory NaturalLanguage.ven() = _VenFactory;
+
+  /// {@macro sealed_world.language_vie_constructor}
+  const factory NaturalLanguage.vie() = _VieFactory;
+
+  /// {@macro sealed_world.language_vol_constructor}
+  const factory NaturalLanguage.vol() = _VolFactory;
+
+  /// {@macro sealed_world.language_wln_constructor}
+  const factory NaturalLanguage.wln() = _WlnFactory;
+
+  /// {@macro sealed_world.language_wol_constructor}
+  const factory NaturalLanguage.wol() = _WolFactory;
+
+  /// {@macro sealed_world.language_xho_constructor}
+  const factory NaturalLanguage.xho() = _XhoFactory;
+
+  /// {@macro sealed_world.language_yid_constructor}
+  const factory NaturalLanguage.yid() = _YidFactory;
+
+  /// {@macro sealed_world.language_yor_constructor}
+  const factory NaturalLanguage.yor() = _YorFactory;
+
+  /// {@macro sealed_world.language_zha_constructor}
+  const factory NaturalLanguage.zha() = _ZhaFactory;
+
+  /// {@macro sealed_world.language_zho_constructor}
+  const factory NaturalLanguage.zho() = _ZhoFactory;
+
+  /// {@macro sealed_world.language_zul_constructor}
+  const factory NaturalLanguage.zul() = _ZulFactory;
 
   /// Returns an instance of the [NaturalLanguage] class from a three-letter
   /// Terminological ISO 639-2 code.
@@ -302,8 +857,9 @@ class NaturalLanguage extends Language
       : 'NaturalLanguage(name: "$name", code: "$code", '
             'codeShort: "$codeShort", namesNative: ${jsonEncode(namesNative)}, '
             '''${bibliographicCode == null ? '' : 'bibliographicCode: "$bibliographicCode", '}'''
-            "family: ${family.runtimeType}(), isRightToLeft: $isRightToLeft, "
-            "scripts: ${scripts.toUniqueInstancesString()},)";
+            "family: const ${family.runtimeType}(), "
+            "isRightToLeft: $isRightToLeft, "
+            "scripts: const ${scripts.toUniqueInstancesString()},)";
 
   @override
   String toJson({JsonCodec codec = const JsonCodec()}) => codec.encode(toMap());

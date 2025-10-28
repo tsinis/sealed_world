@@ -7,8 +7,6 @@ export "src/collections/fiat_currency_country_collections.dart";
 export "src/collections/natural_language_country_collections.dart";
 export "src/data/geo/continental_sections.data.dart";
 export "src/data/geo/continents.data.dart";
-export "src/data/official_world_countries.data.dart";
-export "src/data/other_world_countries.data.dart";
 export "src/data/regional_bloc/regional_bloc.data.dart";
 export "src/helpers/extensions/country_submodels/capital_extension.dart";
 export "src/helpers/extensions/country_submodels/capital_info_extension.dart";

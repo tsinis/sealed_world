@@ -1,3 +1,22 @@
+## 2.8.0
+
+NEW FEATURES
+
+- This version introduces named (Dart 3.10 dot-shorthand compatible) constructors for ISO classes, refactoring the ISO data files to use a factory constructor pattern with extension types. The changes transform the direct constructor calls into a more structured factory-based approach while maintaining backward compatibility. For example, instead of using `CountrySvk()`, you can now use `WorldCountry.svk()`. This change enhances code readability and aligns with modern Dart practices.
+
+```dart
+const country = CountrySvk(); // Old way (still supported).
+const country = WorldCountry.svk(); // New way, or just .svk() in Dart 3.10.
+
+print([WorldCountry.svk(), WorldCountry.cze()]); // Collections, 3.9 way.
+// You can also use the new dot-shorthand syntax introduced in Dart 3.10:
+print(<WorldCountry>[.svk(), .cze()]); // Collections, 3.10 way.
+```
+
+CHORE
+
+- Bulgarian `currencies` array updated to reflect current usage of both BGN and EUR in Bulgaria.
+
 ## 2.7.1
 
 REFACTOR

@@ -98,6 +98,7 @@ DOGR
 DSRT
 DUPL
 Deu
+Deutsch
 Diak
 Dji
 Djiboutian
@@ -117,6 +118,7 @@ Egyd
 Egyh
 Egyp
 Elym
+Englisch
 Epo
 Esh
 Eswatini
@@ -267,6 +269,7 @@ Loma
 Lso
 Ltu
 Ltz
+Lusophone
 Lva
 Lyci
 Lydi
@@ -475,6 +478,7 @@ Samr
 Sarb
 Saur
 Sdn
+Setswana
 Seychellois
 Sgnw
 Sgp
@@ -513,6 +517,7 @@ Subfolder
 Sund
 Sunu
 Svk
+Swati
 Swe
 Swz
 Sxm

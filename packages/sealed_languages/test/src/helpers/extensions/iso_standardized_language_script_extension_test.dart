@@ -1,7 +1,5 @@
 // ignore_for_file: deprecated_member_use_from_same_package, it's TODO!
 
-import "package:sealed_languages/src/data/natural_languages.data.dart";
-import "package:sealed_languages/src/data/scripts.data.dart";
 import "package:sealed_languages/src/helpers/extensions/iso_standardized_language_script_extension.dart";
 import "package:sealed_languages/src/interfaces/iso_standardized.dart";
 import "package:sealed_languages/src/model/language/language.dart";

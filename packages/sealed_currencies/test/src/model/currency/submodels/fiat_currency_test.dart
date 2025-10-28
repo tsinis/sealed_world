@@ -3,8 +3,6 @@
 
 import "package:_sealed_world_tests/sealed_world_tests.dart";
 import "package:sealed_currencies/currency_translations.dart";
-import "package:sealed_currencies/src/data/fiat_currencies.data.dart"
-    show FiatAng;
 import "package:sealed_currencies/src/helpers/fiat_currency/fiat_currency_json.dart";
 import "package:sealed_currencies/src/model/currency/currency.dart";
 import "package:sealed_languages/sealed_languages.dart";
@@ -25,6 +23,13 @@ void main() => group("$FiatCurrency", () {
     expect(value, isA<JsonEncodable>());
     expect(value, isA<Named>());
     expect(value, isA<Translated>());
+  });
+
+  performanceTest("compile and non compile time constructors equality", () {
+    expect(FiatCurrency.aed(), FiatAed());
+    expect(FiatCurrency.aed(), const FiatAed());
+    expect(const FiatCurrency.aed(), FiatAed());
+    expect(const FiatCurrency.aed(), const FiatAed());
   });
 
   assertTest(
@@ -114,6 +119,22 @@ void main() => group("$FiatCurrency", () {
       array.add(FiatCurrency.fromName(array.last.name));
       // ignore: avoid-duplicate-test-assertions, this is mutable array.
       expect(array.length, 2);
+    });
+
+    performanceTest("with ${Map<FiatCurrency, Object>}", () {
+      final map = <FiatCurrency, int>{
+        FiatAed(): 4,
+        const FiatAed(): 3,
+        FiatCurrency.aed(): 2,
+        // ignore: equal_keys_in_map, it's a test.
+        const FiatCurrency.aed(): 1,
+        FiatCurrency.fromCode("AED"): 0,
+      };
+      expect(map.entries.single.key, FiatAed());
+      expect(map.entries.single.key, const FiatAed());
+      expect(map.entries.single.key, FiatCurrency.aed());
+      expect(map.entries.single.key, const FiatCurrency.aed());
+      expect(map.entries.single.value, isZero);
     });
   });
 

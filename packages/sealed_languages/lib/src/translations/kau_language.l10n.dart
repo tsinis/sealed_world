@@ -1,5 +1,5 @@
-import "../data/natural_languages.data.dart";
-import "../data/scripts.data.dart";
+import "../model/language/language.dart";
+import "../model/script/writing_system.dart";
 import "../model/translated_name.dart";
 
 /// Provides 100 translations for a Kanuri language:

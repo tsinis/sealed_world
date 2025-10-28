@@ -1,5 +1,4 @@
 // ignore_for_file: prefer-static-class, it's referenced as static in the model.
-import "../data/fiat_currencies.data.dart";
 import "../model/currency/currency.dart";
 
 /// List of all standard [FiatCurrency] sorted by code.

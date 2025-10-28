@@ -1,8 +1,8 @@
+// ignore_for_file: avoid_print, it's just a CLI tool.
 import "package:change_case/change_case.dart";
 import "package:sealed_languages/sealed_languages.dart";
 
 import "../models/package.dart";
-import "../utils/code_utils.dart";
 import "../utils/dart_utils.dart";
 import "../utils/io_utils.dart";
 import "helpers/extensions/package_associations_extension.dart";
@@ -10,59 +10,94 @@ import "helpers/extensions/package_associations_extension.dart";
 class DataListGenerator {
   const DataListGenerator();
 
-  static const _code = CodeUtils();
   static const _dart = DartUtils();
 
-  Future<void> generate(Package package) async {
+  // ignore: avoid-long-functions, it's just a CLI tool.
+  Future<void> generate(Package? package) async {
     final currentFileDir = Directory(
-      join(Directory.current.parent.path, package.fullPath),
+      join(
+        Directory.current.parent.path,
+        (package ?? Package.sealedLanguages).fullPath,
+      ),
     );
-    final currentFilePath = join(
-      currentFileDir.path,
-      "data/${package.dataFilePrefix}.data.dart",
+    final isoDataDir = Directory(
+      join(currentFileDir.path, "data", package.dataRepresentPlural),
     );
-    final currentImports = _code.readContentUntilFound(currentFilePath);
-    final buffer = StringBuffer(currentImports);
-    final type = package.type.toString();
 
-    for (final item in package.dataList) {
+    // Create the iso data directory if it doesn't exist.
+    if (!isoDataDir.existsSync()) isoDataDir.createSync(recursive: true);
+    final dataRepresent = package.dataRepresent ?? "script";
+    final type = package.type.toString();
+    final isoList = List<IsoStandardized>.of(package.dataList ?? Script.list);
+
+    for (final item in isoList) {
       final code = item.code.toPascalCase();
+      final lowerCaseCode = code.toLowerCase();
       final itemString = item.toString(short: false);
       final className = "${package.classPrefix}$code";
       final superBody = itemString.replaceFirst(type, ": super");
       final setsBody = superBody.replaceAll(": {", ": const {");
       final classBody = setsBody.replaceAll(": [", ": const [");
       final itemName = item.internationalName;
+      final factoryName = "_${code}Factory";
+      final buffer = StringBuffer();
+      if (package == Package.sealedCountries) {
+        buffer.write("""
+// Those classes are based on data from the restcountries project
+// https://gitlab.com/restcountries/restcountries, which is
+// licensed under the Mozilla Public License Version 2.0.
 
+// ignore_for_file: prefer-digit-separators
+""");
+      }
       buffer
         ..write("""
-/// A class that represents the $itemName ${package.dataRepresent}.
+part of "../../model/$dataRepresent/${package.dataRepresent ?? "writing_system"}.dart";
+
+extension type const $factoryName._($className _) implements $className {
+  const $factoryName() : this._(const $className._());
+}
+
+/// A class that represents the $itemName $dataRepresent.
 class $className extends $type {
-/// Creates a instance of [$className] ($itemName ${package.dataRepresent}).
+/// {@template sealed_world.${dataRepresent}_${lowerCaseCode}_constructor}
+/// Creates a instance of [$className] ($itemName $dataRepresent).
 ///
 /// ${IsoStandardized.standardAcronym} ${package.isoCodeAssociated} code: `${item.code}`, ${IsoStandardized.standardAcronym} ${package.isoCodeOtherAssociated} code: `${item.codeOther}`.
-const $className()""")
+/// {@endtemplate}
+const factory $className() = $factoryName;
+
+const $className._()""")
         ..write(classBody)
-        ..write(";\n")
-        ..write(
-          /// It's not possible to use a self-referencing data in
-          /// compile-time constant constructor :-/.
-          package.whenConstOrNull(
-                sealedLanguages: """
-  \n@override
-  List<$TranslatedName> get translations => ${item.code.toLowerCase()}${Language}Translations;""",
-              ) ??
-              "",
-        )
-        ..write("\n}\n");
+        ..write(";\n\n}\n");
+      if (lowerCaseCode == "unk") continue;
+
+      final filePath = join(isoDataDir.path, "$lowerCaseCode.data.dart");
+      IoUtils().writeContentToFile(filePath, buffer);
     }
 
-    IoUtils()
-      ..writeContentToFile(currentFilePath, buffer)
-      ..directory = currentFileDir;
-
+    IoUtils().directory = currentFileDir;
+    print("Generated ${isoList.length} $dataRepresent");
+    final directory = isoDataDir.path;
+    print("Ready to fix in directory: $directory");
+    await _dart.dcm(directory);
+    await _dart.fixFormat(directory);
+    print("Formatted generated $dataRepresent.");
+    await _dart.dcm(directory);
     await _dart.fixFormat();
+    print("DCM Fixed issues in the package");
+  }
 
-    return _dart.fixFormat();
+  void showConstructors(Package? package) {
+    final dataRepresent = package.dataRepresent ?? "script";
+    // ignore: avoid-explicit-type-declaration, not obvious in this case.
+    for (final IsoStandardized item in (package.dataList ?? Script.list)) {
+      final code = item.code.toLowerCase();
+      // ignore: avoid-substring, it's CLI.
+      final capitalize = "${code[0].toUpperCase()}${code.substring(1)}";
+      print("""
+      /// {@macro sealed_world.${dataRepresent}_${code}_constructor}
+      const factory ${package.type}.$code() = _${capitalize}Factory;\n""");
+    }
   }
 }

@@ -4,8 +4,6 @@ library sealed_languages;
 export "/src/helpers/extensions/iso_object_extension_type.dart";
 export "/src/helpers/extensions/iso_string_extension_type.dart";
 export "src/data/natural_language_families.data.dart";
-export "src/data/natural_languages.data.dart";
-export "src/data/scripts.data.dart";
 export "src/helpers/extensions/basic_locale_extension.dart";
 export "src/helpers/extensions/iso_comparable_extension.dart";
 export "src/helpers/extensions/iso_standardized_language_script_extension.dart";

@@ -1,6 +1,5 @@
 // ignore_for_file: avoid-passing-self-as-argument, avoid-self-compare
 
-import "package:sealed_languages/src/data/scripts.data.dart";
 import "package:sealed_languages/src/helpers/extensions/iso_comparable_extension.dart";
 import "package:sealed_languages/src/model/script/writing_system.dart";
 import "package:test/test.dart";

@@ -24,6 +24,13 @@ void main() => group("$Script", () {
     expect(value, isA<Comparable<IsoStandardized>>());
   });
 
+  performanceTest("compile and non compile time constructors equality", () {
+    expect(Script.adlm(), ScriptAdlm());
+    expect(Script.adlm(), const ScriptAdlm());
+    expect(const Script.adlm(), ScriptAdlm());
+    expect(const Script.adlm(), const ScriptAdlm());
+  });
+
   assertTest(
     "permissive constructor",
     () => const _ScriptTest().code,
@@ -80,6 +87,22 @@ void main() => group("$Script", () {
       array.add(Script.fromName(array.last.name));
       // ignore: avoid-duplicate-test-assertions, this is mutable array.
       expect(array.length, 2);
+    });
+
+    performanceTest("with ${Map<Script, Object>}", () {
+      final map = <Script, int>{
+        ScriptAdlm(): 4,
+        const ScriptAdlm(): 3,
+        Script.adlm(): 2,
+        // ignore: equal_keys_in_map, it's a test.
+        const Script.adlm(): 1,
+        Script.fromCode("ADLM"): 0,
+      };
+      expect(map.entries.single.key, ScriptAdlm());
+      expect(map.entries.single.key, const ScriptAdlm());
+      expect(map.entries.single.key, Script.adlm());
+      expect(map.entries.single.key, const Script.adlm());
+      expect(map.entries.single.value, isZero);
     });
   });
 

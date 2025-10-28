@@ -1,6 +1,5 @@
 // ignore_for_file: avoid-passing-default-values
 
-import "package:sealed_languages/src/data/natural_languages.data.dart";
 import "package:sealed_languages/src/helpers/extensions/upper_case_iso_map_extension.dart";
 import "package:sealed_languages/src/model/core/upper_case_iso_map.dart";
 import "package:sealed_languages/src/model/language/language.dart";

@@ -1,7 +1,6 @@
 import "package:sealed_currencies/sealed_currencies.dart";
 
 import "../../collections/natural_language_country_collections.dart";
-import "../../data/official_world_countries.data.dart";
 import "../../model/country/country.dart";
 import "iterable_by_country_population_extension.dart";
 
