@@ -863,7 +863,10 @@ class WorldCountry extends Country
 
   /// {@macro permissive_constructor}
   /// {@macro country_constructor}
-  @Deprecated("Use the default constructor and `copyWith` method instead")
+  @Deprecated(
+    "Use concrete instance and `copyWith` method instead, this "
+    "constructor will be renamed to `custom` in future versions.",
+  )
   const WorldCountry.permissive({
     required super.name,
     required this.code,

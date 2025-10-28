@@ -73,7 +73,10 @@ class NaturalLanguage extends Language
   /// the established ISO specifications and should be approached with caution.
   /// {@endtemplate}
   /// {@macro natural_language_constructor}
-  @Deprecated("Use the default constructor and `copyWith` method instead")
+  @Deprecated(
+    "Use concrete instance and `copyWith` method instead, this "
+    "constructor will be renamed to `custom` in future versions.",
+  )
   const NaturalLanguage.permissive({
     required super.name,
     required this.code,

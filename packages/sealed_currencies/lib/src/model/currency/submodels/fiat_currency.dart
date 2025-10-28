@@ -80,7 +80,10 @@ class FiatCurrency extends Currency
 
   /// {@macro permissive_constructor}
   /// {@macro currency_constructor}
-  @Deprecated("Use existing instance(s) and `copyWith` method instead")
+  @Deprecated(
+    "Use concrete instance and `copyWith` method instead, this "
+    "constructor will be renamed to `custom` in future versions.",
+  )
   const FiatCurrency.permissive({
     required super.code,
     required super.name,
