@@ -28,7 +28,7 @@ jobs:
           check-modified-files-only: "yes"
 
       - name: 🪄 Spell check
-        uses: streetsidesoftware/cspell-action@v7.2.0
+        uses: streetsidesoftware/cspell-action@v8.0.0
         with:
           config: .github/workflows/config/spell-check/cspell.json
           incremental_files_only: true
