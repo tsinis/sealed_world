@@ -144,7 +144,6 @@ abstract class BasicPicker<T extends IsoTranslated>
   /// Returns the default builder for the items.
   /// It also has an optional parameter `isDense`, which indicates whether the
   /// item uses less vertical space or not, defaults to `false`.
-  @required
   @protected
   Widget defaultBuilder(
     BuildContext context,
@@ -154,7 +153,6 @@ abstract class BasicPicker<T extends IsoTranslated>
 
   /// Returns the default search function for the items. By default returns
   /// translated name of the item (if exists).
-  @required
   @protected
   @mustCallSuper
   Iterable<String> defaultSearch(T item, BuildContext context) => [
@@ -252,7 +250,6 @@ abstract class BasicPicker<T extends IsoTranslated>
   }
 
   /// Returns translated common name of the item (if exists).
-  @required
   @protected
   String? nameTranslationCache(T item, TypedLocale locale);
 
@@ -313,8 +310,7 @@ abstract class BasicPicker<T extends IsoTranslated>
   @override
   Future<T?> showInSearch(
     BuildContext context, {
-    String? query =
-        "", // ignore: match-base-class-default-value, false positive.
+    String? query = "",
     bool useRootNavigator = false,
     String? searchFieldLabel,
     TextStyle? searchFieldStyle,
@@ -486,7 +482,6 @@ abstract class BasicPicker<T extends IsoTranslated>
     animationStyle: animationStyle,
   );
 
-  @required
   /// Creates a copy of this picker with the given fields replaced with the new
   /// values.
   BasicPicker<T> copyWith({

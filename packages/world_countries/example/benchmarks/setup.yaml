@@ -3,5 +3,5 @@ appId: world.countries.world_countries_example
 - launchApp
 - extendedWaitUntil:
     visible: "search_icon"
-    timeout: 1000
+    timeout: 2000
 - assertVisible: "search_icon"

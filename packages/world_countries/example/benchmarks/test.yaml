@@ -1,10 +1,4 @@
-# For local usage first build the profile app on a physical device:
-# fvm flutter run --profile -d ZY227DW9LQ
-# Then run the maestro test with flashlight (both has to be installed first):
-# cd benchmarks/
-# flashlight test --bundleId world.countries.world_countries_example --testCommand "maestro test test.yaml" --beforeEachCommand "maestro test setup.yaml" --resultsTitle 3.9.3
-# And see the reports with:
-# flashlight report .
+# For local usage connect your Android device and run: `cd example && dart run`
 appId: world.countries.world_countries_example
 ---
 - assertVisible: "search_icon"

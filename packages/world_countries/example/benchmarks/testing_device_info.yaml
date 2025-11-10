@@ -1,0 +1,1028 @@
+collection_date: "Mon Nov 10 13:31:45 CET 2025"
+
+gsmarena:
+  url: "https://www.gsmarena.com/motorola_moto_g_pro-10269.php"
+  specifications:
+    Technology: "GSM / HSPA / LTE"
+    2G bands: "GSM 850 / 900 / 1800 / 1900"
+    3G bands: "HSDPA 850 / 900 / 1700(AWS) / 1900 / 2100"
+    4G bands: "1, 2, 3, 4, 5, 7, 8, 12, 13, 14, 17, 18, 19, 20, 25, 26, 29, 30, 38, 39, 40, 41, 66, 71"
+    Speed: "HSPA 42.2/5.76 Mbps, LTE (2CA) Cat13 600/100 Mbps"
+    Announced: "2020, May 26. Released 2020, June 15"
+    Status: "Discontinued"
+    Dimensions: "158.6 x 75.8 x 9.2 mm (6.24 x 2.98 x 0.36 in)"
+    Weight: "192 g (6.77 oz)"
+    Build: "Glass front, plastic back, aluminum frame (6000 series)"
+    SIM: "Nano-SIM + Nano-SIM"
+    Type: "IPS LCD"
+    Size: "6.4 inches, 100.7 cm² (~83.7% screen-to-body ratio)"
+    Resolution: "1080 x 2300 pixels (~399 ppi density)"
+    OS: "Android 10, upgradable to Android 12, Android One"
+    Chipset: "Qualcomm SDM665 Snapdragon 665 (11 nm)"
+    CPU: "Octa-core (4x2.0 GHz Kryo 260 Gold & 4x1.8 GHz Kryo 260 Silver)"
+    GPU: "Adreno 610"
+    Card slot: "microSDXC (uses shared SIM slot)"
+    Internal: "128GB 4GB RAM"
+    Triple: '48 MP, f/1.7, 26mm (wide), 1/2.0", 0.8µm, PDAF 16 MP, f/2.2, 117˚ (ultrawide), dedicated video camera (1080p) 2 MP (macro)'
+    Features: "Laser AF, LED flash, HDR, panorama"
+    Video: "4K@30fps, 1080p@30/60/120fps, 1080p@30fps (gyro-EIS)"
+    Single: '16 MP, f/2.0, (wide), 1/3.06", 1.0µm'
+    WLAN: "Wi-Fi 802.11 a/b/g/n/ac, dual-band, Wi-Fi Direct"
+    Bluetooth: "5.0, A2DP, LE"
+    Positioning: "GPS, GLONASS, BDS, GALILEO"
+    NFC: "Yes"
+    Radio: "FM radio"
+    USB: "USB Type-C 2.0"
+    Sensors: "Fingerprint (rear-mounted), accelerometer, gyro, proximity"
+    Colors: "Mystic indigo"
+    Models: "XT2043-7"
+
+adb_properties:
+  DEVICE_PROVISIONED: "1"
+  aaudio.hw_burst_min_usec: "2000"
+  aaudio.mmap_exclusive_policy: "2"
+  aaudio.mmap_policy: "2"
+  af.fast_track_multiplier: "1"
+  arm64.memtag.process.system_server: "off"
+  audio.deep_buffer.media: "true"
+  audio.offload.disable: "false"
+  audio.offload.gapless.enabled: "false"
+  audio.offload.min.duration.secs: "60"
+  audio.offload.video: "false"
+  audio.sys.mute.latency.factor: "2"
+  audio.sys.noisy.broadcast.delay: "500"
+  audio.sys.offload.pstimeout.secs: "3"
+  audio.sys.routing.latency: "0"
+  build.version.extensions.r: "19"
+  build.version.extensions.s: "19"
+  cache_key.bluetooth.get_bond_state: "6510775430813377990"
+  cache_key.bluetooth.get_profile_connection_state: "6510775430813377981"
+  cache_key.bluetooth.get_state: "6510775430813377991"
+  cache_key.bluetooth.is_offloaded_filtering_supported: "6510775430813377985"
+  cache_key.display_info: "8579965505600201351"
+  cache_key.get_packages_for_uid: "8579965505600203922"
+  cache_key.has_system_feature: "8579965505600174933"
+  cache_key.is_compat_change_enabled: "8579965505600203934"
+  cache_key.is_interactive: "8579965505600201353"
+  cache_key.is_power_save_mode: "8579965505600203919"
+  cache_key.is_user_unlocked: "8579965505600175046"
+  cache_key.location_enabled: "8579965505600174944"
+  cache_key.package_info: "8579965505600203935"
+  cache_key.system_server.account_user_data: "8579965505600203947"
+  cache_key.system_server.accounts_data: "8579965505600203927"
+  cache_key.telephony.get_active_data_sub_id: "-76010480054264038"
+  cache_key.telephony.get_default_data_sub_id: "-76010480054264040"
+  cache_key.telephony.get_default_sms_sub_id: "-76010480054264039"
+  cache_key.telephony.get_default_sub_id: "-76010480054264034"
+  cache_key.telephony.get_slot_index: "-76010480054264033"
+  config.disable_rtt: "true"
+  dalvik.vm.appimageformat: "lz4"
+  dalvik.vm.dex2oat-Xms: "64m"
+  dalvik.vm.dex2oat-Xmx: "512m"
+  dalvik.vm.dex2oat-max-image-block-size: "524288"
+  dalvik.vm.dex2oat-minidebuginfo: "true"
+  dalvik.vm.dex2oat-resolve-startup-strings: "true"
+  dalvik.vm.dex2oat-threads: "6"
+  dalvik.vm.dex2oat-updatable-bcp-packages-file: "/system/etc/updatable-bcp-packages.txt"
+  dalvik.vm.dex2oat64.enabled: "true"
+  dalvik.vm.dexopt.secondary: "true"
+  dalvik.vm.dexopt.thermal-cutoff: "2"
+  dalvik.vm.heapgrowthlimit: "128m"
+  dalvik.vm.heapmaxfree: "8m"
+  dalvik.vm.heapminfree: "512k"
+  dalvik.vm.heapsize: "384m"
+  dalvik.vm.heapstartsize: "8m"
+  dalvik.vm.heaptargetutilization: "0.75"
+  dalvik.vm.image-dex2oat-Xms: "64m"
+  dalvik.vm.image-dex2oat-Xmx: "64m"
+  dalvik.vm.isa.arm.features: "default"
+  dalvik.vm.isa.arm.variant: "cortex-a9"
+  dalvik.vm.isa.arm64.features: "default"
+  dalvik.vm.isa.arm64.variant: "generic"
+  dalvik.vm.madvise.artfile.size: "4294967295"
+  dalvik.vm.madvise.odexfile.size: "104857600"
+  dalvik.vm.madvise.vdexfile.size: "104857600"
+  dalvik.vm.minidebuginfo: "true"
+  dalvik.vm.usejit: "true"
+  dalvik.vm.usejitprofiles: "true"
+  debug.atrace.app_0: ""
+  debug.atrace.app_number: "1"
+  debug.atrace.tags.enableflags: "0x8"
+  debug.atrace.user_initiated: "1"
+  debug.egl.hw: "0"
+  debug.force_rtl: "false"
+  debug.mdpcomp.logs: "0"
+  debug.sf.enable_gl_backpressure: "1"
+  debug.sf.enable_hwc_vds: "1"
+  debug.sf.force_cpuset_system_default: "1"
+  debug.sf.hw: "0"
+  debug.sf.latch_unsignaled: "1"
+  debug.stagefright.ccodec: "1"
+  debug.stagefright.omx_default_rank: "0"
+  debug.tracing.screen_brightness: "0.0"
+  debug.tracing.screen_state: "2"
+  dev.bootcomplete: "1"
+  dev.mnt.blk.data: "mmcblk0"
+  dev.mnt.blk.data.user.0: "mmcblk0"
+  dev.mnt.blk.data_mirror.cur_profiles: "mmcblk0"
+  dev.mnt.blk.data_mirror.data_ce.null: "mmcblk0"
+  dev.mnt.blk.data_mirror.data_ce.null.0: "mmcblk0"
+  dev.mnt.blk.data_mirror.data_de.null: "mmcblk0"
+  dev.mnt.blk.data_mirror.ref_profiles: "mmcblk0"
+  dev.mnt.blk.metadata: "mmcblk0"
+  dev.mnt.blk.mnt.product.persist: "mmcblk0"
+  dev.mnt.blk.mnt.vendor.persist: "mmcblk0"
+  dev.mnt.blk.product: "dm-8"
+  dev.mnt.blk.root: "dm-6"
+  dev.mnt.blk.vendor: "dm-7"
+  dev.mnt.blk.vendor.bt_firmware: "mmcblk0"
+  dev.mnt.blk.vendor.dsp: "mmcblk0"
+  dev.mnt.blk.vendor.firmware_mnt: "mmcblk0"
+  dev.mnt.blk.vendor.fsg: "mmcblk0"
+  dev.mnt.partition.data: "mmcblk0p80"
+  dev.pm.dyn_samplingrate: "1"
+  gsm.current.phone-type: "1,1"
+  gsm.network.type: "EDGE,Unknown"
+  gsm.operator.alpha: ","
+  gsm.operator.iso-country: "cz,"
+  gsm.operator.isroaming: "false,false"
+  gsm.operator.numeric: ","
+  gsm.sim.state: "ABSENT,ABSENT"
+  gsm.version.baseband: "M6125_43.45.03.52R SOFIAP_ROWDSDS_CUST"
+  gsm.version.baseband1: "M6125_43.45.03.52R SOFIAP_ROWDSDS_CUST"
+  gsm.version.ril-impl: "Qualcomm RIL 1.0"
+  hwservicemanager.ready: "true"
+  init.svc.adbd: "running"
+  init.svc.android.thermal-hal: "running"
+  init.svc.apexd: "stopped"
+  init.svc.apexd-bootstrap: "stopped"
+  init.svc.apexd-snapshotde: "stopped"
+  init.svc.audioserver: "running"
+  init.svc.bootanim: "stopped"
+  init.svc.bootanim-readyfor: "stopped"
+  init.svc.boringssl_self_test32: "stopped"
+  init.svc.boringssl_self_test32_vendor: "stopped"
+  init.svc.boringssl_self_test64: "stopped"
+  init.svc.boringssl_self_test64_vendor: "stopped"
+  init.svc.boringssl_self_test_apex32: "stopped"
+  init.svc.boringssl_self_test_apex64: "stopped"
+  init.svc.bpfloader: "stopped"
+  init.svc.cameraserver: "running"
+  init.svc.capsense_reset: "running"
+  init.svc.cnss-daemon: "running"
+  init.svc.credstore: "running"
+  init.svc.cryptfshw-1-0: "running"
+  init.svc.data-mmi-carrier-sh: "stopped"
+  init.svc.dcvs-sh: "stopped"
+  init.svc.derive_classpath: "stopped"
+  init.svc.derive_sdk: "stopped"
+  init.svc.display-color-hal-1-0: "running"
+  init.svc.dms-hal-1-0: "running"
+  init.svc.dpmd: "stopped"
+  init.svc.drm: "running"
+  init.svc.emmc_ffu: "stopped"
+  init.svc.fps_hal: "running"
+  init.svc.gatekeeper-1-0: "running"
+  init.svc.gatekeeperd: "running"
+  init.svc.gnss_service: "running"
+  init.svc.gpu: "running"
+  init.svc.health-hal-2-1: "running"
+  init.svc.heapprofd: "stopped"
+  init.svc.hidl_memory: "running"
+  init.svc.hwservicemanager: "running"
+  init.svc.idmap2d: "stopped"
+  init.svc.imgtuner-hal-1-0: "running"
+  init.svc.incidentd: "running"
+  init.svc.installd: "running"
+  init.svc.irsc_util: "stopped"
+  init.svc.keymaster-4-0: "running"
+  init.svc.keystore2: "running"
+  init.svc.lmkd: "running"
+  init.svc.loc_launcher: "running"
+  init.svc.logd: "running"
+  init.svc.logd-auditctl: "stopped"
+  init.svc.logd-reinit: "stopped"
+  init.svc.mdnsd_netbpfload: "stopped"
+  init.svc.media: "running"
+  init.svc.media.swcodec: "running"
+  init.svc.mediadrm: "running"
+  init.svc.mediaextractor: "running"
+  init.svc.mediametrics: "running"
+  init.svc.mlid: "running"
+  init.svc.mmi-carrier-sh: "stopped"
+  init.svc.move_elabel_data: "stopped"
+  init.svc.netd: "running"
+  init.svc.neuralnetworks_hal_service: "running"
+  init.svc.odsign: "stopped"
+  init.svc.panel-hal-1-0: "running"
+  init.svc.perf-hal-2-2: "running"
+  init.svc.post-mmi-carrier-sh: "stopped"
+  init.svc.qccsyshal@1.1-service: "running"
+  init.svc.qcom-c_core-sh: "stopped"
+  init.svc.qcom-c_main-sh: "stopped"
+  init.svc.qcom-post-boot: "stopped"
+  init.svc.qcom-sh: "stopped"
+  init.svc.qteeconnector-hal-1-0: "running"
+  init.svc.qti_esepowermanager_service_1_1: "running"
+  init.svc.rss_hwm_reset: "stopped"
+  init.svc.sensorscal-hal-1-0: "running"
+  init.svc.servicemanager: "running"
+  init.svc.setup_shutdown: "stopped"
+  init.svc.soter-1-0: "running"
+  init.svc.statsd: "running"
+  init.svc.storaged: "running"
+  init.svc.surfaceflinger: "running"
+  init.svc.system_suspend: "running"
+  init.svc.thermal-engine: "running"
+  init.svc.time_daemon: "running"
+  init.svc.tombstoned: "running"
+  init.svc.traced: "running"
+  init.svc.traced_perf: "stopped"
+  init.svc.traced_probes: "stopped"
+  init.svc.ueventd: "running"
+  init.svc.update_engine: "running"
+  init.svc.update_verifier_nonencrypted: "stopped"
+  init.svc.usbd: "stopped"
+  init.svc.vendor-sensor-sh: "stopped"
+  init.svc.vendor_sys_qti_display: "stopped"
+  init.svc.vndservicemanager: "running"
+  init.svc.vold: "running"
+  init.svc.wait_for_keymaster: "stopped"
+  init.svc.wificond: "running"
+  init.svc.wpa_supplicant: "running"
+  init.svc.zygote: "running"
+  init.svc.zygote_secondary: "running"
+  log.tag.APM_AudioPolicyManager: "D"
+  log.tag.stats_log: "I"
+  media.aac_51_output_enabled: "true"
+  media.recorder.show_manufacturer_and_model: "true"
+  media.settings.xml: "/vendor/etc/media_profiles_vendor.xml"
+  media.stagefright.audio.deep: "false"
+  media.stagefright.enable-aac: "true"
+  media.stagefright.enable-fma2dp: "true"
+  media.stagefright.enable-http: "true"
+  media.stagefright.enable-player: "true"
+  media.stagefright.enable-qcp: "true"
+  media.stagefright.enable-scan: "true"
+  media.stagefright.thumbnail.prefer_hw_codecs: "true"
+  mmp.enable.3g2: "true"
+  net.bt.name: "Android"
+  net.lte.ims.data.enabled: "true,true"
+  net.qtaguid_enabled: "1"
+  net.tcp.2g_init_rwnd: "10"
+  nfc.initialized: "true"
+  ota.warm_reset: "0"
+  partition.product.verified: "2"
+  partition.product.verified.hash_alg: "sha256"
+  partition.system.verified: "2"
+  partition.system.verified.hash_alg: "sha256"
+  partition.vendor.verified: "2"
+  partition.vendor.verified.hash_alg: "sha256"
+  persist.app.facebook.partnerid: "lenovo:4a4c670d-0c33-7ea3-3a0a-eaa64e8c8107"
+  persist.app.settings.enterprise_edition: "0"
+  persist.audio.endcall.delay: "250"
+  persist.data.df.agg.dl_pkt: "10"
+  persist.data.df.agg.dl_size: "4096"
+  persist.data.df.dev_name: "rmnet_usb0"
+  persist.data.df.dl_mode: "5"
+  persist.data.df.iwlan_mux: "9"
+  persist.data.df.mux_count: "8"
+  persist.data.df.ul_mode: "5"
+  persist.data.wda.enable: "true"
+  persist.debug.coresight.config: "stm-events"
+  persist.device_config.runtime_native.metrics.reporting-mods: "2"
+  persist.device_config.runtime_native.metrics.reporting-mods-server: "2"
+  persist.device_config.runtime_native.metrics.reporting-num-mods: "100"
+  persist.device_config.runtime_native.metrics.reporting-num-mods-server: "100"
+  persist.device_config.runtime_native.metrics.reporting-spec: "1,5,30,60,600"
+  persist.device_config.runtime_native.metrics.reporting-spec-server: "1,10,60,3600,*"
+  persist.device_config.runtime_native.metrics.write-to-statsd: "true"
+  persist.device_config.runtime_native.use_app_image_startup_cache: "true"
+  persist.device_config.runtime_native_boot.disable_lock_profiling: "false"
+  persist.device_config.runtime_native_boot.enable_uffd_gc_2: "false"
+  persist.device_config.runtime_native_boot.force_disable_uffd_gc: "false"
+  persist.device_config.runtime_native_boot.iorap_blacklisted_packages: ""
+  persist.device_config.runtime_native_boot.iorap_perfetto_enable: "false"
+  persist.device_config.runtime_native_boot.iorap_readahead_enable: "false"
+  persist.device_config.runtime_native_boot.iorapd_options: ""
+  persist.device_config.runtime_native_boot.use_generational_gc: "true"
+  persist.fuse_sdcard: "true"
+  persist.mm.enable.prefetch: "true"
+  persist.radio.airplane_mode_on: "0"
+  persist.radio.multisim.config: "dsds"
+  persist.radio.pb.max.match: "0"
+  persist.radio.pb.min.match: "7"
+  persist.rild.nitz_long_ons_0: ""
+  persist.rild.nitz_long_ons_1: ""
+  persist.rild.nitz_long_ons_2: ""
+  persist.rild.nitz_long_ons_3: ""
+  persist.rild.nitz_plmn: ""
+  persist.rild.nitz_short_ons_0: ""
+  persist.rild.nitz_short_ons_1: ""
+  persist.rild.nitz_short_ons_2: ""
+  persist.rild.nitz_short_ons_3: ""
+  persist.rmnet.data.enable: "true"
+  persist.sys.boot.reason: ""
+  persist.sys.bootupvolume: "0"
+  persist.sys.dalvik.vm.lib.2: "libart.so"
+  persist.sys.displayinset.top: "0"
+  persist.sys.force_sw_gles: "1"
+  persist.sys.fuse: "true"
+  persist.sys.gps.lpp: ""
+  persist.sys.lmk.reportkills: "true"
+  persist.sys.locale: "cs-CZ"
+  persist.sys.phonelock.mode: "0"
+  persist.sys.sf.color_saturation: "1.0"
+  persist.sys.sf.native_mode: "1"
+  persist.sys.timezone: "Europe/Prague"
+  persist.sys.usb.config: "adb"
+  persist.sys.usb.qmmi.func: "adb"
+  persist.sys.wfd.virtual: "0"
+  persist.timed.enable: "true"
+  persist.traced.enable: "1"
+  persist.vendor.camera.expose.aux: "1"
+  persist.vendor.camera.privapp.list: "org.codeaurora.snapcam"
+  persist.vendor.dpm.feature: "0"
+  persist.vendor.lte.pco_mmi_legacy_mode: "true"
+  persist.vendor.lte.pco_supported: "true"
+  persist.vendor.radio.0x9e_not_callname: "1"
+  persist.vendor.radio.add_power_save: "1"
+  persist.vendor.radio.aosp_usr_pref_sel: "true"
+  persist.vendor.radio.apm_sim_not_pwdn: "1"
+  persist.vendor.radio.atfwd.start: "true"
+  persist.vendor.radio.clir0: "0"
+  persist.vendor.radio.custom_ecc: "1"
+  persist.vendor.radio.data_con_rprt: "1"
+  persist.vendor.radio.data_ltd_sys_ind: "1"
+  persist.vendor.radio.dfr_mode_set: "1"
+  persist.vendor.radio.enable_temp_dds: "true"
+  persist.vendor.radio.enableadvancedscan: "true"
+  persist.vendor.radio.eri64_as_home: "1"
+  persist.vendor.radio.fi_supported: "0"
+  persist.vendor.radio.flexmap_type: "none"
+  persist.vendor.radio.force_get_pref: "1"
+  persist.vendor.radio.hidl_dev_service: "1"
+  persist.vendor.radio.is_wps_enabled: "true"
+  persist.vendor.radio.jbims: "1"
+  persist.vendor.radio.lte_vrte_ltd: "1"
+  persist.vendor.radio.mcfg_ver_num: "0x080104D3,0"
+  persist.vendor.radio.mcfg_version: "CZE_VOLTE,null"
+  persist.vendor.radio.msgtunnel.start: "true"
+  persist.vendor.radio.msim.stackid_0: "0"
+  persist.vendor.radio.msim.stackid_1: "1"
+  persist.vendor.radio.mt_sms_ack: "30"
+  persist.vendor.radio.multisim.config: "dsds"
+  persist.vendor.radio.no_wait_for_card: "1"
+  persist.vendor.radio.oem_ind_to_both: "0"
+  persist.vendor.radio.procedure_bytes: "SKIP"
+  persist.vendor.radio.qcril_uim_vcc_feature: "1"
+  persist.vendor.radio.rat_on: "combine"
+  persist.vendor.radio.relay_oprt_change: "0"
+  persist.vendor.radio.ril_payload_on: "0"
+  persist.vendor.radio.sar_sensor: "1"
+  persist.vendor.radio.sglte_target: "0"
+  persist.vendor.radio.sib16_support: "1"
+  persist.vendor.radio.snapshot_enabled: "1"
+  persist.vendor.radio.snapshot_timer: "22"
+  persist.vendor.radio.stack_id_0: "0"
+  persist.vendor.radio.stack_id_1: "1"
+  persist.vendor.radio.start_ota_daemon: "1"
+  persist.vendor.radio.suppress_ussd_rel: "1"
+  persist.vendor.radio.sw_mbn_update: "0"
+  persist.vold.ecryptfs_supported: "true"
+  pm.dexopt.ab-ota: "speed-profile"
+  pm.dexopt.bg-dexopt: "speed-profile"
+  pm.dexopt.boot-after-ota: "verify"
+  pm.dexopt.cmdline: "verify"
+  pm.dexopt.first-boot: "verify"
+  pm.dexopt.inactive: "verify"
+  pm.dexopt.install: "speed-profile"
+  pm.dexopt.install-bulk: "speed-profile"
+  pm.dexopt.install-bulk-downgraded: "verify"
+  pm.dexopt.install-bulk-secondary: "verify"
+  pm.dexopt.install-bulk-secondary-downgraded: "extract"
+  pm.dexopt.install-fast: "skip"
+  pm.dexopt.post-boot: "extract"
+  pm.dexopt.shared: "speed"
+  qcom.hw.aac.encoder: "true"
+  ril.ecclist: "110,999,119,08,118,911,000,112,155,158,190,150"
+  ril.ecclist1: "000,08,110,999,119,118,112,190,911"
+  ril.subscription.types: "RUIM"
+  rild.libpath: "/vendor/lib64/libril-qc-hal-qmi.so"
+  ro.actionable_compatible_property.enabled: "true"
+  ro.adb.secure: "1"
+  ro.af.client_heap_size_kbyte: "7168"
+  ro.allow.mock.location: "0"
+  ro.apex.updatable: "true"
+  ro.audio.monitorRotation: "true"
+  ro.baseband: "msm"
+  ro.bluetooth.library_name: "libbluetooth_qti.so"
+  ro.board.platform: "trinket"
+  ro.boot.avb_version: "1.1"
+  ro.boot.baseband: "msm"
+  ro.boot.boot_devices: "soc/4744000.sdhci"
+  ro.boot.bootdevice: "4744000.sdhci"
+  ro.boot.bootloader: "MBM-3.0-sofiap_ao-7380af07e7e-230320"
+  ro.boot.bootreason: "hardware_reset"
+  ro.boot.dtb_idx: "0"
+  ro.boot.dtbo_idx: "2"
+  ro.boot.dualsim: "true"
+  ro.boot.dynamic_partitions: "true"
+  ro.boot.flash.locked: "1"
+  ro.boot.fstab_suffix: "emmc"
+  ro.boot.hab.cid: "50"
+  ro.boot.hab.csv: "41"
+  ro.boot.hab.product: "sofiap"
+  ro.boot.hardware: "qcom"
+  ro.boot.hardware.revision: "pvt"
+  ro.boot.hardware.sku: "XT2043-7"
+  ro.boot.keymaster: "1"
+  ro.boot.memcg: "1"
+  ro.boot.mode: "normal"
+  ro.boot.product.hardware.sku: "dnf"
+  ro.boot.revision: "pvt"
+  ro.boot.secure_hardware: "1"
+  ro.boot.slot_suffix: "_b"
+  ro.boot.ssm_data: "00000000000F9991"
+  ro.boot.usbcontroller: "4e00000.dwc3"
+  ro.boot.using_zram_from_fstab: "true"
+  ro.boot.vbmeta.avb_version: "1.0"
+  ro.boot.vbmeta.device_state: "locked"
+  ro.boot.vbmeta.digest: "31954904aa5aec8834638747426394930250c540ca0fe4119ff10a439e9b21dc"
+  ro.boot.vbmeta.hash_alg: "sha256"
+  ro.boot.vbmeta.invalidate_on_error: "yes"
+  ro.boot.vbmeta.size: "4096"
+  ro.boot.verifiedbootstate: "green"
+  ro.boot.veritymode: "enforcing"
+  ro.boot.write_protect: "0"
+  ro.bootimage.build.date: "Mon Mar 20 22:58:03 CDT 2023"
+  ro.bootimage.build.date.utc: "1679371083"
+  ro.bootimage.build.fingerprint: "motorola/sofiap_ao/sofiap_sprout:11/S0PRS32.44-11-10-26/471ea:user/release-keys"
+  ro.bootloader: "MBM-3.0-sofiap_ao-7380af07e7e-230320"
+  ro.bootmode: "normal"
+  ro.build.ab_update: "true"
+  ro.build.characteristics: "default"
+  ro.build.date: "Mon Mar 20 22:03:43 CDT 2023"
+  ro.build.date.utc: "1679367823"
+  ro.build.description: "sofiap_ao-user 12 S0PRS32.44-11-10-26 471ea-86991 release-keys"
+  ro.build.display.id: "S0PRS32.44-11-10-26"
+  ro.build.fingerprint: "motorola/sofiap_ao/sofiap_sprout:12/S0PRS32.44-11-10-26/471ea-86991:user/release-keys"
+  ro.build.flavor: "sofiap_ao-user"
+  ro.build.host: "ilclbld208"
+  ro.build.id: "S0PRS32.44-11-10-26"
+  ro.build.product: "sofiap_sprout"
+  ro.build.system_root_image: "false"
+  ro.build.tags: "release-keys"
+  ro.build.type: "user"
+  ro.build.user: "hudsoncm"
+  ro.build.version.all_codenames: "REL"
+  ro.build.version.base_os: "motorola/sofiap_ao/sofiap_sprout:12/S0PRS32.44-11-10-2/cc186c-254025:user/release-keys"
+  ro.build.version.ci: "27"
+  ro.build.version.codename: "REL"
+  ro.build.version.incremental: "471ea-86991"
+  ro.build.version.min_supported_target_sdk: "23"
+  ro.build.version.preview_sdk: "0"
+  ro.build.version.preview_sdk_fingerprint: "REL"
+  ro.build.version.release: "12"
+  ro.build.version.release_or_codename: "12"
+  ro.build.version.sdk: "31"
+  ro.build.version.security_patch: "2023-04-01"
+  ro.camera.cfa.packagelist: "com.motorola.coresettingsext,com.motorola.camera2,com.motorola.camera3,com.motorola.actions"
+  ro.carrier: "reteu"
+  ro.com.android.prov_mobiledata: "false"
+  ro.com.google.acsa: "true"
+  ro.com.google.clientidbase: "android-motorola"
+  ro.com.google.clientidbase.ms: "android-motorola-rev2"
+  ro.com.google.gmsversion: "12_202111"
+  ro.com.google.ime.def_layout: "all=default|handwriting"
+  ro.com.google.ime.system_lm_dir: "/product/usr/share/ime/google/d3_lms/"
+  ro.com.google.ime.theme_id: "4"
+  ro.com.google.lens.oem_camera_package: "com.motorola.camera2"
+  ro.com.google.rlz_ap_whitelist: "y0,y8,YH"
+  ro.com.google.rlzbrandcode: "MOTC"
+  ro.config.alarm_alert: "Oxygen.ogg"
+  ro.config.compact_action_1: "4"
+  ro.config.compact_action_2: "2"
+  ro.config.notification_sound: "Moto.ogg"
+  ro.config.ringtone: "Moto.ogg"
+  ro.config.ringtone_2: "Moto.ogg"
+  ro.config.use_compaction: "true"
+  ro.config.vc_call_vol_steps: "8"
+  ro.config.wallpaper: "system/media/wallpapers/default_moto_wallpaper.jpg"
+  ro.control_privapp_permissions: "enforce"
+  ro.cp_system_other_odex: "1"
+  ro.crypto.dm_default_key.options_format.version: "2"
+  ro.crypto.state: "encrypted"
+  ro.crypto.type: "file"
+  ro.crypto.uses_fs_ioc_add_encryption_key: "true"
+  ro.crypto.volume.filenames_mode: "aes-256-cts"
+  ro.dalvik.vm.native.bridge: "0"
+  ro.debuggable: "0"
+  ro.face.moto_unlock_service: "true"
+  ro.fpsensor.position: "1"
+  ro.frp.pst: "/dev/block/bootdevice/by-name/frp"
+  ro.gwfcactivation.disabled_carriers: "1187,1492,1839"
+  ro.hardware: "qcom"
+  ro.hardware.egl: "adreno"
+  ro.hardware.keystore_desede: "true"
+  ro.hardware.sensors: "sofiap"
+  ro.hardware.soc.manufacturer: "qcom"
+  ro.hardware.vulkan: "adreno"
+  ro.hwui.drop_shadow_cache_size: "6"
+  ro.hwui.gradient_cache_size: "1"
+  ro.hwui.layer_cache_size: "48"
+  ro.hwui.path_cache_size: "32"
+  ro.hwui.r_buffer_cache_size: "8"
+  ro.hwui.text_large_cache_height: "1024"
+  ro.hwui.text_large_cache_width: "2048"
+  ro.hwui.text_small_cache_height: "1024"
+  ro.hwui.text_small_cache_width: "1024"
+  ro.hwui.texture_cache_flushrate: "0.4"
+  ro.hwui.texture_cache_size: "72"
+  ro.hwui.use_vulkan: ""
+  ro.iorapd.enable: "true"
+  ro.kernel.qemu.gles: "0"
+  ro.launcher.blur.appLaunch: "0"
+  ro.lenovo.single_hand: "1"
+  ro.lmk.file_low_percentage: "20"
+  ro.lmk.pgscan_limit: "2000"
+  ro.lmk.psi_partial_stall_ms: "50"
+  ro.lmk.swap_free_low_percentage: "10"
+  ro.lmk.swap_util_max: "90"
+  ro.lmk.thrashing_limit: "60"
+  ro.lmk.threshold_decay: "40"
+  ro.logd.size.stats: "64K"
+  ro.lowmemdetector.psi_high_stall_us: "200000"
+  ro.lowmemdetector.psi_low_stall_us: "100000"
+  ro.lowmemdetector.psi_medium_stall_us: "150000"
+  ro.media.recorder-max-base-layer-fps: "60"
+  ro.mot.build.customerid: "retail"
+  ro.mot.build.guid: "95673abe80f1a3b"
+  ro.mot.build.version.sdk_int: "31"
+  ro.mot.gms.clientidbase: "android-motorola"
+  ro.mot.gms.clientidbase.ms: "android-motorola-rev2"
+  ro.mot.gms.rlz_ap_whitelist: "y0,y8,YH"
+  ro.mot.gms.rlz_base_prop: "y0,y8"
+  ro.mot.product_wave: "2019.4"
+  ro.mot.security.enable: "true"
+  ro.netflix.bsp_rev: "Q6125-17995-1"
+  ro.nfc.port: "I2C"
+  ro.odm.build.date: "Mon Mar 20 22:58:03 CDT 2023"
+  ro.odm.build.date.utc: "1679371083"
+  ro.odm.build.fingerprint: "motorola/sofiap_ao/sofiap_sprout:11/S0PRS32.44-11-10-26/471ea:user/release-keys"
+  ro.odm.build.version.incremental: "471ea"
+  ro.oem.key1: "reteu"
+  ro.opa.device_model_id: "motorola-sofiap_sprout"
+  ro.opa.eligible_device: "true"
+  ro.opengles.version: "196610"
+  ro.organization_owned: "false"
+  ro.postinstall.fstab.prefix: "/product"
+  ro.product.ab_ota_partitions: "system"
+  ro.product.board: "sofiap_sprout"
+  ro.product.brand: "motorola"
+  ro.product.build.date: "Mon Mar 20 22:03:43 CDT 2023"
+  ro.product.build.date.utc: "1679367823"
+  ro.product.build.fingerprint: "motorola/sofiap_ao/sofiap_sprout:12/S0PRS32M.44-11-10-26/86991:user/release-keys"
+  ro.product.build.id: "S0PRS32M.44-11-10-26"
+  ro.product.build.tags: "release-keys"
+  ro.product.build.type: "user"
+  ro.product.build.version.incremental: "86991"
+  ro.product.build.version.release: "12"
+  ro.product.build.version.release_or_codename: "12"
+  ro.product.build.version.sdk: "31"
+  ro.product.cpu.abi: "arm64-v8a"
+  ro.product.cpu.abilist: "arm64-v8a,armeabi-v7a,armeabi"
+  ro.product.cpu.abilist32: "armeabi-v7a,armeabi"
+  ro.product.cpu.abilist64: "arm64-v8a"
+  ro.product.device: "sofiap_sprout"
+  ro.product.first_api_level: "29"
+  ro.product.is_production: "true"
+  ro.product.locale: "en-US"
+  ro.product.manufacturer: "motorola"
+  ro.product.model: "moto g pro"
+  ro.product.name: "sofiap_ao"
+  ro.product.odm.brand: "motorola"
+  ro.product.odm.device: "sofiap_sprout"
+  ro.product.odm.manufacturer: "motorola"
+  ro.product.odm.model: "moto g pro"
+  ro.product.odm.name: "sofiap_ao"
+  ro.product.product.brand: "motorola"
+  ro.product.product.manufacturer: "motorola"
+  ro.product.product.model: "moto g pro"
+  ro.product.product.name: "sofiap_ao"
+  ro.product.property_source_order: "product,odm,vendor,system_ext,system"
+  ro.product.system.brand: "motorola"
+  ro.product.system.device: "sofiap_sprout"
+  ro.product.system.manufacturer: "motorola"
+  ro.product.system.model: "moto g pro"
+  ro.product.system.name: "sofiap_ao"
+  ro.product.system_ext.brand: "motorola"
+  ro.product.system_ext.device: "sofiap_sprout"
+  ro.product.system_ext.manufacturer: "motorola"
+  ro.product.system_ext.model: "moto g pro"
+  ro.product.system_ext.name: "sofiap_ao"
+  ro.product.vendor.brand: "motorola"
+  ro.product.vendor.device: "sofiap_sprout"
+  ro.product.vendor.manufacturer: "motorola"
+  ro.product.vendor.model: "moto g pro"
+  ro.product.vendor.name: "sofiap_ao"
+  ro.property_service.version: "2"
+  ro.revision: "pvt"
+  ro.secure: "1"
+  ro.setupwizard.loading_subscriptions_timeout_millis: "720000"
+  ro.setupwizard.rotation_locked: "true"
+  ro.sf.lcd_density: "420"
+  ro.soc.manufacturer: "QTI"
+  ro.soc.model: "SM6125"
+  ro.support_one_handed_mode: "true"
+  ro.surface_flinger.force_hwc_copy_for_virtual_displays: "true"
+  ro.surface_flinger.has_HDR_display: "false"
+  ro.surface_flinger.has_wide_color_display: "false"
+  ro.surface_flinger.max_frame_buffer_acquired_buffers: "3"
+  ro.surface_flinger.max_virtual_display_dimension: "4096"
+  ro.surface_flinger.use_color_management: "true"
+  ro.sys.adb_reset_protected: "1"
+  ro.system.build.date: "Mon Mar 20 22:03:43 CDT 2023"
+  ro.system.build.date.utc: "1679367823"
+  ro.system.build.fingerprint: "motorola/sofiap_ao/sofiap_sprout:12/S0PRS32M.44-11-10-26/86991:user/release-keys"
+  ro.system.build.id: "S0PRS32M.44-11-10-26"
+  ro.system.build.tags: "release-keys"
+  ro.system.build.type: "user"
+  ro.system.build.version.incremental: "86991"
+  ro.system.build.version.qcom: "LA.QSSI.12.0.r1-04300.02-qssi.0"
+  ro.system.build.version.release: "12"
+  ro.system.build.version.release_or_codename: "12"
+  ro.system.build.version.sdk: "31"
+  ro.system.product.cpu.abilist: "arm64-v8a,armeabi-v7a,armeabi"
+  ro.system.product.cpu.abilist32: "armeabi-v7a,armeabi"
+  ro.system.product.cpu.abilist64: "arm64-v8a"
+  ro.system_ext.build.date: "Mon Mar 20 22:03:43 CDT 2023"
+  ro.system_ext.build.date.utc: "1679367823"
+  ro.system_ext.build.fingerprint: "motorola/sofiap_ao/sofiap_sprout:12/S0PRS32M.44-11-10-26/86991:user/release-keys"
+  ro.system_ext.build.id: "S0PRS32M.44-11-10-26"
+  ro.system_ext.build.tags: "release-keys"
+  ro.system_ext.build.type: "user"
+  ro.system_ext.build.version.incremental: "86991"
+  ro.system_ext.build.version.release: "12"
+  ro.system_ext.build.version.release_or_codename: "12"
+  ro.system_ext.build.version.sdk: "31"
+  ro.telephony.call_ring.multiple: "false"
+  ro.telephony.default_network: "10,10"
+  ro.telephony.iwlan_operation_mode: "legacy"
+  ro.treble.enabled: "true"
+  ro.vendor.build.date: "Mon Mar 20 22:58:03 CDT 2023"
+  ro.vendor.build.date.utc: "1679371083"
+  ro.vendor.build.fingerprint: "motorola/sofiap_ao/sofiap_sprout:11/S0PRS32.44-11-10-26/471ea:user/release-keys"
+  ro.vendor.build.id: "S0PRS32.44-11-10-26"
+  ro.vendor.build.security_patch: "2023-04-01"
+  ro.vendor.build.tags: "release-keys"
+  ro.vendor.build.type: "user"
+  ro.vendor.build.vendorprefix: "/vendor"
+  ro.vendor.build.version.incremental: "471ea"
+  ro.vendor.build.version.release: "11"
+  ro.vendor.build.version.release_or_codename: "11"
+  ro.vendor.build.version.sdk: "30"
+  ro.vendor.hw.device: "sofiap"
+  ro.vendor.hw.dtv: "false"
+  ro.vendor.hw.dualsim: "true"
+  ro.vendor.hw.ecompass: "true"
+  ro.vendor.hw.fps: "true"
+  ro.vendor.hw.frontcolor: ""
+  ro.vendor.hw.hwrev: "0xC000"
+  ro.vendor.hw.imager: "12MP"
+  ro.vendor.hw.nfc: "true"
+  ro.vendor.hw.radio: "ROW"
+  ro.vendor.hw.ram: "4GB"
+  ro.vendor.hw.revision: "pvt"
+  ro.vendor.hw.storage: "128GB"
+  ro.vendor.mot.base_buildid: "S0PRS32.44-11-10-2/cc186c-254025"
+  ro.vendor.mot.hw.colormode_aosp2qdcm: "1"
+  ro.vendor.product.cpu.abilist: "arm64-v8a,armeabi-v7a,armeabi"
+  ro.vendor.product.cpu.abilist32: "armeabi-v7a,armeabi"
+  ro.vendor.product.cpu.abilist64: "arm64-v8a"
+  ro.vendor.product.device: "sofiap_sprout"
+  ro.vendor.product.hardware.sku.variant: "dnf"
+  ro.vendor.product.name: "sofiap_ao"
+  ro.vendor.qti.va_aosp.support: "1"
+  ro.vendor.qti.va_odm.support: "1"
+  ro.vendor.radio.imei.sv: "36"
+  ro.vendor.radio.ims_version: "AT4.3.1_IR92_V11.0"
+  ro.vendor.ril.mbn_copy_completed: "1"
+  ro.vendor.ril.svdo: "false"
+  ro.vendor.ril.svlte1x: "false"
+  ro.vendor.sensors.mot_ltv: "true"
+  ro.vndk.version: "30"
+  ro.wifi.channels: ""
+  ro.zygote: "zygote64_32"
+  security.perf_harden: "1"
+  selinux.restorecon_recursive: "/data/misc_ce/0"
+  service.bootanim.exit: "1"
+  service.bootanim.progress: "0"
+  service.bootanim.readyfor.exit: "1"
+  service.sf.present_timestamp: "1"
+  setupwizard.feature.baseline_setupwizard_enabled: "true"
+  setupwizard.theme: "glif_v3_light"
+  sys.autosuspend.timeout: "500000"
+  sys.boot.reason: "cold"
+  sys.boot.reason.last: "cold"
+  sys.boot_completed: "1"
+  sys.bootbroadcast_completed: "1"
+  sys.bootstat.first_boot_completed: "1"
+  sys.fuse.transcode_enabled: "true"
+  sys.init.perf_lsm_hooks: "1"
+  sys.oem_unlock_allowed: "0"
+  sys.qca1530: "detect"
+  sys.rescue_boot_count: "1"
+  sys.rss_hwm_reset.on: "0"
+  sys.runtime.restart.times: "0"
+  sys.sysctl.extra_free_kbytes: "29109"
+  sys.sysctl.swappiness: "80"
+  sys.system_server.start_count: "1"
+  sys.system_server.start_elapsed: "91462"
+  sys.system_server.start_uptime: "91462"
+  sys.usb.config: "adb"
+  sys.usb.configfs: "1"
+  sys.usb.controller: "4e00000.dwc3"
+  sys.usb.mtp.device_type: "3"
+  sys.usb.state: "adb"
+  sys.use_memfd: "false"
+  sys.user.0.ce_available: "true"
+  sys.vendor.shutdown.waittime: "500"
+  sys.wifitracing.started: "1"
+  telephony.lteOnCdmaDevice: "1"
+  tunnel.audio.encode: "true"
+  use.voice.path.for.pcm.voip: "true"
+  vendor.camera.aux.packagelist: "com.android.settings,com.motorola.camera2,com.motorola.motocit,com.motorola.actions"
+  vendor.camera.aux.packagelist2: "com.motorola.ccc,com.yha.runtime"
+  vendor.gralloc.disable_ubwc: "0"
+  vendor.hw.fm.init: "0"
+  vendor.hw.touch.ft8756.status: "ready"
+  vendor.hw.touch.ft8756.update: "completed"
+  vendor.hw.touch.status: "0"
+  vendor.radio.db_upgrade: "1"
+  vendor.radio.qcril_pre_init_lock_held: "0"
+  vendor.ril.baseband.config.ver_num: "04.87"
+  vendor.ril.baseband.config.version: "SOFIAP_ROWDSDS_CUST"
+  vendor.ril.baseband.rfcable.status: "0"
+  vendor.ril.gsm.version.baseband: "M6125_43.45.03.52R"
+  vendor.ril.lte.bc.config: "0"
+  vendor.ril.radio.ctbk_inst: "1798"
+  vendor.ril.radio.ctbk_val: "1,0,0,0,0,0,1,0,0,0,1,0,0,0,0,1"
+  vendor.ril.radio.sar_sensor_distance: "5,0,1,0,0,0"
+  vold.checkpoint_committed: "1"
+  vold.has_adoptable: "0"
+  vold.has_compress: "0"
+  vold.has_quota: "1"
+  vold.has_reserved: "1"
+
+cpu_detailed: |
+  Processor	: AArch64 Processor rev 2 (aarch64)
+  processor	: 0
+  BogoMIPS	: 38.00
+  Features	: fp asimd evtstrm aes pmull sha1 sha2 crc32 cpuid
+  CPU implementer	: 0x51
+  CPU architecture: 8
+  CPU variant	: 0xa
+  CPU part	: 0x801
+  CPU revision	: 4
+
+  processor	: 1
+  BogoMIPS	: 38.00
+  Features	: fp asimd evtstrm aes pmull sha1 sha2 crc32 cpuid
+  CPU implementer	: 0x51
+  CPU architecture: 8
+  CPU variant	: 0xa
+  CPU part	: 0x801
+  CPU revision	: 4
+
+  processor	: 2
+  BogoMIPS	: 38.00
+  Features	: fp asimd evtstrm aes pmull sha1 sha2 crc32 cpuid
+  CPU implementer	: 0x51
+  CPU architecture: 8
+  CPU variant	: 0xa
+  CPU part	: 0x801
+  CPU revision	: 4
+
+  processor	: 3
+  BogoMIPS	: 38.00
+  Features	: fp asimd evtstrm aes pmull sha1 sha2 crc32 cpuid
+  CPU implementer	: 0x51
+  CPU architecture: 8
+  CPU variant	: 0xa
+  CPU part	: 0x801
+  CPU revision	: 4
+
+  processor	: 4
+  BogoMIPS	: 38.00
+  Features	: fp asimd evtstrm aes pmull sha1 sha2 crc32 cpuid
+  CPU implementer	: 0x51
+  CPU architecture: 8
+  CPU variant	: 0xa
+  CPU part	: 0x800
+  CPU revision	: 2
+
+  processor	: 5
+  BogoMIPS	: 38.00
+  Features	: fp asimd evtstrm aes pmull sha1 sha2 crc32 cpuid
+  CPU implementer	: 0x51
+  CPU architecture: 8
+  CPU variant	: 0xa
+  CPU part	: 0x800
+  CPU revision	: 2
+
+  processor	: 6
+  BogoMIPS	: 38.00
+  Features	: fp asimd evtstrm aes pmull sha1 sha2 crc32 cpuid
+  CPU implementer	: 0x51
+  CPU architecture: 8
+  CPU variant	: 0xa
+  CPU part	: 0x800
+  CPU revision	: 2
+
+  processor	: 7
+  BogoMIPS	: 38.00
+  Features	: fp asimd evtstrm aes pmull sha1 sha2 crc32 cpuid
+  CPU implementer	: 0x51
+  CPU architecture: 8
+  CPU variant	: 0xa
+  CPU part	: 0x800
+  CPU revision	: 2
+
+  Hardware	: Qualcomm Technologies, Inc TRINKET
+
+cpu_usage: |
+  Load: 1.46 / 1.66 / 1.71
+  CPU usage from 193831ms to 187749ms ago (2025-11-10 13:28:32.557 to 2025-11-10 13:28:38.639):
+  4.4% TOTAL: 2% user + 1.5% kernel + 0.5% irq + 0.3% softirq
+
+memory: |
+  MemTotal:        3751724 kB
+  MemFree:          251284 kB
+  MemAvailable:    1589620 kB
+  Buffers:            1232 kB
+  Cached:          1324800 kB
+  SwapCached:        31496 kB
+  Active:          1133840 kB
+  Inactive:         841784 kB
+  Active(anon):     552176 kB
+  Inactive(anon):   248468 kB
+  Active(file):     581664 kB
+  Inactive(file):   593316 kB
+  Unevictable:      127408 kB
+  Mlocked:          127408 kB
+  SwapTotal:       2626200 kB
+  SwapFree:        1821944 kB
+  Dirty:                72 kB
+  Writeback:             0 kB
+  AnonPages:        770940 kB
+  Mapped:           628672 kB
+  Shmem:             29200 kB
+  KReclaimable:     282896 kB
+  Slab:             314984 kB
+  SReclaimable:      95988 kB
+  SUnreclaim:       218996 kB
+  KernelStack:       53072 kB
+  PageTables:        88444 kB
+  NFS_Unstable:          0 kB
+  Bounce:                0 kB
+  WritebackTmp:          0 kB
+  CommitLimit:     4502060 kB
+  Committed_AS:   54747844 kB
+  VmallocTotal:   263061440 kB
+  VmallocUsed:       99708 kB
+  VmallocChunk:          0 kB
+  CmaTotal:         208896 kB
+  CmaFree:           11648 kB
+
+memory_usage: |
+  Applications Memory Usage (in Kilobytes):
+  Uptime: 198356749 Realtime: 1268965716
+
+  Total PSS by category:
+      322,559K: Native
+      202,115K: Dalvik
+      199,744K: .apk mmap
+      195,898K: .dex mmap
+      156,552K: EGL mtrack
+       92,411K: Dalvik Other
+       76,695K: .jar mmap
+       76,629K: .so mmap
+       71,135K: .art mmap
+       59,798K: Unknown
+       33,560K: Gfx dev
+       22,528K: Stack
+       16,802K: .oat mmap
+       14,972K: Other mmap
+        3,840K: GL mtrack
+        3,827K: Ashmem
+        3,646K: .ttf mmap
+        2,985K: Other dev
+            0K: Cursor
+            0K: Other mtrack
+
+  Total RAM: 3,751,724K (status normal)
+   Free RAM: 1,770,465K (  543,205K cached pss +   980,888K cached kernel +   246,372K free)
+        ION:   139,200K (   41,404K mapped +    97,796K unmapped +         0K pools)
+   Used RAM: 2,219,476K (1,685,332K used pss +   534,144K kernel)
+   Lost RAM:   299,748K
+       ZRAM:   250,024K physical used for   801,320K in swap (2,626,200K total swap)
+     Tuning: 128 (large 384), oom   387,073K, restore limit   129,024K (high-end-gfx)
+
+battery: |
+  Current Battery Service state:
+    AC powered: true
+    USB powered: false
+    Wireless powered: false
+    Max charging current: 1500000
+    Max charging voltage: 5000000
+    Charge counter: 3269280
+    status: 5
+    health: 2
+    present: true
+    level: 100
+    scale: 100
+    voltage: 4350
+    temperature: 265
+    technology: Li-ion
+    AdaptiveCharging: config package:, mUpperLimit:-1, mLowerLimit:-1, mChargingDisabled:false, mLastLimitsUpdateTime:NOT SET, mLastChargingStatusChangedTime:NOT SET, HAL service:null
+    Full capacity: 3336000
+    Full design capacity: 4051000
+    vbus state: false
+    lpd state: false
+    Health2_1: {.legacy = {.legacy = {.chargerAcOnline = true, .chargerUsbOnline = false, .chargerWirelessOnline = false, .maxChargingCurrent = 1500000, .maxChargingVoltage = 5000000, .batteryStatus = FULL, .batteryHealth = GOOD, .batteryPresent = true, .batteryLevel = 100, .batteryVoltage = 4350, .batteryTemperature = 265, .batteryCurrent = 0, .batteryCycleCount = 0, .batteryFullCharge = 3336000, .batteryChargeCounter = 3269280, .batteryTechnology = Li-ion}, .batteryCurrentAverage = 0, .diskStats = [], .storageInfos = []}, .batteryCapacityLevel = UNSUPPORTED, .batteryChargeTimeToFullNowSeconds = -1, .batteryFullChargeDesignCapacityUah = 4051000}
+
+display:
+  resolution: " 1080x2300"
+  density: " 420"
+  details: |
+    DISPLAY MANAGER (dumpsys display)
+      mOnlyCode=false
+      mSafeMode=false
+      mPendingTraversal=false
+      mViewports=[DisplayViewport{type=INTERNAL, valid=true, isActive=true, displayId=0, uniqueId='local:4630946747577212033', physicalPort=129, orientation=0, logicalFrame=Rect(0, 0 - 1080, 2300), physicalFrame=Rect(0, 0 - 1080, 2300), deviceWidth=1080, deviceHeight=2300}]
+      mDefaultDisplayDefaultColorMode=0
+      mWifiDisplayScanRequestCount=0
+      mStableDisplaySize=Point(1080, 2300)
+      mMinimumBrightnessCurve=[(0.0, 0.0), (2000.0, 50.0), (4000.0, 90.0)]
+      mReadyforBootanimEnable=true
+
+
+    Display States: size=1
+      Display Id=0
+      Display State=ON
+      Display Brightness=0.0
+      Display SdrBrightness=0.0
+      mDeskVcWaAllowList=[]
+      mDeskVcWaAllowListSearched=false
+
+    Display Adapters: size=3
+      LocalDisplayAdapter
+      VirtualDisplayAdapter
+      OverlayDisplayAdapter
+        mCurrentOverlaySetting=
+        mOverlays: size=0
+
+    Display Devices: size=1
+      DisplayDeviceInfo{"Integrovaná obrazovka": uniqueId="local:4630946747577212033", 1080 x 2300, modeId 1, defaultModeId 1, supportedModes [{id=1, width=1080, height=2300, fps=60.000004, alternativeRefreshRates=[]}], supportedReadyForModes [], colorMode 0, supportedColorModes [0, 7], hdrCapabilities HdrCapabilities{mSupportedHdrTypes=[2, 3], mMaxLuminance=500.0, mMaxAverageLuminance=500.0, mMinLuminance=0.0}, allmSupported false, gameContentTypeSupported false, density 420, 397.565 x 400.137 dpi, appVsyncOff 1000000, presDeadline 16666666, cutout DisplayCutout{insets=Rect(0, 116 - 0, 0) waterfall=Insets{left=0, top=0, right=0, bottom=0} boundingRect={Bounds=[Rect(0, 0 - 0, 0), Rect(57, 0 - 124, 116), Rect(0, 0 - 0, 0), Rect(0, 0 - 0, 0)]} cutoutPathParserInfo={CutoutPathParserInfo{displayWidth=1080 displayHeight=2300 density={2.625} cutoutSpec={M -483,0 L -416,0 L -416,116 L -483,116 Z} rotation={0} scale={1.0}}}}, touch INTERNAL, rotation 0, type INTERNAL, address {port=129, model=0x40446d87f7171c}, deviceProductInfo DeviceProductInfo{name=, manufacturerPnpId=QCM, productId=1, modelYear=null, manufactureDate=ManufactureDate{week=27, year=2006}, connectionToSinkType=0}, state ON, frameRateOverride , brightnessMinimum 0.0, brightnessMaximum 1.0, brightnessDefault 0.39763778, roundedCorners RoundedCorners{[RoundedCorner{position=TopLeft, radius=63, center=Point(63, 63)}, RoundedCorner{position=TopRight, radius=63, center=Point(1017, 63)}, RoundedCorner{position=BottomRight, radius=63, center=Point(1017, 2237)}, RoundedCorner{position=BottomLeft, radius=63, center=Point(63, 2237)}]}, FLAG_DEFAULT_DISPLAY, FLAG_ROTATES_WITH_CONTENT, FLAG_SECURE, FLAG_SUPPORTS_PROTECTED_BUFFERS}
+        mAdapter=LocalDisplayAdapter
+        mUniqueId=local:4630946747577212033
+        mDisplayToken=android.os.BinderProxy@60521e3
+        mCurrentLayerStack=0
+        mCurrentOrientation=0
+        mCurrentLayerStackRect=Rect(0, 0 - 1080, 2300)
+        mCurrentDisplayRect=Rect(0, 0 - 1080, 2300)
+        mCurrentSurface=null
+        mPhysicalDisplayId=4630946747577212033
+        mDisplayModeSpecs={baseModeId=1 allowGroupSwitching=false primaryRefreshRateRange=[0 60] appRequestRefreshRateRange=[0 Infinity]}
+        mDisplayModeSpecsInvalid=false
+        mActiveModeId=1
+        mActiveColorMode=0
+        mActiveDisplayMode=-1
+        mDefaultModeId=1
+        mState=ON
+        mBrightnessState=0.0
+        mBacklightAdapter=BacklightAdapter [useSurfaceControl=true (force_anyway? false), backlight=null]
+        mAllmSupported=false
+        mAllmRequested=false
+        mGameContentTypeSupported=false
+        mGameContentTypeRequested=false
+        mStaticDisplayInfo=StaticDisplayInfo{isInternal=true, density=2.625, secure=true, deviceProductInfo=DeviceProductInfo{name=, manufacturerPnpId=QCM, productId=1, modelYear=null, manufactureDate=ManufactureDate{week=27, year=2006}, connectionToSinkType=0}}
+        mSfDisplayModes=
+          DisplayMode{id=0, width=1080, height=2300, xDpi=397.565, yDpi=400.137, refreshRate=60.000004, appVsyncOffsetNanos=1000000, presentationDeadlineNanos=16666666, group=0}
+        mActiveSfDisplayMode=DisplayMode{id=0, width=1080, height=2300, xDpi=397.565, yDpi=400.137, refreshRate=60.000004, appVsyncOffsetNanos=1000000, presentationDeadlineNanos=16666666, group=0}
+        mSupportedModes=
+          DisplayModeRecord{mMode={id=1, width=1080, height=2300, fps=60.000004, alternativeRefreshRates=[]}}
+        mSupportedColorModes=[0, 7]
+        mDisplayDeviceConfig=DisplayDeviceConfig{mLoadedFrom=<config.xml>, mBacklight=[0.003937008, 0.035433073, 0.13779527, 0.22047244, 0.26377952, 0.33070865, 0.39763778, 0.5, 0.51968503, 0.5551181, 0.5748032, 0.5984252, 0.6653543, 0.8425197, 1.0], mNits=[3.0, 18.0, 63.0, 100.0, 120.0, 150.0, 180.0, 225.0, 235.0, 250.0, 260.0, 270.0, 300.0, 380.0, 450.0], mRawBacklight=[-1.0, 0.003937008, 0.035433073, 0.13779527, 0.22047244, 0.26377952, 0.33070865, 0.39763778, 0.5, 0.51968503, 0.5551181, 0.5748032, 0.5984252, 0.6653543, 0.8425197, 1.0], mRawNits=[0.0, 3.0, 18.0, 63.0, 100.0, 120.0, 150.0, 180.0, 225.0, 235.0, 250.0, 260.0, 270.0, 300.0, 380.0, 450.0], mBrightness=[0.0, 0.031620555, 0.13438734, 0.21739131, 0.26086956, 0.32806322, 0.3952569, 0.49802372, 0.51778656, 0.5533597, 0.57312256, 0.59683794, 0.6640316, 0.84189725, 1.0], mBrightnessToBacklightSpline=MonotoneCubicSpline{[(0.0, 0.003937008: 0.99606293), (0.031620555, 0.035433073: 0.996063), (0.13438734, 0.13779527: 0.996063), (0.21739131, 0.22047244: 0.996063), (0.26086956, 0.26377952: 0.9960632), (0.32806322, 0.33070865: 0.996063), (0.3952569, 0.39763778: 0.9960629), (0.49802372, 0.5: 0.9960628), (0.51778656, 0.51968503: 0.9960625), (0.5533597, 0.5551181: 0.9960633), (0.57312256, 0.5748032: 0.9960641), (0.59683794, 0.5984252: 0.99606323), (0.6640316, 0.6653543: 0.99606276), (0.84189725, 0.8425197: 0.99606305), (1.0, 1.0: 0.996063)]}, mBacklightToBrightnessSpline=MonotoneCubicSpline{[(0.003937008, 0.0: 1.0039526), (0.035433073, 0.031620555: 1.0039525), (0.13779527, 0.13438734: 1.0039526), (0.22047244, 0.21739131: 1.0039526), (0.26377952, 0.26086956: 1.0039524), (0.33070865, 0.32806322: 1.0039525), (0.39763778, 0.3952569: 1.0039527), (0.5, 0.49802372: 1.0039527), (0.51968503, 0.51778656: 1.003953), (0.5551181, 0.5533597: 1.0039523), (0.5748032, 0.57312256: 1.0039514), (0.5984252, 0.59683794: 1.0039523), (0.6653543, 0.6640316: 1.0039527), (0.8425197, 0.84189725: 1.0039525), (1.0, 1.0: 1.0039526)]}, mBacklightMinimum=0.003937008, mBacklightMaximum=1.0, mBrightnessDefault=0.39763778, mQuirks=null, isHbmEnabled=false, mHbmData=null, mBrightnessRampFastDecrease=0.70472443, mBrightnessRampFastIncrease=0.70472443, mBrightnessRampSlowDecrease=0.23228346, mBrightnessRampSlowIncrease=0.23228346, mAmbientLightSensor=Sensor{type: , name: , refreshRateRange: [0.0, Infinity]} , mProximitySensor=Sensor{type: , name: , refreshRateRange: [0.0, Infinity]} , mRefreshRateLimitations= []}
+
+    LogicalDisplayMapper:
+      mSingleDisplayDemoMode=false
+      mCurrentLayout=[{addr: {port=129, model=0x40446d87f7171c}, dispId: 0(ON)}]
+
+system:
+  kernel: "4.14.190-perf+"
+  uptime: " 13:31:53 up 14 days, 16:29,  0 users,  load average: 1.37, 1.46, 1.62"
+
+services:
+  - Found 241 services
