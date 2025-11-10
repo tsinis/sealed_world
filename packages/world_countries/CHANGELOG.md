@@ -17,6 +17,10 @@ CHORE
 
 - Bulgarian `currencies` array updated to reflect current usage of both BGN and EUR in Bulgaria.
 
+DOCUMENTATION
+
+- Added [benchmarks](https://github.com/tsinis/sealed_world/tree/main/packages/world_countries/example/benchmarks) & regression verification documentation.
+
 ## 3.9.3
 
 NEW FEATURES

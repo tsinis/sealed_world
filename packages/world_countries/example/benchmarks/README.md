@@ -7,7 +7,7 @@ This benchmark pipeline produces immutable JSON artifacts per version of the `wo
 - Build metadata (APK size, toolchain, Android config).
 - Runtime performance + behavioral metrics collected via automated device-driven tests.
 
-These artifacts are attached to [GitHub Releases](https://github.com/tsinis/sealed_world/releases) to enable historical comparison and regression detection.
+These artifacts are attached to [GitHub Releases](https://github.com/tsinis/sealed_world/releases/) to enable historical comparison and regression detection.
 
 ## 2. Why
 

@@ -60,6 +60,26 @@ fun String.runCommand(workingDir: File = File(".")): String? = try {
     null
 }
 
+// Captured values from new Variant API
+var capturedCompileSdk: Int? = null
+var capturedMinSdk: Int? = null
+var capturedTargetSdk: Int? = null
+var capturedNdkVersion: String? = null
+var capturedMinifyEnabled: Boolean = false
+var capturedShrinkResources: Boolean = false
+
+androidComponents {
+    finalizeDsl { ext ->
+        capturedCompileSdk = ext.compileSdk
+        capturedMinSdk = ext.defaultConfig.minSdk
+        capturedTargetSdk = ext.defaultConfig.targetSdk
+        capturedNdkVersion = ext.ndkVersion
+        val bt = ext.buildTypes.findByName("profile") ?: ext.buildTypes.getByName("release")
+        capturedMinifyEnabled = bt.isMinifyEnabled
+        capturedShrinkResources = bt.isShrinkResources
+    }
+}
+
 /* ------- Minimal post-build augmentation of PROFILE output-metadata.json ------- */
 val augmentOutputMetadataProfile by tasks.registering {
     doLast {
@@ -88,20 +108,13 @@ val augmentOutputMetadataProfile by tasks.registering {
 
         val gradleVer = gradle.gradleVersion
 
-        // Android config
-        val ext = project.extensions.getByType(com.android.build.gradle.AppExtension::class.java)
-        val compileSdkRaw = ext.compileSdkVersion // e.g., "android-36" or "36"
-        val compileSdkNum = compileSdkRaw?.removePrefix("android-")
-        val defaultConfig = ext.defaultConfig
-        val minSdk = defaultConfig.minSdkVersion?.apiLevel
-        val targetSdk = defaultConfig.targetSdkVersion?.apiLevel
-        val ndkVer = ext.ndkVersion
-
-        // Read flags from profile buildType if present; otherwise fallback to release
-        val hasProfile = ext.buildTypes.names.contains("profile")
-        val profileBt = if (hasProfile) ext.buildTypes.getByName("profile") else ext.buildTypes.getByName("release")
-        val minifyEnabled = profileBt.isMinifyEnabled
-        val shrinkResources = profileBt.isShrinkResources
+        // Android config (from new Variant / DSL capture)
+        val compileSdkNum = capturedCompileSdk
+        val minSdk = capturedMinSdk
+        val targetSdk = capturedTargetSdk
+        val ndkVer = capturedNdkVersion
+        val minifyEnabled = capturedMinifyEnabled
+        val shrinkResources = capturedShrinkResources
 
         // Pretty-print: insert a comma before the closing brace and append nicely formatted fields
         val original = meta.readText()
@@ -117,7 +130,7 @@ val augmentOutputMetadataProfile by tasks.registering {
   "compileSdk": ${compileSdkNum ?: "null"},
   "minSdk": ${minSdk ?: "null"},
   "targetSdk": ${targetSdk ?: "null"},
-  "ndkVersion": ${ndkVer?.let { "\"$it\"" } ?: "null"},
+  "ndkVersion": ${if (ndkVer != null) "\"$ndkVer\"" else "null"},
   "minifyEnabled": $minifyEnabled,
   "shrinkResources": $shrinkResources
 }

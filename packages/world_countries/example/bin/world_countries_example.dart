@@ -3,6 +3,7 @@
 import "dart:convert";
 import "dart:io";
 
+const _fvm = "fvm";
 const _flutter = "flutter";
 const _bundleId = "world.countries.world_countries_example";
 const _apkPath = "build/app/outputs/apk/profile";
@@ -27,14 +28,13 @@ Future<void> main() async {
 }
 
 Future<void> _cleanProject() async {
-  _logStep("Cleaning Flutter project...");
-  await _runCommand(_flutter, ["clean"]);
+  _logStep("Cleaning project...");
+  await _runCommand(["clean"]);
 }
 
 Future<void> _buildApk() async {
-  _logStep("Building profile APK for arm64 with FVM defined channel...");
-  await _runCommand("fvm", [
-    _flutter,
+  _logStep("Building profile APK for ARM64 with FVM defined channel...");
+  await _runCommand([
     "build",
     "apk",
     "--profile",
@@ -44,8 +44,8 @@ Future<void> _buildApk() async {
 }
 
 Future<String> _findAndroidDevice() async {
-  _logStep("Finding connected Android arm64 device...");
-  final result = await Process.run(_flutter, ["devices", "--machine"]);
+  _logStep("Finding connected Android ARM64 device...");
+  final result = await Process.run(_fvm, [_flutter, "devices", "--machine"]);
   if (result.exitCode != 0) throw Exception("No devices: ${result.stderr}");
 
   final outputJson = jsonDecode(result.stdout.toString());
@@ -69,7 +69,7 @@ Future<void> _installApk(String deviceId) async {
   const apkPath = "$_apkPath/$_apkFile";
   if (!File(apkPath).existsSync()) throw Exception("No APK file at: $apkPath");
 
-  await _runCommand(_flutter, [
+  await _runCommand([
     "install",
     "--profile",
     "-d",
@@ -109,7 +109,7 @@ Future<void> _runBenchmark(String version) async {
   final directory = Directory(_directory);
 
   await _runCommand(
-    "flashlight",
+    executable: "flashlight",
     [
       "test",
       "--bundleId",
@@ -154,19 +154,23 @@ Future<void> _generateReport(String version, int timestamp) async {
   final shell = Platform.isWindows ? "cmd" : "sh";
   final shellArg = Platform.isWindows ? "/c" : "-c";
 
-  await _runCommand(shell, [shellArg, command], workingDirectory: _directory);
+  await _runCommand(
+    [shellArg, command],
+    executable: shell,
+    workingDirectory: _directory,
+  );
   _logInfo("Report generated in $_directory folder");
   _logSuccess("Benchmark completed successfully!");
 }
 
 Future<void> _runCommand(
-  String executable,
   List<String> arguments, {
+  String executable = _fvm,
   String? workingDirectory,
 }) async {
   final process = await Process.start(
     executable,
-    arguments,
+    executable == _fvm ? [_flutter, ...arguments] : arguments,
     workingDirectory: workingDirectory,
     mode: ProcessStartMode.inheritStdio,
   );
