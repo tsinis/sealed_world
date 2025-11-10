@@ -16,7 +16,7 @@ final class AboutAppDialog extends StatelessWidget {
     // ignore: avoid-non-ascii-symbols, it's localized for most countries.
     applicationLegalese: "© ${DateTime.now().year} Roman Cinis",
     applicationName: "world_countries",
-    applicationVersion: "3.9.3",
+    applicationVersion: "3.9.4",
     applicationIcon: SizedBox.square(
       dimension: 48,
       child: DecoratedBox(
