@@ -6,7 +6,8 @@ This benchmark pipeline produces immutable JSON artifacts per version of the `wo
 
 - Build metadata (APK size, toolchain, Android config).
 - Runtime performance + behavioral metrics collected via automated device-driven tests.
-  These artifacts are attached to GitHub releases to enable historical comparison and regression detection.
+
+These artifacts are attached to [GitHub Releases](https://github.com/tsinis/sealed_world/releases) to enable historical comparison and regression detection.
 
 ## 2. Why
 
@@ -79,7 +80,7 @@ packages/world_countries/example/benchmarks/
 To obtain consistent metrics:
 
 - Same device model each run.
-- Battery > 50% (optional).
+- Battery > 80%.
 - Close background apps.
 - Keep screen brightness constant.
 - Avoid thermal throttling (cool device if hot).
