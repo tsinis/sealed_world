@@ -114,4 +114,13 @@ This section explains how the ecosystem handles SDK pinning, semantic versioning
 
 - Aligning with Flutter stable's Dart ensures consistent environments across CI and contributors, reducing surprise failures and easing support [Flutter SDK archive](https://docs.flutter.dev/install/archive).
 
+#### Benchmark & regression verification system
+
+This package includes an automated benchmark system that runs on every release to detect performance regressions. Each version produces immutable JSON artifacts containing build metadata (APK size, toolchain versions, Android configuration) and runtime metrics (startup time, frame performance, memory and CPU usage, etc.).
+
+> [!TIP]
+> These artifacts are attached to [GitHub Releases](https://github.com/tsinis/sealed_world/releases) and committed to the repository, enabling historical comparison and transparent performance tracking across versions. The benchmark flow uses **low-end physical ARM64 Android** devices with Flashlight + Maestro for reproducible, device-driven testing.
+
+To run benchmarks locally or learn more about the system, see the [benchmarks documentation](../packages/world_countries/example/benchmarks/README.md). All benchmark data is immutable and versioned, ensuring full auditability and regression traceability.
+
 [^1]: While `sealed_languages` technically depends on `l10n_languages` for localization, this is not part of its core functionality. The package primarily serves as the backbone for all `sealed_*` and `world_*` packages by providing typed locale classes and extensions that power localization maps across the entire ecosystem.
