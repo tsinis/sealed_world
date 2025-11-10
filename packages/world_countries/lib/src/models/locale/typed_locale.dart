@@ -3,7 +3,7 @@
 
 import "dart:ui" show Locale, keepToString;
 
-import "package:flutter/foundation.dart" show immutable, required;
+import "package:flutter/foundation.dart" show immutable;
 import "package:world_flags/world_flags.dart";
 
 import "../../extensions/typed_locale_extension.dart";
@@ -145,7 +145,6 @@ class TypedLocale extends Locale implements BasicTypedLocale {
 
   /// Returns a copy of the [TypedLocale] object with the specified properties.
   /// {@macro copy_with_method}
-  @required
   TypedLocale copyWith({
     NaturalLanguage? language,
     WorldCountry? country,
