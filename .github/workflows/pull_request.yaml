@@ -26,7 +26,7 @@ jobs:
 
   assign:
     name: ✍🏻 Auto-assign PR
-    runs-on: ubuntu-slim
+    runs-on: ubuntu-latest
     timeout-minutes: 4
     if: github.actor != 'dependabot[bot]'
     steps:

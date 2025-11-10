@@ -11,7 +11,7 @@ permissions:
 jobs:
   spell-check:
     name: 🔗🪄 Check Links & Spelling
-    runs-on: ubuntu-slim
+    runs-on: ubuntu-latest
     timeout-minutes: 10
     steps:
       - name: 📚 Git checkout
