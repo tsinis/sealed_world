@@ -1,4 +1,4 @@
-// ignore_for_file: prefer-static-class, avoid-non-ascii-symbols
+// ignore_for_file: prefer-static-class
 
 import "dart:convert";
 import "dart:io";
@@ -176,6 +176,7 @@ Future<void> _runCommand(
   throw Exception("$executable ${arguments.join(' ')} exited with: $exitCode");
 }
 
+// ignore_for_file: avoid-non-ascii-symbols
 void _logError(String message) => stderr.writeln("\n❌ $message");
 void _logInfo(String message) => stdout.writeln("ℹ️ $message");
 void _logStep(String message) => stdout.writeln("\n🔄 $message");
