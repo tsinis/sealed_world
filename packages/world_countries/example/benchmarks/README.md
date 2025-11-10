@@ -100,7 +100,7 @@ jq '.bundleSizeBytes' metadata_new.json
 General checks:
 
 - bundleSizeBytes: Unexpected jump (> +3-5%).
-- Added/removal of SDK / tooling fields.
+- Addition/removal of SDK / tooling fields.
 - Performance metrics (frame times, memory, CPU—exact keys depend on Flashlight version) show sustained degradation (> +10% median).
 
 Suggested automated gate (pseudo):
@@ -155,4 +155,4 @@ Keep all artifacts for released versions indefinitely. Never mutate historical J
 
 ## 14. Summary
 
-Structured, reproducible benchmarks per version mitigate silent regressions and enable confident evolution of `world_countries` (end related packages) data and code.
+Structured, reproducible benchmarks per version mitigate silent regressions and enable confident evolution of `world_countries` (and related packages) data and code.

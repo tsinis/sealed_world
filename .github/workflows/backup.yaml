@@ -16,7 +16,7 @@ concurrency:
 jobs:
   mirror-to-gitlab:
     name: 💾 Backup to GitLab
-    runs-on: ubuntu-slim
+    runs-on: ubuntu-latest
     timeout-minutes: 10
     steps:
       - name: 📚 Git checkout
