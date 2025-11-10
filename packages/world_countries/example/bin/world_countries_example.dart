@@ -11,6 +11,7 @@ const _apkFile = "app-arm64-v8a-profile.apk";
 const _directory = "benchmarks";
 
 Future<void> main() async {
+  final stopwatch = Stopwatch()..start();
   _logStep("Starting benchmark workflow!");
   try {
     final deviceId = await _findAndroidDevice();
@@ -24,6 +25,9 @@ Future<void> main() async {
   } on Exception catch (error) {
     _logError("Benchmark failed: $error");
     rethrow;
+  } finally {
+    stopwatch.stop();
+    _logInfo("Total benchmark time: ${stopwatch.elapsed}");
   }
 }
 
