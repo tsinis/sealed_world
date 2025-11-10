@@ -15,7 +15,7 @@ concurrency:
 jobs:
   branch-name:
     name: 🔀 Check Branch Name
-    runs-on: ubuntu-latest
+    runs-on: ubuntu-slim
     timeout-minutes: 4
     steps:
       - name: 🔀 Assert Branch Naming Convention
@@ -26,7 +26,7 @@ jobs:
 
   assign:
     name: ✍🏻 Auto-assign PR
-    runs-on: ubuntu-latest
+    runs-on: ubuntu-slim
     timeout-minutes: 4
     if: github.actor != 'dependabot[bot]'
     steps:
@@ -38,7 +38,7 @@ jobs:
 
   pr-title:
     name: 📰 Lint PR Title
-    runs-on: ubuntu-latest
+    runs-on: ubuntu-slim
     timeout-minutes: 4
     steps:
       - name: 📰 Lint Pull Request Title
@@ -50,7 +50,7 @@ jobs:
 
   auto-approve:
     name: 🎟️ Auto-approve PR
-    runs-on: ubuntu-latest
+    runs-on: ubuntu-slim
     timeout-minutes: 4
     steps:
       - name: 🎟️ Approve Dependabot and owner
@@ -61,7 +61,7 @@ jobs:
 
   pr-labels:
     name: 🏷️ Add PR Labels
-    runs-on: ubuntu-latest
+    runs-on: ubuntu-slim
     needs: branch-name
     timeout-minutes: 4
     steps:
