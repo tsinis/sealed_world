@@ -28,7 +28,7 @@ jobs:
         run: echo "relative_path=packages/${{ steps.extract_name.outputs.value }}" >> $GITHUB_ENV
 
       - name: 📚 Git checkout
-        uses: actions/checkout@v5.0.0
+        uses: actions/checkout@v6.0.0
 
       - name: 1️⃣ Set version tag
         run: |
