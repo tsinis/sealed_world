@@ -21,7 +21,7 @@ jobs:
           persist-credentials: false
 
       - name: 🔗 Link checker
-        uses: tcort/github-action-markdown-link-check@v1.1.1
+        uses: tcort/github-action-markdown-link-check@v1.1.2
         with:
           base-branch: main
           use-quiet-mode: "yes"
