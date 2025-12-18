@@ -297,7 +297,6 @@ dart_code_metrics:
     - avoid-one-field-records: true
     - avoid-only-rethrow: true
     - avoid-passing-default-values: true
-    - avoid-passing-self-as-argument: true
     - avoid-positional-record-field-access: true
     - avoid-recursive-calls: true
     - avoid-recursive-tostring: true
@@ -318,12 +317,10 @@ dart_code_metrics:
     - avoid-slow-collection-methods: true
     - avoid-stream-tostring: true
     - avoid-substring: true
-    - avoid-suspicious-global-references: true
+    - avoid-suspicious-global-reference: true
     - avoid-suspicious-super-overrides: true
     - avoid-throw-in-catch-block: true
     - avoid-throw-objects-without-tostring: true
-    - avoid-top-level-members-in-tests: true
-    - avoid-type-casts: true
     - avoid-unassigned-fields: true
     - avoid-unassigned-late-fields: true
     - avoid-unassigned-stream-subscriptions: true
