@@ -6,8 +6,8 @@ publish_to: none
 resolution: workspace
 
 environment:
-  sdk: ^3.9.2
-  flutter: ^3.35.7
+  sdk: ^3.10.4
+  flutter: ^3.38.5
 
 dependencies:
   flutter:
@@ -22,7 +22,7 @@ dependencies:
     path: ../
 
 dev_dependencies:
-  build_runner: ^2.9.0 # From Google
+  build_runner: ^2.10.4 # From Google
   dhttpd: ^4.1.0 # From Google
   flutter_gen_runner: ^5.12.0
 

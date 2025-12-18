@@ -12,6 +12,7 @@ class _FiatCurrencyTest extends FiatCurrency {
   const _FiatCurrencyTest() : super.permissive(code: "123", name: " ");
 }
 
+// ignore: avoid-high-cyclomatic-complexity, it's a test...
 void main() => group("$FiatCurrency", () {
   final value = FiatCurrency.list.last;
   final array = {value, FiatCurrency.list.first};

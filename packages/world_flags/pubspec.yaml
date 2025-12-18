@@ -5,6 +5,9 @@ maintainer: Roman Cinis
 repository: https://github.com/tsinis/sealed_world/tree/main/packages/world_flags
 issue_tracker: https://github.com/tsinis/sealed_world/issues
 homepage: https://tsin.is/sealed_world/#/country/gbr/settings
+
+resolution: workspace
+
 topics:
   - flags
   - flag
@@ -15,8 +18,6 @@ topics:
 screenshots:
   - description: "Example of usage"
     path: doc/example.webp
-
-resolution: workspace
 
 environment:
   sdk: ^3.9.2

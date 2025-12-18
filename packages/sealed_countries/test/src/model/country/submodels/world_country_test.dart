@@ -9,6 +9,7 @@ import "package:test/test.dart";
 // ignore: prefer-correct-identifier-length, just for testing.
 enum _WorldCountryTest { de, rus }
 
+// ignore: avoid-high-cyclomatic-complexity, it's a test...
 void main() => group("$WorldCountry", () {
   final value = WorldCountry.list.first;
   final officialList = List<WorldCountry>.unmodifiable(

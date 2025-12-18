@@ -1350,7 +1350,7 @@ class WorldCountry extends Country
       ...worldCountryCodeOtherMap,
       ...worldCountryCodeNumericMap,
     },
-    exactLength: null, // ignore: avoid-passing-default-values, is not default.
+    exactLength: null, // Dart 3.8.0 format.
   );
 
   /// A list of all the countries currently supported

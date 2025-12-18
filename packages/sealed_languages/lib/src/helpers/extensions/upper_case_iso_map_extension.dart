@@ -107,7 +107,7 @@ extension UpperCaseIsoMapExtension<V extends IsoStandardized>
     return UpperCaseIsoMap(
       newMap,
       defaultValue: value,
-      exactLength: null, // ignore: avoid-passing-default-values, not default.
+      exactLength: null,
       maxLength: longest,
       minLength: short,
     );

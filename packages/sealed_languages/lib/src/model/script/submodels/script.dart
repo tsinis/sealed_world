@@ -1006,7 +1006,7 @@ class Script extends WritingSystem
   /// ```
   static const map = UpperCaseIsoMap<Script>(
     {...scriptCodeMap, ...scriptCodeOtherMap},
-    exactLength: null, // ignore: avoid-passing-default-values, is not default.
+    exactLength: null,
     maxLength: codeLength,
     minLength: IsoStandardized.codeLength,
   );

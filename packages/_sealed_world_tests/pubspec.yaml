@@ -1,7 +1,7 @@
 version: 1.0.0
-publish_to: none
 name: _sealed_world_tests
 description: Test infra for writing sealed world tests. Is not published.
+publish_to: none
 maintainer: Roman Cinis
 repository: https://github.com/tsinis/sealed_world/tree/main/packages/_sealed_world_tests
 issue_tracker: https://github.com/tsinis/sealed_world/issues

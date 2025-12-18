@@ -4,6 +4,9 @@ description: Provides data for world languages in the form of sealed classes.
 maintainer: Roman Cinis
 repository: https://github.com/tsinis/sealed_world/tree/main/packages/sealed_languages
 issue_tracker: https://github.com/tsinis/sealed_world/issues
+
+resolution: workspace
+
 topics:
   - languages
   - language
@@ -18,8 +21,6 @@ screenshots:
     path: doc/structure.webp
   - description: "Examples of usage"
     path: doc/example.webp
-
-resolution: workspace
 
 environment:
   sdk: ^3.9.2

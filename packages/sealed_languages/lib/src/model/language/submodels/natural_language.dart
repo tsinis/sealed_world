@@ -982,7 +982,7 @@ class NaturalLanguage extends Language
   /// ```
   static const map = UpperCaseIsoMap<NaturalLanguage>(
     {...naturalLanguageCodeMap, ...naturalLanguageCodeOtherMap},
-    exactLength: null, // ignore: avoid-passing-default-values, is not default.
+    exactLength: null, // Dart 3.8 formatting.
   );
 
   /// A tree-shakable list of all the natural languages currently

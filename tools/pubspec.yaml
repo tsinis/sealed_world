@@ -1,7 +1,7 @@
 version: 0.1.2
 name: cli
-publish_to: none
 description: Command-line tools for a sealed_world ecosystem.
+publish_to: none
 
 resolution: workspace
 

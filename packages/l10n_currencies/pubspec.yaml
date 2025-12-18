@@ -4,6 +4,9 @@ description: Provides currency names translations (for 161 different locales).
 maintainer: Roman Cinis
 repository: https://github.com/tsinis/sealed_world/tree/main/packages/l10n_currencies
 issue_tracker: https://github.com/tsinis/sealed_world/issues
+
+resolution: workspace
+
 topics:
   - l10n
   - localization
@@ -16,8 +19,6 @@ screenshots:
     path: doc/quality.webp
   - description: "Examples of usage"
     path: doc/example.webp
-
-resolution: workspace
 
 environment:
   sdk: ^3.9.2

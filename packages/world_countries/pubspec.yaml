@@ -5,6 +5,9 @@ maintainer: Roman Cinis
 repository: https://github.com/tsinis/sealed_world/tree/main/packages/world_countries
 issue_tracker: https://github.com/tsinis/sealed_world/issues
 homepage: https://tsin.is/sealed_world/
+
+resolution: workspace
+
 topics:
   - picker
   - sealed
@@ -22,15 +25,13 @@ screenshots:
   - description: "Dialog picker example"
     path: doc/dialog_picker.webp
 
-resolution: workspace
-
 environment:
-  sdk: ^3.9.2
+  sdk: ^3.10.4
 
 dependencies:
   flutter:
     sdk: flutter
-  meta: ^1.16.0 # Same as in Flutter SDK.
+  meta: ^1.17.0 # Same as in Flutter SDK.
   world_flags: ^2.9.1
 
 dev_dependencies:

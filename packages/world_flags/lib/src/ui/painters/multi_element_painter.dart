@@ -77,7 +77,6 @@ final class MultiElementPainter extends CustomElementsPainter {
     for (final props in properties) {
       final shape = props.shape;
       if (shape != null) {
-        // ignore: prefer-moving-to-variable, looks like false-positive.
         painter(shape)([props], size.aspectRatio).paint(canvas, size);
       }
       if (props is CustomElementsProperties) paintFlagElements(canvas, size);
