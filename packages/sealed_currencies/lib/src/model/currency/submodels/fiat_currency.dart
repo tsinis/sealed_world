@@ -815,6 +815,7 @@ class FiatCurrency extends Currency
     T? Function(FiatCurrency currency)? where,
     Iterable<FiatCurrency> currencies = listExtended,
   }) {
+    // ignore: avoid-collection-mutating-methods, not mutating anything.
     currencies.assertNotEmpty();
 
     for (final currency in currencies) {

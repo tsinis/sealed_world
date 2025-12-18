@@ -10,7 +10,7 @@ void main() => group("$IrqPainter", () {
 
   test("ratio > originalAspectRatio (flag is wider)", () {
     const size = Size(300, 100);
-    final canvas = _IrqPainterTest(size);
+    final canvas = _IrqPainterTest();
 
     painter.paintFlagElements(canvas, size);
     expect(canvas.saveCount, greaterThan(0));
@@ -19,7 +19,7 @@ void main() => group("$IrqPainter", () {
 
   test("ratio < originalAspectRatio (flag is taller)", () {
     const size = Size(100, 300);
-    final canvas = _IrqPainterTest(size);
+    final canvas = _IrqPainterTest();
     painter.paintFlagElements(canvas, size);
     expect(canvas.saveCount, greaterThan(0));
     expect(canvas.restoreCount, greaterThan(0));
@@ -27,9 +27,6 @@ void main() => group("$IrqPainter", () {
 });
 
 class _IrqPainterTest implements Canvas {
-  _IrqPainterTest(this.size);
-
-  final Size size;
   int restoreCount = 0;
   int saveCount = 0;
 

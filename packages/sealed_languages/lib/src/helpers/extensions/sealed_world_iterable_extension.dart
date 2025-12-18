@@ -110,6 +110,7 @@ extension SealedWorldNullableIterableIsoExtension<T extends IsoStandardized>
     bool assertNotEmpty = true,
   }) {
     if (this == null) return null;
+    // ignore: avoid-collection-mutating-methods, not mutating anything.
     if (assertNotEmpty) this?.assertNotEmpty();
 
     for (final item in this ?? <T>[]) {

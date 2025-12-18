@@ -62,7 +62,7 @@ class ColorUtils {
     result ??= _namedColors[color.toLowerCase()];
     // ignore: only_throw_errors, it's CLI helper tool.
     if (result == null) throw "$_tag Warning: Unsupported color format $color";
-    _colors.add(result);
+    _colors.add(result); // ignore: avoid-collection-mutating-methods, cli tool.
   }
 
   /// Try to convert text input or any [String] to valid [Color]. The [String]

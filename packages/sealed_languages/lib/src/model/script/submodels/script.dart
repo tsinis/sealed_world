@@ -847,6 +847,7 @@ class Script extends WritingSystem
     T? Function(Script script)? where,
     Iterable<Script> scripts = list,
   }) {
+    // ignore: avoid-collection-mutating-methods, not mutating anything.
     scripts.assertNotEmpty();
 
     for (final script in scripts) {

@@ -1162,6 +1162,7 @@ class WorldCountry extends Country
     T? Function(WorldCountry country)? where,
     Iterable<WorldCountry> countries = list,
   }) {
+    // ignore: avoid-collection-mutating-methods, not mutating anything.
     countries.assertNotEmpty();
 
     for (final country in countries) {

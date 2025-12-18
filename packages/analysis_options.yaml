@@ -41,16 +41,45 @@ analyzer:
 dart_code_metrics:
   extends:
     - package:dart_code_metrics_presets/dart_all.yaml
+  exclude:
+    metrics:
+      - "**/example/**"
+      - "**/test/**"
+      - "tools/**"
+  metrics:
+    number-of-external-imports:
+      threshold: 5
+    # number-of-imports:
+    #   threshold: 25
+    # widgets-nesting-level:
+    #   threshold: 10
+    # number-of-used-widgets:
+    #   threshold: 20
+    # cyclomatic-complexity:
+    #   threshold: 45
+    # lines-of-code:
+    #   threshold: 200
+    # number-of-parameters:
+    #   threshold: 5
+    # source-lines-of-code:
+    #   threshold: 100
+    # maximum-nesting-level:
+    #   threshold: 5
+    # halstead-volume:
+    #   threshold: 200
   pubspec-rules:
+    # Disabled:
     - avoid-any-version: false # Defined in the workspace pubspec.yaml
-    - prefer-correct-package-name: false # Different naming conevtions for Dart and Flutter packages.
+    - prefer-correct-package-name: false # Different naming conventions for Dart and Flutter packages.
     - prefer-pinned-version-syntax: false # Conflicts with prefer-caret-version-syntax.
     - prefer-publish-to-none: false # Those are not published packages.
+    - prefer-caret-version-syntax: false # Conflicts with avoid-any-version.
+
+    # Enabled:
     - add-resolution-workspace: true
     - avoid-dependency-overrides: true
     - dependencies-ordering: true
     - newline-before-pubspec-entry: true
-    - prefer-caret-version-syntax: true
     - prefer-correct-screenshots: true
     - prefer-semver-version: true
     - pubspec-ordering:
@@ -161,10 +190,10 @@ dart_code_metrics:
         exclude:
           - "**/data/**.data.dart"
           - "**/test/**"
-    - prefer-match-file-name:
+    - avoid-collection-mutating-methods:
         exclude:
-          - "**/data/**.data.dart"
-          - "**/test/**"
+          - "**/data/**_l10n.data.dart"
+          - "**/lib/l10n_*.dart"
 
     # Disabled:
     # Shorthands:
@@ -175,8 +204,6 @@ dart_code_metrics:
     # Other disabled:
     - arguments-ordering: false # This will be a breaking change.
     - avoid-adjacent-strings: false # It's not being used on one line strings.
-    - avoid-collection-mutating-methods: false # Mostly false positives.
-    - avoid-constant-conditions: false # A lot of false positives (e.g. outside of tests).
     - avoid-continue: false # Just a matter of style.
     - avoid-default-tostring: false # Doesn't make sense here.
     - avoid-deprecated-usage: false # Using default deprecated_member_use_from_same_package.
@@ -225,6 +252,7 @@ dart_code_metrics:
     - avoid-complex-loop-conditions: true
     - avoid-conditions-with-boolean-literals: true
     - avoid-constant-assert-conditions: true
+    - avoid-constant-conditions: true
     - avoid-constant-switches: true
     - avoid-contradictory-expressions: true
     - avoid-declaring-call-method: true

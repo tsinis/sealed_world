@@ -896,6 +896,7 @@ class NaturalLanguage extends Language
     T? Function(NaturalLanguage language)? where,
     Iterable<NaturalLanguage> languages = list,
   }) {
+    // ignore: avoid-collection-mutating-methods, not mutating anything.
     languages.assertNotEmpty();
 
     for (final language in languages) {
