@@ -32,6 +32,7 @@ class NaturalLanguage extends Language
     this.family = const IndoEuropean(),
     this.isRightToLeft = false,
     this.scripts = const {ScriptLatn()},
+    LocaleMapFunction<String> Function()? mapper,
   }) : assert(
          code.length == IsoStandardized.codeLength,
          """`code` should be exactly ${IsoStandardized.codeLength} characters long!""",
@@ -50,7 +51,7 @@ class NaturalLanguage extends Language
              bibliographicCode.length == IsoStandardized.codeLength,
          """`bibliographicCode` should be exactly ${IsoStandardized.codeLength} characters long!""",
        ),
-       _mapper = null;
+       _mapper = mapper;
 
   /// {@template permissive_constructor}
   /// Creates an instance of the class with relaxed constraints.

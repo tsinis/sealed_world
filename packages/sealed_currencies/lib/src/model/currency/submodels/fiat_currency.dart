@@ -14,12 +14,12 @@ class FiatCurrency extends Currency
   /// {@template currency_constructor}
   /// Creates a new instance of [FiatCurrency].
   ///
-  /// The [code], [name], [namesNative], [translations] and [codeNumeric]
-  /// parameters are required. The [priority] parameter defaults to 100, and
-  /// the [smallestDenomination] parameter defaults to 1.
+  /// The [code], [name], [namesNative] and [codeNumeric] parameters are
+  /// required. The [priority] parameter defaults to 100, and the
+  /// [smallestDenomination] parameter defaults to 1.
   ///
   /// The [alternateSymbols], [disambiguateSymbol], [htmlEntity], [subunit],
-  /// [subunitToUnit], and [unitFirst] parameters are optional.
+  /// [subunitToUnit], [mapper] and [unitFirst] parameters are optional.
   ///
   /// The [symbol], [decimalMark], and [thousandsSeparator] parameters are
   /// inherited from the [Currency] class and are also optional.

@@ -71,7 +71,7 @@ extension WorldCountryCopyWith<T extends WorldCountry> on T {
     population: population ?? this.population,
     timezones: timezones ?? this.timezones,
     tld: tld ?? this.tld,
-    mapper: mapper ?? this.l10n.mapper,
+    mapper: mapper ?? l10n.mapper,
     demonyms: demonyms ?? this.demonyms,
     currencies: currencies ?? this.currencies,
     capitalInfo: capitalInfo ?? this.capitalInfo,

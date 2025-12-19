@@ -38,7 +38,7 @@ void main() => group("$WorldCountry", () {
 
   test("compareTo", () => expect(value.compareTo(array.first), isNot(isZero)));
 
-  group('some countries should be fully translated', () {
+  group("some countries should be fully translated", () {
     /// This is a comprehensive list of countries that ensure the availability of
     /// translations for every language in the countries `list`.
     ///
@@ -202,7 +202,7 @@ void main() => group("$WorldCountry", () {
     final langs = <NaturalLanguage>{};
 
     for (final language in kSealedCountriesSupportedLanguages) {
-      test('${language.internationalName} should have all translations', () {
+      test("${language.internationalName} should have all translations", () {
         final translation = WorldCountry.list.commonNamesMap(
           options: LocaleMappingOptions(mainLocale: BasicTypedLocale(language)),
         );
@@ -212,13 +212,13 @@ void main() => group("$WorldCountry", () {
           greaterThanOrEqualTo(WorldCountry.list.length),
           reason:
               'Language "${language.internationalName}" is expected to have '
-              'full translations for all ${WorldCountry.list.length} countries',
+              "full translations for all ${WorldCountry.list.length} countries",
         );
       });
     }
 
     test(
-      'should be equal',
+      "should be equal",
       () => expect(langs, containsAll(kSealedCountriesSupportedLanguages)),
     );
   });

@@ -33,9 +33,9 @@ class WorldCountry extends Country
   /// Creates a new [WorldCountry] object with the given properties.
   ///
   /// The [name] parameter is required and must not be empty. The
-  /// [altSpellings], [languages], [namesNative], [translations], [demonyms],
-  /// [timezones], [bordersCodes], and [tld] parameters should not be `null`.
-  /// The [codeShort], [codeNumeric], [code], [emoji], [idd], [latLng], [maps],
+  /// [altSpellings], [languages], [namesNative], [demonyms], [timezones],
+  /// [bordersCodes], and [tld] parameters should not be `null`. The
+  /// [codeShort], [codeNumeric], [code], [emoji], [idd], [latLng], [maps],
   /// [areaMetric], [population], and [startOfWeek] parameters should not be
   /// `null` and must be valid values.
   /// {@endtemplate}

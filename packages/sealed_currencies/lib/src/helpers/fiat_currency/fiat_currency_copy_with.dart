@@ -40,7 +40,7 @@ extension FiatCurrencyCopyWith<T extends FiatCurrency> on T {
     name: name ?? this.name,
     namesNative: namesNative ?? this.namesNative,
     codeNumeric: codeNumeric ?? this.codeNumeric,
-    mapper: mapper ?? this.l10n.mapper,
+    mapper: mapper ?? l10n.mapper,
     alternateSymbols: alternateSymbols ?? this.alternateSymbols,
     disambiguateSymbol: disambiguateSymbol ?? this.disambiguateSymbol,
     htmlEntity: htmlEntity ?? this.htmlEntity,

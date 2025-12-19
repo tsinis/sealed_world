@@ -45,7 +45,7 @@ void main() => group("$LocalizationDelegate", () {
     expect(copy.scripts, isNotEmpty);
   });
 
-  group('translatedNames', () {
+  group("translatedNames", () {
     test("returns empty list with empty items", () {
       final result = parser.translatedNames(const []);
 
@@ -81,13 +81,13 @@ void main() => group("$LocalizationDelegate", () {
               mainLocale,
               fallbackLocale,
             }) => const {
-              (isoCode: 'ENG', locale: 'en'): 'English',
-              (isoCode: 'ENG+', locale: 'en'): 'English (full)',
+              (isoCode: "ENG", locale: "en"): "English",
+              (isoCode: "ENG+", locale: "en"): "English (full)",
             },
       );
 
       final result = customParser.translatedNames(const [LangEng(), LangDeu()]);
-      expect(result.single.name, 'English');
+      expect(result.single.name, "English");
     });
 
     test("includes full names when localizeFullNames is true", () {
@@ -100,8 +100,8 @@ void main() => group("$LocalizationDelegate", () {
               mainLocale,
               fallbackLocale,
             }) => const {
-              (isoCode: 'ENG', locale: 'en'): 'English',
-              (isoCode: 'ENG+', locale: 'en'): 'English Language',
+              (isoCode: "ENG", locale: "en"): "English",
+              (isoCode: "ENG+", locale: "en"): "English Language",
             },
       );
 
@@ -110,8 +110,8 @@ void main() => group("$LocalizationDelegate", () {
         options: const LocaleMappingOptions(), // Dart 3.8 formatting.
       );
 
-      expect(result.single.name, 'English');
-      expect(result.single.fullName, 'English Language');
+      expect(result.single.name, "English");
+      expect(result.single.fullName, "English Language");
     });
 
     test("excludes full names when localizeFullNames is false", () {
@@ -123,7 +123,7 @@ void main() => group("$LocalizationDelegate", () {
               altSymbol,
               mainLocale,
               fallbackLocale,
-            }) => const {(isoCode: 'ENG', locale: 'en'): 'English'},
+            }) => const {(isoCode: "ENG", locale: "en"): "English"},
       );
 
       final result = customParser.translatedNames(
@@ -133,7 +133,7 @@ void main() => group("$LocalizationDelegate", () {
         ),
       );
 
-      expect(result.single.name, 'English');
+      expect(result.single.name, "English");
       expect(result.single.fullName, isNull);
     });
 
@@ -147,9 +147,9 @@ void main() => group("$LocalizationDelegate", () {
               mainLocale,
               fallbackLocale,
             }) => const {
-              (isoCode: 'ENG', locale: 'en'): 'English',
-              (isoCode: 'ENG', locale: 'de'): 'Englisch',
-              (isoCode: 'ENG', locale: 'fr'): 'Anglais',
+              (isoCode: "ENG", locale: "en"): "English",
+              (isoCode: "ENG", locale: "de"): "Englisch",
+              (isoCode: "ENG", locale: "fr"): "Anglais",
             },
       );
 
@@ -158,7 +158,7 @@ void main() => group("$LocalizationDelegate", () {
       expect(result, hasLength(3));
       expect(
         result.map((e) => e.name),
-        containsAll(const ['English', 'Englisch', 'Anglais']),
+        containsAll(const ["English", "Englisch", "Anglais"]),
       );
     });
 
@@ -172,15 +172,15 @@ void main() => group("$LocalizationDelegate", () {
               mainLocale,
               fallbackLocale,
             }) => const {
-              (isoCode: 'ENG', locale: 'en'): 'English',
-              (isoCode: 'DEU', locale: 'en'): 'German',
+              (isoCode: "ENG", locale: "en"): "English",
+              (isoCode: "DEU", locale: "en"): "German",
             },
       );
 
       final result = customParser.translatedNames(const [LangEng(), LangDeu()]);
 
       expect(result, hasLength(2));
-      expect(result.map((e) => e.name), containsAll(['English', 'German']));
+      expect(result.map((e) => e.name), containsAll(["English", "German"]));
     });
 
     test("respects custom altSymbol", () {
@@ -193,18 +193,18 @@ void main() => group("$LocalizationDelegate", () {
               mainLocale,
               fallbackLocale,
             }) => const {
-              (isoCode: 'ENG', locale: 'en'): 'English',
-              (isoCode: 'ENG*', locale: 'en'): 'English Language',
+              (isoCode: "ENG", locale: "en"): "English",
+              (isoCode: "ENG*", locale: "en"): "English Language",
             },
       );
 
       final result = customParser.translatedNames(
         const [LangEng()],
-        options: const LocaleMappingOptions(altSymbol: '*'), // Dart 3.8 format.
+        options: const LocaleMappingOptions(altSymbol: "*"), // Dart 3.8 format.
       );
 
-      expect(result.single.name, 'English');
-      expect(result.single.fullName, 'English Language');
+      expect(result.single.name, "English");
+      expect(result.single.fullName, "English Language");
     });
 
     test("parses locale correctly", () {
@@ -219,7 +219,7 @@ void main() => group("$LocalizationDelegate", () {
               mainLocale,
               fallbackLocale,
             }) => const {
-              (isoCode: 'ENG', locale: 'en_Latn_US'): 'English (US)',
+              (isoCode: "ENG", locale: "en_Latn_US"): "English (US)",
             },
       );
 
@@ -227,7 +227,7 @@ void main() => group("$LocalizationDelegate", () {
 
       expect(result.single.language, const LangEng());
       expect(result.single.script, const ScriptLatn());
-      expect(result.single.countryCode, 'US');
+      expect(result.single.countryCode, "US");
     });
 
     test("ignores entries with invalid locale", () {
@@ -241,18 +241,18 @@ void main() => group("$LocalizationDelegate", () {
               mainLocale,
               fallbackLocale,
             }) => const {
-              (isoCode: 'ENG', locale: 'invalid_locale_format'): 'English',
-              (isoCode: 'ENG', locale: 'en'): 'English (valid)',
+              (isoCode: "ENG", locale: "invalid_locale_format"): "English",
+              (isoCode: "ENG", locale: "en"): "English (valid)",
             },
       );
 
       final result = customParser.translatedNames(const [LangEng()]);
-      expect(result.single.name, 'English (valid)');
+      expect(result.single.name, "English (valid)");
     });
 
     test("passes options to mapper function", () {
-      String capturedMainLocale = '';
-      String capturedFallbackLocale = '';
+      String capturedMainLocale = "";
+      String capturedFallbackLocale = "";
       bool capturedUseLanguageFallback = true;
 
       final customParser = LocalizationDelegate(
@@ -264,11 +264,11 @@ void main() => group("$LocalizationDelegate", () {
               mainLocale,
               fallbackLocale,
             }) {
-              capturedMainLocale = mainLocale ?? '';
-              capturedFallbackLocale = fallbackLocale ?? '';
+              capturedMainLocale = mainLocale ?? "";
+              capturedFallbackLocale = fallbackLocale ?? "";
               capturedUseLanguageFallback = useLanguageFallback;
 
-              return const {(isoCode: 'ENG', locale: 'en'): 'English'};
+              return const {(isoCode: "ENG", locale: "en"): "English"};
             },
       );
 

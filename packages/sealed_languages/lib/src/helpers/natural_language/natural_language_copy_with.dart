@@ -1,3 +1,5 @@
+import "package:sealed_languages/src/typedefs/typedefs.dart";
+
 import "../../model/language/language.dart";
 import "../../model/language_family/language_family.dart";
 import "../../model/script/writing_system.dart";
@@ -29,6 +31,7 @@ extension NaturalLanguageCopyWith<T extends NaturalLanguage> on T {
     String? name,
     List<String>? namesNative,
     Set<Script>? scripts,
+    LocaleMapFunction<String> Function()? mapper,
   }) => NaturalLanguage(
     name: name ?? this.name,
     codeShort: codeShort ?? this.codeShort,
@@ -38,5 +41,6 @@ extension NaturalLanguageCopyWith<T extends NaturalLanguage> on T {
     family: family ?? this.family,
     isRightToLeft: isRightToLeft ?? this.isRightToLeft,
     scripts: scripts ?? this.scripts,
+    mapper: mapper ?? l10n.mapper,
   );
 }

@@ -36,7 +36,7 @@ void main() => group("$FiatCurrency", () {
     alsoExpect: () => expect(const _FiatCurrencyTest().codeNumeric, isEmpty),
   );
 
-  group('some currencies should be fully translated', () {
+  group("some currencies should be fully translated", () {
     /// This is a comprehensive list of languages that ensure the availability of
     /// translations for every language in the natural language `list`.
     ///
@@ -165,7 +165,7 @@ void main() => group("$FiatCurrency", () {
     final langs = <NaturalLanguage>{};
 
     for (final language in kSealedCurrenciesSupportedLanguages) {
-      test('${language.internationalName} should have all translations', () {
+      test("${language.internationalName} should have all translations", () {
         final translation = FiatCurrency.list.commonNamesMap(
           options: LocaleMappingOptions(mainLocale: BasicLocale(language)),
         );
@@ -175,13 +175,13 @@ void main() => group("$FiatCurrency", () {
           greaterThanOrEqualTo(FiatCurrency.list.length),
           reason:
               'Language "${language.internationalName}" is expected to have '
-              'full translations for all ${FiatCurrency.list.length} langs.',
+              "full translations for all ${FiatCurrency.list.length} langs.",
         );
       });
     }
 
     test(
-      'should be equal',
+      "should be equal",
       () => expect(langs, containsAll(kSealedCurrenciesSupportedLanguages)),
     );
   });

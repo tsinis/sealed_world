@@ -6,7 +6,7 @@ import "package:sealed_languages/src/model/language/language.dart";
 import "package:test/test.dart";
 
 void main() => group("IsoTranslatedIterableExtension", () {
-  group('some languages should be fully translated', () {
+  group("some languages should be fully translated", () {
     /// This is a comprehensive list of languages that ensure the availability of
     /// translations for every language in the natural language `list`.
     ///
@@ -116,7 +116,7 @@ void main() => group("IsoTranslatedIterableExtension", () {
     final langs = <NaturalLanguage>{};
 
     for (final lang in kSealedLanguagesSupportedLanguages) {
-      test('${lang.internationalName} should have all translations', () {
+      test("${lang.internationalName} should have all translations", () {
         final translation = NaturalLanguage.list.commonNamesMap(
           options: LocaleMappingOptions(mainLocale: BasicLocale(lang)),
         );
@@ -126,13 +126,13 @@ void main() => group("IsoTranslatedIterableExtension", () {
           greaterThanOrEqualTo(NaturalLanguage.list.length),
           reason:
               'Language "${lang.internationalName}" is expected to have '
-              'full translations for all ${NaturalLanguage.list.length} langs.',
+              "full translations for all ${NaturalLanguage.list.length} langs.",
         );
       });
     }
 
     test(
-      'should be equal',
+      "should be equal",
       () => expect(langs, containsAll(kSealedLanguagesSupportedLanguages)),
     );
   });
