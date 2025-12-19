@@ -1,7 +1,5 @@
 index_generator:
   exclude:
-    # Code-gen part-of exports:
-    - "**.g.dart"
     # Sealed class part-of exports:
     - "**/model/geo/subregion.dart"
     - "**/regional_bloc/regional_bloc.dart"

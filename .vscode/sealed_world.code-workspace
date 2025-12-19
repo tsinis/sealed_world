@@ -57,8 +57,7 @@
     "search.exclude": {
       "**/.git": true,
       "coverage/**": true,
-      "**/coverage/*": true,
-      "**/*.g.dart": true
+      "**/coverage/*": true
     },
     "explorer.confirmDragAndDrop": false,
     "explorer.fileNesting.enabled": true,
@@ -66,8 +65,7 @@
     "explorer.fileNesting.patterns": {
       "pubspec.yaml": ".flutter-plugins, .packages, .dart_tool, .flutter-plugins-dependencies, .metadata, .packages, pubspec.lock, build.yaml, analysis_options.yaml, all_lint_rules.yaml, flutter_*.yaml, icons_launcher.yaml",
       ".gitignore": ".gitattributes, .gitmodules, .gitmessage, .pubignore, .mailmap, .git-blame*",
-      "readme.*": "authors, backers.md, changelog*, citation*, code_of_conduct.md, codeowners, contributing.md, contributors, copying, credits, governance.md, history.md, license*, maintainers, readme*, security.md, sponsors.md",
-      "*.dart": "$(capture).g.dart, $(capture).freezed.dart, $(capture).select.dart, $(capture).config.dart"
+      "readme.*": "authors, backers.md, changelog*, citation*, code_of_conduct.md, codeowners, contributing.md, contributors, copying, credits, governance.md, history.md, license*, maintainers, readme*, security.md, sponsors.md"
     },
     "editor.formatOnPaste": true,
     "editor.formatOnSave": true,
@@ -127,7 +125,6 @@
       ".git", // Ignore the .git directory
       "**/lib/**/*.data.dart",
       "**/lib/**/*.l10n.dart",
-      "**/lib/**/*.g.dart",
       "**/.vscode/sealed_world.code-workspace"
     ],
     "files.readonlyInclude": { "**/*.g.dart": true },
@@ -319,7 +316,7 @@
       },
       {
         "type": "shell",
-        "command": "lcov -r coverage/lcov.info '*/*.g.dart' '*/*.l10n.dart' -o coverage/lcov.info --ignore-errors unused",
+        "command": "lcov -r coverage/lcov.info '*/*.l10n.dart' -o coverage/lcov.info --ignore-errors unused",
         "label": "Remove Generated Files from Coverage",
         "presentation": {
           "reveal": "never",

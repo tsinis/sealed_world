@@ -100,7 +100,7 @@ jobs:
           github-token: ${{ secrets.GITHUB_TOKEN }}
           package-name: ${{ inputs.package_name }}
           folders: ${{ env.relative_path }}
-          exclude: '{"**/example/**/*.dart", "**/*.g.dart"}'
+          exclude: '{"**/example/**/*.dart"}'
           fatal-found: true
           analyze-assets: true
           check-exports-completeness: true
@@ -127,7 +127,7 @@ jobs:
         uses: VeryGoodOpenSource/very_good_coverage@v3.0.0
         with:
           path: ${{ env.relative_path }}/coverage/lcov.info
-          exclude: "**/*.g.dart **/*.data.dart **/*.l10n.dart"
+          exclude: "**/*.data.dart **/*.l10n.dart"
           min_coverage: 99
 
       - name: 💯 Upload coverage

@@ -1,18 +1,4 @@
 analyzer:
-  exclude:
-    # Web
-    - "web/**"
-    # Build
-    - "build/**"
-    # Assets
-    - "assets/**"
-    # Mocks for test
-    - "**/*.mocks.dart"
-    # Coverage
-    - "coverage/**"
-    # Generated code
-    - "**/*.g.dart"
-
   language:
     strict-casts: true
     strict-inference: true
