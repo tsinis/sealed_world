@@ -1,8 +1,7 @@
-import "package:sealed_languages/src/typedefs/typedefs.dart";
-
 import "../../model/language/language.dart";
 import "../../model/language_family/language_family.dart";
 import "../../model/script/writing_system.dart";
+import "../../typedefs/typedefs.dart";
 
 /// Extension on [NaturalLanguage] that provides a `copyWith` method for
 /// creating a new instance of [NaturalLanguage] with updated properties.

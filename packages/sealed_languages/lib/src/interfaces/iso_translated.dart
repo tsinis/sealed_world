@@ -1,8 +1,7 @@
-import 'package:sealed_languages/src/interfaces/iso_standardized.dart';
-import 'package:sealed_languages/src/model/translated_name.dart';
-
-import '../model/core/basic_locale.dart';
-import 'basic_localization_delegate.dart';
+import "../model/core/basic_locale.dart";
+import "../model/translated_name.dart";
+import "basic_localization_delegate.dart";
+import "iso_standardized.dart";
 
 /// An abstract interface class that extends `Translated` and implements
 /// [IsoStandardized].
