@@ -51,6 +51,7 @@ class BsCurrenciesL10N extends IsoLocaleMapper<String> {
       "EGP": "Egipatska funta",
       "ERN": "Eritrejska nakfa",
       "ETB": "Etiopski bir",
+      "EUR": "Euro",
       "FJD": "Fidžijski dolar",
       "FKP": "Folklandska funta",
       "GBP": "Britanska funta",

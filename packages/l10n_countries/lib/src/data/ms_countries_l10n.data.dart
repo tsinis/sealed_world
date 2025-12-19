@@ -240,6 +240,7 @@ class MsCountriesL10N extends IsoLocaleMapper<String> {
       "UGA": "Uganda",
       "UKR": "Ukraine",
       "UMI": "Kepulauan Terpencil A.S.",
+      "UNK": "Kosovo",
       "URY": "Uruguay",
       "USA": "Amerika Syarikat",
       "UZB": "Uzbekistan",

@@ -240,6 +240,7 @@ class UgCountriesL10N extends IsoLocaleMapper<String> {
       "UGA": "ئۇگاندا",
       "UKR": "ئۇكرائىنا",
       "UMI": "ئا ق ش تاشقى ئاراللىرى",
+      "UNK": "كوسوۋو",
       "URY": "ئۇرۇگۋاي",
       "USA": "ئامېرىكا قوشما ئىشتاتلىرى",
       "UZB": "ئۆزبېكىستان",

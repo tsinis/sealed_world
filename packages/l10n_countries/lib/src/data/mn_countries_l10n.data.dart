@@ -240,6 +240,7 @@ class MnCountriesL10N extends IsoLocaleMapper<String> {
       "UGA": "Уганда",
       "UKR": "Украин",
       "UMI": "Америкийн Нэгдсэн Улсын бага арлууд",
+      "UNK": "Косово",
       "URY": "Уругвай",
       "USA": "Америкийн Нэгдсэн Улс",
       "UZB": "Узбекистан",

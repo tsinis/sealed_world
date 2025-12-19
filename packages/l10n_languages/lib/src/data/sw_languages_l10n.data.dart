@@ -175,6 +175,7 @@ class SwLanguagesL10N extends IsoLocaleMapper<String> {
       "TSO": "Kitsonga",
       "TUK": "Kiturukimeni",
       "TUR": "Kituruki",
+      "TWI": "Kitwi",
       "UIG": "Kiuiguri",
       "UKR": "Kiukrania",
       "URD": "Kiurdu",
