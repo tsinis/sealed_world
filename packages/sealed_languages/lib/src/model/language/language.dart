@@ -2,7 +2,6 @@ import "package:l10n_languages/l10n_languages.dart" show LanguagesLocaleMapper;
 
 import "../../collections/natural_language_collections.dart";
 import "../../data/natural_language_families.data.dart";
-import "../../helpers/extensions/iso_comparable_extension.dart";
 import "../../helpers/extensions/iso_object_extension_type.dart";
 import "../../helpers/extensions/sealed_world_iterable_extension.dart";
 import "../../helpers/extensions/upper_case_iso_map_extension.dart";
@@ -204,7 +203,6 @@ part "../../data/languages/zha.data.dart";
 part "../../data/languages/zho.data.dart";
 part "../../data/languages/zul.data.dart";
 part "submodels/natural_language.dart";
-part "submodels/natural_language.g.dart";
 part "submodels/programming_language.dart";
 
 /// A sealed class that represents a language.

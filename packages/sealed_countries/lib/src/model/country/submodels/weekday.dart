@@ -1,7 +1,5 @@
 import "package:sealed_currencies/sealed_currencies.dart";
 
-part "weekday.g.dart";
-
 /// An enum that represents the days of the week.
 ///
 /// The [Weekday] enum is a simple enumeration that represents the days of the

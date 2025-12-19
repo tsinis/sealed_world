@@ -7,8 +7,6 @@ const fiatCurrencyCodeMap = <String, FiatCurrency>{
   "AFN": FiatAfn(),
   "ALL": FiatAll(),
   "AMD": FiatAmd(),
-  "ANG":
-      FiatAng(), // ignore: deprecated_member_use_from_same_package, TODO! End of 2025.
   "AOA": FiatAoa(),
   "ARS": FiatArs(),
   "AUD": FiatAud(),
@@ -17,8 +15,6 @@ const fiatCurrencyCodeMap = <String, FiatCurrency>{
   "BAM": FiatBam(),
   "BBD": FiatBbd(),
   "BDT": FiatBdt(),
-  "BGN":
-      FiatBgn(), // ignore: deprecated_member_use_from_same_package, TODO! End of 2025.
   "BHD": FiatBhd(),
   "BIF": FiatBif(),
   "BMD": FiatBmd(),
@@ -62,8 +58,6 @@ const fiatCurrencyCodeMap = <String, FiatCurrency>{
   "GYD": FiatGyd(),
   "HKD": FiatHkd(),
   "HNL": FiatHnl(),
-  "HRK":
-      FiatHrk(), // ignore: deprecated_member_use_from_same_package, TODO! End of 2025.
   "HTG": FiatHtg(),
   "HUF": FiatHuf(),
   "IDR": FiatIdr(),
@@ -131,14 +125,10 @@ const fiatCurrencyCodeMap = <String, FiatCurrency>{
   "SGD": FiatSgd(),
   "SHP": FiatShp(),
   "SLE": FiatSle(),
-  "SLL":
-      FiatSll(), // ignore: deprecated_member_use_from_same_package, TODO! End of 2025.
   "SOS": FiatSos(),
   "SRD": FiatSrd(),
   "SSP": FiatSsp(),
   "STN": FiatStn(),
-  "SVC":
-      FiatSvc(), // ignore: deprecated_member_use_from_same_package, TODO! End of 2025.
   "SYP": FiatSyp(),
   "SZL": FiatSzl(),
   "THB": FiatThb(),
@@ -168,8 +158,6 @@ const fiatCurrencyCodeMap = <String, FiatCurrency>{
   "ZAR": FiatZar(),
   "ZMW": FiatZmw(),
   "ZWG": FiatZwg(),
-  "ZWL":
-      FiatZwl(), // ignore: deprecated_member_use_from_same_package, TODO! End of 2025.
   // ignore: map-keys-ordering, Special purpose currencies.
   "XAG": FiatXag(),
   "XAU": FiatXau(),
@@ -213,14 +201,10 @@ const fiatCurrencyCodeOtherMap = <String, FiatCurrency>{
   "170": FiatCop(),
   "174": FiatKmf(),
   "188": FiatCrc(),
-  "191":
-      FiatHrk(), // ignore: deprecated_member_use_from_same_package, TODO! End of 2025.
   "192": FiatCup(),
   "203": FiatCzk(),
   "208": FiatDkk(),
   "214": FiatDop(),
-  "222":
-      FiatSvc(), // ignore: deprecated_member_use_from_same_package, TODO! End of 2025.
   "230": FiatEtb(),
   "232": FiatErn(),
   "238": FiatFkp(),
@@ -286,8 +270,6 @@ const fiatCurrencyCodeOtherMap = <String, FiatCurrency>{
   "654": FiatShp(),
   "682": FiatSar(),
   "690": FiatScr(),
-  "694":
-      FiatSll(), // ignore: deprecated_member_use_from_same_package, TODO! End of 2025.
   "702": FiatSgd(),
   "704": FiatVnd(),
   "706": FiatSos(),
@@ -319,8 +301,6 @@ const fiatCurrencyCodeOtherMap = <String, FiatCurrency>{
   "929": FiatMru(),
   "930": FiatStn(),
   "931": FiatCuc(),
-  "932":
-      FiatZwl(), // ignore: deprecated_member_use_from_same_package, TODO! End of 2025.
   "933": FiatByn(),
   "934": FiatTmt(),
   "936": FiatGhs(),
@@ -350,8 +330,6 @@ const fiatCurrencyCodeOtherMap = <String, FiatCurrency>{
   "971": FiatAfn(),
   "972": FiatTjs(),
   "973": FiatAoa(),
-  "975":
-      FiatBgn(), // ignore: deprecated_member_use_from_same_package, TODO! End of 2025.
   "976": FiatCdf(),
   "977": FiatBam(),
   "978": FiatEur(),

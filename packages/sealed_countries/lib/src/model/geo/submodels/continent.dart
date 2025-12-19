@@ -6,8 +6,6 @@ import "../../../data/geo/continental_sections.data.dart";
 import "../../../data/geo/continents.data.dart";
 import "../region.dart";
 
-part "continent.g.dart";
-
 /// A class that represents a continent.
 ///
 /// The [Continent] class is a simple value object that represents a continent.

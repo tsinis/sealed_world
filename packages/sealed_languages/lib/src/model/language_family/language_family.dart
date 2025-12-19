@@ -3,7 +3,6 @@ import "../../helpers/extensions/iso_object_extension_type.dart";
 import "../../interfaces/named.dart";
 
 part "submodels/natural_language_family.dart";
-part "submodels/natural_language_family.g.dart";
 
 /// A sealed class that represents a family of related languages.
 ///

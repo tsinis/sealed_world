@@ -1,9 +1,6 @@
-// ignore_for_file: deprecated_member_use_from_same_package, it's TODO!.
-
 import "package:flutter/material.dart";
 import "package:flutter_test/flutter_test.dart";
 import "package:world_countries/src/extensions/world_country_extension.dart";
-import "package:world_countries/src/models/locale/typed_locale.dart";
 import "package:world_flags/world_flags.dart";
 
 void main() => group("WorldCountryExtension", () {
@@ -27,44 +24,6 @@ void main() => group("WorldCountryExtension", () {
           languageCode: language.codeShort.toLowerCase(),
           scriptCode: scriptCode,
           countryCode: value.codeShort,
-        ),
-      );
-    });
-  });
-
-  group("toIsoLocale", () {
-    test(
-      "should return correct $TypedLocale instance",
-      () => expect(
-        value.toIsoLocale(),
-        TypedLocale(
-          value.languages.first,
-          country: value,
-          script: value.languages.first.scripts.first,
-        ),
-      ),
-    );
-
-    test("should return correct $TypedLocale instance with all properties", () {
-      final convertedLocale = value.toIsoLocale(
-        language: NaturalLanguage.list.first,
-        script: Script.list.first,
-      );
-      expect(
-        convertedLocale,
-        TypedLocale(
-          NaturalLanguage.list.first,
-          country: value,
-          script: Script.list.first,
-        ),
-      );
-
-      expect(
-        convertedLocale,
-        TypedLocale.fromSubtags(
-          language: NaturalLanguage.list.first,
-          country: value,
-          script: Script.list.first,
         ),
       );
     });

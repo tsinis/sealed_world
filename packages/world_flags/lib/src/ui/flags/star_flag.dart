@@ -31,7 +31,6 @@ class StarFlag extends BasicFlag {
     super.decoration,
     super.decorationPosition,
     super.foregroundPainter,
-    super.foregroundWidget,
     super.foregroundWidgetBuilder,
     super.key,
     super.padding,

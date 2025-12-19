@@ -97,7 +97,6 @@ export "src/ui/flags/triangle_flag.dart";
 export "src/ui/iso_flag.dart";
 export "src/ui/painters/basic/custom_elements_painter.dart";
 export "src/ui/painters/basic/elements_painter.dart";
-export "src/ui/painters/basic/flag_test_properties.dart";
 export "src/ui/painters/basic/stripes_painter.dart";
 export "src/ui/painters/common/diagonal_line_painter.dart";
 export "src/ui/painters/common/ellipse_painter.dart";
@@ -543,8 +542,6 @@ const uniqueSimplifiedFlagsMap = <WorldCountry, BasicFlag>{
 /// final usaFlag = smallSimplifiedFlagsMap[const CountryUsa()];
 /// ```
 const smallSimplifiedFlagsMap = <WorldCountry, BasicFlag>{
-  // ignore: deprecated_member_use_from_same_package, TODO: for the next release
-  CountryAfg(): EllipseFlag(flagAfgProperties),
   ...uniqueSimplifiedFlagsMap,
   CountryGuf(): BasicFlag(flagGufProperties),
 };

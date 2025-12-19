@@ -18,10 +18,6 @@ import "locale/typed_locale.dart";
 /// ```
 typedef LocaleEntry = MapEntry<Locale, TypedLocale>;
 
-/// A typedef representing an [TypedLocale].
-@Deprecated("Please use `TypedLocale` instead.")
-typedef IsoLocale = TypedLocale;
-
 /// A typedef representing a [Map] of translations for [IsoTranslated] items.
 typedef TranslationMap<T extends IsoTranslated> = Map<T, String>;
 

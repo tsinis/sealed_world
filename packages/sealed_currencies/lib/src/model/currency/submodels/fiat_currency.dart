@@ -110,9 +110,6 @@ class FiatCurrency extends Currency
   /// {@macro sealed_world.currency_amd_constructor}
   const factory FiatCurrency.amd() = _AmdFactory;
 
-  /// {@macro sealed_world.currency_ang_constructor}
-  const factory FiatCurrency.ang() = _AngFactory;
-
   /// {@macro sealed_world.currency_aoa_constructor}
   const factory FiatCurrency.aoa() = _AoaFactory;
 
@@ -136,9 +133,6 @@ class FiatCurrency extends Currency
 
   /// {@macro sealed_world.currency_bdt_constructor}
   const factory FiatCurrency.bdt() = _BdtFactory;
-
-  /// {@macro sealed_world.currency_bgn_constructor}
-  const factory FiatCurrency.bgn() = _BgnFactory;
 
   /// {@macro sealed_world.currency_bhd_constructor}
   const factory FiatCurrency.bhd() = _BhdFactory;
@@ -268,9 +262,6 @@ class FiatCurrency extends Currency
 
   /// {@macro sealed_world.currency_hnl_constructor}
   const factory FiatCurrency.hnl() = _HnlFactory;
-
-  /// {@macro sealed_world.currency_hrk_constructor}
-  const factory FiatCurrency.hrk() = _HrkFactory;
 
   /// {@macro sealed_world.currency_htg_constructor}
   const factory FiatCurrency.htg() = _HtgFactory;
@@ -473,9 +464,6 @@ class FiatCurrency extends Currency
   /// {@macro sealed_world.currency_sle_constructor}
   const factory FiatCurrency.sle() = _SleFactory;
 
-  /// {@macro sealed_world.currency_sll_constructor}
-  const factory FiatCurrency.sll() = _SllFactory;
-
   /// {@macro sealed_world.currency_sos_constructor}
   const factory FiatCurrency.sos() = _SosFactory;
 
@@ -487,9 +475,6 @@ class FiatCurrency extends Currency
 
   /// {@macro sealed_world.currency_stn_constructor}
   const factory FiatCurrency.stn() = _StnFactory;
-
-  /// {@macro sealed_world.currency_svc_constructor}
-  const factory FiatCurrency.svc() = _SvcFactory;
 
   /// {@macro sealed_world.currency_syp_constructor}
   const factory FiatCurrency.syp() = _SypFactory;
@@ -578,9 +563,6 @@ class FiatCurrency extends Currency
 
   /// {@macro sealed_world.currency_zwg_constructor}
   const factory FiatCurrency.zwg() = _ZwgFactory;
-
-  /// {@macro sealed_world.currency_zwl_constructor}
-  const factory FiatCurrency.zwl() = _ZwlFactory;
 
   /// {@macro sealed_world.currency_xag_constructor}
   const factory FiatCurrency.xag() = _XagFactory;
@@ -817,7 +799,6 @@ class FiatCurrency extends Currency
     FiatAfn(),
     FiatAll(),
     FiatAmd(),
-    FiatAng(), // ignore: deprecated_member_use_from_same_package, TODO! End of 2025.
     FiatAoa(),
     FiatArs(),
     FiatAud(),
@@ -826,7 +807,6 @@ class FiatCurrency extends Currency
     FiatBam(),
     FiatBbd(),
     FiatBdt(),
-    FiatBgn(), // ignore: deprecated_member_use_from_same_package, TODO! End of 2025.
     FiatBhd(),
     FiatBif(),
     FiatBmd(),
@@ -870,7 +850,6 @@ class FiatCurrency extends Currency
     FiatGyd(),
     FiatHkd(),
     FiatHnl(),
-    FiatHrk(), // ignore: deprecated_member_use_from_same_package, TODO! End of 2025.
     FiatHtg(),
     FiatHuf(),
     FiatIdr(),
@@ -938,12 +917,10 @@ class FiatCurrency extends Currency
     FiatSgd(),
     FiatShp(),
     FiatSle(),
-    FiatSll(), // ignore: deprecated_member_use_from_same_package, TODO! End of 2025.
     FiatSos(),
     FiatSrd(),
     FiatSsp(),
     FiatStn(),
-    FiatSvc(), // ignore: deprecated_member_use_from_same_package, TODO! End of 2025.
     FiatSyp(),
     FiatSzl(),
     FiatThb(),
@@ -973,7 +950,6 @@ class FiatCurrency extends Currency
     FiatZar(),
     FiatZmw(),
     FiatZwg(),
-    FiatZwl(), // ignore: deprecated_member_use_from_same_package, TODO! End of 2025.
   ];
 
   /// A list of all currencies currently supported by the

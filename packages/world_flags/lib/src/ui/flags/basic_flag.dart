@@ -48,14 +48,13 @@ class BasicFlag extends DecoratedFlagWidget {
     this.elementsBuilder,
     this.foregroundPainter,
     this.foregroundPainterBuilder,
-    @Deprecated("Use `child` instead") Widget? foregroundWidget,
     this.foregroundWidgetBuilder,
     super.padding,
     super.height,
     super.width,
-    Widget? child,
+    super.child,
     super.key,
-  }) : super(child: child ?? foregroundWidget);
+  });
 
   /// The properties of the flag.
   final FlagProperties properties;
@@ -74,10 +73,6 @@ class BasicFlag extends DecoratedFlagWidget {
 
   /// A builder for the foreground painter.
   final FlagPainterBuilder? foregroundPainterBuilder;
-
-  @Deprecated("Use `child` instead")
-  /// A widget to display in the foreground of the flag.
-  Widget? get foregroundWidget => child;
 
   /// The original aspect ratio of the flag.
   double get flagAspectRatio => properties.aspectRatio;

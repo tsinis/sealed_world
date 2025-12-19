@@ -274,7 +274,6 @@ part "../../data/countries/zaf.data.dart";
 part "../../data/countries/zmb.data.dart";
 part "../../data/countries/zwe.data.dart";
 part "submodels/world_country.dart";
-part "submodels/world_country.g.dart";
 
 /// A sealed class representing a country.
 sealed class Country implements Named<CountryName> {

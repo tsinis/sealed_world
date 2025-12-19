@@ -5,7 +5,6 @@ import "package:flutter/rendering.dart";
 import "../../../helpers/extensions/box_decoration_extension.dart";
 import "../../../model/flag_properties.dart";
 import "../../../model/stripe_orientation.dart";
-import "flag_test_properties.dart";
 
 /// A custom painter that draws stripes on a flag.
 ///
@@ -67,12 +66,9 @@ class StripesPainter<T extends CustomPainter> extends CustomPainter {
       final radius = size.height / 2;
       final circle = Rect.fromCircle(center: rect.center, radius: radius);
       final rRect = RRect.fromRectAndRadius(circle, Radius.circular(radius));
-      // ignore: deprecated_member_use_from_same_package, it's TODO!
-      canvas.clipRRect(rRect, doAntiAlias: flagAntiAliasOverride);
+      canvas.clipRRect(rRect);
     } else if (borderRadius != BorderRadius.zero) {
-      final rad = borderRadius.resolve(TextDirection.ltr);
-      // ignore: deprecated_member_use_from_same_package, it's TODO!
-      canvas.clipRRect(rad.toRRect(rect), doAntiAlias: flagAntiAliasOverride);
+      canvas.clipRRect(borderRadius.resolve(TextDirection.ltr).toRRect(rect));
     } else {
       canvas.clipRect(rect, doAntiAlias: false); // Straight rectangle.
     }

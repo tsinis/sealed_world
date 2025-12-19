@@ -1,5 +1,4 @@
 import "../../collections/script_collections.dart";
-import "../../helpers/extensions/iso_comparable_extension.dart";
 import "../../helpers/extensions/iso_object_extension_type.dart";
 import "../../helpers/extensions/sealed_world_iterable_extension.dart";
 import "../../helpers/extensions/upper_case_iso_map_extension.dart";
@@ -223,7 +222,6 @@ part "../../data/scripts/zxxx.data.dart";
 part "../../data/scripts/zyyy.data.dart";
 part "../../data/scripts/zzzz.data.dart";
 part "submodels/script.dart";
-part "submodels/script.g.dart";
 
 /// A sealed class that represents a writing system.
 ///

@@ -50,8 +50,7 @@ class CountrySxm extends WorldCountry {
         hasCoatOfArms: false,
       );
   @override
-  // ignore: deprecated_member_use, it's TODO!
-  List<FiatCurrency> get currencies => const [FiatXcg(), FiatAng()];
+  List<FiatCurrency> get currencies => const [FiatXcg()];
   @override
   CapitalInfo get capitalInfo => const CapitalInfo(
     capital: Capital("Philipsburg"),

@@ -237,13 +237,7 @@ void main() => group("$FiatCurrency", () {
       performanceTest("of $FiatCurrency: ${element.name}", () {
         expect(FiatCurrency.map[element.code], element);
         expect(FiatCurrency.codeMap[element.code], element);
-        expect(
-          FiatCurrency.codeNumericMap[element.codeNumeric],
-          element,
-          // ignore: deprecated_member_use_from_same_package, it's TODO!
-          skip: element == const FiatAng(),
-          reason: "XCG reuses same numeric code as ANG",
-        );
+        expect(FiatCurrency.codeNumericMap[element.codeNumeric], element);
       });
     }
   });

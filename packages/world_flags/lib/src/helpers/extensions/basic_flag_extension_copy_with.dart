@@ -43,7 +43,6 @@ extension BasicFlagExtensionCopyWith<T extends BasicFlag> on T {
     FlagPainterBuilder? elementsBuilder,
     CustomPainter? backgroundPainter,
     CustomPainter? foregroundPainter,
-    @Deprecated("Use `child` instead") Widget? foregroundWidget,
     FlagPainterBuilder? foregroundPainterBuilder,
     FlagWidgetBuilder? foregroundWidgetBuilder,
     double? height,
@@ -66,6 +65,6 @@ extension BasicFlagExtensionCopyWith<T extends BasicFlag> on T {
     height: height ?? this.height,
     width: width ?? this.width,
     key: key ?? this.key,
-    child: child ?? foregroundWidget ?? this.child,
+    child: child ?? this.child,
   );
 }
