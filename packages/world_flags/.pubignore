@@ -5,4 +5,5 @@ example/macos/**
 example/windows/**
 example/linux/**
 example/.vscode/**
+example/.fvmrc
 doc/example.gif
