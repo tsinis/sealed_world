@@ -36,6 +36,156 @@ void main() => group("$FiatCurrency", () {
     alsoExpect: () => expect(const _FiatCurrencyTest().codeNumeric, isEmpty),
   );
 
+  group('some currencies should be fully translated', () {
+    /// This is a comprehensive list of languages that ensure the availability of
+    /// translations for every language in the natural language `list`.
+    ///
+    /// It is important to note that while other languages may not be included in
+    /// this list, they may still have translations available for the most common
+    /// languages, but there may be some missing translations for rarer languages.
+    /// Every language contains more than 85 translations of it's name.
+    ///
+    /// Includes all the Material localizations in [kMaterialSupportedLanguages](https://api.flutter.dev/flutter/flutter_localizations/kMaterialSupportedLanguages.html)
+    /// with a two letter code and much more (for example on top of that it also
+    /// provides translations for the following languages):
+    /// - Breton (BRE)
+    /// - Irish (GLE)
+    /// - Kashmiri (KAS)
+    /// - Norwegian Nynorsk (NNO)
+    /// - Romansh (ROH)
+    /// - Tonga (TON)
+    /// - Uyghur (UIG)
+    /// That are not listed in Material one, and much more.
+
+    /// This is a comprehensive list of currencies that ensure the availability of
+    /// translations for every language in the currencies `list`.
+    ///
+    /// It is important to note that while other languages may not be included in
+    /// this list, they may still have translations available for most common
+    /// currencies, but there may be some missing translations for rarer languages.
+    /// Every currency contains more than 79 translations of it's name.
+    ///
+    /// Includes all the Material localizations in [kMaterialSupportedLanguages](https://api.flutter.dev/flutter/flutter_localizations/kMaterialSupportedLanguages.html)
+    /// with a two letter code and much more (for example on top of that it also
+    /// provides translations for the following languages:
+    /// - Breton (BRE)
+    /// - Western Frisian (FRY)
+    /// - (Scottish) Gaelic (GLA)
+    /// - Irish (GLE)
+    /// - Luxembourgish (Letzeburgesch) (LTZ)
+    /// That are not listed in Material one, and much more.
+    const kSealedCurrenciesSupportedLanguages = <NaturalLanguage>[
+      LangAfr(),
+      LangAmh(),
+      LangAra(),
+      LangAsm(),
+      LangAze(),
+      LangBel(),
+      LangBen(),
+      LangBos(),
+      LangBre(),
+      LangBul(),
+      LangCat(),
+      LangCes(),
+      LangCym(),
+      LangDan(),
+      LangDeu(),
+      LangEll(),
+      LangEng(),
+      LangEst(),
+      LangEus(),
+      LangFas(),
+      LangFin(),
+      LangFra(),
+      LangFry(),
+      LangGla(),
+      LangGle(),
+      LangGlg(),
+      LangGuj(),
+      LangHeb(),
+      LangHin(),
+      LangHrv(),
+      LangHun(),
+      LangHye(),
+      LangInd(),
+      LangIsl(),
+      LangIta(),
+      LangJpn(),
+      LangKan(),
+      LangKat(),
+      LangKaz(),
+      LangKhm(),
+      LangKir(),
+      LangKor(),
+      LangLao(),
+      LangLav(),
+      LangLit(),
+      LangLtz(),
+      LangMal(),
+      LangMar(),
+      LangMkd(),
+      LangMon(),
+      LangMsa(),
+      LangMya(),
+      LangNep(),
+      LangNld(),
+      LangNno(),
+      LangNob(),
+      LangNor(),
+      LangOri(),
+      LangPan(),
+      LangPol(),
+      LangPor(),
+      LangPus(),
+      LangRoh(),
+      LangRon(),
+      LangRus(),
+      LangSin(),
+      LangSlk(),
+      LangSlv(),
+      LangSpa(),
+      LangSqi(),
+      LangSrp(),
+      LangSwa(),
+      LangSwe(),
+      LangTam(),
+      LangTel(),
+      LangTgl(),
+      LangTha(),
+      LangTur(),
+      LangUig(),
+      LangUkr(),
+      LangUrd(),
+      LangUzb(),
+      LangVie(),
+      LangZho(),
+      LangZul(),
+    ];
+
+    final langs = <NaturalLanguage>{};
+
+    for (final language in kSealedCurrenciesSupportedLanguages) {
+      test('${language.internationalName} should have all translations', () {
+        final translation = FiatCurrency.list.commonNamesMap(
+          options: LocaleMappingOptions(mainLocale: BasicLocale(language)),
+        );
+        if (translation.length == FiatCurrency.list.length) langs.add(language);
+        expect(
+          translation.length,
+          greaterThanOrEqualTo(FiatCurrency.list.length),
+          reason:
+              'Language "${language.internationalName}" is expected to have '
+              'full translations for all ${FiatCurrency.list.length} langs.',
+        );
+      });
+    }
+
+    test(
+      'should be equal',
+      () => expect(langs, containsAll(kSealedCurrenciesSupportedLanguages)),
+    );
+  });
+
   group("fields", () {
     for (final element in FiatCurrency.list) {
       test("of $FiatCurrency: ${element.name}", () {

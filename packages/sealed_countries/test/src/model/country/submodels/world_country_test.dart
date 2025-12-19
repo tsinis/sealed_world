@@ -38,6 +38,191 @@ void main() => group("$WorldCountry", () {
 
   test("compareTo", () => expect(value.compareTo(array.first), isNot(isZero)));
 
+  group('some countries should be fully translated', () {
+    /// This is a comprehensive list of countries that ensure the availability of
+    /// translations for every language in the countries `list`.
+    ///
+    /// It is important to note that while other languages may not be included in
+    /// this list, they may still have translations available for most common
+    /// countries, but there may be some missing translations for rarer languages.
+    /// Every country contains more than 114 translations of it's name.
+    ///
+    /// Includes all the Material localizations in [kMaterialSupportedLanguages](https://api.flutter.dev/flutter/flutter_localizations/kMaterialSupportedLanguages.html)
+    /// with a two letter code and much more (for example on top of that it also
+    /// provides translations for the following languages):
+    /// - Abkhaz (ABK)
+    /// - Aragonese (ARG)
+    /// - Breton (BRE)
+    /// - Chechen (CHE)
+    /// - Chuvash (CHV)
+    /// - Dzongkha (DZO)
+    /// - Esperanto (EPO)
+    /// - Ewe (EWE)
+    /// - Faroese (FAO)
+    /// - Western Frisian (FRY)
+    /// - Fula (Fulah/Pulaar/Pular) (FUL)
+    /// - (Scottish) Gaelic (GLA)
+    /// - Irish (GLE)
+    /// - Hausa (HAU)
+    /// - Igbo (IBO)
+    /// - Interlingue (ILE)
+    /// - Interlingua (INA)
+    /// - Javanese (JAV)
+    /// - Kashmiri (KAS)
+    /// - Luxembourgish (Letzeburgesch) (LTZ)
+    /// - Maltese (MLT)
+    /// - Māori (MRI)
+    /// - Occitan (OCI)
+    /// - Quechua (QUE)
+    /// - Romansh (ROH)
+    /// - Sindhi (SND)
+    /// - Somali (SOM)
+    /// - Sardinian (SRD)
+    /// - Tigrinya (TIR)
+    /// - Tonga (Tonga Islands) (TON)
+    /// - Turkmen (TUK)
+    /// - Uyghur (UIG)
+    /// - Xhosa (XHO)
+    /// - Yoruba (YOR)
+    /// That are not listed in Material one, and much more.
+    const kSealedCountriesSupportedLanguages = <NaturalLanguage>[
+      LangAbk(),
+      LangAfr(),
+      LangAmh(),
+      LangAra(),
+      LangArg(),
+      LangAsm(),
+      LangAze(),
+      LangBel(),
+      LangBen(),
+      LangBos(),
+      LangBre(),
+      LangBul(),
+      LangCat(),
+      LangCes(),
+      LangChe(),
+      LangChv(),
+      LangCym(),
+      LangDan(),
+      LangDeu(),
+      LangDzo(),
+      LangEll(),
+      LangEng(),
+      LangEpo(),
+      LangEst(),
+      LangEus(),
+      LangEwe(),
+      LangFao(),
+      LangFas(),
+      LangFin(),
+      LangFra(),
+      LangFry(),
+      LangFul(),
+      LangGla(),
+      LangGle(),
+      LangGlg(),
+      LangGuj(),
+      LangHau(),
+      LangHeb(),
+      LangHin(),
+      LangHrv(),
+      LangHun(),
+      LangHye(),
+      LangIbo(),
+      LangIle(),
+      LangIna(),
+      LangInd(),
+      LangIsl(),
+      LangIta(),
+      LangJav(),
+      LangJpn(),
+      LangKan(),
+      LangKas(),
+      LangKat(),
+      LangKaz(),
+      LangKhm(),
+      LangKir(),
+      LangKor(),
+      LangLao(),
+      LangLav(),
+      LangLit(),
+      LangLtz(),
+      LangMal(),
+      LangMar(),
+      LangMkd(),
+      LangMlt(),
+      LangMon(),
+      LangMri(),
+      LangMsa(),
+      LangMya(),
+      LangNep(),
+      LangNld(),
+      LangNob(),
+      LangNor(),
+      LangOci(),
+      LangOri(),
+      LangPan(),
+      LangPol(),
+      LangPor(),
+      LangPus(),
+      LangQue(),
+      LangRoh(),
+      LangRon(),
+      LangRus(),
+      LangSin(),
+      LangSlk(),
+      LangSlv(),
+      LangSnd(),
+      LangSom(),
+      LangSpa(),
+      LangSqi(),
+      LangSrd(),
+      LangSrp(),
+      LangSwa(),
+      LangSwe(),
+      LangTam(),
+      LangTel(),
+      LangTgl(),
+      LangTha(),
+      LangTir(),
+      LangTon(),
+      LangTuk(),
+      LangTur(),
+      LangUig(),
+      LangUkr(),
+      LangUrd(),
+      LangUzb(),
+      LangVie(),
+      LangXho(),
+      LangYor(),
+      LangZho(),
+      LangZul(),
+    ];
+
+    final langs = <NaturalLanguage>{};
+
+    for (final language in kSealedCountriesSupportedLanguages) {
+      test('${language.internationalName} should have all translations', () {
+        final translation = WorldCountry.list.commonNamesMap(
+          options: LocaleMappingOptions(mainLocale: BasicTypedLocale(language)),
+        );
+        if (translation.length == WorldCountry.list.length) langs.add(language);
+        expect(
+          translation.length,
+          greaterThanOrEqualTo(WorldCountry.list.length),
+          reason:
+              'Language "${language.internationalName}" is expected to have '
+              'full translations for all ${WorldCountry.list.length} countries',
+        );
+      });
+    }
+
+    test(
+      'should be equal',
+      () => expect(langs, containsAll(kSealedCountriesSupportedLanguages)),
+    );
+  });
+
   group("fields", () {
     final officialCountries = WorldCountry.list.where(
       (country) => country.isOfficiallyAssigned,
