@@ -33,10 +33,10 @@ void main() => group("$LanguagePicker", () {
     "builder from theme",
     (tester) async => tester.testPickerBody(
       const LanguagePicker(),
-      (item) => item.translations.first.common,
+      (item) => item.namesNative.first,
       theme: LanguageTileThemeData(
         builder: (properties, {isDense}) =>
-            Text(properties.item.translations.first.common),
+            Text(properties.item.namesNative.first),
       ),
     ),
   );

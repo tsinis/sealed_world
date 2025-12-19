@@ -36,10 +36,10 @@ void main() => group("$CountryPicker", () {
     "builder from theme",
     (tester) async => tester.testPickerBody(
       const CountryPicker(),
-      (item) => item.translations.first.common,
+      (item) => item.namesNative.first.common,
       theme: CountryTileThemeData(
         builder: (properties, {isDense}) =>
-            Text(properties.item.translations.first.common),
+            Text(properties.item.namesNative.first.common),
       ),
     ),
   );

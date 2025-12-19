@@ -34,10 +34,10 @@ void main() => group("$PhoneCodePicker", () {
     "builder from theme",
     (tester) async => tester.testPickerBody(
       const PhoneCodePicker(),
-      (item) => item.translations.first.common,
+      (item) => item.namesNative.first.common,
       theme: CountryTileThemeData(
         builder: (properties, {isDense}) =>
-            Text(properties.item.translations.first.common),
+            Text(properties.item.namesNative.first.common),
       ),
     ),
   );
