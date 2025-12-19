@@ -262,11 +262,21 @@
         "group": "build",
         "label": "Dart Build Runner"
       },
-      { "type": "shell", "command": "dart test", "label": "Dart Test (All)" },
       {
         "type": "shell",
-        "command": "dart test --exclude-tags generated --fail-fast --coverage=coverage",
-        "label": "Dart Test (Exclude Generated)"
+        "command": "dart test --timeout=1ms",
+        "label": "Dart Test (All)"
+      },
+      {
+        "type": "shell",
+        "command": "rm -rf coverage",
+        "label": "Remove Coverage Directory",
+        "problemMatcher": []
+      },
+      {
+        "type": "shell",
+        "command": "dart test --timeout=1ms --fail-fast --coverage=coverage",
+        "label": "Dart Test (Coverage)"
       },
       {
         "type": "shell",
@@ -347,7 +357,8 @@
         "label": "Update Dart Coverage",
         "dependsOrder": "sequence",
         "dependsOn": [
-          "Dart Test (Exclude Generated)",
+          "Remove Coverage Directory",
+          "Dart Test (Coverage)",
           "Format Dart Coverage",
           "Generate Coverage"
         ],
@@ -365,7 +376,7 @@
         "dependsOrder": "sequence",
         "dependsOn": [
           "Dart Pub Get",
-          "Dart Test (Exclude Generated)",
+          "Dart Test (Coverage)",
           "Dart Format",
           "Dart Analyze",
           "Dart Code Metrics Analyze",

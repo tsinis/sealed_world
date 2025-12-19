@@ -116,7 +116,7 @@ jobs:
       - name: 🧪 Run Dart tests
         if: ${{ !inputs.is_flutter }}
         run: |
-          dart test test/src --fail-fast --coverage=coverage
+          dart test --timeout=1ms --fail-fast --coverage=coverage
           dart run coverage:format_coverage -c -l -i coverage -o coverage/lcov.info --report-on=lib
 
       - name: 🔬 Run Flutter tests
