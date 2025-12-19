@@ -1,6 +1,3 @@
-// ignore_for_file: prefer-explicit-type-arguments
-// ignore_for_file: deprecated_member_use_from_same_package, it's TODO!
-
 import "package:sealed_countries/src/helpers/extensions/iso_standardized_world_country_extension.dart";
 import "package:sealed_countries/src/model/country/country.dart";
 import "package:sealed_currencies/sealed_currencies.dart";
@@ -11,23 +8,6 @@ void main() => group("IsoStandardizedWorldCountryExtension", () {
   const IsoStandardized? nullValue = null;
   const script = ScriptLatn();
   const country = CountryAbw();
-
-  group("isWorldCountry", () {
-    test(
-      "returns true for $WorldCountry instances",
-      () => expect(country.isWorldCountry, isTrue),
-    );
-
-    test(
-      "returns false for $Script instances",
-      () => expect(script.isWorldCountry, isFalse),
-    );
-
-    test(
-      "returns false for null values",
-      () => expect(nullValue.isWorldCountry, isFalse),
-    );
-  });
 
   group("mapWhenOrNull", () {
     test("returns correct value for $WorldCountry", () {
@@ -73,7 +53,7 @@ void main() => group("IsoStandardizedWorldCountryExtension", () {
     });
 
     test("returns null if no matching callback is provided", () {
-      expect(country.mapWhenOrNull(), isNull);
+      expect(country.mapWhenOrNull<Never>(), isNull);
       expect(script.mapWhenOrNull(language: (_) => "fail"), isNull);
     });
 

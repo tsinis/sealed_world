@@ -16,8 +16,7 @@ class CountryUnk extends WorldCountry {
   const factory CountryUnk() = _UnkFactory;
 
   const CountryUnk._()
-    // ignore: deprecated_member_use_from_same_package, it's TODO!
-    : super.permissive(
+    : super.custom(
         name: const CountryName(
           language: LangEng(),
           official: "Republic of Kosovo",

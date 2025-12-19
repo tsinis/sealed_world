@@ -56,7 +56,6 @@ extension WorldCountryJson on WorldCountry {
     "subregion": subregion?.name,
     "timezones": timezones,
     "tld": tld,
-    "translations": translations.map((t) => t.toMap()).toList(growable: false),
     "unMember": unMember,
   };
 
@@ -84,12 +83,6 @@ extension WorldCountryJson on WorldCountry {
     population: map["population"] as int,
     timezones: List<String>.unmodifiable(map["timezones"] as List),
     tld: List<String>.unmodifiable(map["tld"] as List),
-    // ignore: deprecated_member_use_from_same_package, waits for removal.
-    translations: List<TranslatedName>.unmodifiable(
-      (map["translations"] as List).map(
-        (l10n) => TranslatedNameExtension.fromMap(l10n as JsonMap),
-      ),
-    ),
     demonyms: List<Demonyms>.unmodifiable(
       (map["demonyms"] as List).map(
         (d) => DemonymsExtension.fromMap(d as JsonMap),

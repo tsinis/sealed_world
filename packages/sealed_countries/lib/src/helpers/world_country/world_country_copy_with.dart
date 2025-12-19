@@ -36,7 +36,6 @@ extension WorldCountryCopyWith<T extends WorldCountry> on T {
     Continent? continent,
     SubRegion? subregion,
     List<NaturalLanguage>? languages,
-    Iterable<TranslatedName>? translations,
     LatLng? latLng,
     bool? landlocked,
     List<String>? bordersCodes,
@@ -54,6 +53,7 @@ extension WorldCountryCopyWith<T extends WorldCountry> on T {
     CapitalInfo? capitalInfo,
     PostalCode? postalCode,
     List<RegionalBloc>? regionalBlocs,
+    LocaleMapFunction<String> Function()? mapper,
   }) => WorldCountry(
     name: name ?? this.name,
     altSpellings: altSpellings ?? this.altSpellings,
@@ -71,8 +71,7 @@ extension WorldCountryCopyWith<T extends WorldCountry> on T {
     population: population ?? this.population,
     timezones: timezones ?? this.timezones,
     tld: tld ?? this.tld,
-    // ignore: deprecated_member_use_from_same_package, param is deprecated.
-    translations: List.unmodifiable(translations ?? this.translations),
+    mapper: mapper ?? this.l10n.mapper,
     demonyms: demonyms ?? this.demonyms,
     currencies: currencies ?? this.currencies,
     capitalInfo: capitalInfo ?? this.capitalInfo,

@@ -72,8 +72,7 @@ class WorldCountry extends Country
     List<Demonyms>? demonyms,
     List<NaturalLanguage>? languages,
     List<CountryName>? namesNative,
-    @Deprecated("Translations are now provided via `l10n`")
-    List<TranslatedName>? translations,
+    LocaleMapFunction<String> Function()? mapper,
   }) : assert(
          code.length == IsoStandardized.codeLength,
          """`code` should be exactly ${IsoStandardized.codeLength} characters long!""",
@@ -109,7 +108,7 @@ class WorldCountry extends Country
        _namesNative = namesNative,
        _demonyms = demonyms,
        _languages = languages,
-       _translations = translations;
+       _mapper = mapper;
 
   /// {@macro sealed_world.country_abw_constructor}
   const factory WorldCountry.abw() = _AbwFactory;
@@ -863,11 +862,7 @@ class WorldCountry extends Country
 
   /// {@macro permissive_constructor}
   /// {@macro country_constructor}
-  @Deprecated(
-    "Use concrete instance and `copyWith` method instead, this "
-    "constructor will be renamed to `custom` in future versions.",
-  )
-  const WorldCountry.permissive({
+  const WorldCountry.custom({
     required super.name,
     required this.code,
     this.altSpellings = const [],
@@ -900,11 +895,11 @@ class WorldCountry extends Country
     List<Demonyms> demonyms = const [],
     List<NaturalLanguage>? languages,
     List<CountryName> namesNative = const [],
-    List<TranslatedName>? translations,
+    LocaleMapFunction<String> Function()? mapper,
   }) : _namesNative = namesNative,
        _demonyms = demonyms,
        _languages = languages,
-       _translations = translations;
+       _mapper = mapper;
 
   /// Returns an [WorldCountry] object from the given [code]
   /// ISO 3166-1 Alpha-3 code.
@@ -1108,12 +1103,9 @@ class WorldCountry extends Country
   List<Demonyms> get demonyms => _demonyms ?? const [];
 
   @override
-  List<TranslatedName> get translations =>
-      _translations ?? l10n.translatedNames({this});
-
-  @override
-  TypedLocalizationDelegate get l10n =>
-      TypedLocalizationDelegate(mapper: () => CountriesLocaleMapper().localize);
+  TypedLocalizationDelegate get l10n => TypedLocalizationDelegate(
+    mapper: _mapper ?? () => CountriesLocaleMapper().localize,
+  );
 
   @override
   String toString({bool short = true}) => short
@@ -1613,5 +1605,6 @@ class WorldCountry extends Country
   final List<Demonyms>? _demonyms;
   final List<NaturalLanguage>? _languages;
   final List<CountryName>? _namesNative;
-  final List<TranslatedName>? _translations;
+  // ignore: prefer-correct-callback-field-name, follows delegate naming.
+  final LocaleMapFunction<String> Function()? _mapper; // TODO! Docs.
 }

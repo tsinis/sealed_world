@@ -31,7 +31,6 @@ void main() => group("WorldCountryCopyWith", () {
     expect(element.maps, copy.maps);
     expect(element.emoji, copy.emoji);
     expect(element.latLng, copy.latLng);
-    expect(element.translations, copy.translations);
     expect(element.languages, copy.languages);
     expect(element.continent, copy.continent);
     expect(element.altSpellings, copy.altSpellings);
@@ -66,7 +65,6 @@ void main() => group("WorldCountryCopyWith", () {
     expect(element.maps, copy.maps);
     expect(element.emoji, copy.emoji);
     expect(element.latLng, copy.latLng);
-    expect(element.translations, copy.translations);
     expect(element.languages, copy.languages);
     expect(element.continent, copy.continent);
     expect(element.altSpellings, copy.altSpellings);

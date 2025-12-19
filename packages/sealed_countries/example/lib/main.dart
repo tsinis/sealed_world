@@ -1,4 +1,3 @@
-// ignore_for_file: avoid_print, avoid-non-ascii-symbols, prefer-match-file-name
 import "package:sealed_countries/sealed_countries.dart";
 
 void main() {
