@@ -9,11 +9,11 @@ issue_tracker: https://github.com/tsinis/sealed_world/issues
 resolution: workspace
 
 environment:
-  sdk: ^3.9.2
+  sdk: ^3.10.4
 
 dependencies:
-  meta: ^1.16.0 # Specific version for the flags package. From Google
-  test: ^1.25.15 # Specific version for the flags package. From Google
+  meta: any # Constrained in the workspace pubspec.yaml
+  test: any # Constrained in the workspace pubspec.yaml
 
 dev_dependencies:
   dart_code_metrics_presets: any # Constrained in the workspace pubspec.yaml
