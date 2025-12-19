@@ -392,7 +392,7 @@ void main() => group("$FiatCurrency", () {
     group("without custom array", () {
       performanceTest(
         "with int code",
-        () => expect(FiatCurrency.fromCodeNumeric(932), value),
+        () => expect(FiatCurrency.fromCodeNumeric(924), value),
       );
 
       performanceTest(
