@@ -25,12 +25,6 @@ extension FiatCurrencyJson on FiatCurrency {
     subunitToUnit: map["subunitToUnit"] as int,
     symbol: map["symbol"]?.toString(),
     thousandsSeparator: map["thousandsSeparator"].toString(),
-    // ignore: deprecated_member_use_from_same_package, waits for removal.
-    translations: List.unmodifiable(
-      (map["translations"] as List).map(
-        (l10n) => TranslatedNameExtension.fromMap(l10n as JsonMap),
-      ),
-    ),
     unitFirst: map["unitFirst"] as bool,
   );
 
@@ -50,9 +44,6 @@ extension FiatCurrencyJson on FiatCurrency {
     "subunitToUnit": subunitToUnit,
     "symbol": symbol,
     "thousandsSeparator": thousandsSeparator,
-    "translations": translations
-        .map((l10n) => l10n.toMap())
-        .toList(growable: false),
     "unitFirst": unitFirst,
   };
 }

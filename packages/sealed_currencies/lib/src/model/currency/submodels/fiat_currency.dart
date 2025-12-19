@@ -46,8 +46,7 @@ class FiatCurrency extends Currency
     super.symbol,
     super.decimalMark = dot,
     super.thousandsSeparator = ",",
-    @Deprecated("Translations are now provided via `l10n`")
-    List<TranslatedName>? translations,
+    LocaleMapFunction<String> Function()? mapper,
   }) : assert(
          code.length == IsoStandardized.codeLength,
          """`code` should be exactly ${IsoStandardized.codeLength} characters long!""",
@@ -76,15 +75,11 @@ class FiatCurrency extends Currency
          smallestDenomination >= 0,
          "`smallestDenomination` should not be negative!",
        ),
-       _translations = translations;
+       _mapper = mapper;
 
   /// {@macro permissive_constructor}
   /// {@macro currency_constructor}
-  @Deprecated(
-    "Use concrete instance and `copyWith` method instead, this "
-    "constructor will be renamed to `custom` in future versions.",
-  )
-  const FiatCurrency.permissive({
+  const FiatCurrency.custom({
     required super.code,
     required super.name,
     this.namesNative = const [],
@@ -100,8 +95,8 @@ class FiatCurrency extends Currency
     super.symbol,
     super.decimalMark = dot,
     super.thousandsSeparator = ",",
-    List<TranslatedName>? translations,
-  }) : _translations = translations;
+    LocaleMapFunction<String> Function()? mapper,
+  }) : _mapper = mapper;
 
   /// {@macro sealed_world.currency_aed_constructor}
   const factory FiatCurrency.aed() = _AedFactory;
@@ -749,168 +744,6 @@ class FiatCurrency extends Currency
   /// Default decimal separator for most currencies.
   static const dot = ".";
 
-  /// The international 3-numeric non-empty numeric code as defined by the ISO
-  /// 4217 standard.
-  @override
-  String get codeOther => codeNumeric;
-
-  @override
-  String get internationalName => name;
-
-  @override
-  List<TranslatedName> get translations =>
-      _translations ?? l10n.translatedNames({this});
-
-  @override
-  LocalizationDelegate get l10n =>
-      LocalizationDelegate(mapper: () => CurrenciesLocaleMapper().localize);
-
-  /// Returns a string representation of this instance.
-  @override
-  String toString({bool short = true}) => short
-      ? super.toString()
-      : 'FiatCurrency(code: "$code", name: "$name", '
-            'decimalMark: "$decimalMark", '
-            'thousandsSeparator: "$thousandsSeparator", '
-            '${symbol == null ? '' : 'symbol: r"$symbol", '}'
-            '''${alternateSymbols == null ? '' : 'alternateSymbols: ${jsonEncode(alternateSymbols)}, '}'''
-            '''${disambiguateSymbol == null ? '' : 'disambiguateSymbol: r"$disambiguateSymbol", '}'''
-            '${htmlEntity == null ? '' : 'htmlEntity: r"$htmlEntity", '}'
-            'codeNumeric: "$codeNumeric", '
-            "namesNative: ${jsonEncode(namesNative)}, "
-            "priority: $priority, smallestDenomination: $smallestDenomination, "
-            '${subunit == null ? '' : 'subunit: "$subunit", '}'
-            "subunitToUnit: $subunitToUnit, unitFirst: $unitFirst,)";
-
-  @override
-  String toJson({JsonCodec codec = const JsonCodec()}) => codec.encode(toMap());
-
-  @override
-  int compareTo(FiatCurrency other) => code.compareTo(other.code);
-
-  /// Returns a [FiatCurrency] object whose [code] or the value returned by
-  /// [where] matches the specified [value], or `null` if no such object exists
-  /// in the specified [currencies] list.
-  ///
-  /// The [value] parameter is required and should be of type `T`. If [where] is
-  /// not `null`, this method uses the result of calling [where] with each
-  /// [FiatCurrency] object in [currencies] to determine whether the object's
-  /// [code] matches [value]. If [where] is `null`, this method simply compares
-  /// each [FiatCurrency]'s [code] to [value].
-  ///
-  /// The optional [currencies] parameter specifies the list of [FiatCurrency]
-  /// objects to search (defaults to [FiatCurrency.listExtended]).
-  ///
-  /// Example usage:
-  ///
-  /// ```dart
-  /// final euro = FiatCurrency.maybeFromValue(
-  ///   "Euro",
-  ///   where: (currency) => currency.namesNative.first,
-  /// );
-  /// print(euro); // Prints: "Currency(code: "EUR")".
-  /// ```
-  static FiatCurrency? maybeFromValue<T extends Object>(
-    T value, {
-    T? Function(FiatCurrency currency)? where,
-    Iterable<FiatCurrency> currencies = listExtended,
-  }) {
-    // ignore: avoid-collection-mutating-methods, not mutating anything.
-    currencies.assertNotEmpty();
-
-    for (final currency in currencies) {
-      final expectedValue = where?.call(currency) ?? currency.code;
-      if (expectedValue == value) return currency;
-    }
-
-    return null;
-  }
-
-  /// Returns a [FiatCurrency] instance that corresponds to the given code, or
-  /// `null` if no such instance exists.
-  ///
-  /// The [code] parameter is required and represent the ISO 4217 currency code.
-  /// {@macro any_code_object}
-  /// The optional [currencies] parameter can be used to specify a list of
-  /// [FiatCurrency] objects to search through.
-  /// {@macro optional_instances_array_parameter}
-  ///  This method returns the
-  /// [FiatCurrency] instance that corresponds to the given value, or `null` if
-  /// no such instance exists.
-  ///
-  /// Example:
-  /// ```dart
-  /// FiatCurrency? fiat = FiatCurrency.maybeFromAnyCode(CurrencyEnum.eur.name);
-  /// print(fiat != null) // Prints: true.
-  /// ```
-  ///
-  /// In the above example, the `maybeFromAnyCode` method is called with the
-  /// value "eur". It uses the `maybeMapIsoCode` method to determine the
-  /// appropriate mapping for the value. If the value is numeric, it compares it
-  /// with the `codeNumeric` property of each [FiatCurrency] instance.
-  /// Otherwise, it compares it with the uppercase version of the [code]
-  /// property of each [FiatCurrency] instance. The resulting [FiatCurrency]
-  /// instance is assigned to the `currency` variable.
-  static FiatCurrency? maybeFromAnyCode(
-    Object? code, [
-    Iterable<FiatCurrency>? currencies,
-  ]) => currencies == null
-      ? map.maybeFindByCode(code)
-      : IsoObject.maybe(code)?.maybeMapIsoCode(
-          orElse: (regular) => maybeFromCode(regular, currencies),
-          numeric: (numeric) => maybeFromCodeNumeric(numeric, currencies),
-          minLength: IsoStandardized.codeLength,
-        );
-
-  /// Returns a [FiatCurrency] instance from an letter ISO 4217 code, or
-  /// `null` if no such instance exists.
-  ///
-  /// The [code] parameter is required and should be an object representing
-  /// the three-letter ISO 4217 code for the currency.
-  /// {@macro any_code_object}
-  /// The optional [currencies] parameter can be used to specify a list of
-  /// [FiatCurrency] objects to search through.
-  /// {@macro optional_instances_array_parameter}
-  /// This method returns the [FiatCurrency] instance
-  /// that corresponds to the given code, or `null` if no such
-  /// instance exists.
-  static FiatCurrency? maybeFromCode(
-    Object? code, [
-    Iterable<FiatCurrency>? currencies,
-  ]) {
-    if (currencies == null) return codeMap.maybeFindByCode(code);
-
-    final string = IsoObject.maybe(
-      code, // Dart 3.7+ formatting.
-    )?.maybeToValidIsoUpperCaseCode(exactLength: IsoStandardized.codeLength);
-
-    return currencies.firstIsoWhereCodeOrNull(string, toUpperCase: false);
-  }
-
-  /// Returns a [FiatCurrency] instance from an numeric ISO 4217 code, or
-  /// `null` if no such instance exists.
-  ///
-  /// The [codeNumeric] parameter is required and should be an object
-  /// representing the three-letter numeric ISO 4217 code for the currency.
-  /// {@macro any_code_object}
-  /// The optional [currencies] parameter can be used to specify a list of
-  /// [FiatCurrency] objects to search through.
-  /// {@macro optional_instances_array_parameter}
-  /// This method returns the [FiatCurrency] instance that corresponds to the
-  /// given code, or `null` if no such instance exists.
-  static FiatCurrency? maybeFromCodeNumeric(
-    Object? codeNumeric, [
-    Iterable<FiatCurrency>? currencies,
-  ]) {
-    if (currencies == null) return codeNumericMap.maybeFindByCode(codeNumeric);
-
-    final string = IsoObject.maybe(
-      codeNumeric, // Dart 3.7+ formatting.
-    )?.maybeToValidIsoCode(exactLength: IsoStandardized.codeLength);
-
-    return currencies.firstIsoWhereCodeOtherOrNull(string, toUpperCase: false);
-  }
-
   /// The general standard ISO code for currencies, defined as ISO 4217.
   static const standardGeneralName = "4217";
 
@@ -1148,5 +981,165 @@ class FiatCurrency extends Currency
   /// plus all currencies from the [FiatCurrency.specialPurposeList].
   static const listExtended = <FiatCurrency>[...list, ...specialPurposeList];
 
-  final List<TranslatedName>? _translations;
+  // ignore: prefer-correct-callback-field-name, follows delegate naming.
+  final LocaleMapFunction<String> Function()? _mapper; // TODO! Docs.
+
+  /// The international 3-numeric non-empty numeric code as defined by the ISO
+  /// 4217 standard.
+  @override
+  String get codeOther => codeNumeric;
+
+  @override
+  String get internationalName => name;
+
+  @override
+  LocalizationDelegate get l10n => LocalizationDelegate(
+    mapper: _mapper ?? () => CurrenciesLocaleMapper().localize,
+  );
+
+  /// Returns a string representation of this instance.
+  @override
+  String toString({bool short = true}) => short
+      ? super.toString()
+      : 'FiatCurrency(code: "$code", name: "$name", '
+            'decimalMark: "$decimalMark", '
+            'thousandsSeparator: "$thousandsSeparator", '
+            '${symbol == null ? '' : 'symbol: r"$symbol", '}'
+            '''${alternateSymbols == null ? '' : 'alternateSymbols: ${jsonEncode(alternateSymbols)}, '}'''
+            '''${disambiguateSymbol == null ? '' : 'disambiguateSymbol: r"$disambiguateSymbol", '}'''
+            '${htmlEntity == null ? '' : 'htmlEntity: r"$htmlEntity", '}'
+            'codeNumeric: "$codeNumeric", '
+            "namesNative: ${jsonEncode(namesNative)}, "
+            "priority: $priority, smallestDenomination: $smallestDenomination, "
+            '${subunit == null ? '' : 'subunit: "$subunit", '}'
+            "subunitToUnit: $subunitToUnit, unitFirst: $unitFirst,)";
+
+  @override
+  String toJson({JsonCodec codec = const JsonCodec()}) => codec.encode(toMap());
+
+  @override
+  int compareTo(FiatCurrency other) => code.compareTo(other.code);
+
+  /// Returns a [FiatCurrency] object whose [code] or the value returned by
+  /// [where] matches the specified [value], or `null` if no such object exists
+  /// in the specified [currencies] list.
+  ///
+  /// The [value] parameter is required and should be of type `T`. If [where] is
+  /// not `null`, this method uses the result of calling [where] with each
+  /// [FiatCurrency] object in [currencies] to determine whether the object's
+  /// [code] matches [value]. If [where] is `null`, this method simply compares
+  /// each [FiatCurrency]'s [code] to [value].
+  ///
+  /// The optional [currencies] parameter specifies the list of [FiatCurrency]
+  /// objects to search (defaults to [FiatCurrency.listExtended]).
+  ///
+  /// Example usage:
+  ///
+  /// ```dart
+  /// final euro = FiatCurrency.maybeFromValue(
+  ///   "Euro",
+  ///   where: (currency) => currency.namesNative.first,
+  /// );
+  /// print(euro); // Prints: "Currency(code: "EUR")".
+  /// ```
+  static FiatCurrency? maybeFromValue<T extends Object>(
+    T value, {
+    T? Function(FiatCurrency currency)? where,
+    Iterable<FiatCurrency> currencies = listExtended,
+  }) {
+    // ignore: avoid-collection-mutating-methods, not mutating anything.
+    currencies.assertNotEmpty();
+
+    for (final currency in currencies) {
+      final expectedValue = where?.call(currency) ?? currency.code;
+      if (expectedValue == value) return currency;
+    }
+
+    return null;
+  }
+
+  /// Returns a [FiatCurrency] instance that corresponds to the given code, or
+  /// `null` if no such instance exists.
+  ///
+  /// The [code] parameter is required and represent the ISO 4217 currency code.
+  /// {@macro any_code_object}
+  /// The optional [currencies] parameter can be used to specify a list of
+  /// [FiatCurrency] objects to search through.
+  /// {@macro optional_instances_array_parameter}
+  ///  This method returns the
+  /// [FiatCurrency] instance that corresponds to the given value, or `null` if
+  /// no such instance exists.
+  ///
+  /// Example:
+  /// ```dart
+  /// FiatCurrency? fiat = FiatCurrency.maybeFromAnyCode(CurrencyEnum.eur.name);
+  /// print(fiat != null) // Prints: true.
+  /// ```
+  ///
+  /// In the above example, the `maybeFromAnyCode` method is called with the
+  /// value "eur". It uses the `maybeMapIsoCode` method to determine the
+  /// appropriate mapping for the value. If the value is numeric, it compares it
+  /// with the `codeNumeric` property of each [FiatCurrency] instance.
+  /// Otherwise, it compares it with the uppercase version of the [code]
+  /// property of each [FiatCurrency] instance. The resulting [FiatCurrency]
+  /// instance is assigned to the `currency` variable.
+  static FiatCurrency? maybeFromAnyCode(
+    Object? code, [
+    Iterable<FiatCurrency>? currencies,
+  ]) => currencies == null
+      ? map.maybeFindByCode(code)
+      : IsoObject.maybe(code)?.maybeMapIsoCode(
+          orElse: (regular) => maybeFromCode(regular, currencies),
+          numeric: (numeric) => maybeFromCodeNumeric(numeric, currencies),
+          minLength: IsoStandardized.codeLength,
+        );
+
+  /// Returns a [FiatCurrency] instance from an letter ISO 4217 code, or
+  /// `null` if no such instance exists.
+  ///
+  /// The [code] parameter is required and should be an object representing
+  /// the three-letter ISO 4217 code for the currency.
+  /// {@macro any_code_object}
+  /// The optional [currencies] parameter can be used to specify a list of
+  /// [FiatCurrency] objects to search through.
+  /// {@macro optional_instances_array_parameter}
+  /// This method returns the [FiatCurrency] instance
+  /// that corresponds to the given code, or `null` if no such
+  /// instance exists.
+  static FiatCurrency? maybeFromCode(
+    Object? code, [
+    Iterable<FiatCurrency>? currencies,
+  ]) {
+    if (currencies == null) return codeMap.maybeFindByCode(code);
+
+    final string = IsoObject.maybe(
+      code, // Dart 3.7+ formatting.
+    )?.maybeToValidIsoUpperCaseCode(exactLength: IsoStandardized.codeLength);
+
+    return currencies.firstIsoWhereCodeOrNull(string, toUpperCase: false);
+  }
+
+  /// Returns a [FiatCurrency] instance from an numeric ISO 4217 code, or
+  /// `null` if no such instance exists.
+  ///
+  /// The [codeNumeric] parameter is required and should be an object
+  /// representing the three-letter numeric ISO 4217 code for the currency.
+  /// {@macro any_code_object}
+  /// The optional [currencies] parameter can be used to specify a list of
+  /// [FiatCurrency] objects to search through.
+  /// {@macro optional_instances_array_parameter}
+  /// This method returns the [FiatCurrency] instance that corresponds to the
+  /// given code, or `null` if no such instance exists.
+  static FiatCurrency? maybeFromCodeNumeric(
+    Object? codeNumeric, [
+    Iterable<FiatCurrency>? currencies,
+  ]) {
+    if (currencies == null) return codeNumericMap.maybeFindByCode(codeNumeric);
+
+    final string = IsoObject.maybe(
+      codeNumeric, // Dart 3.7+ formatting.
+    )?.maybeToValidIsoCode(exactLength: IsoStandardized.codeLength);
+
+    return currencies.firstIsoWhereCodeOtherOrNull(string, toUpperCase: false);
+  }
 }

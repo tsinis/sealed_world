@@ -1,11 +1,6 @@
 // ignore_for_file: prefer-static-class, it's referenced as static in the model.
 import "../model/currency/currency.dart";
 
-/// List of all standard [FiatCurrency] sorted by code.
-@Deprecated("Use `FiatCurrency.list` instead.")
-// ignore: avoid-explicit-type-declaration, deprecated member.
-const List<FiatCurrency> fiatCurrencyList = FiatCurrency.list;
-
 /// Map of [FiatCurrency] standard codes.
 const fiatCurrencyCodeMap = <String, FiatCurrency>{
   "AED": FiatAed(),

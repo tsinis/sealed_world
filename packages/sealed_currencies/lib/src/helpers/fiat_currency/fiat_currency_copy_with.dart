@@ -33,16 +33,14 @@ extension FiatCurrencyCopyWith<T extends FiatCurrency> on T {
     int? subunitToUnit,
     String? symbol,
     String? thousandsSeparator,
-    @Deprecated("Translations are now provided via `l10n`")
-    List<TranslatedName>? translations,
+    LocaleMapFunction<String> Function()? mapper,
     bool? unitFirst,
   }) => FiatCurrency(
     code: code ?? this.code,
     name: name ?? this.name,
     namesNative: namesNative ?? this.namesNative,
     codeNumeric: codeNumeric ?? this.codeNumeric,
-    // ignore: deprecated_member_use_from_same_package, param is deprecated.
-    translations: translations ?? this.translations,
+    mapper: mapper ?? this.l10n.mapper,
     alternateSymbols: alternateSymbols ?? this.alternateSymbols,
     disambiguateSymbol: disambiguateSymbol ?? this.disambiguateSymbol,
     htmlEntity: htmlEntity ?? this.htmlEntity,

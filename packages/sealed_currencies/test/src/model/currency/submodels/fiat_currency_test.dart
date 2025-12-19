@@ -1,18 +1,15 @@
-// ignore_for_file: deprecated_member_use, it's TODO!
-// ignore_for_file: deprecated_member_use_from_same_package, it's TODO!
+import "dart:convert";
 
 import "package:_sealed_world_tests/sealed_world_tests.dart";
-import "package:sealed_currencies/currency_translations.dart";
 import "package:sealed_currencies/src/helpers/fiat_currency/fiat_currency_json.dart";
 import "package:sealed_currencies/src/model/currency/currency.dart";
 import "package:sealed_languages/sealed_languages.dart";
 import "package:test/test.dart";
 
 class _FiatCurrencyTest extends FiatCurrency {
-  const _FiatCurrencyTest() : super.permissive(code: "123", name: " ");
+  const _FiatCurrencyTest() : super.custom(code: "123", name: " ");
 }
 
-// ignore: avoid-high-cyclomatic-complexity, it's a test...
 void main() => group("$FiatCurrency", () {
   final value = FiatCurrency.list.last;
   final array = {value, FiatCurrency.list.first};
@@ -23,7 +20,6 @@ void main() => group("$FiatCurrency", () {
     expect(value, isA<IsoTranslated>());
     expect(value, isA<JsonEncodable>());
     expect(value, isA<Named>());
-    expect(value, isA<Translated>());
   });
 
   performanceTest("compile and non compile time constructors equality", () {
@@ -79,7 +75,7 @@ void main() => group("$FiatCurrency", () {
         expect(element.unitFirst, isA<bool>());
         expect(element.decimalMark, isA<String>());
         expect(element.thousandsSeparator, isA<String>());
-        expect(element.translations, isNotEmpty);
+        expect(element.l10n.mapper, isNotNull);
       });
     }
   });
@@ -94,6 +90,7 @@ void main() => group("$FiatCurrency", () {
         expect(
           FiatCurrency.codeNumericMap[element.codeNumeric],
           element,
+          // ignore: deprecated_member_use_from_same_package, it's TODO!
           skip: element == const FiatAng(),
           reason: "XCG reuses same numeric code as ANG",
         );
@@ -334,27 +331,22 @@ void main() => group("$FiatCurrency", () {
       test("compared to $FiatCurrency: ${element.name}", () {
         final json = element.toJson();
         expect(json, isNotEmpty);
-        final decoded = json.tryParse(FiatCurrencyJson.fromMap);
-        expect(
-          decoded?.toString(short: false),
-          json.parse(FiatCurrencyJson.fromMap).toString(short: false),
-        );
-        expect(element.code, decoded?.code);
-        expect(element.name, decoded?.name);
-        expect(element.codeNumeric, decoded?.codeNumeric);
-        expect(element.namesNative, decoded?.namesNative);
-        expect(element.alternateSymbols, decoded?.alternateSymbols);
-        expect(element.htmlEntity, decoded?.htmlEntity);
-        expect(element.disambiguateSymbol, decoded?.disambiguateSymbol);
-        expect(element.subunit, decoded?.subunit);
-        expect(element.symbol, decoded?.symbol);
-        expect(element.priority, decoded?.priority);
-        expect(element.smallestDenomination, decoded?.smallestDenomination);
-        expect(element.subunitToUnit, decoded?.subunitToUnit);
-        expect(element.unitFirst, decoded?.unitFirst);
-        expect(element.decimalMark, decoded?.decimalMark);
-        expect(element.thousandsSeparator, decoded?.thousandsSeparator);
-        expect(element.translations, decoded?.translations);
+        final decoded = FiatCurrencyJson.fromMap(jsonDecode(json));
+        expect(element.code, decoded.code);
+        expect(element.name, decoded.name);
+        expect(element.codeNumeric, decoded.codeNumeric);
+        expect(element.namesNative, decoded.namesNative);
+        expect(element.alternateSymbols, decoded.alternateSymbols);
+        expect(element.htmlEntity, decoded.htmlEntity);
+        expect(element.disambiguateSymbol, decoded.disambiguateSymbol);
+        expect(element.subunit, decoded.subunit);
+        expect(element.symbol, decoded.symbol);
+        expect(element.priority, decoded.priority);
+        expect(element.smallestDenomination, decoded.smallestDenomination);
+        expect(element.subunitToUnit, decoded.subunitToUnit);
+        expect(element.unitFirst, decoded.unitFirst);
+        expect(element.decimalMark, decoded.decimalMark);
+        expect(element.thousandsSeparator, decoded.thousandsSeparator);
       });
     }
   });
@@ -589,7 +581,6 @@ void main() => group("$FiatCurrency", () {
         name: value.name,
         namesNative: value.namesNative,
         codeNumeric: value.codeNumeric,
-        translations: const [],
       ),
       shouldThrow: false,
     );
@@ -601,7 +592,6 @@ void main() => group("$FiatCurrency", () {
         name: "",
         namesNative: value.namesNative,
         codeNumeric: value.codeNumeric,
-        translations: value.translations,
       ),
     );
 
@@ -612,7 +602,6 @@ void main() => group("$FiatCurrency", () {
         name: value.name,
         namesNative: value.namesNative,
         codeNumeric: value.codeNumeric,
-        translations: value.translations,
       ),
     );
 
@@ -623,7 +612,6 @@ void main() => group("$FiatCurrency", () {
         name: value.name,
         namesNative: value.namesNative,
         codeNumeric: value.name,
-        translations: value.translations,
       ),
     );
 
@@ -634,7 +622,6 @@ void main() => group("$FiatCurrency", () {
         name: value.name,
         namesNative: const [],
         codeNumeric: value.codeNumeric,
-        translations: value.translations,
       ),
     );
 
@@ -645,7 +632,6 @@ void main() => group("$FiatCurrency", () {
         name: value.name,
         namesNative: value.namesNative,
         codeNumeric: value.codeNumeric,
-        translations: value.translations,
         htmlEntity: "",
       ),
     );
@@ -657,7 +643,6 @@ void main() => group("$FiatCurrency", () {
         name: value.name,
         namesNative: value.namesNative,
         codeNumeric: value.codeNumeric,
-        translations: value.translations,
         subunit: "",
       ),
     );
@@ -669,7 +654,6 @@ void main() => group("$FiatCurrency", () {
         name: value.name,
         namesNative: value.namesNative,
         codeNumeric: value.codeNumeric,
-        translations: value.translations,
         symbol: "",
       ),
     );
@@ -681,7 +665,6 @@ void main() => group("$FiatCurrency", () {
         name: value.name,
         namesNative: value.namesNative,
         codeNumeric: value.codeNumeric,
-        translations: value.translations,
         alternateSymbols: const [],
       ),
     );
@@ -693,118 +676,8 @@ void main() => group("$FiatCurrency", () {
         name: value.name,
         namesNative: value.namesNative,
         codeNumeric: value.codeNumeric,
-        translations: value.translations,
         smallestDenomination: -1,
       ),
     );
-  });
-
-  group("translations", () {
-    test("translation should always provide at least eng translation", () {
-      const abkhazia = LangAbk();
-      const nonExistCode = "000";
-      int count = 0;
-      for (final currency in FiatCurrency.list) {
-        final maybeMissing = currency.maybeTranslation(
-          const BasicLocale(abkhazia, countryCode: nonExistCode),
-          useLanguageFallback: false,
-        );
-        if (maybeMissing != null) continue;
-        count += 1;
-        expect(
-          currency.translation(
-            const BasicLocale(abkhazia, countryCode: nonExistCode),
-          ),
-          // ignore: avoid-misused-test-matchers, it could be an exception.
-          isNotNull,
-        );
-      }
-      expect(count, isPositive);
-    });
-
-    test("there should be always minimum translations count available", () {
-      final map = {for (final currency in FiatCurrency.list) currency: 0};
-
-      for (final l10n in NaturalLanguage.list) {
-        for (final currency in FiatCurrency.list) {
-          final hasTranslationForValue = currency.maybeTranslation(
-            BasicLocale(l10n),
-          );
-          if (hasTranslationForValue != null) {
-            map[currency] = map[currency]! + 1;
-          }
-        }
-      }
-
-      final sortedList = map.entries.toList(growable: false)
-        ..sort((a, b) => a.value.compareTo(b.value));
-      expect(
-        sortedList.first.value,
-        kSealedCurrenciesSupportedLanguages.length + 2,
-      );
-    });
-
-    test("there should be always translations for specific languages", () {
-      final map = {for (final lang in NaturalLanguage.list) lang: 0};
-      final missing = <NaturalLanguage, Set<FiatCurrency>>{};
-
-      for (final l10n in NaturalLanguage.list) {
-        for (final currency in FiatCurrency.list) {
-          final translation = currency.maybeTranslation(BasicLocale(l10n));
-          if (translation == null) {
-            missing[l10n] = {...?missing[l10n], currency};
-          } else {
-            map[l10n] = map[l10n]! + 1;
-          }
-        }
-      }
-
-      final sortedList = map.entries.toList(growable: false)
-        ..sort((a, b) => a.value.compareTo(b.value));
-      final complete = sortedList.where(
-        (item) => item.value >= FiatCurrency.list.length,
-      );
-      final sortedMap = Map.fromEntries(complete);
-      final sortedLanguages = sortedMap.keys.toList(growable: false)
-        ..sort((a, b) => a.code.compareTo(b.code));
-
-      expect(sortedLanguages, containsAll(kMaterialSupportedLanguagesSealed));
-      expect(sortedLanguages, containsAll(kCupertinoSupportedLanguagesSealed));
-      expect(sortedLanguages, kSealedCurrenciesSupportedLanguages);
-
-      for (final currency in FiatCurrency.list) {
-        for (final l10n in kSealedCurrenciesSupportedLanguages) {
-          if (l10n == const LangEng()) continue;
-          expect(
-            currency.translation(BasicLocale(l10n)),
-            isNot(currency.translation(const BasicLocale(LangEng()))),
-          );
-        }
-      }
-    });
-
-    group("commonNamesCacheMap", () {
-      performanceTest(
-        "languages in supported list should have all translations",
-        () {
-          for (final language in kSealedCurrenciesSupportedLanguages) {
-            final cache = FiatCurrency.list.commonNamesCacheMap(
-              BasicLocale(language, script: language.scripts.first),
-            );
-            expect(cache.length, FiatCurrency.list.length);
-          }
-        },
-      );
-
-      performanceTest(
-        """some languages should have at least 2 translations of it's own name""",
-        () {
-          final cache = FiatCurrency.list.commonNamesCacheMap(
-            const BasicLocale(LangKal()),
-          );
-          expect(cache.length, 2);
-        },
-      );
-    });
   });
 });
