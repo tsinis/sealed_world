@@ -14,7 +14,6 @@ dependencies:
   collection: ^1.19.1
   path: ^1.9.1
   pure_dart_ui: ^0.1.10
-  rw_git: ^1.0.3
   sealed_countries:
     path: ../packages/sealed_countries
   sealed_currencies: any
