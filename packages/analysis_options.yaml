@@ -99,7 +99,6 @@ dart_code_metrics:
           - issue_tracker
           - homepage
           - funding
-          - publish_to
           - resolution
           - topics
           - screenshots
