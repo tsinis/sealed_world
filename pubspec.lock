@@ -317,14 +317,6 @@ packages:
       url: "https://pub.dev"
     source: hosted
     version: "4.0.0"
-  git:
-    dependency: transitive
-    description:
-      name: git
-      sha256: "46556ed28a3b25b1be9bcde0291d84a57b206a899f8b37bf7ab335d8fb640e84"
-      url: "https://pub.dev"
-    source: hosted
-    version: "2.3.2"
   glob:
     dependency: transitive
     description:
@@ -621,14 +613,6 @@ packages:
       url: "https://pub.dev"
     source: hosted
     version: "3.1.2"
-  rw_git:
-    dependency: transitive
-    description:
-      name: rw_git
-      sha256: "5c6321f336b42369fd46a44353d142c430e3a9173cecedb017faecf92168c1fc"
-      url: "https://pub.dev"
-    source: hosted
-    version: "1.0.3"
   safe_url_check:
     dependency: transitive
     description:

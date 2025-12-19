@@ -45,7 +45,6 @@ class CountryUnk extends WorldCountry {
         fifa: "KVX",
         car: const Car(sign: "CS"),
         timezones: const ["UTC+01:00"],
-        // TODO! tld: const [], // No official top-level domain.
       );
   @override
   List<FiatCurrency> get currencies => const [FiatEur()];

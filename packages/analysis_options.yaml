@@ -33,8 +33,24 @@ dart_code_metrics:
       - "**/test/**"
       - "tools/**"
   metrics:
-    number-of-external-imports:
-      threshold: 5
+    # weighted-methods-per-class:
+    #   threshold: 35
+    # response-for-class:
+    #   threshold: 75
+    number-of-overridden-methods:
+      threshold: 10
+    # number-of-methods:
+    #   threshold: 12
+    # number-of-implemented-interfaces:
+    #   threshold: 5
+    # number-of-added-methods:
+    #   threshold: 10
+    # depth-of-inheritance-tree:
+    #   threshold: 7
+    # coupling-between-object-classes:
+    #   threshold: 25
+    # number-of-external-imports:
+    #   threshold: 5
     # number-of-imports:
     #   threshold: 25
     # widgets-nesting-level:
@@ -53,6 +69,10 @@ dart_code_metrics:
     #   threshold: 5
     # halstead-volume:
     #   threshold: 200
+    # weight-of-class:
+    #   threshold: 0.33
+    # tight-class-cohesion:
+    #   threshold: 0.33
   pubspec-rules:
     # Disabled:
     - avoid-any-version: false # Defined in the workspace pubspec.yaml

@@ -49,49 +49,6 @@ void main() => group("IsoStandardizedStringExtension", () {
     );
   });
 
-  group("maybeToValidIsoUppercaseCode", () {
-    assertTest(
-      "should throw assert if maxLength is smaller than minLength",
-      () => alphaRegularCodes.first.maybeToValidIsoUppercaseCode(maxLength: 1),
-    );
-
-    assertTest(
-      "should throw assert if maxLength is zero",
-      () => alphaRegularCodes.first.maybeToValidIsoUppercaseCode(maxLength: 0),
-    );
-
-    assertTest(
-      "should throw assert if minLength is zero",
-      () => alphaRegularCodes.first.maybeToValidIsoUppercaseCode(minLength: 0),
-    );
-
-    performanceTest(
-      "should return null on too short code",
-      () => expect(" E".maybeToValidIsoUppercaseCode(), isNull),
-    );
-
-    performanceTest(
-      "should return null on too long code",
-      () => expect("english".maybeToValidIsoUppercaseCode(), isNull),
-    );
-
-    performanceTest(
-      "should trim and convert to uppercase",
-      () => expect(
-        " eng ".maybeToValidIsoUppercaseCode(),
-        alphaRegularCodes.first,
-      ),
-    );
-
-    performanceTest(
-      "should not make any changes",
-      () => expect(
-        alphaRegularCodes.first.maybeToValidIsoUppercaseCode(),
-        alphaRegularCodes.first,
-      ),
-    );
-  });
-
   group("isIsoAlphaRegularCode", () {
     test("should return true for valid ISO codes", () {
       for (final code in alphaRegularCodes) {
