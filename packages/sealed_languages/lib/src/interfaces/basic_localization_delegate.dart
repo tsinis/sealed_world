@@ -137,6 +137,9 @@ abstract class BasicLocalizationDelegate<
   /// - [options]: Optional locale mapping configuration.
   ///
   /// Returns an unmodifiable list of translated names.
+  ///
+  /// !Important: This method is quite heavy (it's recommended to cache
+  /// the results)!
   List<T> translatedNames(
     Iterable<IsoStandardized> items, {
     LocaleMappingOptions<L> options = const LocaleMappingOptions(),

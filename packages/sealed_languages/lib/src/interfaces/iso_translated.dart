@@ -1,4 +1,8 @@
-part of "translated.dart";
+import 'package:sealed_languages/src/interfaces/iso_standardized.dart';
+import 'package:sealed_languages/src/model/translated_name.dart';
+
+import '../model/core/basic_locale.dart';
+import 'basic_localization_delegate.dart';
 
 /// An abstract interface class that extends `Translated` and implements
 /// [IsoStandardized].
@@ -15,19 +19,7 @@ abstract interface class IsoTranslated<
   N extends Object,
   L extends BasicLocale
 >
-    extends
-        // ignore: deprecated_member_use_from_same_package, it's TODO!
-        Translated<T>
     implements IsoStandardized<N> {
-  /// Creates a new instance of the [IsoTranslated] object.
-  ///
-  /// The [translations] parameter isn't required and could be provided when
-  /// creating a new (custom) instance. It represents the translations
-  /// of the item's name into multiple languages.
-  const IsoTranslated( // coverage:ignore-line
-  // ignore: prefer-trailing-comma, broken by Dart 3.8.0 formatter.
-  {@Deprecated("Translations are now provided via `l10n`") super.translations});
-
   /// Returns the [BasicLocalizationDelegate] used for handling translations.
   ///
   /// This delegate provides localization functionality for ISO standardized

@@ -1,11 +1,6 @@
 // ignore_for_file: prefer-static-class, it's referenced as static in the model.
 import "../model/script/writing_system.dart";
 
-/// List of all standard [Script] sorted by code.
-@Deprecated("Use `Script.list` instead.")
-// ignore: avoid-explicit-type-declaration, deprecated member.
-const List<Script> scriptList = Script.list;
-
 /// Map of [Script] standard codes.
 const scriptCodeMap = <String, Script>{
   "ADLM": ScriptAdlm(),
