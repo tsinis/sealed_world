@@ -21,6 +21,7 @@ import "../model/flag_properties.dart";
 /// }
 /// ```
 const flagPropertiesMap = <WorldCountry, FlagProperties>{
+  CountryAfg(): flagAfgProperties,
   CountryAbw(): flagAbwProperties,
   CountryAgo(): flagAgoProperties,
   CountryAia(): flagAiaProperties,

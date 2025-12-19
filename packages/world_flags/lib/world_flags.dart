@@ -159,6 +159,10 @@ export "src/ui/painters/multi_element_painter.dart";
 /// ```
 const uniqueSimplifiedFlagsMap = <WorldCountry, BasicFlag>{
   CountryAbw(): StarFlag(flagAbwProperties),
+  CountryAfg(): BasicFlag(
+    flagAfgProperties,
+    elementsBuilder: ShahadaPainter.afg,
+  ),
   CountryAgo(): BasicFlag(flagAgoProperties, elementsBuilder: AgoPainter.new),
   CountryAia(): BasicFlag(
     flagAiaProperties,
@@ -552,10 +556,6 @@ const smallSimplifiedFlagsMap = <WorldCountry, BasicFlag>{
 /// Also French Guiana flag is represented by unofficial, but very popular
 /// and more commonly used green-yellow flag with a red star in the center.
 const smallSimplifiedAlternativeFlagsMap = <WorldCountry, BasicFlag>{
-  CountryAfg(): BasicFlag(
-    flagAfgPropertiesAlt,
-    elementsBuilder: ShahadaPainter.afg,
-  ),
   CountryGuf(): StarFlag(flagGufPropertiesAlt),
 };
 
