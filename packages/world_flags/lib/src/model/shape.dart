@@ -17,7 +17,7 @@ sealed class Shape {
 /// meanings.
 final class Triangle implements Shape {
   /// Creates a new instance of [Triangle].
-  const Triangle();
+  const Triangle(); // coverage:ignore-line
 }
 
 /// A class representing a rectangle shape.
@@ -69,7 +69,7 @@ final class Star implements Shape {
 /// used as part of the flag's design.
 final class Ellipse implements Shape {
   /// Creates a new instance of [Ellipse].
-  const Ellipse();
+  const Ellipse(); // coverage:ignore-line
 }
 
 /// A class representing a moon shape.
@@ -101,7 +101,10 @@ final class DiagonalLine implements Shape {
   ///
   /// The [isTopRightToBottomLeft] parameter specifies the direction of the
   /// diagonal line.
-  const DiagonalLine({this.isTopRightToBottomLeft = true});
+  const DiagonalLine( // coverage:ignore-line
+  {
+    this.isTopRightToBottomLeft = true, // Dart 3.8 format.
+  });
 
   /// Whether the diagonal line goes from top-right to bottom-left.
   final bool isTopRightToBottomLeft;

@@ -122,6 +122,7 @@ jobs:
         run: flutter test --coverage --no-pub
 
       - name: 🧾 Debug coverage file
+        if: ${{ env.ACTIONS_RUNNER_DEBUG == 'true' || env.ACTIONS_STEP_DEBUG == 'true' }}
         run: |
           PKG_DIR="${{ github.workspace }}/${{ env.relative_path }}"
           COVERAGE_FILE="$PKG_DIR/coverage/lcov.info"
@@ -136,6 +137,7 @@ jobs:
 
       - name: 📊 Check code coverage
         uses: VeryGoodOpenSource/very_good_coverage@v3.0.0
+        if: ${{ inputs.is_flutter }}
         with:
           path: ${{ env.relative_path }}/coverage/lcov.info
           exclude: "**/*.data.dart **/*.l10n.dart"
