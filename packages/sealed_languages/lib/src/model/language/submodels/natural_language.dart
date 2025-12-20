@@ -32,6 +32,7 @@ class NaturalLanguage extends Language
     this.family = const IndoEuropean(),
     this.isRightToLeft = false,
     this.scripts = const {ScriptLatn()},
+    LocaleMapFunction<String> Function()? mapper,
   }) : assert(
          code.length == IsoStandardized.codeLength,
          """`code` should be exactly ${IsoStandardized.codeLength} characters long!""",
@@ -49,7 +50,8 @@ class NaturalLanguage extends Language
          bibliographicCode == null ||
              bibliographicCode.length == IsoStandardized.codeLength,
          """`bibliographicCode` should be exactly ${IsoStandardized.codeLength} characters long!""",
-       );
+       ),
+       _mapper = mapper;
 
   /// {@template permissive_constructor}
   /// Creates an instance of the class with relaxed constraints.
@@ -73,11 +75,7 @@ class NaturalLanguage extends Language
   /// the established ISO specifications and should be approached with caution.
   /// {@endtemplate}
   /// {@macro natural_language_constructor}
-  @Deprecated(
-    "Use concrete instance and `copyWith` method instead, this "
-    "constructor will be renamed to `custom` in future versions.",
-  )
-  const NaturalLanguage.permissive({
+  const NaturalLanguage.custom({
     required super.name,
     required this.code,
     this.codeShort = "",
@@ -86,7 +84,8 @@ class NaturalLanguage extends Language
     this.family = const IndoEuropean(),
     this.isRightToLeft = false,
     this.scripts = const {ScriptLatn()},
-  });
+    LocaleMapFunction<String> Function()? mapper,
+  }) : _mapper = mapper;
 
   /// {@macro sealed_world.language_aar_constructor}
   const factory NaturalLanguage.aar() = _AarFactory;
@@ -830,108 +829,6 @@ class NaturalLanguage extends Language
   /// The ISO 15924 scripts used by the language.
   final Set<Script> scripts;
 
-  /// A two-letter string representing the ISO 639-1 code for the language.
-  @override
-  String get codeOther => codeShort;
-
-  @override
-  String get internationalName => name;
-
-  @override
-  List<TranslatedName> get translations => l10n.translatedNames({this});
-
-  @override
-  LocalizationDelegate get l10n =>
-      LocalizationDelegate(mapper: () => LanguagesLocaleMapper().localize);
-
-  /// Returns a string representation of this [NaturalLanguage] object.
-  ///
-  /// The optional [short] parameter specifies whether to use a short format
-  /// (defaults to `true`). If [short] is `true`, this method returns the same
-  /// string as the [Language.toString] method. If [short] is `false`, this
-  /// method returns a string that includes additional information about the
-  /// language, such as its ISO codes, native names, and family.
-  @override
-  String toString({bool short = true}) => short
-      ? super.toString()
-      : 'NaturalLanguage(name: "$name", code: "$code", '
-            'codeShort: "$codeShort", namesNative: ${jsonEncode(namesNative)}, '
-            '''${bibliographicCode == null ? '' : 'bibliographicCode: "$bibliographicCode", '}'''
-            "family: const ${family.runtimeType}(), "
-            "isRightToLeft: $isRightToLeft, "
-            "scripts: const ${scripts.toUniqueInstancesString()},)";
-
-  @override
-  String toJson({JsonCodec codec = const JsonCodec()}) => codec.encode(toMap());
-
-  @override
-  int compareTo(NaturalLanguage other) => code.compareTo(other.code);
-
-  /// Returns a [NaturalLanguage] object whose [code] or the value returned by
-  /// [where] matches the specified [value], or `null` if no such object exists
-  /// in the specified [languages] list.
-  ///
-  /// The [value] parameter is required and should be of type `T`. If [where] is
-  /// not `null`, this method uses the result of calling [where] with each
-  /// [NaturalLanguage] object in [languages] to determine whether the object's
-  /// [code] matches [value]. If [where] is `null`, this method simply compares
-  /// each [NaturalLanguage]'s [code] to [value].
-  ///
-  /// The optional [languages] parameter specifies the list of [NaturalLanguage]
-  /// objects to search (defaults to [NaturalLanguage.list]).
-  ///
-  /// Example usage:
-  ///
-  /// ```dart
-  ///  final maybeCzech = NaturalLanguage.maybeFromValue(
-  ///    "CZE",
-  ///    where: (language) => language.bibliographicCode,
-  ///  );
-  ///
-  ///  // This will print: "Native name: čeština".
-  ///  print("Native name: ${maybeCzech?.namesNative.first}");
-  /// ```
-  static NaturalLanguage? maybeFromValue<T extends Object>(
-    T value, {
-    T? Function(NaturalLanguage language)? where,
-    Iterable<NaturalLanguage> languages = list,
-  }) {
-    languages.assertNotEmpty();
-
-    for (final language in languages) {
-      final expectedValue = where?.call(language) ?? language.code;
-      if (expectedValue == value) return language;
-    }
-
-    return null;
-  }
-
-  /// Returns a [NaturalLanguage] object whose [code] matches the specified
-  /// [code],
-  /// or `null` if no such object exists in the specified [languages] list.
-  ///
-  /// The [code] parameter is required and should be an object representing the
-  /// ISO 639 code for the language.
-  /// {@macro any_code_object}
-  /// The optional [languages] parameter specifies the list of [NaturalLanguage]
-  /// objects to search.
-  /// {@macro optional_instances_array_parameter}
-  /// Example usage:
-  ///
-  /// ```dart
-  /// NaturalLanguage? language = NaturalLanguage.maybeFromAnyCode(LangEnum.en);
-  /// print(language != null); // Prints: true
-  /// ```
-  static NaturalLanguage? maybeFromAnyCode(
-    Object? code, [
-    Iterable<NaturalLanguage>? languages,
-  ]) => languages == null
-      ? map.maybeFindByCode(code)
-      : IsoObject.maybe(code)?.maybeMapIsoCode(
-          orElse: (regular) => maybeFromCode(regular, languages),
-          short: (short) => maybeFromCodeShort(short, languages),
-        );
-
   /// The general standard ISO code for languages, defined as ISO 639.
   static const standardGeneralName = "639";
 
@@ -982,7 +879,7 @@ class NaturalLanguage extends Language
   /// ```
   static const map = UpperCaseIsoMap<NaturalLanguage>(
     {...naturalLanguageCodeMap, ...naturalLanguageCodeOtherMap},
-    exactLength: null, // ignore: avoid-passing-default-values, is not default.
+    exactLength: null, // Dart 3.8 formatting.
   );
 
   /// A tree-shakable list of all the natural languages currently
@@ -1174,4 +1071,108 @@ class NaturalLanguage extends Language
     LangZho(),
     LangZul(),
   ];
+
+  /// A two-letter string representing the ISO 639-1 code for the language.
+  @override
+  String get codeOther => codeShort;
+
+  @override
+  String get internationalName => name;
+
+  // ignore: prefer-correct-callback-field-name, follows delegate naming.
+  final LocaleMapFunction<String> Function()? _mapper; // TODO! Docs.
+
+  @override
+  LocalizationDelegate get l10n => LocalizationDelegate(
+    mapper: _mapper ?? () => LanguagesLocaleMapper().localize,
+  );
+
+  /// Returns a string representation of this [NaturalLanguage] object.
+  ///
+  /// The optional [short] parameter specifies whether to use a short format
+  /// (defaults to `true`). If [short] is `true`, this method returns the same
+  /// string as the [Language.toString] method. If [short] is `false`, this
+  /// method returns a string that includes additional information about the
+  /// language, such as its ISO codes, native names, and family.
+  @override
+  String toString({bool short = true}) => short
+      ? super.toString()
+      : 'NaturalLanguage(name: "$name", code: "$code", '
+            'codeShort: "$codeShort", namesNative: ${jsonEncode(namesNative)}, '
+            '''${bibliographicCode == null ? '' : 'bibliographicCode: "$bibliographicCode", '}'''
+            "family: const ${family.runtimeType}(), "
+            "isRightToLeft: $isRightToLeft, "
+            "scripts: const ${scripts.toUniqueInstancesString()},)";
+
+  @override
+  String toJson({JsonCodec codec = const JsonCodec()}) => codec.encode(toMap());
+
+  @override
+  int compareTo(NaturalLanguage other) => code.compareTo(other.code);
+
+  /// Returns a [NaturalLanguage] object whose [code] or the value returned by
+  /// [where] matches the specified [value], or `null` if no such object exists
+  /// in the specified [languages] list.
+  ///
+  /// The [value] parameter is required and should be of type `T`. If [where] is
+  /// not `null`, this method uses the result of calling [where] with each
+  /// [NaturalLanguage] object in [languages] to determine whether the object's
+  /// [code] matches [value]. If [where] is `null`, this method simply compares
+  /// each [NaturalLanguage]'s [code] to [value].
+  ///
+  /// The optional [languages] parameter specifies the list of [NaturalLanguage]
+  /// objects to search (defaults to [NaturalLanguage.list]).
+  ///
+  /// Example usage:
+  ///
+  /// ```dart
+  ///  final maybeCzech = NaturalLanguage.maybeFromValue(
+  ///    "CZE",
+  ///    where: (language) => language.bibliographicCode,
+  ///  );
+  ///
+  ///  // This will print: "Native name: čeština".
+  ///  print("Native name: ${maybeCzech?.namesNative.first}");
+  /// ```
+  static NaturalLanguage? maybeFromValue<T extends Object>(
+    T value, {
+    T? Function(NaturalLanguage language)? where,
+    Iterable<NaturalLanguage> languages = list,
+  }) {
+    // ignore: avoid-collection-mutating-methods, not mutating anything.
+    languages.assertNotEmpty();
+
+    for (final language in languages) {
+      final expectedValue = where?.call(language) ?? language.code;
+      if (expectedValue == value) return language;
+    }
+
+    return null;
+  }
+
+  /// Returns a [NaturalLanguage] object whose [code] matches the specified
+  /// [code],
+  /// or `null` if no such object exists in the specified [languages] list.
+  ///
+  /// The [code] parameter is required and should be an object representing the
+  /// ISO 639 code for the language.
+  /// {@macro any_code_object}
+  /// The optional [languages] parameter specifies the list of [NaturalLanguage]
+  /// objects to search.
+  /// {@macro optional_instances_array_parameter}
+  /// Example usage:
+  ///
+  /// ```dart
+  /// NaturalLanguage? language = NaturalLanguage.maybeFromAnyCode(LangEnum.en);
+  /// print(language != null); // Prints: true
+  /// ```
+  static NaturalLanguage? maybeFromAnyCode(
+    Object? code, [
+    Iterable<NaturalLanguage>? languages,
+  ]) => languages == null
+      ? map.maybeFindByCode(code)
+      : IsoObject.maybe(code)?.maybeMapIsoCode(
+          orElse: (regular) => maybeFromCode(regular, languages),
+          short: (short) => maybeFromCodeShort(short, languages),
+        );
 }

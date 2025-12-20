@@ -12,7 +12,6 @@ import "../common/moon_painter.dart";
 import "../common/rectangle_painter.dart";
 import "../common/star_painter.dart";
 import "../common/triangle_painter.dart";
-import "flag_test_properties.dart";
 
 /// An abstract base class for painting elements on a flag.
 ///
@@ -93,10 +92,7 @@ abstract base class ElementsPainter extends CustomPainter {
   @protected
   Paint paintCreator([Color? color]) =>
       // ignore: avoid-returning-cascades, it's ok for a shorthand method.
-      Paint()
-        ..color = color ?? property.mainColor
-        // ignore: deprecated_member_use_from_same_package, it's TODO!
-        ..isAntiAlias = flagAntiAliasOverride;
+      Paint()..color = color ?? property.mainColor;
 
   /// Retrieves the shape type if it matches the specified type [T].
   ///

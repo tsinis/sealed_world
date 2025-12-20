@@ -58,8 +58,7 @@ class CountryBgr extends WorldCountry {
         ),
       );
   @override
-  // ignore: deprecated_member_use, it's TODO!
-  List<FiatCurrency> get currencies => const [FiatBgn(), FiatEur()];
+  List<FiatCurrency> get currencies => const [FiatEur()];
   @override
   CapitalInfo get capitalInfo => const CapitalInfo(
     capital: Capital("Sofia"),

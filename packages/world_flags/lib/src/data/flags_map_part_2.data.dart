@@ -858,28 +858,6 @@ const flagCypProperties = FlagProperties(
   url: "https://www.vexilla-mundi.com/cyprus/cyprus_sheet.png",
 );
 
-/// Flag properties of country Afghanistan (AF).
-@Deprecated("This is no longer valid, use `flagAfgPropertiesAlt` instead.")
-const flagAfgProperties = FlagProperties(
-  [
-    ColorsProperties(Color(0xff000000)),
-    ColorsProperties(Color(0xffD32011)),
-    ColorsProperties(Color(0xff007A36)),
-  ],
-  stripeOrientation: StripeOrientation.vertical,
-  baseElementType: FlagElementsType.ellipse,
-  isSimplified: true,
-  elementsProperties: [
-    ElementsProperties(
-      Color.fromARGB(100, 255, 255, 255),
-      shape: Ellipse(),
-      heightFactor: 0.8,
-    ),
-    CustomElementsProperties(Color(0xff000000), heightFactor: 1 / 2),
-  ],
-  url: "https://www.vexilla-mundi.com/afghanistan/afghanistan_taliban_flag.png",
-);
-
 /// Flag properties of country Latvia (LV).
 const flagLvaProperties = FlagProperties(
   [

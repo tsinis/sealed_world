@@ -1,5 +1,3 @@
-// ignore_for_file: deprecated_member_use_from_same_package, it's TODO!.
-
 import "package:flutter/material.dart";
 import "package:flutter_test/flutter_test.dart";
 import "package:world_countries/src/extensions/world_country_extension.dart";
@@ -32,40 +30,21 @@ void main() => group("WorldCountryExtension", () {
     });
   });
 
-  group("toIsoLocale", () {
+  group("toTypedLocale", () {
+    const script = ScriptLatn();
     test(
-      "should return correct $TypedLocale instance",
+      "should return correct $TypedLocale instance with codeShort",
       () => expect(
-        value.toIsoLocale(),
-        TypedLocale(
-          value.languages.first,
-          country: value,
-          script: value.languages.first.scripts.first,
-        ),
+        value.toTypedLocale(),
+        TypedLocale(value.languages.first, country: value, script: script),
       ),
     );
 
     test("should return correct $TypedLocale instance with all properties", () {
-      final convertedLocale = value.toIsoLocale(
-        language: NaturalLanguage.list.first,
-        script: Script.list.first,
-      );
+      final language = NaturalLanguage.list.first;
       expect(
-        convertedLocale,
-        TypedLocale(
-          NaturalLanguage.list.first,
-          country: value,
-          script: Script.list.first,
-        ),
-      );
-
-      expect(
-        convertedLocale,
-        TypedLocale.fromSubtags(
-          language: NaturalLanguage.list.first,
-          country: value,
-          script: Script.list.first,
-        ),
+        value.toTypedLocale(language: language, script: script),
+        TypedLocale(language, script: script, country: value),
       );
     });
   });

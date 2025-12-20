@@ -33,10 +33,10 @@ void main() => group("$CurrencyPicker", () {
     "builder from theme",
     (tester) async => tester.testPickerBody(
       const CurrencyPicker(),
-      (item) => item.translations.first.common,
+      (item) => item.namesNative.first,
       theme: CurrencyTileThemeData(
         builder: (properties, {isDense}) =>
-            Text(properties.item.translations.first.common),
+            Text(properties.item.namesNative.first),
       ),
     ),
   );

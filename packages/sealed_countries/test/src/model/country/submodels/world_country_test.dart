@@ -1,8 +1,6 @@
-// ignore_for_file: deprecated_member_use, avoid-duplicate-test-assertions
-// ignore_for_file: deprecated_member_use_from_same_package, it's TODO!
+import "dart:convert";
 
 import "package:_sealed_world_tests/sealed_world_tests.dart";
-import "package:sealed_countries/country_translations.dart";
 import "package:sealed_countries/sealed_countries.dart";
 import "package:test/test.dart";
 
@@ -22,7 +20,6 @@ void main() => group("$WorldCountry", () {
     expect(value, isA<IsoTranslated>());
     expect(value, isA<JsonEncodable>());
     expect(value, isA<Named>());
-    expect(value, isA<Translated>());
   });
 
   performanceTest("compile and non compile time constructors equality", () {
@@ -40,6 +37,191 @@ void main() => group("$WorldCountry", () {
   );
 
   test("compareTo", () => expect(value.compareTo(array.first), isNot(isZero)));
+
+  group("some countries should be fully translated", () {
+    /// This is a comprehensive list of countries that ensure the availability of
+    /// translations for every language in the countries `list`.
+    ///
+    /// It is important to note that while other languages may not be included in
+    /// this list, they may still have translations available for most common
+    /// countries, but there may be some missing translations for rarer languages.
+    /// Every country contains more than 114 translations of it's name.
+    ///
+    /// Includes all the Material localizations in [kMaterialSupportedLanguages](https://api.flutter.dev/flutter/flutter_localizations/kMaterialSupportedLanguages.html)
+    /// with a two letter code and much more (for example on top of that it also
+    /// provides translations for the following languages):
+    /// - Abkhaz (ABK)
+    /// - Aragonese (ARG)
+    /// - Breton (BRE)
+    /// - Chechen (CHE)
+    /// - Chuvash (CHV)
+    /// - Dzongkha (DZO)
+    /// - Esperanto (EPO)
+    /// - Ewe (EWE)
+    /// - Faroese (FAO)
+    /// - Western Frisian (FRY)
+    /// - Fula (Fulah/Pulaar/Pular) (FUL)
+    /// - (Scottish) Gaelic (GLA)
+    /// - Irish (GLE)
+    /// - Hausa (HAU)
+    /// - Igbo (IBO)
+    /// - Interlingue (ILE)
+    /// - Interlingua (INA)
+    /// - Javanese (JAV)
+    /// - Kashmiri (KAS)
+    /// - Luxembourgish (Letzeburgesch) (LTZ)
+    /// - Maltese (MLT)
+    /// - Māori (MRI)
+    /// - Occitan (OCI)
+    /// - Quechua (QUE)
+    /// - Romansh (ROH)
+    /// - Sindhi (SND)
+    /// - Somali (SOM)
+    /// - Sardinian (SRD)
+    /// - Tigrinya (TIR)
+    /// - Tonga (Tonga Islands) (TON)
+    /// - Turkmen (TUK)
+    /// - Uyghur (UIG)
+    /// - Xhosa (XHO)
+    /// - Yoruba (YOR)
+    /// That are not listed in Material one, and much more.
+    const kSealedCountriesSupportedLanguages = <NaturalLanguage>[
+      LangAbk(),
+      LangAfr(),
+      LangAmh(),
+      LangAra(),
+      LangArg(),
+      LangAsm(),
+      LangAze(),
+      LangBel(),
+      LangBen(),
+      LangBos(),
+      LangBre(),
+      LangBul(),
+      LangCat(),
+      LangCes(),
+      LangChe(),
+      LangChv(),
+      LangCym(),
+      LangDan(),
+      LangDeu(),
+      LangDzo(),
+      LangEll(),
+      LangEng(),
+      LangEpo(),
+      LangEst(),
+      LangEus(),
+      LangEwe(),
+      LangFao(),
+      LangFas(),
+      LangFin(),
+      LangFra(),
+      LangFry(),
+      LangFul(),
+      LangGla(),
+      LangGle(),
+      LangGlg(),
+      LangGuj(),
+      LangHau(),
+      LangHeb(),
+      LangHin(),
+      LangHrv(),
+      LangHun(),
+      LangHye(),
+      LangIbo(),
+      LangIle(),
+      LangIna(),
+      LangInd(),
+      LangIsl(),
+      LangIta(),
+      LangJav(),
+      LangJpn(),
+      LangKan(),
+      LangKas(),
+      LangKat(),
+      LangKaz(),
+      LangKhm(),
+      LangKir(),
+      LangKor(),
+      LangLao(),
+      LangLav(),
+      LangLit(),
+      LangLtz(),
+      LangMal(),
+      LangMar(),
+      LangMkd(),
+      LangMlt(),
+      LangMon(),
+      LangMri(),
+      LangMsa(),
+      LangMya(),
+      LangNep(),
+      LangNld(),
+      LangNob(),
+      LangNor(),
+      LangOci(),
+      LangOri(),
+      LangPan(),
+      LangPol(),
+      LangPor(),
+      LangPus(),
+      LangQue(),
+      LangRoh(),
+      LangRon(),
+      LangRus(),
+      LangSin(),
+      LangSlk(),
+      LangSlv(),
+      LangSnd(),
+      LangSom(),
+      LangSpa(),
+      LangSqi(),
+      LangSrd(),
+      LangSrp(),
+      LangSwa(),
+      LangSwe(),
+      LangTam(),
+      LangTel(),
+      LangTgl(),
+      LangTha(),
+      LangTir(),
+      LangTon(),
+      LangTuk(),
+      LangTur(),
+      LangUig(),
+      LangUkr(),
+      LangUrd(),
+      LangUzb(),
+      LangVie(),
+      LangXho(),
+      LangYor(),
+      LangZho(),
+      LangZul(),
+    ];
+
+    final langs = <NaturalLanguage>{};
+
+    for (final language in kSealedCountriesSupportedLanguages) {
+      test("${language.internationalName} should have all translations", () {
+        final translation = WorldCountry.list.commonNamesMap(
+          options: LocaleMappingOptions(mainLocale: BasicTypedLocale(language)),
+        );
+        if (translation.length == WorldCountry.list.length) langs.add(language);
+        expect(
+          translation.length,
+          greaterThanOrEqualTo(WorldCountry.list.length),
+          reason:
+              'Language "${language.internationalName}" is expected to have '
+              "full translations for all ${WorldCountry.list.length} countries",
+        );
+      });
+    }
+
+    test(
+      "should be equal",
+      () => expect(langs, containsAll(kSealedCountriesSupportedLanguages)),
+    );
+  });
 
   group("fields", () {
     final officialCountries = WorldCountry.list.where(
@@ -112,7 +294,7 @@ void main() => group("$WorldCountry", () {
         expect(element.emoji, isNotEmpty);
         expect(element.latLng.longitude, isA<double>());
         expect(element.latLng.latitude, isA<double>());
-        expect(element.translations, isNotEmpty);
+        expect(element.l10n.mapper, isNotNull);
         expect(element.languages, isNotEmpty);
         expect(element.continent.name, isNotEmpty);
         expect(element.altSpellings, isNotEmpty);
@@ -159,11 +341,12 @@ void main() => group("$WorldCountry", () {
     });
 
     test("with ${array.runtimeType}", () {
-      expect(array.length, 2);
+      final length = array.length;
+      expect(length, 2);
       array.addAll(List.of(array));
-      expect(array.length, 2);
+      expect(array.length, length);
       array.add(WorldCountry.fromCodeShort(value.codeShort));
-      expect(array.length, 2);
+      expect(length, array.length);
     });
 
     performanceTest("with ${Map<WorldCountry, Object>}", () {
@@ -456,45 +639,38 @@ void main() => group("$WorldCountry", () {
     for (final element in WorldCountry.list) {
       test("compared to $WorldCountry: ${element.name.common}", () {
         final json = element.toJson();
-
         expect(json, isNotEmpty);
-        final decoded = json.tryParse(WorldCountryJson.fromMap);
-        expect(
-          decoded?.toString(short: false),
-          json.parse(WorldCountryJson.fromMap).toString(short: false),
-        );
-
-        expect(element.code, decoded?.code);
-        expect(element.postalCode, decoded?.postalCode);
-        expect(element.capitalInfo, decoded?.capitalInfo);
-        expect(element.fifa, decoded?.fifa);
-        expect(element.gini, decoded?.gini);
-        expect(element.demonyms, decoded?.demonyms);
-        expect(element.bordersCodes, decoded?.bordersCodes);
-        expect(element.subregion, decoded?.subregion);
-        expect(element.idd, decoded?.idd);
-        expect(element.currencies, decoded?.currencies);
-        expect(element.cioc, decoded?.cioc);
-        expect(element.startOfWeek, decoded?.startOfWeek);
-        expect(element.hasCoatOfArms, decoded?.hasCoatOfArms);
-        expect(element.landlocked, decoded?.landlocked);
-        expect(element.unMember, decoded?.unMember);
-        expect(element.independent, decoded?.independent);
-        expect(element.timezones, decoded?.timezones);
-        expect(element.car, decoded?.car);
-        expect(element.population, decoded?.population);
-        expect(element.areaMetric, decoded?.areaMetric);
-        expect(element.maps, decoded?.maps);
-        expect(element.emoji, decoded?.emoji);
-        expect(element.latLng, decoded?.latLng);
-        expect(element.translations, decoded?.translations);
-        expect(element.languages, decoded?.languages);
-        expect(element.continent, decoded?.continent);
-        expect(element.altSpellings, decoded?.altSpellings);
-        expect(element.codeNumeric, decoded?.codeNumeric);
-        expect(element.codeShort, decoded?.codeShort);
-        expect(element.namesNative, decoded?.namesNative);
-        expect(element.tld, decoded?.tld);
+        final decoded = WorldCountryJson.fromMap(jsonDecode(json));
+        expect(element.code, decoded.code);
+        expect(element.postalCode, decoded.postalCode);
+        expect(element.capitalInfo, decoded.capitalInfo);
+        expect(element.fifa, decoded.fifa);
+        expect(element.gini, decoded.gini);
+        expect(element.demonyms, decoded.demonyms);
+        expect(element.bordersCodes, decoded.bordersCodes);
+        expect(element.subregion, decoded.subregion);
+        expect(element.idd, decoded.idd);
+        expect(element.currencies, decoded.currencies);
+        expect(element.cioc, decoded.cioc);
+        expect(element.startOfWeek, decoded.startOfWeek);
+        expect(element.hasCoatOfArms, decoded.hasCoatOfArms);
+        expect(element.landlocked, decoded.landlocked);
+        expect(element.unMember, decoded.unMember);
+        expect(element.independent, decoded.independent);
+        expect(element.timezones, decoded.timezones);
+        expect(element.car, decoded.car);
+        expect(element.population, decoded.population);
+        expect(element.areaMetric, decoded.areaMetric);
+        expect(element.maps, decoded.maps);
+        expect(element.emoji, decoded.emoji);
+        expect(element.latLng, decoded.latLng);
+        expect(element.languages, decoded.languages);
+        expect(element.continent, decoded.continent);
+        expect(element.altSpellings, decoded.altSpellings);
+        expect(element.codeNumeric, decoded.codeNumeric);
+        expect(element.codeShort, decoded.codeShort);
+        expect(element.namesNative, decoded.namesNative);
+        expect(element.tld, decoded.tld);
       });
     }
   });
@@ -826,7 +1002,6 @@ void main() => group("$WorldCountry", () {
         population: value.population,
         timezones: value.timezones,
         tld: value.tld,
-        translations: const [],
         demonyms: const [],
         currencies: value.currencies,
       ),
@@ -852,7 +1027,6 @@ void main() => group("$WorldCountry", () {
         population: value.population,
         timezones: value.timezones,
         tld: value.tld,
-        translations: value.translations,
         demonyms: value.demonyms,
         currencies: value.currencies,
       ),
@@ -877,7 +1051,6 @@ void main() => group("$WorldCountry", () {
         population: value.population,
         timezones: value.timezones,
         tld: value.tld,
-        translations: value.translations,
         demonyms: value.demonyms,
         currencies: value.currencies,
       ),
@@ -902,7 +1075,6 @@ void main() => group("$WorldCountry", () {
         population: value.population,
         timezones: value.timezones,
         tld: value.tld,
-        translations: value.translations,
         demonyms: value.demonyms,
         currencies: value.currencies,
       ),
@@ -927,7 +1099,6 @@ void main() => group("$WorldCountry", () {
         population: value.population,
         timezones: value.timezones,
         tld: value.tld,
-        translations: value.translations,
         demonyms: value.demonyms,
         currencies: value.currencies,
       ),
@@ -952,7 +1123,6 @@ void main() => group("$WorldCountry", () {
         population: value.population,
         timezones: value.timezones,
         tld: value.tld,
-        translations: value.translations,
         demonyms: value.demonyms,
         currencies: value.currencies,
       ),
@@ -977,7 +1147,6 @@ void main() => group("$WorldCountry", () {
         population: value.population,
         timezones: const [],
         tld: value.tld,
-        translations: value.translations,
         demonyms: value.demonyms,
         currencies: value.currencies,
       ),
@@ -1002,7 +1171,6 @@ void main() => group("$WorldCountry", () {
         population: value.population,
         timezones: value.timezones,
         tld: value.tld,
-        translations: value.translations,
         demonyms: value.demonyms,
         currencies: value.currencies,
         cioc: "",
@@ -1028,7 +1196,6 @@ void main() => group("$WorldCountry", () {
         population: value.population,
         timezones: value.timezones,
         tld: value.tld,
-        translations: value.translations,
         demonyms: value.demonyms,
         currencies: value.currencies,
         fifa: "",
@@ -1054,7 +1221,6 @@ void main() => group("$WorldCountry", () {
         population: value.population,
         timezones: value.timezones,
         tld: value.tld,
-        translations: value.translations,
         demonyms: value.demonyms,
         currencies: value.currencies,
         bordersCodes: const [],
@@ -1080,7 +1246,6 @@ void main() => group("$WorldCountry", () {
         population: value.population,
         timezones: value.timezones,
         tld: value.tld,
-        translations: value.translations,
         demonyms: value.demonyms,
         currencies: value.currencies,
         regionalBlocs: const [],
@@ -1106,119 +1271,10 @@ void main() => group("$WorldCountry", () {
         population: value.population,
         timezones: value.timezones,
         tld: const [],
-        translations: value.translations,
         demonyms: value.demonyms,
         currencies: value.currencies,
         regionalBlocs: value.regionalBlocs,
       ),
     );
-  });
-
-  group("translations", () {
-    test("translation should always provide at least eng translation", () {
-      const language = LangZha();
-      const nonExistCode = "000";
-      int count = 0;
-      for (final country in WorldCountry.list) {
-        final maybeMissing = country.maybeTranslation(
-          const BasicTypedLocale(language, regionalCode: nonExistCode),
-          useLanguageFallback: false,
-        );
-        if (maybeMissing != null) continue;
-        count += 1;
-        expect(
-          country.translation(
-            const BasicTypedLocale(language, regionalCode: nonExistCode),
-          ),
-          // ignore: avoid-misused-test-matchers, could be also exception.
-          isNotNull,
-        );
-      }
-      expect(count, isPositive);
-    });
-
-    test("there should be always minimum translations count available", () {
-      final map = {for (final country in WorldCountry.list) country: 0};
-
-      for (final l10n in NaturalLanguage.list) {
-        for (final country in WorldCountry.list) {
-          final hasTranslationForValue = country.maybeTranslation(
-            BasicTypedLocale(l10n),
-          );
-          if (hasTranslationForValue != null) {
-            map[country] = map[country]! + 1;
-          }
-        }
-      }
-
-      final sortedList = map.entries.toList(growable: false)
-        ..sort((a, b) => a.value.compareTo(b.value));
-      expect(sortedList.first.value, 114);
-    });
-
-    test("there should be always translations for specific languages", () {
-      final map = {for (final lang in NaturalLanguage.list) lang: 0};
-      final missing = <NaturalLanguage, Set<WorldCountry>>{};
-
-      for (final l10n in NaturalLanguage.list) {
-        for (final country in WorldCountry.list) {
-          final hasTranslationForValue = country.maybeTranslation(
-            BasicTypedLocale(l10n),
-          );
-          if (hasTranslationForValue == null) {
-            missing[l10n] = {...?missing[l10n], country};
-          } else {
-            map[l10n] = map[l10n]! + 1;
-          }
-        }
-      }
-
-      final sortedList = map.entries.toList(growable: false)
-        ..sort((a, b) => a.value.compareTo(b.value));
-      final complete = sortedList.where(
-        (item) => item.value >= WorldCountry.list.length,
-      );
-      final sortedMap = Map.fromEntries(complete);
-      final sortedLanguages = sortedMap.keys.toList(growable: false)
-        ..sort((a, b) => a.code.compareTo(b.code));
-
-      expect(sortedLanguages, containsAll(kMaterialSupportedLanguagesSealed));
-
-      expect(sortedLanguages, kSealedCountriesSupportedLanguages);
-
-      for (final country in WorldCountry.list) {
-        for (final l10n in kSealedCountriesSupportedLanguages) {
-          if (l10n == const LangEng()) continue;
-          expect(
-            country.translation(BasicTypedLocale(l10n)),
-            isNot(country.translation(const BasicTypedLocale(LangEng()))),
-          );
-        }
-      }
-    });
-
-    group("commonNamesCacheMap", () {
-      performanceTest(
-        "languages in supported list should have all translations",
-        () {
-          for (final language in kSealedCountriesSupportedLanguages) {
-            final cache = WorldCountry.list.commonNamesCacheMap(
-              BasicTypedLocale(language, script: language.scripts.first),
-            );
-            expect(cache.length, WorldCountry.list.length);
-          }
-        },
-      );
-
-      performanceTest(
-        """some languages should have at smaller amount translations of it's own name""",
-        () {
-          final cache = WorldCountry.list.commonNamesCacheMap(
-            const BasicTypedLocale(LangKal()),
-          );
-          expect(cache.length, lessThan(WorldCountry.list.length));
-        },
-      );
-    });
   });
 });

@@ -6,9 +6,9 @@ import "package:world_countries/src/models/typedefs.dart";
 class _SearchableInterfaceTest implements SearchableInterface<String> {
   const _SearchableInterfaceTest({
     required this.searchIn,
-    this.caseSensitiveSearch = false,
-    this.startWithSearch = true,
-    this.onSearchResultsBuilder,
+    required this.caseSensitiveSearch,
+    required this.startWithSearch,
+    required this.onSearchResultsBuilder,
   });
   @override
   final Iterable<String> Function(String item, BuildContext context) searchIn;
@@ -17,7 +17,7 @@ class _SearchableInterfaceTest implements SearchableInterface<String> {
   @override
   final bool startWithSearch;
   @override
-  final Iterable<String> Function(String query, SearchMap<String> map)?
+  final Iterable<String> Function(String query, SearchMap<String> map)
   onSearchResultsBuilder;
 }
 

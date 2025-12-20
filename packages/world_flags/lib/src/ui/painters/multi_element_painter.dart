@@ -10,7 +10,6 @@ import "../../model/elements/elements_properties.dart";
 import "../../model/shape.dart";
 import "../../model/typedefs.dart";
 import "basic/custom_elements_painter.dart";
-import "basic/flag_test_properties.dart";
 import "common/rectangle_painter.dart";
 
 part "custom/atf_painter.dart";
@@ -77,7 +76,6 @@ final class MultiElementPainter extends CustomElementsPainter {
     for (final props in properties) {
       final shape = props.shape;
       if (shape != null) {
-        // ignore: prefer-moving-to-variable, looks like false-positive.
         painter(shape)([props], size.aspectRatio).paint(canvas, size);
       }
       if (props is CustomElementsProperties) paintFlagElements(canvas, size);

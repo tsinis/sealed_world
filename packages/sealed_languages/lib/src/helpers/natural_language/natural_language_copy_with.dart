@@ -1,6 +1,7 @@
 import "../../model/language/language.dart";
 import "../../model/language_family/language_family.dart";
 import "../../model/script/writing_system.dart";
+import "../../typedefs/typedefs.dart";
 
 /// Extension on [NaturalLanguage] that provides a `copyWith` method for
 /// creating a new instance of [NaturalLanguage] with updated properties.
@@ -29,6 +30,7 @@ extension NaturalLanguageCopyWith<T extends NaturalLanguage> on T {
     String? name,
     List<String>? namesNative,
     Set<Script>? scripts,
+    LocaleMapFunction<String> Function()? mapper,
   }) => NaturalLanguage(
     name: name ?? this.name,
     codeShort: codeShort ?? this.codeShort,
@@ -38,5 +40,6 @@ extension NaturalLanguageCopyWith<T extends NaturalLanguage> on T {
     family: family ?? this.family,
     isRightToLeft: isRightToLeft ?? this.isRightToLeft,
     scripts: scripts ?? this.scripts,
+    mapper: mapper ?? l10n.mapper,
   );
 }

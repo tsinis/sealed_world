@@ -4,7 +4,6 @@ import "../../collections/regional_bloc_collections.dart";
 import "../../data/regional_bloc/regional_bloc.data.dart";
 
 part "regional_bloc.dart";
-part "regional_bloc.g.dart";
 
 /// The [WorldBloc] class is an abstract class that represents a world
 /// bloc. It consists of a [String] values that represents the name and acronym

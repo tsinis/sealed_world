@@ -2,8 +2,6 @@ import "dart:ui" show Offset;
 
 import "package:flutter/foundation.dart";
 
-part "shape.g.dart";
-
 /// An abstract class representing a shape that can be used in flag designs.
 ///
 /// This class is sealed and cannot be instantiated directly. Instead, use one

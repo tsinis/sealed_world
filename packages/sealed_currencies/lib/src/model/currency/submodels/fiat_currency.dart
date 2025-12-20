@@ -14,12 +14,12 @@ class FiatCurrency extends Currency
   /// {@template currency_constructor}
   /// Creates a new instance of [FiatCurrency].
   ///
-  /// The [code], [name], [namesNative], [translations] and [codeNumeric]
-  /// parameters are required. The [priority] parameter defaults to 100, and
-  /// the [smallestDenomination] parameter defaults to 1.
+  /// The [code], [name], [namesNative] and [codeNumeric] parameters are
+  /// required. The [priority] parameter defaults to 100, and the
+  /// [smallestDenomination] parameter defaults to 1.
   ///
   /// The [alternateSymbols], [disambiguateSymbol], [htmlEntity], [subunit],
-  /// [subunitToUnit], and [unitFirst] parameters are optional.
+  /// [subunitToUnit], [mapper] and [unitFirst] parameters are optional.
   ///
   /// The [symbol], [decimalMark], and [thousandsSeparator] parameters are
   /// inherited from the [Currency] class and are also optional.
@@ -46,8 +46,7 @@ class FiatCurrency extends Currency
     super.symbol,
     super.decimalMark = dot,
     super.thousandsSeparator = ",",
-    @Deprecated("Translations are now provided via `l10n`")
-    List<TranslatedName>? translations,
+    LocaleMapFunction<String> Function()? mapper,
   }) : assert(
          code.length == IsoStandardized.codeLength,
          """`code` should be exactly ${IsoStandardized.codeLength} characters long!""",
@@ -76,15 +75,11 @@ class FiatCurrency extends Currency
          smallestDenomination >= 0,
          "`smallestDenomination` should not be negative!",
        ),
-       _translations = translations;
+       _mapper = mapper;
 
   /// {@macro permissive_constructor}
   /// {@macro currency_constructor}
-  @Deprecated(
-    "Use concrete instance and `copyWith` method instead, this "
-    "constructor will be renamed to `custom` in future versions.",
-  )
-  const FiatCurrency.permissive({
+  const FiatCurrency.custom({
     required super.code,
     required super.name,
     this.namesNative = const [],
@@ -100,8 +95,8 @@ class FiatCurrency extends Currency
     super.symbol,
     super.decimalMark = dot,
     super.thousandsSeparator = ",",
-    List<TranslatedName>? translations,
-  }) : _translations = translations;
+    LocaleMapFunction<String> Function()? mapper,
+  }) : _mapper = mapper;
 
   /// {@macro sealed_world.currency_aed_constructor}
   const factory FiatCurrency.aed() = _AedFactory;
@@ -114,9 +109,6 @@ class FiatCurrency extends Currency
 
   /// {@macro sealed_world.currency_amd_constructor}
   const factory FiatCurrency.amd() = _AmdFactory;
-
-  /// {@macro sealed_world.currency_ang_constructor}
-  const factory FiatCurrency.ang() = _AngFactory;
 
   /// {@macro sealed_world.currency_aoa_constructor}
   const factory FiatCurrency.aoa() = _AoaFactory;
@@ -141,9 +133,6 @@ class FiatCurrency extends Currency
 
   /// {@macro sealed_world.currency_bdt_constructor}
   const factory FiatCurrency.bdt() = _BdtFactory;
-
-  /// {@macro sealed_world.currency_bgn_constructor}
-  const factory FiatCurrency.bgn() = _BgnFactory;
 
   /// {@macro sealed_world.currency_bhd_constructor}
   const factory FiatCurrency.bhd() = _BhdFactory;
@@ -273,9 +262,6 @@ class FiatCurrency extends Currency
 
   /// {@macro sealed_world.currency_hnl_constructor}
   const factory FiatCurrency.hnl() = _HnlFactory;
-
-  /// {@macro sealed_world.currency_hrk_constructor}
-  const factory FiatCurrency.hrk() = _HrkFactory;
 
   /// {@macro sealed_world.currency_htg_constructor}
   const factory FiatCurrency.htg() = _HtgFactory;
@@ -478,9 +464,6 @@ class FiatCurrency extends Currency
   /// {@macro sealed_world.currency_sle_constructor}
   const factory FiatCurrency.sle() = _SleFactory;
 
-  /// {@macro sealed_world.currency_sll_constructor}
-  const factory FiatCurrency.sll() = _SllFactory;
-
   /// {@macro sealed_world.currency_sos_constructor}
   const factory FiatCurrency.sos() = _SosFactory;
 
@@ -492,9 +475,6 @@ class FiatCurrency extends Currency
 
   /// {@macro sealed_world.currency_stn_constructor}
   const factory FiatCurrency.stn() = _StnFactory;
-
-  /// {@macro sealed_world.currency_svc_constructor}
-  const factory FiatCurrency.svc() = _SvcFactory;
 
   /// {@macro sealed_world.currency_syp_constructor}
   const factory FiatCurrency.syp() = _SypFactory;
@@ -583,9 +563,6 @@ class FiatCurrency extends Currency
 
   /// {@macro sealed_world.currency_zwg_constructor}
   const factory FiatCurrency.zwg() = _ZwgFactory;
-
-  /// {@macro sealed_world.currency_zwl_constructor}
-  const factory FiatCurrency.zwl() = _ZwlFactory;
 
   /// {@macro sealed_world.currency_xag_constructor}
   const factory FiatCurrency.xag() = _XagFactory;
@@ -749,6 +726,240 @@ class FiatCurrency extends Currency
   /// Default decimal separator for most currencies.
   static const dot = ".";
 
+  /// The general standard ISO code for currencies, defined as ISO 4217.
+  static const standardGeneralName = "4217";
+
+  /// The standard ISO code name for currencies, defined as ISO 4217 Alpha.
+  static const standardCodeName = "$standardGeneralName Alpha";
+
+  /// The standard numeric ISO code name for currencies, defined as
+  /// ISO 4217 Numeric.
+  static const standardCodeNumericName = "$standardGeneralName Numeric";
+
+  /// A tree-shakable constant map containing 3-letter currency (ISO 4217 Alpha)
+  /// codes and their associated [FiatCurrency] objects, for a O(1) access time.
+  ///
+  /// Example usage:
+  ///
+  /// ```dart
+  /// FiatCurrency.codeMap['USD']; // FiatUsd().
+  /// ```
+  static const codeMap = UpperCaseIsoMap<FiatCurrency>(fiatCurrencyCodeMap);
+
+  /// A tree-shakable constant map containing 3-digit numeric currency
+  /// (ISO 4217 Numeric) codes and their associated [FiatCurrency] objects,
+  /// for a O(1) access time.
+  ///
+  /// Example usage:
+  ///
+  /// ```dart
+  /// FiatCurrency.codeNumericMap[840.toString()]; // FiatUsd().
+  /// ```
+  static const codeNumericMap = UpperCaseIsoMap<FiatCurrency>(
+    fiatCurrencyCodeOtherMap,
+  );
+
+  /// A tree-shakable combined map of [codeMap] and [codeNumericMap], providing
+  /// a unified view of currency codes (ISO 4217) and their [FiatCurrency
+  /// objects, for a O(1) access time.
+  ///
+  /// Example usage:
+  ///
+  /// ```dart
+  /// FiatCurrency.map['usd']; // FiatUsd().
+  /// ```
+  static const map = UpperCaseIsoMap<FiatCurrency>({
+    ...fiatCurrencyCodeMap,
+    ...fiatCurrencyCodeOtherMap,
+  });
+
+  /// A list of special purpose fiat currencies (currencies that are
+  /// not being used in the regular transactional currencies list).
+  ///
+  /// This list contains instances of various [FiatCurrency] subclasses
+  /// that represent special purpose fiat currencies.
+  static const specialPurposeList = <FiatCurrency>[
+    FiatXag(),
+    FiatXau(),
+    FiatXba(),
+    FiatXbb(),
+    FiatXbc(),
+    FiatXbd(),
+    FiatXdr(),
+    FiatXpd(),
+    FiatXpt(),
+    FiatXts(),
+  ];
+
+  /// A list of the regular currencies currently supported by the [FiatCurrency]
+  /// class. For a full list with non-regular currencies please
+  /// use [listExtended].
+  static const list = <FiatCurrency>[
+    FiatAed(),
+    FiatAfn(),
+    FiatAll(),
+    FiatAmd(),
+    FiatAoa(),
+    FiatArs(),
+    FiatAud(),
+    FiatAwg(),
+    FiatAzn(),
+    FiatBam(),
+    FiatBbd(),
+    FiatBdt(),
+    FiatBhd(),
+    FiatBif(),
+    FiatBmd(),
+    FiatBnd(),
+    FiatBob(),
+    FiatBrl(),
+    FiatBsd(),
+    FiatBtn(),
+    FiatBwp(),
+    FiatByn(),
+    FiatBzd(),
+    FiatCad(),
+    FiatCdf(),
+    FiatChf(),
+    FiatClf(),
+    FiatClp(),
+    FiatCny(),
+    FiatCop(),
+    FiatCrc(),
+    FiatCuc(),
+    FiatCup(),
+    FiatCve(),
+    FiatCzk(),
+    FiatDjf(),
+    FiatDkk(),
+    FiatDop(),
+    FiatDzd(),
+    FiatEgp(),
+    FiatErn(),
+    FiatEtb(),
+    FiatEur(),
+    FiatFjd(),
+    FiatFkp(),
+    FiatGbp(),
+    FiatGel(),
+    FiatGhs(),
+    FiatGip(),
+    FiatGmd(),
+    FiatGnf(),
+    FiatGtq(),
+    FiatGyd(),
+    FiatHkd(),
+    FiatHnl(),
+    FiatHtg(),
+    FiatHuf(),
+    FiatIdr(),
+    FiatIls(),
+    FiatInr(),
+    FiatIqd(),
+    FiatIrr(),
+    FiatIsk(),
+    FiatJmd(),
+    FiatJod(),
+    FiatJpy(),
+    FiatKes(),
+    FiatKgs(),
+    FiatKhr(),
+    FiatKmf(),
+    FiatKpw(),
+    FiatKrw(),
+    FiatKwd(),
+    FiatKyd(),
+    FiatKzt(),
+    FiatLak(),
+    FiatLbp(),
+    FiatLkr(),
+    FiatLrd(),
+    FiatLsl(),
+    FiatLyd(),
+    FiatMad(),
+    FiatMdl(),
+    FiatMga(),
+    FiatMkd(),
+    FiatMmk(),
+    FiatMnt(),
+    FiatMop(),
+    FiatMru(),
+    FiatMur(),
+    FiatMvr(),
+    FiatMwk(),
+    FiatMxn(),
+    FiatMyr(),
+    FiatMzn(),
+    FiatNad(),
+    FiatNgn(),
+    FiatNio(),
+    FiatNok(),
+    FiatNpr(),
+    FiatNzd(),
+    FiatOmr(),
+    FiatPab(),
+    FiatPen(),
+    FiatPgk(),
+    FiatPhp(),
+    FiatPkr(),
+    FiatPln(),
+    FiatPyg(),
+    FiatQar(),
+    FiatRon(),
+    FiatRsd(),
+    FiatRub(),
+    FiatRwf(),
+    FiatSar(),
+    FiatSbd(),
+    FiatScr(),
+    FiatSdg(),
+    FiatSek(),
+    FiatSgd(),
+    FiatShp(),
+    FiatSle(),
+    FiatSos(),
+    FiatSrd(),
+    FiatSsp(),
+    FiatStn(),
+    FiatSyp(),
+    FiatSzl(),
+    FiatThb(),
+    FiatTjs(),
+    FiatTmt(),
+    FiatTnd(),
+    FiatTop(),
+    FiatTry(),
+    FiatTtd(),
+    FiatTwd(),
+    FiatTzs(),
+    FiatUah(),
+    FiatUgx(),
+    FiatUsd(),
+    FiatUyu(),
+    FiatUzs(),
+    FiatVes(),
+    FiatVnd(),
+    FiatVuv(),
+    FiatWst(),
+    FiatXaf(),
+    FiatXcd(),
+    FiatXcg(),
+    FiatXof(),
+    FiatXpf(),
+    FiatYer(),
+    FiatZar(),
+    FiatZmw(),
+    FiatZwg(),
+  ];
+
+  /// A list of all currencies currently supported by the
+  /// [FiatCurrency] class. This is combination of [FiatCurrency.list]
+  /// plus all currencies from the [FiatCurrency.specialPurposeList].
+  static const listExtended = <FiatCurrency>[...list, ...specialPurposeList];
+
+  // ignore: prefer-correct-callback-field-name, follows delegate naming.
+  final LocaleMapFunction<String> Function()? _mapper; // TODO! Docs.
+
   /// The international 3-numeric non-empty numeric code as defined by the ISO
   /// 4217 standard.
   @override
@@ -758,12 +969,9 @@ class FiatCurrency extends Currency
   String get internationalName => name;
 
   @override
-  List<TranslatedName> get translations =>
-      _translations ?? l10n.translatedNames({this});
-
-  @override
-  LocalizationDelegate get l10n =>
-      LocalizationDelegate(mapper: () => CurrenciesLocaleMapper().localize);
+  LocalizationDelegate get l10n => LocalizationDelegate(
+    mapper: _mapper ?? () => CurrenciesLocaleMapper().localize,
+  );
 
   /// Returns a string representation of this instance.
   @override
@@ -815,6 +1023,7 @@ class FiatCurrency extends Currency
     T? Function(FiatCurrency currency)? where,
     Iterable<FiatCurrency> currencies = listExtended,
   }) {
+    // ignore: avoid-collection-mutating-methods, not mutating anything.
     currencies.assertNotEmpty();
 
     for (final currency in currencies) {
@@ -909,243 +1118,4 @@ class FiatCurrency extends Currency
 
     return currencies.firstIsoWhereCodeOtherOrNull(string, toUpperCase: false);
   }
-
-  /// The general standard ISO code for currencies, defined as ISO 4217.
-  static const standardGeneralName = "4217";
-
-  /// The standard ISO code name for currencies, defined as ISO 4217 Alpha.
-  static const standardCodeName = "$standardGeneralName Alpha";
-
-  /// The standard numeric ISO code name for currencies, defined as
-  /// ISO 4217 Numeric.
-  static const standardCodeNumericName = "$standardGeneralName Numeric";
-
-  /// A tree-shakable constant map containing 3-letter currency (ISO 4217 Alpha)
-  /// codes and their associated [FiatCurrency] objects, for a O(1) access time.
-  ///
-  /// Example usage:
-  ///
-  /// ```dart
-  /// FiatCurrency.codeMap['USD']; // FiatUsd().
-  /// ```
-  static const codeMap = UpperCaseIsoMap<FiatCurrency>(fiatCurrencyCodeMap);
-
-  /// A tree-shakable constant map containing 3-digit numeric currency
-  /// (ISO 4217 Numeric) codes and their associated [FiatCurrency] objects,
-  /// for a O(1) access time.
-  ///
-  /// Example usage:
-  ///
-  /// ```dart
-  /// FiatCurrency.codeNumericMap[840.toString()]; // FiatUsd().
-  /// ```
-  static const codeNumericMap = UpperCaseIsoMap<FiatCurrency>(
-    fiatCurrencyCodeOtherMap,
-  );
-
-  /// A tree-shakable combined map of [codeMap] and [codeNumericMap], providing
-  /// a unified view of currency codes (ISO 4217) and their [FiatCurrency
-  /// objects, for a O(1) access time.
-  ///
-  /// Example usage:
-  ///
-  /// ```dart
-  /// FiatCurrency.map['usd']; // FiatUsd().
-  /// ```
-  static const map = UpperCaseIsoMap<FiatCurrency>({
-    ...fiatCurrencyCodeMap,
-    ...fiatCurrencyCodeOtherMap,
-  });
-
-  /// A list of special purpose fiat currencies (currencies that are
-  /// not being used in the regular transactional currencies list).
-  ///
-  /// This list contains instances of various [FiatCurrency] subclasses
-  /// that represent special purpose fiat currencies.
-  static const specialPurposeList = <FiatCurrency>[
-    FiatXag(),
-    FiatXau(),
-    FiatXba(),
-    FiatXbb(),
-    FiatXbc(),
-    FiatXbd(),
-    FiatXdr(),
-    FiatXpd(),
-    FiatXpt(),
-    FiatXts(),
-  ];
-
-  /// A list of the regular currencies currently supported by the [FiatCurrency]
-  /// class. For a full list with non-regular currencies please
-  /// use [listExtended].
-  static const list = <FiatCurrency>[
-    FiatAed(),
-    FiatAfn(),
-    FiatAll(),
-    FiatAmd(),
-    FiatAng(), // ignore: deprecated_member_use_from_same_package, TODO! End of 2025.
-    FiatAoa(),
-    FiatArs(),
-    FiatAud(),
-    FiatAwg(),
-    FiatAzn(),
-    FiatBam(),
-    FiatBbd(),
-    FiatBdt(),
-    FiatBgn(), // ignore: deprecated_member_use_from_same_package, TODO! End of 2025.
-    FiatBhd(),
-    FiatBif(),
-    FiatBmd(),
-    FiatBnd(),
-    FiatBob(),
-    FiatBrl(),
-    FiatBsd(),
-    FiatBtn(),
-    FiatBwp(),
-    FiatByn(),
-    FiatBzd(),
-    FiatCad(),
-    FiatCdf(),
-    FiatChf(),
-    FiatClf(),
-    FiatClp(),
-    FiatCny(),
-    FiatCop(),
-    FiatCrc(),
-    FiatCuc(),
-    FiatCup(),
-    FiatCve(),
-    FiatCzk(),
-    FiatDjf(),
-    FiatDkk(),
-    FiatDop(),
-    FiatDzd(),
-    FiatEgp(),
-    FiatErn(),
-    FiatEtb(),
-    FiatEur(),
-    FiatFjd(),
-    FiatFkp(),
-    FiatGbp(),
-    FiatGel(),
-    FiatGhs(),
-    FiatGip(),
-    FiatGmd(),
-    FiatGnf(),
-    FiatGtq(),
-    FiatGyd(),
-    FiatHkd(),
-    FiatHnl(),
-    FiatHrk(), // ignore: deprecated_member_use_from_same_package, TODO! End of 2025.
-    FiatHtg(),
-    FiatHuf(),
-    FiatIdr(),
-    FiatIls(),
-    FiatInr(),
-    FiatIqd(),
-    FiatIrr(),
-    FiatIsk(),
-    FiatJmd(),
-    FiatJod(),
-    FiatJpy(),
-    FiatKes(),
-    FiatKgs(),
-    FiatKhr(),
-    FiatKmf(),
-    FiatKpw(),
-    FiatKrw(),
-    FiatKwd(),
-    FiatKyd(),
-    FiatKzt(),
-    FiatLak(),
-    FiatLbp(),
-    FiatLkr(),
-    FiatLrd(),
-    FiatLsl(),
-    FiatLyd(),
-    FiatMad(),
-    FiatMdl(),
-    FiatMga(),
-    FiatMkd(),
-    FiatMmk(),
-    FiatMnt(),
-    FiatMop(),
-    FiatMru(),
-    FiatMur(),
-    FiatMvr(),
-    FiatMwk(),
-    FiatMxn(),
-    FiatMyr(),
-    FiatMzn(),
-    FiatNad(),
-    FiatNgn(),
-    FiatNio(),
-    FiatNok(),
-    FiatNpr(),
-    FiatNzd(),
-    FiatOmr(),
-    FiatPab(),
-    FiatPen(),
-    FiatPgk(),
-    FiatPhp(),
-    FiatPkr(),
-    FiatPln(),
-    FiatPyg(),
-    FiatQar(),
-    FiatRon(),
-    FiatRsd(),
-    FiatRub(),
-    FiatRwf(),
-    FiatSar(),
-    FiatSbd(),
-    FiatScr(),
-    FiatSdg(),
-    FiatSek(),
-    FiatSgd(),
-    FiatShp(),
-    FiatSle(),
-    FiatSll(), // ignore: deprecated_member_use_from_same_package, TODO! End of 2025.
-    FiatSos(),
-    FiatSrd(),
-    FiatSsp(),
-    FiatStn(),
-    FiatSvc(), // ignore: deprecated_member_use_from_same_package, TODO! End of 2025.
-    FiatSyp(),
-    FiatSzl(),
-    FiatThb(),
-    FiatTjs(),
-    FiatTmt(),
-    FiatTnd(),
-    FiatTop(),
-    FiatTry(),
-    FiatTtd(),
-    FiatTwd(),
-    FiatTzs(),
-    FiatUah(),
-    FiatUgx(),
-    FiatUsd(),
-    FiatUyu(),
-    FiatUzs(),
-    FiatVes(),
-    FiatVnd(),
-    FiatVuv(),
-    FiatWst(),
-    FiatXaf(),
-    FiatXcd(),
-    FiatXcg(),
-    FiatXof(),
-    FiatXpf(),
-    FiatYer(),
-    FiatZar(),
-    FiatZmw(),
-    FiatZwg(),
-    FiatZwl(), // ignore: deprecated_member_use_from_same_package, TODO! End of 2025.
-  ];
-
-  /// A list of all currencies currently supported by the
-  /// [FiatCurrency] class. This is combination of [FiatCurrency.list]
-  /// plus all currencies from the [FiatCurrency.specialPurposeList].
-  static const listExtended = <FiatCurrency>[...list, ...specialPurposeList];
-
-  final List<TranslatedName>? _translations;
 }

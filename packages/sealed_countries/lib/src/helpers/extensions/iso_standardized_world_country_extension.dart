@@ -8,13 +8,6 @@ import "../../model/country/country.dart";
 /// This extension allows for easy identification of whether an
 /// [IsoStandardized] instance is a [WorldCountry].
 extension IsoStandardizedWorldCountryExtension on IsoStandardized? {
-  /// Returns `true` if this object is an instance of [WorldCountry].
-  ///
-  /// This getter can be used to check if an [IsoStandardized] object
-  /// represents a world country.
-  @Deprecated("Please use `mapWhenOrNull` or `is WorldCountry` check instead.")
-  bool get isWorldCountry => this is WorldCountry;
-
   /// Pattern-matching helper for ISO types.
   ///
   /// Returns the result of the first matching callback or `null` if none match.

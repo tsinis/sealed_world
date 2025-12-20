@@ -138,11 +138,5 @@ void main() => group("$TypedLocaleDelegate", () {
       final context = await tester.contextExtractor();
       expect(TypedLocaleDelegate.of(context), isNull);
     });
-
-    testWidgets("TypedLocaleDelegate.maybeOf", (tester) async {
-      final context = await tester.contextExtractor();
-      // ignore: deprecated_member_use_from_same_package, it's a TODO!
-      expect(TypedLocaleDelegate.maybeOf(context), isNull);
-    });
   });
 });

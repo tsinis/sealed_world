@@ -3,11 +3,6 @@
 
 import "../model/country/country.dart";
 
-/// List of all standard [WorldCountry] sorted by code.
-@Deprecated("Use `WorldCountry.list` instead.")
-// ignore: avoid-explicit-type-declaration, deprecated member.
-const List<WorldCountry> worldCountryList = WorldCountry.list;
-
 /// Map of [WorldCountry] standard codes.
 const worldCountryCodeMap = <String, WorldCountry>{
   "ABW": CountryAbw(),

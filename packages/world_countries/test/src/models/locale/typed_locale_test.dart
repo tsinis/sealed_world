@@ -48,6 +48,22 @@ void main() => group("$TypedLocale", () {
     );
   });
 
+  test(
+    "fromSubtags",
+    () => expect(
+      TypedLocale.fromSubtags(
+        language: english,
+        country: const CountryUsa(),
+        script: const ScriptLatn(),
+      ).asLocale,
+      const Locale.fromSubtags(
+        languageCode: "en",
+        countryCode: string,
+        scriptCode: "Latn",
+      ),
+    ),
+  );
+
   group("equality", () {
     test("should compare regular $Locale object with $TypedLocale", () {
       expect(value, locale);

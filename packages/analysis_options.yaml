@@ -1,18 +1,4 @@
 analyzer:
-  exclude:
-    # Web
-    - "web/**"
-    # Build
-    - "build/**"
-    # Assets
-    - "assets/**"
-    # Mocks for test
-    - "**/*.mocks.dart"
-    # Coverage
-    - "coverage/**"
-    # Generated code
-    - "**/*.g.dart"
-
   language:
     strict-casts: true
     strict-inference: true
@@ -38,65 +24,96 @@ analyzer:
     close_sinks: error
     valid_regexps: error
 
-  plugins:
-    - dart_code_metrics
-
 dart_code_metrics:
-  exclude:
-    dependencies:
-      - example/pubspec.yaml
-    metrics:
-      - "**/test/**"
-      - "**/example/**"
   extends:
     - package:dart_code_metrics_presets/dart_all.yaml
-  anti-patterns:
-    - long-parameter-list:
-        ignore-optional: true
-        exclude:
-          - "**/helpers/**_copy_with.dart"
-    - long-method:
-        exclude:
-          - "**/test/**"
+  exclude:
+    metrics:
+      - "**/example/**"
+      - "**/test/**"
+      - "tools/**"
   metrics:
-    cyclomatic-complexity: 24
-    maximum-nesting-level: 5
-    number-of-parameters: 4
-    source-lines-of-code: 60
-  metrics-exclude:
-    - test/**
-    - example/**
-  rules:
+    # weighted-methods-per-class:
+    #   threshold: 35
+    # response-for-class:
+    #   threshold: 75
+    number-of-overridden-methods:
+      threshold: 10
+    # number-of-methods:
+    #   threshold: 12
+    # number-of-implemented-interfaces:
+    #   threshold: 5
+    # number-of-added-methods:
+    #   threshold: 10
+    # depth-of-inheritance-tree:
+    #   threshold: 7
+    # coupling-between-object-classes:
+    #   threshold: 25
+    # number-of-external-imports:
+    #   threshold: 5
+    # number-of-imports:
+    #   threshold: 25
+    # widgets-nesting-level:
+    #   threshold: 10
+    # number-of-used-widgets:
+    #   threshold: 20
+    # cyclomatic-complexity:
+    #   threshold: 45
+    # lines-of-code:
+    #   threshold: 200
+    # number-of-parameters:
+    #   threshold: 5
+    # source-lines-of-code:
+    #   threshold: 100
+    # maximum-nesting-level:
+    #   threshold: 5
+    # halstead-volume:
+    #   threshold: 200
+    # weight-of-class:
+    #   threshold: 0.33
+    # tight-class-cohesion:
+    #   threshold: 0.33
+  pubspec-rules:
     # Disabled:
-    - arguments-ordering: false # This will be a breaking change.
-    - avoid-adjacent-strings: false # It's not being used on one line strings.
-    - avoid-collection-mutating-methods: false # Mostly false positives.
-    - avoid-constant-conditions: false # A lot of false positives (e.g. outside of tests).
-    - avoid-continue: false # Just a matter of style.
-    - avoid-default-tostring: false # Doesn't make sense here.
-    - avoid-deprecated-usage: false # Using default deprecated_member_use_from_same_package.
-    - avoid-duplicate-collection-elements: false # They are being used on purpose.
-    - avoid-ignoring-return-values: false # Mostly, collection methods are ignored.
-    - avoid-inferrable-type-arguments: false # Against prefer-explicit-type-arguments.
-    - avoid-long-files: false # A lot of data and collections.
-    - avoid-nullable-interpolation: false # Doesn't work for toString() methods.
-    - avoid-unnecessary-nullable-fields: false # Fields could be nullable + has default values.
-    - avoid-unsafe-collection-methods: false # They are being used on purpose.
-    - enum-constants-ordering: false # This might be a breaking change.
-    - match-getter-setter-field-names: false # Most of those are just aliases.
-    - max-imports: false # Sadly not very suitable for the packages.
-    - no-empty-string: false # This will be a breaking change.
-    - no-equal-arguments: false # Not our use-case here.
-    - no-magic-number: false # Packages contain a lot of numbers.
-    - no-magic-string: false # Packages contain a lot of strings.
-    - parameters-ordering: false # This will be a breaking change.
-    - prefer-test-structure: false # Matter of style.
-    - prefer-boolean-prefixes: false # This will be a breaking change.
-    - prefer-correct-throws: false # No DCM annotations or Meta in Dart packages.
-    - prefer-explicit-parameter-names: false # This will be dev. defined.
-    - prefer-prefixed-global-constants: false # This will be a breaking change.
-    - prefer-test-matchers: false # Matter of style + introduces coupling in tests.
+    - avoid-any-version: false # Defined in the workspace pubspec.yaml
+    - prefer-correct-package-name: false # Different naming conventions for Dart and Flutter packages.
+    - prefer-pinned-version-syntax: false # Conflicts with prefer-caret-version-syntax.
+    - prefer-publish-to-none: false # Those are not published packages.
+    - prefer-caret-version-syntax: false # Conflicts with avoid-any-version.
+
     # Enabled:
+    - add-resolution-workspace: true
+    - avoid-dependency-overrides: true
+    - dependencies-ordering: true
+    - newline-before-pubspec-entry: true
+    - prefer-correct-screenshots: true
+    - prefer-semver-version: true
+    - pubspec-ordering:
+        order:
+          - version
+          - name
+          - description
+          - publish_to
+          - maintainer
+          - repository
+          - issue_tracker
+          - homepage
+          - funding
+          - resolution
+          - topics
+          - screenshots
+          - environment
+          - dependencies
+          - dependency_overrides
+          - dev_dependencies
+    - prefer-commenting-pubspec-ignores: true
+    - prefer-correct-topics: true
+  rules:
+    # With configs:
+    - avoid-non-ascii-symbols:
+        exclude:
+          - "**/data/**.data.dart"
+          - "**/translations/**.l10n.dart"
     - avoid-collection-equality-checks:
         exclude:
           - "**/model/**"
@@ -172,21 +189,56 @@ dart_code_metrics:
     - avoid-non-empty-constructor-bodies:
         exclude:
           - "**/src/**/**.data.dart"
-    - avoid-non-ascii-symbols:
-        exclude:
-          - "**/data/**.data.dart"
-          - "**/translations/**.l10n.dart"
     - prefer-class-destructuring:
         min-occurrences: 4
     - prefer-single-declaration-per-file:
         exclude:
           - "**/data/**.data.dart"
           - "**/test/**"
+    - avoid-collection-mutating-methods:
+        exclude:
+          - "**/data/**_l10n.data.dart"
+          - "**/lib/l10n_*.dart"
+
+    # Disabled:
+    # Shorthands:
+    - prefer-returning-shorthands: false
+    - prefer-shorthands-with-constructors: false
+    - prefer-shorthands-with-enums: false
+    - prefer-shorthands-with-static-fields: false
+    # Other disabled:
+    - arguments-ordering: false # This will be a breaking change.
+    - avoid-adjacent-strings: false # It's not being used on one line strings.
+    - avoid-continue: false # Just a matter of style.
+    - avoid-default-tostring: false # Doesn't make sense here.
+    - avoid-deprecated-usage: false # Using default deprecated_member_use_from_same_package.
+    - avoid-duplicate-collection-elements: false # They are being used on purpose.
+    - avoid-ignoring-return-values: false # Mostly, collection methods are ignored.
+    - avoid-inferrable-type-arguments: false # Against prefer-explicit-type-arguments.
+    - avoid-long-files: false # A lot of data and collections.
+    - avoid-nullable-interpolation: false # Doesn't work for toString() methods.
+    - avoid-unnecessary-nullable-fields: false # Fields could be nullable + has default values.
+    - avoid-unsafe-collection-methods: false # They are being used on purpose.
+    - enum-constants-ordering: false # This might be a breaking change.
+    - match-getter-setter-field-names: false # Most of those are just aliases.
+    - max-imports: false # Sadly not very suitable for the packages.
+    - no-empty-string: false # This will be a breaking change.
+    - no-equal-arguments: false # Not our use-case here.
+    - no-magic-number: false # Packages contain a lot of numbers.
+    - no-magic-string: false # Packages contain a lot of strings.
+    - parameters-ordering: false # This will be a breaking change.
+    - prefer-test-structure: false # Matter of style.
+    - prefer-boolean-prefixes: false # This will be a breaking change.
+    - prefer-correct-throws: false # No DCM annotations or Meta in Dart packages.
+    - prefer-explicit-parameter-names: false # This will be dev. defined.
+    - prefer-prefixed-global-constants: false # This will be a breaking change.
+    - prefer-test-matchers: false # Matter of style + introduces coupling in tests.
 
     # Enabled:
     - add-resolution-workspace: true
     - avoid-accessing-collections-by-constant-index: true
     - avoid-accessing-other-classes-private-members: true
+    - avoid-always-null-parameters: true
     - avoid-assigning-to-static-field: true
     - avoid-assignments-as-conditions: true
     - avoid-async-call-in-sync-function: true
@@ -201,9 +253,11 @@ dart_code_metrics:
     - avoid-collection-methods-with-unrelated-types: true
     - avoid-commented-out-code: true
     - avoid-complex-arithmetic-expressions: true
+    - avoid-complex-conditions: true
     - avoid-complex-loop-conditions: true
     - avoid-conditions-with-boolean-literals: true
     - avoid-constant-assert-conditions: true
+    - avoid-constant-conditions: true
     - avoid-constant-switches: true
     - avoid-contradictory-expressions: true
     - avoid-declaring-call-method: true
@@ -234,6 +288,7 @@ dart_code_metrics:
     - avoid-global-state: true
     - avoid-identical-exception-handling-blocks: true
     - avoid-if-with-many-branches: true
+    - avoid-immediately-invoked-functions: true
     - avoid-implicitly-nullable-extension-types: true
     - avoid-importing-entrypoint-exports: true
     - avoid-incomplete-copy-with: true
@@ -261,6 +316,7 @@ dart_code_metrics:
     - avoid-nested-extension-types: true
     - avoid-nested-futures: true
     - avoid-nested-records: true
+    - avoid-nested-shorthands: true
     - avoid-nested-streams-and-futures: true
     - avoid-nested-switch-expressions: true
     - avoid-nested-switches: true
@@ -274,7 +330,6 @@ dart_code_metrics:
     - avoid-one-field-records: true
     - avoid-only-rethrow: true
     - avoid-passing-default-values: true
-    - avoid-passing-self-as-argument: true
     - avoid-positional-record-field-access: true
     - avoid-recursive-calls: true
     - avoid-recursive-tostring: true
@@ -295,12 +350,11 @@ dart_code_metrics:
     - avoid-slow-collection-methods: true
     - avoid-stream-tostring: true
     - avoid-substring: true
-    - avoid-suspicious-global-references: true
+    - avoid-suspicious-global-reference: true
     - avoid-suspicious-super-overrides: true
     - avoid-throw-in-catch-block: true
     - avoid-throw-objects-without-tostring: true
-    - avoid-top-level-members-in-tests: true
-    - avoid-type-casts: true
+    - avoid-unassigned-fields: true
     - avoid-unassigned-late-fields: true
     - avoid-unassigned-stream-subscriptions: true
     - avoid-uncaught-future-errors: true
@@ -308,6 +362,7 @@ dart_code_metrics:
     - avoid-unknown-pragma: true
     - avoid-unnecessary-block: true
     - avoid-unnecessary-call: true
+    - avoid-unnecessary-collections: true
     - avoid-unnecessary-compare-to: true
     - avoid-unnecessary-conditionals: true
     - avoid-unnecessary-constructor: true
@@ -364,6 +419,7 @@ dart_code_metrics:
     - move-variable-closer-to-its-usage: true
     - move-variable-outside-iteration: true
     - newline-before-case: true
+    - newline-before-constructor: true
     - newline-before-method: true
     - newline-before-pubspec-entry: true
     - newline-before-return: true
@@ -376,6 +432,7 @@ dart_code_metrics:
     - no-equal-then-else: true
     - no-object-declaration: true
     - pass-correct-accepted-type: true
+    - pass-optional-argument: true
     - pattern-fields-ordering: true
     - prefer-abstract-final-static-class: true
     - prefer-add-all: true

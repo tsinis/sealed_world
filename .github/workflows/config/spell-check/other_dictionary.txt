@@ -1,12 +1,22 @@
 # Other keywords/terms
+AABBCC
+AARRGGBB
+Abbcc
 Anglický
 Angličtina
+Bbcc
+Faabbcc
 Pushto
+RRGGBB
 Ruský
 Ruština
 Uyghur
+aabbc
+aabbcc
+aabbcx
 appium
 checo
+ffaabbcc
 jazyk
 ltwh
 republika

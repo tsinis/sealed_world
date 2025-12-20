@@ -8,12 +8,14 @@ ARMI
 ARMN
 AVST
 Abk
+Abkhaz
 Abw
 Adlm
 Afak
 Aghb
 Ahom
 Amh
+Anglais
 Aran
 Ariary
 Armi
@@ -108,6 +110,7 @@ Dogr
 Dsrt
 Dupl
 Dza
+Dzongkha
 EGYD
 EGYH
 EGYP
@@ -125,10 +128,12 @@ Eswatini
 Ethi
 Eus
 Fao
+Faroese
 Fij
 Fji
 Flk
 Fsm
+Fulah
 Futuna
 GEOK
 GEOR
@@ -261,6 +266,7 @@ Lby
 Leke
 Leonean
 Lepc
+Letzeburgesch
 Linb
 Lisu
 Lka
@@ -270,6 +276,7 @@ Lso
 Ltu
 Ltz
 Lusophone
+Luxembourgish
 Lva
 Lyci
 Lydi
@@ -317,6 +324,7 @@ Mwi
 Mymr
 Mys
 Myt
+Māori
 NAGM
 NAND
 NARB
@@ -364,6 +372,7 @@ OSMA
 OSX
 OUGR
 OVERLAPPEDWINDOW
+Occitan
 Oci
 Ogam
 Oji
@@ -416,6 +425,8 @@ Prti
 Príncipe
 Pse
 Psin
+Pulaar
+Pular
 Pyf
 QAAA
 QABX

@@ -6,7 +6,6 @@ import "../../model/language_family/language_family.dart";
 import "../../model/script/writing_system.dart";
 import "../../typedefs/typedefs.dart";
 import "../extensions/sealed_world_iterable_extension.dart";
-import "../extensions/translated_name_extension.dart";
 
 /// Extension on [NaturalLanguage] that provides methods for converting
 /// [NaturalLanguage] objects to and from JSON maps.
@@ -82,8 +81,5 @@ extension NaturalLanguageJson on NaturalLanguage {
     "name": name,
     "namesNative": namesNative,
     "scripts": scripts.toIsoList(),
-    "translations": translations
-        .map((l10n) => l10n.toMap())
-        .toList(growable: false),
   };
 }

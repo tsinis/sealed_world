@@ -23,7 +23,6 @@ void main() => group("FiatCurrencyCopyWith", () {
     expect(copy.unitFirst, element.unitFirst);
     expect(copy.decimalMark, element.decimalMark);
     expect(copy.thousandsSeparator, element.thousandsSeparator);
-    expect(copy.translations, element.translations);
   });
 
   test("copyWith should return a same instance without updated name", () {
@@ -44,6 +43,5 @@ void main() => group("FiatCurrencyCopyWith", () {
     expect(copy.unitFirst, element.unitFirst);
     expect(copy.decimalMark, element.decimalMark);
     expect(copy.thousandsSeparator, element.thousandsSeparator);
-    expect(copy.translations, element.translations);
   });
 });

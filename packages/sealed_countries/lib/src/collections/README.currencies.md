@@ -4,7 +4,6 @@
 | AFN | Afghan Afghani | 🇦🇫 Afghanistan |  |
 | ALL | Albanian Lek | 🇦🇱 Albania |  |
 | AMD | Armenian Dram | 🇦🇲 Armenia |  |
-| ANG | Netherlands Antillean Guilder | 🇨🇼 Curaçao | 🇸🇽 |
 | AOA | Angolan Kwanza | 🇦🇴 Angola |  |
 | ARS | Argentine Peso | 🇦🇷 Argentina |  |
 | AUD | Australian Dollar | 🇦🇺 Australia | 🇰🇮🇳🇷🇹🇻🇳🇫🇨🇽🇨🇨 |
@@ -13,7 +12,6 @@
 | BAM | Convertible Mark | 🇧🇦 Bosnia and Herzegovina |  |
 | BBD | Barbadian Dollar | 🇧🇧 Barbados |  |
 | BDT | Bangladeshi Taka | 🇧🇩 Bangladesh |  |
-| BGN | Bulgarian Lev | 🇧🇬 Bulgaria |  |
 | BHD | Bahraini Dinar | 🇧🇭 Bahrain |  |
 | BIF | Burundian Franc | 🇧🇮 Burundi |  |
 | BMD | Bermudian Dollar | 🇧🇲 Bermuda |  |
@@ -57,7 +55,6 @@
 | GYD | Guyanese Dollar | 🇬🇾 Guyana |  |
 | HKD | Hong Kong Dollar | 🇭🇰 Hong Kong |  |
 | HNL | Honduran Lempira | 🇭🇳 Honduras |  |
-| HRK | Croatian Kuna | 🇭🇷 Croatia |  |
 | HTG | Haitian Gourde | 🇭🇹 Haiti |  |
 | HUF | Hungarian Forint | 🇭🇺 Hungary |  |
 | IDR | Indonesian Rupiah | 🇮🇩 Indonesia |  |
@@ -125,12 +122,10 @@
 | SGD | Singapore Dollar | 🇸🇬 Singapore | 🇧🇳 |
 | SHP | St. Helena Pound | 🇸🇭 Saint Helena, Ascension and Tristan da Cunha |  |
 | SLE | Sierra Leonean Leone | 🇸🇱 Sierra Leone |  |
-| SLL | Sierra Leonean Leone (Old) | 🇸🇱 Sierra Leone |  |
 | SOS | Somali Shilling | 🇸🇴 Somalia |  |
 | SRD | Surinamese Dollar | 🇸🇷 Suriname |  |
 | SSP | South Sudanese Pound | 🇸🇸 South Sudan |  |
 | STN | São Tomé and Príncipe Second Dobra | 🇸🇹 São Tomé and Príncipe |  |
-| SVC | Salvadoran Colón | 🇸🇻 El Salvador |  |
 | SYP | Syrian Pound | 🇸🇾 Syria |  |
 | SZL | Swazi Lilangeni | 🇸🇿 Eswatini |  |
 | THB | Thai Baht | 🇹🇭 Thailand |  |
@@ -160,6 +155,5 @@
 | ZAR | South African Rand | 🇿🇦 South Africa | 🇳🇦🇱🇸🇸🇿 |
 | ZMW | Zambian Kwacha | 🇿🇲 Zambia |  |
 | ZWG | Zimbabwe Gold | 🇿🇼 Zimbabwe |  |
-| ZWL | Zimbabwean Dollar | 🇿🇼 Zimbabwe |  |
 
 > Generated (by test) file, do not edit manually.

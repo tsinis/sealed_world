@@ -240,6 +240,7 @@ class KkCountriesL10N extends IsoLocaleMapper<String> {
       "UGA": "Уганда",
       "UKR": "Украина",
       "UMI": "АҚШ-тың сыртқы кіші аралдары",
+      "UNK": "Косово",
       "URY": "Уругвай",
       "USA": "Америка Құрама Штаттары",
       "UZB": "Өзбекстан",

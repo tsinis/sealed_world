@@ -3,8 +3,6 @@
 import "dart:io";
 
 import "package:path/path.dart";
-// ignore: deprecated_member_use, it's TODO!
-import "package:sealed_currencies/currency_translations.dart";
 import "package:sealed_languages/sealed_languages.dart";
 
 void main(List<String> args) {
@@ -49,10 +47,7 @@ void main(List<String> args) {
     print('  $langClass(): "${entry.value}",');
   }
 
-  print(
-    "\nTotal languages found: ${currencyMap.length} out of "
-    "${kSealedCurrenciesSupportedLanguages.length}",
-  );
+  print("\nTotal languages found: ${currencyMap.length}");
 
   final dataDir = Directory(
     join("../", "packages", "l10n_currencies", "lib", "src", "data"),

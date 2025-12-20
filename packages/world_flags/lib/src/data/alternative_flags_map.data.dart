@@ -2,26 +2,11 @@
 import "dart:ui";
 
 import "../model/colors_properties.dart";
-import "../model/elements/custom_elements_properties.dart";
 import "../model/elements/elements_properties.dart";
 import "../model/flag_elements_type.dart";
 import "../model/flag_properties.dart";
 import "../model/shape.dart";
 import "../model/stripe_orientation.dart";
-
-/// Alternative flag properties of country Afghanistan (AF).
-const flagAfgPropertiesAlt = FlagProperties(
-  [ColorsProperties(Color(0xffffffff))],
-  aspectRatio: 2,
-  isSimplified: null,
-  elementsProperties: [
-    CustomElementsProperties(
-      Color(0xff000000),
-      heightFactor: 0.55,
-      widthFactor: 1.4,
-    ),
-  ],
-);
 
 /// Alternative flag properties of country French Guiana (GF).
 const flagGufPropertiesAlt = FlagProperties(

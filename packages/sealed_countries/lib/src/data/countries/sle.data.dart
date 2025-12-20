@@ -50,8 +50,7 @@ class CountrySle extends WorldCountry {
         timezones: const ["UTC+00:00"],
       );
   @override
-  // ignore: deprecated_member_use, it's TODO!
-  List<FiatCurrency> get currencies => const [FiatSll(), FiatSle()];
+  List<FiatCurrency> get currencies => const [FiatSle()];
   @override
   CapitalInfo get capitalInfo => const CapitalInfo(
     capital: Capital("Freetown"),

@@ -1,13 +1,10 @@
-// ignore_for_file: deprecated_member_use_from_same_package, it's TODO!
 import "../../interfaces/iso_standardized.dart";
 import "iso_standardized_string_extension.dart";
-import "sealed_world_object_extension.dart";
 
 /// Extension type for handling ISO codes from any object.
 ///
 /// This extension type wraps any [Object] to provide specialized ISO code
-/// functionality without affecting the global [Object] scope. It's a direct
-/// replacement for the deprecated [SealedWorldObjectExtension].
+/// functionality without affecting the global [Object] scope.
 ///
 /// Example usage:
 /// ```dart

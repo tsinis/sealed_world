@@ -4,14 +4,7 @@ import "iso_object_extension_type.dart";
 /// Extension on [String] providing additional functionality
 /// for ISO standardized strings.
 ///
-/// **Note:** This extension is internal and deprecated. Use [IsoObject]
-/// extension type instead for better type safety and to avoid polluting the
-/// global [String] scope.
-@Deprecated(
-  "Use `IsoObject` extension type instead. "
-  "This extension will become internal in a future version.",
-)
-// TODO! Remove export.
+/// **Note:** This extension is internal one. Use [IsoObject] extension type.
 extension IsoStandardizedStringExtension on String {
   /// Checks if the string is a valid ISO code.
   ///
@@ -22,12 +15,6 @@ extension IsoStandardizedStringExtension on String {
   ///
   /// In terms of this package, it means that it is a valid
   /// ISO `code` (not `codeOther`).
-  ///
-  /// **Deprecated:** Use [IsoObject] extension type instead:
-  /// ```dart
-  /// IsoObject(yourString).isIsoAlphaRegularCode
-  /// ```
-  @Deprecated("Use `IsoObject(string).isIsoAlphaRegularCode` instead.")
   bool get isIsoAlphaRegularCode =>
       RegExp(r"^[a-z]{3,}$", caseSensitive: false).hasMatch(this);
 
@@ -44,12 +31,6 @@ extension IsoStandardizedStringExtension on String {
   /// print(' en '.maybeToValidIsoCode()); // Prints: "en"
   /// print(' e'.maybeToValidIsoCode()); // Prints: null
   /// ```
-  ///
-  /// **Deprecated:** Use [IsoObject] extension type instead:
-  /// ```dart
-  /// IsoObject(yourString).maybeToValidIsoCode()
-  /// ```
-  @Deprecated("Use `IsoObject(string).maybeToValidIsoCode()` instead.")
   String? maybeToValidIsoCode({
     int? exactLength,
     int maxLength = IsoStandardized.codeLength,
@@ -63,35 +44,6 @@ extension IsoStandardizedStringExtension on String {
 
     return code.length < minLength || code.length > maxLength ? null : code;
   }
-
-  /// Trims and converts the provided string to an ISO code to uppercase if it's
-  /// length is within the valid ISO codes range. If the string is not a valid
-  /// regular ISO code, it returns `null`. The [maxLength] and [minLength]
-  /// parameters control the maximum and minimum length of the trimmed string.
-  /// The optional [exactLength] parameter specifies the exact length of the
-  /// trimmed string.
-  ///
-  /// Example usage:
-  ///
-  /// ```dart
-  /// print(' eng '.maybeToValidIsoCode()); // Prints: "ENG"
-  /// print('english'.maybeToValidIsoCode()); // Prints: null
-  /// ```
-  ///
-  /// **Deprecated:** Use [IsoObject] extension type instead:
-  /// ```dart
-  /// IsoObject(yourString).maybeToValidIsoUppercaseCode()
-  /// ```
-  @Deprecated("Use `IsoObject(string).maybeToValidIsoUpperCaseCode()` instead.")
-  String? maybeToValidIsoUppercaseCode({
-    int? exactLength,
-    int maxLength = IsoStandardized.codeLength,
-    int minLength = IsoStandardized.codeShortLength,
-  }) => maybeToValidIsoCode(
-    maxLength: maxLength,
-    minLength: minLength,
-    exactLength: exactLength,
-  )?.toUpperCase();
 
   /// Maps the ISO code of a string to a value based on the code's length and
   /// type.
@@ -125,13 +77,7 @@ extension IsoStandardizedStringExtension on String {
   /// );
   ///
   /// print(result); // Prints "orElse"
-  /// ```.
-  ///
-  /// **Deprecated:** Use [IsoObject] extension type instead:
-  /// ```dart
-  /// IsoObject(yourString).maybeMapIsoCode(...)
   /// ```
-  @Deprecated("Use `IsoObject(string).maybeMapIsoCode()` instead.")
   // ignore: avoid-unnecessary-extends, otherwise it will be dynamic, so and void.
   T maybeMapIsoCode<T extends Object?>({
     required T Function(String input) orElse,
@@ -154,8 +100,8 @@ extension IsoStandardizedStringExtension on String {
   T _onNumericOrRegular<T>(
     String code,
     T Function(String input) orElse, {
-    T Function(String code)? numeric,
-    T Function(String code)? regular,
+    required T Function(String code)? numeric,
+    required T Function(String code)? regular,
   }) {
     if (numeric == null && regular == null) return orElse(code);
 

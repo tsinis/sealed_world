@@ -36,11 +36,7 @@ class Script extends WritingSystem
 
   /// {@macro permissive_constructor}
   /// {@macro script_constructor}
-  @Deprecated(
-    "Use concrete instance and `copyWith` method instead, this "
-    "constructor will be renamed to `custom` in future versions.",
-  )
-  const Script.permissive({
+  const Script.custom({
     required super.name,
     required this.code,
     this.codeNumeric = "",
@@ -847,6 +843,7 @@ class Script extends WritingSystem
     T? Function(Script script)? where,
     Iterable<Script> scripts = list,
   }) {
+    // ignore: avoid-collection-mutating-methods, not mutating anything.
     scripts.assertNotEmpty();
 
     for (final script in scripts) {
@@ -1006,7 +1003,7 @@ class Script extends WritingSystem
   /// ```
   static const map = UpperCaseIsoMap<Script>(
     {...scriptCodeMap, ...scriptCodeOtherMap},
-    exactLength: null, // ignore: avoid-passing-default-values, is not default.
+    exactLength: null,
     maxLength: codeLength,
     minLength: IsoStandardized.codeLength,
   );

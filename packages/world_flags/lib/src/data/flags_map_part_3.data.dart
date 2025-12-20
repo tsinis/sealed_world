@@ -10,6 +10,20 @@ import "../model/flag_properties.dart";
 import "../model/shape.dart";
 import "../model/stripe_orientation.dart";
 
+/// Alternative flag properties of country Afghanistan (AF).
+const flagAfgProperties = FlagProperties(
+  [ColorsProperties(Color(0xffffffff))],
+  aspectRatio: 2,
+  isSimplified: null,
+  elementsProperties: [
+    CustomElementsProperties(
+      Color(0xff000000),
+      heightFactor: 0.55,
+      widthFactor: 1.4,
+    ),
+  ],
+);
+
 /// Flag properties of country British Indian Ocean Territory (IO).
 const flagIotProperties = FlagProperties(
   [

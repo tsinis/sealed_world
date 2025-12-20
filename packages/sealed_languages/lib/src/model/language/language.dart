@@ -2,16 +2,16 @@ import "package:l10n_languages/l10n_languages.dart" show LanguagesLocaleMapper;
 
 import "../../collections/natural_language_collections.dart";
 import "../../data/natural_language_families.data.dart";
-import "../../helpers/extensions/iso_comparable_extension.dart";
 import "../../helpers/extensions/iso_object_extension_type.dart";
 import "../../helpers/extensions/sealed_world_iterable_extension.dart";
 import "../../helpers/extensions/upper_case_iso_map_extension.dart";
 import "../../helpers/natural_language/natural_language_json.dart";
 import "../../helpers/utils/localization_delegate.dart";
 import "../../interfaces/iso_standardized.dart";
+import "../../interfaces/iso_translated.dart";
 import "../../interfaces/json_encodable.dart";
 import "../../interfaces/named.dart";
-import "../../interfaces/translated.dart";
+import "../../typedefs/typedefs.dart" show LocaleMapFunction;
 import "../core/basic_locale.dart";
 import "../core/upper_case_iso_map.dart";
 import "../language_family/language_family.dart";
@@ -203,7 +203,6 @@ part "../../data/languages/zha.data.dart";
 part "../../data/languages/zho.data.dart";
 part "../../data/languages/zul.data.dart";
 part "submodels/natural_language.dart";
-part "submodels/natural_language.g.dart";
 part "submodels/programming_language.dart";
 
 /// A sealed class that represents a language.

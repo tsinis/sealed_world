@@ -1,11 +1,6 @@
 // ignore_for_file: prefer-static-class, it's referenced as static in the model.
 import "../model/language/language.dart";
 
-/// List of all standard [NaturalLanguage] sorted by code.
-@Deprecated("Use `NaturalLanguage.list` instead.")
-// ignore: avoid-explicit-type-declaration, deprecated member.
-const List<NaturalLanguage> naturalLanguageList = NaturalLanguage.list;
-
 /// Map of [NaturalLanguage] standard codes.
 const naturalLanguageCodeMap = <String, NaturalLanguage>{
   "AAR": LangAar(),
