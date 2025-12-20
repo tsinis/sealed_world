@@ -1,6 +1,7 @@
 import "package:flutter/material.dart";
 import "package:flutter_test/flutter_test.dart";
 import "package:world_countries/src/extensions/world_country_extension.dart";
+import "package:world_countries/src/models/locale/typed_locale.dart";
 import "package:world_flags/world_flags.dart";
 
 void main() => group("WorldCountryExtension", () {
@@ -25,6 +26,25 @@ void main() => group("WorldCountryExtension", () {
           scriptCode: scriptCode,
           countryCode: value.codeShort,
         ),
+      );
+    });
+  });
+
+  group("toTypedLocale", () {
+    const script = ScriptLatn();
+    test(
+      "should return correct $TypedLocale instance with codeShort",
+      () => expect(
+        value.toTypedLocale(),
+        TypedLocale(value.languages.first, country: value, script: script),
+      ),
+    );
+
+    test("should return correct $TypedLocale instance with all properties", () {
+      final language = NaturalLanguage.list.first;
+      expect(
+        value.toTypedLocale(language: language, script: script),
+        TypedLocale(language, script: script, country: value),
       );
     });
   });
