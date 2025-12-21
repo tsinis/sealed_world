@@ -39,7 +39,7 @@ jobs:
         run: flutter test --update-goldens
 
       - name: 🚀 Commit updated golden files
-        uses: stefanzweifel/git-auto-commit-action@v7.0.0
+        uses: stefanzweifel/git-auto-commit-action@v7.1.0
         with:
           branch: ${{ inputs.branch || github.ref_name }}
           file_pattern: "packages/world_flags/test/goldens/*"
