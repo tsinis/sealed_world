@@ -27,7 +27,7 @@ class XhLanguagesL10N extends IsoLocaleMapper<String> {
       "TUR": "Isi-Turkish",
       "XHO": "IsiXhosa",
       "ZHO": "IsiMandarin",
-      "ZUL": "IsiZulu",
+      "ZUL": "isiZulu",
     });
   }
 }
