@@ -34,7 +34,7 @@ void main() => group("$LanguagesLocaleMapper", () {
 
     test("localizes single code with main locale", () {
       final result = mapper.localize(const {"ENG"}, mainLocale: "cs");
-      expect(result.values.single, "angličtina");
+      expect(result.values.single, "Angličtina");
     });
 
     test("uses fallback locale when main locale missing", () {
@@ -55,7 +55,7 @@ void main() => group("$LanguagesLocaleMapper", () {
       const codes = {"ENG", "RUS", "DEU"};
       final result = mapper.localize(codes, mainLocale: "sk");
       expect(result.length, greaterThanOrEqualTo(3));
-      expect(result.values, containsAll(["angličtina", "ruština", "nemčina"]));
+      expect(result.values, containsAll(["Angličtina", "Ruština", "Nemčina"]));
     });
 
     test("handles non-existent ISO codes gracefully", () {

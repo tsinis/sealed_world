@@ -90,7 +90,7 @@ class CyLanguagesL10N extends IsoLocaleMapper<String> {
       "KAU": "Canwri",
       "KAZ": "Casacheg",
       "KHM": "Chmereg",
-      "KIK": "ki",
+      "KIK": "Ki",
       "KIN": "Ciniarŵandeg",
       "KIR": "Cirgiseg",
       "KOM": "Comi",

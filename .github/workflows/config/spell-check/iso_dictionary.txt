@@ -122,6 +122,7 @@ Egyh
 Egyp
 Elym
 Englisch
+Englische
 Epo
 Esh
 Eswatini
@@ -346,6 +347,7 @@ Nbl
 Ncl
 Nde
 Ndo
+Nemčina
 Ner
 Newa
 Nfk
@@ -517,6 +519,7 @@ Sogo
 Somoni
 Soyo
 Spm
+Sprache
 Sqi
 Srb
 Srd

@@ -7,6 +7,6 @@ import "../iso_locale_mapper.dart";
 class IeLanguagesL10N extends IsoLocaleMapper<String> {
   /// Provides language translations for the `ie` locale.
   IeLanguagesL10N() {
-    map.addAll({"ENG": "anglesi"});
+    map.addAll({"ENG": "Anglesi"});
   }
 }

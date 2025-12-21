@@ -7,7 +7,7 @@ class XhLanguagesL10N extends IsoLocaleMapper<String> {
   /// Provides language translations for the `xh` locale.
   XhLanguagesL10N() {
     map.addAll({
-      "AFR": "isiBhulu",
+      "AFR": "IsiBhulu",
       "ARA": "Isi-Arabhu",
       "BEN": "IsiBangla",
       "DEU": "IsiJamani",

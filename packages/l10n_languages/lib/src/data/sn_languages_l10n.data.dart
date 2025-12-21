@@ -16,7 +16,7 @@ class SnLanguagesL10N extends IsoLocaleMapper<String> {
       "CES": "chiCzech",
       "DEU": "chiJerimani",
       "ELL": "chiGreek",
-      "ENG": "Chirungu",
+      "ENG": "chiRungu",
       "FAS": "chiPeshiya",
       "FRA": "chiFurenchi",
       "HAU": "chiHausa",

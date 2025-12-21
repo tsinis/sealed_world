@@ -7,6 +7,6 @@ import "../iso_locale_mapper.dart";
 class KwLanguagesL10N extends IsoLocaleMapper<String> {
   /// Provides language translations for the `kw` locale.
   KwLanguagesL10N() {
-    map.addAll({"COR": "kernewek"});
+    map.addAll({"COR": "Kernewek"});
   }
 }
