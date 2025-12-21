@@ -135,7 +135,7 @@ class EoLanguagesL10N extends IsoLocaleMapper<String> {
       "TSO": "Conga",
       "TUK": "Turkmena",
       "TUR": "Turka",
-      "TWI": "Tw",
+      "TWI": "Tvia",
       "UIG": "Ujgura",
       "UKR": "Ukraina",
       "URD": "Urduo",
