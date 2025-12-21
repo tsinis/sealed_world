@@ -59,7 +59,7 @@ jobs:
         run: dart pub upgrade
 
       - name: 🕵️ Analyze code
-        uses: ValentinVignal/action-dart-analyze@v1.1
+        uses: ValentinVignal/action-dart-analyze@v2.1
         if: ${{ github.event_name == 'pull_request' }}
         with:
           fail-on: "format"
