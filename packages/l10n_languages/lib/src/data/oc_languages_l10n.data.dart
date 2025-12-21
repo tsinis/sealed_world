@@ -6,6 +6,6 @@ import "../iso_locale_mapper.dart";
 class OcLanguagesL10N extends IsoLocaleMapper<String> {
   /// Provides language translations for the `oc` locale.
   OcLanguagesL10N() {
-    map.addAll({"ENG": "anglés", "OCI": "occitan"});
+    map.addAll({"ENG": "Anglés", "OCI": "Occitan"});
   }
 }

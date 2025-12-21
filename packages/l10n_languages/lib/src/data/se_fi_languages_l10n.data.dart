@@ -7,16 +7,16 @@ class SeFiLanguagesL10N extends IsoLocaleMapper<String> {
   /// Provides language translations for the `se_FI` locale.
   SeFiLanguagesL10N() {
     map.addAll({
-      "BEL": "vilgesruoššagiella",
-      "BEN": "bengalagiella",
-      "FIJ": "fižigiella",
-      "HYE": "armenagiella",
-      "KAZ": "kazakhgiella",
-      "KHM": "kambožagiella",
-      "NEP": "nepalagiella",
-      "PAN": "panjabagiella",
-      "THA": "thaigiella",
-      "VIE": "vietnamagiella",
+      "BEL": "Vilgesruoššagiella",
+      "BEN": "Bengalagiella",
+      "FIJ": "Fižigiella",
+      "HYE": "Armenagiella",
+      "KAZ": "Kazakhgiella",
+      "KHM": "Kambožagiella",
+      "NEP": "Nepalagiella",
+      "PAN": "Panjabagiella",
+      "THA": "Thaigiella",
+      "VIE": "Vietnamagiella",
     });
   }
 }

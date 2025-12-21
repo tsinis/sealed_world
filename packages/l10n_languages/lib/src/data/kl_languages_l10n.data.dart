@@ -7,6 +7,6 @@ import "../iso_locale_mapper.dart";
 class KlLanguagesL10N extends IsoLocaleMapper<String> {
   /// Provides language translations for the `kl` locale.
   KlLanguagesL10N() {
-    map.addAll({"KAL": "kalaallisut"});
+    map.addAll({"KAL": "Kalaallisut"});
   }
 }

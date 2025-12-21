@@ -7,6 +7,6 @@ import "../iso_locale_mapper.dart";
 class SvFiLanguagesL10N extends IsoLocaleMapper<String> {
   /// Provides language translations for the `sv_FI` locale.
   SvFiLanguagesL10N() {
-    map.addAll({"KIR": "kirgiziska"});
+    map.addAll({"KIR": "Kirgiziska"});
   }
 }
