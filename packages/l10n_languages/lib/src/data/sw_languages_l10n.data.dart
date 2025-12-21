@@ -74,7 +74,7 @@ class SwLanguagesL10N extends IsoLocaleMapper<String> {
       "IBO": "Kiigbo",
       "IDO": "Kiido",
       "III": "Kiyi cha Sichuan",
-      "IKU": "Iu",
+      "IKU": "Kiinuktituti",
       "ILE": "Lugha ya kisayansi",
       "INA": "Kiintalingua",
       "IND": "Kiindonesia",
