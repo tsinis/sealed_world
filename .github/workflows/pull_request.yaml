@@ -3,7 +3,6 @@ name: pull_requests
 on:
   pull_request:
     branches: [main]
-    types: [opened, reopened, synchronize, ready_for_review]
 
 permissions:
   contents: read
@@ -29,7 +28,7 @@ jobs:
     name: ✍🏻 Auto-assign PR
     runs-on: ubuntu-latest
     timeout-minutes: 4
-    if: github.event.pull_request.user.login != 'dependabot[bot]'
+    if: github.actor != 'dependabot[bot]'
     steps:
       - name: ✍🏻 Add Reviewer and Author Assign
         uses: devmyong/auto-assign@v1.0.1
@@ -56,7 +55,7 @@ jobs:
     steps:
       - name: 🎟️ Approve Dependabot and owner
         uses: hmarr/auto-approve-action@v4.0.0
-        if: (!github.event.pull_request.draft) && (github.event.pull_request.head.repo.full_name == github.repository) && ((github.event.pull_request.user.login == 'dependabot[bot]') || (github.event.pull_request.user.login == 'tsinis'))
+        if: github.actor == 'dependabot[bot]' || github.actor == 'tsinis'
         with:
           github-token: ${{ secrets.GITHUB_TOKEN }}
 

@@ -10,7 +10,7 @@ on:
 jobs:
   check-package-version:
     name: ⏳ Publish ${{ inputs.tag }} Package
-    if: ${{ github.repository_owner == 'tsinis' && github.triggering_actor == 'tsinis' && startsWith(github.ref, 'refs/tags/') }}
+    if: ${{ github.event_name == 'push' && github.actor == 'tsinis' }}
     runs-on: ubuntu-latest
     timeout-minutes: 10
     outputs:
@@ -74,7 +74,7 @@ jobs:
   publish:
     name: 📝 Publish to pub.dev
     needs: check-package-version
-    if: ${{ github.repository_owner == 'tsinis' && github.triggering_actor == 'tsinis' && startsWith(github.ref, 'refs/tags/') }}
+    if: ${{ github.repository_owner == 'tsinis' && github.actor == 'tsinis' }}
     uses: dart-lang/setup-dart/.github/workflows/publish.yml@main
     with:
       environment: "pub.dev"
