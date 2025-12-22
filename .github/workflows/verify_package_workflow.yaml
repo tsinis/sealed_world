@@ -92,7 +92,7 @@ jobs:
           github-token: ${{ secrets.GITHUB_TOKEN }}
 
       - name: 🔎 Dart Code Metrics (Author)
-        if: ${{ github.event_name == 'pull_request' && github.actor == 'tsinis' }}
+        if: ${{ github.event_name == 'pull_request' && github.event.pull_request.user.login == 'tsinis' }}
         uses: CQLabs/dcm-action@v2.0.2
         with:
           ci-key: oss
@@ -107,7 +107,7 @@ jobs:
           check-unused-files: ${{ inputs.is_flutter }}
 
       - name: 🔎 Dart Code Metrics (Fork)
-        if: ${{ github.event_name == 'pull_request' && github.actor != 'tsinis' }}
+        if: ${{ github.event_name == 'pull_request' && github.event.pull_request.user.login != 'tsinis' }}
         run: dcm analyze . --verbose --fatal-style --fatal-warnings --reporter=github
 
       - name: 🛂 Set up file system write permissions
