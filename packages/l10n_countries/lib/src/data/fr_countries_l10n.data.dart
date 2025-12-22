@@ -303,7 +303,7 @@ class FrCountriesL10N extends IsoLocaleMapper<String> {
       "MLI+": "République du Mali",
       "MLT": "Malte",
       "MLT+": "République de Malte",
-      "MMR": "Myanmar",
+      "MMR": "Birmanie",
       "MMR+": "République de l'Union du Myanmar",
       "MNE": "Monténégro",
       "MNE+": "Monténégro",
