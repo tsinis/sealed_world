@@ -160,7 +160,7 @@ class TrCurrenciesL10N extends IsoLocaleMapper<String> {
       "WST": "Samoa Talası",
       "XAF": "CFA Frangı BEAC",
       "XCD": "Doğu Karayip Doları",
-      "XCG": "Karayip Guldeni",
+      "XCG": "Karayip guldeni",
       "XOF": "CFA Frangı BCEAO",
       "XPF": "CFP Frangı",
       "YER": "Yemen Riyali",
