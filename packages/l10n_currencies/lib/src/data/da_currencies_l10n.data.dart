@@ -166,7 +166,7 @@ class DaCurrenciesL10N extends IsoLocaleMapper<String> {
       "YER": "Yemenitisk rial",
       "ZAR": "Sydafrikansk rand",
       "ZMW": "Zambisk kwacha",
-      "ZWG": "Zimbabwe Gold",
+      "ZWG": "Zimbabwisk guld",
       "ZWL": "Zimbabwisk dollar",
     });
   }

@@ -149,7 +149,7 @@ class CaCurrenciesL10N extends IsoLocaleMapper<String> {
       "TTD": "Dòlar de Trinitat i Tobago",
       "TWD": "Nou dòlar de Taiwan",
       "TZS": "Xíling tanzà",
-      "UAH": "Hrívinia ucraïnesa",
+      "UAH": "Hrívnia ucraïnesa",
       "UGX": "Xíling ugandès",
       "USD": "Dòlar dels Estats Units",
       "UYU": "Peso uruguaià",
