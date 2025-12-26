@@ -160,13 +160,13 @@ class TrCurrenciesL10N extends IsoLocaleMapper<String> {
       "WST": "Samoa Talası",
       "XAF": "CFA Frangı BEAC",
       "XCD": "Doğu Karayip Doları",
-      "XCG": "Karayip guldeni",
+      "XCG": "Karayip Guldeni",
       "XOF": "CFA Frangı BCEAO",
       "XPF": "CFP Frangı",
       "YER": "Yemen Riyali",
       "ZAR": "Güney Afrika Randı",
       "ZMW": "Zambiya Kvaçası",
-      "ZWG": "Zimbabve altını",
+      "ZWG": "Zimbabve Altını",
       "ZWL": "Zimbabve Doları",
     });
   }
