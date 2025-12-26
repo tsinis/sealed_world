@@ -8,13 +8,13 @@ class SeCurrenciesL10N extends IsoLocaleMapper<String> {
   SeCurrenciesL10N() {
     map.addAll({
       "DKK": "DKK",
-      "EUR": "euro",
+      "EUR": "Euro",
       "HKD": "HKD",
       "INR": "INR",
       "JPY": "JPY",
       "MXN": "MXN",
-      "NOK": "norgga kruvdno",
-      "SEK": "ruoŧŧa kruvdno",
+      "NOK": "Norgga kruvdno",
+      "SEK": "Ruoŧŧa kruvdno",
       "THB": "THB",
     });
   }
