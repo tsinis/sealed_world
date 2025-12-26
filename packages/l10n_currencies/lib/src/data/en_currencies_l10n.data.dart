@@ -160,7 +160,7 @@ class EnCurrenciesL10N extends IsoLocaleMapper<String> {
       "WST": "Samoan Tala",
       "XAF": "Central African CFA Franc",
       "XCD": "East Caribbean Dollar",
-      "XCG": "Caribbean guilder",
+      "XCG": "Caribbean Guilder",
       "XOF": "West African CFA Franc",
       "XPF": "CFP Franc",
       "YER": "Yemeni Rial",
