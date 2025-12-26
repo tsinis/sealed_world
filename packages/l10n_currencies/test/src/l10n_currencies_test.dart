@@ -58,7 +58,7 @@ void main() => group("$CurrenciesLocaleMapper", () {
       expect(result.length, greaterThanOrEqualTo(3));
       expect(
         result.values,
-        containsAll(["americký dolár", "ruský rubeľ", "euro"]),
+        containsAll(["Americký dolár", "Ruský rubeľ", "Euro"]),
       );
     });
 
@@ -198,10 +198,7 @@ void main() => group("$CurrenciesLocaleMapper", () {
       expect(result.length, 2);
       expect(result.entries.last.key.locale, "cs");
       expect(result.entries.first.key.locale, "sk");
-      expect(
-        result.entries.first.value,
-        result.entries.last.value.toLowerCase(), // TODO! Fix in next parts.
-      );
+      expect(result.entries.first.value, result.entries.last.value);
       expect(result.entries.first.key.isoCode, result.entries.last.key.isoCode);
     });
   });
