@@ -142,7 +142,7 @@ class TkCurrenciesL10N extends IsoLocaleMapper<String> {
       "VES": "Wenesuela boliwary",
       "VUV": "Wanuatu watusy",
       "WST": "Samoa talasy",
-      "XCG": "karib guldeni",
+      "XCG": "Karib guldeni",
       "YER": "Ýemen rialy",
       "ZAR": "Günorta Afrika rendi",
       "ZMW": "Zambiýa kwaçasy",
