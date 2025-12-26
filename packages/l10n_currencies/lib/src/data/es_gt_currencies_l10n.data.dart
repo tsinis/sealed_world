@@ -7,6 +7,6 @@ import "../iso_locale_mapper.dart";
 class EsGtCurrenciesL10N extends IsoLocaleMapper<String> {
   /// Provides currency translations for the `es_GT` locale.
   EsGtCurrenciesL10N() {
-    map.addAll({"GTQ": "quetzal"});
+    map.addAll({"GTQ": "Quetzal"});
   }
 }
