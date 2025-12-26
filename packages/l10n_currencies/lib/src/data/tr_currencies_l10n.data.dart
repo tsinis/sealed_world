@@ -166,7 +166,7 @@ class TrCurrenciesL10N extends IsoLocaleMapper<String> {
       "YER": "Yemen Riyali",
       "ZAR": "Güney Afrika Randı",
       "ZMW": "Zambiya Kvaçası",
-      "ZWG": "Zimbabve Altını",
+      "ZWG": "Zimbabve altını",
       "ZWL": "Zimbabve Doları",
     });
   }
