@@ -13,7 +13,6 @@ import "src/data/am_currencies_l10n.data.dart";
 import "src/data/ar_currencies_l10n.data.dart";
 import "src/data/as_currencies_l10n.data.dart";
 import "src/data/az_currencies_l10n.data.dart";
-import "src/data/az_cyrl_currencies_l10n.data.dart";
 import "src/data/be_currencies_l10n.data.dart";
 import "src/data/bg_currencies_l10n.data.dart";
 import "src/data/bm_currencies_l10n.data.dart";
@@ -45,7 +44,6 @@ import "src/data/eu_currencies_l10n.data.dart";
 import "src/data/fa_af_currencies_l10n.data.dart";
 import "src/data/fa_currencies_l10n.data.dart";
 import "src/data/ff_currencies_l10n.data.dart";
-import "src/data/ff_gn_currencies_l10n.data.dart";
 import "src/data/fi_currencies_l10n.data.dart";
 import "src/data/fo_currencies_l10n.data.dart";
 import "src/data/fr_ca_currencies_l10n.data.dart";
@@ -56,7 +54,6 @@ import "src/data/gd_currencies_l10n.data.dart";
 import "src/data/gl_currencies_l10n.data.dart";
 import "src/data/gu_currencies_l10n.data.dart";
 import "src/data/ha_currencies_l10n.data.dart";
-import "src/data/ha_gh_currencies_l10n.data.dart";
 import "src/data/he_currencies_l10n.data.dart";
 import "src/data/hi_currencies_l10n.data.dart";
 import "src/data/hr_currencies_l10n.data.dart";
@@ -65,7 +62,6 @@ import "src/data/hy_currencies_l10n.data.dart";
 import "src/data/ia_currencies_l10n.data.dart";
 import "src/data/id_currencies_l10n.data.dart";
 import "src/data/ig_currencies_l10n.data.dart";
-import "src/data/ii_currencies_l10n.data.dart";
 import "src/data/is_currencies_l10n.data.dart";
 import "src/data/it_currencies_l10n.data.dart";
 import "src/data/ja_currencies_l10n.data.dart";
@@ -73,7 +69,6 @@ import "src/data/jv_currencies_l10n.data.dart";
 import "src/data/ka_currencies_l10n.data.dart";
 import "src/data/ki_currencies_l10n.data.dart";
 import "src/data/kk_currencies_l10n.data.dart";
-import "src/data/kl_currencies_l10n.data.dart";
 import "src/data/km_currencies_l10n.data.dart";
 import "src/data/kn_currencies_l10n.data.dart";
 import "src/data/ko_currencies_l10n.data.dart";
@@ -94,7 +89,6 @@ import "src/data/ml_currencies_l10n.data.dart";
 import "src/data/mn_currencies_l10n.data.dart";
 import "src/data/mr_currencies_l10n.data.dart";
 import "src/data/ms_currencies_l10n.data.dart";
-import "src/data/mt_currencies_l10n.data.dart";
 import "src/data/my_currencies_l10n.data.dart";
 import "src/data/nb_currencies_l10n.data.dart";
 import "src/data/nd_currencies_l10n.data.dart";
@@ -103,7 +97,6 @@ import "src/data/nl_currencies_l10n.data.dart";
 import "src/data/nn_currencies_l10n.data.dart";
 import "src/data/no_currencies_l10n.data.dart";
 import "src/data/om_currencies_l10n.data.dart";
-import "src/data/om_ke_currencies_l10n.data.dart";
 import "src/data/or_currencies_l10n.data.dart";
 import "src/data/os_currencies_l10n.data.dart";
 import "src/data/pa_arab_currencies_l10n.data.dart";
@@ -114,14 +107,11 @@ import "src/data/pt_currencies_l10n.data.dart";
 import "src/data/pt_mo_currencies_l10n.data.dart";
 import "src/data/pt_mz_currencies_l10n.data.dart";
 import "src/data/pt_pt_currencies_l10n.data.dart";
-import "src/data/qu_bo_currencies_l10n.data.dart";
 import "src/data/qu_currencies_l10n.data.dart";
-import "src/data/qu_ec_currencies_l10n.data.dart";
 import "src/data/rm_currencies_l10n.data.dart";
 import "src/data/rn_currencies_l10n.data.dart";
 import "src/data/ro_currencies_l10n.data.dart";
 import "src/data/ru_currencies_l10n.data.dart";
-import "src/data/rw_currencies_l10n.data.dart";
 import "src/data/sa_currencies_l10n.data.dart";
 import "src/data/sc_currencies_l10n.data.dart";
 import "src/data/sd_currencies_l10n.data.dart";
@@ -132,7 +122,6 @@ import "src/data/sk_currencies_l10n.data.dart";
 import "src/data/sl_currencies_l10n.data.dart";
 import "src/data/sn_currencies_l10n.data.dart";
 import "src/data/so_currencies_l10n.data.dart";
-import "src/data/so_ke_currencies_l10n.data.dart";
 import "src/data/sq_currencies_l10n.data.dart";
 import "src/data/sr_currencies_l10n.data.dart";
 import "src/data/sr_latn_currencies_l10n.data.dart";
@@ -145,7 +134,6 @@ import "src/data/te_currencies_l10n.data.dart";
 import "src/data/tg_currencies_l10n.data.dart";
 import "src/data/th_currencies_l10n.data.dart";
 import "src/data/ti_currencies_l10n.data.dart";
-import "src/data/ti_er_currencies_l10n.data.dart";
 import "src/data/tk_currencies_l10n.data.dart";
 import "src/data/tl_currencies_l10n.data.dart";
 import "src/data/to_currencies_l10n.data.dart";
@@ -176,7 +164,6 @@ export "src/data/am_currencies_l10n.data.dart";
 export "src/data/ar_currencies_l10n.data.dart";
 export "src/data/as_currencies_l10n.data.dart";
 export "src/data/az_currencies_l10n.data.dart";
-export "src/data/az_cyrl_currencies_l10n.data.dart";
 export "src/data/be_currencies_l10n.data.dart";
 export "src/data/bg_currencies_l10n.data.dart";
 export "src/data/bm_currencies_l10n.data.dart";
@@ -208,7 +195,6 @@ export "src/data/eu_currencies_l10n.data.dart";
 export "src/data/fa_af_currencies_l10n.data.dart";
 export "src/data/fa_currencies_l10n.data.dart";
 export "src/data/ff_currencies_l10n.data.dart";
-export "src/data/ff_gn_currencies_l10n.data.dart";
 export "src/data/fi_currencies_l10n.data.dart";
 export "src/data/fo_currencies_l10n.data.dart";
 export "src/data/fr_ca_currencies_l10n.data.dart";
@@ -219,7 +205,6 @@ export "src/data/gd_currencies_l10n.data.dart";
 export "src/data/gl_currencies_l10n.data.dart";
 export "src/data/gu_currencies_l10n.data.dart";
 export "src/data/ha_currencies_l10n.data.dart";
-export "src/data/ha_gh_currencies_l10n.data.dart";
 export "src/data/he_currencies_l10n.data.dart";
 export "src/data/hi_currencies_l10n.data.dart";
 export "src/data/hr_currencies_l10n.data.dart";
@@ -228,7 +213,6 @@ export "src/data/hy_currencies_l10n.data.dart";
 export "src/data/ia_currencies_l10n.data.dart";
 export "src/data/id_currencies_l10n.data.dart";
 export "src/data/ig_currencies_l10n.data.dart";
-export "src/data/ii_currencies_l10n.data.dart";
 export "src/data/is_currencies_l10n.data.dart";
 export "src/data/it_currencies_l10n.data.dart";
 export "src/data/ja_currencies_l10n.data.dart";
@@ -236,7 +220,6 @@ export "src/data/jv_currencies_l10n.data.dart";
 export "src/data/ka_currencies_l10n.data.dart";
 export "src/data/ki_currencies_l10n.data.dart";
 export "src/data/kk_currencies_l10n.data.dart";
-export "src/data/kl_currencies_l10n.data.dart";
 export "src/data/km_currencies_l10n.data.dart";
 export "src/data/kn_currencies_l10n.data.dart";
 export "src/data/ko_currencies_l10n.data.dart";
@@ -257,7 +240,6 @@ export "src/data/ml_currencies_l10n.data.dart";
 export "src/data/mn_currencies_l10n.data.dart";
 export "src/data/mr_currencies_l10n.data.dart";
 export "src/data/ms_currencies_l10n.data.dart";
-export "src/data/mt_currencies_l10n.data.dart";
 export "src/data/my_currencies_l10n.data.dart";
 export "src/data/nb_currencies_l10n.data.dart";
 export "src/data/nd_currencies_l10n.data.dart";
@@ -266,7 +248,6 @@ export "src/data/nl_currencies_l10n.data.dart";
 export "src/data/nn_currencies_l10n.data.dart";
 export "src/data/no_currencies_l10n.data.dart";
 export "src/data/om_currencies_l10n.data.dart";
-export "src/data/om_ke_currencies_l10n.data.dart";
 export "src/data/or_currencies_l10n.data.dart";
 export "src/data/os_currencies_l10n.data.dart";
 export "src/data/pa_arab_currencies_l10n.data.dart";
@@ -277,14 +258,11 @@ export "src/data/pt_currencies_l10n.data.dart";
 export "src/data/pt_mo_currencies_l10n.data.dart";
 export "src/data/pt_mz_currencies_l10n.data.dart";
 export "src/data/pt_pt_currencies_l10n.data.dart";
-export "src/data/qu_bo_currencies_l10n.data.dart";
 export "src/data/qu_currencies_l10n.data.dart";
-export "src/data/qu_ec_currencies_l10n.data.dart";
 export "src/data/rm_currencies_l10n.data.dart";
 export "src/data/rn_currencies_l10n.data.dart";
 export "src/data/ro_currencies_l10n.data.dart";
 export "src/data/ru_currencies_l10n.data.dart";
-export "src/data/rw_currencies_l10n.data.dart";
 export "src/data/sa_currencies_l10n.data.dart";
 export "src/data/sc_currencies_l10n.data.dart";
 export "src/data/sd_currencies_l10n.data.dart";
@@ -295,7 +273,6 @@ export "src/data/sk_currencies_l10n.data.dart";
 export "src/data/sl_currencies_l10n.data.dart";
 export "src/data/sn_currencies_l10n.data.dart";
 export "src/data/so_currencies_l10n.data.dart";
-export "src/data/so_ke_currencies_l10n.data.dart";
 export "src/data/sq_currencies_l10n.data.dart";
 export "src/data/sr_currencies_l10n.data.dart";
 export "src/data/sr_latn_currencies_l10n.data.dart";
@@ -308,7 +285,6 @@ export "src/data/te_currencies_l10n.data.dart";
 export "src/data/tg_currencies_l10n.data.dart";
 export "src/data/th_currencies_l10n.data.dart";
 export "src/data/ti_currencies_l10n.data.dart";
-export "src/data/ti_er_currencies_l10n.data.dart";
 export "src/data/tk_currencies_l10n.data.dart";
 export "src/data/tl_currencies_l10n.data.dart";
 export "src/data/to_currencies_l10n.data.dart";
@@ -347,7 +323,6 @@ class CurrenciesLocaleMapper extends IsoLocaleMapper<IsoLocaleMapper<String>> {
       "ar": ArCurrenciesL10N(),
       "as": AsCurrenciesL10N(),
       "az": AzCurrenciesL10N(),
-      "az_Cyrl": AzCyrlCurrenciesL10N(),
       "be": BeCurrenciesL10N(),
       "bg": BgCurrenciesL10N(),
       "bm": BmCurrenciesL10N(),
@@ -379,7 +354,6 @@ class CurrenciesLocaleMapper extends IsoLocaleMapper<IsoLocaleMapper<String>> {
       "fa": FaCurrenciesL10N(),
       "fa_AF": FaAfCurrenciesL10N(),
       "ff": FfCurrenciesL10N(),
-      "ff_GN": FfGnCurrenciesL10N(),
       "fi": FiCurrenciesL10N(),
       "fo": FoCurrenciesL10N(),
       "fr": FrCurrenciesL10N(),
@@ -390,7 +364,6 @@ class CurrenciesLocaleMapper extends IsoLocaleMapper<IsoLocaleMapper<String>> {
       "gl": GlCurrenciesL10N(),
       "gu": GuCurrenciesL10N(),
       "ha": HaCurrenciesL10N(),
-      "ha_GH": HaGhCurrenciesL10N(),
       "he": HeCurrenciesL10N(),
       "hi": HiCurrenciesL10N(),
       "hr": HrCurrenciesL10N(),
@@ -399,7 +372,6 @@ class CurrenciesLocaleMapper extends IsoLocaleMapper<IsoLocaleMapper<String>> {
       "ia": IaCurrenciesL10N(),
       "id": IdCurrenciesL10N(),
       "ig": IgCurrenciesL10N(),
-      "ii": IiCurrenciesL10N(),
       "is": IsCurrenciesL10N(),
       "it": ItCurrenciesL10N(),
       "ja": JaCurrenciesL10N(),
@@ -407,7 +379,6 @@ class CurrenciesLocaleMapper extends IsoLocaleMapper<IsoLocaleMapper<String>> {
       "ka": KaCurrenciesL10N(),
       "ki": KiCurrenciesL10N(),
       "kk": KkCurrenciesL10N(),
-      "kl": KlCurrenciesL10N(),
       "km": KmCurrenciesL10N(),
       "kn": KnCurrenciesL10N(),
       "ko": KoCurrenciesL10N(),
@@ -428,7 +399,6 @@ class CurrenciesLocaleMapper extends IsoLocaleMapper<IsoLocaleMapper<String>> {
       "mn": MnCurrenciesL10N(),
       "mr": MrCurrenciesL10N(),
       "ms": MsCurrenciesL10N(),
-      "mt": MtCurrenciesL10N(),
       "my": MyCurrenciesL10N(),
       "nb": NbCurrenciesL10N(),
       "nd": NdCurrenciesL10N(),
@@ -437,7 +407,6 @@ class CurrenciesLocaleMapper extends IsoLocaleMapper<IsoLocaleMapper<String>> {
       "nn": NnCurrenciesL10N(),
       "no": NoCurrenciesL10N(),
       "om": OmCurrenciesL10N(),
-      "om_KE": OmKeCurrenciesL10N(),
       "or": OrCurrenciesL10N(),
       "os": OsCurrenciesL10N(),
       "pa": PaCurrenciesL10N(),
@@ -449,13 +418,10 @@ class CurrenciesLocaleMapper extends IsoLocaleMapper<IsoLocaleMapper<String>> {
       "pt_MZ": PtMzCurrenciesL10N(),
       "pt_PT": PtPtCurrenciesL10N(),
       "qu": QuCurrenciesL10N(),
-      "qu_BO": QuBoCurrenciesL10N(),
-      "qu_EC": QuEcCurrenciesL10N(),
       "rm": RmCurrenciesL10N(),
       "rn": RnCurrenciesL10N(),
       "ro": RoCurrenciesL10N(),
       "ru": RuCurrenciesL10N(),
-      "rw": RwCurrenciesL10N(),
       "sa": SaCurrenciesL10N(),
       "sc": ScCurrenciesL10N(),
       "sd": SdCurrenciesL10N(),
@@ -466,7 +432,6 @@ class CurrenciesLocaleMapper extends IsoLocaleMapper<IsoLocaleMapper<String>> {
       "sl": SlCurrenciesL10N(),
       "sn": SnCurrenciesL10N(),
       "so": SoCurrenciesL10N(),
-      "so_KE": SoKeCurrenciesL10N(),
       "sq": SqCurrenciesL10N(),
       "sr": SrCurrenciesL10N(),
       "sr_Latn": SrLatnCurrenciesL10N(),
@@ -479,7 +444,6 @@ class CurrenciesLocaleMapper extends IsoLocaleMapper<IsoLocaleMapper<String>> {
       "tg": TgCurrenciesL10N(),
       "th": ThCurrenciesL10N(),
       "ti": TiCurrenciesL10N(),
-      "ti_ER": TiErCurrenciesL10N(),
       "tk": TkCurrenciesL10N(),
       "tl": TlCurrenciesL10N(),
       "to": ToCurrenciesL10N(),

@@ -7,11 +7,6 @@ import "../iso_locale_mapper.dart";
 class QuCurrenciesL10N extends IsoLocaleMapper<String> {
   /// Provides currency translations for the `qu` locale.
   QuCurrenciesL10N() {
-    map.addAll({
-      "PEN": "PEN",
-      "USD": "USD",
-      "XCG": "Caribe guilderkuna",
-      "ZWG": "Zimbabuemanta quri",
-    });
+    map.addAll({"XCG": "Caribe guilderkuna", "ZWG": "Zimbabuemanta quri"});
   }
 }
