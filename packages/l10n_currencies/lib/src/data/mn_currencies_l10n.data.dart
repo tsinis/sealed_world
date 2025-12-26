@@ -47,7 +47,7 @@ class MnCurrenciesL10N extends IsoLocaleMapper<String> {
       "DJF": "Жибоути франк",
       "DKK": "Данийн крон",
       "DOP": "Доминиканы песо",
-      "DZD": "Алжир доллар",
+      "DZD": "Алжир динар",
       "EGP": "Египет паунд",
       "ERN": "Эритрей накфа",
       "ETB": "Этиоп бирр",
@@ -90,7 +90,7 @@ class MnCurrenciesL10N extends IsoLocaleMapper<String> {
       "LKR": "Шри-ланк рупи",
       "LRD": "Либери доллар",
       "LSL": "Лесото лоти",
-      "LYD": "Ливи доллар",
+      "LYD": "Ливи динар",
       "MAD": "Мароккогийн дирхам",
       "MDL": "Молдавын леу",
       "MGA": "Малайн ариари",
@@ -143,7 +143,7 @@ class MnCurrenciesL10N extends IsoLocaleMapper<String> {
       "THB": "Тайландын бат",
       "TJS": "Тажикийн сомон",
       "TMT": "Туркмен манат",
-      "TND": "Тунис доллар",
+      "TND": "Тунис динар",
       "TOP": "Тонгагийн панга",
       "TRY": "Туркийн лира",
       "TTD": "Тринидад ба тобаго доллар",
@@ -167,7 +167,7 @@ class MnCurrenciesL10N extends IsoLocaleMapper<String> {
       "ZAR": "Өмнөд африкийн ранд",
       "ZMW": "Замби квача",
       "ZWG": "Зимбабвегийн гоулд",
-      "ZWL": "Замбабив Доллар",
+      "ZWL": "Замбабив доллар",
     });
   }
 }
