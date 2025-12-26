@@ -165,7 +165,7 @@ class RmCurrenciesL10N extends IsoLocaleMapper<String> {
       "XPF": "Franc CFP",
       "YER": "Rial dal Jemen",
       "ZAR": "Rand sidafrican",
-      "ZMW": "Kwacha da la sambia",
+      "ZMW": "Kwacha da la Sambia",
       "ZWG": "Aur dal Simbabwe",
       "ZWL": "Dollar dal Simbabwe",
     });

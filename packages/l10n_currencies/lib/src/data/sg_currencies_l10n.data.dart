@@ -53,7 +53,7 @@ class SgCurrenciesL10N extends IsoLocaleMapper<String> {
       "TND": "Dinära tî Tunizïi",
       "TZS": "Shilîngi tî Tanzanïi",
       "UGX": "Shilîngi tî Ugandäa",
-      "USD": r"Dol$ara ttî äLetäa-Ôko tî Amerîka",
+      "USD": "Dolära tî Letäa-Ôko tî Amerîka",
       "XAF": "Farânga CFA (BEAC)",
       "XOF": "Farânga CFA (BCEAO)",
       "ZAR": "Rânde tî Mbongo-Afrîka",
