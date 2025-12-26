@@ -29,7 +29,7 @@ class EuCurrenciesL10N extends IsoLocaleMapper<String> {
       "BRL": "Brasilgo erreala",
       "BSD": "Bahametako dolarra",
       "BTN": "Bhutango ngultruma",
-      "BWP": "Bosniako pula",
+      "BWP": "Botswanako pula",
       "BYN": "Bielorrusiako errubloa",
       "BZD": "Belizeko dolarra",
       "CAD": "Kanadako dolarra",
