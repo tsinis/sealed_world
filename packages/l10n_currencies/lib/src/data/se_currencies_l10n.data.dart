@@ -7,9 +7,15 @@ class SeCurrenciesL10N extends IsoLocaleMapper<String> {
   /// Provides currency translations for the `se` locale.
   SeCurrenciesL10N() {
     map.addAll({
+      "DKK": "DKK",
       "EUR": "Euro",
+      "HKD": "HKD",
+      "INR": "INR",
+      "JPY": "JPY",
+      "MXN": "MXN",
       "NOK": "Norgga kruvdno",
       "SEK": "Ruoŧŧa kruvdno",
+      "THB": "THB",
     });
   }
 }

@@ -14,17 +14,13 @@ Uyghur
 aabbc
 aabbcc
 aabbcx
-americký
 appium
 checo
-dolar
-dolár
 ffaabbcc
 jazyk
 ltwh
 republika
 restcountries
-rubeľ
 slovensko
 slovenská
 taegukgi

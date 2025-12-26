@@ -51,7 +51,7 @@ class EtCurrenciesL10N extends IsoLocaleMapper<String> {
       "EGP": "Egiptuse nael",
       "ERN": "Eritrea nakfa",
       "ETB": "Etioopia birr",
-      "EUR": "Euro",
+      "EUR": "euro",
       "FJD": "Fidži dollar",
       "FKP": "Falklandi saarte nael",
       "GBP": "Suurbritannia naelsterling",
