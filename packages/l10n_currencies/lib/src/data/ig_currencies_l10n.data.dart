@@ -118,7 +118,7 @@ class IgCurrenciesL10N extends IsoLocaleMapper<String> {
       "SHP": "Ego Pound obodo St Helena",
       "SLE": "Ego Leone obodo Sierra Leone",
       "SLL": "Ego Leone obodo Sierra Leone",
-      "SOS": "Ego shilling obodo Somali",
+      "SOS": "Ego Shilling obodo Somali",
       "SRD": "Dollar Surinamese",
       "SSP": "Ego Pound obodo South Sudan",
       "STN": "Ego Dobra nke obodo Sāo Tomé na Principe",

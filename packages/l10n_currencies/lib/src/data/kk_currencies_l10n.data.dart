@@ -89,7 +89,7 @@ class KkCurrenciesL10N extends IsoLocaleMapper<String> {
       "LBP": "Ливан фунты",
       "LKR": "Шри-Ланка рупиясы",
       "LRD": "Либерия доллары",
-      "LSL": "Лоти",
+      "LSL": "Лесото лоти",
       "LYD": "Ливия динары",
       "MAD": "Марокко дирхамы",
       "MDL": "Молдова лейі",
