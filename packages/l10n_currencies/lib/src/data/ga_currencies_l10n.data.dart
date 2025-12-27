@@ -160,7 +160,7 @@ class GaCurrenciesL10N extends IsoLocaleMapper<String> {
       "WST": "Tala Shamó",
       "XAF": "Franc CFA na hAfraice Láir",
       "XCD": "Dollar na Cairibe Thoir",
-      "XCG": "gildear Chairib",
+      "XCG": "Gildear Chairib",
       "XOF": "Franc CFA Iarthar na hAfraice",
       "XPF": "Franc CFP",
       "YER": "Rial Éimin",

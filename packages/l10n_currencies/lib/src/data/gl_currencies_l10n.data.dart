@@ -57,7 +57,7 @@ class GlCurrenciesL10N extends IsoLocaleMapper<String> {
       "GBP": "Libra esterlina",
       "GEL": "Lari xeorxiano",
       "GHS": "Cedi de Ghana",
-      "GIP": "libra xibraltareña",
+      "GIP": "Libra xibraltareña",
       "GMD": "Dalasi gambiano",
       "GNF": "Franco guineano",
       "GTQ": "Quetzal guatemalteco",
