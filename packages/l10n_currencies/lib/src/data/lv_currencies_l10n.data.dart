@@ -51,7 +51,7 @@ class LvCurrenciesL10N extends IsoLocaleMapper<String> {
       "EGP": "Ēģiptes mārciņa",
       "ERN": "Eritrejas nakfa",
       "ETB": "Etiopijas birs",
-      "EUR": "eiro",
+      "EUR": "Eiro",
       "FJD": "Fidži dolārs",
       "FKP": "Folklenda Salu mārciņa",
       "GBP": "Lielbritānijas mārciņa",
