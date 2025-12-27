@@ -18,6 +18,9 @@ This ISO-driven, pure Dart, fully tested and dependency-free package provides tr
 - Fallback locale support.
 - Alternative names and conditional formatting support.
 
+> [!TIP]
+> Translations are provided in sentence case to ensure correct display for leading UI labels, avoiding ambiguous re-capitalization logic. To adapt these values for inline or mid-sentence usage, prefer the `formatter` callback.
+
 ### Getting started
 
 To use this package, add `l10n_countries` as a dependency in your `pubspec.yaml` file.
