@@ -1,5 +1,5 @@
 import "../../model/language/language.dart";
-import "../../model/language_family/language_family.dart";
+import "../../model/language_family/submodels/natural_language_family.dart";
 import "../../model/script/writing_system.dart";
 import "../../typedefs/typedefs.dart";
 

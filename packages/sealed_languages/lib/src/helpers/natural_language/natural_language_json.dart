@@ -2,7 +2,7 @@
 
 import "../../interfaces/json_encodable.dart";
 import "../../model/language/language.dart";
-import "../../model/language_family/language_family.dart";
+import "../../model/language_family/submodels/natural_language_family.dart";
 import "../../model/script/writing_system.dart";
 import "../../typedefs/typedefs.dart";
 import "../extensions/sealed_world_iterable_extension.dart";

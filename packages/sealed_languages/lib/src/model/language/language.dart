@@ -1,7 +1,6 @@
 import "package:l10n_languages/l10n_languages.dart" show LanguagesLocaleMapper;
 
 import "../../collections/natural_language_collections.dart";
-import "../../data/natural_language_families.data.dart";
 import "../../helpers/extensions/iso_object_extension_type.dart";
 import "../../helpers/extensions/sealed_world_iterable_extension.dart";
 import "../../helpers/extensions/upper_case_iso_map_extension.dart";
@@ -14,7 +13,7 @@ import "../../interfaces/named.dart";
 import "../../typedefs/typedefs.dart" show LocaleMapFunction;
 import "../core/basic_locale.dart";
 import "../core/upper_case_iso_map.dart";
-import "../language_family/language_family.dart";
+import "../language_family/submodels/natural_language_family.dart";
 import "../script/writing_system.dart";
 import "../translated_name.dart";
 

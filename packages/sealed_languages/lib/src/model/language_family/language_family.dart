@@ -1,14 +1,10 @@
-import "../../data/natural_language_families.data.dart";
-import "../../helpers/extensions/iso_object_extension_type.dart";
 import "../../interfaces/named.dart";
-
-part "submodels/natural_language_family.dart";
 
 /// A sealed class that represents a family of related languages.
 ///
 /// A language family is a group of languages that have a common ancestor or are
 /// related in some other way.
-sealed class LanguageFamily implements Named<String> {
+class LanguageFamily implements Named<String> {
   /// Creates a new instance of the [LanguageFamily] class.
   ///
   /// The [name] parameter is required and should be a non-empty string
@@ -22,5 +18,6 @@ sealed class LanguageFamily implements Named<String> {
 
   /// Returns a string representation of this [LanguageFamily] object.
   @override
-  String toString({bool short = true}) => 'LanguageFamily(name: "$name")';
+  String toString({bool short = true}) =>
+      short ? name : 'LanguageFamily(name: "$name")';
 }
