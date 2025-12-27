@@ -51,7 +51,7 @@ class FiCurrenciesL10N extends IsoLocaleMapper<String> {
       "EGP": "Egyptin punta",
       "ERN": "Eritrean nakfa",
       "ETB": "Etiopian birr",
-      "EUR": "euro",
+      "EUR": "Euro",
       "FJD": "Fidžin dollari",
       "FKP": "Falklandinsaarten punta",
       "GBP": "Englannin punta",
