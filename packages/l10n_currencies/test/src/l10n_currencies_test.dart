@@ -15,14 +15,14 @@ void main() => group("$CurrenciesLocaleMapper", () {
   group("constructor", () {
     test(
       "creates instance with default data",
-      () => expect(mapper.map.length, 161),
+      () => expect(mapper.map.length, 149),
     );
 
     test("allows adding custom translations", () {
       final customMapper = CurrenciesLocaleMapper(
         other: {"custom": AfCurrenciesL10N()},
       );
-      expect(customMapper.map.length, 162);
+      expect(customMapper.map.length, 150);
       expect(customMapper.map["custom"], isNotNull);
     });
   });
