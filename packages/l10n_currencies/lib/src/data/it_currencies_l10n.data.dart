@@ -136,7 +136,7 @@ class ItCurrenciesL10N extends IsoLocaleMapper<String> {
       "SOS": "Scellino somalo",
       "SRD": "Dollaro del Suriname",
       "SSP": "Sterlina sud-sudanese",
-      "STN": "Dobra di Sao Tomé e Principe",
+      "STN": "Dobra di São Tomé e Príncipe",
       "SVC": "Colón salvadoregno",
       "SYP": "Lira siriana",
       "SZL": "Lilangeni dello Swaziland",

@@ -142,7 +142,7 @@ class IaCurrenciesL10N extends IsoLocaleMapper<String> {
       "YER": "Rial yemeni",
       "ZAR": "Rand sudafrican",
       "ZMW": "Kwacha zambian",
-      "ZWG": "Auro de Zimbwabwe",
+      "ZWG": "Auro de Zimbabwe",
     });
   }
 }
