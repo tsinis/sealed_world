@@ -137,7 +137,7 @@ class IdCurrenciesL10N extends IsoLocaleMapper<String> {
       "SRD": "Dolar Suriname",
       "SSP": "Pound Sudan Selatan",
       "STN": "Dobra Sao Tome dan Principe",
-      "SVC": "Colon El Savador",
+      "SVC": "Colon El Salvador",
       "SYP": "Pound Suriah",
       "SZL": "Lilangeni Swaziland",
       "THB": "Baht Thailand",

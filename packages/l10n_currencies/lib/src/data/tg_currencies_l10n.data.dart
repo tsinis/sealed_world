@@ -9,8 +9,8 @@ class TgCurrenciesL10N extends IsoLocaleMapper<String> {
   TgCurrenciesL10N() {
     map.addAll({
       "RUB": "Рубли русӣ",
-      "XCG": "гулдени Кариб",
-      "ZWG": "тиллоии Зимбабве",
+      "XCG": "Гулдени Кариб",
+      "ZWG": "Тиллоии Зимбабве",
     });
   }
 }

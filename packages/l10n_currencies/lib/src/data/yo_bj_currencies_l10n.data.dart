@@ -20,7 +20,7 @@ class YoBjCurrenciesL10N extends IsoLocaleMapper<String> {
       "CVE": "Kabofediano ti Orílɛ́ède Esuodo",
       "DJF": "Faransi ti Orílɛ́ède Dibouti",
       "DZD": "Dina ti Orílɛ́ède Àlùgèríánì",
-      "EGP": "pɔɔn ti Orílɛ́ède Egipiti",
+      "EGP": "Pɔɔn ti Orílɛ́ède Egipiti",
       "ERN": "Nakifa ti Orílɛ́ède Eriteriani",
       "ETB": "Biri ti Orílɛ́ède Eutopia",
       "GBP": "Pɔɔn ti Orílɛ́ède Bírítísì",

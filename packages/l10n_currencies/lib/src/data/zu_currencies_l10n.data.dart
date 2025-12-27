@@ -160,7 +160,7 @@ class ZuCurrenciesL10N extends IsoLocaleMapper<String> {
       "WST": "i-Samoan Tala",
       "XAF": "i-Central African CFA Franc",
       "XCD": "i-East Caribbean Dollar",
-      "XCG": "i-Caribbean guilder",
+      "XCG": "i-Caribbean Guilder",
       "XOF": "i-West African CFA Franc",
       "XPF": "i-CFP Franc",
       "YER": "i-Yemeni Rial",

@@ -35,7 +35,7 @@ void main() => group("$CurrenciesLocaleMapper", () {
 
     test("localizes single code with main locale", () {
       final result = mapper.localize(const {"USD"}, mainLocale: "cs");
-      expect(result.values.single, "americký dolar");
+      expect(result.values.single, "Americký dolar");
     });
 
     test("uses fallback locale when main locale missing", () {
@@ -58,7 +58,7 @@ void main() => group("$CurrenciesLocaleMapper", () {
       expect(result.length, greaterThanOrEqualTo(3));
       expect(
         result.values,
-        containsAll(["americký dolár", "ruský rubeľ", "euro"]),
+        containsAll(["Americký dolár", "Ruský rubeľ", "Euro"]),
       );
     });
 

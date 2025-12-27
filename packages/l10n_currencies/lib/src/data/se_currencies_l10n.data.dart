@@ -7,9 +7,9 @@ class SeCurrenciesL10N extends IsoLocaleMapper<String> {
   /// Provides currency translations for the `se` locale.
   SeCurrenciesL10N() {
     map.addAll({
-      "EUR": "euro",
-      "NOK": "norgga kruvdno",
-      "SEK": "ruoŧŧa kruvdno",
+      "EUR": "Euro",
+      "NOK": "Norgga kruvdno",
+      "SEK": "Ruoŧŧa kruvdno",
     });
   }
 }

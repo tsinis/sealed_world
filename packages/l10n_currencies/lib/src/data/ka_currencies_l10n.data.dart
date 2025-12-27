@@ -167,7 +167,7 @@ class KaCurrenciesL10N extends IsoLocaleMapper<String> {
       "ZAR": "სამხრეთ აფრიკული რანდი",
       "ZMW": "ზამბიური კვაჭა",
       "ZWG": "ზიმბაბვეს გოლდი",
-      "ZWL": "ზიმბაბვე დოლარი",
+      "ZWL": "ზიმბაბვეს დოლარი",
     });
   }
 }

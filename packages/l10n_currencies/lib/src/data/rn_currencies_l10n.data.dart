@@ -10,7 +10,7 @@ class RnCurrenciesL10N extends IsoLocaleMapper<String> {
       "AED": "Idiramu ryo muri Leta Zunze Ubumwe z’Abarabu",
       "AOA": "Ikwanza ryo muri Angola",
       "AUD": "Idolari ryo muri Ositaraliya",
-      "BHD": "Idinari ry’iribahireyini",
+      "BHD": "Idinari ry’Iribahireyini",
       "BIF": "Ifaranga ry’Uburundi",
       "BWP": "Ipula ryo muri Botswana",
       "CAD": "Idolari rya Kanada",
