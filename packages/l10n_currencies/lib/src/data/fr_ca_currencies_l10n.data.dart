@@ -7,9 +7,9 @@ class FrCaCurrenciesL10N extends IsoLocaleMapper<String> {
   /// Provides currency translations for the `fr_CA` locale.
   FrCaCurrenciesL10N() {
     map.addAll({
-      "FKP": "livre des Îles Malouines",
-      "TOP": "pa’anga",
-      "TTD": "dollar de Trinité-et-Tobago",
+      "FKP": "Livre des Îles Malouines",
+      "TOP": "Pa’anga",
+      "TTD": "Dollar de Trinité-et-Tobago",
     });
   }
 }

@@ -1,6 +1,6 @@
 import "../iso_locale_mapper.dart";
 
-/// Contains 9 translation(s).
+/// Contains 3 translation(s).
 /// Provides translations for the Northern Sami language
 /// locale.
 class SeCurrenciesL10N extends IsoLocaleMapper<String> {

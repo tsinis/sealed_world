@@ -1,6 +1,6 @@
 import "../iso_locale_mapper.dart";
 
-/// Contains 57 translation(s).
+/// Contains 45 translation(s).
 /// Provides translations for the Uzbek language
 /// and Cyrillic script locale.
 class UzCyrlCurrenciesL10N extends IsoLocaleMapper<String> {
@@ -9,7 +9,6 @@ class UzCyrlCurrenciesL10N extends IsoLocaleMapper<String> {
     map.addAll({
       "ANG": "Голланд Антил гульдени",
       "ARS": "Аргентина песоси",
-      "AUD": "AUD",
       "AWG": "Аруба флорини",
       "BBD": "Барбадос доллари",
       "BMD": "Бермуда доллари",
@@ -32,38 +31,27 @@ class UzCyrlCurrenciesL10N extends IsoLocaleMapper<String> {
       "GBP": "Инглиз фунт",
       "GTQ": "Гватемала кветзали",
       "GYD": "Гаяна доллари",
-      "HKD": "HKD",
       "HNL": "Гондурас лемпираси",
       "HTG": "Гаити гурдаси",
-      "ILS": "ILS",
       "INR": "Ҳинд рупияси",
       "JMD": "Ямайка доллари",
       "JPY": "Япон йенаси",
-      "KRW": "KRW",
       "KYD": "Кайман ороли Доллари",
       "LYD": "Ливия динори",
       "MAD": "Марокаш дирҳами",
       "MXN": "Мексика песоси",
       "NIO": "Никарагуа кордобаси",
-      "NZD": "NZD",
       "PAB": "Панама бальбоаси",
       "PEN": "Перу сол",
       "PYG": "Парагвай гуарани",
-      "RON": "RON",
       "RUB": "Рус рубли",
       "SRD": "Суринам доллари",
-      "THB": "THB",
       "TTD": "Тринидад ва Тобаго доллари",
-      "TWD": "TWD",
       "USD": "АҚШ доллари",
       "UYU": "Уругвай песоси",
       "UZS": "Ўзбекистон сўм",
       "VES": "Венесуэла боливари",
-      "VND": "VND",
-      "XAF": "XAF",
       "XCD": "Шарқий Кариб доллари",
-      "XOF": "XOF",
-      "XPF": "XPF",
     });
   }
 }
