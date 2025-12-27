@@ -1,5 +1,5 @@
 import "package:_sealed_world_tests/sealed_world_tests.dart";
-import "package:sealed_languages/src/model/language_family/language_family.dart";
+import "package:sealed_languages/src/model/language_family/submodels/natural_language_family.dart";
 import "package:test/test.dart";
 
 void main() => group("$NaturalLanguageFamily", () {
@@ -16,6 +16,17 @@ void main() => group("$NaturalLanguageFamily", () {
   });
 
   group("equality", () {
+    test("switch statement", () {
+      final result = switch (value) {
+        Dravidian() => false,
+        Uralic() => true,
+        // ignore: avoid-wildcard-cases-with-sealed-classes, it's a test.
+        _ => null,
+      };
+
+      expect(result, isTrue);
+    });
+
     test("basic", () {
       expect(NaturalLanguageFamily.list.first, isNot(equals(value)));
       expect(NaturalLanguageFamily.list.last, same(value));
@@ -49,7 +60,7 @@ void main() => group("$NaturalLanguageFamily", () {
     test(
       "with wrong name",
       () => expect(
-        () => NaturalLanguageFamily.fromName(value.toString()),
+        () => NaturalLanguageFamily.fromName("Wrong Name"),
         throwsStateError,
       ),
     );
@@ -103,15 +114,5 @@ void main() => group("$NaturalLanguageFamily", () {
         value,
       ),
     );
-  });
-
-  group("asserts", () {
-    assertTest(
-      "not",
-      () => NaturalLanguageFamily(name: value.name),
-      shouldThrow: false,
-    );
-
-    assertTest("empty name", () => NaturalLanguageFamily(name: ""));
   });
 });

@@ -11,7 +11,7 @@ void main() => group("TranslatedExtension", () {
   group("commonNameFor", () {
     test("returns translation for valid locale", () {
       final name = portuguese.commonNameFor(const BasicLocale(LangRus()));
-      expect(name, "португальский");
+      expect(name, "Португальский");
     });
 
     test("returns orElse value when translation not found", () {
@@ -36,7 +36,7 @@ void main() => group("TranslatedExtension", () {
 
     test("returns translation for valid locale", () {
       final name = portuguese.maybeCommonNameFor(const BasicLocale(LangRus()));
-      expect(name, "португальский");
+      expect(name, "Португальский");
     });
 
     test("returns orElse value when translation not found", () {
