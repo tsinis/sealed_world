@@ -20,6 +20,9 @@ checo
 dolar
 dolár
 ffaabbcc
+inglés
+islas
+japán
 jazyk
 ltwh
 republika
