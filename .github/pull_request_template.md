@@ -17,7 +17,7 @@
 - [ ] 🧪 Tests
 - [ ] 📝 Documentation
 - [ ] ⚙️ CI/CD or GitHub Workflow configuration change
-- [ ] 📦 Chore and/or dependencies update
+- [ ] 📦 Chore or dependencies update
 
 ## Checks
 
