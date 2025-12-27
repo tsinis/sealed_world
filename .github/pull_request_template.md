@@ -6,10 +6,6 @@
 
 -->
 
-## Description
-
-<!--- Please describe your changes in detail and link related issue(s) -->
-
 ## Type of Change
 
 <!--- Please put an `x` in all the boxes that apply: -->
@@ -21,7 +17,7 @@
 - [ ] 🧪 Tests
 - [ ] 📝 Documentation
 - [ ] ⚙️ CI/CD or GitHub Workflow configuration change
-- [ ] 📦 Dependencies update
+- [ ] 📦 Chore or dependencies update
 
 ## Checks
 
