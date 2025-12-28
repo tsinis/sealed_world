@@ -1,11 +1,11 @@
-part of "../../model/language/language.dart";
+part of "../../model/language/submodels/natural_language.dart";
 
 extension type const _PanFactory._(LangPan _) implements LangPan {
   const _PanFactory() : this._(const LangPan._());
 }
 
 /// A class that represents the (Eastern) Punjabi language.
-class LangPan extends NaturalLanguage {
+final class LangPan extends NaturalLanguage {
   /// {@template sealed_world.language_pan_constructor}
   /// Creates a instance of [LangPan] ((Eastern) Punjabi language).
   ///
@@ -14,7 +14,7 @@ class LangPan extends NaturalLanguage {
   const factory LangPan() = _PanFactory;
 
   const LangPan._()
-    : super(
+    : super._(
         name: "(Eastern) Punjabi",
         code: "PAN",
         codeShort: "PA",

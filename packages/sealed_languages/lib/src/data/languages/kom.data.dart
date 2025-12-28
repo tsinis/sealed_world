@@ -1,11 +1,11 @@
-part of "../../model/language/language.dart";
+part of "../../model/language/submodels/natural_language.dart";
 
 extension type const _KomFactory._(LangKom _) implements LangKom {
   const _KomFactory() : this._(const LangKom._());
 }
 
 /// A class that represents the Komi language.
-class LangKom extends NaturalLanguage {
+final class LangKom extends NaturalLanguage {
   /// {@template sealed_world.language_kom_constructor}
   /// Creates a instance of [LangKom] (Komi language).
   ///
@@ -14,7 +14,7 @@ class LangKom extends NaturalLanguage {
   const factory LangKom() = _KomFactory;
 
   const LangKom._()
-    : super(
+    : super._(
         name: "Komi",
         code: "KOM",
         codeShort: "KV",

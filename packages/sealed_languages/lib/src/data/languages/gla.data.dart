@@ -1,11 +1,11 @@
-part of "../../model/language/language.dart";
+part of "../../model/language/submodels/natural_language.dart";
 
 extension type const _GlaFactory._(LangGla _) implements LangGla {
   const _GlaFactory() : this._(const LangGla._());
 }
 
 /// A class that represents the (Scottish) Gaelic language.
-class LangGla extends NaturalLanguage {
+final class LangGla extends NaturalLanguage {
   /// {@template sealed_world.language_gla_constructor}
   /// Creates a instance of [LangGla] ((Scottish) Gaelic language).
   ///
@@ -14,7 +14,7 @@ class LangGla extends NaturalLanguage {
   const factory LangGla() = _GlaFactory;
 
   const LangGla._()
-    : super(
+    : super._(
         name: "(Scottish) Gaelic",
         code: "GLA",
         codeShort: "GD",

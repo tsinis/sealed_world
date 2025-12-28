@@ -1,11 +1,11 @@
-part of "../../model/language/language.dart";
+part of "../../model/language/submodels/natural_language.dart";
 
 extension type const _GrnFactory._(LangGrn _) implements LangGrn {
   const _GrnFactory() : this._(const LangGrn._());
 }
 
 /// A class that represents the Guaraní language.
-class LangGrn extends NaturalLanguage {
+final class LangGrn extends NaturalLanguage {
   /// {@template sealed_world.language_grn_constructor}
   /// Creates a instance of [LangGrn] (Guaraní language).
   ///
@@ -14,7 +14,7 @@ class LangGrn extends NaturalLanguage {
   const factory LangGrn() = _GrnFactory;
 
   const LangGrn._()
-    : super(
+    : super._(
         name: "Guaraní",
         code: "GRN",
         codeShort: "GN",

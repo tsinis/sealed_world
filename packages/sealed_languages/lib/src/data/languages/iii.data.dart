@@ -1,11 +1,11 @@
-part of "../../model/language/language.dart";
+part of "../../model/language/submodels/natural_language.dart";
 
 extension type const _IiiFactory._(LangIii _) implements LangIii {
   const _IiiFactory() : this._(const LangIii._());
 }
 
 /// A class that represents the Nuosu language.
-class LangIii extends NaturalLanguage {
+final class LangIii extends NaturalLanguage {
   /// {@template sealed_world.language_iii_constructor}
   /// Creates a instance of [LangIii] (Nuosu language).
   ///
@@ -14,7 +14,7 @@ class LangIii extends NaturalLanguage {
   const factory LangIii() = _IiiFactory;
 
   const LangIii._()
-    : super(
+    : super._(
         name: "Nuosu",
         code: "III",
         codeShort: "II",

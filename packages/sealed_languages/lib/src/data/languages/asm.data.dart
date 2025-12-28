@@ -1,11 +1,11 @@
-part of "../../model/language/language.dart";
+part of "../../model/language/submodels/natural_language.dart";
 
 extension type const _AsmFactory._(LangAsm _) implements LangAsm {
   const _AsmFactory() : this._(const LangAsm._());
 }
 
 /// A class that represents the Assamese language.
-class LangAsm extends NaturalLanguage {
+final class LangAsm extends NaturalLanguage {
   /// {@template sealed_world.language_asm_constructor}
   /// Creates a instance of [LangAsm] (Assamese language).
   ///
@@ -14,7 +14,7 @@ class LangAsm extends NaturalLanguage {
   const factory LangAsm() = _AsmFactory;
 
   const LangAsm._()
-    : super(
+    : super._(
         name: "Assamese",
         code: "ASM",
         codeShort: "AS",

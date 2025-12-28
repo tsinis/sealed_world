@@ -1,11 +1,11 @@
-part of "../../model/language/language.dart";
+part of "../../model/language/submodels/natural_language.dart";
 
 extension type const _ZhoFactory._(LangZho _) implements LangZho {
   const _ZhoFactory() : this._(const LangZho._());
 }
 
 /// A class that represents the Chinese language.
-class LangZho extends NaturalLanguage {
+final class LangZho extends NaturalLanguage {
   /// {@template sealed_world.language_zho_constructor}
   /// Creates a instance of [LangZho] (Chinese language).
   ///
@@ -14,7 +14,7 @@ class LangZho extends NaturalLanguage {
   const factory LangZho() = _ZhoFactory;
 
   const LangZho._()
-    : super(
+    : super._(
         name: "Chinese",
         code: "ZHO",
         codeShort: "ZH",

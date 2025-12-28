@@ -1,11 +1,11 @@
-part of "../../model/language/language.dart";
+part of "../../model/language/submodels/natural_language.dart";
 
 extension type const _ChuFactory._(LangChu _) implements LangChu {
   const _ChuFactory() : this._(const LangChu._());
 }
 
 /// A class that represents the (Old) Church Slavonic language.
-class LangChu extends NaturalLanguage {
+final class LangChu extends NaturalLanguage {
   /// {@template sealed_world.language_chu_constructor}
   /// Creates a instance of [LangChu] ((Old) Church Slavonic language).
   ///
@@ -14,7 +14,7 @@ class LangChu extends NaturalLanguage {
   const factory LangChu() = _ChuFactory;
 
   const LangChu._()
-    : super(
+    : super._(
         name: "(Old) Church Slavonic",
         code: "CHU",
         codeShort: "CU",

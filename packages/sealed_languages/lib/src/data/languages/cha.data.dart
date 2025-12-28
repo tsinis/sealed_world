@@ -1,11 +1,11 @@
-part of "../../model/language/language.dart";
+part of "../../model/language/submodels/natural_language.dart";
 
 extension type const _ChaFactory._(LangCha _) implements LangCha {
   const _ChaFactory() : this._(const LangCha._());
 }
 
 /// A class that represents the Chamorro language.
-class LangCha extends NaturalLanguage {
+final class LangCha extends NaturalLanguage {
   /// {@template sealed_world.language_cha_constructor}
   /// Creates a instance of [LangCha] (Chamorro language).
   ///
@@ -14,7 +14,7 @@ class LangCha extends NaturalLanguage {
   const factory LangCha() = _ChaFactory;
 
   const LangCha._()
-    : super(
+    : super._(
         name: "Chamorro",
         code: "CHA",
         codeShort: "CH",

@@ -1,11 +1,11 @@
-part of "../../model/language/language.dart";
+part of "../../model/language/submodels/natural_language.dart";
 
 extension type const _EstFactory._(LangEst _) implements LangEst {
   const _EstFactory() : this._(const LangEst._());
 }
 
 /// A class that represents the Estonian language.
-class LangEst extends NaturalLanguage {
+final class LangEst extends NaturalLanguage {
   /// {@template sealed_world.language_est_constructor}
   /// Creates a instance of [LangEst] (Estonian language).
   ///
@@ -14,7 +14,7 @@ class LangEst extends NaturalLanguage {
   const factory LangEst() = _EstFactory;
 
   const LangEst._()
-    : super(
+    : super._(
         name: "Estonian",
         code: "EST",
         codeShort: "ET",

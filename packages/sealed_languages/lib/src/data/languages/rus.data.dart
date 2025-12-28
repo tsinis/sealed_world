@@ -1,11 +1,11 @@
-part of "../../model/language/language.dart";
+part of "../../model/language/submodels/natural_language.dart";
 
 extension type const _RusFactory._(LangRus _) implements LangRus {
   const _RusFactory() : this._(const LangRus._());
 }
 
 /// A class that represents the Russian language.
-class LangRus extends NaturalLanguage {
+final class LangRus extends NaturalLanguage {
   /// {@template sealed_world.language_rus_constructor}
   /// Creates a instance of [LangRus] (Russian language).
   ///
@@ -14,7 +14,7 @@ class LangRus extends NaturalLanguage {
   const factory LangRus() = _RusFactory;
 
   const LangRus._()
-    : super(
+    : super._(
         name: "Russian",
         code: "RUS",
         codeShort: "RU",

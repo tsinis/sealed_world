@@ -1,11 +1,11 @@
-part of "../../model/language/language.dart";
+part of "../../model/language/submodels/natural_language.dart";
 
 extension type const _KanFactory._(LangKan _) implements LangKan {
   const _KanFactory() : this._(const LangKan._());
 }
 
 /// A class that represents the Kannada language.
-class LangKan extends NaturalLanguage {
+final class LangKan extends NaturalLanguage {
   /// {@template sealed_world.language_kan_constructor}
   /// Creates a instance of [LangKan] (Kannada language).
   ///
@@ -14,7 +14,7 @@ class LangKan extends NaturalLanguage {
   const factory LangKan() = _KanFactory;
 
   const LangKan._()
-    : super(
+    : super._(
         name: "Kannada",
         code: "KAN",
         codeShort: "KN",

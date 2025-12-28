@@ -1,11 +1,11 @@
-part of "../../model/language/language.dart";
+part of "../../model/language/submodels/natural_language.dart";
 
 extension type const _DzoFactory._(LangDzo _) implements LangDzo {
   const _DzoFactory() : this._(const LangDzo._());
 }
 
 /// A class that represents the Dzongkha language.
-class LangDzo extends NaturalLanguage {
+final class LangDzo extends NaturalLanguage {
   /// {@template sealed_world.language_dzo_constructor}
   /// Creates a instance of [LangDzo] (Dzongkha language).
   ///
@@ -14,7 +14,7 @@ class LangDzo extends NaturalLanguage {
   const factory LangDzo() = _DzoFactory;
 
   const LangDzo._()
-    : super(
+    : super._(
         name: "Dzongkha",
         code: "DZO",
         codeShort: "DZ",

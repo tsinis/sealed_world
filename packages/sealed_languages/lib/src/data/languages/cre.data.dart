@@ -1,11 +1,11 @@
-part of "../../model/language/language.dart";
+part of "../../model/language/submodels/natural_language.dart";
 
 extension type const _CreFactory._(LangCre _) implements LangCre {
   const _CreFactory() : this._(const LangCre._());
 }
 
 /// A class that represents the Cree language.
-class LangCre extends NaturalLanguage {
+final class LangCre extends NaturalLanguage {
   /// {@template sealed_world.language_cre_constructor}
   /// Creates a instance of [LangCre] (Cree language).
   ///
@@ -14,7 +14,7 @@ class LangCre extends NaturalLanguage {
   const factory LangCre() = _CreFactory;
 
   const LangCre._()
-    : super(
+    : super._(
         name: "Cree",
         code: "CRE",
         codeShort: "CR",

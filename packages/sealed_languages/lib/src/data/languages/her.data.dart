@@ -1,11 +1,11 @@
-part of "../../model/language/language.dart";
+part of "../../model/language/submodels/natural_language.dart";
 
 extension type const _HerFactory._(LangHer _) implements LangHer {
   const _HerFactory() : this._(const LangHer._());
 }
 
 /// A class that represents the Herero language.
-class LangHer extends NaturalLanguage {
+final class LangHer extends NaturalLanguage {
   /// {@template sealed_world.language_her_constructor}
   /// Creates a instance of [LangHer] (Herero language).
   ///
@@ -14,7 +14,7 @@ class LangHer extends NaturalLanguage {
   const factory LangHer() = _HerFactory;
 
   const LangHer._()
-    : super(
+    : super._(
         name: "Herero",
         code: "HER",
         codeShort: "HZ",

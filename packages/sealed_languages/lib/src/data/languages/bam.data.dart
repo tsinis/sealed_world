@@ -1,11 +1,11 @@
-part of "../../model/language/language.dart";
+part of "../../model/language/submodels/natural_language.dart";
 
 extension type const _BamFactory._(LangBam _) implements LangBam {
   const _BamFactory() : this._(const LangBam._());
 }
 
 /// A class that represents the Bambara language.
-class LangBam extends NaturalLanguage {
+final class LangBam extends NaturalLanguage {
   /// {@template sealed_world.language_bam_constructor}
   /// Creates a instance of [LangBam] (Bambara language).
   ///
@@ -14,7 +14,7 @@ class LangBam extends NaturalLanguage {
   const factory LangBam() = _BamFactory;
 
   const LangBam._()
-    : super(
+    : super._(
         name: "Bambara",
         code: "BAM",
         codeShort: "BM",

@@ -1,11 +1,11 @@
-part of "../../model/language/language.dart";
+part of "../../model/language/submodels/natural_language.dart";
 
 extension type const _LinFactory._(LangLin _) implements LangLin {
   const _LinFactory() : this._(const LangLin._());
 }
 
 /// A class that represents the Lingala language.
-class LangLin extends NaturalLanguage {
+final class LangLin extends NaturalLanguage {
   /// {@template sealed_world.language_lin_constructor}
   /// Creates a instance of [LangLin] (Lingala language).
   ///
@@ -14,7 +14,7 @@ class LangLin extends NaturalLanguage {
   const factory LangLin() = _LinFactory;
 
   const LangLin._()
-    : super(
+    : super._(
         name: "Lingala",
         code: "LIN",
         codeShort: "LN",

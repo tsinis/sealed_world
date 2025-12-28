@@ -1,11 +1,11 @@
-part of "../../model/language/language.dart";
+part of "../../model/language/submodels/natural_language.dart";
 
 extension type const _HebFactory._(LangHeb _) implements LangHeb {
   const _HebFactory() : this._(const LangHeb._());
 }
 
 /// A class that represents the Hebrew (modern) language.
-class LangHeb extends NaturalLanguage {
+final class LangHeb extends NaturalLanguage {
   /// {@template sealed_world.language_heb_constructor}
   /// Creates a instance of [LangHeb] (Hebrew (modern) language).
   ///
@@ -14,7 +14,7 @@ class LangHeb extends NaturalLanguage {
   const factory LangHeb() = _HebFactory;
 
   const LangHeb._()
-    : super(
+    : super._(
         name: "Hebrew (modern)",
         code: "HEB",
         codeShort: "HE",

@@ -1,11 +1,11 @@
-part of "../../model/language/language.dart";
+part of "../../model/language/submodels/natural_language.dart";
 
 extension type const _FinFactory._(LangFin _) implements LangFin {
   const _FinFactory() : this._(const LangFin._());
 }
 
 /// A class that represents the Finnish language.
-class LangFin extends NaturalLanguage {
+final class LangFin extends NaturalLanguage {
   /// {@template sealed_world.language_fin_constructor}
   /// Creates a instance of [LangFin] (Finnish language).
   ///
@@ -14,7 +14,7 @@ class LangFin extends NaturalLanguage {
   const factory LangFin() = _FinFactory;
 
   const LangFin._()
-    : super(
+    : super._(
         name: "Finnish",
         code: "FIN",
         codeShort: "FI",

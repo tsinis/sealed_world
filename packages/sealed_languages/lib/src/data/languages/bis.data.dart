@@ -1,11 +1,11 @@
-part of "../../model/language/language.dart";
+part of "../../model/language/submodels/natural_language.dart";
 
 extension type const _BisFactory._(LangBis _) implements LangBis {
   const _BisFactory() : this._(const LangBis._());
 }
 
 /// A class that represents the Bislama language.
-class LangBis extends NaturalLanguage {
+final class LangBis extends NaturalLanguage {
   /// {@template sealed_world.language_bis_constructor}
   /// Creates a instance of [LangBis] (Bislama language).
   ///
@@ -14,7 +14,7 @@ class LangBis extends NaturalLanguage {
   const factory LangBis() = _BisFactory;
 
   const LangBis._()
-    : super(
+    : super._(
         name: "Bislama",
         code: "BIS",
         codeShort: "BI",

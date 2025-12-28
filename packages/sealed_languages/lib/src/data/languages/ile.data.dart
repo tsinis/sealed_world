@@ -1,11 +1,11 @@
-part of "../../model/language/language.dart";
+part of "../../model/language/submodels/natural_language.dart";
 
 extension type const _IleFactory._(LangIle _) implements LangIle {
   const _IleFactory() : this._(const LangIle._());
 }
 
 /// A class that represents the Interlingue language.
-class LangIle extends NaturalLanguage {
+final class LangIle extends NaturalLanguage {
   /// {@template sealed_world.language_ile_constructor}
   /// Creates a instance of [LangIle] (Interlingue language).
   ///
@@ -14,7 +14,7 @@ class LangIle extends NaturalLanguage {
   const factory LangIle() = _IleFactory;
 
   const LangIle._()
-    : super(
+    : super._(
         name: "Interlingue",
         code: "ILE",
         codeShort: "IE",

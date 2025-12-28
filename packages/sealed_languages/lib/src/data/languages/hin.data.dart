@@ -1,11 +1,11 @@
-part of "../../model/language/language.dart";
+part of "../../model/language/submodels/natural_language.dart";
 
 extension type const _HinFactory._(LangHin _) implements LangHin {
   const _HinFactory() : this._(const LangHin._());
 }
 
 /// A class that represents the Hindi language.
-class LangHin extends NaturalLanguage {
+final class LangHin extends NaturalLanguage {
   /// {@template sealed_world.language_hin_constructor}
   /// Creates a instance of [LangHin] (Hindi language).
   ///
@@ -14,7 +14,7 @@ class LangHin extends NaturalLanguage {
   const factory LangHin() = _HinFactory;
 
   const LangHin._()
-    : super(
+    : super._(
         name: "Hindi",
         code: "HIN",
         codeShort: "HI",

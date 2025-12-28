@@ -1,11 +1,11 @@
-part of "../../model/language/language.dart";
+part of "../../model/language/submodels/natural_language.dart";
 
 extension type const _SinFactory._(LangSin _) implements LangSin {
   const _SinFactory() : this._(const LangSin._());
 }
 
 /// A class that represents the Sinhalese (Sinhala) language.
-class LangSin extends NaturalLanguage {
+final class LangSin extends NaturalLanguage {
   /// {@template sealed_world.language_sin_constructor}
   /// Creates a instance of [LangSin] (Sinhalese (Sinhala) language).
   ///
@@ -14,7 +14,7 @@ class LangSin extends NaturalLanguage {
   const factory LangSin() = _SinFactory;
 
   const LangSin._()
-    : super(
+    : super._(
         name: "Sinhalese (Sinhala)",
         code: "SIN",
         codeShort: "SI",

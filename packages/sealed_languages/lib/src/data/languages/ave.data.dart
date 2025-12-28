@@ -1,11 +1,11 @@
-part of "../../model/language/language.dart";
+part of "../../model/language/submodels/natural_language.dart";
 
 extension type const _AveFactory._(LangAve _) implements LangAve {
   const _AveFactory() : this._(const LangAve._());
 }
 
 /// A class that represents the Avestan language.
-class LangAve extends NaturalLanguage {
+final class LangAve extends NaturalLanguage {
   /// {@template sealed_world.language_ave_constructor}
   /// Creates a instance of [LangAve] (Avestan language).
   ///
@@ -14,7 +14,7 @@ class LangAve extends NaturalLanguage {
   const factory LangAve() = _AveFactory;
 
   const LangAve._()
-    : super(
+    : super._(
         name: "Avestan",
         code: "AVE",
         codeShort: "AE",

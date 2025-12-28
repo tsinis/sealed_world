@@ -1,11 +1,11 @@
-part of "../../model/language/language.dart";
+part of "../../model/language/submodels/natural_language.dart";
 
 extension type const _MyaFactory._(LangMya _) implements LangMya {
   const _MyaFactory() : this._(const LangMya._());
 }
 
 /// A class that represents the Burmese language.
-class LangMya extends NaturalLanguage {
+final class LangMya extends NaturalLanguage {
   /// {@template sealed_world.language_mya_constructor}
   /// Creates a instance of [LangMya] (Burmese language).
   ///
@@ -14,7 +14,7 @@ class LangMya extends NaturalLanguage {
   const factory LangMya() = _MyaFactory;
 
   const LangMya._()
-    : super(
+    : super._(
         name: "Burmese",
         code: "MYA",
         codeShort: "MY",

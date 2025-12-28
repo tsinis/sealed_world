@@ -2,7 +2,7 @@
 
 import "package:sealed_languages/src/helpers/extensions/translated_extension.dart";
 import "package:sealed_languages/src/model/core/basic_locale.dart";
-import "package:sealed_languages/src/model/language/language.dart";
+import "package:sealed_languages/src/model/language/submodels/natural_language.dart";
 import "package:test/test.dart";
 
 void main() => group("TranslatedExtension", () {

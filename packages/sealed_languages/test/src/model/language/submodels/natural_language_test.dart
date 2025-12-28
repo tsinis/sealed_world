@@ -7,11 +7,9 @@ import "package:sealed_languages/src/interfaces/iso_translated.dart";
 import "package:sealed_languages/src/interfaces/json_encodable.dart";
 import "package:sealed_languages/src/interfaces/named.dart";
 import "package:sealed_languages/src/model/language/language.dart";
+import "package:sealed_languages/src/model/language/submodels/natural_language.dart";
+import "package:sealed_languages/src/typedefs/typedefs.dart";
 import "package:test/test.dart";
-
-class _NaturalLanguageTest extends NaturalLanguage {
-  const _NaturalLanguageTest() : super.custom(name: " ", code: "");
-}
 
 void main() => group("$NaturalLanguage", () {
   final value = NaturalLanguage.list.last;
@@ -33,12 +31,21 @@ void main() => group("$NaturalLanguage", () {
     expect(const NaturalLanguage.aar(), const LangAar());
   });
 
-  assertTest(
-    "permissive constructor",
-    () => const _NaturalLanguageTest().code,
-    shouldThrow: false,
-    alsoExpect: () => expect(const _NaturalLanguageTest().code, isEmpty),
-  );
+  group('assert permissive constructor', () {
+    assertTest(
+      "not code",
+      () => const LangCustom(code: "code").code,
+      shouldThrow: false,
+    );
+
+    assertTest(
+      "not codeShort",
+      () => const LangCustom(codeShort: "code").codeShort,
+      shouldThrow: false,
+    );
+
+    assertTest("empty code and codeShort", LangCustom.new);
+  });
 
   test("compareTo", () => expect(value.compareTo(array.last), isNot(isZero)));
 
@@ -343,7 +350,7 @@ void main() => group("$NaturalLanguage", () {
         expect(json, isNotEmpty);
         final decoded = NaturalLanguageJson.fromMap(
           // ignore: avoid-type-casts, it's a test.
-          jsonDecode(json) as Map<String, Object?>,
+          jsonDecode(json) as JsonMap,
         );
 
         expect(element.bibliographicCode, decoded.bibliographicCode);
@@ -651,85 +658,13 @@ void main() => group("$NaturalLanguage", () {
   group("asserts", () {
     assertTest(
       "not",
-      () => NaturalLanguage(
+      () => LangCustom(
         name: value.name,
         codeShort: value.codeShort,
         namesNative: value.namesNative,
         code: value.code,
       ),
       shouldThrow: false,
-    );
-
-    assertTest(
-      "empty name",
-      () => NaturalLanguage(
-        name: "",
-        codeShort: value.codeShort,
-        namesNative: value.namesNative,
-        code: value.code,
-      ),
-    );
-
-    assertTest(
-      "name",
-      () => NaturalLanguage(
-        name: "",
-        codeShort: value.codeShort,
-        namesNative: value.namesNative,
-        code: value.code,
-      ),
-    );
-
-    assertTest(
-      "codeShort length",
-      () => NaturalLanguage(
-        name: value.name,
-        codeShort: value.code,
-        namesNative: value.namesNative,
-        code: value.code,
-      ),
-    );
-
-    assertTest(
-      "code length",
-      () => NaturalLanguage(
-        name: value.name,
-        codeShort: value.codeShort,
-        namesNative: value.namesNative,
-        code: value.codeShort,
-      ),
-    );
-
-    assertTest(
-      "empty namesNative",
-      () => NaturalLanguage(
-        name: value.name,
-        codeShort: value.codeShort,
-        namesNative: const [],
-        code: value.code,
-      ),
-    );
-
-    assertTest(
-      "bibliographicCode length",
-      () => NaturalLanguage(
-        name: value.name,
-        codeShort: value.codeShort,
-        namesNative: value.namesNative,
-        code: value.code,
-        bibliographicCode: value.codeShort,
-      ),
-    );
-
-    assertTest(
-      "empty scripts",
-      () => NaturalLanguage(
-        name: value.name,
-        codeShort: value.codeShort,
-        namesNative: value.namesNative,
-        code: value.code,
-        scripts: const {},
-      ),
     );
   });
 });

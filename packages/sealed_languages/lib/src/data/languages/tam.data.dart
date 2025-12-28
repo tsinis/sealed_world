@@ -1,11 +1,11 @@
-part of "../../model/language/language.dart";
+part of "../../model/language/submodels/natural_language.dart";
 
 extension type const _TamFactory._(LangTam _) implements LangTam {
   const _TamFactory() : this._(const LangTam._());
 }
 
 /// A class that represents the Tamil language.
-class LangTam extends NaturalLanguage {
+final class LangTam extends NaturalLanguage {
   /// {@template sealed_world.language_tam_constructor}
   /// Creates a instance of [LangTam] (Tamil language).
   ///
@@ -14,7 +14,7 @@ class LangTam extends NaturalLanguage {
   const factory LangTam() = _TamFactory;
 
   const LangTam._()
-    : super(
+    : super._(
         name: "Tamil",
         code: "TAM",
         codeShort: "TA",

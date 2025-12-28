@@ -1,11 +1,11 @@
-part of "../../model/language/language.dart";
+part of "../../model/language/submodels/natural_language.dart";
 
 extension type const _LatFactory._(LangLat _) implements LangLat {
   const _LatFactory() : this._(const LangLat._());
 }
 
 /// A class that represents the Latin language.
-class LangLat extends NaturalLanguage {
+final class LangLat extends NaturalLanguage {
   /// {@template sealed_world.language_lat_constructor}
   /// Creates a instance of [LangLat] (Latin language).
   ///
@@ -14,7 +14,7 @@ class LangLat extends NaturalLanguage {
   const factory LangLat() = _LatFactory;
 
   const LangLat._()
-    : super(
+    : super._(
         name: "Latin",
         code: "LAT",
         codeShort: "LA",

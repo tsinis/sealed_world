@@ -1,11 +1,11 @@
-part of "../../model/language/language.dart";
+part of "../../model/language/submodels/natural_language.dart";
 
 extension type const _HyeFactory._(LangHye _) implements LangHye {
   const _HyeFactory() : this._(const LangHye._());
 }
 
 /// A class that represents the Armenian language.
-class LangHye extends NaturalLanguage {
+final class LangHye extends NaturalLanguage {
   /// {@template sealed_world.language_hye_constructor}
   /// Creates a instance of [LangHye] (Armenian language).
   ///
@@ -14,7 +14,7 @@ class LangHye extends NaturalLanguage {
   const factory LangHye() = _HyeFactory;
 
   const LangHye._()
-    : super(
+    : super._(
         name: "Armenian",
         code: "HYE",
         codeShort: "HY",

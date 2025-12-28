@@ -1,11 +1,11 @@
-part of "../../model/language/language.dart";
+part of "../../model/language/submodels/natural_language.dart";
 
 extension type const _CorFactory._(LangCor _) implements LangCor {
   const _CorFactory() : this._(const LangCor._());
 }
 
 /// A class that represents the Cornish language.
-class LangCor extends NaturalLanguage {
+final class LangCor extends NaturalLanguage {
   /// {@template sealed_world.language_cor_constructor}
   /// Creates a instance of [LangCor] (Cornish language).
   ///
@@ -14,7 +14,7 @@ class LangCor extends NaturalLanguage {
   const factory LangCor() = _CorFactory;
 
   const LangCor._()
-    : super(
+    : super._(
         name: "Cornish",
         code: "COR",
         codeShort: "KW",

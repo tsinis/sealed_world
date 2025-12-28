@@ -1,11 +1,11 @@
-part of "../../model/language/language.dart";
+part of "../../model/language/submodels/natural_language.dart";
 
 extension type const _PolFactory._(LangPol _) implements LangPol {
   const _PolFactory() : this._(const LangPol._());
 }
 
 /// A class that represents the Polish language.
-class LangPol extends NaturalLanguage {
+final class LangPol extends NaturalLanguage {
   /// {@template sealed_world.language_pol_constructor}
   /// Creates a instance of [LangPol] (Polish language).
   ///
@@ -14,7 +14,7 @@ class LangPol extends NaturalLanguage {
   const factory LangPol() = _PolFactory;
 
   const LangPol._()
-    : super(
+    : super._(
         name: "Polish",
         code: "POL",
         codeShort: "PL",

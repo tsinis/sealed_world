@@ -1,11 +1,11 @@
-part of "../../model/language/language.dart";
+part of "../../model/language/submodels/natural_language.dart";
 
 extension type const _SweFactory._(LangSwe _) implements LangSwe {
   const _SweFactory() : this._(const LangSwe._());
 }
 
 /// A class that represents the Swedish language.
-class LangSwe extends NaturalLanguage {
+final class LangSwe extends NaturalLanguage {
   /// {@template sealed_world.language_swe_constructor}
   /// Creates a instance of [LangSwe] (Swedish language).
   ///
@@ -14,7 +14,7 @@ class LangSwe extends NaturalLanguage {
   const factory LangSwe() = _SweFactory;
 
   const LangSwe._()
-    : super(
+    : super._(
         name: "Swedish",
         code: "SWE",
         codeShort: "SV",

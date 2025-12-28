@@ -1,11 +1,11 @@
-part of "../../model/language/language.dart";
+part of "../../model/language/submodels/natural_language.dart";
 
 extension type const _QueFactory._(LangQue _) implements LangQue {
   const _QueFactory() : this._(const LangQue._());
 }
 
 /// A class that represents the Quechua language.
-class LangQue extends NaturalLanguage {
+final class LangQue extends NaturalLanguage {
   /// {@template sealed_world.language_que_constructor}
   /// Creates a instance of [LangQue] (Quechua language).
   ///
@@ -14,7 +14,7 @@ class LangQue extends NaturalLanguage {
   const factory LangQue() = _QueFactory;
 
   const LangQue._()
-    : super(
+    : super._(
         name: "Quechua",
         code: "QUE",
         codeShort: "QU",

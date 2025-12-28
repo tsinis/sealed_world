@@ -1,11 +1,11 @@
-part of "../../model/language/language.dart";
+part of "../../model/language/submodels/natural_language.dart";
 
 extension type const _SmeFactory._(LangSme _) implements LangSme {
   const _SmeFactory() : this._(const LangSme._());
 }
 
 /// A class that represents the Northern Sami language.
-class LangSme extends NaturalLanguage {
+final class LangSme extends NaturalLanguage {
   /// {@template sealed_world.language_sme_constructor}
   /// Creates a instance of [LangSme] (Northern Sami language).
   ///
@@ -14,7 +14,7 @@ class LangSme extends NaturalLanguage {
   const factory LangSme() = _SmeFactory;
 
   const LangSme._()
-    : super(
+    : super._(
         name: "Northern Sami",
         code: "SME",
         codeShort: "SE",

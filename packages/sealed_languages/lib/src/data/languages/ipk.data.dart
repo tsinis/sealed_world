@@ -1,11 +1,11 @@
-part of "../../model/language/language.dart";
+part of "../../model/language/submodels/natural_language.dart";
 
 extension type const _IpkFactory._(LangIpk _) implements LangIpk {
   const _IpkFactory() : this._(const LangIpk._());
 }
 
 /// A class that represents the Inupiaq language.
-class LangIpk extends NaturalLanguage {
+final class LangIpk extends NaturalLanguage {
   /// {@template sealed_world.language_ipk_constructor}
   /// Creates a instance of [LangIpk] (Inupiaq language).
   ///
@@ -14,7 +14,7 @@ class LangIpk extends NaturalLanguage {
   const factory LangIpk() = _IpkFactory;
 
   const LangIpk._()
-    : super(
+    : super._(
         name: "Inupiaq",
         code: "IPK",
         codeShort: "IK",

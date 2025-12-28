@@ -1,11 +1,11 @@
-part of "../../model/language/language.dart";
+part of "../../model/language/submodels/natural_language.dart";
 
 extension type const _KinFactory._(LangKin _) implements LangKin {
   const _KinFactory() : this._(const LangKin._());
 }
 
 /// A class that represents the Kinyarwanda language.
-class LangKin extends NaturalLanguage {
+final class LangKin extends NaturalLanguage {
   /// {@template sealed_world.language_kin_constructor}
   /// Creates a instance of [LangKin] (Kinyarwanda language).
   ///
@@ -14,7 +14,7 @@ class LangKin extends NaturalLanguage {
   const factory LangKin() = _KinFactory;
 
   const LangKin._()
-    : super(
+    : super._(
         name: "Kinyarwanda",
         code: "KIN",
         codeShort: "RW",

@@ -1,11 +1,11 @@
-part of "../../model/language/language.dart";
+part of "../../model/language/submodels/natural_language.dart";
 
 extension type const _YorFactory._(LangYor _) implements LangYor {
   const _YorFactory() : this._(const LangYor._());
 }
 
 /// A class that represents the Yoruba language.
-class LangYor extends NaturalLanguage {
+final class LangYor extends NaturalLanguage {
   /// {@template sealed_world.language_yor_constructor}
   /// Creates a instance of [LangYor] (Yoruba language).
   ///
@@ -14,7 +14,7 @@ class LangYor extends NaturalLanguage {
   const factory LangYor() = _YorFactory;
 
   const LangYor._()
-    : super(
+    : super._(
         name: "Yoruba",
         code: "YOR",
         codeShort: "YO",

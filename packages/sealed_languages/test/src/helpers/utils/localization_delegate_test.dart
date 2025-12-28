@@ -3,7 +3,7 @@ import "package:sealed_languages/src/helpers/utils/localization_delegate.dart";
 import "package:sealed_languages/src/model/core/basic_locale.dart";
 import "package:sealed_languages/src/model/core/locale_mapping_options.dart"
     show LocaleMappingOptions;
-import "package:sealed_languages/src/model/language/language.dart";
+import "package:sealed_languages/src/model/language/submodels/natural_language.dart";
 import "package:sealed_languages/src/model/script/submodels/script.dart";
 import "package:sealed_languages/src/model/translated_name.dart";
 import "package:test/test.dart";

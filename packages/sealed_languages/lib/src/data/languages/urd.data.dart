@@ -1,11 +1,11 @@
-part of "../../model/language/language.dart";
+part of "../../model/language/submodels/natural_language.dart";
 
 extension type const _UrdFactory._(LangUrd _) implements LangUrd {
   const _UrdFactory() : this._(const LangUrd._());
 }
 
 /// A class that represents the Urdu language.
-class LangUrd extends NaturalLanguage {
+final class LangUrd extends NaturalLanguage {
   /// {@template sealed_world.language_urd_constructor}
   /// Creates a instance of [LangUrd] (Urdu language).
   ///
@@ -14,7 +14,7 @@ class LangUrd extends NaturalLanguage {
   const factory LangUrd() = _UrdFactory;
 
   const LangUrd._()
-    : super(
+    : super._(
         name: "Urdu",
         code: "URD",
         codeShort: "UR",

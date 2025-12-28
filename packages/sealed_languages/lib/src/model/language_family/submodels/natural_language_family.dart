@@ -59,10 +59,11 @@ sealed class NaturalLanguageFamily extends LanguageFamily {
   /// print(family); // Prints: LanguageFamily(name: Uralic).
   /// ```
   static NaturalLanguageFamily? maybeFromValue<T extends Object>(
-    T value, {
+    T? value, {
     T? Function(NaturalLanguageFamily family)? where,
     Iterable<NaturalLanguageFamily> families = list,
   }) {
+    if (value == null) return null;
     assert(families.isNotEmpty, "`families` should not be empty!");
     for (final family in families) {
       final expectedValue = where?.call(family) ?? family.name;

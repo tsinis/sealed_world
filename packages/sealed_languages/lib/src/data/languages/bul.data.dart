@@ -1,11 +1,11 @@
-part of "../../model/language/language.dart";
+part of "../../model/language/submodels/natural_language.dart";
 
 extension type const _BulFactory._(LangBul _) implements LangBul {
   const _BulFactory() : this._(const LangBul._());
 }
 
 /// A class that represents the Bulgarian language.
-class LangBul extends NaturalLanguage {
+final class LangBul extends NaturalLanguage {
   /// {@template sealed_world.language_bul_constructor}
   /// Creates a instance of [LangBul] (Bulgarian language).
   ///
@@ -14,7 +14,7 @@ class LangBul extends NaturalLanguage {
   const factory LangBul() = _BulFactory;
 
   const LangBul._()
-    : super(
+    : super._(
         name: "Bulgarian",
         code: "BUL",
         codeShort: "BG",

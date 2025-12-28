@@ -1,11 +1,11 @@
-part of "../../model/language/language.dart";
+part of "../../model/language/submodels/natural_language.dart";
 
 extension type const _TsoFactory._(LangTso _) implements LangTso {
   const _TsoFactory() : this._(const LangTso._());
 }
 
 /// A class that represents the Tsonga language.
-class LangTso extends NaturalLanguage {
+final class LangTso extends NaturalLanguage {
   /// {@template sealed_world.language_tso_constructor}
   /// Creates a instance of [LangTso] (Tsonga language).
   ///
@@ -14,7 +14,7 @@ class LangTso extends NaturalLanguage {
   const factory LangTso() = _TsoFactory;
 
   const LangTso._()
-    : super(
+    : super._(
         name: "Tsonga",
         code: "TSO",
         codeShort: "TS",

@@ -1,11 +1,11 @@
-part of "../../model/language/language.dart";
+part of "../../model/language/submodels/natural_language.dart";
 
 extension type const _HrvFactory._(LangHrv _) implements LangHrv {
   const _HrvFactory() : this._(const LangHrv._());
 }
 
 /// A class that represents the Croatian language.
-class LangHrv extends NaturalLanguage {
+final class LangHrv extends NaturalLanguage {
   /// {@template sealed_world.language_hrv_constructor}
   /// Creates a instance of [LangHrv] (Croatian language).
   ///
@@ -14,7 +14,7 @@ class LangHrv extends NaturalLanguage {
   const factory LangHrv() = _HrvFactory;
 
   const LangHrv._()
-    : super(
+    : super._(
         name: "Croatian",
         code: "HRV",
         codeShort: "HR",

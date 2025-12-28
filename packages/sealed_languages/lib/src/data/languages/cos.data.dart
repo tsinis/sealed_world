@@ -1,11 +1,11 @@
-part of "../../model/language/language.dart";
+part of "../../model/language/submodels/natural_language.dart";
 
 extension type const _CosFactory._(LangCos _) implements LangCos {
   const _CosFactory() : this._(const LangCos._());
 }
 
 /// A class that represents the Corsican language.
-class LangCos extends NaturalLanguage {
+final class LangCos extends NaturalLanguage {
   /// {@template sealed_world.language_cos_constructor}
   /// Creates a instance of [LangCos] (Corsican language).
   ///
@@ -14,7 +14,7 @@ class LangCos extends NaturalLanguage {
   const factory LangCos() = _CosFactory;
 
   const LangCos._()
-    : super(
+    : super._(
         name: "Corsican",
         code: "COS",
         codeShort: "CO",

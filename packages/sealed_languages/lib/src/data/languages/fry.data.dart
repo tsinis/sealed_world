@@ -1,11 +1,11 @@
-part of "../../model/language/language.dart";
+part of "../../model/language/submodels/natural_language.dart";
 
 extension type const _FryFactory._(LangFry _) implements LangFry {
   const _FryFactory() : this._(const LangFry._());
 }
 
 /// A class that represents the Western Frisian language.
-class LangFry extends NaturalLanguage {
+final class LangFry extends NaturalLanguage {
   /// {@template sealed_world.language_fry_constructor}
   /// Creates a instance of [LangFry] (Western Frisian language).
   ///
@@ -14,7 +14,7 @@ class LangFry extends NaturalLanguage {
   const factory LangFry() = _FryFactory;
 
   const LangFry._()
-    : super(
+    : super._(
         name: "Western Frisian",
         code: "FRY",
         codeShort: "FY",

@@ -1,11 +1,11 @@
-part of "../../model/language/language.dart";
+part of "../../model/language/submodels/natural_language.dart";
 
 extension type const _TelFactory._(LangTel _) implements LangTel {
   const _TelFactory() : this._(const LangTel._());
 }
 
 /// A class that represents the Telugu language.
-class LangTel extends NaturalLanguage {
+final class LangTel extends NaturalLanguage {
   /// {@template sealed_world.language_tel_constructor}
   /// Creates a instance of [LangTel] (Telugu language).
   ///
@@ -14,7 +14,7 @@ class LangTel extends NaturalLanguage {
   const factory LangTel() = _TelFactory;
 
   const LangTel._()
-    : super(
+    : super._(
         name: "Telugu",
         code: "TEL",
         codeShort: "TE",

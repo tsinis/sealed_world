@@ -1,11 +1,11 @@
-part of "../../model/language/language.dart";
+part of "../../model/language/submodels/natural_language.dart";
 
 extension type const _KauFactory._(LangKau _) implements LangKau {
   const _KauFactory() : this._(const LangKau._());
 }
 
 /// A class that represents the Kanuri language.
-class LangKau extends NaturalLanguage {
+final class LangKau extends NaturalLanguage {
   /// {@template sealed_world.language_kau_constructor}
   /// Creates a instance of [LangKau] (Kanuri language).
   ///
@@ -14,7 +14,7 @@ class LangKau extends NaturalLanguage {
   const factory LangKau() = _KauFactory;
 
   const LangKau._()
-    : super(
+    : super._(
         name: "Kanuri",
         code: "KAU",
         codeShort: "KR",

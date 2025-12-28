@@ -1,11 +1,11 @@
-part of "../../model/language/language.dart";
+part of "../../model/language/submodels/natural_language.dart";
 
 extension type const _KorFactory._(LangKor _) implements LangKor {
   const _KorFactory() : this._(const LangKor._());
 }
 
 /// A class that represents the Korean language.
-class LangKor extends NaturalLanguage {
+final class LangKor extends NaturalLanguage {
   /// {@template sealed_world.language_kor_constructor}
   /// Creates a instance of [LangKor] (Korean language).
   ///
@@ -14,7 +14,7 @@ class LangKor extends NaturalLanguage {
   const factory LangKor() = _KorFactory;
 
   const LangKor._()
-    : super(
+    : super._(
         name: "Korean",
         code: "KOR",
         codeShort: "KO",

@@ -1,11 +1,11 @@
-part of "../../model/language/language.dart";
+part of "../../model/language/submodels/natural_language.dart";
 
 extension type const _KatFactory._(LangKat _) implements LangKat {
   const _KatFactory() : this._(const LangKat._());
 }
 
 /// A class that represents the Georgian language.
-class LangKat extends NaturalLanguage {
+final class LangKat extends NaturalLanguage {
   /// {@template sealed_world.language_kat_constructor}
   /// Creates a instance of [LangKat] (Georgian language).
   ///
@@ -14,7 +14,7 @@ class LangKat extends NaturalLanguage {
   const factory LangKat() = _KatFactory;
 
   const LangKat._()
-    : super(
+    : super._(
         name: "Georgian",
         code: "KAT",
         codeShort: "KA",

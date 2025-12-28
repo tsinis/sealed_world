@@ -1,11 +1,11 @@
-part of "../../model/language/language.dart";
+part of "../../model/language/submodels/natural_language.dart";
 
 extension type const _PusFactory._(LangPus _) implements LangPus {
   const _PusFactory() : this._(const LangPus._());
 }
 
 /// A class that represents the Pashto (Pushto) language.
-class LangPus extends NaturalLanguage {
+final class LangPus extends NaturalLanguage {
   /// {@template sealed_world.language_pus_constructor}
   /// Creates a instance of [LangPus] (Pashto (Pushto) language).
   ///
@@ -14,7 +14,7 @@ class LangPus extends NaturalLanguage {
   const factory LangPus() = _PusFactory;
 
   const LangPus._()
-    : super(
+    : super._(
         name: "Pashto (Pushto)",
         code: "PUS",
         codeShort: "PS",

@@ -1,11 +1,11 @@
-part of "../../model/language/language.dart";
+part of "../../model/language/submodels/natural_language.dart";
 
 extension type const _TglFactory._(LangTgl _) implements LangTgl {
   const _TglFactory() : this._(const LangTgl._());
 }
 
 /// A class that represents the Tagalog language.
-class LangTgl extends NaturalLanguage {
+final class LangTgl extends NaturalLanguage {
   /// {@template sealed_world.language_tgl_constructor}
   /// Creates a instance of [LangTgl] (Tagalog language).
   ///
@@ -14,7 +14,7 @@ class LangTgl extends NaturalLanguage {
   const factory LangTgl() = _TglFactory;
 
   const LangTgl._()
-    : super(
+    : super._(
         name: "Tagalog",
         code: "TGL",
         codeShort: "TL",

@@ -1,11 +1,11 @@
-part of "../../model/language/language.dart";
+part of "../../model/language/submodels/natural_language.dart";
 
 extension type const _IslFactory._(LangIsl _) implements LangIsl {
   const _IslFactory() : this._(const LangIsl._());
 }
 
 /// A class that represents the Icelandic language.
-class LangIsl extends NaturalLanguage {
+final class LangIsl extends NaturalLanguage {
   /// {@template sealed_world.language_isl_constructor}
   /// Creates a instance of [LangIsl] (Icelandic language).
   ///
@@ -14,7 +14,7 @@ class LangIsl extends NaturalLanguage {
   const factory LangIsl() = _IslFactory;
 
   const LangIsl._()
-    : super(
+    : super._(
         name: "Icelandic",
         code: "ISL",
         codeShort: "IS",

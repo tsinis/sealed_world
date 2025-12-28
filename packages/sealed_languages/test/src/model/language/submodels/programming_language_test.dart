@@ -1,4 +1,4 @@
-import "package:sealed_languages/src/model/language/language.dart";
+import "package:sealed_languages/src/model/language/submodels/programming_language.dart";
 import "package:test/test.dart";
 
 void main() => group("$ProgrammingLanguage", () {

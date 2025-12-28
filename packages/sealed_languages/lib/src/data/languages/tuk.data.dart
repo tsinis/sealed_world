@@ -1,11 +1,11 @@
-part of "../../model/language/language.dart";
+part of "../../model/language/submodels/natural_language.dart";
 
 extension type const _TukFactory._(LangTuk _) implements LangTuk {
   const _TukFactory() : this._(const LangTuk._());
 }
 
 /// A class that represents the Turkmen language.
-class LangTuk extends NaturalLanguage {
+final class LangTuk extends NaturalLanguage {
   /// {@template sealed_world.language_tuk_constructor}
   /// Creates a instance of [LangTuk] (Turkmen language).
   ///
@@ -14,7 +14,7 @@ class LangTuk extends NaturalLanguage {
   const factory LangTuk() = _TukFactory;
 
   const LangTuk._()
-    : super(
+    : super._(
         name: "Turkmen",
         code: "TUK",
         codeShort: "TK",

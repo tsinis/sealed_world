@@ -1,11 +1,11 @@
-part of "../../model/language/language.dart";
+part of "../../model/language/submodels/natural_language.dart";
 
 extension type const _BosFactory._(LangBos _) implements LangBos {
   const _BosFactory() : this._(const LangBos._());
 }
 
 /// A class that represents the Bosnian language.
-class LangBos extends NaturalLanguage {
+final class LangBos extends NaturalLanguage {
   /// {@template sealed_world.language_bos_constructor}
   /// Creates a instance of [LangBos] (Bosnian language).
   ///
@@ -14,7 +14,7 @@ class LangBos extends NaturalLanguage {
   const factory LangBos() = _BosFactory;
 
   const LangBos._()
-    : super(
+    : super._(
         name: "Bosnian",
         code: "BOS",
         codeShort: "BS",

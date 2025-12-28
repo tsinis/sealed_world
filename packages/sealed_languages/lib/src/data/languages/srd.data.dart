@@ -1,11 +1,11 @@
-part of "../../model/language/language.dart";
+part of "../../model/language/submodels/natural_language.dart";
 
 extension type const _SrdFactory._(LangSrd _) implements LangSrd {
   const _SrdFactory() : this._(const LangSrd._());
 }
 
 /// A class that represents the Sardinian language.
-class LangSrd extends NaturalLanguage {
+final class LangSrd extends NaturalLanguage {
   /// {@template sealed_world.language_srd_constructor}
   /// Creates a instance of [LangSrd] (Sardinian language).
   ///
@@ -14,7 +14,7 @@ class LangSrd extends NaturalLanguage {
   const factory LangSrd() = _SrdFactory;
 
   const LangSrd._()
-    : super(
+    : super._(
         name: "Sardinian",
         code: "SRD",
         codeShort: "SC",

@@ -1,11 +1,11 @@
-part of "../../model/language/language.dart";
+part of "../../model/language/submodels/natural_language.dart";
 
 extension type const _YidFactory._(LangYid _) implements LangYid {
   const _YidFactory() : this._(const LangYid._());
 }
 
 /// A class that represents the Yiddish language.
-class LangYid extends NaturalLanguage {
+final class LangYid extends NaturalLanguage {
   /// {@template sealed_world.language_yid_constructor}
   /// Creates a instance of [LangYid] (Yiddish language).
   ///
@@ -14,7 +14,7 @@ class LangYid extends NaturalLanguage {
   const factory LangYid() = _YidFactory;
 
   const LangYid._()
-    : super(
+    : super._(
         name: "Yiddish",
         code: "YID",
         codeShort: "YI",

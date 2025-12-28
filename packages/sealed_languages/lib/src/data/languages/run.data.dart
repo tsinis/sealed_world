@@ -1,11 +1,11 @@
-part of "../../model/language/language.dart";
+part of "../../model/language/submodels/natural_language.dart";
 
 extension type const _RunFactory._(LangRun _) implements LangRun {
   const _RunFactory() : this._(const LangRun._());
 }
 
 /// A class that represents the Kirundi language.
-class LangRun extends NaturalLanguage {
+final class LangRun extends NaturalLanguage {
   /// {@template sealed_world.language_run_constructor}
   /// Creates a instance of [LangRun] (Kirundi language).
   ///
@@ -14,7 +14,7 @@ class LangRun extends NaturalLanguage {
   const factory LangRun() = _RunFactory;
 
   const LangRun._()
-    : super(
+    : super._(
         name: "Kirundi",
         code: "RUN",
         codeShort: "RN",

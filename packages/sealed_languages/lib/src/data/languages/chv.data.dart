@@ -1,11 +1,11 @@
-part of "../../model/language/language.dart";
+part of "../../model/language/submodels/natural_language.dart";
 
 extension type const _ChvFactory._(LangChv _) implements LangChv {
   const _ChvFactory() : this._(const LangChv._());
 }
 
 /// A class that represents the Chuvash language.
-class LangChv extends NaturalLanguage {
+final class LangChv extends NaturalLanguage {
   /// {@template sealed_world.language_chv_constructor}
   /// Creates a instance of [LangChv] (Chuvash language).
   ///
@@ -14,7 +14,7 @@ class LangChv extends NaturalLanguage {
   const factory LangChv() = _ChvFactory;
 
   const LangChv._()
-    : super(
+    : super._(
         name: "Chuvash",
         code: "CHV",
         codeShort: "CV",

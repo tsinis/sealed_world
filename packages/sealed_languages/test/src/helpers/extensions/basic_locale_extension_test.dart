@@ -1,6 +1,6 @@
 import "package:sealed_languages/src/helpers/extensions/basic_locale_extension.dart";
 import "package:sealed_languages/src/model/core/basic_locale.dart";
-import "package:sealed_languages/src/model/language/language.dart";
+import "package:sealed_languages/src/model/language/submodels/natural_language.dart";
 import "package:sealed_languages/src/model/script/submodels/script.dart";
 import "package:sealed_languages/src/model/translated_name.dart";
 import "package:test/test.dart";

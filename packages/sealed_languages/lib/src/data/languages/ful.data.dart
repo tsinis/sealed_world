@@ -1,11 +1,11 @@
-part of "../../model/language/language.dart";
+part of "../../model/language/submodels/natural_language.dart";
 
 extension type const _FulFactory._(LangFul _) implements LangFul {
   const _FulFactory() : this._(const LangFul._());
 }
 
 /// A class that represents the Fula (Fulah/Pulaar/Pular) language.
-class LangFul extends NaturalLanguage {
+final class LangFul extends NaturalLanguage {
   /// {@template sealed_world.language_ful_constructor}
   /// Creates a instance of [LangFul] (Fula (Fulah/Pulaar/Pular) language).
   ///
@@ -14,7 +14,7 @@ class LangFul extends NaturalLanguage {
   const factory LangFul() = _FulFactory;
 
   const LangFul._()
-    : super(
+    : super._(
         name: "Fula (Fulah/Pulaar/Pular)",
         code: "FUL",
         codeShort: "FF",

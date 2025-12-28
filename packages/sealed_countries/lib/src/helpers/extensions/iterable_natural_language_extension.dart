@@ -98,6 +98,7 @@ extension IterableNaturalLanguageExtension on Iterable<NaturalLanguage> {
     const LangFra() => _changeFirst(const CountryFra(), countries),
     const LangPor() => _changeFirst(const CountryPrt(), countries),
     const LangSpa() => _changeFirst(const CountryEsp(), countries),
+    // ignore: avoid-wildcard-cases-with-sealed-classes, it's ok to have here.
     _ => countries,
   };
 

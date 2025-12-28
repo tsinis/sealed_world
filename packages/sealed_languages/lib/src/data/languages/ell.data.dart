@@ -1,11 +1,11 @@
-part of "../../model/language/language.dart";
+part of "../../model/language/submodels/natural_language.dart";
 
 extension type const _EllFactory._(LangEll _) implements LangEll {
   const _EllFactory() : this._(const LangEll._());
 }
 
 /// A class that represents the Greek (modern) language.
-class LangEll extends NaturalLanguage {
+final class LangEll extends NaturalLanguage {
   /// {@template sealed_world.language_ell_constructor}
   /// Creates a instance of [LangEll] (Greek (modern) language).
   ///
@@ -14,7 +14,7 @@ class LangEll extends NaturalLanguage {
   const factory LangEll() = _EllFactory;
 
   const LangEll._()
-    : super(
+    : super._(
         name: "Greek (modern)",
         code: "ELL",
         codeShort: "EL",

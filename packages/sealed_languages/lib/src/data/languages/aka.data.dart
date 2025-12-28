@@ -1,11 +1,11 @@
-part of "../../model/language/language.dart";
+part of "../../model/language/submodels/natural_language.dart";
 
 extension type const _AkaFactory._(LangAka _) implements LangAka {
   const _AkaFactory() : this._(const LangAka._());
 }
 
 /// A class that represents the Akan language.
-class LangAka extends NaturalLanguage {
+final class LangAka extends NaturalLanguage {
   /// {@template sealed_world.language_aka_constructor}
   /// Creates a instance of [LangAka] (Akan language).
   ///
@@ -14,7 +14,7 @@ class LangAka extends NaturalLanguage {
   const factory LangAka() = _AkaFactory;
 
   const LangAka._()
-    : super(
+    : super._(
         name: "Akan",
         code: "AKA",
         codeShort: "AK",

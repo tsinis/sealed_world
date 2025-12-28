@@ -1,11 +1,11 @@
-part of "../../model/language/language.dart";
+part of "../../model/language/submodels/natural_language.dart";
 
 extension type const _SpaFactory._(LangSpa _) implements LangSpa {
   const _SpaFactory() : this._(const LangSpa._());
 }
 
 /// A class that represents the Spanish language.
-class LangSpa extends NaturalLanguage {
+final class LangSpa extends NaturalLanguage {
   /// {@template sealed_world.language_spa_constructor}
   /// Creates a instance of [LangSpa] (Spanish language).
   ///
@@ -14,7 +14,7 @@ class LangSpa extends NaturalLanguage {
   const factory LangSpa() = _SpaFactory;
 
   const LangSpa._()
-    : super(
+    : super._(
         name: "Spanish",
         code: "SPA",
         codeShort: "ES",
