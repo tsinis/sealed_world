@@ -1,11 +1,11 @@
-part of "../../model/currency/currency.dart";
+part of "../../model/currency/submodels/fiat_currency.dart";
 
 extension type const _GbpFactory._(FiatGbp _) implements FiatGbp {
   const _GbpFactory() : this._(const FiatGbp._());
 }
 
 /// A class that represents the British Pound currency.
-class FiatGbp extends FiatCurrency {
+final class FiatGbp extends FiatCurrency {
   /// {@template sealed_world.currency_gbp_constructor}
   /// Creates a instance of [FiatGbp] (British Pound currency).
   ///

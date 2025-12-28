@@ -1,11 +1,11 @@
-part of "../../model/currency/currency.dart";
+part of "../../model/currency/submodels/fiat_currency.dart";
 
 extension type const _KgsFactory._(FiatKgs _) implements FiatKgs {
   const _KgsFactory() : this._(const FiatKgs._());
 }
 
 /// A class that represents the Kyrgyzstani Som currency.
-class FiatKgs extends FiatCurrency {
+final class FiatKgs extends FiatCurrency {
   /// {@template sealed_world.currency_kgs_constructor}
   /// Creates a instance of [FiatKgs] (Kyrgyzstani Som currency).
   ///

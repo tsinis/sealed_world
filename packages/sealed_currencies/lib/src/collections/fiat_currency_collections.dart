@@ -1,8 +1,8 @@
 // ignore_for_file: prefer-static-class, it's referenced as static in the model.
-import "../model/currency/currency.dart";
+import "../model/currency/submodels/fiat_currency.dart";
 
 /// Map of [FiatCurrency] standard codes.
-const fiatCurrencyCodeMap = <String, FiatCurrency>{
+const fiatCurrencyCodeMap = {
   "AED": FiatAed(),
   "AFN": FiatAfn(),
   "ALL": FiatAll(),
@@ -172,7 +172,7 @@ const fiatCurrencyCodeMap = <String, FiatCurrency>{
 };
 
 /// Map of [FiatCurrency] other codes.
-const fiatCurrencyCodeOtherMap = <String, FiatCurrency>{
+const fiatCurrencyCodeOtherMap = {
   "008": FiatAll(),
   "012": FiatDzd(),
   "032": FiatArs(),

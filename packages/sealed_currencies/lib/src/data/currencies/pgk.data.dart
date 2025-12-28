@@ -1,11 +1,11 @@
-part of "../../model/currency/currency.dart";
+part of "../../model/currency/submodels/fiat_currency.dart";
 
 extension type const _PgkFactory._(FiatPgk _) implements FiatPgk {
   const _PgkFactory() : this._(const FiatPgk._());
 }
 
 /// A class that represents the Papua New Guinean Kina currency.
-class FiatPgk extends FiatCurrency {
+final class FiatPgk extends FiatCurrency {
   /// {@template sealed_world.currency_pgk_constructor}
   /// Creates a instance of [FiatPgk] (Papua New Guinean Kina currency).
   ///

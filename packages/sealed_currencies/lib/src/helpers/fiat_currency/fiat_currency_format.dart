@@ -1,4 +1,4 @@
-import "../../model/currency/currency.dart";
+import "../../model/currency/submodels/fiat_currency.dart";
 import "fiat_currency_getters.dart";
 
 /// Provides a set of methods for formatting values of [FiatCurrency].

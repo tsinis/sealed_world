@@ -1,11 +1,11 @@
-part of "../../model/currency/currency.dart";
+part of "../../model/currency/submodels/fiat_currency.dart";
 
 extension type const _MopFactory._(FiatMop _) implements FiatMop {
   const _MopFactory() : this._(const FiatMop._());
 }
 
 /// A class that represents the Macanese Pataca currency.
-class FiatMop extends FiatCurrency {
+final class FiatMop extends FiatCurrency {
   /// {@template sealed_world.currency_mop_constructor}
   /// Creates a instance of [FiatMop] (Macanese Pataca currency).
   ///

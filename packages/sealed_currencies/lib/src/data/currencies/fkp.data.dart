@@ -1,11 +1,11 @@
-part of "../../model/currency/currency.dart";
+part of "../../model/currency/submodels/fiat_currency.dart";
 
 extension type const _FkpFactory._(FiatFkp _) implements FiatFkp {
   const _FkpFactory() : this._(const FiatFkp._());
 }
 
 /// A class that represents the Falkland Pound currency.
-class FiatFkp extends FiatCurrency {
+final class FiatFkp extends FiatCurrency {
   /// {@template sealed_world.currency_fkp_constructor}
   /// Creates a instance of [FiatFkp] (Falkland Pound currency).
   ///

@@ -1,11 +1,11 @@
-part of "../../model/currency/currency.dart";
+part of "../../model/currency/submodels/fiat_currency.dart";
 
 extension type const _HkdFactory._(FiatHkd _) implements FiatHkd {
   const _HkdFactory() : this._(const FiatHkd._());
 }
 
 /// A class that represents the Hong Kong Dollar currency.
-class FiatHkd extends FiatCurrency {
+final class FiatHkd extends FiatCurrency {
   /// {@template sealed_world.currency_hkd_constructor}
   /// Creates a instance of [FiatHkd] (Hong Kong Dollar currency).
   ///

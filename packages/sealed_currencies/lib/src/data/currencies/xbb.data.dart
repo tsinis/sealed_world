@@ -1,11 +1,11 @@
-part of "../../model/currency/currency.dart";
+part of "../../model/currency/submodels/fiat_currency.dart";
 
 extension type const _XbbFactory._(FiatXbb _) implements FiatXbb {
   const _XbbFactory() : this._(const FiatXbb._());
 }
 
 /// A class that represents the European Monetary Unit currency.
-class FiatXbb extends FiatCurrency {
+final class FiatXbb extends FiatCurrency {
   /// {@template sealed_world.currency_xbb_constructor}
   /// Creates a instance of [FiatXbb] (European Monetary Unit currency).
   ///

@@ -1,11 +1,11 @@
-part of "../../model/currency/currency.dart";
+part of "../../model/currency/submodels/fiat_currency.dart";
 
 extension type const _HtgFactory._(FiatHtg _) implements FiatHtg {
   const _HtgFactory() : this._(const FiatHtg._());
 }
 
 /// A class that represents the Haitian Gourde currency.
-class FiatHtg extends FiatCurrency {
+final class FiatHtg extends FiatCurrency {
   /// {@template sealed_world.currency_htg_constructor}
   /// Creates a instance of [FiatHtg] (Haitian Gourde currency).
   ///

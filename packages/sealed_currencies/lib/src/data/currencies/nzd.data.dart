@@ -1,11 +1,11 @@
-part of "../../model/currency/currency.dart";
+part of "../../model/currency/submodels/fiat_currency.dart";
 
 extension type const _NzdFactory._(FiatNzd _) implements FiatNzd {
   const _NzdFactory() : this._(const FiatNzd._());
 }
 
 /// A class that represents the New Zealand Dollar currency.
-class FiatNzd extends FiatCurrency {
+final class FiatNzd extends FiatCurrency {
   /// {@template sealed_world.currency_nzd_constructor}
   /// Creates a instance of [FiatNzd] (New Zealand Dollar currency).
   ///

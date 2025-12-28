@@ -1,11 +1,11 @@
-part of "../../model/currency/currency.dart";
+part of "../../model/currency/submodels/fiat_currency.dart";
 
 extension type const _GipFactory._(FiatGip _) implements FiatGip {
   const _GipFactory() : this._(const FiatGip._());
 }
 
 /// A class that represents the Gibraltar Pound currency.
-class FiatGip extends FiatCurrency {
+final class FiatGip extends FiatCurrency {
   /// {@template sealed_world.currency_gip_constructor}
   /// Creates a instance of [FiatGip] (Gibraltar Pound currency).
   ///

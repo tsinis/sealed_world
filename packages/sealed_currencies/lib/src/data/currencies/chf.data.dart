@@ -1,11 +1,11 @@
-part of "../../model/currency/currency.dart";
+part of "../../model/currency/submodels/fiat_currency.dart";
 
 extension type const _ChfFactory._(FiatChf _) implements FiatChf {
   const _ChfFactory() : this._(const FiatChf._());
 }
 
 /// A class that represents the Swiss Franc currency.
-class FiatChf extends FiatCurrency {
+final class FiatChf extends FiatCurrency {
   /// {@template sealed_world.currency_chf_constructor}
   /// Creates a instance of [FiatChf] (Swiss Franc currency).
   ///

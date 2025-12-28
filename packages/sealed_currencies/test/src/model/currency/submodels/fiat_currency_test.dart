@@ -3,12 +3,9 @@ import "dart:convert";
 import "package:_sealed_world_tests/sealed_world_tests.dart";
 import "package:sealed_currencies/src/helpers/fiat_currency/fiat_currency_json.dart";
 import "package:sealed_currencies/src/model/currency/currency.dart";
+import "package:sealed_currencies/src/model/currency/submodels/fiat_currency.dart";
 import "package:sealed_languages/sealed_languages.dart";
 import "package:test/test.dart";
-
-class _FiatCurrencyTest extends FiatCurrency {
-  const _FiatCurrencyTest() : super.custom(code: "123", name: " ");
-}
 
 void main() => group("$FiatCurrency", () {
   final value = FiatCurrency.list.last;
@@ -29,12 +26,21 @@ void main() => group("$FiatCurrency", () {
     expect(const FiatCurrency.aed(), const FiatAed());
   });
 
-  assertTest(
-    "permissive constructor",
-    () => const _FiatCurrencyTest().codeNumeric,
-    shouldThrow: false,
-    alsoExpect: () => expect(const _FiatCurrencyTest().codeNumeric, isEmpty),
-  );
+  group('permissive constructor asserts', () {
+    assertTest(
+      "not empty code",
+      () => const FiatCustom(code: "code").code,
+      shouldThrow: false,
+    );
+
+    assertTest(
+      "not empty codeNumeric",
+      () => const FiatCustom(codeNumeric: "code").codeNumeric,
+      shouldThrow: false,
+    );
+
+    assertTest("empty code and codeNumeric", FiatCustom.new);
+  });
 
   group("some currencies should be fully translated", () {
     /// This is a comprehensive list of languages that ensure the availability of

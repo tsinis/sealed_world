@@ -1,11 +1,11 @@
-part of "../../model/currency/currency.dart";
+part of "../../model/currency/submodels/fiat_currency.dart";
 
 extension type const _MznFactory._(FiatMzn _) implements FiatMzn {
   const _MznFactory() : this._(const FiatMzn._());
 }
 
 /// A class that represents the Mozambican Metical currency.
-class FiatMzn extends FiatCurrency {
+final class FiatMzn extends FiatCurrency {
   /// {@template sealed_world.currency_mzn_constructor}
   /// Creates a instance of [FiatMzn] (Mozambican Metical currency).
   ///

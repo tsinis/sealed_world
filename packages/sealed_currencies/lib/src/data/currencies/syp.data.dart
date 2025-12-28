@@ -1,11 +1,11 @@
-part of "../../model/currency/currency.dart";
+part of "../../model/currency/submodels/fiat_currency.dart";
 
 extension type const _SypFactory._(FiatSyp _) implements FiatSyp {
   const _SypFactory() : this._(const FiatSyp._());
 }
 
 /// A class that represents the Syrian Pound currency.
-class FiatSyp extends FiatCurrency {
+final class FiatSyp extends FiatCurrency {
   /// {@template sealed_world.currency_syp_constructor}
   /// Creates a instance of [FiatSyp] (Syrian Pound currency).
   ///

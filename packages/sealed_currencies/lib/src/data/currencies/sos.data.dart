@@ -1,11 +1,11 @@
-part of "../../model/currency/currency.dart";
+part of "../../model/currency/submodels/fiat_currency.dart";
 
 extension type const _SosFactory._(FiatSos _) implements FiatSos {
   const _SosFactory() : this._(const FiatSos._());
 }
 
 /// A class that represents the Somali Shilling currency.
-class FiatSos extends FiatCurrency {
+final class FiatSos extends FiatCurrency {
   /// {@template sealed_world.currency_sos_constructor}
   /// Creates a instance of [FiatSos] (Somali Shilling currency).
   ///

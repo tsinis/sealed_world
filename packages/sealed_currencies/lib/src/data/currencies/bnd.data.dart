@@ -1,11 +1,11 @@
-part of "../../model/currency/currency.dart";
+part of "../../model/currency/submodels/fiat_currency.dart";
 
 extension type const _BndFactory._(FiatBnd _) implements FiatBnd {
   const _BndFactory() : this._(const FiatBnd._());
 }
 
 /// A class that represents the Brunei Dollar currency.
-class FiatBnd extends FiatCurrency {
+final class FiatBnd extends FiatCurrency {
   /// {@template sealed_world.currency_bnd_constructor}
   /// Creates a instance of [FiatBnd] (Brunei Dollar currency).
   ///

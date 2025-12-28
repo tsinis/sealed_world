@@ -1,11 +1,11 @@
-part of "../../model/currency/currency.dart";
+part of "../../model/currency/submodels/fiat_currency.dart";
 
 extension type const _LbpFactory._(FiatLbp _) implements FiatLbp {
   const _LbpFactory() : this._(const FiatLbp._());
 }
 
 /// A class that represents the Lebanese Pound currency.
-class FiatLbp extends FiatCurrency {
+final class FiatLbp extends FiatCurrency {
   /// {@template sealed_world.currency_lbp_constructor}
   /// Creates a instance of [FiatLbp] (Lebanese Pound currency).
   ///

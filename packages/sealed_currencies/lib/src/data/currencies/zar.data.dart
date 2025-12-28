@@ -1,11 +1,11 @@
-part of "../../model/currency/currency.dart";
+part of "../../model/currency/submodels/fiat_currency.dart";
 
 extension type const _ZarFactory._(FiatZar _) implements FiatZar {
   const _ZarFactory() : this._(const FiatZar._());
 }
 
 /// A class that represents the South African Rand currency.
-class FiatZar extends FiatCurrency {
+final class FiatZar extends FiatCurrency {
   /// {@template sealed_world.currency_zar_constructor}
   /// Creates a instance of [FiatZar] (South African Rand currency).
   ///

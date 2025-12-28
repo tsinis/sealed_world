@@ -1,11 +1,11 @@
-part of "../../model/currency/currency.dart";
+part of "../../model/currency/submodels/fiat_currency.dart";
 
 extension type const _VesFactory._(FiatVes _) implements FiatVes {
   const _VesFactory() : this._(const FiatVes._());
 }
 
 /// A class that represents the Venezuelan Bolívar Soberano currency.
-class FiatVes extends FiatCurrency {
+final class FiatVes extends FiatCurrency {
   /// {@template sealed_world.currency_ves_constructor}
   /// Creates a instance of [FiatVes] (Venezuelan Bolívar Soberano currency).
   ///

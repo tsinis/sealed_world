@@ -1,11 +1,11 @@
-part of "../../model/currency/currency.dart";
+part of "../../model/currency/submodels/fiat_currency.dart";
 
 extension type const _UahFactory._(FiatUah _) implements FiatUah {
   const _UahFactory() : this._(const FiatUah._());
 }
 
 /// A class that represents the Ukrainian Hryvnia currency.
-class FiatUah extends FiatCurrency {
+final class FiatUah extends FiatCurrency {
   /// {@template sealed_world.currency_uah_constructor}
   /// Creates a instance of [FiatUah] (Ukrainian Hryvnia currency).
   ///

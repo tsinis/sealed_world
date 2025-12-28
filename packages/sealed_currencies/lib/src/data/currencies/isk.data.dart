@@ -1,11 +1,11 @@
-part of "../../model/currency/currency.dart";
+part of "../../model/currency/submodels/fiat_currency.dart";
 
 extension type const _IskFactory._(FiatIsk _) implements FiatIsk {
   const _IskFactory() : this._(const FiatIsk._());
 }
 
 /// A class that represents the Icelandic Króna currency.
-class FiatIsk extends FiatCurrency {
+final class FiatIsk extends FiatCurrency {
   /// {@template sealed_world.currency_isk_constructor}
   /// Creates a instance of [FiatIsk] (Icelandic Króna currency).
   ///

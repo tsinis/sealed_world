@@ -1,11 +1,11 @@
-part of "../../model/currency/currency.dart";
+part of "../../model/currency/submodels/fiat_currency.dart";
 
 extension type const _WstFactory._(FiatWst _) implements FiatWst {
   const _WstFactory() : this._(const FiatWst._());
 }
 
 /// A class that represents the Samoan Tala currency.
-class FiatWst extends FiatCurrency {
+final class FiatWst extends FiatCurrency {
   /// {@template sealed_world.currency_wst_constructor}
   /// Creates a instance of [FiatWst] (Samoan Tala currency).
   ///

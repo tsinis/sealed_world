@@ -1,11 +1,11 @@
-part of "../../model/currency/currency.dart";
+part of "../../model/currency/submodels/fiat_currency.dart";
 
 extension type const _UyuFactory._(FiatUyu _) implements FiatUyu {
   const _UyuFactory() : this._(const FiatUyu._());
 }
 
 /// A class that represents the Uruguayan Peso currency.
-class FiatUyu extends FiatCurrency {
+final class FiatUyu extends FiatCurrency {
   /// {@template sealed_world.currency_uyu_constructor}
   /// Creates a instance of [FiatUyu] (Uruguayan Peso currency).
   ///

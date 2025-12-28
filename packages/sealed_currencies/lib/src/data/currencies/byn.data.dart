@@ -1,11 +1,11 @@
-part of "../../model/currency/currency.dart";
+part of "../../model/currency/submodels/fiat_currency.dart";
 
 extension type const _BynFactory._(FiatByn _) implements FiatByn {
   const _BynFactory() : this._(const FiatByn._());
 }
 
 /// A class that represents the Belarusian Ruble currency.
-class FiatByn extends FiatCurrency {
+final class FiatByn extends FiatCurrency {
   /// {@template sealed_world.currency_byn_constructor}
   /// Creates a instance of [FiatByn] (Belarusian Ruble currency).
   ///

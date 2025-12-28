@@ -1,11 +1,11 @@
-part of "../../model/currency/currency.dart";
+part of "../../model/currency/submodels/fiat_currency.dart";
 
 extension type const _VuvFactory._(FiatVuv _) implements FiatVuv {
   const _VuvFactory() : this._(const FiatVuv._());
 }
 
 /// A class that represents the Vanuatu Vatu currency.
-class FiatVuv extends FiatCurrency {
+final class FiatVuv extends FiatCurrency {
   /// {@template sealed_world.currency_vuv_constructor}
   /// Creates a instance of [FiatVuv] (Vanuatu Vatu currency).
   ///

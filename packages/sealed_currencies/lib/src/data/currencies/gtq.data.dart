@@ -1,11 +1,11 @@
-part of "../../model/currency/currency.dart";
+part of "../../model/currency/submodels/fiat_currency.dart";
 
 extension type const _GtqFactory._(FiatGtq _) implements FiatGtq {
   const _GtqFactory() : this._(const FiatGtq._());
 }
 
 /// A class that represents the Guatemalan Quetzal currency.
-class FiatGtq extends FiatCurrency {
+final class FiatGtq extends FiatCurrency {
   /// {@template sealed_world.currency_gtq_constructor}
   /// Creates a instance of [FiatGtq] (Guatemalan Quetzal currency).
   ///

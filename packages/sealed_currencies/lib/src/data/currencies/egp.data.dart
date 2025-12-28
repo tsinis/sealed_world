@@ -1,11 +1,11 @@
-part of "../../model/currency/currency.dart";
+part of "../../model/currency/submodels/fiat_currency.dart";
 
 extension type const _EgpFactory._(FiatEgp _) implements FiatEgp {
   const _EgpFactory() : this._(const FiatEgp._());
 }
 
 /// A class that represents the Egyptian Pound currency.
-class FiatEgp extends FiatCurrency {
+final class FiatEgp extends FiatCurrency {
   /// {@template sealed_world.currency_egp_constructor}
   /// Creates a instance of [FiatEgp] (Egyptian Pound currency).
   ///

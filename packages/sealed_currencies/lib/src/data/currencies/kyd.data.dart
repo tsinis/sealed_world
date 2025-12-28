@@ -1,11 +1,11 @@
-part of "../../model/currency/currency.dart";
+part of "../../model/currency/submodels/fiat_currency.dart";
 
 extension type const _KydFactory._(FiatKyd _) implements FiatKyd {
   const _KydFactory() : this._(const FiatKyd._());
 }
 
 /// A class that represents the Cayman Islands Dollar currency.
-class FiatKyd extends FiatCurrency {
+final class FiatKyd extends FiatCurrency {
   /// {@template sealed_world.currency_kyd_constructor}
   /// Creates a instance of [FiatKyd] (Cayman Islands Dollar currency).
   ///

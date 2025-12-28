@@ -1,11 +1,11 @@
-part of "../../model/currency/currency.dart";
+part of "../../model/currency/submodels/fiat_currency.dart";
 
 extension type const _EurFactory._(FiatEur _) implements FiatEur {
   const _EurFactory() : this._(const FiatEur._());
 }
 
 /// A class that represents the Euro currency.
-class FiatEur extends FiatCurrency {
+final class FiatEur extends FiatCurrency {
   /// {@template sealed_world.currency_eur_constructor}
   /// Creates a instance of [FiatEur] (Euro currency).
   ///

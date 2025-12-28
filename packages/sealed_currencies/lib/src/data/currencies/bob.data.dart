@@ -1,11 +1,11 @@
-part of "../../model/currency/currency.dart";
+part of "../../model/currency/submodels/fiat_currency.dart";
 
 extension type const _BobFactory._(FiatBob _) implements FiatBob {
   const _BobFactory() : this._(const FiatBob._());
 }
 
 /// A class that represents the Bolivian Boliviano currency.
-class FiatBob extends FiatCurrency {
+final class FiatBob extends FiatCurrency {
   /// {@template sealed_world.currency_bob_constructor}
   /// Creates a instance of [FiatBob] (Bolivian Boliviano currency).
   ///

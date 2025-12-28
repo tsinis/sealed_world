@@ -1,11 +1,11 @@
-part of "../../model/currency/currency.dart";
+part of "../../model/currency/submodels/fiat_currency.dart";
 
 extension type const _TzsFactory._(FiatTzs _) implements FiatTzs {
   const _TzsFactory() : this._(const FiatTzs._());
 }
 
 /// A class that represents the Tanzanian Shilling currency.
-class FiatTzs extends FiatCurrency {
+final class FiatTzs extends FiatCurrency {
   /// {@template sealed_world.currency_tzs_constructor}
   /// Creates a instance of [FiatTzs] (Tanzanian Shilling currency).
   ///

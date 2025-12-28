@@ -1,11 +1,11 @@
-part of "../../model/currency/currency.dart";
+part of "../../model/currency/submodels/fiat_currency.dart";
 
 extension type const _SekFactory._(FiatSek _) implements FiatSek {
   const _SekFactory() : this._(const FiatSek._());
 }
 
 /// A class that represents the Swedish Krona currency.
-class FiatSek extends FiatCurrency {
+final class FiatSek extends FiatCurrency {
   /// {@template sealed_world.currency_sek_constructor}
   /// Creates a instance of [FiatSek] (Swedish Krona currency).
   ///

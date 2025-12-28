@@ -1,11 +1,11 @@
-part of "../../model/currency/currency.dart";
+part of "../../model/currency/submodels/fiat_currency.dart";
 
 extension type const _BrlFactory._(FiatBrl _) implements FiatBrl {
   const _BrlFactory() : this._(const FiatBrl._());
 }
 
 /// A class that represents the Brazilian Real currency.
-class FiatBrl extends FiatCurrency {
+final class FiatBrl extends FiatCurrency {
   /// {@template sealed_world.currency_brl_constructor}
   /// Creates a instance of [FiatBrl] (Brazilian Real currency).
   ///

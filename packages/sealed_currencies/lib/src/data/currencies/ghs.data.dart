@@ -1,11 +1,11 @@
-part of "../../model/currency/currency.dart";
+part of "../../model/currency/submodels/fiat_currency.dart";
 
 extension type const _GhsFactory._(FiatGhs _) implements FiatGhs {
   const _GhsFactory() : this._(const FiatGhs._());
 }
 
 /// A class that represents the Ghanaian Cedi currency.
-class FiatGhs extends FiatCurrency {
+final class FiatGhs extends FiatCurrency {
   /// {@template sealed_world.currency_ghs_constructor}
   /// Creates a instance of [FiatGhs] (Ghanaian Cedi currency).
   ///

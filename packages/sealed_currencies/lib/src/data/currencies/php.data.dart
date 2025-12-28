@@ -1,11 +1,11 @@
-part of "../../model/currency/currency.dart";
+part of "../../model/currency/submodels/fiat_currency.dart";
 
 extension type const _PhpFactory._(FiatPhp _) implements FiatPhp {
   const _PhpFactory() : this._(const FiatPhp._());
 }
 
 /// A class that represents the Philippine Peso currency.
-class FiatPhp extends FiatCurrency {
+final class FiatPhp extends FiatCurrency {
   /// {@template sealed_world.currency_php_constructor}
   /// Creates a instance of [FiatPhp] (Philippine Peso currency).
   ///

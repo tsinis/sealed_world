@@ -1,11 +1,11 @@
-part of "../../model/currency/currency.dart";
+part of "../../model/currency/submodels/fiat_currency.dart";
 
 extension type const _BdtFactory._(FiatBdt _) implements FiatBdt {
   const _BdtFactory() : this._(const FiatBdt._());
 }
 
 /// A class that represents the Bangladeshi Taka currency.
-class FiatBdt extends FiatCurrency {
+final class FiatBdt extends FiatCurrency {
   /// {@template sealed_world.currency_bdt_constructor}
   /// Creates a instance of [FiatBdt] (Bangladeshi Taka currency).
   ///

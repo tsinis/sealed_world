@@ -1,11 +1,11 @@
-part of "../../model/currency/currency.dart";
+part of "../../model/currency/submodels/fiat_currency.dart";
 
 extension type const _TopFactory._(FiatTop _) implements FiatTop {
   const _TopFactory() : this._(const FiatTop._());
 }
 
 /// A class that represents the Tongan Paʻanga currency.
-class FiatTop extends FiatCurrency {
+final class FiatTop extends FiatCurrency {
   /// {@template sealed_world.currency_top_constructor}
   /// Creates a instance of [FiatTop] (Tongan Paʻanga currency).
   ///

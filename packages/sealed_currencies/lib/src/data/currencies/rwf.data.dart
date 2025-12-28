@@ -1,11 +1,11 @@
-part of "../../model/currency/currency.dart";
+part of "../../model/currency/submodels/fiat_currency.dart";
 
 extension type const _RwfFactory._(FiatRwf _) implements FiatRwf {
   const _RwfFactory() : this._(const FiatRwf._());
 }
 
 /// A class that represents the Rwandan Franc currency.
-class FiatRwf extends FiatCurrency {
+final class FiatRwf extends FiatCurrency {
   /// {@template sealed_world.currency_rwf_constructor}
   /// Creates a instance of [FiatRwf] (Rwandan Franc currency).
   ///

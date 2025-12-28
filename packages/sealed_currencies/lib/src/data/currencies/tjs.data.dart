@@ -1,11 +1,11 @@
-part of "../../model/currency/currency.dart";
+part of "../../model/currency/submodels/fiat_currency.dart";
 
 extension type const _TjsFactory._(FiatTjs _) implements FiatTjs {
   const _TjsFactory() : this._(const FiatTjs._());
 }
 
 /// A class that represents the Tajikistani Somoni currency.
-class FiatTjs extends FiatCurrency {
+final class FiatTjs extends FiatCurrency {
   /// {@template sealed_world.currency_tjs_constructor}
   /// Creates a instance of [FiatTjs] (Tajikistani Somoni currency).
   ///

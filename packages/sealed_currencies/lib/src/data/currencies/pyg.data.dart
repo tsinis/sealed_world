@@ -1,11 +1,11 @@
-part of "../../model/currency/currency.dart";
+part of "../../model/currency/submodels/fiat_currency.dart";
 
 extension type const _PygFactory._(FiatPyg _) implements FiatPyg {
   const _PygFactory() : this._(const FiatPyg._());
 }
 
 /// A class that represents the Paraguayan Guarani currency.
-class FiatPyg extends FiatCurrency {
+final class FiatPyg extends FiatCurrency {
   /// {@template sealed_world.currency_pyg_constructor}
   /// Creates a instance of [FiatPyg] (Paraguayan Guarani currency).
   ///

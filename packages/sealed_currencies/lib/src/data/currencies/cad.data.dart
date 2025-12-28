@@ -1,11 +1,11 @@
-part of "../../model/currency/currency.dart";
+part of "../../model/currency/submodels/fiat_currency.dart";
 
 extension type const _CadFactory._(FiatCad _) implements FiatCad {
   const _CadFactory() : this._(const FiatCad._());
 }
 
 /// A class that represents the Canadian Dollar currency.
-class FiatCad extends FiatCurrency {
+final class FiatCad extends FiatCurrency {
   /// {@template sealed_world.currency_cad_constructor}
   /// Creates a instance of [FiatCad] (Canadian Dollar currency).
   ///

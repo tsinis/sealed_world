@@ -1,11 +1,11 @@
-part of "../../model/currency/currency.dart";
+part of "../../model/currency/submodels/fiat_currency.dart";
 
 extension type const _SleFactory._(FiatSle _) implements FiatSle {
   const _SleFactory() : this._(const FiatSle._());
 }
 
 /// A class that represents the Sierra Leonean Leone currency.
-class FiatSle extends FiatCurrency {
+final class FiatSle extends FiatCurrency {
   /// {@template sealed_world.currency_sle_constructor}
   /// Creates a instance of [FiatSle] (Sierra Leonean Leone currency).
   ///

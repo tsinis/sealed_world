@@ -1,11 +1,11 @@
-part of "../../model/currency/currency.dart";
+part of "../../model/currency/submodels/fiat_currency.dart";
 
 extension type const _ScrFactory._(FiatScr _) implements FiatScr {
   const _ScrFactory() : this._(const FiatScr._());
 }
 
 /// A class that represents the Seychellois Rupee currency.
-class FiatScr extends FiatCurrency {
+final class FiatScr extends FiatCurrency {
   /// {@template sealed_world.currency_scr_constructor}
   /// Creates a instance of [FiatScr] (Seychellois Rupee currency).
   ///

@@ -1,11 +1,11 @@
-part of "../../model/currency/currency.dart";
+part of "../../model/currency/submodels/fiat_currency.dart";
 
 extension type const _AmdFactory._(FiatAmd _) implements FiatAmd {
   const _AmdFactory() : this._(const FiatAmd._());
 }
 
 /// A class that represents the Armenian Dram currency.
-class FiatAmd extends FiatCurrency {
+final class FiatAmd extends FiatCurrency {
   /// {@template sealed_world.currency_amd_constructor}
   /// Creates a instance of [FiatAmd] (Armenian Dram currency).
   ///

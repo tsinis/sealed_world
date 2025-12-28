@@ -1,11 +1,11 @@
-part of "../../model/currency/currency.dart";
+part of "../../model/currency/submodels/fiat_currency.dart";
 
 extension type const _JodFactory._(FiatJod _) implements FiatJod {
   const _JodFactory() : this._(const FiatJod._());
 }
 
 /// A class that represents the Jordanian Dinar currency.
-class FiatJod extends FiatCurrency {
+final class FiatJod extends FiatCurrency {
   /// {@template sealed_world.currency_jod_constructor}
   /// Creates a instance of [FiatJod] (Jordanian Dinar currency).
   ///

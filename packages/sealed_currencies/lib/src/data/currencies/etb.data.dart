@@ -1,11 +1,11 @@
-part of "../../model/currency/currency.dart";
+part of "../../model/currency/submodels/fiat_currency.dart";
 
 extension type const _EtbFactory._(FiatEtb _) implements FiatEtb {
   const _EtbFactory() : this._(const FiatEtb._());
 }
 
 /// A class that represents the Ethiopian Birr currency.
-class FiatEtb extends FiatCurrency {
+final class FiatEtb extends FiatCurrency {
   /// {@template sealed_world.currency_etb_constructor}
   /// Creates a instance of [FiatEtb] (Ethiopian Birr currency).
   ///
