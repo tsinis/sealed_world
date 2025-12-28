@@ -1,11 +1,11 @@
-part of "../../model/script/writing_system.dart";
+part of "../../model/script/submodels/script.dart";
 
 extension type const _ManiFactory._(ScriptMani _) implements ScriptMani {
   const _ManiFactory() : this._(const ScriptMani._());
 }
 
 /// A class that represents the Manichaean script.
-class ScriptMani extends Script {
+final class ScriptMani extends Script {
   /// {@template sealed_world.script_mani_constructor}
   /// Creates a instance of [ScriptMani] (Manichaean script).
   ///
@@ -14,7 +14,7 @@ class ScriptMani extends Script {
   const factory ScriptMani() = _ManiFactory;
 
   const ScriptMani._()
-    : super(
+    : super._(
         name: "Manichaean",
         code: "Mani",
         codeNumeric: "139",

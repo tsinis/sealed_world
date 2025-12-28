@@ -1,11 +1,11 @@
-part of "../../model/script/writing_system.dart";
+part of "../../model/script/submodels/script.dart";
 
 extension type const _PaucFactory._(ScriptPauc _) implements ScriptPauc {
   const _PaucFactory() : this._(const ScriptPauc._());
 }
 
 /// A class that represents the Pau Cin Hau script.
-class ScriptPauc extends Script {
+final class ScriptPauc extends Script {
   /// {@template sealed_world.script_pauc_constructor}
   /// Creates a instance of [ScriptPauc] (Pau Cin Hau script).
   ///
@@ -14,7 +14,7 @@ class ScriptPauc extends Script {
   const factory ScriptPauc() = _PaucFactory;
 
   const ScriptPauc._()
-    : super(
+    : super._(
         name: "Pau Cin Hau",
         code: "Pauc",
         codeNumeric: "263",

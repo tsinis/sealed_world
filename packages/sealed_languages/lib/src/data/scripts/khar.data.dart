@@ -1,11 +1,11 @@
-part of "../../model/script/writing_system.dart";
+part of "../../model/script/submodels/script.dart";
 
 extension type const _KharFactory._(ScriptKhar _) implements ScriptKhar {
   const _KharFactory() : this._(const ScriptKhar._());
 }
 
 /// A class that represents the Kharoshthi script.
-class ScriptKhar extends Script {
+final class ScriptKhar extends Script {
   /// {@template sealed_world.script_khar_constructor}
   /// Creates a instance of [ScriptKhar] (Kharoshthi script).
   ///
@@ -14,7 +14,7 @@ class ScriptKhar extends Script {
   const factory ScriptKhar() = _KharFactory;
 
   const ScriptKhar._()
-    : super(
+    : super._(
         name: "Kharoshthi",
         code: "Khar",
         codeNumeric: "305",

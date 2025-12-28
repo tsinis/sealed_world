@@ -1,11 +1,11 @@
-part of "../../model/script/writing_system.dart";
+part of "../../model/script/submodels/script.dart";
 
 extension type const _PelmFactory._(ScriptPelm _) implements ScriptPelm {
   const _PelmFactory() : this._(const ScriptPelm._());
 }
 
 /// A class that represents the Proto-Elamite script.
-class ScriptPelm extends Script {
+final class ScriptPelm extends Script {
   /// {@template sealed_world.script_pelm_constructor}
   /// Creates a instance of [ScriptPelm] (Proto-Elamite script).
   ///
@@ -14,7 +14,7 @@ class ScriptPelm extends Script {
   const factory ScriptPelm() = _PelmFactory;
 
   const ScriptPelm._()
-    : super(
+    : super._(
         name: "Proto-Elamite",
         code: "Pelm",
         codeNumeric: "016",

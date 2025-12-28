@@ -1,11 +1,11 @@
-part of "../../model/script/writing_system.dart";
+part of "../../model/script/submodels/script.dart";
 
 extension type const _PermFactory._(ScriptPerm _) implements ScriptPerm {
   const _PermFactory() : this._(const ScriptPerm._());
 }
 
 /// A class that represents the Old Permic script.
-class ScriptPerm extends Script {
+final class ScriptPerm extends Script {
   /// {@template sealed_world.script_perm_constructor}
   /// Creates a instance of [ScriptPerm] (Old Permic script).
   ///
@@ -14,7 +14,7 @@ class ScriptPerm extends Script {
   const factory ScriptPerm() = _PermFactory;
 
   const ScriptPerm._()
-    : super(
+    : super._(
         name: "Old Permic",
         code: "Perm",
         codeNumeric: "227",

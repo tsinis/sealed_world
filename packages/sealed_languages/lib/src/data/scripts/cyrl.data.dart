@@ -1,11 +1,11 @@
-part of "../../model/script/writing_system.dart";
+part of "../../model/script/submodels/script.dart";
 
 extension type const _CyrlFactory._(ScriptCyrl _) implements ScriptCyrl {
   const _CyrlFactory() : this._(const ScriptCyrl._());
 }
 
 /// A class that represents the Cyrillic script.
-class ScriptCyrl extends Script {
+final class ScriptCyrl extends Script {
   /// {@template sealed_world.script_cyrl_constructor}
   /// Creates a instance of [ScriptCyrl] (Cyrillic script).
   ///
@@ -14,7 +14,7 @@ class ScriptCyrl extends Script {
   const factory ScriptCyrl() = _CyrlFactory;
 
   const ScriptCyrl._()
-    : super(
+    : super._(
         name: "Cyrillic",
         code: "Cyrl",
         codeNumeric: "220",

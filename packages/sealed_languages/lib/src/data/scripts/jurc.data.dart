@@ -1,11 +1,11 @@
-part of "../../model/script/writing_system.dart";
+part of "../../model/script/submodels/script.dart";
 
 extension type const _JurcFactory._(ScriptJurc _) implements ScriptJurc {
   const _JurcFactory() : this._(const ScriptJurc._());
 }
 
 /// A class that represents the Jurchen script.
-class ScriptJurc extends Script {
+final class ScriptJurc extends Script {
   /// {@template sealed_world.script_jurc_constructor}
   /// Creates a instance of [ScriptJurc] (Jurchen script).
   ///
@@ -14,7 +14,7 @@ class ScriptJurc extends Script {
   const factory ScriptJurc() = _JurcFactory;
 
   const ScriptJurc._()
-    : super(
+    : super._(
         name: "Jurchen",
         code: "Jurc",
         codeNumeric: "510",

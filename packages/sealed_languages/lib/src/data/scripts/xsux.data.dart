@@ -1,11 +1,11 @@
-part of "../../model/script/writing_system.dart";
+part of "../../model/script/submodels/script.dart";
 
 extension type const _XsuxFactory._(ScriptXsux _) implements ScriptXsux {
   const _XsuxFactory() : this._(const ScriptXsux._());
 }
 
 /// A class that represents the Cuneiform, Sumero-Akkadian script.
-class ScriptXsux extends Script {
+final class ScriptXsux extends Script {
   /// {@template sealed_world.script_xsux_constructor}
   /// Creates a instance of [ScriptXsux] (Cuneiform, Sumero-Akkadian script).
   ///
@@ -14,7 +14,7 @@ class ScriptXsux extends Script {
   const factory ScriptXsux() = _XsuxFactory;
 
   const ScriptXsux._()
-    : super(
+    : super._(
         name: "Cuneiform, Sumero-Akkadian",
         code: "Xsux",
         codeNumeric: "020",

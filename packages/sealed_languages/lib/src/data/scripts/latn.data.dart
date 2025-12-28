@@ -1,11 +1,11 @@
-part of "../../model/script/writing_system.dart";
+part of "../../model/script/submodels/script.dart";
 
 extension type const _LatnFactory._(ScriptLatn _) implements ScriptLatn {
   const _LatnFactory() : this._(const ScriptLatn._());
 }
 
 /// A class that represents the Latin script.
-class ScriptLatn extends Script {
+final class ScriptLatn extends Script {
   /// {@template sealed_world.script_latn_constructor}
   /// Creates a instance of [ScriptLatn] (Latin script).
   ///
@@ -14,7 +14,7 @@ class ScriptLatn extends Script {
   const factory ScriptLatn() = _LatnFactory;
 
   const ScriptLatn._()
-    : super(
+    : super._(
         name: "Latin",
         code: "Latn",
         codeNumeric: "215",

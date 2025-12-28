@@ -1,11 +1,11 @@
-part of "../../model/script/writing_system.dart";
+part of "../../model/script/submodels/script.dart";
 
 extension type const _HatrFactory._(ScriptHatr _) implements ScriptHatr {
   const _HatrFactory() : this._(const ScriptHatr._());
 }
 
 /// A class that represents the Hatran script.
-class ScriptHatr extends Script {
+final class ScriptHatr extends Script {
   /// {@template sealed_world.script_hatr_constructor}
   /// Creates a instance of [ScriptHatr] (Hatran script).
   ///
@@ -14,7 +14,7 @@ class ScriptHatr extends Script {
   const factory ScriptHatr() = _HatrFactory;
 
   const ScriptHatr._()
-    : super(
+    : super._(
         name: "Hatran",
         code: "Hatr",
         codeNumeric: "127",

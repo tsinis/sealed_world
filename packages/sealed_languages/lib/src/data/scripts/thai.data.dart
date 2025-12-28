@@ -1,11 +1,11 @@
-part of "../../model/script/writing_system.dart";
+part of "../../model/script/submodels/script.dart";
 
 extension type const _ThaiFactory._(ScriptThai _) implements ScriptThai {
   const _ThaiFactory() : this._(const ScriptThai._());
 }
 
 /// A class that represents the Thai script.
-class ScriptThai extends Script {
+final class ScriptThai extends Script {
   /// {@template sealed_world.script_thai_constructor}
   /// Creates a instance of [ScriptThai] (Thai script).
   ///
@@ -14,7 +14,7 @@ class ScriptThai extends Script {
   const factory ScriptThai() = _ThaiFactory;
 
   const ScriptThai._()
-    : super(
+    : super._(
         name: "Thai",
         code: "Thai",
         codeNumeric: "352",

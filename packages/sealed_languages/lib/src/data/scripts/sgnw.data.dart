@@ -1,11 +1,11 @@
-part of "../../model/script/writing_system.dart";
+part of "../../model/script/submodels/script.dart";
 
 extension type const _SgnwFactory._(ScriptSgnw _) implements ScriptSgnw {
   const _SgnwFactory() : this._(const ScriptSgnw._());
 }
 
 /// A class that represents the SignWriting script.
-class ScriptSgnw extends Script {
+final class ScriptSgnw extends Script {
   /// {@template sealed_world.script_sgnw_constructor}
   /// Creates a instance of [ScriptSgnw] (SignWriting script).
   ///
@@ -14,7 +14,7 @@ class ScriptSgnw extends Script {
   const factory ScriptSgnw() = _SgnwFactory;
 
   const ScriptSgnw._()
-    : super(
+    : super._(
         name: "SignWriting",
         code: "Sgnw",
         codeNumeric: "095",

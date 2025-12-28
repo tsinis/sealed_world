@@ -1,11 +1,11 @@
-part of "../../model/script/writing_system.dart";
+part of "../../model/script/submodels/script.dart";
 
 extension type const _MercFactory._(ScriptMerc _) implements ScriptMerc {
   const _MercFactory() : this._(const ScriptMerc._());
 }
 
 /// A class that represents the Meroitic Cursive script.
-class ScriptMerc extends Script {
+final class ScriptMerc extends Script {
   /// {@template sealed_world.script_merc_constructor}
   /// Creates a instance of [ScriptMerc] (Meroitic Cursive script).
   ///
@@ -14,7 +14,7 @@ class ScriptMerc extends Script {
   const factory ScriptMerc() = _MercFactory;
 
   const ScriptMerc._()
-    : super(
+    : super._(
         name: "Meroitic Cursive",
         code: "Merc",
         codeNumeric: "101",

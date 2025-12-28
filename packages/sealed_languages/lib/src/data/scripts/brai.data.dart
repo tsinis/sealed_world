@@ -1,11 +1,11 @@
-part of "../../model/script/writing_system.dart";
+part of "../../model/script/submodels/script.dart";
 
 extension type const _BraiFactory._(ScriptBrai _) implements ScriptBrai {
   const _BraiFactory() : this._(const ScriptBrai._());
 }
 
 /// A class that represents the Braille script.
-class ScriptBrai extends Script {
+final class ScriptBrai extends Script {
   /// {@template sealed_world.script_brai_constructor}
   /// Creates a instance of [ScriptBrai] (Braille script).
   ///
@@ -14,7 +14,7 @@ class ScriptBrai extends Script {
   const factory ScriptBrai() = _BraiFactory;
 
   const ScriptBrai._()
-    : super(
+    : super._(
         name: "Braille",
         code: "Brai",
         codeNumeric: "570",

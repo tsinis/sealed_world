@@ -1,11 +1,11 @@
-part of "../../model/script/writing_system.dart";
+part of "../../model/script/submodels/script.dart";
 
 extension type const _NshuFactory._(ScriptNshu _) implements ScriptNshu {
   const _NshuFactory() : this._(const ScriptNshu._());
 }
 
 /// A class that represents the Nüshu script.
-class ScriptNshu extends Script {
+final class ScriptNshu extends Script {
   /// {@template sealed_world.script_nshu_constructor}
   /// Creates a instance of [ScriptNshu] (Nüshu script).
   ///
@@ -14,7 +14,7 @@ class ScriptNshu extends Script {
   const factory ScriptNshu() = _NshuFactory;
 
   const ScriptNshu._()
-    : super(
+    : super._(
         name: "Nüshu",
         code: "Nshu",
         codeNumeric: "499",

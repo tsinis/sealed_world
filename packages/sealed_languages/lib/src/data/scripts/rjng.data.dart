@@ -1,11 +1,11 @@
-part of "../../model/script/writing_system.dart";
+part of "../../model/script/submodels/script.dart";
 
 extension type const _RjngFactory._(ScriptRjng _) implements ScriptRjng {
   const _RjngFactory() : this._(const ScriptRjng._());
 }
 
 /// A class that represents the Rejang (Redjang, Kaganga) script.
-class ScriptRjng extends Script {
+final class ScriptRjng extends Script {
   /// {@template sealed_world.script_rjng_constructor}
   /// Creates a instance of [ScriptRjng] (Rejang (Redjang, Kaganga) script).
   ///
@@ -14,7 +14,7 @@ class ScriptRjng extends Script {
   const factory ScriptRjng() = _RjngFactory;
 
   const ScriptRjng._()
-    : super(
+    : super._(
         name: "Rejang (Redjang, Kaganga)",
         code: "Rjng",
         codeNumeric: "363",

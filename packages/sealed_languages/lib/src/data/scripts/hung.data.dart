@@ -1,11 +1,11 @@
-part of "../../model/script/writing_system.dart";
+part of "../../model/script/submodels/script.dart";
 
 extension type const _HungFactory._(ScriptHung _) implements ScriptHung {
   const _HungFactory() : this._(const ScriptHung._());
 }
 
 /// A class that represents the Old Hungarian (Hungarian Runic) script.
-class ScriptHung extends Script {
+final class ScriptHung extends Script {
   /// {@template sealed_world.script_hung_constructor}
   /// Creates a instance of [ScriptHung] (Old Hungarian (Hungarian Runic) script).
   ///
@@ -14,7 +14,7 @@ class ScriptHung extends Script {
   const factory ScriptHung() = _HungFactory;
 
   const ScriptHung._()
-    : super(
+    : super._(
         name: "Old Hungarian (Hungarian Runic)",
         code: "Hung",
         codeNumeric: "176",

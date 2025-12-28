@@ -1,11 +1,11 @@
-part of "../../model/script/writing_system.dart";
+part of "../../model/script/submodels/script.dart";
 
 extension type const _ChrsFactory._(ScriptChrs _) implements ScriptChrs {
   const _ChrsFactory() : this._(const ScriptChrs._());
 }
 
 /// A class that represents the Chorasmian script.
-class ScriptChrs extends Script {
+final class ScriptChrs extends Script {
   /// {@template sealed_world.script_chrs_constructor}
   /// Creates a instance of [ScriptChrs] (Chorasmian script).
   ///
@@ -14,7 +14,7 @@ class ScriptChrs extends Script {
   const factory ScriptChrs() = _ChrsFactory;
 
   const ScriptChrs._()
-    : super(
+    : super._(
         name: "Chorasmian",
         code: "Chrs",
         codeNumeric: "109",

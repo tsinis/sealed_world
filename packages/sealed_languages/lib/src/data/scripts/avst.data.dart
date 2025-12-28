@@ -1,11 +1,11 @@
-part of "../../model/script/writing_system.dart";
+part of "../../model/script/submodels/script.dart";
 
 extension type const _AvstFactory._(ScriptAvst _) implements ScriptAvst {
   const _AvstFactory() : this._(const ScriptAvst._());
 }
 
 /// A class that represents the Avestan script.
-class ScriptAvst extends Script {
+final class ScriptAvst extends Script {
   /// {@template sealed_world.script_avst_constructor}
   /// Creates a instance of [ScriptAvst] (Avestan script).
   ///
@@ -14,7 +14,7 @@ class ScriptAvst extends Script {
   const factory ScriptAvst() = _AvstFactory;
 
   const ScriptAvst._()
-    : super(
+    : super._(
         name: "Avestan",
         code: "Avst",
         codeNumeric: "134",

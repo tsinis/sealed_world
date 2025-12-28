@@ -1,11 +1,11 @@
-part of "../../model/script/writing_system.dart";
+part of "../../model/script/submodels/script.dart";
 
 extension type const _HansFactory._(ScriptHans _) implements ScriptHans {
   const _HansFactory() : this._(const ScriptHans._());
 }
 
 /// A class that represents the Han (Simplified variant) script.
-class ScriptHans extends Script {
+final class ScriptHans extends Script {
   /// {@template sealed_world.script_hans_constructor}
   /// Creates a instance of [ScriptHans] (Han (Simplified variant) script).
   ///
@@ -14,7 +14,7 @@ class ScriptHans extends Script {
   const factory ScriptHans() = _HansFactory;
 
   const ScriptHans._()
-    : super(
+    : super._(
         name: "Han (Simplified variant)",
         code: "Hans",
         codeNumeric: "501",

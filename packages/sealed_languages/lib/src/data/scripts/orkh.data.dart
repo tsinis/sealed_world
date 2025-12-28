@@ -1,11 +1,11 @@
-part of "../../model/script/writing_system.dart";
+part of "../../model/script/submodels/script.dart";
 
 extension type const _OrkhFactory._(ScriptOrkh _) implements ScriptOrkh {
   const _OrkhFactory() : this._(const ScriptOrkh._());
 }
 
 /// A class that represents the Old Turkic, Orkhon Runic script.
-class ScriptOrkh extends Script {
+final class ScriptOrkh extends Script {
   /// {@template sealed_world.script_orkh_constructor}
   /// Creates a instance of [ScriptOrkh] (Old Turkic, Orkhon Runic script).
   ///
@@ -14,7 +14,7 @@ class ScriptOrkh extends Script {
   const factory ScriptOrkh() = _OrkhFactory;
 
   const ScriptOrkh._()
-    : super(
+    : super._(
         name: "Old Turkic, Orkhon Runic",
         code: "Orkh",
         codeNumeric: "175",

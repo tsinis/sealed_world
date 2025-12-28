@@ -1,8 +1,8 @@
 // ignore_for_file: prefer-static-class, it's referenced as static in the model.
-import "../model/script/writing_system.dart";
+import "../model/script/submodels/script.dart";
 
 /// Map of [Script] standard codes.
-const scriptCodeMap = <String, Script>{
+const scriptCodeMap = {
   "ADLM": ScriptAdlm(),
   "AFAK": ScriptAfak(),
   "AGHB": ScriptAghb(),

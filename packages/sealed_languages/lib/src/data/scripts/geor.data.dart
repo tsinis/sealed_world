@@ -1,11 +1,11 @@
-part of "../../model/script/writing_system.dart";
+part of "../../model/script/submodels/script.dart";
 
 extension type const _GeorFactory._(ScriptGeor _) implements ScriptGeor {
   const _GeorFactory() : this._(const ScriptGeor._());
 }
 
 /// A class that represents the Georgian (Mkhedruli and Mtavruli) script.
-class ScriptGeor extends Script {
+final class ScriptGeor extends Script {
   /// {@template sealed_world.script_geor_constructor}
   /// Creates a instance of [ScriptGeor] (Georgian (Mkhedruli and Mtavruli) script).
   ///
@@ -14,7 +14,7 @@ class ScriptGeor extends Script {
   const factory ScriptGeor() = _GeorFactory;
 
   const ScriptGeor._()
-    : super(
+    : super._(
         name: "Georgian (Mkhedruli and Mtavruli)",
         code: "Geor",
         codeNumeric: "240",

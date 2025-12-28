@@ -1,11 +1,11 @@
-part of "../../model/script/writing_system.dart";
+part of "../../model/script/submodels/script.dart";
 
 extension type const _LydiFactory._(ScriptLydi _) implements ScriptLydi {
   const _LydiFactory() : this._(const ScriptLydi._());
 }
 
 /// A class that represents the Lydian script.
-class ScriptLydi extends Script {
+final class ScriptLydi extends Script {
   /// {@template sealed_world.script_lydi_constructor}
   /// Creates a instance of [ScriptLydi] (Lydian script).
   ///
@@ -14,7 +14,7 @@ class ScriptLydi extends Script {
   const factory ScriptLydi() = _LydiFactory;
 
   const ScriptLydi._()
-    : super(
+    : super._(
         name: "Lydian",
         code: "Lydi",
         codeNumeric: "116",

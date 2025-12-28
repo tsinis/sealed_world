@@ -1,11 +1,11 @@
-part of "../../model/script/writing_system.dart";
+part of "../../model/script/submodels/script.dart";
 
 extension type const _WoleFactory._(ScriptWole _) implements ScriptWole {
   const _WoleFactory() : this._(const ScriptWole._());
 }
 
 /// A class that represents the Woleai script.
-class ScriptWole extends Script {
+final class ScriptWole extends Script {
   /// {@template sealed_world.script_wole_constructor}
   /// Creates a instance of [ScriptWole] (Woleai script).
   ///
@@ -14,7 +14,7 @@ class ScriptWole extends Script {
   const factory ScriptWole() = _WoleFactory;
 
   const ScriptWole._()
-    : super(
+    : super._(
         name: "Woleai",
         code: "Wole",
         codeNumeric: "480",

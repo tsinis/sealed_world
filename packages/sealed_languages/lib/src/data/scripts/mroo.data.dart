@@ -1,11 +1,11 @@
-part of "../../model/script/writing_system.dart";
+part of "../../model/script/submodels/script.dart";
 
 extension type const _MrooFactory._(ScriptMroo _) implements ScriptMroo {
   const _MrooFactory() : this._(const ScriptMroo._());
 }
 
 /// A class that represents the Mro, Mru script.
-class ScriptMroo extends Script {
+final class ScriptMroo extends Script {
   /// {@template sealed_world.script_mroo_constructor}
   /// Creates a instance of [ScriptMroo] (Mro, Mru script).
   ///
@@ -14,7 +14,7 @@ class ScriptMroo extends Script {
   const factory ScriptMroo() = _MrooFactory;
 
   const ScriptMroo._()
-    : super(
+    : super._(
         name: "Mro, Mru",
         code: "Mroo",
         codeNumeric: "264",

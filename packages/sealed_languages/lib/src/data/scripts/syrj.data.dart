@@ -1,11 +1,11 @@
-part of "../../model/script/writing_system.dart";
+part of "../../model/script/submodels/script.dart";
 
 extension type const _SyrjFactory._(ScriptSyrj _) implements ScriptSyrj {
   const _SyrjFactory() : this._(const ScriptSyrj._());
 }
 
 /// A class that represents the Syriac (Western variant) script.
-class ScriptSyrj extends Script {
+final class ScriptSyrj extends Script {
   /// {@template sealed_world.script_syrj_constructor}
   /// Creates a instance of [ScriptSyrj] (Syriac (Western variant) script).
   ///
@@ -14,7 +14,7 @@ class ScriptSyrj extends Script {
   const factory ScriptSyrj() = _SyrjFactory;
 
   const ScriptSyrj._()
-    : super(
+    : super._(
         name: "Syriac (Western variant)",
         code: "Syrj",
         codeNumeric: "137",

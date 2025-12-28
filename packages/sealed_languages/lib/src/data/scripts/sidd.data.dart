@@ -1,11 +1,11 @@
-part of "../../model/script/writing_system.dart";
+part of "../../model/script/submodels/script.dart";
 
 extension type const _SiddFactory._(ScriptSidd _) implements ScriptSidd {
   const _SiddFactory() : this._(const ScriptSidd._());
 }
 
 /// A class that represents the Siddham, Siddhaṃ, Siddhamātṛkā script.
-class ScriptSidd extends Script {
+final class ScriptSidd extends Script {
   /// {@template sealed_world.script_sidd_constructor}
   /// Creates a instance of [ScriptSidd] (Siddham, Siddhaṃ, Siddhamātṛkā script).
   ///
@@ -14,7 +14,7 @@ class ScriptSidd extends Script {
   const factory ScriptSidd() = _SiddFactory;
 
   const ScriptSidd._()
-    : super(
+    : super._(
         name: "Siddham, Siddhaṃ, Siddhamātṛkā",
         code: "Sidd",
         codeNumeric: "302",

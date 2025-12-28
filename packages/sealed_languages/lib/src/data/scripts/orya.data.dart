@@ -1,11 +1,11 @@
-part of "../../model/script/writing_system.dart";
+part of "../../model/script/submodels/script.dart";
 
 extension type const _OryaFactory._(ScriptOrya _) implements ScriptOrya {
   const _OryaFactory() : this._(const ScriptOrya._());
 }
 
 /// A class that represents the Oriya (Odia) script.
-class ScriptOrya extends Script {
+final class ScriptOrya extends Script {
   /// {@template sealed_world.script_orya_constructor}
   /// Creates a instance of [ScriptOrya] (Oriya (Odia) script).
   ///
@@ -14,7 +14,7 @@ class ScriptOrya extends Script {
   const factory ScriptOrya() = _OryaFactory;
 
   const ScriptOrya._()
-    : super(
+    : super._(
         name: "Oriya (Odia)",
         code: "Orya",
         codeNumeric: "327",

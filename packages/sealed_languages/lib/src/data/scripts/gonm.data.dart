@@ -1,11 +1,11 @@
-part of "../../model/script/writing_system.dart";
+part of "../../model/script/submodels/script.dart";
 
 extension type const _GonmFactory._(ScriptGonm _) implements ScriptGonm {
   const _GonmFactory() : this._(const ScriptGonm._());
 }
 
 /// A class that represents the Masaram Gondi script.
-class ScriptGonm extends Script {
+final class ScriptGonm extends Script {
   /// {@template sealed_world.script_gonm_constructor}
   /// Creates a instance of [ScriptGonm] (Masaram Gondi script).
   ///
@@ -14,7 +14,7 @@ class ScriptGonm extends Script {
   const factory ScriptGonm() = _GonmFactory;
 
   const ScriptGonm._()
-    : super(
+    : super._(
         name: "Masaram Gondi",
         code: "Gonm",
         codeNumeric: "313",

@@ -1,11 +1,11 @@
-part of "../../model/script/writing_system.dart";
+part of "../../model/script/submodels/script.dart";
 
 extension type const _TamlFactory._(ScriptTaml _) implements ScriptTaml {
   const _TamlFactory() : this._(const ScriptTaml._());
 }
 
 /// A class that represents the Tamil script.
-class ScriptTaml extends Script {
+final class ScriptTaml extends Script {
   /// {@template sealed_world.script_taml_constructor}
   /// Creates a instance of [ScriptTaml] (Tamil script).
   ///
@@ -14,7 +14,7 @@ class ScriptTaml extends Script {
   const factory ScriptTaml() = _TamlFactory;
 
   const ScriptTaml._()
-    : super(
+    : super._(
         name: "Tamil",
         code: "Taml",
         codeNumeric: "346",

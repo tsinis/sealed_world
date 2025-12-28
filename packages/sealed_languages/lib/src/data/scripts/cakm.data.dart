@@ -1,11 +1,11 @@
-part of "../../model/script/writing_system.dart";
+part of "../../model/script/submodels/script.dart";
 
 extension type const _CakmFactory._(ScriptCakm _) implements ScriptCakm {
   const _CakmFactory() : this._(const ScriptCakm._());
 }
 
 /// A class that represents the Chakma script.
-class ScriptCakm extends Script {
+final class ScriptCakm extends Script {
   /// {@template sealed_world.script_cakm_constructor}
   /// Creates a instance of [ScriptCakm] (Chakma script).
   ///
@@ -14,7 +14,7 @@ class ScriptCakm extends Script {
   const factory ScriptCakm() = _CakmFactory;
 
   const ScriptCakm._()
-    : super(
+    : super._(
         name: "Chakma",
         code: "Cakm",
         codeNumeric: "349",

@@ -1,11 +1,11 @@
-part of "../../model/script/writing_system.dart";
+part of "../../model/script/submodels/script.dart";
 
 extension type const _YiiiFactory._(ScriptYiii _) implements ScriptYiii {
   const _YiiiFactory() : this._(const ScriptYiii._());
 }
 
 /// A class that represents the Yi script.
-class ScriptYiii extends Script {
+final class ScriptYiii extends Script {
   /// {@template sealed_world.script_yiii_constructor}
   /// Creates a instance of [ScriptYiii] (Yi script).
   ///
@@ -14,7 +14,7 @@ class ScriptYiii extends Script {
   const factory ScriptYiii() = _YiiiFactory;
 
   const ScriptYiii._()
-    : super(
+    : super._(
         name: "Yi",
         code: "Yiii",
         codeNumeric: "460",

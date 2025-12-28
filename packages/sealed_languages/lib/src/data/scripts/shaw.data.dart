@@ -1,11 +1,11 @@
-part of "../../model/script/writing_system.dart";
+part of "../../model/script/submodels/script.dart";
 
 extension type const _ShawFactory._(ScriptShaw _) implements ScriptShaw {
   const _ShawFactory() : this._(const ScriptShaw._());
 }
 
 /// A class that represents the Shavian (Shaw) script.
-class ScriptShaw extends Script {
+final class ScriptShaw extends Script {
   /// {@template sealed_world.script_shaw_constructor}
   /// Creates a instance of [ScriptShaw] (Shavian (Shaw) script).
   ///
@@ -14,7 +14,7 @@ class ScriptShaw extends Script {
   const factory ScriptShaw() = _ShawFactory;
 
   const ScriptShaw._()
-    : super(
+    : super._(
         name: "Shavian (Shaw)",
         code: "Shaw",
         codeNumeric: "281",

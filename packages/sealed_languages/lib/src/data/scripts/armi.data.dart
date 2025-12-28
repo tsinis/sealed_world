@@ -1,11 +1,11 @@
-part of "../../model/script/writing_system.dart";
+part of "../../model/script/submodels/script.dart";
 
 extension type const _ArmiFactory._(ScriptArmi _) implements ScriptArmi {
   const _ArmiFactory() : this._(const ScriptArmi._());
 }
 
 /// A class that represents the Imperial Aramaic script.
-class ScriptArmi extends Script {
+final class ScriptArmi extends Script {
   /// {@template sealed_world.script_armi_constructor}
   /// Creates a instance of [ScriptArmi] (Imperial Aramaic script).
   ///
@@ -14,7 +14,7 @@ class ScriptArmi extends Script {
   const factory ScriptArmi() = _ArmiFactory;
 
   const ScriptArmi._()
-    : super(
+    : super._(
         name: "Imperial Aramaic",
         code: "Armi",
         codeNumeric: "124",

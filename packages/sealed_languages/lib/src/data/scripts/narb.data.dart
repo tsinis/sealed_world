@@ -1,11 +1,11 @@
-part of "../../model/script/writing_system.dart";
+part of "../../model/script/submodels/script.dart";
 
 extension type const _NarbFactory._(ScriptNarb _) implements ScriptNarb {
   const _NarbFactory() : this._(const ScriptNarb._());
 }
 
 /// A class that represents the Old North Arabian (Ancient North Arabian) script.
-class ScriptNarb extends Script {
+final class ScriptNarb extends Script {
   /// {@template sealed_world.script_narb_constructor}
   /// Creates a instance of [ScriptNarb] (Old North Arabian (Ancient North Arabian) script).
   ///
@@ -14,7 +14,7 @@ class ScriptNarb extends Script {
   const factory ScriptNarb() = _NarbFactory;
 
   const ScriptNarb._()
-    : super(
+    : super._(
         name: "Old North Arabian (Ancient North Arabian)",
         code: "Narb",
         codeNumeric: "106",

@@ -1,11 +1,11 @@
-part of "../../model/script/writing_system.dart";
+part of "../../model/script/submodels/script.dart";
 
 extension type const _NandFactory._(ScriptNand _) implements ScriptNand {
   const _NandFactory() : this._(const ScriptNand._());
 }
 
 /// A class that represents the Nandinagari script.
-class ScriptNand extends Script {
+final class ScriptNand extends Script {
   /// {@template sealed_world.script_nand_constructor}
   /// Creates a instance of [ScriptNand] (Nandinagari script).
   ///
@@ -14,7 +14,7 @@ class ScriptNand extends Script {
   const factory ScriptNand() = _NandFactory;
 
   const ScriptNand._()
-    : super(
+    : super._(
         name: "Nandinagari",
         code: "Nand",
         codeNumeric: "311",

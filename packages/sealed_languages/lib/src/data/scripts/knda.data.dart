@@ -1,11 +1,11 @@
-part of "../../model/script/writing_system.dart";
+part of "../../model/script/submodels/script.dart";
 
 extension type const _KndaFactory._(ScriptKnda _) implements ScriptKnda {
   const _KndaFactory() : this._(const ScriptKnda._());
 }
 
 /// A class that represents the Kannada script.
-class ScriptKnda extends Script {
+final class ScriptKnda extends Script {
   /// {@template sealed_world.script_knda_constructor}
   /// Creates a instance of [ScriptKnda] (Kannada script).
   ///
@@ -14,7 +14,7 @@ class ScriptKnda extends Script {
   const factory ScriptKnda() = _KndaFactory;
 
   const ScriptKnda._()
-    : super(
+    : super._(
         name: "Kannada",
         code: "Knda",
         codeNumeric: "345",

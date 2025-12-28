@@ -1,11 +1,11 @@
-part of "../../model/script/writing_system.dart";
+part of "../../model/script/submodels/script.dart";
 
 extension type const _TotoFactory._(ScriptToto _) implements ScriptToto {
   const _TotoFactory() : this._(const ScriptToto._());
 }
 
 /// A class that represents the Toto script.
-class ScriptToto extends Script {
+final class ScriptToto extends Script {
   /// {@template sealed_world.script_toto_constructor}
   /// Creates a instance of [ScriptToto] (Toto script).
   ///
@@ -14,7 +14,7 @@ class ScriptToto extends Script {
   const factory ScriptToto() = _TotoFactory;
 
   const ScriptToto._()
-    : super(
+    : super._(
         name: "Toto",
         code: "Toto",
         codeNumeric: "294",

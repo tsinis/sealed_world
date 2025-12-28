@@ -1,11 +1,11 @@
-part of "../../model/script/writing_system.dart";
+part of "../../model/script/submodels/script.dart";
 
 extension type const _PalmFactory._(ScriptPalm _) implements ScriptPalm {
   const _PalmFactory() : this._(const ScriptPalm._());
 }
 
 /// A class that represents the Palmyrene script.
-class ScriptPalm extends Script {
+final class ScriptPalm extends Script {
   /// {@template sealed_world.script_palm_constructor}
   /// Creates a instance of [ScriptPalm] (Palmyrene script).
   ///
@@ -14,7 +14,7 @@ class ScriptPalm extends Script {
   const factory ScriptPalm() = _PalmFactory;
 
   const ScriptPalm._()
-    : super(
+    : super._(
         name: "Palmyrene",
         code: "Palm",
         codeNumeric: "126",

@@ -1,11 +1,11 @@
-part of "../../model/script/writing_system.dart";
+part of "../../model/script/submodels/script.dart";
 
 extension type const _SogoFactory._(ScriptSogo _) implements ScriptSogo {
   const _SogoFactory() : this._(const ScriptSogo._());
 }
 
 /// A class that represents the Old Sogdian script.
-class ScriptSogo extends Script {
+final class ScriptSogo extends Script {
   /// {@template sealed_world.script_sogo_constructor}
   /// Creates a instance of [ScriptSogo] (Old Sogdian script).
   ///
@@ -14,7 +14,7 @@ class ScriptSogo extends Script {
   const factory ScriptSogo() = _SogoFactory;
 
   const ScriptSogo._()
-    : super(
+    : super._(
         name: "Old Sogdian",
         code: "Sogo",
         codeNumeric: "142",

@@ -1,11 +1,11 @@
-part of "../../model/script/writing_system.dart";
+part of "../../model/script/submodels/script.dart";
 
 extension type const _LinaFactory._(ScriptLina _) implements ScriptLina {
   const _LinaFactory() : this._(const ScriptLina._());
 }
 
 /// A class that represents the Linear A script.
-class ScriptLina extends Script {
+final class ScriptLina extends Script {
   /// {@template sealed_world.script_lina_constructor}
   /// Creates a instance of [ScriptLina] (Linear A script).
   ///
@@ -14,7 +14,7 @@ class ScriptLina extends Script {
   const factory ScriptLina() = _LinaFactory;
 
   const ScriptLina._()
-    : super(
+    : super._(
         name: "Linear A",
         code: "Lina",
         codeNumeric: "400",

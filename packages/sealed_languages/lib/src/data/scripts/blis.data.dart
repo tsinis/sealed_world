@@ -1,11 +1,11 @@
-part of "../../model/script/writing_system.dart";
+part of "../../model/script/submodels/script.dart";
 
 extension type const _BlisFactory._(ScriptBlis _) implements ScriptBlis {
   const _BlisFactory() : this._(const ScriptBlis._());
 }
 
 /// A class that represents the Blissymbols script.
-class ScriptBlis extends Script {
+final class ScriptBlis extends Script {
   /// {@template sealed_world.script_blis_constructor}
   /// Creates a instance of [ScriptBlis] (Blissymbols script).
   ///
@@ -14,7 +14,7 @@ class ScriptBlis extends Script {
   const factory ScriptBlis() = _BlisFactory;
 
   const ScriptBlis._()
-    : super(
+    : super._(
         name: "Blissymbols",
         code: "Blis",
         codeNumeric: "550",

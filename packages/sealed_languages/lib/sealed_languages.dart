@@ -30,6 +30,7 @@ export "src/model/core/upper_case_map.dart";
 export "src/model/language/language.dart";
 export "src/model/language_family/language_family.dart";
 export "src/model/language_family/submodels/natural_language_family.dart";
+export "src/model/script/submodels/script.dart";
 export "src/model/script/writing_system.dart";
 export "src/model/translated_name.dart";
 export "src/typedefs/typedefs.dart";

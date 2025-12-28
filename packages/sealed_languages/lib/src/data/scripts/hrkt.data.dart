@@ -1,11 +1,11 @@
-part of "../../model/script/writing_system.dart";
+part of "../../model/script/submodels/script.dart";
 
 extension type const _HrktFactory._(ScriptHrkt _) implements ScriptHrkt {
   const _HrktFactory() : this._(const ScriptHrkt._());
 }
 
 /// A class that represents the Japanese syllabaries (alias for Hiragana + Katakana) script.
-class ScriptHrkt extends Script {
+final class ScriptHrkt extends Script {
   /// {@template sealed_world.script_hrkt_constructor}
   /// Creates a instance of [ScriptHrkt] (Japanese syllabaries (alias for Hiragana + Katakana) script).
   ///
@@ -14,7 +14,7 @@ class ScriptHrkt extends Script {
   const factory ScriptHrkt() = _HrktFactory;
 
   const ScriptHrkt._()
-    : super(
+    : super._(
         name: "Japanese syllabaries (alias for Hiragana + Katakana)",
         code: "Hrkt",
         codeNumeric: "412",

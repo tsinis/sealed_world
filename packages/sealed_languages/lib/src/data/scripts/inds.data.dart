@@ -1,11 +1,11 @@
-part of "../../model/script/writing_system.dart";
+part of "../../model/script/submodels/script.dart";
 
 extension type const _IndsFactory._(ScriptInds _) implements ScriptInds {
   const _IndsFactory() : this._(const ScriptInds._());
 }
 
 /// A class that represents the Indus (Harappan) script.
-class ScriptInds extends Script {
+final class ScriptInds extends Script {
   /// {@template sealed_world.script_inds_constructor}
   /// Creates a instance of [ScriptInds] (Indus (Harappan) script).
   ///
@@ -14,7 +14,7 @@ class ScriptInds extends Script {
   const factory ScriptInds() = _IndsFactory;
 
   const ScriptInds._()
-    : super(
+    : super._(
         name: "Indus (Harappan)",
         code: "Inds",
         codeNumeric: "610",

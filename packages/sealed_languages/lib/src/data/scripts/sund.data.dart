@@ -1,11 +1,11 @@
-part of "../../model/script/writing_system.dart";
+part of "../../model/script/submodels/script.dart";
 
 extension type const _SundFactory._(ScriptSund _) implements ScriptSund {
   const _SundFactory() : this._(const ScriptSund._());
 }
 
 /// A class that represents the Sundanese script.
-class ScriptSund extends Script {
+final class ScriptSund extends Script {
   /// {@template sealed_world.script_sund_constructor}
   /// Creates a instance of [ScriptSund] (Sundanese script).
   ///
@@ -14,7 +14,7 @@ class ScriptSund extends Script {
   const factory ScriptSund() = _SundFactory;
 
   const ScriptSund._()
-    : super(
+    : super._(
         name: "Sundanese",
         code: "Sund",
         codeNumeric: "362",

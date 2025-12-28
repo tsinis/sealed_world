@@ -1,11 +1,11 @@
-part of "../../model/script/writing_system.dart";
+part of "../../model/script/submodels/script.dart";
 
 extension type const _TagbFactory._(ScriptTagb _) implements ScriptTagb {
   const _TagbFactory() : this._(const ScriptTagb._());
 }
 
 /// A class that represents the Tagbanwa script.
-class ScriptTagb extends Script {
+final class ScriptTagb extends Script {
   /// {@template sealed_world.script_tagb_constructor}
   /// Creates a instance of [ScriptTagb] (Tagbanwa script).
   ///
@@ -14,7 +14,7 @@ class ScriptTagb extends Script {
   const factory ScriptTagb() = _TagbFactory;
 
   const ScriptTagb._()
-    : super(
+    : super._(
         name: "Tagbanwa",
         code: "Tagb",
         codeNumeric: "373",

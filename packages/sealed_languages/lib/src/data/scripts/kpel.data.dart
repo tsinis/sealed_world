@@ -1,11 +1,11 @@
-part of "../../model/script/writing_system.dart";
+part of "../../model/script/submodels/script.dart";
 
 extension type const _KpelFactory._(ScriptKpel _) implements ScriptKpel {
   const _KpelFactory() : this._(const ScriptKpel._());
 }
 
 /// A class that represents the Kpelle script.
-class ScriptKpel extends Script {
+final class ScriptKpel extends Script {
   /// {@template sealed_world.script_kpel_constructor}
   /// Creates a instance of [ScriptKpel] (Kpelle script).
   ///
@@ -14,7 +14,7 @@ class ScriptKpel extends Script {
   const factory ScriptKpel() = _KpelFactory;
 
   const ScriptKpel._()
-    : super(
+    : super._(
         name: "Kpelle",
         code: "Kpel",
         codeNumeric: "436",

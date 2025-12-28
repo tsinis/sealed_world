@@ -1,11 +1,11 @@
-part of "../../model/script/writing_system.dart";
+part of "../../model/script/submodels/script.dart";
 
 extension type const _DiakFactory._(ScriptDiak _) implements ScriptDiak {
   const _DiakFactory() : this._(const ScriptDiak._());
 }
 
 /// A class that represents the Dives Akuru script.
-class ScriptDiak extends Script {
+final class ScriptDiak extends Script {
   /// {@template sealed_world.script_diak_constructor}
   /// Creates a instance of [ScriptDiak] (Dives Akuru script).
   ///
@@ -14,7 +14,7 @@ class ScriptDiak extends Script {
   const factory ScriptDiak() = _DiakFactory;
 
   const ScriptDiak._()
-    : super(
+    : super._(
         name: "Dives Akuru",
         code: "Diak",
         codeNumeric: "342",

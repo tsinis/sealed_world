@@ -1,11 +1,11 @@
-part of "../../model/script/writing_system.dart";
+part of "../../model/script/submodels/script.dart";
 
 extension type const _OsmaFactory._(ScriptOsma _) implements ScriptOsma {
   const _OsmaFactory() : this._(const ScriptOsma._());
 }
 
 /// A class that represents the Osmanya script.
-class ScriptOsma extends Script {
+final class ScriptOsma extends Script {
   /// {@template sealed_world.script_osma_constructor}
   /// Creates a instance of [ScriptOsma] (Osmanya script).
   ///
@@ -14,7 +14,7 @@ class ScriptOsma extends Script {
   const factory ScriptOsma() = _OsmaFactory;
 
   const ScriptOsma._()
-    : super(
+    : super._(
         name: "Osmanya",
         code: "Osma",
         codeNumeric: "260",

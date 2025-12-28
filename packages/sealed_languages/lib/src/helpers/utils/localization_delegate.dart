@@ -1,7 +1,7 @@
 import "../../interfaces/basic_localization_delegate.dart";
 import "../../model/core/basic_locale.dart";
 import "../../model/language/language.dart";
-import "../../model/script/writing_system.dart";
+import "../../model/script/submodels/script.dart";
 import "../../model/translated_name.dart";
 import "../../typedefs/typedefs.dart";
 import "../extensions/basic_locale_extension.dart";

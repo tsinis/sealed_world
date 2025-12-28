@@ -1,11 +1,11 @@
-part of "../../model/script/writing_system.dart";
+part of "../../model/script/submodels/script.dart";
 
 extension type const _QaaaFactory._(ScriptQaaa _) implements ScriptQaaa {
   const _QaaaFactory() : this._(const ScriptQaaa._());
 }
 
 /// A class that represents the Reserved for private use (start) script.
-class ScriptQaaa extends Script {
+final class ScriptQaaa extends Script {
   /// {@template sealed_world.script_qaaa_constructor}
   /// Creates a instance of [ScriptQaaa] (Reserved for private use (start) script).
   ///
@@ -14,7 +14,7 @@ class ScriptQaaa extends Script {
   const factory ScriptQaaa() = _QaaaFactory;
 
   const ScriptQaaa._()
-    : super(
+    : super._(
         name: "Reserved for private use (start)",
         code: "Qaaa",
         codeNumeric: "900",

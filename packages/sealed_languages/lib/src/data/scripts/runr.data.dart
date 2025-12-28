@@ -1,11 +1,11 @@
-part of "../../model/script/writing_system.dart";
+part of "../../model/script/submodels/script.dart";
 
 extension type const _RunrFactory._(ScriptRunr _) implements ScriptRunr {
   const _RunrFactory() : this._(const ScriptRunr._());
 }
 
 /// A class that represents the Runic script.
-class ScriptRunr extends Script {
+final class ScriptRunr extends Script {
   /// {@template sealed_world.script_runr_constructor}
   /// Creates a instance of [ScriptRunr] (Runic script).
   ///
@@ -14,7 +14,7 @@ class ScriptRunr extends Script {
   const factory ScriptRunr() = _RunrFactory;
 
   const ScriptRunr._()
-    : super(
+    : super._(
         name: "Runic",
         code: "Runr",
         codeNumeric: "211",

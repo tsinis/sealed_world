@@ -1,11 +1,11 @@
-part of "../../model/script/writing_system.dart";
+part of "../../model/script/submodels/script.dart";
 
 extension type const _KaliFactory._(ScriptKali _) implements ScriptKali {
   const _KaliFactory() : this._(const ScriptKali._());
 }
 
 /// A class that represents the Kayah Li script.
-class ScriptKali extends Script {
+final class ScriptKali extends Script {
   /// {@template sealed_world.script_kali_constructor}
   /// Creates a instance of [ScriptKali] (Kayah Li script).
   ///
@@ -14,7 +14,7 @@ class ScriptKali extends Script {
   const factory ScriptKali() = _KaliFactory;
 
   const ScriptKali._()
-    : super(
+    : super._(
         name: "Kayah Li",
         code: "Kali",
         codeNumeric: "357",

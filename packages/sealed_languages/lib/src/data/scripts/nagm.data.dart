@@ -1,11 +1,11 @@
-part of "../../model/script/writing_system.dart";
+part of "../../model/script/submodels/script.dart";
 
 extension type const _NagmFactory._(ScriptNagm _) implements ScriptNagm {
   const _NagmFactory() : this._(const ScriptNagm._());
 }
 
 /// A class that represents the Nag Mundari script.
-class ScriptNagm extends Script {
+final class ScriptNagm extends Script {
   /// {@template sealed_world.script_nagm_constructor}
   /// Creates a instance of [ScriptNagm] (Nag Mundari script).
   ///
@@ -14,7 +14,7 @@ class ScriptNagm extends Script {
   const factory ScriptNagm() = _NagmFactory;
 
   const ScriptNagm._()
-    : super(
+    : super._(
         name: "Nag Mundari",
         code: "Nagm",
         codeNumeric: "295",

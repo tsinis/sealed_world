@@ -1,11 +1,11 @@
-part of "../../model/script/writing_system.dart";
+part of "../../model/script/submodels/script.dart";
 
 extension type const _HanoFactory._(ScriptHano _) implements ScriptHano {
   const _HanoFactory() : this._(const ScriptHano._());
 }
 
 /// A class that represents the Hanunoo (Hanunóo) script.
-class ScriptHano extends Script {
+final class ScriptHano extends Script {
   /// {@template sealed_world.script_hano_constructor}
   /// Creates a instance of [ScriptHano] (Hanunoo (Hanunóo) script).
   ///
@@ -14,7 +14,7 @@ class ScriptHano extends Script {
   const factory ScriptHano() = _HanoFactory;
 
   const ScriptHano._()
-    : super(
+    : super._(
         name: "Hanunoo (Hanunóo)",
         code: "Hano",
         codeNumeric: "371",

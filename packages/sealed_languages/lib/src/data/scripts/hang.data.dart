@@ -1,11 +1,11 @@
-part of "../../model/script/writing_system.dart";
+part of "../../model/script/submodels/script.dart";
 
 extension type const _HangFactory._(ScriptHang _) implements ScriptHang {
   const _HangFactory() : this._(const ScriptHang._());
 }
 
 /// A class that represents the Hangul (Hangŭl, Hangeul) script.
-class ScriptHang extends Script {
+final class ScriptHang extends Script {
   /// {@template sealed_world.script_hang_constructor}
   /// Creates a instance of [ScriptHang] (Hangul (Hangŭl, Hangeul) script).
   ///
@@ -14,7 +14,7 @@ class ScriptHang extends Script {
   const factory ScriptHang() = _HangFactory;
 
   const ScriptHang._()
-    : super(
+    : super._(
         name: "Hangul (Hangŭl, Hangeul)",
         code: "Hang",
         codeNumeric: "286",

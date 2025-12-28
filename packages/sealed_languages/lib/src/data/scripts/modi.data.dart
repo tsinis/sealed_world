@@ -1,11 +1,11 @@
-part of "../../model/script/writing_system.dart";
+part of "../../model/script/submodels/script.dart";
 
 extension type const _ModiFactory._(ScriptModi _) implements ScriptModi {
   const _ModiFactory() : this._(const ScriptModi._());
 }
 
 /// A class that represents the Modi, Moḍī script.
-class ScriptModi extends Script {
+final class ScriptModi extends Script {
   /// {@template sealed_world.script_modi_constructor}
   /// Creates a instance of [ScriptModi] (Modi, Moḍī script).
   ///
@@ -14,7 +14,7 @@ class ScriptModi extends Script {
   const factory ScriptModi() = _ModiFactory;
 
   const ScriptModi._()
-    : super(
+    : super._(
         name: "Modi, Moḍī",
         code: "Modi",
         codeNumeric: "324",

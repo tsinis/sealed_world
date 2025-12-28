@@ -1,11 +1,11 @@
-part of "../../model/script/writing_system.dart";
+part of "../../model/script/submodels/script.dart";
 
 extension type const _EgydFactory._(ScriptEgyd _) implements ScriptEgyd {
   const _EgydFactory() : this._(const ScriptEgyd._());
 }
 
 /// A class that represents the Egyptian demotic script.
-class ScriptEgyd extends Script {
+final class ScriptEgyd extends Script {
   /// {@template sealed_world.script_egyd_constructor}
   /// Creates a instance of [ScriptEgyd] (Egyptian demotic script).
   ///
@@ -14,7 +14,7 @@ class ScriptEgyd extends Script {
   const factory ScriptEgyd() = _EgydFactory;
 
   const ScriptEgyd._()
-    : super(
+    : super._(
         name: "Egyptian demotic",
         code: "Egyd",
         codeNumeric: "070",

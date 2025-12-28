@@ -1,11 +1,11 @@
-part of "../../model/script/writing_system.dart";
+part of "../../model/script/submodels/script.dart";
 
 extension type const _TengFactory._(ScriptTeng _) implements ScriptTeng {
   const _TengFactory() : this._(const ScriptTeng._());
 }
 
 /// A class that represents the Tengwar script.
-class ScriptTeng extends Script {
+final class ScriptTeng extends Script {
   /// {@template sealed_world.script_teng_constructor}
   /// Creates a instance of [ScriptTeng] (Tengwar script).
   ///
@@ -14,7 +14,7 @@ class ScriptTeng extends Script {
   const factory ScriptTeng() = _TengFactory;
 
   const ScriptTeng._()
-    : super(
+    : super._(
         name: "Tengwar",
         code: "Teng",
         codeNumeric: "290",

@@ -1,11 +1,11 @@
-part of "../../model/script/writing_system.dart";
+part of "../../model/script/submodels/script.dart";
 
 extension type const _WaraFactory._(ScriptWara _) implements ScriptWara {
   const _WaraFactory() : this._(const ScriptWara._());
 }
 
 /// A class that represents the Warang Citi (Varang Kshiti) script.
-class ScriptWara extends Script {
+final class ScriptWara extends Script {
   /// {@template sealed_world.script_wara_constructor}
   /// Creates a instance of [ScriptWara] (Warang Citi (Varang Kshiti) script).
   ///
@@ -14,7 +14,7 @@ class ScriptWara extends Script {
   const factory ScriptWara() = _WaraFactory;
 
   const ScriptWara._()
-    : super(
+    : super._(
         name: "Warang Citi (Varang Kshiti)",
         code: "Wara",
         codeNumeric: "262",

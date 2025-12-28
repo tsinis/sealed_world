@@ -1,11 +1,11 @@
-part of "../../model/script/writing_system.dart";
+part of "../../model/script/submodels/script.dart";
 
 extension type const _PlrdFactory._(ScriptPlrd _) implements ScriptPlrd {
   const _PlrdFactory() : this._(const ScriptPlrd._());
 }
 
 /// A class that represents the Miao (Pollard) script.
-class ScriptPlrd extends Script {
+final class ScriptPlrd extends Script {
   /// {@template sealed_world.script_plrd_constructor}
   /// Creates a instance of [ScriptPlrd] (Miao (Pollard) script).
   ///
@@ -14,7 +14,7 @@ class ScriptPlrd extends Script {
   const factory ScriptPlrd() = _PlrdFactory;
 
   const ScriptPlrd._()
-    : super(
+    : super._(
         name: "Miao (Pollard)",
         code: "Plrd",
         codeNumeric: "282",

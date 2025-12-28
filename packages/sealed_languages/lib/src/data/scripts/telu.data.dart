@@ -1,11 +1,11 @@
-part of "../../model/script/writing_system.dart";
+part of "../../model/script/submodels/script.dart";
 
 extension type const _TeluFactory._(ScriptTelu _) implements ScriptTelu {
   const _TeluFactory() : this._(const ScriptTelu._());
 }
 
 /// A class that represents the Telugu script.
-class ScriptTelu extends Script {
+final class ScriptTelu extends Script {
   /// {@template sealed_world.script_telu_constructor}
   /// Creates a instance of [ScriptTelu] (Telugu script).
   ///
@@ -14,7 +14,7 @@ class ScriptTelu extends Script {
   const factory ScriptTelu() = _TeluFactory;
 
   const ScriptTelu._()
-    : super(
+    : super._(
         name: "Telugu",
         code: "Telu",
         codeNumeric: "340",

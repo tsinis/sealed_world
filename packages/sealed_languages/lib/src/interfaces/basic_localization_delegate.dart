@@ -5,7 +5,7 @@ import "../helpers/extensions/locale_mapping_options_extension.dart";
 import "../model/core/basic_locale.dart";
 import "../model/core/locale_mapping_options.dart";
 import "../model/language/language.dart";
-import "../model/script/writing_system.dart";
+import "../model/script/submodels/script.dart";
 import "../model/translated_name.dart";
 import "../typedefs/typedefs.dart";
 import "iso_standardized.dart";

@@ -1,11 +1,11 @@
-part of "../../model/script/writing_system.dart";
+part of "../../model/script/submodels/script.dart";
 
 extension type const _CprtFactory._(ScriptCprt _) implements ScriptCprt {
   const _CprtFactory() : this._(const ScriptCprt._());
 }
 
 /// A class that represents the Cypriot syllabary script.
-class ScriptCprt extends Script {
+final class ScriptCprt extends Script {
   /// {@template sealed_world.script_cprt_constructor}
   /// Creates a instance of [ScriptCprt] (Cypriot syllabary script).
   ///
@@ -14,7 +14,7 @@ class ScriptCprt extends Script {
   const factory ScriptCprt() = _CprtFactory;
 
   const ScriptCprt._()
-    : super(
+    : super._(
         name: "Cypriot syllabary",
         code: "Cprt",
         codeNumeric: "403",

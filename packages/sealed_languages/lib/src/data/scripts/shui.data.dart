@@ -1,11 +1,11 @@
-part of "../../model/script/writing_system.dart";
+part of "../../model/script/submodels/script.dart";
 
 extension type const _ShuiFactory._(ScriptShui _) implements ScriptShui {
   const _ShuiFactory() : this._(const ScriptShui._());
 }
 
 /// A class that represents the Shuishu script.
-class ScriptShui extends Script {
+final class ScriptShui extends Script {
   /// {@template sealed_world.script_shui_constructor}
   /// Creates a instance of [ScriptShui] (Shuishu script).
   ///
@@ -14,7 +14,7 @@ class ScriptShui extends Script {
   const factory ScriptShui() = _ShuiFactory;
 
   const ScriptShui._()
-    : super(
+    : super._(
         name: "Shuishu",
         code: "Shui",
         codeNumeric: "530",

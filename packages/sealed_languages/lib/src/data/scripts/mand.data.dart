@@ -1,11 +1,11 @@
-part of "../../model/script/writing_system.dart";
+part of "../../model/script/submodels/script.dart";
 
 extension type const _MandFactory._(ScriptMand _) implements ScriptMand {
   const _MandFactory() : this._(const ScriptMand._());
 }
 
 /// A class that represents the Mandaic, Mandaean script.
-class ScriptMand extends Script {
+final class ScriptMand extends Script {
   /// {@template sealed_world.script_mand_constructor}
   /// Creates a instance of [ScriptMand] (Mandaic, Mandaean script).
   ///
@@ -14,7 +14,7 @@ class ScriptMand extends Script {
   const factory ScriptMand() = _MandFactory;
 
   const ScriptMand._()
-    : super(
+    : super._(
         name: "Mandaic, Mandaean",
         code: "Mand",
         codeNumeric: "140",

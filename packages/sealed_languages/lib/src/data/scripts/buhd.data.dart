@@ -1,11 +1,11 @@
-part of "../../model/script/writing_system.dart";
+part of "../../model/script/submodels/script.dart";
 
 extension type const _BuhdFactory._(ScriptBuhd _) implements ScriptBuhd {
   const _BuhdFactory() : this._(const ScriptBuhd._());
 }
 
 /// A class that represents the Buhid script.
-class ScriptBuhd extends Script {
+final class ScriptBuhd extends Script {
   /// {@template sealed_world.script_buhd_constructor}
   /// Creates a instance of [ScriptBuhd] (Buhid script).
   ///
@@ -14,7 +14,7 @@ class ScriptBuhd extends Script {
   const factory ScriptBuhd() = _BuhdFactory;
 
   const ScriptBuhd._()
-    : super(
+    : super._(
         name: "Buhid",
         code: "Buhd",
         codeNumeric: "372",

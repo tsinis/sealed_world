@@ -1,11 +1,11 @@
-part of "../../model/script/writing_system.dart";
+part of "../../model/script/submodels/script.dart";
 
 extension type const _MeroFactory._(ScriptMero _) implements ScriptMero {
   const _MeroFactory() : this._(const ScriptMero._());
 }
 
 /// A class that represents the Meroitic Hieroglyphs script.
-class ScriptMero extends Script {
+final class ScriptMero extends Script {
   /// {@template sealed_world.script_mero_constructor}
   /// Creates a instance of [ScriptMero] (Meroitic Hieroglyphs script).
   ///
@@ -14,7 +14,7 @@ class ScriptMero extends Script {
   const factory ScriptMero() = _MeroFactory;
 
   const ScriptMero._()
-    : super(
+    : super._(
         name: "Meroitic Hieroglyphs",
         code: "Mero",
         codeNumeric: "100",

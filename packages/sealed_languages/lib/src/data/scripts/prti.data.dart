@@ -1,11 +1,11 @@
-part of "../../model/script/writing_system.dart";
+part of "../../model/script/submodels/script.dart";
 
 extension type const _PrtiFactory._(ScriptPrti _) implements ScriptPrti {
   const _PrtiFactory() : this._(const ScriptPrti._());
 }
 
 /// A class that represents the Inscriptional Parthian script.
-class ScriptPrti extends Script {
+final class ScriptPrti extends Script {
   /// {@template sealed_world.script_prti_constructor}
   /// Creates a instance of [ScriptPrti] (Inscriptional Parthian script).
   ///
@@ -14,7 +14,7 @@ class ScriptPrti extends Script {
   const factory ScriptPrti() = _PrtiFactory;
 
   const ScriptPrti._()
-    : super(
+    : super._(
         name: "Inscriptional Parthian",
         code: "Prti",
         codeNumeric: "130",

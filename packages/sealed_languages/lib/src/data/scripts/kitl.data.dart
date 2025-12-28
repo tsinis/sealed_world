@@ -1,11 +1,11 @@
-part of "../../model/script/writing_system.dart";
+part of "../../model/script/submodels/script.dart";
 
 extension type const _KitlFactory._(ScriptKitl _) implements ScriptKitl {
   const _KitlFactory() : this._(const ScriptKitl._());
 }
 
 /// A class that represents the Khitan large script script.
-class ScriptKitl extends Script {
+final class ScriptKitl extends Script {
   /// {@template sealed_world.script_kitl_constructor}
   /// Creates a instance of [ScriptKitl] (Khitan large script script).
   ///
@@ -14,7 +14,7 @@ class ScriptKitl extends Script {
   const factory ScriptKitl() = _KitlFactory;
 
   const ScriptKitl._()
-    : super(
+    : super._(
         name: "Khitan large script",
         code: "Kitl",
         codeNumeric: "505",

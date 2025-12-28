@@ -1,11 +1,11 @@
-part of "../../model/script/writing_system.dart";
+part of "../../model/script/submodels/script.dart";
 
 extension type const _ZzzzFactory._(ScriptZzzz _) implements ScriptZzzz {
   const _ZzzzFactory() : this._(const ScriptZzzz._());
 }
 
 /// A class that represents the Code for uncoded script script.
-class ScriptZzzz extends Script {
+final class ScriptZzzz extends Script {
   /// {@template sealed_world.script_zzzz_constructor}
   /// Creates a instance of [ScriptZzzz] (Code for uncoded script script).
   ///
@@ -14,7 +14,7 @@ class ScriptZzzz extends Script {
   const factory ScriptZzzz() = _ZzzzFactory;
 
   const ScriptZzzz._()
-    : super(
+    : super._(
         name: "Code for uncoded script",
         code: "Zzzz",
         codeNumeric: "999",

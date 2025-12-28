@@ -14,7 +14,7 @@ import "../../typedefs/typedefs.dart" show LocaleMapFunction;
 import "../core/basic_locale.dart";
 import "../core/upper_case_iso_map.dart";
 import "../language_family/submodels/natural_language_family.dart";
-import "../script/writing_system.dart";
+import "../script/submodels/script.dart";
 import "../translated_name.dart";
 
 part "../../data/languages/aar.data.dart";

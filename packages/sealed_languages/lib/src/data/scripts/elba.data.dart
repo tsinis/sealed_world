@@ -1,11 +1,11 @@
-part of "../../model/script/writing_system.dart";
+part of "../../model/script/submodels/script.dart";
 
 extension type const _ElbaFactory._(ScriptElba _) implements ScriptElba {
   const _ElbaFactory() : this._(const ScriptElba._());
 }
 
 /// A class that represents the Elbasan script.
-class ScriptElba extends Script {
+final class ScriptElba extends Script {
   /// {@template sealed_world.script_elba_constructor}
   /// Creates a instance of [ScriptElba] (Elbasan script).
   ///
@@ -14,7 +14,7 @@ class ScriptElba extends Script {
   const factory ScriptElba() = _ElbaFactory;
 
   const ScriptElba._()
-    : super(
+    : super._(
         name: "Elbasan",
         code: "Elba",
         codeNumeric: "226",

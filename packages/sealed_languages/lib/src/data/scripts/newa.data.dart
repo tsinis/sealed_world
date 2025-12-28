@@ -1,11 +1,11 @@
-part of "../../model/script/writing_system.dart";
+part of "../../model/script/submodels/script.dart";
 
 extension type const _NewaFactory._(ScriptNewa _) implements ScriptNewa {
   const _NewaFactory() : this._(const ScriptNewa._());
 }
 
 /// A class that represents the Newa, Newar, Newari, Nepāla lipi script.
-class ScriptNewa extends Script {
+final class ScriptNewa extends Script {
   /// {@template sealed_world.script_newa_constructor}
   /// Creates a instance of [ScriptNewa] (Newa, Newar, Newari, Nepāla lipi script).
   ///
@@ -14,7 +14,7 @@ class ScriptNewa extends Script {
   const factory ScriptNewa() = _NewaFactory;
 
   const ScriptNewa._()
-    : super(
+    : super._(
         name: "Newa, Newar, Newari, Nepāla lipi",
         code: "Newa",
         codeNumeric: "333",

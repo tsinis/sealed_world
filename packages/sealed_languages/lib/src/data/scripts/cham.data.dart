@@ -1,11 +1,11 @@
-part of "../../model/script/writing_system.dart";
+part of "../../model/script/submodels/script.dart";
 
 extension type const _ChamFactory._(ScriptCham _) implements ScriptCham {
   const _ChamFactory() : this._(const ScriptCham._());
 }
 
 /// A class that represents the Cham script.
-class ScriptCham extends Script {
+final class ScriptCham extends Script {
   /// {@template sealed_world.script_cham_constructor}
   /// Creates a instance of [ScriptCham] (Cham script).
   ///
@@ -14,7 +14,7 @@ class ScriptCham extends Script {
   const factory ScriptCham() = _ChamFactory;
 
   const ScriptCham._()
-    : super(
+    : super._(
         name: "Cham",
         code: "Cham",
         codeNumeric: "358",

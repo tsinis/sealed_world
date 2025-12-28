@@ -1,11 +1,11 @@
-part of "../../model/script/writing_system.dart";
+part of "../../model/script/submodels/script.dart";
 
 extension type const _PcunFactory._(ScriptPcun _) implements ScriptPcun {
   const _PcunFactory() : this._(const ScriptPcun._());
 }
 
 /// A class that represents the Proto-Cuneiform script.
-class ScriptPcun extends Script {
+final class ScriptPcun extends Script {
   /// {@template sealed_world.script_pcun_constructor}
   /// Creates a instance of [ScriptPcun] (Proto-Cuneiform script).
   ///
@@ -14,7 +14,7 @@ class ScriptPcun extends Script {
   const factory ScriptPcun() = _PcunFactory;
 
   const ScriptPcun._()
-    : super(
+    : super._(
         name: "Proto-Cuneiform",
         code: "Pcun",
         codeNumeric: "015",

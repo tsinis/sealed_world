@@ -1,11 +1,11 @@
-part of "../../model/script/writing_system.dart";
+part of "../../model/script/submodels/script.dart";
 
 extension type const _MymrFactory._(ScriptMymr _) implements ScriptMymr {
   const _MymrFactory() : this._(const ScriptMymr._());
 }
 
 /// A class that represents the Myanmar (Burmese) script.
-class ScriptMymr extends Script {
+final class ScriptMymr extends Script {
   /// {@template sealed_world.script_mymr_constructor}
   /// Creates a instance of [ScriptMymr] (Myanmar (Burmese) script).
   ///
@@ -14,7 +14,7 @@ class ScriptMymr extends Script {
   const factory ScriptMymr() = _MymrFactory;
 
   const ScriptMymr._()
-    : super(
+    : super._(
         name: "Myanmar (Burmese)",
         code: "Mymr",
         codeNumeric: "350",

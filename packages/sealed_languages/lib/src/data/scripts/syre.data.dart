@@ -1,11 +1,11 @@
-part of "../../model/script/writing_system.dart";
+part of "../../model/script/submodels/script.dart";
 
 extension type const _SyreFactory._(ScriptSyre _) implements ScriptSyre {
   const _SyreFactory() : this._(const ScriptSyre._());
 }
 
 /// A class that represents the Syriac (Estrangelo variant) script.
-class ScriptSyre extends Script {
+final class ScriptSyre extends Script {
   /// {@template sealed_world.script_syre_constructor}
   /// Creates a instance of [ScriptSyre] (Syriac (Estrangelo variant) script).
   ///
@@ -14,7 +14,7 @@ class ScriptSyre extends Script {
   const factory ScriptSyre() = _SyreFactory;
 
   const ScriptSyre._()
-    : super(
+    : super._(
         name: "Syriac (Estrangelo variant)",
         code: "Syre",
         codeNumeric: "138",

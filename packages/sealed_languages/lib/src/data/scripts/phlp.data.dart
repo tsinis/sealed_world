@@ -1,11 +1,11 @@
-part of "../../model/script/writing_system.dart";
+part of "../../model/script/submodels/script.dart";
 
 extension type const _PhlpFactory._(ScriptPhlp _) implements ScriptPhlp {
   const _PhlpFactory() : this._(const ScriptPhlp._());
 }
 
 /// A class that represents the Psalter Pahlavi script.
-class ScriptPhlp extends Script {
+final class ScriptPhlp extends Script {
   /// {@template sealed_world.script_phlp_constructor}
   /// Creates a instance of [ScriptPhlp] (Psalter Pahlavi script).
   ///
@@ -14,7 +14,7 @@ class ScriptPhlp extends Script {
   const factory ScriptPhlp() = _PhlpFactory;
 
   const ScriptPhlp._()
-    : super(
+    : super._(
         name: "Psalter Pahlavi",
         code: "Phlp",
         codeNumeric: "132",

@@ -1,11 +1,11 @@
-part of "../../model/script/writing_system.dart";
+part of "../../model/script/submodels/script.dart";
 
 extension type const _LanaFactory._(ScriptLana _) implements ScriptLana {
   const _LanaFactory() : this._(const ScriptLana._());
 }
 
 /// A class that represents the Tai Tham (Lanna) script.
-class ScriptLana extends Script {
+final class ScriptLana extends Script {
   /// {@template sealed_world.script_lana_constructor}
   /// Creates a instance of [ScriptLana] (Tai Tham (Lanna) script).
   ///
@@ -14,7 +14,7 @@ class ScriptLana extends Script {
   const factory ScriptLana() = _LanaFactory;
 
   const ScriptLana._()
-    : super(
+    : super._(
         name: "Tai Tham (Lanna)",
         code: "Lana",
         codeNumeric: "351",

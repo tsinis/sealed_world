@@ -1,11 +1,11 @@
-part of "../../model/script/writing_system.dart";
+part of "../../model/script/submodels/script.dart";
 
 extension type const _GuruFactory._(ScriptGuru _) implements ScriptGuru {
   const _GuruFactory() : this._(const ScriptGuru._());
 }
 
 /// A class that represents the Gurmukhi script.
-class ScriptGuru extends Script {
+final class ScriptGuru extends Script {
   /// {@template sealed_world.script_guru_constructor}
   /// Creates a instance of [ScriptGuru] (Gurmukhi script).
   ///
@@ -14,7 +14,7 @@ class ScriptGuru extends Script {
   const factory ScriptGuru() = _GuruFactory;
 
   const ScriptGuru._()
-    : super(
+    : super._(
         name: "Gurmukhi",
         code: "Guru",
         codeNumeric: "310",

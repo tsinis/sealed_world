@@ -1,11 +1,11 @@
-part of "../../model/script/writing_system.dart";
+part of "../../model/script/submodels/script.dart";
 
 extension type const _SunuFactory._(ScriptSunu _) implements ScriptSunu {
   const _SunuFactory() : this._(const ScriptSunu._());
 }
 
 /// A class that represents the Sunuwar script.
-class ScriptSunu extends Script {
+final class ScriptSunu extends Script {
   /// {@template sealed_world.script_sunu_constructor}
   /// Creates a instance of [ScriptSunu] (Sunuwar script).
   ///
@@ -14,7 +14,7 @@ class ScriptSunu extends Script {
   const factory ScriptSunu() = _SunuFactory;
 
   const ScriptSunu._()
-    : super(
+    : super._(
         name: "Sunuwar",
         code: "Sunu",
         codeNumeric: "274",

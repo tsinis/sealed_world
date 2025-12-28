@@ -1,11 +1,11 @@
-part of "../../model/script/writing_system.dart";
+part of "../../model/script/submodels/script.dart";
 
 extension type const _TakrFactory._(ScriptTakr _) implements ScriptTakr {
   const _TakrFactory() : this._(const ScriptTakr._());
 }
 
 /// A class that represents the Takri, Ṭākrī, Ṭāṅkrī script.
-class ScriptTakr extends Script {
+final class ScriptTakr extends Script {
   /// {@template sealed_world.script_takr_constructor}
   /// Creates a instance of [ScriptTakr] (Takri, Ṭākrī, Ṭāṅkrī script).
   ///
@@ -14,7 +14,7 @@ class ScriptTakr extends Script {
   const factory ScriptTakr() = _TakrFactory;
 
   const ScriptTakr._()
-    : super(
+    : super._(
         name: "Takri, Ṭākrī, Ṭāṅkrī",
         code: "Takr",
         codeNumeric: "321",
