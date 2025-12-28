@@ -12,9 +12,9 @@ final class LangCustom extends NaturalLanguage {
     super.codeShort,
     super.namesNative,
     super.bibliographicCode,
-    super.family = const IndoEuropean(),
-    super.isRightToLeft = false,
-    super.scripts = const {ScriptLatn()},
+    super.family,
+    super.isRightToLeft,
+    super.scripts,
     super.mapper,
   }) : super._permissive();
 }

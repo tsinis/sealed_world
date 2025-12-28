@@ -18,6 +18,5 @@ class LanguageFamily implements Named<String> {
 
   /// Returns a string representation of this [LanguageFamily] object.
   @override
-  String toString({bool short = true}) =>
-      short ? name : 'LanguageFamily(name: "$name")';
+  String toString({bool short = true}) => 'LanguageFamily(name: "$name")';
 }

@@ -4,7 +4,7 @@ part of "../../model/script/submodels/script.dart";
 final class ScriptCustom extends Script {
   /// Creates a custom instance of [Script] (non-standard, custom script).
   const ScriptCustom({
-    required super.code,
+    super.code,
     super.name,
     super.codeNumeric,
     super.date,

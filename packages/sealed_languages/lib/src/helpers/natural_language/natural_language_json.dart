@@ -42,17 +42,17 @@ extension NaturalLanguageJson on NaturalLanguage {
   /// final english = NaturalLanguageJson.fromMap(jsonMap);
   /// ```
   static NaturalLanguage fromMap(JsonMap map) {
-    final code = map["code"]?.toString();
-    final codeShort = map["codeShort"]?.toString();
-    if (code == null && codeShort == null) {
+    final code = map["code"]?.toString().trim() ?? "";
+    final codeShort = map["codeShort"]?.toString().trim() ?? "";
+    if (code.isEmpty && codeShort.isEmpty) {
       throw ArgumentError(
         "The `code` (or at least `codeShort`) must be provided!",
       );
     }
 
-    return LangCustom(code: code ?? "", codeShort: codeShort ?? "").copyWith(
+    return LangCustom(code: code, codeShort: codeShort).copyWith(
       name: map["name"]?.toString(),
-      namesNative: List<String>.unmodifiable(map["namesNative"] as List),
+      namesNative: List<String>.unmodifiable(map["namesNative"]),
       bibliographicCode: map["bibliographicCode"]?.toString(),
       family: NaturalLanguageFamily.maybeFromValue(map["family"]?.toString()),
       isRightToLeft: map["isRightToLeft"] as bool,

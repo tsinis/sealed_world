@@ -260,12 +260,15 @@ sealed class Script extends WritingSystem
   /// {@macro permissive_constructor}
   /// {@macro script_constructor}
   const Script._permissive({
-    required this.code,
+    this.code = "",
     super.name = " ",
     this.codeNumeric = "",
     this.date = "",
     this.pva,
-  });
+  }) : assert(
+         code.length > 0 || codeNumeric.length > 0,
+         'The `code` (or at least `codeNumeric`) must be provided!',
+       );
 
   /// {@macro sealed_world.script_adlm_constructor}
   const factory Script.adlm() = _AdlmFactory;

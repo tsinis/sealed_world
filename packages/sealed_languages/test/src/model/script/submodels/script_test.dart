@@ -26,12 +26,21 @@ void main() => group("$Script", () {
     expect(const Script.adlm(), const ScriptAdlm());
   });
 
-  assertTest(
-    "custom constructor",
-    () => const ScriptCustom(code: "").code,
-    shouldThrow: false,
-    alsoExpect: () => expect(const ScriptCustom(code: "").code, isEmpty),
-  );
+  group('permissive constructor asserts', () {
+    assertTest(
+      "not empty code",
+      () => ScriptCustom(code: " "),
+      shouldThrow: false,
+    );
+
+    assertTest(
+      "not empty codeNumeric",
+      () => ScriptCustom(codeNumeric: " "),
+      shouldThrow: false,
+    );
+
+    assertTest("empty codeNumeric and code", ScriptCustom.new);
+  });
 
   test("compareTo", () => expect(value.compareTo(array.last), isNot(isZero)));
 
