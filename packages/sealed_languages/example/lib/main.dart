@@ -1,4 +1,4 @@
-// ignore_for_file: avoid_print, prefer-match-file-name
+// ignore_for_file: avoid_print
 import "package:sealed_languages/sealed_languages.dart";
 
 void main() {

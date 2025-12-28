@@ -1,5 +1,5 @@
 import "package:sealed_languages/src/helpers/script/script_copy_with.dart";
-import "package:sealed_languages/src/model/script/writing_system.dart";
+import "package:sealed_languages/src/model/script/submodels/script.dart";
 import "package:test/test.dart";
 
 void main() => group("ScriptCopyWith", () {

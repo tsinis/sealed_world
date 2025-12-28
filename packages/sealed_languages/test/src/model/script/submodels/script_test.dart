@@ -6,12 +6,8 @@ import "package:_sealed_world_tests/sealed_world_tests.dart";
 import "package:sealed_languages/src/helpers/script/script_json.dart";
 import "package:sealed_languages/src/interfaces/iso_standardized.dart";
 import "package:sealed_languages/src/interfaces/json_encodable.dart";
-import "package:sealed_languages/src/model/script/writing_system.dart";
+import "package:sealed_languages/src/model/script/submodels/script.dart";
 import "package:test/test.dart";
-
-class _ScriptTest extends Script {
-  const _ScriptTest() : super.custom(name: " ", code: "");
-}
 
 void main() => group("$Script", () {
   final value = Script.list.last;
@@ -31,10 +27,10 @@ void main() => group("$Script", () {
   });
 
   assertTest(
-    "permissive constructor",
-    () => const _ScriptTest().code,
+    "custom constructor",
+    () => const ScriptCustom(code: "").code,
     shouldThrow: false,
-    alsoExpect: () => expect(const _ScriptTest().code, isEmpty),
+    alsoExpect: () => expect(const ScriptCustom(code: "").code, isEmpty),
   );
 
   test("compareTo", () => expect(value.compareTo(array.last), isNot(isZero)));
@@ -459,7 +455,7 @@ void main() => group("$Script", () {
   group("asserts", () {
     assertTest(
       "not",
-      () => Script(
+      () => ScriptCustom(
         name: value.name,
         code: value.code,
         codeNumeric: value.codeNumeric,
@@ -467,50 +463,6 @@ void main() => group("$Script", () {
         pva: value.pva,
       ),
       shouldThrow: false,
-    );
-
-    assertTest(
-      "empty name",
-      () => Script(
-        name: "",
-        code: value.code,
-        codeNumeric: value.codeNumeric,
-        date: value.date,
-        pva: value.pva,
-      ),
-    );
-
-    assertTest(
-      "codeNumeric length",
-      () => Script(
-        name: value.name,
-        code: value.code,
-        codeNumeric: value.code,
-        date: value.date,
-        pva: value.pva,
-      ),
-    );
-
-    assertTest(
-      "code length",
-      () => Script(
-        name: value.name,
-        code: value.codeNumeric,
-        codeNumeric: value.code,
-        date: value.date,
-        pva: value.pva,
-      ),
-    );
-
-    assertTest(
-      "pva length",
-      () => Script(
-        name: value.name,
-        code: value.code,
-        codeNumeric: value.code,
-        date: value.date,
-        pva: "",
-      ),
     );
   });
 

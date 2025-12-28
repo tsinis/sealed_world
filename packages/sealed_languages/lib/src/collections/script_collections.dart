@@ -219,7 +219,7 @@ const scriptCodeMap = {
 };
 
 /// Map of [Script] other codes.
-const scriptCodeOtherMap = <String, Script>{
+const scriptCodeOtherMap = {
   "015": ScriptPcun(),
   "016": ScriptPelm(),
   "020": ScriptXsux(),

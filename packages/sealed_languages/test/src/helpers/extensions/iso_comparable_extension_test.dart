@@ -1,7 +1,7 @@
 // ignore_for_file: avoid-passing-self-as-argument, avoid-self-compare
 
 import "package:sealed_languages/src/helpers/extensions/iso_comparable_extension.dart";
-import "package:sealed_languages/src/model/script/writing_system.dart";
+import "package:sealed_languages/src/model/script/submodels/script.dart";
 import "package:test/test.dart";
 
 void main() => group("IsoComparableExtension", () {
