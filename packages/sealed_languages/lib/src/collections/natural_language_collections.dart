@@ -1,8 +1,8 @@
 // ignore_for_file: prefer-static-class, it's referenced as static in the model.
-import "../model/language/language.dart";
+import "../model/language/submodels/natural_language.dart";
 
 /// Map of [NaturalLanguage] standard codes.
-const naturalLanguageCodeMap = <String, NaturalLanguage>{
+const naturalLanguageCodeMap = {
   "AAR": LangAar(),
   "ABK": LangAbk(),
   "AFR": LangAfr(),
@@ -190,7 +190,7 @@ const naturalLanguageCodeMap = <String, NaturalLanguage>{
 };
 
 /// Map of [NaturalLanguage] other codes.
-const naturalLanguageCodeOtherMap = <String, NaturalLanguage>{
+const naturalLanguageCodeOtherMap = {
   "AA": LangAar(),
   "AB": LangAbk(),
   "AE": LangAve(),

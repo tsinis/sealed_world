@@ -1,9 +1,9 @@
-import "../../model/language/language.dart";
+import "../../model/language/submodels/natural_language.dart";
 
 /// Provides convenient getters for ISO 639 language codes
 /// on a [NaturalLanguage] class.
 extension NaturalLanguageGetters on NaturalLanguage {
-  static const _constructedLanguages = <NaturalLanguage>{
+  static const _constructedLanguages = {
     LangEpo(),
     LangIle(),
     LangIna(),

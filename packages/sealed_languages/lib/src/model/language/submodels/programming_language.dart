@@ -1,4 +1,4 @@
-part of "../language.dart";
+import "../language.dart";
 
 /// A class that represents a programming language.
 ///

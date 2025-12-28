@@ -1,7 +1,7 @@
 import "../../interfaces/iso_translated.dart";
 import "../../model/core/basic_locale.dart";
 import "../../model/core/locale_mapping_options.dart";
-import "../../model/language/language.dart";
+import "../../model/language/submodels/natural_language.dart";
 import "../../model/translated_name.dart";
 
 /// An extension that provides translation methods for objects implementing the

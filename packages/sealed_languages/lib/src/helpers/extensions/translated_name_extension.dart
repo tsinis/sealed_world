@@ -1,5 +1,5 @@
 import "../../model/core/basic_locale.dart";
-import "../../model/language/language.dart";
+import "../../model/language/submodels/natural_language.dart";
 import "../../model/script/submodels/script.dart";
 import "../../model/translated_name.dart";
 import "../../typedefs/typedefs.dart";

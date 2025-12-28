@@ -1,4 +1,4 @@
-import "../../model/language/language.dart";
+import "../../model/language/submodels/natural_language.dart";
 import "../../model/language_family/submodels/natural_language_family.dart";
 import "../../model/script/submodels/script.dart";
 import "../../typedefs/typedefs.dart";
@@ -31,7 +31,7 @@ extension NaturalLanguageCopyWith<T extends NaturalLanguage> on T {
     List<String>? namesNative,
     Set<Script>? scripts,
     LocaleMapFunction<String> Function()? mapper,
-  }) => NaturalLanguage(
+  }) => LangCustom(
     name: name ?? this.name,
     codeShort: codeShort ?? this.codeShort,
     namesNative: namesNative ?? this.namesNative,

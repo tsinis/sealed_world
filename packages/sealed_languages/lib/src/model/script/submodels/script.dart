@@ -1200,7 +1200,7 @@ sealed class Script extends WritingSystem
   /// ```dart
   /// Script.codeMap['Latn']; // ScriptLatn().
   /// ```
-  static const codeMap = UpperCaseIsoMap<Script>(
+  static const codeMap = UpperCaseIsoMap(
     scriptCodeMap,
     exactLength: codeLength,
   );
@@ -1213,7 +1213,7 @@ sealed class Script extends WritingSystem
   /// ```dart
   /// Script.codeNumericMap[215.toString()]; // ScriptLatn().
   /// ```
-  static const codeNumericMap = UpperCaseIsoMap<Script>(scriptCodeOtherMap);
+  static const codeNumericMap = UpperCaseIsoMap(scriptCodeOtherMap);
 
   /// A tree-shakable combined map of [codeMap] and [codeNumericMap], providing
   /// a unified view of script codes and their [Script] objects, for a O(1)
@@ -1224,7 +1224,7 @@ sealed class Script extends WritingSystem
   /// ```dart
   /// Script.map['Latn']; // ScriptLatn().
   /// ```
-  static const map = UpperCaseIsoMap<Script>(
+  static const map = UpperCaseIsoMap(
     {...scriptCodeMap, ...scriptCodeOtherMap},
     exactLength: null,
     maxLength: codeLength,
@@ -1234,7 +1234,7 @@ sealed class Script extends WritingSystem
   /// A tree-shakable list of all the scripts currently supported
   /// by the [Script] class.
   // ignore_for_file: avoid-referencing-subclasses, transition to sealed class.
-  static const list = <Script>[
+  static const list = [
     ScriptAdlm(),
     ScriptAfak(),
     ScriptAghb(),
