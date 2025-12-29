@@ -23,10 +23,10 @@ extension CapitalExtension on Capital {
   );
 
   /// {@macro to_map_method}
-  Map<String, String?> toMap() => {
+  Map<String, String> toMap() => {
     "deFacto": deFacto,
-    "deJure": deJure,
-    "third": third,
+    "deJure": ?deJure,
+    "third": ?third,
   };
 
   /// {@macro from_map_method}

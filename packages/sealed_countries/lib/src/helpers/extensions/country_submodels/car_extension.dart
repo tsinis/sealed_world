@@ -12,7 +12,7 @@ extension CarExtension on Car {
   );
 
   /// {@macro to_map_method}
-  JsonObjectMap toMap() => {"isRightSide": isRightSide, "sign": sign};
+  JsonObjectMap toMap() => {"isRightSide": isRightSide, "sign": ?sign};
 
   /// {@macro from_map_method}
   static Car fromMap(JsonMap map) => Car(

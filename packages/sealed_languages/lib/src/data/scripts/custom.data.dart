@@ -5,9 +5,9 @@ final class ScriptCustom extends Script {
   /// Creates a custom instance of [Script] (non-standard, custom script).
   const ScriptCustom({
     super.code,
-    super.name,
     super.codeNumeric,
     super.date,
+    super.name,
     super.pva,
   }) : super._permissive();
 }

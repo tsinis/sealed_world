@@ -8,13 +8,13 @@ final class LangCustom extends NaturalLanguage {
   /// {@macro permissive_constructor}
   const LangCustom({
     super.code,
-    super.name,
     super.codeShort,
-    super.namesNative,
     super.bibliographicCode,
     super.family,
     super.isRightToLeft,
-    super.scripts,
     super.mapper,
+    super.name,
+    super.namesNative,
+    super.scripts,
   }) : super._permissive();
 }

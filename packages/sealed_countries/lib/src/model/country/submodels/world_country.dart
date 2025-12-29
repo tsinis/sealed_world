@@ -348,7 +348,6 @@ class WorldCountry extends Country
     List<Demonyms>? demonyms,
     List<NaturalLanguage>? languages,
     List<CountryName>? namesNative,
-    LocaleMapFunction<String> Function()? mapper,
   }) : assert(
          code.length == IsoStandardized.codeLength,
          """`code` should be exactly ${IsoStandardized.codeLength} characters long!""",
@@ -384,7 +383,7 @@ class WorldCountry extends Country
        _namesNative = namesNative,
        _demonyms = demonyms,
        _languages = languages,
-       _mapper = mapper;
+       _mapper = null;
 
   /// {@macro sealed_world.country_abw_constructor}
   const factory WorldCountry.abw() = _AbwFactory;
@@ -1139,8 +1138,12 @@ class WorldCountry extends Country
   /// {@macro permissive_constructor}
   /// {@macro country_constructor}
   const WorldCountry._permissive({
-    required super.name,
-    required this.code,
+    this.code = "",
+    super.name = const CountryName(
+      language: LangCustom(code: "und"),
+      common: " ",
+      official: " ",
+    ),
     this.altSpellings = const [],
     this.areaMetric = 1,
     this.codeNumeric = "",
@@ -1172,7 +1175,11 @@ class WorldCountry extends Country
     List<NaturalLanguage>? languages,
     List<CountryName> namesNative = const [],
     LocaleMapFunction<String> Function()? mapper,
-  }) : _namesNative = namesNative,
+  }) : assert(
+         code.length > 0 || codeNumeric.length > 0 || codeShort.length > 0,
+         'The `code` (or at least `codeShort`/`codeNumeric`) must be provided!',
+       ),
+       _namesNative = namesNative,
        _demonyms = demonyms,
        _languages = languages,
        _mapper = mapper;
@@ -1576,7 +1583,7 @@ class WorldCountry extends Country
   /// ```dart
   /// WorldCountry.codeMap['AFG']; // CountryAfg().
   /// ```
-  static const codeMap = UpperCaseIsoMap<WorldCountry>(worldCountryCodeMap);
+  static const codeMap = UpperCaseIsoMap(worldCountryCodeMap);
 
   /// A tree-shakable constant map containing numeric country
   /// (ISO 3166-1 Numeric) codes and their associated [WorldCountry] objects,
@@ -1587,9 +1594,7 @@ class WorldCountry extends Country
   /// ```dart
   /// WorldCountry.codeNumericMap[204]; // CountryBen().
   /// ```
-  static const codeNumericMap = UpperCaseIsoMap<WorldCountry>(
-    worldCountryCodeNumericMap,
-  );
+  static const codeNumericMap = UpperCaseIsoMap(worldCountryCodeNumericMap);
 
   /// A tree-shakable constant map containing country (ISO 3166-1 Alpha-2) codes
   /// and their associated [WorldCountry] objects, for a O(1) access time.
@@ -1599,7 +1604,7 @@ class WorldCountry extends Country
   /// ```dart
   /// WorldCountry.codeShortMap['BF']; // CountryBfa().
   /// ```
-  static const codeShortMap = UpperCaseIsoMap<WorldCountry>(
+  static const codeShortMap = UpperCaseIsoMap(
     worldCountryCodeOtherMap,
     exactLength: IsoStandardized.codeShortLength,
   );
@@ -1613,7 +1618,7 @@ class WorldCountry extends Country
   /// ```dart
   /// WorldCountry.map[204]; // CountryBen().
   /// ```
-  static const map = UpperCaseIsoMap<WorldCountry>(
+  static const map = UpperCaseIsoMap(
     {
       ...worldCountryCodeMap,
       ...worldCountryCodeOtherMap,
@@ -1625,7 +1630,7 @@ class WorldCountry extends Country
   /// A list of all the countries currently supported
   /// by the [WorldCountry] class.
   // ignore_for_file: avoid-referencing-subclasses, transition to sealed class.
-  static const list = <WorldCountry>[
+  static const list = [
     CountryAbw(),
     CountryAfg(),
     CountryAgo(),

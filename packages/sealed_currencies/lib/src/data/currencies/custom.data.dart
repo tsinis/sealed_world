@@ -7,20 +7,20 @@ final class FiatCustom extends FiatCurrency {
   /// {@macro permissive_constructor}
   const FiatCustom({
     super.code,
-    super.name,
-    super.namesNative,
     super.codeNumeric,
     super.alternateSymbols,
+    super.decimalMark,
     super.disambiguateSymbol,
     super.htmlEntity,
+    super.mapper,
+    super.name,
+    super.namesNative,
     super.priority,
     super.smallestDenomination,
     super.subunit,
     super.subunitToUnit,
-    super.unitFirst,
     super.symbol,
-    super.decimalMark,
     super.thousandsSeparator,
-    super.mapper,
+    super.unitFirst,
   }) : super._permissive();
 }

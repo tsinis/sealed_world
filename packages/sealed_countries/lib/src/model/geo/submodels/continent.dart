@@ -58,10 +58,11 @@ class Continent extends SubRegion {
   /// The [continents] parameter is the list of continents to search. If no
   /// value is provided, the [list] constant is used.
   static Continent? maybeFromValue<T extends Object>(
-    T value, {
+    T? value, {
     Iterable<Continent> continents = list,
     T? Function(Continent continent)? where,
   }) {
+    if (value == null) return null;
     assert(continents.isNotEmpty, "`continents` should not be empty!");
     for (final continent in continents) {
       final expectedValue = where?.call(continent) ?? continent.name;

@@ -150,9 +150,9 @@ const unofficialLanguagesCountryMap = <NaturalLanguage, List<WorldCountry>>{
   LangYor(): [CountryNga()], // https://wikipedia.org/wiki/Yoruba_language
   LangZha(): [CountryChn()], // https://wikipedia.org/wiki/Zhuang_languages
   /// Constructed languages:
-  LangEpo(): <WorldCountry>[], // https://wikipedia.org/wiki/Esperanto
-  LangIdo(): <WorldCountry>[], // https://wikipedia.org/wiki/Ido
-  LangIle(): <WorldCountry>[], // https://wikipedia.org/wiki/Interlingue
-  LangIna(): <WorldCountry>[], // https://wikipedia.org/wiki/Interlingua
-  LangVol(): <WorldCountry>[], // https://wikipedia.org/wiki/Volapük
+  LangEpo(): [], // https://wikipedia.org/wiki/Esperanto
+  LangIdo(): [], // https://wikipedia.org/wiki/Ido
+  LangIle(): [], // https://wikipedia.org/wiki/Interlingue
+  LangIna(): [], // https://wikipedia.org/wiki/Interlingua
+  LangVol(): [], // https://wikipedia.org/wiki/Volapük
 };

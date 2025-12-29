@@ -44,7 +44,7 @@ typedef JsonMap = Map<String, dynamic>;
 /// See also:
 ///   - [Map], the built-in Dart class representing a map.
 ///   - [JsonMap], the type alias for a JSON-encoded map.
-typedef JsonObjectMap = Map<String, Object?>;
+typedef JsonObjectMap = Map<String, Object>;
 
 /// A record type representing a key for ISO locale mappings.
 ///

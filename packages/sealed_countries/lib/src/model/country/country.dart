@@ -18,5 +18,6 @@ class Country implements Named<CountryName> {
   final CountryName name;
 
   @override
-  String toString({bool short = true}) => 'Country(name: "${name.common}")';
+  String toString({bool short = true}) =>
+      short ? name.common : 'Country(name: $name)';
 }

@@ -25,7 +25,7 @@ extension CapitalInfoExtension on CapitalInfo {
 
   /// {@macro from_map_method}
   static CapitalInfo fromMap(JsonMap map) => CapitalInfo(
-    capital: CapitalExtension.fromMap(map["capital"] as JsonMap),
-    latLng: LatLngExtension.fromMap(map["latLng"] as JsonMap),
+    capital: CapitalExtension.fromMap(map["capital"]),
+    latLng: LatLngExtension.fromMap(map["latLng"]),
   );
 }

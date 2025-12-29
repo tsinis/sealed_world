@@ -667,10 +667,15 @@ void main() => group("$WorldCountry", () {
         expect(element.languages, decoded.languages);
         expect(element.continent, decoded.continent);
         expect(element.altSpellings, decoded.altSpellings);
-        expect(element.codeNumeric, decoded.codeNumeric);
         expect(element.codeShort, decoded.codeShort);
         expect(element.namesNative, decoded.namesNative);
         expect(element.tld, decoded.tld);
+        expect(
+          element.codeNumeric,
+          decoded.codeNumeric,
+          skip: element is CountryUnk,
+          reason: "Kosovo isn't recognized by ISO and many countries/orgs.",
+        );
       });
     }
   });
@@ -982,30 +987,25 @@ void main() => group("$WorldCountry", () {
     });
   });
 
-  group("asserts", () {
+  group('permissive constructor asserts', () {
     assertTest(
-      "not",
-      () => CountryCustom(
-        name: value.name,
-        altSpellings: value.altSpellings,
-        areaMetric: value.areaMetric,
-        code: value.code,
-        codeNumeric: value.codeNumeric,
-        codeShort: value.codeShort,
-        continent: value.continent,
-        emoji: value.emoji,
-        idd: value.idd,
-        languages: const [],
-        latLng: value.latLng,
-        maps: value.maps,
-        namesNative: const [],
-        population: value.population,
-        timezones: value.timezones,
-        tld: value.tld,
-        demonyms: const [],
-        currencies: value.currencies,
-      ),
+      "not empty code",
+      () => const CountryCustom(code: "code").code,
       shouldThrow: false,
     );
+
+    assertTest(
+      "not empty codeShort",
+      () => const CountryCustom(codeShort: "code").codeShort,
+      shouldThrow: false,
+    );
+
+    assertTest(
+      "not empty codeNumeric",
+      () => const CountryCustom(codeNumeric: "code").codeNumeric,
+      shouldThrow: false,
+    );
+
+    assertTest("empty code, codeShort and codeNumeric", CountryCustom.new);
   });
 });
