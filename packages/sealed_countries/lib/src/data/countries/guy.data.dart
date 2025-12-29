@@ -4,7 +4,7 @@
 
 // ignore_for_file: prefer-digit-separators
 
-part of "../../model/country/country.dart";
+part of "../../model/country/submodels/world_country.dart";
 
 extension type const _GuyFactory._(CountryGuy _) implements CountryGuy {
   const _GuyFactory() : this._(const CountryGuy._());
@@ -20,7 +20,7 @@ class CountryGuy extends WorldCountry {
   const factory CountryGuy() = _GuyFactory;
 
   const CountryGuy._()
-    : super(
+    : super._(
         name: const CountryName(
           language: LangEng(),
           official: "Co-operative Republic of Guyana",

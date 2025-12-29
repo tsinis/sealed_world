@@ -4,7 +4,7 @@
 
 // ignore_for_file: prefer-digit-separators
 
-part of "../../model/country/country.dart";
+part of "../../model/country/submodels/world_country.dart";
 
 extension type const _DjiFactory._(CountryDji _) implements CountryDji {
   const _DjiFactory() : this._(const CountryDji._());
@@ -20,7 +20,7 @@ class CountryDji extends WorldCountry {
   const factory CountryDji() = _DjiFactory;
 
   const CountryDji._()
-    : super(
+    : super._(
         name: const CountryName(
           language: LangEng(),
           official: "Republic of Djibouti",

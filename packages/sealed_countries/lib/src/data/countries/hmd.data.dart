@@ -4,7 +4,7 @@
 
 // ignore_for_file: prefer-digit-separators
 
-part of "../../model/country/country.dart";
+part of "../../model/country/submodels/world_country.dart";
 
 extension type const _HmdFactory._(CountryHmd _) implements CountryHmd {
   const _HmdFactory() : this._(const CountryHmd._());
@@ -20,7 +20,7 @@ class CountryHmd extends WorldCountry {
   const factory CountryHmd() = _HmdFactory;
 
   const CountryHmd._()
-    : super(
+    : super._(
         name: const CountryName(
           language: LangEng(),
           official: "Heard Island and McDonald Islands",

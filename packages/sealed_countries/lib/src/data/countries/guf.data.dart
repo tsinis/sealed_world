@@ -4,7 +4,7 @@
 
 // ignore_for_file: prefer-digit-separators
 
-part of "../../model/country/country.dart";
+part of "../../model/country/submodels/world_country.dart";
 
 extension type const _GufFactory._(CountryGuf _) implements CountryGuf {
   const _GufFactory() : this._(const CountryGuf._());
@@ -20,7 +20,7 @@ class CountryGuf extends WorldCountry {
   const factory CountryGuf() = _GufFactory;
 
   const CountryGuf._()
-    : super(
+    : super._(
         name: const CountryName(
           language: LangEng(),
           official: "French Guiana",

@@ -4,7 +4,7 @@
 
 // ignore_for_file: prefer-digit-separators
 
-part of "../../model/country/country.dart";
+part of "../../model/country/submodels/world_country.dart";
 
 extension type const _AiaFactory._(CountryAia _) implements CountryAia {
   const _AiaFactory() : this._(const CountryAia._());
@@ -20,7 +20,7 @@ class CountryAia extends WorldCountry {
   const factory CountryAia() = _AiaFactory;
 
   const CountryAia._()
-    : super(
+    : super._(
         name: const CountryName(
           language: LangEng(),
           official: "Anguilla",

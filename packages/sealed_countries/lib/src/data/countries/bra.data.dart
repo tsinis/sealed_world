@@ -4,7 +4,7 @@
 
 // ignore_for_file: prefer-digit-separators
 
-part of "../../model/country/country.dart";
+part of "../../model/country/submodels/world_country.dart";
 
 extension type const _BraFactory._(CountryBra _) implements CountryBra {
   const _BraFactory() : this._(const CountryBra._());
@@ -20,7 +20,7 @@ class CountryBra extends WorldCountry {
   const factory CountryBra() = _BraFactory;
 
   const CountryBra._()
-    : super(
+    : super._(
         name: const CountryName(
           language: LangEng(),
           official: "Federative Republic of Brazil",

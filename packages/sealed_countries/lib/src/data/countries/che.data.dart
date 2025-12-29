@@ -4,7 +4,7 @@
 
 // ignore_for_file: prefer-digit-separators
 
-part of "../../model/country/country.dart";
+part of "../../model/country/submodels/world_country.dart";
 
 extension type const _CheFactory._(CountryChe _) implements CountryChe {
   const _CheFactory() : this._(const CountryChe._());
@@ -20,7 +20,7 @@ class CountryChe extends WorldCountry {
   const factory CountryChe() = _CheFactory;
 
   const CountryChe._()
-    : super(
+    : super._(
         name: const CountryName(
           language: LangEng(),
           official: "Swiss Confederation",

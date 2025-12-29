@@ -4,7 +4,7 @@
 
 // ignore_for_file: prefer-digit-separators
 
-part of "../../model/country/country.dart";
+part of "../../model/country/submodels/world_country.dart";
 
 extension type const _DzaFactory._(CountryDza _) implements CountryDza {
   const _DzaFactory() : this._(const CountryDza._());
@@ -20,7 +20,7 @@ class CountryDza extends WorldCountry {
   const factory CountryDza() = _DzaFactory;
 
   const CountryDza._()
-    : super(
+    : super._(
         name: const CountryName(
           language: LangEng(),
           official: "People's Democratic Republic of Algeria",

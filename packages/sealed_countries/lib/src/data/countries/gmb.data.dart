@@ -4,7 +4,7 @@
 
 // ignore_for_file: prefer-digit-separators
 
-part of "../../model/country/country.dart";
+part of "../../model/country/submodels/world_country.dart";
 
 extension type const _GmbFactory._(CountryGmb _) implements CountryGmb {
   const _GmbFactory() : this._(const CountryGmb._());
@@ -20,7 +20,7 @@ class CountryGmb extends WorldCountry {
   const factory CountryGmb() = _GmbFactory;
 
   const CountryGmb._()
-    : super(
+    : super._(
         name: const CountryName(
           language: LangEng(),
           official: "Republic of the Gambia",

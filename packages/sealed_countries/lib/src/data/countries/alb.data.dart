@@ -4,7 +4,7 @@
 
 // ignore_for_file: prefer-digit-separators
 
-part of "../../model/country/country.dart";
+part of "../../model/country/submodels/world_country.dart";
 
 extension type const _AlbFactory._(CountryAlb _) implements CountryAlb {
   const _AlbFactory() : this._(const CountryAlb._());
@@ -20,7 +20,7 @@ class CountryAlb extends WorldCountry {
   const factory CountryAlb() = _AlbFactory;
 
   const CountryAlb._()
-    : super(
+    : super._(
         name: const CountryName(
           language: LangEng(),
           official: "Republic of Albania",

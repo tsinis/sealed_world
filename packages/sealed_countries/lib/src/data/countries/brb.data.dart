@@ -4,7 +4,7 @@
 
 // ignore_for_file: prefer-digit-separators
 
-part of "../../model/country/country.dart";
+part of "../../model/country/submodels/world_country.dart";
 
 extension type const _BrbFactory._(CountryBrb _) implements CountryBrb {
   const _BrbFactory() : this._(const CountryBrb._());
@@ -20,7 +20,7 @@ class CountryBrb extends WorldCountry {
   const factory CountryBrb() = _BrbFactory;
 
   const CountryBrb._()
-    : super(
+    : super._(
         name: const CountryName(
           language: LangEng(),
           official: "Barbados",

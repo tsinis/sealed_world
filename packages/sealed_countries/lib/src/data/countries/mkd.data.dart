@@ -4,7 +4,7 @@
 
 // ignore_for_file: prefer-digit-separators
 
-part of "../../model/country/country.dart";
+part of "../../model/country/submodels/world_country.dart";
 
 extension type const _MkdFactory._(CountryMkd _) implements CountryMkd {
   const _MkdFactory() : this._(const CountryMkd._());
@@ -20,7 +20,7 @@ class CountryMkd extends WorldCountry {
   const factory CountryMkd() = _MkdFactory;
 
   const CountryMkd._()
-    : super(
+    : super._(
         name: const CountryName(
           language: LangEng(),
           official: "Republic of North Macedonia",

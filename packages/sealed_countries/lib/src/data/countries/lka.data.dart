@@ -4,7 +4,7 @@
 
 // ignore_for_file: prefer-digit-separators
 
-part of "../../model/country/country.dart";
+part of "../../model/country/submodels/world_country.dart";
 
 extension type const _LkaFactory._(CountryLka _) implements CountryLka {
   const _LkaFactory() : this._(const CountryLka._());
@@ -20,7 +20,7 @@ class CountryLka extends WorldCountry {
   const factory CountryLka() = _LkaFactory;
 
   const CountryLka._()
-    : super(
+    : super._(
         name: const CountryName(
           language: LangEng(),
           official: "Democratic Socialist Republic of Sri Lanka",

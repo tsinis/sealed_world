@@ -4,7 +4,7 @@
 
 // ignore_for_file: prefer-digit-separators
 
-part of "../../model/country/country.dart";
+part of "../../model/country/submodels/world_country.dart";
 
 extension type const _WlfFactory._(CountryWlf _) implements CountryWlf {
   const _WlfFactory() : this._(const CountryWlf._());
@@ -20,7 +20,7 @@ class CountryWlf extends WorldCountry {
   const factory CountryWlf() = _WlfFactory;
 
   const CountryWlf._()
-    : super(
+    : super._(
         name: const CountryName(
           language: LangEng(),
           official: "Territory of the Wallis and Futuna Islands",

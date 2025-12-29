@@ -4,7 +4,7 @@
 
 // ignore_for_file: prefer-digit-separators
 
-part of "../../model/country/country.dart";
+part of "../../model/country/submodels/world_country.dart";
 
 extension type const _BmuFactory._(CountryBmu _) implements CountryBmu {
   const _BmuFactory() : this._(const CountryBmu._());
@@ -20,7 +20,7 @@ class CountryBmu extends WorldCountry {
   const factory CountryBmu() = _BmuFactory;
 
   const CountryBmu._()
-    : super(
+    : super._(
         name: const CountryName(
           language: LangEng(),
           official: "Bermuda",

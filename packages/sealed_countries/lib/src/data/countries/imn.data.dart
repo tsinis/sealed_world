@@ -4,7 +4,7 @@
 
 // ignore_for_file: prefer-digit-separators
 
-part of "../../model/country/country.dart";
+part of "../../model/country/submodels/world_country.dart";
 
 extension type const _ImnFactory._(CountryImn _) implements CountryImn {
   const _ImnFactory() : this._(const CountryImn._());
@@ -20,7 +20,7 @@ class CountryImn extends WorldCountry {
   const factory CountryImn() = _ImnFactory;
 
   const CountryImn._()
-    : super(
+    : super._(
         name: const CountryName(
           language: LangEng(),
           official: "Isle of Man",

@@ -4,7 +4,7 @@
 
 // ignore_for_file: prefer-digit-separators
 
-part of "../../model/country/country.dart";
+part of "../../model/country/submodels/world_country.dart";
 
 extension type const _BhsFactory._(CountryBhs _) implements CountryBhs {
   const _BhsFactory() : this._(const CountryBhs._());
@@ -20,7 +20,7 @@ class CountryBhs extends WorldCountry {
   const factory CountryBhs() = _BhsFactory;
 
   const CountryBhs._()
-    : super(
+    : super._(
         name: const CountryName(
           language: LangEng(),
           official: "Commonwealth of the Bahamas",

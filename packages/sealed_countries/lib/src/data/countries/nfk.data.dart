@@ -4,7 +4,7 @@
 
 // ignore_for_file: prefer-digit-separators
 
-part of "../../model/country/country.dart";
+part of "../../model/country/submodels/world_country.dart";
 
 extension type const _NfkFactory._(CountryNfk _) implements CountryNfk {
   const _NfkFactory() : this._(const CountryNfk._());
@@ -20,7 +20,7 @@ class CountryNfk extends WorldCountry {
   const factory CountryNfk() = _NfkFactory;
 
   const CountryNfk._()
-    : super(
+    : super._(
         name: const CountryName(
           language: LangEng(),
           official: "Territory of Norfolk Island",

@@ -4,7 +4,7 @@
 
 // ignore_for_file: prefer-digit-separators
 
-part of "../../model/country/country.dart";
+part of "../../model/country/submodels/world_country.dart";
 
 extension type const _FroFactory._(CountryFro _) implements CountryFro {
   const _FroFactory() : this._(const CountryFro._());
@@ -20,7 +20,7 @@ class CountryFro extends WorldCountry {
   const factory CountryFro() = _FroFactory;
 
   const CountryFro._()
-    : super(
+    : super._(
         name: const CountryName(
           language: LangEng(),
           official: "Faroe Islands",

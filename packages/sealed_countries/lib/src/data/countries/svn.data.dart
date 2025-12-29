@@ -4,7 +4,7 @@
 
 // ignore_for_file: prefer-digit-separators
 
-part of "../../model/country/country.dart";
+part of "../../model/country/submodels/world_country.dart";
 
 extension type const _SvnFactory._(CountrySvn _) implements CountrySvn {
   const _SvnFactory() : this._(const CountrySvn._());
@@ -20,7 +20,7 @@ class CountrySvn extends WorldCountry {
   const factory CountrySvn() = _SvnFactory;
 
   const CountrySvn._()
-    : super(
+    : super._(
         name: const CountryName(
           language: LangEng(),
           official: "Republic of Slovenia",

@@ -4,7 +4,7 @@
 
 // ignore_for_file: prefer-digit-separators
 
-part of "../../model/country/country.dart";
+part of "../../model/country/submodels/world_country.dart";
 
 extension type const _BrnFactory._(CountryBrn _) implements CountryBrn {
   const _BrnFactory() : this._(const CountryBrn._());
@@ -20,7 +20,7 @@ class CountryBrn extends WorldCountry {
   const factory CountryBrn() = _BrnFactory;
 
   const CountryBrn._()
-    : super(
+    : super._(
         name: const CountryName(
           language: LangEng(),
           official: "Nation of Brunei, Abode of Peace",

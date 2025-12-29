@@ -4,7 +4,7 @@
 
 // ignore_for_file: prefer-digit-separators
 
-part of "../../model/country/country.dart";
+part of "../../model/country/submodels/world_country.dart";
 
 extension type const _UgaFactory._(CountryUga _) implements CountryUga {
   const _UgaFactory() : this._(const CountryUga._());
@@ -20,7 +20,7 @@ class CountryUga extends WorldCountry {
   const factory CountryUga() = _UgaFactory;
 
   const CountryUga._()
-    : super(
+    : super._(
         name: const CountryName(
           language: LangEng(),
           official: "Republic of Uganda",

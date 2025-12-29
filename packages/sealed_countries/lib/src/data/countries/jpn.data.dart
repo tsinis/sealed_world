@@ -4,7 +4,7 @@
 
 // ignore_for_file: prefer-digit-separators
 
-part of "../../model/country/country.dart";
+part of "../../model/country/submodels/world_country.dart";
 
 extension type const _JpnFactory._(CountryJpn _) implements CountryJpn {
   const _JpnFactory() : this._(const CountryJpn._());
@@ -20,7 +20,7 @@ class CountryJpn extends WorldCountry {
   const factory CountryJpn() = _JpnFactory;
 
   const CountryJpn._()
-    : super(
+    : super._(
         name: const CountryName(
           language: LangEng(),
           official: "Japan",

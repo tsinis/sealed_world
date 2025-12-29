@@ -4,7 +4,7 @@
 
 // ignore_for_file: prefer-digit-separators
 
-part of "../../model/country/country.dart";
+part of "../../model/country/submodels/world_country.dart";
 
 extension type const _LuxFactory._(CountryLux _) implements CountryLux {
   const _LuxFactory() : this._(const CountryLux._());
@@ -20,7 +20,7 @@ class CountryLux extends WorldCountry {
   const factory CountryLux() = _LuxFactory;
 
   const CountryLux._()
-    : super(
+    : super._(
         name: const CountryName(
           language: LangEng(),
           official: "Grand Duchy of Luxembourg",

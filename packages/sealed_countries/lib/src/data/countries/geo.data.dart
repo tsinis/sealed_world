@@ -4,7 +4,7 @@
 
 // ignore_for_file: prefer-digit-separators
 
-part of "../../model/country/country.dart";
+part of "../../model/country/submodels/world_country.dart";
 
 extension type const _GeoFactory._(CountryGeo _) implements CountryGeo {
   const _GeoFactory() : this._(const CountryGeo._());
@@ -20,7 +20,7 @@ class CountryGeo extends WorldCountry {
   const factory CountryGeo() = _GeoFactory;
 
   const CountryGeo._()
-    : super(
+    : super._(
         name: const CountryName(
           language: LangEng(),
           official: "Georgia",

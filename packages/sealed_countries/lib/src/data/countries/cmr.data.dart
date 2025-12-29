@@ -4,7 +4,7 @@
 
 // ignore_for_file: prefer-digit-separators
 
-part of "../../model/country/country.dart";
+part of "../../model/country/submodels/world_country.dart";
 
 extension type const _CmrFactory._(CountryCmr _) implements CountryCmr {
   const _CmrFactory() : this._(const CountryCmr._());
@@ -20,7 +20,7 @@ class CountryCmr extends WorldCountry {
   const factory CountryCmr() = _CmrFactory;
 
   const CountryCmr._()
-    : super(
+    : super._(
         name: const CountryName(
           language: LangEng(),
           official: "Republic of Cameroon",

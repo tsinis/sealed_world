@@ -4,7 +4,7 @@
 
 // ignore_for_file: prefer-digit-separators
 
-part of "../../model/country/country.dart";
+part of "../../model/country/submodels/world_country.dart";
 
 extension type const _DmaFactory._(CountryDma _) implements CountryDma {
   const _DmaFactory() : this._(const CountryDma._());
@@ -20,7 +20,7 @@ class CountryDma extends WorldCountry {
   const factory CountryDma() = _DmaFactory;
 
   const CountryDma._()
-    : super(
+    : super._(
         name: const CountryName(
           language: LangEng(),
           official: "Commonwealth of Dominica",

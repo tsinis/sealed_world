@@ -4,7 +4,7 @@
 
 // ignore_for_file: prefer-digit-separators
 
-part of "../../model/country/country.dart";
+part of "../../model/country/submodels/world_country.dart";
 
 extension type const _ReuFactory._(CountryReu _) implements CountryReu {
   const _ReuFactory() : this._(const CountryReu._());
@@ -20,7 +20,7 @@ class CountryReu extends WorldCountry {
   const factory CountryReu() = _ReuFactory;
 
   const CountryReu._()
-    : super(
+    : super._(
         name: const CountryName(
           language: LangEng(),
           official: "Réunion Island",

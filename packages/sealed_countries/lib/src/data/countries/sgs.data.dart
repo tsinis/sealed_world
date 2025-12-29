@@ -4,7 +4,7 @@
 
 // ignore_for_file: prefer-digit-separators
 
-part of "../../model/country/country.dart";
+part of "../../model/country/submodels/world_country.dart";
 
 extension type const _SgsFactory._(CountrySgs _) implements CountrySgs {
   const _SgsFactory() : this._(const CountrySgs._());
@@ -20,7 +20,7 @@ class CountrySgs extends WorldCountry {
   const factory CountrySgs() = _SgsFactory;
 
   const CountrySgs._()
-    : super(
+    : super._(
         name: const CountryName(
           language: LangEng(),
           official: "South Georgia and the South Sandwich Islands",

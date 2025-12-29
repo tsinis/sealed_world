@@ -60,11 +60,11 @@ extension WorldCountryJson on WorldCountry {
   };
 
   /// {@macro from_map_method}
-  static WorldCountry fromMap(JsonMap map) => WorldCountry(
+  static WorldCountry fromMap(JsonMap map) => CountryCustom(
     name: CountryNameExtension.fromMap(map["name"] as JsonMap),
+    code: map["code"].toString(),
     altSpellings: List<String>.unmodifiable(map["altSpellings"] as List),
     areaMetric: map["areaMetric"] as double,
-    code: map["code"].toString(),
     codeNumeric: map["codeNumeric"].toString(),
     codeShort: map["codeShort"].toString(),
     continent: Continent.fromName(map["continent"] as String),

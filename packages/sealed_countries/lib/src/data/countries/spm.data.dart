@@ -4,7 +4,7 @@
 
 // ignore_for_file: prefer-digit-separators
 
-part of "../../model/country/country.dart";
+part of "../../model/country/submodels/world_country.dart";
 
 extension type const _SpmFactory._(CountrySpm _) implements CountrySpm {
   const _SpmFactory() : this._(const CountrySpm._());
@@ -20,7 +20,7 @@ class CountrySpm extends WorldCountry {
   const factory CountrySpm() = _SpmFactory;
 
   const CountrySpm._()
-    : super(
+    : super._(
         name: const CountryName(
           language: LangEng(),
           official: "Saint Pierre and Miquelon",

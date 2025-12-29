@@ -4,7 +4,7 @@
 
 // ignore_for_file: prefer-digit-separators
 
-part of "../../model/country/country.dart";
+part of "../../model/country/submodels/world_country.dart";
 
 extension type const _SjmFactory._(CountrySjm _) implements CountrySjm {
   const _SjmFactory() : this._(const CountrySjm._());
@@ -20,7 +20,7 @@ class CountrySjm extends WorldCountry {
   const factory CountrySjm() = _SjmFactory;
 
   const CountrySjm._()
-    : super(
+    : super._(
         name: const CountryName(
           language: LangEng(),
           official: "Svalbard og Jan Mayen",

@@ -4,7 +4,7 @@
 
 // ignore_for_file: prefer-digit-separators
 
-part of "../../model/country/country.dart";
+part of "../../model/country/submodels/world_country.dart";
 
 extension type const _JamFactory._(CountryJam _) implements CountryJam {
   const _JamFactory() : this._(const CountryJam._());
@@ -20,7 +20,7 @@ class CountryJam extends WorldCountry {
   const factory CountryJam() = _JamFactory;
 
   const CountryJam._()
-    : super(
+    : super._(
         name: const CountryName(
           language: LangEng(),
           official: "Jamaica",

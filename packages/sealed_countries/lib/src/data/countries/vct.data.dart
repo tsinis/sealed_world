@@ -4,7 +4,7 @@
 
 // ignore_for_file: prefer-digit-separators
 
-part of "../../model/country/country.dart";
+part of "../../model/country/submodels/world_country.dart";
 
 extension type const _VctFactory._(CountryVct _) implements CountryVct {
   const _VctFactory() : this._(const CountryVct._());
@@ -20,7 +20,7 @@ class CountryVct extends WorldCountry {
   const factory CountryVct() = _VctFactory;
 
   const CountryVct._()
-    : super(
+    : super._(
         name: const CountryName(
           language: LangEng(),
           official: "Saint Vincent and the Grenadines",

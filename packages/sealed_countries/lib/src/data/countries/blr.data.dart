@@ -4,7 +4,7 @@
 
 // ignore_for_file: prefer-digit-separators
 
-part of "../../model/country/country.dart";
+part of "../../model/country/submodels/world_country.dart";
 
 extension type const _BlrFactory._(CountryBlr _) implements CountryBlr {
   const _BlrFactory() : this._(const CountryBlr._());
@@ -20,7 +20,7 @@ class CountryBlr extends WorldCountry {
   const factory CountryBlr() = _BlrFactory;
 
   const CountryBlr._()
-    : super(
+    : super._(
         name: const CountryName(
           language: LangEng(),
           official: "Republic of Belarus",

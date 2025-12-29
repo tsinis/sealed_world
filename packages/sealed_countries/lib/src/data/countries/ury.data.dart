@@ -4,7 +4,7 @@
 
 // ignore_for_file: prefer-digit-separators
 
-part of "../../model/country/country.dart";
+part of "../../model/country/submodels/world_country.dart";
 
 extension type const _UryFactory._(CountryUry _) implements CountryUry {
   const _UryFactory() : this._(const CountryUry._());
@@ -20,7 +20,7 @@ class CountryUry extends WorldCountry {
   const factory CountryUry() = _UryFactory;
 
   const CountryUry._()
-    : super(
+    : super._(
         name: const CountryName(
           language: LangEng(),
           official: "Oriental Republic of Uruguay",

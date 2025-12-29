@@ -4,7 +4,7 @@
 
 // ignore_for_file: prefer-digit-separators
 
-part of "../../model/country/country.dart";
+part of "../../model/country/submodels/world_country.dart";
 
 extension type const _ZafFactory._(CountryZaf _) implements CountryZaf {
   const _ZafFactory() : this._(const CountryZaf._());
@@ -20,7 +20,7 @@ class CountryZaf extends WorldCountry {
   const factory CountryZaf() = _ZafFactory;
 
   const CountryZaf._()
-    : super(
+    : super._(
         name: const CountryName(
           language: LangEng(),
           official: "Republic of South Africa",

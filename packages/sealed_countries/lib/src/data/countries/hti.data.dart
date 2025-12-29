@@ -4,7 +4,7 @@
 
 // ignore_for_file: prefer-digit-separators
 
-part of "../../model/country/country.dart";
+part of "../../model/country/submodels/world_country.dart";
 
 extension type const _HtiFactory._(CountryHti _) implements CountryHti {
   const _HtiFactory() : this._(const CountryHti._());
@@ -20,7 +20,7 @@ class CountryHti extends WorldCountry {
   const factory CountryHti() = _HtiFactory;
 
   const CountryHti._()
-    : super(
+    : super._(
         name: const CountryName(
           language: LangEng(),
           official: "Republic of Haiti",

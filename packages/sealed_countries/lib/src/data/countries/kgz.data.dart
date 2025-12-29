@@ -4,7 +4,7 @@
 
 // ignore_for_file: prefer-digit-separators
 
-part of "../../model/country/country.dart";
+part of "../../model/country/submodels/world_country.dart";
 
 extension type const _KgzFactory._(CountryKgz _) implements CountryKgz {
   const _KgzFactory() : this._(const CountryKgz._());
@@ -20,7 +20,7 @@ class CountryKgz extends WorldCountry {
   const factory CountryKgz() = _KgzFactory;
 
   const CountryKgz._()
-    : super(
+    : super._(
         name: const CountryName(
           language: LangEng(),
           official: "Kyrgyz Republic",

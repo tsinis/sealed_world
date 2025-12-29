@@ -4,7 +4,7 @@
 
 // ignore_for_file: prefer-digit-separators
 
-part of "../../model/country/country.dart";
+part of "../../model/country/submodels/world_country.dart";
 
 extension type const _SwzFactory._(CountrySwz _) implements CountrySwz {
   const _SwzFactory() : this._(const CountrySwz._());
@@ -20,7 +20,7 @@ class CountrySwz extends WorldCountry {
   const factory CountrySwz() = _SwzFactory;
 
   const CountrySwz._()
-    : super(
+    : super._(
         name: const CountryName(
           language: LangEng(),
           official: "Kingdom of Eswatini",

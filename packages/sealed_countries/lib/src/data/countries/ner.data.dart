@@ -4,7 +4,7 @@
 
 // ignore_for_file: prefer-digit-separators
 
-part of "../../model/country/country.dart";
+part of "../../model/country/submodels/world_country.dart";
 
 extension type const _NerFactory._(CountryNer _) implements CountryNer {
   const _NerFactory() : this._(const CountryNer._());
@@ -20,7 +20,7 @@ class CountryNer extends WorldCountry {
   const factory CountryNer() = _NerFactory;
 
   const CountryNer._()
-    : super(
+    : super._(
         name: const CountryName(
           language: LangEng(),
           official: "Republic of Niger",

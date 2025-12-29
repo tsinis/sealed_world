@@ -4,7 +4,7 @@
 
 // ignore_for_file: prefer-digit-separators
 
-part of "../../model/country/country.dart";
+part of "../../model/country/submodels/world_country.dart";
 
 extension type const _NamFactory._(CountryNam _) implements CountryNam {
   const _NamFactory() : this._(const CountryNam._());
@@ -20,7 +20,7 @@ class CountryNam extends WorldCountry {
   const factory CountryNam() = _NamFactory;
 
   const CountryNam._()
-    : super(
+    : super._(
         name: const CountryName(
           language: LangEng(),
           official: "Republic of Namibia",

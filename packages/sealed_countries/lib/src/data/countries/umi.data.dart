@@ -4,7 +4,7 @@
 
 // ignore_for_file: prefer-digit-separators
 
-part of "../../model/country/country.dart";
+part of "../../model/country/submodels/world_country.dart";
 
 extension type const _UmiFactory._(CountryUmi _) implements CountryUmi {
   const _UmiFactory() : this._(const CountryUmi._());
@@ -20,7 +20,7 @@ class CountryUmi extends WorldCountry {
   const factory CountryUmi() = _UmiFactory;
 
   const CountryUmi._()
-    : super(
+    : super._(
         name: const CountryName(
           language: LangEng(),
           official: "United States Minor Outlying Islands",

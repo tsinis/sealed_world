@@ -4,7 +4,7 @@
 
 // ignore_for_file: prefer-digit-separators
 
-part of "../../model/country/country.dart";
+part of "../../model/country/submodels/world_country.dart";
 
 extension type const _TonFactory._(CountryTon _) implements CountryTon {
   const _TonFactory() : this._(const CountryTon._());
@@ -20,7 +20,7 @@ class CountryTon extends WorldCountry {
   const factory CountryTon() = _TonFactory;
 
   const CountryTon._()
-    : super(
+    : super._(
         name: const CountryName(
           language: LangEng(),
           official: "Kingdom of Tonga",

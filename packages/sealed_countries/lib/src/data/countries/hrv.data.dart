@@ -4,7 +4,7 @@
 
 // ignore_for_file: prefer-digit-separators
 
-part of "../../model/country/country.dart";
+part of "../../model/country/submodels/world_country.dart";
 
 extension type const _HrvFactory._(CountryHrv _) implements CountryHrv {
   const _HrvFactory() : this._(const CountryHrv._());
@@ -20,7 +20,7 @@ class CountryHrv extends WorldCountry {
   const factory CountryHrv() = _HrvFactory;
 
   const CountryHrv._()
-    : super(
+    : super._(
         name: const CountryName(
           language: LangEng(),
           official: "Republic of Croatia",

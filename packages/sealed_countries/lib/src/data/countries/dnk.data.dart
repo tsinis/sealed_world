@@ -4,7 +4,7 @@
 
 // ignore_for_file: prefer-digit-separators
 
-part of "../../model/country/country.dart";
+part of "../../model/country/submodels/world_country.dart";
 
 extension type const _DnkFactory._(CountryDnk _) implements CountryDnk {
   const _DnkFactory() : this._(const CountryDnk._());
@@ -20,7 +20,7 @@ class CountryDnk extends WorldCountry {
   const factory CountryDnk() = _DnkFactory;
 
   const CountryDnk._()
-    : super(
+    : super._(
         name: const CountryName(
           language: LangEng(),
           official: "Kingdom of Denmark",

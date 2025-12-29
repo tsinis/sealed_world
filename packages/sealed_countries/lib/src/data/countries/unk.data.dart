@@ -4,7 +4,11 @@
 
 // ignore_for_file: prefer-digit-separators
 
-part of "../../model/country/country.dart";
+part of "../../model/country/submodels/world_country.dart";
+
+extension type const _UnkFactory._(CountryUnk _) implements CountryUnk {
+  const _UnkFactory() : this._(const CountryUnk._());
+}
 
 /// A class that represents the Kosovo country.
 class CountryUnk extends WorldCountry {
@@ -16,7 +20,7 @@ class CountryUnk extends WorldCountry {
   const factory CountryUnk() = _UnkFactory;
 
   const CountryUnk._()
-    : super.custom(
+    : super._permissive(
         name: const CountryName(
           language: LangEng(),
           official: "Republic of Kosovo",
@@ -75,8 +79,4 @@ class CountryUnk extends WorldCountry {
   ];
   @override
   List<NaturalLanguage> get languages => const [LangSrp(), LangSqi()];
-}
-
-extension type const _UnkFactory._(CountryUnk _) implements CountryUnk {
-  const _UnkFactory() : this._(const CountryUnk._());
 }

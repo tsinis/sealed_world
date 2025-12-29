@@ -4,7 +4,7 @@
 
 // ignore_for_file: prefer-digit-separators
 
-part of "../../model/country/country.dart";
+part of "../../model/country/submodels/world_country.dart";
 
 extension type const _KenFactory._(CountryKen _) implements CountryKen {
   const _KenFactory() : this._(const CountryKen._());
@@ -20,7 +20,7 @@ class CountryKen extends WorldCountry {
   const factory CountryKen() = _KenFactory;
 
   const CountryKen._()
-    : super(
+    : super._(
         name: const CountryName(
           language: LangEng(),
           official: "Republic of Kenya",

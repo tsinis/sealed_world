@@ -4,7 +4,7 @@
 
 // ignore_for_file: prefer-digit-separators
 
-part of "../../model/country/country.dart";
+part of "../../model/country/submodels/world_country.dart";
 
 extension type const _KwtFactory._(CountryKwt _) implements CountryKwt {
   const _KwtFactory() : this._(const CountryKwt._());
@@ -20,7 +20,7 @@ class CountryKwt extends WorldCountry {
   const factory CountryKwt() = _KwtFactory;
 
   const CountryKwt._()
-    : super(
+    : super._(
         name: const CountryName(
           language: LangEng(),
           official: "State of Kuwait",

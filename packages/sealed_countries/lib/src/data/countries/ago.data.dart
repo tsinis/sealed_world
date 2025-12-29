@@ -4,7 +4,7 @@
 
 // ignore_for_file: prefer-digit-separators
 
-part of "../../model/country/country.dart";
+part of "../../model/country/submodels/world_country.dart";
 
 extension type const _AgoFactory._(CountryAgo _) implements CountryAgo {
   const _AgoFactory() : this._(const CountryAgo._());
@@ -20,7 +20,7 @@ class CountryAgo extends WorldCountry {
   const factory CountryAgo() = _AgoFactory;
 
   const CountryAgo._()
-    : super(
+    : super._(
         name: const CountryName(
           language: LangEng(),
           official: "Republic of Angola",

@@ -4,7 +4,7 @@
 
 // ignore_for_file: prefer-digit-separators
 
-part of "../../model/country/country.dart";
+part of "../../model/country/submodels/world_country.dart";
 
 extension type const _LieFactory._(CountryLie _) implements CountryLie {
   const _LieFactory() : this._(const CountryLie._());
@@ -20,7 +20,7 @@ class CountryLie extends WorldCountry {
   const factory CountryLie() = _LieFactory;
 
   const CountryLie._()
-    : super(
+    : super._(
         name: const CountryName(
           language: LangEng(),
           official: "Principality of Liechtenstein",

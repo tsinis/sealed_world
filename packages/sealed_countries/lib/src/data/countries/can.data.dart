@@ -4,7 +4,7 @@
 
 // ignore_for_file: prefer-digit-separators
 
-part of "../../model/country/country.dart";
+part of "../../model/country/submodels/world_country.dart";
 
 extension type const _CanFactory._(CountryCan _) implements CountryCan {
   const _CanFactory() : this._(const CountryCan._());
@@ -20,7 +20,7 @@ class CountryCan extends WorldCountry {
   const factory CountryCan() = _CanFactory;
 
   const CountryCan._()
-    : super(
+    : super._(
         name: const CountryName(
           language: LangEng(),
           official: "Canada",

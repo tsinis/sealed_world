@@ -4,7 +4,7 @@
 
 // ignore_for_file: prefer-digit-separators
 
-part of "../../model/country/country.dart";
+part of "../../model/country/submodels/world_country.dart";
 
 extension type const _LcaFactory._(CountryLca _) implements CountryLca {
   const _LcaFactory() : this._(const CountryLca._());
@@ -20,7 +20,7 @@ class CountryLca extends WorldCountry {
   const factory CountryLca() = _LcaFactory;
 
   const CountryLca._()
-    : super(
+    : super._(
         name: const CountryName(
           language: LangEng(),
           official: "Saint Lucia",

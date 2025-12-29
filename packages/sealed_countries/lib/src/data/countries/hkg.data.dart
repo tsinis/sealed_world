@@ -4,7 +4,7 @@
 
 // ignore_for_file: prefer-digit-separators
 
-part of "../../model/country/country.dart";
+part of "../../model/country/submodels/world_country.dart";
 
 extension type const _HkgFactory._(CountryHkg _) implements CountryHkg {
   const _HkgFactory() : this._(const CountryHkg._());
@@ -20,7 +20,7 @@ class CountryHkg extends WorldCountry {
   const factory CountryHkg() = _HkgFactory;
 
   const CountryHkg._()
-    : super(
+    : super._(
         name: const CountryName(
           language: LangEng(),
           official:

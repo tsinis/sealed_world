@@ -4,7 +4,7 @@
 
 // ignore_for_file: prefer-digit-separators
 
-part of "../../model/country/country.dart";
+part of "../../model/country/submodels/world_country.dart";
 
 extension type const _VutFactory._(CountryVut _) implements CountryVut {
   const _VutFactory() : this._(const CountryVut._());
@@ -20,7 +20,7 @@ class CountryVut extends WorldCountry {
   const factory CountryVut() = _VutFactory;
 
   const CountryVut._()
-    : super(
+    : super._(
         name: const CountryName(
           language: LangEng(),
           official: "Republic of Vanuatu",

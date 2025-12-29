@@ -4,7 +4,7 @@
 
 // ignore_for_file: prefer-digit-separators
 
-part of "../../model/country/country.dart";
+part of "../../model/country/submodels/world_country.dart";
 
 extension type const _MarFactory._(CountryMar _) implements CountryMar {
   const _MarFactory() : this._(const CountryMar._());
@@ -20,7 +20,7 @@ class CountryMar extends WorldCountry {
   const factory CountryMar() = _MarFactory;
 
   const CountryMar._()
-    : super(
+    : super._(
         name: const CountryName(
           language: LangEng(),
           official: "Kingdom of Morocco",

@@ -4,7 +4,7 @@
 
 // ignore_for_file: prefer-digit-separators
 
-part of "../../model/country/country.dart";
+part of "../../model/country/submodels/world_country.dart";
 
 extension type const _TcaFactory._(CountryTca _) implements CountryTca {
   const _TcaFactory() : this._(const CountryTca._());
@@ -20,7 +20,7 @@ class CountryTca extends WorldCountry {
   const factory CountryTca() = _TcaFactory;
 
   const CountryTca._()
-    : super(
+    : super._(
         name: const CountryName(
           language: LangEng(),
           official: "Turks and Caicos Islands",

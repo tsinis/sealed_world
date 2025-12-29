@@ -4,7 +4,7 @@
 
 // ignore_for_file: prefer-digit-separators
 
-part of "../../model/country/country.dart";
+part of "../../model/country/submodels/world_country.dart";
 
 extension type const _GumFactory._(CountryGum _) implements CountryGum {
   const _GumFactory() : this._(const CountryGum._());
@@ -20,7 +20,7 @@ class CountryGum extends WorldCountry {
   const factory CountryGum() = _GumFactory;
 
   const CountryGum._()
-    : super(
+    : super._(
         name: const CountryName(
           language: LangEng(),
           official: "Territory of Guam",

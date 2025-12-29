@@ -4,7 +4,7 @@
 
 // ignore_for_file: prefer-digit-separators
 
-part of "../../model/country/country.dart";
+part of "../../model/country/submodels/world_country.dart";
 
 extension type const _AtfFactory._(CountryAtf _) implements CountryAtf {
   const _AtfFactory() : this._(const CountryAtf._());
@@ -20,7 +20,7 @@ class CountryAtf extends WorldCountry {
   const factory CountryAtf() = _AtfFactory;
 
   const CountryAtf._()
-    : super(
+    : super._(
         name: const CountryName(
           language: LangEng(),
           official: "Territory of the French Southern and Antarctic Lands",

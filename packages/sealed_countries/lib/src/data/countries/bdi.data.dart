@@ -4,7 +4,7 @@
 
 // ignore_for_file: prefer-digit-separators
 
-part of "../../model/country/country.dart";
+part of "../../model/country/submodels/world_country.dart";
 
 extension type const _BdiFactory._(CountryBdi _) implements CountryBdi {
   const _BdiFactory() : this._(const CountryBdi._());
@@ -20,7 +20,7 @@ class CountryBdi extends WorldCountry {
   const factory CountryBdi() = _BdiFactory;
 
   const CountryBdi._()
-    : super(
+    : super._(
         name: const CountryName(
           language: LangEng(),
           official: "Republic of Burundi",

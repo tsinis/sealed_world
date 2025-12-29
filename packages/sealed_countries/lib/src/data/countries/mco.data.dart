@@ -4,7 +4,7 @@
 
 // ignore_for_file: prefer-digit-separators
 
-part of "../../model/country/country.dart";
+part of "../../model/country/submodels/world_country.dart";
 
 extension type const _McoFactory._(CountryMco _) implements CountryMco {
   const _McoFactory() : this._(const CountryMco._());
@@ -20,7 +20,7 @@ class CountryMco extends WorldCountry {
   const factory CountryMco() = _McoFactory;
 
   const CountryMco._()
-    : super(
+    : super._(
         name: const CountryName(
           language: LangEng(),
           official: "Principality of Monaco",

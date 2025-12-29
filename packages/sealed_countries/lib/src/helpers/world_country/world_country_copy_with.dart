@@ -54,11 +54,11 @@ extension WorldCountryCopyWith<T extends WorldCountry> on T {
     PostalCode? postalCode,
     List<RegionalBloc>? regionalBlocs,
     LocaleMapFunction<String> Function()? mapper,
-  }) => WorldCountry(
+  }) => CountryCustom(
     name: name ?? this.name,
+    code: code ?? this.code,
     altSpellings: altSpellings ?? this.altSpellings,
     areaMetric: areaMetric ?? this.areaMetric,
-    code: code ?? this.code,
     codeNumeric: codeNumeric ?? this.codeNumeric,
     codeShort: codeShort ?? this.codeShort,
     continent: continent ?? this.continent,

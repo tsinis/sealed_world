@@ -4,7 +4,7 @@
 
 // ignore_for_file: prefer-digit-separators
 
-part of "../../model/country/country.dart";
+part of "../../model/country/submodels/world_country.dart";
 
 extension type const _GabFactory._(CountryGab _) implements CountryGab {
   const _GabFactory() : this._(const CountryGab._());
@@ -20,7 +20,7 @@ class CountryGab extends WorldCountry {
   const factory CountryGab() = _GabFactory;
 
   const CountryGab._()
-    : super(
+    : super._(
         name: const CountryName(
           language: LangEng(),
           official: "Gabonese Republic",

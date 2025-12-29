@@ -4,7 +4,7 @@
 
 // ignore_for_file: prefer-digit-separators
 
-part of "../../model/country/country.dart";
+part of "../../model/country/submodels/world_country.dart";
 
 extension type const _MozFactory._(CountryMoz _) implements CountryMoz {
   const _MozFactory() : this._(const CountryMoz._());
@@ -20,7 +20,7 @@ class CountryMoz extends WorldCountry {
   const factory CountryMoz() = _MozFactory;
 
   const CountryMoz._()
-    : super(
+    : super._(
         name: const CountryName(
           language: LangEng(),
           official: "Republic of Mozambique",

@@ -4,7 +4,7 @@
 
 // ignore_for_file: prefer-digit-separators
 
-part of "../../model/country/country.dart";
+part of "../../model/country/submodels/world_country.dart";
 
 extension type const _EshFactory._(CountryEsh _) implements CountryEsh {
   const _EshFactory() : this._(const CountryEsh._());
@@ -20,7 +20,7 @@ class CountryEsh extends WorldCountry {
   const factory CountryEsh() = _EshFactory;
 
   const CountryEsh._()
-    : super(
+    : super._(
         name: const CountryName(
           language: LangEng(),
           official: "Sahrawi Arab Democratic Republic",

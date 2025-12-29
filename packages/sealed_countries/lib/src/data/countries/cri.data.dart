@@ -4,7 +4,7 @@
 
 // ignore_for_file: prefer-digit-separators
 
-part of "../../model/country/country.dart";
+part of "../../model/country/submodels/world_country.dart";
 
 extension type const _CriFactory._(CountryCri _) implements CountryCri {
   const _CriFactory() : this._(const CountryCri._());
@@ -20,7 +20,7 @@ class CountryCri extends WorldCountry {
   const factory CountryCri() = _CriFactory;
 
   const CountryCri._()
-    : super(
+    : super._(
         name: const CountryName(
           language: LangEng(),
           official: "Republic of Costa Rica",

@@ -4,7 +4,7 @@
 
 // ignore_for_file: prefer-digit-separators
 
-part of "../../model/country/country.dart";
+part of "../../model/country/submodels/world_country.dart";
 
 extension type const _TklFactory._(CountryTkl _) implements CountryTkl {
   const _TklFactory() : this._(const CountryTkl._());
@@ -20,7 +20,7 @@ class CountryTkl extends WorldCountry {
   const factory CountryTkl() = _TklFactory;
 
   const CountryTkl._()
-    : super(
+    : super._(
         name: const CountryName(
           language: LangEng(),
           official: "Tokelau",

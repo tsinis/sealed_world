@@ -4,7 +4,7 @@
 
 // ignore_for_file: prefer-digit-separators
 
-part of "../../model/country/country.dart";
+part of "../../model/country/submodels/world_country.dart";
 
 extension type const _AndFactory._(CountryAnd _) implements CountryAnd {
   const _AndFactory() : this._(const CountryAnd._());
@@ -20,7 +20,7 @@ class CountryAnd extends WorldCountry {
   const factory CountryAnd() = _AndFactory;
 
   const CountryAnd._()
-    : super(
+    : super._(
         name: const CountryName(
           language: LangEng(),
           official: "Principality of Andorra",

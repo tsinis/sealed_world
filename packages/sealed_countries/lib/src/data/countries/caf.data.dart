@@ -4,7 +4,7 @@
 
 // ignore_for_file: prefer-digit-separators
 
-part of "../../model/country/country.dart";
+part of "../../model/country/submodels/world_country.dart";
 
 extension type const _CafFactory._(CountryCaf _) implements CountryCaf {
   const _CafFactory() : this._(const CountryCaf._());
@@ -20,7 +20,7 @@ class CountryCaf extends WorldCountry {
   const factory CountryCaf() = _CafFactory;
 
   const CountryCaf._()
-    : super(
+    : super._(
         name: const CountryName(
           language: LangEng(),
           official: "Central African Republic",

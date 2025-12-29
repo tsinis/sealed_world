@@ -4,7 +4,7 @@
 
 // ignore_for_file: prefer-digit-separators
 
-part of "../../model/country/country.dart";
+part of "../../model/country/submodels/world_country.dart";
 
 extension type const _IotFactory._(CountryIot _) implements CountryIot {
   const _IotFactory() : this._(const CountryIot._());
@@ -20,7 +20,7 @@ class CountryIot extends WorldCountry {
   const factory CountryIot() = _IotFactory;
 
   const CountryIot._()
-    : super(
+    : super._(
         name: const CountryName(
           language: LangEng(),
           official: "British Indian Ocean Territory",

@@ -4,7 +4,7 @@
 
 // ignore_for_file: prefer-digit-separators
 
-part of "../../model/country/country.dart";
+part of "../../model/country/submodels/world_country.dart";
 
 extension type const _GtmFactory._(CountryGtm _) implements CountryGtm {
   const _GtmFactory() : this._(const CountryGtm._());
@@ -20,7 +20,7 @@ class CountryGtm extends WorldCountry {
   const factory CountryGtm() = _GtmFactory;
 
   const CountryGtm._()
-    : super(
+    : super._(
         name: const CountryName(
           language: LangEng(),
           official: "Republic of Guatemala",

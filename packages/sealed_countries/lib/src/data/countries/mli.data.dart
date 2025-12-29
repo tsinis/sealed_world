@@ -4,7 +4,7 @@
 
 // ignore_for_file: prefer-digit-separators
 
-part of "../../model/country/country.dart";
+part of "../../model/country/submodels/world_country.dart";
 
 extension type const _MliFactory._(CountryMli _) implements CountryMli {
   const _MliFactory() : this._(const CountryMli._());
@@ -20,7 +20,7 @@ class CountryMli extends WorldCountry {
   const factory CountryMli() = _MliFactory;
 
   const CountryMli._()
-    : super(
+    : super._(
         name: const CountryName(
           language: LangEng(),
           official: "Republic of Mali",

@@ -4,7 +4,7 @@
 
 // ignore_for_file: prefer-digit-separators
 
-part of "../../model/country/country.dart";
+part of "../../model/country/submodels/world_country.dart";
 
 extension type const _NgaFactory._(CountryNga _) implements CountryNga {
   const _NgaFactory() : this._(const CountryNga._());
@@ -20,7 +20,7 @@ class CountryNga extends WorldCountry {
   const factory CountryNga() = _NgaFactory;
 
   const CountryNga._()
-    : super(
+    : super._(
         name: const CountryName(
           language: LangEng(),
           official: "Federal Republic of Nigeria",

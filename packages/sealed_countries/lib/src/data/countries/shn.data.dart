@@ -4,7 +4,7 @@
 
 // ignore_for_file: prefer-digit-separators
 
-part of "../../model/country/country.dart";
+part of "../../model/country/submodels/world_country.dart";
 
 extension type const _ShnFactory._(CountryShn _) implements CountryShn {
   const _ShnFactory() : this._(const CountryShn._());
@@ -20,7 +20,7 @@ class CountryShn extends WorldCountry {
   const factory CountryShn() = _ShnFactory;
 
   const CountryShn._()
-    : super(
+    : super._(
         name: const CountryName(
           language: LangEng(),
           official: "Saint Helena, Ascension and Tristan da Cunha",
