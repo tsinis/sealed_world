@@ -70,6 +70,55 @@ void main() => group("$LanguagesLocaleMapper", () {
     });
   });
 
+  group("language fallback extraction", () {
+    test("falls back to two-letter language subtag", () {
+      final custom = LanguagesLocaleMapper(
+        other: {
+          "en": IsoLocaleMapper(other: {"ENG": "English"}),
+        },
+      );
+
+      final result = custom.localize(const {"ENG"}, mainLocale: "en_US");
+      expect(result[(isoCode: "ENG", locale: "en")], "English");
+    });
+
+    test("falls back to three-letter language subtag", () {
+      final custom = LanguagesLocaleMapper(
+        other: {
+          "fil": IsoLocaleMapper(other: {"ENG": "Ingles"}),
+        },
+      );
+
+      final result = custom.localize(const {"ENG"}, mainLocale: "fil_PH");
+      expect(result[(isoCode: "ENG", locale: "fil")], "Ingles");
+    });
+
+    test("falls back to five-letter language subtag", () {
+      final custom = LanguagesLocaleMapper(
+        other: {
+          "alphae": IsoLocaleMapper(other: {"ENG": "Alphaen"}),
+        },
+      );
+
+      final result = custom.localize(const {"ENG"}, mainLocale: "alphae_LATN");
+      expect(result[(isoCode: "ENG", locale: "alphae")], "Alphaen");
+    });
+
+    test("keeps original locale when language subtag is invalid", () {
+      final custom = LanguagesLocaleMapper(
+        other: {
+          "und": IsoLocaleMapper(other: {"ENG": "Unknown"}),
+        },
+      );
+
+      final nonValid = custom.localize(const {"ENG"}, mainLocale: "123_locale");
+      expect(nonValid, isEmpty);
+
+      final valid = custom.localize(const {"ENG"}, mainLocale: "und");
+      expect(valid[(isoCode: "ENG", locale: "und")], "Unknown");
+    });
+  });
+
   group("formatter", () {
     test("applies formatter to all translations", () {
       final result = mapper.localize(

@@ -74,6 +74,56 @@ void main() => group("$CurrenciesLocaleMapper", () {
     });
   });
 
+  group("language fallback extraction", () {
+    test("falls back to two-letter language subtag", () {
+      final custom = CurrenciesLocaleMapper(
+        other: {
+          "en": IsoLocaleMapper(other: {"USD": "Dollar"}),
+        },
+      );
+
+      final result = custom.localize(const {"USD"}, mainLocale: "en_US");
+
+      expect(result[(isoCode: "USD", locale: "en")], "Dollar");
+    });
+
+    test("falls back to three-letter language subtag", () {
+      final custom = CurrenciesLocaleMapper(
+        other: {
+          "fil": IsoLocaleMapper(other: {"USD": "Dolyar"}),
+        },
+      );
+
+      final result = custom.localize(const {"USD"}, mainLocale: "fil_PH");
+      expect(result[(isoCode: "USD", locale: "fil")], "Dolyar");
+    });
+
+    test("falls back to five-letter language subtag", () {
+      final custom = CurrenciesLocaleMapper(
+        other: {
+          "alphae": IsoLocaleMapper(other: {"USD": "Alphae Dollar"}),
+        },
+      );
+
+      final result = custom.localize(const {"USD"}, mainLocale: "alphae_LATN");
+      expect(result[(isoCode: "USD", locale: "alphae")], "Alphae Dollar");
+    });
+
+    test("keeps original locale when language subtag is invalid", () {
+      final custom = CurrenciesLocaleMapper(
+        other: {
+          "und": IsoLocaleMapper(other: {"USD": "Unknown Currency"}),
+        },
+      );
+
+      final nonValid = custom.localize(const {"USD"}, mainLocale: "123_locale");
+      expect(nonValid, isEmpty);
+
+      final valid = custom.localize(const {"USD"}, mainLocale: "und");
+      expect(valid[(isoCode: "USD", locale: "und")], "Unknown Currency");
+    });
+  });
+
   group("$IsoLocaleMapper functionality", () {
     test("returns full map when keys are null", () {
       final customMapper = CurrenciesLocaleMapper(
