@@ -8,6 +8,7 @@ import "package:sealed_languages/src/model/script/submodels/script.dart";
 import "package:sealed_languages/src/model/translated_name.dart";
 import "package:test/test.dart";
 
+// ignore: avoid-high-cyclomatic-complexity, it's a test...
 void main() => group("$LocalizationDelegate", () {
   const language = LangEng();
   const script = ScriptLatn();

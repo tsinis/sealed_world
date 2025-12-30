@@ -1,4 +1,9 @@
-part of "world_bloc.dart";
+import "package:sealed_languages/sealed_languages.dart";
+
+import "../../collections/regional_bloc_collections.dart";
+import "world_bloc.dart";
+
+part "../../data/regional_bloc/regional_bloc.data.dart";
 
 /// The [RegionalBloc] class is an non-abstract class that represents a regional
 /// bloc. It consists of a [String] values that represents the name and acronym
@@ -19,7 +24,7 @@ class RegionalBloc extends WorldBloc {
   /// Creates a new [RegionalBloc] object with the given name.
   ///
   /// The [name] and [acronym] parameters are required and must not be empty.
-  const RegionalBloc({
+  const RegionalBloc._({
     required String super.acronym,
     required super.name,
     this.otherAcronyms,
@@ -47,7 +52,7 @@ class RegionalBloc extends WorldBloc {
     return list.firstWhere((bloc) => bloc.acronym == string);
   }
 
-  /// Creates a new [RegionalBloc] object from its name.
+  /// Creates a new [RegionalBloc] object from its [name].
   // ignore: avoid-non-empty-constructor-bodies, false positive, it's factory...
   factory RegionalBloc.fromName(String name) {
     final upperCaseName = IsoObject(name).toUpperCaseCode();
@@ -62,8 +67,7 @@ class RegionalBloc extends WorldBloc {
   final List<String>? otherNames;
 
   @override
-  // ignore: avoid-non-null-assertion, field is non-nullable in this class.
-  String get acronym => super.acronym!;
+  String get acronym => super.acronym ?? "";
 
   @override
   String toString({bool short = true}) => short
@@ -127,12 +131,12 @@ class RegionalBloc extends WorldBloc {
   }
 
   /// A map of all the regional blocs with their corresponding acronyms.
-  static const map = UpperCaseMap<RegionalBloc>(regionalBlocAcronymMap);
+  static const map = UpperCaseMap(regionalBlocAcronymMap);
 
   /// A list of all the regional blocs currently
   /// supported by the [RegionalBloc] class.
   // ignore_for_file: avoid-referencing-subclasses, transition to sealed class.
-  static const list = <RegionalBloc>[
+  static const list = [
     BlocAL(),
     BlocASEAN(),
     BlocAU(),

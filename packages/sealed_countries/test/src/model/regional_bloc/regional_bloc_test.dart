@@ -1,7 +1,7 @@
 import "dart:convert";
 
 import "package:_sealed_world_tests/sealed_world_tests.dart";
-import "package:sealed_countries/src/model/regional_bloc/world_bloc.dart";
+import "package:sealed_countries/src/model/regional_bloc/regional_bloc.dart";
 import "package:test/test.dart";
 
 import "../../test_data.dart";
@@ -142,12 +142,12 @@ void main() => group("$RegionalBloc", () {
   group("asserts", () {
     assertTest(
       "acronym length",
-      () => RegionalBloc(acronym: TestData.emptyString, name: TestData.string),
+      () => BlocCustom(acronym: TestData.emptyString, name: TestData.string),
     );
 
     assertTest(
       "name length",
-      () => RegionalBloc(acronym: TestData.string, name: TestData.emptyString),
+      () => BlocCustom(acronym: TestData.string, name: TestData.emptyString),
     );
   });
 

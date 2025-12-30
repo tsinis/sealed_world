@@ -1,9 +1,8 @@
-// ignore_for_file: prefer-static-class, it's referenced as static in the model.
-import "../data/regional_bloc/regional_bloc.data.dart";
-import "../model/regional_bloc/world_bloc.dart";
+import "../model/regional_bloc/regional_bloc.dart";
 
 /// Map of [RegionalBloc] standard acronyms.
-const regionalBlocAcronymMap = <String, RegionalBloc>{
+// ignore: prefer-static-class, it's referenced as static in the model.
+const regionalBlocAcronymMap = {
   "AL": BlocAL(),
   "ASEAN": BlocASEAN(),
   "AU": BlocAU(),

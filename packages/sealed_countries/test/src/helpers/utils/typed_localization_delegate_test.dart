@@ -3,6 +3,7 @@ import "package:sealed_countries/src/model/country/country.dart";
 import "package:sealed_currencies/sealed_currencies.dart";
 import "package:test/test.dart";
 
+// ignore: avoid-high-cyclomatic-complexity, it's a test...
 void main() => group("$TypedLocalizationDelegate", () {
   const language = LangEng();
   const countryCode = "US";

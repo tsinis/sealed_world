@@ -7,7 +7,7 @@ import "../../model/country/submodels/country_name.dart";
 import "../../model/country/submodels/demonyms.dart";
 import "../../model/country/submodels/weekday.dart";
 import "../../model/geo/submodels/continent.dart";
-import "../../model/regional_bloc/world_bloc.dart";
+import "../../model/regional_bloc/regional_bloc.dart";
 import "../extensions/country_submodels/capital_info_extension.dart";
 import "../extensions/country_submodels/car_extension.dart";
 import "../extensions/country_submodels/country_name_extension.dart";
