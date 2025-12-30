@@ -34,7 +34,7 @@ extension LocaleExtension on Locale? {
   @useResult
   TypedLocale? maybeToTypedLocale([NaturalLanguage? fallbackLanguage]) {
     final language = maybeLanguage ?? fallbackLanguage;
-    final country = WorldCountry.maybeFromCodeShort(this?.countryCode);
+    final country = maybeCountry;
 
     return language == null
         ? null

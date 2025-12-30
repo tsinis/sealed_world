@@ -80,6 +80,7 @@ void main() => group("$LocalizationDelegate", () {
               altSymbol,
               mainLocale,
               fallbackLocale,
+              formatter,
             }) => const {
               (isoCode: "ENG", locale: "en"): "English",
               (isoCode: "ENG+", locale: "en"): "English (full)",
@@ -99,6 +100,7 @@ void main() => group("$LocalizationDelegate", () {
               altSymbol,
               mainLocale,
               fallbackLocale,
+              formatter,
             }) => const {
               (isoCode: "ENG", locale: "en"): "English",
               (isoCode: "ENG+", locale: "en"): "English Language",
@@ -123,6 +125,7 @@ void main() => group("$LocalizationDelegate", () {
               altSymbol,
               mainLocale,
               fallbackLocale,
+              formatter,
             }) => const {(isoCode: "ENG", locale: "en"): "English"},
       );
 
@@ -146,6 +149,7 @@ void main() => group("$LocalizationDelegate", () {
               altSymbol,
               mainLocale,
               fallbackLocale,
+              formatter,
             }) => const {
               (isoCode: "ENG", locale: "en"): "English",
               (isoCode: "ENG", locale: "de"): "Englisch",
@@ -171,6 +175,7 @@ void main() => group("$LocalizationDelegate", () {
               altSymbol,
               mainLocale,
               fallbackLocale,
+              formatter,
             }) => const {
               (isoCode: "ENG", locale: "en"): "English",
               (isoCode: "DEU", locale: "en"): "German",
@@ -192,6 +197,7 @@ void main() => group("$LocalizationDelegate", () {
               altSymbol,
               mainLocale,
               fallbackLocale,
+              formatter,
             }) => const {
               (isoCode: "ENG", locale: "en"): "English",
               (isoCode: "ENG*", locale: "en"): "English Language",
@@ -218,6 +224,7 @@ void main() => group("$LocalizationDelegate", () {
               altSymbol,
               mainLocale,
               fallbackLocale,
+              formatter,
             }) => const {
               (isoCode: "ENG", locale: "en_Latn_US"): "English (US)",
             },
@@ -240,6 +247,7 @@ void main() => group("$LocalizationDelegate", () {
               altSymbol,
               mainLocale,
               fallbackLocale,
+              formatter,
             }) => const {
               (isoCode: "ENG", locale: "invalid_locale_format"): "English",
               (isoCode: "ENG", locale: "en"): "English (valid)",
@@ -263,6 +271,7 @@ void main() => group("$LocalizationDelegate", () {
               altSymbol,
               mainLocale,
               fallbackLocale,
+              formatter,
             }) {
               capturedMainLocale = mainLocale ?? "";
               capturedFallbackLocale = fallbackLocale ?? "";
@@ -307,6 +316,15 @@ void main() => group("$LocalizationDelegate", () {
         expect(result?.countryCode, isNull);
       });
 
+      test("parses three-letter language", () {
+        final result = parser.parseLocale("eng");
+
+        expect(result?.toString(), locale.toString());
+        expect(result?.language, equals(language));
+        expect(result?.script, isNull);
+        expect(result?.countryCode, isNull);
+      });
+
       test("parses language with country", () {
         final result = parser.parseLocale("en_US");
 
@@ -317,6 +335,18 @@ void main() => group("$LocalizationDelegate", () {
         expect(result?.language, equals(language));
         expect(result?.script, isNull);
         expect(result?.countryCode, equals(countryCode));
+      });
+
+      test("parses language with alpha-3 country", () {
+        final result = parser.parseLocale("en_USA");
+
+        expect(
+          result?.toString(),
+          locale.copyWith(countryCode: "USA").toString(),
+        );
+        expect(result?.language, equals(language));
+        expect(result?.script, isNull);
+        expect(result?.countryCode, equals("USA"));
       });
 
       test("parses language with script", () {
@@ -386,12 +416,12 @@ void main() => group("$LocalizationDelegate", () {
     group("invalid formats", () {
       test(
         "rejects invalid language length",
-        () => expect(parser.parseLocale("eng"), isNull),
+        () => expect(parser.parseLocale("engl"), isNull),
       );
 
       test(
         "rejects invalid country length",
-        () => expect(parser.parseLocale("en_USA"), isNull),
+        () => expect(parser.parseLocale("en_U"), isNull),
       );
 
       test(
@@ -408,6 +438,49 @@ void main() => group("$LocalizationDelegate", () {
         "rejects wrong order",
         () => expect(parser.parseLocale("US_en"), isNull),
       );
+    });
+
+    group("edge cases", () {
+      test("parses BasicLocale input", () {
+        const localeInput = BasicLocale(language, countryCode: "gb");
+        final result = parser.parseLocale(localeInput);
+
+        expect(result?.language, equals(language));
+        expect(result?.script, isNull);
+        expect(result?.countryCode, equals("GB"));
+      });
+
+      test("handles messy separators and casing", () {
+        final result = parser.parseLocale("  en - LATN__ usa ");
+
+        expect(result?.language, equals(language));
+        expect(result?.script, equals(script));
+        expect(result?.countryCode, equals("USA"));
+      });
+
+      test("returns null for language outside whitelist", () {
+        expect(parser.parseLocale("de"), isNull);
+      });
+
+      test("omits scripts that are not whitelisted", () {
+        final result = parser.parseLocale("en_Cyrl_ru");
+
+        expect(result?.language, equals(language));
+        expect(result?.script, isNull);
+        expect(result?.countryCode, equals("RU"));
+      });
+
+      test("parses iso-3 language with script and alpha-3 country", () {
+        final extendedParser = LocalizationDelegate(
+          languages: const [LangEng(), LangDeu()],
+          scripts: const [ScriptLatn(), ScriptCyrl()],
+        );
+        final result = extendedParser.parseLocale("deu-Cyrl-DEU");
+
+        expect(result?.language, equals(const LangDeu()));
+        expect(result?.script, equals(const ScriptCyrl()));
+        expect(result?.countryCode, equals("DEU"));
+      });
     });
   });
 });

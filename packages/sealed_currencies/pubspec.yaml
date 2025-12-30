@@ -1,4 +1,4 @@
-version: 2.5.0
+version: 2.5.0 # TODO! Bump to 3.0.0 at January 2026
 name: sealed_currencies
 description: Provides data for world currencies in the form of sealed classes.
 maintainer: Roman Cinis
@@ -23,7 +23,7 @@ screenshots:
     path: doc/example.webp
 
 environment:
-  sdk: ^3.9.2
+  sdk: ^3.10.4
 
 dependencies:
   l10n_currencies: ^1.3.0

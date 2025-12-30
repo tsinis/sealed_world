@@ -20,10 +20,10 @@ extension BasicLocaleExtension on BasicLocale {
   );
 
   /// {@macro to_map_method}
-  Map<String, String?> toMap() => {
-    "countryCode": IsoString.maybe(countryCode)?.toUpperCaseCode(),
+  Map<String, String> toMap() => {
+    "countryCode": ?IsoString.maybe(countryCode)?.toUpperCaseCode(),
     "language": language.codeShort.toLowerCase(),
-    "script": script?.code,
+    "script": ?script?.code,
   };
 
   /// {@macro from_map_method}

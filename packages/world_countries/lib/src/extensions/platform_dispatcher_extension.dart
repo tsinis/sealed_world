@@ -25,7 +25,7 @@ extension PlatformDispatcherExtension on PlatformDispatcher {
   /// ```
   @useResult
   WorldCountry? get firstCountryOrNull => _firstWhereCode(
-    WorldCountry.maybeFromCodeShort,
+    WorldCountry.maybeFromAnyCode,
     codeFromLocale: (locale) => locale.countryCode,
   );
 
@@ -44,7 +44,7 @@ extension PlatformDispatcherExtension on PlatformDispatcher {
   /// ```
   @useResult
   NaturalLanguage? get firstLanguageOrNull => _firstWhereCode(
-    NaturalLanguage.maybeFromCodeShort,
+    NaturalLanguage.maybeFromAnyCode,
     codeFromLocale: (locale) => locale.languageCode,
   );
 
@@ -84,10 +84,10 @@ extension PlatformDispatcherExtension on PlatformDispatcher {
   /// ```
   @useResult
   BasicTypedLocale? get maybeLocale {
-    final language = NaturalLanguage.maybeFromCodeShort(locale.languageCode);
+    final language = NaturalLanguage.maybeFromAnyCode(locale.languageCode);
     if (language == null) return null;
 
-    final country = WorldCountry.maybeFromCodeShort(locale.countryCode);
+    final country = WorldCountry.maybeFromAnyCode(locale.countryCode);
     final script = Script.maybeFromCode(locale.scriptCode);
 
     return BasicTypedLocale(language, country: country, script: script);
@@ -98,11 +98,19 @@ extension PlatformDispatcherExtension on PlatformDispatcher {
   T? _firstWhereCode<T extends IsoStandardized>(
     T? Function(String? code) fromCode, {
     required String? Function(Locale locale) codeFromLocale,
-    int codeLength = IsoStandardized.codeShortLength,
+    int? codeLength,
   }) {
     for (final locale in locales) {
-      final code = codeFromLocale(locale);
-      if (code?.length != codeLength) continue;
+      final code = codeFromLocale(locale) ?? "";
+      if (code.isEmpty) continue;
+
+      final length = code.length;
+      if (codeLength != null) {
+        if (length != codeLength) continue;
+      } else if (length < IsoStandardized.codeShortLength ||
+          length > IsoStandardized.codeLength) {
+        continue;
+      }
 
       final value = fromCode(code);
       if (value != null) return value;

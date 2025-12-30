@@ -4,7 +4,7 @@ import "../../model/country/country.dart";
 /// [WorldCountry] object.
 extension WorldCountryGeo on WorldCountry {
   /// The multiplier to convert square kilometers to square miles.
-  static const imperialAreaMultiplier = 0.38610_216;
+  static const imperialAreaMultiplier = 0.386_102_16;
 
   /// Returns an unmodifiable list of [WorldCountry] objects representing the
   /// countries that share a land border with this country.

@@ -1,3 +1,5 @@
+import '../../typedefs/typedefs.dart';
+
 /// Configuration options for locale mapping operations.
 ///
 /// Type parameter [T] represents the type of locale identifier that can be used
@@ -14,12 +16,14 @@ class LocaleMappingOptions<T extends Object> {
   /// localization.
   /// - [useLanguageFallback]: Whether to fallback to language-only codes.
   /// - [altSymbol]: Symbol used to mark alternative names, defaults to `"+"`.
+  /// - [formatter]: Optional function to customize localized string formatting.
   const LocaleMappingOptions({
     this.mainLocale,
     this.fallbackLocale,
     this.localizeFullNames = true,
     this.useLanguageFallback = true,
     this.altSymbol = "+",
+    this.formatter,
   });
 
   /// Default symbol used to mark alternative names in localization maps.
@@ -42,11 +46,17 @@ class LocaleMappingOptions<T extends Object> {
   /// For example, if true and `'en_US'` is not found, will try `'en'`.
   final bool useLanguageFallback;
 
+  /// Optional formatter function for customizing localized strings.
+  final String Function(IsoLocaleKey isoLocale, String l10n)?
+  // ignore: prefer-correct-callback-field-name, to match L10N naming.
+  formatter;
+
   @override
   String toString() =>
       'LocaleMappingOptions(altSymbol: "$altSymbol", '
       '${fallbackLocale == null ? '' : ', fallbackLocale: "$fallbackLocale"'}'
       "localizeFullNames: $localizeFullNames, "
       '${mainLocale == null ? '' : ', mainLocale: "$mainLocale" '}'
-      "useLanguageFallback: $useLanguageFallback)";
+      "useLanguageFallback: $useLanguageFallback, "
+      "formatter: ${(formatter != null)})";
 }

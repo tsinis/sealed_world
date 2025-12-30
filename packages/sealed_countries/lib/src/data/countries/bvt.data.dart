@@ -35,7 +35,7 @@ class CountryBvt extends WorldCountry {
         idd: const Idd(root: 4, suffixes: [7]),
         altSpellings: const ["BV", "Bouvetøya", "Bouvet-øya"],
         continent: const Antarctica(),
-        latLng: const LatLng(54.4208, 3.3464),
+        latLng: const LatLng(-54.4208, 3.3464),
         areaMetric: 49,
         emoji: "🇧🇻",
         maps: const Maps(

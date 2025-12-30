@@ -137,5 +137,16 @@ void main() => group("LocaleExtension", () {
         const TypedLocale(english, country: usa, script: latin),
       ),
     );
+
+    test(
+      "should resolve alpha-3 country codes when available",
+      () => expect(
+        Locale.fromSubtags(
+          languageCode: english.codeShort,
+          countryCode: usa.code,
+        ).maybeToTypedLocale(),
+        const TypedLocale(english, country: usa),
+      ),
+    );
   });
 });

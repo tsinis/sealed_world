@@ -19,27 +19,26 @@
 /// string keys to retrieve the values.
 typedef JsonMap = Map<String, dynamic>;
 
-/// A typedef representing a JSON-encoded map with string keys and [Object?]
+/// A typedef representing a JSON-encoded map with string keys and [Object]
 /// values.
 ///
 /// The `JsonObjectMap` type is used to represent a map-like structure commonly
-/// found in JSON-encoded data. It has string keys and [Object?] values, where
-/// [Object?] represents a nullable value of any type. This typedef is typically
-/// used to improve code readability and provide a more expressive type
-/// annotation.
+/// found in JSON-encoded data. It has string keys and [Object] values, where
+/// [Object] represents a non-nullable value of any type. This typedef is
+/// typically used to improve code readability and provide a more expressive
+/// type annotation.
 ///
 /// Example usage:
 /// ```dart
 /// JsonObjectMap user = {
 ///   'name': 'John Doe',
 ///   'age': 30,
-///   'email': null,
+///   'email': ?email,
 /// };
 /// ```
 ///
 /// Note: JSON-encoded maps can contain values of different types, including
-/// null. The [Object?] type allows for flexibility in handling different value
-/// types.
+/// null. The [Object] type makes sure that the values are non-nullable.
 ///
 /// See also:
 ///   - [Map], the built-in Dart class representing a map.
@@ -86,4 +85,5 @@ typedef LocaleMapFunction<T extends Object> =
       String? altSymbol,
       T? mainLocale,
       T? fallbackLocale,
+      String Function(IsoLocaleKey isoLocale, String l10n)? formatter,
     });

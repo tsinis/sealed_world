@@ -37,6 +37,11 @@ void main() => group("PlatformDispatcherExtension", () {
       expect(tester.platformDispatcher.firstCountryOrNull, const CountryUsa());
     });
 
+    testWidgets("should support alpha-3 country codes", (tester) async {
+      tester.platformDispatcher.localesTestValue = const [Locale("en", "USA")];
+      expect(tester.platformDispatcher.firstCountryOrNull, const CountryUsa());
+    });
+
     testWidgets(
       "should skip invalid country codes and return the next valid one",
       (tester) async {
@@ -65,6 +70,11 @@ void main() => group("PlatformDispatcherExtension", () {
         Locale("en", "US"),
         Locale("es", "ES"),
       ];
+      expect(tester.platformDispatcher.firstLanguageOrNull, const LangEng());
+    });
+
+    testWidgets("should support alpha-3 language codes", (tester) async {
+      tester.platformDispatcher.localesTestValue = const [Locale("eng", "US")];
       expect(tester.platformDispatcher.firstLanguageOrNull, const LangEng());
     });
 
@@ -163,6 +173,19 @@ void main() => group("PlatformDispatcherExtension", () {
       expect(typedLocale?.language, const LangRus());
       expect(typedLocale?.country, const CountryRus());
       expect(typedLocale?.script, const ScriptCyrl());
+    });
+
+    testWidgets("should resolve alpha-3 language and country codes", (
+      tester,
+    ) async {
+      tester.platformDispatcher.localeTestValue = const Locale.fromSubtags(
+        languageCode: "eng",
+        countryCode: "USA",
+      );
+      final typedLocale = tester.platformDispatcher.maybeLocale;
+      expect(typedLocale, isNotNull);
+      expect(typedLocale?.language, const LangEng());
+      expect(typedLocale?.country, const CountryUsa());
     });
   });
 });

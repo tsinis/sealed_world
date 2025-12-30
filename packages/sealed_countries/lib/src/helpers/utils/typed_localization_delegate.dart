@@ -35,7 +35,7 @@ class TypedLocalizationDelegate
     WorldCountry? country,
   }) {
     final maybeCountry =
-        country ?? WorldCountry.maybeFromCodeShort(countryCode, countries);
+        country ?? WorldCountry.maybeFromAnyCode(countryCode, countries);
 
     return BasicTypedLocale(
       language,
