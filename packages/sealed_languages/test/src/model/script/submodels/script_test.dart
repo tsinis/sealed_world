@@ -44,6 +44,31 @@ void main() => group("$Script", () {
 
   test("compareTo", () => expect(value.compareTo(array.last), isNot(isZero)));
 
+  group("sealed switch expressions", () {
+    // ignore: avoid-local-functions, it's a test.
+    String? describe(Script script) => switch (script) {
+      ScriptLatn() => "latin",
+      ScriptCyrl() => "cyrillic",
+      ScriptCustom(:final codeNumeric) when codeNumeric.startsWith("9") =>
+        "custom-$codeNumeric",
+      Script(:final pva) when (pva?.contains("Arabic") ?? false) =>
+        "arabic family",
+      // ignore: avoid-wildcard-cases-with-sealed-classes, it's a test.
+      _ => null,
+    };
+
+    test("matches generated subtypes", () {
+      expect(describe(const ScriptLatn()), "latin");
+      expect(describe(const ScriptCyrl()), "cyrillic");
+    });
+
+    test("matches custom scripts and guards", () {
+      const custom = ScriptCustom(code: "ZZZZ", codeNumeric: "900");
+      expect(describe(custom), "custom-900");
+      expect(describe(const ScriptArab()), "arabic family");
+    });
+  });
+
   group("fields", () {
     for (final element in Script.list) {
       test("of $Script: ${element.name}", () {

@@ -46,9 +46,15 @@ sealed class RegionalBloc extends WorldBloc {
     // ignore: avoid-non-empty-constructor-bodies, more clear for factory methods.
   ]) {
     final string = IsoObject.maybe(acronym)?.toUpperCaseCode();
-    if (blocs == null) return map[string]!;
+    final regionalBlocs = blocs ?? list;
 
-    return list.firstWhere((bloc) => bloc.acronym == string);
+    return regionalBlocs.firstWhere(
+      (bloc) => bloc.acronym == string,
+      orElse: () => throw StateError(
+        'RegionalBloc with acronym "$acronym"'
+        "does not exist in the $regionalBlocs!",
+      ),
+    );
   }
 
   /// Creates a new [RegionalBloc] object from its [name].

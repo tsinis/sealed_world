@@ -49,6 +49,29 @@ void main() => group("$NaturalLanguage", () {
 
   test("compareTo", () => expect(value.compareTo(array.last), isNot(isZero)));
 
+  group("sealed switch expressions", () {
+    // ignore: avoid-local-functions, it's a test.
+    String? describe(NaturalLanguage language) => switch (language) {
+      LangEng() => "english",
+      LangSpa() => "spanish",
+      LangCustom(:final code) when code.startsWith("X") => "custom-$code",
+      NaturalLanguage(isRightToLeft: true) => "rtl",
+      // ignore: avoid-wildcard-cases-with-sealed-classes, it's a test.
+      _ => null,
+    };
+
+    test("matches generated subtypes", () {
+      expect(describe(const LangEng()), "english");
+      expect(describe(const LangSpa()), "spanish");
+    });
+
+    test("matches custom languages and guard", () {
+      const custom = LangCustom(code: "XSA", codeShort: "xs");
+      expect(describe(custom), "custom-XSA");
+      expect(describe(const LangAra()), "rtl");
+    });
+  });
+
   group("fields", () {
     for (final element in NaturalLanguage.list) {
       test("of $NaturalLanguage: ${element.name}", () {

@@ -38,6 +38,29 @@ void main() => group("$WorldCountry", () {
 
   test("compareTo", () => expect(value.compareTo(array.first), isNot(isZero)));
 
+  group("sealed switch expressions", () {
+    // ignore: avoid-local-functions, it's a test.
+    String? describe(WorldCountry country) => switch (country) {
+      CountryUsa() => "usa",
+      CountryFra() => "france",
+      CountryCustom(:final code) when code.startsWith("Z") => "custom-$code",
+      WorldCountry(:final continent) when continent is Americas => "americas",
+      // ignore: avoid-wildcard-cases-with-sealed-classes, it's a test.
+      _ => null,
+    };
+
+    test("matches generated subtypes", () {
+      expect(describe(const CountryUsa()), "usa");
+      expect(describe(const CountryFra()), "france");
+    });
+
+    test("matches CountryCustom and guard", () {
+      const custom = CountryCustom(code: "ZZZ");
+      expect(describe(custom), "custom-ZZZ");
+      expect(describe(const CountryArg()), "americas");
+    });
+  });
+
   group("some countries should be fully translated", () {
     /// This is a comprehensive list of countries that ensure the availability of
     /// translations for every language in the countries `list`.

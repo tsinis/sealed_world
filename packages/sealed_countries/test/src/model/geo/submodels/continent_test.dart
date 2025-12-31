@@ -6,6 +6,37 @@ void main() => group("$Continent", () {
   final value = Continent.list.last;
   final array = {value, Continent.list.first};
 
+  group("sealed switch expressions", () {
+    // ignore: avoid-local-functions, it's a test.
+    String describe(Continent continent) => switch (continent) {
+      Africa() => "africa",
+      Americas() => "americas",
+      Antarctica() => "antarctica",
+      Asia() => "asia",
+      Europe() => "europe",
+      Oceania() => "oceania",
+    };
+
+    test("matches generated subtypes", () {
+      expect(describe(const Europe()), "europe");
+      expect(describe(const Africa()), "africa");
+    });
+
+    test("covers all continents", () {
+      expect(
+        Continent.list.map(describe).toSet(),
+        containsAll(const {
+          "africa",
+          "americas",
+          "antarctica",
+          "asia",
+          "europe",
+          "oceania",
+        }),
+      );
+    });
+  });
+
   group("fromName", () {
     test(
       "with proper name",

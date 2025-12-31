@@ -1,5 +1,7 @@
 // ignore_for_file: prefer-correct-identifier-length, avoid-type-casts
 
+import "dart:convert";
+
 import "package:sealed_currencies/sealed_currencies.dart";
 
 import "../../model/country/country.dart";
@@ -24,42 +26,48 @@ import "world_country_copy_with.dart";
 /// [WorldCountry] objects to and from JSON maps.
 extension WorldCountryJson on WorldCountry {
   /// {@macro to_map_method}
-  JsonObjectMap toMap() => {
-    "altSpellings": altSpellings,
-    "areaMetric": areaMetric,
-    "bordersCodes": ?bordersCodes,
-    "capitalInfo": ?capitalInfo?.toMap(),
-    "car": car.toMap(),
-    "cioc": ?cioc,
-    "code": code,
-    "codeNumeric": codeNumeric,
-    "codeShort": codeShort,
-    "continent": continent.name,
-    "currencies": ?currencies?.toIsoList(),
-    "demonyms": demonyms.map((d) => d.toMap()).toList(growable: false),
-    "emoji": emoji,
-    "fifa": ?fifa,
-    "gini": ?gini?.toMap(),
-    "hasCoatOfArms": hasCoatOfArms,
-    "idd": idd.toMap(),
-    "independent": independent,
-    "landlocked": landlocked,
-    "languages": languages.toIsoList(),
-    "latLng": latLng.toMap(),
-    "maps": maps.toMap(),
-    "name": name.toMap(),
-    "namesNative": namesNative.map((nn) => nn.toMap()).toList(growable: false),
-    "population": population,
-    "postalCode": ?postalCode?.toMap(),
-    "regionalBlocs": ?regionalBlocs
-        ?.map((rb) => rb.acronym)
-        .toList(growable: false),
-    "startOfWeek": startOfWeek.toMap(),
-    "subregion": ?subregion?.name,
-    "timezones": timezones,
-    "tld": tld,
-    "unMember": unMember,
-  };
+  JsonObjectMap toMap() {
+    final encodedBlocs = jsonEncode(
+      regionalBlocs?.map((rb) => rb.acronym).toList(growable: false) ?? [],
+    );
+
+    return {
+      "altSpellings": altSpellings,
+      "areaMetric": areaMetric,
+      "bordersCodes": ?bordersCodes,
+      "capitalInfo": ?capitalInfo?.toMap(),
+      "car": car.toMap(),
+      "cioc": ?cioc,
+      "code": code,
+      "codeNumeric": codeNumeric,
+      "codeShort": codeShort,
+      "continent": continent.name,
+      "currencies": ?currencies?.toIsoList(),
+      "demonyms": demonyms.map((d) => d.toMap()).toList(growable: false),
+      "emoji": emoji,
+      "fifa": ?fifa,
+      "gini": ?gini?.toMap(),
+      "hasCoatOfArms": hasCoatOfArms,
+      "idd": idd.toMap(),
+      "independent": independent,
+      "landlocked": landlocked,
+      "languages": languages.toIsoList(),
+      "latLng": latLng.toMap(),
+      "maps": maps.toMap(),
+      "name": name.toMap(),
+      "namesNative": namesNative
+          .map((nn) => nn.toMap())
+          .toList(growable: false),
+      "population": population,
+      "postalCode": ?postalCode?.toMap(),
+      "regionalBlocs": ?(encodedBlocs.isEmpty ? null : encodedBlocs),
+      "startOfWeek": startOfWeek.toMap(),
+      "subregion": ?subregion?.name,
+      "timezones": timezones,
+      "tld": tld,
+      "unMember": unMember,
+    };
+  }
 
   /// {@macro from_map_method}
   // ignore: avoid-long-functions, very rich object.
@@ -72,6 +80,7 @@ extension WorldCountryJson on WorldCountry {
         "The `code` (or at least `codeShort`/`codeNumeric`) must be provided!",
       );
     }
+    final decodedBlocs = jsonDecode(map["regionalBlocs"]?.toString() ?? "[]");
 
     return CountryCustom(
       code: code,
@@ -126,13 +135,13 @@ extension WorldCountryJson on WorldCountry {
           ? SubRegion.maybeFromValue(map["subregion"]?.toString())
           : null,
       unMember: map["unMember"] as bool?,
-      regionalBlocs: map["regionalBlocs"] is List<Object>
-          ? List<RegionalBloc>.from(
-              (map["regionalBlocs"] as List<Object>).map(
+      regionalBlocs: decodedBlocs.isEmpty
+          ? null
+          : List<RegionalBloc>.from(
+              (decodedBlocs as List).map(
                 (rb) => RegionalBloc.fromAcronym("$rb"),
               ),
-            )
-          : null,
+            ),
     );
   }
 }

@@ -6,6 +6,28 @@ void main() => group("$NaturalLanguageFamily", () {
   final value = NaturalLanguageFamily.list.last;
   final array = {value, NaturalLanguageFamily.list.first};
 
+  group("sealed switch expressions", () {
+    // ignore: avoid-local-functions, it's a test.
+    String? describe(NaturalLanguageFamily family) => switch (family) {
+      IndoEuropean() => "indo-european",
+      AfroAsiatic() => "afro-asiatic",
+      NaturalLanguageFamily(:final name) when name.startsWith("U") =>
+        "starts-with-u",
+      // ignore: avoid-wildcard-cases-with-sealed-classes, it's a test.
+      _ => null,
+    };
+
+    test("matches generated subtypes", () {
+      expect(describe(const IndoEuropean()), "indo-european");
+      expect(describe(const AfroAsiatic()), "afro-asiatic");
+    });
+
+    test(
+      "matches guard on family name",
+      () => expect(describe(const Uralic()), "starts-with-u"),
+    );
+  });
+
   group("fields", () {
     for (final element in NaturalLanguageFamily.list) {
       test(
@@ -16,17 +38,6 @@ void main() => group("$NaturalLanguageFamily", () {
   });
 
   group("equality", () {
-    test("switch statement", () {
-      final result = switch (value) {
-        Dravidian() => false,
-        Uralic() => true,
-        // ignore: avoid-wildcard-cases-with-sealed-classes, it's a test.
-        _ => null,
-      };
-
-      expect(result, isTrue);
-    });
-
     test("basic", () {
       expect(NaturalLanguageFamily.list.first, isNot(equals(value)));
       expect(NaturalLanguageFamily.list.last, same(value));

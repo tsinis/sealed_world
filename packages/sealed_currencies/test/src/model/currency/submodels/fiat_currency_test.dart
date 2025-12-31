@@ -286,6 +286,31 @@ void main() => group("$FiatCurrency", () {
     });
   });
 
+  group("sealed switch expressions", () {
+    // ignore: avoid-local-functions, it's a test.
+    String? describe(FiatCurrency currency) => switch (currency) {
+      FiatUsd() => currency.code,
+      FiatCustom(:final code) when code.startsWith("Z") =>
+        "custom-prefix-$code",
+      FiatCustom(:final codeNumeric) when codeNumeric.endsWith("9") =>
+        "custom-numeric-$codeNumeric",
+      // ignore: avoid-wildcard-cases-with-sealed-classes, it's a test.
+      _ => null,
+    };
+
+    test("matches generated subtypes", () {
+      expect(describe(.usd()), "USD");
+      expect(describe(.eur()), isNull);
+    });
+
+    test("matches FiatCustom with prefix guard", () {
+      FiatCurrency custom = const FiatCustom(code: "ZZZ");
+      expect(describe(custom), "custom-prefix-ZZZ");
+      custom = const FiatCustom(codeNumeric: "999");
+      expect(describe(custom), "custom-numeric-999");
+    });
+  });
+
   test("toString", () {
     expect(value.toString(short: false), contains(value.code));
     expect(value.toString().contains(value.name), isFalse);

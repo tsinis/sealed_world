@@ -34,6 +34,11 @@ void main() => group("$RegionalBloc", () {
     }
 
     test(
+      "throws when acronym missing in default map",
+      () => expect(() => RegionalBloc.fromAcronym("XYZ"), throwsStateError),
+    );
+
+    test(
       "with proper acronym",
       () => expect(
         RegionalBloc.fromAcronym(value.acronym, RegionalBloc.list),
@@ -121,6 +126,28 @@ void main() => group("$RegionalBloc", () {
         value,
       ),
     );
+  });
+
+  group("sealed switch expressions", () {
+    // ignore: avoid-local-functions, it's a test.
+    String? describe(RegionalBloc bloc) => switch (bloc) {
+      BlocEU() => "eu",
+      BlocAU() => "au",
+      BlocCustom(:final acronym) when acronym.startsWith("X") =>
+        "custom-$acronym",
+      // ignore: avoid-wildcard-cases-with-sealed-classes, it's a test.
+      _ => null,
+    };
+
+    test("matches generated subtypes", () {
+      expect(describe(const BlocEU()), "eu");
+      expect(describe(const BlocAU()), "au");
+    });
+
+    test("matches BlocCustom", () {
+      const custom = BlocCustom(acronym: "XU");
+      expect(describe(custom), "custom-XU");
+    });
   });
 
   test("toString", () {
