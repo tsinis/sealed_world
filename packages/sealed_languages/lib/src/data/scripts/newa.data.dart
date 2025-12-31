@@ -7,7 +7,8 @@ extension type const _NewaFactory._(ScriptNewa _) implements ScriptNewa {
 /// A class that represents the Newa, Newar, Newari, Nepāla lipi script.
 final class ScriptNewa extends Script {
   /// {@template sealed_world.script_newa_constructor}
-  /// Creates a instance of [ScriptNewa] (Newa, Newar, Newari, Nepāla lipi script).
+  /// Creates a instance of [ScriptNewa] (Newa, Newar, Newari, Nepāla lipi
+  /// script).
   ///
   /// ISO 15924 Alpha-4 code: `Newa`, ISO 15924 Numeric code: `333`.
   /// {@endtemplate}

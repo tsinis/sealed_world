@@ -267,7 +267,7 @@ sealed class Script extends WritingSystem
     this.pva,
   }) : assert(
          code.length > 0 || codeNumeric.length > 0,
-         'The `code` (or at least `codeNumeric`) must be provided!',
+         "The `code` (or at least `codeNumeric`) must be provided!",
        );
 
   /// {@macro sealed_world.script_adlm_constructor}
@@ -1203,7 +1203,7 @@ sealed class Script extends WritingSystem
   /// ```dart
   /// Script.codeMap['Latn']; // ScriptLatn().
   /// ```
-  static const codeMap = UpperCaseIsoMap(
+  static const codeMap = UpperCaseIsoMap<Script>(
     scriptCodeMap,
     exactLength: codeLength,
   );
@@ -1216,7 +1216,7 @@ sealed class Script extends WritingSystem
   /// ```dart
   /// Script.codeNumericMap[215.toString()]; // ScriptLatn().
   /// ```
-  static const codeNumericMap = UpperCaseIsoMap(scriptCodeOtherMap);
+  static const codeNumericMap = UpperCaseIsoMap<Script>(scriptCodeOtherMap);
 
   /// A tree-shakable combined map of [codeMap] and [codeNumericMap], providing
   /// a unified view of script codes and their [Script] objects, for a O(1)
@@ -1227,7 +1227,7 @@ sealed class Script extends WritingSystem
   /// ```dart
   /// Script.map['Latn']; // ScriptLatn().
   /// ```
-  static const map = UpperCaseIsoMap(
+  static const map = UpperCaseIsoMap<Script>(
     {...scriptCodeMap, ...scriptCodeOtherMap},
     exactLength: null,
     maxLength: codeLength,
@@ -1237,7 +1237,7 @@ sealed class Script extends WritingSystem
   /// A tree-shakable list of all the scripts currently supported
   /// by the [Script] class.
   // ignore_for_file: avoid-referencing-subclasses, transition to sealed class.
-  static const list = [
+  static const list = <Script>[
     ScriptAdlm(),
     ScriptAfak(),
     ScriptAghb(),

@@ -7,7 +7,8 @@ extension type const _QabxFactory._(ScriptQabx _) implements ScriptQabx {
 /// A class that represents the Reserved for private use (end) script.
 final class ScriptQabx extends Script {
   /// {@template sealed_world.script_qabx_constructor}
-  /// Creates a instance of [ScriptQabx] (Reserved for private use (end) script).
+  /// Creates a instance of [ScriptQabx]
+  /// (Reserved for private use (end) script).
   ///
   /// ISO 15924 Alpha-4 code: `Qabx`, ISO 15924 Numeric code: `949`.
   /// {@endtemplate}

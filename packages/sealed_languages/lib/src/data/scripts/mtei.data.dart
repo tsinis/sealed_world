@@ -7,7 +7,8 @@ extension type const _MteiFactory._(ScriptMtei _) implements ScriptMtei {
 /// A class that represents the Meitei Mayek (Meithei, Meetei) script.
 final class ScriptMtei extends Script {
   /// {@template sealed_world.script_mtei_constructor}
-  /// Creates a instance of [ScriptMtei] (Meitei Mayek (Meithei, Meetei) script).
+  /// Creates a instance of [ScriptMtei] (Meitei Mayek (Meithei, Meetei)
+  /// script).
   ///
   /// ISO 15924 Alpha-4 code: `Mtei`, ISO 15924 Numeric code: `337`.
   /// {@endtemplate}

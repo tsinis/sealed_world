@@ -290,7 +290,7 @@ sealed class NaturalLanguage extends Language
     LocaleMapFunction<String> Function()? mapper,
   }) : assert(
          code.length > 0 || codeShort.length > 0,
-         'The `code` (or at least `codeShort`) must be provided!',
+         "The `code` (or at least `codeShort`) must be provided!",
        ),
        _mapper = mapper;
 
@@ -1058,7 +1058,9 @@ sealed class NaturalLanguage extends Language
   /// ```dart
   /// NaturalLanguage.codeMap[' eng']; // LangEng().
   /// ```
-  static const codeMap = UpperCaseIsoMap(naturalLanguageCodeMap);
+  static const codeMap = UpperCaseIsoMap<NaturalLanguage>(
+    naturalLanguageCodeMap,
+  );
 
   /// A tree-shakable constant map containing short language (ISO 639-1) codes
   /// and their associated [NaturalLanguage] objects, for a O(1) access time.
@@ -1068,7 +1070,7 @@ sealed class NaturalLanguage extends Language
   /// ```dart
   /// NaturalLanguage.codeShortMap['en ']; // LangEng().
   /// ```
-  static const codeShortMap = UpperCaseIsoMap(
+  static const codeShortMap = UpperCaseIsoMap<NaturalLanguage>(
     naturalLanguageCodeOtherMap,
     exactLength: IsoStandardized.codeShortLength,
   );
@@ -1082,7 +1084,7 @@ sealed class NaturalLanguage extends Language
   /// ```dart
   /// NaturalLanguage.map[' en ']; // LangEng().
   /// ```
-  static const map = UpperCaseIsoMap(
+  static const map = UpperCaseIsoMap<NaturalLanguage>(
     {...naturalLanguageCodeMap, ...naturalLanguageCodeOtherMap},
     exactLength: null, // Dart 3.8 formatting.
   );
@@ -1090,7 +1092,7 @@ sealed class NaturalLanguage extends Language
   /// A tree-shakable list of all the natural languages currently
   /// supported by the [NaturalLanguage] class.
   // ignore_for_file: avoid-referencing-subclasses, transition to sealed class.
-  static const list = [
+  static const list = <NaturalLanguage>[
     LangAar(),
     LangAbk(),
     LangAfr(),

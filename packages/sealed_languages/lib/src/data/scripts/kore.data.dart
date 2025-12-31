@@ -7,7 +7,8 @@ extension type const _KoreFactory._(ScriptKore _) implements ScriptKore {
 /// A class that represents the Korean (alias for Hangul + Han) script.
 final class ScriptKore extends Script {
   /// {@template sealed_world.script_kore_constructor}
-  /// Creates a instance of [ScriptKore] (Korean (alias for Hangul + Han) script).
+  /// Creates a instance of [ScriptKore] (Korean (alias for Hangul + Han)
+  /// script).
   ///
   /// ISO 15924 Alpha-4 code: `Kore`, ISO 15924 Numeric code: `287`.
   /// {@endtemplate}

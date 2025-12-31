@@ -6,7 +6,7 @@ void main() => group("$LanguageFamily", () {
   group("asserts", () {
     assertTest(
       "not",
-      () => LanguageFamily(name: "Valid Name"),
+      () => const LanguageFamily(name: "Valid Name"),
       shouldThrow: false,
     );
 

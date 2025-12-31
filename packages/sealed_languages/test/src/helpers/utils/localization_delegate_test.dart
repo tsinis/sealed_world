@@ -264,7 +264,7 @@ void main() => group("$LocalizationDelegate", () {
       String capturedFallbackLocale = "";
       bool capturedUseLanguageFallback = true;
 
-      final customParser = LocalizationDelegate(
+      LocalizationDelegate(
         mapper: () =>
             (
               isoCodes, {
@@ -280,13 +280,11 @@ void main() => group("$LocalizationDelegate", () {
 
               return const {(isoCode: "ENG", locale: "en"): "English"};
             },
-      );
-
-      customParser.translatedNames(
+      ).translatedNames(
         const [LangEng()],
-        options: LocaleMappingOptions(
+        options: const LocaleMappingOptions(
           mainLocale: locale,
-          fallbackLocale: const BasicLocale(LangDeu()),
+          fallbackLocale: BasicLocale(LangDeu()),
           useLanguageFallback: false,
         ),
       );
@@ -472,9 +470,9 @@ void main() => group("$LocalizationDelegate", () {
       });
 
       test("parses iso-3 language with script and alpha-3 country", () {
-        final extendedParser = LocalizationDelegate(
-          languages: const [LangEng(), LangDeu()],
-          scripts: const [ScriptLatn(), ScriptCyrl()],
+        const extendedParser = LocalizationDelegate(
+          languages: [LangEng(), LangDeu()],
+          scripts: [ScriptLatn(), ScriptCyrl()],
         );
         final result = extendedParser.parseLocale("deu-Cyrl-DEU");
 

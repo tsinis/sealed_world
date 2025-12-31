@@ -7,7 +7,8 @@ extension type const _DuplFactory._(ScriptDupl _) implements ScriptDupl {
 /// A class that represents the Duployan shorthand, Duployan stenography script.
 final class ScriptDupl extends Script {
   /// {@template sealed_world.script_dupl_constructor}
-  /// Creates a instance of [ScriptDupl] (Duployan shorthand, Duployan stenography script).
+  /// Creates a instance of [ScriptDupl] (Duployan shorthand, Duployan
+  /// stenography script).
   ///
   /// ISO 15924 Alpha-4 code: `Dupl`, ISO 15924 Numeric code: `755`.
   /// {@endtemplate}

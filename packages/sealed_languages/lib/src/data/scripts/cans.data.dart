@@ -7,7 +7,8 @@ extension type const _CansFactory._(ScriptCans _) implements ScriptCans {
 /// A class that represents the Unified Canadian Aboriginal Syllabics script.
 final class ScriptCans extends Script {
   /// {@template sealed_world.script_cans_constructor}
-  /// Creates a instance of [ScriptCans] (Unified Canadian Aboriginal Syllabics script).
+  /// Creates a instance of [ScriptCans] (Unified Canadian Aboriginal Syllabics
+  /// script).
   ///
   /// ISO 15924 Alpha-4 code: `Cans`, ISO 15924 Numeric code: `440`.
   /// {@endtemplate}

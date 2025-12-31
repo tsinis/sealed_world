@@ -7,7 +7,8 @@ extension type const _ItalFactory._(ScriptItal _) implements ScriptItal {
 /// A class that represents the Old Italic (Etruscan, Oscan, etc.) script.
 final class ScriptItal extends Script {
   /// {@template sealed_world.script_ital_constructor}
-  /// Creates a instance of [ScriptItal] (Old Italic (Etruscan, Oscan, etc.) script).
+  /// Creates a instance of [ScriptItal] (Old Italic (Etruscan, Oscan, etc.)
+  /// script).
   ///
   /// ISO 15924 Alpha-4 code: `Ital`, ISO 15924 Numeric code: `210`.
   /// {@endtemplate}

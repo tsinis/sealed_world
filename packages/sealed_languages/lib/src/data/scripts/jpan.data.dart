@@ -4,10 +4,12 @@ extension type const _JpanFactory._(ScriptJpan _) implements ScriptJpan {
   const _JpanFactory() : this._(const ScriptJpan._());
 }
 
-/// A class that represents the Japanese (alias for Han + Hiragana + Katakana) script.
+/// A class that represents the Japanese (alias for Han + Hiragana + Katakana)
+/// script.
 final class ScriptJpan extends Script {
   /// {@template sealed_world.script_jpan_constructor}
-  /// Creates a instance of [ScriptJpan] (Japanese (alias for Han + Hiragana + Katakana) script).
+  /// Creates a instance of [ScriptJpan]
+  /// (Japanese (alias for Han + Hiragana + Katakana) script).
   ///
   /// ISO 15924 Alpha-4 code: `Jpan`, ISO 15924 Numeric code: `413`.
   /// {@endtemplate}

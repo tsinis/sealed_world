@@ -7,7 +7,8 @@ extension type const _SiddFactory._(ScriptSidd _) implements ScriptSidd {
 /// A class that represents the Siddham, Siddhaṃ, Siddhamātṛkā script.
 final class ScriptSidd extends Script {
   /// {@template sealed_world.script_sidd_constructor}
-  /// Creates a instance of [ScriptSidd] (Siddham, Siddhaṃ, Siddhamātṛkā script).
+  /// Creates a instance of [ScriptSidd]
+  /// (Siddham, Siddhaṃ, Siddhamātṛkā script).
   ///
   /// ISO 15924 Alpha-4 code: `Sidd`, ISO 15924 Numeric code: `302`.
   /// {@endtemplate}

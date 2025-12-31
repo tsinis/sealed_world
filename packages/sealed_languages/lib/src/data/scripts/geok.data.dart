@@ -7,7 +7,8 @@ extension type const _GeokFactory._(ScriptGeok _) implements ScriptGeok {
 /// A class that represents the Khutsuri (Asomtavruli and Nuskhuri) script.
 final class ScriptGeok extends Script {
   /// {@template sealed_world.script_geok_constructor}
-  /// Creates a instance of [ScriptGeok] (Khutsuri (Asomtavruli and Nuskhuri) script).
+  /// Creates a instance of [ScriptGeok] (Khutsuri (Asomtavruli and Nuskhuri)
+  /// script).
   ///
   /// ISO 15924 Alpha-4 code: `Geok`, ISO 15924 Numeric code: `241`.
   /// {@endtemplate}

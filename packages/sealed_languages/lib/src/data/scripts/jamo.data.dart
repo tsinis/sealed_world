@@ -7,7 +7,8 @@ extension type const _JamoFactory._(ScriptJamo _) implements ScriptJamo {
 /// A class that represents the Jamo (alias for Jamo subset of Hangul) script.
 final class ScriptJamo extends Script {
   /// {@template sealed_world.script_jamo_constructor}
-  /// Creates a instance of [ScriptJamo] (Jamo (alias for Jamo subset of Hangul) script).
+  /// Creates a instance of [ScriptJamo] (Jamo (alias for Jamo subset of Hangul)
+  /// script).
   ///
   /// ISO 15924 Alpha-4 code: `Jamo`, ISO 15924 Numeric code: `284`.
   /// {@endtemplate}

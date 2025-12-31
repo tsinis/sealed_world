@@ -52,7 +52,7 @@ extension NaturalLanguageJson on NaturalLanguage {
 
     return LangCustom(code: code, codeShort: codeShort).copyWith(
       name: map["name"]?.toString(),
-      namesNative: List<String>.unmodifiable(map["namesNative"]),
+      namesNative: List<String>.unmodifiable(map["namesNative"] as List),
       bibliographicCode: map["bibliographicCode"]?.toString(),
       family: NaturalLanguageFamily.maybeFromValue(map["family"]?.toString()),
       isRightToLeft: map["isRightToLeft"] as bool,

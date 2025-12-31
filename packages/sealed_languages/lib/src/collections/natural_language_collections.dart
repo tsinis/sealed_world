@@ -2,7 +2,7 @@
 import "../model/language/submodels/natural_language.dart";
 
 /// Map of [NaturalLanguage] standard codes.
-const naturalLanguageCodeMap = {
+const naturalLanguageCodeMap = <String, NaturalLanguage>{
   "AAR": LangAar(),
   "ABK": LangAbk(),
   "AFR": LangAfr(),
@@ -190,7 +190,7 @@ const naturalLanguageCodeMap = {
 };
 
 /// Map of [NaturalLanguage] other codes.
-const naturalLanguageCodeOtherMap = {
+const naturalLanguageCodeOtherMap = <String, NaturalLanguage>{
   "AA": LangAar(),
   "AB": LangAbk(),
   "AE": LangAve(),

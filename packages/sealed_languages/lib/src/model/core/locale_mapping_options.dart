@@ -1,4 +1,4 @@
-import '../../typedefs/typedefs.dart';
+import "../../typedefs/typedefs.dart";
 
 /// Configuration options for locale mapping operations.
 ///
@@ -58,5 +58,5 @@ class LocaleMappingOptions<T extends Object> {
       "localizeFullNames: $localizeFullNames, "
       '${mainLocale == null ? '' : ', mainLocale: "$mainLocale" '}'
       "useLanguageFallback: $useLanguageFallback, "
-      "formatter: ${(formatter != null)})";
+      "formatter: ${formatter != null})";
 }

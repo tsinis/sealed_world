@@ -7,7 +7,8 @@ extension type const _CyrsFactory._(ScriptCyrs _) implements ScriptCyrs {
 /// A class that represents the Cyrillic (Old Church Slavonic variant) script.
 final class ScriptCyrs extends Script {
   /// {@template sealed_world.script_cyrs_constructor}
-  /// Creates a instance of [ScriptCyrs] (Cyrillic (Old Church Slavonic variant) script).
+  /// Creates a instance of [ScriptCyrs] (Cyrillic (Old Church Slavonic variant)
+  /// script).
   ///
   /// ISO 15924 Alpha-4 code: `Cyrs`, ISO 15924 Numeric code: `221`.
   /// {@endtemplate}

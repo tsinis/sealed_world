@@ -2,7 +2,7 @@
 import "../model/script/submodels/script.dart";
 
 /// Map of [Script] standard codes.
-const scriptCodeMap = {
+const scriptCodeMap = <String, Script>{
   "ADLM": ScriptAdlm(),
   "AFAK": ScriptAfak(),
   "AGHB": ScriptAghb(),
@@ -219,7 +219,7 @@ const scriptCodeMap = {
 };
 
 /// Map of [Script] other codes.
-const scriptCodeOtherMap = {
+const scriptCodeOtherMap = <String, Script>{
   "015": ScriptPcun(),
   "016": ScriptPelm(),
   "020": ScriptXsux(),

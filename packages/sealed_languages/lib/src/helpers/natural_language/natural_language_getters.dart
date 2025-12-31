@@ -3,7 +3,7 @@ import "../../model/language/submodels/natural_language.dart";
 /// Provides convenient getters for ISO 639 language codes
 /// on a [NaturalLanguage] class.
 extension NaturalLanguageGetters on NaturalLanguage {
-  static const _constructedLanguages = {
+  static const _constructedLanguages = <NaturalLanguage>{
     LangEpo(),
     LangIle(),
     LangIna(),

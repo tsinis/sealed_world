@@ -1,4 +1,5 @@
-// ignore_for_file: avoid-returning-void
+// ignore_for_file: prefer_const_constructors, equal_keys_in_map, it's a test.
+// ignore_for_file: avoid-duplicate-test-assertions
 
 import "dart:convert";
 
@@ -26,7 +27,7 @@ void main() => group("$Script", () {
     expect(const Script.adlm(), const ScriptAdlm());
   });
 
-  group('permissive constructor asserts', () {
+  group("permissive constructor asserts", () {
     assertTest(
       "not empty code",
       () => ScriptCustom(code: " "),
@@ -83,6 +84,7 @@ void main() => group("$Script", () {
         expect(element.internationalName, element.name);
         expect(element.date, isA<String>());
         expect(element.date, isNotEmpty);
+        // ignore: avoid-returning-void, it's a test.
         if (element.pva == null) return expect(element.pva, isNull);
         expect(element.pva, isA<String>());
         expect(element.pva, isNotEmpty);
@@ -111,10 +113,8 @@ void main() => group("$Script", () {
     test("with ${array.runtimeType}", () {
       expect(array.length, 2);
       array.addAll(List.of(array));
-      // ignore: avoid-duplicate-test-assertions, this is mutable array.
       expect(array.length, 2);
       array.add(Script.fromName(array.last.name));
-      // ignore: avoid-duplicate-test-assertions, this is mutable array.
       expect(array.length, 2);
     });
 
@@ -123,7 +123,6 @@ void main() => group("$Script", () {
         ScriptAdlm(): 4,
         const ScriptAdlm(): 3,
         Script.adlm(): 2,
-        // ignore: equal_keys_in_map, it's a test.
         const Script.adlm(): 1,
         Script.fromCode("ADLM"): 0,
       };

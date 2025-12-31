@@ -75,7 +75,7 @@ sealed class NaturalLanguageFamily extends LanguageFamily {
 
   /// A list of all natural language families currently
   /// supported by the [NaturalLanguageFamily] class.
-  static const list = [
+  static const list = <NaturalLanguageFamily>[
     AfroAsiatic(),
     Algonquian(),
     Austroasiatic(),

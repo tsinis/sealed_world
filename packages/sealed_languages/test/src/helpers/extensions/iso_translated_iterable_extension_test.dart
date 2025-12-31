@@ -7,13 +7,14 @@ import "package:test/test.dart";
 
 void main() => group("IsoTranslatedIterableExtension", () {
   group("some languages should be fully translated", () {
-    /// This is a comprehensive list of languages that ensure the availability of
-    /// translations for every language in the natural language `list`.
+    /// This is a comprehensive list of languages that ensure the availability
+    /// of translations for every language in the natural language `list`.
     ///
-    /// It is important to note that while other languages may not be included in
-    /// this list, they may still have translations available for the most common
-    /// languages, but there may be some missing translations for rarer languages.
-    /// Every language contains more than 85 translations of it's name.
+    /// It is important to note that while other languages may not be included
+    /// in this list, they may still have translations available for the most
+    /// common languages, but there may be some missing translations for rarer
+    /// languages. Every language contains more than 85 translations of it's
+    /// name.
     ///
     /// Includes all the Material localizations in [kMaterialSupportedLanguages](https://api.flutter.dev/flutter/flutter_localizations/kMaterialSupportedLanguages.html)
     /// with a two letter code and much more (for example on top of that it also

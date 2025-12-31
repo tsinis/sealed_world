@@ -7,7 +7,8 @@ extension type const _OlckFactory._(ScriptOlck _) implements ScriptOlck {
 /// A class that represents the Ol Chiki (Ol Cemet’, Ol, Santali) script.
 final class ScriptOlck extends Script {
   /// {@template sealed_world.script_olck_constructor}
-  /// Creates a instance of [ScriptOlck] (Ol Chiki (Ol Cemet’, Ol, Santali) script).
+  /// Creates a instance of [ScriptOlck]
+  /// (Ol Chiki (Ol Cemet’, Ol, Santali) script).
   ///
   /// ISO 15924 Alpha-4 code: `Olck`, ISO 15924 Numeric code: `261`.
   /// {@endtemplate}

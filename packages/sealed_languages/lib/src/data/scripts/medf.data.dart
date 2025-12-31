@@ -7,7 +7,8 @@ extension type const _MedfFactory._(ScriptMedf _) implements ScriptMedf {
 /// A class that represents the Medefaidrin (Oberi Okaime, Oberi Ɔkaimɛ) script.
 final class ScriptMedf extends Script {
   /// {@template sealed_world.script_medf_constructor}
-  /// Creates a instance of [ScriptMedf] (Medefaidrin (Oberi Okaime, Oberi Ɔkaimɛ) script).
+  /// Creates a instance of [ScriptMedf]
+  /// (Medefaidrin (Oberi Okaime, Oberi Ɔkaimɛ) script).
   ///
   /// ISO 15924 Alpha-4 code: `Medf`, ISO 15924 Numeric code: `265`.
   /// {@endtemplate}

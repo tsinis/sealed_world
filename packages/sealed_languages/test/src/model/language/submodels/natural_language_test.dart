@@ -1,3 +1,6 @@
+// ignore_for_file: prefer_const_constructors, equal_keys_in_map, it's a test.
+// ignore_for_file: avoid-duplicate-test-assertions
+
 import "dart:convert";
 
 import "package:_sealed_world_tests/sealed_world_tests.dart";
@@ -31,7 +34,7 @@ void main() => group("$NaturalLanguage", () {
     expect(const NaturalLanguage.aar(), const LangAar());
   });
 
-  group('assert permissive constructor', () {
+  group("assert permissive constructor", () {
     assertTest(
       "not code",
       () => const LangCustom(code: "code").code,
@@ -123,25 +126,22 @@ void main() => group("$NaturalLanguage", () {
     test("with ${array.runtimeType}", () {
       expect(array.length, 2);
       array.addAll(List.of(array));
-      // ignore: avoid-duplicate-test-assertions, this is mutable array.
       expect(array.length, 2);
       array.add(NaturalLanguage.fromName(array.last.name));
-      // ignore: avoid-duplicate-test-assertions, this is mutable array.
       expect(array.length, 2);
     });
 
     performanceTest("with ${Map<NaturalLanguage, Object>}", () {
       final map = <NaturalLanguage, int>{
-        LangAar(): 4,
+        const LangAar(): 4,
         const LangAar(): 3,
-        NaturalLanguage.aar(): 2,
-        // ignore: equal_keys_in_map, it's a test.
+        const NaturalLanguage.aar(): 2,
         const NaturalLanguage.aar(): 1,
         NaturalLanguage.fromCode("AAR"): 0,
       };
-      expect(map.entries.single.key, LangAar());
       expect(map.entries.single.key, const LangAar());
-      expect(map.entries.single.key, NaturalLanguage.aar());
+      expect(map.entries.single.key, const LangAar());
+      expect(map.entries.single.key, const NaturalLanguage.aar());
       expect(map.entries.single.key, const NaturalLanguage.aar());
       expect(map.entries.single.value, isZero);
     });

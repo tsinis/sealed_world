@@ -7,7 +7,8 @@ extension type const _GeorFactory._(ScriptGeor _) implements ScriptGeor {
 /// A class that represents the Georgian (Mkhedruli and Mtavruli) script.
 final class ScriptGeor extends Script {
   /// {@template sealed_world.script_geor_constructor}
-  /// Creates a instance of [ScriptGeor] (Georgian (Mkhedruli and Mtavruli) script).
+  /// Creates a instance of [ScriptGeor] (Georgian (Mkhedruli and Mtavruli)
+  /// script).
   ///
   /// ISO 15924 Alpha-4 code: `Geor`, ISO 15924 Numeric code: `240`.
   /// {@endtemplate}
