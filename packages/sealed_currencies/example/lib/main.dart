@@ -1,11 +1,11 @@
-// ignore_for_file: avoid_print, prefer-match-file-name
+// ignore_for_file: avoid_print, prefer-match-file-name, prefer-static-class
 
 import "package:sealed_currencies/sealed_currencies.dart";
 
 void main() {
   print(FiatCurrency.listExtended.length); // Prints: "171".
 
-  final serbianDinar = FiatCurrency.fromCode("RSD");
+  final serbianDinar = FiatCurrency.fromCode("Rsd");
   print(serbianDinar.name); // Prints: "Serbian Dinar".
 
   final maybeEuro = FiatCurrency.maybeFromValue(
@@ -21,10 +21,16 @@ void main() {
   subunitToUnit: 100, unitFirst: true,)".
   */
 
+  const customOne = FiatCustom(code: "XTS", name: "Codes Sandbox"); // Custom.
+  print(describeCurrency(customOne)); // Prints: "Custom currency XTS".
+  print(describeCurrency(serbianDinar)); // Prints: "Unit-first currency".
+  print(describeCurrency(const FiatUsd())); // Prints: "United States Dollar".
+  print(describeCurrency(const FiatErn())); // Prints: "Standard fiat currency".
+
   /// Translations:
   // Prints German translations of all available regular currencies.
   final germanNames = FiatCurrency.list.commonNamesMap(
-    options: const LocaleMappingOptions(mainLocale: BasicLocale(LangDeu())),
+    options: const LocaleMappingOptions(mainLocale: BasicLocale(.deu())),
   );
 
   print(
@@ -34,7 +40,14 @@ void main() {
     print("German name of ${deuTranslation.key.name}: ${deuTranslation.value}");
   }
 
-  print(
-    serbianDinar.maybeCommonNameFor(const BasicLocale(LangPol())),
-  ); // Prints Polish name of RSD: "dinar serbski".
+  // Prints Polish name of RSD: "dinar serbski".
+  print(serbianDinar.maybeCommonNameFor(const BasicLocale(.pol())));
 }
+
+String describeCurrency(FiatCurrency currency) => switch (currency) {
+  FiatUsd() => currency.name,
+  FiatCustom(:final code) when code.startsWith("X") => "Custom currency $code",
+  FiatCurrency(:final unitFirst) when unitFirst => "Unit-first currency",
+  // ignore: avoid-wildcard-cases-with-sealed-classes, just an example.
+  _ => "Standard fiat currency",
+};
