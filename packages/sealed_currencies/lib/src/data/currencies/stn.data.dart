@@ -7,7 +7,8 @@ extension type const _StnFactory._(FiatStn _) implements FiatStn {
 /// A class that represents the São Tomé and Príncipe Second Dobra currency.
 final class FiatStn extends FiatCurrency {
   /// {@template sealed_world.currency_stn_constructor}
-  /// Creates a instance of [FiatStn] (São Tomé and Príncipe Second Dobra currency).
+  /// Creates a instance of [FiatStn] (São Tomé and Príncipe Second Dobra
+  /// currency).
   ///
   /// ISO 4217 Alpha code: `STN`, ISO 4217 Numeric code: `930`.
   /// {@endtemplate}

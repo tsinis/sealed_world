@@ -12,11 +12,11 @@ void main() => group("FiatCurrencyJson", () {
 
     test("deserializes FiatCurrency from map", () {
       const map = {
-        "alternateSymbols": ["Z\$"],
+        "alternateSymbols": [r"Z$"],
         "code": "ZZZ",
         "codeNumeric": "999",
         "decimalMark": ".",
-        "disambiguateSymbol": "Zed\$",
+        "disambiguateSymbol": r"Zed$",
         "htmlEntity": "&Zed;",
         "name": "Zed Dollar",
         "namesNative": ["Zed"],
@@ -36,10 +36,10 @@ void main() => group("FiatCurrencyJson", () {
       expect(currency.codeNumeric, "999");
       expect(currency.name, "Zed Dollar");
       expect(currency.namesNative, ["Zed"]);
-      expect(currency.alternateSymbols, ["Z\$"]);
+      expect(currency.alternateSymbols, [r"Z$"]);
       expect(currency.decimalMark, ".");
       expect(currency.thousandsSeparator, ",");
-      expect(currency.disambiguateSymbol, "Zed\$");
+      expect(currency.disambiguateSymbol, r"Zed$");
       expect(currency.htmlEntity, "&Zed;");
       expect(currency.subunit, "Zed cent");
       expect(currency.subunitToUnit, 100);

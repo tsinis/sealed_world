@@ -1,3 +1,6 @@
+// ignore_for_file: prefer_const_constructors, equal_keys_in_map, it's a test.
+// ignore_for_file: avoid-duplicate-test-assertions
+
 import "dart:convert";
 
 import "package:_sealed_world_tests/sealed_world_tests.dart";
@@ -26,7 +29,7 @@ void main() => group("$FiatCurrency", () {
     expect(const FiatCurrency.aed(), const FiatAed());
   });
 
-  group('permissive constructor asserts', () {
+  group("permissive constructor asserts", () {
     assertTest(
       "not empty code",
       () => const FiatCustom(code: "code").code,
@@ -43,13 +46,14 @@ void main() => group("$FiatCurrency", () {
   });
 
   group("some currencies should be fully translated", () {
-    /// This is a comprehensive list of languages that ensure the availability of
-    /// translations for every language in the natural language `list`.
+    /// This is a comprehensive list of languages that ensure the availability
+    /// of translations for every language in the natural language `list`.
     ///
-    /// It is important to note that while other languages may not be included in
-    /// this list, they may still have translations available for the most common
-    /// languages, but there may be some missing translations for rarer languages.
-    /// Every language contains more than 85 translations of it's name.
+    /// It is important to note that while other languages may not be included
+    /// in this list, they may still have translations available for the most
+    /// common languages, but there may be some missing translations for rarer
+    /// languages. Every language contains more than 85 translations of it's
+    /// name.
     ///
     /// Includes all the Material localizations in [kMaterialSupportedLanguages](https://api.flutter.dev/flutter/flutter_localizations/kMaterialSupportedLanguages.html)
     /// with a two letter code and much more (for example on top of that it also
@@ -63,13 +67,14 @@ void main() => group("$FiatCurrency", () {
     /// - Uyghur (UIG)
     /// That are not listed in Material one, and much more.
 
-    /// This is a comprehensive list of currencies that ensure the availability of
-    /// translations for every language in the currencies `list`.
+    /// This is a comprehensive list of currencies that ensure the availability
+    /// of translations for every language in the currencies `list`.
     ///
-    /// It is important to note that while other languages may not be included in
-    /// this list, they may still have translations available for most common
-    /// currencies, but there may be some missing translations for rarer languages.
-    /// Every currency contains more than 79 translations of it's name.
+    /// It is important to note that while other languages may not be included
+    /// in this list, they may still have translations available for most common
+    /// currencies, but there may be some missing translations for rarer
+    /// languages. Every currency contains more than 79 translations of it's
+    /// name.
     ///
     /// Includes all the Material localizations in [kMaterialSupportedLanguages](https://api.flutter.dev/flutter/flutter_localizations/kMaterialSupportedLanguages.html)
     /// with a two letter code and much more (for example on top of that it also
@@ -262,10 +267,8 @@ void main() => group("$FiatCurrency", () {
     test("with ${array.runtimeType}", () {
       expect(array.length, 2);
       array.addAll(List.of(array));
-      // ignore: avoid-duplicate-test-assertions, this is mutable array.
       expect(array.length, 2);
       array.add(FiatCurrency.fromName(array.last.name));
-      // ignore: avoid-duplicate-test-assertions, this is mutable array.
       expect(array.length, 2);
     });
 
@@ -274,7 +277,6 @@ void main() => group("$FiatCurrency", () {
         FiatAed(): 4,
         const FiatAed(): 3,
         FiatCurrency.aed(): 2,
-        // ignore: equal_keys_in_map, it's a test.
         const FiatCurrency.aed(): 1,
         FiatCurrency.fromCode("AED"): 0,
       };
@@ -506,7 +508,8 @@ void main() => group("$FiatCurrency", () {
       test("compared to $FiatCurrency: ${element.name}", () {
         final json = element.toJson();
         expect(json, isNotEmpty);
-        final decoded = FiatCurrencyJson.fromMap(jsonDecode(json));
+        // ignore: avoid-type-casts, it's a test.
+        final decoded = FiatCurrencyJson.fromMap(jsonDecode(json) as JsonMap);
         expect(element.code, decoded.code);
         expect(element.name, decoded.name);
         expect(element.codeNumeric, decoded.codeNumeric);
@@ -751,6 +754,6 @@ void main() => group("$FiatCurrency", () {
   group("asserts", () {
     assertTest("not", () => FiatCustom(code: value.code), shouldThrow: false);
     assertTest("empty code", () => FiatCustom(code: ""));
-    assertTest("empty codeNumeric", () => FiatCustom(codeNumeric: ""));
+    assertTest("empty codeNumeric", () => FiatCustom(codeNumeric: " ".trim()));
   });
 });

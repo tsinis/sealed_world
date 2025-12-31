@@ -2,7 +2,7 @@
 import "../model/currency/submodels/fiat_currency.dart";
 
 /// Map of [FiatCurrency] standard codes.
-const fiatCurrencyCodeMap = {
+const fiatCurrencyCodeMap = <String, FiatCurrency>{
   "AED": FiatAed(),
   "AFN": FiatAfn(),
   "ALL": FiatAll(),
@@ -172,7 +172,7 @@ const fiatCurrencyCodeMap = {
 };
 
 /// Map of [FiatCurrency] other codes.
-const fiatCurrencyCodeOtherMap = {
+const fiatCurrencyCodeOtherMap = <String, FiatCurrency>{
   "008": FiatAll(),
   "012": FiatDzd(),
   "032": FiatArs(),

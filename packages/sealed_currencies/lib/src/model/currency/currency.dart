@@ -11,7 +11,7 @@ import "package:sealed_languages/sealed_languages.dart" show Named;
 /// a `toString` method that can be used to print the contents of a [Currency]
 /// instance.
 ///
-/// This class is extended by the [FiatCurrency] and [CryptoCurrency] classes,
+/// This class is extended by the `FiatCurrency` and `CryptoCurrency` classes,
 /// which provide additional properties specific to fiat and crypto currencies,
 /// respectively.
 ///

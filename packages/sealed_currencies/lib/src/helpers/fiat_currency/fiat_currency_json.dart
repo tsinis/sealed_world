@@ -20,13 +20,13 @@ extension FiatCurrencyJson on FiatCurrency {
 
     return FiatCustom(code: code, codeNumeric: codeNumeric).copyWith(
       alternateSymbols: map["alternateSymbols"] is List
-          ? List<String>.unmodifiable(map["alternateSymbols"])
+          ? List<String>.unmodifiable(map["alternateSymbols"] as List)
           : null,
       decimalMark: map["decimalMark"]?.toString(),
       disambiguateSymbol: map["disambiguateSymbol"]?.toString(),
       htmlEntity: map["htmlEntity"]?.toString(),
       name: map["name"]?.toString(),
-      namesNative: List<String>.unmodifiable(map["namesNative"]),
+      namesNative: List<String>.unmodifiable(map["namesNative"] as List),
       priority: map["priority"] as int?,
       smallestDenomination: map["smallestDenomination"] as int?,
       subunit: map["subunit"]?.toString(),
