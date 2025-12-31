@@ -6,7 +6,7 @@
 [![Pub points](https://img.shields.io/pub/points/l10n_countries)](https://pub.dev/packages/l10n_countries/score)
 [![Last commit](https://img.shields.io/github/last-commit/tsinis/sealed_world)](https://github.com/tsinis/sealed_world/commits/main/packages/l10n_countries)
 [![GitHub stars](https://img.shields.io/github/stars/tsinis/sealed_world?style=flat&color=green)](https://github.com/tsinis/sealed_world/stargazers)
-![License](https://img.shields.io/github/license/tsinis/sealed_world)
+[![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
 [![Pub package](https://img.shields.io/pub/v/l10n_countries.svg)](https://pub.dev/packages/l10n_countries)
 
 This ISO-driven, pure Dart, fully tested and dependency-free package provides translations for country names in `194` different locales. For Flutter ready widgets (like country picker) please use [world_countries](https://pub.dev/packages/world_countries) package. For Dart-only use - it's recommended to use together with [sealed_countries](https://pub.dev/packages/sealed_countries) package.
