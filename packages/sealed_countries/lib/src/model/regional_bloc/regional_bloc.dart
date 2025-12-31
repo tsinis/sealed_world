@@ -1,6 +1,5 @@
 import "package:sealed_languages/sealed_languages.dart";
 
-import "../../collections/regional_bloc_collections.dart";
 import "world_bloc.dart";
 
 part "../../data/regional_bloc/regional_bloc.data.dart";
@@ -131,7 +130,21 @@ class RegionalBloc extends WorldBloc {
   }
 
   /// A map of all the regional blocs with their corresponding acronyms.
-  static const map = UpperCaseMap(regionalBlocAcronymMap);
+  static const map = UpperCaseMap({
+    "AL": BlocAL(),
+    "ASEAN": BlocASEAN(),
+    "AU": BlocAU(),
+    "CAIS": BlocCAIS(),
+    "CARICOM": BlocCARICOM(),
+    "CEFTA": BlocCEFTA(),
+    "EEU": BlocEEU(),
+    "EFTA": BlocEFTA(),
+    "EU": BlocEU(),
+    "NAFTA": BlocNAFTA(),
+    "PA": BlocPA(),
+    "SAARC": BlocSAARC(),
+    "USAN": BlocUSAN(),
+  });
 
   /// A list of all the regional blocs currently
   /// supported by the [RegionalBloc] class.
