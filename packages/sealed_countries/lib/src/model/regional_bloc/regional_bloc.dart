@@ -19,7 +19,7 @@ part "../../data/regional_bloc/regional_bloc.data.dart";
 /// final bloc = SomeBloc(name: "Some Bloc", acronym: "SB");
 /// print(bloc.name); // Prints: "Some Bloc"
 /// ```
-class RegionalBloc extends WorldBloc {
+sealed class RegionalBloc extends WorldBloc {
   /// Creates a new [RegionalBloc] object with the given name.
   ///
   /// The [name] and [acronym] parameters are required and must not be empty.

@@ -1,6 +1,6 @@
 import "../../interfaces/named.dart";
 
-/// A sealed class that represents a family of related languages.
+/// A class that represents a family of related languages.
 ///
 /// A language family is a group of languages that have a common ancestor or are
 /// related in some other way.

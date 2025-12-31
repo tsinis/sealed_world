@@ -2,12 +2,10 @@ import "package:l10n_countries/l10n_countries.dart" show CountriesLocaleMapper;
 import "package:sealed_currencies/sealed_currencies.dart";
 
 import "../../../collections/world_country_collections.dart";
-import "../../../data/geo/continental_sections.data.dart";
-import "../../../data/geo/continents.data.dart";
 import "../../../helpers/utils/typed_localization_delegate.dart";
 import "../../../helpers/world_country/world_country_json.dart";
-import "../../geo/region.dart";
 import "../../geo/submodels/continent.dart";
+import "../../geo/submodels/subregion.dart";
 import "../../locale/basic_typed_locale.dart";
 import "../../regional_bloc/regional_bloc.dart";
 import "../country.dart";
@@ -299,7 +297,7 @@ part "../../../data/countries/zwe.data.dart";
 /// final unknown = WorldCountry.maybeFromValue<int>(42);
 /// print(unknown); // Output: null
 /// ```
-class WorldCountry extends Country
+sealed class WorldCountry extends Country
     implements
         IsoTranslated<TranslatedName, CountryName, BasicTypedLocale>,
         JsonEncodable<WorldCountry>,

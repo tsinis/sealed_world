@@ -175,11 +175,11 @@ part "../../../data/currencies/zar.data.dart";
 part "../../../data/currencies/zmw.data.dart";
 part "../../../data/currencies/zwg.data.dart";
 
-/// A class representing fiat currency.
+/// A sealed class representing fiat currency.
 ///
 /// This class extends the general [Currency] class and adds additional
 /// properties specific to fiat currencies.
-class FiatCurrency extends Currency
+sealed class FiatCurrency extends Currency
     implements
         IsoTranslated<TranslatedName, String, BasicLocale>,
         JsonEncodable<FiatCurrency>,

@@ -1,15 +1,13 @@
-// ignore_for_file: avoid-referencing-subclasses, those are static constants.
+import "package:sealed_currencies/sealed_currencies.dart" show IsoObject;
 
-import "package:sealed_currencies/sealed_currencies.dart";
-
-import "../../../data/geo/continental_sections.data.dart";
-import "../../../data/geo/continents.data.dart";
 import "../region.dart";
 
-/// A class that represents a continent.
+part "../../../data/geo/continents.data.dart";
+
+/// A sealed class that represents a continent.
 ///
 /// The [Continent] class is a simple value object that represents a continent.
-/// It extends the [SubRegion] class, which represents a subregion of the world.
+/// It extends the [Region] class, which represents a geographic region.
 /// It consists of a [String] value that represents the name of the continent.
 /// The [name] field is required and must not be empty. The [Continent] class
 /// includes a factory constructor `fromName` to create a new continent object
@@ -30,7 +28,7 @@ import "../region.dart";
 /// final unknown = Continent.maybeFromValue<int>(42);
 /// print(unknown); // Prints: null
 /// ```
-class Continent extends SubRegion {
+sealed class Continent extends Region {
   /// Creates a new [Continent] object with the given name.
   ///
   /// The [name] parameter is required and must not be empty.
@@ -72,41 +70,14 @@ class Continent extends SubRegion {
     return null;
   }
 
-  /// A list of all the continents currently
-  /// supported by the [Continent] class.
-  static const list = <Continent>[
-    /// General continents.
+  /// A list of all the primary continents currently supported.
+  // ignore_for_file: avoid-referencing-subclasses, those are static constants.
+  static const list = [
     Africa(),
     Americas(),
     Antarctica(),
     Asia(),
     Europe(),
     Oceania(),
-
-    /// Subregions.
-    CentralAmerica(),
-    NorthAmerica(),
-    SouthAmerica(),
-    Caribbean(),
-    CentralEurope(),
-    NorthernEurope(),
-    SouthernEurope(),
-    EasternEurope(),
-    WesternEurope(),
-    SouthwestEurope(),
-    MiddleAfrica(),
-    WesternAfrica(),
-    SouthernAfrica(),
-    EasternAfrica(),
-    NorthernAfrica(),
-    CentralAsia(),
-    EasternAsia(),
-    WesternAsia(),
-    SouthernAsia(),
-    SouthEasternAsia(),
-    AustraliaAndNewZealand(),
-    Melanesia(),
-    Micronesia(),
-    Polynesia(),
   ];
 }

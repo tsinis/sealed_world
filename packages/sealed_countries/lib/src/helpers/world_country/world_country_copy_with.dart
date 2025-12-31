@@ -11,8 +11,8 @@ import "../../model/country/submodels/lat_lng.dart";
 import "../../model/country/submodels/maps.dart";
 import "../../model/country/submodels/postal_code.dart";
 import "../../model/country/submodels/weekday.dart";
-import "../../model/geo/region.dart";
 import "../../model/geo/submodels/continent.dart";
+import "../../model/geo/submodels/subregion.dart";
 import "../../model/regional_bloc/regional_bloc.dart";
 
 /// Extension that adds a [copyWith] method to the [WorldCountry] class.

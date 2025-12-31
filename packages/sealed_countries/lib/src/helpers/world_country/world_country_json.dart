@@ -7,6 +7,7 @@ import "../../model/country/submodels/country_name.dart";
 import "../../model/country/submodels/demonyms.dart";
 import "../../model/country/submodels/weekday.dart";
 import "../../model/geo/submodels/continent.dart";
+import "../../model/geo/submodels/subregion.dart";
 import "../../model/regional_bloc/regional_bloc.dart";
 import "../extensions/country_submodels/capital_info_extension.dart";
 import "../extensions/country_submodels/car_extension.dart";
@@ -80,7 +81,7 @@ extension WorldCountryJson on WorldCountry {
       name: CountryNameExtension.fromMap(map["name"]),
       altSpellings: List<String>.unmodifiable(map["altSpellings"]),
       areaMetric: map["areaMetric"] as double?,
-      continent: Continent.fromName(map["continent"].toString()),
+      continent: Continent.maybeFromValue(map["continent"]),
       emoji: map["emoji"]?.toString(),
       idd: IddExtension.fromMap(map["idd"]),
       languages: map["languages"] is List<Object?>
@@ -122,7 +123,7 @@ extension WorldCountryJson on WorldCountry {
           : null,
       startOfWeek: Weekday.fromMap(map["startOfWeek"]),
       subregion: map["subregion"] is String?
-          ? Continent.maybeFromValue(map["subregion"]?.toString())
+          ? SubRegion.maybeFromValue(map["subregion"]?.toString())
           : null,
       unMember: map["unMember"] as bool?,
       regionalBlocs: map["regionalBlocs"] is List<Object>
