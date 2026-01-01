@@ -1,11 +1,11 @@
-part of "../../model/currency/currency.dart";
+part of "../../model/currency/submodels/fiat_currency.dart";
 
 extension type const _MxnFactory._(FiatMxn _) implements FiatMxn {
   const _MxnFactory() : this._(const FiatMxn._());
 }
 
 /// A class that represents the Mexican Peso currency.
-class FiatMxn extends FiatCurrency {
+final class FiatMxn extends FiatCurrency {
   /// {@template sealed_world.currency_mxn_constructor}
   /// Creates a instance of [FiatMxn] (Mexican Peso currency).
   ///

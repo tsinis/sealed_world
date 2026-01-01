@@ -1,11 +1,11 @@
-part of "../../model/language/language.dart";
+part of "../../model/language/submodels/natural_language.dart";
 
 extension type const _NepFactory._(LangNep _) implements LangNep {
   const _NepFactory() : this._(const LangNep._());
 }
 
 /// A class that represents the Nepali language.
-class LangNep extends NaturalLanguage {
+final class LangNep extends NaturalLanguage {
   /// {@template sealed_world.language_nep_constructor}
   /// Creates a instance of [LangNep] (Nepali language).
   ///
@@ -14,7 +14,7 @@ class LangNep extends NaturalLanguage {
   const factory LangNep() = _NepFactory;
 
   const LangNep._()
-    : super(
+    : super._(
         name: "Nepali",
         code: "NEP",
         codeShort: "NE",

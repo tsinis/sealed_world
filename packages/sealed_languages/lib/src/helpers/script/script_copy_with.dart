@@ -1,4 +1,4 @@
-import "../../model/script/writing_system.dart";
+import "../../model/script/submodels/script.dart";
 
 /// Adds [copyWith] method to [Script] objects.
 extension ScriptCopyWith<T extends Script> on T {
@@ -9,9 +9,9 @@ extension ScriptCopyWith<T extends Script> on T {
     String? date,
     String? name,
     String? pva,
-  }) => Script(
-    name: name ?? this.name,
+  }) => ScriptCustom(
     code: code ?? this.code,
+    name: name ?? this.name,
     codeNumeric: codeNumeric ?? this.codeNumeric,
     date: date ?? this.date,
     pva: pva ?? this.pva,

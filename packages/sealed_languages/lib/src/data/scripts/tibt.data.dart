@@ -1,11 +1,11 @@
-part of "../../model/script/writing_system.dart";
+part of "../../model/script/submodels/script.dart";
 
 extension type const _TibtFactory._(ScriptTibt _) implements ScriptTibt {
   const _TibtFactory() : this._(const ScriptTibt._());
 }
 
 /// A class that represents the Tibetan script.
-class ScriptTibt extends Script {
+final class ScriptTibt extends Script {
   /// {@template sealed_world.script_tibt_constructor}
   /// Creates a instance of [ScriptTibt] (Tibetan script).
   ///
@@ -14,7 +14,7 @@ class ScriptTibt extends Script {
   const factory ScriptTibt() = _TibtFactory;
 
   const ScriptTibt._()
-    : super(
+    : super._(
         name: "Tibetan",
         code: "Tibt",
         codeNumeric: "330",

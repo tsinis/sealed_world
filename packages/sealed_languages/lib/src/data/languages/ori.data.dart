@@ -1,11 +1,11 @@
-part of "../../model/language/language.dart";
+part of "../../model/language/submodels/natural_language.dart";
 
 extension type const _OriFactory._(LangOri _) implements LangOri {
   const _OriFactory() : this._(const LangOri._());
 }
 
 /// A class that represents the Oriya language.
-class LangOri extends NaturalLanguage {
+final class LangOri extends NaturalLanguage {
   /// {@template sealed_world.language_ori_constructor}
   /// Creates a instance of [LangOri] (Oriya language).
   ///
@@ -14,7 +14,7 @@ class LangOri extends NaturalLanguage {
   const factory LangOri() = _OriFactory;
 
   const LangOri._()
-    : super(
+    : super._(
         name: "Oriya",
         code: "ORI",
         codeShort: "OR",

@@ -1,11 +1,11 @@
-part of "../../model/language/language.dart";
+part of "../../model/language/submodels/natural_language.dart";
 
 extension type const _AvaFactory._(LangAva _) implements LangAva {
   const _AvaFactory() : this._(const LangAva._());
 }
 
 /// A class that represents the Avaric language.
-class LangAva extends NaturalLanguage {
+final class LangAva extends NaturalLanguage {
   /// {@template sealed_world.language_ava_constructor}
   /// Creates a instance of [LangAva] (Avaric language).
   ///
@@ -14,7 +14,7 @@ class LangAva extends NaturalLanguage {
   const factory LangAva() = _AvaFactory;
 
   const LangAva._()
-    : super(
+    : super._(
         name: "Avaric",
         code: "AVA",
         codeShort: "AV",

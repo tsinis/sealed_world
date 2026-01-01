@@ -4,7 +4,7 @@
 
 // ignore_for_file: prefer-digit-separators
 
-part of "../../model/country/country.dart";
+part of "../../model/country/submodels/world_country.dart";
 
 extension type const _PngFactory._(CountryPng _) implements CountryPng {
   const _PngFactory() : this._(const CountryPng._());
@@ -20,7 +20,7 @@ class CountryPng extends WorldCountry {
   const factory CountryPng() = _PngFactory;
 
   const CountryPng._()
-    : super(
+    : super._(
         name: const CountryName(
           language: LangEng(),
           official: "Independent State of Papua New Guinea",

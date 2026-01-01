@@ -4,7 +4,7 @@
 
 // ignore_for_file: prefer-digit-separators
 
-part of "../../model/country/country.dart";
+part of "../../model/country/submodels/world_country.dart";
 
 extension type const _LsoFactory._(CountryLso _) implements CountryLso {
   const _LsoFactory() : this._(const CountryLso._());
@@ -20,7 +20,7 @@ class CountryLso extends WorldCountry {
   const factory CountryLso() = _LsoFactory;
 
   const CountryLso._()
-    : super(
+    : super._(
         name: const CountryName(
           language: LangEng(),
           official: "Kingdom of Lesotho",

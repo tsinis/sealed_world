@@ -4,7 +4,7 @@
 
 // ignore_for_file: prefer-digit-separators
 
-part of "../../model/country/country.dart";
+part of "../../model/country/submodels/world_country.dart";
 
 extension type const _NplFactory._(CountryNpl _) implements CountryNpl {
   const _NplFactory() : this._(const CountryNpl._());
@@ -20,7 +20,7 @@ class CountryNpl extends WorldCountry {
   const factory CountryNpl() = _NplFactory;
 
   const CountryNpl._()
-    : super(
+    : super._(
         name: const CountryName(
           language: LangEng(),
           official: "Federal Democratic Republic of Nepal",

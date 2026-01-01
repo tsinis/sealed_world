@@ -1,11 +1,11 @@
-part of "../../model/script/writing_system.dart";
+part of "../../model/script/submodels/script.dart";
 
 extension type const _TavtFactory._(ScriptTavt _) implements ScriptTavt {
   const _TavtFactory() : this._(const ScriptTavt._());
 }
 
 /// A class that represents the Tai Viet script.
-class ScriptTavt extends Script {
+final class ScriptTavt extends Script {
   /// {@template sealed_world.script_tavt_constructor}
   /// Creates a instance of [ScriptTavt] (Tai Viet script).
   ///
@@ -14,7 +14,7 @@ class ScriptTavt extends Script {
   const factory ScriptTavt() = _TavtFactory;
 
   const ScriptTavt._()
-    : super(
+    : super._(
         name: "Tai Viet",
         code: "Tavt",
         codeNumeric: "359",

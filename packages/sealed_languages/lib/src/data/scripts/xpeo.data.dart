@@ -1,11 +1,11 @@
-part of "../../model/script/writing_system.dart";
+part of "../../model/script/submodels/script.dart";
 
 extension type const _XpeoFactory._(ScriptXpeo _) implements ScriptXpeo {
   const _XpeoFactory() : this._(const ScriptXpeo._());
 }
 
 /// A class that represents the Old Persian script.
-class ScriptXpeo extends Script {
+final class ScriptXpeo extends Script {
   /// {@template sealed_world.script_xpeo_constructor}
   /// Creates a instance of [ScriptXpeo] (Old Persian script).
   ///
@@ -14,7 +14,7 @@ class ScriptXpeo extends Script {
   const factory ScriptXpeo() = _XpeoFactory;
 
   const ScriptXpeo._()
-    : super(
+    : super._(
         name: "Old Persian",
         code: "Xpeo",
         codeNumeric: "030",

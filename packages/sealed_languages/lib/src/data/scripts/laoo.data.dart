@@ -1,11 +1,11 @@
-part of "../../model/script/writing_system.dart";
+part of "../../model/script/submodels/script.dart";
 
 extension type const _LaooFactory._(ScriptLaoo _) implements ScriptLaoo {
   const _LaooFactory() : this._(const ScriptLaoo._());
 }
 
 /// A class that represents the Lao script.
-class ScriptLaoo extends Script {
+final class ScriptLaoo extends Script {
   /// {@template sealed_world.script_laoo_constructor}
   /// Creates a instance of [ScriptLaoo] (Lao script).
   ///
@@ -14,7 +14,7 @@ class ScriptLaoo extends Script {
   const factory ScriptLaoo() = _LaooFactory;
 
   const ScriptLaoo._()
-    : super(
+    : super._(
         name: "Lao",
         code: "Laoo",
         codeNumeric: "356",

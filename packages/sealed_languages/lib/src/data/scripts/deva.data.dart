@@ -1,11 +1,11 @@
-part of "../../model/script/writing_system.dart";
+part of "../../model/script/submodels/script.dart";
 
 extension type const _DevaFactory._(ScriptDeva _) implements ScriptDeva {
   const _DevaFactory() : this._(const ScriptDeva._());
 }
 
 /// A class that represents the Devanagari (Nagari) script.
-class ScriptDeva extends Script {
+final class ScriptDeva extends Script {
   /// {@template sealed_world.script_deva_constructor}
   /// Creates a instance of [ScriptDeva] (Devanagari (Nagari) script).
   ///
@@ -14,7 +14,7 @@ class ScriptDeva extends Script {
   const factory ScriptDeva() = _DevaFactory;
 
   const ScriptDeva._()
-    : super(
+    : super._(
         name: "Devanagari (Nagari)",
         code: "Deva",
         codeNumeric: "315",

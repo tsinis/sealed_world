@@ -4,7 +4,7 @@
 
 // ignore_for_file: prefer-digit-separators
 
-part of "../../model/country/country.dart";
+part of "../../model/country/submodels/world_country.dart";
 
 extension type const _PhlFactory._(CountryPhl _) implements CountryPhl {
   const _PhlFactory() : this._(const CountryPhl._());
@@ -20,7 +20,7 @@ class CountryPhl extends WorldCountry {
   const factory CountryPhl() = _PhlFactory;
 
   const CountryPhl._()
-    : super(
+    : super._(
         name: const CountryName(
           language: LangEng(),
           official: "Republic of the Philippines",

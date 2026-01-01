@@ -1,14 +1,14 @@
+// ignore_for_file: prefer_const_constructors, equal_keys_in_map, it's a test.
+// ignore_for_file: avoid-duplicate-test-assertions
+
 import "dart:convert";
 
 import "package:_sealed_world_tests/sealed_world_tests.dart";
 import "package:sealed_currencies/src/helpers/fiat_currency/fiat_currency_json.dart";
 import "package:sealed_currencies/src/model/currency/currency.dart";
+import "package:sealed_currencies/src/model/currency/submodels/fiat_currency.dart";
 import "package:sealed_languages/sealed_languages.dart";
 import "package:test/test.dart";
-
-class _FiatCurrencyTest extends FiatCurrency {
-  const _FiatCurrencyTest() : super.custom(code: "123", name: " ");
-}
 
 void main() => group("$FiatCurrency", () {
   final value = FiatCurrency.list.last;
@@ -29,21 +29,31 @@ void main() => group("$FiatCurrency", () {
     expect(const FiatCurrency.aed(), const FiatAed());
   });
 
-  assertTest(
-    "permissive constructor",
-    () => const _FiatCurrencyTest().codeNumeric,
-    shouldThrow: false,
-    alsoExpect: () => expect(const _FiatCurrencyTest().codeNumeric, isEmpty),
-  );
+  group("permissive constructor asserts", () {
+    assertTest(
+      "not empty code",
+      () => const FiatCustom(code: "code").code,
+      shouldThrow: false,
+    );
+
+    assertTest(
+      "not empty codeNumeric",
+      () => const FiatCustom(codeNumeric: "code").codeNumeric,
+      shouldThrow: false,
+    );
+
+    assertTest("empty code and codeNumeric", FiatCustom.new);
+  });
 
   group("some currencies should be fully translated", () {
-    /// This is a comprehensive list of languages that ensure the availability of
-    /// translations for every language in the natural language `list`.
+    /// This is a comprehensive list of languages that ensure the availability
+    /// of translations for every language in the natural language `list`.
     ///
-    /// It is important to note that while other languages may not be included in
-    /// this list, they may still have translations available for the most common
-    /// languages, but there may be some missing translations for rarer languages.
-    /// Every language contains more than 85 translations of it's name.
+    /// It is important to note that while other languages may not be included
+    /// in this list, they may still have translations available for the most
+    /// common languages, but there may be some missing translations for rarer
+    /// languages. Every language contains more than 85 translations of it's
+    /// name.
     ///
     /// Includes all the Material localizations in [kMaterialSupportedLanguages](https://api.flutter.dev/flutter/flutter_localizations/kMaterialSupportedLanguages.html)
     /// with a two letter code and much more (for example on top of that it also
@@ -57,13 +67,14 @@ void main() => group("$FiatCurrency", () {
     /// - Uyghur (UIG)
     /// That are not listed in Material one, and much more.
 
-    /// This is a comprehensive list of currencies that ensure the availability of
-    /// translations for every language in the currencies `list`.
+    /// This is a comprehensive list of currencies that ensure the availability
+    /// of translations for every language in the currencies `list`.
     ///
-    /// It is important to note that while other languages may not be included in
-    /// this list, they may still have translations available for most common
-    /// currencies, but there may be some missing translations for rarer languages.
-    /// Every currency contains more than 79 translations of it's name.
+    /// It is important to note that while other languages may not be included
+    /// in this list, they may still have translations available for most common
+    /// currencies, but there may be some missing translations for rarer
+    /// languages. Every currency contains more than 79 translations of it's
+    /// name.
     ///
     /// Includes all the Material localizations in [kMaterialSupportedLanguages](https://api.flutter.dev/flutter/flutter_localizations/kMaterialSupportedLanguages.html)
     /// with a two letter code and much more (for example on top of that it also
@@ -256,10 +267,8 @@ void main() => group("$FiatCurrency", () {
     test("with ${array.runtimeType}", () {
       expect(array.length, 2);
       array.addAll(List.of(array));
-      // ignore: avoid-duplicate-test-assertions, this is mutable array.
       expect(array.length, 2);
       array.add(FiatCurrency.fromName(array.last.name));
-      // ignore: avoid-duplicate-test-assertions, this is mutable array.
       expect(array.length, 2);
     });
 
@@ -268,7 +277,6 @@ void main() => group("$FiatCurrency", () {
         FiatAed(): 4,
         const FiatAed(): 3,
         FiatCurrency.aed(): 2,
-        // ignore: equal_keys_in_map, it's a test.
         const FiatCurrency.aed(): 1,
         FiatCurrency.fromCode("AED"): 0,
       };
@@ -277,6 +285,31 @@ void main() => group("$FiatCurrency", () {
       expect(map.entries.single.key, FiatCurrency.aed());
       expect(map.entries.single.key, const FiatCurrency.aed());
       expect(map.entries.single.value, isZero);
+    });
+  });
+
+  group("sealed switch expressions", () {
+    // ignore: avoid-local-functions, it's a test.
+    String? describe(FiatCurrency currency) => switch (currency) {
+      FiatUsd() => currency.code,
+      FiatCustom(:final code) when code.startsWith("Z") =>
+        "custom-prefix-$code",
+      FiatCustom(:final codeNumeric) when codeNumeric.endsWith("9") =>
+        "custom-numeric-$codeNumeric",
+      // ignore: avoid-wildcard-cases-with-sealed-classes, it's a test.
+      _ => null,
+    };
+
+    test("matches generated subtypes", () {
+      expect(describe(.usd()), "USD");
+      expect(describe(.eur()), isNull);
+    });
+
+    test("matches FiatCustom with prefix guard", () {
+      FiatCurrency custom = const FiatCustom(code: "ZZZ");
+      expect(describe(custom), "custom-prefix-ZZZ");
+      custom = const FiatCustom(codeNumeric: "999");
+      expect(describe(custom), "custom-numeric-999");
     });
   });
 
@@ -475,7 +508,8 @@ void main() => group("$FiatCurrency", () {
       test("compared to $FiatCurrency: ${element.name}", () {
         final json = element.toJson();
         expect(json, isNotEmpty);
-        final decoded = FiatCurrencyJson.fromMap(jsonDecode(json));
+        // ignore: avoid-type-casts, it's a test.
+        final decoded = FiatCurrencyJson.fromMap(jsonDecode(json) as JsonMap);
         expect(element.code, decoded.code);
         expect(element.name, decoded.name);
         expect(element.codeNumeric, decoded.codeNumeric);
@@ -718,110 +752,8 @@ void main() => group("$FiatCurrency", () {
   });
 
   group("asserts", () {
-    assertTest(
-      "not",
-      () => FiatCurrency(
-        code: value.code,
-        name: value.name,
-        namesNative: value.namesNative,
-        codeNumeric: value.codeNumeric,
-      ),
-      shouldThrow: false,
-    );
-
-    assertTest(
-      "empty name",
-      () => FiatCurrency(
-        code: value.code,
-        name: "",
-        namesNative: value.namesNative,
-        codeNumeric: value.codeNumeric,
-      ),
-    );
-
-    assertTest(
-      "code length",
-      () => FiatCurrency(
-        code: value.name,
-        name: value.name,
-        namesNative: value.namesNative,
-        codeNumeric: value.codeNumeric,
-      ),
-    );
-
-    assertTest(
-      "codeNumeric length",
-      () => FiatCurrency(
-        code: value.code,
-        name: value.name,
-        namesNative: value.namesNative,
-        codeNumeric: value.name,
-      ),
-    );
-
-    assertTest(
-      "empty namesNative",
-      () => FiatCurrency(
-        code: value.code,
-        name: value.name,
-        namesNative: const [],
-        codeNumeric: value.codeNumeric,
-      ),
-    );
-
-    assertTest(
-      "empty htmlEntity",
-      () => FiatCurrency(
-        code: value.code,
-        name: value.name,
-        namesNative: value.namesNative,
-        codeNumeric: value.codeNumeric,
-        htmlEntity: "",
-      ),
-    );
-
-    assertTest(
-      "empty subunit",
-      () => FiatCurrency(
-        code: value.code,
-        name: value.name,
-        namesNative: value.namesNative,
-        codeNumeric: value.codeNumeric,
-        subunit: "",
-      ),
-    );
-
-    assertTest(
-      "empty symbol",
-      () => FiatCurrency(
-        code: value.code,
-        name: value.name,
-        namesNative: value.namesNative,
-        codeNumeric: value.codeNumeric,
-        symbol: "",
-      ),
-    );
-
-    assertTest(
-      "empty alternateSymbols",
-      () => FiatCurrency(
-        code: value.code,
-        name: value.name,
-        namesNative: value.namesNative,
-        codeNumeric: value.codeNumeric,
-        alternateSymbols: const [],
-      ),
-    );
-
-    assertTest(
-      "negative smallestDenomination",
-      () => FiatCurrency(
-        code: value.code,
-        name: value.name,
-        namesNative: value.namesNative,
-        codeNumeric: value.codeNumeric,
-        smallestDenomination: -1,
-      ),
-    );
+    assertTest("not", () => FiatCustom(code: value.code), shouldThrow: false);
+    assertTest("empty code", () => FiatCustom(code: ""));
+    assertTest("empty codeNumeric", () => FiatCustom(codeNumeric: " ".trim()));
   });
 });

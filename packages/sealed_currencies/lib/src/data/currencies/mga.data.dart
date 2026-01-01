@@ -1,11 +1,11 @@
-part of "../../model/currency/currency.dart";
+part of "../../model/currency/submodels/fiat_currency.dart";
 
 extension type const _MgaFactory._(FiatMga _) implements FiatMga {
   const _MgaFactory() : this._(const FiatMga._());
 }
 
 /// A class that represents the Malagasy Ariary currency.
-class FiatMga extends FiatCurrency {
+final class FiatMga extends FiatCurrency {
   /// {@template sealed_world.currency_mga_constructor}
   /// Creates a instance of [FiatMga] (Malagasy Ariary currency).
   ///

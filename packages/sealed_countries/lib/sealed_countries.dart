@@ -5,9 +5,6 @@ export "package:sealed_currencies/sealed_currencies.dart";
 
 export "src/collections/fiat_currency_country_collections.dart";
 export "src/collections/natural_language_country_collections.dart";
-export "src/data/geo/continental_sections.data.dart";
-export "src/data/geo/continents.data.dart";
-export "src/data/regional_bloc/regional_bloc.data.dart";
 export "src/helpers/extensions/country_submodels/capital_extension.dart";
 export "src/helpers/extensions/country_submodels/capital_info_extension.dart";
 export "src/helpers/extensions/country_submodels/car_extension.dart";
@@ -44,6 +41,8 @@ export "src/model/country/submodels/postal_code.dart";
 export "src/model/country/submodels/weekday.dart";
 export "src/model/geo/region.dart";
 export "src/model/geo/submodels/continent.dart";
+export "src/model/geo/submodels/subregion.dart";
 export "src/model/locale/basic_typed_locale.dart";
+export "src/model/regional_bloc/regional_bloc.dart";
 export "src/model/regional_bloc/world_bloc.dart";
 export "src/model/typedefs/utc_duration_difference.dart";

@@ -4,7 +4,7 @@
 
 // ignore_for_file: prefer-digit-separators
 
-part of "../../model/country/country.dart";
+part of "../../model/country/submodels/world_country.dart";
 
 extension type const _GrdFactory._(CountryGrd _) implements CountryGrd {
   const _GrdFactory() : this._(const CountryGrd._());
@@ -20,7 +20,7 @@ class CountryGrd extends WorldCountry {
   const factory CountryGrd() = _GrdFactory;
 
   const CountryGrd._()
-    : super(
+    : super._(
         name: const CountryName(
           language: LangEng(),
           official: "Grenada",

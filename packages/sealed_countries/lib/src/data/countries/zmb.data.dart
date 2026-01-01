@@ -4,7 +4,7 @@
 
 // ignore_for_file: prefer-digit-separators
 
-part of "../../model/country/country.dart";
+part of "../../model/country/submodels/world_country.dart";
 
 extension type const _ZmbFactory._(CountryZmb _) implements CountryZmb {
   const _ZmbFactory() : this._(const CountryZmb._());
@@ -20,7 +20,7 @@ class CountryZmb extends WorldCountry {
   const factory CountryZmb() = _ZmbFactory;
 
   const CountryZmb._()
-    : super(
+    : super._(
         name: const CountryName(
           language: LangEng(),
           official: "Republic of Zambia",

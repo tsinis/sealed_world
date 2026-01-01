@@ -4,7 +4,7 @@
 
 // ignore_for_file: prefer-digit-separators
 
-part of "../../model/country/country.dart";
+part of "../../model/country/submodels/world_country.dart";
 
 extension type const _BihFactory._(CountryBih _) implements CountryBih {
   const _BihFactory() : this._(const CountryBih._());
@@ -20,7 +20,7 @@ class CountryBih extends WorldCountry {
   const factory CountryBih() = _BihFactory;
 
   const CountryBih._()
-    : super(
+    : super._(
         name: const CountryName(
           language: LangEng(),
           official: "Bosnia and Herzegovina",

@@ -1,11 +1,11 @@
-part of "../../model/script/writing_system.dart";
+part of "../../model/script/submodels/script.dart";
 
 extension type const _SaurFactory._(ScriptSaur _) implements ScriptSaur {
   const _SaurFactory() : this._(const ScriptSaur._());
 }
 
 /// A class that represents the Saurashtra script.
-class ScriptSaur extends Script {
+final class ScriptSaur extends Script {
   /// {@template sealed_world.script_saur_constructor}
   /// Creates a instance of [ScriptSaur] (Saurashtra script).
   ///
@@ -14,7 +14,7 @@ class ScriptSaur extends Script {
   const factory ScriptSaur() = _SaurFactory;
 
   const ScriptSaur._()
-    : super(
+    : super._(
         name: "Saurashtra",
         code: "Saur",
         codeNumeric: "344",

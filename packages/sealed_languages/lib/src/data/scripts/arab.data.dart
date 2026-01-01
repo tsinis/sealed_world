@@ -1,11 +1,11 @@
-part of "../../model/script/writing_system.dart";
+part of "../../model/script/submodels/script.dart";
 
 extension type const _ArabFactory._(ScriptArab _) implements ScriptArab {
   const _ArabFactory() : this._(const ScriptArab._());
 }
 
 /// A class that represents the Arabic script.
-class ScriptArab extends Script {
+final class ScriptArab extends Script {
   /// {@template sealed_world.script_arab_constructor}
   /// Creates a instance of [ScriptArab] (Arabic script).
   ///
@@ -14,7 +14,7 @@ class ScriptArab extends Script {
   const factory ScriptArab() = _ArabFactory;
 
   const ScriptArab._()
-    : super(
+    : super._(
         name: "Arabic",
         code: "Arab",
         codeNumeric: "160",

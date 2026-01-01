@@ -1,11 +1,11 @@
-part of "../../model/currency/currency.dart";
+part of "../../model/currency/submodels/fiat_currency.dart";
 
 extension type const _ArsFactory._(FiatArs _) implements FiatArs {
   const _ArsFactory() : this._(const FiatArs._());
 }
 
 /// A class that represents the Argentine Peso currency.
-class FiatArs extends FiatCurrency {
+final class FiatArs extends FiatCurrency {
   /// {@template sealed_world.currency_ars_constructor}
   /// Creates a instance of [FiatArs] (Argentine Peso currency).
   ///

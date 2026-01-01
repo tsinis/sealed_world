@@ -1,11 +1,11 @@
-part of "../../model/script/writing_system.dart";
+part of "../../model/script/submodels/script.dart";
 
 extension type const _GujrFactory._(ScriptGujr _) implements ScriptGujr {
   const _GujrFactory() : this._(const ScriptGujr._());
 }
 
 /// A class that represents the Gujarati script.
-class ScriptGujr extends Script {
+final class ScriptGujr extends Script {
   /// {@template sealed_world.script_gujr_constructor}
   /// Creates a instance of [ScriptGujr] (Gujarati script).
   ///
@@ -14,7 +14,7 @@ class ScriptGujr extends Script {
   const factory ScriptGujr() = _GujrFactory;
 
   const ScriptGujr._()
-    : super(
+    : super._(
         name: "Gujarati",
         code: "Gujr",
         codeNumeric: "320",

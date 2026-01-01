@@ -1,11 +1,11 @@
-part of "../../model/currency/currency.dart";
+part of "../../model/currency/submodels/fiat_currency.dart";
 
 extension type const _HufFactory._(FiatHuf _) implements FiatHuf {
   const _HufFactory() : this._(const FiatHuf._());
 }
 
 /// A class that represents the Hungarian Forint currency.
-class FiatHuf extends FiatCurrency {
+final class FiatHuf extends FiatCurrency {
   /// {@template sealed_world.currency_huf_constructor}
   /// Creates a instance of [FiatHuf] (Hungarian Forint currency).
   ///

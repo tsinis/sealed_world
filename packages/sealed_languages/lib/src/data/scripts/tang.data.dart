@@ -1,11 +1,11 @@
-part of "../../model/script/writing_system.dart";
+part of "../../model/script/submodels/script.dart";
 
 extension type const _TangFactory._(ScriptTang _) implements ScriptTang {
   const _TangFactory() : this._(const ScriptTang._());
 }
 
 /// A class that represents the Tangut script.
-class ScriptTang extends Script {
+final class ScriptTang extends Script {
   /// {@template sealed_world.script_tang_constructor}
   /// Creates a instance of [ScriptTang] (Tangut script).
   ///
@@ -14,7 +14,7 @@ class ScriptTang extends Script {
   const factory ScriptTang() = _TangFactory;
 
   const ScriptTang._()
-    : super(
+    : super._(
         name: "Tangut",
         code: "Tang",
         codeNumeric: "520",

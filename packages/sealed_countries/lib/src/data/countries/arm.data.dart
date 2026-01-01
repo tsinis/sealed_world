@@ -4,7 +4,7 @@
 
 // ignore_for_file: prefer-digit-separators
 
-part of "../../model/country/country.dart";
+part of "../../model/country/submodels/world_country.dart";
 
 extension type const _ArmFactory._(CountryArm _) implements CountryArm {
   const _ArmFactory() : this._(const CountryArm._());
@@ -20,7 +20,7 @@ class CountryArm extends WorldCountry {
   const factory CountryArm() = _ArmFactory;
 
   const CountryArm._()
-    : super(
+    : super._(
         name: const CountryName(
           language: LangEng(),
           official: "Republic of Armenia",

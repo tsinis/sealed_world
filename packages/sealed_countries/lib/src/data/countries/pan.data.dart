@@ -4,7 +4,7 @@
 
 // ignore_for_file: prefer-digit-separators
 
-part of "../../model/country/country.dart";
+part of "../../model/country/submodels/world_country.dart";
 
 extension type const _PanFactory._(CountryPan _) implements CountryPan {
   const _PanFactory() : this._(const CountryPan._());
@@ -20,7 +20,7 @@ class CountryPan extends WorldCountry {
   const factory CountryPan() = _PanFactory;
 
   const CountryPan._()
-    : super(
+    : super._(
         name: const CountryName(
           language: LangEng(),
           official: "Republic of Panama",

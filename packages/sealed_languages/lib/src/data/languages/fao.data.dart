@@ -1,11 +1,11 @@
-part of "../../model/language/language.dart";
+part of "../../model/language/submodels/natural_language.dart";
 
 extension type const _FaoFactory._(LangFao _) implements LangFao {
   const _FaoFactory() : this._(const LangFao._());
 }
 
 /// A class that represents the Faroese language.
-class LangFao extends NaturalLanguage {
+final class LangFao extends NaturalLanguage {
   /// {@template sealed_world.language_fao_constructor}
   /// Creates a instance of [LangFao] (Faroese language).
   ///
@@ -14,7 +14,7 @@ class LangFao extends NaturalLanguage {
   const factory LangFao() = _FaoFactory;
 
   const LangFao._()
-    : super(
+    : super._(
         name: "Faroese",
         code: "FAO",
         codeShort: "FO",

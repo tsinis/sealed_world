@@ -1,11 +1,11 @@
-part of "../../model/script/writing_system.dart";
+part of "../../model/script/submodels/script.dart";
 
 extension type const _DogrFactory._(ScriptDogr _) implements ScriptDogr {
   const _DogrFactory() : this._(const ScriptDogr._());
 }
 
 /// A class that represents the Dogra script.
-class ScriptDogr extends Script {
+final class ScriptDogr extends Script {
   /// {@template sealed_world.script_dogr_constructor}
   /// Creates a instance of [ScriptDogr] (Dogra script).
   ///
@@ -14,7 +14,7 @@ class ScriptDogr extends Script {
   const factory ScriptDogr() = _DogrFactory;
 
   const ScriptDogr._()
-    : super(
+    : super._(
         name: "Dogra",
         code: "Dogr",
         codeNumeric: "328",

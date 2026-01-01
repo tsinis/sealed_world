@@ -1,11 +1,11 @@
-part of "../../model/language/language.dart";
+part of "../../model/language/submodels/natural_language.dart";
 
 extension type const _PorFactory._(LangPor _) implements LangPor {
   const _PorFactory() : this._(const LangPor._());
 }
 
 /// A class that represents the Portuguese language.
-class LangPor extends NaturalLanguage {
+final class LangPor extends NaturalLanguage {
   /// {@template sealed_world.language_por_constructor}
   /// Creates a instance of [LangPor] (Portuguese language).
   ///
@@ -14,7 +14,7 @@ class LangPor extends NaturalLanguage {
   const factory LangPor() = _PorFactory;
 
   const LangPor._()
-    : super(
+    : super._(
         name: "Portuguese",
         code: "POR",
         codeShort: "PT",

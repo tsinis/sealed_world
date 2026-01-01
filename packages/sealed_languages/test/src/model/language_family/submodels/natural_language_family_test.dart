@@ -1,10 +1,32 @@
 import "package:_sealed_world_tests/sealed_world_tests.dart";
-import "package:sealed_languages/src/model/language_family/language_family.dart";
+import "package:sealed_languages/src/model/language_family/submodels/natural_language_family.dart";
 import "package:test/test.dart";
 
 void main() => group("$NaturalLanguageFamily", () {
   final value = NaturalLanguageFamily.list.last;
   final array = {value, NaturalLanguageFamily.list.first};
+
+  group("sealed switch expressions", () {
+    // ignore: avoid-local-functions, it's a test.
+    String? describe(NaturalLanguageFamily family) => switch (family) {
+      IndoEuropean() => "indo-european",
+      AfroAsiatic() => "afro-asiatic",
+      NaturalLanguageFamily(:final name) when name.startsWith("U") =>
+        "starts-with-u",
+      // ignore: avoid-wildcard-cases-with-sealed-classes, it's a test.
+      _ => null,
+    };
+
+    test("matches generated subtypes", () {
+      expect(describe(const IndoEuropean()), "indo-european");
+      expect(describe(const AfroAsiatic()), "afro-asiatic");
+    });
+
+    test(
+      "matches guard on family name",
+      () => expect(describe(const Uralic()), "starts-with-u"),
+    );
+  });
 
   group("fields", () {
     for (final element in NaturalLanguageFamily.list) {
@@ -49,7 +71,7 @@ void main() => group("$NaturalLanguageFamily", () {
     test(
       "with wrong name",
       () => expect(
-        () => NaturalLanguageFamily.fromName(value.toString()),
+        () => NaturalLanguageFamily.fromName("Wrong Name"),
         throwsStateError,
       ),
     );
@@ -103,15 +125,5 @@ void main() => group("$NaturalLanguageFamily", () {
         value,
       ),
     );
-  });
-
-  group("asserts", () {
-    assertTest(
-      "not",
-      () => NaturalLanguageFamily(name: value.name),
-      shouldThrow: false,
-    );
-
-    assertTest("empty name", () => NaturalLanguageFamily(name: ""));
   });
 });

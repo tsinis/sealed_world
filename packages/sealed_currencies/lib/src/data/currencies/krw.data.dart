@@ -1,11 +1,11 @@
-part of "../../model/currency/currency.dart";
+part of "../../model/currency/submodels/fiat_currency.dart";
 
 extension type const _KrwFactory._(FiatKrw _) implements FiatKrw {
   const _KrwFactory() : this._(const FiatKrw._());
 }
 
 /// A class that represents the South Korean Won currency.
-class FiatKrw extends FiatCurrency {
+final class FiatKrw extends FiatCurrency {
   /// {@template sealed_world.currency_krw_constructor}
   /// Creates a instance of [FiatKrw] (South Korean Won currency).
   ///

@@ -1,11 +1,11 @@
-part of "../../model/currency/currency.dart";
+part of "../../model/currency/submodels/fiat_currency.dart";
 
 extension type const _IqdFactory._(FiatIqd _) implements FiatIqd {
   const _IqdFactory() : this._(const FiatIqd._());
 }
 
 /// A class that represents the Iraqi Dinar currency.
-class FiatIqd extends FiatCurrency {
+final class FiatIqd extends FiatCurrency {
   /// {@template sealed_world.currency_iqd_constructor}
   /// Creates a instance of [FiatIqd] (Iraqi Dinar currency).
   ///

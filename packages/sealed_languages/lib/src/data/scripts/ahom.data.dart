@@ -1,11 +1,11 @@
-part of "../../model/script/writing_system.dart";
+part of "../../model/script/submodels/script.dart";
 
 extension type const _AhomFactory._(ScriptAhom _) implements ScriptAhom {
   const _AhomFactory() : this._(const ScriptAhom._());
 }
 
 /// A class that represents the Ahom, Tai Ahom script.
-class ScriptAhom extends Script {
+final class ScriptAhom extends Script {
   /// {@template sealed_world.script_ahom_constructor}
   /// Creates a instance of [ScriptAhom] (Ahom, Tai Ahom script).
   ///
@@ -14,7 +14,7 @@ class ScriptAhom extends Script {
   const factory ScriptAhom() = _AhomFactory;
 
   const ScriptAhom._()
-    : super(
+    : super._(
         name: "Ahom, Tai Ahom",
         code: "Ahom",
         codeNumeric: "338",

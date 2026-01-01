@@ -69,6 +69,62 @@ void main() => group("$CountriesLocaleMapper", () {
     });
   });
 
+  group("language fallback extraction", () {
+    test("falls back to two-letter language subtag", () {
+      final custom = CountriesLocaleMapper(
+        other: {
+          "en": IsoLocaleMapper(other: {"USA": "States"}),
+        },
+      );
+
+      final result = custom.localize(const {"USA"}, mainLocale: "en_US");
+
+      expect(result[(isoCode: "USA", locale: "en")], "States");
+    });
+
+    test("falls back to three-letter language subtag", () {
+      final custom = CountriesLocaleMapper(
+        other: {
+          "fil": IsoLocaleMapper(other: {"USA": "Mga Nagkakaisang Estado"}),
+        },
+      );
+
+      final result = custom.localize(const {"USA"}, mainLocale: "fil_PH");
+      expect(
+        result[(isoCode: "USA", locale: "fil")],
+        "Mga Nagkakaisang Estado",
+      );
+    });
+
+    test("falls back to five-letter language subtag", () {
+      final custom = CountriesLocaleMapper(
+        other: {
+          "alphae": IsoLocaleMapper(other: {"USA": "Alphae States"}),
+        },
+      );
+
+      final result = custom.localize(const {"USA"}, mainLocale: "alphae_LATN");
+      expect(result[(isoCode: "USA", locale: "alphae")], "Alphae States");
+    });
+
+    test("keeps original locale when language subtag is invalid", () {
+      final custom = CountriesLocaleMapper(
+        other: {
+          "und": IsoLocaleMapper(other: {"USA": "Unknown"}),
+        },
+      );
+
+      final invalidFallback = custom.localize(
+        const {"USA"},
+        mainLocale: "123_locale", // Dart 3.8 formatting.
+      );
+      expect(invalidFallback, isEmpty);
+
+      final valid = custom.localize(const {"USA"}, mainLocale: "und");
+      expect(valid[(isoCode: "USA", locale: "und")], "Unknown");
+    });
+  });
+
   group("$IsoLocaleMapper functionality", () {
     test("returns full map when keys are null", () {
       final customMapper = CountriesLocaleMapper(

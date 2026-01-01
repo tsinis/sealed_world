@@ -1,11 +1,11 @@
-part of "../../model/language/language.dart";
+part of "../../model/language/submodels/natural_language.dart";
 
 extension type const _CheFactory._(LangChe _) implements LangChe {
   const _CheFactory() : this._(const LangChe._());
 }
 
 /// A class that represents the Chechen language.
-class LangChe extends NaturalLanguage {
+final class LangChe extends NaturalLanguage {
   /// {@template sealed_world.language_che_constructor}
   /// Creates a instance of [LangChe] (Chechen language).
   ///
@@ -14,7 +14,7 @@ class LangChe extends NaturalLanguage {
   const factory LangChe() = _CheFactory;
 
   const LangChe._()
-    : super(
+    : super._(
         name: "Chechen",
         code: "CHE",
         codeShort: "CE",

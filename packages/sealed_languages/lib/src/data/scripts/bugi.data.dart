@@ -1,11 +1,11 @@
-part of "../../model/script/writing_system.dart";
+part of "../../model/script/submodels/script.dart";
 
 extension type const _BugiFactory._(ScriptBugi _) implements ScriptBugi {
   const _BugiFactory() : this._(const ScriptBugi._());
 }
 
 /// A class that represents the Buginese script.
-class ScriptBugi extends Script {
+final class ScriptBugi extends Script {
   /// {@template sealed_world.script_bugi_constructor}
   /// Creates a instance of [ScriptBugi] (Buginese script).
   ///
@@ -14,7 +14,7 @@ class ScriptBugi extends Script {
   const factory ScriptBugi() = _BugiFactory;
 
   const ScriptBugi._()
-    : super(
+    : super._(
         name: "Buginese",
         code: "Bugi",
         codeNumeric: "367",

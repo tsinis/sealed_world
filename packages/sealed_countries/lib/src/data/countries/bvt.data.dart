@@ -4,7 +4,7 @@
 
 // ignore_for_file: prefer-digit-separators
 
-part of "../../model/country/country.dart";
+part of "../../model/country/submodels/world_country.dart";
 
 extension type const _BvtFactory._(CountryBvt _) implements CountryBvt {
   const _BvtFactory() : this._(const CountryBvt._());
@@ -20,7 +20,7 @@ class CountryBvt extends WorldCountry {
   const factory CountryBvt() = _BvtFactory;
 
   const CountryBvt._()
-    : super(
+    : super._(
         name: const CountryName(
           language: LangEng(),
           official: "Bouvet Island",
@@ -35,7 +35,7 @@ class CountryBvt extends WorldCountry {
         idd: const Idd(root: 4, suffixes: [7]),
         altSpellings: const ["BV", "Bouvetøya", "Bouvet-øya"],
         continent: const Antarctica(),
-        latLng: const LatLng(54.4208, 3.3464),
+        latLng: const LatLng(-54.4208, 3.3464),
         areaMetric: 49,
         emoji: "🇧🇻",
         maps: const Maps(

@@ -1,11 +1,11 @@
-part of "../../model/script/writing_system.dart";
+part of "../../model/script/submodels/script.dart";
 
 extension type const _GongFactory._(ScriptGong _) implements ScriptGong {
   const _GongFactory() : this._(const ScriptGong._());
 }
 
 /// A class that represents the Gunjala Gondi script.
-class ScriptGong extends Script {
+final class ScriptGong extends Script {
   /// {@template sealed_world.script_gong_constructor}
   /// Creates a instance of [ScriptGong] (Gunjala Gondi script).
   ///
@@ -14,7 +14,7 @@ class ScriptGong extends Script {
   const factory ScriptGong() = _GongFactory;
 
   const ScriptGong._()
-    : super(
+    : super._(
         name: "Gunjala Gondi",
         code: "Gong",
         codeNumeric: "312",

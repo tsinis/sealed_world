@@ -1,11 +1,11 @@
-part of "../../model/currency/currency.dart";
+part of "../../model/currency/submodels/fiat_currency.dart";
 
 extension type const _KesFactory._(FiatKes _) implements FiatKes {
   const _KesFactory() : this._(const FiatKes._());
 }
 
 /// A class that represents the Kenyan Shilling currency.
-class FiatKes extends FiatCurrency {
+final class FiatKes extends FiatCurrency {
   /// {@template sealed_world.currency_kes_constructor}
   /// Creates a instance of [FiatKes] (Kenyan Shilling currency).
   ///

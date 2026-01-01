@@ -1,11 +1,11 @@
-part of "../../model/script/writing_system.dart";
+part of "../../model/script/submodels/script.dart";
 
 extension type const _MongFactory._(ScriptMong _) implements ScriptMong {
   const _MongFactory() : this._(const ScriptMong._());
 }
 
 /// A class that represents the Mongolian script.
-class ScriptMong extends Script {
+final class ScriptMong extends Script {
   /// {@template sealed_world.script_mong_constructor}
   /// Creates a instance of [ScriptMong] (Mongolian script).
   ///
@@ -14,7 +14,7 @@ class ScriptMong extends Script {
   const factory ScriptMong() = _MongFactory;
 
   const ScriptMong._()
-    : super(
+    : super._(
         name: "Mongolian",
         code: "Mong",
         codeNumeric: "145",

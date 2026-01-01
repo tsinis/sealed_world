@@ -1,11 +1,11 @@
-part of "../../model/script/writing_system.dart";
+part of "../../model/script/submodels/script.dart";
 
 extension type const _MendFactory._(ScriptMend _) implements ScriptMend {
   const _MendFactory() : this._(const ScriptMend._());
 }
 
 /// A class that represents the Mende Kikakui script.
-class ScriptMend extends Script {
+final class ScriptMend extends Script {
   /// {@template sealed_world.script_mend_constructor}
   /// Creates a instance of [ScriptMend] (Mende Kikakui script).
   ///
@@ -14,7 +14,7 @@ class ScriptMend extends Script {
   const factory ScriptMend() = _MendFactory;
 
   const ScriptMend._()
-    : super(
+    : super._(
         name: "Mende Kikakui",
         code: "Mend",
         codeNumeric: "438",

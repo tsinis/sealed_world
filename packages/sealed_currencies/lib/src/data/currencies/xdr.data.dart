@@ -1,11 +1,11 @@
-part of "../../model/currency/currency.dart";
+part of "../../model/currency/submodels/fiat_currency.dart";
 
 extension type const _XdrFactory._(FiatXdr _) implements FiatXdr {
   const _XdrFactory() : this._(const FiatXdr._());
 }
 
 /// A class that represents the Special Drawing Rights currency.
-class FiatXdr extends FiatCurrency {
+final class FiatXdr extends FiatCurrency {
   /// {@template sealed_world.currency_xdr_constructor}
   /// Creates a instance of [FiatXdr] (Special Drawing Rights currency).
   ///

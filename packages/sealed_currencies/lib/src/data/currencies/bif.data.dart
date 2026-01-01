@@ -1,11 +1,11 @@
-part of "../../model/currency/currency.dart";
+part of "../../model/currency/submodels/fiat_currency.dart";
 
 extension type const _BifFactory._(FiatBif _) implements FiatBif {
   const _BifFactory() : this._(const FiatBif._());
 }
 
 /// A class that represents the Burundian Franc currency.
-class FiatBif extends FiatCurrency {
+final class FiatBif extends FiatCurrency {
   /// {@template sealed_world.currency_bif_constructor}
   /// Creates a instance of [FiatBif] (Burundian Franc currency).
   ///

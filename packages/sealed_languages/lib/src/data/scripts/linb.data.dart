@@ -1,11 +1,11 @@
-part of "../../model/script/writing_system.dart";
+part of "../../model/script/submodels/script.dart";
 
 extension type const _LinbFactory._(ScriptLinb _) implements ScriptLinb {
   const _LinbFactory() : this._(const ScriptLinb._());
 }
 
 /// A class that represents the Linear B script.
-class ScriptLinb extends Script {
+final class ScriptLinb extends Script {
   /// {@template sealed_world.script_linb_constructor}
   /// Creates a instance of [ScriptLinb] (Linear B script).
   ///
@@ -14,7 +14,7 @@ class ScriptLinb extends Script {
   const factory ScriptLinb() = _LinbFactory;
 
   const ScriptLinb._()
-    : super(
+    : super._(
         name: "Linear B",
         code: "Linb",
         codeNumeric: "401",

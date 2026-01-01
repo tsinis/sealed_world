@@ -1,11 +1,11 @@
-part of "../../model/language/language.dart";
+part of "../../model/language/submodels/natural_language.dart";
 
 extension type const _KasFactory._(LangKas _) implements LangKas {
   const _KasFactory() : this._(const LangKas._());
 }
 
 /// A class that represents the Kashmiri language.
-class LangKas extends NaturalLanguage {
+final class LangKas extends NaturalLanguage {
   /// {@template sealed_world.language_kas_constructor}
   /// Creates a instance of [LangKas] (Kashmiri language).
   ///
@@ -14,7 +14,7 @@ class LangKas extends NaturalLanguage {
   const factory LangKas() = _KasFactory;
 
   const LangKas._()
-    : super(
+    : super._(
         name: "Kashmiri",
         code: "KAS",
         codeShort: "KS",

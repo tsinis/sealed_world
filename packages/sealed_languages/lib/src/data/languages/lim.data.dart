@@ -1,11 +1,11 @@
-part of "../../model/language/language.dart";
+part of "../../model/language/submodels/natural_language.dart";
 
 extension type const _LimFactory._(LangLim _) implements LangLim {
   const _LimFactory() : this._(const LangLim._());
 }
 
 /// A class that represents the Limburgish (Limburgan/Limburger) language.
-class LangLim extends NaturalLanguage {
+final class LangLim extends NaturalLanguage {
   /// {@template sealed_world.language_lim_constructor}
   /// Creates a instance of [LangLim] (Limburgish (Limburgan/Limburger) language).
   ///
@@ -14,7 +14,7 @@ class LangLim extends NaturalLanguage {
   const factory LangLim() = _LimFactory;
 
   const LangLim._()
-    : super(
+    : super._(
         name: "Limburgish (Limburgan/Limburger)",
         code: "LIM",
         codeShort: "LI",

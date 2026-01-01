@@ -9,7 +9,7 @@ void main() => group("$LocaleMappingOptions", () {
     expect(
       options.toString(),
       'LocaleMappingOptions(altSymbol: "+", localizeFullNames: true, '
-      "useLanguageFallback: true)",
+      "useLanguageFallback: true, formatter: false)",
     );
   });
 

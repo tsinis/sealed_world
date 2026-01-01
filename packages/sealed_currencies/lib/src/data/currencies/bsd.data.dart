@@ -1,11 +1,11 @@
-part of "../../model/currency/currency.dart";
+part of "../../model/currency/submodels/fiat_currency.dart";
 
 extension type const _BsdFactory._(FiatBsd _) implements FiatBsd {
   const _BsdFactory() : this._(const FiatBsd._());
 }
 
 /// A class that represents the Bahamian Dollar currency.
-class FiatBsd extends FiatCurrency {
+final class FiatBsd extends FiatCurrency {
   /// {@template sealed_world.currency_bsd_constructor}
   /// Creates a instance of [FiatBsd] (Bahamian Dollar currency).
   ///

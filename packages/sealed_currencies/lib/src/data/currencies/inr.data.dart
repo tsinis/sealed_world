@@ -1,11 +1,11 @@
-part of "../../model/currency/currency.dart";
+part of "../../model/currency/submodels/fiat_currency.dart";
 
 extension type const _InrFactory._(FiatInr _) implements FiatInr {
   const _InrFactory() : this._(const FiatInr._());
 }
 
 /// A class that represents the Indian Rupee currency.
-class FiatInr extends FiatCurrency {
+final class FiatInr extends FiatCurrency {
   /// {@template sealed_world.currency_inr_constructor}
   /// Creates a instance of [FiatInr] (Indian Rupee currency).
   ///

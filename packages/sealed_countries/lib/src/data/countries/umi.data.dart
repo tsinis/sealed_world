@@ -4,7 +4,7 @@
 
 // ignore_for_file: prefer-digit-separators
 
-part of "../../model/country/country.dart";
+part of "../../model/country/submodels/world_country.dart";
 
 extension type const _UmiFactory._(CountryUmi _) implements CountryUmi {
   const _UmiFactory() : this._(const CountryUmi._());
@@ -13,14 +13,15 @@ extension type const _UmiFactory._(CountryUmi _) implements CountryUmi {
 /// A class that represents the United States Minor Outlying Islands country.
 class CountryUmi extends WorldCountry {
   /// {@template sealed_world.country_umi_constructor}
-  /// Creates a instance of [CountryUmi] (United States Minor Outlying Islands country).
+  /// Creates a instance of [CountryUmi] (United States Minor Outlying Islands
+  /// country).
   ///
   /// ISO 3166-1 Alpha-3 code: `UMI`, ISO 3166-1 Alpha-2 code: `UM`.
   /// {@endtemplate}
   const factory CountryUmi() = _UmiFactory;
 
   const CountryUmi._()
-    : super(
+    : super._(
         name: const CountryName(
           language: LangEng(),
           official: "United States Minor Outlying Islands",

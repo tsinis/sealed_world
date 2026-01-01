@@ -4,7 +4,7 @@
 
 // ignore_for_file: prefer-digit-separators
 
-part of "../../model/country/country.dart";
+part of "../../model/country/submodels/world_country.dart";
 
 extension type const _GnqFactory._(CountryGnq _) implements CountryGnq {
   const _GnqFactory() : this._(const CountryGnq._());
@@ -20,7 +20,7 @@ class CountryGnq extends WorldCountry {
   const factory CountryGnq() = _GnqFactory;
 
   const CountryGnq._()
-    : super(
+    : super._(
         name: const CountryName(
           language: LangEng(),
           official: "Republic of Equatorial Guinea",

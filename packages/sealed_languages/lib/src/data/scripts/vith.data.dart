@@ -1,11 +1,11 @@
-part of "../../model/script/writing_system.dart";
+part of "../../model/script/submodels/script.dart";
 
 extension type const _VithFactory._(ScriptVith _) implements ScriptVith {
   const _VithFactory() : this._(const ScriptVith._());
 }
 
 /// A class that represents the Vithkuqi script.
-class ScriptVith extends Script {
+final class ScriptVith extends Script {
   /// {@template sealed_world.script_vith_constructor}
   /// Creates a instance of [ScriptVith] (Vithkuqi script).
   ///
@@ -14,7 +14,7 @@ class ScriptVith extends Script {
   const factory ScriptVith() = _VithFactory;
 
   const ScriptVith._()
-    : super(
+    : super._(
         name: "Vithkuqi",
         code: "Vith",
         codeNumeric: "228",

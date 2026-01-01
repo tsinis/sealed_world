@@ -1,11 +1,11 @@
-part of "../../model/language/language.dart";
+part of "../../model/language/submodels/natural_language.dart";
 
 extension type const _KirFactory._(LangKir _) implements LangKir {
   const _KirFactory() : this._(const LangKir._());
 }
 
 /// A class that represents the Kyrgyz language.
-class LangKir extends NaturalLanguage {
+final class LangKir extends NaturalLanguage {
   /// {@template sealed_world.language_kir_constructor}
   /// Creates a instance of [LangKir] (Kyrgyz language).
   ///
@@ -14,7 +14,7 @@ class LangKir extends NaturalLanguage {
   const factory LangKir() = _KirFactory;
 
   const LangKir._()
-    : super(
+    : super._(
         name: "Kyrgyz",
         code: "KIR",
         codeShort: "KY",

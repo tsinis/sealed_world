@@ -1,11 +1,11 @@
-part of "../../model/script/writing_system.dart";
+part of "../../model/script/submodels/script.dart";
 
 extension type const _GranFactory._(ScriptGran _) implements ScriptGran {
   const _GranFactory() : this._(const ScriptGran._());
 }
 
 /// A class that represents the Grantha script.
-class ScriptGran extends Script {
+final class ScriptGran extends Script {
   /// {@template sealed_world.script_gran_constructor}
   /// Creates a instance of [ScriptGran] (Grantha script).
   ///
@@ -14,7 +14,7 @@ class ScriptGran extends Script {
   const factory ScriptGran() = _GranFactory;
 
   const ScriptGran._()
-    : super(
+    : super._(
         name: "Grantha",
         code: "Gran",
         codeNumeric: "343",

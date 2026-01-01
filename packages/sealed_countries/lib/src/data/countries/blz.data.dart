@@ -4,7 +4,7 @@
 
 // ignore_for_file: prefer-digit-separators
 
-part of "../../model/country/country.dart";
+part of "../../model/country/submodels/world_country.dart";
 
 extension type const _BlzFactory._(CountryBlz _) implements CountryBlz {
   const _BlzFactory() : this._(const CountryBlz._());
@@ -20,7 +20,7 @@ class CountryBlz extends WorldCountry {
   const factory CountryBlz() = _BlzFactory;
 
   const CountryBlz._()
-    : super(
+    : super._(
         name: const CountryName(
           language: LangEng(),
           official: "Belize",

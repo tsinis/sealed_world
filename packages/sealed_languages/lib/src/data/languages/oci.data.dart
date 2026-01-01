@@ -1,11 +1,11 @@
-part of "../../model/language/language.dart";
+part of "../../model/language/submodels/natural_language.dart";
 
 extension type const _OciFactory._(LangOci _) implements LangOci {
   const _OciFactory() : this._(const LangOci._());
 }
 
 /// A class that represents the Occitan language.
-class LangOci extends NaturalLanguage {
+final class LangOci extends NaturalLanguage {
   /// {@template sealed_world.language_oci_constructor}
   /// Creates a instance of [LangOci] (Occitan language).
   ///
@@ -14,7 +14,7 @@ class LangOci extends NaturalLanguage {
   const factory LangOci() = _OciFactory;
 
   const LangOci._()
-    : super(
+    : super._(
         name: "Occitan",
         code: "OCI",
         codeShort: "OC",

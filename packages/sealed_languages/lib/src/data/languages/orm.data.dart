@@ -1,11 +1,11 @@
-part of "../../model/language/language.dart";
+part of "../../model/language/submodels/natural_language.dart";
 
 extension type const _OrmFactory._(LangOrm _) implements LangOrm {
   const _OrmFactory() : this._(const LangOrm._());
 }
 
 /// A class that represents the Oromo language.
-class LangOrm extends NaturalLanguage {
+final class LangOrm extends NaturalLanguage {
   /// {@template sealed_world.language_orm_constructor}
   /// Creates a instance of [LangOrm] (Oromo language).
   ///
@@ -14,7 +14,7 @@ class LangOrm extends NaturalLanguage {
   const factory LangOrm() = _OrmFactory;
 
   const LangOrm._()
-    : super(
+    : super._(
         name: "Oromo",
         code: "ORM",
         codeShort: "OM",

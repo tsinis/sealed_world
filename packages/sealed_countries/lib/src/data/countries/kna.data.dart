@@ -4,7 +4,7 @@
 
 // ignore_for_file: prefer-digit-separators
 
-part of "../../model/country/country.dart";
+part of "../../model/country/submodels/world_country.dart";
 
 extension type const _KnaFactory._(CountryKna _) implements CountryKna {
   const _KnaFactory() : this._(const CountryKna._());
@@ -20,7 +20,7 @@ class CountryKna extends WorldCountry {
   const factory CountryKna() = _KnaFactory;
 
   const CountryKna._()
-    : super(
+    : super._(
         name: const CountryName(
           language: LangEng(),
           official: "Federation of Saint Christopher and Nevis",

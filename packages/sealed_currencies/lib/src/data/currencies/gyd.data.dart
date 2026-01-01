@@ -1,11 +1,11 @@
-part of "../../model/currency/currency.dart";
+part of "../../model/currency/submodels/fiat_currency.dart";
 
 extension type const _GydFactory._(FiatGyd _) implements FiatGyd {
   const _GydFactory() : this._(const FiatGyd._());
 }
 
 /// A class that represents the Guyanese Dollar currency.
-class FiatGyd extends FiatCurrency {
+final class FiatGyd extends FiatCurrency {
   /// {@template sealed_world.currency_gyd_constructor}
   /// Creates a instance of [FiatGyd] (Guyanese Dollar currency).
   ///

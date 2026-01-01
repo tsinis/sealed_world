@@ -1,7 +1,210 @@
-part of "../language.dart";
+import "package:l10n_languages/l10n_languages.dart" show LanguagesLocaleMapper;
 
-/// A class that represents a natural language.
-class NaturalLanguage extends Language
+import "../../../collections/natural_language_collections.dart";
+import "../../../helpers/extensions/iso_object_extension_type.dart";
+import "../../../helpers/extensions/sealed_world_iterable_extension.dart";
+import "../../../helpers/extensions/upper_case_iso_map_extension.dart";
+import "../../../helpers/natural_language/natural_language_json.dart";
+import "../../../helpers/utils/localization_delegate.dart";
+import "../../../interfaces/iso_standardized.dart";
+import "../../../interfaces/iso_translated.dart";
+import "../../../interfaces/json_encodable.dart";
+import "../../../typedefs/typedefs.dart" show LocaleMapFunction;
+import "../../core/basic_locale.dart";
+import "../../core/upper_case_iso_map.dart";
+import "../../language_family/submodels/natural_language_family.dart";
+import "../../script/submodels/script.dart";
+import "../../translated_name.dart";
+import "../language.dart";
+
+part "../../../data/languages/aar.data.dart";
+part "../../../data/languages/abk.data.dart";
+part "../../../data/languages/afr.data.dart";
+part "../../../data/languages/aka.data.dart";
+part "../../../data/languages/amh.data.dart";
+part "../../../data/languages/ara.data.dart";
+part "../../../data/languages/arg.data.dart";
+part "../../../data/languages/asm.data.dart";
+part "../../../data/languages/ava.data.dart";
+part "../../../data/languages/ave.data.dart";
+part "../../../data/languages/aym.data.dart";
+part "../../../data/languages/aze.data.dart";
+part "../../../data/languages/bak.data.dart";
+part "../../../data/languages/bam.data.dart";
+part "../../../data/languages/bel.data.dart";
+part "../../../data/languages/ben.data.dart";
+part "../../../data/languages/bih.data.dart";
+part "../../../data/languages/bis.data.dart";
+part "../../../data/languages/bod.data.dart";
+part "../../../data/languages/bos.data.dart";
+part "../../../data/languages/bre.data.dart";
+part "../../../data/languages/bul.data.dart";
+part "../../../data/languages/cat.data.dart";
+part "../../../data/languages/ces.data.dart";
+part "../../../data/languages/cha.data.dart";
+part "../../../data/languages/che.data.dart";
+part "../../../data/languages/chu.data.dart";
+part "../../../data/languages/chv.data.dart";
+part "../../../data/languages/cor.data.dart";
+part "../../../data/languages/cos.data.dart";
+part "../../../data/languages/cre.data.dart";
+part "../../../data/languages/custom.data.dart";
+part "../../../data/languages/cym.data.dart";
+part "../../../data/languages/dan.data.dart";
+part "../../../data/languages/deu.data.dart";
+part "../../../data/languages/div.data.dart";
+part "../../../data/languages/dzo.data.dart";
+part "../../../data/languages/ell.data.dart";
+part "../../../data/languages/eng.data.dart";
+part "../../../data/languages/epo.data.dart";
+part "../../../data/languages/est.data.dart";
+part "../../../data/languages/eus.data.dart";
+part "../../../data/languages/ewe.data.dart";
+part "../../../data/languages/fao.data.dart";
+part "../../../data/languages/fas.data.dart";
+part "../../../data/languages/fij.data.dart";
+part "../../../data/languages/fin.data.dart";
+part "../../../data/languages/fra.data.dart";
+part "../../../data/languages/fry.data.dart";
+part "../../../data/languages/ful.data.dart";
+part "../../../data/languages/gla.data.dart";
+part "../../../data/languages/gle.data.dart";
+part "../../../data/languages/glg.data.dart";
+part "../../../data/languages/glv.data.dart";
+part "../../../data/languages/grn.data.dart";
+part "../../../data/languages/guj.data.dart";
+part "../../../data/languages/hat.data.dart";
+part "../../../data/languages/hau.data.dart";
+part "../../../data/languages/heb.data.dart";
+part "../../../data/languages/her.data.dart";
+part "../../../data/languages/hin.data.dart";
+part "../../../data/languages/hmo.data.dart";
+part "../../../data/languages/hrv.data.dart";
+part "../../../data/languages/hun.data.dart";
+part "../../../data/languages/hye.data.dart";
+part "../../../data/languages/ibo.data.dart";
+part "../../../data/languages/ido.data.dart";
+part "../../../data/languages/iii.data.dart";
+part "../../../data/languages/iku.data.dart";
+part "../../../data/languages/ile.data.dart";
+part "../../../data/languages/ina.data.dart";
+part "../../../data/languages/ind.data.dart";
+part "../../../data/languages/ipk.data.dart";
+part "../../../data/languages/isl.data.dart";
+part "../../../data/languages/ita.data.dart";
+part "../../../data/languages/jav.data.dart";
+part "../../../data/languages/jpn.data.dart";
+part "../../../data/languages/kal.data.dart";
+part "../../../data/languages/kan.data.dart";
+part "../../../data/languages/kas.data.dart";
+part "../../../data/languages/kat.data.dart";
+part "../../../data/languages/kau.data.dart";
+part "../../../data/languages/kaz.data.dart";
+part "../../../data/languages/khm.data.dart";
+part "../../../data/languages/kik.data.dart";
+part "../../../data/languages/kin.data.dart";
+part "../../../data/languages/kir.data.dart";
+part "../../../data/languages/kom.data.dart";
+part "../../../data/languages/kon.data.dart";
+part "../../../data/languages/kor.data.dart";
+part "../../../data/languages/kua.data.dart";
+part "../../../data/languages/kur.data.dart";
+part "../../../data/languages/lao.data.dart";
+part "../../../data/languages/lat.data.dart";
+part "../../../data/languages/lav.data.dart";
+part "../../../data/languages/lim.data.dart";
+part "../../../data/languages/lin.data.dart";
+part "../../../data/languages/lit.data.dart";
+part "../../../data/languages/ltz.data.dart";
+part "../../../data/languages/lub.data.dart";
+part "../../../data/languages/lug.data.dart";
+part "../../../data/languages/mah.data.dart";
+part "../../../data/languages/mal.data.dart";
+part "../../../data/languages/mar.data.dart";
+part "../../../data/languages/mkd.data.dart";
+part "../../../data/languages/mlg.data.dart";
+part "../../../data/languages/mlt.data.dart";
+part "../../../data/languages/mon.data.dart";
+part "../../../data/languages/mri.data.dart";
+part "../../../data/languages/msa.data.dart";
+part "../../../data/languages/mya.data.dart";
+part "../../../data/languages/nau.data.dart";
+part "../../../data/languages/nav.data.dart";
+part "../../../data/languages/nbl.data.dart";
+part "../../../data/languages/nde.data.dart";
+part "../../../data/languages/ndo.data.dart";
+part "../../../data/languages/nep.data.dart";
+part "../../../data/languages/nld.data.dart";
+part "../../../data/languages/nno.data.dart";
+part "../../../data/languages/nob.data.dart";
+part "../../../data/languages/nor.data.dart";
+part "../../../data/languages/nya.data.dart";
+part "../../../data/languages/oci.data.dart";
+part "../../../data/languages/oji.data.dart";
+part "../../../data/languages/ori.data.dart";
+part "../../../data/languages/orm.data.dart";
+part "../../../data/languages/oss.data.dart";
+part "../../../data/languages/pan.data.dart";
+part "../../../data/languages/pli.data.dart";
+part "../../../data/languages/pol.data.dart";
+part "../../../data/languages/por.data.dart";
+part "../../../data/languages/pus.data.dart";
+part "../../../data/languages/que.data.dart";
+part "../../../data/languages/roh.data.dart";
+part "../../../data/languages/ron.data.dart";
+part "../../../data/languages/run.data.dart";
+part "../../../data/languages/rus.data.dart";
+part "../../../data/languages/sag.data.dart";
+part "../../../data/languages/san.data.dart";
+part "../../../data/languages/sin.data.dart";
+part "../../../data/languages/slk.data.dart";
+part "../../../data/languages/slv.data.dart";
+part "../../../data/languages/sme.data.dart";
+part "../../../data/languages/smo.data.dart";
+part "../../../data/languages/sna.data.dart";
+part "../../../data/languages/snd.data.dart";
+part "../../../data/languages/som.data.dart";
+part "../../../data/languages/sot.data.dart";
+part "../../../data/languages/spa.data.dart";
+part "../../../data/languages/sqi.data.dart";
+part "../../../data/languages/srd.data.dart";
+part "../../../data/languages/srp.data.dart";
+part "../../../data/languages/ssw.data.dart";
+part "../../../data/languages/sun.data.dart";
+part "../../../data/languages/swa.data.dart";
+part "../../../data/languages/swe.data.dart";
+part "../../../data/languages/tah.data.dart";
+part "../../../data/languages/tam.data.dart";
+part "../../../data/languages/tat.data.dart";
+part "../../../data/languages/tel.data.dart";
+part "../../../data/languages/tgk.data.dart";
+part "../../../data/languages/tgl.data.dart";
+part "../../../data/languages/tha.data.dart";
+part "../../../data/languages/tir.data.dart";
+part "../../../data/languages/ton.data.dart";
+part "../../../data/languages/tsn.data.dart";
+part "../../../data/languages/tso.data.dart";
+part "../../../data/languages/tuk.data.dart";
+part "../../../data/languages/tur.data.dart";
+part "../../../data/languages/twi.data.dart";
+part "../../../data/languages/uig.data.dart";
+part "../../../data/languages/ukr.data.dart";
+part "../../../data/languages/urd.data.dart";
+part "../../../data/languages/uzb.data.dart";
+part "../../../data/languages/ven.data.dart";
+part "../../../data/languages/vie.data.dart";
+part "../../../data/languages/vol.data.dart";
+part "../../../data/languages/wln.data.dart";
+part "../../../data/languages/wol.data.dart";
+part "../../../data/languages/xho.data.dart";
+part "../../../data/languages/yid.data.dart";
+part "../../../data/languages/yor.data.dart";
+part "../../../data/languages/zha.data.dart";
+part "../../../data/languages/zho.data.dart";
+part "../../../data/languages/zul.data.dart";
+
+/// A sealed class that represents a natural language.
+sealed class NaturalLanguage extends Language
     implements
         IsoTranslated<TranslatedName, String, BasicLocale>,
         JsonEncodable<NaturalLanguage>,
@@ -22,8 +225,44 @@ class NaturalLanguage extends Language
   /// language belongs (defaults to the Indo-European family). The optional
   /// [isRightToLeft] parameter specifies whether the language is written
   /// right-to-left (defaults to `false`).
+  /// {@template sealed_world.locale_mapper_callback}
+  /// The optional [mapper] parameter and lets you inject custom localization
+  /// sources.
+  ///
+  /// Lazily provides a [LocaleMapFunction] that translates ISO codes into human
+  /// readable names. Pass this callback when you want to override the default
+  /// localization sources from the `l10n_*` packages with your own mapper.
+  ///
+  /// The closure commonly instantiates a `*LocaleMapper`, (see package's
+  /// `example/lib/main.dart`) and returns its `localize` method. This
+  /// lets you register extra locale data through the `other` parameter or reuse
+  /// features like `mainLocale`, `fallbackLocale`, `useLanguageFallback`, the
+  /// alternative-name `altSymbol`, and the `formatter` hook exposed by
+  /// [LocaleMapFunction].
+  ///
+  /// ```dart
+  /// final delegate = TypedLocalizationDelegate(
+  ///   mapper: () => CountriesLocaleMapper(
+  ///     other: {
+  ///       "en_GB": IsoLocaleMapper(other: {"SCT": "Scotland"}),
+  ///     },
+  ///   ).localize,
+  /// );
+  ///
+  /// final localized = delegate.mapper?.call().call(
+  ///   {"USA", "SCT"},
+  ///   mainLocale: "fr",
+  ///   fallbackLocale: "en_GB",
+  ///   formatter: (key, value) =>
+  ///       key.locale.startsWith("en") ? value.toUpperCase() : value,
+  /// );
+  /// ```
+  ///
+  /// Returning a new mapper each time keeps the underlying `IsoLocaleMapper`
+  /// mutable for registration without leaking mutations between lookups.
   /// {@endtemplate}
-  const NaturalLanguage({
+  /// {@endtemplate}
+  const NaturalLanguage._({
     required super.name,
     required this.codeShort,
     required this.namesNative,
@@ -32,6 +271,8 @@ class NaturalLanguage extends Language
     this.family = const IndoEuropean(),
     this.isRightToLeft = false,
     this.scripts = const {ScriptLatn()},
+
+    /// {@macro sealed_world.locale_mapper_callback}
     LocaleMapFunction<String> Function()? mapper,
   }) : assert(
          code.length == IsoStandardized.codeLength,
@@ -75,17 +316,23 @@ class NaturalLanguage extends Language
   /// the established ISO specifications and should be approached with caution.
   /// {@endtemplate}
   /// {@macro natural_language_constructor}
-  const NaturalLanguage.custom({
-    required super.name,
-    required this.code,
+  const NaturalLanguage._permissive({
+    this.code = "",
+    super.name = " ",
     this.codeShort = "",
     this.namesNative = const [],
     this.bibliographicCode,
     this.family = const IndoEuropean(),
     this.isRightToLeft = false,
     this.scripts = const {ScriptLatn()},
+
+    /// {@macro sealed_world.locale_mapper_callback}
     LocaleMapFunction<String> Function()? mapper,
-  }) : _mapper = mapper;
+  }) : assert(
+         code.length > 0 || codeShort.length > 0,
+         "The `code` (or at least `codeShort`) must be provided!",
+       ),
+       _mapper = mapper;
 
   /// {@macro sealed_world.language_aar_constructor}
   const factory NaturalLanguage.aar() = _AarFactory;
@@ -1079,8 +1326,9 @@ class NaturalLanguage extends Language
   @override
   String get internationalName => name;
 
+  /// {@macro sealed_world.locale_mapper_callback}
   // ignore: prefer-correct-callback-field-name, follows delegate naming.
-  final LocaleMapFunction<String> Function()? _mapper; // TODO! Docs.
+  final LocaleMapFunction<String> Function()? _mapper;
 
   @override
   LocalizationDelegate get l10n => LocalizationDelegate(

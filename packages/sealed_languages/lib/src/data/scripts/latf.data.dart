@@ -1,11 +1,11 @@
-part of "../../model/script/writing_system.dart";
+part of "../../model/script/submodels/script.dart";
 
 extension type const _LatfFactory._(ScriptLatf _) implements ScriptLatf {
   const _LatfFactory() : this._(const ScriptLatf._());
 }
 
 /// A class that represents the Latin (Fraktur variant) script.
-class ScriptLatf extends Script {
+final class ScriptLatf extends Script {
   /// {@template sealed_world.script_latf_constructor}
   /// Creates a instance of [ScriptLatf] (Latin (Fraktur variant) script).
   ///
@@ -14,7 +14,7 @@ class ScriptLatf extends Script {
   const factory ScriptLatf() = _LatfFactory;
 
   const ScriptLatf._()
-    : super(
+    : super._(
         name: "Latin (Fraktur variant)",
         code: "Latf",
         codeNumeric: "217",

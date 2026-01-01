@@ -1,11 +1,11 @@
-part of "../../model/language/language.dart";
+part of "../../model/language/submodels/natural_language.dart";
 
 extension type const _KikFactory._(LangKik _) implements LangKik {
   const _KikFactory() : this._(const LangKik._());
 }
 
 /// A class that represents the Kikuyu (Gikuyu) language.
-class LangKik extends NaturalLanguage {
+final class LangKik extends NaturalLanguage {
   /// {@template sealed_world.language_kik_constructor}
   /// Creates a instance of [LangKik] (Kikuyu (Gikuyu) language).
   ///
@@ -14,7 +14,7 @@ class LangKik extends NaturalLanguage {
   const factory LangKik() = _KikFactory;
 
   const LangKik._()
-    : super(
+    : super._(
         name: "Kikuyu (Gikuyu)",
         code: "KIK",
         codeShort: "KI",

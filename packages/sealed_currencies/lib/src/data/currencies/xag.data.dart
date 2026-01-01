@@ -1,11 +1,11 @@
-part of "../../model/currency/currency.dart";
+part of "../../model/currency/submodels/fiat_currency.dart";
 
 extension type const _XagFactory._(FiatXag _) implements FiatXag {
   const _XagFactory() : this._(const FiatXag._());
 }
 
 /// A class that represents the Silver (Troy Ounce) currency.
-class FiatXag extends FiatCurrency {
+final class FiatXag extends FiatCurrency {
   /// {@template sealed_world.currency_xag_constructor}
   /// Creates a instance of [FiatXag] (Silver (Troy Ounce) currency).
   ///

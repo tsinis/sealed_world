@@ -4,7 +4,7 @@
 
 // ignore_for_file: prefer-digit-separators
 
-part of "../../model/country/country.dart";
+part of "../../model/country/submodels/world_country.dart";
 
 extension type const _ZweFactory._(CountryZwe _) implements CountryZwe {
   const _ZweFactory() : this._(const CountryZwe._());
@@ -20,7 +20,7 @@ class CountryZwe extends WorldCountry {
   const factory CountryZwe() = _ZweFactory;
 
   const CountryZwe._()
-    : super(
+    : super._(
         name: const CountryName(
           language: LangEng(),
           official: "Republic of Zimbabwe",

@@ -1,11 +1,11 @@
-part of "../../model/currency/currency.dart";
+part of "../../model/currency/submodels/fiat_currency.dart";
 
 extension type const _SdgFactory._(FiatSdg _) implements FiatSdg {
   const _SdgFactory() : this._(const FiatSdg._());
 }
 
 /// A class that represents the Sudanese Pound currency.
-class FiatSdg extends FiatCurrency {
+final class FiatSdg extends FiatCurrency {
   /// {@template sealed_world.currency_sdg_constructor}
   /// Creates a instance of [FiatSdg] (Sudanese Pound currency).
   ///

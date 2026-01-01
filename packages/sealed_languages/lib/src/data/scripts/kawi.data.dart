@@ -1,11 +1,11 @@
-part of "../../model/script/writing_system.dart";
+part of "../../model/script/submodels/script.dart";
 
 extension type const _KawiFactory._(ScriptKawi _) implements ScriptKawi {
   const _KawiFactory() : this._(const ScriptKawi._());
 }
 
 /// A class that represents the Kawi script.
-class ScriptKawi extends Script {
+final class ScriptKawi extends Script {
   /// {@template sealed_world.script_kawi_constructor}
   /// Creates a instance of [ScriptKawi] (Kawi script).
   ///
@@ -14,5 +14,10 @@ class ScriptKawi extends Script {
   const factory ScriptKawi() = _KawiFactory;
 
   const ScriptKawi._()
-    : super(name: "Kawi", code: "Kawi", codeNumeric: "368", date: "2021-12-03");
+    : super._(
+        name: "Kawi",
+        code: "Kawi",
+        codeNumeric: "368",
+        date: "2021-12-03",
+      );
 }

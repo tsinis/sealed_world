@@ -1,11 +1,11 @@
-part of "../../model/script/writing_system.dart";
+part of "../../model/script/submodels/script.dart";
 
 extension type const _YeziFactory._(ScriptYezi _) implements ScriptYezi {
   const _YeziFactory() : this._(const ScriptYezi._());
 }
 
 /// A class that represents the Yezidi script.
-class ScriptYezi extends Script {
+final class ScriptYezi extends Script {
   /// {@template sealed_world.script_yezi_constructor}
   /// Creates a instance of [ScriptYezi] (Yezidi script).
   ///
@@ -14,7 +14,7 @@ class ScriptYezi extends Script {
   const factory ScriptYezi() = _YeziFactory;
 
   const ScriptYezi._()
-    : super(
+    : super._(
         name: "Yezidi",
         code: "Yezi",
         codeNumeric: "192",

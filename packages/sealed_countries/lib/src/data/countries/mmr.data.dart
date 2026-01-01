@@ -4,7 +4,7 @@
 
 // ignore_for_file: prefer-digit-separators
 
-part of "../../model/country/country.dart";
+part of "../../model/country/submodels/world_country.dart";
 
 extension type const _MmrFactory._(CountryMmr _) implements CountryMmr {
   const _MmrFactory() : this._(const CountryMmr._());
@@ -20,7 +20,7 @@ class CountryMmr extends WorldCountry {
   const factory CountryMmr() = _MmrFactory;
 
   const CountryMmr._()
-    : super(
+    : super._(
         name: const CountryName(
           language: LangEng(),
           official: "Republic of the Union of Myanmar",

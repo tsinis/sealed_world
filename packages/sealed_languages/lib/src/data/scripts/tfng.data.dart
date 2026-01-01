@@ -1,11 +1,11 @@
-part of "../../model/script/writing_system.dart";
+part of "../../model/script/submodels/script.dart";
 
 extension type const _TfngFactory._(ScriptTfng _) implements ScriptTfng {
   const _TfngFactory() : this._(const ScriptTfng._());
 }
 
 /// A class that represents the Tifinagh (Berber) script.
-class ScriptTfng extends Script {
+final class ScriptTfng extends Script {
   /// {@template sealed_world.script_tfng_constructor}
   /// Creates a instance of [ScriptTfng] (Tifinagh (Berber) script).
   ///
@@ -14,7 +14,7 @@ class ScriptTfng extends Script {
   const factory ScriptTfng() = _TfngFactory;
 
   const ScriptTfng._()
-    : super(
+    : super._(
         name: "Tifinagh (Berber)",
         code: "Tfng",
         codeNumeric: "120",

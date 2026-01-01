@@ -4,7 +4,7 @@
 
 // ignore_for_file: prefer-digit-separators
 
-part of "../../model/country/country.dart";
+part of "../../model/country/submodels/world_country.dart";
 
 extension type const _PryFactory._(CountryPry _) implements CountryPry {
   const _PryFactory() : this._(const CountryPry._());
@@ -20,7 +20,7 @@ class CountryPry extends WorldCountry {
   const factory CountryPry() = _PryFactory;
 
   const CountryPry._()
-    : super(
+    : super._(
         name: const CountryName(
           language: LangEng(),
           official: "Republic of Paraguay",

@@ -1,11 +1,10 @@
 /// Provides data for world languages in the form of sealed classes.
 library sealed_languages;
 
-export "/src/helpers/extensions/iso_object_extension_type.dart";
-export "/src/helpers/extensions/iso_string_extension_type.dart";
-export "src/data/natural_language_families.data.dart";
 export "src/helpers/extensions/basic_locale_extension.dart";
 export "src/helpers/extensions/iso_comparable_extension.dart";
+export "src/helpers/extensions/iso_object_extension_type.dart";
+export "src/helpers/extensions/iso_string_extension_type.dart";
 export "src/helpers/extensions/iso_translated_iterable_extension.dart";
 export "src/helpers/extensions/locale_mapping_options_extension.dart";
 export "src/helpers/extensions/sealed_world_iterable_extension.dart";
@@ -29,7 +28,11 @@ export "src/model/core/locale_mapping_options.dart";
 export "src/model/core/upper_case_iso_map.dart";
 export "src/model/core/upper_case_map.dart";
 export "src/model/language/language.dart";
+export "src/model/language/submodels/natural_language.dart";
+export "src/model/language/submodels/programming_language.dart";
 export "src/model/language_family/language_family.dart";
+export "src/model/language_family/submodels/natural_language_family.dart";
+export "src/model/script/submodels/script.dart";
 export "src/model/script/writing_system.dart";
 export "src/model/translated_name.dart";
 export "src/typedefs/typedefs.dart";

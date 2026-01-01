@@ -1,11 +1,11 @@
-part of "../../model/language/language.dart";
+part of "../../model/language/submodels/natural_language.dart";
 
 extension type const _AymFactory._(LangAym _) implements LangAym {
   const _AymFactory() : this._(const LangAym._());
 }
 
 /// A class that represents the Aymara language.
-class LangAym extends NaturalLanguage {
+final class LangAym extends NaturalLanguage {
   /// {@template sealed_world.language_aym_constructor}
   /// Creates a instance of [LangAym] (Aymara language).
   ///
@@ -14,7 +14,7 @@ class LangAym extends NaturalLanguage {
   const factory LangAym() = _AymFactory;
 
   const LangAym._()
-    : super(
+    : super._(
         name: "Aymara",
         code: "AYM",
         codeShort: "AY",

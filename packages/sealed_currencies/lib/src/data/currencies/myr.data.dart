@@ -1,11 +1,11 @@
-part of "../../model/currency/currency.dart";
+part of "../../model/currency/submodels/fiat_currency.dart";
 
 extension type const _MyrFactory._(FiatMyr _) implements FiatMyr {
   const _MyrFactory() : this._(const FiatMyr._());
 }
 
 /// A class that represents the Malaysian Ringgit currency.
-class FiatMyr extends FiatCurrency {
+final class FiatMyr extends FiatCurrency {
   /// {@template sealed_world.currency_myr_constructor}
   /// Creates a instance of [FiatMyr] (Malaysian Ringgit currency).
   ///

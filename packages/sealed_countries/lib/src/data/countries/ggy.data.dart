@@ -4,7 +4,7 @@
 
 // ignore_for_file: prefer-digit-separators
 
-part of "../../model/country/country.dart";
+part of "../../model/country/submodels/world_country.dart";
 
 extension type const _GgyFactory._(CountryGgy _) implements CountryGgy {
   const _GgyFactory() : this._(const CountryGgy._());
@@ -20,7 +20,7 @@ class CountryGgy extends WorldCountry {
   const factory CountryGgy() = _GgyFactory;
 
   const CountryGgy._()
-    : super(
+    : super._(
         name: const CountryName(
           language: LangEng(),
           official: "Bailiwick of Guernsey",

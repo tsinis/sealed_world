@@ -1,11 +1,11 @@
-part of "../../model/currency/currency.dart";
+part of "../../model/currency/submodels/fiat_currency.dart";
 
 extension type const _SgdFactory._(FiatSgd _) implements FiatSgd {
   const _SgdFactory() : this._(const FiatSgd._());
 }
 
 /// A class that represents the Singapore Dollar currency.
-class FiatSgd extends FiatCurrency {
+final class FiatSgd extends FiatCurrency {
   /// {@template sealed_world.currency_sgd_constructor}
   /// Creates a instance of [FiatSgd] (Singapore Dollar currency).
   ///

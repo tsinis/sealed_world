@@ -4,7 +4,7 @@
 
 // ignore_for_file: prefer-digit-separators
 
-part of "../../model/country/country.dart";
+part of "../../model/country/submodels/world_country.dart";
 
 extension type const _SvkFactory._(CountrySvk _) implements CountrySvk {
   const _SvkFactory() : this._(const CountrySvk._());
@@ -20,7 +20,7 @@ class CountrySvk extends WorldCountry {
   const factory CountrySvk() = _SvkFactory;
 
   const CountrySvk._()
-    : super(
+    : super._(
         name: const CountryName(
           language: LangEng(),
           official: "Slovak Republic",

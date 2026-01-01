@@ -1,11 +1,11 @@
-part of "../../model/language/language.dart";
+part of "../../model/language/submodels/natural_language.dart";
 
 extension type const _MonFactory._(LangMon _) implements LangMon {
   const _MonFactory() : this._(const LangMon._());
 }
 
 /// A class that represents the Mongolian language.
-class LangMon extends NaturalLanguage {
+final class LangMon extends NaturalLanguage {
   /// {@template sealed_world.language_mon_constructor}
   /// Creates a instance of [LangMon] (Mongolian language).
   ///
@@ -14,7 +14,7 @@ class LangMon extends NaturalLanguage {
   const factory LangMon() = _MonFactory;
 
   const LangMon._()
-    : super(
+    : super._(
         name: "Mongolian",
         code: "MON",
         codeShort: "MN",

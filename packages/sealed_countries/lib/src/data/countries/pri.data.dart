@@ -4,7 +4,7 @@
 
 // ignore_for_file: prefer-digit-separators
 
-part of "../../model/country/country.dart";
+part of "../../model/country/submodels/world_country.dart";
 
 extension type const _PriFactory._(CountryPri _) implements CountryPri {
   const _PriFactory() : this._(const CountryPri._());
@@ -20,7 +20,7 @@ class CountryPri extends WorldCountry {
   const factory CountryPri() = _PriFactory;
 
   const CountryPri._()
-    : super(
+    : super._(
         name: const CountryName(
           language: LangEng(),
           official: "Commonwealth of Puerto Rico",

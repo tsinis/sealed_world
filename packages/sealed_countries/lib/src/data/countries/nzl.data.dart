@@ -4,7 +4,7 @@
 
 // ignore_for_file: prefer-digit-separators
 
-part of "../../model/country/country.dart";
+part of "../../model/country/submodels/world_country.dart";
 
 extension type const _NzlFactory._(CountryNzl _) implements CountryNzl {
   const _NzlFactory() : this._(const CountryNzl._());
@@ -20,7 +20,7 @@ class CountryNzl extends WorldCountry {
   const factory CountryNzl() = _NzlFactory;
 
   const CountryNzl._()
-    : super(
+    : super._(
         name: const CountryName(
           language: LangEng(),
           official: "New Zealand",

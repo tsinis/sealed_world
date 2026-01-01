@@ -1,11 +1,11 @@
-part of "../../model/script/writing_system.dart";
+part of "../../model/script/submodels/script.dart";
 
 extension type const _CariFactory._(ScriptCari _) implements ScriptCari {
   const _CariFactory() : this._(const ScriptCari._());
 }
 
 /// A class that represents the Carian script.
-class ScriptCari extends Script {
+final class ScriptCari extends Script {
   /// {@template sealed_world.script_cari_constructor}
   /// Creates a instance of [ScriptCari] (Carian script).
   ///
@@ -14,7 +14,7 @@ class ScriptCari extends Script {
   const factory ScriptCari() = _CariFactory;
 
   const ScriptCari._()
-    : super(
+    : super._(
         name: "Carian",
         code: "Cari",
         codeNumeric: "201",

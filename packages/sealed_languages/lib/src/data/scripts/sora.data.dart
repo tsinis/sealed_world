@@ -1,11 +1,11 @@
-part of "../../model/script/writing_system.dart";
+part of "../../model/script/submodels/script.dart";
 
 extension type const _SoraFactory._(ScriptSora _) implements ScriptSora {
   const _SoraFactory() : this._(const ScriptSora._());
 }
 
 /// A class that represents the Sora Sompeng script.
-class ScriptSora extends Script {
+final class ScriptSora extends Script {
   /// {@template sealed_world.script_sora_constructor}
   /// Creates a instance of [ScriptSora] (Sora Sompeng script).
   ///
@@ -14,7 +14,7 @@ class ScriptSora extends Script {
   const factory ScriptSora() = _SoraFactory;
 
   const ScriptSora._()
-    : super(
+    : super._(
         name: "Sora Sompeng",
         code: "Sora",
         codeNumeric: "398",

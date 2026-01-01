@@ -1,11 +1,11 @@
-part of "../../model/language/language.dart";
+part of "../../model/language/submodels/natural_language.dart";
 
 extension type const _SmoFactory._(LangSmo _) implements LangSmo {
   const _SmoFactory() : this._(const LangSmo._());
 }
 
 /// A class that represents the Samoan language.
-class LangSmo extends NaturalLanguage {
+final class LangSmo extends NaturalLanguage {
   /// {@template sealed_world.language_smo_constructor}
   /// Creates a instance of [LangSmo] (Samoan language).
   ///
@@ -14,7 +14,7 @@ class LangSmo extends NaturalLanguage {
   const factory LangSmo() = _SmoFactory;
 
   const LangSmo._()
-    : super(
+    : super._(
         name: "Samoan",
         code: "SMO",
         codeShort: "SM",

@@ -1,11 +1,11 @@
-part of "../../model/language/language.dart";
+part of "../../model/language/submodels/natural_language.dart";
 
 extension type const _SlvFactory._(LangSlv _) implements LangSlv {
   const _SlvFactory() : this._(const LangSlv._());
 }
 
 /// A class that represents the Slovene language.
-class LangSlv extends NaturalLanguage {
+final class LangSlv extends NaturalLanguage {
   /// {@template sealed_world.language_slv_constructor}
   /// Creates a instance of [LangSlv] (Slovene language).
   ///
@@ -14,7 +14,7 @@ class LangSlv extends NaturalLanguage {
   const factory LangSlv() = _SlvFactory;
 
   const LangSlv._()
-    : super(
+    : super._(
         name: "Slovene",
         code: "SLV",
         codeShort: "SL",

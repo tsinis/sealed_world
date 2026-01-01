@@ -1,11 +1,11 @@
-part of "../../model/script/writing_system.dart";
+part of "../../model/script/submodels/script.dart";
 
 extension type const _PiqdFactory._(ScriptPiqd _) implements ScriptPiqd {
   const _PiqdFactory() : this._(const ScriptPiqd._());
 }
 
 /// A class that represents the Klingon (KLI pIqaD) script.
-class ScriptPiqd extends Script {
+final class ScriptPiqd extends Script {
   /// {@template sealed_world.script_piqd_constructor}
   /// Creates a instance of [ScriptPiqd] (Klingon (KLI pIqaD) script).
   ///
@@ -14,7 +14,7 @@ class ScriptPiqd extends Script {
   const factory ScriptPiqd() = _PiqdFactory;
 
   const ScriptPiqd._()
-    : super(
+    : super._(
         name: "Klingon (KLI pIqaD)",
         code: "Piqd",
         codeNumeric: "293",

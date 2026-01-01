@@ -1,6 +1,6 @@
 import "package:sealed_languages/sealed_languages.dart";
 
-import "../../model/currency/currency.dart";
+import "../../model/currency/submodels/fiat_currency.dart";
 
 /// Extension on [FiatCurrency] that provides a `copyWith` method for
 /// creating a new instance of [FiatCurrency] with updated properties.
@@ -33,9 +33,11 @@ extension FiatCurrencyCopyWith<T extends FiatCurrency> on T {
     int? subunitToUnit,
     String? symbol,
     String? thousandsSeparator,
+
+    /// {@macro sealed_world.locale_mapper_callback}
     LocaleMapFunction<String> Function()? mapper,
     bool? unitFirst,
-  }) => FiatCurrency(
+  }) => FiatCustom(
     code: code ?? this.code,
     name: name ?? this.name,
     namesNative: namesNative ?? this.namesNative,

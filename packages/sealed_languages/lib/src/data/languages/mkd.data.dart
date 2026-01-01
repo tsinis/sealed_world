@@ -1,11 +1,11 @@
-part of "../../model/language/language.dart";
+part of "../../model/language/submodels/natural_language.dart";
 
 extension type const _MkdFactory._(LangMkd _) implements LangMkd {
   const _MkdFactory() : this._(const LangMkd._());
 }
 
 /// A class that represents the Macedonian language.
-class LangMkd extends NaturalLanguage {
+final class LangMkd extends NaturalLanguage {
   /// {@template sealed_world.language_mkd_constructor}
   /// Creates a instance of [LangMkd] (Macedonian language).
   ///
@@ -14,7 +14,7 @@ class LangMkd extends NaturalLanguage {
   const factory LangMkd() = _MkdFactory;
 
   const LangMkd._()
-    : super(
+    : super._(
         name: "Macedonian",
         code: "MKD",
         codeShort: "MK",

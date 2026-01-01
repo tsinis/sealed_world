@@ -1,11 +1,11 @@
-part of "../../model/currency/currency.dart";
+part of "../../model/currency/submodels/fiat_currency.dart";
 
 extension type const _LydFactory._(FiatLyd _) implements FiatLyd {
   const _LydFactory() : this._(const FiatLyd._());
 }
 
 /// A class that represents the Libyan Dinar currency.
-class FiatLyd extends FiatCurrency {
+final class FiatLyd extends FiatCurrency {
   /// {@template sealed_world.currency_lyd_constructor}
   /// Creates a instance of [FiatLyd] (Libyan Dinar currency).
   ///

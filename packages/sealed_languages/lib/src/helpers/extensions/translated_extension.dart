@@ -1,14 +1,14 @@
 import "../../interfaces/iso_translated.dart";
 import "../../model/core/basic_locale.dart";
 import "../../model/core/locale_mapping_options.dart";
-import "../../model/language/language.dart";
+import "../../model/language/submodels/natural_language.dart";
 import "../../model/translated_name.dart";
 
 /// An extension that provides translation methods for objects implementing the
-/// [Translated] interface.
+/// [IsoTranslated] interface.
 ///
 /// The [TranslatedExtension] extension adds methods to objects that implement
-/// the [Translated] interface. It provides convenient ways to retrieve
+/// the [IsoTranslated] interface. It provides convenient ways to retrieve
 /// translations based on the specified language, country code, and script.
 ///
 /// Example usage:
@@ -26,7 +26,7 @@ import "../../model/translated_name.dart";
 /// ```
 ///
 /// In this example, the `country` object is an instance of a class that
-/// implements the [Translated] interface. By using the `translation` method
+/// implements the [IsoTranslated] interface. By using the `translation` method
 /// provided by the [TranslatedExtension] extension, you can retrieve the
 /// translation for a specific language. The method accepts the desired locale
 /// [BasicLocale] with required [NaturalLanguage], optional `countryCode`,

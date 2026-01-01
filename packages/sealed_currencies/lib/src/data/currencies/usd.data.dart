@@ -1,11 +1,11 @@
-part of "../../model/currency/currency.dart";
+part of "../../model/currency/submodels/fiat_currency.dart";
 
 extension type const _UsdFactory._(FiatUsd _) implements FiatUsd {
   const _UsdFactory() : this._(const FiatUsd._());
 }
 
 /// A class that represents the United States Dollar currency.
-class FiatUsd extends FiatCurrency {
+final class FiatUsd extends FiatCurrency {
   /// {@template sealed_world.currency_usd_constructor}
   /// Creates a instance of [FiatUsd] (United States Dollar currency).
   ///

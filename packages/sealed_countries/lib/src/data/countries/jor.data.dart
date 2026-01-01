@@ -4,7 +4,7 @@
 
 // ignore_for_file: prefer-digit-separators
 
-part of "../../model/country/country.dart";
+part of "../../model/country/submodels/world_country.dart";
 
 extension type const _JorFactory._(CountryJor _) implements CountryJor {
   const _JorFactory() : this._(const CountryJor._());
@@ -20,7 +20,7 @@ class CountryJor extends WorldCountry {
   const factory CountryJor() = _JorFactory;
 
   const CountryJor._()
-    : super(
+    : super._(
         name: const CountryName(
           language: LangEng(),
           official: "Hashemite Kingdom of Jordan",

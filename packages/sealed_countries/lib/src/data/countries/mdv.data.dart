@@ -4,7 +4,7 @@
 
 // ignore_for_file: prefer-digit-separators
 
-part of "../../model/country/country.dart";
+part of "../../model/country/submodels/world_country.dart";
 
 extension type const _MdvFactory._(CountryMdv _) implements CountryMdv {
   const _MdvFactory() : this._(const CountryMdv._());
@@ -20,7 +20,7 @@ class CountryMdv extends WorldCountry {
   const factory CountryMdv() = _MdvFactory;
 
   const CountryMdv._()
-    : super(
+    : super._(
         name: const CountryName(
           language: LangEng(),
           official: "Republic of the Maldives",

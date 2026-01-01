@@ -1,11 +1,11 @@
-part of "../../model/script/writing_system.dart";
+part of "../../model/script/submodels/script.dart";
 
 extension type const _SyloFactory._(ScriptSylo _) implements ScriptSylo {
   const _SyloFactory() : this._(const ScriptSylo._());
 }
 
 /// A class that represents the Syloti Nagri script.
-class ScriptSylo extends Script {
+final class ScriptSylo extends Script {
   /// {@template sealed_world.script_sylo_constructor}
   /// Creates a instance of [ScriptSylo] (Syloti Nagri script).
   ///
@@ -14,7 +14,7 @@ class ScriptSylo extends Script {
   const factory ScriptSylo() = _SyloFactory;
 
   const ScriptSylo._()
-    : super(
+    : super._(
         name: "Syloti Nagri",
         code: "Sylo",
         codeNumeric: "316",

@@ -1,11 +1,11 @@
-part of "../../model/currency/currency.dart";
+part of "../../model/currency/submodels/fiat_currency.dart";
 
 extension type const _MadFactory._(FiatMad _) implements FiatMad {
   const _MadFactory() : this._(const FiatMad._());
 }
 
 /// A class that represents the Moroccan Dirham currency.
-class FiatMad extends FiatCurrency {
+final class FiatMad extends FiatCurrency {
   /// {@template sealed_world.currency_mad_constructor}
   /// Creates a instance of [FiatMad] (Moroccan Dirham currency).
   ///

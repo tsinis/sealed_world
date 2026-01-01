@@ -1,11 +1,11 @@
-part of "../../model/currency/currency.dart";
+part of "../../model/currency/submodels/fiat_currency.dart";
 
 extension type const _YerFactory._(FiatYer _) implements FiatYer {
   const _YerFactory() : this._(const FiatYer._());
 }
 
 /// A class that represents the Yemeni Rial currency.
-class FiatYer extends FiatCurrency {
+final class FiatYer extends FiatCurrency {
   /// {@template sealed_world.currency_yer_constructor}
   /// Creates a instance of [FiatYer] (Yemeni Rial currency).
   ///

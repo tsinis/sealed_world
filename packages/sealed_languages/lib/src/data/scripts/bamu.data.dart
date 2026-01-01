@@ -1,11 +1,11 @@
-part of "../../model/script/writing_system.dart";
+part of "../../model/script/submodels/script.dart";
 
 extension type const _BamuFactory._(ScriptBamu _) implements ScriptBamu {
   const _BamuFactory() : this._(const ScriptBamu._());
 }
 
 /// A class that represents the Bamum script.
-class ScriptBamu extends Script {
+final class ScriptBamu extends Script {
   /// {@template sealed_world.script_bamu_constructor}
   /// Creates a instance of [ScriptBamu] (Bamum script).
   ///
@@ -14,7 +14,7 @@ class ScriptBamu extends Script {
   const factory ScriptBamu() = _BamuFactory;
 
   const ScriptBamu._()
-    : super(
+    : super._(
         name: "Bamum",
         code: "Bamu",
         codeNumeric: "435",

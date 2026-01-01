@@ -1,11 +1,11 @@
-part of "../../model/currency/currency.dart";
+part of "../../model/currency/submodels/fiat_currency.dart";
 
 extension type const _XauFactory._(FiatXau _) implements FiatXau {
   const _XauFactory() : this._(const FiatXau._());
 }
 
 /// A class that represents the Gold (Troy Ounce) currency.
-class FiatXau extends FiatCurrency {
+final class FiatXau extends FiatCurrency {
   /// {@template sealed_world.currency_xau_constructor}
   /// Creates a instance of [FiatXau] (Gold (Troy Ounce) currency).
   ///

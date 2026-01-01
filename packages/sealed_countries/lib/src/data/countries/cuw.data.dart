@@ -4,7 +4,7 @@
 
 // ignore_for_file: prefer-digit-separators
 
-part of "../../model/country/country.dart";
+part of "../../model/country/submodels/world_country.dart";
 
 extension type const _CuwFactory._(CountryCuw _) implements CountryCuw {
   const _CuwFactory() : this._(const CountryCuw._());
@@ -20,7 +20,7 @@ class CountryCuw extends WorldCountry {
   const factory CountryCuw() = _CuwFactory;
 
   const CountryCuw._()
-    : super(
+    : super._(
         name: const CountryName(
           language: LangEng(),
           official: "Country of Curaçao",

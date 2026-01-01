@@ -11,9 +11,9 @@ import "../../model/country/submodels/lat_lng.dart";
 import "../../model/country/submodels/maps.dart";
 import "../../model/country/submodels/postal_code.dart";
 import "../../model/country/submodels/weekday.dart";
-import "../../model/geo/region.dart";
 import "../../model/geo/submodels/continent.dart";
-import "../../model/regional_bloc/world_bloc.dart";
+import "../../model/geo/submodels/subregion.dart";
+import "../../model/regional_bloc/regional_bloc.dart";
 
 /// Extension that adds a [copyWith] method to the [WorldCountry] class.
 /// This method returns a new instance of [WorldCountry] with the specified
@@ -53,12 +53,14 @@ extension WorldCountryCopyWith<T extends WorldCountry> on T {
     CapitalInfo? capitalInfo,
     PostalCode? postalCode,
     List<RegionalBloc>? regionalBlocs,
+
+    /// {@macro sealed_world.locale_mapper_callback}
     LocaleMapFunction<String> Function()? mapper,
-  }) => WorldCountry(
+  }) => CountryCustom(
     name: name ?? this.name,
+    code: code ?? this.code,
     altSpellings: altSpellings ?? this.altSpellings,
     areaMetric: areaMetric ?? this.areaMetric,
-    code: code ?? this.code,
     codeNumeric: codeNumeric ?? this.codeNumeric,
     codeShort: codeShort ?? this.codeShort,
     continent: continent ?? this.continent,

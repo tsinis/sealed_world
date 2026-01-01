@@ -1,11 +1,11 @@
-part of "../../model/currency/currency.dart";
+part of "../../model/currency/submodels/fiat_currency.dart";
 
 extension type const _DzdFactory._(FiatDzd _) implements FiatDzd {
   const _DzdFactory() : this._(const FiatDzd._());
 }
 
 /// A class that represents the Algerian Dinar currency.
-class FiatDzd extends FiatCurrency {
+final class FiatDzd extends FiatCurrency {
   /// {@template sealed_world.currency_dzd_constructor}
   /// Creates a instance of [FiatDzd] (Algerian Dinar currency).
   ///

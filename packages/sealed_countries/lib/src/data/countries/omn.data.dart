@@ -4,7 +4,7 @@
 
 // ignore_for_file: prefer-digit-separators
 
-part of "../../model/country/country.dart";
+part of "../../model/country/submodels/world_country.dart";
 
 extension type const _OmnFactory._(CountryOmn _) implements CountryOmn {
   const _OmnFactory() : this._(const CountryOmn._());
@@ -20,7 +20,7 @@ class CountryOmn extends WorldCountry {
   const factory CountryOmn() = _OmnFactory;
 
   const CountryOmn._()
-    : super(
+    : super._(
         name: const CountryName(
           language: LangEng(),
           official: "Sultanate of Oman",

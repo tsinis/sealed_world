@@ -4,7 +4,7 @@
 
 // ignore_for_file: prefer-digit-separators
 
-part of "../../model/country/country.dart";
+part of "../../model/country/submodels/world_country.dart";
 
 extension type const _MexFactory._(CountryMex _) implements CountryMex {
   const _MexFactory() : this._(const CountryMex._());
@@ -20,7 +20,7 @@ class CountryMex extends WorldCountry {
   const factory CountryMex() = _MexFactory;
 
   const CountryMex._()
-    : super(
+    : super._(
         name: const CountryName(
           language: LangEng(),
           official: "United Mexican States",

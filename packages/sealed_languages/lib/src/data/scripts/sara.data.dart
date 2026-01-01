@@ -1,11 +1,11 @@
-part of "../../model/script/writing_system.dart";
+part of "../../model/script/submodels/script.dart";
 
 extension type const _SaraFactory._(ScriptSara _) implements ScriptSara {
   const _SaraFactory() : this._(const ScriptSara._());
 }
 
 /// A class that represents the Sarati script.
-class ScriptSara extends Script {
+final class ScriptSara extends Script {
   /// {@template sealed_world.script_sara_constructor}
   /// Creates a instance of [ScriptSara] (Sarati script).
   ///
@@ -14,7 +14,7 @@ class ScriptSara extends Script {
   const factory ScriptSara() = _SaraFactory;
 
   const ScriptSara._()
-    : super(
+    : super._(
         name: "Sarati",
         code: "Sara",
         codeNumeric: "292",

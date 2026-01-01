@@ -3,11 +3,12 @@ import "package:sealed_languages/src/helpers/utils/localization_delegate.dart";
 import "package:sealed_languages/src/model/core/basic_locale.dart";
 import "package:sealed_languages/src/model/core/locale_mapping_options.dart"
     show LocaleMappingOptions;
-import "package:sealed_languages/src/model/language/language.dart";
-import "package:sealed_languages/src/model/script/writing_system.dart";
+import "package:sealed_languages/src/model/language/submodels/natural_language.dart";
+import "package:sealed_languages/src/model/script/submodels/script.dart";
 import "package:sealed_languages/src/model/translated_name.dart";
 import "package:test/test.dart";
 
+// ignore: avoid-high-cyclomatic-complexity, it's a test...
 void main() => group("$LocalizationDelegate", () {
   const language = LangEng();
   const script = ScriptLatn();
@@ -80,6 +81,7 @@ void main() => group("$LocalizationDelegate", () {
               altSymbol,
               mainLocale,
               fallbackLocale,
+              formatter,
             }) => const {
               (isoCode: "ENG", locale: "en"): "English",
               (isoCode: "ENG+", locale: "en"): "English (full)",
@@ -99,6 +101,7 @@ void main() => group("$LocalizationDelegate", () {
               altSymbol,
               mainLocale,
               fallbackLocale,
+              formatter,
             }) => const {
               (isoCode: "ENG", locale: "en"): "English",
               (isoCode: "ENG+", locale: "en"): "English Language",
@@ -123,6 +126,7 @@ void main() => group("$LocalizationDelegate", () {
               altSymbol,
               mainLocale,
               fallbackLocale,
+              formatter,
             }) => const {(isoCode: "ENG", locale: "en"): "English"},
       );
 
@@ -146,6 +150,7 @@ void main() => group("$LocalizationDelegate", () {
               altSymbol,
               mainLocale,
               fallbackLocale,
+              formatter,
             }) => const {
               (isoCode: "ENG", locale: "en"): "English",
               (isoCode: "ENG", locale: "de"): "Englisch",
@@ -171,6 +176,7 @@ void main() => group("$LocalizationDelegate", () {
               altSymbol,
               mainLocale,
               fallbackLocale,
+              formatter,
             }) => const {
               (isoCode: "ENG", locale: "en"): "English",
               (isoCode: "DEU", locale: "en"): "German",
@@ -192,6 +198,7 @@ void main() => group("$LocalizationDelegate", () {
               altSymbol,
               mainLocale,
               fallbackLocale,
+              formatter,
             }) => const {
               (isoCode: "ENG", locale: "en"): "English",
               (isoCode: "ENG*", locale: "en"): "English Language",
@@ -218,6 +225,7 @@ void main() => group("$LocalizationDelegate", () {
               altSymbol,
               mainLocale,
               fallbackLocale,
+              formatter,
             }) => const {
               (isoCode: "ENG", locale: "en_Latn_US"): "English (US)",
             },
@@ -240,6 +248,7 @@ void main() => group("$LocalizationDelegate", () {
               altSymbol,
               mainLocale,
               fallbackLocale,
+              formatter,
             }) => const {
               (isoCode: "ENG", locale: "invalid_locale_format"): "English",
               (isoCode: "ENG", locale: "en"): "English (valid)",
@@ -255,7 +264,7 @@ void main() => group("$LocalizationDelegate", () {
       String capturedFallbackLocale = "";
       bool capturedUseLanguageFallback = true;
 
-      final customParser = LocalizationDelegate(
+      LocalizationDelegate(
         mapper: () =>
             (
               isoCodes, {
@@ -263,6 +272,7 @@ void main() => group("$LocalizationDelegate", () {
               altSymbol,
               mainLocale,
               fallbackLocale,
+              formatter,
             }) {
               capturedMainLocale = mainLocale ?? "";
               capturedFallbackLocale = fallbackLocale ?? "";
@@ -270,13 +280,11 @@ void main() => group("$LocalizationDelegate", () {
 
               return const {(isoCode: "ENG", locale: "en"): "English"};
             },
-      );
-
-      customParser.translatedNames(
+      ).translatedNames(
         const [LangEng()],
-        options: LocaleMappingOptions(
+        options: const LocaleMappingOptions(
           mainLocale: locale,
-          fallbackLocale: const BasicLocale(LangDeu()),
+          fallbackLocale: BasicLocale(LangDeu()),
           useLanguageFallback: false,
         ),
       );
@@ -307,6 +315,15 @@ void main() => group("$LocalizationDelegate", () {
         expect(result?.countryCode, isNull);
       });
 
+      test("parses three-letter language", () {
+        final result = parser.parseLocale("eng");
+
+        expect(result?.toString(), locale.toString());
+        expect(result?.language, equals(language));
+        expect(result?.script, isNull);
+        expect(result?.countryCode, isNull);
+      });
+
       test("parses language with country", () {
         final result = parser.parseLocale("en_US");
 
@@ -317,6 +334,18 @@ void main() => group("$LocalizationDelegate", () {
         expect(result?.language, equals(language));
         expect(result?.script, isNull);
         expect(result?.countryCode, equals(countryCode));
+      });
+
+      test("parses language with alpha-3 country", () {
+        final result = parser.parseLocale("en_USA");
+
+        expect(
+          result?.toString(),
+          locale.copyWith(countryCode: "USA").toString(),
+        );
+        expect(result?.language, equals(language));
+        expect(result?.script, isNull);
+        expect(result?.countryCode, equals("USA"));
       });
 
       test("parses language with script", () {
@@ -386,12 +415,12 @@ void main() => group("$LocalizationDelegate", () {
     group("invalid formats", () {
       test(
         "rejects invalid language length",
-        () => expect(parser.parseLocale("eng"), isNull),
+        () => expect(parser.parseLocale("engl"), isNull),
       );
 
       test(
         "rejects invalid country length",
-        () => expect(parser.parseLocale("en_USA"), isNull),
+        () => expect(parser.parseLocale("en_U"), isNull),
       );
 
       test(
@@ -408,6 +437,49 @@ void main() => group("$LocalizationDelegate", () {
         "rejects wrong order",
         () => expect(parser.parseLocale("US_en"), isNull),
       );
+    });
+
+    group("edge cases", () {
+      test("parses BasicLocale input", () {
+        const localeInput = BasicLocale(language, countryCode: "gb");
+        final result = parser.parseLocale(localeInput);
+
+        expect(result?.language, equals(language));
+        expect(result?.script, isNull);
+        expect(result?.countryCode, equals("GB"));
+      });
+
+      test("handles messy separators and casing", () {
+        final result = parser.parseLocale("  en - LATN__ usa ");
+
+        expect(result?.language, equals(language));
+        expect(result?.script, equals(script));
+        expect(result?.countryCode, equals("USA"));
+      });
+
+      test("returns null for language outside whitelist", () {
+        expect(parser.parseLocale("de"), isNull);
+      });
+
+      test("omits scripts that are not whitelisted", () {
+        final result = parser.parseLocale("en_Cyrl_ru");
+
+        expect(result?.language, equals(language));
+        expect(result?.script, isNull);
+        expect(result?.countryCode, equals("RU"));
+      });
+
+      test("parses iso-3 language with script and alpha-3 country", () {
+        const extendedParser = LocalizationDelegate(
+          languages: [LangEng(), LangDeu()],
+          scripts: [ScriptLatn(), ScriptCyrl()],
+        );
+        final result = extendedParser.parseLocale("deu-Cyrl-DEU");
+
+        expect(result?.language, equals(const LangDeu()));
+        expect(result?.script, equals(const ScriptCyrl()));
+        expect(result?.countryCode, equals("DEU"));
+      });
     });
   });
 });

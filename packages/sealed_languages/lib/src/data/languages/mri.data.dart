@@ -1,11 +1,11 @@
-part of "../../model/language/language.dart";
+part of "../../model/language/submodels/natural_language.dart";
 
 extension type const _MriFactory._(LangMri _) implements LangMri {
   const _MriFactory() : this._(const LangMri._());
 }
 
 /// A class that represents the Māori language.
-class LangMri extends NaturalLanguage {
+final class LangMri extends NaturalLanguage {
   /// {@template sealed_world.language_mri_constructor}
   /// Creates a instance of [LangMri] (Māori language).
   ///
@@ -14,7 +14,7 @@ class LangMri extends NaturalLanguage {
   const factory LangMri() = _MriFactory;
 
   const LangMri._()
-    : super(
+    : super._(
         name: "Māori",
         code: "MRI",
         codeShort: "MI",

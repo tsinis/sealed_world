@@ -4,7 +4,7 @@
 
 // ignore_for_file: prefer-digit-separators
 
-part of "../../model/country/country.dart";
+part of "../../model/country/submodels/world_country.dart";
 
 extension type const _AtgFactory._(CountryAtg _) implements CountryAtg {
   const _AtgFactory() : this._(const CountryAtg._());
@@ -20,7 +20,7 @@ class CountryAtg extends WorldCountry {
   const factory CountryAtg() = _AtgFactory;
 
   const CountryAtg._()
-    : super(
+    : super._(
         name: const CountryName(
           language: LangEng(),
           official: "Antigua and Barbuda",

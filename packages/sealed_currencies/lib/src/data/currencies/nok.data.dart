@@ -1,11 +1,11 @@
-part of "../../model/currency/currency.dart";
+part of "../../model/currency/submodels/fiat_currency.dart";
 
 extension type const _NokFactory._(FiatNok _) implements FiatNok {
   const _NokFactory() : this._(const FiatNok._());
 }
 
 /// A class that represents the Norwegian Krone currency.
-class FiatNok extends FiatCurrency {
+final class FiatNok extends FiatCurrency {
   /// {@template sealed_world.currency_nok_constructor}
   /// Creates a instance of [FiatNok] (Norwegian Krone currency).
   ///

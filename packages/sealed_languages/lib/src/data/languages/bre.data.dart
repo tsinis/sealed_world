@@ -1,11 +1,11 @@
-part of "../../model/language/language.dart";
+part of "../../model/language/submodels/natural_language.dart";
 
 extension type const _BreFactory._(LangBre _) implements LangBre {
   const _BreFactory() : this._(const LangBre._());
 }
 
 /// A class that represents the Breton language.
-class LangBre extends NaturalLanguage {
+final class LangBre extends NaturalLanguage {
   /// {@template sealed_world.language_bre_constructor}
   /// Creates a instance of [LangBre] (Breton language).
   ///
@@ -14,7 +14,7 @@ class LangBre extends NaturalLanguage {
   const factory LangBre() = _BreFactory;
 
   const LangBre._()
-    : super(
+    : super._(
         name: "Breton",
         code: "BRE",
         codeShort: "BR",

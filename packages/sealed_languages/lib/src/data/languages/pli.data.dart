@@ -1,11 +1,11 @@
-part of "../../model/language/language.dart";
+part of "../../model/language/submodels/natural_language.dart";
 
 extension type const _PliFactory._(LangPli _) implements LangPli {
   const _PliFactory() : this._(const LangPli._());
 }
 
 /// A class that represents the Pāli language.
-class LangPli extends NaturalLanguage {
+final class LangPli extends NaturalLanguage {
   /// {@template sealed_world.language_pli_constructor}
   /// Creates a instance of [LangPli] (Pāli language).
   ///
@@ -14,7 +14,7 @@ class LangPli extends NaturalLanguage {
   const factory LangPli() = _PliFactory;
 
   const LangPli._()
-    : super(
+    : super._(
         name: "Pāli",
         code: "PLI",
         codeShort: "PI",

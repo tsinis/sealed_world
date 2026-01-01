@@ -4,7 +4,7 @@
 
 // ignore_for_file: prefer-digit-separators
 
-part of "../../model/country/country.dart";
+part of "../../model/country/submodels/world_country.dart";
 
 extension type const _StpFactory._(CountryStp _) implements CountryStp {
   const _StpFactory() : this._(const CountryStp._());
@@ -20,7 +20,7 @@ class CountryStp extends WorldCountry {
   const factory CountryStp() = _StpFactory;
 
   const CountryStp._()
-    : super(
+    : super._(
         name: const CountryName(
           language: LangEng(),
           official: "Democratic Republic of São Tomé and Príncipe",

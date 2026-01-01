@@ -4,7 +4,7 @@
 
 // ignore_for_file: prefer-digit-separators
 
-part of "../../model/country/country.dart";
+part of "../../model/country/submodels/world_country.dart";
 
 extension type const _CodFactory._(CountryCod _) implements CountryCod {
   const _CodFactory() : this._(const CountryCod._());
@@ -20,7 +20,7 @@ class CountryCod extends WorldCountry {
   const factory CountryCod() = _CodFactory;
 
   const CountryCod._()
-    : super(
+    : super._(
         name: const CountryName(
           language: LangEng(),
           official: "Democratic Republic of the Congo",

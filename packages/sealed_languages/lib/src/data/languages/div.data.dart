@@ -1,11 +1,11 @@
-part of "../../model/language/language.dart";
+part of "../../model/language/submodels/natural_language.dart";
 
 extension type const _DivFactory._(LangDiv _) implements LangDiv {
   const _DivFactory() : this._(const LangDiv._());
 }
 
 /// A class that represents the Divehi (Dhivehi/Maldivian) language.
-class LangDiv extends NaturalLanguage {
+final class LangDiv extends NaturalLanguage {
   /// {@template sealed_world.language_div_constructor}
   /// Creates a instance of [LangDiv] (Divehi (Dhivehi/Maldivian) language).
   ///
@@ -14,7 +14,7 @@ class LangDiv extends NaturalLanguage {
   const factory LangDiv() = _DivFactory;
 
   const LangDiv._()
-    : super(
+    : super._(
         name: "Divehi (Dhivehi/Maldivian)",
         code: "DIV",
         codeShort: "DV",

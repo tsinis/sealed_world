@@ -1,11 +1,11 @@
-part of "../../model/script/writing_system.dart";
+part of "../../model/script/submodels/script.dart";
 
 extension type const _BassFactory._(ScriptBass _) implements ScriptBass {
   const _BassFactory() : this._(const ScriptBass._());
 }
 
 /// A class that represents the Bassa Vah script.
-class ScriptBass extends Script {
+final class ScriptBass extends Script {
   /// {@template sealed_world.script_bass_constructor}
   /// Creates a instance of [ScriptBass] (Bassa Vah script).
   ///
@@ -14,7 +14,7 @@ class ScriptBass extends Script {
   const factory ScriptBass() = _BassFactory;
 
   const ScriptBass._()
-    : super(
+    : super._(
         name: "Bassa Vah",
         code: "Bass",
         codeNumeric: "259",

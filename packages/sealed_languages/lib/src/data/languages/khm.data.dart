@@ -1,11 +1,11 @@
-part of "../../model/language/language.dart";
+part of "../../model/language/submodels/natural_language.dart";
 
 extension type const _KhmFactory._(LangKhm _) implements LangKhm {
   const _KhmFactory() : this._(const LangKhm._());
 }
 
 /// A class that represents the Khmer language.
-class LangKhm extends NaturalLanguage {
+final class LangKhm extends NaturalLanguage {
   /// {@template sealed_world.language_khm_constructor}
   /// Creates a instance of [LangKhm] (Khmer language).
   ///
@@ -14,7 +14,7 @@ class LangKhm extends NaturalLanguage {
   const factory LangKhm() = _KhmFactory;
 
   const LangKhm._()
-    : super(
+    : super._(
         name: "Khmer",
         code: "KHM",
         codeShort: "KM",

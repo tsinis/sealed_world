@@ -1,11 +1,11 @@
-part of "../../model/script/writing_system.dart";
+part of "../../model/script/submodels/script.dart";
 
 extension type const _WchoFactory._(ScriptWcho _) implements ScriptWcho {
   const _WchoFactory() : this._(const ScriptWcho._());
 }
 
 /// A class that represents the Wancho script.
-class ScriptWcho extends Script {
+final class ScriptWcho extends Script {
   /// {@template sealed_world.script_wcho_constructor}
   /// Creates a instance of [ScriptWcho] (Wancho script).
   ///
@@ -14,7 +14,7 @@ class ScriptWcho extends Script {
   const factory ScriptWcho() = _WchoFactory;
 
   const ScriptWcho._()
-    : super(
+    : super._(
         name: "Wancho",
         code: "Wcho",
         codeNumeric: "283",

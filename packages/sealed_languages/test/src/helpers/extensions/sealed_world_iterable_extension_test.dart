@@ -1,5 +1,5 @@
 import "package:sealed_languages/src/helpers/extensions/sealed_world_iterable_extension.dart";
-import "package:sealed_languages/src/model/script/writing_system.dart";
+import "package:sealed_languages/src/model/script/submodels/script.dart";
 import "package:test/test.dart";
 
 void main() {

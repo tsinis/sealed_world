@@ -1,11 +1,11 @@
-part of "../../model/language/language.dart";
+part of "../../model/language/submodels/natural_language.dart";
 
 extension type const _VieFactory._(LangVie _) implements LangVie {
   const _VieFactory() : this._(const LangVie._());
 }
 
 /// A class that represents the Vietnamese language.
-class LangVie extends NaturalLanguage {
+final class LangVie extends NaturalLanguage {
   /// {@template sealed_world.language_vie_constructor}
   /// Creates a instance of [LangVie] (Vietnamese language).
   ///
@@ -14,7 +14,7 @@ class LangVie extends NaturalLanguage {
   const factory LangVie() = _VieFactory;
 
   const LangVie._()
-    : super(
+    : super._(
         name: "Vietnamese",
         code: "VIE",
         codeShort: "VI",

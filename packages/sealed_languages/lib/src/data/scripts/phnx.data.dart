@@ -1,11 +1,11 @@
-part of "../../model/script/writing_system.dart";
+part of "../../model/script/submodels/script.dart";
 
 extension type const _PhnxFactory._(ScriptPhnx _) implements ScriptPhnx {
   const _PhnxFactory() : this._(const ScriptPhnx._());
 }
 
 /// A class that represents the Phoenician script.
-class ScriptPhnx extends Script {
+final class ScriptPhnx extends Script {
   /// {@template sealed_world.script_phnx_constructor}
   /// Creates a instance of [ScriptPhnx] (Phoenician script).
   ///
@@ -14,7 +14,7 @@ class ScriptPhnx extends Script {
   const factory ScriptPhnx() = _PhnxFactory;
 
   const ScriptPhnx._()
-    : super(
+    : super._(
         name: "Phoenician",
         code: "Phnx",
         codeNumeric: "115",

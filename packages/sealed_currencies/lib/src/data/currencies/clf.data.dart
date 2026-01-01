@@ -1,11 +1,11 @@
-part of "../../model/currency/currency.dart";
+part of "../../model/currency/submodels/fiat_currency.dart";
 
 extension type const _ClfFactory._(FiatClf _) implements FiatClf {
   const _ClfFactory() : this._(const FiatClf._());
 }
 
 /// A class that represents the Chilean Unit of Account (UF) currency.
-class FiatClf extends FiatCurrency {
+final class FiatClf extends FiatCurrency {
   /// {@template sealed_world.currency_clf_constructor}
   /// Creates a instance of [FiatClf] (Chilean Unit of Account (UF) currency).
   ///

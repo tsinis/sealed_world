@@ -1,11 +1,11 @@
-part of "../../model/script/writing_system.dart";
+part of "../../model/script/submodels/script.dart";
 
 extension type const _BrahFactory._(ScriptBrah _) implements ScriptBrah {
   const _BrahFactory() : this._(const ScriptBrah._());
 }
 
 /// A class that represents the Brahmi script.
-class ScriptBrah extends Script {
+final class ScriptBrah extends Script {
   /// {@template sealed_world.script_brah_constructor}
   /// Creates a instance of [ScriptBrah] (Brahmi script).
   ///
@@ -14,7 +14,7 @@ class ScriptBrah extends Script {
   const factory ScriptBrah() = _BrahFactory;
 
   const ScriptBrah._()
-    : super(
+    : super._(
         name: "Brahmi",
         code: "Brah",
         codeNumeric: "300",

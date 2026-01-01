@@ -1,11 +1,11 @@
-part of "../../model/language/language.dart";
+part of "../../model/language/submodels/natural_language.dart";
 
 extension type const _TahFactory._(LangTah _) implements LangTah {
   const _TahFactory() : this._(const LangTah._());
 }
 
 /// A class that represents the Tahitian language.
-class LangTah extends NaturalLanguage {
+final class LangTah extends NaturalLanguage {
   /// {@template sealed_world.language_tah_constructor}
   /// Creates a instance of [LangTah] (Tahitian language).
   ///
@@ -14,7 +14,7 @@ class LangTah extends NaturalLanguage {
   const factory LangTah() = _TahFactory;
 
   const LangTah._()
-    : super(
+    : super._(
         name: "Tahitian",
         code: "TAH",
         codeShort: "TY",

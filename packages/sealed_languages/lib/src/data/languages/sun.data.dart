@@ -1,11 +1,11 @@
-part of "../../model/language/language.dart";
+part of "../../model/language/submodels/natural_language.dart";
 
 extension type const _SunFactory._(LangSun _) implements LangSun {
   const _SunFactory() : this._(const LangSun._());
 }
 
 /// A class that represents the Sundanese language.
-class LangSun extends NaturalLanguage {
+final class LangSun extends NaturalLanguage {
   /// {@template sealed_world.language_sun_constructor}
   /// Creates a instance of [LangSun] (Sundanese language).
   ///
@@ -14,7 +14,7 @@ class LangSun extends NaturalLanguage {
   const factory LangSun() = _SunFactory;
 
   const LangSun._()
-    : super(
+    : super._(
         name: "Sundanese",
         code: "SUN",
         codeShort: "SU",

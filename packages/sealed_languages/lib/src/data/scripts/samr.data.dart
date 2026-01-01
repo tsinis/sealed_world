@@ -1,11 +1,11 @@
-part of "../../model/script/writing_system.dart";
+part of "../../model/script/submodels/script.dart";
 
 extension type const _SamrFactory._(ScriptSamr _) implements ScriptSamr {
   const _SamrFactory() : this._(const ScriptSamr._());
 }
 
 /// A class that represents the Samaritan script.
-class ScriptSamr extends Script {
+final class ScriptSamr extends Script {
   /// {@template sealed_world.script_samr_constructor}
   /// Creates a instance of [ScriptSamr] (Samaritan script).
   ///
@@ -14,7 +14,7 @@ class ScriptSamr extends Script {
   const factory ScriptSamr() = _SamrFactory;
 
   const ScriptSamr._()
-    : super(
+    : super._(
         name: "Samaritan",
         code: "Samr",
         codeNumeric: "123",

@@ -1,11 +1,11 @@
-part of "../../model/currency/currency.dart";
+part of "../../model/currency/submodels/fiat_currency.dart";
 
 extension type const _QarFactory._(FiatQar _) implements FiatQar {
   const _QarFactory() : this._(const FiatQar._());
 }
 
 /// A class that represents the Qatari Riyal currency.
-class FiatQar extends FiatCurrency {
+final class FiatQar extends FiatCurrency {
   /// {@template sealed_world.currency_qar_constructor}
   /// Creates a instance of [FiatQar] (Qatari Riyal currency).
   ///

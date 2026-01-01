@@ -1,11 +1,11 @@
-part of "../../model/script/writing_system.dart";
+part of "../../model/script/submodels/script.dart";
 
 extension type const _VaiiFactory._(ScriptVaii _) implements ScriptVaii {
   const _VaiiFactory() : this._(const ScriptVaii._());
 }
 
 /// A class that represents the Vai script.
-class ScriptVaii extends Script {
+final class ScriptVaii extends Script {
   /// {@template sealed_world.script_vaii_constructor}
   /// Creates a instance of [ScriptVaii] (Vai script).
   ///
@@ -14,7 +14,7 @@ class ScriptVaii extends Script {
   const factory ScriptVaii() = _VaiiFactory;
 
   const ScriptVaii._()
-    : super(
+    : super._(
         name: "Vai",
         code: "Vaii",
         codeNumeric: "470",

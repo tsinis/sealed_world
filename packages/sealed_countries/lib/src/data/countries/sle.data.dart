@@ -4,7 +4,7 @@
 
 // ignore_for_file: prefer-digit-separators
 
-part of "../../model/country/country.dart";
+part of "../../model/country/submodels/world_country.dart";
 
 extension type const _SleFactory._(CountrySle _) implements CountrySle {
   const _SleFactory() : this._(const CountrySle._());
@@ -20,7 +20,7 @@ class CountrySle extends WorldCountry {
   const factory CountrySle() = _SleFactory;
 
   const CountrySle._()
-    : super(
+    : super._(
         name: const CountryName(
           language: LangEng(),
           official: "Republic of Sierra Leone",

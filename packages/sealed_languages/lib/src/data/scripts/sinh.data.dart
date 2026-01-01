@@ -1,11 +1,11 @@
-part of "../../model/script/writing_system.dart";
+part of "../../model/script/submodels/script.dart";
 
 extension type const _SinhFactory._(ScriptSinh _) implements ScriptSinh {
   const _SinhFactory() : this._(const ScriptSinh._());
 }
 
 /// A class that represents the Sinhala script.
-class ScriptSinh extends Script {
+final class ScriptSinh extends Script {
   /// {@template sealed_world.script_sinh_constructor}
   /// Creates a instance of [ScriptSinh] (Sinhala script).
   ///
@@ -14,7 +14,7 @@ class ScriptSinh extends Script {
   const factory ScriptSinh() = _SinhFactory;
 
   const ScriptSinh._()
-    : super(
+    : super._(
         name: "Sinhala",
         code: "Sinh",
         codeNumeric: "348",

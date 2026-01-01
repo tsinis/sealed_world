@@ -1,6 +1,279 @@
-part of "../country.dart";
+import "package:l10n_countries/l10n_countries.dart" show CountriesLocaleMapper;
+import "package:sealed_currencies/sealed_currencies.dart";
 
-/// A class that represents a country in the world.
+import "../../../collections/world_country_collections.dart";
+import "../../../helpers/utils/typed_localization_delegate.dart";
+import "../../../helpers/world_country/world_country_json.dart";
+import "../../geo/submodels/continent.dart";
+import "../../geo/submodels/subregion.dart";
+import "../../locale/basic_typed_locale.dart";
+import "../../regional_bloc/regional_bloc.dart";
+import "../country.dart";
+import "capital.dart";
+import "capital_info.dart";
+import "car.dart";
+import "country_name.dart";
+import "demonyms.dart";
+import "gini.dart";
+import "idd.dart";
+import "lat_lng.dart";
+import "maps.dart";
+import "postal_code.dart";
+import "weekday.dart";
+
+part "../../../data/countries/abw.data.dart";
+part "../../../data/countries/afg.data.dart";
+part "../../../data/countries/ago.data.dart";
+part "../../../data/countries/aia.data.dart";
+part "../../../data/countries/ala.data.dart";
+part "../../../data/countries/alb.data.dart";
+part "../../../data/countries/and.data.dart";
+part "../../../data/countries/are.data.dart";
+part "../../../data/countries/arg.data.dart";
+part "../../../data/countries/arm.data.dart";
+part "../../../data/countries/asm.data.dart";
+part "../../../data/countries/ata.data.dart";
+part "../../../data/countries/atf.data.dart";
+part "../../../data/countries/atg.data.dart";
+part "../../../data/countries/aus.data.dart";
+part "../../../data/countries/aut.data.dart";
+part "../../../data/countries/aze.data.dart";
+part "../../../data/countries/bdi.data.dart";
+part "../../../data/countries/bel.data.dart";
+part "../../../data/countries/ben.data.dart";
+part "../../../data/countries/bes.data.dart";
+part "../../../data/countries/bfa.data.dart";
+part "../../../data/countries/bgd.data.dart";
+part "../../../data/countries/bgr.data.dart";
+part "../../../data/countries/bhr.data.dart";
+part "../../../data/countries/bhs.data.dart";
+part "../../../data/countries/bih.data.dart";
+part "../../../data/countries/blm.data.dart";
+part "../../../data/countries/blr.data.dart";
+part "../../../data/countries/blz.data.dart";
+part "../../../data/countries/bmu.data.dart";
+part "../../../data/countries/bol.data.dart";
+part "../../../data/countries/bra.data.dart";
+part "../../../data/countries/brb.data.dart";
+part "../../../data/countries/brn.data.dart";
+part "../../../data/countries/btn.data.dart";
+part "../../../data/countries/bvt.data.dart";
+part "../../../data/countries/bwa.data.dart";
+part "../../../data/countries/caf.data.dart";
+part "../../../data/countries/can.data.dart";
+part "../../../data/countries/cck.data.dart";
+part "../../../data/countries/che.data.dart";
+part "../../../data/countries/chl.data.dart";
+part "../../../data/countries/chn.data.dart";
+part "../../../data/countries/civ.data.dart";
+part "../../../data/countries/cmr.data.dart";
+part "../../../data/countries/cod.data.dart";
+part "../../../data/countries/cog.data.dart";
+part "../../../data/countries/cok.data.dart";
+part "../../../data/countries/col.data.dart";
+part "../../../data/countries/com.data.dart";
+part "../../../data/countries/cpv.data.dart";
+part "../../../data/countries/cri.data.dart";
+part "../../../data/countries/cub.data.dart";
+part "../../../data/countries/custom.data.dart";
+part "../../../data/countries/cuw.data.dart";
+part "../../../data/countries/cxr.data.dart";
+part "../../../data/countries/cym.data.dart";
+part "../../../data/countries/cyp.data.dart";
+part "../../../data/countries/cze.data.dart";
+part "../../../data/countries/deu.data.dart";
+part "../../../data/countries/dji.data.dart";
+part "../../../data/countries/dma.data.dart";
+part "../../../data/countries/dnk.data.dart";
+part "../../../data/countries/dom.data.dart";
+part "../../../data/countries/dza.data.dart";
+part "../../../data/countries/ecu.data.dart";
+part "../../../data/countries/egy.data.dart";
+part "../../../data/countries/eri.data.dart";
+part "../../../data/countries/esh.data.dart";
+part "../../../data/countries/esp.data.dart";
+part "../../../data/countries/est.data.dart";
+part "../../../data/countries/eth.data.dart";
+part "../../../data/countries/fin.data.dart";
+part "../../../data/countries/fji.data.dart";
+part "../../../data/countries/flk.data.dart";
+part "../../../data/countries/fra.data.dart";
+part "../../../data/countries/fro.data.dart";
+part "../../../data/countries/fsm.data.dart";
+part "../../../data/countries/gab.data.dart";
+part "../../../data/countries/gbr.data.dart";
+part "../../../data/countries/geo.data.dart";
+part "../../../data/countries/ggy.data.dart";
+part "../../../data/countries/gha.data.dart";
+part "../../../data/countries/gib.data.dart";
+part "../../../data/countries/gin.data.dart";
+part "../../../data/countries/glp.data.dart";
+part "../../../data/countries/gmb.data.dart";
+part "../../../data/countries/gnb.data.dart";
+part "../../../data/countries/gnq.data.dart";
+part "../../../data/countries/grc.data.dart";
+part "../../../data/countries/grd.data.dart";
+part "../../../data/countries/grl.data.dart";
+part "../../../data/countries/gtm.data.dart";
+part "../../../data/countries/guf.data.dart";
+part "../../../data/countries/gum.data.dart";
+part "../../../data/countries/guy.data.dart";
+part "../../../data/countries/hkg.data.dart";
+part "../../../data/countries/hmd.data.dart";
+part "../../../data/countries/hnd.data.dart";
+part "../../../data/countries/hrv.data.dart";
+part "../../../data/countries/hti.data.dart";
+part "../../../data/countries/hun.data.dart";
+part "../../../data/countries/idn.data.dart";
+part "../../../data/countries/imn.data.dart";
+part "../../../data/countries/ind.data.dart";
+part "../../../data/countries/iot.data.dart";
+part "../../../data/countries/irl.data.dart";
+part "../../../data/countries/irn.data.dart";
+part "../../../data/countries/irq.data.dart";
+part "../../../data/countries/isl.data.dart";
+part "../../../data/countries/isr.data.dart";
+part "../../../data/countries/ita.data.dart";
+part "../../../data/countries/jam.data.dart";
+part "../../../data/countries/jey.data.dart";
+part "../../../data/countries/jor.data.dart";
+part "../../../data/countries/jpn.data.dart";
+part "../../../data/countries/kaz.data.dart";
+part "../../../data/countries/ken.data.dart";
+part "../../../data/countries/kgz.data.dart";
+part "../../../data/countries/khm.data.dart";
+part "../../../data/countries/kir.data.dart";
+part "../../../data/countries/kna.data.dart";
+part "../../../data/countries/kor.data.dart";
+part "../../../data/countries/kwt.data.dart";
+part "../../../data/countries/lao.data.dart";
+part "../../../data/countries/lbn.data.dart";
+part "../../../data/countries/lbr.data.dart";
+part "../../../data/countries/lby.data.dart";
+part "../../../data/countries/lca.data.dart";
+part "../../../data/countries/lie.data.dart";
+part "../../../data/countries/lka.data.dart";
+part "../../../data/countries/lso.data.dart";
+part "../../../data/countries/ltu.data.dart";
+part "../../../data/countries/lux.data.dart";
+part "../../../data/countries/lva.data.dart";
+part "../../../data/countries/mac.data.dart";
+part "../../../data/countries/maf.data.dart";
+part "../../../data/countries/mar.data.dart";
+part "../../../data/countries/mco.data.dart";
+part "../../../data/countries/mda.data.dart";
+part "../../../data/countries/mdg.data.dart";
+part "../../../data/countries/mdv.data.dart";
+part "../../../data/countries/mex.data.dart";
+part "../../../data/countries/mhl.data.dart";
+part "../../../data/countries/mkd.data.dart";
+part "../../../data/countries/mli.data.dart";
+part "../../../data/countries/mlt.data.dart";
+part "../../../data/countries/mmr.data.dart";
+part "../../../data/countries/mne.data.dart";
+part "../../../data/countries/mng.data.dart";
+part "../../../data/countries/mnp.data.dart";
+part "../../../data/countries/moz.data.dart";
+part "../../../data/countries/mrt.data.dart";
+part "../../../data/countries/msr.data.dart";
+part "../../../data/countries/mtq.data.dart";
+part "../../../data/countries/mus.data.dart";
+part "../../../data/countries/mwi.data.dart";
+part "../../../data/countries/mys.data.dart";
+part "../../../data/countries/myt.data.dart";
+part "../../../data/countries/nam.data.dart";
+part "../../../data/countries/ncl.data.dart";
+part "../../../data/countries/ner.data.dart";
+part "../../../data/countries/nfk.data.dart";
+part "../../../data/countries/nga.data.dart";
+part "../../../data/countries/nic.data.dart";
+part "../../../data/countries/niu.data.dart";
+part "../../../data/countries/nld.data.dart";
+part "../../../data/countries/nor.data.dart";
+part "../../../data/countries/npl.data.dart";
+part "../../../data/countries/nru.data.dart";
+part "../../../data/countries/nzl.data.dart";
+part "../../../data/countries/omn.data.dart";
+part "../../../data/countries/pak.data.dart";
+part "../../../data/countries/pan.data.dart";
+part "../../../data/countries/pcn.data.dart";
+part "../../../data/countries/per.data.dart";
+part "../../../data/countries/phl.data.dart";
+part "../../../data/countries/plw.data.dart";
+part "../../../data/countries/png.data.dart";
+part "../../../data/countries/pol.data.dart";
+part "../../../data/countries/pri.data.dart";
+part "../../../data/countries/prk.data.dart";
+part "../../../data/countries/prt.data.dart";
+part "../../../data/countries/pry.data.dart";
+part "../../../data/countries/pse.data.dart";
+part "../../../data/countries/pyf.data.dart";
+part "../../../data/countries/qat.data.dart";
+part "../../../data/countries/reu.data.dart";
+part "../../../data/countries/rou.data.dart";
+part "../../../data/countries/rus.data.dart";
+part "../../../data/countries/rwa.data.dart";
+part "../../../data/countries/sau.data.dart";
+part "../../../data/countries/sdn.data.dart";
+part "../../../data/countries/sen.data.dart";
+part "../../../data/countries/sgp.data.dart";
+part "../../../data/countries/sgs.data.dart";
+part "../../../data/countries/shn.data.dart";
+part "../../../data/countries/sjm.data.dart";
+part "../../../data/countries/slb.data.dart";
+part "../../../data/countries/sle.data.dart";
+part "../../../data/countries/slv.data.dart";
+part "../../../data/countries/smr.data.dart";
+part "../../../data/countries/som.data.dart";
+part "../../../data/countries/spm.data.dart";
+part "../../../data/countries/srb.data.dart";
+part "../../../data/countries/ssd.data.dart";
+part "../../../data/countries/stp.data.dart";
+part "../../../data/countries/sur.data.dart";
+part "../../../data/countries/svk.data.dart";
+part "../../../data/countries/svn.data.dart";
+part "../../../data/countries/swe.data.dart";
+part "../../../data/countries/swz.data.dart";
+part "../../../data/countries/sxm.data.dart";
+part "../../../data/countries/syc.data.dart";
+part "../../../data/countries/syr.data.dart";
+part "../../../data/countries/tca.data.dart";
+part "../../../data/countries/tcd.data.dart";
+part "../../../data/countries/tgo.data.dart";
+part "../../../data/countries/tha.data.dart";
+part "../../../data/countries/tjk.data.dart";
+part "../../../data/countries/tkl.data.dart";
+part "../../../data/countries/tkm.data.dart";
+part "../../../data/countries/tls.data.dart";
+part "../../../data/countries/ton.data.dart";
+part "../../../data/countries/tto.data.dart";
+part "../../../data/countries/tun.data.dart";
+part "../../../data/countries/tur.data.dart";
+part "../../../data/countries/tuv.data.dart";
+part "../../../data/countries/twn.data.dart";
+part "../../../data/countries/tza.data.dart";
+part "../../../data/countries/uga.data.dart";
+part "../../../data/countries/ukr.data.dart";
+part "../../../data/countries/umi.data.dart";
+part "../../../data/countries/unk.data.dart";
+part "../../../data/countries/ury.data.dart";
+part "../../../data/countries/usa.data.dart";
+part "../../../data/countries/uzb.data.dart";
+part "../../../data/countries/vat.data.dart";
+part "../../../data/countries/vct.data.dart";
+part "../../../data/countries/ven.data.dart";
+part "../../../data/countries/vgb.data.dart";
+part "../../../data/countries/vir.data.dart";
+part "../../../data/countries/vnm.data.dart";
+part "../../../data/countries/vut.data.dart";
+part "../../../data/countries/wlf.data.dart";
+part "../../../data/countries/wsm.data.dart";
+part "../../../data/countries/yem.data.dart";
+part "../../../data/countries/zaf.data.dart";
+part "../../../data/countries/zmb.data.dart";
+part "../../../data/countries/zwe.data.dart";
+
+/// A sealed class that represents a country in the world.
 ///
 /// The [WorldCountry] class is a class that represents a country in the world.
 /// It extends the [Country] class, which represents a country. It consists of
@@ -24,7 +297,7 @@ part of "../country.dart";
 /// final unknown = WorldCountry.maybeFromValue<int>(42);
 /// print(unknown); // Output: null
 /// ```
-class WorldCountry extends Country
+sealed class WorldCountry extends Country
     implements
         IsoTranslated<TranslatedName, CountryName, BasicTypedLocale>,
         JsonEncodable<WorldCountry>,
@@ -39,7 +312,7 @@ class WorldCountry extends Country
   /// [areaMetric], [population], and [startOfWeek] parameters should not be
   /// `null` and must be valid values.
   /// {@endtemplate}
-  const WorldCountry({
+  const WorldCountry._({
     required super.name,
     required this.altSpellings,
     required this.areaMetric,
@@ -72,7 +345,6 @@ class WorldCountry extends Country
     List<Demonyms>? demonyms,
     List<NaturalLanguage>? languages,
     List<CountryName>? namesNative,
-    LocaleMapFunction<String> Function()? mapper,
   }) : assert(
          code.length == IsoStandardized.codeLength,
          """`code` should be exactly ${IsoStandardized.codeLength} characters long!""",
@@ -108,7 +380,7 @@ class WorldCountry extends Country
        _namesNative = namesNative,
        _demonyms = demonyms,
        _languages = languages,
-       _mapper = mapper;
+       _mapper = null;
 
   /// {@macro sealed_world.country_abw_constructor}
   const factory WorldCountry.abw() = _AbwFactory;
@@ -862,9 +1134,13 @@ class WorldCountry extends Country
 
   /// {@macro permissive_constructor}
   /// {@macro country_constructor}
-  const WorldCountry.custom({
-    required super.name,
-    required this.code,
+  const WorldCountry._permissive({
+    this.code = "",
+    super.name = const CountryName(
+      language: LangCustom(code: "und"),
+      common: " ",
+      official: " ",
+    ),
     this.altSpellings = const [],
     this.areaMetric = 1,
     this.codeNumeric = "",
@@ -895,8 +1171,14 @@ class WorldCountry extends Country
     List<Demonyms> demonyms = const [],
     List<NaturalLanguage>? languages,
     List<CountryName> namesNative = const [],
+
+    /// {@macro sealed_world.locale_mapper_callback}
     LocaleMapFunction<String> Function()? mapper,
-  }) : _namesNative = namesNative,
+  }) : assert(
+         code.length > 0 || codeNumeric.length > 0 || codeShort.length > 0,
+         "The `code` (or at least `codeShort`/`codeNumeric`) must be provided!",
+       ),
+       _namesNative = namesNative,
        _demonyms = demonyms,
        _languages = languages,
        _mapper = mapper;
@@ -1110,7 +1392,8 @@ class WorldCountry extends Country
   @override
   String toString({bool short = true}) => short
       ? super.toString()
-      : 'WorldCountry(name: const ${name.toString(short: short)}, tld: ${jsonEncode(tld)}, code: "$code", '
+      : "WorldCountry(name: const ${name.toString(short: short)}, "
+            'tld: ${jsonEncode(tld)}, code: "$code", '
             'codeNumeric: "$codeNumeric", codeShort: "$codeShort", '
             '''${cioc == null ? '' : 'cioc: "$cioc", '}independent: $independent, '''
             "unMember: $unMember, idd: const $idd, "
@@ -1120,7 +1403,7 @@ class WorldCountry extends Country
             "latLng: const $latLng, landlocked: $landlocked, "
             """${bordersCodes == null ? '' : 'bordersCodes: ${jsonEncode(bordersCodes)}, '}"""
             'areaMetric: $areaMetric, emoji: "$emoji", maps: const $maps, '
-            "population: $population,${gini == null ? ' ' : 'gini: const $gini, '}"
+            """population: $population,${gini == null ? ' ' : 'gini: const $gini, '}"""
             '${fifa == null ? '' : 'fifa: "$fifa", '}car: const $car, '
             """timezones: ${jsonEncode(timezones)}, hasCoatOfArms: $hasCoatOfArms, """
             "startOfWeek: $startOfWeek, "
@@ -1606,5 +1889,5 @@ class WorldCountry extends Country
   final List<NaturalLanguage>? _languages;
   final List<CountryName>? _namesNative;
   // ignore: prefer-correct-callback-field-name, follows delegate naming.
-  final LocaleMapFunction<String> Function()? _mapper; // TODO! Docs.
+  final LocaleMapFunction<String> Function()? _mapper;
 }

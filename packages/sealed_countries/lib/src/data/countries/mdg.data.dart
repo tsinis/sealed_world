@@ -4,7 +4,7 @@
 
 // ignore_for_file: prefer-digit-separators
 
-part of "../../model/country/country.dart";
+part of "../../model/country/submodels/world_country.dart";
 
 extension type const _MdgFactory._(CountryMdg _) implements CountryMdg {
   const _MdgFactory() : this._(const CountryMdg._());
@@ -20,7 +20,7 @@ class CountryMdg extends WorldCountry {
   const factory CountryMdg() = _MdgFactory;
 
   const CountryMdg._()
-    : super(
+    : super._(
         name: const CountryName(
           language: LangEng(),
           official: "Republic of Madagascar",

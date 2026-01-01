@@ -1,11 +1,11 @@
-part of "../../model/script/writing_system.dart";
+part of "../../model/script/submodels/script.dart";
 
 extension type const _BaliFactory._(ScriptBali _) implements ScriptBali {
   const _BaliFactory() : this._(const ScriptBali._());
 }
 
 /// A class that represents the Balinese script.
-class ScriptBali extends Script {
+final class ScriptBali extends Script {
   /// {@template sealed_world.script_bali_constructor}
   /// Creates a instance of [ScriptBali] (Balinese script).
   ///
@@ -14,7 +14,7 @@ class ScriptBali extends Script {
   const factory ScriptBali() = _BaliFactory;
 
   const ScriptBali._()
-    : super(
+    : super._(
         name: "Balinese",
         code: "Bali",
         codeNumeric: "360",

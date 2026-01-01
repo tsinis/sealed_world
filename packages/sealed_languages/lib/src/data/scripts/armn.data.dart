@@ -1,11 +1,11 @@
-part of "../../model/script/writing_system.dart";
+part of "../../model/script/submodels/script.dart";
 
 extension type const _ArmnFactory._(ScriptArmn _) implements ScriptArmn {
   const _ArmnFactory() : this._(const ScriptArmn._());
 }
 
 /// A class that represents the Armenian script.
-class ScriptArmn extends Script {
+final class ScriptArmn extends Script {
   /// {@template sealed_world.script_armn_constructor}
   /// Creates a instance of [ScriptArmn] (Armenian script).
   ///
@@ -14,7 +14,7 @@ class ScriptArmn extends Script {
   const factory ScriptArmn() = _ArmnFactory;
 
   const ScriptArmn._()
-    : super(
+    : super._(
         name: "Armenian",
         code: "Armn",
         codeNumeric: "230",

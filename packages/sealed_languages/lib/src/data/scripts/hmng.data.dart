@@ -1,11 +1,11 @@
-part of "../../model/script/writing_system.dart";
+part of "../../model/script/submodels/script.dart";
 
 extension type const _HmngFactory._(ScriptHmng _) implements ScriptHmng {
   const _HmngFactory() : this._(const ScriptHmng._());
 }
 
 /// A class that represents the Pahawh Hmong script.
-class ScriptHmng extends Script {
+final class ScriptHmng extends Script {
   /// {@template sealed_world.script_hmng_constructor}
   /// Creates a instance of [ScriptHmng] (Pahawh Hmong script).
   ///
@@ -14,7 +14,7 @@ class ScriptHmng extends Script {
   const factory ScriptHmng() = _HmngFactory;
 
   const ScriptHmng._()
-    : super(
+    : super._(
         name: "Pahawh Hmong",
         code: "Hmng",
         codeNumeric: "450",

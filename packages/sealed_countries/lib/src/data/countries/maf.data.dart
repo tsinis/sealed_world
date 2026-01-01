@@ -4,7 +4,7 @@
 
 // ignore_for_file: prefer-digit-separators
 
-part of "../../model/country/country.dart";
+part of "../../model/country/submodels/world_country.dart";
 
 extension type const _MafFactory._(CountryMaf _) implements CountryMaf {
   const _MafFactory() : this._(const CountryMaf._());
@@ -20,7 +20,7 @@ class CountryMaf extends WorldCountry {
   const factory CountryMaf() = _MafFactory;
 
   const CountryMaf._()
-    : super(
+    : super._(
         name: const CountryName(
           language: LangEng(),
           official: "Collectivity of Saint Martin",

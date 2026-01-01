@@ -1,11 +1,11 @@
-part of "../../model/language/language.dart";
+part of "../../model/language/submodels/natural_language.dart";
 
 extension type const _WolFactory._(LangWol _) implements LangWol {
   const _WolFactory() : this._(const LangWol._());
 }
 
 /// A class that represents the Wolof language.
-class LangWol extends NaturalLanguage {
+final class LangWol extends NaturalLanguage {
   /// {@template sealed_world.language_wol_constructor}
   /// Creates a instance of [LangWol] (Wolof language).
   ///
@@ -14,7 +14,7 @@ class LangWol extends NaturalLanguage {
   const factory LangWol() = _WolFactory;
 
   const LangWol._()
-    : super(
+    : super._(
         name: "Wolof",
         code: "WOL",
         codeShort: "WO",

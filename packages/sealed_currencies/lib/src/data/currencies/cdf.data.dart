@@ -1,11 +1,11 @@
-part of "../../model/currency/currency.dart";
+part of "../../model/currency/submodels/fiat_currency.dart";
 
 extension type const _CdfFactory._(FiatCdf _) implements FiatCdf {
   const _CdfFactory() : this._(const FiatCdf._());
 }
 
 /// A class that represents the Congolese Franc currency.
-class FiatCdf extends FiatCurrency {
+final class FiatCdf extends FiatCurrency {
   /// {@template sealed_world.currency_cdf_constructor}
   /// Creates a instance of [FiatCdf] (Congolese Franc currency).
   ///

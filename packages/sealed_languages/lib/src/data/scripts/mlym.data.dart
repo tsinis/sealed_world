@@ -1,11 +1,11 @@
-part of "../../model/script/writing_system.dart";
+part of "../../model/script/submodels/script.dart";
 
 extension type const _MlymFactory._(ScriptMlym _) implements ScriptMlym {
   const _MlymFactory() : this._(const ScriptMlym._());
 }
 
 /// A class that represents the Malayalam script.
-class ScriptMlym extends Script {
+final class ScriptMlym extends Script {
   /// {@template sealed_world.script_mlym_constructor}
   /// Creates a instance of [ScriptMlym] (Malayalam script).
   ///
@@ -14,7 +14,7 @@ class ScriptMlym extends Script {
   const factory ScriptMlym() = _MlymFactory;
 
   const ScriptMlym._()
-    : super(
+    : super._(
         name: "Malayalam",
         code: "Mlym",
         codeNumeric: "347",

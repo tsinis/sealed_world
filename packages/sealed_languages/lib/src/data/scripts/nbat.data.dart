@@ -1,11 +1,11 @@
-part of "../../model/script/writing_system.dart";
+part of "../../model/script/submodels/script.dart";
 
 extension type const _NbatFactory._(ScriptNbat _) implements ScriptNbat {
   const _NbatFactory() : this._(const ScriptNbat._());
 }
 
 /// A class that represents the Nabataean script.
-class ScriptNbat extends Script {
+final class ScriptNbat extends Script {
   /// {@template sealed_world.script_nbat_constructor}
   /// Creates a instance of [ScriptNbat] (Nabataean script).
   ///
@@ -14,7 +14,7 @@ class ScriptNbat extends Script {
   const factory ScriptNbat() = _NbatFactory;
 
   const ScriptNbat._()
-    : super(
+    : super._(
         name: "Nabataean",
         code: "Nbat",
         codeNumeric: "159",

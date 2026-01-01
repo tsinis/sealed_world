@@ -1,11 +1,11 @@
-part of "../../model/language/language.dart";
+part of "../../model/language/submodels/natural_language.dart";
 
 extension type const _IboFactory._(LangIbo _) implements LangIbo {
   const _IboFactory() : this._(const LangIbo._());
 }
 
 /// A class that represents the Igbo language.
-class LangIbo extends NaturalLanguage {
+final class LangIbo extends NaturalLanguage {
   /// {@template sealed_world.language_ibo_constructor}
   /// Creates a instance of [LangIbo] (Igbo language).
   ///
@@ -14,7 +14,7 @@ class LangIbo extends NaturalLanguage {
   const factory LangIbo() = _IboFactory;
 
   const LangIbo._()
-    : super(
+    : super._(
         name: "Igbo",
         code: "IBO",
         codeShort: "IG",

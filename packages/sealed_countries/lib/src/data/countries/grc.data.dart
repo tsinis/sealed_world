@@ -4,7 +4,7 @@
 
 // ignore_for_file: prefer-digit-separators
 
-part of "../../model/country/country.dart";
+part of "../../model/country/submodels/world_country.dart";
 
 extension type const _GrcFactory._(CountryGrc _) implements CountryGrc {
   const _GrcFactory() : this._(const CountryGrc._());
@@ -20,7 +20,7 @@ class CountryGrc extends WorldCountry {
   const factory CountryGrc() = _GrcFactory;
 
   const CountryGrc._()
-    : super(
+    : super._(
         name: const CountryName(
           language: LangEng(),
           official: "Hellenic Republic",

@@ -1,11 +1,11 @@
-part of "../../model/script/writing_system.dart";
+part of "../../model/script/submodels/script.dart";
 
 extension type const _ShrdFactory._(ScriptShrd _) implements ScriptShrd {
   const _ShrdFactory() : this._(const ScriptShrd._());
 }
 
 /// A class that represents the Sharada, Śāradā script.
-class ScriptShrd extends Script {
+final class ScriptShrd extends Script {
   /// {@template sealed_world.script_shrd_constructor}
   /// Creates a instance of [ScriptShrd] (Sharada, Śāradā script).
   ///
@@ -14,7 +14,7 @@ class ScriptShrd extends Script {
   const factory ScriptShrd() = _ShrdFactory;
 
   const ScriptShrd._()
-    : super(
+    : super._(
         name: "Sharada, Śāradā",
         code: "Shrd",
         codeNumeric: "319",

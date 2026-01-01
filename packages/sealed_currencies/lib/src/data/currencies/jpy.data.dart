@@ -1,11 +1,11 @@
-part of "../../model/currency/currency.dart";
+part of "../../model/currency/submodels/fiat_currency.dart";
 
 extension type const _JpyFactory._(FiatJpy _) implements FiatJpy {
   const _JpyFactory() : this._(const FiatJpy._());
 }
 
 /// A class that represents the Japanese Yen currency.
-class FiatJpy extends FiatCurrency {
+final class FiatJpy extends FiatCurrency {
   /// {@template sealed_world.currency_jpy_constructor}
   /// Creates a instance of [FiatJpy] (Japanese Yen currency).
   ///

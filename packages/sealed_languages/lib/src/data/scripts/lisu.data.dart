@@ -1,11 +1,11 @@
-part of "../../model/script/writing_system.dart";
+part of "../../model/script/submodels/script.dart";
 
 extension type const _LisuFactory._(ScriptLisu _) implements ScriptLisu {
   const _LisuFactory() : this._(const ScriptLisu._());
 }
 
 /// A class that represents the Lisu (Fraser) script.
-class ScriptLisu extends Script {
+final class ScriptLisu extends Script {
   /// {@template sealed_world.script_lisu_constructor}
   /// Creates a instance of [ScriptLisu] (Lisu (Fraser) script).
   ///
@@ -14,7 +14,7 @@ class ScriptLisu extends Script {
   const factory ScriptLisu() = _LisuFactory;
 
   const ScriptLisu._()
-    : super(
+    : super._(
         name: "Lisu (Fraser)",
         code: "Lisu",
         codeNumeric: "399",

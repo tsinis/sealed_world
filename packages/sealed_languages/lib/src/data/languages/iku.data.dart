@@ -1,11 +1,11 @@
-part of "../../model/language/language.dart";
+part of "../../model/language/submodels/natural_language.dart";
 
 extension type const _IkuFactory._(LangIku _) implements LangIku {
   const _IkuFactory() : this._(const LangIku._());
 }
 
 /// A class that represents the Inuktitut language.
-class LangIku extends NaturalLanguage {
+final class LangIku extends NaturalLanguage {
   /// {@template sealed_world.language_iku_constructor}
   /// Creates a instance of [LangIku] (Inuktitut language).
   ///
@@ -14,7 +14,7 @@ class LangIku extends NaturalLanguage {
   const factory LangIku() = _IkuFactory;
 
   const LangIku._()
-    : super(
+    : super._(
         name: "Inuktitut",
         code: "IKU",
         codeShort: "IU",

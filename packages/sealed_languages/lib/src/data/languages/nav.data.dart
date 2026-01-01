@@ -1,11 +1,11 @@
-part of "../../model/language/language.dart";
+part of "../../model/language/submodels/natural_language.dart";
 
 extension type const _NavFactory._(LangNav _) implements LangNav {
   const _NavFactory() : this._(const LangNav._());
 }
 
 /// A class that represents the Navajo (Navaho) language.
-class LangNav extends NaturalLanguage {
+final class LangNav extends NaturalLanguage {
   /// {@template sealed_world.language_nav_constructor}
   /// Creates a instance of [LangNav] (Navajo (Navaho) language).
   ///
@@ -14,7 +14,7 @@ class LangNav extends NaturalLanguage {
   const factory LangNav() = _NavFactory;
 
   const LangNav._()
-    : super(
+    : super._(
         name: "Navajo (Navaho)",
         code: "NAV",
         codeShort: "NV",

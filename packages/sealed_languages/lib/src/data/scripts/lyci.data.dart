@@ -1,11 +1,11 @@
-part of "../../model/script/writing_system.dart";
+part of "../../model/script/submodels/script.dart";
 
 extension type const _LyciFactory._(ScriptLyci _) implements ScriptLyci {
   const _LyciFactory() : this._(const ScriptLyci._());
 }
 
 /// A class that represents the Lycian script.
-class ScriptLyci extends Script {
+final class ScriptLyci extends Script {
   /// {@template sealed_world.script_lyci_constructor}
   /// Creates a instance of [ScriptLyci] (Lycian script).
   ///
@@ -14,7 +14,7 @@ class ScriptLyci extends Script {
   const factory ScriptLyci() = _LyciFactory;
 
   const ScriptLyci._()
-    : super(
+    : super._(
         name: "Lycian",
         code: "Lyci",
         codeNumeric: "202",

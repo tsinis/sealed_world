@@ -4,6 +4,8 @@
 // https://github.com/umpirsky/language-list project (from Saša Stamenković).
 // Both projects are licensed under the MIT License.
 
+// ignore_for_file: avoid-collection-mutating-methods
+
 /// Provides language translations for different locales.
 library l10n_languages;
 
@@ -552,12 +554,19 @@ class LanguagesLocaleMapper extends IsoLocaleMapper<IsoLocaleMapper<String>> {
     };
   }
 
+  static final _langSubtagRegExp = RegExp(r"^[a-z]{2,3}$|^[a-z]{5,8}$");
+
   static Set<String> _localesSet(
     String locale, {
     required bool useLanguageFallback,
-  }) =>
-      // ignore: avoid-substring, locale should has no emoji.
-      {locale, if (useLanguageFallback) locale.substring(0, 2)};
+  }) => {locale, if (useLanguageFallback) _extractLanguageCode(locale)};
+
+  static String _extractLanguageCode(String locale) {
+    if (locale.isEmpty) return locale;
+    final lang = locale.toLowerCase().split(RegExp("[-_]")).firstOrNull;
+
+    return lang != null && _langSubtagRegExp.hasMatch(lang) ? lang : locale;
+  }
 
   static MapEntry<LocaleKey, String> _mapSingle(
     String Function(LocaleKey isoLocale, String l10n)? formatter,

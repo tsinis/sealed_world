@@ -1,11 +1,11 @@
-part of "../../model/currency/currency.dart";
+part of "../../model/currency/submodels/fiat_currency.dart";
 
 extension type const _FjdFactory._(FiatFjd _) implements FiatFjd {
   const _FjdFactory() : this._(const FiatFjd._());
 }
 
 /// A class that represents the Fijian Dollar currency.
-class FiatFjd extends FiatCurrency {
+final class FiatFjd extends FiatCurrency {
   /// {@template sealed_world.currency_fjd_constructor}
   /// Creates a instance of [FiatFjd] (Fijian Dollar currency).
   ///

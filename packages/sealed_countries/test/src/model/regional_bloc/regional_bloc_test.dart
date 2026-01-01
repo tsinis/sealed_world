@@ -1,7 +1,7 @@
 import "dart:convert";
 
 import "package:_sealed_world_tests/sealed_world_tests.dart";
-import "package:sealed_countries/src/model/regional_bloc/world_bloc.dart";
+import "package:sealed_countries/src/model/regional_bloc/regional_bloc.dart";
 import "package:test/test.dart";
 
 import "../../test_data.dart";
@@ -32,6 +32,11 @@ void main() => group("$RegionalBloc", () {
         () => expect(RegionalBloc.fromAcronym(element.acronym), element),
       );
     }
+
+    test(
+      "throws when acronym missing in default map",
+      () => expect(() => RegionalBloc.fromAcronym("XYZ"), throwsStateError),
+    );
 
     test(
       "with proper acronym",
@@ -123,6 +128,28 @@ void main() => group("$RegionalBloc", () {
     );
   });
 
+  group("sealed switch expressions", () {
+    // ignore: avoid-local-functions, it's a test.
+    String? describe(RegionalBloc bloc) => switch (bloc) {
+      BlocEU() => "eu",
+      BlocAU() => "au",
+      BlocCustom(:final acronym) when acronym.startsWith("X") =>
+        "custom-$acronym",
+      // ignore: avoid-wildcard-cases-with-sealed-classes, it's a test.
+      _ => null,
+    };
+
+    test("matches generated subtypes", () {
+      expect(describe(const BlocEU()), "eu");
+      expect(describe(const BlocAU()), "au");
+    });
+
+    test("matches BlocCustom", () {
+      const custom = BlocCustom(acronym: "XU");
+      expect(describe(custom), "custom-XU");
+    });
+  });
+
   test("toString", () {
     final withOtherAcronyms = RegionalBloc.list.firstWhere(
       (bloc) => bloc.otherAcronyms != null,
@@ -142,12 +169,12 @@ void main() => group("$RegionalBloc", () {
   group("asserts", () {
     assertTest(
       "acronym length",
-      () => RegionalBloc(acronym: TestData.emptyString, name: TestData.string),
+      () => BlocCustom(acronym: TestData.emptyString, name: TestData.string),
     );
 
     assertTest(
       "name length",
-      () => RegionalBloc(acronym: TestData.string, name: TestData.emptyString),
+      () => BlocCustom(acronym: TestData.string, name: TestData.emptyString),
     );
   });
 

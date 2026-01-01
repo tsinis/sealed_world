@@ -4,7 +4,7 @@
 
 // ignore_for_file: prefer-digit-separators
 
-part of "../../model/country/country.dart";
+part of "../../model/country/submodels/world_country.dart";
 
 extension type const _PyfFactory._(CountryPyf _) implements CountryPyf {
   const _PyfFactory() : this._(const CountryPyf._());
@@ -20,7 +20,7 @@ class CountryPyf extends WorldCountry {
   const factory CountryPyf() = _PyfFactory;
 
   const CountryPyf._()
-    : super(
+    : super._(
         name: const CountryName(
           language: LangEng(),
           official: "French Polynesia",

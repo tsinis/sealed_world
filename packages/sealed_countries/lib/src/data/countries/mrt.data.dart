@@ -4,7 +4,7 @@
 
 // ignore_for_file: prefer-digit-separators
 
-part of "../../model/country/country.dart";
+part of "../../model/country/submodels/world_country.dart";
 
 extension type const _MrtFactory._(CountryMrt _) implements CountryMrt {
   const _MrtFactory() : this._(const CountryMrt._());
@@ -20,7 +20,7 @@ class CountryMrt extends WorldCountry {
   const factory CountryMrt() = _MrtFactory;
 
   const CountryMrt._()
-    : super(
+    : super._(
         name: const CountryName(
           language: LangEng(),
           official: "Islamic Republic of Mauritania",

@@ -1,11 +1,11 @@
-part of "../../model/script/writing_system.dart";
+part of "../../model/script/submodels/script.dart";
 
 extension type const _MakaFactory._(ScriptMaka _) implements ScriptMaka {
   const _MakaFactory() : this._(const ScriptMaka._());
 }
 
 /// A class that represents the Makasar script.
-class ScriptMaka extends Script {
+final class ScriptMaka extends Script {
   /// {@template sealed_world.script_maka_constructor}
   /// Creates a instance of [ScriptMaka] (Makasar script).
   ///
@@ -14,7 +14,7 @@ class ScriptMaka extends Script {
   const factory ScriptMaka() = _MakaFactory;
 
   const ScriptMaka._()
-    : super(
+    : super._(
         name: "Makasar",
         code: "Maka",
         codeNumeric: "366",

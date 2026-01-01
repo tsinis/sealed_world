@@ -1,11 +1,11 @@
-part of "../../model/language/language.dart";
+part of "../../model/language/submodels/natural_language.dart";
 
 extension type const _MsaFactory._(LangMsa _) implements LangMsa {
   const _MsaFactory() : this._(const LangMsa._());
 }
 
 /// A class that represents the Malay language.
-class LangMsa extends NaturalLanguage {
+final class LangMsa extends NaturalLanguage {
   /// {@template sealed_world.language_msa_constructor}
   /// Creates a instance of [LangMsa] (Malay language).
   ///
@@ -14,7 +14,7 @@ class LangMsa extends NaturalLanguage {
   const factory LangMsa() = _MsaFactory;
 
   const LangMsa._()
-    : super(
+    : super._(
         name: "Malay",
         code: "MSA",
         codeShort: "MS",

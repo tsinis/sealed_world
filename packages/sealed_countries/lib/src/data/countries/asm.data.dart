@@ -4,7 +4,7 @@
 
 // ignore_for_file: prefer-digit-separators
 
-part of "../../model/country/country.dart";
+part of "../../model/country/submodels/world_country.dart";
 
 extension type const _AsmFactory._(CountryAsm _) implements CountryAsm {
   const _AsmFactory() : this._(const CountryAsm._());
@@ -20,7 +20,7 @@ class CountryAsm extends WorldCountry {
   const factory CountryAsm() = _AsmFactory;
 
   const CountryAsm._()
-    : super(
+    : super._(
         name: const CountryName(
           language: LangEng(),
           official: "American Samoa",

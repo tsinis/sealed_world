@@ -1,11 +1,11 @@
-part of "../../model/language/language.dart";
+part of "../../model/language/submodels/natural_language.dart";
 
 extension type const _ItaFactory._(LangIta _) implements LangIta {
   const _ItaFactory() : this._(const LangIta._());
 }
 
 /// A class that represents the Italian language.
-class LangIta extends NaturalLanguage {
+final class LangIta extends NaturalLanguage {
   /// {@template sealed_world.language_ita_constructor}
   /// Creates a instance of [LangIta] (Italian language).
   ///
@@ -14,7 +14,7 @@ class LangIta extends NaturalLanguage {
   const factory LangIta() = _ItaFactory;
 
   const LangIta._()
-    : super(
+    : super._(
         name: "Italian",
         code: "ITA",
         codeShort: "IT",

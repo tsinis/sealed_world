@@ -1,11 +1,11 @@
-part of "../../model/script/writing_system.dart";
+part of "../../model/script/submodels/script.dart";
 
 extension type const _KitsFactory._(ScriptKits _) implements ScriptKits {
   const _KitsFactory() : this._(const ScriptKits._());
 }
 
 /// A class that represents the Khitan small script script.
-class ScriptKits extends Script {
+final class ScriptKits extends Script {
   /// {@template sealed_world.script_kits_constructor}
   /// Creates a instance of [ScriptKits] (Khitan small script script).
   ///
@@ -14,7 +14,7 @@ class ScriptKits extends Script {
   const factory ScriptKits() = _KitsFactory;
 
   const ScriptKits._()
-    : super(
+    : super._(
         name: "Khitan small script",
         code: "Kits",
         codeNumeric: "288",

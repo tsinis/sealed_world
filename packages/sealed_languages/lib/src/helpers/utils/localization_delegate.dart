@@ -1,7 +1,7 @@
 import "../../interfaces/basic_localization_delegate.dart";
 import "../../model/core/basic_locale.dart";
-import "../../model/language/language.dart";
-import "../../model/script/writing_system.dart";
+import "../../model/language/submodels/natural_language.dart";
+import "../../model/script/submodels/script.dart";
 import "../../model/translated_name.dart";
 import "../../typedefs/typedefs.dart";
 import "../extensions/basic_locale_extension.dart";
@@ -17,8 +17,9 @@ class LocalizationDelegate
   ///
   /// Parameters are passed directly to [BasicLocalizationDelegate]:
   /// - [languages]: Optional collection of supported languages.
-  /// - [mapper]: Optional function that returns locale mapping function.
   /// - [scripts]: Optional collection of supported scripts.
+  /// - [mapper]:
+  /// {@macro sealed_world.locale_mapper_callback}
   const LocalizationDelegate({super.languages, super.mapper, super.scripts});
 
   @override
@@ -35,6 +36,8 @@ class LocalizationDelegate
   @override // coverage:ignore-line
   LocalizationDelegate copyWith({
     Iterable<NaturalLanguage>? languages,
+
+    /// {@macro sealed_world.locale_mapper_callback}
     LocaleMapFunction<String> Function()? mapper,
     Iterable<Script>? scripts,
   }) => LocalizationDelegate(

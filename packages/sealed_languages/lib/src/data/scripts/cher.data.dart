@@ -1,11 +1,11 @@
-part of "../../model/script/writing_system.dart";
+part of "../../model/script/submodels/script.dart";
 
 extension type const _CherFactory._(ScriptCher _) implements ScriptCher {
   const _CherFactory() : this._(const ScriptCher._());
 }
 
 /// A class that represents the Cherokee script.
-class ScriptCher extends Script {
+final class ScriptCher extends Script {
   /// {@template sealed_world.script_cher_constructor}
   /// Creates a instance of [ScriptCher] (Cherokee script).
   ///
@@ -14,7 +14,7 @@ class ScriptCher extends Script {
   const factory ScriptCher() = _CherFactory;
 
   const ScriptCher._()
-    : super(
+    : super._(
         name: "Cherokee",
         code: "Cher",
         codeNumeric: "445",

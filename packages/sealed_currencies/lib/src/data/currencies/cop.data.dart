@@ -1,11 +1,11 @@
-part of "../../model/currency/currency.dart";
+part of "../../model/currency/submodels/fiat_currency.dart";
 
 extension type const _CopFactory._(FiatCop _) implements FiatCop {
   const _CopFactory() : this._(const FiatCop._());
 }
 
 /// A class that represents the Colombian Peso currency.
-class FiatCop extends FiatCurrency {
+final class FiatCop extends FiatCurrency {
   /// {@template sealed_world.currency_cop_constructor}
   /// Creates a instance of [FiatCop] (Colombian Peso currency).
   ///

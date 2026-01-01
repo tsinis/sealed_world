@@ -1,6 +1,6 @@
 import "../../model/core/basic_locale.dart";
-import "../../model/language/language.dart";
-import "../../model/script/writing_system.dart";
+import "../../model/language/submodels/natural_language.dart";
+import "../../model/script/submodels/script.dart";
 import "../../model/translated_name.dart";
 import "../../typedefs/typedefs.dart";
 
@@ -41,20 +41,18 @@ extension TranslatedNameExtension on TranslatedName {
     name: map["name"].toString(),
     fullName: map["fullName"]?.toString(),
     countryCode: map["countryCode"]?.toString(),
-    script: map["script"] is String
-        ? Script.fromCode(map["script"].toString())
-        : null,
+    script: Script.maybeFromCode(map["script"]?.toString()),
   );
 
   /// {@template to_map_method}
   /// Converts this object object to a JSON like map.
   /// {@endtemplate}
-  Map<String, String?> toMap() => {
-    "countryCode": countryCode,
-    "fullName": fullName,
+  Map<String, String> toMap() => {
+    "countryCode": ?countryCode,
+    "fullName": ?fullName,
     "language": language.code,
     "name": name,
-    "script": script?.code,
+    "script": ?script?.code,
   };
 
   /// Just an alias for the [name] property.

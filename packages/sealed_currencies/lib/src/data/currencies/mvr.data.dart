@@ -1,11 +1,11 @@
-part of "../../model/currency/currency.dart";
+part of "../../model/currency/submodels/fiat_currency.dart";
 
 extension type const _MvrFactory._(FiatMvr _) implements FiatMvr {
   const _MvrFactory() : this._(const FiatMvr._());
 }
 
 /// A class that represents the Maldivian Rufiyaa currency.
-class FiatMvr extends FiatCurrency {
+final class FiatMvr extends FiatCurrency {
   /// {@template sealed_world.currency_mvr_constructor}
   /// Creates a instance of [FiatMvr] (Maldivian Rufiyaa currency).
   ///

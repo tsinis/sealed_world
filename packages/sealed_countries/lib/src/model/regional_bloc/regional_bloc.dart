@@ -1,4 +1,8 @@
-part of "world_bloc.dart";
+import "package:sealed_currencies/sealed_currencies.dart";
+
+import "world_bloc.dart";
+
+part "../../data/regional_bloc/regional_bloc.data.dart";
 
 /// The [RegionalBloc] class is an non-abstract class that represents a regional
 /// bloc. It consists of a [String] values that represents the name and acronym
@@ -15,11 +19,11 @@ part of "world_bloc.dart";
 /// final bloc = SomeBloc(name: "Some Bloc", acronym: "SB");
 /// print(bloc.name); // Prints: "Some Bloc"
 /// ```
-class RegionalBloc extends WorldBloc {
+sealed class RegionalBloc extends WorldBloc {
   /// Creates a new [RegionalBloc] object with the given name.
   ///
   /// The [name] and [acronym] parameters are required and must not be empty.
-  const RegionalBloc({
+  const RegionalBloc._({
     required String super.acronym,
     required super.name,
     this.otherAcronyms,
@@ -42,12 +46,18 @@ class RegionalBloc extends WorldBloc {
     // ignore: avoid-non-empty-constructor-bodies, more clear for factory methods.
   ]) {
     final string = IsoObject.maybe(acronym)?.toUpperCaseCode();
-    if (blocs == null) return map[string]!;
+    final regionalBlocs = blocs ?? list;
 
-    return list.firstWhere((bloc) => bloc.acronym == string);
+    return regionalBlocs.firstWhere(
+      (bloc) => bloc.acronym == string,
+      orElse: () => throw StateError(
+        'RegionalBloc with acronym "$acronym" '
+        "does not exist in the $regionalBlocs!",
+      ),
+    );
   }
 
-  /// Creates a new [RegionalBloc] object from its name.
+  /// Creates a new [RegionalBloc] object from its [name].
   // ignore: avoid-non-empty-constructor-bodies, false positive, it's factory...
   factory RegionalBloc.fromName(String name) {
     final upperCaseName = IsoObject(name).toUpperCaseCode();
@@ -62,8 +72,7 @@ class RegionalBloc extends WorldBloc {
   final List<String>? otherNames;
 
   @override
-  // ignore: avoid-non-null-assertion, field is non-nullable in this class.
-  String get acronym => super.acronym!;
+  String get acronym => super.acronym ?? "";
 
   @override
   String toString({bool short = true}) => short
@@ -127,7 +136,21 @@ class RegionalBloc extends WorldBloc {
   }
 
   /// A map of all the regional blocs with their corresponding acronyms.
-  static const map = UpperCaseMap<RegionalBloc>(regionalBlocAcronymMap);
+  static const map = UpperCaseMap<RegionalBloc>({
+    "AL": BlocAL(),
+    "ASEAN": BlocASEAN(),
+    "AU": BlocAU(),
+    "CAIS": BlocCAIS(),
+    "CARICOM": BlocCARICOM(),
+    "CEFTA": BlocCEFTA(),
+    "EEU": BlocEEU(),
+    "EFTA": BlocEFTA(),
+    "EU": BlocEU(),
+    "NAFTA": BlocNAFTA(),
+    "PA": BlocPA(),
+    "SAARC": BlocSAARC(),
+    "USAN": BlocUSAN(),
+  });
 
   /// A list of all the regional blocs currently
   /// supported by the [RegionalBloc] class.

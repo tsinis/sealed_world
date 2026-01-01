@@ -1,11 +1,11 @@
-part of "../../model/currency/currency.dart";
+part of "../../model/currency/submodels/fiat_currency.dart";
 
 extension type const _VndFactory._(FiatVnd _) implements FiatVnd {
   const _VndFactory() : this._(const FiatVnd._());
 }
 
 /// A class that represents the Vietnamese Dong currency.
-class FiatVnd extends FiatCurrency {
+final class FiatVnd extends FiatCurrency {
   /// {@template sealed_world.currency_vnd_constructor}
   /// Creates a instance of [FiatVnd] (Vietnamese Dong currency).
   ///

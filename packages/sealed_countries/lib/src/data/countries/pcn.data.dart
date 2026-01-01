@@ -4,7 +4,7 @@
 
 // ignore_for_file: prefer-digit-separators
 
-part of "../../model/country/country.dart";
+part of "../../model/country/submodels/world_country.dart";
 
 extension type const _PcnFactory._(CountryPcn _) implements CountryPcn {
   const _PcnFactory() : this._(const CountryPcn._());
@@ -20,7 +20,7 @@ class CountryPcn extends WorldCountry {
   const factory CountryPcn() = _PcnFactory;
 
   const CountryPcn._()
-    : super(
+    : super._(
         name: const CountryName(
           language: LangEng(),
           official: "Pitcairn Group of Islands",

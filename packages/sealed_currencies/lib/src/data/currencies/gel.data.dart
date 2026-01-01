@@ -1,11 +1,11 @@
-part of "../../model/currency/currency.dart";
+part of "../../model/currency/submodels/fiat_currency.dart";
 
 extension type const _GelFactory._(FiatGel _) implements FiatGel {
   const _GelFactory() : this._(const FiatGel._());
 }
 
 /// A class that represents the Georgian Lari currency.
-class FiatGel extends FiatCurrency {
+final class FiatGel extends FiatCurrency {
   /// {@template sealed_world.currency_gel_constructor}
   /// Creates a instance of [FiatGel] (Georgian Lari currency).
   ///

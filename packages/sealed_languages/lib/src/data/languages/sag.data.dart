@@ -1,11 +1,11 @@
-part of "../../model/language/language.dart";
+part of "../../model/language/submodels/natural_language.dart";
 
 extension type const _SagFactory._(LangSag _) implements LangSag {
   const _SagFactory() : this._(const LangSag._());
 }
 
 /// A class that represents the Sango language.
-class LangSag extends NaturalLanguage {
+final class LangSag extends NaturalLanguage {
   /// {@template sealed_world.language_sag_constructor}
   /// Creates a instance of [LangSag] (Sango language).
   ///
@@ -14,7 +14,7 @@ class LangSag extends NaturalLanguage {
   const factory LangSag() = _SagFactory;
 
   const LangSag._()
-    : super(
+    : super._(
         name: "Sango",
         code: "SAG",
         codeShort: "SG",

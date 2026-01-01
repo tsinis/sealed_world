@@ -1,4 +1,4 @@
-import "../../model/script/writing_system.dart";
+import "../../model/script/submodels/script.dart";
 
 /// Provides extension getters for [Script] class.
 /// {@template getters_extension}

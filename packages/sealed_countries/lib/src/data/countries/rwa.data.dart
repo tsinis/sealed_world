@@ -4,7 +4,7 @@
 
 // ignore_for_file: prefer-digit-separators
 
-part of "../../model/country/country.dart";
+part of "../../model/country/submodels/world_country.dart";
 
 extension type const _RwaFactory._(CountryRwa _) implements CountryRwa {
   const _RwaFactory() : this._(const CountryRwa._());
@@ -20,7 +20,7 @@ class CountryRwa extends WorldCountry {
   const factory CountryRwa() = _RwaFactory;
 
   const CountryRwa._()
-    : super(
+    : super._(
         name: const CountryName(
           language: LangEng(),
           official: "Republic of Rwanda",

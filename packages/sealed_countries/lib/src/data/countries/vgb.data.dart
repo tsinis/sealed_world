@@ -4,7 +4,7 @@
 
 // ignore_for_file: prefer-digit-separators
 
-part of "../../model/country/country.dart";
+part of "../../model/country/submodels/world_country.dart";
 
 extension type const _VgbFactory._(CountryVgb _) implements CountryVgb {
   const _VgbFactory() : this._(const CountryVgb._());
@@ -20,7 +20,7 @@ class CountryVgb extends WorldCountry {
   const factory CountryVgb() = _VgbFactory;
 
   const CountryVgb._()
-    : super(
+    : super._(
         name: const CountryName(
           language: LangEng(),
           official: "Virgin Islands",

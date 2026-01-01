@@ -1,11 +1,11 @@
-part of "../../model/language/language.dart";
+part of "../../model/language/submodels/natural_language.dart";
 
 extension type const _VolFactory._(LangVol _) implements LangVol {
   const _VolFactory() : this._(const LangVol._());
 }
 
 /// A class that represents the Volapük language.
-class LangVol extends NaturalLanguage {
+final class LangVol extends NaturalLanguage {
   /// {@template sealed_world.language_vol_constructor}
   /// Creates a instance of [LangVol] (Volapük language).
   ///
@@ -14,7 +14,7 @@ class LangVol extends NaturalLanguage {
   const factory LangVol() = _VolFactory;
 
   const LangVol._()
-    : super(
+    : super._(
         name: "Volapük",
         code: "VOL",
         codeShort: "VO",

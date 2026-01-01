@@ -1,11 +1,11 @@
-part of "../../model/script/writing_system.dart";
+part of "../../model/script/submodels/script.dart";
 
 extension type const _LimbFactory._(ScriptLimb _) implements ScriptLimb {
   const _LimbFactory() : this._(const ScriptLimb._());
 }
 
 /// A class that represents the Limbu script.
-class ScriptLimb extends Script {
+final class ScriptLimb extends Script {
   /// {@template sealed_world.script_limb_constructor}
   /// Creates a instance of [ScriptLimb] (Limbu script).
   ///
@@ -14,7 +14,7 @@ class ScriptLimb extends Script {
   const factory ScriptLimb() = _LimbFactory;
 
   const ScriptLimb._()
-    : super(
+    : super._(
         name: "Limbu",
         code: "Limb",
         codeNumeric: "336",

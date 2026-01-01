@@ -1,11 +1,11 @@
-part of "../../model/script/writing_system.dart";
+part of "../../model/script/submodels/script.dart";
 
 extension type const _CirtFactory._(ScriptCirt _) implements ScriptCirt {
   const _CirtFactory() : this._(const ScriptCirt._());
 }
 
 /// A class that represents the Cirth script.
-class ScriptCirt extends Script {
+final class ScriptCirt extends Script {
   /// {@template sealed_world.script_cirt_constructor}
   /// Creates a instance of [ScriptCirt] (Cirth script).
   ///
@@ -14,7 +14,7 @@ class ScriptCirt extends Script {
   const factory ScriptCirt() = _CirtFactory;
 
   const ScriptCirt._()
-    : super(
+    : super._(
         name: "Cirth",
         code: "Cirt",
         codeNumeric: "291",

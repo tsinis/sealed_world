@@ -280,7 +280,7 @@ class EsCountriesL10N extends IsoLocaleMapper<String> {
       "LVA+": "República de Letonia",
       "MAC": "Macao",
       "MAC+":
-          "Región Administrativa Especial de Macao de la República Popular China",
+          """Región Administrativa Especial de Macao de la República Popular China""",
       "MAF": "San Martín",
       "MAF+": "San Martín",
       "MAR": "Marruecos",

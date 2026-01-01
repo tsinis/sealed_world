@@ -1,11 +1,11 @@
-part of "../../model/currency/currency.dart";
+part of "../../model/currency/submodels/fiat_currency.dart";
 
 extension type const _NgnFactory._(FiatNgn _) implements FiatNgn {
   const _NgnFactory() : this._(const FiatNgn._());
 }
 
 /// A class that represents the Nigerian Naira currency.
-class FiatNgn extends FiatCurrency {
+final class FiatNgn extends FiatCurrency {
   /// {@template sealed_world.currency_ngn_constructor}
   /// Creates a instance of [FiatNgn] (Nigerian Naira currency).
   ///

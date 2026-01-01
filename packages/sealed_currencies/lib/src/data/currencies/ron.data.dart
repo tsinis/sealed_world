@@ -1,11 +1,11 @@
-part of "../../model/currency/currency.dart";
+part of "../../model/currency/submodels/fiat_currency.dart";
 
 extension type const _RonFactory._(FiatRon _) implements FiatRon {
   const _RonFactory() : this._(const FiatRon._());
 }
 
 /// A class that represents the Romanian Leu currency.
-class FiatRon extends FiatCurrency {
+final class FiatRon extends FiatCurrency {
   /// {@template sealed_world.currency_ron_constructor}
   /// Creates a instance of [FiatRon] (Romanian Leu currency).
   ///

@@ -1,11 +1,11 @@
-part of "../../model/currency/currency.dart";
+part of "../../model/currency/submodels/fiat_currency.dart";
 
 extension type const _TtdFactory._(FiatTtd _) implements FiatTtd {
   const _TtdFactory() : this._(const FiatTtd._());
 }
 
 /// A class that represents the Trinidad & Tobago Dollar currency.
-class FiatTtd extends FiatCurrency {
+final class FiatTtd extends FiatCurrency {
   /// {@template sealed_world.currency_ttd_constructor}
   /// Creates a instance of [FiatTtd] (Trinidad & Tobago Dollar currency).
   ///

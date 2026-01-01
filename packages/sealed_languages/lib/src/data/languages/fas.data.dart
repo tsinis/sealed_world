@@ -1,11 +1,11 @@
-part of "../../model/language/language.dart";
+part of "../../model/language/submodels/natural_language.dart";
 
 extension type const _FasFactory._(LangFas _) implements LangFas {
   const _FasFactory() : this._(const LangFas._());
 }
 
 /// A class that represents the Persian (Farsi) language.
-class LangFas extends NaturalLanguage {
+final class LangFas extends NaturalLanguage {
   /// {@template sealed_world.language_fas_constructor}
   /// Creates a instance of [LangFas] (Persian (Farsi) language).
   ///
@@ -14,7 +14,7 @@ class LangFas extends NaturalLanguage {
   const factory LangFas() = _FasFactory;
 
   const LangFas._()
-    : super(
+    : super._(
         name: "Persian (Farsi)",
         code: "FAS",
         codeShort: "FA",

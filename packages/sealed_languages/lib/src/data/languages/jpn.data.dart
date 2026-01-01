@@ -1,11 +1,11 @@
-part of "../../model/language/language.dart";
+part of "../../model/language/submodels/natural_language.dart";
 
 extension type const _JpnFactory._(LangJpn _) implements LangJpn {
   const _JpnFactory() : this._(const LangJpn._());
 }
 
 /// A class that represents the Japanese language.
-class LangJpn extends NaturalLanguage {
+final class LangJpn extends NaturalLanguage {
   /// {@template sealed_world.language_jpn_constructor}
   /// Creates a instance of [LangJpn] (Japanese language).
   ///
@@ -14,7 +14,7 @@ class LangJpn extends NaturalLanguage {
   const factory LangJpn() = _JpnFactory;
 
   const LangJpn._()
-    : super(
+    : super._(
         name: "Japanese",
         code: "JPN",
         codeShort: "JA",

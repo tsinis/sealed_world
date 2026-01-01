@@ -1,11 +1,11 @@
-part of "../../model/script/writing_system.dart";
+part of "../../model/script/submodels/script.dart";
 
 extension type const _EthiFactory._(ScriptEthi _) implements ScriptEthi {
   const _EthiFactory() : this._(const ScriptEthi._());
 }
 
 /// A class that represents the Ethiopic (Geʻez) script.
-class ScriptEthi extends Script {
+final class ScriptEthi extends Script {
   /// {@template sealed_world.script_ethi_constructor}
   /// Creates a instance of [ScriptEthi] (Ethiopic (Geʻez) script).
   ///
@@ -14,7 +14,7 @@ class ScriptEthi extends Script {
   const factory ScriptEthi() = _EthiFactory;
 
   const ScriptEthi._()
-    : super(
+    : super._(
         name: "Ethiopic (Geʻez)",
         code: "Ethi",
         codeNumeric: "430",

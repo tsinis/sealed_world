@@ -1,11 +1,11 @@
-part of "../../model/currency/currency.dart";
+part of "../../model/currency/submodels/fiat_currency.dart";
 
 extension type const _KmfFactory._(FiatKmf _) implements FiatKmf {
   const _KmfFactory() : this._(const FiatKmf._());
 }
 
 /// A class that represents the Comorian Franc currency.
-class FiatKmf extends FiatCurrency {
+final class FiatKmf extends FiatCurrency {
   /// {@template sealed_world.currency_kmf_constructor}
   /// Creates a instance of [FiatKmf] (Comorian Franc currency).
   ///

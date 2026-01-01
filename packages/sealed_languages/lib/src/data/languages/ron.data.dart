@@ -1,11 +1,11 @@
-part of "../../model/language/language.dart";
+part of "../../model/language/submodels/natural_language.dart";
 
 extension type const _RonFactory._(LangRon _) implements LangRon {
   const _RonFactory() : this._(const LangRon._());
 }
 
 /// A class that represents the Romanian language.
-class LangRon extends NaturalLanguage {
+final class LangRon extends NaturalLanguage {
   /// {@template sealed_world.language_ron_constructor}
   /// Creates a instance of [LangRon] (Romanian language).
   ///
@@ -14,7 +14,7 @@ class LangRon extends NaturalLanguage {
   const factory LangRon() = _RonFactory;
 
   const LangRon._()
-    : super(
+    : super._(
         name: "Romanian",
         code: "RON",
         codeShort: "RO",

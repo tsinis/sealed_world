@@ -4,7 +4,7 @@
 
 // ignore_for_file: prefer-digit-separators
 
-part of "../../model/country/country.dart";
+part of "../../model/country/submodels/world_country.dart";
 
 extension type const _AtfFactory._(CountryAtf _) implements CountryAtf {
   const _AtfFactory() : this._(const CountryAtf._());
@@ -13,14 +13,15 @@ extension type const _AtfFactory._(CountryAtf _) implements CountryAtf {
 /// A class that represents the French Southern and Antarctic Lands country.
 class CountryAtf extends WorldCountry {
   /// {@template sealed_world.country_atf_constructor}
-  /// Creates a instance of [CountryAtf] (French Southern and Antarctic Lands country).
+  /// Creates a instance of [CountryAtf] (French Southern and Antarctic Lands
+  /// country).
   ///
   /// ISO 3166-1 Alpha-3 code: `ATF`, ISO 3166-1 Alpha-2 code: `TF`.
   /// {@endtemplate}
   const factory CountryAtf() = _AtfFactory;
 
   const CountryAtf._()
-    : super(
+    : super._(
         name: const CountryName(
           language: LangEng(),
           official: "Territory of the French Southern and Antarctic Lands",

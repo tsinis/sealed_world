@@ -4,7 +4,7 @@
 
 // ignore_for_file: prefer-digit-separators
 
-part of "../../model/country/country.dart";
+part of "../../model/country/submodels/world_country.dart";
 
 extension type const _MneFactory._(CountryMne _) implements CountryMne {
   const _MneFactory() : this._(const CountryMne._());
@@ -20,7 +20,7 @@ class CountryMne extends WorldCountry {
   const factory CountryMne() = _MneFactory;
 
   const CountryMne._()
-    : super(
+    : super._(
         name: const CountryName(
           language: LangEng(),
           official: "Montenegro",

@@ -1,11 +1,11 @@
-part of "../../model/currency/currency.dart";
+part of "../../model/currency/submodels/fiat_currency.dart";
 
 extension type const _XpfFactory._(FiatXpf _) implements FiatXpf {
   const _XpfFactory() : this._(const FiatXpf._());
 }
 
 /// A class that represents the Cfp Franc currency.
-class FiatXpf extends FiatCurrency {
+final class FiatXpf extends FiatCurrency {
   /// {@template sealed_world.currency_xpf_constructor}
   /// Creates a instance of [FiatXpf] (Cfp Franc currency).
   ///

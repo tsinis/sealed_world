@@ -1,11 +1,11 @@
-part of "../../model/language/language.dart";
+part of "../../model/language/submodels/natural_language.dart";
 
 extension type const _EweFactory._(LangEwe _) implements LangEwe {
   const _EweFactory() : this._(const LangEwe._());
 }
 
 /// A class that represents the Ewe language.
-class LangEwe extends NaturalLanguage {
+final class LangEwe extends NaturalLanguage {
   /// {@template sealed_world.language_ewe_constructor}
   /// Creates a instance of [LangEwe] (Ewe language).
   ///
@@ -14,7 +14,7 @@ class LangEwe extends NaturalLanguage {
   const factory LangEwe() = _EweFactory;
 
   const LangEwe._()
-    : super(
+    : super._(
         name: "Ewe",
         code: "EWE",
         codeShort: "EE",

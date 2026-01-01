@@ -4,7 +4,7 @@
 
 // ignore_for_file: prefer-digit-separators
 
-part of "../../model/country/country.dart";
+part of "../../model/country/submodels/world_country.dart";
 
 extension type const _NicFactory._(CountryNic _) implements CountryNic {
   const _NicFactory() : this._(const CountryNic._());
@@ -20,7 +20,7 @@ class CountryNic extends WorldCountry {
   const factory CountryNic() = _NicFactory;
 
   const CountryNic._()
-    : super(
+    : super._(
         name: const CountryName(
           language: LangEng(),
           official: "Republic of Nicaragua",

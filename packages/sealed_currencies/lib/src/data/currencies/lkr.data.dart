@@ -1,11 +1,11 @@
-part of "../../model/currency/currency.dart";
+part of "../../model/currency/submodels/fiat_currency.dart";
 
 extension type const _LkrFactory._(FiatLkr _) implements FiatLkr {
   const _LkrFactory() : this._(const FiatLkr._());
 }
 
 /// A class that represents the Sri Lankan Rupee currency.
-class FiatLkr extends FiatCurrency {
+final class FiatLkr extends FiatCurrency {
   /// {@template sealed_world.currency_lkr_constructor}
   /// Creates a instance of [FiatLkr] (Sri Lankan Rupee currency).
   ///

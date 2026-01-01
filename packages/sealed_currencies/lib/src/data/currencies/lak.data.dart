@@ -1,11 +1,11 @@
-part of "../../model/currency/currency.dart";
+part of "../../model/currency/submodels/fiat_currency.dart";
 
 extension type const _LakFactory._(FiatLak _) implements FiatLak {
   const _LakFactory() : this._(const FiatLak._());
 }
 
 /// A class that represents the Laotian Kip currency.
-class FiatLak extends FiatCurrency {
+final class FiatLak extends FiatCurrency {
   /// {@template sealed_world.currency_lak_constructor}
   /// Creates a instance of [FiatLak] (Laotian Kip currency).
   ///

@@ -1,11 +1,11 @@
-part of "../../model/language/language.dart";
+part of "../../model/language/submodels/natural_language.dart";
 
 extension type const _WlnFactory._(LangWln _) implements LangWln {
   const _WlnFactory() : this._(const LangWln._());
 }
 
 /// A class that represents the Walloon language.
-class LangWln extends NaturalLanguage {
+final class LangWln extends NaturalLanguage {
   /// {@template sealed_world.language_wln_constructor}
   /// Creates a instance of [LangWln] (Walloon language).
   ///
@@ -14,7 +14,7 @@ class LangWln extends NaturalLanguage {
   const factory LangWln() = _WlnFactory;
 
   const LangWln._()
-    : super(
+    : super._(
         name: "Walloon",
         code: "WLN",
         codeShort: "WA",

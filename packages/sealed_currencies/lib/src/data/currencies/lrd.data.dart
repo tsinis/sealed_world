@@ -1,11 +1,11 @@
-part of "../../model/currency/currency.dart";
+part of "../../model/currency/submodels/fiat_currency.dart";
 
 extension type const _LrdFactory._(FiatLrd _) implements FiatLrd {
   const _LrdFactory() : this._(const FiatLrd._());
 }
 
 /// A class that represents the Liberian Dollar currency.
-class FiatLrd extends FiatCurrency {
+final class FiatLrd extends FiatCurrency {
   /// {@template sealed_world.currency_lrd_constructor}
   /// Creates a instance of [FiatLrd] (Liberian Dollar currency).
   ///

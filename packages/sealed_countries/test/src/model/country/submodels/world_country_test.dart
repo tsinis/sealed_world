@@ -1,3 +1,6 @@
+// ignore_for_file: prefer_const_constructors, equal_keys_in_map, it's a test.
+// ignore_for_file: avoid-duplicate-test-assertions
+
 import "dart:convert";
 
 import "package:_sealed_world_tests/sealed_world_tests.dart";
@@ -23,10 +26,10 @@ void main() => group("$WorldCountry", () {
   });
 
   performanceTest("compile and non compile time constructors equality", () {
-    expect(WorldCountry.abw(), CountryAbw());
     expect(WorldCountry.abw(), const CountryAbw());
     expect(const WorldCountry.abw(), CountryAbw());
     expect(const WorldCountry.abw(), const CountryAbw());
+    expect(WorldCountry.abw(), CountryAbw());
   });
 
   assertTest(
@@ -38,14 +41,38 @@ void main() => group("$WorldCountry", () {
 
   test("compareTo", () => expect(value.compareTo(array.first), isNot(isZero)));
 
+  group("sealed switch expressions", () {
+    // ignore: avoid-local-functions, it's a test.
+    String? describe(WorldCountry country) => switch (country) {
+      CountryUsa() => "usa",
+      CountryFra() => "france",
+      CountryCustom(:final code) when code.startsWith("Z") => "custom-$code",
+      WorldCountry(:final continent) when continent is Americas => "americas",
+      // ignore: avoid-wildcard-cases-with-sealed-classes, it's a test.
+      _ => null,
+    };
+
+    test("matches generated subtypes", () {
+      expect(describe(const CountryUsa()), "usa");
+      expect(describe(const CountryFra()), "france");
+    });
+
+    test("matches CountryCustom and guard", () {
+      const custom = CountryCustom(code: "ZZZ");
+      expect(describe(custom), "custom-ZZZ");
+      expect(describe(const CountryArg()), "americas");
+    });
+  });
+
   group("some countries should be fully translated", () {
-    /// This is a comprehensive list of countries that ensure the availability of
-    /// translations for every language in the countries `list`.
+    /// This is a comprehensive list of countries that ensure the availability
+    /// of translations for every language in the countries `list`.
     ///
-    /// It is important to note that while other languages may not be included in
-    /// this list, they may still have translations available for most common
-    /// countries, but there may be some missing translations for rarer languages.
-    /// Every country contains more than 114 translations of it's name.
+    /// It is important to note that while other languages may not be included
+    /// in this list, they may still have translations available for most common
+    /// countries, but there may be some missing translations for rarer
+    /// languages. Every country contains more than 114 translations of it's
+    /// name.
     ///
     /// Includes all the Material localizations in [kMaterialSupportedLanguages](https://api.flutter.dev/flutter/flutter_localizations/kMaterialSupportedLanguages.html)
     /// with a two letter code and much more (for example on top of that it also
@@ -85,7 +112,7 @@ void main() => group("$WorldCountry", () {
     /// - Xhosa (XHO)
     /// - Yoruba (YOR)
     /// That are not listed in Material one, and much more.
-    const kSealedCountriesSupportedLanguages = <NaturalLanguage>[
+    const kSealedCountriesSupportedLanguages = [
       LangAbk(),
       LangAfr(),
       LangAmh(),
@@ -354,7 +381,6 @@ void main() => group("$WorldCountry", () {
         CountryAbw(): 4,
         const CountryAbw(): 3,
         WorldCountry.abw(): 2,
-        // ignore: equal_keys_in_map, it's a test.
         const WorldCountry.abw(): 1,
         WorldCountry.fromCode("ABW"): 0,
       };
@@ -640,7 +666,9 @@ void main() => group("$WorldCountry", () {
       test("compared to $WorldCountry: ${element.name.common}", () {
         final json = element.toJson();
         expect(json, isNotEmpty);
-        final decoded = WorldCountryJson.fromMap(jsonDecode(json));
+        final decoded = WorldCountryJson.fromMap(
+          jsonDecode(json) as JsonMap, // ignore: avoid-type-casts, it's a test.
+        );
         expect(element.code, decoded.code);
         expect(element.postalCode, decoded.postalCode);
         expect(element.capitalInfo, decoded.capitalInfo);
@@ -667,10 +695,15 @@ void main() => group("$WorldCountry", () {
         expect(element.languages, decoded.languages);
         expect(element.continent, decoded.continent);
         expect(element.altSpellings, decoded.altSpellings);
-        expect(element.codeNumeric, decoded.codeNumeric);
         expect(element.codeShort, decoded.codeShort);
         expect(element.namesNative, decoded.namesNative);
         expect(element.tld, decoded.tld);
+        expect(
+          element.codeNumeric,
+          decoded.codeNumeric,
+          skip: element is CountryUnk,
+          reason: "Kosovo isn't recognized by ISO and many countries/orgs.",
+        );
       });
     }
   });
@@ -982,299 +1015,25 @@ void main() => group("$WorldCountry", () {
     });
   });
 
-  group("asserts", () {
+  group("permissive constructor asserts", () {
     assertTest(
-      "not",
-      () => WorldCountry(
-        name: value.name,
-        altSpellings: value.altSpellings,
-        areaMetric: value.areaMetric,
-        code: value.code,
-        codeNumeric: value.codeNumeric,
-        codeShort: value.codeShort,
-        continent: value.continent,
-        emoji: value.emoji,
-        idd: value.idd,
-        languages: const [],
-        latLng: value.latLng,
-        maps: value.maps,
-        namesNative: const [],
-        population: value.population,
-        timezones: value.timezones,
-        tld: value.tld,
-        demonyms: const [],
-        currencies: value.currencies,
-      ),
+      "not empty code",
+      () => const CountryCustom(code: "code").code,
       shouldThrow: false,
     );
 
     assertTest(
-      "code length",
-      () => WorldCountry(
-        name: value.name,
-        altSpellings: value.altSpellings,
-        areaMetric: value.areaMetric,
-        code: value.codeShort,
-        codeNumeric: value.codeNumeric,
-        codeShort: value.codeShort,
-        continent: value.continent,
-        emoji: value.emoji,
-        idd: value.idd,
-        languages: value.languages,
-        latLng: value.latLng,
-        maps: value.maps,
-        namesNative: value.namesNative,
-        population: value.population,
-        timezones: value.timezones,
-        tld: value.tld,
-        demonyms: value.demonyms,
-        currencies: value.currencies,
-      ),
+      "not empty codeShort",
+      () => const CountryCustom(codeShort: "code").codeShort,
+      shouldThrow: false,
     );
 
     assertTest(
-      "codeNumeric length",
-      () => WorldCountry(
-        name: value.name,
-        altSpellings: value.altSpellings,
-        areaMetric: value.areaMetric,
-        code: value.code,
-        codeNumeric: value.codeShort,
-        codeShort: value.codeShort,
-        continent: value.continent,
-        emoji: value.emoji,
-        idd: value.idd,
-        languages: value.languages,
-        latLng: value.latLng,
-        maps: value.maps,
-        namesNative: value.namesNative,
-        population: value.population,
-        timezones: value.timezones,
-        tld: value.tld,
-        demonyms: value.demonyms,
-        currencies: value.currencies,
-      ),
+      "not empty codeNumeric",
+      () => const CountryCustom(codeNumeric: "code").codeNumeric,
+      shouldThrow: false,
     );
 
-    assertTest(
-      "codeShort length",
-      () => WorldCountry(
-        name: value.name,
-        altSpellings: value.altSpellings,
-        areaMetric: value.areaMetric,
-        code: value.code,
-        codeNumeric: value.codeNumeric,
-        codeShort: value.code,
-        continent: value.continent,
-        emoji: value.emoji,
-        idd: value.idd,
-        languages: value.languages,
-        latLng: value.latLng,
-        maps: value.maps,
-        namesNative: value.namesNative,
-        population: value.population,
-        timezones: value.timezones,
-        tld: value.tld,
-        demonyms: value.demonyms,
-        currencies: value.currencies,
-      ),
-    );
-
-    assertTest(
-      "emoji length",
-      () => WorldCountry(
-        name: value.name,
-        altSpellings: value.altSpellings,
-        areaMetric: value.areaMetric,
-        code: value.code,
-        codeNumeric: value.codeNumeric,
-        codeShort: value.codeShort,
-        continent: value.continent,
-        emoji: "",
-        idd: value.idd,
-        languages: value.languages,
-        latLng: value.latLng,
-        maps: value.maps,
-        namesNative: value.namesNative,
-        population: value.population,
-        timezones: value.timezones,
-        tld: value.tld,
-        demonyms: value.demonyms,
-        currencies: value.currencies,
-      ),
-    );
-
-    assertTest(
-      "altSpellings empty",
-      () => WorldCountry(
-        name: value.name,
-        altSpellings: const [],
-        areaMetric: value.areaMetric,
-        code: value.code,
-        codeNumeric: value.codeNumeric,
-        codeShort: value.codeShort,
-        continent: value.continent,
-        emoji: value.emoji,
-        idd: value.idd,
-        languages: value.languages,
-        latLng: value.latLng,
-        maps: value.maps,
-        namesNative: value.namesNative,
-        population: value.population,
-        timezones: value.timezones,
-        tld: value.tld,
-        demonyms: value.demonyms,
-        currencies: value.currencies,
-      ),
-    );
-
-    assertTest(
-      "timezones empty",
-      () => WorldCountry(
-        name: value.name,
-        altSpellings: value.altSpellings,
-        areaMetric: value.areaMetric,
-        code: value.code,
-        codeNumeric: value.codeNumeric,
-        codeShort: value.codeShort,
-        continent: value.continent,
-        emoji: value.emoji,
-        idd: value.idd,
-        languages: value.languages,
-        latLng: value.latLng,
-        maps: value.maps,
-        namesNative: value.namesNative,
-        population: value.population,
-        timezones: const [],
-        tld: value.tld,
-        demonyms: value.demonyms,
-        currencies: value.currencies,
-      ),
-    );
-
-    assertTest(
-      "cioc length",
-      () => WorldCountry(
-        name: value.name,
-        altSpellings: value.altSpellings,
-        areaMetric: value.areaMetric,
-        code: value.code,
-        codeNumeric: value.codeNumeric,
-        codeShort: value.codeShort,
-        continent: value.continent,
-        emoji: value.emoji,
-        idd: value.idd,
-        languages: value.languages,
-        latLng: value.latLng,
-        maps: value.maps,
-        namesNative: value.namesNative,
-        population: value.population,
-        timezones: value.timezones,
-        tld: value.tld,
-        demonyms: value.demonyms,
-        currencies: value.currencies,
-        cioc: "",
-      ),
-    );
-
-    assertTest(
-      "fifa length",
-      () => WorldCountry(
-        name: value.name,
-        altSpellings: value.altSpellings,
-        areaMetric: value.areaMetric,
-        code: value.code,
-        codeNumeric: value.codeNumeric,
-        codeShort: value.codeShort,
-        continent: value.continent,
-        emoji: value.emoji,
-        idd: value.idd,
-        languages: value.languages,
-        latLng: value.latLng,
-        maps: value.maps,
-        namesNative: value.namesNative,
-        population: value.population,
-        timezones: value.timezones,
-        tld: value.tld,
-        demonyms: value.demonyms,
-        currencies: value.currencies,
-        fifa: "",
-      ),
-    );
-
-    assertTest(
-      "bordersCodes empty",
-      () => WorldCountry(
-        name: value.name,
-        altSpellings: value.altSpellings,
-        areaMetric: value.areaMetric,
-        code: value.code,
-        codeNumeric: value.codeNumeric,
-        codeShort: value.codeShort,
-        continent: value.continent,
-        emoji: value.emoji,
-        idd: value.idd,
-        languages: value.languages,
-        latLng: value.latLng,
-        maps: value.maps,
-        namesNative: value.namesNative,
-        population: value.population,
-        timezones: value.timezones,
-        tld: value.tld,
-        demonyms: value.demonyms,
-        currencies: value.currencies,
-        bordersCodes: const [],
-      ),
-    );
-
-    assertTest(
-      "regionalBlocs empty",
-      () => WorldCountry(
-        name: value.name,
-        altSpellings: value.altSpellings,
-        areaMetric: value.areaMetric,
-        code: value.code,
-        codeNumeric: value.codeNumeric,
-        codeShort: value.codeShort,
-        continent: value.continent,
-        emoji: value.emoji,
-        idd: value.idd,
-        languages: value.languages,
-        latLng: value.latLng,
-        maps: value.maps,
-        namesNative: value.namesNative,
-        population: value.population,
-        timezones: value.timezones,
-        tld: value.tld,
-        demonyms: value.demonyms,
-        currencies: value.currencies,
-        regionalBlocs: const [],
-      ),
-    );
-
-    assertTest(
-      "tld empty",
-      () => WorldCountry(
-        name: value.name,
-        altSpellings: value.altSpellings,
-        areaMetric: value.areaMetric,
-        code: value.code,
-        codeNumeric: value.codeNumeric,
-        codeShort: value.codeShort,
-        continent: value.continent,
-        emoji: value.emoji,
-        idd: value.idd,
-        languages: value.languages,
-        latLng: value.latLng,
-        maps: value.maps,
-        namesNative: value.namesNative,
-        population: value.population,
-        timezones: value.timezones,
-        tld: const [],
-        demonyms: value.demonyms,
-        currencies: value.currencies,
-        regionalBlocs: value.regionalBlocs,
-      ),
-    );
+    assertTest("empty code, codeShort and codeNumeric", CountryCustom.new);
   });
 });

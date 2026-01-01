@@ -1,11 +1,11 @@
-part of "../../model/language/language.dart";
+part of "../../model/language/submodels/natural_language.dart";
 
 extension type const _NdeFactory._(LangNde _) implements LangNde {
   const _NdeFactory() : this._(const LangNde._());
 }
 
 /// A class that represents the Northern Ndebele language.
-class LangNde extends NaturalLanguage {
+final class LangNde extends NaturalLanguage {
   /// {@template sealed_world.language_nde_constructor}
   /// Creates a instance of [LangNde] (Northern Ndebele language).
   ///
@@ -14,7 +14,7 @@ class LangNde extends NaturalLanguage {
   const factory LangNde() = _NdeFactory;
 
   const LangNde._()
-    : super(
+    : super._(
         name: "Northern Ndebele",
         code: "NDE",
         codeShort: "ND",

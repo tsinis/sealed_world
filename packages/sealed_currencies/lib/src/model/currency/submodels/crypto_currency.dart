@@ -1,4 +1,4 @@
-part of "../currency.dart";
+import "../currency.dart";
 
 /// A class representing a cryptocurrency.
 ///

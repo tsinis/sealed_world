@@ -1,11 +1,12 @@
 // ignore_for_file: avoid-type-casts
 
 import "../../interfaces/json_encodable.dart";
-import "../../model/language/language.dart";
-import "../../model/language_family/language_family.dart";
-import "../../model/script/writing_system.dart";
+import "../../model/language/submodels/natural_language.dart";
+import "../../model/language_family/submodels/natural_language_family.dart";
+import "../../model/script/submodels/script.dart";
 import "../../typedefs/typedefs.dart";
 import "../extensions/sealed_world_iterable_extension.dart";
+import "natural_language_copy_with.dart";
 
 /// Extension on [NaturalLanguage] that provides methods for converting
 /// [NaturalLanguage] objects to and from JSON maps.
@@ -40,18 +41,27 @@ extension NaturalLanguageJson on NaturalLanguage {
   ///
   /// final english = NaturalLanguageJson.fromMap(jsonMap);
   /// ```
-  static NaturalLanguage fromMap(JsonMap map) => NaturalLanguage(
-    name: map["name"].toString(),
-    codeShort: map["codeShort"].toString(),
-    namesNative: List<String>.unmodifiable(map["namesNative"] as List),
-    code: map["code"].toString(),
-    bibliographicCode: map["bibliographicCode"]?.toString(),
-    family: NaturalLanguageFamily.fromName(map["family"].toString()),
-    isRightToLeft: map["isRightToLeft"] as bool,
-    scripts: (map["scripts"] as List<Object?>)
-        .fromIsoList(Script.fromCode)
-        .toSet(),
-  );
+  static NaturalLanguage fromMap(JsonMap map) {
+    final code = map["code"]?.toString().trim() ?? "";
+    final codeShort = map["codeShort"]?.toString().trim() ?? "";
+    if (code.isEmpty && codeShort.isEmpty) {
+      throw ArgumentError(
+        "The `code` (or at least `codeShort`) must be provided!",
+      );
+    }
+
+    return LangCustom(code: code, codeShort: codeShort).copyWith(
+      name: map["name"]?.toString(),
+      namesNative: List<String>.unmodifiable(map["namesNative"] as List),
+      bibliographicCode: map["bibliographicCode"]?.toString(),
+      family: NaturalLanguageFamily.maybeFromValue(map["family"]?.toString()),
+      isRightToLeft: map["isRightToLeft"] as bool,
+      scripts: (map["scripts"] as List<Object?>)
+          .fromIsoList(Script.maybeFromAnyCode)
+          .nonNulls
+          .toSet(),
+    );
+  }
 
   /// Converts the [NaturalLanguage] object to a JSON map.
   ///
@@ -72,8 +82,8 @@ extension NaturalLanguageJson on NaturalLanguage {
   /// ```dart
   /// final jsonMap = LangEng().toMap();
   /// ```
-  JsonObjectMap toMap() => {
-    "bibliographicCode": bibliographicCode,
+  Map<String, Object> toMap() => {
+    "bibliographicCode": ?bibliographicCode,
     "code": code,
     "codeShort": codeShort,
     "family": family.name,

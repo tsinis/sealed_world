@@ -1,11 +1,11 @@
-part of "../../model/script/writing_system.dart";
+part of "../../model/script/submodels/script.dart";
 
 extension type const _RohgFactory._(ScriptRohg _) implements ScriptRohg {
   const _RohgFactory() : this._(const ScriptRohg._());
 }
 
 /// A class that represents the Hanifi Rohingya script.
-class ScriptRohg extends Script {
+final class ScriptRohg extends Script {
   /// {@template sealed_world.script_rohg_constructor}
   /// Creates a instance of [ScriptRohg] (Hanifi Rohingya script).
   ///
@@ -14,7 +14,7 @@ class ScriptRohg extends Script {
   const factory ScriptRohg() = _RohgFactory;
 
   const ScriptRohg._()
-    : super(
+    : super._(
         name: "Hanifi Rohingya",
         code: "Rohg",
         codeNumeric: "167",

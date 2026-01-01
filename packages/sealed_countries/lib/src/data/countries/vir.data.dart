@@ -4,7 +4,7 @@
 
 // ignore_for_file: prefer-digit-separators
 
-part of "../../model/country/country.dart";
+part of "../../model/country/submodels/world_country.dart";
 
 extension type const _VirFactory._(CountryVir _) implements CountryVir {
   const _VirFactory() : this._(const CountryVir._());
@@ -20,7 +20,7 @@ class CountryVir extends WorldCountry {
   const factory CountryVir() = _VirFactory;
 
   const CountryVir._()
-    : super(
+    : super._(
         name: const CountryName(
           language: LangEng(),
           official: "Virgin Islands of the United States",

@@ -4,7 +4,7 @@
 
 // ignore_for_file: prefer-digit-separators
 
-part of "../../model/country/country.dart";
+part of "../../model/country/submodels/world_country.dart";
 
 extension type const _WsmFactory._(CountryWsm _) implements CountryWsm {
   const _WsmFactory() : this._(const CountryWsm._());
@@ -20,7 +20,7 @@ class CountryWsm extends WorldCountry {
   const factory CountryWsm() = _WsmFactory;
 
   const CountryWsm._()
-    : super(
+    : super._(
         name: const CountryName(
           language: LangEng(),
           official: "Independent State of Samoa",

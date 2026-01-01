@@ -1,4 +1,5 @@
 import "../../model/core/locale_mapping_options.dart";
+import "../../typedefs/typedefs.dart";
 
 /// Extension methods for [LocaleMappingOptions] class.
 ///
@@ -23,11 +24,13 @@ extension LocaleMappingOptionsExtension<T extends Object>
     bool? localizeFullNames,
     T? mainLocale,
     bool? useLanguageFallback,
+    String Function(IsoLocaleKey isoLocale, String l10n)? formatter,
   }) => LocaleMappingOptions<T>(
     altSymbol: altSymbol ?? this.altSymbol,
     fallbackLocale: fallbackLocale ?? this.fallbackLocale,
     localizeFullNames: localizeFullNames ?? this.localizeFullNames,
     mainLocale: mainLocale ?? this.mainLocale,
     useLanguageFallback: useLanguageFallback ?? this.useLanguageFallback,
+    formatter: formatter ?? this.formatter,
   );
 }

@@ -1,11 +1,11 @@
-part of "../../model/language/language.dart";
+part of "../../model/language/submodels/natural_language.dart";
 
 extension type const _MahFactory._(LangMah _) implements LangMah {
   const _MahFactory() : this._(const LangMah._());
 }
 
 /// A class that represents the Marshallese language.
-class LangMah extends NaturalLanguage {
+final class LangMah extends NaturalLanguage {
   /// {@template sealed_world.language_mah_constructor}
   /// Creates a instance of [LangMah] (Marshallese language).
   ///
@@ -14,7 +14,7 @@ class LangMah extends NaturalLanguage {
   const factory LangMah() = _MahFactory;
 
   const LangMah._()
-    : super(
+    : super._(
         name: "Marshallese",
         code: "MAH",
         codeShort: "MH",

@@ -4,7 +4,7 @@
 
 // ignore_for_file: prefer-digit-separators
 
-part of "../../model/country/country.dart";
+part of "../../model/country/submodels/world_country.dart";
 
 extension type const _BesFactory._(CountryBes _) implements CountryBes {
   const _BesFactory() : this._(const CountryBes._());
@@ -20,7 +20,7 @@ class CountryBes extends WorldCountry {
   const factory CountryBes() = _BesFactory;
 
   const CountryBes._()
-    : super(
+    : super._(
         name: const CountryName(
           language: LangEng(),
           official: "Bonaire, Sint Eustatius and Saba",

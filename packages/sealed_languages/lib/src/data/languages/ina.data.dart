@@ -1,11 +1,11 @@
-part of "../../model/language/language.dart";
+part of "../../model/language/submodels/natural_language.dart";
 
 extension type const _InaFactory._(LangIna _) implements LangIna {
   const _InaFactory() : this._(const LangIna._());
 }
 
 /// A class that represents the Interlingua language.
-class LangIna extends NaturalLanguage {
+final class LangIna extends NaturalLanguage {
   /// {@template sealed_world.language_ina_constructor}
   /// Creates a instance of [LangIna] (Interlingua language).
   ///
@@ -14,7 +14,7 @@ class LangIna extends NaturalLanguage {
   const factory LangIna() = _InaFactory;
 
   const LangIna._()
-    : super(
+    : super._(
         name: "Interlingua",
         code: "INA",
         codeShort: "IA",

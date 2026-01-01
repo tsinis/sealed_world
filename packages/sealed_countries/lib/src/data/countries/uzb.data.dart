@@ -4,7 +4,7 @@
 
 // ignore_for_file: prefer-digit-separators
 
-part of "../../model/country/country.dart";
+part of "../../model/country/submodels/world_country.dart";
 
 extension type const _UzbFactory._(CountryUzb _) implements CountryUzb {
   const _UzbFactory() : this._(const CountryUzb._());
@@ -20,7 +20,7 @@ class CountryUzb extends WorldCountry {
   const factory CountryUzb() = _UzbFactory;
 
   const CountryUzb._()
-    : super(
+    : super._(
         name: const CountryName(
           language: LangEng(),
           official: "Republic of Uzbekistan",

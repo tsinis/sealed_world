@@ -1,11 +1,11 @@
-part of "../../model/language/language.dart";
+part of "../../model/language/submodels/natural_language.dart";
 
 extension type const _SrpFactory._(LangSrp _) implements LangSrp {
   const _SrpFactory() : this._(const LangSrp._());
 }
 
 /// A class that represents the Serbian language.
-class LangSrp extends NaturalLanguage {
+final class LangSrp extends NaturalLanguage {
   /// {@template sealed_world.language_srp_constructor}
   /// Creates a instance of [LangSrp] (Serbian language).
   ///
@@ -14,7 +14,7 @@ class LangSrp extends NaturalLanguage {
   const factory LangSrp() = _SrpFactory;
 
   const LangSrp._()
-    : super(
+    : super._(
         name: "Serbian",
         code: "SRP",
         codeShort: "SR",

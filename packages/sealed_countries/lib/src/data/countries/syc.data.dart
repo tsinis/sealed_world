@@ -4,7 +4,7 @@
 
 // ignore_for_file: prefer-digit-separators
 
-part of "../../model/country/country.dart";
+part of "../../model/country/submodels/world_country.dart";
 
 extension type const _SycFactory._(CountrySyc _) implements CountrySyc {
   const _SycFactory() : this._(const CountrySyc._());
@@ -20,7 +20,7 @@ class CountrySyc extends WorldCountry {
   const factory CountrySyc() = _SycFactory;
 
   const CountrySyc._()
-    : super(
+    : super._(
         name: const CountryName(
           language: LangEng(),
           official: "Republic of Seychelles",

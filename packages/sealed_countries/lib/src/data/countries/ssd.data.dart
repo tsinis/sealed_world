@@ -4,7 +4,7 @@
 
 // ignore_for_file: prefer-digit-separators
 
-part of "../../model/country/country.dart";
+part of "../../model/country/submodels/world_country.dart";
 
 extension type const _SsdFactory._(CountrySsd _) implements CountrySsd {
   const _SsdFactory() : this._(const CountrySsd._());
@@ -20,7 +20,7 @@ class CountrySsd extends WorldCountry {
   const factory CountrySsd() = _SsdFactory;
 
   const CountrySsd._()
-    : super(
+    : super._(
         name: const CountryName(
           language: LangEng(),
           official: "Republic of South Sudan",

@@ -1,4 +1,5 @@
-// ignore_for_file: avoid-returning-void
+// ignore_for_file: prefer_const_constructors, equal_keys_in_map, it's a test.
+// ignore_for_file: avoid-duplicate-test-assertions
 
 import "dart:convert";
 
@@ -6,12 +7,8 @@ import "package:_sealed_world_tests/sealed_world_tests.dart";
 import "package:sealed_languages/src/helpers/script/script_json.dart";
 import "package:sealed_languages/src/interfaces/iso_standardized.dart";
 import "package:sealed_languages/src/interfaces/json_encodable.dart";
-import "package:sealed_languages/src/model/script/writing_system.dart";
+import "package:sealed_languages/src/model/script/submodels/script.dart";
 import "package:test/test.dart";
-
-class _ScriptTest extends Script {
-  const _ScriptTest() : super.custom(name: " ", code: "");
-}
 
 void main() => group("$Script", () {
   final value = Script.list.last;
@@ -30,14 +27,48 @@ void main() => group("$Script", () {
     expect(const Script.adlm(), const ScriptAdlm());
   });
 
-  assertTest(
-    "permissive constructor",
-    () => const _ScriptTest().code,
-    shouldThrow: false,
-    alsoExpect: () => expect(const _ScriptTest().code, isEmpty),
-  );
+  group("permissive constructor asserts", () {
+    assertTest(
+      "not empty code",
+      () => ScriptCustom(code: " "),
+      shouldThrow: false,
+    );
+
+    assertTest(
+      "not empty codeNumeric",
+      () => ScriptCustom(codeNumeric: " "),
+      shouldThrow: false,
+    );
+
+    assertTest("empty codeNumeric and code", ScriptCustom.new);
+  });
 
   test("compareTo", () => expect(value.compareTo(array.last), isNot(isZero)));
+
+  group("sealed switch expressions", () {
+    // ignore: avoid-local-functions, it's a test.
+    String? describe(Script script) => switch (script) {
+      ScriptLatn() => "latin",
+      ScriptCyrl() => "cyrillic",
+      ScriptCustom(:final codeNumeric) when codeNumeric.startsWith("9") =>
+        "custom-$codeNumeric",
+      Script(:final pva) when (pva?.contains("Arabic") ?? false) =>
+        "arabic family",
+      // ignore: avoid-wildcard-cases-with-sealed-classes, it's a test.
+      _ => null,
+    };
+
+    test("matches generated subtypes", () {
+      expect(describe(const ScriptLatn()), "latin");
+      expect(describe(const ScriptCyrl()), "cyrillic");
+    });
+
+    test("matches custom scripts and guards", () {
+      const custom = ScriptCustom(code: "ZZZZ", codeNumeric: "900");
+      expect(describe(custom), "custom-900");
+      expect(describe(const ScriptArab()), "arabic family");
+    });
+  });
 
   group("fields", () {
     for (final element in Script.list) {
@@ -53,6 +84,7 @@ void main() => group("$Script", () {
         expect(element.internationalName, element.name);
         expect(element.date, isA<String>());
         expect(element.date, isNotEmpty);
+        // ignore: avoid-returning-void, it's a test.
         if (element.pva == null) return expect(element.pva, isNull);
         expect(element.pva, isA<String>());
         expect(element.pva, isNotEmpty);
@@ -81,10 +113,8 @@ void main() => group("$Script", () {
     test("with ${array.runtimeType}", () {
       expect(array.length, 2);
       array.addAll(List.of(array));
-      // ignore: avoid-duplicate-test-assertions, this is mutable array.
       expect(array.length, 2);
       array.add(Script.fromName(array.last.name));
-      // ignore: avoid-duplicate-test-assertions, this is mutable array.
       expect(array.length, 2);
     });
 
@@ -93,7 +123,6 @@ void main() => group("$Script", () {
         ScriptAdlm(): 4,
         const ScriptAdlm(): 3,
         Script.adlm(): 2,
-        // ignore: equal_keys_in_map, it's a test.
         const Script.adlm(): 1,
         Script.fromCode("ADLM"): 0,
       };
@@ -459,7 +488,7 @@ void main() => group("$Script", () {
   group("asserts", () {
     assertTest(
       "not",
-      () => Script(
+      () => ScriptCustom(
         name: value.name,
         code: value.code,
         codeNumeric: value.codeNumeric,
@@ -467,50 +496,6 @@ void main() => group("$Script", () {
         pva: value.pva,
       ),
       shouldThrow: false,
-    );
-
-    assertTest(
-      "empty name",
-      () => Script(
-        name: "",
-        code: value.code,
-        codeNumeric: value.codeNumeric,
-        date: value.date,
-        pva: value.pva,
-      ),
-    );
-
-    assertTest(
-      "codeNumeric length",
-      () => Script(
-        name: value.name,
-        code: value.code,
-        codeNumeric: value.code,
-        date: value.date,
-        pva: value.pva,
-      ),
-    );
-
-    assertTest(
-      "code length",
-      () => Script(
-        name: value.name,
-        code: value.codeNumeric,
-        codeNumeric: value.code,
-        date: value.date,
-        pva: value.pva,
-      ),
-    );
-
-    assertTest(
-      "pva length",
-      () => Script(
-        name: value.name,
-        code: value.code,
-        codeNumeric: value.code,
-        date: value.date,
-        pva: "",
-      ),
     );
   });
 

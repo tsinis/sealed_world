@@ -1,11 +1,11 @@
-part of "../../model/script/writing_system.dart";
+part of "../../model/script/submodels/script.dart";
 
 extension type const _MarcFactory._(ScriptMarc _) implements ScriptMarc {
   const _MarcFactory() : this._(const ScriptMarc._());
 }
 
 /// A class that represents the Marchen script.
-class ScriptMarc extends Script {
+final class ScriptMarc extends Script {
   /// {@template sealed_world.script_marc_constructor}
   /// Creates a instance of [ScriptMarc] (Marchen script).
   ///
@@ -14,7 +14,7 @@ class ScriptMarc extends Script {
   const factory ScriptMarc() = _MarcFactory;
 
   const ScriptMarc._()
-    : super(
+    : super._(
         name: "Marchen",
         code: "Marc",
         codeNumeric: "332",

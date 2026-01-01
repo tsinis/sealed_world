@@ -1,6 +1,6 @@
 import "../../model/core/basic_locale.dart";
-import "../../model/language/language.dart";
-import "../../model/script/writing_system.dart";
+import "../../model/language/submodels/natural_language.dart";
+import "../../model/script/submodels/script.dart";
 import "../../model/translated_name.dart";
 import "../../typedefs/typedefs.dart";
 import "iso_string_extension_type.dart";
@@ -20,10 +20,10 @@ extension BasicLocaleExtension on BasicLocale {
   );
 
   /// {@macro to_map_method}
-  Map<String, String?> toMap() => {
-    "countryCode": IsoString.maybe(countryCode)?.toUpperCaseCode(),
+  Map<String, String> toMap() => {
+    "countryCode": ?IsoString.maybe(countryCode)?.toUpperCaseCode(),
     "language": language.codeShort.toLowerCase(),
-    "script": script?.code,
+    "script": ?script?.code,
   };
 
   /// {@macro from_map_method}

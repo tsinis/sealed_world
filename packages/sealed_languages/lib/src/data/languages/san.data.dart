@@ -1,11 +1,11 @@
-part of "../../model/language/language.dart";
+part of "../../model/language/submodels/natural_language.dart";
 
 extension type const _SanFactory._(LangSan _) implements LangSan {
   const _SanFactory() : this._(const LangSan._());
 }
 
 /// A class that represents the Sanskrit (Saṁskṛta) language.
-class LangSan extends NaturalLanguage {
+final class LangSan extends NaturalLanguage {
   /// {@template sealed_world.language_san_constructor}
   /// Creates a instance of [LangSan] (Sanskrit (Saṁskṛta) language).
   ///
@@ -14,7 +14,7 @@ class LangSan extends NaturalLanguage {
   const factory LangSan() = _SanFactory;
 
   const LangSan._()
-    : super(
+    : super._(
         name: "Sanskrit (Saṁskṛta)",
         code: "SAN",
         codeShort: "SA",

@@ -1,11 +1,11 @@
-part of "../../model/script/writing_system.dart";
+part of "../../model/script/submodels/script.dart";
 
 extension type const _LekeFactory._(ScriptLeke _) implements ScriptLeke {
   const _LekeFactory() : this._(const ScriptLeke._());
 }
 
 /// A class that represents the Leke script.
-class ScriptLeke extends Script {
+final class ScriptLeke extends Script {
   /// {@template sealed_world.script_leke_constructor}
   /// Creates a instance of [ScriptLeke] (Leke script).
   ///
@@ -14,5 +14,10 @@ class ScriptLeke extends Script {
   const factory ScriptLeke() = _LekeFactory;
 
   const ScriptLeke._()
-    : super(name: "Leke", code: "Leke", codeNumeric: "364", date: "2015-07-07");
+    : super._(
+        name: "Leke",
+        code: "Leke",
+        codeNumeric: "364",
+        date: "2015-07-07",
+      );
 }

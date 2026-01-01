@@ -1,11 +1,11 @@
-part of "../../model/script/writing_system.dart";
+part of "../../model/script/submodels/script.dart";
 
 extension type const _HebrFactory._(ScriptHebr _) implements ScriptHebr {
   const _HebrFactory() : this._(const ScriptHebr._());
 }
 
 /// A class that represents the Hebrew script.
-class ScriptHebr extends Script {
+final class ScriptHebr extends Script {
   /// {@template sealed_world.script_hebr_constructor}
   /// Creates a instance of [ScriptHebr] (Hebrew script).
   ///
@@ -14,7 +14,7 @@ class ScriptHebr extends Script {
   const factory ScriptHebr() = _HebrFactory;
 
   const ScriptHebr._()
-    : super(
+    : super._(
         name: "Hebrew",
         code: "Hebr",
         codeNumeric: "125",

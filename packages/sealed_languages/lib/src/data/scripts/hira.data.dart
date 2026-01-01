@@ -1,11 +1,11 @@
-part of "../../model/script/writing_system.dart";
+part of "../../model/script/submodels/script.dart";
 
 extension type const _HiraFactory._(ScriptHira _) implements ScriptHira {
   const _HiraFactory() : this._(const ScriptHira._());
 }
 
 /// A class that represents the Hiragana script.
-class ScriptHira extends Script {
+final class ScriptHira extends Script {
   /// {@template sealed_world.script_hira_constructor}
   /// Creates a instance of [ScriptHira] (Hiragana script).
   ///
@@ -14,7 +14,7 @@ class ScriptHira extends Script {
   const factory ScriptHira() = _HiraFactory;
 
   const ScriptHira._()
-    : super(
+    : super._(
         name: "Hiragana",
         code: "Hira",
         codeNumeric: "410",

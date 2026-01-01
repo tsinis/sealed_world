@@ -1,11 +1,11 @@
-part of "../../model/script/writing_system.dart";
+part of "../../model/script/submodels/script.dart";
 
 extension type const _ThaaFactory._(ScriptThaa _) implements ScriptThaa {
   const _ThaaFactory() : this._(const ScriptThaa._());
 }
 
 /// A class that represents the Thaana script.
-class ScriptThaa extends Script {
+final class ScriptThaa extends Script {
   /// {@template sealed_world.script_thaa_constructor}
   /// Creates a instance of [ScriptThaa] (Thaana script).
   ///
@@ -14,7 +14,7 @@ class ScriptThaa extends Script {
   const factory ScriptThaa() = _ThaaFactory;
 
   const ScriptThaa._()
-    : super(
+    : super._(
         name: "Thaana",
         code: "Thaa",
         codeNumeric: "170",

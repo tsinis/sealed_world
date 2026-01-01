@@ -1,11 +1,11 @@
-part of "../../model/language/language.dart";
+part of "../../model/language/submodels/natural_language.dart";
 
 extension type const _CymFactory._(LangCym _) implements LangCym {
   const _CymFactory() : this._(const LangCym._());
 }
 
 /// A class that represents the Welsh language.
-class LangCym extends NaturalLanguage {
+final class LangCym extends NaturalLanguage {
   /// {@template sealed_world.language_cym_constructor}
   /// Creates a instance of [LangCym] (Welsh language).
   ///
@@ -14,7 +14,7 @@ class LangCym extends NaturalLanguage {
   const factory LangCym() = _CymFactory;
 
   const LangCym._()
-    : super(
+    : super._(
         name: "Welsh",
         code: "CYM",
         codeShort: "CY",

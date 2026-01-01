@@ -4,7 +4,7 @@
 
 // ignore_for_file: prefer-digit-separators
 
-part of "../../model/country/country.dart";
+part of "../../model/country/submodels/world_country.dart";
 
 extension type const _BlmFactory._(CountryBlm _) implements CountryBlm {
   const _BlmFactory() : this._(const CountryBlm._());
@@ -20,7 +20,7 @@ class CountryBlm extends WorldCountry {
   const factory CountryBlm() = _BlmFactory;
 
   const CountryBlm._()
-    : super(
+    : super._(
         name: const CountryName(
           language: LangEng(),
           official: "Collectivity of Saint Barthélemy",

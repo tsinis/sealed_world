@@ -1,11 +1,11 @@
-part of "../../model/currency/currency.dart";
+part of "../../model/currency/submodels/fiat_currency.dart";
 
 extension type const _MkdFactory._(FiatMkd _) implements FiatMkd {
   const _MkdFactory() : this._(const FiatMkd._());
 }
 
 /// A class that represents the Macedonian Denar currency.
-class FiatMkd extends FiatCurrency {
+final class FiatMkd extends FiatCurrency {
   /// {@template sealed_world.currency_mkd_constructor}
   /// Creates a instance of [FiatMkd] (Macedonian Denar currency).
   ///

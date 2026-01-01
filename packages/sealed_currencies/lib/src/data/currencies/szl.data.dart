@@ -1,11 +1,11 @@
-part of "../../model/currency/currency.dart";
+part of "../../model/currency/submodels/fiat_currency.dart";
 
 extension type const _SzlFactory._(FiatSzl _) implements FiatSzl {
   const _SzlFactory() : this._(const FiatSzl._());
 }
 
 /// A class that represents the Swazi Lilangeni currency.
-class FiatSzl extends FiatCurrency {
+final class FiatSzl extends FiatCurrency {
   /// {@template sealed_world.currency_szl_constructor}
   /// Creates a instance of [FiatSzl] (Swazi Lilangeni currency).
   ///

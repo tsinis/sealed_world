@@ -1,11 +1,11 @@
-part of "../../model/language/language.dart";
+part of "../../model/language/submodels/natural_language.dart";
 
 extension type const _AzeFactory._(LangAze _) implements LangAze {
   const _AzeFactory() : this._(const LangAze._());
 }
 
 /// A class that represents the Azerbaijani language.
-class LangAze extends NaturalLanguage {
+final class LangAze extends NaturalLanguage {
   /// {@template sealed_world.language_aze_constructor}
   /// Creates a instance of [LangAze] (Azerbaijani language).
   ///
@@ -14,7 +14,7 @@ class LangAze extends NaturalLanguage {
   const factory LangAze() = _AzeFactory;
 
   const LangAze._()
-    : super(
+    : super._(
         name: "Azerbaijani",
         code: "AZE",
         codeShort: "AZ",

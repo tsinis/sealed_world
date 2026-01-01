@@ -1,11 +1,11 @@
-part of "../../model/language/language.dart";
+part of "../../model/language/submodels/natural_language.dart";
 
 extension type const _SomFactory._(LangSom _) implements LangSom {
   const _SomFactory() : this._(const LangSom._());
 }
 
 /// A class that represents the Somali language.
-class LangSom extends NaturalLanguage {
+final class LangSom extends NaturalLanguage {
   /// {@template sealed_world.language_som_constructor}
   /// Creates a instance of [LangSom] (Somali language).
   ///
@@ -14,7 +14,7 @@ class LangSom extends NaturalLanguage {
   const factory LangSom() = _SomFactory;
 
   const LangSom._()
-    : super(
+    : super._(
         name: "Somali",
         code: "SOM",
         codeShort: "SO",

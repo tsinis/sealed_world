@@ -1,11 +1,11 @@
-part of "../../model/currency/currency.dart";
+part of "../../model/currency/submodels/fiat_currency.dart";
 
 extension type const _CnyFactory._(FiatCny _) implements FiatCny {
   const _CnyFactory() : this._(const FiatCny._());
 }
 
 /// A class that represents the Chinese Renminbi Yuan currency.
-class FiatCny extends FiatCurrency {
+final class FiatCny extends FiatCurrency {
   /// {@template sealed_world.currency_cny_constructor}
   /// Creates a instance of [FiatCny] (Chinese Renminbi Yuan currency).
   ///

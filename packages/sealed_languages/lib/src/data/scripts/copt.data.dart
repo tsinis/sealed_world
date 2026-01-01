@@ -1,11 +1,11 @@
-part of "../../model/script/writing_system.dart";
+part of "../../model/script/submodels/script.dart";
 
 extension type const _CoptFactory._(ScriptCopt _) implements ScriptCopt {
   const _CoptFactory() : this._(const ScriptCopt._());
 }
 
 /// A class that represents the Coptic script.
-class ScriptCopt extends Script {
+final class ScriptCopt extends Script {
   /// {@template sealed_world.script_copt_constructor}
   /// Creates a instance of [ScriptCopt] (Coptic script).
   ///
@@ -14,7 +14,7 @@ class ScriptCopt extends Script {
   const factory ScriptCopt() = _CoptFactory;
 
   const ScriptCopt._()
-    : super(
+    : super._(
         name: "Coptic",
         code: "Copt",
         codeNumeric: "204",

@@ -6,7 +6,7 @@
 [![Pub points](https://img.shields.io/pub/points/l10n_languages)](https://pub.dev/packages/l10n_languages/score)
 [![Last commit](https://img.shields.io/github/last-commit/tsinis/sealed_world)](https://github.com/tsinis/sealed_world/commits/main/packages/l10n_languages)
 [![GitHub stars](https://img.shields.io/github/stars/tsinis/sealed_world?style=flat&color=green)](https://github.com/tsinis/sealed_world/stargazers)
-![License](https://img.shields.io/github/license/tsinis/sealed_world)
+[![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
 [![Pub package](https://img.shields.io/pub/v/l10n_languages.svg)](https://pub.dev/packages/l10n_languages)
 
 This ISO-driven, pure Dart, fully tested and dependency-free package provides translations for language names in `157` different locales. For Flutter ready widgets (like language picker) please use [world_countries](https://pub.dev/packages/world_countries) package. For Dart-only use - it's recommended to use together with [sealed_languages](https://pub.dev/packages/sealed_languages) package.

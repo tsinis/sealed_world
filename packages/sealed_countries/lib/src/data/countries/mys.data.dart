@@ -4,7 +4,7 @@
 
 // ignore_for_file: prefer-digit-separators
 
-part of "../../model/country/country.dart";
+part of "../../model/country/submodels/world_country.dart";
 
 extension type const _MysFactory._(CountryMys _) implements CountryMys {
   const _MysFactory() : this._(const CountryMys._());
@@ -20,7 +20,7 @@ class CountryMys extends WorldCountry {
   const factory CountryMys() = _MysFactory;
 
   const CountryMys._()
-    : super(
+    : super._(
         name: const CountryName(
           language: LangEng(),
           official: "Malaysia",

@@ -4,7 +4,7 @@
 
 // ignore_for_file: prefer-digit-separators
 
-part of "../../model/country/country.dart";
+part of "../../model/country/submodels/world_country.dart";
 
 extension type const _TcdFactory._(CountryTcd _) implements CountryTcd {
   const _TcdFactory() : this._(const CountryTcd._());
@@ -20,7 +20,7 @@ class CountryTcd extends WorldCountry {
   const factory CountryTcd() = _TcdFactory;
 
   const CountryTcd._()
-    : super(
+    : super._(
         name: const CountryName(
           language: LangEng(),
           official: "Republic of Chad",

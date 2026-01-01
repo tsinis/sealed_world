@@ -1,6 +1,6 @@
-import "../../model/language/language.dart";
-import "../../model/language_family/language_family.dart";
-import "../../model/script/writing_system.dart";
+import "../../model/language/submodels/natural_language.dart";
+import "../../model/language_family/submodels/natural_language_family.dart";
+import "../../model/script/submodels/script.dart";
 import "../../typedefs/typedefs.dart";
 
 /// Extension on [NaturalLanguage] that provides a `copyWith` method for
@@ -30,8 +30,10 @@ extension NaturalLanguageCopyWith<T extends NaturalLanguage> on T {
     String? name,
     List<String>? namesNative,
     Set<Script>? scripts,
+
+    /// {@macro sealed_world.locale_mapper_callback}
     LocaleMapFunction<String> Function()? mapper,
-  }) => NaturalLanguage(
+  }) => LangCustom(
     name: name ?? this.name,
     codeShort: codeShort ?? this.codeShort,
     namesNative: namesNative ?? this.namesNative,

@@ -1,11 +1,11 @@
-part of "../../model/currency/currency.dart";
+part of "../../model/currency/submodels/fiat_currency.dart";
 
 extension type const _XptFactory._(FiatXpt _) implements FiatXpt {
   const _XptFactory() : this._(const FiatXpt._());
 }
 
 /// A class that represents the Platinum currency.
-class FiatXpt extends FiatCurrency {
+final class FiatXpt extends FiatCurrency {
   /// {@template sealed_world.currency_xpt_constructor}
   /// Creates a instance of [FiatXpt] (Platinum currency).
   ///

@@ -27,19 +27,43 @@ jobs:
 
   assign:
     name: ✍🏻 Auto-assign PR
-    runs-on: ubuntu-latest
+    runs-on: ubuntu-slim
     timeout-minutes: 4
     if: github.event.pull_request.user.login != 'dependabot[bot]'
     steps:
-      - name: ✍🏻 Add Reviewer and Author Assign
-        uses: devmyong/auto-assign@v1.0.1
-        env:
-          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
-          PR_NUMBER: ${{ github.event.number }}
+      - name: ✍🏻 Assign pull request
+        uses: actions/github-script@v8.0.0
+        with:
+          github-token: ${{ secrets.GITHUB_TOKEN }}
+          script: |
+            await github.rest.issues.addAssignees({
+              owner: context.repo.owner,
+              repo: context.repo.repo,
+              issue_number: context.payload.pull_request.number,
+              assignees: ["tsinis"],
+            });
+
+  reviewers:
+    name: 🧐 Auto-assign reviewers
+    runs-on: ubuntu-slim
+    timeout-minutes: 4
+    if: github.event.pull_request.user.login != 'tsinis'
+    steps:
+      - name: 🧐 Assign PR Reviewers
+        uses: actions/github-script@v8.0.0
+        with:
+          github-token: ${{ secrets.GITHUB_TOKEN }}
+          script: |
+            await github.rest.pulls.requestReviewers({
+              owner: context.repo.owner,
+              repo: context.repo.repo,
+              pull_number: context.payload.pull_request.number,
+              reviewers: ["tsinis"],
+            });
 
   pr-title:
     name: 📰 Lint PR Title
-    runs-on: ubuntu-slim
+    runs-on: ubuntu-latest
     timeout-minutes: 4
     steps:
       - name: 📰 Lint Pull Request Title
@@ -51,7 +75,7 @@ jobs:
 
   auto-approve:
     name: 🎟️ Auto-approve PR
-    runs-on: ubuntu-slim
+    runs-on: ubuntu-latest
     timeout-minutes: 4
     steps:
       - name: 🎟️ Approve Dependabot and owner

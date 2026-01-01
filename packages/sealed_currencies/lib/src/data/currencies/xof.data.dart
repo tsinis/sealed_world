@@ -1,11 +1,11 @@
-part of "../../model/currency/currency.dart";
+part of "../../model/currency/submodels/fiat_currency.dart";
 
 extension type const _XofFactory._(FiatXof _) implements FiatXof {
   const _XofFactory() : this._(const FiatXof._());
 }
 
 /// A class that represents the West African Cfa Franc currency.
-class FiatXof extends FiatCurrency {
+final class FiatXof extends FiatCurrency {
   /// {@template sealed_world.currency_xof_constructor}
   /// Creates a instance of [FiatXof] (West African Cfa Franc currency).
   ///

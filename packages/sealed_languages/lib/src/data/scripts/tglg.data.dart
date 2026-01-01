@@ -1,11 +1,11 @@
-part of "../../model/script/writing_system.dart";
+part of "../../model/script/submodels/script.dart";
 
 extension type const _TglgFactory._(ScriptTglg _) implements ScriptTglg {
   const _TglgFactory() : this._(const ScriptTglg._());
 }
 
 /// A class that represents the Tagalog (Baybayin, Alibata) script.
-class ScriptTglg extends Script {
+final class ScriptTglg extends Script {
   /// {@template sealed_world.script_tglg_constructor}
   /// Creates a instance of [ScriptTglg] (Tagalog (Baybayin, Alibata) script).
   ///
@@ -14,7 +14,7 @@ class ScriptTglg extends Script {
   const factory ScriptTglg() = _TglgFactory;
 
   const ScriptTglg._()
-    : super(
+    : super._(
         name: "Tagalog (Baybayin, Alibata)",
         code: "Tglg",
         codeNumeric: "370",

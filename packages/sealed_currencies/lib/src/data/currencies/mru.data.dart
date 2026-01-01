@@ -1,11 +1,11 @@
-part of "../../model/currency/currency.dart";
+part of "../../model/currency/submodels/fiat_currency.dart";
 
 extension type const _MruFactory._(FiatMru _) implements FiatMru {
   const _MruFactory() : this._(const FiatMru._());
 }
 
 /// A class that represents the Mauritanian Ouguiya currency.
-class FiatMru extends FiatCurrency {
+final class FiatMru extends FiatCurrency {
   /// {@template sealed_world.currency_mru_constructor}
   /// Creates a instance of [FiatMru] (Mauritanian Ouguiya currency).
   ///

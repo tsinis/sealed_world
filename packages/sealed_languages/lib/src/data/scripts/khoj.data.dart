@@ -1,11 +1,11 @@
-part of "../../model/script/writing_system.dart";
+part of "../../model/script/submodels/script.dart";
 
 extension type const _KhojFactory._(ScriptKhoj _) implements ScriptKhoj {
   const _KhojFactory() : this._(const ScriptKhoj._());
 }
 
 /// A class that represents the Khojki script.
-class ScriptKhoj extends Script {
+final class ScriptKhoj extends Script {
   /// {@template sealed_world.script_khoj_constructor}
   /// Creates a instance of [ScriptKhoj] (Khojki script).
   ///
@@ -14,7 +14,7 @@ class ScriptKhoj extends Script {
   const factory ScriptKhoj() = _KhojFactory;
 
   const ScriptKhoj._()
-    : super(
+    : super._(
         name: "Khojki",
         code: "Khoj",
         codeNumeric: "322",

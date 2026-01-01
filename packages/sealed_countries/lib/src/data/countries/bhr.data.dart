@@ -4,7 +4,7 @@
 
 // ignore_for_file: prefer-digit-separators
 
-part of "../../model/country/country.dart";
+part of "../../model/country/submodels/world_country.dart";
 
 extension type const _BhrFactory._(CountryBhr _) implements CountryBhr {
   const _BhrFactory() : this._(const CountryBhr._());
@@ -20,7 +20,7 @@ class CountryBhr extends WorldCountry {
   const factory CountryBhr() = _BhrFactory;
 
   const CountryBhr._()
-    : super(
+    : super._(
         name: const CountryName(
           language: LangEng(),
           official: "Kingdom of Bahrain",

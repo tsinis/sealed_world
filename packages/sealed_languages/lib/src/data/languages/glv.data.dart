@@ -1,11 +1,11 @@
-part of "../../model/language/language.dart";
+part of "../../model/language/submodels/natural_language.dart";
 
 extension type const _GlvFactory._(LangGlv _) implements LangGlv {
   const _GlvFactory() : this._(const LangGlv._());
 }
 
 /// A class that represents the Manx language.
-class LangGlv extends NaturalLanguage {
+final class LangGlv extends NaturalLanguage {
   /// {@template sealed_world.language_glv_constructor}
   /// Creates a instance of [LangGlv] (Manx language).
   ///
@@ -14,7 +14,7 @@ class LangGlv extends NaturalLanguage {
   const factory LangGlv() = _GlvFactory;
 
   const LangGlv._()
-    : super(
+    : super._(
         name: "Manx",
         code: "GLV",
         codeShort: "GV",

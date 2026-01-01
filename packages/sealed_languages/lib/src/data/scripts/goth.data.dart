@@ -1,11 +1,11 @@
-part of "../../model/script/writing_system.dart";
+part of "../../model/script/submodels/script.dart";
 
 extension type const _GothFactory._(ScriptGoth _) implements ScriptGoth {
   const _GothFactory() : this._(const ScriptGoth._());
 }
 
 /// A class that represents the Gothic script.
-class ScriptGoth extends Script {
+final class ScriptGoth extends Script {
   /// {@template sealed_world.script_goth_constructor}
   /// Creates a instance of [ScriptGoth] (Gothic script).
   ///
@@ -14,7 +14,7 @@ class ScriptGoth extends Script {
   const factory ScriptGoth() = _GothFactory;
 
   const ScriptGoth._()
-    : super(
+    : super._(
         name: "Gothic",
         code: "Goth",
         codeNumeric: "206",

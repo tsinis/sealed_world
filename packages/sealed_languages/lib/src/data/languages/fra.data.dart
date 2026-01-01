@@ -1,11 +1,11 @@
-part of "../../model/language/language.dart";
+part of "../../model/language/submodels/natural_language.dart";
 
 extension type const _FraFactory._(LangFra _) implements LangFra {
   const _FraFactory() : this._(const LangFra._());
 }
 
 /// A class that represents the French language.
-class LangFra extends NaturalLanguage {
+final class LangFra extends NaturalLanguage {
   /// {@template sealed_world.language_fra_constructor}
   /// Creates a instance of [LangFra] (French language).
   ///
@@ -14,7 +14,7 @@ class LangFra extends NaturalLanguage {
   const factory LangFra() = _FraFactory;
 
   const LangFra._()
-    : super(
+    : super._(
         name: "French",
         code: "FRA",
         codeShort: "FR",

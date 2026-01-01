@@ -1,11 +1,11 @@
-part of "../../model/currency/currency.dart";
+part of "../../model/currency/submodels/fiat_currency.dart";
 
 extension type const _AznFactory._(FiatAzn _) implements FiatAzn {
   const _AznFactory() : this._(const FiatAzn._());
 }
 
 /// A class that represents the Azerbaijani Manat currency.
-class FiatAzn extends FiatCurrency {
+final class FiatAzn extends FiatCurrency {
   /// {@template sealed_world.currency_azn_constructor}
   /// Creates a instance of [FiatAzn] (Azerbaijani Manat currency).
   ///

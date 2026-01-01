@@ -4,7 +4,7 @@
 
 // ignore_for_file: prefer-digit-separators
 
-part of "../../model/country/country.dart";
+part of "../../model/country/submodels/world_country.dart";
 
 extension type const _MdaFactory._(CountryMda _) implements CountryMda {
   const _MdaFactory() : this._(const CountryMda._());
@@ -20,7 +20,7 @@ class CountryMda extends WorldCountry {
   const factory CountryMda() = _MdaFactory;
 
   const CountryMda._()
-    : super(
+    : super._(
         name: const CountryName(
           language: LangEng(),
           official: "Republic of Moldova",

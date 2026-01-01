@@ -1,11 +1,11 @@
-part of "../../model/script/writing_system.dart";
+part of "../../model/script/submodels/script.dart";
 
 extension type const _MahjFactory._(ScriptMahj _) implements ScriptMahj {
   const _MahjFactory() : this._(const ScriptMahj._());
 }
 
 /// A class that represents the Mahajani script.
-class ScriptMahj extends Script {
+final class ScriptMahj extends Script {
   /// {@template sealed_world.script_mahj_constructor}
   /// Creates a instance of [ScriptMahj] (Mahajani script).
   ///
@@ -14,7 +14,7 @@ class ScriptMahj extends Script {
   const factory ScriptMahj() = _MahjFactory;
 
   const ScriptMahj._()
-    : super(
+    : super._(
         name: "Mahajani",
         code: "Mahj",
         codeNumeric: "314",

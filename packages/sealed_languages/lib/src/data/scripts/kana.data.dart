@@ -1,11 +1,11 @@
-part of "../../model/script/writing_system.dart";
+part of "../../model/script/submodels/script.dart";
 
 extension type const _KanaFactory._(ScriptKana _) implements ScriptKana {
   const _KanaFactory() : this._(const ScriptKana._());
 }
 
 /// A class that represents the Katakana script.
-class ScriptKana extends Script {
+final class ScriptKana extends Script {
   /// {@template sealed_world.script_kana_constructor}
   /// Creates a instance of [ScriptKana] (Katakana script).
   ///
@@ -14,7 +14,7 @@ class ScriptKana extends Script {
   const factory ScriptKana() = _KanaFactory;
 
   const ScriptKana._()
-    : super(
+    : super._(
         name: "Katakana",
         code: "Kana",
         codeNumeric: "411",

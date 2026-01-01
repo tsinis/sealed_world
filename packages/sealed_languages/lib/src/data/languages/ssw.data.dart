@@ -1,11 +1,11 @@
-part of "../../model/language/language.dart";
+part of "../../model/language/submodels/natural_language.dart";
 
 extension type const _SswFactory._(LangSsw _) implements LangSsw {
   const _SswFactory() : this._(const LangSsw._());
 }
 
 /// A class that represents the Swati language.
-class LangSsw extends NaturalLanguage {
+final class LangSsw extends NaturalLanguage {
   /// {@template sealed_world.language_ssw_constructor}
   /// Creates a instance of [LangSsw] (Swati language).
   ///
@@ -14,7 +14,7 @@ class LangSsw extends NaturalLanguage {
   const factory LangSsw() = _SswFactory;
 
   const LangSsw._()
-    : super(
+    : super._(
         name: "Swati",
         code: "SSW",
         codeShort: "SS",

@@ -1,11 +1,11 @@
-part of "../../model/language/language.dart";
+part of "../../model/language/submodels/natural_language.dart";
 
 extension type const _MalFactory._(LangMal _) implements LangMal {
   const _MalFactory() : this._(const LangMal._());
 }
 
 /// A class that represents the Malayalam language.
-class LangMal extends NaturalLanguage {
+final class LangMal extends NaturalLanguage {
   /// {@template sealed_world.language_mal_constructor}
   /// Creates a instance of [LangMal] (Malayalam language).
   ///
@@ -14,7 +14,7 @@ class LangMal extends NaturalLanguage {
   const factory LangMal() = _MalFactory;
 
   const LangMal._()
-    : super(
+    : super._(
         name: "Malayalam",
         code: "MAL",
         codeShort: "ML",

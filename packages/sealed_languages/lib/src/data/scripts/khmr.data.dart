@@ -1,11 +1,11 @@
-part of "../../model/script/writing_system.dart";
+part of "../../model/script/submodels/script.dart";
 
 extension type const _KhmrFactory._(ScriptKhmr _) implements ScriptKhmr {
   const _KhmrFactory() : this._(const ScriptKhmr._());
 }
 
 /// A class that represents the Khmer script.
-class ScriptKhmr extends Script {
+final class ScriptKhmr extends Script {
   /// {@template sealed_world.script_khmr_constructor}
   /// Creates a instance of [ScriptKhmr] (Khmer script).
   ///
@@ -14,7 +14,7 @@ class ScriptKhmr extends Script {
   const factory ScriptKhmr() = _KhmrFactory;
 
   const ScriptKhmr._()
-    : super(
+    : super._(
         name: "Khmer",
         code: "Khmr",
         codeNumeric: "355",

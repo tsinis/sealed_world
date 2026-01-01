@@ -1,11 +1,11 @@
-part of "../../model/language/language.dart";
+part of "../../model/language/submodels/natural_language.dart";
 
 extension type const _SnaFactory._(LangSna _) implements LangSna {
   const _SnaFactory() : this._(const LangSna._());
 }
 
 /// A class that represents the Shona language.
-class LangSna extends NaturalLanguage {
+final class LangSna extends NaturalLanguage {
   /// {@template sealed_world.language_sna_constructor}
   /// Creates a instance of [LangSna] (Shona language).
   ///
@@ -14,7 +14,7 @@ class LangSna extends NaturalLanguage {
   const factory LangSna() = _SnaFactory;
 
   const LangSna._()
-    : super(
+    : super._(
         name: "Shona",
         code: "SNA",
         codeShort: "SN",

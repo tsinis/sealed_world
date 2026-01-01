@@ -4,8 +4,8 @@ import "../helpers/extensions/basic_locale_extension.dart";
 import "../helpers/extensions/locale_mapping_options_extension.dart";
 import "../model/core/basic_locale.dart";
 import "../model/core/locale_mapping_options.dart";
-import "../model/language/language.dart";
-import "../model/script/writing_system.dart";
+import "../model/language/submodels/natural_language.dart";
+import "../model/script/submodels/script.dart";
 import "../model/translated_name.dart";
 import "../typedefs/typedefs.dart";
 import "iso_standardized.dart";
@@ -24,8 +24,9 @@ abstract class BasicLocalizationDelegate<
   /// Parameters:
   /// - [languages]: Optional collection of supported languages for locale
   ///       parsing.
-  /// - [mapper]: Optional function that returns locale mapping function
   /// - [scripts]: Optional collection of supported scripts for locale parsing.
+  /// - [mapper]:
+  /// {@macro sealed_world.locale_mapper_callback}
   const BasicLocalizationDelegate({this.languages, this.mapper, this.scripts});
 
   /// Optional collection of supported languages. Used to limit locale parsing
@@ -43,11 +44,13 @@ abstract class BasicLocalizationDelegate<
 
   /// Regular expression pattern for parsing Unicode locale identifiers.
   static const unicodeLocale =
-      r"^(\p{L}{2})(?:[_\s-]+(?:(\p{L}{4})|(\p{L}{2}))?)?(?:[_\s-]+(\p{L}{2}))?$";
+      r"^(\p{L}{2,3})(?:[_\s-]+(?:(\p{L}{4})(?:[_\s-]+(\p{L}{2,3}))?|(\p{L}{2,3})))?$";
 
   /// {@macro copy_with_method}
   BasicLocalizationDelegate<L, T> copyWith({
     Iterable<NaturalLanguage>? languages,
+
+    /// {@macro sealed_world.locale_mapper_callback}
     LocaleMapFunction<String> Function()? mapper,
     Iterable<Script>? scripts,
   });
@@ -88,18 +91,17 @@ abstract class BasicLocalizationDelegate<
   ///
   /// Returns a locale of type [L] if valid, `null` otherwise.
   L? parseLocale(Object? locale) {
-    final match = localePattern.firstMatch(locale?.toString() ?? "");
-    final lang = NaturalLanguage.maybeFromCodeShort(match?.group(1), languages);
+    final input = locale?.toString().trim() ?? "";
+    if (input.isEmpty) return null;
+
+    final match = localePattern.firstMatch(input);
+    final lang = NaturalLanguage.maybeFromAnyCode(match?.group(1), languages);
     if (lang == null) return null;
 
     final maybeCountryCode = match?.group(3) ?? match?.group(4);
-    final maybeScriptCode = match?.group(2);
+    final maybeScript = Script.maybeFromCode(match?.group(2), scripts);
 
-    return toLocale(
-      lang,
-      Script.maybeFromCode(maybeScriptCode, scripts),
-      maybeCountryCode?.toUpperCase(),
-    );
+    return toLocale(lang, maybeScript, maybeCountryCode?.toUpperCase());
   }
 
   /// Creates a map of ISO codes to their common names in the specified locale.

@@ -1,11 +1,11 @@
-part of "../../model/script/writing_system.dart";
+part of "../../model/script/submodels/script.dart";
 
 extension type const _BatkFactory._(ScriptBatk _) implements ScriptBatk {
   const _BatkFactory() : this._(const ScriptBatk._());
 }
 
 /// A class that represents the Batak script.
-class ScriptBatk extends Script {
+final class ScriptBatk extends Script {
   /// {@template sealed_world.script_batk_constructor}
   /// Creates a instance of [ScriptBatk] (Batak script).
   ///
@@ -14,7 +14,7 @@ class ScriptBatk extends Script {
   const factory ScriptBatk() = _BatkFactory;
 
   const ScriptBatk._()
-    : super(
+    : super._(
         name: "Batak",
         code: "Batk",
         codeNumeric: "365",

@@ -1,11 +1,11 @@
-part of "../../model/currency/currency.dart";
+part of "../../model/currency/submodels/fiat_currency.dart";
 
 extension type const _BwpFactory._(FiatBwp _) implements FiatBwp {
   const _BwpFactory() : this._(const FiatBwp._());
 }
 
 /// A class that represents the Botswanan Pula currency.
-class FiatBwp extends FiatCurrency {
+final class FiatBwp extends FiatCurrency {
   /// {@template sealed_world.currency_bwp_constructor}
   /// Creates a instance of [FiatBwp] (Botswanan Pula currency).
   ///

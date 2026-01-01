@@ -1,11 +1,11 @@
-part of "../../model/currency/currency.dart";
+part of "../../model/currency/submodels/fiat_currency.dart";
 
 extension type const _LslFactory._(FiatLsl _) implements FiatLsl {
   const _LslFactory() : this._(const FiatLsl._());
 }
 
 /// A class that represents the Lesotho Loti currency.
-class FiatLsl extends FiatCurrency {
+final class FiatLsl extends FiatCurrency {
   /// {@template sealed_world.currency_lsl_constructor}
   /// Creates a instance of [FiatLsl] (Lesotho Loti currency).
   ///

@@ -2,8 +2,8 @@ import "../../helpers/extensions/basic_locale_extension.dart";
 import "../../helpers/extensions/iso_string_extension_type.dart";
 import "../../interfaces/iso_standardized.dart";
 import "../../interfaces/json_encodable.dart";
-import "../language/language.dart";
-import "../script/writing_system.dart";
+import "../language/submodels/natural_language.dart";
+import "../script/submodels/script.dart";
 
 /// A basic representation of a locale.
 class BasicLocale implements JsonEncodable<BasicLocale> {

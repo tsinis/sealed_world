@@ -1,7 +1,230 @@
-part of "../writing_system.dart";
+import "../../../collections/script_collections.dart";
+import "../../../helpers/extensions/iso_object_extension_type.dart";
+import "../../../helpers/extensions/sealed_world_iterable_extension.dart";
+import "../../../helpers/extensions/upper_case_iso_map_extension.dart";
+import "../../../helpers/script/script_json.dart";
+import "../../../interfaces/iso_standardized.dart";
+import "../../../interfaces/json_encodable.dart";
+import "../../core/upper_case_iso_map.dart";
+import "../writing_system.dart";
 
-/// A class that represents a script used in writing systems.
-class Script extends WritingSystem
+part "../../../data/scripts/adlm.data.dart";
+part "../../../data/scripts/afak.data.dart";
+part "../../../data/scripts/aghb.data.dart";
+part "../../../data/scripts/ahom.data.dart";
+part "../../../data/scripts/arab.data.dart";
+part "../../../data/scripts/aran.data.dart";
+part "../../../data/scripts/armi.data.dart";
+part "../../../data/scripts/armn.data.dart";
+part "../../../data/scripts/avst.data.dart";
+part "../../../data/scripts/bali.data.dart";
+part "../../../data/scripts/bamu.data.dart";
+part "../../../data/scripts/bass.data.dart";
+part "../../../data/scripts/batk.data.dart";
+part "../../../data/scripts/beng.data.dart";
+part "../../../data/scripts/bhks.data.dart";
+part "../../../data/scripts/blis.data.dart";
+part "../../../data/scripts/bopo.data.dart";
+part "../../../data/scripts/brah.data.dart";
+part "../../../data/scripts/brai.data.dart";
+part "../../../data/scripts/bugi.data.dart";
+part "../../../data/scripts/buhd.data.dart";
+part "../../../data/scripts/cakm.data.dart";
+part "../../../data/scripts/cans.data.dart";
+part "../../../data/scripts/cari.data.dart";
+part "../../../data/scripts/cham.data.dart";
+part "../../../data/scripts/cher.data.dart";
+part "../../../data/scripts/chrs.data.dart";
+part "../../../data/scripts/cirt.data.dart";
+part "../../../data/scripts/copt.data.dart";
+part "../../../data/scripts/cpmn.data.dart";
+part "../../../data/scripts/cprt.data.dart";
+part "../../../data/scripts/custom.data.dart";
+part "../../../data/scripts/cyrl.data.dart";
+part "../../../data/scripts/cyrs.data.dart";
+part "../../../data/scripts/deva.data.dart";
+part "../../../data/scripts/diak.data.dart";
+part "../../../data/scripts/dogr.data.dart";
+part "../../../data/scripts/dsrt.data.dart";
+part "../../../data/scripts/dupl.data.dart";
+part "../../../data/scripts/egyd.data.dart";
+part "../../../data/scripts/egyh.data.dart";
+part "../../../data/scripts/egyp.data.dart";
+part "../../../data/scripts/elba.data.dart";
+part "../../../data/scripts/elym.data.dart";
+part "../../../data/scripts/ethi.data.dart";
+part "../../../data/scripts/geok.data.dart";
+part "../../../data/scripts/geor.data.dart";
+part "../../../data/scripts/glag.data.dart";
+part "../../../data/scripts/gong.data.dart";
+part "../../../data/scripts/gonm.data.dart";
+part "../../../data/scripts/goth.data.dart";
+part "../../../data/scripts/gran.data.dart";
+part "../../../data/scripts/grek.data.dart";
+part "../../../data/scripts/gujr.data.dart";
+part "../../../data/scripts/guru.data.dart";
+part "../../../data/scripts/hanb.data.dart";
+part "../../../data/scripts/hang.data.dart";
+part "../../../data/scripts/hani.data.dart";
+part "../../../data/scripts/hano.data.dart";
+part "../../../data/scripts/hans.data.dart";
+part "../../../data/scripts/hant.data.dart";
+part "../../../data/scripts/hatr.data.dart";
+part "../../../data/scripts/hebr.data.dart";
+part "../../../data/scripts/hira.data.dart";
+part "../../../data/scripts/hluw.data.dart";
+part "../../../data/scripts/hmng.data.dart";
+part "../../../data/scripts/hmnp.data.dart";
+part "../../../data/scripts/hrkt.data.dart";
+part "../../../data/scripts/hung.data.dart";
+part "../../../data/scripts/inds.data.dart";
+part "../../../data/scripts/ital.data.dart";
+part "../../../data/scripts/jamo.data.dart";
+part "../../../data/scripts/java.data.dart";
+part "../../../data/scripts/jpan.data.dart";
+part "../../../data/scripts/jurc.data.dart";
+part "../../../data/scripts/kali.data.dart";
+part "../../../data/scripts/kana.data.dart";
+part "../../../data/scripts/kawi.data.dart";
+part "../../../data/scripts/khar.data.dart";
+part "../../../data/scripts/khmr.data.dart";
+part "../../../data/scripts/khoj.data.dart";
+part "../../../data/scripts/kitl.data.dart";
+part "../../../data/scripts/kits.data.dart";
+part "../../../data/scripts/knda.data.dart";
+part "../../../data/scripts/kore.data.dart";
+part "../../../data/scripts/kpel.data.dart";
+part "../../../data/scripts/kthi.data.dart";
+part "../../../data/scripts/lana.data.dart";
+part "../../../data/scripts/laoo.data.dart";
+part "../../../data/scripts/latf.data.dart";
+part "../../../data/scripts/latg.data.dart";
+part "../../../data/scripts/latn.data.dart";
+part "../../../data/scripts/leke.data.dart";
+part "../../../data/scripts/lepc.data.dart";
+part "../../../data/scripts/limb.data.dart";
+part "../../../data/scripts/lina.data.dart";
+part "../../../data/scripts/linb.data.dart";
+part "../../../data/scripts/lisu.data.dart";
+part "../../../data/scripts/loma.data.dart";
+part "../../../data/scripts/lyci.data.dart";
+part "../../../data/scripts/lydi.data.dart";
+part "../../../data/scripts/mahj.data.dart";
+part "../../../data/scripts/maka.data.dart";
+part "../../../data/scripts/mand.data.dart";
+part "../../../data/scripts/mani.data.dart";
+part "../../../data/scripts/marc.data.dart";
+part "../../../data/scripts/maya.data.dart";
+part "../../../data/scripts/medf.data.dart";
+part "../../../data/scripts/mend.data.dart";
+part "../../../data/scripts/merc.data.dart";
+part "../../../data/scripts/mero.data.dart";
+part "../../../data/scripts/mlym.data.dart";
+part "../../../data/scripts/modi.data.dart";
+part "../../../data/scripts/mong.data.dart";
+part "../../../data/scripts/moon.data.dart";
+part "../../../data/scripts/mroo.data.dart";
+part "../../../data/scripts/mtei.data.dart";
+part "../../../data/scripts/mult.data.dart";
+part "../../../data/scripts/mymr.data.dart";
+part "../../../data/scripts/nagm.data.dart";
+part "../../../data/scripts/nand.data.dart";
+part "../../../data/scripts/narb.data.dart";
+part "../../../data/scripts/nbat.data.dart";
+part "../../../data/scripts/newa.data.dart";
+part "../../../data/scripts/nkdb.data.dart";
+part "../../../data/scripts/nkgb.data.dart";
+part "../../../data/scripts/nkoo.data.dart";
+part "../../../data/scripts/nshu.data.dart";
+part "../../../data/scripts/ogam.data.dart";
+part "../../../data/scripts/olck.data.dart";
+part "../../../data/scripts/orkh.data.dart";
+part "../../../data/scripts/orya.data.dart";
+part "../../../data/scripts/osge.data.dart";
+part "../../../data/scripts/osma.data.dart";
+part "../../../data/scripts/ougr.data.dart";
+part "../../../data/scripts/palm.data.dart";
+part "../../../data/scripts/pauc.data.dart";
+part "../../../data/scripts/pcun.data.dart";
+part "../../../data/scripts/pelm.data.dart";
+part "../../../data/scripts/perm.data.dart";
+part "../../../data/scripts/phag.data.dart";
+part "../../../data/scripts/phli.data.dart";
+part "../../../data/scripts/phlp.data.dart";
+part "../../../data/scripts/phlv.data.dart";
+part "../../../data/scripts/phnx.data.dart";
+part "../../../data/scripts/piqd.data.dart";
+part "../../../data/scripts/plrd.data.dart";
+part "../../../data/scripts/prti.data.dart";
+part "../../../data/scripts/psin.data.dart";
+part "../../../data/scripts/qaaa.data.dart";
+part "../../../data/scripts/qabx.data.dart";
+part "../../../data/scripts/ranj.data.dart";
+part "../../../data/scripts/rjng.data.dart";
+part "../../../data/scripts/rohg.data.dart";
+part "../../../data/scripts/roro.data.dart";
+part "../../../data/scripts/runr.data.dart";
+part "../../../data/scripts/samr.data.dart";
+part "../../../data/scripts/sara.data.dart";
+part "../../../data/scripts/sarb.data.dart";
+part "../../../data/scripts/saur.data.dart";
+part "../../../data/scripts/sgnw.data.dart";
+part "../../../data/scripts/shaw.data.dart";
+part "../../../data/scripts/shrd.data.dart";
+part "../../../data/scripts/shui.data.dart";
+part "../../../data/scripts/sidd.data.dart";
+part "../../../data/scripts/sind.data.dart";
+part "../../../data/scripts/sinh.data.dart";
+part "../../../data/scripts/sogd.data.dart";
+part "../../../data/scripts/sogo.data.dart";
+part "../../../data/scripts/sora.data.dart";
+part "../../../data/scripts/soyo.data.dart";
+part "../../../data/scripts/sund.data.dart";
+part "../../../data/scripts/sunu.data.dart";
+part "../../../data/scripts/sylo.data.dart";
+part "../../../data/scripts/syrc.data.dart";
+part "../../../data/scripts/syre.data.dart";
+part "../../../data/scripts/syrj.data.dart";
+part "../../../data/scripts/syrn.data.dart";
+part "../../../data/scripts/tagb.data.dart";
+part "../../../data/scripts/takr.data.dart";
+part "../../../data/scripts/tale.data.dart";
+part "../../../data/scripts/talu.data.dart";
+part "../../../data/scripts/taml.data.dart";
+part "../../../data/scripts/tang.data.dart";
+part "../../../data/scripts/tavt.data.dart";
+part "../../../data/scripts/telu.data.dart";
+part "../../../data/scripts/teng.data.dart";
+part "../../../data/scripts/tfng.data.dart";
+part "../../../data/scripts/tglg.data.dart";
+part "../../../data/scripts/thaa.data.dart";
+part "../../../data/scripts/thai.data.dart";
+part "../../../data/scripts/tibt.data.dart";
+part "../../../data/scripts/tirh.data.dart";
+part "../../../data/scripts/tnsa.data.dart";
+part "../../../data/scripts/toto.data.dart";
+part "../../../data/scripts/ugar.data.dart";
+part "../../../data/scripts/vaii.data.dart";
+part "../../../data/scripts/visp.data.dart";
+part "../../../data/scripts/vith.data.dart";
+part "../../../data/scripts/wara.data.dart";
+part "../../../data/scripts/wcho.data.dart";
+part "../../../data/scripts/wole.data.dart";
+part "../../../data/scripts/xpeo.data.dart";
+part "../../../data/scripts/xsux.data.dart";
+part "../../../data/scripts/yezi.data.dart";
+part "../../../data/scripts/yiii.data.dart";
+part "../../../data/scripts/zanb.data.dart";
+part "../../../data/scripts/zinh.data.dart";
+part "../../../data/scripts/zmth.data.dart";
+part "../../../data/scripts/zsye.data.dart";
+part "../../../data/scripts/zsym.data.dart";
+part "../../../data/scripts/zxxx.data.dart";
+part "../../../data/scripts/zyyy.data.dart";
+part "../../../data/scripts/zzzz.data.dart";
+
+/// A sealed class that represents a script used in writing systems.
+sealed class Script extends WritingSystem
     implements
         IsoStandardized<String>,
         JsonEncodable<Script>,
@@ -18,7 +241,7 @@ class Script extends WritingSystem
   /// date of addition of the script. The optional [pva] parameter is a string
   /// representing the property value alias for the script.
   /// {@endtemplate}
-  const Script({
+  const Script._({
     required super.name,
     required this.code,
     required this.codeNumeric,
@@ -36,13 +259,16 @@ class Script extends WritingSystem
 
   /// {@macro permissive_constructor}
   /// {@macro script_constructor}
-  const Script.custom({
-    required super.name,
-    required this.code,
+  const Script._permissive({
+    this.code = "",
+    super.name = " ",
     this.codeNumeric = "",
     this.date = "",
     this.pva,
-  });
+  }) : assert(
+         code.length > 0 || codeNumeric.length > 0,
+         "The `code` (or at least `codeNumeric`) must be provided!",
+       );
 
   /// {@macro sealed_world.script_adlm_constructor}
   const factory Script.adlm() = _AdlmFactory;

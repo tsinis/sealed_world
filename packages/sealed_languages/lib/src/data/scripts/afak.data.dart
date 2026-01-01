@@ -1,11 +1,11 @@
-part of "../../model/script/writing_system.dart";
+part of "../../model/script/submodels/script.dart";
 
 extension type const _AfakFactory._(ScriptAfak _) implements ScriptAfak {
   const _AfakFactory() : this._(const ScriptAfak._());
 }
 
 /// A class that represents the Afaka script.
-class ScriptAfak extends Script {
+final class ScriptAfak extends Script {
   /// {@template sealed_world.script_afak_constructor}
   /// Creates a instance of [ScriptAfak] (Afaka script).
   ///
@@ -14,7 +14,7 @@ class ScriptAfak extends Script {
   const factory ScriptAfak() = _AfakFactory;
 
   const ScriptAfak._()
-    : super(
+    : super._(
         name: "Afaka",
         code: "Afak",
         codeNumeric: "439",

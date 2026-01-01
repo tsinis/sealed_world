@@ -4,7 +4,7 @@
 
 // ignore_for_file: prefer-digit-separators
 
-part of "../../model/country/country.dart";
+part of "../../model/country/submodels/world_country.dart";
 
 extension type const _GlpFactory._(CountryGlp _) implements CountryGlp {
   const _GlpFactory() : this._(const CountryGlp._());
@@ -20,7 +20,7 @@ class CountryGlp extends WorldCountry {
   const factory CountryGlp() = _GlpFactory;
 
   const CountryGlp._()
-    : super(
+    : super._(
         name: const CountryName(
           language: LangEng(),
           official: "Guadeloupe",

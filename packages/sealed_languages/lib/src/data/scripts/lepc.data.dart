@@ -1,11 +1,11 @@
-part of "../../model/script/writing_system.dart";
+part of "../../model/script/submodels/script.dart";
 
 extension type const _LepcFactory._(ScriptLepc _) implements ScriptLepc {
   const _LepcFactory() : this._(const ScriptLepc._());
 }
 
 /// A class that represents the Lepcha (Róng) script.
-class ScriptLepc extends Script {
+final class ScriptLepc extends Script {
   /// {@template sealed_world.script_lepc_constructor}
   /// Creates a instance of [ScriptLepc] (Lepcha (Róng) script).
   ///
@@ -14,7 +14,7 @@ class ScriptLepc extends Script {
   const factory ScriptLepc() = _LepcFactory;
 
   const ScriptLepc._()
-    : super(
+    : super._(
         name: "Lepcha (Róng)",
         code: "Lepc",
         codeNumeric: "335",

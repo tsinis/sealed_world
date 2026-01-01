@@ -1,11 +1,11 @@
-part of "../../model/language/language.dart";
+part of "../../model/language/submodels/natural_language.dart";
 
 extension type const _SndFactory._(LangSnd _) implements LangSnd {
   const _SndFactory() : this._(const LangSnd._());
 }
 
 /// A class that represents the Sindhi language.
-class LangSnd extends NaturalLanguage {
+final class LangSnd extends NaturalLanguage {
   /// {@template sealed_world.language_snd_constructor}
   /// Creates a instance of [LangSnd] (Sindhi language).
   ///
@@ -14,7 +14,7 @@ class LangSnd extends NaturalLanguage {
   const factory LangSnd() = _SndFactory;
 
   const LangSnd._()
-    : super(
+    : super._(
         name: "Sindhi",
         code: "SND",
         codeShort: "SD",

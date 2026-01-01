@@ -1,11 +1,11 @@
-part of "../../model/currency/currency.dart";
+part of "../../model/currency/submodels/fiat_currency.dart";
 
 extension type const _UgxFactory._(FiatUgx _) implements FiatUgx {
   const _UgxFactory() : this._(const FiatUgx._());
 }
 
 /// A class that represents the Ugandan Shilling currency.
-class FiatUgx extends FiatCurrency {
+final class FiatUgx extends FiatCurrency {
   /// {@template sealed_world.currency_ugx_constructor}
   /// Creates a instance of [FiatUgx] (Ugandan Shilling currency).
   ///

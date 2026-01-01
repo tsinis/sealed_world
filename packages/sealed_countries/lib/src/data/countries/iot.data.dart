@@ -4,7 +4,7 @@
 
 // ignore_for_file: prefer-digit-separators
 
-part of "../../model/country/country.dart";
+part of "../../model/country/submodels/world_country.dart";
 
 extension type const _IotFactory._(CountryIot _) implements CountryIot {
   const _IotFactory() : this._(const CountryIot._());
@@ -13,14 +13,15 @@ extension type const _IotFactory._(CountryIot _) implements CountryIot {
 /// A class that represents the British Indian Ocean Territory country.
 class CountryIot extends WorldCountry {
   /// {@template sealed_world.country_iot_constructor}
-  /// Creates a instance of [CountryIot] (British Indian Ocean Territory country).
+  /// Creates a instance of [CountryIot] (British Indian Ocean Territory
+  /// country).
   ///
   /// ISO 3166-1 Alpha-3 code: `IOT`, ISO 3166-1 Alpha-2 code: `IO`.
   /// {@endtemplate}
   const factory CountryIot() = _IotFactory;
 
   const CountryIot._()
-    : super(
+    : super._(
         name: const CountryName(
           language: LangEng(),
           official: "British Indian Ocean Territory",

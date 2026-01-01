@@ -1,11 +1,11 @@
-part of "../../model/currency/currency.dart";
+part of "../../model/currency/submodels/fiat_currency.dart";
 
 extension type const _GmdFactory._(FiatGmd _) implements FiatGmd {
   const _GmdFactory() : this._(const FiatGmd._());
 }
 
 /// A class that represents the Gambian Dalasi currency.
-class FiatGmd extends FiatCurrency {
+final class FiatGmd extends FiatCurrency {
   /// {@template sealed_world.currency_gmd_constructor}
   /// Creates a instance of [FiatGmd] (Gambian Dalasi currency).
   ///

@@ -1,11 +1,11 @@
-part of "../../model/language/language.dart";
+part of "../../model/language/submodels/natural_language.dart";
 
 extension type const _SqiFactory._(LangSqi _) implements LangSqi {
   const _SqiFactory() : this._(const LangSqi._());
 }
 
 /// A class that represents the Albanian language.
-class LangSqi extends NaturalLanguage {
+final class LangSqi extends NaturalLanguage {
   /// {@template sealed_world.language_sqi_constructor}
   /// Creates a instance of [LangSqi] (Albanian language).
   ///
@@ -14,7 +14,7 @@ class LangSqi extends NaturalLanguage {
   const factory LangSqi() = _SqiFactory;
 
   const LangSqi._()
-    : super(
+    : super._(
         name: "Albanian",
         code: "SQI",
         codeShort: "SQ",

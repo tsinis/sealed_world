@@ -1,11 +1,11 @@
-part of "../../model/script/writing_system.dart";
+part of "../../model/script/submodels/script.dart";
 
 extension type const _RoroFactory._(ScriptRoro _) implements ScriptRoro {
   const _RoroFactory() : this._(const ScriptRoro._());
 }
 
 /// A class that represents the Rongorongo script.
-class ScriptRoro extends Script {
+final class ScriptRoro extends Script {
   /// {@template sealed_world.script_roro_constructor}
   /// Creates a instance of [ScriptRoro] (Rongorongo script).
   ///
@@ -14,7 +14,7 @@ class ScriptRoro extends Script {
   const factory ScriptRoro() = _RoroFactory;
 
   const ScriptRoro._()
-    : super(
+    : super._(
         name: "Rongorongo",
         code: "Roro",
         codeNumeric: "620",

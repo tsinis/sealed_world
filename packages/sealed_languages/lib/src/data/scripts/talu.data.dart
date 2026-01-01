@@ -1,11 +1,11 @@
-part of "../../model/script/writing_system.dart";
+part of "../../model/script/submodels/script.dart";
 
 extension type const _TaluFactory._(ScriptTalu _) implements ScriptTalu {
   const _TaluFactory() : this._(const ScriptTalu._());
 }
 
 /// A class that represents the New Tai Lue script.
-class ScriptTalu extends Script {
+final class ScriptTalu extends Script {
   /// {@template sealed_world.script_talu_constructor}
   /// Creates a instance of [ScriptTalu] (New Tai Lue script).
   ///
@@ -14,7 +14,7 @@ class ScriptTalu extends Script {
   const factory ScriptTalu() = _TaluFactory;
 
   const ScriptTalu._()
-    : super(
+    : super._(
         name: "New Tai Lue",
         code: "Talu",
         codeNumeric: "354",

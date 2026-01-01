@@ -1,11 +1,11 @@
-part of "../../model/language/language.dart";
+part of "../../model/language/submodels/natural_language.dart";
 
 extension type const _MlgFactory._(LangMlg _) implements LangMlg {
   const _MlgFactory() : this._(const LangMlg._());
 }
 
 /// A class that represents the Malagasy language.
-class LangMlg extends NaturalLanguage {
+final class LangMlg extends NaturalLanguage {
   /// {@template sealed_world.language_mlg_constructor}
   /// Creates a instance of [LangMlg] (Malagasy language).
   ///
@@ -14,7 +14,7 @@ class LangMlg extends NaturalLanguage {
   const factory LangMlg() = _MlgFactory;
 
   const LangMlg._()
-    : super(
+    : super._(
         name: "Malagasy",
         code: "MLG",
         codeShort: "MG",

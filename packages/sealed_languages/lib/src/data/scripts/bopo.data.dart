@@ -1,11 +1,11 @@
-part of "../../model/script/writing_system.dart";
+part of "../../model/script/submodels/script.dart";
 
 extension type const _BopoFactory._(ScriptBopo _) implements ScriptBopo {
   const _BopoFactory() : this._(const ScriptBopo._());
 }
 
 /// A class that represents the Bopomofo script.
-class ScriptBopo extends Script {
+final class ScriptBopo extends Script {
   /// {@template sealed_world.script_bopo_constructor}
   /// Creates a instance of [ScriptBopo] (Bopomofo script).
   ///
@@ -14,7 +14,7 @@ class ScriptBopo extends Script {
   const factory ScriptBopo() = _BopoFactory;
 
   const ScriptBopo._()
-    : super(
+    : super._(
         name: "Bopomofo",
         code: "Bopo",
         codeNumeric: "285",

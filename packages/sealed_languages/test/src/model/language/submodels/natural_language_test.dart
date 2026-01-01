@@ -1,3 +1,6 @@
+// ignore_for_file: prefer_const_constructors, equal_keys_in_map, it's a test.
+// ignore_for_file: avoid-duplicate-test-assertions
+
 import "dart:convert";
 
 import "package:_sealed_world_tests/sealed_world_tests.dart";
@@ -7,11 +10,9 @@ import "package:sealed_languages/src/interfaces/iso_translated.dart";
 import "package:sealed_languages/src/interfaces/json_encodable.dart";
 import "package:sealed_languages/src/interfaces/named.dart";
 import "package:sealed_languages/src/model/language/language.dart";
+import "package:sealed_languages/src/model/language/submodels/natural_language.dart";
+import "package:sealed_languages/src/typedefs/typedefs.dart";
 import "package:test/test.dart";
-
-class _NaturalLanguageTest extends NaturalLanguage {
-  const _NaturalLanguageTest() : super.custom(name: " ", code: "");
-}
 
 void main() => group("$NaturalLanguage", () {
   final value = NaturalLanguage.list.last;
@@ -33,14 +34,46 @@ void main() => group("$NaturalLanguage", () {
     expect(const NaturalLanguage.aar(), const LangAar());
   });
 
-  assertTest(
-    "permissive constructor",
-    () => const _NaturalLanguageTest().code,
-    shouldThrow: false,
-    alsoExpect: () => expect(const _NaturalLanguageTest().code, isEmpty),
-  );
+  group("assert permissive constructor", () {
+    assertTest(
+      "not code",
+      () => const LangCustom(code: "code").code,
+      shouldThrow: false,
+    );
+
+    assertTest(
+      "not codeShort",
+      () => const LangCustom(codeShort: "code").codeShort,
+      shouldThrow: false,
+    );
+
+    assertTest("empty code and codeShort", LangCustom.new);
+  });
 
   test("compareTo", () => expect(value.compareTo(array.last), isNot(isZero)));
+
+  group("sealed switch expressions", () {
+    // ignore: avoid-local-functions, it's a test.
+    String? describe(NaturalLanguage language) => switch (language) {
+      LangEng() => "english",
+      LangSpa() => "spanish",
+      LangCustom(:final code) when code.startsWith("X") => "custom-$code",
+      NaturalLanguage(isRightToLeft: true) => "rtl",
+      // ignore: avoid-wildcard-cases-with-sealed-classes, it's a test.
+      _ => null,
+    };
+
+    test("matches generated subtypes", () {
+      expect(describe(const LangEng()), "english");
+      expect(describe(const LangSpa()), "spanish");
+    });
+
+    test("matches custom languages and guard", () {
+      const custom = LangCustom(code: "XSA", codeShort: "xs");
+      expect(describe(custom), "custom-XSA");
+      expect(describe(const LangAra()), "rtl");
+    });
+  });
 
   group("fields", () {
     for (final element in NaturalLanguage.list) {
@@ -93,25 +126,22 @@ void main() => group("$NaturalLanguage", () {
     test("with ${array.runtimeType}", () {
       expect(array.length, 2);
       array.addAll(List.of(array));
-      // ignore: avoid-duplicate-test-assertions, this is mutable array.
       expect(array.length, 2);
       array.add(NaturalLanguage.fromName(array.last.name));
-      // ignore: avoid-duplicate-test-assertions, this is mutable array.
       expect(array.length, 2);
     });
 
     performanceTest("with ${Map<NaturalLanguage, Object>}", () {
       final map = <NaturalLanguage, int>{
-        LangAar(): 4,
+        const LangAar(): 4,
         const LangAar(): 3,
-        NaturalLanguage.aar(): 2,
-        // ignore: equal_keys_in_map, it's a test.
+        const NaturalLanguage.aar(): 2,
         const NaturalLanguage.aar(): 1,
         NaturalLanguage.fromCode("AAR"): 0,
       };
-      expect(map.entries.single.key, LangAar());
       expect(map.entries.single.key, const LangAar());
-      expect(map.entries.single.key, NaturalLanguage.aar());
+      expect(map.entries.single.key, const LangAar());
+      expect(map.entries.single.key, const NaturalLanguage.aar());
       expect(map.entries.single.key, const NaturalLanguage.aar());
       expect(map.entries.single.value, isZero);
     });
@@ -343,7 +373,7 @@ void main() => group("$NaturalLanguage", () {
         expect(json, isNotEmpty);
         final decoded = NaturalLanguageJson.fromMap(
           // ignore: avoid-type-casts, it's a test.
-          jsonDecode(json) as Map<String, Object?>,
+          jsonDecode(json) as JsonMap,
         );
 
         expect(element.bibliographicCode, decoded.bibliographicCode);
@@ -651,85 +681,13 @@ void main() => group("$NaturalLanguage", () {
   group("asserts", () {
     assertTest(
       "not",
-      () => NaturalLanguage(
+      () => LangCustom(
         name: value.name,
         codeShort: value.codeShort,
         namesNative: value.namesNative,
         code: value.code,
       ),
       shouldThrow: false,
-    );
-
-    assertTest(
-      "empty name",
-      () => NaturalLanguage(
-        name: "",
-        codeShort: value.codeShort,
-        namesNative: value.namesNative,
-        code: value.code,
-      ),
-    );
-
-    assertTest(
-      "name",
-      () => NaturalLanguage(
-        name: "",
-        codeShort: value.codeShort,
-        namesNative: value.namesNative,
-        code: value.code,
-      ),
-    );
-
-    assertTest(
-      "codeShort length",
-      () => NaturalLanguage(
-        name: value.name,
-        codeShort: value.code,
-        namesNative: value.namesNative,
-        code: value.code,
-      ),
-    );
-
-    assertTest(
-      "code length",
-      () => NaturalLanguage(
-        name: value.name,
-        codeShort: value.codeShort,
-        namesNative: value.namesNative,
-        code: value.codeShort,
-      ),
-    );
-
-    assertTest(
-      "empty namesNative",
-      () => NaturalLanguage(
-        name: value.name,
-        codeShort: value.codeShort,
-        namesNative: const [],
-        code: value.code,
-      ),
-    );
-
-    assertTest(
-      "bibliographicCode length",
-      () => NaturalLanguage(
-        name: value.name,
-        codeShort: value.codeShort,
-        namesNative: value.namesNative,
-        code: value.code,
-        bibliographicCode: value.codeShort,
-      ),
-    );
-
-    assertTest(
-      "empty scripts",
-      () => NaturalLanguage(
-        name: value.name,
-        codeShort: value.codeShort,
-        namesNative: value.namesNative,
-        code: value.code,
-        scripts: const {},
-      ),
     );
   });
 });

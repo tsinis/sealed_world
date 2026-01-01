@@ -1,11 +1,11 @@
-part of "../../model/script/writing_system.dart";
+part of "../../model/script/submodels/script.dart";
 
 extension type const _RanjFactory._(ScriptRanj _) implements ScriptRanj {
   const _RanjFactory() : this._(const ScriptRanj._());
 }
 
 /// A class that represents the Ranjana script.
-class ScriptRanj extends Script {
+final class ScriptRanj extends Script {
   /// {@template sealed_world.script_ranj_constructor}
   /// Creates a instance of [ScriptRanj] (Ranjana script).
   ///
@@ -14,7 +14,7 @@ class ScriptRanj extends Script {
   const factory ScriptRanj() = _RanjFactory;
 
   const ScriptRanj._()
-    : super(
+    : super._(
         name: "Ranjana",
         code: "Ranj",
         codeNumeric: "303",

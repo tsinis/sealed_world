@@ -1,11 +1,11 @@
-part of "../../model/language/language.dart";
+part of "../../model/language/submodels/natural_language.dart";
 
 extension type const _HatFactory._(LangHat _) implements LangHat {
   const _HatFactory() : this._(const LangHat._());
 }
 
 /// A class that represents the Haitian (Haitian Creole) language.
-class LangHat extends NaturalLanguage {
+final class LangHat extends NaturalLanguage {
   /// {@template sealed_world.language_hat_constructor}
   /// Creates a instance of [LangHat] (Haitian (Haitian Creole) language).
   ///
@@ -14,7 +14,7 @@ class LangHat extends NaturalLanguage {
   const factory LangHat() = _HatFactory;
 
   const LangHat._()
-    : super(
+    : super._(
         name: "Haitian (Haitian Creole)",
         code: "HAT",
         codeShort: "HT",

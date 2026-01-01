@@ -1,11 +1,11 @@
-part of "../../model/language/language.dart";
+part of "../../model/language/submodels/natural_language.dart";
 
 extension type const _TonFactory._(LangTon _) implements LangTon {
   const _TonFactory() : this._(const LangTon._());
 }
 
 /// A class that represents the Tonga (Tonga Islands) language.
-class LangTon extends NaturalLanguage {
+final class LangTon extends NaturalLanguage {
   /// {@template sealed_world.language_ton_constructor}
   /// Creates a instance of [LangTon] (Tonga (Tonga Islands) language).
   ///
@@ -14,7 +14,7 @@ class LangTon extends NaturalLanguage {
   const factory LangTon() = _TonFactory;
 
   const LangTon._()
-    : super(
+    : super._(
         name: "Tonga (Tonga Islands)",
         code: "TON",
         codeShort: "TO",

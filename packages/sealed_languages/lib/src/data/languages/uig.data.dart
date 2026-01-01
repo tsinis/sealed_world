@@ -1,11 +1,11 @@
-part of "../../model/language/language.dart";
+part of "../../model/language/submodels/natural_language.dart";
 
 extension type const _UigFactory._(LangUig _) implements LangUig {
   const _UigFactory() : this._(const LangUig._());
 }
 
 /// A class that represents the Uyghur language.
-class LangUig extends NaturalLanguage {
+final class LangUig extends NaturalLanguage {
   /// {@template sealed_world.language_uig_constructor}
   /// Creates a instance of [LangUig] (Uyghur language).
   ///
@@ -14,7 +14,7 @@ class LangUig extends NaturalLanguage {
   const factory LangUig() = _UigFactory;
 
   const LangUig._()
-    : super(
+    : super._(
         name: "Uyghur",
         code: "UIG",
         codeShort: "UG",

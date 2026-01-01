@@ -1,11 +1,11 @@
-part of "../../model/script/writing_system.dart";
+part of "../../model/script/submodels/script.dart";
 
 extension type const _HantFactory._(ScriptHant _) implements ScriptHant {
   const _HantFactory() : this._(const ScriptHant._());
 }
 
 /// A class that represents the Han (Traditional variant) script.
-class ScriptHant extends Script {
+final class ScriptHant extends Script {
   /// {@template sealed_world.script_hant_constructor}
   /// Creates a instance of [ScriptHant] (Han (Traditional variant) script).
   ///
@@ -14,7 +14,7 @@ class ScriptHant extends Script {
   const factory ScriptHant() = _HantFactory;
 
   const ScriptHant._()
-    : super(
+    : super._(
         name: "Han (Traditional variant)",
         code: "Hant",
         codeNumeric: "502",

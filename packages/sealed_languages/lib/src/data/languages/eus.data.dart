@@ -1,11 +1,11 @@
-part of "../../model/language/language.dart";
+part of "../../model/language/submodels/natural_language.dart";
 
 extension type const _EusFactory._(LangEus _) implements LangEus {
   const _EusFactory() : this._(const LangEus._());
 }
 
 /// A class that represents the Basque language.
-class LangEus extends NaturalLanguage {
+final class LangEus extends NaturalLanguage {
   /// {@template sealed_world.language_eus_constructor}
   /// Creates a instance of [LangEus] (Basque language).
   ///
@@ -14,7 +14,7 @@ class LangEus extends NaturalLanguage {
   const factory LangEus() = _EusFactory;
 
   const LangEus._()
-    : super(
+    : super._(
         name: "Basque",
         code: "EUS",
         codeShort: "EU",

@@ -4,7 +4,7 @@
 
 // ignore_for_file: prefer-digit-separators
 
-part of "../../model/country/country.dart";
+part of "../../model/country/submodels/world_country.dart";
 
 extension type const _PlwFactory._(CountryPlw _) implements CountryPlw {
   const _PlwFactory() : this._(const CountryPlw._());
@@ -20,7 +20,7 @@ class CountryPlw extends WorldCountry {
   const factory CountryPlw() = _PlwFactory;
 
   const CountryPlw._()
-    : super(
+    : super._(
         name: const CountryName(
           language: LangEng(),
           official: "Republic of Palau",

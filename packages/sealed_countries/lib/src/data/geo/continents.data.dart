@@ -1,4 +1,4 @@
-import "../../model/geo/submodels/continent.dart";
+part of "../../model/geo/submodels/continent.dart";
 
 /// Represents the continent of Europe.
 ///
@@ -11,8 +11,8 @@ import "../../model/geo/submodels/continent.dart";
 /// final europe = Europe();
 /// print(europe.name); // "Europe"
 /// ```
-class Europe extends Continent {
-  /// Creates a new `Europe` instance.
+final class Europe extends Continent {
+  /// Creates a new [Europe] instance.
   const Europe() : super(name: "Europe");
 }
 
@@ -27,8 +27,8 @@ class Europe extends Continent {
 /// final africa = Africa();
 /// print(africa.name); // "Africa"
 /// ```
-class Africa extends Continent {
-  /// Creates a new `Africa` instance.
+final class Africa extends Continent {
+  /// Creates a new [Africa] instance.
   const Africa() : super(name: "Africa");
 }
 
@@ -43,8 +43,8 @@ class Africa extends Continent {
 /// final americas = Americas();
 /// print(americas.name); // "Americas"
 /// ```
-class Americas extends Continent {
-  /// Creates a new `Americas` instance.
+final class Americas extends Continent {
+  /// Creates a new [Americas] instance.
   const Americas() : super(name: "Americas");
 }
 
@@ -59,8 +59,8 @@ class Americas extends Continent {
 /// final asia = Asia();
 /// print(asia.name); // "Asia"
 /// ```
-class Asia extends Continent {
-  /// Creates a new `Asia` instance.
+final class Asia extends Continent {
+  /// Creates a new [Asia] instance.
   const Asia() : super(name: "Asia");
 }
 
@@ -75,8 +75,8 @@ class Asia extends Continent {
 /// final antarctica = Antarctica();
 /// print(antarctica.name); // "Antarctica"
 /// ```
-class Antarctica extends Continent {
-  /// Creates a new `Antarctica` instance.
+final class Antarctica extends Continent {
+  /// Creates a new [Antarctica] instance.
   const Antarctica() : super(name: "Antarctica");
 }
 
@@ -91,7 +91,7 @@ class Antarctica extends Continent {
 /// final oceania = Oceania();
 /// print(oceania.name); // "Oceania"
 /// ```
-class Oceania extends Continent {
-  /// Creates a new `Oceania` instance.
+final class Oceania extends Continent {
+  /// Creates a new [Oceania] instance.
   const Oceania() : super(name: "Oceania");
 }

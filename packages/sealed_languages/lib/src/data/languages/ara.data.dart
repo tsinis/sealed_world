@@ -1,11 +1,11 @@
-part of "../../model/language/language.dart";
+part of "../../model/language/submodels/natural_language.dart";
 
 extension type const _AraFactory._(LangAra _) implements LangAra {
   const _AraFactory() : this._(const LangAra._());
 }
 
 /// A class that represents the Arabic language.
-class LangAra extends NaturalLanguage {
+final class LangAra extends NaturalLanguage {
   /// {@template sealed_world.language_ara_constructor}
   /// Creates a instance of [LangAra] (Arabic language).
   ///
@@ -14,7 +14,7 @@ class LangAra extends NaturalLanguage {
   const factory LangAra() = _AraFactory;
 
   const LangAra._()
-    : super(
+    : super._(
         name: "Arabic",
         code: "ARA",
         codeShort: "AR",

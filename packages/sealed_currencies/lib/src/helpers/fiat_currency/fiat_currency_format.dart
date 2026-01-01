@@ -1,4 +1,4 @@
-import "../../model/currency/currency.dart";
+import "../../model/currency/submodels/fiat_currency.dart";
 import "fiat_currency_getters.dart";
 
 /// Provides a set of methods for formatting values of [FiatCurrency].
@@ -14,7 +14,8 @@ extension FiatCurrencyFormat on FiatCurrency {
   /// value, otherwise it is added after the value.
   String addUnit(String value) => unitFirst ? "$unit $value" : "$value $unit";
 
-  /// Formats the value as a string with the currency symbol.
+  /// Formats the value as a string with the currency symbol. Please keep in
+  /// mind that currency formatting might be also affected by locale itself.
   String format(num value) {
     final stringValue = value.toString();
     if (stringValue.contains(FiatCurrency.dot)) {

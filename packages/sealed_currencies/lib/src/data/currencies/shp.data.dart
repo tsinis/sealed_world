@@ -1,11 +1,11 @@
-part of "../../model/currency/currency.dart";
+part of "../../model/currency/submodels/fiat_currency.dart";
 
 extension type const _ShpFactory._(FiatShp _) implements FiatShp {
   const _ShpFactory() : this._(const FiatShp._());
 }
 
 /// A class that represents the St. Helena Pound currency.
-class FiatShp extends FiatCurrency {
+final class FiatShp extends FiatCurrency {
   /// {@template sealed_world.currency_shp_constructor}
   /// Creates a instance of [FiatShp] (St. Helena Pound currency).
   ///

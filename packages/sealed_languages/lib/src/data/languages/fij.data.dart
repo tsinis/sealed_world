@@ -1,11 +1,11 @@
-part of "../../model/language/language.dart";
+part of "../../model/language/submodels/natural_language.dart";
 
 extension type const _FijFactory._(LangFij _) implements LangFij {
   const _FijFactory() : this._(const LangFij._());
 }
 
 /// A class that represents the Fijian language.
-class LangFij extends NaturalLanguage {
+final class LangFij extends NaturalLanguage {
   /// {@template sealed_world.language_fij_constructor}
   /// Creates a instance of [LangFij] (Fijian language).
   ///
@@ -14,7 +14,7 @@ class LangFij extends NaturalLanguage {
   const factory LangFij() = _FijFactory;
 
   const LangFij._()
-    : super(
+    : super._(
         name: "Fijian",
         code: "FIJ",
         codeShort: "FJ",

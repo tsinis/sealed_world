@@ -1,11 +1,11 @@
-part of "../../model/currency/currency.dart";
+part of "../../model/currency/submodels/fiat_currency.dart";
 
 extension type const _SspFactory._(FiatSsp _) implements FiatSsp {
   const _SspFactory() : this._(const FiatSsp._());
 }
 
 /// A class that represents the South Sudanese Pound currency.
-class FiatSsp extends FiatCurrency {
+final class FiatSsp extends FiatCurrency {
   /// {@template sealed_world.currency_ssp_constructor}
   /// Creates a instance of [FiatSsp] (South Sudanese Pound currency).
   ///

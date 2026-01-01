@@ -1,3 +1,5 @@
+// ignore_for_file: avoid_print, it's a test
+
 import "package:sealed_countries/sealed_countries.dart";
 
 void main() {
@@ -19,6 +21,11 @@ void main() {
 
   print(europeButNotEU.length); // Prints 23 count of non-EU European countries.
 
+  const customOne = CountryCustom(code: "XKX", continent: Asia()); // Custom.
+  print(describeCountry(const CountryUsa())); // Prints: "United States".
+  print(describeCountry(customOne)); // Prints: "Custom territory XKX".
+  print(describeCountry(country)); // Prints: "Standard catalog entry".
+
   /// Prints all the countries in the world with their phone code.
   for (final cnt in WorldCountry.list) {
     print("${cnt.name.common} code: ${cnt.idd.phoneCode()}");
@@ -27,9 +34,7 @@ void main() {
   /// Translations:
   // Prints German translations of all available regular countries.
   final germanNames = WorldCountry.list.commonNamesMap(
-    options: const LocaleMappingOptions(
-      mainLocale: BasicTypedLocale(LangDeu()),
-    ),
+    options: const LocaleMappingOptions(mainLocale: BasicTypedLocale(.deu())),
   );
 
   print(
@@ -39,3 +44,14 @@ void main() {
     print("German name of ${deuTranslation.key.name}: ${deuTranslation.value}");
   }
 }
+
+// ignore: prefer-static-class, just an example.
+String describeCountry(WorldCountry country) => switch (country) {
+  CountryUsa() => country.name.common,
+  CountryCustom(:final code) when code.startsWith("X") =>
+    "Custom territory $code",
+  WorldCountry(:final continent) when continent is Oceania =>
+    "Oceania catalog entry",
+  // ignore: avoid-wildcard-cases-with-sealed-classes, just an example.
+  _ => "Standard catalog entry",
+};

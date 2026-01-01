@@ -1,11 +1,11 @@
-part of "../../model/script/writing_system.dart";
+part of "../../model/script/submodels/script.dart";
 
 extension type const _AdlmFactory._(ScriptAdlm _) implements ScriptAdlm {
   const _AdlmFactory() : this._(const ScriptAdlm._());
 }
 
 /// A class that represents the Adlam script.
-class ScriptAdlm extends Script {
+final class ScriptAdlm extends Script {
   /// {@template sealed_world.script_adlm_constructor}
   /// Creates a instance of [ScriptAdlm] (Adlam script).
   ///
@@ -14,7 +14,7 @@ class ScriptAdlm extends Script {
   const factory ScriptAdlm() = _AdlmFactory;
 
   const ScriptAdlm._()
-    : super(
+    : super._(
         name: "Adlam",
         code: "Adlm",
         codeNumeric: "166",

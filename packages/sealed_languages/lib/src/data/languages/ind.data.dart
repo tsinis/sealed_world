@@ -1,11 +1,11 @@
-part of "../../model/language/language.dart";
+part of "../../model/language/submodels/natural_language.dart";
 
 extension type const _IndFactory._(LangInd _) implements LangInd {
   const _IndFactory() : this._(const LangInd._());
 }
 
 /// A class that represents the Indonesian language.
-class LangInd extends NaturalLanguage {
+final class LangInd extends NaturalLanguage {
   /// {@template sealed_world.language_ind_constructor}
   /// Creates a instance of [LangInd] (Indonesian language).
   ///
@@ -14,7 +14,7 @@ class LangInd extends NaturalLanguage {
   const factory LangInd() = _IndFactory;
 
   const LangInd._()
-    : super(
+    : super._(
         name: "Indonesian",
         code: "IND",
         codeShort: "ID",

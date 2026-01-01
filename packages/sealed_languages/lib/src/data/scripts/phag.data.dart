@@ -1,11 +1,11 @@
-part of "../../model/script/writing_system.dart";
+part of "../../model/script/submodels/script.dart";
 
 extension type const _PhagFactory._(ScriptPhag _) implements ScriptPhag {
   const _PhagFactory() : this._(const ScriptPhag._());
 }
 
 /// A class that represents the Phags-pa script.
-class ScriptPhag extends Script {
+final class ScriptPhag extends Script {
   /// {@template sealed_world.script_phag_constructor}
   /// Creates a instance of [ScriptPhag] (Phags-pa script).
   ///
@@ -14,7 +14,7 @@ class ScriptPhag extends Script {
   const factory ScriptPhag() = _PhagFactory;
 
   const ScriptPhag._()
-    : super(
+    : super._(
         name: "Phags-pa",
         code: "Phag",
         codeNumeric: "331",

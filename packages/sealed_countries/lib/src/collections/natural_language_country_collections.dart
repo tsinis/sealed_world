@@ -45,9 +45,7 @@ const unofficialLanguagesCountryMap = <NaturalLanguage, List<WorldCountry>>{
     CountryGha(), // https://wikipedia.org/wiki/Ewe_language
     CountryTgo(),
   ],
-  LangFry(): [
-    CountryNld(), // https://wikipedia.org/wiki/West_Frisian_language
-  ],
+  LangFry(): [CountryNld()], // https://wikipedia.org/wiki/West_Frisian_language
   LangFul(): [
     CountryNga(), // https://wikipedia.org/wiki/Fula_language
     CountryNer(),
@@ -95,9 +93,7 @@ const unofficialLanguagesCountryMap = <NaturalLanguage, List<WorldCountry>>{
     CountryBel(),
     CountryDeu(),
   ],
-  LangLub(): [
-    CountryCod(), // https://wikipedia.org/wiki/Luba-Katanga_language
-  ],
+  LangLub(): [CountryCod()], // https://wikipedia.org/wiki/Luba-Katanga_language
   LangLug(): [CountryUga()], // https://wikipedia.org/wiki/Ganda_language
   LangMal(): [CountryInd()], // https://wikipedia.org/wiki/Malayalam
   LangMar(): [CountryInd()], // https://wikipedia.org/wiki/Marathi_language
@@ -128,18 +124,13 @@ const unofficialLanguagesCountryMap = <NaturalLanguage, List<WorldCountry>>{
     CountryPak(), // https://wikipedia.org/wiki/Sindhi_language
     CountryInd(),
   ],
-  LangSrd(): [
-    CountryIta(), // https://wikipedia.org/wiki/Sardinian_language
-  ],
-  LangSun(): [
-    CountryIdn(), // https://wikipedia.org/wiki/Sundanese_language
-  ],
+  LangSrd(): [CountryIta()], // https://wikipedia.org/wiki/Sardinian_language
+  LangSun(): [CountryIdn()], // https://wikipedia.org/wiki/Sundanese_language
   LangTah(): [CountryPyf()], // https://wikipedia.org/wiki/Tahitian_language
   LangTat(): [CountryRus()], // https://wikipedia.org/wiki/Tatar_language
   LangTel(): [CountryInd()], // https://wikipedia.org/wiki/Telugu_language
   LangTwi(): [CountryGha()], // https://wikipedia.org/wiki/Twi
   LangUig(): [CountryChn()], // https://wikipedia.org/wiki/Uyghur_language
-
   LangWln(): [CountryBel()], // https://wikipedia.org/wiki/Walloon_language
   LangWol(): [CountrySen()], // https://wikipedia.org/wiki/Wolof_language
   LangYid(): [
@@ -150,9 +141,9 @@ const unofficialLanguagesCountryMap = <NaturalLanguage, List<WorldCountry>>{
   LangYor(): [CountryNga()], // https://wikipedia.org/wiki/Yoruba_language
   LangZha(): [CountryChn()], // https://wikipedia.org/wiki/Zhuang_languages
   /// Constructed languages:
-  LangEpo(): <WorldCountry>[], // https://wikipedia.org/wiki/Esperanto
-  LangIdo(): <WorldCountry>[], // https://wikipedia.org/wiki/Ido
-  LangIle(): <WorldCountry>[], // https://wikipedia.org/wiki/Interlingue
-  LangIna(): <WorldCountry>[], // https://wikipedia.org/wiki/Interlingua
-  LangVol(): <WorldCountry>[], // https://wikipedia.org/wiki/Volapük
+  LangEpo(): [], // https://wikipedia.org/wiki/Esperanto
+  LangIdo(): [], // https://wikipedia.org/wiki/Ido
+  LangIle(): [], // https://wikipedia.org/wiki/Interlingue
+  LangIna(): [], // https://wikipedia.org/wiki/Interlingua
+  LangVol(): [], // https://wikipedia.org/wiki/Volapük
 };

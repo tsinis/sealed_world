@@ -1,4 +1,4 @@
-// ignore_for_file: avoid_print, prefer-match-file-name
+// ignore_for_file: avoid_print, prefer-static-class
 import "package:sealed_languages/sealed_languages.dart";
 
 void main() {
@@ -36,6 +36,11 @@ void main() {
   print("Native name: ${maybeCzech?.namesNative.first}");
   print(NaturalLanguage.list.length); // Prints: "184".
 
+  const customOne = LangCustom(code: "XTL", codeShort: "xt"); // Custom.
+  print(describeLanguage(const LangEng())); // Prints: "English".
+  print(describeLanguage(customOne)); // Prints: "Custom language XTL".
+  print(describeLanguage(russian)); // Prints: "ISO-based language".
+
   /// Translations:
   // Prints Slovak translations of all available languages.
   final slovakNames = NaturalLanguage.list.commonNamesMap(
@@ -50,9 +55,7 @@ void main() {
   }
 
   // Distinguishes country code in translations.
-  print(
-    maybeCzech?.maybeCommonNameFor(const BasicLocale(LangPor())),
-  ); // Prints "tcheco".
+  print(maybeCzech?.maybeCommonNameFor(const BasicLocale(.por()))); // "tcheco".
   print(
     maybeCzech?.maybeCommonNameFor(
       const BasicLocale(LangPor(), countryCode: "PT"),
@@ -64,8 +67,14 @@ void main() {
     maybeCzech?.commonNameFor(const BasicLocale(LangSrp())),
   ); // Prints "чешки".
   print(
-    maybeCzech?.commonNameFor(
-      const BasicLocale(LangSrp(), script: ScriptLatn()),
-    ),
+    maybeCzech?.commonNameFor(const BasicLocale(.srp(), script: .latn())),
   ); // Prints "češki".
 }
+
+String describeLanguage(NaturalLanguage language) => switch (language) {
+  LangEng() => language.name,
+  LangCustom(:final code) when code.startsWith("X") => "Custom language $code",
+  NaturalLanguage(:final isRightToLeft) when isRightToLeft => "RTL language",
+  // ignore: avoid-wildcard-cases-with-sealed-classes, just an example.
+  _ => "ISO-based language",
+};

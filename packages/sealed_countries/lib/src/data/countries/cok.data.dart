@@ -4,7 +4,7 @@
 
 // ignore_for_file: prefer-digit-separators
 
-part of "../../model/country/country.dart";
+part of "../../model/country/submodels/world_country.dart";
 
 extension type const _CokFactory._(CountryCok _) implements CountryCok {
   const _CokFactory() : this._(const CountryCok._());
@@ -20,7 +20,7 @@ class CountryCok extends WorldCountry {
   const factory CountryCok() = _CokFactory;
 
   const CountryCok._()
-    : super(
+    : super._(
         name: const CountryName(
           language: LangEng(),
           official: "Cook Islands",

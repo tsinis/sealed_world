@@ -4,7 +4,7 @@
 
 // ignore_for_file: prefer-digit-separators
 
-part of "../../model/country/country.dart";
+part of "../../model/country/submodels/world_country.dart";
 
 extension type const _BgdFactory._(CountryBgd _) implements CountryBgd {
   const _BgdFactory() : this._(const CountryBgd._());
@@ -20,7 +20,7 @@ class CountryBgd extends WorldCountry {
   const factory CountryBgd() = _BgdFactory;
 
   const CountryBgd._()
-    : super(
+    : super._(
         name: const CountryName(
           language: LangEng(),
           official: "People's Republic of Bangladesh",

@@ -4,7 +4,7 @@
 
 // ignore_for_file: prefer-digit-separators
 
-part of "../../model/country/country.dart";
+part of "../../model/country/submodels/world_country.dart";
 
 extension type const _VenFactory._(CountryVen _) implements CountryVen {
   const _VenFactory() : this._(const CountryVen._());
@@ -20,7 +20,7 @@ class CountryVen extends WorldCountry {
   const factory CountryVen() = _VenFactory;
 
   const CountryVen._()
-    : super(
+    : super._(
         name: const CountryName(
           language: LangEng(),
           official: "Bolivarian Republic of Venezuela",

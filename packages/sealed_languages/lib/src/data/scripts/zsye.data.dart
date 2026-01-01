@@ -1,11 +1,11 @@
-part of "../../model/script/writing_system.dart";
+part of "../../model/script/submodels/script.dart";
 
 extension type const _ZsyeFactory._(ScriptZsye _) implements ScriptZsye {
   const _ZsyeFactory() : this._(const ScriptZsye._());
 }
 
 /// A class that represents the Symbols (Emoji variant) script.
-class ScriptZsye extends Script {
+final class ScriptZsye extends Script {
   /// {@template sealed_world.script_zsye_constructor}
   /// Creates a instance of [ScriptZsye] (Symbols (Emoji variant) script).
   ///
@@ -14,7 +14,7 @@ class ScriptZsye extends Script {
   const factory ScriptZsye() = _ZsyeFactory;
 
   const ScriptZsye._()
-    : super(
+    : super._(
         name: "Symbols (Emoji variant)",
         code: "Zsye",
         codeNumeric: "993",

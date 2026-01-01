@@ -1,11 +1,11 @@
-part of "../../model/script/writing_system.dart";
+part of "../../model/script/submodels/script.dart";
 
 extension type const _DsrtFactory._(ScriptDsrt _) implements ScriptDsrt {
   const _DsrtFactory() : this._(const ScriptDsrt._());
 }
 
 /// A class that represents the Deseret (Mormon) script.
-class ScriptDsrt extends Script {
+final class ScriptDsrt extends Script {
   /// {@template sealed_world.script_dsrt_constructor}
   /// Creates a instance of [ScriptDsrt] (Deseret (Mormon) script).
   ///
@@ -14,7 +14,7 @@ class ScriptDsrt extends Script {
   const factory ScriptDsrt() = _DsrtFactory;
 
   const ScriptDsrt._()
-    : super(
+    : super._(
         name: "Deseret (Mormon)",
         code: "Dsrt",
         codeNumeric: "250",

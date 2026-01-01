@@ -1,6 +1,9 @@
 // ignore_for_file: avoid-referencing-subclasses
 
-part of "../language_family.dart";
+import "../../../helpers/extensions/iso_object_extension_type.dart";
+import "../language_family.dart";
+
+part "../../../data/natural_language_families.data.dart";
 
 /// A class that represents a family of natural languages.
 ///
@@ -9,7 +12,7 @@ part of "../language_family.dart";
 /// families include the Indo-European family (which includes languages like
 /// English, Spanish, French, and German) and the Sino-Tibetan family (which
 /// includes languages like Mandarin and Tibetan).
-class NaturalLanguageFamily extends LanguageFamily {
+sealed class NaturalLanguageFamily extends LanguageFamily {
   /// Creates a new instance of the [NaturalLanguageFamily] class.
   ///
   /// The [name] parameter is required and should be a string representing the
@@ -56,10 +59,11 @@ class NaturalLanguageFamily extends LanguageFamily {
   /// print(family); // Prints: LanguageFamily(name: Uralic).
   /// ```
   static NaturalLanguageFamily? maybeFromValue<T extends Object>(
-    T value, {
+    T? value, {
     T? Function(NaturalLanguageFamily family)? where,
     Iterable<NaturalLanguageFamily> families = list,
   }) {
+    if (value == null) return null;
     assert(families.isNotEmpty, "`families` should not be empty!");
     for (final family in families) {
       final expectedValue = where?.call(family) ?? family.name;

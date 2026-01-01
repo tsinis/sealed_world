@@ -1,11 +1,11 @@
-part of "../../model/script/writing_system.dart";
+part of "../../model/script/submodels/script.dart";
 
 extension type const _ZinhFactory._(ScriptZinh _) implements ScriptZinh {
   const _ZinhFactory() : this._(const ScriptZinh._());
 }
 
 /// A class that represents the Code for inherited script script.
-class ScriptZinh extends Script {
+final class ScriptZinh extends Script {
   /// {@template sealed_world.script_zinh_constructor}
   /// Creates a instance of [ScriptZinh] (Code for inherited script script).
   ///
@@ -14,7 +14,7 @@ class ScriptZinh extends Script {
   const factory ScriptZinh() = _ZinhFactory;
 
   const ScriptZinh._()
-    : super(
+    : super._(
         name: "Code for inherited script",
         code: "Zinh",
         codeNumeric: "994",

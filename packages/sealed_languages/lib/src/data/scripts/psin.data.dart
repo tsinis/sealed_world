@@ -1,11 +1,11 @@
-part of "../../model/script/writing_system.dart";
+part of "../../model/script/submodels/script.dart";
 
 extension type const _PsinFactory._(ScriptPsin _) implements ScriptPsin {
   const _PsinFactory() : this._(const ScriptPsin._());
 }
 
 /// A class that represents the Proto-Sinaitic script.
-class ScriptPsin extends Script {
+final class ScriptPsin extends Script {
   /// {@template sealed_world.script_psin_constructor}
   /// Creates a instance of [ScriptPsin] (Proto-Sinaitic script).
   ///
@@ -14,7 +14,7 @@ class ScriptPsin extends Script {
   const factory ScriptPsin() = _PsinFactory;
 
   const ScriptPsin._()
-    : super(
+    : super._(
         name: "Proto-Sinaitic",
         code: "Psin",
         codeNumeric: "103",

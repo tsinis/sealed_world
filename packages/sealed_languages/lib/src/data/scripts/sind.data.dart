@@ -1,11 +1,11 @@
-part of "../../model/script/writing_system.dart";
+part of "../../model/script/submodels/script.dart";
 
 extension type const _SindFactory._(ScriptSind _) implements ScriptSind {
   const _SindFactory() : this._(const ScriptSind._());
 }
 
 /// A class that represents the Khudawadi, Sindhi script.
-class ScriptSind extends Script {
+final class ScriptSind extends Script {
   /// {@template sealed_world.script_sind_constructor}
   /// Creates a instance of [ScriptSind] (Khudawadi, Sindhi script).
   ///
@@ -14,7 +14,7 @@ class ScriptSind extends Script {
   const factory ScriptSind() = _SindFactory;
 
   const ScriptSind._()
-    : super(
+    : super._(
         name: "Khudawadi, Sindhi",
         code: "Sind",
         codeNumeric: "318",

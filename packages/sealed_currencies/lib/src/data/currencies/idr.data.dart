@@ -1,11 +1,11 @@
-part of "../../model/currency/currency.dart";
+part of "../../model/currency/submodels/fiat_currency.dart";
 
 extension type const _IdrFactory._(FiatIdr _) implements FiatIdr {
   const _IdrFactory() : this._(const FiatIdr._());
 }
 
 /// A class that represents the Indonesian Rupiah currency.
-class FiatIdr extends FiatCurrency {
+final class FiatIdr extends FiatCurrency {
   /// {@template sealed_world.currency_idr_constructor}
   /// Creates a instance of [FiatIdr] (Indonesian Rupiah currency).
   ///

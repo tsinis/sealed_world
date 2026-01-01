@@ -1,11 +1,11 @@
-part of "../../model/currency/currency.dart";
+part of "../../model/currency/submodels/fiat_currency.dart";
 
 extension type const _PabFactory._(FiatPab _) implements FiatPab {
   const _PabFactory() : this._(const FiatPab._());
 }
 
 /// A class that represents the Panamanian Balboa currency.
-class FiatPab extends FiatCurrency {
+final class FiatPab extends FiatCurrency {
   /// {@template sealed_world.currency_pab_constructor}
   /// Creates a instance of [FiatPab] (Panamanian Balboa currency).
   ///

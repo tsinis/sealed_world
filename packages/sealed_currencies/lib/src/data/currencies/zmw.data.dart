@@ -1,11 +1,11 @@
-part of "../../model/currency/currency.dart";
+part of "../../model/currency/submodels/fiat_currency.dart";
 
 extension type const _ZmwFactory._(FiatZmw _) implements FiatZmw {
   const _ZmwFactory() : this._(const FiatZmw._());
 }
 
 /// A class that represents the Zambian Kwacha currency.
-class FiatZmw extends FiatCurrency {
+final class FiatZmw extends FiatCurrency {
   /// {@template sealed_world.currency_zmw_constructor}
   /// Creates a instance of [FiatZmw] (Zambian Kwacha currency).
   ///

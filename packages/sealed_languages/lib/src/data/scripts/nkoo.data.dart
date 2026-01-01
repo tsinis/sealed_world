@@ -1,11 +1,11 @@
-part of "../../model/script/writing_system.dart";
+part of "../../model/script/submodels/script.dart";
 
 extension type const _NkooFactory._(ScriptNkoo _) implements ScriptNkoo {
   const _NkooFactory() : this._(const ScriptNkoo._());
 }
 
 /// A class that represents the N’Ko script.
-class ScriptNkoo extends Script {
+final class ScriptNkoo extends Script {
   /// {@template sealed_world.script_nkoo_constructor}
   /// Creates a instance of [ScriptNkoo] (N’Ko script).
   ///
@@ -14,7 +14,7 @@ class ScriptNkoo extends Script {
   const factory ScriptNkoo() = _NkooFactory;
 
   const ScriptNkoo._()
-    : super(
+    : super._(
         name: "N’Ko",
         code: "Nkoo",
         codeNumeric: "165",

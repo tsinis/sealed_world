@@ -1,11 +1,11 @@
-part of "../../model/currency/currency.dart";
+part of "../../model/currency/submodels/fiat_currency.dart";
 
 extension type const _AfnFactory._(FiatAfn _) implements FiatAfn {
   const _AfnFactory() : this._(const FiatAfn._());
 }
 
 /// A class that represents the Afghan Afghani currency.
-class FiatAfn extends FiatCurrency {
+final class FiatAfn extends FiatCurrency {
   /// {@template sealed_world.currency_afn_constructor}
   /// Creates a instance of [FiatAfn] (Afghan Afghani currency).
   ///

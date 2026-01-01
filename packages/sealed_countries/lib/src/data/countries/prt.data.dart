@@ -4,7 +4,7 @@
 
 // ignore_for_file: prefer-digit-separators
 
-part of "../../model/country/country.dart";
+part of "../../model/country/submodels/world_country.dart";
 
 extension type const _PrtFactory._(CountryPrt _) implements CountryPrt {
   const _PrtFactory() : this._(const CountryPrt._());
@@ -20,7 +20,7 @@ class CountryPrt extends WorldCountry {
   const factory CountryPrt() = _PrtFactory;
 
   const CountryPrt._()
-    : super(
+    : super._(
         name: const CountryName(
           language: LangEng(),
           official: "Portuguese Republic",

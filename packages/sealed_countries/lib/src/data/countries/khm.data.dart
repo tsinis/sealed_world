@@ -4,7 +4,7 @@
 
 // ignore_for_file: prefer-digit-separators
 
-part of "../../model/country/country.dart";
+part of "../../model/country/submodels/world_country.dart";
 
 extension type const _KhmFactory._(CountryKhm _) implements CountryKhm {
   const _KhmFactory() : this._(const CountryKhm._());
@@ -20,7 +20,7 @@ class CountryKhm extends WorldCountry {
   const factory CountryKhm() = _KhmFactory;
 
   const CountryKhm._()
-    : super(
+    : super._(
         name: const CountryName(
           language: LangEng(),
           official: "Kingdom of Cambodia",

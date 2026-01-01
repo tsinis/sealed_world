@@ -4,7 +4,7 @@
 
 // ignore_for_file: prefer-digit-separators
 
-part of "../../model/country/country.dart";
+part of "../../model/country/submodels/world_country.dart";
 
 extension type const _HmdFactory._(CountryHmd _) implements CountryHmd {
   const _HmdFactory() : this._(const CountryHmd._());
@@ -13,14 +13,15 @@ extension type const _HmdFactory._(CountryHmd _) implements CountryHmd {
 /// A class that represents the Heard Island and McDonald Islands country.
 class CountryHmd extends WorldCountry {
   /// {@template sealed_world.country_hmd_constructor}
-  /// Creates a instance of [CountryHmd] (Heard Island and McDonald Islands country).
+  /// Creates a instance of [CountryHmd] (Heard Island and McDonald Islands
+  /// country).
   ///
   /// ISO 3166-1 Alpha-3 code: `HMD`, ISO 3166-1 Alpha-2 code: `HM`.
   /// {@endtemplate}
   const factory CountryHmd() = _HmdFactory;
 
   const CountryHmd._()
-    : super(
+    : super._(
         name: const CountryName(
           language: LangEng(),
           official: "Heard Island and McDonald Islands",

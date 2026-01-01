@@ -1,11 +1,11 @@
-part of "../../model/script/writing_system.dart";
+part of "../../model/script/submodels/script.dart";
 
 extension type const _SoyoFactory._(ScriptSoyo _) implements ScriptSoyo {
   const _SoyoFactory() : this._(const ScriptSoyo._());
 }
 
 /// A class that represents the Soyombo script.
-class ScriptSoyo extends Script {
+final class ScriptSoyo extends Script {
   /// {@template sealed_world.script_soyo_constructor}
   /// Creates a instance of [ScriptSoyo] (Soyombo script).
   ///
@@ -14,7 +14,7 @@ class ScriptSoyo extends Script {
   const factory ScriptSoyo() = _SoyoFactory;
 
   const ScriptSoyo._()
-    : super(
+    : super._(
         name: "Soyombo",
         code: "Soyo",
         codeNumeric: "329",

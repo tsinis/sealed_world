@@ -4,7 +4,7 @@
 
 // ignore_for_file: prefer-digit-separators
 
-part of "../../model/country/country.dart";
+part of "../../model/country/submodels/world_country.dart";
 
 extension type const _GnbFactory._(CountryGnb _) implements CountryGnb {
   const _GnbFactory() : this._(const CountryGnb._());
@@ -20,7 +20,7 @@ class CountryGnb extends WorldCountry {
   const factory CountryGnb() = _GnbFactory;
 
   const CountryGnb._()
-    : super(
+    : super._(
         name: const CountryName(
           language: LangEng(),
           official: "Republic of Guinea-Bissau",
