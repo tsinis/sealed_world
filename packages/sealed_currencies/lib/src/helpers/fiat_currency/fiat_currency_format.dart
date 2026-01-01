@@ -15,7 +15,7 @@ extension FiatCurrencyFormat on FiatCurrency {
   String addUnit(String value) => unitFirst ? "$unit $value" : "$value $unit";
 
   /// Formats the value as a string with the currency symbol. Please keep in
-  /// mind that currency formatting might be also affected by locale iteself.
+  /// mind that currency formatting might be also affected by locale itself.
   String format(num value) {
     final stringValue = value.toString();
     if (stringValue.contains(FiatCurrency.dot)) {
