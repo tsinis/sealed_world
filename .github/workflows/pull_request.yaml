@@ -51,7 +51,7 @@ jobs:
 
   pr-title:
     name: 📰 Lint PR Title
-    runs-on: ubuntu-slim
+    runs-on: ubuntu-latest
     timeout-minutes: 4
     steps:
       - name: 📰 Lint Pull Request Title
@@ -63,7 +63,7 @@ jobs:
 
   auto-approve:
     name: 🎟️ Auto-approve PR
-    runs-on: ubuntu-slim
+    runs-on: ubuntu-latest
     timeout-minutes: 4
     steps:
       - name: 🎟️ Approve Dependabot and owner
