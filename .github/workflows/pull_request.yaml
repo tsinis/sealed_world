@@ -47,6 +47,7 @@ jobs:
     name: 🧐 Auto-assign reviewers
     runs-on: ubuntu-slim
     timeout-minutes: 4
+    if: github.event.pull_request.user.login != 'tsinis'
     steps:
       - name: 🧐 Assign PR Reviewers
         uses: actions/github-script@v8.0.0
