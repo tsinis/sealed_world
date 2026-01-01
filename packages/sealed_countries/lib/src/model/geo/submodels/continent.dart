@@ -72,7 +72,7 @@ sealed class Continent extends Region {
 
   /// A list of all the primary continents currently supported.
   // ignore_for_file: avoid-referencing-subclasses, those are static constants.
-  static const list = [
+  static const list = <Continent>[
     Africa(),
     Americas(),
     Antarctica(),

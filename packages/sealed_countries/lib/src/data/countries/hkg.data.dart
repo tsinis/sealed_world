@@ -24,7 +24,8 @@ class CountryHkg extends WorldCountry {
         name: const CountryName(
           language: LangEng(),
           official:
-              "Hong Kong Special Administrative Region of the People's Republic of China",
+              "Hong Kong Special Administrative Region of the People's Republic"
+              " of China",
           common: "Hong Kong",
         ),
         tld: const [".hk", ".香港"],
@@ -68,7 +69,8 @@ class CountryHkg extends WorldCountry {
     CountryName(
       language: LangEng(),
       official:
-          "Hong Kong Special Administrative Region of the People's Republic of China",
+          "Hong Kong Special Administrative Region of the People's Republic of "
+          "China",
       common: "Hong Kong",
     ),
     CountryName(language: LangZho(), official: "中华人民共和国香港特别行政区", common: "香港"),

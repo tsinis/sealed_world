@@ -24,7 +24,8 @@ class CountryMac extends WorldCountry {
         name: const CountryName(
           language: LangEng(),
           official:
-              "Macao Special Administrative Region of the People's Republic of China",
+              "Macao Special Administrative Region of the People's Republic of "
+              "China",
           common: "Macau",
         ),
         tld: const [".mo"],
@@ -38,9 +39,9 @@ class CountryMac extends WorldCountry {
           "MO",
           "澳门",
           "Macao",
-          "Macao Special Administrative Region of the People's Republic of China",
+          """Macao Special Administrative Region of the People's Republic of China""",
           "中華人民共和國澳門特別行政區",
-          "Região Administrativa Especial de Macau da República Popular da China",
+          """Região Administrativa Especial de Macau da República Popular da China""",
         ],
         continent: const Asia(),
         subregion: const EasternAsia(),
@@ -69,7 +70,7 @@ class CountryMac extends WorldCountry {
     CountryName(
       language: LangPor(),
       official:
-          "Região Administrativa Especial de Macau da República Popular da China",
+          """Região Administrativa Especial de Macau da República Popular da China""",
       common: "Macau",
     ),
     CountryName(language: LangZho(), official: "中华人民共和国澳门特别行政区", common: "澳门"),

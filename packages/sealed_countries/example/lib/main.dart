@@ -1,3 +1,5 @@
+// ignore_for_file: avoid_print, it's a test
+
 import "package:sealed_countries/sealed_countries.dart";
 
 void main() {
@@ -19,7 +21,7 @@ void main() {
 
   print(europeButNotEU.length); // Prints 23 count of non-EU European countries.
 
-  const customOne = CountryCustom(code: "XKX", continent: const Asia());
+  const customOne = CountryCustom(code: "XKX", continent: Asia()); // Custom.
   print(describeCountry(const CountryUsa())); // Prints: "United States".
   print(describeCountry(customOne)); // Prints: "Custom territory XKX".
   print(describeCountry(country)); // Prints: "Standard catalog entry".

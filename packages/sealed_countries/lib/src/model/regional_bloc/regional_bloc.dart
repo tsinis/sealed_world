@@ -1,4 +1,4 @@
-import "package:sealed_languages/sealed_languages.dart";
+import "package:sealed_currencies/sealed_currencies.dart";
 
 import "world_bloc.dart";
 
@@ -51,7 +51,7 @@ sealed class RegionalBloc extends WorldBloc {
     return regionalBlocs.firstWhere(
       (bloc) => bloc.acronym == string,
       orElse: () => throw StateError(
-        'RegionalBloc with acronym "$acronym"'
+        'RegionalBloc with acronym "$acronym" '
         "does not exist in the $regionalBlocs!",
       ),
     );
@@ -136,7 +136,7 @@ sealed class RegionalBloc extends WorldBloc {
   }
 
   /// A map of all the regional blocs with their corresponding acronyms.
-  static const map = UpperCaseMap({
+  static const map = UpperCaseMap<RegionalBloc>({
     "AL": BlocAL(),
     "ASEAN": BlocASEAN(),
     "AU": BlocAU(),
@@ -155,7 +155,7 @@ sealed class RegionalBloc extends WorldBloc {
   /// A list of all the regional blocs currently
   /// supported by the [RegionalBloc] class.
   // ignore_for_file: avoid-referencing-subclasses, transition to sealed class.
-  static const list = [
+  static const list = <RegionalBloc>[
     BlocAL(),
     BlocASEAN(),
     BlocAU(),

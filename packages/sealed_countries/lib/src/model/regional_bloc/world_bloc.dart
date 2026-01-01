@@ -1,4 +1,4 @@
-import "package:sealed_languages/sealed_languages.dart" show Named;
+import "package:sealed_currencies/sealed_currencies.dart" show Named;
 
 /// The [WorldBloc] class is an abstract class that represents a world
 /// bloc. It consists of a [String] values that represents the name and acronym

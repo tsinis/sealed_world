@@ -45,7 +45,7 @@ sealed class SubRegion extends Region {
 
   /// All supported subregions grouped under their parent continents.
   // ignore_for_file: avoid-referencing-subclasses, those are static constants.
-  static const list = [
+  static const list = <SubRegion>[
     /// Americas.
     CentralAmerica(),
     NorthAmerica(),

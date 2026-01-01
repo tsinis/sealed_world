@@ -87,27 +87,31 @@ extension WorldCountryJson on WorldCountry {
       codeNumeric: codeNumeric,
       codeShort: codeShort,
     ).copyWith(
-      name: CountryNameExtension.fromMap(map["name"]),
-      altSpellings: List<String>.unmodifiable(map["altSpellings"]),
+      name: CountryNameExtension.fromMap(map["name"] as JsonMap),
+      altSpellings: List<String>.unmodifiable(map["altSpellings"] as List),
       areaMetric: map["areaMetric"] as double?,
       continent: Continent.maybeFromValue(map["continent"]),
       emoji: map["emoji"]?.toString(),
-      idd: IddExtension.fromMap(map["idd"]),
+      idd: IddExtension.fromMap(map["idd"] as JsonMap),
       languages: map["languages"] is List<Object?>
           ? (map["languages"] as List<Object?>)
                 .fromIsoList(NaturalLanguage.fromCode)
                 .toList(growable: false)
           : null,
-      latLng: LatLngExtension.fromMap(map["latLng"]),
-      maps: MapsExtension.fromMap(map["maps"]),
+      latLng: LatLngExtension.fromMap(map["latLng"] as JsonMap),
+      maps: MapsExtension.fromMap(map["maps"] as JsonMap),
       namesNative: List<CountryName>.unmodifiable(
-        (map["namesNative"]).map((n) => CountryNameExtension.fromMap(n)),
+        (map["namesNative"] as List).map(
+          (n) => CountryNameExtension.fromMap(n as JsonMap),
+        ),
       ),
       population: map["population"] as int?,
-      timezones: List<String>.unmodifiable(map["timezones"]),
-      tld: List<String>.unmodifiable(map["tld"]),
+      timezones: List<String>.unmodifiable(map["timezones"] as List),
+      tld: List<String>.unmodifiable(map["tld"] as List),
       demonyms: List<Demonyms>.unmodifiable(
-        (map["demonyms"]).map((d) => DemonymsExtension.fromMap(d)),
+        (map["demonyms"] as List).map(
+          (i) => DemonymsExtension.fromMap(i as JsonMap),
+        ),
       ),
       currencies: map["currencies"] is List<Object?>
           ? (map["currencies"] as List<Object?>)
@@ -116,31 +120,31 @@ extension WorldCountryJson on WorldCountry {
           : null,
       capitalInfo: map["capitalInfo"] == null
           ? null
-          : CapitalInfoExtension.fromMap(map["capitalInfo"]),
-      car: CarExtension.fromMap(map["car"]),
+          : CapitalInfoExtension.fromMap(map["capitalInfo"] as JsonMap),
+      car: CarExtension.fromMap(map["car"] as JsonMap),
       cioc: map["cioc"]?.toString(),
       fifa: map["fifa"]?.toString(),
-      gini: map["gini"] == null ? null : GiniExtension.fromMap(map["gini"]),
+      gini: map["gini"] == null
+          ? null
+          : GiniExtension.fromMap(map["gini"] as JsonMap),
       hasCoatOfArms: map["hasCoatOfArms"] as bool?,
       independent: map["independent"] as bool?,
       landlocked: map["landlocked"] as bool?,
       postalCode: map["postalCode"] == null
           ? null
-          : PostalCodeExtension.fromMap(map["postalCode"]),
+          : PostalCodeExtension.fromMap(map["postalCode"] as JsonMap),
       bordersCodes: map["bordersCodes"] is List
-          ? List<String>.unmodifiable(map["bordersCodes"])
+          ? List<String>.unmodifiable(map["bordersCodes"] as List)
           : null,
-      startOfWeek: Weekday.fromMap(map["startOfWeek"]),
+      startOfWeek: Weekday.fromMap(map["startOfWeek"] as JsonMap),
       subregion: map["subregion"] is String?
           ? SubRegion.maybeFromValue(map["subregion"]?.toString())
           : null,
       unMember: map["unMember"] as bool?,
-      regionalBlocs: decodedBlocs.isEmpty
+      regionalBlocs: decodedBlocs is! List || decodedBlocs.isEmpty
           ? null
           : List<RegionalBloc>.from(
-              (decodedBlocs as List).map(
-                (rb) => RegionalBloc.fromAcronym("$rb"),
-              ),
+              decodedBlocs.map((rb) => RegionalBloc.fromAcronym("$rb")),
             ),
     );
   }

@@ -1,5 +1,5 @@
-import '../../../model/geo/submodels/continent.dart';
-import '../../../model/geo/submodels/subregion.dart';
+import "../../../model/geo/submodels/continent.dart";
+import "../../../model/geo/submodels/subregion.dart";
 
 /// Convenience helpers for discovering the subregions of a [Continent].
 extension ContinentExtension on Continent {

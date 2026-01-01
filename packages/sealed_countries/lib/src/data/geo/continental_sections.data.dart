@@ -1,4 +1,4 @@
-part of '../../model/geo/submodels/subregion.dart';
+part of "../../model/geo/submodels/subregion.dart";
 
 // Americas.
 

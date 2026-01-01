@@ -13,7 +13,8 @@ extension type const _VctFactory._(CountryVct _) implements CountryVct {
 /// A class that represents the Saint Vincent and the Grenadines country.
 class CountryVct extends WorldCountry {
   /// {@template sealed_world.country_vct_constructor}
-  /// Creates a instance of [CountryVct] (Saint Vincent and the Grenadines country).
+  /// Creates a instance of [CountryVct] (Saint Vincent and the Grenadines
+  /// country).
   ///
   /// ISO 3166-1 Alpha-3 code: `VCT`, ISO 3166-1 Alpha-2 code: `VC`.
   /// {@endtemplate}

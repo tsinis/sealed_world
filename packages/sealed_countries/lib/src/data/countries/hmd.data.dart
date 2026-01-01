@@ -13,7 +13,8 @@ extension type const _HmdFactory._(CountryHmd _) implements CountryHmd {
 /// A class that represents the Heard Island and McDonald Islands country.
 class CountryHmd extends WorldCountry {
   /// {@template sealed_world.country_hmd_constructor}
-  /// Creates a instance of [CountryHmd] (Heard Island and McDonald Islands country).
+  /// Creates a instance of [CountryHmd] (Heard Island and McDonald Islands
+  /// country).
   ///
   /// ISO 3166-1 Alpha-3 code: `HMD`, ISO 3166-1 Alpha-2 code: `HM`.
   /// {@endtemplate}

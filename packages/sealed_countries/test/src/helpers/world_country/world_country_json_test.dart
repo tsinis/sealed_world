@@ -2,6 +2,7 @@ import "dart:convert";
 
 import "package:sealed_countries/src/helpers/world_country/world_country_json.dart";
 import "package:sealed_countries/src/model/country/submodels/world_country.dart";
+import "package:sealed_currencies/sealed_currencies.dart" show JsonMap;
 import "package:test/test.dart";
 
 void main() => group("WorldCountryJson", () {
@@ -16,7 +17,10 @@ void main() => group("WorldCountryJson", () {
       final source = WorldCountry.list.firstWhere(
         (country) => country.regionalBlocs?.isNotEmpty ?? false,
       );
-      final decoded = WorldCountryJson.fromMap(jsonDecode(source.toJson()));
+      final decoded = WorldCountryJson.fromMap(
+        // ignore: avoid-type-casts, it's a test.
+        jsonDecode(source.toJson()) as JsonMap,
+      );
 
       expect(decoded, isA<CountryCustom>());
       expect(decoded.code, source.code);

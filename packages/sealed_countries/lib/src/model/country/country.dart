@@ -1,4 +1,4 @@
-import "package:sealed_languages/sealed_languages.dart" show Named;
+import "package:sealed_currencies/sealed_currencies.dart" show Named;
 
 import "../../helpers/extensions/country_submodels/country_name_extension.dart";
 import "submodels/country_name.dart";
@@ -19,5 +19,5 @@ class Country implements Named<CountryName> {
 
   @override
   String toString({bool short = true}) =>
-      short ? name.common : 'Country(name: $name)';
+      short ? name.common : "Country(name: $name)";
 }

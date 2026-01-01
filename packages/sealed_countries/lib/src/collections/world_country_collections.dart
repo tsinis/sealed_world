@@ -4,7 +4,7 @@
 import "../model/country/country.dart";
 
 /// Map of [WorldCountry] standard codes.
-const worldCountryCodeMap = {
+const worldCountryCodeMap = <String, WorldCountry>{
   "ABW": CountryAbw(),
   "AFG": CountryAfg(),
   "AGO": CountryAgo(),
@@ -258,7 +258,7 @@ const worldCountryCodeMap = {
 };
 
 /// Map of [WorldCountry] other codes.
-const worldCountryCodeOtherMap = {
+const worldCountryCodeOtherMap = <String, WorldCountry>{
   "AD": CountryAnd(),
   "AE": CountryAre(),
   "AF": CountryAfg(),
@@ -512,7 +512,7 @@ const worldCountryCodeOtherMap = {
 };
 
 /// Map of [WorldCountry] numeric codes.
-const worldCountryCodeNumericMap = {
+const worldCountryCodeNumericMap = <String, WorldCountry>{
   "004": CountryAfg(),
   "008": CountryAlb(),
   "010": CountryAta(),

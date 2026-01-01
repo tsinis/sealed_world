@@ -232,10 +232,10 @@ void main() => group("$TypedLocalizationDelegate", () {
       });
 
       test("parses iso-3 combinations with custom parser", () {
-        final extendedParser = TypedLocalizationDelegate(
-          countries: const [CountryUsa(), CountryDeu()],
-          languages: const [LangEng(), LangDeu()],
-          scripts: const [ScriptLatn(), ScriptCyrl()],
+        const extendedParser = TypedLocalizationDelegate(
+          countries: [CountryUsa(), CountryDeu()],
+          languages: [LangEng(), LangDeu()],
+          scripts: [ScriptLatn(), ScriptCyrl()],
         );
         final result = extendedParser.parseLocale("deu-Cyrl-DE");
 
@@ -246,9 +246,9 @@ void main() => group("$TypedLocalizationDelegate", () {
       });
 
       test("resolves alpha-3 countries when provided", () {
-        final extendedParser = TypedLocalizationDelegate(
-          countries: const [CountryUsa(), CountryDeu()],
-          languages: const [LangEng(), LangDeu()],
+        const extendedParser = TypedLocalizationDelegate(
+          countries: [CountryUsa(), CountryDeu()],
+          languages: [LangEng(), LangDeu()],
         );
         final result = extendedParser.parseLocale("deu_deu");
 

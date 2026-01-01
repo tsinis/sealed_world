@@ -1,3 +1,6 @@
+// ignore_for_file: prefer_const_constructors, equal_keys_in_map, it's a test.
+// ignore_for_file: avoid-duplicate-test-assertions
+
 import "dart:convert";
 
 import "package:_sealed_world_tests/sealed_world_tests.dart";
@@ -23,10 +26,10 @@ void main() => group("$WorldCountry", () {
   });
 
   performanceTest("compile and non compile time constructors equality", () {
-    expect(WorldCountry.abw(), CountryAbw());
     expect(WorldCountry.abw(), const CountryAbw());
     expect(const WorldCountry.abw(), CountryAbw());
     expect(const WorldCountry.abw(), const CountryAbw());
+    expect(WorldCountry.abw(), CountryAbw());
   });
 
   assertTest(
@@ -62,13 +65,14 @@ void main() => group("$WorldCountry", () {
   });
 
   group("some countries should be fully translated", () {
-    /// This is a comprehensive list of countries that ensure the availability of
-    /// translations for every language in the countries `list`.
+    /// This is a comprehensive list of countries that ensure the availability
+    /// of translations for every language in the countries `list`.
     ///
-    /// It is important to note that while other languages may not be included in
-    /// this list, they may still have translations available for most common
-    /// countries, but there may be some missing translations for rarer languages.
-    /// Every country contains more than 114 translations of it's name.
+    /// It is important to note that while other languages may not be included
+    /// in this list, they may still have translations available for most common
+    /// countries, but there may be some missing translations for rarer
+    /// languages. Every country contains more than 114 translations of it's
+    /// name.
     ///
     /// Includes all the Material localizations in [kMaterialSupportedLanguages](https://api.flutter.dev/flutter/flutter_localizations/kMaterialSupportedLanguages.html)
     /// with a two letter code and much more (for example on top of that it also
@@ -377,7 +381,6 @@ void main() => group("$WorldCountry", () {
         CountryAbw(): 4,
         const CountryAbw(): 3,
         WorldCountry.abw(): 2,
-        // ignore: equal_keys_in_map, it's a test.
         const WorldCountry.abw(): 1,
         WorldCountry.fromCode("ABW"): 0,
       };
@@ -663,7 +666,9 @@ void main() => group("$WorldCountry", () {
       test("compared to $WorldCountry: ${element.name.common}", () {
         final json = element.toJson();
         expect(json, isNotEmpty);
-        final decoded = WorldCountryJson.fromMap(jsonDecode(json));
+        final decoded = WorldCountryJson.fromMap(
+          jsonDecode(json) as JsonMap, // ignore: avoid-type-casts, it's a test.
+        );
         expect(element.code, decoded.code);
         expect(element.postalCode, decoded.postalCode);
         expect(element.capitalInfo, decoded.capitalInfo);
@@ -1010,7 +1015,7 @@ void main() => group("$WorldCountry", () {
     });
   });
 
-  group('permissive constructor asserts', () {
+  group("permissive constructor asserts", () {
     assertTest(
       "not empty code",
       () => const CountryCustom(code: "code").code,
