@@ -27,15 +27,27 @@ jobs:
 
   assign:
     name: ✍🏻 Auto-assign PR
-    runs-on: ubuntu-latest
+    runs-on: ubuntu-slim
     timeout-minutes: 4
     if: github.event.pull_request.user.login != 'dependabot[bot]'
     steps:
-      - name: ✍🏻 Add Reviewer and Author Assign
-        uses: devmyong/auto-assign@v1.0.1
-        env:
-          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
-          PR_NUMBER: ${{ github.event.number }}
+      - name: ✍🏻 Assign pull request
+        uses: gustavofreze/auto-assign@2.0.0
+        with:
+          assignees: "tsinis"
+          github_token: ${{ secrets.GITHUB_TOKEN }}
+          assignment_options: "PULL_REQUEST"
+
+  reviewers:
+    name: 🧐 Auto-assign reviewers
+    runs-on: ubuntu-slim
+    timeout-minutes: 4
+    steps:
+      - name: 🧐 Assign PR Reviewers
+        uses: parraletz/add-reviewers-action@v1.2.4
+        with:
+          github_token: ${{ secrets.GITHUB_TOKEN }}
+          reviewers_file_path: ".github/workflows/config/reviewers.yaml"
 
   pr-title:
     name: 📰 Lint PR Title
