@@ -24,8 +24,9 @@ abstract class BasicLocalizationDelegate<
   /// Parameters:
   /// - [languages]: Optional collection of supported languages for locale
   ///       parsing.
-  /// - [mapper]: Optional function that returns locale mapping function
   /// - [scripts]: Optional collection of supported scripts for locale parsing.
+  /// - [mapper]:
+  /// {@macro sealed_world.locale_mapper_callback}
   const BasicLocalizationDelegate({this.languages, this.mapper, this.scripts});
 
   /// Optional collection of supported languages. Used to limit locale parsing
@@ -48,6 +49,8 @@ abstract class BasicLocalizationDelegate<
   /// {@macro copy_with_method}
   BasicLocalizationDelegate<L, T> copyWith({
     Iterable<NaturalLanguage>? languages,
+
+    /// {@macro sealed_world.locale_mapper_callback}
     LocaleMapFunction<String> Function()? mapper,
     Iterable<Script>? scripts,
   });

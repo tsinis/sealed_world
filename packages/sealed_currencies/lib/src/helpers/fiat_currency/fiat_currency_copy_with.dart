@@ -33,6 +33,8 @@ extension FiatCurrencyCopyWith<T extends FiatCurrency> on T {
     int? subunitToUnit,
     String? symbol,
     String? thousandsSeparator,
+
+    /// {@macro sealed_world.locale_mapper_callback}
     LocaleMapFunction<String> Function()? mapper,
     bool? unitFirst,
   }) => FiatCustom(

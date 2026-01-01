@@ -53,6 +53,8 @@ extension WorldCountryCopyWith<T extends WorldCountry> on T {
     CapitalInfo? capitalInfo,
     PostalCode? postalCode,
     List<RegionalBloc>? regionalBlocs,
+
+    /// {@macro sealed_world.locale_mapper_callback}
     LocaleMapFunction<String> Function()? mapper,
   }) => CountryCustom(
     name: name ?? this.name,

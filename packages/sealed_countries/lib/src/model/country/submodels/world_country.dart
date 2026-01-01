@@ -1171,6 +1171,8 @@ sealed class WorldCountry extends Country
     List<Demonyms> demonyms = const [],
     List<NaturalLanguage>? languages,
     List<CountryName> namesNative = const [],
+
+    /// {@macro sealed_world.locale_mapper_callback}
     LocaleMapFunction<String> Function()? mapper,
   }) : assert(
          code.length > 0 || codeNumeric.length > 0 || codeShort.length > 0,
@@ -1887,5 +1889,5 @@ sealed class WorldCountry extends Country
   final List<NaturalLanguage>? _languages;
   final List<CountryName>? _namesNative;
   // ignore: prefer-correct-callback-field-name, follows delegate naming.
-  final LocaleMapFunction<String> Function()? _mapper; // TODO! Docs.
+  final LocaleMapFunction<String> Function()? _mapper;
 }

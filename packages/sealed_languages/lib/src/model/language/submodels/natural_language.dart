@@ -225,6 +225,42 @@ sealed class NaturalLanguage extends Language
   /// language belongs (defaults to the Indo-European family). The optional
   /// [isRightToLeft] parameter specifies whether the language is written
   /// right-to-left (defaults to `false`).
+  /// {@template sealed_world.locale_mapper_callback}
+  /// The optional [mapper] parameter and lets you inject custom localization
+  /// sources.
+  ///
+  /// Lazily provides a [LocaleMapFunction] that translates ISO codes into human
+  /// readable names. Pass this callback when you want to override the default
+  /// localization sources from the `l10n_*` packages with your own mapper.
+  ///
+  /// The closure commonly instantiates a `*LocaleMapper`, (see package's
+  /// `example/lib/main.dart`) and returns its `localize` method. This
+  /// lets you register extra locale data through the `other` parameter or reuse
+  /// features like `mainLocale`, `fallbackLocale`, `useLanguageFallback`, the
+  /// alternative-name `altSymbol`, and the `formatter` hook exposed by
+  /// [LocaleMapFunction].
+  ///
+  /// ```dart
+  /// final delegate = TypedLocalizationDelegate(
+  ///   mapper: () => CountriesLocaleMapper(
+  ///     other: {
+  ///       "en_GB": IsoLocaleMapper(other: {"SCT": "Scotland"}),
+  ///     },
+  ///   ).localize,
+  /// );
+  ///
+  /// final localized = delegate.mapper?.call().call(
+  ///   {"USA", "SCT"},
+  ///   mainLocale: "fr",
+  ///   fallbackLocale: "en_GB",
+  ///   formatter: (key, value) =>
+  ///       key.locale.startsWith("en") ? value.toUpperCase() : value,
+  /// );
+  /// ```
+  ///
+  /// Returning a new mapper each time keeps the underlying `IsoLocaleMapper`
+  /// mutable for registration without leaking mutations between lookups.
+  /// {@endtemplate}
   /// {@endtemplate}
   const NaturalLanguage._({
     required super.name,
@@ -235,6 +271,8 @@ sealed class NaturalLanguage extends Language
     this.family = const IndoEuropean(),
     this.isRightToLeft = false,
     this.scripts = const {ScriptLatn()},
+
+    /// {@macro sealed_world.locale_mapper_callback}
     LocaleMapFunction<String> Function()? mapper,
   }) : assert(
          code.length == IsoStandardized.codeLength,
@@ -287,6 +325,8 @@ sealed class NaturalLanguage extends Language
     this.family = const IndoEuropean(),
     this.isRightToLeft = false,
     this.scripts = const {ScriptLatn()},
+
+    /// {@macro sealed_world.locale_mapper_callback}
     LocaleMapFunction<String> Function()? mapper,
   }) : assert(
          code.length > 0 || codeShort.length > 0,
@@ -1286,8 +1326,9 @@ sealed class NaturalLanguage extends Language
   @override
   String get internationalName => name;
 
+  /// {@macro sealed_world.locale_mapper_callback}
   // ignore: prefer-correct-callback-field-name, follows delegate naming.
-  final LocaleMapFunction<String> Function()? _mapper; // TODO! Docs.
+  final LocaleMapFunction<String> Function()? _mapper;
 
   @override
   LocalizationDelegate get l10n => LocalizationDelegate(

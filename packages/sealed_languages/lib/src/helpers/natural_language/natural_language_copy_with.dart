@@ -30,6 +30,8 @@ extension NaturalLanguageCopyWith<T extends NaturalLanguage> on T {
     String? name,
     List<String>? namesNative,
     Set<Script>? scripts,
+
+    /// {@macro sealed_world.locale_mapper_callback}
     LocaleMapFunction<String> Function()? mapper,
   }) => LangCustom(
     name: name ?? this.name,

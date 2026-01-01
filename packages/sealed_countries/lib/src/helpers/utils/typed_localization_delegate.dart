@@ -14,8 +14,9 @@ class TypedLocalizationDelegate
   ///
   /// Parameters are passed directly to [BasicLocalizationDelegate]:
   /// - [languages]: Optional collection of supported languages.
-  /// - [mapper]: Optional function that returns locale mapping function.
   /// - [scripts]: Optional collection of supported scripts.
+  /// - [mapper]: Optional function that returns locale mapping function.
+  /// {@macro sealed_world.locale_mapper_callback}
   const TypedLocalizationDelegate({
     this.countries,
     super.languages,
@@ -53,6 +54,8 @@ class TypedLocalizationDelegate
   TypedLocalizationDelegate copyWith({
     Iterable<WorldCountry>? countries,
     Iterable<NaturalLanguage>? languages,
+
+    /// {@macro sealed_world.locale_mapper_callback}
     LocaleMapFunction<String> Function()? mapper,
     Iterable<Script>? scripts,
   }) => TypedLocalizationDelegate(

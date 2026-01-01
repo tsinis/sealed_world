@@ -201,6 +201,8 @@ sealed class FiatCurrency extends Currency
   /// [codeNumeric] is not exactly 3 characters long, [namesNative] is empty,
   /// [htmlEntity] is empty, [subunit] is empty, [alternateSymbols] is empty, or
   /// [smallestDenomination] is negative.
+  /// The optional [mapper] parameter when you need custom localization data:
+  /// {@macro sealed_world.locale_mapper_callback}
   const FiatCurrency({
     /// The international 3-numeric non-empty letter code as defined by the ISO
     /// 4217 standard.
@@ -219,6 +221,8 @@ sealed class FiatCurrency extends Currency
     super.symbol,
     super.decimalMark = dot,
     super.thousandsSeparator = ",",
+
+    /// {@macro sealed_world.locale_mapper_callback}
     LocaleMapFunction<String> Function()? mapper,
   }) : assert(
          code.length == IsoStandardized.codeLength,
@@ -268,6 +272,8 @@ sealed class FiatCurrency extends Currency
     super.symbol,
     super.decimalMark = dot,
     super.thousandsSeparator = ",",
+
+    /// {@macro sealed_world.locale_mapper_callback}
     LocaleMapFunction<String> Function()? mapper,
   }) : assert(
          (code?.length ?? 0) > 0 || codeNumeric.length > 0,
@@ -1136,7 +1142,7 @@ sealed class FiatCurrency extends Currency
   static const listExtended = <FiatCurrency>[...list, ...specialPurposeList];
 
   // ignore: prefer-correct-callback-field-name, follows delegate naming.
-  final LocaleMapFunction<String> Function()? _mapper; // TODO! Docs.
+  final LocaleMapFunction<String> Function()? _mapper;
 
   /// The international 3-numeric non-empty numeric code as defined by the ISO
   /// 4217 standard.

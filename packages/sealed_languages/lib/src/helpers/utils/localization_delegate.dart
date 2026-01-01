@@ -17,8 +17,9 @@ class LocalizationDelegate
   ///
   /// Parameters are passed directly to [BasicLocalizationDelegate]:
   /// - [languages]: Optional collection of supported languages.
-  /// - [mapper]: Optional function that returns locale mapping function.
   /// - [scripts]: Optional collection of supported scripts.
+  /// - [mapper]:
+  /// {@macro sealed_world.locale_mapper_callback}
   const LocalizationDelegate({super.languages, super.mapper, super.scripts});
 
   @override
@@ -35,6 +36,8 @@ class LocalizationDelegate
   @override // coverage:ignore-line
   LocalizationDelegate copyWith({
     Iterable<NaturalLanguage>? languages,
+
+    /// {@macro sealed_world.locale_mapper_callback}
     LocaleMapFunction<String> Function()? mapper,
     Iterable<Script>? scripts,
   }) => LocalizationDelegate(
