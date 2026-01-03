@@ -20,7 +20,7 @@ screenshots:
     path: doc/example.webp
 
 environment:
-  sdk: ^3.9.2
+  sdk: ^3.10.4
 
 dependencies:
   flutter:
@@ -33,3 +33,7 @@ dev_dependencies:
   dart_code_metrics_presets: any # Constrained in the workspace pubspec.yaml
   flutter_test: # From Google
     sdk: flutter
+
+flutter:
+  shaders:
+    - shaders/waved_flag.frag
