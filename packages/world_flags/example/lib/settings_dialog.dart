@@ -1,20 +1,18 @@
-import "dart:async";
-
 import "package:flutter/material.dart";
+import "package:meta/meta.dart"; // ignore: depend_on_referenced_packages, example app.
 import "package:world_flags/world_flags.dart";
 
 class SettingsDialog extends StatefulWidget {
   const SettingsDialog(this.aspectRatio, this.country, {super.key});
 
-  static void show(
+  @awaitNotRequired
+  static Future<void> show(
     ValueNotifier<double?> aspectRatio,
     BuildContext context,
     WorldCountry country,
-  ) => unawaited(
-    showDialog(
-      context: context,
-      builder: (_) => SettingsDialog(aspectRatio, country),
-    ),
+  ) => showDialog<void>(
+    context: context,
+    builder: (_) => SettingsDialog(aspectRatio, country),
   );
 
   final WorldCountry country;
@@ -24,8 +22,14 @@ class SettingsDialog extends StatefulWidget {
   State<SettingsDialog> createState() => _SettingsDialogState();
 }
 
-class _SettingsDialogState extends State<SettingsDialog> {
+class _SettingsDialogState extends State<SettingsDialog>
+    with SingleTickerProviderStateMixin {
   final _opacity = ValueNotifier<double>(1 / 2);
+  // ignore: avoid-late-keyword, free lazy initialization.
+  late final _shader = WavedFlagShaderDelegate(
+    vsync: this,
+    options: const FlagShaderOptions(enabled: true),
+  );
 
   WorldCountry get _country => widget.country;
 
@@ -38,6 +42,7 @@ class _SettingsDialogState extends State<SettingsDialog> {
   @override
   void dispose() {
     _opacity.dispose();
+    _shader.dispose();
     super.dispose();
   }
 
@@ -120,7 +125,11 @@ class _SettingsDialogState extends State<SettingsDialog> {
               ),
             ),
           ),
-          child: CountryFlag.simplified(_country, aspectRatio: ratio),
+          child: CountryFlag.simplified(
+            _country,
+            aspectRatio: ratio,
+            shader: _shader,
+          ),
         ),
       ),
     ),

@@ -44,6 +44,7 @@ class BasicFlag extends DecoratedFlagWidget {
     this.properties, {
     super.aspectRatio,
     this.backgroundPainter,
+    this.shader,
     super.decoration,
     super.decorationPosition,
     this.elementsBuilder,
@@ -54,7 +55,6 @@ class BasicFlag extends DecoratedFlagWidget {
     super.height,
     super.width,
     super.child,
-    this.shader,
     super.key,
   });
 

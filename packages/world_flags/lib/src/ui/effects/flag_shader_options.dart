@@ -5,13 +5,13 @@ import "dart:ui" show Offset;
 import "package:flutter/foundation.dart";
 
 import "../../theme/flag_theme_data.dart";
-import "../flags/basic_flag.dart";
+import "flag_shader_controller.dart" show FlagShaderController;
 
 /// Immutable configuration for waved-flag style shader delegates.
 ///
 /// These options describe purely visual preferences (amplitude, turbulence,
-/// highlights, etc.) and can be stored inside [FlagThemeData] or passed
-/// directly to a [BasicFlag]. They do *not* manage shader lifecycles, tickers,
+/// highlights, etc.) and can be stored inside [FlagThemeData] or supplied to
+/// a [FlagShaderController]. They do *not* manage shader lifecycles, tickers,
 /// or GPU resources.
 ///
 /// ### Usage
@@ -24,10 +24,7 @@ import "../flags/basic_flag.dart";
 /// );
 ///
 /// return FlagShaderController(
-///   flag: BasicFlag(
-///     flagProperties,
-///     shaderOptions: options,
-///   ),
+///   flag: BasicFlag(flagProperties),
 ///   options: options,
 /// );
 /// ```

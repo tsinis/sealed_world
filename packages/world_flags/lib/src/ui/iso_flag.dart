@@ -7,6 +7,7 @@ import "package:sealed_countries/sealed_countries.dart" show IsoStandardized;
 import "../debug/iso_diagnostics_property.dart";
 import "../helpers/extensions/basic_flag_extension_copy_with.dart";
 import "decorated_flag_widget.dart";
+import "effects/flag_shader_delegate.dart";
 import "flags/basic_flag.dart";
 
 /// A widget that displays a flag for a given ISO object.
@@ -48,6 +49,7 @@ class IsoFlag<T extends IsoStandardized, F extends BasicFlag>
     this._map, {
     Map<T, F>? alternativeMap,
     this.orElse,
+    this.shader,
     super.height,
     super.width,
     super.aspectRatio,
@@ -74,6 +76,9 @@ class IsoFlag<T extends IsoStandardized, F extends BasicFlag>
 
   /// A widget to display if the flag is not found in the map.
   final Widget? orElse;
+
+  /// Optional shader delegate applied when painting the stripes.
+  final FlagShaderDelegate? shader;
 
   @override
   String toStringShort() => "IsoFlag($debugLabel)";
@@ -187,6 +192,13 @@ class IsoFlag<T extends IsoStandardized, F extends BasicFlag>
           map,
           ifEmpty: "empty flags map provided",
         ),
+      )
+      ..add(
+        DiagnosticsProperty<FlagShaderDelegate?>(
+          "shader",
+          shader,
+          ifNull: "no shader provided",
+        ),
       );
   }
 
@@ -199,6 +211,7 @@ class IsoFlag<T extends IsoStandardized, F extends BasicFlag>
         decorationPosition: decorationPosition,
         padding: padding,
         height: height,
+        shader: shader,
         width: width,
         child: child,
       ) ??
