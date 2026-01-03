@@ -35,6 +35,5 @@ class MultiElementFlag extends BasicFlag {
     super.key,
     super.padding,
     super.child,
-    super.shaderOptions,
   }) : super(elementsBuilder: MultiElementPainter.new); // coverage:ignore-line
 }

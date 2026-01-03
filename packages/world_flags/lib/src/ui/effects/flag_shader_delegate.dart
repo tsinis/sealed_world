@@ -9,6 +9,7 @@ typedef FlagShaderContentPainter = void Function(Canvas canvas, Size size);
 /// Implementations can decide whether to apply a shader or bail out and let the
 /// fallback painter run.
 abstract class FlagShaderDelegate implements Listenable {
+  /// Creates a new instance of [FlagShaderDelegate].
   const FlagShaderDelegate({
     this.contentScale = 1,
     this.shouldClipContent = false,

@@ -35,6 +35,5 @@ class StarFlag extends BasicFlag {
     super.key,
     super.padding,
     super.child,
-    super.shaderOptions,
   }) : super(elementsBuilder: StarPainter.new); // coverage:ignore-line
 }

@@ -7,7 +7,6 @@ import "package:sealed_countries/sealed_countries.dart" show IsoStandardized;
 import "../debug/iso_diagnostics_property.dart";
 import "../helpers/extensions/basic_flag_extension_copy_with.dart";
 import "decorated_flag_widget.dart";
-import "effects/flag_shader_options.dart";
 import "flags/basic_flag.dart";
 
 /// A widget that displays a flag for a given ISO object.
@@ -43,7 +42,6 @@ class IsoFlag<T extends IsoStandardized, F extends BasicFlag>
   /// - [width]: The width of the flag. If `null`, the width from the flag theme
   ///  is used.
   /// - [child]: A widget to display in the foreground of the flag.
-  /// - [shaderOptions]: Shader options override applied to produced flags.
   /// - [key]: The key for the widget.
   const IsoFlag(
     this.item,
@@ -57,7 +55,6 @@ class IsoFlag<T extends IsoStandardized, F extends BasicFlag>
     super.decorationPosition,
     super.padding,
     super.child,
-    this.shaderOptions,
     super.key,
   }) : _alternativeMap = alternativeMap;
 
@@ -77,9 +74,6 @@ class IsoFlag<T extends IsoStandardized, F extends BasicFlag>
 
   /// A widget to display if the flag is not found in the map.
   final Widget? orElse;
-
-  /// Shader options forwarded to the resolved [BasicFlag].
-  final FlagShaderOptions? shaderOptions;
 
   @override
   String toStringShort() => "IsoFlag($debugLabel)";
@@ -116,13 +110,6 @@ class IsoFlag<T extends IsoStandardized, F extends BasicFlag>
           "child",
           child,
           ifNull: "no foreground widget",
-        ),
-      )
-      ..add(
-        ObjectFlagProperty<FlagShaderOptions>(
-          "shaderOptions",
-          shaderOptions,
-          ifNull: "no shader options override",
         ),
       )
       ..add(
@@ -214,7 +201,6 @@ class IsoFlag<T extends IsoStandardized, F extends BasicFlag>
         height: height,
         width: width,
         child: child,
-        shaderOptions: shaderOptions,
       ) ??
       orElse ??
       const SizedBox.shrink();

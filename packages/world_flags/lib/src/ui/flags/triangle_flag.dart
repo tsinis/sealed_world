@@ -35,6 +35,5 @@ class TriangleFlag extends BasicFlag {
     super.key,
     super.padding,
     super.child,
-    super.shaderOptions,
   }) : super(elementsBuilder: TrianglePainter.new); // coverage:ignore-line
 }

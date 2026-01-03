@@ -35,6 +35,5 @@ class EllipseFlag extends BasicFlag {
     super.key,
     super.padding,
     super.child,
-    super.shaderOptions,
   }) : super(elementsBuilder: EllipsePainter.new); // coverage:ignore-line
 }
