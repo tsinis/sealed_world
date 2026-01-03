@@ -73,6 +73,7 @@ final class MultiElementPainter extends CustomElementsPainter {
   /// elements.
   @override
   FlagParentBounds? paint(Canvas canvas, Size size) {
+    canvas.clipRect(Offset.zero & size); // Clip to flag bounds/parent stripes.
     for (final props in properties) {
       final shape = props.shape;
       if (shape != null) {

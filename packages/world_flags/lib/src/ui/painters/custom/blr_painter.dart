@@ -168,13 +168,13 @@ final class BlrPainter extends CustomElementsPainter {
       ..lineTo(width * 0.75, height * 0.03)
       ..moveTo(width * 0.24, height * 0.9)
       ..lineTo(width * 0.41, height * 0.96)
-      ..lineTo(width * 0.24, height * 1.03)
+      ..lineTo(width * 0.24, height)
       ..lineTo(width * 0.07, height * 0.96)
       ..lineTo(width * 0.22, height * 0.9)
       ..lineTo(width * 0.24, height * 0.89)
       ..moveTo(width * 0.75, height * 0.89)
       ..lineTo(width * 0.93, height * 0.96)
-      ..lineTo(width * 0.75, height * 1.03)
+      ..lineTo(width * 0.75, height)
       ..lineTo(width * 0.58, height * 0.96)
       ..lineTo(width * 0.75, height * 0.89)
       ..lineTo(width * 0.75, height * 0.89)
@@ -182,7 +182,11 @@ final class BlrPainter extends CustomElementsPainter {
 
     final bounds = path.getBounds();
     final redPaint = paintCreator(customColors.first);
-    final rect = Rect.fromLTRB(bounds.left, 0, width * 0.99, height * 1.1);
+    final rect = Rect.fromCenter(
+      center: bounds.center,
+      width: width * 0.99,
+      height: height,
+    );
 
     canvas
       ..translate(center.dx - bounds.center.dx, center.dy - bounds.center.dy)

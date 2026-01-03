@@ -23,6 +23,7 @@ import "src/ui/painters/custom/ata_painter.dart";
 import "src/ui/painters/custom/blr_painter.dart";
 import "src/ui/painters/custom/brb_painter.dart";
 import "src/ui/painters/custom/btn_painter.dart";
+import "src/ui/painters/custom/clipped_triangle_painter.dart";
 import "src/ui/painters/custom/cyp_painter.dart";
 import "src/ui/painters/custom/david_star_painter.dart";
 import "src/ui/painters/custom/eagle_painter.dart";
@@ -87,6 +88,8 @@ export "src/model/typedefs.dart";
 export "src/theme/flag_theme_data.dart";
 export "src/ui/country_flag.dart";
 export "src/ui/decorated_flag_widget.dart";
+export "src/ui/effects/flag_shader_scope.dart";
+export "src/ui/effects/waved_flag_shader.dart";
 export "src/ui/flags/basic_flag.dart";
 export "src/ui/flags/ellipse_flag.dart";
 export "src/ui/flags/moon_flag.dart";
@@ -111,6 +114,7 @@ export "src/ui/painters/custom/ata_painter.dart";
 export "src/ui/painters/custom/blr_painter.dart";
 export "src/ui/painters/custom/brb_painter.dart";
 export "src/ui/painters/custom/btn_painter.dart";
+export "src/ui/painters/custom/clipped_triangle_painter.dart";
 export "src/ui/painters/custom/cyp_painter.dart";
 export "src/ui/painters/custom/david_star_painter.dart";
 export "src/ui/painters/custom/eagle_painter.dart";
@@ -194,7 +198,10 @@ const uniqueSimplifiedFlagsMap = <WorldCountry, BasicFlag>{
   CountryBfa(): StarFlag(flagBfaProperties),
   CountryBgd(): EllipseFlag(flagBgdProperties),
   CountryBgr(): BasicFlag(flagBgrProperties),
-  CountryBhr(): TriangleFlag(flagBhrProperties),
+  CountryBhr(): BasicFlag(
+    flagBhrProperties,
+    elementsBuilder: ClippedTrianglePainter.new,
+  ),
   CountryBhs(): TriangleFlag(flagBhsProperties),
   CountryBih(): MultiElementFlag(flagBihProperties),
   CountryBlm(): BasicFlag(flagBlmProperties),
