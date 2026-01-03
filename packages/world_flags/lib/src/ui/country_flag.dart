@@ -37,6 +37,7 @@ class CountryFlag extends IsoFlag<WorldCountry, BasicFlag> {
   /// - [width]: The width of the flag. If `null`, the width from the flag theme
   ///  is used.
   /// - [child]: A widget to display in the foreground of the flag.
+  /// - [shaderOptions]: Shader configuration override applied to produced flags.
   /// - [key]: The key for the widget.
   const CountryFlag.simplified(
     WorldCountry country, {
@@ -49,6 +50,7 @@ class CountryFlag extends IsoFlag<WorldCountry, BasicFlag> {
     super.padding,
     super.orElse,
     super.child,
+    super.shaderOptions,
     super.key,
   }) : super(country, smallSimplifiedFlagsMap);
 
@@ -67,6 +69,7 @@ class CountryFlag extends IsoFlag<WorldCountry, BasicFlag> {
   /// - [width]: The width of the flag. If `null`, the width from the flag theme
   /// is used.
   /// - [child]: A widget to display in the foreground of the flag.
+  /// - [shaderOptions]: Shader configuration override applied to produced flags.
   /// - [key]: The key for the widget.
   const CountryFlag.custom(
     super.item,
@@ -80,6 +83,7 @@ class CountryFlag extends IsoFlag<WorldCountry, BasicFlag> {
     super.width,
     super.orElse,
     super.child,
+    super.shaderOptions,
     super.key,
   });
 

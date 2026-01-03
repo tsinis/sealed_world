@@ -35,5 +35,6 @@ class RectangleFlag extends BasicFlag {
     super.key,
     super.padding,
     super.child,
+    super.shaderOptions,
   }) : super(elementsBuilder: RectanglePainter.new); // coverage:ignore-line
 }

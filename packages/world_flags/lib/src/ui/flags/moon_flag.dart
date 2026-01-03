@@ -35,5 +35,6 @@ class MoonFlag extends BasicFlag {
     super.key,
     super.padding,
     super.child,
+    super.shaderOptions,
   }) : super(elementsBuilder: MoonPainter.new); // coverage:ignore-line
 }

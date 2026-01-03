@@ -3,6 +3,7 @@
 import "package:flutter/widgets.dart";
 import "package:sealed_countries/sealed_countries.dart" show IsoStandardized;
 
+import "../../ui/effects/flag_shader_options.dart";
 import "../../ui/flags/basic_flag.dart";
 import "../../ui/iso_flag.dart";
 
@@ -36,20 +37,22 @@ extension IsoFlagExtension<T extends IsoStandardized, F extends BasicFlag>
     BoxDecoration? decoration,
     DecorationPosition? decorationPosition,
     EdgeInsetsGeometry? padding,
+    FlagShaderOptions? shaderOptions,
     Widget? child,
     Key? key,
   }) => IsoFlag(
-    item ?? this.item,
-    map ?? this.map,
     alternativeMap: alternativeMap ?? this.alternativeMap,
-    orElse: orElse ?? this.orElse,
-    height: height ?? this.height,
-    width: width ?? this.width,
     aspectRatio: aspectRatio ?? this.aspectRatio,
     decoration: decoration ?? this.decoration,
     decorationPosition: decorationPosition ?? this.decorationPosition,
-    padding: padding ?? this.padding,
+    height: height ?? this.height,
+    item ?? this.item,
     key: key ?? this.key,
+    map ?? this.map,
+    orElse: orElse ?? this.orElse,
+    padding: padding ?? this.padding,
+    shaderOptions: shaderOptions ?? this.shaderOptions,
+    width: width ?? this.width,
     child: child ?? this.child,
   );
 }

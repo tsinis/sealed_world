@@ -10,6 +10,8 @@ import "../../helpers/extensions/world_flags_build_context_extension.dart";
 import "../../model/flag_properties.dart";
 import "../../model/typedefs.dart";
 import "../decorated_flag_widget.dart";
+import "../effects/flag_shader_delegate.dart";
+import "../effects/flag_shader_options.dart";
 import "../painters/basic/stripes_painter.dart";
 
 /// A widget that represents a basic flag with customizable properties,
@@ -38,6 +40,9 @@ class BasicFlag extends DecoratedFlagWidget {
   /// - [width]: The width of the flag. If `null`, the width from the flag theme
   /// is used.
   /// - [child]: A widget to display in the foreground of the flag.
+  /// - [shaderOptions]: Per-flag shader configuration override. When non-null,
+  ///   wrap this widget in a FlagShaderController to automatically instantiate
+  ///   a shader delegate, or provide [shader] manually.
   /// - [key]: The key for the widget.
   const BasicFlag(
     this.properties, {
@@ -53,8 +58,13 @@ class BasicFlag extends DecoratedFlagWidget {
     super.height,
     super.width,
     super.child,
+    this.shader,
+    this.shaderOptions,
     super.key,
-  });
+  }) : assert(
+         shader == null || shaderOptions == null,
+         "Provide either a shader delegate or shaderOptions (use FlagShaderController when building delegates).",
+       );
 
   /// The properties of the flag.
   final FlagProperties properties;
@@ -73,6 +83,12 @@ class BasicFlag extends DecoratedFlagWidget {
 
   /// A builder for the foreground painter.
   final FlagPainterBuilder? foregroundPainterBuilder;
+
+  /// Optional shader delegate applied when painting the stripes.
+  final FlagShaderDelegate? shader;
+
+  /// Optional per-flag shader configuration override.
+  final FlagShaderOptions? shaderOptions;
 
   /// The original aspect ratio of the flag.
   double get flagAspectRatio => properties.aspectRatio;
@@ -180,6 +196,20 @@ class BasicFlag extends DecoratedFlagWidget {
           _elements,
           ifNull: "no elements properties",
         ),
+      )
+      ..add(
+        ObjectFlagProperty<FlagShaderDelegate>(
+          "shader",
+          shader,
+          ifNull: "no shader delegate",
+        ),
+      )
+      ..add(
+        ObjectFlagProperty<FlagShaderOptions>(
+          "shaderOptions",
+          shaderOptions,
+          ifNull: "no shader options override",
+        ),
       );
   }
 
@@ -213,7 +243,13 @@ class BasicFlag extends DecoratedFlagWidget {
               child: CustomPaint(
                 painter:
                     backgroundPainter ??
-                    StripesPainter(properties, boxDecoration, _elementsPainter),
+                    StripesPainter(
+                      properties,
+                      boxDecoration,
+                      _elementsPainter,
+                      shaderDelegate: shader,
+                      shaderOptions: shaderOptions,
+                    ),
                 foregroundPainter:
                     foregroundPainter ??
                     foregroundPainterBuilder?.call(_elements, flagAspectRatio),
