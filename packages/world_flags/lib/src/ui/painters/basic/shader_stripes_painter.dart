@@ -106,6 +106,7 @@ class ShaderStripesPainter<T extends CustomPainter> extends StripesPainter<T> {
       oldDelegate.decoration != decoration ||
       oldDelegate.elementsPainter != elementsPainter;
 
+  /// Releases any resources allocated by the painter.
   void dispose() {
     _image?.dispose();
     _image = null;

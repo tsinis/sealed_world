@@ -52,6 +52,8 @@ class StripesPainter<T extends CustomPainter> extends CustomPainter {
 
   @protected
   @visibleForTesting
+  /// Paints the stripes on the flag based on the [FlagProperties]. Every flag
+  /// should have at least one stripe.
   void paintStripes(Canvas canvas, Size size) {
     final total = properties.stripeColors.fold(
       0,
@@ -76,6 +78,7 @@ class StripesPainter<T extends CustomPainter> extends CustomPainter {
   }
 
   @protected
+  /// Applies clipping to the flag based on the [decoration].
   void applyFlagClipping(Canvas canvas, Size size) {
     final rect = Rect.fromLTWH(0, 0, size.width, size.height);
     if (decoration.isCircle) {
