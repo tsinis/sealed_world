@@ -211,7 +211,6 @@ class IsoFlag<T extends IsoStandardized, F extends BasicFlag>
         decorationPosition: decorationPosition,
         padding: padding,
         height: height,
-        shader: shader,
         width: width,
         child: child,
       ) ??

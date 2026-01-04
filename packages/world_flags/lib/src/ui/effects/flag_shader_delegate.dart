@@ -1,8 +1,6 @@
-import "package:flutter/widgets.dart";
+import "dart:ui" show Canvas, Image, Size;
 
-/// Paints the flag content into an offscreen surface so it can be sampled
-/// inside a fragment shader.
-typedef FlagShaderContentPainter = void Function(Canvas canvas, Size size);
+import "package:flutter/foundation.dart" show Listenable;
 
 /// A delegate that knows how to post-process flag content with a shader.
 ///
@@ -29,14 +27,14 @@ abstract class FlagShaderDelegate implements Listenable {
   /// shader-driven overflow. Defaults to `1.0` (no scaling).
   final double contentScale;
 
-  /// Attempts to paint [paintContent] with a shader.
+  /// Attempts to paint [image] with a shader.
   ///
   /// Returns `true` when the shader path was taken. If `false` is returned, the
   /// caller should paint the content normally.
   bool paintWithShader({
     required Canvas destination,
     required Size size,
-    required FlagShaderContentPainter paintContent,
+    required Image image,
   });
 
   /// Releases any resources allocated by the delegate.

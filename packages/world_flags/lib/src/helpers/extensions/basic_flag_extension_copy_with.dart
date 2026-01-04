@@ -2,7 +2,6 @@ import "package:flutter/widgets.dart";
 
 import "../../model/flag_properties.dart";
 import "../../model/typedefs.dart";
-import "../../ui/effects/flag_shader_delegate.dart";
 import "../../ui/flags/basic_flag.dart";
 
 /// An extension on [BasicFlag] to provide a [copyWith] method for creating a
@@ -49,7 +48,6 @@ extension BasicFlagExtensionCopyWith<T extends BasicFlag> on T {
     double? height,
     double? width,
     Widget? child,
-    FlagShaderDelegate? shader,
     Key? key,
   }) => BasicFlag(
     properties ?? this.properties,
@@ -66,7 +64,6 @@ extension BasicFlagExtensionCopyWith<T extends BasicFlag> on T {
         foregroundWidgetBuilder ?? this.foregroundWidgetBuilder,
     height: height ?? this.height,
     width: width ?? this.width,
-    shader: shader ?? this.shader,
     key: key ?? this.key,
     child: child ?? this.child,
   );

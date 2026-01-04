@@ -10,7 +10,6 @@ import "../../helpers/extensions/world_flags_build_context_extension.dart";
 import "../../model/flag_properties.dart";
 import "../../model/typedefs.dart";
 import "../decorated_flag_widget.dart";
-import "../effects/flag_shader_delegate.dart";
 import "../painters/basic/stripes_painter.dart";
 
 /// A widget that represents a basic flag with customizable properties,
@@ -44,7 +43,6 @@ class BasicFlag extends DecoratedFlagWidget {
     this.properties, {
     super.aspectRatio,
     this.backgroundPainter,
-    this.shader,
     super.decoration,
     super.decorationPosition,
     this.elementsBuilder,
@@ -75,9 +73,6 @@ class BasicFlag extends DecoratedFlagWidget {
 
   /// A builder for the foreground painter.
   final FlagPainterBuilder? foregroundPainterBuilder;
-
-  /// Optional shader delegate applied when painting the stripes.
-  final FlagShaderDelegate? shader;
 
   /// The original aspect ratio of the flag.
   double get flagAspectRatio => properties.aspectRatio;
@@ -185,13 +180,6 @@ class BasicFlag extends DecoratedFlagWidget {
           _elements,
           ifNull: "no elements properties",
         ),
-      )
-      ..add(
-        ObjectFlagProperty<FlagShaderDelegate>(
-          "shader",
-          shader,
-          ifNull: "no shader delegate",
-        ),
       );
   }
 
@@ -225,12 +213,7 @@ class BasicFlag extends DecoratedFlagWidget {
               child: CustomPaint(
                 painter:
                     backgroundPainter ??
-                    StripesPainter(
-                      properties,
-                      boxDecoration,
-                      _elementsPainter,
-                      shaderDelegate: shader,
-                    ),
+                    StripesPainter(properties, boxDecoration, _elementsPainter),
                 foregroundPainter:
                     foregroundPainter ??
                     foregroundPainterBuilder?.call(_elements, flagAspectRatio),
