@@ -31,11 +31,7 @@ abstract class FlagShaderDelegate implements Listenable {
   ///
   /// Returns `true` when the shader path was taken. If `false` is returned, the
   /// caller should paint the content normally.
-  bool paintWithShader({
-    required Canvas destination,
-    required Size size,
-    required Image image,
-  });
+  bool paintWithShader(Canvas destination, Size size, {required Image image});
 
   /// Releases any resources allocated by the delegate.
   void dispose();

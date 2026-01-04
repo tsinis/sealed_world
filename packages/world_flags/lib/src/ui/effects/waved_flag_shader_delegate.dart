@@ -52,6 +52,9 @@ class WavedFlagShaderDelegate extends ChangeNotifier
   }
 
   FragmentShader? _shader;
+  final _paint = Paint();
+  Size? _cachedShaderSize;
+  Image? _cachedShaderImage;
   double _time = 0;
   Duration _lastTick = Duration.zero;
 
@@ -68,6 +71,8 @@ class WavedFlagShaderDelegate extends ChangeNotifier
     if (_program == null) return;
     _shader?.dispose();
     _shader = _program?.fragmentShader();
+    _cachedShaderSize = null;
+    _cachedShaderImage = null;
     _configureShader();
     notifyListeners();
   }
@@ -148,18 +153,23 @@ class WavedFlagShaderDelegate extends ChangeNotifier
   }
 
   @override
-  bool paintWithShader({
-    required Canvas destination,
-    required Size size,
-    required Image image,
-  }) {
+  bool paintWithShader(Canvas destination, Size size, {required Image image}) {
     if (_shader == null || size.isEmpty) return false;
     try {
-      _shader
-        ?..setFloat(0, size.width)
-        ..setFloat(1, size.height)
-        ..setImageSampler(0, image);
-      destination.drawRect(Offset.zero & size, Paint()..shader = _shader);
+      if (_cachedShaderSize != size) {
+        _shader
+          ?..setFloat(0, size.width)
+          ..setFloat(1, size.height);
+        _cachedShaderSize = size;
+      }
+      if (!identical(_cachedShaderImage, image)) {
+        _shader?.setImageSampler(0, image);
+        _cachedShaderImage = image;
+      }
+
+      _paint.shader = _shader;
+      destination.drawRect(Offset.zero & size, _paint);
+      _paint.shader = null;
 
       return true;
     } on Object catch (error, stackTrace) {
@@ -173,6 +183,9 @@ class WavedFlagShaderDelegate extends ChangeNotifier
   void dispose() {
     _ticker.dispose();
     _shader?.dispose();
+    _paint.shader = null;
+    _cachedShaderImage?.dispose();
+    _cachedShaderImage = null;
     super.dispose();
   }
 }

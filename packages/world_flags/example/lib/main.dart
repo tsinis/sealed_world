@@ -6,11 +6,7 @@ import "settings_dialog.dart";
 void main() {
   /// Provide flag decorations globally.
   const extensions = [
-    FlagThemeData(
-      decoration: BoxDecoration(
-        borderRadius: BorderRadius.all(Radius.circular(4)),
-      ),
-    ),
+    FlagThemeData(decoration: BoxDecoration(borderRadius: .all(.circular(4)))),
   ];
 
   runApp(

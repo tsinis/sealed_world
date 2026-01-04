@@ -557,14 +557,13 @@ const uniqueSimplifiedFlagsMap = <WorldCountry, BasicFlag>{
 /// ```
 const smallSimplifiedFlagsMap = <WorldCountry, BasicFlag>{
   ...uniqueSimplifiedFlagsMap,
-  CountryGuf(): BasicFlag(flagGufProperties),
+  ...smallSimplifiedAlternativeFlagsMap,
 };
 
 /// Alternative flags for specific countries. As an alternative for flags from
-/// the [smallSimplifiedFlagsMap]. For example Afghanistan flag is no longer
-/// using the old version but rather using the new flag properties (after 2021).
-/// Also French Guiana flag is represented by unofficial, but very popular
-/// and more commonly used green-yellow flag with a red star in the center.
+/// the [smallSimplifiedFlagsMap]. For French Guiana flag is represented by
+/// unofficial, but very popular and more commonly used green-yellow flag with
+/// a red star in the center.
 const smallSimplifiedAlternativeFlagsMap = <WorldCountry, BasicFlag>{
   CountryGuf(): StarFlag(flagGufPropertiesAlt),
 };

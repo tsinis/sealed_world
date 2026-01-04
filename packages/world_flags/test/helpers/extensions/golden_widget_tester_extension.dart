@@ -10,8 +10,7 @@ import "../flag_type.dart";
 // ignore: avoid-top-level-members-in-tests, it's not a test, but extension.
 extension GoldenWidgetTesterExtension on WidgetTester {
   static const _items = <IsoTranslated, BasicFlag>{
-    ...uniqueSimplifiedFlagsMap,
-    ...smallSimplifiedAlternativeFlagsMap,
+    ...smallSimplifiedFlagsMap,
     FiatEur(): StarFlag(flagEurProperties),
     ...smallSimplifiedLanguageFlagsMap,
   };
