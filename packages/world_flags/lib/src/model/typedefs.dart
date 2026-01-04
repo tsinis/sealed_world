@@ -1,6 +1,17 @@
 import "package:flutter/widgets.dart";
 
+import "../ui/effects/flag_shader_delegate.dart";
+import "../ui/effects/flag_shader_options.dart";
 import "elements/elements_properties.dart";
+import "flag_properties.dart";
+
+/// Signature for building shader delegate when no custom delegate is supplied.
+typedef FlagShaderDelegateBuilder =
+    FlagShaderDelegate Function(
+      TickerProvider vsync,
+      FlagShaderOptions options,
+      FlagProperties properties,
+    );
 
 /// A type definition for a list of [ElementsProperties].
 typedef ElementsProps = List<ElementsProperties>;

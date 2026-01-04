@@ -1,5 +1,6 @@
 import "dart:math";
 
+import "package:flutter/foundation.dart";
 import "package:flutter/rendering.dart";
 
 import "../../../helpers/extensions/box_decoration_extension.dart";
@@ -19,7 +20,12 @@ class StripesPainter<T extends CustomPainter> extends CustomPainter {
   ///   color and border radius.
   /// - [elementsPainter]: An optional custom painter for additional elements on
   ///   the flag.
-  const StripesPainter(this.properties, this.decoration, this.elementsPainter);
+  const StripesPainter(
+    this.properties,
+    this.decoration,
+    this.elementsPainter, {
+    super.repaint,
+  });
 
   /// The properties of the flag.
   final FlagProperties properties;
@@ -40,9 +46,18 @@ class StripesPainter<T extends CustomPainter> extends CustomPainter {
 
   @override
   void paint(Canvas canvas, Size size) {
-    _applyFlagClipping(canvas, size);
-    // ignore: prefer-correct-identifier-length, CP for [ColorsProperties].
-    final total = properties.stripeColors.fold(0, (sum, cp) => sum + cp.ratio);
+    applyFlagClipping(canvas, size);
+    paintStripes(canvas, size);
+  }
+
+  @protected
+  @visibleForTesting
+  void paintStripes(Canvas canvas, Size size) {
+    final total = properties.stripeColors.fold(
+      0,
+      // ignore: prefer-correct-identifier-length, CP for [ColorsProperties].
+      (sum, cp) => sum + cp.ratio,
+    );
     switch (properties.stripeOrientation) {
       case StripeOrientation.horizontal:
         _drawHorizontalStripes(canvas, size, total);
@@ -60,7 +75,8 @@ class StripesPainter<T extends CustomPainter> extends CustomPainter {
     elementsPainter?.paint(canvas, size);
   }
 
-  void _applyFlagClipping(Canvas canvas, Size size) {
+  @protected
+  void applyFlagClipping(Canvas canvas, Size size) {
     final rect = Rect.fromLTWH(0, 0, size.width, size.height);
     if (decoration.isCircle) {
       final radius = size.height / 2;
@@ -110,6 +126,7 @@ class StripesPainter<T extends CustomPainter> extends CustomPainter {
 
     canvas
       ..save()
+      ..clipRect(Rect.fromLTWH(0, 0, size.width, height))
       ..translate(size.width / 2, height / 2)
       ..rotate(isTopLeftToBottom ? angle : -angle)
       ..translate(-diagonalLength, -height * 2);
