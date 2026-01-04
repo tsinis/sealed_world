@@ -26,10 +26,7 @@ class _SettingsDialogState extends State<SettingsDialog>
     with SingleTickerProviderStateMixin {
   final _opacity = ValueNotifier<double>(1 / 2);
   // ignore: avoid-late-keyword, free lazy initialization.
-  late final _shader = WavedFlagShaderDelegate(
-    vsync: this,
-    options: const FlagShaderOptions(enabled: true),
-  );
+  late final _shader = WavedFlagShaderDelegate(vsync: this);
 
   WorldCountry get _country => widget.country;
 

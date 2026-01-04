@@ -18,7 +18,6 @@ import "flag_shader_controller.dart" show FlagShaderController;
 ///
 /// ```dart
 /// const options = FlagShaderOptions(
-///   enabled: true,
 ///   waveAmplitude: 0.04,
 ///   turbulence: 0.6,
 /// );
@@ -40,7 +39,6 @@ import "flag_shader_controller.dart" show FlagShaderController;
 class FlagShaderOptions {
   /// Creates a new set of shader options.
   const FlagShaderOptions({
-    this.enabled = false,
     this.animate = true,
     this.animationSpeed = 1,
     this.frozenPhase = 0.25,
@@ -67,9 +65,6 @@ class FlagShaderOptions {
     this.clipContent = false,
     this.overflowScale = 0.92,
   });
-
-  /// Whether the shader effect is enabled.
-  final bool enabled;
 
   /// Whether animation should advance automatically using a ticker.
   final bool animate;
@@ -149,7 +144,7 @@ class FlagShaderOptions {
 
   @override
   String toString() =>
-      "FlagShaderOptions(enabled: $enabled, animate: $animate, "
+      "FlagShaderOptions(animate: $animate, "
       "animationSpeed: $animationSpeed, frozenPhase: $frozenPhase, "
       "waveAmplitude: $waveAmplitude, waveFrequency: $waveFrequency, "
       "wavePhaseShift: $wavePhaseShift, "
@@ -166,7 +161,6 @@ class FlagShaderOptions {
 
   /// Returns a copy with selectively replaced fields.
   FlagShaderOptions copyWith({
-    bool? enabled,
     bool? animate,
     double? animationSpeed,
     double? frozenPhase,
@@ -193,7 +187,6 @@ class FlagShaderOptions {
     bool? clipContent,
     double? overflowScale,
   }) => FlagShaderOptions(
-    enabled: enabled ?? this.enabled,
     animate: animate ?? this.animate,
     animationSpeed: animationSpeed ?? this.animationSpeed,
     frozenPhase: frozenPhase ?? this.frozenPhase,
@@ -223,7 +216,6 @@ class FlagShaderOptions {
 
   @override
   int get hashCode => Object.hashAll([
-    enabled,
     animate,
     animationSpeed,
     frozenPhase,
@@ -258,7 +250,6 @@ class FlagShaderOptions {
 
     // ignore: avoid-complex-conditions, it's regular == override in big class.
     return other is FlagShaderOptions &&
-        other.enabled == enabled &&
         other.animate == animate &&
         other.animationSpeed == animationSpeed &&
         other.frozenPhase == frozenPhase &&
