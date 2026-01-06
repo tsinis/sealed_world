@@ -22,11 +22,8 @@ class SettingsDialog extends StatefulWidget {
   State<SettingsDialog> createState() => _SettingsDialogState();
 }
 
-class _SettingsDialogState extends State<SettingsDialog>
-    with SingleTickerProviderStateMixin {
-  final _opacity = ValueNotifier<double>(1 / 2);
-  // ignore: avoid-late-keyword, free lazy initialization.
-  late final _shader = WavedFlagShaderDelegate(vsync: this);
+class _SettingsDialogState extends State<SettingsDialog> {
+  final _opacity = ValueNotifier<double>(1);
 
   WorldCountry get _country => widget.country;
 
@@ -39,7 +36,6 @@ class _SettingsDialogState extends State<SettingsDialog>
   @override
   void dispose() {
     _opacity.dispose();
-    _shader.dispose();
     super.dispose();
   }
 
@@ -74,19 +70,15 @@ class _SettingsDialogState extends State<SettingsDialog>
             ),
             body: Center(
               child: DecoratedBox(
-                decoration: BoxDecoration(
-                  image: DecorationImage(
-                    fit: BoxFit.fitHeight,
-                    image: NetworkImage(_country.flagPngUrl()),
-                  ),
-                ),
-                child: AspectRatio(
-                  aspectRatio:
-                      ratio ??
-                      _country.flagProperties?.aspectRatio ??
-                      FlagConstants.defaultAspectRatio,
-                  child: Opacity(opacity: opacityValue, child: flag),
-                ),
+                decoration: opacityValue == 1
+                    ? const BoxDecoration()
+                    : BoxDecoration(
+                        image: DecorationImage(
+                          fit: BoxFit.fitHeight,
+                          image: NetworkImage(_country.flagPngUrl()),
+                        ),
+                      ),
+                child: Opacity(opacity: opacityValue, child: flag),
               ),
             ),
             bottomNavigationBar: SliderTheme(
@@ -103,6 +95,7 @@ class _SettingsDialogState extends State<SettingsDialog>
                           ratio ??
                           _country.flagProperties?.aspectRatio ??
                           FlagConstants.minAspectRatio,
+                      secondaryTrackValue: _country.flagProperties?.aspectRatio,
                       onChanged: (newRatio) =>
                           widget.aspectRatio.value = newRatio,
                       min: FlagConstants.minAspectRatio,
@@ -122,11 +115,7 @@ class _SettingsDialogState extends State<SettingsDialog>
               ),
             ),
           ),
-          child: CountryFlag.simplified(
-            _country,
-            aspectRatio: ratio,
-            shader: _shader,
-          ),
+          child: FlagShaderSurface(_country, aspectRatio: ratio),
         ),
       ),
     ),
