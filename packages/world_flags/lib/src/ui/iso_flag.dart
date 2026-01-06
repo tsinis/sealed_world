@@ -26,6 +26,7 @@ import "flags/basic_flag.dart";
 ///   decoration: BoxDecoration(border: Border.all(color: Colors.black)),
 /// )
 /// ```
+@optionalTypeArgs
 class IsoFlag<T extends IsoStandardized, F extends BasicFlag>
     extends DecoratedFlagWidget {
   /// Creates a [IsoFlag] widget with a simplified flag representation.

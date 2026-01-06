@@ -3,26 +3,52 @@
 import "dart:math";
 import "dart:ui";
 
+import "package:flutter/cupertino.dart" show Listenable;
+import "package:flutter/foundation.dart" show Listenable;
+import "package:flutter/material.dart" show Listenable;
 import "package:flutter/rendering.dart";
+import "package:flutter/widgets.dart" show Listenable;
 
 import "../../../model/flag_properties.dart";
 import "../../effects/flag_shader_delegate.dart";
+import "../../effects/flag_shader_surface.dart" show FlagShaderSurface;
 import "stripes_painter.dart";
 
-/// Painter that caches the flag render output and feeds it into a _shader
+/// Painter that caches the flag render output and feeds it into a shader
 /// delegate for animation without re-rendering every frame.
+///
+/// ## Cache Strategy
+///
+/// The painter maintains a rasterized [Image] of the flag content at the
+/// current size and scale. This cache is invalidated when:
+/// - The [Size] changes
+/// - The `shader.contentScale` changes
+/// - The `shader.shouldClipContent` flag changes
+///
+/// ## Resource Management
+///
+/// The [shader] delegate is **not** disposed by this painter,
+/// its lifecycle is managed by the widget that created it.
+///
+/// See also:
+/// - [FlagShaderDelegate] for the shader interface.
+/// - [StripesPainter] for the base painting implementation.
 class ShaderStripesPainter<T extends CustomPainter> extends StripesPainter<T> {
   /// Creates a new instance of [ShaderStripesPainter].
+  ///
+  /// The [shader] delegate drives both animation (via its [Listenable]
+  /// interface) and the shader rendering path.
   ShaderStripesPainter(
     FlagProperties properties,
     T? elementsPainter, {
-    required FlagShaderDelegate shader,
-  }) : _shader = shader,
-       super(properties, null, elementsPainter, repaint: shader);
+    required this.shader,
+  }) : super(properties, null, elementsPainter, repaint: shader);
 
-  final FlagShaderDelegate _shader;
+  /// The shader delegate responsible for applying visual effects.
+  final FlagShaderDelegate shader;
+
   bool? _clip;
-  Image? _image;
+  Image? _image; // ignore: dispose-class-fields, see `this.dispose()` dartdoc.
   double? _scale;
   Size? _size;
 
@@ -39,11 +65,11 @@ class ShaderStripesPainter<T extends CustomPainter> extends StripesPainter<T> {
   void _ensureCache(Size size) {
     if (_image != null &&
         _size == size &&
-        _scale == _shader.contentScale &&
-        _clip == _shader.shouldClipContent) {
+        _scale == shader.contentScale &&
+        _clip == shader.shouldClipContent) {
       return;
     }
-    _rebuildCache(size, _shader.contentScale);
+    _rebuildCache(size, shader.contentScale);
   }
 
   void _rebuildCache(Size size, double scale) {
@@ -52,7 +78,7 @@ class ShaderStripesPainter<T extends CustomPainter> extends StripesPainter<T> {
 
     final recorder = PictureRecorder();
     final tempCanvas = Canvas(recorder);
-    if (_shader.shouldClipContent) applyFlagClipping(tempCanvas, size);
+    if (shader.shouldClipContent) applyFlagClipping(tempCanvas, size);
     _paintScaledStripes(tempCanvas, size, scale);
     final picture = recorder.endRecording();
 
@@ -61,7 +87,7 @@ class ShaderStripesPainter<T extends CustomPainter> extends StripesPainter<T> {
     _image = picture.toImageSync(width, height);
     _size = size;
     _scale = scale;
-    _clip = _shader.shouldClipContent;
+    _clip = shader.shouldClipContent;
   }
 
   void _paintScaledStripes(Canvas canvas, Size size, double scaleY) {
@@ -78,38 +104,43 @@ class ShaderStripesPainter<T extends CustomPainter> extends StripesPainter<T> {
   }
 
   bool _renderWithShader(Canvas canvas, Size size, Image image) {
-    if (_shader.shouldClipContent) {
+    if (shader.shouldClipContent) {
       canvas.save();
       applyFlagClipping(canvas, size);
     }
-    final painted = _shader.paintWithShader(canvas, size, image: image);
-    if (_shader.shouldClipContent) canvas.restore();
+    final painted = shader.paintWithShader(canvas, size, image: image);
+    if (shader.shouldClipContent) canvas.restore();
 
     return painted;
   }
 
   void _drawCachedImage(Canvas canvas, Size size, Image image) {
-    if (_shader.shouldClipContent) {
+    if (shader.shouldClipContent) {
       canvas.save();
       applyFlagClipping(canvas, size);
     }
     final source = Rect.fromLTWH(0, 0, _size?.width ?? 0, _size?.height ?? 0);
     final destination = Rect.fromLTWH(0, 0, size.width, size.height);
     canvas.drawImageRect(image, source, destination, Paint());
-    if (_shader.shouldClipContent) canvas.restore();
+    if (shader.shouldClipContent) canvas.restore();
   }
 
   @override
   bool shouldRepaint(covariant ShaderStripesPainter<T> oldDelegate) =>
-      oldDelegate._shader != _shader ||
+      oldDelegate.shader != shader ||
       oldDelegate.properties != properties ||
       oldDelegate.decoration != decoration ||
       oldDelegate.elementsPainter != elementsPainter;
 
-  /// Releases any resources allocated by the painter.
+  /// Releases resources allocated by this painter.
+  ///
+  /// Does NOT dispose the [_image] or [shader] delegate.
+  /// The delegate's lifecycle is managed by the widget that created this
+  /// painter, typically [FlagShaderSurface].
   void dispose() {
-    _image?.dispose();
+    _size = null;
+    _scale = null;
+    _clip = null;
     _image = null;
-    _shader.dispose();
   }
 }

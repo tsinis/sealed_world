@@ -183,6 +183,7 @@ class WavedFlagShaderDelegate extends ChangeNotifier
   void dispose() {
     _ticker.dispose();
     _shader?.dispose();
+    _paint.shader?.dispose();
     _paint.shader = null;
     _cachedShaderImage?.dispose();
     _cachedShaderImage = null;
