@@ -136,7 +136,7 @@ void main() => group("$WavedFlagShaderDelegate", () {
   });
 
   testWidgets("paintWithShader returns true with shader program", (
-    tester,
+    tester, // Dart 3.8 formatting.
   ) async {
     const tickerProvider = _WavedFlagShaderDelegateTest();
     final delegate = WavedFlagShaderDelegate(vsync: tickerProvider);
