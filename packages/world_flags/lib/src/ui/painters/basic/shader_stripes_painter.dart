@@ -17,22 +17,11 @@ import "stripes_painter.dart";
 /// Painter that caches the flag render output and feeds it into a shader
 /// delegate for animation without re-rendering every frame.
 ///
-/// ## Cache Strategy
+/// ## Image Ownership
 ///
-/// The painter maintains a rasterized [Image] of the flag content at the
-/// current size and scale. This cache is invalidated when:
-/// - The [Size] changes
-/// - The `shader.contentScale` changes
-/// - The `shader.shouldClipContent` flag changes
-///
-/// ## Resource Management
-///
-/// The [shader] delegate is **not** disposed by this painter,
-/// its lifecycle is managed by the widget that created it.
-///
-/// See also:
-/// - [FlagShaderDelegate] for the shader interface.
-/// - [StripesPainter] for the base painting implementation.
+/// This painter OWNS the [_image] and is responsible for its lifecycle.
+/// The [shader] delegate receives the image for rendering but must NOT
+/// dispose it.
 class ShaderStripesPainter<T extends CustomPainter> extends StripesPainter<T> {
   /// Creates a new instance of [ShaderStripesPainter].
   ///
@@ -48,7 +37,7 @@ class ShaderStripesPainter<T extends CustomPainter> extends StripesPainter<T> {
   final FlagShaderDelegate shader;
 
   bool? _clip;
-  Image? _image; // ignore: dispose-class-fields, see `this.dispose()` dartdoc.
+  Image? _image;
   double? _scale;
   Size? _size;
 
@@ -73,6 +62,7 @@ class ShaderStripesPainter<T extends CustomPainter> extends StripesPainter<T> {
   }
 
   void _rebuildCache(Size size, double scale) {
+    // Dispose previous image before creating new one.
     _image?.dispose();
     _image = null;
 
@@ -85,6 +75,7 @@ class ShaderStripesPainter<T extends CustomPainter> extends StripesPainter<T> {
     final width = max(1, size.width.ceil());
     final height = max(1, size.height.ceil());
     _image = picture.toImageSync(width, height);
+    picture.dispose(); // Dispose picture after converting to image.
     _size = size;
     _scale = scale;
     _clip = shader.shouldClipContent;
@@ -132,15 +123,15 @@ class ShaderStripesPainter<T extends CustomPainter> extends StripesPainter<T> {
       oldDelegate.decoration != decoration ||
       oldDelegate.elementsPainter != elementsPainter;
 
-  /// Releases resources allocated by this painter.
+  /// Disposes resources owned by this painter.
   ///
-  /// Does NOT dispose the [_image] or [shader] delegate.
-  /// The delegate's lifecycle is managed by the widget that created this
-  /// painter, typically [FlagShaderSurface].
+  /// This disposes [_image] which this painter owns. The [shader] delegate
+  /// is NOT disposed here - its lifecycle is managed by [FlagShaderSurface].
   void dispose() {
+    _image?.dispose();
+    _image = null;
     _size = null;
     _scale = null;
     _clip = null;
-    _image = null;
   }
 }

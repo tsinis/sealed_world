@@ -61,15 +61,27 @@ float noise(vec2 p) {
     );
 }
 
-float fbm(vec2 p, int octaves) {
+// FBM with 2 octaves - unrolled for SkSL compatibility.
+// SkSL requires loop bounds to be compile-time constants; dynamic `int octaves`
+// parameter causes "loop index must be compared with a constant" error in tests.
+float fbm2(vec2 p) {
     float value = 0.0;
     float amp = 0.5;
-    float freq = 1.0;
-    for (int i = 0; i < octaves; i++) {
-        value += amp * noise(p * freq);
-        freq *= 2.0;
-        amp *= 0.5;
-    }
+    value += amp * noise(p);
+    amp *= 0.5;
+    value += amp * noise(p * 2.0);
+    return value;
+}
+
+// FBM with 3 octaves - unrolled for SkSL compatibility.
+float fbm3(vec2 p) {
+    float value = 0.0;
+    float amp = 0.5;
+    value += amp * noise(p);
+    amp *= 0.5;
+    value += amp * noise(p * 2.0);
+    amp *= 0.5;
+    value += amp * noise(p * 4.0);
     return value;
 }
 
@@ -128,8 +140,8 @@ float organicWave(vec2 uv, float baseArg, float turb, float time) {
     float h2 = sin(modulatedArg * 3.3 + 1.6) * 0.15;
     wave += turb * (h1 + h2);
 
-    // Cotton drift
-    float drift = fbm(noisePos * 0.5, 2) * 2.0 - 1.0;
+    // Cotton drift - uses fbm2 (was: fbm(..., 2))
+    float drift = fbm2(noisePos * 0.5) * 2.0 - 1.0;
     wave += turb * drift * 0.4;
 
     return wave / (1.0 + turb * 0.7);
@@ -159,7 +171,8 @@ float organicDeriv(vec2 uv, float baseArg, float turb, float time) {
 // ─────────────────────────────────────────────────────────────────────────────
 
 float fabric(vec2 uv) {
-    float cotton = fbm(uv * 8.0, 3);
+    // Uses fbm3 (was: fbm(..., 3))
+    float cotton = fbm3(uv * 8.0);
 
     vec2 t = uv * 55.0;
     float warp = abs(fract(t.x) * 2.0 - 1.0);

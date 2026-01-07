@@ -1,15 +1,24 @@
 import "dart:async";
+import "dart:io";
 import "dart:math" as math;
 import "dart:ui";
 
 import "package:flutter/foundation.dart";
 import "package:flutter/scheduler.dart";
 
+import "../painters/basic/shader_stripes_painter.dart"
+    show ShaderStripesPainter;
 import "flag_shader_delegate.dart";
 import "flag_shader_options.dart";
 
 /// A reusable delegate that applies the waved-flag shader to cached flag
 /// imagery.
+///
+/// ## Image Ownership
+///
+/// The delegate does NOT own images passed to [paintWithShader]. Images are
+/// owned by the calling painter (typically [ShaderStripesPainter]) and must
+/// not be disposed by this delegate.
 class WavedFlagShaderDelegate extends ChangeNotifier
     implements FlagShaderDelegate {
   /// Creates a new instance of [WavedFlagShaderDelegate].
@@ -40,21 +49,22 @@ class WavedFlagShaderDelegate extends ChangeNotifier
   static void _debugPrintError(Object error, StackTrace stackTrace) =>
       debugPrint("WavedFlagShaderDelegate paint failed: $error\n$stackTrace");
 
+  static final _shaderPath =
+      !kIsWeb && Platform.environment.containsKey("FLUTTER_TEST")
+      ? "shaders/waved_flag.frag"
+      : "packages/world_flags/shaders/waved_flag.frag";
+
   /// Ensures the shader program is loaded before instantiating delegates.
   ///
   /// [assetKey] - represents path to the fragment program from the asset,
   /// default to package's `packages/world_flags/shaders/waved_flag.frag`.
-  static Future<void> warmUp([
-    String assetKey = "packages/world_flags/shaders/waved_flag.frag",
-  ]) async {
-    _programLoader ??= FragmentProgram.fromAsset(assetKey);
+  static Future<void> warmUp([String? assetKey]) async {
+    _programLoader ??= FragmentProgram.fromAsset(assetKey ?? _shaderPath);
     _program ??= await _programLoader;
   }
 
   FragmentShader? _shader;
   final _paint = Paint();
-  Size? _cachedShaderSize;
-  Image? _cachedShaderImage;
   double _time = 0;
   Duration _lastTick = Duration.zero;
 
@@ -71,8 +81,6 @@ class WavedFlagShaderDelegate extends ChangeNotifier
     if (_program == null) return;
     _shader?.dispose();
     _shader = _program?.fragmentShader();
-    _cachedShaderSize = null;
-    _cachedShaderImage = null;
     _configureShader();
     notifyListeners();
   }
@@ -156,16 +164,13 @@ class WavedFlagShaderDelegate extends ChangeNotifier
   bool paintWithShader(Canvas destination, Size size, {required Image image}) {
     if (_shader == null || size.isEmpty) return false;
     try {
-      if (_cachedShaderSize != size) {
-        _shader
-          ?..setFloat(0, size.width)
-          ..setFloat(1, size.height);
-        _cachedShaderSize = size;
-      }
-      if (!identical(_cachedShaderImage, image)) {
-        _shader?.setImageSampler(0, image);
-        _cachedShaderImage = image;
-      }
+      // CRITICAL: Always update size and image sampler each frame.
+      // Do NOT cache the image reference - this causes issues when the
+      // painter replaces the image on Skia (!) backends.
+      _shader
+        ?..setFloat(0, size.width)
+        ..setFloat(1, size.height)
+        ..setImageSampler(0, image);
 
       _paint.shader = _shader;
       destination.drawRect(Offset.zero & size, _paint);
@@ -185,8 +190,8 @@ class WavedFlagShaderDelegate extends ChangeNotifier
     _shader?.dispose();
     _paint.shader?.dispose();
     _paint.shader = null;
-    _cachedShaderImage?.dispose();
-    _cachedShaderImage = null;
+    // NOTE: Do NOT dispose any cached image here!
+    // Images are owned by [ShaderStripesPainter], not by this delegate.
     super.dispose();
   }
 }
