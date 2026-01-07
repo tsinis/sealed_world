@@ -29,7 +29,7 @@ void main() => group("$FlagShaderOptions", () {
     expect(defaultOptions.waveDirection, const Offset(0.8, 0.3));
     expect(defaultOptions.fabricVisibility, 0);
     expect(defaultOptions.clipContent, isFalse);
-    expect(defaultOptions.overflowScale, 0.92);
+    expect(defaultOptions.overflowScale, 0.9);
   });
 
   test("custom values", () {

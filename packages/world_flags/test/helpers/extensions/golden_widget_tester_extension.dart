@@ -16,6 +16,7 @@ extension GoldenWidgetTesterExtension on WidgetTester {
   };
 
   Future<void> flagGolden<T extends IsoTranslated>(T iso, FlagType type) async {
+    final isWaved = type == FlagType.waved;
     final aspectRatio = iso.mapWhenOrNull(
       country: (country) => country.flagProperties?.aspectRatio,
     );
@@ -24,18 +25,23 @@ extension GoldenWidgetTesterExtension on WidgetTester {
     final filePath = "../../goldens/${type.name}/${iso.code.toLowerCase()}.png";
 
     await binding.setSurfaceSize(Size(width, height));
+    final widget = isWaved
+        ? FlagShaderSurface(iso, height: height, width: width)
+        : IsoFlag(iso, _items);
+
     await pumpWidget(
       MaterialApp(
-        home: IsoFlag(iso, _items),
+        home: widget,
         theme: ThemeData(
           extensions: [FlagThemeData(decoration: type.decoration)],
         ),
       ),
     );
+    if (isWaved) await pump(const Duration(milliseconds: 100));
 
     return expectLater(
-      find.byType(IsoFlag<T, BasicFlag>),
-      matchesGoldenFile(filePath),
+      find.byType(isWaved ? FlagShaderSurface : IsoFlag<T, BasicFlag>),
+      matchesGoldenFile(isWaved ? "../$filePath" : filePath),
       skip: !Platform.isLinux && _ignoreOnNonLinux.contains(iso),
       reason: "Non-Linux platforms rendering those flags slightly differently",
     );

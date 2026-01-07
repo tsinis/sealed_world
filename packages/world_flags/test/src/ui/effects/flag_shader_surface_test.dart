@@ -1,7 +1,12 @@
+// ignore_for_file: missing-test-assertion, wavedFlagGolden method
+
 import "package:flutter/foundation.dart";
 import "package:flutter/material.dart";
 import "package:flutter_test/flutter_test.dart";
 import "package:world_flags/world_flags.dart";
+
+import "../../../helpers/extensions/golden_widget_tester_extension.dart";
+import "../../../helpers/flag_type.dart";
 
 void main() => group("$FlagShaderSurface", () {
   testWidgets("renders CustomPaint for shader flags", (tester) async {
@@ -140,5 +145,14 @@ void main() => group("$FlagShaderSurface", () {
     );
     expect(find.byType(FlagShaderSurface), findsOneWidget);
     shader.dispose();
+  });
+
+  group("golden", () {
+    for (final iso in const <WorldCountry>[.svk(), .kor(), .mkd(), .shn()]) {
+      testWidgets(
+        "${iso.internationalName} Waved Flag",
+        (tester) => tester.flagGolden(iso, FlagType.waved),
+      );
+    }
   });
 });

@@ -64,7 +64,7 @@ class FlagShaderOptions {
     this.waveDirection = const Offset(0.8, 0.3),
     this.fabricVisibility = 0,
     this.clipContent = false,
-    this.overflowScale = 0.92,
+    this.overflowScale = 0.9,
   });
 
   /// Whether animation should advance automatically using a ticker.
