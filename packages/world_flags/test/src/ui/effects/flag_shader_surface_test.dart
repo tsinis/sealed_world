@@ -147,6 +147,37 @@ void main() => group("$FlagShaderSurface", () {
     shader.dispose();
   });
 
+  testWidgets("reuses painter when delegate unchanged", (tester) async {
+    await tester.pumpWidget(
+      const MaterialApp(home: FlagShaderSurface(CountryUsa())),
+    );
+    await tester.pump();
+    final firstPaint = tester.widget<CustomPaint>(
+      find
+          .descendant(
+            of: find.byType(FlagShaderSurface),
+            matching: find.byType(CustomPaint),
+          )
+          .first,
+    );
+    await tester.pumpWidget(
+      const MaterialApp(home: FlagShaderSurface(CountryUsa())),
+    );
+    final secondPaint = tester.widget<CustomPaint>(
+      find
+          .descendant(
+            of: find.byType(FlagShaderSurface),
+            matching: find.byType(CustomPaint),
+          )
+          .first,
+    );
+    expect(
+      identical(firstPaint.painter, secondPaint.painter),
+      isTrue,
+      reason: "Painter should be reused (same instance)",
+    );
+  });
+
   group("golden", () {
     for (final iso in const <WorldCountry>[.svk(), .kor(), .mkd(), .shn()]) {
       testWidgets(

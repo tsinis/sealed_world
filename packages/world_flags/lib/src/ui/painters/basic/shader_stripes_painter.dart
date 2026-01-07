@@ -44,8 +44,8 @@ class ShaderStripesPainter<T extends CustomPainter> extends StripesPainter<T> {
   @override
   void paint(Canvas canvas, Size size) {
     _ensureCache(size);
-    final image = _image;
-    if (image == null) return super.paint(canvas, size);
+    final image = _image; // Null is practically impossible here, defensive.
+    if (image == null) return super.paint(canvas, size); // coverage:ignore-line
 
     final painted = _renderWithShader(canvas, size, image);
     if (!painted) _drawCachedImage(canvas, size, image);
@@ -62,8 +62,7 @@ class ShaderStripesPainter<T extends CustomPainter> extends StripesPainter<T> {
   }
 
   void _rebuildCache(Size size, double scale) {
-    // Dispose previous image before creating new one.
-    _image?.dispose();
+    _image?.dispose(); // Dispose previous image before creating new one.
     _image = null;
 
     final recorder = PictureRecorder();

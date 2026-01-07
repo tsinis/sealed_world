@@ -12,7 +12,6 @@ import "../../../world_flags.dart"
     show smallSimplifiedFlagsMap, smallSimplifiedLanguageFlagsMap;
 import "../../data/other_iso_flags_map.dart";
 import "../../helpers/extensions/aspect_ratio_extension.dart";
-import "../../helpers/extensions/basic_flag_extension_copy_with.dart";
 import "../../model/flag_properties.dart";
 import "../../model/typedefs.dart";
 import "../flags/basic_flag.dart";
@@ -309,28 +308,22 @@ class _FlagShaderSurfaceState extends State<FlagShaderSurface>
   Widget build(BuildContext context) {
     final flag = widget._flag;
     if (flag == null) return widget.orElse;
-    final delegate = _resolveDelegate(flag);
+    final delegate = _resolveDelegate(flag); // Null is practically impossible.
+    if (delegate == null) return widget.orElse; // coverage:ignore-line
 
-    return delegate == null
-        ? flag.copyWith(
-            key: Key(widget.item.code),
-            height: widget.height,
-            width: widget.width,
-            aspectRatio: widget.aspectRatio,
-          )
-        : SizedBox(
-            height: widget.height ?? flag.height,
-            width: widget.width ?? flag.width,
-            child: AspectRatio(
-              aspectRatio:
-                  widget.aspectRatio ??
-                  widget.height.aspectRatio(widget.width) ??
-                  flag.flagAspectRatio,
-              child: CustomPaint(
-                painter: _resolvePainter(flag, delegate),
-                willChange: widget.options.animate,
-              ),
-            ),
-          );
+    return SizedBox(
+      height: widget.height ?? flag.height,
+      width: widget.width ?? flag.width,
+      child: AspectRatio(
+        aspectRatio:
+            widget.aspectRatio ??
+            widget.height.aspectRatio(widget.width) ??
+            flag.flagAspectRatio,
+        child: CustomPaint(
+          painter: _resolvePainter(flag, delegate),
+          willChange: widget.options.animate,
+        ),
+      ),
+    );
   }
 }

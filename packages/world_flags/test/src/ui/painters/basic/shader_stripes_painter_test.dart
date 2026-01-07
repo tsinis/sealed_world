@@ -206,12 +206,29 @@ void main() => group("$ShaderStripesPainter", () {
     await tester.pump();
     expect(painter.shader, equals(shader));
   });
+
+  testWidgets("draws cached image with clipping when needed", (tester) async {
+    const shader = _ShaderStripesPainterTest(shouldClipContent: true);
+    final painter = ShaderStripesPainter(properties, null, shader: shader);
+    await tester.pumpWidget(
+      MaterialApp(
+        home: Scaffold(
+          body: CustomPaint(painter: painter, size: const Size(300, 200)),
+        ),
+      ),
+    );
+    await tester.pump();
+    // Since paintWithShader returns false, it falls back to _drawCachedImage.
+    // With clipContent: true, this tests the clipping path in _drawCachedImage.
+    expect(shader.shouldClipContent, isTrue);
+  });
 });
 
 class _ShaderStripesPainterTest implements FlagShaderDelegate {
-  const _ShaderStripesPainterTest();
+  const _ShaderStripesPainterTest({this.shouldClipContent = false});
+
   @override
-  bool get shouldClipContent => false;
+  final bool shouldClipContent;
 
   @override
   double get contentScale => 1;

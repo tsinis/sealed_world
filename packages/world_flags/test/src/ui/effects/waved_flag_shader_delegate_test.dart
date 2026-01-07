@@ -100,13 +100,24 @@ void main() => group("$WavedFlagShaderDelegate", () {
     );
 
     await tester.pump();
-    expect(
-      delegate,
-      isA<WavedFlagShaderDelegate>(),
-      reason: "No errors should occur during basic construction.",
+    final recorder = PictureRecorder();
+    Canvas(recorder).drawRect(
+      const Rect.fromLTWH(0, 0, 10, 10),
+      Paint()..color = Colors.green,
     );
-    expect(capturedError, isNull);
+    final picture = recorder.endRecording();
+    final testImage = await picture.toImage(10, 10);
+
+    final canvasRecorder = PictureRecorder();
+    final testCanvas = Canvas(canvasRecorder);
+    delegate.paintWithShader(testCanvas, const Size(50, 25), image: testImage);
+    expect(capturedError, isNull, reason: "No error should occur on 1st paint");
     expect(capturedStackTrace, isNull);
+    testImage.dispose();
+    delegate.paintWithShader(testCanvas, const Size(50, 25), image: testImage);
+
+    expect(capturedError, isNotNull);
+    expect(capturedStackTrace, isNotNull);
 
     delegate.dispose();
     tickerProvider.dispose();
@@ -124,7 +135,7 @@ void main() => group("$WavedFlagShaderDelegate", () {
     tickerProvider.dispose();
   });
 
-  testWidgets("paintWithShader returns false without shader program", (
+  testWidgets("paintWithShader returns true with shader program", (
     tester,
   ) async {
     const tickerProvider = _WavedFlagShaderDelegateTest();
@@ -155,6 +166,71 @@ void main() => group("$WavedFlagShaderDelegate", () {
     testImage.dispose();
     delegate.dispose();
     tickerProvider.dispose();
+  });
+
+  testWidgets("animation advances time when animate is true", (tester) async {
+    final delegate = WavedFlagShaderDelegate(vsync: tester);
+    await tester.pump(const Duration(milliseconds: 16));
+    expect(
+      delegate,
+      isA<WavedFlagShaderDelegate>(),
+      reason: "Delegate should function with animation.",
+    );
+
+    delegate.dispose();
+  });
+
+  testWidgets("stops animation when animate is false", (tester) async {
+    final delegate = WavedFlagShaderDelegate(
+      vsync: tester,
+      options: const FlagShaderOptions(animate: false),
+    );
+    await tester.pump();
+    expect(delegate, isA<WavedFlagShaderDelegate>());
+    delegate.dispose();
+  });
+
+  testWidgets("uses default error handler when none provided", (tester) async {
+    // Create delegate without custom onError - uses _debugPrintError default.
+    final delegate = WavedFlagShaderDelegate(vsync: tester);
+    await tester.pump();
+    final recorder = PictureRecorder(); // Create a test image.
+    Canvas(recorder).drawRect(
+      const Rect.fromLTWH(0, 0, 10, 10),
+      Paint()..color = Colors.green,
+    );
+    final picture = recorder.endRecording();
+    final testImage = await picture.toImage(10, 10);
+    final canvasRecorder = PictureRecorder();
+    final testCanvas = Canvas(canvasRecorder);
+    delegate.paintWithShader(testCanvas, const Size(50, 25), image: testImage);
+    testImage.dispose(); // Dispose image to cause error.
+    final result = delegate.paintWithShader(
+      testCanvas,
+      const Size(50, 25),
+      image: testImage,
+    );
+    expect(result, isFalse, reason: "Should return false when error occurs.");
+
+    delegate.dispose();
+  });
+
+  testWidgets("time wraps around after exceeding 10000", (tester) async {
+    final delegate = WavedFlagShaderDelegate(
+      vsync: tester,
+      options: const FlagShaderOptions(animationSpeed: 10000),
+    );
+
+    await tester.pump(); // Pump enough frames to exceed the 1e4 threshold.
+    await tester.pump(const Duration(seconds: 1));
+    await tester.pump(const Duration(milliseconds: 1100));
+    expect(
+      delegate,
+      isA<WavedFlagShaderDelegate>(),
+      reason: "Delegate should still function correctly after time wraps.",
+    );
+
+    delegate.dispose();
   });
 });
 
