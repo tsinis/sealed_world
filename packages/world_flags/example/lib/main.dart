@@ -6,11 +6,7 @@ import "settings_dialog.dart";
 void main() {
   /// Provide flag decorations globally.
   const extensions = [
-    FlagThemeData(
-      decoration: BoxDecoration(
-        borderRadius: BorderRadius.all(Radius.circular(4)),
-      ),
-    ),
+    FlagThemeData(decoration: BoxDecoration(borderRadius: .all(.circular(4)))),
   ];
 
   runApp(
@@ -33,8 +29,7 @@ class _MainState extends State<Main> {
   // ignore: specify_nonobvious_property_types, a double as it's divided by 2.0.
   static const _size = kMinInteractiveDimension / 2.0;
   static const _items = <IsoTranslated, BasicFlag>{
-    ...uniqueSimplifiedFlagsMap,
-    CountryGuf(): StarFlag(flagGufPropertiesAlt),
+    ...smallSimplifiedFlagsMap,
     FiatEur(): StarFlag(flagEurProperties),
     ...smallSimplifiedLanguageFlagsMap,
   };

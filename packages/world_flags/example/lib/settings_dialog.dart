@@ -1,20 +1,18 @@
-import "dart:async";
-
 import "package:flutter/material.dart";
+import "package:meta/meta.dart"; // ignore: depend_on_referenced_packages, example app.
 import "package:world_flags/world_flags.dart";
 
 class SettingsDialog extends StatefulWidget {
   const SettingsDialog(this.aspectRatio, this.country, {super.key});
 
-  static void show(
+  @awaitNotRequired
+  static Future<void> show(
     ValueNotifier<double?> aspectRatio,
     BuildContext context,
     WorldCountry country,
-  ) => unawaited(
-    showDialog(
-      context: context,
-      builder: (_) => SettingsDialog(aspectRatio, country),
-    ),
+  ) => showDialog<void>(
+    context: context,
+    builder: (_) => SettingsDialog(aspectRatio, country),
   );
 
   final WorldCountry country;
@@ -25,7 +23,7 @@ class SettingsDialog extends StatefulWidget {
 }
 
 class _SettingsDialogState extends State<SettingsDialog> {
-  final _opacity = ValueNotifier<double>(1 / 2);
+  final _opacity = ValueNotifier<double>(1);
 
   WorldCountry get _country => widget.country;
 
@@ -72,19 +70,15 @@ class _SettingsDialogState extends State<SettingsDialog> {
             ),
             body: Center(
               child: DecoratedBox(
-                decoration: BoxDecoration(
-                  image: DecorationImage(
-                    fit: BoxFit.fitHeight,
-                    image: NetworkImage(_country.flagPngUrl()),
-                  ),
-                ),
-                child: AspectRatio(
-                  aspectRatio:
-                      ratio ??
-                      _country.flagProperties?.aspectRatio ??
-                      FlagConstants.defaultAspectRatio,
-                  child: Opacity(opacity: opacityValue, child: flag),
-                ),
+                decoration: opacityValue == 1
+                    ? const BoxDecoration()
+                    : BoxDecoration(
+                        image: DecorationImage(
+                          fit: BoxFit.fitHeight,
+                          image: NetworkImage(_country.flagPngUrl()),
+                        ),
+                      ),
+                child: Opacity(opacity: opacityValue, child: flag),
               ),
             ),
             bottomNavigationBar: SliderTheme(
@@ -101,6 +95,7 @@ class _SettingsDialogState extends State<SettingsDialog> {
                           ratio ??
                           _country.flagProperties?.aspectRatio ??
                           FlagConstants.minAspectRatio,
+                      secondaryTrackValue: _country.flagProperties?.aspectRatio,
                       onChanged: (newRatio) =>
                           widget.aspectRatio.value = newRatio,
                       min: FlagConstants.minAspectRatio,
@@ -120,7 +115,7 @@ class _SettingsDialogState extends State<SettingsDialog> {
               ),
             ),
           ),
-          child: CountryFlag.simplified(_country, aspectRatio: ratio),
+          child: FlagShaderSurface(_country, aspectRatio: ratio),
         ),
       ),
     ),

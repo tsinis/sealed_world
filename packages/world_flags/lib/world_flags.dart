@@ -23,6 +23,7 @@ import "src/ui/painters/custom/ata_painter.dart";
 import "src/ui/painters/custom/blr_painter.dart";
 import "src/ui/painters/custom/brb_painter.dart";
 import "src/ui/painters/custom/btn_painter.dart";
+import "src/ui/painters/custom/clipped_triangle_painter.dart";
 import "src/ui/painters/custom/cyp_painter.dart";
 import "src/ui/painters/custom/david_star_painter.dart";
 import "src/ui/painters/custom/eagle_painter.dart";
@@ -87,6 +88,10 @@ export "src/model/typedefs.dart";
 export "src/theme/flag_theme_data.dart";
 export "src/ui/country_flag.dart";
 export "src/ui/decorated_flag_widget.dart";
+export "src/ui/effects/flag_shader_delegate.dart";
+export "src/ui/effects/flag_shader_options.dart";
+export "src/ui/effects/flag_shader_surface.dart";
+export "src/ui/effects/waved_flag_shader_delegate.dart";
 export "src/ui/flags/basic_flag.dart";
 export "src/ui/flags/ellipse_flag.dart";
 export "src/ui/flags/moon_flag.dart";
@@ -97,6 +102,7 @@ export "src/ui/flags/triangle_flag.dart";
 export "src/ui/iso_flag.dart";
 export "src/ui/painters/basic/custom_elements_painter.dart";
 export "src/ui/painters/basic/elements_painter.dart";
+export "src/ui/painters/basic/shader_stripes_painter.dart";
 export "src/ui/painters/basic/stripes_painter.dart";
 export "src/ui/painters/common/diagonal_line_painter.dart";
 export "src/ui/painters/common/ellipse_painter.dart";
@@ -111,6 +117,7 @@ export "src/ui/painters/custom/ata_painter.dart";
 export "src/ui/painters/custom/blr_painter.dart";
 export "src/ui/painters/custom/brb_painter.dart";
 export "src/ui/painters/custom/btn_painter.dart";
+export "src/ui/painters/custom/clipped_triangle_painter.dart";
 export "src/ui/painters/custom/cyp_painter.dart";
 export "src/ui/painters/custom/david_star_painter.dart";
 export "src/ui/painters/custom/eagle_painter.dart";
@@ -194,7 +201,10 @@ const uniqueSimplifiedFlagsMap = <WorldCountry, BasicFlag>{
   CountryBfa(): StarFlag(flagBfaProperties),
   CountryBgd(): EllipseFlag(flagBgdProperties),
   CountryBgr(): BasicFlag(flagBgrProperties),
-  CountryBhr(): TriangleFlag(flagBhrProperties),
+  CountryBhr(): BasicFlag(
+    flagBhrProperties,
+    elementsBuilder: ClippedTrianglePainter.new,
+  ),
   CountryBhs(): TriangleFlag(flagBhsProperties),
   CountryBih(): MultiElementFlag(flagBihProperties),
   CountryBlm(): BasicFlag(flagBlmProperties),
@@ -547,14 +557,13 @@ const uniqueSimplifiedFlagsMap = <WorldCountry, BasicFlag>{
 /// ```
 const smallSimplifiedFlagsMap = <WorldCountry, BasicFlag>{
   ...uniqueSimplifiedFlagsMap,
-  CountryGuf(): BasicFlag(flagGufProperties),
+  ...smallSimplifiedAlternativeFlagsMap,
 };
 
 /// Alternative flags for specific countries. As an alternative for flags from
-/// the [smallSimplifiedFlagsMap]. For example Afghanistan flag is no longer
-/// using the old version but rather using the new flag properties (after 2021).
-/// Also French Guiana flag is represented by unofficial, but very popular
-/// and more commonly used green-yellow flag with a red star in the center.
+/// the [smallSimplifiedFlagsMap]. For French Guiana flag is represented by
+/// unofficial, but very popular and more commonly used green-yellow flag with
+/// a red star in the center.
 const smallSimplifiedAlternativeFlagsMap = <WorldCountry, BasicFlag>{
   CountryGuf(): StarFlag(flagGufPropertiesAlt),
 };

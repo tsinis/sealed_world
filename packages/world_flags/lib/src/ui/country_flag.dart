@@ -3,8 +3,7 @@
 import "package:sealed_countries/sealed_countries.dart";
 
 // ignore: avoid-importing-entrypoint-exports, only shows maps.
-import "../../world_flags.dart"
-    show smallSimplifiedAlternativeFlagsMap, smallSimplifiedFlagsMap;
+import "../../world_flags.dart" show smallSimplifiedFlagsMap;
 import "flags/basic_flag.dart";
 import "iso_flag.dart";
 
@@ -40,13 +39,14 @@ class CountryFlag extends IsoFlag<WorldCountry, BasicFlag> {
   /// - [key]: The key for the widget.
   const CountryFlag.simplified(
     WorldCountry country, {
-    super.alternativeMap = smallSimplifiedAlternativeFlagsMap,
+    super.alternativeMap,
     super.height,
     super.width,
     super.aspectRatio,
     super.decoration,
     super.decorationPosition,
     super.padding,
+    super.shader,
     super.orElse,
     super.child,
     super.key,
@@ -78,6 +78,7 @@ class CountryFlag extends IsoFlag<WorldCountry, BasicFlag> {
     super.padding,
     super.height,
     super.width,
+    super.shader,
     super.orElse,
     super.child,
     super.key,

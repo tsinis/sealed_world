@@ -18,7 +18,7 @@ void main() => group("$Currency", () {
         currency.toString(short: false),
         'FiatCurrency(code: "ARS", name: "Argentine Peso", '
         r'decimalMark: ",", thousandsSeparator: ".", symbol: r"$", '
-        r'alternateSymbols: ["$m/n","m$n"], disambiguateSymbol: r"$m/n", '
+        r'alternateSymbols: ["AR$"], disambiguateSymbol: r"AR$", '
         r'htmlEntity: r"$", codeNumeric: "032", '
         'namesNative: ["Argentine peso"], priority: 100, '
         'smallestDenomination: 1, subunit: "Centavo", subunitToUnit: 100, '

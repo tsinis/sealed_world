@@ -2385,7 +2385,7 @@ const flagLcaProperties = FlagProperties(
   baseElementType: FlagElementsType.rectangle,
   elementsProperties: [
     ElementsProperties(
-      Color(0xff65cfff),
+      Color(0x0065cfff),
       shape: Rectangle(),
       offset: Offset(0, 4.5),
       heightFactor: 0.82,

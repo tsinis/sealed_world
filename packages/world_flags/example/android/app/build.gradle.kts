@@ -1,3 +1,5 @@
+import java.util.concurrent.TimeUnit
+
 plugins {
     id("com.android.application")
     id("kotlin-android")
@@ -13,10 +15,6 @@ android {
     compileOptions {
         sourceCompatibility = JavaVersion.VERSION_24
         targetCompatibility = JavaVersion.VERSION_24
-    }
-
-    kotlinOptions {
-        jvmTarget = JavaVersion.VERSION_24.toString()
     }
 
     defaultConfig {
@@ -36,6 +34,12 @@ android {
             // Signing with the debug keys for now, so `flutter run --release` works.
             signingConfig = signingConfigs.getByName("debug")
         }
+    }
+}
+
+kotlin {
+    compilerOptions {
+        jvmTarget.set(org.jetbrains.kotlin.gradle.dsl.JvmTarget.JVM_24)
     }
 }
 
