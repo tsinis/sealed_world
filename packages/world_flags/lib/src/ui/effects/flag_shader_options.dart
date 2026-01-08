@@ -11,7 +11,7 @@ import "flag_shader_surface.dart" show FlagShaderSurface;
 ///
 /// These options describe purely visual preferences (amplitude, turbulence,
 /// highlights, etc.) and can be stored inside [FlagThemeData] or supplied to
-/// a [FlagShaderSurface]. They do *not* manage shader lifecycles, tickers,
+/// a [FlagShaderSurface]. They do *not* manage shader life-cycles, tickers,
 /// or GPU resources.
 ///
 /// ### Usage
@@ -35,7 +35,7 @@ import "flag_shader_surface.dart" show FlagShaderSurface;
 /// - Shader effects are relatively GPU intensive; avoid animating multiple
 ///   full-size flags simultaneously on low-end devices.
 /// - Maintain sufficient padding/"breathing space" above and below the flag when
-///   increasing [waveAmplitude] to minimize clipping artefacts.
+///   increasing [waveAmplitude] to minimize clipping artifacts.
 @immutable
 class FlagShaderOptions {
   /// Creates a new set of shader options.

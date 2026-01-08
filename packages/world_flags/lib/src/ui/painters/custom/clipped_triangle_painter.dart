@@ -17,7 +17,6 @@ final class ClippedTrianglePainter extends ElementsPainter {
     return _leftToRightTriangle(canvas, size);
   }
 
-  /// Czechia like triangle on the flag.
   FlagParentBounds _leftToRightTriangle(Canvas canvas, Size size) {
     final compensation = (aspectRatio / calculateAspectRatio(size) + 1) / 2;
     final width = size.width * (property.widthFactor ?? 1) * compensation;

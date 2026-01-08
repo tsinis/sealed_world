@@ -29,6 +29,6 @@
 	<key>NSPrincipalClass</key>
 	<string>NSApplication</string>
 	<key>FLTEnableImpeller</key>
-  	<true />
+	<true />
 </dict>
 </plist>

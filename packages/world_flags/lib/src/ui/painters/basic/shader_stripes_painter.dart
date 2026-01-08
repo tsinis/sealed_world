@@ -3,11 +3,8 @@
 import "dart:math";
 import "dart:ui";
 
-import "package:flutter/cupertino.dart" show Listenable;
 import "package:flutter/foundation.dart" show Listenable;
-import "package:flutter/material.dart" show Listenable;
 import "package:flutter/rendering.dart";
-import "package:flutter/widgets.dart" show Listenable;
 
 import "../../../model/flag_properties.dart";
 import "../../effects/flag_shader_delegate.dart";
