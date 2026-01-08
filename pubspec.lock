@@ -213,10 +213,10 @@ packages:
     dependency: "direct dev"
     description:
       name: dart_code_metrics_presets
-      sha256: "882ac8d8e77704e1f4b00c4906805e45f25099e35157b4a26904d0239f38184d"
+      sha256: "722309c3b9133c36f389fc7c1ef6dbaf36fac7b18b43a0b2da5234f9a99282b2"
       url: "https://pub.dev"
     source: hosted
-    version: "2.28.0"
+    version: "2.29.0"
   dart_style:
     dependency: transitive
     description:
@@ -521,10 +521,10 @@ packages:
     dependency: "direct dev"
     description:
       name: pana
-      sha256: eb816d35b80d3880335c3f2d139b376e81fd98a9ea273faf39f2c8914c4afba5
+      sha256: "58c4dfd9602aa9edb67682cf060721bddac0dd0eef1773791ec103744062667e"
       url: "https://pub.dev"
     source: hosted
-    version: "0.23.3"
+    version: "0.23.5"
   path:
     dependency: transitive
     description:
