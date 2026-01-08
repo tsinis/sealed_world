@@ -68,5 +68,6 @@ class TranslatedName extends BasicLocale implements Named<String> {
   }
 
   @override
-  int get hashCode => language.hashCode ^ name.hashCode ^ fullName.hashCode;
+  int get hashCode =>
+      Object.hash(language, name.toUpperCase(), fullName?.toUpperCase());
 }

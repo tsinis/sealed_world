@@ -66,5 +66,5 @@ final class Gini implements JsonEncodable<Gini> {
   }
 
   @override
-  int get hashCode => year.hashCode ^ coefficient.hashCode;
+  int get hashCode => Object.hash(year, coefficient);
 }

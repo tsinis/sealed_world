@@ -48,5 +48,5 @@ final class CapitalInfo implements JsonEncodable<CapitalInfo> {
   }
 
   @override
-  int get hashCode => capital.hashCode ^ latLng.hashCode;
+  int get hashCode => Object.hash(capital, latLng);
 }

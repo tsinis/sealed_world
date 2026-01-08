@@ -42,5 +42,5 @@ final class Idd implements JsonEncodable<Idd> {
   }
 
   @override
-  int get hashCode => root.hashCode ^ suffixes.hashCode;
+  int get hashCode => Object.hash(root, suffixes);
 }

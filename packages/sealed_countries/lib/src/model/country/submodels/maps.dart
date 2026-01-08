@@ -56,5 +56,5 @@ final class Maps implements JsonEncodable<Maps> {
   }
 
   @override
-  int get hashCode => googleMaps.hashCode ^ openStreetMaps.hashCode;
+  int get hashCode => Object.hash(googleMaps, openStreetMaps);
 }
