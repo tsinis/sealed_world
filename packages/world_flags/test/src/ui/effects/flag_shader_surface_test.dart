@@ -178,6 +178,7 @@ void main() => group("$FlagShaderSurface", () {
 
   group("golden", () {
     for (final iso in const <WorldCountry>[.svk(), .kor(), .mkd(), .shn()]) {
+      // ignore: missing-test-assertion, flagGolden does the job.
       testWidgets(
         "${iso.internationalName} Waved Flag",
         (tester) => tester.flagGolden(iso, FlagType.waved),

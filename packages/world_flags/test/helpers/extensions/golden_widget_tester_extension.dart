@@ -42,7 +42,7 @@ extension GoldenWidgetTesterExtension on WidgetTester {
     return expectLater(
       find.byType(isWaved ? FlagShaderSurface : IsoFlag<T, BasicFlag>),
       matchesGoldenFile(isWaved ? "../$filePath" : filePath),
-      skip: !Platform.isLinux && _ignoreOnNonLinux.contains(iso),
+      skip: !Platform.isLinux && (_ignoreOnNonLinux.contains(iso) || isWaved),
       reason: "Non-Linux platforms rendering those flags slightly differently",
     );
   }
