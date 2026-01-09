@@ -2,14 +2,15 @@ import "package:flutter/gestures.dart" show DragStartBehavior;
 import "package:flutter/material.dart";
 import "package:world_flags/world_flags.dart";
 
-import "../../extensions/world_countries_build_context_extension.dart";
 import "../../models/item_properties.dart";
 import "../../models/locale/typed_locale.dart";
+import "../generic_widgets/list_item_tile.dart";
 import "../pickers/basic_picker.dart";
 import "country_tile.dart";
 
 /// A picker widget for selecting a country.
-class CountryPicker extends BasicPicker<WorldCountry> {
+class CountryPicker
+    extends BasicPicker<WorldCountry, ListItemTile<WorldCountry>> {
   /// Constructor for the [CountryPicker] class.
   ///
   /// * [countries] is the list of countries to display.
@@ -106,36 +107,14 @@ class CountryPicker extends BasicPicker<WorldCountry> {
   }) : super(countries);
 
   @override
-  Widget defaultBuilder(
-    BuildContext context,
-    ItemProperties<WorldCountry> itemProperties, {
-    bool? isDense,
-  }) {
-    final builder = context.countryTileTheme?.builder;
-    if (builder != null) return builder(itemProperties, isDense: isDense);
-
-    final maybeNameTitle = itemNameTranslated(
-      itemProperties.item,
-      itemProperties.context,
-    );
-
-    return (isDense ?? false)
-        ? CountryTile.simple(
-            itemProperties,
-            title: maybeNameTitle,
-            leading: flagsMap[itemProperties.item],
-            titleAlignment: ListTileTitleAlignment.titleHeight,
-            onPressed: (country) =>
-                // ignore: prefer-correct-handler-name, breaking change.
-                maybeSelectAndPop(country, itemProperties.context),
-          )
-        : CountryTile.fromProperties(
-            itemProperties,
-            title: maybeNameTitle,
-            leading: flagsMap[itemProperties.item],
-            onPressed: onSelect,
-          );
-  }
+  ListItemTile<WorldCountry> defaultBuilder(
+    ItemProperties<WorldCountry> props,
+  ) => CountryTile.fromProperties(
+    props,
+    title: itemNameTranslated(props.item, props.context),
+    leading: flagsMap[props.item],
+    onPressed: onSelect,
+  );
 
   @override
   String? nameTranslationCache(WorldCountry item, TypedLocale locale) =>
@@ -195,10 +174,7 @@ class CountryPicker extends BasicPicker<WorldCountry> {
       Map<WorldCountry, Set<String>> map,
     )?
     onSearchResultsBuilder,
-    Widget? Function(
-      ItemProperties<WorldCountry> itemProperties, {
-      bool? isDense,
-    })?
+    Widget? Function(ItemProperties<WorldCountry>, ListItemTile<WorldCountry>)?
     itemBuilder,
     double? spacing,
     TypedLocale? translation,
@@ -218,7 +194,9 @@ class CountryPicker extends BasicPicker<WorldCountry> {
     disabled: disabled ?? this.disabled,
     dragStartBehavior: dragStartBehavior ?? this.dragStartBehavior,
     emptyStatePlaceholder: emptyStatePlaceholder ?? this.emptyStatePlaceholder,
-    itemBuilder: itemBuilder ?? this.itemBuilder,
+    itemBuilder: (props, tile) =>
+        itemBuilder?.call(props, tile ?? defaultBuilder(props)) ??
+        this.itemBuilder?.call(props, tile),
     key: key ?? this.key,
     keyboardDismissBehavior:
         keyboardDismissBehavior ?? this.keyboardDismissBehavior,

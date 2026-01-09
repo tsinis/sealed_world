@@ -7,9 +7,9 @@ import "../../mixins/properties_convertible_mixin.dart";
 import "../base_widgets/stateful_indexed_list_view.dart";
 
 /// A stateful indexed list view widget that displays a list of items.
-class IndexedListViewBuilder<T extends Object>
-    extends StatefulIndexedListView<T>
-    with PropertiesConvertibleMixin<T> {
+class IndexedListViewBuilder<T extends Object, W extends Widget>
+    extends StatefulIndexedListView<T, W>
+    with PropertiesConvertibleMixin<T, W> {
   /// Constructor for the [IndexedListViewBuilder] class.
   ///
   /// * [items] is the list of items to display in the list view.
@@ -87,11 +87,11 @@ class IndexedListViewBuilder<T extends Object>
 
   @override
   State<IndexedListViewBuilder> createState() =>
-      _IndexedListViewBuilderState<T>();
+      _IndexedListViewBuilderState<T, W>();
 }
 
-class _IndexedListViewBuilderState<T extends Object>
-    extends State<IndexedListViewBuilder<T>> {
+class _IndexedListViewBuilderState<T extends Object, W extends Widget>
+    extends State<IndexedListViewBuilder<T, W>> {
   @override
   // ignore: avoid-high-cyclomatic-complexity, build methods are typically long.
   Widget build(BuildContext context) {
@@ -138,7 +138,7 @@ class _IndexedListViewBuilderState<T extends Object>
                     padding: widget.padding ?? theme?.padding,
                     itemBuilder: (newContext, index) {
                       final properties = widget.properties(newContext, index);
-                      final child = widget.itemBuilder?.call(properties);
+                      final child = widget.itemBuilder?.call(properties, null);
                       if (child == null) return null;
                       if (properties.isDisabled) return child;
 

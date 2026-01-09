@@ -11,6 +11,7 @@ import "../../constants/ui_constants.dart";
 import "../../extensions/build_context_extension.dart";
 import "../../extensions/core/duration_extension.dart";
 import "../../extensions/iterable_search_map_extension.dart";
+import "../../extensions/list_item_tile_extension.dart";
 import "../../extensions/world_countries_build_context_extension.dart";
 import "../../helpers/typed_locale_delegate.dart";
 import "../../interfaces/basic_picker_interface.dart";
@@ -20,7 +21,10 @@ import "../../models/locale/typed_locale.dart";
 import "../../models/typedefs.dart";
 import "../../theme/pickers_theme_data.dart";
 import "../adaptive/adaptive_search_text_field.dart";
+import "../country/country_tile.dart";
+import "../currency/currency_tile.dart";
 import "../generic_widgets/implicit_search_delegate.dart";
+import "../generic_widgets/list_item_tile.dart";
 import "../generic_widgets/searchable_indexed_list_view_builder.dart";
 import "../helpers/maybe_widget.dart";
 
@@ -29,8 +33,8 @@ part "basic_picker_state.dart";
 /// An abstract class that provides a basic picker [Widget], with search
 /// functionality and indexing support.
 @immutable
-abstract class BasicPicker<T extends IsoTranslated>
-    extends SearchableIndexedListViewBuilder<T>
+abstract class BasicPicker<T extends IsoTranslated, W extends ListItemTile<T>>
+    extends SearchableIndexedListViewBuilder<T, W>
     with CompareSearchMixin<T>
     implements BasicPickerInterface {
   /// Constructor for the [BasicPicker] class.
@@ -92,7 +96,7 @@ abstract class BasicPicker<T extends IsoTranslated>
     super.disabled,
     super.dragStartBehavior,
     super.emptyStatePlaceholder,
-    super.itemBuilder,
+    this.itemBuilder,
     super.key,
     super.keyboardDismissBehavior,
     super.mainAxisAlignment,
@@ -120,7 +124,38 @@ abstract class BasicPicker<T extends IsoTranslated>
     this.showClearButton = true,
     this.translation,
     this.flagsMap = const {},
-  }) : super(header: searchBar);
+  }) : super(header: searchBar, itemBuilder: itemBuilder);
+
+  /// Custom itemBuilder that receives the default tile for customization.
+  ///
+  /// If provided, this itemBuilder receives [ItemProperties] and the default
+  /// [ListItemTile] widget. You can return the default tile as-is, or create
+  /// a custom widget using the tile's properties (like `dense`,
+  /// `visualDensity`, etc.) as a reference.
+  ///
+  /// Example:
+  /// ```dart
+  /// itemBuilder: (itemProperties, defaultTile) {
+  ///   // Option 1: Use the default tile as-is
+  ///   return defaultTile;
+  ///
+  ///   // Option 2: Use tile properties to create custom widget
+  ///   final isDense = defaultTile.dense ?? false;
+  ///   return MyCustomTile(
+  ///     item: itemProperties.item,
+  ///     dense: isDense,
+  ///   );
+  ///
+  ///   // Option 3: Modify the default tile appearance
+  ///   return DecoratedBox(
+  ///     decoration: BoxDecoration(color: Colors.blue.shade50),
+  ///     child: defaultTile,
+  ///   );
+  /// }
+  /// ```
+  @override
+  // ignore: overridden_fields, for documentation purpose.
+  final Widget? Function(ItemProperties<T>, ListItemTile<T>?)? itemBuilder;
 
   /// A boolean indicating whether to show a clear button in the search bar.
   @override
@@ -141,15 +176,26 @@ abstract class BasicPicker<T extends IsoTranslated>
   @override
   final Map<T, BasicFlag> flagsMap;
 
-  /// Returns the default builder for the items.
-  /// It also has an optional parameter `isDense`, which indicates whether the
-  /// item uses less vertical space or not, defaults to `false`.
+  /// Returns the default tile widget for the items.
+  ///
+  /// This method creates and returns the default [ListItemTile] (such as
+  /// [CountryTile], [CurrencyTile], etc.) with theme properties applied.
+  ///
+  /// Example usage in custom itemBuilder:
+  /// ```dart
+  /// itemBuilder: (itemProperties, defaultTile) {
+  ///   // Use the default tile as-is
+  ///   return defaultTile;
+  ///
+  ///   // Or wrap/modify it
+  ///   return ColoredBox(
+  ///     color: Colors.blue.shade50,
+  ///     child: defaultTile,
+  ///   );
+  /// }
+  /// ```
   @protected
-  Widget defaultBuilder(
-    BuildContext context,
-    ItemProperties<T> itemProperties, {
-    bool? isDense,
-  });
+  W defaultBuilder(ItemProperties<T> itemProperties);
 
   /// Returns the default search function for the items. By default returns
   /// translated name of the item (if exists).
@@ -185,15 +231,21 @@ abstract class BasicPicker<T extends IsoTranslated>
 
     return List<Widget>.generate(
       x.length,
-      (i) =>
-          itemBuilder?.call(filteredProperties(x, context, i), isDense: true) ??
-          // ignore: avoid-returning-widgets, Might be breaking change.
-          defaultBuilder(
-            context,
-            filteredProperties(x, context, i),
-            isDense: true,
-          ),
-      growable: false,
+      // ignore: prefer-extracting-callbacks, due to complexity.
+      (i) {
+        final props = filteredProperties(x, context, i);
+        final defaultTile = defaultBuilder(props).copyWith(
+          onPressed: (item) => maybeSelectAndPop(item, context),
+          titleAlignment: ListTileTitleAlignment.titleHeight,
+          visualDensity: VisualDensity.compact,
+          dense: true,
+        );
+
+        return itemBuilder?.call(props, defaultTile) ??
+            context.tileTheme<T>()?.itemBuilder?.call(props, defaultTile) ??
+            defaultTile;
+      },
+      growable: false, // Dart 3.8 Formatting.
     );
   }
 
@@ -254,7 +306,7 @@ abstract class BasicPicker<T extends IsoTranslated>
   String? nameTranslationCache(T item, TypedLocale locale);
 
   @override
-  State<BasicPicker<T>> createState() => _BasicPickerState<T>();
+  State<BasicPicker<T, W>> createState() => _BasicPickerState<T, W>();
 
   @override
   Future<T?> showInModalBottomSheet(
@@ -484,7 +536,7 @@ abstract class BasicPicker<T extends IsoTranslated>
 
   /// Creates a copy of this picker with the given fields replaced with the new
   /// values.
-  BasicPicker<T> copyWith({
+  BasicPicker<T, W> copyWith({
     Iterable<T>? items,
     bool? addAutomaticKeepAlives,
     bool? addRepaintBoundaries,
@@ -523,8 +575,7 @@ abstract class BasicPicker<T extends IsoTranslated>
     Iterable<String> Function(T item, BuildContext context)? searchIn,
     Iterable<T> Function(String query, SearchMap<T> map)?
     onSearchResultsBuilder,
-    Widget? Function(ItemProperties<T> itemProperties, {bool? isDense})?
-    itemBuilder,
+    Widget? Function(ItemProperties<T>, ListItemTile<T>)? itemBuilder,
     double? spacing,
     TypedLocale? translation,
     Map<T, BasicFlag>? flagsMap,

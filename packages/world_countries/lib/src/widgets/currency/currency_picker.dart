@@ -4,14 +4,15 @@ import "package:meta/meta.dart";
 import "package:world_flags/world_flags.dart";
 
 import "../../extensions/pickers/basic_picker_flags_extension.dart";
-import "../../extensions/world_countries_build_context_extension.dart";
 import "../../models/item_properties.dart";
 import "../../models/locale/typed_locale.dart";
+import "../generic_widgets/list_item_tile.dart";
 import "../pickers/basic_picker.dart";
 import "currency_tile.dart";
 
 /// A picker widget that displays a list of fiat currencies.
-class CurrencyPicker extends BasicPicker<FiatCurrency> {
+class CurrencyPicker
+    extends BasicPicker<FiatCurrency, ListItemTile<FiatCurrency>> {
   /// Constructor for the [CurrencyPicker] class.
   ///
   /// * [currencies] is the list of fiat currencies to display.
@@ -156,25 +157,14 @@ class CurrencyPicker extends BasicPicker<FiatCurrency> {
   /// Mapping Euro currency to the European Union 🇪🇺 flag.
   static const defaultFlagsMap = {FiatEur(): StarFlag(flagEurProperties)};
 
+  /// TODO! Manage dense in dropdowns! Via simple constructors.
   @override
-  Widget defaultBuilder(
-    BuildContext context,
-    ItemProperties<FiatCurrency> itemProperties, {
-    bool? isDense,
-  }) =>
-      context.currencyTileTheme?.builder?.call(
-        itemProperties,
-        isDense: isDense,
-      ) ??
+  CurrencyTile defaultBuilder(ItemProperties<FiatCurrency> props) =>
       CurrencyTile.fromProperties(
-        itemProperties,
-        title: itemNameTranslated(itemProperties.item, itemProperties.context),
-        dense: isDense,
-        leading: flagsMap[itemProperties.item],
-        onPressed: (currency) => (isDense ?? false)
-            ? maybeSelectAndPop(currency, itemProperties.context)
-            : onSelect?.call(currency),
-        visualDensity: (isDense ?? false) ? VisualDensity.compact : null,
+        props,
+        title: itemNameTranslated(props.item, props.context),
+        leading: flagsMap[props.item],
+        onPressed: onSelect,
       );
 
   @override
@@ -236,10 +226,7 @@ class CurrencyPicker extends BasicPicker<FiatCurrency> {
       Map<FiatCurrency, Set<String>> map,
     )?
     onSearchResultsBuilder,
-    Widget? Function(
-      ItemProperties<FiatCurrency> itemProperties, {
-      bool? isDense,
-    })?
+    Widget? Function(ItemProperties<FiatCurrency>, ListItemTile<FiatCurrency>)?
     itemBuilder,
     double? spacing,
     TypedLocale? translation,
@@ -259,7 +246,9 @@ class CurrencyPicker extends BasicPicker<FiatCurrency> {
     disabled: disabled ?? this.disabled,
     dragStartBehavior: dragStartBehavior ?? this.dragStartBehavior,
     emptyStatePlaceholder: emptyStatePlaceholder ?? this.emptyStatePlaceholder,
-    itemBuilder: itemBuilder ?? this.itemBuilder,
+    itemBuilder: (props, tile) =>
+        itemBuilder?.call(props, tile ?? defaultBuilder(props)) ??
+        this.itemBuilder?.call(props, tile),
     key: key ?? this.key,
     keyboardDismissBehavior:
         keyboardDismissBehavior ?? this.keyboardDismissBehavior,

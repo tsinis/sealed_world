@@ -18,9 +18,9 @@ part "searchable_indexed_list_view_builder_state.dart";
 
 /// A widget that displays a list of items, with search functionality and
 /// indexing support.
-class SearchableIndexedListViewBuilder<T extends Object>
-    extends StatefulIndexedListView<T>
-    with PropertiesConvertibleMixin<T>, PoppedMixin<T>
+class SearchableIndexedListViewBuilder<T extends Object, W extends Widget>
+    extends StatefulIndexedListView<T, W>
+    with PropertiesConvertibleMixin<T, W>, PoppedMixin<T, W>
     implements MaterialContextInterface<T>, SearchableInterface<T> {
   /// Constructor for the [SearchableIndexedListViewBuilder] class.
   ///
@@ -139,8 +139,8 @@ class SearchableIndexedListViewBuilder<T extends Object>
   onSearchResultsBuilder;
 
   @override
-  State<SearchableIndexedListViewBuilder<T>> createState() =>
-      _SearchableIndexedListViewBuilderState<T>();
+  State<SearchableIndexedListViewBuilder<T, W>> createState() =>
+      _SearchableIndexedListViewBuilderState<T, W>();
 
   @override
   Future<T?> showInModalBottomSheet(

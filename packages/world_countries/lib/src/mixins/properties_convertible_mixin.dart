@@ -1,12 +1,12 @@
 import "package:flutter/foundation.dart";
-import "package:flutter/widgets.dart" show BuildContext;
+import "package:flutter/widgets.dart" show BuildContext, Widget;
 
 import "../models/item_properties.dart";
 import "../widgets/base_widgets/stateful_indexed_list_view.dart";
 
 /// A mixin that provides methods for converting items into [ItemProperties].
-mixin PropertiesConvertibleMixin<T extends Object>
-    on StatefulIndexedListView<T> {
+mixin PropertiesConvertibleMixin<T extends Object, W extends Widget>
+    on StatefulIndexedListView<T, W> {
   /// Returns the [ItemProperties] for an item at the specified [index].
   ///
   /// The [context] parameter is the build context for the item.

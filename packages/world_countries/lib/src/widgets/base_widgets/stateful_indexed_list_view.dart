@@ -18,7 +18,8 @@ import "../../models/item_properties.dart";
 ///
 /// This widget can be used in conjunction with the [ItemProperties] class to
 /// customize the appearance and behavior of individual items in the list.
-abstract class StatefulIndexedListView<T extends Object> extends StatefulWidget
+abstract class StatefulIndexedListView<T extends Object, W extends Widget>
+    extends StatefulWidget
     implements IndexedListViewInterface {
   /// Creates a [StatefulIndexedListView] with the given parameters.
   ///
@@ -72,10 +73,8 @@ abstract class StatefulIndexedListView<T extends Object> extends StatefulWidget
   /// The builder is called for each item in the list and should return a widget
   /// that displays the item. The argument passed to the builder is an
   /// [ItemProperties] object that contains information about the item being
-  /// displayed. It also has an optional parameter `isDense`, which indicates
-  /// whether the item uses less vertical space or not, defaults to `false`.
-  final Widget? Function(ItemProperties<T> itemProperties, {bool? isDense})?
-  itemBuilder;
+  /// displayed.
+  final Widget? Function(ItemProperties<T>, W?)? itemBuilder;
 
   /// A widget to display when the list is empty.
   final Widget emptyStatePlaceholder;

@@ -16,10 +16,19 @@ import "base_tile_theme_data.dart";
 /// Example:
 /// ```dart
 /// final languageTileThemeData = LanguageTileThemeData(
-///   builder: (itemProperties, {isDense}) => MyLanguageTile(
-///     title: itemProperties.item.commonNameFor(locale),
-///     isDense: isDense,
-///   ),
+///   itemBuilder: (itemProperties, defaultTile) {
+///     // Use the default tile as-is
+///     return defaultTile;
+///
+///     // Or customize it with copyWith
+///     return defaultTile.copyWith(dense: true);
+///
+///     // Or build a custom tile
+///     return MyLanguageTile(
+///       title: itemProperties.item.commonNameFor(locale),
+///       isDense: defaultTile.dense ?? false,
+///     );
+///   },
 /// );
 /// ```
 ///
@@ -32,5 +41,5 @@ final class LanguageTileThemeData extends BaseTileThemeData<NaturalLanguage> {
   /// The builder function should take [ItemProperties] of type
   /// [NaturalLanguage] and an optional density flag, and return a widget that
   /// visually represents the language.
-  const LanguageTileThemeData({super.builder});
+  const LanguageTileThemeData({super.itemBuilder});
 }

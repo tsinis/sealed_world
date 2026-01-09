@@ -4,11 +4,11 @@ import "package:world_flags/world_flags.dart";
 
 import "../../constants/ui_constants.dart";
 import "../../extensions/build_context_extension.dart";
-import "../../extensions/world_countries_build_context_extension.dart";
+import "../../extensions/list_item_tile_extension.dart";
 import "../../models/item_properties.dart";
 import "../../models/locale/typed_locale.dart";
 import "../country/country_picker.dart";
-import "../country/country_tile.dart";
+import "../generic_widgets/list_item_tile.dart";
 
 /// A picker widget that displays a list of countries with their phone codes.
 class PhoneCodePicker extends CountryPicker {
@@ -112,17 +112,11 @@ class PhoneCodePicker extends CountryPicker {
       );
 
   @override
-  Widget defaultBuilder(
-    BuildContext context,
-    ItemProperties<WorldCountry> itemProperties, {
-    bool? isDense,
-  }) =>
-      context.countryTileTheme?.builder?.call(
-        itemProperties,
-        isDense: isDense,
-      ) ??
-      CountryTile.fromProperties(
-        itemProperties,
+  ListItemTile<WorldCountry> defaultBuilder(
+    ItemProperties<WorldCountry> props,
+  ) => super
+      .defaultBuilder(props)
+      .copyWith(
         leading: ConstrainedBox(
           constraints: UiConstants.constraints,
           child: FittedBox(
@@ -130,15 +124,15 @@ class PhoneCodePicker extends CountryPicker {
             child: Column(
               mainAxisSize: MainAxisSize.min,
               children: [
-                flagsMap[itemProperties.item] ??
+                flagsMap[props.item] ??
                     CountryFlag.simplified(
-                      itemProperties.item,
+                      props.item,
                       height: 18,
                       aspectRatio:
-                          context.flagTheme?.aspectRatio ??
+                          props.context.flagTheme?.aspectRatio ??
                           FlagConstants.defaultAspectRatio,
                       decoration:
-                          context.flagTheme?.decoration ??
+                          props.context.flagTheme?.decoration ??
                           const BoxDecoration(
                             borderRadius: BorderRadius.all(
                               Radius.circular(UiConstants.point / 2),
@@ -150,19 +144,14 @@ class PhoneCodePicker extends CountryPicker {
                     end: UiConstants.point / 2,
                   ),
                   child: Text(
-                    itemProperties.item.idd.phoneCode(),
-                    style: context.theme.textTheme.labelSmall,
+                    props.item.idd.phoneCode(),
+                    style: props.context.theme.textTheme.labelSmall,
                   ),
                 ),
               ],
             ),
           ),
         ),
-        title: itemNameTranslated(itemProperties.item, itemProperties.context),
-        onPressed: (phone) => (isDense ?? false)
-            ? maybeSelectAndPop(phone, itemProperties.context)
-            : onSelect?.call(phone),
-        visualDensity: (isDense ?? false) ? VisualDensity.compact : null,
       );
 
   @override
@@ -217,10 +206,7 @@ class PhoneCodePicker extends CountryPicker {
       Map<WorldCountry, Set<String>> map,
     )?
     onSearchResultsBuilder,
-    Widget? Function(
-      ItemProperties<WorldCountry> itemProperties, {
-      bool? isDense,
-    })?
+    Widget? Function(ItemProperties<WorldCountry>, ListItemTile<WorldCountry>)?
     itemBuilder,
     double? spacing,
     TypedLocale? translation,
@@ -240,7 +226,9 @@ class PhoneCodePicker extends CountryPicker {
     disabled: disabled ?? this.disabled,
     dragStartBehavior: dragStartBehavior ?? this.dragStartBehavior,
     emptyStatePlaceholder: emptyStatePlaceholder ?? this.emptyStatePlaceholder,
-    itemBuilder: itemBuilder ?? this.itemBuilder,
+    itemBuilder: (props, tile) =>
+        itemBuilder?.call(props, tile ?? defaultBuilder(props)) ??
+        this.itemBuilder?.call(props, tile),
     key: key ?? this.key,
     keyboardDismissBehavior:
         keyboardDismissBehavior ?? this.keyboardDismissBehavior,

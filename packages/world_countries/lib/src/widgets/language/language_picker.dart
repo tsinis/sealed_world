@@ -4,14 +4,15 @@ import "package:meta/meta.dart";
 import "package:world_flags/world_flags.dart";
 
 import "../../extensions/pickers/basic_picker_flags_extension.dart";
-import "../../extensions/world_countries_build_context_extension.dart";
 import "../../models/item_properties.dart";
 import "../../models/locale/typed_locale.dart";
+import "../generic_widgets/list_item_tile.dart";
 import "../pickers/basic_picker.dart";
 import "language_tile.dart";
 
 /// A picker widget that displays a list of natural languages.
-class LanguagePicker extends BasicPicker<NaturalLanguage> {
+class LanguagePicker
+    extends BasicPicker<NaturalLanguage, ListItemTile<NaturalLanguage>> {
   /// Constructor for the [LanguagePicker] class.
   ///
   /// * [languages] is the list of natural languages to display.
@@ -157,24 +158,12 @@ class LanguagePicker extends BasicPicker<NaturalLanguage> {
        );
 
   @override
-  Widget defaultBuilder(
-    BuildContext context,
-    ItemProperties<NaturalLanguage> itemProperties, {
-    bool? isDense,
-  }) =>
-      context.languageTileTheme?.builder?.call(
-        itemProperties,
-        isDense: isDense,
-      ) ??
+  LanguageTile defaultBuilder(ItemProperties<NaturalLanguage> props) =>
       LanguageTile.fromProperties(
-        itemProperties,
-        title: itemNameTranslated(itemProperties.item, itemProperties.context),
-        dense: isDense,
-        leading: flagsMap[itemProperties.item],
-        onPressed: (language) => (isDense ?? false)
-            ? maybeSelectAndPop(language, itemProperties.context)
-            : onSelect?.call(language),
-        visualDensity: (isDense ?? false) ? VisualDensity.compact : null,
+        props,
+        title: itemNameTranslated(props.item, props.context),
+        leading: flagsMap[props.item],
+        onPressed: onSelect,
       );
 
   @override
@@ -236,9 +225,9 @@ class LanguagePicker extends BasicPicker<NaturalLanguage> {
     )?
     onSearchResultsBuilder,
     Widget? Function(
-      ItemProperties<NaturalLanguage> itemProperties, {
-      bool? isDense,
-    })?
+      ItemProperties<NaturalLanguage>,
+      ListItemTile<NaturalLanguage>,
+    )?
     itemBuilder,
     double? spacing,
     TypedLocale? translation,
@@ -258,7 +247,9 @@ class LanguagePicker extends BasicPicker<NaturalLanguage> {
     disabled: disabled ?? this.disabled,
     dragStartBehavior: dragStartBehavior ?? this.dragStartBehavior,
     emptyStatePlaceholder: emptyStatePlaceholder ?? this.emptyStatePlaceholder,
-    itemBuilder: itemBuilder ?? this.itemBuilder,
+    itemBuilder: (props, tile) =>
+        itemBuilder?.call(props, tile ?? defaultBuilder(props)) ??
+        this.itemBuilder?.call(props, tile),
     key: key ?? this.key,
     keyboardDismissBehavior:
         keyboardDismissBehavior ?? this.keyboardDismissBehavior,

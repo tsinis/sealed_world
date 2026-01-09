@@ -16,10 +16,19 @@ import "base_tile_theme_data.dart";
 /// Example:
 /// ```dart
 /// final currencyTileThemeData = CurrencyTileThemeData(
-///   builder: (itemProperties, {isDense}) => MyCurrencyTile(
-///     title: itemProperties.item.commonNameFor(locale),
-///     isDense: isDense,
-///   ),
+///   itemBuilder: (itemProperties, defaultTile) {
+///     // Use the default tile as-is
+///     return defaultTile;
+///
+///     // Or customize it with copyWith
+///     return defaultTile.copyWith(dense: true);
+///
+///     // Or build a custom tile
+///     return MyCurrencyTile(
+///       title: itemProperties.item.commonNameFor(locale),
+///       isDense: defaultTile.dense ?? false,
+///     );
+///   },
 /// );
 /// ```
 ///
@@ -31,5 +40,5 @@ final class CurrencyTileThemeData extends BaseTileThemeData<FiatCurrency> {
   /// The builder function should take [ItemProperties] of type [FiatCurrency]
   /// and an optional density flag, and return a widget that visually represents
   /// the currency.
-  const CurrencyTileThemeData({super.builder});
+  const CurrencyTileThemeData({super.itemBuilder});
 }

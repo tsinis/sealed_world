@@ -1,7 +1,7 @@
 part of "searchable_indexed_list_view_builder.dart";
 
-class _SearchableIndexedListViewBuilderState<T extends Object>
-    extends State<SearchableIndexedListViewBuilder<T>> {
+class _SearchableIndexedListViewBuilderState<T extends Object, W extends Widget>
+    extends State<SearchableIndexedListViewBuilder<T, W>> {
   bool get _isSearchable =>
       widget.searchIn != null && widget.textController != null;
 
@@ -17,7 +17,7 @@ class _SearchableIndexedListViewBuilderState<T extends Object>
 
     return _isSearchable && _toShowHeader
         ? SearchListListenableBuilder<T>(
-            builder: (_, filteredItems) => IndexedListViewBuilder<T>(
+            builder: (_, filteredItems) => IndexedListViewBuilder<T, W>(
               filteredItems,
               addAutomaticKeepAlives: widget.addAutomaticKeepAlives,
               addRepaintBoundaries:
@@ -84,7 +84,7 @@ class _SearchableIndexedListViewBuilderState<T extends Object>
             caseSensitiveSearch: widget.caseSensitiveSearch,
             startWithSearch: widget.startWithSearch,
           )
-        : IndexedListViewBuilder<T>(
+        : IndexedListViewBuilder<T, W>(
             widget.items,
             addAutomaticKeepAlives: widget.addAutomaticKeepAlives,
             addRepaintBoundaries:

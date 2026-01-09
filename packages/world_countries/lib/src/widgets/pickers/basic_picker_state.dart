@@ -1,6 +1,7 @@
 part of "basic_picker.dart";
 
-class _BasicPickerState<T extends IsoTranslated> extends State<BasicPicker<T>> {
+class _BasicPickerState<T extends IsoTranslated, W extends ListItemTile<T>>
+    extends State<BasicPicker<T, W>> {
   TextEditingController _controller = TextEditingController();
 
   @override
@@ -36,7 +37,7 @@ class _BasicPickerState<T extends IsoTranslated> extends State<BasicPicker<T>> {
           )
         : null;
 
-    return SearchableIndexedListViewBuilder<T>(
+    return SearchableIndexedListViewBuilder<T, W>(
       widget.items,
       addAutomaticKeepAlives: widget.addAutomaticKeepAlives,
       addRepaintBoundaries:
@@ -62,9 +63,14 @@ class _BasicPickerState<T extends IsoTranslated> extends State<BasicPicker<T>> {
           : maybeSearchBar == null
           ? (widget.header ?? theme?.header ?? adaptiveTextField)
           : adaptiveTextField,
-      itemBuilder: (itemProperties, {isDense}) =>
-          widget.itemBuilder?.call(itemProperties, isDense: isDense) ??
-          widget.defaultBuilder(context, itemProperties, isDense: isDense),
+      // ignore: prefer-extracting-callbacks, for better readability.
+      itemBuilder: (props, _) {
+        final defaultTile = widget.defaultBuilder(props);
+
+        return widget.itemBuilder?.call(props, defaultTile) ??
+            context.tileTheme<T>()?.itemBuilder?.call(props, defaultTile) ??
+            defaultTile;
+      },
       keyboardDismissBehavior:
           widget.keyboardDismissBehavior ??
           theme?.keyboardDismissBehavior ??
