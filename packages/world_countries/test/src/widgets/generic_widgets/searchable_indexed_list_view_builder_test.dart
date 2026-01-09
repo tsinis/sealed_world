@@ -51,7 +51,7 @@ void main() => group("$SearchableIndexedListViewBuilder", () {
       const PickersThemeData(showHeader: null),
     );
     expect(find.byType(SearchListListenableBuilder<int>), findsNothing);
-    expect(find.byType(IndexedListViewBuilder<int>), findsOneWidget);
+    expect(find.byType(IndexedListViewBuilder<int, Widget>), findsOneWidget);
     controller.dispose();
   });
 

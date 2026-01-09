@@ -4,7 +4,7 @@ import "package:flutter/material.dart";
 import "package:flutter_test/flutter_test.dart";
 import "package:world_countries/src/theme/tile_theme_data/country_tile_theme_data.dart";
 import "package:world_countries/src/widgets/country/country_picker.dart";
-import "package:world_countries/src/widgets/country/country_tile.dart";
+import "package:world_countries/src/widgets/generic_widgets/list_item_tile.dart";
 import "package:world_countries/src/widgets/phone_code/phone_code_picker.dart";
 import "package:world_flags/world_flags.dart";
 
@@ -36,7 +36,7 @@ void main() => group("$PhoneCodePicker", () {
       const PhoneCodePicker(),
       (item) => item.namesNative.first.common,
       theme: CountryTileThemeData(
-        builder: (properties, {isDense}) =>
+        itemBuilder: (properties, _) =>
             Text(properties.item.namesNative.first.common),
       ),
     ),
@@ -89,7 +89,7 @@ void main() => group("$PhoneCodePicker", () {
         suggestionsBuilder: const PhoneCodePicker().searchSuggestions,
       ),
     );
-    final tile = find.byType(CountryTile);
+    final tile = find.byType(ListItemTile<WorldCountry>);
     expect(tile, findsNothing);
     await tester.tapAndSettle(find.byIcon(Icons.search));
     expect(tile, findsWidgets);

@@ -7,7 +7,7 @@ import "package:world_countries/src/models/locale/typed_locale.dart";
 import "package:world_countries/src/theme/pickers_theme_data.dart";
 import "package:world_countries/src/theme/tile_theme_data/country_tile_theme_data.dart";
 import "package:world_countries/src/widgets/country/country_picker.dart";
-import "package:world_countries/src/widgets/country/country_tile.dart";
+import "package:world_countries/src/widgets/generic_widgets/list_item_tile.dart";
 import "package:world_flags/world_flags.dart";
 
 import "../../../helpers/widget_tester_extension.dart";
@@ -38,7 +38,7 @@ void main() => group("$CountryPicker", () {
       const CountryPicker(),
       (item) => item.namesNative.first.common,
       theme: CountryTileThemeData(
-        builder: (properties, {isDense}) =>
+        itemBuilder: (properties, _) =>
             Text(properties.item.namesNative.first.common),
       ),
     ),
@@ -176,7 +176,7 @@ void main() => group("$CountryPicker", () {
           suggestionsBuilder: const CountryPicker().searchSuggestions,
         ),
       );
-      final tile = find.byType(CountryTile);
+      final tile = find.byType(ListItemTile<WorldCountry>);
       expect(tile, findsNothing);
       await tester.tapAndSettle(find.byIcon(Icons.search));
       expect(tile, findsWidgets);

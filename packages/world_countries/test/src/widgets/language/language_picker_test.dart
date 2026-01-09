@@ -3,6 +3,7 @@ import "package:flutter/material.dart";
 import "package:flutter_test/flutter_test.dart";
 import "package:world_countries/src/helpers/typed_locale_delegate.dart";
 import "package:world_countries/src/theme/tile_theme_data/language_tile_theme_data.dart";
+import "package:world_countries/src/widgets/generic_widgets/list_item_tile.dart";
 import "package:world_countries/src/widgets/language/language_picker.dart";
 import "package:world_countries/src/widgets/language/language_tile.dart";
 import "package:world_flags/world_flags.dart";
@@ -35,8 +36,7 @@ void main() => group("$LanguagePicker", () {
       const LanguagePicker(),
       (item) => item.namesNative.first,
       theme: LanguageTileThemeData(
-        builder: (properties, {isDense}) =>
-            Text(properties.item.namesNative.first),
+        itemBuilder: (properties, _) => Text(properties.item.namesNative.first),
       ),
     ),
   );
@@ -99,7 +99,7 @@ void main() => group("$LanguagePicker", () {
       null,
       const TypedLocaleDelegate(asyncTranslationCacheProcessing: false),
     );
-    final tile = find.byType(LanguageTile);
+    final tile = find.byType(ListItemTile<NaturalLanguage>);
     expect(tile, findsNothing);
     await tester.pumpAndSettle();
     await tester.tapAndSettle(find.byIcon(Icons.search));
