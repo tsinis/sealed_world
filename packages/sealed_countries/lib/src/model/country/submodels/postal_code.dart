@@ -56,5 +56,5 @@ final class PostalCode implements JsonEncodable<PostalCode> {
   }
 
   @override
-  int get hashCode => format.hashCode ^ regExpPattern.hashCode;
+  int get hashCode => Object.hash(format, regExpPattern);
 }

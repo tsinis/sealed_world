@@ -62,5 +62,5 @@ final class Capital implements JsonEncodable<Capital> {
   }
 
   @override
-  int get hashCode => deFacto.hashCode ^ deJure.hashCode ^ third.hashCode;
+  int get hashCode => Object.hash(deFacto, deJure, third);
 }

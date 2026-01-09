@@ -46,5 +46,5 @@ final class LatLng implements JsonEncodable<LatLng> {
   }
 
   @override
-  int get hashCode => latitude.hashCode ^ longitude.hashCode;
+  int get hashCode => Object.hash(latitude, longitude);
 }

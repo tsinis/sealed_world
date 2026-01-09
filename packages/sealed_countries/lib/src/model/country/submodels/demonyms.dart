@@ -60,5 +60,5 @@ final class Demonyms implements JsonEncodable<Demonyms> {
   }
 
   @override
-  int get hashCode => language.hashCode ^ female.hashCode ^ male.hashCode;
+  int get hashCode => Object.hash(language, female, male);
 }

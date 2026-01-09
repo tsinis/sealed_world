@@ -45,5 +45,5 @@ final class Car implements JsonEncodable<Car> {
   }
 
   @override
-  int get hashCode => isRightSide.hashCode ^ sign.hashCode;
+  int get hashCode => Object.hash(isRightSide, sign);
 }

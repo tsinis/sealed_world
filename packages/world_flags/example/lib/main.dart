@@ -1,7 +1,7 @@
 import "package:flutter/material.dart";
 import "package:world_flags/world_flags.dart";
 
-import "settings_dialog.dart";
+import "flag_settings_page.dart";
 
 void main() {
   /// Provide flag decorations globally.
@@ -54,9 +54,7 @@ class _MainState extends State<Main> {
           enabled: !isSimplified,
           title: Text(item.internationalName),
           subtitle: Text("${item.namesNative?.first}"),
-          onTap: item is WorldCountry
-              ? () => SettingsDialog.show(_aspectRatio, bc, item)
-              : null,
+          onTap: () => FlagSettingsPage.show(_aspectRatio, bc, item),
           trailing: ValueListenableBuilder(
             valueListenable: _aspectRatio,
             builder: (_, aspectRatio, flag) => flag is IsoFlag

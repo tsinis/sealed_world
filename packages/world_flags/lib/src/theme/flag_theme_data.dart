@@ -125,14 +125,15 @@ class FlagThemeData extends ThemeExtension<FlagThemeData>
   }
 
   @override
-  int get hashCode =>
-      _aspectRatio.hashCode ^
-      decoration.hashCode ^
-      decorationPosition.hashCode ^
-      padding.hashCode ^
-      height.hashCode ^
-      width.hashCode ^
-      child.hashCode;
+  int get hashCode => Object.hash(
+    _aspectRatio,
+    decoration,
+    decorationPosition,
+    padding,
+    height,
+    width,
+    child,
+  );
 
   @override // coverage:ignore-line
   FlagThemeData lerp(
