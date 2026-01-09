@@ -26,7 +26,7 @@ screenshots:
     path: doc/dialog_picker.webp
 
 environment:
-  sdk: ^3.10.4
+  sdk: ^3.10.7
 
 dependencies:
   flutter:
