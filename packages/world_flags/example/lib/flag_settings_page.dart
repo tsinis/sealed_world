@@ -58,7 +58,6 @@ class _FlagSettingsPageState extends State<FlagSettingsPage> {
   }
 
   @override
-  @override
   Widget build(BuildContext context) => Scaffold(
     appBar: AppBar(
       automaticallyImplyLeading: false,
