@@ -133,7 +133,7 @@ class TypedLocaleDelegate implements LocalizationsDelegate<TypedLocale?> {
       "`isoCollections.localeMapResolution` and/or `fallbackLanguage`",
     );
 
-    return _asyncTranslationCacheProcessing
+    final translatedMaps = _asyncTranslationCacheProcessing
         ? await typedLocale?.copyWithTranslationsCacheAsync(
             languages: _isoCollections.languagesForTranslationCache,
             currencies: _isoCollections.currenciesForTranslationCache,
@@ -146,10 +146,16 @@ class TypedLocaleDelegate implements LocalizationsDelegate<TypedLocale?> {
             countries: _isoCollections.countriesForTranslationCache,
             l10nFormatter: _l10nFormatter,
           );
+
+    return await translatedMaps?.copyWithFlagsCache(
+      _isoCollections,
+      isAsync: _asyncTranslationCacheProcessing,
+      localeCountry: typedLocale?.country,
+    );
   }
 
   @override
-  bool shouldReload(TypedLocaleDelegate old) => false;
+  bool shouldReload(TypedLocaleDelegate old) => false; // TODO!
 
   @override
   String toString() =>

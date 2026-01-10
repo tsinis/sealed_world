@@ -92,10 +92,18 @@ class IsoCollections {
   final Iterable<NaturalLanguage> languagesForTranslationCache;
 
   /// Optional mapping of currencies to flags (customizable per app).
-  final Map<FiatCurrency, WorldCountry> currencyFlagsMap;
+  ///
+  /// Custom mappings that override the default behavior. If a
+  /// currency exists in this map, its custom country list is used instead of
+  /// the computed one.
+  final Map<FiatCurrency, Iterable<WorldCountry>> currencyFlagsMap;
 
   /// Optional mapping of languages to flags (customizable per app).
-  final Map<NaturalLanguage, WorldCountry> languagesFlagsMap;
+  ///
+  /// Custom mappings that override the default behavior. If a
+  /// language exists in this map, its custom country list is used instead of
+  /// the computed one.
+  final Map<NaturalLanguage, Iterable<WorldCountry>> languagesFlagsMap;
 
   /// Optional countries pre-fetched specifically for flag lookups.
   final Iterable<WorldCountry> countriesForFlagsCache;
@@ -131,10 +139,10 @@ class IsoCollections {
         "[${languagesForTranslationCache.map((e) => e.code).join(', ')}]";
     final currencyFlagsString =
         "{${currencyFlagsMap.entries.map((e) => '${e.key.code}: '
-            '${e.value.code}').join(', ')}}";
+            '${e.value.map((i) => i.code).join(', ')}').join(', ')}}";
     final languagesFlagsString =
         "{${languagesFlagsMap.entries.map((e) => '${e.key.code}: '
-            '${e.value.code}').join(', ')}}";
+            '${e.value.map((i) => i.code).join(', ')}').join(', ')}}";
     final countriesFlagsCacheString =
         "[${countriesForFlagsCache.map((e) => e.code).join(', ')}]";
     final currenciesFlagsCacheString =

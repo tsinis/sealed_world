@@ -155,7 +155,9 @@ class CurrencyPicker
 
   /// Default flags map for the [CurrencyPicker.adaptiveFlags].
   /// Mapping Euro currency to the European Union 🇪🇺 flag.
-  static const defaultFlagsMap = {FiatEur(): StarFlag(flagEurProperties)};
+  // ignore: avoid-explicit-type-declaration, vs specify_nonobvious_property_types
+  static const Map<FiatCurrency, BasicFlag> defaultFlagsMap =
+      smallSimplifiedCurrencyFlagsMap;
 
   /// TODO! Manage dense in dropdowns! Via simple constructors.
   @override

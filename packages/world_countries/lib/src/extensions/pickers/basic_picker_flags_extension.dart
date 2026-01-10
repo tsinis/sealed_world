@@ -53,7 +53,7 @@ extension BasicPickerFlagsExtension<T extends IsoTranslated>
 
   BasicFlag _defaultFlagsMapper(BasicFlag flag, T _, List<WorldCountry>? _) =>
       flag.copyWith(
-        height: 18,
+        height: 18, // TODO!
         aspectRatio: FlagConstants.defaultAspectRatio,
         decoration: const BoxDecoration(
           borderRadius: BorderRadius.all(

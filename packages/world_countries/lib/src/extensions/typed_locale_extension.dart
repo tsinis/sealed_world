@@ -1,16 +1,23 @@
+// ignore_for_file: prefer-class-destructuring
+
 import "dart:ui" show Locale;
 
 import "package:meta/meta.dart" show useResult;
 import "package:world_flags/world_flags.dart";
 
+import "../models/iso/iso_collections.dart";
 import "../models/locale/typed_locale.dart";
 import "../models/typedefs.dart";
 import "core/duration_extension.dart";
 import "iso_maps_extension.dart";
+import "pickers/basic_picker_flags_extension.dart";
 
 /// An extension on [TypedLocale] that provides utilities to manage translation
 /// caches and transforms to other locale types.
-extension TypedLocaleExtension<T extends TypedLocale> on T {
+extension TypedLocaleExtension on TypedLocale {
+  // ignore: avoid-explicit-type-declaration, make no sense but linter wants it.
+  static const Duration _zeroDuration = Duration.zero;
+
   /// Returns typed locale in the more basic (parent) type [BasicLocale],
   /// without translations and other additional properties.
   @useResult
@@ -34,6 +41,41 @@ extension TypedLocaleExtension<T extends TypedLocale> on T {
     countryCode: countryCode,
     scriptCode: script?.code,
   );
+
+  /// Returns a future of a new [TypedLocale] instance with updated flags map
+  /// caches asynchronously.
+  @useResult
+  Future<TypedLocale> copyWithFlagsCache(
+    IsoCollections collection, {
+    required bool isAsync,
+    WorldCountry? localeCountry,
+  }) async {
+    if (isAsync) await _zeroDuration.sleep;
+    final languageFlags = collection.languagesForFlagsCache.byCountryMap(
+      custom: collection.languagesFlagsMap,
+    );
+    if (isAsync) await _zeroDuration.sleep;
+    final currencyFlags = collection.currenciesForFlagsCache.byCountryMap(
+      custom: collection.currencyFlagsMap,
+    );
+    if (isAsync) await _zeroDuration.sleep;
+    final adaptedCurrencyFlags = smallSimplifiedCurrencyFlagsMap.adaptFlags(
+      currencyFlags,
+      localeCountry: localeCountry,
+    );
+    if (isAsync) await _zeroDuration.sleep;
+    final adaptedLanguageFlags = smallSimplifiedLanguageFlagsMap.adaptFlags(
+      languageFlags,
+      localeCountry: localeCountry,
+    );
+
+    return copyWith(
+      isoMaps: isoMaps.copyWith(
+        languageFlags: adaptedLanguageFlags,
+        currencyFlags: adaptedCurrencyFlags,
+      ),
+    );
+  }
 
   /// Synchronously returns a copy of this [TypedLocale] with updated
   /// translation caches.
@@ -62,11 +104,11 @@ extension TypedLocaleExtension<T extends TypedLocale> on T {
   ///
   /// Returns a new instance of [TypedLocale] with updated translation caches.
   @useResult
-  T copyWithTranslationsCache({
+  TypedLocale copyWithTranslationsCache({
     Iterable<NaturalLanguage>? languages,
     Iterable<FiatCurrency>? currencies,
     Iterable<WorldCountry>? countries,
-    L10NFormatter<T, IsoTranslated>? l10nFormatter,
+    L10NFormatter<TypedLocale, IsoTranslated>? l10nFormatter,
   }) {
     final l10n = _itemsToTranslate(languages, currencies, countries);
 
@@ -84,11 +126,11 @@ extension TypedLocaleExtension<T extends TypedLocale> on T {
   ///
   /// Returns a [Future] that completes with a new instance of [TypedLocale].
   @useResult
-  Future<T> copyWithTranslationsCacheAsync({
+  Future<TypedLocale> copyWithTranslationsCacheAsync({
     Iterable<NaturalLanguage>? languages,
     Iterable<FiatCurrency>? currencies,
     Iterable<WorldCountry>? countries,
-    L10NFormatter<T, IsoTranslated>? l10nFormatter,
+    L10NFormatter<TypedLocale, IsoTranslated>? l10nFormatter,
   }) async {
     final l10n = _itemsToTranslate(languages, currencies, countries);
     final languageMap = await _cacheAsync(l10n.languages, l10nFormatter);
@@ -100,7 +142,7 @@ extension TypedLocaleExtension<T extends TypedLocale> on T {
 
   Map<R, String>? _cache<R extends IsoTranslated>(
     Iterable<R> iso,
-    L10NFormatter<T, R>? l10nFormatter,
+    L10NFormatter<TypedLocale, R>? l10nFormatter,
   ) {
     if (iso.isEmpty) return null;
 
@@ -114,24 +156,24 @@ extension TypedLocaleExtension<T extends TypedLocale> on T {
 
   Future<Map<R, String>?> _cacheAsync<R extends IsoTranslated>(
     Iterable<R> iso, [
-    L10NFormatter<T, R>? l10nFormatter,
+    L10NFormatter<TypedLocale, R>? l10nFormatter,
   ]) async {
     if (iso.isEmpty) return null;
-    await Duration.zero.sleep; // ignore: prefer-moving-to-variable, redundant .
+    await _zeroDuration.sleep;
 
     final l10nMap = iso.commonNamesMap(
       options: LocaleMappingOptions(mainLocale: this),
     );
 
     if (l10nFormatter == null) return l10nMap;
-    await Duration.zero.sleep; // ignore: prefer-moving-to-variable, redundant .
+    await _zeroDuration.sleep;
 
     return _formatTranslation(l10nMap, l10nFormatter);
   }
 
   Map<R, String> _formatTranslation<R extends IsoTranslated>(
     Map<R, String> originalMap,
-    L10NFormatter<T, R> l10nFormatter,
+    L10NFormatter<TypedLocale, R> l10nFormatter,
   ) {
     try {
       return originalMap.map(
@@ -148,7 +190,7 @@ extension TypedLocaleExtension<T extends TypedLocale> on T {
     }
   }
 
-  T _copyWithTranslationMaps(
+  TypedLocale _copyWithTranslationMaps(
     Map<NaturalLanguage, String>? languages,
     Map<FiatCurrency, String>? currencies,
     Map<WorldCountry, String>? countries,
@@ -163,8 +205,7 @@ extension TypedLocaleExtension<T extends TypedLocale> on T {
       countryTranslations: countries ?? countryTranslations,
     );
 
-    // ignore: avoid-type-casts, Might be a breaking change.
-    return copyWith(isoMaps: translatedIsoMaps) as T;
+    return copyWith(isoMaps: translatedIsoMaps);
   }
 
   ({
