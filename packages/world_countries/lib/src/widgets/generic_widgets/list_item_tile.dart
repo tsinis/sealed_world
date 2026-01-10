@@ -76,6 +76,8 @@ class ListItemTile<T extends Object> extends ListTile {
   /// UI Automator, iOS XCUITest, or Appium. It's not exposed to users.
   final String? semanticsIdentifier;
 
+  // TODO! Provide flags by default.
+
   @override
   Widget build(BuildContext context) => Material(
     // Reference: https://github.com/flutter/flutter/issues/86584.

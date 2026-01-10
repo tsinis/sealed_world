@@ -6,6 +6,7 @@ import "package:world_flags/world_flags.dart";
 import "../models/locale/typed_locale.dart";
 import "../models/typedefs.dart";
 import "core/duration_extension.dart";
+import "iso_maps_extension.dart";
 
 /// An extension on [TypedLocale] that provides utilities to manage translation
 /// caches and transforms to other locale types.
@@ -151,14 +152,20 @@ extension TypedLocaleExtension<T extends TypedLocale> on T {
     Map<NaturalLanguage, String>? languages,
     Map<FiatCurrency, String>? currencies,
     Map<WorldCountry, String>? countries,
-  ) =>
-      // ignore: avoid-type-casts, Might be a breaking change.
-      copyWith(
-            countryTranslations: countries, // Common country names cache.
-            currencyTranslations: currencies, // Common currency names cache.
-            languageTranslations: languages, // Common language names cache.
-          )
-          as T;
+  ) {
+    if (languages == null && currencies == null && countries == null) {
+      return this;
+    }
+
+    final translatedIsoMaps = isoMaps.copyWith(
+      languageTranslations: languages ?? languageTranslations,
+      currencyTranslations: currencies ?? currencyTranslations,
+      countryTranslations: countries ?? countryTranslations,
+    );
+
+    // ignore: avoid-type-casts, Might be a breaking change.
+    return copyWith(isoMaps: translatedIsoMaps) as T;
+  }
 
   ({
     Iterable<WorldCountry> countries,

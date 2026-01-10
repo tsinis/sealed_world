@@ -127,7 +127,7 @@ void main() => group("$TypedLocaleDelegate", () {
 
     test("throws no assertion errors if fallbackLanguage specified", () async {
       const fallbackDelegate = TypedLocaleDelegate(fallbackLanguage: english);
-      expect(fallbackDelegate.toString(), contains(english.name));
+      expect(fallbackDelegate.toString(), contains("LangEng()"));
       expect(
         await fallbackDelegate.load(const Locale("00")),
         const TypedLocale(english),
