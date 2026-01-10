@@ -585,3 +585,17 @@ const smallSimplifiedLanguageFlagsMap = <NaturalLanguage, BasicFlag>{
   LangIna(): StarFlag(flagInaProperties),
   LangVol(): RectangleFlag(flagVolProperties),
 };
+
+/// A map that associates currency objects with simplified flag representations.
+///
+/// This map is used to provide simplified flag representations for currencies.
+/// Each entry in the map consists of a currency as the key and a flag as the
+/// value.
+///
+/// Example usage:
+/// ```dart
+/// final euroFlag = smallSimplifiedCurrencyFlagsMap[const FiatEur()];
+/// ```
+const smallSimplifiedCurrencyFlagsMap = <FiatCurrency, BasicFlag>{
+  FiatEur(): StarFlag(flagEurProperties),
+};

@@ -30,7 +30,7 @@ class _MainState extends State<Main> {
   static const _size = kMinInteractiveDimension / 2.0;
   static const _items = <IsoTranslated, BasicFlag>{
     ...smallSimplifiedFlagsMap,
-    FiatEur(): StarFlag(flagEurProperties),
+    ...smallSimplifiedCurrencyFlagsMap,
     ...smallSimplifiedLanguageFlagsMap,
   };
 

@@ -11,7 +11,7 @@ import "../flag_type.dart";
 extension GoldenWidgetTesterExtension on WidgetTester {
   static const _items = <IsoTranslated, BasicFlag>{
     ...smallSimplifiedFlagsMap,
-    FiatEur(): StarFlag(flagEurProperties),
+    ...smallSimplifiedCurrencyFlagsMap,
     ...smallSimplifiedLanguageFlagsMap,
   };
 
