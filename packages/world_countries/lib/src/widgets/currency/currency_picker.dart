@@ -159,7 +159,6 @@ class CurrencyPicker
   static const Map<FiatCurrency, BasicFlag> defaultFlagsMap =
       smallSimplifiedCurrencyFlagsMap;
 
-  /// TODO! Manage dense in dropdowns! Via simple constructors.
   @override
   CurrencyTile defaultBuilder(ItemProperties<FiatCurrency> props) =>
       CurrencyTile.fromProperties(

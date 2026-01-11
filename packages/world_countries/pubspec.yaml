@@ -10,10 +10,10 @@ resolution: workspace
 
 topics:
   - picker
-  - sealed
   - country-picker
   - country-selector
   - currency-picker
+  - language-picker
 
 screenshots:
   - description: "Use with SearchAnchor widget"

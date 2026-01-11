@@ -16,7 +16,7 @@ class FlagThemeData extends ThemeExtension<FlagThemeData>
     implements DecoratedFlagInterface {
   /// Creates a new instance of [FlagThemeData].
   ///
-  /// - [aspectRatio]: The aspect ratio of the flag.
+  /// - [aspectRatio]: The aspect ratio of the flag, defaults to `null`.
   /// - [decoration]: The decoration to paint behind the flag.
   /// - [decorationPosition]: The position of the decoration. Defaults to
   ///  [DecorationPosition.foreground].
@@ -30,6 +30,35 @@ class FlagThemeData extends ThemeExtension<FlagThemeData>
     this.decorationPosition,
     this.padding,
     this.height,
+    this.width,
+    this.child,
+  }) : assert(height == null || height > 0, "`height` must be greater than 0"),
+       assert(width == null || width > 0, "`width` must be greater than 0"),
+       assert(
+         aspectRatio == null || aspectRatio > 0,
+         "`aspectRatio` must be greater than 0",
+       ),
+       _aspectRatio = aspectRatio;
+
+  /// Creates a new instance of [FlagThemeData] with pre-defined default values
+  /// for small flags with rounded corners.
+  ///
+  /// It has default values for [decoration] and [height].
+  /// - [aspectRatio]: The aspect ratio of the flag, defaults to `null`.
+  /// - [decoration]: The decoration to paint behind the flag, defaults to a
+  /// border radius of 4.
+  /// - [decorationPosition]: The position of the decoration. Defaults to
+  ///  [DecorationPosition.foreground].
+  /// - [padding]: The padding around the flag.
+  /// - [height]: The height of the flag, defaults to 18.
+  /// - [width]: The width of the flag.
+  /// - [child]: A widget to display in the foreground of the flag.
+  const FlagThemeData.small({
+    double? aspectRatio,
+    this.decoration = const BoxDecoration(borderRadius: .all(.circular(4))),
+    this.decorationPosition,
+    this.padding,
+    this.height = 18,
     this.width,
     this.child,
   }) : assert(height == null || height > 0, "`height` must be greater than 0"),
