@@ -6,13 +6,12 @@ import "package:world_flags/world_flags.dart";
 import "../../extensions/pickers/basic_picker_flags_extension.dart";
 import "../../models/iso/iso_maps.dart";
 import "../../models/item_properties.dart";
+import "../generic_widgets/iso_tile.dart";
 import "../generic_widgets/list_item_tile.dart";
 import "../pickers/basic_picker.dart";
-import "currency_tile.dart";
 
 /// A picker widget that displays a list of fiat currencies.
-class CurrencyPicker
-    extends BasicPicker<FiatCurrency, ListItemTile<FiatCurrency>> {
+class CurrencyPicker extends BasicPicker<FiatCurrency, IsoTile<FiatCurrency>> {
   /// Constructor for the [CurrencyPicker] class.
   ///
   /// * [currencies] is the list of fiat currencies to display.
@@ -160,11 +159,11 @@ class CurrencyPicker
       smallSimplifiedCurrencyFlagsMap;
 
   @override
-  CurrencyTile defaultBuilder(ItemProperties<FiatCurrency> props) =>
-      CurrencyTile.fromProperties(
+  IsoTile<FiatCurrency> defaultBuilder(ItemProperties<FiatCurrency> props) =>
+      IsoTile.fromProperties(
         props,
         title: itemNameTranslated(props.item, props.context),
-        leading: flagsMap[props.item],
+        leadingFlag: maybeMaps(props.context)?.currencyFlags[props.item],
         onPressed: onSelect,
       );
 

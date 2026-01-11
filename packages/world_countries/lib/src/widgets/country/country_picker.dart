@@ -4,9 +4,9 @@ import "package:world_flags/world_flags.dart";
 
 import "../../models/iso/iso_maps.dart";
 import "../../models/item_properties.dart";
+import "../generic_widgets/iso_tile.dart";
 import "../generic_widgets/list_item_tile.dart";
 import "../pickers/basic_picker.dart";
-import "country_tile.dart";
 
 /// A picker widget for selecting a country.
 class CountryPicker
@@ -109,10 +109,10 @@ class CountryPicker
   @override
   ListItemTile<WorldCountry> defaultBuilder(
     ItemProperties<WorldCountry> props,
-  ) => CountryTile.fromProperties(
+  ) => IsoTile.fromProperties(
     props,
     title: itemNameTranslated(props.item, props.context),
-    leading: flagsMap[props.item],
+    leadingFlag: maybeMaps(props.context)?.countryFlags[props.item],
     onPressed: onSelect,
   );
 

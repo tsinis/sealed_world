@@ -114,45 +114,33 @@ class PhoneCodePicker extends CountryPicker {
   @override
   ListItemTile<WorldCountry> defaultBuilder(
     ItemProperties<WorldCountry> props,
-  ) => super
-      .defaultBuilder(props)
-      .copyWith(
-        leading: ConstrainedBox(
-          constraints: UiConstants.constraints,
-          child: FittedBox(
-            fit: BoxFit.scaleDown,
-            child: Column(
-              mainAxisSize: MainAxisSize.min,
-              children: [
-                flagsMap[props.item] ??
-                    CountryFlag.simplified(
-                      props.item,
-                      height: 18,
-                      aspectRatio:
-                          props.context.flagTheme?.aspectRatio ??
-                          FlagConstants.defaultAspectRatio,
-                      decoration:
-                          props.context.flagTheme?.decoration ??
-                          const BoxDecoration(
-                            borderRadius: BorderRadius.all(
-                              Radius.circular(UiConstants.point / 2),
-                            ),
-                          ),
-                    ),
-                Padding(
-                  padding: const EdgeInsetsDirectional.only(
-                    end: UiConstants.point / 2,
-                  ),
-                  child: Text(
-                    props.item.idd.phoneCode(),
-                    style: props.context.theme.textTheme.labelSmall,
-                  ),
+  ) {
+    final superTile = super.defaultBuilder(props);
+
+    return superTile.copyWith(
+      leading: ConstrainedBox(
+        constraints: UiConstants.constraints,
+        child: FittedBox(
+          fit: BoxFit.scaleDown,
+          child: Column(
+            mainAxisSize: MainAxisSize.min,
+            children: [
+              ?superTile.leading,
+              Padding(
+                padding: const EdgeInsetsDirectional.only(
+                  end: UiConstants.point / 2,
                 ),
-              ],
-            ),
+                child: Text(
+                  props.item.idd.phoneCode(),
+                  style: props.context.theme.textTheme.labelSmall,
+                ),
+              ),
+            ],
           ),
         ),
-      );
+      ),
+    );
+  }
 
   @override
   Iterable<String> defaultSearch(WorldCountry item, BuildContext context) =>

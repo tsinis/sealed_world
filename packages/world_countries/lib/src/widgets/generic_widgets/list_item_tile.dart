@@ -1,6 +1,7 @@
 // ignore_for_file: avoid-nullable-parameters-with-default-values
 
 import "package:flutter/material.dart";
+import "package:world_flags/world_flags.dart";
 
 import "../../constants/ui_constants.dart";
 
@@ -18,6 +19,7 @@ class ListItemTile<T extends Object> extends ListTile {
     this.onPressed,
     this.excludeSemantics = true,
     this.semanticsIdentifier,
+    this.flagTheme = const FlagThemeData.small(), // Move to is flag.
     Widget? chosenIcon = const Icon(Icons.beenhere_outlined),
     bool isChosen = false,
     bool isDisabled = false,
@@ -76,7 +78,9 @@ class ListItemTile<T extends Object> extends ListTile {
   /// UI Automator, iOS XCUITest, or Appium. It's not exposed to users.
   final String? semanticsIdentifier;
 
-  // TODO! Provide flags by default.
+  /// The theme data for the displayed in the tile, could be also provided
+  /// via [ThemeExtension<FlagThemeData>].
+  final FlagThemeData flagTheme;
 
   @override
   Widget build(BuildContext context) => Material(

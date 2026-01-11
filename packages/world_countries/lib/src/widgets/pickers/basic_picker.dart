@@ -250,10 +250,14 @@ abstract class BasicPicker<T extends IsoTranslated, W extends ListItemTile<T>>
     );
   }
 
+  @protected
+  IsoMaps? maybeMaps(BuildContext context) =>
+      maps ?? context.pickersTheme?.maps ?? context.maybeLocale?.maps;
+
   String? _maybeNameTranslation(T item, BuildContext context) {
     final direct = maps;
-    final global = context.maybeLocale?.maps;
     final theme = context.pickersTheme?.maps;
+    final global = context.maybeLocale?.maps;
 
     if (direct == null && theme == null && global == null) return null;
     String? result;
