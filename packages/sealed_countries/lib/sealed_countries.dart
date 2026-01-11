@@ -17,6 +17,7 @@ export "src/helpers/extensions/country_submodels/maps_extension.dart";
 export "src/helpers/extensions/country_submodels/postal_code_extension.dart";
 export "src/helpers/extensions/country_submodels/weekday_extension.dart";
 export "src/helpers/extensions/iso_standardized_world_country_extension.dart";
+export "src/helpers/extensions/iso_translated_names_extension.dart";
 export "src/helpers/extensions/iterable_fiat_currency_extension.dart";
 export "src/helpers/extensions/iterable_natural_language_extension.dart";
 export "src/helpers/utils/typed_localization_delegate.dart";

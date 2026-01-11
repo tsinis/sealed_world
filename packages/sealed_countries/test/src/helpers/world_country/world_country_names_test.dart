@@ -1,3 +1,4 @@
+import "package:sealed_countries/src/helpers/extensions/iso_translated_names_extension.dart";
 import "package:sealed_countries/src/helpers/world_country/world_country_names.dart";
 import "package:sealed_countries/src/model/country/country.dart";
 import "package:test/test.dart";
@@ -9,7 +10,7 @@ void main() => group("WorldCountryNames", () {
     );
 
     test(
-      "separator",
+      "separator", // TODO! Move to IsoTranslatedNames test.
       () => expect(
         country.namesCommonNative(separator: "-"),
         """${country.namesNative.first.name}-${country.namesNative.last.name}""",
