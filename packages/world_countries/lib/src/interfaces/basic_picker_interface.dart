@@ -3,7 +3,7 @@ import "package:world_flags/world_flags.dart" show BasicFlag, IsoTranslated;
 
 import "../constants/ui_constants.dart";
 import "../helpers/typed_locale_delegate.dart";
-import "../models/locale/typed_locale.dart";
+import "../models/iso/iso_maps.dart";
 
 /// An abstract interface defining the basic contract for picker components.
 ///
@@ -19,20 +19,20 @@ import "../models/locale/typed_locale.dart";
 ///   button should be shown. Defaults to `true`, showing the clear button.
 /// - [searchBar]: An optional widget that can be passed to replace the default
 ///   search bar.
-/// - [translation]: An optional argument for providing localized text strings
-///   for the picker component.
+/// - [maps]: Optional [IsoMaps] bundle supplying cached translations and
+///   optional flag overrides for the picker component.
 ///
 /// Implementing classes should provide behavior for these properties to create
 /// a coherent picker experience.
 /// Immutable contract for basic picker configuration objects.
 @immutable
-abstract interface class BasicPickerInterface<T extends TypedLocale> {
+abstract interface class BasicPickerInterface {
   const BasicPickerInterface( // coverage:ignore-line
   {
     this.searchBarPadding = UiConstants.padding,
     this.showClearButton = true,
     this.searchBar,
-    this.translation,
+    this.maps,
     this.flagsMap = const {},
   });
 
@@ -45,31 +45,13 @@ abstract interface class BasicPickerInterface<T extends TypedLocale> {
   /// The padding to apply to the search bar.
   final EdgeInsetsGeometry? searchBarPadding;
 
-  /// The locale to use for translations.
+  /// Bundled translation and flag maps used for localized rendering.
   ///
-  /// It is recommended to create instances of [TypedLocale] and all its related
-  /// classes using the `.withTranslationsCache` factory constructors
-  /// to ensure that the translation caches for languages, currencies, and
-  /// countries are populated.
-  ///
-  /// Using this constructor ensures that the pickers have access to the
-  /// necessary translation hash-maps for displaying localized names with 1(0)
-  /// access time.
-  ///
-  /// Those hash-maps are cached in the [TypedLocale] class by default, when
-  /// using a [TypedLocaleDelegate] - providing translations to translated
-  /// common country/currency/language names based on the device's locale. But
-  /// when custom translations are provided, those hash-maps are not relevant
-  /// because provided custom [translation] will be used instead.
-  ///
-  /// If [TypedLocale] is instantiated without these caches, the
-  /// pickers will use on-demand `.where` methods in `translations` to search
-  /// for the corresponding translation, which will result in slower performance
-  /// (especially comparing it to 1(0) access time that cached maps provide).
-  ///
-  /// Refer to [TypedLocale.withTranslationsCache] for more information on how
-  /// the caches are created and updated.
-  final T? translation;
+  /// Provide the [IsoMaps] produced by [TypedLocaleDelegate] (via
+  /// `TypedLocale.maps`) to benefit from the pre-computed caches with O(1)
+  /// lookup time. Supplying custom [IsoMaps] gives full control over the
+  /// displayed strings and flag associations.
+  final IsoMaps? maps;
 
   /// An optional map of flags for the ISO items. Allows to provide a
   /// custom set of flags for the picker, which can be used to display

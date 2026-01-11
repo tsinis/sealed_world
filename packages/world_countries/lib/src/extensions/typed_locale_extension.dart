@@ -70,7 +70,7 @@ extension TypedLocaleExtension on TypedLocale {
     );
 
     return copyWith(
-      isoMaps: isoMaps.copyWith(
+      maps: maps.copyWith(
         languageFlags: adaptedLanguageFlags,
         currencyFlags: adaptedCurrencyFlags,
       ),
@@ -199,13 +199,13 @@ extension TypedLocaleExtension on TypedLocale {
       return this;
     }
 
-    final translatedIsoMaps = isoMaps.copyWith(
+    final translatedIsoMaps = maps.copyWith(
       languageTranslations: languages ?? languageTranslations,
       currencyTranslations: currencies ?? currencyTranslations,
       countryTranslations: countries ?? countryTranslations,
     );
 
-    return copyWith(isoMaps: translatedIsoMaps);
+    return copyWith(maps: translatedIsoMaps);
   }
 
   ({

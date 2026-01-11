@@ -4,8 +4,8 @@ import "package:meta/meta.dart";
 import "package:world_flags/world_flags.dart";
 
 import "../../extensions/pickers/basic_picker_flags_extension.dart";
+import "../../models/iso/iso_maps.dart";
 import "../../models/item_properties.dart";
-import "../../models/locale/typed_locale.dart";
 import "../generic_widgets/list_item_tile.dart";
 import "../pickers/basic_picker.dart";
 import "language_tile.dart";
@@ -58,7 +58,7 @@ class LanguagePicker
     super.textDirection,
     super.verticalDirection,
     super.spacing,
-    super.translation,
+    super.maps,
     super.flagsMap,
   }) : super(languages);
 
@@ -120,7 +120,7 @@ class LanguagePicker
     super.textDirection,
     super.verticalDirection,
     super.spacing,
-    super.translation,
+    super.maps,
     @mustBeConst Map<NaturalLanguage, BasicFlag> flagsMap = const {},
 
     /// The country to use as the locale reference for flag selection and
@@ -176,8 +176,8 @@ class LanguagePicker
       });
 
   @override
-  String? nameTranslationCache(NaturalLanguage item, TypedLocale locale) =>
-      locale.languageTranslations[item];
+  String? nameTranslationCache(NaturalLanguage item, IsoMaps isoMaps) =>
+      isoMaps.languageTranslations[item];
 
   @override
   // ignore: avoid-incomplete-copy-with, avoid-high-cyclomatic-complexity, a lot of params.
@@ -230,7 +230,7 @@ class LanguagePicker
     )?
     itemBuilder,
     double? spacing,
-    TypedLocale? translation,
+    IsoMaps? maps,
     Map<NaturalLanguage, BasicFlag>? flagsMap,
   }) => LanguagePicker(
     languages: items ?? this.items,
@@ -276,7 +276,7 @@ class LanguagePicker
     textBaseline: textBaseline ?? this.textBaseline,
     textDirection: textDirection ?? this.textDirection,
     verticalDirection: verticalDirection ?? this.verticalDirection,
-    translation: translation ?? this.translation,
+    maps: maps ?? this.maps,
     spacing: spacing ?? this.spacing,
     flagsMap: flagsMap ?? this.flagsMap,
   );

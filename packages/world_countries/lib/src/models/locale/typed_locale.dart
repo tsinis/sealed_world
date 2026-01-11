@@ -32,13 +32,13 @@ class TypedLocale extends Locale implements BasicTypedLocale {
   ///
   /// The [language] parameter is required.
   /// The [country] and [script] parameters are optional.
-  /// The [isoMaps] parameter encapsulates translation and flag maps.
+  /// The [maps] parameter encapsulates translation and flag maps.
   /// The [regionalCode] parameter is optional.
   const TypedLocale(
     this.language, {
     this.country,
     this.script,
-    this.isoMaps = const IsoMaps(),
+    this.maps = const IsoMaps(),
     String? regionalCode,
   }) : assert(
          regionalCode == null || country == null,
@@ -51,14 +51,14 @@ class TypedLocale extends Locale implements BasicTypedLocale {
   ///
   /// The [language] parameter is required.
   /// The [country] and [script] parameters are optional.
-  /// The [isoMaps] parameter encapsulates translation and flag maps.
+  /// The [maps] parameter encapsulates translation and flag maps.
   /// The [regionalCode] parameter is optional.
   TypedLocale.fromSubtags({
     required this.language,
     this.country,
     this.script,
     String? regionalCode,
-    this.isoMaps = const IsoMaps(),
+    this.maps = const IsoMaps(),
   }) : assert(
          regionalCode == null || country == null,
          "Cannot provide both `regionalCode` and `country` at the same time",
@@ -120,25 +120,25 @@ class TypedLocale extends Locale implements BasicTypedLocale {
   final Script? script;
 
   /// Translation and flag maps backing this locale instance.
-  final IsoMaps isoMaps;
+  final IsoMaps maps;
 
   /// Common country names translations for the current locale.
   TranslationMap<WorldCountry> get countryTranslations =>
-      isoMaps.countryTranslations;
+      maps.countryTranslations;
 
   /// Common currency names translations for the current locale.
   TranslationMap<FiatCurrency> get currencyTranslations =>
-      isoMaps.currencyTranslations;
+      maps.currencyTranslations;
 
   /// Common language names translations for the current locale.
   TranslationMap<NaturalLanguage> get languageTranslations =>
-      isoMaps.languageTranslations;
+      maps.languageTranslations;
 
   /// Optional currency flags associated with this locale.
-  Map<FiatCurrency, BasicFlag> get currencyFlags => isoMaps.currencyFlags;
+  Map<FiatCurrency, BasicFlag> get currencyFlags => maps.currencyFlags;
 
   /// Optional language flags associated with this locale.
-  Map<NaturalLanguage, BasicFlag> get languageFlags => isoMaps.languageFlags;
+  Map<NaturalLanguage, BasicFlag> get languageFlags => maps.languageFlags;
 
   @override
   String? get countryCode =>
@@ -159,13 +159,13 @@ class TypedLocale extends Locale implements BasicTypedLocale {
     NaturalLanguage? language,
     WorldCountry? country,
     Script? script,
-    IsoMaps? isoMaps,
+    IsoMaps? maps,
     String? regionalCode,
   }) => TypedLocale(
     language ?? this.language,
     country: country ?? this.country,
     script: script ?? this.script,
-    isoMaps: isoMaps ?? this.isoMaps,
+    maps: maps ?? this.maps,
     regionalCode: regionalCode ?? _regionalCode,
   );
 

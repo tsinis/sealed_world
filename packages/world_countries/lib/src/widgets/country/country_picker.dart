@@ -2,8 +2,8 @@ import "package:flutter/gestures.dart" show DragStartBehavior;
 import "package:flutter/material.dart";
 import "package:world_flags/world_flags.dart";
 
+import "../../models/iso/iso_maps.dart";
 import "../../models/item_properties.dart";
-import "../../models/locale/typed_locale.dart";
 import "../generic_widgets/list_item_tile.dart";
 import "../pickers/basic_picker.dart";
 import "country_tile.dart";
@@ -60,7 +60,7 @@ class CountryPicker
   /// * [textBaseline] is the text baseline for the items.
   /// * [textDirection] is the text direction for the items.
   /// * [verticalDirection] is the vertical direction for the items.
-  /// * [translation] is the optional natural language to use for translations.
+  /// * [maps] is the optional [IsoMaps] bundle with translations/flags.
   /// * [flagsMap] is the optional map of flags to use for the [countries].
   const CountryPicker({
     Iterable<WorldCountry> countries = WorldCountry.list,
@@ -102,7 +102,7 @@ class CountryPicker
     super.textDirection,
     super.verticalDirection,
     super.spacing,
-    super.translation,
+    super.maps,
     super.flagsMap,
   }) : super(countries);
 
@@ -117,8 +117,8 @@ class CountryPicker
   );
 
   @override
-  String? nameTranslationCache(WorldCountry item, TypedLocale locale) =>
-      locale.countryTranslations[item];
+  String? nameTranslationCache(WorldCountry item, IsoMaps isoMaps) =>
+      isoMaps.countryTranslations[item];
 
   @override
   Iterable<String> defaultSearch(WorldCountry item, BuildContext context) =>
@@ -177,7 +177,7 @@ class CountryPicker
     Widget? Function(ItemProperties<WorldCountry>, ListItemTile<WorldCountry>)?
     itemBuilder,
     double? spacing,
-    TypedLocale? translation,
+    IsoMaps? maps,
     Map<WorldCountry, BasicFlag>? flagsMap,
   }) => CountryPicker(
     countries: items ?? this.items,
@@ -224,7 +224,7 @@ class CountryPicker
     textDirection: textDirection ?? this.textDirection,
     verticalDirection: verticalDirection ?? this.verticalDirection,
     spacing: spacing ?? this.spacing,
-    translation: translation ?? this.translation,
+    maps: maps ?? this.maps,
     flagsMap: flagsMap ?? this.flagsMap,
   );
 }

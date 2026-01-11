@@ -3,7 +3,7 @@
 import "package:flutter/material.dart";
 import "package:flutter_test/flutter_test.dart";
 import "package:world_countries/src/helpers/typed_locale_delegate.dart";
-import "package:world_countries/src/models/locale/typed_locale.dart";
+import "package:world_countries/src/models/iso/iso_maps.dart";
 import "package:world_countries/src/theme/pickers_theme_data.dart";
 import "package:world_countries/src/theme/tile_theme_data/country_tile_theme_data.dart";
 import "package:world_countries/src/widgets/country/country_picker.dart";
@@ -81,14 +81,14 @@ void main() => group("$CountryPicker", () {
     ),
   );
 
-  testWidgets("throws assert on empty $TypedLocale in theme", (tester) async {
+  testWidgets("throws assert on empty $IsoMaps in theme", (tester) async {
     bool assertionThrown = false;
     final originalOnError = FlutterError.onError;
 
     FlutterError.onError = (details) {
       if (details.exception is AssertionError &&
           details.exception.toString().contains(
-            "The $TypedLocale passed to the `translation` parameter in "
+            "The $IsoMaps passed to the `maps` parameter in "
             "$PickersThemeData lacks a translation",
           )) {
         assertionThrown = true;
@@ -100,7 +100,7 @@ void main() => group("$CountryPicker", () {
     try {
       await tester.pumpMaterialApp(
         const CountryPicker(),
-        const PickersThemeData(translation: TypedLocale(LangEng())),
+        const PickersThemeData(maps: IsoMaps()),
       );
 
       expect(assertionThrown, isTrue);
@@ -109,14 +109,14 @@ void main() => group("$CountryPicker", () {
     }
   });
 
-  testWidgets("throws assert on empty $TypedLocale in picker", (tester) async {
+  testWidgets("throws assert on empty $IsoMaps in picker", (tester) async {
     bool assertionThrown = false;
     final originalOnError = FlutterError.onError;
 
     FlutterError.onError = (details) {
       if (details.exception is AssertionError &&
           details.exception.toString().contains(
-            "The $TypedLocale passed to the `translation` parameter in the "
+            "The $IsoMaps passed to the `maps` parameter in the "
             "$CountryPicker lacks a",
           )) {
         assertionThrown = true;
@@ -126,9 +126,7 @@ void main() => group("$CountryPicker", () {
     };
 
     try {
-      await tester.pumpMaterialApp(
-        const CountryPicker(translation: TypedLocale(LangEng())),
-      );
+      await tester.pumpMaterialApp(const CountryPicker(maps: IsoMaps()));
 
       expect(assertionThrown, isTrue);
     } finally {
@@ -143,7 +141,7 @@ void main() => group("$CountryPicker", () {
     FlutterError.onError = (details) {
       if (details.exception is AssertionError &&
           details.exception.toString().contains(
-            """The $TypedLocaleDelegate passed to the app's `localizationsDelegates`""",
+            "provided IsoMaps without a translation",
           )) {
         assertionThrown = true;
       } else {

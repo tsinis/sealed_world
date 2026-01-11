@@ -16,8 +16,8 @@ import "../../extensions/world_countries_build_context_extension.dart";
 import "../../helpers/typed_locale_delegate.dart";
 import "../../interfaces/basic_picker_interface.dart";
 import "../../mixins/compare_search_mixin.dart";
+import "../../models/iso/iso_maps.dart";
 import "../../models/item_properties.dart";
-import "../../models/locale/typed_locale.dart";
 import "../../models/typedefs.dart";
 import "../../theme/pickers_theme_data.dart";
 import "../adaptive/adaptive_search_text_field.dart";
@@ -81,7 +81,8 @@ abstract class BasicPicker<T extends IsoTranslated, W extends ListItemTile<T>>
   /// * [searchBarPadding] is the padding to apply to the search bar.
   /// * [showClearButton] is a boolean indicating whether to show a clear button
   ///   in the search bar.
-  /// * [translation] is the optional parameter to use for translations.
+  /// * [maps] is the optional [IsoMaps] bundle containing pre-computed
+  ///   translation caches and optional flag overrides.
   const BasicPicker(
     super.items, {
     super.addAutomaticKeepAlives,
@@ -122,7 +123,7 @@ abstract class BasicPicker<T extends IsoTranslated, W extends ListItemTile<T>>
     this.searchBar,
     this.searchBarPadding, // Default: EdgeInsets.only(left:8, top:8, right:8).
     this.showClearButton = true,
-    this.translation,
+    this.maps,
     this.flagsMap = const {},
   }) : super(header: searchBar, itemBuilder: itemBuilder);
 
@@ -169,9 +170,9 @@ abstract class BasicPicker<T extends IsoTranslated, W extends ListItemTile<T>>
   @override
   final EdgeInsetsGeometry? searchBarPadding;
 
-  /// The local to use for translations.
+  /// Cached translations/flags bundle to use for rendering.
   @override
-  final TypedLocale? translation;
+  final IsoMaps? maps;
 
   @override
   final Map<T, BasicFlag> flagsMap;
@@ -250,9 +251,9 @@ abstract class BasicPicker<T extends IsoTranslated, W extends ListItemTile<T>>
   }
 
   String? _maybeNameTranslation(T item, BuildContext context) {
-    final direct = translation;
-    final global = context.maybeLocale;
-    final theme = context.pickersTheme?.translation;
+    final direct = maps;
+    final global = context.maybeLocale?.maps;
+    final theme = context.pickersTheme?.maps;
 
     if (direct == null && theme == null && global == null) return null;
     String? result;
@@ -274,17 +275,17 @@ abstract class BasicPicker<T extends IsoTranslated, W extends ListItemTile<T>>
 
     assert(
       direct == null,
-      "The $TypedLocale passed to the `translation` parameter in the "
+      "The $IsoMaps passed to the `maps` parameter in the "
       "$this lacks a translation for item: $item. Verify that the provided "
       "${TranslationMap<T>} translations map includes a key value pair for the "
       "{${item.runtimeType}(): '${item.internationalName} translation'} there."
       " Consider adding `localizationsDelegates: const [TypedLocaleDelegate()]`"
-      " in the app to enable device locale-based auto. translation maps cache.",
+      " in the app to enable device locale-based auto translation maps cache.",
     );
 
     assert(
       theme == null,
-      "The $TypedLocale passed to the `translation` parameter in "
+      "The $IsoMaps passed to the `maps` parameter in "
       "$PickersThemeData lacks a translation for item: $item. Verify that the "
       "${TranslationMap<T>} translations map includes a key value pair for the "
       "{${item.runtimeType}(): '${item.internationalName} translation'} there.",
@@ -293,8 +294,8 @@ abstract class BasicPicker<T extends IsoTranslated, W extends ListItemTile<T>>
     assert(
       global == null,
       "The $TypedLocaleDelegate passed to the app's `localizationsDelegates` "
-      "parameter lacks a translation for item: $item. Verify that the "
-      "translation cache includes a key value pair for the "
+      "parameter provided IsoMaps without a translation for item: $item. "
+      "Verify that the translation cache includes a key value pair for the "
       "{${item.runtimeType}(): '${item.internationalName} translation'} there.",
     );
 
@@ -303,7 +304,7 @@ abstract class BasicPicker<T extends IsoTranslated, W extends ListItemTile<T>>
 
   /// Returns translated common name of the item (if exists).
   @protected
-  String? nameTranslationCache(T item, TypedLocale locale);
+  String? nameTranslationCache(T item, IsoMaps isoMaps);
 
   @override
   State<BasicPicker<T, W>> createState() => _BasicPickerState<T, W>();
@@ -577,7 +578,7 @@ abstract class BasicPicker<T extends IsoTranslated, W extends ListItemTile<T>>
     onSearchResultsBuilder,
     Widget? Function(ItemProperties<T>, ListItemTile<T>)? itemBuilder,
     double? spacing,
-    TypedLocale? translation,
+    IsoMaps? maps,
     Map<T, BasicFlag>? flagsMap,
   });
 }

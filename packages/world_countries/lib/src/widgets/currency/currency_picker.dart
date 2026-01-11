@@ -4,8 +4,8 @@ import "package:meta/meta.dart";
 import "package:world_flags/world_flags.dart";
 
 import "../../extensions/pickers/basic_picker_flags_extension.dart";
+import "../../models/iso/iso_maps.dart";
 import "../../models/item_properties.dart";
-import "../../models/locale/typed_locale.dart";
 import "../generic_widgets/list_item_tile.dart";
 import "../pickers/basic_picker.dart";
 import "currency_tile.dart";
@@ -58,7 +58,7 @@ class CurrencyPicker
     super.textDirection,
     super.verticalDirection,
     super.spacing,
-    super.translation,
+    super.maps,
     super.flagsMap,
   }) : super(currencies);
 
@@ -120,7 +120,7 @@ class CurrencyPicker
     super.textDirection,
     super.verticalDirection,
     super.spacing,
-    super.translation,
+    super.maps,
     @mustBeConst Map<FiatCurrency, BasicFlag> flagsMap = defaultFlagsMap,
 
     /// The country to use as the locale reference for flag selection and
@@ -179,8 +179,8 @@ class CurrencyPicker
       });
 
   @override
-  String? nameTranslationCache(FiatCurrency item, TypedLocale locale) =>
-      locale.currencyTranslations[item];
+  String? nameTranslationCache(FiatCurrency item, IsoMaps isoMaps) =>
+      isoMaps.currencyTranslations[item];
 
   @override
   // ignore: avoid-incomplete-copy-with, avoid-high-cyclomatic-complexity, a lot of params.
@@ -230,7 +230,7 @@ class CurrencyPicker
     Widget? Function(ItemProperties<FiatCurrency>, ListItemTile<FiatCurrency>)?
     itemBuilder,
     double? spacing,
-    TypedLocale? translation,
+    IsoMaps? maps,
     Map<FiatCurrency, BasicFlag>? flagsMap,
   }) => CurrencyPicker(
     currencies: items ?? this.items,
@@ -277,7 +277,7 @@ class CurrencyPicker
     textDirection: textDirection ?? this.textDirection,
     verticalDirection: verticalDirection ?? this.verticalDirection,
     spacing: spacing ?? this.spacing,
-    translation: translation ?? this.translation,
+    maps: maps ?? this.maps,
     flagsMap: flagsMap ?? this.flagsMap,
   );
 }

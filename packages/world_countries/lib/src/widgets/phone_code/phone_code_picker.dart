@@ -5,8 +5,8 @@ import "package:world_flags/world_flags.dart";
 import "../../constants/ui_constants.dart";
 import "../../extensions/build_context_extension.dart";
 import "../../extensions/list_item_tile_extension.dart";
+import "../../models/iso/iso_maps.dart";
 import "../../models/item_properties.dart";
-import "../../models/locale/typed_locale.dart";
 import "../country/country_picker.dart";
 import "../generic_widgets/list_item_tile.dart";
 
@@ -58,7 +58,7 @@ class PhoneCodePicker extends CountryPicker {
     super.textDirection,
     super.verticalDirection,
     super.spacing,
-    super.translation,
+    super.maps,
     super.flagsMap,
   });
 
@@ -107,7 +107,7 @@ class PhoneCodePicker extends CountryPicker {
         textDirection: picker.textDirection,
         verticalDirection: picker.verticalDirection,
         spacing: picker.spacing,
-        translation: picker.translation,
+        maps: picker.maps,
         flagsMap: picker.flagsMap,
       );
 
@@ -209,7 +209,7 @@ class PhoneCodePicker extends CountryPicker {
     Widget? Function(ItemProperties<WorldCountry>, ListItemTile<WorldCountry>)?
     itemBuilder,
     double? spacing,
-    TypedLocale? translation,
+    IsoMaps? maps,
     Map<WorldCountry, BasicFlag>? flagsMap,
   }) => PhoneCodePicker(
     countries: items ?? this.items,
@@ -255,7 +255,7 @@ class PhoneCodePicker extends CountryPicker {
     textBaseline: textBaseline ?? this.textBaseline,
     textDirection: textDirection ?? this.textDirection,
     verticalDirection: verticalDirection ?? this.verticalDirection,
-    translation: translation ?? this.translation,
+    maps: maps ?? this.maps,
     spacing: spacing ?? this.spacing,
     flagsMap: flagsMap ?? this.flagsMap,
   );
