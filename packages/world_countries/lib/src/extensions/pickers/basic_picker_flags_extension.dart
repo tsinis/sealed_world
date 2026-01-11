@@ -9,10 +9,9 @@ import "../platform_dispatcher_extension.dart";
 @internal
 extension BasicPickerFlagsExtension<T extends IsoTranslated>
     on Map<T, BasicFlag> {
-  static const _countryFlags = <WorldCountry, BasicFlag>{
-    ...uniqueSimplifiedFlagsMap,
-    ...smallSimplifiedAlternativeFlagsMap,
-  };
+  // ignore: avoid-explicit-type-declaration, vs avoid-explicit-type-declaration
+  static const Map<WorldCountry, BasicFlag> _countryFlags =
+      smallSimplifiedFlagsMap;
 
   Map<T, BasicFlag> adaptFlags(
     Map<T, List<WorldCountry>> itemsMap, {

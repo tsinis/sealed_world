@@ -19,6 +19,7 @@ class IsoMaps {
     this.countryTranslations = const {},
     this.currencyTranslations = const {},
     this.languageTranslations = const {},
+    this.countryFlags = const {},
     this.currencyFlags = const {},
     this.languageFlags = const {},
   });
@@ -38,17 +39,22 @@ class IsoMaps {
   /// Optional mapping of languages to their [BasicFlag] representation.
   final Map<NaturalLanguage, BasicFlag> languageFlags;
 
+  /// Optional mapping of countries to their [BasicFlag] representation.
+  final Map<WorldCountry, BasicFlag> countryFlags;
+
   @override
   String toString({bool short = true}) => short
       ? "IsoMaps(countryTranslations: ${countryTranslations.length}, "
             "currencyTranslations: ${currencyTranslations.length}, "
             "languageTranslations: ${languageTranslations.length}, "
+            "countryFlags: ${countryFlags.length}, "
             "currencyFlags: ${currencyFlags.length}, "
             "languageFlags: ${languageFlags.length})"
       : "IsoMaps(\n"
             "countryTranslations: $countryTranslations,\n"
             "currencyTranslations: $currencyTranslations,\n"
             "languageTranslations: $languageTranslations,\n"
+            "countryFlags: $countryFlags,\n"
             "currencyFlags: $currencyFlags,\n"
             "languageFlags: $languageFlags\n)";
 }

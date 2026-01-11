@@ -9,6 +9,7 @@ import "../models/iso/iso_collections.dart";
 import "../models/locale/typed_locale.dart";
 import "../models/typedefs.dart";
 import "core/duration_extension.dart";
+import "iso_collections_extension.dart";
 import "iso_maps_extension.dart";
 import "pickers/basic_picker_flags_extension.dart";
 
@@ -51,11 +52,16 @@ extension TypedLocaleExtension on TypedLocale {
     WorldCountry? localeCountry,
   }) async {
     if (isAsync) await _zeroDuration.sleep;
-    final languageFlags = collection.languagesForFlagsCache.byCountryMap(
+    final adaptedCountryFlags = {
+      for (final country in collection.anyCountriesToCache)
+        country: ?smallSimplifiedFlagsMap[country],
+    };
+    if (isAsync) await _zeroDuration.sleep;
+    final languageFlags = collection.anyLanguagesToCache.byCountryMap(
       custom: collection.languagesFlagsMap,
     );
     if (isAsync) await _zeroDuration.sleep;
-    final currencyFlags = collection.currenciesForFlagsCache.byCountryMap(
+    final currencyFlags = collection.anyCurrenciesToCache.byCountryMap(
       custom: collection.currencyFlagsMap,
     );
     if (isAsync) await _zeroDuration.sleep;
@@ -71,8 +77,9 @@ extension TypedLocaleExtension on TypedLocale {
 
     return copyWith(
       maps: maps.copyWith(
-        languageFlags: adaptedLanguageFlags,
+        countryFlags: adaptedCountryFlags,
         currencyFlags: adaptedCurrencyFlags,
+        languageFlags: adaptedLanguageFlags,
       ),
     );
   }
