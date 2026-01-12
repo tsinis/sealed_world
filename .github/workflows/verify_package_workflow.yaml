@@ -62,10 +62,11 @@ jobs:
         uses: ValentinVignal/action-dart-analyze@v2.1
         if: ${{ github.event_name == 'pull_request' }}
         with:
-          fail-on: "format"
+          fail-on: "note"
+          fail-on-format: true
+          format: true
           token: ${{ secrets.GITHUB_TOKEN }}
           working-directory: ${{ env.relative_path }}
-          format: true
 
       - name: 🏜️ Publish - dry run
         if: ${{ github.event_name == 'pull_request' }}
