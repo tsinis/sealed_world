@@ -59,7 +59,6 @@ class PhoneCodePicker extends CountryPicker {
     super.verticalDirection,
     super.spacing,
     super.maps,
-    super.flagsMap,
   });
 
   /// Constructor for the [PhoneCodePicker] class that uses a [CountryPicker]
@@ -108,7 +107,6 @@ class PhoneCodePicker extends CountryPicker {
         verticalDirection: picker.verticalDirection,
         spacing: picker.spacing,
         maps: picker.maps,
-        flagsMap: picker.flagsMap,
       );
 
   @override
@@ -198,7 +196,6 @@ class PhoneCodePicker extends CountryPicker {
     itemBuilder,
     double? spacing,
     IsoMaps? maps,
-    Map<WorldCountry, BasicFlag>? flagsMap,
   }) => PhoneCodePicker(
     countries: items ?? this.items,
     addAutomaticKeepAlives:
@@ -245,6 +242,5 @@ class PhoneCodePicker extends CountryPicker {
     verticalDirection: verticalDirection ?? this.verticalDirection,
     maps: maps ?? this.maps,
     spacing: spacing ?? this.spacing,
-    flagsMap: flagsMap ?? this.flagsMap,
   );
 }

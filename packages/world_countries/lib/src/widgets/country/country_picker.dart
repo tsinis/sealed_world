@@ -61,7 +61,6 @@ class CountryPicker
   /// * [textDirection] is the text direction for the items.
   /// * [verticalDirection] is the vertical direction for the items.
   /// * [maps] is the optional [IsoMaps] bundle with translations/flags.
-  /// * [flagsMap] is the optional map of flags to use for the [countries].
   const CountryPicker({
     Iterable<WorldCountry> countries = WorldCountry.list,
     super.addAutomaticKeepAlives,
@@ -103,7 +102,6 @@ class CountryPicker
     super.verticalDirection,
     super.spacing,
     super.maps,
-    super.flagsMap,
   }) : super(countries);
 
   @override
@@ -178,7 +176,6 @@ class CountryPicker
     itemBuilder,
     double? spacing,
     IsoMaps? maps,
-    Map<WorldCountry, BasicFlag>? flagsMap,
   }) => CountryPicker(
     countries: items ?? this.items,
     addAutomaticKeepAlives:
@@ -225,6 +222,5 @@ class CountryPicker
     verticalDirection: verticalDirection ?? this.verticalDirection,
     spacing: spacing ?? this.spacing,
     maps: maps ?? this.maps,
-    flagsMap: flagsMap ?? this.flagsMap,
   );
 }

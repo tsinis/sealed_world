@@ -124,7 +124,6 @@ abstract class BasicPicker<T extends IsoTranslated, W extends ListItemTile<T>>
     this.searchBarPadding, // Default: EdgeInsets.only(left:8, top:8, right:8).
     this.showClearButton = true,
     this.maps,
-    this.flagsMap = const {},
   }) : super(header: searchBar, itemBuilder: itemBuilder);
 
   /// Custom itemBuilder that receives the default tile for customization.
@@ -173,9 +172,6 @@ abstract class BasicPicker<T extends IsoTranslated, W extends ListItemTile<T>>
   /// Cached translations/flags bundle to use for rendering.
   @override
   final IsoMaps? maps;
-
-  @override
-  final Map<T, BasicFlag> flagsMap;
 
   /// Returns the default tile widget for the items.
   ///
@@ -583,6 +579,5 @@ abstract class BasicPicker<T extends IsoTranslated, W extends ListItemTile<T>>
     Widget? Function(ItemProperties<T>, ListItemTile<T>)? itemBuilder,
     double? spacing,
     IsoMaps? maps,
-    Map<T, BasicFlag>? flagsMap,
   });
 }

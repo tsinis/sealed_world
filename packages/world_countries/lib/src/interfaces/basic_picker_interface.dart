@@ -1,5 +1,4 @@
 import "package:flutter/material.dart";
-import "package:world_flags/world_flags.dart" show BasicFlag, IsoTranslated;
 
 import "../constants/ui_constants.dart";
 import "../helpers/typed_locale_delegate.dart";
@@ -33,7 +32,6 @@ abstract interface class BasicPickerInterface {
     this.showClearButton = true,
     this.searchBar,
     this.maps,
-    this.flagsMap = const {},
   });
 
   /// A boolean indicating whether to show a clear button in the search bar.
@@ -52,14 +50,4 @@ abstract interface class BasicPickerInterface {
   /// lookup time. Supplying custom [IsoMaps] gives full control over the
   /// displayed strings and flag associations.
   final IsoMaps? maps;
-
-  /// An optional map of flags for the ISO items. Allows to provide a
-  /// custom set of flags for the picker, which can be used to display
-  /// flags for the ISO items in the picker.
-  ///
-  /// Country and phone code pickers
-  /// already provide a default set of flags. You can override this map
-  /// to provide custom flags for the picker. Same applies to language and
-  /// currency pickers (although this is not a recommended practice).
-  final Map<IsoTranslated, BasicFlag> flagsMap;
 }
