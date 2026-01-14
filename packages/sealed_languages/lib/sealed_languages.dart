@@ -6,6 +6,7 @@ export "src/helpers/extensions/iso_comparable_extension.dart";
 export "src/helpers/extensions/iso_object_extension_type.dart";
 export "src/helpers/extensions/iso_string_extension_type.dart";
 export "src/helpers/extensions/iso_translated_iterable_extension.dart";
+export "src/helpers/extensions/iso_translated_names_extension.dart";
 export "src/helpers/extensions/locale_mapping_options_extension.dart";
 export "src/helpers/extensions/sealed_world_iterable_extension.dart";
 export "src/helpers/extensions/translated_extension.dart";
