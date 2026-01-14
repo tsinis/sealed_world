@@ -21,9 +21,8 @@ import "../../models/item_properties.dart";
 import "../../models/typedefs.dart";
 import "../../theme/pickers_theme_data.dart";
 import "../adaptive/adaptive_search_text_field.dart";
-import "../country/country_tile.dart";
-import "../currency/currency_tile.dart";
 import "../generic_widgets/implicit_search_delegate.dart";
+import "../generic_widgets/iso_tile.dart";
 import "../generic_widgets/list_item_tile.dart";
 import "../generic_widgets/searchable_indexed_list_view_builder.dart";
 import "../helpers/maybe_widget.dart";
@@ -175,8 +174,8 @@ abstract class BasicPicker<T extends IsoTranslated, W extends ListItemTile<T>>
 
   /// Returns the default tile widget for the items.
   ///
-  /// This method creates and returns the default [ListItemTile] (such as
-  /// [CountryTile], [CurrencyTile], etc.) with theme properties applied.
+  /// This method creates and returns the default [IsoTile] with theme
+  /// properties applied.
   ///
   /// Example usage in custom itemBuilder:
   /// ```dart

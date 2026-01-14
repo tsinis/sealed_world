@@ -66,8 +66,8 @@ class IsoTile<T extends IsoTranslated> extends ListItemTile<T> {
   ///   constructor.
   IsoTile.fromProperties(
     ItemProperties<T> iso, {
-    required BasicFlag? leadingFlag,
-    required Widget? title,
+    BasicFlag? leadingFlag,
+    Widget? title,
     Widget? subtitle,
     super.flagTheme,
     super.autofocus,
@@ -111,13 +111,15 @@ class IsoTile<T extends IsoTranslated> extends ListItemTile<T> {
              title ??
              MaybeWidget.orNull(
                iso.item.namesNative?.firstOrNull?.toString(),
-               (firstNativeName) =>
-                   Text(firstNativeName, overflow: TextOverflow.ellipsis),
+               (firstName) => Text(firstName, overflow: TextOverflow.ellipsis),
              ),
          subtitle:
              subtitle ??
              Text(
-               iso.item.namesCommonNative(skipFirst: title == null),
+               iso.item.namesCommonNative(
+                 skipFirst: title == null,
+                 orElse: iso.item.code,
+               ),
                overflow: TextOverflow.ellipsis,
              ),
        );

@@ -1,7 +1,9 @@
 import "dart:ui" show Locale;
 
-import "package:world_flags/world_flags.dart" show IsoTranslated;
+import "package:world_flags/world_flags.dart"
+    show FiatCurrency, IsoTranslated, NaturalLanguage, WorldCountry;
 
+import "../widgets/generic_widgets/iso_tile.dart";
 import "locale/typed_locale.dart";
 
 /// A typedef representing a map entry of [Locale] and [TypedLocale].
@@ -33,3 +35,7 @@ typedef SearchMap<T extends Object> = Map<T, Set<String>>;
 /// as a [String], and returns a formatted [String] for the given locale.
 typedef L10NFormatter<T extends TypedLocale, Iso extends IsoTranslated> =
     String Function(MapEntry<Iso, String> l10n, T locale);
+
+typedef CurrencyTile = IsoTile<FiatCurrency>;
+typedef CountryTile = IsoTile<WorldCountry>;
+typedef LanguageTile = IsoTile<NaturalLanguage>;
