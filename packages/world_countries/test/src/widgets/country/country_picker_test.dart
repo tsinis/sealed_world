@@ -135,32 +135,21 @@ void main() => group("$CountryPicker", () {
   });
 
   testWidgets("throws assert on empty $TypedLocaleDelegate", (tester) async {
-    bool assertionThrown = false;
-    final originalOnError = FlutterError.onError;
+    await tester.pumpMaterialApp(
+      SearchAnchor.bar(
+        suggestionsBuilder: const CountryPicker().searchSuggestions,
+      ),
+      null,
+      const TypedLocaleDelegate.selectiveCache(),
+    );
+    final tile = find.byType(ListItemTile<WorldCountry>);
+    expect(tile, findsNothing);
 
-    FlutterError.onError = (details) {
-      if (details.exception is AssertionError &&
-          details.exception.toString().contains(
-            "provided IsoMaps without a translation",
-          )) {
-        assertionThrown = true;
-      } else {
-        originalOnError?.call(details);
-      }
-    };
-
-    try {
-      await tester.pumpMaterialApp(
-        const CountryPicker(),
-        null,
-        const TypedLocaleDelegate.selectiveCache(),
-      );
-      await tester.pump();
-
-      expect(assertionThrown, isTrue);
-    } finally {
-      FlutterError.onError = originalOnError;
-    }
+    await expectLater(
+      tester.tapAndSettle(find.byIcon(Icons.search)),
+      throwsAssertionError,
+    );
+    await tester.pump(Duration.zero);
   });
 
   group("searchSuggestions()", () {
@@ -190,7 +179,7 @@ void main() => group("$CountryPicker", () {
         ),
       );
 
-      final tile = find.byType(CountryFlag);
+      final tile = find.byType(ListItemTile<WorldCountry>);
       expect(tile, findsNothing);
       await tester.tapAndSettle(find.byIcon(Icons.search));
       await tester.enterText(
@@ -198,23 +187,10 @@ void main() => group("$CountryPicker", () {
         firstCountry.internationalName,
       );
       await tester.pumpAndSettle();
+      expect(find.text(firstCountry.namesNative.first.common), findsWidgets);
+      expect(find.text(lastCountry.namesNative.first.common), findsNothing);
       expect(
-        find.byWidgetPredicate(
-          (widget) => widget is CountryFlag && widget.country == firstCountry,
-        ),
-        findsWidgets,
-      );
-      expect(
-        find.byWidgetPredicate(
-          (widget) => widget is CountryFlag && widget.country == lastCountry,
-        ),
-        findsNothing,
-      );
-      expect(
-        find.byWidgetPredicate(
-          (widget) =>
-              widget is CountryFlag && widget.country == neverFoundCountry,
-        ),
+        find.text(neverFoundCountry.namesNative.first.common),
         findsNothing,
       );
     });
@@ -229,7 +205,7 @@ void main() => group("$CountryPicker", () {
         ),
       );
 
-      final tile = find.byType(CountryFlag);
+      final tile = find.byType(ListItemTile<WorldCountry>);
       expect(tile, findsNothing);
       await tester.tapAndSettle(find.byIcon(Icons.search));
       await tester.enterText(
@@ -237,23 +213,10 @@ void main() => group("$CountryPicker", () {
         firstCountry.internationalName,
       );
       await tester.pumpAndSettle();
+      expect(find.text(firstCountry.namesNative.first.common), findsWidgets);
+      expect(find.text(lastCountry.namesNative.first.common), findsWidgets);
       expect(
-        find.byWidgetPredicate(
-          (widget) => widget is CountryFlag && widget.country == firstCountry,
-        ),
-        findsWidgets,
-      );
-      expect(
-        find.byWidgetPredicate(
-          (widget) => widget is CountryFlag && widget.country == lastCountry,
-        ),
-        findsWidgets,
-      );
-      expect(
-        find.byWidgetPredicate(
-          (widget) =>
-              widget is CountryFlag && widget.country == neverFoundCountry,
-        ),
+        find.text(neverFoundCountry.namesNative.first.common),
         findsNothing,
       );
     });
@@ -271,10 +234,7 @@ void main() => group("$CountryPicker", () {
       ),
     );
     expect(find.byType(CountryPicker), findsOneWidget);
-    expect(
-      find.text(countries.first.namesNative.first.common),
-      findsNWidgets(2), // TODO: Refactor with semantic label.
-    );
+    expect(find.text(countries.first.namesNative.first.common), findsOneWidget);
     expect(find.text(countries.last.namesNative.first.common), findsNothing);
   });
 
@@ -294,7 +254,7 @@ void main() => group("$CountryPicker", () {
     expect(find.byType(CountryPicker), findsOneWidget);
     expect(
       find.text(sortedCountries.first.namesNative.first.common),
-      findsNWidgets(2), // TODO: Refactor with semantic label.
+      findsOneWidget,
     );
     expect(
       find.text(sortedCountries.last.namesNative.first.common),

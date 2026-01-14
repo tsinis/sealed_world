@@ -4,12 +4,12 @@ import "package:world_flags/world_flags.dart";
 
 import "../../models/iso/iso_maps.dart";
 import "../../models/item_properties.dart";
-import "../generic_widgets/iso_tile.dart";
+import "../../models/typedefs.dart";
 import "../generic_widgets/list_item_tile.dart";
 import "../pickers/basic_picker.dart";
 
 /// A picker widget that displays a list of fiat currencies.
-class CurrencyPicker extends BasicPicker<FiatCurrency, IsoTile<FiatCurrency>> {
+class CurrencyPicker extends BasicPicker<FiatCurrency, CurrencyTile> {
   /// Constructor for the [CurrencyPicker] class.
   ///
   /// * [currencies] is the list of fiat currencies to display.
@@ -59,8 +59,8 @@ class CurrencyPicker extends BasicPicker<FiatCurrency, IsoTile<FiatCurrency>> {
   }) : super(currencies);
 
   @override
-  IsoTile<FiatCurrency> defaultBuilder(ItemProperties<FiatCurrency> props) =>
-      IsoTile.fromProperties(
+  CurrencyTile defaultBuilder(ItemProperties<FiatCurrency> props) =>
+      CurrencyTile.fromProperties(
         props,
         title: itemNameTranslated(props.item, props.context),
         leadingFlag: maybeMaps(props.context)?.currencyFlags[props.item],

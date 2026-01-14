@@ -3,10 +3,10 @@ import "package:flutter/material.dart";
 import "package:flutter_test/flutter_test.dart";
 import "package:world_countries/src/helpers/typed_locale_delegate.dart";
 import "package:world_countries/src/models/iso/iso_maps.dart";
+import "package:world_countries/src/models/typedefs.dart";
 import "package:world_countries/src/theme/pickers_theme_data.dart";
 import "package:world_countries/src/theme/tile_theme_data/currency_tile_theme_data.dart";
 import "package:world_countries/src/widgets/currency/currency_picker.dart";
-import "package:world_countries/src/widgets/currency/currency_tile.dart";
 import "package:world_countries/src/widgets/generic_widgets/list_item_tile.dart";
 import "package:world_flags/world_flags.dart";
 
@@ -91,6 +91,7 @@ void main() => group("$CurrencyPicker", () {
       tester.tapAndSettle(find.byIcon(Icons.search)),
       throwsAssertionError,
     );
+    await tester.pump(Duration.zero);
   });
 
   testWidgets("searchSuggestions()", (tester) async {

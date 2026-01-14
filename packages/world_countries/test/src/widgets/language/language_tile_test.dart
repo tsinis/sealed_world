@@ -1,6 +1,6 @@
 import "package:flutter_test/flutter_test.dart";
 import "package:world_countries/src/models/item_properties.dart";
-import "package:world_countries/src/widgets/language/language_tile.dart";
+import "package:world_countries/src/models/typedefs.dart";
 import "package:world_flags/world_flags.dart";
 
 import "../../../helpers/widget_tester_extension.dart";
@@ -20,7 +20,7 @@ void main() => group("$LanguageTile", () {
     );
 
     expect(
-      find.widgetWithText(LanguageTile, "${value.name} (${value.codeShort})"),
+      find.widgetWithText(LanguageTile, value.namesNative.first),
       findsOneWidget,
     );
   });

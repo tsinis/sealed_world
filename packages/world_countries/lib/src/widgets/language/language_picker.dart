@@ -4,13 +4,12 @@ import "package:world_flags/world_flags.dart";
 
 import "../../models/iso/iso_maps.dart";
 import "../../models/item_properties.dart";
-import "../generic_widgets/iso_tile.dart";
+import "../../models/typedefs.dart";
 import "../generic_widgets/list_item_tile.dart";
 import "../pickers/basic_picker.dart";
 
 /// A picker widget that displays a list of natural languages.
-class LanguagePicker
-    extends BasicPicker<NaturalLanguage, IsoTile<NaturalLanguage>> {
+class LanguagePicker extends BasicPicker<NaturalLanguage, LanguageTile> {
   /// Constructor for the [LanguagePicker] class.
   ///
   /// * [languages] is the list of natural languages to display.
@@ -60,14 +59,13 @@ class LanguagePicker
   }) : super(languages);
 
   @override
-  IsoTile<NaturalLanguage> defaultBuilder(
-    ItemProperties<NaturalLanguage> props,
-  ) => IsoTile.fromProperties(
-    props,
-    title: itemNameTranslated(props.item, props.context),
-    leadingFlag: maybeMaps(props.context)?.languageFlags[props.item],
-    onPressed: onSelect,
-  );
+  LanguageTile defaultBuilder(ItemProperties<NaturalLanguage> props) =>
+      LanguageTile.fromProperties(
+        props,
+        title: itemNameTranslated(props.item, props.context),
+        leadingFlag: maybeMaps(props.context)?.languageFlags[props.item],
+        onPressed: onSelect,
+      );
 
   @override
   Iterable<String> defaultSearch(NaturalLanguage item, BuildContext context) =>

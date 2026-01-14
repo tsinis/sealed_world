@@ -1,7 +1,7 @@
 import "package:flutter/widgets.dart";
 import "package:flutter_test/flutter_test.dart";
 import "package:world_countries/src/extensions/list_item_tile_extension.dart";
-import "package:world_countries/src/widgets/country/country_tile.dart";
+import "package:world_countries/src/models/typedefs.dart";
 import "package:world_flags/world_flags.dart";
 
 void main() => group("ListItemTileExtension", () {
