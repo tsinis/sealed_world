@@ -81,6 +81,20 @@ void main() => group("$FlagThemeData", () {
       () => FlagThemeData(aspectRatio: negative),
     );
 
+    assertTest(
+      "small negative width",
+      () => FlagThemeData.small(width: negative),
+    );
+    assertTest(
+      "small negative height",
+      () => FlagThemeData.small(height: negative),
+    );
+
+    assertTest(
+      "small negative aspectRatio",
+      () => FlagThemeData.small(aspectRatio: negative),
+    );
+
     group("copyWith asserts", () {
       const data = FlagThemeData();
       assertTest("negative width", () => data.copyWith(width: negative));

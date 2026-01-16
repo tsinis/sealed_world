@@ -128,7 +128,7 @@ abstract class StaticFlagShaderDelegate extends ChangeNotifier
   /// Programs are cached globally, so warming up once benefits all instances.
   static Future<void> warmUp(String assetPath) async {
     if (_programCache.containsKey(assetPath)) return;
-    // ignore: avoid-collection-mutating-methods, intentional cache.,
+    // ignore: avoid-collection-mutating-methods, intentional cache.
     _loadingFutures[assetPath] ??= FragmentProgram.fromAsset(assetPath);
     // ignore: avoid-collection-mutating-methods, intentional cache.
     _programCache[assetPath] = await _loadingFutures[assetPath]!;
