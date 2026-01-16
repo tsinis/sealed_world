@@ -28,11 +28,15 @@ class ShaderStripesPainter<T extends CustomPainter> extends StripesPainter<T> {
     FlagProperties properties,
     T? elementsPainter, {
     required this.shader,
+    this.pixelRatio = 1,
   }) : super(properties, null, elementsPainter, repaint: shader);
 
   /// The shader delegate responsible for applying visual effects.
   final FlagShaderDelegate shader;
 
+  /// The pixel ratio used for scaling the flag image.
+  final double pixelRatio;
+  final _paint = Paint()..filterQuality = FilterQuality.high;
   bool? _clip;
   Image? _image;
   double? _scale;
@@ -63,13 +67,13 @@ class ShaderStripesPainter<T extends CustomPainter> extends StripesPainter<T> {
     _image = null;
 
     final recorder = PictureRecorder();
-    final tempCanvas = Canvas(recorder);
+    final tempCanvas = Canvas(recorder)..scale(pixelRatio);
     if (shader.shouldClipContent) applyFlagClipping(tempCanvas, size);
     _paintScaledStripes(tempCanvas, size, scale);
     final picture = recorder.endRecording();
 
-    final width = max(1, size.width.ceil());
-    final height = max(1, size.height.ceil());
+    final width = max(1, (size.width * pixelRatio).ceil());
+    final height = max(1, (size.height * pixelRatio).ceil());
     _image = picture.toImageSync(width, height);
     picture.dispose(); // Dispose picture after converting to image.
     _size = size;
@@ -106,9 +110,14 @@ class ShaderStripesPainter<T extends CustomPainter> extends StripesPainter<T> {
       canvas.save();
       applyFlagClipping(canvas, size);
     }
-    final source = Rect.fromLTWH(0, 0, _size?.width ?? 0, _size?.height ?? 0);
+    final source = Rect.fromLTWH(
+      0,
+      0,
+      (_size?.width ?? 0) * pixelRatio,
+      (_size?.height ?? 0) * pixelRatio,
+    );
     final destination = Rect.fromLTWH(0, 0, size.width, size.height);
-    canvas.drawImageRect(image, source, destination, Paint());
+    canvas.drawImageRect(image, source, destination, _paint);
     if (shader.shouldClipContent) canvas.restore();
   }
 

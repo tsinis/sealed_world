@@ -202,6 +202,7 @@ class _FlagShaderSurfaceState extends State<FlagShaderSurface>
   FlagShaderDelegate? _managedDelegate;
   FlagShaderOptions? _cachedOptions;
   ShaderStripesPainter? _painter;
+  double _pixelRatio = 1;
 
   /// Creates the default waved-flag shader delegate.
   ///
@@ -277,10 +278,20 @@ class _FlagShaderSurfaceState extends State<FlagShaderSurface>
         flag.properties.elementsProperties,
         flag.flagAspectRatio,
       ),
+      pixelRatio: _pixelRatio,
       shader: delegate,
     );
 
     return _painter!; // ignore: avoid-non-null-assertion, just assigned above.
+  }
+
+  @override
+  void didChangeDependencies() {
+    super.didChangeDependencies();
+    final pixelRatio = MediaQuery.devicePixelRatioOf(context);
+    if (pixelRatio == _pixelRatio) return;
+    _pixelRatio = pixelRatio;
+    _disposePainter(); // Force painter rebuild with new pixel ratio.
   }
 
   @override
