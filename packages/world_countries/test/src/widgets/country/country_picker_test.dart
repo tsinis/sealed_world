@@ -4,10 +4,10 @@ import "package:flutter/material.dart";
 import "package:flutter_test/flutter_test.dart";
 import "package:world_countries/src/helpers/typed_locale_delegate.dart";
 import "package:world_countries/src/models/iso/iso_maps.dart";
+import "package:world_countries/src/models/typedefs.dart";
 import "package:world_countries/src/theme/pickers_theme_data.dart";
 import "package:world_countries/src/theme/tile_theme_data/country_tile_theme_data.dart";
 import "package:world_countries/src/widgets/country/country_picker.dart";
-import "package:world_countries/src/widgets/generic_widgets/list_item_tile.dart";
 import "package:world_flags/world_flags.dart";
 
 import "../../../helpers/widget_tester_extension.dart";
@@ -142,7 +142,7 @@ void main() => group("$CountryPicker", () {
       null,
       const TypedLocaleDelegate.selectiveCache(),
     );
-    final tile = find.byType(ListItemTile<WorldCountry>);
+    final tile = find.byType(CountryTile);
     expect(tile, findsNothing);
 
     await expectLater(
@@ -163,7 +163,7 @@ void main() => group("$CountryPicker", () {
           suggestionsBuilder: const CountryPicker().searchSuggestions,
         ),
       );
-      final tile = find.byType(ListItemTile<WorldCountry>);
+      final tile = find.byType(CountryTile);
       expect(tile, findsNothing);
       await tester.tapAndSettle(find.byIcon(Icons.search));
       expect(tile, findsWidgets);
@@ -179,7 +179,7 @@ void main() => group("$CountryPicker", () {
         ),
       );
 
-      final tile = find.byType(ListItemTile<WorldCountry>);
+      final tile = find.byType(CountryTile);
       expect(tile, findsNothing);
       await tester.tapAndSettle(find.byIcon(Icons.search));
       await tester.enterText(
@@ -205,7 +205,7 @@ void main() => group("$CountryPicker", () {
         ),
       );
 
-      final tile = find.byType(ListItemTile<WorldCountry>);
+      final tile = find.byType(CountryTile);
       expect(tile, findsNothing);
       await tester.tapAndSettle(find.byIcon(Icons.search));
       await tester.enterText(

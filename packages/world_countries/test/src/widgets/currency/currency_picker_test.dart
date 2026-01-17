@@ -7,7 +7,6 @@ import "package:world_countries/src/models/typedefs.dart";
 import "package:world_countries/src/theme/pickers_theme_data.dart";
 import "package:world_countries/src/theme/tile_theme_data/currency_tile_theme_data.dart";
 import "package:world_countries/src/widgets/currency/currency_picker.dart";
-import "package:world_countries/src/widgets/generic_widgets/list_item_tile.dart";
 import "package:world_flags/world_flags.dart";
 
 import "../../../helpers/widget_tester_extension.dart";
@@ -102,7 +101,7 @@ void main() => group("$CurrencyPicker", () {
       null,
       const TypedLocaleDelegate(asyncTranslationCacheProcessing: false),
     );
-    final tile = find.byType(ListItemTile<FiatCurrency>);
+    final tile = find.byType(CurrencyTile);
     expect(tile, findsNothing);
     await tester.pumpAndSettle();
     await tester.tapAndSettle(find.byIcon(Icons.search));

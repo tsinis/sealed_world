@@ -6,7 +6,6 @@ import "package:world_countries/src/models/iso/iso_maps.dart";
 import "package:world_countries/src/models/typedefs.dart";
 import "package:world_countries/src/theme/pickers_theme_data.dart";
 import "package:world_countries/src/theme/tile_theme_data/language_tile_theme_data.dart";
-import "package:world_countries/src/widgets/generic_widgets/list_item_tile.dart";
 import "package:world_countries/src/widgets/language/language_picker.dart";
 import "package:world_flags/world_flags.dart";
 
@@ -102,7 +101,7 @@ void main() => group("$LanguagePicker", () {
       null,
       const TypedLocaleDelegate(asyncTranslationCacheProcessing: false),
     );
-    final tile = find.byType(ListItemTile<NaturalLanguage>);
+    final tile = find.byType(LanguageTile);
     expect(tile, findsNothing);
     await tester.pumpAndSettle();
     await tester.tapAndSettle(find.byIcon(Icons.search));
