@@ -117,6 +117,10 @@ class CountryPicker extends BasicPicker<WorldCountry, CountryTile> {
       isoMaps.countryTranslations[item];
 
   @override
+  TranslationMap<WorldCountry>? translationMap(BuildContext context) =>
+      maybeMaps(context)?.countryTranslations;
+
+  @override
   Iterable<String> defaultSearch(WorldCountry item, BuildContext context) =>
       Set.unmodifiable({
         ...super.defaultSearch(item, context),

@@ -81,6 +81,10 @@ class LanguagePicker extends BasicPicker<NaturalLanguage, LanguageTile> {
       isoMaps.languageTranslations[item];
 
   @override
+  TranslationMap<NaturalLanguage>? translationMap(BuildContext context) =>
+      maybeMaps(context)?.languageTranslations;
+
+  @override
   // ignore: avoid-incomplete-copy-with, avoid-high-cyclomatic-complexity, a lot of params.
   LanguagePicker copyWith({
     Iterable<NaturalLanguage>? items,

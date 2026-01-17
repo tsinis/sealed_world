@@ -246,6 +246,9 @@ abstract class BasicPicker<T extends IsoTranslated, W extends IsoTile<T>>
   }
 
   @protected
+  TranslationMap<T>? translationMap(BuildContext context);
+
+  @protected
   IsoMaps? maybeMaps(BuildContext context) =>
       maps ?? context.pickersTheme?.maps ?? context.maybeLocale?.maps;
 

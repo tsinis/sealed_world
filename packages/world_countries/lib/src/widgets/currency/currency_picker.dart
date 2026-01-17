@@ -82,6 +82,10 @@ class CurrencyPicker extends BasicPicker<FiatCurrency, CurrencyTile> {
       isoMaps.currencyTranslations[item];
 
   @override
+  TranslationMap<FiatCurrency>? translationMap(BuildContext context) =>
+      maybeMaps(context)?.currencyTranslations;
+
+  @override
   // ignore: avoid-incomplete-copy-with, avoid-high-cyclomatic-complexity, a lot of params.
   CurrencyPicker copyWith({
     Iterable<FiatCurrency>? items,
