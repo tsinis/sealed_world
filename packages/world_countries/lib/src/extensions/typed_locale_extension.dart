@@ -11,6 +11,7 @@ import "../models/typedefs.dart";
 import "core/duration_extension.dart";
 import "iso_collections_extension.dart";
 import "iso_maps_extension.dart";
+import "map_iso_l10n_extension.dart";
 import "pickers/basic_picker_flags_extension.dart";
 
 /// An extension on [TypedLocale] that provides utilities to manage translation
@@ -156,9 +157,10 @@ extension TypedLocaleExtension on TypedLocale {
     final l10nMap = iso.commonNamesMap(
       options: LocaleMappingOptions(mainLocale: this),
     );
-    if (l10nFormatter == null) return l10nMap;
+    final sortedMap = l10nMap.sortAlphabetically();
+    if (l10nFormatter == null) return sortedMap;
 
-    return _formatTranslation(l10nMap, l10nFormatter);
+    return _formatTranslation(sortedMap, l10nFormatter);
   }
 
   Future<Map<R, String>?> _cacheAsync<R extends IsoTranslated>(
@@ -171,11 +173,11 @@ extension TypedLocaleExtension on TypedLocale {
     final l10nMap = iso.commonNamesMap(
       options: LocaleMappingOptions(mainLocale: this),
     );
-
-    if (l10nFormatter == null) return l10nMap;
+    final sortedMap = l10nMap.sortAlphabetically();
+    if (l10nFormatter == null) return sortedMap;
     await _zeroDuration.sleep;
 
-    return _formatTranslation(l10nMap, l10nFormatter);
+    return _formatTranslation(sortedMap, l10nFormatter);
   }
 
   Map<R, String> _formatTranslation<R extends IsoTranslated>(
