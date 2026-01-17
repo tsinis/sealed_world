@@ -17,7 +17,7 @@ class IsoTile<T extends IsoTranslated> extends ListItemTile<T> {
   /// constructor.
   const IsoTile(
     super.item, {
-    super.flagTheme,
+    this.flagTheme = const FlagThemeData.small(),
     super.autofocus,
     super.chosenIcon,
     super.contentPadding,
@@ -53,8 +53,11 @@ class IsoTile<T extends IsoTranslated> extends ListItemTile<T> {
     super.titleAlignment,
     super.titleTextStyle,
     super.visualDensity,
-    super.excludeSemantics = false,
     super.semanticsIdentifier,
+    super.minTileHeight,
+    super.internalAddSemanticForOnTap,
+    super.statesController,
+    super.excludeSemantics = false,
   });
 
   /// Constructor for the [IsoTile] class that uses an [ItemProperties]
@@ -66,10 +69,10 @@ class IsoTile<T extends IsoTranslated> extends ListItemTile<T> {
   ///   constructor.
   IsoTile.fromProperties(
     ItemProperties<T> iso, {
+    this.flagTheme = const FlagThemeData.small(),
     BasicFlag? leadingFlag,
     Widget? title,
     Widget? subtitle,
-    super.flagTheme,
     super.autofocus,
     super.chosenIcon,
     super.contentPadding,
@@ -100,6 +103,9 @@ class IsoTile<T extends IsoTranslated> extends ListItemTile<T> {
     super.titleAlignment,
     super.titleTextStyle,
     super.visualDensity,
+    super.minTileHeight,
+    super.internalAddSemanticForOnTap,
+    super.statesController,
     super.excludeSemantics = false,
   }) : super(
          iso.item,
@@ -123,4 +129,8 @@ class IsoTile<T extends IsoTranslated> extends ListItemTile<T> {
                overflow: TextOverflow.ellipsis,
              ),
        );
+
+  /// The theme data for the displayed in the tile, could be also provided
+  /// via [ThemeExtension<FlagThemeData>].
+  final FlagThemeData flagTheme;
 }

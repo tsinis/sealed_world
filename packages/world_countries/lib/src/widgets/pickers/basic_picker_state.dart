@@ -1,6 +1,6 @@
 part of "basic_picker.dart";
 
-class _BasicPickerState<T extends IsoTranslated, W extends ListItemTile<T>>
+class _BasicPickerState<T extends IsoTranslated, W extends IsoTile<T>>
     extends State<BasicPicker<T, W>> {
   TextEditingController _controller = TextEditingController();
 

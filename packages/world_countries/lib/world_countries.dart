@@ -40,6 +40,7 @@ export "src/widgets/country/emoji_flag.dart";
 export "src/widgets/currency/currency_picker.dart";
 export "src/widgets/generic_widgets/implicit_search_delegate.dart";
 export "src/widgets/generic_widgets/indexed_list_view_builder.dart";
+export "src/widgets/generic_widgets/iso_tile.dart";
 export "src/widgets/generic_widgets/list_item_tile.dart";
 export "src/widgets/generic_widgets/search_list_listenable_builder.dart";
 export "src/widgets/generic_widgets/searchable_indexed_list_view_builder.dart";

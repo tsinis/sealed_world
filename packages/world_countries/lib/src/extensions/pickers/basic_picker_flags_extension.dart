@@ -1,9 +1,7 @@
-import "package:flutter/widgets.dart"
-    show BorderRadius, BoxDecoration, Radius, WidgetsBinding;
+import "package:flutter/widgets.dart" show WidgetsBinding;
 import "package:meta/meta.dart";
 import "package:world_flags/world_flags.dart";
 
-import "../../constants/ui_constants.dart";
 import "../platform_dispatcher_extension.dart";
 
 @internal
@@ -51,13 +49,5 @@ extension BasicPickerFlagsExtension<T extends IsoTranslated>
   }
 
   BasicFlag _defaultFlagsMapper(BasicFlag flag, T _, List<WorldCountry>? _) =>
-      flag.copyWith(
-        height: 18, // TODO!
-        aspectRatio: FlagConstants.defaultAspectRatio,
-        decoration: const BoxDecoration(
-          borderRadius: BorderRadius.all(
-            Radius.circular(UiConstants.point / 2),
-          ),
-        ),
-      );
+      flag;
 }

@@ -9,8 +9,7 @@ import "../generic_widgets/list_item_tile.dart";
 import "../pickers/basic_picker.dart";
 
 /// A picker widget for selecting a country.
-class CountryPicker
-    extends BasicPicker<WorldCountry, ListItemTile<WorldCountry>> {
+class CountryPicker extends BasicPicker<WorldCountry, CountryTile> {
   /// Constructor for the [CountryPicker] class.
   ///
   /// * [countries] is the list of countries to display.
@@ -105,14 +104,13 @@ class CountryPicker
   }) : super(countries);
 
   @override
-  ListItemTile<WorldCountry> defaultBuilder(
-    ItemProperties<WorldCountry> props,
-  ) => CountryTile.fromProperties(
-    props,
-    title: itemNameTranslated(props.item, props.context),
-    leadingFlag: maybeMaps(props.context)?.countryFlags[props.item],
-    onPressed: onSelect,
-  );
+  CountryTile defaultBuilder(ItemProperties<WorldCountry> props) =>
+      CountryTile.fromProperties(
+        props,
+        title: itemNameTranslated(props.item, props.context),
+        leadingFlag: maybeMaps(props.context)?.countryFlags[props.item],
+        onPressed: onSelect,
+      );
 
   @override
   String? nameTranslationCache(WorldCountry item, IsoMaps isoMaps) =>

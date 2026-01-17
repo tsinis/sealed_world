@@ -10,8 +10,8 @@ import "package:world_flags/world_flags.dart";
 import "../../constants/ui_constants.dart";
 import "../../extensions/build_context_extension.dart";
 import "../../extensions/core/duration_extension.dart";
+import "../../extensions/iso_tile_extension.dart";
 import "../../extensions/iterable_search_map_extension.dart";
-import "../../extensions/list_item_tile_extension.dart";
 import "../../extensions/world_countries_build_context_extension.dart";
 import "../../helpers/typed_locale_delegate.dart";
 import "../../interfaces/basic_picker_interface.dart";
@@ -32,7 +32,7 @@ part "basic_picker_state.dart";
 /// An abstract class that provides a basic picker [Widget], with search
 /// functionality and indexing support.
 @immutable
-abstract class BasicPicker<T extends IsoTranslated, W extends ListItemTile<T>>
+abstract class BasicPicker<T extends IsoTranslated, W extends IsoTile<T>>
     extends SearchableIndexedListViewBuilder<T, W>
     with CompareSearchMixin<T>
     implements BasicPickerInterface {

@@ -4,9 +4,10 @@ import "package:world_flags/world_flags.dart";
 
 import "../../constants/ui_constants.dart";
 import "../../extensions/build_context_extension.dart";
-import "../../extensions/list_item_tile_extension.dart";
+import "../../extensions/iso_tile_extension.dart";
 import "../../models/iso/iso_maps.dart";
 import "../../models/item_properties.dart";
+import "../../models/typedefs.dart";
 import "../country/country_picker.dart";
 import "../generic_widgets/list_item_tile.dart";
 
@@ -110,9 +111,7 @@ class PhoneCodePicker extends CountryPicker {
       );
 
   @override
-  ListItemTile<WorldCountry> defaultBuilder(
-    ItemProperties<WorldCountry> props,
-  ) {
+  CountryTile defaultBuilder(ItemProperties<WorldCountry> props) {
     final superTile = super.defaultBuilder(props);
 
     return superTile.copyWith(
