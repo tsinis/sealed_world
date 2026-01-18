@@ -386,7 +386,7 @@ abstract class BasicPicker<T extends IsoTranslated, W extends IsoTile<T>>
     delegate = ImplicitSearchDelegate<T>(
       sourceItems,
       // ignore: prefer-correct-handler-name, breaking change.
-      resultsBuilder: (_, itemsList) => copyWith(
+      resultsBuilder: (_, itemsList, _) => copyWith(
         key: onSearchResultsBuilder == null ? null : ValueKey(itemsList.length),
         items: itemsList,
         onSelect: closeOnSelect,

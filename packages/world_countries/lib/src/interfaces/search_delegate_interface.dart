@@ -40,6 +40,7 @@ abstract class SearchDelegateInterface<T extends Object>
     this.items, {
     required this.resultsBuilder,
     required this.searchIn,
+    required this.searchMap,
     super.keyboardType,
     super.searchFieldDecorationTheme,
     super.searchFieldLabel,
@@ -56,7 +57,6 @@ abstract class SearchDelegateInterface<T extends Object>
     this.backIconButton,
     this.clearIconButton,
     this.onSearchResultsBuilder,
-    this.searchMap = const {},
   });
 
   /// A function that takes an item and returns a boolean indicating whether the
@@ -79,10 +79,15 @@ abstract class SearchDelegateInterface<T extends Object>
   /// The list of items to search through.
   final Iterable<T> items;
 
-  /// A function that takes a `BuildContext` and an [UnmodifiableListView] of
-  /// items and returns a widget to display as the search results.
-  final Widget Function(BuildContext context, UnmodifiableListView<T> items)
-  resultsBuilder; // TODO: Improve with query param in the next major release.
+  /// A function that takes a [BuildContext], [String] query and an
+  /// [UnmodifiableListView] of items and returns a widget to display as
+  /// the search results.
+  final Widget Function(
+    BuildContext context,
+    UnmodifiableListView<T> items,
+    String query,
+  )
+  resultsBuilder;
 
   /// A boolean indicating whether to show the clear button on the search field.
   final bool? showClearButton;
@@ -107,5 +112,5 @@ abstract class SearchDelegateInterface<T extends Object>
 
   /// A map of search results to their corresponding items. That can be used to
   /// cache the search results for performance optimization.
-  final SearchMap<T> searchMap; // TODO: Mandatory in the next major release.
+  final SearchMap<T> searchMap;
 }

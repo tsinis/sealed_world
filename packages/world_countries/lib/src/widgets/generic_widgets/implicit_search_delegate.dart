@@ -53,6 +53,7 @@ class ImplicitSearchDelegate<T extends Object>
     super.items, {
     required super.resultsBuilder,
     required super.searchIn,
+    required super.searchMap,
     super.appBarBottom,
     super.appBarThemeData,
     super.backIconButton,
@@ -69,7 +70,6 @@ class ImplicitSearchDelegate<T extends Object>
     super.autocorrect,
     super.enableSuggestions,
     super.onSearchResultsBuilder,
-    super.searchMap,
   });
 
   @override
@@ -150,7 +150,7 @@ class ImplicitSearchDelegate<T extends Object>
   Widget buildSuggestions(
     BuildContext context, [
     UnmodifiableListView<T>? itemsList,
-  ]) => resultsBuilder(context, itemsList ?? _filteredItems(context));
+  ]) => resultsBuilder(context, itemsList ?? _filteredItems(context), query);
 
   UnmodifiableListView<T> _filteredItems(BuildContext context) {
     if (searchMap.isEmpty) {
