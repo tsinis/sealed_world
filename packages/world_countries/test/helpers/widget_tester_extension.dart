@@ -101,7 +101,7 @@ extension WidgetTesterExtension on WidgetTester {
     }
     expect(selected, isNull);
     await _testPicker(testPicker, findLabel);
-    if (testSelection) expect(selected, picker.items.last);
+    if (testSelection) expect(selected, picker.resolvedItems().last);
   }
 
   Future<void>
@@ -173,7 +173,7 @@ extension WidgetTesterExtension on WidgetTester {
     }
 
     await _testPicker(testPicker, findLabel);
-    expect(selected, picker.items.last);
+    expect(selected, picker.resolvedItems().last);
   }
 
   Future<void> _testPicker<T extends IsoTranslated, W extends IsoTile<T>>(
@@ -181,8 +181,8 @@ extension WidgetTesterExtension on WidgetTester {
     String Function(T value) findLabel,
   ) async {
     await pumpAndSettle();
-    final firstItem = find.text(findLabel(picker.items.first));
-    final lastItem = find.text(findLabel(picker.items.last));
+    final firstItem = find.text(findLabel(picker.resolvedItems().first));
+    final lastItem = find.text(findLabel(picker.resolvedItems().last));
 
     expect(firstItem, findsWidgets);
 

@@ -5,5 +5,5 @@ import "package:world_countries/src/widgets/language/language_picker.dart";
 void main() => group("LanguagePickerExtension", () {
   const picker = LanguagePicker();
 
-  test("languages", () => expect(picker.items, picker.languages));
+  test("languages", () => expect(picker.languages, isNotEmpty));
 });

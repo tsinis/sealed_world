@@ -17,7 +17,7 @@ void main() => group("$CountryPicker", () {
     const picker = CountryPicker();
     expect(picker.onSelect, isNull);
     final newPicker = picker.copyWith(onSelect: (item) => item.toString());
-    newPicker.onSelect?.call(picker.items.first);
+    newPicker.onSelect?.call(picker.resolvedItems().first);
     expect(newPicker.onSelect, isNotNull);
     final newestPicker = newPicker.copyWith(onSelect: print);
     expect(newestPicker.onSelect, isNotNull);
@@ -88,8 +88,7 @@ void main() => group("$CountryPicker", () {
     FlutterError.onError = (details) {
       if (details.exception is AssertionError &&
           details.exception.toString().contains(
-            "The $IsoMaps passed to the `maps` parameter in "
-            "$PickersThemeData lacks a translation",
+            "The $IsoMaps passed to the `maps` contains an empty",
           )) {
         assertionThrown = true;
       } else {
@@ -116,8 +115,7 @@ void main() => group("$CountryPicker", () {
     FlutterError.onError = (details) {
       if (details.exception is AssertionError &&
           details.exception.toString().contains(
-            "The $IsoMaps passed to the `maps` parameter in the "
-            "$CountryPicker lacks a",
+            "The $IsoMaps passed to the `maps` contains an empty",
           )) {
         assertionThrown = true;
       } else {

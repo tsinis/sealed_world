@@ -16,7 +16,7 @@ void main() => group("$CurrencyPicker", () {
     const picker = CurrencyPicker();
     expect(picker.onSelect, isNull);
     final newPicker = picker.copyWith(onSelect: (item) => item.toString());
-    newPicker.onSelect?.call(picker.items.first);
+    newPicker.onSelect?.call(picker.resolvedItems().first);
     expect(newPicker.onSelect, isNotNull);
     final newestPicker = newPicker.copyWith(onSelect: print);
     expect(newestPicker.onSelect, isNotNull);
@@ -91,6 +91,57 @@ void main() => group("$CurrencyPicker", () {
       throwsAssertionError,
     );
     await tester.pump(Duration.zero);
+  });
+
+  testWidgets("throws assert on empty $IsoMaps in theme", (tester) async {
+    bool assertionThrown = false;
+    final originalOnError = FlutterError.onError;
+
+    FlutterError.onError = (details) {
+      if (details.exception is AssertionError &&
+          details.exception.toString().contains(
+            "The $IsoMaps passed to the `maps` contains an empty",
+          )) {
+        assertionThrown = true;
+      } else {
+        originalOnError?.call(details);
+      }
+    };
+
+    try {
+      await tester.pumpMaterialApp(
+        const CurrencyPicker(),
+        const PickersThemeData(maps: IsoMaps()),
+      );
+
+      expect(assertionThrown, isTrue);
+    } finally {
+      FlutterError.onError = originalOnError;
+    }
+  });
+
+  testWidgets("throws assert on empty $IsoMaps in picker", (tester) async {
+    bool assertionThrown = false;
+    final originalOnError = FlutterError.onError;
+
+    FlutterError.onError = (details) {
+      if (details.exception is AssertionError &&
+          details.exception.toString().contains(
+            "The $IsoMaps passed to the `maps` contains an empty",
+          )) {
+        assertionThrown = true;
+      } else {
+        originalOnError?.call(details);
+      }
+    };
+
+    try {
+      await tester.pumpMaterialApp(const CurrencyPicker(maps: IsoMaps()));
+
+      expect(assertionThrown, isTrue);
+    } finally {
+      FlutterError.onError = originalOnError;
+    }
   });
 
   testWidgets("searchSuggestions()", (tester) async {

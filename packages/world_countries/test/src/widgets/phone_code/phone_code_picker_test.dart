@@ -15,7 +15,7 @@ void main() => group("$PhoneCodePicker", () {
     const picker = PhoneCodePicker();
     expect(picker.onSelect, isNull);
     final newPicker = picker.copyWith(onSelect: (item) => item.toString());
-    newPicker.onSelect?.call(picker.items.first);
+    newPicker.onSelect?.call(picker.resolvedItems().first);
     expect(newPicker.onSelect, isNotNull);
     final newestPicker = newPicker.copyWith(onSelect: print);
     expect(newestPicker.onSelect, isNotNull);
