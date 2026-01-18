@@ -38,7 +38,7 @@ class _BasicPickerState<T extends IsoTranslated, W extends IsoTile<T>>
         : null;
 
     return SearchableIndexedListViewBuilder<T, W>(
-      widget.items,
+      widget.resolvedItems(context),
       addAutomaticKeepAlives: widget.addAutomaticKeepAlives,
       addRepaintBoundaries:
           widget.addRepaintBoundaries ?? theme?.addRepaintBoundaries ?? true,

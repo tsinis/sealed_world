@@ -16,7 +16,7 @@ class CurrencyPicker extends BasicPicker<FiatCurrency, CurrencyTile> {
   /// * All other parameters are optional and are passed
   /// to the superclass constructor.
   const CurrencyPicker({
-    Iterable<FiatCurrency> currencies = FiatCurrency.list,
+    Iterable<FiatCurrency>? currencies,
     super.addAutomaticKeepAlives,
     super.addRepaintBoundaries,
     super.addSemanticIndexes,
@@ -82,8 +82,17 @@ class CurrencyPicker extends BasicPicker<FiatCurrency, CurrencyTile> {
       isoMaps.currencyTranslations[item];
 
   @override
-  TranslationMap<FiatCurrency>? translationMap(BuildContext context) =>
-      maybeMaps(context)?.currencyTranslations;
+  Iterable<FiatCurrency> defaultItems(BuildContext? context) {
+    final keys = maybeMaps(context)?.currencyTranslations.keys;
+    assert(
+      keys == null || keys.isNotEmpty,
+      "The $IsoMaps passed to the `maps` contains an empty "
+      "`currencyTranslations` map. Please provide a valid  `IsoMaps` instance "
+      "with currency translations or non-empty `currencies`",
+    );
+
+    return keys ?? FiatCurrency.list;
+  }
 
   @override
   // ignore: avoid-incomplete-copy-with, avoid-high-cyclomatic-complexity, a lot of params.

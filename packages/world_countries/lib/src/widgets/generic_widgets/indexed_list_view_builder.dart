@@ -1,5 +1,6 @@
 import "package:flutter/gestures.dart";
 import "package:flutter/widgets.dart";
+import "package:meta/meta.dart";
 
 import "../../constants/ui_constants.dart";
 import "../../extensions/world_countries_build_context_extension.dart";
@@ -86,6 +87,10 @@ class IndexedListViewBuilder<T extends Object, W extends Widget>
   });
 
   @override
+  @mustBeOverridden
+  Iterable<T> defaultItems(BuildContext? context) => const [];
+
+  @override
   State<IndexedListViewBuilder> createState() =>
       _IndexedListViewBuilderState<T, W>();
 }
@@ -96,6 +101,7 @@ class _IndexedListViewBuilderState<T extends Object, W extends Widget>
   // ignore: avoid-high-cyclomatic-complexity, build methods are typically long.
   Widget build(BuildContext context) {
     final theme = context.pickersTheme;
+    final items = widget.resolvedItems(context);
     final header = widget.header ?? theme?.header;
 
     return Column(
@@ -124,7 +130,7 @@ class _IndexedListViewBuilderState<T extends Object, W extends Widget>
             duration: UiConstants.duration,
             switchInCurve: UiConstants.switchInCurve,
             switchOutCurve: UiConstants.switchOutCurve,
-            child: widget.items.isEmpty
+            child: items.isEmpty
                 ? widget.emptyStatePlaceholder
                 // ignore: avoid-shrink-wrap-in-lists, it's `false` by default.
                 : ListView.separated(
@@ -136,8 +142,8 @@ class _IndexedListViewBuilderState<T extends Object, W extends Widget>
                     physics: widget.physics ?? theme?.physics,
                     shrinkWrap: widget.shrinkWrap ?? theme?.shrinkWrap ?? false,
                     padding: widget.padding ?? theme?.padding,
-                    itemBuilder: (newContext, index) {
-                      final properties = widget.properties(newContext, index);
+                    itemBuilder: (bc, index) {
+                      final properties = widget.properties(bc, index, items);
                       final child = widget.itemBuilder?.call(properties, null);
                       if (child == null) return null;
                       if (properties.isDisabled) return child;
@@ -151,7 +157,7 @@ class _IndexedListViewBuilderState<T extends Object, W extends Widget>
                         widget.separator ??
                         theme?.separator ??
                         UiConstants.separator,
-                    itemCount: widget.items.length,
+                    itemCount: items.length,
                     addAutomaticKeepAlives: widget.addAutomaticKeepAlives,
                     addRepaintBoundaries:
                         widget.addRepaintBoundaries ??

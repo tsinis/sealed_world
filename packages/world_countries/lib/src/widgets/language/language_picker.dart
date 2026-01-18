@@ -16,7 +16,7 @@ class LanguagePicker extends BasicPicker<NaturalLanguage, LanguageTile> {
   /// * All other parameters are optional and are passed
   /// to the superclass constructor.
   const LanguagePicker({
-    Iterable<NaturalLanguage> languages = NaturalLanguage.list,
+    Iterable<NaturalLanguage>? languages,
     super.addAutomaticKeepAlives,
     super.addRepaintBoundaries,
     super.addSemanticIndexes,
@@ -81,8 +81,17 @@ class LanguagePicker extends BasicPicker<NaturalLanguage, LanguageTile> {
       isoMaps.languageTranslations[item];
 
   @override
-  TranslationMap<NaturalLanguage>? translationMap(BuildContext context) =>
-      maybeMaps(context)?.languageTranslations;
+  Iterable<NaturalLanguage> defaultItems(BuildContext? context) {
+    final keys = maybeMaps(context)?.languageTranslations.keys;
+    assert(
+      keys == null || keys.isNotEmpty,
+      "The $IsoMaps passed to the `maps` contains an empty "
+      "`languageTranslations` map. Please provide a valid  `IsoMaps` instance "
+      "with language translations or non-empty `languages`",
+    );
+
+    return keys ?? NaturalLanguage.list;
+  }
 
   @override
   // ignore: avoid-incomplete-copy-with, avoid-high-cyclomatic-complexity, a lot of params.

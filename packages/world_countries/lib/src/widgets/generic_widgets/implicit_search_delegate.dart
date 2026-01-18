@@ -149,8 +149,8 @@ class ImplicitSearchDelegate<T extends Object>
   @override
   Widget buildSuggestions(
     BuildContext context, [
-    UnmodifiableListView<T>? items,
-  ]) => resultsBuilder(context, items ?? _filteredItems(context));
+    UnmodifiableListView<T>? itemsList,
+  ]) => resultsBuilder(context, itemsList ?? _filteredItems(context));
 
   UnmodifiableListView<T> _filteredItems(BuildContext context) {
     if (searchMap.isEmpty) {

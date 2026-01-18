@@ -5,17 +5,17 @@ class _SearchableIndexedListViewBuilderState<T extends Object, W extends Widget>
   bool get _isSearchable =>
       widget.searchIn != null && widget.textController != null;
 
-  bool get _toShowHeader =>
-      widget.showHeader ??
-      context.pickersTheme?.showHeader ??
-      (widget.items.length > 5); // Hick's law optimal number.
-
   @override
   // ignore: avoid-high-cyclomatic-complexity, build methods are typically long.
   Widget build(BuildContext context) {
     final theme = context.pickersTheme;
+    final itemsList = widget.resolvedItems(context);
+    final shouldShowHeader =
+        widget.showHeader ??
+        theme?.showHeader ??
+        (itemsList.length > 5); // Hick's law optimal range.
 
-    return _isSearchable && _toShowHeader
+    return _isSearchable && shouldShowHeader
         ? SearchListListenableBuilder<T>(
             builder: (_, filteredItems) => IndexedListViewBuilder<T, W>(
               filteredItems,
@@ -75,7 +75,7 @@ class _SearchableIndexedListViewBuilderState<T extends Object, W extends Widget>
                   theme?.verticalDirection ??
                   VerticalDirection.down,
             ),
-            items: widget.items,
+            items: itemsList,
             // ignore: avoid-non-null-assertion, null-checked on build first line.
             searchIn: widget.searchIn!,
             onSearchResultsBuilder: widget.onSearchResultsBuilder,
@@ -85,7 +85,7 @@ class _SearchableIndexedListViewBuilderState<T extends Object, W extends Widget>
             startWithSearch: widget.startWithSearch,
           )
         : IndexedListViewBuilder<T, W>(
-            widget.items,
+            itemsList,
             addAutomaticKeepAlives: widget.addAutomaticKeepAlives,
             addRepaintBoundaries:
                 widget.addRepaintBoundaries ??

@@ -61,7 +61,7 @@ class CountryPicker extends BasicPicker<WorldCountry, CountryTile> {
   /// * [verticalDirection] is the vertical direction for the items.
   /// * [maps] is the optional [IsoMaps] bundle with translations/flags.
   const CountryPicker({
-    Iterable<WorldCountry> countries = WorldCountry.list,
+    Iterable<WorldCountry>? countries,
     super.addAutomaticKeepAlives,
     super.addRepaintBoundaries,
     super.addSemanticIndexes,
@@ -117,8 +117,17 @@ class CountryPicker extends BasicPicker<WorldCountry, CountryTile> {
       isoMaps.countryTranslations[item];
 
   @override
-  TranslationMap<WorldCountry>? translationMap(BuildContext context) =>
-      maybeMaps(context)?.countryTranslations;
+  Iterable<WorldCountry> defaultItems(BuildContext? context) {
+    final keys = maybeMaps(context)?.countryTranslations.keys;
+    assert(
+      keys == null || keys.isNotEmpty,
+      "The $IsoMaps passed to the `maps` contains an empty "
+      "`countryTranslations` map. Please provide a valid  `IsoMaps` instance "
+      "with country translations or non-empty `countries`",
+    );
+
+    return keys ?? WorldCountry.list;
+  }
 
   @override
   Iterable<String> defaultSearch(WorldCountry item, BuildContext context) =>

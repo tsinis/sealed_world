@@ -11,8 +11,11 @@ mixin PropertiesConvertibleMixin<T extends Object, W extends Widget>
   ///
   /// The [context] parameter is the build context for the item.
   @optionalTypeArgs
-  ItemProperties<T> properties(BuildContext context, int index) =>
-      filteredProperties(items, context, index);
+  ItemProperties<T> properties(
+    BuildContext context,
+    int index, [
+    Iterable<T>? source,
+  ]) => filteredProperties(source ?? resolvedItems(context), context, index);
 
   /// Creates [ItemProperties] for an item at the specified [index] using the
   /// provided [filtered] items and [context].

@@ -216,20 +216,21 @@ abstract class BasicPicker<T extends IsoTranslated, W extends IsoTile<T>>
     SearchController controller,
   ) {
     final text = controller.text.trim();
-    final map = items.searchMap(context, searchIn ?? defaultSearch);
-    final x = text.isNotEmpty
+    final sourceItems = resolvedItems(context);
+    final map = sourceItems.searchMap(context, searchIn ?? defaultSearch);
+    final iterable = text.isNotEmpty
         ? (onSearchResultsBuilder?.call(text, map) ??
-              items.searchResults(
+              sourceItems.searchResults(
                 map,
                 (itemText) => compareWithTextInput(controller, itemText),
               ))
-        : items;
+        : sourceItems;
 
     return List<Widget>.generate(
-      x.length,
+      iterable.length,
       // ignore: prefer-extracting-callbacks, due to complexity.
       (i) {
-        final props = filteredProperties(x, context, i);
+        final props = filteredProperties(iterable, context, i);
         final defaultTile = defaultBuilder(props).copyWith(
           onPressed: (item) => maybeSelectAndPop(item, context),
           titleAlignment: ListTileTitleAlignment.titleHeight,
@@ -244,13 +245,6 @@ abstract class BasicPicker<T extends IsoTranslated, W extends IsoTile<T>>
       growable: false, // Dart 3.8 Formatting.
     );
   }
-
-  @protected
-  TranslationMap<T>? translationMap(BuildContext context);
-
-  @protected
-  IsoMaps? maybeMaps(BuildContext context) =>
-      maps ?? context.pickersTheme?.maps ?? context.maybeLocale?.maps;
 
   String? _maybeNameTranslation(T item, BuildContext context) {
     final direct = maps;
@@ -304,10 +298,6 @@ abstract class BasicPicker<T extends IsoTranslated, W extends IsoTile<T>>
     return result;
   }
 
-  /// Returns translated common name of the item (if exists).
-  @protected
-  String? nameTranslationCache(T item, IsoMaps isoMaps);
-
   @override
   State<BasicPicker<T, W>> createState() => _BasicPickerState<T, W>();
 
@@ -339,6 +329,7 @@ abstract class BasicPicker<T extends IsoTranslated, W extends IsoTile<T>>
       child: FractionallySizedBox(
         heightFactor: heightFactor,
         child: copyWith(
+          items: resolvedItems(newContext),
           onSelect: (selected) => maybeSelectAndPop(selected, newContext),
         ),
       ),
@@ -382,7 +373,8 @@ abstract class BasicPicker<T extends IsoTranslated, W extends IsoTile<T>>
     // ignore: avoid-long-functions, a lot of parameters here.
   }) async {
     T? result;
-    final searchMap = items.searchMap(context, searchIn ?? defaultSearch);
+    final sourceItems = resolvedItems(context);
+    final searchMap = sourceItems.searchMap(context, searchIn ?? defaultSearch);
     // ignore: avoid-late-keyword, avoid-unnecessary-local-late, it's not.
     late final ImplicitSearchDelegate<T> delegate;
     // ignore: avoid-local-functions, lazy delegate.
@@ -392,11 +384,11 @@ abstract class BasicPicker<T extends IsoTranslated, W extends IsoTile<T>>
     }
 
     delegate = ImplicitSearchDelegate<T>(
-      items,
+      sourceItems,
       // ignore: prefer-correct-handler-name, breaking change.
-      resultsBuilder: (_, items) => copyWith(
-        key: onSearchResultsBuilder == null ? null : ValueKey(items.length),
-        items: items,
+      resultsBuilder: (_, itemsList) => copyWith(
+        key: onSearchResultsBuilder == null ? null : ValueKey(itemsList.length),
+        items: itemsList,
         onSelect: closeOnSelect,
         showSearchBar: false,
       ),
@@ -502,6 +494,7 @@ abstract class BasicPicker<T extends IsoTranslated, W extends IsoTile<T>>
       content: SizedBox(
         width: double.maxFinite,
         child: copyWith(
+          items: resolvedItems(newContext),
           onSelect: (selected) => maybeSelectAndPop(selected, newContext),
         ),
       ),
@@ -536,6 +529,14 @@ abstract class BasicPicker<T extends IsoTranslated, W extends IsoTile<T>>
     requestFocus: requestFocus,
     animationStyle: animationStyle,
   );
+
+  @protected
+  IsoMaps? maybeMaps(BuildContext? context) =>
+      maps ?? context?.pickersTheme?.maps ?? context?.maybeLocale?.maps;
+
+  /// Returns translated common name of the item (if exists).
+  @protected
+  String? nameTranslationCache(T item, IsoMaps isoMaps);
 
   /// Creates a copy of this picker with the given fields replaced with the new
   /// values.

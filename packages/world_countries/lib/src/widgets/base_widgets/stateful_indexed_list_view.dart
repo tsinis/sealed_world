@@ -23,8 +23,9 @@ abstract class StatefulIndexedListView<T extends Object, W extends Widget>
     implements IndexedListViewInterface {
   /// Creates a [StatefulIndexedListView] with the given parameters.
   ///
-  /// The [items] parameter is required and specifies the list of items to
-  /// display.
+  /// The [items] parameter specifies the list of items to display. When it is
+  /// `null`, subclasses must provide a fallback via [defaultItems] to ensure
+  /// that the view can still render meaningful content.
   ///
   /// The optional parameters allow customization of the list's appearance and
   /// behavior.
@@ -66,7 +67,7 @@ abstract class StatefulIndexedListView<T extends Object, W extends Widget>
   });
 
   /// The list of items to display.
-  final Iterable<T> items;
+  final Iterable<T>? items;
 
   /// A builder that returns a widget to display an item in the list.
   ///
@@ -180,4 +181,10 @@ abstract class StatefulIndexedListView<T extends Object, W extends Widget>
 
   @override
   final double? spacing;
+
+  @protected
+  Iterable<T> defaultItems(BuildContext? context);
+
+  Iterable<T> resolvedItems([BuildContext? context]) =>
+      items ?? defaultItems(context);
 }

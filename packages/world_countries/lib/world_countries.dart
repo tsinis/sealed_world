@@ -24,6 +24,7 @@ export "src/interfaces/searchable_interface.dart";
 export "src/mixins/compare_search_mixin.dart";
 export "src/mixins/popped_mixin.dart";
 export "src/mixins/properties_convertible_mixin.dart";
+export "src/models/iso/iso_maps.dart";
 export "src/models/item_properties.dart";
 export "src/models/locale/typed_locale.dart";
 export "src/models/typedefs.dart";

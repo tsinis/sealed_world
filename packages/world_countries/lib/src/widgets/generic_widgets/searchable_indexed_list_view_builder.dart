@@ -139,6 +139,9 @@ class SearchableIndexedListViewBuilder<T extends Object, W extends Widget>
   onSearchResultsBuilder;
 
   @override
+  Iterable<T> defaultItems(BuildContext? context) => const [];
+
+  @override
   State<SearchableIndexedListViewBuilder<T, W>> createState() =>
       _SearchableIndexedListViewBuilderState<T, W>();
 
