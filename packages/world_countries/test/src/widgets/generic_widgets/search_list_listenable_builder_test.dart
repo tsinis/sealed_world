@@ -14,7 +14,7 @@ void main() => group("$SearchListListenableBuilder", () {
     await tester.pumpWidgetsApp(
       SearchListListenableBuilder(
         items: items,
-        searchIn: (item, _) => [item],
+        searchIn: (item, _) => {item},
         textController: controller,
         builder: (_, list) {
           lastBuiltList.addAll(list);
@@ -36,7 +36,7 @@ void main() => group("$SearchListListenableBuilder", () {
     await tester.pumpWidgetsApp(
       SearchListListenableBuilder<String>(
         items: items,
-        searchIn: (item, _) => [item],
+        searchIn: (item, _) => {item},
         textController: controller,
         builder: (_, _) => const SizedBox.shrink(),
       ),
@@ -45,7 +45,7 @@ void main() => group("$SearchListListenableBuilder", () {
     await tester.pumpWidgetsApp(
       SearchListListenableBuilder<String>(
         items: items,
-        searchIn: (item, _) => [item],
+        searchIn: (item, _) => {item},
         textController: anotherController,
         builder: (_, _) => const SizedBox.shrink(),
       ),

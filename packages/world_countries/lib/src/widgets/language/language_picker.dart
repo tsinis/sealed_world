@@ -68,7 +68,7 @@ class LanguagePicker extends BasicPicker<NaturalLanguage, LanguageTile> {
       );
 
   @override
-  Iterable<String> defaultSearch(NaturalLanguage item, BuildContext context) =>
+  Set<String> defaultSearch(NaturalLanguage item, BuildContext context) =>
       Set.unmodifiable({
         ...super.defaultSearch(item, context),
         ...item.namesNative,
@@ -131,7 +131,7 @@ class LanguagePicker extends BasicPicker<NaturalLanguage, LanguageTile> {
     TextBaseline? textBaseline,
     TextDirection? textDirection,
     VerticalDirection? verticalDirection,
-    Iterable<String> Function(NaturalLanguage language, BuildContext context)?
+    Set<String> Function(NaturalLanguage language, BuildContext context)?
     searchIn,
     Iterable<NaturalLanguage> Function(
       String query,

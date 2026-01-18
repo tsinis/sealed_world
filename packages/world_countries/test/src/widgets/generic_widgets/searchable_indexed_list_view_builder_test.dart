@@ -28,7 +28,7 @@ void main() => group("$SearchableIndexedListViewBuilder", () {
     await tester.pumpMaterialApp(
       SearchableIndexedListViewBuilder(
         const [1, 2, 3, 4, 5, 6],
-        searchIn: (i, _) => ["$i"],
+        searchIn: (i, _) => {"$i"},
         textController: controller,
       ),
       const PickersThemeData(showHeader: null),
@@ -45,7 +45,7 @@ void main() => group("$SearchableIndexedListViewBuilder", () {
     await tester.pumpMaterialApp(
       SearchableIndexedListViewBuilder(
         const [1, 2, 3, 4, 5],
-        searchIn: (i, _) => ["$i"],
+        searchIn: (i, _) => {"$i"},
         textController: controller,
       ),
       const PickersThemeData(showHeader: null),
@@ -60,7 +60,7 @@ void main() => group("$SearchableIndexedListViewBuilder", () {
     await tester.pumpMaterialApp(
       SearchableIndexedListViewBuilder(
         const [1, 2],
-        searchIn: (i, _) => ["$i"],
+        searchIn: (i, _) => {"$i"},
         textController: controller,
       ),
     );

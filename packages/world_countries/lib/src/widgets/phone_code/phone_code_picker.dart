@@ -140,7 +140,7 @@ class PhoneCodePicker extends CountryPicker {
   }
 
   @override
-  Iterable<String> defaultSearch(WorldCountry item, BuildContext context) =>
+  Set<String> defaultSearch(WorldCountry item, BuildContext context) =>
       Set.unmodifiable({
         ...super.defaultSearch(item, context),
         item.idd.phoneCode(leading: ""),
@@ -184,8 +184,7 @@ class PhoneCodePicker extends CountryPicker {
     TextBaseline? textBaseline,
     TextDirection? textDirection,
     VerticalDirection? verticalDirection,
-    Iterable<String> Function(WorldCountry country, BuildContext context)?
-    searchIn,
+    Set<String> Function(WorldCountry country, BuildContext context)? searchIn,
     Iterable<WorldCountry> Function(
       String query,
       Map<WorldCountry, Set<String>> map,

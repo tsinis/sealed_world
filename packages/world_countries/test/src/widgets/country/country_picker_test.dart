@@ -72,7 +72,7 @@ void main() => group("$CountryPicker", () {
     "showSearchBar: false and without selection test",
     (tester) async => tester.testPickerBody(
       CountryPicker(
-        searchIn: (_, _) => const [],
+        searchIn: (_, _) => const {},
         showClearButton: false,
         showSearchBar: false,
       ),

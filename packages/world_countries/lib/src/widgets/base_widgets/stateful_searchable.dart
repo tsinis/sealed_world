@@ -29,7 +29,7 @@ abstract class StatefulSearchable<T extends Object> extends StatefulWidget
   final TextEditingController textController;
 
   @override
-  final Iterable<String> Function(T item, BuildContext context) searchIn;
+  final Set<String> Function(T item, BuildContext context) searchIn;
 
   @override
   final bool caseSensitiveSearch;

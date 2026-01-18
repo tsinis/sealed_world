@@ -4,7 +4,7 @@ import "package:flutter/widgets.dart" show BuildContext;
 abstract interface class SearchableInterface<T extends Object> {
   /// Constructor for the [SearchableInterface] class.
   ///
-  /// * [searchIn] is a function that takes an item and returns an iterable of
+  /// * [searchIn] is a function that takes an item and returns a set of
   ///   strings to search in.
   /// * [caseSensitiveSearch] is a boolean indicating whether the search should
   ///   be case-sensitive.
@@ -18,10 +18,10 @@ abstract interface class SearchableInterface<T extends Object> {
     this.onSearchResultsBuilder,
   });
 
-  /// A function that takes an item and returns an iterable of strings to search
+  /// A function that takes an item and returns a set of strings to search
   /// in.
   // ignore: prefer-correct-callback-field-name, Might be breaking change.
-  final Iterable<String> Function(T item, BuildContext context)? searchIn;
+  final Set<String> Function(T item, BuildContext context)? searchIn;
 
   /// A function that takes a query (usually user typed input) and a map of
   /// items to their search strings and returns an iterable of items that match

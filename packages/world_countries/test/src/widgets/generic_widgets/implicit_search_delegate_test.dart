@@ -8,7 +8,7 @@ void main() => group("$ImplicitSearchDelegate", () {
   final delegate = ImplicitSearchDelegate(
     const [1],
     resultsBuilder: (_, _, _) => const SizedBox(),
-    searchIn: (i, _) => [i.toString()],
+    searchIn: (i, _) => {i.toString()},
     resultValidator: (_) => false,
     searchMap: const <int, Set<String>>{},
   );

@@ -11,7 +11,7 @@ class _SearchableInterfaceTest implements SearchableInterface<String> {
     required this.onSearchResultsBuilder,
   });
   @override
-  final Iterable<String> Function(String item, BuildContext context) searchIn;
+  final Set<String> Function(String item, BuildContext context) searchIn;
   @override
   final bool caseSensitiveSearch;
   @override
@@ -26,7 +26,7 @@ void main() => group("$SearchableInterface", () {
     "constructor",
     () => expect(
       _SearchableInterfaceTest(
-        searchIn: (_, _) => const [],
+        searchIn: (_, _) => const {},
         caseSensitiveSearch: true,
         startWithSearch: false,
         onSearchResultsBuilder: (_, _) => const [],

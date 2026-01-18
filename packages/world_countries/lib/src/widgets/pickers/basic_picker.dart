@@ -197,9 +197,9 @@ abstract class BasicPicker<T extends IsoTranslated, W extends IsoTile<T>>
   /// translated name of the item (if exists).
   @protected
   @mustCallSuper
-  Iterable<String> defaultSearch(T item, BuildContext context) => [
+  Set<String> defaultSearch(T item, BuildContext context) => {
     _maybeNameTranslation(item, context) ?? item.internationalName,
-  ];
+  };
 
   /// Returns the name translation of the item (if exists) in form
   /// of [Text] widget.
@@ -576,7 +576,7 @@ abstract class BasicPicker<T extends IsoTranslated, W extends IsoTile<T>>
     TextBaseline? textBaseline,
     TextDirection? textDirection,
     VerticalDirection? verticalDirection,
-    Iterable<String> Function(T item, BuildContext context)? searchIn,
+    Set<String> Function(T item, BuildContext context)? searchIn,
     Iterable<T> Function(String query, SearchMap<T> map)?
     onSearchResultsBuilder,
     Widget? Function(ItemProperties<T>, ListItemTile<T>)? itemBuilder,

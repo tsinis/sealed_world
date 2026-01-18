@@ -19,7 +19,7 @@ class ImplicitSearchDelegate<T extends Object>
   /// * [resultsBuilder] is a function that takes a [BuildContext] and an
   ///   [UnmodifiableListView] of items and returns a widget to display as the
   ///   search results.
-  /// * [searchIn] is a function that takes an item and returns an iterable of
+  /// * [searchIn] is a function that takes an item and returns a set of
   ///   strings to search in.
   /// * [onSearchResultsBuilder] is the optional function to customize the build
   ///   of the search results.
@@ -155,7 +155,7 @@ class ImplicitSearchDelegate<T extends Object>
   UnmodifiableListView<T> _filteredItems(BuildContext context) {
     if (searchMap.isEmpty) {
       return UnmodifiableListView(
-        items.where((i) => searchIn(i, context).toSet().any(_hasSameText)),
+        items.where((i) => searchIn(i, context).any(_hasSameText)),
       );
     }
 

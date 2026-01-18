@@ -18,7 +18,7 @@ abstract class SearchDelegateInterface<T extends Object>
   /// * [resultsBuilder] is a function that takes a `BuildContext` and an
   ///   [UnmodifiableListView] of items and returns a widget to display as the
   ///   search results.
-  /// * [searchIn] is a function that takes an item and returns an iterable of
+  /// * [searchIn] is a function that takes an item and returns a set of
   ///   strings to search in.
   /// * [onSearchResultsBuilder] is the optional function to customize the build
   ///   of the search results.
@@ -101,10 +101,10 @@ abstract class SearchDelegateInterface<T extends Object>
   @override
   final bool startWithSearch;
 
-  /// A function that takes an item and returns an iterable of strings to search
+  /// A function that takes an item and returns a set of strings to search
   /// in.
   @override
-  final Iterable<String> Function(T item, BuildContext context) searchIn;
+  final Set<String> Function(T item, BuildContext context) searchIn;
 
   @override
   final Iterable<T> Function(String query, SearchMap<T> map)?

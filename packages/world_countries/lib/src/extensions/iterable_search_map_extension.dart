@@ -23,9 +23,9 @@ extension IterableSearchMapExtension<T extends Object> on Iterable<T> {
   @useResult
   SearchMap<T> searchMap(
     BuildContext context,
-    Iterable<String> Function(T, BuildContext) search,
+    Set<String> Function(T, BuildContext) search,
   ) => SearchMap<T>.unmodifiable({
-    for (final item in this) item: search(item, context).toSet(),
+    for (final item in this) item: search(item, context),
   });
 
   /// Filters items in this iterable based on search criteria.

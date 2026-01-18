@@ -68,7 +68,7 @@ class CurrencyPicker extends BasicPicker<FiatCurrency, CurrencyTile> {
       );
 
   @override
-  Iterable<String> defaultSearch(FiatCurrency item, BuildContext context) =>
+  Set<String> defaultSearch(FiatCurrency item, BuildContext context) =>
       Set.unmodifiable({
         ...super.defaultSearch(item, context),
         ...item.namesNative,
@@ -132,8 +132,7 @@ class CurrencyPicker extends BasicPicker<FiatCurrency, CurrencyTile> {
     TextBaseline? textBaseline,
     TextDirection? textDirection,
     VerticalDirection? verticalDirection,
-    Iterable<String> Function(FiatCurrency currency, BuildContext context)?
-    searchIn,
+    Set<String> Function(FiatCurrency currency, BuildContext context)? searchIn,
     Iterable<FiatCurrency> Function(
       String query,
       Map<FiatCurrency, Set<String>> map,
