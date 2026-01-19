@@ -70,7 +70,8 @@ class LanguagePicker extends BasicPicker<NaturalLanguage, LanguageTile> {
   @override
   Set<String> defaultSearch(NaturalLanguage item, BuildContext context) =>
       Set.unmodifiable({
-        ...super.defaultSearch(item, context),
+        ?maybeNameTranslation(item, context),
+        item.internationalName,
         ...item.namesNative,
         item.name,
         item.codeShort,

@@ -197,14 +197,12 @@ abstract class BasicPicker<T extends IsoTranslated, W extends IsoTile<T>>
   /// translated name of the item (if exists).
   @protected
   @mustCallSuper
-  Set<String> defaultSearch(T item, BuildContext context) => {
-    _maybeNameTranslation(item, context) ?? item.internationalName,
-  };
+  Set<String> defaultSearch(T item, BuildContext context);
 
   /// Returns the name translation of the item (if exists) in form
   /// of [Text] widget.
   Text? itemNameTranslated(T item, BuildContext context) => MaybeWidget.orNull(
-    _maybeNameTranslation(item, context),
+    maybeNameTranslation(item, context),
     (title) => Text(title, overflow: TextOverflow.ellipsis),
   );
 
@@ -246,7 +244,8 @@ abstract class BasicPicker<T extends IsoTranslated, W extends IsoTile<T>>
     );
   }
 
-  String? _maybeNameTranslation(T item, BuildContext context) {
+  @protected
+  String? maybeNameTranslation(T item, BuildContext context) {
     final direct = maps;
     final theme = context.pickersTheme?.maps;
     final global = context.maybeLocale?.maps;

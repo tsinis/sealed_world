@@ -70,7 +70,8 @@ class CurrencyPicker extends BasicPicker<FiatCurrency, CurrencyTile> {
   @override
   Set<String> defaultSearch(FiatCurrency item, BuildContext context) =>
       Set.unmodifiable({
-        ...super.defaultSearch(item, context),
+        ?maybeNameTranslation(item, context),
+        item.internationalName,
         ...item.namesNative,
         item.name,
         item.code,

@@ -132,7 +132,8 @@ class CountryPicker extends BasicPicker<WorldCountry, CountryTile> {
   @override
   Set<String> defaultSearch(WorldCountry item, BuildContext context) =>
       Set.unmodifiable({
-        ...super.defaultSearch(item, context),
+        ?maybeNameTranslation(item, context),
+        item.internationalName,
         ...item.namesNative.map((nativeName) => nativeName.common),
         ...item.altSpellings,
         item.name.common,
