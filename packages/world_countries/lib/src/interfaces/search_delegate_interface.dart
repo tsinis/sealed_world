@@ -5,6 +5,7 @@ import "package:flutter/material.dart"
 import "package:flutter/widgets.dart";
 
 import "../constants/ui_constants.dart";
+import "../models/search_data.dart";
 import "../models/typedefs.dart";
 import "searchable_interface.dart";
 
@@ -101,10 +102,10 @@ abstract class SearchDelegateInterface<T extends Object>
   @override
   final bool startWithSearch;
 
-  /// A function that takes an item and returns a set of strings to search
+  /// A function that takes an item and returns a list of strings to search
   /// in.
   @override
-  final Set<String> Function(T item, BuildContext context) searchIn;
+  final SearchData Function(T item, BuildContext context) searchIn;
 
   @override
   final Iterable<T> Function(String query, SearchMap<T> map)?

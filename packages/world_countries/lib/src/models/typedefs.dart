@@ -5,6 +5,7 @@ import "package:world_flags/world_flags.dart"
 
 import "../widgets/generic_widgets/iso_tile.dart";
 import "locale/typed_locale.dart";
+import "search_data.dart";
 
 /// A typedef representing a map entry of [Locale] and [TypedLocale].
 ///
@@ -23,11 +24,11 @@ typedef LocaleEntry = MapEntry<Locale, TypedLocale>;
 /// A typedef representing a [Map] of translations for [IsoTranslated] items.
 typedef TranslationMap<T extends IsoTranslated> = Map<T, String>;
 
-/// A typedef representing a [Map] of [T] and a set of [String].
+/// A typedef representing a [Map] of [T] and a list of [String].
 /// This is used for search functionality, where [T] is the type of the
 /// items being searched, and the set of [String] represents the search
 /// terms associated with each item.
-typedef SearchMap<T extends Object> = Map<T, Set<String>>;
+typedef SearchMap<T extends Object> = Map<T, SearchData>;
 
 /// A typedef representing a function that formats a translation
 /// for a specific [TypedLocale] and [IsoTranslated] item.

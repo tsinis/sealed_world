@@ -9,6 +9,7 @@ import "../../interfaces/material_context_interface.dart";
 import "../../interfaces/searchable_interface.dart";
 import "../../mixins/popped_mixin.dart";
 import "../../mixins/properties_convertible_mixin.dart";
+import "../../models/search_data.dart";
 import "../../models/typedefs.dart";
 import "../base_widgets/stateful_indexed_list_view.dart";
 import "indexed_list_view_builder.dart";
@@ -124,7 +125,7 @@ class SearchableIndexedListViewBuilder<T extends Object, W extends Widget>
 
   /// The method to apply search to the items.
   @override
-  final Set<String> Function(T item, BuildContext context)? searchIn;
+  final SearchData Function(T item, BuildContext context)? searchIn;
 
   /// A boolean indicating whether the search is case-sensitive.
   @override

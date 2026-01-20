@@ -4,8 +4,8 @@ import "package:world_flags/world_flags.dart";
 
 import "../../models/iso/iso_maps.dart";
 import "../../models/item_properties.dart";
+import "../../models/search_data.dart";
 import "../../models/typedefs.dart";
-import "../generic_widgets/list_item_tile.dart";
 import "../pickers/basic_picker.dart";
 
 /// A picker widget for selecting a country.
@@ -130,14 +130,14 @@ class CountryPicker extends BasicPicker<WorldCountry, CountryTile> {
   }
 
   @override
-  Set<String> defaultSearch(WorldCountry item, BuildContext context) =>
-      Set.unmodifiable({
-        ?maybeNameTranslation(item, context),
+  SearchData defaultSearch(WorldCountry item, BuildContext context) =>
+      SearchData(
         item.internationalName,
-        ...item.namesNative.map((nativeName) => nativeName.common),
-        ...item.altSpellings,
-        item.name.common,
-      });
+        item.namesNative.map((nativeName) => nativeName.common),
+        name: maybeNameTranslation(item, context),
+        code: item.code,
+        others: item.altSpellings,
+      );
 
   @override
   // ignore: avoid-incomplete-copy-with, avoid-high-cyclomatic-complexity, a lot of params.
@@ -177,14 +177,13 @@ class CountryPicker extends BasicPicker<WorldCountry, CountryTile> {
     TextBaseline? textBaseline,
     TextDirection? textDirection,
     VerticalDirection? verticalDirection,
-    Set<String> Function(WorldCountry country, BuildContext context)? searchIn,
+    SearchData Function(WorldCountry country, BuildContext context)? searchIn,
     Iterable<WorldCountry> Function(
       String query,
-      Map<WorldCountry, Set<String>> map,
+      Map<WorldCountry, SearchData> map,
     )?
     onSearchResultsBuilder,
-    Widget? Function(ItemProperties<WorldCountry>, ListItemTile<WorldCountry>)?
-    itemBuilder,
+    Widget? Function(ItemProperties<WorldCountry>, CountryTile)? itemBuilder,
     double? spacing,
     IsoMaps? maps,
   }) => CountryPicker(

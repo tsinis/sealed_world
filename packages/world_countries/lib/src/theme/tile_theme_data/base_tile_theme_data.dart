@@ -3,7 +3,7 @@ import "package:meta/meta.dart" show useResult;
 import "package:world_flags/world_flags.dart";
 
 import "../../models/item_properties.dart";
-import "../../widgets/generic_widgets/list_item_tile.dart";
+import "../../widgets/generic_widgets/iso_tile.dart";
 
 /// A theme extension data class that holds theme data for base tiles.
 ///
@@ -31,7 +31,7 @@ base class BaseTileThemeData<T extends IsoTranslated>
   @optionalTypeArgs
   @useResult
   BaseTileThemeData<T> copyWith({
-    Widget? Function(ItemProperties<T>, ListItemTile<T>)? itemBuilder,
+    Widget? Function(ItemProperties<T>, IsoTile<T>)? itemBuilder,
   }) => BaseTileThemeData<T>(itemBuilder: itemBuilder ?? this.itemBuilder);
 
   @override
@@ -64,5 +64,5 @@ sealed class _BaseTileThemeData<T extends IsoTranslated>
   ///   return defaultTile.copyWith(dense: true);
   /// }
   /// ```
-  final Widget? Function(ItemProperties<T>, ListItemTile<T>)? itemBuilder;
+  final Widget? Function(ItemProperties<T>, IsoTile<T>)? itemBuilder;
 }

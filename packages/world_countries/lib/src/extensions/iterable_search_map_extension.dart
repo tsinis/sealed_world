@@ -1,6 +1,7 @@
 import "package:flutter/material.dart";
 import "package:meta/meta.dart" show internal, useResult;
 
+import "../models/search_data.dart";
 import "../models/typedefs.dart";
 
 /// Extension on [Iterable] that provides functionality for creating search maps
@@ -14,7 +15,7 @@ extension IterableSearchMapExtension<T extends Object> on Iterable<T> {
   /// Creates an unmodifiable search map from this iterable.
   ///
   /// The [search] function is called for each item in the iterable to generate
-  /// a set of searchable strings for that item.
+  /// a list of searchable strings for that item.
   ///
   /// [context] is passed to the search function to support localized search
   /// terms.
@@ -23,7 +24,7 @@ extension IterableSearchMapExtension<T extends Object> on Iterable<T> {
   @useResult
   SearchMap<T> searchMap(
     BuildContext context,
-    Set<String> Function(T, BuildContext) search,
+    SearchData Function(T, BuildContext) search,
   ) => SearchMap<T>.unmodifiable({
     for (final item in this) item: search(item, context),
   });

@@ -4,8 +4,8 @@ import "package:world_flags/world_flags.dart";
 
 import "../../models/iso/iso_maps.dart";
 import "../../models/item_properties.dart";
+import "../../models/search_data.dart";
 import "../../models/typedefs.dart";
-import "../generic_widgets/list_item_tile.dart";
 import "../pickers/basic_picker.dart";
 
 /// A picker widget that displays a list of fiat currencies.
@@ -68,15 +68,14 @@ class CurrencyPicker extends BasicPicker<FiatCurrency, CurrencyTile> {
       );
 
   @override
-  Set<String> defaultSearch(FiatCurrency item, BuildContext context) =>
-      Set.unmodifiable({
-        ?maybeNameTranslation(item, context),
+  SearchData defaultSearch(FiatCurrency item, BuildContext context) =>
+      SearchData(
         item.internationalName,
-        ...item.namesNative,
-        item.name,
-        item.code,
-        item.unit,
-      });
+        item.namesNative,
+        name: maybeNameTranslation(item, context),
+        code: item.code,
+        other: item.unit,
+      );
 
   @override
   String? nameTranslationCache(FiatCurrency item, IsoMaps isoMaps) =>
@@ -133,14 +132,13 @@ class CurrencyPicker extends BasicPicker<FiatCurrency, CurrencyTile> {
     TextBaseline? textBaseline,
     TextDirection? textDirection,
     VerticalDirection? verticalDirection,
-    Set<String> Function(FiatCurrency currency, BuildContext context)? searchIn,
+    SearchData Function(FiatCurrency currency, BuildContext context)? searchIn,
     Iterable<FiatCurrency> Function(
       String query,
-      Map<FiatCurrency, Set<String>> map,
+      Map<FiatCurrency, SearchData> map,
     )?
     onSearchResultsBuilder,
-    Widget? Function(ItemProperties<FiatCurrency>, ListItemTile<FiatCurrency>)?
-    itemBuilder,
+    Widget? Function(ItemProperties<FiatCurrency>, CurrencyTile)? itemBuilder,
     double? spacing,
     IsoMaps? maps,
   }) => CurrencyPicker(

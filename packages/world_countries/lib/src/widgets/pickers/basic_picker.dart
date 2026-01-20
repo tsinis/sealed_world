@@ -18,6 +18,7 @@ import "../../interfaces/basic_picker_interface.dart";
 import "../../mixins/compare_search_mixin.dart";
 import "../../models/iso/iso_maps.dart";
 import "../../models/item_properties.dart";
+import "../../models/search_data.dart";
 import "../../models/typedefs.dart";
 import "../../theme/pickers_theme_data.dart";
 import "../adaptive/adaptive_search_text_field.dart";
@@ -154,7 +155,7 @@ abstract class BasicPicker<T extends IsoTranslated, W extends IsoTile<T>>
   /// ```
   @override
   // ignore: overridden_fields, for documentation purpose.
-  final Widget? Function(ItemProperties<T>, ListItemTile<T>?)? itemBuilder;
+  final Widget? Function(ItemProperties<T>, IsoTile<T>?)? itemBuilder;
 
   /// A boolean indicating whether to show a clear button in the search bar.
   @override
@@ -196,8 +197,7 @@ abstract class BasicPicker<T extends IsoTranslated, W extends IsoTile<T>>
   /// Returns the default search function for the items. By default returns
   /// translated name of the item (if exists).
   @protected
-  @mustCallSuper
-  Set<String> defaultSearch(T item, BuildContext context);
+  SearchData defaultSearch(T item, BuildContext context);
 
   /// Returns the name translation of the item (if exists) in form
   /// of [Text] widget.
@@ -575,10 +575,10 @@ abstract class BasicPicker<T extends IsoTranslated, W extends IsoTile<T>>
     TextBaseline? textBaseline,
     TextDirection? textDirection,
     VerticalDirection? verticalDirection,
-    Set<String> Function(T item, BuildContext context)? searchIn,
+    SearchData Function(T item, BuildContext context)? searchIn,
     Iterable<T> Function(String query, SearchMap<T> map)?
     onSearchResultsBuilder,
-    Widget? Function(ItemProperties<T>, ListItemTile<T>)? itemBuilder,
+    Widget? Function(ItemProperties<T>, IsoTile<T>)? itemBuilder,
     double? spacing,
     IsoMaps? maps,
   });

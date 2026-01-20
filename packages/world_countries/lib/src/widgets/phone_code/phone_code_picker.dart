@@ -7,9 +7,9 @@ import "../../extensions/build_context_extension.dart";
 import "../../extensions/iso_tile_extension.dart";
 import "../../models/iso/iso_maps.dart";
 import "../../models/item_properties.dart";
+import "../../models/search_data.dart";
 import "../../models/typedefs.dart";
 import "../country/country_picker.dart";
-import "../generic_widgets/list_item_tile.dart";
 
 /// A picker widget that displays a list of countries with their phone codes.
 class PhoneCodePicker extends CountryPicker {
@@ -140,11 +140,15 @@ class PhoneCodePicker extends CountryPicker {
   }
 
   @override
-  Set<String> defaultSearch(WorldCountry item, BuildContext context) =>
-      Set.unmodifiable({
-        ...super.defaultSearch(item, context),
-        item.idd.phoneCode(leading: ""),
-      });
+  SearchData defaultSearch(WorldCountry item, BuildContext context) =>
+      SearchData(
+        item.internationalName,
+        item.namesNative.map((nativeName) => nativeName.common),
+        name: maybeNameTranslation(item, context),
+        code: item.code,
+        other: item.idd.phoneCode(leading: ""),
+        others: item.altSpellings,
+      );
 
   @override
   // ignore: avoid-incomplete-copy-with, avoid-high-cyclomatic-complexity, a lot of params.
@@ -184,14 +188,13 @@ class PhoneCodePicker extends CountryPicker {
     TextBaseline? textBaseline,
     TextDirection? textDirection,
     VerticalDirection? verticalDirection,
-    Set<String> Function(WorldCountry country, BuildContext context)? searchIn,
+    SearchData Function(WorldCountry country, BuildContext context)? searchIn,
     Iterable<WorldCountry> Function(
       String query,
-      Map<WorldCountry, Set<String>> map,
+      Map<WorldCountry, SearchData> map,
     )?
     onSearchResultsBuilder,
-    Widget? Function(ItemProperties<WorldCountry>, ListItemTile<WorldCountry>)?
-    itemBuilder,
+    Widget? Function(ItemProperties<WorldCountry>, CountryTile)? itemBuilder,
     double? spacing,
     IsoMaps? maps,
   }) => PhoneCodePicker(

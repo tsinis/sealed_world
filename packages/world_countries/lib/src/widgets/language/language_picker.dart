@@ -4,8 +4,8 @@ import "package:world_flags/world_flags.dart";
 
 import "../../models/iso/iso_maps.dart";
 import "../../models/item_properties.dart";
+import "../../models/search_data.dart";
 import "../../models/typedefs.dart";
-import "../generic_widgets/list_item_tile.dart";
 import "../pickers/basic_picker.dart";
 
 /// A picker widget that displays a list of natural languages.
@@ -68,14 +68,13 @@ class LanguagePicker extends BasicPicker<NaturalLanguage, LanguageTile> {
       );
 
   @override
-  Set<String> defaultSearch(NaturalLanguage item, BuildContext context) =>
-      Set.unmodifiable({
-        ?maybeNameTranslation(item, context),
+  SearchData defaultSearch(NaturalLanguage item, BuildContext context) =>
+      SearchData(
         item.internationalName,
-        ...item.namesNative,
-        item.name,
-        item.codeShort,
-      });
+        item.namesNative,
+        name: maybeNameTranslation(item, context),
+        code: item.codeShort,
+      );
 
   @override
   String? nameTranslationCache(NaturalLanguage item, IsoMaps isoMaps) =>
@@ -132,17 +131,14 @@ class LanguagePicker extends BasicPicker<NaturalLanguage, LanguageTile> {
     TextBaseline? textBaseline,
     TextDirection? textDirection,
     VerticalDirection? verticalDirection,
-    Set<String> Function(NaturalLanguage language, BuildContext context)?
+    SearchData Function(NaturalLanguage language, BuildContext context)?
     searchIn,
     Iterable<NaturalLanguage> Function(
       String query,
-      Map<NaturalLanguage, Set<String>> map,
+      Map<NaturalLanguage, SearchData> map,
     )?
     onSearchResultsBuilder,
-    Widget? Function(
-      ItemProperties<NaturalLanguage>,
-      ListItemTile<NaturalLanguage>,
-    )?
+    Widget? Function(ItemProperties<NaturalLanguage>, LanguageTile)?
     itemBuilder,
     double? spacing,
     IsoMaps? maps,
