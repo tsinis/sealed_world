@@ -9,15 +9,12 @@ import "../../../model/world_data.dart";
 
 export "package:world_countries/helpers.dart";
 
-abstract base class WorldDataTab<
-  L extends BasicLocale,
-  I extends IsoTranslated<TranslatedName, Object, L>
->
+abstract base class WorldDataTab<I extends IsoTranslated>
     extends StatelessWidget {
   WorldDataTab(
     this.data,
     AsyncValueSetter<String>? go, {
-    required BasicPicker<I> dataPicker,
+    required BasicPicker<I, IsoTile<I>> dataPicker,
     required WorldData type,
     List<I> items = const [],
     super.key,
@@ -32,5 +29,5 @@ abstract base class WorldDataTab<
   @protected
   final I data;
 
-  final BasicPicker<IsoTranslated<TranslatedName, Object, L>> picker;
+  final BasicPicker<I, IsoTile<I>> picker;
 }

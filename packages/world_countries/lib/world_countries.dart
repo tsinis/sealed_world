@@ -28,6 +28,7 @@ export "src/mixins/properties_convertible_mixin.dart";
 export "src/models/iso/iso_maps.dart";
 export "src/models/item_properties.dart";
 export "src/models/locale/typed_locale.dart";
+export "src/models/search_data.dart";
 export "src/models/typedefs.dart";
 export "src/theme/pickers_theme_data.dart";
 export "src/theme/tile_theme_data/base_tile_theme_data.dart";

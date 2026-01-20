@@ -26,7 +26,9 @@ class Main extends StatefulWidget {
 class _MainState extends State<Main> {
   /// Also [CurrencyTileThemeData], [LanguageTileThemeData],
   /// [CountryTileThemeData], [FlagThemeData], etc.
-  static const pickersExtensions = [PickersThemeData(primary: true)];
+  final _pickersExtensions = <ThemeExtension>[
+    const PickersThemeData(primary: true),
+  ];
 
   final _flagThemeController = FlagThemeController();
   final _navigatorKey = GlobalKey<NavigatorState>();
@@ -58,7 +60,7 @@ class _MainState extends State<Main> {
           routerDelegate: _routerDelegate,
           routeInformationParser: _routeParser,
           theme: ThemeProvider.maybeOf(bc)?.theme.copyWith(
-            extensions: [...pickersExtensions, _flagThemeController.theme],
+            extensions: [..._pickersExtensions, _flagThemeController.theme],
           ),
           localizationsDelegates: const [
             GlobalMaterialLocalizations.delegate,

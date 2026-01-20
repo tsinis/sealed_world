@@ -26,12 +26,14 @@ class MainPage extends StatefulWidget {
       _lang = LanguageTab(_data.language, go);
 
   final ParsedData _data;
-  final WorldDataTab<BasicTypedLocale, WorldCountry> _country;
-  final WorldDataTab<BasicLocale, FiatCurrency> _currency;
-  final WorldDataTab<BasicLocale, NaturalLanguage> _lang;
+  final WorldDataTab<WorldCountry> _country;
+  final WorldDataTab<FiatCurrency> _currency;
+  final WorldDataTab<NaturalLanguage> _lang;
 
   BasicPicker _mapPickers(WorldData data) =>
-      data.map(country: _country, currency: _currency, language: _lang).picker;
+      // ignore: avoid-type-casts, it's a simple example app.
+      data.map(country: _country, currency: _currency, language: _lang).picker
+          as BasicPicker;
 
   @override
   State<MainPage> createState() => _MainPageState();
