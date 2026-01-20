@@ -4,6 +4,7 @@ import "package:flutter/material.dart";
 import "package:flutter_test/flutter_test.dart";
 import "package:world_countries/src/helpers/typed_locale_delegate.dart";
 import "package:world_countries/src/models/iso/iso_maps.dart";
+import "package:world_countries/src/models/search_data.dart";
 import "package:world_countries/src/models/typedefs.dart";
 import "package:world_countries/src/theme/pickers_theme_data.dart";
 import "package:world_countries/src/theme/tile_theme_data/country_tile_theme_data.dart";
@@ -72,7 +73,7 @@ void main() => group("$CountryPicker", () {
     "showSearchBar: false and without selection test",
     (tester) async => tester.testPickerBody(
       CountryPicker(
-        searchIn: (_, _) => const {},
+        searchIn: (_, _) => SearchData.empty(),
         showClearButton: false,
         showSearchBar: false,
       ),
