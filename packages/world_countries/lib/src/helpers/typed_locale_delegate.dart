@@ -46,6 +46,10 @@ class TypedLocaleDelegate implements LocalizationsDelegate<TypedLocale?> {
   ///   for details.
   /// - [asyncTranslationCacheProcessing]: When `true`, populates
   ///   [isoCollections] caches asynchronously.
+  /// - [shouldReload]: Set to `true` if the resources for this delegate should
+  /// be loaded again by calling the [load] method. This method is called
+  /// whenever its [Localizations] widget is rebuilt. If it returns true then
+  /// dependent widgets will be rebuilt after [load] has completed.
   /// - [l10nFormatter]: Optional formatter that customizes how ISO
   ///   translations are rendered.
   const TypedLocaleDelegate({
@@ -53,9 +57,11 @@ class TypedLocaleDelegate implements LocalizationsDelegate<TypedLocale?> {
     bool asyncTranslationCacheProcessing = true,
     @mustBeConst IsoCollections isoCollections = const IsoCollections(),
     L10NFormatter<TypedLocale, IsoTranslated>? l10nFormatter,
+    bool shouldReload = false,
   }) : _asyncTranslationCacheProcessing = asyncTranslationCacheProcessing,
        _isoCollections = isoCollections,
-       _l10nFormatter = l10nFormatter;
+       _l10nFormatter = l10nFormatter,
+       _shouldReload = shouldReload;
 
   /// Creates an instance of [TypedLocaleDelegate] without translations caching.
   /// This is useful when you don't want to cache the translations for the
@@ -71,6 +77,10 @@ class TypedLocaleDelegate implements LocalizationsDelegate<TypedLocale?> {
   ///   [IsoCollections.selective] to keep caches empty.
   /// - [asyncTranslationCacheProcessing]: When `true`, populates
   ///   [isoCollections] caches asynchronously.
+  /// - [shouldReload]: Set to `true` if the resources for this delegate should
+  /// be loaded again by calling the [load] method. This method is called
+  /// whenever its [Localizations] widget is rebuilt. If it returns true then
+  /// dependent widgets will be rebuilt after [load] has completed.
   /// - [l10nFormatter]: Optional formatter that customizes how ISO
   ///   translations are rendered.
   const TypedLocaleDelegate.selectiveCache({
@@ -79,9 +89,11 @@ class TypedLocaleDelegate implements LocalizationsDelegate<TypedLocale?> {
     @mustBeConst
     IsoCollections isoCollections = const IsoCollections.selective(),
     L10NFormatter<TypedLocale, IsoTranslated>? l10nFormatter,
+    bool shouldReload = false,
   }) : _asyncTranslationCacheProcessing = asyncTranslationCacheProcessing,
        _isoCollections = isoCollections,
-       _l10nFormatter = l10nFormatter;
+       _l10nFormatter = l10nFormatter,
+       _shouldReload = shouldReload;
 
   /// A constant list of [LocaleEntry] objects that define the default
   /// resolution for locale mapping.
@@ -110,6 +122,7 @@ class TypedLocaleDelegate implements LocalizationsDelegate<TypedLocale?> {
   final NaturalLanguage? fallbackLanguage;
 
   final bool _asyncTranslationCacheProcessing;
+  final bool _shouldReload;
   final IsoCollections _isoCollections;
 
   /// A formatter for customizing how ISO translations are formatted.
@@ -155,14 +168,14 @@ class TypedLocaleDelegate implements LocalizationsDelegate<TypedLocale?> {
   }
 
   @override
-  bool shouldReload(TypedLocaleDelegate old) => false; // TODO!
+  bool shouldReload(TypedLocaleDelegate old) => _shouldReload;
 
   @override
   String toString() =>
       "TypedLocaleDelegate("
       """${fallbackLanguage == null ? '' : 'fallbackLanguage: ${fallbackLanguage.runtimeType}(), '}"""
       "asyncTranslationCacheProcessing: $_asyncTranslationCacheProcessing, "
-      "isoCollections: $_isoCollections, "
+      "shouldReload: $_shouldReload, isoCollections: $_isoCollections, "
       "l10nFormatter: ${_l10nFormatter.runtimeType},)";
 
   @override
