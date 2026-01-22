@@ -86,7 +86,7 @@ class IndexedListViewBuilder<T extends Object, W extends Widget>
     super.spacing,
   });
 
-  @override
+  @override // coverage:ignore-line
   @mustBeOverridden
   Iterable<T> defaultItems(BuildContext? context) => const [];
 

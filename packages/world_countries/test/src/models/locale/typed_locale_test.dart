@@ -3,7 +3,8 @@ import "dart:ui";
 
 import "package:_sealed_world_tests/sealed_world_tests.dart";
 import "package:flutter_test/flutter_test.dart";
-import "package:world_countries/src/extensions/typed_locale_extension.dart";
+import "package:world_countries/src/extensions/models/typed_locale_extension.dart";
+import "package:world_countries/src/models/iso/iso_maps.dart";
 import "package:world_countries/src/models/locale/typed_locale.dart";
 import "package:world_flags/world_flags.dart";
 
@@ -141,6 +142,46 @@ void main() => group("$TypedLocale", () {
         country: WorldCountry.list.first,
         regionalCode: string,
       ),
+    );
+  });
+
+  group("flags getters", () {
+    test("currencyFlags should return maps.currencyFlags", () {
+      final firstCountry = WorldCountry.list.first;
+      final flag = smallSimplifiedFlagsMap[firstCountry]!;
+      final flagMap = <FiatCurrency, BasicFlag>{FiatCurrency.list.first: flag};
+      final flagLocale = TypedLocale(
+        english,
+        maps: IsoMaps(currencyFlags: flagMap),
+      );
+
+      expect(flagLocale.currencyFlags, flagMap);
+      expect(flagLocale.currencyFlags, flagLocale.maps.currencyFlags);
+    });
+
+    test("languageFlags should return maps.languageFlags", () {
+      final firstCountry = WorldCountry.list.first;
+      final flag = smallSimplifiedFlagsMap[firstCountry]!;
+      final flagMap = <NaturalLanguage, BasicFlag>{
+        NaturalLanguage.list.first: flag,
+      };
+      final flagLocale = TypedLocale(
+        english,
+        maps: IsoMaps(languageFlags: flagMap),
+      );
+
+      expect(flagLocale.languageFlags, flagMap);
+      expect(flagLocale.languageFlags, flagLocale.maps.languageFlags);
+    });
+
+    test(
+      "currencyFlags should return empty map when not provided",
+      () => expect(value.currencyFlags, isEmpty),
+    );
+
+    test(
+      "languageFlags should return empty map when not provided",
+      () => expect(value.languageFlags, isEmpty),
     );
   });
 });

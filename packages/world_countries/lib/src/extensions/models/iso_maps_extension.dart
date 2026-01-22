@@ -1,7 +1,7 @@
 import "package:world_flags/world_flags.dart";
 
-import "../models/iso/iso_maps.dart";
-import "../models/typedefs.dart";
+import "../../models/iso/iso_maps.dart";
+import "../../models/typedefs.dart";
 
 /// Convenience helpers for working with [IsoMaps] instances.
 extension IsoMapsExtension on IsoMaps {

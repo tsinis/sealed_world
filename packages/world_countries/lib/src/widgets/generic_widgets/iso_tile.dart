@@ -3,7 +3,7 @@
 import "package:flutter/material.dart";
 import "package:world_flags/world_flags.dart";
 
-import "../../extensions/iso_semantics_extension.dart";
+import "../../extensions/models/iso_semantics_extension.dart";
 import "../../models/item_properties.dart";
 import "../generic_widgets/list_item_tile.dart";
 import "../helpers/maybe_widget.dart";

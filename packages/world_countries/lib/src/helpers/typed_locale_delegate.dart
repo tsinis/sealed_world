@@ -3,7 +3,7 @@ import "package:meta/meta.dart";
 import "package:world_flags/world_flags.dart";
 
 import "../extensions/core/locale_extension.dart";
-import "../extensions/typed_locale_extension.dart";
+import "../extensions/models/typed_locale_extension.dart";
 import "../models/iso/iso_collections.dart";
 import "../models/locale/typed_locale.dart";
 import "../models/typedefs.dart";

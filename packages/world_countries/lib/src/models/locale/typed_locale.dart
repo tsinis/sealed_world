@@ -6,7 +6,7 @@ import "dart:ui" show Locale, keepToString;
 import "package:flutter/foundation.dart" show immutable;
 import "package:world_flags/world_flags.dart";
 
-import "../../extensions/typed_locale_extension.dart";
+import "../../extensions/models/typed_locale_extension.dart";
 import "../iso/iso_maps.dart";
 import "../typedefs.dart";
 
@@ -152,7 +152,6 @@ class TypedLocale extends Locale implements BasicTypedLocale {
   @override
   String? get scriptCode => script?.code;
 
-  // TODO! Test 3 letter codes construction too.
   /// Returns a copy of the [TypedLocale] object with the specified properties.
   /// {@macro copy_with_method}
   TypedLocale copyWith({

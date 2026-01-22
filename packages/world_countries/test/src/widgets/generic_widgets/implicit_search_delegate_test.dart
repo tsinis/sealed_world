@@ -1,7 +1,7 @@
 import "package:flutter/material.dart";
 import "package:flutter_test/flutter_test.dart";
 import "package:world_countries/src/models/search_data.dart";
-import "package:world_countries/world_countries.dart";
+import "package:world_countries/src/widgets/generic_widgets/implicit_search_delegate.dart";
 
 import "../../../helpers/widget_tester_extension.dart";
 

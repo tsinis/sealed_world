@@ -139,7 +139,7 @@ class SearchableIndexedListViewBuilder<T extends Object, W extends Widget>
   final Iterable<T> Function(String query, SearchMap<T> map)?
   onSearchResultsBuilder;
 
-  @override
+  @override // coverage:ignore-line
   Iterable<T> defaultItems(BuildContext? context) => const [];
 
   @override
