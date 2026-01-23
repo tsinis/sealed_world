@@ -182,9 +182,27 @@ abstract class StatefulIndexedListView<T extends Object, W extends Widget>
   @override
   final double? spacing;
 
+  /// Provides the default list of items to display when [items] is `null`.
+  ///
+  /// Subclasses must implement this method to define fallback behavior.
+  /// For example, pickers might return all available countries, currencies,
+  /// or languages from a global list, or use translation cache keys from
+  /// theme or locale delegate.
+  ///
+  /// The [context] parameter allows subclasses to access theme data or
+  /// localization delegates to determine appropriate default items.
   @protected
   Iterable<T> defaultItems(BuildContext? context);
 
+  /// Returns the items to display, using [items] if provided, otherwise
+  /// falling back to [defaultItems].
+  ///
+  /// This is the primary method for obtaining the list of items to render
+  /// in the view. It ensures that there's always a valid list of items
+  /// available, even when [items] is `null`.
+  ///
+  /// The optional [context] parameter is passed to [defaultItems] when
+  /// needed for determining defaults based on theme or locale.
   Iterable<T> resolvedItems([BuildContext? context]) =>
       items ?? defaultItems(context);
 }

@@ -231,7 +231,7 @@ void main() => group("$BasicPicker", () {
       });
 
       testWidgets("returns null when no translations available", (
-        tester, // Dart 3.8 formtting.
+        tester, // Dart 3.8 formatting.
       ) async {
         const picker = _BasicPickerTest();
         final context = await tester.contextExtractor();

@@ -3,7 +3,11 @@ import "dart:ui" show Locale;
 import "package:world_flags/world_flags.dart"
     show FiatCurrency, IsoTranslated, NaturalLanguage, WorldCountry;
 
+import "../widgets/country/country_picker.dart";
+import "../widgets/currency/currency_picker.dart" show CurrencyPicker;
 import "../widgets/generic_widgets/iso_tile.dart";
+import "../widgets/language/language_picker.dart";
+import "../widgets/phone_code/phone_code_picker.dart";
 import "locale/typed_locale.dart";
 import "search_data.dart";
 
@@ -37,6 +41,20 @@ typedef SearchMap<T extends Object> = Map<T, SearchData>;
 typedef L10NFormatter<T extends TypedLocale, Iso extends IsoTranslated> =
     String Function(MapEntry<Iso, String> l10n, T locale);
 
+/// A typedef for an [IsoTile] specialized for [FiatCurrency] items.
+///
+/// Used in [CurrencyPicker] to display currency list items with their
+/// properties such as name, code, symbol, and optional flag.
 typedef CurrencyTile = IsoTile<FiatCurrency>;
+
+/// A typedef for an [IsoTile] specialized for [WorldCountry] items.
+///
+/// Used in [CountryPicker] and [PhoneCodePicker] to display country list
+/// items with their properties such as name, flag, code, and phone code.
 typedef CountryTile = IsoTile<WorldCountry>;
+
+/// A typedef for an [IsoTile] specialized for [NaturalLanguage] items.
+///
+/// Used in [LanguagePicker] to display language list items with their
+/// properties such as name, code, and optional flag.
 typedef LanguageTile = IsoTile<NaturalLanguage>;

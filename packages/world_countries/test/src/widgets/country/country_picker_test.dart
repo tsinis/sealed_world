@@ -26,7 +26,7 @@ void main() => group("$CountryPicker", () {
   });
 
   testWidgets("copyWith itemBuilder fallback to defaultBuilder", (
-    tester, // Dart 3.8 formtting.
+    tester, // Dart 3.8 formatting.
   ) async {
     const testText = "Original";
     final picker = CountryPicker(

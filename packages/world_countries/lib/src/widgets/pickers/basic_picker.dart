@@ -244,6 +244,21 @@ abstract class BasicPicker<T extends IsoTranslated, W extends IsoTile<T>>
     );
   }
 
+  /// Returns the translated name of an item by searching in order of priority:
+  /// direct [maps], theme [PickersThemeData.maps], and global
+  /// [TypedLocaleDelegate] translation cache.
+  ///
+  /// Returns `null` if no translation is found in any source, or if all sources
+  /// are `null`.
+  ///
+  /// Asserts in debug mode when a translation is missing from a non-null
+  /// source, suggesting to add the item to the translation cache or use
+  /// [TypedLocaleDelegate] for automatic translations.
+  ///
+  /// Priority order:
+  /// 1. Direct [maps] parameter (highest priority).
+  /// 2. Theme [PickersThemeData.maps].
+  /// 3. Global [TypedLocaleDelegate] translation cache (lowest priority).
   @protected
   String? maybeNameTranslation(T item, BuildContext context) {
     final direct = maps;
@@ -529,6 +544,14 @@ abstract class BasicPicker<T extends IsoTranslated, W extends IsoTile<T>>
     animationStyle: animationStyle,
   );
 
+  /// Returns the first available [IsoMaps] from the following sources in order:
+  /// direct [maps] parameter, theme [PickersThemeData.maps], or global
+  /// [TypedLocaleDelegate] translation cache.
+  ///
+  /// Returns `null` if no [IsoMaps] is available from any source.
+  ///
+  /// This is used to access cached translations and flag overrides for
+  /// rendering picker items.
   @protected
   IsoMaps? maybeMaps(BuildContext? context) =>
       maps ?? context?.pickersTheme?.maps ?? context?.maybeLocale?.maps;

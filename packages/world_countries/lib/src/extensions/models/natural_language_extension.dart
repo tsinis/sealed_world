@@ -25,5 +25,5 @@ extension NaturalLanguageExtension on NaturalLanguage {
         languageCode: codeShort.toLowerCase(),
         scriptCode: scriptCode,
         countryCode: countryCode,
-      ); // TODO? Add toLocale with typed params?
+      );
 }
