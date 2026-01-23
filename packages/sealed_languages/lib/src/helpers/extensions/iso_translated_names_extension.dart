@@ -18,7 +18,7 @@ extension IsoTranslatedNamesExtension on IsoTranslated {
     String? orElse,
   }) {
     if (namesNative?.isEmpty ?? true) return "";
-    final names = namesNative?.map((i) => i.toString()).toSet() ?? const {};
+    final names = namesNative?.map((i) => i.toString()).toList() ?? const [];
     final length = names.length;
     if (orElse != null && skipFirst && length < 2) return orElse;
     // ignore: avoid-passing-self-as-argument, length is checked.

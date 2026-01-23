@@ -17,7 +17,7 @@ extension WorldCountryNames on WorldCountry {
     bool skipFirst = false,
     String? orElse,
   }) {
-    final names = namesNative.map((i) => i.official).toSet();
+    final names = namesNative.map((i) => i.official).toList();
     final length = names.length;
     if (orElse != null && skipFirst && length < 2) return orElse;
     // ignore: avoid-passing-self-as-argument, length is checked.
