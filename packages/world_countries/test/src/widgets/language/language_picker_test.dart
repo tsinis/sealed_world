@@ -23,6 +23,36 @@ void main() => group("$LanguagePicker", () {
     expect(newestPicker.copyWith(), isNot(newestPicker));
   });
 
+  testWidgets("copyWith itemBuilder fallback to defaultBuilder", (
+    tester, // Dart 3.8 formtting.
+  ) async {
+    const testText = "Original";
+    final picker = LanguagePicker(
+      languages: const [LangEng()],
+      itemBuilder: (props, tile) => const Text(testText),
+    );
+    const newTestText = "New";
+    final newPicker = picker.copyWith(
+      itemBuilder: (props, tile) => const Text(newTestText),
+    );
+
+    await tester.pumpMaterialApp(newPicker);
+    expect(find.text(newTestText), findsWidgets);
+    expect(find.text(testText), findsNothing);
+  });
+
+  testWidgets("copyWith itemBuilder chains to existing", (tester) async {
+    const testText = "Chained";
+    final picker = LanguagePicker(
+      languages: const [LangEng()],
+      itemBuilder: (props, tile) => const Text(testText),
+    );
+    final newPicker = picker.copyWith();
+
+    await tester.pumpMaterialApp(newPicker);
+    expect(find.text(testText), findsWidgets);
+  });
+
   testWidgets(
     "scroll from first to last item and tap",
     (tester) async => tester.testPickerBody(
