@@ -1,3 +1,5 @@
+import "package:meta/meta.dart" show useResult;
+
 import "../../models/search_data.dart";
 
 /// Extension methods for [SearchData] providing utility functionality.
@@ -22,6 +24,7 @@ extension SearchDataExtension on SearchData {
   /// some properties changed while keeping the rest unchanged. Any parameter
   /// that is not provided (or is null) will use the value from the current
   /// instance.
+  @useResult
   SearchData copyWith({
     String? code,
     String? internationalName,

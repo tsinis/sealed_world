@@ -23,7 +23,7 @@ extension IsoTileExtension<T extends IsoTranslated> on IsoTile<T> {
     Widget? leading,
     TextStyle? leadingAndTrailingTextStyle,
     bool? internalAddSemanticForOnTap,
-    Widget? title,
+    Text? title,
     TextStyle? titleTextStyle,
     Widget? subtitle,
     TextStyle? subtitleTextStyle,

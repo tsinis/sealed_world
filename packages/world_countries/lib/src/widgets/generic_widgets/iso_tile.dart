@@ -18,6 +18,7 @@ class IsoTile<T extends IsoTranslated> extends ListItemTile<T> {
   const IsoTile(
     super.item, {
     this.flagTheme = const FlagThemeData.small(),
+    this.title,
     super.autofocus,
     super.chosenIcon,
     super.contentPadding,
@@ -49,7 +50,6 @@ class IsoTile<T extends IsoTranslated> extends ListItemTile<T> {
     super.subtitleTextStyle,
     super.textColor,
     super.tileColor,
-    super.title,
     super.titleAlignment,
     super.titleTextStyle,
     super.visualDensity,
@@ -58,7 +58,7 @@ class IsoTile<T extends IsoTranslated> extends ListItemTile<T> {
     super.internalAddSemanticForOnTap,
     super.statesController,
     super.excludeSemantics = false,
-  });
+  }) : super(title: title);
 
   /// Constructor for the [IsoTile] class that uses an [ItemProperties]
   /// object.
@@ -71,7 +71,7 @@ class IsoTile<T extends IsoTranslated> extends ListItemTile<T> {
     ItemProperties<T> iso, {
     this.flagTheme = const FlagThemeData.small(),
     BasicFlag? leadingFlag,
-    Widget? title,
+    Text? title,
     Widget? subtitle,
     super.autofocus,
     super.chosenIcon,
@@ -107,18 +107,22 @@ class IsoTile<T extends IsoTranslated> extends ListItemTile<T> {
     super.internalAddSemanticForOnTap,
     super.statesController,
     super.excludeSemantics = false,
-  }) : super(
+  }) : title =
+           title ??
+           MaybeWidget.orNull(
+             iso.item.namesNative?.firstOrNull?.toString(),
+             (firstName) => Text(firstName, overflow: TextOverflow.ellipsis),
+           ),
+       super(
          iso.item,
          isChosen: iso.isChosen,
          isDisabled: iso.isDisabled,
          semanticsIdentifier: iso.item.semanticIdentifier,
-         leading: leadingFlag?.copyWithTheme(theme: flagTheme),
-         title:
-             title ??
-             MaybeWidget.orNull(
-               iso.item.namesNative?.firstOrNull?.toString(),
-               (firstName) => Text(firstName, overflow: TextOverflow.ellipsis),
-             ),
+         leading: MaybeWidget.orNull(
+           flagTheme,
+           (theme) => leadingFlag?.copyWithTheme(theme: theme),
+         ),
+         title: title,
          subtitle:
              subtitle ??
              Text(
@@ -131,6 +135,12 @@ class IsoTile<T extends IsoTranslated> extends ListItemTile<T> {
        );
 
   /// The theme data for the displayed in the tile, could be also provided
-  /// via [ThemeExtension<FlagThemeData>].
-  final FlagThemeData flagTheme;
+  /// via [ThemeExtension<FlagThemeData>]. If not provided - flag will not be
+  /// displayed. Defaults to [FlagThemeData.small()].
+  final FlagThemeData? flagTheme;
+
+  /// The title widget to display in the tile, typically a [Text] widget with
+  /// a localized name of the ISO object.
+  @override
+  final Text? title; // ignore: overridden_fields, it's intended.
 }
