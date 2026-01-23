@@ -338,7 +338,7 @@ void main() => group("SearchDataExtension", () {
       const special = "🌍 Test™ © \n\t";
       final searchData = SearchData(
         special,
-        {special},
+        const {special},
         code: special,
         name: special,
       );

@@ -123,12 +123,12 @@ void main() => group("$IsoCollections", () {
 
       test("should display currency flags mapping", () {
         final currency = FiatCurrency.list.first;
-        final country1 = WorldCountry.list.first;
-        final country2 = WorldCountry.list.elementAt(1);
+        final firstCountry = WorldCountry.list.first;
+        final secondCountry = WorldCountry.list.elementAt(1);
 
         final collections = IsoCollections.selective(
           currencyFlagsMap: {
-            currency: [country1, country2],
+            currency: [firstCountry, secondCountry],
           },
         );
 
@@ -136,8 +136,8 @@ void main() => group("$IsoCollections", () {
 
         expect(result, contains("currencyFlags: {"));
         expect(result, contains(currency.code));
-        expect(result, contains(country1.code));
-        expect(result, contains(country2.code));
+        expect(result, contains(firstCountry.code));
+        expect(result, contains(secondCountry.code));
       });
 
       test("should display language flags mapping", () {
