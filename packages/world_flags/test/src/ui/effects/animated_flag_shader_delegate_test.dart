@@ -140,10 +140,12 @@ void main() => group("$AnimatedFlagShaderDelegate", () {
 
   testWidgets("does not start when animate returns false", (tester) async {
     final delegate = _PausableAnimatedDelegate(vsync: tester, isPaused: true);
+    // Verify time doesn't advance when manually ticked (ticker not running).
+    await tester.pump(const Duration(milliseconds: 16));
     expect(
       delegate.currentTime,
       equals(0),
-      reason: "Time should still be 0 because ticker never started.",
+      reason: "Time should remain 0 because ticker never started.",
     );
     delegate.dispose();
   });

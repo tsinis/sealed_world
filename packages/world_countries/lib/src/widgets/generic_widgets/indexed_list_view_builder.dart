@@ -91,7 +91,7 @@ class IndexedListViewBuilder<T extends Object, W extends Widget>
   Iterable<T> defaultItems(BuildContext? context) => const [];
 
   @override
-  State<IndexedListViewBuilder> createState() =>
+  State<IndexedListViewBuilder<T, W>> createState() =>
       _IndexedListViewBuilderState<T, W>();
 }
 

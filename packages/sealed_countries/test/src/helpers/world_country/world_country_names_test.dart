@@ -12,7 +12,7 @@ void main() => group("WorldCountryNames", () {
       "separator",
       () => expect(
         country.namesOfficialNative(separator: "-"),
-        """${country.namesNative.first.fullName}-${country.namesNative.last.fullName}""",
+        country.namesNative.map((i) => i.fullName).join("-"),
       ),
     );
 
@@ -26,7 +26,7 @@ void main() => group("WorldCountryNames", () {
         "with multiple names",
         () => expect(
           country.namesOfficialNative(skipFirst: true),
-          country.namesNative.last.fullName,
+          country.namesNative.skip(1).map((i) => i.fullName).join("/"),
         ),
       );
 
@@ -61,7 +61,7 @@ void main() => group("WorldCountryNames", () {
         "with multiple names and orElse",
         () => expect(
           country.namesOfficialNative(skipFirst: true, orElse: fallback),
-          country.namesNative.last.fullName,
+          country.namesNative.skip(1).map((i) => i.fullName).join("/"),
         ),
       );
     });

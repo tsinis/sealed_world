@@ -4,7 +4,6 @@ library world_countries;
 
 export "package:world_flags/world_flags.dart";
 
-export "/src/models/iso/iso_collections.dart";
 export "src/extensions/core/locale_extension.dart";
 export "src/extensions/iso_tile_extension.dart";
 export "src/extensions/list_item_tile_extension.dart";
@@ -27,6 +26,7 @@ export "src/interfaces/searchable_interface.dart";
 export "src/mixins/compare_search_mixin.dart";
 export "src/mixins/popped_mixin.dart";
 export "src/mixins/properties_convertible_mixin.dart";
+export "src/models/iso/iso_collections.dart";
 export "src/models/iso/iso_maps.dart";
 export "src/models/item_properties.dart";
 export "src/models/locale/typed_locale.dart";

@@ -55,7 +55,7 @@ void main() => group("WorldCountriesBuildContextExtension", () {
     testWidgets("should return null when PickersThemeData is not provided", (
       tester,
     ) async {
-      await tester.pumpWidget(const MaterialApp(home: SizedBox()));
+      await tester.pumpWidget(const SizedBox());
       final context = tester.element(find.byType(SizedBox));
       expect(context.pickersTheme, isNull);
     });
@@ -245,7 +245,7 @@ void main() => group("WorldCountriesBuildContextExtension", () {
       const currencyTheme = CurrencyTileThemeData();
       const languageTheme = LanguageTileThemeData();
 
-      await tester.pumpMaterialApp(
+      await tester.pumpWidget(
         MaterialApp(
           home: const Scaffold(body: SizedBox()),
           theme: ThemeData(

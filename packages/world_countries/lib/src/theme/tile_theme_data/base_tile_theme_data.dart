@@ -17,7 +17,7 @@ import "../../widgets/generic_widgets/iso_tile.dart";
 ///
 /// Parameters:
 /// - [itemBuilder]: An optional function that returns a widget for a given set
-///  of [ItemProperties] and density flag.
+/// of [ItemProperties] and the default [IsoTile] widget.
 ///
 /// This allows for custom tile widgets to be built based on the provided item
 /// properties and whether the tile should be dense or not.
