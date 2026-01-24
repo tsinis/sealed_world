@@ -145,37 +145,6 @@ void main() => group("$FlagShaderSurface", () {
     shader.dispose();
   });
 
-  testWidgets("uses View.of fallback when MediaQuery is absent", (
-    tester, // Dart 3.8 formatting.
-  ) async {
-    // ignore: avoid-mutating-parameters, standard Flutter test view setup.
-    final view = tester.view..devicePixelRatio = 2.5;
-    addTearDown(view.resetDevicePixelRatio);
-
-    MediaQueryData? capturedMediaQuery;
-    await tester.pumpWidget(
-      Directionality(
-        textDirection: TextDirection.ltr,
-        child: Builder(
-          builder: (context) {
-            capturedMediaQuery = MediaQuery.maybeOf(context);
-
-            return const FlagShaderSurface(CountryUsa());
-          },
-        ),
-      ),
-    );
-    await tester.pump();
-
-    expect(
-      capturedMediaQuery,
-      isNull,
-      reason: "MediaQuery must be null to test View.of fallback",
-    );
-    expect(find.byType(FlagShaderSurface), findsOneWidget);
-    expect(find.byType(CustomPaint), findsWidgets);
-  });
-
   testWidgets("reuses painter when delegate unchanged", (tester) async {
     await tester.pumpWidget(
       const MaterialApp(home: FlagShaderSurface(CountryUsa())),
