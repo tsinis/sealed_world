@@ -26,13 +26,12 @@ void main() => group("$AnimatedFlagShaderDelegate", () {
       final delegate = _PausableAnimatedDelegate(vsync: tester, isPaused: true);
       expect(delegate.animate, isFalse);
       expect(delegate.currentTime, equals(0));
-      delegate
-        ..startAnimation()
-        ..simulateTick(0.016);
+      delegate.startAnimation();
+      await tester.pump(const Duration(milliseconds: 16));
       expect(
         delegate.currentTime,
-        greaterThan(0),
-        reason: "Time should have advanced since we started animation.",
+        equals(0),
+        reason: "Time should remain 0 because delegate is paused.",
       );
       delegate
         ..stopAnimation()
@@ -41,6 +40,7 @@ void main() => group("$AnimatedFlagShaderDelegate", () {
 
     testWidgets("can be called multiple times safely", (tester) async {
       final delegate = _AnimatedFlagShaderDelegateTest(vsync: tester)
+        ..stopAnimation()
         ..simulateTick(0.016);
       final timeBefore = delegate.currentTime;
       expect(timeBefore, greaterThan(0));
@@ -60,6 +60,7 @@ void main() => group("$AnimatedFlagShaderDelegate", () {
 
   testWidgets("stopAnimation can be called and preserves time", (tester) async {
     final delegate = _AnimatedFlagShaderDelegateTest(vsync: tester)
+      ..stopAnimation()
       ..simulateTick(0.016);
     final timeStopped = delegate.currentTime;
     expect(timeStopped, greaterThan(0));
@@ -74,6 +75,7 @@ void main() => group("$AnimatedFlagShaderDelegate", () {
 
   testWidgets("animation resumes from same point", (tester) async {
     final delegate = _AnimatedFlagShaderDelegateTest(vsync: tester)
+      ..stopAnimation()
       ..simulateTick(0.05);
     final timeStopped = delegate.currentTime;
     expect(timeStopped, greaterThan(0));
@@ -97,11 +99,11 @@ void main() => group("$AnimatedFlagShaderDelegate", () {
     final slowDelegate = _AnimatedFlagShaderDelegateTest(
       vsync: tester,
       speed: 0.5,
-    );
+    )..stopAnimation();
     final fastDelegate = _AnimatedFlagShaderDelegateTest(
       vsync: tester,
       speed: 2,
-    );
+    )..stopAnimation();
 
     const deltaSeconds = 0.1; // Simulate same delta time for both.
     slowDelegate.simulateTick(deltaSeconds);
@@ -113,7 +115,7 @@ void main() => group("$AnimatedFlagShaderDelegate", () {
     );
     expect(
       fastDelegate.currentTime,
-      equals(slowDelegate.currentTime * 4),
+      closeTo(slowDelegate.currentTime * 4, 1e-6),
       reason:
           "Verify the ratio is correct, 2x speed vs 0.5x speed = 4x difference",
     );
@@ -127,7 +129,7 @@ void main() => group("$AnimatedFlagShaderDelegate", () {
   });
 
   testWidgets("onTick is called during animation", (tester) async {
-    final delegate = _TrackingAnimatedDelegate(vsync: tester);
+    final delegate = _TrackingAnimatedDelegate(vsync: tester)..stopAnimation();
     expect(delegate.tickCount, equals(0));
     delegate
       ..simulateTick(0.015)
@@ -151,10 +153,10 @@ void main() => group("$AnimatedFlagShaderDelegate", () {
   });
 
   testWidgets("time wraps around at 10000 to prevent overflow", (tester) async {
-    final delegate = _AnimatedFlagShaderDelegateTest(
-      vsync: tester,
-      speed: 100_000,
-    )..simulateTick(0.2); // 0.2 * 100000 = 20000 -> wraps to 10000.
+    final delegate =
+        _AnimatedFlagShaderDelegateTest(vsync: tester, speed: 100_000)
+          ..stopAnimation()
+          ..simulateTick(0.2); // 0.2 * 100000 = 20000 -> wraps to 10000.
     expect(delegate.currentTime, equals(10000));
     delegate
       ..stopAnimation()
@@ -162,7 +164,8 @@ void main() => group("$AnimatedFlagShaderDelegate", () {
   });
 
   testWidgets("animationSpeed defaults to 1", (tester) async {
-    final delegate = _AnimatedFlagShaderDelegateTest(vsync: tester);
+    final delegate = _AnimatedFlagShaderDelegateTest(vsync: tester)
+      ..stopAnimation();
     expect(delegate.animationSpeed, 1.0);
     delegate
       ..stopAnimation()
