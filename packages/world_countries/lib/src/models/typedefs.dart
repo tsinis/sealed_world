@@ -1,7 +1,12 @@
 import "dart:ui" show Locale;
 
 import "package:world_flags/world_flags.dart"
-    show FiatCurrency, IsoTranslated, NaturalLanguage, WorldCountry;
+    show
+        BasicTypedLocale,
+        FiatCurrency,
+        IsoTranslated,
+        NaturalLanguage,
+        WorldCountry;
 
 import "../widgets/country/country_picker.dart";
 import "../widgets/currency/currency_picker.dart" show CurrencyPicker;
@@ -10,6 +15,31 @@ import "../widgets/language/language_picker.dart";
 import "../widgets/phone_code/phone_code_picker.dart";
 import "locale/typed_locale.dart";
 import "search_data.dart";
+
+/// A factory that creates a comparator for sorting translation map entries.
+///
+/// Used by `MapIsoL10nExtension.sortAlphabetically` to allow custom sorting
+/// logic. The factory receives the [locale] once and returns a [Comparator]
+/// that compares [MapEntry] instances containing the ISO object and its
+/// translated name.
+///
+/// This design ensures efficient sorting by constructing locale-specific
+/// resources (like collators) only once, rather than on every comparison.
+///
+/// The returned comparator should return a negative number if the first entry
+/// should come before the second, zero if they are equal, or a positive number
+/// if the first should come after.
+///
+/// Example with `intl4x` package for locale-aware diacritics handling:
+/// ```dart
+/// final sorterFactory = (BasicTypedLocale typed) {
+///   final locale = Locale.parse(typed.toUnicodeLocaleId());
+///   final collator = Collation(locale: locale);
+///   return (a, b) => collator.compare(a.value, b.value);
+/// };
+/// ```
+typedef L10nSorter<T extends IsoTranslated> =
+    Comparator<MapEntry<T, String>> Function(BasicTypedLocale locale);
 
 /// A typedef representing a map entry of [Locale] and [TypedLocale].
 ///

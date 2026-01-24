@@ -52,15 +52,20 @@ class TypedLocaleDelegate implements LocalizationsDelegate<TypedLocale?> {
   /// dependent widgets will be rebuilt after [load] has completed.
   /// - [l10nFormatter]: Optional formatter that customizes how ISO
   ///   translations are rendered.
+  /// - [l10nSorter]: Optional custom comparator for sorting translations.
+  ///   When provided, overrides the default alphabetical sorting. Useful for
+  ///   locale-sensitive collation (e.g., handling diacritics properly).
   const TypedLocaleDelegate({
     @mustBeConst this.fallbackLanguage,
     bool asyncTranslationCacheProcessing = true,
     @mustBeConst IsoCollections isoCollections = const IsoCollections(),
     L10NFormatter<TypedLocale, IsoTranslated>? l10nFormatter,
+    L10nSorter<IsoTranslated>? l10nSorter,
     bool shouldReload = false,
   }) : _asyncTranslationCacheProcessing = asyncTranslationCacheProcessing,
        _isoCollections = isoCollections,
        _l10nFormatter = l10nFormatter,
+       _l10nSorter = l10nSorter,
        _shouldReload = shouldReload;
 
   /// Creates an instance of [TypedLocaleDelegate] without translations caching.
@@ -83,16 +88,19 @@ class TypedLocaleDelegate implements LocalizationsDelegate<TypedLocale?> {
   /// dependent widgets will be rebuilt after [load] has completed.
   /// - [l10nFormatter]: Optional formatter that customizes how ISO
   ///   translations are rendered.
+  /// - [l10nSorter]: Optional custom comparator for sorting translations.
   const TypedLocaleDelegate.selectiveCache({
     @mustBeConst this.fallbackLanguage,
     bool asyncTranslationCacheProcessing = true,
     @mustBeConst
     IsoCollections isoCollections = const IsoCollections.selective(),
     L10NFormatter<TypedLocale, IsoTranslated>? l10nFormatter,
+    L10nSorter<IsoTranslated>? l10nSorter,
     bool shouldReload = false,
   }) : _asyncTranslationCacheProcessing = asyncTranslationCacheProcessing,
        _isoCollections = isoCollections,
        _l10nFormatter = l10nFormatter,
+       _l10nSorter = l10nSorter,
        _shouldReload = shouldReload;
 
   /// A constant list of [LocaleEntry] objects that define the default
@@ -133,6 +141,14 @@ class TypedLocaleDelegate implements LocalizationsDelegate<TypedLocale?> {
   // ignore: prefer-correct-callback-field-name, it's not a builder.
   final L10NFormatter<TypedLocale, IsoTranslated>? _l10nFormatter;
 
+  /// A custom comparator for sorting translations.
+  ///
+  /// When provided, overrides the default alphabetical sorting (which uses
+  /// simple Unicode code-point comparison via [String.compareTo]). This allows
+  /// locale-sensitive collation, e.g., proper handling of diacritics.
+  // ignore: prefer-correct-callback-field-name, it's not a builder.
+  final L10nSorter<IsoTranslated>? _l10nSorter;
+
   @override
   @useResult
   bool isSupported(Locale locale) => _toTypedLocale(locale) != null;
@@ -152,12 +168,14 @@ class TypedLocaleDelegate implements LocalizationsDelegate<TypedLocale?> {
             currencies: _isoCollections.currenciesForTranslationCache,
             countries: _isoCollections.countriesForTranslationCache,
             l10nFormatter: _l10nFormatter,
+            l10nSorter: _l10nSorter,
           )
         : typedLocale?.copyWithTranslationsCache(
             languages: _isoCollections.languagesForTranslationCache,
             currencies: _isoCollections.currenciesForTranslationCache,
             countries: _isoCollections.countriesForTranslationCache,
             l10nFormatter: _l10nFormatter,
+            l10nSorter: _l10nSorter,
           );
 
     return await translatedMaps?.copyWithFlagsCache(
