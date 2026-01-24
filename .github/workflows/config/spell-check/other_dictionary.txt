@@ -18,6 +18,10 @@ alphae
 alphaen
 americký
 appium
+belgien
+belgique
+belgië
+byelarus
 checo
 dolar
 dolyar
@@ -30,6 +34,7 @@ federace
 ffaabbcc
 inglés
 islas
+japon
 japán
 jazyk
 lanna
@@ -46,6 +51,8 @@ sjedinjene
 slovensko
 slovenská
 staaten
+svizra
+svizzera
 taegukgi
 tcheco
 testish
@@ -55,5 +62,10 @@ vereinigte
 Český
 češki
 čeština
+аустрија
+беларусь
+бразил
+венецуела
+грчка
 португальский
 чешки
