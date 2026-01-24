@@ -59,7 +59,8 @@ testish
 tham
 unidos
 vereinigte
-Český
+český
+česko
 češki
 čeština
 аустрија
