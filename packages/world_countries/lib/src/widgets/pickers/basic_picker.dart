@@ -10,17 +10,20 @@ import "package:world_flags/world_flags.dart";
 import "../../constants/ui_constants.dart";
 import "../../extensions/build_context_extension.dart";
 import "../../extensions/core/duration_extension.dart";
+import "../../extensions/iso_tile_extension.dart";
 import "../../extensions/iterable_search_map_extension.dart";
 import "../../extensions/world_countries_build_context_extension.dart";
 import "../../helpers/typed_locale_delegate.dart";
 import "../../interfaces/basic_picker_interface.dart";
 import "../../mixins/compare_search_mixin.dart";
+import "../../models/iso/iso_maps.dart";
 import "../../models/item_properties.dart";
-import "../../models/locale/typed_locale.dart";
+import "../../models/search_data.dart";
 import "../../models/typedefs.dart";
 import "../../theme/pickers_theme_data.dart";
 import "../adaptive/adaptive_search_text_field.dart";
 import "../generic_widgets/implicit_search_delegate.dart";
+import "../generic_widgets/iso_tile.dart";
 import "../generic_widgets/searchable_indexed_list_view_builder.dart";
 import "../helpers/maybe_widget.dart";
 
@@ -29,8 +32,8 @@ part "basic_picker_state.dart";
 /// An abstract class that provides a basic picker [Widget], with search
 /// functionality and indexing support.
 @immutable
-abstract class BasicPicker<T extends IsoTranslated>
-    extends SearchableIndexedListViewBuilder<T>
+abstract class BasicPicker<T extends IsoTranslated, W extends IsoTile<T>>
+    extends SearchableIndexedListViewBuilder<T, W>
     with CompareSearchMixin<T>
     implements BasicPickerInterface {
   /// Constructor for the [BasicPicker] class.
@@ -77,7 +80,8 @@ abstract class BasicPicker<T extends IsoTranslated>
   /// * [searchBarPadding] is the padding to apply to the search bar.
   /// * [showClearButton] is a boolean indicating whether to show a clear button
   ///   in the search bar.
-  /// * [translation] is the optional parameter to use for translations.
+  /// * [maps] is the optional [IsoMaps] bundle containing pre-computed
+  ///   translation caches and optional flag overrides.
   const BasicPicker(
     super.items, {
     super.addAutomaticKeepAlives,
@@ -92,7 +96,7 @@ abstract class BasicPicker<T extends IsoTranslated>
     super.disabled,
     super.dragStartBehavior,
     super.emptyStatePlaceholder,
-    super.itemBuilder,
+    this.itemBuilder,
     super.key,
     super.keyboardDismissBehavior,
     super.mainAxisAlignment,
@@ -118,9 +122,39 @@ abstract class BasicPicker<T extends IsoTranslated>
     this.searchBar,
     this.searchBarPadding, // Default: EdgeInsets.only(left:8, top:8, right:8).
     this.showClearButton = true,
-    this.translation,
-    this.flagsMap = const {},
-  }) : super(header: searchBar);
+    this.maps,
+  }) : super(header: searchBar, itemBuilder: itemBuilder);
+
+  /// Custom itemBuilder that receives the default tile for customization.
+  ///
+  /// If provided, this itemBuilder receives [ItemProperties] and the default
+  /// [IsoTile<T>] widget. You can return the default tile as-is, or create
+  /// a custom widget using the tile's properties (like `dense`,
+  /// `visualDensity`, etc.) as a reference.
+  ///
+  /// Example:
+  /// ```dart
+  /// itemBuilder: (itemProperties, defaultTile) {
+  ///   // Option 1: Use the default tile as-is
+  ///   return defaultTile;
+  ///
+  ///   // Option 2: Use tile properties to create custom widget
+  ///   final isDense = defaultTile.dense ?? false;
+  ///   return MyCustomTile(
+  ///     item: itemProperties.item,
+  ///     dense: isDense,
+  ///   );
+  ///
+  ///   // Option 3: Modify the default tile appearance
+  ///   return DecoratedBox(
+  ///     decoration: BoxDecoration(color: Colors.blue.shade50),
+  ///     child: defaultTile,
+  ///   );
+  /// }
+  /// ```
+  @override
+  // ignore: overridden_fields, for documentation purpose.
+  final Widget? Function(ItemProperties<T>, IsoTile<T>?)? itemBuilder;
 
   /// A boolean indicating whether to show a clear button in the search bar.
   @override
@@ -134,35 +168,40 @@ abstract class BasicPicker<T extends IsoTranslated>
   @override
   final EdgeInsetsGeometry? searchBarPadding;
 
-  /// The local to use for translations.
+  /// Cached translations/flags bundle to use for rendering.
   @override
-  final TypedLocale? translation;
+  final IsoMaps? maps;
 
-  @override
-  final Map<T, BasicFlag> flagsMap;
-
-  /// Returns the default builder for the items.
-  /// It also has an optional parameter `isDense`, which indicates whether the
-  /// item uses less vertical space or not, defaults to `false`.
+  /// Returns the default tile widget for the items.
+  ///
+  /// This method creates and returns the default [IsoTile] with theme
+  /// properties applied.
+  ///
+  /// Example usage in custom itemBuilder:
+  /// ```dart
+  /// itemBuilder: (itemProperties, defaultTile) {
+  ///   // Use the default tile as-is
+  ///   return defaultTile;
+  ///
+  ///   // Or wrap/modify it
+  ///   return ColoredBox(
+  ///     color: Colors.blue.shade50,
+  ///     child: defaultTile,
+  ///   );
+  /// }
+  /// ```
   @protected
-  Widget defaultBuilder(
-    BuildContext context,
-    ItemProperties<T> itemProperties, {
-    bool? isDense,
-  });
+  W defaultBuilder(ItemProperties<T> itemProperties);
 
   /// Returns the default search function for the items. By default returns
   /// translated name of the item (if exists).
   @protected
-  @mustCallSuper
-  Iterable<String> defaultSearch(T item, BuildContext context) => [
-    _maybeNameTranslation(item, context) ?? item.internationalName,
-  ];
+  SearchData defaultSearch(T item, BuildContext context);
 
   /// Returns the name translation of the item (if exists) in form
   /// of [Text] widget.
   Text? itemNameTranslated(T item, BuildContext context) => MaybeWidget.orNull(
-    _maybeNameTranslation(item, context),
+    maybeNameTranslation(item, context),
     (title) => Text(title, overflow: TextOverflow.ellipsis),
   );
 
@@ -174,33 +213,56 @@ abstract class BasicPicker<T extends IsoTranslated>
     SearchController controller,
   ) {
     final text = controller.text.trim();
-    final map = items.searchMap(context, searchIn ?? defaultSearch);
-    final x = text.isNotEmpty
+    final sourceItems = resolvedItems(context);
+    final map = sourceItems.searchMap(context, searchIn ?? defaultSearch);
+    final iterable = text.isNotEmpty
         ? (onSearchResultsBuilder?.call(text, map) ??
-              items.searchResults(
+              sourceItems.searchResults(
                 map,
                 (itemText) => compareWithTextInput(controller, itemText),
               ))
-        : items;
+        : sourceItems;
 
     return List<Widget>.generate(
-      x.length,
-      (i) =>
-          itemBuilder?.call(filteredProperties(x, context, i), isDense: true) ??
-          // ignore: avoid-returning-widgets, Might be breaking change.
-          defaultBuilder(
-            context,
-            filteredProperties(x, context, i),
-            isDense: true,
-          ),
-      growable: false,
+      iterable.length,
+      // ignore: prefer-extracting-callbacks, due to complexity.
+      (i) {
+        final props = filteredProperties(iterable, context, i);
+        final defaultTile = defaultBuilder(props).copyWith(
+          onPressed: (item) => maybeSelectAndPop(item, context),
+          titleAlignment: ListTileTitleAlignment.titleHeight,
+          visualDensity: VisualDensity.compact,
+          dense: true,
+        );
+
+        return itemBuilder?.call(props, defaultTile) ??
+            context.tileTheme<T>()?.itemBuilder?.call(props, defaultTile) ??
+            defaultTile;
+      },
+      growable: false, // Dart 3.8 Formatting.
     );
   }
 
-  String? _maybeNameTranslation(T item, BuildContext context) {
-    final direct = translation;
-    final global = context.maybeLocale;
-    final theme = context.pickersTheme?.translation;
+  /// Returns the translated name of an item by searching in order of priority:
+  /// direct [maps], theme [PickersThemeData.maps], and global
+  /// [TypedLocaleDelegate] translation cache.
+  ///
+  /// Returns `null` if no translation is found in any source, or if all sources
+  /// are `null`.
+  ///
+  /// Asserts in debug mode when a translation is missing from a non-null
+  /// source, suggesting to add the item to the translation cache or use
+  /// [TypedLocaleDelegate] for automatic translations.
+  ///
+  /// Priority order:
+  /// 1. Direct [maps] parameter (highest priority).
+  /// 2. Theme [PickersThemeData.maps].
+  /// 3. Global [TypedLocaleDelegate] translation cache (lowest priority).
+  @protected
+  String? maybeNameTranslation(T item, BuildContext context) {
+    final direct = maps;
+    final theme = context.pickersTheme?.maps;
+    final global = context.maybeLocale?.maps;
 
     if (direct == null && theme == null && global == null) return null;
     String? result;
@@ -222,17 +284,17 @@ abstract class BasicPicker<T extends IsoTranslated>
 
     assert(
       direct == null,
-      "The $TypedLocale passed to the `translation` parameter in the "
+      "The $IsoMaps passed to the `maps` parameter in the "
       "$this lacks a translation for item: $item. Verify that the provided "
       "${TranslationMap<T>} translations map includes a key value pair for the "
       "{${item.runtimeType}(): '${item.internationalName} translation'} there."
       " Consider adding `localizationsDelegates: const [TypedLocaleDelegate()]`"
-      " in the app to enable device locale-based auto. translation maps cache.",
+      " in the app to enable device locale-based auto translation maps cache.",
     );
 
     assert(
       theme == null,
-      "The $TypedLocale passed to the `translation` parameter in "
+      "The $IsoMaps passed to the `maps` parameter in "
       "$PickersThemeData lacks a translation for item: $item. Verify that the "
       "${TranslationMap<T>} translations map includes a key value pair for the "
       "{${item.runtimeType}(): '${item.internationalName} translation'} there.",
@@ -241,20 +303,16 @@ abstract class BasicPicker<T extends IsoTranslated>
     assert(
       global == null,
       "The $TypedLocaleDelegate passed to the app's `localizationsDelegates` "
-      "parameter lacks a translation for item: $item. Verify that the "
-      "translation cache includes a key value pair for the "
+      "parameter provided IsoMaps without a translation for item: $item. "
+      "Verify that the translation cache includes a key value pair for the "
       "{${item.runtimeType}(): '${item.internationalName} translation'} there.",
     );
 
     return result;
   }
 
-  /// Returns translated common name of the item (if exists).
-  @protected
-  String? nameTranslationCache(T item, TypedLocale locale);
-
   @override
-  State<BasicPicker<T>> createState() => _BasicPickerState<T>();
+  State<BasicPicker<T, W>> createState() => _BasicPickerState<T, W>();
 
   @override
   Future<T?> showInModalBottomSheet(
@@ -284,6 +342,7 @@ abstract class BasicPicker<T extends IsoTranslated>
       child: FractionallySizedBox(
         heightFactor: heightFactor,
         child: copyWith(
+          items: resolvedItems(newContext),
           onSelect: (selected) => maybeSelectAndPop(selected, newContext),
         ),
       ),
@@ -327,7 +386,8 @@ abstract class BasicPicker<T extends IsoTranslated>
     // ignore: avoid-long-functions, a lot of parameters here.
   }) async {
     T? result;
-    final searchMap = items.searchMap(context, searchIn ?? defaultSearch);
+    final sourceItems = resolvedItems(context);
+    final searchMap = sourceItems.searchMap(context, searchIn ?? defaultSearch);
     // ignore: avoid-late-keyword, avoid-unnecessary-local-late, it's not.
     late final ImplicitSearchDelegate<T> delegate;
     // ignore: avoid-local-functions, lazy delegate.
@@ -337,11 +397,11 @@ abstract class BasicPicker<T extends IsoTranslated>
     }
 
     delegate = ImplicitSearchDelegate<T>(
-      items,
+      sourceItems,
       // ignore: prefer-correct-handler-name, breaking change.
-      resultsBuilder: (_, items) => copyWith(
-        key: onSearchResultsBuilder == null ? null : ValueKey(items.length),
-        items: items,
+      resultsBuilder: (_, itemsList, _) => copyWith(
+        key: onSearchResultsBuilder == null ? null : ValueKey(itemsList.length),
+        items: itemsList,
         onSelect: closeOnSelect,
         showSearchBar: false,
       ),
@@ -447,6 +507,7 @@ abstract class BasicPicker<T extends IsoTranslated>
       content: SizedBox(
         width: double.maxFinite,
         child: copyWith(
+          items: resolvedItems(newContext),
           onSelect: (selected) => maybeSelectAndPop(selected, newContext),
         ),
       ),
@@ -482,9 +543,25 @@ abstract class BasicPicker<T extends IsoTranslated>
     animationStyle: animationStyle,
   );
 
+  /// Returns the first available [IsoMaps] from the following sources in order:
+  /// direct [maps] parameter, theme [PickersThemeData.maps], or global
+  /// [TypedLocaleDelegate] translation cache.
+  ///
+  /// Returns `null` if no [IsoMaps] is available from any source.
+  ///
+  /// This is used to access cached translations and flag overrides for
+  /// rendering picker items.
+  @protected
+  IsoMaps? maybeMaps(BuildContext? context) =>
+      maps ?? context?.pickersTheme?.maps ?? context?.maybeLocale?.maps;
+
+  /// Returns translated common name of the item (if exists).
+  @protected
+  String? nameTranslationCache(T item, IsoMaps isoMaps);
+
   /// Creates a copy of this picker with the given fields replaced with the new
   /// values.
-  BasicPicker<T> copyWith({
+  BasicPicker<T, W> copyWith({
     Iterable<T>? items,
     bool? addAutomaticKeepAlives,
     bool? addRepaintBoundaries,
@@ -520,13 +597,11 @@ abstract class BasicPicker<T extends IsoTranslated>
     TextBaseline? textBaseline,
     TextDirection? textDirection,
     VerticalDirection? verticalDirection,
-    Iterable<String> Function(T item, BuildContext context)? searchIn,
+    SearchData Function(T item, BuildContext context)? searchIn,
     Iterable<T> Function(String query, SearchMap<T> map)?
     onSearchResultsBuilder,
-    Widget? Function(ItemProperties<T> itemProperties, {bool? isDense})?
-    itemBuilder,
+    Widget? Function(ItemProperties<T>, IsoTile<T>)? itemBuilder,
     double? spacing,
-    TypedLocale? translation,
-    Map<T, BasicFlag>? flagsMap,
+    IsoMaps? maps,
   });
 }

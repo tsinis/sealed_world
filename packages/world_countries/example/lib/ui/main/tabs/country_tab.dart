@@ -9,7 +9,7 @@ import "../abstractions/world_data_tab.dart";
 import "../widgets/description_tile.dart";
 import "../widgets/tab_body.dart";
 
-final class CountryTab extends WorldDataTab<BasicTypedLocale, WorldCountry> {
+final class CountryTab extends WorldDataTab<WorldCountry> {
   CountryTab(
     super.data,
     super.go, {

@@ -1,24 +1,22 @@
 import "package:flutter/gestures.dart" show DragStartBehavior;
 import "package:flutter/material.dart";
-import "package:meta/meta.dart";
 import "package:world_flags/world_flags.dart";
 
-import "../../extensions/pickers/basic_picker_flags_extension.dart";
-import "../../extensions/world_countries_build_context_extension.dart";
+import "../../models/iso/iso_maps.dart";
 import "../../models/item_properties.dart";
-import "../../models/locale/typed_locale.dart";
+import "../../models/search_data.dart";
+import "../../models/typedefs.dart";
 import "../pickers/basic_picker.dart";
-import "currency_tile.dart";
 
 /// A picker widget that displays a list of fiat currencies.
-class CurrencyPicker extends BasicPicker<FiatCurrency> {
+class CurrencyPicker extends BasicPicker<FiatCurrency, CurrencyTile> {
   /// Constructor for the [CurrencyPicker] class.
   ///
   /// * [currencies] is the list of fiat currencies to display.
   /// * All other parameters are optional and are passed
   /// to the superclass constructor.
   const CurrencyPicker({
-    Iterable<FiatCurrency> currencies = FiatCurrency.list,
+    Iterable<FiatCurrency>? currencies,
     super.addAutomaticKeepAlives,
     super.addRepaintBoundaries,
     super.addSemanticIndexes,
@@ -57,139 +55,44 @@ class CurrencyPicker extends BasicPicker<FiatCurrency> {
     super.textDirection,
     super.verticalDirection,
     super.spacing,
-    super.translation,
-    super.flagsMap,
+    super.maps,
   }) : super(currencies);
 
-  /// A factory constructor that creates a [CurrencyPicker] with a pre-computed
-  /// map of flags based on the device's locale or a provided [localeCountry].
-  ///
-  /// Unlike the default constructor which uses a manually built [flagsMap],
-  /// this constructor automatically computes the most relevant flag for each
-  /// currency. It prioritizes the user's geopolitical context to provide a more
-  /// intuitive experience, saving you from complex manual mapping.
-  ///
-  /// For example, if the user's device is set to Greenland (`GL`), the Danish
-  /// Krone (`DKK`) will be displayed with the Greenlandic flag 🇬🇱. For all
-  /// other users, it will show the flag of Denmark 🇩🇰.
-  ///
-  /// This is achieved by first checking the provided [localeCountry]. If it's
-  /// `null`, it inspects the user's preferred locales from the platform. The
-  /// first locale with a valid country code is then used as the context. Flags
-  /// provided in the initial [flagsMap] are respected and will not be
-  /// overridden by this logic.
-  @experimental
-  CurrencyPicker.adaptiveFlags({
-    Iterable<FiatCurrency> currencies = FiatCurrency.list,
-    super.addAutomaticKeepAlives,
-    super.addRepaintBoundaries,
-    super.addSemanticIndexes,
-    super.cacheExtent,
-    super.caseSensitiveSearch,
-    super.chosen,
-    super.clipBehavior,
-    super.crossAxisAlignment,
-    super.direction,
-    super.disabled,
-    super.dragStartBehavior,
-    super.emptyStatePlaceholder,
-    super.itemBuilder,
-    super.key,
-    super.keyboardDismissBehavior,
-    super.mainAxisAlignment,
-    super.mainAxisSize,
-    super.onSelect,
-    super.padding,
-    super.physics,
-    super.primary,
-    super.restorationId,
-    super.reverse,
-    super.scrollController,
-    super.searchBar,
-    super.searchBarPadding,
-    super.searchIn,
-    super.onSearchResultsBuilder,
-    super.separator,
-    super.showClearButton,
-    super.showSearchBar,
-    super.shrinkWrap,
-    super.sort,
-    super.startWithSearch,
-    super.textBaseline,
-    super.textDirection,
-    super.verticalDirection,
-    super.spacing,
-    super.translation,
-    @mustBeConst Map<FiatCurrency, BasicFlag> flagsMap = defaultFlagsMap,
-
-    /// The country to use as the locale reference for flag selection and
-    /// mapping. If provided, this country will be used to determine the default
-    /// flag for currencies that are associated with a specific country context.
-    /// If `null`, the picker will attempt to infer the locale country from the
-    /// current context. For example if device's country is Greenland (`GL`),
-    /// the picker will use the Greenlandic 🇬🇱 flag for the Danish Krone
-    /// (`DKK`), but if device's country is China (`CN`), the picker will use
-    /// the flag of the Denmark 🇩🇰 for the Danish Krone (`DKK`).
-    WorldCountry? localeCountry,
-
-    /// An optional custom function to map or transform a [BasicFlag] for a
-    /// given currency. This function allows you to override the default flag
-    /// appearance or logic for each currency and its associated countries. If
-    /// not provided, a default flag mapping will be used (similar to country
-    /// picker).
-    BasicFlag Function(
-      BasicFlag flag,
-      FiatCurrency currency,
-      List<WorldCountry>? countries,
-    )?
-    flagMapper,
-  }) : super(
-         currencies,
-         flagsMap: flagsMap.adaptFlags(
-           currencies.byCountryMap(),
-           flagsMapper: flagMapper,
-           localeCountry: localeCountry,
-         ),
-       );
-
-  /// Default flags map for the [CurrencyPicker.adaptiveFlags].
-  /// Mapping Euro currency to the European Union 🇪🇺 flag.
-  static const defaultFlagsMap = {FiatEur(): StarFlag(flagEurProperties)};
-
   @override
-  Widget defaultBuilder(
-    BuildContext context,
-    ItemProperties<FiatCurrency> itemProperties, {
-    bool? isDense,
-  }) =>
-      context.currencyTileTheme?.builder?.call(
-        itemProperties,
-        isDense: isDense,
-      ) ??
+  CurrencyTile defaultBuilder(ItemProperties<FiatCurrency> props) =>
       CurrencyTile.fromProperties(
-        itemProperties,
-        title: itemNameTranslated(itemProperties.item, itemProperties.context),
-        dense: isDense,
-        leading: flagsMap[itemProperties.item],
-        onPressed: (currency) => (isDense ?? false)
-            ? maybeSelectAndPop(currency, itemProperties.context)
-            : onSelect?.call(currency),
-        visualDensity: (isDense ?? false) ? VisualDensity.compact : null,
+        props,
+        title: itemNameTranslated(props.item, props.context),
+        leadingFlag: maybeMaps(props.context)?.currencyFlags[props.item],
+        onPressed: onSelect,
       );
 
   @override
-  Iterable<String> defaultSearch(FiatCurrency item, BuildContext context) =>
-      Set.unmodifiable({
-        ...super.defaultSearch(item, context),
-        ...item.namesNative,
-        item.name,
-        item.code,
-        item.unit,
-      });
+  SearchData defaultSearch(FiatCurrency item, BuildContext context) =>
+      SearchData(
+        item.internationalName,
+        item.namesNative,
+        name: maybeNameTranslation(item, context),
+        code: item.code,
+        other: item.unit,
+      );
 
   @override
-  String? nameTranslationCache(FiatCurrency item, TypedLocale locale) =>
-      locale.currencyTranslations[item];
+  String? nameTranslationCache(FiatCurrency item, IsoMaps isoMaps) =>
+      isoMaps.currencyTranslations[item];
+
+  @override
+  Iterable<FiatCurrency> defaultItems(BuildContext? context) {
+    final keys = maybeMaps(context)?.currencyTranslations.keys;
+    assert(
+      keys == null || keys.isNotEmpty,
+      "The $IsoMaps passed to the `maps` contains an empty "
+      "`currencyTranslations` map. Please provide a valid `IsoMaps` instance "
+      "with currency translations or non-empty `currencies`",
+    );
+
+    return keys ?? FiatCurrency.list;
+  }
 
   @override
   // ignore: avoid-incomplete-copy-with, avoid-high-cyclomatic-complexity, a lot of params.
@@ -229,21 +132,15 @@ class CurrencyPicker extends BasicPicker<FiatCurrency> {
     TextBaseline? textBaseline,
     TextDirection? textDirection,
     VerticalDirection? verticalDirection,
-    Iterable<String> Function(FiatCurrency currency, BuildContext context)?
-    searchIn,
+    SearchData Function(FiatCurrency currency, BuildContext context)? searchIn,
     Iterable<FiatCurrency> Function(
       String query,
-      Map<FiatCurrency, Set<String>> map,
+      Map<FiatCurrency, SearchData> map,
     )?
     onSearchResultsBuilder,
-    Widget? Function(
-      ItemProperties<FiatCurrency> itemProperties, {
-      bool? isDense,
-    })?
-    itemBuilder,
+    Widget? Function(ItemProperties<FiatCurrency>, CurrencyTile)? itemBuilder,
     double? spacing,
-    TypedLocale? translation,
-    Map<FiatCurrency, BasicFlag>? flagsMap,
+    IsoMaps? maps,
   }) => CurrencyPicker(
     currencies: items ?? this.items,
     addAutomaticKeepAlives:
@@ -259,7 +156,9 @@ class CurrencyPicker extends BasicPicker<FiatCurrency> {
     disabled: disabled ?? this.disabled,
     dragStartBehavior: dragStartBehavior ?? this.dragStartBehavior,
     emptyStatePlaceholder: emptyStatePlaceholder ?? this.emptyStatePlaceholder,
-    itemBuilder: itemBuilder ?? this.itemBuilder,
+    itemBuilder: (props, tile) =>
+        itemBuilder?.call(props, tile ?? defaultBuilder(props)) ??
+        this.itemBuilder?.call(props, tile),
     key: key ?? this.key,
     keyboardDismissBehavior:
         keyboardDismissBehavior ?? this.keyboardDismissBehavior,
@@ -287,7 +186,6 @@ class CurrencyPicker extends BasicPicker<FiatCurrency> {
     textDirection: textDirection ?? this.textDirection,
     verticalDirection: verticalDirection ?? this.verticalDirection,
     spacing: spacing ?? this.spacing,
-    translation: translation ?? this.translation,
-    flagsMap: flagsMap ?? this.flagsMap,
+    maps: maps ?? this.maps,
   );
 }

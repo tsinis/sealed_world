@@ -24,7 +24,8 @@ class BasicTypedLocale extends BasicLocale {
   final WorldCountry? country;
 
   @override
-  String? get countryCode => country?.codeShort ?? super.countryCode;
+  String? get countryCode =>
+      country?.codeShort ?? country?.code ?? super.countryCode;
 
   @override
   String toString({bool short = true}) => short

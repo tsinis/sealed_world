@@ -6,7 +6,7 @@ import "../abstractions/world_data_tab.dart";
 import "../widgets/description_tile.dart";
 import "../widgets/tab_body.dart";
 
-final class CurrencyTab extends WorldDataTab<BasicLocale, FiatCurrency> {
+final class CurrencyTab extends WorldDataTab<FiatCurrency> {
   CurrencyTab(
     super.data,
     super.go, {

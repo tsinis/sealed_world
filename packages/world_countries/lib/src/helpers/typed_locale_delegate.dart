@@ -3,7 +3,8 @@ import "package:meta/meta.dart";
 import "package:world_flags/world_flags.dart";
 
 import "../extensions/core/locale_extension.dart";
-import "../extensions/typed_locale_extension.dart";
+import "../extensions/models/typed_locale_extension.dart";
+import "../models/iso/iso_collections.dart";
 import "../models/locale/typed_locale.dart";
 import "../models/typedefs.dart";
 
@@ -16,93 +17,91 @@ import "../models/typedefs.dart";
 /// The [TypedLocaleDelegate] class has the following properties:
 /// - [fallbackLanguage]: The fallback language to be used if the locale is not
 ///   available.
-/// - [localeMapResolution]: The resolution strategy for resolving the locale
-///   map.
+/// - [IsoCollections]: Bundled ISO caches, locale remapping entries, and flag
+///   mappings consumed during translation caching.
 ///
 /// Example usage:
 ///
 /// ```dart
 /// const typedLocaleDelegate = TypedLocaleDelegate(
-///       localeMapResolution: [
-///         LocaleEntry(
-///           /// Brazilian Portuguese could be mapped to Euro Portuguese.
-///           Locale("pt", "BR"),
-///           TypedLocale(LangPor(), country: CountryPrt()),
-///         ),
-///       ],
+///       isoCollections: IsoCollections(
+///         localeMapResolution: [
+///           LocaleEntry(
+///             /// Brazilian Portuguese could be mapped to Euro Portuguese.
+///             Locale("pt", "BR"),
+///             TypedLocale(LangPor(), country: CountryPrt()),
+///           ),
+///         ],
+///       ),
 ///     );
 /// ```
 @immutable
 class TypedLocaleDelegate implements LocalizationsDelegate<TypedLocale?> {
   /// Creates an instance of [TypedLocaleDelegate].
   ///
-  /// The [fallbackLanguage] parameter is optional. If provided, it sets the
-  /// fallback language. The [localeMapResolution] parameter is optional. If
-  /// provided, it sets the resolution strategy for the locale map.
-  /// The [countriesForTranslationCache] parameter is optional. If provided,
-  /// it sets the countries for translation cache.
-  /// The [currenciesForTranslationCache] parameter is optional. If provided,
-  /// it sets the currencies for translation cache.
-  /// The [languagesForTranslationCache] parameter is optional. If provided,
-  /// it sets the languages for translation cache.
-  /// The [asyncTranslationCacheProcessing] parameter is optional. If provided,
-  /// it sets the async translation cache processing. Default to `true`.
-  /// The [l10nFormatter] parameter is optional. If provided, it customizes how
-  /// ISO translations are formatted. It takes a [TypedLocale] and an
-  /// [IsoTranslated] as input and returns a formatted string.
+  /// - [fallbackLanguage]: Optional default language when a locale cannot be
+  ///   resolved.
+  /// - [isoCollections]: Immutable bundle with translation caches, optional
+  ///   locale remapping, and ISO flag mappings. See [IsoCollections]
+  ///   for details.
+  /// - [asyncTranslationCacheProcessing]: When `true`, populates
+  ///   [isoCollections] caches asynchronously.
+  /// - [shouldReload]: Set to `true` if the resources for this delegate should
+  /// be loaded again by calling the [load] method. This method is called
+  /// whenever its [Localizations] widget is rebuilt. If it returns true then
+  /// dependent widgets will be rebuilt after [load] has completed.
+  /// - [l10nFormatter]: Optional formatter that customizes how ISO
+  ///   translations are rendered.
+  /// - [l10nSorter]: Optional custom comparator for sorting translations.
+  ///   When provided, overrides the default alphabetical sorting. Useful for
+  ///   locale-sensitive collation (e.g., handling diacritics properly).
   const TypedLocaleDelegate({
     @mustBeConst this.fallbackLanguage,
-    @mustBeConst this.localeMapResolution = defaultLocaleMapResolution,
     bool asyncTranslationCacheProcessing = true,
-    @mustBeConst
-    Iterable<WorldCountry> countriesForTranslationCache = WorldCountry.list,
-    @mustBeConst
-    Iterable<FiatCurrency> currenciesForTranslationCache = FiatCurrency.list,
-    @mustBeConst
-    Iterable<NaturalLanguage> languagesForTranslationCache =
-        NaturalLanguage.list,
+    @mustBeConst IsoCollections isoCollections = const IsoCollections(),
     L10NFormatter<TypedLocale, IsoTranslated>? l10nFormatter,
+    L10nSorter<IsoTranslated>? l10nSorter,
+    bool shouldReload = false,
   }) : _asyncTranslationCacheProcessing = asyncTranslationCacheProcessing,
-       _countriesForTranslationCache = countriesForTranslationCache,
-       _currenciesForTranslationCache = currenciesForTranslationCache,
-       _languagesForTranslationCache = languagesForTranslationCache,
-       _l10nFormatter = l10nFormatter;
+       _isoCollections = isoCollections,
+       _l10nFormatter = l10nFormatter,
+       _l10nSorter = l10nSorter,
+       _shouldReload = shouldReload;
 
   /// Creates an instance of [TypedLocaleDelegate] without translations caching.
   /// This is useful when you don't want to cache the translations for the
   /// specific unused ISO objects. For example you are only using country
   /// pickers, so you might not need currency an language translations. In this
-  /// case you can provide [countriesForTranslationCache] for the countries.
+  /// case you can provide an [IsoCollections.selective] instance that contains
+  /// only the caches you require.
   ///
-  /// The [fallbackLanguage] parameter is optional. If provided, it sets the
-  /// fallback language. The [localeMapResolution] parameter is optional. If
-  /// provided, it sets the resolution strategy for the locale map.
-  /// The [countriesForTranslationCache] parameter is optional. If provided,
-  /// it sets the countries for translation cache.
-  /// The [currenciesForTranslationCache] parameter is optional. If provided,
-  /// it sets the currencies for translation cache.
-  /// The [languagesForTranslationCache] parameter is optional. If provided,
-  /// it sets the languages for translation cache.
-  /// The [asyncTranslationCacheProcessing] parameter is optional. If provided,
-  /// it sets the async translation cache processing. Default to `true`.
-  /// The [l10nFormatter] parameter is optional. If provided, it customizes how
-  /// ISO translations are formatted. It takes a [TypedLocale] and an
-  /// [IsoTranslated] as input and returns a formatted string.
+  /// - [fallbackLanguage]: Optional default language when a locale cannot be
+  ///   resolved.
+  /// - [isoCollections]: Immutable bundle with translation caches, locale
+  ///   remapping, and optional ISO flag mappings. Use
+  ///   [IsoCollections.selective] to keep caches empty.
+  /// - [asyncTranslationCacheProcessing]: When `true`, populates
+  ///   [isoCollections] caches asynchronously.
+  /// - [shouldReload]: Set to `true` if the resources for this delegate should
+  /// be loaded again by calling the [load] method. This method is called
+  /// whenever its [Localizations] widget is rebuilt. If it returns true then
+  /// dependent widgets will be rebuilt after [load] has completed.
+  /// - [l10nFormatter]: Optional formatter that customizes how ISO
+  ///   translations are rendered.
+  /// - [l10nSorter]: Optional custom comparator for sorting translations.
   const TypedLocaleDelegate.selectiveCache({
     @mustBeConst this.fallbackLanguage,
-    @mustBeConst this.localeMapResolution = defaultLocaleMapResolution,
     bool asyncTranslationCacheProcessing = true,
-    @mustBeConst Iterable<WorldCountry> countriesForTranslationCache = const {},
     @mustBeConst
-    Iterable<FiatCurrency> currenciesForTranslationCache = const {},
-    @mustBeConst
-    Iterable<NaturalLanguage> languagesForTranslationCache = const {},
+    IsoCollections isoCollections = const IsoCollections.selective(),
     L10NFormatter<TypedLocale, IsoTranslated>? l10nFormatter,
+    L10nSorter<IsoTranslated>? l10nSorter,
+    bool shouldReload = false,
   }) : _asyncTranslationCacheProcessing = asyncTranslationCacheProcessing,
-       _countriesForTranslationCache = countriesForTranslationCache,
-       _currenciesForTranslationCache = currenciesForTranslationCache,
-       _languagesForTranslationCache = languagesForTranslationCache,
-       _l10nFormatter = l10nFormatter;
+       _isoCollections = isoCollections,
+       _l10nFormatter = l10nFormatter,
+       _l10nSorter = l10nSorter,
+       _shouldReload = shouldReload;
 
   /// A constant list of [LocaleEntry] objects that define the default
   /// resolution for locale mapping.
@@ -119,14 +118,9 @@ class TypedLocaleDelegate implements LocalizationsDelegate<TypedLocale?> {
   ///
   /// These mappings are used as the default resolution when no other locale
   /// mapping is provided.
-  static const defaultLocaleMapResolution = <LocaleEntry>[
-    LocaleEntry(Locale("fil"), TypedLocale(LangTgl())),
-    LocaleEntry(Locale("gsw"), TypedLocale(LangDeu(), country: CountryChe())),
-    LocaleEntry(
-      Locale.fromSubtags(languageCode: "bs", scriptCode: "Cyrl"),
-      TypedLocale(LangSrp()),
-    ),
-  ];
+  // ignore: avoid-explicit-type-declaration, vs specify_nonobvious_property_types
+  static const List<LocaleEntry> defaultLocaleMapResolution =
+      IsoCollections.defaultLocaleMapResolution;
 
   /// The fallback language to be used if the locale cannot be converted to
   /// [TypedLocale] instance.
@@ -135,16 +129,9 @@ class TypedLocaleDelegate implements LocalizationsDelegate<TypedLocale?> {
   /// as a default (with attempt to create a [TypedLocale] out of it instead).
   final NaturalLanguage? fallbackLanguage;
 
-  /// The resolution strategy for resolving the locale map.
-  ///
-  /// The locale map resolution strategy determines how the locale map
-  /// is resolved based on the available locales.
-  final Iterable<LocaleEntry>? localeMapResolution;
-
   final bool _asyncTranslationCacheProcessing;
-  final Iterable<WorldCountry> _countriesForTranslationCache;
-  final Iterable<FiatCurrency> _currenciesForTranslationCache;
-  final Iterable<NaturalLanguage> _languagesForTranslationCache;
+  final bool _shouldReload;
+  final IsoCollections _isoCollections;
 
   /// A formatter for customizing how ISO translations are formatted.
   ///
@@ -153,6 +140,14 @@ class TypedLocaleDelegate implements LocalizationsDelegate<TypedLocale?> {
   /// [IsoTranslated] object as input and returns a formatted string.
   // ignore: prefer-correct-callback-field-name, it's not a builder.
   final L10NFormatter<TypedLocale, IsoTranslated>? _l10nFormatter;
+
+  /// A custom comparator for sorting translations.
+  ///
+  /// When provided, overrides the default alphabetical sorting (which uses
+  /// simple Unicode code-point comparison via [String.compareTo]). This allows
+  /// locale-sensitive collation, e.g., proper handling of diacritics.
+  // ignore: prefer-correct-callback-field-name, it's not a builder.
+  final L10nSorter<IsoTranslated>? _l10nSorter;
 
   @override
   @useResult
@@ -164,43 +159,50 @@ class TypedLocaleDelegate implements LocalizationsDelegate<TypedLocale?> {
     assert(
       typedLocale != null,
       "Unsupported ISO locale: $locale, consider adding "
-      "`localeMapResolution` and/or `fallbackLanguage`",
+      "`isoCollections.localeMapResolution` and/or `fallbackLanguage`",
     );
 
-    return _asyncTranslationCacheProcessing
+    final translatedMaps = _asyncTranslationCacheProcessing
         ? await typedLocale?.copyWithTranslationsCacheAsync(
-            languages: _languagesForTranslationCache,
-            currencies: _currenciesForTranslationCache,
-            countries: _countriesForTranslationCache,
+            languages: _isoCollections.languagesForTranslationCache,
+            currencies: _isoCollections.currenciesForTranslationCache,
+            countries: _isoCollections.countriesForTranslationCache,
             l10nFormatter: _l10nFormatter,
+            l10nSorter: _l10nSorter,
           )
         : typedLocale?.copyWithTranslationsCache(
-            languages: _languagesForTranslationCache,
-            currencies: _currenciesForTranslationCache,
-            countries: _countriesForTranslationCache,
+            languages: _isoCollections.languagesForTranslationCache,
+            currencies: _isoCollections.currenciesForTranslationCache,
+            countries: _isoCollections.countriesForTranslationCache,
             l10nFormatter: _l10nFormatter,
+            l10nSorter: _l10nSorter,
           );
+
+    return await translatedMaps?.copyWithFlagsCache(
+      _isoCollections,
+      isAsync: _asyncTranslationCacheProcessing,
+      localeCountry: typedLocale?.country,
+    );
   }
 
   @override
-  bool shouldReload(TypedLocaleDelegate old) => false;
+  bool shouldReload(TypedLocaleDelegate old) => _shouldReload;
 
   @override
   String toString() =>
       "TypedLocaleDelegate("
       """${fallbackLanguage == null ? '' : 'fallbackLanguage: ${fallbackLanguage.runtimeType}(), '}"""
-      """${localeMapResolution == null ? '' : 'localeMapResolution: $localeMapResolution, '}"""
       "asyncTranslationCacheProcessing: $_asyncTranslationCacheProcessing, "
-      "countriesForTranslationCache: $_countriesForTranslationCache, "
-      "currenciesForTranslationCache: $_currenciesForTranslationCache, "
-      "languagesForTranslationCache: $_languagesForTranslationCache, "
+      "shouldReload: $_shouldReload, isoCollections: $_isoCollections, "
       "l10nFormatter: ${_l10nFormatter.runtimeType},)";
 
   @override
   Type get type => TypedLocale;
 
   TypedLocale? _maybeResolutionLocale(Locale locale) =>
-      Map<Locale, TypedLocale>.fromEntries(localeMapResolution ?? [])[locale];
+      Map<Locale, TypedLocale>.fromEntries(
+        _isoCollections.localeMapResolution ?? const [],
+      )[locale];
 
   TypedLocale? _toTypedLocale(Locale locale) =>
       _maybeResolutionLocale(locale) ??

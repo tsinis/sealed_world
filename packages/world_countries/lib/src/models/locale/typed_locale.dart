@@ -6,7 +6,8 @@ import "dart:ui" show Locale, keepToString;
 import "package:flutter/foundation.dart" show immutable;
 import "package:world_flags/world_flags.dart";
 
-import "../../extensions/typed_locale_extension.dart";
+import "../../extensions/models/typed_locale_extension.dart";
+import "../iso/iso_maps.dart";
 import "../typedefs.dart";
 
 /// A class representing a typed locale with optional country and script.
@@ -31,16 +32,13 @@ class TypedLocale extends Locale implements BasicTypedLocale {
   ///
   /// The [language] parameter is required.
   /// The [country] and [script] parameters are optional.
-  /// The [countryTranslations], [currencyTranslations],
-  /// and [languageTranslations] parameters are optional.
+  /// The [maps] parameter encapsulates translation and flag maps.
   /// The [regionalCode] parameter is optional.
   const TypedLocale(
     this.language, {
     this.country,
     this.script,
-    this.countryTranslations = const {},
-    this.currencyTranslations = const {},
-    this.languageTranslations = const {},
+    this.maps = const IsoMaps(),
     String? regionalCode,
   }) : assert(
          regionalCode == null || country == null,
@@ -53,17 +51,14 @@ class TypedLocale extends Locale implements BasicTypedLocale {
   ///
   /// The [language] parameter is required.
   /// The [country] and [script] parameters are optional.
-  /// The [countryTranslations], [currencyTranslations], and
-  /// [languageTranslations] parameters are optional.
+  /// The [maps] parameter encapsulates translation and flag maps.
   /// The [regionalCode] parameter is optional.
   TypedLocale.fromSubtags({
     required this.language,
     this.country,
     this.script,
-    this.countryTranslations = const {},
-    this.currencyTranslations = const {},
-    this.languageTranslations = const {},
     String? regionalCode,
+    this.maps = const IsoMaps(),
   }) : assert(
          regionalCode == null || country == null,
          "Cannot provide both `regionalCode` and `country` at the same time",
@@ -124,18 +119,32 @@ class TypedLocale extends Locale implements BasicTypedLocale {
   @override
   final Script? script;
 
+  /// Translation and flag maps backing this locale instance.
+  final IsoMaps maps;
+
   /// Common country names translations for the current locale.
-  final TranslationMap<WorldCountry> countryTranslations;
+  TranslationMap<WorldCountry> get countryTranslations =>
+      maps.countryTranslations;
 
   /// Common currency names translations for the current locale.
-  final TranslationMap<FiatCurrency> currencyTranslations;
+  TranslationMap<FiatCurrency> get currencyTranslations =>
+      maps.currencyTranslations;
 
   /// Common language names translations for the current locale.
-  final TranslationMap<NaturalLanguage> languageTranslations;
+  TranslationMap<NaturalLanguage> get languageTranslations =>
+      maps.languageTranslations;
+
+  /// Optional currency flags associated with this locale.
+  Map<FiatCurrency, BasicFlag> get currencyFlags => maps.currencyFlags;
+
+  /// Optional language flags associated with this locale.
+  Map<NaturalLanguage, BasicFlag> get languageFlags => maps.languageFlags;
 
   @override
   String? get countryCode =>
-      country?.codeShort ?? IsoString.maybe(_regionalCode)?.toUpperCaseCode();
+      country?.codeShort ??
+      country?.code ??
+      IsoString.maybe(_regionalCode)?.toUpperCaseCode();
 
   @override
   String get languageCode => language.codeShort.toLowerCase();
@@ -149,17 +158,13 @@ class TypedLocale extends Locale implements BasicTypedLocale {
     NaturalLanguage? language,
     WorldCountry? country,
     Script? script,
-    TranslationMap<WorldCountry>? countryTranslations,
-    TranslationMap<FiatCurrency>? currencyTranslations,
-    TranslationMap<NaturalLanguage>? languageTranslations,
+    IsoMaps? maps,
     String? regionalCode,
   }) => TypedLocale(
     language ?? this.language,
     country: country ?? this.country,
     script: script ?? this.script,
-    countryTranslations: countryTranslations ?? this.countryTranslations,
-    currencyTranslations: currencyTranslations ?? this.currencyTranslations,
-    languageTranslations: languageTranslations ?? this.languageTranslations,
+    maps: maps ?? this.maps,
     regionalCode: regionalCode ?? _regionalCode,
   );
 

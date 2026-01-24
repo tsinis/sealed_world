@@ -258,6 +258,28 @@ TypedLocaleDelegate(
 )
 ```
 
+#### How to use locale-aware sorting with proper diacritics handling?
+
+By default, translations are sorted using simple Unicode code-point comparison (`String.compareTo`), which doesn't handle diacritics correctly for many languages. You can provide a custom `l10nSorter` factory to use locale-sensitive collation, for example with the [`intl4x`](https://pub.dev/packages/intl4x) package:
+
+```dart
+import 'package:intl4x/collation.dart' as intl;
+
+TypedLocaleDelegate(
+  l10nSorter: (typed) {
+    // Create locale and collator once for the current locale.
+    final locale = intl.Locale.parse(typed.toUnicodeLocaleId());
+    final collator = intl.Collation(locale: locale);
+    // Return comparator that will be used for all comparisons.
+    return (a, b) => collator.compare(a.value, b.value);
+  },
+)
+```
+
+The factory pattern ensures the locale and collator are constructed only once per sorting operation, not on every comparison (which would be ~4k times for all countries).
+
+This ensures that characters like `ä`, `ö`, `ü` in German or `č`, `š`, `ž` in Czech are sorted according to their respective language rules, not by their Unicode code points.
+
 #### How to use fuzzy or similar search functionality?
 
 For example, use custom `onSearchResultsBuilder` in your picker. Here, fuzzy matching is performed using `extractAllSorted` from your favorite fuzzy search package, add its import and:

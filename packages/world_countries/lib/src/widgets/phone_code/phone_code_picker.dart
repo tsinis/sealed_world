@@ -4,11 +4,12 @@ import "package:world_flags/world_flags.dart";
 
 import "../../constants/ui_constants.dart";
 import "../../extensions/build_context_extension.dart";
-import "../../extensions/world_countries_build_context_extension.dart";
+import "../../extensions/iso_tile_extension.dart";
+import "../../models/iso/iso_maps.dart";
 import "../../models/item_properties.dart";
-import "../../models/locale/typed_locale.dart";
+import "../../models/search_data.dart";
+import "../../models/typedefs.dart";
 import "../country/country_picker.dart";
-import "../country/country_tile.dart";
 
 /// A picker widget that displays a list of countries with their phone codes.
 class PhoneCodePicker extends CountryPicker {
@@ -58,8 +59,7 @@ class PhoneCodePicker extends CountryPicker {
     super.textDirection,
     super.verticalDirection,
     super.spacing,
-    super.translation,
-    super.flagsMap,
+    super.maps,
   });
 
   /// Constructor for the [PhoneCodePicker] class that uses a [CountryPicker]
@@ -107,70 +107,48 @@ class PhoneCodePicker extends CountryPicker {
         textDirection: picker.textDirection,
         verticalDirection: picker.verticalDirection,
         spacing: picker.spacing,
-        translation: picker.translation,
-        flagsMap: picker.flagsMap,
+        maps: picker.maps,
       );
 
   @override
-  Widget defaultBuilder(
-    BuildContext context,
-    ItemProperties<WorldCountry> itemProperties, {
-    bool? isDense,
-  }) =>
-      context.countryTileTheme?.builder?.call(
-        itemProperties,
-        isDense: isDense,
-      ) ??
-      CountryTile.fromProperties(
-        itemProperties,
-        leading: ConstrainedBox(
-          constraints: UiConstants.constraints,
-          child: FittedBox(
-            fit: BoxFit.scaleDown,
-            child: Column(
-              mainAxisSize: MainAxisSize.min,
-              children: [
-                flagsMap[itemProperties.item] ??
-                    CountryFlag.simplified(
-                      itemProperties.item,
-                      height: 18,
-                      aspectRatio:
-                          context.flagTheme?.aspectRatio ??
-                          FlagConstants.defaultAspectRatio,
-                      decoration:
-                          context.flagTheme?.decoration ??
-                          const BoxDecoration(
-                            borderRadius: BorderRadius.all(
-                              Radius.circular(UiConstants.point / 2),
-                            ),
-                          ),
-                    ),
-                Padding(
-                  padding: const EdgeInsetsDirectional.only(
-                    end: UiConstants.point / 2,
-                  ),
-                  child: Text(
-                    itemProperties.item.idd.phoneCode(),
-                    style: context.theme.textTheme.labelSmall,
-                  ),
+  CountryTile defaultBuilder(ItemProperties<WorldCountry> props) {
+    final superTile = super.defaultBuilder(props);
+
+    return superTile.copyWith(
+      leading: ConstrainedBox(
+        constraints: UiConstants.constraints,
+        child: FittedBox(
+          fit: BoxFit.scaleDown,
+          child: Column(
+            mainAxisSize: MainAxisSize.min,
+            children: [
+              ?superTile.leading,
+              Padding(
+                padding: const EdgeInsetsDirectional.only(
+                  end: UiConstants.point / 2,
                 ),
-              ],
-            ),
+                child: Text(
+                  props.item.idd.phoneCode(),
+                  style: props.context.theme.textTheme.labelSmall,
+                ),
+              ),
+            ],
           ),
         ),
-        title: itemNameTranslated(itemProperties.item, itemProperties.context),
-        onPressed: (phone) => (isDense ?? false)
-            ? maybeSelectAndPop(phone, itemProperties.context)
-            : onSelect?.call(phone),
-        visualDensity: (isDense ?? false) ? VisualDensity.compact : null,
-      );
+      ),
+    );
+  }
 
   @override
-  Iterable<String> defaultSearch(WorldCountry item, BuildContext context) =>
-      Set.unmodifiable({
-        ...super.defaultSearch(item, context),
-        item.idd.phoneCode(leading: ""),
-      });
+  SearchData defaultSearch(WorldCountry item, BuildContext context) =>
+      SearchData(
+        item.internationalName,
+        item.namesNative.map((nativeName) => nativeName.common),
+        name: maybeNameTranslation(item, context),
+        code: item.code,
+        other: item.idd.phoneCode(leading: ""),
+        others: item.altSpellings,
+      );
 
   @override
   // ignore: avoid-incomplete-copy-with, avoid-high-cyclomatic-complexity, a lot of params.
@@ -210,21 +188,15 @@ class PhoneCodePicker extends CountryPicker {
     TextBaseline? textBaseline,
     TextDirection? textDirection,
     VerticalDirection? verticalDirection,
-    Iterable<String> Function(WorldCountry country, BuildContext context)?
-    searchIn,
+    SearchData Function(WorldCountry country, BuildContext context)? searchIn,
     Iterable<WorldCountry> Function(
       String query,
-      Map<WorldCountry, Set<String>> map,
+      Map<WorldCountry, SearchData> map,
     )?
     onSearchResultsBuilder,
-    Widget? Function(
-      ItemProperties<WorldCountry> itemProperties, {
-      bool? isDense,
-    })?
-    itemBuilder,
+    Widget? Function(ItemProperties<WorldCountry>, CountryTile)? itemBuilder,
     double? spacing,
-    TypedLocale? translation,
-    Map<WorldCountry, BasicFlag>? flagsMap,
+    IsoMaps? maps,
   }) => PhoneCodePicker(
     countries: items ?? this.items,
     addAutomaticKeepAlives:
@@ -240,7 +212,9 @@ class PhoneCodePicker extends CountryPicker {
     disabled: disabled ?? this.disabled,
     dragStartBehavior: dragStartBehavior ?? this.dragStartBehavior,
     emptyStatePlaceholder: emptyStatePlaceholder ?? this.emptyStatePlaceholder,
-    itemBuilder: itemBuilder ?? this.itemBuilder,
+    itemBuilder: (props, tile) =>
+        itemBuilder?.call(props, tile ?? defaultBuilder(props)) ??
+        this.itemBuilder?.call(props, tile),
     key: key ?? this.key,
     keyboardDismissBehavior:
         keyboardDismissBehavior ?? this.keyboardDismissBehavior,
@@ -267,8 +241,7 @@ class PhoneCodePicker extends CountryPicker {
     textBaseline: textBaseline ?? this.textBaseline,
     textDirection: textDirection ?? this.textDirection,
     verticalDirection: verticalDirection ?? this.verticalDirection,
-    translation: translation ?? this.translation,
+    maps: maps ?? this.maps,
     spacing: spacing ?? this.spacing,
-    flagsMap: flagsMap ?? this.flagsMap,
   );
 }

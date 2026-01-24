@@ -48,7 +48,7 @@ extension WorldCountriesBuildContextExtension on BuildContext {
   /// for language tiles, or null if no theme data is available for language
   /// tiles in the current theme.
   BaseTileThemeData<NaturalLanguage>? get languageTileTheme =>
-      _tileTheme<NaturalLanguage>();
+      tileTheme<NaturalLanguage>();
 
   /// Retrieves the theme data for country tiles.
   ///
@@ -59,7 +59,7 @@ extension WorldCountriesBuildContextExtension on BuildContext {
   /// for country tiles, or null if no theme data is available for country tiles
   /// in the current theme.
   CountryTileThemeData? get countryTileTheme {
-    final theme = _tileTheme<WorldCountry>();
+    final theme = tileTheme<WorldCountry>();
 
     return switch (theme) {
       CountryTileThemeData() => theme,
@@ -77,8 +77,12 @@ extension WorldCountriesBuildContextExtension on BuildContext {
   /// for currency tiles, or null if no theme data is available for currency
   /// tiles in the current theme.
   BaseTileThemeData<FiatCurrency>? get currencyTileTheme =>
-      _tileTheme<FiatCurrency>();
+      tileTheme<FiatCurrency>();
 
-  BaseTileThemeData<T>? _tileTheme<T extends IsoTranslated>() =>
+  /// A helper method to retrieve the [BaseTileThemeData] for a specific type
+  /// of [IsoTranslated]. Ideal for getting tile themes for different models
+  /// like [WorldCountry], [NaturalLanguage], or [FiatCurrency] in a more
+  /// generic way.
+  BaseTileThemeData<T>? tileTheme<T extends IsoTranslated>() =>
       Theme.of(this).extension<BaseTileThemeData<T>>();
 }

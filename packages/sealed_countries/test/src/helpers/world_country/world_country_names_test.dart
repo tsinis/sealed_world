@@ -3,40 +3,6 @@ import "package:sealed_countries/src/model/country/country.dart";
 import "package:test/test.dart";
 
 void main() => group("WorldCountryNames", () {
-  group("namesCommonNative", () {
-    final country = WorldCountry.list.firstWhere(
-      (cnt) => cnt.namesNative.length > 1,
-    );
-
-    test(
-      "separator",
-      () => expect(
-        country.namesCommonNative(separator: "-"),
-        """${country.namesNative.first.name}-${country.namesNative.last.name}""",
-      ),
-    );
-
-    group("skipFirst", () {
-      test(
-        "with multiple names",
-        () => expect(
-          country.namesCommonNative(skipFirst: true),
-          country.namesNative.last.name,
-        ),
-      );
-
-      test("with single name", () {
-        final singleNameCountry = WorldCountry.list.firstWhere(
-          (cnt) => cnt.namesNative.length == 1,
-        );
-        expect(
-          singleNameCountry.namesCommonNative(skipFirst: true),
-          singleNameCountry.namesNative.first.name,
-        );
-      });
-    });
-  });
-
   group("namesOfficialNative", () {
     final country = WorldCountry.list.firstWhere(
       (cnt) => cnt.namesNative.length > 1,
@@ -46,28 +12,58 @@ void main() => group("WorldCountryNames", () {
       "separator",
       () => expect(
         country.namesOfficialNative(separator: "-"),
-        """${country.namesNative.first.fullName}-${country.namesNative.last.fullName}""",
+        country.namesNative.map((i) => i.fullName).join("-"),
       ),
     );
 
     group("skipFirst", () {
+      const fallback = "Fallback Official Name";
+      final singleNameCountry = WorldCountry.list.firstWhere(
+        (cnt) => cnt.namesNative.length == 1,
+      );
+
       test(
         "with multiple names",
         () => expect(
           country.namesOfficialNative(skipFirst: true),
-          country.namesNative.last.fullName,
+          country.namesNative.skip(1).map((i) => i.fullName).join("/"),
         ),
       );
 
-      test("with single name", () {
-        final singleNameCountry = WorldCountry.list.firstWhere(
-          (cnt) => cnt.namesNative.length == 1,
-        );
-        expect(
+      test(
+        "with single name",
+        () => expect(
           singleNameCountry.namesOfficialNative(skipFirst: true),
           singleNameCountry.namesNative.first.fullName,
-        );
-      });
+        ),
+      );
+
+      test(
+        "with single name and orElse",
+        () => expect(
+          singleNameCountry.namesOfficialNative(
+            skipFirst: true,
+            orElse: fallback,
+          ),
+          fallback,
+        ),
+      );
+
+      test(
+        "with single name and orElse but skipFirst false",
+        () => expect(
+          singleNameCountry.namesOfficialNative(orElse: fallback),
+          singleNameCountry.namesNative.first.fullName,
+        ),
+      );
+
+      test(
+        "with multiple names and orElse",
+        () => expect(
+          country.namesOfficialNative(skipFirst: true, orElse: fallback),
+          country.namesNative.skip(1).map((i) => i.fullName).join("/"),
+        ),
+      );
     });
   });
 });

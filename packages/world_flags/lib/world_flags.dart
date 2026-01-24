@@ -88,9 +88,11 @@ export "src/model/typedefs.dart";
 export "src/theme/flag_theme_data.dart";
 export "src/ui/country_flag.dart";
 export "src/ui/decorated_flag_widget.dart";
+export "src/ui/effects/animated_flag_shader_delegate.dart";
 export "src/ui/effects/flag_shader_delegate.dart";
 export "src/ui/effects/flag_shader_options.dart";
 export "src/ui/effects/flag_shader_surface.dart";
+export "src/ui/effects/static_flag_shader_delegate.dart";
 export "src/ui/effects/waved_flag_shader_delegate.dart";
 export "src/ui/flags/basic_flag.dart";
 export "src/ui/flags/ellipse_flag.dart";
@@ -584,4 +586,18 @@ const smallSimplifiedLanguageFlagsMap = <NaturalLanguage, BasicFlag>{
   LangIle(): EllipseFlag(flagIleProperties),
   LangIna(): StarFlag(flagInaProperties),
   LangVol(): RectangleFlag(flagVolProperties),
+};
+
+/// A map that associates currency objects with simplified flag representations.
+///
+/// This map is used to provide simplified flag representations for currencies.
+/// Each entry in the map consists of a currency as the key and a flag as the
+/// value.
+///
+/// Example usage:
+/// ```dart
+/// final euroFlag = smallSimplifiedCurrencyFlagsMap[const FiatEur()];
+/// ```
+const smallSimplifiedCurrencyFlagsMap = <FiatCurrency, BasicFlag>{
+  FiatEur(): StarFlag(flagEurProperties),
 };

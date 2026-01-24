@@ -1,12 +1,13 @@
 import "package:flutter/widgets.dart" show BuildContext;
 
+import "../models/search_data.dart";
+
 /// An interface for classes that can be searched.
-// ignore: avoid-unnecessary-extends, // TODO: Non-null in next major release.
-abstract interface class SearchableInterface<T extends Object?> {
+abstract interface class SearchableInterface<T extends Object> {
   /// Constructor for the [SearchableInterface] class.
   ///
-  /// * [searchIn] is a function that takes an item and returns an iterable of
-  ///   strings to search in.
+  /// * [searchIn] is a function that takes an item and [BuildContext] and
+  ///   returns a [SearchData] containing the searchable terms for that item.
   /// * [caseSensitiveSearch] is a boolean indicating whether the search should
   ///   be case-sensitive.
   /// * [startWithSearch] is a boolean indicating whether the search field
@@ -19,16 +20,16 @@ abstract interface class SearchableInterface<T extends Object?> {
     this.onSearchResultsBuilder,
   });
 
-  /// A function that takes an item and returns an iterable of strings to search
-  /// in.
+  /// A function that takes an item and context and returns [SearchData] to
+  /// search in.
   // ignore: prefer-correct-callback-field-name, Might be breaking change.
-  final Iterable<String> Function(T item, BuildContext context)? searchIn;
+  final SearchData Function(T item, BuildContext context)? searchIn;
 
   /// A function that takes a query (usually user typed input) and a map of
   /// items to their search strings and returns an iterable of items that match
   /// the query. Useful for customizing the search results with different
   /// search algorithms.
-  final Iterable<T> Function(String query, Map<T, Set<String>> map)?
+  final Iterable<T> Function(String query, Map<T, SearchData> map)?
   onSearchResultsBuilder;
 
   /// A boolean indicating whether the search should be case-sensitive.

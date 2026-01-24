@@ -2,9 +2,11 @@
 import "package:flutter/material.dart";
 import "package:flutter_test/flutter_test.dart";
 import "package:world_countries/src/helpers/typed_locale_delegate.dart";
+import "package:world_countries/src/models/iso/iso_maps.dart";
+import "package:world_countries/src/models/typedefs.dart";
+import "package:world_countries/src/theme/pickers_theme_data.dart";
 import "package:world_countries/src/theme/tile_theme_data/currency_tile_theme_data.dart";
 import "package:world_countries/src/widgets/currency/currency_picker.dart";
-import "package:world_countries/src/widgets/currency/currency_tile.dart";
 import "package:world_flags/world_flags.dart";
 
 import "../../../helpers/widget_tester_extension.dart";
@@ -14,11 +16,41 @@ void main() => group("$CurrencyPicker", () {
     const picker = CurrencyPicker();
     expect(picker.onSelect, isNull);
     final newPicker = picker.copyWith(onSelect: (item) => item.toString());
-    newPicker.onSelect?.call(picker.items.first);
+    newPicker.onSelect?.call(picker.resolvedItems().first);
     expect(newPicker.onSelect, isNotNull);
     final newestPicker = newPicker.copyWith(onSelect: print);
     expect(newestPicker.onSelect, isNotNull);
     expect(newestPicker.copyWith(), isNot(newestPicker));
+  });
+
+  testWidgets("copyWith itemBuilder fallback to defaultBuilder", (
+    tester, // Dart 3.8 formatting.
+  ) async {
+    const testText = "Original";
+    final picker = CurrencyPicker(
+      currencies: const [FiatUsd()],
+      itemBuilder: (props, tile) => const Text(testText),
+    );
+    const newTestText = "New";
+    final newPicker = picker.copyWith(
+      itemBuilder: (props, tile) => const Text(newTestText),
+    );
+
+    await tester.pumpMaterialApp(newPicker);
+    expect(find.text(newTestText), findsWidgets);
+    expect(find.text(testText), findsNothing);
+  });
+
+  testWidgets("copyWith itemBuilder chains to existing", (tester) async {
+    const testText = "Chained";
+    final picker = CurrencyPicker(
+      currencies: const [FiatUsd()],
+      itemBuilder: (props, tile) => const Text(testText),
+    );
+    final newPicker = picker.copyWith();
+
+    await tester.pumpMaterialApp(newPicker);
+    expect(find.text(testText), findsWidgets);
   });
 
   testWidgets(
@@ -35,8 +67,7 @@ void main() => group("$CurrencyPicker", () {
       const CurrencyPicker(),
       (item) => item.namesNative.first,
       theme: CurrencyTileThemeData(
-        builder: (properties, {isDense}) =>
-            Text(properties.item.namesNative.first),
+        itemBuilder: (properties, _) => Text(properties.item.namesNative.first),
       ),
     ),
   );
@@ -89,6 +120,58 @@ void main() => group("$CurrencyPicker", () {
       tester.tapAndSettle(find.byIcon(Icons.search)),
       throwsAssertionError,
     );
+    await tester.pump(Duration.zero);
+  });
+
+  testWidgets("throws assert on empty $IsoMaps in theme", (tester) async {
+    bool assertionThrown = false;
+    final originalOnError = FlutterError.onError;
+
+    FlutterError.onError = (details) {
+      if (details.exception is AssertionError &&
+          details.exception.toString().contains(
+            "The $IsoMaps passed to the `maps` contains an empty",
+          )) {
+        assertionThrown = true;
+      } else {
+        originalOnError?.call(details);
+      }
+    };
+
+    try {
+      await tester.pumpMaterialApp(
+        const CurrencyPicker(),
+        const PickersThemeData(maps: IsoMaps()),
+      );
+
+      expect(assertionThrown, isTrue);
+    } finally {
+      FlutterError.onError = originalOnError;
+    }
+  });
+
+  testWidgets("throws assert on empty $IsoMaps in picker", (tester) async {
+    bool assertionThrown = false;
+    final originalOnError = FlutterError.onError;
+
+    FlutterError.onError = (details) {
+      if (details.exception is AssertionError &&
+          details.exception.toString().contains(
+            "The $IsoMaps passed to the `maps` contains an empty",
+          )) {
+        assertionThrown = true;
+      } else {
+        originalOnError?.call(details);
+      }
+    };
+
+    try {
+      await tester.pumpMaterialApp(const CurrencyPicker(maps: IsoMaps()));
+
+      expect(assertionThrown, isTrue);
+    } finally {
+      FlutterError.onError = originalOnError;
+    }
   });
 
   testWidgets("searchSuggestions()", (tester) async {
@@ -109,163 +192,71 @@ void main() => group("$CurrencyPicker", () {
     expect(tile, findsNothing);
   });
 
-  group("adaptiveFlags", () {
+  group("maps", () {
     const danishKrone = FiatDkk();
-    const greenland = CountryGrl();
     const danishFlag = BasicFlag(flagDnkProperties);
     const greenlandicFlag = BasicFlag(flagGrlProperties);
-    const eurFlag = StarFlag(flagEurProperties);
-
-    testWidgets("uses localeCountry to ignore platform locale", (tester) async {
-      await tester.pumpMaterialApp(
-        CurrencyPicker.adaptiveFlags(
-          currencies: const [danishKrone],
-          localeCountry: greenland,
-        ),
-      );
-      await tester.pumpAndSettle();
-      final tile = find.widgetWithText(
-        CurrencyTile,
-        danishKrone.namesNative.first,
-      );
-      expect(tile, findsOneWidget);
-      final greenlandFlagFinder = find.byWidgetPredicate(
-        (e) => e is BasicFlag && e.properties == greenlandicFlag.properties,
-      );
-      expect(greenlandFlagFinder, findsOneWidget);
-      final danishFlagFinder = find.byWidgetPredicate(
-        (e) => e is BasicFlag && e.properties == danishFlag.properties,
-      );
-      expect(danishFlagFinder, findsNothing);
-    });
-
-    testWidgets("uses platform locale if localeCountry isn't provided", (
-      tester,
-    ) async {
-      // ignore: avoid-mutating-parameters, it's a test.
-      final testDispatcher = tester.binding.platformDispatcher
-        ..localesTestValue = const [
-          Locale.fromSubtags(languageCode: "kl", countryCode: "GL"),
-        ];
-      addTearDown(testDispatcher.clearLocalesTestValue);
-
-      await tester.pumpMaterialApp(
-        CurrencyPicker.adaptiveFlags(currencies: const [danishKrone]),
-      );
-      final tile = find.widgetWithText(
-        CurrencyTile,
-        danishKrone.namesNative.first,
-      );
-      expect(tile, findsOneWidget);
-      final greenlandFlagFinder = find.byWidgetPredicate(
-        (e) => e is BasicFlag && e.properties == greenlandicFlag.properties,
-      );
-      expect(greenlandFlagFinder, findsOneWidget);
-      final danishFlagFinder = find.byWidgetPredicate(
-        (e) => e is BasicFlag && e.properties == danishFlag.properties,
-      );
-      expect(danishFlagFinder, findsNothing);
-    });
-
-    testWidgets(
-      "respects flags provided in flagsMap and does not override them",
-      (tester) async {
-        await tester.pumpMaterialApp(
-          CurrencyPicker.adaptiveFlags(
-            currencies: const [danishKrone],
-            flagsMap: const {danishKrone: eurFlag},
-          ),
-        );
-        await tester.pumpAndSettle();
-        final tile = find.widgetWithText(
-          CurrencyTile,
-          danishKrone.namesNative.first,
-        );
-        expect(tile, findsOneWidget);
-        final eurFlagFinder = find.byWidgetPredicate(
-          (e) => e is BasicFlag && e.properties == eurFlag.properties,
-        );
-        expect(eurFlagFinder, findsOneWidget);
-        final danishFlagFinder = find.byWidgetPredicate(
-          (e) => e is BasicFlag && e.properties == danishFlag.properties,
-        );
-        expect(danishFlagFinder, findsNothing);
-      },
+    final widgetMaps = IsoMaps(
+      currencyTranslations: {danishKrone: danishKrone.namesNative.first},
+      currencyFlags: const {danishKrone: greenlandicFlag},
+    );
+    final themeMaps = IsoMaps(
+      currencyTranslations: {danishKrone: danishKrone.namesNative.first},
+      currencyFlags: const {danishKrone: danishFlag},
     );
 
-    testWidgets("uses defaultFlagsMap for specific currencies", (tester) async {
-      const euro = FiatEur();
-
+    testWidgets("uses widget maps to render flags", (tester) async {
       await tester.pumpMaterialApp(
-        CurrencyPicker.adaptiveFlags(currencies: const [euro]),
+        CurrencyPicker(currencies: const [danishKrone], maps: widgetMaps),
       );
       await tester.pumpAndSettle();
-      final tile = find.widgetWithText(CurrencyTile, euro.namesNative.first);
-      expect(tile, findsOneWidget);
-      final eurFlagFinder = find.byWidgetPredicate(
-        (e) => e is BasicFlag && e.properties == flagEurProperties,
-      );
-      expect(eurFlagFinder, findsOneWidget);
-      final danishFlagFinder = find.byWidgetPredicate(
-        (e) => e is BasicFlag && e.properties == danishFlag.properties,
-      );
-      expect(danishFlagFinder, findsNothing);
-    });
-
-    testWidgets("flagMapper can customize the final flag", (tester) async {
-      const customKey = Key("customized_flag");
-      await tester.pumpMaterialApp(
-        CurrencyPicker.adaptiveFlags(
-          currencies: const [danishKrone],
-          flagMapper: (flag, _, _) =>
-              StarFlag(flagEurProperties, key: customKey, child: flag),
-        ),
-      );
-      await tester.pumpAndSettle();
-      final tileFinder = find.widgetWithText(
-        CurrencyTile,
-        danishKrone.namesNative.first,
-      );
-      expect(tileFinder, findsOneWidget);
-      final customWidgetFinder = find.descendant(
-        of: tileFinder,
-        matching: find.byKey(customKey),
-      );
-      expect(customWidgetFinder, findsOneWidget);
-    });
-
-    testWidgets("showInModalBottomSheet shows a picker with adaptive flags", (
-      tester,
-    ) async {
-      final picker = CurrencyPicker.adaptiveFlags(
-        currencies: const [danishKrone],
-        localeCountry: greenland,
-      );
-
-      await tester.pumpWidget(
-        MaterialApp(
-          home: Scaffold(
-            body: Builder(
-              builder: (context) => ElevatedButton(
-                onPressed: () async => picker.showInModalBottomSheet(context),
-                child: const Text("Show"),
-              ),
-            ),
-          ),
-        ),
-      );
-
-      await tester.tapAndSettle(find.byType(ElevatedButton));
-      final tile = find.widgetWithText(
-        CurrencyTile,
-        danishKrone.namesNative.first,
-      );
-      expect(tile, findsOneWidget);
+      final tileText = find.text(danishKrone.namesNative.first);
+      expect(tileText, findsWidgets);
 
       final greenlandFlagFinder = find.byWidgetPredicate(
-        (e) => e is BasicFlag && e.properties == greenlandicFlag.properties,
+        (widget) =>
+            widget is BasicFlag &&
+            widget.properties == greenlandicFlag.properties,
       );
       expect(greenlandFlagFinder, findsOneWidget);
+    });
+
+    testWidgets("uses theme maps when widget maps missing", (tester) async {
+      await tester.pumpMaterialApp(
+        const CurrencyPicker(currencies: [danishKrone]),
+        PickersThemeData(maps: themeMaps),
+      );
+      await tester.pumpAndSettle();
+      final tileText = find.text(danishKrone.namesNative.first);
+      expect(tileText, findsWidgets);
+
+      final danishFlagFinder = find.byWidgetPredicate(
+        (widget) =>
+            widget is BasicFlag && widget.properties == danishFlag.properties,
+      );
+      expect(danishFlagFinder, findsOneWidget);
+    });
+
+    testWidgets("prefers widget maps over theme maps", (tester) async {
+      await tester.pumpMaterialApp(
+        CurrencyPicker(currencies: const [danishKrone], maps: widgetMaps),
+        PickersThemeData(maps: themeMaps),
+      );
+      await tester.pumpAndSettle();
+      final tileText = find.text(danishKrone.namesNative.first);
+      expect(tileText, findsWidgets);
+
+      final greenlandFlagFinder = find.byWidgetPredicate(
+        (widget) =>
+            widget is BasicFlag &&
+            widget.properties == greenlandicFlag.properties,
+      );
+      final danishFlagFinder = find.byWidgetPredicate(
+        (widget) =>
+            widget is BasicFlag && widget.properties == danishFlag.properties,
+      );
+      expect(greenlandFlagFinder, findsOneWidget);
+      expect(danishFlagFinder, findsNothing);
     });
   });
 });

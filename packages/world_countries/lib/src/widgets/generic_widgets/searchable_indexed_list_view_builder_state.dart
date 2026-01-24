@@ -1,23 +1,23 @@
 part of "searchable_indexed_list_view_builder.dart";
 
-class _SearchableIndexedListViewBuilderState<T extends Object>
-    extends State<SearchableIndexedListViewBuilder<T>> {
+class _SearchableIndexedListViewBuilderState<T extends Object, W extends Widget>
+    extends State<SearchableIndexedListViewBuilder<T, W>> {
   bool get _isSearchable =>
       widget.searchIn != null && widget.textController != null;
-
-  bool get _toShowHeader =>
-      widget.showHeader ??
-      context.pickersTheme?.showHeader ??
-      (widget.items.length > 5); // Hick's law optimal number.
 
   @override
   // ignore: avoid-high-cyclomatic-complexity, build methods are typically long.
   Widget build(BuildContext context) {
     final theme = context.pickersTheme;
+    final itemsList = widget.resolvedItems(context);
+    final shouldShowHeader =
+        widget.showHeader ??
+        theme?.showHeader ??
+        (itemsList.length > 5); // Hick's law optimal range.
 
-    return _isSearchable && _toShowHeader
+    return _isSearchable && shouldShowHeader
         ? SearchListListenableBuilder<T>(
-            builder: (_, filteredItems) => IndexedListViewBuilder<T>(
+            builder: (_, filteredItems) => IndexedListViewBuilder<T, W>(
               filteredItems,
               addAutomaticKeepAlives: widget.addAutomaticKeepAlives,
               addRepaintBoundaries:
@@ -69,13 +69,14 @@ class _SearchableIndexedListViewBuilderState<T extends Object>
               shrinkWrap: widget.shrinkWrap ?? theme?.shrinkWrap ?? false,
               sort: widget.sort,
               textBaseline: widget.textBaseline ?? theme?.textBaseline,
+              spacing: widget.spacing ?? theme?.spacing,
               textDirection: widget.textDirection ?? theme?.textDirection,
               verticalDirection:
                   widget.verticalDirection ??
                   theme?.verticalDirection ??
                   VerticalDirection.down,
             ),
-            items: widget.items,
+            items: itemsList,
             // ignore: avoid-non-null-assertion, null-checked on build first line.
             searchIn: widget.searchIn!,
             onSearchResultsBuilder: widget.onSearchResultsBuilder,
@@ -84,8 +85,8 @@ class _SearchableIndexedListViewBuilderState<T extends Object>
             caseSensitiveSearch: widget.caseSensitiveSearch,
             startWithSearch: widget.startWithSearch,
           )
-        : IndexedListViewBuilder<T>(
-            widget.items,
+        : IndexedListViewBuilder<T, W>(
+            itemsList,
             addAutomaticKeepAlives: widget.addAutomaticKeepAlives,
             addRepaintBoundaries:
                 widget.addRepaintBoundaries ??

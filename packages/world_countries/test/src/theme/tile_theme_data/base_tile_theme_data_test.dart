@@ -6,11 +6,13 @@ void main() => group("$BaseTileThemeData", () {
   const original = BaseTileThemeData();
 
   test("copyWith", () {
-    final copy = original.copyWith(builder: (_, {isDense}) => Text("$isDense"));
+    final copy = original.copyWith(
+      itemBuilder: (_, tile) => Text("${tile.runtimeType}"),
+    );
 
     expect(original, isNot(copy));
-    expect(original.builder, isNull);
-    expect(copy.builder, isNotNull);
+    expect(original.itemBuilder, isNull);
+    expect(copy.itemBuilder, isNotNull);
   });
 
   test("lerp", () => expect(original.lerp(original, 1), original));

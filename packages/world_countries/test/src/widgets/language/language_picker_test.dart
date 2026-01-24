@@ -2,9 +2,11 @@
 import "package:flutter/material.dart";
 import "package:flutter_test/flutter_test.dart";
 import "package:world_countries/src/helpers/typed_locale_delegate.dart";
+import "package:world_countries/src/models/iso/iso_maps.dart";
+import "package:world_countries/src/models/typedefs.dart";
+import "package:world_countries/src/theme/pickers_theme_data.dart";
 import "package:world_countries/src/theme/tile_theme_data/language_tile_theme_data.dart";
 import "package:world_countries/src/widgets/language/language_picker.dart";
-import "package:world_countries/src/widgets/language/language_tile.dart";
 import "package:world_flags/world_flags.dart";
 
 import "../../../helpers/widget_tester_extension.dart";
@@ -14,11 +16,41 @@ void main() => group("$LanguagePicker", () {
     const picker = LanguagePicker();
     expect(picker.onSelect, isNull);
     final newPicker = picker.copyWith(onSelect: (item) => item.toString());
-    newPicker.onSelect?.call(picker.items.first);
+    newPicker.onSelect?.call(picker.resolvedItems().first);
     expect(newPicker.onSelect, isNotNull);
     final newestPicker = newPicker.copyWith(onSelect: print);
     expect(newestPicker.onSelect, isNotNull);
     expect(newestPicker.copyWith(), isNot(newestPicker));
+  });
+
+  testWidgets("copyWith itemBuilder fallback to defaultBuilder", (
+    tester, // Dart 3.8 formatting.
+  ) async {
+    const testText = "Original";
+    final picker = LanguagePicker(
+      languages: const [LangEng()],
+      itemBuilder: (props, tile) => const Text(testText),
+    );
+    const newTestText = "New";
+    final newPicker = picker.copyWith(
+      itemBuilder: (props, tile) => const Text(newTestText),
+    );
+
+    await tester.pumpMaterialApp(newPicker);
+    expect(find.text(newTestText), findsWidgets);
+    expect(find.text(testText), findsNothing);
+  });
+
+  testWidgets("copyWith itemBuilder chains to existing", (tester) async {
+    const testText = "Chained";
+    final picker = LanguagePicker(
+      languages: const [LangEng()],
+      itemBuilder: (props, tile) => const Text(testText),
+    );
+    final newPicker = picker.copyWith();
+
+    await tester.pumpMaterialApp(newPicker);
+    expect(find.text(testText), findsWidgets);
   });
 
   testWidgets(
@@ -35,8 +67,7 @@ void main() => group("$LanguagePicker", () {
       const LanguagePicker(),
       (item) => item.namesNative.first,
       theme: LanguageTileThemeData(
-        builder: (properties, {isDense}) =>
-            Text(properties.item.namesNative.first),
+        itemBuilder: (properties, _) => Text(properties.item.namesNative.first),
       ),
     ),
   );
@@ -89,6 +120,58 @@ void main() => group("$LanguagePicker", () {
       tester.tapAndSettle(find.byIcon(Icons.search)),
       throwsAssertionError,
     );
+    await tester.pump(Duration.zero);
+  });
+
+  testWidgets("throws assert on empty $IsoMaps in theme", (tester) async {
+    bool assertionThrown = false;
+    final originalOnError = FlutterError.onError;
+
+    FlutterError.onError = (details) {
+      if (details.exception is AssertionError &&
+          details.exception.toString().contains(
+            "The $IsoMaps passed to the `maps` contains an empty",
+          )) {
+        assertionThrown = true;
+      } else {
+        originalOnError?.call(details);
+      }
+    };
+
+    try {
+      await tester.pumpMaterialApp(
+        const LanguagePicker(),
+        const PickersThemeData(maps: IsoMaps()),
+      );
+
+      expect(assertionThrown, isTrue);
+    } finally {
+      FlutterError.onError = originalOnError;
+    }
+  });
+
+  testWidgets("throws assert on empty $IsoMaps in picker", (tester) async {
+    bool assertionThrown = false;
+    final originalOnError = FlutterError.onError;
+
+    FlutterError.onError = (details) {
+      if (details.exception is AssertionError &&
+          details.exception.toString().contains(
+            "The $IsoMaps passed to the `maps` contains an empty",
+          )) {
+        assertionThrown = true;
+      } else {
+        originalOnError?.call(details);
+      }
+    };
+
+    try {
+      await tester.pumpMaterialApp(const LanguagePicker(maps: IsoMaps()));
+
+      expect(assertionThrown, isTrue);
+    } finally {
+      FlutterError.onError = originalOnError;
+    }
   });
 
   testWidgets("searchSuggestions()", (tester) async {
@@ -136,164 +219,65 @@ void main() => group("$LanguagePicker", () {
     await expectLater(selected, expected);
   });
 
-  group("adaptiveFlags", () {
+  group("maps", () {
     const german = LangDeu();
-    const austria = CountryAut();
     const germanFlag = BasicFlag(flagDeuProperties);
     const austrianFlag = BasicFlag(flagAutProperties);
-    const eurFlag = StarFlag(flagEurProperties);
-
-    testWidgets("uses localeCountry to ignore platform locale", (tester) async {
-      await tester.pumpMaterialApp(
-        LanguagePicker.adaptiveFlags(
-          languages: const [german],
-          localeCountry: austria,
-        ),
-      );
-      await tester.pumpAndSettle();
-      final tile = find.widgetWithText(LanguageTile, german.namesNative.first);
-      expect(tile, findsOneWidget);
-      final austrianFlagFinder = find.byWidgetPredicate(
-        (e) => e is BasicFlag && e.properties == austrianFlag.properties,
-      );
-      expect(austrianFlagFinder, findsOneWidget);
-      final germanFlagFinder = find.byWidgetPredicate(
-        (e) => e is BasicFlag && e.properties == germanFlag.properties,
-      );
-      expect(germanFlagFinder, findsNothing);
-    });
-
-    testWidgets("uses platform locale if localeCountry isn't provided", (
-      tester,
-    ) async {
-      // ignore: avoid-mutating-parameters, it's a test.
-      final testDispatcher = tester.binding.platformDispatcher
-        ..localesTestValue = const [
-          Locale.fromSubtags(languageCode: "de", countryCode: "AT"),
-        ];
-      addTearDown(testDispatcher.clearLocalesTestValue);
-
-      await tester.pumpMaterialApp(
-        LanguagePicker.adaptiveFlags(languages: const [german]),
-      );
-      final tile = find.widgetWithText(LanguageTile, german.namesNative.first);
-      expect(tile, findsOneWidget);
-      final austrianFlagFinder = find.byWidgetPredicate(
-        (e) => e is BasicFlag && e.properties == austrianFlag.properties,
-      );
-      expect(austrianFlagFinder, findsOneWidget);
-      final germanFlagFinder = find.byWidgetPredicate(
-        (e) => e is BasicFlag && e.properties == germanFlag.properties,
-      );
-      expect(germanFlagFinder, findsNothing);
-    });
-
-    testWidgets(
-      "respects flags provided in flagsMap and does not override them",
-      (tester) async {
-        await tester.pumpMaterialApp(
-          LanguagePicker.adaptiveFlags(
-            languages: const [german],
-            flagsMap: const {german: eurFlag},
-          ),
-        );
-        await tester.pumpAndSettle();
-        final tile = find.widgetWithText(
-          LanguageTile,
-          german.namesNative.first,
-        );
-        expect(tile, findsOneWidget);
-        final eurFlagFinder = find.byWidgetPredicate(
-          (e) => e is BasicFlag && e.properties == eurFlag.properties,
-        );
-        expect(eurFlagFinder, findsOneWidget);
-        final germanFlagFinder = find.byWidgetPredicate(
-          (e) => e is BasicFlag && e.properties == germanFlag.properties,
-        );
-        expect(germanFlagFinder, findsNothing);
-      },
+    final widgetMaps = IsoMaps(
+      languageTranslations: {german: german.namesNative.first},
+      languageFlags: const {german: austrianFlag},
+    );
+    final themeMaps = IsoMaps(
+      languageTranslations: {german: german.namesNative.first},
+      languageFlags: const {german: germanFlag},
     );
 
-    testWidgets(
-      "uses fallbacksMap for languages without associated countries",
-      (tester) async {
-        const esperanto = LangEpo();
-
-        await tester.pumpMaterialApp(
-          LanguagePicker.adaptiveFlags(languages: const [esperanto]),
-        );
-        await tester.pumpAndSettle();
-        final tile = find.widgetWithText(
-          LanguageTile,
-          esperanto.namesNative.first,
-        );
-        expect(tile, findsOneWidget);
-        final epoFlagFinder = find.byWidgetPredicate(
-          (e) => e is BasicFlag && e.properties == flagEpoProperties,
-        );
-        expect(epoFlagFinder, findsOneWidget);
-        final germanFlagFinder = find.byWidgetPredicate(
-          (e) => e is BasicFlag && e.properties == germanFlag.properties,
-        );
-        expect(germanFlagFinder, findsNothing);
-      },
-    );
-
-    testWidgets("flagMapper can customize the final flag", (tester) async {
-      const customKey = Key("customized_flag");
+    testWidgets("uses widget maps to render flags", (tester) async {
       await tester.pumpMaterialApp(
-        LanguagePicker.adaptiveFlags(
-          languages: const [german],
-          flagMapper: (flag, _, _) =>
-              StarFlag(flagEurProperties, key: customKey, child: flag),
-        ),
+        LanguagePicker(languages: const [german], maps: widgetMaps),
       );
       await tester.pumpAndSettle();
-      final tileFinder = find.widgetWithText(
-        LanguageTile,
-        german.namesNative.first,
-      );
-      expect(tileFinder, findsOneWidget);
-      final customWidgetFinder = find.descendant(
-        of: tileFinder,
-        matching: find.byKey(customKey),
-      );
-      expect(customWidgetFinder, findsOneWidget);
-    });
-
-    testWidgets("showInModalBottomSheet shows a picker with adaptive flags", (
-      tester,
-    ) async {
-      final picker = LanguagePicker.adaptiveFlags(
-        languages: const [german],
-        localeCountry: austria,
-      );
-
-      await tester.pumpWidget(
-        MaterialApp(
-          home: Scaffold(
-            body: Builder(
-              builder: (context) => ElevatedButton(
-                onPressed: () async => picker.showInModalBottomSheet(context),
-                child: const Text("Show"),
-              ),
-            ),
-          ),
-        ),
-      );
-
-      await tester.tapAndSettle(find.byType(ElevatedButton));
-      final tile = find.widgetWithText(LanguageTile, german.namesNative.first);
-      expect(tile, findsOneWidget);
-
+      final languageText = find.text(german.namesNative.first);
+      expect(languageText, findsWidgets);
       final austrianFlagFinder = find.byWidgetPredicate(
-        (e) => e is BasicFlag && e.properties == austrianFlag.properties,
+        (widget) =>
+            widget is BasicFlag && widget.properties == austrianFlag.properties,
       );
       expect(austrianFlagFinder, findsOneWidget);
+    });
 
-      final germanFlagFinder = find.byWidgetPredicate(
-        (e) => e is BasicFlag && e.properties == germanFlag.properties,
+    testWidgets("uses theme maps when widget maps missing", (tester) async {
+      await tester.pumpMaterialApp(
+        const LanguagePicker(languages: [german]),
+        PickersThemeData(maps: themeMaps),
       );
+      await tester.pumpAndSettle();
+      final languageText = find.text(german.namesNative.first);
+      expect(languageText, findsWidgets);
+      final germanFlagFinder = find.byWidgetPredicate(
+        (widget) =>
+            widget is BasicFlag && widget.properties == germanFlag.properties,
+      );
+      expect(germanFlagFinder, findsOneWidget);
+    });
+
+    testWidgets("prefers widget maps over theme maps", (tester) async {
+      await tester.pumpMaterialApp(
+        LanguagePicker(languages: const [german], maps: widgetMaps),
+        PickersThemeData(maps: themeMaps),
+      );
+      await tester.pumpAndSettle();
+      final languageText = find.text(german.namesNative.first);
+      expect(languageText, findsWidgets);
+      final austrianFlagFinder = find.byWidgetPredicate(
+        (widget) =>
+            widget is BasicFlag && widget.properties == austrianFlag.properties,
+      );
+      final germanFlagFinder = find.byWidgetPredicate(
+        (widget) =>
+            widget is BasicFlag && widget.properties == germanFlag.properties,
+      );
+      expect(austrianFlagFinder, findsOneWidget);
       expect(germanFlagFinder, findsNothing);
     });
   });

@@ -4,18 +4,18 @@ import "dart:async" show unawaited;
 
 import "package:flutter/foundation.dart";
 import "package:flutter/widgets.dart";
-import "package:sealed_countries/sealed_countries.dart"
-    show FiatEur, IsoStandardized;
+import "package:sealed_countries/sealed_countries.dart" show IsoStandardized;
 
 // ignore: avoid-importing-entrypoint-exports, only shows maps.
 import "../../../world_flags.dart"
-    show smallSimplifiedFlagsMap, smallSimplifiedLanguageFlagsMap;
-import "../../data/other_iso_flags_map.dart";
+    show
+        smallSimplifiedCurrencyFlagsMap,
+        smallSimplifiedFlagsMap,
+        smallSimplifiedLanguageFlagsMap;
 import "../../helpers/extensions/aspect_ratio_extension.dart";
 import "../../model/flag_properties.dart";
 import "../../model/typedefs.dart";
 import "../flags/basic_flag.dart";
-import "../flags/star_flag.dart";
 import "../painters/basic/shader_stripes_painter.dart";
 import "flag_shader_delegate.dart";
 import "flag_shader_options.dart";
@@ -88,7 +88,7 @@ class FlagShaderSurface extends StatefulWidget {
     this.item, {
     Map<IsoStandardized, BasicFlag> map = const {
       ...smallSimplifiedFlagsMap,
-      FiatEur(): StarFlag(flagEurProperties),
+      ...smallSimplifiedCurrencyFlagsMap,
       ...smallSimplifiedLanguageFlagsMap,
     },
     Map<IsoStandardized, BasicFlag>? alternativeMap,
@@ -202,6 +202,7 @@ class _FlagShaderSurfaceState extends State<FlagShaderSurface>
   FlagShaderDelegate? _managedDelegate;
   FlagShaderOptions? _cachedOptions;
   ShaderStripesPainter? _painter;
+  double _pixelRatio = 1;
 
   /// Creates the default waved-flag shader delegate.
   ///
@@ -277,10 +278,22 @@ class _FlagShaderSurfaceState extends State<FlagShaderSurface>
         flag.properties.elementsProperties,
         flag.flagAspectRatio,
       ),
+      pixelRatio: _pixelRatio,
       shader: delegate,
     );
 
     return _painter!; // ignore: avoid-non-null-assertion, just assigned above.
+  }
+
+  @override
+  void didChangeDependencies() {
+    super.didChangeDependencies();
+    final pixelRatio =
+        MediaQuery.maybeDevicePixelRatioOf(context) ??
+        View.of(context).devicePixelRatio; // coverage:ignore-line
+    if (pixelRatio == _pixelRatio) return;
+    _pixelRatio = pixelRatio;
+    _disposePainter(); // Force painter rebuild with new pixel ratio.
   }
 
   @override

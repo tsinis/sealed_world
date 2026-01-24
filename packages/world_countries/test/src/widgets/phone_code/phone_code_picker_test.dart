@@ -2,9 +2,9 @@
 
 import "package:flutter/material.dart";
 import "package:flutter_test/flutter_test.dart";
+import "package:world_countries/src/models/typedefs.dart";
 import "package:world_countries/src/theme/tile_theme_data/country_tile_theme_data.dart";
 import "package:world_countries/src/widgets/country/country_picker.dart";
-import "package:world_countries/src/widgets/country/country_tile.dart";
 import "package:world_countries/src/widgets/phone_code/phone_code_picker.dart";
 import "package:world_flags/world_flags.dart";
 
@@ -15,11 +15,41 @@ void main() => group("$PhoneCodePicker", () {
     const picker = PhoneCodePicker();
     expect(picker.onSelect, isNull);
     final newPicker = picker.copyWith(onSelect: (item) => item.toString());
-    newPicker.onSelect?.call(picker.items.first);
+    newPicker.onSelect?.call(picker.resolvedItems().first);
     expect(newPicker.onSelect, isNotNull);
     final newestPicker = newPicker.copyWith(onSelect: print);
     expect(newestPicker.onSelect, isNotNull);
     expect(newestPicker.copyWith(), isNot(newestPicker));
+  });
+
+  testWidgets("copyWith itemBuilder fallback to defaultBuilder", (
+    tester, // Dart 3.8 formatting.
+  ) async {
+    const testText = "Original";
+    final picker = PhoneCodePicker(
+      countries: const [CountryUsa()],
+      itemBuilder: (props, tile) => const Text(testText),
+    );
+    const newTestText = "New";
+    final newPicker = picker.copyWith(
+      itemBuilder: (props, tile) => const Text(newTestText),
+    );
+
+    await tester.pumpMaterialApp(newPicker);
+    expect(find.text(newTestText), findsWidgets);
+    expect(find.text(testText), findsNothing);
+  });
+
+  testWidgets("copyWith itemBuilder chains to existing", (tester) async {
+    const testText = "Chained";
+    final picker = PhoneCodePicker(
+      countries: const [CountryUsa()],
+      itemBuilder: (props, tile) => const Text(testText),
+    );
+    final newPicker = picker.copyWith();
+
+    await tester.pumpMaterialApp(newPicker);
+    expect(find.text(testText), findsWidgets);
   });
 
   testWidgets(
@@ -36,7 +66,7 @@ void main() => group("$PhoneCodePicker", () {
       const PhoneCodePicker(),
       (item) => item.namesNative.first.common,
       theme: CountryTileThemeData(
-        builder: (properties, {isDense}) =>
+        itemBuilder: (properties, _) =>
             Text(properties.item.namesNative.first.common),
       ),
     ),

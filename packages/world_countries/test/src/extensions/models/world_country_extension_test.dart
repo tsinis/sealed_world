@@ -1,6 +1,6 @@
 import "package:flutter/material.dart";
 import "package:flutter_test/flutter_test.dart";
-import "package:world_countries/src/extensions/world_country_extension.dart";
+import "package:world_countries/src/extensions/models/world_country_extension.dart";
 import "package:world_countries/src/models/locale/typed_locale.dart";
 import "package:world_flags/world_flags.dart";
 

@@ -1,6 +1,7 @@
 import "package:flutter/widgets.dart";
 
 import "../../interfaces/searchable_interface.dart";
+import "../../models/search_data.dart";
 import "../../models/typedefs.dart";
 
 /// An abstract stateful widget that provides search functionality.
@@ -8,7 +9,7 @@ abstract class StatefulSearchable<T extends Object> extends StatefulWidget
     implements SearchableInterface<T> {
   /// Constructor for the [StatefulSearchable] class.
   ///
-  /// * [searchIn] is the function to extract search strings from the items.
+  /// * [searchIn] is the function to extract search data from the items.
   /// * [textController] is the text editing controller for the search bar.
   /// * [caseSensitiveSearch] is a boolean indicating whether the search is
   ///   case-sensitive.
@@ -29,7 +30,7 @@ abstract class StatefulSearchable<T extends Object> extends StatefulWidget
   final TextEditingController textController;
 
   @override
-  final Iterable<String> Function(T item, BuildContext context) searchIn;
+  final SearchData Function(T item, BuildContext context) searchIn;
 
   @override
   final bool caseSensitiveSearch;

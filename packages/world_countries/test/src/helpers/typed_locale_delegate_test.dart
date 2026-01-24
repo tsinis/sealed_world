@@ -5,10 +5,16 @@ import "dart:ui";
 import "package:_sealed_world_tests/sealed_world_tests.dart";
 import "package:flutter_test/flutter_test.dart";
 import "package:world_countries/src/helpers/typed_locale_delegate.dart";
+import "package:world_countries/src/models/iso/iso_collections.dart";
 import "package:world_countries/src/models/locale/typed_locale.dart";
 import "package:world_flags/world_flags.dart";
 
 import "../../helpers/widget_tester_extension.dart";
+
+Comparator<MapEntry<IsoTranslated, String>> _reverseSorterFactory(
+  BasicTypedLocale _,
+) =>
+    (first, second) => second.value.compareTo(first.value);
 
 void main() => group("$TypedLocaleDelegate", () {
   const locale = Locale("en");
@@ -103,6 +109,66 @@ void main() => group("$TypedLocaleDelegate", () {
     });
   });
 
+  group("l10nSorter", () {
+    test("should be used when sorting translations async", () async {
+      const delegateWithSorter = TypedLocaleDelegate(
+        l10nSorter: _reverseSorterFactory,
+      );
+      const defaultDelegate = TypedLocaleDelegate();
+
+      final sortedLocale = await delegateWithSorter.load(locale);
+      final defaultLocale = await defaultDelegate.load(locale);
+
+      final sortedCountries = sortedLocale?.countryTranslations.values.toList();
+      final defaultCountries = defaultLocale?.countryTranslations.values
+          .toList();
+
+      // Verify both have data.
+      expect(sortedCountries, isNotEmpty);
+      expect(defaultCountries, isNotEmpty);
+
+      // Custom sorter reverses the order, so first and last should be swapped.
+      expect(sortedCountries?.first, equals(defaultCountries?.last));
+      expect(sortedCountries?.last, equals(defaultCountries?.first));
+    });
+
+    test("should be used when sorting translations sync", () async {
+      const delegateWithSorter = TypedLocaleDelegate(
+        l10nSorter: _reverseSorterFactory,
+        asyncTranslationCacheProcessing: false,
+      );
+      const defaultDelegate = TypedLocaleDelegate(
+        asyncTranslationCacheProcessing: false,
+      );
+
+      final sortedLocale = await delegateWithSorter.load(locale);
+      final defaultLocale = await defaultDelegate.load(locale);
+
+      final sortedCountries = sortedLocale?.countryTranslations.values.toList();
+      final defaultCountries = defaultLocale?.countryTranslations.values
+          .toList();
+
+      // Verify both have data.
+      expect(sortedCountries, isNotEmpty);
+      expect(defaultCountries, isNotEmpty);
+
+      // Custom sorter reverses the order, so first and last should be swapped.
+      expect(sortedCountries?.first, equals(defaultCountries?.last));
+      expect(sortedCountries?.last, equals(defaultCountries?.first));
+    });
+
+    test("should work with selectiveCache constructor", () async {
+      const delegateWithSorter = TypedLocaleDelegate.selectiveCache(
+        l10nSorter: _reverseSorterFactory,
+        isoCollections: IsoCollections(),
+      );
+
+      final typedLocale = await delegateWithSorter.load(locale);
+
+      expect(typedLocale?.countryTranslations, isNotEmpty);
+    });
+  });
+
   group("isSupported", () {
     test(
       "returns typed locale on supported locale",
@@ -127,7 +193,7 @@ void main() => group("$TypedLocaleDelegate", () {
 
     test("throws no assertion errors if fallbackLanguage specified", () async {
       const fallbackDelegate = TypedLocaleDelegate(fallbackLanguage: english);
-      expect(fallbackDelegate.toString(), contains(english.name));
+      expect(fallbackDelegate.toString(), contains("LangEng()"));
       expect(
         await fallbackDelegate.load(const Locale("00")),
         const TypedLocale(english),

@@ -1,6 +1,6 @@
 import "package:world_flags/world_flags.dart";
 
-import "../../models/item_properties.dart";
+import "../../models/item_properties.dart" show ItemProperties;
 import "base_tile_theme_data.dart";
 
 /// A theme extension data class that holds theme data for currency tiles.
@@ -16,10 +16,19 @@ import "base_tile_theme_data.dart";
 /// Example:
 /// ```dart
 /// final currencyTileThemeData = CurrencyTileThemeData(
-///   builder: (itemProperties, {isDense}) => MyCurrencyTile(
-///     title: itemProperties.item.commonNameFor(locale),
-///     isDense: isDense,
-///   ),
+///   itemBuilder: (itemProperties, defaultTile) {
+///     // Use the default tile as-is
+///     return defaultTile;
+///
+///     // Or customize it with copyWith
+///     return defaultTile.copyWith(dense: true);
+///
+///     // Or build a custom tile
+///     return MyCurrencyTile(
+///       title: itemProperties.item.commonNameFor(locale),
+///       isDense: defaultTile.dense ?? false,
+///     );
+///   },
 /// );
 /// ```
 ///
@@ -29,7 +38,7 @@ final class CurrencyTileThemeData extends BaseTileThemeData<FiatCurrency> {
   /// Constructs a [CurrencyTileThemeData] with an optional builder function.
   ///
   /// The builder function should take [ItemProperties] of type [FiatCurrency]
-  /// and an optional density flag, and return a widget that visually represents
-  /// the currency.
-  const CurrencyTileThemeData({super.builder});
+  /// and the default tile widget, and return a widget that visually represents
+  /// the currency (optionally by returning or customizing the default tile).
+  const CurrencyTileThemeData({super.itemBuilder});
 }

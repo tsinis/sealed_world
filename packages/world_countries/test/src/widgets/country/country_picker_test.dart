@@ -3,11 +3,12 @@
 import "package:flutter/material.dart";
 import "package:flutter_test/flutter_test.dart";
 import "package:world_countries/src/helpers/typed_locale_delegate.dart";
-import "package:world_countries/src/models/locale/typed_locale.dart";
+import "package:world_countries/src/models/iso/iso_maps.dart";
+import "package:world_countries/src/models/search_data.dart";
+import "package:world_countries/src/models/typedefs.dart";
 import "package:world_countries/src/theme/pickers_theme_data.dart";
 import "package:world_countries/src/theme/tile_theme_data/country_tile_theme_data.dart";
 import "package:world_countries/src/widgets/country/country_picker.dart";
-import "package:world_countries/src/widgets/country/country_tile.dart";
 import "package:world_flags/world_flags.dart";
 
 import "../../../helpers/widget_tester_extension.dart";
@@ -17,11 +18,41 @@ void main() => group("$CountryPicker", () {
     const picker = CountryPicker();
     expect(picker.onSelect, isNull);
     final newPicker = picker.copyWith(onSelect: (item) => item.toString());
-    newPicker.onSelect?.call(picker.items.first);
+    newPicker.onSelect?.call(picker.resolvedItems().first);
     expect(newPicker.onSelect, isNotNull);
     final newestPicker = newPicker.copyWith(onSelect: print);
     expect(newestPicker.onSelect, isNotNull);
     expect(newestPicker.copyWith(), isNot(newestPicker));
+  });
+
+  testWidgets("copyWith itemBuilder fallback to defaultBuilder", (
+    tester, // Dart 3.8 formatting.
+  ) async {
+    const testText = "Original";
+    final picker = CountryPicker(
+      countries: const [CountryUsa()],
+      itemBuilder: (props, tile) => const Text(testText),
+    );
+    const newTestText = "New";
+    final newPicker = picker.copyWith(
+      itemBuilder: (props, tile) => const Text(newTestText),
+    );
+
+    await tester.pumpMaterialApp(newPicker);
+    expect(find.text(newTestText), findsWidgets);
+    expect(find.text(testText), findsNothing);
+  });
+
+  testWidgets("copyWith itemBuilder chains to existing", (tester) async {
+    const testText = "Chained";
+    final picker = CountryPicker(
+      countries: const [CountryUsa()],
+      itemBuilder: (props, tile) => const Text(testText),
+    );
+    final newPicker = picker.copyWith();
+
+    await tester.pumpMaterialApp(newPicker);
+    expect(find.text(testText), findsWidgets);
   });
 
   testWidgets(
@@ -38,7 +69,7 @@ void main() => group("$CountryPicker", () {
       const CountryPicker(),
       (item) => item.namesNative.first.common,
       theme: CountryTileThemeData(
-        builder: (properties, {isDense}) =>
+        itemBuilder: (properties, _) =>
             Text(properties.item.namesNative.first.common),
       ),
     ),
@@ -72,7 +103,7 @@ void main() => group("$CountryPicker", () {
     "showSearchBar: false and without selection test",
     (tester) async => tester.testPickerBody(
       CountryPicker(
-        searchIn: (_, _) => const [],
+        searchIn: (_, _) => SearchData.empty(),
         showClearButton: false,
         showSearchBar: false,
       ),
@@ -81,15 +112,14 @@ void main() => group("$CountryPicker", () {
     ),
   );
 
-  testWidgets("throws assert on empty $TypedLocale in theme", (tester) async {
+  testWidgets("throws assert on empty $IsoMaps in theme", (tester) async {
     bool assertionThrown = false;
     final originalOnError = FlutterError.onError;
 
     FlutterError.onError = (details) {
       if (details.exception is AssertionError &&
           details.exception.toString().contains(
-            "The $TypedLocale passed to the `translation` parameter in "
-            "$PickersThemeData lacks a translation",
+            "The $IsoMaps passed to the `maps` contains an empty",
           )) {
         assertionThrown = true;
       } else {
@@ -100,7 +130,7 @@ void main() => group("$CountryPicker", () {
     try {
       await tester.pumpMaterialApp(
         const CountryPicker(),
-        const PickersThemeData(translation: TypedLocale(LangEng())),
+        const PickersThemeData(maps: IsoMaps()),
       );
 
       expect(assertionThrown, isTrue);
@@ -109,15 +139,14 @@ void main() => group("$CountryPicker", () {
     }
   });
 
-  testWidgets("throws assert on empty $TypedLocale in picker", (tester) async {
+  testWidgets("throws assert on empty $IsoMaps in picker", (tester) async {
     bool assertionThrown = false;
     final originalOnError = FlutterError.onError;
 
     FlutterError.onError = (details) {
       if (details.exception is AssertionError &&
           details.exception.toString().contains(
-            "The $TypedLocale passed to the `translation` parameter in the "
-            "$CountryPicker lacks a",
+            "The $IsoMaps passed to the `maps` contains an empty",
           )) {
         assertionThrown = true;
       } else {
@@ -126,9 +155,7 @@ void main() => group("$CountryPicker", () {
     };
 
     try {
-      await tester.pumpMaterialApp(
-        const CountryPicker(translation: TypedLocale(LangEng())),
-      );
+      await tester.pumpMaterialApp(const CountryPicker(maps: IsoMaps()));
 
       expect(assertionThrown, isTrue);
     } finally {
@@ -137,32 +164,21 @@ void main() => group("$CountryPicker", () {
   });
 
   testWidgets("throws assert on empty $TypedLocaleDelegate", (tester) async {
-    bool assertionThrown = false;
-    final originalOnError = FlutterError.onError;
+    await tester.pumpMaterialApp(
+      SearchAnchor.bar(
+        suggestionsBuilder: const CountryPicker().searchSuggestions,
+      ),
+      null,
+      const TypedLocaleDelegate.selectiveCache(),
+    );
+    final tile = find.byType(CountryTile);
+    expect(tile, findsNothing);
 
-    FlutterError.onError = (details) {
-      if (details.exception is AssertionError &&
-          details.exception.toString().contains(
-            """The $TypedLocaleDelegate passed to the app's `localizationsDelegates`""",
-          )) {
-        assertionThrown = true;
-      } else {
-        originalOnError?.call(details);
-      }
-    };
-
-    try {
-      await tester.pumpMaterialApp(
-        const CountryPicker(),
-        null,
-        const TypedLocaleDelegate.selectiveCache(),
-      );
-      await tester.pump();
-
-      expect(assertionThrown, isTrue);
-    } finally {
-      FlutterError.onError = originalOnError;
-    }
+    await expectLater(
+      tester.tapAndSettle(find.byIcon(Icons.search)),
+      throwsAssertionError,
+    );
+    await tester.pump(Duration.zero);
   });
 
   group("searchSuggestions()", () {
@@ -192,7 +208,7 @@ void main() => group("$CountryPicker", () {
         ),
       );
 
-      final tile = find.byType(CountryFlag);
+      final tile = find.byType(CountryTile);
       expect(tile, findsNothing);
       await tester.tapAndSettle(find.byIcon(Icons.search));
       await tester.enterText(
@@ -200,23 +216,10 @@ void main() => group("$CountryPicker", () {
         firstCountry.internationalName,
       );
       await tester.pumpAndSettle();
+      expect(find.text(firstCountry.namesNative.first.common), findsWidgets);
+      expect(find.text(lastCountry.namesNative.first.common), findsNothing);
       expect(
-        find.byWidgetPredicate(
-          (widget) => widget is CountryFlag && widget.country == firstCountry,
-        ),
-        findsWidgets,
-      );
-      expect(
-        find.byWidgetPredicate(
-          (widget) => widget is CountryFlag && widget.country == lastCountry,
-        ),
-        findsNothing,
-      );
-      expect(
-        find.byWidgetPredicate(
-          (widget) =>
-              widget is CountryFlag && widget.country == neverFoundCountry,
-        ),
+        find.text(neverFoundCountry.namesNative.first.common),
         findsNothing,
       );
     });
@@ -231,7 +234,7 @@ void main() => group("$CountryPicker", () {
         ),
       );
 
-      final tile = find.byType(CountryFlag);
+      final tile = find.byType(CountryTile);
       expect(tile, findsNothing);
       await tester.tapAndSettle(find.byIcon(Icons.search));
       await tester.enterText(
@@ -239,23 +242,10 @@ void main() => group("$CountryPicker", () {
         firstCountry.internationalName,
       );
       await tester.pumpAndSettle();
+      expect(find.text(firstCountry.namesNative.first.common), findsWidgets);
+      expect(find.text(lastCountry.namesNative.first.common), findsWidgets);
       expect(
-        find.byWidgetPredicate(
-          (widget) => widget is CountryFlag && widget.country == firstCountry,
-        ),
-        findsWidgets,
-      );
-      expect(
-        find.byWidgetPredicate(
-          (widget) => widget is CountryFlag && widget.country == lastCountry,
-        ),
-        findsWidgets,
-      );
-      expect(
-        find.byWidgetPredicate(
-          (widget) =>
-              widget is CountryFlag && widget.country == neverFoundCountry,
-        ),
+        find.text(neverFoundCountry.namesNative.first.common),
         findsNothing,
       );
     });
@@ -273,10 +263,7 @@ void main() => group("$CountryPicker", () {
       ),
     );
     expect(find.byType(CountryPicker), findsOneWidget);
-    expect(
-      find.text(countries.first.namesNative.first.common),
-      findsNWidgets(2), // TODO: Refactor with semantic label.
-    );
+    expect(find.text(countries.first.namesNative.first.common), findsOneWidget);
     expect(find.text(countries.last.namesNative.first.common), findsNothing);
   });
 
@@ -296,7 +283,7 @@ void main() => group("$CountryPicker", () {
     expect(find.byType(CountryPicker), findsOneWidget);
     expect(
       find.text(sortedCountries.first.namesNative.first.common),
-      findsNWidgets(2), // TODO: Refactor with semantic label.
+      findsOneWidget,
     );
     expect(
       find.text(sortedCountries.last.namesNative.first.common),

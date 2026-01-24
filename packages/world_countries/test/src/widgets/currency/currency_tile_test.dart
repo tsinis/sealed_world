@@ -1,6 +1,6 @@
 import "package:flutter_test/flutter_test.dart";
 import "package:world_countries/src/models/item_properties.dart";
-import "package:world_countries/src/widgets/currency/currency_tile.dart";
+import "package:world_countries/src/models/typedefs.dart";
 import "package:world_flags/world_flags.dart";
 
 import "../../../helpers/widget_tester_extension.dart";
@@ -19,9 +19,7 @@ void main() => group("$CurrencyTile", () {
       CurrencyTile.fromProperties(ItemProperties(context, value, index: 1)),
     );
 
-    expect(
-      find.widgetWithText(CurrencyTile, "${value.name} (${value.code})"),
-      findsOneWidget,
-    );
+    expect(find.byType(CurrencyTile), findsOneWidget);
+    expect(find.text(value.namesNative.first), findsOneWidget);
   });
 });

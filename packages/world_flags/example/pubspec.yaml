@@ -1,4 +1,4 @@
-version: 2.9.1
+version: 3.0.0
 name: world_flags_example
 description: A world_flags package example application.
 publish_to: none
@@ -16,3 +16,5 @@ dependencies:
 
 flutter:
   uses-material-design: true
+  shaders:
+    - shaders/cupertino_emoji_flag.frag

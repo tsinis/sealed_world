@@ -2,14 +2,14 @@ import "package:flutter/gestures.dart" show DragStartBehavior;
 import "package:flutter/material.dart";
 import "package:world_flags/world_flags.dart";
 
-import "../../extensions/world_countries_build_context_extension.dart";
+import "../../models/iso/iso_maps.dart";
 import "../../models/item_properties.dart";
-import "../../models/locale/typed_locale.dart";
+import "../../models/search_data.dart";
+import "../../models/typedefs.dart";
 import "../pickers/basic_picker.dart";
-import "country_tile.dart";
 
 /// A picker widget for selecting a country.
-class CountryPicker extends BasicPicker<WorldCountry> {
+class CountryPicker extends BasicPicker<WorldCountry, CountryTile> {
   /// Constructor for the [CountryPicker] class.
   ///
   /// * [countries] is the list of countries to display.
@@ -59,10 +59,9 @@ class CountryPicker extends BasicPicker<WorldCountry> {
   /// * [textBaseline] is the text baseline for the items.
   /// * [textDirection] is the text direction for the items.
   /// * [verticalDirection] is the vertical direction for the items.
-  /// * [translation] is the optional natural language to use for translations.
-  /// * [flagsMap] is the optional map of flags to use for the [countries].
+  /// * [maps] is the optional [IsoMaps] bundle with translations/flags.
   const CountryPicker({
-    Iterable<WorldCountry> countries = WorldCountry.list,
+    Iterable<WorldCountry>? countries,
     super.addAutomaticKeepAlives,
     super.addRepaintBoundaries,
     super.addSemanticIndexes,
@@ -101,54 +100,44 @@ class CountryPicker extends BasicPicker<WorldCountry> {
     super.textDirection,
     super.verticalDirection,
     super.spacing,
-    super.translation,
-    super.flagsMap,
+    super.maps,
   }) : super(countries);
 
   @override
-  Widget defaultBuilder(
-    BuildContext context,
-    ItemProperties<WorldCountry> itemProperties, {
-    bool? isDense,
-  }) {
-    final builder = context.countryTileTheme?.builder;
-    if (builder != null) return builder(itemProperties, isDense: isDense);
+  CountryTile defaultBuilder(ItemProperties<WorldCountry> props) =>
+      CountryTile.fromProperties(
+        props,
+        title: itemNameTranslated(props.item, props.context),
+        leadingFlag: maybeMaps(props.context)?.countryFlags[props.item],
+        onPressed: onSelect,
+      );
 
-    final maybeNameTitle = itemNameTranslated(
-      itemProperties.item,
-      itemProperties.context,
+  @override
+  String? nameTranslationCache(WorldCountry item, IsoMaps isoMaps) =>
+      isoMaps.countryTranslations[item];
+
+  @override
+  Iterable<WorldCountry> defaultItems(BuildContext? context) {
+    final keys = maybeMaps(context)?.countryTranslations.keys;
+    assert(
+      keys == null || keys.isNotEmpty,
+      "The $IsoMaps passed to the `maps` contains an empty "
+      "`countryTranslations` map. Please provide a valid `IsoMaps` instance "
+      "with country translations or non-empty `countries`",
     );
 
-    return (isDense ?? false)
-        ? CountryTile.simple(
-            itemProperties,
-            title: maybeNameTitle,
-            leading: flagsMap[itemProperties.item],
-            titleAlignment: ListTileTitleAlignment.titleHeight,
-            onPressed: (country) =>
-                // ignore: prefer-correct-handler-name, breaking change.
-                maybeSelectAndPop(country, itemProperties.context),
-          )
-        : CountryTile.fromProperties(
-            itemProperties,
-            title: maybeNameTitle,
-            leading: flagsMap[itemProperties.item],
-            onPressed: onSelect,
-          );
+    return keys ?? WorldCountry.list;
   }
 
   @override
-  String? nameTranslationCache(WorldCountry item, TypedLocale locale) =>
-      locale.countryTranslations[item];
-
-  @override
-  Iterable<String> defaultSearch(WorldCountry item, BuildContext context) =>
-      Set.unmodifiable({
-        ...super.defaultSearch(item, context),
-        ...item.namesNative.map((nativeName) => nativeName.common),
-        ...item.altSpellings,
-        item.name.common,
-      });
+  SearchData defaultSearch(WorldCountry item, BuildContext context) =>
+      SearchData(
+        item.internationalName,
+        item.namesNative.map((nativeName) => nativeName.common),
+        name: maybeNameTranslation(item, context),
+        code: item.code,
+        others: item.altSpellings,
+      );
 
   @override
   // ignore: avoid-incomplete-copy-with, avoid-high-cyclomatic-complexity, a lot of params.
@@ -188,21 +177,15 @@ class CountryPicker extends BasicPicker<WorldCountry> {
     TextBaseline? textBaseline,
     TextDirection? textDirection,
     VerticalDirection? verticalDirection,
-    Iterable<String> Function(WorldCountry country, BuildContext context)?
-    searchIn,
+    SearchData Function(WorldCountry country, BuildContext context)? searchIn,
     Iterable<WorldCountry> Function(
       String query,
-      Map<WorldCountry, Set<String>> map,
+      Map<WorldCountry, SearchData> map,
     )?
     onSearchResultsBuilder,
-    Widget? Function(
-      ItemProperties<WorldCountry> itemProperties, {
-      bool? isDense,
-    })?
-    itemBuilder,
+    Widget? Function(ItemProperties<WorldCountry>, CountryTile)? itemBuilder,
     double? spacing,
-    TypedLocale? translation,
-    Map<WorldCountry, BasicFlag>? flagsMap,
+    IsoMaps? maps,
   }) => CountryPicker(
     countries: items ?? this.items,
     addAutomaticKeepAlives:
@@ -218,7 +201,9 @@ class CountryPicker extends BasicPicker<WorldCountry> {
     disabled: disabled ?? this.disabled,
     dragStartBehavior: dragStartBehavior ?? this.dragStartBehavior,
     emptyStatePlaceholder: emptyStatePlaceholder ?? this.emptyStatePlaceholder,
-    itemBuilder: itemBuilder ?? this.itemBuilder,
+    itemBuilder: (props, tile) =>
+        itemBuilder?.call(props, tile ?? defaultBuilder(props)) ??
+        this.itemBuilder?.call(props, tile),
     key: key ?? this.key,
     keyboardDismissBehavior:
         keyboardDismissBehavior ?? this.keyboardDismissBehavior,
@@ -246,7 +231,6 @@ class CountryPicker extends BasicPicker<WorldCountry> {
     textDirection: textDirection ?? this.textDirection,
     verticalDirection: verticalDirection ?? this.verticalDirection,
     spacing: spacing ?? this.spacing,
-    translation: translation ?? this.translation,
-    flagsMap: flagsMap ?? this.flagsMap,
+    maps: maps ?? this.maps,
   );
 }

@@ -18,12 +18,14 @@ import "../../models/item_properties.dart";
 ///
 /// This widget can be used in conjunction with the [ItemProperties] class to
 /// customize the appearance and behavior of individual items in the list.
-abstract class StatefulIndexedListView<T extends Object> extends StatefulWidget
+abstract class StatefulIndexedListView<T extends Object, W extends Widget>
+    extends StatefulWidget
     implements IndexedListViewInterface {
   /// Creates a [StatefulIndexedListView] with the given parameters.
   ///
-  /// The [items] parameter is required and specifies the list of items to
-  /// display.
+  /// The [items] parameter specifies the list of items to display. When it is
+  /// `null`, subclasses must provide a fallback via [defaultItems] to ensure
+  /// that the view can still render meaningful content.
   ///
   /// The optional parameters allow customization of the list's appearance and
   /// behavior.
@@ -65,17 +67,15 @@ abstract class StatefulIndexedListView<T extends Object> extends StatefulWidget
   });
 
   /// The list of items to display.
-  final Iterable<T> items;
+  final Iterable<T>? items;
 
   /// A builder that returns a widget to display an item in the list.
   ///
   /// The builder is called for each item in the list and should return a widget
   /// that displays the item. The argument passed to the builder is an
   /// [ItemProperties] object that contains information about the item being
-  /// displayed. It also has an optional parameter `isDense`, which indicates
-  /// whether the item uses less vertical space or not, defaults to `false`.
-  final Widget? Function(ItemProperties<T> itemProperties, {bool? isDense})?
-  itemBuilder;
+  /// displayed.
+  final Widget? Function(ItemProperties<T>, W?)? itemBuilder;
 
   /// A widget to display when the list is empty.
   final Widget emptyStatePlaceholder;
@@ -181,4 +181,28 @@ abstract class StatefulIndexedListView<T extends Object> extends StatefulWidget
 
   @override
   final double? spacing;
+
+  /// Provides the default list of items to display when [items] is `null`.
+  ///
+  /// Subclasses must implement this method to define fallback behavior.
+  /// For example, pickers might return all available countries, currencies,
+  /// or languages from a global list, or use translation cache keys from
+  /// theme or locale delegate.
+  ///
+  /// The [context] parameter allows subclasses to access theme data or
+  /// localization delegates to determine appropriate default items.
+  @protected
+  Iterable<T> defaultItems(BuildContext? context);
+
+  /// Returns the items to display, using [items] if provided, otherwise
+  /// falling back to [defaultItems].
+  ///
+  /// This is the primary method for obtaining the list of items to render
+  /// in the view. It ensures that there's always a valid list of items
+  /// available, even when [items] is `null`.
+  ///
+  /// The optional [context] parameter is passed to [defaultItems] when
+  /// needed for determining defaults based on theme or locale.
+  Iterable<T> resolvedItems([BuildContext? context]) =>
+      items ?? defaultItems(context);
 }

@@ -1,12 +1,11 @@
 import "package:flutter/gestures.dart";
 import "package:flutter/material.dart";
 import "package:meta/meta.dart" show useResult;
-import "package:world_flags/world_flags.dart";
 
 import "../constants/ui_constants.dart";
 import "../interfaces/basic_picker_interface.dart";
 import "../interfaces/indexed_list_view_interface.dart";
-import "../models/locale/typed_locale.dart";
+import "../models/iso/iso_maps.dart";
 
 /// Holds the theme data for pickers.
 ///
@@ -53,9 +52,8 @@ class PickersThemeData extends ThemeExtension<PickersThemeData>
     this.searchBarPadding = UiConstants.padding,
     this.showClearButton = true,
     this.searchBar,
-    this.translation,
+    this.maps,
     this.spacing = 0,
-    this.flagsMap = const {},
   });
 
   /// Creates a copy of this theme data but with the given fields replaced with
@@ -78,7 +76,7 @@ class PickersThemeData extends ThemeExtension<PickersThemeData>
     bool? showClearButton,
     TextField? searchBar,
     EdgeInsetsGeometry? searchBarPadding,
-    TypedLocale? translation,
+    IsoMaps? maps,
     Widget? separator,
     bool? showHeader,
     Widget? header,
@@ -101,7 +99,6 @@ class PickersThemeData extends ThemeExtension<PickersThemeData>
     DragStartBehavior? dragStartBehavior,
     ScrollViewKeyboardDismissBehavior? keyboardDismissBehavior,
     double? spacing,
-    Map<IsoTranslated, BasicFlag>? flagsMap,
   }) => PickersThemeData(
     addRepaintBoundaries: addRepaintBoundaries ?? this.addRepaintBoundaries,
     addSemanticIndexes: addSemanticIndexes ?? this.addSemanticIndexes,
@@ -128,9 +125,8 @@ class PickersThemeData extends ThemeExtension<PickersThemeData>
     searchBarPadding: searchBarPadding ?? this.searchBarPadding,
     showClearButton: showClearButton ?? this.showClearButton,
     searchBar: searchBar ?? this.searchBar,
-    translation: translation ?? this.translation,
+    maps: maps ?? this.maps,
     spacing: spacing ?? this.spacing,
-    flagsMap: flagsMap ?? this.flagsMap,
   );
 
   @override
@@ -150,7 +146,7 @@ class PickersThemeData extends ThemeExtension<PickersThemeData>
   final EdgeInsetsGeometry? searchBarPadding;
 
   @override
-  final TypedLocale? translation;
+  final IsoMaps? maps;
 
   @override
   final Widget? separator;
@@ -217,7 +213,4 @@ class PickersThemeData extends ThemeExtension<PickersThemeData>
 
   @override
   final double spacing;
-
-  @override
-  final Map<IsoTranslated, BasicFlag> flagsMap;
 }

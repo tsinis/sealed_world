@@ -1,5 +1,6 @@
 import "package:flutter/gestures.dart";
 import "package:flutter/widgets.dart";
+import "package:meta/meta.dart";
 
 import "../../constants/ui_constants.dart";
 import "../../extensions/world_countries_build_context_extension.dart";
@@ -7,9 +8,9 @@ import "../../mixins/properties_convertible_mixin.dart";
 import "../base_widgets/stateful_indexed_list_view.dart";
 
 /// A stateful indexed list view widget that displays a list of items.
-class IndexedListViewBuilder<T extends Object>
-    extends StatefulIndexedListView<T>
-    with PropertiesConvertibleMixin<T> {
+class IndexedListViewBuilder<T extends Object, W extends Widget>
+    extends StatefulIndexedListView<T, W>
+    with PropertiesConvertibleMixin<T, W> {
   /// Constructor for the [IndexedListViewBuilder] class.
   ///
   /// * [items] is the list of items to display in the list view.
@@ -85,17 +86,22 @@ class IndexedListViewBuilder<T extends Object>
     super.spacing,
   });
 
+  @override // coverage:ignore-line
+  @mustBeOverridden
+  Iterable<T> defaultItems(BuildContext? context) => const [];
+
   @override
-  State<IndexedListViewBuilder> createState() =>
-      _IndexedListViewBuilderState<T>();
+  State<IndexedListViewBuilder<T, W>> createState() =>
+      _IndexedListViewBuilderState<T, W>();
 }
 
-class _IndexedListViewBuilderState<T extends Object>
-    extends State<IndexedListViewBuilder<T>> {
+class _IndexedListViewBuilderState<T extends Object, W extends Widget>
+    extends State<IndexedListViewBuilder<T, W>> {
   @override
   // ignore: avoid-high-cyclomatic-complexity, build methods are typically long.
   Widget build(BuildContext context) {
     final theme = context.pickersTheme;
+    final items = widget.resolvedItems(context);
     final header = widget.header ?? theme?.header;
 
     return Column(
@@ -124,7 +130,7 @@ class _IndexedListViewBuilderState<T extends Object>
             duration: UiConstants.duration,
             switchInCurve: UiConstants.switchInCurve,
             switchOutCurve: UiConstants.switchOutCurve,
-            child: widget.items.isEmpty
+            child: items.isEmpty
                 ? widget.emptyStatePlaceholder
                 // ignore: avoid-shrink-wrap-in-lists, it's `false` by default.
                 : ListView.separated(
@@ -136,9 +142,9 @@ class _IndexedListViewBuilderState<T extends Object>
                     physics: widget.physics ?? theme?.physics,
                     shrinkWrap: widget.shrinkWrap ?? theme?.shrinkWrap ?? false,
                     padding: widget.padding ?? theme?.padding,
-                    itemBuilder: (newContext, index) {
-                      final properties = widget.properties(newContext, index);
-                      final child = widget.itemBuilder?.call(properties);
+                    itemBuilder: (bc, index) {
+                      final properties = widget.properties(bc, index, items);
+                      final child = widget.itemBuilder?.call(properties, null);
                       if (child == null) return null;
                       if (properties.isDisabled) return child;
 
@@ -151,7 +157,7 @@ class _IndexedListViewBuilderState<T extends Object>
                         widget.separator ??
                         theme?.separator ??
                         UiConstants.separator,
-                    itemCount: widget.items.length,
+                    itemCount: items.length,
                     addAutomaticKeepAlives: widget.addAutomaticKeepAlives,
                     addRepaintBoundaries:
                         widget.addRepaintBoundaries ??

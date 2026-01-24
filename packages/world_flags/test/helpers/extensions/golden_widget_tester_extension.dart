@@ -11,7 +11,7 @@ import "../flag_type.dart";
 extension GoldenWidgetTesterExtension on WidgetTester {
   static const _items = <IsoTranslated, BasicFlag>{
     ...smallSimplifiedFlagsMap,
-    FiatEur(): StarFlag(flagEurProperties),
+    ...smallSimplifiedCurrencyFlagsMap,
     ...smallSimplifiedLanguageFlagsMap,
   };
 
@@ -26,7 +26,7 @@ extension GoldenWidgetTesterExtension on WidgetTester {
 
     await binding.setSurfaceSize(Size(width, height));
     final widget = isWaved
-        ? FlagShaderSurface(iso, height: height, width: width)
+        ? FlagShaderSurface(iso, height: height, width: width) // TODO! Pixel.R.
         : IsoFlag(iso, _items);
 
     await pumpWidget(

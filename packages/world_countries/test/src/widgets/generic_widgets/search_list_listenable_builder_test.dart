@@ -1,5 +1,6 @@
 import "package:flutter/material.dart";
 import "package:flutter_test/flutter_test.dart";
+import "package:world_countries/src/models/search_data.dart";
 import "package:world_countries/src/widgets/generic_widgets/search_list_listenable_builder.dart";
 
 import "../../../helpers/widget_tester_extension.dart";
@@ -14,7 +15,7 @@ void main() => group("$SearchListListenableBuilder", () {
     await tester.pumpWidgetsApp(
       SearchListListenableBuilder(
         items: items,
-        searchIn: (item, _) => [item],
+        searchIn: (item, _) => SearchData.empty(code: item),
         textController: controller,
         builder: (_, list) {
           lastBuiltList.addAll(list);
@@ -36,7 +37,7 @@ void main() => group("$SearchListListenableBuilder", () {
     await tester.pumpWidgetsApp(
       SearchListListenableBuilder<String>(
         items: items,
-        searchIn: (item, _) => [item],
+        searchIn: (item, _) => SearchData.empty(code: item),
         textController: controller,
         builder: (_, _) => const SizedBox.shrink(),
       ),
@@ -45,7 +46,7 @@ void main() => group("$SearchListListenableBuilder", () {
     await tester.pumpWidgetsApp(
       SearchListListenableBuilder<String>(
         items: items,
-        searchIn: (item, _) => [item],
+        searchIn: (item, _) => SearchData.empty(code: item),
         textController: anotherController,
         builder: (_, _) => const SizedBox.shrink(),
       ),

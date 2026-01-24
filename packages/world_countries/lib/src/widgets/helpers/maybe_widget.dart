@@ -263,7 +263,6 @@ class MaybeWidget<T extends Object> extends StatelessWidget {
   void debugFillProperties(DiagnosticPropertiesBuilder properties) {
     super.debugFillProperties(properties);
 
-    // TODO? Improve generics as W extends Widget and provide builder data here.
     properties
       ..add(
         DiagnosticsProperty<T>(

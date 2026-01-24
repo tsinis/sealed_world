@@ -18,10 +18,19 @@ import "base_tile_theme_data.dart";
 /// Example:
 /// ```dart
 /// final countryTileThemeData = CountryTileThemeData(
-///   builder: (itemProperties, {isDense}) => MyCountryTile(
-///     title: itemProperties.item.commonNameFor(locale),
-///     isDense: isDense,
-///   ),
+///   itemBuilder: (itemProperties, defaultTile) {
+///     // Use the default tile as-is
+///     return defaultTile;
+///
+///     // Or customize it with copyWith
+///     return defaultTile.copyWith(dense: true);
+///
+///     // Or build a custom tile
+///     return MyCountryTile(
+///       title: itemProperties.item.commonNameFor(locale),
+///       isDense: defaultTile.dense ?? false,
+///     );
+///   },
 /// );
 /// ```
 ///
@@ -31,7 +40,7 @@ final class CountryTileThemeData extends BaseTileThemeData<WorldCountry> {
   /// Constructs a [CountryTileThemeData] with a builder function.
   ///
   /// The builder function should take [ItemProperties] of type [WorldCountry]
-  /// and an optional density flag, and return a widget that visually represents
-  /// the country.
-  const CountryTileThemeData({super.builder});
+  /// and the default tile widget, and return a widget that visually represents
+  /// the country (optionally by returning or customizing the default tile).
+  const CountryTileThemeData({super.itemBuilder});
 }

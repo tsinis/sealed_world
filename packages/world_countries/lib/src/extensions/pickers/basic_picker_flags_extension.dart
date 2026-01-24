@@ -1,19 +1,12 @@
-import "package:flutter/widgets.dart"
-    show BorderRadius, BoxDecoration, Radius, WidgetsBinding;
+import "package:flutter/widgets.dart" show WidgetsBinding;
 import "package:meta/meta.dart";
 import "package:world_flags/world_flags.dart";
 
-import "../../constants/ui_constants.dart";
 import "../platform_dispatcher_extension.dart";
 
 @internal
 extension BasicPickerFlagsExtension<T extends IsoTranslated>
     on Map<T, BasicFlag> {
-  static const _countryFlags = <WorldCountry, BasicFlag>{
-    ...uniqueSimplifiedFlagsMap,
-    ...smallSimplifiedAlternativeFlagsMap,
-  };
-
   Map<T, BasicFlag> adaptFlags(
     Map<T, List<WorldCountry>> itemsMap, {
     Map<T, BasicFlag>? fallbacksMap,
@@ -25,7 +18,7 @@ extension BasicPickerFlagsExtension<T extends IsoTranslated>
         WidgetsBinding.instance.platformDispatcher.firstCountryOrNull;
     final mapper = flagsMapper ?? _defaultFlagsMapper;
     final flagMap = Map<T, BasicFlag>.of(this);
-    final localeFlag = _countryFlags[country];
+    final localeFlag = smallSimplifiedFlagsMap[country];
     final hasCountry = localeFlag != null;
 
     for (final entry in itemsMap.entries) {
@@ -43,7 +36,7 @@ extension BasicPickerFlagsExtension<T extends IsoTranslated>
         final fallback = fallbacksMap?[key];
         if (fallback != null) flagMap[key] = mapper(fallback, key, countries);
       } else {
-        final firstOne = _countryFlags[countries.first];
+        final firstOne = smallSimplifiedFlagsMap[countries.first];
         if (firstOne != null) flagMap[key] = mapper(firstOne, key, countries);
       }
     }
@@ -51,14 +44,5 @@ extension BasicPickerFlagsExtension<T extends IsoTranslated>
     return flagMap;
   }
 
-  BasicFlag _defaultFlagsMapper(BasicFlag flag, T _, List<WorldCountry>? _) =>
-      flag.copyWith(
-        height: 18,
-        aspectRatio: FlagConstants.defaultAspectRatio,
-        decoration: const BoxDecoration(
-          borderRadius: BorderRadius.all(
-            Radius.circular(UiConstants.point / 2),
-          ),
-        ),
-      );
+  BasicFlag _defaultFlagsMapper(BasicFlag flag, Object _, Object _) => flag;
 }

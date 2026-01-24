@@ -5,6 +5,7 @@ import "package:flutter/material.dart"
 import "package:flutter/widgets.dart";
 
 import "../constants/ui_constants.dart";
+import "../models/search_data.dart";
 import "../models/typedefs.dart";
 import "searchable_interface.dart";
 
@@ -15,11 +16,11 @@ abstract class SearchDelegateInterface<T extends Object>
   /// Constructor for the [SearchDelegateInterface] class.
   ///
   /// * [items] is the list of items to search through.
-  /// * [resultsBuilder] is a function that takes a `BuildContext` and an
+  /// * [resultsBuilder] is a function that takes a [BuildContext] and an
   ///   [UnmodifiableListView] of items and returns a widget to display as the
   ///   search results.
-  /// * [searchIn] is a function that takes an item and returns an iterable of
-  ///   strings to search in.
+  /// * [searchIn] is a function that takes an item and returns [SearchData] to
+  ///   search in.
   /// * [onSearchResultsBuilder] is the optional function to customize the build
   ///   of the search results.
   /// * [resultValidator] is a function that takes an item and returns a boolean
@@ -40,6 +41,7 @@ abstract class SearchDelegateInterface<T extends Object>
     this.items, {
     required this.resultsBuilder,
     required this.searchIn,
+    required this.searchMap,
     super.keyboardType,
     super.searchFieldDecorationTheme,
     super.searchFieldLabel,
@@ -56,7 +58,6 @@ abstract class SearchDelegateInterface<T extends Object>
     this.backIconButton,
     this.clearIconButton,
     this.onSearchResultsBuilder,
-    this.searchMap = const {},
   });
 
   /// A function that takes an item and returns a boolean indicating whether the
@@ -79,10 +80,15 @@ abstract class SearchDelegateInterface<T extends Object>
   /// The list of items to search through.
   final Iterable<T> items;
 
-  /// A function that takes a `BuildContext` and an [UnmodifiableListView] of
-  /// items and returns a widget to display as the search results.
-  final Widget Function(BuildContext context, UnmodifiableListView<T> items)
-  resultsBuilder; // TODO: Improve with query param in the next major release.
+  /// A function that takes a [BuildContext], [String] query and an
+  /// [UnmodifiableListView] of items and returns a widget to display as
+  /// the search results.
+  final Widget Function(
+    BuildContext context,
+    UnmodifiableListView<T> items,
+    String query,
+  )
+  resultsBuilder;
 
   /// A boolean indicating whether to show the clear button on the search field.
   final bool? showClearButton;
@@ -96,10 +102,10 @@ abstract class SearchDelegateInterface<T extends Object>
   @override
   final bool startWithSearch;
 
-  /// A function that takes an item and returns an iterable of strings to search
-  /// in.
+  /// A function that takes an item and context and returns [SearchData] to
+  /// search in.
   @override
-  final Iterable<String> Function(T item, BuildContext context) searchIn;
+  final SearchData Function(T item, BuildContext context) searchIn;
 
   @override
   final Iterable<T> Function(String query, SearchMap<T> map)?
@@ -107,5 +113,5 @@ abstract class SearchDelegateInterface<T extends Object>
 
   /// A map of search results to their corresponding items. That can be used to
   /// cache the search results for performance optimization.
-  final SearchMap<T> searchMap; // TODO: Mandatory in the next major release.
+  final SearchMap<T> searchMap;
 }

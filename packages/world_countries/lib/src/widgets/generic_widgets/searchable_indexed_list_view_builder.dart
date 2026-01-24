@@ -9,6 +9,7 @@ import "../../interfaces/material_context_interface.dart";
 import "../../interfaces/searchable_interface.dart";
 import "../../mixins/popped_mixin.dart";
 import "../../mixins/properties_convertible_mixin.dart";
+import "../../models/search_data.dart";
 import "../../models/typedefs.dart";
 import "../base_widgets/stateful_indexed_list_view.dart";
 import "indexed_list_view_builder.dart";
@@ -18,9 +19,9 @@ part "searchable_indexed_list_view_builder_state.dart";
 
 /// A widget that displays a list of items, with search functionality and
 /// indexing support.
-class SearchableIndexedListViewBuilder<T extends Object>
-    extends StatefulIndexedListView<T>
-    with PropertiesConvertibleMixin<T>, PoppedMixin<T>
+class SearchableIndexedListViewBuilder<T extends Object, W extends Widget>
+    extends StatefulIndexedListView<T, W>
+    with PropertiesConvertibleMixin<T, W>, PoppedMixin<T, W>
     implements MaterialContextInterface<T>, SearchableInterface<T> {
   /// Constructor for the [SearchableIndexedListViewBuilder] class.
   ///
@@ -122,9 +123,9 @@ class SearchableIndexedListViewBuilder<T extends Object>
   /// The text editing controller for the search bar.
   final TextEditingController? textController;
 
-  /// The method to apply search to the items.
+  /// The method to apply search to the items and return search data.
   @override
-  final Iterable<String> Function(T item, BuildContext context)? searchIn;
+  final SearchData Function(T item, BuildContext context)? searchIn;
 
   /// A boolean indicating whether the search is case-sensitive.
   @override
@@ -138,9 +139,12 @@ class SearchableIndexedListViewBuilder<T extends Object>
   final Iterable<T> Function(String query, SearchMap<T> map)?
   onSearchResultsBuilder;
 
+  @override // coverage:ignore-line
+  Iterable<T> defaultItems(BuildContext? context) => const [];
+
   @override
-  State<SearchableIndexedListViewBuilder<T>> createState() =>
-      _SearchableIndexedListViewBuilderState<T>();
+  State<SearchableIndexedListViewBuilder<T, W>> createState() =>
+      _SearchableIndexedListViewBuilderState<T, W>();
 
   @override
   Future<T?> showInModalBottomSheet(

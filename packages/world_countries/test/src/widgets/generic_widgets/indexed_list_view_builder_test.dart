@@ -12,11 +12,15 @@ void main() => group("$IndexedListViewBuilder", () {
 
   testWidgets("with theme extensions", (tester) async {
     final widget = IndexedListViewBuilder(
-      itemBuilder: (_, {isDense}) => Text("$isDense"),
+      itemBuilder: (props, _) => Text(props.item.toString()),
       const [1, 2],
     );
     await tester.pumpMaterialApp(widget);
-    expect(find.byType(IndexedListViewBuilder<int>), findsOneWidget);
+    expect(
+      find.byWidgetPredicate((i) => i is Text && i.data == "1"),
+      findsOneWidget,
+    );
+    expect(find.byType(IndexedListViewBuilder<int, Widget>), findsOneWidget);
     expect(find.byType(ListView), findsOneWidget);
     expect(find.byType(Divider), findsOneWidget);
   });

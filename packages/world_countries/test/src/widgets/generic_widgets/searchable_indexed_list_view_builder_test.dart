@@ -1,5 +1,6 @@
 import "package:flutter/material.dart";
 import "package:flutter_test/flutter_test.dart";
+import "package:world_countries/src/models/search_data.dart";
 import "package:world_countries/src/theme/pickers_theme_data.dart";
 import "package:world_countries/src/widgets/generic_widgets/indexed_list_view_builder.dart";
 import "package:world_countries/src/widgets/generic_widgets/search_list_listenable_builder.dart";
@@ -28,7 +29,7 @@ void main() => group("$SearchableIndexedListViewBuilder", () {
     await tester.pumpMaterialApp(
       SearchableIndexedListViewBuilder(
         const [1, 2, 3, 4, 5, 6],
-        searchIn: (i, _) => ["$i"],
+        searchIn: (i, _) => SearchData.empty(code: "$i"),
         textController: controller,
       ),
       const PickersThemeData(showHeader: null),
@@ -45,13 +46,13 @@ void main() => group("$SearchableIndexedListViewBuilder", () {
     await tester.pumpMaterialApp(
       SearchableIndexedListViewBuilder(
         const [1, 2, 3, 4, 5],
-        searchIn: (i, _) => ["$i"],
+        searchIn: (i, _) => SearchData.empty(code: "$i"),
         textController: controller,
       ),
       const PickersThemeData(showHeader: null),
     );
     expect(find.byType(SearchListListenableBuilder<int>), findsNothing);
-    expect(find.byType(IndexedListViewBuilder<int>), findsOneWidget);
+    expect(find.byType(IndexedListViewBuilder<int, Widget>), findsOneWidget);
     controller.dispose();
   });
 
@@ -60,7 +61,7 @@ void main() => group("$SearchableIndexedListViewBuilder", () {
     await tester.pumpMaterialApp(
       SearchableIndexedListViewBuilder(
         const [1, 2],
-        searchIn: (i, _) => ["$i"],
+        searchIn: (i, _) => SearchData.empty(code: "$i"),
         textController: controller,
       ),
     );
