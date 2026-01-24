@@ -29,6 +29,11 @@ void main() => group("IsoTileExtension", () {
       expect(copy.title, tile.title);
       expect(copy.enabled, tile.enabled);
       expect(copy.selected, tile.selected);
+      expect(
+        copy.trailing,
+        tile.trailing,
+        reason: "Verify trailing/chosenIcon preservation",
+      );
     });
   });
 });

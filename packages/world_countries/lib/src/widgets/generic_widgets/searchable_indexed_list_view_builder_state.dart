@@ -69,6 +69,7 @@ class _SearchableIndexedListViewBuilderState<T extends Object, W extends Widget>
               shrinkWrap: widget.shrinkWrap ?? theme?.shrinkWrap ?? false,
               sort: widget.sort,
               textBaseline: widget.textBaseline ?? theme?.textBaseline,
+              spacing: widget.spacing ?? theme?.spacing,
               textDirection: widget.textDirection ?? theme?.textDirection,
               verticalDirection:
                   widget.verticalDirection ??

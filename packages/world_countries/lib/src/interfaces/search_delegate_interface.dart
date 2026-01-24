@@ -16,11 +16,11 @@ abstract class SearchDelegateInterface<T extends Object>
   /// Constructor for the [SearchDelegateInterface] class.
   ///
   /// * [items] is the list of items to search through.
-  /// * [resultsBuilder] is a function that takes a `BuildContext` and an
+  /// * [resultsBuilder] is a function that takes a [BuildContext] and an
   ///   [UnmodifiableListView] of items and returns a widget to display as the
   ///   search results.
-  /// * [searchIn] is a function that takes an item and returns a set of
-  ///   strings to search in.
+  /// * [searchIn] is a function that takes an item and returns [SearchData] to
+  ///   search in.
   /// * [onSearchResultsBuilder] is the optional function to customize the build
   ///   of the search results.
   /// * [resultValidator] is a function that takes an item and returns a boolean
@@ -102,8 +102,8 @@ abstract class SearchDelegateInterface<T extends Object>
   @override
   final bool startWithSearch;
 
-  /// A function that takes an item and returns a list of strings to search
-  /// in.
+  /// A function that takes an item and context and returns [SearchData] to
+  /// search in.
   @override
   final SearchData Function(T item, BuildContext context) searchIn;
 

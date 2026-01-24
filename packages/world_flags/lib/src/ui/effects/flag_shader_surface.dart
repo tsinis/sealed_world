@@ -288,7 +288,9 @@ class _FlagShaderSurfaceState extends State<FlagShaderSurface>
   @override
   void didChangeDependencies() {
     super.didChangeDependencies();
-    final pixelRatio = MediaQuery.devicePixelRatioOf(context);
+    final pixelRatio =
+        MediaQuery.maybeDevicePixelRatioOf(context) ??
+        View.of(context).devicePixelRatio; // coverage:ignore-line
     if (pixelRatio == _pixelRatio) return;
     _pixelRatio = pixelRatio;
     _disposePainter(); // Force painter rebuild with new pixel ratio.

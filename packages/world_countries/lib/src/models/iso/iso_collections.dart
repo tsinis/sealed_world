@@ -33,7 +33,7 @@ class IsoCollections {
   /// - [currencyFlagsMap]: mapping of fiat currencies to their [WorldCountry].
   ///   This enables custom flag rendering for currencies. Defaults to `{}`.
   /// - [languagesFlagsMap]: mapping of natural languages to their
-  ///   [WorldCountry].This enables custom flag rendering for languages.
+  ///   [WorldCountry]. This enables custom flag rendering for languages.
   ///   Defaults to `{}`.
   /// - [countriesForFlagsCache]: optional iterable of countries used when
   ///   building country-backed flag relationships. Defaults to `[]`.

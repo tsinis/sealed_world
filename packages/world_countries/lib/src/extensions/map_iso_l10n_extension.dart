@@ -11,6 +11,9 @@ extension MapIsoL10nExtension<T extends IsoTranslated> on Map<T, String> {
   /// The original map is never mutated; the returned [Map] is built from the
   /// sorted entry list. Pass [reverse] to flip the comparison and receive a
   /// descending order instead.
+  ///
+  /// Note: Uses Unicode code-point comparison via [String.compareTo]. For
+  /// locale-sensitive collation, consider using the `intl4x` package.
   @useResult
   Map<T, String> sortAlphabetically({bool reverse = false}) =>
       Map<T, String>.fromEntries(

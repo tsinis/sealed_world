@@ -6,7 +6,6 @@ import "../../models/typedefs.dart";
 /// Convenience helpers for working with [IsoMaps] instances.
 extension IsoMapsExtension on IsoMaps {
   /// Creates a copy of this [IsoMaps] with selectively overridden data.
-  /// Returns a copy of this instance with selective overrides.
   IsoMaps copyWith({
     TranslationMap<WorldCountry>? countryTranslations,
     TranslationMap<FiatCurrency>? currencyTranslations,

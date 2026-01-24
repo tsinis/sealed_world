@@ -6,8 +6,8 @@ import "../models/search_data.dart";
 abstract interface class SearchableInterface<T extends Object> {
   /// Constructor for the [SearchableInterface] class.
   ///
-  /// * [searchIn] is a function that takes an item and returns a set of
-  ///   strings to search in.
+  /// * [searchIn] is a function that takes an item and [BuildContext] and
+  ///   returns a [SearchData] containing the searchable terms for that item.
   /// * [caseSensitiveSearch] is a boolean indicating whether the search should
   ///   be case-sensitive.
   /// * [startWithSearch] is a boolean indicating whether the search field
@@ -20,8 +20,8 @@ abstract interface class SearchableInterface<T extends Object> {
     this.onSearchResultsBuilder,
   });
 
-  /// A function that takes an item and returns a list of strings to search
-  /// in.
+  /// A function that takes an item and context and returns [SearchData] to
+  /// search in.
   // ignore: prefer-correct-callback-field-name, Might be breaking change.
   final SearchData Function(T item, BuildContext context)? searchIn;
 

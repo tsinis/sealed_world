@@ -72,15 +72,6 @@ void main() => group("$IsoCollections", () {
         expect(result, contains("currencyFlagsCache: 2"));
         expect(result, contains("languageFlagsCache: 3"));
       });
-
-      test("should work with explicit short: true parameter", () {
-        const collections = IsoCollections.selective();
-
-        final result = collections.toString();
-
-        expect(result, contains("IsoCollections("));
-        expect(result, contains("countries: 0"));
-      });
     });
 
     group("with short: false", () {

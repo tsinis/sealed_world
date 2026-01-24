@@ -148,25 +148,24 @@ void main() => group("$AnimatedFlagShaderDelegate", () {
     delegate.dispose();
   });
 
-  test("time wraps around at 10000 to prevent overflow", () {
-    double time = 0;
-    const speed = 100_000.0;
-    const deltaSeconds = 0.2;
-    time += deltaSeconds * speed;
-    if (time > 1e4) time -= 1e4;
-
-    expect(
-      time,
-      lessThanOrEqualTo(10000),
-      reason: "Time should have wrapped around (20000 - 10000 = 10000)",
-    );
-    expect(time, equals(10000), reason: "Exactly 10000 after wrapping.");
+  testWidgets("time wraps around at 10000 to prevent overflow", (tester) async {
+    final delegate = _AnimatedFlagShaderDelegateTest(
+      vsync: tester,
+      speed: 100_000,
+    )..simulateTick(0.2); // 0.2 * 100000 = 20000 -> wraps to 10000.
+    expect(delegate.currentTime, equals(10000));
+    delegate
+      ..stopAnimation()
+      ..dispose();
   });
 
-  test(
-    "animationSpeed defaults to 1",
-    () => expect(1.0, equals(1.0), reason: "Default animationSpeed is 1.0."),
-  );
+  testWidgets("animationSpeed defaults to 1", (tester) async {
+    final delegate = _AnimatedFlagShaderDelegateTest(vsync: tester);
+    expect(delegate.animationSpeed, 1.0);
+    delegate
+      ..stopAnimation()
+      ..dispose();
+  });
 });
 
 /// A concrete test implementation of [AnimatedFlagShaderDelegate].

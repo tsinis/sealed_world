@@ -55,15 +55,6 @@ void main() => group("$IsoMaps", () {
         expect(result, contains("currencyFlags: 2"));
         expect(result, contains("languageFlags: 3"));
       });
-
-      test("should work with explicit short: true parameter", () {
-        const maps = IsoMaps();
-
-        final result = maps.toString();
-
-        expect(result, contains("IsoMaps("));
-        expect(result, contains("countryTranslations: 0"));
-      });
     });
 
     group("with short: false", () {

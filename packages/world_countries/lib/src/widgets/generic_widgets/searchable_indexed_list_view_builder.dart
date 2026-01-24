@@ -123,7 +123,7 @@ class SearchableIndexedListViewBuilder<T extends Object, W extends Widget>
   /// The text editing controller for the search bar.
   final TextEditingController? textController;
 
-  /// The method to apply search to the items.
+  /// The method to apply search to the items and return search data.
   @override
   final SearchData Function(T item, BuildContext context)? searchIn;
 

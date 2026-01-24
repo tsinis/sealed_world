@@ -20,6 +20,6 @@ void main() => group("$CurrencyTile", () {
     );
 
     expect(find.byType(CurrencyTile), findsOneWidget);
-    expect(find.text(value.namesNative.first), findsAtLeastNWidgets(1));
+    expect(find.text(value.namesNative.first), findsOneWidget);
   });
 });

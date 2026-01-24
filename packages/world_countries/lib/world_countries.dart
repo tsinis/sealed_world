@@ -4,6 +4,7 @@ library world_countries;
 
 export "package:world_flags/world_flags.dart";
 
+export "/src/models/iso/iso_collections.dart";
 export "src/extensions/core/locale_extension.dart";
 export "src/extensions/iso_tile_extension.dart";
 export "src/extensions/list_item_tile_extension.dart";

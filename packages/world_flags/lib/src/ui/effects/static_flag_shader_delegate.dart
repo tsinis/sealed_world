@@ -114,8 +114,8 @@ abstract class StaticFlagShaderDelegate extends ChangeNotifier
 
   /// Pre-warms the shader program for faster first render.
   ///
-  /// Call this early in app startup to avoid shader compilation jank on first
-  /// use:
+  /// Call this early in app startup to avoid shader compilation stutter on
+  /// first use:
   ///
   /// ```dart
   /// void main() async {

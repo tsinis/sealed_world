@@ -59,7 +59,7 @@ extension IsoTileExtension<T extends IsoTranslated> on IsoTile<T> {
     flagTheme: flagTheme ?? this.flagTheme,
     excludeSemantics: excludeSemantics ?? this.excludeSemantics,
     semanticsIdentifier: semanticsIdentifier ?? this.semanticsIdentifier,
-    chosenIcon: chosenIcon ?? trailing ?? const Icon(Icons.beenhere_outlined),
+    chosenIcon: chosenIcon ?? trailing,
     isChosen: isChosen ?? selected,
     isDisabled: isDisabled ?? !enabled,
     key: key ?? this.key,

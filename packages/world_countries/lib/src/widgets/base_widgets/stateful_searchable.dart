@@ -9,7 +9,7 @@ abstract class StatefulSearchable<T extends Object> extends StatefulWidget
     implements SearchableInterface<T> {
   /// Constructor for the [StatefulSearchable] class.
   ///
-  /// * [searchIn] is the function to extract search strings from the items.
+  /// * [searchIn] is the function to extract search data from the items.
   /// * [textController] is the text editing controller for the search bar.
   /// * [caseSensitiveSearch] is a boolean indicating whether the search is
   ///   case-sensitive.

@@ -6,6 +6,7 @@ import "../../extensions/build_context_extension.dart";
 import "../../extensions/iterable_search_map_extension.dart";
 import "../../interfaces/search_delegate_interface.dart";
 import "../../mixins/compare_search_mixin.dart";
+import "../../models/search_data.dart";
 import "../buttons/clear_button.dart";
 
 /// An implementation of [SearchDelegateInterface] that uses the `compare`
@@ -19,8 +20,8 @@ class ImplicitSearchDelegate<T extends Object>
   /// * [resultsBuilder] is a function that takes a [BuildContext] and an
   ///   [UnmodifiableListView] of items and returns a widget to display as the
   ///   search results.
-  /// * [searchIn] is a function that takes an item and returns a set of
-  ///   strings to search in.
+  /// * [searchIn] is a function that takes an item and [BuildContext] and
+  ///   returns a [SearchData] containing the searchable terms for that item.
   /// * [onSearchResultsBuilder] is the optional function to customize the build
   ///   of the search results.
   /// * [appBarBottom] is a widget to display at the bottom of the search page's

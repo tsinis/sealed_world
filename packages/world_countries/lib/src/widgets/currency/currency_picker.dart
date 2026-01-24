@@ -87,7 +87,7 @@ class CurrencyPicker extends BasicPicker<FiatCurrency, CurrencyTile> {
     assert(
       keys == null || keys.isNotEmpty,
       "The $IsoMaps passed to the `maps` contains an empty "
-      "`currencyTranslations` map. Please provide a valid  `IsoMaps` instance "
+      "`currencyTranslations` map. Please provide a valid `IsoMaps` instance "
       "with currency translations or non-empty `currencies`",
     );
 

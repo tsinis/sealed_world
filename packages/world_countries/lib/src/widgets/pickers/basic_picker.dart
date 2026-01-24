@@ -24,7 +24,6 @@ import "../../theme/pickers_theme_data.dart";
 import "../adaptive/adaptive_search_text_field.dart";
 import "../generic_widgets/implicit_search_delegate.dart";
 import "../generic_widgets/iso_tile.dart";
-import "../generic_widgets/list_item_tile.dart";
 import "../generic_widgets/searchable_indexed_list_view_builder.dart";
 import "../helpers/maybe_widget.dart";
 
@@ -129,7 +128,7 @@ abstract class BasicPicker<T extends IsoTranslated, W extends IsoTile<T>>
   /// Custom itemBuilder that receives the default tile for customization.
   ///
   /// If provided, this itemBuilder receives [ItemProperties] and the default
-  /// [ListItemTile] widget. You can return the default tile as-is, or create
+  /// [IsoTile<T>] widget. You can return the default tile as-is, or create
   /// a custom widget using the tile's properties (like `dense`,
   /// `visualDensity`, etc.) as a reference.
   ///

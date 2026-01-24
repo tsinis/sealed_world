@@ -86,7 +86,7 @@ class LanguagePicker extends BasicPicker<NaturalLanguage, LanguageTile> {
     assert(
       keys == null || keys.isNotEmpty,
       "The $IsoMaps passed to the `maps` contains an empty "
-      "`languageTranslations` map. Please provide a valid  `IsoMaps` instance "
+      "`languageTranslations` map. Please provide a valid `IsoMaps` instance "
       "with language translations or non-empty `languages`",
     );
 

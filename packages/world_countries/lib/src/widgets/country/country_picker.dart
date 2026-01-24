@@ -122,7 +122,7 @@ class CountryPicker extends BasicPicker<WorldCountry, CountryTile> {
     assert(
       keys == null || keys.isNotEmpty,
       "The $IsoMaps passed to the `maps` contains an empty "
-      "`countryTranslations` map. Please provide a valid  `IsoMaps` instance "
+      "`countryTranslations` map. Please provide a valid `IsoMaps` instance "
       "with country translations or non-empty `countries`",
     );
 

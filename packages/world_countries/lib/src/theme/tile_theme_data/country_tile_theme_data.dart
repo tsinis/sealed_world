@@ -40,7 +40,7 @@ final class CountryTileThemeData extends BaseTileThemeData<WorldCountry> {
   /// Constructs a [CountryTileThemeData] with a builder function.
   ///
   /// The builder function should take [ItemProperties] of type [WorldCountry]
-  /// and an optional density flag, and return a widget that visually represents
-  /// the country.
+  /// and the default tile widget, and return a widget that visually represents
+  /// the country (optionally by returning or customizing the default tile).
   const CountryTileThemeData({super.itemBuilder});
 }

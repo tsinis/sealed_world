@@ -39,7 +39,8 @@ final class LanguageTileThemeData extends BaseTileThemeData<NaturalLanguage> {
   /// Constructs a [LanguageTileThemeData] with an optional builder function.
   ///
   /// The builder function should take [ItemProperties] of type
-  /// [NaturalLanguage] and an optional density flag, and return a widget that
-  /// visually represents the language.
+  /// [NaturalLanguage] and the default tile widget, and return a widget that
+  /// visually represents the language (optionally by returning or customizing
+  /// the default tile).
   const LanguageTileThemeData({super.itemBuilder});
 }
