@@ -87,7 +87,7 @@ class CountrySwz extends WorldCountry {
     CountryName(
       language: LangSsw(),
       official: "Umbuso weSwatini",
-      common: "eSwatini",
+      common: "ESwatini",
     ),
   ];
   @override

@@ -74,12 +74,12 @@ class CountryZwe extends WorldCountry {
     CountryName(
       language: LangSna(),
       official: "Nyika yeZimbabwe",
-      common: "yeZimbabwe",
+      common: "YeZimbabwe",
     ),
     CountryName(
       language: LangNde(),
       official: "Ilizwe laseZimbabwe",
-      common: "laseZimbabwe",
+      common: "LaseZimbabwe",
     ),
     CountryName(
       language: LangNya(),
@@ -104,7 +104,7 @@ class CountryZwe extends WorldCountry {
     CountryName(
       language: LangXho(),
       official: "IRiphabhlikhi yaseZimbabwe",
-      common: "yaseZimbabwe",
+      common: "YaseZimbabwe",
     ),
   ];
   @override
