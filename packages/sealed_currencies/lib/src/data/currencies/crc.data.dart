@@ -23,7 +23,7 @@ final class FiatCrc extends FiatCurrency {
         alternateSymbols: const ["¢"],
         htmlEntity: "&#x20A1;",
         codeNumeric: "188",
-        namesNative: const ["colón costarricense"],
+        namesNative: const ["Colón costarricense"],
         smallestDenomination: 500,
         subunit: "Céntimo",
         unitFirst: true,
