@@ -18,7 +18,7 @@ final class LangWln extends NaturalLanguage {
         name: "Walloon",
         code: "WLN",
         codeShort: "WA",
-        namesNative: const ["walon"],
+        namesNative: const ["Walon"],
         family: const IndoEuropean(),
       );
 }

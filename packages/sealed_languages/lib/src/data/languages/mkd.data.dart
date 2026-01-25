@@ -18,7 +18,7 @@ final class LangMkd extends NaturalLanguage {
         name: "Macedonian",
         code: "MKD",
         codeShort: "MK",
-        namesNative: const ["македонски јазик"],
+        namesNative: const ["Македонски јазик"],
         bibliographicCode: "MAC",
         family: const IndoEuropean(),
         scripts: const {ScriptCyrl()},

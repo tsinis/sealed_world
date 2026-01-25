@@ -18,7 +18,7 @@ final class LangSmo extends NaturalLanguage {
         name: "Samoan",
         code: "SMO",
         codeShort: "SM",
-        namesNative: const ["gagana fa'a Samoa"],
+        namesNative: const ["Gagana fa'a Samoa"],
         family: const Austronesian(),
       );
 }

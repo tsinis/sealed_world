@@ -18,7 +18,7 @@ final class LangSag extends NaturalLanguage {
         name: "Sango",
         code: "SAG",
         codeShort: "SG",
-        namesNative: const ["yângâ tî sängö"],
+        namesNative: const ["Yângâ tî sängö"],
         family: const Creole(),
       );
 }

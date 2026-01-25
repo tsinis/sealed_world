@@ -18,7 +18,7 @@ final class LangGlg extends NaturalLanguage {
         name: "Galician",
         code: "GLG",
         codeShort: "GL",
-        namesNative: const ["galego"],
+        namesNative: const ["Galego"],
         family: const IndoEuropean(),
       );
 }

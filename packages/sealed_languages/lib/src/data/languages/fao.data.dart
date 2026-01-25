@@ -18,7 +18,7 @@ final class LangFao extends NaturalLanguage {
         name: "Faroese",
         code: "FAO",
         codeShort: "FO",
-        namesNative: const ["føroyskt"],
+        namesNative: const ["Føroyskt"],
         family: const IndoEuropean(),
       );
 }

@@ -18,7 +18,7 @@ final class LangMsa extends NaturalLanguage {
         name: "Malay",
         code: "MSA",
         codeShort: "MS",
-        namesNative: const ["bahasa Melayu", "بهاس ملايو‎"],
+        namesNative: const ["Bahasa Melayu", "بهاس ملايو‎"],
         bibliographicCode: "MAY",
         family: const Austronesian(),
         scripts: const {ScriptLatn(), ScriptArab()},

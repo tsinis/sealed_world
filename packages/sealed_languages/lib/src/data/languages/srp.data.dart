@@ -18,7 +18,7 @@ final class LangSrp extends NaturalLanguage {
         name: "Serbian",
         code: "SRP",
         codeShort: "SR",
-        namesNative: const ["српски језик"],
+        namesNative: const ["Српски језик"],
         family: const IndoEuropean(),
         scripts: const {ScriptCyrl(), ScriptLatn()},
       );

@@ -18,7 +18,7 @@ final class LangAze extends NaturalLanguage {
         name: "Azerbaijani",
         code: "AZE",
         codeShort: "AZ",
-        namesNative: const ["azərbaycan dili"],
+        namesNative: const ["Azərbaycan dili"],
         family: const Turkic(),
         scripts: const {ScriptArab(), ScriptLatn(), ScriptCyrl()},
       );

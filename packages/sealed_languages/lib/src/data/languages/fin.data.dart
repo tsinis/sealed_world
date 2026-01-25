@@ -18,7 +18,7 @@ final class LangFin extends NaturalLanguage {
         name: "Finnish",
         code: "FIN",
         codeShort: "FI",
-        namesNative: const ["suomi", "suomen kieli"],
+        namesNative: const ["Suomi", "Suomen kieli"],
         family: const Uralic(),
       );
 }

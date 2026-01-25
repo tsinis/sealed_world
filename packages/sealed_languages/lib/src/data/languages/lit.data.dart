@@ -18,7 +18,7 @@ final class LangLit extends NaturalLanguage {
         name: "Lithuanian",
         code: "LIT",
         codeShort: "LT",
-        namesNative: const ["lietuvių kalba"],
+        namesNative: const ["Lietuvių kalba"],
         family: const IndoEuropean(),
       );
 }

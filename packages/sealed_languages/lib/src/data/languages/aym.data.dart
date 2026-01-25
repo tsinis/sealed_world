@@ -18,7 +18,7 @@ final class LangAym extends NaturalLanguage {
         name: "Aymara",
         code: "AYM",
         codeShort: "AY",
-        namesNative: const ["aymar aru"],
+        namesNative: const ["Aymar aru"],
         family: const Aymaran(),
       );
 }

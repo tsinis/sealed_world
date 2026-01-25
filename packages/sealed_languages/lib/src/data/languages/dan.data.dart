@@ -18,7 +18,7 @@ final class LangDan extends NaturalLanguage {
         name: "Danish",
         code: "DAN",
         codeShort: "DA",
-        namesNative: const ["dansk"],
+        namesNative: const ["Dansk"],
         family: const IndoEuropean(),
       );
 }

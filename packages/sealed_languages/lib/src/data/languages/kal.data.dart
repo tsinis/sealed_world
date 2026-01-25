@@ -18,7 +18,7 @@ final class LangKal extends NaturalLanguage {
         name: "Kalaallisut (Greenlandic)",
         code: "KAL",
         codeShort: "KL",
-        namesNative: const ["kalaallisut", "kalaallit oqaasii"],
+        namesNative: const ["Kalaallisut", "Kalaallit oqaasii"],
         family: const EskimoAleut(),
       );
 }

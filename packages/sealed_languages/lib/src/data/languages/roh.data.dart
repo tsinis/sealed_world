@@ -18,7 +18,7 @@ final class LangRoh extends NaturalLanguage {
         name: "Romansh",
         code: "ROH",
         codeShort: "RM",
-        namesNative: const ["rumantsch grischun"],
+        namesNative: const ["Rumantsch grischun"],
         family: const IndoEuropean(),
       );
 }

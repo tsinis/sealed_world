@@ -18,7 +18,7 @@ final class LangEst extends NaturalLanguage {
         name: "Estonian",
         code: "EST",
         codeShort: "ET",
-        namesNative: const ["eesti", "eesti keel"],
+        namesNative: const ["Eesti", "Eesti keel"],
         family: const Uralic(),
       );
 }

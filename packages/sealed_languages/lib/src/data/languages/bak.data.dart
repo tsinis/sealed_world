@@ -18,7 +18,7 @@ final class LangBak extends NaturalLanguage {
         name: "Bashkir",
         code: "BAK",
         codeShort: "BA",
-        namesNative: const ["башҡорт теле"],
+        namesNative: const ["Башҡорт теле"],
         family: const Turkic(),
         scripts: const {ScriptCyrl()},
       );

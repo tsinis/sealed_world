@@ -18,7 +18,7 @@ final class LangBam extends NaturalLanguage {
         name: "Bambara",
         code: "BAM",
         codeShort: "BM",
-        namesNative: const ["bamanankan"],
+        namesNative: const ["Bamanankan"],
         family: const NigerCongo(),
       );
 }

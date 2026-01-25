@@ -18,7 +18,7 @@ final class LangSlk extends NaturalLanguage {
         name: "Slovak",
         code: "SLK",
         codeShort: "SK",
-        namesNative: const ["slovenčina"],
+        namesNative: const ["Slovenčina"],
         bibliographicCode: "SLO",
         family: const IndoEuropean(),
       );

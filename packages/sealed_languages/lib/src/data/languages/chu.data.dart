@@ -18,7 +18,7 @@ final class LangChu extends NaturalLanguage {
         name: "(Old) Church Slavonic",
         code: "CHU",
         codeShort: "CU",
-        namesNative: const ["ѩзыкъ словѣньскъ"],
+        namesNative: const ["Ѩзыкъ словѣньскъ"],
         family: const IndoEuropean(),
         scripts: const {ScriptCyrs()},
       );

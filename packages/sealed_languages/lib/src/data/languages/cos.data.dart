@@ -18,7 +18,7 @@ final class LangCos extends NaturalLanguage {
         name: "Corsican",
         code: "COS",
         codeShort: "CO",
-        namesNative: const ["corsu", "lingua corsa"],
+        namesNative: const ["Corsu", "Lingua corsa"],
         family: const IndoEuropean(),
       );
 }

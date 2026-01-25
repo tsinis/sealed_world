@@ -18,7 +18,7 @@ final class LangChe extends NaturalLanguage {
         name: "Chechen",
         code: "CHE",
         codeShort: "CE",
-        namesNative: const ["нохчийн мотт"],
+        namesNative: const ["Нохчийн мотт"],
         family: const NortheastCaucasian(),
         scripts: const {ScriptCyrl()},
       );

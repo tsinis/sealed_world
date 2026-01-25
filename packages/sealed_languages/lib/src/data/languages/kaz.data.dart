@@ -18,7 +18,7 @@ final class LangKaz extends NaturalLanguage {
         name: "Kazakh",
         code: "KAZ",
         codeShort: "KK",
-        namesNative: const ["қазақ тілі"],
+        namesNative: const ["Қазақ тілі"],
         family: const Turkic(),
         scripts: const {ScriptCyrl(), ScriptLatn(), ScriptArab()},
       );

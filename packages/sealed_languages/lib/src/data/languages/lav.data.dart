@@ -18,7 +18,7 @@ final class LangLav extends NaturalLanguage {
         name: "Latvian",
         code: "LAV",
         codeShort: "LV",
-        namesNative: const ["latviešu valoda"],
+        namesNative: const ["Latviešu valoda"],
         family: const IndoEuropean(),
       );
 }

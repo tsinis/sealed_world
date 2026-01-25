@@ -18,7 +18,7 @@ final class LangSna extends NaturalLanguage {
         name: "Shona",
         code: "SNA",
         codeShort: "SN",
-        namesNative: const ["chiShona"],
+        namesNative: const ["ChiShona"],
         family: const NigerCongo(),
       );
 }

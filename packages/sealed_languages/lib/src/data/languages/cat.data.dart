@@ -18,7 +18,7 @@ final class LangCat extends NaturalLanguage {
         name: "Catalan",
         code: "CAT",
         codeShort: "CA",
-        namesNative: const ["català"],
+        namesNative: const ["Català"],
         family: const IndoEuropean(),
       );
 }

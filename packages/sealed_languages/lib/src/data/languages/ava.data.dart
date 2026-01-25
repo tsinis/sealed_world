@@ -18,7 +18,7 @@ final class LangAva extends NaturalLanguage {
         name: "Avaric",
         code: "AVA",
         codeShort: "AV",
-        namesNative: const ["авар мацӀ", "магӀарул мацӀ"],
+        namesNative: const ["Авар мацӀ", "МагӀарул мацӀ"],
         family: const NortheastCaucasian(),
         scripts: const {ScriptCyrl()},
       );

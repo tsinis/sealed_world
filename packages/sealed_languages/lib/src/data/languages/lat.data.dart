@@ -18,7 +18,7 @@ final class LangLat extends NaturalLanguage {
         name: "Latin",
         code: "LAT",
         codeShort: "LA",
-        namesNative: const ["latine", "lingua latina"],
+        namesNative: const ["Latine", "Lingua latina"],
         family: const IndoEuropean(),
       );
 }

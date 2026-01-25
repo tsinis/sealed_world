@@ -18,7 +18,7 @@ final class LangBre extends NaturalLanguage {
         name: "Breton",
         code: "BRE",
         codeShort: "BR",
-        namesNative: const ["brezhoneg"],
+        namesNative: const ["Brezhoneg"],
         family: const IndoEuropean(),
       );
 }

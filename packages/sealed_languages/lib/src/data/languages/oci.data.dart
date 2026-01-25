@@ -18,7 +18,7 @@ final class LangOci extends NaturalLanguage {
         name: "Occitan",
         code: "OCI",
         codeShort: "OC",
-        namesNative: const ["occitan", "lenga d'òc"],
+        namesNative: const ["Occitan", "Lenga d'òc"],
         family: const IndoEuropean(),
       );
 }
