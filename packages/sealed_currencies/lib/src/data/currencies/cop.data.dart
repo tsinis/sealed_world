@@ -24,7 +24,7 @@ final class FiatCop extends FiatCurrency {
         disambiguateSymbol: r"COL$",
         htmlEntity: "&#36;",
         codeNumeric: "170",
-        namesNative: const ["Peso colombiano"],
+        namesNative: const ["peso colombiano"],
         smallestDenomination: 20,
         subunit: "Centavo",
         unitFirst: true,

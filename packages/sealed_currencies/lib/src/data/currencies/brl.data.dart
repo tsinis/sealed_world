@@ -22,7 +22,7 @@ final class FiatBrl extends FiatCurrency {
         symbol: r"R$",
         htmlEntity: r"R$",
         codeNumeric: "986",
-        namesNative: const ["Real brasileiro"],
+        namesNative: const ["real brasileiro"],
         smallestDenomination: 5,
         subunit: "Centavo",
         unitFirst: true,

@@ -23,7 +23,7 @@ final class FiatSek extends FiatCurrency {
         alternateSymbols: const [":-"],
         disambiguateSymbol: "SEK",
         codeNumeric: "752",
-        namesNative: const ["Svensk krona"],
+        namesNative: const ["svensk krona"],
         smallestDenomination: 100,
         subunit: "Öre",
       );

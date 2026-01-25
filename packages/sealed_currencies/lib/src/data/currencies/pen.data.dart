@@ -22,7 +22,7 @@ final class FiatPen extends FiatCurrency {
         symbol: "S/",
         htmlEntity: "S/",
         codeNumeric: "604",
-        namesNative: const ["Sol peruano"],
+        namesNative: const ["sol peruano"],
         subunit: "Céntimo",
         unitFirst: true,
       );

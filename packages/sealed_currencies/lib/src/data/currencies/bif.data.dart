@@ -21,7 +21,7 @@ final class FiatBif extends FiatCurrency {
         alternateSymbols: const ["FBu"],
         disambiguateSymbol: "FBu",
         codeNumeric: "108",
-        namesNative: const ["Franc burundais"],
+        namesNative: const ["franc burundais"],
         smallestDenomination: 100,
         subunit: "Centime",
         subunitToUnit: 1,

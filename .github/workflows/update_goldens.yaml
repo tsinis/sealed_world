@@ -18,7 +18,7 @@ jobs:
     timeout-minutes: 20
     steps:
       - name: 📚 Git checkout
-        uses: actions/checkout@v6.0.2
+        uses: actions/checkout@v6.0.1
         with:
           ref: ${{ inputs.branch || github.ref_name }}
           token: ${{ secrets.GITHUB_TOKEN }}

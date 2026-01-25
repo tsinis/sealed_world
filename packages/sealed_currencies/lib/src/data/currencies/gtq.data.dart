@@ -19,7 +19,7 @@ final class FiatGtq extends FiatCurrency {
         name: "Guatemalan Quetzal",
         symbol: "Q",
         codeNumeric: "320",
-        namesNative: const ["Quetzal guatemalteco"],
+        namesNative: const ["quetzal guatemalteco"],
         subunit: "Centavo",
         unitFirst: true,
       );

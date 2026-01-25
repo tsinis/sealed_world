@@ -23,7 +23,7 @@ final class FiatByn extends FiatCurrency {
         alternateSymbols: const ["бел. руб.", "б.р.", "руб.", "р."],
         disambiguateSymbol: "BYN",
         codeNumeric: "933",
-        namesNative: const ["Беларускі рубель", "Белорусский рубль"],
+        namesNative: const ["беларускі рубель", "белорусский рубль"],
         subunit: "Kapeyka",
       );
 }

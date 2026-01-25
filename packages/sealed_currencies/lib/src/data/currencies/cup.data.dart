@@ -22,7 +22,7 @@ final class FiatCup extends FiatCurrency {
         disambiguateSymbol: r"$MN",
         htmlEntity: "&#x20B1;",
         codeNumeric: "192",
-        namesNative: const ["Peso cubano"],
+        namesNative: const ["peso cubano"],
         subunit: "Centavo",
         unitFirst: true,
       );

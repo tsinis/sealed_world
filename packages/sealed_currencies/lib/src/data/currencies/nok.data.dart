@@ -24,7 +24,7 @@ final class FiatNok extends FiatCurrency {
         disambiguateSymbol: "NOK",
         htmlEntity: "kr",
         codeNumeric: "578",
-        namesNative: const ["Norsk krone"],
+        namesNative: const ["norsk krone"],
         smallestDenomination: 100,
         subunit: "Øre",
       );

@@ -20,7 +20,7 @@ final class FiatNio extends FiatCurrency {
         symbol: r"C$",
         disambiguateSymbol: r"NIO$",
         codeNumeric: "558",
-        namesNative: const ["Córdoba nicaragüense"],
+        namesNative: const ["córdoba nicaragüense"],
         smallestDenomination: 5,
         subunit: "Centavo",
         unitFirst: true,

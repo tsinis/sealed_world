@@ -19,7 +19,7 @@ final class FiatHtg extends FiatCurrency {
         name: "Haitian Gourde",
         symbol: "G",
         codeNumeric: "332",
-        namesNative: const ["Goud ayisyen"],
+        namesNative: const ["goud ayisyen"],
         smallestDenomination: 5,
         subunit: "Centime",
       );

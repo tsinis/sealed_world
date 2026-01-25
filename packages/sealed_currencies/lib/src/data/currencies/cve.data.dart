@@ -21,7 +21,7 @@ final class FiatCve extends FiatCurrency {
         alternateSymbols: const ["Esc"],
         disambiguateSymbol: "Esc",
         codeNumeric: "132",
-        namesNative: const ["Eskudu kabu-verdianu"],
+        namesNative: const ["eskudu kabu-verdianu"],
         smallestDenomination: 100,
         subunit: "Centavo",
       );

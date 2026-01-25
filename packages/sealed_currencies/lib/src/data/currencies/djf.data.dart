@@ -19,7 +19,7 @@ final class FiatDjf extends FiatCurrency {
         name: "Djiboutian Franc",
         symbol: "Fdj",
         codeNumeric: "262",
-        namesNative: const ["Franc djibouti"],
+        namesNative: const ["franc djibouti"],
         smallestDenomination: 100,
         subunit: "Centime",
         subunitToUnit: 1,

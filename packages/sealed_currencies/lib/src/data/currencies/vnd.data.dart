@@ -22,7 +22,7 @@ final class FiatVnd extends FiatCurrency {
         symbol: "₫",
         htmlEntity: "&#x20AB;",
         codeNumeric: "704",
-        namesNative: const ["Đồng Việt Nam"],
+        namesNative: const ["đồng Việt Nam"],
         smallestDenomination: 100,
         subunit: "Hào",
         subunitToUnit: 1,

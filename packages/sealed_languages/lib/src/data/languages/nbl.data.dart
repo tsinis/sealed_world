@@ -18,7 +18,7 @@ final class LangNbl extends NaturalLanguage {
         name: "Southern Ndebele",
         code: "NBL",
         codeShort: "NR",
-        namesNative: const ["isiNdebele"],
+        namesNative: const ["IsiNdebele"],
         family: const NigerCongo(),
       );
 }

@@ -19,7 +19,7 @@ final class FiatTmt extends FiatCurrency {
         name: "Turkmenistani Manat",
         symbol: "T",
         codeNumeric: "934",
-        namesNative: const ["Manat"],
+        namesNative: const ["manat"],
         subunit: "Tenge",
       );
 }

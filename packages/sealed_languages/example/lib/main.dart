@@ -32,11 +32,11 @@ void main() {
     where: (language) => language.bibliographicCode,
   );
 
-  // This will print: "Native name: Čeština".
+  // This will print: "Native name: čeština".
   print("Native name: ${maybeCzech?.namesNative.first}");
   print(NaturalLanguage.list.length); // Prints: "184".
 
-  const customOne = LangCustom(code: "XTL", codeShort: "XT"); // Custom.
+  const customOne = LangCustom(code: "XTL", codeShort: "xt"); // Custom.
   print(describeLanguage(const LangEng())); // Prints: "English".
   print(describeLanguage(customOne)); // Prints: "Custom language XTL".
   print(describeLanguage(russian)); // Prints: "ISO-based language".
@@ -55,20 +55,20 @@ void main() {
   }
 
   // Distinguishes country code in translations.
-  print(maybeCzech?.maybeCommonNameFor(const BasicLocale(.por()))); // "Tcheco".
+  print(maybeCzech?.maybeCommonNameFor(const BasicLocale(.por()))); // "tcheco".
   print(
     maybeCzech?.maybeCommonNameFor(
       const BasicLocale(LangPor(), countryCode: "PT"),
     ),
-  ); // Prints "Checo".
+  ); // Prints "checo".
 
   // Distinguishes script in translations.
   print(
     maybeCzech?.commonNameFor(const BasicLocale(LangSrp())),
-  ); // Prints "Чешки".
+  ); // Prints "чешки".
   print(
     maybeCzech?.commonNameFor(const BasicLocale(.srp(), script: .latn())),
-  ); // Prints "Češki".
+  ); // Prints "češki".
 }
 
 String describeLanguage(NaturalLanguage language) => switch (language) {

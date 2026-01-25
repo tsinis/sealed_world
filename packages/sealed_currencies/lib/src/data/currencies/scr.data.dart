@@ -22,7 +22,7 @@ final class FiatScr extends FiatCurrency {
         disambiguateSymbol: "SRe",
         htmlEntity: "&#x20A8;",
         codeNumeric: "690",
-        namesNative: const ["Roupie seychelloise"],
+        namesNative: const ["roupie seychelloise"],
         subunit: "Cent",
       );
 }

@@ -23,7 +23,7 @@ final class FiatDkk extends FiatCurrency {
         alternateSymbols: const ["krone"],
         disambiguateSymbol: "DKK",
         codeNumeric: "208",
-        namesNative: const ["Dansk krone"],
+        namesNative: const ["dansk krone"],
         smallestDenomination: 50,
         subunit: "Øre",
       );

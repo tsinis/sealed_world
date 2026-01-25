@@ -20,7 +20,7 @@ final class FiatHnl extends FiatCurrency {
         symbol: "L",
         disambiguateSymbol: "HNL",
         codeNumeric: "340",
-        namesNative: const ["Lempira hondureño"],
+        namesNative: const ["lempira hondureño"],
         smallestDenomination: 5,
         subunit: "Centavo",
         unitFirst: true,

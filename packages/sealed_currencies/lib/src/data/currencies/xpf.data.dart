@@ -20,7 +20,7 @@ final class FiatXpf extends FiatCurrency {
         symbol: "Fr",
         alternateSymbols: const ["F"],
         codeNumeric: "953",
-        namesNative: const ["Franc pacifique"],
+        namesNative: const ["franc pacifique"],
         smallestDenomination: 100,
         subunit: "Centime",
         subunitToUnit: 1,

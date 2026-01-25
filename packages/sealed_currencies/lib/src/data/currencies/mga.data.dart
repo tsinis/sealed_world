@@ -19,7 +19,7 @@ final class FiatMga extends FiatCurrency {
         name: "Malagasy Ariary",
         symbol: "Ar",
         codeNumeric: "969",
-        namesNative: const ["Ariary malagasy", "Ariary malgache"],
+        namesNative: const ["ariary malagasy", "ariary malgache"],
         subunit: "Iraimbilanja",
         subunitToUnit: 5,
         unitFirst: true,

@@ -23,7 +23,7 @@ final class FiatUyu extends FiatCurrency {
         alternateSymbols: const [r"$U"],
         htmlEntity: r"$U",
         codeNumeric: "858",
-        namesNative: const ["Peso uruguayo"],
+        namesNative: const ["peso uruguayo"],
         smallestDenomination: 100,
         subunit: "Centésimo",
         unitFirst: true,

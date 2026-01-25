@@ -20,7 +20,7 @@ final class FiatUah extends FiatCurrency {
         symbol: "₴",
         htmlEntity: "&#x20B4;",
         codeNumeric: "980",
-        namesNative: const ["Українська гривня"],
+        namesNative: const ["українська гривня"],
         subunit: "Kopiyka",
       );
 }

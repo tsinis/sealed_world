@@ -21,7 +21,7 @@ final class FiatStn extends FiatCurrency {
         symbol: "Db",
         disambiguateSymbol: "STN",
         codeNumeric: "930",
-        namesNative: const ["Dobra são-tomense"],
+        namesNative: const ["dobra são-tomense"],
         smallestDenomination: 10,
         subunit: "Cêntimo",
       );

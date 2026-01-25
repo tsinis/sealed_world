@@ -20,7 +20,7 @@ final class FiatMdl extends FiatCurrency {
         symbol: "L",
         alternateSymbols: const ["lei"],
         codeNumeric: "498",
-        namesNative: const ["Leu moldovenesc"],
+        namesNative: const ["leu moldovenesc"],
         subunit: "Ban",
       );
 }
