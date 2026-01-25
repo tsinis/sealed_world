@@ -46,7 +46,7 @@ CHORE
 - Corrected latitude for Bouvet Island.
 - Updated Argentine peso symbol.
 - All deprecated APIs from previous versions have been removed.
-- The Dart SDK was bumped to v3.10.4.
+- The Dart SDK was bumped to v3.10.7.
 
 ## 2.9.1
 

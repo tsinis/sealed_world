@@ -6,6 +6,10 @@ NEW FEATURES
 - Pixel ratio support in flag shaders.
 - Adds FlagShaderSurface widget with `WavedFlagShaderDelegate` for real-time GPU-based flag animations
 - Introduces `FlagShaderOptions` for controlling wave parameters, turbulence, lighting, and fabric appearance
+- Generic `IsoTile<T>` widget consolidating all tile implementations.
+- `SearchData` model for structured, multi-variant search terms (e.g. for fuzzy search).
+- `L10nSorter` typedef for locale-aware alphabetical sorting.
+- `MapIsoL10nExtension.sortAlphabetically` for sorted translation maps.
 
 - New `namesCommonNative` method on ISO (`IsoTranslated`) classes, returning the native name for the given locale as a single string.
 - Enhanced locale parsing to support three-letter codes.
@@ -34,15 +38,6 @@ BREAKING CHANGES (in this package)
 
 See [MIGRATION_GUIDES.md](MIGRATION_GUIDES.md) for migration guide.
 
-NEW FEATURES
-
-- Generic `IsoTile<T>` widget consolidating all tile implementations.
-- `SearchData` model for structured, multi-variant search terms (e.g. for fuzzy search).
-- `L10nSorter` typedef for locale-aware alphabetical sorting.
-- `MapIsoL10nExtension.sortAlphabetically` for sorted translation maps.
-- Animated shader delegate system (`AnimatedFlagShaderDelegate`, `StaticFlagShaderDelegate`).
-- Pixel ratio support in flag shaders.
-
 REFACTOR
 
 - `CountryTile`, `CurrencyTile`, `LanguageTile` are now typedefs of `IsoTile<T>`.
@@ -53,7 +48,7 @@ CHORE
 - Corrected latitude for Bouvet Island.
 - Updated Argentine peso symbol.
 - All deprecated APIs from previous versions have been removed.
-- The Dart SDK was bumped to v3.10.4.
+- The Dart SDK was bumped to v3.10.7.
 
 ## 3.9.4
 
