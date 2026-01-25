@@ -18,7 +18,7 @@ final class LangTon extends NaturalLanguage {
         name: "Tonga (Tonga Islands)",
         code: "TON",
         codeShort: "TO",
-        namesNative: const ["Faka Tonga"],
+        namesNative: const ["faka Tonga"],
         family: const Austronesian(),
       );
 }
