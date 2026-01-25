@@ -21,7 +21,7 @@ final class FiatXaf extends FiatCurrency {
         alternateSymbols: const ["FCFA"],
         disambiguateSymbol: "FCFA",
         codeNumeric: "950",
-        namesNative: const ["franc CFA"],
+        namesNative: const ["Franc CFA"],
         smallestDenomination: 100,
         subunit: "Centime",
         subunitToUnit: 1,

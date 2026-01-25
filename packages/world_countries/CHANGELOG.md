@@ -1,3 +1,55 @@
+## 4.0.0
+
+NEW FEATURES
+
+- Animated shader delegate system (`AnimatedFlagShaderDelegate`, `StaticFlagShaderDelegate`).
+- Pixel ratio support in flag shaders.
+- Adds FlagShaderSurface widget with `WavedFlagShaderDelegate` for real-time GPU-based flag animations
+- Introduces `FlagShaderOptions` for controlling wave parameters, turbulence, lighting, and fabric appearance
+- Generic `IsoTile<T>` widget consolidating all tile implementations.
+- `SearchData` model for structured, multi-variant search terms (e.g. for fuzzy search).
+- `L10nSorter` typedef for locale-aware alphabetical sorting.
+- `MapIsoL10nExtension.sortAlphabetically` for sorted translation maps.
+
+- New `namesCommonNative` method on ISO (`IsoTranslated`) classes, returning the native name for the given locale as a single string.
+- Enhanced locale parsing to support three-letter codes.
+- Picker's locale-aware sorting support via `L10nSorter` typedef and `MapIsoL10nExtension`.
+
+BREAKING CHANGES (in underlying Dart packages)
+
+- L10N values and `namesNative` are now provided in sentence case.
+- `JsonObjectMap` - no longer nullable.
+- `List<TranslatedName> get translations` was removed (was previously deprecated), refer to `.l10n.translatedNames({this})` instead.
+- Finalized base classes (`WorldCountry`, `FiatCurrency`, `NaturalLanguage`, etc.) instances - sealed classes with private constructors, you can create your own instances via `CountryCustom` for example:
+
+```dart
+const custom = CountryCustom(code: "XTL", codeShort: "XT"); // Custom country.
+```
+
+BREAKING CHANGES (in this package)
+
+- **IsoMaps**: Translation/flag maps moved from `TypedLocale` to `IsoMaps` class. Access via `locale.maps.countryTranslations`.
+- **Tile builders**: `builder` renamed to `itemBuilder` with new signature `(props, defaultTile)`.
+- **IsoCollections**: ISO collections moved from `TypedLocaleDelegate` params to `IsoCollections` class.
+- **Pickers**: `translation`/`flagsMap` params replaced with single `maps` param, `items` are now nullable.
+- **Search**: `searchIn` returns `SearchData` instead of `Iterable<String>`. `resultsBuilder` gains `query` param.
+- **Generics**: `BasicPicker` and related mixins require second type argument for tile type.
+- **Removed**: `CurrencyPicker.adaptiveFlags()`, `LanguagePicker.adaptiveFlags()` constructors. Flags are now default for all pickers.
+
+See [MIGRATION_GUIDES.md](MIGRATION_GUIDES.md) for migration guide.
+
+REFACTOR
+
+- `CountryTile`, `CurrencyTile`, `LanguageTile` are now typedefs of `IsoTile<T>`.
+- Stricter return types for `defaultBuilder` methods.
+
+CHORE
+
+- Corrected latitude for Bouvet Island.
+- Updated Argentine peso symbol.
+- All deprecated APIs from previous versions have been removed.
+- The Dart SDK was bumped to v3.10.7.
+
 ## 3.9.4
 
 NEW FEATURES
