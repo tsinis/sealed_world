@@ -21,7 +21,7 @@ final class FiatCdf extends FiatCurrency {
         alternateSymbols: const ["FC"],
         disambiguateSymbol: "FC",
         codeNumeric: "976",
-        namesNative: const ["franc congolais"],
+        namesNative: const ["Franc congolais"],
         subunit: "Centime",
       );
 }
