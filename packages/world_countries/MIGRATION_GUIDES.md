@@ -246,12 +246,8 @@ Iterable<String> defaultSearch(WorldCountry item, BuildContext context) {
 
 ```dart
 @override
-SearchData defaultSearch(WorldCountry item, BuildContext context) {
-  return SearchData(
-    item.name.common,
-    {item.namesNative},
-  );
-}
+SearchData defaultSearch(WorldCountry item, BuildContext context) =>
+  return SearchData(item.name.common, item.namesNative);
 ```
 
 ---

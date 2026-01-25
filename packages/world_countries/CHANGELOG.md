@@ -4,15 +4,18 @@ NEW FEATURES
 
 - Animated shader delegate system (`AnimatedFlagShaderDelegate`, `StaticFlagShaderDelegate`).
 - Pixel ratio support in flag shaders.
+- Adds FlagShaderSurface widget with `WavedFlagShaderDelegate` for real-time GPU-based flag animations
+- Introduces `FlagShaderOptions` for controlling wave parameters, turbulence, lighting, and fabric appearance
 
 - New `namesCommonNative` method on ISO (`IsoTranslated`) classes, returning the native name for the given locale as a single string.
 - Enhanced locale parsing to support three-letter codes.
+- Picker's locale-aware sorting support via `L10nSorter` typedef and `MapIsoL10nExtension`.
 
 BREAKING CHANGES (in underlying Dart packages)
 
 - L10N values and `namesNative` are now provided in sentence case.
 - `JsonObjectMap` - no longer nullable.
-- `List<TranslatedName> get translations` was removed (was previusly depricated), refer to `.l10n.translatedNames({this})` instead.
+- `List<TranslatedName> get translations` was removed (was previously deprecated), refer to `.l10n.translatedNames({this})` instead.
 - Finalized base classes (`WorldCountry`, `FiatCurrency`, `NaturalLanguage`, etc.) instances - sealed classes with private constructors, you can create your own instances via `CountryCustom` for example:
 
 ```dart

@@ -11,7 +11,7 @@ BREAKING CHANGES
 
 - L10N values and `namesNative` are now provided in sentence case.
 - `JsonObjectMap` - no longer nullable.
-- `List<TranslatedName> get translations` was removed (was previusly depricated), refer to `.l10n.translatedNames({this})` instead.
+- `List<TranslatedName> get translations` was removed (was previously deprecated), refer to `.l10n.translatedNames({this})` instead.
 - Finalized base classes (`WorldCountry`, `FiatCurrency`, `NaturalLanguage`, etc.) instances - sealed classes with private constructors, you can create your own instances via `CountryCustom` for example:
 
 ```dart
