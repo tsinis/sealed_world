@@ -40,7 +40,7 @@ void main() {
     print("German name of ${deuTranslation.key.name}: ${deuTranslation.value}");
   }
 
-  // Prints Polish name of RSD: "dinar serbski".
+  // Prints Polish name of RSD: "Dinar serbski".
   print(serbianDinar.maybeCommonNameFor(const BasicLocale(.pol())));
 }
 

@@ -18,7 +18,7 @@ final class LangZul extends NaturalLanguage {
         name: "Zulu",
         code: "ZUL",
         codeShort: "ZU",
-        namesNative: const ["IsiZulu"],
+        namesNative: const ["isiZulu"],
         family: const NigerCongo(),
       );
 }

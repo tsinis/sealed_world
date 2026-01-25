@@ -18,7 +18,7 @@ final class LangXho extends NaturalLanguage {
         name: "Xhosa",
         code: "XHO",
         codeShort: "XH",
-        namesNative: const ["IsiXhosa"],
+        namesNative: const ["isiXhosa"],
         family: const NigerCongo(),
       );
 }

@@ -32,7 +32,7 @@ void main() {
     where: (language) => language.bibliographicCode,
   );
 
-  // This will print: "Native name: čeština".
+  // This will print: "Native name: Čeština".
   print("Native name: ${maybeCzech?.namesNative.first}");
   print(NaturalLanguage.list.length); // Prints: "184".
 
@@ -55,20 +55,20 @@ void main() {
   }
 
   // Distinguishes country code in translations.
-  print(maybeCzech?.maybeCommonNameFor(const BasicLocale(.por()))); // "tcheco".
+  print(maybeCzech?.maybeCommonNameFor(const BasicLocale(.por()))); // "Tcheco".
   print(
     maybeCzech?.maybeCommonNameFor(
       const BasicLocale(LangPor(), countryCode: "PT"),
     ),
-  ); // Prints "checo".
+  ); // Prints "Checo".
 
   // Distinguishes script in translations.
   print(
     maybeCzech?.commonNameFor(const BasicLocale(LangSrp())),
-  ); // Prints "чешки".
+  ); // Prints "Чешки".
   print(
     maybeCzech?.commonNameFor(const BasicLocale(.srp(), script: .latn())),
-  ); // Prints "češki".
+  ); // Prints "Češki".
 }
 
 String describeLanguage(NaturalLanguage language) => switch (language) {
