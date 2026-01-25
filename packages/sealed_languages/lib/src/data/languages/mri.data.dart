@@ -18,7 +18,7 @@ final class LangMri extends NaturalLanguage {
         name: "Māori",
         code: "MRI",
         codeShort: "MI",
-        namesNative: const ["te reo Māori"],
+        namesNative: const ["Te reo Māori"],
         bibliographicCode: "MAO",
         family: const Austronesian(),
       );

@@ -18,7 +18,7 @@ final class LangAve extends NaturalLanguage {
         name: "Avestan",
         code: "AVE",
         codeShort: "AE",
-        namesNative: const ["avesta"],
+        namesNative: const ["Avesta"],
         family: const IndoEuropean(),
         isRightToLeft: true,
         scripts: const {ScriptAvst()},

@@ -18,7 +18,7 @@ final class LangHrv extends NaturalLanguage {
         name: "Croatian",
         code: "HRV",
         codeShort: "HR",
-        namesNative: const ["hrvatski jezik"],
+        namesNative: const ["Hrvatski jezik"],
         family: const IndoEuropean(),
       );
 }

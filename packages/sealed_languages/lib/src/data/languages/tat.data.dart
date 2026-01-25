@@ -18,7 +18,7 @@ final class LangTat extends NaturalLanguage {
         name: "Tatar",
         code: "TAT",
         codeShort: "TT",
-        namesNative: const ["татар теле", "tatar tele"],
+        namesNative: const ["Татар теле", "Tatar tele"],
         family: const Turkic(),
         scripts: const {ScriptCyrl(), ScriptLatn(), ScriptArab()},
       );

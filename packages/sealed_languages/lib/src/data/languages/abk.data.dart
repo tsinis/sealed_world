@@ -18,7 +18,7 @@ final class LangAbk extends NaturalLanguage {
         name: "Abkhaz",
         code: "ABK",
         codeShort: "AB",
-        namesNative: const ["аҧсуа бызшәа", "аҧсшәа"],
+        namesNative: const ["Аҧсуа бызшәа", "Аҧсшәа"],
         family: const NorthwestCaucasian(),
         scripts: const {ScriptCyrl()},
       );

@@ -18,7 +18,7 @@ final class LangSrd extends NaturalLanguage {
         name: "Sardinian",
         code: "SRD",
         codeShort: "SC",
-        namesNative: const ["sardu"],
+        namesNative: const ["Sardu"],
         family: const IndoEuropean(),
       );
 }

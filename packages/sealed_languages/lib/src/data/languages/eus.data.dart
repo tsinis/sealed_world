@@ -18,7 +18,7 @@ final class LangEus extends NaturalLanguage {
         name: "Basque",
         code: "EUS",
         codeShort: "EU",
-        namesNative: const ["euskara", "euskera"],
+        namesNative: const ["Euskara", "Euskera"],
         bibliographicCode: "BAQ",
         family: const LanguageIsolate(),
       );

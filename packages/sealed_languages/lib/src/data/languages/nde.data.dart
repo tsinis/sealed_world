@@ -18,7 +18,7 @@ final class LangNde extends NaturalLanguage {
         name: "Northern Ndebele",
         code: "NDE",
         codeShort: "ND",
-        namesNative: const ["isiNdebele"],
+        namesNative: const ["IsiNdebele"],
         family: const NigerCongo(),
       );
 }

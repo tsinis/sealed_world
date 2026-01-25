@@ -18,7 +18,7 @@ final class LangSlv extends NaturalLanguage {
         name: "Slovene",
         code: "SLV",
         codeShort: "SL",
-        namesNative: const ["slovenščina"],
+        namesNative: const ["Slovenščina"],
         family: const IndoEuropean(),
       );
 }

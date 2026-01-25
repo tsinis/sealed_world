@@ -18,7 +18,7 @@ final class LangHun extends NaturalLanguage {
         name: "Hungarian",
         code: "HUN",
         codeShort: "HU",
-        namesNative: const ["magyar"],
+        namesNative: const ["Magyar"],
         family: const Uralic(),
       );
 }

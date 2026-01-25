@@ -18,7 +18,7 @@ final class LangArg extends NaturalLanguage {
         name: "Aragonese",
         code: "ARG",
         codeShort: "AN",
-        namesNative: const ["aragonés"],
+        namesNative: const ["Aragonés"],
         family: const IndoEuropean(),
       );
 }

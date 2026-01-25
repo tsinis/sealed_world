@@ -18,7 +18,7 @@ final class LangCes extends NaturalLanguage {
         name: "Czech",
         code: "CES",
         codeShort: "CS",
-        namesNative: const ["čeština"],
+        namesNative: const ["Čeština"],
         bibliographicCode: "CZE",
         family: const IndoEuropean(),
       );

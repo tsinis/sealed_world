@@ -18,7 +18,7 @@ final class LangChv extends NaturalLanguage {
         name: "Chuvash",
         code: "CHV",
         codeShort: "CV",
-        namesNative: const ["чӑваш чӗлхи"],
+        namesNative: const ["Чӑваш чӗлхи"],
         family: const Turkic(),
         scripts: const {ScriptCyrl()},
       );

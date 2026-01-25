@@ -18,7 +18,7 @@ final class LangTgk extends NaturalLanguage {
         name: "Tajik",
         code: "TGK",
         codeShort: "TG",
-        namesNative: const ["тоҷикӣ", "تاجیکی‎", "toçikī"],
+        namesNative: const ["Тоҷикӣ", "تاجیکی‎", "Toçikī"],
         family: const IndoEuropean(),
         scripts: const {ScriptCyrl()},
       );

@@ -18,7 +18,7 @@ final class LangBul extends NaturalLanguage {
         name: "Bulgarian",
         code: "BUL",
         codeShort: "BG",
-        namesNative: const ["български език"],
+        namesNative: const ["Български език"],
         family: const IndoEuropean(),
         scripts: const {ScriptCyrl()},
       );

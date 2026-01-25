@@ -18,7 +18,7 @@ final class LangMlg extends NaturalLanguage {
         name: "Malagasy",
         code: "MLG",
         codeShort: "MG",
-        namesNative: const ["fiteny malagasy"],
+        namesNative: const ["Fiteny malagasy"],
         family: const Austronesian(),
       );
 }

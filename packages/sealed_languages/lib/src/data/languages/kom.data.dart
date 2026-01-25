@@ -18,7 +18,7 @@ final class LangKom extends NaturalLanguage {
         name: "Komi",
         code: "KOM",
         codeShort: "KV",
-        namesNative: const ["коми кыв"],
+        namesNative: const ["Коми кыв"],
         family: const Uralic(),
         scripts: const {ScriptCyrl()},
       );

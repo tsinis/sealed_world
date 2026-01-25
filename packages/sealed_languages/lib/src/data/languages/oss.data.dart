@@ -18,7 +18,7 @@ final class LangOss extends NaturalLanguage {
         name: "Ossetian (Ossetic)",
         code: "OSS",
         codeShort: "OS",
-        namesNative: const ["ирон æвзаг"],
+        namesNative: const ["Ирон æвзаг"],
         family: const IndoEuropean(),
         scripts: const {ScriptCyrl()},
       );

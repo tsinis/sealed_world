@@ -18,7 +18,7 @@ final class LangNya extends NaturalLanguage {
         name: "Chichewa (Chewa/Nyanja)",
         code: "NYA",
         codeShort: "NY",
-        namesNative: const ["chiCheŵa", "chinyanja"],
+        namesNative: const ["ChiCheŵa", "Chinyanja"],
         family: const NigerCongo(),
       );
 }

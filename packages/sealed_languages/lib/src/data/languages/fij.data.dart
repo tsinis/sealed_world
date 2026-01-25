@@ -18,7 +18,7 @@ final class LangFij extends NaturalLanguage {
         name: "Fijian",
         code: "FIJ",
         codeShort: "FJ",
-        namesNative: const ["vosa Vakaviti"],
+        namesNative: const ["Vosa Vakaviti"],
         family: const Austronesian(),
       );
 }

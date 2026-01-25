@@ -18,7 +18,7 @@ final class LangEll extends NaturalLanguage {
         name: "Greek (modern)",
         code: "ELL",
         codeShort: "EL",
-        namesNative: const ["ελληνικά"],
+        namesNative: const ["Ελληνικά"],
         bibliographicCode: "GRE",
         family: const IndoEuropean(),
         scripts: const {ScriptGrek()},

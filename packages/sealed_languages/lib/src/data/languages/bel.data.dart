@@ -18,7 +18,7 @@ final class LangBel extends NaturalLanguage {
         name: "Belarusian",
         code: "BEL",
         codeShort: "BE",
-        namesNative: const ["беларуская мова"],
+        namesNative: const ["Беларуская мова"],
         family: const IndoEuropean(),
         scripts: const {ScriptCyrl()},
       );

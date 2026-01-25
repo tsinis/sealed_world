@@ -18,7 +18,7 @@ final class LangFra extends NaturalLanguage {
         name: "French",
         code: "FRA",
         codeShort: "FR",
-        namesNative: const ["français", "langue française"],
+        namesNative: const ["Français", "Langue française"],
         bibliographicCode: "FRE",
         family: const IndoEuropean(),
       );

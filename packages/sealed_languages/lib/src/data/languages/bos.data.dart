@@ -18,7 +18,7 @@ final class LangBos extends NaturalLanguage {
         name: "Bosnian",
         code: "BOS",
         codeShort: "BS",
-        namesNative: const ["bosanski jezik"],
+        namesNative: const ["Bosanski jezik"],
         family: const IndoEuropean(),
         scripts: const {ScriptLatn(), ScriptCyrl()},
       );

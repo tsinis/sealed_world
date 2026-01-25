@@ -18,7 +18,7 @@ final class LangSwe extends NaturalLanguage {
         name: "Swedish",
         code: "SWE",
         codeShort: "SV",
-        namesNative: const ["svenska"],
+        namesNative: const ["Svenska"],
         family: const IndoEuropean(),
       );
 }
