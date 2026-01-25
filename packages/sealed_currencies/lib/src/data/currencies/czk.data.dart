@@ -21,7 +21,7 @@ final class FiatCzk extends FiatCurrency {
         thousandsSeparator: " ",
         symbol: "Kč",
         codeNumeric: "203",
-        namesNative: const ["koruna česká"],
+        namesNative: const ["Koruna česká"],
         smallestDenomination: 100,
         subunit: "Haléř",
       );

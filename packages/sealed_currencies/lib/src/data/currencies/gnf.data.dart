@@ -21,7 +21,7 @@ final class FiatGnf extends FiatCurrency {
         alternateSymbols: const ["FG", "GFr"],
         disambiguateSymbol: "FG",
         codeNumeric: "324",
-        namesNative: const ["franc guinéen"],
+        namesNative: const ["Franc guinéen"],
         smallestDenomination: 100,
         subunit: "Centime",
         subunitToUnit: 1,

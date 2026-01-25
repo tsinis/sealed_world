@@ -36,7 +36,7 @@ void main() {
   print("Native name: ${maybeCzech?.namesNative.first}");
   print(NaturalLanguage.list.length); // Prints: "184".
 
-  const customOne = LangCustom(code: "XTL", codeShort: "xt"); // Custom.
+  const customOne = LangCustom(code: "XTL", codeShort: "XT"); // Custom.
   print(describeLanguage(const LangEng())); // Prints: "English".
   print(describeLanguage(customOne)); // Prints: "Custom language XTL".
   print(describeLanguage(russian)); // Prints: "ISO-based language".
