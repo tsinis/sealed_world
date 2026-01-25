@@ -1,3 +1,53 @@
+## 3.0.0
+
+🎉 Third anniversary and new major release!
+
+NEW FEATURES
+
+- Animated shader delegate system (`AnimatedFlagShaderDelegate`, `StaticFlagShaderDelegate`).
+- Pixel ratio support in flag shaders.
+
+- New `namesCommonNative` method on ISO (`IsoTranslated`) classes, returning the native name for the given locale as a single string.
+- Enhanced locale parsing to support three-letter codes.
+
+BREAKING CHANGES (in underlying Dart packages)
+
+- L10N values and `namesNative` are now provided in sentence case.
+- `JsonObjectMap` - no longer nullable.
+- `List<TranslatedName> get translations` was removed (was previusly depricated), refer to `.l10n.translatedNames({this})` instead.
+- Finalized base classes (`WorldCountry`, `FiatCurrency`, `NaturalLanguage`, etc.) instances - sealed classes with private constructors, you can create your own instances via `CountryCustom` for example:
+
+```dart
+const custom = CountryCustom(code: "XTL", codeShort: "XT"); // Custom country.
+```
+
+Changes from underlying L10N packages:
+
+Previously, localized strings were provided in mixed lowercase (e.g., "islas Malvinas", in Spanish for `FLK` code) and sentence case. They are now unified and provided in sentence case only (e.g., "Islas Malvinas", in Spanish for `FLK` code) to preserve capitalization context for proper nouns and ensure immediate compatibility with independent UI labels.
+
+**Justification:**
+Capitalization is context-sensitive and cannot be reliably reconstructed from lowercase source strings. By providing values in sentence case, we ensure high-fidelity data for headers and labels. This was also part of [discussion in the past](https://github.com/tsinis/sealed_world/discussions/325).
+
+**Migration:**
+
+- If you use these values as standalone labels, no action is required (you can also remove your `formatter` callback, if not needed).
+- If you require mid-sentence (inline) text, use the `formatter` callback to strictly adapt the casing, rather than relying on direct string manipulation.
+
+```dart
+final localized = mapper.localize(
+  isoCodes,
+  mainLocale: locale,
+  formatter: (_, l10n) => l10n.toLowerCase(), // <-- e.g., inline usage
+);
+```
+
+CHORE
+
+- Corrected latitude for Bouvet Island.
+- Updated Argentine peso symbol.
+- All deprecated APIs from previous versions have been removed.
+- The Dart SDK was bumped to v3.10.4.
+
 ## 2.9.1
 
 NEW FEATURES
