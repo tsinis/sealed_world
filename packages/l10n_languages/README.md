@@ -67,6 +67,9 @@ void main() {
 }
 ```
 
+> [!IMPORTANT]
+> Mapper instances are designed for single-use only. After calling `localize()`, the mapper clears its internal data to free memory and cannot be reused. Create a new instance if you need to localize again.
+
 ### FAQ
 
 #### Why should I use this package over any other language-related package?

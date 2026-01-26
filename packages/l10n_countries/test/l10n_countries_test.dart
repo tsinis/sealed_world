@@ -84,6 +84,15 @@ void main() => group("$CountriesLocaleMapper", () {
       expect(mapper.map, isEmpty);
       expect(result, isNotEmpty);
     });
+
+    test("throws assertion error when reused after localize", () {
+      mapper.localize(const {"USA"}, mainLocale: "en");
+      expect(
+        () => mapper.localize(const {"RUS"}, mainLocale: "en"),
+        throwsA(isA<AssertionError>()),
+        reason: "mapper cannot be reused after consumption",
+      );
+    });
   });
 
   group("language fallback extraction", () {

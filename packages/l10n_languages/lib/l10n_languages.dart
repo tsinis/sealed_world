@@ -328,6 +328,11 @@ export "src/data/zu_languages_l10n.data.dart";
 export "src/iso_locale_mapper.dart";
 
 /// Provides language names translations for different locales.
+///
+/// **Important**: This mapper is designed for single-use only. Once [localize]
+/// is called, the mapper clears its internal data to free memory and cannot be
+/// reused. Attempting to call [localize] again on the same instance will throw
+/// an assertion error. Create a new instance if you need to localize again.
 // ignore: prefer-match-file-name, it's main library file.
 class LanguagesLocaleMapper extends IsoLocaleMapper<IsoLocaleMapper<String>> {
   /// Provides names translations for 157 locales, with the option to
@@ -340,6 +345,8 @@ class LanguagesLocaleMapper extends IsoLocaleMapper<IsoLocaleMapper<String>> {
 
   /// The symbol used to identify the alternative/full name of the ISO object.
   static const symbol = "+";
+
+  bool _isConsumed = false;
 
   /// Lazy factories — static final means this map is only created once,
   /// and the tear-offs (.new) don't invoke constructors until called.
@@ -532,6 +539,14 @@ class LanguagesLocaleMapper extends IsoLocaleMapper<IsoLocaleMapper<String>> {
     bool useLanguageFallback = true,
     String Function(LocaleKey isoLocale, String l10n)? formatter,
   }) {
+    assert(
+      !_isConsumed,
+      "A LanguagesLocaleMapper was used after being consumed. "
+      "Once localize() is called, the mapper clears its internal data to free "
+      "memory and must not be reused. If you need to call localize() again, "
+      "create a new LanguagesLocaleMapper instance.",
+    );
+
     if (isoCodes.isEmpty) return const {};
     final locale = mainLocale?.toString();
     final altLocale = fallbackLocale?.toString();
@@ -604,6 +619,7 @@ class LanguagesLocaleMapper extends IsoLocaleMapper<IsoLocaleMapper<String>> {
         );
     localeEntry.value.map.clear();
     map.clear();
+    _isConsumed = true;
 
     return LocaleMap.unmodifiable(results);
   }
@@ -648,6 +664,7 @@ class LanguagesLocaleMapper extends IsoLocaleMapper<IsoLocaleMapper<String>> {
       localeEntry.value.map.clear();
     }
     map.clear();
+    _isConsumed = true;
 
     return LocaleMap.unmodifiable(results);
   }

@@ -89,6 +89,15 @@ void main() => group("$CurrenciesLocaleMapper", () {
       expect(mapper.map, isEmpty);
       expect(result, isNotEmpty);
     });
+
+    test("throws assertion error when reused after localize", () {
+      mapper.localize(const {"USD"}, mainLocale: "en");
+      expect(
+        () => mapper.localize(const {"RUB"}, mainLocale: "en"),
+        throwsA(isA<AssertionError>()),
+        reason: "mapper cannot be reused after consumption",
+      );
+    });
   });
 
   group("language fallback extraction", () {

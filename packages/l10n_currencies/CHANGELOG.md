@@ -8,6 +8,7 @@ NEW FEATURES
 - Optimized memory usage with lazy locale initialization - translations are now loaded on-demand instead of all at once.
 - Reduced initial memory footprint by ~90% - only requested locales are instantiated.
 - Added `availableLocales` getter to query all supported locales without materializing them.
+- **Single-use design**: Mapper instances automatically free memory after `localize()` is called and cannot be reused. This ensures optimal memory efficiency - create a new instance if you need to localize again.
 
 BREAKING CHANGES
 
