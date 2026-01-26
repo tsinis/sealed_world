@@ -6,24 +6,41 @@ import "package:l10n_languages/src/iso_locale_mapper.dart";
 import "package:test/test.dart";
 
 void main() => group("$LanguagesLocaleMapper", () {
-  // ignore: avoid-late-keyword, it's a test.
-  late LanguagesLocaleMapper mapper;
+  LanguagesLocaleMapper mapper = LanguagesLocaleMapper();
 
-  setUp(() => mapper = LanguagesLocaleMapper());
+  setUp(() => mapper = LanguagesLocaleMapper()); // Fresh instance each time.
 
   group("constructor", () {
     test(
-      "creates instance with default data",
-      () => expect(mapper.map.length, 157),
+      "has 157 default available locales",
+      () => expect(mapper.availableLocales.length, 157),
+    );
+
+    test(
+      "starts with empty map (lazy)",
+      () => expect(mapper.map.length, isZero, reason: "lazy instantiation"),
     );
 
     test("allows adding custom translations", () {
       final customMapper = LanguagesLocaleMapper(
         other: {"custom": AfLanguagesL10N()},
       );
-      expect(customMapper.map.length, 158);
-      expect(customMapper.map["custom"], isNotNull);
+      expect(customMapper.availableLocales.length, 158, reason: "one more");
+      expect(customMapper.map["custom"], isNotNull, reason: "custom is eager");
+      expect(customMapper.map.length, 1, reason: "only custom is materialized");
     });
+  });
+
+  group("lazy instantiation", () {
+    test("materializes only requested locales", () {
+      mapper.localize({"ENG"}, mainLocale: "en");
+      expect(mapper.map.length, isZero, reason: "cleared after use");
+    });
+
+    test(
+      "localize works with available locale",
+      () => expect(mapper.localize({"ENG"}, mainLocale: "fr"), isNotEmpty),
+    );
   });
 
   group("localize", () {
