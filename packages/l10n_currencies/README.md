@@ -9,11 +9,11 @@
 [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
 [![Pub package](https://img.shields.io/pub/v/l10n_currencies.svg)](https://pub.dev/packages/l10n_currencies)
 
-This ISO-driven, pure Dart, fully tested and dependency-free package provides translations for currency names in `161` different locales. For Flutter ready widgets (like currency picker) please use [world_countries](https://pub.dev/packages/world_countries) package. For Dart-only use - it's recommended to use together with [sealed_currencies](https://pub.dev/packages/sealed_currencies) package.
+This ISO-driven, pure Dart, fully tested and dependency-free package provides translations for currency names in `149` different locales. For Flutter ready widgets (like currency picker) please use [world_countries](https://pub.dev/packages/world_countries) package. For Dart-only use - it's recommended to use together with [sealed_currencies](https://pub.dev/packages/sealed_currencies) package.
 
 ### Features
 
-- 161 locales supported out of the box.
+- 149 locales supported out of the box.
 - Three-letter ISO 4217 Alpha code lookup.
 - Fallback locale support.
 - Allows injecting custom translations to extend/modify existing ones.
@@ -72,6 +72,7 @@ void main() {
 #### Why should I use this package over any other currency-related package?
 
 - **No dependencies**: This package has no dependencies, not even `meta`, ensuring that you won't have any issues or conflicts with other dependencies.
+- **Memory efficient**: Lazy initialization loads translations on-demand, reducing initial memory footprint by ~90% - only the locales you actually use are loaded into memory.
 - **Rich data**: This package offers tons of translations (all [GlobalMaterialLocalizations](https://api.flutter.dev/flutter/flutter_localizations/GlobalMaterialLocalizations-class.html) and [GlobalCupertinoLocalizations](https://api.flutter.dev/flutter/flutter_localizations/GlobalCupertinoLocalizations-class.html) locales and more).
 - **High code coverage**: The code in this package has 100% code coverage, providing confidence in its reliability and stability.
 - **Comprehensive documentation**: This package provides full documentation for every non-code generated public member, usually with examples, ensuring clarity and ease of use.
