@@ -1,5 +1,7 @@
-// ignore_for_file: avoid-non-ascii-symbols
+@TestOn("vm")
+library;
 
+// ignore_for_file: do_not_use_environment, avoid-non-ascii-symbols
 import "package:l10n_currencies/l10n_currencies.dart"
     show CurrenciesLocaleMapper;
 import "package:l10n_currencies/src/data/af_currencies_l10n.data.dart";
@@ -10,8 +12,9 @@ void main() => group("$CurrenciesLocaleMapper", () {
   CurrenciesLocaleMapper mapper = CurrenciesLocaleMapper();
 
   setUp(() => mapper = CurrenciesLocaleMapper()); // Fresh instance each time.
+  const hasDeFlag = bool.fromEnvironment("l10n-de");
 
-  group("constructor", () {
+  group("constructor", skip: hasDeFlag, () {
     test(
       "has 149 default available locales",
       () => expect(mapper.availableLocales.length, 149),
@@ -28,13 +31,17 @@ void main() => group("$CurrenciesLocaleMapper", () {
       );
       expect(customMapper.availableLocales.length, 150, reason: "one more");
       expect(customMapper.map["custom"], isNotNull, reason: "custom is eager");
-      expect(customMapper.map.length, 1, reason: "only custom is materialized");
+      expect(
+        customMapper.map.entries.single.value,
+        isA<AfCurrenciesL10N>(),
+        reason: "only custom is materialized",
+      );
     });
   });
 
-  group("lazy instantiation", () {
+  group("lazy instantiation", skip: hasDeFlag, () {
     test("materializes only requested locales", () {
-      mapper.localize({"USD"}, mainLocale: "en");
+      mapper.localize(const {"USD"}, mainLocale: "en");
       expect(mapper.map.length, isZero, reason: "cleared after use");
     });
 
@@ -44,7 +51,7 @@ void main() => group("$CurrenciesLocaleMapper", () {
     );
   });
 
-  group("localize", () {
+  group("localize", skip: hasDeFlag, () {
     test(
       "returns empty map for empty input",
       () => expect(mapper.localize(const {}), isEmpty),
@@ -100,7 +107,7 @@ void main() => group("$CurrenciesLocaleMapper", () {
     });
   });
 
-  group("language fallback extraction", () {
+  group("language fallback extraction", skip: hasDeFlag, () {
     test("falls back to two-letter language subtag", () {
       final custom = CurrenciesLocaleMapper(
         other: {
@@ -150,7 +157,7 @@ void main() => group("$CurrenciesLocaleMapper", () {
     });
   });
 
-  group("$IsoLocaleMapper functionality", () {
+  group("$IsoLocaleMapper functionality", skip: hasDeFlag, () {
     test("returns full map when keys are null", () {
       final customMapper = CurrenciesLocaleMapper(
         other: {
@@ -218,7 +225,7 @@ void main() => group("$CurrenciesLocaleMapper", () {
     });
   });
 
-  group("formatter", () {
+  group("formatter", skip: hasDeFlag, () {
     test("applies formatter to all translations", () {
       final result = mapper.localize(
         const {"USD", "RUB"},
@@ -256,14 +263,14 @@ void main() => group("$CurrenciesLocaleMapper", () {
     });
   });
 
-  group("symbol constant", () {
+  group("symbol constant", skip: hasDeFlag, () {
     test(
       "has correct default value",
       () => expect(CurrenciesLocaleMapper.symbol, "+"),
     );
   });
 
-  group("multiple locales with fallback", () {
+  group("multiple locales with fallback", skip: hasDeFlag, () {
     test("handles both main and fallback locales correctly", () {
       final result = mapper.localize(
         const {"BGN"},
@@ -276,6 +283,58 @@ void main() => group("$CurrenciesLocaleMapper", () {
       expect(result.entries.first.key.locale, "sk");
       expect(result.entries.first.value, result.entries.last.value);
       expect(result.entries.first.key.isoCode, result.entries.last.key.isoCode);
+    });
+  });
+
+  group("Compile-time locale filtering", skip: !hasDeFlag, () {
+    const deEnabled = bool.fromEnvironment("l10n-de");
+    test("_hasAnyLocaleFilter detects when flags are provided", () {
+      expect(hasDeFlag, isTrue, reason: "Flag should be detected");
+      expect(deEnabled, isTrue, reason: "DE should be enabled");
+    });
+
+    test("CurrenciesLocaleMapper contains only filtered locales", () {
+      final shakedMapper = CurrenciesLocaleMapper();
+      final locales = shakedMapper.availableLocales;
+
+      expect(locales, contains("de"), reason: "DE should be included");
+      expect(
+        locales,
+        isNot(contains("fr")),
+        reason: "FR should be excluded when not in dart-define",
+      );
+      expect(
+        locales,
+        isNot(contains("ja")),
+        reason: "JA should be excluded when not in dart-define",
+      );
+    });
+
+    test("availableLocales count matches enabled flags", () {
+      final shakedMapper = CurrenciesLocaleMapper();
+      expect(
+        shakedMapper.availableLocales.single,
+        "de",
+        reason: "When run with exactly 1 locale enabled (de)",
+      );
+    });
+  });
+
+  group("Default behavior (no flags)", skip: hasDeFlag, () {
+    test("all locales included when no flags provided", () {
+      const hasAnyFlag =
+          bool.hasEnvironment("l10n-de") ||
+          bool.hasEnvironment("l10n-en") ||
+          bool.hasEnvironment("l10n-fr");
+
+      if (!hasAnyFlag) {
+        final shakedMapper = CurrenciesLocaleMapper();
+        expect(
+          shakedMapper.availableLocales.length,
+          greaterThan(100),
+          reason: "All locales should be included by default",
+        );
+      }
     });
   });
 });

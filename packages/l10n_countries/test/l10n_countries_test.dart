@@ -2,7 +2,6 @@
 library;
 
 // ignore_for_file: do_not_use_environment, avoid-non-ascii-symbols
-
 import "package:l10n_countries/l10n_countries.dart" show CountriesLocaleMapper;
 import "package:l10n_countries/src/data/af_countries_l10n.data.dart";
 import "package:l10n_countries/src/iso_locale_mapper.dart";
@@ -31,13 +30,17 @@ void main() => group("$CountriesLocaleMapper", () {
       );
       expect(customMapper.availableLocales.length, 194, reason: "one more");
       expect(customMapper.map["custom"], isNotNull, reason: "custom is eager");
-      expect(customMapper.map.length, 1, reason: "only custom is materialized");
+      expect(
+        customMapper.map.entries.single.value,
+        isA<AfCountriesL10N>(),
+        reason: "only custom is materialized",
+      );
     });
   });
 
   group("lazy instantiation", skip: hasDeFlag, () {
     test("materializes only requested locales", () {
-      mapper.localize({"MKD"}, mainLocale: "en");
+      mapper.localize(const {"MKD"}, mainLocale: "en");
       expect(mapper.map.length, isZero, reason: "cleared after use");
     });
 
@@ -321,8 +324,8 @@ void main() => group("$CountriesLocaleMapper", () {
     test("availableLocales count matches enabled flags", () {
       final shakedMapper = CountriesLocaleMapper();
       expect(
-        shakedMapper.availableLocales.length,
-        1,
+        shakedMapper.availableLocales.single,
+        "de",
         reason: "When run with exactly 1 locale enabled (de)",
       );
     });

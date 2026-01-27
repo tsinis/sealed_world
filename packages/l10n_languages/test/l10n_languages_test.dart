@@ -1,5 +1,7 @@
-// ignore_for_file: avoid-non-ascii-symbols
+@TestOn("vm")
+library;
 
+// ignore_for_file: do_not_use_environment, avoid-non-ascii-symbols
 import "package:l10n_languages/l10n_languages.dart" show LanguagesLocaleMapper;
 import "package:l10n_languages/src/data/af_languages_l10n.data.dart";
 import "package:l10n_languages/src/iso_locale_mapper.dart";
@@ -10,7 +12,9 @@ void main() => group("$LanguagesLocaleMapper", () {
 
   setUp(() => mapper = LanguagesLocaleMapper()); // Fresh instance each time.
 
-  group("constructor", () {
+  const hasDeFlag = bool.fromEnvironment("l10n-de");
+
+  group("constructor", skip: hasDeFlag, () {
     test(
       "has 157 default available locales",
       () => expect(mapper.availableLocales.length, 157),
@@ -27,11 +31,15 @@ void main() => group("$LanguagesLocaleMapper", () {
       );
       expect(customMapper.availableLocales.length, 158, reason: "one more");
       expect(customMapper.map["custom"], isNotNull, reason: "custom is eager");
-      expect(customMapper.map.length, 1, reason: "only custom is materialized");
+      expect(
+        customMapper.map.entries.single.value,
+        isA<AfLanguagesL10N>(),
+        reason: "only custom is materialized",
+      );
     });
   });
 
-  group("lazy instantiation", () {
+  group("lazy instantiation", skip: hasDeFlag, () {
     test("materializes only requested locales", () {
       mapper.localize({"ENG"}, mainLocale: "en");
       expect(mapper.map.length, isZero, reason: "cleared after use");
@@ -43,7 +51,7 @@ void main() => group("$LanguagesLocaleMapper", () {
     );
   });
 
-  group("localize", () {
+  group("localize", skip: hasDeFlag, () {
     test(
       "returns empty map for empty input",
       () => expect(mapper.localize(const {}), isEmpty),
@@ -96,7 +104,7 @@ void main() => group("$LanguagesLocaleMapper", () {
     });
   });
 
-  group("language fallback extraction", () {
+  group("language fallback extraction", skip: hasDeFlag, () {
     test("falls back to two-letter language subtag", () {
       final custom = LanguagesLocaleMapper(
         other: {
@@ -145,7 +153,7 @@ void main() => group("$LanguagesLocaleMapper", () {
     });
   });
 
-  group("formatter", () {
+  group("formatter", skip: hasDeFlag, () {
     test("applies formatter to all translations", () {
       final result = mapper.localize(
         const {"ENG", "RUS"},
@@ -183,7 +191,7 @@ void main() => group("$LanguagesLocaleMapper", () {
     });
   });
 
-  group("$IsoLocaleMapper functionality", () {
+  group("$IsoLocaleMapper functionality", skip: hasDeFlag, () {
     test("returns full map when keys are null", () {
       final customMapper = LanguagesLocaleMapper(
         other: {
@@ -259,14 +267,14 @@ void main() => group("$LanguagesLocaleMapper", () {
     });
   });
 
-  group("symbol constant", () {
+  group("symbol constant", skip: hasDeFlag, () {
     test(
       "has correct default value",
       () => expect(LanguagesLocaleMapper.symbol, "+"),
     );
   });
 
-  group("multiple locales with fallback", () {
+  group("multiple locales with fallback", skip: hasDeFlag, () {
     test("handles both main and fallback locales correctly", () {
       final result = mapper.localize(
         const {"ENG"},
@@ -279,6 +287,57 @@ void main() => group("$LanguagesLocaleMapper", () {
       expect(result.entries.first.key.locale, "sk");
       expect(result.entries.first.value, result.entries.last.value);
       expect(result.entries.first.key.isoCode, result.entries.last.key.isoCode);
+    });
+  });
+  group("Compile-time locale filtering", skip: !hasDeFlag, () {
+    const deEnabled = bool.fromEnvironment("l10n-de");
+    test("_hasAnyLocaleFilter detects when flags are provided", () {
+      expect(hasDeFlag, isTrue, reason: "Flag should be detected");
+      expect(deEnabled, isTrue, reason: "DE should be enabled");
+    });
+
+    test("LanguagesLocaleMapper contains only filtered locales", () {
+      final shakedMapper = LanguagesLocaleMapper();
+      final locales = shakedMapper.availableLocales;
+
+      expect(locales, contains("de"), reason: "DE should be included");
+      expect(
+        locales,
+        isNot(contains("fr")),
+        reason: "FR should be excluded when not in dart-define",
+      );
+      expect(
+        locales,
+        isNot(contains("ja")),
+        reason: "JA should be excluded when not in dart-define",
+      );
+    });
+
+    test("availableLocales count matches enabled flags", () {
+      final shakedMapper = LanguagesLocaleMapper();
+      expect(
+        shakedMapper.availableLocales.single,
+        "de",
+        reason: "When run with exactly 1 locale enabled (de)",
+      );
+    });
+  });
+
+  group("Default behavior (no flags)", skip: hasDeFlag, () {
+    test("all locales included when no flags provided", () {
+      const hasAnyFlag =
+          bool.hasEnvironment("l10n-de") ||
+          bool.hasEnvironment("l10n-en") ||
+          bool.hasEnvironment("l10n-fr");
+
+      if (!hasAnyFlag) {
+        final shakedMapper = LanguagesLocaleMapper();
+        expect(
+          shakedMapper.availableLocales.length,
+          greaterThan(100),
+          reason: "All locales should be included by default",
+        );
+      }
     });
   });
 });
