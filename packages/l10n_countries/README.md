@@ -17,6 +17,7 @@ This ISO-driven, pure Dart, fully tested and dependency-free package provides tr
 - Three-letter ISO 3166-1 Alpha-3 code lookup.
 - Fallback locale support.
 - Alternative names and conditional formatting support.
+- Tree-shakable via dart define flags.
 
 > [!TIP]
 > Translations are provided in sentence case to ensure correct display for leading UI labels, avoiding ambiguous re-capitalization logic. To adapt these values for inline or mid-sentence usage, prefer the `formatter` callback.
@@ -35,6 +36,10 @@ Then import the package in your Dart code:
 ```dart
 import 'package:l10n_countries/l10n_countries.dart';
 ```
+
+> [!TIP]
+> Tree-shakable builds can be achieved by providing dart define flags to exclude unused locales. For example, to include only EN and SK locales, use:
+> `dart run -Dl10n-en=true -Dl10n-sk=true` or `flutter run --dart-define=l10n-en=true --dart-define=l10n-sk=true`
 
 ### Usage
 

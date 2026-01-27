@@ -5,6 +5,7 @@
 NEW FEATURES
 
 - L10N values are now provided in sentence case!
+- Tree-shakable via dart define flags.
 - Optimized memory usage with lazy locale initialization - translations are now loaded on-demand instead of all at once.
 - Reduced initial memory footprint by ~90% - only requested locales are instantiated.
 - Added `availableLocales` getter to query all supported locales without materializing them.
