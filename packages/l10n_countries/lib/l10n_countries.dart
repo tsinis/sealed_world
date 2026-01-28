@@ -1065,9 +1065,7 @@ class CountriesLocaleMapper extends IsoLocaleMapper<IsoLocaleMapper<String>> {
         altLocale,
         useLanguageFallback: useLanguageFallback,
       );
-      localeKeys = localeKeys == null
-          ? fallbackKeys
-          : {...localeKeys, ...fallbackKeys};
+      localeKeys = {...?localeKeys, ...fallbackKeys};
     }
 
     if (localeKeys != null) {

@@ -832,16 +832,20 @@ class CurrenciesLocaleMapper extends IsoLocaleMapper<IsoLocaleMapper<String>> {
     if (isoCodes.isEmpty) return const {};
     final locale = mainLocale?.toString();
     final altLocale = fallbackLocale?.toString();
-    final localeKeys = locale == null
-        ? null
-        : {
-            ..._localesSet(locale, useLanguageFallback: useLanguageFallback),
-            if (altLocale != null)
-              ..._localesSet(
-                altLocale,
-                useLanguageFallback: useLanguageFallback,
-              ),
-          };
+    Set<String>? localeKeys;
+    if (locale != null) {
+      localeKeys = _localesSet(
+        locale,
+        useLanguageFallback: useLanguageFallback,
+      );
+    }
+    if (altLocale != null) {
+      final fallbackKeys = _localesSet(
+        altLocale,
+        useLanguageFallback: useLanguageFallback,
+      );
+      localeKeys = {...?localeKeys, ...fallbackKeys};
+    }
 
     if (localeKeys != null) {
       for (final key in localeKeys) {
