@@ -71,6 +71,11 @@ void main() => group("$LanguagesLocaleMapper", () {
       expect(result.values.single, "Englisch");
     });
 
+    test("uses fallback locale when main locale is null", () {
+      final result = mapper.localize(const {"ENG"}, fallbackLocale: "de");
+      expect(result.values.single, "Englisch");
+    });
+
     test("uses language fallback when specific locale not found", () {
       final result = mapper.localize(const {"ENG"}, mainLocale: "en_US");
       expect(result.values.single, "English");
