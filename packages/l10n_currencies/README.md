@@ -9,7 +9,7 @@
 [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
 [![Pub package](https://img.shields.io/pub/v/l10n_currencies.svg)](https://pub.dev/packages/l10n_currencies)
 
-This ISO-driven, pure Dart, fully tested and dependency-free package provides translations for currency names in `149` different locales. For Flutter ready widgets (like currency picker) please use [world_countries](https://pub.dev/packages/world_countries) package. For Dart-only use - it's recommended to use together with [sealed_currencies](https://pub.dev/packages/sealed_currencies) package.
+This ISO-driven, pure Dart, fully tested and dependency-free package provides translations for currency names in `149` different locales. For Flutter-ready widgets (like currency picker) please use [world_countries](https://pub.dev/packages/world_countries) package. For Dart-only use - it's recommended to use together with [sealed_currencies](https://pub.dev/packages/sealed_currencies) package.
 
 ### Features
 
