@@ -446,7 +446,6 @@ RPATH
 RRF
 RUNPATH
 RUNR
-ramallah
 Ranj
 Renminbi
 República
@@ -708,6 +707,7 @@ polski
 português
 ptq
 ptr
+ramallah
 serbski
 tne
 tostring
@@ -719,3 +719,4 @@ ycn
 zwk
 Éire
 Éireann
+États
