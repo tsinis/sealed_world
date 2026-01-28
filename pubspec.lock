@@ -41,6 +41,14 @@ packages:
       url: "https://pub.dev"
     source: hosted
     version: "2.13.0"
+  benchmark_harness:
+    dependency: "direct dev"
+    description:
+      name: benchmark_harness
+      sha256: a2d3c4c83cac0126bf38e41eaf7bd9ed4f6635f1ee1a0cbc6f79fa9736c62cbd
+      url: "https://pub.dev"
+    source: hosted
+    version: "2.4.0"
   boolean_selector:
     dependency: transitive
     description:

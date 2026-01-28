@@ -34,6 +34,7 @@ workspace:
   - packages/world_countries/example # Example for the world_countries package.
 
 dev_dependencies:
+  benchmark_harness: ^2.4.0 # From Google. Defines top level dependency constraint.
   coverage: ^1.15.0 # From Google. Defines top level dependency constraint.
   dart_code_metrics_presets: ^2.29.0 # DCM. Defines top level dependency constraint.
   lints: ^6.0.0 # From Google. Defines top level dependency constraint.

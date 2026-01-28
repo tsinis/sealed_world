@@ -4,7 +4,8 @@
 // https://github.com/umpirsky/country-list project (from Saša Stamenković).
 // Both projects are licensed under the MIT License.
 
-// ignore_for_file: avoid-collection-mutating-methods
+// ignore_for_file: do_not_use_environment, avoid-collection-mutating-methods
+// ignore_for_file: avoid-complex-conditions, avoid-collapsible-if
 
 /// Provides country translations for different locales.
 library l10n_countries;
@@ -400,212 +401,619 @@ export "src/data/zu_countries_l10n.data.dart";
 export "src/iso_locale_mapper.dart";
 
 /// Provides country names translations for different locales.
+///
+/// **Important**: This mapper is designed for single-use only. Once [localize]
+/// is called, the mapper clears its internal data to free memory and cannot be
+/// reused. Attempting to call [localize] again on the same instance will throw
+/// an assertion error. Create a new instance if you need to localize again.
 // ignore: prefer-match-file-name, it's main library file.
 class CountriesLocaleMapper extends IsoLocaleMapper<IsoLocaleMapper<String>> {
   /// Provides names translations for 193 locales, with the option to
   /// add more translations via the [other] parameter.
-  // ignore: avoid-non-empty-constructor-bodies,on purpose.
-  CountriesLocaleMapper({Map<String, IsoLocaleMapper<String>>? other}) {
-    map.addAll({
-      "aa": AaCountriesL10N(),
-      "ab": AbCountriesL10N(),
-      "af": AfCountriesL10N(),
-      "ak": AkCountriesL10N(),
-      "am": AmCountriesL10N(),
-      "an": AnCountriesL10N(),
-      "ar": ArCountriesL10N(),
-      "as": AsCountriesL10N(),
-      "av": AvCountriesL10N(),
-      "ay": AyCountriesL10N(),
-      "az": AzCountriesL10N(),
-      "az_Cyrl": AzCyrlCountriesL10N(),
-      "ba": BaCountriesL10N(),
-      "be": BeCountriesL10N(),
-      "bg": BgCountriesL10N(),
-      "bh": BhCountriesL10N(),
-      "bi": BiCountriesL10N(),
-      "bm": BmCountriesL10N(),
-      "bm_Latn": BmLatnCountriesL10N(),
-      "bn": BnCountriesL10N(),
-      "bn_IN": BnInCountriesL10N(),
-      "bo": BoCountriesL10N(),
-      "br": BrCountriesL10N(),
-      "bs": BsCountriesL10N(),
-      "bs_Cyrl": BsCyrlCountriesL10N(),
-      "ca": CaCountriesL10N(),
-      "ce": CeCountriesL10N(),
-      "ch": ChCountriesL10N(),
-      "co": CoCountriesL10N(),
-      "cs": CsCountriesL10N(),
-      "cu": CuCountriesL10N(),
-      "cv": CvCountriesL10N(),
-      "cy": CyCountriesL10N(),
-      "da": DaCountriesL10N(),
-      "de": DeCountriesL10N(),
-      "dv": DvCountriesL10N(),
-      "dz": DzCountriesL10N(),
-      "ee": EeCountriesL10N(),
-      "el": ElCountriesL10N(),
-      "en": EnCountriesL10N(),
-      "eo": EoCountriesL10N(),
-      "es": EsCountriesL10N(),
-      "et": EtCountriesL10N(),
-      "eu": EuCountriesL10N(),
-      "fa": FaCountriesL10N(),
-      "ff": FfCountriesL10N(),
-      "fi": FiCountriesL10N(),
-      "fj": FjCountriesL10N(),
-      "fo": FoCountriesL10N(),
-      "fr": FrCountriesL10N(),
-      "fy": FyCountriesL10N(),
-      "ga": GaCountriesL10N(),
-      "gd": GdCountriesL10N(),
-      "gl": GlCountriesL10N(),
-      "gn": GnCountriesL10N(),
-      "gu": GuCountriesL10N(),
-      "gv": GvCountriesL10N(),
-      "ha": HaCountriesL10N(),
-      "ha_Latn": HaLatnCountriesL10N(),
-      "he": HeCountriesL10N(),
-      "hi": HiCountriesL10N(),
-      "hr": HrCountriesL10N(),
-      "ht": HtCountriesL10N(),
-      "hu": HuCountriesL10N(),
-      "hy": HyCountriesL10N(),
-      "ia": IaCountriesL10N(),
-      "id": IdCountriesL10N(),
-      "ie": IeCountriesL10N(),
-      "ig": IgCountriesL10N(),
-      "ii": IiCountriesL10N(),
-      "ik": IkCountriesL10N(),
-      "io": IoCountriesL10N(),
-      "is": IsCountriesL10N(),
-      "it": ItCountriesL10N(),
-      "iu": IuCountriesL10N(),
-      "ja": JaCountriesL10N(),
-      "jv": JvCountriesL10N(),
-      "ka": KaCountriesL10N(),
-      "kg": KgCountriesL10N(),
-      "ki": KiCountriesL10N(),
-      "kk": KkCountriesL10N(),
-      "kk_Cyrl": KkCyrlCountriesL10N(),
-      "kl": KlCountriesL10N(),
-      "km": KmCountriesL10N(),
-      "kn": KnCountriesL10N(),
-      "ko": KoCountriesL10N(),
-      "ks": KsCountriesL10N(),
-      "ks_Arab": KsArabCountriesL10N(),
-      "ku": KuCountriesL10N(),
-      "kv": KvCountriesL10N(),
-      "kw": KwCountriesL10N(),
-      "ky": KyCountriesL10N(),
-      "ky_Cyrl": KyCyrlCountriesL10N(),
-      "la": LaCountriesL10N(),
-      "lb": LbCountriesL10N(),
-      "lg": LgCountriesL10N(),
-      "li": LiCountriesL10N(),
-      "ln": LnCountriesL10N(),
-      "lo": LoCountriesL10N(),
-      "lt": LtCountriesL10N(),
-      "lu": LuCountriesL10N(),
-      "lv": LvCountriesL10N(),
-      "mg": MgCountriesL10N(),
-      "mi": MiCountriesL10N(),
-      "mk": MkCountriesL10N(),
-      "ml": MlCountriesL10N(),
-      "mn": MnCountriesL10N(),
-      "mn_Cyrl": MnCyrlCountriesL10N(),
-      "mr": MrCountriesL10N(),
-      "ms": MsCountriesL10N(),
-      "ms_Latn": MsLatnCountriesL10N(),
-      "mt": MtCountriesL10N(),
-      "my": MyCountriesL10N(),
-      "na": NaCountriesL10N(),
-      "nb": NbCountriesL10N(),
-      "nd": NdCountriesL10N(),
-      "ne": NeCountriesL10N(),
-      "nl": NlCountriesL10N(),
-      "nn": NnCountriesL10N(),
-      "no": NoCountriesL10N(),
-      "nv": NvCountriesL10N(),
-      "ny": NyCountriesL10N(),
-      "oc": OcCountriesL10N(),
-      "om": OmCountriesL10N(),
-      "or": OrCountriesL10N(),
-      "os": OsCountriesL10N(),
-      "pa": PaCountriesL10N(),
-      "pa_Arab": PaArabCountriesL10N(),
-      "pi": PiCountriesL10N(),
-      "pl": PlCountriesL10N(),
-      "ps": PsCountriesL10N(),
-      "ps_PK": PsPkCountriesL10N(),
-      "pt": PtCountriesL10N(),
-      "qu": QuCountriesL10N(),
-      "rm": RmCountriesL10N(),
-      "rn": RnCountriesL10N(),
-      "ro": RoCountriesL10N(),
-      "ro_MD": RoMdCountriesL10N(),
-      "ru": RuCountriesL10N(),
-      "rw": RwCountriesL10N(),
-      "sa": SaCountriesL10N(),
-      "sc": ScCountriesL10N(),
-      "sd": SdCountriesL10N(),
-      "se": SeCountriesL10N(),
-      "se_FI": SeFiCountriesL10N(),
-      "sg": SgCountriesL10N(),
-      "si": SiCountriesL10N(),
-      "sk": SkCountriesL10N(),
-      "sl": SlCountriesL10N(),
-      "sm": SmCountriesL10N(),
-      "sn": SnCountriesL10N(),
-      "so": SoCountriesL10N(),
-      "sq": SqCountriesL10N(),
-      "sr": SrCountriesL10N(),
-      "ss": SsCountriesL10N(),
-      "st": StCountriesL10N(),
-      "su": SuCountriesL10N(),
-      "sv": SvCountriesL10N(),
-      "sw": SwCountriesL10N(),
-      "sw_CD": SwCdCountriesL10N(),
-      "sw_KE": SwKeCountriesL10N(),
-      "ta": TaCountriesL10N(),
-      "te": TeCountriesL10N(),
-      "tg": TgCountriesL10N(),
-      "th": ThCountriesL10N(),
-      "ti": TiCountriesL10N(),
-      "tk": TkCountriesL10N(),
-      "tl": TlCountriesL10N(),
-      "tn": TnCountriesL10N(),
-      "to": ToCountriesL10N(),
-      "tr": TrCountriesL10N(),
-      "ts": TsCountriesL10N(),
-      "tt": TtCountriesL10N(),
-      "tw": TwCountriesL10N(),
-      "ty": TyCountriesL10N(),
-      "ug": UgCountriesL10N(),
-      "ug_Arab": UgArabCountriesL10N(),
-      "uk": UkCountriesL10N(),
-      "ur": UrCountriesL10N(),
-      "uz": UzCountriesL10N(),
-      "uz_Cyrl": UzCyrlCountriesL10N(),
-      "ve": VeCountriesL10N(),
-      "vi": ViCountriesL10N(),
-      "vo": VoCountriesL10N(),
-      "wa": WaCountriesL10N(),
-      "wo": WoCountriesL10N(),
-      "xh": XhCountriesL10N(),
-      "yi": YiCountriesL10N(),
-      "yo": YoCountriesL10N(),
-      "yo_BJ": YoBjCountriesL10N(),
-      "za": ZaCountriesL10N(),
-      "zh": ZhCountriesL10N(),
-      "zu": ZuCountriesL10N(),
-      ...?other,
-    });
+  CountriesLocaleMapper({Map<String, IsoLocaleMapper<String>>? other})
+    // ignore: avoid-non-empty-constructor-bodies,on purpose.
+    : super(availableLocales: {..._factories.keys, ...?other?.keys}) {
+    if (other != null) map.addAll(other);
   }
 
   /// The symbol used to identify the alternative/full name of the ISO object.
   static const symbol = "+";
+
+  bool _isConsumed = false;
+
+  /// Lazy factories — static final means this map is only created once,
+  /// and the tear-offs (.new) don't invoke constructors until called.
+  /// AUTO-GENERATED by env_flags_generator.dart - DO NOT EDIT MANUALLY
+  /// Detects if user provided ANY l10n-* flag (unified across packages).
+  /// If yes, we switch to "opt-in" mode. If no, include all.
+  // Generated code - tree-shaking optimization for locale filtering.
+  // ignore: avoid-explicit-type-declaration
+  static const bool _hasAnyLocaleFilter =
+      bool.hasEnvironment("l10n-aa") ||
+      bool.hasEnvironment("l10n-ab") ||
+      bool.hasEnvironment("l10n-af") ||
+      bool.hasEnvironment("l10n-ak") ||
+      bool.hasEnvironment("l10n-am") ||
+      bool.hasEnvironment("l10n-an") ||
+      bool.hasEnvironment("l10n-ar") ||
+      bool.hasEnvironment("l10n-as") ||
+      bool.hasEnvironment("l10n-av") ||
+      bool.hasEnvironment("l10n-ay") ||
+      bool.hasEnvironment("l10n-az") ||
+      bool.hasEnvironment("l10n-az_cyrl") ||
+      bool.hasEnvironment("l10n-ba") ||
+      bool.hasEnvironment("l10n-be") ||
+      bool.hasEnvironment("l10n-bg") ||
+      bool.hasEnvironment("l10n-bh") ||
+      bool.hasEnvironment("l10n-bi") ||
+      bool.hasEnvironment("l10n-bm") ||
+      bool.hasEnvironment("l10n-bm_latn") ||
+      bool.hasEnvironment("l10n-bn") ||
+      bool.hasEnvironment("l10n-bn_in") ||
+      bool.hasEnvironment("l10n-bo") ||
+      bool.hasEnvironment("l10n-br") ||
+      bool.hasEnvironment("l10n-bs") ||
+      bool.hasEnvironment("l10n-bs_cyrl") ||
+      bool.hasEnvironment("l10n-ca") ||
+      bool.hasEnvironment("l10n-ce") ||
+      bool.hasEnvironment("l10n-ch") ||
+      bool.hasEnvironment("l10n-co") ||
+      bool.hasEnvironment("l10n-cs") ||
+      bool.hasEnvironment("l10n-cu") ||
+      bool.hasEnvironment("l10n-cv") ||
+      bool.hasEnvironment("l10n-cy") ||
+      bool.hasEnvironment("l10n-da") ||
+      bool.hasEnvironment("l10n-de") ||
+      bool.hasEnvironment("l10n-dv") ||
+      bool.hasEnvironment("l10n-dz") ||
+      bool.hasEnvironment("l10n-ee") ||
+      bool.hasEnvironment("l10n-el") ||
+      bool.hasEnvironment("l10n-en") ||
+      bool.hasEnvironment("l10n-eo") ||
+      bool.hasEnvironment("l10n-es") ||
+      bool.hasEnvironment("l10n-et") ||
+      bool.hasEnvironment("l10n-eu") ||
+      bool.hasEnvironment("l10n-fa") ||
+      bool.hasEnvironment("l10n-ff") ||
+      bool.hasEnvironment("l10n-fi") ||
+      bool.hasEnvironment("l10n-fj") ||
+      bool.hasEnvironment("l10n-fo") ||
+      bool.hasEnvironment("l10n-fr") ||
+      bool.hasEnvironment("l10n-fy") ||
+      bool.hasEnvironment("l10n-ga") ||
+      bool.hasEnvironment("l10n-gd") ||
+      bool.hasEnvironment("l10n-gl") ||
+      bool.hasEnvironment("l10n-gn") ||
+      bool.hasEnvironment("l10n-gu") ||
+      bool.hasEnvironment("l10n-gv") ||
+      bool.hasEnvironment("l10n-ha") ||
+      bool.hasEnvironment("l10n-ha_latn") ||
+      bool.hasEnvironment("l10n-he") ||
+      bool.hasEnvironment("l10n-hi") ||
+      bool.hasEnvironment("l10n-hr") ||
+      bool.hasEnvironment("l10n-ht") ||
+      bool.hasEnvironment("l10n-hu") ||
+      bool.hasEnvironment("l10n-hy") ||
+      bool.hasEnvironment("l10n-ia") ||
+      bool.hasEnvironment("l10n-id") ||
+      bool.hasEnvironment("l10n-ie") ||
+      bool.hasEnvironment("l10n-ig") ||
+      bool.hasEnvironment("l10n-ii") ||
+      bool.hasEnvironment("l10n-ik") ||
+      bool.hasEnvironment("l10n-io") ||
+      bool.hasEnvironment("l10n-is") ||
+      bool.hasEnvironment("l10n-it") ||
+      bool.hasEnvironment("l10n-iu") ||
+      bool.hasEnvironment("l10n-ja") ||
+      bool.hasEnvironment("l10n-jv") ||
+      bool.hasEnvironment("l10n-ka") ||
+      bool.hasEnvironment("l10n-kg") ||
+      bool.hasEnvironment("l10n-ki") ||
+      bool.hasEnvironment("l10n-kk") ||
+      bool.hasEnvironment("l10n-kk_cyrl") ||
+      bool.hasEnvironment("l10n-kl") ||
+      bool.hasEnvironment("l10n-km") ||
+      bool.hasEnvironment("l10n-kn") ||
+      bool.hasEnvironment("l10n-ko") ||
+      bool.hasEnvironment("l10n-ks") ||
+      bool.hasEnvironment("l10n-ks_arab") ||
+      bool.hasEnvironment("l10n-ku") ||
+      bool.hasEnvironment("l10n-kv") ||
+      bool.hasEnvironment("l10n-kw") ||
+      bool.hasEnvironment("l10n-ky") ||
+      bool.hasEnvironment("l10n-ky_cyrl") ||
+      bool.hasEnvironment("l10n-la") ||
+      bool.hasEnvironment("l10n-lb") ||
+      bool.hasEnvironment("l10n-lg") ||
+      bool.hasEnvironment("l10n-li") ||
+      bool.hasEnvironment("l10n-ln") ||
+      bool.hasEnvironment("l10n-lo") ||
+      bool.hasEnvironment("l10n-lt") ||
+      bool.hasEnvironment("l10n-lu") ||
+      bool.hasEnvironment("l10n-lv") ||
+      bool.hasEnvironment("l10n-mg") ||
+      bool.hasEnvironment("l10n-mi") ||
+      bool.hasEnvironment("l10n-mk") ||
+      bool.hasEnvironment("l10n-ml") ||
+      bool.hasEnvironment("l10n-mn") ||
+      bool.hasEnvironment("l10n-mn_cyrl") ||
+      bool.hasEnvironment("l10n-mr") ||
+      bool.hasEnvironment("l10n-ms") ||
+      bool.hasEnvironment("l10n-ms_latn") ||
+      bool.hasEnvironment("l10n-mt") ||
+      bool.hasEnvironment("l10n-my") ||
+      bool.hasEnvironment("l10n-na") ||
+      bool.hasEnvironment("l10n-nb") ||
+      bool.hasEnvironment("l10n-nd") ||
+      bool.hasEnvironment("l10n-ne") ||
+      bool.hasEnvironment("l10n-nl") ||
+      bool.hasEnvironment("l10n-nn") ||
+      bool.hasEnvironment("l10n-no") ||
+      bool.hasEnvironment("l10n-nv") ||
+      bool.hasEnvironment("l10n-ny") ||
+      bool.hasEnvironment("l10n-oc") ||
+      bool.hasEnvironment("l10n-om") ||
+      bool.hasEnvironment("l10n-or") ||
+      bool.hasEnvironment("l10n-os") ||
+      bool.hasEnvironment("l10n-pa") ||
+      bool.hasEnvironment("l10n-pa_arab") ||
+      bool.hasEnvironment("l10n-pi") ||
+      bool.hasEnvironment("l10n-pl") ||
+      bool.hasEnvironment("l10n-ps") ||
+      bool.hasEnvironment("l10n-ps_pk") ||
+      bool.hasEnvironment("l10n-pt") ||
+      bool.hasEnvironment("l10n-qu") ||
+      bool.hasEnvironment("l10n-rm") ||
+      bool.hasEnvironment("l10n-rn") ||
+      bool.hasEnvironment("l10n-ro") ||
+      bool.hasEnvironment("l10n-ro_md") ||
+      bool.hasEnvironment("l10n-ru") ||
+      bool.hasEnvironment("l10n-rw") ||
+      bool.hasEnvironment("l10n-sa") ||
+      bool.hasEnvironment("l10n-sc") ||
+      bool.hasEnvironment("l10n-sd") ||
+      bool.hasEnvironment("l10n-se") ||
+      bool.hasEnvironment("l10n-se_fi") ||
+      bool.hasEnvironment("l10n-sg") ||
+      bool.hasEnvironment("l10n-si") ||
+      bool.hasEnvironment("l10n-sk") ||
+      bool.hasEnvironment("l10n-sl") ||
+      bool.hasEnvironment("l10n-sm") ||
+      bool.hasEnvironment("l10n-sn") ||
+      bool.hasEnvironment("l10n-so") ||
+      bool.hasEnvironment("l10n-sq") ||
+      bool.hasEnvironment("l10n-sr") ||
+      bool.hasEnvironment("l10n-ss") ||
+      bool.hasEnvironment("l10n-st") ||
+      bool.hasEnvironment("l10n-su") ||
+      bool.hasEnvironment("l10n-sv") ||
+      bool.hasEnvironment("l10n-sw") ||
+      bool.hasEnvironment("l10n-sw_cd") ||
+      bool.hasEnvironment("l10n-sw_ke") ||
+      bool.hasEnvironment("l10n-ta") ||
+      bool.hasEnvironment("l10n-te") ||
+      bool.hasEnvironment("l10n-tg") ||
+      bool.hasEnvironment("l10n-th") ||
+      bool.hasEnvironment("l10n-ti") ||
+      bool.hasEnvironment("l10n-tk") ||
+      bool.hasEnvironment("l10n-tl") ||
+      bool.hasEnvironment("l10n-tn") ||
+      bool.hasEnvironment("l10n-to") ||
+      bool.hasEnvironment("l10n-tr") ||
+      bool.hasEnvironment("l10n-ts") ||
+      bool.hasEnvironment("l10n-tt") ||
+      bool.hasEnvironment("l10n-tw") ||
+      bool.hasEnvironment("l10n-ty") ||
+      bool.hasEnvironment("l10n-ug") ||
+      bool.hasEnvironment("l10n-ug_arab") ||
+      bool.hasEnvironment("l10n-uk") ||
+      bool.hasEnvironment("l10n-ur") ||
+      bool.hasEnvironment("l10n-uz") ||
+      bool.hasEnvironment("l10n-uz_cyrl") ||
+      bool.hasEnvironment("l10n-ve") ||
+      bool.hasEnvironment("l10n-vi") ||
+      bool.hasEnvironment("l10n-vo") ||
+      bool.hasEnvironment("l10n-wa") ||
+      bool.hasEnvironment("l10n-wo") ||
+      bool.hasEnvironment("l10n-xh") ||
+      bool.hasEnvironment("l10n-yi") ||
+      bool.hasEnvironment("l10n-yo") ||
+      bool.hasEnvironment("l10n-yo_bj") ||
+      bool.hasEnvironment("l10n-za") ||
+      bool.hasEnvironment("l10n-zh") ||
+      bool.hasEnvironment("l10n-zu");
+
+  static final _factories = <String, IsoLocaleMapper<String> Function()>{
+    if (!_hasAnyLocaleFilter || const bool.fromEnvironment("l10n-aa"))
+      "aa": AaCountriesL10N.new,
+    if (!_hasAnyLocaleFilter || const bool.fromEnvironment("l10n-ab"))
+      "ab": AbCountriesL10N.new,
+    if (!_hasAnyLocaleFilter || const bool.fromEnvironment("l10n-af"))
+      "af": AfCountriesL10N.new,
+    if (!_hasAnyLocaleFilter || const bool.fromEnvironment("l10n-ak"))
+      "ak": AkCountriesL10N.new,
+    if (!_hasAnyLocaleFilter || const bool.fromEnvironment("l10n-am"))
+      "am": AmCountriesL10N.new,
+    if (!_hasAnyLocaleFilter || const bool.fromEnvironment("l10n-an"))
+      "an": AnCountriesL10N.new,
+    if (!_hasAnyLocaleFilter || const bool.fromEnvironment("l10n-ar"))
+      "ar": ArCountriesL10N.new,
+    if (!_hasAnyLocaleFilter || const bool.fromEnvironment("l10n-as"))
+      "as": AsCountriesL10N.new,
+    if (!_hasAnyLocaleFilter || const bool.fromEnvironment("l10n-av"))
+      "av": AvCountriesL10N.new,
+    if (!_hasAnyLocaleFilter || const bool.fromEnvironment("l10n-ay"))
+      "ay": AyCountriesL10N.new,
+    if (!_hasAnyLocaleFilter || const bool.fromEnvironment("l10n-az"))
+      "az": AzCountriesL10N.new,
+    if (!_hasAnyLocaleFilter || const bool.fromEnvironment("l10n-az_cyrl"))
+      "az_Cyrl": AzCyrlCountriesL10N.new,
+    if (!_hasAnyLocaleFilter || const bool.fromEnvironment("l10n-ba"))
+      "ba": BaCountriesL10N.new,
+    if (!_hasAnyLocaleFilter || const bool.fromEnvironment("l10n-be"))
+      "be": BeCountriesL10N.new,
+    if (!_hasAnyLocaleFilter || const bool.fromEnvironment("l10n-bg"))
+      "bg": BgCountriesL10N.new,
+    if (!_hasAnyLocaleFilter || const bool.fromEnvironment("l10n-bh"))
+      "bh": BhCountriesL10N.new,
+    if (!_hasAnyLocaleFilter || const bool.fromEnvironment("l10n-bi"))
+      "bi": BiCountriesL10N.new,
+    if (!_hasAnyLocaleFilter || const bool.fromEnvironment("l10n-bm"))
+      "bm": BmCountriesL10N.new,
+    if (!_hasAnyLocaleFilter || const bool.fromEnvironment("l10n-bm_latn"))
+      "bm_Latn": BmLatnCountriesL10N.new,
+    if (!_hasAnyLocaleFilter || const bool.fromEnvironment("l10n-bn"))
+      "bn": BnCountriesL10N.new,
+    if (!_hasAnyLocaleFilter || const bool.fromEnvironment("l10n-bn_in"))
+      "bn_IN": BnInCountriesL10N.new,
+    if (!_hasAnyLocaleFilter || const bool.fromEnvironment("l10n-bo"))
+      "bo": BoCountriesL10N.new,
+    if (!_hasAnyLocaleFilter || const bool.fromEnvironment("l10n-br"))
+      "br": BrCountriesL10N.new,
+    if (!_hasAnyLocaleFilter || const bool.fromEnvironment("l10n-bs"))
+      "bs": BsCountriesL10N.new,
+    if (!_hasAnyLocaleFilter || const bool.fromEnvironment("l10n-bs_cyrl"))
+      "bs_Cyrl": BsCyrlCountriesL10N.new,
+    if (!_hasAnyLocaleFilter || const bool.fromEnvironment("l10n-ca"))
+      "ca": CaCountriesL10N.new,
+    if (!_hasAnyLocaleFilter || const bool.fromEnvironment("l10n-ce"))
+      "ce": CeCountriesL10N.new,
+    if (!_hasAnyLocaleFilter || const bool.fromEnvironment("l10n-ch"))
+      "ch": ChCountriesL10N.new,
+    if (!_hasAnyLocaleFilter || const bool.fromEnvironment("l10n-co"))
+      "co": CoCountriesL10N.new,
+    if (!_hasAnyLocaleFilter || const bool.fromEnvironment("l10n-cs"))
+      "cs": CsCountriesL10N.new,
+    if (!_hasAnyLocaleFilter || const bool.fromEnvironment("l10n-cu"))
+      "cu": CuCountriesL10N.new,
+    if (!_hasAnyLocaleFilter || const bool.fromEnvironment("l10n-cv"))
+      "cv": CvCountriesL10N.new,
+    if (!_hasAnyLocaleFilter || const bool.fromEnvironment("l10n-cy"))
+      "cy": CyCountriesL10N.new,
+    if (!_hasAnyLocaleFilter || const bool.fromEnvironment("l10n-da"))
+      "da": DaCountriesL10N.new,
+    if (!_hasAnyLocaleFilter || const bool.fromEnvironment("l10n-de"))
+      "de": DeCountriesL10N.new,
+    if (!_hasAnyLocaleFilter || const bool.fromEnvironment("l10n-dv"))
+      "dv": DvCountriesL10N.new,
+    if (!_hasAnyLocaleFilter || const bool.fromEnvironment("l10n-dz"))
+      "dz": DzCountriesL10N.new,
+    if (!_hasAnyLocaleFilter || const bool.fromEnvironment("l10n-ee"))
+      "ee": EeCountriesL10N.new,
+    if (!_hasAnyLocaleFilter || const bool.fromEnvironment("l10n-el"))
+      "el": ElCountriesL10N.new,
+    if (!_hasAnyLocaleFilter || const bool.fromEnvironment("l10n-en"))
+      "en": EnCountriesL10N.new,
+    if (!_hasAnyLocaleFilter || const bool.fromEnvironment("l10n-eo"))
+      "eo": EoCountriesL10N.new,
+    if (!_hasAnyLocaleFilter || const bool.fromEnvironment("l10n-es"))
+      "es": EsCountriesL10N.new,
+    if (!_hasAnyLocaleFilter || const bool.fromEnvironment("l10n-et"))
+      "et": EtCountriesL10N.new,
+    if (!_hasAnyLocaleFilter || const bool.fromEnvironment("l10n-eu"))
+      "eu": EuCountriesL10N.new,
+    if (!_hasAnyLocaleFilter || const bool.fromEnvironment("l10n-fa"))
+      "fa": FaCountriesL10N.new,
+    if (!_hasAnyLocaleFilter || const bool.fromEnvironment("l10n-ff"))
+      "ff": FfCountriesL10N.new,
+    if (!_hasAnyLocaleFilter || const bool.fromEnvironment("l10n-fi"))
+      "fi": FiCountriesL10N.new,
+    if (!_hasAnyLocaleFilter || const bool.fromEnvironment("l10n-fj"))
+      "fj": FjCountriesL10N.new,
+    if (!_hasAnyLocaleFilter || const bool.fromEnvironment("l10n-fo"))
+      "fo": FoCountriesL10N.new,
+    if (!_hasAnyLocaleFilter || const bool.fromEnvironment("l10n-fr"))
+      "fr": FrCountriesL10N.new,
+    if (!_hasAnyLocaleFilter || const bool.fromEnvironment("l10n-fy"))
+      "fy": FyCountriesL10N.new,
+    if (!_hasAnyLocaleFilter || const bool.fromEnvironment("l10n-ga"))
+      "ga": GaCountriesL10N.new,
+    if (!_hasAnyLocaleFilter || const bool.fromEnvironment("l10n-gd"))
+      "gd": GdCountriesL10N.new,
+    if (!_hasAnyLocaleFilter || const bool.fromEnvironment("l10n-gl"))
+      "gl": GlCountriesL10N.new,
+    if (!_hasAnyLocaleFilter || const bool.fromEnvironment("l10n-gn"))
+      "gn": GnCountriesL10N.new,
+    if (!_hasAnyLocaleFilter || const bool.fromEnvironment("l10n-gu"))
+      "gu": GuCountriesL10N.new,
+    if (!_hasAnyLocaleFilter || const bool.fromEnvironment("l10n-gv"))
+      "gv": GvCountriesL10N.new,
+    if (!_hasAnyLocaleFilter || const bool.fromEnvironment("l10n-ha"))
+      "ha": HaCountriesL10N.new,
+    if (!_hasAnyLocaleFilter || const bool.fromEnvironment("l10n-ha_latn"))
+      "ha_Latn": HaLatnCountriesL10N.new,
+    if (!_hasAnyLocaleFilter || const bool.fromEnvironment("l10n-he"))
+      "he": HeCountriesL10N.new,
+    if (!_hasAnyLocaleFilter || const bool.fromEnvironment("l10n-hi"))
+      "hi": HiCountriesL10N.new,
+    if (!_hasAnyLocaleFilter || const bool.fromEnvironment("l10n-hr"))
+      "hr": HrCountriesL10N.new,
+    if (!_hasAnyLocaleFilter || const bool.fromEnvironment("l10n-ht"))
+      "ht": HtCountriesL10N.new,
+    if (!_hasAnyLocaleFilter || const bool.fromEnvironment("l10n-hu"))
+      "hu": HuCountriesL10N.new,
+    if (!_hasAnyLocaleFilter || const bool.fromEnvironment("l10n-hy"))
+      "hy": HyCountriesL10N.new,
+    if (!_hasAnyLocaleFilter || const bool.fromEnvironment("l10n-ia"))
+      "ia": IaCountriesL10N.new,
+    if (!_hasAnyLocaleFilter || const bool.fromEnvironment("l10n-id"))
+      "id": IdCountriesL10N.new,
+    if (!_hasAnyLocaleFilter || const bool.fromEnvironment("l10n-ie"))
+      "ie": IeCountriesL10N.new,
+    if (!_hasAnyLocaleFilter || const bool.fromEnvironment("l10n-ig"))
+      "ig": IgCountriesL10N.new,
+    if (!_hasAnyLocaleFilter || const bool.fromEnvironment("l10n-ii"))
+      "ii": IiCountriesL10N.new,
+    if (!_hasAnyLocaleFilter || const bool.fromEnvironment("l10n-ik"))
+      "ik": IkCountriesL10N.new,
+    if (!_hasAnyLocaleFilter || const bool.fromEnvironment("l10n-io"))
+      "io": IoCountriesL10N.new,
+    if (!_hasAnyLocaleFilter || const bool.fromEnvironment("l10n-is"))
+      "is": IsCountriesL10N.new,
+    if (!_hasAnyLocaleFilter || const bool.fromEnvironment("l10n-it"))
+      "it": ItCountriesL10N.new,
+    if (!_hasAnyLocaleFilter || const bool.fromEnvironment("l10n-iu"))
+      "iu": IuCountriesL10N.new,
+    if (!_hasAnyLocaleFilter || const bool.fromEnvironment("l10n-ja"))
+      "ja": JaCountriesL10N.new,
+    if (!_hasAnyLocaleFilter || const bool.fromEnvironment("l10n-jv"))
+      "jv": JvCountriesL10N.new,
+    if (!_hasAnyLocaleFilter || const bool.fromEnvironment("l10n-ka"))
+      "ka": KaCountriesL10N.new,
+    if (!_hasAnyLocaleFilter || const bool.fromEnvironment("l10n-kg"))
+      "kg": KgCountriesL10N.new,
+    if (!_hasAnyLocaleFilter || const bool.fromEnvironment("l10n-ki"))
+      "ki": KiCountriesL10N.new,
+    if (!_hasAnyLocaleFilter || const bool.fromEnvironment("l10n-kk"))
+      "kk": KkCountriesL10N.new,
+    if (!_hasAnyLocaleFilter || const bool.fromEnvironment("l10n-kk_cyrl"))
+      "kk_Cyrl": KkCyrlCountriesL10N.new,
+    if (!_hasAnyLocaleFilter || const bool.fromEnvironment("l10n-kl"))
+      "kl": KlCountriesL10N.new,
+    if (!_hasAnyLocaleFilter || const bool.fromEnvironment("l10n-km"))
+      "km": KmCountriesL10N.new,
+    if (!_hasAnyLocaleFilter || const bool.fromEnvironment("l10n-kn"))
+      "kn": KnCountriesL10N.new,
+    if (!_hasAnyLocaleFilter || const bool.fromEnvironment("l10n-ko"))
+      "ko": KoCountriesL10N.new,
+    if (!_hasAnyLocaleFilter || const bool.fromEnvironment("l10n-ks"))
+      "ks": KsCountriesL10N.new,
+    if (!_hasAnyLocaleFilter || const bool.fromEnvironment("l10n-ks_arab"))
+      "ks_Arab": KsArabCountriesL10N.new,
+    if (!_hasAnyLocaleFilter || const bool.fromEnvironment("l10n-ku"))
+      "ku": KuCountriesL10N.new,
+    if (!_hasAnyLocaleFilter || const bool.fromEnvironment("l10n-kv"))
+      "kv": KvCountriesL10N.new,
+    if (!_hasAnyLocaleFilter || const bool.fromEnvironment("l10n-kw"))
+      "kw": KwCountriesL10N.new,
+    if (!_hasAnyLocaleFilter || const bool.fromEnvironment("l10n-ky"))
+      "ky": KyCountriesL10N.new,
+    if (!_hasAnyLocaleFilter || const bool.fromEnvironment("l10n-ky_cyrl"))
+      "ky_Cyrl": KyCyrlCountriesL10N.new,
+    if (!_hasAnyLocaleFilter || const bool.fromEnvironment("l10n-la"))
+      "la": LaCountriesL10N.new,
+    if (!_hasAnyLocaleFilter || const bool.fromEnvironment("l10n-lb"))
+      "lb": LbCountriesL10N.new,
+    if (!_hasAnyLocaleFilter || const bool.fromEnvironment("l10n-lg"))
+      "lg": LgCountriesL10N.new,
+    if (!_hasAnyLocaleFilter || const bool.fromEnvironment("l10n-li"))
+      "li": LiCountriesL10N.new,
+    if (!_hasAnyLocaleFilter || const bool.fromEnvironment("l10n-ln"))
+      "ln": LnCountriesL10N.new,
+    if (!_hasAnyLocaleFilter || const bool.fromEnvironment("l10n-lo"))
+      "lo": LoCountriesL10N.new,
+    if (!_hasAnyLocaleFilter || const bool.fromEnvironment("l10n-lt"))
+      "lt": LtCountriesL10N.new,
+    if (!_hasAnyLocaleFilter || const bool.fromEnvironment("l10n-lu"))
+      "lu": LuCountriesL10N.new,
+    if (!_hasAnyLocaleFilter || const bool.fromEnvironment("l10n-lv"))
+      "lv": LvCountriesL10N.new,
+    if (!_hasAnyLocaleFilter || const bool.fromEnvironment("l10n-mg"))
+      "mg": MgCountriesL10N.new,
+    if (!_hasAnyLocaleFilter || const bool.fromEnvironment("l10n-mi"))
+      "mi": MiCountriesL10N.new,
+    if (!_hasAnyLocaleFilter || const bool.fromEnvironment("l10n-mk"))
+      "mk": MkCountriesL10N.new,
+    if (!_hasAnyLocaleFilter || const bool.fromEnvironment("l10n-ml"))
+      "ml": MlCountriesL10N.new,
+    if (!_hasAnyLocaleFilter || const bool.fromEnvironment("l10n-mn"))
+      "mn": MnCountriesL10N.new,
+    if (!_hasAnyLocaleFilter || const bool.fromEnvironment("l10n-mn_cyrl"))
+      "mn_Cyrl": MnCyrlCountriesL10N.new,
+    if (!_hasAnyLocaleFilter || const bool.fromEnvironment("l10n-mr"))
+      "mr": MrCountriesL10N.new,
+    if (!_hasAnyLocaleFilter || const bool.fromEnvironment("l10n-ms"))
+      "ms": MsCountriesL10N.new,
+    if (!_hasAnyLocaleFilter || const bool.fromEnvironment("l10n-ms_latn"))
+      "ms_Latn": MsLatnCountriesL10N.new,
+    if (!_hasAnyLocaleFilter || const bool.fromEnvironment("l10n-mt"))
+      "mt": MtCountriesL10N.new,
+    if (!_hasAnyLocaleFilter || const bool.fromEnvironment("l10n-my"))
+      "my": MyCountriesL10N.new,
+    if (!_hasAnyLocaleFilter || const bool.fromEnvironment("l10n-na"))
+      "na": NaCountriesL10N.new,
+    if (!_hasAnyLocaleFilter || const bool.fromEnvironment("l10n-nb"))
+      "nb": NbCountriesL10N.new,
+    if (!_hasAnyLocaleFilter || const bool.fromEnvironment("l10n-nd"))
+      "nd": NdCountriesL10N.new,
+    if (!_hasAnyLocaleFilter || const bool.fromEnvironment("l10n-ne"))
+      "ne": NeCountriesL10N.new,
+    if (!_hasAnyLocaleFilter || const bool.fromEnvironment("l10n-nl"))
+      "nl": NlCountriesL10N.new,
+    if (!_hasAnyLocaleFilter || const bool.fromEnvironment("l10n-nn"))
+      "nn": NnCountriesL10N.new,
+    if (!_hasAnyLocaleFilter || const bool.fromEnvironment("l10n-no"))
+      "no": NoCountriesL10N.new,
+    if (!_hasAnyLocaleFilter || const bool.fromEnvironment("l10n-nv"))
+      "nv": NvCountriesL10N.new,
+    if (!_hasAnyLocaleFilter || const bool.fromEnvironment("l10n-ny"))
+      "ny": NyCountriesL10N.new,
+    if (!_hasAnyLocaleFilter || const bool.fromEnvironment("l10n-oc"))
+      "oc": OcCountriesL10N.new,
+    if (!_hasAnyLocaleFilter || const bool.fromEnvironment("l10n-om"))
+      "om": OmCountriesL10N.new,
+    if (!_hasAnyLocaleFilter || const bool.fromEnvironment("l10n-or"))
+      "or": OrCountriesL10N.new,
+    if (!_hasAnyLocaleFilter || const bool.fromEnvironment("l10n-os"))
+      "os": OsCountriesL10N.new,
+    if (!_hasAnyLocaleFilter || const bool.fromEnvironment("l10n-pa"))
+      "pa": PaCountriesL10N.new,
+    if (!_hasAnyLocaleFilter || const bool.fromEnvironment("l10n-pa_arab"))
+      "pa_Arab": PaArabCountriesL10N.new,
+    if (!_hasAnyLocaleFilter || const bool.fromEnvironment("l10n-pi"))
+      "pi": PiCountriesL10N.new,
+    if (!_hasAnyLocaleFilter || const bool.fromEnvironment("l10n-pl"))
+      "pl": PlCountriesL10N.new,
+    if (!_hasAnyLocaleFilter || const bool.fromEnvironment("l10n-ps"))
+      "ps": PsCountriesL10N.new,
+    if (!_hasAnyLocaleFilter || const bool.fromEnvironment("l10n-ps_pk"))
+      "ps_PK": PsPkCountriesL10N.new,
+    if (!_hasAnyLocaleFilter || const bool.fromEnvironment("l10n-pt"))
+      "pt": PtCountriesL10N.new,
+    if (!_hasAnyLocaleFilter || const bool.fromEnvironment("l10n-qu"))
+      "qu": QuCountriesL10N.new,
+    if (!_hasAnyLocaleFilter || const bool.fromEnvironment("l10n-rm"))
+      "rm": RmCountriesL10N.new,
+    if (!_hasAnyLocaleFilter || const bool.fromEnvironment("l10n-rn"))
+      "rn": RnCountriesL10N.new,
+    if (!_hasAnyLocaleFilter || const bool.fromEnvironment("l10n-ro"))
+      "ro": RoCountriesL10N.new,
+    if (!_hasAnyLocaleFilter || const bool.fromEnvironment("l10n-ro_md"))
+      "ro_MD": RoMdCountriesL10N.new,
+    if (!_hasAnyLocaleFilter || const bool.fromEnvironment("l10n-ru"))
+      "ru": RuCountriesL10N.new,
+    if (!_hasAnyLocaleFilter || const bool.fromEnvironment("l10n-rw"))
+      "rw": RwCountriesL10N.new,
+    if (!_hasAnyLocaleFilter || const bool.fromEnvironment("l10n-sa"))
+      "sa": SaCountriesL10N.new,
+    if (!_hasAnyLocaleFilter || const bool.fromEnvironment("l10n-sc"))
+      "sc": ScCountriesL10N.new,
+    if (!_hasAnyLocaleFilter || const bool.fromEnvironment("l10n-sd"))
+      "sd": SdCountriesL10N.new,
+    if (!_hasAnyLocaleFilter || const bool.fromEnvironment("l10n-se"))
+      "se": SeCountriesL10N.new,
+    if (!_hasAnyLocaleFilter || const bool.fromEnvironment("l10n-se_fi"))
+      "se_FI": SeFiCountriesL10N.new,
+    if (!_hasAnyLocaleFilter || const bool.fromEnvironment("l10n-sg"))
+      "sg": SgCountriesL10N.new,
+    if (!_hasAnyLocaleFilter || const bool.fromEnvironment("l10n-si"))
+      "si": SiCountriesL10N.new,
+    if (!_hasAnyLocaleFilter || const bool.fromEnvironment("l10n-sk"))
+      "sk": SkCountriesL10N.new,
+    if (!_hasAnyLocaleFilter || const bool.fromEnvironment("l10n-sl"))
+      "sl": SlCountriesL10N.new,
+    if (!_hasAnyLocaleFilter || const bool.fromEnvironment("l10n-sm"))
+      "sm": SmCountriesL10N.new,
+    if (!_hasAnyLocaleFilter || const bool.fromEnvironment("l10n-sn"))
+      "sn": SnCountriesL10N.new,
+    if (!_hasAnyLocaleFilter || const bool.fromEnvironment("l10n-so"))
+      "so": SoCountriesL10N.new,
+    if (!_hasAnyLocaleFilter || const bool.fromEnvironment("l10n-sq"))
+      "sq": SqCountriesL10N.new,
+    if (!_hasAnyLocaleFilter || const bool.fromEnvironment("l10n-sr"))
+      "sr": SrCountriesL10N.new,
+    if (!_hasAnyLocaleFilter || const bool.fromEnvironment("l10n-ss"))
+      "ss": SsCountriesL10N.new,
+    if (!_hasAnyLocaleFilter || const bool.fromEnvironment("l10n-st"))
+      "st": StCountriesL10N.new,
+    if (!_hasAnyLocaleFilter || const bool.fromEnvironment("l10n-su"))
+      "su": SuCountriesL10N.new,
+    if (!_hasAnyLocaleFilter || const bool.fromEnvironment("l10n-sv"))
+      "sv": SvCountriesL10N.new,
+    if (!_hasAnyLocaleFilter || const bool.fromEnvironment("l10n-sw"))
+      "sw": SwCountriesL10N.new,
+    if (!_hasAnyLocaleFilter || const bool.fromEnvironment("l10n-sw_cd"))
+      "sw_CD": SwCdCountriesL10N.new,
+    if (!_hasAnyLocaleFilter || const bool.fromEnvironment("l10n-sw_ke"))
+      "sw_KE": SwKeCountriesL10N.new,
+    if (!_hasAnyLocaleFilter || const bool.fromEnvironment("l10n-ta"))
+      "ta": TaCountriesL10N.new,
+    if (!_hasAnyLocaleFilter || const bool.fromEnvironment("l10n-te"))
+      "te": TeCountriesL10N.new,
+    if (!_hasAnyLocaleFilter || const bool.fromEnvironment("l10n-tg"))
+      "tg": TgCountriesL10N.new,
+    if (!_hasAnyLocaleFilter || const bool.fromEnvironment("l10n-th"))
+      "th": ThCountriesL10N.new,
+    if (!_hasAnyLocaleFilter || const bool.fromEnvironment("l10n-ti"))
+      "ti": TiCountriesL10N.new,
+    if (!_hasAnyLocaleFilter || const bool.fromEnvironment("l10n-tk"))
+      "tk": TkCountriesL10N.new,
+    if (!_hasAnyLocaleFilter || const bool.fromEnvironment("l10n-tl"))
+      "tl": TlCountriesL10N.new,
+    if (!_hasAnyLocaleFilter || const bool.fromEnvironment("l10n-tn"))
+      "tn": TnCountriesL10N.new,
+    if (!_hasAnyLocaleFilter || const bool.fromEnvironment("l10n-to"))
+      "to": ToCountriesL10N.new,
+    if (!_hasAnyLocaleFilter || const bool.fromEnvironment("l10n-tr"))
+      "tr": TrCountriesL10N.new,
+    if (!_hasAnyLocaleFilter || const bool.fromEnvironment("l10n-ts"))
+      "ts": TsCountriesL10N.new,
+    if (!_hasAnyLocaleFilter || const bool.fromEnvironment("l10n-tt"))
+      "tt": TtCountriesL10N.new,
+    if (!_hasAnyLocaleFilter || const bool.fromEnvironment("l10n-tw"))
+      "tw": TwCountriesL10N.new,
+    if (!_hasAnyLocaleFilter || const bool.fromEnvironment("l10n-ty"))
+      "ty": TyCountriesL10N.new,
+    if (!_hasAnyLocaleFilter || const bool.fromEnvironment("l10n-ug"))
+      "ug": UgCountriesL10N.new,
+    if (!_hasAnyLocaleFilter || const bool.fromEnvironment("l10n-ug_arab"))
+      "ug_Arab": UgArabCountriesL10N.new,
+    if (!_hasAnyLocaleFilter || const bool.fromEnvironment("l10n-uk"))
+      "uk": UkCountriesL10N.new,
+    if (!_hasAnyLocaleFilter || const bool.fromEnvironment("l10n-ur"))
+      "ur": UrCountriesL10N.new,
+    if (!_hasAnyLocaleFilter || const bool.fromEnvironment("l10n-uz"))
+      "uz": UzCountriesL10N.new,
+    if (!_hasAnyLocaleFilter || const bool.fromEnvironment("l10n-uz_cyrl"))
+      "uz_Cyrl": UzCyrlCountriesL10N.new,
+    if (!_hasAnyLocaleFilter || const bool.fromEnvironment("l10n-ve"))
+      "ve": VeCountriesL10N.new,
+    if (!_hasAnyLocaleFilter || const bool.fromEnvironment("l10n-vi"))
+      "vi": ViCountriesL10N.new,
+    if (!_hasAnyLocaleFilter || const bool.fromEnvironment("l10n-vo"))
+      "vo": VoCountriesL10N.new,
+    if (!_hasAnyLocaleFilter || const bool.fromEnvironment("l10n-wa"))
+      "wa": WaCountriesL10N.new,
+    if (!_hasAnyLocaleFilter || const bool.fromEnvironment("l10n-wo"))
+      "wo": WoCountriesL10N.new,
+    if (!_hasAnyLocaleFilter || const bool.fromEnvironment("l10n-xh"))
+      "xh": XhCountriesL10N.new,
+    if (!_hasAnyLocaleFilter || const bool.fromEnvironment("l10n-yi"))
+      "yi": YiCountriesL10N.new,
+    if (!_hasAnyLocaleFilter || const bool.fromEnvironment("l10n-yo"))
+      "yo": YoCountriesL10N.new,
+    if (!_hasAnyLocaleFilter || const bool.fromEnvironment("l10n-yo_bj"))
+      "yo_BJ": YoBjCountriesL10N.new,
+    if (!_hasAnyLocaleFilter || const bool.fromEnvironment("l10n-za"))
+      "za": ZaCountriesL10N.new,
+    if (!_hasAnyLocaleFilter || const bool.fromEnvironment("l10n-zh"))
+      "zh": ZhCountriesL10N.new,
+    if (!_hasAnyLocaleFilter || const bool.fromEnvironment("l10n-zu"))
+      "zu": ZuCountriesL10N.new,
+  };
+
+  static final _localeSplitRegExp = RegExp("[-_]");
+  static final _langSubtagRegExp = RegExp(r"^[a-z]{2,3}$|^[a-z]{5,8}$");
 
   /// Localizes a set of ISO codes into names (to specified locale if needed).
   ///
@@ -633,22 +1041,41 @@ class CountriesLocaleMapper extends IsoLocaleMapper<IsoLocaleMapper<String>> {
     bool useLanguageFallback = true,
     String Function(LocaleKey isoLocale, String l10n)? formatter,
   }) {
+    assert(
+      !_isConsumed,
+      "A CountriesLocaleMapper was used after being consumed. "
+      "Once localize() is called, the mapper clears its internal data to free "
+      "memory and must not be reused. If you need to call localize() again, "
+      "create a new CountriesLocaleMapper instance.",
+    );
+
     if (isoCodes.isEmpty) return const {};
     final locale = mainLocale?.toString();
     final altLocale = fallbackLocale?.toString();
+    Set<String>? localeKeys;
+    if (locale != null) {
+      localeKeys = _localesSet(
+        locale,
+        useLanguageFallback: useLanguageFallback,
+      );
+    }
 
-    final localeData = extract(
-      locale == null
-          ? null
-          : {
-              ..._localesSet(locale, useLanguageFallback: useLanguageFallback),
-              if (altLocale != null)
-                ..._localesSet(
-                  altLocale,
-                  useLanguageFallback: useLanguageFallback,
-                ),
-            },
-    );
+    if (altLocale != null) {
+      final fallbackKeys = _localesSet(
+        altLocale,
+        useLanguageFallback: useLanguageFallback,
+      );
+      localeKeys = {...?localeKeys, ...fallbackKeys};
+    }
+
+    if (localeKeys != null) {
+      for (final key in localeKeys) {
+        if (map.containsKey(key)) continue;
+        final maybeFactory = _factories[key];
+        if (maybeFactory != null) map[key] = maybeFactory();
+      }
+    }
+    final localeData = extract(localeKeys);
 
     return switch (localeData.length) {
       0 => const {},
@@ -662,8 +1089,6 @@ class CountriesLocaleMapper extends IsoLocaleMapper<IsoLocaleMapper<String>> {
     };
   }
 
-  static final _langSubtagRegExp = RegExp(r"^[a-z]{2,3}$|^[a-z]{5,8}$");
-
   static Set<String> _localesSet(
     String locale, {
     required bool useLanguageFallback,
@@ -671,7 +1096,7 @@ class CountriesLocaleMapper extends IsoLocaleMapper<IsoLocaleMapper<String>> {
 
   static String _extractLanguageCode(String locale) {
     if (locale.isEmpty) return locale;
-    final lang = locale.toLowerCase().split(RegExp("[-_]")).firstOrNull;
+    final lang = locale.toLowerCase().split(_localeSplitRegExp).firstOrNull;
 
     return lang != null && _langSubtagRegExp.hasMatch(lang) ? lang : locale;
   }
@@ -701,6 +1126,7 @@ class CountriesLocaleMapper extends IsoLocaleMapper<IsoLocaleMapper<String>> {
         );
     localeEntry.value.map.clear();
     map.clear();
+    _isConsumed = true;
 
     return LocaleMap.unmodifiable(results);
   }
@@ -745,6 +1171,7 @@ class CountriesLocaleMapper extends IsoLocaleMapper<IsoLocaleMapper<String>> {
       localeEntry.value.map.clear();
     }
     map.clear();
+    _isConsumed = true;
 
     return LocaleMap.unmodifiable(results);
   }

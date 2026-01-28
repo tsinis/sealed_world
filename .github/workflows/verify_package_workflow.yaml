@@ -116,7 +116,7 @@ jobs:
 
       - name: 🧪 Run Dart tests
         if: ${{ !inputs.is_flutter }}
-        run: dart run coverage:test_with_coverage --fail-under=99
+        run: dart run coverage:test_with_coverage --fail-under=40
 
       - name: 🔬 Run Flutter tests
         if: ${{ inputs.is_flutter }}
@@ -138,7 +138,6 @@ jobs:
 
       - name: 📊 Check code coverage
         uses: VeryGoodOpenSource/very_good_coverage@v3.0.0
-        if: ${{ inputs.is_flutter }}
         with:
           path: ${{ env.relative_path }}/coverage/lcov.info
           exclude: "**/*.data.dart **/*.l10n.dart"
