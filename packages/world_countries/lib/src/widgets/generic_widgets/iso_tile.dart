@@ -118,10 +118,12 @@ class IsoTile<T extends IsoTranslated> extends ListItemTile<T> {
          isChosen: iso.isChosen,
          isDisabled: iso.isDisabled,
          semanticsIdentifier: iso.item.semanticIdentifier,
-         leading: MaybeWidget.orNull(
-           flagTheme,
-           (theme) => leadingFlag?.copyWithTheme(theme: theme),
-         ),
+         leading:
+             MaybeWidget.orNull(
+               flagTheme,
+               (theme) => leadingFlag?.copyWithTheme(theme: theme),
+             ) ??
+             Text(iso.item.code),
          title: title,
          subtitle:
              subtitle ??
