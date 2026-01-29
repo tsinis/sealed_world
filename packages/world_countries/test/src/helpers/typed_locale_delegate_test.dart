@@ -2,7 +2,6 @@
 
 import "dart:ui";
 
-import "package:_sealed_world_tests/sealed_world_tests.dart";
 import "package:flutter_test/flutter_test.dart";
 import "package:world_countries/src/helpers/typed_locale_delegate.dart";
 import "package:world_countries/src/models/iso/iso_collections.dart";
@@ -186,17 +185,20 @@ void main() => group("$TypedLocaleDelegate", () {
       ),
     );
 
-    assertTest(
-      "throws assertion error on unsupported locale",
-      () async => delegate.load(const Locale("00")),
-    );
+    test("falls back to default language on unsupported locale", () async {
+      expect(delegate.toString(), contains("LangEng()"));
+      expect(
+        await delegate.load(const Locale("00")),
+        const TypedLocale(english),
+      );
+    });
 
-    test("throws no assertion errors if fallbackLanguage specified", () async {
-      const fallbackDelegate = TypedLocaleDelegate(fallbackLanguage: english);
-      expect(fallbackDelegate.toString(), contains("LangEng()"));
+    test("uses custom fallbackLanguage when provided", () async {
+      const fallbackDelegate = TypedLocaleDelegate(fallbackLanguage: LangDeu());
+
       expect(
         await fallbackDelegate.load(const Locale("00")),
-        const TypedLocale(english),
+        const TypedLocale(LangDeu()),
       );
     });
 

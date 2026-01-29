@@ -17,6 +17,8 @@ NEW FEATURES
 
 BREAKING CHANGES (in underlying Dart packages)
 
+- Items in pickers are sorted alphabetically by default, based on the current locale.
+- `TypedLocaleDelegate` now has a non-null `fallbackLanguage` parameter.
 - L10N values and `namesNative` are now provided in sentence case.
 - `JsonObjectMap` - no longer nullable.
 - `List<TranslatedName> get translations` was removed (was previously deprecated), refer to `.l10n.translatedNames({this})` instead.
@@ -40,6 +42,9 @@ See [MIGRATION_GUIDES.md](MIGRATION_GUIDES.md) for migration guide.
 
 REFACTOR
 
+- Translation cache builders now receive the delegate's fallback language so
+  that missing translations reuse the configured language instead of producing
+  empty maps.
 - `CountryTile`, `CurrencyTile`, `LanguageTile` are now typedefs of `IsoTile<T>`.
 - Stricter return types for `defaultBuilder` methods.
 

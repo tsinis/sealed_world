@@ -6,6 +6,7 @@ This document lists all the breaking changes in v4 of the `world_countries` pack
 
 - [Generic Type Arguments](#generic-type-arguments)
 - [Theme and Tile Builders](#theme-and-tile-builders)
+- [fallbackLanguage Is No Longer Nullable](#fallbacklanguage-is-no-longer-nullable)
 - [TypedLocaleDelegate and IsoCollections](#typedlocaledelegate-and-isocollections)
 - [TypedLocale and IsoMaps](#typedlocale-and-isomaps)
 - [Extensions](#extensions)
@@ -117,6 +118,37 @@ TypedLocaleDelegate(
     countriesForTranslationCache: [CountryUsa()],
   ),
 )
+```
+
+### fallbackLanguage Is No Longer Nullable
+
+The `fallbackLanguage` parameter on `TypedLocaleDelegate` now always resolves
+to a concrete language. `LangEng()` remains the default, but passing `null`
+is no longer supported.
+
+**Reasoning:**
+
+Guaranteeing a fallback language allows the delegate to emit deterministic
+`TypedLocale` instances for unsupported locales and ensures translation caches
+populate strings instead of returning empty maps.
+
+**Migration Guide:**
+
+1. Remove any `null` argument previously supplied to `fallbackLanguage`.
+2. Supply an explicit language when you need a different default experience.
+3. Handle opt-out scenarios in your own logic instead of relying on a `null`
+   fallback.
+
+**Before:**
+
+```dart
+const delegate = TypedLocaleDelegate(fallbackLanguage: null);
+```
+
+**After:**
+
+```dart
+const delegate = TypedLocaleDelegate(fallbackLanguage: LangDeu());
 ```
 
 ---
