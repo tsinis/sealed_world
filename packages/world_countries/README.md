@@ -303,7 +303,7 @@ This package includes an automated benchmark system that runs on every release t
 > [!TIP]
 > These artifacts are attached to [GitHub Releases](https://github.com/tsinis/sealed_world/releases) and committed to the repository, enabling historical comparison and transparent performance tracking across versions. The benchmark flow uses **low-end physical ARM64 Android** devices with Flashlight + Maestro for reproducible, device-driven testing.
 
-To run benchmarks locally or learn more about the system, see the [benchmarks documentation](example/benchmarks/README.md). All benchmark data is immutable and versioned, ensuring full auditability and regression traceability.
+To run benchmarks locally or learn more about the system, see the [benchmarks documentation](example/benchmarks/README.md). Execute the shared CLI via `dart run tools/bin/benchmarks.dart world_countries` (or `cd tools && dart run :benchmarks world_countries`). All benchmark data is immutable and versioned, ensuring full auditability and regression traceability.
 
 #### Why should I use this package over any other country/currency/language picker package?
 

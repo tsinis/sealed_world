@@ -63,11 +63,19 @@ Prerequisites:
 - Physical **low-end Android ARM64** device (USB debugging enabled).
 - No interfering background processes (close heavy apps).
 
-Command (inside `world_countries` root):
+Command (from repository root):
 
 ```shell
-cd example && dart run
+dart run tools/bin/benchmarks.dart world_countries
 ```
+
+Or run inside the CLI package:
+
+```shell
+cd tools && dart run :benchmarks world_countries
+```
+
+Use `dart run tools/bin/benchmarks.dart --help` for additional flags (custom bundle IDs, alternate APK names, dry runs, verbose logging, etc.).
 
 Outputs appear in:
 
