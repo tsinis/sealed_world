@@ -10,6 +10,36 @@ NEW FEATURES
 - New `namesCommonNative` method on ISO (`IsoTranslated`) classes, returning the native name for the given locale as a single string.
 - Enhanced locale parsing to support three-letter codes.
 
+BREAKING CHANGES
+
+- **Moon shape API change**: The `Moon` class now uses `offsetDx` and `offsetDy` parameters instead of `Offset offset` to enable `@pragma("vm:deeply-immutable")` optimization.
+
+**Migration Guide:**
+
+If you're using the `Moon` shape directly in your code:
+
+```dart
+// Before
+const moon = Moon(radius: 0.8, offset: Offset(0.25, 0));
+
+// After
+const moon = Moon(radius: 0.8, offsetDx: 0.25, offsetDy: 0);
+```
+
+If you're accessing the offset field:
+
+```dart
+// Before
+final offsetX = moon.offset.dx;
+final offsetY = moon.offset.dy;
+
+// After
+final offsetX = moon.offsetDx;
+final offsetY = moon.offsetDy;
+```
+
+This change improves performance by allowing the Dart VM to optimize `Moon` instances as deeply immutable, which was previously blocked by the `Offset` type (from the `dart:ui` library).
+
 BREAKING CHANGES (in underlying Dart packages)
 
 - L10N values and `namesNative` are now provided in sentence case.

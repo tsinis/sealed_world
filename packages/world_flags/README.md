@@ -135,6 +135,9 @@ class _MainState extends State<Main> {
 }
 ```
 
+> [!TIP]
+> And because these flags are based on `CustomPainter`, you can easily modify their appearance using shaders! The package offers high-level interfaces for static and animated shaders, as well as a low-level API.
+
 For more usage examples, please see the `/example` folder.
 
 ### Demo
