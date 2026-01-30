@@ -130,6 +130,20 @@ To preview flag modifications you can also visit [this web page](https://tsin.is
 For more information on using this package, check out the API documentation.
 If you have any issues or suggestions for the package, please file them in the GitHub repository. **PRs or ideas are always welcome**. If you like this package, please give it a star or like.
 
+### Benchmarks
+
+Review the benchmark pipeline details and artifact locations in [packages/world_flags/example/benchmarks/README.md](packages/world_flags/example/benchmarks/README.md). Run the automated flow from the repository root with:
+
+```sh
+dart run tools/bin/benchmarks.dart world_flags
+```
+
+Or run the shared CLI from the tools package:
+
+```sh
+cd tools && dart run :benchmarks world_flags
+```
+
 ### References and credits
 
 This package is licensed under the MIT license (see [LICENSE](./LICENSE) for details). Its dependencies are under their respective licenses, which can be found in the corresponding `LICENSE` and `NOTICE` files.

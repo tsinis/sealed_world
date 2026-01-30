@@ -1,0 +1,14 @@
+# For local usage connect your Android device and run:
+# `dart run tools/bin/benchmarks.dart world_flags`
+appId: com.example.world_flags_example
+---
+- tapOn:
+    point: "50%,10%"
+- waitForAnimationToEnd:
+    timeout: 1000
+- repeat:
+    times: 4
+    commands:
+      - swipe:
+          start: "50%,85%"
+          end: "50%,15%"

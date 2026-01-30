@@ -1,0 +1,5 @@
+appId: com.example.world_flags_example
+---
+- launchApp
+- waitForAnimationToEnd:
+    timeout: 2000

@@ -1,11 +1,15 @@
 import "benchmark_config.dart";
 
 /// Provides predefined benchmark configurations for known examples.
-abstract final class BenchmarkRegistry {
-  static final _configs = <String, BenchmarkConfig>{
-    "world_countries": const BenchmarkConfig(
+sealed class BenchmarkRegistry {
+  static const _configs = <String, BenchmarkConfig>{
+    "world_countries": BenchmarkConfig(
       examplePath: "packages/world_countries/example",
       bundleId: "world.countries.world_countries_example",
+    ),
+    "world_flags": BenchmarkConfig(
+      examplePath: "packages/world_flags/example",
+      bundleId: "com.example.world_flags_example",
     ),
   };
 
