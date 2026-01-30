@@ -151,7 +151,7 @@ If you have any issues or suggestions for the package, please file them in the G
 
 ### Benchmarks
 
-Review the benchmark pipeline details and artifact locations in [packages/world_flags/example/benchmarks/README.md](packages/world_flags/example/benchmarks/README.md). Run the automated flow from the repository root with:
+Review the benchmark pipeline details and artifact locations in [example/benchmarks/README.md](./example/benchmarks/README.md). Run the automated flow from the repository root with:
 
 ```sh
 dart run tools/bin/benchmarks.dart world_flags
