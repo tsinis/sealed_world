@@ -316,7 +316,7 @@
       },
       {
         "type": "shell",
-        "command": "flutter test --coverage",
+        "command": "flutter test --coverage --no-pub",
         "label": "Flutter Test"
       },
       {

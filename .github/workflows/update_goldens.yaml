@@ -36,7 +36,7 @@ jobs:
 
       - name: ️🧪 Update golden tests
         working-directory: packages/world_flags
-        run: flutter test --update-goldens
+        run: flutter test --update-goldens --no-pub
 
       - name: 🚀 Commit updated golden files
         uses: stefanzweifel/git-auto-commit-action@v7.1.0
