@@ -2,7 +2,7 @@
 
 import "package:flutter/material.dart";
 import "package:flutter_test/flutter_test.dart";
-import "package:world_countries/src/models/typedefs.dart";
+import "package:world_countries/src/model/typedefs.dart";
 import "package:world_countries/src/theme/tile_theme_data/country_tile_theme_data.dart";
 import "package:world_countries/src/widgets/country/country_picker.dart";
 import "package:world_countries/src/widgets/phone_code/phone_code_picker.dart";

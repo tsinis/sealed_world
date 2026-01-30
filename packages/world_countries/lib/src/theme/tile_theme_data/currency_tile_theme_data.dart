@@ -1,6 +1,6 @@
 import "package:world_flags/world_flags.dart";
 
-import "../../models/item_properties.dart" show ItemProperties;
+import "../../model/item_properties.dart" show ItemProperties;
 import "base_tile_theme_data.dart";
 
 /// A theme extension data class that holds theme data for currency tiles.

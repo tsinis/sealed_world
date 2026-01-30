@@ -4,8 +4,8 @@ import "dart:ui";
 import "package:_sealed_world_tests/sealed_world_tests.dart";
 import "package:flutter_test/flutter_test.dart";
 import "package:world_countries/src/extensions/models/typed_locale_extension.dart";
-import "package:world_countries/src/models/iso/iso_maps.dart";
-import "package:world_countries/src/models/locale/typed_locale.dart";
+import "package:world_countries/src/model/iso/iso_maps.dart";
+import "package:world_countries/src/model/locale/typed_locale.dart";
 import "package:world_flags/world_flags.dart";
 
 void main() => group("$TypedLocale", () {

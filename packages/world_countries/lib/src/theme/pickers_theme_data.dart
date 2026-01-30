@@ -5,7 +5,7 @@ import "package:meta/meta.dart" show useResult;
 import "../constants/ui_constants.dart";
 import "../interfaces/basic_picker_interface.dart";
 import "../interfaces/indexed_list_view_interface.dart";
-import "../models/iso/iso_maps.dart";
+import "../model/iso/iso_maps.dart";
 
 /// Holds the theme data for pickers.
 ///

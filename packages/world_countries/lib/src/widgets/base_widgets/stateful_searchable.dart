@@ -1,8 +1,8 @@
 import "package:flutter/widgets.dart";
 
 import "../../interfaces/searchable_interface.dart";
-import "../../models/search_data.dart";
-import "../../models/typedefs.dart";
+import "../../model/search_data.dart";
+import "../../model/typedefs.dart";
 
 /// An abstract stateful widget that provides search functionality.
 abstract class StatefulSearchable<T extends Object> extends StatefulWidget

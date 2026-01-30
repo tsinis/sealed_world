@@ -6,7 +6,7 @@ import "package:flutter/material.dart";
 import "package:flutter_test/flutter_test.dart";
 import "package:world_countries/src/constants/ui_constants.dart";
 import "package:world_countries/src/helpers/typed_locale_delegate.dart";
-import "package:world_countries/src/models/locale/typed_locale.dart";
+import "package:world_countries/src/model/locale/typed_locale.dart";
 import "package:world_countries/src/theme/pickers_theme_data.dart";
 import "package:world_countries/src/widgets/buttons/clear_button.dart";
 import "package:world_countries/src/widgets/generic_widgets/iso_tile.dart";

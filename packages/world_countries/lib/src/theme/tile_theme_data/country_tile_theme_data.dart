@@ -1,6 +1,6 @@
 import "package:world_flags/world_flags.dart";
 
-import "../../models/item_properties.dart";
+import "../../model/item_properties.dart";
 import "base_tile_theme_data.dart";
 
 /// A theme extension data class that holds theme data for country/phone code

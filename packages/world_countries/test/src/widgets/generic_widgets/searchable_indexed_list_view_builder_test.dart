@@ -1,6 +1,6 @@
 import "package:flutter/material.dart";
 import "package:flutter_test/flutter_test.dart";
-import "package:world_countries/src/models/search_data.dart";
+import "package:world_countries/src/model/search_data.dart";
 import "package:world_countries/src/theme/pickers_theme_data.dart";
 import "package:world_countries/src/widgets/generic_widgets/indexed_list_view_builder.dart";
 import "package:world_countries/src/widgets/generic_widgets/search_list_listenable_builder.dart";

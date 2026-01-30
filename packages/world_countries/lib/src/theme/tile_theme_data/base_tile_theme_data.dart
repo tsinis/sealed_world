@@ -2,7 +2,7 @@ import "package:flutter/material.dart";
 import "package:meta/meta.dart" show useResult;
 import "package:world_flags/world_flags.dart";
 
-import "../../models/item_properties.dart";
+import "../../model/item_properties.dart";
 import "../../widgets/generic_widgets/iso_tile.dart";
 
 /// A theme extension data class that holds theme data for base tiles.

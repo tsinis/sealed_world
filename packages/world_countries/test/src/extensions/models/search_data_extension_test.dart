@@ -2,7 +2,7 @@ import "dart:collection" show UnmodifiableListView;
 
 import "package:flutter_test/flutter_test.dart";
 import "package:world_countries/src/extensions/models/search_data_extension.dart";
-import "package:world_countries/src/models/search_data.dart";
+import "package:world_countries/src/model/search_data.dart";
 
 void main() => group("SearchDataExtension", () {
   group("anyName", () {

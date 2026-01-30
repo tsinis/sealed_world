@@ -1,7 +1,7 @@
 import "package:flutter/foundation.dart";
 import "package:flutter/widgets.dart" show BuildContext, Widget;
 
-import "../models/item_properties.dart";
+import "../model/item_properties.dart";
 import "../widgets/base_widgets/stateful_indexed_list_view.dart";
 
 /// A mixin that provides methods for converting items into [ItemProperties].

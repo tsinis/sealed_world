@@ -4,8 +4,8 @@ import "dart:ui";
 
 import "package:flutter_test/flutter_test.dart";
 import "package:world_countries/src/helpers/typed_locale_delegate.dart";
-import "package:world_countries/src/models/iso/iso_collections.dart";
-import "package:world_countries/src/models/locale/typed_locale.dart";
+import "package:world_countries/src/model/iso/iso_collections.dart";
+import "package:world_countries/src/model/locale/typed_locale.dart";
 import "package:world_flags/world_flags.dart";
 
 import "../../helpers/widget_tester_extension.dart";

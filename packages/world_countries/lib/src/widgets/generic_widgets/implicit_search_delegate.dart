@@ -6,7 +6,7 @@ import "../../extensions/build_context_extension.dart";
 import "../../extensions/iterable_search_map_extension.dart";
 import "../../interfaces/search_delegate_interface.dart";
 import "../../mixins/compare_search_mixin.dart";
-import "../../models/search_data.dart";
+import "../../model/search_data.dart";
 import "../buttons/clear_button.dart";
 
 /// An implementation of [SearchDelegateInterface] that uses the `compare`

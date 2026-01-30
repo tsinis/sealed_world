@@ -6,7 +6,7 @@ import "package:flutter/widgets.dart";
 
 import "../../extensions/iterable_search_map_extension.dart";
 import "../../mixins/compare_search_mixin.dart";
-import "../../models/typedefs.dart";
+import "../../model/typedefs.dart";
 import "../base_widgets/stateful_searchable.dart";
 
 /// A stateful searchable widget that builds a list view based on a list of

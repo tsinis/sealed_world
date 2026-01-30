@@ -1,8 +1,8 @@
 import "package:flutter/material.dart";
 import "package:meta/meta.dart" show internal, useResult;
 
-import "../models/search_data.dart";
-import "../models/typedefs.dart";
+import "../model/search_data.dart";
+import "../model/typedefs.dart";
 
 /// Extension on [Iterable] that provides functionality for creating search maps
 /// and finding search results.
