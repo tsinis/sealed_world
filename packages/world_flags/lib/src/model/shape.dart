@@ -89,7 +89,7 @@ final class Moon implements Shape {
   final double radius;
 
   /// Relative X and Y positions of the second circle.
-  final Offset offset;
+  final Offset offset; // Blocking @pragma("vm:deeply-immutable") usage.
 }
 
 /// A class representing a diagonal line shape.
