@@ -1,7 +1,6 @@
 import "package:sealed_languages/sealed_languages.dart" show Named;
 
-/// A class representing a currency. This is an abstract class and should not be
-/// instantiated directly.
+/// A class representing a currency.
 ///
 /// The [code], [decimalMark], [name], and [thousandsSeparator] parameters are
 /// required. The [symbol] parameter is optional.
