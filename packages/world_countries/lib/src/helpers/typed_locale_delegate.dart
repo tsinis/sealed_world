@@ -16,7 +16,8 @@ import "../models/typedefs.dart";
 ///
 /// The [TypedLocaleDelegate] class has the following properties:
 /// - [fallbackLanguage]: The fallback language to be used if the locale is not
-///   available.
+///   available. Defaults to [LangEng], ensuring the delegate always provides a
+///   deterministic language.
 /// - [IsoCollections]: Bundled ISO caches, locale remapping entries, and flag
 ///   mappings consumed during translation caching.
 ///
@@ -39,8 +40,9 @@ import "../models/typedefs.dart";
 class TypedLocaleDelegate implements LocalizationsDelegate<TypedLocale?> {
   /// Creates an instance of [TypedLocaleDelegate].
   ///
-  /// - [fallbackLanguage]: Optional default language when a locale cannot be
-  ///   resolved.
+  /// - [fallbackLanguage]: Default language when a locale cannot be resolved.
+  ///   Defaults to [LangEng] so that unsupported locales still produce a
+  ///   deterministic [TypedLocale].
   /// - [isoCollections]: Immutable bundle with translation caches, optional
   ///   locale remapping, and ISO flag mappings. See [IsoCollections]
   ///   for details.
@@ -56,9 +58,9 @@ class TypedLocaleDelegate implements LocalizationsDelegate<TypedLocale?> {
   ///   When provided, overrides the default alphabetical sorting. Useful for
   ///   locale-sensitive collation (e.g., handling diacritics properly).
   const TypedLocaleDelegate({
-    @mustBeConst this.fallbackLanguage,
+    this.fallbackLanguage = const LangEng(),
     bool asyncTranslationCacheProcessing = true,
-    @mustBeConst IsoCollections isoCollections = const IsoCollections(),
+    IsoCollections isoCollections = const IsoCollections(),
     L10NFormatter<TypedLocale, IsoTranslated>? l10nFormatter,
     L10nSorter<IsoTranslated>? l10nSorter,
     bool shouldReload = false,
@@ -75,8 +77,9 @@ class TypedLocaleDelegate implements LocalizationsDelegate<TypedLocale?> {
   /// case you can provide an [IsoCollections.selective] instance that contains
   /// only the caches you require.
   ///
-  /// - [fallbackLanguage]: Optional default language when a locale cannot be
-  ///   resolved.
+  /// - [fallbackLanguage]: Default language when a locale cannot be resolved.
+  ///   Defaults to [LangEng] so that unsupported locales still produce a
+  ///   deterministic [TypedLocale].
   /// - [isoCollections]: Immutable bundle with translation caches, locale
   ///   remapping, and optional ISO flag mappings. Use
   ///   [IsoCollections.selective] to keep caches empty.
@@ -90,9 +93,8 @@ class TypedLocaleDelegate implements LocalizationsDelegate<TypedLocale?> {
   ///   translations are rendered.
   /// - [l10nSorter]: Optional custom comparator for sorting translations.
   const TypedLocaleDelegate.selectiveCache({
-    @mustBeConst this.fallbackLanguage,
+    this.fallbackLanguage = const LangEng(),
     bool asyncTranslationCacheProcessing = true,
-    @mustBeConst
     IsoCollections isoCollections = const IsoCollections.selective(),
     L10NFormatter<TypedLocale, IsoTranslated>? l10nFormatter,
     L10nSorter<IsoTranslated>? l10nSorter,
@@ -127,7 +129,8 @@ class TypedLocaleDelegate implements LocalizationsDelegate<TypedLocale?> {
   ///
   /// If the locale cannot be converted, the fallback language will be used
   /// as a default (with attempt to create a [TypedLocale] out of it instead).
-  final NaturalLanguage? fallbackLanguage;
+  /// The language is always non-null.
+  final NaturalLanguage fallbackLanguage;
 
   final bool _asyncTranslationCacheProcessing;
   final bool _shouldReload;
@@ -169,6 +172,7 @@ class TypedLocaleDelegate implements LocalizationsDelegate<TypedLocale?> {
             countries: _isoCollections.countriesForTranslationCache,
             l10nFormatter: _l10nFormatter,
             l10nSorter: _l10nSorter,
+            fallback: fallbackLanguage,
           )
         : typedLocale?.copyWithTranslationsCache(
             languages: _isoCollections.languagesForTranslationCache,
@@ -176,6 +180,7 @@ class TypedLocaleDelegate implements LocalizationsDelegate<TypedLocale?> {
             countries: _isoCollections.countriesForTranslationCache,
             l10nFormatter: _l10nFormatter,
             l10nSorter: _l10nSorter,
+            fallback: fallbackLanguage,
           );
 
     return await translatedMaps?.copyWithFlagsCache(
@@ -191,7 +196,7 @@ class TypedLocaleDelegate implements LocalizationsDelegate<TypedLocale?> {
   @override
   String toString() =>
       "TypedLocaleDelegate("
-      """${fallbackLanguage == null ? '' : 'fallbackLanguage: ${fallbackLanguage.runtimeType}(), '}"""
+      """${'fallbackLanguage: ${fallbackLanguage.runtimeType}(), '}"""
       "asyncTranslationCacheProcessing: $_asyncTranslationCacheProcessing, "
       "shouldReload: $_shouldReload, isoCollections: $_isoCollections, "
       "l10nFormatter: ${_l10nFormatter.runtimeType},)";

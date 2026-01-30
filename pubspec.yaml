@@ -13,7 +13,7 @@ topics:
   - iso
 
 environment:
-  sdk: ^3.10.7
+  sdk: ^3.10.8
 
 workspace:
   - tools # Command-line tools for public packages.

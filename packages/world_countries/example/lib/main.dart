@@ -65,7 +65,7 @@ class _MainState extends State<Main> {
           localizationsDelegates: const [
             GlobalMaterialLocalizations.delegate,
             GlobalCupertinoLocalizations.delegate,
-            TypedLocaleDelegate(), // <- Add for pickers L10N & improved search.
+            TypedLocaleDelegate(), // ! Add for pickers L10N & improved search.
           ],
           supportedLocales: [
             ...const [

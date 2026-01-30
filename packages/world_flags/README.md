@@ -45,74 +45,93 @@ All you need is a compile-time [WorldCountry](https://github.com/tsinis/sealed_w
 ```dart
 import "package:flutter/material.dart";
 import "package:world_flags/world_flags.dart";
+import "cupertino_emoji_shader_delegate.dart";
 
-void main() => runApp(
-      MaterialApp(
-        home: const Main(),
-        theme: ThemeData(
-          /// Provide flag decorations globally.
-          extensions: const [
-            FlagThemeData(
-              decoration: BoxDecoration(
-                borderRadius: BorderRadius.all(Radius.circular(4)),
-              ),
-            ),
-          ],
-        ),
-      ),
-    );
+const isComplexExample = bool.fromEnvironment("isComplex");
+void main() async {
+  if (isComplexExample) {
+    WidgetsFlutterBinding.ensureInitialized();
+    await CupertinoEmojiShaderDelegate.warmUp();
+    await WavedFlagShaderDelegate.warmUp();
+  }
+  const extensions = [ // Custom flag theming.
+    FlagThemeData(decoration: BoxDecoration(borderRadius: .all(.circular(4)))),
+  ];
+
+  runApp(
+    MaterialApp(
+      home: const Main(isSimpleExample: !isComplexExample),
+      theme: ThemeData(extensions: extensions, brightness: Brightness.light),
+      darkTheme: ThemeData(extensions: extensions, brightness: Brightness.dark),
+    ),
+  );
+}
 
 class Main extends StatefulWidget {
-  const Main({super.key});
+  const Main({required this.isSimpleExample, super.key});
+
+  final bool isSimpleExample;
 
   @override
   State<Main> createState() => _MainState();
 }
 
 class _MainState extends State<Main> {
-  static const size = kMinInteractiveDimension / 2;
-  static const countries = WorldCountry.list;
+  static const _size = kMinInteractiveDimension / 2.0;
+  static const _items = <IsoTranslated, BasicFlag>{
+    ...smallSimplifiedFlagsMap,
+    ...smallSimplifiedCurrencyFlagsMap,
+    ...smallSimplifiedLanguageFlagsMap,
+  };
 
-  final _aspectRatio = ValueNotifier(FlagConstants.defaultAspectRatio);
+  final _shaderDelegate = CupertinoEmojiShaderDelegate(); // Custom shader flag.
+  late final _aspectRatio = ValueNotifier<double?>(
+    widget.isSimpleExample ? null : 7 / 5,
+  );
 
   @override
   void dispose() {
+    _shaderDelegate.dispose();
     _aspectRatio.dispose();
     super.dispose();
   }
 
   @override
-  Widget build(BuildContext context) => ColoredBox(
-        color: Theme.of(context).scaffoldBackgroundColor,
-        child: SafeArea(
-          minimum: const EdgeInsets.all(size / 2),
-          child: ValueListenableBuilder(
+  Widget build(BuildContext context) => Material(
+    color: Theme.of(context).scaffoldBackgroundColor,
+    child: ListView.separated(
+      itemBuilder: (bc, index) {
+        final item = _items.keys.elementAt(index);
+        final isSimplified = _items[item]?.properties.isSimplified ?? true;
+
+        return ListTile(
+          enabled: !isSimplified,
+          title: Text(item.internationalName),
+          subtitle: Text("${item.namesNative?.first}"),
+          onTap: () => FlagSettingsPage.show(_aspectRatio, bc, item),
+          trailing: ValueListenableBuilder(
             valueListenable: _aspectRatio,
-            builder: (_, aspectRatio, __) => Scaffold(
-              body: ListView.builder(
-                itemBuilder: (_, i) => ListTile(
-                  title: Text(countries[i].internationalName),
-                  trailing: CountryFlag.simplified(
-                    countries[i],
-                    height: size,
+            builder: (_, aspectRatio, flag) =>
+                widget.isSimpleExample && flag is IsoFlag
+                ? flag.copyWith(aspectRatio: aspectRatio)
+                : FlagShaderSurface( // Supported on every platform.
+                    item,
+                    height: _size,
                     aspectRatio: aspectRatio,
+                    shader: _shaderDelegate,
                   ),
-                ),
-                itemCount: countries.length,
-              ),
-              bottomNavigationBar: SizedBox(
-                height: size * 2,
-                child: Slider(
-                  value: aspectRatio,
-                  onChanged: (newRatio) => _aspectRatio.value = newRatio,
-                  min: FlagConstants.minAspectRatio,
-                  max: FlagConstants.maxAspectRatio,
-                ),
-              ),
-            ),
+            child: IsoFlag(item, _items, height: _size), // Or [CountryFlag].
           ),
-        ),
-      );
+        );
+      },
+      separatorBuilder: (bc, _) => Divider(
+        color: Theme.of(bc).disabledColor.withValues(alpha: 0.1),
+        height: 1,
+      ),
+      itemCount: _items.length,
+      clipBehavior: Clip.none,
+    ),
+  );
 }
 ```
 
@@ -129,6 +148,20 @@ To preview flag modifications you can also visit [this web page](https://tsin.is
 
 For more information on using this package, check out the API documentation.
 If you have any issues or suggestions for the package, please file them in the GitHub repository. **PRs or ideas are always welcome**. If you like this package, please give it a star or like.
+
+### Benchmarks
+
+Review the benchmark pipeline details and artifact locations in [example/benchmarks/README.md](./example/benchmarks/README.md). Run the automated flow from the repository root with:
+
+```sh
+dart run tools/bin/benchmarks.dart world_flags
+```
+
+Or run the shared CLI from the tools package:
+
+```sh
+cd tools && dart run :benchmarks world_flags
+```
 
 ### References and credits
 

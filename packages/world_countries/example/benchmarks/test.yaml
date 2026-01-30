@@ -1,4 +1,5 @@
-# For local usage connect your Android device and run: `cd example && dart run`
+# For local usage connect your Android device and run:
+# `dart run tools/bin/benchmarks.dart world_countries`
 appId: world.countries.world_countries_example
 ---
 - assertVisible: "search_icon"
@@ -8,7 +9,7 @@ appId: world.countries.world_countries_example
 - hideKeyboard
 - scrollUntilVisible:
     element:
-      id: "ISO-UNK"
+      id: "ISO-ZWE"
     speed: 90
     timeout: 30000
     waitToSettleTimeoutMs: 100

@@ -20,7 +20,7 @@ screenshots:
     path: doc/example.webp
 
 environment:
-  sdk: ^3.10.7
+  sdk: ^3.10.8
 
 dependencies:
   flutter:

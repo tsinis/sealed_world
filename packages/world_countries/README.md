@@ -37,7 +37,7 @@ This package provides the following ready-to-use widgets and classes:
 
 Or you can just create your own pickers by extending `BasicPicker`.
 
-- `TypedLocaleDelegate` - A locale delegate for automatic translation of pickers. Provides translations including (all [GlobalMaterialLocalizations](https://api.flutter.dev/flutter/flutter_localizations/GlobalMaterialLocalizations-class.html) and [GlobalCupertinoLocalizations](https://api.flutter.dev/flutter/flutter_localizations/GlobalCupertinoLocalizations-class.html) locales and more).
+- `TypedLocaleDelegate` - A locale delegate for automatic translation of pickers. Provides CLDR-like translations including (all [GlobalMaterialLocalizations](https://api.flutter.dev/flutter/flutter_localizations/GlobalMaterialLocalizations-class.html) and [GlobalCupertinoLocalizations](https://api.flutter.dev/flutter/flutter_localizations/GlobalCupertinoLocalizations-class.html) locales and more).
 
 - `PickersThemeData`, `FlagThemeData`, `CountryTileThemeData`, `CurrencyTileThemeData` and `LanguageTileThemeData` are [theme extensions](https://api.flutter.dev/flutter/material/ThemeExtension-class.html) that you can use in your `ThemeData` to specify global theme to your pickers, themes of your tiles (for example country flag adjustments or builders).
 
@@ -303,7 +303,7 @@ This package includes an automated benchmark system that runs on every release t
 > [!TIP]
 > These artifacts are attached to [GitHub Releases](https://github.com/tsinis/sealed_world/releases) and committed to the repository, enabling historical comparison and transparent performance tracking across versions. The benchmark flow uses **low-end physical ARM64 Android** devices with Flashlight + Maestro for reproducible, device-driven testing.
 
-To run benchmarks locally or learn more about the system, see the [benchmarks documentation](example/benchmarks/README.md). All benchmark data is immutable and versioned, ensuring full auditability and regression traceability.
+To run benchmarks locally or learn more about the system, see the [benchmarks documentation](example/benchmarks/README.md). Execute the shared CLI via `dart run tools/bin/benchmarks.dart world_countries` (or `cd tools && dart run :benchmarks world_countries`). All benchmark data is immutable and versioned, ensuring full auditability and regression traceability.
 
 #### Why should I use this package over any other country/currency/language picker package?
 

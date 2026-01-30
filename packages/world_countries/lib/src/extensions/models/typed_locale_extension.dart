@@ -120,13 +120,14 @@ extension TypedLocaleExtension on TypedLocale {
     Iterable<WorldCountry>? countries,
     L10NFormatter<TypedLocale, IsoTranslated>? l10nFormatter,
     L10nSorter<IsoTranslated>? l10nSorter,
+    NaturalLanguage? fallback,
   }) {
     final l10n = _itemsToTranslate(languages, currencies, countries);
 
     return _copyWithTranslationMaps(
-      _cache(l10n.languages, l10nFormatter, l10nSorter),
-      _cache(l10n.currencies, l10nFormatter, l10nSorter),
-      _cache(l10n.countries, l10nFormatter, l10nSorter),
+      _cache(l10n.languages, l10nFormatter, l10nSorter, fallback),
+      _cache(l10n.currencies, l10nFormatter, l10nSorter, fallback),
+      _cache(l10n.countries, l10nFormatter, l10nSorter, fallback),
     );
   }
 
@@ -143,22 +144,26 @@ extension TypedLocaleExtension on TypedLocale {
     Iterable<WorldCountry>? countries,
     L10NFormatter<TypedLocale, IsoTranslated>? l10nFormatter,
     L10nSorter<IsoTranslated>? l10nSorter,
+    NaturalLanguage? fallback,
   }) async {
     final l10n = _itemsToTranslate(languages, currencies, countries);
     final languageMap = await _cacheAsync(
       l10n.languages,
       l10nFormatter,
       l10nSorter,
+      fallback,
     );
     final currencyMap = await _cacheAsync(
       l10n.currencies,
       l10nFormatter,
       l10nSorter,
+      fallback,
     );
     final countryMap = await _cacheAsync(
       l10n.countries,
       l10nFormatter,
       l10nSorter,
+      fallback,
     );
 
     return _copyWithTranslationMaps(languageMap, currencyMap, countryMap);
@@ -167,13 +172,15 @@ extension TypedLocaleExtension on TypedLocale {
   Map<R, String>? _cache<R extends IsoTranslated>(
     Iterable<R> iso,
     L10NFormatter<TypedLocale, R>? l10nFormatter,
-    L10nSorter<R>? l10nSorter,
-  ) {
+    L10nSorter<R>? l10nSorter, [
+    NaturalLanguage? fallback,
+  ]) {
     if (iso.isEmpty) return null;
-
+    final orElse = fallback == null ? null : TypedLocale(fallback);
     final l10nMap = iso.commonNamesMap(
-      options: LocaleMappingOptions(mainLocale: this),
+      options: LocaleMappingOptions(mainLocale: this, fallbackLocale: orElse),
     );
+    if (l10nMap.isEmpty) return null;
     final sortedMap = l10nMap.sortAlphabetically(
       locale: l10nSorter == null ? null : this,
       compare: l10nSorter,
@@ -186,14 +193,17 @@ extension TypedLocaleExtension on TypedLocale {
   Future<Map<R, String>?> _cacheAsync<R extends IsoTranslated>(
     Iterable<R> iso,
     L10NFormatter<TypedLocale, R>? l10nFormatter,
-    L10nSorter<R>? l10nSorter,
-  ) async {
+    L10nSorter<R>? l10nSorter, [
+    NaturalLanguage? fallback,
+  ]) async {
     if (iso.isEmpty) return null;
     await _zeroDuration.sleep;
 
+    final orElse = fallback == null ? null : TypedLocale(fallback);
     final l10nMap = iso.commonNamesMap(
-      options: LocaleMappingOptions(mainLocale: this),
+      options: LocaleMappingOptions(mainLocale: this, fallbackLocale: orElse),
     );
+    if (l10nMap.isEmpty) return null;
     final sortedMap = l10nMap.sortAlphabetically(
       locale: l10nSorter == null ? null : this,
       compare: l10nSorter,

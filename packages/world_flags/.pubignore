@@ -4,6 +4,7 @@ example/ios/**
 example/macos/**
 example/windows/**
 example/linux/**
+example/benchmarks/**
 example/.vscode/**
 example/.fvmrc
 doc/example.gif
