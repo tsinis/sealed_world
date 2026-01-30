@@ -7,7 +7,6 @@ example/web/icons/**
 example/web/splash/**
 example/assets/**
 example/benchmarks/**
-example/bin/**
 example/.vscode/**
 example/.idx/**
 example/.fvmrc

@@ -46,7 +46,7 @@ class _MainState extends State<Main> {
     ...smallSimplifiedLanguageFlagsMap,
   };
 
-  final _shaderDelegate = CupertinoEmojiShaderDelegate();
+  final _shaderDelegate = CupertinoEmojiShaderDelegate(); // Custom shader flag.
   // ignore: avoid-late-keyword, just an example app.
   late final _aspectRatio = ValueNotifier<double?>(
     widget.isSimpleExample ? null : 7 / 5,
@@ -83,7 +83,7 @@ class _MainState extends State<Main> {
                     aspectRatio: aspectRatio,
                     shader: _shaderDelegate,
                   ),
-            child: IsoFlag(item, _items, height: _size),
+            child: IsoFlag(item, _items, height: _size), // Or [CountryFlag].
           ),
         );
       },

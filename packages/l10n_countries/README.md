@@ -9,7 +9,7 @@
 [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
 [![Pub package](https://img.shields.io/pub/v/l10n_countries.svg)](https://pub.dev/packages/l10n_countries)
 
-This ISO-driven, pure Dart, fully tested and dependency-free package provides translations for country names in `194` different locales. For Flutter-ready widgets (like country picker) please use [world_countries](https://pub.dev/packages/world_countries) package. For Dart-only use - it's recommended to use together with [sealed_countries](https://pub.dev/packages/sealed_countries) package.
+This ISO-driven, pure Dart, fully tested and dependency-free package provides CLDR-like translations for country names in `194` different locales. For Flutter-ready widgets (like country picker) please use [world_countries](https://pub.dev/packages/world_countries) package. For Dart-only use - it's recommended to use together with [sealed_countries](https://pub.dev/packages/sealed_countries) package.
 
 ### Features
 
