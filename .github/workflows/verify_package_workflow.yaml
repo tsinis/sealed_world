@@ -72,7 +72,7 @@ jobs:
         if: ${{ github.event_name == 'pull_request' }}
         run: dart pub publish --dry-run
 
-      - name: 🧮 Check PANA score # TODO! Move from 90 back to 160 after version bump.
+      - name: 🧮 Check PANA score
         if: ${{ github.event_name == 'pull_request' }}
         run: |
           sudo apt-get install webp
@@ -84,7 +84,7 @@ jobs:
           PANA_SCORE=$(echo $PANA | sed -n "s/.*Points: \([0-9]*\)\/\([0-9]*\)./\1\/\2/p")
           echo "score: $PANA_SCORE"
           IFS='/' read -ra SCORE_ARR <<< "$PANA_SCORE"; SCORE=${SCORE_ARR[0]}
-          if (( SCORE < 90 )); then echo "Minimum score of 160 was not met! Got $SCORE."; exit 1; fi
+          if (( SCORE < 160 )); then echo "Minimum score of 160 was not met! Got $SCORE."; exit 1; fi
 
       - name: 📥 Install DCM
         if: ${{ github.event_name == 'pull_request' }}

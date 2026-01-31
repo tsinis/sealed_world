@@ -1,4 +1,4 @@
-version: 1.3.0 # TODO! Bump to 2.0.0 at January 2026
+version: 2.0.0
 name: l10n_currencies
 description: Provides currency names translations (for 161 different locales).
 maintainer: Roman Cinis
