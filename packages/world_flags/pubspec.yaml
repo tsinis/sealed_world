@@ -1,4 +1,4 @@
-version: 2.9.1
+version: 3.0.0
 name: world_flags
 description: The first and only collection of declaratively defined world flags. No assets.
 maintainer: Roman Cinis
@@ -6,7 +6,7 @@ repository: https://github.com/tsinis/sealed_world/tree/main/packages/world_flag
 issue_tracker: https://github.com/tsinis/sealed_world/issues
 homepage: https://tsin.is/sealed_world/#/country/gbr/settings
 
-# resolution: workspace
+resolution: workspace
 
 topics:
   - flags
@@ -25,7 +25,7 @@ environment:
 dependencies:
   flutter:
     sdk: flutter
-  sealed_countries: ^2.8.0
+  sealed_countries: ^3.0.0
 
 dev_dependencies:
   _sealed_world_tests:
