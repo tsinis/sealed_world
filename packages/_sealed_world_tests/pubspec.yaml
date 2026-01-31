@@ -9,7 +9,7 @@ issue_tracker: https://github.com/tsinis/sealed_world/issues
 resolution: workspace
 
 environment:
-  sdk: ^3.10.7
+  sdk: ^3.10.8
 
 dependencies:
   meta: any # Constrained in the workspace pubspec.yaml
