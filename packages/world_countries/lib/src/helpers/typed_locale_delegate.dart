@@ -5,6 +5,7 @@ import "package:world_flags/world_flags.dart";
 import "../extensions/core/locale_extension.dart";
 import "../extensions/models/typed_locale_extension.dart";
 import "../model/iso/iso_collections.dart";
+import "../model/iso/iso_maps.dart";
 import "../model/locale/typed_locale.dart";
 import "../model/typedefs.dart";
 
@@ -57,17 +58,22 @@ class TypedLocaleDelegate implements LocalizationsDelegate<TypedLocale?> {
   /// - [l10nSorter]: Optional custom comparator for sorting translations.
   ///   When provided, overrides the default alphabetical sorting. Useful for
   ///   locale-sensitive collation (e.g., handling diacritics properly).
+  /// - [isoMapsBuilder]: Optional callback invoked after every cache
+  ///   population, letting you adjust the [IsoMaps] before widgets consume
+  ///   the locale.
   const TypedLocaleDelegate({
     this.fallbackLanguage = const LangEng(),
     bool asyncTranslationCacheProcessing = true,
     IsoCollections isoCollections = const IsoCollections(),
     L10NFormatter<TypedLocale, IsoTranslated>? l10nFormatter,
     L10nSorter<IsoTranslated>? l10nSorter,
+    IsoMaps Function(IsoMaps maps)? isoMapsBuilder,
     bool shouldReload = false,
   }) : _asyncTranslationCacheProcessing = asyncTranslationCacheProcessing,
        _isoCollections = isoCollections,
        _l10nFormatter = l10nFormatter,
        _l10nSorter = l10nSorter,
+       _isoMapsBuilder = isoMapsBuilder,
        _shouldReload = shouldReload;
 
   /// Creates an instance of [TypedLocaleDelegate] without translations caching.
@@ -92,17 +98,22 @@ class TypedLocaleDelegate implements LocalizationsDelegate<TypedLocale?> {
   /// - [l10nFormatter]: Optional formatter that customizes how ISO
   ///   translations are rendered.
   /// - [l10nSorter]: Optional custom comparator for sorting translations.
+  /// - [isoMapsBuilder]: Optional callback invoked after every cache
+  ///   population, letting you adjust the [IsoMaps] before widgets consume
+  ///   the locale.
   const TypedLocaleDelegate.selectiveCache({
     this.fallbackLanguage = const LangEng(),
     bool asyncTranslationCacheProcessing = true,
     IsoCollections isoCollections = const IsoCollections.selective(),
     L10NFormatter<TypedLocale, IsoTranslated>? l10nFormatter,
     L10nSorter<IsoTranslated>? l10nSorter,
+    IsoMaps Function(IsoMaps maps)? isoMapsBuilder,
     bool shouldReload = false,
   }) : _asyncTranslationCacheProcessing = asyncTranslationCacheProcessing,
        _isoCollections = isoCollections,
        _l10nFormatter = l10nFormatter,
        _l10nSorter = l10nSorter,
+       _isoMapsBuilder = isoMapsBuilder,
        _shouldReload = shouldReload;
 
   /// A constant list of [LocaleEntry] objects that define the default
@@ -152,6 +163,9 @@ class TypedLocaleDelegate implements LocalizationsDelegate<TypedLocale?> {
   // ignore: prefer-correct-callback-field-name, it's not a builder.
   final L10nSorter<IsoTranslated>? _l10nSorter;
 
+  /// Last-chance hook for mutating or replacing populated [IsoMaps].
+  final IsoMaps Function(IsoMaps maps)? _isoMapsBuilder;
+
   @override
   @useResult
   bool isSupported(Locale locale) => _toTypedLocale(locale) != null;
@@ -183,11 +197,17 @@ class TypedLocaleDelegate implements LocalizationsDelegate<TypedLocale?> {
             fallback: fallbackLanguage,
           );
 
-    return await translatedMaps?.copyWithFlagsCache(
+    final localeWithFlags = await translatedMaps?.copyWithFlagsCache(
       _isoCollections,
       isAsync: _asyncTranslationCacheProcessing,
       localeCountry: typedLocale?.country,
     );
+
+    if (localeWithFlags == null) return null;
+    final builder = _isoMapsBuilder;
+    if (builder == null) return localeWithFlags;
+
+    return localeWithFlags.copyWith(maps: builder(localeWithFlags.maps));
   }
 
   @override
@@ -199,7 +219,8 @@ class TypedLocaleDelegate implements LocalizationsDelegate<TypedLocale?> {
       """${'fallbackLanguage: ${fallbackLanguage.runtimeType}(), '}"""
       "asyncTranslationCacheProcessing: $_asyncTranslationCacheProcessing, "
       "shouldReload: $_shouldReload, isoCollections: $_isoCollections, "
-      "l10nFormatter: ${_l10nFormatter.runtimeType},)";
+      "l10nFormatter: ${_l10nFormatter.runtimeType}, "
+      "isoMapsBuilder: ${_isoMapsBuilder != null})";
 
   @override
   Type get type => TypedLocale;
