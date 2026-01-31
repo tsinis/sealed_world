@@ -247,7 +247,7 @@ const flagTurProperties = FlagProperties(
   elementsProperties: [
     ElementsProperties(
       Color(0xffffffff),
-      shape: Moon(radius: 0.8, offset: Offset(0.75, 0)),
+      shape: Moon(radius: 0.8, offsetDx: 0.75),
       offset: Offset(-0.333, 0),
       heightFactor: 1 / 2,
       widthFactor: 1 / 3,
@@ -918,7 +918,7 @@ const flagMrtProperties = FlagProperties(
       heightFactor: 0.2,
       child: ElementsProperties(
         Color(0xffFFD700),
-        shape: Moon(radius: 1.09, offset: Offset(0, -1)),
+        shape: Moon(radius: 1.09, offsetDx: 0, offsetDy: -1),
         offset: Offset(0, -0.9),
         heightFactor: 0.3,
         widthFactor: 4,
@@ -1074,7 +1074,7 @@ const flagCckProperties = FlagProperties(
   elementsProperties: [
     ElementsProperties(
       Color(0xffffe000),
-      shape: Moon(radius: 0.82, offset: Offset(0.3, 0)),
+      shape: Moon(radius: 0.82, offsetDx: 0.3),
       heightFactor: 0.42,
       child: ElementsProperties(
         Color(0xffffe000),
@@ -1602,7 +1602,7 @@ const flagNplProperties = FlagProperties(
     ),
     ElementsProperties(
       Color(0xffffffff),
-      shape: Moon(radius: 1, offset: Offset(0, -0.32)),
+      shape: Moon(radius: 1, offsetDx: 0, offsetDy: -0.32),
       offset: Offset(-0.51, -0.36),
       heightFactor: 0.28,
       child: ElementsProperties(
@@ -1723,7 +1723,7 @@ const flagUzbProperties = FlagProperties(
   elementsProperties: [
     ElementsProperties(
       Color(0xffffffff),
-      shape: Moon(radius: 1, offset: Offset(0.31, 0)),
+      shape: Moon(radius: 1, offsetDx: 0.31),
       offset: Offset(-0.72, -0.68),
       heightFactor: 30 / 125,
       child: ElementsProperties(
@@ -2182,7 +2182,7 @@ const flagMngProperties = FlagProperties(
             heightFactor: 1.6,
             child: ElementsProperties(
               Color(0xffffd900),
-              shape: Moon(radius: 1, offset: Offset(0, -0.3)),
+              shape: Moon(radius: 1, offsetDx: 0, offsetDy: -0.3),
               offset: Offset(0, 0.4),
               heightFactor: 1.4,
               child: ElementsProperties(
@@ -2445,7 +2445,7 @@ const flagTkmProperties = FlagProperties(
   elementsProperties: [
     ElementsProperties(
       Color(0xffffffff),
-      shape: Moon(radius: 1.02, offset: Offset(-0.3, -0.2)),
+      shape: Moon(radius: 1.02, offsetDx: -0.3, offsetDy: -0.2),
       offset: Offset(-0.075, -0.55),
       heightFactor: 0.25,
       child: ElementsProperties(

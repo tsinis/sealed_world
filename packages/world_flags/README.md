@@ -135,6 +135,9 @@ class _MainState extends State<Main> {
 }
 ```
 
+> [!TIP]
+> And because these flags are based on `CustomPainter`, you can easily modify their appearance using shaders! The package offers high-level interfaces for static and animated shaders, as well as a low-level API.
+
 For more usage examples, please see the `/example` folder.
 
 ### Demo
@@ -174,7 +177,7 @@ This package is licensed under the MIT license (see [LICENSE](./LICENSE) for det
 - **Every flag is a Widget**: This package doesn't use heavy SVG or any other assets, all flags are declarative-style optimized `CustomPainter`s. That means that you **_don't have to worry about pre-caching, increased app size, platform-dependent look of the flags_**, etc. And since it's a widget - you can always change its look - shape, decoration, aspect ratio, etc. Just ask yourself for example - how you can easily change the aspect ratio of asset-based flags without stretching/shrinking them.
 - **Up-to-date flags**: This package ensures accurate and timely flag representations, reflecting current designs. Unlike other packages or emoji/font sets that often use outdated flags, this package offers flags with the most recent designs (such as the Afghan flag from 2013 is shown here correctly with a design from year 2021, or the Syrian flag is displayed with a design from year 2025, etc.).
 - **Custom flags**: Package provides multiple classes and simple API to create your own flags.
-- **Classes with a sealed origin**: This package provides data via classes with a sealed origin, defining specific permitted direct subclasses. This lets you use instances of these subclasses and customize their data or behavior (e.g., overriding methods), offering more structured flexibility than enums or standard open classes.
+- **Sealed classes**: Unlike enums, you can create your own ISO instances, yet unlike open classes, the sealed hierarchy guarantees exhaustive pattern matching and compile-time safety. You get the immutability and type-safety of enums with the extensibility to define custom values — all while maintaining full switch exhaustiveness checking.
 - **No external 3rd-party dependencies**: This package has no external third-party dependencies. It relies on the Flutter SDK and other packages within the `sealed_world` monorepo, ensuring controlled and consistent integration.
 - **Rich data**: This package offers far more data than any other package + tons of translations (all [GlobalMaterialLocalizations](https://api.flutter.dev/flutter/flutter_localizations/GlobalMaterialLocalizations-class.html) and [GlobalCupertinoLocalizations](https://api.flutter.dev/flutter/flutter_localizations/GlobalCupertinoLocalizations-class.html) locales and more).
 - **Type-safe**: The contracts and types in this package are exceptionally strong, ensuring that your code is strongly typed and well-defined.

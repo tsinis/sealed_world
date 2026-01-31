@@ -1,8 +1,8 @@
 import "package:flutter/widgets.dart" show BuildContext;
 import "package:flutter_test/flutter_test.dart";
 import "package:world_countries/src/interfaces/searchable_interface.dart";
-import "package:world_countries/src/models/search_data.dart";
-import "package:world_countries/src/models/typedefs.dart";
+import "package:world_countries/src/model/search_data.dart";
+import "package:world_countries/src/model/typedefs.dart";
 
 class _SearchableInterfaceTest implements SearchableInterface<String> {
   const _SearchableInterfaceTest({

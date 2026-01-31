@@ -5,8 +5,8 @@ import "package:flutter/material.dart"
 import "package:flutter/widgets.dart";
 
 import "../constants/ui_constants.dart";
-import "../models/search_data.dart";
-import "../models/typedefs.dart";
+import "../model/search_data.dart";
+import "../model/typedefs.dart";
 import "searchable_interface.dart";
 
 /// An interface for a search delegate.

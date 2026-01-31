@@ -1,5 +1,5 @@
 import "package:flutter_test/flutter_test.dart";
-import "package:world_countries/src/models/iso/iso_collections.dart";
+import "package:world_countries/src/model/iso/iso_collections.dart";
 import "package:world_flags/world_flags.dart";
 
 void main() => group("$IsoCollections", () {

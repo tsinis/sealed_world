@@ -5,9 +5,9 @@ import "dart:ui" show Locale;
 import "package:meta/meta.dart" show useResult;
 import "package:world_flags/world_flags.dart";
 
-import "../../models/iso/iso_collections.dart";
-import "../../models/locale/typed_locale.dart";
-import "../../models/typedefs.dart";
+import "../../model/iso/iso_collections.dart";
+import "../../model/locale/typed_locale.dart";
+import "../../model/typedefs.dart";
 import "../core/duration_extension.dart";
 import "../map_iso_l10n_extension.dart";
 import "../pickers/basic_picker_flags_extension.dart";

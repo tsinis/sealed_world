@@ -2,7 +2,7 @@ import "package:meta/meta.dart";
 import "package:world_flags/world_flags.dart"
     show BasicTypedLocale, IsoTranslated;
 
-import "../models/typedefs.dart";
+import "../model/typedefs.dart";
 
 /// Sorting helpers for [Map<IsoTranslated, String>] collections.
 ///

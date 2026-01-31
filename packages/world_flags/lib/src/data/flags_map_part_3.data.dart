@@ -389,7 +389,7 @@ const flagMexProperties = FlagProperties(
     ),
     ElementsProperties(
       Color(0xff0C8489),
-      shape: Moon(offset: Offset(0, -0.3)),
+      shape: Moon(offsetDx: 0, offsetDy: -0.3),
       heightFactor: 0.2,
     ),
   ],
@@ -626,7 +626,7 @@ const flagTunProperties = FlagProperties(
       heightFactor: 1 / 2,
       child: ElementsProperties(
         Color(0xffe70013),
-        shape: Moon(radius: 0.8, offset: Offset(0.26, 0)),
+        shape: Moon(radius: 0.8, offsetDx: 0.26),
         heightFactor: 15 / 20,
         child: ElementsProperties(
           Color(0xffe70013),
@@ -1456,7 +1456,7 @@ const flagComProperties = FlagProperties(
       widthFactor: 1 / 2,
       child: ElementsProperties(
         Color(0xffffffff),
-        shape: Moon(radius: 0.98, offset: Offset(0.4, 0)),
+        shape: Moon(radius: 0.98, offsetDx: 0.4),
         offset: Offset(-0.32, 0),
         heightFactor: 68 / 144,
         child: ElementsProperties(

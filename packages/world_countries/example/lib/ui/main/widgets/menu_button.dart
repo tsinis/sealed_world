@@ -36,9 +36,9 @@ class MenuButton extends StatelessWidget {
           ),
           PopupMenuItem(
             onTap: () => AboutAppDialog.show(bc),
-            child: Align(
+            child: const Align(
               alignment: Alignment.centerRight,
-              child: Text(bc.materialL10n.aboutListTileTitle("")),
+              child: Text("About"),
             ),
           ),
         ],

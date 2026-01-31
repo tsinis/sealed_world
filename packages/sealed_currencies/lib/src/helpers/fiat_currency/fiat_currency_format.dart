@@ -3,6 +3,9 @@ import "fiat_currency_getters.dart";
 
 /// Provides a set of methods for formatting values of [FiatCurrency].
 extension FiatCurrencyFormat on FiatCurrency {
+  /// Cached regex for thousands formatting.
+  static final _thousandsRegex = RegExp(r"(\d)(?=(\d{3})+(?!\d))");
+
   /// If value is not `null` - formats the value as a string with
   /// the currency symbol. Otherwise returns `null`.
   String? tryFormat([num? maybeValue]) =>
@@ -31,7 +34,7 @@ extension FiatCurrencyFormat on FiatCurrency {
   }
 
   String _formatThousands(String value) => value.replaceAllMapped(
-    RegExp(r"(\d)(?=(\d{3})+(?!\d))"),
+    _thousandsRegex,
     (match) => "${match[1]}$thousandsSeparator",
   );
 }

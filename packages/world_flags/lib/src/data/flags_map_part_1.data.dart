@@ -189,7 +189,7 @@ const flagDzaProperties = FlagProperties(
   elementsProperties: [
     ElementsProperties(
       Color(0xffD21034),
-      shape: Moon(radius: 0.8, offset: Offset(0.25, 0)),
+      shape: Moon(radius: 0.8, offsetDx: 0.25),
       heightFactor: 1 / 2,
       child: ElementsProperties(
         Color(0xffD21034),
@@ -418,7 +418,7 @@ const flagEshProperties = FlagProperties(
     ),
     ElementsProperties(
       Color(0xffc4111b),
-      shape: Moon(radius: 1, offset: Offset(0.4, 0)),
+      shape: Moon(radius: 1, offsetDx: 0.4),
       heightFactor: 0.27,
       child: ElementsProperties(
         Color(0xffc4111b),
@@ -600,7 +600,7 @@ const flagPakProperties = FlagProperties(
   elementsProperties: [
     ElementsProperties(
       Color(0xffffffff),
-      shape: Moon(radius: 0.92, offset: Offset(0.255, -0.23)),
+      shape: Moon(radius: 0.92, offsetDx: 0.255, offsetDy: -0.23),
       offset: Offset(0.25, 0),
       heightFactor: 12 / 20,
       angle: 60,
@@ -624,7 +624,7 @@ const flagSgpProperties = FlagProperties(
   elementsProperties: [
     ElementsProperties(
       Color(0xffffffff),
-      shape: Moon(radius: 0.98, offset: Offset(0.425, 0)),
+      shape: Moon(radius: 0.98, offsetDx: 0.425),
       offset: Offset(-0.58, -0.5),
       heightFactor: 0.366,
       angle: 60,
@@ -1522,7 +1522,7 @@ const flagMdvProperties = FlagProperties(
       widthFactor: 48 / 72,
       child: ElementsProperties(
         Color(0xffffffff),
-        shape: Moon(radius: 1, offset: Offset(0.38, 0)),
+        shape: Moon(radius: 1, offsetDx: 0.38),
         offset: Offset(0.12, 0),
         heightFactor: 16 / 24,
       ),
@@ -1716,7 +1716,7 @@ const flagBrnProperties = FlagProperties(
     ),
     ElementsProperties(
       Color(0xffcf1126),
-      shape: Moon(offset: Offset(0, -0.25)),
+      shape: Moon(offsetDx: 0, offsetDy: -0.25),
       offset: Offset(0, 0.1),
       heightFactor: 0.4,
     ),
@@ -1728,7 +1728,7 @@ const flagBrnProperties = FlagProperties(
     ),
     ElementsProperties(
       Color(0xffcf1126),
-      shape: Moon(radius: 0.95, offset: Offset(0, -0.45)),
+      shape: Moon(radius: 0.95, offsetDx: 0, offsetDy: -0.45),
       heightFactor: 0.5,
     ),
   ],

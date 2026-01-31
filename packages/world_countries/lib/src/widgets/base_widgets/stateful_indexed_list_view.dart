@@ -3,7 +3,7 @@ import "package:flutter/material.dart";
 
 import "../../constants/ui_constants.dart";
 import "../../interfaces/indexed_list_view_interface.dart";
-import "../../models/item_properties.dart";
+import "../../model/item_properties.dart";
 
 /// A stateful widget for displaying an indexed list of items.
 ///

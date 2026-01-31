@@ -34,7 +34,7 @@ final localized = mapper.localize(
 CHORE
 
 - The Dart SDK was bumped to v3.10.4.
-- Update Indonesian country translations.
+- Updated Indonesian country translations.
 
 ## 1.3.1
 

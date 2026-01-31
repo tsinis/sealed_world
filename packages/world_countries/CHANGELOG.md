@@ -13,6 +13,7 @@ NEW FEATURES
 
 - New `namesCommonNative` method on ISO (`IsoTranslated`) classes, returning the native name for the given locale as a single string.
 - Enhanced locale parsing to support three-letter codes.
+- L10N tree-shakable via dart define flags.
 - Picker's locale-aware sorting support via `L10nSorter` typedef and `MapIsoL10nExtension`.
 
 BREAKING CHANGES (in underlying Dart packages)
@@ -38,7 +39,7 @@ BREAKING CHANGES (in this package)
 - **Generics**: `BasicPicker` and related mixins require second type argument for tile type.
 - **Removed**: `CurrencyPicker.adaptiveFlags()`, `LanguagePicker.adaptiveFlags()` constructors. Flags are now default for all pickers.
 
-See [MIGRATION_GUIDES.md](MIGRATION_GUIDES.md) for migration guide.
+See human (but also LLM-agent adjusted) [MIGRATION_GUIDES.md](MIGRATION_GUIDES.md) for migration guide. Just provide it to your LLM of choice and let it help you with the migration.
 
 REFACTOR
 
@@ -52,8 +53,9 @@ CHORE
 
 - Corrected latitude for Bouvet Island.
 - Updated Argentine peso symbol.
+- Updated Indonesian country translations.
 - All deprecated APIs from previous versions have been removed.
-- The Dart SDK was bumped to v3.10.7.
+- The Dart SDK was bumped to v3.10.8.
 
 ## 3.9.4
 

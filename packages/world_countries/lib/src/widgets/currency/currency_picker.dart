@@ -2,10 +2,10 @@ import "package:flutter/gestures.dart" show DragStartBehavior;
 import "package:flutter/material.dart";
 import "package:world_flags/world_flags.dart";
 
-import "../../models/iso/iso_maps.dart";
-import "../../models/item_properties.dart";
-import "../../models/search_data.dart";
-import "../../models/typedefs.dart";
+import "../../model/iso/iso_maps.dart";
+import "../../model/item_properties.dart";
+import "../../model/search_data.dart";
+import "../../model/typedefs.dart";
 import "../pickers/basic_picker.dart";
 
 /// A picker widget that displays a list of fiat currencies.

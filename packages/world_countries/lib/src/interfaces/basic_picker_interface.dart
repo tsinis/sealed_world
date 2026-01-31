@@ -2,7 +2,7 @@ import "package:flutter/material.dart";
 
 import "../constants/ui_constants.dart";
 import "../helpers/typed_locale_delegate.dart";
-import "../models/iso/iso_maps.dart";
+import "../model/iso/iso_maps.dart";
 
 /// An abstract interface defining the basic contract for picker components.
 ///

@@ -4,8 +4,8 @@
 import "package:flutter/material.dart";
 import "package:flutter_test/flutter_test.dart";
 import "package:world_countries/src/helpers/typed_locale_delegate.dart";
-import "package:world_countries/src/models/iso/iso_collections.dart";
-import "package:world_countries/src/models/iso/iso_maps.dart";
+import "package:world_countries/src/model/iso/iso_collections.dart";
+import "package:world_countries/src/model/iso/iso_maps.dart";
 import "package:world_countries/src/theme/pickers_theme_data.dart";
 import "package:world_countries/src/widgets/country/country_picker.dart";
 import "package:world_countries/src/widgets/pickers/basic_picker.dart";

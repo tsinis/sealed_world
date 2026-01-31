@@ -5,10 +5,10 @@ import "package:world_flags/world_flags.dart";
 import "../../constants/ui_constants.dart";
 import "../../extensions/build_context_extension.dart";
 import "../../extensions/iso_tile_extension.dart";
-import "../../models/iso/iso_maps.dart";
-import "../../models/item_properties.dart";
-import "../../models/search_data.dart";
-import "../../models/typedefs.dart";
+import "../../model/iso/iso_maps.dart";
+import "../../model/item_properties.dart";
+import "../../model/search_data.dart";
+import "../../model/typedefs.dart";
 import "../country/country_picker.dart";
 
 /// A picker widget that displays a list of countries with their phone codes.
@@ -97,6 +97,7 @@ class PhoneCodePicker extends CountryPicker {
         searchBar: picker.searchBar,
         searchBarPadding: picker.searchBarPadding,
         searchIn: picker.searchIn,
+        onSearchResultsBuilder: picker.onSearchResultsBuilder,
         separator: picker.separator,
         showClearButton: picker.showClearButton,
         showSearchBar: picker.showHeader,

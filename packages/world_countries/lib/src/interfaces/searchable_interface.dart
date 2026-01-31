@@ -1,6 +1,6 @@
 import "package:flutter/widgets.dart" show BuildContext;
 
-import "../models/search_data.dart";
+import "../model/search_data.dart";
 
 /// An interface for classes that can be searched.
 abstract interface class SearchableInterface<T extends Object> {

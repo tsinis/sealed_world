@@ -6,6 +6,7 @@ NEW FEATURES
 
 - New `namesCommonNative` method on ISO (`IsoTranslated`) classes, returning the native name for the given locale as a single string.
 - Enhanced locale parsing to support three-letter codes.
+- L10N tree-shakable via dart define flags.
 
 BREAKING CHANGES
 
@@ -42,6 +43,7 @@ CHORE
 
 - Corrected latitude for Bouvet Island.
 - Updated Argentine peso symbol.
+- Updated Indonesian country translations.
 - All deprecated APIs from previous versions have been removed.
 - The Dart SDK was bumped to v3.10.4.
 

@@ -22,11 +22,9 @@ screenshots:
     path: doc/search_picker.webp
   - description: "Modal bottom sheet picker example"
     path: doc/modal_picker.webp
-  - description: "Dialog picker example"
-    path: doc/dialog_picker.webp
 
 environment:
-  sdk: ^3.10.7
+  sdk: ^3.10.8
 
 dependencies:
   flutter:

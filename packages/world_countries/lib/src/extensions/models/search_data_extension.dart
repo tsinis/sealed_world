@@ -1,6 +1,6 @@
 import "package:meta/meta.dart" show useResult;
 
-import "../../models/search_data.dart";
+import "../../model/search_data.dart";
 
 /// Extension methods for [SearchData] providing utility functionality.
 ///

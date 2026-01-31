@@ -2,7 +2,7 @@ import "package:flutter/material.dart";
 import "package:world_flags/world_flags.dart";
 
 import "../helpers/typed_locale_delegate.dart";
-import "../models/locale/typed_locale.dart";
+import "../model/locale/typed_locale.dart";
 import "../theme/pickers_theme_data.dart";
 import "../theme/tile_theme_data/base_tile_theme_data.dart";
 import "../theme/tile_theme_data/country_tile_theme_data.dart";
