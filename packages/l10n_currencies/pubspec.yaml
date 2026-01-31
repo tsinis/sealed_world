@@ -1,11 +1,11 @@
 version: 2.0.0
 name: l10n_currencies
-description: Provides currency names translations (for 161 different locales).
+description: Provides currency names translations (for 149 different locales).
 maintainer: Roman Cinis
 repository: https://github.com/tsinis/sealed_world/tree/main/packages/l10n_currencies
 issue_tracker: https://github.com/tsinis/sealed_world/issues
 
-# resolution: workspace
+resolution: workspace
 
 topics:
   - l10n

@@ -1,11 +1,11 @@
-version: 2.5.0 # TODO! Bump to 3.0.0 at January 2026
+version: 3.0.0
 name: sealed_languages
 description: Provides data for world languages in the form of sealed classes.
 maintainer: Roman Cinis
 repository: https://github.com/tsinis/sealed_world/tree/main/packages/sealed_languages
 issue_tracker: https://github.com/tsinis/sealed_world/issues
 
-resolution: workspace
+# resolution: workspace
 
 topics:
   - languages
@@ -26,7 +26,7 @@ environment:
   sdk: ^3.10.8
 
 dependencies:
-  l10n_languages: ^1.3.0
+  l10n_languages: ^2.0.0
 
 dev_dependencies:
   _sealed_world_tests:

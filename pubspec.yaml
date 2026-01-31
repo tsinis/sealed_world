@@ -19,13 +19,13 @@ workspace:
   - tools # Command-line tools for public packages.
   - packages/_sealed_world_tests # Internal tests for public packages.
 
-  # - packages/l10n_languages # Localized languages maps.
-  # - packages/l10n_currencies # Localized currencies maps.
-  # - packages/l10n_countries # Localized countries maps.
+  - packages/l10n_languages # Localized languages maps.
+  - packages/l10n_currencies # Localized currencies maps.
+  - packages/l10n_countries # Localized countries maps.
 
-  - packages/sealed_languages # Sealed languages and scripts.
-  - packages/sealed_currencies # Sealed currencies.
-  - packages/sealed_countries # Sealed countries.
+  # - packages/sealed_languages # Sealed languages and scripts.
+  # - packages/sealed_currencies # Sealed currencies.
+  # - packages/sealed_countries # Sealed countries.
 
   - packages/world_flags # Country flags made with Flutter.
   - packages/world_countries # Pickers, selectors, typed locales for Flutter.

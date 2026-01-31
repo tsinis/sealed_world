@@ -5,7 +5,7 @@ maintainer: Roman Cinis
 repository: https://github.com/tsinis/sealed_world/tree/main/packages/l10n_languages
 issue_tracker: https://github.com/tsinis/sealed_world/issues
 
-# resolution: workspace
+resolution: workspace
 
 topics:
   - l10n
