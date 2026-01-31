@@ -14,6 +14,7 @@ This document lists all the breaking changes in v4 of the `world_countries` pack
 - [Pickers](#pickers)
 - [Tile Widgets](#tile-widgets)
 - [L10N Changes](#l10n-changes)
+- [Moon shape changes](#moon-shape-changes)
 
 ---
 
@@ -403,3 +404,33 @@ final localized = mapper.localize(
   formatter: (_, l10n) => l10n.toLowerCase(), // <-- e.g., inline usage
 );
 ```
+
+## Moon Shape Changes
+
+The `Moon` class now uses `offsetDx` and `offsetDy` parameters instead of `Offset offset` to enable `@pragma("vm:deeply-immutable")` optimization.
+
+**Migration Guide:**
+
+If you're using the `Moon` shape directly in your code:
+
+```dart
+// Before
+const moon = Moon(radius: 0.8, offset: Offset(0.25, 0));
+
+// After
+const moon = Moon(radius: 0.8, offsetDx: 0.25, offsetDy: 0);
+```
+
+If you're accessing the offset field:
+
+```dart
+// Before
+final offsetX = moon.offset.dx;
+final offsetY = moon.offset.dy;
+
+// After
+final offsetX = moon.offsetDx;
+final offsetY = moon.offsetDy;
+```
+
+This change improves performance by allowing the Dart VM to optimize `Moon` instances as deeply immutable, which was previously blocked by the `Offset` type (from the `dart:ui` library).

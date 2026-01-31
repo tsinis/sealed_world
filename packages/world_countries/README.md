@@ -95,44 +95,37 @@ import "package:flutter_localizations/flutter_localizations.dart";
 import "package:world_countries/world_countries.dart";
 
 void main() => runApp(
-      MaterialApp(
-        home: const MainPage(),
-        theme: ThemeData(
-          /// And also [CurrencyTileThemeData], [LanguageTileThemeData], [CountryTileThemeData]...
-          extensions: const <ThemeExtension>[
-            PickersThemeData(primary: true), // Specify global pickers theme.
-            FlagThemeData(
-            decoration:
-                BoxDecoration(borderRadius: BorderRadius.all(Radius.circular(4))),
-            ),
-          ],
-        ),
-        localizationsDelegates: const [
-          GlobalMaterialLocalizations.delegate,
-          GlobalCupertinoLocalizations.delegate,
-          TypedLocaleDelegate( // ! Don't forget to add this delegate too !
-            localeMapResolution: [
-              /// Just as an example, Brazil could be mapped to Euro Portuguese.
-              LocaleEntry(
-                Locale("pt", "BR"),
-                TypedLocale(LangPor(), country: CountryPrt()),
-              ),
-            ],
+  MaterialApp(
+    home: const MainPage(),
+    theme: ThemeData(
+      /// And also [CurrencyTileThemeData], [LanguageTileThemeData], [CountryTileThemeData]...
+      extensions: const <ThemeExtension>[
+        PickersThemeData(primary: true), // Specify global pickers theme.
+        FlagThemeData(
+          aspectRatio: FlagConstants.defaultAspectRatio,
+          decoration: BoxDecoration(
+            borderRadius: BorderRadius.all(Radius.circular(4)),
           ),
-        ],
-        supportedLocales: [
-          for (final locale in kMaterialSupportedLanguages) Locale(locale),
-          const Locale("pt", "PT"),
-          const Locale("pt", "BR"),
-        ],
-      ),
-    );
+        ),
+      ],
+    ),
+    localizationsDelegates: const [
+      ...GlobalMaterialLocalizations.delegates,
+      TypedLocaleDelegate(), // <-- ! ESSENTIAL FOR L10N AND OPTIMIZED SEARCH !
+    ],
+    supportedLocales: [
+      for (final locale in kMaterialSupportedLanguages) Locale(locale),
+      const Locale("pt", "PT"),
+      const Locale("pt", "BR"),
+    ],
+  ),
+);
 
 class MainPage extends StatefulWidget {
   const MainPage({
     super.key,
     // Immutable compile-time constant constructors in every picker.
-    this.basicPicker = const CountryPicker(disabled: [CountryAbw()]),
+    this.basicPicker = const CountryPicker(disabled: [.abw()]),
   });
 
   final CountryPicker basicPicker;
@@ -172,47 +165,46 @@ class _MainPageState extends State<MainPage>
 
   @override
   Widget build(BuildContext context) => Scaffold(
-        appBar: AppBar(
-          actions: [
-            SearchAnchor(
-              isFullScreen: false,
-              viewConstraints:
-                  const BoxConstraints(minWidth: 220, maxWidth: 320),
-              builder: (_, controller) => GestureDetector(
-                onLongPress: onAppBarSearchLongPressed,
-                child: IconButton(
-                  onPressed: controller.openView,
-                  icon: const Icon(Icons.search),
-                ),
-              ),
-              suggestionsBuilder: picker.searchSuggestions,
-            ),
-          ],
-        ),
-        body: Center(
-          child: MaybeWidget(
-            selectedCountry?.maybeCommonNameFor(BasicTypedLocale(LangEng())),
-            Text.new,
-            orElse: const Text(
-              "Please select country by pressing on the search icon",
+    appBar: AppBar(
+      actions: [
+        SearchAnchor(
+          isFullScreen: false,
+          viewConstraints: const BoxConstraints(minWidth: 220, maxWidth: 320),
+          builder: (_, controller) => GestureDetector(
+            onLongPress: onAppBarSearchLongPressed,
+            child: IconButton(
+              onPressed: controller.openView,
+              icon: const Icon(Icons.search),
             ),
           ),
+          suggestionsBuilder: picker.searchSuggestions,
         ),
-        floatingActionButton: GestureDetector(
-          onLongPress: () => onFabPressed(isLongPress: true),
-          child: FloatingActionButton(
-            onPressed: onFabPressed,
-            child: const Icon(Icons.search),
-          ),
+      ],
+    ),
+    body: Center(
+      child: MaybeWidget(
+        context.maybeLocale?.maps.countryTranslations[selectedCountry],
+        Text.new,
+        orElse: const Text(
+          "Please select country by pressing on the search icon",
         ),
-      );
+      ),
+    ),
+    floatingActionButton: GestureDetector(
+      onLongPress: () => onFabPressed(isLongPress: true),
+      child: FloatingActionButton(
+        onPressed: onFabPressed,
+        child: const Icon(Icons.search),
+      ),
+    ),
+  );
 }
 ```
 
 For more usage examples, please see the `/example` folder.
 
 > [!TIP]
-> For a smarter flag display, use the experimental `.adaptiveFlags` constructors, in currency and language picker. For example - they automatically show the most relevant flag based on the user's device locale, like showing the Austrian flag 🇦🇹 for the German language if the user is in Austria.
+> Pickers are showing country flags by default. For example, they automatically show the most relevant flag based on the user's device locale, like showing the Austrian flag 🇦🇹 for the German language or Euro (currency), if the user's region is Austria. You can adjust those mappings (and their sorting) with `TypedLocaleDelegate` and maps parameter in theme or picker.
 
 ### Data
 
@@ -237,12 +229,10 @@ This package is licensed under the MIT license (see [LICENSE](./LICENSE) for det
 
 #### I don't like default tiles UI in the pickers
 
-Answer: Every picker has a `itemBuilder` parameter, providing access to specific list item properties, for example this is how you can show only an emoji flag in `CountryPicker`:
+Answer: Every picker (and also its theme) has a `itemBuilder` parameter, providing access to specific list item properties, for example this is how you can show only an emoji flag in `CountryPicker`:
 
 ```dart
-CountryPicker(
-  itemBuilder: (country, {isDense}) => EmojiFlag.platformDefault(country.item),
-);
+CountryPicker(itemBuilder: (country, defaultTile) => EmojiFlag.platformDefault(country.item)); // Or defaultTile.copyWith(...)
 ```
 
 #### How to format/adjust automatic global translations of ISO objects in my app?
@@ -252,7 +242,7 @@ For instance, you may want to capitalize all French currency names in auto-trans
 ```dart
 TypedLocaleDelegate(
   l10nFormatter: (l10n, locale) =>
-      locale.language.isFra && l10n.key is FiatCurrency
+      locale.language == LangFra() && l10n.key is FiatCurrency
           ? l10n.value.toUpperCase() // Format French currency names only.
           : l10n.value, // Don't change other translations.
 )
@@ -266,9 +256,9 @@ By default, translations are sorted using simple Unicode code-point comparison (
 import 'package:intl4x/collation.dart' as intl;
 
 TypedLocaleDelegate(
-  l10nSorter: (typed) {
+  l10nSorter: (typedLocale) {
     // Create locale and collator once for the current locale.
-    final locale = intl.Locale.parse(typed.toUnicodeLocaleId());
+    final locale = intl.Locale.parse(typedLocale.toUnicodeLocaleId());
     final collator = intl.Collation(locale: locale);
     // Return comparator that will be used for all comparisons.
     return (a, b) => collator.compare(a.value, b.value);
@@ -282,18 +272,32 @@ This ensures that characters like `ä`, `ö`, `ü` in German or `č`, `š`, `ž`
 
 #### How to use fuzzy or similar search functionality?
 
-For example, use custom `onSearchResultsBuilder` in your picker. Here, fuzzy matching is performed using `extractAllSorted` from your favorite fuzzy search package, add its import and:
+For example, use custom `onSearchResultsBuilder` in your picker. Here, fuzzy matching is performed using `fuse.search` from your favorite fuzzy search package, add its import and:
 
 ```dart
-onSearchResultsBuilder: (query, map) =>
-    query.isNotEmpty
-        ? extractAllSorted(
-            choices: map.entries.toList(growable: false),
-            getter: (iso) => iso.value.first, // I.e. fuzzy search on ISO object L10N.
-            query: query,
-            cutoff: 50,
-          ).map((result) => result.choice.key)
-        : items, // Original items or `map.keys` etc.
+import "package:fuzzy/fuzzy.dart"; // Example with `fuzzy` package, any other will work too.
+
+onSearchResultsBuilder: (query, map) {
+      if (query.isEmpty) return map.keys; // Return all items if query is empty.
+      final entries = map.entries.toList(growable: false);
+      final fuse = Fuzzy<MapEntry<WorldCountry, SearchData>>(
+        entries,
+        options: FuzzyOptions(
+          keys: [ // Define searchable keys, for example by name:
+            WeightedKey(
+              name: "name",
+              getter: (iso) => iso.value.anyName, // Search in localized name.
+              weight: 1,
+            ),
+          ],
+          threshold: 0.5, // Lower = stricter, higher = more lenient.
+          findAllMatches: true,
+          shouldSort: false,
+        ),
+      );
+
+      return fuse.search(query).map((iso) => iso.item.key);
+    },
 ```
 
 #### How does the benchmark & regression verification system work?
@@ -310,7 +314,7 @@ To run benchmarks locally or learn more about the system, see the [benchmarks do
 - **Every flag is a Widget**: This package doesn't use heavy SVG or any other assets to show country flags in the pickers. All flags are declarative-style optimized `CustomPainter`s. That means that you don't have to worry about pre-caching, increased app size, platform-dependent look of the flags, etc. And since it's a widget - you can always change its look - shape, decoration, aspect ratio, etc. Just ask yourself for example - how you can easily change the aspect ratio of asset-based flags without stretching/shrinking them.
 - **Fully accessible**: All pickers are meticulously crafted with accessibility in mind, ensuring seamless integration with screen readers and assistive technologies.
 - **Up-to-date flags**: This package ensures accurate and timely flag representations, reflecting current designs. Unlike other packages or emoji/font sets that often use outdated flags, this package offers flags with the most recent designs (such as the Afghan flag from 2013 is shown here correctly with a design from year 2021, or the Syrian flag is displayed with a design from year 2026, etc.).
-- **Classes with a sealed origin**: This package provides data via classes with a sealed origin, defining specific permitted direct subclasses. This lets you use instances of these subclasses and customize their data or behavior (e.g., overriding methods), offering more structured flexibility than enums or standard open classes.
+- **Sealed classes**: Unlike enums, you can create your own ISO instances, yet unlike open classes, the sealed hierarchy guarantees exhaustive pattern matching and compile-time safety. You get the immutability and type-safety of enums with the extensibility to define custom values — all while maintaining full switch exhaustiveness checking.
 - **No external 3rd-party dependencies**: This package has no external third-party dependencies. It relies on the Flutter SDK and other packages within the `sealed_world` monorepo, ensuring controlled and consistent integration.
 - **Rich data**: This package offers far more data than any other package + tons of translations (all [GlobalMaterialLocalizations](https://api.flutter.dev/flutter/flutter_localizations/GlobalMaterialLocalizations-class.html) and [GlobalCupertinoLocalizations](https://api.flutter.dev/flutter/flutter_localizations/GlobalCupertinoLocalizations-class.html) locales and more).
 - **Type-safe**: The contracts and types in this package are exceptionally strong, ensuring that your code is strongly typed and well-defined.

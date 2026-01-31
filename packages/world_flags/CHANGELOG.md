@@ -74,9 +74,10 @@ final localized = mapper.localize(
 CHORE
 
 - Corrected latitude for Bouvet Island.
+- Updated Indonesian country translations.
 - Updated Argentine peso symbol.
 - All deprecated APIs from previous versions have been removed.
-- The Dart SDK was bumped to v3.10.7.
+- The Dart SDK was bumped to v3.10.8.
 
 ## 2.9.1
 
