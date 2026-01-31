@@ -73,6 +73,7 @@ class IsoTile<T extends IsoTranslated> extends ListItemTile<T> {
     BasicFlag? leadingFlag,
     Text? title,
     Widget? subtitle,
+    double? minLeadingWidth,
     super.autofocus,
     super.chosenIcon,
     super.contentPadding,
@@ -86,7 +87,6 @@ class IsoTile<T extends IsoTranslated> extends ListItemTile<T> {
     super.isThreeLine,
     super.key,
     super.leadingAndTrailingTextStyle,
-    super.minLeadingWidth,
     super.minVerticalPadding,
     super.mouseCursor,
     super.onFocusChange,
@@ -118,12 +118,11 @@ class IsoTile<T extends IsoTranslated> extends ListItemTile<T> {
          isChosen: iso.isChosen,
          isDisabled: iso.isDisabled,
          semanticsIdentifier: iso.item.semanticIdentifier,
-         leading:
-             MaybeWidget.orNull(
-               flagTheme,
-               (theme) => leadingFlag?.copyWithTheme(theme: theme),
-             ) ??
-             Text(iso.item.code),
+         minLeadingWidth: minLeadingWidth ?? (leadingFlag == null ? 0 : null),
+         leading: MaybeWidget.orNull(
+           flagTheme,
+           (theme) => leadingFlag?.copyWithTheme(theme: theme),
+         ),
          title: title,
          subtitle:
              subtitle ??

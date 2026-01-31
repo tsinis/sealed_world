@@ -97,6 +97,7 @@ class PhoneCodePicker extends CountryPicker {
         searchBar: picker.searchBar,
         searchBarPadding: picker.searchBarPadding,
         searchIn: picker.searchIn,
+        onSearchResultsBuilder: picker.onSearchResultsBuilder,
         separator: picker.separator,
         showClearButton: picker.showClearButton,
         showSearchBar: picker.showHeader,
