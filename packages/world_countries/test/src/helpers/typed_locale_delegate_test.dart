@@ -5,6 +5,7 @@ import "dart:ui";
 import "package:flutter_test/flutter_test.dart";
 import "package:world_countries/src/helpers/typed_locale_delegate.dart";
 import "package:world_countries/src/model/iso/iso_collections.dart";
+import "package:world_countries/src/model/iso/iso_maps.dart";
 import "package:world_countries/src/model/locale/typed_locale.dart";
 import "package:world_flags/world_flags.dart";
 
@@ -165,6 +166,103 @@ void main() => group("$TypedLocaleDelegate", () {
       final typedLocale = await delegateWithSorter.load(locale);
 
       expect(typedLocale?.countryTranslations, isNotEmpty);
+    });
+  });
+
+  group("isoMapsBuilder", () {
+    const customCountryName = "Custom Country";
+    int builderInvocations = 0;
+    IsoMaps? observedMaps;
+
+    // ignore: prefer-extracting-function-callbacks, it's a test setup.
+    setUp(() {
+      builderInvocations = 0;
+      observedMaps = null;
+    });
+
+    test("replaces IsoMaps when returning new instance", () async {
+      IsoMaps? mutatedMaps;
+      WorldCountry? mutatedCountry;
+      expect(builderInvocations, isZero);
+
+      final typedLocale = await TypedLocaleDelegate(
+        isoMapsBuilder: (maps) {
+          builderInvocations += 1;
+          observedMaps = maps;
+
+          final entry = maps.countryTranslations.entries.first;
+          mutatedCountry = entry.key;
+
+          final updatedCountries = Map<WorldCountry, String>.of(
+            maps.countryTranslations,
+            // ignore: avoid-collection-mutating-methods, it's a test.
+          )..[entry.key] = customCountryName;
+
+          mutatedMaps = IsoMaps(
+            countryTranslations: updatedCountries,
+            currencyTranslations: maps.currencyTranslations,
+            languageTranslations: maps.languageTranslations,
+            countryFlags: maps.countryFlags,
+            currencyFlags: maps.currencyFlags,
+            languageFlags: maps.languageFlags,
+          );
+          if (mutatedMaps == null) return fail("mutatedMaps shouldn't be null");
+
+          return mutatedMaps!; // ignore: avoid-non-null-assertion, fail above.
+        },
+      ).load(locale);
+
+      final resolvedLocale = typedLocale;
+      final originalMaps = observedMaps;
+      final mutatedMapsValue = mutatedMaps;
+      final mutatedCountryValue = mutatedCountry;
+
+      expect(builderInvocations, 1);
+      expect(originalMaps, isNotNull);
+      expect(mutatedMapsValue, isNotNull);
+      expect(mutatedCountryValue, isNotNull);
+      expect(resolvedLocale, isNotNull);
+
+      final localeWithMutatedMaps = resolvedLocale;
+      final originalMapsValue = originalMaps;
+      final mutatedMapsResolved = mutatedMapsValue;
+      final mutatedCountryResolved = mutatedCountryValue;
+
+      expect(localeWithMutatedMaps, isNotNull);
+      expect(originalMapsValue, isNotNull);
+      expect(mutatedMapsResolved, isNotNull);
+      expect(mutatedCountryResolved, isNotNull);
+      expect(identical(mutatedMapsResolved, originalMapsValue), isFalse);
+      expect(localeWithMutatedMaps?.maps, same(mutatedMapsResolved));
+      expect(
+        localeWithMutatedMaps?.countryTranslations[mutatedCountryResolved],
+        customCountryName,
+      );
+    });
+
+    test("keeps original locale when returning identical maps", () async {
+      final typedLocale = await TypedLocaleDelegate(
+        isoMapsBuilder: (maps) {
+          builderInvocations += 1;
+          observedMaps = maps;
+
+          return maps;
+        },
+      ).load(locale);
+
+      final resolvedLocale = typedLocale;
+      final originalMaps = observedMaps;
+
+      expect(builderInvocations, 1);
+      expect(originalMaps, isNotNull);
+      expect(resolvedLocale, isNotNull);
+
+      final localeWithOriginalMaps = resolvedLocale;
+      final originalMapsValue = originalMaps;
+
+      expect(localeWithOriginalMaps, isNotNull);
+      expect(originalMapsValue, isNotNull);
+      expect(originalMapsValue, same(localeWithOriginalMaps?.maps));
     });
   });
 
