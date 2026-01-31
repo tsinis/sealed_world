@@ -69,6 +69,8 @@ class _MainState extends State<Main> {
           ],
           supportedLocales: [
             ...const [
+              Locale("de", "DE"),
+              Locale("de", "AT"),
               Locale.fromSubtags(languageCode: "bs", scriptCode: "Cyrl"),
               Locale.fromSubtags(languageCode: "bs", scriptCode: "Latn"),
               TypedLocale(LangPor(), country: CountryBra()), // Typed one.

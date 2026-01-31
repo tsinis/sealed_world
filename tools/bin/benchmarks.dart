@@ -1,5 +1,5 @@
-// ignore_for_file: prefer-static-class, avoid-long-functions,
-// ignore_for_file: prefer-class-destructuring, avoid-type-casts
+// ignore_for_file: prefer-static-class, avoid-type-casts, avoid-local-functions
+// ignore_for_file: prefer-class-destructuring, avoid-long-functions,
 
 import "dart:io";
 
@@ -7,6 +7,7 @@ import "package:args/args.dart";
 import "package:cli/benchmarks/benchmark_config.dart";
 import "package:cli/benchmarks/benchmark_registry.dart";
 import "package:cli/benchmarks/benchmark_runner.dart";
+import "package:path/path.dart" as p;
 
 Future<void> main(List<String> args) async {
   final parser = _buildParser();
@@ -22,10 +23,11 @@ Future<void> main(List<String> args) async {
     return;
   }
 
-  final help = results["help"];
+  if (results["help"] == true) {
+    _printUsage(parser);
 
-  // ignore: avoid-returning-void, just a CLI tool.
-  if (help is bool && help) return _printUsage(parser);
+    return;
+  }
 
   final key = results.rest.isNotEmpty ? results.rest.first : null;
   BenchmarkConfig? config = key == null
@@ -45,8 +47,8 @@ Future<void> main(List<String> args) async {
   if (config == null) {
     if (examplePath == null || examplePath.isEmpty) {
       _printError(
-        "Provide a known benchmark key or specify --example to "
-        "locate the project.",
+        "Provide a known benchmark key or specify --example "
+        "to locate the project.",
       );
       _printUsage(parser);
       exitCode = 64;
@@ -67,12 +69,25 @@ Future<void> main(List<String> args) async {
   }
 
   config = _applyOverrides(config, results);
-
   final allowEmulator = results["allow-emulator"] as bool;
   config = config.copyWith(requirePhysicalDevice: !allowEmulator);
 
   final verbose = results["verbose"] as bool;
   final dryRun = results["dry-run"] as bool;
+
+  if (results["cloud"] as bool) {
+    final apiKey = results.wasParsed("api-key")
+        ? results["api-key"]?.toString()
+        : null;
+    await _runCloudBenchmark(
+      config,
+      verbose: verbose,
+      dryRun: dryRun,
+      apiKey: apiKey,
+    );
+
+    return;
+  }
 
   final runner = BenchmarkRunner(
     config: config,
@@ -86,6 +101,17 @@ Future<void> main(List<String> args) async {
 // ignore: avoid-returning-cascades, just a CLI tool.
 ArgParser _buildParser() => ArgParser()
   ..addFlag("help", abbr: "h", negatable: false, help: "Show usage info")
+  ..addFlag(
+    "cloud",
+    abbr: "c",
+    negatable: false,
+    help: "Upload APK to Flashlight Cloud instead of running locally",
+  )
+  ..addOption(
+    "api-key",
+    abbr: "k",
+    help: "Flashlight API key (or set FLASHLIGHT_API_KEY env var)",
+  )
   ..addOption(
     "example",
     abbr: "e",
@@ -153,8 +179,7 @@ ArgParser _buildParser() => ArgParser()
   )
   ..addOption(
     "before-each",
-    help:
-        "Flashlight --beforeEachCommand value, set to empty string to disable",
+    help: "Flashlight --beforeEachCommand value, empty string disables it.",
   )
   ..addMultiOption(
     "flashlight-arg",
@@ -170,11 +195,8 @@ ArgParser _buildParser() => ArgParser()
 BenchmarkConfig _applyOverrides(BenchmarkConfig config, ArgResults results) {
   BenchmarkConfig updated = config;
 
-  // ignore: avoid-local-functions, it's a CLI tool.
   String? maybeOption(String name) =>
       results.wasParsed(name) ? results[name]?.toString() : null;
-
-  // ignore: avoid-local-functions, it's a CLI tool.
   List<String>? maybeList(String name) =>
       results.wasParsed(name) ? List<String>.from(results[name] as List) : null;
 
@@ -239,5 +261,173 @@ void _printUsage(ArgParser parser) {
   stdout.writeln(parser.usage);
 }
 
-// ignore: avoid-non-ascii-symbols, just a CLI tool.
-void _printError(String message) => stderr.writeln("❌ $message");
+void _printError(String message) => stderr.writeln("ERROR: $message");
+
+Future<void> _runCloudBenchmark(
+  BenchmarkConfig config, {
+  required bool verbose,
+  required bool dryRun,
+  String? apiKey,
+}) async {
+  final key = apiKey ?? Platform.environment["FLASHLIGHT_API_KEY"];
+  if (key == null || key.isEmpty) {
+    _printError(
+      "Flashlight API key not provided. Pass --api-key or "
+      "export FLASHLIGHT_API_KEY.",
+    );
+    exitCode = 1;
+
+    return;
+  }
+
+  final root = _resolveRoot(Directory.current.path, config.examplePath);
+  final exampleDir = p.normalize(p.join(root, config.examplePath));
+  final apkPath = config.apkPath(root);
+  final benchmarksPath = config.benchmarksPath(root);
+
+  if (!Directory(exampleDir).existsSync()) {
+    _printError("Example directory not found: $exampleDir");
+    exitCode = 1;
+
+    return;
+  }
+
+  Future<void> ensureApk() async {
+    if (File(apkPath).existsSync()) return;
+
+    stdout.writeln("\nBuilding APK (clean + build)...");
+    await _runFlutterCommand(
+      config,
+      config.cleanArguments,
+      exampleDir,
+      verbose: verbose,
+      dryRun: dryRun,
+    );
+    await _runFlutterCommand(
+      config,
+      config.buildArguments,
+      exampleDir,
+      verbose: verbose,
+      dryRun: dryRun,
+    );
+
+    if (!dryRun && !File(apkPath).existsSync()) {
+      final apkDir = Directory(p.dirname(apkPath));
+      if (apkDir.existsSync()) {
+        final files = apkDir
+            .listSync()
+            .map((entry) => p.basename(entry.path))
+            .join(", ");
+        _printError(
+          "Build finished but APK not found at $apkPath. Files: $files",
+        );
+      } else {
+        _printError("Build finished but APK directory missing: ${apkDir.path}");
+      }
+      exitCode = 1;
+      throw StateError("APK not produced");
+    }
+  }
+
+  try {
+    await ensureApk();
+  } on Object {
+    if (exitCode == 0) exitCode = 1;
+
+    return;
+  }
+
+  stdout.writeln("\nRunning Flashlight Cloud...");
+  final args = <String>[
+    "cloud",
+    "--apiKey",
+    key,
+    "--app",
+    apkPath,
+    "--test",
+    "test.yaml",
+    "--beforeAll",
+    "setup.yaml",
+    ...config.additionalFlashlightArguments,
+  ];
+
+  if (dryRun || verbose) {
+    stdout.writeln(
+      "${config.flashlightExecutable} ${args.join(' ')} (cwd: $benchmarksPath)",
+    );
+  }
+
+  if (dryRun) return;
+
+  final process = await Process.start(
+    config.flashlightExecutable,
+    args,
+    workingDirectory: benchmarksPath,
+    mode: ProcessStartMode.inheritStdio,
+  );
+
+  final exit = await process.exitCode;
+  if (exit != 0) {
+    _printError("Flashlight Cloud failed with exit code $exit");
+
+    return;
+  }
+
+  stdout.writeln("\nFlashlight Cloud benchmark completed.");
+}
+
+String _resolveRoot(String start, String examplePath) {
+  if (p.isAbsolute(examplePath)) return "";
+
+  Directory dir = Directory(start);
+  while (true) {
+    final candidate = Directory(p.join(dir.path, examplePath));
+    if (candidate.existsSync()) return p.normalize(dir.path);
+
+    final parent = dir.parent;
+    if (parent.path == dir.path) {
+      throw StateError(
+        "Unable to locate example path '$examplePath' from '$start'",
+      );
+    }
+    dir = parent;
+  }
+}
+
+Future<void> _runFlutterCommand(
+  BenchmarkConfig config,
+  List<String> args,
+  String workingDirectory, {
+  required bool verbose,
+  required bool dryRun,
+}) async {
+  final executable =
+      config.flutterWrapperExecutable ?? config.flutterExecutable;
+  final arguments = config.flutterWrapperExecutable == null
+      ? args
+      : [config.flutterExecutable, ...args];
+
+  if (dryRun || verbose) {
+    stdout.writeln(
+      "$executable ${arguments.join(' ')} (cwd: $workingDirectory)",
+    );
+  }
+
+  if (dryRun) return;
+
+  final process = await Process.start(
+    executable,
+    arguments,
+    workingDirectory: workingDirectory,
+    mode: ProcessStartMode.inheritStdio,
+  );
+
+  final exit = await process.exitCode;
+  if (exit != 0) {
+    _printError(
+      "$executable ${arguments.join(' ')} failed with exit code $exit",
+    );
+    exitCode = exit;
+    throw StateError("Flutter command failed");
+  }
+}
