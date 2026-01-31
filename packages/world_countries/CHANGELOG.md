@@ -4,7 +4,7 @@ NEW FEATURES
 
 - Animated shader delegate system (`AnimatedFlagShaderDelegate`, `StaticFlagShaderDelegate`).
 - Pixel ratio support in flag shaders.
-- Adds FlagShaderSurface widget with `WavedFlagShaderDelegate` for real-time GPU-based flag animations
+- Adds `FlagShaderSurface` widget with `WavedFlagShaderDelegate` for real-time GPU-based flag animations
 - Introduces `FlagShaderOptions` for controlling wave parameters, turbulence, lighting, and fabric appearance
 - Generic `IsoTile<T>` widget consolidating all tile implementations.
 - `SearchData` model for structured, multi-variant search terms (e.g. for fuzzy search).

@@ -28,10 +28,10 @@ workspace:
   - packages/sealed_countries # Sealed countries.
 
   - packages/world_flags # Country flags made with Flutter.
-  # - packages/world_countries # Pickers, selectors, typed locales for Flutter.
+  - packages/world_countries # Pickers, selectors, typed locales for Flutter.
 
   - packages/world_flags/example # Example for the world_flags package.
-  # - packages/world_countries/example # Example for the world_countries package.
+  - packages/world_countries/example # Example for the world_countries package.
 
 dev_dependencies:
   benchmark_harness: ^2.4.0 # From Google. Defines top level dependency constraint.

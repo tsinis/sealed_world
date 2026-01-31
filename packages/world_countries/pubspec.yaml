@@ -1,4 +1,4 @@
-version: 3.9.4
+version: 4.0.0
 name: world_countries
 description: Sealed world data in form of Flutter widgets (country, phone, currency pickers, etc.).
 maintainer: Roman Cinis
@@ -6,7 +6,7 @@ repository: https://github.com/tsinis/sealed_world/tree/main/packages/world_coun
 issue_tracker: https://github.com/tsinis/sealed_world/issues
 homepage: https://tsin.is/sealed_world/
 
-# resolution: workspace
+resolution: workspace
 
 topics:
   - picker
@@ -30,7 +30,7 @@ dependencies:
   flutter:
     sdk: flutter
   meta: ^1.17.0 # Same as in Flutter SDK.
-  world_flags: ^2.9.1
+  world_flags: ^3.0.0
 
 dev_dependencies:
   _sealed_world_tests:
