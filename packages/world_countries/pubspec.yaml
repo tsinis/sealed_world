@@ -6,7 +6,7 @@ repository: https://github.com/tsinis/sealed_world/tree/main/packages/world_coun
 issue_tracker: https://github.com/tsinis/sealed_world/issues
 homepage: https://tsin.is/sealed_world/
 
-resolution: workspace
+# resolution: workspace
 
 topics:
   - picker

@@ -3,7 +3,7 @@ name: world_countries_example
 description: A world_countries example application.
 publish_to: none
 
-resolution: workspace
+# resolution: workspace
 
 environment:
   sdk: ^3.10.8

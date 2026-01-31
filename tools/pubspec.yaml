@@ -3,7 +3,7 @@ name: cli
 description: Command-line tools for a sealed_world ecosystem.
 publish_to: none
 
-resolution: workspace
+# resolution: workspace
 
 environment:
   sdk: ^3.10.8
