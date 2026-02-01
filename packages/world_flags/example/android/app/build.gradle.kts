@@ -2,7 +2,6 @@ import java.util.concurrent.TimeUnit
 
 plugins {
     id("com.android.application")
-    id("kotlin-android")
     // The Flutter Gradle Plugin must be applied after the Android and Kotlin Gradle plugins.
     id("dev.flutter.flutter-gradle-plugin")
 }
@@ -39,7 +38,7 @@ android {
 
 kotlin {
     compilerOptions {
-        jvmTarget.set(org.jetbrains.kotlin.gradle.dsl.JvmTarget.JVM_24)
+        jvmTarget = org.jetbrains.kotlin.gradle.dsl.JvmTarget.JVM_24
     }
 }
 
