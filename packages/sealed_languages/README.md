@@ -117,7 +117,7 @@ To get information about languages, use the `NaturalLanguage` class. Use the cla
 ```
 
 > [!TIP]
-> Also supports Dart 3.10 dot-shorthands:
+> Also supports Dart 3.10 dot shorthands:
 
 ```dart
 print(<NaturalLanguage>[.zho(), .eng(), .spa(), .deu(), .fra()].length); // 5.
@@ -139,6 +139,55 @@ For more usage examples, please see the `/example` folder.
 - **Mirrored Repository**: The GitHub repository, including all package tags, is mirrored on [GitLab](https://gitlab.com/tsinis/sealed_world/), providing an alternative access point should GitHub become unavailable.
 - **Industry adopted**: This package is actively used in production by numerous European companies, ensuring its efficacy and robustness in real-world scenarios.
 - **MIT license**: This package and sources are released under the MIT license, which is a permissive license that allows users to use, modify, and distribute the code with minimal restrictions. The MIT license is considered better than most other open-source licenses because it provides flexibility and allows users to incorporate the code into their projects without worrying about legal implications.
+
+#### Do you have LLM-agents instructions?
+
+Yes, for sure! You can find them under this spoiler:
+
+<details>
+<summary><strong>LLM-agent instructions</strong> (click to expand)</summary>
+
+### LLM Agent Guide: `sealed_languages` Implementation
+
+Optimized for high-level models from **Google**, **Anthropic**, and **OpenAI** for use via **GitHub Copilot** or **Cursor**.
+
+#### Context
+
+`sealed_languages` provides ISO 639-1, 639-2, and 15924-compliant data for languages and scripts in a type-safe, sealed class hierarchy.
+
+#### Installation
+
+Add to `pubspec.yaml`:
+
+```yaml
+dependencies:
+  sealed_languages: any
+```
+
+#### Core Data Structures
+
+- **`NaturalLanguage`**: Main class for languages. Access via `NaturalLanguage.list` or factory constructors like `.fromCode("ENG")`, `.fromCodeShort("EN")`, `.fromAnyCode("cs")`.
+- **`Script`**: Access via `Script.list` or `.fromCode("Latn")`, `.fromCodeNumeric("215")`.
+- **`LanguageFamily`**: Accessible via `language.family`.
+
+#### Querying & Filtering
+
+- **Find by code**: `NaturalLanguage.fromAnyCode("EN")` or `NaturalLanguage.maybeFromAnyCode(code)`.
+- **Filter by properties**: `NaturalLanguage.list.where((l) => l.isRightToLeft)`.
+- **Functional lookups**: `NaturalLanguage.maybeFromValue("Czech", where: (l) => l.namesNative.first)`.
+
+#### Integration Patterns
+
+- **Dot shorthands** (Dart 3.10+): Use `.eng()`, `.deu()`, `.fra()` for concise initialization.
+- **Switch Exhaustiveness**: Use `switch(language) { ... }` to ensure all language cases are handled.
+- **Localization**: Translations are built-in. Use `language.commonNameFor(BasicLocale(LangEng()))` for localized names. For advanced L10N features, consider the `l10n_languages` package.
+
+#### Troubleshooting
+
+- Use `maybeFromAnyCode` to safely handle external input.
+- For country-specific language info, refer to `sealed_countries` documentation.
+
+</details>
 
 ### Additional information
 

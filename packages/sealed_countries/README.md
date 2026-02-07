@@ -114,7 +114,7 @@ To get information about countries, use the `WorldCountry` class. Use the class'
 ```
 
 > [!TIP]
-> Also supports Dart 3.10 dot-shorthands:
+> Also supports Dart 3.10 dot shorthands:
 
 ```dart
 print(<WorldCountry>[.chn(), .ind(), .usa(), .bra(), .jpn()].length); // 5.
@@ -153,6 +153,53 @@ For more usage examples, please see the `/example` folder.
 - **Mirrored Repository**: The GitHub repository, including all package tags, is mirrored on [GitLab](https://gitlab.com/tsinis/sealed_world/), providing an alternative access point should GitHub become unavailable.
 - **Industry adopted**: This package is actively used in production by numerous European companies, ensuring its efficacy and robustness in real-world scenarios.
 - **MIT license**: This package and sources are released under the MIT license, which is a permissive license that allows users to use, modify, and distribute the code with minimal restrictions. The MIT license is considered better than most other open-source licenses because it provides flexibility and allows users to incorporate the code into their projects without worrying about legal implications.
+
+#### Do you have LLM-agents instructions?
+
+Yes, for sure! You can find them under this spoiler:
+
+<details>
+<summary><strong>LLM-agent instructions</strong> (click to expand)</summary>
+
+### LLM Agent Guide: `sealed_countries` Implementation
+
+Optimized for high-level models from **Google**, **Anthropic**, and **OpenAI** within **GitHub Copilot** or **Cursor**.
+
+#### Context
+
+`sealed_countries` provides ISO 3166-1 Alpha-2, Alpha-3, and Numeric data (flags, capitals, population, etc.) in a type-safe sealed class hierarchy.
+
+#### Installation
+
+Add to `pubspec.yaml`:
+
+```yaml
+dependencies:
+  sealed_countries: any
+```
+
+#### Core Data Structures
+
+- **`WorldCountry`**: Main class. Access via `WorldCountry.list` or factories: `fromCode("IRL")`, `fromCodeShort("IE")`, `fromCodeNumeric("372")`.
+
+#### Common Operations
+
+- **Geographic**: Access `latLng`, `continent`, `subregion`, and `bordersCodes`.
+- **Attributes**: `population`, `areaMetric`, `emoji` (flag), `idd` (phone codes), `tld`.
+- **Linked Data**: Access `currencies` (list of `FiatCurrency`) and `languages` (list of `NaturalLanguage`).
+
+#### Integration Patterns
+
+- **Dot shorthands**: `.irl()`, `.mex()`, `.usa()`.
+- **Search**: `WorldCountry.maybeFromAnyCode(code)`.
+- **Localization**: Translations are built-in. Use `country.commonNameFor(BasicLocale(LangEng()))` for localized names. For advanced L10N features, consider the `l10n_countries` package.
+
+#### Resource Navigation
+
+- **Currencies**: For detailed currency formatting/subunits, refer to `sealed_currencies` documentation.
+- **Languages**: For detailed language/script info, refer to `sealed_languages` documentation.
+
+</details>
 
 ### Additional information
 

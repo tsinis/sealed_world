@@ -106,7 +106,7 @@ To get information about currencies, use the `FiatCurrency` class. Use the class
 ```
 
 > [!TIP]
-> Also supports Dart 3.10 dot-shorthands:
+> Also supports Dart 3.10 dot shorthands:
 
 ```dart
 print(<FiatCurrency>[.eur(), .usd(), .czk(), .zwg(), .scr()].length); // 5.
@@ -128,6 +128,53 @@ For more usage examples, please see the `/example` folder.
 - **Mirrored Repository**: The GitHub repository, including all package tags, is mirrored on [GitLab](https://gitlab.com/tsinis/sealed_world/), providing an alternative access point should GitHub become unavailable.
 - **Industry adopted**: This package is actively used in production by numerous European companies, ensuring its efficacy and robustness in real-world scenarios.
 - **MIT license**: This package and sources are released under the MIT license, which is a permissive license that allows users to use, modify, and distribute the code with minimal restrictions. The MIT license is considered better than most other open-source licenses because it provides flexibility and allows users to incorporate the code into their projects without worrying about legal implications.
+
+#### Do you have LLM-agents instructions?
+
+Yes, for sure! You can find them under this spoiler:
+
+<details>
+<summary><strong>LLM-agent instructions</strong> (click to expand)</summary>
+
+### LLM Agent Guide: `sealed_currencies` Implementation
+
+Optimized for high-level models from **Google**, **Anthropic**, and **OpenAI** for use via **GitHub Copilot** or **Cursor**.
+
+#### Context
+
+`sealed_currencies` provides ISO 4217-compliant currency data, including symbols, subunits, and formatting rules, using a tree-shakable sealed class hierarchy.
+
+#### Installation
+
+Add to `pubspec.yaml`:
+
+```yaml
+dependencies:
+  sealed_currencies: any
+```
+
+#### Core Data Structures
+
+- **`FiatCurrency`**: Primary class. Access via `FiatCurrency.list` (regular) or `FiatCurrency.listExtended` (all 171).
+- **Factories**: `FiatCurrency.fromCode("USD")`, `FiatCurrency.fromCodeNumeric("840")`, `FiatCurrency.fromAnyCode("EUR")`.
+
+#### Common Operations
+
+- **Formatting**: Use `decimalMark`, `thousandsSeparator`, `symbol`, and `unitFirst` for UI display logic.
+- **Calculations**: Use `subunitToUnit` for precision-safe subunit/unit conversions.
+- **Native Names**: Access `namesNative` for localized labels in the currency's origin locales.
+
+#### Integration Patterns
+
+- **Dot shorthands**: `const [.usd(), .eur(), .gbp()]`.
+- **Type Safety**: Leverage sealed classes for exhaustive pattern matching in financial logic.
+- **Localization**: Translations are built-in. Use `currency.commonNameFor(BasicLocale(LangEng()))` for localized names. For advanced L10N features, consider the `l10n_currencies` package.
+
+#### Cross-Referencing
+
+- For languages associated with a currency's native name, consult the `sealed_languages` documentation.
+
+</details>
 
 ### Additional information
 
