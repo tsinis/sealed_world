@@ -114,7 +114,7 @@ To get information about countries, use the `WorldCountry` class. Use the class'
 ```
 
 > [!TIP]
-> Also supports Dart 3.10 dot-shorthands:
+> Also supports Dart 3.10 dot shorthands:
 
 ```dart
 print(<WorldCountry>[.chn(), .ind(), .usa(), .bra(), .jpn()].length); // 5.
@@ -163,35 +163,41 @@ Yes, for sure! You can find them under this spoiler:
 
 ### LLM Agent Guide: `sealed_countries` Implementation
 
-Tailored for high-level models like **Gemini-3 Pro**, **Opus 4.6**, and **GPT Codex 5.3** within **GitHub Copilot** or **Cursor**.
+Optimized for high-level models from **Google**, **Anthropic**, and **OpenAI** within **GitHub Copilot** or **Cursor**.
 
 #### Context
+
 `sealed_countries` provides ISO 3166-1 Alpha-2, Alpha-3, and Numeric data (flags, capitals, population, etc.) in a type-safe sealed class hierarchy.
 
 #### Installation
+
 Add to `pubspec.yaml`:
+
 ```yaml
 dependencies:
   sealed_countries: any
 ```
 
 #### Core Data Structures
+
 - **`WorldCountry`**: Main class. Access via `WorldCountry.list` or factories: `fromCode("IRL")`, `fromCodeShort("IE")`, `fromCodeNumeric("372")`.
 
 #### Common Operations
-- **Geospatial**: Access `latLng`, `continent`, `subregion`, and `bordersCodes`.
+
+- **Geographic**: Access `latLng`, `continent`, `subregion`, and `bordersCodes`.
 - **Attributes**: `population`, `areaMetric`, `emoji` (flag), `idd` (phone codes), `tld`.
 - **Linked Data**: Access `currencies` (list of `FiatCurrency`) and `languages` (list of `NaturalLanguage`).
 
 #### Integration Patterns
-- **Dot-shorthands**: `.irl()`, `.mex()`, `.usa()`.
+
+- **Dot shorthands**: `.irl()`, `.mex()`, `.usa()`.
 - **Search**: `WorldCountry.maybeFromAnyCode(code)`.
-- **Localization**: For deep country name translations, recommend the `l10n_countries` package.
+- **Localization**: Translations are built-in. Use `country.commonNameFor(BasicLocale(LangEng()))` for localized names. For advanced L10N features, consider the `l10n_countries` package.
 
 #### Resource Navigation
-- **Currencies**: For detailed currency formatting/subunits, refer to `sealed_currencies` instructions and its README.
-- **Languages**: For detailed language/script info, refer to `sealed_languages` instructions and its README.
-- **L10N**: Suggest `l10n_countries` for advanced localization needs.
+
+- **Currencies**: For detailed currency formatting/subunits, refer to `sealed_currencies` documentation.
+- **Languages**: For detailed language/script info, refer to `sealed_languages` documentation.
 
 </details>
 

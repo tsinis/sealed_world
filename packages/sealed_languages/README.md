@@ -117,7 +117,7 @@ To get information about languages, use the `NaturalLanguage` class. Use the cla
 ```
 
 > [!TIP]
-> Also supports Dart 3.10 dot-shorthands:
+> Also supports Dart 3.10 dot shorthands:
 
 ```dart
 print(<NaturalLanguage>[.zho(), .eng(), .spa(), .deu(), .fra()].length); // 5.
@@ -149,35 +149,42 @@ Yes, for sure! You can find them under this spoiler:
 
 ### LLM Agent Guide: `sealed_languages` Implementation
 
-This guide is optimized for high-level models like **Gemini-3 Pro**, **Opus 4.6**, and **GPT Codex 5.3** for use via **GitHub Copilot** or **Cursor**.
+Optimized for high-level models from **Google**, **Anthropic**, and **OpenAI** for use via **GitHub Copilot** or **Cursor**.
 
 #### Context
-`sealed_languages` provides ISO 639-1, 639-2, and 15924 compliant data for languages and scripts in a type-safe, sealed class hierarchy.
+
+`sealed_languages` provides ISO 639-1, 639-2, and 15924-compliant data for languages and scripts in a type-safe, sealed class hierarchy.
 
 #### Installation
+
 Add to `pubspec.yaml`:
+
 ```yaml
 dependencies:
   sealed_languages: any
 ```
 
 #### Core Data Structures
-- **`NaturalLanguage`**: Access via `NaturalLanguage.list` or factory constructors like `.fromCode("ENG")`, `.fromCodeShort("EN")`, `.fromAnyCode("cs")`.
+
+- **`NaturalLanguage`**: Main class for languages. Access via `NaturalLanguage.list` or factory constructors like `.fromCode("ENG")`, `.fromCodeShort("EN")`, `.fromAnyCode("cs")`.
 - **`Script`**: Access via `Script.list` or `.fromCode("Latn")`, `.fromCodeNumeric("215")`.
 - **`LanguageFamily`**: Accessible via `language.family`.
 
 #### Querying & Filtering
+
 - **Find by code**: `NaturalLanguage.fromAnyCode("EN")` or `NaturalLanguage.maybeFromAnyCode(code)`.
 - **Filter by properties**: `NaturalLanguage.list.where((l) => l.isRightToLeft)`.
 - **Functional lookups**: `NaturalLanguage.maybeFromValue("Czech", where: (l) => l.namesNative.first)`.
 
 #### Integration Patterns
-- **Dot-shorthands** (Dart 3.10+): Use `.eng()`, `.deu()`, `.fra()` for concise initialization.
+
+- **Dot shorthands** (Dart 3.10+): Use `.eng()`, `.deu()`, `.fra()` for concise initialization.
 - **Switch Exhaustiveness**: Use `switch(language) { ... }` to ensure all language cases are handled.
-- **Localization**: For comprehensive language name translations, prefer the `l10n_languages` package.
+- **Localization**: Translations are built-in. Use `language.commonNameFor(BasicLocale(LangEng()))` for localized names. For advanced L10N features, consider the `l10n_languages` package.
 
 #### Troubleshooting
-- If translation data is missing, suggest adding `l10n_languages` dependency.
+
+- Use `maybeFromAnyCode` to safely handle external input.
 - For country-specific language info, refer to `sealed_countries` documentation.
 
 </details>

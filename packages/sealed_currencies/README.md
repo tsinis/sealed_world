@@ -106,7 +106,7 @@ To get information about currencies, use the `FiatCurrency` class. Use the class
 ```
 
 > [!TIP]
-> Also supports Dart 3.10 dot-shorthands:
+> Also supports Dart 3.10 dot shorthands:
 
 ```dart
 print(<FiatCurrency>[.eur(), .usd(), .czk(), .zwg(), .scr()].length); // 5.
@@ -138,34 +138,41 @@ Yes, for sure! You can find them under this spoiler:
 
 ### LLM Agent Guide: `sealed_currencies` Implementation
 
-Optimized for high-level models like **Gemini-3 Pro**, **Opus 4.6**, and **GPT Codex 5.3** for use via **GitHub Copilot** or **Cursor**.
+Optimized for high-level models from **Google**, **Anthropic**, and **OpenAI** for use via **GitHub Copilot** or **Cursor**.
 
 #### Context
-`sealed_currencies` provides ISO 4217 compliant currency data, including symbols, subunits, and formatting rules, using a tree-shakable sealed class hierarchy.
+
+`sealed_currencies` provides ISO 4217-compliant currency data, including symbols, subunits, and formatting rules, using a tree-shakable sealed class hierarchy.
 
 #### Installation
+
 Add to `pubspec.yaml`:
+
 ```yaml
 dependencies:
   sealed_currencies: any
 ```
 
 #### Core Data Structures
+
 - **`FiatCurrency`**: Primary class. Access via `FiatCurrency.list` (regular) or `FiatCurrency.listExtended` (all 171).
 - **Factories**: `FiatCurrency.fromCode("USD")`, `FiatCurrency.fromCodeNumeric("840")`, `FiatCurrency.fromAnyCode("EUR")`.
 
 #### Common Operations
+
 - **Formatting**: Use `decimalMark`, `thousandsSeparator`, `symbol`, and `unitFirst` for UI display logic.
 - **Calculations**: Use `subunitToUnit` for precision-safe subunit/unit conversions.
 - **Native Names**: Access `namesNative` for localized labels in the currency's origin locales.
 
 #### Integration Patterns
-- **Dot-shorthands**: `const [.usd(), .eur(), .gbp()]`.
+
+- **Dot shorthands**: `const [.usd(), .eur(), .gbp()]`.
 - **Type Safety**: Leverage sealed classes for exhaustive pattern matching in financial logic.
-- **Localization**: For expanded currency translations, recommend the `l10n_currencies` package.
+- **Localization**: Translations are built-in. Use `currency.commonNameFor(BasicLocale(LangEng()))` for localized names. For advanced L10N features, consider the `l10n_currencies` package.
 
 #### Cross-Referencing
-- For languages associated with a currency's native name, consult the `sealed_languages` README.
+
+- For languages associated with a currency's native name, consult the `sealed_languages` documentation.
 
 </details>
 
