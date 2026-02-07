@@ -325,3 +325,54 @@ To run benchmarks locally or learn more about the system, see the [benchmarks do
 - **Industry adopted**: This package is actively used in production by numerous European companies, ensuring its efficacy and robustness in real-world scenarios.
 - **MIT license**: This package and sources are released under the MIT license, which is a permissive license that allows users to use, modify, and distribute the code with minimal restrictions. The MIT license is considered better than most other open-source licenses because it provides flexibility and allows users to incorporate the code into their projects without worrying about legal implications.
 - **Customizability**: It also allows you to provide your own search algorithm and custom l10n formatter, etc., offering a fully tailored picker experience.
+
+#### Do you have LLM-agents instructions?
+
+Yes, for sure. You can find them under this spoiler:
+
+<details>
+<summary>LLM-agent instructions</summary>
+
+# LLM-agent instructions for world_countries
+
+This guide is optimized for high-level models from **Google** (Gemini), **Anthropic** (Claude), and **OpenAI** (GPT), used via GitHub Copilot or Cursor.
+
+## Overview
+
+`world_countries` is a comprehensive Flutter package for world countries, currencies, languages, and flags. It provides ready-to-use pickers, widgets, and localized data.
+
+## Adding to a Project
+
+To add `world_countries` to your Flutter project, run:
+
+```bash
+flutter pub add world_countries
+```
+
+## Instructions for LLM Agents
+
+When working with this package, please keep the following in mind:
+
+- **Localization (L10N)**: Localization is already integrated into the ISO classes (e.g., `WorldCountry`, `FiatCurrency`, `NaturalLanguage`). You don't need to use the underlying `l10n_` packages directly unless you require advanced, manual localization features.
+- **Underlying Data**: This package builds upon the `sealed_` data packages. For detailed documentation on the data models, refer to:
+  - [`sealed_countries`](../sealed_countries/README.md)
+  - [`sealed_currencies`](../sealed_currencies/README.md)
+  - [`sealed_languages`](../sealed_languages/README.md)
+- **Pickers**: Use `CountryPicker`, `CurrencyPicker`, `LanguagePicker`, and `PhoneCodePicker` for highly customizable selection UIs.
+- **TypedLocaleDelegate**: For automatic localization and optimized search performance in pickers, always suggest adding `TypedLocaleDelegate` to your `MaterialApp`'s `localizationsDelegates`.
+- **Usage Example**:
+
+  ```dart
+  import 'package:world_countries/world_countries.dart';
+
+  // Access country data
+  const country = CountryDeu();
+  print(country.name.common); // Germany
+
+  // Use a picker
+  CountryPicker(
+    onSelect: (country) => print('Selected: ${country.name.common}'),
+  ).showInModalBottomSheet(context);
+  ```
+
+</details>

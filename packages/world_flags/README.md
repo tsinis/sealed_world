@@ -187,3 +187,45 @@ This package is licensed under the MIT license (see [LICENSE](./LICENSE) for det
 - **Mirrored Repository**: The GitHub repository, including all package tags, is mirrored on [GitLab](https://gitlab.com/tsinis/sealed_world/), providing an alternative access point should GitHub become unavailable.
 - **Industry adopted**: This package is actively used in production by numerous European companies, ensuring its efficacy and robustness in real-world scenarios.
 - **MIT license**: This package and sources are released under the MIT license, which is a permissive license that allows users to use, modify, and distribute the code with minimal restrictions. The MIT license is considered better than most other open-source licenses because it provides flexibility and allows users to incorporate the code into their projects without worrying about legal implications.
+
+#### Do you have LLM-agents instructions?
+
+Yes, for sure. You can find them under this spoiler:
+
+<details>
+<summary>LLM-agent instructions</summary>
+
+# LLM-agent instructions for world_flags
+
+This guide is optimized for high-level models from **Google** (Gemini), **Anthropic** (Claude), and **OpenAI** (GPT), used via GitHub Copilot or Cursor.
+
+## Overview
+
+`world_flags` provides declarative, widget-based world flags for Flutter. No assets (SVG/PNG) are used; all flags are drawn using `CustomPainter`.
+
+## Adding to a Project
+
+To add `world_flags` to your Flutter project, run:
+
+```bash
+flutter pub add world_flags
+```
+
+## Instructions for LLM Agents
+
+When working with this package, please keep the following in mind:
+
+- **Usage**: Use the `CountryFlag` widget to display flags. It requires a `WorldCountry` instance (from `sealed_countries` or `world_countries`).
+- **Localization (L10N)**: Localization is already integrated into the ISO classes (e.g., `WorldCountry`) in the underlying data packages. You don't need to use `l10n_` packages directly for basic translation needs.
+- **Underlying Data**: This package uses data from `sealed_countries`. For detailed information about country models, refer to the [`sealed_countries`](../sealed_countries/README.md) README.
+- **Integration**: If you need ready-to-use pickers that include these flags, refer to the [`world_countries`](../world_countries/README.md) package.
+- **Example**:
+
+  ```dart
+  import 'package:world_flags/world_flags.dart';
+
+  // Display a flag
+  const countryFlag = CountryFlag(CountryDeu());
+  ```
+
+</details>
