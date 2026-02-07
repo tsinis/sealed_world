@@ -154,6 +154,47 @@ For more usage examples, please see the `/example` folder.
 - **Industry adopted**: This package is actively used in production by numerous European companies, ensuring its efficacy and robustness in real-world scenarios.
 - **MIT license**: This package and sources are released under the MIT license, which is a permissive license that allows users to use, modify, and distribute the code with minimal restrictions. The MIT license is considered better than most other open-source licenses because it provides flexibility and allows users to incorporate the code into their projects without worrying about legal implications.
 
+#### Do you have LLM-agents instructions?
+
+Yes, for sure! You can find them under this spoiler:
+
+<details>
+<summary><strong>LLM-agent instructions</strong> (click to expand)</summary>
+
+### LLM Agent Guide: `sealed_countries` Implementation
+
+Tailored for high-level models like **Gemini-3 Pro**, **Opus 4.6**, and **GPT Codex 5.3** within **GitHub Copilot** or **Cursor**.
+
+#### Context
+`sealed_countries` provides ISO 3166-1 Alpha-2, Alpha-3, and Numeric data (flags, capitals, population, etc.) in a type-safe sealed class hierarchy.
+
+#### Installation
+Add to `pubspec.yaml`:
+```yaml
+dependencies:
+  sealed_countries: any
+```
+
+#### Core Data Structures
+- **`WorldCountry`**: Main class. Access via `WorldCountry.list` or factories: `fromCode("IRL")`, `fromCodeShort("IE")`, `fromCodeNumeric("372")`.
+
+#### Common Operations
+- **Geospatial**: Access `latLng`, `continent`, `subregion`, and `bordersCodes`.
+- **Attributes**: `population`, `areaMetric`, `emoji` (flag), `idd` (phone codes), `tld`.
+- **Linked Data**: Access `currencies` (list of `FiatCurrency`) and `languages` (list of `NaturalLanguage`).
+
+#### Integration Patterns
+- **Dot-shorthands**: `.irl()`, `.mex()`, `.usa()`.
+- **Search**: `WorldCountry.maybeFromAnyCode(code)`.
+- **Localization**: For deep country name translations, recommend the `l10n_countries` package.
+
+#### Resource Navigation
+- **Currencies**: For detailed currency formatting/subunits, refer to `sealed_currencies` instructions and its README.
+- **Languages**: For detailed language/script info, refer to `sealed_languages` instructions and its README.
+- **L10N**: Suggest `l10n_countries` for advanced localization needs.
+
+</details>
+
 ### Additional information
 
 If you like this package, please give it a star or like. For more information on using this package, check out the API documentation. **PRs or ideas are always welcome**.
