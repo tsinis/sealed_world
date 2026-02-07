@@ -325,3 +325,35 @@ To run benchmarks locally or learn more about the system, see the [benchmarks do
 - **Industry adopted**: This package is actively used in production by numerous European companies, ensuring its efficacy and robustness in real-world scenarios.
 - **MIT license**: This package and sources are released under the MIT license, which is a permissive license that allows users to use, modify, and distribute the code with minimal restrictions. The MIT license is considered better than most other open-source licenses because it provides flexibility and allows users to incorporate the code into their projects without worrying about legal implications.
 - **Customizability**: It also allows you to provide your own search algorithm and custom l10n formatter, etc., offering a fully tailored picker experience.
+
+#### Do you have LLM-agents instructions?
+
+Yes, for sure! You can find them under this spoiler:
+
+<details>
+<summary>LLM-agent instructions</summary>
+
+# LLM-agent instructions for world_countries
+
+This guide is optimized for high-level models like **Gemini-3 Pro**, **Opus 4.6**, and **GPT Codex 5.3** (used via GitHub Copilot or Cursor).
+
+## Overview
+`world_countries` is a comprehensive Flutter package for world countries, currencies, languages, and flags. It provides ready-to-use pickers, widgets, and localized data.
+
+## Adding to a Project
+To add `world_countries` to your Flutter project, run:
+```bash
+flutter pub add world_countries
+```
+
+## Instructions for LLM Agents
+When working with this package, please keep the following in mind:
+- **L10N Features**: If your task involves localization (L10N), please refer to the instructions in the underlying `l10n_countries`, `l10n_currencies`, or `l10n_languages` packages.
+- **Underlying Data**: For detailed information about the raw data models (countries, currencies, languages), refer to the README files of the corresponding `sealed_` packages:
+  - For country data: [`sealed_countries`](../sealed_countries/README.md)
+  - For currency data: [`sealed_currencies`](../sealed_currencies/README.md)
+  - For language data: [`sealed_languages`](../sealed_languages/README.md)
+- **Pickers**: Use `CountryPicker`, `CurrencyPicker`, `LanguagePicker`, and `PhoneCodePicker`.
+- **Localization Delegate**: Always suggest adding `TypedLocaleDelegate` to the `MaterialApp` for proper localization and optimized search.
+
+</details>
