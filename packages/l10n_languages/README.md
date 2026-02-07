@@ -88,6 +88,49 @@ void main() {
 - **Industry adopted**: This package is actively used in production by numerous European companies, ensuring its efficacy and robustness in real-world scenarios.
 - **Lightweight**: This package keeps **under 500 KB**, ensuring it fits within the pub cache limit. This leads to quick, low-bandwidth downloads and faster caching, minimizing resource impact.
 - **MIT license**: This package and sources are released under the MIT license, which is a permissive license that allows users to use, modify, and distribute the code with minimal restrictions. The MIT license is considered better than most other open-source licenses because it provides flexibility and allows users to incorporate the code into their projects without worrying about legal implications.
+- **Do you have LLM-agents instructions?**: Yes, for sure, under this spoiler,
+  <details>
+  <summary>LLM-agent instructions</summary>
+
+  ### Instruction for LLM Agents (Gemini-3 Pro, Opus 4.6, GPT Codex 5.3)
+
+  This section provides optimized instructions for LLM agents to integrate the `l10n_languages` package into Dart or Flutter projects via GitHub Copilot or Cursor.
+
+  #### 1. Package Installation
+  To add the package to the project, use one of the following commands:
+  - For Dart projects: `dart pub add l10n_languages`
+  - For Flutter projects: `flutter pub add l10n_languages`
+
+  #### 2. Import the Package
+  Add the following import statement to the relevant Dart file:
+  ```dart
+  import 'package:l10n_languages/l10n_languages.dart';
+  ```
+
+  #### 3. Core Implementation (Usage)
+  The package uses `LanguagesLocaleMapper` to provide localized language names. Note that mapper instances are designed for **single-use only** and clear their internal data after `localize()` is called.
+
+  **Example Implementation:**
+  ```dart
+  final mapper = LanguagesLocaleMapper();
+  final isoCodes = {"ENG", "FRA", "DEU"};
+  final localizedNames = mapper.localize(
+    isoCodes,
+    mainLocale: "en", // Specify the target locale
+    fallbackLocale: "sk", // Optional: specify a fallback locale
+  );
+  ```
+
+  #### 4. Performance Optimization (Tree-shaking)
+  To minimize the application size, the package supports tree-shaking for translations. Use `--dart-define` flags to include only necessary locales during the build process:
+  - Example: `flutter build apk --dart-define=l10n-en=true --dart-define=l10n-sk=true`
+
+  #### 5. Context for LLM Agents
+  - **No Dependencies**: The package is dependency-free, ensuring no version conflicts.
+  - **Lazy Loading**: Translations are loaded on-demand to save memory.
+  - **100% Test Coverage**: High reliability for production environments.
+
+  </details>
 
 ### Additional information
 
