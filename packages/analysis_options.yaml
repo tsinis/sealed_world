@@ -674,6 +674,7 @@ linter:
     provide_deprecation_message: true
     public_member_api_docs: true
     recursive_getters: true
+    remove_deprecations_in_breaking_versions: true
     require_trailing_commas: true
     secure_pubspec_urls: true
     slash_for_doc_comments: true
