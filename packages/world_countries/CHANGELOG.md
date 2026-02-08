@@ -1,3 +1,15 @@
+## 4.0.1
+
+REFACTOR
+
+- Added `item` comparison to `FlagShaderSurface` change detection logic to ensure proper updates when the item changes.
+
+DOCUMENTATION
+
+- TODO(@tsinis): Improve example app, update GIF.
+- Improved CHANGELOG for clarity.
+- Added LLM agent instructions to the README.
+
 ## 4.0.0
 
 NEW FEATURES

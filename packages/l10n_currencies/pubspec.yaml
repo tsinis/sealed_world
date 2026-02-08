@@ -1,4 +1,4 @@
-version: 2.0.0
+version: 2.0.1
 name: l10n_currencies
 description: Provides currency names translations (for 149 different locales).
 maintainer: Roman Cinis

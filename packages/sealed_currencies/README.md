@@ -134,11 +134,11 @@ For more usage examples, please see the `/example` folder.
 Yes, for sure! You can find them under this spoiler:
 
 <details>
-<summary><strong>LLM-agent instructions</strong> (click to expand)</summary>
+<summary>LLM-agent instructions</summary>
 
-### LLM Agent Guide: `sealed_currencies` Implementation
+### LLM-agent instructions for l10n_currencies
 
-Optimized for high-level models from **Google**, **Anthropic**, and **OpenAI** for use via **GitHub Copilot** or **Cursor**.
+Optimized for high-level models from **Google**, **Anthropic**, and **OpenAI** for use via **GitHub Copilot**, **Claude Code** or **Cursor**.
 
 #### Context
 
@@ -172,7 +172,7 @@ dependencies:
 
 #### Cross-Referencing
 
-- For languages associated with a currency's native name, consult the `sealed_languages` documentation.
+- For languages associated with a currency's native name, consult the `sealed_languages` [documentation](https://github.com/tsinis/sealed_world/blob/main/packages/sealed_languages/README.md).
 
 </details>
 
