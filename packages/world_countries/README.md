@@ -223,6 +223,8 @@ If you have any issues or suggestions for the package, please file them in the G
 
 This package is licensed under the MIT license (see [LICENSE](./LICENSE) for details). Its dependencies are under their respective licenses, which can be found in the corresponding `LICENSE` and `NOTICE` files.
 
+- [Project Roadmap](https://github.com/users/tsinis/projects/1)
+
 ---
 
 ### FAQ
@@ -313,12 +315,12 @@ To run benchmarks locally or learn more about the system, see the [benchmarks do
 
 - **Every flag is a Widget**: This package doesn't use heavy SVG or any other assets to show country flags in the pickers. All flags are declarative-style optimized `CustomPainter`s. That means that you don't have to worry about pre-caching, increased app size, platform-dependent look of the flags, etc. And since it's a widget - you can always change its look - shape, decoration, aspect ratio, etc. Just ask yourself for example - how you can easily change the aspect ratio of asset-based flags without stretching/shrinking them.
 - **Fully accessible**: All pickers are meticulously crafted with accessibility in mind, ensuring seamless integration with screen readers and assistive technologies.
-- **Up-to-date flags**: This package ensures accurate and timely flag representations, reflecting current designs. Unlike other packages or emoji/font sets that often use outdated flags, this package offers flags with the most recent designs (such as the Afghan flag from 2013 is shown here correctly with a design from year 2021, or the Syrian flag is displayed with a design from year 2026, etc.).
+- **Up-to-date flags**: This package ensures accurate and timely flag representations, reflecting current designs. Unlike other packages or emoji/font sets that often use outdated flags, this package offers flags with the most recent designs (such as the Afghan flag from 2013 is shown here correctly with a design from year 2021, or the Syrian flag is displayed with a design from year 2025, etc.).
 - **Sealed classes**: Unlike enums, you can create your own ISO instances, yet unlike open classes, the sealed hierarchy guarantees exhaustive pattern matching and compile-time safety. You get the immutability and type-safety of enums with the extensibility to define custom values — all while maintaining full switch exhaustiveness checking.
 - **No external 3rd-party dependencies**: This package has no external third-party dependencies. It relies on the Flutter SDK and other packages within the `sealed_world` monorepo, ensuring controlled and consistent integration.
 - **Rich data**: This package offers far more data than any other package + tons of translations (all [GlobalMaterialLocalizations](https://api.flutter.dev/flutter/flutter_localizations/GlobalMaterialLocalizations-class.html) and [GlobalCupertinoLocalizations](https://api.flutter.dev/flutter/flutter_localizations/GlobalCupertinoLocalizations-class.html) locales and more).
 - **Type-safe**: The contracts and types in this package are exceptionally strong, ensuring that your code is strongly typed and well-defined.
-- **High code coverage**: The code in this package boasts nearly **_100% test coverage, with almost 5K tests_** (150+ in this package, 4.8K+ in underlying Dart packages) ensuring reliability and stability.
+- **High code coverage**: The code in this package has 100% code coverage, with 5.6K tests (150+ in this package, 4.8K+ in underlying Dart packages) ensuring reliability and stability.
 - **Comprehensive documentation**: This package provides full documentation for every non-code generated public member, usually with examples, ensuring clarity and ease of use.
 - **Lightweight**: This package keeps **under 500 KB**, ensuring it fits within the pub cache limit. This leads to quick, low-bandwidth downloads and faster caching, minimizing resource impact.
 - **Mirrored Repository**: The GitHub repository, including all package tags, is mirrored on [GitLab](https://gitlab.com/tsinis/sealed_world/), providing an alternative access point should GitHub become unavailable.
@@ -335,7 +337,7 @@ Yes, for sure. You can find them under this spoiler:
 
 # LLM-agent instructions for world_countries
 
-This guide is optimized for high-level models from **Google** (Gemini), **Anthropic** (Claude), and **OpenAI** (GPT), used via GitHub Copilot or Cursor.
+Optimized for high-level models from **Google**, **Anthropic**, and **OpenAI** for use via **GitHub Copilot**, **Claude Code** or **Cursor**.
 
 ## Overview
 
@@ -355,9 +357,9 @@ When working with this package, please keep the following in mind:
 
 - **Localization (L10N)**: Localization is already integrated into the ISO classes (e.g., `WorldCountry`, `FiatCurrency`, `NaturalLanguage`). You don't need to use the underlying `l10n_` packages directly unless you require advanced, manual localization features.
 - **Underlying Data**: This package builds upon the `sealed_` data packages. For detailed documentation on the data models, refer to:
-  - [`sealed_countries`](../sealed_countries/README.md)
-  - [`sealed_currencies`](../sealed_currencies/README.md)
-  - [`sealed_languages`](../sealed_languages/README.md)
+  - [`sealed_countries`](https://github.com/tsinis/sealed_world/blob/main/packages/sealed_countries/README.md)
+  - [`sealed_currencies`](https://github.com/tsinis/sealed_world/blob/main/packages/sealed_currencies/README.md)
+  - [`sealed_languages`](https://github.com/tsinis/sealed_world/blob/main/packages/sealed_languages/README.md)
 - **Pickers**: Use `CountryPicker`, `CurrencyPicker`, `LanguagePicker`, and `PhoneCodePicker` for highly customizable selection UIs.
 - **TypedLocaleDelegate**: For automatic localization and optimized search performance in pickers, always suggest adding `TypedLocaleDelegate` to your `MaterialApp`'s `localizationsDelegates`.
 - **Usage Example**:

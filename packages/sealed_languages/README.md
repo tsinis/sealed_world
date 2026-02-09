@@ -145,11 +145,11 @@ For more usage examples, please see the `/example` folder.
 Yes, for sure! You can find them under this spoiler:
 
 <details>
-<summary><strong>LLM-agent instructions</strong> (click to expand)</summary>
+<summary>LLM-agent instructions</summary>
 
-### LLM Agent Guide: `sealed_languages` Implementation
+### LLM-agent instructions for sealed_languages
 
-Optimized for high-level models from **Google**, **Anthropic**, and **OpenAI** for use via **GitHub Copilot** or **Cursor**.
+Optimized for high-level models from **Google**, **Anthropic**, and **OpenAI** for use via **GitHub Copilot**, **Claude Code** or **Cursor**.
 
 #### Context
 
@@ -185,7 +185,7 @@ dependencies:
 #### Troubleshooting
 
 - Use `maybeFromAnyCode` to safely handle external input.
-- For country-specific language info, refer to `sealed_countries` documentation.
+- For country-specific language info, refer to `sealed_countries` [documentation](https://github.com/tsinis/sealed_world/tree/main/packages/sealed_countries/README.md).
 
 </details>
 

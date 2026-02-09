@@ -1,3 +1,10 @@
+## 2.0.1
+
+DOCUMENTATION
+
+- Improved CHANGELOG for clarity.
+- Added LLM agent instructions to the README.
+
 ## 2.0.0
 
 🎉 Third anniversary and new major release!
@@ -12,6 +19,8 @@ NEW FEATURES
 - **Single-use design**: Mapper instances automatically free memory after `localize()` is called and cannot be reused. This ensures optimal memory efficiency - create a new instance if you need to localize again.
 
 BREAKING CHANGES
+
+- **Single-use design**: Mapper instances automatically free memory after `localize()` is called and cannot be reused. This ensures optimal memory efficiency - create a new instance if you need to localize again.
 
 Previously, localized strings were provided in mixed lowercase (e.g., "islas Malvinas", in Spanish for `FLK` code) and sentence case. They are now unified and provided in sentence case only (e.g., "Islas Malvinas", in Spanish for `FLK` code) to preserve capitalization context for proper nouns and ensure immediate compatibility with independent UI labels.
 

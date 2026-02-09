@@ -1,3 +1,10 @@
+## 3.0.1
+
+DOCUMENTATION
+
+- Improved CHANGELOG for clarity.
+- Added LLM agent instructions to the README.
+
 ## 3.0.0
 
 🎉 Third anniversary and new major release!
