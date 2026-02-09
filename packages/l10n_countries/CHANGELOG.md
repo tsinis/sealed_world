@@ -1,3 +1,9 @@
+## 2.0.2
+
+DOCUMENTATION
+
+- Added FOSSA status badge to the README (docs only, no code changes).
+
 ## 2.0.1
 
 DOCUMENTATION
