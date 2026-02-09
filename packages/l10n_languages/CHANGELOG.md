@@ -4,7 +4,7 @@ DOCUMENTATION
 
 Docs only, no code changes:
 
-- Added FOSSA status badge to the README (docs only, no code changes).
+- Added FOSSA status badge to the README.
 
 ## 2.0.1
 
