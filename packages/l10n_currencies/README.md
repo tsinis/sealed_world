@@ -88,57 +88,57 @@ void main() {
 - **Industry adopted**: This package is actively used in production by numerous European companies, ensuring its efficacy and robustness in real-world scenarios.
 - **Lightweight**: This package keeps **under 500 KB**, ensuring it fits within the pub cache limit. This leads to quick, low-bandwidth downloads and faster caching, minimizing resource impact.
 - **MIT license**: This package and sources are released under the MIT license, which is a permissive license that allows users to use, modify, and distribute the code with minimal restrictions. The MIT license is considered better than most other open-source licenses because it provides flexibility and allows users to incorporate the code into their projects without worrying about legal implications.
-- **Do you have LLM-agents instructions?**: Yes, available under this spoiler,
+- **Do you have LLM-agents instructions?**: Yes, available under this spoiler:
 
-  <details>
-  <summary>LLM-agent instructions</summary>
+<details>
+<summary>LLM-agent instructions</summary>
 
-  ### Instructions for LLM Agents (Google Gemini, Anthropic Claude, OpenAI GPT)
+### LLM-agent instructions for l10n_currencies
 
-  This section provides optimized instructions for LLM agents to integrate the `l10n_currencies` package into Dart or Flutter projects via GitHub Copilot or Cursor.
+Optimized for high-level models from **Google**, **Anthropic**, and **OpenAI** for use via **GitHub Copilot**, **Claude Code** or **Cursor**.
 
-  #### 1. Package Installation
+#### 1. Package Installation
 
-  To add the package to the project, use one of the following commands:
+To add the package to the project, use one of the following commands:
 
-  - For Dart projects: `dart pub add l10n_currencies`
-  - For Flutter projects: `flutter pub add l10n_currencies`
+- For Dart projects: `dart pub add l10n_currencies`
+- For Flutter projects: `flutter pub add l10n_currencies`
 
-  #### 2. Import the Package
+#### 2. Import the Package
 
-  Add the following import statement to the relevant Dart file:
+Add the following import statement to the relevant Dart file:
 
-  ```dart
-  import 'package:l10n_currencies/l10n_currencies.dart';
-  ```
+```dart
+import 'package:l10n_currencies/l10n_currencies.dart';
+```
 
-  #### 3. Core Implementation (Usage)
+#### 3. Core Implementation (Usage)
 
-  The package uses `CurrenciesLocaleMapper` to provide localized currency names.
+The package uses `CurrenciesLocaleMapper` to provide localized currency names.
 
-  **Example Implementation:**
+**Example Implementation:**
 
-  ```dart
-  final mapper = CurrenciesLocaleMapper();
-  final isoCodes = {"USD", "EUR", "GBP"};
-  final localizedNames = mapper.localize(
-    isoCodes,
-    mainLocale: "en", // Specify the target locale
-    fallbackLocale: "sk", // Optional: specify a fallback locale
-  );
-  ```
+```dart
+final mapper = CurrenciesLocaleMapper();
+final isoCodes = {"USD", "EUR", "GBP"};
+final localizedNames = mapper.localize(
+  isoCodes,
+  mainLocale: "en", // Specify the target locale
+  fallbackLocale: "sk", // Optional: specify a fallback locale
+);
+```
 
-  #### 4. Performance Optimization (Tree-shaking)
+#### 4. Performance Optimization (Tree-shaking)
 
-  To minimize the application size, the package supports tree-shaking for translations. Use `--dart-define` flags to include only necessary locales during the build process:
+To minimize the application size, the package supports tree-shaking for translations. Use `--dart-define` flags to include only necessary locales during the build process:
 
-  - Example: `flutter build apk --dart-define=l10n-en=true --dart-define=l10n-sk=true`
+- Example: `flutter build apk --dart-define=l10n-en=true --dart-define=l10n-sk=true`
 
-  #### 5. Best Practices for LLM Agents
+#### 5. Best Practices for LLM Agents
 
-  - **Single-use Mappers**: The `CurrenciesLocaleMapper` instances are designed for **single-use only**. They clear their internal data after `localize()` is called to save memory.
-  - **No Caching**: Do NOT cache mapper instances. Always create a new instance when you need to perform localization.
-  - **Result Caching**: Cache the *results* of the `localize()` method if you need to use them multiple times, rather than keeping the mapper instance alive.
+- **Single-use Mappers**: The `CurrenciesLocaleMapper` instances are designed for **single-use only**. They clear their internal data after `localize()` is called to save memory.
+- **No Caching**: Do NOT cache mapper instances. Always create a new instance when you need to perform localization.
+- **Result Caching**: Cache the _results_ of the `localize()` method if you need to use them multiple times, rather than keeping the mapper instance alive.
 
   </details>
 

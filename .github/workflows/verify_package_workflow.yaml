@@ -77,14 +77,10 @@ jobs:
         run: |
           sudo apt-get install webp
           if [ "${{ inputs.is_flutter }}" = "true" ]; then
-            PANA=$(dart run pana . --no-warning --flutter-sdk $FLUTTER_ROOT)
+            dart run pana . --no-warning --exit-code-threshold 0 --flutter-sdk $FLUTTER_ROOT
           else
-            PANA=$(dart run pana . --no-warning)
+            dart run pana . --no-warning --exit-code-threshold 0
           fi
-          PANA_SCORE=$(echo $PANA | sed -n "s/.*Points: \([0-9]*\)\/\([0-9]*\)./\1\/\2/p")
-          echo "score: $PANA_SCORE"
-          IFS='/' read -ra SCORE_ARR <<< "$PANA_SCORE"; SCORE=${SCORE_ARR[0]}
-          if (( SCORE < 160 )); then echo "Minimum score of 160 was not met! Got $SCORE."; exit 1; fi
 
       - name: 📥 Install DCM
         if: ${{ github.event_name == 'pull_request' }}
@@ -121,20 +117,6 @@ jobs:
       - name: 🔬 Run Flutter tests
         if: ${{ inputs.is_flutter }}
         run: flutter test --coverage --no-pub
-
-      - name: 🧾 Debug coverage file
-        if: ${{ env.ACTIONS_RUNNER_DEBUG == 'true' || env.ACTIONS_STEP_DEBUG == 'true' }}
-        run: |
-          PKG_DIR="${{ github.workspace }}/${{ env.relative_path }}"
-          COVERAGE_FILE="$PKG_DIR/coverage/lcov.info"
-          echo "coverage file path: $COVERAGE_FILE"
-          if [ -f "$COVERAGE_FILE" ]; then
-            ls -l "$COVERAGE_FILE"
-            head -n 40 "$COVERAGE_FILE"
-          else
-            echo "coverage file not found; searching..."
-            find "$PKG_DIR" -name 'lcov.info' -print || true
-          fi
 
       - name: 📊 Check code coverage
         uses: VeryGoodOpenSource/very_good_coverage@v3.0.0

@@ -159,11 +159,11 @@ For more usage examples, please see the `/example` folder.
 Yes, for sure! You can find them under this spoiler:
 
 <details>
-<summary><strong>LLM-agent instructions</strong> (click to expand)</summary>
+<summary>LLM-agent instructions</summary>
 
-### LLM Agent Guide: `sealed_countries` Implementation
+### LLM-agent instructions for sealed_countries
 
-Optimized for high-level models from **Google**, **Anthropic**, and **OpenAI** within **GitHub Copilot** or **Cursor**.
+Optimized for high-level models from **Google**, **Anthropic**, and **OpenAI** for use via **GitHub Copilot**, **Claude Code** or **Cursor**.
 
 #### Context
 
@@ -196,8 +196,8 @@ dependencies:
 
 #### Resource Navigation
 
-- **Currencies**: For detailed currency formatting/subunits, refer to `sealed_currencies` documentation.
-- **Languages**: For detailed language/script info, refer to `sealed_languages` documentation.
+- **Currencies**: For detailed currency formatting/subunits, refer to `sealed_currencies` [documentation](https://github.com/tsinis/sealed_world/blob/main/packages/sealed_currencies/README.md).
+- **Languages**: For detailed language/script info, refer to `sealed_languages` [documentation](https://github.com/tsinis/sealed_world/blob/main/packages/sealed_languages/README.md).
 
 </details>
 

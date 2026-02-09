@@ -302,6 +302,7 @@ class _FlagShaderSurfaceState extends State<FlagShaderSurface>
     final delegateChanged =
         oldWidget.delegateBuilder != widget.delegateBuilder ||
         oldWidget.options != widget.options ||
+        oldWidget.item != widget.item ||
         oldWidget.shader != widget.shader;
 
     if (delegateChanged) {
