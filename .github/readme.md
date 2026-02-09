@@ -8,6 +8,7 @@
 [![GitHub stars](https://img.shields.io/github/stars/tsinis/sealed_world?style=flat&color=green)](https://github.com/tsinis/sealed_world/stargazers)
 [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
 ![Commits](https://img.shields.io/github/commit-activity/m/tsinis/sealed_world)
+[![FOSSA Status](https://app.fossa.com/api/projects/git%2Bgithub.com%2Ftsinis%2Fsealed_world.svg?type=shield)](https://app.fossa.com/projects/git%2Bgithub.com%2Ftsinis%2Fsealed_world?ref=badge_shield)
 
 ## Sealed World
 
@@ -124,3 +125,7 @@ This package includes an automated benchmark system that runs on every release t
 To run benchmarks locally or learn more about the system, see the [benchmarks documentation](../packages/world_countries/example/benchmarks/README.md). Execute the shared CLI via `dart run tools/bin/benchmarks.dart $package_name` (or `cd tools && dart run :benchmarks $package_name`). Current targets include all Flutter packages. All benchmark data is immutable and versioned, ensuring full auditability and regression traceability.
 
 [^1]: While `sealed_languages` technically depends on `l10n_languages` for localization, this is not part of its core functionality. The package primarily serves as the backbone for all `sealed_*` and `world_*` packages by providing typed locale classes and extensions that power localization maps across the entire ecosystem.
+
+
+## License
+[![FOSSA Status](https://app.fossa.com/api/projects/git%2Bgithub.com%2Ftsinis%2Fsealed_world.svg?type=large)](https://app.fossa.com/projects/git%2Bgithub.com%2Ftsinis%2Fsealed_world?ref=badge_large)
