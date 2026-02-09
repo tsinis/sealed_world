@@ -2,11 +2,15 @@
 
 DOCUMENTATION
 
+Docs only, no code changes:
+
 - Added FOSSA status badge to the README (docs only, no code changes).
 
 ## 2.0.1
 
 DOCUMENTATION
+
+Docs only, no code changes:
 
 - Improved CHANGELOG for clarity.
 - Added LLM agent instructions to the README.
