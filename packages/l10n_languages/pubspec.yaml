@@ -1,4 +1,4 @@
-version: 2.0.1
+version: 2.0.2
 name: l10n_languages
 description: Provides language names translations (for 157 different locales).
 maintainer: Roman Cinis

@@ -8,6 +8,7 @@
 [![GitHub stars](https://img.shields.io/github/stars/tsinis/sealed_world?style=flat&color=green)](https://github.com/tsinis/sealed_world/stargazers)
 [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
 [![Pub package](https://img.shields.io/pub/v/l10n_countries.svg)](https://pub.dev/packages/l10n_countries)
+[![FOSSA Status](https://app.fossa.com/api/projects/git%2Bgithub.com%2Ftsinis%2Fsealed_world.svg?type=shield&issueType=security)](https://app.fossa.com/projects/git%2Bgithub.com%2Ftsinis%2Fsealed_world?ref=badge_shield&issueType=security)
 
 This ISO-driven, pure Dart, fully tested and dependency-free package provides CLDR-like translations for country names in `194` different locales. For Flutter-ready widgets (like country picker) please use [world_countries](https://pub.dev/packages/world_countries) package. For Dart-only use - it's recommended to use together with [sealed_countries](https://pub.dev/packages/sealed_countries) package.
 
@@ -87,7 +88,10 @@ void main() {
 - **Industry adopted**: This package is actively used in production by numerous European companies, ensuring its efficacy and robustness in real-world scenarios.
 - **Lightweight**: This package keeps **under 500 KB**, ensuring it fits within the pub cache limit. This leads to quick, low-bandwidth downloads and faster caching, minimizing resource impact.
 - **MIT license**: This package and sources are released under the MIT license, which is a permissive license that allows users to use, modify, and distribute the code with minimal restrictions. The MIT license is considered better than most other open-source licenses because it provides flexibility and allows users to incorporate the code into their projects without worrying about legal implications.
-- **Do you have LLM-agents instructions?**: Yes, available under this spoiler:
+
+#### Do you have LLM-agents instructions?
+
+Yes, available under this spoiler:
 
 <details>
 <summary>LLM-agent instructions</summary>
