@@ -136,7 +136,7 @@ Yes, for sure! You can find them under this spoiler:
 <details>
 <summary>LLM-agent instructions</summary>
 
-### LLM-agent instructions for l10n_currencies
+### LLM-agent instructions for sealed_currencies
 
 Optimized for high-level models from **Google**, **Anthropic**, and **OpenAI** for use via **GitHub Copilot**, **Claude Code** or **Cursor**.
 
