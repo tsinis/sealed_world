@@ -13,6 +13,7 @@ class CurrencyPicker extends BasicPicker<FiatCurrency, CurrencyTile> {
   /// Constructor for the [CurrencyPicker] class.
   ///
   /// * [currencies] is the list of fiat currencies to display.
+  /// * [flagTheme] is the optional [FlagThemeData] override for flags.
   /// * All other parameters are optional and are passed
   /// to the superclass constructor.
   const CurrencyPicker({
@@ -56,6 +57,7 @@ class CurrencyPicker extends BasicPicker<FiatCurrency, CurrencyTile> {
     super.verticalDirection,
     super.spacing,
     super.maps,
+    super.flagTheme,
   }) : super(currencies);
 
   @override
@@ -64,6 +66,7 @@ class CurrencyPicker extends BasicPicker<FiatCurrency, CurrencyTile> {
         props,
         title: itemNameTranslated(props.item, props.context),
         leadingFlag: maybeMaps(props.context)?.currencyFlags[props.item],
+        flagTheme: maybeFlagTheme(props.context),
         onPressed: onSelect,
       );
 
@@ -141,6 +144,7 @@ class CurrencyPicker extends BasicPicker<FiatCurrency, CurrencyTile> {
     Widget? Function(ItemProperties<FiatCurrency>, CurrencyTile)? itemBuilder,
     double? spacing,
     IsoMaps? maps,
+    FlagThemeData? flagTheme,
   }) => CurrencyPicker(
     currencies: items ?? this.items,
     addAutomaticKeepAlives:
@@ -187,5 +191,6 @@ class CurrencyPicker extends BasicPicker<FiatCurrency, CurrencyTile> {
     verticalDirection: verticalDirection ?? this.verticalDirection,
     spacing: spacing ?? this.spacing,
     maps: maps ?? this.maps,
+    flagTheme: flagTheme ?? this.flagTheme,
   );
 }

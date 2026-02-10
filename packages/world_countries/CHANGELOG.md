@@ -1,5 +1,9 @@
 ## 4.0.1
 
+NEW FEATURES
+
+- Added `flagTheme` override to all pickers and picker theme data.
+
 REFACTOR
 
 - Added `item` comparison to `FlagShaderSurface` change detection logic to ensure proper updates when the item changes.

@@ -82,6 +82,7 @@ abstract class BasicPicker<T extends IsoTranslated, W extends IsoTile<T>>
   ///   in the search bar.
   /// * [maps] is the optional [IsoMaps] bundle containing pre-computed
   ///   translation caches and optional flag overrides.
+  /// * [flagTheme] is the optional [FlagThemeData] override for flags.
   const BasicPicker(
     super.items, {
     super.addAutomaticKeepAlives,
@@ -123,6 +124,7 @@ abstract class BasicPicker<T extends IsoTranslated, W extends IsoTile<T>>
     this.searchBarPadding, // Default: EdgeInsets.only(left:8, top:8, right:8).
     this.showClearButton = true,
     this.maps,
+    this.flagTheme,
   }) : super(header: searchBar, itemBuilder: itemBuilder);
 
   /// Custom itemBuilder that receives the default tile for customization.
@@ -171,6 +173,12 @@ abstract class BasicPicker<T extends IsoTranslated, W extends IsoTile<T>>
   /// Cached translations/flags bundle to use for rendering.
   @override
   final IsoMaps? maps;
+
+  /// Optional [FlagThemeData] override for the flags rendered in tiles.
+  ///
+  /// When not provided, the [FlagThemeData] from the current [Theme] is used.
+  @override
+  final FlagThemeData? flagTheme;
 
   /// Returns the default tile widget for the items.
   ///
@@ -310,6 +318,17 @@ abstract class BasicPicker<T extends IsoTranslated, W extends IsoTile<T>>
 
     return result;
   }
+
+  /// Returns the first available [FlagThemeData] from the following sources
+  /// in order: direct [flagTheme] parameter, theme [PickersThemeData], or the
+  /// current [Theme] extension. Falls back to a default [FlagThemeData.small()]
+  /// flag theme if none of the sources provide a flag theme.
+  @protected
+  FlagThemeData maybeFlagTheme(BuildContext? context) =>
+      flagTheme ??
+      context?.pickersTheme?.flagTheme ??
+      context?.flagTheme ??
+      const FlagThemeData.small();
 
   @override
   State<BasicPicker<T, W>> createState() => _BasicPickerState<T, W>();
@@ -603,5 +622,6 @@ abstract class BasicPicker<T extends IsoTranslated, W extends IsoTile<T>>
     Widget? Function(ItemProperties<T>, IsoTile<T>)? itemBuilder,
     double? spacing,
     IsoMaps? maps,
+    FlagThemeData? flagTheme,
   });
 }

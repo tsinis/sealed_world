@@ -1,6 +1,7 @@
 import "package:flutter/gestures.dart";
 import "package:flutter/material.dart";
 import "package:meta/meta.dart" show useResult;
+import "package:world_flags/world_flags.dart";
 
 import "../constants/ui_constants.dart";
 import "../interfaces/basic_picker_interface.dart";
@@ -53,6 +54,7 @@ class PickersThemeData extends ThemeExtension<PickersThemeData>
     this.showClearButton = true,
     this.searchBar,
     this.maps,
+    this.flagTheme,
     this.spacing = 0,
   });
 
@@ -77,6 +79,7 @@ class PickersThemeData extends ThemeExtension<PickersThemeData>
     TextField? searchBar,
     EdgeInsetsGeometry? searchBarPadding,
     IsoMaps? maps,
+    FlagThemeData? flagTheme,
     Widget? separator,
     bool? showHeader,
     Widget? header,
@@ -126,6 +129,7 @@ class PickersThemeData extends ThemeExtension<PickersThemeData>
     showClearButton: showClearButton ?? this.showClearButton,
     searchBar: searchBar ?? this.searchBar,
     maps: maps ?? this.maps,
+    flagTheme: flagTheme ?? this.flagTheme,
     spacing: spacing ?? this.spacing,
   );
 
@@ -147,6 +151,9 @@ class PickersThemeData extends ThemeExtension<PickersThemeData>
 
   @override
   final IsoMaps? maps;
+
+  @override
+  final FlagThemeData? flagTheme;
 
   @override
   final Widget? separator;
