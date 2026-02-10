@@ -16,6 +16,7 @@ class FlagThemeController extends ChangeNotifier {
   static const _defaultTheme = FlagThemeData(
     decorationPosition: DecorationPosition.background,
     aspectRatio: FlagConstants.defaultAspectRatio,
+    height: 18,
     decoration: BoxDecoration(
       borderRadius: defaultBorderRadius,
       border: Border.fromBorderSide(defaultBorder),

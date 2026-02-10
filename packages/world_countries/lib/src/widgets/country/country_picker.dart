@@ -60,6 +60,7 @@ class CountryPicker extends BasicPicker<WorldCountry, CountryTile> {
   /// * [textDirection] is the text direction for the items.
   /// * [verticalDirection] is the vertical direction for the items.
   /// * [maps] is the optional [IsoMaps] bundle with translations/flags.
+  /// * [flagTheme] is the optional [FlagThemeData] override for flags.
   const CountryPicker({
     Iterable<WorldCountry>? countries,
     super.addAutomaticKeepAlives,
@@ -101,6 +102,7 @@ class CountryPicker extends BasicPicker<WorldCountry, CountryTile> {
     super.verticalDirection,
     super.spacing,
     super.maps,
+    super.flagTheme,
   }) : super(countries);
 
   @override
@@ -109,6 +111,7 @@ class CountryPicker extends BasicPicker<WorldCountry, CountryTile> {
         props,
         title: itemNameTranslated(props.item, props.context),
         leadingFlag: maybeMaps(props.context)?.countryFlags[props.item],
+        flagTheme: resolvedFlagTheme(props.context),
         onPressed: onSelect,
       );
 
@@ -186,6 +189,7 @@ class CountryPicker extends BasicPicker<WorldCountry, CountryTile> {
     Widget? Function(ItemProperties<WorldCountry>, CountryTile)? itemBuilder,
     double? spacing,
     IsoMaps? maps,
+    FlagThemeData? flagTheme,
   }) => CountryPicker(
     countries: items ?? this.items,
     addAutomaticKeepAlives:
@@ -232,5 +236,6 @@ class CountryPicker extends BasicPicker<WorldCountry, CountryTile> {
     verticalDirection: verticalDirection ?? this.verticalDirection,
     spacing: spacing ?? this.spacing,
     maps: maps ?? this.maps,
+    flagTheme: flagTheme ?? this.flagTheme,
   );
 }

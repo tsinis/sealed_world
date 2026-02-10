@@ -13,6 +13,7 @@ class LanguagePicker extends BasicPicker<NaturalLanguage, LanguageTile> {
   /// Constructor for the [LanguagePicker] class.
   ///
   /// * [languages] is the list of natural languages to display.
+  /// * [flagTheme] is the optional [FlagThemeData] override for flags.
   /// * All other parameters are optional and are passed
   /// to the superclass constructor.
   const LanguagePicker({
@@ -56,6 +57,7 @@ class LanguagePicker extends BasicPicker<NaturalLanguage, LanguageTile> {
     super.verticalDirection,
     super.spacing,
     super.maps,
+    super.flagTheme,
   }) : super(languages);
 
   @override
@@ -64,6 +66,7 @@ class LanguagePicker extends BasicPicker<NaturalLanguage, LanguageTile> {
         props,
         title: itemNameTranslated(props.item, props.context),
         leadingFlag: maybeMaps(props.context)?.languageFlags[props.item],
+        flagTheme: resolvedFlagTheme(props.context),
         onPressed: onSelect,
       );
 
@@ -142,6 +145,7 @@ class LanguagePicker extends BasicPicker<NaturalLanguage, LanguageTile> {
     itemBuilder,
     double? spacing,
     IsoMaps? maps,
+    FlagThemeData? flagTheme,
   }) => LanguagePicker(
     languages: items ?? this.items,
     addAutomaticKeepAlives:
@@ -188,5 +192,6 @@ class LanguagePicker extends BasicPicker<NaturalLanguage, LanguageTile> {
     verticalDirection: verticalDirection ?? this.verticalDirection,
     maps: maps ?? this.maps,
     spacing: spacing ?? this.spacing,
+    flagTheme: flagTheme ?? this.flagTheme,
   );
 }
