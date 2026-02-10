@@ -66,7 +66,7 @@ class CurrencyPicker extends BasicPicker<FiatCurrency, CurrencyTile> {
         props,
         title: itemNameTranslated(props.item, props.context),
         leadingFlag: maybeMaps(props.context)?.currencyFlags[props.item],
-        flagTheme: maybeFlagTheme(props.context),
+        flagTheme: resolvedFlagTheme(props.context),
         onPressed: onSelect,
       );
 

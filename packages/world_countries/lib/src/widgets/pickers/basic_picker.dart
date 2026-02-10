@@ -324,7 +324,7 @@ abstract class BasicPicker<T extends IsoTranslated, W extends IsoTile<T>>
   /// current [Theme] extension. Falls back to a default [FlagThemeData.small()]
   /// flag theme if none of the sources provide a flag theme.
   @protected
-  FlagThemeData maybeFlagTheme(BuildContext? context) =>
+  FlagThemeData resolvedFlagTheme(BuildContext? context) =>
       flagTheme ??
       context?.pickersTheme?.flagTheme ??
       context?.flagTheme ??

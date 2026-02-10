@@ -66,7 +66,7 @@ class LanguagePicker extends BasicPicker<NaturalLanguage, LanguageTile> {
         props,
         title: itemNameTranslated(props.item, props.context),
         leadingFlag: maybeMaps(props.context)?.languageFlags[props.item],
-        flagTheme: maybeFlagTheme(props.context),
+        flagTheme: resolvedFlagTheme(props.context),
         onPressed: onSelect,
       );
 

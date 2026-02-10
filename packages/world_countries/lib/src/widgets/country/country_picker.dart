@@ -111,7 +111,7 @@ class CountryPicker extends BasicPicker<WorldCountry, CountryTile> {
         props,
         title: itemNameTranslated(props.item, props.context),
         leadingFlag: maybeMaps(props.context)?.countryFlags[props.item],
-        flagTheme: maybeFlagTheme(props.context),
+        flagTheme: resolvedFlagTheme(props.context),
         onPressed: onSelect,
       );
 
