@@ -19,7 +19,7 @@ jobs:
   deploy:
     name: 🚀 Deploy example website
     runs-on: ubuntu-latest
-    timeout-minutes: 24
+    timeout-minutes: 20
     steps:
       - name: 📚 Git checkout
         uses: actions/checkout@v6.0.2
@@ -32,7 +32,7 @@ jobs:
 
       - name: 📦 Install dependencies
         working-directory: packages/world_countries/example
-        run: flutter pub get
+        run: flutter pub upgrade
 
       - name: 🛠️ Build for web
         working-directory: packages/world_countries/example

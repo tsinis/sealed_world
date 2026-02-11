@@ -3,10 +3,9 @@
 REFACTOR
 
 - Added `item` comparison to `FlagShaderSurface` change detection logic to ensure proper updates when the item changes.
+- Adjusted Nepal flag (`NplPainter`) stroke paint configuration by explicitly setting `strokeMiterLimit` to prevent miter-to-bevel fallback on acute angles. This ensures the triangle apexes render as sharp points regardless of the flag's aspect ratio.
 
 DOCUMENTATION
-
-Docs only, no code changes:
 
 - Improved CHANGELOG for clarity.
 - Added LLM agent instructions to the README.

@@ -184,8 +184,8 @@ This package is licensed under the MIT license (see [LICENSE](./LICENSE) for det
 - **No external 3rd-party dependencies**: This package has no external third-party dependencies. It relies on the Flutter SDK and other packages within the `sealed_world` monorepo, ensuring controlled and consistent integration.
 - **Rich data**: This package offers far more data than any other package + tons of translations (all [GlobalMaterialLocalizations](https://api.flutter.dev/flutter/flutter_localizations/GlobalMaterialLocalizations-class.html) and [GlobalCupertinoLocalizations](https://api.flutter.dev/flutter/flutter_localizations/GlobalCupertinoLocalizations-class.html) locales and more).
 - **Type-safe**: The contracts and types in this package are exceptionally strong, ensuring that your code is strongly typed and well-defined.
-- **High code coverage**: The code in this package has 100% code coverage, with **_more than 1.6K (+3.2K in underlying Dart packages) tests_**, providing confidence in its reliability and stability.
-- **Comprehensive documentation**: This package provides full documentation for every non-code generated public member, usually with examples, ensuring clarity and ease of use.
+- **High code coverage**: The code in this package has 100% code coverage, with more than **1.6K (+3.6K in underlying Dart packages) tests**, providing confidence in its reliability and stability.
+- **Comprehensive documentation**: This package provides full documentation for every public member, usually with examples, ensuring clarity and ease of use.
 - **Lightweight**: This package keeps **under 500 KB**, ensuring it fits within the pub cache limit. This leads to quick, low-bandwidth downloads and faster caching, minimizing resource impact. Asset‑based (SVG/JPG/TTF) flag sets typically cannot achieve this size without aggressive optimization.
 - **Mirrored Repository**: The GitHub repository, including all package tags, is mirrored on [GitLab](https://gitlab.com/tsinis/sealed_world/), providing an alternative access point should GitHub become unavailable.
 - **Industry adopted**: This package is actively used in production by numerous European companies, ensuring its efficacy and robustness in real-world scenarios.
@@ -222,7 +222,7 @@ flutter pub add world_flags
 
 When working with this package, please keep the following in mind:
 
-- **Usage**: Use the `CountryFlag` widget to display flags. It requires a `WorldCountry` instance (from `sealed_countries` or `world_countries`).
+- **Usage**: Use the `CountryFlag` or `IsoFlag` widget to display flags. It requires a `WorldCountry` instance (from `sealed_countries` or `world_countries`).
 - **Localization (L10N)**: Localization is already integrated into the ISO classes (e.g., `WorldCountry`) in the underlying data packages. You don't need to use `l10n_` packages directly for basic translation needs.
 - **Underlying Data**: This package uses data from `sealed_countries`. For detailed information about country models, refer to the [`sealed_countries`](https://github.com/tsinis/sealed_world/blob/main/packages/sealed_countries/README.md) README.
 - **Integration**: If you need ready-to-use pickers that include these flags, refer to the [`world_countries`](https://github.com/tsinis/sealed_world/blob/main/packages/world_countries/README.md) package.
@@ -231,8 +231,7 @@ When working with this package, please keep the following in mind:
   ```dart
   import 'package:world_flags/world_flags.dart';
 
-  // Display a flag
-  const countryFlag = CountryFlag(CountryDeu());
+  const countryFlag = CountryFlag.simplified(CountryDeu()); // Flag for Germany.
   ```
 
 </details>
