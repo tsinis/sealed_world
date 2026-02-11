@@ -26,7 +26,8 @@ final class NplPainter extends CustomElementsPainter {
         path,
         paintCreator(customColors.first)
           ..style = PaintingStyle.stroke
-          ..strokeWidth = height / 15,
+          ..strokeWidth = height / 15
+          ..strokeMiterLimit = 10, // Sharp triangle apexes at any aspect ratio.
       )
       ..drawPath(path, paintCreator());
 
