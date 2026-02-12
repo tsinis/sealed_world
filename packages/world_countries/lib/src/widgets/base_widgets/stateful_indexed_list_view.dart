@@ -43,6 +43,7 @@ abstract class StatefulIndexedListView<T extends Object, W extends Widget>
     this.dragStartBehavior, // Default to: DragStartBehavior.start.
     this.emptyStatePlaceholder = UiConstants.placeholder, // SizedBox.shrink().
     this.header,
+    this.hitTestBehavior, // Default to: HitTestBehavior.opaque.
     this.itemBuilder,
     // Default to: ScrollViewKeyboardDismissBehavior.manual.
     this.keyboardDismissBehavior,
@@ -175,6 +176,9 @@ abstract class StatefulIndexedListView<T extends Object, W extends Widget>
 
   @override
   final DragStartBehavior? dragStartBehavior;
+
+  @override
+  final HitTestBehavior? hitTestBehavior;
 
   @override
   final ScrollViewKeyboardDismissBehavior? keyboardDismissBehavior;

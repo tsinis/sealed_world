@@ -38,6 +38,7 @@ class PickersThemeData extends ThemeExtension<PickersThemeData>
     this.direction = Axis.vertical,
     this.dragStartBehavior = DragStartBehavior.start,
     this.header,
+    this.hitTestBehavior = HitTestBehavior.opaque,
     this.keyboardDismissBehavior = ScrollViewKeyboardDismissBehavior.manual,
     this.mainAxisAlignment = MainAxisAlignment.start,
     this.mainAxisSize = MainAxisSize.min,
@@ -101,6 +102,7 @@ class PickersThemeData extends ThemeExtension<PickersThemeData>
     bool? addSemanticIndexes,
     double? cacheExtent,
     DragStartBehavior? dragStartBehavior,
+    HitTestBehavior? hitTestBehavior,
     ScrollViewKeyboardDismissBehavior? keyboardDismissBehavior,
     double? spacing,
   }) => PickersThemeData(
@@ -112,6 +114,7 @@ class PickersThemeData extends ThemeExtension<PickersThemeData>
     direction: direction ?? this.direction,
     dragStartBehavior: dragStartBehavior ?? this.dragStartBehavior,
     header: header ?? this.header,
+    hitTestBehavior: hitTestBehavior ?? this.hitTestBehavior,
     keyboardDismissBehavior:
         keyboardDismissBehavior ?? this.keyboardDismissBehavior,
     mainAxisAlignment: mainAxisAlignment ?? this.mainAxisAlignment,
@@ -215,6 +218,9 @@ class PickersThemeData extends ThemeExtension<PickersThemeData>
 
   @override
   final DragStartBehavior dragStartBehavior;
+
+  @override
+  final HitTestBehavior hitTestBehavior;
 
   @override
   final ScrollViewKeyboardDismissBehavior keyboardDismissBehavior;

@@ -32,6 +32,7 @@ class CountryPicker extends BasicPicker<WorldCountry, CountryTile> {
   /// * [emptyStatePlaceholder] is the widget to display when the list is empty.
   /// * [itemBuilder] is the builder function for the items.
   /// * [key] is the optional key to use for the widget.
+  /// * [hitTestBehavior] is the hit test behavior for the list.
   /// * [keyboardDismissBehavior] is the keyboard dismiss behavior for the list.
   /// * [mainAxisAlignment] is the main axis alignment for the list.
   /// * [mainAxisSize] is the main axis size for the list.
@@ -78,6 +79,7 @@ class CountryPicker extends BasicPicker<WorldCountry, CountryTile> {
     super.emptyStatePlaceholder,
     super.itemBuilder,
     super.key,
+    super.hitTestBehavior,
     super.keyboardDismissBehavior,
     super.mainAxisAlignment,
     super.mainAxisSize,
@@ -160,6 +162,7 @@ class CountryPicker extends BasicPicker<WorldCountry, CountryTile> {
     DragStartBehavior? dragStartBehavior,
     Widget? emptyStatePlaceholder,
     Key? key,
+    HitTestBehavior? hitTestBehavior,
     ScrollViewKeyboardDismissBehavior? keyboardDismissBehavior,
     MainAxisAlignment? mainAxisAlignment,
     MainAxisSize? mainAxisSize,
@@ -210,6 +213,7 @@ class CountryPicker extends BasicPicker<WorldCountry, CountryTile> {
         itemBuilder?.call(props, tile ?? defaultBuilder(props)) ??
         this.itemBuilder?.call(props, tile),
     key: key ?? this.key,
+    hitTestBehavior: hitTestBehavior ?? this.hitTestBehavior,
     keyboardDismissBehavior:
         keyboardDismissBehavior ?? this.keyboardDismissBehavior,
     mainAxisAlignment: mainAxisAlignment ?? this.mainAxisAlignment,

@@ -36,6 +36,7 @@ class PhoneCodePicker extends CountryPicker {
     super.emptyStatePlaceholder,
     super.itemBuilder,
     super.key,
+    super.hitTestBehavior,
     super.keyboardDismissBehavior,
     super.mainAxisAlignment,
     super.mainAxisSize,
@@ -86,6 +87,7 @@ class PhoneCodePicker extends CountryPicker {
         dragStartBehavior: picker.dragStartBehavior,
         emptyStatePlaceholder: picker.emptyStatePlaceholder,
         itemBuilder: picker.itemBuilder,
+        hitTestBehavior: picker.hitTestBehavior,
         keyboardDismissBehavior: picker.keyboardDismissBehavior,
         mainAxisAlignment: picker.mainAxisAlignment,
         mainAxisSize: picker.mainAxisSize,
@@ -171,6 +173,7 @@ class PhoneCodePicker extends CountryPicker {
     DragStartBehavior? dragStartBehavior,
     Widget? emptyStatePlaceholder,
     Key? key,
+    HitTestBehavior? hitTestBehavior,
     ScrollViewKeyboardDismissBehavior? keyboardDismissBehavior,
     MainAxisAlignment? mainAxisAlignment,
     MainAxisSize? mainAxisSize,
@@ -221,6 +224,7 @@ class PhoneCodePicker extends CountryPicker {
         itemBuilder?.call(props, tile ?? defaultBuilder(props)) ??
         this.itemBuilder?.call(props, tile),
     key: key ?? this.key,
+    hitTestBehavior: hitTestBehavior ?? this.hitTestBehavior,
     keyboardDismissBehavior:
         keyboardDismissBehavior ?? this.keyboardDismissBehavior,
     mainAxisAlignment: mainAxisAlignment ?? this.mainAxisAlignment,
