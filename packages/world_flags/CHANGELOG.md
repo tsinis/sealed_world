@@ -7,7 +7,7 @@ REFACTOR
 
 DOCUMENTATION
 
-- Improved CHANGELOG for clarity.
+- Added `platforms` section to `pubspec.yaml` to explicitly declare support for **all official Flutter platforms**.
 - Added LLM agent instructions to the README.
 - Added FOSSA status badge.
 

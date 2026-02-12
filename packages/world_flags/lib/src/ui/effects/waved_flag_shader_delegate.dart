@@ -1,9 +1,9 @@
-import "dart:io" show Platform;
 import "dart:math" as math;
 import "dart:ui";
 
 import "package:flutter/foundation.dart";
 
+import "../../helpers/platform_environment.dart";
 import "../painters/basic/shader_stripes_painter.dart"
     show ShaderStripesPainter;
 import "animated_flag_shader_delegate.dart";
@@ -66,7 +66,7 @@ class WavedFlagShaderDelegate extends AnimatedFlagShaderDelegate {
       debugPrint("WavedFlagShaderDelegate paint failed: $error\n$stackTrace");
 
   static final _shaderPath =
-      !kIsWeb && Platform.environment.containsKey("FLUTTER_TEST")
+      !kIsWeb && platformEnvironment.containsKey("FLUTTER_TEST")
       ? "shaders/waved_flag.frag"
       : "packages/world_flags/shaders/waved_flag.frag";
 

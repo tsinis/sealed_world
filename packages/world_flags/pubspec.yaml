@@ -19,6 +19,15 @@ screenshots:
   - description: "Example of usage"
     path: doc/example.webp
 
+# This package supports all official Flutter platforms:
+platforms:
+  android:
+  ios:
+  linux:
+  macos:
+  web:
+  windows:
+
 environment:
   sdk: ^3.10.8
 
