@@ -88,6 +88,8 @@ final class BenchmarkRunner {
   }
 
   Future<void> _buildApk() async {
+    _logStep("Upgrading dependencies...");
+    if (!dryRun) await _runFlutterCommand(["pub", "upgrade"]);
     _logStep("Building APK with Flutter...");
     if (!dryRun) await _runFlutterCommand(config.buildArguments);
   }
@@ -244,9 +246,10 @@ final class BenchmarkRunner {
     required String executable,
     required String workingDirectory,
   }) async {
+    final commandLine = _formatCommand(executable, arguments);
+    _logInfo("Running: $commandLine (cwd: $workingDirectory)");
     if (verbose) {
-      final cwd = " (cwd: $workingDirectory)";
-      _logInfo("Running: $executable ${arguments.join(' ')}$cwd");
+      _logInfo("Verbose: enabled");
     }
     if (dryRun) return;
 
@@ -272,6 +275,23 @@ final class BenchmarkRunner {
   static void _logStep(String message) => stdout.writeln("\n🔄 $message");
 
   static void _logSuccess(String message) => stdout.writeln("\n✅ $message");
+
+  static String _formatCommand(String executable, List<String> arguments) {
+    if (arguments.isEmpty) return executable;
+
+    final formattedArgs = arguments.map(_quoteArg).join(" ");
+
+    return "$executable $formattedArgs";
+  }
+
+  static String _quoteArg(String arg) {
+    if (arg.isEmpty) return '""';
+    final needsQuotes =
+        arg.contains(" ") || arg.contains('"') || arg.contains("'");
+    if (!needsQuotes) return arg;
+
+    return '"${arg.replaceAll('"', r'\"')}"';
+  }
 
   String get _exampleDirectory =>
       p.normalize(p.join(_root, config.examplePath));
