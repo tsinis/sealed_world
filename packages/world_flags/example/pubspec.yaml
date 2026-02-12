@@ -1,4 +1,4 @@
-version: 3.0.0
+version: 3.0.1
 name: world_flags_example
 description: A world_flags package example application.
 publish_to: none
