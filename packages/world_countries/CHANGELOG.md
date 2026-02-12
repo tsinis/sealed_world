@@ -1,18 +1,23 @@
-## 4.0.1
+## 4.1.0
 
 NEW FEATURES
 
+- `ClearButton` now uses `onPressed` when provided and falls back to clearing the
+  controller when it is `null`.
+- Added `hitTestBehavior` to indexed list views, pickers, and picker themes.
 - Added `flagTheme` override to all pickers and picker theme data.
 
 REFACTOR
 
 - Added `item` comparison to `FlagShaderSurface` change detection logic to ensure proper updates when the item changes.
+- Adjusted Nepal flag (`NplPainter`) stroke paint configuration by explicitly setting `strokeMiterLimit` to prevent miter-to-bevel fallback on acute angles. This ensures the triangle apexes render as sharp points regardless of the flag's aspect ratio.
+
+CHORE
+
+- The Dart SDK was bumped to v3.11.0.
 
 DOCUMENTATION
 
-Docs only, no code changes:
-
-- TODO(@tsinis): Improve example app, update GIF.
 - Improved CHANGELOG for clarity.
 - Added LLM agent instructions to the README.
 - Added FOSSA status badge.

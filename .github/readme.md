@@ -34,54 +34,99 @@ A pure Dart, fully tested and ISO-driven ecosystem for the world's data in the f
 **This ecosystem follows a hierarchical structure** with optional localization support. At the foundation are **languages and scripts**, providing core functionality across all packages. Building upon this, **currencies** extend the system, followed by **countries**. Each core package has an optional **l10n** companion that provides localization maps. The **countries** package serves as a bridge to Flutter, enabling the rendering of country **flags**, which the **world_countries** package uses to create UI components like country pickers with localized names and visual elements.
 
 ```mermaid
-graph TB
+flowchart TD
+    %% Monorepo Root: Tools & CI
+    subgraph "Tools & CI"
+        direction TB
+        Tools["Code Generation Tools"]:::tools
+        GitHubWorkflows["GitHub Actions Workflows"]:::ci
+        DevContainer["Devcontainer"]:::tools
+        Pubspecs["Pubspecs"]:::config
+    end
 
-    %% Sealed packages
-    sealed_languages["<span title='Sealed Languages Package'>sealed_languages</span>"]
-    sealed_currencies["<span title='Sealed Currencies Package'>sealed_currencies</span>"]
-    sealed_countries["<span title='Sealed Countries Package'>sealed_countries</span>"]
+    %% Core Dart Sealed Packages (Layer 1)
+    subgraph "Core Dart Sealed Packages"
+        direction TB
+        SL["sealed_languages"]:::core
+        SCu["sealed_currencies"]:::core
+        SC["sealed_countries"]:::core
+    end
 
-    %% l10n packages
-    l10n_languages["<span title='L10N Languages Package'>l10n_languages</span>"]
-    l10n_currencies["<span title='L10N Currencies Package'>l10n_currencies</span>"]
-    l10n_countries["<span title='L10N Countries Package'>l10n_countries</span>"]
+    %% Dart Localization Packages (Layer 2)
+    subgraph "Dart Localization Packages"
+        direction TB
+        LL["l10n_languages"]:::l10n
+        LCu["l10n_currencies"]:::l10n
+        LC["l10n_countries"]:::l10n
+    end
 
-    %% World packages
-    world_flags["<span title='World Flags Package'>world_flags</span>"]
-    world_countries["<span title='World Countries Package'>world_countries</span>"]
+    %% Flutter UI Packages (Layer 3)
+    subgraph "Flutter UI Packages"
+        direction TB
+        WF["world_flags"]:::ui
+        WC["world_countries"]:::ui
+    end
 
-    %% Main chain, labeled arrow for Flutter
-    sealed_languages --> sealed_currencies --> sealed_countries -->| ― Flutter ― | world_flags --> world_countries
+    %% Example Applications
+    subgraph "Example Applications"
+        direction TB
+        WFEx["world_flags/example"]:::example
+        WCEx["world_countries/example"]:::example
+    end
 
-    %% l10n packages pointing to each sealed package
-    l10n_languages --> sealed_languages
-    l10n_currencies --> sealed_currencies
-    l10n_countries --> sealed_countries
+    %% External Services
+    subgraph "External Services"
+        direction TB
+        PubDev["pub.dev"]:::external
+    end
 
-    %% Styles for sealed (light fill) and world packages (darker border)
-    style sealed_languages fill:#aec7e8,stroke:#aec7e8,stroke-width:2px,fill-opacity:0.2,rx:10,ry:10
-    style sealed_currencies fill:#aec7e8,stroke:#aec7e8,stroke-width:2px,fill-opacity:0.2,rx:10,ry:10
-    style sealed_countries fill:#aec7e8,stroke:#aec7e8,stroke-width:2px,fill-opacity:0.2,rx:10,ry:10
-    style world_flags fill:#aec7e8,stroke:#0050B9,stroke-width:2px,fill-opacity:0.5,rx:10,ry:10
-    style world_countries fill:#aec7e8,stroke:#0050B9,stroke-width:2px,fill-opacity:0.5,rx:10,ry:10
+    %% Relationships
+    Tools -->|codegen| SL
+    Tools -->|codegen| LL
+    Tools -->|codegen| SCu
+    Tools -->|codegen| LCu
+    Tools -->|codegen| SC
+    Tools -->|codegen| LC
 
-    %% Styles for l10n packages (turquoise fill)
-    style l10n_languages fill:#40DBE0BE,stroke:#aec7e8,stroke-width:2px,fill-opacity:0.2,rx:10,ry:10
-    style l10n_currencies fill:#40DBE0BE,stroke:#aec7e8,stroke-width:2px,fill-opacity:0.2,rx:10,ry:10
-    style l10n_countries fill:#40DBE0BE,stroke:#aec7e8,stroke-width:2px,fill-opacity:0.2,rx:10,ry:10
+    SL -->|depends on| SCu
+    SCu -->|depends on| SC
+    SC -->|used by| WF
+    WF -->|used by| WC
 
-    %% Attempt to remove the label background only on the "Flutter" arrow (link index 2).
-    linkStyle 2 stroke:#0050B9,stroke-width:2px,color:#000,fill:none
+    LL -->|localizes| SL
+    LCu -->|localizes| SCu
+    LC -->|localizes| SC
 
-    %% Clickable links
-    click sealed_languages "https://github.com/tsinis/sealed_world/tree/main/packages/sealed_languages"
-    click sealed_currencies "https://github.com/tsinis/sealed_world/tree/main/packages/sealed_currencies"
-    click sealed_countries "https://github.com/tsinis/sealed_world/tree/main/packages/sealed_countries"
-    click l10n_languages "https://github.com/tsinis/sealed_world/tree/main/packages/l10n_languages"
-    click l10n_currencies "https://github.com/tsinis/sealed_world/tree/main/packages/l10n_currencies"
-    click l10n_countries "https://github.com/tsinis/sealed_world/tree/main/packages/l10n_countries"
-    click world_flags "https://github.com/tsinis/sealed_world/tree/main/packages/world_flags"
-    click world_countries "https://github.com/tsinis/sealed_world/tree/main/packages/world_countries"
+    WFEx -->|example for| WF
+    WCEx -->|demo for| WC
+
+    GitHubWorkflows -->|publish| PubDev
+
+    %% Click Events
+    click GitHubWorkflows "https://github.com/tsinis/sealed_world/tree/main/.github/workflows/"
+    click DevContainer "https://github.com/tsinis/sealed_world/tree/main/.devcontainer/"
+    click Tools "https://github.com/tsinis/sealed_world/tree/main/tools/"
+    click SL "https://github.com/tsinis/sealed_world/tree/main/packages/sealed_languages/"
+    click SCu "https://github.com/tsinis/sealed_world/tree/main/packages/sealed_currencies/"
+    click SC "https://github.com/tsinis/sealed_world/tree/main/packages/sealed_countries/"
+    click LL "https://github.com/tsinis/sealed_world/tree/main/packages/l10n_languages/"
+    click LCu "https://github.com/tsinis/sealed_world/tree/main/packages/l10n_currencies/"
+    click LC "https://github.com/tsinis/sealed_world/tree/main/packages/l10n_countries/"
+    click WF "https://github.com/tsinis/sealed_world/tree/main/packages/world_flags/"
+    click WC "https://github.com/tsinis/sealed_world/tree/main/packages/world_countries/"
+    click WFEx "https://github.com/tsinis/sealed_world/tree/main/packages/world_flags/example/"
+    click WCEx "https://github.com/tsinis/sealed_world/tree/main/packages/world_countries/example/"
+    click Pubspecs "https://github.com/tsinis/sealed_world/blob/main/pubspec.yaml"
+
+    %% Styles
+    classDef core fill:#D0E8FF,stroke:#0066CC,stroke-width:2px;
+    classDef l10n fill:#B3FFF2,stroke:#00CC99,stroke-width:2px;
+    classDef ui fill:#99CCFF,stroke:#003399,stroke-width:2px;
+    classDef tools fill:#EEEEEE,stroke:#777777,stroke-width:2px;
+    classDef ci fill:#DDDDDD,stroke:#555555,stroke-width:2px,stroke-dasharray: 5 5;
+    classDef example fill:#FFF2CC,stroke:#CC9900,stroke-width:2px;
+    classDef external fill:#F5F5F5,stroke:#888888,stroke-width:2px,stroke-dasharray: 2 2;
+    classDef config fill:#EFEFEF,stroke:#666666,stroke-width:2px;
 ```
 
 ### Versioning and Release Policy
