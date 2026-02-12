@@ -14,7 +14,7 @@
 
 The first and only collection of declaratively defined **world flags**. Flags adapt to any size and shape while preserving their true proportions. Enjoy **more than 250 widget-based flags**, designed for clarity, performance, and flexibility.
 
-Each flag is a vector-based `CustomPainter`, ensuring precise, scalable, and stunning results. Following official color standards and using a declarative design, `world_flags` allows easy customization of flag shapes, decorations, and aspect ratios without losing quality or breaking flag element proportions.
+Each flag is a vector-based `CustomPainter`, ensuring precise, scalable, and stunning results. Following official color standards and using a declarative design, `world_flags` allows easy customization of flag shapes, decorations, and aspect ratios without losing quality or breaking flag element proportions. And that's why **you can build adaptive designs like this on any screen, with no assets at all** — just Dart code and `world_flags`:
 
 ![Example](https://raw.githubusercontent.com/tsinis/sealed_world/main/packages/world_flags/doc/example.gif)
 
