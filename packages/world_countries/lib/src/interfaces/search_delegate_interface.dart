@@ -2,7 +2,8 @@ import "dart:collection";
 
 import "package:flutter/material.dart"
     show IconButton, SearchDelegate, ThemeData;
-import "package:flutter/widgets.dart";
+import "package:flutter/widgets.dart"
+    show BuildContext, PreferredSizeWidget, Widget;
 
 import "../constants/ui_constants.dart";
 import "../model/search_data.dart";

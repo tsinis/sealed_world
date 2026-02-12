@@ -1,4 +1,4 @@
-import "package:meta/meta.dart";
+import "package:meta/meta.dart" show useResult;
 import "package:world_flags/world_flags.dart"
     show BasicTypedLocale, IsoTranslated;
 

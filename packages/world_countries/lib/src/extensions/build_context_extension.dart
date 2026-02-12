@@ -1,5 +1,5 @@
 import "package:flutter/material.dart";
-import "package:meta/meta.dart";
+import "package:meta/meta.dart" show useResult;
 
 /// A set of useful extensions for [BuildContext].
 extension BuildContextExtension on BuildContext {

@@ -1,6 +1,6 @@
 import "package:flutter/gestures.dart";
 import "package:flutter/widgets.dart";
-import "package:meta/meta.dart";
+import "package:meta/meta.dart" show mustBeOverridden;
 
 import "../../constants/ui_constants.dart";
 import "../../extensions/world_countries_build_context_extension.dart";

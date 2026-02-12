@@ -1,5 +1,6 @@
-import "package:flutter/material.dart";
-import "package:meta/meta.dart" show internal, useResult;
+import "package:flutter/foundation.dart" show internal;
+import "package:flutter/widgets.dart" show BuildContext;
+import "package:meta/meta.dart" show useResult;
 
 import "../model/search_data.dart";
 import "../model/typedefs.dart";

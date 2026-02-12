@@ -1,5 +1,9 @@
-import "package:flutter/widgets.dart";
-import "package:meta/meta.dart";
+import "dart:ui" show Locale;
+
+import "package:flutter/foundation.dart" show immutable;
+import "package:flutter/widgets.dart"
+    show BuildContext, Localizations, LocalizationsDelegate;
+import "package:meta/meta.dart" show useResult;
 import "package:world_flags/world_flags.dart";
 
 import "../extensions/core/locale_extension.dart";

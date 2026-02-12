@@ -1,5 +1,6 @@
 import "package:flutter/gestures.dart";
-import "package:flutter/material.dart";
+import "package:flutter/material.dart" show TextField, ThemeExtension;
+import "package:flutter/widgets.dart";
 import "package:meta/meta.dart" show useResult;
 import "package:world_flags/world_flags.dart";
 

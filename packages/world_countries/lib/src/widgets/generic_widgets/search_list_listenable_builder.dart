@@ -2,7 +2,8 @@
 
 import "dart:collection";
 
-import "package:flutter/widgets.dart";
+import "package:flutter/widgets.dart"
+    show BuildContext, State, Widget, WidgetsBinding;
 
 import "../../extensions/iterable_search_map_extension.dart";
 import "../../mixins/compare_search_mixin.dart";

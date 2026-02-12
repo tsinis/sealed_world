@@ -1,5 +1,5 @@
+import "package:flutter/foundation.dart" show internal;
 import "package:flutter/widgets.dart" show WidgetsBinding;
-import "package:meta/meta.dart";
 import "package:world_flags/world_flags.dart";
 
 import "../platform_dispatcher_extension.dart";

@@ -1,4 +1,6 @@
-import "package:flutter/material.dart";
+import "package:flutter/foundation.dart";
+import "package:flutter/material.dart" show ThemeExtension;
+import "package:flutter/widgets.dart" show Widget;
 import "package:meta/meta.dart" show useResult;
 import "package:world_flags/world_flags.dart";
 

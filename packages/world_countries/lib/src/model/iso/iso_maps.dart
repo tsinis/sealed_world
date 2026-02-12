@@ -1,4 +1,4 @@
-import "package:meta/meta.dart";
+import "package:meta/meta.dart" show immutable;
 import "package:world_flags/world_flags.dart";
 
 import "../locale/typed_locale.dart" show TypedLocale;

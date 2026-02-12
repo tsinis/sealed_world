@@ -1,6 +1,10 @@
 // ignore_for_file: avoid-nullable-parameters-with-default-values
 
-import "package:flutter/material.dart";
+import "package:flutter/foundation.dart";
+import "package:flutter/material.dart"
+    show Icons, ListTile, Material, MaterialType;
+import "package:flutter/widgets.dart"
+    show BuildContext, Icon, Semantics, TextStyle, Widget;
 
 import "../../constants/ui_constants.dart";
 

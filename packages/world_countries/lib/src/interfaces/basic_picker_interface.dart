@@ -1,4 +1,6 @@
-import "package:flutter/material.dart";
+import "package:flutter/foundation.dart" show immutable;
+import "package:flutter/material.dart" show TextField, Theme;
+import "package:flutter/widgets.dart" show EdgeInsetsGeometry;
 import "package:world_flags/world_flags.dart";
 
 import "../constants/ui_constants.dart";
