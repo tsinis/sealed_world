@@ -57,6 +57,10 @@ class _BasicPickerState<T extends IsoTranslated, W extends IsoTile<T>>
           widget.dragStartBehavior ??
           theme?.dragStartBehavior ??
           DragStartBehavior.start,
+      hitTestBehavior:
+          widget.hitTestBehavior ??
+          theme?.hitTestBehavior ??
+          HitTestBehavior.opaque,
       emptyStatePlaceholder: widget.emptyStatePlaceholder,
       header: adaptiveTextField == null
           ? null

@@ -1,6 +1,6 @@
 // ignore_for_file: avoid-nullable-parameters-with-default-values
 
-import "package:flutter/material.dart";
+import "package:flutter/widgets.dart" show Text, TextOverflow, Widget;
 import "package:world_flags/world_flags.dart";
 
 import "../../extensions/models/iso_semantics_extension.dart";

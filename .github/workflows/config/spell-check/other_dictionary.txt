@@ -5,7 +5,6 @@ Abbcc
 Anglický
 Angličtina
 Bbcc
-bouvet
 Faabbcc
 Pushto
 RRGGBB
@@ -22,6 +21,7 @@ appium
 belgien
 belgique
 belgië
+bouvet
 byelarus
 checo
 cldr
@@ -29,6 +29,7 @@ dolar
 dolyar
 dolár
 države
+emojidex
 engl
 estado
 estados
@@ -49,6 +50,7 @@ rubeľ
 rusija
 rusko
 ruská
+segoe
 shaked
 sjedinjene
 slovensko

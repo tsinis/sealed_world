@@ -1,7 +1,8 @@
 // ignore_for_file: avoid-nullable-parameters-with-default-values
 
 import "package:flutter/gestures.dart";
-import "package:flutter/material.dart";
+import "package:flutter/material.dart" show Colors;
+import "package:flutter/widgets.dart";
 
 import "../../constants/ui_constants.dart";
 import "../../extensions/world_countries_build_context_extension.dart";
@@ -43,6 +44,7 @@ class SearchableIndexedListViewBuilder<T extends Object, W extends Widget>
   /// * [header] is the optional header to display above the list.
   /// * [itemBuilder] is the builder function for the items.
   /// * [key] is the optional key to use for the widget.
+  /// * [hitTestBehavior] is the hit test behavior for the list.
   /// * [keyboardDismissBehavior] is the keyboard dismiss behavior for the list.
   /// * [mainAxisAlignment] is the main axis alignment for the list.
   /// * [mainAxisSize] is the main axis size for the list.
@@ -91,6 +93,7 @@ class SearchableIndexedListViewBuilder<T extends Object, W extends Widget>
     super.header,
     super.itemBuilder,
     super.key,
+    super.hitTestBehavior,
     super.keyboardDismissBehavior,
     super.mainAxisAlignment,
     super.mainAxisSize,

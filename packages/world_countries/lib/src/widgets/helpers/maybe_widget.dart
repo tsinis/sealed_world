@@ -1,5 +1,6 @@
 import "package:flutter/foundation.dart";
-import "package:flutter/widgets.dart";
+import "package:flutter/widgets.dart"
+    show BuildContext, Flex, Offstage, SizedBox, Stack, StatelessWidget, Widget;
 
 /// A widget that does a null-check of provided [value] and returns [orElse]
 /// (default to [SizedBox.shrink]) if [value] is `null`.
@@ -175,8 +176,8 @@ class MaybeWidget<T extends Object> extends StatelessWidget {
   /// Generics:
   /// * [T] represents the (non-null) value type expected by [builder].
   /// * [W] represents the widget subtype you expect the [builder] to return. By
-  ///   default the compiler will usually infer `W` for you (e.g. [Widget],
-  ///   [Text], [Icon], etc.).
+  ///   default the compiler will usually infer `W` for you (e.g. `Widget`,
+  ///   `Text`, `Icon`, etc.).
   ///
   /// Use cases include concise, allocation-free conditional widget inclusion:
   ///

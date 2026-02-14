@@ -42,6 +42,10 @@ class _SearchableIndexedListViewBuilderState<T extends Object, W extends Widget>
                   widget.dragStartBehavior ??
                   theme?.dragStartBehavior ??
                   DragStartBehavior.start,
+              hitTestBehavior:
+                  widget.hitTestBehavior ??
+                  theme?.hitTestBehavior ??
+                  HitTestBehavior.opaque,
               emptyStatePlaceholder: widget.emptyStatePlaceholder,
               header: widget.header ?? theme?.header,
               itemBuilder: widget.itemBuilder,
@@ -108,6 +112,10 @@ class _SearchableIndexedListViewBuilderState<T extends Object, W extends Widget>
                 widget.dragStartBehavior ??
                 theme?.dragStartBehavior ??
                 DragStartBehavior.start,
+            hitTestBehavior:
+                widget.hitTestBehavior ??
+                theme?.hitTestBehavior ??
+                HitTestBehavior.opaque,
             emptyStatePlaceholder: widget.emptyStatePlaceholder,
             header: widget.header ?? theme?.header,
             itemBuilder: widget.itemBuilder,

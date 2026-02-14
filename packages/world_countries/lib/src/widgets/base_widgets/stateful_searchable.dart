@@ -1,4 +1,5 @@
-import "package:flutter/widgets.dart";
+import "package:flutter/widgets.dart"
+    show BuildContext, StatefulWidget, TextEditingController;
 
 import "../../interfaces/searchable_interface.dart";
 import "../../model/search_data.dart";

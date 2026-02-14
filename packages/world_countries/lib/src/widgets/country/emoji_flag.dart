@@ -1,4 +1,4 @@
-import "package:flutter/widgets.dart";
+import "package:flutter/widgets.dart" show Text, TextStyle;
 import "package:world_flags/world_flags.dart";
 
 import "../../constants/ui_constants.dart";
@@ -28,9 +28,10 @@ class EmojiFlag extends Text {
     super.locale,
     super.softWrap,
     super.overflow,
-    super.textScaleFactor,
+    super.textScaler,
     super.maxLines,
     super.semanticsLabel,
+    super.semanticsIdentifier,
     super.textWidthBasis,
     super.textHeightBehavior,
     super.selectionColor,
@@ -49,9 +50,10 @@ class EmojiFlag extends Text {
     super.locale,
     super.softWrap,
     super.overflow,
-    super.textScaleFactor,
+    super.textScaler,
     super.maxLines,
     super.semanticsLabel,
+    super.semanticsIdentifier,
     super.textWidthBasis,
     super.textHeightBehavior,
     super.selectionColor,
@@ -66,7 +68,7 @@ class EmojiFlag extends Text {
     String? package,
     double? size,
   }) => (style ?? const TextStyle()).copyWith(
-    color: UiConstants.color,
+    color: style?.color ?? UiConstants.color,
     fontSize: size ?? style?.fontSize,
     fontFamily: font,
     package: package,

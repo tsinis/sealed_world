@@ -1,4 +1,5 @@
-import "package:flutter/widgets.dart" show TextEditingController, protected;
+import "package:flutter/foundation.dart" show protected;
+import "package:flutter/widgets.dart" show TextEditingController;
 import "package:meta/meta.dart" show useResult;
 
 import "../interfaces/searchable_interface.dart";

@@ -1,6 +1,7 @@
 import "dart:ui";
 
-import "package:meta/meta.dart" show factory, useResult;
+import "package:flutter/foundation.dart" show factory;
+import "package:meta/meta.dart" show useResult;
 import "package:world_flags/world_flags.dart";
 
 /// Extension on [NaturalLanguage] to convert it to a [Locale].

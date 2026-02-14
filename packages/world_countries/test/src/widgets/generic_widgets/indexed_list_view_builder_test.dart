@@ -24,4 +24,11 @@ void main() => group("$IndexedListViewBuilder", () {
     expect(find.byType(ListView), findsOneWidget);
     expect(find.byType(Divider), findsOneWidget);
   });
+
+  testWidgets("hitTestBehavior uses explicit value", (tester) async {
+    const widget = IndexedListViewBuilder([1], hitTestBehavior: .translucent);
+    await tester.pumpWidgetsApp(widget);
+    final listView = tester.widget<ListView>(find.byType(ListView));
+    expect(listView.hitTestBehavior, HitTestBehavior.translucent);
+  });
 });

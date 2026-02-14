@@ -1,6 +1,8 @@
 // ignore_for_file: prefer-widget-private-members
 
-import "package:flutter/material.dart";
+import "package:flutter/material.dart"
+    show Colors, InputDecoration, Material, MaterialType, TextField;
+import "package:flutter/widgets.dart";
 
 import "../../constants/ui_constants.dart";
 import "../../extensions/build_context_extension.dart";

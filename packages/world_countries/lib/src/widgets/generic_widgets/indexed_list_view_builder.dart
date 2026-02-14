@@ -1,6 +1,6 @@
 import "package:flutter/gestures.dart";
 import "package:flutter/widgets.dart";
-import "package:meta/meta.dart";
+import "package:meta/meta.dart" show mustBeOverridden;
 
 import "../../constants/ui_constants.dart";
 import "../../extensions/world_countries_build_context_extension.dart";
@@ -31,6 +31,7 @@ class IndexedListViewBuilder<T extends Object, W extends Widget>
   /// * [emptyStatePlaceholder] is the placeholder widget to display when the
   ///   list is empty.
   /// * [header] is the optional header widget to display.
+  /// * [hitTestBehavior] is the hit test behavior to use.
   /// * [itemBuilder] is the builder function to use for the items.
   /// * [key] is the optional key to use for the widget.
   /// * [keyboardDismissBehavior] is the keyboard dismiss behavior to use.
@@ -64,6 +65,7 @@ class IndexedListViewBuilder<T extends Object, W extends Widget>
     super.dragStartBehavior,
     super.emptyStatePlaceholder,
     super.header,
+    super.hitTestBehavior,
     super.itemBuilder,
     super.key,
     super.keyboardDismissBehavior,
@@ -172,6 +174,10 @@ class _IndexedListViewBuilderState<T extends Object, W extends Widget>
                         widget.dragStartBehavior ??
                         theme?.dragStartBehavior ??
                         DragStartBehavior.start,
+                    hitTestBehavior:
+                        widget.hitTestBehavior ??
+                        theme?.hitTestBehavior ??
+                        HitTestBehavior.opaque,
                     keyboardDismissBehavior:
                         widget.keyboardDismissBehavior ??
                         theme?.keyboardDismissBehavior ??

@@ -1,5 +1,5 @@
 import "package:flutter/gestures.dart" show DragStartBehavior;
-import "package:flutter/material.dart";
+import "package:flutter/widgets.dart";
 
 /// An interface for widgets that are displaying an indexed list of items.
 ///
@@ -28,6 +28,8 @@ abstract interface class IndexedListViewInterface {
     this.direction, // Default to: Axis.vertical.
     this.dragStartBehavior, // Default to: DragStartBehavior.start.
     this.header,
+    // Default to: HitTestBehavior.opaque.
+    this.hitTestBehavior,
     // Default to: ScrollViewKeyboardDismissBehavior.manual.
     this.keyboardDismissBehavior,
     this.mainAxisAlignment, // Default to: MainAxisAlignment.start.
@@ -199,6 +201,9 @@ abstract interface class IndexedListViewInterface {
 
   /// {@macro flutter.widgets.scrollable.dragStartBehavior}
   final DragStartBehavior? dragStartBehavior;
+
+  /// {@macro flutter.widgets.scrollable.hitTestBehavior}
+  final HitTestBehavior? hitTestBehavior;
 
   /// {@macro flutter.widgets.scroll_view.keyboardDismissBehavior}
   final ScrollViewKeyboardDismissBehavior? keyboardDismissBehavior;

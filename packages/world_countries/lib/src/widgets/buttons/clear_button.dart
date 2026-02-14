@@ -1,4 +1,6 @@
-import "package:flutter/material.dart";
+import "package:flutter/material.dart"
+    show CircularProgressIndicator, IconButton, Icons, TextField;
+import "package:flutter/widgets.dart";
 
 import "../../constants/ui_constants.dart";
 
@@ -6,9 +8,11 @@ import "../../constants/ui_constants.dart";
 class ClearButton extends IconButton {
   /// Constructor for the [ClearButton] class.
   ///
-  /// * TextEditingController is the text editing controller to listen to.
-  /// * [icon] is the icon to display in the button.
-  /// * [key] is the optional key to use for the widget.
+  /// [TextEditingController] is the only mandatory field here and it's a text
+  /// editing controller to listen to. Other parameters are simply passed to the
+  /// super constructor of [IconButton] and [AnimatedCrossFade]. When the text
+  /// editing controller's text is empty, the [whenEmptyChild] is shown instead
+  /// of the [IconButton].
   const ClearButton(
     this._controller, {
     super.icon = defaultIcon,
@@ -36,6 +40,7 @@ class ClearButton extends IconButton {
     super.isSelected,
     super.selectedIcon,
     super.key,
+    super.statesController,
     this.whenEmptyChild = UiConstants.placeholder,
     this.firstCurve = UiConstants.switchOutCurve,
     this.secondCurve = UiConstants.switchInCurve,
@@ -110,7 +115,7 @@ class ClearButton extends IconButton {
     valueListenable: _controller,
     builder: (_, controller, _) => AnimatedCrossFade(
       firstChild: IconButton(
-        onPressed: _controller.clear,
+        onPressed: onPressed ?? _controller.clear,
         icon: icon,
         iconSize: iconSize,
         visualDensity: visualDensity,
@@ -134,6 +139,7 @@ class ClearButton extends IconButton {
         style: style,
         isSelected: isSelected,
         selectedIcon: selectedIcon,
+        statesController: statesController,
       ),
       secondChild: whenEmptyChild,
       firstCurve: firstCurve,

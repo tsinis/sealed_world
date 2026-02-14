@@ -1,4 +1,6 @@
-import "package:flutter/widgets.dart";
+import "package:flutter/foundation.dart" show optionalTypeArgs;
+import "package:flutter/widgets.dart"
+    show BuildContext, Navigator, NavigatorState, Route;
 import "package:meta/meta.dart" show useResult;
 
 /// A set of useful extensions related to [Navigator] for [BuildContext].

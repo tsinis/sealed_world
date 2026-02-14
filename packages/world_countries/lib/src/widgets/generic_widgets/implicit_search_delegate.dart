@@ -1,6 +1,9 @@
 import "dart:collection";
 
-import "package:flutter/material.dart";
+import "package:flutter/material.dart"
+    show BackButtonIcon, IconButton, ThemeData;
+import "package:flutter/widgets.dart"
+    show BuildContext, PreferredSizeWidget, Widget;
 
 import "../../extensions/build_context_extension.dart";
 import "../../extensions/iterable_search_map_extension.dart";

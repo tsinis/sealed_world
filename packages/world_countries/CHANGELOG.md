@@ -1,21 +1,33 @@
-## 4.0.1
+## 4.1.0
+
+Synced with Flutter 3.41 SDK — replaced deprecated widget members with their updated counterparts and adopted newly introduced parameters.
 
 NEW FEATURES
 
 - Added `flagTheme` override to all pickers and picker theme data.
+- Added `hitTestBehavior` to indexed list views, pickers, and picker themes.
+- `ClearButton` now uses `onPressed` when provided and falls back to clearing the
+  controller when it is `null`.
 
 REFACTOR
 
+- Replaced deprecated `textScaleFactor` with `textScaler` in `EmojiFlag` due to PANA score penalty.
 - Added `item` comparison to `FlagShaderSurface` change detection logic to ensure proper updates when the item changes.
+- Adjusted Nepal flag (`NplPainter`) stroke paint configuration by explicitly setting `strokeMiterLimit` to prevent miter-to-bevel fallback on acute angles. This ensures the triangle apexes render as sharp points regardless of the flag's aspect ratio.
+
+CHORE
+
+- The Dart SDK was bumped to v3.11.0.
 
 DOCUMENTATION
 
-Docs only, no code changes:
-
-- TODO(@tsinis): Improve example app, update GIF.
 - Improved CHANGELOG for clarity.
 - Added LLM agent instructions to the README.
 - Added FOSSA status badge.
+
+TEST
+
+- Added widget tests for `ClearButton` to verify custom `onPressed` behavior and default controller clearing.
 
 ## 4.0.0
 

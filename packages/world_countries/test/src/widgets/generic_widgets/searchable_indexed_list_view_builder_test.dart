@@ -70,6 +70,15 @@ void main() => group("$SearchableIndexedListViewBuilder", () {
     controller.dispose();
   });
 
+  testWidgets("hitTestBehavior uses theme value", (tester) async {
+    await tester.pumpMaterialApp(
+      const SearchableIndexedListViewBuilder(<Object>[1]),
+      const PickersThemeData(hitTestBehavior: HitTestBehavior.translucent),
+    );
+    final listView = tester.widget<ListView>(find.byType(ListView));
+    expect(listView.hitTestBehavior, HitTestBehavior.translucent);
+  });
+
   testWidgets("showInSearch", (tester) async {
     final context = await tester.contextExtractor();
     expect(await builder.showInSearch(context), isNull);

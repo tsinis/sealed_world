@@ -58,6 +58,7 @@ abstract class BasicPicker<T extends IsoTranslated, W extends IsoTile<T>>
   /// * [header] is the optional header to display above the list.
   /// * [itemBuilder] is the builder function for the items.
   /// * [key] is the optional key to use for the widget.
+  /// * [hitTestBehavior] is the hit test behavior for the list.
   /// * [keyboardDismissBehavior] is the keyboard dismiss behavior for the list.
   /// * [mainAxisAlignment] is the main axis alignment for the list.
   /// * [mainAxisSize] is the main axis size for the list.
@@ -99,6 +100,7 @@ abstract class BasicPicker<T extends IsoTranslated, W extends IsoTile<T>>
     super.emptyStatePlaceholder,
     this.itemBuilder,
     super.key,
+    super.hitTestBehavior,
     super.keyboardDismissBehavior,
     super.mainAxisAlignment,
     super.mainAxisSize,
@@ -595,6 +597,7 @@ abstract class BasicPicker<T extends IsoTranslated, W extends IsoTile<T>>
     DragStartBehavior? dragStartBehavior,
     Widget? emptyStatePlaceholder,
     Key? key,
+    HitTestBehavior? hitTestBehavior,
     ScrollViewKeyboardDismissBehavior? keyboardDismissBehavior,
     MainAxisAlignment? mainAxisAlignment,
     MainAxisSize? mainAxisSize,

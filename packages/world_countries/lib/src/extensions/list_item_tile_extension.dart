@@ -1,4 +1,4 @@
-import "package:flutter/material.dart";
+import "package:flutter/widgets.dart" show Widget;
 
 import "../widgets/generic_widgets/list_item_tile.dart";
 

@@ -1,5 +1,6 @@
 import "package:flutter/gestures.dart" show DragStartBehavior;
-import "package:flutter/material.dart";
+import "package:flutter/material.dart" show TextField;
+import "package:flutter/widgets.dart";
 import "package:world_flags/world_flags.dart";
 
 import "../../model/iso/iso_maps.dart";
@@ -32,6 +33,7 @@ class LanguagePicker extends BasicPicker<NaturalLanguage, LanguageTile> {
     super.emptyStatePlaceholder,
     super.itemBuilder,
     super.key,
+    super.hitTestBehavior,
     super.keyboardDismissBehavior,
     super.mainAxisAlignment,
     super.mainAxisSize,
@@ -113,6 +115,7 @@ class LanguagePicker extends BasicPicker<NaturalLanguage, LanguageTile> {
     DragStartBehavior? dragStartBehavior,
     Widget? emptyStatePlaceholder,
     Key? key,
+    HitTestBehavior? hitTestBehavior,
     ScrollViewKeyboardDismissBehavior? keyboardDismissBehavior,
     MainAxisAlignment? mainAxisAlignment,
     MainAxisSize? mainAxisSize,
@@ -165,6 +168,7 @@ class LanguagePicker extends BasicPicker<NaturalLanguage, LanguageTile> {
         itemBuilder?.call(props, tile ?? defaultBuilder(props)) ??
         this.itemBuilder?.call(props, tile),
     key: key ?? this.key,
+    hitTestBehavior: hitTestBehavior ?? this.hitTestBehavior,
     keyboardDismissBehavior:
         keyboardDismissBehavior ?? this.keyboardDismissBehavior,
     mainAxisAlignment: mainAxisAlignment ?? this.mainAxisAlignment,
