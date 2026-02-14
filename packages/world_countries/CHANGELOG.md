@@ -25,6 +25,10 @@ DOCUMENTATION
 - Added LLM agent instructions to the README.
 - Added FOSSA status badge.
 
+TEST
+
+- Added widget tests for `ClearButton` to verify custom `onPressed` behavior and default controller clearing.
+
 ## 4.0.0
 
 NEW FEATURES
