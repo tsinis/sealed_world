@@ -1,14 +1,17 @@
 ## 4.1.0
 
+Synced with Flutter 3.41 SDK — replaced deprecated widget members with their updated counterparts and adopted newly introduced parameters.
+
 NEW FEATURES
 
+- Added `flagTheme` override to all pickers and picker theme data.
+- Added `hitTestBehavior` to indexed list views, pickers, and picker themes.
 - `ClearButton` now uses `onPressed` when provided and falls back to clearing the
   controller when it is `null`.
-- Added `hitTestBehavior` to indexed list views, pickers, and picker themes.
-- Added `flagTheme` override to all pickers and picker theme data.
 
 REFACTOR
 
+- Replaced deprecated `textScaleFactor` with `textScaler` in `EmojiFlag` due to PANA score penalty.
 - Added `item` comparison to `FlagShaderSurface` change detection logic to ensure proper updates when the item changes.
 - Adjusted Nepal flag (`NplPainter`) stroke paint configuration by explicitly setting `strokeMiterLimit` to prevent miter-to-bevel fallback on acute angles. This ensures the triangle apexes render as sharp points regardless of the flag's aspect ratio.
 

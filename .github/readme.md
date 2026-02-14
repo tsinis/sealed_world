@@ -88,8 +88,8 @@ flowchart TD
     Tools -->|codegen| SC
     Tools -->|codegen| LC
 
-    SL -->|depends on| SCu
-    SCu -->|depends on| SC
+    SL -->|used by| SCu
+    SCu -->|used by| SC
     SC -->|used by| WF
     WF -->|used by| WC
 
