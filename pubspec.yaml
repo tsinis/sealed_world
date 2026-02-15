@@ -38,5 +38,4 @@ dev_dependencies:
   coverage: ^1.15.0 # From Google. Defines top level dependency constraint.
   dart_code_metrics_presets: ^2.29.0 # DCM. Defines top level dependency constraint.
   lints: ^6.1.0 # From Google. Defines top level dependency constraint.
-  pana: ^0.23.9 # From Google. Defines top level dependency constraint.
   test: ^1.29.0 # From Google. Defines top level dependency constraint.
