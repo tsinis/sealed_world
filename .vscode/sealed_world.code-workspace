@@ -2,62 +2,62 @@
   "folders": [
     {
       "name": "VS Code",
-      "path": "."
+      "path": ".",
     },
     {
       "name": "Dev Container",
-      "path": "../.devcontainer"
+      "path": "../.devcontainer",
     },
     {
       "name": "GitHub Setup",
-      "path": "../.github"
+      "path": "../.github",
     },
     {
       "name": "CLI Tools",
-      "path": "../tools"
+      "path": "../tools",
     },
     {
       "name": "Flutter World",
-      "path": "../packages/world_countries"
+      "path": "../packages/world_countries",
     },
     {
       "name": "Flutter Flags",
-      "path": "../packages/world_flags"
+      "path": "../packages/world_flags",
     },
     {
       "name": "Countries",
-      "path": "../packages/sealed_countries"
+      "path": "../packages/sealed_countries",
     },
     {
       "name": "Currencies",
-      "path": "../packages/sealed_currencies"
+      "path": "../packages/sealed_currencies",
     },
     {
       "name": "Languages",
-      "path": "../packages/sealed_languages"
+      "path": "../packages/sealed_languages",
     },
     {
       "name": "Tests",
-      "path": "../packages/_sealed_world_tests"
+      "path": "../packages/_sealed_world_tests",
     },
     {
       "name": "L10N Langs",
-      "path": "../packages/l10n_languages"
+      "path": "../packages/l10n_languages",
     },
     {
       "name": "L10N Currencies",
-      "path": "../packages/l10n_currencies"
+      "path": "../packages/l10n_currencies",
     },
     {
       "name": "L10N Countries",
-      "path": "../packages/l10n_countries"
-    }
+      "path": "../packages/l10n_countries",
+    },
   ],
   "settings": {
     "search.exclude": {
       "**/.git": true,
       "coverage/**": true,
-      "**/coverage/*": true
+      "**/coverage/*": true,
     },
     "explorer.confirmDragAndDrop": false,
     "explorer.fileNesting.enabled": true,
@@ -65,7 +65,7 @@
     "explorer.fileNesting.patterns": {
       "pubspec.yaml": ".flutter-plugins, .packages, .dart_tool, .flutter-plugins-dependencies, .metadata, .packages, pubspec.lock, build.yaml, analysis_options.yaml, all_lint_rules.yaml, flutter_*.yaml, icons_launcher.yaml",
       ".gitignore": ".gitattributes, .gitmodules, .gitmessage, .pubignore, .mailmap, .git-blame*",
-      "readme.*": "authors, backers.md, changelog*, citation*, code_of_conduct.md, codeowners, contributing.md, contributors, copying, credits, governance.md, history.md, license*, maintainers, readme*, security.md, sponsors.md"
+      "readme.*": "authors, backers.md, changelog*, citation*, code_of_conduct.md, codeowners, contributing.md, contributors, copying, credits, governance.md, history.md, license*, maintainers, readme*, security.md, sponsors.md",
     },
     "editor.formatOnPaste": true,
     "editor.formatOnSave": true,
@@ -88,8 +88,8 @@
         "source.fixAll": "always",
         "source.organizeImports": "always",
         "source.addRequired": "always",
-        "source.sortMembers": "never"
-      }
+        "source.sortMembers": "never",
+      },
     },
     "cSpell.words": [
       "Appium",
@@ -118,14 +118,14 @@
       "Taegukgi",
       "twemoji",
       "umpirsky",
-      "XCUI"
+      "XCUI",
     ],
     "cSpell.useGitignore": true,
     "cSpell.ignorePaths": [
       ".git", // Ignore the .git directory
       "**/lib/**/*.data.dart",
       "**/lib/**/*.l10n.dart",
-      "**/.vscode/sealed_world.code-workspace"
+      "**/.vscode/sealed_world.code-workspace",
     ],
     "files.readonlyInclude": { "**/*.g.dart": true },
     "dart.renameFilesWithClasses": "prompt",
@@ -161,8 +161,8 @@
       "windows": "components",
       "linux": "sass",
       "converters": "hook",
-      "collections": "batch"
-    }
+      "collections": "batch",
+    },
   },
   "extensions": {
     "recommendations": [
@@ -201,8 +201,8 @@
       "stkb.rewrap",
       "streetsidesoftware.code-spell-checker",
       "tenraneko.pubspec-dependency-opener",
-      "tyriar.sort-lines"
-    ]
+      "tyriar.sort-lines",
+    ],
   },
   "launch": {
     "version": "0.2.0",
@@ -212,16 +212,16 @@
         "name": "Debug Example",
         "request": "launch",
         "type": "dart",
-        "program": "${fileWorkspaceFolder}/example/lib/main.dart"
+        "program": "${fileWorkspaceFolder}/example/lib/main.dart",
       },
       {
         "name": "Debug And Observe Example",
         "request": "launch",
         "type": "dart",
         "args": ["--observe"],
-        "program": "${fileWorkspaceFolder}/example/lib/main.dart"
-      }
-    ]
+        "program": "${fileWorkspaceFolder}/example/lib/main.dart",
+      },
+    ],
   },
   "tasks": {
     "version": "2.0.0",
@@ -231,7 +231,7 @@
       {
         "type": "shell",
         "command": "dart pub get --no-example",
-        "label": "Dart Pub Get"
+        "label": "Dart Pub Get",
       },
       { "type": "shell", "command": "dart analyze .", "label": "Dart Analyze" },
       {
@@ -241,88 +241,88 @@
         "presentation": {
           "reveal": "never",
           "revealProblems": "onProblem",
-          "close": true
-        }
+          "close": true,
+        },
       },
       {
         "type": "shell",
         "command": "dart pub publish --dry-run",
         "label": "Dart Publish Dry Run",
-        "presentation": { "revealProblems": "onProblem" }
+        "presentation": { "revealProblems": "onProblem" },
       },
       {
         "type": "shell",
-        "command": "PANA=$(dart run pana . --no-warning); PANA_SCORE=$(echo $PANA | sed -n \"s/.*Points: \\([0-9]*\\)\\/\\([0-9]*\\)./\\1\\/\\2/p\"); echo \"score: $PANA_SCORE\"; IFS='/' read -ra SCORE_ARR <<< \"$PANA_SCORE\"; SCORE=${SCORE_ARR[0]}; if (( SCORE < 160 )); then echo \"Minimum score of 160 was not met! Got $SCORE.\"; exit 1; fi",
-        "label": "PANA Score Check"
+        "command": "dart pub global run pana . --no-warning --exit-code-threshold 0",
+        "label": "PANA Score Check",
       },
       {
         "type": "shell",
         "command": "dart run build_runner build -d",
         "problemMatcher": ["$dart-build_runner"],
         "group": "build",
-        "label": "Dart Build Runner"
+        "label": "Dart Build Runner",
       },
       {
         "type": "shell",
         "command": "dart test --timeout=1ms",
-        "label": "Dart Test (All)"
+        "label": "Dart Test (All)",
       },
       {
         "type": "shell",
         "command": "rm -rf coverage",
         "label": "Remove Coverage Directory",
-        "problemMatcher": []
+        "problemMatcher": [],
       },
       {
         "type": "shell",
         "command": "dart test --timeout=1ms --fail-fast --coverage=coverage",
-        "label": "Dart Test (Coverage)"
+        "label": "Dart Test (Coverage)",
       },
       {
         "type": "shell",
         "command": "dcm analyze lib",
-        "label": "Dart Code Metrics Analyze"
+        "label": "Dart Code Metrics Analyze",
       },
       {
         "type": "shell",
         "command": "dcm check-unnecessary-nullable lib",
-        "label": "Dart Code Metrics Nullable"
+        "label": "Dart Code Metrics Nullable",
       },
       {
         "type": "shell",
         "command": "dcm check-unused-l10n lib",
-        "label": "Dart Code Metrics Unused L10N"
+        "label": "Dart Code Metrics Unused L10N",
       },
       {
         "type": "shell",
         "command": "dcm check-unused-files lib",
-        "label": "Dart Code Metrics Unused Files"
+        "label": "Dart Code Metrics Unused Files",
       },
       {
         "type": "shell",
         "command": "dcm check-unused-code lib",
-        "label": "Dart Code Metrics Unused Code"
+        "label": "Dart Code Metrics Unused Code",
       },
       {
         "type": "shell",
         "command": "flutter clean",
         "label": "Flutter Clean",
-        "presentation": { "close": true }
+        "presentation": { "close": true },
       },
       {
         "type": "shell",
         "command": "flutter analyze",
-        "label": "Flutter Analyze"
+        "label": "Flutter Analyze",
       },
       {
         "type": "shell",
         "command": "flutter test --coverage --no-pub",
-        "label": "Flutter Test"
+        "label": "Flutter Test",
       },
       {
         "type": "shell",
         "command": "dart run coverage:format_coverage --check-ignore -l -i coverage -o coverage/lcov.info --report-on=lib",
-        "label": "Format Dart Coverage"
+        "label": "Format Dart Coverage",
       },
       {
         "type": "shell",
@@ -331,8 +331,8 @@
         "presentation": {
           "reveal": "never",
           "panel": "shared",
-          "close": true
-        }
+          "close": true,
+        },
       },
       {
         "type": "shell",
@@ -342,15 +342,15 @@
         "presentation": {
           "reveal": "never",
           "revealProblems": "onProblem",
-          "close": true
-        }
+          "close": true,
+        },
       },
       {
         "type": "shell",
         "osx": { "command": "open coverage/index.html" },
         "linux": { "command": "xdg-open coverage/index.html" },
         "label": "Open Coverage Report",
-        "presentation": { "close": true }
+        "presentation": { "close": true },
       },
       {
         "type": "shell",
@@ -360,16 +360,16 @@
           "Remove Coverage Directory",
           "Dart Test (Coverage)",
           "Format Dart Coverage",
-          "Generate Coverage"
+          "Generate Coverage",
         ],
-        "presentation": { "revealProblems": "onProblem", "close": true }
+        "presentation": { "revealProblems": "onProblem", "close": true },
       },
       {
         "type": "shell",
         "label": "Show Dart Coverage",
         "dependsOrder": "sequence",
         "dependsOn": ["Update Dart Coverage", "Open Coverage Report"],
-        "presentation": { "revealProblems": "onProblem", "close": true }
+        "presentation": { "revealProblems": "onProblem", "close": true },
       },
       {
         "type": "shell",
@@ -382,9 +382,9 @@
           "Dart Code Metrics Analyze",
           "Dart Code Metrics Nullable",
           "Dart Code Metrics Unused Code",
-          "Dart Code Metrics Unused Files"
+          "Dart Code Metrics Unused Files",
         ],
-        "label": "Dart Pub Get, Test, Format, Analyze, DCM"
+        "label": "Dart Pub Get, Test, Format, Analyze, DCM",
       },
       {
         "type": "shell",
@@ -398,9 +398,9 @@
           "Dart Code Metrics Analyze",
           "Dart Code Metrics Nullable",
           "Dart Code Metrics Unused Code",
-          "Dart Code Metrics Unused Files"
+          "Dart Code Metrics Unused Files",
         ],
-        "label": "Dart Pub Get, Test, Format, Analyze, Dry Run, DCM"
+        "label": "Dart Pub Get, Test, Format, Analyze, Dry Run, DCM",
       },
       {
         "type": "shell",
@@ -409,35 +409,35 @@
         "dependsOn": [
           "Flutter Test",
           "Generate Coverage",
-          "Open Coverage Report"
+          "Open Coverage Report",
         ],
-        "presentation": { "revealProblems": "onProblem", "close": true }
+        "presentation": { "revealProblems": "onProblem", "close": true },
       },
       {
         "type": "shell",
         "command": "cwebp -q 90 doc/structure.png -o doc/structure.webp",
         "label": "Convert Structure PNG to WEBP",
-        "presentation": { "revealProblems": "onProblem", "close": true }
+        "presentation": { "revealProblems": "onProblem", "close": true },
       },
       {
         "type": "shell",
         "command": "cwebp -q 90 doc/example.png -o doc/example.webp",
         "label": "Convert Example PNG to WEBP",
-        "presentation": { "revealProblems": "onProblem", "close": true }
+        "presentation": { "revealProblems": "onProblem", "close": true },
       },
       {
         "label": "Update Goldens (Local)",
         "type": "shell",
         "command": "flutter test --update-goldens",
         "presentation": { "reveal": "always" },
-        "problemMatcher": []
+        "problemMatcher": [],
       },
       {
         "label": "Update Goldens (Remote)",
         "type": "shell",
         "command": "CURRENT_BRANCH=$(git branch --show-current); echo \"Triggering golden test update for branch: $CURRENT_BRANCH\"; gh workflow run update_goldens.yaml --field branch=\"$CURRENT_BRANCH\"; echo \"Checking workflow runs...\"; gh run list --workflow=\"update_goldens.yaml\"",
         "presentation": { "reveal": "always" },
-        "problemMatcher": []
+        "problemMatcher": [],
       },
       {
         "label": "Build Android-ARM64 (Profile)",
@@ -445,8 +445,8 @@
         "command": "flutter clean && fvm flutter build apk --profile --target-platform=android-arm64 --split-per-abi && open build/app/outputs/apk/profile",
         "options": { "cwd": "${fileWorkspaceFolder}/example" },
         "presentation": { "reveal": "always" },
-        "problemMatcher": []
-      }
-    ]
-  }
+        "problemMatcher": [],
+      },
+    ],
+  },
 }
