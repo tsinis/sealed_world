@@ -109,6 +109,9 @@ dart_code_metrics:
     - prefer-commenting-pubspec-ignores: true
     - prefer-correct-topics: true
   rules:
+    - prefer-static-method:
+        ignore-public: true
+        ignore-private: false
     # With configs:
     - avoid-non-ascii-symbols:
         exclude:
@@ -132,8 +135,6 @@ dart_code_metrics:
         # bc for BuildContext, a and b are convenient for sorting, e for the element,
         # k for key, v for value.
         exceptions: ["a", "b", "e", "i", "k", "v", "x", "y", "io", "bc", "sb"]
-    - prefer-static-method:
-        ignore-public: true
     - avoid-long-parameter-list:
         ignore-optional: true
     - avoid-type-casts:
@@ -235,7 +236,6 @@ dart_code_metrics:
     - prefer-test-matchers: false # Matter of style + introduces coupling in tests.
 
     # Enabled:
-    - add-resolution-workspace: true
     - avoid-accessing-collections-by-constant-index: true
     - avoid-accessing-other-classes-private-members: true
     - avoid-always-null-parameters: true
@@ -405,7 +405,6 @@ dart_code_metrics:
     - avoid-wildcard-cases-with-enums: true
     - avoid-wildcard-cases-with-sealed-classes: true
     - binary-expression-operand-order: true
-    - dependencies-ordering: true
     - dispose-class-fields: true
     - double-literal-format: true
     - function-always-returns-null: true
@@ -421,7 +420,6 @@ dart_code_metrics:
     - newline-before-case: true
     - newline-before-constructor: true
     - newline-before-method: true
-    - newline-before-pubspec-entry: true
     - newline-before-return: true
     - no-boolean-literal-compare: true
     - no-empty-block: true
@@ -444,7 +442,6 @@ dart_code_metrics:
     - prefer-bytes-builder: true
     - prefer-commenting-analyzer-ignores: true
     - prefer-commenting-future-delayed: true
-    - prefer-commenting-pubspec-ignores: true
     - prefer-compound-assignment-operators: true
     - prefer-conditional-expressions: true
     - prefer-contains: true
@@ -458,7 +455,6 @@ dart_code_metrics:
     - prefer-correct-stream-return-type: true
     - prefer-correct-switch-length: true
     - prefer-correct-test-file-name: true
-    - prefer-correct-topics: true
     - prefer-correct-type-name: true
     - prefer-declaring-const-constructor: true
     - prefer-digit-separators: true
@@ -500,7 +496,6 @@ dart_code_metrics:
     - prefer-unwrapping-future-or: true
     - prefer-visible-for-testing-on-members: true
     - prefer-wildcard-pattern: true
-    - pubspec-ordering: true
     - record-fields-ordering: true
     - unnecessary-trailing-comma: true
     - use-existing-destructuring: true
@@ -518,7 +513,6 @@ linter:
     omit_local_variable_types: false # Conflicts with: prefer-type-over-var
     omit_obvious_local_variable_types: false # Conflicts with: omit_local_variable_types and prefer-type-over-var.
     omit_obvious_property_types: false # Conflicts with: type_annotate_public_apis.
-    prefer_final_parameters: false # Conflicts with: avoid_final_parameters.
     prefer_single_quotes: false # Conflicts with: prefer_double_quotes.
     specify_nonobvious_local_variable_types: false # Conflicts with: avoid-explicit-type-declaration.
     unnecessary_final: false # Conflicts with: prefer_final_locals.
@@ -527,7 +521,6 @@ linter:
     # Enabled:
     always_declare_return_types: true
     always_put_required_named_parameters_first: true
-    always_require_non_null_named_parameters: true
     annotate_overrides: true
     annotate_redeclares: true
     avoid_annotating_with_dynamic: true
@@ -546,7 +539,6 @@ linter:
     avoid_init_to_null: true
     avoid_js_rounded_ints: true
     avoid_multiple_declarations_per_line: true
-    avoid_null_checks_in_equality_operators: true
     avoid_positional_boolean_parameters: true
     avoid_print: true
     avoid_private_typedef_functions: true
@@ -554,8 +546,6 @@ linter:
     avoid_relative_lib_imports: true
     avoid_renaming_method_parameters: true
     avoid_return_types_on_setters: true
-    avoid_returning_null: true
-    avoid_returning_null_for_future: true
     avoid_returning_null_for_void: true
     avoid_returning_this: true
     avoid_setters_without_getters: true
@@ -592,7 +582,6 @@ linter:
     empty_catches: true
     empty_constructor_bodies: true
     empty_statements: true
-    enable_null_safety: true
     eol_at_end_of_file: true
     exhaustive_cases: true
     file_names: true
@@ -629,7 +618,6 @@ linter:
     one_member_abstracts: true
     only_throw_errors: true
     overridden_fields: true
-    package_api_docs: true
     package_names: true
     package_prefixed_library_names: true
     parameter_assignments: true
@@ -645,7 +633,6 @@ linter:
     prefer_constructors_over_static_methods: true
     prefer_contains: true
     prefer_double_quotes: true
-    prefer_equal_for_default_values: true
     prefer_expression_function_bodies: true
     prefer_final_fields: true
     prefer_final_in_for_each: true
@@ -722,11 +709,9 @@ linter:
     unnecessary_underscores: true
     unreachable_from_main: true
     unrelated_type_equality_checks: true
-    unsafe_html: true
     unsafe_variance: true
     use_enums: true
     use_function_type_syntax_for_parameters: true
-    use_if_null_to_convert_nulls_to_bools: true
     use_is_even_rather_than_modulo: true
     use_late_for_private_fields_and_variables: true
     use_named_constants: true

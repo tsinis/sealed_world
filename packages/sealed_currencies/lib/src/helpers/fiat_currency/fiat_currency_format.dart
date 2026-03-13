@@ -11,7 +11,8 @@ extension FiatCurrencyFormat on FiatCurrency {
   ///
   /// When [isRtl] is `true`, the unit position is flipped to ensure correct
   /// display in right-to-left locales.
-  // ignore: avoid_positional_boolean_parameters, limitation of dart lang.
+  // This is limitation of Dart language + breaking change.
+  // ignore: avoid_positional_boolean_parameters, prefer-named-boolean-parameters
   String? tryFormat([num? maybeValue, bool isRtl = false]) =>
       maybeValue == null ? null : format(maybeValue, isRtl: isRtl);
 
@@ -22,11 +23,8 @@ extension FiatCurrencyFormat on FiatCurrency {
   ///
   /// When [isRtl] is `true`, the unit position is flipped to ensure correct
   /// display in right-to-left locales.
-  String addUnit(String value, {bool isRtl = false}) {
-    final isLeading = isRtl ? !unitFirst : unitFirst;
-
-    return isLeading ? "$unit $value" : "$value $unit";
-  }
+  String addUnit(String value, {bool isRtl = false}) =>
+      isRtl == unitFirst ? "$value $unit" : "$unit $value";
 
   /// Formats the value as a string with the currency symbol. Please keep in
   /// mind that currency formatting might be also affected by locale itself.
