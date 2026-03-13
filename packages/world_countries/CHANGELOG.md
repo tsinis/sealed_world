@@ -1,3 +1,18 @@
+## 4.2.0
+
+NEW FEATURES
+
+- Added `isRtl` getter to `BuildContextExtension` for convenient RTL detection via `context.isRtl`.
+
+REFACTOR
+
+- `PhoneCodePicker` now detects RTL locale via `context.isRtl` and passes `isRtl: true` to `phoneCode()`, fixing dial code display in right-to-left locales (e.g., dial code is now rendered as `971+` instead of `+971`).
+- Replaced `EdgeInsets.only(left:, right:)` with `EdgeInsetsDirectional.only(start:, end:)` in `UiConstants.padding` for proper RTL support.
+
+CHORE
+
+- Updated `world_flags` to v3.1.0 — which includes RTL support from `sealed_countries` v3.1.0 and `sealed_currencies` v3.1.0.
+
 ## 4.1.0
 
 Synced with Flutter 3.41 SDK — replaced deprecated widget members with their updated counterparts and adopted newly introduced parameters.

@@ -82,6 +82,27 @@ void main() => group("BuildContextExtension", () {
     ),
   );
 
+  testWidgets("isRtl returns false for LTR context", (tester) async {
+    final context = await tester.contextExtractor();
+    expect(context.isRtl, isFalse);
+  });
+
+  testWidgets(
+    "isRtl returns true for RTL context",
+    (tester) => tester.pumpWidget(
+      Directionality(
+        textDirection: TextDirection.rtl,
+        child: Builder(
+          builder: (context) {
+            expect(context.isRtl, isTrue);
+
+            return const SizedBox();
+          },
+        ),
+      ),
+    ),
+  );
+
   testWidgets("showSnackBar", (tester) async {
     const message = "Hello, World!";
     const snackBar = SnackBar(content: Text(message));
