@@ -29,15 +29,22 @@ extension IddExtension on Idd {
   /// value in the [suffixes] list of this [Idd] object if it has a single
   /// suffix value, and an empty string otherwise.
   ///
+  /// When [isRtl] is `true`, the [leading] symbol is moved to the end of the
+  /// string to ensure correct display in right-to-left locales (e.g., Arabic).
+  ///
   /// Example usage:
   ///
   /// ```dart
   /// final idd = Idd(root: 3, suffixes: [81]);
   /// final phoneCode = idd.phoneCode();
   /// print(phoneCode); // Prints: "+381"
+  /// print(idd.phoneCode(isRtl: true)); // Prints: "381+"
   /// ```
-  String phoneCode({String leading = "+"}) =>
-      "$leading$root${hasSingleSuffix ? "${suffixes.first}" : ""}";
+  String phoneCode({String leading = "+", bool isRtl = false}) {
+    final suffix = hasSingleSuffix ? "${suffixes.first}" : "";
+
+    return isRtl ? "$root$suffix$leading" : "$leading$root$suffix";
+  }
 
   /// {@macro copy_with_method}
   Idd copyWith({int? root, List<int>? suffixes}) =>

@@ -27,6 +27,29 @@ void main() => group("IddExtension", () {
     );
   });
 
+  test("phoneCode with isRtl", () {
+    expect(
+      value.phoneCode(isRtl: true),
+      "${value.root}${value.suffixes.first}+",
+      reason: "11+",
+    );
+    expect(
+      multipleSuffixes.phoneCode(isRtl: true),
+      "${multipleSuffixes.root}+",
+      reason:
+          "When there are multiple suffixes, the phone code should not include "
+          "any suffix and should end with the leading symbol, 1+ not 11+.",
+    );
+    expect(
+      multipleSuffixes.phoneCode(isRtl: true),
+      "${multipleSuffixes.root}+",
+    );
+    expect(
+      value.phoneCode(leading: TestData.emptyString, isRtl: true),
+      value.root.toString() * 2,
+    );
+  });
+
   group("copyWith", () {
     test("with non-null values", () {
       final copy = value.copyWith(root: 0);
