@@ -109,7 +109,7 @@ coverage_badge.svg
 *.lcov
 nohup.out
 
-# Platfroms except Flutter examples
+# Platforms except Flutter examples
 macos/
 !packages/*/example/macos
 windows/
