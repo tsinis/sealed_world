@@ -113,22 +113,6 @@ void main() => group("$PhoneCodePicker", () {
     ),
   );
 
-  testWidgets("renders phone code with trailing + in RTL locale", (
-    tester,
-  ) async {
-    const country = CountryAre(); // UAE +971, but it's related to locale.
-    const picker = PhoneCodePicker(countries: [country]);
-    final rtlCode = country.idd.phoneCode(isRtl: true);
-
-    await tester.pumpMaterialApp(
-      const Directionality(textDirection: .rtl, child: picker),
-    );
-    await tester.pumpAndSettle();
-
-    expect(rtlCode, endsWith("+"));
-    expect(find.text(rtlCode), findsOneWidget);
-  });
-
   testWidgets("searchSuggestions()", (tester) async {
     await tester.pumpMaterialApp(
       SearchAnchor.bar(

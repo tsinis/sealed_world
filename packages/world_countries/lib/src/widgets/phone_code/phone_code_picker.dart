@@ -134,7 +134,7 @@ class PhoneCodePicker extends CountryPicker {
                   end: UiConstants.point / 2,
                 ),
                 child: Text(
-                  props.item.idd.phoneCode(isRtl: props.context.isRtl),
+                  props.item.idd.phoneCode(),
                   style: props.context.theme.textTheme.labelSmall,
                 ),
               ),

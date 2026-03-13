@@ -6,8 +6,11 @@ NEW FEATURES
 
 REFACTOR
 
-- `PhoneCodePicker` now detects RTL locale via `context.isRtl` and passes `isRtl: true` to `phoneCode()`, fixing dial code display in right-to-left locales (e.g., dial code is now rendered as `971+` instead of `+971`).
 - Replaced `EdgeInsets.only(left:, right:)` with `EdgeInsetsDirectional.only(start:, end:)` in `UiConstants.padding` for proper RTL support.
+
+DOCUMENTATION
+
+- Adjusted `localizationsDelegates` example in README to include `GlobalWidgetsLocalizations.delegate` (required for proper `Directionality` detection).
 
 CHORE
 
