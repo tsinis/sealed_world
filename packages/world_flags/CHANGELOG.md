@@ -1,3 +1,9 @@
+## 3.1.0
+
+CHORE
+
+- Updated `sealed_countries` to v3.1.0 — added RTL support for phone code formatting (`isRtl` parameter in `phoneCode()`).
+
 ## 3.0.1
 
 REFACTOR

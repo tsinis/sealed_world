@@ -1,4 +1,4 @@
-version: 3.0.1
+version: 3.1.0
 name: world_flags
 description: The first and only collection of declaratively defined world flags. No assets.
 maintainer: Roman Cinis
