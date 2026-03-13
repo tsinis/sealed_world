@@ -29,10 +29,10 @@ import "package:flutter/foundation.dart" show immutable;
 ///   {"Беларусь"},                // Native names
 ///   code: "BY",                   // ISO code
 ///   name: "Belarus",              // Localized name
-///   others: ["Byelarus"],         // Alternative spellings
+///   others: ["Byelorussia"],      // Alternative spellings
 /// );
 ///
-/// // The resulting list contains: ["Belarus", "Беларусь", "Belarus", "BY", "Byelarus"]
+/// // The resulting list contains: ["Belarus", "Беларусь", "Belarus", "BY", "Byelorussia"]
 /// print(searchData.first); // "Belarus"
 /// print(searchData.code);  // "BY"
 /// ```

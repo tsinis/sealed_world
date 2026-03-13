@@ -13,8 +13,8 @@ void main() => group("NaturalLanguageJson", () {
         "codeShort": "TS",
         "family": const IndoEuropean().name,
         "isRightToLeft": false,
-        "name": "Testish",
-        "namesNative": const ["Testish"],
+        "name": "Testing",
+        "namesNative": const ["Testing"],
         "scripts": const ["Latn"],
       };
 
@@ -23,8 +23,8 @@ void main() => group("NaturalLanguageJson", () {
       expect(language, isA<LangCustom>());
       expect(language.code, "TST");
       expect(language.codeShort, "TS");
-      expect(language.name, "Testish");
-      expect(language.namesNative, const ["Testish"]);
+      expect(language.name, "Testing");
+      expect(language.namesNative, const ["Testing"]);
       expect(language.family, const IndoEuropean());
       expect(language.isRightToLeft, isFalse);
       expect(language.scripts, const {ScriptLatn()});
