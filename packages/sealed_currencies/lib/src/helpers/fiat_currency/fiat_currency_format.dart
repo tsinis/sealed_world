@@ -8,29 +8,44 @@ extension FiatCurrencyFormat on FiatCurrency {
 
   /// If value is not `null` - formats the value as a string with
   /// the currency symbol. Otherwise returns `null`.
-  String? tryFormat([num? maybeValue]) =>
-      maybeValue == null ? null : format(maybeValue);
+  ///
+  /// When [isRtl] is `true`, the unit position is flipped to ensure correct
+  /// display in right-to-left locales.
+  // ignore: avoid_positional_boolean_parameters, limitation of dart lang.
+  String? tryFormat([num? maybeValue, bool isRtl = false]) =>
+      maybeValue == null ? null : format(maybeValue, isRtl: isRtl);
 
   /// Adds the currency unit to a value.
   ///
   /// If [unitFirst] is `true` (default), the currency unit is added before the
   /// value, otherwise it is added after the value.
-  String addUnit(String value) => unitFirst ? "$unit $value" : "$value $unit";
+  ///
+  /// When [isRtl] is `true`, the unit position is flipped to ensure correct
+  /// display in right-to-left locales.
+  String addUnit(String value, {bool isRtl = false}) {
+    final isLeading = isRtl ? !unitFirst : unitFirst;
+
+    return isLeading ? "$unit $value" : "$value $unit";
+  }
 
   /// Formats the value as a string with the currency symbol. Please keep in
   /// mind that currency formatting might be also affected by locale itself.
-  String format(num value) {
+  ///
+  /// When [isRtl] is `true`, the unit position is flipped to ensure correct
+  /// display in right-to-left locales.
+  String format(num value, {bool isRtl = false}) {
     final stringValue = value.toString();
+
     if (stringValue.contains(FiatCurrency.dot)) {
       final splitValue = stringValue.split(FiatCurrency.dot);
       final integer = splitValue.first;
       final decimals = splitValue.last;
       final formattedInt = _formatThousands(integer);
 
-      return addUnit(formattedInt + decimalMark + decimals);
+      return addUnit(formattedInt + decimalMark + decimals, isRtl: isRtl);
     }
 
-    return addUnit(_formatThousands(stringValue));
+    return addUnit(_formatThousands(stringValue), isRtl: isRtl);
   }
 
   String _formatThousands(String value) => value.replaceAllMapped(
