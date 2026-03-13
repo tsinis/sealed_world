@@ -68,8 +68,8 @@ extension IterableByCountryPopulationExtension<T extends IsoStandardized>
           map[item] = [...existing, country];
         } else {
           final unofficialCountries = unofficialMap[item] ?? const [];
-          for (final unoff in unofficialCountries) {
-            if (!existing.contains(unoff)) map[item] = [unoff, ...existing];
+          for (final unofficial in unofficialCountries) {
+            if (!existing.contains(unofficial)) map[item] = [unofficial, ...existing];
           }
         }
       }

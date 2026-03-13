@@ -73,7 +73,7 @@ class HaCurrenciesL10N extends IsoLocaleMapper<String> {
       "JOD": "Dinarin Jordan",
       "JPY": "Kuɗin Japan",
       "KES": "Sulen Kenya",
-      "KGS": "Som na ƙasar Kyrgystani",
+      "KGS": "Som na ƙasar Kyrgyzstani",
       "KHR": "Riel na ƙasar Cambodia",
       "KMF": "Kuɗin Kwamoras",
       "KPW": "Won na ƙasar Koriya ta Arewa",

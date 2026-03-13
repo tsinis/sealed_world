@@ -77,7 +77,7 @@ class SwCurrenciesL10N extends IsoLocaleMapper<String> {
       "JOD": "Dinar ya Yordani",
       "JPY": "Yen ya Japani",
       "KES": "Shilingi ya Kenya",
-      "KGS": "Som ya Kyrgystani",
+      "KGS": "Som ya Kyrgyzstani",
       "KHR": "Riel ya Kambodia",
       "KMF": "Faranga ya Komoro",
       "KPW": "Won ya Korea Kaskazini",

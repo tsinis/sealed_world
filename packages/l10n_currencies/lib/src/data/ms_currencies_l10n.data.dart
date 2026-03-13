@@ -77,7 +77,7 @@ class MsCurrenciesL10N extends IsoLocaleMapper<String> {
       "JOD": "Dinar Jordan",
       "JPY": "Yen Jepun",
       "KES": "Syiling Kenya",
-      "KGS": "Som Kyrgystani",
+      "KGS": "Som Kyrgyzstani",
       "KHR": "Riel Kemboja",
       "KMF": "Franc Comoria",
       "KPW": "Won Korea Utara",

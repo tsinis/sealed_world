@@ -165,7 +165,6 @@ Gtm
 Guf
 Guj
 Gujr
-Guyanaese
 HANB
 HANI
 HANO
@@ -246,7 +245,6 @@ Kpel
 Kthi
 Kwt
 Kxgpch
-Kyrgystani
 Kyrgyzstani
 LAOO
 LATF
@@ -712,7 +710,6 @@ serbski
 tne
 tostring
 txa
-unoff
 xbc
 xox
 ycn

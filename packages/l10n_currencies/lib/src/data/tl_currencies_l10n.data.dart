@@ -77,7 +77,7 @@ class TlCurrenciesL10N extends IsoLocaleMapper<String> {
       "JOD": "Jordanian Dinar",
       "JPY": "Yen ng Hapon",
       "KES": "Kenyan Shilling",
-      "KGS": "Kyrgystani Som",
+      "KGS": "Kyrgyzstani Som",
       "KHR": "Cambodian Riel",
       "KMF": "Comorian Franc",
       "KPW": "Won ng Hilagang Korea",
