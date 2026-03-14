@@ -63,8 +63,7 @@ class _MainState extends State<Main> {
             extensions: [..._pickersExtensions, _flagThemeController.theme],
           ),
           localizationsDelegates: const [
-            GlobalMaterialLocalizations.delegate,
-            GlobalCupertinoLocalizations.delegate,
+            ...GlobalMaterialLocalizations.delegates,
             TypedLocaleDelegate(), // ! Add for pickers L10N & improved search.
           ],
           supportedLocales: [

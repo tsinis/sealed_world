@@ -11,7 +11,11 @@ sealed class UiConstants {
   static const duration = kThemeChangeDuration;
 
   /// The default padding used in the UI.
-  static const padding = EdgeInsets.only(left: point, top: point, right: point);
+  static const padding = EdgeInsetsDirectional.only(
+    start: point,
+    top: point,
+    end: point,
+  );
 
   /// The default point used in the UI.
   static const point = 8.0;

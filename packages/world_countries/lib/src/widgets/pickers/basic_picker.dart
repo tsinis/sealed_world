@@ -123,7 +123,7 @@ abstract class BasicPicker<T extends IsoTranslated, W extends IsoTile<T>>
     super.onSearchResultsBuilder,
     super.spacing,
     this.searchBar,
-    this.searchBarPadding, // Default: EdgeInsets.only(left:8, top:8, right:8).
+    this.searchBarPadding, // EdgeInsetsDirectional.only(start:8, top:8, end:8).
     this.showClearButton = true,
     this.maps,
     this.flagTheme,

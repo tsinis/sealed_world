@@ -1,3 +1,9 @@
+## 3.1.0
+
+NEW FEATURES
+
+- Added `isRtl` parameter to `FiatCurrencyFormat.addUnit()`, `format()`, and `tryFormat()` methods. When `true`, the currency unit position is flipped for correct display in right-to-left locales.
+
 ## 3.0.1
 
 DOCUMENTATION

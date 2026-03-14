@@ -22,7 +22,6 @@ belgien
 belgique
 belgië
 bouvet
-byelarus
 checo
 cldr
 dolar
@@ -60,7 +59,6 @@ svizra
 svizzera
 taegukgi
 tcheco
-testish
 tham
 unidos
 vereinigte

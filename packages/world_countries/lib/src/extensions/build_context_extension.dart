@@ -101,6 +101,15 @@ extension BuildContextExtension on BuildContext {
   /// ```
   ScaffoldMessengerState? get maybeMessenger => ScaffoldMessenger.maybeOf(this);
 
+  /// Whether the current text direction is right-to-left.
+  ///
+  /// Example usage:
+  /// ```dart
+  /// final code = idd.phoneCode(isRtl: context.isRtl);
+  /// ```
+  @useResult
+  bool get isRtl => Directionality.of(this) == TextDirection.rtl;
+
   /// Shows a [SnackBar] at the bottom of the screen.
   ///
   /// Example usage:

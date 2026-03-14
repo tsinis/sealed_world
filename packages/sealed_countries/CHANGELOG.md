@@ -1,3 +1,13 @@
+## 3.1.0
+
+NEW FEATURES
+
+- Added `isRtl` parameter to `IddExtension.phoneCode()` method. When `true`, the leading symbol (e.g., `+`) is moved to the end of the string for correct display in right-to-left locales.
+
+CHORE
+
+- Updated `sealed_currencies` to v3.1.0 — added RTL support for currency formatting.
+
 ## 3.0.1
 
 DOCUMENTATION

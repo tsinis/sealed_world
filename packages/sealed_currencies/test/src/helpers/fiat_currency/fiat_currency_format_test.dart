@@ -77,4 +77,30 @@ void main() => group("FiatCurrencyFormat", () {
       );
     });
   });
+
+  group("RTL support", () {
+    test("addUnit flips unit position when isRtl is true", () {
+      expect(valueWithoutDot.unitFirst, isTrue);
+      expect(valueWithoutDot.addUnit("100"), "${valueWithoutDot.unit} 100");
+      expect(
+        valueWithoutDot.addUnit("100", isRtl: true),
+        "100 ${valueWithoutDot.unit}",
+      );
+    });
+
+    test("format with isRtl flips unit position", () {
+      expect(
+        valueWithoutDot.format(1000, isRtl: true),
+        "1.000 ${valueWithoutDot.unit}",
+      );
+    });
+
+    test("tryFormat with isRtl", () {
+      expect(valueWithoutDot.tryFormat(null, true), isNull);
+      expect(
+        valueWithoutDot.tryFormat(1000, true),
+        "1.000 ${valueWithoutDot.unit}",
+      );
+    });
+  });
 });

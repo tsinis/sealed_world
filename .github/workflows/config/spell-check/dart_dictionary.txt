@@ -70,7 +70,6 @@ ICU
 IME
 INFOPLIST
 IOG
-Instantitation
 JDr
 Jetifier
 Kbl
@@ -89,7 +88,6 @@ NOZORDER
 NULLABILITY
 PANA
 Params
-Platfroms
 Stderrs
 XCT
 allprojects
@@ -251,7 +249,6 @@ nsh
 nullptr
 opensource
 openstreetmap
-painer
 parallelizable
 pbxproj
 pbxuser
@@ -264,9 +261,7 @@ pragma
 pubspec
 pyc
 regexps
-registar
 resizable
-responsponds
 rfc
 rtl
 sconsign

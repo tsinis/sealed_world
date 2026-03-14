@@ -16,7 +16,7 @@ import "../model/iso/iso_maps.dart";
 ///
 /// Parameters:
 /// - [searchBarPadding]: The padding around the search bar. Defaults to
-///   the [EdgeInsets.only(left: 8, top: 8, right: 8)].
+///   the [EdgeInsetsDirectional.only(start: 8, top: 8, end: 8)].
 /// - [showClearButton]: A boolean value that determines whether the clear
 ///   button should be shown. Defaults to `true`, showing the clear button.
 /// - [searchBar]: An optional widget that can be passed to replace the default
