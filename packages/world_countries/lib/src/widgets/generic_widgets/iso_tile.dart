@@ -6,8 +6,6 @@ import "package:world_flags/world_flags.dart";
 import "../../extensions/models/iso_semantics_extension.dart";
 import "../../model/item_properties.dart";
 import "../generic_widgets/list_item_tile.dart";
-import "../helpers/maybe_widget.dart";
-
 /// A tile widget that displays information about the ISO object.
 class IsoTile<T extends IsoTranslated> extends ListItemTile<T> {
   /// Constructor for the [IsoTile] class.

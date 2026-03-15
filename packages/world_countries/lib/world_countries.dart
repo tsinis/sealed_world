@@ -49,7 +49,6 @@ export "src/widgets/generic_widgets/iso_tile.dart";
 export "src/widgets/generic_widgets/list_item_tile.dart";
 export "src/widgets/generic_widgets/search_list_listenable_builder.dart";
 export "src/widgets/generic_widgets/searchable_indexed_list_view_builder.dart";
-export "src/widgets/helpers/maybe_widget.dart";
 export "src/widgets/language/language_picker.dart";
 export "src/widgets/phone_code/phone_code_picker.dart";
 export "src/widgets/pickers/basic_picker.dart";

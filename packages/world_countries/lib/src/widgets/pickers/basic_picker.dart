@@ -25,8 +25,6 @@ import "../adaptive/adaptive_search_text_field.dart";
 import "../generic_widgets/implicit_search_delegate.dart";
 import "../generic_widgets/iso_tile.dart";
 import "../generic_widgets/searchable_indexed_list_view_builder.dart";
-import "../helpers/maybe_widget.dart";
-
 part "basic_picker_state.dart";
 
 /// An abstract class that provides a basic picker [Widget], with search

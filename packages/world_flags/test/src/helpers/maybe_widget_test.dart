@@ -1,7 +1,7 @@
 import "package:flutter/foundation.dart" show DiagnosticPropertiesBuilder;
 import "package:flutter/material.dart";
 import "package:flutter_test/flutter_test.dart";
-import "package:world_countries/src/widgets/helpers/maybe_widget.dart";
+import "package:world_flags/src/helpers/maybe_widget.dart";
 
 void main() => group("$MaybeWidget", () {
   const fallbackText = "Fallback";
