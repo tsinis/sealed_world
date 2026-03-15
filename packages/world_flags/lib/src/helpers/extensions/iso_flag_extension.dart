@@ -5,7 +5,7 @@ import "package:sealed_countries/sealed_countries.dart" show IsoStandardized;
 
 import "../../ui/effects/flag_shader_delegate.dart";
 import "../../ui/flags/basic_flag.dart";
-import "../../ui/iso_flag.dart";
+import "../../ui/flags/iso/iso_flag.dart";
 
 /// An extension on [IsoFlag] to provide a [copyWith] method for creating a
 /// new instance of [IsoFlag] with modified properties.
