@@ -122,7 +122,8 @@ class _MainState extends State<Main> {
                     aspectRatio: aspectRatio,
                     shader: _shaderDelegate,
                   ),
-            child: IsoFlag(item, _items, height: _size), // Or [CountryFlag].
+            // You can also use [CountryFlag], [CurrencyFlag] or [LanguageFlag].
+            child: IsoFlag(item, _items, height: _size),
           ),
         );
       },
