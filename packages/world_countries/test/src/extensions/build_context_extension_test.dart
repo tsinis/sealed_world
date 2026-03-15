@@ -1,4 +1,12 @@
-import "package:flutter/material.dart";
+import "package:flutter/material.dart"
+    show
+        MaterialLocalizations,
+        ScaffoldFeatureController,
+        ScaffoldMessengerState,
+        ScaffoldState,
+        SnackBar,
+        SnackBarClosedReason;
+import "package:flutter/widgets.dart";
 import "package:flutter_test/flutter_test.dart";
 import "package:world_countries/src/extensions/build_context_extension.dart";
 

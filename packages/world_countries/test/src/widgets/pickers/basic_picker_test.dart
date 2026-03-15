@@ -1,7 +1,8 @@
 // ignore_for_file: avoid-non-ascii-symbols, for test assertions readability.
 // ignore_for_file: prefer-match-file-name, testing protected method.
 
-import "package:flutter/material.dart";
+import "package:flutter/material.dart" show MaterialApp, ThemeData;
+import "package:flutter/widgets.dart";
 import "package:flutter_test/flutter_test.dart";
 import "package:world_countries/src/helpers/typed_locale_delegate.dart";
 import "package:world_countries/src/model/iso/iso_collections.dart";

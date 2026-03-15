@@ -1,5 +1,6 @@
 import "package:flutter/foundation.dart" show DiagnosticPropertiesBuilder;
-import "package:flutter/material.dart";
+import "package:flutter/material.dart" show Icons, MaterialApp;
+import "package:flutter/widgets.dart";
 import "package:flutter_test/flutter_test.dart";
 import "package:world_flags/src/ui/other/maybe_widget.dart";
 

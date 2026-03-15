@@ -1,8 +1,11 @@
 import "package:_sealed_world_tests/sealed_world_tests.dart";
 import "package:flutter/foundation.dart";
-import "package:flutter/material.dart";
+import "package:flutter/material.dart" show MaterialApp;
+import "package:flutter/widgets.dart";
 import "package:flutter_test/flutter_test.dart";
-import "package:world_flags/world_flags.dart";
+import "package:sealed_countries/sealed_countries.dart";
+import "package:world_flags/src/helpers/extensions/basic_flag_extension_copy_with.dart";
+import "package:world_flags/src/ui/country_flag.dart";
 
 void main() => group("$CountryFlag", () {
   const value = CountryDeu();

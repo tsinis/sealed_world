@@ -1,6 +1,7 @@
 // ignore_for_file: unnecessary_async, just a test.
 
-import "package:flutter/material.dart";
+import "package:flutter/material.dart" show Icons, SearchAnchor;
+import "package:flutter/widgets.dart";
 import "package:flutter_test/flutter_test.dart";
 import "package:world_countries/src/model/typedefs.dart";
 import "package:world_countries/src/theme/tile_theme_data/country_tile_theme_data.dart";

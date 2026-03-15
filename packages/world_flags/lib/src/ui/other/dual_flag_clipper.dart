@@ -15,7 +15,7 @@ class DualFlagClipper extends CustomClipper<Path> {
   /// Creates a new instance of [DualFlagClipper].
   const DualFlagClipper([this.angle = 45]);
 
-  /// The angle of the split line in degrees. Defaults to `45`.
+  /// The angle of the split line in degrees. Defaults to `45` degrees.
   final int angle;
 
   @override
@@ -34,7 +34,7 @@ class DualFlagClipper extends CustomClipper<Path> {
     final other => _diagonalClip(size, other),
   };
 
-  Path _diagonalClip(Size size, int normalizedAngle) {
+  static Path _diagonalClip(Size size, int normalizedAngle) {
     final radians = normalizedAngle * pi / 180;
     final center = Offset(size.width / 2, size.height / 2);
     final extent = size.width + size.height;
@@ -47,6 +47,7 @@ class DualFlagClipper extends CustomClipper<Path> {
     final farEnd = lineEnd + perpendicular * extent;
     final farStart = lineStart + perpendicular * extent;
 
+    // ignore: avoid-returning-cascades, it's common for the custom painter api.
     return Path()
       ..moveTo(lineStart.dx, lineStart.dy)
       ..lineTo(lineEnd.dx, lineEnd.dy)

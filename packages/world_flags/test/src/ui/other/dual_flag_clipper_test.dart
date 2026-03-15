@@ -1,7 +1,7 @@
 import "dart:ui" show Size;
 
 import "package:flutter_test/flutter_test.dart";
-import "package:world_flags/world_flags.dart";
+import "package:world_flags/src/ui/other/dual_flag_clipper.dart";
 
 void main() => group("$DualFlagClipper", () {
   const size = Size(200, 100);
@@ -11,8 +11,8 @@ void main() => group("$DualFlagClipper", () {
     final path = clipper.getClip(size);
     final bounds = path.getBounds();
 
-    expect(bounds.left, 0);
-    expect(bounds.top, 0);
+    expect(bounds.left, isZero);
+    expect(bounds.top, isZero);
     expect(bounds.width, size.width / 2);
     expect(bounds.height, size.height);
   });
@@ -22,8 +22,8 @@ void main() => group("$DualFlagClipper", () {
     final path = clipper.getClip(size);
     final bounds = path.getBounds();
 
-    expect(bounds.left, 0);
-    expect(bounds.top, 0);
+    expect(bounds.left, isZero);
+    expect(bounds.top, isZero);
     expect(bounds.width, size.width);
     expect(bounds.height, size.height / 2);
   });
@@ -33,7 +33,7 @@ void main() => group("$DualFlagClipper", () {
     final path = clipper.getClip(size);
     final bounds = path.getBounds();
 
-    expect(bounds.left, 0);
+    expect(bounds.left, isZero);
     expect(bounds.top, size.height / 2);
     expect(bounds.width, size.width);
     expect(bounds.height, size.height / 2);
@@ -45,17 +45,17 @@ void main() => group("$DualFlagClipper", () {
     final bounds = path.getBounds();
 
     expect(bounds.left, size.width / 2);
-    expect(bounds.top, 0);
+    expect(bounds.top, isZero);
     expect(bounds.width, size.width / 2);
     expect(bounds.height, size.height);
   });
 
   test("handles negative angles equivalently", () {
     const clipperNeg90 = DualFlagClipper(-90);
-    const clipper270 = DualFlagClipper(270);
+    const clip270 = DualFlagClipper(270);
 
     final boundsNeg = clipperNeg90.getClip(size).getBounds();
-    final bounds270 = clipper270.getClip(size).getBounds();
+    final bounds270 = clip270.getClip(size).getBounds();
 
     expect(boundsNeg, bounds270);
   });
@@ -63,10 +63,9 @@ void main() => group("$DualFlagClipper", () {
   test("produces a closed path at default (diagonal) angle", () {
     const clipper = DualFlagClipper();
     final path = clipper.getClip(size);
-    final metrics = path.computeMetrics().toList();
+    final metrics = path.computeMetrics().toList(growable: false);
 
-    expect(metrics, hasLength(1));
-    expect(metrics.first.isClosed, isTrue);
+    expect(metrics.single.isClosed, isTrue);
   });
 
   test("shouldReclip returns true when angle changes", () {

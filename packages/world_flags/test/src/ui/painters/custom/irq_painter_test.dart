@@ -1,6 +1,8 @@
 import "package:flutter/rendering.dart";
 import "package:flutter_test/flutter_test.dart";
-import "package:world_flags/world_flags.dart";
+import "package:world_flags/src/data/flags_map_part_3.data.dart"
+    show flagIrqProperties;
+import "package:world_flags/src/ui/painters/custom/irq_painter.dart";
 
 void main() => group("$IrqPainter", () {
   final painter = IrqPainter(
