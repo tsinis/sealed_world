@@ -1,6 +1,11 @@
 import "package:flutter/rendering.dart";
 import "package:flutter_test/flutter_test.dart";
-import "package:world_flags/world_flags.dart";
+import "package:world_flags/src/helpers/extensions/basic_flag_extension_copy_with.dart";
+import "package:world_flags/src/model/colors_properties.dart"
+    show ColorsProperties;
+import "package:world_flags/src/model/flag_properties.dart";
+import "package:world_flags/src/theme/flag_theme_data.dart";
+import "package:world_flags/src/ui/flags/basic_flag.dart";
 
 void main() => group("BasicFlagExtensionCopyWith", () {
   test("copyWith", () {

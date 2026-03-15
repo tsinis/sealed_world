@@ -1,4 +1,4 @@
-version: 3.0.1
+version: 3.1.0
 name: world_flags_example
 description: A world_flags package example application.
 publish_to: none
@@ -6,7 +6,7 @@ publish_to: none
 resolution: workspace
 
 environment:
-  sdk: ^3.10.8
+  sdk: ^3.11.1
 
 dependencies:
   flutter:

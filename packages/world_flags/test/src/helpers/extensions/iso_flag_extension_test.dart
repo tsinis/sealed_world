@@ -3,7 +3,7 @@ import "package:flutter_test/flutter_test.dart";
 import "package:sealed_countries/sealed_countries.dart";
 import "package:world_flags/src/helpers/extensions/iso_flag_extension.dart";
 import "package:world_flags/src/ui/flags/basic_flag.dart";
-import "package:world_flags/src/ui/iso_flag.dart";
+import "package:world_flags/src/ui/flags/iso/iso_flag.dart";
 
 void main() => group("IsoFlagExtension", () {
   test("copyWith", () {

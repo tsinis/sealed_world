@@ -1,4 +1,5 @@
-import "package:flutter/material.dart";
+import "package:flutter/material.dart" show InputDecoration, TextField;
+import "package:flutter/widgets.dart";
 import "package:flutter_test/flutter_test.dart";
 import "package:world_countries/src/extensions/text_field_extension.dart";
 

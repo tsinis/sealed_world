@@ -88,7 +88,7 @@ BREAKING CHANGES (in this package)
 - **Generics**: `BasicPicker` and related mixins require second type argument for tile type.
 - **Removed**: `CurrencyPicker.adaptiveFlags()`, `LanguagePicker.adaptiveFlags()` constructors. Flags are now default for all pickers.
 
-See human (but also LLM-agent adjusted) [MIGRATION_GUIDES.md](MIGRATION_GUIDES.md) for migration guide. Just provide it to your LLM of choice and let it help you with the migration.
+See human (but also LLM-agent adjusted) [MIGRATION_GUIDES.md](https://github.com/tsinis/sealed_world/blob/main/packages/world_countries/MIGRATION_GUIDES.md) for migration guide. Just provide it to your LLM of choice and let it help you with the migration.
 
 REFACTOR
 

@@ -1,5 +1,6 @@
 import "package:_sealed_world_tests/sealed_world_tests.dart";
-import "package:flutter/material.dart";
+import "package:flutter/material.dart" show Colors;
+import "package:flutter/widgets.dart";
 import "package:flutter_test/flutter_test.dart";
 import "package:world_flags/src/theme/flag_theme_data.dart";
 

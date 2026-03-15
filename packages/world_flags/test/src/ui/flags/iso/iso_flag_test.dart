@@ -1,12 +1,17 @@
-// ignore_for_file: unnecessary_async, missing-test-assertion, flagGolden method
+// ignore_for_file: missing-test-assertion, flagGolden does the job.
+
 import "package:_sealed_world_tests/sealed_world_tests.dart";
 import "package:flutter/foundation.dart";
-import "package:flutter/material.dart";
+import "package:flutter/material.dart" show FlutterLogo;
 import "package:flutter_test/flutter_test.dart";
-import "package:world_flags/world_flags.dart";
+import "package:sealed_countries/sealed_countries.dart";
+import "package:world_flags/src/helpers/extensions/flag_extension.dart";
+import "package:world_flags/src/ui/flags/basic_flag.dart";
+import "package:world_flags/src/ui/flags/iso/iso_flag.dart";
+import "package:world_flags/world_flags.dart"
+    show smallSimplifiedFlagsMap, smallSimplifiedLanguageFlagsMap;
 
-import "../../helpers/extensions/golden_widget_tester_extension.dart";
-import "../../helpers/flag_type.dart";
+import "../../../../helpers/extensions/golden_widget_tester_extension.dart";
 
 void main() => group("$IsoFlag", () {
   const value = CountryDeu();
@@ -42,7 +47,7 @@ void main() => group("$IsoFlag", () {
     ]) {
       testWidgets(
         "${iso.internationalName} Flag",
-        (tester) async => tester.flagGolden(iso, FlagType.full),
+        (tester) => tester.flagGolden(iso, .full),
       );
     }
   });
@@ -55,7 +60,7 @@ void main() => group("$IsoFlag", () {
     ]) {
       testWidgets(
         "${iso.internationalName} Flag",
-        (tester) async => tester.flagGolden(iso, FlagType.simplified),
+        (tester) => tester.flagGolden(iso, .simplified),
       );
     }
   });

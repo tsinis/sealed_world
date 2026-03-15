@@ -4,11 +4,11 @@ import "package:flutter/foundation.dart";
 import "package:flutter/widgets.dart";
 import "package:sealed_countries/sealed_countries.dart" show IsoStandardized;
 
-import "../debug/iso_diagnostics_property.dart";
-import "../helpers/extensions/basic_flag_extension_copy_with.dart";
-import "decorated_flag_widget.dart";
-import "effects/flag_shader_delegate.dart";
-import "flags/basic_flag.dart";
+import "../../../debug/iso_diagnostics_property.dart";
+import "../../../helpers/extensions/basic_flag_extension_copy_with.dart";
+import "../../decorated_flag_widget.dart";
+import "../../effects/flag_shader_delegate.dart";
+import "../basic_flag.dart";
 
 /// A widget that displays a flag for a given ISO object.
 ///

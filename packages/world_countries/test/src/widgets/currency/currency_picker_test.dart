@@ -1,5 +1,7 @@
 // ignore_for_file: unnecessary_async, missing-test-assertion
-import "package:flutter/material.dart";
+
+import "package:flutter/material.dart" show Icons, SearchAnchor;
+import "package:flutter/widgets.dart";
 import "package:flutter_test/flutter_test.dart";
 import "package:world_countries/src/helpers/typed_locale_delegate.dart";
 import "package:world_countries/src/model/iso/iso_maps.dart";

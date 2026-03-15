@@ -239,6 +239,9 @@ Answer: Every picker (and also its theme) has a `itemBuilder` parameter, providi
 CountryPicker(itemBuilder: (country, defaultTile) => EmojiFlag.platformDefault(country.item)); // Or defaultTile.copyWith(...)
 ```
 
+> [!TIP]
+> For language and currency pickers, you can also use `LanguageFlag` and `CurrencyFlag` widgets from the `world_flags` package to display **dual flags** — a split flag showing both the primary and secondary country (e.g. English: UK/US, EUR: Germany/EU). They work out of the box with built-in default maps: `LanguageFlag(LangEng())` or `CurrencyFlag(FiatEur())`.
+
 #### How to format/adjust automatic global translations of ISO objects in my app?
 
 For instance, you may want to capitalize all French currency names in auto-translations. You enhance the `TypedLocaleDelegate` with a custom `l10nFormatter` as follows:

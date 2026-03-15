@@ -1,10 +1,16 @@
 import "package:flutter/foundation.dart";
-import "package:flutter/material.dart";
+import "package:flutter/material.dart" show MaterialApp;
+import "package:flutter/widgets.dart";
 import "package:flutter_test/flutter_test.dart";
-import "package:world_flags/world_flags.dart";
+import "package:sealed_countries/sealed_countries.dart";
+import "package:world_flags/src/model/colors_properties.dart";
+import "package:world_flags/src/model/flag_properties.dart";
+import "package:world_flags/src/ui/effects/flag_shader_options.dart";
+import "package:world_flags/src/ui/effects/flag_shader_surface.dart";
+import "package:world_flags/src/ui/effects/waved_flag_shader_delegate.dart";
+import "package:world_flags/src/ui/flags/basic_flag.dart";
 
 import "../../../helpers/extensions/golden_widget_tester_extension.dart";
-import "../../../helpers/flag_type.dart";
 
 void main() => group("$FlagShaderSurface", () {
   testWidgets("renders CustomPaint for shader flags", (tester) async {
@@ -181,7 +187,8 @@ void main() => group("$FlagShaderSurface", () {
       // ignore: missing-test-assertion, flagGolden does the job.
       testWidgets(
         "${iso.internationalName} Waved Flag",
-        (tester) => tester.flagGolden(iso, FlagType.waved),
+        (tester) =>
+            tester.flagGolden(iso, .waved, goldensPath: "../../goldens"),
       );
     }
   });

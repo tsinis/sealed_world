@@ -11,7 +11,7 @@ class MaybeWidget<T extends Object> extends StatelessWidget {
   /// Constructor for the [MaybeWidget] class.
   ///
   /// * [value] is the value to check for null.
-  /// * [_builder] is the builder function to call with a non-null [value].
+  /// * `builder` is the builder function to call with a non-null [value].
   /// * [orElse] is the widget to display if [value] is null.
   /// * [buildWhen] optional predicate; if provided and returns `true` the
   ///   builder runs, if it returns `false` [orElse] is used. When omitted only
@@ -42,7 +42,7 @@ class MaybeWidget<T extends Object> extends StatelessWidget {
   /// Typically used with animated parents.
   ///
   /// * [value] is the value to check for null.
-  /// * [_builder] is the builder function to call with a non-null [value].
+  /// * `builder` is the builder function to call with a non-null [value].
   /// * [orElse] is the widget to display if [value] is null.
   /// * [buildWhen] optional predicate; if provided and returns `true` the
   ///   builder runs, if it returns `false` [orElse] is used. When omitted only
@@ -72,11 +72,11 @@ class MaybeWidget<T extends Object> extends StatelessWidget {
   /// Creates a [MaybeWidget] that uses [Offstage] as the default [orElse]
   /// widget.
   ///
-  /// This constructor is useful when you want to preserve the layout space even
-  /// when the [value] is `null`, but make the widget invisible.
+  /// This constructor is useful when you want to completely remove the widget
+  /// from the layout when [value] is `null`, taking up zero space.
   ///
   /// * [value] is the value to check for `null`.
-  /// * [_builder] is the builder function to call with a non-null [value].
+  /// * `builder` is the builder function to call with a non-null [value].
   /// * [orElse] defaults to [Offstage] when [value] is `null`.
   /// * [buildWhen] optional predicate; if provided and returns `true` the
   ///   builder runs, if it returns `false` [orElse] (the Offstage widget unless
@@ -159,27 +159,14 @@ class MaybeWidget<T extends Object> extends StatelessWidget {
 
   /// Conditional widget builder that returns `null` when [value] is `null`.
   ///
-  /// This lightweight utility mirrors the ergonomics of the main [MaybeWidget]
-  /// widget for the specific scenario where you only need a nullable widget
-  /// result (e.g. for nullable `child:` inputs, or inside a [Flex]/[Stack]/etc.
-  /// children list, or in a collection literal with spread / if
-  /// expressions) instead of inserting an always-present placeholder like
-  /// [SizedBox.shrink].
+  /// Unlike the [MaybeWidget] widget which inserts a placeholder (e.g.
+  /// [SizedBox.shrink]) when [value] is `null`, this static method simply
+  /// returns `null` — useful for nullable `child:` parameters, or inside
+  /// [Flex]/[Stack]/etc. children lists with null-aware spread/if expressions.
   ///
-  /// When the provided [value] is:
-  /// * `null`  - the method returns `null` (allowing you to naturally skip the
-  ///   widget in list literals without extra `if` checks).
-  /// * non-`null` - the optional [builder] is invoked and its result returned.
-  ///   If [builder] itself is omitted or returns `null`, the overall result is
-  ///   also `null`.
-  ///
-  /// Generics:
-  /// * [T] represents the (non-null) value type expected by [builder].
-  /// * [W] represents the widget subtype you expect the [builder] to return. By
-  ///   default the compiler will usually infer `W` for you (e.g. `Widget`,
-  ///   `Text`, `Icon`, etc.).
-  ///
-  /// Use cases include concise, allocation-free conditional widget inclusion:
+  /// Returns `null` when [value] is `null`, when [builder] is `null`, or when
+  /// [buildWhen] returns `false`. Otherwise invokes [builder] with the
+  /// non-`null` [value].
   ///
   /// ```dart
   /// Column(
@@ -244,6 +231,7 @@ class MaybeWidget<T extends Object> extends StatelessWidget {
   }
 
   /// The builder function to call with a non-null [value].
+  // ignore: unsafe_variance, breaking change.
   final Widget Function(T) _builder;
 
   /// Optional predicate that must return `true` for the builder to be used.
@@ -251,6 +239,7 @@ class MaybeWidget<T extends Object> extends StatelessWidget {
   /// If omitted, only the null-check on [value] is applied. When provided, the
   /// [value] must be non-null AND the predicate returns `true` for the builder
   /// to run; otherwise [orElse] (or `null` for [orNull]) is used.
+  // ignore: unsafe_variance, breaking change.
   final bool Function(T)?
   buildWhen; // ignore: prefer-correct-callback-field-name, SDK like.
 

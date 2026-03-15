@@ -5,7 +5,7 @@ import "package:sealed_countries/sealed_countries.dart";
 // ignore: avoid-importing-entrypoint-exports, only shows maps.
 import "../../world_flags.dart" show smallSimplifiedFlagsMap;
 import "flags/basic_flag.dart";
-import "iso_flag.dart";
+import "flags/iso/iso_flag.dart";
 
 /// A widget that displays a flag for a given country.
 ///
