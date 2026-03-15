@@ -3,6 +3,7 @@ import "package:flutter/widgets.dart";
 import "package:sealed_countries/sealed_countries.dart" show IsoStandardized;
 
 import "../../../helpers/extensions/basic_flag_extension_copy_with.dart";
+import "../../../helpers/extensions/decorated_flag_interface_extension.dart";
 import "../../other/dual_flag_clipper.dart";
 import "../../other/maybe_widget.dart";
 import "../basic_flag.dart";
@@ -37,10 +38,10 @@ class DualFlag<T extends IsoStandardized, F extends BasicFlag>
   const DualFlag(
     super.item,
     super._map, {
-    super.alternativeMap,
     this.splitAngle = 45,
     this.clipSecondary = true,
     this.clipBehavior = Clip.antiAlias,
+    super.alternativeMap,
     super.orElse,
     super.height,
     super.width,
@@ -85,11 +86,13 @@ class DualFlag<T extends IsoStandardized, F extends BasicFlag>
             final background = clipSecondary ? primary : secondary;
             final foreground = clipSecondary ? secondary : primary;
 
-            return background?.copyWith(
-              child: ClipPath(
-                clipBehavior: clipBehavior,
-                clipper: DualFlagClipper(splitAngle),
-                child: foreground,
+            return background?.copyWithTheme(
+              theme: toThemeData(
+                child: ClipPath(
+                  clipBehavior: clipBehavior,
+                  clipper: DualFlagClipper(splitAngle),
+                  child: foreground,
+                ),
               ),
             );
           },

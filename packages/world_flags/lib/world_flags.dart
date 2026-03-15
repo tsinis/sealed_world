@@ -73,6 +73,7 @@ export "src/helpers/extensions/basic_flag_extension_copy_with.dart";
 export "src/helpers/extensions/box_decoration_extension.dart";
 export "src/helpers/extensions/country_flag_extension.dart";
 export "src/helpers/extensions/decorated_flag_interface_extension.dart";
+export "src/helpers/extensions/dual_flag_extension.dart";
 export "src/helpers/extensions/flag_extension.dart";
 export "src/helpers/extensions/iso_flag_extension.dart";
 export "src/helpers/extensions/world_flags_build_context_extension.dart";
