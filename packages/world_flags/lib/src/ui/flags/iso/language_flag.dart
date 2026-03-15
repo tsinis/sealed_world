@@ -10,7 +10,10 @@ import "../../painters/custom/alb_painter.dart";
 import "../../painters/custom/almond_painter.dart";
 import "../../painters/custom/blr_painter.dart";
 import "../../painters/custom/btn_painter.dart";
+import "../../painters/custom/cyp_painter.dart";
 import "../../painters/custom/david_star_painter.dart";
+import "../../painters/custom/eagle_painter.dart";
+import "../../painters/custom/eri_painter.dart";
 import "../../painters/custom/esp_painter.dart";
 import "../../painters/custom/hrv_painter.dart";
 import "../../painters/custom/imn_painter.dart";
@@ -18,6 +21,7 @@ import "../../painters/custom/irq_painter.dart";
 import "../../painters/custom/ken_painter.dart";
 import "../../painters/custom/khm_painter.dart";
 import "../../painters/custom/lka_painter.dart";
+import "../../painters/custom/lso_painter.dart";
 import "../../painters/custom/maple_leaf_painter.dart";
 import "../../painters/custom/npl_painter.dart";
 import "../../painters/custom/prt_painter.dart";
@@ -59,17 +63,28 @@ class LanguageFlag extends DualFlag<NaturalLanguage, BasicFlag> {
   /// Creates a new instance of [LanguageFlag].
   ///
   /// - [language]: The natural language for which to display the flag.
-  /// - [alternativeMap]: An optional map of locale-adapted (secondary) flags.
+  /// - [alternativeMap]: A map of secondary (locale-adapted) flags. Defaults to
+  ///   [defaultSecondaryCountryLanguageFlags] which maps languages to their
+  ///  most recognizable secondary country (e.g. English → US, French → Canada).
   /// - [splitAngle]: The angle of the split line in degrees. Defaults to 45.
   /// - [clipSecondary]: When `true` (default), the secondary flag is clipped.
   ///   When `false`, the primary flag is clipped instead.
   /// - [key]: The key for the widget.
   const LanguageFlag(
     NaturalLanguage language, {
-    super.alternativeMap,
+    super.alternativeMap = defaultSecondaryCountryLanguageFlags,
     super.splitAngle,
     super.clipSecondary,
     super.clipBehavior,
+    super.orElse,
+    super.height,
+    super.width,
+    super.aspectRatio,
+    super.decoration,
+    super.decorationPosition,
+    super.padding,
+    super.shader,
+    super.child,
     super.key,
   }) : super(language, defaultConventionalLanguageFlags);
 
@@ -329,4 +344,140 @@ class LanguageFlag extends DualFlag<NaturalLanguage, BasicFlag> {
     LangZho(): MultiElementFlag(flagChnProperties),
     LangZul(): MultiElementFlag(flagZafProperties),
   };
+
+  /// Default secondary country flags for languages spoken in multiple
+  /// countries.
+  ///
+  /// Maps each [NaturalLanguage] that has a notable secondary country to the
+  /// flag of that country. For example, English (primary: UK) maps to the US
+  /// flag, French (primary: France) maps to the Canadian flag, etc.
+  ///
+  /// Only languages with a well-known secondary country association are
+  /// included. Languages spoken in only one country are omitted.
+  static const defaultSecondaryCountryLanguageFlags =
+      <NaturalLanguage, BasicFlag>{
+        LangAbk(): BasicFlag(flagRusProperties),
+        LangAfr(): StarFlag(flagNamProperties),
+        LangAra(): BasicFlag(
+          flagSauProperties,
+          elementsBuilder: ShahadaPainter.sau,
+        ),
+        LangAym(): BasicFlag(flagBolProperties),
+        LangBih(): BasicFlag(
+          flagNplProperties,
+          elementsBuilder: NplPainter.new,
+        ),
+        LangBod(): BasicFlag(
+          flagBtnProperties,
+          elementsBuilder: BtnPainter.new,
+        ),
+        LangCha(): MultiElementFlag(flagMnpProperties),
+        LangCos(): BasicFlag(flagItaProperties),
+        LangDan(): MultiElementFlag(flagFroProperties),
+        LangDeu(): BasicFlag(flagAutProperties),
+        LangEll(): BasicFlag(
+          flagCypProperties,
+          elementsBuilder: CypPainter.new,
+        ),
+        LangEng(): BasicFlag(
+          flagUsaProperties,
+          elementsBuilder: UsaStarsPainter.new,
+        ),
+        LangEus(): BasicFlag(flagFraProperties),
+        LangEwe(): RectangleFlag(flagTgoProperties),
+        LangFra(): BasicFlag(
+          flagCanProperties,
+          elementsBuilder: MapleLeafPainter.new,
+        ),
+        LangFul(): EllipseFlag(flagNerProperties),
+        LangGlg(): BasicFlag(
+          flagPrtProperties,
+          elementsBuilder: PrtPainter.new,
+        ),
+        LangGrn(): BasicFlag(flagBolProperties),
+        LangHau(): EllipseFlag(flagNerProperties),
+        LangHrv(): MultiElementFlag(flagBihProperties),
+        LangIpk(): BasicFlag(
+          flagCanProperties,
+          elementsBuilder: MapleLeafPainter.new,
+        ),
+        LangIta(): MultiElementFlag(flagCheProperties),
+        LangKas(): MoonFlag(flagPakProperties),
+        LangKau(): EllipseFlag(flagNerProperties),
+        LangKor(): EllipseFlag(flagPrkProperties),
+        LangKua(): StarFlag(flagNamProperties),
+        LangLim(): BasicFlag(flagBelProperties),
+        LangMsa(): MultiElementFlag(flagSgpProperties),
+        LangNld(): BasicFlag(flagBelProperties),
+        LangNya(): TriangleFlag(flagZweProperties),
+        LangOci(): BasicFlag(
+          flagEspProperties,
+          elementsBuilder: EspPainter.new,
+        ),
+        LangOji(): BasicFlag(
+          flagUsaProperties,
+          elementsBuilder: UsaStarsPainter.new,
+        ),
+        LangOss(): BasicFlag(
+          flagGeoProperties,
+          elementsBuilder: GeoPainter.new,
+        ),
+        LangPan(): EllipseFlag(flagIndProperties),
+        LangPor(): BasicFlag(
+          flagBraProperties,
+          elementsBuilder: BraPainter.new,
+        ),
+        LangQue(): BasicFlag(flagBolProperties),
+        LangRon(): BasicFlag(
+          flagMdaProperties,
+          elementsBuilder: SimpleBirdPainter.mda,
+        ),
+        LangRus(): BasicFlag(
+          flagBlrProperties,
+          elementsBuilder: BlrPainter.new,
+        ),
+        LangSmo(): BasicFlag(
+          flagAsmProperties,
+          elementsBuilder: EaglePainter.new,
+        ),
+        LangSnd(): EllipseFlag(flagIndProperties),
+        LangSom(): MultiElementFlag(flagEthProperties),
+        LangSot(): BasicFlag(
+          flagLsoProperties,
+          elementsBuilder: LsoPainter.new,
+        ),
+        LangSpa(): BasicFlag(
+          flagMexProperties,
+          elementsBuilder: EaglePainter.new,
+        ),
+        LangSqi(): BasicFlag(
+          flagUnkProperties,
+          elementsBuilder: KosovoPainter.new,
+        ),
+        LangSrp(): MultiElementFlag(flagBihProperties),
+        LangSsw(): MultiElementFlag(flagZafProperties),
+        LangSwa(): BasicFlag(
+          flagKenProperties,
+          elementsBuilder: KenPainter.new,
+        ),
+        LangSwe(): RectangleFlag(flagFinProperties),
+        LangTam(): BasicFlag(
+          flagLkaProperties,
+          elementsBuilder: LkaPainter.new,
+        ),
+        LangTir(): BasicFlag(
+          flagEriProperties,
+          elementsBuilder: EriPainter.new,
+        ),
+        LangTsn(): MultiElementFlag(flagZafProperties),
+        LangTso(): TriangleFlag(flagZweProperties),
+        LangTur(): BasicFlag(
+          flagCypProperties,
+          elementsBuilder: CypPainter.new,
+        ),
+        LangVen(): TriangleFlag(flagZweProperties),
+        LangXho(): TriangleFlag(flagZweProperties),
+        LangYid(): BasicFlag(flagDeuProperties),
+        LangZho(): RectangleFlag(flagTwnProperties),
+      };
 }

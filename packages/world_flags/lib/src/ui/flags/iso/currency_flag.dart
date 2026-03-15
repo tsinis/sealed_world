@@ -19,6 +19,7 @@ import "../../painters/custom/irq_painter.dart";
 import "../../painters/custom/ken_painter.dart";
 import "../../painters/custom/khm_painter.dart";
 import "../../painters/custom/lbn_painter.dart";
+import "../../painters/custom/lie_painter.dart";
 import "../../painters/custom/lka_painter.dart";
 import "../../painters/custom/lso_painter.dart";
 import "../../painters/custom/mac_painter.dart";
@@ -61,17 +62,29 @@ class CurrencyFlag extends DualFlag<FiatCurrency, BasicFlag> {
   /// Creates a new instance of [CurrencyFlag].
   ///
   /// - [currency]: The fiat currency for which to display the flag.
-  /// - [alternativeMap]: An optional map of locale-adapted (secondary) flags.
+  /// - [alternativeMap]: A map of secondary flags for currencies used in
+  ///   multiple countries. Defaults to [defaultSecondaryCountryCurrencyFlags]
+  ///   which maps currencies to their most recognizable secondary country
+  ///   (e.g. EUR → France, USD → Ecuador, GBP → Jersey).
   /// - [splitAngle]: The angle of the split line in degrees. Defaults to 45.
   /// - [clipSecondary]: When `true` (default), the secondary flag is clipped.
   ///   When `false`, the primary flag is clipped instead.
   /// - [key]: The key for the widget.
   const CurrencyFlag(
     FiatCurrency currency, {
-    super.alternativeMap,
+    super.alternativeMap = defaultSecondaryCountryCurrencyFlags,
     super.splitAngle,
     super.clipSecondary,
     super.clipBehavior,
+    super.orElse,
+    super.height,
+    super.width,
+    super.aspectRatio,
+    super.decoration,
+    super.decorationPosition,
+    super.padding,
+    super.shader,
+    super.child,
     super.key,
   }) : super(currency, defaultConventionalCurrencyFlags);
 
@@ -302,5 +315,52 @@ class CurrencyFlag extends DualFlag<FiatCurrency, BasicFlag> {
     FiatZar(): MultiElementFlag(flagZafProperties),
     FiatZmw(): BasicFlag(flagZmbProperties, elementsBuilder: ZmbPainter.new),
     FiatZwg(): TriangleFlag(flagZweProperties),
+  };
+
+  /// Default secondary country flags for currencies used in multiple countries.
+  ///
+  /// Maps each [FiatCurrency] that is used in more than one country to the flag
+  /// of a notable secondary country. For example, EUR (primary: Germany) maps
+  /// to the French flag, USD (primary: US) maps to the Ecuadorian flag, etc.
+  ///
+  /// Only currencies with a well-known secondary country association are
+  /// included. Single-country currencies are omitted.
+  static const defaultSecondaryCountryCurrencyFlags = <FiatCurrency, BasicFlag>{
+    FiatAud(): BasicFlag(
+      flagKirProperties,
+      elementsBuilder: HalfEllipsePainter.new,
+    ),
+    FiatChf(): BasicFlag(flagLieProperties, elementsBuilder: LiePainter.new),
+    FiatDkk(): BasicFlag(
+      flagGrlProperties,
+      elementsBuilder: HalfEllipsePainter.new,
+    ),
+    FiatDzd(): MultiElementFlag(flagEshProperties),
+    FiatEgp(): TriangleFlag(flagPseProperties),
+    FiatEur(): BasicFlag(flagDeuProperties),
+    FiatGbp(): BasicFlag(
+      flagJeyProperties,
+      elementsBuilder: SimpleShieldPainter.outlinedWithoutDividers,
+    ),
+    FiatIls(): TriangleFlag(flagPseProperties),
+    FiatInr(): BasicFlag(flagBtnProperties, elementsBuilder: BtnPainter.new),
+    FiatJod(): TriangleFlag(flagPseProperties),
+    FiatMad(): MultiElementFlag(flagEshProperties),
+    FiatMru(): MultiElementFlag(flagEshProperties),
+    FiatNzd(): BasicFlag(
+      flagCokProperties,
+      elementsBuilder: UnionJackPainter.half,
+    ),
+    FiatSgd(): BasicFlag(flagBrnProperties, elementsBuilder: BrnPainter.new),
+    FiatUsd(): BasicFlag(
+      flagEcuProperties,
+      elementsBuilder: SimpleShieldPainter.outlinedWithoutDividers,
+    ),
+    FiatXaf(): BasicFlag(flagTcdProperties),
+    FiatXcd(): MultiElementFlag(flagGrdProperties),
+    FiatXcg(): TriangleFlag(flagSxmProperties),
+    FiatXof(): StarFlag(flagSenProperties),
+    FiatXpf(): BasicFlag(flagNclProperties),
+    FiatZar(): StarFlag(flagNamProperties),
   };
 }
