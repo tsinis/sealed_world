@@ -1,5 +1,19 @@
 ## 3.1.0
 
+NEW FEATURES
+
+- Introduced `DualFlag` widget — displays two flags split by a configurable angle (default 45°) for a given ISO item. When both primary and secondary flags exist, renders a split view; otherwise falls back to a single flag.
+- Added `CurrencyFlag` widget — renders a country flag for a given `FiatCurrency`, with built-in default mappings for all fiat currencies to their primary country flags. Also provides secondary country flag mappings for dual-flag display.
+- Added `LanguageFlag` widget — renders a country flag for a given `NaturalLanguage`, with built-in default mappings for all natural languages to their primary country flags (including constructed languages). Also provides secondary country flag mappings for dual-flag display.
+- Added `DualFlagClipper` — a `CustomClipper` that clips along a line through the center at any angle, supporting horizontal, vertical, and diagonal splits.
+- Added `MaybeWidget` — a utility widget for conditionally wrapping or building widgets.
+
+REFACTOR
+
+- Reorganized ISO flag widgets (`IsoFlag`, `CurrencyFlag`, `LanguageFlag`, `DualFlag`) into a dedicated `flags/iso/` subdirectory.
+- Moved `MaybeWidget` from `world_countries` to `world_flags` package.
+- Optimized Flutter imports with explicit `show` clauses.
+
 CHORE
 
 - Updated `sealed_countries` to v3.1.0 — added RTL support for phone code formatting (`isRtl` parameter in `phoneCode()`).
