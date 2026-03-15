@@ -7,6 +7,8 @@ import "package:world_flags/src/model/flag_properties.dart";
 import "package:world_flags/src/ui/flags/basic_flag.dart";
 import "package:world_flags/src/ui/flags/iso/language_flag.dart";
 
+import "../../../../helpers/extensions/golden_widget_tester_extension.dart";
+
 void main() => group("$LanguageFlag", () {
   testWidgets("renders single flag for language with no secondary country", (
     tester,
@@ -67,4 +69,14 @@ void main() => group("$LanguageFlag", () {
     "defaultSecondaryCountryLanguageFlags is not empty",
     () => expect(LanguageFlag.defaultSecondaryCountryLanguageFlags, isNotEmpty),
   );
+
+  group("goldens", () {
+    for (final iso in LanguageFlag.defaultSecondaryCountryLanguageFlags.keys) {
+      // ignore: missing-test-assertion, flagGolden does the job.
+      testWidgets(
+        "${iso.internationalName} Flag",
+        (tester) => tester.flagGolden(iso, .dual, widget: LanguageFlag(iso)),
+      );
+    }
+  });
 });

@@ -7,6 +7,8 @@ import "package:world_flags/src/model/flag_properties.dart";
 import "package:world_flags/src/ui/flags/basic_flag.dart";
 import "package:world_flags/src/ui/flags/iso/currency_flag.dart";
 
+import "../../../../helpers/extensions/golden_widget_tester_extension.dart";
+
 void main() => group("$CurrencyFlag", () {
   testWidgets("renders single flag for currency with no secondary country", (
     tester,
@@ -68,4 +70,14 @@ void main() => group("$CurrencyFlag", () {
     "defaultSecondaryCountryCurrencyFlags is not empty",
     () => expect(CurrencyFlag.defaultSecondaryCountryCurrencyFlags, isNotEmpty),
   );
+
+  group("goldens", () {
+    for (final iso in CurrencyFlag.defaultSecondaryCountryCurrencyFlags.keys) {
+      // ignore: missing-test-assertion, flagGolden does the job.
+      testWidgets(
+        "${iso.internationalName} Flag",
+        (tester) => tester.flagGolden(iso, .dual, widget: CurrencyFlag(iso)),
+      );
+    }
+  });
 });

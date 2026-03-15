@@ -5,7 +5,8 @@ import "package:flutter/widgets.dart";
 enum FlagType {
   full(height: 320),
   simplified(decoration: BoxDecoration(borderRadius: .all(.circular(4)))),
-  waved(height: 60);
+  waved(height: 60),
+  dual;
 
   const FlagType({this.decoration, this.height = kMinInteractiveDimension});
 

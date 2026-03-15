@@ -30,9 +30,11 @@ extension GoldenWidgetTesterExtension on WidgetTester {
   Future<void> flagGolden<T extends IsoTranslated>(
     T iso,
     FlagType type, {
+    Widget? widget,
     String goldensPath = "../../../../goldens",
   }) async {
     final isWaved = type == FlagType.waved;
+    final isDual = type == FlagType.dual;
     final aspectRatio = iso.mapWhenOrNull(
       country: (country) => country.flagProperties?.aspectRatio,
     );
@@ -41,13 +43,15 @@ extension GoldenWidgetTesterExtension on WidgetTester {
     final filePath = "$goldensPath/${type.name}/${iso.code.toLowerCase()}.png";
 
     await binding.setSurfaceSize(Size(width, height));
-    final widget = isWaved
-        ? FlagShaderSurface(iso, height: height, width: width) // TODO! Pixel.R.
-        : IsoFlag(iso, _items);
+    final flagWidget =
+        widget ??
+        (isWaved
+            ? FlagShaderSurface(iso, height: height, width: width)
+            : IsoFlag(iso, _items));
 
     await pumpWidget(
       MaterialApp(
-        home: widget,
+        home: flagWidget,
         theme: ThemeData(
           extensions: [FlagThemeData(decoration: type.decoration)],
         ),
@@ -55,8 +59,12 @@ extension GoldenWidgetTesterExtension on WidgetTester {
     );
     if (isWaved) await pump(const Duration(milliseconds: 100));
 
+    final finderType = isDual || isWaved
+        ? flagWidget.runtimeType
+        : IsoFlag<T, BasicFlag>;
+
     return expectLater(
-      find.byType(isWaved ? FlagShaderSurface : IsoFlag<T, BasicFlag>),
+      find.byType(finderType),
       matchesGoldenFile(isWaved ? "../$filePath" : filePath),
       skip: !Platform.isLinux && (_ignoreOnNonLinux.contains(iso) || isWaved),
       reason: "Non-Linux platforms rendering those flags slightly differently",
