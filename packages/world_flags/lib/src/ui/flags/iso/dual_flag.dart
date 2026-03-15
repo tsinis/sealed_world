@@ -17,9 +17,10 @@ import "iso_flag.dart";
 /// flag using [IsoFlag]'s default behavior.
 ///
 /// The [splitAngle] controls the direction of the split:
-/// - `90` degrees (default): vertical split (left/right)
+/// - `45` degrees (default): diagonal split
+/// - `90` degrees: vertical split (left/right)
 /// - `0` degrees: horizontal split (top/bottom)
-/// - Other values: diagonal split at the specified angle.
+/// - Other values: split at the specified angle.
 /// {@endtemplate}
 class DualFlag<T extends IsoStandardized, F extends BasicFlag>
     extends IsoFlag<T, F> {
@@ -28,7 +29,7 @@ class DualFlag<T extends IsoStandardized, F extends BasicFlag>
   /// - [item]: The ISO item for which to display the flag.
   /// - [map]: A map of primary flag associations (positional, same as IsoFlag).
   /// - [alternativeMap]: An optional map of secondary flags.
-  /// - [splitAngle]: The angle of the split line in degrees. Defaults to `90`.
+  /// - [splitAngle]: The angle of the split line in degrees. Defaults to `45`.
   /// - [clipSecondary]: When `true` (default), the secondary flag is clipped.
   ///   When `false`, the primary flag is clipped instead.
   /// - [clipBehavior]: The clip behavior for the split edge. Defaults to
@@ -37,7 +38,7 @@ class DualFlag<T extends IsoStandardized, F extends BasicFlag>
     super.item,
     super._map, {
     super.alternativeMap,
-    this.splitAngle = 90,
+    this.splitAngle = 45,
     this.clipSecondary = true,
     this.clipBehavior = Clip.antiAlias,
     super.orElse,

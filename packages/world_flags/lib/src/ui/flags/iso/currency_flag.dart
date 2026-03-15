@@ -62,7 +62,7 @@ class CurrencyFlag extends DualFlag<FiatCurrency, BasicFlag> {
   ///
   /// - [currency]: The fiat currency for which to display the flag.
   /// - [alternativeMap]: An optional map of locale-adapted (secondary) flags.
-  /// - [splitAngle]: The angle of the split line in degrees. Defaults to 90.
+  /// - [splitAngle]: The angle of the split line in degrees. Defaults to 45.
   /// - [clipSecondary]: When `true` (default), the secondary flag is clipped.
   ///   When `false`, the primary flag is clipped instead.
   /// - [key]: The key for the widget.
