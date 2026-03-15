@@ -154,6 +154,9 @@ To preview flag modifications you can also visit [this web page](https://tsin.is
 For more information on using this package, check out the API documentation.
 If you have any issues or suggestions for the package, please file them in the GitHub repository. **PRs or ideas are always welcome**. If you like this package, please give it a star or like.
 
+> [!TIP]
+> For languages and currencies used in multiple countries, use `LanguageFlag` and `CurrencyFlag` widgets to display **dual flags** — a split flag showing both the primary and secondary country associations (e.g. English: UK/US, EUR: Germany/EU). They come with built-in default maps, so a single `LanguageFlag(LangEng())` or `CurrencyFlag(FiatEur())` is all you need.
+
 ### Benchmarks
 
 Review the benchmark pipeline details and artifact locations in [example/benchmarks/README.md](./example/benchmarks/README.md). Run the automated flow from the repository root with:
@@ -203,7 +206,7 @@ Yes, for sure. You can find them under this spoiler:
 <details>
 <summary>LLM-agent instructions</summary>
 
-# LLM-agent instructions for world_flags
+## LLM-agent instructions for world_flags
 
 Optimized for high-level models from **Google**, **Anthropic**, and **OpenAI** for use via **GitHub Copilot**, **Claude Code** or **Cursor**.
 
