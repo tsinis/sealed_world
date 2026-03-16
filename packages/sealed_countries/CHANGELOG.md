@@ -3,6 +3,9 @@
 NEW FEATURES
 
 - Added `isRtl` parameter to `IddExtension.phoneCode()` method. When `true`, the leading symbol (e.g., `+`) is moved to the end of the string for correct display in right-to-left locales.
+- `copyWith` methods now support resetting nullable fields to `null` via domain-invalid sentinel values:
+  - `String?` fields: pass an empty string to reset (e.g. `cioc: ""`, `fifa: ""`; also `deJure`, `third` on `Capital`).
+  - `List?` fields: pass an empty list to reset (e.g. `bordersCodes: []`, `currencies: []`, `regionalBlocs: []`).
 
 CHORE
 
