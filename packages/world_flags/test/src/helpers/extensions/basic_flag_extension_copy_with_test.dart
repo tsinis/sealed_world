@@ -24,6 +24,20 @@ void main() => group("BasicFlagExtensionCopyWith", () {
     expect(copy.copyWith().key, copyKey);
   });
 
+  test("copyWith resets height/width/aspectRatio to null with negative", () {
+    const original = BasicFlag(
+      FlagProperties([ColorsProperties(Color(0xFFFFFFFF))]),
+      height: 50,
+      width: 100,
+      aspectRatio: 2,
+    );
+
+    final copy = original.copyWith(height: -1, width: -1, aspectRatio: -1);
+    expect(copy.aspectRatio, isNull);
+    expect(copy.height, isNull);
+    expect(copy.width, isNull);
+  });
+
   group("copyWithTheme", () {
     const smallTheme = FlagThemeData.small();
 

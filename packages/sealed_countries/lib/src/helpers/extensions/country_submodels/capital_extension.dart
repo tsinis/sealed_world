@@ -18,8 +18,8 @@ extension CapitalExtension on Capital {
   /// {@macro copy_with_method}
   Capital copyWith({String? deFacto, String? deJure, String? third}) => Capital(
     deFacto ?? this.deFacto,
-    deJure: deJure ?? this.deJure,
-    third: third ?? this.third,
+    deJure: (deJure?.isEmpty ?? false) ? null : (deJure ?? this.deJure),
+    third: (third?.isEmpty ?? false) ? null : (third ?? this.third),
   );
 
   /// {@macro to_map_method}

@@ -38,7 +38,9 @@ extension NaturalLanguageCopyWith<T extends NaturalLanguage> on T {
     codeShort: codeShort ?? this.codeShort,
     namesNative: namesNative ?? this.namesNative,
     code: code ?? this.code,
-    bibliographicCode: bibliographicCode ?? this.bibliographicCode,
+    bibliographicCode: (bibliographicCode?.isEmpty ?? false)
+        ? null
+        : (bibliographicCode ?? this.bibliographicCode),
     family: family ?? this.family,
     isRightToLeft: isRightToLeft ?? this.isRightToLeft,
     scripts: scripts ?? this.scripts,

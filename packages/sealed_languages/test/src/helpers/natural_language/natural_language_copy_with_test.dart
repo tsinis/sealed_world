@@ -28,4 +28,16 @@ void main() => group("NaturalLanguageCopyWith", () {
     expect(copy.family, element.family);
     expect(copy.isRightToLeft, element.isRightToLeft);
   });
+
+  test("copyWith should reset bibliographicCode to null with empty string", () {
+    final withBiblio = NaturalLanguage.list.firstWhere(
+      (l) => l.bibliographicCode != null,
+    );
+    expect(withBiblio.bibliographicCode, isNotNull);
+
+    final copy = withBiblio.copyWith(bibliographicCode: "");
+    expect(copy.bibliographicCode, isNull);
+    expect(copy.name, withBiblio.name);
+    expect(copy.code, withBiblio.code);
+  });
 });

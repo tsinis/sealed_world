@@ -44,4 +44,20 @@ void main() => group("FiatCurrencyCopyWith", () {
     expect(copy.decimalMark, element.decimalMark);
     expect(copy.thousandsSeparator, element.thousandsSeparator);
   });
+
+  test("copyWith should reset nullable String fields to null with ''", () {
+    final withHtml = FiatCurrency.list.firstWhere((i) => i.htmlEntity != null);
+    final copy = withHtml.copyWith(htmlEntity: "");
+    expect(copy.htmlEntity, isNull);
+    expect(copy.code, withHtml.code);
+  });
+
+  test("copyWith should reset nullable List field to null with empty list", () {
+    final withAlt = FiatCurrency.list.firstWhere(
+      (i) => i.alternateSymbols != null,
+    );
+    final copy = withAlt.copyWith(alternateSymbols: const []);
+    expect(copy.alternateSymbols, isNull);
+    expect(copy.code, withAlt.code);
+  });
 });

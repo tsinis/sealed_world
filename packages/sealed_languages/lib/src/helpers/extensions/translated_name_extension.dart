@@ -13,8 +13,20 @@ extension TranslatedNameExtension on TranslatedName {
   /// {@template copy_with_method}
   /// Creates a copy of this object with the given fields replaced with
   /// the new values.
-  /// If the new values are `null`, the field is left unchanged. Otherwise,
-  /// the field is replaced with the new value.
+  ///
+  /// For nullable fields, passing `null` leaves the field unchanged (standard
+  /// Dart `copyWith` behavior). To explicitly **reset a nullable field to
+  /// `null`**, pass a domain-invalid sentinel value:
+  ///
+  /// - **`String?` fields**: pass an empty string (`isEmpty`) to reset to
+  ///   `null`.
+  /// - **`List?` / `Set?` fields**: pass an empty collection (`isEmpty`) to
+  ///   reset to `null`.
+  /// - **`double?`/`int?` fields** (positive-only, e.g. height/width/angle):
+  ///   pass a negative value (`isNegative`) to reset to `null`.
+  ///
+  /// These sentinel values are never valid for the respective fields (enforced
+  /// by constructor assertions), making the intent unambiguous.
   /// {@endtemplate}
   TranslatedName copyWith({
     String? countryCode,
@@ -25,8 +37,10 @@ extension TranslatedNameExtension on TranslatedName {
   }) => TranslatedName(
     language ?? this.language,
     name: name ?? this.name,
-    fullName: fullName ?? this.fullName,
-    countryCode: countryCode ?? this.countryCode,
+    fullName: (fullName?.isEmpty ?? false) ? null : (fullName ?? this.fullName),
+    countryCode: (countryCode?.isEmpty ?? false)
+        ? null
+        : (countryCode ?? this.countryCode),
     script: script ?? this.script,
   );
 

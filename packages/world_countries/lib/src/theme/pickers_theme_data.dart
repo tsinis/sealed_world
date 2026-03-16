@@ -108,7 +108,9 @@ class PickersThemeData extends ThemeExtension<PickersThemeData>
   }) => PickersThemeData(
     addRepaintBoundaries: addRepaintBoundaries ?? this.addRepaintBoundaries,
     addSemanticIndexes: addSemanticIndexes ?? this.addSemanticIndexes,
-    cacheExtent: cacheExtent ?? this.cacheExtent,
+    cacheExtent: (cacheExtent?.isNegative ?? false)
+        ? null
+        : (cacheExtent ?? this.cacheExtent),
     clipBehavior: clipBehavior ?? this.clipBehavior,
     crossAxisAlignment: crossAxisAlignment ?? this.crossAxisAlignment,
     direction: direction ?? this.direction,

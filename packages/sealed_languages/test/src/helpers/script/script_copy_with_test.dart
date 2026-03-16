@@ -24,4 +24,14 @@ void main() => group("ScriptCopyWith", () {
     expect(copy.date, element.date);
     expect(copy.pva, element.pva);
   });
+
+  test("copyWith should reset pva to null with empty string sentinel", () {
+    final withPva = Script.list.firstWhere((s) => s.pva != null);
+    expect(withPva.pva, isNotNull);
+
+    final copy = withPva.copyWith(pva: "");
+    expect(copy.pva, isNull);
+    expect(copy.name, withPva.name);
+    expect(copy.code, withPva.code);
+  });
 });

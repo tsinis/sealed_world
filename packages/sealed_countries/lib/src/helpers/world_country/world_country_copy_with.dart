@@ -20,6 +20,7 @@ import "../../model/regional_bloc/regional_bloc.dart";
 /// properties updated.
 extension WorldCountryCopyWith<T extends WorldCountry> on T {
   /// {@macro copy_with_method}
+  // ignore: avoid-high-cyclomatic-complexity, a lot of parameters to update.
   WorldCountry copyWith({
     CountryName? name,
     List<CountryName>? namesNative,
@@ -75,20 +76,26 @@ extension WorldCountryCopyWith<T extends WorldCountry> on T {
     tld: tld ?? this.tld,
     mapper: mapper ?? l10n.mapper,
     demonyms: demonyms ?? this.demonyms,
-    currencies: currencies ?? this.currencies,
+    currencies: currencies != null && currencies.isEmpty
+        ? null
+        : (currencies ?? this.currencies),
     capitalInfo: capitalInfo ?? this.capitalInfo,
     car: car ?? this.car,
-    cioc: cioc ?? this.cioc,
-    fifa: fifa ?? this.fifa,
+    cioc: (cioc?.isEmpty ?? false) ? null : (cioc ?? this.cioc),
+    fifa: (fifa?.isEmpty ?? false) ? null : (fifa ?? this.fifa),
     gini: gini ?? this.gini,
     hasCoatOfArms: hasCoatOfArms ?? this.hasCoatOfArms,
     independent: independent ?? this.independent,
     landlocked: landlocked ?? this.landlocked,
     postalCode: postalCode ?? this.postalCode,
-    bordersCodes: bordersCodes ?? this.bordersCodes,
+    bordersCodes: (bordersCodes?.isEmpty ?? false)
+        ? null
+        : (bordersCodes ?? this.bordersCodes),
     startOfWeek: startOfWeek ?? this.startOfWeek,
     subregion: subregion ?? this.subregion,
     unMember: unMember ?? this.unMember,
-    regionalBlocs: regionalBlocs ?? this.regionalBlocs,
+    regionalBlocs: (regionalBlocs?.isEmpty ?? false)
+        ? null
+        : (regionalBlocs ?? this.regionalBlocs),
   );
 }

@@ -15,7 +15,9 @@ extension BasicLocaleExtension on BasicLocale {
     Script? script,
   }) => BasicLocale(
     language ?? this.language,
-    countryCode: countryCode ?? this.countryCode,
+    countryCode: (countryCode?.isEmpty ?? false)
+        ? null
+        : (countryCode ?? this.countryCode),
     script: script ?? this.script,
   );
 
