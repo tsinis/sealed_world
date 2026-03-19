@@ -2,6 +2,8 @@ import "package:flutter/widgets.dart";
 import "package:flutter_test/flutter_test.dart";
 import "package:sealed_countries/sealed_countries.dart";
 import "package:world_flags/src/helpers/extensions/dual_flag_extension.dart";
+import "package:world_flags/src/model/colors_properties.dart";
+import "package:world_flags/src/model/flag_properties.dart";
 import "package:world_flags/src/ui/flags/basic_flag.dart";
 import "package:world_flags/src/ui/flags/iso/dual_flag.dart";
 
@@ -72,7 +74,9 @@ void main() => group("DualFlagExtension", () {
 
   test("copyWith updates item and map", () {
     const newItem = FiatUsd();
-    const newMap = <FiatCurrency, BasicFlag>{};
+    const newMap = <FiatCurrency, BasicFlag>{
+      .usd(): BasicFlag(FlagProperties([ColorsProperties(Color(0xff000000))])),
+    };
     final copy = original.copyWith(item: newItem, map: newMap);
 
     expect(copy.item, newItem);

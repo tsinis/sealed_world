@@ -19,4 +19,3 @@ dependencies:
   sealed_currencies: any
   sealed_languages: any
   yaml: ^3.1.3
-

@@ -63,6 +63,5 @@ class CustomElementsProperties extends ElementsProperties {
       "CustomElementsProperties($mainColor, "
       "heightFactor: $heightFactor, otherColors: $otherColors, "
       "${widthFactor == null ? '' : 'widthFactor: $widthFactor, '}"
-      "${angle == null ? '' : 'angle: $angle, '}offset: $offset,"
-      "${child == null ? '' : ' child: $child,'})";
+      "${angle == null ? '' : 'angle: $angle, '}offset: $offset,)";
 }

@@ -16,7 +16,6 @@ extension CustomElementsPropertiesCopyWith on CustomElementsProperties {
   ///   to reset to `null`.
   /// - [angle]: The rotation angle of the element in degrees. Pass a negative
   ///   value to reset to `null`.
-  /// - [child]: A potential child element.
   CustomElementsProperties copyWith({
     Color? mainColor,
     List<Color>? otherColors,
