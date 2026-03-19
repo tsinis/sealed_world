@@ -6,7 +6,7 @@ publish_to: none
 resolution: workspace
 
 environment:
-  sdk: ^3.11.0
+  sdk: ^3.11.3
 
 dependencies:
   args: ^2.7.0
@@ -19,3 +19,4 @@ dependencies:
   sealed_currencies: any
   sealed_languages: any
   yaml: ^3.1.3
+
