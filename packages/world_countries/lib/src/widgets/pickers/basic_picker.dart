@@ -469,6 +469,7 @@ abstract class BasicPicker<T extends IsoTranslated, W extends IsoTile<T>>
       maintainState: maintainState,
     );
 
+    // ignore: avoid-unassigned-local-variable, false positive on closeOnSelect.
     return popResult ?? result;
   }
 

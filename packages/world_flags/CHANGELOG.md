@@ -7,6 +7,8 @@ NEW FEATURES
 - Added `LanguageFlag` widget — renders a country flag for a given `NaturalLanguage`, with built-in default mappings for all natural languages to their primary country flags (including constructed languages). Also provides secondary country flag mappings for dual-flag display.
 - Added `DualFlagClipper` — a `CustomClipper` that clips along a line through the center at any angle, supporting horizontal, vertical, and diagonal splits.
 - Added `MaybeWidget` — a utility widget for conditionally wrapping or building widgets.
+- Added `copyWith` extensions for `FlagProperties`, `ElementsProperties`, and `CustomElementsProperties`.
+- All `copyWith` methods across the ecosystem now support resetting nullable fields to `null` via domain-invalid sentinel values (see underlying packages for details). In this package: pass a negative value for positive-only `double?`/`int?` fields (`height`, `width`, `aspectRatio`, `widthFactor`, `angle`), and an empty list for `List?` fields (`elementsProperties`).
 
 REFACTOR
 

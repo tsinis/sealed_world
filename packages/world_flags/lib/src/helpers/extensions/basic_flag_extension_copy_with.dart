@@ -52,7 +52,9 @@ extension BasicFlagExtensionCopyWith<T extends BasicFlag> on T {
     Key? key,
   }) => BasicFlag(
     properties ?? this.properties,
-    aspectRatio: aspectRatio ?? this.aspectRatio,
+    aspectRatio: (aspectRatio?.isNegative ?? false)
+        ? null
+        : (aspectRatio ?? this.aspectRatio),
     decoration: decoration ?? this.decoration,
     decorationPosition: decorationPosition ?? this.decorationPosition,
     padding: padding ?? this.padding,
@@ -63,8 +65,8 @@ extension BasicFlagExtensionCopyWith<T extends BasicFlag> on T {
         foregroundPainterBuilder ?? this.foregroundPainterBuilder,
     foregroundWidgetBuilder:
         foregroundWidgetBuilder ?? this.foregroundWidgetBuilder,
-    height: height ?? this.height,
-    width: width ?? this.width,
+    height: (height?.isNegative ?? false) ? null : (height ?? this.height),
+    width: (width?.isNegative ?? false) ? null : (width ?? this.width),
     key: key ?? this.key,
     child: child ?? this.child,
   );

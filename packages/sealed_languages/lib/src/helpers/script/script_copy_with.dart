@@ -14,6 +14,6 @@ extension ScriptCopyWith<T extends Script> on T {
     name: name ?? this.name,
     codeNumeric: codeNumeric ?? this.codeNumeric,
     date: date ?? this.date,
-    pva: pva ?? this.pva,
+    pva: (pva?.isEmpty ?? false) ? null : (pva ?? this.pva),
   );
 }

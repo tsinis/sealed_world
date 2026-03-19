@@ -73,4 +73,24 @@ void main() => group("WorldCountryCopyWith", () {
     expect(element.namesNative, copy.namesNative);
     expect(element.tld, copy.tld);
   });
+
+  test("copyWith should reset nullable String fields to null with ''", () {
+    final withCioc = WorldCountry.list.firstWhere((i) => i.cioc != null);
+    final copy = withCioc.copyWith(cioc: "", fifa: "");
+    expect(copy.cioc, isNull);
+    expect(copy.fifa, isNull);
+    expect(copy.code, withCioc.code);
+  });
+
+  test(
+    "copyWith should reset nullable List fields to null with empty list",
+    () {
+      final withBorders = WorldCountry.list.firstWhere(
+        (i) => i.bordersCodes != null,
+      );
+      final copy = withBorders.copyWith(bordersCodes: const []);
+      expect(copy.bordersCodes, isNull);
+      expect(copy.code, withBorders.code);
+    },
+  );
 });

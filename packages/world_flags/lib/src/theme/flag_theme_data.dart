@@ -120,12 +120,14 @@ class FlagThemeData extends ThemeExtension<FlagThemeData>
     double? width,
     Widget? child,
   }) => FlagThemeData(
-    aspectRatio: aspectRatio ?? _aspectRatio,
+    aspectRatio: (aspectRatio?.isNegative ?? false)
+        ? null
+        : (aspectRatio ?? _aspectRatio),
     decoration: decoration ?? this.decoration,
     decorationPosition: decorationPosition ?? this.decorationPosition,
     padding: padding ?? this.padding,
-    height: height ?? this.height,
-    width: width ?? this.width,
+    height: (height?.isNegative ?? false) ? null : (height ?? this.height),
+    width: (width?.isNegative ?? false) ? null : (width ?? this.width),
     child: child ?? this.child,
   );
 

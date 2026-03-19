@@ -3,6 +3,10 @@
 NEW FEATURES
 
 - Added `isRtl` parameter to `FiatCurrencyFormat.addUnit()`, `format()`, and `tryFormat()` methods. When `true`, the currency unit position is flipped for correct display in right-to-left locales.
+- `copyWith` methods now support resetting nullable fields to `null` via domain-invalid sentinel values:
+  - `String?` fields: pass an empty string to reset (e.g. `htmlEntity: ""`, `subunit: ""`, `disambiguateSymbol: ""`, `proofType: ""`).
+  - `List?` fields: pass an empty list to reset (e.g. `alternateSymbols: []`).
+- Added `CryptoCurrencyCopyWith` extension providing a `copyWith` method for `CryptoCurrency`.
 
 ## 3.0.1
 

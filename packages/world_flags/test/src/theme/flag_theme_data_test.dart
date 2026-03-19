@@ -69,6 +69,15 @@ void main() => group("$FlagThemeData", () {
       expect(value, isNot(updated));
       expect(value.hashCode, isNot(updated.hashCode));
     });
+
+    test("returns a new instance with updated child", () {
+      const child = SizedBox(height: 10);
+      final updated = value.copyWith(child: child);
+
+      expect(updated.child, child);
+      expect(updated.aspectRatio, value.aspectRatio);
+      expect(updated.height, value.height);
+    });
   });
 
   group("asserts", () {
@@ -96,14 +105,17 @@ void main() => group("$FlagThemeData", () {
       () => FlagThemeData.small(aspectRatio: negative),
     );
 
-    group("copyWith asserts", () {
-      const data = FlagThemeData();
-      assertTest("negative width", () => data.copyWith(width: negative));
-      assertTest("negative height", () => data.copyWith(height: negative));
-      assertTest(
-        "negative aspectRatio",
-        () => data.copyWith(aspectRatio: negative),
-      );
+    group("copyWith sentinel resets to null with negative values", () {
+      test("resets height, width, aspectRatio to null with negative", () {
+        final copy = value.copyWith(
+          height: negative,
+          width: negative,
+          aspectRatio: negative,
+        );
+        expect(copy.height, isNull);
+        expect(copy.width, isNull);
+        expect(copy.specifiedAspectRatio, isNull);
+      });
     });
   });
 });

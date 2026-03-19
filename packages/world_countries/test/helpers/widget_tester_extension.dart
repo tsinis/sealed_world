@@ -99,6 +99,7 @@ extension WidgetTesterExtension on WidgetTester {
       await ensureVisible(clearButton);
       await tapAndSettle(clearButton);
     }
+    // ignore: avoid-unassigned-local-variable, false positive, see testPicker.
     expect(selected, isNull);
     await _testPicker(testPicker, findLabel);
     if (testSelection) expect(selected, picker.resolvedItems().last);
@@ -152,6 +153,7 @@ extension WidgetTesterExtension on WidgetTester {
     );
     await pumpAndSettle();
     await tap(find.byIcon(Icons.search));
+    // ignore: avoid-unassigned-local-variable, false positive, see testPicker.
     expect(selected, isNull);
 
     if (inDialog == false) {

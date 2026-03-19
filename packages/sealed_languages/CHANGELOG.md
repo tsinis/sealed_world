@@ -1,4 +1,10 @@
-## 3.0.1
+## 3.1.0
+
+NEW FEATURES
+
+- `copyWith` methods now support resetting nullable fields to `null` via domain-invalid sentinel values:
+  - `String?` fields: pass an empty string to reset (e.g. `pva: ""`, `bibliographicCode: ""`, `fullName: ""`, `countryCode: ""`).
+  - `List?`/`Set?` fields: pass an empty collection to reset.
 
 DOCUMENTATION
 

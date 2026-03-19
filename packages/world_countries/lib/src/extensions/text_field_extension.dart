@@ -121,12 +121,18 @@ extension TextFieldExtension on TextField? {
       smartDashesType: smartDashesType ?? textField.smartDashesType,
       smartQuotesType: smartQuotesType ?? textField.smartQuotesType,
       enableSuggestions: enableSuggestions ?? textField.enableSuggestions,
-      maxLines: maxLines ?? textField.maxLines,
-      minLines: minLines ?? textField.minLines,
+      maxLines: (maxLines?.isNegative ?? false)
+          ? null
+          : (maxLines ?? textField.maxLines),
+      minLines: (minLines?.isNegative ?? false)
+          ? null
+          : (minLines ?? textField.minLines),
       expands: expands ?? textField.expands,
       readOnly: readOnly ?? textField.readOnly,
       showCursor: showCursor ?? textField.showCursor,
-      maxLength: maxLength ?? textField.maxLength,
+      maxLength: (maxLength?.isNegative ?? false)
+          ? null
+          : (maxLength ?? textField.maxLength),
       maxLengthEnforcement:
           maxLengthEnforcement ?? textField.maxLengthEnforcement,
       onChanged: onChanged ?? textField.onChanged,
@@ -140,7 +146,9 @@ extension TextFieldExtension on TextField? {
       enabled: enabled ?? textField.enabled,
       ignorePointers: ignorePointers ?? textField.ignorePointers,
       cursorWidth: cursorWidth ?? textField.cursorWidth,
-      cursorHeight: cursorHeight ?? textField.cursorHeight,
+      cursorHeight: (cursorHeight?.isNegative ?? false)
+          ? null
+          : (cursorHeight ?? textField.cursorHeight),
       cursorRadius: cursorRadius ?? textField.cursorRadius,
       cursorOpacityAnimates:
           cursorOpacityAnimates ?? textField.cursorOpacityAnimates,
@@ -163,7 +171,9 @@ extension TextFieldExtension on TextField? {
       scrollController: scrollController ?? textField.scrollController,
       autofillHints: autofillHints ?? textField.autofillHints,
       clipBehavior: clipBehavior ?? textField.clipBehavior,
-      restorationId: restorationId ?? textField.restorationId,
+      restorationId: (restorationId?.isEmpty ?? false)
+          ? null
+          : (restorationId ?? textField.restorationId),
       stylusHandwritingEnabled:
           stylusHandwritingEnabled ?? textField.stylusHandwritingEnabled,
       enableIMEPersonalizedLearning:

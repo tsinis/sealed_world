@@ -50,18 +50,20 @@ extension DualFlagExtension<T extends IsoStandardized, F extends BasicFlag>
     item ?? this.item,
     map ?? this.map,
     alternativeMap: alternativeMap ?? this.alternativeMap,
-    aspectRatio: aspectRatio ?? this.aspectRatio,
+    aspectRatio: (aspectRatio?.isNegative ?? false)
+        ? null
+        : (aspectRatio ?? this.aspectRatio),
     clipBehavior: clipBehavior ?? this.clipBehavior,
     clipSecondary: clipSecondary ?? this.clipSecondary,
     decoration: decoration ?? this.decoration,
     decorationPosition: decorationPosition ?? this.decorationPosition,
-    height: height ?? this.height,
+    height: (height?.isNegative ?? false) ? null : (height ?? this.height),
     key: key ?? this.key,
     orElse: orElse ?? this.orElse,
     padding: padding ?? this.padding,
     shader: shader ?? this.shader,
     splitAngle: splitAngle ?? this.splitAngle,
-    width: width ?? this.width,
+    width: (width?.isNegative ?? false) ? null : (width ?? this.width),
     child: child ?? this.child,
   );
 }

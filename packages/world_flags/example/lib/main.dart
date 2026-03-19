@@ -55,7 +55,7 @@ class _MainState extends State<Main> {
   @override
   void dispose() {
     _shaderDelegate.dispose();
-    _aspectRatio.dispose();
+    _aspectRatio.dispose(); // ignore: avoid-disposing-late-fields, its example.
     super.dispose();
   }
 

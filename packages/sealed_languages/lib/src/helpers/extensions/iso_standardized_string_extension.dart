@@ -87,7 +87,7 @@ extension IsoStandardizedStringExtension on String {
     T Function(String code)? regular,
     T Function(String code)? short,
   }) {
-    final code = (minLength == maxLength)
+    final code = minLength == maxLength
         ? maybeToValidIsoCode(exactLength: minLength)
         : maybeToValidIsoCode(maxLength: maxLength, minLength: minLength);
     if (code == null) return orElse(this);

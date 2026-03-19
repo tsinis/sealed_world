@@ -42,16 +42,18 @@ extension IsoFlagExtension<T extends IsoStandardized, F extends BasicFlag>
     Key? key,
   }) => IsoFlag(
     alternativeMap: alternativeMap ?? this.alternativeMap,
-    aspectRatio: aspectRatio ?? this.aspectRatio,
+    aspectRatio: (aspectRatio?.isNegative ?? false)
+        ? null
+        : (aspectRatio ?? this.aspectRatio),
     decoration: decoration ?? this.decoration,
     decorationPosition: decorationPosition ?? this.decorationPosition,
-    height: height ?? this.height,
+    height: (height?.isNegative ?? false) ? null : (height ?? this.height),
     item ?? this.item,
     key: key ?? this.key,
     map ?? this.map,
     orElse: orElse ?? this.orElse,
     padding: padding ?? this.padding,
-    width: width ?? this.width,
+    width: (width?.isNegative ?? false) ? null : (width ?? this.width),
     shader: shader ?? this.shader,
     child: child ?? this.child,
   );

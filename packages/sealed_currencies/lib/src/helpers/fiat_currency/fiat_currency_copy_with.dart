@@ -43,12 +43,18 @@ extension FiatCurrencyCopyWith<T extends FiatCurrency> on T {
     namesNative: namesNative ?? this.namesNative,
     codeNumeric: codeNumeric ?? this.codeNumeric,
     mapper: mapper ?? l10n.mapper,
-    alternateSymbols: alternateSymbols ?? this.alternateSymbols,
-    disambiguateSymbol: disambiguateSymbol ?? this.disambiguateSymbol,
-    htmlEntity: htmlEntity ?? this.htmlEntity,
+    alternateSymbols: alternateSymbols != null && alternateSymbols.isEmpty
+        ? null
+        : (alternateSymbols ?? this.alternateSymbols),
+    disambiguateSymbol: (disambiguateSymbol?.isEmpty ?? false)
+        ? null
+        : (disambiguateSymbol ?? this.disambiguateSymbol),
+    htmlEntity: (htmlEntity?.isEmpty ?? false)
+        ? null
+        : (htmlEntity ?? this.htmlEntity),
     priority: priority ?? this.priority,
     smallestDenomination: smallestDenomination ?? this.smallestDenomination,
-    subunit: subunit ?? this.subunit,
+    subunit: (subunit?.isEmpty ?? false) ? null : (subunit ?? this.subunit),
     subunitToUnit: subunitToUnit ?? this.subunitToUnit,
     unitFirst: unitFirst ?? this.unitFirst,
     symbol: symbol ?? this.symbol,

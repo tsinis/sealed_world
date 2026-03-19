@@ -20,6 +20,7 @@ dart_code_metrics:
         ignore-static: true
     - always-remove-listener: true
     - avoid-border-all: true
+    - avoid-disposing-late-fields: true
     - avoid-empty-setstate: true
     - avoid-expanded-as-spacer: true
     - avoid-flexible-outside-flex: true
@@ -54,6 +55,7 @@ dart_code_metrics:
     - prefer-constrained-box-over-container: true
     - prefer-container: true
     - prefer-correct-edge-insets-constructor: true
+    - prefer-correct-static-icon-provider: true
     - prefer-dedicated-media-query-methods: true
     - prefer-define-hero-tag: true
     - prefer-extracting-callbacks: true

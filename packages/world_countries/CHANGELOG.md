@@ -3,6 +3,7 @@
 NEW FEATURES
 
 - Added `isRtl` getter to `BuildContextExtension` for convenient RTL detection via `context.isRtl`.
+- All `copyWith` methods across the ecosystem now support resetting nullable fields to `null` via domain-invalid sentinel values (see underlying packages for details). In this package: pass a negative value for positive-only `double?`/`int?` fields (`cacheExtent`, `maxLines`, `minLines`, `maxLength`, `cursorHeight`), and an empty string for `String?` fields where empty is invalid (`restorationId`).
 
 REFACTOR
 
