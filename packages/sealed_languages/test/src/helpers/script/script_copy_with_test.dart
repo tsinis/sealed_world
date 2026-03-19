@@ -26,7 +26,7 @@ void main() => group("ScriptCopyWith", () {
   });
 
   test("copyWith should reset pva to null with empty string sentinel", () {
-    final withPva = Script.list.firstWhere((s) => s.pva != null);
+    final withPva = Script.list.firstWhere((script) => script.pva != null);
     expect(withPva.pva, isNotNull);
 
     final copy = withPva.copyWith(pva: "");

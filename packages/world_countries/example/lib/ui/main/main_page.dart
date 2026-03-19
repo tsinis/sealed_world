@@ -89,7 +89,7 @@ class _MainPageState extends State<MainPage>
 
   @override
   void dispose() {
-    _controller.dispose();
+    _controller.dispose(); // ignore: avoid-disposing-late-fields, example app.
     super.dispose();
   }
 

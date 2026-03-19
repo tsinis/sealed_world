@@ -211,6 +211,7 @@ void main() => group("$LanguagePicker", () {
     );
     await tester.pumpAndSettle();
     await tester.tapAndSettle(find.byIcon(searchIcon));
+    // ignore: avoid-unassigned-local-variable, false positive, see picker.
     expect(selected, isNull);
 
     final textField = find.byType(TextField);

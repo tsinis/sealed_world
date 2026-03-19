@@ -31,7 +31,7 @@ void main() => group("NaturalLanguageCopyWith", () {
 
   test("copyWith should reset bibliographicCode to null with empty string", () {
     final withBiblio = NaturalLanguage.list.firstWhere(
-      (l) => l.bibliographicCode != null,
+      (lang) => lang.bibliographicCode != null,
     );
     expect(withBiblio.bibliographicCode, isNotNull);
 

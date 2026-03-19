@@ -230,7 +230,7 @@ String _generateEnvFlagsCode(String content, List<String> locales) {
   // Split into chunks for readability (4 checks per line).
   hasAnyFilterLines.add("  static const _hasAnyLocaleFilter =");
   for (int i = 0; i < filterChecks.length; i += 4) {
-    final end = (i + 4 < filterChecks.length) ? i + 4 : filterChecks.length;
+    final end = i + 4 < filterChecks.length ? i + 4 : filterChecks.length;
     final chunk = filterChecks.sublist(i, end);
     final line = "      ${chunk.join(" || ")}";
     if (end < filterChecks.length) {
