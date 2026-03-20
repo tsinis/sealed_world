@@ -52,7 +52,7 @@ void main() => group("$BasicFlag", () {
     final builder = DiagnosticPropertiesBuilder();
     flag.debugFillProperties(builder);
     final prop = builder.properties.firstWhere(
-      (p) => p.name == "elementsBuilder",
+      (property) => property.name == "elementsBuilder",
     );
     expect(prop.toString(), startsWith("auto-resolved from"));
   });
