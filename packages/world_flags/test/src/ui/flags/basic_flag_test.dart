@@ -41,6 +41,22 @@ void main() => group("$BasicFlag", () {
     expect(builder.properties.any((prop) => prop.name == "padding"), isTrue);
   });
 
+  test("debugFillProperties elementsBuilder ifNull with baseElementType", () {
+    const flag = BasicFlag(
+      FlagProperties(
+        stripes,
+        baseElementType: FlagElementsType.star,
+        elementsProperties: elementsList,
+      ),
+    );
+    final builder = DiagnosticPropertiesBuilder();
+    flag.debugFillProperties(builder);
+    final prop = builder.properties.firstWhere(
+      (p) => p.name == "elementsBuilder",
+    );
+    expect(prop.toString(), startsWith("auto-resolved from"));
+  });
+
   group("resolvePainter", () {
     const ratio = 1.5;
 
