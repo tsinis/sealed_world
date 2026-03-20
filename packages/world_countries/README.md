@@ -241,7 +241,7 @@ CountryPicker(itemBuilder: (country, defaultTile) => EmojiFlag.platformDefault(c
 ```
 
 > [!TIP]
-> For language and currency pickers, you can also use `LanguageFlag` and `CurrencyFlag` widgets from the `world_flags` package to display **dual flags** — a split flag showing both the primary and secondary country (e.g. English: UK/US, EUR: Germany/EU). They work out of the box with built-in default maps: `LanguageFlag(LangEng())` or `CurrencyFlag(FiatEur())`.
+> For language and currency pickers, you can also use `LanguageFlag` and `CurrencyFlag` widgets from the `world_flags` package to display **dual flags** — a split flag showing both the primary and secondary country (e.g. English: UK/US, EUR: Germany/EU). They work out of the box with built-in default maps: `LanguageFlag.fromFlagMap(LangEng())` or `CurrencyFlag.fromFlagMap(FiatEur())`.
 
 #### How to format/adjust automatic global translations of ISO objects in my app?
 
