@@ -12,6 +12,10 @@ NEW FEATURES
 
 REFACTOR
 
+- `BasicFlag` now auto-resolves the elements painter from `FlagProperties.baseElementType` when no explicit `elementsBuilder` is provided. This means `BasicFlag(properties)` is now sufficient for all standard flag types (star, rectangle, ellipse, moon, triangle, multi-element) — the correct painter is selected automatically at build time.
+- Deprecated `StarFlag`, `MoonFlag`, `EllipseFlag`, `RectangleFlag`, `TriangleFlag`, and `MultiElementFlag` — use `BasicFlag(properties)` instead. These subclasses will be removed in the next major version.
+- Replaced all internal usages of the deprecated flag subclasses with `BasicFlag` in all flag maps.
+- Added missing `baseElementType`s to `flagChlProperties`, `flagChnProperties`, `flagDjiProperties`, `flagEthProperties`, and `flagEurProperties`.
 - Reorganized ISO flag widgets (`IsoFlag`, `CurrencyFlag`, `LanguageFlag`, `DualFlag`) into a dedicated `flags/iso/` subdirectory.
 - Moved `MaybeWidget` from `world_countries` to `world_flags` package.
 - Optimized Flutter imports with explicit `show` clauses.
