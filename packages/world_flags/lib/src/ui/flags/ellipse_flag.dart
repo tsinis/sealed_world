@@ -29,7 +29,7 @@ class EllipseFlag extends BasicFlag {
   /// - [child]: A widget to display in the foreground of the flag.
   /// - [foregroundWidgetBuilder]: A builder for the foreground widget.
   /// - [key]: The key for the widget.
-  @Deprecated("Use BasicFlag(properties) instead.")
+  @Deprecated("Use BasicFlag(properties) instead.") // coverage:ignore-line
   const EllipseFlag(
     super.properties, {
     super.aspectRatio,
