@@ -85,9 +85,13 @@ class BasicFlag extends DecoratedFlagWidget {
   double get flagAspectRatio => properties.aspectRatio;
 
   ElementsProps? get _elements => properties.elementsProperties;
-  CustomPainter? get _elementsPainter =>
-      elementsBuilder?.call(_elements, flagAspectRatio) ??
-      _resolveFromBaseType(_elements, flagAspectRatio);
+
+  /// Resolves the elements painter, preferring an explicit [elementsBuilder]
+  /// and falling back to auto-resolution from [FlagProperties.baseElementType].
+  // ignore: prefer-widget-private-members, it's being used in shader surface.
+  CustomPainter? resolvePainter(ElementsProps? elements, double ratio) =>
+      elementsBuilder?.call(elements, ratio) ??
+      _resolveFromBaseType(elements, ratio);
 
   CustomPainter? _resolveFromBaseType(ElementsProps? elements, double ratio) =>
       switch (properties.baseElementType) {
@@ -189,14 +193,6 @@ class BasicFlag extends DecoratedFlagWidget {
         ObjectFlagProperty<Widget>("child", child, ifNull: "no child widget"),
       )
       ..add(
-        FlagProperty(
-          "has elements painter",
-          value: _elementsPainter != null,
-          ifTrue: "yes",
-          ifFalse: "no custom elements painter",
-        ),
-      )
-      ..add(
         DiagnosticsProperty<ElementsProps>(
           "elements",
           _elements,
@@ -235,7 +231,11 @@ class BasicFlag extends DecoratedFlagWidget {
               child: CustomPaint(
                 painter:
                     backgroundPainter ??
-                    StripesPainter(properties, boxDecoration, _elementsPainter),
+                    StripesPainter(
+                      properties,
+                      boxDecoration,
+                      resolvePainter(_elements, flagAspectRatio),
+                    ),
                 foregroundPainter:
                     foregroundPainter ??
                     foregroundPainterBuilder?.call(_elements, flagAspectRatio),
