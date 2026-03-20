@@ -47,7 +47,7 @@ import "dual_flag.dart";
 ///
 /// Example usage:
 /// ```dart
-/// LanguageFlag(
+/// LanguageFlag.fromFlagMap(
 ///   const LangDeu(),
 ///   alternativeMap: context.maps.languageFlags,
 /// )
@@ -64,7 +64,7 @@ class LanguageFlag extends DualFlag<NaturalLanguage, BasicFlag> {
   /// - [clipSecondary]: When `true` (default), the secondary flag is clipped.
   ///   When `false`, the primary flag is clipped instead.
   /// - [key]: The key for the widget.
-  const LanguageFlag(
+  const LanguageFlag.fromFlagMap(
     NaturalLanguage language, {
     super.alternativeMap = defaultSecondaryCountryLanguageFlags,
     super.splitAngle,

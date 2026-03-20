@@ -13,7 +13,7 @@ void main() => group("$LanguageFlag", () {
   testWidgets("renders single flag for language with no secondary country", (
     tester,
   ) async {
-    const flag = LanguageFlag(LangJpn());
+    const flag = LanguageFlag.fromFlagMap(LangJpn());
     await tester.pumpWidget(const MaterialApp(home: flag));
 
     expect(find.byType(ClipPath), findsNothing);
@@ -22,7 +22,7 @@ void main() => group("$LanguageFlag", () {
   testWidgets("renders dual flag by default for multi-country language", (
     tester,
   ) async {
-    const flag = LanguageFlag(LangEng());
+    const flag = LanguageFlag.fromFlagMap(LangEng());
     await tester.pumpWidget(const MaterialApp(home: flag));
 
     expect(find.byType(ClipPath), findsOneWidget);
@@ -34,7 +34,10 @@ void main() => group("$LanguageFlag", () {
         FlagProperties([ColorsProperties(Color(0xFF0000FF))]),
       ),
     };
-    const flag = LanguageFlag(LangDeu(), alternativeMap: alternativeMap);
+    const flag = LanguageFlag.fromFlagMap(
+      LangDeu(),
+      alternativeMap: alternativeMap,
+    );
     await tester.pumpWidget(const MaterialApp(home: flag));
 
     expect(find.byType(ClipPath), findsOneWidget);
@@ -46,7 +49,7 @@ void main() => group("$LanguageFlag", () {
         FlagProperties([ColorsProperties(Color(0xFF0000FF))]),
       ),
     };
-    const flag = LanguageFlag(
+    const flag = LanguageFlag.fromFlagMap(
       LangDeu(),
       alternativeMap: alternativeMap,
       clipBehavior: Clip.hardEdge,
@@ -75,7 +78,11 @@ void main() => group("$LanguageFlag", () {
       // ignore: missing-test-assertion, flagGolden does the job.
       testWidgets(
         "${iso.internationalName} Flag",
-        (tester) => tester.flagGolden(iso, .dual, widget: LanguageFlag(iso)),
+        (tester) => tester.flagGolden(
+          iso,
+          .dual,
+          widget: LanguageFlag.fromFlagMap(iso),
+        ),
       );
     }
   });

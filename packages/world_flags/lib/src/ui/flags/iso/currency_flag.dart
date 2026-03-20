@@ -46,7 +46,7 @@ import "dual_flag.dart";
 ///
 /// Example usage:
 /// ```dart
-/// CurrencyFlag(
+/// CurrencyFlag.fromFlagMap(
 ///   const FiatUsd(),
 ///   alternativeMap: context.maps.currencyFlags,
 /// )
@@ -64,7 +64,7 @@ class CurrencyFlag extends DualFlag<FiatCurrency, BasicFlag> {
   /// - [clipSecondary]: When `true` (default), the secondary flag is clipped.
   ///   When `false`, the primary flag is clipped instead.
   /// - [key]: The key for the widget.
-  const CurrencyFlag(
+  const CurrencyFlag.fromFlagMap(
     FiatCurrency currency, {
     super.alternativeMap = defaultSecondaryCountryCurrencyFlags,
     super.splitAngle,
