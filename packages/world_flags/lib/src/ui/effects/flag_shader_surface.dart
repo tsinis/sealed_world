@@ -270,19 +270,16 @@ class _FlagShaderSurfaceState extends State<FlagShaderSurface>
     if (currentPainter != null && currentPainter.shader == delegate) {
       return currentPainter; // Reuse painter if delegate hasn't changed.
     }
-
     _disposePainter(); // Dispose old painter and create new one.
-    _painter = ShaderStripesPainter(
-      flag.properties,
-      flag.elementsBuilder?.call(
-        flag.properties.elementsProperties,
-        flag.flagAspectRatio,
-      ),
+    final properties = flag.properties;
+
+    return _painter = ShaderStripesPainter(
+      properties,
+      // ignore: avoid-passing-self-as-argument, passing painter to the delegate
+      flag.resolvePainter(properties.elementsProperties, flag.flagAspectRatio),
       pixelRatio: _pixelRatio,
       shader: delegate,
     );
-
-    return _painter!; // ignore: avoid-non-null-assertion, just assigned above.
   }
 
   @override

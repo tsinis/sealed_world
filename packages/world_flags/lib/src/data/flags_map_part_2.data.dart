@@ -137,6 +137,7 @@ const flagAndProperties = FlagProperties(
 /// Flag properties of country Chile (CL).
 const flagChlProperties = FlagProperties(
   [ColorsProperties(Color(0xffffffff)), ColorsProperties(Color(0xffd52b1e))],
+  baseElementType: FlagElementsType.rectangle,
   elementsProperties: [
     ElementsProperties(
       Color(0xff0039a6),
@@ -783,6 +784,7 @@ const flagTgoProperties = FlagProperties(
 /// Flag properties of country China (CN).
 const flagChnProperties = FlagProperties(
   [ColorsProperties(Color(0xffee1c25))],
+  baseElementType: FlagElementsType.multiElement,
   elementsProperties: [
     ElementsProperties(
       Color(0xffffff00),

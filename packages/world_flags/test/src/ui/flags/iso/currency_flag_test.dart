@@ -13,7 +13,7 @@ void main() => group("$CurrencyFlag", () {
   testWidgets("renders single flag for currency with no secondary country", (
     tester,
   ) async {
-    const flag = CurrencyFlag(FiatAfn());
+    const flag = CurrencyFlag.fromFlagMap(FiatAfn());
     await tester.pumpWidget(const MaterialApp(home: flag));
 
     expect(find.byType(ClipPath), findsNothing);
@@ -22,7 +22,7 @@ void main() => group("$CurrencyFlag", () {
   testWidgets("renders dual flag by default for multi-country currency", (
     tester,
   ) async {
-    const flag = CurrencyFlag(FiatEur());
+    const flag = CurrencyFlag.fromFlagMap(FiatEur());
     await tester.pumpWidget(const MaterialApp(home: flag));
 
     expect(find.byType(ClipPath), findsOneWidget);
@@ -34,7 +34,10 @@ void main() => group("$CurrencyFlag", () {
         FlagProperties([ColorsProperties(Color(0xFF0000FF))]),
       ),
     };
-    const flag = CurrencyFlag(FiatUsd(), alternativeMap: alternativeMap);
+    const flag = CurrencyFlag.fromFlagMap(
+      FiatUsd(),
+      alternativeMap: alternativeMap,
+    );
     await tester.pumpWidget(const MaterialApp(home: flag));
 
     expect(find.byType(ClipPath), findsOneWidget);
@@ -46,7 +49,7 @@ void main() => group("$CurrencyFlag", () {
         FlagProperties([ColorsProperties(Color(0xFF0000FF))]),
       ),
     };
-    const flag = CurrencyFlag(
+    const flag = CurrencyFlag.fromFlagMap(
       FiatUsd(),
       alternativeMap: alternativeMap,
       clipBehavior: .hardEdge,
@@ -76,7 +79,11 @@ void main() => group("$CurrencyFlag", () {
       // ignore: missing-test-assertion, flagGolden does the job.
       testWidgets(
         "${iso.internationalName} Flag",
-        (tester) => tester.flagGolden(iso, .dual, widget: CurrencyFlag(iso)),
+        (tester) => tester.flagGolden(
+          iso,
+          .dual,
+          widget: CurrencyFlag.fromFlagMap(iso),
+        ),
       );
     }
   });

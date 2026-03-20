@@ -157,7 +157,7 @@ For more information on using this package, check out the API documentation.
 If you have any issues or suggestions for the package, please file them in the GitHub repository. **PRs or ideas are always welcome**. If you like this package, please give it a star or like.
 
 > [!TIP]
-> For languages and currencies used in multiple countries, use `LanguageFlag` and `CurrencyFlag` widgets to display **dual flags** — a split flag showing both the primary and secondary country associations (e.g. English: UK/US, EUR: Germany/EU). They come with built-in default maps, so a single `LanguageFlag(LangEng())` or `CurrencyFlag(FiatEur())` is all you need.
+> For languages and currencies used in multiple countries, use `LanguageFlag` and `CurrencyFlag` widgets to display **dual flags** — a split flag showing both the primary and secondary country associations (e.g. English: UK/US, EUR: Germany/EU). They come with built-in default maps, so a single `LanguageFlag.fromFlagMap(LangEng())` or `CurrencyFlag.fromFlagMap(FiatEur())` is all you need.
 
 ### Benchmarks
 

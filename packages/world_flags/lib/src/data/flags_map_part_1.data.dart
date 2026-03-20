@@ -1085,6 +1085,7 @@ const flagSycProperties = FlagProperties(
 /// Flag properties of country Djibouti (DJ).
 const flagDjiProperties = FlagProperties(
   [ColorsProperties(Color(0xff6AB2E7)), ColorsProperties(Color(0xff12AD2B))],
+  baseElementType: FlagElementsType.triangle,
   elementsProperties: [
     ElementsProperties(
       Color(0xffffffff),

@@ -7,10 +7,17 @@ import "../../debug/flag_properties_property.dart";
 import "../../helpers/extensions/box_decoration_extension.dart";
 import "../../helpers/extensions/decorated_flag_interface_extension.dart";
 import "../../helpers/extensions/world_flags_build_context_extension.dart";
+import "../../model/flag_elements_type.dart";
 import "../../model/flag_properties.dart";
 import "../../model/typedefs.dart";
 import "../decorated_flag_widget.dart";
 import "../painters/basic/stripes_painter.dart";
+import "../painters/common/ellipse_painter.dart";
+import "../painters/common/moon_painter.dart";
+import "../painters/common/rectangle_painter.dart";
+import "../painters/common/star_painter.dart";
+import "../painters/common/triangle_painter.dart";
+import "../painters/multi_element_painter.dart";
 
 /// A widget that represents a basic flag with customizable properties,
 /// decorations, and elements.
@@ -78,8 +85,24 @@ class BasicFlag extends DecoratedFlagWidget {
   double get flagAspectRatio => properties.aspectRatio;
 
   ElementsProps? get _elements => properties.elementsProperties;
-  CustomPainter? get _elementsPainter =>
-      elementsBuilder?.call(_elements, flagAspectRatio);
+
+  /// Resolves the elements painter, preferring an explicit [elementsBuilder]
+  /// and falling back to auto-resolution from [FlagProperties.baseElementType].
+  // ignore: prefer-widget-private-members, it's being used in shader surface.
+  CustomPainter? resolvePainter(ElementsProps? elements, double ratio) =>
+      elementsBuilder?.call(elements, ratio) ??
+      _resolveFromBaseType(elements, ratio);
+
+  CustomPainter? _resolveFromBaseType(ElementsProps? elements, double ratio) =>
+      switch (properties.baseElementType) {
+        FlagElementsType.multiElement => MultiElementPainter(elements, ratio),
+        FlagElementsType.star => StarPainter(elements, ratio),
+        FlagElementsType.rectangle => RectanglePainter(elements, ratio),
+        FlagElementsType.triangle => TrianglePainter(elements, ratio),
+        FlagElementsType.ellipse => EllipsePainter(elements, ratio),
+        FlagElementsType.moon => MoonPainter(elements, ratio),
+        null => null,
+      };
 
   double _boxRatio(BoxDecoration? boxDecoration, double? ratio) =>
       boxDecoration.isCircle ? 1 : (ratio ?? flagAspectRatio);
@@ -139,7 +162,10 @@ class BasicFlag extends DecoratedFlagWidget {
         ObjectFlagProperty<FlagPainterBuilder>(
           "elementsBuilder",
           elementsBuilder,
-          ifNull: "no custom elements builder",
+          ifNull: switch (this.properties.baseElementType) {
+            final type? => "auto-resolved from $type",
+            null => "no custom elements builder",
+          },
         ),
       )
       ..add(
@@ -165,14 +191,6 @@ class BasicFlag extends DecoratedFlagWidget {
       )
       ..add(
         ObjectFlagProperty<Widget>("child", child, ifNull: "no child widget"),
-      )
-      ..add(
-        FlagProperty(
-          "has elements painter",
-          value: _elementsPainter != null,
-          ifTrue: "yes",
-          ifFalse: "no custom elements painter",
-        ),
       )
       ..add(
         DiagnosticsProperty<ElementsProps>(
@@ -213,7 +231,11 @@ class BasicFlag extends DecoratedFlagWidget {
               child: CustomPaint(
                 painter:
                     backgroundPainter ??
-                    StripesPainter(properties, boxDecoration, _elementsPainter),
+                    StripesPainter(
+                      properties,
+                      boxDecoration,
+                      resolvePainter(_elements, flagAspectRatio),
+                    ),
                 foregroundPainter:
                     foregroundPainter ??
                     foregroundPainterBuilder?.call(_elements, flagAspectRatio),

@@ -11,6 +11,11 @@ import "basic_flag.dart";
 /// ```dart
 /// EllipseFlag(myFlagProperties, aspectRatio: 1.5),
 /// ```
+@Deprecated(
+  "Use BasicFlag(properties) instead - the painter is now resolved "
+  "automatically from FlagProperties.baseElementType. "
+  "Will be removed in the next major version.",
+)
 class EllipseFlag extends BasicFlag {
   /// Creates a new instance of [EllipseFlag].
   ///
@@ -24,6 +29,7 @@ class EllipseFlag extends BasicFlag {
   /// - [child]: A widget to display in the foreground of the flag.
   /// - [foregroundWidgetBuilder]: A builder for the foreground widget.
   /// - [key]: The key for the widget.
+  @Deprecated("Use BasicFlag(properties) instead.") // coverage:ignore-line
   const EllipseFlag(
     super.properties, {
     super.aspectRatio,

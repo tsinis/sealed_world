@@ -1066,6 +1066,7 @@ const flagEthProperties = FlagProperties(
     ColorsProperties(Color(0xffef2118)),
   ],
   aspectRatio: 2,
+  baseElementType: FlagElementsType.multiElement,
   isSimplified: null,
   elementsProperties: [
     ElementsProperties(

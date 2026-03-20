@@ -11,6 +11,9 @@ jobs:
   check-package-version:
     name: ⏳ Publish ${{ inputs.tag }} Package
     if: ${{ github.repository_owner == 'tsinis' && github.triggering_actor == 'tsinis' }}
+    permissions:
+      contents: write
+      actions: write
     runs-on: ubuntu-latest
     timeout-minutes: 10
     outputs:
@@ -75,6 +78,8 @@ jobs:
     name: 📝 Publish to pub.dev
     needs: check-package-version
     if: ${{ github.repository_owner == 'tsinis' && github.triggering_actor == 'tsinis' }}
+    permissions:
+      id-token: write
     uses: dart-lang/setup-dart/.github/workflows/publish.yml@main
     with:
       environment: "pub.dev"
