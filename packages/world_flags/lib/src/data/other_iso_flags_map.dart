@@ -11,6 +11,7 @@ import "../model/shape.dart";
 /// Flag properties of European Union (EUR).
 const flagEurProperties = FlagProperties(
   [ColorsProperties(Color(0xff003399))],
+  baseElementType: FlagElementsType.star,
   elementsProperties: [
     ElementsProperties(
       Color(0xffffcc00),
