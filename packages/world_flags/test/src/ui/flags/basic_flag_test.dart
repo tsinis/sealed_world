@@ -1,7 +1,8 @@
 // ignore_for_file: missing-test-assertion, flagGolden method
+import "dart:ui";
 
 import "package:flutter/foundation.dart";
-import "package:flutter/widgets.dart";
+import "package:flutter/widgets.dart" show Text;
 import "package:flutter_test/flutter_test.dart";
 import "package:world_flags/src/model/colors_properties.dart";
 import "package:world_flags/src/model/elements/elements_properties.dart";
@@ -118,8 +119,8 @@ void main() => group("$BasicFlag", () {
     });
 
     test("prefers explicit elementsBuilder over baseElementType", () {
-      final flag = BasicFlag(
-        const FlagProperties(
+      const flag = BasicFlag(
+        FlagProperties(
           stripes,
           baseElementType: FlagElementsType.moon,
           elementsProperties: elementsList,
@@ -130,8 +131,8 @@ void main() => group("$BasicFlag", () {
     });
 
     test("explicit elementsBuilder works without baseElementType", () {
-      final flag = BasicFlag(
-        const FlagProperties(stripes),
+      const flag = BasicFlag(
+        FlagProperties(stripes),
         elementsBuilder: StarPainter.new,
       );
       expect(flag.resolvePainter(elementsList, ratio), isA<StarPainter>());
