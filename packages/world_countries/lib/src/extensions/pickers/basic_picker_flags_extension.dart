@@ -23,16 +23,24 @@ extension BasicPickerFlagsExtension<T extends IsoTranslated>
 
     for (final entry in itemsMap.entries) {
       final key = entry.key;
-      final customFlag = flagMap[key];
-      if (customFlag != null) {
-        flagMap[key] = mapper(customFlag, key, entry.value);
+      final countries = entry.value;
+
+      // Locale country match takes priority over pre-existing map entries.
+      // Without this, items like EUR that have a default flag in the map
+      // (e.g. the EU flag) would never show the locale country's flag,
+      // even when that country uses the currency/language.
+      if (countries.contains(country) && hasCountry) {
+        flagMap[key] = mapper(localeFlag, key, countries);
         continue;
       }
 
-      final countries = entry.value;
-      if (countries.contains(country) && hasCountry) {
-        flagMap[key] = mapper(localeFlag, key, countries);
-      } else if (countries.isEmpty) {
+      final customFlag = flagMap[key];
+      if (customFlag != null) {
+        flagMap[key] = mapper(customFlag, key, countries);
+        continue;
+      }
+
+      if (countries.isEmpty) {
         final fallback = fallbacksMap?[key];
         if (fallback != null) flagMap[key] = mapper(fallback, key, countries);
       } else {
