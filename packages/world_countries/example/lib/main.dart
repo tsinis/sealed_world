@@ -38,10 +38,7 @@ class _MainState extends State<Main> {
     ),
     LanguageTileThemeData(
       itemBuilder: (language, languageTile) => languageTile.copyWith(
-        leading: LanguageFlag.fromFlagMap(
-          language.item, // Dual flag for langs with multiple countries (GB/US).
-          alternativeMap: language.context.maybeLocale?.maps.languageFlags,
-        ),
+        leading: LanguageFlag.fromFlagMap(language.item), // E.g. US/GB for ENG.
       ),
     ),
   ];
