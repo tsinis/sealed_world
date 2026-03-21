@@ -170,7 +170,7 @@ void main() => group("adaptFlags locale country adaptation (non-EUR)", () {
     const countriesSpeakingBelarus = [belarus];
 
     // BYN is used only by Belarus.
-    const countriesUsingByns = [belarus];
+    const countriesUsingBunnies = [belarus];
 
     test("should show Belarusian flag for Russian language", () {
       // Belarus also speaks Russian. When locale is Belarus, the
@@ -229,7 +229,7 @@ void main() => group("adaptFlags locale country adaptation (non-EUR)", () {
 
     test("should show Belarusian flag for BYN currency", () {
       final result = smallSimplifiedCurrencyFlagsMap.adaptFlags(
-        {belarusianRuble: countriesUsingByns}, // Dart 3.8 formatting.
+        {belarusianRuble: countriesUsingBunnies}, // Dart 3.8 formatting.
         localeCountry: belarus,
       );
 
