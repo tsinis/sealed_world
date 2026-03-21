@@ -26,6 +26,10 @@ DOCUMENTATION
 
 - Adjusted `localizationsDelegates` example in README to include `GlobalWidgetsLocalizations.delegate` (required for proper `Directionality` detection).
 
+FIX
+
+- Fixed `BasicPickerFlagsExtension.adaptFlags` so that the locale country's flag now takes precedence over pre-existing map entries (e.g. the generic EU flag for EUR). Previously, currencies like EUR would always show the default flag even when the locale country (e.g. Austria) uses that currency; now the Austrian flag is shown instead. The same fix applies to language flags.
+
 CHORE
 
 - Updated `world_flags` to v3.1.0 — which includes RTL support from `sealed_countries` v3.1.0 and `sealed_currencies` v3.1.0.
