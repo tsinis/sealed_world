@@ -28,6 +28,22 @@ class _MainState extends State<Main> {
   /// [CountryTileThemeData], [FlagThemeData], etc.
   final _pickersExtensions = <ThemeExtension>[
     const PickersThemeData(primary: true),
+    CurrencyTileThemeData(
+      itemBuilder: (currency, currencyTile) => currencyTile.copyWith(
+        leading: CurrencyFlag.fromFlagMap(
+          currency.item, // Dual flags for currencies with multiple countries.
+          alternativeMap: currency.context.maybeLocale?.maps.currencyFlags,
+        ),
+      ),
+    ),
+    LanguageTileThemeData(
+      itemBuilder: (language, languageTile) => languageTile.copyWith(
+        leading: LanguageFlag.fromFlagMap(
+          language.item, // Dual flag for langs with multiple countries (GB/US).
+          alternativeMap: language.context.maybeLocale?.maps.languageFlags,
+        ),
+      ),
+    ),
   ];
 
   final _flagThemeController = FlagThemeController();

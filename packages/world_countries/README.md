@@ -234,14 +234,21 @@ This package is licensed under the MIT license (see [LICENSE](./LICENSE) for det
 
 #### I don't like default tiles UI in the pickers
 
-Answer: Every picker (and also its theme) has a `itemBuilder` parameter, providing access to specific list item properties, for example this is how you can show only an emoji flag in `CountryPicker`:
+Answer: Every picker (and also its theme) has a `itemBuilder` parameter, providing access to specific list item properties, for example this is how you can show dual flags in the `LanguagePicker`:
 
 ```dart
-CountryPicker(itemBuilder: (country, defaultTile) => EmojiFlag.platformDefault(country.item)); // Or defaultTile.copyWith(...)
+LanguagePicker(
+  itemBuilder: (language, defaultLangTile) => defaultLangTile?.copyWith(
+          leading: LanguageFlag.fromFlagMap(
+            language.item, // Dual flag for langs with multiple countries (US/GB for English).
+            alternativeMap: language.context.maybeLocale?.maps.languageFlags,
+        ),
+      ),
+    )
 ```
 
 > [!TIP]
-> For language and currency pickers, you can also use `LanguageFlag` and `CurrencyFlag` widgets from the `world_flags` package to display **dual flags** — a split flag showing both the primary and secondary country (e.g. English: UK/US, EUR: Germany/EU). They work out of the box with built-in default maps: `LanguageFlag.fromFlagMap(LangEng())` or `CurrencyFlag.fromFlagMap(FiatEur())`.
+> For language and currency pickers, you can also use `LanguageFlag` and `CurrencyFlag` widgets from the `world_flags` package to display **dual flags** — a split flag showing both the primary and secondary country (e.g. English: UK/US, EUR: Germany/EU). They work out of the box with built-in default maps: `LanguageFlag.fromFlagMap(LangEng())` or `CurrencyFlag.fromFlagMap(.eur())`.
 
 #### How to format/adjust automatic global translations of ISO objects in my app?
 
