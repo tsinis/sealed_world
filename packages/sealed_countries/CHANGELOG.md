@@ -15,8 +15,6 @@ CHORE
 
 DOCUMENTATION
 
-Docs only, no code changes:
-
 - Improved CHANGELOG for clarity.
 - Added LLM agent instructions to the README.
 - Added FOSSA status badge.
