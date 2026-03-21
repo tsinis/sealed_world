@@ -2,12 +2,25 @@
 
 NEW FEATURES
 
+- Introduced `DualFlag` widget — displays two flags split by a configurable angle (default 45°) for a given ISO item. When both primary and secondary flags exist, renders a split view; otherwise falls back to a single flag.
+- Added `CurrencyFlag` widget — renders a country flag for a given `FiatCurrency`, with built-in default mappings for all fiat currencies to their primary country flags. Also provides secondary country flag mappings for dual-flag display.
+- Added `LanguageFlag` widget — renders a country flag for a given `NaturalLanguage`, with built-in default mappings for all natural languages to their primary country flags (including constructed languages). Also provides secondary country flag mappings for dual-flag display.
+- Added `DualFlagClipper` — a `CustomClipper` that clips along a line through the center at any angle, supporting horizontal, vertical, and diagonal splits.
+- `MaybeWidget`, a utility widget for conditionally wrapping or building widgets, is moved to the `world_flags` package.
+- Added `copyWith` extensions for `FlagProperties`, `ElementsProperties`, and `CustomElementsProperties`.
+- All `copyWith` methods across the ecosystem now support resetting nullable fields to `null` via domain-invalid sentinel values (see underlying packages for details). In this package: pass a negative value for positive-only `double?`/`int?` fields (`height`, `width`, `aspectRatio`, `widthFactor`, `angle`), and an empty list for `List?` fields (`elementsProperties`).
 - Added `isRtl` getter to `BuildContextExtension` for convenient RTL detection via `context.isRtl`.
-- All `copyWith` methods across the ecosystem now support resetting nullable fields to `null` via domain-invalid sentinel values (see underlying packages for details). In this package: pass a negative value for positive-only `double?`/`int?` fields (`cacheExtent`, `maxLines`, `minLines`, `maxLength`, `cursorHeight`), and an empty string for `String?` fields where empty is invalid (`restorationId`).
 
 REFACTOR
 
 - Replaced `EdgeInsets.only(left:, right:)` with `EdgeInsetsDirectional.only(start:, end:)` in `UiConstants.padding` for proper RTL support.
+- `BasicFlag` now auto-resolves the elements painter from `FlagProperties.baseElementType` when no explicit `elementsBuilder` is provided. This means `BasicFlag(properties)` is now sufficient for all standard flag types (star, rectangle, ellipse, moon, triangle, multi-element) — the correct painter is selected automatically at build time.
+- Deprecated `StarFlag`, `MoonFlag`, `EllipseFlag`, `RectangleFlag`, `TriangleFlag`, and `MultiElementFlag` — use `BasicFlag(properties)` instead. These subclasses will be removed in the next major version.
+- Replaced all internal usages of the deprecated flag subclasses with `BasicFlag` in all flag maps.
+- Added missing `baseElementType`s to `flagChlProperties`, `flagChnProperties`, `flagDjiProperties`, `flagEthProperties`, and `flagEurProperties`.
+- Reorganized ISO flag widgets (`IsoFlag`, `CurrencyFlag`, `LanguageFlag`, `DualFlag`) into a dedicated `flags/iso/` subdirectory.
+- Moved `MaybeWidget` from `world_countries` to `world_flags` package.
+- Optimized Flutter imports with explicit `show` clauses.
 
 DOCUMENTATION
 
