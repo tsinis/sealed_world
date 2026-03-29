@@ -5148,7 +5148,7 @@
 5147:skia_private::THashTable<skgpu::ganesh::SmallPathShapeData*\2c\20skgpu::ganesh::SmallPathShapeDataKey\2c\20SkTDynamicHash<skgpu::ganesh::SmallPathShapeData\2c\20skgpu::ganesh::SmallPathShapeDataKey\2c\20skgpu::ganesh::SmallPathShapeData>::AdaptedTraits>::uncheckedSet\28skgpu::ganesh::SmallPathShapeData*&&\29
 5148:skia_private::THashTable<skgpu::ganesh::SmallPathShapeData*\2c\20skgpu::ganesh::SmallPathShapeDataKey\2c\20SkTDynamicHash<skgpu::ganesh::SmallPathShapeData\2c\20skgpu::ganesh::SmallPathShapeDataKey\2c\20skgpu::ganesh::SmallPathShapeData>::AdaptedTraits>::resize\28int\29
 5149:skia_private::THashTable<skgpu::ganesh::SmallPathShapeData*\2c\20skgpu::ganesh::SmallPathShapeDataKey\2c\20SkTDynamicHash<skgpu::ganesh::SmallPathShapeData\2c\20skgpu::ganesh::SmallPathShapeDataKey\2c\20skgpu::ganesh::SmallPathShapeData>::AdaptedTraits>::removeIfExists\28skgpu::ganesh::SmallPathShapeDataKey\20const&\29
-5150:skia_private::THashTable<skgpu::ganesh::GlyphEntry*\2c\20SkPackedGlyphID\2c\20skgpu::ganesh::TextStrike::HashTraits>::uncheckedSet\28skgpu::ganesh::GlyphEntry*&&\29
+5150:skia_private::THashTable<skgpu::ganesh::GlyphEntry*\2c\20skgpu::ganesh::GlyphEntryKey\2c\20skgpu::ganesh::TextStrike::HashTraits>::uncheckedSet\28skgpu::ganesh::GlyphEntry*&&\29
 5151:skia_private::THashTable<sk_sp<sktext::gpu::TextStrikeBase>\2c\20SkDescriptor\20const&\2c\20sktext::gpu::StrikeCache::HashTraits>::uncheckedSet\28sk_sp<sktext::gpu::TextStrikeBase>&&\29
 5152:skia_private::THashTable<sk_sp<sktext::gpu::TextStrikeBase>\2c\20SkDescriptor\20const&\2c\20sktext::gpu::StrikeCache::HashTraits>::resize\28int\29
 5153:skia_private::THashTable<sk_sp<SkStrike>\2c\20SkDescriptor\2c\20SkStrikeCache::StrikeTraits>::uncheckedSet\28sk_sp<SkStrike>&&\29
@@ -8167,7 +8167,7 @@
 8166:7946
 8167:7947
 8168:xyzd50_to_hcl\28SkRGBA4f<\28SkAlphaType\292>\2c\20bool*\29
-8169:void\20sktext::gpu::GlyphVector::initBackendData<skgpu::ganesh::GlyphData>\28sktext::gpu::StrikeCache*\29\20requires\20std::is_constructible_v<T\2c\20std::__2::invoke_result<decltype\28T::FindStrike\29\2c\20sktext::gpu::StrikeCache*\2c\20SkStrikeSpec\20const&>::type\2c\20decltype\28fp0\29...>::'lambda'\28std::byte*\29::__invoke\28std::byte*\29
+8169:void\20sktext::gpu::GlyphVector::initBackendData<skgpu::ganesh::GlyphData>\28sktext::gpu::StrikeCache*\2c\20skgpu::MaskFormat\29\20requires\20std::is_constructible_v<T\2c\20std::__2::invoke_result<decltype\28T::FindStrike\29\2c\20sktext::gpu::StrikeCache*\2c\20SkStrikeSpec\20const&>::type\2c\20decltype\28fp1\29...>::'lambda'\28std::byte*\29::__invoke\28std::byte*\29
 8170:void\20mergeT<unsigned\20short>\28void\20const*\2c\20int\2c\20unsigned\20char\20const*\2c\20int\2c\20void*\29
 8171:void\20mergeT<unsigned\20char>\28void\20const*\2c\20int\2c\20unsigned\20char\20const*\2c\20int\2c\20void*\29
 8172:void\20\28anonymous\20namespace\29::downsample_3_3<\28anonymous\20namespace\29::ColorTypeFilter_RGBA_F16>\28void*\2c\20void\20const*\2c\20unsigned\20long\2c\20int\29

@@ -5783,7 +5783,7 @@
 5782:skia_private::THashTable<skgpu::ganesh::SmallPathShapeData*\2c\20skgpu::ganesh::SmallPathShapeDataKey\2c\20SkTDynamicHash<skgpu::ganesh::SmallPathShapeData\2c\20skgpu::ganesh::SmallPathShapeDataKey\2c\20skgpu::ganesh::SmallPathShapeData>::AdaptedTraits>::uncheckedSet\28skgpu::ganesh::SmallPathShapeData*&&\29
 5783:skia_private::THashTable<skgpu::ganesh::SmallPathShapeData*\2c\20skgpu::ganesh::SmallPathShapeDataKey\2c\20SkTDynamicHash<skgpu::ganesh::SmallPathShapeData\2c\20skgpu::ganesh::SmallPathShapeDataKey\2c\20skgpu::ganesh::SmallPathShapeData>::AdaptedTraits>::resize\28int\29
 5784:skia_private::THashTable<skgpu::ganesh::SmallPathShapeData*\2c\20skgpu::ganesh::SmallPathShapeDataKey\2c\20SkTDynamicHash<skgpu::ganesh::SmallPathShapeData\2c\20skgpu::ganesh::SmallPathShapeDataKey\2c\20skgpu::ganesh::SmallPathShapeData>::AdaptedTraits>::removeIfExists\28skgpu::ganesh::SmallPathShapeDataKey\20const&\29
-5785:skia_private::THashTable<skgpu::ganesh::GlyphEntry*\2c\20SkPackedGlyphID\2c\20skgpu::ganesh::TextStrike::HashTraits>::uncheckedSet\28skgpu::ganesh::GlyphEntry*&&\29
+5785:skia_private::THashTable<skgpu::ganesh::GlyphEntry*\2c\20skgpu::ganesh::GlyphEntryKey\2c\20skgpu::ganesh::TextStrike::HashTraits>::uncheckedSet\28skgpu::ganesh::GlyphEntry*&&\29
 5786:skia_private::THashTable<sk_sp<sktext::gpu::TextStrikeBase>\2c\20SkDescriptor\20const&\2c\20sktext::gpu::StrikeCache::HashTraits>::uncheckedSet\28sk_sp<sktext::gpu::TextStrikeBase>&&\29
 5787:skia_private::THashTable<sk_sp<sktext::gpu::TextStrikeBase>\2c\20SkDescriptor\20const&\2c\20sktext::gpu::StrikeCache::HashTraits>::resize\28int\29
 5788:skia_private::THashTable<sk_sp<SkStrike>\2c\20SkDescriptor\2c\20SkStrikeCache::StrikeTraits>::uncheckedSet\28sk_sp<SkStrike>&&\29
@@ -9204,7 +9204,7 @@
 9203:wuffs_base__pixel_swizzler__bgr_565__index__src
 9204:void\20std::__2::__call_once_proxy\5babi:nn180100\5d<std::__2::tuple<std::__2::locale::id::__get\28\29::$_0&&>>\28void*\29
 9205:void\20std::__2::__call_once_proxy\5babi:ne180100\5d<std::__2::tuple<void\20\28&\29\28\29>>\28void*\29
-9206:void\20sktext::gpu::GlyphVector::initBackendData<skgpu::ganesh::GlyphData>\28sktext::gpu::StrikeCache*\29\20requires\20std::is_constructible_v<T\2c\20std::__2::invoke_result<decltype\28T::FindStrike\29\2c\20sktext::gpu::StrikeCache*\2c\20SkStrikeSpec\20const&>::type\2c\20decltype\28fp0\29...>::'lambda'\28std::byte*\29::__invoke\28std::byte*\29
+9206:void\20sktext::gpu::GlyphVector::initBackendData<skgpu::ganesh::GlyphData>\28sktext::gpu::StrikeCache*\2c\20skgpu::MaskFormat\29\20requires\20std::is_constructible_v<T\2c\20std::__2::invoke_result<decltype\28T::FindStrike\29\2c\20sktext::gpu::StrikeCache*\2c\20SkStrikeSpec\20const&>::type\2c\20decltype\28fp1\29...>::'lambda'\28std::byte*\29::__invoke\28std::byte*\29
 9207:void\20mergeT<unsigned\20short>\28void\20const*\2c\20int\2c\20unsigned\20char\20const*\2c\20int\2c\20void*\29
 9208:void\20mergeT<unsigned\20char>\28void\20const*\2c\20int\2c\20unsigned\20char\20const*\2c\20int\2c\20void*\29
 9209:void\20\28anonymous\20namespace\29::downsample_3_3<\28anonymous\20namespace\29::ColorTypeFilter_RGBA_F16>\28void*\2c\20void\20const*\2c\20unsigned\20long\2c\20int\29
