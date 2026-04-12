@@ -35,7 +35,7 @@ jobs:
 
       - name: 🧹 Workspace cleaner
         if: ${{ !inputs.is_flutter }}
-        uses: actions/github-script@v8.0.0
+        uses: actions/github-script@v9.0.0
         with:
           script: |
             const f = 'pubspec.yaml', c = await require('fs').promises.readFile(f, 'utf8')
