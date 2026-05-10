@@ -325,6 +325,7 @@ Future<void> _runCloudBenchmark(
         _printError("Build finished but APK directory missing: ${apkDir.path}");
       }
       exitCode = 1;
+
       throw StateError("APK not produced");
     }
   }
@@ -428,6 +429,7 @@ Future<void> _runFlutterCommand(
       "$executable ${arguments.join(' ')} failed with exit code $exit",
     );
     exitCode = exit;
+
     throw StateError("Flutter command failed");
   }
 }

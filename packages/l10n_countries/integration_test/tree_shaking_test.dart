@@ -217,6 +217,7 @@ abstract final class _TreeShakingTest {
       if (pubspec.existsSync()) return current.path;
       current = current.parent;
     }
+
     throw StateError("Could not find package root (no pubspec.yaml found)");
   }
 

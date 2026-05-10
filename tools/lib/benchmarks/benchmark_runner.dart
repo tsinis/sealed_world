@@ -14,8 +14,8 @@ final class BenchmarkRunner {
     this.verbose = false,
     this.dryRun = false,
     DateTime Function()? now,
-  }) : _now = now ?? DateTime.now,
-       _root = _resolveRoot(Directory.current.path, config.examplePath);
+  }) : _root = _resolveRoot(Directory.current.path, config.examplePath),
+       _now = now ?? DateTime.now;
 
   final BenchmarkConfig config;
   final bool verbose;
@@ -40,6 +40,7 @@ final class BenchmarkRunner {
       await _generateReport(version, timestamp);
     } on Exception catch (error) {
       _logError("Benchmark failed: $error");
+
       rethrow;
     } finally {
       _stopwatch.stop();

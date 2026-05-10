@@ -377,9 +377,9 @@ sealed class WorldCountry extends Country
          regionalBlocs != const <RegionalBloc>[],
          "`regionalBlocs` should not be empty!",
        ),
-       _namesNative = namesNative,
        _demonyms = demonyms,
        _languages = languages,
+       _namesNative = namesNative,
        _mapper = null;
 
   /// {@macro sealed_world.country_abw_constructor}
@@ -1178,9 +1178,9 @@ sealed class WorldCountry extends Country
          code.length > 0 || codeNumeric.length > 0 || codeShort.length > 0,
          "The `code` (or at least `codeShort`/`codeNumeric`) must be provided!",
        ),
-       _namesNative = namesNative,
        _demonyms = demonyms,
        _languages = languages,
+       _namesNative = namesNative,
        _mapper = mapper;
 
   /// Returns an [WorldCountry] object from the given [code]
@@ -1235,7 +1235,7 @@ sealed class WorldCountry extends Country
   factory WorldCountry.fromCodeNumeric(
     Object codeNumeric, [
     Iterable<WorldCountry>? countries,
-    // ignore: avoid-non-empty-constructor-bodies, more clear for factory methods.
+    // ignore: avoid-non-empty-constructor-bodies, it's a factory constructor.
   ]) {
     if (countries == null) return codeNumericMap.findByCodeOrThrow(codeNumeric);
 

@@ -46,6 +46,7 @@ extension UpperCaseIsoMapExtension<V extends IsoStandardized>
     final result = maybeFindByCode(code);
 
     if (result != null) return result;
+
     throw StateError(
       "No matching ISO $V element was found for the '$code'! Consider using the"
       " same but nullable runtime-safe methods (with a `maybe` prefix) instead",

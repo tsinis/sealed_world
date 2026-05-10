@@ -74,11 +74,11 @@ class TypedLocaleDelegate implements LocalizationsDelegate<TypedLocale?> {
     IsoMaps Function(IsoMaps maps)? isoMapsBuilder,
     bool shouldReload = false,
   }) : _asyncTranslationCacheProcessing = asyncTranslationCacheProcessing,
+       _shouldReload = shouldReload,
        _isoCollections = isoCollections,
        _l10nFormatter = l10nFormatter,
        _l10nSorter = l10nSorter,
-       _isoMapsBuilder = isoMapsBuilder,
-       _shouldReload = shouldReload;
+       _isoMapsBuilder = isoMapsBuilder;
 
   /// Creates an instance of [TypedLocaleDelegate] without translations caching.
   /// This is useful when you don't want to cache the translations for the
@@ -114,11 +114,11 @@ class TypedLocaleDelegate implements LocalizationsDelegate<TypedLocale?> {
     IsoMaps Function(IsoMaps maps)? isoMapsBuilder,
     bool shouldReload = false,
   }) : _asyncTranslationCacheProcessing = asyncTranslationCacheProcessing,
+       _shouldReload = shouldReload,
        _isoCollections = isoCollections,
        _l10nFormatter = l10nFormatter,
        _l10nSorter = l10nSorter,
-       _isoMapsBuilder = isoMapsBuilder,
-       _shouldReload = shouldReload;
+       _isoMapsBuilder = isoMapsBuilder;
 
   /// A constant list of [LocaleEntry] objects that define the default
   /// resolution for locale mapping.

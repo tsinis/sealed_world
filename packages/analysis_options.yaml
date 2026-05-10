@@ -113,6 +113,10 @@ dart_code_metrics:
         ignore-public: true
         ignore-private: false
     # With configs:
+    - avoid-dot-shorthands:
+        exclude:
+          - "**/**_test.dart"
+          - "**/main.dart"
     - avoid-non-ascii-symbols:
         exclude:
           - "**/data/**.data.dart"
@@ -154,6 +158,8 @@ dart_code_metrics:
           - test/data/**/*.dart
           - test/**/data.dart
           - lib/**
+    - max-statements:
+        - "**/main.dart"
     - missing-test-assertion:
         include-assertions:
           - verify
@@ -297,6 +303,7 @@ dart_code_metrics:
     - avoid-incorrect-uri: true
     - avoid-inverted-boolean-checks: true
     - avoid-keywords-in-wildcard-pattern: true
+    - avoid-labels: true
     - avoid-late-final-reassignment: true
     - avoid-local-functions: true
     - avoid-long-records: true
@@ -414,6 +421,7 @@ dart_code_metrics:
     - function-always-returns-null: true
     - function-always-returns-same-value: true
     - handle-throwing-invocations: true
+    - initializers-ordering: true
     - map-keys-ordering: true
     - match-base-class-default-value: true
     - match-lib-folder-structure: true
@@ -421,10 +429,13 @@ dart_code_metrics:
     - move-records-to-typedefs: true
     - move-variable-closer-to-its-usage: true
     - move-variable-outside-iteration: true
+    - newline-before-break: true
     - newline-before-case: true
     - newline-before-constructor: true
+    - newline-before-continue: true
     - newline-before-method: true
     - newline-before-return: true
+    - newline-before-throw: true
     - no-boolean-literal-compare: true
     - no-empty-block: true
     - no-equal-conditions: true
@@ -440,6 +451,7 @@ dart_code_metrics:
     - prefer-add-all: true
     - prefer-addition-subtraction-assignments: true
     - prefer-any-or-every: true
+    - prefer-assert-initializers-first: true
     - prefer-assigning-await-expressions: true
     - prefer-async-await: true
     - prefer-both-inlining-annotations: true
@@ -502,6 +514,7 @@ dart_code_metrics:
     - prefer-visible-for-testing-on-members: true
     - prefer-wildcard-pattern: true
     - record-fields-ordering: true
+    - require-atomic-async-update: true
     - unnecessary-trailing-comma: true
     - use-existing-destructuring: true
     - use-existing-variable: true

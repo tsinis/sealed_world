@@ -67,6 +67,7 @@ extension SealedWorldIterableIsoExtension<T extends IsoStandardized>
   T _getFirstIsoOrThrow<S extends Object>(S value, T? Function(S) isoOrNull) {
     final maybeMatchingIso = isoOrNull(value);
     if (maybeMatchingIso != null) return maybeMatchingIso;
+
     throw StateError(
       "No matching ISO $T element was found for the input! Consider using the"
       " same but nullable runtime-safe methods (with a `maybe` prefix) instead",

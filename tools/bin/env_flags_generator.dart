@@ -350,6 +350,7 @@ String _wrapFactoriesWithInclude(String content) {
     if (trimmed.isEmpty || trimmed.startsWith("//")) {
       newLines.add(line);
       i += 1;
+
       continue;
     }
 
@@ -379,6 +380,7 @@ String _wrapFactoriesWithInclude(String content) {
           entryLocale = match.group(1);
           entryValue = match.group(2);
           i += 1;
+
           break;
         }
         // Skip nested if statements.
@@ -402,6 +404,7 @@ String _wrapFactoriesWithInclude(String content) {
           '$baseIndent  "$entryLocale": $entryValue',
         ]);
       }
+
       continue;
     }
 
@@ -437,6 +440,7 @@ String _wrapFactoriesWithInclude(String content) {
         }
         i += 1;
       }
+
       continue;
     }
 

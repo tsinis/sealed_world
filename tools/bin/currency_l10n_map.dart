@@ -176,6 +176,7 @@ bool _updateDataFile(File file, String currencyCode, String translation) {
       mapStartIndex = i;
     } else if (mapStartIndex != -1 && lines[i].trim() == "});") {
       mapEndIndex = i;
+
       break;
     }
   }
@@ -221,6 +222,7 @@ bool _updateDataFile(File file, String currencyCode, String translation) {
     if (lines[i].contains("/// Contains") &&
         lines[i].contains("translation(s)")) {
       lines[i] = "/// Contains $newCount translation(s).";
+
       break;
     }
   }

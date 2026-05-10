@@ -13,7 +13,7 @@ topics:
   - iso
 
 environment:
-  sdk: ^3.11.3
+  sdk: ^3.11.5
 
 workspace:
   - tools # Command-line tools for public packages.
@@ -36,6 +36,6 @@ workspace:
 dev_dependencies:
   benchmark_harness: ^2.4.0 # From Google. Defines top level dependency constraint.
   coverage: ^1.15.0 # From Google. Defines top level dependency constraint.
-  dart_code_metrics_presets: ^2.30.0 # DCM. Defines top level dependency constraint.
+  dart_code_metrics_presets: ^2.31.0 # DCM. Defines top level dependency constraint.
   lints: ^6.1.0 # From Google. Defines top level dependency constraint.
   test: ^1.30.0 # From Google. Defines top level dependency constraint.
