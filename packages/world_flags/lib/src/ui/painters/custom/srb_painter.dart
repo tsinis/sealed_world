@@ -16,7 +16,6 @@ final class SrbPainter extends CustomElementsPainter {
 
   @override
   FlagParentBounds paintFlagElements(Canvas canvas, Size size) {
-    // ignore: max-statements, dcm bug, ignoring analysis options for this path.
     final adjustedSize = ratioAdjustedSize(size, minRatio: 1.2);
     final center = calculateCenter(size);
     final height = adjustedSize.height;
