@@ -18,6 +18,9 @@ dart_code_metrics:
           - path
     - prefer-widget-private-members:
         ignore-static: true
+    - max-statements:
+        exclude:
+          - "**/ui/painters/**"
     - always-pass-global-key: true
     - always-remove-listener: true
     - avoid-border-all: true

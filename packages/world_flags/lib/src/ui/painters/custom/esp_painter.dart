@@ -16,6 +16,7 @@ final class EspPainter extends CustomElementsPainter {
 
   @override
   FlagParentBounds paintFlagElements(Canvas canvas, Size size) {
+    // ignore: max-statements, dcm bug, ignoring analysis options for this path.
     final adjustedSize = ratioAdjustedSize(size, minRatio: 1.22);
     final center = calculateCenter(size);
     final height = adjustedSize.height;

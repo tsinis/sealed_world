@@ -1,4 +1,4 @@
-// ignore_for_file: avoid_print, prefer-for-in, avoid-long-functions
+// ignore_for_file:avoid_print,prefer-for-in,avoid-long-functions,max-statements
 
 import "dart:io";
 

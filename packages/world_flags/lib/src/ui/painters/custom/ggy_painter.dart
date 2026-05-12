@@ -17,6 +17,7 @@ final class GgyPainter extends CustomElementsPainter {
 
   @override
   FlagParentBounds paintFlagElements(Canvas canvas, Size size) {
+    // ignore: max-statements, dcm bug, ignoring analysis options for this path.
     final width = size.width;
     final height = size.height;
     final redThickness = height * (1 - property.heightFactor);

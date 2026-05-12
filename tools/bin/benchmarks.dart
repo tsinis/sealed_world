@@ -193,6 +193,7 @@ ArgParser _buildParser() => ArgParser()
   ..addFlag("dry-run", help: "Skip all external commands.");
 
 BenchmarkConfig _applyOverrides(BenchmarkConfig config, ArgResults results) {
+  // ignore: max-statements, it's just a benchmark.
   BenchmarkConfig updated = config;
 
   String? maybeOption(String name) =>

@@ -54,6 +54,7 @@ final class SimpleShieldPainter extends MultiElementPainter {
 
   @override
   FlagParentBounds paintFlagElements(Canvas canvas, Size size) {
+    // ignore: max-statements, dcm bug, ignoring analysis options for this path.
     final adjustedSize = ratioAdjustedSize(size);
     final thisProperty = property;
     final otherColors =
