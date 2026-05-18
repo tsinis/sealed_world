@@ -2,8 +2,8 @@
 import "package:flutter/material.dart";
 import "package:world_countries/helpers.dart";
 
-import "../../../../helpers/extensions/border_flag_theme_controller_extension.dart";
-import "../../../../theme/flag_theme_controller.dart";
+import "../../../helpers/extensions/border_flag_theme_controller_extension.dart";
+import "../../../theme/flag_theme_controller.dart";
 
 /// Horizontally scrollable row of color choice chips for border color.
 /// Uses a curated subset of Material colors for brevity.

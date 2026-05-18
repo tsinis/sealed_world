@@ -682,6 +682,7 @@ linter:
     remove_deprecations_in_breaking_versions: true
     require_trailing_commas: true
     secure_pubspec_urls: true
+    simple_directive_paths: true
     simplify_variable_pattern: true
     slash_for_doc_comments: true
     sort_constructors_first: true
