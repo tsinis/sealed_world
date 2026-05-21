@@ -9,6 +9,10 @@ TEST
 
 - Added new tests for the enum mapping methods, ensuring correct functionality and coverage.
 
+CHORE
+
+- The Dart SDK was bumped to v3.12.0.
+
 ## 4.2.0
 
 NEW FEATURES
