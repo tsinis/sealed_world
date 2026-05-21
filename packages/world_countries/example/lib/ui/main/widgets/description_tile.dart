@@ -28,9 +28,9 @@ class DescriptionTile extends StatelessWidget {
   const DescriptionTile.raw(
     this._title, {
     required this.description,
-    Widget? leading,
+    this._leading,
     super.key,
-  }) : _leading = leading;
+  });
 
   static const leadingColor = Color.fromARGB(125, 100, 100, 100);
 

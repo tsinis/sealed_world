@@ -1,7 +1,7 @@
 import "package:flutter/material.dart";
 import "package:world_countries/helpers.dart";
 
-import "../../../../../../theme/flag_theme_controller.dart";
+import "../../../../theme/flag_theme_controller.dart";
 
 abstract base class SettingsTileSlider extends StatelessWidget {
   const SettingsTileSlider(

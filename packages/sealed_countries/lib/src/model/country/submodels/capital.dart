@@ -26,13 +26,13 @@ final class Capital implements JsonEncodable<Capital> {
   ///
   /// The [name] parameter must not be empty.
   const Capital(String name, {this.deJure, this.third})
-    : deFacto = name,
-      assert(third == null || third.length > 0, "`third` should not be empty!"),
+    : assert(third == null || third.length > 0, "`third` should not be empty!"),
       assert(name.length > 0, "`name` of capital should not be empty!"),
       assert(
         deJure == null || deJure.length > 0,
         "`deJure` should not be empty!",
-      );
+      ),
+      deFacto = name;
 
   /// The de facto name of this capital.
   final String deFacto;

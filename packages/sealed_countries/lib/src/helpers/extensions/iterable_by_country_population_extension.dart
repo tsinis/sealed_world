@@ -53,6 +53,7 @@ extension IterableByCountryPopulationExtension<T extends IsoStandardized>
       final customValue = custom[item];
       if (customValue != null) {
         map[item] = customValue.toList(growable: false);
+
         continue;
       }
 

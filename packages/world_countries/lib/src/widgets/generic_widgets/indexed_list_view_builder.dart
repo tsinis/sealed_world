@@ -1,4 +1,5 @@
 import "package:flutter/gestures.dart";
+import "package:flutter/rendering.dart";
 import "package:flutter/widgets.dart";
 import "package:meta/meta.dart" show mustBeOverridden;
 
@@ -105,6 +106,7 @@ class _IndexedListViewBuilderState<T extends Object, W extends Widget>
     final theme = context.pickersTheme;
     final items = widget.resolvedItems(context);
     final header = widget.header ?? theme?.header;
+    final cacheExtent = widget.cacheExtent ?? theme?.cacheExtent;
 
     return Column(
       mainAxisAlignment:
@@ -136,6 +138,9 @@ class _IndexedListViewBuilderState<T extends Object, W extends Widget>
                 ? widget.emptyStatePlaceholder
                 // ignore: avoid-shrink-wrap-in-lists, it's `false` by default.
                 : ListView.separated(
+                    scrollCacheExtent: cacheExtent == null
+                        ? null
+                        : ScrollCacheExtent.pixels(cacheExtent),
                     scrollDirection:
                         widget.direction ?? theme?.direction ?? Axis.vertical,
                     reverse: widget.reverse ?? theme?.reverse ?? false,
@@ -169,7 +174,6 @@ class _IndexedListViewBuilderState<T extends Object, W extends Widget>
                         widget.addSemanticIndexes ??
                         theme?.addSemanticIndexes ??
                         true,
-                    cacheExtent: widget.cacheExtent ?? theme?.cacheExtent,
                     dragStartBehavior:
                         widget.dragStartBehavior ??
                         theme?.dragStartBehavior ??

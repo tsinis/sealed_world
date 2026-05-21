@@ -48,37 +48,32 @@ class TypedLocaleDelegate implements LocalizationsDelegate<TypedLocale?> {
   /// - [fallbackLanguage]: Default language when a locale cannot be resolved.
   ///   Defaults to [LangEng] so that unsupported locales still produce a
   ///   deterministic [TypedLocale].
-  /// - [isoCollections]: Immutable bundle with translation caches, optional
+  /// - [_isoCollections]: Immutable bundle with translation caches, optional
   ///   locale remapping, and ISO flag mappings. See [IsoCollections]
   ///   for details.
-  /// - [asyncTranslationCacheProcessing]: When `true`, populates
-  ///   [isoCollections] caches asynchronously.
-  /// - [shouldReload]: Set to `true` if the resources for this delegate should
+  /// - [_asyncTranslationCacheProcessing]: When `true`, populates
+  ///   [_isoCollections] caches asynchronously.
+  /// - [_shouldReload]: Set to `true` if the resources for this delegate should
   /// be loaded again by calling the [load] method. This method is called
   /// whenever its [Localizations] widget is rebuilt. If it returns true then
   /// dependent widgets will be rebuilt after [load] has completed.
-  /// - [l10nFormatter]: Optional formatter that customizes how ISO
+  /// - [_l10nFormatter]: Optional formatter that customizes how ISO
   ///   translations are rendered.
-  /// - [l10nSorter]: Optional custom comparator for sorting translations.
+  /// - [_l10nSorter]: Optional custom comparator for sorting translations.
   ///   When provided, overrides the default alphabetical sorting. Useful for
   ///   locale-sensitive collation (e.g., handling diacritics properly).
-  /// - [isoMapsBuilder]: Optional callback invoked after every cache
+  /// - [_isoMapsBuilder]: Optional callback invoked after every cache
   ///   population, letting you adjust the [IsoMaps] before widgets consume
   ///   the locale.
   const TypedLocaleDelegate({
     this.fallbackLanguage = const LangEng(),
-    bool asyncTranslationCacheProcessing = true,
-    IsoCollections isoCollections = const IsoCollections(),
-    L10NFormatter<TypedLocale, IsoTranslated>? l10nFormatter,
-    L10nSorter<IsoTranslated>? l10nSorter,
-    IsoMaps Function(IsoMaps maps)? isoMapsBuilder,
-    bool shouldReload = false,
-  }) : _asyncTranslationCacheProcessing = asyncTranslationCacheProcessing,
-       _isoCollections = isoCollections,
-       _l10nFormatter = l10nFormatter,
-       _l10nSorter = l10nSorter,
-       _isoMapsBuilder = isoMapsBuilder,
-       _shouldReload = shouldReload;
+    this._asyncTranslationCacheProcessing = true,
+    this._isoCollections = const IsoCollections(),
+    this._l10nFormatter,
+    this._l10nSorter,
+    this._isoMapsBuilder,
+    this._shouldReload = false,
+  });
 
   /// Creates an instance of [TypedLocaleDelegate] without translations caching.
   /// This is useful when you don't want to cache the translations for the
@@ -90,35 +85,30 @@ class TypedLocaleDelegate implements LocalizationsDelegate<TypedLocale?> {
   /// - [fallbackLanguage]: Default language when a locale cannot be resolved.
   ///   Defaults to [LangEng] so that unsupported locales still produce a
   ///   deterministic [TypedLocale].
-  /// - [isoCollections]: Immutable bundle with translation caches, locale
+  /// - [_isoCollections]: Immutable bundle with translation caches, locale
   ///   remapping, and optional ISO flag mappings. Use
   ///   [IsoCollections.selective] to keep caches empty.
-  /// - [asyncTranslationCacheProcessing]: When `true`, populates
-  ///   [isoCollections] caches asynchronously.
-  /// - [shouldReload]: Set to `true` if the resources for this delegate should
+  /// - [_asyncTranslationCacheProcessing]: When `true`, populates
+  ///   [_isoCollections] caches asynchronously.
+  /// - [_shouldReload]: Set to `true` if the resources for this delegate should
   /// be loaded again by calling the [load] method. This method is called
   /// whenever its [Localizations] widget is rebuilt. If it returns true then
   /// dependent widgets will be rebuilt after [load] has completed.
-  /// - [l10nFormatter]: Optional formatter that customizes how ISO
+  /// - [_l10nFormatter]: Optional formatter that customizes how ISO
   ///   translations are rendered.
-  /// - [l10nSorter]: Optional custom comparator for sorting translations.
-  /// - [isoMapsBuilder]: Optional callback invoked after every cache
+  /// - [_l10nSorter]: Optional custom comparator for sorting translations.
+  /// - [_isoMapsBuilder]: Optional callback invoked after every cache
   ///   population, letting you adjust the [IsoMaps] before widgets consume
   ///   the locale.
   const TypedLocaleDelegate.selectiveCache({
     this.fallbackLanguage = const LangEng(),
-    bool asyncTranslationCacheProcessing = true,
-    IsoCollections isoCollections = const IsoCollections.selective(),
-    L10NFormatter<TypedLocale, IsoTranslated>? l10nFormatter,
-    L10nSorter<IsoTranslated>? l10nSorter,
-    IsoMaps Function(IsoMaps maps)? isoMapsBuilder,
-    bool shouldReload = false,
-  }) : _asyncTranslationCacheProcessing = asyncTranslationCacheProcessing,
-       _isoCollections = isoCollections,
-       _l10nFormatter = l10nFormatter,
-       _l10nSorter = l10nSorter,
-       _isoMapsBuilder = isoMapsBuilder,
-       _shouldReload = shouldReload;
+    this._asyncTranslationCacheProcessing = true,
+    this._isoCollections = const IsoCollections.selective(),
+    this._l10nFormatter,
+    this._l10nSorter,
+    this._isoMapsBuilder,
+    this._shouldReload = false,
+  });
 
   /// A constant list of [LocaleEntry] objects that define the default
   /// resolution for locale mapping.

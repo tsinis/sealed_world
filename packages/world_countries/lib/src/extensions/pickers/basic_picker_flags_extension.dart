@@ -31,12 +31,14 @@ extension BasicPickerFlagsExtension<T extends IsoTranslated>
       // even when that country uses the currency/language.
       if (countries.contains(country) && hasCountry) {
         flagMap[key] = mapper(localeFlag, key, countries);
+
         continue;
       }
 
       final customFlag = flagMap[key];
       if (customFlag != null) {
         flagMap[key] = mapper(customFlag, key, countries);
+
         continue;
       }
 

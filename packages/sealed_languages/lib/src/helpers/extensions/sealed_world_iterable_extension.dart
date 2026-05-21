@@ -1,6 +1,7 @@
 // ignore_for_file: prefer-single-declaration-per-file
 
 import "../../interfaces/iso_standardized.dart";
+import "../../model/script/submodels/script.dart" show Script;
 import "iso_object_extension_type.dart";
 
 /// Extension on [Iterable] class to provide helper methods for working
@@ -67,6 +68,7 @@ extension SealedWorldIterableIsoExtension<T extends IsoStandardized>
   T _getFirstIsoOrThrow<S extends Object>(S value, T? Function(S) isoOrNull) {
     final maybeMatchingIso = isoOrNull(value);
     if (maybeMatchingIso != null) return maybeMatchingIso;
+
     throw StateError(
       "No matching ISO $T element was found for the input! Consider using the"
       " same but nullable runtime-safe methods (with a `maybe` prefix) instead",
@@ -78,6 +80,83 @@ extension SealedWorldIterableIsoExtension<T extends IsoStandardized>
 /// with nullable [IsoStandardized] collections.
 extension SealedWorldNullableIterableIsoExtension<T extends IsoStandardized>
     on Iterable<T>? {
+  /// Returns a list of [IsoStandardized] objects from this collection that
+  /// correspond to the provided [values].
+  ///
+  /// The matching is done by comparing the `name` of each [Enum] in [values]
+  /// (converted to uppercase) with the `code` or `codeOther` of the
+  /// [IsoStandardized] objects in this collection.
+  ///
+  /// Returns an empty unmodifiable list if [values] is empty or this
+  /// collection is `null` or empty.
+  ///
+  /// The resulting list contains only unique [IsoStandardized] objects and
+  /// preserves the order of the provided [values].
+  ///
+  /// Example:
+  /// ```dart
+  /// enum IsoEnum { de, ru, bul, fr }
+  ///
+  /// final sealedObjects = NaturalLanguage.list.fromEnums(IsoEnum.values);
+  /// print(sealedObjects); // [LangDeu(), LangRus(), LangBul(), LangFra()]
+  /// ```
+  List<T> fromEnums<E extends Enum>(Iterable<E> values) {
+    if (values.isEmpty || this?.isEmpty == true) return const [];
+
+    final result = <T>[];
+    for (final value in values) {
+      final i = _firstIsoWhereEnum(value);
+      if (i != null && !result.contains(i)) result.add(i);
+    }
+
+    return List<T>.unmodifiable(result);
+  }
+
+  /// Returns a list of [Enum] values from the provided [values] that
+  /// correspond to the [IsoStandardized] objects in this collection.
+  ///
+  /// The matching is done by comparing the `code` or `codeOther` of each
+  /// [IsoStandardized] object in this collection with the `name` of each
+  /// [Enum] in [values] (converted to uppercase).
+  ///
+  /// Returns an empty unmodifiable list if [values] is empty or this
+  /// collection is `null` or empty.
+  ///
+  /// The resulting list contains only unique [Enum] values and preserves the
+  /// order of the [values] enums provided.
+  ///
+  /// Example:
+  /// ```dart
+  /// enum IsoEnum { de, cn, fr, rus }
+  ///
+  /// final enums = {.rus(), .fra()}.toEnums(IsoEnum.values);
+  /// print(enums); // [IsoEnum.rus, IsoEnum.fr]
+  /// ```
+  List<E> toEnums<E extends Enum>(Iterable<E> values) {
+    if (values.isEmpty || this?.isEmpty == true) return const [];
+
+    final result = <E>[];
+    for (final i in values) {
+      if (_firstIsoWhereEnum(i) != null && !result.contains(i)) result.add(i);
+    }
+
+    return List<E>.unmodifiable(result);
+  }
+
+  T? _firstIsoWhereEnum<E extends Enum>(E enumValue) {
+    final enumCode = enumValue.name.toUpperCase();
+
+    return firstIsoWhereOrNull(
+      (iso) => switch (enumCode.length) {
+        IsoStandardized.codeShortLength => iso.codeOther == enumCode,
+        IsoStandardized.codeLength => iso.code == enumCode,
+        Script.codeLength => iso.code.toUpperCase() == enumCode, // Script code.
+        _ => false,
+      },
+      assertNotEmpty: false,
+    );
+  }
+
   /// Returns the first [IsoStandardized] element in the collection that has the
   /// given regular [code], or `null` if there is no such element.
   /// If [toUpperCase] is set to `true` (default), the code is converted to

@@ -193,6 +193,7 @@ ArgParser _buildParser() => ArgParser()
   ..addFlag("dry-run", help: "Skip all external commands.");
 
 BenchmarkConfig _applyOverrides(BenchmarkConfig config, ArgResults results) {
+  // ignore: max-statements, it's just a benchmark.
   BenchmarkConfig updated = config;
 
   String? maybeOption(String name) =>
@@ -325,6 +326,7 @@ Future<void> _runCloudBenchmark(
         _printError("Build finished but APK directory missing: ${apkDir.path}");
       }
       exitCode = 1;
+
       throw StateError("APK not produced");
     }
   }
@@ -428,6 +430,7 @@ Future<void> _runFlutterCommand(
       "$executable ${arguments.join(' ')} failed with exit code $exit",
     );
     exitCode = exit;
+
     throw StateError("Flutter command failed");
   }
 }

@@ -3,7 +3,7 @@ import "package:world_countries/world_countries.dart";
 
 import "../../../../helpers/extensions/border_flag_theme_controller_extension.dart";
 import "../../../../theme/flag_theme_controller.dart";
-import "../appbar/sliver_settings_app_bar.dart";
+import "sliver_settings_app_bar.dart";
 
 class ScaledCountryFlag extends StatelessWidget {
   const ScaledCountryFlag(this._controller, this._flag, {IsoFlag? fallback})

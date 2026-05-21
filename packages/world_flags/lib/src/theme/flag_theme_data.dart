@@ -55,7 +55,9 @@ class FlagThemeData extends ThemeExtension<FlagThemeData>
   /// - [child]: A widget to display in the foreground of the flag.
   const FlagThemeData.small({
     double? aspectRatio,
-    this.decoration = const BoxDecoration(borderRadius: .all(.circular(4))),
+    this.decoration = const BoxDecoration(
+      borderRadius: BorderRadius.all(Radius.circular(4)),
+    ),
     this.decorationPosition,
     this.padding,
     this.height = 18,

@@ -1,3 +1,13 @@
+## 3.2.0
+
+NEW FEATURES
+
+- Added new conversion methods for enum-to-object and object-to-enum mappings. New `fromEnums` and `toEnums` extension methods are added to `SealedWorldNullableIterableIsoExtension` to facilitate mapping between ISO objects and enums.
+
+TEST
+
+- Added new tests for the enum mapping methods, ensuring correct functionality and coverage.
+
 ## 3.1.0
 
 NEW FEATURES

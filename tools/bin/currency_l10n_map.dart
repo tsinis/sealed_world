@@ -1,4 +1,4 @@
-// ignore_for_file: avoid_print, prefer-for-in, avoid-long-functions
+// ignore_for_file:avoid_print,prefer-for-in,avoid-long-functions,max-statements
 
 import "dart:io";
 
@@ -176,6 +176,7 @@ bool _updateDataFile(File file, String currencyCode, String translation) {
       mapStartIndex = i;
     } else if (mapStartIndex != -1 && lines[i].trim() == "});") {
       mapEndIndex = i;
+
       break;
     }
   }
@@ -221,6 +222,7 @@ bool _updateDataFile(File file, String currencyCode, String translation) {
     if (lines[i].contains("/// Contains") &&
         lines[i].contains("translation(s)")) {
       lines[i] = "/// Contains $newCount translation(s).";
+
       break;
     }
   }

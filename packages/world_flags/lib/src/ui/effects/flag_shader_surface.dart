@@ -100,8 +100,8 @@ class FlagShaderSurface extends StatefulWidget {
     this.width,
     this.aspectRatio,
     super.key,
-  }) : _alternativeMap = alternativeMap,
-       _map = map;
+  }) : _map = map,
+       _alternativeMap = alternativeMap;
 
   /// The ISO-standardized object whose flag should be displayed.
   ///

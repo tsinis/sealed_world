@@ -1,4 +1,4 @@
-// ignore_for_file: avoid_print, prefer-static-class
+// ignore_for_file: avoid_print, prefer-static-class, max-statements
 import "package:sealed_languages/sealed_languages.dart";
 
 void main() {

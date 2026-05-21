@@ -18,6 +18,10 @@ dart_code_metrics:
           - path
     - prefer-widget-private-members:
         ignore-static: true
+    - max-statements:
+        exclude:
+          - "**/ui/painters/**"
+    - always-pass-global-key: true
     - always-remove-listener: true
     - avoid-border-all: true
     - avoid-disposing-late-fields: true
@@ -44,6 +48,7 @@ dart_code_metrics:
     - check-for-equals-in-render-object-setters: true
     - consistent-update-render-object: true
     - dispose-fields: true
+    - keep-state-below-its-widget: true
     - pass-existing-future-to-future-builder: true
     - pass-existing-stream-to-stream-builder: true
     - prefer-action-button-tooltip: true
