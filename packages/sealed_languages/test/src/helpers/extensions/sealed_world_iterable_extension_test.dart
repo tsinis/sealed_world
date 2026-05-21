@@ -3,7 +3,7 @@ import "package:sealed_languages/src/model/language/submodels/natural_language.d
 import "package:sealed_languages/src/model/script/submodels/script.dart";
 import "package:test/test.dart";
 
-// ignore: prefer-correct-identifier-length, excersing for testing purposes.
+// ignore: prefer-correct-identifier-length, exercising for testing purposes.
 enum _SealedWorldIterableExtensionTest { adlm, arab, ar, cyrl, nonexistent }
 
 void main() {
@@ -54,7 +54,7 @@ void main() {
       );
 
       test(
-        "should return valid list when receiver is not empty and preserv order",
+        "should return valid list when receiver isn't empty and preserve order",
         () => expect(
           Script.list.fromEnums(_SealedWorldIterableExtensionTest.values),
           const <Script>[.adlm(), .arab(), .cyrl()],
