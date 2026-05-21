@@ -24,12 +24,12 @@ screenshots:
     path: doc/modal_picker.webp
 
 environment:
-  sdk: ^3.11.0
+  sdk: ^3.12.0
 
 dependencies:
   flutter:
     sdk: flutter
-  meta: ^1.17.0 # Same as in Flutter SDK.
+  meta: ^1.18.0 # Same as in Flutter SDK.
   world_flags: ^3.1.0
 
 dev_dependencies:
