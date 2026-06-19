@@ -10,7 +10,7 @@ import "../basic/elements_painter.dart";
 /// rectangles based on the specified properties.
 final class RectanglePainter extends ElementsPainter {
   /// Creates a [RectanglePainter] with the given properties and aspect ratio.
-  const RectanglePainter(super.properties, super.aspectRatio);
+  const RectanglePainter(super._properties, super.aspectRatio);
 
   @override
   Paint paintCreator([Color? color]) =>

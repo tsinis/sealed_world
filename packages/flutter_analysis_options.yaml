@@ -44,6 +44,8 @@ dart_code_metrics:
     - avoid-unnecessary-overrides-in-state: true
     - avoid-unnecessary-setstate: true
     - avoid-unnecessary-stateful-widgets: true
+    - avoid-unrestricted-javascript: true
+    - avoid-unrestricted-navigation: true
     - avoid-wrapping-in-padding: true
     - check-for-equals-in-render-object-setters: true
     - consistent-update-render-object: true

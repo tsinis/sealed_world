@@ -14,7 +14,7 @@ import "../basic/elements_painter.dart";
 /// properties.
 final class StarPainter extends ElementsPainter {
   /// Creates a [StarPainter] with the given properties and aspect ratio.
-  const StarPainter(super.properties, super.aspectRatio);
+  const StarPainter(super._properties, super.aspectRatio);
   static const _startRadians = pi / 2;
   static const _radiansMultiplier = pi / 180;
 

@@ -12,7 +12,7 @@ import "../basic/elements_painter.dart";
 final class DiagonalLinePainter extends ElementsPainter {
   /// Creates a [DiagonalLinePainter] with the given properties
   /// and aspect ratio.
-  const DiagonalLinePainter(super.properties, super.aspectRatio);
+  const DiagonalLinePainter(super._properties, super.aspectRatio);
 
   @override
   FlagParentBounds paintFlagElements(Canvas canvas, Size size) {

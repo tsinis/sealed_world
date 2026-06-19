@@ -241,6 +241,7 @@ dart_code_metrics:
     - prefer-explicit-parameter-names: false # This will be dev. defined.
     - prefer-prefixed-global-constants: false # This will be a breaking change.
     - prefer-test-matchers: false # Matter of style + introduces coupling in tests.
+    - prefer-private-named-parameters: false # Not updated to the Dart 3.12 everywhere yet.
 
     # Enabled:
     - avoid-accessing-collections-by-constant-index: true
@@ -272,6 +273,7 @@ dart_code_metrics:
     - avoid-duplicate-cascades: true
     - avoid-duplicate-constant-values: true
     - avoid-duplicate-exports: true
+    - avoid-duplicate-factories: true
     - avoid-duplicate-initializers: true
     - avoid-duplicate-map-keys: true
     - avoid-duplicate-mixins: true
@@ -352,6 +354,7 @@ dart_code_metrics:
     - avoid-returning-void: true
     - avoid-self-assignment: true
     - avoid-self-compare: true
+    - avoid-sensitive-query-params: true
     - avoid-shadowed-extension-methods: true
     - avoid-shadowing: true
     - avoid-similar-names: true
@@ -370,6 +373,7 @@ dart_code_metrics:
     - avoid-uncaught-future-errors: true
     - avoid-unconditional-break: true
     - avoid-unknown-pragma: true
+    - avoid-unmodified-loop-condition: true
     - avoid-unnecessary-block: true
     - avoid-unnecessary-call: true
     - avoid-unnecessary-collections: true
@@ -381,6 +385,7 @@ dart_code_metrics:
     - avoid-unnecessary-enum-arguments: true
     - avoid-unnecessary-enum-prefix: true
     - avoid-unnecessary-extends: true
+    - avoid-unnecessary-factory: true
     - avoid-unnecessary-futures: true
     - avoid-unnecessary-getter: true
     - avoid-unnecessary-if: true
@@ -484,6 +489,7 @@ dart_code_metrics:
     - prefer-for-in: true
     - prefer-getter-over-method: true
     - prefer-immediate-return: true
+    - prefer-initializing-formals: true
     - prefer-iterable-of: true
     - prefer-last: true
     - prefer-moving-to-variable: true
@@ -496,6 +502,7 @@ dart_code_metrics:
     - prefer-private-extension-type-field: true
     - prefer-public-exception-classes: true
     - prefer-pushing-conditional-expressions: true
+    - prefer-random-secure: true
     - prefer-redirecting-superclass-constructor: true
     - prefer-return-await: true
     - prefer-returning-condition: true

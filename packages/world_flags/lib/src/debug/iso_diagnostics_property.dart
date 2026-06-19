@@ -21,12 +21,12 @@ class IsoDiagnosticsProperty<Iso extends IsoStandardized>
   ///
   /// The [name] parameter is used to identify the property in diagnostic
   /// output.
-  /// The [iso] parameter is the [IsoStandardized] object to be displayed.
+  /// The [_iso] parameter is the [IsoStandardized] object to be displayed.
   ///
   /// The remaining parameters are optional and can be used to customize
   /// the behavior of the property.
   IsoDiagnosticsProperty(
-    Iso? iso, {
+    this._iso, {
     String additionalData = "",
     super.allowNameWrap,
     super.allowWrap,
@@ -40,13 +40,12 @@ class IsoDiagnosticsProperty<Iso extends IsoStandardized>
     super.showSeparator,
     super.style,
   }) : _data = additionalData,
-       _iso = iso,
        super(
-         iso?.runtimeType.toString(),
-         iso,
-         description: _toString(iso, additionalData),
-         tooltip: "ISO ${iso.runtimeType} object",
-         ifNull: "${iso.runtimeType} is not provided",
+         _iso?.runtimeType.toString(),
+         _iso,
+         description: _toString(_iso, additionalData),
+         tooltip: "ISO ${_iso.runtimeType} object",
+         ifNull: "${_iso.runtimeType} is not provided",
        );
 
   final String _data;
