@@ -31,7 +31,7 @@ jobs:
 
     steps:
       - name: 📚 Git checkout
-        uses: actions/checkout@v6.0.3
+        uses: actions/checkout@v7.0.0
 
       - name: 🧹 Workspace cleaner
         if: ${{ !inputs.is_flutter }}
