@@ -33,10 +33,10 @@ addEventListener("message", eventListener);
 if (!window._flutter) {
   window._flutter = {};
 }
-_flutter.buildConfig = {"engineRevision":"0a9f488c1306b9d5042a78cffbfef1fa4428b64e","wasmHashes":{"skwasm.wasm":"8ec00bb9cf6ee137a040f1fcd77e6b8a6dd169d1f2c9aef21aebd9dba70981a9","wimp.wasm":"005295339dc7c1469b2a0e87c384e598434d6295acaf4abf39e570c4250a1300","experimental_webparagraph/canvaskit.wasm":"6fdbbac77cac298b16132a2a6869d922225835a107b98e9a5ad3430920e4acdc","skwasm_heavy.wasm":"59ce37ce3dd0b809b72bbd0d7186380a93865060c1247b713317a0898f5db60b","chromium/canvaskit.wasm":"2f6a66ba21416e62c420a5c56869057ba9b7da389646933572555315ff7bd556","canvaskit.wasm":"0df725bba9c7c8cb490ba6517de988ef2c3807ad639de5db4f20d117485e39eb"},"builds":[{"compileTarget":"dart2wasm","renderer":"skwasm","mainWasmPath":"main.dart.wasm","jsSupportRuntimePath":"main.dart.mjs"},{"compileTarget":"dart2js","renderer":"canvaskit","mainJsPath":"main.dart.js"}]};
+_flutter.buildConfig = {"engineRevision":"0a9f488c1306b9d5042a78cffbfef1fa4428b64e","wasmHashes":{"skwasm.wasm":"8ec00bb9cf6ee137a040f1fcd77e6b8a6dd169d1f2c9aef21aebd9dba70981a9","chromium/canvaskit.wasm":"2f6a66ba21416e62c420a5c56869057ba9b7da389646933572555315ff7bd556","experimental_webparagraph/canvaskit.wasm":"6fdbbac77cac298b16132a2a6869d922225835a107b98e9a5ad3430920e4acdc","wimp.wasm":"005295339dc7c1469b2a0e87c384e598434d6295acaf4abf39e570c4250a1300","canvaskit.wasm":"0df725bba9c7c8cb490ba6517de988ef2c3807ad639de5db4f20d117485e39eb","skwasm_heavy.wasm":"59ce37ce3dd0b809b72bbd0d7186380a93865060c1247b713317a0898f5db60b"},"builds":[{"compileTarget":"dart2wasm","renderer":"skwasm","mainWasmPath":"main.dart.wasm","jsSupportRuntimePath":"main.dart.mjs"},{"compileTarget":"dart2js","renderer":"canvaskit","mainJsPath":"main.dart.js"}]};
 
 _flutter.loader.load({
   serviceWorkerSettings: {
-    serviceWorkerVersion: "663710018" /* Flutter's service worker is deprecated and will be removed in a future Flutter release. */
+    serviceWorkerVersion: "1802178844" /* Flutter's service worker is deprecated and will be removed in a future Flutter release. */
   }
 });
