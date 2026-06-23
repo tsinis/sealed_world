@@ -3,7 +3,7 @@ part of "../multi_element_painter.dart";
 /// Painter for the half ellipse element.
 final class HalfEllipsePainter extends MultiElementPainter {
   /// Creates a new instance of [HalfEllipsePainter].
-  const HalfEllipsePainter(super.properties, super.aspectRatio);
+  const HalfEllipsePainter(super._properties, super.aspectRatio);
 
   @override
   FlagParentBounds paintFlagElements(Canvas canvas, Size size) {

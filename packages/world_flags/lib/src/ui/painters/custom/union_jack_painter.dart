@@ -12,7 +12,7 @@ final class UnionJackPainter extends SimpleShieldPainter {
   ///
   /// The [properties] parameter specifies the properties of the shield. The
   /// [aspectRatio] parameter specifies the aspect ratio of the shield.
-  const UnionJackPainter.half(super.properties, super.aspectRatio)
+  const UnionJackPainter.half(super._properties, super.aspectRatio)
     : _isFull = false,
       super.outlinedWithoutDividers();
 
@@ -21,15 +21,17 @@ final class UnionJackPainter extends SimpleShieldPainter {
   ///
   /// The [properties] parameter specifies the properties of the shield. The
   /// [aspectRatio] parameter specifies the aspect ratio of the shield.
-  const UnionJackPainter.halfWithoutOutline(super.properties, super.aspectRatio)
-    : _isFull = false,
+  const UnionJackPainter.halfWithoutOutline(
+    super._properties,
+    super.aspectRatio,
+  ) : _isFull = false,
       super.withoutDividers();
 
   /// Creates a [UnionJackPainter] with a half Union Jack with dividers.
   ///
   /// The [properties] parameter specifies the properties of the shield. The
   /// [aspectRatio] parameter specifies the aspect ratio of the shield.
-  const UnionJackPainter.halfWithDividers(super.properties, super.aspectRatio)
+  const UnionJackPainter.halfWithDividers(super._properties, super.aspectRatio)
     : _isFull = false,
       super.withDividers();
 
@@ -37,7 +39,7 @@ final class UnionJackPainter extends SimpleShieldPainter {
   ///
   /// The [properties] parameter specifies the properties of the shield. The
   /// [aspectRatio] parameter specifies the aspect ratio of the shield.
-  const UnionJackPainter.full(super.properties, super.aspectRatio)
+  const UnionJackPainter.full(super._properties, super.aspectRatio)
     : _isFull = true,
       super.withoutDividers();
 

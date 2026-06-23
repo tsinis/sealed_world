@@ -8,7 +8,7 @@ import "../common/star_painter.dart";
 /// Painter for the Macau flag.
 final class MacPainter extends CustomElementsPainter {
   /// Creates a new instance of [MacPainter].
-  const MacPainter(super.properties, super.aspectRatio);
+  const MacPainter(super._properties, super.aspectRatio);
 
   @override
   double get originalAspectRatio => flagMacProperties.aspectRatio;

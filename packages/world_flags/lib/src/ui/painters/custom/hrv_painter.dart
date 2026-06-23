@@ -7,7 +7,7 @@ import "../basic/custom_elements_painter.dart";
 /// Painter for the Croatia flag.
 final class HrvPainter extends CustomElementsPainter {
   /// Creates a new instance of [HrvPainter].
-  const HrvPainter(super.properties, super.aspectRatio);
+  const HrvPainter(super._properties, super.aspectRatio);
 
   @override
   double get originalAspectRatio => flagHrvProperties.aspectRatio;

@@ -7,7 +7,7 @@ import "../basic/custom_elements_painter.dart";
 /// Painter for the Antarctica flag.
 final class AtaPainter extends CustomElementsPainter {
   /// Creates a new instance of [AtaPainter].
-  const AtaPainter(super.properties, super.aspectRatio);
+  const AtaPainter(super._properties, super.aspectRatio);
 
   @override
   double get originalAspectRatio => flagAtaProperties.aspectRatio;

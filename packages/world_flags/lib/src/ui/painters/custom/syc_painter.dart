@@ -6,7 +6,7 @@ import "../basic/custom_elements_painter.dart";
 /// Painter for the Seychelles flag.
 final class SycPainter extends CustomElementsPainter {
   /// Creates a new instance of [SycPainter].
-  const SycPainter(super.properties, super.aspectRatio);
+  const SycPainter(super._properties, super.aspectRatio);
 
   @override
   FlagParentBounds paintFlagElements(Canvas canvas, Size size) {

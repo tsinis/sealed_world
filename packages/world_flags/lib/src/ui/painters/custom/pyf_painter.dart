@@ -3,7 +3,7 @@ part of "../multi_element_painter.dart";
 /// Painter for the French Polynesia flag.
 final class PyfPainter extends MultiElementPainter {
   /// Creates a new instance of [PyfPainter].
-  const PyfPainter(super.properties, super.aspectRatio);
+  const PyfPainter(super._properties, super.aspectRatio);
 
   @override
   FlagParentBounds paintFlagElements(Canvas canvas, Size size) {

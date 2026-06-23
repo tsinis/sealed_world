@@ -8,7 +8,7 @@ import "../multi_element_painter.dart";
 /// Painter for the simple eagle.
 final class EaglePainter extends CustomElementsPainter {
   /// Creates a new instance of [EaglePainter].
-  const EaglePainter(super.properties, super.aspectRatio);
+  const EaglePainter(super._properties, super.aspectRatio);
 
   @override
   double get originalAspectRatio => flagAsmProperties.aspectRatio;

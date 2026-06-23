@@ -3,7 +3,7 @@ part of "../multi_element_painter.dart";
 /// Painter for the Montenegro flag.
 final class MnePainter extends MultiElementPainter {
   /// Creates a new instance of [MnePainter].
-  const MnePainter(super.properties, super.aspectRatio);
+  const MnePainter(super._properties, super.aspectRatio);
 
   @override
   double get originalAspectRatio => flagMneProperties.aspectRatio;

@@ -7,7 +7,7 @@ import "../basic/custom_elements_painter.dart";
 /// Painter for the Albania flag.
 final class AlbPainter extends CustomElementsPainter {
   /// Creates a new instance of [AlbPainter].
-  const AlbPainter(super.properties, super.aspectRatio);
+  const AlbPainter(super._properties, super.aspectRatio);
 
   @override
   double get originalAspectRatio => flagAlbProperties.aspectRatio;

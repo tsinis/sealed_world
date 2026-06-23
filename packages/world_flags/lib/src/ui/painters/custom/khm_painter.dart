@@ -7,7 +7,7 @@ import "../basic/custom_elements_painter.dart";
 /// Painter for the Cambodia flag.
 final class KhmPainter extends CustomElementsPainter {
   /// Creates a new instance of [KhmPainter].
-  const KhmPainter(super.properties, super.aspectRatio);
+  const KhmPainter(super._properties, super.aspectRatio);
 
   @override
   double get originalAspectRatio => flagKhmProperties.aspectRatio;

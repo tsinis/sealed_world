@@ -9,7 +9,7 @@ import "../basic/custom_elements_painter.dart";
 /// Painter for the Serbia flag.
 final class SrbPainter extends CustomElementsPainter {
   /// Creates a new instance of [SrbPainter].
-  const SrbPainter(super.properties, super.aspectRatio);
+  const SrbPainter(super._properties, super.aspectRatio);
 
   @override
   double get originalAspectRatio => flagSrbProperties.aspectRatio;

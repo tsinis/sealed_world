@@ -8,7 +8,7 @@ import "../multi_element_painter.dart";
 /// Painter for the Eritrea flag.
 final class EriPainter extends CustomElementsPainter {
   /// Creates a new instance of [EriPainter].
-  const EriPainter(super.properties, super.aspectRatio);
+  const EriPainter(super._properties, super.aspectRatio);
 
   @override
   double get originalAspectRatio => flagEriProperties.aspectRatio;

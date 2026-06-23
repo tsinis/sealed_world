@@ -8,7 +8,7 @@ import "../multi_element_painter.dart";
 /// Painter for the U.S. Virgin Islands flag.
 final class VirPainter extends CustomElementsPainter {
   /// Creates a new instance of [VirPainter].
-  const VirPainter(super.properties, super.aspectRatio);
+  const VirPainter(super._properties, super.aspectRatio);
 
   @override
   double get originalAspectRatio => flagVirProperties.aspectRatio;

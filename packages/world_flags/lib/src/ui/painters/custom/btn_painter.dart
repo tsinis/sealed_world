@@ -7,7 +7,7 @@ import "../basic/custom_elements_painter.dart";
 /// Painter for the Bhutan flag.
 final class BtnPainter extends CustomElementsPainter {
   /// Creates a new instance of [BtnPainter].
-  const BtnPainter(super.properties, super.aspectRatio);
+  const BtnPainter(super._properties, super.aspectRatio);
 
   @override
   double get originalAspectRatio => flagBtnProperties.aspectRatio;

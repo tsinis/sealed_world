@@ -7,7 +7,7 @@ import "../basic/custom_elements_painter.dart";
 /// Painter for the Hong Kong flag.
 final class HkgPainter extends CustomElementsPainter {
   /// Creates a new instance of [HkgPainter].
-  const HkgPainter(super.properties, super.aspectRatio);
+  const HkgPainter(super._properties, super.aspectRatio);
 
   @override
   double get originalAspectRatio => flagHkgProperties.aspectRatio;

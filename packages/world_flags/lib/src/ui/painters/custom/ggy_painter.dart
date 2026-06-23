@@ -13,7 +13,7 @@ import "../basic/custom_elements_painter.dart";
 /// 2. Yellow flared cross with triangular ends centered within the red cross.
 final class GgyPainter extends CustomElementsPainter {
   /// Creates a painter for the Guernsey flag.
-  const GgyPainter(super.properties, super.aspectRatio);
+  const GgyPainter(super._properties, super.aspectRatio);
 
   @override
   FlagParentBounds paintFlagElements(Canvas canvas, Size size) {
