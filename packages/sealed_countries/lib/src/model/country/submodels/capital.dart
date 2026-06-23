@@ -20,6 +20,7 @@ import "../../../helpers/extensions/country_submodels/capital_extension.dart";
 // Read more about the world's capitals
 // https://en.wikipedia.org/wiki/List_of_countries_with_multiple_capitals
 // Reference (Wikipedia).
+@pragma("vm:deeply-immutable")
 final class Capital implements JsonEncodable<Capital> {
   /// Creates a new [Capital] object with the given name and optional de jure
   /// and third values.

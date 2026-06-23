@@ -16,6 +16,7 @@ import "../../../helpers/extensions/country_submodels/lat_lng_extension.dart";
 /// print(point.latitude); // Prints: 37.7749
 /// print(point.longitude); // Prints: -122.4194
 /// ```
+@pragma("vm:deeply-immutable")
 final class LatLng implements JsonEncodable<LatLng> {
   /// Creates a new [LatLng] object with the given [latitude] and [longitude].
   const LatLng(this.latitude, this.longitude);
