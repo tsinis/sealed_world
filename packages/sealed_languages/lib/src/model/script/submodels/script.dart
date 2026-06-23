@@ -224,6 +224,7 @@ part "../../../data/scripts/zyyy.data.dart";
 part "../../../data/scripts/zzzz.data.dart";
 
 /// A sealed class that represents a script used in writing systems.
+// ignore: deprecated_subclass, it's TODO to address in the next major version.
 sealed class Script extends WritingSystem
     implements
         IsoStandardized<String>,

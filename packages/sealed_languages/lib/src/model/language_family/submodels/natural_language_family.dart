@@ -12,6 +12,7 @@ part "../../../data/natural_language_families.data.dart";
 /// families include the Indo-European family (which includes languages like
 /// English, Spanish, French, and German) and the Sino-Tibetan family (which
 /// includes languages like Mandarin and Tibetan).
+// ignore: deprecated_subclass, it's TODO to address in the next major version.
 sealed class NaturalLanguageFamily extends LanguageFamily {
   /// Creates a new instance of the [NaturalLanguageFamily] class.
   ///

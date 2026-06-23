@@ -28,6 +28,7 @@ part "../../../data/geo/continents.data.dart";
 /// final unknown = Continent.maybeFromValue<int>(42);
 /// print(unknown); // Prints: null
 /// ```
+// ignore: deprecated_subclass, it's TODO to address in the next major version.
 sealed class Continent extends Region {
   /// Creates a new [Continent] object with the given name.
   ///

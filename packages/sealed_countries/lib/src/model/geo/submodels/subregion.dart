@@ -10,6 +10,7 @@ part "../../../data/geo/continental_sections.data.dart";
 /// A [SubRegion] describes geographical areas such as "Central America" or
 /// "Western Europe". Each subregion belongs to a single [continent] and is
 /// modeled as an immutable value object.
+// ignore: deprecated_subclass, it's TODO to address in the next major version.
 sealed class SubRegion extends Region {
   /// Creates a new [SubRegion] with the provided [name] and [continent].
   const SubRegion(this.continent, {required super.name});
