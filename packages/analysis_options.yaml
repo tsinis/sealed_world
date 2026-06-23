@@ -521,7 +521,7 @@ dart_code_metrics:
     - prefer-visible-for-testing-on-members: true
     - prefer-wildcard-pattern: true
     - record-fields-ordering: true
-    - require-atomic-async-update: true
+    - require-atomic-async-updates: true
     - unnecessary-trailing-comma: true
     - use-existing-destructuring: true
     - use-existing-variable: true
