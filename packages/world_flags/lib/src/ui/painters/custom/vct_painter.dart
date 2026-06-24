@@ -7,7 +7,7 @@ import "../basic/custom_elements_painter.dart";
 /// Painter for the Saint Vincent and the Grenadines flag.
 final class VctPainter extends CustomElementsPainter {
   /// Creates a new instance of [VctPainter].
-  const VctPainter(super.properties, super.aspectRatio);
+  const VctPainter(super._properties, super.aspectRatio);
 
   @override
   double get originalAspectRatio => flagVctProperties.aspectRatio;

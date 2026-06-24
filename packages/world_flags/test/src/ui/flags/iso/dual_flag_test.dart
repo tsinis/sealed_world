@@ -3,6 +3,7 @@ import "package:flutter/material.dart" show MaterialApp, Scaffold;
 import "package:flutter/widgets.dart";
 import "package:flutter_test/flutter_test.dart";
 import "package:sealed_countries/sealed_countries.dart";
+import "package:world_flags/src/helpers/extensions/box_decoration_extension.dart";
 import "package:world_flags/src/model/colors_properties.dart";
 import "package:world_flags/src/model/flag_properties.dart";
 import "package:world_flags/src/ui/flags/basic_flag.dart";
@@ -55,6 +56,26 @@ void main() => group("$DualFlag", () {
     await tester.pumpWidget(const MaterialApp(home: flag));
 
     expect(find.byType(ClipPath), findsOneWidget);
+  });
+
+  testWidgets("applies decoration to both flags when decoration is provided", (
+    tester,
+  ) async {
+    await tester.pumpWidget(
+      const MaterialApp(
+        home: DualFlag(
+          item,
+          primeMap,
+          alternativeMap: alternativeMap,
+          decoration: BoxDecoration(shape: BoxShape.circle),
+        ),
+      ),
+    );
+
+    final basicFlags = tester.widgetList<BasicFlag>(find.byType(BasicFlag));
+    expect(basicFlags.firstOrNull?.decoration.isCircle, isTrue);
+    expect(basicFlags.lastOrNull?.decoration.isCircle, isTrue);
+    expect(basicFlags, hasLength(2));
   });
 
   testWidgets("passes clipBehavior to ClipPath", (tester) async {

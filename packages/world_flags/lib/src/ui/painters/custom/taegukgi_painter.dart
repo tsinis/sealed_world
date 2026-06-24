@@ -8,7 +8,7 @@ import "../basic/custom_elements_painter.dart";
 /// Painter for the South Korea flag.
 final class TaegukgiPainter extends CustomElementsPainter {
   /// Creates a new instance of [TaegukgiPainter].
-  const TaegukgiPainter(super.properties, super.aspectRatio);
+  const TaegukgiPainter(super._properties, super.aspectRatio);
 
   @override
   double get originalAspectRatio => flagKorProperties.aspectRatio;

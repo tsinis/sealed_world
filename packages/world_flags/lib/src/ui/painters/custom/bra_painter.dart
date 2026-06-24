@@ -5,7 +5,7 @@ part of "../multi_element_painter.dart";
 /// Painter for the Brazil flag.
 final class BraPainter extends MultiElementPainter {
   /// Creates a new instance of [BraPainter].
-  const BraPainter(super.properties, super.aspectRatio);
+  const BraPainter(super._properties, super.aspectRatio);
 
   @override
   double get originalAspectRatio => flagBraProperties.aspectRatio;

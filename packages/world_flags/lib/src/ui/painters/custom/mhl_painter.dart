@@ -3,7 +3,7 @@ part of "../multi_element_painter.dart";
 /// Painter for the Marshall Islands flag.
 final class MhlPainter extends MultiElementPainter {
   /// Creates a new instance of [MhlPainter].
-  const MhlPainter(super.properties, super.aspectRatio);
+  const MhlPainter(super._properties, super.aspectRatio);
 
   @override
   FlagParentBounds paintFlagElements(Canvas canvas, Size size) {

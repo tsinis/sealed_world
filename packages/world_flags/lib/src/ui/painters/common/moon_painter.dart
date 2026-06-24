@@ -10,7 +10,7 @@ import "../basic/elements_painter.dart";
 /// moon shapes based on the specified properties.
 final class MoonPainter extends ElementsPainter {
   /// Creates a [MoonPainter] with the given properties and aspect ratio.
-  const MoonPainter(super.properties, super.aspectRatio);
+  const MoonPainter(super._properties, super.aspectRatio);
 
   @override
   FlagParentBounds paintFlagElements(Canvas canvas, Size size) {

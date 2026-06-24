@@ -1,4 +1,4 @@
-version: 3.2.0
+version: 3.3.0
 name: world_flags
 description: The first and only collection of declaratively defined world flags. No assets.
 maintainer: Roman Cinis
@@ -29,7 +29,7 @@ platforms:
   windows:
 
 environment:
-  sdk: ^3.10.8
+  sdk: ^3.12.0
 
 dependencies:
   flutter:

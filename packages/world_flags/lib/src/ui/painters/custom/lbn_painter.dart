@@ -7,7 +7,7 @@ import "../basic/custom_elements_painter.dart";
 /// Painter for the Lebanon flag.
 final class LbnPainter extends CustomElementsPainter {
   /// Creates a new instance of [LbnPainter].
-  const LbnPainter(super.properties, super.aspectRatio);
+  const LbnPainter(super._properties, super.aspectRatio);
 
   @override
   double get originalAspectRatio => flagLbnProperties.aspectRatio;

@@ -61,7 +61,7 @@ void randomElementTest<T extends Object>(
 /// Returns a random item from the provided [iterable].
 @visibleForTesting
 T randomIterableItem<T extends Object>(Iterable<T> iterable) =>
-    iterable.elementAt(Random().nextInt(iterable.length));
+    iterable.elementAt(Random.secure().nextInt(iterable.length));
 
 /// Runs a test that should throw an assertion error during instance creation.
 @isTest

@@ -20,6 +20,7 @@ import "lat_lng.dart";
 /// print(capitalInfo.capital); // Prints: Capital("Ramallah")
 /// print(capitalInfo.latLng); // Prints: LatLng(latitude: 31.9, longitude: 35.2)
 /// ```
+@pragma("vm:deeply-immutable")
 final class CapitalInfo implements JsonEncodable<CapitalInfo> {
   /// Creates a new [CapitalInfo] object with the given capital
   /// and location values.

@@ -7,7 +7,7 @@ import "../basic/custom_elements_painter.dart";
 /// Painter for the Kenya flag.
 final class KenPainter extends CustomElementsPainter {
   /// Creates a new instance of [KenPainter].
-  const KenPainter(super.properties, super.aspectRatio);
+  const KenPainter(super._properties, super.aspectRatio);
 
   @override
   double get originalAspectRatio => flagKenProperties.aspectRatio;

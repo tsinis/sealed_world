@@ -24,13 +24,12 @@ abstract base class ElementsPainter extends CustomPainter {
   /// - [properties]: The properties of the elements to be painted. Must contain
   /// at least one element.
   /// - [aspectRatio]: The aspect ratio of the flag.
-  const ElementsPainter(ElementsProps? properties, this.aspectRatio)
+  const ElementsPainter(this._properties, this.aspectRatio)
     : assert(aspectRatio > 0, "`aspectRatio` must be greater than 0"),
       assert(
-        properties != null && properties.length > 0,
-        "`properties` must contain at least one element.",
-      ),
-      _properties = properties;
+        _properties != null && _properties.length > 0,
+        "`_properties` must contain at least one element.",
+      );
 
   /// The aspect ratio of the flag.
   final double aspectRatio;

@@ -7,7 +7,7 @@ import "../basic/custom_elements_painter.dart";
 /// Painter for the Slovakia flag.
 final class SvkPainter extends CustomElementsPainter {
   /// Creates a new instance of [SvkPainter].
-  const SvkPainter(super.properties, super.aspectRatio);
+  const SvkPainter(super._properties, super.aspectRatio);
 
   @override
   double get originalAspectRatio => flagSvkProperties.aspectRatio;

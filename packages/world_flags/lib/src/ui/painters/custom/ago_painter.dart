@@ -10,7 +10,7 @@ import "../common/star_painter.dart";
 /// Painter for the Angola flag.
 final class AgoPainter extends CustomElementsPainter {
   /// Creates a new instance of [AgoPainter].
-  const AgoPainter(super.properties, super.aspectRatio);
+  const AgoPainter(super._properties, super.aspectRatio);
 
   @override
   double get originalAspectRatio => flagAgoProperties.aspectRatio;

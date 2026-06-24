@@ -91,7 +91,13 @@ class DualFlag<T extends IsoStandardized, F extends BasicFlag>
                 child: ClipPath(
                   clipBehavior: clipBehavior,
                   clipper: DualFlagClipper(splitAngle),
-                  child: foreground,
+                  child: foreground?.copyWith(
+                    aspectRatio: aspectRatio,
+                    decoration: decoration,
+                    decorationPosition: decorationPosition,
+                    padding: EdgeInsets.zero,
+                    child: child,
+                  ),
                 ),
               ),
             );

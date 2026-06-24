@@ -7,7 +7,7 @@ import "../basic/custom_elements_painter.dart";
 /// Painter for the Lesotho flag.
 final class LsoPainter extends CustomElementsPainter {
   /// Creates a new instance of [LsoPainter].
-  const LsoPainter(super.properties, super.aspectRatio);
+  const LsoPainter(super._properties, super.aspectRatio);
 
   @override
   double get originalAspectRatio => flagLsoProperties.aspectRatio;

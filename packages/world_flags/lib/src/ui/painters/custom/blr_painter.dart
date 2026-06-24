@@ -7,7 +7,7 @@ import "../basic/custom_elements_painter.dart";
 /// Painter for the Belarus flag.
 final class BlrPainter extends CustomElementsPainter {
   /// Creates a new instance of [BlrPainter].
-  const BlrPainter(super.properties, super.aspectRatio);
+  const BlrPainter(super._properties, super.aspectRatio);
 
   @override
   double get originalAspectRatio => flagBlrProperties.aspectRatio;

@@ -5,7 +5,7 @@ part of "../multi_element_painter.dart";
 /// Painter for the USA flag.
 final class UsaStarsPainter extends MultiElementPainter {
   /// Creates a new instance of [UsaStarsPainter].
-  const UsaStarsPainter(super.properties, super.aspectRatio);
+  const UsaStarsPainter(super._properties, super.aspectRatio);
 
   /// Count of star points.
   static const _points = 5;

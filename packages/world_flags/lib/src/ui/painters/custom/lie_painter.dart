@@ -7,7 +7,7 @@ import "../basic/custom_elements_painter.dart";
 /// Painter for the Liechtenstein flag.
 final class LiePainter extends CustomElementsPainter {
   /// Creates a new instance of [LiePainter].
-  const LiePainter(super.properties, super.aspectRatio);
+  const LiePainter(super._properties, super.aspectRatio);
 
   @override
   double get originalAspectRatio => flagLieProperties.aspectRatio;

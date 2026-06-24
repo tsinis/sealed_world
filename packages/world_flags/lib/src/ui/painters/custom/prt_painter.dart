@@ -7,7 +7,7 @@ import "../basic/custom_elements_painter.dart";
 /// Painter for the Portugal flag.
 final class PrtPainter extends CustomElementsPainter {
   /// Creates a new instance of [PrtPainter].
-  const PrtPainter(super.properties, super.aspectRatio);
+  const PrtPainter(super._properties, super.aspectRatio);
 
   @override
   double get originalAspectRatio => flagPrtProperties.aspectRatio;

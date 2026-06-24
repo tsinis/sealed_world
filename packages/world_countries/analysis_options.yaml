@@ -1,5 +1,8 @@
 include: ../flutter_analysis_options.yaml
 
+dart_code_metrics:
+  - prefer-private-named-parameters: true
+
 linter:
   rules:
     unsafe_variance: false # Mostly inherited callbacks.

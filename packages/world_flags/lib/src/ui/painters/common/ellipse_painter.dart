@@ -9,7 +9,7 @@ import "../basic/elements_painter.dart";
 /// ellipses based on the specified properties.
 final class EllipsePainter extends ElementsPainter {
   /// Creates an [EllipsePainter] with the given properties and aspect ratio.
-  const EllipsePainter(super.properties, super.aspectRatio);
+  const EllipsePainter(super._properties, super.aspectRatio);
 
   @override
   FlagParentBounds paintFlagElements(Canvas canvas, Size size) {

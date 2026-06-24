@@ -17,6 +17,7 @@ import "../../../helpers/extensions/country_submodels/car_extension.dart";
 /// print(car.sign); // Prints: "NEP"
 /// print(car.isRightSide); // Prints: false
 /// ```
+@pragma("vm:deeply-immutable")
 final class Car implements JsonEncodable<Car> {
   /// Creates a new [Car] object with the given sign and side values.
   ///

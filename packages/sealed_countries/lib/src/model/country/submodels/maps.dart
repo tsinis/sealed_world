@@ -15,6 +15,7 @@ import "../../../helpers/extensions/country_submodels/maps_extension.dart";
 /// print(maps.googleMapsUrl); // Output: "https://goo.gl/maps/abcdefg"
 /// print(maps.openStreetMapsUrl); // Output: "https://www.openstreetmap.org/123456789"
 /// ```
+@pragma("vm:deeply-immutable")
 final class Maps implements JsonEncodable<Maps> {
   /// Creates a new [Maps] object with the given Google Maps and OpenStreetMap
   /// IDs.

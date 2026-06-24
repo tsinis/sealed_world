@@ -7,7 +7,7 @@ import "../basic/custom_elements_painter.dart";
 /// Painter for the Barbados flag.
 final class BrbPainter extends CustomElementsPainter {
   /// Creates a new instance of [BrbPainter].
-  const BrbPainter(super.properties, super.aspectRatio);
+  const BrbPainter(super._properties, super.aspectRatio);
 
   @override
   double get originalAspectRatio => flagBrbProperties.aspectRatio;

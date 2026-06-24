@@ -1,3 +1,14 @@
+## 4.4.0
+
+FIX
+
+- Fixed an issue where the decoration (like border radius) provided to `DualFlag` was only applied to the background flag and not the foreground flag. Now both flags in `DualFlag` correctly receive the decoration.
+
+NEW FEATURES
+
+- Added `@pragma("vm:deeply-immutable")` optimization to `Capital`, `CapitalInfo`, `Gini`, `LatLng`, `Maps`, and `PostalCode` classes.
+- Deprecated sub-classing `Region`, `LanguageFamily` and `WritingSystem` via `@Deprecated.subclass(...)` to prepare for making them `final` in the next major version.
+
 ## 4.3.0
 
 NEW FEATURES

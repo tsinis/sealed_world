@@ -18,6 +18,7 @@ import "../../../helpers/extensions/country_submodels/gini_extension.dart";
 /// print(gini.year); // Prints: 2020
 /// print(gini.coefficient); // Prints: 32.0
 /// ```
+@pragma("vm:deeply-immutable")
 final class Gini implements JsonEncodable<Gini> {
   /// Creates a new [Gini] object with the given year and coefficient.
   ///

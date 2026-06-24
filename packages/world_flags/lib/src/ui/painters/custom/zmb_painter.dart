@@ -3,7 +3,7 @@ part of "../multi_element_painter.dart";
 /// Painter for the Zambia flag.
 final class ZmbPainter extends MultiElementPainter {
   /// Creates a new instance of [ZmbPainter].
-  const ZmbPainter(super.properties, super.aspectRatio);
+  const ZmbPainter(super._properties, super.aspectRatio);
 
   @override
   double get originalAspectRatio => flagZmbProperties.aspectRatio;

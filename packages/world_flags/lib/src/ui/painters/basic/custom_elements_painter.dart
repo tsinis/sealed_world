@@ -19,7 +19,7 @@ abstract base class CustomElementsPainter<T extends FlagParentBounds>
   ///
   /// - [properties]: The properties of the elements to be painted.
   /// - [aspectRatio]: The aspect ratio of the flag.
-  const CustomElementsPainter(super.properties, super.aspectRatio);
+  const CustomElementsPainter(super._properties, super.aspectRatio);
 
   /// The original aspect ratio of the flag.
   ///

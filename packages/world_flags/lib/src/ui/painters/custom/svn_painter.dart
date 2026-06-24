@@ -7,7 +7,7 @@ import "../basic/custom_elements_painter.dart";
 /// Painter for the Slovenia flag.
 final class SvnPainter extends CustomElementsPainter {
   /// Creates a new instance of [SvnPainter].
-  const SvnPainter(super.properties, super.aspectRatio);
+  const SvnPainter(super._properties, super.aspectRatio);
 
   @override
   double get originalAspectRatio => flagSvnProperties.aspectRatio;

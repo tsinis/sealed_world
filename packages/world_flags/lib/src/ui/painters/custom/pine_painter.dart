@@ -7,7 +7,7 @@ import "../basic/custom_elements_painter.dart";
 /// Painter for the Norfolk Island flag.
 final class PinePainter extends CustomElementsPainter {
   /// Creates a new instance of [PinePainter].
-  const PinePainter(super.properties, super.aspectRatio);
+  const PinePainter(super._properties, super.aspectRatio);
 
   @override
   double get originalAspectRatio => flagNfkProperties.aspectRatio;
