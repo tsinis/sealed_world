@@ -22,8 +22,8 @@ import "../../../helpers/extensions/country_submodels/capital_extension.dart";
 // Reference (Wikipedia).
 @pragma("vm:deeply-immutable")
 final class Capital implements JsonEncodable<Capital> {
-  /// Creates a new [Capital] object with the given name and optional de jure
-  /// and third values.
+  /// Creates a new [Capital] object with the given de facto name and optional
+  /// de jure and third values.
   ///
   /// The [deFacto] parameter must not be empty.
   const Capital(this.deFacto, {this.deJure, this.third})

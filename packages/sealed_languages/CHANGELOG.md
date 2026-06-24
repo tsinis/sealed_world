@@ -2,7 +2,7 @@
 
 NEW FEATURES
 
-- Deprecated sub-classing `LanguageFamily` and `WritingSystem` via `@Deprecated.subclass(...)` to prepare for making them as `final` in the next major version to support deep immutability.
+- Deprecated sub-classing `LanguageFamily` and `WritingSystem` via `@Deprecated.subclass(...)` to prepare for making them `final` in the next major version to support deep immutability.
 
 ## 3.2.0
 
