@@ -21,7 +21,8 @@ Pull requests are the best way to propose changes to the codebase (we use [Githu
 3. If you've changed APIs, update the documentation.
 4. Ensure the test suite passes.
 5. Make sure your code lints.
-6. Issue that pull request!
+6. Verify your documentation code samples pass analysis by running `dart run tools/bin/test_docs.dart <package_name>`.
+7. Issue that pull request!
 
 ## Any contributions you make will be under the MIT Software License
 
