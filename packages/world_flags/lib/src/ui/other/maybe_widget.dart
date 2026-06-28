@@ -19,7 +19,7 @@ class MaybeWidget<T extends Object> extends StatelessWidget {
   /// * [key] is the key for the widget.
   /// Example:
   ///
-  /// ```dart
+  /// ```dart#no-test
   /// MaybeWidget(
   ///  nullableText,
   ///  (text) => Text(text),
@@ -52,7 +52,7 @@ class MaybeWidget<T extends Object> extends StatelessWidget {
   ///
   /// Example:
   ///
-  /// ```dart
+  /// ```dart#no-test
   /// AnimatedSwitcher(
   ///  duration: const Duration(milliseconds: 800),
   ///  child: MaybeWidget.identifiable(
@@ -85,7 +85,7 @@ class MaybeWidget<T extends Object> extends StatelessWidget {
   ///
   /// Example:
   ///
-  /// ```dart
+  /// ```dart#no-test
   /// MaybeWidget.offstage(
   ///   nullableValue,
   ///   (value) => Text(value.toString()),
@@ -116,7 +116,7 @@ class MaybeWidget<T extends Object> extends StatelessWidget {
   ///   list is built purely based on nullability.
   ///
   /// Example with single child:
-  /// ```dart
+  /// ```dart#no-test
   /// MaybeWidget.list(
   ///   maybeUser,
   ///   child: (user) => Text(user.name),
@@ -124,7 +124,7 @@ class MaybeWidget<T extends Object> extends StatelessWidget {
   /// ```
   ///
   /// Example with multiple children:
-  /// ```dart
+  /// ```dart#no-test
   /// MaybeWidget.list(
   ///   maybeUser,
   ///   children: (user) => [
@@ -135,7 +135,7 @@ class MaybeWidget<T extends Object> extends StatelessWidget {
   /// ```
   ///
   /// Example using [buildWhen]:
-  /// ```dart
+  /// ```dart#no-test
   /// // Only include widgets when the user is active.
   /// MaybeWidget.list(
   ///   maybeUser,
@@ -168,7 +168,7 @@ class MaybeWidget<T extends Object> extends StatelessWidget {
   /// [buildWhen] returns `false`. Otherwise invokes [builder] with the
   /// non-`null` [value].
   ///
-  /// ```dart
+  /// ```dart#no-test
   /// Column(
   ///   children: [
   ///     const Text('Header'),
@@ -178,7 +178,7 @@ class MaybeWidget<T extends Object> extends StatelessWidget {
   /// ```
   ///
   /// Simple example with inference:
-  /// ```dart
+  /// ```dart#no-test
   /// final trailing = MaybeWidget.orNull<Text, DateTime>(
   ///   lastEdited,
   ///   (dt) => Text(timeAgo(dt)),
@@ -187,7 +187,7 @@ class MaybeWidget<T extends Object> extends StatelessWidget {
   ///
   /// If you do not need a specialized widget subtype you can omit the generic
   /// arguments entirely and let inference work:
-  /// ```dart
+  /// ```dart#no-test
   /// final maybeChip = MaybeWidget.orNull(tag, (t) => Chip(label: Text(t)));
   /// ```
   ///
@@ -198,7 +198,7 @@ class MaybeWidget<T extends Object> extends StatelessWidget {
   ///   null-check on [value] is applied.
   ///
   /// Example:
-  /// ```dart
+  /// ```dart#no-test
   /// final subtitle = MaybeWidget.orNull<Text, String>(
   ///   maybeSubtitle,
   ///   Text.new,

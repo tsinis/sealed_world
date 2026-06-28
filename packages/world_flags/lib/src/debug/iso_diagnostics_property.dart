@@ -8,7 +8,7 @@ import "package:sealed_countries/sealed_countries.dart";
 /// codes, and additional data in a structured way that's helpful for debugging.
 ///
 /// Example usage:
-/// ```dart
+/// ```dart#no-test
 /// void debugFillProperties(DiagnosticPropertiesBuilder properties) {
 ///   super.debugFillProperties(properties);
 ///   properties.add(IsoDiagnosticsProperty(isoObject));

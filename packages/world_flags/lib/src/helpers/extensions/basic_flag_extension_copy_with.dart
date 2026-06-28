@@ -12,7 +12,7 @@ import "../../ui/flags/basic_flag.dart";
 /// existing one and overriding specific properties.
 ///
 /// Example usage:
-/// ```dart
+/// ```dart#no-test
 /// final newFlag = existingFlag.copyWith(aspectRatio: 1.5);
 /// ```
 extension BasicFlagExtensionCopyWith<T extends BasicFlag> on T {

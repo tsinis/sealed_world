@@ -16,7 +16,7 @@ import "flag_shader_surface.dart" show FlagShaderSurface;
 ///
 /// ### Usage
 ///
-/// ```dart
+/// ```dart#no-test
 /// const options = FlagShaderOptions(
 ///   waveAmplitude: 0.04,
 ///   turbulence: 0.6,

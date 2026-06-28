@@ -11,9 +11,13 @@ import "../../../helpers/extensions/country_submodels/maps_extension.dart";
 /// Example usage:
 ///
 /// ```dart
-/// final maps = Maps(googleMaps: "abcdefg", openStreetMaps: "123456789");
-/// print(maps.googleMapsUrl); // Output: "https://goo.gl/maps/abcdefg"
-/// print(maps.openStreetMapsUrl); // Output: "https://www.openstreetmap.org/123456789"
+/// import "package:sealed_countries/sealed_countries.dart";
+///
+/// void main() {
+///   final maps = const Maps(googleMaps: "abcdefg", openStreetMaps: "123456789");
+///   assert(maps.googleMapsUrl == "https://goo.gl/maps/abcdefg");
+///   assert(maps.openStreetMapsUrl == "https://www.openstreetmap.org/123456789");
+/// }
 /// ```
 @pragma("vm:deeply-immutable")
 final class Maps implements JsonEncodable<Maps> {

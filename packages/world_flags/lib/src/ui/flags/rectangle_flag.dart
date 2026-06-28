@@ -8,7 +8,7 @@ import "basic_flag.dart";
 /// properties and customization options from [BasicFlag].
 ///
 /// Example usage:
-/// ```dart
+/// ```dart#no-test
 /// RectangleFlag(myFlagProperties, aspectRatio: 1.5),
 /// ```
 @Deprecated(

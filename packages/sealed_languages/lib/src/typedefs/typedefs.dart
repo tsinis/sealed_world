@@ -6,11 +6,15 @@
 /// Example usage:
 ///
 /// ```dart
-/// final json = '{"name": "John", "age": 30}';
-/// final map = jsonDecode(json) as JsonMap;
+/// import "dart:convert";
+/// import "package:sealed_languages/sealed_languages.dart";
 ///
-/// print(map['name']); // Output: John
-/// print(map['age']); // Output: 30
+/// void main() {
+///   const json = "{\"name\": \"John\", \"age\": 30}";
+///   final map = jsonDecode(json) as JsonMap;
+///   assert(map["name"] == "John");
+///   assert(map["age"] == 30);
+/// }
 /// ```
 ///
 /// In this example, the `JsonMap` type alias is used to represent a map that
@@ -30,11 +34,13 @@ typedef JsonMap = Map<String, dynamic>;
 ///
 /// Example usage:
 /// ```dart
-/// JsonObjectMap user = {
-///   'name': 'John Doe',
-///   'age': 30,
-///   'email': ?email,
-/// };
+/// void main() {
+///   const user = {
+///     "name": "John Doe",
+///     "age": 30,
+///   };
+///   assert(user["name"] == "John Doe");
+/// }
 /// ```
 ///
 /// Note: JSON-encoded maps can contain values of different types, including
@@ -73,9 +79,12 @@ typedef LocaleMap = Map<IsoLocaleKey, String>;
 ///
 /// Example:
 /// ```dart
-/// {
-///   (isoCode: 'USA', locale: 'en_US'): 'United States',
-///   (isoCode: 'USA', locale: 'es'): 'Estados Unidos',
+/// void main() {
+///   const map = {
+///     (isoCode: "USA", locale: "en_US"): "United States",
+///     (isoCode: "USA", locale: "es"): "Estados Unidos",
+///   };
+///   assert(map.isNotEmpty);
 /// }
 /// ```
 typedef LocaleMapFunction<T extends Object> =

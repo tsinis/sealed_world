@@ -12,7 +12,7 @@ import "../shape.dart";
 /// child elements.
 ///
 /// Example usage:
-/// ```dart
+/// ```dart#no-test
 /// const element = ElementsProperties(
 ///   Color(0xFF0000FF),
 ///   shape: Triangle(),

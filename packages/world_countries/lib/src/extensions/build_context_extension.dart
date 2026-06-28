@@ -6,7 +6,7 @@ extension BuildContextExtension on BuildContext {
   /// Returns the [MaterialLocalizations] instance for the current context.
   ///
   /// Example usage:
-  /// ```dart
+  /// ```dart#no-test
   /// String ok = context.materialL10n.okButtonLabel;
   /// ```
   @useResult
@@ -22,7 +22,7 @@ extension BuildContextExtension on BuildContext {
   /// Returns the nearest [FocusScopeNode] instance for the current context.
   ///
   /// Example usage:
-  /// ```dart
+  /// ```dart#no-test
   /// context.focus.requestFocus();
   /// ```
   FocusScopeNode get focus => FocusScope.of(this);
@@ -30,7 +30,7 @@ extension BuildContextExtension on BuildContext {
   /// Returns the nearest [MediaQueryData] instance for the current context.
   ///
   /// Example usage:
-  /// ```dart
+  /// ```dart#no-test
   /// Size size = context.media.size;
   /// ```
   @useResult
@@ -40,7 +40,7 @@ extension BuildContextExtension on BuildContext {
   /// current context.
   ///
   /// Example usage:
-  /// ```dart
+  /// ```dart#no-test
   /// EdgeInsets padding = context.padding;
   /// ```
   @useResult
@@ -49,7 +49,7 @@ extension BuildContextExtension on BuildContext {
   /// Returns the [ThemeData] instance for the current context.
   ///
   /// Example usage:
-  /// ```dart
+  /// ```dart#no-test
   /// Color primaryColor = context.theme.primaryColor;
   /// ```
   @useResult
@@ -58,7 +58,7 @@ extension BuildContextExtension on BuildContext {
   /// Returns the nearest [ScaffoldState] instance for the current context.
   ///
   /// Example usage:
-  /// ```dart
+  /// ```dart#no-test
   /// context.scaffold.showSnackBar(SnackBar(content: Text('Hello')));
   /// ```
   ScaffoldState get scaffold => Scaffold.of(this);
@@ -72,7 +72,7 @@ extension BuildContextExtension on BuildContext {
   /// example inside isolated subtrees or tests) without throwing.
   ///
   /// Example usage:
-  /// ```dart
+  /// ```dart#no-test
   /// context.maybeScaffold?.showSnackBar(const SnackBar(content: Text('Hi!')));
   /// ```
   ScaffoldState? get maybeScaffold => Scaffold.maybeOf(this);
@@ -81,7 +81,7 @@ extension BuildContextExtension on BuildContext {
   /// context.
   ///
   /// Example usage:
-  /// ```dart
+  /// ```dart#no-test
   /// ScaffoldMessengerState messenger = context.messenger;
   /// ```
   ScaffoldMessengerState get messenger => ScaffoldMessenger.of(this);
@@ -94,7 +94,7 @@ extension BuildContextExtension on BuildContext {
   /// a context where you are not certain a [ScaffoldMessenger] exists.
   ///
   /// Example usage:
-  /// ```dart
+  /// ```dart#no-test
   /// context.maybeMessenger?.showSnackBar(
   ///   const SnackBar(content: Text('Optional messenger')),
   /// );
@@ -104,7 +104,7 @@ extension BuildContextExtension on BuildContext {
   /// Whether the current text direction is right-to-left.
   ///
   /// Example usage:
-  /// ```dart
+  /// ```dart#no-test
   /// final code = idd.phoneCode(isRtl: context.isRtl);
   /// ```
   @useResult
@@ -113,7 +113,7 @@ extension BuildContextExtension on BuildContext {
   /// Shows a [SnackBar] at the bottom of the screen.
   ///
   /// Example usage:
-  /// ```dart
+  /// ```dart#no-test
   /// context.showSnackBar(SnackBar(content: Text('Hello')));
   /// ```
   ScaffoldFeatureController<SnackBar, SnackBarClosedReason> showSnackBar(

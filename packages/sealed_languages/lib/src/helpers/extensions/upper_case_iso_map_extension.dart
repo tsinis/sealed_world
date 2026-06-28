@@ -35,11 +35,15 @@ extension UpperCaseIsoMapExtension<V extends IsoStandardized>
   /// does not throw an exception.
   ///
   /// ```dart
-  /// try {
-  ///   final result = map.findByCodeOrThrow('ISO');
-  ///   // Use the result here.
-  /// } on StateError catch (e) {
-  ///   // Handle the case when the ISO code does not have an associated value.
+  /// import "package:sealed_languages/sealed_languages.dart";
+  ///
+  /// void main() {
+  ///   const map = UpperCaseIsoMap(
+  ///     {"EN": LangEng()},
+  ///     defaultValue: LangEng(),
+  ///   );
+  ///   final result = map.maybeFindByCode("ISO");
+  ///   assert(result == null, "should be null");
   /// }
   /// ```
   V findByCodeOrThrow(Object? code) {
@@ -72,14 +76,25 @@ extension UpperCaseIsoMapExtension<V extends IsoStandardized>
   ///
   /// Usage:
   /// ```dart
-  /// final originalMap = {'en': LangEng(), 'fr': LangFra()};
-  /// final upperCaseIsoMap = UpperCaseIsoMap.copyWith(originalMap,
-  /// defaultValue: LangEng());
+  /// import "package:sealed_languages/sealed_languages.dart";
   ///
-  /// // Accessing 'EN' or 'en' will return LangEng()
-  /// final english = upperCaseIsoMap['En']; // Returns LangEng()
-  /// final french = upperCaseIsoMap['FR'];  // Returns LangFra()
-  /// final unknown = upperCaseIsoMap['DE']; // Returns LangEng(): default value
+  /// void main() {
+  ///   const originalMap = {"en": LangEng(), "fr": LangFra()};
+  ///   const upperCaseIsoMap = UpperCaseIsoMap(
+  ///     originalMap,
+  ///     defaultValue: LangEng(),
+  ///   );
+  ///
+  ///   // Accessing "EN" or "en" will return const LangEng()
+  ///   final english = upperCaseIsoMap["En"]; // Returns const LangEng()
+  ///   final french = upperCaseIsoMap["FR"];  // Returns const LangFra()
+  ///   final unknown = upperCaseIsoMap["DE"]; // Returns defaultValue
+  ///   assert(originalMap.isNotEmpty, "originalMap should not be empty");
+  ///   assert(upperCaseIsoMap.isNotEmpty, "upperCaseIsoMap should not be empty");
+  ///   assert(english == const LangEng(), "should be LangEng");
+  ///   assert(french == const LangFra(), "should be LangFra");
+  ///   assert(unknown == const LangEng(), "should be LangEng");
+  /// }
   /// ```
   ///
   /// - Parameters:

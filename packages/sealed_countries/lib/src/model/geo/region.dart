@@ -1,20 +1,21 @@
+// ignore_for_file: deprecated_member_use
 import "package:sealed_currencies/sealed_currencies.dart";
 
 /// A class that represents a region of the world.
 ///
-/// The [Region] class is a class that represents a region of the
+/// The region class is a class that represents a region of the
 /// world. It consists of a [String] value that represents the name of the
 /// region. The [name] field is required and must not be empty.
 ///
 /// Example usage:
 ///
 /// ```dart
-/// class City extends Region {
-///   const City({required super.name});
+/// import "package:sealed_countries/sealed_countries.dart";
+/// 
+/// void main() {
+///   final region = Continent.fromName("Europe");
+///   assert(region.name == "Europe", "should match region name");
 /// }
-///
-/// final city = City(name: "Warsaw");
-/// print(city.name); // Prints: "Warsaw"
 /// ```
 /// Base type shared by continent and subregion models.
 @Deprecated.subclass(
@@ -22,7 +23,7 @@ import "package:sealed_currencies/sealed_currencies.dart";
   "deep immutability optimizations. Do not extend or implement this class.",
 )
 class Region implements Named<String> {
-  /// Creates a new [Region] object with the given name.
+  /// Creates a new Region object with the given name.
   ///
   /// The [name] parameter is required and must not be empty.
   // ignore: deprecated_consistency, constructor cannot be annotated with it.

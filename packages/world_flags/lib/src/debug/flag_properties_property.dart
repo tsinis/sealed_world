@@ -12,7 +12,7 @@ import "../model/flag_properties.dart";
 /// any additional elements.
 ///
 /// Example usage:
-/// ```dart
+/// ```dart#no-test
 /// @override
 /// void debugFillProperties(DiagnosticPropertiesBuilder properties) {
 ///   super.debugFillProperties(properties);

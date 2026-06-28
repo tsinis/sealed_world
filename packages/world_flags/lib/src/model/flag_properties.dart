@@ -13,7 +13,7 @@ import "stripe_orientation.dart";
 /// elements, and a URL.
 ///
 /// Example usage:
-/// ```dart
+/// ```dart#no-test
 /// import 'package:world_flags/world_flags.dart';
 ///
 /// void main() {
@@ -110,7 +110,7 @@ class FlagProperties {
   ///   totally valid and appropriate. Ultimately, the developer decides which
   ///   version to use based on the specific use case. For example:
   ///
-  /// ```dart
+  /// ```dart#no-test
   ///   final isNotOfficial = flagOptions?.isSimplified ?? true;
   ///   if (isNotOfficial) {
   ///     // Renders the simplified flag version (e.g., for smaller icons).

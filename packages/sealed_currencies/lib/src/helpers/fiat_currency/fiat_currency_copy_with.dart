@@ -14,9 +14,13 @@ extension FiatCurrencyCopyWith<T extends FiatCurrency> on T {
   /// Example usage:
   ///
   /// ```dart
-  /// const taka = FiatBdt();
+  /// import "package:sealed_currencies/sealed_currencies.dart";
   ///
-  /// final shortTaka = taka.copyWith(name: 'Taka');
+  /// void main() {
+  ///   const taka = FiatBdt();
+  ///   final shortTaka = taka.copyWith(name: "Taka");
+  ///   assert(shortTaka.name == "Taka");
+  /// }
   /// ```
   FiatCurrency copyWith({
     List<String>? alternateSymbols,

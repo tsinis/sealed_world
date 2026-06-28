@@ -8,8 +8,12 @@ part of "../../model/geo/submodels/continent.dart";
 /// Example:
 ///
 /// ```dart
-/// final europe = Europe();
-/// print(europe.name); // "Europe"
+/// import "package:sealed_countries/sealed_countries.dart";
+///
+/// void main() {
+///   const europe = Europe();
+///   assert(europe.name == "Europe");
+/// }
 /// ```
 final class Europe extends Continent {
   /// Creates a new [Europe] instance.
@@ -24,8 +28,12 @@ final class Europe extends Continent {
 /// Example:
 ///
 /// ```dart
-/// final africa = Africa();
-/// print(africa.name); // "Africa"
+/// import "package:sealed_countries/sealed_countries.dart";
+///
+/// void main() {
+///   const africa = Africa();
+///   assert(africa.name == "Africa");
+/// }
 /// ```
 final class Africa extends Continent {
   /// Creates a new [Africa] instance.
@@ -40,8 +48,12 @@ final class Africa extends Continent {
 /// Example:
 ///
 /// ```dart
-/// final americas = Americas();
-/// print(americas.name); // "Americas"
+/// import "package:sealed_countries/sealed_countries.dart";
+///
+/// void main() {
+///   const americas = Americas();
+///   assert(americas.name == "Americas");
+/// }
 /// ```
 final class Americas extends Continent {
   /// Creates a new [Americas] instance.
@@ -56,8 +68,12 @@ final class Americas extends Continent {
 /// Example:
 ///
 /// ```dart
-/// final asia = Asia();
-/// print(asia.name); // "Asia"
+/// import "package:sealed_countries/sealed_countries.dart";
+///
+/// void main() {
+///   const asia = Asia();
+///   assert(asia.name == "Asia");
+/// }
 /// ```
 final class Asia extends Continent {
   /// Creates a new [Asia] instance.
@@ -72,8 +88,12 @@ final class Asia extends Continent {
 /// Example:
 ///
 /// ```dart
-/// final antarctica = Antarctica();
-/// print(antarctica.name); // "Antarctica"
+/// import "package:sealed_countries/sealed_countries.dart";
+///
+/// void main() {
+///   const antarctica = Antarctica();
+///   assert(antarctica.name == "Antarctica");
+/// }
 /// ```
 final class Antarctica extends Continent {
   /// Creates a new [Antarctica] instance.
@@ -88,8 +108,12 @@ final class Antarctica extends Continent {
 /// Example:
 ///
 /// ```dart
-/// final oceania = Oceania();
-/// print(oceania.name); // "Oceania"
+/// import "package:sealed_countries/sealed_countries.dart";
+///
+/// void main() {
+///   const oceania = Oceania();
+///   assert(oceania.name == "Oceania");
+/// }
 /// ```
 final class Oceania extends Continent {
   /// Creates a new [Oceania] instance.

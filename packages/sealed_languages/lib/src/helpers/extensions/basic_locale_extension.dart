@@ -71,9 +71,14 @@ extension BasicLocaleExtension on BasicLocale {
   ///
   /// Example:
   /// ```dart
-  /// const engLocale = BasicLocale(LangEng(), countryCode: 'US');
-  /// final translation = engLocale.toTranslatedName('USA',
-  ///   fullName: 'United States of America');
+  /// import "package:sealed_languages/sealed_languages.dart";
+  ///
+  /// void main() {
+  ///   const engLocale = BasicLocale(LangEng(), countryCode: "US");
+  ///   final translation = engLocale.toTranslatedName("USA",
+  ///     fullName: "United States of America");
+  ///   assert(translation.name == "USA");
+  /// }
   /// ```
   ///
   /// Returns a [TranslatedName] that inherits this locale's language, country

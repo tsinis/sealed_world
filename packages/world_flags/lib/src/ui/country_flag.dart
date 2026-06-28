@@ -15,7 +15,7 @@ import "flags/iso/iso_flag.dart";
 /// padding, and a child widget.
 ///
 /// Example usage:
-/// ```dart
+/// ```dart#no-test
 /// CountryFlag.simplified(
 ///   country,
 ///   height: 50,

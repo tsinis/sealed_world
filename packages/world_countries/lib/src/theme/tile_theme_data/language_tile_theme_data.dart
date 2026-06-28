@@ -14,7 +14,7 @@ import "base_tile_theme_data.dart";
 /// to render a tile given [NaturalLanguage] item properties.
 ///
 /// Example:
-/// ```dart
+/// ```dart#no-test
 /// final languageTileThemeData = LanguageTileThemeData(
 ///   itemBuilder: (itemProperties, defaultTile) {
 ///     // Use the default tile as-is

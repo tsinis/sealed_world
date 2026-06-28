@@ -165,9 +165,11 @@ export "src/ui/painters/multi_element_painter.dart";
 /// countries. Each entry in the map consists of a country as the key and a
 /// country flag as the value.
 ///
-/// Example usage:
 /// ```dart
-/// final usaFlag = uniqueSimplifiedFlagsMap[const CountryUsa()];
+/// void main() {
+///   final usaFlag = uniqueSimplifiedFlagsMap[const CountryUsa()];
+///   assert(usaFlag != null);
+/// }
 /// ```
 const uniqueSimplifiedFlagsMap = <WorldCountry, BasicFlag>{
   CountryAbw(): BasicFlag(flagAbwProperties),
@@ -556,9 +558,11 @@ const uniqueSimplifiedFlagsMap = <WorldCountry, BasicFlag>{
 /// countries. Each entry in the map consists of a country as the key and a
 /// country flag as the value.
 ///
-/// Example usage:
 /// ```dart
-/// final usaFlag = smallSimplifiedFlagsMap[const CountryUsa()];
+/// void main() {
+///   final usaFlag = smallSimplifiedFlagsMap[const CountryUsa()];
+///   assert(usaFlag != null);
+/// }
 /// ```
 const smallSimplifiedFlagsMap = <WorldCountry, BasicFlag>{
   ...uniqueSimplifiedFlagsMap,
@@ -579,9 +583,11 @@ const smallSimplifiedAlternativeFlagsMap = <WorldCountry, BasicFlag>{
 /// languages. Each entry in the map consists of a language as the key and a
 /// flag as the value.
 ///
-/// Example usage:
 /// ```dart
-/// final esperantoFlag = smallSimplifiedFlagsMap[const LangEpo()];
+/// void main() {
+///   final esperantoFlag = smallSimplifiedLanguageFlagsMap[const LangEpo()];
+///   assert(esperantoFlag != null);
+/// }
 /// ```
 const smallSimplifiedLanguageFlagsMap = <NaturalLanguage, BasicFlag>{
   LangEpo(): BasicFlag(flagEpoProperties),
@@ -597,9 +603,11 @@ const smallSimplifiedLanguageFlagsMap = <NaturalLanguage, BasicFlag>{
 /// Each entry in the map consists of a currency as the key and a flag as the
 /// value.
 ///
-/// Example usage:
 /// ```dart
-/// final euroFlag = smallSimplifiedCurrencyFlagsMap[const FiatEur()];
+/// void main() {
+///   final euroFlag = smallSimplifiedCurrencyFlagsMap[const FiatEur()];
+///   assert(euroFlag != null);
+/// }
 /// ```
 const smallSimplifiedCurrencyFlagsMap = <FiatCurrency, BasicFlag>{
   FiatEur(): BasicFlag(flagEurProperties),

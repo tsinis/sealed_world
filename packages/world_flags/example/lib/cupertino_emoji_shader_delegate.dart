@@ -11,7 +11,7 @@ import "package:world_flags/world_flags.dart";
 ///
 /// For shared delegate across multiple widgets (recommended for ListView):
 ///
-/// ```dart
+/// ```dart#no-test
 /// final _delegate = CupertinoEmojiShaderDelegate();
 ///
 /// // Use shader: parameter for externally-owned delegates!
@@ -23,7 +23,7 @@ import "package:world_flags/world_flags.dart";
 ///
 /// For single-use:
 ///
-/// ```dart
+/// ```dart#no-test
 /// FlagShaderSurface(
 ///   item,
 ///   delegateBuilder: (vsync, options, properties) =>

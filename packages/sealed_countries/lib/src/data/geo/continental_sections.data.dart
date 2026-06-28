@@ -10,8 +10,12 @@ part of "../../model/geo/submodels/subregion.dart";
 /// Example:
 ///
 /// ```dart
-/// final centralAmerica = CentralAmerica();
-/// print(centralAmerica.name); // "Central America"
+/// import "package:sealed_countries/sealed_countries.dart";
+///
+/// void main() {
+///   const centralAmerica = CentralAmerica();
+///   assert(centralAmerica.name == "Central America");
+/// }
 /// ```
 final class CentralAmerica extends SubRegion {
   /// Creates a new [CentralAmerica] instance.
@@ -27,8 +31,12 @@ final class CentralAmerica extends SubRegion {
 /// Example:
 ///
 /// ```dart
-/// final northAmerica = NorthAmerica();
-/// print(northAmerica.name); // "North America"
+/// import "package:sealed_countries/sealed_countries.dart";
+///
+/// void main() {
+///   const northAmerica = NorthAmerica();
+///   assert(northAmerica.name == "North America");
+/// }
 /// ```
 final class NorthAmerica extends SubRegion {
   /// Creates a new [NorthAmerica] instance.
@@ -44,8 +52,12 @@ final class NorthAmerica extends SubRegion {
 /// Example:
 ///
 /// ```dart
-/// final southAmerica = SouthAmerica();
-/// print(southAmerica.name); // "South America"
+/// import "package:sealed_countries/sealed_countries.dart";
+///
+/// void main() {
+///   const southAmerica = SouthAmerica();
+///   assert(southAmerica.name == "South America");
+/// }
 /// ```
 final class SouthAmerica extends SubRegion {
   /// Creates a new [SouthAmerica] instance.
@@ -61,8 +73,12 @@ final class SouthAmerica extends SubRegion {
 /// Example:
 ///
 /// ```dart
-/// final caribbean = Caribbean();
-/// print(caribbean.name); // "Caribbean"
+/// import "package:sealed_countries/sealed_countries.dart";
+///
+/// void main() {
+///   const caribbean = Caribbean();
+///   assert(caribbean.name == "Caribbean");
+/// }
 /// ```
 final class Caribbean extends SubRegion {
   /// Creates a new [Caribbean] instance.
@@ -80,8 +96,12 @@ final class Caribbean extends SubRegion {
 /// Example:
 ///
 /// ```dart
-/// final centralEurope = CentralEurope();
-/// print(centralEurope.name); // "Central Europe"
+/// import "package:sealed_countries/sealed_countries.dart";
+///
+/// void main() {
+///   const centralEurope = CentralEurope();
+///   assert(centralEurope.name == "Central Europe");
+/// }
 /// ```
 final class CentralEurope extends SubRegion {
   /// Creates a new [CentralEurope] instance.
@@ -97,8 +117,12 @@ final class CentralEurope extends SubRegion {
 /// Example:
 ///
 /// ```dart
-/// final northernEurope = NorthernEurope();
-/// print(northernEurope.name); // "Northern Europe"
+/// import "package:sealed_countries/sealed_countries.dart";
+///
+/// void main() {
+///   const northernEurope = NorthernEurope();
+///   assert(northernEurope.name == "Northern Europe");
+/// }
 /// ```
 final class NorthernEurope extends SubRegion {
   /// Creates a new [NorthernEurope] instance.
@@ -115,8 +139,12 @@ final class NorthernEurope extends SubRegion {
 /// Example:
 ///
 /// ```dart
-/// final southernEurope = SouthernEurope();
-/// print(southernEurope.name); // "Southern Europe"
+/// import "package:sealed_countries/sealed_countries.dart";
+///
+/// void main() {
+///   const southernEurope = SouthernEurope();
+///   assert(southernEurope.name == "Southern Europe");
+/// }
 /// ```
 final class SouthernEurope extends SubRegion {
   /// Creates a new [SouthernEurope] instance.
@@ -132,8 +160,12 @@ final class SouthernEurope extends SubRegion {
 /// Example:
 ///
 /// ```dart
-/// final easternEurope = EasternEurope();
-/// print(easternEurope.name); // "Eastern Europe"
+/// import "package:sealed_countries/sealed_countries.dart";
+///
+/// void main() {
+///   const easternEurope = EasternEurope();
+///   assert(easternEurope.name == "Eastern Europe");
+/// }
 /// ```
 final class EasternEurope extends SubRegion {
   /// Creates a new [EasternEurope] instance.
@@ -149,8 +181,12 @@ final class EasternEurope extends SubRegion {
 /// Example:
 ///
 /// ```dart
-/// final westernEurope = WesternEurope();
-/// print(westernEurope.name); // "Western Europe"
+/// import "package:sealed_countries/sealed_countries.dart";
+///
+/// void main() {
+///   const westernEurope = WesternEurope();
+///   assert(westernEurope.name == "Western Europe");
+/// }
 /// ```
 final class WesternEurope extends SubRegion {
   /// Creates a new [WesternEurope] instance.
@@ -166,8 +202,12 @@ final class WesternEurope extends SubRegion {
 /// Example:
 ///
 /// ```dart
-/// final southwestEurope = SouthwestEurope();
-/// print(southwestEurope.name); // "Southwest Europe"
+/// import "package:sealed_countries/sealed_countries.dart";
+///
+/// void main() {
+///   const southwestEurope = SouthwestEurope();
+///   assert(southwestEurope.name == "Southwest Europe");
+/// }
 /// ```
 final class SouthwestEurope extends SubRegion {
   /// Creates a new [SouthwestEurope] instance.
@@ -185,8 +225,12 @@ final class SouthwestEurope extends SubRegion {
 /// Example:
 ///
 /// ```dart
-/// final middleAfrica = MiddleAfrica();
-/// print(middleAfrica.name); // "Middle Africa"
+/// import "package:sealed_countries/sealed_countries.dart";
+///
+/// void main() {
+///   const middleAfrica = MiddleAfrica();
+///   assert(middleAfrica.name == "Middle Africa");
+/// }
 /// ```
 final class MiddleAfrica extends SubRegion {
   /// Creates a new [MiddleAfrica] instance.
@@ -202,8 +246,12 @@ final class MiddleAfrica extends SubRegion {
 /// Example:
 ///
 /// ```dart
-/// final westernAfrica = WesternAfrica();
-/// print(westernAfrica.name); // "Western Africa"
+/// import "package:sealed_countries/sealed_countries.dart";
+///
+/// void main() {
+///   const westernAfrica = WesternAfrica();
+///   assert(westernAfrica.name == "Western Africa");
+/// }
 /// ```
 final class WesternAfrica extends SubRegion {
   /// Creates a new [WesternAfrica] instance.
@@ -220,8 +268,12 @@ final class WesternAfrica extends SubRegion {
 /// Example:
 ///
 /// ```dart
-/// final southernAfrica = SouthernAfrica();
-/// print(southernAfrica.name); // "Southern Africa"
+/// import "package:sealed_countries/sealed_countries.dart";
+///
+/// void main() {
+///   const southernAfrica = SouthernAfrica();
+///   assert(southernAfrica.name == "Southern Africa");
+/// }
 /// ```
 final class SouthernAfrica extends SubRegion {
   /// Creates a new [SouthernAfrica] instance.
@@ -237,8 +289,12 @@ final class SouthernAfrica extends SubRegion {
 /// Example:
 ///
 /// ```dart
-/// final easternAfrica = EasternAfrica();
-/// print(easternAfrica.name); // "Eastern Africa"
+/// import "package:sealed_countries/sealed_countries.dart";
+///
+/// void main() {
+///   const easternAfrica = EasternAfrica();
+///   assert(easternAfrica.name == "Eastern Africa");
+/// }
 /// ```
 final class EasternAfrica extends SubRegion {
   /// Creates a new [EasternAfrica] instance.
@@ -254,8 +310,12 @@ final class EasternAfrica extends SubRegion {
 /// Example:
 ///
 /// ```dart
-/// final northernAfrica = NorthernAfrica();
-/// print(northernAfrica.name); // "Northern Africa"
+/// import "package:sealed_countries/sealed_countries.dart";
+///
+/// void main() {
+///   const northernAfrica = NorthernAfrica();
+///   assert(northernAfrica.name == "Northern Africa");
+/// }
 /// ```
 final class NorthernAfrica extends SubRegion {
   /// Creates a new [NorthernAfrica] instance.
@@ -273,8 +333,12 @@ final class NorthernAfrica extends SubRegion {
 /// Example:
 ///
 /// ```dart
-/// final centralAsia = CentralAsia();
-/// print(centralAsia.name); // "Central Asia"
+/// import "package:sealed_countries/sealed_countries.dart";
+///
+/// void main() {
+///   const centralAsia = CentralAsia();
+///   assert(centralAsia.name == "Central Asia");
+/// }
 /// ```
 final class CentralAsia extends SubRegion {
   /// Creates a new [CentralAsia] instance.
@@ -290,8 +354,12 @@ final class CentralAsia extends SubRegion {
 /// Example:
 ///
 /// ```dart
-/// final easternAsia = EasternAsia();
-/// print(easternAsia.name); // "Eastern Asia"
+/// import "package:sealed_countries/sealed_countries.dart";
+///
+/// void main() {
+///   const easternAsia = EasternAsia();
+///   assert(easternAsia.name == "Eastern Asia");
+/// }
 /// ```
 final class EasternAsia extends SubRegion {
   /// Creates a new [EasternAsia] instance.
@@ -307,8 +375,12 @@ final class EasternAsia extends SubRegion {
 /// Example:
 ///
 /// ```dart
-/// final westernAsia = WesternAsia();
-/// print(westernAsia.name); // "Western Asia"
+/// import "package:sealed_countries/sealed_countries.dart";
+///
+/// void main() {
+///   const westernAsia = WesternAsia();
+///   assert(westernAsia.name == "Western Asia");
+/// }
 /// ```
 final class WesternAsia extends SubRegion {
   /// Creates a new [WesternAsia] instance.
@@ -324,8 +396,12 @@ final class WesternAsia extends SubRegion {
 /// Example:
 ///
 /// ```dart
-/// final southernAsia = SouthernAsia();
-/// print(southernAsia.name); // "Southern Asia"
+/// import "package:sealed_countries/sealed_countries.dart";
+///
+/// void main() {
+///   const southernAsia = SouthernAsia();
+///   assert(southernAsia.name == "Southern Asia");
+/// }
 /// ```
 final class SouthernAsia extends SubRegion {
   /// Creates a new [SouthernAsia] instance.
@@ -341,8 +417,12 @@ final class SouthernAsia extends SubRegion {
 /// Example:
 ///
 /// ```dart
-/// final southEasternAsia = SouthEasternAsia();
-/// print(southEasternAsia.name); // "SouthEastern Asia"
+/// import "package:sealed_countries/sealed_countries.dart";
+///
+/// void main() {
+///   const southEasternAsia = SouthEasternAsia();
+///   assert(southEasternAsia.name == "SouthEastern Asia");
+/// }
 /// ```
 final class SouthEasternAsia extends SubRegion {
   /// Creates a new [SouthEasternAsia] instance.
@@ -360,8 +440,12 @@ final class SouthEasternAsia extends SubRegion {
 /// Example:
 ///
 /// ```dart
-/// final australiaAndNewZealand = AustraliaAndNewZealand();
-/// print(australiaAndNewZealand.name); // "AustraliaAndNewZealand"
+/// import "package:sealed_countries/sealed_countries.dart";
+///
+/// void main() {
+///   const australiaAndNewZealand = AustraliaAndNewZealand();
+///   assert(australiaAndNewZealand.name == "AustraliaAndNewZealand");
+/// }
 /// ```
 final class AustraliaAndNewZealand extends SubRegion {
   /// Creates a new [AustraliaAndNewZealand] instance.
@@ -378,8 +462,12 @@ final class AustraliaAndNewZealand extends SubRegion {
 /// Example:
 ///
 /// ```dart
-/// final melanesia = Melanesia();
-/// print(melanesia.name); // "Melanesia"
+/// import "package:sealed_countries/sealed_countries.dart";
+///
+/// void main() {
+///   const melanesia = Melanesia();
+///   assert(melanesia.name == "Melanesia");
+/// }
 /// ```
 final class Melanesia extends SubRegion {
   /// Creates a new [Melanesia] instance.
@@ -395,8 +483,12 @@ final class Melanesia extends SubRegion {
 /// Example:
 ///
 /// ```dart
-/// final micronesia = Micronesia();
-/// print(micronesia.name); // "Micronesia"
+/// import "package:sealed_countries/sealed_countries.dart";
+///
+/// void main() {
+///   const micronesia = Micronesia();
+///   assert(micronesia.name == "Micronesia");
+/// }
 /// ```
 final class Micronesia extends SubRegion {
   /// Creates a new [Micronesia] instance.
@@ -412,8 +504,12 @@ final class Micronesia extends SubRegion {
 /// Example:
 ///
 /// ```dart
-/// final polynesia = Polynesia();
-/// print(polynesia.name); // "Polynesia"
+/// import "package:sealed_countries/sealed_countries.dart";
+///
+/// void main() {
+///   const polynesia = Polynesia();
+///   assert(polynesia.name == "Polynesia");
+/// }
 /// ```
 final class Polynesia extends SubRegion {
   /// Creates a new [Polynesia] instance.

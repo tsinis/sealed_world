@@ -45,7 +45,7 @@ import "dual_flag.dart";
 /// primary flag as a regular [BasicFlag].
 ///
 /// Example usage:
-/// ```dart
+/// ```dart#no-test
 /// CurrencyFlag.fromFlagMap(
 ///   const FiatUsd(),
 ///   alternativeMap: context.maps.currencyFlags,

@@ -14,13 +14,16 @@ extension DemonymsExtension on Demonyms {
   /// Example usage:
   ///
   /// ```dart
-  /// final demonyms = Demonyms(
-  ///   language: LangEng(),
-  ///   female: "Englishwoman",
-  ///   male: "Englishman",
-  /// );
-  /// final areSame = demonyms.areSame;
-  /// print(areSame); // Prints: false
+  /// import "package:sealed_countries/sealed_countries.dart";
+  ///
+  /// void main() {
+  ///   final demonyms = const Demonyms(
+  ///     language: LangEng(),
+  ///     female: "Englishwoman",
+  ///     male: "Englishman",
+  ///   );
+  ///   assert(!demonyms.areSame);
+  /// }
   /// ```
   bool get areSame => male == female;
 

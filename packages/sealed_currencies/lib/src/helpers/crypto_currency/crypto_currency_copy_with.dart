@@ -8,8 +8,13 @@ extension CryptoCurrencyCopyWith<T extends CryptoCurrency> on T {
   /// Example usage:
   ///
   /// ```dart
-  /// const bitcoin = CryptoBtc();
-  /// final customBtc = bitcoin.copyWith(name: 'Custom Bitcoin');
+  /// import "package:sealed_currencies/sealed_currencies.dart";
+  ///
+  /// void main() {
+  ///   const bitcoin = CryptoCurrency(code: "BTC", name: "Bitcoin");
+  ///   final customBtc = bitcoin.copyWith(name: "Custom Bitcoin");
+  ///   assert(customBtc.name == "Custom Bitcoin");
+  /// }
   /// ```
   CryptoCurrency copyWith({
     String? code,

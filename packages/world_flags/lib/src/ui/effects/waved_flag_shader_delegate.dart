@@ -26,13 +26,13 @@ import "static_flag_shader_delegate.dart";
 ///
 /// Basic usage with default options:
 ///
-/// ```dart
+/// ```dart#no-test
 /// FlagShaderSurface(CountryUsa())
 /// ```
 ///
 /// With custom wave settings:
 ///
-/// ```dart
+/// ```dart#no-test
 /// FlagShaderSurface(
 ///   CountryFra(),
 ///   options: FlagShaderOptions(

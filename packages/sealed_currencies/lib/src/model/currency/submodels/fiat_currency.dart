@@ -851,7 +851,12 @@ sealed class FiatCurrency extends Currency
   ///
   /// Example:
   /// ```dart
-  /// final currency = FiatCurrency.fromAnyCode("eur");
+  /// import "package:sealed_currencies/sealed_currencies.dart";
+  ///
+  /// void main() {
+  ///   final currency = FiatCurrency.fromAnyCode("eur");
+  ///   assert(currency.name == "Euro");
+  /// }
   /// ```
   ///
   /// In the above example, the  factory method is called with the
@@ -1232,8 +1237,12 @@ sealed class FiatCurrency extends Currency
   ///
   /// Example:
   /// ```dart
-  /// FiatCurrency? fiat = FiatCurrency.maybeFromAnyCode(CurrencyEnum.eur.name);
-  /// print(fiat != null) // Prints: true.
+  /// import "package:sealed_currencies/sealed_currencies.dart";
+  ///
+  /// void main() {
+  ///   final fiat = FiatCurrency.maybeFromAnyCode("eur");
+  ///   assert(fiat != null);
+  /// }
   /// ```
   ///
   /// In the above example, the `maybeFromAnyCode` method is called with the

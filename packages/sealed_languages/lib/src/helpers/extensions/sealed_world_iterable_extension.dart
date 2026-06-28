@@ -23,8 +23,14 @@ extension SealedWorldIterableExtension<T extends Object> on Iterable<T?> {
   ///
   /// Example:
   /// ```dart
-  /// final list = [1, null, 'hello', 2.5];
-  /// final result = list.toInstancesString(); // [int(), String(), double()]
+  /// import "package:sealed_languages/sealed_languages.dart";
+  ///
+  /// void main() {
+  ///   final list = [1, null, "hello", 2.5];
+  ///   final result = list.toInstancesString(); // [int(), String(), double()]
+  ///   assert(list.isNotEmpty, "should not be empty");
+  ///   assert(result.isNotEmpty, "should not be empty");
+  /// }
   /// ```
   String toInstancesString() => whereType<T>()
       .map((obj) => "${obj.runtimeType}()")
@@ -95,10 +101,14 @@ extension SealedWorldNullableIterableIsoExtension<T extends IsoStandardized>
   ///
   /// Example:
   /// ```dart
+  /// import "package:sealed_languages/sealed_languages.dart";
+  ///
   /// enum IsoEnum { de, ru, bul, fr }
   ///
-  /// final sealedObjects = NaturalLanguage.list.fromEnums(IsoEnum.values);
-  /// print(sealedObjects); // [LangDeu(), LangRus(), LangBul(), LangFra()]
+  /// void main() {
+  ///   final sealedObjects = NaturalLanguage.list.fromEnums(IsoEnum.values);
+  ///   assert(sealedObjects.isNotEmpty, "should not be empty");
+  /// }
   /// ```
   List<T> fromEnums<E extends Enum>(Iterable<E> values) {
     if (values.isEmpty || this?.isEmpty == true) return const [];
@@ -127,10 +137,14 @@ extension SealedWorldNullableIterableIsoExtension<T extends IsoStandardized>
   ///
   /// Example:
   /// ```dart
+  /// import "package:sealed_languages/sealed_languages.dart";
+  ///
   /// enum IsoEnum { de, cn, fr, rus }
   ///
-  /// final enums = {.rus(), .fra()}.toEnums(IsoEnum.values);
-  /// print(enums); // [IsoEnum.rus, IsoEnum.fr]
+  /// void main() {
+  ///   final enums = {const LangRus(), const LangFra()}.toEnums(IsoEnum.values);
+  ///   assert(enums.isNotEmpty, "should not be empty");
+  /// }
   /// ```
   List<E> toEnums<E extends Enum>(Iterable<E> values) {
     if (values.isEmpty || this?.isEmpty == true) return const [];

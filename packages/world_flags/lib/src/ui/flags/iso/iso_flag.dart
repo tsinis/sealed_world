@@ -19,12 +19,18 @@ import "../basic_flag.dart";
 ///
 /// Example usage:
 /// ```dart
-/// IsoFlag(
-///   isoObject,
-///   const {}, // Map of flags for ISO objects.
-///   height: 50,
-///   decoration: BoxDecoration(border: Border.all(color: Colors.black)),
-/// )
+/// import "package:flutter/material.dart";
+/// import "package:world_flags/world_flags.dart";
+/// 
+/// void main() {
+///   final country = WorldCountry.list.first;
+///   IsoFlag(
+///     country,
+///     smallSimplifiedFlagsMap,
+///     height: 50,
+///     decoration: BoxDecoration(border: Border.all()),
+///   );
+/// }
 /// ```
 @optionalTypeArgs
 class IsoFlag<T extends IsoStandardized, F extends BasicFlag>

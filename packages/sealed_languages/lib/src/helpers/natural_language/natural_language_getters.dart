@@ -15,10 +15,14 @@ extension NaturalLanguageGetters on NaturalLanguage {
   /// language.
   ///
   /// ```dart
-  /// const esperanto = LangEpo();
-  /// print(esperanto.isConstructed); // true
-  /// const english = LangEng();
-  /// print(english.isConstructed); // false
+  /// import "package:sealed_languages/sealed_languages.dart";
+  ///
+  /// void main() {
+  ///   const esperanto = LangEpo();
+  ///   assert(esperanto.isConstructed);
+  ///   const english = LangEng();
+  ///   assert(!english.isConstructed);
+  /// }
   /// ```
   bool get isConstructed => _constructedLanguages.contains(this);
 

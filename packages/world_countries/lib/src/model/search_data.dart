@@ -23,18 +23,19 @@ import "package:flutter/foundation.dart" show immutable;
 /// ## Example
 ///
 /// ```dart
-/// // Create search data for a country
-/// final searchData = SearchData(
-///   "Belarus",                    // International name
-///   {"Беларусь"},                // Native names
-///   code: "BY",                   // ISO code
-///   name: "Belarus",              // Localized name
-///   others: ["Byelarus"],         // Alternative spellings
-/// );
+/// import "package:world_countries/world_countries.dart";
 ///
-/// // The resulting list contains: ["Belarus", "Беларусь", "Belarus", "BY", "Byelarus"]
-/// print(searchData.first); // "Belarus"
-/// print(searchData.code);  // "BY"
+/// void main() {
+///   final searchData = SearchData(
+///     "Belarus",
+///     const {"Беларусь"},
+///     code: "BY",
+///     name: "Belarus",
+///     others: const ["Byelarus"],
+///   );
+///   assert(searchData.first == "Belarus");
+///   assert(searchData.code == "BY");
+/// }
 /// ```
 ///
 /// ## Creating Empty Search Data
@@ -43,7 +44,12 @@ import "package:flutter/foundation.dart" show immutable;
 /// default search data instance:
 ///
 /// ```dart
-/// final emptySearch = SearchData.empty(code: "XX");
+/// import "package:world_countries/world_countries.dart";
+///
+/// void main() {
+///   final emptySearch = SearchData.empty(code: "XX");
+///   assert(emptySearch.code == "XX");
+/// }
 /// ```
 @immutable
 class SearchData extends UnmodifiableListView<String> {
@@ -83,14 +89,19 @@ class SearchData extends UnmodifiableListView<String> {
   /// ## Example
   ///
   /// ```dart
-  /// final japanSearch = SearchData(
-  ///   "Japan",                     // internationalName
-  ///   {"日本", "にほん"},           // namesNative
-  ///   code: "JP",                  // code
-  ///   name: "Japan",               // name (localized)
-  ///   other: "JPN",               // other (3-letter code)
-  ///   others: ["Nippon", "Nihon"], // others (transliterations)
-  /// );
+  /// import "package:world_countries/world_countries.dart";
+  ///
+  /// void main() {
+  ///   final japanSearch = SearchData(
+  ///     "Japan",
+  ///     const {"日本", "にほん"},
+  ///     code: "JP",
+  ///     name: "Japan",
+  ///     other: "JPN",
+  ///     others: const ["Nippon", "Nihon"],
+  ///   );
+  ///   assert(japanSearch.code == "JP");
+  /// }
   /// ```
   /// .
   SearchData(
@@ -134,14 +145,18 @@ class SearchData extends UnmodifiableListView<String> {
   /// ## Example
   ///
   /// ```dart
-  /// // Create minimal search data
-  /// final placeholder = SearchData.empty(code: "XX");
+  /// import "package:world_countries/world_countries.dart";
   ///
-  /// // Create search data with some fields
-  /// final partial = SearchData.empty(
-  ///   code: "US",
-  ///   internationalName: "United States",
-  /// );
+  /// void main() {
+  ///   final placeholder = SearchData.empty(code: "XX");
+  ///   assert(placeholder.code == "XX");
+  ///
+  ///   final partial = SearchData.empty(
+  ///     code: "US",
+  ///     internationalName: "United States",
+  ///   );
+  ///   assert(partial.code == "US");
+  /// }
   /// ```
   /// .
   SearchData.empty({

@@ -46,7 +46,7 @@ import "dual_flag.dart";
 /// primary flag as a regular [BasicFlag].
 ///
 /// Example usage:
-/// ```dart
+/// ```dart#no-test
 /// LanguageFlag.fromFlagMap(
 ///   const LangDeu(),
 ///   alternativeMap: context.maps.languageFlags,

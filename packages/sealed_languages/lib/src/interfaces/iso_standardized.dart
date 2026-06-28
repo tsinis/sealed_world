@@ -10,22 +10,38 @@
 /// Example usage:
 ///
 /// ```dart
-/// class NaturalLanguage implements IsoStandardized<String> {
-///   const NaturalLanguage({
-///     required this.name,
+/// import "package:sealed_languages/sealed_languages.dart";
+///
+/// class CustomIso implements IsoStandardized<String> {
+///   const CustomIso({
 ///     required this.code,
+///     required this.codeOther,
+///     required this.name,
 ///     this.namesNative,
-///     this.codeShort,
 ///   });
 ///
+///   @override
 ///   final String code;
-///   final String? codeShort;
 ///
+///   @override
+///   final String codeOther;
+///
+///   @override
 ///   final String name;
+///
+///   @override
 ///   final List<String>? namesNative;
 ///
 ///   @override
-///   String get codeOther => codeShort;
+///   String get internationalName => name;
+///
+///   @override
+///   String toString({bool short = true}) => name;
+/// }
+///
+/// void main() {
+///   const custom = CustomIso(code: "CUS", codeOther: "CU", name: "Custom");
+///   assert(custom.code == "CUS");
 /// }
 /// ```
 ///

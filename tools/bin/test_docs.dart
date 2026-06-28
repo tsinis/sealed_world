@@ -43,14 +43,7 @@ Future<void> main(List<String> args) async {
   }
 
   if (results["help"] == true) return _printUsage(parser, 0);
-  if (results.rest.isEmpty) {
-    stderr.writeln(
-      "Error: No package name or path specified, "
-      "it must be one of: ${_allPackages.join(", ")}",
-    );
-
-    return _printUsage(parser, 1);
-  }
+  final targets = results.rest.isEmpty ? _allPackages.toList() : results.rest;
 
   final checkResult = await Process.run("dart", ["pub", "global", "list"]);
   if (results["activate"] == true &&
@@ -71,7 +64,7 @@ Future<void> main(List<String> args) async {
   final targetDirs = <Directory>[];
   final scriptFile = File(Platform.script.toFilePath());
   final repoRoot = scriptFile.parent.parent.parent;
-  for (final targetArg in results.rest) {
+  for (final targetArg in targets) {
     if (!_allPackages.contains(targetArg)) {
       stderr.writeln(
         "Error: Invalid package name '$targetArg'. "
@@ -164,7 +157,7 @@ Future<void> main(List<String> args) async {
 void _printUsage(ArgParser parser, int exitCode) {
   stdout
     ..writeln(
-      "\nUsage: dart run tools/bin/test_docs.dart <package_name_or_path> [options]",
+      "\nUsage: dart run tools/bin/test_docs.dart [<package_name>] [options]",
     )
     ..writeln("Options:\n${parser.usage}");
   exit(exitCode);

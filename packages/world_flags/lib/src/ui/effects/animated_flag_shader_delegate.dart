@@ -28,7 +28,7 @@ import "static_flag_shader_delegate.dart";
 ///
 /// A simple animated shader delegate:
 ///
-/// ```dart
+/// ```dart#no-test
 /// class MyAnimatedShaderDelegate extends AnimatedFlagShaderDelegate {
 ///   MyAnimatedShaderDelegate({required super.vsync})
 ///       : super(assetPath: 'shaders/my_animated_shader.frag');
@@ -43,7 +43,7 @@ import "static_flag_shader_delegate.dart";
 ///
 /// With animation control:
 ///
-/// ```dart
+/// ```dart#no-test
 /// class PausableShaderDelegate extends AnimatedFlagShaderDelegate {
 ///   PausableShaderDelegate({
 ///     required super.vsync,
@@ -103,7 +103,7 @@ abstract class AnimatedFlagShaderDelegate extends StaticFlagShaderDelegate {
   ///
   /// Override this getter to control animation based on external state:
   ///
-  /// ```dart
+  /// ```dart#no-test
   /// @override
   /// bool get animate => options.animate && isVisible;
   /// ```
@@ -124,7 +124,7 @@ abstract class AnimatedFlagShaderDelegate extends StaticFlagShaderDelegate {
   ///
   /// Example with custom time logic:
   ///
-  /// ```dart
+  /// ```dart#no-test
   /// @override
   /// void onTick(double deltaSeconds) {
   ///   time += deltaSeconds * animationSpeed * direction;

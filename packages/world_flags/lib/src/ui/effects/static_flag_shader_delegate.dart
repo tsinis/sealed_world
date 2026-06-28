@@ -31,7 +31,7 @@ import "flag_shader_delegate.dart";
 ///
 /// A minimal static shader delegate:
 ///
-/// ```dart
+/// ```dart#no-test
 /// class MyStaticShaderDelegate extends StaticFlagShaderDelegate {
 ///   MyStaticShaderDelegate() : super(assetPath: 'shaders/my_shader.frag');
 /// }
@@ -39,7 +39,7 @@ import "flag_shader_delegate.dart";
 ///
 /// With custom uniforms:
 ///
-/// ```dart
+/// ```dart#no-test
 /// class MyCustomShaderDelegate extends StaticFlagShaderDelegate {
 ///   MyCustomShaderDelegate({this.intensity = 1.0})
 ///       : super(assetPath: 'shaders/custom.frag');
@@ -117,7 +117,7 @@ abstract class StaticFlagShaderDelegate extends ChangeNotifier
   /// Call this early in app startup to avoid shader compilation stutter on
   /// first use:
   ///
-  /// ```dart
+  /// ```dart#no-test
   /// void main() async {
   ///   WidgetsFlutterBinding.ensureInitialized();
   ///   await StaticFlagShaderDelegate.warmUp('shaders/my_shader.frag');
@@ -152,7 +152,7 @@ abstract class StaticFlagShaderDelegate extends ChangeNotifier
   ///
   /// Override to add additional uniforms. Always call `super` first:
   ///
-  /// ```dart
+  /// ```dart#no-test
   /// @override
   /// void configureShader(FragmentShader shader, Size size, Image image) {
   ///   super.configureShader(shader, size, image);

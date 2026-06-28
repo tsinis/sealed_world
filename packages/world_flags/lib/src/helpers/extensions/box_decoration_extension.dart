@@ -7,11 +7,13 @@ import "package:flutter/rendering.dart";
 ///
 /// Example usage:
 /// ```dart
-/// BoxDecoration decoration = BoxDecoration(shape: BoxShape.circle);
-/// bool isCircleShape = decoration.isCircle; // true
+/// void main() {
+///   final decoration = const BoxDecoration(shape: BoxShape.circle);
+///   assert(decoration.isCircle);
 ///
-/// BoxDecoration anotherDecoration = BoxDecoration(shape: BoxShape.rectangle);
-/// bool isCircleShape = anotherDecoration.isCircle; // false
+///   final anotherDecoration = const BoxDecoration(shape: BoxShape.rectangle);
+///   assert(!anotherDecoration.isCircle);
+/// }
 /// ```
 extension BoxDecorationExtension on BoxDecoration? {
   /// Returns `true` if the shape of the [BoxDecoration] is a circle.

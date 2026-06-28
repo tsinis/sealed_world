@@ -8,7 +8,7 @@ import "basic_flag.dart";
 /// customization options from [BasicFlag].
 ///
 /// Example usage:
-/// ```dart
+/// ```dart#no-test
 /// MoonFlag(myFlagProperties, aspectRatio: 1.5),
 /// ```
 @Deprecated(

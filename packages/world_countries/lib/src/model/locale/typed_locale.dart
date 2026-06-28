@@ -24,7 +24,12 @@ import "../typedefs.dart";
 /// Example usage:
 ///
 /// ```dart
-/// const typedLocale = TypedLocale(LangEng(), script: ScriptLatn());
+/// import "package:world_countries/world_countries.dart";
+/// 
+/// void main() {
+///   const typedLocale = TypedLocale(LangEng(), script: ScriptLatn());
+///  assert(typedLocale.toString().isNotEmpty, "typedLocale should not be empty");
+/// }
 /// ```
 @immutable
 class TypedLocale extends Locale implements BasicTypedLocale {

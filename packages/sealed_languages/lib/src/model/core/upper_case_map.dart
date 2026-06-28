@@ -17,13 +17,19 @@ import "../../helpers/extensions/iso_object_extension_type.dart";
 ///
 /// Example:
 /// ```dart
-/// const isoMap = UpperCaseMap({
-///   'EN': LangEng(),
-///   'FR': LangFra(),
-/// }, defaultValue: LangEng());
+/// import "package:sealed_languages/sealed_languages.dart";
 ///
-/// final english = isoMap[' fr']; // Returns LangFra()
-/// final unknown = isoMap['DE']; // Returns LangEng() as the default value
+/// void main() {
+///   const isoMap = UpperCaseMap({
+///     "EN": LangEng(),
+///     "FR": LangFra(),
+///   }, defaultValue: LangEng());
+///
+///   final english = isoMap[" fr"]; // Returns LangFra()
+///   final unknown = isoMap["DE"]; // Returns LangEng() as the default value
+///   assert(english == const LangFra());
+///   assert(unknown == const LangEng());
+/// }
 /// ```
 class UpperCaseMap<V extends Object> extends MapView<String, V> {
   /// Creates an uppercase key/value map view with trimmed string keys.
@@ -36,13 +42,17 @@ class UpperCaseMap<V extends Object> extends MapView<String, V> {
   ///
   /// Example:
   /// ```dart
-  /// const isoMap = UpperCaseMap({
-  ///   'EN': LangEng(),
-  ///   'FR': LangFra(),
-  /// }, defaultValue: LangEng());
+  /// import "package:sealed_languages/sealed_languages.dart";
   ///
-  /// final english = isoMap['fr']; // Returns LangFra()
-  /// final unknown = isoMap['DE']; // Returns LangEng() as the default value
+  /// void main() {
+  ///   const isoMap = UpperCaseMap({
+  ///     "EN": LangEng(),
+  ///     "FR": LangFra(),
+  ///   }, defaultValue: LangEng());
+  ///
+  ///   assert(isoMap["fr"] == const LangFra());
+  ///   assert(isoMap["DE"] == const LangEng());
+  /// }
   /// ```
   ///
   /// [map]: The original map that this is a view of.

@@ -28,7 +28,7 @@ extension WorldCountriesBuildContextExtension on BuildContext {
   /// will return `null`.
   ///
   /// Usage:
-  /// ```dart
+  /// ```dart#no-test
   /// final PickersThemeData? pickersThemeData = context.pickerTheme;
   /// ```
   ///

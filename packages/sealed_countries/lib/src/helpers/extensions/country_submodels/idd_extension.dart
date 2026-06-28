@@ -15,9 +15,12 @@ extension IddExtension on Idd {
   /// Example usage:
   ///
   /// ```dart
-  /// final idd = Idd(root: 3, suffixes: [81]);
-  /// final hasSingleSuffix = idd.hasSingleSuffix;
-  /// print(hasSingleSuffix); // Prints: true
+  /// import "package:sealed_countries/sealed_countries.dart";
+  ///
+  /// void main() {
+  ///   final idd = const Idd(root: 3, suffixes: [81]);
+  ///   assert(idd.hasSingleSuffix);
+  /// }
   /// ```
   bool get hasSingleSuffix => suffixes.length == 1;
 
@@ -35,10 +38,13 @@ extension IddExtension on Idd {
   /// Example usage:
   ///
   /// ```dart
-  /// final idd = Idd(root: 3, suffixes: [81]);
-  /// final phoneCode = idd.phoneCode();
-  /// print(phoneCode); // Prints: "+381"
-  /// print(idd.phoneCode(isRtl: true)); // Prints: "381+"
+  /// import "package:sealed_countries/sealed_countries.dart";
+  ///
+  /// void main() {
+  ///   final idd = const Idd(root: 3, suffixes: [81]);
+  ///   assert(idd.phoneCode() == "+381");
+  ///   assert(idd.phoneCode(isRtl: true) == "381+");
+  /// }
   /// ```
   String phoneCode({String leading = "+", bool isRtl = false}) {
     final suffix = hasSingleSuffix ? "${suffixes.first}" : "";

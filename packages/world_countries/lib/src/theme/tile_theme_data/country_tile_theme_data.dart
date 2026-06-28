@@ -16,7 +16,7 @@ import "base_tile_theme_data.dart";
 /// of rendering a tile given [WorldCountry] item properties.
 ///
 /// Example:
-/// ```dart
+/// ```dart#no-test
 /// final countryTileThemeData = CountryTileThemeData(
 ///   itemBuilder: (itemProperties, defaultTile) {
 ///     // Use the default tile as-is
