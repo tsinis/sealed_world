@@ -22,13 +22,19 @@ import "upper_case_map.dart";
 ///
 /// Example:
 /// ```dart
-/// const isoMap = UpperCaseIsoMap({
-///   'EN': LangEng(),
-///   'FR': LangFra(),
-/// }, defaultValue: LangEng());
+/// import "package:sealed_languages/sealed_languages.dart";
 ///
-/// final english = isoMap[' fr']; // Returns LangFra()
-/// final unknown = isoMap['DE']; // Returns LangEng() as the default value
+/// void main() {
+///   const isoMap = UpperCaseIsoMap({
+///     "EN": LangEng(),
+///     "FR": LangFra(),
+///   }, defaultValue: LangEng());
+///
+///   final english = isoMap[" fr"]; // Returns LangFra()
+///   final unknown = isoMap["DE"]; // Returns LangEng() as the default value
+///   assert(english == const LangFra());
+///   assert(unknown == const LangEng());
+/// }
 /// ```
 ///
 /// [V] is the type of the values in the map. It must extend [IsoStandardized].
@@ -47,13 +53,17 @@ class UpperCaseIsoMap<V extends IsoStandardized> extends UpperCaseMap<V> {
   ///
   /// Example:
   /// ```dart
-  /// const isoMap = UpperCaseIsoMap({
-  ///   'EN': LangEng(),
-  ///   'FR': LangFra(),
-  /// }, defaultValue: LangEng());
+  /// import "package:sealed_languages/sealed_languages.dart";
   ///
-  /// final english = isoMap['fr']; // Returns LangFra()
-  /// final unknown = isoMap['DE']; // Returns LangEng() as the default value
+  /// void main() {
+  ///   const isoMap = UpperCaseIsoMap({
+  ///     "EN": LangEng(),
+  ///     "FR": LangFra(),
+  ///   }, defaultValue: LangEng());
+  ///
+  ///   assert(isoMap["fr"] == const LangFra());
+  ///   assert(isoMap["DE"] == const LangEng());
+  /// }
   /// ```
   ///
   /// [map]: The original map that this is a view of.

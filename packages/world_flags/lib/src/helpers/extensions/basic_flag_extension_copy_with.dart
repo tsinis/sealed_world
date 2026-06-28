@@ -13,7 +13,13 @@ import "../../ui/flags/basic_flag.dart";
 ///
 /// Example usage:
 /// ```dart
-/// final newFlag = existingFlag.copyWith(aspectRatio: 1.5);
+/// import "package:world_flags/world_flags.dart";
+///
+/// void main() {
+///   final existingFlag = BasicFlag(flagAbwProperties);
+///   final newFlag = existingFlag.copyWith(aspectRatio: 1.5);
+///   assert(newFlag.aspectRatio == 1.5);
+/// }
 /// ```
 extension BasicFlagExtensionCopyWith<T extends BasicFlag> on T {
   /// Creates a copy of this [BasicFlag] but with the given fields replaced with

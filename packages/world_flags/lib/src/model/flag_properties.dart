@@ -14,15 +14,19 @@ import "stripe_orientation.dart";
 ///
 /// Example usage:
 /// ```dart
-/// import 'package:world_flags/world_flags.dart';
+/// import "dart:ui";
+/// import "package:world_flags/world_flags.dart";
 ///
 /// void main() {
 ///   const flagProps = FlagProperties(
-///     [ColorsProperties(Colors.red), ColorsProperties(Colors.white)],
+///     [
+///       ColorsProperties(Color(0xFFD01C1F)),
+///       ColorsProperties(Color(0xFFFFFFFF)),
+///     ],
 ///     aspectRatio: 2,
 ///     stripeOrientation: StripeOrientation.vertical,
 ///   );
-///   print(flagProps);
+///   assert(flagProps.aspectRatio == 2);
 /// }
 /// ```
 ///
@@ -111,12 +115,17 @@ class FlagProperties {
   ///   version to use based on the specific use case. For example:
   ///
   /// ```dart
-  ///   final isNotOfficial = flagOptions?.isSimplified ?? true;
-  ///   if (isNotOfficial) {
-  ///     // Renders the simplified flag version (e.g., for smaller icons).
-  ///   } else {
-  ///     // Renders bigger flag with full details (e.g., for official use).
-  ///   }
+  /// import "dart:ui";
+  /// import "package:world_flags/world_flags.dart";
+  ///
+  /// void main() {
+  ///   const flagProps = FlagProperties(
+  ///     [ColorsProperties(Color(0xFFFFFFFF))],
+  ///     isSimplified: true,
+  ///   );
+  ///   final isNotOfficial = flagProps.isSimplified ?? true;
+  ///   assert(isNotOfficial);
+  /// }
   /// ```
   final bool? isSimplified;
 

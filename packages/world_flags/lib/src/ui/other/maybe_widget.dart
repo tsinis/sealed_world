@@ -1,6 +1,5 @@
 import "package:flutter/foundation.dart";
-import "package:flutter/widgets.dart"
-    show BuildContext, Flex, Offstage, SizedBox, Stack, StatelessWidget, Widget;
+import "package:flutter/widgets.dart";
 
 /// A widget that does a null-check of provided [value] and returns [orElse]
 /// (default to [SizedBox.shrink]) if [value] is `null`.
@@ -20,12 +19,17 @@ class MaybeWidget<T extends Object> extends StatelessWidget {
   /// Example:
   ///
   /// ```dart
-  /// MaybeWidget(
-  ///  nullableText,
-  ///  (text) => Text(text),
-  ///  buildWhen: (text) => text.trim().isNotEmpty, // Only for non-empty text.
-  ///  orElse: const Icon(Icons.text_decrease),
-  /// ),
+  /// import "package:flutter/material.dart";
+  ///
+  /// void main() {
+  ///   final Widget widget = MaybeWidget<String>(
+  ///     "hello",
+  ///     (text) => Text(text),
+  ///     buildWhen: (text) => text.trim().isNotEmpty,
+  ///     orElse: const SizedBox.shrink(),
+  ///   );
+  ///   assert(widget.toString().isNotEmpty);
+  /// }
   /// ```
   const MaybeWidget(
     this.value,
@@ -53,13 +57,18 @@ class MaybeWidget<T extends Object> extends StatelessWidget {
   /// Example:
   ///
   /// ```dart
-  /// AnimatedSwitcher(
-  ///  duration: const Duration(milliseconds: 800),
-  ///  child: MaybeWidget.identifiable(
-  ///  nullableValue,
-  ///  (nonNullValue) => Text(nonNullValue.toString()),
-  ///   ),
-  /// ),
+  /// import "package:flutter/material.dart";
+  ///
+  /// void main() {
+  ///   final Widget widget = AnimatedSwitcher(
+  ///     duration: const Duration(milliseconds: 800),
+  ///     child: MaybeWidget<String>.identifiable(
+  ///       "value",
+  ///       (nonNullValue) => Text(nonNullValue.toString()),
+  ///     ),
+  ///   );
+  ///   assert(widget.toString().isNotEmpty);
+  /// }
   /// ```
   MaybeWidget.identifiable(
     this.value,
@@ -86,10 +95,15 @@ class MaybeWidget<T extends Object> extends StatelessWidget {
   /// Example:
   ///
   /// ```dart
-  /// MaybeWidget.offstage(
-  ///   nullableValue,
-  ///   (value) => Text(value.toString()),
-  /// )
+  /// import "package:flutter/material.dart";
+  ///
+  /// void main() {
+  ///   final Widget widget = MaybeWidget<String>.offstage(
+  ///     "value",
+  ///     (value) => Text(value.toString()),
+  ///   );
+  ///   assert(widget.toString().isNotEmpty);
+  /// }
   /// ```
   const MaybeWidget.offstage(
     this.value,
@@ -117,31 +131,65 @@ class MaybeWidget<T extends Object> extends StatelessWidget {
   ///
   /// Example with single child:
   /// ```dart
-  /// MaybeWidget.list(
-  ///   maybeUser,
-  ///   child: (user) => Text(user.name),
-  /// )
+  /// import "package:flutter/material.dart";
+  ///
+  /// class User {
+  ///   const User(this.name);
+  ///   final String name;
+  /// }
+  ///
+  /// void main() {
+  ///   const maybeUser = User("Alice");
+  ///   final List<Widget> list = MaybeWidget.list<User>(
+  ///     maybeUser,
+  ///     child: (user) => Text(user.name),
+  ///   );
+  ///   assert(list.length == 1);
+  /// }
   /// ```
   ///
   /// Example with multiple children:
   /// ```dart
-  /// MaybeWidget.list(
-  ///   maybeUser,
-  ///   children: (user) => [
-  ///     Text(user.name),
-  ///     if (user.isAdmin) Icon(Icons.star),
-  ///   ],
-  /// )
+  /// import "package:flutter/material.dart";
+  ///
+  /// class User {
+  ///   const User(this.name, {this.isAdmin = false});
+  ///   final String name;
+  ///   final bool isAdmin;
+  /// }
+  ///
+  /// void main() {
+  ///   const maybeUser = User("Bob", isAdmin: true);
+  ///   final List<Widget> list = MaybeWidget.list<User>(
+  ///     maybeUser,
+  ///     children: (user) => [
+  ///       Text(user.name),
+  ///       if (user.isAdmin) const SizedBox.shrink(),
+  ///     ],
+  ///   );
+  ///   assert(list.length == 2);
+  /// }
   /// ```
   ///
   /// Example using [buildWhen]:
   /// ```dart
-  /// // Only include widgets when the user is active.
-  /// MaybeWidget.list(
-  ///   maybeUser,
-  ///   child: (user) => Text(user.name),
-  ///   buildWhen: (user) => user.isActive,
-  /// );
+  /// import "package:flutter/material.dart";
+  ///
+  /// class User {
+  ///   const User(this.name, {this.isActive = true});
+  ///   final String name;
+  ///   final bool isActive;
+  /// }
+  ///
+  /// void main() {
+  ///   const maybeUser = User("Charlie", isActive: false);
+  ///   final List<Widget> list = MaybeWidget.list<User>(
+  ///     maybeUser,
+  ///     child: (user) => Text(user.name),
+  ///     buildWhen: (user) => user.isActive,
+  ///   );
+  ///   assert(list.isEmpty);
+  /// }
   /// ```
   static List<Widget> list<T extends Object>(
     T? value, {
@@ -159,8 +207,8 @@ class MaybeWidget<T extends Object> extends StatelessWidget {
 
   /// Conditional widget builder that returns `null` when [value] is `null`.
   ///
-  /// Unlike the [MaybeWidget] widget which inserts a placeholder (e.g.
-  /// [SizedBox.shrink]) when [value] is `null`, this static method simply
+  /// Unlike the [MaybeWidget] widget which inserts a placeholder, e.g.
+  /// `SizedBox.shrink`, when [value] is `null`, this static method simply
   /// returns `null` — useful for nullable `child:` parameters, or inside
   /// [Flex]/[Stack]/etc. children lists with null-aware spread/if expressions.
   ///
@@ -169,26 +217,44 @@ class MaybeWidget<T extends Object> extends StatelessWidget {
   /// non-`null` [value].
   ///
   /// ```dart
-  /// Column(
-  ///   children: [
-  ///     const Text('Header'),
-  ///     ?MaybeWidget.orNull(subtitle, Text.new), // Add a subtitle if exists.
-  ///   ],
-  /// );
+  /// import "package:flutter/material.dart";
+  ///
+  /// void main() {
+  ///   const String? subtitle = "Sub";
+  ///   final Widget column = Column(
+  ///     children: [
+  ///       const Text("Header"),
+  ///       if (MaybeWidget.orNull(subtitle, (s) => Text(s)) case final w?) w,
+  ///     ],
+  ///   );
+  ///   assert(column.toString().isNotEmpty);
+  /// }
   /// ```
   ///
   /// Simple example with inference:
   /// ```dart
-  /// final trailing = MaybeWidget.orNull<Text, DateTime>(
-  ///   lastEdited,
-  ///   (dt) => Text(timeAgo(dt)),
-  /// );
+  /// import "package:flutter/material.dart";
+  ///
+  /// void main() {
+  ///   final lastEdited = DateTime.now();
+  ///   final Widget? trailing = MaybeWidget.orNull<Text, DateTime>(
+  ///     lastEdited,
+  ///     (dt) => Text(dt.toIso8601String()),
+  ///   );
+  ///   assert(trailing != null);
+  /// }
   /// ```
   ///
   /// If you do not need a specialized widget subtype you can omit the generic
   /// arguments entirely and let inference work:
   /// ```dart
-  /// final maybeChip = MaybeWidget.orNull(tag, (t) => Chip(label: Text(t)));
+  /// import "package:flutter/material.dart";
+  ///
+  /// void main() {
+  ///   const String? tag = "tag";
+  ///   final Widget? maybeContainer = MaybeWidget.orNull(tag, Text.new);
+  ///   assert(maybeContainer != null);
+  /// }
   /// ```
   ///
   /// Returns `null` when [value] is `null` or when [builder] is `null`.
@@ -199,11 +265,17 @@ class MaybeWidget<T extends Object> extends StatelessWidget {
   ///
   /// Example:
   /// ```dart
-  /// final subtitle = MaybeWidget.orNull<Text, String>(
-  ///   maybeSubtitle,
-  ///   Text.new,
-  ///   buildWhen: (s) => s.trim().isNotEmpty,
-  /// );
+  /// import "package:flutter/material.dart";
+  ///
+  /// void main() {
+  ///   const String? maybeSubtitle = "  ";
+  ///   final Widget? subtitle = MaybeWidget.orNull(
+  ///     maybeSubtitle,
+  ///     (s) => Text(s),
+  ///     buildWhen: (s) => s.trim().isNotEmpty,
+  ///   );
+  ///   assert(subtitle == null);
+  /// }
   /// ```
   ///
   /// See also: [MaybeWidget]: the widget counterpart when you need a concrete

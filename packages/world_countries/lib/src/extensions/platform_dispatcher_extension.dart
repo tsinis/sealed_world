@@ -19,7 +19,7 @@ extension PlatformDispatcherExtension on PlatformDispatcher {
   ///
   /// Returns `null` if no valid country code is found in any of the locales.
   ///
-  /// ```dart
+  /// ```dart#no-test
   /// final country = PlatformDispatcher.instance.firstCountryOrNull;
   /// print(country?.code); // Prints country code, e.g., "USA".
   /// ```
@@ -38,7 +38,7 @@ extension PlatformDispatcherExtension on PlatformDispatcher {
   ///
   /// Returns `null` if no valid language code is found in any of the locales.
   ///
-  /// ```dart
+  /// ```dart#no-test
   /// final language = PlatformDispatcher.instance.firstLanguageOrNull;
   /// print(language?.code); // Prints language code, e.g., "ENG".
   /// ```
@@ -56,7 +56,7 @@ extension PlatformDispatcherExtension on PlatformDispatcher {
   ///
   /// Returns `null` if no valid script code is found in any of the locales.
   ///
-  /// ```dart
+  /// ```dart#no-test
   /// final script = PlatformDispatcher.instance.firstScriptOrNull;
   /// print(script?.code); // Prints script code, e.g., "Latn".
   /// ```
@@ -76,7 +76,7 @@ extension PlatformDispatcherExtension on PlatformDispatcher {
   /// Returns `null` if the `languageCode` of the primary `locale` cannot be
   /// parsed into a [NaturalLanguage].
   ///
-  /// ```dart
+  /// ```dart#no-test
   /// final typedLocale = PlatformDispatcher.instance.maybeLocale;
   /// if (typedLocale == null) return;
   /// print(typedLocale.language.internationalName);

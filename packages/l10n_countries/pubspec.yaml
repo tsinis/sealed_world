@@ -1,4 +1,4 @@
-version: 2.0.2
+version: 2.0.3
 name: l10n_countries
 description: Provides country names translations (for 194 different locales).
 maintainer: Roman Cinis

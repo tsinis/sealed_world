@@ -47,10 +47,15 @@ import "dual_flag.dart";
 ///
 /// Example usage:
 /// ```dart
-/// LanguageFlag.fromFlagMap(
-///   const LangDeu(),
-///   alternativeMap: context.maps.languageFlags,
-/// )
+/// import "package:world_flags/world_flags.dart";
+///
+/// void main() {
+///   final flag = LanguageFlag.fromFlagMap(
+///     const LangDeu(),
+///     alternativeMap: LanguageFlag.defaultSecondaryCountryLanguageFlags,
+///   );
+///   assert(flag.item == const LangDeu());
+/// }
 /// ```
 /// {@endtemplate}
 class LanguageFlag extends DualFlag<NaturalLanguage, BasicFlag> {

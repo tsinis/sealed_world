@@ -30,16 +30,21 @@ extension NaturalLanguageJson on NaturalLanguage {
   /// Example usage:
   ///
   /// ```dart
-  /// final jsonMap = {
-  ///   "name": "American English",
-  ///   "code": "ENG",
-  ///   "codeShort": "EN",
-  ///   "namesNative": ["American English"],
-  ///   "isRightToLeft": false,
-  ///   "scripts": ["Latn"],
-  /// };
+  /// import "package:sealed_languages/sealed_languages.dart";
   ///
-  /// final english = NaturalLanguageJson.fromMap(jsonMap);
+  /// void main() {
+  ///   const jsonMap = {
+  ///     "name": "American English",
+  ///     "code": "ENG",
+  ///     "codeShort": "EN",
+  ///     "namesNative": ["American English"],
+  ///     "isRightToLeft": false,
+  ///     "scripts": ["Latn"],
+  ///   };
+  ///
+  ///   final english = NaturalLanguageJson.fromMap(jsonMap);
+  ///   assert(english.name == "American English");
+  /// }
   /// ```
   static NaturalLanguage fromMap(JsonMap map) {
     final code = map["code"]?.toString().trim() ?? "";
@@ -80,7 +85,12 @@ extension NaturalLanguageJson on NaturalLanguage {
   /// Example usage:
   ///
   /// ```dart
-  /// final jsonMap = LangEng().toMap();
+  /// import "package:sealed_languages/sealed_languages.dart";
+  ///
+  /// void main() {
+  ///   final jsonMap = const LangEng().toMap();
+  ///   assert(jsonMap.isNotEmpty);
+  /// }
   /// ```
   Map<String, Object> toMap() => {
     "bibliographicCode": ?bibliographicCode,

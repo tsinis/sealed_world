@@ -16,11 +16,19 @@ import "flags/iso/iso_flag.dart";
 ///
 /// Example usage:
 /// ```dart
-/// CountryFlag.simplified(
-///   country,
-///   height: 50,
-///   decoration: BoxDecoration(border: Border.all(color: Colors.black)),
-/// )
+/// import "package:flutter/widgets.dart";
+/// import "package:world_flags/world_flags.dart";
+///
+/// void main() {
+///   final flag = CountryFlag.simplified(
+///     const CountryUsa(),
+///     height: 50,
+///     decoration: const BoxDecoration(
+///       border: Border.fromBorderSide(BorderSide(color: Color(0xFF000000))),
+///     ),
+///   );
+///   assert(flag.height == 50);
+/// }
 /// ```
 class CountryFlag extends IsoFlag<WorldCountry, BasicFlag> {
   /// Creates a [CountryFlag] widget with a simplified flag representation.

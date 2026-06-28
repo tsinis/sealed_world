@@ -5,23 +5,27 @@ import "../../../helpers/extensions/country_submodels/country_name_extension.dar
 /// A class that represents the name of a country in a particular language.
 ///
 /// The main difference to the super [TranslatedName] class is that the
-/// [official] (`fullName`) must be provided and cannot be empty.
-/// The [CountryName] class is a simple value object that represents the name of
+/// The official (`fullName`) must be provided and cannot be empty.
+/// The CountryName class is a simple value object that represents the name of
 /// a country in a particular language. It consists of a [NaturalLanguage]
 /// object that represents the language, and two [String] values that represent
-/// the official and common names of the country. The [official] and [common]
+/// the official and common names of the country. The official and common
 /// fields must not be empty.
 ///
 /// Example usage:
 ///
 /// ```dart
-/// const countryName = CountryName(
-///   language: LangSlk(),
-///   official: "Slovenská republika",
-///   common: "Slovensko",
-/// );
-/// print(countryName.official); // Prints: "Slovenská republika"
-/// print(countryName.common); // Prints: "Slovensko"
+/// import "package:sealed_countries/sealed_countries.dart";
+///
+/// void main() {
+///   const countryName = CountryName(
+///     language: LangSlk(),
+///     official: "Slovenská republika",
+///     common: "Slovensko",
+///   );
+///   assert(countryName.official == "Slovenská republika");
+///   assert(countryName.common == "Slovensko");
+/// }
 /// ```
 final class CountryName extends TranslatedName {
   /// Creates a new `CountryName` object with the given language and name

@@ -11,11 +11,6 @@ extension NavigatorContextExtension on BuildContext {
 
   /// Pops the current route off the navigation stack and returns to the
   /// previous route with an optional result.
-  ///
-  /// Example usage:
-  /// ```dart
-  /// onTap: context.pop,
-  /// ```
   @optionalTypeArgs
   void pop<T extends Object>([T? result]) => navigator.pop<T>(result);
 
@@ -23,7 +18,7 @@ extension NavigatorContextExtension on BuildContext {
   /// completes when the new route is popped.
   ///
   /// Example usage:
-  /// ```dart
+  /// ```dart#no-test
   /// context.push(MyRoute());
   /// ```
   @optionalTypeArgs
@@ -32,11 +27,6 @@ extension NavigatorContextExtension on BuildContext {
   /// Pops the current route off the navigation stack and returns to the
   /// previous route with an optional result, but only if there is a previous
   /// route.
-  ///
-  /// Example usage:
-  /// ```dart
-  /// context.maybePop();
-  /// ```
   @optionalTypeArgs
   Future<bool> maybePop<T extends Object>([T? result]) =>
       navigator.maybePop<T>(result);

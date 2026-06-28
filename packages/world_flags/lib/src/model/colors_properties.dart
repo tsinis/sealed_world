@@ -11,15 +11,12 @@ import "package:flutter/foundation.dart" show immutable, visibleForTesting;
 ///
 /// Example usage:
 /// ```dart
-/// import 'package:your_package/colors_properties.dart';
-/// import 'package:flutter/material.dart';
+/// import "dart:ui";
 ///
 /// void main() {
-///   const colorProps = ColorsProperties(Colors.red, ratio: 2);
-///   print(colorProps);
-///
-///   const intProps = ColorsProperties.fromIntColor(0xFFFF0000, ratio: 2);
-///   print(intProps);
+///   const colorProps = ColorsProperties(Color(0xFFFF0000), ratio: 2);
+///   assert(colorProps.ratio == 2);
+///   assert(colorProps.color == const Color(0xFFFF0000));
 /// }
 /// ```
 ///

@@ -18,12 +18,18 @@ import "../model/iso/iso_maps.dart";
 /// various picker components.
 ///
 /// Usage example:
-/// ```dart
-/// final pickersTheme = PickersThemeData(
-///   padding: EdgeInsets.all(8),
-///   searchBarPadding: EdgeInsets.symmetric(horizontal: 16),
-///   showClearButton: false,
-/// );
+/// ```dart#no-test
+/// import "package:flutter/widgets.dart";
+/// import "package:world_countries/world_countries.dart";
+///
+/// void main() {
+///   const pickersTheme = PickersThemeData(
+///     padding: EdgeInsets.all(8),
+///     searchBarPadding: EdgeInsets.symmetric(horizontal: 16),
+///     showClearButton: false,
+///   );
+///  assert(pickersTheme.toString().isNotEmpty, "theme should not be empty");
+/// }
 /// ```
 @immutable
 class PickersThemeData extends ThemeExtension<PickersThemeData>
@@ -71,8 +77,10 @@ class PickersThemeData extends ThemeExtension<PickersThemeData>
   /// configuration changes.
   ///
   /// Usage:
-  /// ```dart
-  /// final newTheme = pickerTheme.copyWith(padding: EdgeInsets.all(16));
+  /// ```dart#no-test
+  /// const pickerTheme = PickersThemeData();
+  /// final newTheme = pickerTheme.copyWith(padding: const EdgeInsets.all(16));
+  /// assert(newTheme.toString().isNotEmpty, "newTheme should not be empty");
   /// ```
   @override
   @useResult

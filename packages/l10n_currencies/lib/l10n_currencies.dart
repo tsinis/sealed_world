@@ -811,7 +811,9 @@ class CurrenciesLocaleMapper extends IsoLocaleMapper<IsoLocaleMapper<String>> {
   ///
   /// Example:
   /// ```dart
+  /// final mapper = CurrenciesLocaleMapper();
   /// final map = mapper.localize({'USD', 'RUB'}, mainLocale: 'en');
+  /// print(map);
   /// ```
   LocaleMap localize(
     Set<String> isoCodes, {

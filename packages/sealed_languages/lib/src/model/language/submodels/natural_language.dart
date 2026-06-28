@@ -240,7 +240,7 @@ sealed class NaturalLanguage extends Language
   /// alternative-name `altSymbol`, and the `formatter` hook exposed by
   /// [LocaleMapFunction].
   ///
-  /// ```dart
+  /// ```dart#no-test
   /// final delegate = TypedLocalizationDelegate(
   ///   mapper: () => CountriesLocaleMapper(
   ///     other: {
@@ -307,7 +307,7 @@ sealed class NaturalLanguage extends Language
   /// using the generative constructor to ensure full compatibility.
   ///
   /// Usage:
-  /// ```dart
+  /// ```dart#no-test
   /// class MyIsoClassInstance extends IsoClassWithPermissiveConstructor {
   ///   const MyIsoClassInstance() : super.permissive(name: "Name", code: "1");
   /// }
@@ -896,12 +896,12 @@ sealed class NaturalLanguage extends Language
   /// `toString()` call. For example it could be an instance of [StringBuffer],
   /// [String], [Enum] (in case of enum - `.name.toUpperCase()` will be used):
   ///
-  /// ```dart
+  /// ```dart#no-test
   /// enum IsoEnum {de, fr, ar} // On (IsoEnum.de) call it will use "DE" input.
   /// ```
   ///
   ///  Or has a custom `toString()` override, i.e.:
-  /// ```dart
+  /// ```dart#no-test
   /// class CustomIsoCodeClass {
   ///  const CustomIsoCodeClass({String code = '123', this.foo}) : _code = code;
   ///  final String _code;
@@ -991,7 +991,12 @@ sealed class NaturalLanguage extends Language
   ///
   /// Example:
   /// ```dart
-  /// final language = NaturalLanguage.fromAnyCode("en");
+  /// import "package:sealed_languages/sealed_languages.dart";
+  ///
+  /// void main() {
+  ///   final language = NaturalLanguage.fromAnyCode("en");
+  ///   assert(language.name == "English");
+  /// }
   /// ```
   ///
   /// In the above example, the `fromAnyCode` factory method is called with the
@@ -1411,8 +1416,12 @@ sealed class NaturalLanguage extends Language
   /// Example usage:
   ///
   /// ```dart
-  /// NaturalLanguage? language = NaturalLanguage.maybeFromAnyCode(LangEnum.en);
-  /// print(language != null); // Prints: true
+  /// import "package:sealed_languages/sealed_languages.dart";
+  ///
+  /// void main() {
+  ///   final language = NaturalLanguage.maybeFromAnyCode("en");
+  ///   assert(language != null);
+  /// }
   /// ```
   static NaturalLanguage? maybeFromAnyCode(
     Object? code, [

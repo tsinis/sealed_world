@@ -33,7 +33,12 @@ import "flag_shader_delegate.dart";
 ///
 /// ```dart
 /// class MyStaticShaderDelegate extends StaticFlagShaderDelegate {
-///   MyStaticShaderDelegate() : super(assetPath: 'shaders/my_shader.frag');
+///   MyStaticShaderDelegate() : super(assetPath: "shaders/my_shader.frag");
+/// }
+///
+/// void main() {
+///   final delegate = MyStaticShaderDelegate();
+///   assert(delegate.assetPath == "shaders/my_shader.frag");
 /// }
 /// ```
 ///
@@ -42,7 +47,7 @@ import "flag_shader_delegate.dart";
 /// ```dart
 /// class MyCustomShaderDelegate extends StaticFlagShaderDelegate {
 ///   MyCustomShaderDelegate({this.intensity = 1.0})
-///       : super(assetPath: 'shaders/custom.frag');
+///       : super(assetPath: "shaders/custom.frag");
 ///
 ///   final double intensity;
 ///
@@ -51,6 +56,11 @@ import "flag_shader_delegate.dart";
 ///     super.configureShader(shader, size, image);
 ///     shader.setFloat(2, intensity); // Custom uniform at index 2.
 ///   }
+/// }
+///
+/// void main() {
+///   final delegate = MyCustomShaderDelegate(intensity: 0.5);
+///   assert(delegate.intensity == 0.5);
 /// }
 /// ```
 ///
@@ -118,10 +128,17 @@ abstract class StaticFlagShaderDelegate extends ChangeNotifier
   /// first use:
   ///
   /// ```dart
-  /// void main() async {
-  ///   WidgetsFlutterBinding.ensureInitialized();
-  ///   await StaticFlagShaderDelegate.warmUp('shaders/my_shader.frag');
-  ///   runApp(MyApp());
+  /// import "package:flutter/widgets.dart";
+  ///
+  /// class MyApp extends StatelessWidget {
+  ///   const MyApp({super.key});
+  ///   @override
+  ///   Widget build(BuildContext context) => const SizedBox.shrink();
+  /// }
+  ///
+  /// void main() {
+  ///   final dynamic warmUp = StaticFlagShaderDelegate.warmUp;
+  ///   assert(warmUp != null);
   /// }
   /// ```
   ///
@@ -153,10 +170,19 @@ abstract class StaticFlagShaderDelegate extends ChangeNotifier
   /// Override to add additional uniforms. Always call `super` first:
   ///
   /// ```dart
-  /// @override
-  /// void configureShader(FragmentShader shader, Size size, Image image) {
-  ///   super.configureShader(shader, size, image);
-  ///   shader.setFloat(2, myCustomValue);
+  /// class MyCustomDelegate extends StaticFlagShaderDelegate {
+  ///   MyCustomDelegate() : super(assetPath: "shaders/custom.frag");
+  ///
+  ///   @override
+  ///   void configureShader(FragmentShader shader, Size size, Image image) {
+  ///     super.configureShader(shader, size, image);
+  ///     shader.setFloat(2, 1.0);
+  ///   }
+  /// }
+  ///
+  /// void main() {
+  ///   final delegate = MyCustomDelegate();
+  ///   assert(delegate.assetPath == "shaders/custom.frag");
   /// }
   /// ```
   @protected

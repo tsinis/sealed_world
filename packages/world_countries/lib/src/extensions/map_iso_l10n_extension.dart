@@ -26,7 +26,7 @@ extension MapIsoL10nExtension<T extends IsoTranslated> on Map<T, String> {
   /// [compare] factory, e.g. using the `intl4x` package.
   ///
   /// Example with custom sorter:
-  /// ```dart
+  /// ```dart#no-test
   /// // Custom diacritics-aware sorting using intl4x.
   /// final sorted = translations.sortAlphabetically(
   ///   locale: typedLocale,

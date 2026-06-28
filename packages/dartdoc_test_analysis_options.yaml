@@ -1,0 +1,14 @@
+# Custom analysis options for dartdoc_test code sample validation.
+# This file intentionally relaxes several rules that trigger false positives
+# when dartdoc_test extracts isolated code snippets for analysis.
+include: analysis_options.yaml
+
+analyzer:
+  errors:
+    unused_import: ignore
+    directives_ordering: ignore
+    unnecessary_import: ignore
+    duplicate_import: ignore
+    implementation_imports: ignore
+    unused_shown_name: ignore
+    uri_does_not_exist: ignore

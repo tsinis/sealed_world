@@ -58,6 +58,10 @@ jobs:
       - name: 📦 Install dependencies
         run: dart pub upgrade
 
+      - name: 📝 Test documentation code samples
+        working-directory: ../..
+        run: dart run tools/bin/test_docs.dart ${{ inputs.package_name }}
+
       - name: 🕵️ Analyze code
         uses: ValentinVignal/action-dart-analyze@v2.1
         if: ${{ github.event_name == 'pull_request' }}

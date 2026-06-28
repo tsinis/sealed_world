@@ -9,7 +9,12 @@ import "basic_flag.dart";
 ///
 /// Example usage:
 /// ```dart
-/// EllipseFlag(myFlagProperties, aspectRatio: 1.5),
+/// import "package:world_flags/world_flags.dart";
+///
+/// void main() {
+///   final flag = EllipseFlag(flagAbwProperties, aspectRatio: 1.5);
+///   assert(flag.properties == flagAbwProperties);
+/// }
 /// ```
 @Deprecated(
   "Use BasicFlag(properties) instead - the painter is now resolved "

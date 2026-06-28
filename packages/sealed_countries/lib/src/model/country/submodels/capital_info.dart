@@ -14,11 +14,15 @@ import "lat_lng.dart";
 /// Example usage:
 ///
 /// ```dart
-/// const capital = Capital("Ramallah", deJure: "Jerusalem");
-/// const latLng = LatLng(31.9, 35.2);
-/// const capitalInfo = CapitalInfo(capital: capital, latLng: latLng);
-/// print(capitalInfo.capital); // Prints: Capital("Ramallah")
-/// print(capitalInfo.latLng); // Prints: LatLng(latitude: 31.9, longitude: 35.2)
+/// import "package:sealed_countries/sealed_countries.dart";
+///
+/// void main() {
+///   const capital = Capital("Ramallah", deJure: "Jerusalem");
+///   const latLng = LatLng(31.9, 35.2);
+///   const capitalInfo = CapitalInfo(capital: capital, latLng: latLng);
+///   assert(capitalInfo.capital.deFacto == "Ramallah", "must match de facto");
+///   assert(capitalInfo.latLng.latitude == 31.9, "should match latitude");
+/// }
 /// ```
 @pragma("vm:deeply-immutable")
 final class CapitalInfo implements JsonEncodable<CapitalInfo> {

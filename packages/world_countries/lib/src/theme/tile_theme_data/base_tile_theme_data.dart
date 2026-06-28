@@ -57,7 +57,7 @@ sealed class _BaseTileThemeData<T extends IsoTranslated>
   /// tile widget which can be used as-is or customized using `.copyWith()`.
   ///
   /// Example:
-  /// ```dart
+  /// ```dart#no-test
   /// itemBuilder: (itemProperties, defaultTile) {
   ///   // Use default tile as-is
   ///   return defaultTile;

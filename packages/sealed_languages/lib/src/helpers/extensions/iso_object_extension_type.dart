@@ -8,20 +8,19 @@ import "iso_standardized_string_extension.dart";
 ///
 /// Example usage:
 /// ```dart
+/// import "package:sealed_languages/sealed_languages.dart";
+///
 /// enum Colors { red, green, blue }
 ///
 /// void main() {
-///   // Example with enum:
-///   Colors color = Colors.green;
-///   print(IsoObject(color).toUpperCaseCode()); // Outputs: GREEN
+///   const color = Colors.green;
+///   assert(IsoObject(color).toUpperCaseCode() == "GREEN");
 ///
-///   // Example with string:
-///   String text = ' Hello, World! ';
-///   print(IsoObject(text).toUpperCaseCode()); // Outputs: HELLO, WORLD!
+///   const text = " Hello, World! ";
+///   assert(IsoObject(text).toUpperCaseCode() == "HELLO, WORLD!");
 ///
-///   // Example with custom object:
-///   final buffer = StringBuffer(' eng ');
-///   print(IsoObject(buffer).toUpperCaseCode()); // Outputs: ENG
+///   final buffer = StringBuffer(" eng ");
+///   assert(IsoObject(buffer.toString()).toUpperCaseCode() == "ENG");
 /// }
 /// ```
 // ignore: prefer-match-file-name, doesn't respect keywords + "IsoObject".
@@ -70,8 +69,12 @@ extension type const IsoObject._(Object _value) implements Object {
   /// Example usage:
   ///
   /// ```dart
-  /// print(IsoObject(' en ').maybeToValidIsoCode()); // Prints: "en"
-  /// print(IsoObject(' e').maybeToValidIsoCode()); // Prints: null
+  /// import "package:sealed_languages/sealed_languages.dart";
+  ///
+  /// void main() {
+  ///   assert(IsoObject(" en ").maybeToValidIsoCode() == "en");
+  ///   assert(IsoObject(" e").maybeToValidIsoCode() == null);
+  /// }
   /// ```
   String? maybeToValidIsoCode({
     int? exactLength,
@@ -93,8 +96,12 @@ extension type const IsoObject._(Object _value) implements Object {
   /// Example usage:
   ///
   /// ```dart
-  /// print(IsoObject(' eng ').maybeToValidIsoUpperCaseCode()); // Prints: "ENG"
-  /// print(IsoObject('english').maybeToValidIsoUpperCaseCode()); // Prints: null
+  /// import "package:sealed_languages/sealed_languages.dart";
+  ///
+  /// void main() {
+  ///   assert(IsoObject(" eng ").maybeToValidIsoUpperCaseCode() == "ENG");
+  ///   assert(IsoObject("english").maybeToValidIsoUpperCaseCode() == null);
+  /// }
   /// ```
   String? maybeToValidIsoUpperCaseCode({
     int? exactLength,
@@ -132,14 +139,17 @@ extension type const IsoObject._(Object _value) implements Object {
   ///
   /// Example:
   /// ```dart
-  /// final result = IsoObject("EN").maybeMapIsoCode(
-  ///   orElse: (_) => "orElse",
-  ///   numeric: (_) => "numeric",
-  ///   regular: (_) => "regular",
-  /// );
+  /// import "package:sealed_languages/sealed_languages.dart";
   ///
-  /// print(result); // Prints "orElse"
-  /// ```.
+  /// void main() {
+  ///   final result = IsoObject("EN").maybeMapIsoCode(
+  ///     orElse: (_) => "orElse",
+  ///     numeric: (_) => "numeric",
+  ///     regular: (_) => "regular",
+  ///   );
+  ///   assert(result == "orElse");
+  /// }
+  /// ```
   // ignore: avoid-unnecessary-extends, all but 1 required.
   T maybeMapIsoCode<T extends Object?>({
     required T Function(String input) orElse,

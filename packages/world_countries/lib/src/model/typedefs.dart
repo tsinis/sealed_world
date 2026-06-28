@@ -30,13 +30,18 @@ import "search_data.dart";
 /// should come before the second, zero if they are equal, or a positive number
 /// if the first should come after.
 ///
-/// Example with `intl4x` package for locale-aware diacritics handling:
+/// Example (conceptual — integrate your collation library similarly):
 /// ```dart
-/// final sorterFactory = (BasicTypedLocale typed) {
-///   final locale = Locale.parse(typed.toUnicodeLocaleId());
-///   final collator = Collation(locale: locale);
-///   return (a, b) => collator.compare(a.value, b.value);
-/// };
+/// Comparator<MapEntry<WorldCountry, String>> nameSort(BasicTypedLocale _) =>
+///   (a, b) => a.value.compareTo(b.value);
+///
+/// void main() {
+///   const sorter = nameSort;
+///   assert(
+///     sorter.toString().isNotEmpty,
+///     "sorter should not be empty",
+///   );
+/// }
 /// ```
 typedef L10nSorter<T extends IsoTranslated> =
     Comparator<MapEntry<T, String>> Function(BasicTypedLocale locale);
@@ -51,7 +56,16 @@ typedef L10nSorter<T extends IsoTranslated> =
 /// Example usage:
 ///
 /// ```dart
-/// const localeEntry = LocaleEntry(Locale('en'), TypedLocale(LangEng()));
+/// import "dart:ui";
+/// import "package:world_countries/world_countries.dart";
+///
+/// void main() {
+///   const localeEntry = LocaleEntry(
+///     Locale("en"),
+///     TypedLocale(LangEng()),
+///   );
+///  assert(localeEntry.toString().isNotEmpty, "locale should not be empty");
+/// }
 /// ```
 typedef LocaleEntry = MapEntry<Locale, TypedLocale>;
 

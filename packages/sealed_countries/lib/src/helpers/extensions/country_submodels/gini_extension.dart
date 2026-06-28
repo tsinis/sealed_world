@@ -16,9 +16,13 @@ extension GiniExtension on Gini {
   /// Example usage:
   ///
   /// ```dart
-  /// final gini = Gini(year: 2020, coefficient: 32.0);
-  /// final dateTime = gini.dateTime;
-  /// print(dateTime); // Prints: "2020-01-01 00:00:00.000"
+  /// import "package:sealed_countries/sealed_countries.dart";
+  ///
+  /// void main() {
+  ///   final gini = const Gini(year: 2020, coefficient: 32.0);
+  ///   final dateTime = gini.dateTime;
+  ///   assert(dateTime.year == 2020);
+  /// }
   /// ```
   DateTime get dateTime => DateTime(year);
 

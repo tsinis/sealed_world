@@ -53,9 +53,10 @@ extension DurationExtension on Duration {
   ///
   /// Example usage:
   /// ```dart
-  /// // This will pause the execution for 1 second.
-  /// await Duration(seconds: 1).sleep;
-  /// print('Executed after 1 second pause');
+  /// void main() async {
+  ///   // This will pause the execution for 1 second.
+  ///   await const Duration(seconds: 1).sleep;
+  /// }
   /// ```
   Future<void> get sleep => delayed<void>();
 }

@@ -994,7 +994,12 @@ sealed class Script extends WritingSystem
   ///
   /// Example:
   /// ```dart
-  /// final script = Script.fromAnyCode("Latn");
+  /// import "package:sealed_languages/sealed_languages.dart";
+  ///
+  /// void main() {
+  ///   final script = Script.fromAnyCode("Latn");
+  ///   assert(script.name == "Latin");
+  /// }
   /// ```
   ///
   /// In the above example, the `fromAnyCode` factory method is called with the
@@ -1095,8 +1100,12 @@ sealed class Script extends WritingSystem
   ///
   /// Example:
   /// ```dart
-  /// Script? script = Script.maybeFromAnyCode(ExampleScriptEnum.latn);
-  /// print(script != null) // Prints: true.
+  /// import "package:sealed_languages/sealed_languages.dart";
+  ///
+  /// void main() {
+  ///   final script = Script.maybeFromAnyCode("Latn");
+  ///   assert(script != null);
+  /// }
   /// ```
   ///
   /// In the above example, the `maybeFromAnyCode` method is called with the
@@ -1128,7 +1137,12 @@ sealed class Script extends WritingSystem
   ///
   /// Example:
   /// ```dart
-  /// final script = Script.maybeFromCode("Latn");
+  /// import "package:sealed_languages/sealed_languages.dart";
+  ///
+  /// void main() {
+  ///   final script = Script.maybeFromCode("Latn");
+  ///   assert(script != null);
+  /// }
   /// ```
   ///
   /// In the above example, the `maybeFromCode` static method is called with the
@@ -1158,7 +1172,12 @@ sealed class Script extends WritingSystem
   ///
   /// Example:
   /// ```dart
-  /// final script = Script.maybeFromCodeNumeric("215");
+  /// import "package:sealed_languages/sealed_languages.dart";
+  ///
+  /// void main() {
+  ///   final script = Script.maybeFromCodeNumeric("215");
+  ///   assert(script != null);
+  /// }
   /// ```
   /// In the above example, the `maybeFromCodeNumeric` static method is called
   /// with the code "215". The resulting [Script] instance (or null) is assigned
@@ -1179,8 +1198,12 @@ sealed class Script extends WritingSystem
   /// Formats the given [input] to a standard four-character ISO 15924 code.
   /// Example:
   /// ```dart
-  /// final script = Script.formatToStandardCode("LATN");
-  /// print(script) // Prints: "Latn"
+  /// import "package:sealed_languages/sealed_languages.dart";
+  ///
+  /// void main() {
+  ///   final formatted = Script.formatToStandardCode("LATN");
+  ///   assert(formatted == "Latn");
+  /// }
   /// ```
   static String formatToStandardCode(String input) =>
       // ignore: avoid-substring, no emojis expected here.

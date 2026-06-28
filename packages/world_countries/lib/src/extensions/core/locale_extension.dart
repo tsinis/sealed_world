@@ -26,7 +26,7 @@ extension LocaleExtension on Locale? {
   ///
   /// Example usage:
   ///
-  /// ```dart
+  /// ```dart#no-test
   /// final locale = Locale('en', 'US');
   /// // typedLocale is equal to: TypedLocale(LangEng(), country: CountryUsa()).
   /// final typedLocale = locale.maybeToTypedLocale();

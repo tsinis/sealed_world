@@ -135,7 +135,7 @@ abstract class BasicPicker<T extends IsoTranslated, W extends IsoTile<T>>
   /// `visualDensity`, etc.) as a reference.
   ///
   /// Example:
-  /// ```dart
+  /// ```dart#no-test
   /// itemBuilder: (itemProperties, defaultTile) {
   ///   // Option 1: Use the default tile as-is
   ///   return defaultTile;
@@ -186,7 +186,7 @@ abstract class BasicPicker<T extends IsoTranslated, W extends IsoTile<T>>
   /// properties applied.
   ///
   /// Example usage in custom itemBuilder:
-  /// ```dart
+  /// ```dart#no-test
   /// itemBuilder: (itemProperties, defaultTile) {
   ///   // Use the default tile as-is
   ///   return defaultTile;

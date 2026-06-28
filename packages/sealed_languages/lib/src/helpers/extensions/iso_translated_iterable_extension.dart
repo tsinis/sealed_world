@@ -26,14 +26,18 @@ extension IsoTranslatedIterableExtension<
   /// Example usage:
   ///
   /// ```dart
-  /// final map = NaturalLanguage.list.commonNamesMap(
-  ///   options: const LocaleMappingOptions(
-  ///   mainLocale: BasicLocale(LangCes()),
-  ///   fallbackLocale: BasicLocale(LangEng(), countryCode: "US"),
-  ///   localizeFullNames: false,
-  ///   ),
-  /// );
-  /// print(map[const LangAfr()]); // "Afrikaans"
+  /// import "package:sealed_languages/sealed_languages.dart";
+  ///
+  /// void main() {
+  ///   final map = NaturalLanguage.list.commonNamesMap(
+  ///     options: const LocaleMappingOptions(
+  ///       mainLocale: BasicLocale(LangCes()),
+  ///       fallbackLocale: BasicLocale(LangEng(), countryCode: "US"),
+  ///       localizeFullNames: false,
+  ///     ),
+  ///   );
+  ///   assert(map.isNotEmpty);
+  /// }
   /// ```
   Map<I, String> commonNamesMap<B extends L>({
     required LocaleMappingOptions<B> options,

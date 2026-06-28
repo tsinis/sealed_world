@@ -13,7 +13,7 @@ import "../../model/translated_name.dart";
 ///
 /// Example usage:
 ///
-/// ```dart
+/// ```dart#no-test
 /// TranslatedCountry country = ... // An object implementing the Translated interface
 ///
 /// TranslatedName translation = country.translation(BasicLocale(
@@ -52,8 +52,13 @@ extension TranslatedExtension<
   ///
   /// Example:
   /// ```dart
-  /// // Returns German common name for the language or `orElse` if not found.
-  /// final name = language.commonNameFor(const BasicLocale(LangDeu()));
+  /// import "package:sealed_languages/sealed_languages.dart";
+  ///
+  /// void main() {
+  ///   const language = LangEng();
+  ///   final name = language.commonNameFor(const BasicLocale(LangDeu()));
+  ///   assert(name.isNotEmpty);
+  /// }
   /// ```
   String commonNameFor<B extends L>(
     B mainLocale, {
@@ -84,8 +89,13 @@ extension TranslatedExtension<
   ///
   /// Example:
   /// ```dart
-  /// // Returns German common name for the language or `null` if not found.
-  /// final name = language.maybeCommonNameFor(const BasicLocale(LangDeu()));
+  /// import "package:sealed_languages/sealed_languages.dart";
+  ///
+  /// void main() {
+  ///   const language = LangEng();
+  ///   final name = language.maybeCommonNameFor(const BasicLocale(LangDeu()));
+  ///   assert(name != null);
+  /// }
   /// ```
   String? maybeCommonNameFor<B extends L>(
     B? mainLocale, {

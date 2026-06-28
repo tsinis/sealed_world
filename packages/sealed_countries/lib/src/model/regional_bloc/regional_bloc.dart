@@ -12,12 +12,12 @@ part "../../data/regional_bloc/regional_bloc.data.dart";
 /// Example usage:
 ///
 /// ```dart
-/// class SomeBloc extends RegionalBloc {
-///   const SomeBloc({required super.name});
-/// }
+/// import "package:sealed_countries/sealed_countries.dart";
 ///
-/// final bloc = SomeBloc(name: "Some Bloc", acronym: "SB");
-/// print(bloc.name); // Prints: "Some Bloc"
+/// void main() {
+///   const bloc = BlocEU();
+///   assert(bloc.name == "European Union");
+/// }
 /// ```
 sealed class RegionalBloc extends WorldBloc {
   /// Creates a new [RegionalBloc] object with the given name.

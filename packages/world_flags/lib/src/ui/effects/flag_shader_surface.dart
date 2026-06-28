@@ -33,26 +33,41 @@ import "waved_flag_shader_delegate.dart";
 ///
 /// Basic usage with default shader options:
 /// ```dart
-/// FlagShaderSurface(CountryUsa())
+/// import "package:world_flags/world_flags.dart";
+///
+/// void main() {
+///   final country = WorldCountry.list.first;
+///   FlagShaderSurface(country);
+/// }
 /// ```
 ///
 /// With custom shader options:
 /// ```dart
-/// FlagShaderSurface(
-///   CountryFra(),
-///   options: FlagShaderOptions(
-///     turbulence: 0.1,
-///   ),
-/// )
+/// import "package:world_flags/world_flags.dart";
+///
+/// void main() {
+///   final country = WorldCountry.list.first;
+///   FlagShaderSurface(
+///     country,
+///     options: const FlagShaderOptions(
+///       turbulence: 0.1,
+///     ),
+///   );
+/// }
 /// ```
 ///
 /// With explicit dimensions:
 /// ```dart
-/// FlagShaderSurface(
-///   CountryDeu(),
-///   width: 200,
-///   height: 120,
-/// )
+/// import "package:world_flags/world_flags.dart";
+///
+/// void main() {
+///   final country = WorldCountry.list.first;
+///   FlagShaderSurface(
+///     country,
+///     width: 200,
+///     height: 120,
+///   );
+/// }
 /// ```
 /// {@endtemplate}
 ///
@@ -100,7 +115,9 @@ class FlagShaderSurface extends StatefulWidget {
     this.width,
     this.aspectRatio,
     super.key,
+    // ignore: prefer_initializing_formals, private field with public param name.
   }) : _map = map,
+       // ignore: prefer_initializing_formals, private field with public param name.
        _alternativeMap = alternativeMap;
 
   /// The ISO-standardized object whose flag should be displayed.

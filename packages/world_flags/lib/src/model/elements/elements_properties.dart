@@ -13,14 +13,19 @@ import "../shape.dart";
 ///
 /// Example usage:
 /// ```dart
-/// const element = ElementsProperties(
-///   Color(0xFF0000FF),
-///   shape: Triangle(),
-///   offset: Offset(0.5, 0.5),
-///   heightFactor: 0.8,
-///   widthFactor: 0.8,
-///   angle: 90,
-/// );
+/// import "package:world_flags/src/model/shape.dart";
+///
+/// void main() {
+///   const element = ElementsProperties(
+///     Color(0xFF0000FF),
+///     shape: Triangle(),
+///     offset: Offset(0.5, 0.5),
+///     heightFactor: 0.8,
+///     widthFactor: 0.8,
+///     angle: 90,
+///   );
+///   assert(element.heightFactor == 0.8);
+/// }
 /// ```
 @immutable
 class ElementsProperties {

@@ -28,7 +28,7 @@ import "../model/typedefs.dart";
 ///
 /// Example usage:
 ///
-/// ```dart
+/// ```dart#no-test
 /// const typedLocaleDelegate = TypedLocaleDelegate(
 ///       isoCollections: IsoCollections(
 ///         localeMapResolution: [
@@ -236,7 +236,7 @@ class TypedLocaleDelegate implements LocalizationsDelegate<TypedLocale?> {
   ///
   /// Example usage:
   ///
-  /// ```dart
+  /// ```dart#no-test
   /// final typedLocale = TypedLocaleDelegate.of(context);
   /// // or just as final typedLocale = context.maybeLocale;
   /// ```

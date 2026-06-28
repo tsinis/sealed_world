@@ -10,9 +10,12 @@ extension WeekdayExtension on Weekday {
   /// Example usage:
   ///
   /// ```dart
-  /// const monday = Weekday.monday;
-  /// final labelShort = monday.labelShort;
-  /// print(labelShort); // Output: "Mon"
+  /// import "package:sealed_countries/sealed_countries.dart";
+  ///
+  /// void main() {
+  ///   const monday = Weekday.monday;
+  ///   assert(monday.labelShort == "Mon");
+  /// }
   /// ```
   // ignore: avoid-substring, no emojis here.
   String get labelShort => label.substring(0, 3);

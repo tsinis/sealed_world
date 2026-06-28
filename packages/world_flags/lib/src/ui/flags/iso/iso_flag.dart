@@ -19,12 +19,18 @@ import "../basic_flag.dart";
 ///
 /// Example usage:
 /// ```dart
-/// IsoFlag(
-///   isoObject,
-///   const {}, // Map of flags for ISO objects.
-///   height: 50,
-///   decoration: BoxDecoration(border: Border.all(color: Colors.black)),
-/// )
+/// import "package:flutter/material.dart";
+/// import "package:world_flags/world_flags.dart";
+///
+/// void main() {
+///   final country = WorldCountry.list.first;
+///   IsoFlag(
+///     country,
+///     smallSimplifiedFlagsMap,
+///     height: 50,
+///     decoration: BoxDecoration(border: Border.all()),
+///   );
+/// }
 /// ```
 @optionalTypeArgs
 class IsoFlag<T extends IsoStandardized, F extends BasicFlag>
@@ -33,7 +39,7 @@ class IsoFlag<T extends IsoStandardized, F extends BasicFlag>
   ///
   /// - [item]: The item for which the flag is to be displayed.
   /// - [_map]: A map of flags for ISO objects.
-  /// - [alternativeMap]: A map of non-official or alternative flags of the ISO.
+  /// - [_alternativeMap]: A map of non-official or alternative flags of ISO.
   /// - [aspectRatio]: The aspect ratio of the flag.
   /// - [decoration]: The decoration to paint behind the flag.
   /// - [decorationPosition]: The position of the decoration.
@@ -48,7 +54,7 @@ class IsoFlag<T extends IsoStandardized, F extends BasicFlag>
   const IsoFlag(
     this.item,
     this._map, {
-    Map<T, F>? alternativeMap,
+    this._alternativeMap,
     this.orElse,
     this.shader,
     super.height,
@@ -59,7 +65,7 @@ class IsoFlag<T extends IsoStandardized, F extends BasicFlag>
     super.padding,
     super.child,
     super.key,
-  }) : _alternativeMap = alternativeMap;
+  });
 
   final Map<T, F> _map;
   final Map<T, F>? _alternativeMap;

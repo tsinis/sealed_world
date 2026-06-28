@@ -1261,7 +1261,12 @@ sealed class WorldCountry extends Country
   ///
   /// Example:
   /// ```dart
-  /// final country = WorldCountry.fromAnyCode("BLR");
+  /// import "package:sealed_countries/sealed_countries.dart";
+  ///
+  /// void main() {
+  ///   final country = WorldCountry.fromAnyCode("BLR");
+  ///   assert(country.name == "Belarus");
+  /// }
   /// ```
   ///
   /// In the above example, the `fromAnyCode` factory method is called with the
@@ -1538,8 +1543,12 @@ sealed class WorldCountry extends Country
   ///
   /// Example:
   /// ```dart
-  /// WorldCountry? blr = WorldCountry.maybeFromAnyCode(CountryEnum.blr.name);
-  /// print(blr != null) // Prints: true.
+  /// import "package:sealed_countries/sealed_countries.dart";
+  ///
+  /// void main() {
+  ///   final blr = WorldCountry.maybeFromAnyCode("BLR");
+  ///   assert(blr != null);
+  /// }
   /// ```
   ///
   /// In the above example, the [maybeFromAnyCode] method is called with the

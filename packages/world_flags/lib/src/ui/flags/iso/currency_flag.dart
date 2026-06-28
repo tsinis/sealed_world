@@ -46,10 +46,15 @@ import "dual_flag.dart";
 ///
 /// Example usage:
 /// ```dart
-/// CurrencyFlag.fromFlagMap(
-///   const FiatUsd(),
-///   alternativeMap: context.maps.currencyFlags,
-/// )
+/// import "package:world_flags/world_flags.dart";
+///
+/// void main() {
+///   final flag = CurrencyFlag.fromFlagMap(
+///     const FiatUsd(),
+///     alternativeMap: CurrencyFlag.defaultSecondaryCountryCurrencyFlags,
+///   );
+///   assert(flag.item == const FiatUsd());
+/// }
 /// ```
 /// {@endtemplate}
 class CurrencyFlag extends DualFlag<FiatCurrency, BasicFlag> {

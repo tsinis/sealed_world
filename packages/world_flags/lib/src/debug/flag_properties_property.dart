@@ -13,10 +13,11 @@ import "../model/flag_properties.dart";
 ///
 /// Example usage:
 /// ```dart
-/// @override
-/// void debugFillProperties(DiagnosticPropertiesBuilder properties) {
-///   super.debugFillProperties(properties);
-///   properties.add(FlagPropertiesProperty(flagProperties));
+/// import "package:world_flags/world_flags.dart";
+///
+/// void main() {
+///   final property = FlagPropertiesProperty(flagAbwProperties);
+///   assert(property.value == flagAbwProperties);
 /// }
 /// ```
 class FlagPropertiesProperty extends DiagnosticsProperty<FlagProperties> {

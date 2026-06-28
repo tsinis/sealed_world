@@ -29,8 +29,12 @@ sealed class NaturalLanguageFamily extends LanguageFamily {
   /// Example usage:
   ///
   /// ```dart
-  /// final family = NaturalLanguageFamily.fromName('Indo-European');
-  /// print(family); // Prints: LanguageFamily(name: Indo-European).
+  /// import "package:sealed_languages/sealed_languages.dart";
+  ///
+  /// void main() {
+  ///   final family = NaturalLanguageFamily.fromName("Indo-European");
+  ///   assert(family.name == "Indo-European");
+  /// }
   /// ```
   factory NaturalLanguageFamily.fromName(
     Object name, [
@@ -56,8 +60,12 @@ sealed class NaturalLanguageFamily extends LanguageFamily {
   /// Example usage:
   ///
   /// ```dart
-  /// final family = NaturalLanguageFamily.maybeFromValue("Uralic");
-  /// print(family); // Prints: LanguageFamily(name: Uralic).
+  /// import "package:sealed_languages/sealed_languages.dart";
+  ///
+  /// void main() {
+  ///   final family = NaturalLanguageFamily.maybeFromValue("Uralic");
+  ///   assert(family != null);
+  /// }
   /// ```
   static NaturalLanguageFamily? maybeFromValue<T extends Object>(
     T? value, {

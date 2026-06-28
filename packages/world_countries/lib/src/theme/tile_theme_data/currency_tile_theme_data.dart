@@ -14,7 +14,7 @@ import "base_tile_theme_data.dart";
 /// of rendering a tile given [FiatCurrency] item properties.
 ///
 /// Example:
-/// ```dart
+/// ```dart#no-test
 /// final currencyTileThemeData = CurrencyTileThemeData(
 ///   itemBuilder: (itemProperties, defaultTile) {
 ///     // Use the default tile as-is

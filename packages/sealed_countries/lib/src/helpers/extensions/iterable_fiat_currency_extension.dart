@@ -29,10 +29,14 @@ extension IterableFiatCurrencyExtension on Iterable<FiatCurrency> {
   ///
   ///  Usage Example:
   /// ```dart
-  /// // Limit to top 1 country per currency.
-  /// final limitedMap = FiatCurrency.list.byCountryMap(
-  ///   mapper: (currency, countries) => countries.take(1).toList(),
-  /// );
+  /// import "package:sealed_countries/sealed_countries.dart";
+  ///
+  /// void main() {
+  ///   final limitedMap = FiatCurrency.list.byCountryMap(
+  ///     mapper: (currency, countries) => countries.take(1).toList(),
+  ///   );
+  ///   assert(limitedMap.isNotEmpty);
+  /// }
   /// ```
   Map<FiatCurrency, List<WorldCountry>> byCountryMap({
     Iterable<WorldCountry> countries = WorldCountry.list,
