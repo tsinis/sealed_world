@@ -1,4 +1,3 @@
-// ignore_for_file: deprecated_member_use
 import "package:sealed_currencies/sealed_currencies.dart";
 
 /// A class that represents a region of the world.
@@ -11,7 +10,7 @@ import "package:sealed_currencies/sealed_currencies.dart";
 ///
 /// ```dart
 /// import "package:sealed_countries/sealed_countries.dart";
-/// 
+///
 /// void main() {
 ///   final region = Continent.fromName("Europe");
 ///   assert(region.name == "Europe", "should match region name");

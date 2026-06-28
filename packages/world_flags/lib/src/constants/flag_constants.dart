@@ -12,17 +12,17 @@
 /// ```dart
 /// import "package:flutter/material.dart";
 /// import "package:world_flags/world_flags.dart";
-/// 
+///
 /// class FlagAspectRatioSlider extends StatefulWidget {
 ///   const FlagAspectRatioSlider({super.key});
-/// 
+///
 ///   @override
-///   State<FlagAspectRatioSlider> createState() => _FlagAspectRatioSliderState();
+/// State<FlagAspectRatioSlider> createState() => _FlagAspectRatioSliderState();
 /// }
-/// 
+///
 /// class _FlagAspectRatioSliderState extends State<FlagAspectRatioSlider> {
 ///   double _currentAspectRatio = FlagConstants.defaultAspectRatio;
-/// 
+///
 ///   @override
 ///   Widget build(BuildContext context) => Column(
 ///     mainAxisAlignment: MainAxisAlignment.center,
@@ -39,7 +39,7 @@
 ///     ],
 ///   );
 /// }
-/// 
+///
 /// void main() {
 ///   // Tearoff reference keeps the class reachable from main.
 ///   // ignore: unnecessary_statements

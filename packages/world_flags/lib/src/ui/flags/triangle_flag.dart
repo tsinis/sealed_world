@@ -8,8 +8,13 @@ import "basic_flag.dart";
 /// properties and customization options from [BasicFlag].
 ///
 /// Example usage:
-/// ```dart#no-test
-/// TriangleFlag(myFlagProperties, aspectRatio: 1.5),
+/// ```dart
+/// import "package:world_flags/world_flags.dart";
+///
+/// void main() {
+///   final flag = TriangleFlag(flagAbwProperties, aspectRatio: 1.5);
+///   assert(flag.properties == flagAbwProperties);
+/// }
 /// ```
 @Deprecated(
   "Use BasicFlag(properties) instead - the painter is now resolved "

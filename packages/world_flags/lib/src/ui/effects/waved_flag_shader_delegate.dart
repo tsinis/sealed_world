@@ -26,20 +26,33 @@ import "static_flag_shader_delegate.dart";
 ///
 /// Basic usage with default options:
 ///
-/// ```dart#no-test
-/// FlagShaderSurface(CountryUsa())
+/// ```dart
+/// import "package:sealed_countries/sealed_countries.dart";
+/// import "package:world_flags/src/ui/effects/flag_shader_surface.dart";
+///
+/// void main() {
+///   final surface = FlagShaderSurface(const CountryUsa());
+///   assert(surface.item == const CountryUsa());
+/// }
 /// ```
 ///
 /// With custom wave settings:
 ///
-/// ```dart#no-test
-/// FlagShaderSurface(
-///   CountryFra(),
-///   options: FlagShaderOptions(
-///     waveAmplitude: 0.05,
-///     animationSpeed: 0.8,
-///   ),
-/// )
+/// ```dart
+/// import "package:sealed_countries/sealed_countries.dart";
+/// import "package:world_flags/src/ui/effects/flag_shader_surface.dart";
+/// import "package:world_flags/src/ui/effects/flag_shader_options.dart";
+///
+/// void main() {
+///   final surface = FlagShaderSurface(
+///     const CountryFra(),
+///     options: const FlagShaderOptions(
+///       waveAmplitude: 0.05,
+///       animationSpeed: 0.8,
+///     ),
+///   );
+///   assert(surface.options.waveAmplitude == 0.05);
+/// }
 /// ```
 ///
 /// See also:

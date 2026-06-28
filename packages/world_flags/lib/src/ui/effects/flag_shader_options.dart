@@ -16,17 +16,21 @@ import "flag_shader_surface.dart" show FlagShaderSurface;
 ///
 /// ### Usage
 ///
-/// ```dart#no-test
-/// const options = FlagShaderOptions(
-///   waveAmplitude: 0.04,
-///   turbulence: 0.6,
-/// );
+/// ```dart
+/// import "package:sealed_countries/sealed_countries.dart";
+/// import "package:world_flags/src/ui/effects/flag_shader_surface.dart";
 ///
-/// return FlagShaderSurface(
-///   isoObject,
-///   simplifiedFlagsMap,
-///   options: options,
-/// );
+/// void main() {
+///   const options = FlagShaderOptions(
+///     waveAmplitude: 0.04,
+///     turbulence: 0.6,
+///   );
+///   final surface = FlagShaderSurface(
+///     const CountryUsa(),
+///     options: options,
+///   );
+///   assert(surface.options.waveAmplitude == 0.04);
+/// }
 /// ```
 ///
 /// ### Recommendations

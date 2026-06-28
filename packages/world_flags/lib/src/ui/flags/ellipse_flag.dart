@@ -8,8 +8,13 @@ import "basic_flag.dart";
 /// customization options from [BasicFlag].
 ///
 /// Example usage:
-/// ```dart#no-test
-/// EllipseFlag(myFlagProperties, aspectRatio: 1.5),
+/// ```dart
+/// import "package:world_flags/world_flags.dart";
+///
+/// void main() {
+///   final flag = EllipseFlag(flagAbwProperties, aspectRatio: 1.5);
+///   assert(flag.properties == flagAbwProperties);
+/// }
 /// ```
 @Deprecated(
   "Use BasicFlag(properties) instead - the painter is now resolved "

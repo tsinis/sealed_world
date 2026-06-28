@@ -15,12 +15,12 @@ import "lat_lng.dart";
 ///
 /// ```dart
 /// import "package:sealed_countries/sealed_countries.dart";
-/// 
+///
 /// void main() {
 ///   const capital = Capital("Ramallah", deJure: "Jerusalem");
 ///   const latLng = LatLng(31.9, 35.2);
 ///   const capitalInfo = CapitalInfo(capital: capital, latLng: latLng);
-///   assert(capitalInfo.capital.deFacto == "Ramallah", "should match de facto");
+///   assert(capitalInfo.capital.deFacto == "Ramallah", "must match de facto");
 ///   assert(capitalInfo.latLng.latitude == 31.9, "should match latitude");
 /// }
 /// ```

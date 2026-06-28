@@ -34,7 +34,7 @@ import "waved_flag_shader_delegate.dart";
 /// Basic usage with default shader options:
 /// ```dart
 /// import "package:world_flags/world_flags.dart";
-/// 
+///
 /// void main() {
 ///   final country = WorldCountry.list.first;
 ///   FlagShaderSurface(country);
@@ -44,7 +44,7 @@ import "waved_flag_shader_delegate.dart";
 /// With custom shader options:
 /// ```dart
 /// import "package:world_flags/world_flags.dart";
-/// 
+///
 /// void main() {
 ///   final country = WorldCountry.list.first;
 ///   FlagShaderSurface(
@@ -59,7 +59,7 @@ import "waved_flag_shader_delegate.dart";
 /// With explicit dimensions:
 /// ```dart
 /// import "package:world_flags/world_flags.dart";
-/// 
+///
 /// void main() {
 ///   final country = WorldCountry.list.first;
 ///   FlagShaderSurface(
@@ -115,7 +115,9 @@ class FlagShaderSurface extends StatefulWidget {
     this.width,
     this.aspectRatio,
     super.key,
+    // ignore: prefer_initializing_formals, private field with public param name.
   }) : _map = map,
+       // ignore: prefer_initializing_formals, private field with public param name.
        _alternativeMap = alternativeMap;
 
   /// The ISO-standardized object whose flag should be displayed.

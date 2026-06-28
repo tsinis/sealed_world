@@ -142,7 +142,7 @@ extension SealedWorldNullableIterableIsoExtension<T extends IsoStandardized>
   /// enum IsoEnum { de, cn, fr, rus }
   ///
   /// void main() {
-  ///   final enums = {const LangRus(), const LangFra()}.toEnums(IsoEnum.values);
+  ///   final enums = {const LangFra()}.toEnums(IsoEnum.values);
   ///   assert(enums.isNotEmpty, "should not be empty");
   /// }
   /// ```

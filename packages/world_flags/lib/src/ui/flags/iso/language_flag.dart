@@ -46,11 +46,16 @@ import "dual_flag.dart";
 /// primary flag as a regular [BasicFlag].
 ///
 /// Example usage:
-/// ```dart#no-test
-/// LanguageFlag.fromFlagMap(
-///   const LangDeu(),
-///   alternativeMap: context.maps.languageFlags,
-/// )
+/// ```dart
+/// import "package:world_flags/world_flags.dart";
+///
+/// void main() {
+///   final flag = LanguageFlag.fromFlagMap(
+///     const LangDeu(),
+///     alternativeMap: LanguageFlag.defaultSecondaryCountryLanguageFlags,
+///   );
+///   assert(flag.item == const LangDeu());
+/// }
 /// ```
 /// {@endtemplate}
 class LanguageFlag extends DualFlag<NaturalLanguage, BasicFlag> {

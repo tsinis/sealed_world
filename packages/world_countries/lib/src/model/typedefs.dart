@@ -32,9 +32,9 @@ import "search_data.dart";
 ///
 /// Example (conceptual — integrate your collation library similarly):
 /// ```dart
-/// Comparator<MapEntry<WorldCountry, String>> nameSort(BasicTypedLocale locale) =>
-///     (a, b) => a.value.compareTo(b.value);
-/// 
+/// Comparator<MapEntry<WorldCountry, String>> nameSort(BasicTypedLocale _) =>
+///   (a, b) => a.value.compareTo(b.value);
+///
 /// void main() {
 ///   const sorter = nameSort;
 ///   assert(
@@ -58,13 +58,13 @@ typedef L10nSorter<T extends IsoTranslated> =
 /// ```dart
 /// import "dart:ui";
 /// import "package:world_countries/world_countries.dart";
-/// 
+///
 /// void main() {
 ///   const localeEntry = LocaleEntry(
 ///     Locale("en"),
 ///     TypedLocale(LangEng()),
 ///   );
-///  assert(localeEntry.toString().isNotEmpty, "localeEntry should not be empty");
+///  assert(localeEntry.toString().isNotEmpty, "locale should not be empty");
 /// }
 /// ```
 typedef LocaleEntry = MapEntry<Locale, TypedLocale>;

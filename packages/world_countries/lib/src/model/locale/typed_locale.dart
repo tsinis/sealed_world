@@ -25,10 +25,10 @@ import "../typedefs.dart";
 ///
 /// ```dart
 /// import "package:world_countries/world_countries.dart";
-/// 
+///
 /// void main() {
 ///   const typedLocale = TypedLocale(LangEng(), script: ScriptLatn());
-///  assert(typedLocale.toString().isNotEmpty, "typedLocale should not be empty");
+///  assert(typedLocale.toString().isNotEmpty, "locale shouldn't be empty");
 /// }
 /// ```
 @immutable

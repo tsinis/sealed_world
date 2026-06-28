@@ -21,14 +21,14 @@ import "../model/iso/iso_maps.dart";
 /// ```dart#no-test
 /// import "package:flutter/widgets.dart";
 /// import "package:world_countries/world_countries.dart";
-/// 
+///
 /// void main() {
 ///   const pickersTheme = PickersThemeData(
 ///     padding: EdgeInsets.all(8),
 ///     searchBarPadding: EdgeInsets.symmetric(horizontal: 16),
 ///     showClearButton: false,
 ///   );
-///  assert(pickersTheme.toString().isNotEmpty, "pickersTheme should not be empty");
+///  assert(pickersTheme.toString().isNotEmpty, "theme should not be empty");
 /// }
 /// ```
 @immutable

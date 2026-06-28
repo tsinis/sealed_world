@@ -90,7 +90,7 @@ extension UpperCaseIsoMapExtension<V extends IsoStandardized>
   ///   final french = upperCaseIsoMap["FR"];  // Returns const LangFra()
   ///   final unknown = upperCaseIsoMap["DE"]; // Returns defaultValue
   ///   assert(originalMap.isNotEmpty, "originalMap should not be empty");
-  ///   assert(upperCaseIsoMap.isNotEmpty, "upperCaseIsoMap should not be empty");
+  ///   assert(upperCaseIsoMap.isNotEmpty, "map shouldn't be empty");
   ///   assert(english == const LangEng(), "should be LangEng");
   ///   assert(french == const LangFra(), "should be LangFra");
   ///   assert(unknown == const LangEng(), "should be LangEng");

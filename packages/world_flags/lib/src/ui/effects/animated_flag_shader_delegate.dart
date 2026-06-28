@@ -28,10 +28,12 @@ import "static_flag_shader_delegate.dart";
 ///
 /// A simple animated shader delegate:
 ///
-/// ```dart#no-test
+/// ```dart
+/// import "dart:ui";
+///
 /// class MyAnimatedShaderDelegate extends AnimatedFlagShaderDelegate {
 ///   MyAnimatedShaderDelegate({required super.vsync})
-///       : super(assetPath: 'shaders/my_animated_shader.frag');
+///       : super(assetPath: "shaders/my_animated_shader.frag");
 ///
 ///   @override
 ///   void configureShader(FragmentShader shader, Size size, Image image) {
@@ -39,21 +41,31 @@ import "static_flag_shader_delegate.dart";
 ///     shader.setFloat(2, time); // Pass time to shader.
 ///   }
 /// }
+///
+/// void main() {
+///   final type = MyAnimatedShaderDelegate;
+///   assert(type.toString().isNotEmpty);
+/// }
 /// ```
 ///
 /// With animation control:
 ///
-/// ```dart#no-test
+/// ```dart
 /// class PausableShaderDelegate extends AnimatedFlagShaderDelegate {
 ///   PausableShaderDelegate({
 ///     required super.vsync,
 ///     this.isPaused = false,
-///   }) : super(assetPath: 'shaders/pausable.frag');
+///   }) : super(assetPath: "shaders/pausable.frag");
 ///
 ///   final bool isPaused;
 ///
 ///   @override
 ///   bool get animate => !isPaused;
+/// }
+///
+/// void main() {
+///   final type = PausableShaderDelegate;
+///   assert(type.toString().isNotEmpty);
 /// }
 /// ```
 ///
@@ -103,9 +115,21 @@ abstract class AnimatedFlagShaderDelegate extends StaticFlagShaderDelegate {
   ///
   /// Override this getter to control animation based on external state:
   ///
-  /// ```dart#no-test
-  /// @override
-  /// bool get animate => options.animate && isVisible;
+  /// ```dart
+  /// class MyAnimateDelegate extends AnimatedFlagShaderDelegate {
+  ///   MyAnimateDelegate({required super.vsync})
+  ///       : super(assetPath: "shaders/pausable.frag");
+  ///
+  ///   final bool isVisible = true;
+  ///
+  ///   @override
+  ///   bool get animate => isVisible;
+  /// }
+  ///
+  /// void main() {
+  ///   final type = MyAnimateDelegate;
+  ///   assert(type.toString().isNotEmpty);
+  /// }
   /// ```
   ///
   /// When this returns `false`, the ticker is stopped and [time] stops
@@ -124,11 +148,24 @@ abstract class AnimatedFlagShaderDelegate extends StaticFlagShaderDelegate {
   ///
   /// Example with custom time logic:
   ///
-  /// ```dart#no-test
-  /// @override
-  /// void onTick(double deltaSeconds) {
-  ///   time += deltaSeconds * animationSpeed * direction;
-  ///   if (time > maxTime) time = 0; // Loop animation.
+  /// ```dart
+  /// class MyTickDelegate extends AnimatedFlagShaderDelegate {
+  ///   MyTickDelegate({required super.vsync})
+  ///       : super(assetPath: "shaders/pausable.frag");
+  ///
+  ///   final double direction = 1.0;
+  ///   final double maxTime = 10.0;
+  ///
+  ///   @override
+  ///   void onTick(double deltaSeconds) {
+  ///     time += deltaSeconds * animationSpeed * direction;
+  ///     if (time > maxTime) time = 0; // Loop animation.
+  ///   }
+  /// }
+  ///
+  /// void main() {
+  ///   final type = MyTickDelegate;
+  ///   assert(type.toString().isNotEmpty);
   /// }
   /// ```
   @protected

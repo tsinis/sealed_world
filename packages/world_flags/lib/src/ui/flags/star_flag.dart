@@ -8,8 +8,13 @@ import "basic_flag.dart";
 /// customization options from [BasicFlag].
 ///
 /// Example usage:
-/// ```dart#no-test
-/// StarFlag(myFlagProperties, aspectRatio: 1.5),
+/// ```dart
+/// import "package:world_flags/world_flags.dart";
+///
+/// void main() {
+///   final flag = StarFlag(flagAbwProperties, aspectRatio: 1.5);
+///   assert(flag.properties == flagAbwProperties);
+/// }
 /// ```
 @Deprecated(
   "Use BasicFlag(properties) instead - the painter is now resolved "

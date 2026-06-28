@@ -8,11 +8,10 @@ import "package:sealed_countries/sealed_countries.dart";
 /// codes, and additional data in a structured way that's helpful for debugging.
 ///
 /// Example usage:
-/// ```dart#no-test
-/// void debugFillProperties(DiagnosticPropertiesBuilder properties) {
-///   super.debugFillProperties(properties);
-///   properties.add(IsoDiagnosticsProperty(isoObject));
-///   // Add other properties as needed.
+/// ```dart
+/// void main() {
+///   final property = IsoDiagnosticsProperty(const CountryUsa());
+///   assert(property.value == const CountryUsa());
 /// }
 /// ```
 class IsoDiagnosticsProperty<Iso extends IsoStandardized>

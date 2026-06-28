@@ -34,7 +34,7 @@ extension MapsExtension on Maps {
   /// import "package:sealed_countries/sealed_countries.dart";
   ///
   /// void main() {
-  ///   final maps = const Maps(googleMaps: "abcdefg", openStreetMaps: "123456789");
+  ///   final maps = const Maps(googleMaps: "abcdefg", openStreetMaps: "1234");
   ///   assert(maps.googleMapsUrl == "https://goo.gl/maps/abcdefg");
   /// }
   /// ```
@@ -51,8 +51,8 @@ extension MapsExtension on Maps {
   /// import "package:sealed_countries/sealed_countries.dart";
   ///
   /// void main() {
-  ///   final maps = const Maps(googleMaps: "abcdefg", openStreetMaps: "123456789");
-  ///   assert(maps.openStreetMapsUrl == "https://www.openstreetmap.org/123456789");
+  ///   final maps = const Maps(googleMaps: "abcdefg", openStreetMaps: "123");
+  ///   assert(maps.openStreetMapsUrl == "https://www.openstreetmap.org/123");
   /// }
   /// ```
   String get openStreetMapsUrl => Maps.openStreetMapsPrefix + openStreetMaps;

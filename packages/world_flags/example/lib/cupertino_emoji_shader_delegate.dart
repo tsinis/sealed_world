@@ -11,24 +11,36 @@ import "package:world_flags/world_flags.dart";
 ///
 /// For shared delegate across multiple widgets (recommended for ListView):
 ///
-/// ```dart#no-test
-/// final _delegate = CupertinoEmojiShaderDelegate();
+/// ```dart
+/// import "package:sealed_countries/sealed_countries.dart";
+/// import "package:world_flags/src/ui/effects/flag_shader_surface.dart";
+/// import "package:world_flags_example/cupertino_emoji_shader_delegate.dart";
 ///
-/// // Use shader: parameter for externally-owned delegates!
-/// FlagShaderSurface(
-///   item,
-///   shader: _delegate,  // NOT delegateBuilder!
-/// )
+/// void main() {
+///   final delegate = CupertinoEmojiShaderDelegate();
+///   final surface = FlagShaderSurface(
+///     const CountryUsa(),
+///     shader: delegate,
+///   );
+///   assert(surface.shader != null);
+/// }
 /// ```
 ///
 /// For single-use:
 ///
-/// ```dart#no-test
-/// FlagShaderSurface(
-///   item,
-///   delegateBuilder: (vsync, options, properties) =>
-///       CupertinoEmojiShaderDelegate(),
-/// )
+/// ```dart
+/// import "package:sealed_countries/sealed_countries.dart";
+/// import "package:world_flags/src/ui/effects/flag_shader_surface.dart";
+/// import "package:world_flags_example/cupertino_emoji_shader_delegate.dart";
+///
+/// void main() {
+///   final surface = FlagShaderSurface(
+///     const CountryUsa(),
+///     delegateBuilder: (vsync, options, properties) =>
+///         CupertinoEmojiShaderDelegate(),
+///   );
+///   assert(surface.delegateBuilder != null);
+/// }
 /// ```
 ///
 /// ## How This Works
