@@ -10,7 +10,7 @@
 /// import 'package:sealed_languages/sealed_languages.dart';
 ///
 /// void main() {
-///   const json = '{\'name\': \'John\', \'age\': 30}';
+///   const json = '{"name": "John", "age": 30}';
 ///   final map = jsonDecode(json) as JsonMap;
 ///   assert(map['name'] == 'John');
 ///   assert(map['age'] == 30);

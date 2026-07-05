@@ -110,7 +110,7 @@ Future<void> main(List<String> args) async {
     final relativePath = relative(dir.path, from: repoRoot.path);
     print("Testing documentation in $relativePath...");
 
-    await Process.run(
+    final writeResult = await Process.run(
       "dart",
       [
         "pub",
@@ -126,6 +126,13 @@ Future<void> main(List<String> args) async {
     );
 
     final testDir = Directory(join(dir.path, ".dart_tool", "dartdoc_test"));
+    if (writeResult.exitCode != 0 || !testDir.existsSync()) {
+      stderr.write(writeResult.stderr);
+      print("✗ $relativePath failed validation.");
+      overallSuccess = false;
+
+      continue;
+    }
 
     // Unescape HTML entities that dartdoc_test 0.1.0 produces in code blocks.
     for (final file in testDir.listSync().whereType<File>()) {

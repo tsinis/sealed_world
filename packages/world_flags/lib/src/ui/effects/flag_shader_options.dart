@@ -18,7 +18,7 @@ import "flag_shader_surface.dart" show FlagShaderSurface;
 ///
 /// ```dart
 /// import 'package:sealed_countries/sealed_countries.dart';
-/// import 'package:world_flags/src/ui/effects/flag_shader_surface.dart';
+/// import 'package:world_flags/world_flags.dart';
 ///
 /// void main() {
 ///   const options = FlagShaderOptions(
