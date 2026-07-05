@@ -15,11 +15,11 @@ import "../../../helpers/extensions/country_submodels/demonyms_extension.dart";
 /// ```dart
 /// final demonyms = Demonyms(
 ///   language: LangEng(),
-///   female: "Englishwoman",
-///   male: "Englishman",
+///   female: 'Englishwoman',
+///   male: 'Englishman',
 /// );
-/// print(demonyms.female); // Output: "Englishwoman"
-/// print(demonyms.male); // Output: "Englishman"
+/// print(demonyms.female); // Output: 'Englishwoman'
+/// print(demonyms.male); // Output: 'Englishman'
 /// ```
 final class Demonyms implements JsonEncodable<Demonyms> {
   /// Creates a new [Demonyms] object with the given language and demonym

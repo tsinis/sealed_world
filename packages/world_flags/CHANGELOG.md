@@ -13,6 +13,14 @@ CHORE
 
 - The Dart SDK was bumped to v3.12.0.
 
+TEST
+
+- Integrated `dartdoc_test` validation for code samples in documentation comments.
+
+DOCUMENTATION
+
+- Fixed documentation code sample (code examples) issues.
+
 ## 3.2.0
 
 NEW FEATURES

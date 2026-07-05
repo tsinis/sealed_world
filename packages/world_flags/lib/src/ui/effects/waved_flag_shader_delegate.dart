@@ -27,19 +27,29 @@ import "static_flag_shader_delegate.dart";
 /// Basic usage with default options:
 ///
 /// ```dart
-/// FlagShaderSurface(CountryUsa())
+/// import 'package:world_flags/world_flags.dart';
+///
+/// void main() {
+///   final surface = FlagShaderSurface(const CountryUsa());
+///   assert(surface.item == const CountryUsa());
+/// }
 /// ```
 ///
 /// With custom wave settings:
 ///
 /// ```dart
-/// FlagShaderSurface(
-///   CountryFra(),
-///   options: FlagShaderOptions(
-///     waveAmplitude: 0.05,
-///     animationSpeed: 0.8,
-///   ),
-/// )
+/// import 'package:world_flags/world_flags.dart';
+///
+/// void main() {
+///   final surface = FlagShaderSurface(
+///     const CountryFra(),
+///     options: const FlagShaderOptions(
+///       waveAmplitude: 0.05,
+///       animationSpeed: 0.8,
+///     ),
+///   );
+///   assert(surface.options.waveAmplitude == 0.05);
+/// }
 /// ```
 ///
 /// See also:

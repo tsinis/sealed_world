@@ -136,22 +136,17 @@ abstract class BasicPicker<T extends IsoTranslated, W extends IsoTile<T>>
   ///
   /// Example:
   /// ```dart
-  /// itemBuilder: (itemProperties, defaultTile) {
-  ///   // Option 1: Use the default tile as-is
+  /// import 'package:world_countries/world_countries.dart';
+  ///
+  /// Widget? myItemBuilder(
+  ///   ItemProperties<WorldCountry> props,
+  ///   IsoTile<WorldCountry>? defaultTile,
+  /// ) {
   ///   return defaultTile;
+  /// }
   ///
-  ///   // Option 2: Use tile properties to create custom widget
-  ///   final isDense = defaultTile.dense ?? false;
-  ///   return MyCustomTile(
-  ///     item: itemProperties.item,
-  ///     dense: isDense,
-  ///   );
-  ///
-  ///   // Option 3: Modify the default tile appearance
-  ///   return DecoratedBox(
-  ///     decoration: BoxDecoration(color: Colors.blue.shade50),
-  ///     child: defaultTile,
-  ///   );
+  /// void main() {
+  ///   assert(myItemBuilder.hashCode != 0);
   /// }
   /// ```
   @override
@@ -187,15 +182,17 @@ abstract class BasicPicker<T extends IsoTranslated, W extends IsoTile<T>>
   ///
   /// Example usage in custom itemBuilder:
   /// ```dart
-  /// itemBuilder: (itemProperties, defaultTile) {
-  ///   // Use the default tile as-is
-  ///   return defaultTile;
+  /// import 'package:world_countries/world_countries.dart';
   ///
-  ///   // Or wrap/modify it
-  ///   return ColoredBox(
-  ///     color: Colors.blue.shade50,
-  ///     child: defaultTile,
-  ///   );
+  /// Widget? myItemBuilder(
+  ///   ItemProperties<WorldCountry> props,
+  ///   IsoTile<WorldCountry>? defaultTile,
+  /// ) {
+  ///   return defaultTile;
+  /// }
+  ///
+  /// void main() {
+  ///   assert(myItemBuilder.hashCode != 0);
   /// }
   /// ```
   @protected

@@ -10,7 +10,7 @@ import "package:sealed_currencies/sealed_currencies.dart";
 ///
 /// ```dart
 /// final monday = Weekday.monday;
-/// print(monday.label); // Prints: "Monday"
+/// print(monday.label); // Prints: 'Monday'
 /// ```
 enum Weekday implements JsonEncodable<Weekday> {
   /// Represents Monday.

@@ -14,25 +14,31 @@ import "../../model/translated_name.dart";
 /// Example usage:
 ///
 /// ```dart
-/// TranslatedCountry country = ... // An object implementing the Translated interface
+/// import 'package:sealed_languages/sealed_languages.dart';
 ///
-/// TranslatedName translation = country.translation(BasicLocale(
-///   LangAar(), // The desired language.
-///   countryCode: 'DE', // Optional country code filter.
-///   script: const ScriptLatn(), // Optional script filter.
-///   ),
-///   orElse: const LangEng(), // Default language if no translation is found.
-/// );
+/// void main() {
+///   const language = LangEng();
+///   final name = language.commonNameFor(
+///     const BasicLocale(
+///       LangDeu(),
+///       countryCode: 'DE',
+///       script: const ScriptLatn(),
+///     ),
+///     orElse: 'English',
+///   );
+///   assert(name.isNotEmpty);
+/// }
 /// ```
 ///
-/// In this example, the `country` object is an instance of a class that
-/// implements the [IsoTranslated] interface. By using the `translation` method
-/// provided by the [TranslatedExtension] extension, you can retrieve the
-/// translation for a specific language. The method accepts the desired locale
-/// [BasicLocale] with required [NaturalLanguage], optional `countryCode`,
-/// `script`, and a default `orElse` language if no translation is found. It
-/// returns the translation as a [TranslatedName] object. If no translation is
-/// found for the specified language, it falls back to the `orElse` language.
+/// In this example, the `language` object is an instance of a class that
+/// implements the [IsoTranslated] interface. By using the `commonNameFor`
+/// method provided by the [TranslatedExtension] extension, you can retrieve
+/// the translation for a specific language. The method accepts the desired
+/// locale [BasicLocale] with required [NaturalLanguage], optional
+/// `countryCode`, `script`, and a default `orElse` string if no translation
+/// is found. It returns the translation as a [String] object. If no
+/// translation is found for the specified language, it falls back to the
+/// `orElse` string.
 extension TranslatedExtension<
   T extends TranslatedName,
   L extends BasicLocale,
@@ -52,8 +58,13 @@ extension TranslatedExtension<
   ///
   /// Example:
   /// ```dart
-  /// // Returns German common name for the language or `orElse` if not found.
-  /// final name = language.commonNameFor(const BasicLocale(LangDeu()));
+  /// import 'package:sealed_languages/sealed_languages.dart';
+  ///
+  /// void main() {
+  ///   const language = LangEng();
+  ///   final name = language.commonNameFor(const BasicLocale(LangDeu()));
+  ///   assert(name.isNotEmpty);
+  /// }
   /// ```
   String commonNameFor<B extends L>(
     B mainLocale, {
@@ -84,8 +95,13 @@ extension TranslatedExtension<
   ///
   /// Example:
   /// ```dart
-  /// // Returns German common name for the language or `null` if not found.
-  /// final name = language.maybeCommonNameFor(const BasicLocale(LangDeu()));
+  /// import 'package:sealed_languages/sealed_languages.dart';
+  ///
+  /// void main() {
+  ///   const language = LangEng();
+  ///   final name = language.maybeCommonNameFor(const BasicLocale(LangDeu()));
+  ///   assert(name != null);
+  /// }
   /// ```
   String? maybeCommonNameFor<B extends L>(
     B? mainLocale, {

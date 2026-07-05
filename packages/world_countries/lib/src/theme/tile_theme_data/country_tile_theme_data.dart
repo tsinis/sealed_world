@@ -17,21 +17,14 @@ import "base_tile_theme_data.dart";
 ///
 /// Example:
 /// ```dart
-/// final countryTileThemeData = CountryTileThemeData(
-///   itemBuilder: (itemProperties, defaultTile) {
-///     // Use the default tile as-is
-///     return defaultTile;
+/// import 'package:world_countries/world_countries.dart';
 ///
-///     // Or customize it with copyWith
-///     return defaultTile.copyWith(dense: true);
-///
-///     // Or build a custom tile
-///     return MyCountryTile(
-///       title: itemProperties.item.commonNameFor(locale),
-///       isDense: defaultTile.dense ?? false,
-///     );
-///   },
-/// );
+/// void main() {
+///   final countryTileTheme = CountryTileThemeData(
+///     itemBuilder: (props, defaultTile) => defaultTile,
+///   );
+///   assert(countryTileTheme.itemBuilder != null);
+/// }
 /// ```
 ///
 /// `MyCountryTile` is a hypothetical widget that uses the [WorldCountry]

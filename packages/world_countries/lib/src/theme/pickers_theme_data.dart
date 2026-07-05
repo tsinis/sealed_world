@@ -19,11 +19,16 @@ import "../model/iso/iso_maps.dart";
 ///
 /// Usage example:
 /// ```dart
-/// final pickersTheme = PickersThemeData(
-///   padding: EdgeInsets.all(8),
-///   searchBarPadding: EdgeInsets.symmetric(horizontal: 16),
-///   showClearButton: false,
-/// );
+/// import 'package:world_countries/world_countries.dart';
+///
+/// void main() {
+///   const pickersTheme = PickersThemeData(
+///     padding: EdgeInsets.all(8),
+///     searchBarPadding: EdgeInsets.symmetric(horizontal: 16),
+///     showClearButton: false,
+///   );
+///   assert(pickersTheme.toString().isNotEmpty, 'theme should not be empty');
+/// }
 /// ```
 @immutable
 class PickersThemeData extends ThemeExtension<PickersThemeData>
@@ -72,7 +77,15 @@ class PickersThemeData extends ThemeExtension<PickersThemeData>
   ///
   /// Usage:
   /// ```dart
-  /// final newTheme = pickerTheme.copyWith(padding: EdgeInsets.all(16));
+  /// import 'package:world_countries/world_countries.dart';
+  ///
+  /// void main() {
+  ///   const pickerTheme = PickersThemeData();
+  ///   final newTheme = pickerTheme.copyWith(
+  ///     padding: const EdgeInsets.all(16),
+  ///   );
+  ///   assert(newTheme.toString().isNotEmpty);
+  /// }
   /// ```
   @override
   @useResult

@@ -1,3 +1,13 @@
+## 2.0.3
+
+TEST
+
+- Integrated `dartdoc_test` validation for code samples in documentation comments.
+
+DOCUMENTATION
+
+- Fixed the `LanguagesLocaleMapper.localize` example code snippet to instantiate the mapper.
+
 ## 2.0.2
 
 DOCUMENTATION

@@ -9,10 +9,9 @@ import "package:sealed_countries/sealed_countries.dart";
 ///
 /// Example usage:
 /// ```dart
-/// void debugFillProperties(DiagnosticPropertiesBuilder properties) {
-///   super.debugFillProperties(properties);
-///   properties.add(IsoDiagnosticsProperty(isoObject));
-///   // Add other properties as needed.
+/// void main() {
+///   final property = IsoDiagnosticsProperty(const CountryUsa());
+///   assert(property.value == const CountryUsa());
 /// }
 /// ```
 class IsoDiagnosticsProperty<Iso extends IsoStandardized>

@@ -12,9 +12,9 @@ import "../../../helpers/extensions/country_submodels/capital_extension.dart";
 /// Example usage:
 ///
 /// ```dart
-/// final capital = const Capital("Ramallah", deJure: "Jerusalem");
-/// print(capital.deFacto); // Prints: "Ramallah"
-/// print(capital.deJure); // Prints: "Jerusalem"
+/// final capital = const Capital('Ramallah', deJure: 'Jerusalem');
+/// print(capital.deFacto); // Prints: 'Ramallah'
+/// print(capital.deJure); // Prints: 'Jerusalem'
 /// print(capital.third); // Prints: null
 /// ```
 // Read more about the world's capitals

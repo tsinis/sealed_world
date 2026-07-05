@@ -29,7 +29,16 @@ extension WorldCountriesBuildContextExtension on BuildContext {
   ///
   /// Usage:
   /// ```dart
-  /// final PickersThemeData? pickersThemeData = context.pickerTheme;
+  /// import 'package:world_countries/world_countries.dart';
+  ///
+  /// void example(BuildContext context) {
+  ///   final PickersThemeData? pickersThemeData = context.pickersTheme;
+  ///   if (pickersThemeData != null) {
+  ///     assert(pickersThemeData.toString().isNotEmpty);
+  ///   }
+  /// }
+  ///
+  /// void main() {}
   /// ```
   ///
   /// Make sure to handle the possibility of a `null` value if the

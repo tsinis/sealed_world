@@ -14,9 +14,9 @@ import "../../../helpers/extensions/country_submodels/postal_code_extension.dart
 ///
 /// ```dart
 /// final postalCode =
-///   PostalCode(format: "#####-####", regExpPattern: r"^(\d{5}(-\\d{4})?)$");
-/// print(postalCode.format); // Prints: "#####-####"
-/// print(postalCode.regExpPattern); // Prints: "^(\\d{5}(-\\d{4})?)$"
+///   PostalCode(format: '#####-####', regExpPattern: r'^(\d{5}(-\d{4})?)$');
+/// print(postalCode.format); // Prints: '#####-####'
+/// print(postalCode.regExpPattern); // Prints: '^(\\d{5}(-\\d{4})?)$'
 /// ```
 @pragma("vm:deeply-immutable")
 final class PostalCode implements JsonEncodable<PostalCode> {

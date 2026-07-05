@@ -15,21 +15,14 @@ import "base_tile_theme_data.dart";
 ///
 /// Example:
 /// ```dart
-/// final currencyTileThemeData = CurrencyTileThemeData(
-///   itemBuilder: (itemProperties, defaultTile) {
-///     // Use the default tile as-is
-///     return defaultTile;
+/// import 'package:world_countries/world_countries.dart';
 ///
-///     // Or customize it with copyWith
-///     return defaultTile.copyWith(dense: true);
-///
-///     // Or build a custom tile
-///     return MyCurrencyTile(
-///       title: itemProperties.item.commonNameFor(locale),
-///       isDense: defaultTile.dense ?? false,
-///     );
-///   },
-/// );
+/// void main() {
+///   final currencyTileTheme = CurrencyTileThemeData(
+///     itemBuilder: (props, defaultTile) => defaultTile,
+///   );
+///   assert(currencyTileTheme.itemBuilder != null);
+/// }
 /// ```
 ///
 /// `MyCurrencyTile` is a hypothetical widget that uses the [FiatCurrency]

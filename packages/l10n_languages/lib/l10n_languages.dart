@@ -851,7 +851,9 @@ class LanguagesLocaleMapper extends IsoLocaleMapper<IsoLocaleMapper<String>> {
   ///
   /// Example:
   /// ```dart
+  /// final mapper = LanguagesLocaleMapper();
   /// final map = mapper.localize({'FRA', 'RUS'}, mainLocale: 'en');
+  /// print(map);
   /// ```
   LocaleMap localize(
     Set<String> isoCodes, {

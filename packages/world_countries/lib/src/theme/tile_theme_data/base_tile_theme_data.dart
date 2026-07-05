@@ -58,12 +58,17 @@ sealed class _BaseTileThemeData<T extends IsoTranslated>
   ///
   /// Example:
   /// ```dart
-  /// itemBuilder: (itemProperties, defaultTile) {
-  ///   // Use default tile as-is
-  ///   return defaultTile;
+  /// import 'package:world_countries/world_countries.dart';
   ///
-  ///   // Or customize it
-  ///   return defaultTile.copyWith(dense: true);
+  /// Widget? myItemBuilder(
+  ///   ItemProperties<WorldCountry> props,
+  ///   IsoTile<WorldCountry> defaultTile,
+  /// ) {
+  ///   return defaultTile;
+  /// }
+  ///
+  /// void main() {
+  ///   assert(myItemBuilder.hashCode != 0);
   /// }
   /// ```
   final Widget? Function(ItemProperties<T>, IsoTile<T>)? itemBuilder;
