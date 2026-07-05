@@ -58,7 +58,7 @@ sealed class _BaseTileThemeData<T extends IsoTranslated>
   ///
   /// Example:
   /// ```dart
-  /// import "package:world_countries/world_countries.dart";
+  /// import 'package:world_countries/world_countries.dart';
   ///
   /// Widget? myItemBuilder(
   ///   ItemProperties<WorldCountry> props,

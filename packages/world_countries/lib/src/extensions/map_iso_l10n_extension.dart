@@ -27,12 +27,12 @@ extension MapIsoL10nExtension<T extends IsoTranslated> on Map<T, String> {
   ///
   /// Example with custom sorter:
   /// ```dart
-  /// import "package:world_countries/world_countries.dart";
+  /// import 'package:world_countries/world_countries.dart';
   ///
   /// void main() {
   ///   final map = <WorldCountry, String>{
-  ///     const CountryUsa(): "United States",
-  ///     const CountryFra(): "France",
+  ///     const CountryUsa(): 'United States',
+  ///     const CountryFra(): 'France',
   ///   };
   ///   final sorted = map.sortAlphabetically(
   ///     compare: (typed) => (a, b) => a.value.compareTo(b.value),

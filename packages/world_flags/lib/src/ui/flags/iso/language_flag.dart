@@ -47,7 +47,7 @@ import "dual_flag.dart";
 ///
 /// Example usage:
 /// ```dart
-/// import "package:world_flags/world_flags.dart";
+/// import 'package:world_flags/world_flags.dart';
 ///
 /// void main() {
 ///   final flag = LanguageFlag.fromFlagMap(

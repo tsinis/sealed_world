@@ -28,7 +28,7 @@ extension IsoStandardizedStringExtension on String {
   /// Example usage:
   ///
   /// ```dart
-  /// print(' en '.maybeToValidIsoCode()); // Prints: "en"
+  /// print(' en '.maybeToValidIsoCode()); // Prints: 'en'
   /// print(' e'.maybeToValidIsoCode()); // Prints: null
   /// ```
   String? maybeToValidIsoCode({
@@ -70,13 +70,13 @@ extension IsoStandardizedStringExtension on String {
   ///
   /// Example:
   /// ```dart
-  /// final result = "EN".maybeMapIsoCode(
-  ///   orElse: (_) => "orElse",
-  ///   numeric: (_) => "numeric",
-  ///   regular: (_) => "regular",
+  /// final result = 'EN'.maybeMapIsoCode(
+  ///   orElse: (_) => 'orElse',
+  ///   numeric: (_) => 'numeric',
+  ///   regular: (_) => 'regular',
   /// );
   ///
-  /// print(result); // Prints "orElse"
+  /// print(result); // Prints 'orElse'
   /// ```
   // ignore: avoid-unnecessary-extends, otherwise it will be dynamic, so and void.
   T maybeMapIsoCode<T extends Object?>({

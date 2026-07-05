@@ -15,7 +15,7 @@ import "base_tile_theme_data.dart";
 ///
 /// Example:
 /// ```dart
-/// import "package:world_countries/world_countries.dart";
+/// import 'package:world_countries/world_countries.dart';
 ///
 /// void main() {
 ///   final languageTileTheme = LanguageTileThemeData(

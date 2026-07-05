@@ -29,7 +29,7 @@ extension WorldCountriesBuildContextExtension on BuildContext {
   ///
   /// Usage:
   /// ```dart
-  /// import "package:world_countries/world_countries.dart";
+  /// import 'package:world_countries/world_countries.dart';
   ///
   /// void example(BuildContext context) {
   ///   final PickersThemeData? pickersThemeData = context.pickersTheme;

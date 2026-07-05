@@ -24,11 +24,11 @@ import "../typedefs.dart";
 /// Example usage:
 ///
 /// ```dart
-/// import "package:world_countries/world_countries.dart";
+/// import 'package:world_countries/world_countries.dart';
 ///
 /// void main() {
 ///   const typedLocale = TypedLocale(LangEng(), script: ScriptLatn());
-///  assert(typedLocale.toString().isNotEmpty, "locale shouldn't be empty");
+///  assert(typedLocale.toString().isNotEmpty, 'locale shouldn\'t be empty');
 /// }
 /// ```
 @immutable

@@ -15,7 +15,7 @@ extension NaturalLanguageGetters on NaturalLanguage {
   /// language.
   ///
   /// ```dart
-  /// import "package:sealed_languages/sealed_languages.dart";
+  /// import 'package:sealed_languages/sealed_languages.dart';
   ///
   /// void main() {
   ///   const esperanto = LangEpo();

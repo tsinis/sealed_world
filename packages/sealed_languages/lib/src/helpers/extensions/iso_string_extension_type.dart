@@ -5,14 +5,14 @@
 ///
 /// Example usage:
 /// ```dart
-/// import "package:sealed_languages/sealed_languages.dart";
+/// import 'package:sealed_languages/sealed_languages.dart';
 ///
 /// void main() {
-///   const text = " Hello, World! ";
-///   assert(IsoString(text).toUpperCaseCode() == "HELLO, WORLD!");
+///   const text = ' Hello, World! ';
+///   assert(IsoString(text).toUpperCaseCode() == 'HELLO, WORLD!');
 ///
-///   final buffer = StringBuffer(" eng ");
-///   assert(IsoString(buffer.toString()).toUpperCaseCode() == "ENG");
+///   final buffer = StringBuffer(' eng ');
+///   assert(IsoString(buffer.toString()).toUpperCaseCode() == 'ENG');
 /// }
 /// ```
 // ignore: prefer-match-file-name, doesn't respect keywords + "IsoString".

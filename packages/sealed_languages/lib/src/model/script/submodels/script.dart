@@ -994,11 +994,11 @@ sealed class Script extends WritingSystem
   ///
   /// Example:
   /// ```dart
-  /// import "package:sealed_languages/sealed_languages.dart";
+  /// import 'package:sealed_languages/sealed_languages.dart';
   ///
   /// void main() {
-  ///   final script = Script.fromAnyCode("Latn");
-  ///   assert(script.name == "Latin");
+  ///   final script = Script.fromAnyCode('Latn');
+  ///   assert(script.name == 'Latin');
   /// }
   /// ```
   ///
@@ -1100,10 +1100,10 @@ sealed class Script extends WritingSystem
   ///
   /// Example:
   /// ```dart
-  /// import "package:sealed_languages/sealed_languages.dart";
+  /// import 'package:sealed_languages/sealed_languages.dart';
   ///
   /// void main() {
-  ///   final script = Script.maybeFromAnyCode("Latn");
+  ///   final script = Script.maybeFromAnyCode('Latn');
   ///   assert(script != null);
   /// }
   /// ```
@@ -1137,10 +1137,10 @@ sealed class Script extends WritingSystem
   ///
   /// Example:
   /// ```dart
-  /// import "package:sealed_languages/sealed_languages.dart";
+  /// import 'package:sealed_languages/sealed_languages.dart';
   ///
   /// void main() {
-  ///   final script = Script.maybeFromCode("Latn");
+  ///   final script = Script.maybeFromCode('Latn');
   ///   assert(script != null);
   /// }
   /// ```
@@ -1172,10 +1172,10 @@ sealed class Script extends WritingSystem
   ///
   /// Example:
   /// ```dart
-  /// import "package:sealed_languages/sealed_languages.dart";
+  /// import 'package:sealed_languages/sealed_languages.dart';
   ///
   /// void main() {
-  ///   final script = Script.maybeFromCodeNumeric("215");
+  ///   final script = Script.maybeFromCodeNumeric('215');
   ///   assert(script != null);
   /// }
   /// ```
@@ -1198,11 +1198,11 @@ sealed class Script extends WritingSystem
   /// Formats the given [input] to a standard four-character ISO 15924 code.
   /// Example:
   /// ```dart
-  /// import "package:sealed_languages/sealed_languages.dart";
+  /// import 'package:sealed_languages/sealed_languages.dart';
   ///
   /// void main() {
-  ///   final formatted = Script.formatToStandardCode("LATN");
-  ///   assert(formatted == "Latn");
+  ///   final formatted = Script.formatToStandardCode('LATN');
+  ///   assert(formatted == 'Latn');
   /// }
   /// ```
   static String formatToStandardCode(String input) =>

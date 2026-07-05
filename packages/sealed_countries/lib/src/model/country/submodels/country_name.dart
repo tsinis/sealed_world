@@ -15,16 +15,16 @@ import "../../../helpers/extensions/country_submodels/country_name_extension.dar
 /// Example usage:
 ///
 /// ```dart
-/// import "package:sealed_countries/sealed_countries.dart";
+/// import 'package:sealed_countries/sealed_countries.dart';
 ///
 /// void main() {
 ///   const countryName = CountryName(
 ///     language: LangSlk(),
-///     official: "Slovenská republika",
-///     common: "Slovensko",
+///     official: 'Slovenská republika',
+///     common: 'Slovensko',
 ///   );
-///   assert(countryName.official == "Slovenská republika");
-///   assert(countryName.common == "Slovensko");
+///   assert(countryName.official == 'Slovenská republika');
+///   assert(countryName.common == 'Slovensko');
 /// }
 /// ```
 final class CountryName extends TranslatedName {

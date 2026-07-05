@@ -14,17 +14,17 @@ import "../../model/translated_name.dart";
 /// Example usage:
 ///
 /// ```dart
-/// import "package:sealed_languages/sealed_languages.dart";
+/// import 'package:sealed_languages/sealed_languages.dart';
 ///
 /// void main() {
 ///   const language = LangEng();
 ///   final name = language.commonNameFor(
 ///     const BasicLocale(
 ///       LangDeu(),
-///       countryCode: "DE",
+///       countryCode: 'DE',
 ///       script: const ScriptLatn(),
 ///     ),
-///     orElse: "English",
+///     orElse: 'English',
 ///   );
 ///   assert(name.isNotEmpty);
 /// }
@@ -58,7 +58,7 @@ extension TranslatedExtension<
   ///
   /// Example:
   /// ```dart
-  /// import "package:sealed_languages/sealed_languages.dart";
+  /// import 'package:sealed_languages/sealed_languages.dart';
   ///
   /// void main() {
   ///   const language = LangEng();
@@ -95,7 +95,7 @@ extension TranslatedExtension<
   ///
   /// Example:
   /// ```dart
-  /// import "package:sealed_languages/sealed_languages.dart";
+  /// import 'package:sealed_languages/sealed_languages.dart';
   ///
   /// void main() {
   ///   const language = LangEng();

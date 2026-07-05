@@ -11,7 +11,7 @@ import "package:flutter/foundation.dart" show immutable, visibleForTesting;
 ///
 /// Example usage:
 /// ```dart
-/// import "dart:ui";
+/// import 'dart:ui';
 ///
 /// void main() {
 ///   const colorProps = ColorsProperties(Color(0xFFFF0000), ratio: 2);

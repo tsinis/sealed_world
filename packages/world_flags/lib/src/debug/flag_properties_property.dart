@@ -13,7 +13,7 @@ import "../model/flag_properties.dart";
 ///
 /// Example usage:
 /// ```dart
-/// import "package:world_flags/world_flags.dart";
+/// import 'package:world_flags/world_flags.dart';
 ///
 /// void main() {
 ///   final property = FlagPropertiesProperty(flagAbwProperties);

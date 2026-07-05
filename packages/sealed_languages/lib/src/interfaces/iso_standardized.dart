@@ -10,7 +10,7 @@
 /// Example usage:
 ///
 /// ```dart
-/// import "package:sealed_languages/sealed_languages.dart";
+/// import 'package:sealed_languages/sealed_languages.dart';
 ///
 /// class CustomIso implements IsoStandardized<String> {
 ///   const CustomIso({
@@ -40,8 +40,8 @@
 /// }
 ///
 /// void main() {
-///   const custom = CustomIso(code: "CUS", codeOther: "CU", name: "Custom");
-///   assert(custom.code == "CUS");
+///   const custom = CustomIso(code: 'CUS', codeOther: 'CU', name: 'Custom');
+///   assert(custom.code == 'CUS');
 /// }
 /// ```
 ///

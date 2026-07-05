@@ -20,14 +20,14 @@ extension PlatformDispatcherExtension on PlatformDispatcher {
   /// Returns `null` if no valid country code is found in any of the locales.
   ///
   /// ```dart
-  /// import "dart:ui";
-  /// import "package:world_countries/world_countries.dart";
+  /// import 'dart:ui';
+  /// import 'package:world_countries/world_countries.dart';
   ///
   /// void main() {
-  ///   const locale = Locale("en");
+  ///   const locale = Locale('en');
   ///   final country = PlatformDispatcher.instance.firstCountryOrNull;
   ///   assert(
-  ///     locale.languageCode == "en" &&
+  ///     locale.languageCode == 'en' &&
   ///         (country == null || country.code.isNotEmpty),
   ///   );
   /// }
@@ -48,14 +48,14 @@ extension PlatformDispatcherExtension on PlatformDispatcher {
   /// Returns `null` if no valid language code is found in any of the locales.
   ///
   /// ```dart
-  /// import "dart:ui";
-  /// import "package:world_countries/world_countries.dart";
+  /// import 'dart:ui';
+  /// import 'package:world_countries/world_countries.dart';
   ///
   /// void main() {
-  ///   const locale = Locale("en");
+  ///   const locale = Locale('en');
   ///   final language = PlatformDispatcher.instance.firstLanguageOrNull;
   ///   assert(
-  ///     locale.languageCode == "en" &&
+  ///     locale.languageCode == 'en' &&
   ///         (language == null || language.code.isNotEmpty),
   ///   );
   /// }
@@ -75,14 +75,14 @@ extension PlatformDispatcherExtension on PlatformDispatcher {
   /// Returns `null` if no valid script code is found in any of the locales.
   ///
   /// ```dart
-  /// import "dart:ui";
-  /// import "package:world_countries/world_countries.dart";
+  /// import 'dart:ui';
+  /// import 'package:world_countries/world_countries.dart';
   ///
   /// void main() {
-  ///   const locale = Locale("en");
+  ///   const locale = Locale('en');
   ///   final script = PlatformDispatcher.instance.firstScriptOrNull;
   ///   assert(
-  ///     locale.languageCode == "en" &&
+  ///     locale.languageCode == 'en' &&
   ///         (script == null || script.code.isNotEmpty),
   ///   );
   /// }
@@ -104,15 +104,15 @@ extension PlatformDispatcherExtension on PlatformDispatcher {
   /// parsed into a [NaturalLanguage].
   ///
   /// ```dart
-  /// import "dart:ui";
-  /// import "package:world_countries/world_countries.dart";
+  /// import 'dart:ui';
+  /// import 'package:world_countries/world_countries.dart';
   ///
   /// void main() {
-  ///   const locale = Locale("en");
+  ///   const locale = Locale('en');
   ///   final typedLocale = PlatformDispatcher.instance.maybeLocale;
   ///   if (typedLocale != null) {
   ///     assert(
-  ///       locale.languageCode == "en" &&
+  ///       locale.languageCode == 'en' &&
   ///           typedLocale.language.internationalName.isNotEmpty,
   ///     );
   ///   }

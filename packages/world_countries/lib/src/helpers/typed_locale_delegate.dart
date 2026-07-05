@@ -29,7 +29,7 @@ import "../model/typedefs.dart";
 /// Example usage:
 ///
 /// ```dart
-/// import "package:world_countries/world_countries.dart";
+/// import 'package:world_countries/world_countries.dart';
 ///
 /// void main() {
 ///   const typedLocaleDelegate = TypedLocaleDelegate(
@@ -234,8 +234,8 @@ class TypedLocaleDelegate implements LocalizationsDelegate<TypedLocale?> {
   /// Example usage:
   ///
   /// ```dart
-  /// import "package:flutter/widgets.dart";
-  /// import "package:world_countries/world_countries.dart";
+  /// import 'package:flutter/widgets.dart';
+  /// import 'package:world_countries/world_countries.dart';
   ///
   /// void example(BuildContext context) {
   ///   final typedLocale = TypedLocaleDelegate.of(context);

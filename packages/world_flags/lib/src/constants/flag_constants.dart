@@ -10,8 +10,8 @@
 ///
 /// Example usage:
 /// ```dart
-/// import "package:flutter/material.dart";
-/// import "package:world_flags/world_flags.dart";
+/// import 'package:flutter/material.dart';
+/// import 'package:world_flags/world_flags.dart';
 ///
 /// class FlagAspectRatioSlider extends StatefulWidget {
 ///   const FlagAspectRatioSlider({super.key});
@@ -27,7 +27,7 @@
 ///   Widget build(BuildContext context) => Column(
 ///     mainAxisAlignment: MainAxisAlignment.center,
 ///     children: [
-///       Text("Aspect Ratio: ${_currentAspectRatio.toStringAsFixed(2)}"),
+///       Text('Aspect Ratio: ${_currentAspectRatio.toStringAsFixed(2)}'),
 ///       Slider(
 ///         value: _currentAspectRatio,
 ///         min: FlagConstants.minAspectRatio,

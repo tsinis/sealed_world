@@ -10,11 +10,11 @@ extension WeekdayExtension on Weekday {
   /// Example usage:
   ///
   /// ```dart
-  /// import "package:sealed_countries/sealed_countries.dart";
+  /// import 'package:sealed_countries/sealed_countries.dart';
   ///
   /// void main() {
   ///   const monday = Weekday.monday;
-  ///   assert(monday.labelShort == "Mon");
+  ///   assert(monday.labelShort == 'Mon');
   /// }
   /// ```
   // ignore: avoid-substring, no emojis here.

@@ -29,11 +29,11 @@ sealed class NaturalLanguageFamily extends LanguageFamily {
   /// Example usage:
   ///
   /// ```dart
-  /// import "package:sealed_languages/sealed_languages.dart";
+  /// import 'package:sealed_languages/sealed_languages.dart';
   ///
   /// void main() {
-  ///   final family = NaturalLanguageFamily.fromName("Indo-European");
-  ///   assert(family.name == "Indo-European");
+  ///   final family = NaturalLanguageFamily.fromName('Indo-European');
+  ///   assert(family.name == 'Indo-European');
   /// }
   /// ```
   factory NaturalLanguageFamily.fromName(
@@ -60,10 +60,10 @@ sealed class NaturalLanguageFamily extends LanguageFamily {
   /// Example usage:
   ///
   /// ```dart
-  /// import "package:sealed_languages/sealed_languages.dart";
+  /// import 'package:sealed_languages/sealed_languages.dart';
   ///
   /// void main() {
-  ///   final family = NaturalLanguageFamily.maybeFromValue("Uralic");
+  ///   final family = NaturalLanguageFamily.maybeFromValue('Uralic');
   ///   assert(family != null);
   /// }
   /// ```

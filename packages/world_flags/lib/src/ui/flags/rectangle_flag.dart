@@ -9,7 +9,7 @@ import "basic_flag.dart";
 ///
 /// Example usage:
 /// ```dart
-/// import "package:world_flags/world_flags.dart";
+/// import 'package:world_flags/world_flags.dart';
 ///
 /// void main() {
 ///   final flag = RectangleFlag(flagAbwProperties, aspectRatio: 1.5);

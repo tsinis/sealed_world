@@ -39,7 +39,7 @@ import "search_data.dart";
 ///   const sorter = nameSort;
 ///   assert(
 ///     sorter.toString().isNotEmpty,
-///     "sorter should not be empty",
+///     'sorter should not be empty',
 ///   );
 /// }
 /// ```
@@ -56,15 +56,15 @@ typedef L10nSorter<T extends IsoTranslated> =
 /// Example usage:
 ///
 /// ```dart
-/// import "dart:ui";
-/// import "package:world_countries/world_countries.dart";
+/// import 'dart:ui';
+/// import 'package:world_countries/world_countries.dart';
 ///
 /// void main() {
 ///   const localeEntry = LocaleEntry(
-///     Locale("en"),
+///     Locale('en'),
 ///     TypedLocale(LangEng()),
 ///   );
-///  assert(localeEntry.toString().isNotEmpty, "locale should not be empty");
+///  assert(localeEntry.toString().isNotEmpty, 'locale should not be empty');
 /// }
 /// ```
 typedef LocaleEntry = MapEntry<Locale, TypedLocale>;

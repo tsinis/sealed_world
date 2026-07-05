@@ -29,11 +29,11 @@ import "static_flag_shader_delegate.dart";
 /// A simple animated shader delegate:
 ///
 /// ```dart
-/// import "dart:ui";
+/// import 'dart:ui';
 ///
 /// class MyAnimatedShaderDelegate extends AnimatedFlagShaderDelegate {
 ///   MyAnimatedShaderDelegate({required super.vsync})
-///       : super(assetPath: "shaders/my_animated_shader.frag");
+///       : super(assetPath: 'shaders/my_animated_shader.frag');
 ///
 ///   @override
 ///   void configureShader(FragmentShader shader, Size size, Image image) {
@@ -55,7 +55,7 @@ import "static_flag_shader_delegate.dart";
 ///   PausableShaderDelegate({
 ///     required super.vsync,
 ///     this.isPaused = false,
-///   }) : super(assetPath: "shaders/pausable.frag");
+///   }) : super(assetPath: 'shaders/pausable.frag');
 ///
 ///   final bool isPaused;
 ///
@@ -118,7 +118,7 @@ abstract class AnimatedFlagShaderDelegate extends StaticFlagShaderDelegate {
   /// ```dart
   /// class MyAnimateDelegate extends AnimatedFlagShaderDelegate {
   ///   MyAnimateDelegate({required super.vsync})
-  ///       : super(assetPath: "shaders/pausable.frag");
+  ///       : super(assetPath: 'shaders/pausable.frag');
   ///
   ///   final bool isVisible = true;
   ///
@@ -151,7 +151,7 @@ abstract class AnimatedFlagShaderDelegate extends StaticFlagShaderDelegate {
   /// ```dart
   /// class MyTickDelegate extends AnimatedFlagShaderDelegate {
   ///   MyTickDelegate({required super.vsync})
-  ///       : super(assetPath: "shaders/pausable.frag");
+  ///       : super(assetPath: 'shaders/pausable.frag');
   ///
   ///   final double direction = 1.0;
   ///   final double maxTime = 10.0;

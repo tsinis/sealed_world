@@ -31,11 +31,11 @@ extension MapsExtension on Maps {
   /// Example usage:
   ///
   /// ```dart
-  /// import "package:sealed_countries/sealed_countries.dart";
+  /// import 'package:sealed_countries/sealed_countries.dart';
   ///
   /// void main() {
-  ///   final maps = const Maps(googleMaps: "abcdefg", openStreetMaps: "1234");
-  ///   assert(maps.googleMapsUrl == "https://goo.gl/maps/abcdefg");
+  ///   final maps = const Maps(googleMaps: 'abcdefg', openStreetMaps: '1234');
+  ///   assert(maps.googleMapsUrl == 'https://goo.gl/maps/abcdefg');
   /// }
   /// ```
   String get googleMapsUrl => Maps.googleMapsPrefix + googleMaps;
@@ -48,11 +48,11 @@ extension MapsExtension on Maps {
   /// Example usage:
   ///
   /// ```dart
-  /// import "package:sealed_countries/sealed_countries.dart";
+  /// import 'package:sealed_countries/sealed_countries.dart';
   ///
   /// void main() {
-  ///   final maps = const Maps(googleMaps: "abcdefg", openStreetMaps: "123");
-  ///   assert(maps.openStreetMapsUrl == "https://www.openstreetmap.org/123");
+  ///   final maps = const Maps(googleMaps: 'abcdefg', openStreetMaps: '123');
+  ///   assert(maps.openStreetMapsUrl == 'https://www.openstreetmap.org/123');
   /// }
   /// ```
   String get openStreetMapsUrl => Maps.openStreetMapsPrefix + openStreetMaps;

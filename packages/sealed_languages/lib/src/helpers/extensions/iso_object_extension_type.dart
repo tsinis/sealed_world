@@ -8,19 +8,19 @@ import "iso_standardized_string_extension.dart";
 ///
 /// Example usage:
 /// ```dart
-/// import "package:sealed_languages/sealed_languages.dart";
+/// import 'package:sealed_languages/sealed_languages.dart';
 ///
 /// enum Colors { red, green, blue }
 ///
 /// void main() {
 ///   const color = Colors.green;
-///   assert(IsoObject(color).toUpperCaseCode() == "GREEN");
+///   assert(IsoObject(color).toUpperCaseCode() == 'GREEN');
 ///
-///   const text = " Hello, World! ";
-///   assert(IsoObject(text).toUpperCaseCode() == "HELLO, WORLD!");
+///   const text = ' Hello, World! ';
+///   assert(IsoObject(text).toUpperCaseCode() == 'HELLO, WORLD!');
 ///
-///   final buffer = StringBuffer(" eng ");
-///   assert(IsoObject(buffer.toString()).toUpperCaseCode() == "ENG");
+///   final buffer = StringBuffer(' eng ');
+///   assert(IsoObject(buffer.toString()).toUpperCaseCode() == 'ENG');
 /// }
 /// ```
 // ignore: prefer-match-file-name, doesn't respect keywords + "IsoObject".
@@ -69,11 +69,11 @@ extension type const IsoObject._(Object _value) implements Object {
   /// Example usage:
   ///
   /// ```dart
-  /// import "package:sealed_languages/sealed_languages.dart";
+  /// import 'package:sealed_languages/sealed_languages.dart';
   ///
   /// void main() {
-  ///   assert(IsoObject(" en ").maybeToValidIsoCode() == "en");
-  ///   assert(IsoObject(" e").maybeToValidIsoCode() == null);
+  ///   assert(IsoObject(' en ').maybeToValidIsoCode() == 'en');
+  ///   assert(IsoObject(' e').maybeToValidIsoCode() == null);
   /// }
   /// ```
   String? maybeToValidIsoCode({
@@ -96,11 +96,11 @@ extension type const IsoObject._(Object _value) implements Object {
   /// Example usage:
   ///
   /// ```dart
-  /// import "package:sealed_languages/sealed_languages.dart";
+  /// import 'package:sealed_languages/sealed_languages.dart';
   ///
   /// void main() {
-  ///   assert(IsoObject(" eng ").maybeToValidIsoUpperCaseCode() == "ENG");
-  ///   assert(IsoObject("english").maybeToValidIsoUpperCaseCode() == null);
+  ///   assert(IsoObject(' eng ').maybeToValidIsoUpperCaseCode() == 'ENG');
+  ///   assert(IsoObject('english').maybeToValidIsoUpperCaseCode() == null);
   /// }
   /// ```
   String? maybeToValidIsoUpperCaseCode({
@@ -139,15 +139,15 @@ extension type const IsoObject._(Object _value) implements Object {
   ///
   /// Example:
   /// ```dart
-  /// import "package:sealed_languages/sealed_languages.dart";
+  /// import 'package:sealed_languages/sealed_languages.dart';
   ///
   /// void main() {
-  ///   final result = IsoObject("EN").maybeMapIsoCode(
-  ///     orElse: (_) => "orElse",
-  ///     numeric: (_) => "numeric",
-  ///     regular: (_) => "regular",
+  ///   final result = IsoObject('EN').maybeMapIsoCode(
+  ///     orElse: (_) => 'orElse',
+  ///     numeric: (_) => 'numeric',
+  ///     regular: (_) => 'regular',
   ///   );
-  ///   assert(result == "orElse");
+  ///   assert(result == 'orElse');
   /// }
   /// ```
   // ignore: avoid-unnecessary-extends, all but 1 required.

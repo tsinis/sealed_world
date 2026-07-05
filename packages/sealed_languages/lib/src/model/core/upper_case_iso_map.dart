@@ -22,16 +22,16 @@ import "upper_case_map.dart";
 ///
 /// Example:
 /// ```dart
-/// import "package:sealed_languages/sealed_languages.dart";
+/// import 'package:sealed_languages/sealed_languages.dart';
 ///
 /// void main() {
 ///   const isoMap = UpperCaseIsoMap({
-///     "EN": LangEng(),
-///     "FR": LangFra(),
+///     'EN': LangEng(),
+///     'FR': LangFra(),
 ///   }, defaultValue: LangEng());
 ///
-///   final english = isoMap[" fr"]; // Returns LangFra()
-///   final unknown = isoMap["DE"]; // Returns LangEng() as the default value
+///   final english = isoMap[' fr']; // Returns LangFra()
+///   final unknown = isoMap['DE']; // Returns LangEng() as the default value
 ///   assert(english == const LangFra());
 ///   assert(unknown == const LangEng());
 /// }
@@ -53,16 +53,16 @@ class UpperCaseIsoMap<V extends IsoStandardized> extends UpperCaseMap<V> {
   ///
   /// Example:
   /// ```dart
-  /// import "package:sealed_languages/sealed_languages.dart";
+  /// import 'package:sealed_languages/sealed_languages.dart';
   ///
   /// void main() {
   ///   const isoMap = UpperCaseIsoMap({
-  ///     "EN": LangEng(),
-  ///     "FR": LangFra(),
+  ///     'EN': LangEng(),
+  ///     'FR': LangFra(),
   ///   }, defaultValue: LangEng());
   ///
-  ///   assert(isoMap["fr"] == const LangFra());
-  ///   assert(isoMap["DE"] == const LangEng());
+  ///   assert(isoMap['fr'] == const LangFra());
+  ///   assert(isoMap['DE'] == const LangEng());
   /// }
   /// ```
   ///

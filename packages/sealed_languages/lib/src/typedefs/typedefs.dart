@@ -6,14 +6,14 @@
 /// Example usage:
 ///
 /// ```dart
-/// import "dart:convert";
-/// import "package:sealed_languages/sealed_languages.dart";
+/// import 'dart:convert';
+/// import 'package:sealed_languages/sealed_languages.dart';
 ///
 /// void main() {
-///   const json = "{\"name\": \"John\", \"age\": 30}";
+///   const json = '{\'name\': \'John\', \'age\': 30}';
 ///   final map = jsonDecode(json) as JsonMap;
-///   assert(map["name"] == "John");
-///   assert(map["age"] == 30);
+///   assert(map['name'] == 'John');
+///   assert(map['age'] == 30);
 /// }
 /// ```
 ///
@@ -36,10 +36,10 @@ typedef JsonMap = Map<String, dynamic>;
 /// ```dart
 /// void main() {
 ///   const user = {
-///     "name": "John Doe",
-///     "age": 30,
+///     'name': 'John Doe',
+///     'age': 30,
 ///   };
-///   assert(user["name"] == "John Doe");
+///   assert(user['name'] == 'John Doe');
 /// }
 /// ```
 ///
@@ -81,8 +81,8 @@ typedef LocaleMap = Map<IsoLocaleKey, String>;
 /// ```dart
 /// void main() {
 ///   const map = {
-///     (isoCode: "USA", locale: "en_US"): "United States",
-///     (isoCode: "USA", locale: "es"): "Estados Unidos",
+///     (isoCode: 'USA', locale: 'en_US'): 'United States',
+///     (isoCode: 'USA', locale: 'es'): 'Estados Unidos',
 ///   };
 ///   assert(map.isNotEmpty);
 /// }

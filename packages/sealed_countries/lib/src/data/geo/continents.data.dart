@@ -8,11 +8,11 @@ part of "../../model/geo/submodels/continent.dart";
 /// Example:
 ///
 /// ```dart
-/// import "package:sealed_countries/sealed_countries.dart";
+/// import 'package:sealed_countries/sealed_countries.dart';
 ///
 /// void main() {
 ///   const europe = Europe();
-///   assert(europe.name == "Europe");
+///   assert(europe.name == 'Europe');
 /// }
 /// ```
 final class Europe extends Continent {
@@ -28,11 +28,11 @@ final class Europe extends Continent {
 /// Example:
 ///
 /// ```dart
-/// import "package:sealed_countries/sealed_countries.dart";
+/// import 'package:sealed_countries/sealed_countries.dart';
 ///
 /// void main() {
 ///   const africa = Africa();
-///   assert(africa.name == "Africa");
+///   assert(africa.name == 'Africa');
 /// }
 /// ```
 final class Africa extends Continent {
@@ -48,11 +48,11 @@ final class Africa extends Continent {
 /// Example:
 ///
 /// ```dart
-/// import "package:sealed_countries/sealed_countries.dart";
+/// import 'package:sealed_countries/sealed_countries.dart';
 ///
 /// void main() {
 ///   const americas = Americas();
-///   assert(americas.name == "Americas");
+///   assert(americas.name == 'Americas');
 /// }
 /// ```
 final class Americas extends Continent {
@@ -68,11 +68,11 @@ final class Americas extends Continent {
 /// Example:
 ///
 /// ```dart
-/// import "package:sealed_countries/sealed_countries.dart";
+/// import 'package:sealed_countries/sealed_countries.dart';
 ///
 /// void main() {
 ///   const asia = Asia();
-///   assert(asia.name == "Asia");
+///   assert(asia.name == 'Asia');
 /// }
 /// ```
 final class Asia extends Continent {
@@ -88,11 +88,11 @@ final class Asia extends Continent {
 /// Example:
 ///
 /// ```dart
-/// import "package:sealed_countries/sealed_countries.dart";
+/// import 'package:sealed_countries/sealed_countries.dart';
 ///
 /// void main() {
 ///   const antarctica = Antarctica();
-///   assert(antarctica.name == "Antarctica");
+///   assert(antarctica.name == 'Antarctica');
 /// }
 /// ```
 final class Antarctica extends Continent {
@@ -108,11 +108,11 @@ final class Antarctica extends Continent {
 /// Example:
 ///
 /// ```dart
-/// import "package:sealed_countries/sealed_countries.dart";
+/// import 'package:sealed_countries/sealed_countries.dart';
 ///
 /// void main() {
 ///   const oceania = Oceania();
-///   assert(oceania.name == "Oceania");
+///   assert(oceania.name == 'Oceania');
 /// }
 /// ```
 final class Oceania extends Continent {

@@ -19,11 +19,11 @@ part "../../../data/geo/continents.data.dart";
 /// Example usage:
 ///
 /// ```dart
-/// final europe = Continent.fromName("Europe");
-/// print(europe.name); // Prints: "Europe"
+/// final europe = Continent.fromName('Europe');
+/// print(europe.name); // Prints: 'Europe'
 ///
-/// final africa = Continent.maybeFromValue<String>("Africa");
-/// print(africa?.name); // Prints: "Africa"
+/// final africa = Continent.maybeFromValue<String>('Africa');
+/// print(africa?.name); // Prints: 'Africa'
 ///
 /// final unknown = Continent.maybeFromValue<int>(42);
 /// print(unknown); // Prints: null

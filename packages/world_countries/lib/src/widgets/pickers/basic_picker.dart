@@ -136,7 +136,7 @@ abstract class BasicPicker<T extends IsoTranslated, W extends IsoTile<T>>
   ///
   /// Example:
   /// ```dart
-  /// import "package:world_countries/world_countries.dart";
+  /// import 'package:world_countries/world_countries.dart';
   ///
   /// Widget? myItemBuilder(
   ///   ItemProperties<WorldCountry> props,
@@ -182,7 +182,7 @@ abstract class BasicPicker<T extends IsoTranslated, W extends IsoTile<T>>
   ///
   /// Example usage in custom itemBuilder:
   /// ```dart
-  /// import "package:world_countries/world_countries.dart";
+  /// import 'package:world_countries/world_countries.dart';
   ///
   /// Widget? myItemBuilder(
   ///   ItemProperties<WorldCountry> props,

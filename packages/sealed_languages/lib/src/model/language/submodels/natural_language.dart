@@ -240,7 +240,7 @@ sealed class NaturalLanguage extends Language
   /// alternative-name `altSymbol`, and the `formatter` hook exposed by
   /// [LocaleMapFunction].
   /// ```dart
-  /// import "package:sealed_languages/sealed_languages.dart";
+  /// import 'package:sealed_languages/sealed_languages.dart';
   ///
   /// void main() {
   ///   final delegate = LocalizationDelegate(
@@ -252,13 +252,13 @@ sealed class NaturalLanguage extends Language
   ///       mainLocale,
   ///       useLanguageFallback = true,
   ///     }) => {
-  ///       (isoCode: "USA", locale: "en"): "United States",
+  ///       (isoCode: 'USA', locale: 'en'): 'United States',
   ///     },
   ///   );
   ///
   ///   final localized = delegate.mapper?.call().call(
-  ///     {"USA"},
-  ///     mainLocale: "en",
+  ///     {'USA'},
+  ///     mainLocale: 'en',
   ///   );
   ///   assert(localized != null);
   ///   assert(localized!.isNotEmpty);
@@ -325,12 +325,12 @@ sealed class NaturalLanguage extends Language
   /// }
   ///
   /// class MyIsoClassInstance extends IsoClassWithPermissiveConstructor {
-  ///   const MyIsoClassInstance() : super.permissive(name: "Name", code: "1");
+  ///   const MyIsoClassInstance() : super.permissive(name: 'Name', code: '1');
   /// }
   ///
   /// void main() {
   ///   const instance = MyIsoClassInstance();
-  ///   assert(instance.name == "Name");
+  ///   assert(instance.name == 'Name');
   /// }
   /// ```
   /// Note: Employing this constructor may result in behavior that deviates from
@@ -918,7 +918,7 @@ sealed class NaturalLanguage extends Language
   /// [String], [Enum] (in case of enum - `.name.toUpperCase()` will be used):
   ///
   /// ```dart
-  /// import "package:sealed_languages/sealed_languages.dart";
+  /// import 'package:sealed_languages/sealed_languages.dart';
   ///
   /// enum IsoEnum { de, fr, ar }
   ///
@@ -930,10 +930,10 @@ sealed class NaturalLanguage extends Language
   ///
   ///  Or has a custom `toString()` override, i.e.:
   /// ```dart
-  /// import "package:sealed_languages/sealed_languages.dart";
+  /// import 'package:sealed_languages/sealed_languages.dart';
   ///
   /// class CustomIsoCodeClass {
-  ///   const CustomIsoCodeClass({String code = "deu"}) : _code = code;
+  ///   const CustomIsoCodeClass({String code = 'deu'}) : _code = code;
   ///   final String _code;
   ///
   ///   @override
@@ -1023,11 +1023,11 @@ sealed class NaturalLanguage extends Language
   ///
   /// Example:
   /// ```dart
-  /// import "package:sealed_languages/sealed_languages.dart";
+  /// import 'package:sealed_languages/sealed_languages.dart';
   ///
   /// void main() {
-  ///   final language = NaturalLanguage.fromAnyCode("en");
-  ///   assert(language.name == "English");
+  ///   final language = NaturalLanguage.fromAnyCode('en');
+  ///   assert(language.name == 'English');
   /// }
   /// ```
   ///
@@ -1412,12 +1412,12 @@ sealed class NaturalLanguage extends Language
   ///
   /// ```dart
   ///  final maybeCzech = NaturalLanguage.maybeFromValue(
-  ///    "CZE",
+  ///    'CZE',
   ///    where: (language) => language.bibliographicCode,
   ///  );
   ///
-  ///  // This will print: "Native name: čeština".
-  ///  print("Native name: ${maybeCzech?.namesNative.first}");
+  ///  // This will print: 'Native name: čeština'.
+  ///  print('Native name: ${maybeCzech?.namesNative.first}');
   /// ```
   static NaturalLanguage? maybeFromValue<T extends Object>(
     T value, {
@@ -1448,10 +1448,10 @@ sealed class NaturalLanguage extends Language
   /// Example usage:
   ///
   /// ```dart
-  /// import "package:sealed_languages/sealed_languages.dart";
+  /// import 'package:sealed_languages/sealed_languages.dart';
   ///
   /// void main() {
-  ///   final language = NaturalLanguage.maybeFromAnyCode("en");
+  ///   final language = NaturalLanguage.maybeFromAnyCode('en');
   ///   assert(language != null);
   /// }
   /// ```

@@ -29,7 +29,7 @@ extension IterableFiatCurrencyExtension on Iterable<FiatCurrency> {
   ///
   ///  Usage Example:
   /// ```dart
-  /// import "package:sealed_countries/sealed_countries.dart";
+  /// import 'package:sealed_countries/sealed_countries.dart';
   ///
   /// void main() {
   ///   final limitedMap = FiatCurrency.list.byCountryMap(

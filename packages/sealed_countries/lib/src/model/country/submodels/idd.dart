@@ -13,7 +13,7 @@ import "../../../helpers/extensions/country_submodels/idd_extension.dart";
 ///
 /// ```dart
 /// final idd = Idd(root: 3, suffixes: [81]);
-/// print(idd); // Prints: "Idd(root: 3, suffixes: [81])"
+/// print(idd); // Prints: 'Idd(root: 3, suffixes: [81])'
 /// ```
 final class Idd implements JsonEncodable<Idd> {
   /// Creates a new [Idd] object with the given root and suffixes.

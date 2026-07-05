@@ -30,20 +30,20 @@ extension NaturalLanguageJson on NaturalLanguage {
   /// Example usage:
   ///
   /// ```dart
-  /// import "package:sealed_languages/sealed_languages.dart";
+  /// import 'package:sealed_languages/sealed_languages.dart';
   ///
   /// void main() {
   ///   const jsonMap = {
-  ///     "name": "American English",
-  ///     "code": "ENG",
-  ///     "codeShort": "EN",
-  ///     "namesNative": ["American English"],
-  ///     "isRightToLeft": false,
-  ///     "scripts": ["Latn"],
+  ///     'name': 'American English',
+  ///     'code': 'ENG',
+  ///     'codeShort': 'EN',
+  ///     'namesNative': ['American English'],
+  ///     'isRightToLeft': false,
+  ///     'scripts': ['Latn'],
   ///   };
   ///
   ///   final english = NaturalLanguageJson.fromMap(jsonMap);
-  ///   assert(english.name == "American English");
+  ///   assert(english.name == 'American English');
   /// }
   /// ```
   static NaturalLanguage fromMap(JsonMap map) {
@@ -85,7 +85,7 @@ extension NaturalLanguageJson on NaturalLanguage {
   /// Example usage:
   ///
   /// ```dart
-  /// import "package:sealed_languages/sealed_languages.dart";
+  /// import 'package:sealed_languages/sealed_languages.dart';
   ///
   /// void main() {
   ///   final jsonMap = const LangEng().toMap();

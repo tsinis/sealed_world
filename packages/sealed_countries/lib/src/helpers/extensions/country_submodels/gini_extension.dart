@@ -16,7 +16,7 @@ extension GiniExtension on Gini {
   /// Example usage:
   ///
   /// ```dart
-  /// import "package:sealed_countries/sealed_countries.dart";
+  /// import 'package:sealed_countries/sealed_countries.dart';
   ///
   /// void main() {
   ///   final gini = const Gini(year: 2020, coefficient: 32.0);

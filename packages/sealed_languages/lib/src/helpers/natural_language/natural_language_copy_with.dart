@@ -15,14 +15,14 @@ extension NaturalLanguageCopyWith<T extends NaturalLanguage> on T {
   /// Example usage:
   ///
   /// ```dart
-  /// import "package:sealed_languages/sealed_languages.dart";
+  /// import 'package:sealed_languages/sealed_languages.dart';
   ///
   /// void main() {
   ///   const english = LangEng();
   ///   final americanEnglish = english.copyWith(
-  ///     name: "American English",
+  ///     name: 'American English',
   ///   );
-  ///   assert(americanEnglish.name == "American English");
+  ///   assert(americanEnglish.name == 'American English');
   /// }
   /// ```
   NaturalLanguage copyWith({

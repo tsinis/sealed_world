@@ -19,8 +19,8 @@ import "../basic_flag.dart";
 ///
 /// Example usage:
 /// ```dart
-/// import "package:flutter/material.dart";
-/// import "package:world_flags/world_flags.dart";
+/// import 'package:flutter/material.dart';
+/// import 'package:world_flags/world_flags.dart';
 ///
 /// void main() {
 ///   final country = WorldCountry.list.first;

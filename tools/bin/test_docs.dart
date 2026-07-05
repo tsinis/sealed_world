@@ -2,6 +2,7 @@
 import "package:args/args.dart";
 import "package:cli/utils/io_utils.dart";
 
+// ignore: prefer-static-class, it's just a tool not a library.
 const _allPackages = {
   "l10n_languages",
   "l10n_currencies",
@@ -109,13 +110,14 @@ Future<void> main(List<String> args) async {
     final relativePath = relative(dir.path, from: repoRoot.path);
     print("Testing documentation in $relativePath...");
 
-    final testResult = await Process.run(
+    await Process.run(
       "dart",
       [
         "pub",
         "global",
         "run",
         "dartdoc_test",
+        "--write",
         "--exclude",
         // ignore: avoid-accessing-collections-by-constant-index, it's a tool.
         ?results["exclude"]?.toString(),
@@ -123,15 +125,38 @@ Future<void> main(List<String> args) async {
       workingDirectory: dir.path,
     );
 
+    final testDir = Directory(join(dir.path, ".dart_tool", "dartdoc_test"));
+
+    // Unescape HTML entities that dartdoc_test 0.1.0 produces in code blocks.
+    for (final file in testDir.listSync().whereType<File>()) {
+      file.writeAsStringSync(
+        file
+            .readAsStringSync()
+            .replaceAll("&gt;", ">")
+            .replaceAll("&lt;", "<")
+            .replaceAll("&quot;", '"')
+            .replaceAll("&amp;", "&")
+            .replaceAll("&#x27;", "'")
+            .replaceAll("&#39;", "'"),
+      );
+    }
+
+    File(
+      join(repoRoot.path, "packages", "dartdoc_test_analysis_options.yaml"),
+    ).copySync(join(testDir.path, "analysis_options.yaml"));
+
+    final testResult = await Process.run(
+      "dart",
+      ["analyze", join(".dart_tool", "dartdoc_test")],
+      workingDirectory: dir.path, // Dart 3.8 formatting.
+    );
+
     final out = testResult.stdout.toString();
     final err = testResult.stderr.toString();
     final combinedOutput = out + err;
 
     final hasErrors =
-        combinedOutput.contains(RegExp(r"([1-9]\d*)\s+issues?\s+found")) ||
-        (testResult.exitCode != 0 &&
-            !combinedOutput.contains("0 issues found") &&
-            !combinedOutput.contains("No issues found"));
+        testResult.exitCode != 0 && !combinedOutput.contains("No issues found");
 
     if (hasErrors) {
       stdout.write(out);
@@ -139,14 +164,7 @@ Future<void> main(List<String> args) async {
       print("✗ $relativePath failed validation.");
       overallSuccess = false;
     } else {
-      if (testResult.exitCode == 0) {
-        print("✓ $relativePath passed.");
-      } else {
-        print(
-          "✓ $relativePath: dartdoc_test incorrectly reported failure for 0 "
-          " issues. Treating as success.",
-        );
-      }
+      print("✓ $relativePath passed.");
     }
   }
 

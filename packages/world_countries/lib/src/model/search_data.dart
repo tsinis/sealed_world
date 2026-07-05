@@ -23,18 +23,18 @@ import "package:flutter/foundation.dart" show immutable;
 /// ## Example
 ///
 /// ```dart
-/// import "package:world_countries/world_countries.dart";
+/// import 'package:world_countries/world_countries.dart';
 ///
 /// void main() {
 ///   final searchData = SearchData(
-///     "Belarus",
-///     const {"Беларусь"},
-///     code: "BY",
-///     name: "Belarus",
-///     others: const ["Byelarus"],
+///     'Belarus',
+///     const {'Беларусь'},
+///     code: 'BY',
+///     name: 'Belarus',
+///     others: const ['Byelarus'],
 ///   );
-///   assert(searchData.first == "Belarus");
-///   assert(searchData.code == "BY");
+///   assert(searchData.first == 'Belarus');
+///   assert(searchData.code == 'BY');
 /// }
 /// ```
 ///
@@ -44,11 +44,11 @@ import "package:flutter/foundation.dart" show immutable;
 /// default search data instance:
 ///
 /// ```dart
-/// import "package:world_countries/world_countries.dart";
+/// import 'package:world_countries/world_countries.dart';
 ///
 /// void main() {
-///   final emptySearch = SearchData.empty(code: "XX");
-///   assert(emptySearch.code == "XX");
+///   final emptySearch = SearchData.empty(code: 'XX');
+///   assert(emptySearch.code == 'XX');
 /// }
 /// ```
 @immutable
@@ -89,18 +89,18 @@ class SearchData extends UnmodifiableListView<String> {
   /// ## Example
   ///
   /// ```dart
-  /// import "package:world_countries/world_countries.dart";
+  /// import 'package:world_countries/world_countries.dart';
   ///
   /// void main() {
   ///   final japanSearch = SearchData(
-  ///     "Japan",
-  ///     const {"日本", "にほん"},
-  ///     code: "JP",
-  ///     name: "Japan",
-  ///     other: "JPN",
-  ///     others: const ["Nippon", "Nihon"],
+  ///     'Japan',
+  ///     const {'日本', 'にほん'},
+  ///     code: 'JP',
+  ///     name: 'Japan',
+  ///     other: 'JPN',
+  ///     others: const ['Nippon', 'Nihon'],
   ///   );
-  ///   assert(japanSearch.code == "JP");
+  ///   assert(japanSearch.code == 'JP');
   /// }
   /// ```
   /// .
@@ -145,17 +145,17 @@ class SearchData extends UnmodifiableListView<String> {
   /// ## Example
   ///
   /// ```dart
-  /// import "package:world_countries/world_countries.dart";
+  /// import 'package:world_countries/world_countries.dart';
   ///
   /// void main() {
-  ///   final placeholder = SearchData.empty(code: "XX");
-  ///   assert(placeholder.code == "XX");
+  ///   final placeholder = SearchData.empty(code: 'XX');
+  ///   assert(placeholder.code == 'XX');
   ///
   ///   final partial = SearchData.empty(
-  ///     code: "US",
-  ///     internationalName: "United States",
+  ///     code: 'US',
+  ///     internationalName: 'United States',
   ///   );
-  ///   assert(partial.code == "US");
+  ///   assert(partial.code == 'US');
   /// }
   /// ```
   /// .

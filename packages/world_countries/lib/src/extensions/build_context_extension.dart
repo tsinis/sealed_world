@@ -136,7 +136,7 @@ extension BuildContextExtension on BuildContext {
   /// ```dart
   /// void example(BuildContext context) {
   ///   context.maybeMessenger?.showSnackBar(
-  ///     const SnackBar(content: Text("Optional messenger")),
+  ///     const SnackBar(content: Text('Optional messenger')),
   ///   );
   /// }
   ///
@@ -164,7 +164,7 @@ extension BuildContextExtension on BuildContext {
   /// ```dart
   /// void example(BuildContext context) {
   ///   context.showSnackBar(
-  ///     const SnackBar(content: Text("Hello")),
+  ///     const SnackBar(content: Text('Hello')),
   ///   );
   /// }
   ///

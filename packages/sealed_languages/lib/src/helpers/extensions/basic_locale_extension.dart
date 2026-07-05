@@ -71,13 +71,13 @@ extension BasicLocaleExtension on BasicLocale {
   ///
   /// Example:
   /// ```dart
-  /// import "package:sealed_languages/sealed_languages.dart";
+  /// import 'package:sealed_languages/sealed_languages.dart';
   ///
   /// void main() {
-  ///   const engLocale = BasicLocale(LangEng(), countryCode: "US");
-  ///   final translation = engLocale.toTranslatedName("USA",
-  ///     fullName: "United States of America");
-  ///   assert(translation.name == "USA");
+  ///   const engLocale = BasicLocale(LangEng(), countryCode: 'US');
+  ///   final translation = engLocale.toTranslatedName('USA',
+  ///     fullName: 'United States of America');
+  ///   assert(translation.name == 'USA');
   /// }
   /// ```
   ///

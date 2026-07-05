@@ -14,7 +14,7 @@ export "dart:convert" show JsonCodec, jsonEncode;
 /// Example usage:
 ///
 /// ```dart
-/// import "package:sealed_languages/sealed_languages.dart";
+/// import 'package:sealed_languages/sealed_languages.dart';
 ///
 /// class Person implements JsonEncodable<Person> {
 ///   const Person({
@@ -27,12 +27,12 @@ export "dart:convert" show JsonCodec, jsonEncode;
 ///
 ///   @override
 ///   String toJson({JsonCodec codec = const JsonCodec()}) =>
-///       codec.encode({"name": name, "age": age});
+///       codec.encode({'name': name, 'age': age});
 /// }
 ///
 /// void main() {
-///   const person = Person(name: "John", age: 30);
-///   assert(person.toJson().contains("John"));
+///   const person = Person(name: 'John', age: 30);
+///   assert(person.toJson().contains('John'));
 /// }
 /// ```
 ///

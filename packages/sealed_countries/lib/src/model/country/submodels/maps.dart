@@ -11,12 +11,12 @@ import "../../../helpers/extensions/country_submodels/maps_extension.dart";
 /// Example usage:
 ///
 /// ```dart
-/// import "package:sealed_countries/sealed_countries.dart";
+/// import 'package:sealed_countries/sealed_countries.dart';
 ///
 /// void main() {
-///   final maps = const Maps(googleMaps: "abcdefg", openStreetMaps: "12345");
-///   assert(maps.googleMapsUrl == "https://goo.gl/maps/abcdefg");
-///   assert(maps.openStreetMapsUrl == "https://www.openstreetmap.org/12345");
+///   final maps = const Maps(googleMaps: 'abcdefg', openStreetMaps: '12345');
+///   assert(maps.googleMapsUrl == 'https://goo.gl/maps/abcdefg');
+///   assert(maps.openStreetMapsUrl == 'https://www.openstreetmap.org/12345');
 /// }
 /// ```
 @pragma("vm:deeply-immutable")

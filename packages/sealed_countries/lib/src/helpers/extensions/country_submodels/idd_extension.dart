@@ -15,7 +15,7 @@ extension IddExtension on Idd {
   /// Example usage:
   ///
   /// ```dart
-  /// import "package:sealed_countries/sealed_countries.dart";
+  /// import 'package:sealed_countries/sealed_countries.dart';
   ///
   /// void main() {
   ///   final idd = const Idd(root: 3, suffixes: [81]);
@@ -38,12 +38,12 @@ extension IddExtension on Idd {
   /// Example usage:
   ///
   /// ```dart
-  /// import "package:sealed_countries/sealed_countries.dart";
+  /// import 'package:sealed_countries/sealed_countries.dart';
   ///
   /// void main() {
   ///   final idd = const Idd(root: 3, suffixes: [81]);
-  ///   assert(idd.phoneCode() == "+381");
-  ///   assert(idd.phoneCode(isRtl: true) == "381+");
+  ///   assert(idd.phoneCode() == '+381');
+  ///   assert(idd.phoneCode(isRtl: true) == '381+');
   /// }
   /// ```
   String phoneCode({String leading = "+", bool isRtl = false}) {

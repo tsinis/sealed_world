@@ -15,15 +15,15 @@ extension PostalCodeExtension on PostalCode {
   /// Example usage:
   ///
   /// ```dart
-  /// import "package:sealed_countries/sealed_countries.dart";
+  /// import 'package:sealed_countries/sealed_countries.dart';
   ///
   /// void main() {
   ///   const postalCode = PostalCode(
-  ///     format: "#####-####",
-  ///     regExpPattern: r"^(\d{5}(-\d{4})?)$",
+  ///     format: '#####-####',
+  ///     regExpPattern: r'^(\d{5}(-\d{4})?)$',
   ///   );
   ///   final postalCodeValidator = postalCode.validator();
-  ///   assert(postalCodeValidator.hasMatch("12345-6789"));
+  ///   assert(postalCodeValidator.hasMatch('12345-6789'));
   /// }
   /// ```
   RegExp validator({

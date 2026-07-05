@@ -27,10 +27,10 @@ extension LocaleExtension on Locale? {
   /// Example usage:
   ///
   /// ```dart
-  /// import "package:world_countries/world_countries.dart";
+  /// import 'package:world_countries/world_countries.dart';
   ///
   /// void main() {
-  ///   const locale = Locale("en", "US");
+  ///   const locale = Locale('en', 'US');
   ///   final typedLocale = locale.maybeToTypedLocale();
   ///   assert(typedLocale != null);
   /// }

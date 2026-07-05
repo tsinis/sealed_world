@@ -19,7 +19,7 @@ import "../model/iso/iso_maps.dart";
 ///
 /// Usage example:
 /// ```dart
-/// import "package:world_countries/world_countries.dart";
+/// import 'package:world_countries/world_countries.dart';
 ///
 /// void main() {
 ///   const pickersTheme = PickersThemeData(
@@ -27,7 +27,7 @@ import "../model/iso/iso_maps.dart";
 ///     searchBarPadding: EdgeInsets.symmetric(horizontal: 16),
 ///     showClearButton: false,
 ///   );
-///   assert(pickersTheme.toString().isNotEmpty, "theme should not be empty");
+///   assert(pickersTheme.toString().isNotEmpty, 'theme should not be empty');
 /// }
 /// ```
 @immutable
@@ -77,7 +77,7 @@ class PickersThemeData extends ThemeExtension<PickersThemeData>
   ///
   /// Usage:
   /// ```dart
-  /// import "package:world_countries/world_countries.dart";
+  /// import 'package:world_countries/world_countries.dart';
   ///
   /// void main() {
   ///   const pickerTheme = PickersThemeData();

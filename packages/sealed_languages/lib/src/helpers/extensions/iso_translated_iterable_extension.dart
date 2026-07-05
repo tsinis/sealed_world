@@ -26,13 +26,13 @@ extension IsoTranslatedIterableExtension<
   /// Example usage:
   ///
   /// ```dart
-  /// import "package:sealed_languages/sealed_languages.dart";
+  /// import 'package:sealed_languages/sealed_languages.dart';
   ///
   /// void main() {
   ///   final map = NaturalLanguage.list.commonNamesMap(
   ///     options: const LocaleMappingOptions(
   ///       mainLocale: BasicLocale(LangCes()),
-  ///       fallbackLocale: BasicLocale(LangEng(), countryCode: "US"),
+  ///       fallbackLocale: BasicLocale(LangEng(), countryCode: 'US'),
   ///       localizeFullNames: false,
   ///     ),
   ///   );

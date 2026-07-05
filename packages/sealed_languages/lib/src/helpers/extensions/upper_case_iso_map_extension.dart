@@ -35,15 +35,15 @@ extension UpperCaseIsoMapExtension<V extends IsoStandardized>
   /// does not throw an exception.
   ///
   /// ```dart
-  /// import "package:sealed_languages/sealed_languages.dart";
+  /// import 'package:sealed_languages/sealed_languages.dart';
   ///
   /// void main() {
   ///   const map = UpperCaseIsoMap(
-  ///     {"EN": LangEng()},
+  ///     {'EN': LangEng()},
   ///     defaultValue: LangEng(),
   ///   );
-  ///   final result = map.maybeFindByCode("ISO");
-  ///   assert(result == null, "should be null");
+  ///   final result = map.maybeFindByCode('ISO');
+  ///   assert(result == null, 'should be null');
   /// }
   /// ```
   V findByCodeOrThrow(Object? code) {
@@ -76,24 +76,24 @@ extension UpperCaseIsoMapExtension<V extends IsoStandardized>
   ///
   /// Usage:
   /// ```dart
-  /// import "package:sealed_languages/sealed_languages.dart";
+  /// import 'package:sealed_languages/sealed_languages.dart';
   ///
   /// void main() {
-  ///   const originalMap = {"en": LangEng(), "fr": LangFra()};
+  ///   const originalMap = {'en': LangEng(), 'fr': LangFra()};
   ///   const upperCaseIsoMap = UpperCaseIsoMap(
   ///     originalMap,
   ///     defaultValue: LangEng(),
   ///   );
   ///
-  ///   // Accessing "EN" or "en" will return const LangEng()
-  ///   final english = upperCaseIsoMap["En"]; // Returns const LangEng()
-  ///   final french = upperCaseIsoMap["FR"];  // Returns const LangFra()
-  ///   final unknown = upperCaseIsoMap["DE"]; // Returns defaultValue
-  ///   assert(originalMap.isNotEmpty, "originalMap should not be empty");
-  ///   assert(upperCaseIsoMap.isNotEmpty, "map shouldn't be empty");
-  ///   assert(english == const LangEng(), "should be LangEng");
-  ///   assert(french == const LangFra(), "should be LangFra");
-  ///   assert(unknown == const LangEng(), "should be LangEng");
+  ///   // Accessing 'EN' or 'en' will return const LangEng()
+  ///   final english = upperCaseIsoMap['En']; // Returns const LangEng()
+  ///   final french = upperCaseIsoMap['FR'];  // Returns const LangFra()
+  ///   final unknown = upperCaseIsoMap['DE']; // Returns defaultValue
+  ///   assert(originalMap.isNotEmpty, 'originalMap should not be empty');
+  ///   assert(upperCaseIsoMap.isNotEmpty, 'map shouldn\'t be empty');
+  ///   assert(english == const LangEng(), 'should be LangEng');
+  ///   assert(french == const LangFra(), 'should be LangFra');
+  ///   assert(unknown == const LangEng(), 'should be LangEng');
   /// }
   /// ```
   ///

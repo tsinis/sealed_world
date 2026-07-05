@@ -13,8 +13,8 @@ import "../../../helpers/extensions/country_submodels/car_extension.dart";
 /// Example usage:
 ///
 /// ```dart
-/// final car = const Car(sign: "NEP", isRightSide: false);
-/// print(car.sign); // Prints: "NEP"
+/// final car = const Car(sign: 'NEP', isRightSide: false);
+/// print(car.sign); // Prints: 'NEP'
 /// print(car.isRightSide); // Prints: false
 /// ```
 @pragma("vm:deeply-immutable")

@@ -14,8 +14,8 @@ import "stripe_orientation.dart";
 ///
 /// Example usage:
 /// ```dart
-/// import "dart:ui";
-/// import "package:world_flags/world_flags.dart";
+/// import 'dart:ui';
+/// import 'package:world_flags/world_flags.dart';
 ///
 /// void main() {
 ///   const flagProps = FlagProperties(
@@ -115,8 +115,8 @@ class FlagProperties {
   ///   version to use based on the specific use case. For example:
   ///
   /// ```dart
-  /// import "dart:ui";
-  /// import "package:world_flags/world_flags.dart";
+  /// import 'dart:ui';
+  /// import 'package:world_flags/world_flags.dart';
   ///
   /// void main() {
   ///   const flagProps = FlagProperties(

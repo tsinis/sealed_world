@@ -9,11 +9,11 @@ import "package:sealed_currencies/sealed_currencies.dart";
 /// Example usage:
 ///
 /// ```dart
-/// import "package:sealed_countries/sealed_countries.dart";
+/// import 'package:sealed_countries/sealed_countries.dart';
 ///
 /// void main() {
-///   final region = Continent.fromName("Europe");
-///   assert(region.name == "Europe", "should match region name");
+///   final region = Continent.fromName('Europe');
+///   assert(region.name == 'Europe', 'should match region name');
 /// }
 /// ```
 /// Base type shared by continent and subregion models.

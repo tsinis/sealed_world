@@ -16,8 +16,8 @@ import "flags/iso/iso_flag.dart";
 ///
 /// Example usage:
 /// ```dart
-/// import "package:flutter/widgets.dart";
-/// import "package:world_flags/world_flags.dart";
+/// import 'package:flutter/widgets.dart';
+/// import 'package:world_flags/world_flags.dart';
 ///
 /// void main() {
 ///   final flag = CountryFlag.simplified(

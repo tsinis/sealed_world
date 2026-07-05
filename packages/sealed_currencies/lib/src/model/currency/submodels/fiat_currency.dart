@@ -851,11 +851,11 @@ sealed class FiatCurrency extends Currency
   ///
   /// Example:
   /// ```dart
-  /// import "package:sealed_currencies/sealed_currencies.dart";
+  /// import 'package:sealed_currencies/sealed_currencies.dart';
   ///
   /// void main() {
-  ///   final currency = FiatCurrency.fromAnyCode("eur");
-  ///   assert(currency.name == "Euro");
+  ///   final currency = FiatCurrency.fromAnyCode('eur');
+  ///   assert(currency.name == 'Euro');
   /// }
   /// ```
   ///
@@ -1202,10 +1202,10 @@ sealed class FiatCurrency extends Currency
   ///
   /// ```dart
   /// final euro = FiatCurrency.maybeFromValue(
-  ///   "Euro",
+  ///   'Euro',
   ///   where: (currency) => currency.namesNative.first,
   /// );
-  /// print(euro); // Prints: "Currency(code: "EUR")".
+  /// print(euro); // Prints: 'Currency(code: 'EUR')'.
   /// ```
   static FiatCurrency? maybeFromValue<T extends Object>(
     T value, {
@@ -1237,10 +1237,10 @@ sealed class FiatCurrency extends Currency
   ///
   /// Example:
   /// ```dart
-  /// import "package:sealed_currencies/sealed_currencies.dart";
+  /// import 'package:sealed_currencies/sealed_currencies.dart';
   ///
   /// void main() {
-  ///   final fiat = FiatCurrency.maybeFromAnyCode("eur");
+  ///   final fiat = FiatCurrency.maybeFromAnyCode('eur');
   ///   assert(fiat != null);
   /// }
   /// ```

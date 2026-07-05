@@ -12,11 +12,11 @@ part "../../data/regional_bloc/regional_bloc.data.dart";
 /// Example usage:
 ///
 /// ```dart
-/// import "package:sealed_countries/sealed_countries.dart";
+/// import 'package:sealed_countries/sealed_countries.dart';
 ///
 /// void main() {
 ///   const bloc = BlocEU();
-///   assert(bloc.name == "European Union");
+///   assert(bloc.name == 'European Union');
 /// }
 /// ```
 sealed class RegionalBloc extends WorldBloc {

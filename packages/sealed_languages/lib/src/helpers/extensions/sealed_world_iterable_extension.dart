@@ -23,13 +23,13 @@ extension SealedWorldIterableExtension<T extends Object> on Iterable<T?> {
   ///
   /// Example:
   /// ```dart
-  /// import "package:sealed_languages/sealed_languages.dart";
+  /// import 'package:sealed_languages/sealed_languages.dart';
   ///
   /// void main() {
-  ///   final list = [1, null, "hello", 2.5];
+  ///   final list = [1, null, 'hello', 2.5];
   ///   final result = list.toInstancesString(); // [int(), String(), double()]
-  ///   assert(list.isNotEmpty, "should not be empty");
-  ///   assert(result.isNotEmpty, "should not be empty");
+  ///   assert(list.isNotEmpty, 'should not be empty');
+  ///   assert(result.isNotEmpty, 'should not be empty');
   /// }
   /// ```
   String toInstancesString() => whereType<T>()
@@ -101,13 +101,13 @@ extension SealedWorldNullableIterableIsoExtension<T extends IsoStandardized>
   ///
   /// Example:
   /// ```dart
-  /// import "package:sealed_languages/sealed_languages.dart";
+  /// import 'package:sealed_languages/sealed_languages.dart';
   ///
   /// enum IsoEnum { de, ru, bul, fr }
   ///
   /// void main() {
   ///   final sealedObjects = NaturalLanguage.list.fromEnums(IsoEnum.values);
-  ///   assert(sealedObjects.isNotEmpty, "should not be empty");
+  ///   assert(sealedObjects.isNotEmpty, 'should not be empty');
   /// }
   /// ```
   List<T> fromEnums<E extends Enum>(Iterable<E> values) {
@@ -137,13 +137,13 @@ extension SealedWorldNullableIterableIsoExtension<T extends IsoStandardized>
   ///
   /// Example:
   /// ```dart
-  /// import "package:sealed_languages/sealed_languages.dart";
+  /// import 'package:sealed_languages/sealed_languages.dart';
   ///
   /// enum IsoEnum { de, cn, fr, rus }
   ///
   /// void main() {
   ///   final enums = {const LangFra()}.toEnums(IsoEnum.values);
-  ///   assert(enums.isNotEmpty, "should not be empty");
+  ///   assert(enums.isNotEmpty, 'should not be empty');
   /// }
   /// ```
   List<E> toEnums<E extends Enum>(Iterable<E> values) {

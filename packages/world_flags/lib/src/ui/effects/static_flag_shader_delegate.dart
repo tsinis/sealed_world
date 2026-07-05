@@ -33,12 +33,12 @@ import "flag_shader_delegate.dart";
 ///
 /// ```dart
 /// class MyStaticShaderDelegate extends StaticFlagShaderDelegate {
-///   MyStaticShaderDelegate() : super(assetPath: "shaders/my_shader.frag");
+///   MyStaticShaderDelegate() : super(assetPath: 'shaders/my_shader.frag');
 /// }
 ///
 /// void main() {
 ///   final delegate = MyStaticShaderDelegate();
-///   assert(delegate.assetPath == "shaders/my_shader.frag");
+///   assert(delegate.assetPath == 'shaders/my_shader.frag');
 /// }
 /// ```
 ///
@@ -47,7 +47,7 @@ import "flag_shader_delegate.dart";
 /// ```dart
 /// class MyCustomShaderDelegate extends StaticFlagShaderDelegate {
 ///   MyCustomShaderDelegate({this.intensity = 1.0})
-///       : super(assetPath: "shaders/custom.frag");
+///       : super(assetPath: 'shaders/custom.frag');
 ///
 ///   final double intensity;
 ///
@@ -128,7 +128,7 @@ abstract class StaticFlagShaderDelegate extends ChangeNotifier
   /// first use:
   ///
   /// ```dart
-  /// import "package:flutter/widgets.dart";
+  /// import 'package:flutter/widgets.dart';
   ///
   /// class MyApp extends StatelessWidget {
   ///   const MyApp({super.key});
@@ -171,7 +171,7 @@ abstract class StaticFlagShaderDelegate extends ChangeNotifier
   ///
   /// ```dart
   /// class MyCustomDelegate extends StaticFlagShaderDelegate {
-  ///   MyCustomDelegate() : super(assetPath: "shaders/custom.frag");
+  ///   MyCustomDelegate() : super(assetPath: 'shaders/custom.frag');
   ///
   ///   @override
   ///   void configureShader(FragmentShader shader, Size size, Image image) {
@@ -182,7 +182,7 @@ abstract class StaticFlagShaderDelegate extends ChangeNotifier
   ///
   /// void main() {
   ///   final delegate = MyCustomDelegate();
-  ///   assert(delegate.assetPath == "shaders/custom.frag");
+  ///   assert(delegate.assetPath == 'shaders/custom.frag');
   /// }
   /// ```
   @protected
