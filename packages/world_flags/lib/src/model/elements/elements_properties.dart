@@ -13,13 +13,13 @@ import "../shape.dart";
 ///
 /// Example usage:
 /// ```dart
-/// import "package:world_flags/src/model/shape.dart";
+/// import "package:world_flags/world_flags.dart";
 ///
 /// void main() {
 ///   const element = ElementsProperties(
-///     Color(0xFF0000FF),
-///     shape: Triangle(),
-///     offset: Offset(0.5, 0.5),
+///     const Color(0xFF0000FF),
+///     shape: const Triangle(),
+///     offset: const Offset(0.5, 0.5),
 ///     heightFactor: 0.8,
 ///     widthFactor: 0.8,
 ///     angle: 90,

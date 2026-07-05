@@ -26,16 +26,19 @@ extension MapIsoL10nExtension<T extends IsoTranslated> on Map<T, String> {
   /// [compare] factory, e.g. using the `intl4x` package.
   ///
   /// Example with custom sorter:
-  /// ```dart#no-test
-  /// // Custom diacritics-aware sorting using intl4x.
-  /// final sorted = translations.sortAlphabetically(
-  ///   locale: typedLocale,
-  ///   compare: (typed) {
-  ///     final locale = Locale.parse(typed.toUnicodeLocaleId());
-  ///     final collator = Collation(locale: locale);
-  ///     return (a, b) => collator.compare(a.value, b.value);
-  ///   },
-  /// );
+  /// ```dart
+  /// import "package:world_countries/world_countries.dart";
+  ///
+  /// void main() {
+  ///   final map = <WorldCountry, String>{
+  ///     const CountryUsa(): "United States",
+  ///     const CountryFra(): "France",
+  ///   };
+  ///   final sorted = map.sortAlphabetically(
+  ///     compare: (typed) => (a, b) => a.value.compareTo(b.value),
+  ///   );
+  ///   assert(sorted.keys.first == const CountryFra());
+  /// }
   /// ```
   @useResult
   Map<T, String> sortAlphabetically({

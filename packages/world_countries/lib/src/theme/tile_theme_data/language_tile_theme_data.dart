@@ -14,22 +14,15 @@ import "base_tile_theme_data.dart";
 /// to render a tile given [NaturalLanguage] item properties.
 ///
 /// Example:
-/// ```dart#no-test
-/// final languageTileThemeData = LanguageTileThemeData(
-///   itemBuilder: (itemProperties, defaultTile) {
-///     // Use the default tile as-is
-///     return defaultTile;
+/// ```dart
+/// import "package:world_countries/world_countries.dart";
 ///
-///     // Or customize it with copyWith
-///     return defaultTile.copyWith(dense: true);
-///
-///     // Or build a custom tile
-///     return MyLanguageTile(
-///       title: itemProperties.item.commonNameFor(locale),
-///       isDense: defaultTile.dense ?? false,
-///     );
-///   },
-/// );
+/// void main() {
+///   final languageTileTheme = LanguageTileThemeData(
+///     itemBuilder: (props, defaultTile) => defaultTile,
+///   );
+///   assert(languageTileTheme.itemBuilder != null);
+/// }
 /// ```
 ///
 /// The `MyLanguageTile` is a hypothetical widget that uses the provided

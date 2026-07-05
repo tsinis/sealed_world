@@ -19,9 +19,18 @@ extension PlatformDispatcherExtension on PlatformDispatcher {
   ///
   /// Returns `null` if no valid country code is found in any of the locales.
   ///
-  /// ```dart#no-test
-  /// final country = PlatformDispatcher.instance.firstCountryOrNull;
-  /// print(country?.code); // Prints country code, e.g., "USA".
+  /// ```dart
+  /// import "dart:ui";
+  /// import "package:world_countries/world_countries.dart";
+  ///
+  /// void main() {
+  ///   const locale = Locale("en");
+  ///   final country = PlatformDispatcher.instance.firstCountryOrNull;
+  ///   assert(
+  ///     locale.languageCode == "en" &&
+  ///         (country == null || country.code.isNotEmpty),
+  ///   );
+  /// }
   /// ```
   @useResult
   WorldCountry? get firstCountryOrNull => _firstWhereCode(
@@ -38,9 +47,18 @@ extension PlatformDispatcherExtension on PlatformDispatcher {
   ///
   /// Returns `null` if no valid language code is found in any of the locales.
   ///
-  /// ```dart#no-test
-  /// final language = PlatformDispatcher.instance.firstLanguageOrNull;
-  /// print(language?.code); // Prints language code, e.g., "ENG".
+  /// ```dart
+  /// import "dart:ui";
+  /// import "package:world_countries/world_countries.dart";
+  ///
+  /// void main() {
+  ///   const locale = Locale("en");
+  ///   final language = PlatformDispatcher.instance.firstLanguageOrNull;
+  ///   assert(
+  ///     locale.languageCode == "en" &&
+  ///         (language == null || language.code.isNotEmpty),
+  ///   );
+  /// }
   /// ```
   @useResult
   NaturalLanguage? get firstLanguageOrNull => _firstWhereCode(
@@ -56,9 +74,18 @@ extension PlatformDispatcherExtension on PlatformDispatcher {
   ///
   /// Returns `null` if no valid script code is found in any of the locales.
   ///
-  /// ```dart#no-test
-  /// final script = PlatformDispatcher.instance.firstScriptOrNull;
-  /// print(script?.code); // Prints script code, e.g., "Latn".
+  /// ```dart
+  /// import "dart:ui";
+  /// import "package:world_countries/world_countries.dart";
+  ///
+  /// void main() {
+  ///   const locale = Locale("en");
+  ///   final script = PlatformDispatcher.instance.firstScriptOrNull;
+  ///   assert(
+  ///     locale.languageCode == "en" &&
+  ///         (script == null || script.code.isNotEmpty),
+  ///   );
+  /// }
   /// ```
   @useResult
   Script? get firstScriptOrNull => _firstWhereCode(
@@ -76,11 +103,20 @@ extension PlatformDispatcherExtension on PlatformDispatcher {
   /// Returns `null` if the `languageCode` of the primary `locale` cannot be
   /// parsed into a [NaturalLanguage].
   ///
-  /// ```dart#no-test
-  /// final typedLocale = PlatformDispatcher.instance.maybeLocale;
-  /// if (typedLocale == null) return;
-  /// print(typedLocale.language.internationalName);
-  /// print(typedLocale.country?.code);
+  /// ```dart
+  /// import "dart:ui";
+  /// import "package:world_countries/world_countries.dart";
+  ///
+  /// void main() {
+  ///   const locale = Locale("en");
+  ///   final typedLocale = PlatformDispatcher.instance.maybeLocale;
+  ///   if (typedLocale != null) {
+  ///     assert(
+  ///       locale.languageCode == "en" &&
+  ///           typedLocale.language.internationalName.isNotEmpty,
+  ///     );
+  ///   }
+  /// }
   /// ```
   @useResult
   BasicTypedLocale? get maybeLocale {

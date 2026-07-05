@@ -28,18 +28,15 @@ import "../model/typedefs.dart";
 ///
 /// Example usage:
 ///
-/// ```dart#no-test
-/// const typedLocaleDelegate = TypedLocaleDelegate(
-///       isoCollections: IsoCollections(
-///         localeMapResolution: [
-///           LocaleEntry(
-///             /// Brazilian Portuguese could be mapped to Euro Portuguese.
-///             Locale("pt", "BR"),
-///             TypedLocale(LangPor(), country: CountryPrt()),
-///           ),
-///         ],
-///       ),
-///     );
+/// ```dart
+/// import "package:world_countries/world_countries.dart";
+///
+/// void main() {
+///   const typedLocaleDelegate = TypedLocaleDelegate(
+///     fallbackLanguage: LangEng(),
+///   );
+///   assert(typedLocaleDelegate.fallbackLanguage == const LangEng());
+/// }
 /// ```
 @immutable
 class TypedLocaleDelegate implements LocalizationsDelegate<TypedLocale?> {
@@ -236,9 +233,18 @@ class TypedLocaleDelegate implements LocalizationsDelegate<TypedLocale?> {
   ///
   /// Example usage:
   ///
-  /// ```dart#no-test
-  /// final typedLocale = TypedLocaleDelegate.of(context);
-  /// // or just as final typedLocale = context.maybeLocale;
+  /// ```dart
+  /// import "package:flutter/widgets.dart";
+  /// import "package:world_countries/world_countries.dart";
+  ///
+  /// void example(BuildContext context) {
+  ///   final typedLocale = TypedLocaleDelegate.of(context);
+  ///   if (typedLocale != null) {
+  ///     assert(typedLocale.language.code.isNotEmpty);
+  ///   }
+  /// }
+  ///
+  /// void main() {}
   /// ```
   @useResult
   static TypedLocale? of(BuildContext context) =>

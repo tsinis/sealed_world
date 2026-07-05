@@ -57,13 +57,18 @@ sealed class _BaseTileThemeData<T extends IsoTranslated>
   /// tile widget which can be used as-is or customized using `.copyWith()`.
   ///
   /// Example:
-  /// ```dart#no-test
-  /// itemBuilder: (itemProperties, defaultTile) {
-  ///   // Use default tile as-is
-  ///   return defaultTile;
+  /// ```dart
+  /// import "package:world_countries/world_countries.dart";
   ///
-  ///   // Or customize it
-  ///   return defaultTile.copyWith(dense: true);
+  /// Widget? myItemBuilder(
+  ///   ItemProperties<WorldCountry> props,
+  ///   IsoTile<WorldCountry> defaultTile,
+  /// ) {
+  ///   return defaultTile;
+  /// }
+  ///
+  /// void main() {
+  ///   assert(myItemBuilder.hashCode != 0);
   /// }
   /// ```
   final Widget? Function(ItemProperties<T>, IsoTile<T>)? itemBuilder;

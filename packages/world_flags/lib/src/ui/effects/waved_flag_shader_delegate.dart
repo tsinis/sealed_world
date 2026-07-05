@@ -27,8 +27,7 @@ import "static_flag_shader_delegate.dart";
 /// Basic usage with default options:
 ///
 /// ```dart
-/// import "package:sealed_countries/sealed_countries.dart";
-/// import "package:world_flags/src/ui/effects/flag_shader_surface.dart";
+/// import "package:world_flags/world_flags.dart";
 ///
 /// void main() {
 ///   final surface = FlagShaderSurface(const CountryUsa());
@@ -39,9 +38,7 @@ import "static_flag_shader_delegate.dart";
 /// With custom wave settings:
 ///
 /// ```dart
-/// import "package:sealed_countries/sealed_countries.dart";
-/// import "package:world_flags/src/ui/effects/flag_shader_surface.dart";
-/// import "package:world_flags/src/ui/effects/flag_shader_options.dart";
+/// import "package:world_flags/world_flags.dart";
 ///
 /// void main() {
 ///   final surface = FlagShaderSurface(

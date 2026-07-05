@@ -59,7 +59,7 @@ jobs:
         run: dart pub upgrade
 
       - name: 📝 Test documentation code samples
-        working-directory: ../..
+        working-directory: .
         run: dart run tools/bin/test_docs.dart ${{ inputs.package_name }}
 
       - name: 🕵️ Analyze code

@@ -18,8 +18,12 @@ extension NavigatorContextExtension on BuildContext {
   /// completes when the new route is popped.
   ///
   /// Example usage:
-  /// ```dart#no-test
-  /// context.push(MyRoute());
+  /// ```dart
+  /// void example(BuildContext context, Route<Object> route) {
+  ///   context.push(route);
+  /// }
+  ///
+  /// void main() {}
   /// ```
   @optionalTypeArgs
   Future<T?> push<T extends Object>(Route<T> route) => navigator.push(route);
