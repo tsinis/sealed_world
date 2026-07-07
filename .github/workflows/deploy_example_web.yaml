@@ -9,7 +9,9 @@ on:
       - ".github/workflows/deploy_example_web.yaml"
 
 permissions:
-  contents: write
+  contents: read
+  pages: write
+  id-token: write
 
 concurrency:
   group: ${{ github.workflow }}
@@ -20,6 +22,9 @@ jobs:
     name: 🚀 Deploy example website
     runs-on: ubuntu-latest
     timeout-minutes: 20
+    environment:
+      name: github-pages
+      url: ${{ steps.deployment.outputs.page_url }}
     steps:
       - name: 📚 Git checkout
         uses: actions/checkout@v7.0.0
@@ -38,10 +43,11 @@ jobs:
         working-directory: packages/world_countries/example
         run: flutter build web --release --base-href=/sealed_world/ --wasm
 
-      - name: 🛫 Deploy the website to GH Pages
-        uses: s0/git-publish-subdir-action@v2.6.0
-        env:
-          REPO: self
-          BRANCH: gh-pages
-          FOLDER: packages/world_countries/example/build/web
-          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+      - name: 📤 Upload Pages Artifact
+        uses: actions/upload-pages-artifact@v5.0.0
+        with:
+          path: packages/world_countries/example/build/web
+
+      - name: 🛫 Deploy to GitHub Pages
+        id: deployment
+        uses: actions/deploy-pages@v5.0.0

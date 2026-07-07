@@ -152,11 +152,12 @@ val augmentOutputMetadataProfile by tasks.registering {
 }
 
 // Bind finalizer when assembleProfile is created
-tasks.whenTaskAdded {
-    if (this.path == ":app:assembleProfile") {
-        this.finalizedBy(augmentOutputMetadataProfile)
+tasks.configureEach {
+    if (name == "assembleProfile") {
+        finalizedBy(augmentOutputMetadataProfile)
     }
 }
+
 
 // Fallback: finalize any Flutter-side profile build proxies
 val postAssembleProfileCheck by tasks.registering {
@@ -172,5 +173,9 @@ val postAssembleProfileCheck by tasks.registering {
     }
 }
 
-tasks.matching { it.name.contains("compileFlutterBuild") && it.name.endsWith("Profile") }
-    .configureEach { finalizedBy(postAssembleProfileCheck) }
+tasks.configureEach {
+    if (name.contains("compileFlutterBuild") && name.endsWith("Profile")) {
+        finalizedBy(postAssembleProfileCheck)
+    }
+}
+
