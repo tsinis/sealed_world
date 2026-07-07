@@ -1,6 +1,6 @@
 ## 3.3.0
 
-NEW FEATURES
+REFACTOR
 
 - Deprecated sub-classing `LanguageFamily` and `WritingSystem` via `@Deprecated.subclass(...)` to prepare for making them `final` in the next major version to support deep immutability.
 
