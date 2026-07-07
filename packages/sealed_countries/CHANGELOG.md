@@ -1,6 +1,6 @@
 ## 3.3.0
 
-NEW FEATURES
+REFACTOR
 
 - Added `@pragma("vm:deeply-immutable")` optimization to `Capital`, `CapitalInfo`, `Gini`, `LatLng`, `Maps`, and `PostalCode` classes.
 - Deprecated sub-classing `Region`, `LanguageFamily` and `WritingSystem` via `@Deprecated.subclass(...)` to prepare for making them `final` in the next major version.
