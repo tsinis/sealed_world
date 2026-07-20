@@ -39,7 +39,7 @@ class IsoFlag<T extends IsoStandardized, F extends BasicFlag>
   ///
   /// - [item]: The item for which the flag is to be displayed.
   /// - [_map]: A map of flags for ISO objects.
-  /// - [_alternativeMap]: A map of non-official or alternative flags of ISO.
+  /// - [alternativeMap]: A map of non-official or alternative flags of ISO.
   /// - [aspectRatio]: The aspect ratio of the flag.
   /// - [decoration]: The decoration to paint behind the flag.
   /// - [decorationPosition]: The position of the decoration.
@@ -54,7 +54,7 @@ class IsoFlag<T extends IsoStandardized, F extends BasicFlag>
   const IsoFlag(
     this.item,
     this._map, {
-    this._alternativeMap,
+    this.alternativeMap,
     this.orElse,
     this.shader,
     super.height,
@@ -68,7 +68,7 @@ class IsoFlag<T extends IsoStandardized, F extends BasicFlag>
   });
 
   final Map<T, F> _map;
-  final Map<T, F>? _alternativeMap;
+  final Map<T, F>? alternativeMap;
 
   /// The item for which the flag is to be displayed.
   final T item;
@@ -79,7 +79,7 @@ class IsoFlag<T extends IsoStandardized, F extends BasicFlag>
   Map<T, F> get map => _map;
 
   /// Map of non-official or alternative flags of the ISO objects.
-  Map<T, F>? get alternativeMap => _alternativeMap;
+
 
   /// A widget to display if the flag is not found in the map.
   final Widget? orElse;
@@ -92,7 +92,7 @@ class IsoFlag<T extends IsoStandardized, F extends BasicFlag>
 
   /// Returns the [BasicFlag] for the specified item from the main map
   /// or the alternative map if available.
-  F? get basicFlag => _alternativeMap?[item] ?? _map[item];
+  F? get basicFlag => alternativeMap?[item] ?? _map[item];
 
   /// Returns a debug label for the flag, which is the ISO code by default.
   @protected
@@ -166,7 +166,7 @@ class IsoFlag<T extends IsoStandardized, F extends BasicFlag>
       ..add(
         FlagProperty(
           "uses alternative flag for this ${item.internationalName} item",
-          value: _alternativeMap?[item] != null,
+          value: alternativeMap?[item] != null,
           ifTrue: "yes",
           ifFalse: "no",
         ),
@@ -180,9 +180,9 @@ class IsoFlag<T extends IsoStandardized, F extends BasicFlag>
       )
       ..add(
         DiagnosticsProperty<int>(
-          "total flags available in _alternativeMap",
-          _alternativeMap?.length,
-          description: "${_alternativeMap?.length} flags in alt. map",
+          "total flags available in alternativeMap",
+          alternativeMap?.length,
+          description: "${alternativeMap?.length} flags in alt. map",
         ),
       )
       ..add(
