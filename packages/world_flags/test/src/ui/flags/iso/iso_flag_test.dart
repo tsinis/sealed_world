@@ -1,5 +1,3 @@
-// ignore_for_file: missing-test-assertion, flagGolden does the job.
-
 import "package:_sealed_world_tests/sealed_world_tests.dart";
 import "package:flutter/foundation.dart";
 import "package:flutter/material.dart" show FlutterLogo;
@@ -45,10 +43,7 @@ void main() => group("$IsoFlag", () {
       const LangEpo(),
       const LangIdo(),
     ]) {
-      testWidgets(
-        "${iso.internationalName} Flag",
-        (tester) => tester.flagGolden(iso, .full),
-      );
+      flagGoldenTest(iso, .full);
     }
   });
 
@@ -58,10 +53,7 @@ void main() => group("$IsoFlag", () {
       const FiatEur(),
       ...smallSimplifiedLanguageFlagsMap.keys,
     ]) {
-      testWidgets(
-        "${iso.internationalName} Flag",
-        (tester) => tester.flagGolden(iso, .simplified),
-      );
+      flagGoldenTest(iso, .simplified);
     }
   });
 });

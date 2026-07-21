@@ -76,15 +76,7 @@ void main() => group("$CurrencyFlag", () {
 
   group("goldens", () {
     for (final iso in CurrencyFlag.defaultSecondaryCountryCurrencyFlags.keys) {
-      // ignore: missing-test-assertion, flagGolden does the job.
-      testWidgets(
-        "${iso.internationalName} Flag",
-        (tester) => tester.flagGolden(
-          iso,
-          .dual,
-          widget: CurrencyFlag.fromFlagMap(iso),
-        ),
-      );
+      flagGoldenTest(iso, .dual, widget: CurrencyFlag.fromFlagMap(iso));
     }
   });
 });

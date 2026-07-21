@@ -1,9 +1,7 @@
 // ignore_for_file: prefer-moving-to-variable, avoid_redundant_argument_values
-import "dart:io" show Platform;
-
+import "package:alchemist/alchemist.dart";
 import "package:flutter/material.dart" show MaterialApp, ThemeData;
 import "package:flutter/widgets.dart";
-import "package:flutter_test/flutter_test.dart";
 import "package:sealed_countries/sealed_countries.dart";
 import "package:world_flags/src/constants/flag_constants.dart";
 import "package:world_flags/src/helpers/extensions/flag_extension.dart";
@@ -19,70 +17,49 @@ import "package:world_flags/world_flags.dart"
 
 import "../flag_type.dart";
 
-// ignore: avoid-top-level-members-in-tests, it's not a test, but extension.
-extension GoldenWidgetTesterExtension on WidgetTester {
-  static const _items = <IsoTranslated, BasicFlag>{
-    ...smallSimplifiedFlagsMap,
-    ...smallSimplifiedCurrencyFlagsMap,
-    ...smallSimplifiedLanguageFlagsMap,
-  };
+const _items = <IsoTranslated, BasicFlag>{
+  ...smallSimplifiedFlagsMap,
+  ...smallSimplifiedCurrencyFlagsMap,
+  ...smallSimplifiedLanguageFlagsMap,
+};
 
-  Future<void> flagGolden<T extends IsoTranslated>(
-    T iso,
-    FlagType type, {
-    Widget? widget,
-    String goldensPath = "../../../../goldens",
-  }) async {
-    final isWaved = type == FlagType.waved;
-    final isDual = type == FlagType.dual;
-    final aspectRatio = iso.mapWhenOrNull(
-      country: (country) => country.flagProperties?.aspectRatio,
-    );
-    final height = type.height;
-    final width = height * (aspectRatio ?? FlagConstants.defaultAspectRatio);
-    final filePath = "$goldensPath/${type.name}/${iso.code.toLowerCase()}.png";
+// ignore: avoid-top-level-members-in-tests, it's not a test, but a helper.
+void flagGoldenTest<T extends IsoTranslated>(
+  T iso,
+  FlagType type, {
+  Widget? widget,
+}) {
+  final isWaved = type == FlagType.waved;
+  final aspectRatio = iso.mapWhenOrNull(
+    country: (country) => country.flagProperties?.aspectRatio,
+  );
+  final height = type.height;
+  final width = height * (aspectRatio ?? FlagConstants.defaultAspectRatio);
 
-    await binding.setSurfaceSize(Size(width, height));
-    final flagWidget =
-        widget ??
-        (isWaved
-            ? FlagShaderSurface(iso, height: height, width: width)
-            : IsoFlag(iso, _items));
+  final flagWidget =
+      widget ??
+      (isWaved
+          ? FlagShaderSurface(iso, height: height, width: width)
+          : IsoFlag(iso, _items));
 
-    await pumpWidget(
-      MaterialApp(
-        home: flagWidget,
-        theme: ThemeData(
-          extensions: [FlagThemeData(decoration: type.decoration)],
+  goldenTest(
+    "${iso.internationalName} ${type.name} flag",
+    fileName: "${type.name}/${iso.code.toLowerCase()}",
+    builder: () => flagWidget,
+    constraints: BoxConstraints.tight(Size(width, height)),
+    pumpWidget: (tester, pumpedWidget) async {
+      await tester.pumpWidget(
+        MaterialApp(
+          home: pumpedWidget,
+          theme: ThemeData(
+            extensions: [FlagThemeData(decoration: type.decoration)],
+          ),
+          debugShowCheckedModeBanner: false,
         ),
-      ),
-    );
-    if (isWaved) await pump(const Duration(milliseconds: 100));
-
-    final finderType = isDual || isWaved
-        ? flagWidget.runtimeType
-        : IsoFlag<T, BasicFlag>;
-
-    return expectLater(
-      find.byType(finderType),
-      matchesGoldenFile(isWaved ? "../$filePath" : filePath),
-      skip: !Platform.isLinux && (_ignoreOnNonLinux.contains(iso) || isWaved),
-      reason: "Non-Linux platforms rendering those flags slightly differently",
-    );
-  }
-
-  static const _ignoreOnNonLinux = <IsoTranslated>{
-    CountryAia(),
-    CountryAnd(),
-    CountryBmu(),
-    CountryEcu(),
-    CountryFji(),
-    CountryFlk(),
-    CountryIot(),
-    CountryJey(),
-    CountryMsr(),
-    CountryPcn(),
-    CountrySgs(),
-    CountryTca(),
-  };
+      );
+    },
+    pumpBeforeTest: (tester) async {
+      if (isWaved) await tester.pump(const Duration(milliseconds: 100));
+    },
+  );
 }

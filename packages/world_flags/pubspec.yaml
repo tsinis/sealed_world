@@ -39,6 +39,7 @@ dependencies:
 dev_dependencies:
   _sealed_world_tests:
     path: ../_sealed_world_tests
+  alchemist: ^0.14.0
   dart_code_metrics_presets: any # Constrained in the workspace pubspec.yaml
   flutter_test: # From Google
     sdk: flutter

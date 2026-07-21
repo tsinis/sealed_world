@@ -75,15 +75,7 @@ void main() => group("$LanguageFlag", () {
 
   group("goldens", () {
     for (final iso in LanguageFlag.defaultSecondaryCountryLanguageFlags.keys) {
-      // ignore: missing-test-assertion, flagGolden does the job.
-      testWidgets(
-        "${iso.internationalName} Flag",
-        (tester) => tester.flagGolden(
-          iso,
-          .dual,
-          widget: LanguageFlag.fromFlagMap(iso),
-        ),
-      );
+      flagGoldenTest(iso, .dual, widget: LanguageFlag.fromFlagMap(iso));
     }
   });
 });
