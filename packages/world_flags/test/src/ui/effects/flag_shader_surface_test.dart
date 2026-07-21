@@ -182,6 +182,7 @@ void main() => group("$FlagShaderSurface", () {
     );
   });
 
+  // ignore: avoid-empty-test-groups, just a showcase.
   group("golden", () {
     for (final iso in const <WorldCountry>[.svk(), .kor(), .mkd(), .shn()]) {
       flagGoldenTest(iso, .waved);

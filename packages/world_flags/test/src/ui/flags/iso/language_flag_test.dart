@@ -73,6 +73,7 @@ void main() => group("$LanguageFlag", () {
     () => expect(LanguageFlag.defaultSecondaryCountryLanguageFlags, isNotEmpty),
   );
 
+  // ignore: avoid-empty-test-groups, just a showcase.
   group("goldens", () {
     for (final iso in LanguageFlag.defaultSecondaryCountryLanguageFlags.keys) {
       flagGoldenTest(iso, .dual, widget: LanguageFlag.fromFlagMap(iso));

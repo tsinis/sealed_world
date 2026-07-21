@@ -33,6 +33,7 @@ void main() => group("$IsoFlag", () {
     expect(builder.properties.any((prop) => prop.name == "padding"), isTrue);
   });
 
+  // ignore: avoid-empty-test-groups, just a showcase.
   group("Full", () {
     final nonSimplified = WorldCountry.list.where(
       (country) => country.flagProperties?.isSimplified == false,
@@ -47,6 +48,7 @@ void main() => group("$IsoFlag", () {
     }
   });
 
+  // ignore: avoid-empty-test-groups, just a showcase.
   group("Simplified", () {
     for (final iso in <IsoTranslated>[
       ...smallSimplifiedFlagsMap.keys,

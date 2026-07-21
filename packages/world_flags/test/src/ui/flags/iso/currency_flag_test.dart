@@ -74,6 +74,7 @@ void main() => group("$CurrencyFlag", () {
     () => expect(CurrencyFlag.defaultSecondaryCountryCurrencyFlags, isNotEmpty),
   );
 
+  // ignore: avoid-empty-test-groups, just a showcase.
   group("goldens", () {
     for (final iso in CurrencyFlag.defaultSecondaryCountryCurrencyFlags.keys) {
       flagGoldenTest(iso, .dual, widget: CurrencyFlag.fromFlagMap(iso));

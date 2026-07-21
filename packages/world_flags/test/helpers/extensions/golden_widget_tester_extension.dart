@@ -42,6 +42,8 @@ void flagGoldenTest<T extends IsoTranslated>(
           ? FlagShaderSurface(iso, height: height, width: width)
           : IsoFlag(iso, _items));
 
+  // Just a showcase, no need to test the golden here.
+  //ignore:discarded_futures,avoid-async-call-in-sync-function,missing-test-assertion
   goldenTest(
     "${iso.internationalName} ${type.name} flag",
     fileName: "${type.name}/${iso.code.toLowerCase()}",
