@@ -27,7 +27,7 @@ jobs:
       url: ${{ steps.deployment.outputs.page_url }}
     steps:
       - name: 📚 Git checkout
-        uses: actions/checkout@v7.0.0
+        uses: actions/checkout@v7.0.1
 
       - name: 🐦 Setup Flutter
         uses: subosito/flutter-action@v2.23.0
