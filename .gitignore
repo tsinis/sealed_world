@@ -133,3 +133,6 @@ json/
 **/example/android/app/.cxx/*
 **/example/benchmarks/*.json
 **/example/android/.kotlin/sessions/**
+
+# Golden files and gleon
+**/test/goldens/**/*.png
