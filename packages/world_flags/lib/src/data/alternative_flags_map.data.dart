@@ -10,7 +10,7 @@ import "../model/stripe_orientation.dart";
 
 /// Alternative flag properties of country French Guiana (GF).
 const flagGufPropertiesAlt = FlagProperties(
-  [ColorsProperties(Color(0xffFCDD09)), ColorsProperties(Color(0xff078930))],
+  [ColorsProperties(Color(0xffFCDD09)), ColorsProperties(Color(0xff078931))],
   stripeOrientation: StripeOrientation.diagonalTopLeftToBottomRight,
   baseElementType: FlagElementsType.star,
   elementsProperties: [

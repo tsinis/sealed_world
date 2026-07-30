@@ -1,6 +1,4 @@
 // ignore_for_file: prefer-moving-to-variable, avoid_redundant_argument_values
-import "dart:io" show Platform;
-
 import "package:flutter/material.dart" show MaterialApp, ThemeData;
 import "package:flutter/widgets.dart";
 import "package:flutter_test/flutter_test.dart";
@@ -66,23 +64,6 @@ extension GoldenWidgetTesterExtension on WidgetTester {
     return expectLater(
       find.byType(finderType),
       matchesGoldenFile(isWaved ? "../$filePath" : filePath),
-      skip: !Platform.isLinux && (_ignoreOnNonLinux.contains(iso) || isWaved),
-      reason: "Non-Linux platforms rendering those flags slightly differently",
     );
   }
-
-  static const _ignoreOnNonLinux = <IsoTranslated>{
-    CountryAia(),
-    CountryAnd(),
-    CountryBmu(),
-    CountryEcu(),
-    CountryFji(),
-    CountryFlk(),
-    CountryIot(),
-    CountryJey(),
-    CountryMsr(),
-    CountryPcn(),
-    CountrySgs(),
-    CountryTca(),
-  };
 }
