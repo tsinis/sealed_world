@@ -137,6 +137,13 @@ jobs:
         if: ${{ inputs.is_flutter }}
         run: flutter test --coverage --no-pub --update-goldens
 
+      - name: Pull Baselines
+        env:
+          GLEON_STORAGE_URL: ${{ secrets.GLEON_STORAGE_URL }}
+          AWS_ACCESS_KEY_ID: ${{ secrets.AWS_ACCESS_KEY_ID }}
+          AWS_SECRET_ACCESS_KEY: ${{ secrets.AWS_SECRET_ACCESS_KEY }}
+        run: gleon pull
+
       - name: Run Gleon Diff
         run: gleon diff
 
@@ -144,8 +151,8 @@ jobs:
         if: failure()
         uses: actions/upload-artifact@v7.0.1
         with:
-          name: gleon-diff-report
-          path: .gleon/runs/latest/
+          name: gleon-diff-report-${{ inputs.package_name }}
+          path: ${{ env.relative_path }}/.gleon/runs/latest/
 
       - name: ⏳ Wait for Analyze and DCM
         wait: [analyze, dcm]
