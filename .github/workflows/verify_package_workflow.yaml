@@ -124,9 +124,28 @@ jobs:
         if: ${{ !inputs.is_flutter }}
         run: dart run coverage:test_with_coverage --fail-under=40
 
+      - name: Cache Gleon Binary
+        uses: actions/cache@v6.1.0
+        with:
+          path: ~/.cargo/bin/gleon
+          key: gleon-cli-${{ runner.os }}-v1
+
+      - name: Install Gleon CLI
+        run: which gleon || cargo install --git https://github.com/tsinis/gleon gleon
+
       - name: 🔬 Run Flutter tests
         if: ${{ inputs.is_flutter }}
-        run: flutter test --coverage --no-pub
+        run: flutter test --coverage --no-pub --update-goldens
+
+      - name: Run Gleon Diff
+        run: gleon diff
+
+      - name: Upload Diff HTML Report
+        if: failure()
+        uses: actions/upload-artifact@v7.0.1
+        with:
+          name: gleon-diff-report
+          path: .gleon/runs/latest/
 
       - name: ⏳ Wait for Analyze and DCM
         wait: [analyze, dcm]
