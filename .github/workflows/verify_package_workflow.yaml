@@ -91,7 +91,7 @@ jobs:
 
       - name: 📥 Install DCM
         if: ${{ github.event_name == 'pull_request' }}
-        uses: CQLabs/setup-dcm@v2.0.1
+        uses: CQLabs/setup-dcm@v2.0.2
         with:
           github-token: ${{ secrets.GITHUB_TOKEN }}
 
