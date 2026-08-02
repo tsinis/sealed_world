@@ -98,7 +98,7 @@ jobs:
       - name: 🔎 Dart Code Metrics (Author)
         id: dcm
         if: ${{ github.event_name == 'pull_request' && github.event.pull_request.user.login == 'tsinis' }}
-        uses: CQLabs/dcm-action@v2.0.3
+        uses: CQLabs/dcm-action@v2.0.4
         background: true
         with:
           ci-key: oss
