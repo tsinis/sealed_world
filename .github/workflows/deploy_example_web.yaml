@@ -21,7 +21,7 @@ jobs:
   deploy:
     name: 🚀 Deploy example website
     runs-on: ubuntu-latest
-    timeout-minutes: 15
+    timeout-minutes: 10
     environment:
       name: github-pages
       url: ${{ steps.deployment.outputs.page_url }}
