@@ -43,7 +43,7 @@ jobs:
 
       - name: 🎯 Setup Dart
         if: ${{ !inputs.is_flutter }}
-        uses: dart-lang/setup-dart@v1.7.2
+        uses: dart-lang/setup-dart@v1.8.0
         with:
           sdk: "stable"
 
