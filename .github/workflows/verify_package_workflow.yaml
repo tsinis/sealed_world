@@ -161,7 +161,7 @@ jobs:
         env:
           GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
         run: |
-          gleon report --report .gleon/runs/latest/actual/status.json --pr-number ${{ github.event.pull_request.number }} markdown > gleon-report.md
+          gleon report --report .gleon/runs/latest/gleon-report.json --pr-number ${{ github.event.pull_request.number }} markdown > gleon-report.md
           gh pr comment ${{ github.event.pull_request.number }} --body-file gleon-report.md
         working-directory: ${{ env.relative_path }}
 
