@@ -67,7 +67,7 @@ extension GoldenWidgetTesterExtension on WidgetTester {
       find.byType(finderType),
       matchesGoldenFile(isWaved ? "../$filePath" : filePath),
       skip: !Platform.isLinux && (_ignoreOnNonLinux.contains(iso) || isWaved),
-      reason: "Non-Linux platforms rendering those flags slightly differently",
+      reason: "Non-Linux platforms rendering those flags slightly differently.",
     );
   }
 
