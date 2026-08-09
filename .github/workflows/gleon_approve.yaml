@@ -1,0 +1,84 @@
+name: gleon_approve
+
+on:
+  issue_comment:
+    types: [created]
+
+permissions:
+  contents: write
+  pull-requests: write
+
+jobs:
+  approve:
+    if: github.event.issue.pull_request && startsWith(github.event.comment.body, '/gleon approve')
+    runs-on: ubuntu-latest
+    steps:
+      - name: Verify Collaborator
+        uses: actions/github-script@v9.0.0
+        with:
+          script: |
+            const permission = await github.rest.repos.getCollaboratorPermissionLevel({
+              owner: context.repo.owner,
+              repo: context.repo.repo,
+              username: context.actor,
+            });
+            if (permission.data.permission !== 'admin' && permission.data.permission !== 'write') {
+              core.setFailed(`User ${context.actor} does not have write access.`);
+            }
+
+      - name: Get PR Info
+        id: pr-info
+        uses: actions/github-script@v9.0.0
+        with:
+          script: |
+            const pr = await github.rest.pulls.get({
+              owner: context.repo.owner,
+              repo: context.repo.repo,
+              pull_number: context.issue.number,
+            });
+            core.setOutput("head_sha", pr.data.head.sha);
+            core.setOutput("head_ref", pr.data.head.ref);
+
+      - name: Checkout PR Branch
+        uses: actions/checkout@v7.0.1
+        with:
+          ref: ${{ steps.pr-info.outputs.head_ref }}
+
+      - name: Download Diff Artifacts
+        uses: actions/download-artifact@v8.0.1
+        with:
+          # Use pattern matching to download diffs for all packages in this PR
+          pattern: gleon-diffs-${{ github.event.issue.number }}-*
+          path: .gleon-downloads/
+
+      - name: Reconstruct Diffs Directory
+        run: |
+          mkdir -p packages/world_flags/.gleon/diffs
+          cp -r .gleon-downloads/gleon-diffs-${{ github.event.issue.number }}-world_flags/* packages/world_flags/.gleon/diffs/ 2>/dev/null || true
+
+      - name: Run Gleon Approve
+        uses: tsinis/gleon@f0bc3fe71815eabc6b1f1ed94f29ac4c8a72a143
+        with:
+          version: "v0.1.0"
+          checksum: "sha256:9b8121fae8e4be91188da15169a91a2d5adcb286216e356e724ea74fb2157d5f"
+          command: "approve"
+          working-directory: packages/world_flags
+          args: '["--from=.gleon/diffs"]'
+
+      - name: Commit and Push
+        env:
+          GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+        run: |
+          cd packages/world_flags
+
+          # Stage and commit the updated manifests
+          git config user.name "github-actions[bot]"
+          git config user.email "github-actions[bot]@users.noreply.github.com"
+          git add .gleon/manifests/
+
+          if ! git diff --staged --quiet; then
+            git commit -m "chore(gleon): update baseline images [skip ci]"
+            git push origin HEAD:${{ steps.pr-info.outputs.head_ref }}
+          else
+            echo "No changes to commit."
+          fi

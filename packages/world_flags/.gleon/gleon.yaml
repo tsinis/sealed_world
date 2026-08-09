@@ -12,3 +12,4 @@ screenshots:
     masks: []
 exclude:
   - build/**
+  - example/**
