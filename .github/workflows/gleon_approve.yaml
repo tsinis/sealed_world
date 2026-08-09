@@ -66,7 +66,7 @@ jobs:
         uses: tsinis/gleon@f0bc3fe71815eabc6b1f1ed94f29ac4c8a72a143
         with:
           version: "v0.1.0"
-          checksum: "sha256:9b8121fae8e4be91188da15169a91a2d5adcb286216e356e724ea74fb2157d5f"
+          checksum: "9b8121fae8e4be91188da15169a91a2d5adcb286216e356e724ea74fb2157d5f"
           command: "approve"
           working-directory: packages/world_flags
           args: '["--from=.gleon/diffs"]'
