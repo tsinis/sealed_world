@@ -41,6 +41,22 @@ jobs:
             const f = 'pubspec.yaml', c = await require('fs').promises.readFile(f, 'utf8')
             await require('fs').promises.writeFile(f, c.replace(/- packages\/world_/g, '#'))
 
+      - name: Pull Baselines
+        if: ${{ inputs.is_flutter }}
+        id: gleon
+        background: true
+        uses: tsinis/gleon@f0bc3fe71815eabc6b1f1ed94f29ac4c8a72a143
+        with:
+          version: "v0.1.0"
+          checksum: "sha256:9b8121fae8e4be91188da15169a91a2d5adcb286216e356e724ea74fb2157d5f"
+          command: "pull"
+          working-directory: ${{ env.relative_path }}
+        env:
+          R2_ACCOUNT_ID: ${{ secrets.R2_ACCOUNT_ID }}
+          GLEON_STORAGE_URL: ${{ secrets.GLEON_STORAGE_URL }}
+          AWS_ACCESS_KEY_ID: ${{ secrets.AWS_ACCESS_KEY_ID }}
+          AWS_SECRET_ACCESS_KEY: ${{ secrets.AWS_SECRET_ACCESS_KEY }}
+
       - name: 🎯 Setup Dart
         if: ${{ !inputs.is_flutter }}
         uses: dart-lang/setup-dart@v1.7.2
@@ -129,19 +145,8 @@ jobs:
         # Always use --update-goldens! Gleon will handle the diffing.
         run: flutter test --coverage --no-pub --update-goldens
 
-      - name: Pull Baselines
-        if: ${{ inputs.is_flutter }}
-        uses: tsinis/gleon@f0bc3fe71815eabc6b1f1ed94f29ac4c8a72a143
-        with:
-          version: "v0.1.0"
-          checksum: "sha256:9b8121fae8e4be91188da15169a91a2d5adcb286216e356e724ea74fb2157d5f"
-          command: "pull"
-          working-directory: ${{ env.relative_path }}
-        env:
-          R2_ACCOUNT_ID: ${{ secrets.R2_ACCOUNT_ID }}
-          GLEON_STORAGE_URL: ${{ secrets.GLEON_STORAGE_URL }}
-          AWS_ACCESS_KEY_ID: ${{ secrets.AWS_ACCESS_KEY_ID }}
-          AWS_SECRET_ACCESS_KEY: ${{ secrets.AWS_SECRET_ACCESS_KEY }}
+      - name: ⏳ Wait for gleon Pull
+        wait: [gleon]
 
       - name: Run Gleon Diff
         if: ${{ inputs.is_flutter }}
