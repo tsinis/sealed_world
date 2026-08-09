@@ -156,6 +156,13 @@ jobs:
           checksum: "9b8121fae8e4be91188da15169a91a2d5adcb286216e356e724ea74fb2157d5f"
           working-directory: ${{ env.relative_path }}
 
+      - name: Post PR Summary
+        if: ${{ inputs.is_flutter && failure() && github.event_name == 'pull_request' }}
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+        run: gleon report --pr=${{ github.event.pull_request.number }}
+        working-directory: ${{ env.relative_path }}
+
       - name: Upload Diff Artifacts (For Approval)
         if: ${{ inputs.is_flutter && failure() && github.event_name == 'pull_request' }}
         uses: actions/upload-artifact@v7.0.1
