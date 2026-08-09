@@ -109,6 +109,9 @@ coverage_badge.svg
 *.lcov
 nohup.out
 
+# Test/golden releated
+**/test/goldens/**/*.png
+
 # Platforms except Flutter examples
 macos/
 !packages/*/example/macos
