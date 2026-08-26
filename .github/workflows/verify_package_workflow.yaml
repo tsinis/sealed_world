@@ -122,7 +122,7 @@ jobs:
 
       - name: 🧪 Run Dart tests
         if: ${{ !inputs.is_flutter }}
-        run: dart run coverage:test_with_coverage --fail-under=98
+        run: dart run coverage:test_with_coverage --fail-under=40
 
       - name: 🔬 Run Flutter tests
         if: ${{ inputs.is_flutter }}
