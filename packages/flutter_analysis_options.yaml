@@ -4,6 +4,9 @@ dart_code_metrics:
   extends:
     - package:dart_code_metrics_presets/flutter_all.yaml
   rules:
+    # Disabled:
+    - prefer-localized-semantic-labels: false
+    # Enabled:
     - avoid-duplicate-cascades:
         exclude:
           - "**/ui/painters/**"
@@ -80,6 +83,21 @@ dart_code_metrics:
     - proper-super-calls: true
     - use-closest-build-context: true
     - use-setstate-synchronously: true
+    - prefer-unmodifiable-of: true
+    - use-existing-widget: true
+    - prefer-icon-button-tooltip: true
+    - avoid-redundant-semantics-wrapper: true
+    - provide-progress-indicator-semantics: true
+    - avoid-focusable-offstage: true
+    - provide-input-field-label: true
+    - avoid-merge-semantics-list-tile: true
+    - provide-slider-semantic-formatter: true
+    - provide-icon-semantic-label: true
+    - provide-autofill-hints: true
+    - prefer-semantics-header: true
+    - avoid-nested-interactive-semantics: true
+    - prefer-haptic-feedback-on-interaction: true
+    - prefer-private-named-parameters: true
 
 linter:
   rules:

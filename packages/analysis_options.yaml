@@ -241,12 +241,15 @@ dart_code_metrics:
     - prefer-explicit-parameter-names: false # This will be dev. defined.
     - prefer-prefixed-global-constants: false # This will be a breaking change.
     - prefer-test-matchers: false # Matter of style + introduces coupling in tests.
-    - prefer-private-named-parameters: false # Not updated to the Dart 3.12 everywhere yet.
+    - prefer-unmodifiable-of: false # TODO(tsinis)! adopt in Dart only packages too.
+    - prefer-private-named-parameters: false # TODO(tsinis)! adopt in Dart only packages too.
 
     # Enabled:
+    - add-static-field: true
     - avoid-accessing-collections-by-constant-index: true
     - avoid-accessing-other-classes-private-members: true
     - avoid-always-null-parameters: true
+    - avoid-always-null-variables: true
     - avoid-assigning-to-static-field: true
     - avoid-assignments-as-conditions: true
     - avoid-async-call-in-sync-function: true
@@ -274,6 +277,7 @@ dart_code_metrics:
     - avoid-duplicate-constant-values: true
     - avoid-duplicate-exports: true
     - avoid-duplicate-factories: true
+    - avoid-duplicate-field-initializers: true
     - avoid-duplicate-initializers: true
     - avoid-duplicate-map-keys: true
     - avoid-duplicate-mixins: true
@@ -320,6 +324,7 @@ dart_code_metrics:
     - avoid-misused-wildcard-pattern: true
     - avoid-mixing-named-and-positional-fields: true
     - avoid-multi-assignment: true
+    - avoid-mutating-constant-collections: true
     - avoid-mutating-parameters: true
     - avoid-negated-conditions: true
     - avoid-negations-in-equality-checks: true
@@ -335,6 +340,7 @@ dart_code_metrics:
     - avoid-never-passed-parameters: true
     - avoid-non-final-exception-class-fields: true
     - avoid-non-null-assertion: true
+    - avoid-not-assignable-collection-types: true
     - avoid-not-encodable-in-to-json: true
     - avoid-nullable-parameters-with-default-values: true
     - avoid-nullable-tostring: true
@@ -472,6 +478,7 @@ dart_code_metrics:
     - prefer-correct-future-return-type: true
     - prefer-correct-handler-name: true
     - prefer-correct-json-casts: true
+    - prefer-correct-mutated: true
     - prefer-correct-setter-parameter-name: true
     - prefer-correct-stream-return-type: true
     - prefer-correct-switch-length: true
@@ -542,12 +549,14 @@ linter:
     specify_nonobvious_local_variable_types: false # Conflicts with: avoid-explicit-type-declaration.
     unnecessary_final: false # Conflicts with: prefer_final_locals.
     unnecessary_library_name: false # To prevent breaking changes for those who use this libs.
+    use_primary_constructors: false # TODO(tsinis)? adopt in the next major release.
 
     # Enabled:
     always_declare_return_types: true
     always_put_required_named_parameters_first: true
     annotate_overrides: true
     annotate_redeclares: true
+    async_return_with_no_await: true
     avoid_annotating_with_dynamic: true
     avoid_bool_literals_in_conditional_expressions: true
     avoid_catches_without_on_clauses: true
@@ -606,6 +615,7 @@ linter:
     document_ignores: true
     empty_catches: true
     empty_constructor_bodies: true
+    empty_container_bodies: true
     empty_statements: true
     eol_at_end_of_file: true
     exhaustive_cases: true
@@ -614,6 +624,7 @@ linter:
     implementation_imports: true
     implicit_call_tearoffs: true
     implicit_reopen: true
+    initialize_in_field_declaration: true
     invalid_case_patterns: true
     invalid_runtime_check_with_js_interop_types: true
     join_return_with_assignment: true
@@ -630,9 +641,11 @@ linter:
     no_adjacent_strings_in_list: true
     no_default_cases: true
     no_duplicate_case_values: true
+    no_dynamic_casts: true
     no_leading_underscores_for_library_prefixes: true
     no_leading_underscores_for_local_identifiers: true
     no_literal_bool_comparisons: true
+    no_raw_types: true
     no_runtimeType_toString: true
     no_self_assignments: true
     no_wildcard_variable_uses: true
@@ -711,6 +724,7 @@ linter:
     unnecessary_brace_in_string_interps: true
     unnecessary_breaks: true
     unnecessary_const: true
+    unnecessary_const_in_enum_constructor: true
     unnecessary_constructor_name: true
     unnecessary_getters_setters: true
     unnecessary_ignore: true
@@ -725,17 +739,20 @@ linter:
     unnecessary_nullable_for_final_variable_declarations: true
     unnecessary_overrides: true
     unnecessary_parenthesis: true
+    unnecessary_primary_constructor_body: true
     unnecessary_raw_strings: true
     unnecessary_statements: true
     unnecessary_string_escapes: true
     unnecessary_string_interpolations: true
     unnecessary_this: true
     unnecessary_to_list_in_spreads: true
+    unnecessary_type_name_in_constructor: true
     unnecessary_unawaited: true
     unnecessary_underscores: true
     unreachable_from_main: true
     unrelated_type_equality_checks: true
     unsafe_variance: true
+    use_declaring_parameters: true
     use_enums: true
     use_function_type_syntax_for_parameters: true
     use_is_even_rather_than_modulo: true
