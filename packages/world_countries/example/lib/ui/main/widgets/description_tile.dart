@@ -2,30 +2,34 @@ import "package:flutter/material.dart";
 import "package:world_countries/helpers.dart";
 
 class DescriptionTile extends StatelessWidget {
-  DescriptionTile(
+  new(
     this._title, {
     required IconData icon,
     required this.description,
     super.key,
-  }) : _leading = Icon(icon, color: leadingColor);
+  }) : _leading = Icon(semanticLabel: "item", icon, color: leadingColor);
 
-  DescriptionTile.fromBool({
+  new fromBool({
     required bool isTrue,
     required IconData icon,
     required this.description,
     super.key,
   }) : _title = isTrue ? "Yes" : "No",
-       _leading = Icon(icon, color: leadingColor);
+       _leading = Icon(
+         semanticLabel: 'is ${isTrue ? "true" : "false"}',
+         icon,
+         color: leadingColor,
+       );
 
-  DescriptionTile.fromIterable(
+  new fromIterable(
     Iterable<Object>? iterable, {
     required IconData icon,
     required this.description,
     super.key,
   }) : _title = iterable?.join(", "),
-       _leading = Icon(icon, color: leadingColor);
+       _leading = Icon(semanticLabel: "item", icon, color: leadingColor);
 
-  const DescriptionTile.raw(
+  const new raw(
     this._title, {
     required this.description,
     this._leading,

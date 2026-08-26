@@ -9,7 +9,7 @@ import "../basic/custom_elements_painter.dart";
 /// Painter for the San Marino flag.
 final class SmrPainter extends CustomElementsPainter {
   /// Creates a new instance of [SmrPainter].
-  const SmrPainter(super._properties, super.aspectRatio);
+  const new(super._properties, super.aspectRatio);
 
   @override
   double get originalAspectRatio => flagSmrProperties.aspectRatio;

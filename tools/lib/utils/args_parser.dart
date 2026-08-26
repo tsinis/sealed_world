@@ -4,7 +4,7 @@ import "package:change_case/change_case.dart";
 import "../models/package.dart";
 
 final class ArgsParser {
-  const ArgsParser(this.args);
+  const new(this.args);
 
   final List<String> args;
 

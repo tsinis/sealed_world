@@ -226,7 +226,7 @@ void main() => group("$ShaderStripesPainter", () {
 });
 
 class _ShaderStripesPainterTest implements FlagShaderDelegate {
-  const _ShaderStripesPainterTest({this.shouldClipContent = false});
+  const new({this.shouldClipContent = false});
 
   @override
   final bool shouldClipContent;

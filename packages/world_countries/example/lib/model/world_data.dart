@@ -10,7 +10,7 @@ enum WorldData {
   currency(icon: Icons.payments_outlined),
   language(icon: Icons.translate_outlined);
 
-  const WorldData({required this.icon});
+  new({required this.icon});
 
   final IconData icon;
 

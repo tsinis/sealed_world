@@ -70,34 +70,28 @@ void main() => group("$IsoDiagnosticsProperty", () {
   });
 
   group("valueToString", () {
-    test(
-      "returns correct string for non-null ISO object with additionalData",
-      () {
-        final property = IsoDiagnosticsProperty(
-          testCountry,
-          additionalData: "🇬🇧",
-        );
-        final string = property.valueToString();
+    test("returns correct string for non-null object with additionalData", () {
+      final property = IsoDiagnosticsProperty(
+        testCountry,
+        additionalData: "🇬🇧",
+      );
+      final string = property.valueToString();
 
-        expect(
-          string,
-          "🇬🇧 ${testCountry.internationalName} ${testCountry.code}/${testCountry.codeOther}",
-        );
-      },
-    );
+      expect(
+        string,
+        "🇬🇧 ${testCountry.internationalName} ${testCountry.code}/${testCountry.codeOther}",
+      );
+    });
 
-    test(
-      "returns correct string for non-null ISO object without additionalData",
-      () {
-        final property = IsoDiagnosticsProperty(testCountry);
-        final string = property.valueToString();
+    test("returns correct string for non-null object w/o additionalData", () {
+      final property = IsoDiagnosticsProperty(testCountry);
+      final string = property.valueToString();
 
-        expect(
-          string,
-          "${testCountry.internationalName} ${testCountry.code}/${testCountry.codeOther}",
-        );
-      },
-    );
+      expect(
+        string,
+        "${testCountry.internationalName} ${testCountry.code}/${testCountry.codeOther}",
+      );
+    });
 
     test('returns "null" for null value', () {
       final property = IsoDiagnosticsProperty(nullCountry);

@@ -4,7 +4,7 @@ import "../../../../helpers/extensions/shadows_flag_theme_controller_extension.d
 import "settings_tile_slider.dart";
 
 final class ShadowOffsetVerticalSlider extends SettingsTileSlider {
-  const ShadowOffsetVerticalSlider(super.flagTheme, {super.key})
+  const new(super.flagTheme, {super.key})
     : super(
         name: "Vertical Offset",
         min: -3,

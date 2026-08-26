@@ -51,7 +51,7 @@ class IsoFlag<T extends IsoStandardized, F extends BasicFlag>
   ///  is used.
   /// - [child]: A widget to display in the foreground of the flag.
   /// - [key]: The key for the widget.
-  const IsoFlag(
+  const new(
     this.item,
     this._map, {
     this._alternativeMap,

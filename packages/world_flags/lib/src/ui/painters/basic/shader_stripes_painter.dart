@@ -24,7 +24,7 @@ class ShaderStripesPainter<T extends CustomPainter> extends StripesPainter<T> {
   ///
   /// The [shader] delegate drives both animation (via its [Listenable]
   /// interface) and the shader rendering path.
-  ShaderStripesPainter(
+  new(
     FlagProperties properties,
     T? elementsPainter, {
     required this.shader,

@@ -8,7 +8,7 @@ import "../utils/io_utils.dart";
 import "helpers/extensions/package_associations_extension.dart";
 
 class CollectionsGenerator {
-  const CollectionsGenerator();
+  const new();
 
   static const _code = CodeUtils();
   static const _dart = DartUtils();
@@ -76,7 +76,6 @@ class CollectionsGenerator {
       ..writeContentToFile(currentFilePath, buffer)
       ..directory = currentFileDir;
     await _dart.fixFormat();
-
-    return _dart.fixFormat();
+    await _dart.fixFormat();
   }
 }

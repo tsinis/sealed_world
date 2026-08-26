@@ -10,7 +10,7 @@ import "../../routing/parsed_route.dart";
 import "../extensions/parsed_route_settings_extension.dart"; // For settings helpers.
 
 final class RouteParseUtils {
-  const RouteParseUtils({
+  const new({
     this.fallbackCountry = const CountrySrb(),
     this.fallbackCurrency = const FiatEur(),
   });

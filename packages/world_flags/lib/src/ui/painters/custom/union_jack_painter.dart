@@ -12,7 +12,7 @@ final class UnionJackPainter extends SimpleShieldPainter {
   ///
   /// The [properties] parameter specifies the properties of the shield. The
   /// [aspectRatio] parameter specifies the aspect ratio of the shield.
-  const UnionJackPainter.half(super._properties, super.aspectRatio)
+  const new half(super._properties, super.aspectRatio)
     : _isFull = false,
       super.outlinedWithoutDividers();
 
@@ -21,17 +21,15 @@ final class UnionJackPainter extends SimpleShieldPainter {
   ///
   /// The [properties] parameter specifies the properties of the shield. The
   /// [aspectRatio] parameter specifies the aspect ratio of the shield.
-  const UnionJackPainter.halfWithoutOutline(
-    super._properties,
-    super.aspectRatio,
-  ) : _isFull = false,
+  const new halfWithoutOutline(super._properties, super.aspectRatio)
+    : _isFull = false,
       super.withoutDividers();
 
   /// Creates a [UnionJackPainter] with a half Union Jack with dividers.
   ///
   /// The [properties] parameter specifies the properties of the shield. The
   /// [aspectRatio] parameter specifies the aspect ratio of the shield.
-  const UnionJackPainter.halfWithDividers(super._properties, super.aspectRatio)
+  const new halfWithDividers(super._properties, super.aspectRatio)
     : _isFull = false,
       super.withDividers();
 
@@ -39,7 +37,7 @@ final class UnionJackPainter extends SimpleShieldPainter {
   ///
   /// The [properties] parameter specifies the properties of the shield. The
   /// [aspectRatio] parameter specifies the aspect ratio of the shield.
-  const UnionJackPainter.full(super._properties, super.aspectRatio)
+  const new full(super._properties, super.aspectRatio)
     : _isFull = true,
       super.withoutDividers();
 
@@ -107,7 +105,7 @@ final class UnionJackPainter extends SimpleShieldPainter {
 
 class _SaintPatrickCross {
   // ignore: prefer-named-parameters, it's a private implementation.
-  const _SaintPatrickCross(this._canvas, this._center, this._paint, this._size);
+  const new(this._canvas, this._center, this._paint, this._size);
 
   final Canvas _canvas;
   final Offset _center;

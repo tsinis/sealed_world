@@ -12,7 +12,7 @@ export "dart:io";
 export "package:path/path.dart";
 
 final class IoUtils {
-  IoUtils([Directory? directory]) : _dirCache = directory ?? Directory.current;
+  new([Directory? directory]) : _dirCache = directory ?? Directory.current;
 
   final Directory _dirCache;
 

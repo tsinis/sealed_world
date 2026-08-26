@@ -1442,7 +1442,6 @@ sealed class WorldCountry extends Country
     T? Function(WorldCountry country)? where,
     Iterable<WorldCountry> countries = list,
   }) {
-    // ignore: avoid-collection-mutating-methods, not mutating anything.
     countries.assertNotEmpty();
 
     for (final country in countries) {
@@ -1471,7 +1470,7 @@ sealed class WorldCountry extends Country
     if (countries == null) return codeMap.maybeFindByCode(code);
 
     final string = IsoObject.maybe(
-      code, // Dart 3.7+ formatting.
+      code,
     )?.maybeToValidIsoUpperCaseCode(exactLength: IsoStandardized.codeLength);
 
     return countries.firstIsoWhereCodeOrNull(string, toUpperCase: false);
@@ -1520,7 +1519,7 @@ sealed class WorldCountry extends Country
   ]) {
     if (countries == null) return codeNumericMap.maybeFindByCode(codeNumeric);
     final trimmedCode = IsoObject(
-      codeNumeric, // Dart 3.7+ formatting.
+      codeNumeric,
     ).maybeToValidIsoCode(exactLength: IsoStandardized.codeLength);
 
     return countries.firstIsoWhereOrNull(

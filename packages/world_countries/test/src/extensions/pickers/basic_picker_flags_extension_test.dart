@@ -53,34 +53,28 @@ void main() {
         },
       );
 
-      test(
-        """should use fallback flag when countries list is empty and fallback provided""",
-        () {
-          final fallbackFlag = secondFlag;
-          final originalMap = <FiatCurrency, BasicFlag>{};
+      test("""should use fallback flag when countries list is empty and fallback provided""", () {
+        final fallbackFlag = secondFlag;
+        final originalMap = <FiatCurrency, BasicFlag>{};
 
-          final result = originalMap.adaptFlags(
-            {firstCurrency: []},
-            fallbacksMap: {firstCurrency: fallbackFlag},
-          );
+        final result = originalMap.adaptFlags(
+          {firstCurrency: []},
+          fallbacksMap: {firstCurrency: fallbackFlag},
+        );
 
-          expect(result[firstCurrency], fallbackFlag);
-        },
-      );
+        expect(result[firstCurrency], fallbackFlag);
+      });
 
-      test(
-        """should not use fallback when countries list is empty but fallback is null""",
-        () {
-          final originalMap = <FiatCurrency, BasicFlag>{};
+      test("""should not use fallback when countries list is empty but fallback is null""", () {
+        final originalMap = <FiatCurrency, BasicFlag>{};
 
-          final result = originalMap.adaptFlags(
-            {firstCurrency: []},
-            fallbacksMap: {secondCurrency: secondFlag},
-          );
+        final result = originalMap.adaptFlags(
+          {firstCurrency: []},
+          fallbacksMap: {secondCurrency: secondFlag},
+        );
 
-          expect(result.containsKey(firstCurrency), isFalse);
-        },
-      );
+        expect(result.containsKey(firstCurrency), isFalse);
+      });
 
       test("should use first country flag when locale country not in list", () {
         final originalMap = <FiatCurrency, BasicFlag>{};

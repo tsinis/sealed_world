@@ -71,8 +71,7 @@ const flagIotProperties = FlagProperties(
       heightFactor: 0.5,
     ),
   ],
-  url:
-      "https://www.vexilla-mundi.com/british_indian_ocean_territory/british_indian_ocean_territory_sheet.png",
+  url: "https://www.vexilla-mundi.com/british_indian_ocean_territory/british_indian_ocean_territory_sheet.png",
 );
 
 /// Flag properties of country Grenada (GD).
@@ -231,8 +230,7 @@ const flagSgsProperties = FlagProperties(
       widthFactor: 0.15,
     ),
   ],
-  url:
-      "https://www.vexilla-mundi.com/south_georgia_and_the_south_sandwich_islands/south_georgia_and_the_south_sandwich_islands_sheet.png",
+  url: "https://www.vexilla-mundi.com/south_georgia_and_the_south_sandwich_islands/south_georgia_and_the_south_sandwich_islands_sheet.png",
 );
 
 /// Flag properties of country DR Congo (CD).
@@ -253,8 +251,7 @@ const flagCodProperties = FlagProperties(
       heightFactor: 0.39,
     ),
   ],
-  url:
-      "https://www.vexilla-mundi.com/congo_democratic_republic/congo_democratic_republic_sheet.png",
+  url: "https://www.vexilla-mundi.com/congo_democratic_republic/congo_democratic_republic_sheet.png",
 );
 
 /// Flag properties of country Sri Lanka (LK).
@@ -426,8 +423,7 @@ const flagNamProperties = FlagProperties(
       ),
     ),
   ],
-  url:
-      "https://wikipedia.org/wiki/File:Flag_of_Namibia_(construction_sheet).svg",
+  url: "https://wikipedia.org/wiki/File:Flag_of_Namibia_(construction_sheet).svg",
 );
 
 /// Flag properties of country Mozambique (MZ).
@@ -484,8 +480,7 @@ const flagLieProperties = FlagProperties(
       widthFactor: 0.2,
     ),
   ],
-  url:
-      "https://wikipedia.org/wiki/File:Flag_of_Liechtenstein_(construction).svg",
+  url: "https://wikipedia.org/wiki/File:Flag_of_Liechtenstein_(construction).svg",
 );
 
 /// Flag properties of country Myanmar (MM).
@@ -504,8 +499,7 @@ const flagMmrProperties = FlagProperties(
       heightFactor: 0.72,
     ),
   ],
-  url:
-      "https://wikipedia.org/wiki/File:Flag_of_Myanmar_(construction_sheet).svg",
+  url: "https://wikipedia.org/wiki/File:Flag_of_Myanmar_(construction_sheet).svg",
 );
 
 /// Flag properties of country Central African Republic (CF).
@@ -530,8 +524,7 @@ const flagCafProperties = FlagProperties(
       heightFactor: 9 / 40,
     ),
   ],
-  url:
-      "https://wikipedia.org/wiki/File:Flag_of_the_Central_African_Republic_(construction_sheet).svg",
+  url: "https://wikipedia.org/wiki/File:Flag_of_the_Central_African_Republic_(construction_sheet).svg",
 );
 
 /// Flag properties of country Barbados (BB).
@@ -549,8 +542,7 @@ const flagBrbProperties = FlagProperties(
       widthFactor: 1 / 3,
     ),
   ],
-  url:
-      "https://wikipedia.org/wiki/File:Flag_of_Barbados_(construction_sheet).png",
+  url: "https://wikipedia.org/wiki/File:Flag_of_Barbados_(construction_sheet).png",
 );
 
 /// Flag properties of country British Virgin Islands (VG).
@@ -579,8 +571,7 @@ const flagVgbProperties = FlagProperties(
       widthFactor: 0.15,
     ),
   ],
-  url:
-      "https://www.vexilla-mundi.com/british_virgin_islands/british_virgin_islands_sheet.png",
+  url: "https://www.vexilla-mundi.com/british_virgin_islands/british_virgin_islands_sheet.png",
 );
 
 /// Flag properties of country Tonga (TO).
@@ -638,8 +629,7 @@ const flagTunProperties = FlagProperties(
       ),
     ),
   ],
-  url:
-      "https://wikipedia.org/wiki/File:Flag_of_Tunisia_(construction_sheet).svg",
+  url: "https://wikipedia.org/wiki/File:Flag_of_Tunisia_(construction_sheet).svg",
 );
 
 /// Flag properties of country Angola (AO).
@@ -695,8 +685,7 @@ const flagCogProperties = FlagProperties(
   elementsProperties: [
     CustomElementsProperties(Color(0xffFBDE4A), heightFactor: 1 / 3),
   ],
-  url:
-      "https://wikipedia.org/wiki/File:Flag_of_the_Republic_of_the_Congo_(construction_sheet).svg",
+  url: "https://wikipedia.org/wiki/File:Flag_of_the_Republic_of_the_Congo_(construction_sheet).svg",
 );
 
 /// Flag properties of country Mali (ML).
@@ -925,8 +914,7 @@ const flagSleProperties = FlagProperties(
     ColorsProperties(Color(0xffffffff)),
     ColorsProperties(Color(0xff0072C6)),
   ],
-  url:
-      "https://wikipedia.org/wiki/File:Flag_of_Sierra_Leone_(construction_sheet).svg",
+  url: "https://wikipedia.org/wiki/File:Flag_of_Sierra_Leone_(construction_sheet).svg",
 );
 
 /// Flag properties of country Germany (DE).
@@ -937,8 +925,7 @@ const flagDeuProperties = FlagProperties(
     ColorsProperties(Color(0xffffcc00)),
   ],
   aspectRatio: 5 / 3,
-  url:
-      "https://wikipedia.org/wiki/File:Flag_of_Germany_(construction_sheet).svg",
+  url: "https://wikipedia.org/wiki/File:Flag_of_Germany_(construction_sheet).svg",
 );
 
 /// Flag properties of country Gibraltar (GI).
@@ -1175,8 +1162,7 @@ const flagEcuProperties = FlagProperties(
       widthFactor: 1 / 5,
     ),
   ],
-  url:
-      "https://wikipedia.org/wiki/File:Construction_sheet_of_the_Ecuador_flag_(es).svg",
+  url: "https://wikipedia.org/wiki/File:Construction_sheet_of_the_Ecuador_flag_(es).svg",
 );
 
 /// Flag properties of country Senegal (SN).
@@ -1222,8 +1208,7 @@ const flagSyrProperties = FlagProperties(
       heightFactor: 3 / 11,
     ),
   ],
-  url:
-      "https://wikipedia.org/wiki/File:Approximate_Construction_of_the_Flag_of_Syria.svg",
+  url: "https://wikipedia.org/wiki/File:Approximate_Construction_of_the_Flag_of_Syria.svg",
 );
 
 /// Flag properties of country Sint Maarten (SX).
@@ -1325,8 +1310,7 @@ const flagJamProperties = FlagProperties(
       heightFactor: 0.17,
     ),
   ],
-  url:
-      "https://wikipedia.org/wiki/File:Flag_of_Jamaica_(construction_sheet).svg",
+  url: "https://wikipedia.org/wiki/File:Flag_of_Jamaica_(construction_sheet).svg",
 );
 
 /// Flag properties of country Croatia (HR).
@@ -1435,8 +1419,7 @@ const flagIrlProperties = FlagProperties(
   ],
   aspectRatio: 2,
   stripeOrientation: StripeOrientation.vertical,
-  url:
-      "https://wikipedia.org/wiki/File:Flag_of_Ireland_(construction_sheet).svg",
+  url: "https://wikipedia.org/wiki/File:Flag_of_Ireland_(construction_sheet).svg",
 );
 
 /// Flag properties of country Comoros (KM).
@@ -1487,8 +1470,7 @@ const flagComProperties = FlagProperties(
       ),
     ),
   ],
-  url:
-      "https://wikipedia.org/wiki/File:Flag_of_the_Comoros_(construction_sheet).svg",
+  url: "https://wikipedia.org/wiki/File:Flag_of_the_Comoros_(construction_sheet).svg",
 );
 
 /// Flag properties of country Iran (IR).
@@ -1648,8 +1630,7 @@ const flagPngProperties = FlagProperties(
       ),
     ),
   ],
-  url:
-      "https://www.vexilla-mundi.com/papua_new_guinea/papua_new_guinea_sheet.png",
+  url: "https://www.vexilla-mundi.com/papua_new_guinea/papua_new_guinea_sheet.png",
 );
 
 /// Flag properties of country Slovakia (SK).
@@ -1668,8 +1649,7 @@ const flagSvkProperties = FlagProperties(
       widthFactor: 0.29,
     ),
   ],
-  url:
-      "https://wikipedia.org/wiki/File:Flag_of_Slovakia_(construction_sheet).svg",
+  url: "https://wikipedia.org/wiki/File:Flag_of_Slovakia_(construction_sheet).svg",
 );
 
 /// Flag properties of country Romania (RO).
@@ -1680,8 +1660,7 @@ const flagRouProperties = FlagProperties(
     ColorsProperties(Color(0xffCE1126)),
   ],
   stripeOrientation: StripeOrientation.vertical,
-  url:
-      "https://wikipedia.org/wiki/File:Flag_of_Romania_(construction_sheet).svg",
+  url: "https://wikipedia.org/wiki/File:Flag_of_Romania_(construction_sheet).svg",
 );
 
 /// Flag properties of country French Polynesia (PF).
@@ -1722,8 +1701,7 @@ const flagPyfProperties = FlagProperties(
       heightFactor: 0.22,
     ),
   ],
-  url:
-      "https://www.vexilla-mundi.com/french_polynesia/french_polynesia_sheet.png",
+  url: "https://www.vexilla-mundi.com/french_polynesia/french_polynesia_sheet.png",
 );
 
 /// Flag properties of country Falkland Islands (FK).
@@ -1756,8 +1734,7 @@ const flagFlkProperties = FlagProperties(
       widthFactor: 0.2,
     ),
   ],
-  url:
-      "https://www.vexilla-mundi.com/falkland_islands/falkland_islands_sheet.png",
+  url: "https://www.vexilla-mundi.com/falkland_islands/falkland_islands_sheet.png",
 );
 
 /// Flag properties of country Egypt (EG).
@@ -1807,15 +1784,13 @@ const flagIslProperties = FlagProperties(
       widthFactor: 1,
     ),
   ],
-  url:
-      "https://wikipedia.org/wiki/File:Flag_of_Iceland_(construction_sheet).svg",
+  url: "https://wikipedia.org/wiki/File:Flag_of_Iceland_(construction_sheet).svg",
 );
 
 /// Flag properties of country Indonesia (ID).
 const flagIdnProperties = FlagProperties(
   [ColorsProperties(Color(0xffff0000)), ColorsProperties(Color(0xffffffff))],
-  url:
-      "https://wikipedia.org/wiki/File:Flag_of_Indonesia_(construction_sheet).svg",
+  url: "https://wikipedia.org/wiki/File:Flag_of_Indonesia_(construction_sheet).svg",
 );
 
 /// Flag properties of country Cayman Islands (KY).
@@ -1927,8 +1902,7 @@ const flagKnaProperties = FlagProperties(
       angle: 38,
     ),
   ],
-  url:
-      "https://wikipedia.org/wiki/File:Flag_of_Saint_Kitts_and_Nevis_(construction_sheet).svg",
+  url: "https://wikipedia.org/wiki/File:Flag_of_Saint_Kitts_and_Nevis_(construction_sheet).svg",
 );
 
 /// Flag properties of country Hungary (HU).
@@ -1939,8 +1913,7 @@ const flagHunProperties = FlagProperties(
     ColorsProperties(Color(0xff477050)),
   ],
   aspectRatio: 2,
-  url:
-      "https://wikipedia.org/wiki/File:Flag_of_Hungary_(1-2)_(construction_sheet).svg",
+  url: "https://wikipedia.org/wiki/File:Flag_of_Hungary_(1-2)_(construction_sheet).svg",
 );
 
 /// Flag properties of country Estonia (EE).
@@ -1951,8 +1924,7 @@ const flagEstProperties = FlagProperties(
     ColorsProperties(Color(0xffffffff)),
   ],
   aspectRatio: 11 / 7,
-  url:
-      "https://wikipedia.org/wiki/File:Flag_of_Estonia_(construction_sheet).svg",
+  url: "https://wikipedia.org/wiki/File:Flag_of_Estonia_(construction_sheet).svg",
 );
 
 /// Flag properties of country Eritrea (ER).
@@ -1973,8 +1945,7 @@ const flagEriProperties = FlagProperties(
       widthFactor: 1,
     ),
   ],
-  url:
-      "https://wikipedia.org/wiki/File:Flag_of_Eritrea_(construction_sheet).svg",
+  url: "https://wikipedia.org/wiki/File:Flag_of_Eritrea_(construction_sheet).svg",
 );
 
 /// Flag properties of country Finland (FI).
@@ -1994,8 +1965,7 @@ const flagFinProperties = FlagProperties(
       widthFactor: 3 / 18,
     ),
   ],
-  url:
-      "https://wikipedia.org/wiki/File:Flag_of_Finland_(construction_sheet).svg",
+  url: "https://wikipedia.org/wiki/File:Flag_of_Finland_(construction_sheet).svg",
 );
 
 /// Flag properties of country Gambia (GM).
@@ -2007,8 +1977,7 @@ const flagGmbProperties = FlagProperties(
     ColorsProperties(Color(0xffffffff)),
     ColorsProperties(Color(0xff009900), ratio: 6),
   ],
-  url:
-      "https://wikipedia.org/wiki/File:Flag_of_the_Gambia_(construction_sheet).svg",
+  url: "https://wikipedia.org/wiki/File:Flag_of_the_Gambia_(construction_sheet).svg",
 );
 
 /// Flag properties of country Palestine (PS).
@@ -2028,8 +1997,7 @@ const flagPseProperties = FlagProperties(
       widthFactor: 2 / 6,
     ),
   ],
-  url:
-      "https://wikipedia.org/wiki/File:Flag_of_Palestine_(construction_sheet).svg",
+  url: "https://wikipedia.org/wiki/File:Flag_of_Palestine_(construction_sheet).svg",
 );
 
 /// Flag properties of country Puerto Rico (PR).
@@ -2056,8 +2024,7 @@ const flagPriProperties = FlagProperties(
       ),
     ),
   ],
-  url:
-      "https://wikipedia.org/wiki/File:Flag_of_Puerto_Rico_(construction_sheet).svg",
+  url: "https://wikipedia.org/wiki/File:Flag_of_Puerto_Rico_(construction_sheet).svg",
 );
 
 /// Flag properties of country Slovenia (SI).
@@ -2084,8 +2051,7 @@ const flagSvnProperties = FlagProperties(
       widthFactor: 0.15,
     ),
   ],
-  url:
-      "https://wikipedia.org/wiki/File:Flag_of_Slovenia_(construction_sheet).svg",
+  url: "https://wikipedia.org/wiki/File:Flag_of_Slovenia_(construction_sheet).svg",
 );
 
 /// Flag properties of country Peru (PE).
@@ -2188,8 +2154,7 @@ const flagGrlProperties = FlagProperties(
       widthFactor: 0.45,
     ),
   ],
-  url:
-      "https://wikipedia.org/wiki/File:Flag_of_Greenland_(construction_sheet).svg",
+  url: "https://wikipedia.org/wiki/File:Flag_of_Greenland_(construction_sheet).svg",
 );
 
 /// Flag properties of country Haiti (HT).
@@ -2290,8 +2255,7 @@ const flagCheProperties = FlagProperties(
       heightFactor: 6 / 32,
     ),
   ],
-  url:
-      "https://wikipedia.org/wiki/File:Flag_of_Switzerland_(construction_sheet).svg",
+  url: "https://wikipedia.org/wiki/File:Flag_of_Switzerland_(construction_sheet).svg",
 );
 
 /// Flag properties of country Monaco (MC).
@@ -2414,6 +2378,5 @@ const flagLcaProperties = FlagProperties(
       ),
     ),
   ],
-  url:
-      "https://wikipedia.org/wiki/File:Flag_of_Saint_Lucia_(construction_sheet).svg",
+  url: "https://wikipedia.org/wiki/File:Flag_of_Saint_Lucia_(construction_sheet).svg",
 );

@@ -18,6 +18,7 @@ void main() => group("$AdaptiveSearchTextField", () {
       AdaptiveSearchTextField(
         controller,
         copyFrom: TextField(
+          autofillHints: const ["test"],
           controller: controller,
           decoration: const InputDecoration(enabled: false),
           textCapitalization: TextCapitalization.words,

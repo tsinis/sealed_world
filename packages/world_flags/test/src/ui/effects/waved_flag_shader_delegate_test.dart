@@ -237,7 +237,7 @@ void main() => group("$WavedFlagShaderDelegate", () {
 
 /// Test ticker provider that creates tickers without requiring a widget tree.
 class _WavedFlagShaderDelegateTest implements TickerProvider {
-  const _WavedFlagShaderDelegateTest();
+  const new();
 
   @override
   Ticker createTicker(TickerCallback onTick) => Ticker(onTick);

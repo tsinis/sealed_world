@@ -1,5 +1,3 @@
-// ignore_for_file: unnecessary_async, just a test.
-
 import "package:flutter/material.dart" show Icons, SearchAnchor;
 import "package:flutter/widgets.dart";
 import "package:flutter_test/flutter_test.dart";
@@ -55,7 +53,7 @@ void main() => group("$PhoneCodePicker", () {
 
   testWidgets(
     "scroll from first to last item and tap",
-    (tester) async => tester.testPickerBody(
+    (tester) => tester.testPickerBody(
       const PhoneCodePicker(),
       (item) => item.idd.phoneCode(),
     ),
@@ -63,7 +61,7 @@ void main() => group("$PhoneCodePicker", () {
 
   testWidgets(
     "builder from theme",
-    (tester) async => tester.testPickerBody(
+    (tester) => tester.testPickerBody(
       const PhoneCodePicker(),
       (item) => item.namesNative.first.common,
       theme: CountryTileThemeData(
@@ -75,7 +73,7 @@ void main() => group("$PhoneCodePicker", () {
 
   testWidgets(
     "scroll from first to last item and without selection test",
-    (tester) async => tester.testPickerBody(
+    (tester) => tester.testPickerBody(
       const PhoneCodePicker(),
       (item) => item.idd.phoneCode(),
       testSelection: false,
@@ -84,7 +82,7 @@ void main() => group("$PhoneCodePicker", () {
 
   testWidgets(
     "test behavior in dialog",
-    (tester) async => tester.testPickerInDialog(
+    (tester) => tester.testPickerInDialog(
       const PhoneCodePicker(),
       (item) => item.idd.phoneCode(),
     ),
@@ -92,7 +90,7 @@ void main() => group("$PhoneCodePicker", () {
 
   testWidgets(
     "test behavior in search",
-    (tester) async => tester.testPickerInSearch(
+    (tester) => tester.testPickerInSearch(
       const PhoneCodePicker(),
       (item) => item.idd.phoneCode(),
     ),
@@ -100,7 +98,7 @@ void main() => group("$PhoneCodePicker", () {
 
   testWidgets(
     "test behavior in modal bottom sheet",
-    (tester) async => tester.testPickerInModal(
+    (tester) => tester.testPickerInModal(
       const PhoneCodePicker(),
       (item) => item.idd.phoneCode(),
     ),
@@ -108,7 +106,7 @@ void main() => group("$PhoneCodePicker", () {
 
   testWidgets(
     "fromCountryPicker",
-    (tester) async => tester.testPickerBody(
+    (tester) => tester.testPickerBody(
       PhoneCodePicker.fromCountryPicker(const CountryPicker()),
       (item) => item.idd.phoneCode(),
     ),

@@ -11,7 +11,7 @@ export "package:world_countries/helpers.dart";
 
 abstract base class WorldDataTab<I extends IsoTranslated>
     extends StatelessWidget {
-  WorldDataTab(
+  new(
     this.data,
     AsyncValueSetter<String>? go, {
     required BasicPicker<I, IsoTile<I>> dataPicker,

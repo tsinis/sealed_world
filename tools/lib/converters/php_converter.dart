@@ -1,5 +1,5 @@
 abstract final class PhpConverter {
-  const PhpConverter();
+  const new();
 
   static const format = "php";
 

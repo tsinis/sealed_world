@@ -24,7 +24,7 @@ class IsoDiagnosticsProperty<Iso extends IsoStandardized>
   ///
   /// The remaining parameters are optional and can be used to customize
   /// the behavior of the property.
-  IsoDiagnosticsProperty(
+  new(
     this._iso, {
     String additionalData = "",
     super.allowNameWrap,

@@ -31,7 +31,7 @@ class MaybeWidget<T extends Object> extends StatelessWidget {
   ///   assert(widget.toString().isNotEmpty);
   /// }
   /// ```
-  const MaybeWidget(
+  const new(
     this.value,
     this._builder, {
     this.orElse = const SizedBox.shrink(),
@@ -70,7 +70,7 @@ class MaybeWidget<T extends Object> extends StatelessWidget {
   ///   assert(widget.toString().isNotEmpty);
   /// }
   /// ```
-  MaybeWidget.identifiable(
+  new identifiable(
     this.value,
     this._builder, {
     this.orElse = const SizedBox.shrink(),
@@ -105,7 +105,7 @@ class MaybeWidget<T extends Object> extends StatelessWidget {
   ///   assert(widget.toString().isNotEmpty);
   /// }
   /// ```
-  const MaybeWidget.offstage(
+  const new offstage(
     this.value,
     this._builder, {
     this.orElse = const Offstage(),

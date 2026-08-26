@@ -20,7 +20,7 @@ class PhoneCodePicker extends CountryPicker {
   /// * [countries] is the list of countries with their phone codes to display.
   /// * All other parameters are optional and are passed to the superclass
   ///   constructor.
-  const PhoneCodePicker({
+  const new({
     super.countries,
     super.addAutomaticKeepAlives,
     super.addRepaintBoundaries,
@@ -71,7 +71,7 @@ class PhoneCodePicker extends CountryPicker {
   /// * [picker] is the [CountryPicker] object to use.
   /// * All other parameters are optional and are passed to the superclass
   ///   constructor.
-  PhoneCodePicker.fromCountryPicker(CountryPicker picker, {super.key})
+  new fromCountryPicker(CountryPicker picker, {super.key})
     : super(
         countries: picker.items,
         addAutomaticKeepAlives: picker.addAutomaticKeepAlives,

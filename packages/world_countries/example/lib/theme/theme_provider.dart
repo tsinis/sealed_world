@@ -2,7 +2,7 @@ import "package:flutter/foundation.dart" show listEquals;
 import "package:flutter/material.dart";
 
 class ThemeProvider<T extends List<Color>> extends InheritedWidget {
-  const ThemeProvider(
+  const new(
     this._flagColors, {
     required super.child,
     this.onColorsChange,

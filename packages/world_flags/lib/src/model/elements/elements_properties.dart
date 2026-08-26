@@ -43,7 +43,7 @@ class ElementsProperties {
   ///
   /// The constructor asserts that [widthFactor], if provided, is non-negative,
   /// and that [heightFactor] is non-negative.
-  const ElementsProperties(
+  const new(
     this.mainColor, {
     required this.shape,
     this.offset = Offset.zero,

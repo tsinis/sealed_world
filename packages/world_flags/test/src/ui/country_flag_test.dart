@@ -56,9 +56,8 @@ void main() => group("$CountryFlag", () {
   testWidgets("circle flag decoration", (tester) async {
     await tester.pumpWidget(
       MaterialApp(
-        home: const CountryFlag.simplified(value).basicFlag?.copyWith(
-          decoration: const BoxDecoration(shape: BoxShape.circle),
-        ),
+        home: const CountryFlag.simplified(value).basicFlag
+            ?.copyWith(decoration: const BoxDecoration(shape: BoxShape.circle)),
       ),
     );
     await tester.pumpAndSettle();

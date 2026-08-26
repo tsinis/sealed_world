@@ -13,7 +13,7 @@ class ClearButton extends IconButton {
   /// super constructor of [IconButton] and [AnimatedCrossFade]. When the text
   /// editing controller's text is empty, the [whenEmptyChild] is shown instead
   /// of the [IconButton].
-  const ClearButton(
+  const new(
     this._controller, {
     super.icon = defaultIcon,
     super.onPressed,
@@ -52,6 +52,7 @@ class ClearButton extends IconButton {
   });
 
   /// The default icon to display in the button.
+  // ignore: provide-icon-semantic-label, this is generic/abstract icon.
   static const defaultIcon = Icon(Icons.clear);
 
   /// The text editing controller to listen to.

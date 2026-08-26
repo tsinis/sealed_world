@@ -43,7 +43,7 @@ import "flag_shader_surface.dart" show FlagShaderSurface;
 @immutable
 class FlagShaderOptions {
   /// Creates a new set of shader options.
-  const FlagShaderOptions({
+  const new({
     this.animate = true,
     this.animationSpeed = 1,
     this.frozenPhase = 0.25,

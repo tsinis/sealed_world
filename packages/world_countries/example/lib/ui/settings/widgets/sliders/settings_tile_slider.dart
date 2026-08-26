@@ -4,7 +4,7 @@ import "package:world_countries/helpers.dart";
 import "../../../../theme/flag_theme_controller.dart";
 
 abstract base class SettingsTileSlider extends StatelessWidget {
-  const SettingsTileSlider(
+  const new(
     this.flagTheme, {
     required this.name,
     this.divisions = 19,
@@ -51,6 +51,7 @@ abstract base class SettingsTileSlider extends StatelessWidget {
       padding: const EdgeInsets.only(right: 16),
       label: value?.toStringAsFixed(fractionDigits),
       secondaryTrackValue: secondaryTrackValue,
+      semanticFormatterCallback: (val) => val.toString(),
       value: value ?? min,
     ),
   );

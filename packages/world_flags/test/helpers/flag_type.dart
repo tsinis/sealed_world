@@ -12,7 +12,7 @@ enum FlagType {
   waved(height: 60),
   dual;
 
-  const FlagType({this.decoration, this.height = kMinInteractiveDimension});
+  new({this.decoration, this.height = kMinInteractiveDimension});
 
   final BoxDecoration? decoration;
   final double height;

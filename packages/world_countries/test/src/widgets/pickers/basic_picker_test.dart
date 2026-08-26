@@ -246,7 +246,7 @@ void main() => group("$BasicPicker", () {
 
 /// Test subclass to expose protected method.
 class _BasicPickerTest extends CountryPicker {
-  const _BasicPickerTest({super.maps});
+  const new({super.maps});
 
   @override
   String? maybeNameTranslation(WorldCountry item, BuildContext context) =>

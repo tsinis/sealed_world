@@ -4,7 +4,7 @@ import "package:world_countries/helpers.dart";
 /// A Material 3 style section header with a title.
 /// Insert inside the settings list to visually group related slider tiles.
 final class SettingsSectionHeader extends StatelessWidget {
-  const SettingsSectionHeader(
+  const new(
     this.title, {
     this.padding = const EdgeInsets.only(top: 24, left: 24),
     super.key,

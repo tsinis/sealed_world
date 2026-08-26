@@ -29,7 +29,7 @@ void main() async {
 }
 
 class Main extends StatefulWidget {
-  const Main({required this.isSimpleExample, super.key});
+  const new({required this.isSimpleExample, super.key});
 
   final bool isSimpleExample;
 

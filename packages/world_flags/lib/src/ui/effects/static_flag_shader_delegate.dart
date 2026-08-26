@@ -85,7 +85,7 @@ abstract class StaticFlagShaderDelegate extends ChangeNotifier
   ///
   /// For shaders in the app's asset bundle, use a relative path:
   /// `'shaders/my_shader.frag'`.
-  StaticFlagShaderDelegate({
+  new({
     required this.assetPath,
     this.contentScale = 1,
     this.shouldClipContent = false,

@@ -3,7 +3,7 @@ part of "../multi_element_painter.dart";
 /// Painter for the Tokelau flag.
 final class TklPainter extends MultiElementPainter {
   /// Creates a new instance of [TklPainter].
-  const TklPainter(super._properties, super.aspectRatio);
+  const new(super._properties, super.aspectRatio);
 
   @override
   FlagParentBounds paintFlagElements(Canvas canvas, Size size) {

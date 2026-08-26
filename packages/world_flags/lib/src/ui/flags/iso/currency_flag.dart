@@ -69,7 +69,7 @@ class CurrencyFlag extends DualFlag<FiatCurrency, BasicFlag> {
   /// - [clipSecondary]: When `true` (default), the secondary flag is clipped.
   ///   When `false`, the primary flag is clipped instead.
   /// - [key]: The key for the widget.
-  const CurrencyFlag.fromFlagMap(
+  const new fromFlagMap(
     FiatCurrency currency, {
     super.alternativeMap = defaultSecondaryCountryCurrencyFlags,
     super.splitAngle,

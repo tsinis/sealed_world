@@ -7,7 +7,7 @@ import "../basic/custom_elements_painter.dart";
 /// Painter for the Canada flag.
 final class MapleLeafPainter extends CustomElementsPainter {
   /// Creates a new instance of [MapleLeafPainter].
-  const MapleLeafPainter(super._properties, super.aspectRatio);
+  const new(super._properties, super.aspectRatio);
 
   @override
   double get originalAspectRatio => flagCanProperties.aspectRatio;

@@ -55,7 +55,7 @@ import "package:world_flags/world_flags.dart";
 /// and `uTexture`), no [configureShader] override is needed
 /// - the base class handles everything.
 class CupertinoEmojiShaderDelegate extends StaticFlagShaderDelegate {
-  CupertinoEmojiShaderDelegate() : super(assetPath: _assetPath);
+  new() : super(assetPath: _assetPath);
   static const _assetPath = "shaders/cupertino_emoji_flag.frag";
 
   /// Pre-warms the shader program for faster first render on Skia backend.

@@ -7,7 +7,7 @@ import "world_data.dart";
 
 @immutable
 final class ParsedData {
-  const ParsedData({
+  const new({
     required this.country,
     required this.currency,
     required this.language,

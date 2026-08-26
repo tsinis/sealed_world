@@ -15,7 +15,7 @@ class IsoMaps {
   ///
   /// All parameters default to empty constant maps so the object can be
   /// instantiated in `const` contexts.
-  const IsoMaps({
+  const new({
     this.countryTranslations = const {},
     this.currencyTranslations = const {},
     this.languageTranslations = const {},

@@ -53,7 +53,7 @@ class ImplicitSearchDelegate<T extends Object>
   ///   the search field.
   /// * [enableSuggestions] is a boolean indicating whether to enable
   ///   suggestions for the search field.
-  ImplicitSearchDelegate(
+  new(
     super.items, {
     required super.resultsBuilder,
     required super.searchIn,

@@ -7,7 +7,7 @@ import "../basic/custom_elements_painter.dart";
 /// Painter for the Israel flag.
 final class DavidStarPainter extends CustomElementsPainter {
   /// Creates a new instance of [DavidStarPainter].
-  const DavidStarPainter(super._properties, super.aspectRatio);
+  const new(super._properties, super.aspectRatio);
 
   @override
   FlagParentBounds? paintFlagElements(Canvas canvas, Size size) {

@@ -20,7 +20,7 @@ import "widgets/floating_button.dart";
 import "widgets/menu_button.dart";
 
 class MainPage extends StatefulWidget {
-  MainPage(this._data, {AsyncValueSetter<String>? go, super.key})
+  new(this._data, {AsyncValueSetter<String>? go, super.key})
     : _country = CountryTab(_data.country, go),
       _currency = CurrencyTab(_data.currency, go),
       _lang = LanguageTab(_data.language, go);
@@ -81,9 +81,9 @@ class _MainPageState extends State<MainPage>
   void didUpdateWidget(MainPage oldWidget) {
     super.didUpdateWidget(oldWidget);
     _postFrameCallback(
-      () => ThemeProvider.maybeOf(
-        context, // Dart v3.7 formatting.
-      )?.onColorsChange?.call(widget._data.country.flagStripeColors),
+      () =>
+          ThemeProvider.maybeOf(context)?.onColorsChange
+              ?.call(widget._data.country.flagStripeColors),
     );
   }
 
@@ -98,14 +98,16 @@ class _MainPageState extends State<MainPage>
     length: _controller.length,
     child: Scaffold(
       appBar: AppBar(
-        title: const Text("sealed_world"),
+        title: Semantics(header: true, child: const Text("sealed_world")),
         actions: [
           SearchAnchor(
             isFullScreen: false,
             viewConstraints: const BoxConstraints(minWidth: 220, maxWidth: 320),
             builder: (_, controller) => GestureDetector(
               onLongPress: _handleAppBarSearch,
+              // ignore:avoid-nested-interactive-semantics, just an example app.
               child: IconButton(
+                tooltip: "search",
                 onPressed: controller.openView,
                 icon: const Icon(Icons.search, semanticLabel: "search_icon"),
               ),

@@ -4,7 +4,7 @@ import "package:pure_dart_ui/pure_dart_ui.dart";
 
 /// Actually my code from flutter_colorpicker + SVG content parser.
 class ColorUtils {
-  const ColorUtils(this._colors, this._tag);
+  const new(this._colors, this._tag);
 
   static const svgFormat = "svg";
 

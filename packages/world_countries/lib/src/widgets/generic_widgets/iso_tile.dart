@@ -14,7 +14,7 @@ class IsoTile<T extends IsoTranslated> extends ListItemTile<T> {
   /// * Input ISO item is the ISO object to display information about.
   /// * All other parameters are optional and are passed to the superclass
   /// constructor.
-  const IsoTile(
+  const new(
     super.item, {
     this.flagTheme = const FlagThemeData.small(),
     this.title,
@@ -66,7 +66,7 @@ class IsoTile<T extends IsoTranslated> extends ListItemTile<T> {
   ///   display information about.
   /// * All other parameters are optional and are passed to the superclass
   ///   constructor.
-  IsoTile.fromProperties(
+  new fromProperties(
     ItemProperties<T> iso, {
     this.flagTheme = const FlagThemeData.small(),
     BasicFlag? leadingFlag,

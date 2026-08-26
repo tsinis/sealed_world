@@ -45,7 +45,7 @@ class CountryFlag extends IsoFlag<WorldCountry, BasicFlag> {
   ///  is used.
   /// - [child]: A widget to display in the foreground of the flag.
   /// - [key]: The key for the widget.
-  const CountryFlag.simplified(
+  const new simplified(
     WorldCountry country, {
     super.alternativeMap,
     super.height,
@@ -76,7 +76,7 @@ class CountryFlag extends IsoFlag<WorldCountry, BasicFlag> {
   /// is used.
   /// - [child]: A widget to display in the foreground of the flag.
   /// - [key]: The key for the widget.
-  const CountryFlag.custom(
+  const new custom(
     super.item,
     super._map, {
     super.alternativeMap,

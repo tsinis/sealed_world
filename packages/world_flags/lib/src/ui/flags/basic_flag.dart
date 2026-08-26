@@ -46,7 +46,7 @@ class BasicFlag extends DecoratedFlagWidget {
   /// is used.
   /// - [child]: A widget to display in the foreground of the flag.
   /// - [key]: The key for the widget.
-  const BasicFlag(
+  const new(
     this.properties, {
     super.aspectRatio,
     this.backgroundPainter,

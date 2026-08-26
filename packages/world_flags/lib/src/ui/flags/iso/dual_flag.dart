@@ -35,7 +35,7 @@ class DualFlag<T extends IsoStandardized, F extends BasicFlag>
   ///   When `false`, the primary flag is clipped instead.
   /// - [clipBehavior]: The clip behavior for the split edge. Defaults to
   ///   [Clip.antiAlias] for smooth diagonal edges with minimal overhead.
-  const DualFlag(
+  const new(
     super.item,
     super._map, {
     this.splitAngle = 45,

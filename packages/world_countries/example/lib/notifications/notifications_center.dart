@@ -1,7 +1,7 @@
 import "package:flutter/foundation.dart";
 
 final class NotificationsCenter {
-  NotificationsCenter._();
+  new _();
   static final _instance = NotificationsCenter._();
 
   // ignore: avoid-unnecessary-getter, it's a singleton pattern.

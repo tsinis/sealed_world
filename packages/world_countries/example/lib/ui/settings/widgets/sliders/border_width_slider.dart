@@ -7,7 +7,7 @@ import "settings_tile_slider.dart";
 /// UI shows width * 10 (same scaling approach as border radius usage in
 /// settings). Controller stores logical width directly.
 final class BorderWidthSlider extends SettingsTileSlider {
-  const BorderWidthSlider(super.flagTheme, {super.key})
+  const new(super.flagTheme, {super.key})
     : super(name: "Width", icon: Icons.border_style, divisions: 18, max: 3);
 
   @override

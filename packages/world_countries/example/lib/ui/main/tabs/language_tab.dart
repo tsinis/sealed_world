@@ -7,7 +7,7 @@ import "../widgets/description_tile.dart";
 import "../widgets/tab_body.dart";
 
 final class LanguageTab extends WorldDataTab<NaturalLanguage> {
-  LanguageTab(
+  new(
     super.data,
     super.go, {
     super.dataPicker = const LanguagePicker(),

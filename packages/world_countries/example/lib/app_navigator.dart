@@ -12,7 +12,7 @@ import "ui/main/main_page.dart";
 import "ui/settings/settings_page.dart";
 
 class AppNavigator extends StatelessWidget {
-  const AppNavigator(
+  const new(
     this._navigatorKey, {
     this.utils = const RouteParseUtils(),
     super.key,

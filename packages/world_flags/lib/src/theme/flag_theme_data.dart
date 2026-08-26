@@ -1,6 +1,7 @@
-// ignore_for_file: prefer-class-destructuring
+// ignore_for_file: prefer-class-destructuring, prefer-private-named-parameters
 
-import "package:flutter/material.dart";
+import "package:flutter/material.dart" show ThemeExtension;
+import "package:flutter/widgets.dart";
 
 import "../helpers/extensions/decorated_flag_interface_extension.dart";
 import "../interfaces/decorated_flag_interface.dart";
@@ -24,7 +25,7 @@ class FlagThemeData extends ThemeExtension<FlagThemeData>
   /// - [height]: The height of the flag.
   /// - [width]: The width of the flag.
   /// - [child]: A widget to display in the foreground of the flag.
-  const FlagThemeData({
+  const new({
     double? aspectRatio,
     this.decoration,
     this.decorationPosition,
@@ -53,7 +54,7 @@ class FlagThemeData extends ThemeExtension<FlagThemeData>
   /// - [height]: The height of the flag, defaults to 18.
   /// - [width]: The width of the flag.
   /// - [child]: A widget to display in the foreground of the flag.
-  const FlagThemeData.small({
+  const new small({
     double? aspectRatio,
     this.decoration = const BoxDecoration(
       borderRadius: BorderRadius.all(Radius.circular(4)),

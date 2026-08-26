@@ -23,7 +23,7 @@ import "iso_standardized_string_extension.dart";
 ///   assert(IsoObject(buffer.toString()).toUpperCaseCode() == 'ENG');
 /// }
 /// ```
-// ignore: prefer-match-file-name, doesn't respect keywords + "IsoObject".
+// ignore:prefer-match-file-name,no-object-declaration,doesn't respect keywords.
 extension type const IsoObject._(Object _value) implements Object {
   /// Creates an ISO code wrapper for any [Object] value.
   const IsoObject(Object value) : this._(value);

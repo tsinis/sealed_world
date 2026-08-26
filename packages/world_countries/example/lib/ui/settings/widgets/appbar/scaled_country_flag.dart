@@ -6,7 +6,7 @@ import "../../../../theme/flag_theme_controller.dart";
 import "sliver_settings_app_bar.dart";
 
 class ScaledCountryFlag extends StatelessWidget {
-  const ScaledCountryFlag(this._controller, this._flag, {IsoFlag? fallback})
+  const new(this._controller, this._flag, {IsoFlag? fallback})
     : fallback = fallback ?? _flag,
       super(key: const ValueKey(ScaledCountryFlag));
 

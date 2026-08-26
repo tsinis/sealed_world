@@ -2,7 +2,7 @@ import "package:path/path.dart" as p;
 
 /// Immutable configuration describing a benchmark target.
 final class BenchmarkConfig {
-  const BenchmarkConfig({
+  const new({
     required this.examplePath,
     required this.bundleId,
     this.apkDirectory = "build/app/outputs/apk/profile",

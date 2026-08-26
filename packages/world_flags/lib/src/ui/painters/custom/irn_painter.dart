@@ -3,7 +3,7 @@ part of "../multi_element_painter.dart";
 /// Painter for the Iran flag.
 final class IrnPainter extends MultiElementPainter {
   /// Creates a new instance of [IrnPainter].
-  const IrnPainter(super._properties, super.aspectRatio);
+  const new(super._properties, super.aspectRatio);
 
   @override
   double get originalAspectRatio => flagIrnProperties.aspectRatio;

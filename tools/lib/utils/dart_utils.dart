@@ -1,7 +1,7 @@
 import "dart:io";
 
 final class DartUtils {
-  const DartUtils();
+  const new();
 
   Future<void> run(
     List<String> arguments, {

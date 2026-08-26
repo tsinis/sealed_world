@@ -13,7 +13,7 @@ import "package:flutter/widgets.dart";
 @immutable
 class DualFlagClipper extends CustomClipper<Path> {
   /// Creates a new instance of [DualFlagClipper].
-  const DualFlagClipper([this.angle = 45]);
+  const new([this.angle = 45]);
 
   /// The angle of the split line in degrees. Defaults to `45` degrees.
   final int angle;

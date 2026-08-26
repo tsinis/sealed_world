@@ -124,7 +124,6 @@ sealed class RegionalBloc extends WorldBloc {
     Iterable<RegionalBloc> regionalBlocs = list,
     T? Function(RegionalBloc regionalBloc)? where,
   }) {
-    // ignore: avoid-collection-mutating-methods, not mutating anything.
     regionalBlocs.assertNotEmpty();
 
     for (final regionalBloc in regionalBlocs) {

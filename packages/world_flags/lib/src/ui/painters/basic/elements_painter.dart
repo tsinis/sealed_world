@@ -24,7 +24,7 @@ abstract base class ElementsPainter extends CustomPainter {
   /// - [properties]: The properties of the elements to be painted. Must contain
   /// at least one element.
   /// - [aspectRatio]: The aspect ratio of the flag.
-  const ElementsPainter(this._properties, this.aspectRatio)
+  const new(this._properties, this.aspectRatio)
     : assert(aspectRatio > 0, "`aspectRatio` must be greater than 0"),
       assert(
         _properties != null && _properties.length > 0,
@@ -74,7 +74,7 @@ abstract base class ElementsPainter extends CustomPainter {
   @override
   FlagParentBounds? paint(Canvas canvas, Size size) {
     final parent = paintFlagElements(canvas, size);
-    if (parent == null) return parent;
+    if (parent == null) return null;
     final child = paintChild(parent.canvas, parent.bounds, parent.child);
 
     return child ?? parent;

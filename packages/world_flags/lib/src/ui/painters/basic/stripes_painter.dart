@@ -20,7 +20,7 @@ class StripesPainter<T extends CustomPainter> extends CustomPainter {
   ///   color and border radius.
   /// - [elementsPainter]: An optional custom painter for additional elements on
   ///   the flag.
-  const StripesPainter(
+  const new(
     this.properties,
     this.decoration,
     this.elementsPainter, {

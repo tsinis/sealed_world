@@ -17,11 +17,12 @@ class ListItemTile<T extends Object> extends ListTile {
   /// * [chosenIcon] is the icon to display when the tile is selected.
   /// * [isChosen] is a boolean indicating whether the tile is selected.
   /// * [isDisabled] is a boolean indicating whether the tile is disabled.
-  const ListItemTile(
+  const new(
     this.item, {
     this.onPressed,
     this.excludeSemantics = true,
     this.semanticsIdentifier,
+    // ignore: provide-icon-semantic-label, could be specified by the developer.
     Widget? chosenIcon = const Icon(Icons.beenhere_outlined),
     bool isChosen = false,
     bool isDisabled = false,

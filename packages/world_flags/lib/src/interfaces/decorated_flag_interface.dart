@@ -22,7 +22,7 @@ abstract interface class DecoratedFlagInterface {
   /// - [width]: The width of the flag. If null, the width from the flag theme
   /// is used.
   /// - [child]: A widget to display in the foreground of the flag.
-  const DecoratedFlagInterface( // coverage:ignore-line
+  const new( // coverage:ignore-line
   {
     this.aspectRatio,
     this.decoration,

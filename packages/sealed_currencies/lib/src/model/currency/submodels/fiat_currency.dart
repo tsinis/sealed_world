@@ -1212,7 +1212,6 @@ sealed class FiatCurrency extends Currency
     T? Function(FiatCurrency currency)? where,
     Iterable<FiatCurrency> currencies = listExtended,
   }) {
-    // ignore: avoid-collection-mutating-methods, not mutating anything.
     currencies.assertNotEmpty();
 
     for (final currency in currencies) {
@@ -1282,7 +1281,7 @@ sealed class FiatCurrency extends Currency
     if (currencies == null) return codeMap.maybeFindByCode(code);
 
     final string = IsoObject.maybe(
-      code, // Dart 3.7+ formatting.
+      code,
     )?.maybeToValidIsoUpperCaseCode(exactLength: IsoStandardized.codeLength);
 
     return currencies.firstIsoWhereCodeOrNull(string, toUpperCase: false);
@@ -1306,7 +1305,7 @@ sealed class FiatCurrency extends Currency
     if (currencies == null) return codeNumericMap.maybeFindByCode(codeNumeric);
 
     final string = IsoObject.maybe(
-      codeNumeric, // Dart 3.7+ formatting.
+      codeNumeric,
     )?.maybeToValidIsoCode(exactLength: IsoStandardized.codeLength);
 
     return currencies.firstIsoWhereCodeOtherOrNull(string, toUpperCase: false);

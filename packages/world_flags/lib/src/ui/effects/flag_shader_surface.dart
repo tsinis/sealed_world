@@ -96,17 +96,17 @@ class FlagShaderSurface extends StatefulWidget {
   /// Creates an animated flag surface for the given [item].
   ///
   /// The [item] must be a valid ISO-standardized object (country, language,
-  /// or currency) that has a corresponding flag in [map] or [alternativeMap].
+  /// or currency) that has a corresponding flag in [_map] or [_alternativeMap].
   ///
   /// {@macro flag_shader_surface_usage}
-  const FlagShaderSurface(
+  const new(
     this.item, {
-    Map<IsoStandardized, BasicFlag> map = const {
+    this._map = const {
       ...smallSimplifiedFlagsMap,
       ...smallSimplifiedCurrencyFlagsMap,
       ...smallSimplifiedLanguageFlagsMap,
     },
-    Map<IsoStandardized, BasicFlag>? alternativeMap,
+    this._alternativeMap,
     this.orElse = const SizedBox.shrink(),
     this.options = const FlagShaderOptions(),
     this.shader,
@@ -115,10 +115,8 @@ class FlagShaderSurface extends StatefulWidget {
     this.width,
     this.aspectRatio,
     super.key,
-    // ignore: prefer_initializing_formals, private field with public param name.
-  }) : _map = map,
-       // ignore: prefer_initializing_formals, private field with public param name.
-       _alternativeMap = alternativeMap;
+    // ignore: private field with public param name.
+  });
 
   /// The ISO-standardized object whose flag should be displayed.
   ///

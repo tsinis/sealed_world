@@ -1,4 +1,5 @@
-// ignore_for_file: unnecessary_async, prefer-static-class, long-parameter-list
+// ignore_for_file: prefer-static-class
+
 import "dart:async";
 import "dart:math";
 
@@ -48,7 +49,7 @@ void randomElementTest<T extends Object>(
   int retry = _defaultRetryCount,
 }) => performanceTest(
   description,
-  () async => body(randomIterableItem(iterable)),
+  () => body(randomIterableItem(iterable)),
   durationLimit: durationLimit,
   testOn: testOn,
   timeout: timeout,
@@ -78,7 +79,7 @@ void assertTest(
   int? retry,
 }) => test(
   description,
-  () async {
+  () {
     expect(
       createInstance,
       shouldThrow

@@ -7,7 +7,7 @@ import "package:world_countries/world_countries.dart";
 import "settings_toolbar.dart";
 
 class SliverSettingsAppBar extends StatelessWidget {
-  const SliverSettingsAppBar(
+  const new(
     this._flag, {
     this.padding = const EdgeInsets.all(30),
     this.title = "Flag Settings",

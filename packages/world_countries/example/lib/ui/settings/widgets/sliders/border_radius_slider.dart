@@ -4,7 +4,7 @@ import "../../../../helpers/extensions/border_flag_theme_controller_extension.da
 import "settings_tile_slider.dart";
 
 final class BorderRadiusSlider extends SettingsTileSlider {
-  const BorderRadiusSlider(super.flagTheme, {super.key})
+  const new(super.flagTheme, {super.key})
     : super(
         name: "Radius",
         divisions: 18,

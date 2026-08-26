@@ -18,7 +18,7 @@ sealed class BenchmarkRegistry {
 
   /// Registers or replaces a configuration for a custom key.
   static void register(String key, BenchmarkConfig config) =>
-      // ignore: avoid-collection-mutating-methods, just a CLI tool.
+      // ignore: avoid-collection-mutating-methods, avoid-mutating-constant-collections, just a CLI.
       _configs[_normalize(key)] = config;
 
   /// All configured keys.

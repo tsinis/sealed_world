@@ -26,7 +26,6 @@ extension IsoFlagExtension<T extends IsoStandardized, F extends BasicFlag>
   /// - [padding]: The padding around the flag.
   /// - [child]: A widget to display in the foreground of the flag.
   /// - [key]: The key for the widget.
-  // ignore: avoid-incomplete-copy-with, it's complete, see _alternativeMap.
   IsoFlag<T, F> copyWith({
     T? item,
     Map<T, F>? map,

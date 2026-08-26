@@ -11,7 +11,7 @@ import "../../../routing/route_state.dart";
 import "../dialogs/about_app_dialog.dart";
 
 class MenuButton extends StatelessWidget {
-  const MenuButton({super.key});
+  const new({super.key});
 
   @override
   Widget build(BuildContext context) {

@@ -63,7 +63,7 @@ class CountryPicker extends BasicPicker<WorldCountry, CountryTile> {
   /// * [verticalDirection] is the vertical direction for the items.
   /// * [maps] is the optional [IsoMaps] bundle with translations/flags.
   /// * [flagTheme] is the optional [FlagThemeData] override for flags.
-  const CountryPicker({
+  const new({
     Iterable<WorldCountry>? countries,
     super.addAutomaticKeepAlives,
     super.addRepaintBoundaries,

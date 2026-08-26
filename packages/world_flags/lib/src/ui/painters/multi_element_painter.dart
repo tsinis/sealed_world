@@ -47,7 +47,7 @@ final class MultiElementPainter extends CustomElementsPainter {
   ///
   /// - [properties]: The properties of the elements to be painted.
   /// - [aspectRatio]: The aspect ratio of the flag.
-  const MultiElementPainter(super._properties, super.aspectRatio);
+  const new(super._properties, super.aspectRatio);
 
   /// Paints the custom flag elements on the given canvas and size.
   ///

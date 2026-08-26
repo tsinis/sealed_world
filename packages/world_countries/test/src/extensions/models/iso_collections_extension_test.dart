@@ -25,18 +25,15 @@ void main() => group("IsoCollectionsExtension", () {
       expect(result, isNot(contains(secondCountry)));
     });
 
-    test(
-      """should return countriesForTranslationCache when countriesForFlagsCache is empty""",
-      () {
-        final collections = IsoCollections.selective(
-          countriesForTranslationCache: [firstCountry, secondCountry],
-        );
+    test("""should return countriesForTranslationCache when countriesForFlagsCache is empty""", () {
+      final collections = IsoCollections.selective(
+        countriesForTranslationCache: [firstCountry, secondCountry],
+      );
 
-        final result = collections.anyCountriesToCache;
+      final result = collections.anyCountriesToCache;
 
-        expect(result, {firstCountry, secondCountry});
-      },
-    );
+      expect(result, {firstCountry, secondCountry});
+    });
 
     test("should return empty set when both caches are empty", () {
       const collections = IsoCollections.selective();
@@ -64,17 +61,14 @@ void main() => group("IsoCollectionsExtension", () {
       expect(result.single, firstCurrency);
     });
 
-    test(
-      """should return currenciesForTranslationCache when currenciesForFlagsCache is empty""",
-      () {
-        final collections = IsoCollections.selective(
-          currenciesForTranslationCache: [firstCurrency, secondCurrency],
-        );
-        final result = collections.anyCurrenciesToCache;
+    test("""should return currenciesForTranslationCache when currenciesForFlagsCache is empty""", () {
+      final collections = IsoCollections.selective(
+        currenciesForTranslationCache: [firstCurrency, secondCurrency],
+      );
+      final result = collections.anyCurrenciesToCache;
 
-        expect(result, {firstCurrency, secondCurrency});
-      },
-    );
+      expect(result, {firstCurrency, secondCurrency});
+    });
 
     test("should return empty set when both caches are empty", () {
       const collections = IsoCollections.selective();
@@ -103,17 +97,14 @@ void main() => group("IsoCollectionsExtension", () {
       expect(result.single, firstLanguage);
     });
 
-    test(
-      """should return languagesForTranslationCache when languagesForFlagsCache is empty""",
-      () {
-        final collections = IsoCollections.selective(
-          languagesForTranslationCache: [firstLanguage, secondLanguage],
-        );
-        final result = collections.anyLanguagesToCache;
+    test("""should return languagesForTranslationCache when languagesForFlagsCache is empty""", () {
+      final collections = IsoCollections.selective(
+        languagesForTranslationCache: [firstLanguage, secondLanguage],
+      );
+      final result = collections.anyLanguagesToCache;
 
-        expect(result, {firstLanguage, secondLanguage});
-      },
-    );
+      expect(result, {firstLanguage, secondLanguage});
+    });
 
     test("should return empty set when both caches are empty", () {
       const collections = IsoCollections.selective();

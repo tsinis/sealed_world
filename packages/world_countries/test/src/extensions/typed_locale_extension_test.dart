@@ -87,7 +87,8 @@ void main() => group("TypedLocaleExtension", () {
   group("copyWithTranslationsCacheAsync", () {
     assertTest(
       "should throw assert when no iterable specified",
-      () async => locale.copyWithTranslationsCacheAsync(),
+      // ignore: avoid-async-call-in-sync-function, it's just a test.
+      () => locale.copyWithTranslationsCacheAsync(),
     );
 
     test("should only create languages cache", () async {
