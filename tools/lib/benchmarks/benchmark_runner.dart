@@ -9,7 +9,7 @@ import "benchmark_config.dart";
 
 /// Runs the benchmark workflow for a configured example project.
 final class BenchmarkRunner {
-  BenchmarkRunner({
+  new({
     required this.config,
     this.verbose = false,
     this.dryRun = false,

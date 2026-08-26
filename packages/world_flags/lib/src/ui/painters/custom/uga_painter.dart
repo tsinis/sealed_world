@@ -3,7 +3,7 @@ part of "../multi_element_painter.dart";
 /// Painter for the Uganda flag.
 final class UgaPainter extends MultiElementPainter {
   /// Creates a new instance of [UgaPainter].
-  const UgaPainter(super._properties, super.aspectRatio);
+  const new(super._properties, super.aspectRatio);
 
   @override
   FlagParentBounds paintFlagElements(Canvas canvas, Size size) {

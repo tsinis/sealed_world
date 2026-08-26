@@ -52,7 +52,7 @@ class FlagProperties {
   /// empty string. It is used for testing purposes.
   /// The [baseElementType] parameter is optional and specifies the element's
   /// type of the flag.
-  const FlagProperties(
+  const new(
     this.stripeColors, {
     this.aspectRatio = FlagConstants.defaultAspectRatio,
     this.stripeOrientation = StripeOrientation.horizontal,

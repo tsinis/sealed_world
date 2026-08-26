@@ -148,9 +148,8 @@ Future<void> main(List<String> args) async {
       );
     }
 
-    File(
-      join(repoRoot.path, "packages", "dartdoc_test_analysis_options.yaml"),
-    ).copySync(join(testDir.path, "analysis_options.yaml"));
+    File(join(repoRoot.path, "packages", "dartdoc_test_analysis_options.yaml"))
+        .copySync(join(testDir.path, "analysis_options.yaml"));
 
     final testResult = await Process.run(
       "dart",

@@ -19,7 +19,7 @@ import "parser.dart";
 /// RouteStateScope.of(context).go('/path/to/route');
 /// ```
 class RouteState extends ChangeNotifier {
-  RouteState(this._parser) : _route = _parser.initialRoute;
+  new(this._parser) : _route = _parser.initialRoute;
   final TemplateRouteParser _parser;
   ParsedRoute _route;
 
@@ -43,11 +43,7 @@ class RouteState extends ChangeNotifier {
 /// Provides the current [RouteState] to descendant widgets in the tree.
 // ignore: prefer-single-declaration-per-file, it's original sample code.
 class RouteStateScope extends InheritedNotifier<RouteState> {
-  const RouteStateScope({
-    required super.notifier,
-    required super.child,
-    super.key,
-  });
+  const new({required super.notifier, required super.child, super.key});
 
   static RouteState of(BuildContext context) =>
       // ignore: avoid-non-null-assertion, to match original code.

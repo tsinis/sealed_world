@@ -257,9 +257,7 @@ void main() => group("$WorldCountry", () {
 
     for (final element in officialCountries) {
       test("of $WorldCountry: ${element.name.common}", () {
-        if (element.postalCode == null) {
-          expect(element.postalCode, isNull);
-        } else {
+        if (element.postalCode != null) {
           expect(element.postalCode?.format, isNotEmpty);
           expect(element.postalCode?.regExpPattern, isNotEmpty);
         }
@@ -272,9 +270,7 @@ void main() => group("$WorldCountry", () {
           element.capitalInfo == null ? isNull : isNotNull,
         );
         expect(element.fifa, element.fifa == null ? isNull : isNotEmpty);
-        if (element.gini == null) {
-          expect(element.gini, isNull);
-        } else {
+        if (element.gini != null) {
           expect(element.gini?.year, isPositive);
           expect(element.gini?.coefficient, isPositive);
         }

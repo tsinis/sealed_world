@@ -25,7 +25,7 @@ class FlagPropertiesProperty extends DiagnosticsProperty<FlagProperties> {
   ///
   /// Other optional parameters allow further customization of how this
   /// property is displayed in diagnostics output.
-  FlagPropertiesProperty(
+  new(
     FlagProperties properties, {
     super.description,
     super.ifNull = "no flag properties",

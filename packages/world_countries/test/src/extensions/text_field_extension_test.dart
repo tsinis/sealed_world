@@ -1,3 +1,5 @@
+// ignore_for_file: provide-autofill-hints, it's just a test.
+
 import "dart:ui" as ui;
 
 import "package:flutter/gestures.dart";

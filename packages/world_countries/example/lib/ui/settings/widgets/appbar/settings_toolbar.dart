@@ -4,7 +4,7 @@ import "../../../main/abstractions/world_data_tab.dart";
 import "sliver_settings_app_bar.dart";
 
 final class SettingsToolbar extends StatelessWidget {
-  const SettingsToolbar(this.title, {required this.onReset, super.key});
+  const new(this.title, {required this.onReset, super.key});
 
   final String title;
   final VoidCallback? onReset;

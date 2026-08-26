@@ -210,9 +210,7 @@ void main() => group("$FiatCurrency", () {
         expect(element.internationalName, element.name);
         expect(element.namesNative, isA<List<String>>());
         expect(element.namesNative, isNotEmpty);
-        if (element.alternateSymbols == null) {
-          expect(element.alternateSymbols, isNull);
-        } else {
+        if (element.alternateSymbols != null) {
           expect(element.alternateSymbols, isA<List<String>>());
           expect(element.alternateSymbols, isNotEmpty);
         }

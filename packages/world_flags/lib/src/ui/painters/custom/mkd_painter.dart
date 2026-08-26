@@ -3,7 +3,7 @@ part of "../multi_element_painter.dart";
 /// Painter for the North Macedonia flag.
 final class MkdPainter extends MultiElementPainter {
   /// Creates a new instance of [MkdPainter].
-  const MkdPainter(super._properties, super.aspectRatio);
+  const new(super._properties, super.aspectRatio);
 
   @override
   FlagParentBounds? paintFlagElements(Canvas canvas, Size size) {

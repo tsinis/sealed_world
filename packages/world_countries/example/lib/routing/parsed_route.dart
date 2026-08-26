@@ -16,7 +16,7 @@ import "parser.dart";
 @immutable
 class ParsedRoute {
   // ignore: prefer-named-parameters, for example simplicity.
-  const ParsedRoute(
+  const new(
     this.path,
     this.pathTemplate,
     this.parameters,

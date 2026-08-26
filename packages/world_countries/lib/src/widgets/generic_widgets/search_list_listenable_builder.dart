@@ -29,7 +29,7 @@ class SearchListListenableBuilder<T extends Object>
   /// * [startWithSearch] is a boolean indicating whether to search from the
   ///   beginning of the string.
   /// * [key] is the optional key to use for the widget.
-  const SearchListListenableBuilder({
+  const new({
     required this.builder,
     required this.items,
     required super.searchIn,

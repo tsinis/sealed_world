@@ -104,7 +104,7 @@ class SearchData extends UnmodifiableListView<String> {
   /// }
   /// ```
   /// .
-  SearchData(
+  new(
     this.internationalName,
     this.namesNative, {
     required this.code,
@@ -159,7 +159,7 @@ class SearchData extends UnmodifiableListView<String> {
   /// }
   /// ```
   /// .
-  SearchData.empty({
+  new empty({
     this.code = "",
     this.name,
     this.namesNative = const {},

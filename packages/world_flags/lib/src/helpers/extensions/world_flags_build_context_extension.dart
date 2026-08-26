@@ -1,4 +1,5 @@
-import "package:flutter/material.dart";
+import "package:flutter/material.dart" show Theme;
+import "package:flutter/widgets.dart" show BuildContext;
 
 import "../../theme/flag_theme_data.dart";
 

@@ -23,7 +23,7 @@ abstract class DecoratedFlagWidget extends StatelessWidget
   ///  theme is used.
   /// - [child]: A widget to display in the foreground of the flag.
   /// - [key]: The key for the widget.
-  const DecoratedFlagWidget({
+  const new({
     this.aspectRatio,
     this.decoration,
     this.decorationPosition,

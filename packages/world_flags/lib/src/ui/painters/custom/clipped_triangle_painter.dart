@@ -8,7 +8,7 @@ import "../basic/elements_painter.dart";
 final class ClippedTrianglePainter extends ElementsPainter {
   /// Creates a [ClippedTrianglePainter] with the given [properties]
   /// and [aspectRatio].
-  const ClippedTrianglePainter(super._properties, super.aspectRatio);
+  const new(super._properties, super.aspectRatio);
 
   @override
   FlagParentBounds paintFlagElements(Canvas canvas, Size size) {

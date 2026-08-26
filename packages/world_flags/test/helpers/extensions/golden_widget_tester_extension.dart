@@ -63,7 +63,7 @@ extension GoldenWidgetTesterExtension on WidgetTester {
         ? flagWidget.runtimeType
         : IsoFlag<T, BasicFlag>;
 
-    return expectLater(
+    await expectLater(
       find.byType(finderType),
       matchesGoldenFile(isWaved ? "../$filePath" : filePath),
       skip: !Platform.isLinux && (_ignoreOnNonLinux.contains(iso) || isWaved),

@@ -25,6 +25,7 @@ import "../adaptive/adaptive_search_text_field.dart";
 import "../generic_widgets/implicit_search_delegate.dart";
 import "../generic_widgets/iso_tile.dart";
 import "../generic_widgets/searchable_indexed_list_view_builder.dart";
+
 part "basic_picker_state.dart";
 
 /// An abstract class that provides a basic picker [Widget], with search
@@ -82,7 +83,7 @@ abstract class BasicPicker<T extends IsoTranslated, W extends IsoTile<T>>
   /// * [maps] is the optional [IsoMaps] bundle containing pre-computed
   ///   translation caches and optional flag overrides.
   /// * [flagTheme] is the optional [FlagThemeData] override for flags.
-  const BasicPicker(
+  const new(
     super.items, {
     super.addAutomaticKeepAlives,
     super.addRepaintBoundaries,
@@ -244,7 +245,7 @@ abstract class BasicPicker<T extends IsoTranslated, W extends IsoTile<T>>
             context.tileTheme<T>()?.itemBuilder?.call(props, defaultTile) ??
             defaultTile;
       },
-      growable: false, // Dart 3.8 Formatting.
+      growable: false,
     );
   }
 

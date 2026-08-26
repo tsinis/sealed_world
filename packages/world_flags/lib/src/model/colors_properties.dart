@@ -30,7 +30,7 @@ class ColorsProperties {
   /// The [color] parameter is required and specifies the color of the element.
   /// The [ratio] parameter is optional and defaults to `1`. It must be greater
   /// than or equal to zero.
-  const ColorsProperties(this.color, {this.ratio = 1})
+  const new(this.color, {this.ratio = 1})
     : assert(ratio >= 0, "`ratio` must be greater than or equal to zero.");
 
   /// Creates a new instance of [ColorsProperties] from an integer
@@ -40,7 +40,7 @@ class ColorsProperties {
   /// format. The [ratio] parameter is optional and defaults to `1`. It must be
   /// greater than or equal to zero.
   @visibleForTesting
-  ColorsProperties.fromIntColor(int bitColor, {this.ratio = 1})
+  new fromIntColor(int bitColor, {this.ratio = 1})
     : assert(ratio >= 0, "`ratio` must be greater than or equal to zero."),
       color = Color(bitColor);
 

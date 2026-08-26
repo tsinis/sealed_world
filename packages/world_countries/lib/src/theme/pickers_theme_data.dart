@@ -34,7 +34,7 @@ import "../model/iso/iso_maps.dart";
 class PickersThemeData extends ThemeExtension<PickersThemeData>
     implements IndexedListViewInterface, BasicPickerInterface {
   /// Creates a [PickersThemeData] instance with the given properties.
-  const PickersThemeData({
+  const new({
     this.addRepaintBoundaries = true,
     this.addSemanticIndexes = true,
     this.cacheExtent,

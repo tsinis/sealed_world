@@ -15,7 +15,7 @@ class ItemProperties<T extends Object> {
   /// * [isChosen] is a boolean indicating whether the item is currently chosen.
   /// * [isDisabled] is a boolean indicating whether the item is currently
   ///   disabled.
-  const ItemProperties(
+  const new(
     this.context,
     this.item, {
     required this.index,

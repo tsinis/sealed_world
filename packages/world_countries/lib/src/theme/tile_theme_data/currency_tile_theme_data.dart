@@ -33,5 +33,5 @@ final class CurrencyTileThemeData extends BaseTileThemeData<FiatCurrency> {
   /// The builder function should take [ItemProperties] of type [FiatCurrency]
   /// and the default tile widget, and return a widget that visually represents
   /// the currency (optionally by returning or customizing the default tile).
-  const CurrencyTileThemeData({super.itemBuilder});
+  const new({super.itemBuilder});
 }

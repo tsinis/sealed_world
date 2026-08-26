@@ -52,7 +52,7 @@ class IndexedListViewBuilder<T extends Object, W extends Widget>
   /// * [textBaseline] is the text baseline to use.
   /// * [textDirection] is the text direction to use.
   /// * [verticalDirection] is the vertical direction to use.
-  const IndexedListViewBuilder(
+  const new(
     super.items, {
     super.addAutomaticKeepAlives,
     super.addRepaintBoundaries,
@@ -156,6 +156,8 @@ class _IndexedListViewBuilderState<T extends Object, W extends Widget>
                       if (properties.isDisabled) return child;
 
                       return GestureDetector(
+                        // It's up on the deve to provide a feedback on top.
+                        // ignore: prefer-haptic-feedback-on-interaction
                         onTap: () => widget.onSelect?.call(properties.item),
                         child: child,
                       );

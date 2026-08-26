@@ -35,7 +35,7 @@ class MultiElementFlag extends BasicFlag {
   /// - [foregroundWidgetBuilder]: A builder for the foreground widget.
   /// - [key]: The key for the widget.
   @Deprecated("Use BasicFlag(properties) instead.") // coverage:ignore-line
-  const MultiElementFlag(
+  const new(
     super.properties, {
     super.aspectRatio,
     super.backgroundPainter,

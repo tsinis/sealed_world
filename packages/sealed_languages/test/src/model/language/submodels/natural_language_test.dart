@@ -78,9 +78,7 @@ void main() => group("$NaturalLanguage", () {
   group("fields", () {
     for (final element in NaturalLanguage.list) {
       test("of $NaturalLanguage: ${element.name}", () {
-        if (element.bibliographicCode == null) {
-          expect(element.bibliographicCode, isNull);
-        } else {
+        if (element.bibliographicCode != null) {
           expect(element.bibliographicCode, isA<String>());
           expect(element.bibliographicCode, isNotEmpty);
         }

@@ -1,7 +1,7 @@
 import "dart:io";
 
 final class CodeUtils {
-  const CodeUtils();
+  const new();
 
   String readContentUntilFound(String filePath, {String searchFor = "///"}) {
     final lines = File(filePath).readAsLinesSync();

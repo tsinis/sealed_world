@@ -225,7 +225,7 @@ extension TypedLocaleExtension on TypedLocale {
       // ignore: avoid_catches_without_on_clauses, should catch anything.
     } catch (error, stackTrace) {
       assert(
-        false, //ignore: avoid-constant-assert-conditions, should always trigger
+        false,
         "Error formatting translation map: $originalMap, $error on $stackTrace",
       );
 

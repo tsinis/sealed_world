@@ -17,7 +17,7 @@ import "theme/theme_provider.dart";
 void main() => runApp(const ThemeManager(child: Main()));
 
 class Main extends StatefulWidget {
-  const Main({super.key});
+  const new({super.key});
 
   @override
   State<Main> createState() => _MainState();

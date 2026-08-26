@@ -35,5 +35,5 @@ final class LanguageTileThemeData extends BaseTileThemeData<NaturalLanguage> {
   /// [NaturalLanguage] and the default tile widget, and return a widget that
   /// visually represents the language (optionally by returning or customizing
   /// the default tile).
-  const LanguageTileThemeData({super.itemBuilder});
+  const new({super.itemBuilder});
 }

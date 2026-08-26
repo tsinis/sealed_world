@@ -29,7 +29,7 @@ abstract class StatefulIndexedListView<T extends Object, W extends Widget>
   ///
   /// The optional parameters allow customization of the list's appearance and
   /// behavior.
-  const StatefulIndexedListView(
+  const new(
     this.items, {
     this.addAutomaticKeepAlives = true,
     this.addRepaintBoundaries, // Default to: true.

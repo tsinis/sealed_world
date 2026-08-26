@@ -27,6 +27,7 @@ void main() => group("NavigatorContextExtension", () {
     await tester.pumpMaterialApp(
       Builder(
         builder: (context) => ElevatedButton(
+          // ignore: async_return_with_no_await, it's a test.
           onPressed: () async => context.push(route),
           child: const Text("Push route"),
         ),
@@ -45,6 +46,7 @@ void main() => group("NavigatorContextExtension", () {
     await tester.pumpMaterialApp(
       Builder(
         builder: (context) => ElevatedButton(
+          // ignore: async_return_with_no_await, it's a test.
           onPressed: () async => context.push(route),
           child: const Text("Push route"),
         ),

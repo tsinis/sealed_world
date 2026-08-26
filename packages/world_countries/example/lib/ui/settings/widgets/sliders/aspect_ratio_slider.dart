@@ -4,7 +4,7 @@ import "package:world_countries/world_countries.dart";
 import "settings_tile_slider.dart";
 
 final class AspectRatioSlider extends SettingsTileSlider {
-  const AspectRatioSlider(super.flagTheme, double? originalRatio, {super.key})
+  const new(super.flagTheme, double? originalRatio, {super.key})
     : super(
         divisions: 180,
         fractionDigits: 2,

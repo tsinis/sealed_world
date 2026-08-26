@@ -27,7 +27,7 @@ import "../../widgets/generic_widgets/iso_tile.dart";
 base class BaseTileThemeData<T extends IsoTranslated>
     extends _BaseTileThemeData<T> {
   /// Creates a [BaseTileThemeData] with the given properties.
-  const BaseTileThemeData({super.itemBuilder});
+  const new({super.itemBuilder});
 
   @override
   @optionalTypeArgs
@@ -47,7 +47,7 @@ base class BaseTileThemeData<T extends IsoTranslated>
 @immutable
 sealed class _BaseTileThemeData<T extends IsoTranslated>
     extends ThemeExtension<BaseTileThemeData<T>> {
-  const _BaseTileThemeData({this.itemBuilder}); // coverage:ignore-line
+  const new({this.itemBuilder}); // coverage:ignore-line
 
   /// A builder function that takes [ItemProperties] and a default tile widget,
   /// and returns a widget for the tile.

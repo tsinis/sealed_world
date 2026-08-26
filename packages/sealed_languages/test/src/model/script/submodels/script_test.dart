@@ -84,8 +84,8 @@ void main() => group("$Script", () {
         expect(element.internationalName, element.name);
         expect(element.date, isA<String>());
         expect(element.date, isNotEmpty);
-        // ignore: avoid-returning-void, it's a test.
-        if (element.pva == null) return expect(element.pva, isNull);
+
+        if (element.pva == null) return;
         expect(element.pva, isA<String>());
         expect(element.pva, isNotEmpty);
       });

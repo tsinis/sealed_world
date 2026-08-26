@@ -33,6 +33,6 @@ extension FlagExtension on WorldCountry {
       colors.add(props.mainColor);
     }
 
-    return List.unmodifiable(colors);
+    return List.unmodifiableOf(colors);
   }
 }

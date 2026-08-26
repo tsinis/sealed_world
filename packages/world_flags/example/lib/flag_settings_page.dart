@@ -9,11 +9,7 @@ import "package:world_flags/world_flags.dart";
 
 /// A full-screen page for configuring and previewing flag shader options.
 class FlagSettingsPage extends StatefulWidget {
-  const FlagSettingsPage({
-    required this.aspectRatio,
-    required this.country,
-    super.key,
-  });
+  const new({required this.aspectRatio, required this.country, super.key});
 
   /// Shows the settings page as a full-screen route.
   @awaitNotRequired
@@ -24,7 +20,7 @@ class FlagSettingsPage extends StatefulWidget {
   ) async {
     if (iso is! WorldCountry) return;
 
-    return Navigator.of(context).push<void>(
+    await Navigator.of(context).push<void>(
       MaterialPageRoute(
         builder: (_) =>
             FlagSettingsPage(aspectRatio: aspectRatio, country: iso),
@@ -61,9 +57,13 @@ class _FlagSettingsPageState extends State<FlagSettingsPage> {
   Widget build(BuildContext context) => Scaffold(
     appBar: AppBar(
       automaticallyImplyLeading: false,
-      title: Text("${_country.internationalName} (${_country.code})"),
+      title: Semantics(
+        header: true,
+        child: Text("${_country.internationalName} (${_country.code})"),
+      ),
       actions: [
         IconButton(
+          tooltip: "close",
           icon: const Icon(Icons.close),
           onPressed: Navigator.of(context).pop,
         ),
@@ -104,7 +104,7 @@ class _FlagSettingsPageState extends State<FlagSettingsPage> {
 }
 
 class _FlagPreview extends StatelessWidget {
-  const _FlagPreview({
+  const new({
     required this.country,
     required this.aspectRatio,
     required this.options,
@@ -143,7 +143,7 @@ class _FlagPreview extends StatelessWidget {
 }
 
 class _ShaderPreview extends StatelessWidget {
-  const _ShaderPreview({
+  const new({
     required this.country,
     required this.aspectRatio,
     required this.options,
@@ -170,7 +170,7 @@ class _ShaderPreview extends StatelessWidget {
 }
 
 class _ComparisonPreview extends StatelessWidget {
-  const _ComparisonPreview({
+  const new({
     required this.country,
     required this.aspectRatio,
     required this.opacity,
@@ -209,7 +209,7 @@ class _ComparisonPreview extends StatelessWidget {
 }
 
 class _SettingsPanel extends StatelessWidget {
-  const _SettingsPanel({
+  const new({
     required this.options,
     required this.aspectRatio,
     required this.debugCompareMode,
@@ -268,7 +268,7 @@ class _SettingsPanel extends StatelessWidget {
 }
 
 class _AnimationControls {
-  const _AnimationControls({required this.options, required this.opts});
+  const new({required this.options, required this.opts});
 
   final ValueNotifier<FlagShaderOptions> options;
   final FlagShaderOptions opts;
@@ -302,7 +302,7 @@ class _AnimationControls {
 }
 
 class _WaveControls {
-  const _WaveControls({required this.options, required this.opts});
+  const new({required this.options, required this.opts});
 
   final ValueNotifier<FlagShaderOptions> options;
   final FlagShaderOptions opts;
@@ -359,7 +359,7 @@ class _WaveControls {
 }
 
 class _WaveDirectionControls {
-  const _WaveDirectionControls({required this.options, required this.opts});
+  const new({required this.options, required this.opts});
 
   final ValueNotifier<FlagShaderOptions> options;
   final FlagShaderOptions opts;
@@ -400,7 +400,7 @@ class _WaveDirectionControls {
 }
 
 class _EdgePinningControls {
-  const _EdgePinningControls({required this.options, required this.opts});
+  const new({required this.options, required this.opts});
 
   final ValueNotifier<FlagShaderOptions> options;
   final FlagShaderOptions opts;
@@ -440,7 +440,7 @@ class _EdgePinningControls {
 }
 
 class _ShadingControls {
-  const _ShadingControls({required this.options, required this.opts});
+  const new({required this.options, required this.opts});
 
   final ValueNotifier<FlagShaderOptions> options;
   final FlagShaderOptions opts;
@@ -501,7 +501,7 @@ class _ShadingControls {
 }
 
 class _OtherControls {
-  const _OtherControls({required this.options, required this.opts});
+  const new({required this.options, required this.opts});
 
   final ValueNotifier<FlagShaderOptions> options;
   final FlagShaderOptions opts;
@@ -553,7 +553,7 @@ class _OtherControls {
 }
 
 class _SectionHeader extends StatelessWidget {
-  const _SectionHeader({required this.title, required this.theme});
+  const new({required this.title, required this.theme});
 
   final String title;
   final ThemeData theme;
@@ -572,10 +572,7 @@ class _SectionHeader extends StatelessWidget {
 }
 
 class _DebugCompareSection extends StatelessWidget {
-  const _DebugCompareSection({
-    required this.debugCompareMode,
-    required this.opacity,
-  });
+  const new({required this.debugCompareMode, required this.opacity});
 
   final ValueNotifier<bool> debugCompareMode;
   final ValueNotifier<double> opacity;
@@ -612,7 +609,7 @@ class _DebugCompareSection extends StatelessWidget {
 }
 
 class _AspectRatioSlider extends StatelessWidget {
-  const _AspectRatioSlider({required this.aspectRatio, required this.country});
+  const new({required this.aspectRatio, required this.country});
 
   static String _formatValue(double value) => value.toStringAsFixed(3);
 
@@ -632,6 +629,7 @@ class _AspectRatioSlider extends StatelessWidget {
         children: [
           const Text("Width to height ratio of the flag."),
           Slider(
+            semanticFormatterCallback: (value) => "ratio: $value",
             value: ratio ?? _originalRatio,
             secondaryTrackValue: _originalRatio,
             onChanged: (newRatio) => aspectRatio.value = newRatio,
@@ -653,7 +651,7 @@ class _AspectRatioSlider extends StatelessWidget {
 }
 
 class _OptionSlider extends StatelessWidget {
-  const _OptionSlider({
+  const new({
     required this.name,
     required this.description,
     required this.value,
@@ -681,6 +679,7 @@ class _OptionSlider extends StatelessWidget {
         Slider(
           value: value.clamp(min, max),
           secondaryTrackValue: defaultValue,
+          semanticFormatterCallback: (val) => val.toString(),
           onChanged: onChanged,
           min: min,
           max: max,
@@ -692,7 +691,7 @@ class _OptionSlider extends StatelessWidget {
 }
 
 class _OptionSwitch extends StatelessWidget {
-  const _OptionSwitch({
+  const new({
     required this.name,
     required this.description,
     required this.value,
@@ -715,7 +714,7 @@ class _OptionSwitch extends StatelessWidget {
 }
 
 class _CodeSnippetSection extends StatelessWidget {
-  const _CodeSnippetSection({required this.options, required this.aspectRatio});
+  const new({required this.options, required this.aspectRatio});
 
   final ValueNotifier<FlagShaderOptions> options;
   final ValueNotifier<double?> aspectRatio;

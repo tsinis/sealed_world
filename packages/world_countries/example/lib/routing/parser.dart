@@ -18,8 +18,8 @@ typedef RouteGuard<T> = Future<T> Function(T from);
 /// Parses the URI path into a [ParsedRoute].
 // ignore: prefer-match-file-name, to match original code.
 class TemplateRouteParser extends RouteInformationParser<ParsedRoute> {
-  TemplateRouteParser({
-    /// The list of allowed path templates (['/currency', '/currency/:code'])
+  new({
+    /// The list of allowed path templates (['/currency', '/currency/:code']).
     required List<String> allowedPaths,
 
     /// The initial route.
@@ -62,6 +62,7 @@ class TemplateRouteParser extends RouteInformationParser<ParsedRoute> {
 
     // Redirect if a guard is present.
     final guard = this.guard;
+    // ignore: async_return_with_no_await, just an example, not production code.
     if (guard != null) return guard(parsedRoute);
 
     return parsedRoute;

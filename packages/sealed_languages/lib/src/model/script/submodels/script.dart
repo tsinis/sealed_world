@@ -926,7 +926,7 @@ sealed class Script extends WritingSystem
     if (scripts == null) return codeMap.findByCodeOrThrow(code);
 
     String? validCode = IsoObject(
-      code, // Dart 3.7+ formatting.
+      code,
     ).maybeToValidIsoCode(exactLength: codeLength);
     if (validCode == null) {
       throw StateError(
@@ -1075,7 +1075,6 @@ sealed class Script extends WritingSystem
     T? Function(Script script)? where,
     Iterable<Script> scripts = list,
   }) {
-    // ignore: avoid-collection-mutating-methods, not mutating anything.
     scripts.assertNotEmpty();
 
     for (final script in scripts) {
@@ -1152,7 +1151,7 @@ sealed class Script extends WritingSystem
     if (scripts == null) return codeMap.maybeFindByCode(code);
 
     String? string = IsoObject.maybe(
-      code, // Dart 3.7+ formatting.
+      code,
     )?.maybeToValidIsoCode(exactLength: codeLength);
     if (string == null) return null;
     string = formatToStandardCode(string);
@@ -1189,7 +1188,7 @@ sealed class Script extends WritingSystem
     if (scripts == null) return codeNumericMap.maybeFindByCode(codeNumeric);
 
     final string = IsoObject.maybe(
-      codeNumeric, // Dart 3.7+ formatting.
+      codeNumeric,
     )?.maybeToValidIsoCode(exactLength: IsoStandardized.codeLength);
 
     return scripts.firstIsoWhereCodeOtherOrNull(string, toUpperCase: false);

@@ -57,7 +57,7 @@ import "static_flag_shader_delegate.dart";
 /// - [AnimatedFlagShaderDelegate] for creating custom animated shaders.
 class WavedFlagShaderDelegate extends AnimatedFlagShaderDelegate {
   /// Creates a new instance of [WavedFlagShaderDelegate].
-  WavedFlagShaderDelegate({
+  new({
     required super.vsync,
     this.options = const FlagShaderOptions(),
     void Function(Object error, StackTrace stackTrace)? onError,

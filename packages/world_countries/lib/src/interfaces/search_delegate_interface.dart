@@ -38,7 +38,7 @@ abstract class SearchDelegateInterface<T extends Object>
   ///   button.
   /// * [clearIconButton] is an icon button to use as the search page's clear
   ///   button.
-  SearchDelegateInterface(
+  new(
     this.items, {
     required this.resultsBuilder,
     required this.searchIn,

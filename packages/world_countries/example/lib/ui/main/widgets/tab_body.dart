@@ -6,7 +6,7 @@ import "package:world_countries/helpers.dart";
 import "description_tile.dart";
 
 class TabBody extends StatelessWidget {
-  const TabBody({
+  const new({
     required this.title,
     this.titleOverlay = const SizedBox.shrink(),
     this.titlePadding = const EdgeInsets.symmetric(vertical: 16),

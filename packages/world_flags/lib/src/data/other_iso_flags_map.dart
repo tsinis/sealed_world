@@ -106,8 +106,7 @@ const flagEpoProperties = FlagProperties(
       ),
     ),
   ],
-  url:
-      "https://wikipedia.org/wiki/Esperanto_symbols#/media/File:Esperanto_flag_-_construction.svg",
+  url: "https://wikipedia.org/wiki/Esperanto_symbols#/media/File:Esperanto_flag_-_construction.svg",
 );
 
 /// Flag properties of Ido (IDO).

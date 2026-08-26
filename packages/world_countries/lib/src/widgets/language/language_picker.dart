@@ -17,7 +17,7 @@ class LanguagePicker extends BasicPicker<NaturalLanguage, LanguageTile> {
   /// * [flagTheme] is the optional [FlagThemeData] override for flags.
   /// * All other parameters are optional and are passed
   /// to the superclass constructor.
-  const LanguagePicker({
+  const new({
     Iterable<NaturalLanguage>? languages,
     super.addAutomaticKeepAlives,
     super.addRepaintBoundaries,

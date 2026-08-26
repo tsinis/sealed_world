@@ -21,7 +21,7 @@ class AdaptiveSearchTextField extends TextField {
   /// * [showClearButton] is a boolean indicating whether a clear button should
   ///   be displayed in the text field.
   /// * `key` is the optional key to use for the widget.
-  const AdaptiveSearchTextField(
+  const new(
     TextEditingController controller, {
     this.copyFrom,
     this.padding,
@@ -86,6 +86,7 @@ class _AdaptiveSearchTextFieldState extends State<AdaptiveSearchTextField> {
             ),
             child: Padding(
               padding: const EdgeInsets.all(UiConstants.point),
+              // ignore: provide-autofill-hints, it's a very basic widget.
               child: EditableText(
                 controller: controller,
                 focusNode: focusNode,

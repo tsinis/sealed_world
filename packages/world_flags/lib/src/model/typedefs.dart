@@ -6,12 +6,11 @@ import "elements/elements_properties.dart";
 import "flag_properties.dart";
 
 /// Signature for building shader delegate when no custom delegate is supplied.
-typedef FlagShaderDelegateBuilder =
-    FlagShaderDelegate Function(
-      TickerProvider vsync,
-      FlagShaderOptions options,
-      FlagProperties properties,
-    );
+typedef FlagShaderDelegateBuilder = FlagShaderDelegate Function(
+  TickerProvider vsync,
+  FlagShaderOptions options,
+  FlagProperties properties,
+);
 
 /// A type definition for a list of [ElementsProperties].
 typedef ElementsProps = List<ElementsProperties>;
@@ -26,8 +25,10 @@ typedef ElementsProps = List<ElementsProperties>;
 /// The function returns an instance of [T], which extends [CustomPainter], or
 /// `null`.
 @optionalTypeArgs
-typedef FlagPainterBuilder<T extends CustomPainter> =
-    T? Function(ElementsProps? properties, double aspectRatio);
+typedef FlagPainterBuilder<T extends CustomPainter> = T? Function(
+  ElementsProps? properties,
+  double aspectRatio,
+);
 
 /// A type definition for a function that builds a [Widget] for a flag.
 ///
@@ -38,8 +39,10 @@ typedef FlagPainterBuilder<T extends CustomPainter> =
 ///
 /// The function returns an instance of [T], which extends [Widget], or null.
 @optionalTypeArgs
-typedef FlagWidgetBuilder<T extends Widget> =
-    T? Function(ElementsProps? properties, double aspectRatio);
+typedef FlagWidgetBuilder<T extends Widget> = T? Function(
+  ElementsProps? properties,
+  double aspectRatio,
+);
 
 /// A type definition for a record that holds the parent bounds of a flag
 /// element.

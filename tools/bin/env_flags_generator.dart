@@ -113,7 +113,7 @@ void main(List<String> args) {
     print("🎨 Running dart format...");
     final formatResult = Process.runSync("dart", [
       "format",
-      packagePath, // Dart 3.8 formatting.
+      packagePath,
     ], workingDirectory: Directory.current.path);
 
     if (formatResult.exitCode == 0) {
@@ -141,11 +141,10 @@ void main(List<String> args) {
 
     // Step 8: Run dcm analyze on the generator tool itself.
     print("🔍 Running dcm analyze on generator tool...");
-    final dcmResult = Process.runSync(
-      "dcm",
-      ["analyze", "bin/env_flags_generator.dart"], // Dart 3.8 formatting.
-      workingDirectory: Directory.current.path,
-    );
+    final dcmResult = Process.runSync("dcm", [
+      "analyze",
+      "bin/env_flags_generator.dart",
+    ], workingDirectory: Directory.current.path);
 
     if (dcmResult.exitCode == 0) {
       print("   ✓ dcm analyze completed successfully");
@@ -416,9 +415,8 @@ String _wrapFactoriesWithInclude(String content) {
       if (i < lines.length) {
         final entryLine = lines[i];
         final entryTrimmed = entryLine.trim();
-        final entryMatch = RegExp(
-          r'''^["\']([a-zA-Z0-9_]+)["\']\s*:\s*(.+)$''',
-        ).firstMatch(entryTrimmed);
+        final entryMatch = RegExp(r'''^["\']([a-zA-Z0-9_]+)["\']\s*:\s*(.+)$''')
+            .firstMatch(entryTrimmed);
         if (entryMatch != null) {
           final locale = entryMatch.group(1)!;
           final value = entryMatch.group(2);

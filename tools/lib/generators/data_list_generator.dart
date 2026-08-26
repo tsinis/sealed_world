@@ -8,7 +8,7 @@ import "../utils/io_utils.dart";
 import "helpers/extensions/package_associations_extension.dart";
 
 class DataListGenerator {
-  const DataListGenerator();
+  const new();
 
   static const _dart = DartUtils();
 

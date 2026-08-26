@@ -32,7 +32,7 @@ mixin PropertiesConvertibleMixin<T extends Object, W extends Widget>
   ) {
     final sortedItems = sort == null
         ? filtered
-        : List<T>.unmodifiable(filtered.toList(growable: false)..sort(sort));
+        : List<T>.unmodifiableOf(filtered.toList(growable: false)..sort(sort));
     final item = sortedItems.elementAt(index);
     final isChosen = chosen?.contains(item) ?? false;
     final isDisabled = disabled?.contains(item) ?? false;

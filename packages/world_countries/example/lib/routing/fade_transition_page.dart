@@ -8,7 +8,7 @@
 import "package:flutter/material.dart";
 
 class FadeTransitionPage<T> extends Page<T> {
-  const FadeTransitionPage({
+  const new({
     required this.child,
     this.duration = const Duration(milliseconds: 300),
     super.key,
@@ -24,7 +24,7 @@ class FadeTransitionPage<T> extends Page<T> {
 
 // ignore: prefer-single-declaration-per-file, it's original sample code.
 class PageBasedFadeTransitionRoute<T> extends PageRoute<T> {
-  PageBasedFadeTransitionRoute(this._page) : super(settings: _page);
+  new(this._page) : super(settings: _page);
 
   final FadeTransitionPage<T> _page;
 

@@ -69,7 +69,7 @@ class LanguageFlag extends DualFlag<NaturalLanguage, BasicFlag> {
   /// - [clipSecondary]: When `true` (default), the secondary flag is clipped.
   ///   When `false`, the primary flag is clipped instead.
   /// - [key]: The key for the widget.
-  const LanguageFlag.fromFlagMap(
+  const new fromFlagMap(
     NaturalLanguage language, {
     super.alternativeMap = defaultSecondaryCountryLanguageFlags,
     super.splitAngle,

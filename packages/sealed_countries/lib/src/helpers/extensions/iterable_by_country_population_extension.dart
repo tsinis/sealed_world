@@ -59,7 +59,6 @@ extension IterableByCountryPopulationExtension<T extends IsoStandardized>
 
       map[item] ??= const <WorldCountry>[];
       for (final country in sortedCountries) {
-        // ignore: move-variable-outside-iteration, not really as being updated.
         final existing = map[item] ?? const [];
         if (existing.contains(country)) continue;
 

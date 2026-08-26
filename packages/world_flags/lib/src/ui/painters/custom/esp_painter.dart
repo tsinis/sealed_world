@@ -9,7 +9,7 @@ import "../basic/custom_elements_painter.dart";
 /// Painter for the Spain flag.
 final class EspPainter extends CustomElementsPainter {
   /// Creates a new instance of [EspPainter].
-  const EspPainter(super._properties, super.aspectRatio);
+  const new(super._properties, super.aspectRatio);
 
   @override
   double get originalAspectRatio => flagEspProperties.aspectRatio;

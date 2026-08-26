@@ -5,7 +5,7 @@ import "package:world_countries/world_countries.dart";
 
 /// Controller that holds a mutable [FlagThemeData] as [ChangeNotifier].
 class FlagThemeController extends ChangeNotifier {
-  FlagThemeController([this._theme = _defaultTheme]);
+  new([this._theme = _defaultTheme]);
 
   static const defaultBorder = BorderSide(
     strokeAlign: BorderSide.strokeAlignOutside,

@@ -17,7 +17,7 @@ import "widgets/sliders/shadow_opacity_slider.dart";
 import "widgets/sliders/shadow_spread_slider.dart";
 
 class SettingsPage extends StatelessWidget {
-  const SettingsPage(this._controller, this._country, {super.key});
+  const new(this._controller, this._country, {super.key});
 
   static const _fallback = CountryFlag.simplified(
     CountryGbr(),

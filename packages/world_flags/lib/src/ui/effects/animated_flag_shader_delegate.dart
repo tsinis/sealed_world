@@ -1,5 +1,3 @@
-import "dart:async" show unawaited;
-
 import "package:flutter/foundation.dart";
 import "package:flutter/scheduler.dart";
 
@@ -81,7 +79,7 @@ abstract class AnimatedFlagShaderDelegate extends StaticFlagShaderDelegate {
   ///
   /// The [animationSpeed] multiplier affects how fast [time] increments each
   /// frame. Default is `1.0`.
-  AnimatedFlagShaderDelegate({
+  new({
     required TickerProvider vsync,
     required super.assetPath,
     super.contentScale,
@@ -184,7 +182,7 @@ abstract class AnimatedFlagShaderDelegate extends StaticFlagShaderDelegate {
 
     if (!_ticker.isActive) {
       _lastTick = Duration.zero;
-      unawaited(_ticker.start());
+      _ticker.start();
     }
   }
 
@@ -209,7 +207,7 @@ abstract class AnimatedFlagShaderDelegate extends StaticFlagShaderDelegate {
   void startAnimation() {
     if (_ticker.isActive) return;
     _lastTick = Duration.zero;
-    unawaited(_ticker.start());
+    _ticker.start();
   }
 
   /// Stops the animation ticker.

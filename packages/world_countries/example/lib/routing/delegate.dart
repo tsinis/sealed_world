@@ -16,7 +16,7 @@ import "route_state.dart";
 // ignore: prefer-match-file-name, to match original code.
 class SimpleRouterDelegate extends RouterDelegate<ParsedRoute>
     with ChangeNotifier, PopNavigatorRouterDelegateMixin<ParsedRoute> {
-  SimpleRouterDelegate({
+  new({
     required this.routeState,
     required this.builder,
     required this.navigatorKey,

@@ -12,7 +12,7 @@ import "../../../notifications/notifications_center.dart";
 import "../../../theme/flag_theme_scope.dart";
 
 class CodeCopyPreview extends StatelessWidget {
-  const CodeCopyPreview({super.key});
+  const new({super.key});
 
   static String _colorLiteral(Color color) {
     final alpha = (color.a * 255.0).round() & 0xff;
@@ -128,7 +128,7 @@ class CodeCopyPreview extends StatelessWidget {
 }
 
 class _CopyButton extends StatefulWidget {
-  const _CopyButton({required this.payload});
+  const new({required this.payload});
   final String payload;
 
   @override
@@ -154,9 +154,8 @@ class _CopyButtonState extends State<_CopyButton> {
 
     if (mounted) setState(() => _isCopied = true);
     unawaited(
-      const Duration(
-        seconds: 2, // Dart 3.8 formatting conflict.
-      ).delayed(() => mounted ? setState(() => _isCopied = false) : null),
+      const Duration(seconds: 2)
+          .delayed(() => mounted ? setState(() => _isCopied = false) : null),
     );
   }
 
@@ -170,6 +169,7 @@ class _CopyButtonState extends State<_CopyButton> {
       switchInCurve: Curves.fastEaseInToSlowEaseOut,
       switchOutCurve: Curves.fastEaseInToSlowEaseOut,
       child: Icon(
+        semanticLabel: _isCopied ? "Copied" : "Copy to clipboard",
         _isCopied ? Icons.check : Icons.copy,
         key: ValueKey(_isCopied),
       ),
@@ -178,7 +178,7 @@ class _CopyButtonState extends State<_CopyButton> {
 }
 
 class _CodeBlock extends StatelessWidget {
-  const _CodeBlock({required this.snippet});
+  const new({required this.snippet});
 
   final String snippet;
 

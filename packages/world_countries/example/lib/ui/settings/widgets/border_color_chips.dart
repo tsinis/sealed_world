@@ -8,7 +8,7 @@ import "../../../theme/flag_theme_controller.dart";
 /// Horizontally scrollable row of color choice chips for border color.
 /// Uses a curated subset of Material colors for brevity.
 final class BorderColorChips extends StatelessWidget {
-  const BorderColorChips(this._controller, {super.key});
+  const new(this._controller, {super.key});
 
   // ignore: avoid-explicit-type-declaration, vs specify_nonobvious_property_types
   static const Map<String, Color> _palette = {

@@ -10,7 +10,7 @@ import "../widgets/description_tile.dart";
 import "../widgets/tab_body.dart";
 
 final class CountryTab extends WorldDataTab<WorldCountry> {
-  CountryTab(
+  new(
     super.data,
     super.go, {
     super.dataPicker = const CountryPicker(), // Or for example PhoneCodePicker.

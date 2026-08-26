@@ -8,7 +8,7 @@ import "package:flutter/foundation.dart" show Listenable;
 /// fallback painter run.
 abstract class FlagShaderDelegate implements Listenable {
   /// Creates a new instance of [FlagShaderDelegate].
-  const FlagShaderDelegate( // coverage:ignore-line
+  const new( // coverage:ignore-line
   {
     this.contentScale = 1, // Dart 3.8 formatting.
     this.shouldClipContent = false,

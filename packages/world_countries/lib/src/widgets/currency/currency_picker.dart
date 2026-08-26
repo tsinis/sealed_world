@@ -17,7 +17,7 @@ class CurrencyPicker extends BasicPicker<FiatCurrency, CurrencyTile> {
   /// * [flagTheme] is the optional [FlagThemeData] override for flags.
   /// * All other parameters are optional and are passed
   /// to the superclass constructor.
-  const CurrencyPicker({
+  const new({
     Iterable<FiatCurrency>? currencies,
     super.addAutomaticKeepAlives,
     super.addRepaintBoundaries,

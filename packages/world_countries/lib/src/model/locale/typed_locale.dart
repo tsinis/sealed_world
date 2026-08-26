@@ -1,3 +1,5 @@
+// ignore_for_file: prefer-private-named-parameters
+
 // ignore: lines_longer_than_80_chars, we are re-using `Locale` implementations.
 // ignore_for_file: prefer-overriding-parent-equality, avoid-nullable-parameters-with-default-values, avoid-suspicious-super-overrides
 
@@ -39,7 +41,7 @@ class TypedLocale extends Locale implements BasicTypedLocale {
   /// The [country] and [script] parameters are optional.
   /// The [maps] parameter encapsulates translation and flag maps.
   /// The [regionalCode] parameter is optional.
-  const TypedLocale(
+  const new(
     this.language, {
     this.country,
     this.script,
@@ -58,7 +60,7 @@ class TypedLocale extends Locale implements BasicTypedLocale {
   /// The [country] and [script] parameters are optional.
   /// The [maps] parameter encapsulates translation and flag maps.
   /// The [regionalCode] parameter is optional.
-  TypedLocale.fromSubtags({
+  new fromSubtags({
     required this.language,
     this.country,
     this.script,
@@ -93,7 +95,7 @@ class TypedLocale extends Locale implements BasicTypedLocale {
   ///
   /// {@macro typed_locale_with_translations_cache}
   ///
-  factory TypedLocale.withTranslationsCache(
+  factory withTranslationsCache(
     NaturalLanguage language, {
     WorldCountry? country,
     Script? script,

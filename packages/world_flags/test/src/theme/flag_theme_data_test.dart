@@ -41,21 +41,18 @@ void main() => group("$FlagThemeData", () {
       expect(value.hashCode, isNot(updated.hashCode));
     });
 
-    test(
-      """returns a new instance with original values when no arguments are provided""",
-      () {
-        final updated = value.copyWith();
+    test("""returns a new instance with original values when no arguments are provided""", () {
+      final updated = value.copyWith();
 
-        expect(updated.aspectRatio, value.aspectRatio);
-        expect(updated.decoration, value.decoration);
-        expect(updated.decorationPosition, value.decorationPosition);
-        expect(updated.padding, value.padding);
-        expect(updated.height, value.height);
-        expect(updated.width, value.width);
-        expect(value, updated);
-        expect(value.hashCode, updated.hashCode);
-      },
-    );
+      expect(updated.aspectRatio, value.aspectRatio);
+      expect(updated.decoration, value.decoration);
+      expect(updated.decorationPosition, value.decorationPosition);
+      expect(updated.padding, value.padding);
+      expect(updated.height, value.height);
+      expect(updated.width, value.width);
+      expect(value, updated);
+      expect(value.hashCode, updated.hashCode);
+    });
 
     test("returns a new instance with mixed updated and original values", () {
       final updated = value.copyWith(aspectRatio: 2, height: 150);

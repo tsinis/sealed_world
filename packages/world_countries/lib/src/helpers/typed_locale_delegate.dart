@@ -62,7 +62,7 @@ class TypedLocaleDelegate implements LocalizationsDelegate<TypedLocale?> {
   /// - [_isoMapsBuilder]: Optional callback invoked after every cache
   ///   population, letting you adjust the [IsoMaps] before widgets consume
   ///   the locale.
-  const TypedLocaleDelegate({
+  const new({
     this.fallbackLanguage = const LangEng(),
     this._asyncTranslationCacheProcessing = true,
     this._isoCollections = const IsoCollections(),
@@ -97,7 +97,7 @@ class TypedLocaleDelegate implements LocalizationsDelegate<TypedLocale?> {
   /// - [_isoMapsBuilder]: Optional callback invoked after every cache
   ///   population, letting you adjust the [IsoMaps] before widgets consume
   ///   the locale.
-  const TypedLocaleDelegate.selectiveCache({
+  const new selectiveCache({
     this.fallbackLanguage = const LangEng(),
     this._asyncTranslationCacheProcessing = true,
     this._isoCollections = const IsoCollections.selective(),

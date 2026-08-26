@@ -18,7 +18,7 @@ abstract class StatefulSearchable<T extends Object> extends StatefulWidget
   /// search with the search string.
   /// * [onSearchResultsBuilder] is the optional function to customize the build
   ///   of the search results.
-  const StatefulSearchable({
+  const new({
     required this.searchIn,
     required this.textController,
     this.caseSensitiveSearch = false,

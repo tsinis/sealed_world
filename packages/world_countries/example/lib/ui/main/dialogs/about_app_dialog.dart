@@ -5,7 +5,7 @@ import "package:flutter/material.dart";
 import "../../../assets/assets.gen.dart";
 
 final class AboutAppDialog extends StatelessWidget {
-  const AboutAppDialog._();
+  const new _();
 
   static void show(BuildContext context) => unawaited(
     showDialog(context: context, builder: (_) => const AboutAppDialog._()),

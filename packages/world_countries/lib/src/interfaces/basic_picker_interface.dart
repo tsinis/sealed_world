@@ -30,7 +30,7 @@ import "../model/iso/iso_maps.dart";
 /// Immutable contract for basic picker configuration objects.
 @immutable
 abstract interface class BasicPickerInterface {
-  const BasicPickerInterface( // coverage:ignore-line
+  const new( // coverage:ignore-line
   {
     this.searchBarPadding = UiConstants.padding,
     this.showClearButton = true,

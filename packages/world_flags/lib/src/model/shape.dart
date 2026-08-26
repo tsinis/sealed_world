@@ -7,7 +7,7 @@ import "package:flutter/foundation.dart" show immutable;
 @immutable
 @pragma("vm:deeply-immutable")
 sealed class Shape {
-  const Shape(); // coverage:ignore-line
+  const new(); // coverage:ignore-line
 }
 
 /// A class representing a triangle shape.
@@ -17,7 +17,7 @@ sealed class Shape {
 @pragma("vm:deeply-immutable")
 final class Triangle implements Shape {
   /// Creates a new instance of [Triangle].
-  const Triangle(); // coverage:ignore-line
+  const new(); // coverage:ignore-line
 }
 
 /// A class representing a rectangle shape.
@@ -30,7 +30,7 @@ final class Rectangle implements Shape {
   ///
   /// The [aspectRatio] parameter is optional and specifies the width to height
   /// ratio of the rectangle.
-  const Rectangle({this.aspectRatio})
+  const new({this.aspectRatio})
     : assert(
         aspectRatio == null || aspectRatio > 0,
         "`aspectRatio` must be greater than 0",
@@ -52,7 +52,7 @@ final class Star implements Shape {
   /// [radiusFactor] parameter specifies the relative size of the inner radius
   /// compared to the outer radius. The [isFilled] parameter specifies whether
   /// the star is filled or outlined.
-  const Star({this.points = 5, this.radiusFactor = 0.38, this.isFilled = true})
+  const new({this.points = 5, this.radiusFactor = 0.38, this.isFilled = true})
     : assert(points > 0, "`points` must be greater than 0");
 
   /// The number of points on the star.
@@ -72,7 +72,7 @@ final class Star implements Shape {
 @pragma("vm:deeply-immutable")
 final class Ellipse implements Shape {
   /// Creates a new instance of [Ellipse].
-  const Ellipse(); // coverage:ignore-line
+  const new(); // coverage:ignore-line
 }
 
 /// A class representing a moon shape.
@@ -86,7 +86,7 @@ final class Moon implements Shape {
   /// The [radius] parameter specifies the relative radius of the second circle.
   /// The [offsetDx] and [offsetDy] parameters specify the relative X and Y
   /// positions of the second circle.
-  const Moon({this.radius = 0.85, this.offsetDx = 0.22, this.offsetDy = 0})
+  const new({this.radius = 0.85, this.offsetDx = 0.22, this.offsetDy = 0})
     : assert(radius > 0, "`radius` must be greater than 0");
 
   /// Relative radius of the second circle.
@@ -109,7 +109,7 @@ final class DiagonalLine implements Shape {
   ///
   /// The [isTopRightToBottomLeft] parameter specifies the direction of the
   /// diagonal line.
-  const DiagonalLine( // coverage:ignore-line
+  const new( // coverage:ignore-line
   {
     this.isTopRightToBottomLeft = true, // Dart 3.8 format.
   });

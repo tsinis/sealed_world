@@ -43,7 +43,7 @@ class IsoCollections {
   ///   when building language-to-flag relationships. Defaults to `[]`.
   /// - [localeMapResolution]: optional remapping between [Locale] and
   ///   [TypedLocale]. Defaults to [defaultLocaleMapResolution].
-  const IsoCollections({
+  const new({
     this.localeMapResolution = defaultLocaleMapResolution,
     this.countriesForTranslationCache = WorldCountry.list,
     this.currenciesForTranslationCache = FiatCurrency.list,
@@ -60,7 +60,7 @@ class IsoCollections {
   /// Useful for selective caching scenarios where you only opt‑in to specific
   /// ISO objects, keep memory overhead minimal, and provide bespoke locale
   /// remapping entries.
-  const IsoCollections.selective({
+  const new selective({
     this.localeMapResolution = const [],
     this.countriesForTranslationCache = const [],
     this.currenciesForTranslationCache = const [],

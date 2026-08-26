@@ -4,7 +4,7 @@ import "package:world_countries/helpers.dart";
 import "../tabs/tabs_data_controller.dart";
 
 class FloatingButton extends StatelessWidget {
-  const FloatingButton(this._controller, {required this.onPressed, super.key});
+  const new(this._controller, {required this.onPressed, super.key});
 
   final void Function({bool isLong}) onPressed;
   final TabsDataController _controller;
@@ -23,6 +23,7 @@ class FloatingButton extends StatelessWidget {
           switchInCurve: UiConstants.switchInCurve,
           switchOutCurve: UiConstants.switchOutCurve,
           child: Icon(
+            semanticLabel: "current tab",
             _controller.currentData.icon,
             key: ValueKey(_controller.currentData),
           ),

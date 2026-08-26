@@ -5,7 +5,7 @@ import "package:world_countries/src/model/search_data.dart";
 import "package:world_countries/src/model/typedefs.dart";
 
 class _SearchableInterfaceTest implements SearchableInterface<String> {
-  const _SearchableInterfaceTest({
+  const new({
     required this.searchIn,
     required this.caseSensitiveSearch,
     required this.startWithSearch,

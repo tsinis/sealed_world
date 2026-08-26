@@ -17,7 +17,7 @@ import "../../constants/ui_constants.dart";
 /// * JoyPixels are also not open-source and free for everyone.
 class EmojiFlag extends Text {
   /// Platform default representation of the emoji flag.
-  EmojiFlag.platformDefault(
+  new platformDefault(
     WorldCountry country, {
     double? size,
     TextStyle? style,
@@ -38,7 +38,7 @@ class EmojiFlag extends Text {
   }) : super(country.emoji, style: _style(style, null, size: size));
 
   /// Custom representation of the emoji flag.
-  EmojiFlag.custom(
+  new custom(
     WorldCountry country, {
     double? size,
     TextStyle? style,

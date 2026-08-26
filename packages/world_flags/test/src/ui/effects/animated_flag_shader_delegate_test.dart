@@ -175,7 +175,7 @@ void main() => group("$AnimatedFlagShaderDelegate", () {
 
 /// A concrete test implementation of [AnimatedFlagShaderDelegate].
 class _AnimatedFlagShaderDelegateTest extends AnimatedFlagShaderDelegate {
-  _AnimatedFlagShaderDelegateTest({required super.vsync, double speed = 1})
+  new({required super.vsync, double speed = 1})
     : super(assetPath: "shaders/waved_flag.frag", animationSpeed: speed);
 
   /// Exposes the protected [time] field for testing.
@@ -187,7 +187,7 @@ class _AnimatedFlagShaderDelegateTest extends AnimatedFlagShaderDelegate {
 
 /// A test delegate that allows controlling the [animate] getter.
 class _PausableAnimatedDelegate extends AnimatedFlagShaderDelegate {
-  _PausableAnimatedDelegate({required super.vsync, required this.isPaused})
+  new({required super.vsync, required this.isPaused})
     : super(assetPath: "shaders/waved_flag.frag");
 
   final bool isPaused;
@@ -204,8 +204,7 @@ class _PausableAnimatedDelegate extends AnimatedFlagShaderDelegate {
 
 /// A test delegate that tracks [onTick] calls.
 class _TrackingAnimatedDelegate extends AnimatedFlagShaderDelegate {
-  _TrackingAnimatedDelegate({required super.vsync})
-    : super(assetPath: "shaders/waved_flag.frag");
+  new({required super.vsync}) : super(assetPath: "shaders/waved_flag.frag");
 
   int tickCount = 0;
 

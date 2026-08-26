@@ -10,12 +10,10 @@ import "../basic/custom_elements_painter.dart";
 /// Painter for the Saudi Arabia and Afghanistan flag.
 final class ShahadaPainter extends CustomElementsPainter {
   /// Creates a new instance of [ShahadaPainter] for the Saudi Arabia flag.
-  const ShahadaPainter.sau(super._properties, super.aspectRatio)
-    : _hasSabre = true;
+  const new sau(super._properties, super.aspectRatio) : _hasSabre = true;
 
   /// Creates a new instance of [ShahadaPainter] for the Afghanistan flag.
-  const ShahadaPainter.afg(super._properties, super.aspectRatio)
-    : _hasSabre = false;
+  const new afg(super._properties, super.aspectRatio) : _hasSabre = false;
 
   final bool _hasSabre;
 

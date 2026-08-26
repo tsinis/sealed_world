@@ -1,4 +1,4 @@
-// ignore_for_file: unnecessary_async, missing-test-assertion
+// ignore_for_file: unnecessary_async, async_return_with_no_await, it's a test.
 
 import "package:flutter/material.dart" show Icons, SearchAnchor;
 import "package:flutter/widgets.dart";

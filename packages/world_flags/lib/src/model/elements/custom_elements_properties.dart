@@ -43,7 +43,7 @@ class CustomElementsProperties extends ElementsProperties {
   /// the element. The [otherColors] parameter is optional and defaults to an
   /// empty list. Other parameters such as [offset], [heightFactor],
   /// [widthFactor], and [angle] are inherited from [ElementsProperties].
-  const CustomElementsProperties(
+  const new(
     super.mainColor, {
     this.otherColors = const [],
     super.offset,

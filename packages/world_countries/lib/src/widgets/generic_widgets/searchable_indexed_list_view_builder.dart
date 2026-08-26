@@ -77,7 +77,7 @@ class SearchableIndexedListViewBuilder<T extends Object, W extends Widget>
   /// search bar. If not specified uses `PickersThemeData.showHeader` value and
   /// fallbacks to items count condition `if (items.length > 5)`, according to
   /// the Hick's law optimal range number of options.
-  const SearchableIndexedListViewBuilder(
+  const new(
     super.items, {
     super.addAutomaticKeepAlives,
     super.addRepaintBoundaries,
