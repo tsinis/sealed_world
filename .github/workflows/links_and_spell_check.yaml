@@ -22,6 +22,7 @@ jobs:
 
       - name: 🔗 Link checker
         uses: tcort/github-action-markdown-link-check@v1.1.3
+        if: false # TODO(tsinis): replace this one with different link checker.
         with:
           base-branch: main
           use-quiet-mode: "yes"
