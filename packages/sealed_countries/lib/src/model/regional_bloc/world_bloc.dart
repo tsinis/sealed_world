@@ -26,5 +26,5 @@ class WorldBloc implements Named<String> {
   @override
   String toString({bool short = true}) => short
       ? 'WorldBloc(name: "$name")'
-      : '''WorldBloc(name: "$name"${acronym == null ? '' : ', acronym: "$acronym"'})''';
+      : '''WorldBloc(name: "$name"${acronym == null ? '' : ', acronym: "$acronym"'})'''; // coverage:ignore-line
 }
