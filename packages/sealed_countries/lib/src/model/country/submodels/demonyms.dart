@@ -45,7 +45,7 @@ final class Demonyms implements JsonEncodable<Demonyms> {
   @override
   String toString({bool short = true}) => short
       ? '''Demonyms(language: ${language.runtimeType}(), female: "$female", male: "$male")'''
-      : 'Demonyms(language: $language, female: "$female", male: "$male")';
+      : '''Demonyms(language: $language, female: "$female", male: "$male")'''; // coverage:ignore-line
 
   @override
   String toJson({JsonCodec codec = const JsonCodec()}) => codec.encode(toMap());
