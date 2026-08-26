@@ -156,7 +156,7 @@ class _IndexedListViewBuilderState<T extends Object, W extends Widget>
                       if (properties.isDisabled) return child;
 
                       return GestureDetector(
-                        // It's up on the deve to provide a feedback on top.
+                        // It's up on the dev to provide a feedback on top.
                         // ignore: prefer-haptic-feedback-on-interaction
                         onTap: () => widget.onSelect?.call(properties.item),
                         child: child,
