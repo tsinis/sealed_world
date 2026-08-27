@@ -7,6 +7,7 @@ on:
 permissions:
   contents: write
   pull-requests: write
+  actions: write
 
 concurrency:
   group: gleon-approve-${{ github.event.issue.number }}
@@ -50,7 +51,6 @@ jobs:
             core.setOutput("head_ref", pr.data.head.ref);
 
       # Security: Checkout trusted base repository code only (satisfies CodeQL).
-      # We need main as a starting point to install the trusted gleon binary.
       - name: Checkout Trusted Repository Code
         uses: actions/checkout@v7.0.1
         with:
@@ -92,6 +92,18 @@ jobs:
           command: "approve"
           working-directory: packages/world_flags
 
+      - name: Push Approved Blobs to Storage
+        uses: tsinis/gleon@main
+        with:
+          version: "v0.2.0"
+          command: "push"
+          working-directory: packages/world_flags
+        env:
+          R2_ACCOUNT_ID: ${{ secrets.R2_ACCOUNT_ID }}
+          GLEON_STORAGE_URL: ${{ secrets.GLEON_STORAGE_URL }}
+          AWS_ACCESS_KEY_ID: ${{ secrets.AWS_ACCESS_KEY_ID }}
+          AWS_SECRET_ACCESS_KEY: ${{ secrets.AWS_SECRET_ACCESS_KEY }}
+
       - name: Commit and Push Approved Manifests
         env:
           HEAD_SHA: ${{ steps.pr-info.outputs.head_sha }}
@@ -102,9 +114,7 @@ jobs:
           TMPDIR=$(mktemp -d)
           cp -r packages/world_flags/.gleon/manifests/ "$TMPDIR/manifests"
 
-          # 2. Switch to PR branch tip so the commit is fast-forward.
-          #    This is safe: gleon (trusted binary) has already executed.
-          #    No PR code is run — we only need the git history as commit parent.
+          # 2. Switch to PR branch tip so the commit is fast-forward
           git checkout "$HEAD_SHA"
 
           # 3. Restore the approved manifests on top of the PR tree
@@ -118,8 +128,15 @@ jobs:
           git add .gleon/manifests/
 
           if ! git diff --staged --quiet; then
-            git commit -m "chore(gleon): update baseline images [skip ci]"
+            git commit -m "chore(gleon): update baseline images"
             git push "https://x-access-token:${GH_TOKEN}@github.com/${GITHUB_REPOSITORY}.git" "HEAD:refs/heads/$HEAD_REF"
           else
             echo "No changes to commit."
           fi
+
+      - name: Trigger CI Re-run
+        env:
+          GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+          HEAD_REF: ${{ steps.pr-info.outputs.head_ref }}
+        run: |
+          gh workflow run verify_packages.yaml --ref "$HEAD_REF"
