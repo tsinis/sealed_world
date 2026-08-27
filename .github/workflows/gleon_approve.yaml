@@ -5,9 +5,9 @@ on:
     types: [created]
 
 permissions:
+  actions: write
   contents: write
   pull-requests: write
-  actions: write
 
 concurrency:
   group: gleon-approve-${{ github.event.issue.number }}
@@ -66,6 +66,19 @@ jobs:
           if git ls-tree --name-only "$HEAD_SHA" packages/world_flags/.gleon/manifests | grep -q .; then
             git checkout "$HEAD_SHA" -- packages/world_flags/.gleon/manifests/
           fi
+
+      # Pull existing remote blobs so local cache has all current baseline blobs
+      - name: Pull Existing Baseline Blobs
+        uses: tsinis/gleon@main
+        with:
+          version: "v0.2.0"
+          command: "pull"
+          working-directory: packages/world_flags
+        env:
+          R2_ACCOUNT_ID: ${{ secrets.R2_ACCOUNT_ID }}
+          GLEON_STORAGE_URL: ${{ secrets.GLEON_STORAGE_URL }}
+          AWS_ACCESS_KEY_ID: ${{ secrets.AWS_ACCESS_KEY_ID }}
+          AWS_SECRET_ACCESS_KEY: ${{ secrets.AWS_SECRET_ACCESS_KEY }}
 
       - name: Download Artifacts
         env:
