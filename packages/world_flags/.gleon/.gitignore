@@ -1,0 +1,5 @@
+blobs/
+runs/
+.env
+.env.local
+credentials
