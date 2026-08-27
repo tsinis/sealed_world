@@ -1,0 +1,103 @@
+name: gleon_approve
+
+on:
+  issue_comment:
+    types: [created]
+
+permissions:
+  contents: write
+  pull-requests: write
+
+concurrency:
+  group: gleon-approve-${{ github.event.issue.number }}
+  cancel-in-progress: false
+
+jobs:
+  approve:
+    if: github.event.issue.pull_request && startsWith(github.event.comment.body, '/gleon approve')
+    runs-on: ubuntu-latest
+    steps:
+      - name: Verify Collaborator
+        uses: actions/github-script@v9.0.0
+        with:
+          script: |
+            const permission = await github.rest.repos.getCollaboratorPermissionLevel({
+              owner: context.repo.owner,
+              repo: context.repo.repo,
+              username: context.actor,
+            });
+            if (permission.data.permission !== 'admin' && permission.data.permission !== 'write') {
+              core.setFailed(`User ${context.actor} does not have write access.`);
+            }
+
+      - name: Get PR Info
+        id: pr-info
+        uses: actions/github-script@v9.0.0
+        with:
+          script: |
+            const pr = await github.rest.pulls.get({
+              owner: context.repo.owner,
+              repo: context.repo.repo,
+              pull_number: context.issue.number,
+            });
+
+            // Security: Reject PRs from forks to prevent untrusted code execution
+            if (pr.data.head.repo.full_name !== pr.data.base.repo.full_name) {
+              core.setFailed("Refusing to approve PRs from forks due to security risks.");
+            }
+
+            core.setOutput("head_sha", pr.data.head.sha);
+            core.setOutput("head_ref", pr.data.head.ref);
+
+      # Security: Checkout trusted base repository code only (satisfies CodeQL)
+      - name: Checkout Trusted Repository Code
+        uses: actions/checkout@v7.0.1
+        with:
+          ref: ${{ github.event.repository.default_branch }}
+          persist-credentials: false
+
+      # Security: Fetch ONLY the manifests from the PR branch
+      - name: Restore PR Manifests
+        env:
+          HEAD_SHA: ${{ steps.pr-info.outputs.head_sha }}
+        run: |
+          git fetch origin "$HEAD_SHA"
+          if git ls-tree --name-only "$HEAD_SHA" packages/world_flags/.gleon/manifests | grep -q .; then
+            git checkout "$HEAD_SHA" -- packages/world_flags/.gleon/manifests/
+          fi
+
+      - name: Download Artifacts
+        uses: actions/download-artifact@v8.0.1
+        with:
+          pattern: gleon-artifacts-${{ github.event.issue.number }}-*
+          path: .gleon-downloads/
+
+      - name: Reconstruct Runs Directory
+        run: |
+          mkdir -p packages/world_flags/.gleon/runs/latest
+          cp -r .gleon-downloads/gleon-artifacts-${{ github.event.issue.number }}-world_flags/* packages/world_flags/.gleon/runs/latest/ 2>/dev/null || true
+
+      - name: Run Gleon Approve
+        uses: tsinis/gleon@main
+        with:
+          version: "v0.2.0"
+          command: "approve"
+          working-directory: packages/world_flags
+
+      - name: Commit and Push
+        env:
+          HEAD_REF: ${{ steps.pr-info.outputs.head_ref }}
+          GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+        run: |
+          cd packages/world_flags
+
+          git config user.name "github-actions[bot]"
+          git config user.email "github-actions[bot]@users.noreply.github.com"
+          git add .gleon/manifests/
+
+          if ! git diff --staged --quiet; then
+            git commit -m "chore(gleon): update baseline images [skip ci]"
+            git push "https://x-access-token:${GH_TOKEN}@github.com/${GITHUB_REPOSITORY}.git" "HEAD:refs/heads/$HEAD_REF"
+          else
+            echo "No changes to commit."
+          fi
