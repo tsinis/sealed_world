@@ -12,6 +12,8 @@ on:
       - "packages/**/*.dart"
       - "packages/**/pubspec.yaml"
       - ".github/workflows/verify_packages.yaml"
+      - "packages/**/.gleon/**"
+  workflow_dispatch:
 
 permissions:
   contents: read
