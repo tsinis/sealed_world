@@ -49,7 +49,8 @@ jobs:
             core.setOutput("head_sha", pr.data.head.sha);
             core.setOutput("head_ref", pr.data.head.ref);
 
-      # Security: Checkout trusted base repository code only (satisfies CodeQL)
+      # Security: Checkout trusted base repository code only (satisfies CodeQL).
+      # We need main as a starting point to install the trusted gleon binary.
       - name: Checkout Trusted Repository Code
         uses: actions/checkout@v7.0.1
         with:
@@ -83,7 +84,7 @@ jobs:
             echo "::error::No verification artifacts found in .gleon-downloads for PR #${{ github.event.issue.number }}."
             exit 1
           fi
-          
+
       - name: Run Gleon Approve
         uses: tsinis/gleon@main
         with:
@@ -91,13 +92,27 @@ jobs:
           command: "approve"
           working-directory: packages/world_flags
 
-      - name: Commit and Push
+      - name: Commit and Push Approved Manifests
         env:
+          HEAD_SHA: ${{ steps.pr-info.outputs.head_sha }}
           HEAD_REF: ${{ steps.pr-info.outputs.head_ref }}
           GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
         run: |
-          cd packages/world_flags
+          # 1. Save the approved manifests that gleon just wrote
+          TMPDIR=$(mktemp -d)
+          cp -r packages/world_flags/.gleon/manifests/ "$TMPDIR/manifests"
 
+          # 2. Switch to PR branch tip so the commit is fast-forward.
+          #    This is safe: gleon (trusted binary) has already executed.
+          #    No PR code is run — we only need the git history as commit parent.
+          git checkout "$HEAD_SHA"
+
+          # 3. Restore the approved manifests on top of the PR tree
+          rm -rf packages/world_flags/.gleon/manifests/
+          cp -r "$TMPDIR/manifests" packages/world_flags/.gleon/manifests/
+
+          # 4. Commit and push
+          cd packages/world_flags
           git config user.name "github-actions[bot]"
           git config user.email "github-actions[bot]@users.noreply.github.com"
           git add .gleon/manifests/
