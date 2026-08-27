@@ -71,12 +71,18 @@ jobs:
         with:
           pattern: gleon-artifacts-${{ github.event.issue.number }}-*
           path: .gleon-downloads/
+          merge-multiple: true
 
       - name: Reconstruct Runs Directory
         run: |
           mkdir -p packages/world_flags/.gleon/runs/latest
-          cp -r .gleon-downloads/gleon-artifacts-${{ github.event.issue.number }}-world_flags/* packages/world_flags/.gleon/runs/latest/ 2>/dev/null || true
-
+          if [ -d .gleon-downloads ] && [ "$(ls -A .gleon-downloads 2>/dev/null)" ]; then
+            cp -r .gleon-downloads/* packages/world_flags/.gleon/runs/latest/
+          else
+            echo "::error::No verification artifacts found in .gleon-downloads for PR #${{ github.event.issue.number }}."
+            exit 1
+          fi
+          
       - name: Run Gleon Approve
         uses: tsinis/gleon@main
         with:
