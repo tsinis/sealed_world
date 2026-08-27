@@ -5,9 +5,9 @@ on:
     types: [created]
 
 permissions:
+  actions: write
   contents: write
   pull-requests: write
-  actions: write
 
 concurrency:
   group: gleon-approve-${{ github.event.issue.number }}
