@@ -1,0 +1,11 @@
+name: gleon_cleanup
+
+on:
+    pull_request_target:
+        types: [closed]
+
+jobs:
+    cleanup:
+        permissions:
+            contents: write
+        uses: tsinis/gleon/.github/workflows/cleanup.yml@v0.2.0
