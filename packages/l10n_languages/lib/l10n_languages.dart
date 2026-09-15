@@ -340,12 +340,31 @@ class LanguagesLocaleMapper extends IsoLocaleMapper<IsoLocaleMapper<String>> {
   /// add more translations via the [other] parameter.
   LanguagesLocaleMapper({Map<String, IsoLocaleMapper<String>>? other})
     // ignore: avoid-non-empty-constructor-bodies,on purpose.
-    : super(availableLocales: {..._factories.keys, ...?other?.keys}) {
+    : _customLocales = other?.keys.toSet() {
     if (other != null) map.addAll(other);
   }
 
   /// The symbol used to identify the alternative/full name of the ISO object.
   static const symbol = "+";
+
+  /// Returns all available locale keys (both lazy and already instantiated).
+  ///
+  /// Built on first read rather than in the constructor: a mapper is single-use
+  /// and most callers never read this, so materializing the full locale set
+  /// eagerly would add cost to every [localize] call.
+  @override
+  // ignore: avoid-late-keyword, deferring this set is the point of the field.
+  late final availableLocales = {..._factories.keys, ...?_customLocales};
+
+  static const _noLocaleError =
+      "A LanguagesLocaleMapper was asked to localize without a locale. "
+      "Neither mainLocale nor fallbackLocale was provided and no translations "
+      "were injected via the `other` constructor parameter, so the call can "
+      "only return an empty map. Pass a locale, or provide translations.";
+
+  /// Locale keys supplied via the `other` constructor parameter, kept apart
+  /// from [map] so that [availableLocales] stays correct after consumption.
+  final Set<String>? _customLocales;
 
   bool _isConsumed = false;
 
@@ -840,6 +859,9 @@ class LanguagesLocaleMapper extends IsoLocaleMapper<IsoLocaleMapper<String>> {
   /// Parameters:
   /// - [isoCodes]: Set of ISO codes to be localized.
   /// - [altSymbol]: Optional symbol for alternative (full) name translations.
+  /// The bundled translations ship no alternative names, so this only matters
+  /// for entries injected via the `other` constructor parameter. Pass an empty
+  /// string to skip the extra lookup per ISO code when none are injected.
   /// - [fallbackLocale]: Optional secondary locale for translations.
   /// - [mainLocale]: Optional primary locale for translations.
   /// - [useLanguageFallback]: Whether to try language-only codes if specified
@@ -848,6 +870,11 @@ class LanguagesLocaleMapper extends IsoLocaleMapper<IsoLocaleMapper<String>> {
   ///
   /// Returns a [Map] containing the localized names for the provided ISO
   /// codes.
+  ///
+  /// Unless [isoCodes] is empty, at least one of [mainLocale], [fallbackLocale]
+  /// or translations injected via the `other` constructor parameter is
+  /// required. Without any of them the call cannot resolve anything: it throws
+  /// an assertion error in debug mode and returns an empty map in release.
   ///
   /// Example:
   /// ```dart
@@ -872,6 +899,11 @@ class LanguagesLocaleMapper extends IsoLocaleMapper<IsoLocaleMapper<String>> {
     );
 
     if (isoCodes.isEmpty) return const {};
+    assert(
+      mainLocale != null || fallbackLocale != null || map.isNotEmpty,
+      _noLocaleError,
+    );
+
     final locale = mainLocale?.toString();
     final altLocale = fallbackLocale?.toString();
     Set<String>? localeKeys;
