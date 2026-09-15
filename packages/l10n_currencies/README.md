@@ -20,7 +20,7 @@ This ISO-driven, pure Dart, fully tested and dependency-free package provides CL
 - Three-letter ISO 4217 Alpha code lookup.
 - Fallback locale support.
 - Allows injecting custom translations to extend/modify existing ones.
-- Alternative names and conditional formatting support.
+- Conditional formatting support, plus alternative names for injected translations (the bundled ones ship no alternative names, so `altSymbol: ""` skips a redundant lookup per ISO code).
 - Tree-shakable via dart define flags.
 
 > [!TIP]

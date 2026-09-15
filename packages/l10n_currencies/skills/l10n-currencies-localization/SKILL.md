@@ -56,6 +56,7 @@ The package has no dependencies and exposes `CurrenciesLocaleMapper`, `IsoLocale
 
 - **Inject custom translations via constructor**: Pass `other` to `CurrenciesLocaleMapper(other: ...)` to add or override translations without modifying package internals. The map is keyed by **locale identifier** (`"en"`, `"de_CH"`), and each value is an `IsoLocaleMapper<String>` keyed by ISO 4217 code.
 - **Supplying a built-in locale replaces it**: An entry whose key matches a bundled locale suppresses that locale's bundled data entirely. To extend rather than replace, start from the locale's data class (e.g. `EnCurrenciesL10N()`) and add entries to its `map`.
+- **Pass `altSymbol: ""` unless injecting alternative names**: Alternative names are entries keyed `"<CODE>+"` (e.g. `"USD+"`). The bundled translations ship none, so the default `"+"` costs one extra lookup per ISO code and returns nothing. Only keep the default when `other` supplies `"<CODE>+"` entries.
 
 ---
 

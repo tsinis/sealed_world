@@ -17,14 +17,20 @@ class IsoLocaleMapper<V extends Object> {
   ///
   /// Parameters:
   /// - [other]: Optional initial mapping data.
-  IsoLocaleMapper({Map<String, V>? other, this.availableLocales = const {}})
-    : map = other ?? {};
+  IsoLocaleMapper({
+    Map<String, V>? other,
+    Set<String> availableLocales = const {},
+  }) : map = other ?? {},
+       _availableLocales = availableLocales;
 
   /// The internal mapping between ISO codes and their values.
   final Map<String, V> map;
 
   /// Returns all available locale keys (both lazy and already instantiated).
-  final Set<String> availableLocales;
+  // ignore: avoid-unnecessary-getter, subclasses override it with a lazy field.
+  Set<String> get availableLocales => _availableLocales;
+
+  final Set<String> _availableLocales;
 
   /// Generates an alternative key by appending a symbol to the original key.
   ///
