@@ -1,3 +1,11 @@
+## 2.1.0
+
+IMPROVEMENTS
+
+- `availableLocales` is now built on first read instead of in the constructor, making a `localize()` call (mapper construction included) around 15% faster. Mappers are single-use, so every call previously paid for materializing the full 193-locale set even when it was never read.
+
+- `localize()` now asserts, in debug mode only, when it is given no `mainLocale`, no `fallbackLocale` and no translations injected via the `other` constructor parameter. Such a call can only ever return an empty map. Release builds are unaffected and still return an empty map.
+
 ## 2.0.3
 
 TEST
