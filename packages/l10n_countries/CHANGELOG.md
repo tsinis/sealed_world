@@ -6,6 +6,11 @@ IMPROVEMENTS
 
 - `localize()` now asserts, in debug mode only, when it is given no `mainLocale`, no `fallbackLocale` and no translations injected via the `other` constructor parameter. Such a call can only ever return an empty map. Release builds are unaffected and still return an empty map.
 
+DOCUMENTATION
+
+- Added a bundled agent skill (`skills/l10n-countries-localization`), compliant with the [Agent Skills specification](https://agentskills.io), installable via `dart run skills@ get`.
+- Replaced the README's inline LLM agent instructions with a pointer to that skill.
+
 ## 2.0.3
 
 TEST

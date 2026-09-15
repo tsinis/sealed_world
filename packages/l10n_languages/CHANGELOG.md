@@ -8,6 +8,8 @@ IMPROVEMENTS
 
 DOCUMENTATION
 
+- Added a bundled agent skill (`skills/l10n-languages-localization`), compliant with the [Agent Skills specification](https://agentskills.io), installable via `dart run skills@ get`.
+- Replaced the README's inline LLM agent instructions with a pointer to that skill.
 - Documented that bundled translations ship no alternative names, so passing `altSymbol: ""` skips a redundant lookup per ISO code.
 
 ## 2.0.3
