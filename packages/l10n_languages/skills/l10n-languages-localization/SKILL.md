@@ -1,7 +1,7 @@
 ---
 name: l10n-languages-localization
 description: >-
-  Translate ISO 639 language codes into localized language names across 157
+  Translate ISO 639-2/T language codes into localized language names across 157
   locales with the l10n_languages Dart/Flutter package. Use when working with
   LanguagesLocaleMapper, localizing language names, picking locale fallbacks,
   registering custom translations, or configuring compile-time tree-shaking of
@@ -34,12 +34,12 @@ The package has no dependencies and exposes `LanguagesLocaleMapper`, `IsoLocaleM
 - **Single-use only**: Always instantiate a new `LanguagesLocaleMapper` for every localization request. Once `localize()` is called, internal maps are cleared to minimize memory footprint and subsequent calls throw an assertion error.
 - **Never cache mapper instances**: Do not store `LanguagesLocaleMapper` in static variables, long-lived services, dependency injection containers, or state objects.
 - **Cache results, not mappers**: If localized names are accessed repeatedly, cache the returned `LocaleMap` or extracted `String` values.
-- **Locale required**: Always specify `mainLocale` or `fallbackLocale` (or provide translations via `other`). In debug mode, calling `localize()` without any locale or custom translations asserts and fails.
+- **Always pass a locale**: Specify `mainLocale` or `fallbackLocale` (or provide translations via `other`). `localize()` returns an empty map when given none — it does not throw, so a missing locale fails silently.
 
 ### Locales and Fallbacks
 
 - **Always provide a fallback**: Specify `fallbackLocale` when working with user-selected or device locales to guarantee a valid translation if the requested locale is missing.
-- **ISO 639 code format**: Pass three-letter uppercase ISO 639 language codes (e.g. `"ENG"`, `"FRA"`, `"DEU"`, `"SPA"`).
+- **ISO 639-2/T code format only**: Pass three-letter uppercase ISO 639-2/T *terminological* codes (e.g. `"ENG"`, `"FRA"`, `"DEU"`, `"SPA"`). Two-letter ISO 639-1 codes (`"EN"`) and ISO 639-2/B *bibliographic* codes (`"FRE"` for French, `"GER"` for German) are not bundled: they raise no error and are simply absent from the result. Prefer `"FRA"` over `"FRE"`, and `"DEU"` over `"GER"`.
 - **Automatic language subtag fallback**: By default, `useLanguageFallback: true` resolves country-specific locales (e.g. `"en_US"`) to their base language (`"en"`) if the regional variant is unavailable.
 
 ### Alternative Names & Formatting

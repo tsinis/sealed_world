@@ -62,6 +62,7 @@ taeguk
 taegukgi
 tcheco
 tham
+tlhIngan
 tokelau
 unidos
 unoff

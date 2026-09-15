@@ -88,11 +88,14 @@ void main() {
     });
 
     group("missing locale arguments", () {
-      test("asserts when no locale and no injected translations are given", () {
+      test("returns an empty map instead of throwing", () {
         expect(
-          () => CountriesLocaleMapper().localize(const {"FRA"}),
-          throwsA(isA<AssertionError>()),
-          reason: "an unsatisfiable call should not silently return empty",
+          CountriesLocaleMapper().localize(const {"FRA"}),
+          isEmpty,
+          reason:
+              "sealed_* delegates call localize() with both locales null when "
+              "LocaleMappingOptions defaults are used; asserting here would "
+              "break those callers in debug mode",
         );
       });
 

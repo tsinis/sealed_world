@@ -428,12 +428,6 @@ class CountriesLocaleMapper extends IsoLocaleMapper<IsoLocaleMapper<String>> {
   // ignore: avoid-late-keyword, deferring this set is the point of the field.
   late final availableLocales = {..._factories.keys, ...?_customLocales};
 
-  static const _noLocaleError =
-      "A CountriesLocaleMapper was asked to localize without a locale. "
-      "Neither mainLocale nor fallbackLocale was provided and no translations "
-      "were injected via the `other` constructor parameter, so the call can "
-      "only return an empty map. Pass a locale, or provide translations.";
-
   /// Locale keys supplied via the `other` constructor parameter, kept apart
   /// from [map] so that [availableLocales] stays correct after consumption.
   final Set<String>? _customLocales;
@@ -1048,11 +1042,6 @@ class CountriesLocaleMapper extends IsoLocaleMapper<IsoLocaleMapper<String>> {
   /// Returns a [Map] containing the localized names for the provided ISO
   /// codes.
   ///
-  /// Unless [isoCodes] is empty, at least one of [mainLocale], [fallbackLocale]
-  /// or translations injected via the `other` constructor parameter is
-  /// required. Without any of them the call cannot resolve anything: it throws
-  /// an assertion error in debug mode and returns an empty map in release.
-  ///
   /// Example:
   /// ```dart
   /// final mapper = CountriesLocaleMapper();
@@ -1076,11 +1065,6 @@ class CountriesLocaleMapper extends IsoLocaleMapper<IsoLocaleMapper<String>> {
     );
 
     if (isoCodes.isEmpty) return const {};
-    assert(
-      mainLocale != null || fallbackLocale != null || map.isNotEmpty,
-      _noLocaleError,
-    );
-
     final locale = mainLocale?.toString();
     final altLocale = fallbackLocale?.toString();
     Set<String>? localeKeys;

@@ -12,11 +12,11 @@
 [![FOSSA Status](https://app.fossa.com/api/projects/git%2Bgithub.com%2Ftsinis%2Fsealed_world.svg?type=shield&issueType=security)](https://app.fossa.com/projects/git%2Bgithub.com%2Ftsinis%2Fsealed_world?ref=badge_shield&issueType=security)
 [![FOSSA Status](https://app.fossa.com/api/projects/git%2Bgithub.com%2Ftsinis%2Fsealed_world.svg?type=shield&issueType=license)](https://app.fossa.com/projects/git%2Bgithub.com%2Ftsinis%2Fsealed_world?ref=badge_shield&issueType=license)
 
-This ISO-driven, pure Dart, fully tested and dependency-free package provides CLDR-like translations for country names in `194` different locales. For Flutter-ready widgets (like country picker) please use [world_countries](https://pub.dev/packages/world_countries) package. For Dart-only use - it's recommended to use together with [sealed_countries](https://pub.dev/packages/sealed_countries) package.
+This ISO-driven, pure Dart, fully tested and dependency-free package provides CLDR-like translations for country names in `193` different locales. For Flutter-ready widgets (like country picker) please use [world_countries](https://pub.dev/packages/world_countries) package. For Dart-only use - it's recommended to use together with [sealed_countries](https://pub.dev/packages/sealed_countries) package.
 
 ### Features
 
-- 194 locales supported out of the box.
+- 193 locales supported out of the box.
 - Three-letter ISO 3166-1 Alpha-3 code lookup.
 - Fallback locale support.
 - Alternative names and conditional formatting support.

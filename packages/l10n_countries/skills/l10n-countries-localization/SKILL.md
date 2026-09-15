@@ -1,8 +1,8 @@
 ---
 name: l10n-countries-localization
 description: >-
-  Translate ISO 3166-1 country codes into localized country names across 194
-  locales with the l10n_countries Dart/Flutter package. Use when working with
+  Translate ISO 3166-1 Alpha-3 country codes into localized country names across
+  193 locales with the l10n_countries Dart/Flutter package. Use when working with
   CountriesLocaleMapper, localizing country names, picking locale fallbacks,
   fetching official/alternative names, registering custom translations, or
   configuring compile-time tree-shaking of translation tables.
@@ -10,7 +10,7 @@ description: >-
 
 # Country Localization with l10n_countries
 
-Guidelines and examples for localizing country names across 194 locales using the `l10n_countries` package.
+Guidelines and examples for localizing country names across 193 locales using the `l10n_countries` package.
 
 ## Setup
 
@@ -34,12 +34,12 @@ The package has no dependencies and exposes `CountriesLocaleMapper`, `IsoLocaleM
 - **Single-use only**: Always instantiate a new `CountriesLocaleMapper` for every localization request. Once `localize()` is called, internal maps are cleared to minimize memory footprint and subsequent calls throw an assertion error.
 - **Never cache mapper instances**: Do not store `CountriesLocaleMapper` in static variables, long-lived services, dependency injection containers, or state objects.
 - **Cache results, not mappers**: If localized names are accessed repeatedly, cache the returned `LocaleMap` or extracted `String` values.
-- **Locale required**: Always specify `mainLocale` or `fallbackLocale` (or provide translations via `other`). In debug mode, calling `localize()` without any locale or custom translations asserts and fails.
+- **Always pass a locale**: Specify `mainLocale` or `fallbackLocale` (or provide translations via `other`). `localize()` returns an empty map when given none — it does not throw, so a missing locale fails silently.
 
 ### Locales and Fallbacks
 
 - **Always provide a fallback**: Specify `fallbackLocale` when working with user-selected or device locales to guarantee a valid translation if the requested locale is missing.
-- **ISO 3166-1 Alpha-3 code format**: Pass three-letter uppercase ISO 3166-1 country codes (e.g. `"USA"`, `"GBR"`, `"DEU"`, `"FRA"`).
+- **ISO 3166-1 Alpha-3 code format only**: Pass three-letter uppercase ISO 3166-1 Alpha-3 country codes (e.g. `"USA"`, `"GBR"`, `"DEU"`, `"FRA"`). Alpha-2 (`"US"`) and numeric (`"840"`) codes are not bundled: they raise no error and are simply absent from the result.
 - **Automatic language subtag fallback**: By default, `useLanguageFallback: true` resolves country-specific locales (e.g. `"en_US"`) to their base language (`"en"`) if the regional variant is unavailable.
 
 ### Alternative Names & Formatting
