@@ -1,3 +1,12 @@
+## 2.0.4
+
+DOCUMENTATION
+
+Docs only, no code changes:
+
+- Added a bundled agent skill (`skills/l10n-currencies-localization`), compliant with the [Agent Skills specification](https://agentskills.io), installable via `dart run skills@ get`.
+- Replaced the README's inline LLM agent instructions with a pointer to that skill.
+
 ## 2.0.3
 
 TEST
