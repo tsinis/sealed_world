@@ -110,7 +110,7 @@
 | MRI | Māori | 🇳🇿 New Zealand |  |
 | MSA | Malay | 🇲🇾 Malaysia | 🇸🇬🇧🇳 |
 | MYA | Burmese | 🇲🇲 Myanmar |  |
-| NAU | Nauruan | 🇳🇷 Nauru |  |
+| NAU | Nauruan | 🇳🇷 Naoero |  |
 | NAV | Navajo (Navaho) | 🇺🇸 United States |  |
 | NBL | Southern Ndebele | 🇿🇦 South Africa |  |
 | NDE | Northern Ndebele | 🇿🇼 Zimbabwe |  |

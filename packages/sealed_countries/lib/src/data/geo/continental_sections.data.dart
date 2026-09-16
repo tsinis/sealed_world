@@ -475,7 +475,7 @@ final class Melanesia extends SubRegion {
 }
 
 /// Represents the Micronesia region, which includes the countries of Federated
-/// States of Micronesia, Guam, Kiribati, Marshall Islands, Nauru, etc.
+/// States of Micronesia, Guam, Kiribati, Marshall Islands, Naoero, etc.
 ///
 /// This class extends [SubRegion] and sets its [name] property to
 /// "Micronesia".

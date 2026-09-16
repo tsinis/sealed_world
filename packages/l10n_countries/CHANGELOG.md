@@ -1,5 +1,10 @@
 ## 2.1.0
 
+FIX
+
+- Renamed `NRU` in the English locale to "Naoero" ("Republic of Naoero" for the official name), following [Nauru's ISO 3166-1 change of name](https://www.un.org/en/about-us/member-states/naoero). Other locales keep their own exonyms (German still reads "Nauru").
+- Added the missing `NRU` self-translation to the Nauruan (`na`) locale, which previously had no entry for its own country.
+
 IMPROVEMENTS
 
 - `availableLocales` is now built on first read instead of in the constructor, making a `localize()` call (mapper construction included) around 15% faster. Mappers are single-use, so every call previously paid for materializing the full 193-locale set even when it was never read.

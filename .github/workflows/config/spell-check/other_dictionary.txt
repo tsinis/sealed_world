@@ -10,8 +10,10 @@ Bienvenue
 Dhivehi
 Divehi
 Faabbcc
+Naoero
 Pushto
 RRGGBB
+Ripublik
 Ruský
 Ruština
 Uyghur
@@ -39,6 +41,7 @@ endonyms
 engl
 estado
 estados
+exonyms
 federace
 ffaabbcc
 français

@@ -1,6 +1,6 @@
 import "../iso_locale_mapper.dart";
 
-/// Contains 112 translation(s).
+/// Contains 113 translation(s).
 /// Provides translations for the Nauruan language
 /// locale.
 class NaCountriesL10N extends IsoLocaleMapper<String> {
@@ -96,6 +96,7 @@ class NaCountriesL10N extends IsoLocaleMapper<String> {
       "MYS": "Maraidja",
       "NLD": "Eben Eyong",
       "NOR": "Norwei",
+      "NRU": "Naoero",
       "NZL": "Niu Djiran",
       "PHL": "Eben Piripin",
       "POL": "Poran",
