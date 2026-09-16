@@ -5,12 +5,17 @@ Abbcc
 Anglický
 Angličtina
 Bbcc
+Bienvenido
+Bienvenue
+Dhivehi
+Divehi
 Faabbcc
 Pushto
 RRGGBB
 Ruský
 Ruština
 Uyghur
+Willkommen
 aabbc
 aabbcc
 aabbcx
@@ -30,11 +35,14 @@ dolyar
 dolár
 države
 emojidex
+endonyms
 engl
 estado
 estados
 federace
 ffaabbcc
+français
+française
 inglés
 islas
 japon
@@ -78,3 +86,4 @@ vereinigte
 грчка
 португальский
 чешки
+مرحبا

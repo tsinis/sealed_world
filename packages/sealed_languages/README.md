@@ -157,7 +157,7 @@ dart run skills@ get
 Select `sealed-languages-core` when prompted. For advanced raw translation tables and custom translation injection, also install the companion `l10n-languages-localization` skill.
 
 > [!TIP]
-> **Key rule for LLM agents**: Prefer non-throwing `maybeFrom*` methods (such as `maybeFromAnyCode`) over throwing variants when parsing untrusted input. Take advantage of sealed classes for exhaustive pattern matching without fallback default cases.
+> **Key rule for LLM agents**: Prefer non-throwing `maybeFrom*` methods (such as `maybeFromAnyCode`) over throwing variants when parsing untrusted input. Sealed classes give compile-time exhaustiveness checks on `switch`, so a missing case is an error rather than a silent fallthrough — with 184 languages a `_` wildcard for the remainder is still the normal choice.
 
 ### Additional information
 

@@ -31,7 +31,7 @@ The package exposes `NaturalLanguage`, `Script`, `LanguageFamily`, `BasicLocale`
 
 ### Sealed Class Hierarchy & Exhaustive Matching
 
-- **Exhaustive pattern matching**: `NaturalLanguage` and `Script` are sealed class hierarchies. Switch expressions and statements on these types are checked for exhaustiveness at compile time without requiring fallback `default` cases.
+- **Exhaustive pattern matching**: `NaturalLanguage` and `Script` are sealed class hierarchies, so switches over them are exhaustiveness-checked at compile time — a missing case is an error, not a silent fallthrough. Enumerating all 184 language subclasses is rarely practical, so a `_` wildcard for the remainder is the normal choice; the compile-time check still pays off when matching a deliberately small, closed set.
 - **Dedicated const types**: Every language has its own subclass and factory constructor (e.g. `LangEng()` or `NaturalLanguage.eng()`). Prefer compile-time `const` instances where possible.
 
 ### ISO Standards & Code Formats
@@ -53,7 +53,7 @@ The package exposes `NaturalLanguage`, `Script`, `LanguageFamily`, `BasicLocale`
 - **`isRightToLeft`**: Boolean indicating right-to-left text direction (e.g. `true` for Arabic, Hebrew, Persian, Urdu).
 - **`family`**: Polymorphic language family classification (e.g. `IndoEuropean()`, `AfroAsiatic()`, `Turkic()`, `SinoTibetan()`).
 - **`scripts`**: A `Set<Script>` representing the writing systems traditionally used by the language.
-- **`namesNative`**: Non-empty list of native language endonyms (e.g. `['English']`, `['Deutsch']`, `['français']`).
+- **`namesNative`**: Non-empty list of native language endonyms, in sentence case. A language may have several (e.g. `['English']`, `['Deutsch']`, but `['Français', 'Langue française']` for French), so read the whole list rather than assuming a single entry.
 
 ### Localization & Companion Skill
 
@@ -109,7 +109,8 @@ import 'package:sealed_languages/sealed_languages.dart';
 void main() {
   // Find all right-to-left languages
   final rtlLanguages = NaturalLanguage.list.where((l) => l.isRightToLeft);
-  print(rtlLanguages.map((l) => l.name)); // (Arabic, Avestan, Hebrew, ...)
+  // (Arabic, Avestan, Divehi (Dhivehi/Maldivian), ...)
+  print(rtlLanguages.map((l) => l.name));
 
   // Filter languages written in Cyrillic
   final cyrillicLanguages = NaturalLanguage.list.where(
@@ -143,8 +144,10 @@ void main() {
     orElse: 'English',
   );
 
+  // Names come back in sentence case (since 2.0.0), ready for standalone
+  // labels. Use a formatter if you need inline, mid-sentence casing.
   print('DE: $germanName'); // "Englisch"
-  print('ES: $spanishName'); // "inglés"
+  print('ES: $spanishName'); // "Inglés"
 }
 ```
 
@@ -159,7 +162,8 @@ void main() {
   final devanagari = Script.fromCodeNumeric('315');
 
   print('${latin.name}: ${latin.code} (${latin.codeNumeric})'); // "Latin: Latn (215)"
-  print('${devanagari.name}: ${devanagari.code}'); // "Devanagari: Deva"
+  // Some names carry a parenthesised variant: "Devanagari (Nagari): Deva"
+  print('${devanagari.name}: ${devanagari.code}');
 
   // Safe parsing for scripts
   final maybeScript = Script.maybeFromCode('Arab');
