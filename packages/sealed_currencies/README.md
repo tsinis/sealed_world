@@ -12,7 +12,7 @@
 [![FOSSA Status](https://app.fossa.com/api/projects/git%2Bgithub.com%2Ftsinis%2Fsealed_world.svg?type=shield&issueType=security)](https://app.fossa.com/projects/git%2Bgithub.com%2Ftsinis%2Fsealed_world?ref=badge_shield&issueType=security)
 [![FOSSA Status](https://app.fossa.com/api/projects/git%2Bgithub.com%2Ftsinis%2Fsealed_world.svg?type=shield&issueType=license)](https://app.fossa.com/projects/git%2Bgithub.com%2Ftsinis%2Fsealed_world?ref=badge_shield&issueType=license)
 
-This ISO-driven, pure Dart, fully tested and 3rd-party dependency-free package provides information about world currencies in the form of compile-time, tree-shakable constant classes with a sealed origin. Contains all actively used 171<sup>1</sup> currencies with ISO letter 4217 codes, also provides ISO 4217 numeric codes, their English, native names, units, subunits, currency name translations, etc. For Flutter ready widgets (like currency picker) please use [world_countries](https://pub.dev/packages/world_countries) package.
+This ISO-driven, pure Dart, fully tested and 3rd-party dependency-free package provides information about world currencies in the form of compile-time, tree-shakable constant classes with a sealed origin. Contains all actively used 165<sup>1</sup> currencies with ISO letter 4217 codes, also provides ISO 4217 numeric codes, their English, native names, units, subunits, currency name translations, etc. For Flutter ready widgets (like currency picker) please use [world_countries](https://pub.dev/packages/world_countries) package.
 
 ### Features
 
@@ -73,7 +73,7 @@ import 'package:sealed_currencies/sealed_currencies.dart';
 To get information about currencies, use the `FiatCurrency` class. Use the class's factory constructors or static methods, or select a currency from the `FiatCurrency.list` constant.
 
 ```dart
-  print(FiatCurrency.listExtended.length); // Prints: "171".
+  print(FiatCurrency.listExtended.length); // Prints: "165".
 
   final serbianDinar = FiatCurrency.fromCode("Rsd");
   print(serbianDinar.name); // Prints: "Serbian Dinar".
@@ -146,7 +146,7 @@ dart run skills@ get
 Select `sealed-currencies-core` when prompted. For advanced raw translation tables and custom translation injection, also install the companion `l10n-currencies-localization` skill.
 
 > [!TIP]
-> **Key rule for LLM agents**: Prefer non-throwing `maybeFrom*` methods (such as `maybeFromAnyCode` or `maybeFromCodeNumeric`) over throwing variants when parsing untrusted input. Sealed classes give compile-time exhaustiveness checks on `switch`, so a missing case is an error rather than a silent fallthrough — with 171 currencies a `_` wildcard for the remainder is still the normal choice.
+> **Key rule for LLM agents**: Prefer non-throwing `maybeFrom*` methods (such as `maybeFromAnyCode` or `maybeFromCodeNumeric`) over throwing variants when parsing untrusted input. Sealed classes give compile-time exhaustiveness checks on `switch`, so a missing case is an error rather than a silent fallthrough — with 165 currencies a `_` wildcard for the remainder is still the normal choice.
 
 ### Additional information
 

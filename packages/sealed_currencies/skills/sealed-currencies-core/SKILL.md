@@ -31,7 +31,7 @@ The package exposes `FiatCurrency`, `Currency`, `BasicLocale`, `TranslatedName`,
 
 ### Sealed Class Hierarchy & Exhaustive Matching
 
-- **Exhaustive pattern matching**: `FiatCurrency` is a sealed class hierarchy, so switches over it are exhaustiveness-checked at compile time — a missing case is an error, not a silent fallthrough. Enumerating all 171 currency subclasses is rarely practical, so a `_` wildcard for the remainder is the normal choice; the compile-time check still pays off when matching a deliberately small, closed set (e.g. supported billing currencies).
+- **Exhaustive pattern matching**: `FiatCurrency` is a sealed class hierarchy, so switches over it are exhaustiveness-checked at compile time — a missing case is an error, not a silent fallthrough. Enumerating all 165 currency subclasses is rarely practical, so a `_` wildcard for the remainder is the normal choice; the compile-time check still pays off when matching a deliberately small, closed set (e.g. supported billing currencies).
 - **Dedicated const types**: Every currency has its own subclass and factory constructor (e.g. `FiatUsd()` or `FiatCurrency.usd()`). Prefer compile-time `const` instances where possible.
 
 ### ISO 4217 Standards & Code Formats
@@ -43,7 +43,7 @@ The package exposes `FiatCurrency`, `Currency`, `BasicLocale`, `TranslatedName`,
 
 - **Prefer `maybeFrom*` for untrusted input**: Use `maybeFromAnyCode()`, `maybeFromCode()`, or `maybeFromCodeNumeric()` when parsing external or user-provided data. These methods return `null` if the code is invalid or unrecognized.
 - **Avoid throwing variants for user input**: Methods like `fromCode()`, `fromCodeNumeric()`, `fromAnyCode()`, and `fromName()` throw when no matching currency is found. Only use them when input validity is guaranteed.
-- **O(1) lookups**: Access pre-indexed lookup tables using `FiatCurrency.map` (keyed by uppercase 3-letter code), `FiatCurrency.list` (regular active currencies), or `FiatCurrency.listExtended` (all 171 currencies including complementary and funds codes).
+- **O(1) lookups**: Access pre-indexed lookup tables using `FiatCurrency.map` (keyed by uppercase 3-letter code), `FiatCurrency.list` (155 regular active currencies), or `FiatCurrency.listExtended` (all 165). The 10 extra entries in `listExtended` are not spendable currencies: precious metals (`XAU`, `XAG`, `XPT`, `XPD`), bond market units (`XBA`–`XBD`), IMF special drawing rights (`XDR`), and the reserved test code `XTS`. Prefer `list` for anything users pick or pay in.
 
 ### Formatting & Monetary Properties
 
@@ -76,7 +76,7 @@ void main() {
   // Safe lookup from untrusted user input (alpha or numeric code)
   final currency = FiatCurrency.maybeFromAnyCode('usd');
   if (currency != null) {
-    print('Name: ${currency.name}'); // "US Dollar"
+    print('Name: ${currency.name}'); // "United States Dollar"
     print('Code: ${currency.code}'); // "USD"
     print('Numeric: ${currency.codeNumeric}'); // "840"
     print('Symbol: ${currency.symbol}'); // "$"
@@ -159,6 +159,7 @@ void main() {
   final zeroDecimalCurrencies = FiatCurrency.list.where(
     (c) => c.subunitToUnit == 1,
   );
-  print(zeroDecimalCurrencies.map((c) => c.code)); // (BIF, CLP, DJF, JPY, ...)
+  // (BIF, CLP, DJF, GNF, ISK, JPY, ...)
+  print(zeroDecimalCurrencies.map((c) => c.code));
 }
 ```
