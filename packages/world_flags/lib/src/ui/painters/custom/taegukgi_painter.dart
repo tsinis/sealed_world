@@ -68,49 +68,28 @@ final class TaegukgiPainter extends CustomElementsPainter {
       )
       ..restore();
 
-    _drawTrigram(
-      canvas,
-      size,
-      Offset(size.width * 0.71, size.height * 0.29),
-      [false, false, false], // Heaven - ☰ (3 solid bars).
-      _radians,
-    );
-
-    _drawTrigram(
-      canvas,
-      size,
-      Offset(size.width * 0.29, size.height * 0.29),
-      [true, false, true], // Earth - ☷ (2 broken bars).
-      -_radians,
-    );
-
-    _drawTrigram(
-      canvas,
-      size,
-      Offset(size.width * 0.8, size.height * 0.8),
-      [false, true, false], // Water - ☵ (1 broken bar in the middle).
-      -_radians,
-    );
-
-    _drawTrigram(
-      canvas,
-      size,
-      Offset(size.width * 0.2, size.height * 0.8),
-      [true, true, true], // Fire - ☲ (3 broken bars).
-      _radians,
-    );
+    for (final trigram in _trigrams) {
+      _drawTrigram(canvas, size, trigram);
+    }
 
     return null;
   }
 
-  // ignore: long-parameter-list, TODO: Refactor later.
-  void _drawTrigram(
-    Canvas canvas,
-    Size size,
-    Offset offset,
-    List<bool> brokenBars,
-    double angle,
-  ) {
+  /// The four trigrams, in the corners around the taeguk.
+  static const _trigrams = <_Trigram>[
+    // Heaven - 3 solid bars.
+    (angle: _radians, bars: [false, false, false], left: 0.71, top: 0.29),
+    // Earth - 2 broken bars.
+    (angle: -_radians, bars: [true, false, true], left: 0.29, top: 0.29),
+    // Water - 1 broken bar in the middle.
+    (angle: -_radians, bars: [false, true, false], left: 0.8, top: 0.8),
+    // Fire - 3 broken bars.
+    (angle: _radians, bars: [true, true, true], left: 0.2, top: 0.8),
+  ];
+
+  void _drawTrigram(Canvas canvas, Size size, _Trigram trigram) {
+    final (:angle, :bars, :left, :top) = trigram;
+    final offset = Offset(size.width * left, size.height * top);
     final paint = paintCreator();
     final height = size.height / 25;
     final width = size.width / 6;
@@ -123,8 +102,8 @@ final class TaegukgiPainter extends CustomElementsPainter {
       ..rotate(angle);
 
     // ignore: prefer-for-in, need index here.
-    for (int i = 0; i < brokenBars.length; i += 1) {
-      final isBroken = brokenBars.length > i && brokenBars[i];
+    for (int i = 0; i < bars.length; i += 1) {
+      final isBroken = bars[i];
       final y = (height + space) * i;
 
       if (isBroken) {
@@ -145,3 +124,7 @@ final class TaegukgiPainter extends CustomElementsPainter {
     canvas.restore();
   }
 }
+
+/// A trigram: which of its three bars are broken, how it is rotated, and where
+/// it sits as a fraction of the flag size.
+typedef _Trigram = ({double angle, List<bool> bars, double left, double top});

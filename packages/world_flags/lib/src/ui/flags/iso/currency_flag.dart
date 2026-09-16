@@ -13,6 +13,7 @@ import "../../painters/custom/btn_painter.dart";
 import "../../painters/custom/clipped_triangle_painter.dart";
 import "../../painters/custom/david_star_painter.dart";
 import "../../painters/custom/eagle_painter.dart";
+import "../../painters/custom/ecu_painter.dart";
 import "../../painters/custom/eri_painter.dart";
 import "../../painters/custom/hkg_painter.dart";
 import "../../painters/custom/irq_painter.dart";
@@ -119,10 +120,7 @@ class CurrencyFlag extends DualFlag<FiatCurrency, BasicFlag> {
       elementsBuilder: ClippedTrianglePainter.new,
     ),
     FiatBif(): BasicFlag(flagBdiProperties),
-    FiatBmd(): BasicFlag(
-      flagBmuProperties,
-      elementsBuilder: UnionJackPainter.halfWithoutOutline,
-    ),
+    FiatBmd(): BasicFlag(flagBmuProperties, elementsBuilder: BmuPainter.new),
     FiatBnd(): BasicFlag(flagBrnProperties, elementsBuilder: BrnPainter.new),
     FiatBob(): BasicFlag(flagBolProperties),
     FiatBrl(): BasicFlag(flagBraProperties, elementsBuilder: BraPainter.new),
@@ -163,14 +161,8 @@ class CurrencyFlag extends DualFlag<FiatCurrency, BasicFlag> {
     FiatErn(): BasicFlag(flagEriProperties, elementsBuilder: EriPainter.new),
     FiatEtb(): BasicFlag(flagEthProperties),
     FiatEur(): BasicFlag(flagEurProperties),
-    FiatFjd(): BasicFlag(
-      flagFjiProperties,
-      elementsBuilder: UnionJackPainter.halfWithDividers,
-    ),
-    FiatFkp(): BasicFlag(
-      flagFlkProperties,
-      elementsBuilder: UnionJackPainter.halfWithoutOutline,
-    ),
+    FiatFjd(): BasicFlag(flagFjiProperties, elementsBuilder: FjiPainter.new),
+    FiatFkp(): BasicFlag(flagFlkProperties, elementsBuilder: FlkPainter.new),
     FiatGbp(): BasicFlag(
       flagGbrProperties,
       elementsBuilder: UnionJackPainter.full,
@@ -337,10 +329,7 @@ class CurrencyFlag extends DualFlag<FiatCurrency, BasicFlag> {
     FiatDzd(): BasicFlag(flagEshProperties),
     FiatEgp(): BasicFlag(flagPseProperties),
     FiatEur(): BasicFlag(flagDeuProperties),
-    FiatGbp(): BasicFlag(
-      flagJeyProperties,
-      elementsBuilder: SimpleShieldPainter.outlinedWithoutDividers,
-    ),
+    FiatGbp(): BasicFlag(flagJeyProperties, elementsBuilder: JeyPainter.new),
     FiatIls(): BasicFlag(flagPseProperties),
     FiatInr(): BasicFlag(flagBtnProperties, elementsBuilder: BtnPainter.new),
     FiatJod(): BasicFlag(flagPseProperties),
@@ -351,10 +340,7 @@ class CurrencyFlag extends DualFlag<FiatCurrency, BasicFlag> {
       elementsBuilder: UnionJackPainter.half,
     ),
     FiatSgd(): BasicFlag(flagBrnProperties, elementsBuilder: BrnPainter.new),
-    FiatUsd(): BasicFlag(
-      flagEcuProperties,
-      elementsBuilder: SimpleShieldPainter.outlinedWithoutDividers,
-    ),
+    FiatUsd(): BasicFlag(flagEcuProperties, elementsBuilder: EcuPainter.new),
     FiatXaf(): BasicFlag(flagTcdProperties),
     FiatXcd(): BasicFlag(flagGrdProperties),
     FiatXcg(): BasicFlag(flagSxmProperties),

@@ -1,3 +1,65 @@
+## 3.5.0
+
+NEW FEATURES
+
+- Twelve flags now have their own badge painter instead of sharing the generic
+  shield one: `AiaPainter`, `AndPainter`, `BmuPainter`, `EcuPainter`,
+  `FjiPainter`, `FlkPainter`, `IotPainter`, `JeyPainter`, `MsrPainter`,
+  `PcnPainter`, `SgsPainter` and `TcaPainter`. Anguilla's dolphins, Andorra's
+  quartered escutcheon, Bermuda's lion, Ecuador's condor, Fiji's arms, the
+  Falklands' ram and ship, the British Indian Ocean Territory's palm and crown,
+  Jersey's three leopards, Montserrat's Erin, Pitcairn's anchor, South Georgia's
+  seal and penguin, and the Turks and Caicos conch, lobster and cactus are all
+  drawn properly now, in place of a four-colour quartered shield.
+- `CustomElementsPainter.proportionalBounds` lays out artwork that has to keep
+  a fixed width-to-height ratio. The element's `widthFactor` and `heightFactor`
+  still describe the box it fills at the flag's own aspect ratio, but when the
+  flag is drawn wider or narrower the artwork is fitted into that box instead
+  of being stretched with it.
+
+IMPROVEMENTS
+
+- Those twelve flags render identically on every platform. The shared shield
+  painter stroked a curved path and composited its quarters through `saveLayer`
+  and `clipPath`, which are not pixel-stable across rasterizer backends, so
+  their golden tests had to be skipped off Linux. The new painters only fill
+  cubic paths, and the skip list is gone.
+- Badge colours come from the construction sheets each flag entry links to
+  rather than from the emoji palette, so Montserrat's ground is brown earth
+  again and Pitcairn, Jersey, Bermuda and the Turks and Caicos match the colours
+  the rest of the package uses.
+- Montserrat's shield regained the grey rim the real badge has, its cross is
+  dark wood rather than black, and Erin is no longer bald; Anguilla's shield
+  lost the gold rim it never had.
+- South Georgia's and the Falkland Islands' badges now include the scroll under
+  the shield, Fiji's lion holds its charge again, and the British Indian Ocean
+  Territory's crown is drawn whole; its arches and crosses only read as a crown
+  together.
+- Badge placement moved fully into flag data. Each badge is positioned and
+  scaled by `offset`, `heightFactor` and `widthFactor` alone, so it follows the
+  flag's aspect ratio like every other element. The British Indian Ocean
+  Territory no longer needs a separate rectangle for the palm trunk.
+- Anguilla (`AIA`), Fiji (`FJI`), Jersey (`JEY`), Montserrat (`MSR`) and the
+  Turks and Caicos Islands (`TCA`) are no longer marked `isSimplified: true`.
+  Their badges are accurate now, so they moved to `null`: suitable for everyday
+  use, while still not claiming to be a strictly official rendition.
+- The Turks and Caicos badge is sized off the official flag rather than by eye.
+  It now spans 0.4292 of the flag height, matching the published construction to
+  within a pixel.
+
+REFACTOR
+
+- Cleared the three standing TODOs in the custom painters, with every affected
+  flag rendering pixel for pixel as before:
+  - `DavidStarPainter` builds each triangle of the hexagram as a `Path` instead
+    of passing the canvas and paint down, which drops its long parameter list,
+    and its rotation is now scoped by `save`/`restore`.
+  - `AlmondPainter` (Guam and Eswatini) scopes both of its branches the same
+    way, and no longer undoes a translation that `restore` already undoes.
+  - `TaegukgiPainter` describes its four trigrams as a const table and draws
+    them in a loop, in place of four near-identical calls that needed a long
+    parameter list.
+
 ## 3.4.0
 
 FIX
