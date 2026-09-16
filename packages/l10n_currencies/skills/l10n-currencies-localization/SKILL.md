@@ -31,7 +31,7 @@ The package has no dependencies and exposes `CurrenciesLocaleMapper`, `IsoLocale
 
 ### Mapper Lifecycle & Memory Optimization
 
-- **Single-use only**: Always instantiate a new `CurrenciesLocaleMapper` for every localization request. Once `localize()` is called, internal maps are cleared to minimize memory footprint and subsequent calls throw an assertion error.
+- **Single-use only**: Always instantiate a new `CurrenciesLocaleMapper` for every localization request. Once `localize()` is called, internal maps are cleared to minimize memory footprint. Reuse is guarded only by an assertion: it throws in assertion-enabled builds (`dart test`, Flutter debug), while release builds strip the assertion and silently re-materialize the cleared locale data instead — wasting the memory saving rather than failing loudly.
 - **Never cache mapper instances**: Do not store `CurrenciesLocaleMapper` in static variables, long-lived services, dependency injection containers, or state objects.
 - **Cache results, not mappers**: If localized names are accessed repeatedly, cache the returned `LocaleMap` or extracted `String` values.
 

@@ -10,7 +10,8 @@
     "**/web/**",
     "**/ios/**",
     "**/android/**",
-    "**/collections/**",
+    "**/collections/*_collections.dart",
+    "**/collections/README.*.md",
     "**/*.*.dart"
   ],
   "ignoreRegExpList": ["\\#[\\w\\-]+"],

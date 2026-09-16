@@ -2,7 +2,7 @@
 
 FIX
 
-- Renamed `NRU` in the English locale to "Naoero" ("Republic of Naoero" for the official name), following [Nauru's ISO 3166-1 change of name](https://www.un.org/en/about-us/member-states/naoero). Other locales keep their own exonyms (German still reads "Nauru").
+- Renamed `NRU` in the English locale to "Naoero" ("Republic of Naoero" for the official name), following the [United Nations' update of the country's name](https://www.un.org/en/about-us/member-states/naoero). Other locales keep their own exonyms (German still reads "Nauru").
 - Added the missing `NRU` self-translation to the Nauruan (`na`) locale, which previously had no entry for its own country.
 
 IMPROVEMENTS

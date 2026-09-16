@@ -4,7 +4,7 @@ FIX
 
 Inherited from `sealed_countries` 3.4.0:
 
-- `NRU`/`NR` is now named "Naoero" ("Republic of Naoero" officially), following its [ISO 3166-1 change of name](https://www.un.org/en/about-us/member-states/naoero). This package re-exports `sealed_countries`, so any flag list, picker, or label showing `name.common` will display the new name. Flag artwork and all codes are unchanged.
+- `NRU`/`NR` is now named "Naoero" ("Republic of Naoero" officially), following the [United Nations' update of the country's name](https://www.un.org/en/about-us/member-states/naoero). This package re-exports `sealed_countries`, so any flag list, picker, or label showing `name.common` will display the new name. Flag artwork and all codes are unchanged.
 
 IMPROVEMENTS
 

@@ -68,7 +68,7 @@ The package requires no PNG, SVG, or asset bundles — every flag is rendered as
 ### Performance in Long Lists
 
 - **Always construct flags as `const` where possible**: Every flag is a `CustomPainter`, and `const` widgets let Flutter skip rebuilding and repainting them. All ISO models are const (`CountryDeu()`, `LangEng()`), so `const CountryFlag.simplified(CountryDeu(), height: 24)` is usually achievable. Keep the country list itself `const` too.
-- **Wrap flags in `RepaintBoundary` inside scrolling lists**: A country picker builds hundreds of painters; without a boundary they share a layer with the scrolling content and repaint on every frame of a scroll.
+- **Do not add `RepaintBoundary` by reflex in scrolling lists**: `ListView.builder` and `GridView.builder` use a `SliverChildBuilderDelegate`, whose `addRepaintBoundaries` already defaults to `true`, so each flag is isolated for free. Add one manually only where that is absent — a custom delegate passing `addRepaintBoundaries: false`, or a flag repainting inside a hand-built scrolling widget.
 - **Prefer `FlagThemeData` over per-widget decorations in lists**: One ambient decoration avoids allocating an identical `BoxDecoration` per row.
 
 ### App-Wide Flag Theming (`FlagThemeData`)
@@ -186,12 +186,11 @@ class FlagGrid extends StatelessWidget {
       childAspectRatio: 3 / 2,
     ),
     itemCount: _countries.length,
-    itemBuilder: (_, index) => RepaintBoundary(
-      child: CountryFlag.simplified(
-        _countries[index],
-        // Uniform 3:2 across all flags, even the 1:1 Swiss one.
-        aspectRatio: 3 / 2,
-      ),
+    // GridView.builder already wraps each child in a RepaintBoundary.
+    itemBuilder: (_, index) => CountryFlag.simplified(
+      _countries[index],
+      // Uniform 3:2 across all flags, even the 1:1 Swiss one.
+      aspectRatio: 3 / 2,
     ),
   );
 }

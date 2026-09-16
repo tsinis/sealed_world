@@ -1,7 +1,9 @@
 @TestOn("vm")
 library;
 
-// Tree-shaking flags are read to skip locale-count assertions on shaked runs.
+// Locale-count assertions only hold on an unshaken build. CI shakes with
+// `l10n-de`, so that key is the guard; `hasEnvironment` (not
+// `fromEnvironment`) so a `-Dl10n-de=false` run skips them too.
 // ignore_for_file: do_not_use_environment
 
 import "package:l10n_countries/l10n_countries.dart";
@@ -40,6 +42,23 @@ void main() {
               "Building the 193-locale set must happen on first read, not in "
               "the constructor, since every localize() call needs a new mapper",
         );
+      });
+
+      test("is served by the base getter for a plain IsoLocaleMapper", () {
+        const locales = {"en", "de"};
+        final base = IsoLocaleMapper<String>(
+          other: const {"AAA": "Test"},
+          availableLocales: locales,
+        );
+
+        expect(
+          base.availableLocales,
+          locales,
+          reason:
+              "the mapper overrides it with a lazy field, so the base "
+              "getter is only reachable through IsoLocaleMapper itself",
+        );
+        expect(IsoLocaleMapper<String>().availableLocales, isEmpty);
       });
 
       test("still reports all bundled locales", () {
