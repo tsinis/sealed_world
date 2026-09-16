@@ -75,8 +75,10 @@ tcheco
 tham
 tlhIngan
 tokelau
+unlocalized
 unidos
 unoff
+viewports
 vereinigte
 český
 česko
