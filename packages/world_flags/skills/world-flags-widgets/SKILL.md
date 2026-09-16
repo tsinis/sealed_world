@@ -38,15 +38,16 @@ The package requires no PNG, SVG, or asset bundles — every flag is rendered as
 ### Primary Flag Widgets
 
 - **`CountryFlag.simplified(WorldCountry country)`**: The primary widget for national flags. Uses optimized paths designed for crisp rendering at standard UI sizes while preserving proportions.
-- **`LanguageFlag.fromFlagMap(NaturalLanguage language)`**: Displays a dual split flag representing natural languages spoken across multiple countries (e.g. `LangEng()` displays UK and US flags split diagonally).
+- **`LanguageFlag.fromFlagMap(NaturalLanguage language)`**: Displays a dual split flag representing natural languages spoken across multiple countries (e.g. `LangEng()` displays UK and US flags). The split is diagonal by default (`splitAngle` is `45`); pass `splitAngle: 0` for a horizontal top/bottom split, `90` for a vertical one.
 - **`CurrencyFlag.fromFlagMap(FiatCurrency currency)`**: Displays a dual split flag representing currencies shared across countries (e.g. `FiatEur()` displays Germany and European Union associations).
 - **`IsoFlag(item, map)`**: Generic low-level flag widget for custom ISO item mappings.
 - **Constructor rule**: `CountryFlag` does not have an unnamed default constructor `CountryFlag()`. Always instantiate via `CountryFlag.simplified(...)` or `CountryFlag.custom(...)`.
 
 ### Sizing and Aspect Ratios
 
-- **True aspect ratios by default**: Flags render using their official ISO proportions (e.g. 2:1 for UK/Australia, 3:2 for France/Germany, 1:1 for Switzerland).
+- **True aspect ratios by default**: Flags render using their official proportions (e.g. 2:1 for UK/Australia, 3:2 for France, 5:3 for Germany, 1:1 for Switzerland).
 - **Custom aspect ratios**: Override the ratio using `aspectRatio` (e.g. `aspectRatio: 1` for square badges, `aspectRatio: 3 / 2` for uniform grid tiles).
+- **`aspectRatio` loses to tight constraints**: It is applied by an `AspectRatio` widget, so a parent that forces an exact size wins. A `GridView` tile is the common trap: `SliverGridDelegateWithFixedCrossAxisCount` defaults `childAspectRatio` to `1.0`, which silently renders every flag square no matter what `aspectRatio` says. Match the delegate's `childAspectRatio` to the flag ratio you want.
 - **Dimension priority**: Specify `height` and/or `width`. If only `height` is given, `width` is computed automatically from the flag's aspect ratio.
 
 ### Borders, Rounded Corners, and Shapes
@@ -63,6 +64,12 @@ The package requires no PNG, SVG, or asset bundles — every flag is rendered as
   )
   ```
 - **Circular flag badges**: Set `decoration: const BoxDecoration(shape: BoxShape.circle)` to produce circular flag avatars without manual clipping.
+
+### Performance in Long Lists
+
+- **Always construct flags as `const` where possible**: Every flag is a `CustomPainter`, and `const` widgets let Flutter skip rebuilding and repainting them. All ISO models are const (`CountryDeu()`, `LangEng()`), so `const CountryFlag.simplified(CountryDeu(), height: 24)` is usually achievable. Keep the country list itself `const` too.
+- **Wrap flags in `RepaintBoundary` inside scrolling lists**: A country picker builds hundreds of painters; without a boundary they share a layer with the scrolling content and repaint on every frame of a scroll.
+- **Prefer `FlagThemeData` over per-widget decorations in lists**: One ambient decoration avoids allocating an identical `BoxDecoration` per row.
 
 ### App-Wide Flag Theming (`FlagThemeData`)
 
@@ -136,7 +143,7 @@ import 'package:world_flags/world_flags.dart';
 
 Widget buildLocaleSelectors() => Row(
   children: [
-    // Dual split flag for English (UK background, US clipped top)
+    // Dual flag for English, split diagonally between the UK and US flags
     const LanguageFlag.fromFlagMap(
       LangEng(),
       height: 24,
@@ -173,12 +180,18 @@ class FlagGrid extends StatelessWidget {
       crossAxisCount: 2,
       mainAxisSpacing: 8,
       crossAxisSpacing: 8,
+      // Required: childAspectRatio defaults to 1.0, and a tile's tight
+      // constraints override the flag's own aspectRatio, squashing every
+      // flag into a square.
+      childAspectRatio: 3 / 2,
     ),
     itemCount: _countries.length,
-    itemBuilder: (_, index) => CountryFlag.simplified(
-      _countries[index],
-      // Force uniform 3:2 ratio across all flags (even 1:1 Swiss flag)
-      aspectRatio: 3 / 2,
+    itemBuilder: (_, index) => RepaintBoundary(
+      child: CountryFlag.simplified(
+        _countries[index],
+        // Uniform 3:2 across all flags, even the 1:1 Swiss one.
+        aspectRatio: 3 / 2,
+      ),
     ),
   );
 }
