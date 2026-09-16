@@ -1,3 +1,12 @@
+## 3.3.1
+
+DOCUMENTATION
+
+Docs only, no code changes:
+
+- Added a bundled agent skill (`skills/sealed-currencies-core`), compliant with the [Agent Skills specification](https://agentskills.io), installable via `dart run skills@ get`.
+- Replaced the README's inline LLM agent instructions with a pointer to that skill.
+
 ## 3.3.0
 
 REFACTOR
