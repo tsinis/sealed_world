@@ -1,3 +1,16 @@
+## 3.4.0
+
+IMPROVEMENTS
+
+Inherited from `l10n_countries` 2.1.0:
+
+- `availableLocales` is now built on first read instead of in the constructor, making a `localize()` call (mapper construction included) around 15% faster. Mappers are single-use, so every call previously paid for materializing the full locale set even when it was never read.
+
+DOCUMENTATION
+
+- Added a bundled agent skill (`skills/sealed-countries-core`), compliant with the [Agent Skills specification](https://agentskills.io), installable via `dart run skills@ get`.
+- Replaced the README's inline LLM agent instructions with a pointer to that skill.
+
 ## 3.3.0
 
 REFACTOR
