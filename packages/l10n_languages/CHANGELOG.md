@@ -1,3 +1,15 @@
+## 2.1.0
+
+IMPROVEMENTS
+
+- `availableLocales` is now built on first read instead of in the constructor, making a `localize()` call (mapper construction included) around 25% faster. Mappers are single-use, so every call previously paid for materializing the full 157-locale set even when it was never read.
+
+DOCUMENTATION
+
+- Added a bundled agent skill (`skills/l10n-languages-localization`), compliant with the [Agent Skills specification](https://agentskills.io), installable via `dart run skills@ get`.
+- Replaced the README's inline LLM agent instructions with a pointer to that skill.
+- Documented that bundled translations ship no alternative names, so passing `altSymbol: ""` skips a redundant lookup per ISO code.
+
 ## 2.0.3
 
 TEST

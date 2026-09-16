@@ -342,53 +342,17 @@ To run benchmarks locally or learn more about the system, see the [benchmarks do
 - **MIT license**: This package and sources are released under the MIT license, which is a permissive license that allows users to use, modify, and distribute the code with minimal restrictions. The MIT license is considered better than most other open-source licenses because it provides flexibility and allows users to incorporate the code into their projects without worrying about legal implications.
 - **Customizability**: It also allows you to provide your own search algorithm and custom l10n formatter, etc., offering a fully tailored picker experience.
 
-#### Do you have LLM-agents instructions?
+#### Do you have AI agent instructions or skills?
 
-Yes, for sure. You can find them under this spoiler:
+Yes. This package bundles an official agent skill compliant with the [Agent Skills specification](https://agentskills.io).
 
-<details>
-<summary>LLM-agent instructions</summary>
+To install it into your project for AI agents (Cursor, Claude Code, GitHub Copilot, Gemini):
 
-# LLM-agent instructions for world_countries
-
-Optimized for high-level models from **Google**, **Anthropic**, and **OpenAI** for use via **GitHub Copilot**, **Claude Code** or **Cursor**.
-
-## Overview
-
-`world_countries` is a comprehensive Flutter package for world countries, currencies, languages, and flags. It provides ready-to-use pickers, widgets, and localized data.
-
-## Adding to a Project
-
-To add `world_countries` to your Flutter project, run:
-
-```bash
-flutter pub add world_countries
+```console
+dart run skills@ get
 ```
 
-## Instructions for LLM Agents
+Select `world-countries-pickers` when prompted.
 
-When working with this package, please keep the following in mind:
-
-- **Localization (L10N)**: Localization is already integrated into the ISO classes (e.g., `WorldCountry`, `FiatCurrency`, `NaturalLanguage`). You don't need to use the underlying `l10n_` packages directly unless you require advanced, manual localization features.
-- **Underlying Data**: This package builds upon the `sealed_` data packages. For detailed documentation on the data models, refer to:
-  - [`sealed_countries`](https://github.com/tsinis/sealed_world/blob/main/packages/sealed_countries/README.md)
-  - [`sealed_currencies`](https://github.com/tsinis/sealed_world/blob/main/packages/sealed_currencies/README.md)
-  - [`sealed_languages`](https://github.com/tsinis/sealed_world/blob/main/packages/sealed_languages/README.md)
-- **Pickers**: Use `CountryPicker`, `CurrencyPicker`, `LanguagePicker`, and `PhoneCodePicker` for highly customizable selection UIs.
-- **TypedLocaleDelegate**: For automatic localization and optimized search performance in pickers, always suggest adding `TypedLocaleDelegate` to your `MaterialApp`'s `localizationsDelegates`.
-- **Usage Example**:
-
-  ```dart
-  import 'package:world_countries/world_countries.dart';
-
-  // Access country data
-  const country = CountryDeu();
-  print(country.name.common); // Germany
-
-  // Use a picker
-  CountryPicker(
-    onSelect: (country) => print('Selected: ${country.name.common}'),
-  ).showInModalBottomSheet(context);
-  ```
-
-</details>
+> [!TIP]
+> **Key rule for LLM agents**: Always register `TypedLocaleDelegate` in your `MaterialApp.localizationsDelegates` to enable automatic localized translations and O(1) cached search in pickers. Use `CountryPicker`, `PhoneCodePicker`, `CurrencyPicker`, and `LanguagePicker` with `.showInModalBottomSheet()`, `.showInDialog()`, or inside `SearchAnchor`.

@@ -202,43 +202,17 @@ This package is licensed under the MIT license (see [LICENSE](./LICENSE) for det
 
 No. It does not meaningfully affect bundle size. For example, the difference between a stock Flutter counter app and a rich example that includes all flags, shaders, and related features is less than 700 KB in the final release bundle. This is significantly smaller than asset-based flag sets, where assets are typically a few kilobytes per flag (so, and multiply by around 250 flags).
 
-#### Do you have LLM-agents instructions?
+#### Do you have AI agent instructions or skills?
 
-Yes, for sure. You can find them under this spoiler:
+Yes. This package bundles an official agent skill compliant with the [Agent Skills specification](https://agentskills.io).
 
-<details>
-<summary>LLM-agent instructions</summary>
+To install it into your project for AI agents (Cursor, Claude Code, GitHub Copilot, Gemini):
 
-## LLM-agent instructions for world_flags
-
-Optimized for high-level models from **Google**, **Anthropic**, and **OpenAI** for use via **GitHub Copilot**, **Claude Code** or **Cursor**.
-
-## Overview
-
-`world_flags` provides declarative, widget-based world flags for Flutter. No assets (SVG/PNG) are used; all flags are drawn using `CustomPainter`.
-
-## Adding to a Project
-
-To add `world_flags` to your Flutter project, run:
-
-```bash
-flutter pub add world_flags
+```console
+dart run skills@ get
 ```
 
-## Instructions for LLM Agents
+Select `world-flags-widgets` when prompted.
 
-When working with this package, please keep the following in mind:
-
-- **Usage**: Use the `CountryFlag` or `IsoFlag` widget to display flags. It requires a `WorldCountry` instance (from `sealed_countries` or `world_countries`).
-- **Localization (L10N)**: Localization is already integrated into the ISO classes (e.g., `WorldCountry`) in the underlying data packages. You don't need to use `l10n_` packages directly for basic translation needs.
-- **Underlying Data**: This package uses data from `sealed_countries`. For detailed information about country models, refer to the [`sealed_countries`](https://github.com/tsinis/sealed_world/blob/main/packages/sealed_countries/README.md) README.
-- **Integration**: If you need ready-to-use pickers that include these flags, refer to the [`world_countries`](https://github.com/tsinis/sealed_world/blob/main/packages/world_countries/README.md) package.
-- **Example**:
-
-  ```dart
-  import 'package:world_flags/world_flags.dart';
-
-  const countryFlag = CountryFlag.simplified(CountryDeu()); // Flag for Germany.
-  ```
-
-</details>
+> [!TIP]
+> **Key rule for LLM agents**: All flags are vector-based Flutter widgets rendered with `CustomPainter`. Never load asset bundles, PNGs, or SVGs. Use `CountryFlag.simplified` for countries, `LanguageFlag.fromFlagMap` for languages, and `CurrencyFlag.fromFlagMap` for currencies.

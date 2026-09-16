@@ -1,3 +1,22 @@
+## 3.4.0
+
+FIX
+
+- Renamed the `NRU` country's name fields to Naoero, following the [United Nations' update of the country's name](https://www.un.org/en/about-us/member-states/naoero): `name.common` is now "Naoero" and `name.official` is "Republic of Naoero". The `CountryNru` class itself was not renamed, so existing `const CountryNru()` / `WorldCountry.nru()` call sites compile unchanged. "Nauru" and "Republic of Nauru" remain in `altSpellings`, and all codes (`NRU`, `NR`, `520`) are unchanged, so lookups are unaffected. The Nauruan native name is now "Ripublik Naoero" rather than a copy of the English one.
+
+  Note that anything displaying or snapshotting `name.common` for `NR`/`NRU` will show the new value.
+
+IMPROVEMENTS
+
+Inherited from `l10n_countries` 2.1.0:
+
+- `availableLocales` is now built on first read instead of in the constructor, making a `localize()` call (mapper construction included) around 15% faster. Mappers are single-use, so every call previously paid for materializing the full locale set even when it was never read.
+
+DOCUMENTATION
+
+- Added a bundled agent skill (`skills/sealed-countries-core`), compliant with the [Agent Skills specification](https://agentskills.io), installable via `dart run skills@ get`.
+- Replaced the README's inline LLM agent instructions with a pointer to that skill.
+
 ## 3.3.0
 
 REFACTOR

@@ -12,11 +12,11 @@
 [![FOSSA Status](https://app.fossa.com/api/projects/git%2Bgithub.com%2Ftsinis%2Fsealed_world.svg?type=shield&issueType=security)](https://app.fossa.com/projects/git%2Bgithub.com%2Ftsinis%2Fsealed_world?ref=badge_shield&issueType=security)
 [![FOSSA Status](https://app.fossa.com/api/projects/git%2Bgithub.com%2Ftsinis%2Fsealed_world.svg?type=shield&issueType=license)](https://app.fossa.com/projects/git%2Bgithub.com%2Ftsinis%2Fsealed_world?ref=badge_shield&issueType=license)
 
-This ISO-driven, pure Dart, fully tested and dependency-free package provides CLDR-like translations for country names in `194` different locales. For Flutter-ready widgets (like country picker) please use [world_countries](https://pub.dev/packages/world_countries) package. For Dart-only use - it's recommended to use together with [sealed_countries](https://pub.dev/packages/sealed_countries) package.
+This ISO-driven, pure Dart, fully tested and dependency-free package provides CLDR-like translations for country names in `193` different locales. For Flutter-ready widgets (like country picker) please use [world_countries](https://pub.dev/packages/world_countries) package. For Dart-only use - it's recommended to use together with [sealed_countries](https://pub.dev/packages/sealed_countries) package.
 
 ### Features
 
-- 194 locales supported out of the box.
+- 193 locales supported out of the box.
 - Three-letter ISO 3166-1 Alpha-3 code lookup.
 - Fallback locale support.
 - Alternative names and conditional formatting support.
@@ -92,61 +92,20 @@ void main() {
 - **Lightweight**: This package keeps **under 500 KB**, ensuring it fits within the pub cache limit. This leads to quick, low-bandwidth downloads and faster caching, minimizing resource impact.
 - **MIT license**: This package and sources are released under the MIT license, which is a permissive license that allows users to use, modify, and distribute the code with minimal restrictions. The MIT license is considered better than most other open-source licenses because it provides flexibility and allows users to incorporate the code into their projects without worrying about legal implications.
 
-#### Do you have LLM-agents instructions?
+#### Do you have AI agent instructions or skills?
 
-Yes, available under this spoiler:
+Yes. This package bundles an official agent skill compliant with the [Agent Skills specification](https://agentskills.io).
 
-<details>
-<summary>LLM-agent instructions</summary>
+To install it into your project for AI agents (Cursor, Claude Code, GitHub Copilot, Gemini):
 
-### LLM-agent instructions for l10n_countries
-
-Optimized for high-level models from **Google**, **Anthropic**, and **OpenAI** for use via **GitHub Copilot**, **Claude Code** or **Cursor**.
-
-#### 1. Package Installation
-
-To add the package to the project, use one of the following commands:
-
-- For Dart projects: `dart pub add l10n_countries`
-- For Flutter projects: `flutter pub add l10n_countries`
-
-#### 2. Import the Package
-
-Add the following import statement to the relevant Dart file:
-
-```dart
-import 'package:l10n_countries/l10n_countries.dart';
+```console
+dart run skills@ get
 ```
 
-#### 3. Core Implementation (Usage)
+Select `l10n-countries-localization` when prompted.
 
-The package uses `CountriesLocaleMapper` to provide localized country names.
-
-**Example Implementation:**
-
-```dart
-final mapper = CountriesLocaleMapper();
-final isoCodes = {"USA", "GBR", "DEU"};
-final localizedNames = mapper.localize(
-  isoCodes,
-  mainLocale: "en", // Specify the target locale
-  fallbackLocale: "sk", // Optional: specify a fallback locale
-);
-```
-
-#### 4. Performance Optimization (Tree-shaking)
-
-To minimize the application size, the package supports tree-shaking for translations. Use `--dart-define` flags to include only necessary locales during the build process:
-
-- Example: `flutter build apk --dart-define=l10n-en=true --dart-define=l10n-sk=true`
-
-#### 5. Best Practices for LLM Agents
-
-- **Single-use Mappers**: The `CountriesLocaleMapper` instances are designed for **single-use only**. They clear their internal data after `localize()` is called to save memory.
-- **No Caching**: Do NOT cache mapper instances. Always create a new instance when you need to perform localization.
-- **Result Caching**: Cache the _results_ of the `localize()` method if you need to use them multiple times, rather than keeping the mapper instance alive.
-
-  </details>
+> [!IMPORTANT]
+> **Key rule for LLM agents**: `CountriesLocaleMapper` instances are designed for **single-use only**. They purge internal data immediately upon calling `localize()`. Never cache or reuse mapper instances—always instantiate a new mapper per request and cache the localized result strings instead.
 
 ### Additional information
 

@@ -412,12 +412,25 @@ class CountriesLocaleMapper extends IsoLocaleMapper<IsoLocaleMapper<String>> {
   /// add more translations via the [other] parameter.
   CountriesLocaleMapper({Map<String, IsoLocaleMapper<String>>? other})
     // ignore: avoid-non-empty-constructor-bodies,on purpose.
-    : super(availableLocales: {..._factories.keys, ...?other?.keys}) {
+    : _customLocales = other?.keys.toSet() {
     if (other != null) map.addAll(other);
   }
 
   /// The symbol used to identify the alternative/full name of the ISO object.
   static const symbol = "+";
+
+  /// Returns all available locale keys (both lazy and already instantiated).
+  ///
+  /// Built on first read rather than in the constructor: a mapper is single-use
+  /// and most callers never read this, so materializing the full locale set
+  /// eagerly would add cost to every [localize] call.
+  @override
+  // ignore: avoid-late-keyword, deferring this set is the point of the field.
+  late final availableLocales = {..._factories.keys, ...?_customLocales};
+
+  /// Locale keys supplied via the `other` constructor parameter, kept apart
+  /// from [map] so that [availableLocales] stays correct after consumption.
+  final Set<String>? _customLocales;
 
   bool _isConsumed = false;
 

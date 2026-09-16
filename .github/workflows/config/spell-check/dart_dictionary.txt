@@ -286,6 +286,7 @@ strdupv
 strfreev
 submenu
 submodels
+subtag
 subtags
 subviews
 suo

@@ -158,52 +158,20 @@ For more usage examples, please see the `/example` folder.
 - **Verified publisher**: Published and maintained under an active, verified pub.dev publisher account since 2022.
 - **MIT license**: This package and sources are released under the MIT license, which is a permissive license that allows users to use, modify, and distribute the code with minimal restrictions. The MIT license is considered better than most other open-source licenses because it provides flexibility and allows users to incorporate the code into their projects without worrying about legal implications.
 
-#### Do you have LLM-agents instructions?
+#### Do you have AI agent instructions or skills?
 
-Yes, for sure! You can find them under this spoiler:
+Yes. This package bundles an official agent skill compliant with the [Agent Skills specification](https://agentskills.io).
 
-<details>
-<summary>LLM-agent instructions</summary>
+To install it into your project for AI agents (Cursor, Claude Code, GitHub Copilot, Gemini):
 
-### LLM-agent instructions for sealed_countries
-
-Optimized for high-level models from **Google**, **Anthropic**, and **OpenAI** for use via **GitHub Copilot**, **Claude Code** or **Cursor**.
-
-#### Context
-
-`sealed_countries` provides ISO 3166-1 Alpha-2, Alpha-3, and Numeric data (flags, capitals, population, etc.) in a type-safe sealed class hierarchy.
-
-#### Installation
-
-Add to `pubspec.yaml`:
-
-```yaml
-dependencies:
-  sealed_countries: any
+```console
+dart run skills@ get
 ```
 
-#### Core Data Structures
+Select `sealed-countries-core` when prompted. For advanced raw translation tables and custom translation injection, also install the companion `l10n-countries-localization` skill.
 
-- **`WorldCountry`**: Main class. Access via `WorldCountry.list` or factories: `fromCode("IRL")`, `fromCodeShort("IE")`, `fromCodeNumeric("372")`.
-
-#### Common Operations
-
-- **Geographic**: Access `latLng`, `continent`, `subregion`, and `bordersCodes`.
-- **Attributes**: `population`, `areaMetric`, `emoji` (flag), `idd` (phone codes), `tld`.
-- **Linked Data**: Access `currencies` (list of `FiatCurrency`) and `languages` (list of `NaturalLanguage`).
-
-#### Integration Patterns
-
-- **Dot shorthands**: `.irl()`, `.mex()`, `.usa()`.
-- **Search**: `WorldCountry.maybeFromAnyCode(code)`.
-- **Localization**: Translations are built-in. Use `country.commonNameFor(BasicLocale(LangEng()))` for localized names. For advanced L10N features, consider the `l10n_countries` package.
-
-#### Resource Navigation
-
-- **Currencies**: For detailed currency formatting/subunits, refer to `sealed_currencies` [documentation](https://github.com/tsinis/sealed_world/blob/main/packages/sealed_currencies/README.md).
-- **Languages**: For detailed language/script info, refer to `sealed_languages` [documentation](https://github.com/tsinis/sealed_world/blob/main/packages/sealed_languages/README.md).
-
-</details>
+> [!TIP]
+> **Key rule for LLM agents**: Prefer non-throwing `maybeFrom*` methods (such as `maybeFromAnyCode` or `maybeFromCodeNumeric`) over throwing variants when parsing untrusted input. Sealed classes give compile-time exhaustiveness checks on `switch`, so a missing case is an error rather than a silent fallthrough — with 250 countries a `_` wildcard for the remainder is still the normal choice.
 
 ### Additional information
 

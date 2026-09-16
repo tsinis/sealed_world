@@ -1,3 +1,22 @@
+## 3.4.0
+
+FIX
+
+Inherited from `sealed_countries` 3.4.0:
+
+- `NRU`/`NR` is now named "Naoero" ("Republic of Naoero" officially), following the [United Nations' update of the country's name](https://www.un.org/en/about-us/member-states/naoero). This package re-exports `sealed_countries`, so any flag list, picker, or label showing `name.common` will display the new name. Flag artwork and all codes are unchanged.
+
+IMPROVEMENTS
+
+Inherited from `sealed_countries` 3.4.0:
+
+- `availableLocales` is now built on first read instead of in the constructor, making a `localize()` call (mapper construction included) around 15% faster. Mappers are single-use, so every call previously paid for materializing the full locale set even when it was never read.
+
+DOCUMENTATION
+
+- Added a bundled agent skill (`skills/world-flags-widgets`), compliant with the [Agent Skills specification](https://agentskills.io), installable via `dart run skills@ get`.
+- Replaced the README's inline LLM agent instructions with a pointer to that skill.
+
 ## 3.3.0
 
 FIX

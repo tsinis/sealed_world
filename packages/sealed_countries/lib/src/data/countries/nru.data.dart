@@ -10,10 +10,10 @@ extension type const _NruFactory._(CountryNru _) implements CountryNru {
   const _NruFactory() : this._(const CountryNru._());
 }
 
-/// A class that represents the Nauru country.
+/// A class that represents the Naoero (formerly Nauru) country.
 class CountryNru extends WorldCountry {
   /// {@template sealed_world.country_nru_constructor}
-  /// Creates a instance of [CountryNru] (Nauru country).
+  /// Creates a instance of [CountryNru] (Naoero country, formerly Nauru).
   ///
   /// ISO 3166-1 Alpha-3 code: `NRU`, ISO 3166-1 Alpha-2 code: `NR`.
   /// {@endtemplate}
@@ -23,8 +23,8 @@ class CountryNru extends WorldCountry {
     : super._(
         name: const CountryName(
           language: LangEng(),
-          official: "Republic of Nauru",
-          common: "Nauru",
+          official: "Republic of Naoero",
+          common: "Naoero",
         ),
         tld: const [".nr"],
         code: "NRU",
@@ -34,7 +34,7 @@ class CountryNru extends WorldCountry {
         idd: const Idd(root: 6, suffixes: [74]),
         altSpellings: const [
           "NR",
-          "Naoero",
+          "Nauru",
           "Pleasant Island",
           "Republic of Nauru",
           "Ripublik Naoero",
@@ -69,13 +69,13 @@ class CountryNru extends WorldCountry {
   List<CountryName> get namesNative => const [
     CountryName(
       language: LangEng(),
-      official: "Republic of Nauru",
-      common: "Nauru",
+      official: "Republic of Naoero",
+      common: "Naoero",
     ),
     CountryName(
       language: LangNau(),
-      official: "Republic of Nauru",
-      common: "Nauru",
+      official: "Ripublik Naoero",
+      common: "Naoero",
     ),
   ];
   @override

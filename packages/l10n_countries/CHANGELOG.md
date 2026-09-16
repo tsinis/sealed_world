@@ -1,3 +1,19 @@
+## 2.1.0
+
+FIX
+
+- Renamed `NRU` in the English locale to "Naoero" ("Republic of Naoero" for the official name), following the [United Nations' update of the country's name](https://www.un.org/en/about-us/member-states/naoero). Other locales keep their own exonyms (German still reads "Nauru").
+- Added the missing `NRU` self-translation to the Nauruan (`na`) locale, which previously had no entry for its own country.
+
+IMPROVEMENTS
+
+- `availableLocales` is now built on first read instead of in the constructor, making a `localize()` call (mapper construction included) around 15% faster. Mappers are single-use, so every call previously paid for materializing the full 193-locale set even when it was never read.
+
+DOCUMENTATION
+
+- Added a bundled agent skill (`skills/l10n-countries-localization`), compliant with the [Agent Skills specification](https://agentskills.io), installable via `dart run skills@ get`.
+- Replaced the README's inline LLM agent instructions with a pointer to that skill.
+
 ## 2.0.3
 
 TEST

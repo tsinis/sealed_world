@@ -144,54 +144,20 @@ For more usage examples, please see the `/example` folder.
 - **Verified publisher**: Published and maintained under an active, verified pub.dev publisher account since 2022.
 - **MIT license**: This package and sources are released under the MIT license, which is a permissive license that allows users to use, modify, and distribute the code with minimal restrictions. The MIT license is considered better than most other open-source licenses because it provides flexibility and allows users to incorporate the code into their projects without worrying about legal implications.
 
-#### Do you have LLM-agents instructions?
+#### Do you have AI agent instructions or skills?
 
-Yes, for sure! You can find them under this spoiler:
+Yes. This package bundles an official agent skill compliant with the [Agent Skills specification](https://agentskills.io).
 
-<details>
-<summary>LLM-agent instructions</summary>
+To install it into your project for AI agents (Cursor, Claude Code, GitHub Copilot, Gemini):
 
-### LLM-agent instructions for sealed_languages
-
-Optimized for high-level models from **Google**, **Anthropic**, and **OpenAI** for use via **GitHub Copilot**, **Claude Code** or **Cursor**.
-
-#### Context
-
-`sealed_languages` provides ISO 639-1, 639-2, and 15924-compliant data for languages and scripts in a type-safe, sealed class hierarchy.
-
-#### Installation
-
-Add to `pubspec.yaml`:
-
-```yaml
-dependencies:
-  sealed_languages: any
+```console
+dart run skills@ get
 ```
 
-#### Core Data Structures
+Select `sealed-languages-core` when prompted. For advanced raw translation tables and custom translation injection, also install the companion `l10n-languages-localization` skill.
 
-- **`NaturalLanguage`**: Main class for languages. Access via `NaturalLanguage.list` or factory constructors like `.fromCode("ENG")`, `.fromCodeShort("EN")`, `.fromAnyCode("cs")`.
-- **`Script`**: Access via `Script.list` or `.fromCode("Latn")`, `.fromCodeNumeric("215")`.
-- **`LanguageFamily`**: Accessible via `language.family`.
-
-#### Querying & Filtering
-
-- **Find by code**: `NaturalLanguage.fromAnyCode("EN")` or `NaturalLanguage.maybeFromAnyCode(code)`.
-- **Filter by properties**: `NaturalLanguage.list.where((l) => l.isRightToLeft)`.
-- **Functional lookups**: `NaturalLanguage.maybeFromValue("Czech", where: (l) => l.namesNative.first)`.
-
-#### Integration Patterns
-
-- **Dot shorthands** (Dart 3.10+): Use `.eng()`, `.deu()`, `.fra()` for concise initialization.
-- **Switch Exhaustiveness**: Use `switch(language) { ... }` to ensure all language cases are handled.
-- **Localization**: Translations are built-in. Use `language.commonNameFor(BasicLocale(LangEng()))` for localized names. For advanced L10N features, consider the `l10n_languages` package.
-
-#### Troubleshooting
-
-- Use `maybeFromAnyCode` to safely handle external input.
-- For country-specific language info, refer to `sealed_countries` [documentation](https://github.com/tsinis/sealed_world/tree/main/packages/sealed_countries/README.md).
-
-</details>
+> [!TIP]
+> **Key rule for LLM agents**: Prefer non-throwing `maybeFrom*` methods (such as `maybeFromAnyCode`) over throwing variants when parsing untrusted input. Sealed classes give compile-time exhaustiveness checks on `switch`, so a missing case is an error rather than a silent fallthrough — with 184 languages a `_` wildcard for the remainder is still the normal choice.
 
 ### Additional information
 
