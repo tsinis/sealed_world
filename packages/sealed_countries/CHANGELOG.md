@@ -2,7 +2,7 @@
 
 FIX
 
-- Renamed `CountryNru` to Naoero, following the [United Nations' update of the country's name](https://www.un.org/en/about-us/member-states/naoero): `name.common` is now "Naoero" and `name.official` is "Republic of Naoero". "Nauru" and "Republic of Nauru" remain in `altSpellings`, and all codes (`NRU`, `NR`, `520`) are unchanged, so lookups are unaffected. The Nauruan native name is now "Ripublik Naoero" rather than a copy of the English one.
+- Renamed the `NRU` country's name fields to Naoero, following the [United Nations' update of the country's name](https://www.un.org/en/about-us/member-states/naoero): `name.common` is now "Naoero" and `name.official` is "Republic of Naoero". The `CountryNru` class itself was not renamed, so existing `const CountryNru()` / `WorldCountry.nru()` call sites compile unchanged. "Nauru" and "Republic of Nauru" remain in `altSpellings`, and all codes (`NRU`, `NR`, `520`) are unchanged, so lookups are unaffected. The Nauruan native name is now "Ripublik Naoero" rather than a copy of the English one.
 
   Note that anything displaying or snapshotting `name.common` for `NR`/`NRU` will show the new value.
 

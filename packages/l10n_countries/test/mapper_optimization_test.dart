@@ -1,9 +1,9 @@
 @TestOn("vm")
 library;
 
-// Locale-count assertions only hold on an unshaken build. CI shakes with
-// `l10n-de`, so that key is the guard; `hasEnvironment` (not
-// `fromEnvironment`) so a `-Dl10n-de=false` run skips them too.
+// Locale-count assertions and the "en" anchor only hold on an unshaken
+// build. CI shakes with `l10n-de`; `hasEnvironment` so a `=false` run
+// skips too. See CHANGELOG note on a fuller any-filter guard.
 // ignore_for_file: do_not_use_environment
 
 import "package:l10n_countries/l10n_countries.dart";

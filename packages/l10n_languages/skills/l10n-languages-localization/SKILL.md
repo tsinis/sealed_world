@@ -31,7 +31,7 @@ The package has no dependencies and exposes `LanguagesLocaleMapper`, `IsoLocaleM
 
 ### Mapper Lifecycle & Memory Optimization
 
-- **Single-use only**: Always instantiate a new `LanguagesLocaleMapper` for every localization request. Once `localize()` is called, internal maps are cleared to minimize memory footprint. Reuse is guarded only by an assertion: it throws in assertion-enabled builds (`dart test`, Flutter debug), while release builds strip the assertion and silently re-materialize the cleared locale data instead — wasting the memory saving rather than failing loudly.
+- **Single-use only**: Always instantiate a new `LanguagesLocaleMapper` for every localization request. Once `localize()` is called, internal maps are cleared to minimize memory footprint. Reuse is guarded only by an assertion: it throws in assertion-enabled builds (`dart test`, Flutter debug), but release builds strip that assertion and silently re-materialize **bundled** locale data from the factories. Reuse in release is therefore wrong, not merely wasteful — translations injected via `other` are never restored, so a custom-only locale returns an empty map on the second call, and a custom override of a bundled locale silently reverts to the bundled values.
 - **Never cache mapper instances**: Do not store `LanguagesLocaleMapper` in static variables, long-lived services, dependency injection containers, or state objects.
 - **Cache results, not mappers**: If localized names are accessed repeatedly, cache the returned `LocaleMap` or extracted `String` values.
 - **Always pass a locale**: Specify `mainLocale` or `fallbackLocale` (or provide translations via `other`). `localize()` returns an empty map when given none — it does not throw, so a missing locale fails silently.
