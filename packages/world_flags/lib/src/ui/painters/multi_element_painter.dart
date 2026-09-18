@@ -9,6 +9,7 @@ import "../../model/elements/custom_elements_properties.dart";
 import "../../model/elements/elements_properties.dart";
 import "../../model/shape.dart";
 import "../../model/typedefs.dart";
+import "basic/badge_artwork.dart";
 import "basic/custom_elements_painter.dart";
 import "common/rectangle_painter.dart";
 
@@ -19,6 +20,7 @@ part "custom/bmu_painter.dart";
 part "custom/bra_painter.dart";
 part "custom/brn_painter.dart";
 part "custom/custom_diagonal_painter.dart";
+part "custom/dma_painter.dart";
 part "custom/fji_painter.dart";
 part "custom/flk_painter.dart";
 part "custom/geo_painter.dart";
@@ -46,6 +48,7 @@ part "custom/uga_painter.dart";
 part "custom/union_jack_painter.dart";
 part "custom/usa_stars_painter.dart";
 part "custom/zmb_painter.dart";
+part "custom/zwe_painter.dart";
 
 /// A custom painter that draws multiple elements on a flag.
 ///
@@ -83,13 +86,19 @@ final class MultiElementPainter extends CustomElementsPainter {
   /// elements.
   @override
   FlagParentBounds? paint(Canvas canvas, Size size) {
-    canvas.clipRect(Offset.zero & size); // Clip to flag bounds/parent stripes.
+    // No clip here: the caller has already clipped to `size`.
+    bool hasPaintedElements = false;
     for (final props in properties) {
       final shape = props.shape;
       if (shape != null) {
         painter(shape)([props], size.aspectRatio).paint(canvas, size);
       }
-      if (props is CustomElementsProperties) paintFlagElements(canvas, size);
+
+      // [paintFlagElements] paints every custom element of this flag in one
+      // go, so calling it again would only redraw the same emblem on itself.
+      if (hasPaintedElements || props is! CustomElementsProperties) continue;
+      hasPaintedElements = true;
+      paintFlagElements(canvas, size);
     }
 
     return null;

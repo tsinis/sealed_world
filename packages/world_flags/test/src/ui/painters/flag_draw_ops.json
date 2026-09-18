@@ -1,0 +1,1508 @@
+{
+  "_totals": {
+    "clips": 285,
+    "contours": 2315,
+    "draws": 1359,
+    "saveLayers": 0
+  },
+  "abw": {
+    "clips": 1,
+    "contours": 7,
+    "draws": 4,
+    "saveLayers": 0
+  },
+  "afg": {
+    "clips": 1,
+    "contours": 83,
+    "draws": 3,
+    "saveLayers": 0
+  },
+  "ago": {
+    "clips": 1,
+    "contours": 6,
+    "draws": 3,
+    "saveLayers": 0
+  },
+  "aia": {
+    "clips": 2,
+    "contours": 17,
+    "draws": 9,
+    "saveLayers": 0
+  },
+  "ala": {
+    "clips": 1,
+    "contours": 6,
+    "draws": 5,
+    "saveLayers": 0
+  },
+  "alb": {
+    "clips": 1,
+    "contours": 2,
+    "draws": 2,
+    "saveLayers": 0
+  },
+  "and": {
+    "clips": 1,
+    "contours": 19,
+    "draws": 8,
+    "saveLayers": 0
+  },
+  "are": {
+    "clips": 1,
+    "contours": 4,
+    "draws": 4,
+    "saveLayers": 0
+  },
+  "arg": {
+    "clips": 1,
+    "contours": 6,
+    "draws": 5,
+    "saveLayers": 0
+  },
+  "arm": {
+    "clips": 1,
+    "contours": 3,
+    "draws": 3,
+    "saveLayers": 0
+  },
+  "asm": {
+    "clips": 1,
+    "contours": 5,
+    "draws": 5,
+    "saveLayers": 0
+  },
+  "ata": {
+    "clips": 1,
+    "contours": 2,
+    "draws": 2,
+    "saveLayers": 0
+  },
+  "atf": {
+    "clips": 1,
+    "contours": 12,
+    "draws": 6,
+    "saveLayers": 0
+  },
+  "atg": {
+    "clips": 1,
+    "contours": 5,
+    "draws": 5,
+    "saveLayers": 0
+  },
+  "aus": {
+    "clips": 2,
+    "contours": 18,
+    "draws": 8,
+    "saveLayers": 0
+  },
+  "aut": {
+    "clips": 1,
+    "contours": 3,
+    "draws": 2,
+    "saveLayers": 0
+  },
+  "aze": {
+    "clips": 1,
+    "contours": 5,
+    "draws": 5,
+    "saveLayers": 0
+  },
+  "bdi": {
+    "clips": 1,
+    "contours": 12,
+    "draws": 12,
+    "saveLayers": 0
+  },
+  "bel": {
+    "clips": 1,
+    "contours": 3,
+    "draws": 3,
+    "saveLayers": 0
+  },
+  "ben": {
+    "clips": 1,
+    "contours": 3,
+    "draws": 3,
+    "saveLayers": 0
+  },
+  "bes": {
+    "clips": 1,
+    "contours": 3,
+    "draws": 3,
+    "saveLayers": 0
+  },
+  "bfa": {
+    "clips": 1,
+    "contours": 3,
+    "draws": 3,
+    "saveLayers": 0
+  },
+  "bgd": {
+    "clips": 1,
+    "contours": 2,
+    "draws": 2,
+    "saveLayers": 0
+  },
+  "bgr": {
+    "clips": 1,
+    "contours": 3,
+    "draws": 3,
+    "saveLayers": 0
+  },
+  "bhr": {
+    "clips": 2,
+    "contours": 7,
+    "draws": 7,
+    "saveLayers": 0
+  },
+  "bhs": {
+    "clips": 1,
+    "contours": 4,
+    "draws": 3,
+    "saveLayers": 0
+  },
+  "bih": {
+    "clips": 1,
+    "contours": 13,
+    "draws": 5,
+    "saveLayers": 0
+  },
+  "blm": {
+    "clips": 1,
+    "contours": 3,
+    "draws": 3,
+    "saveLayers": 0
+  },
+  "blr": {
+    "clips": 1,
+    "contours": 18,
+    "draws": 6,
+    "saveLayers": 0
+  },
+  "blz": {
+    "clips": 1,
+    "contours": 6,
+    "draws": 5,
+    "saveLayers": 0
+  },
+  "bmu": {
+    "clips": 2,
+    "contours": 23,
+    "draws": 16,
+    "saveLayers": 0
+  },
+  "bol": {
+    "clips": 1,
+    "contours": 3,
+    "draws": 3,
+    "saveLayers": 0
+  },
+  "bra": {
+    "clips": 1,
+    "contours": 4,
+    "draws": 4,
+    "saveLayers": 0
+  },
+  "brb": {
+    "clips": 1,
+    "contours": 4,
+    "draws": 3,
+    "saveLayers": 0
+  },
+  "brn": {
+    "clips": 1,
+    "contours": 7,
+    "draws": 7,
+    "saveLayers": 0
+  },
+  "btn": {
+    "clips": 2,
+    "contours": 4,
+    "draws": 4,
+    "saveLayers": 0
+  },
+  "bvt": {
+    "clips": 1,
+    "contours": 6,
+    "draws": 5,
+    "saveLayers": 0
+  },
+  "bwa": {
+    "clips": 1,
+    "contours": 5,
+    "draws": 3,
+    "saveLayers": 0
+  },
+  "caf": {
+    "clips": 1,
+    "contours": 6,
+    "draws": 6,
+    "saveLayers": 0
+  },
+  "can": {
+    "clips": 1,
+    "contours": 4,
+    "draws": 3,
+    "saveLayers": 0
+  },
+  "cck": {
+    "clips": 1,
+    "contours": 10,
+    "draws": 7,
+    "saveLayers": 0
+  },
+  "che": {
+    "clips": 1,
+    "contours": 3,
+    "draws": 3,
+    "saveLayers": 0
+  },
+  "chl": {
+    "clips": 1,
+    "contours": 4,
+    "draws": 4,
+    "saveLayers": 0
+  },
+  "chn": {
+    "clips": 1,
+    "contours": 6,
+    "draws": 6,
+    "saveLayers": 0
+  },
+  "civ": {
+    "clips": 1,
+    "contours": 3,
+    "draws": 3,
+    "saveLayers": 0
+  },
+  "cmr": {
+    "clips": 1,
+    "contours": 4,
+    "draws": 4,
+    "saveLayers": 0
+  },
+  "cod": {
+    "clips": 1,
+    "contours": 4,
+    "draws": 4,
+    "saveLayers": 0
+  },
+  "cog": {
+    "clips": 2,
+    "contours": 3,
+    "draws": 3,
+    "saveLayers": 0
+  },
+  "cok": {
+    "clips": 2,
+    "contours": 27,
+    "draws": 7,
+    "saveLayers": 0
+  },
+  "col": {
+    "clips": 1,
+    "contours": 3,
+    "draws": 3,
+    "saveLayers": 0
+  },
+  "com": {
+    "clips": 1,
+    "contours": 10,
+    "draws": 7,
+    "saveLayers": 0
+  },
+  "cpv": {
+    "clips": 1,
+    "contours": 15,
+    "draws": 4,
+    "saveLayers": 0
+  },
+  "cri": {
+    "clips": 2,
+    "contours": 11,
+    "draws": 9,
+    "saveLayers": 0
+  },
+  "cub": {
+    "clips": 1,
+    "contours": 7,
+    "draws": 4,
+    "saveLayers": 0
+  },
+  "cuw": {
+    "clips": 1,
+    "contours": 5,
+    "draws": 4,
+    "saveLayers": 0
+  },
+  "cxr": {
+    "clips": 2,
+    "contours": 10,
+    "draws": 6,
+    "saveLayers": 0
+  },
+  "cym": {
+    "clips": 3,
+    "contours": 18,
+    "draws": 12,
+    "saveLayers": 0
+  },
+  "cyp": {
+    "clips": 1,
+    "contours": 25,
+    "draws": 3,
+    "saveLayers": 0
+  },
+  "cze": {
+    "clips": 1,
+    "contours": 3,
+    "draws": 3,
+    "saveLayers": 0
+  },
+  "deu": {
+    "clips": 1,
+    "contours": 3,
+    "draws": 3,
+    "saveLayers": 0
+  },
+  "dji": {
+    "clips": 1,
+    "contours": 4,
+    "draws": 4,
+    "saveLayers": 0
+  },
+  "dma": {
+    "clips": 1,
+    "contours": 24,
+    "draws": 14,
+    "saveLayers": 0
+  },
+  "dnk": {
+    "clips": 1,
+    "contours": 4,
+    "draws": 3,
+    "saveLayers": 0
+  },
+  "dom": {
+    "clips": 1,
+    "contours": 7,
+    "draws": 7,
+    "saveLayers": 0
+  },
+  "dza": {
+    "clips": 1,
+    "contours": 4,
+    "draws": 4,
+    "saveLayers": 0
+  },
+  "ecu": {
+    "clips": 1,
+    "contours": 14,
+    "draws": 14,
+    "saveLayers": 0
+  },
+  "egy": {
+    "clips": 1,
+    "contours": 7,
+    "draws": 7,
+    "saveLayers": 0
+  },
+  "eri": {
+    "clips": 1,
+    "contours": 6,
+    "draws": 4,
+    "saveLayers": 0
+  },
+  "esh": {
+    "clips": 1,
+    "contours": 6,
+    "draws": 6,
+    "saveLayers": 0
+  },
+  "esp": {
+    "clips": 1,
+    "contours": 37,
+    "draws": 11,
+    "saveLayers": 0
+  },
+  "est": {
+    "clips": 1,
+    "contours": 3,
+    "draws": 3,
+    "saveLayers": 0
+  },
+  "eth": {
+    "clips": 1,
+    "contours": 9,
+    "draws": 9,
+    "saveLayers": 0
+  },
+  "fin": {
+    "clips": 1,
+    "contours": 4,
+    "draws": 3,
+    "saveLayers": 0
+  },
+  "fji": {
+    "clips": 2,
+    "contours": 32,
+    "draws": 18,
+    "saveLayers": 0
+  },
+  "flk": {
+    "clips": 2,
+    "contours": 34,
+    "draws": 17,
+    "saveLayers": 0
+  },
+  "fra": {
+    "clips": 1,
+    "contours": 3,
+    "draws": 3,
+    "saveLayers": 0
+  },
+  "fro": {
+    "clips": 1,
+    "contours": 6,
+    "draws": 5,
+    "saveLayers": 0
+  },
+  "fsm": {
+    "clips": 1,
+    "contours": 5,
+    "draws": 2,
+    "saveLayers": 0
+  },
+  "gab": {
+    "clips": 1,
+    "contours": 3,
+    "draws": 3,
+    "saveLayers": 0
+  },
+  "gbr": {
+    "clips": 2,
+    "contours": 14,
+    "draws": 7,
+    "saveLayers": 0
+  },
+  "geo": {
+    "clips": 1,
+    "contours": 12,
+    "draws": 5,
+    "saveLayers": 0
+  },
+  "ggy": {
+    "clips": 1,
+    "contours": 5,
+    "draws": 4,
+    "saveLayers": 0
+  },
+  "gha": {
+    "clips": 1,
+    "contours": 4,
+    "draws": 4,
+    "saveLayers": 0
+  },
+  "gib": {
+    "clips": 1,
+    "contours": 21,
+    "draws": 7,
+    "saveLayers": 0
+  },
+  "gin": {
+    "clips": 1,
+    "contours": 3,
+    "draws": 3,
+    "saveLayers": 0
+  },
+  "glp": {
+    "clips": 1,
+    "contours": 3,
+    "draws": 3,
+    "saveLayers": 0
+  },
+  "gmb": {
+    "clips": 1,
+    "contours": 5,
+    "draws": 4,
+    "saveLayers": 0
+  },
+  "gnb": {
+    "clips": 1,
+    "contours": 4,
+    "draws": 4,
+    "saveLayers": 0
+  },
+  "gnq": {
+    "clips": 2,
+    "contours": 10,
+    "draws": 10,
+    "saveLayers": 0
+  },
+  "grc": {
+    "clips": 1,
+    "contours": 13,
+    "draws": 6,
+    "saveLayers": 0
+  },
+  "grd": {
+    "clips": 1,
+    "contours": 17,
+    "draws": 13,
+    "saveLayers": 0
+  },
+  "grl": {
+    "clips": 1,
+    "contours": 3,
+    "draws": 3,
+    "saveLayers": 0
+  },
+  "gtm": {
+    "clips": 1,
+    "contours": 7,
+    "draws": 6,
+    "saveLayers": 0
+  },
+  "gum": {
+    "clips": 1,
+    "contours": 7,
+    "draws": 6,
+    "saveLayers": 0
+  },
+  "guy": {
+    "clips": 1,
+    "contours": 5,
+    "draws": 5,
+    "saveLayers": 0
+  },
+  "hkg": {
+    "clips": 1,
+    "contours": 6,
+    "draws": 2,
+    "saveLayers": 0
+  },
+  "hmd": {
+    "clips": 2,
+    "contours": 18,
+    "draws": 8,
+    "saveLayers": 0
+  },
+  "hnd": {
+    "clips": 1,
+    "contours": 8,
+    "draws": 7,
+    "saveLayers": 0
+  },
+  "hrv": {
+    "clips": 1,
+    "contours": 20,
+    "draws": 7,
+    "saveLayers": 0
+  },
+  "hti": {
+    "clips": 1,
+    "contours": 4,
+    "draws": 4,
+    "saveLayers": 0
+  },
+  "hun": {
+    "clips": 1,
+    "contours": 3,
+    "draws": 3,
+    "saveLayers": 0
+  },
+  "idn": {
+    "clips": 1,
+    "contours": 2,
+    "draws": 2,
+    "saveLayers": 0
+  },
+  "imn": {
+    "clips": 1,
+    "contours": 4,
+    "draws": 3,
+    "saveLayers": 0
+  },
+  "ind": {
+    "clips": 1,
+    "contours": 8,
+    "draws": 8,
+    "saveLayers": 0
+  },
+  "iot": {
+    "clips": 2,
+    "contours": 42,
+    "draws": 13,
+    "saveLayers": 0
+  },
+  "irl": {
+    "clips": 1,
+    "contours": 3,
+    "draws": 3,
+    "saveLayers": 0
+  },
+  "irn": {
+    "clips": 1,
+    "contours": 9,
+    "draws": 6,
+    "saveLayers": 0
+  },
+  "irq": {
+    "clips": 1,
+    "contours": 9,
+    "draws": 4,
+    "saveLayers": 0
+  },
+  "isl": {
+    "clips": 1,
+    "contours": 6,
+    "draws": 5,
+    "saveLayers": 0
+  },
+  "isr": {
+    "clips": 1,
+    "contours": 7,
+    "draws": 4,
+    "saveLayers": 0
+  },
+  "ita": {
+    "clips": 1,
+    "contours": 3,
+    "draws": 3,
+    "saveLayers": 0
+  },
+  "jam": {
+    "clips": 1,
+    "contours": 5,
+    "draws": 5,
+    "saveLayers": 0
+  },
+  "jey": {
+    "clips": 1,
+    "contours": 8,
+    "draws": 6,
+    "saveLayers": 0
+  },
+  "jor": {
+    "clips": 1,
+    "contours": 5,
+    "draws": 5,
+    "saveLayers": 0
+  },
+  "jpn": {
+    "clips": 1,
+    "contours": 2,
+    "draws": 2,
+    "saveLayers": 0
+  },
+  "kaz": {
+    "clips": 1,
+    "contours": 7,
+    "draws": 6,
+    "saveLayers": 0
+  },
+  "ken": {
+    "clips": 1,
+    "contours": 15,
+    "draws": 8,
+    "saveLayers": 0
+  },
+  "kgz": {
+    "clips": 1,
+    "contours": 7,
+    "draws": 7,
+    "saveLayers": 0
+  },
+  "khm": {
+    "clips": 1,
+    "contours": 5,
+    "draws": 4,
+    "saveLayers": 0
+  },
+  "kir": {
+    "clips": 1,
+    "contours": 9,
+    "draws": 5,
+    "saveLayers": 0
+  },
+  "kna": {
+    "clips": 2,
+    "contours": 6,
+    "draws": 6,
+    "saveLayers": 0
+  },
+  "kor": {
+    "clips": 1,
+    "contours": 21,
+    "draws": 4,
+    "saveLayers": 0
+  },
+  "kwt": {
+    "clips": 1,
+    "contours": 5,
+    "draws": 5,
+    "saveLayers": 0
+  },
+  "lao": {
+    "clips": 1,
+    "contours": 4,
+    "draws": 3,
+    "saveLayers": 0
+  },
+  "lbn": {
+    "clips": 1,
+    "contours": 4,
+    "draws": 3,
+    "saveLayers": 0
+  },
+  "lbr": {
+    "clips": 1,
+    "contours": 13,
+    "draws": 4,
+    "saveLayers": 0
+  },
+  "lby": {
+    "clips": 1,
+    "contours": 5,
+    "draws": 5,
+    "saveLayers": 0
+  },
+  "lca": {
+    "clips": 1,
+    "contours": 5,
+    "draws": 5,
+    "saveLayers": 0
+  },
+  "lie": {
+    "clips": 1,
+    "contours": 3,
+    "draws": 3,
+    "saveLayers": 0
+  },
+  "lka": {
+    "clips": 1,
+    "contours": 14,
+    "draws": 11,
+    "saveLayers": 0
+  },
+  "lso": {
+    "clips": 1,
+    "contours": 6,
+    "draws": 4,
+    "saveLayers": 0
+  },
+  "ltu": {
+    "clips": 1,
+    "contours": 3,
+    "draws": 3,
+    "saveLayers": 0
+  },
+  "lux": {
+    "clips": 1,
+    "contours": 3,
+    "draws": 3,
+    "saveLayers": 0
+  },
+  "lva": {
+    "clips": 1,
+    "contours": 3,
+    "draws": 2,
+    "saveLayers": 0
+  },
+  "mac": {
+    "clips": 1,
+    "contours": 10,
+    "draws": 4,
+    "saveLayers": 0
+  },
+  "maf": {
+    "clips": 1,
+    "contours": 3,
+    "draws": 3,
+    "saveLayers": 0
+  },
+  "mar": {
+    "clips": 1,
+    "contours": 4,
+    "draws": 4,
+    "saveLayers": 0
+  },
+  "mco": {
+    "clips": 1,
+    "contours": 2,
+    "draws": 2,
+    "saveLayers": 0
+  },
+  "mda": {
+    "clips": 1,
+    "contours": 7,
+    "draws": 7,
+    "saveLayers": 0
+  },
+  "mdg": {
+    "clips": 1,
+    "contours": 3,
+    "draws": 3,
+    "saveLayers": 0
+  },
+  "mdv": {
+    "clips": 1,
+    "contours": 3,
+    "draws": 3,
+    "saveLayers": 0
+  },
+  "mex": {
+    "clips": 1,
+    "contours": 6,
+    "draws": 6,
+    "saveLayers": 0
+  },
+  "mhl": {
+    "clips": 1,
+    "contours": 5,
+    "draws": 4,
+    "saveLayers": 0
+  },
+  "mkd": {
+    "clips": 1,
+    "contours": 11,
+    "draws": 11,
+    "saveLayers": 0
+  },
+  "mli": {
+    "clips": 1,
+    "contours": 3,
+    "draws": 3,
+    "saveLayers": 0
+  },
+  "mlt": {
+    "clips": 1,
+    "contours": 14,
+    "draws": 14,
+    "saveLayers": 0
+  },
+  "mmr": {
+    "clips": 1,
+    "contours": 4,
+    "draws": 4,
+    "saveLayers": 0
+  },
+  "mne": {
+    "clips": 1,
+    "contours": 21,
+    "draws": 8,
+    "saveLayers": 0
+  },
+  "mng": {
+    "clips": 1,
+    "contours": 15,
+    "draws": 14,
+    "saveLayers": 0
+  },
+  "mnp": {
+    "clips": 1,
+    "contours": 8,
+    "draws": 8,
+    "saveLayers": 0
+  },
+  "moz": {
+    "clips": 1,
+    "contours": 9,
+    "draws": 8,
+    "saveLayers": 0
+  },
+  "mrt": {
+    "clips": 1,
+    "contours": 5,
+    "draws": 4,
+    "saveLayers": 0
+  },
+  "msr": {
+    "clips": 2,
+    "contours": 25,
+    "draws": 14,
+    "saveLayers": 0
+  },
+  "mtq": {
+    "clips": 1,
+    "contours": 3,
+    "draws": 3,
+    "saveLayers": 0
+  },
+  "mus": {
+    "clips": 1,
+    "contours": 4,
+    "draws": 4,
+    "saveLayers": 0
+  },
+  "mwi": {
+    "clips": 1,
+    "contours": 4,
+    "draws": 4,
+    "saveLayers": 0
+  },
+  "mys": {
+    "clips": 1,
+    "contours": 17,
+    "draws": 5,
+    "saveLayers": 0
+  },
+  "myt": {
+    "clips": 1,
+    "contours": 3,
+    "draws": 3,
+    "saveLayers": 0
+  },
+  "nam": {
+    "clips": 2,
+    "contours": 8,
+    "draws": 8,
+    "saveLayers": 0
+  },
+  "ncl": {
+    "clips": 1,
+    "contours": 3,
+    "draws": 3,
+    "saveLayers": 0
+  },
+  "ner": {
+    "clips": 1,
+    "contours": 4,
+    "draws": 4,
+    "saveLayers": 0
+  },
+  "nfk": {
+    "clips": 1,
+    "contours": 4,
+    "draws": 3,
+    "saveLayers": 0
+  },
+  "nga": {
+    "clips": 1,
+    "contours": 3,
+    "draws": 2,
+    "saveLayers": 0
+  },
+  "nic": {
+    "clips": 1,
+    "contours": 9,
+    "draws": 8,
+    "saveLayers": 0
+  },
+  "niu": {
+    "clips": 3,
+    "contours": 18,
+    "draws": 12,
+    "saveLayers": 0
+  },
+  "nld": {
+    "clips": 1,
+    "contours": 3,
+    "draws": 3,
+    "saveLayers": 0
+  },
+  "nor": {
+    "clips": 1,
+    "contours": 6,
+    "draws": 5,
+    "saveLayers": 0
+  },
+  "npl": {
+    "clips": 1,
+    "contours": 6,
+    "draws": 6,
+    "saveLayers": 0
+  },
+  "nru": {
+    "clips": 1,
+    "contours": 4,
+    "draws": 3,
+    "saveLayers": 0
+  },
+  "nzl": {
+    "clips": 2,
+    "contours": 20,
+    "draws": 14,
+    "saveLayers": 0
+  },
+  "omn": {
+    "clips": 1,
+    "contours": 6,
+    "draws": 5,
+    "saveLayers": 0
+  },
+  "pak": {
+    "clips": 1,
+    "contours": 4,
+    "draws": 4,
+    "saveLayers": 0
+  },
+  "pan": {
+    "clips": 1,
+    "contours": 6,
+    "draws": 6,
+    "saveLayers": 0
+  },
+  "pcn": {
+    "clips": 2,
+    "contours": 17,
+    "draws": 9,
+    "saveLayers": 0
+  },
+  "per": {
+    "clips": 1,
+    "contours": 3,
+    "draws": 2,
+    "saveLayers": 0
+  },
+  "phl": {
+    "clips": 1,
+    "contours": 10,
+    "draws": 8,
+    "saveLayers": 0
+  },
+  "plw": {
+    "clips": 1,
+    "contours": 2,
+    "draws": 2,
+    "saveLayers": 0
+  },
+  "png": {
+    "clips": 2,
+    "contours": 8,
+    "draws": 4,
+    "saveLayers": 0
+  },
+  "pol": {
+    "clips": 1,
+    "contours": 2,
+    "draws": 2,
+    "saveLayers": 0
+  },
+  "pri": {
+    "clips": 1,
+    "contours": 7,
+    "draws": 4,
+    "saveLayers": 0
+  },
+  "prk": {
+    "clips": 1,
+    "contours": 7,
+    "draws": 5,
+    "saveLayers": 0
+  },
+  "prt": {
+    "clips": 1,
+    "contours": 24,
+    "draws": 6,
+    "saveLayers": 0
+  },
+  "pry": {
+    "clips": 1,
+    "contours": 10,
+    "draws": 10,
+    "saveLayers": 0
+  },
+  "pse": {
+    "clips": 1,
+    "contours": 4,
+    "draws": 4,
+    "saveLayers": 0
+  },
+  "pyf": {
+    "clips": 1,
+    "contours": 7,
+    "draws": 6,
+    "saveLayers": 0
+  },
+  "qat": {
+    "clips": 1,
+    "contours": 11,
+    "draws": 11,
+    "saveLayers": 0
+  },
+  "reu": {
+    "clips": 1,
+    "contours": 3,
+    "draws": 3,
+    "saveLayers": 0
+  },
+  "rou": {
+    "clips": 1,
+    "contours": 3,
+    "draws": 3,
+    "saveLayers": 0
+  },
+  "rus": {
+    "clips": 1,
+    "contours": 3,
+    "draws": 3,
+    "saveLayers": 0
+  },
+  "rwa": {
+    "clips": 1,
+    "contours": 6,
+    "draws": 6,
+    "saveLayers": 0
+  },
+  "sau": {
+    "clips": 1,
+    "contours": 85,
+    "draws": 3,
+    "saveLayers": 0
+  },
+  "sdn": {
+    "clips": 1,
+    "contours": 4,
+    "draws": 4,
+    "saveLayers": 0
+  },
+  "sen": {
+    "clips": 1,
+    "contours": 4,
+    "draws": 4,
+    "saveLayers": 0
+  },
+  "sgp": {
+    "clips": 1,
+    "contours": 8,
+    "draws": 8,
+    "saveLayers": 0
+  },
+  "sgs": {
+    "clips": 2,
+    "contours": 36,
+    "draws": 18,
+    "saveLayers": 0
+  },
+  "shn": {
+    "clips": 2,
+    "contours": 14,
+    "draws": 7,
+    "saveLayers": 0
+  },
+  "sjm": {
+    "clips": 1,
+    "contours": 6,
+    "draws": 5,
+    "saveLayers": 0
+  },
+  "slb": {
+    "clips": 2,
+    "contours": 8,
+    "draws": 4,
+    "saveLayers": 0
+  },
+  "sle": {
+    "clips": 1,
+    "contours": 3,
+    "draws": 3,
+    "saveLayers": 0
+  },
+  "slv": {
+    "clips": 1,
+    "contours": 12,
+    "draws": 11,
+    "saveLayers": 0
+  },
+  "smr": {
+    "clips": 1,
+    "contours": 18,
+    "draws": 8,
+    "saveLayers": 0
+  },
+  "som": {
+    "clips": 1,
+    "contours": 2,
+    "draws": 2,
+    "saveLayers": 0
+  },
+  "spm": {
+    "clips": 1,
+    "contours": 3,
+    "draws": 3,
+    "saveLayers": 0
+  },
+  "srb": {
+    "clips": 1,
+    "contours": 28,
+    "draws": 14,
+    "saveLayers": 0
+  },
+  "ssd": {
+    "clips": 1,
+    "contours": 7,
+    "draws": 6,
+    "saveLayers": 0
+  },
+  "stp": {
+    "clips": 1,
+    "contours": 6,
+    "draws": 4,
+    "saveLayers": 0
+  },
+  "sur": {
+    "clips": 1,
+    "contours": 6,
+    "draws": 4,
+    "saveLayers": 0
+  },
+  "svk": {
+    "clips": 1,
+    "contours": 8,
+    "draws": 7,
+    "saveLayers": 0
+  },
+  "svn": {
+    "clips": 1,
+    "contours": 6,
+    "draws": 6,
+    "saveLayers": 0
+  },
+  "swe": {
+    "clips": 1,
+    "contours": 4,
+    "draws": 3,
+    "saveLayers": 0
+  },
+  "swz": {
+    "clips": 1,
+    "contours": 11,
+    "draws": 9,
+    "saveLayers": 0
+  },
+  "sxm": {
+    "clips": 1,
+    "contours": 3,
+    "draws": 3,
+    "saveLayers": 0
+  },
+  "syc": {
+    "clips": 2,
+    "contours": 5,
+    "draws": 5,
+    "saveLayers": 0
+  },
+  "syr": {
+    "clips": 1,
+    "contours": 6,
+    "draws": 6,
+    "saveLayers": 0
+  },
+  "tca": {
+    "clips": 2,
+    "contours": 33,
+    "draws": 13,
+    "saveLayers": 0
+  },
+  "tcd": {
+    "clips": 1,
+    "contours": 3,
+    "draws": 3,
+    "saveLayers": 0
+  },
+  "tgo": {
+    "clips": 1,
+    "contours": 7,
+    "draws": 4,
+    "saveLayers": 0
+  },
+  "tha": {
+    "clips": 1,
+    "contours": 5,
+    "draws": 3,
+    "saveLayers": 0
+  },
+  "tjk": {
+    "clips": 1,
+    "contours": 15,
+    "draws": 5,
+    "saveLayers": 0
+  },
+  "tkl": {
+    "clips": 1,
+    "contours": 7,
+    "draws": 3,
+    "saveLayers": 0
+  },
+  "tkm": {
+    "clips": 1,
+    "contours": 20,
+    "draws": 10,
+    "saveLayers": 0
+  },
+  "tls": {
+    "clips": 1,
+    "contours": 4,
+    "draws": 4,
+    "saveLayers": 0
+  },
+  "ton": {
+    "clips": 1,
+    "contours": 5,
+    "draws": 5,
+    "saveLayers": 0
+  },
+  "tto": {
+    "clips": 1,
+    "contours": 3,
+    "draws": 3,
+    "saveLayers": 0
+  },
+  "tun": {
+    "clips": 1,
+    "contours": 4,
+    "draws": 4,
+    "saveLayers": 0
+  },
+  "tur": {
+    "clips": 1,
+    "contours": 3,
+    "draws": 3,
+    "saveLayers": 0
+  },
+  "tuv": {
+    "clips": 2,
+    "contours": 21,
+    "draws": 7,
+    "saveLayers": 0
+  },
+  "twn": {
+    "clips": 1,
+    "contours": 5,
+    "draws": 5,
+    "saveLayers": 0
+  },
+  "tza": {
+    "clips": 2,
+    "contours": 5,
+    "draws": 5,
+    "saveLayers": 0
+  },
+  "uga": {
+    "clips": 1,
+    "contours": 9,
+    "draws": 6,
+    "saveLayers": 0
+  },
+  "ukr": {
+    "clips": 1,
+    "contours": 2,
+    "draws": 2,
+    "saveLayers": 0
+  },
+  "umi": {
+    "clips": 1,
+    "contours": 64,
+    "draws": 4,
+    "saveLayers": 0
+  },
+  "ury": {
+    "clips": 1,
+    "contours": 13,
+    "draws": 6,
+    "saveLayers": 0
+  },
+  "usa": {
+    "clips": 1,
+    "contours": 64,
+    "draws": 4,
+    "saveLayers": 0
+  },
+  "uzb": {
+    "clips": 1,
+    "contours": 18,
+    "draws": 6,
+    "saveLayers": 0
+  },
+  "vat": {
+    "clips": 1,
+    "contours": 6,
+    "draws": 4,
+    "saveLayers": 0
+  },
+  "vct": {
+    "clips": 1,
+    "contours": 6,
+    "draws": 6,
+    "saveLayers": 0
+  },
+  "ven": {
+    "clips": 1,
+    "contours": 11,
+    "draws": 4,
+    "saveLayers": 0
+  },
+  "vgb": {
+    "clips": 3,
+    "contours": 18,
+    "draws": 12,
+    "saveLayers": 0
+  },
+  "vir": {
+    "clips": 1,
+    "contours": 8,
+    "draws": 6,
+    "saveLayers": 0
+  },
+  "vnm": {
+    "clips": 1,
+    "contours": 2,
+    "draws": 2,
+    "saveLayers": 0
+  },
+  "vut": {
+    "clips": 1,
+    "contours": 12,
+    "draws": 11,
+    "saveLayers": 0
+  },
+  "wlf": {
+    "clips": 1,
+    "contours": 3,
+    "draws": 3,
+    "saveLayers": 0
+  },
+  "wsm": {
+    "clips": 1,
+    "contours": 7,
+    "draws": 3,
+    "saveLayers": 0
+  },
+  "yem": {
+    "clips": 1,
+    "contours": 3,
+    "draws": 3,
+    "saveLayers": 0
+  },
+  "zaf": {
+    "clips": 1,
+    "contours": 10,
+    "draws": 9,
+    "saveLayers": 0
+  },
+  "zmb": {
+    "clips": 1,
+    "contours": 6,
+    "draws": 5,
+    "saveLayers": 0
+  },
+  "zwe": {
+    "clips": 1,
+    "contours": 11,
+    "draws": 8,
+    "saveLayers": 0
+  },
+  "unk": {
+    "clips": 1,
+    "contours": 8,
+    "draws": 3,
+    "saveLayers": 0
+  },
+  "guf": {
+    "clips": 2,
+    "contours": 3,
+    "draws": 3,
+    "saveLayers": 0
+  }
+}

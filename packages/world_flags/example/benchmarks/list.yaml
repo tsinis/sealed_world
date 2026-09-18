@@ -1,0 +1,22 @@
+# The flag list itself: `WorldCountry.list` in a scrolling list, every row a
+# `CountryFlag` at 24 logical pixels. `test.yaml` measures the shader settings
+# page instead, so this is the flow to use when the painters change.
+#
+# For local usage connect your Android device and run:
+# `dart run tools/bin/benchmarks.dart world_flags --test-command "maestro test list.yaml"`
+appId: com.example.world_flags_example
+---
+- waitForAnimationToEnd:
+    timeout: 1000
+- repeat:
+    times: 6
+    commands:
+      - swipe:
+          start: "50%,85%"
+          end: "50%,15%"
+- repeat:
+    times: 6
+    commands:
+      - swipe:
+          start: "50%,15%"
+          end: "50%,85%"

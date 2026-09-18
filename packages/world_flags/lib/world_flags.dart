@@ -26,6 +26,7 @@ import "src/ui/painters/custom/ecu_painter.dart";
 import "src/ui/painters/custom/eri_painter.dart";
 import "src/ui/painters/custom/esp_painter.dart";
 import "src/ui/painters/custom/ggy_painter.dart";
+import "src/ui/painters/custom/gib_painter.dart";
 import "src/ui/painters/custom/hkg_painter.dart";
 import "src/ui/painters/custom/hrv_painter.dart";
 import "src/ui/painters/custom/imn_painter.dart";
@@ -133,6 +134,7 @@ export "src/ui/painters/custom/ecu_painter.dart";
 export "src/ui/painters/custom/eri_painter.dart";
 export "src/ui/painters/custom/esp_painter.dart";
 export "src/ui/painters/custom/ggy_painter.dart";
+export "src/ui/painters/custom/gib_painter.dart";
 export "src/ui/painters/custom/hkg_painter.dart";
 export "src/ui/painters/custom/hrv_painter.dart";
 export "src/ui/painters/custom/imn_painter.dart";
@@ -264,7 +266,7 @@ const uniqueSimplifiedFlagsMap = <WorldCountry, BasicFlag>{
   CountryCze(): BasicFlag(flagCzeProperties),
   CountryDeu(): BasicFlag(flagDeuProperties),
   CountryDji(): BasicFlag(flagDjiProperties),
-  CountryDma(): BasicFlag(flagDmaProperties),
+  CountryDma(): BasicFlag(flagDmaProperties, elementsBuilder: DmaPainter.new),
   CountryDnk(): BasicFlag(flagDnkProperties),
   CountryDom(): BasicFlag(flagDomProperties),
   CountryDza(): BasicFlag(flagDzaProperties),
@@ -292,7 +294,7 @@ const uniqueSimplifiedFlagsMap = <WorldCountry, BasicFlag>{
   CountryGeo(): BasicFlag(flagGeoProperties, elementsBuilder: GeoPainter.new),
   CountryGgy(): BasicFlag(flagGgyProperties, elementsBuilder: GgyPainter.new),
   CountryGha(): BasicFlag(flagGhaProperties),
-  CountryGib(): BasicFlag(flagGibProperties),
+  CountryGib(): BasicFlag(flagGibProperties, elementsBuilder: GibPainter.new),
   CountryGin(): BasicFlag(flagGinProperties),
   CountryGlp(): BasicFlag(flagGlpProperties),
   CountryGmb(): BasicFlag(flagGmbProperties),
@@ -513,7 +515,7 @@ const uniqueSimplifiedFlagsMap = <WorldCountry, BasicFlag>{
   CountryYem(): BasicFlag(flagYemProperties),
   CountryZaf(): BasicFlag(flagZafProperties),
   CountryZmb(): BasicFlag(flagZmbProperties, elementsBuilder: ZmbPainter.new),
-  CountryZwe(): BasicFlag(flagZweProperties),
+  CountryZwe(): BasicFlag(flagZweProperties, elementsBuilder: ZwePainter.new),
   CountryUnk(): BasicFlag(
     flagUnkProperties,
     elementsBuilder: KosovoPainter.new,

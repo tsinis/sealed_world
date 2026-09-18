@@ -65,7 +65,7 @@ class _MainState extends State<Main> {
     child: ListView.separated(
       itemBuilder: (bc, index) {
         final item = _items.keys.elementAt(index);
-        final isSimplified = _items[item]?.properties.isSimplified ?? false;
+        final isSimplified = _items[item]?.properties.isSimplified ?? true;
 
         return ListTile(
           enabled: !isSimplified,

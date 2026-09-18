@@ -27,6 +27,9 @@ Capturing structured metrics per version ensures regressions are detected early 
 4. Execute the automated Maestro flow with Flashlight:
    - `setup.yaml` launches the example, waits for stabilization, and confirms the main list.
    - `test.yaml` opens the first flag settings page and scrolls through shader controls.
+   - `list.yaml` scrolls the flag list itself, six swipes down and six back up. Use it when the
+     painters change, since `test.yaml` barely touches them:
+     `dart run tools/bin/benchmarks.dart world_flags --test-command "maestro test list.yaml"`.
 5. Persist Flashlight JSON results and formatted metadata with immutable timestamps.
 6. Generate a Flashlight report for quick inspection.
 
@@ -110,3 +113,35 @@ Include both metadata and result JSON files when publishing releases. Do not ove
 | Report misses files              | Results renamed or glob mismatch   | Verify `result_*.json` exists |
 
 Maintaining consistent procedures keeps regression tracking reliable.
+
+## 6. Measuring frame times directly
+
+`example/integration_test/flag_list_perf_test.dart` traces three screens under
+`flutter drive`: an empty list, a list of plain boxes, and the flag list at 24 logical pixels a
+row. The three are a ladder — the floor the device reaches with nothing painted, one trivial draw
+per row, and what the painters cost on top.
+
+```bash
+cd packages/world_flags/example
+PERF_RUN=baseline flutter drive --profile -d <device> --no-dds \
+  --driver=test_driver/perf_driver.dart \
+  --target=integration_test/flag_list_perf_test.dart
+```
+
+`--no-dds` is required: `traceAction` needs the VM service directly. The driver writes a
+`TimelineSummary` per screen to `benchmarks/local/`, named after `PERF_RUN`, and prints the build
+and rasterizer averages. That directory is ignored: the numbers are per machine.
+
+Three things to know before reading the output:
+
+- **Compare within one run, never across runs.** The first screen a run traces can read several
+  milliseconds faster than the same screen traced later. On a Snapdragon 665 the same code
+  measured 8.2 ms and 12.0 ms depending on its position in the run, which is larger than most
+  changes worth making.
+- A desktop runs Impeller on Metal, where a draw command costs far less than on the Impeller GLES
+  backend that mid-range Android devices use. Treat a desktop run as direction, not magnitude.
+- The live test binding coalesces frames, so a run records fewer frames than it takes steps.
+
+For an exact, machine-independent figure use the draw-command census instead:
+`test/src/ui/painters/flag_draw_ops_test.dart` counts every canvas command each flag costs and
+holds it against `flag_draw_ops.json`.

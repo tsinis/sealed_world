@@ -18,8 +18,9 @@ const flagAfgProperties = FlagProperties(
   elementsProperties: [
     CustomElementsProperties(
       Color(0xff000000),
-      heightFactor: 0.55,
-      widthFactor: 1.4,
+      offset: Offset(-0.0199, 0.0156),
+      heightFactor: 0.5554,
+      widthFactor: 0.6999,
     ),
   ],
 );
@@ -236,11 +237,10 @@ const flagLkaProperties = FlagProperties(
   isSimplified: null,
   elementsProperties: [
     CustomElementsProperties(
-      Color(0xffF7B718),
-      otherColors: [Color(0xff000000)],
-      offset: Offset(0.33, -0.14),
-      heightFactor: 0.63,
-      widthFactor: 0.45,
+      Color(0xfff7b718),
+      offset: Offset(0.3112, -0.0029),
+      heightFactor: 0.6315,
+      widthFactor: 0.3896,
     ),
     ElementsProperties(
       Color(0xffF7B718),
@@ -604,11 +604,10 @@ const flagAgoProperties = FlagProperties(
   [ColorsProperties(Color(0xffff0000)), ColorsProperties(Color(0xff000000))],
   elementsProperties: [
     CustomElementsProperties(
-      Color(0xffFFCD00),
-      otherColors: [Color(0xff000000)],
-      offset: Offset(-0.14, -0.03),
-      heightFactor: 0.26,
-      widthFactor: 0.71,
+      Color(0xffffcd00),
+      offset: Offset(0.0317, -0.0055),
+      heightFactor: 0.5926,
+      widthFactor: 0.3123,
     ),
   ],
   url: "https://www.vexilla-mundi.com/angola/angola_sheet.png",
@@ -730,32 +729,16 @@ const flagSmrProperties = FlagProperties(
   isSimplified: true,
   elementsProperties: [
     CustomElementsProperties(
-      Color(0xffe9bf00),
+      Color(0xff006800),
       otherColors: [
-        Color(0xff65c7ff),
-        Color(0xff006800),
         Color(0xffa9a9a9),
-        Color(0xffa8a8a8),
-        Color(0xff004100),
+        Color(0xffe9bf00),
         Color(0xff65c7ff),
-        Color(0xff8fc753),
-        Color(0xff8fc753),
-        Color(0xffffe100),
-        Color(0xffe40000),
-        Color(0xffc76e2e),
-        Color(0xff9d4916),
-        Color(0xff7d6c00),
-        Color(0xff3a9d4f),
-        Color(0xff000000),
-        Color(0xffac0000),
-        Color(0xff68300e),
-        Color(0xff00a400),
-        Color(0xffffdd00),
         Color(0xff4fd46b),
       ],
-      offset: Offset(0, -0.05),
-      heightFactor: 0.4,
-      widthFactor: 0.4,
+      offset: Offset(0.003, -0.1117),
+      heightFactor: 0.6079,
+      widthFactor: 0.385,
     ),
   ],
   url: "https://www.vexilla-mundi.com/san_marino/san_marino_sheet.png",
@@ -905,51 +888,12 @@ const flagGibProperties = FlagProperties(
   baseElementType: FlagElementsType.multiElement,
   isSimplified: true,
   elementsProperties: [
-    ElementsProperties(
-      Color(0xfff8d80e),
-      shape: Rectangle(aspectRatio: 0.1),
-      offset: Offset(0, 0.8),
-      heightFactor: 30 / 114,
-    ),
-    ElementsProperties(
-      Color(0xffda000c),
-      shape: Rectangle(aspectRatio: 0.8),
-      offset: Offset(0, -0.5),
-      heightFactor: 60 / 114,
-      child: ElementsProperties(
-        Color(0xffffffff),
-        shape: Rectangle(aspectRatio: 1),
-        offset: Offset(0, -1),
-        heightFactor: 0.4,
-        child: ElementsProperties(
-          Color(0xffda000c),
-          shape: Rectangle(aspectRatio: 0.6),
-        ),
-      ),
-    ),
-    ElementsProperties(
-      Color(0xffda000c),
-      shape: Rectangle(aspectRatio: 2.1),
-      heightFactor: 30 / 114,
-      child: ElementsProperties(
-        Color(0xff000000),
-        shape: Rectangle(aspectRatio: 4),
-        offset: Offset(0, 0.5),
-        heightFactor: 0.4,
-        child: ElementsProperties(
-          Color(0xffda000c),
-          shape: Rectangle(aspectRatio: 2.5),
-          child: ElementsProperties(
-            Color(0xff000000),
-            shape: Rectangle(aspectRatio: 1),
-          ),
-        ),
-      ),
-    ),
     CustomElementsProperties(
-      Color(0xffda000c),
-      otherColors: [Color(0xffffffff), Color(0xff000000), Color(0xfff8d80e)],
-      heightFactor: 100 / 114,
+      Color(0xffda1c0b),
+      otherColors: [Color(0xff000000), Color(0xfffff100)],
+      offset: Offset(0, 0.09),
+      heightFactor: 0.89,
+      widthFactor: 0.3319,
     ),
   ],
   url: "https://www.vexilla-mundi.com/gibraltar/gibraltar_sheet.png",
@@ -1441,9 +1385,9 @@ const flagIrnProperties = FlagProperties(
   elementsProperties: [
     CustomElementsProperties(
       Color(0xffda0000),
-      offset: Offset(-0.01, 0.025),
-      heightFactor: 0.22,
-      widthFactor: 0.17,
+      offset: Offset(-0.0029, 0.003),
+      heightFactor: 0.2414,
+      widthFactor: 0.1455,
     ),
     ElementsProperties(
       Color.fromARGB(100, 255, 255, 255),
@@ -1545,9 +1489,9 @@ const flagPngProperties = FlagProperties(
   elementsProperties: [
     CustomElementsProperties(
       Color(0xffffcc00),
-      offset: Offset(0.35, -0.24),
-      heightFactor: 0.51,
-      widthFactor: 0.36,
+      offset: Offset(0.3372, -0.2748),
+      heightFactor: 0.5107,
+      widthFactor: 0.3314,
     ),
     ElementsProperties(
       Color(0xffffffff),
@@ -1592,11 +1536,11 @@ const flagSvkProperties = FlagProperties(
   ],
   elementsProperties: [
     CustomElementsProperties(
-      Color(0xffffffff),
-      otherColors: [Color(0xffee1c25), Color(0xff0b4ea2)],
-      offset: Offset(-0.4, -0.01),
+      Color(0xffee1c25),
+      otherColors: [Color(0xffffffff), Color(0xff0b4ea2)],
+      offset: Offset(-0.3974, -0.01),
       heightFactor: 0.525,
-      widthFactor: 0.29,
+      widthFactor: 0.2843,
     ),
   ],
   url: "https://wikipedia.org/wiki/File:Flag_of_Slovakia_(construction_sheet).svg",
@@ -1776,25 +1720,11 @@ const flagEspProperties = FlagProperties(
   isSimplified: null,
   elementsProperties: [
     CustomElementsProperties(
-      Color(0xffad1519),
-      otherColors: [
-        Color(0xffc8b100),
-        Color(0xff005bbf),
-        Color(0xffad1519),
-        Color(0xffc7b500),
-        Color(0xffdb4446),
-        Color(0xff058e6e),
-        Color(0xffcccccc),
-        Color(0xffc7b500),
-        Color(0xffed72aa),
-        Color(0xffffd691),
-        Color(0xff0039f0),
-        Color(0xff000000),
-        Color(0xffffffff),
-      ],
-      offset: Offset(-1 / 3, 0.125),
-      heightFactor: 0.28,
-      widthFactor: 0.25,
+      Color(0xffffffff),
+      otherColors: [Color(0xffad1519), Color(0xffc8b100), Color(0xff005bbf)],
+      offset: Offset(-0.3333, 0.0018),
+      heightFactor: 0.3836,
+      widthFactor: 0.2514,
     ),
   ],
   url: "https://wikipedia.org/wiki/File:Flag_of_Spain_(construction_sheet).png",
@@ -1809,7 +1739,12 @@ const flagIrqProperties = FlagProperties(
   ],
   isSimplified: null,
   elementsProperties: [
-    CustomElementsProperties(Color(0xff017b3d), heightFactor: 1 / 4),
+    CustomElementsProperties(
+      Color(0xff017b3d),
+      offset: Offset(-0.0001, 0.0101),
+      heightFactor: 0.1899,
+      widthFactor: 0.3994,
+    ),
   ],
   url: "https://wikipedia.org/wiki/File:Flag_of_Iraq_(construction_sheet).svg",
 );
@@ -1875,10 +1810,10 @@ const flagEriProperties = FlagProperties(
   aspectRatio: 2,
   elementsProperties: [
     CustomElementsProperties(
-      Color(0xffFBC724),
-      offset: Offset(-0.68, -0.21),
-      heightFactor: 1 / 2,
-      widthFactor: 1 / 4,
+      Color(0xfffbc724),
+      offset: Offset(-0.5031, 0.0399),
+      heightFactor: 0.4999,
+      widthFactor: 0.2522,
     ),
     ElementsProperties(
       Color(0xffEB0433),

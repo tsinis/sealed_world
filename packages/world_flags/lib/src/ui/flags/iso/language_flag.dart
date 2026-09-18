@@ -255,7 +255,7 @@ class LanguageFlag extends DualFlag<NaturalLanguage, BasicFlag> {
       elementsBuilder: UsaStarsPainter.new,
     ),
     LangNbl(): BasicFlag(flagZafProperties),
-    LangNde(): BasicFlag(flagZweProperties),
+    LangNde(): BasicFlag(flagZweProperties, elementsBuilder: ZwePainter.new),
     LangNdo(): BasicFlag(flagNamProperties),
     LangNep(): BasicFlag(flagNplProperties, elementsBuilder: NplPainter.new),
     LangNld(): BasicFlag(flagNldProperties),
@@ -294,7 +294,7 @@ class LanguageFlag extends DualFlag<NaturalLanguage, BasicFlag> {
     LangSlv(): BasicFlag(flagSvnProperties, elementsBuilder: SvnPainter.new),
     LangSme(): BasicFlag(flagNorProperties),
     LangSmo(): BasicFlag(flagWsmProperties),
-    LangSna(): BasicFlag(flagZweProperties),
+    LangSna(): BasicFlag(flagZweProperties, elementsBuilder: ZwePainter.new),
     LangSnd(): BasicFlag(flagPakProperties),
     LangSom(): BasicFlag(flagSomProperties),
     LangSot(): BasicFlag(flagZafProperties),
@@ -403,7 +403,10 @@ class LanguageFlag extends DualFlag<NaturalLanguage, BasicFlag> {
         LangLim(): BasicFlag(flagBelProperties),
         LangMsa(): BasicFlag(flagSgpProperties),
         LangNld(): BasicFlag(flagBelProperties),
-        LangNya(): BasicFlag(flagZweProperties),
+        LangNya(): BasicFlag(
+          flagZweProperties,
+          elementsBuilder: ZwePainter.new,
+        ),
         LangOci(): BasicFlag(
           flagEspProperties,
           elementsBuilder: EspPainter.new,
@@ -464,13 +467,22 @@ class LanguageFlag extends DualFlag<NaturalLanguage, BasicFlag> {
           elementsBuilder: EriPainter.new,
         ),
         LangTsn(): BasicFlag(flagZafProperties),
-        LangTso(): BasicFlag(flagZweProperties),
+        LangTso(): BasicFlag(
+          flagZweProperties,
+          elementsBuilder: ZwePainter.new,
+        ),
         LangTur(): BasicFlag(
           flagCypProperties,
           elementsBuilder: CypPainter.new,
         ),
-        LangVen(): BasicFlag(flagZweProperties),
-        LangXho(): BasicFlag(flagZweProperties),
+        LangVen(): BasicFlag(
+          flagZweProperties,
+          elementsBuilder: ZwePainter.new,
+        ),
+        LangXho(): BasicFlag(
+          flagZweProperties,
+          elementsBuilder: ZwePainter.new,
+        ),
         LangYid(): BasicFlag(flagDeuProperties),
         LangZho(): BasicFlag(flagTwnProperties),
       };

@@ -15,6 +15,7 @@ import "../../painters/custom/david_star_painter.dart";
 import "../../painters/custom/eagle_painter.dart";
 import "../../painters/custom/ecu_painter.dart";
 import "../../painters/custom/eri_painter.dart";
+import "../../painters/custom/gib_painter.dart";
 import "../../painters/custom/hkg_painter.dart";
 import "../../painters/custom/irq_painter.dart";
 import "../../painters/custom/ken_painter.dart";
@@ -169,7 +170,7 @@ class CurrencyFlag extends DualFlag<FiatCurrency, BasicFlag> {
     ),
     FiatGel(): BasicFlag(flagGeoProperties, elementsBuilder: GeoPainter.new),
     FiatGhs(): BasicFlag(flagGhaProperties),
-    FiatGip(): BasicFlag(flagGibProperties),
+    FiatGip(): BasicFlag(flagGibProperties, elementsBuilder: GibPainter.new),
     FiatGmd(): BasicFlag(flagGmbProperties),
     FiatGnf(): BasicFlag(flagGinProperties),
     FiatGtq(): BasicFlag(flagGtmProperties),
@@ -305,7 +306,7 @@ class CurrencyFlag extends DualFlag<FiatCurrency, BasicFlag> {
     FiatYer(): BasicFlag(flagYemProperties),
     FiatZar(): BasicFlag(flagZafProperties),
     FiatZmw(): BasicFlag(flagZmbProperties, elementsBuilder: ZmbPainter.new),
-    FiatZwg(): BasicFlag(flagZweProperties),
+    FiatZwg(): BasicFlag(flagZweProperties, elementsBuilder: ZwePainter.new),
   };
 
   /// Default secondary country flags for currencies used in multiple countries.

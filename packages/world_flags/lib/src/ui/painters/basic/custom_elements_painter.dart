@@ -1,5 +1,5 @@
 import "dart:math";
-import "dart:ui" show Color, Rect, Size;
+import "dart:ui" show Color, Offset, Paint, Rect, Size;
 
 import "package:flutter/foundation.dart";
 
@@ -63,17 +63,33 @@ abstract base class CustomElementsPainter<T extends FlagParentBounds>
   @protected
   Rect proportionalBounds(Size size, double artworkAspectRatio) {
     assert(artworkAspectRatio > 0, "Aspect ratio should be greater than zero.");
+    // Read from the custom element rather than the first one: flags that paint
+    // a shape behind their badge keep that shape at the head of the list.
+    final element = customProperties;
     final height = min(
-      size.height * property.heightFactor,
-      (size.width * (property.widthFactor ?? 1)) / artworkAspectRatio,
+      size.height * element.heightFactor,
+      (size.width * (element.widthFactor ?? 1)) / artworkAspectRatio,
     );
+    final offset = element.offset;
 
     return Rect.fromCenter(
-      center: calculateCenter(size),
+      center: Offset(
+        (offset.dx + 1) * size.width / 2,
+        (offset.dy + 1) * size.height / 2,
+      ),
       width: height * artworkAspectRatio,
       height: height,
     );
   }
+
+  /// The paint for the badge layer whose palette index is [index].
+  ///
+  /// `0` is the custom element's `mainColor` and `n` is its
+  /// `otherColors[n - 1]`, so the palette stays in the flag data.
+  @protected
+  Paint badgePaint(int index) => paintCreator(
+    index == 0 ? customProperties.mainColor : customColors[index - 1],
+  );
 
   /// Adjusts the size of the child element based on the aspect ratio.
   ///

@@ -1,1035 +1,166 @@
-// ignore_for_file: prefer-moving-to-variable, avoid-similar-names
+// ignore_for_file: format-comment
 
 import "dart:ui";
 
-import "../../../data/flags_map_part_3.data.dart";
 import "../../../model/typedefs.dart";
+import "../basic/badge_artwork.dart";
 import "../basic/custom_elements_painter.dart";
 
-/// Painter for the Spain flag.
+/// Painter for the coat of arms of Spain.
 final class EspPainter extends CustomElementsPainter {
   /// Creates a new instance of [EspPainter].
   const new(super._properties, super.aspectRatio);
 
-  @override
-  double get originalAspectRatio => flagEspProperties.aspectRatio;
+  /// Width over height of the emblem artwork.
+  ///
+  /// The emblem keeps this ratio whatever ratio the flag itself is drawn at.
+  static const _artworkRatio = 0.983;
+
+  /// The artwork, packed into typed arrays on first paint and reused after.
+  static final _artwork = BadgeArtwork(_layers);
+
+  /// Commands as an opcode then its coordinates, relative to the emblem
+  /// box: 1 moves, 2 draws a line, 0 closes the sub-path.
+  // dart format off
+  static const _layers = <BadgeLayer>[
+    (color: 0, geometry: [
+      1, 0.0624, 0.365, 2, 0.1419, 0.3651, 2, 0.1419, 0.8176, 2, 0.0624,
+      0.8175, 0, 1, 0.8599, 0.365, 2, 0.858, 0.8176, 2, 0.9376, 0.8175, 2,
+      0.9376, 0.365, 0, 1, 0.4992, 0.5913, 2, 0.437, 0.5962, 2, 0.3804, 0.61,
+      2, 0.3305, 0.6315, 2, 0.2877, 0.6611, 2, 0.2559, 0.6968, 2, 0.237,
+      0.7363, 2, 0.2315, 0.7779, 2, 0.2395, 0.8189, 2, 0.2607, 0.8575, 2,
+      0.294, 0.8917, 2, 0.3379, 0.9199, 2, 0.3903, 0.9407, 2, 0.4492, 0.9531,
+      2, 0.5099, 0.9561, 2, 0.5699, 0.9502, 2, 0.6263, 0.9353, 2, 0.6964,
+      0.899, 2, 0.7241, 0.8752, 2, 0.7457, 0.8483, 2, 0.7604, 0.8192, 2,
+      0.7676, 0.7896, 2, 0.7677, 0.759, 2, 0.7601, 0.7275, 2, 0.7453, 0.6986,
+      2, 0.7249, 0.6731, 2, 0.6646, 0.6289, 2, 0.5863, 0.6007, 0,
+    ]),
+    (color: 1, geometry: [
+      1, 0.1068, 0.1811, 2, 0.0714, 0.196, 2, 0.0625, 0.2184, 2, 0.066,
+      0.2907, 2, 0.0804, 0.3107, 2, 0.1019, 0.3184, 2, 0.1328, 0.3078, 2,
+      0.1418, 0.2816, 2, 0.1389, 0.2073, 2, 0.1264, 0.1884, 0, 1, 0.9025,
+      0.1811, 2, 0.8671, 0.196, 2, 0.8582, 0.2184, 2, 0.8616, 0.2907, 2,
+      0.8761, 0.3107, 2, 0.8976, 0.3184, 2, 0.9285, 0.3078, 2, 0.9375,
+      0.2816, 2, 0.9346, 0.2073, 2, 0.922, 0.1884, 0, 1, 0.5, 0.6351, 2,
+      0.5021, 0.7993, 2, 0.5147, 0.8392, 2, 0.5376, 0.8724, 2, 0.5799,
+      0.9023, 2, 0.629, 0.9124, 2, 0.6762, 0.9026, 2, 0.7251, 0.8716, 2,
+      0.7523, 0.8369, 2, 0.7664, 0.7974, 2, 0.7685, 0.6352, 0,
+    ]),
+    (color: 2, geometry: [
+      1, 0.2315, 0.6351, 2, 0.2335, 0.7993, 2, 0.2462, 0.8392, 2, 0.269,
+      0.8724, 2, 0.3114, 0.9023, 2, 0.3605, 0.9124, 2, 0.4077, 0.9026, 2,
+      0.4566, 0.8716, 2, 0.4837, 0.8369, 2, 0.4978, 0.7974, 2, 0.5, 0.6352,
+      0, 1, 0.0642, 0.2701, 2, 0.0348, 0.2786, 2, 0.0171, 0.3031, 2, 0.0175,
+      0.3331, 2, 0.0374, 0.3586, 2, 0.0593, 0.3649, 2, 0.1471, 0.3648, 2,
+      0.1674, 0.359, 2, 0.1831, 0.3449, 2, 0.1891, 0.329, 2, 0.1872, 0.3101,
+      2, 0.1605, 0.2754, 2, 0.1441, 0.2701, 0, 1, 0.8599, 0.2701, 2, 0.8321,
+      0.2775, 2, 0.8133, 0.3012, 2, 0.8116, 0.3276, 2, 0.8271, 0.3575, 2,
+      0.8532, 0.3648, 2, 0.9428, 0.3648, 2, 0.9631, 0.359, 2, 0.9788, 0.3449,
+      2, 0.9848, 0.3289, 2, 0.9835, 0.3119, 2, 0.9561, 0.2754, 2, 0.9397,
+      0.2701, 0, 1, 0.0623, 0.8176, 2, 0.0333, 0.8272, 2, 0.0165, 0.8524, 2,
+      0.0182, 0.8824, 2, 0.0374, 0.9061, 2, 0.0593, 0.9124, 2, 0.1471,
+      0.9122, 2, 0.1674, 0.9065, 2, 0.1831, 0.8924, 2, 0.1891, 0.8764, 2,
+      0.1872, 0.8575, 2, 0.1605, 0.8228, 2, 0.1441, 0.8176, 0, 1, 0.858,
+      0.8176, 2, 0.8305, 0.826, 2, 0.8133, 0.8487, 2, 0.8116, 0.8751, 2,
+      0.8271, 0.905, 2, 0.8532, 0.9123, 2, 0.9428, 0.9122, 2, 0.9631, 0.9065,
+      2, 0.9788, 0.8924, 2, 0.9848, 0.8764, 2, 0.9835, 0.8594, 2, 0.9561,
+      0.8228, 2, 0.9397, 0.8176, 0,
+    ]),
+    (color: 1, geometry: [
+      1, 0.0226, 0.5037, 2, 0.007, 0.5109, 2, 0, 0.5243, 2, 0.0139, 0.5442,
+      2, 0.0228, 0.5475, 2, 0.9766, 0.5475, 2, 0.9926, 0.5377, 2, 1, 0.5201,
+      2, 0.9973, 0.511, 2, 0.9803, 0.5037, 0, 1, 0.0226, 0.6351, 2, 0.0082,
+      0.644, 2, 0, 0.6614, 2, 0.0021, 0.6706, 2, 0.0209, 0.6861, 2, 0.1822,
+      0.6861, 2, 0.1966, 0.6768, 2, 0.2042, 0.6612, 2, 0.2019, 0.6501, 2,
+      0.1848, 0.6354, 0, 1, 0.8183, 0.6351, 2, 0.8038, 0.644, 2, 0.7957,
+      0.6614, 2, 0.7977, 0.6706, 2, 0.8165, 0.6861, 2, 0.9779, 0.6861, 2,
+      0.9922, 0.6768, 2, 0.9998, 0.6612, 2, 0.9976, 0.6501, 2, 0.9805,
+      0.6354, 0,
+    ]),
+    (color: 0, geometry: [
+      1, 0.4304, 0.0438, 2, 0.4055, 0.0479, 2, 0.3819, 0.0609, 2, 0.3627,
+      0.0824, 2, 0.3511, 0.1086, 2, 0.3196, 0.1022, 2, 0.2966, 0.1058, 2,
+      0.2707, 0.1188, 2, 0.2493, 0.1407, 2, 0.2338, 0.1756, 2, 0.2329,
+      0.2136, 2, 0.2465, 0.2471, 2, 0.2715, 0.2709, 2, 0.3096, 0.284, 2,
+      0.3501, 0.2802, 2, 0.3841, 0.2588, 2, 0.4105, 0.219, 2, 0.4347, 0.2259,
+      2, 0.4598, 0.2243, 2, 0.4828, 0.2143, 2, 0.5004, 0.1976, 2, 0.5167,
+      0.2139, 2, 0.5395, 0.2241, 2, 0.5646, 0.2259, 2, 0.5888, 0.2193, 2,
+      0.6209, 0.2637, 2, 0.642, 0.2774, 2, 0.6641, 0.2845, 2, 0.6893, 0.2849,
+      2, 0.7114, 0.278, 2, 0.7302, 0.2648, 2, 0.7503, 0.2408, 2, 0.7628,
+      0.207, 2, 0.7613, 0.1709, 2, 0.746, 0.1359, 2, 0.7197, 0.1108, 2,
+      0.698, 0.1022, 2, 0.649, 0.1088, 2, 0.6254, 0.072, 2, 0.5861, 0.0519,
+      2, 0.5609, 0.0497, 2, 0.538, 0.0538, 2, 0.5172, 0.0641, 2, 0.5003,
+      0.0799, 2, 0.4664, 0.0524, 0, 1, 0.4304, 0.0876, 2, 0.4475, 0.091, 2,
+      0.4635, 0.1018, 2, 0.4755, 0.1191, 2, 0.4801, 0.1377, 2, 0.477, 0.1566,
+      2, 0.4673, 0.1708, 2, 0.4522, 0.1793, 2, 0.4311, 0.1825, 2, 0.414,
+      0.179, 2, 0.4015, 0.17, 2, 0.3906, 0.1399, 2, 0.4035, 0.1043, 2,
+      0.4161, 0.0923, 0, 1, 0.5696, 0.0876, 2, 0.5842, 0.0925, 2, 0.5966,
+      0.1045, 2, 0.6094, 0.1402, 2, 0.5983, 0.1702, 2, 0.5858, 0.1791, 2,
+      0.5686, 0.1825, 2, 0.5475, 0.1792, 2, 0.5325, 0.1706, 2, 0.5229,
+      0.1564, 2, 0.5199, 0.1375, 2, 0.5246, 0.1189, 2, 0.5367, 0.1016, 2,
+      0.5528, 0.0909, 0, 1, 0.321, 0.146, 2, 0.3409, 0.1534, 2, 0.3707,
+      0.198, 2, 0.3662, 0.2125, 2, 0.355, 0.2257, 2, 0.3219, 0.2409, 2,
+      0.3069, 0.2374, 2, 0.2945, 0.2282, 2, 0.2849, 0.2138, 2, 0.2812, 0.197,
+      2, 0.2842, 0.1781, 2, 0.2932, 0.1612, 2, 0.3063, 0.1499, 0, 1, 0.679,
+      0.146, 2, 0.6962, 0.1491, 2, 0.7085, 0.1584, 2, 0.716, 0.1737, 2,
+      0.7188, 0.1966, 2, 0.7087, 0.2289, 2, 0.6963, 0.2378, 2, 0.6789,
+      0.2409, 2, 0.6456, 0.2263, 2, 0.6294, 0.1988, 2, 0.6586, 0.1541, 0, 1,
+      0.5, 0.365, 2, 0.7681, 0.365, 2, 0.7679, 0.6351, 2, 0.5, 0.6349, 0,
+    ]),
+    (color: 2, geometry: [
+      1, 0.4602, 0, 2, 0.5398, 0.0001, 2, 0.5389, 0.1825, 2, 0.4602, 0.1815,
+      0,
+    ]),
+    (color: 1, geometry: [
+      1, 0.4997, 0.1387, 2, 0.5561, 0.1431, 2, 0.6071, 0.1556, 2, 0.6527,
+      0.1762, 2, 0.6882, 0.2031, 2, 0.7112, 0.2357, 2, 0.7188, 0.2701, 2,
+      0.6798, 0.3201, 2, 0.321, 0.3212, 2, 0.2812, 0.2695, 2, 0.2894, 0.2344,
+      2, 0.3115, 0.2035, 2, 0.3469, 0.1764, 2, 0.3925, 0.1558, 2, 0.4434,
+      0.1432, 0, 1, 0.2315, 0.365, 2, 0.4995, 0.365, 2, 0.4994, 0.6351, 2,
+      0.2315, 0.6349, 0, 1, 0.6335, 0.4086, 2, 0.6147, 0.4128, 2, 0.595,
+      0.4285, 2, 0.5835, 0.446, 2, 0.5796, 0.4666, 2, 0.5797, 0.5374, 2,
+      0.5843, 0.5578, 2, 0.6028, 0.5819, 2, 0.6318, 0.5914, 2, 0.6524,
+      0.5872, 2, 0.6741, 0.5741, 2, 0.685, 0.5562, 2, 0.689, 0.5336, 2,
+      0.6888, 0.4633, 2, 0.6844, 0.4447, 2, 0.6641, 0.4195, 0, 1, 0.2812,
+      0.6351, 2, 0.2812, 0.8833, 2, 0.3401, 0.9122, 2, 0.3409, 0.6364, 0, 1,
+      0.3906, 0.6351, 2, 0.3919, 0.912, 2, 0.4503, 0.8827, 2, 0.4503, 0.6364,
+      0,
+    ]),
+    (color: 2, geometry: [
+      1, 0.2812, 0.4088, 2, 0.2813, 0.4526, 2, 0.321, 0.4537, 2, 0.321,
+      0.5473, 2, 0.2812, 0.5482, 2, 0.2821, 0.5913, 2, 0.4602, 0.5907, 2,
+      0.4595, 0.5475, 2, 0.4105, 0.546, 2, 0.4106, 0.4526, 2, 0.4592, 0.4526,
+      2, 0.4602, 0.4097, 0, 1, 0.321, 0.3212, 2, 0.6784, 0.3212, 2, 0.679,
+      0.3645, 2, 0.3221, 0.365, 0, 1, 0.3811, 0.2044, 2, 0.3607, 0.2101, 2,
+      0.3487, 0.2271, 2, 0.3514, 0.2596, 2, 0.3631, 0.2686, 2, 0.3938,
+      0.2669, 2, 0.4116, 0.2453, 2, 0.4102, 0.2188, 0, 1, 0.4997, 0.2044, 2,
+      0.4779, 0.2118, 2, 0.4667, 0.2335, 2, 0.4706, 0.2561, 2, 0.4909,
+      0.2697, 2, 0.5206, 0.2651, 2, 0.5332, 0.2447, 2, 0.5289, 0.2183, 0, 1,
+      0.62, 0.2044, 2, 0.5996, 0.2137, 2, 0.5873, 0.2375, 2, 0.59, 0.2562, 2,
+      0.6104, 0.2697, 2, 0.64, 0.2651, 2, 0.6526, 0.2447, 2, 0.6471, 0.2147,
+      0,
+    ]),
+    (color: 3, geometry: [
+      1, 0.5, 0.5475, 2, 0.4639, 0.5548, 2, 0.4357, 0.5747, 2, 0.4167,
+      0.6056, 2, 0.4104, 0.6412, 2, 0.418, 0.6804, 2, 0.4338, 0.7023, 2,
+      0.4641, 0.7227, 2, 0.5, 0.73, 2, 0.5361, 0.7226, 2, 0.5643, 0.7027, 2,
+      0.5833, 0.6719, 2, 0.5896, 0.6362, 2, 0.582, 0.5971, 2, 0.5662, 0.5752,
+      2, 0.5359, 0.5548, 0, 1, 0.858, 0.9125, 2, 0.8284, 0.9209, 2, 0.8124,
+      0.9419, 2, 0.8125, 0.9664, 2, 0.8204, 0.9859, 2, 0.8307, 0.9946, 2,
+      0.8551, 1, 2, 0.9447, 0.9996, 2, 0.9665, 0.9921, 2, 0.9807, 0.9767, 2,
+      0.985, 0.9621, 2, 0.9829, 0.9451, 2, 0.9602, 0.9173, 2, 0.9417, 0.9126,
+      0, 1, 0.0623, 0.9125, 2, 0.0328, 0.9209, 2, 0.0162, 0.9438, 2, 0.0189,
+      0.9716, 2, 0.0406, 0.9956, 2, 0.0592, 1, 2, 0.149, 0.9996, 2, 0.1708,
+      0.9921, 2, 0.185, 0.9767, 2, 0.1894, 0.9622, 2, 0.1872, 0.9452, 2,
+      0.1645, 0.9173, 2, 0.1461, 0.9126, 0,
+    ]),
+  ];
+  // dart format on
 
   @override
   FlagParentBounds paintFlagElements(Canvas canvas, Size size) {
-    final adjustedSize = ratioAdjustedSize(size, minRatio: 1.22);
-    final center = calculateCenter(size);
-    final height = adjustedSize.height;
-    final width = adjustedSize.width;
-
-    final path = Path()
-      ..moveTo(width * 0.14, height * 1.12)
-      ..lineTo(width * 0.06, height * 1.12)
-      ..lineTo(width * 0.06, height * 0.5)
-      ..lineTo(width * 0.14, height * 0.5)
-      ..lineTo(width * 0.14, height * 1.12)
-      ..lineTo(width * 0.14, height * 1.12)
-      ..moveTo(width * 0.86, height * 1.12)
-      ..lineTo(width * 0.94, height * 1.12)
-      ..lineTo(width * 0.94, height * 0.5)
-      ..lineTo(width * 0.86, height * 0.5)
-      ..lineTo(width * 0.86, height * 1.12)
-      ..lineTo(width * 0.86, height * 1.12)
-      ..moveTo(width * 0.5, height * 1.31)
-      ..cubicTo(
-        width * 0.65,
-        height * 1.31,
-        width * 0.77,
-        height * 1.2,
-        width * 0.77,
-        height * 1.06,
-      )
-      ..cubicTo(
-        width * 0.77,
-        height * 0.92,
-        width * 0.65,
-        height * 0.81,
-        width * 0.5,
-        height * 0.81,
-      )
-      ..cubicTo(
-        width * 0.35,
-        height * 0.81,
-        width * 0.23,
-        height * 0.92,
-        width * 0.23,
-        height * 1.06,
-      )
-      ..cubicTo(
-        width * 0.23,
-        height * 1.2,
-        width * 0.35,
-        height * 1.31,
-        width * 0.5,
-        height * 1.31,
-      )
-      ..lineTo(width * 0.5, height * 1.31);
-
-    final path2 = Path()
-      ..moveTo(width * 0.14, height * 0.31)
-      ..cubicTo(
-        width * 0.14,
-        height * 0.26,
-        width * 0.11,
-        height * 0.23,
-        width * 0.08,
-        height * 0.26,
-      )
-      ..cubicTo(
-        width * 0.06,
-        height * 0.27,
-        width * 0.06,
-        height * 0.29,
-        width * 0.06,
-        height * 0.31,
-      )
-      ..lineTo(width * 0.06, height * 0.37)
-      ..cubicTo(
-        width * 0.06,
-        height * 0.42,
-        width * 0.09,
-        height * 0.45,
-        width * 0.12,
-        height * 0.43,
-      )
-      ..cubicTo(
-        width * 0.14,
-        height * 0.42,
-        width * 0.14,
-        height * 0.4,
-        width * 0.14,
-        height * 0.37,
-      )
-      ..lineTo(width * 0.14, height * 0.31)
-      ..lineTo(width * 0.14, height * 0.31)
-      ..moveTo(width * 0.94, height * 0.31)
-      ..cubicTo(
-        width * 0.94,
-        height * 0.26,
-        width * 0.91,
-        height * 0.23,
-        width * 0.88,
-        height * 0.26,
-      )
-      ..cubicTo(
-        width * 0.86,
-        height * 0.27,
-        width * 0.86,
-        height * 0.29,
-        width * 0.86,
-        height * 0.31,
-      )
-      ..lineTo(width * 0.86, height * 0.37)
-      ..cubicTo(
-        width * 0.86,
-        height * 0.42,
-        width * 0.89,
-        height * 0.45,
-        width * 0.92,
-        height * 0.43,
-      )
-      ..cubicTo(
-        width * 0.94,
-        height * 0.42,
-        width * 0.94,
-        height * 0.4,
-        width * 0.94,
-        height * 0.37,
-      )
-      ..lineTo(width * 0.94, height * 0.31)
-      ..lineTo(width * 0.94, height * 0.31)
-      ..moveTo(width * 0.5, height * 0.87)
-      ..lineTo(width * 0.5, height * 1.06)
-      ..cubicTo(
-        width * 0.5,
-        height * 1.21,
-        width * 0.61,
-        height * 1.3,
-        width * 0.7,
-        height * 1.22,
-      )
-      ..cubicTo(
-        width * 0.74,
-        height * 1.19,
-        width * 0.77,
-        height * 1.13,
-        width * 0.77,
-        height * 1.06,
-      )
-      ..lineTo(width * 0.77, height * 0.87)
-      ..lineTo(width * 0.5, height * 0.87)
-      ..lineTo(width * 0.5, height * 0.87);
-
-    final path3 = Path()
-      ..moveTo(width * 0.23, height * 0.87)
-      ..lineTo(width * 0.23, height * 1.06)
-      ..cubicTo(
-        width * 0.23,
-        height * 1.21,
-        width * 0.34,
-        height * 1.3,
-        width * 0.43,
-        height * 1.22,
-      )
-      ..cubicTo(
-        width * 0.47,
-        height * 1.19,
-        width * 0.5,
-        height * 1.13,
-        width * 0.5,
-        height * 1.06,
-      )
-      ..lineTo(width * 0.5, height * 0.87)
-      ..lineTo(width * 0.23, height * 0.87)
-      ..lineTo(width * 0.23, height * 0.87)
-      ..moveTo(width * 0.14, height * 0.37)
-      ..lineTo(width * 0.06, height * 0.37)
-      ..cubicTo(
-        width * 0.02,
-        height * 0.37,
-        0,
-        height * 0.43,
-        width * 0.02,
-        height * 0.47,
-      )
-      ..cubicTo(
-        width * 0.03,
-        height * 0.49,
-        width * 0.04,
-        height * 0.5,
-        width * 0.06,
-        height * 0.5,
-      )
-      ..lineTo(width * 0.14, height * 0.5)
-      ..cubicTo(
-        width * 0.18,
-        height * 0.5,
-        width * 0.2,
-        height * 0.45,
-        width * 0.18,
-        height * 0.41,
-      )
-      ..cubicTo(
-        width * 0.17,
-        height * 0.39,
-        width * 0.16,
-        height * 0.37,
-        width * 0.14,
-        height * 0.37,
-      )
-      ..lineTo(width * 0.14, height * 0.37)
-      ..moveTo(width * 0.94, height * 0.37)
-      ..lineTo(width * 0.86, height * 0.37)
-      ..cubicTo(
-        width * 0.82,
-        height * 0.37,
-        width * 0.8,
-        height * 0.43,
-        width * 0.82,
-        height * 0.47,
-      )
-      ..cubicTo(
-        width * 0.82,
-        height * 0.49,
-        width * 0.84,
-        height * 0.5,
-        width * 0.86,
-        height * 0.5,
-      )
-      ..lineTo(width * 0.94, height * 0.5)
-      ..cubicTo(
-        width * 0.98,
-        height * 0.5,
-        width,
-        height * 0.45,
-        width * 0.98,
-        height * 0.41,
-      )
-      ..cubicTo(
-        width * 0.97,
-        height * 0.39,
-        width * 0.96,
-        height * 0.37,
-        width * 0.94,
-        height * 0.37,
-      )
-      ..lineTo(width * 0.94, height * 0.37)
-      ..moveTo(width * 0.14, height * 1.12)
-      ..lineTo(width * 0.06, height * 1.12)
-      ..cubicTo(
-        width * 0.02,
-        height * 1.12,
-        0,
-        height * 1.18,
-        width * 0.02,
-        height * 1.22,
-      )
-      ..cubicTo(
-        width * 0.03,
-        height * 1.24,
-        width * 0.04,
-        height * 1.25,
-        width * 0.06,
-        height * 1.25,
-      )
-      ..lineTo(width * 0.14, height * 1.25)
-      ..cubicTo(
-        width * 0.18,
-        height * 1.25,
-        width * 0.2,
-        height * 1.2,
-        width * 0.18,
-        height * 1.16,
-      )
-      ..cubicTo(
-        width * 0.17,
-        height * 1.14,
-        width * 0.16,
-        height * 1.12,
-        width * 0.14,
-        height * 1.12,
-      )
-      ..lineTo(width * 0.14, height * 1.12)
-      ..moveTo(width * 0.94, height * 1.12)
-      ..lineTo(width * 0.86, height * 1.12)
-      ..cubicTo(
-        width * 0.82,
-        height * 1.12,
-        width * 0.8,
-        height * 1.18,
-        width * 0.82,
-        height * 1.22,
-      )
-      ..cubicTo(
-        width * 0.82,
-        height * 1.24,
-        width * 0.84,
-        height * 1.25,
-        width * 0.86,
-        height * 1.25,
-      )
-      ..lineTo(width * 0.94, height * 1.25)
-      ..cubicTo(
-        width * 0.98,
-        height * 1.25,
-        width,
-        height * 1.2,
-        width * 0.98,
-        height * 1.16,
-      )
-      ..cubicTo(
-        width * 0.97,
-        height * 1.14,
-        width * 0.96,
-        height * 1.12,
-        width * 0.94,
-        height * 1.12,
-      )
-      ..lineTo(width * 0.94, height * 1.12);
-
-    final path4 = Path()
-      ..moveTo(width * 0.02, height * 0.72)
-      ..lineTo(width * 0.98, height * 0.72)
-      ..lineTo(width * 0.02, height * 0.72)
-      ..moveTo(width * 0.02, height * 0.91)
-      ..lineTo(width * 0.18, height * 0.91)
-      ..lineTo(width * 0.02, height * 0.91)
-      ..moveTo(width * 0.82, height * 0.91)
-      ..lineTo(width * 0.98, height * 0.91)
-      ..lineTo(width * 0.82, height * 0.91);
-
-    final path5 = Path()
-      ..moveTo(width * 0.02, height * 0.69)
-      ..cubicTo(
-        width * 0.01,
-        height * 0.69,
-        width * -0.01,
-        height * 0.71,
-        0,
-        height * 0.73,
-      )
-      ..cubicTo(
-        width * 0.01,
-        height * 0.74,
-        width * 0.01,
-        height * 0.75,
-        width * 0.02,
-        height * 0.75,
-      )
-      ..lineTo(width * 0.98, height * 0.75)
-      ..cubicTo(
-        width * 0.99,
-        height * 0.75,
-        width * 1.01,
-        height * 0.72,
-        width,
-        height * 0.7,
-      )
-      ..cubicTo(
-        width * 0.99,
-        height * 0.69,
-        width * 0.99,
-        height * 0.69,
-        width * 0.98,
-        height * 0.69,
-      )
-      ..lineTo(width * 0.02, height * 0.69)
-      ..lineTo(width * 0.02, height * 0.69)
-      ..moveTo(width * 0.02, height * 0.87)
-      ..cubicTo(
-        width * 0.01,
-        height * 0.87,
-        width * -0.01,
-        height * 0.9,
-        0,
-        height * 0.92,
-      )
-      ..cubicTo(
-        width * 0.01,
-        height * 0.93,
-        width * 0.01,
-        height * 0.94,
-        width * 0.02,
-        height * 0.94,
-      )
-      ..lineTo(width * 0.18, height * 0.94)
-      ..cubicTo(
-        width * 0.19,
-        height * 0.94,
-        width * 0.21,
-        height * 0.91,
-        width * 0.2,
-        height * 0.89,
-      )
-      ..cubicTo(
-        width * 0.19,
-        height * 0.88,
-        width * 0.19,
-        height * 0.87,
-        width * 0.18,
-        height * 0.87,
-      )
-      ..lineTo(width * 0.02, height * 0.87)
-      ..lineTo(width * 0.02, height * 0.87)
-      ..moveTo(width * 0.82, height * 0.87)
-      ..cubicTo(
-        width * 0.81,
-        height * 0.87,
-        width * 0.79,
-        height * 0.9,
-        width * 0.8,
-        height * 0.92,
-      )
-      ..cubicTo(
-        width * 0.81,
-        height * 0.93,
-        width * 0.81,
-        height * 0.94,
-        width * 0.82,
-        height * 0.94,
-      )
-      ..lineTo(width * 0.98, height * 0.94)
-      ..cubicTo(
-        width * 0.99,
-        height * 0.94,
-        width * 1.01,
-        height * 0.91,
-        width,
-        height * 0.89,
-      )
-      ..cubicTo(
-        width * 0.99,
-        height * 0.88,
-        width * 0.99,
-        height * 0.87,
-        width * 0.98,
-        height * 0.87,
-      )
-      ..lineTo(width * 0.82, height * 0.87)
-      ..lineTo(width * 0.82, height * 0.87);
-
-    final path6 = Path()
-      ..moveTo(width * 0.43, height * 0.06)
-      ..cubicTo(
-        width * 0.39,
-        height * 0.06,
-        width * 0.36,
-        height * 0.1,
-        width * 0.35,
-        height * 0.15,
-      )
-      ..lineTo(width * 0.32, height * 0.14)
-      ..cubicTo(
-        width * 0.27,
-        height * 0.14,
-        width * 0.23,
-        height * 0.2,
-        width * 0.23,
-        height * 0.27,
-      )
-      ..cubicTo(
-        width * 0.23,
-        height * 0.34,
-        width * 0.27,
-        height * 0.39,
-        width * 0.32,
-        height * 0.39,
-      )
-      ..cubicTo(
-        width * 0.36,
-        height * 0.39,
-        width * 0.39,
-        height * 0.36,
-        width * 0.41,
-        height * 0.3,
-      )
-      ..cubicTo(
-        width * 0.44,
-        height * 0.32,
-        width * 0.48,
-        height * 0.31,
-        width * 0.5,
-        height * 0.27,
-      )
-      ..cubicTo(
-        width * 0.52,
-        height * 0.31,
-        width * 0.56,
-        height * 0.32,
-        width * 0.59,
-        height * 0.3,
-      )
-      ..cubicTo(
-        width * 0.62,
-        height * 0.4,
-        width * 0.7,
-        height * 0.42,
-        width * 0.74,
-        height * 0.35,
-      )
-      ..cubicTo(
-        width * 0.79,
-        height * 0.28,
-        width * 0.76,
-        height * 0.16,
-        width * 0.7,
-        height * 0.14,
-      )
-      ..cubicTo(
-        width * 0.68,
-        height * 0.14,
-        width * 0.67,
-        height * 0.14,
-        width * 0.65,
-        height * 0.15,
-      )
-      ..cubicTo(
-        width * 0.63,
-        height * 0.06,
-        width * 0.54,
-        height * 0.04,
-        width * 0.5,
-        height * 0.11,
-      )
-      ..cubicTo(
-        width * 0.48,
-        height * 0.08,
-        width * 0.46,
-        height * 0.06,
-        width * 0.43,
-        height * 0.06,
-      )
-      ..lineTo(width * 0.43, height * 0.06)
-      ..moveTo(width * 0.43, height * 0.12)
-      ..cubicTo(
-        width * 0.46,
-        height * 0.12,
-        width * 0.48,
-        height * 0.16,
-        width * 0.48,
-        height * 0.19,
-      )
-      ..cubicTo(
-        width * 0.48,
-        height * 0.23,
-        width * 0.46,
-        height * 0.25,
-        width * 0.43,
-        height * 0.25,
-      )
-      ..cubicTo(
-        width * 0.41,
-        height * 0.25,
-        width * 0.39,
-        height * 0.23,
-        width * 0.39,
-        height * 0.19,
-      )
-      ..cubicTo(
-        width * 0.39,
-        height * 0.16,
-        width * 0.41,
-        height * 0.12,
-        width * 0.43,
-        height * 0.12,
-      )
-      ..lineTo(width * 0.43, height * 0.12)
-      ..moveTo(width * 0.57, height * 0.12)
-      ..cubicTo(
-        width * 0.59,
-        height * 0.12,
-        width * 0.61,
-        height * 0.16,
-        width * 0.61,
-        height * 0.19,
-      )
-      ..cubicTo(
-        width * 0.61,
-        height * 0.23,
-        width * 0.59,
-        height * 0.25,
-        width * 0.57,
-        height * 0.25,
-      )
-      ..cubicTo(
-        width * 0.54,
-        height * 0.25,
-        width * 0.52,
-        height * 0.23,
-        width * 0.52,
-        height * 0.19,
-      )
-      ..cubicTo(
-        width * 0.52,
-        height * 0.16,
-        width * 0.54,
-        height * 0.12,
-        width * 0.57,
-        height * 0.12,
-      )
-      ..lineTo(width * 0.57, height * 0.12)
-      ..moveTo(width * 0.32, height * 0.2)
-      ..lineTo(width * 0.34, height * 0.21)
-      ..lineTo(width * 0.37, height * 0.27)
-      ..cubicTo(
-        width * 0.37,
-        height * 0.3,
-        width * 0.34,
-        height * 0.33,
-        width * 0.32,
-        height * 0.33,
-      )
-      ..cubicTo(
-        width * 0.3,
-        height * 0.33,
-        width * 0.28,
-        height * 0.3,
-        width * 0.28,
-        height * 0.27,
-      )
-      ..cubicTo(
-        width * 0.28,
-        height * 0.23,
-        width * 0.3,
-        height * 0.2,
-        width * 0.32,
-        height * 0.2,
-      )
-      ..lineTo(width * 0.32, height * 0.2)
-      ..moveTo(width * 0.68, height * 0.2)
-      ..cubicTo(
-        width * 0.71,
-        height * 0.2,
-        width * 0.72,
-        height * 0.23,
-        width * 0.72,
-        height * 0.27,
-      )
-      ..cubicTo(
-        width * 0.72,
-        height * 0.3,
-        width * 0.71,
-        height * 0.33,
-        width * 0.68,
-        height * 0.33,
-      )
-      ..cubicTo(
-        width * 0.66,
-        height * 0.33,
-        width * 0.63,
-        height * 0.3,
-        width * 0.63,
-        height * 0.27,
-      )
-      ..lineTo(width * 0.66, height * 0.21)
-      ..lineTo(width * 0.68, height * 0.2)
-      ..lineTo(width * 0.68, height * 0.2);
-
-    final path7 = Path()
-      ..moveTo(width * 0.46, 0)
-      ..lineTo(width * 0.54, 0)
-      ..lineTo(width * 0.54, height * 0.25)
-      ..lineTo(width * 0.46, height * 0.25)
-      ..lineTo(width * 0.46, 0)
-      ..lineTo(width * 0.46, 0);
-
-    final path8 = Path()
-      ..moveTo(width * 0.5, height * 0.5)
-      ..lineTo(width * 0.77, height * 0.5)
-      ..lineTo(width * 0.77, height * 0.87)
-      ..lineTo(width * 0.5, height * 0.87)
-      ..lineTo(width * 0.5, height * 0.5)
-      ..lineTo(width * 0.5, height * 0.5);
-
-    final path9 = Path()
-      ..moveTo(width * 0.72, height * 0.37)
-      ..lineTo(width * 0.68, height * 0.44)
-      ..lineTo(width * 0.32, height * 0.44)
-      ..lineTo(width * 0.28, height * 0.37)
-      ..cubicTo(
-        width * 0.28,
-        height * 0.27,
-        width * 0.38,
-        height * 0.19,
-        width * 0.5,
-        height * 0.19,
-      )
-      ..cubicTo(
-        width * 0.62,
-        height * 0.19,
-        width * 0.72,
-        height * 0.27,
-        width * 0.72,
-        height * 0.37,
-      )
-      ..lineTo(width * 0.72, height * 0.37)
-      ..moveTo(width * 0.23, height * 0.5)
-      ..lineTo(width * 0.5, height * 0.5)
-      ..lineTo(width * 0.5, height * 0.87)
-      ..lineTo(width * 0.23, height * 0.87)
-      ..lineTo(width * 0.23, height * 0.5)
-      ..lineTo(width * 0.23, height * 0.5)
-      ..moveTo(width * 0.69, height * 0.64)
-      ..cubicTo(
-        width * 0.69,
-        height * 0.58,
-        width * 0.64,
-        height * 0.54,
-        width * 0.61,
-        height * 0.57,
-      )
-      ..cubicTo(
-        width * 0.59,
-        height * 0.59,
-        width * 0.58,
-        height * 0.61,
-        width * 0.58,
-        height * 0.64,
-      )
-      ..lineTo(width * 0.58, height * 0.73)
-      ..cubicTo(
-        width * 0.58,
-        height * 0.79,
-        width * 0.62,
-        height * 0.83,
-        width * 0.66,
-        height * 0.8,
-      )
-      ..cubicTo(
-        width * 0.68,
-        height * 0.79,
-        width * 0.69,
-        height * 0.76,
-        width * 0.69,
-        height * 0.73,
-      )
-      ..lineTo(width * 0.69, height * 0.64)
-      ..lineTo(width * 0.69, height * 0.64);
-
-    final path10 = Path()
-      ..moveTo(width * 0.28, height * 0.56)
-      ..lineTo(width * 0.28, height * 0.62)
-      ..lineTo(width * 0.32, height * 0.62)
-      ..lineTo(width * 0.32, height * 0.75)
-      ..lineTo(width * 0.28, height * 0.75)
-      ..lineTo(width * 0.28, height * 0.81)
-      ..lineTo(width * 0.46, height * 0.81)
-      ..lineTo(width * 0.46, height * 0.75)
-      ..lineTo(width * 0.41, height * 0.75)
-      ..lineTo(width * 0.41, height * 0.62)
-      ..lineTo(width * 0.46, height * 0.62)
-      ..lineTo(width * 0.46, height * 0.56)
-      ..lineTo(width * 0.28, height * 0.56)
-      ..lineTo(width * 0.28, height * 0.56)
-      ..moveTo(width * 0.32, height * 0.44)
-      ..lineTo(width * 0.68, height * 0.44)
-      ..lineTo(width * 0.68, height * 0.5)
-      ..lineTo(width * 0.32, height * 0.5)
-      ..lineTo(width * 0.32, height * 0.44)
-      ..lineTo(width * 0.32, height * 0.44);
-
-    final path11 = Path()
-      ..moveTo(width * 0.38, height * 0.37)
-      ..cubicTo(
-        width * 0.4,
-        height * 0.37,
-        width * 0.42,
-        height * 0.34,
-        width * 0.41,
-        height * 0.3,
-      )
-      ..cubicTo(
-        width * 0.4,
-        height * 0.29,
-        width * 0.39,
-        height * 0.28,
-        width * 0.38,
-        height * 0.28,
-      )
-      ..cubicTo(
-        width * 0.35,
-        height * 0.28,
-        width * 0.34,
-        height * 0.32,
-        width * 0.35,
-        height * 0.35,
-      )
-      ..cubicTo(
-        width * 0.35,
-        height * 0.37,
-        width * 0.37,
-        height * 0.37,
-        width * 0.38,
-        height * 0.37,
-      )
-      ..lineTo(width * 0.38, height * 0.37)
-      ..moveTo(width * 0.5, height * 0.37)
-      ..cubicTo(
-        width * 0.53,
-        height * 0.37,
-        width * 0.54,
-        height * 0.34,
-        width * 0.53,
-        height * 0.3,
-      )
-      ..cubicTo(
-        width * 0.52,
-        height * 0.29,
-        width * 0.51,
-        height * 0.28,
-        width * 0.5,
-        height * 0.28,
-      )
-      ..cubicTo(
-        width * 0.47,
-        height * 0.28,
-        width * 0.46,
-        height * 0.32,
-        width * 0.47,
-        height * 0.35,
-      )
-      ..cubicTo(
-        width * 0.48,
-        height * 0.37,
-        width * 0.49,
-        height * 0.37,
-        width * 0.5,
-        height * 0.37,
-      )
-      ..lineTo(width * 0.5, height * 0.37)
-      ..moveTo(width * 0.62, height * 0.37)
-      ..cubicTo(
-        width * 0.65,
-        height * 0.37,
-        width * 0.66,
-        height * 0.34,
-        width * 0.65,
-        height * 0.3,
-      )
-      ..cubicTo(
-        width * 0.65,
-        height * 0.29,
-        width * 0.63,
-        height * 0.28,
-        width * 0.62,
-        height * 0.28,
-      )
-      ..cubicTo(
-        width * 0.6,
-        height * 0.28,
-        width * 0.58,
-        height * 0.32,
-        width * 0.59,
-        height * 0.35,
-      )
-      ..cubicTo(
-        width * 0.6,
-        height * 0.37,
-        width * 0.61,
-        height * 0.37,
-        width * 0.62,
-        height * 0.37,
-      )
-      ..lineTo(width * 0.62, height * 0.37);
-
-    final path12 = Path()
-      ..moveTo(width * 0.28, height * 0.87)
-      ..lineTo(width * 0.28, height * 1.21)
-      ..cubicTo(
-        width * 0.3,
-        height * 1.23,
-        width * 0.32,
-        height * 1.24,
-        width * 0.34,
-        height * 1.25,
-      )
-      ..lineTo(width * 0.34, height * 0.87)
-      ..lineTo(width * 0.28, height * 0.87)
-      ..lineTo(width * 0.28, height * 0.87)
-      ..moveTo(width * 0.39, height * 0.87)
-      ..lineTo(width * 0.39, height * 1.25)
-      ..cubicTo(
-        width * 0.41,
-        height * 1.24,
-        width * 0.43,
-        height * 1.23,
-        width * 0.45,
-        height * 1.21,
-      )
-      ..lineTo(width * 0.45, height * 0.87)
-      ..lineTo(width * 0.39, height * 0.87)
-      ..lineTo(width * 0.39, height * 0.87);
-
-    final path13 = Path()
-      ..moveTo(width * 0.5, height)
-      ..cubicTo(
-        width * 0.57,
-        height,
-        width * 0.61,
-        height * 0.9,
-        width * 0.58,
-        height * 0.81,
-      )
-      ..cubicTo(
-        width * 0.56,
-        height * 0.77,
-        width * 0.53,
-        height * 0.75,
-        width * 0.5,
-        height * 0.75,
-      )
-      ..cubicTo(
-        width * 0.43,
-        height * 0.75,
-        width * 0.39,
-        height * 0.85,
-        width * 0.42,
-        height * 0.94,
-      )
-      ..cubicTo(
-        width * 0.44,
-        height * 0.98,
-        width * 0.47,
-        height,
-        width * 0.5,
-        height,
-      )
-      ..lineTo(width * 0.5, height)
-      ..moveTo(width * 0.94, height * 1.25)
-      ..lineTo(width * 0.86, height * 1.25)
-      ..cubicTo(
-        width * 0.82,
-        height * 1.25,
-        width * 0.8,
-        height * 1.3,
-        width * 0.82,
-        height * 1.34,
-      )
-      ..cubicTo(
-        width * 0.82,
-        height * 1.36,
-        width * 0.84,
-        height * 1.37,
-        width * 0.86,
-        height * 1.37,
-      )
-      ..lineTo(width * 0.94, height * 1.37)
-      ..cubicTo(
-        width * 0.98,
-        height * 1.37,
-        width,
-        height * 1.32,
-        width * 0.98,
-        height * 1.28,
-      )
-      ..cubicTo(
-        width * 0.97,
-        height * 1.26,
-        width * 0.96,
-        height * 1.25,
-        width * 0.94,
-        height * 1.25,
-      )
-      ..lineTo(width * 0.94, height * 1.25)
-      ..moveTo(width * 0.14, height * 1.25)
-      ..lineTo(width * 0.06, height * 1.25)
-      ..cubicTo(
-        width * 0.02,
-        height * 1.25,
-        0,
-        height * 1.3,
-        width * 0.02,
-        height * 1.34,
-      )
-      ..cubicTo(
-        width * 0.03,
-        height * 1.36,
-        width * 0.04,
-        height * 1.37,
-        width * 0.06,
-        height * 1.37,
-      )
-      ..lineTo(width * 0.14, height * 1.37)
-      ..cubicTo(
-        width * 0.18,
-        height * 1.37,
-        width * 0.2,
-        height * 1.32,
-        width * 0.18,
-        height * 1.28,
-      )
-      ..cubicTo(
-        width * 0.17,
-        height * 1.26,
-        width * 0.16,
-        height * 1.25,
-        width * 0.14,
-        height * 1.25,
-      )
-      ..lineTo(width * 0.14, height * 1.25);
-
-    final bounds = path.getBounds();
-    final paint = paintCreator();
-
-    canvas
-      ..translate(center.dx - bounds.center.dx, center.dy - bounds.center.dy)
-      ..drawPath(path, paintCreator(customColors.last)) // White.
-      ..drawPath(path2, paint) // Red.
-      ..drawPath(path3, paintCreator(customColors.first)) // Yellow.
-      ..drawPath(path4, paint) // Black.
-      ..drawPath(path5, paint) // Red.
-      ..drawPath(path6, paintCreator(customColors.last)) // White.
-      ..drawPath(path7, paintCreator(customColors.first)) // Yellow.
-      ..drawPath(path8, paintCreator(customColors.last)) // White.
-      ..drawPath(path9, paint) // Red.
-      ..drawPath(path10, paintCreator(customColors.first)) // Yellow.
-      ..drawPath(path11, paintCreator(customColors.first)) // Light yellow?
-      ..drawPath(path12, paint) // Red.
-      ..drawPath(path13, paintCreator(customColors[1])); // Blue.
+    final bounds = proportionalBounds(size, _artworkRatio);
+    _artwork.paint(canvas, bounds, badgePaint);
 
     return (canvas: canvas, bounds: bounds, child: property.child);
   }

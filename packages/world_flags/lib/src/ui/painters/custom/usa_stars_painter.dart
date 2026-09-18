@@ -17,34 +17,29 @@ final class UsaStarsPainter extends MultiElementPainter {
   static const _starsInRow = 6;
 
   @override
-  FlagParentBounds? paintFlagElements(Canvas canvas, Size size) {
-    final parent = RectanglePainter(
+  FlagParentBounds paintFlagElements(Canvas canvas, Size size) {
+    // The canton itself is already painted from the flag data, so this only
+    // needs its box: fifty stars then go into one path and one draw call.
+    final canton = RectanglePainter(
       [properties.first], // Dart 3.8 format.
       aspectRatio,
-    ).paint(canvas, size);
-    if (parent == null) return null;
-    final paint = paintCreator(customProperties.mainColor);
-    final parentSize = parent.bounds.size;
-    final rectSize = Size(parentSize.width, parentSize.height);
-    final horizontalSpacing = rectSize.width / _starsInRow;
-    final verticalSpacing = (rectSize.height / _rows) * 0.9;
-    final outerRadius = rectSize.height * customProperties.heightFactor;
-    final starPath = _drawStar(outerRadius);
+    ).rectangleBounds(size);
+    final horizontalSpacing = canton.width / _starsInRow;
+    final verticalSpacing = (canton.height / _rows) * 0.9;
+    final starPath = _drawStar(canton.height * customProperties.heightFactor);
+    final stars = Path();
 
     for (int row = 0; row < _rows; row += 1) {
       final isEven = row.isEven;
       final yOffset = verticalSpacing * row + verticalSpacing / 2;
       for (int star = 0; star < (isEven ? _starsInRow : 5); star += 1) {
         final horizontal = horizontalSpacing * (star + (isEven ? 1 / 2 : 1));
-        canvas
-          ..save()
-          ..translate(horizontal, yOffset)
-          ..drawPath(starPath, paint)
-          ..restore();
+        stars.addPath(starPath, Offset(horizontal, yOffset));
       }
     }
+    canvas.drawPath(stars, paintCreator(customProperties.mainColor));
 
-    return parent;
+    return (canvas: canvas, bounds: canton, child: customProperties.child);
   }
 
   static Path _drawStar(double outerRadius) {
