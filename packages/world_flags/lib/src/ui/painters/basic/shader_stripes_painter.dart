@@ -95,7 +95,7 @@ class ShaderStripesPainter<T extends CustomPainter> extends StripesPainter<T> {
     // real flag) and the recording is what the shader then distorts, so
     // nothing may be left outside. The picture is cached, so this costs
     // nothing per frame.
-    canvas.clipRect(Offset.zero & size);
+    canvas.clipRect(Offset.zero & size, doAntiAlias: false);
     paintStripes(canvas, size);
     canvas.restore();
   }

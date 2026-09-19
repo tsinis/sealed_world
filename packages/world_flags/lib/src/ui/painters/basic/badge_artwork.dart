@@ -3,7 +3,7 @@ import "dart:ui" show Canvas, Paint, Path, Rect;
 /// One layer of a flag badge: a palette index and the geometry filled with it.
 ///
 /// Its `color` indexes the badge's palette in the flag data: `0` is the custom
-/// element's `mainColor` and `n` is its `otherColors[n - 1]`, so the colours
+/// element's `mainColor` and `n` is its `otherColors[n - 1]`, so the colors
 /// stay where every other flag element keeps them.
 ///
 /// Its `geometry` is the layer's outline, encoded as described on
@@ -28,12 +28,26 @@ typedef _BadgePath = ({int color, Path path});
 /// | [lineTo] | draws a straight line | `x y` |
 /// | [closePath] | closes the sub-path | none |
 ///
+/// A triangle filling the box, in the badge's main color, is ten numbers:
+///
 /// ```dart
-/// static const _layers = <BadgeLayer>[
-///   (color: 0, geometry: [moveTo, .5, 0, lineTo, 1, 1, lineTo, 0, 1, 0]),
+/// const layers = <BadgeLayer>[
+///   (
+///     color: 0,
+///     geometry: [
+///       BadgeArtwork.moveTo, 0.5, 0,
+///       BadgeArtwork.lineTo, 1, 1,
+///       BadgeArtwork.lineTo, 0, 1,
+///       BadgeArtwork.closePath,
+///     ],
+///   ),
 /// ];
-/// static final _artwork = BadgeArtwork(_layers);
+/// assert(layers.single.geometry.length == 10, "Ten numbers, one triangle.");
 /// ```
+///
+/// A painter holds the artwork built from such a table in a `static final`
+/// field, so that one instance serves every flag that paints it and they
+/// share its path cache.
 ///
 /// The constants below are plain numbers in the generated data, so a layer
 /// costs one list literal rather than a method call per point. Curves are
@@ -71,7 +85,7 @@ final class BadgeArtwork {
   _BadgeCache? _recent;
   _BadgeCache? _previous;
 
-  /// Fills every layer into [bounds], resolving colours through [paintFor].
+  /// Fills every layer into [bounds], resolving colors through [paintFor].
   ///
   /// Coordinates are multiplied out one at a time, exactly as a hand-written
   /// painter would, so the geometry matches what the flag data describes.
@@ -104,7 +118,7 @@ final class BadgeArtwork {
       return previous.paths;
     }
 
-    // Layers that follow one another in the same colour are filled as a
+    // Layers that follow one another in the same color are filled as a
     // single path: one draw command instead of one per layer, and the result
     // is identical because they were painted back to back anyway.
     final built = <_BadgePath>[];

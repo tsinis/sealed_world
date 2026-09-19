@@ -114,7 +114,7 @@ Include both metadata and result JSON files when publishing releases. Do not ove
 
 Maintaining consistent procedures keeps regression tracking reliable.
 
-## 6. Measuring frame times directly
+## 11. Measuring frame times directly
 
 `example/integration_test/flag_list_perf_test.dart` traces three screens under
 `flutter drive`: an empty list, a list of plain boxes, and the flag list at 24 logical pixels a

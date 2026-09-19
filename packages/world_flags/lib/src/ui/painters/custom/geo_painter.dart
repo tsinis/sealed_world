@@ -82,7 +82,7 @@ final class GeoPainter extends MultiElementPainter {
       )
       ..lineTo(dimension, dimension * 0.33);
 
-    // The four small crosses are the same colour and never overlap, so each
+    // The four small crosses are the same color and never overlap, so each
     // arm of all of them goes into one path: two draw calls instead of eight.
     final stems = Path();
     final bars = Path();

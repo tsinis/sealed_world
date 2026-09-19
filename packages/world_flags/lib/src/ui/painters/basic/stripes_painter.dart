@@ -93,10 +93,10 @@ class StripesPainter<T extends CustomPainter> extends CustomPainter {
     }
   }
 
-  /// Draws the straight stripes, one draw call per colour.
+  /// Draws the straight stripes, one draw call per color.
   ///
-  /// Stripes never overlap, so stripes that share a colour can be filled as
-  /// one path without changing a pixel: thirteen stripes of two colours cost
+  /// Stripes never overlap, so stripes that share a color can be filled as
+  /// one path without changing a pixel: thirteen stripes of two colors cost
   /// two draw calls instead of thirteen. Anti-aliasing stays off, so the
   /// merged path rasterizes exactly like the separate rectangles did.
   void _drawStripes(

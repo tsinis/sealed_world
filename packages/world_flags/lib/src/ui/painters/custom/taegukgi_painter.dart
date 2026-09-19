@@ -39,7 +39,7 @@ final class TaegukgiPainter extends CustomElementsPainter {
     // out around the lower lobe and back in around the upper one. Built from
     // four anti-aliased half-discs instead, the two edges that meet on the
     // vertical diameter each covered about half of its pixels, which left a
-    // seam straight across the taeguk. One path per colour has no seam to
+    // seam straight across the taeguk. One path per color has no seam to
     // leave, and costs two draw calls rather than four.
     final yang = Path()
       ..arcTo(disc, -pi / 2, pi, true)
@@ -58,7 +58,7 @@ final class TaegukgiPainter extends CustomElementsPainter {
       ..drawPath(yang, paint..color = customColors.last)
       ..restore();
 
-    // All twelve bars share one colour and never overlap, so the four
+    // All twelve bars share one color and never overlap, so the four
     // trigrams are filled as a single path: one draw call instead of eighteen.
     final trigrams = Path();
     for (final trigram in _trigrams) {
@@ -108,7 +108,7 @@ final class TaegukgiPainter extends CustomElementsPainter {
         );
         _addBar(
           path,
-          Rect.fromLTWH(space / 2, y, half - space / 3, height),
+          Rect.fromLTWH(space / 6, y, half - space / 3, height),
           origin,
           cosine,
           sine,

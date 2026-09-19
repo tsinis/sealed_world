@@ -12,12 +12,12 @@ import "../basic/elements_painter.dart";
 ///
 /// Flags nest their stars: every star is the `child` of the one before it, and
 /// its box is the previous star's bounds. Those stars almost always share a
-/// colour, so this painter walks the chain itself and fills it as a single
+/// color, so this painter walks the chain itself and fills it as a single
 /// path. The Cook Islands' ring of fifteen stars costs one draw call instead
 /// of fifteen, which is what the raster thread actually pays for.
 ///
 /// The chain stops as soon as the next element is not a star, is not filled or
-/// carries another colour; the remaining child is handed back so that
+/// carries another color; the remaining child is handed back so that
 /// [ElementsPainter.paintChild] picks it up as before.
 final class StarPainter extends ElementsPainter {
   /// Creates a painter for a star, or a chain of stars.

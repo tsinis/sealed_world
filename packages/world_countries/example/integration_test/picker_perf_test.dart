@@ -34,7 +34,7 @@ void main() {
         await gesture.up();
         await tester.pumpAndSettle();
       },
-      reportKey: key, // Dart 3.8 formtting.
+      reportKey: key, // Dart 3.8 formatting.
     );
   }
 
@@ -67,8 +67,11 @@ class _PickerPerfTest extends StatelessWidget {
         const PickersThemeData(primary: true),
         if (!withFlags)
           CountryTileThemeData(
-            // ignore: avoid-passing-default-values, it's just a test.
-            itemBuilder: (_, i) => i.copyWith(leading: null),
+            // Built from the item rather than copied from the default tile:
+            // `copyWith` reads `leading ?? this.leading`, so passing null
+            // there keeps the flag and the control measures nothing. Leaving
+            // `leadingFlag` out drops the flag and the leading gap with it.
+            itemBuilder: (item, _) => CountryTile.fromProperties(item),
           ),
       ],
     ),

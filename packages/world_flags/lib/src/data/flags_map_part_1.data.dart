@@ -76,7 +76,6 @@ const flagDmaProperties = FlagProperties(
         ),
       ),
     ),
-    // The red disc; Twemoji's artwork supplies the stars and the parrot.
     ElementsProperties(
       Color(0xffE4002B),
       shape: Ellipse(),

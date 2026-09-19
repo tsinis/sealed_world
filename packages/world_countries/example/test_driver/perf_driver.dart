@@ -1,10 +1,10 @@
-// Driver for the local (desktop) performance runs of the flag list.
+// Driver for the performance runs of the country picker.
 //
 // Usage from the `example` directory:
 // ```
 // PERF_RUN=baseline flutter drive --profile -d macos \
 //   --driver=test_driver/perf_driver.dart \
-//   --target=integration_test/flag_list_perf_test.dart
+//   --target=integration_test/picker_perf_test.dart
 // ```
 // It writes `benchmarks/local/<report key>.<PERF_RUN>.timeline_summary.json`,
 // which holds the frame build and rasterizer percentiles to compare runs with.

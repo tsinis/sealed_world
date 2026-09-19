@@ -10,9 +10,9 @@ NEW FEATURES
 - `BadgeArtwork` holds a badge's layers as a flat run of numbers. A layer is
   an opcode followed by its coordinates, given as fractions of the badge box,
   so the artwork still scales with the flag. `BadgeLayer` pairs that geometry
-  with a palette index, which keeps the colours in the flag data where every
+  with a palette index, which keeps the colors in the flag data where every
   other element keeps them.
-  Layers that follow one another in the same colour are filled as a single
+  Layers that follow one another in the same color are filled as a single
   path, and the built paths are cached for the last two box sizes, so a flag
   shown in a list and in a detail view at once does not rebuild either.
 
@@ -26,15 +26,15 @@ IMPROVEMENTS
   command (flutter/flutter#192147), so on the mid-range Android devices that
   run it this is the number that decides the frame rate of a long flag list.
   The per-flag budget is recorded in `flag_draw_ops.json` and enforced by a
-  test. The worst flag now costs 21 draws where it used to cost 65.
-  - Stripes that share a colour are filled as one path: the United States'
+  test. The worst flag now costs 18 draws where it used to cost 65.
+  - Stripes that share a color are filled as one path: the United States'
     thirteen stripes are two draw calls, not thirteen.
-  - A chain of nested stars of the same colour is filled as one path: the Cook
+  - A chain of nested stars of the same color is filled as one path: the Cook
     Islands' ring of fifteen stars is one draw call, not fifteen, and
     `StarPainter` turns a star's points rather than the canvas.
   - The fifty stars of the United States are one path with fifty contours.
   - The Union Jack is five draw calls instead of eleven, with its diagonals
-    batched per colour and its cross filled per colour, which also speeds up
+    batched per color and its cross filled per color, which also speeds up
     the fifteen ensigns built on it.
   - Korea's twelve trigram bars are one path, Georgia's four small crosses are
     two, and Georgia no longer paints its emblem once per element (it was
@@ -45,7 +45,7 @@ IMPROVEMENTS
     already clipped to. The shader path does that clip itself now, inside its
     content scale, which is where it belongs: elements are allowed to overhang
     the flag body, and the recording is what the shader distorts.
-  - Korea's taeguk is one path per colour instead of four half-discs.
+  - Korea's taeguk is one path per color instead of four half-discs.
   - **Twenty-four hand-written emblems became cached artwork.** Angola,
     Antarctica, Albania, Cyprus, Eritrea, Hong Kong, Iran, Iraq, the Isle of
     Man, Kenya, Lebanon, Montenegro, the Norfolk Island pine, Papua New
@@ -61,7 +61,7 @@ IMPROVEMENTS
     its pixels, none of them differing by more than a quarter of a channel.
   - The shahada was drawing the **same accumulating path eight times** as it
     built the glyphs up - two contours, then six, then seventeen, up to
-    forty-two, all in one colour. Seven of those eight draws rasterized
+    forty-two, all in one color. Seven of those eight draws rasterized
     pixels the eighth would cover. It is two now, and the second is there for
     weight rather than for shape: the script is sub-pixel in a list, where the
     edge opacity those overlapping passes produced is what makes it read as
@@ -71,7 +71,7 @@ IMPROVEMENTS
   - Every badge is now flat polygons rather than curves, and layers that
     cannot change places are filled together. Across the fifteen badges that
     is 32% fewer coordinates and 32% fewer lines, with the emblems unchanged
-    to the eye; nothing was merged where a later layer of the same colour
+    to the eye; nothing was merged where a later layer of the same color
     carried detail on top of an earlier one.
 - `CustomElementsPainter.proportionalBounds` and the new `badgePaint` read the
   custom element out of `elementsProperties` by type rather than taking the
@@ -85,10 +85,11 @@ IMPROVEMENTS
 
 FIX
 
-- Elements that overhang the flag body are clipped again on the shader path.
-  Bosnia and Herzegovina's stars are cut off by the edge on the real flag and
-  relied on a clip that 3.6.0 had removed as redundant; it was not redundant
-  for a waved flag, whose content is scaled inside a larger recording.
+- Elements that overhang the flag body are clipped on the shader path by the
+  painter that records it, rather than by `MultiElementPainter`. Bosnia and
+  Herzegovina's stars are cut off by the edge on the real flag, and a waved
+  flag scales its content inside a larger recording, so the clip has to be
+  applied inside that scale to cut them in the same place.
 - Korea's taeguk no longer has a hairline straight across it. It was built
   from four anti-aliased half-discs whose flat edges all met on the same
   diameter, so each covered about half of those pixels and the background
@@ -105,7 +106,7 @@ TEST
   flag or the catalogue as a whole costs more than the numbers recorded in
   `flag_draw_ops.json`. Regenerate them with `UPDATE_DRAW_OPS=1 flutter test`.
 - Added `badge_artwork_test.dart` for the geometry encoding itself: opcode
-  handling, absolute coordinates, colour resolution, and that packing happens
+  handling, absolute coordinates, color resolution, and that packing happens
   once rather than per paint.
 - `example/integration_test/flag_list_perf_test.dart` with
   `test_driver/perf_driver.dart` scrolls a flag-only list and a dense flag grid
@@ -125,7 +126,7 @@ NEW FEATURES
   Falklands' ram and ship, the British Indian Ocean Territory's palm and crown,
   Jersey's three leopards, Montserrat's Erin, Pitcairn's anchor, South Georgia's
   seal and penguin, and the Turks and Caicos conch, lobster and cactus are all
-  drawn properly now, in place of a four-colour quartered shield.
+  drawn properly now, in place of a four-color quartered shield.
 - `CustomElementsPainter.proportionalBounds` lays out artwork that has to keep
   a fixed width-to-height ratio. The element's `widthFactor` and `heightFactor`
   still describe the box it fills at the flag's own aspect ratio, but when the
@@ -139,9 +140,9 @@ IMPROVEMENTS
   and `clipPath`, which are not pixel-stable across rasterizer backends, so
   their golden tests had to be skipped off Linux. The new painters only fill
   cubic paths, and the skip list is gone.
-- Badge colours come from the construction sheets each flag entry links to
+- Badge colors come from the construction sheets each flag entry links to
   rather than from the emoji palette, so Montserrat's ground is brown earth
-  again and Pitcairn, Jersey, Bermuda and the Turks and Caicos match the colours
+  again and Pitcairn, Jersey, Bermuda and the Turks and Caicos match the colors
   the rest of the package uses.
 - Montserrat's shield regained the grey rim the real badge has, its cross is
   dark wood rather than black, and Erin is no longer bald; Anguilla's shield

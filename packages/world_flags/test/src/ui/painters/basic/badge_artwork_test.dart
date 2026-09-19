@@ -68,7 +68,7 @@ void main() {
     );
   });
 
-  test("resolves each layer's colour through the caller", () {
+  test("resolves each layer's color through the caller", () {
     final artwork = BadgeArtwork(const [
       (color: 0, geometry: square),
       (color: 2, geometry: square),
@@ -97,7 +97,7 @@ void main() {
   });
 }
 
-/// Encodes the palette index into the colour, so a test can read it back.
+/// Encodes the palette index into the color, so a test can read it back.
 // The analyzer wants a cascade here and DCM would rather not return one, so
 // the rules are traded off explicitly.
 // ignore: avoid-returning-cascades

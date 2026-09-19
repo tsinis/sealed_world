@@ -22,7 +22,7 @@ final class GibPainter extends CustomElementsPainter {
   static final _artwork = BadgeArtwork(_layers);
 
   /// Commands as an opcode then its coordinates, relative to the badge
-  /// box: 1 moves, 2 draws a line, 3 curves, 0 closes the sub-path.
+  /// box: 1 moves, 2 draws a line, 0 closes the sub-path.
   // dart format off
   static const _layers = <BadgeLayer>[
     (color: 0, geometry: [

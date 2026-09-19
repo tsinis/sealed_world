@@ -75,7 +75,7 @@ final class UnionJackPainter extends SimpleShieldPainter {
     final rect = Rect.fromLTWH(0, 0, width, height);
     final length = sqrt(width * width + height * height);
 
-    // Both diagonals of a colour go into one path: they share a paint and
+    // Both diagonals of a color go into one path: they share a paint and
     // overlap at the centre, so filling them together draws the same pixels
     // as two separate calls did, for one draw command instead of two.
     final saltire = Path();
@@ -103,10 +103,10 @@ final class UnionJackPainter extends SimpleShieldPainter {
     _paintCross(canvas, size);
   }
 
-  /// Paints the upright cross, one draw call per colour.
+  /// Paints the upright cross, one draw call per color.
   ///
   /// The bars are axis-aligned and drawn without anti-aliasing, so filling the
-  /// two bars of a colour as one path is pixel for pixel what the four
+  /// two bars of a color as one path is pixel for pixel what the four
   /// separate rectangles produced.
   void _paintCross(Canvas canvas, Size size) {
     final ratio = size.aspectRatio;

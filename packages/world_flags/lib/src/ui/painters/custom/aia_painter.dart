@@ -1,10 +1,3 @@
-// Badge geometry derived from the Twemoji flag of Anguilla (CC-BY 4.0,
-// https://github.com/twitter/twemoji), curated for rendering at 18-48
-// pixels and normalized to the badge box, so every coordinate stays
-// relative to the flag size.
-//
-// The geometry table is generated and kept packed, so the formatter is fenced
-// off around it rather than exploding it to one number per line.
 // ignore_for_file: format-comment
 
 part of "../multi_element_painter.dart";
@@ -25,7 +18,7 @@ final class AiaPainter extends UnionJackPainter {
   static final _artwork = BadgeArtwork(_layers);
 
   /// Commands as an opcode then its coordinates, relative to the badge
-  /// box: 1 moves, 2 draws a line, 3 curves, 0 closes the sub-path.
+  /// box: 1 moves, 2 draws a line, 0 closes the sub-path.
   // dart format off
   static const _layers = <BadgeLayer>[
     (color: 0, geometry: [
