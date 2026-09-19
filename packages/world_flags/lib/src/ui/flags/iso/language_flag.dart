@@ -8,6 +8,7 @@ import "../../../data/flags_map_part_3.data.dart";
 import "../../painters/custom/ago_painter.dart";
 import "../../painters/custom/alb_painter.dart";
 import "../../painters/custom/almond_painter.dart";
+import "../../painters/custom/and_painter.dart";
 import "../../painters/custom/blr_painter.dart";
 import "../../painters/custom/btn_painter.dart";
 import "../../painters/custom/cyp_painter.dart";
@@ -122,10 +123,7 @@ class LanguageFlag extends DualFlag<NaturalLanguage, BasicFlag> {
     LangBos(): BasicFlag(flagBihProperties),
     LangBre(): BasicFlag(flagFraProperties),
     LangBul(): BasicFlag(flagBgrProperties),
-    LangCat(): BasicFlag(
-      flagAndProperties,
-      elementsBuilder: SimpleShieldPainter.outlinedWithDividers,
-    ),
+    LangCat(): BasicFlag(flagAndProperties, elementsBuilder: AndPainter.new),
     LangCes(): BasicFlag(flagCzeProperties),
     LangCha(): BasicFlag(flagGumProperties, elementsBuilder: AlmondPainter.gum),
     LangChe(): BasicFlag(flagRusProperties),
@@ -158,10 +156,7 @@ class LanguageFlag extends DualFlag<NaturalLanguage, BasicFlag> {
     LangEwe(): BasicFlag(flagGhaProperties),
     LangFao(): BasicFlag(flagFroProperties),
     LangFas(): BasicFlag(flagIrnProperties, elementsBuilder: IrnPainter.new),
-    LangFij(): BasicFlag(
-      flagFjiProperties,
-      elementsBuilder: UnionJackPainter.halfWithDividers,
-    ),
+    LangFij(): BasicFlag(flagFjiProperties, elementsBuilder: FjiPainter.new),
     LangFin(): BasicFlag(flagFinProperties),
     LangFra(): BasicFlag(flagFraProperties),
     LangFry(): BasicFlag(flagNldProperties),
@@ -260,7 +255,7 @@ class LanguageFlag extends DualFlag<NaturalLanguage, BasicFlag> {
       elementsBuilder: UsaStarsPainter.new,
     ),
     LangNbl(): BasicFlag(flagZafProperties),
-    LangNde(): BasicFlag(flagZweProperties),
+    LangNde(): BasicFlag(flagZweProperties, elementsBuilder: ZwePainter.new),
     LangNdo(): BasicFlag(flagNamProperties),
     LangNep(): BasicFlag(flagNplProperties, elementsBuilder: NplPainter.new),
     LangNld(): BasicFlag(flagNldProperties),
@@ -299,7 +294,7 @@ class LanguageFlag extends DualFlag<NaturalLanguage, BasicFlag> {
     LangSlv(): BasicFlag(flagSvnProperties, elementsBuilder: SvnPainter.new),
     LangSme(): BasicFlag(flagNorProperties),
     LangSmo(): BasicFlag(flagWsmProperties),
-    LangSna(): BasicFlag(flagZweProperties),
+    LangSna(): BasicFlag(flagZweProperties, elementsBuilder: ZwePainter.new),
     LangSnd(): BasicFlag(flagPakProperties),
     LangSom(): BasicFlag(flagSomProperties),
     LangSot(): BasicFlag(flagZafProperties),
@@ -408,7 +403,10 @@ class LanguageFlag extends DualFlag<NaturalLanguage, BasicFlag> {
         LangLim(): BasicFlag(flagBelProperties),
         LangMsa(): BasicFlag(flagSgpProperties),
         LangNld(): BasicFlag(flagBelProperties),
-        LangNya(): BasicFlag(flagZweProperties),
+        LangNya(): BasicFlag(
+          flagZweProperties,
+          elementsBuilder: ZwePainter.new,
+        ),
         LangOci(): BasicFlag(
           flagEspProperties,
           elementsBuilder: EspPainter.new,
@@ -469,13 +467,22 @@ class LanguageFlag extends DualFlag<NaturalLanguage, BasicFlag> {
           elementsBuilder: EriPainter.new,
         ),
         LangTsn(): BasicFlag(flagZafProperties),
-        LangTso(): BasicFlag(flagZweProperties),
+        LangTso(): BasicFlag(
+          flagZweProperties,
+          elementsBuilder: ZwePainter.new,
+        ),
         LangTur(): BasicFlag(
           flagCypProperties,
           elementsBuilder: CypPainter.new,
         ),
-        LangVen(): BasicFlag(flagZweProperties),
-        LangXho(): BasicFlag(flagZweProperties),
+        LangVen(): BasicFlag(
+          flagZweProperties,
+          elementsBuilder: ZwePainter.new,
+        ),
+        LangXho(): BasicFlag(
+          flagZweProperties,
+          elementsBuilder: ZwePainter.new,
+        ),
         LangYid(): BasicFlag(flagDeuProperties),
         LangZho(): BasicFlag(flagTwnProperties),
       };

@@ -25,7 +25,6 @@ final class AlmondPainter extends CustomElementsPainter {
 
   @override
   FlagParentBounds paintFlagElements(Canvas canvas, Size size) {
-    /// TODO? Refactor with .save() and .restore() methods.
     MultiElementPainter(
       List.unmodifiable(properties.skip(1)),
       aspectRatio,
@@ -57,6 +56,7 @@ final class AlmondPainter extends CustomElementsPainter {
 
     if (_isVertical) {
       canvas
+        ..save()
         ..translate(center.dx - bounds.center.dx, center.dy - bounds.center.dy)
         ..drawPath(path, paint)
         ..drawPath(
@@ -65,17 +65,14 @@ final class AlmondPainter extends CustomElementsPainter {
             ..style = PaintingStyle.stroke
             ..strokeCap = StrokeCap.round
             ..strokeWidth = height / 25,
-        );
+        )
+        ..restore();
     } else {
-      final verticalCenter = bounds.center.dy;
-      final horizontalCenter = bounds.center.dx;
-
       canvas
         ..save()
-        ..translate(center.dx - verticalCenter, center.dy - horizontalCenter)
-        ..rotate((pi / 180) * 90)
+        ..translate(center.dx - bounds.center.dy, center.dy - bounds.center.dx)
+        ..rotate(pi / 2)
         ..drawPath(path, paint)
-        ..translate(-center.dx - verticalCenter, -center.dy - horizontalCenter)
         ..restore();
     }
 

@@ -87,7 +87,7 @@ final class SimpleShieldPainter extends MultiElementPainter {
     paint.style = PaintingStyle.fill;
     canvas
       ..drawPath(path, paint)
-      ..saveLayer(Rect.fromLTWH(0, 0, height, height), Paint())
+      ..save()
       ..clipPath(path);
 
     paint.color = otherColors?.elementAtOrNull(1) ?? _fallback;

@@ -10,7 +10,7 @@ final class GeoPainter extends MultiElementPainter {
     final center = calculateCenter(size);
     final dimension = size.height / 5;
 
-    final vertical = Path()
+    final verticalArm = Path()
       ..moveTo(dimension * 0.33, 0)
       ..cubicTo(
         dimension * 0.44,
@@ -46,7 +46,7 @@ final class GeoPainter extends MultiElementPainter {
       )
       ..lineTo(dimension * 0.33, 0);
 
-    final horizontal = Path()
+    final horizontalArm = Path()
       ..moveTo(dimension, dimension * 0.33)
       ..cubicTo(
         dimension * 0.98,
@@ -82,22 +82,25 @@ final class GeoPainter extends MultiElementPainter {
       )
       ..lineTo(dimension, dimension * 0.33);
 
-    final paint = paintCreator();
+    // The four small crosses are the same color and never overlap, so each
+    // arm of all of them goes into one path: two draw calls instead of eight.
+    final stems = Path();
+    final bars = Path();
     for (final prop in properties.skip(1)) {
-      final offsetY = center.dy + (prop.offset.dy * size.height / 2);
-      // ignore: avoid-similar-names, Horizontal is already defined.
-      final offsetX =
-          center.dx +
-          (prop.offset.dx * size.width / 2 / aspectRatio) -
-          dimension / 2;
-
-      canvas
-        ..save()
-        ..translate(offsetX, offsetY)
-        ..drawPath(vertical, paint)
-        ..drawPath(horizontal, paint)
-        ..restore();
+      final offset = Offset(
+        center.dx +
+            (prop.offset.dx * size.width / 2 / aspectRatio) -
+            dimension / 2,
+        center.dy + (prop.offset.dy * size.height / 2),
+      );
+      stems.addPath(verticalArm, offset);
+      bars.addPath(horizontalArm, offset);
     }
+
+    final paint = paintCreator();
+    canvas
+      ..drawPath(stems, paint)
+      ..drawPath(bars, paint);
 
     return null;
   }

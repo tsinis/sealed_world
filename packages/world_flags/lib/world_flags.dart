@@ -13,6 +13,7 @@ import "src/ui/flags/basic_flag.dart";
 import "src/ui/painters/custom/ago_painter.dart";
 import "src/ui/painters/custom/alb_painter.dart";
 import "src/ui/painters/custom/almond_painter.dart";
+import "src/ui/painters/custom/and_painter.dart";
 import "src/ui/painters/custom/ata_painter.dart";
 import "src/ui/painters/custom/blr_painter.dart";
 import "src/ui/painters/custom/brb_painter.dart";
@@ -21,9 +22,11 @@ import "src/ui/painters/custom/clipped_triangle_painter.dart";
 import "src/ui/painters/custom/cyp_painter.dart";
 import "src/ui/painters/custom/david_star_painter.dart";
 import "src/ui/painters/custom/eagle_painter.dart";
+import "src/ui/painters/custom/ecu_painter.dart";
 import "src/ui/painters/custom/eri_painter.dart";
 import "src/ui/painters/custom/esp_painter.dart";
 import "src/ui/painters/custom/ggy_painter.dart";
+import "src/ui/painters/custom/gib_painter.dart";
 import "src/ui/painters/custom/hkg_painter.dart";
 import "src/ui/painters/custom/hrv_painter.dart";
 import "src/ui/painters/custom/imn_painter.dart";
@@ -118,6 +121,7 @@ export "src/ui/painters/common/triangle_painter.dart";
 export "src/ui/painters/custom/ago_painter.dart";
 export "src/ui/painters/custom/alb_painter.dart";
 export "src/ui/painters/custom/almond_painter.dart";
+export "src/ui/painters/custom/and_painter.dart";
 export "src/ui/painters/custom/ata_painter.dart";
 export "src/ui/painters/custom/blr_painter.dart";
 export "src/ui/painters/custom/brb_painter.dart";
@@ -126,9 +130,11 @@ export "src/ui/painters/custom/clipped_triangle_painter.dart";
 export "src/ui/painters/custom/cyp_painter.dart";
 export "src/ui/painters/custom/david_star_painter.dart";
 export "src/ui/painters/custom/eagle_painter.dart";
+export "src/ui/painters/custom/ecu_painter.dart";
 export "src/ui/painters/custom/eri_painter.dart";
 export "src/ui/painters/custom/esp_painter.dart";
 export "src/ui/painters/custom/ggy_painter.dart";
+export "src/ui/painters/custom/gib_painter.dart";
 export "src/ui/painters/custom/hkg_painter.dart";
 export "src/ui/painters/custom/hrv_painter.dart";
 export "src/ui/painters/custom/imn_painter.dart";
@@ -178,16 +184,10 @@ const uniqueSimplifiedFlagsMap = <WorldCountry, BasicFlag>{
     elementsBuilder: ShahadaPainter.afg,
   ),
   CountryAgo(): BasicFlag(flagAgoProperties, elementsBuilder: AgoPainter.new),
-  CountryAia(): BasicFlag(
-    flagAiaProperties,
-    elementsBuilder: UnionJackPainter.half,
-  ),
+  CountryAia(): BasicFlag(flagAiaProperties, elementsBuilder: AiaPainter.new),
   CountryAla(): BasicFlag(flagAlaProperties),
   CountryAlb(): BasicFlag(flagAlbProperties, elementsBuilder: AlbPainter.new),
-  CountryAnd(): BasicFlag(
-    flagAndProperties,
-    elementsBuilder: SimpleShieldPainter.outlinedWithDividers,
-  ),
+  CountryAnd(): BasicFlag(flagAndProperties, elementsBuilder: AndPainter.new),
   CountryAre(): BasicFlag(flagAreProperties),
   CountryArg(): BasicFlag(flagArgProperties),
   CountryArm(): BasicFlag(flagArmProperties),
@@ -217,10 +217,7 @@ const uniqueSimplifiedFlagsMap = <WorldCountry, BasicFlag>{
   CountryBlm(): BasicFlag(flagBlmProperties),
   CountryBlr(): BasicFlag(flagBlrProperties, elementsBuilder: BlrPainter.new),
   CountryBlz(): BasicFlag(flagBlzProperties),
-  CountryBmu(): BasicFlag(
-    flagBmuProperties,
-    elementsBuilder: UnionJackPainter.halfWithoutOutline,
-  ),
+  CountryBmu(): BasicFlag(flagBmuProperties, elementsBuilder: BmuPainter.new),
   CountryBol(): BasicFlag(flagBolProperties),
   CountryBra(): BasicFlag(flagBraProperties, elementsBuilder: BraPainter.new),
   CountryBrb(): BasicFlag(flagBrbProperties, elementsBuilder: BrbPainter.new),
@@ -269,14 +266,11 @@ const uniqueSimplifiedFlagsMap = <WorldCountry, BasicFlag>{
   CountryCze(): BasicFlag(flagCzeProperties),
   CountryDeu(): BasicFlag(flagDeuProperties),
   CountryDji(): BasicFlag(flagDjiProperties),
-  CountryDma(): BasicFlag(flagDmaProperties),
+  CountryDma(): BasicFlag(flagDmaProperties, elementsBuilder: DmaPainter.new),
   CountryDnk(): BasicFlag(flagDnkProperties),
   CountryDom(): BasicFlag(flagDomProperties),
   CountryDza(): BasicFlag(flagDzaProperties),
-  CountryEcu(): BasicFlag(
-    flagEcuProperties,
-    elementsBuilder: SimpleShieldPainter.outlinedWithoutDividers,
-  ),
+  CountryEcu(): BasicFlag(flagEcuProperties, elementsBuilder: EcuPainter.new),
   CountryEgy(): BasicFlag(
     flagEgyProperties,
     elementsBuilder: SimpleBirdPainter.egy,
@@ -287,14 +281,8 @@ const uniqueSimplifiedFlagsMap = <WorldCountry, BasicFlag>{
   CountryEst(): BasicFlag(flagEstProperties),
   CountryEth(): BasicFlag(flagEthProperties),
   CountryFin(): BasicFlag(flagFinProperties),
-  CountryFji(): BasicFlag(
-    flagFjiProperties,
-    elementsBuilder: UnionJackPainter.halfWithDividers,
-  ),
-  CountryFlk(): BasicFlag(
-    flagFlkProperties,
-    elementsBuilder: UnionJackPainter.halfWithoutOutline,
-  ),
+  CountryFji(): BasicFlag(flagFjiProperties, elementsBuilder: FjiPainter.new),
+  CountryFlk(): BasicFlag(flagFlkProperties, elementsBuilder: FlkPainter.new),
   CountryFra(): BasicFlag(flagFraProperties),
   CountryFro(): BasicFlag(flagFroProperties),
   CountryFsm(): BasicFlag(flagFsmProperties),
@@ -306,7 +294,7 @@ const uniqueSimplifiedFlagsMap = <WorldCountry, BasicFlag>{
   CountryGeo(): BasicFlag(flagGeoProperties, elementsBuilder: GeoPainter.new),
   CountryGgy(): BasicFlag(flagGgyProperties, elementsBuilder: GgyPainter.new),
   CountryGha(): BasicFlag(flagGhaProperties),
-  CountryGib(): BasicFlag(flagGibProperties),
+  CountryGib(): BasicFlag(flagGibProperties, elementsBuilder: GibPainter.new),
   CountryGin(): BasicFlag(flagGinProperties),
   CountryGlp(): BasicFlag(flagGlpProperties),
   CountryGmb(): BasicFlag(flagGmbProperties),
@@ -339,10 +327,7 @@ const uniqueSimplifiedFlagsMap = <WorldCountry, BasicFlag>{
   CountryIdn(): BasicFlag(flagIdnProperties),
   CountryImn(): BasicFlag(flagImnProperties, elementsBuilder: ImnPainter.new),
   CountryInd(): BasicFlag(flagIndProperties),
-  CountryIot(): BasicFlag(
-    flagIotProperties,
-    elementsBuilder: UnionJackPainter.halfWithoutOutline,
-  ),
+  CountryIot(): BasicFlag(flagIotProperties, elementsBuilder: IotPainter.new),
   CountryIrl(): BasicFlag(flagIrlProperties),
   CountryIrn(): BasicFlag(flagIrnProperties, elementsBuilder: IrnPainter.new),
   CountryIrq(): BasicFlag(flagIrqProperties, elementsBuilder: IrqPainter.new),
@@ -353,10 +338,7 @@ const uniqueSimplifiedFlagsMap = <WorldCountry, BasicFlag>{
   ),
   CountryIta(): BasicFlag(flagItaProperties),
   CountryJam(): BasicFlag(flagJamProperties),
-  CountryJey(): BasicFlag(
-    flagJeyProperties,
-    elementsBuilder: SimpleShieldPainter.outlinedWithoutDividers,
-  ),
+  CountryJey(): BasicFlag(flagJeyProperties, elementsBuilder: JeyPainter.new),
   CountryJor(): BasicFlag(flagJorProperties),
   CountryJpn(): BasicFlag(flagJpnProperties),
   CountryKaz(): BasicFlag(flagKazProperties, elementsBuilder: KazPainter.new),
@@ -405,10 +387,7 @@ const uniqueSimplifiedFlagsMap = <WorldCountry, BasicFlag>{
   CountryMnp(): BasicFlag(flagMnpProperties),
   CountryMoz(): BasicFlag(flagMozProperties),
   CountryMrt(): BasicFlag(flagMrtProperties),
-  CountryMsr(): BasicFlag(
-    flagMsrProperties,
-    elementsBuilder: UnionJackPainter.halfWithoutOutline,
-  ),
+  CountryMsr(): BasicFlag(flagMsrProperties, elementsBuilder: MsrPainter.new),
   CountryMtq(): BasicFlag(flagMtqProperties),
   CountryMus(): BasicFlag(flagMusProperties),
   CountryMwi(): BasicFlag(
@@ -438,10 +417,7 @@ const uniqueSimplifiedFlagsMap = <WorldCountry, BasicFlag>{
   CountryOmn(): BasicFlag(flagOmnProperties),
   CountryPak(): BasicFlag(flagPakProperties),
   CountryPan(): BasicFlag(flagPanProperties),
-  CountryPcn(): BasicFlag(
-    flagPcnProperties,
-    elementsBuilder: UnionJackPainter.half,
-  ),
+  CountryPcn(): BasicFlag(flagPcnProperties, elementsBuilder: PcnPainter.new),
   CountryPer(): BasicFlag(flagPerProperties),
   CountryPhl(): BasicFlag(flagPhlProperties),
   CountryPlw(): BasicFlag(flagPlwProperties),
@@ -465,10 +441,7 @@ const uniqueSimplifiedFlagsMap = <WorldCountry, BasicFlag>{
   CountrySdn(): BasicFlag(flagSdnProperties),
   CountrySen(): BasicFlag(flagSenProperties),
   CountrySgp(): BasicFlag(flagSgpProperties),
-  CountrySgs(): BasicFlag(
-    flagSgsProperties,
-    elementsBuilder: UnionJackPainter.half,
-  ),
+  CountrySgs(): BasicFlag(flagSgsProperties, elementsBuilder: SgsPainter.new),
   CountryShn(): BasicFlag(
     flagShnProperties,
     elementsBuilder: UnionJackPainter.full,
@@ -494,10 +467,7 @@ const uniqueSimplifiedFlagsMap = <WorldCountry, BasicFlag>{
   CountrySxm(): BasicFlag(flagSxmProperties),
   CountrySyc(): BasicFlag(flagSycProperties, elementsBuilder: SycPainter.new),
   CountrySyr(): BasicFlag(flagSyrProperties),
-  CountryTca(): BasicFlag(
-    flagTcaProperties,
-    elementsBuilder: UnionJackPainter.half,
-  ),
+  CountryTca(): BasicFlag(flagTcaProperties, elementsBuilder: TcaPainter.new),
   CountryTcd(): BasicFlag(flagTcdProperties),
   CountryTgo(): BasicFlag(flagTgoProperties),
   CountryTha(): BasicFlag(flagThaProperties),
@@ -545,7 +515,7 @@ const uniqueSimplifiedFlagsMap = <WorldCountry, BasicFlag>{
   CountryYem(): BasicFlag(flagYemProperties),
   CountryZaf(): BasicFlag(flagZafProperties),
   CountryZmb(): BasicFlag(flagZmbProperties, elementsBuilder: ZmbPainter.new),
-  CountryZwe(): BasicFlag(flagZweProperties),
+  CountryZwe(): BasicFlag(flagZweProperties, elementsBuilder: ZwePainter.new),
   CountryUnk(): BasicFlag(
     flagUnkProperties,
     elementsBuilder: KosovoPainter.new,

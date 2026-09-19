@@ -19,39 +19,41 @@ final class DavidStarPainter extends CustomElementsPainter {
     final radius = min(size.width, size.height) / 5.5;
 
     canvas
+      ..save()
       ..translate(size.width / 2, size.height / 2)
       ..rotate(pi / 2)
-      ..translate(-size.width / 2, -size.height / 2);
-
-    _drawTriangle(canvas, center, radius, paint, isUpward: true);
-    _drawTriangle(canvas, center, radius, paint, isUpward: false);
+      ..translate(-size.width / 2, -size.height / 2)
+      ..drawPath(_triangle(center, radius, isUpward: true), paint)
+      ..drawPath(_triangle(center, radius, isUpward: false), paint)
+      ..restore();
 
     return null;
   }
 
-  // ignore: long-parameter-list, TODO? Refactor later.
-  static void _drawTriangle(
-    Canvas canvas,
+  /// One of the two interlocking triangles of the hexagram.
+  static Path _triangle(
     Offset center,
-    double radius,
-    Paint paint, {
+    double radius, {
     required bool isUpward,
   }) {
     const angle = pi * 2 / 3;
-    final path = Path();
     final startAngle = isUpward ? pi : 0;
+    final path = Path();
 
-    for (int i = 0; i < 3; i += 1) {
-      final x = center.dx + radius * cos(startAngle + angle * i);
-      final y = center.dy + radius * sin(startAngle + angle * i);
-      if (i == 0) {
-        path.moveTo(x, y);
+    for (int corner = 0; corner < 3; corner += 1) {
+      final point = Offset(
+        center.dx + radius * cos(startAngle + angle * corner),
+        center.dy + radius * sin(startAngle + angle * corner),
+      );
+      if (corner == 0) {
+        path.moveTo(point.dx, point.dy);
       } else {
-        path.lineTo(x, y);
+        path.lineTo(point.dx, point.dy);
       }
     }
+
     path.close();
 
-    canvas.drawPath(path, paint);
+    return path;
   }
 }

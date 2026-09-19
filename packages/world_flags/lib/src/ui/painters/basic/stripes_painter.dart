@@ -62,10 +62,10 @@ class StripesPainter<T extends CustomPainter> extends CustomPainter {
     );
     switch (properties.stripeOrientation) {
       case StripeOrientation.horizontal:
-        _drawHorizontalStripes(canvas, size, total);
+        _drawStripes(canvas, size, total, isVertical: false);
 
       case StripeOrientation.vertical:
-        _drawVerticalStripes(canvas, size, total);
+        _drawStripes(canvas, size, total, isVertical: true);
 
       case StripeOrientation.diagonalBottomLeftToTopRight:
         _drawDiagonalStripes(canvas, size, total, isTopLeftToBottom: true);
@@ -93,27 +93,44 @@ class StripesPainter<T extends CustomPainter> extends CustomPainter {
     }
   }
 
-  void _drawVerticalStripes(Canvas canvas, Size size, int totalRatio) {
+  /// Draws the straight stripes, one draw call per color.
+  ///
+  /// Stripes never overlap, so stripes that share a color can be filled as
+  /// one path without changing a pixel: thirteen stripes of two colors cost
+  /// two draw calls instead of thirteen. Anti-aliasing stays off, so the
+  /// merged path rasterizes exactly like the separate rectangles did.
+  void _drawStripes(
+    Canvas canvas,
+    Size size,
+    int totalRatio, {
+    required bool isVertical,
+  }) {
+    final byColor = <Color, List<Rect>>{};
     double position = 0;
-    final paint = Paint()..isAntiAlias = false;
     for (final colorProperty in properties.stripeColors) {
-      final stripeSize = size.width * colorProperty.ratio / totalRatio;
-      final stripe = Rect.fromLTWH(position, 0, stripeSize, size.height);
-      paint.color = colorProperty.color;
-      canvas.drawRect(stripe, paint);
-      position += stripeSize;
+      final extent =
+          (isVertical ? size.width : size.height) *
+          colorProperty.ratio /
+          totalRatio;
+      final stripe = isVertical
+          ? Rect.fromLTWH(position, 0, extent, size.height)
+          : Rect.fromLTWH(0, position, size.width, extent);
+      final same = byColor[colorProperty.color] ?? const <Rect>[];
+      byColor[colorProperty.color] = [...same, stripe];
+      position += extent;
     }
-  }
 
-  void _drawHorizontalStripes(Canvas canvas, Size size, int totalRatio) {
-    double position = 0;
     final paint = Paint()..isAntiAlias = false;
-    for (final colorProperty in properties.stripeColors) {
-      final stripeSize = size.height * colorProperty.ratio / totalRatio;
-      final stripe = Rect.fromLTWH(0, position, size.width, stripeSize);
-      paint.color = colorProperty.color;
-      canvas.drawRect(stripe, paint);
-      position += stripeSize;
+    for (final MapEntry(key: color, value: group) in byColor.entries) {
+      paint.color = color;
+      if (group.length == 1) {
+        canvas.drawRect(group.first, paint);
+
+        continue;
+      }
+      final path = Path();
+      group.forEach(path.addRect);
+      canvas.drawPath(path, paint);
     }
   }
 

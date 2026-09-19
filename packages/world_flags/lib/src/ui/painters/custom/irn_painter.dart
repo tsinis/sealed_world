@@ -1,249 +1,62 @@
+// ignore_for_file: format-comment
+
 part of "../multi_element_painter.dart";
 
-/// Painter for the Iran flag.
+/// Painter for the emblem of Iran.
 final class IrnPainter extends MultiElementPainter {
   /// Creates a new instance of [IrnPainter].
   const new(super._properties, super.aspectRatio);
 
-  @override
-  double get originalAspectRatio => flagIrnProperties.aspectRatio;
+  /// Width over height of the emblem artwork.
+  ///
+  /// The emblem keeps this ratio whatever ratio the flag itself is drawn at.
+  static const _artworkRatio = 1.0547;
+
+  /// The artwork, packed into typed arrays on first paint and reused after.
+  static final _artwork = BadgeArtwork(_layers);
+
+  /// Commands as an opcode then its coordinates, relative to the emblem
+  /// box: 1 moves, 2 draws a line, 0 closes the sub-path.
+  // dart format off
+  static const _layers = <BadgeLayer>[
+    (color: 0, geometry: [
+      1, 0.4992, 0.0903, 2, 0.4751, 0.1234, 2, 0.4407, 0.1449, 2, 0.4407,
+      0.4452, 2, 0.4523, 0.8272, 2, 0.3823, 0.7619, 2, 0.3247, 0.6824, 2,
+      0.2825, 0.5929, 2, 0.2578, 0.4995, 2, 0.2504, 0.3998, 2, 0.2613,
+      0.3036, 2, 0.2899, 0.2115, 2, 0.3351, 0.127, 2, 0.2671, 0.1992, 2,
+      0.2171, 0.284, 2, 0.1864, 0.3785, 2, 0.1763, 0.4779, 2, 0.1933, 0.6037,
+      2, 0.2418, 0.72, 2, 0.3182, 0.8182, 2, 0.4167, 0.8915, 2, 0.3087,
+      0.9178, 2, 0.2196, 0.9193, 2, 0.3445, 0.9456, 2, 0.464, 0.9381, 2, 0.5,
+      1, 2, 0.5341, 0.9551, 2, 0.5345, 0.9374, 2, 0.6666, 0.9413, 2, 0.7793,
+      0.9192, 2, 0.6902, 0.918, 2, 0.581, 0.8919, 2, 0.6834, 0.8198, 2,
+      0.7598, 0.7257, 2, 0.8022, 0.6296, 2, 0.8201, 0.548, 2, 0.8253, 0.4815,
+      2, 0.8148, 0.3852, 2, 0.7833, 0.2909, 2, 0.732, 0.2034, 2, 0.6627,
+      0.1265, 2, 0.708, 0.2109, 2, 0.7368, 0.303, 2, 0.7478, 0.3992, 2,
+      0.7404, 0.4989, 2, 0.7158, 0.5923, 2, 0.6737, 0.6819, 2, 0.6163,
+      0.7614, 2, 0.5458, 0.8278, 2, 0.5575, 0.4458, 2, 0.5575, 0.1455, 2,
+      0.5214, 0.1218, 0, 1, 0.71, 0.1178, 2, 0.7818, 0.1831, 2, 0.8398,
+      0.2622, 2, 0.8817, 0.3519, 2, 0.9064, 0.4515, 2, 0.9116, 0.5514, 2,
+      0.8977, 0.6502, 2, 0.8649, 0.744, 2, 0.815, 0.8277, 2, 0.9015, 0.7577,
+      2, 0.9654, 0.661, 2, 0.9994, 0.5487, 2, 1, 0.4309, 2, 0.9665, 0.3217,
+      2, 0.9039, 0.2336, 2, 0.8154, 0.1615, 0, 1, 0.2888, 0.1173, 2, 0.1817,
+      0.1612, 2, 0.0938, 0.234, 2, 0.0323, 0.3288, 2, 0, 0.4416, 2, 0.002,
+      0.5594, 2, 0.0394, 0.6738, 2, 0.1099, 0.7729, 2, 0.1951, 0.8278, 2,
+      0.1416, 0.7452, 2, 0.1058, 0.6527, 2, 0.0897, 0.5573, 2, 0.0929,
+      0.4574, 2, 0.1156, 0.3603, 2, 0.1578, 0.2674, 2, 0.2167, 0.1853, 0, 1,
+      0.3702, 0, 2, 0.3664, 0.0362, 2, 0.3771, 0.0705, 2, 0.3939, 0.09, 2,
+      0.4269, 0.1009, 2, 0.4696, 0.0966, 2, 0.4986, 0.0725, 2, 0.5314,
+      0.0946, 2, 0.5713, 0.0948, 2, 0.6064, 0.0747, 2, 0.6276, 0.0432, 2,
+      0.6276, 0.0004, 2, 0.6103, 0.0318, 2, 0.5781, 0.0512, 2, 0.5355,
+      0.0508, 2, 0.4991, 0.0262, 2, 0.4724, 0.0526, 2, 0.433, 0.0584, 2,
+      0.3996, 0.042, 0,
+    ]),
+  ];
+  // dart format on
 
   @override
   FlagParentBounds paintFlagElements(Canvas canvas, Size size) {
-    final adjustedSize = ratioAdjustedSize(size, minRatio: 1.2);
-    final center = calculateCenter(size);
-    final height = adjustedSize.height;
-    final width = adjustedSize.width;
-
-    final path = Path()
-      ..moveTo(width * 0.76, height * 0.78)
-      ..cubicTo(
-        width * 0.81,
-        height * 0.59,
-        width * 0.76,
-        height * 0.38,
-        width * 0.64,
-        height * 0.24,
-      )
-      ..cubicTo(
-        width * 0.77,
-        height * 0.49,
-        width * 0.72,
-        height * 0.83,
-        width * 0.54,
-        height * 1.01,
-      )
-      ..lineTo(width * 0.55, height * 0.59)
-      ..lineTo(width * 0.55, height * 0.26)
-      ..cubicTo(
-        width * 0.53,
-        height * 0.25,
-        width * 0.51,
-        height * 0.23,
-        width * 0.5,
-        height * 0.2,
-      )
-      ..cubicTo(
-        width * 0.49,
-        height * 0.23,
-        width * 0.47,
-        height * 0.25,
-        width * 0.45,
-        height * 0.26,
-      )
-      ..lineTo(width * 0.45, height * 0.59)
-      ..lineTo(width * 0.46, height * 1.01)
-      ..cubicTo(
-        width * 0.28,
-        height * 0.83,
-        width * 0.23,
-        height * 0.49,
-        width * 0.36,
-        height * 0.24,
-      )
-      ..cubicTo(
-        width * 0.15,
-        height * 0.47,
-        width * 0.19,
-        height * 0.91,
-        width * 0.43,
-        height * 1.08,
-      )
-      ..cubicTo(
-        width * 0.38,
-        height * 1.1,
-        width * 0.32,
-        height * 1.12,
-        width * 0.26,
-        height * 1.11,
-      )
-      ..cubicTo(
-        width * 0.33,
-        height * 1.14,
-        width * 0.4,
-        height * 1.15,
-        width * 0.47,
-        height * 1.13,
-      )
-      ..lineTo(width * 0.47, height * 1.14)
-      ..lineTo(width * 0.5, height * 1.2)
-      ..lineTo(width * 0.53, height * 1.15)
-      ..lineTo(width * 0.53, height * 1.13)
-      ..cubicTo(
-        width * 0.6,
-        height * 1.14,
-        width * 0.67,
-        height * 1.14,
-        width * 0.74,
-        height * 1.11,
-      )
-      ..cubicTo(
-        width * 0.68,
-        height * 1.12,
-        width * 0.62,
-        height * 1.1,
-        width * 0.57,
-        height * 1.08,
-      )
-      ..cubicTo(
-        width * 0.66,
-        height * 1.02,
-        width * 0.73,
-        height * 0.92,
-        width * 0.76,
-        height * 0.79,
-      )
-      ..lineTo(width * 0.76, height * 0.78);
-    final path2 = Path()
-      ..moveTo(width * 0.89, height * 0.43)
-      ..cubicTo(
-        width * 0.84,
-        height * 0.33,
-        width * 0.77,
-        height * 0.26,
-        width * 0.68,
-        height * 0.23,
-      )
-      ..cubicTo(
-        width * 0.87,
-        height * 0.41,
-        width * 0.91,
-        height * 0.77,
-        width * 0.77,
-        height * 1.01,
-      )
-      ..lineTo(width * 0.77, height * 1.01)
-      ..cubicTo(
-        width * 0.92,
-        height * 0.9,
-        width * 0.98,
-        height * 0.63,
-        width * 0.89,
-        height * 0.43,
-      )
-      ..lineTo(width * 0.89, height * 0.43)
-      ..moveTo(width * 0.32, height * 0.23)
-      ..cubicTo(
-        width * 0.07,
-        height * 0.31,
-        width * -0.01,
-        height * 0.7,
-        width * 0.16,
-        height * 0.94,
-      )
-      ..cubicTo(
-        width * 0.18,
-        height * 0.97,
-        width * 0.21,
-        height * 0.99,
-        width * 0.24,
-        height * 1.01,
-      )
-      ..cubicTo(
-        width * 0.09,
-        height * 0.77,
-        width * 0.13,
-        height * 0.42,
-        width * 0.32,
-        height * 0.23,
-      )
-      ..lineTo(width * 0.32, height * 0.23)
-      ..moveTo(width * 0.41, height * 0.2)
-      ..cubicTo(
-        width * 0.44,
-        height * 0.22,
-        width * 0.48,
-        height * 0.22,
-        width * 0.5,
-        height * 0.18,
-      )
-      ..cubicTo(
-        width * 0.53,
-        height * 0.23,
-        width * 0.59,
-        height * 0.21,
-        width * 0.61,
-        height * 0.15,
-      )
-      ..cubicTo(
-        width * 0.61,
-        height * 0.14,
-        width * 0.61,
-        height * 0.12,
-        width * 0.61,
-        height * 0.1,
-      )
-      ..cubicTo(
-        width * 0.6,
-        height * 0.16,
-        width * 0.54,
-        height * 0.18,
-        width * 0.51,
-        height * 0.14,
-      )
-      ..cubicTo(
-        width * 0.51,
-        height * 0.14,
-        width * 0.5,
-        height * 0.13,
-        width * 0.5,
-        height * 0.13,
-      )
-      ..cubicTo(
-        width * 0.48,
-        height * 0.18,
-        width * 0.42,
-        height * 0.18,
-        width * 0.4,
-        height * 0.12,
-      )
-      ..cubicTo(
-        width * 0.4,
-        height * 0.12,
-        width * 0.39,
-        height * 0.11,
-        width * 0.39,
-        height * 0.1,
-      )
-      ..cubicTo(
-        width * 0.38,
-        height * 0.14,
-        width * 0.39,
-        height * 0.18,
-        width * 0.41,
-        height * 0.2,
-      )
-      ..lineTo(width * 0.41, height * 0.2);
-
-    final bounds = path.getBounds();
-    final paint = paintCreator();
-
-    canvas
-      ..save()
-      ..translate(center.dx - bounds.center.dx, center.dy - bounds.center.dy)
-      ..drawPath(path, paint)
-      ..drawPath(path2, paint)
-      ..restore();
+    final bounds = proportionalBounds(size, _artworkRatio);
+    _artwork.paint(canvas, bounds, badgePaint);
 
     return (canvas: canvas, bounds: bounds, child: property.child);
   }

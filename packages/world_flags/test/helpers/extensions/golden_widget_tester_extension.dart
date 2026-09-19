@@ -66,23 +66,8 @@ extension GoldenWidgetTesterExtension on WidgetTester {
     await expectLater(
       find.byType(finderType),
       matchesGoldenFile(isWaved ? "../$filePath" : filePath),
-      skip: !Platform.isLinux && (_ignoreOnNonLinux.contains(iso) || isWaved),
-      reason: "Non-Linux platforms rendering those flags slightly differently",
+      skip: !Platform.isLinux && isWaved,
+      reason: "Shader-based flags rasterize differently off Linux",
     );
   }
-
-  static const _ignoreOnNonLinux = <IsoTranslated>{
-    CountryAia(),
-    CountryAnd(),
-    CountryBmu(),
-    CountryEcu(),
-    CountryFji(),
-    CountryFlk(),
-    CountryIot(),
-    CountryJey(),
-    CountryMsr(),
-    CountryPcn(),
-    CountrySgs(),
-    CountryTca(),
-  };
 }

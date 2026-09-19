@@ -103,14 +103,11 @@ class _MainPageState extends State<MainPage>
           SearchAnchor(
             isFullScreen: false,
             viewConstraints: const BoxConstraints(minWidth: 220, maxWidth: 320),
-            builder: (_, controller) => GestureDetector(
+            builder: (_, controller) => IconButton(
+              tooltip: "search",
+              onPressed: controller.openView,
               onLongPress: _handleAppBarSearch,
-              // ignore:avoid-nested-interactive-semantics, just an example app.
-              child: IconButton(
-                tooltip: "search",
-                onPressed: controller.openView,
-                icon: const Icon(Icons.search, semanticLabel: "search_icon"),
-              ),
+              icon: const Icon(Icons.search, semanticLabel: "search_icon"),
             ),
             suggestionsBuilder: (_, search) =>
                 // ignore: use-closest-build-context, on purpose.

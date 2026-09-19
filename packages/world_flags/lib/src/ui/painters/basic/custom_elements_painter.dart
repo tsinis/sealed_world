@@ -1,5 +1,5 @@
 import "dart:math";
-import "dart:ui" show Color, Size;
+import "dart:ui" show Color, Offset, Paint, Rect, Size;
 
 import "package:flutter/foundation.dart";
 
@@ -46,6 +46,50 @@ abstract base class CustomElementsPainter<T extends FlagParentBounds>
   /// Returns a list of custom colors.
   @protected
   List<Color> get customColors => customProperties.otherColors;
+
+  /// The bounds of artwork that must keep a fixed [artworkAspectRatio], given
+  /// as width over height.
+  ///
+  /// The element's `widthFactor` and `heightFactor` describe the box the
+  /// artwork fills at the flag's own aspect ratio. When
+  /// the flag is drawn wider or narrower than that, the artwork is fitted into
+  /// the box rather than stretched with it, so it is never squeezed. The
+  /// result is centered by [calculateCenter], like every other element.
+  ///
+  /// - [size]: The size of the flag.
+  /// - [artworkAspectRatio]: The width-to-height ratio the artwork keeps.
+  ///
+  /// Returns the bounds the artwork should be drawn into.
+  @protected
+  Rect proportionalBounds(Size size, double artworkAspectRatio) {
+    assert(artworkAspectRatio > 0, "Aspect ratio should be greater than zero.");
+    // Read from the custom element rather than the first one: flags that paint
+    // a shape behind their badge keep that shape at the head of the list.
+    final element = customProperties;
+    final height = min(
+      size.height * element.heightFactor,
+      (size.width * (element.widthFactor ?? 1)) / artworkAspectRatio,
+    );
+    final offset = element.offset;
+
+    return Rect.fromCenter(
+      center: Offset(
+        (offset.dx + 1) * size.width / 2,
+        (offset.dy + 1) * size.height / 2,
+      ),
+      width: height * artworkAspectRatio,
+      height: height,
+    );
+  }
+
+  /// The paint for the badge layer whose palette index is [index].
+  ///
+  /// `0` is the custom element's `mainColor` and `n` is its
+  /// `otherColors[n - 1]`, so the palette stays in the flag data.
+  @protected
+  Paint badgePaint(int index) => paintCreator(
+    index == 0 ? customProperties.mainColor : customColors[index - 1],
+  );
 
   /// Adjusts the size of the child element based on the aspect ratio.
   ///

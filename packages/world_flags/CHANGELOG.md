@@ -1,3 +1,181 @@
+## 3.5.0
+
+NEW FEATURES
+
+- Three flags that had no emblem painter at all now have one: Gibraltar
+  (`GIB`), Dominica (`DMA`) and Zimbabwe (`ZWE`).
+  `MultiElementPainter.paintFlagElements` returns `null`, so a
+  `CustomElementsProperties` with no matching `elementsBuilder` renders as
+  nothing and its palette sits unused; that is what these three were doing.
+- `BadgeArtwork` holds a badge's layers as a flat run of numbers. A layer is
+  an opcode followed by its coordinates, given as fractions of the badge box,
+  so the artwork still scales with the flag. `BadgeLayer` pairs that geometry
+  with a palette index, which keeps the colors in the flag data where every
+  other element keeps them.
+  Layers that follow one another in the same color are filled as a single
+  path, and the built paths are cached for the last two box sizes, so a flag
+  shown in a list and in a detail view at once does not rebuild either.
+
+IMPROVEMENTS
+
+- **Every flag costs the engine fewer draw calls.** Measured across the whole
+  catalogue at list size, the 250 flags went from 2,088 draw commands to 1,359
+  (-35%), from 400 clips to 285 (-29%), and from five offscreen layers to none.
+  The average flag went from 8.4 draws to 5.4 and the worst from 65 to 18.
+  Impeller's GLES backend re-issues the complete GL state for every draw
+  command (flutter/flutter#192147), so on the mid-range Android devices that
+  run it this is the number that decides the frame rate of a long flag list.
+  The per-flag budget is recorded in `flag_draw_ops.json` and enforced by a
+  test. The worst flag now costs 18 draws where it used to cost 65.
+  - Stripes that share a color are filled as one path: the United States'
+    thirteen stripes are two draw calls, not thirteen.
+  - A chain of nested stars of the same color is filled as one path: the Cook
+    Islands' ring of fifteen stars is one draw call, not fifteen, and
+    `StarPainter` turns a star's points rather than the canvas.
+  - The fifty stars of the United States are one path with fifty contours.
+  - The Union Jack is five draw calls instead of eleven, with its diagonals
+    batched per color and its cross filled per color, which also speeds up
+    the fifteen ensigns built on it.
+  - Korea's twelve trigram bars are one path, Georgia's four small crosses are
+    two, and Georgia no longer paints its emblem once per element (it was
+    drawing all four crosses four times over).
+  - `SimpleShieldPainter` no longer opens an offscreen layer for opaque
+    quadrants, which removes the last `saveLayer` from the static flag path.
+  - `MultiElementPainter` no longer re-clips to the flag bounds its caller has
+    already clipped to. The shader path does that clip itself now, inside its
+    content scale, which is where it belongs: elements are allowed to overhang
+    the flag body, and the recording is what the shader distorts.
+  - Korea's taeguk is one path per color instead of four half-discs.
+  - **Twenty-four hand-written emblems became cached artwork.** Angola,
+    Antarctica, Albania, Cyprus, Eritrea, Hong Kong, Iran, Iraq, the Isle of
+    Man, Kenya, Lebanon, Montenegro, the Norfolk Island pine, Papua New
+    Guinea, San Marino, Serbia, Slovakia, Spain, Sri Lanka, Tajikistan,
+    Uganda, Zambia and the shahada of Saudi Arabia and Afghanistan were
+    chains of `cubicTo` calls that rebuilt their whole path on every paint.
+    `ListView.builder` disposes a row when it leaves the viewport, so that
+    rebuild was paid again every time the row scrolled back in. They are
+    `BadgeArtwork` tables now: built once per size and reused, and straight
+    segments rather than curves, which is what the rasterizer flattens them to
+    anyway. Together those files went from 19,724
+    lines to 3,316, and every full-size golden they have stayed within 1.6% of
+    its pixels, none of them differing by more than a quarter of a channel.
+  - The shahada was drawing the **same accumulating path eight times** as it
+    built the glyphs up - two contours, then six, then seventeen, up to
+    forty-two, all in one color. Seven of those eight draws rasterized
+    pixels the eighth would cover. It is two now, and the second is there for
+    weight rather than for shape: the script is sub-pixel in a list, where the
+    edge opacity those overlapping passes produced is what makes it read as
+    writing at all.
+  - Spain's arms went from 13 draws to 9, Serbia's from 16 to 11, Montenegro's
+    from 6 to 4, Eritrea's wreath and Tajikistan's crown from 3 to 1.
+  - Every badge is now flat polygons rather than curves, and layers that
+    cannot change places are filled together. Across the fifteen badges that
+    is 32% fewer coordinates and 32% fewer lines, with the emblems unchanged
+    to the eye; nothing was merged where a later layer of the same color
+    carried detail on top of an earlier one.
+- `CustomElementsPainter.proportionalBounds` and the new `badgePaint` read the
+  custom element out of `elementsProperties` by type rather than taking the
+  first entry, so a flag can keep a shape ahead of its badge in the paint
+  order. Dominica now does exactly that, drawing its disc from flag data and
+  the emblem on top.
+- `RectanglePainter.rectangleBounds` exposes where a rectangle element lands,
+  so a painter that only needs the box no longer has to draw it to find out.
+- The twelve badge painters added in 3.5.0 shrank from 13,131 lines to roughly
+  2,000 with identical output.
+
+FIX
+
+- Elements that overhang the flag body are clipped on the shader path by the
+  painter that records it, rather than by `MultiElementPainter`. Bosnia and
+  Herzegovina's stars are cut off by the edge on the real flag, and a waved
+  flag scales its content inside a larger recording, so the clip has to be
+  applied inside that scale to cut them in the same place.
+- Korea's taeguk no longer has a hairline straight across it. It was built
+  from four anti-aliased half-discs whose flat edges all met on the same
+  diameter, so each covered about half of those pixels and the background
+  showed through between them.
+- Currency and language dual flags that reused these countries' properties
+  without an `elementsBuilder` left their emblems unpainted. `GIP`, `ZWG` and
+  the Ndebele, Shona, Chichewa, Tsonga, Venda and Xhosa flags render their
+  badge now.
+
+TEST
+
+- Added `flag_draw_ops_test.dart`: it paints every flag through the real
+  `StripesPainter` at list size, counts every canvas command, and fails if any
+  flag or the catalogue as a whole costs more than the numbers recorded in
+  `flag_draw_ops.json`. Regenerate them with `UPDATE_DRAW_OPS=1 flutter test`.
+- Added `badge_artwork_test.dart` for the geometry encoding itself: opcode
+  handling, absolute coordinates, color resolution, and that packing happens
+  once rather than per paint.
+- `example/integration_test/flag_list_perf_test.dart` with
+  `test_driver/perf_driver.dart` scrolls a flag-only list and a dense flag grid
+  under `flutter drive --profile` and writes the frame timings to
+  `example/benchmarks/local/`, so a change can be measured on a desktop before
+  it reaches a device. `example/benchmarks/list.yaml` is the matching Maestro
+  flow for the Flashlight device run, which the existing `test.yaml` did not
+  cover because it drives the shader settings page.
+
+NEW FEATURES
+
+- Twelve flags now have their own badge painter instead of sharing the generic
+  shield one: `AiaPainter`, `AndPainter`, `BmuPainter`, `EcuPainter`,
+  `FjiPainter`, `FlkPainter`, `IotPainter`, `JeyPainter`, `MsrPainter`,
+  `PcnPainter`, `SgsPainter` and `TcaPainter`. Anguilla's dolphins, Andorra's
+  quartered escutcheon, Bermuda's lion, Ecuador's condor, Fiji's arms, the
+  Falklands' ram and ship, the British Indian Ocean Territory's palm and crown,
+  Jersey's three leopards, Montserrat's Erin, Pitcairn's anchor, South Georgia's
+  seal and penguin, and the Turks and Caicos conch, lobster and cactus are all
+  drawn properly now, in place of a four-color quartered shield.
+- `CustomElementsPainter.proportionalBounds` lays out artwork that has to keep
+  a fixed width-to-height ratio. The element's `widthFactor` and `heightFactor`
+  still describe the box it fills at the flag's own aspect ratio, but when the
+  flag is drawn wider or narrower the artwork is fitted into that box instead
+  of being stretched with it.
+
+IMPROVEMENTS
+
+- Those twelve flags render identically on every platform. The shared shield
+  painter stroked a curved path and composited its quarters through `saveLayer`
+  and `clipPath`, which are not pixel-stable across rasterizer backends, so
+  their golden tests had to be skipped off Linux. The new painters only fill
+  cubic paths, and the skip list is gone.
+- Badge colors come from the construction sheets each flag entry links to
+  rather than from the emoji palette, so Montserrat's ground is brown earth
+  again and Pitcairn, Jersey, Bermuda and the Turks and Caicos match the colors
+  the rest of the package uses.
+- Montserrat's shield regained the grey rim the real badge has, its cross is
+  dark wood rather than black, and Erin is no longer bald; Anguilla's shield
+  lost the gold rim it never had.
+- South Georgia's and the Falkland Islands' badges now include the scroll under
+  the shield, Fiji's lion holds its charge again, and the British Indian Ocean
+  Territory's crown is drawn whole; its arches and crosses only read as a crown
+  together.
+- Badge placement moved fully into flag data. Each badge is positioned and
+  scaled by `offset`, `heightFactor` and `widthFactor` alone, so it follows the
+  flag's aspect ratio like every other element. The British Indian Ocean
+  Territory no longer needs a separate rectangle for the palm trunk.
+- Anguilla (`AIA`), Fiji (`FJI`), Jersey (`JEY`), Montserrat (`MSR`) and the
+  Turks and Caicos Islands (`TCA`) are no longer marked `isSimplified: true`.
+  Their badges are accurate now, so they moved to `null`: suitable for everyday
+  use, while still not claiming to be a strictly official rendition.
+- The Turks and Caicos badge is sized off the official flag rather than by eye.
+  It now spans 0.4292 of the flag height, matching the published construction to
+  within a pixel.
+
+REFACTOR
+
+- Cleared the three standing TODOs in the custom painters, with every affected
+  flag rendering pixel for pixel as before:
+  - `DavidStarPainter` builds each triangle of the hexagram as a `Path` instead
+    of passing the canvas and paint down, which drops its long parameter list,
+    and its rotation is now scoped by `save`/`restore`.
+  - `AlmondPainter` (Guam and Eswatini) scopes both of its branches the same
+    way, and no longer undoes a translation that `restore` already undoes.
+  - `TaegukgiPainter` describes its four trigrams as a const table and draws
+    them in a loop, in place of four near-identical calls that needed a long
+    parameter list.
+
 ## 3.4.0
 
 FIX

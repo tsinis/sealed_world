@@ -82,14 +82,20 @@ class ShaderStripesPainter<T extends CustomPainter> extends StripesPainter<T> {
   }
 
   void _paintScaledStripes(Canvas canvas, Size size, double scaleY) {
-    if (scaleY == 1) return paintStripes(canvas, size);
-
-    final center = Offset(size.width / 2, size.height / 2);
-    canvas
-      ..save()
-      ..translate(center.dx, center.dy)
-      ..scale(1, scaleY)
-      ..translate(-center.dx, -center.dy);
+    canvas.save();
+    if (scaleY != 1) {
+      final center = Offset(size.width / 2, size.height / 2);
+      canvas
+        ..translate(center.dx, center.dy)
+        ..scale(1, scaleY)
+        ..translate(-center.dx, -center.dy);
+    }
+    // Clip to the flag's own body, inside the content scale: elements are
+    // allowed to overhang it (Bosnia's stars are cut off by the edge on the
+    // real flag) and the recording is what the shader then distorts, so
+    // nothing may be left outside. The picture is cached, so this costs
+    // nothing per frame.
+    canvas.clipRect(Offset.zero & size, doAntiAlias: false);
     paintStripes(canvas, size);
     canvas.restore();
   }
