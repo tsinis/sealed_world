@@ -4,7 +4,7 @@
 import "package:flutter/foundation.dart" show kDebugMode;
 import "package:flutter/material.dart";
 import "package:flutter/services.dart" show Clipboard, ClipboardData;
-import "package:meta/meta.dart"; //ignore:depend_on_referenced_packages, it's ok
+import "package:meta/meta.dart";
 import "package:world_flags/world_flags.dart";
 
 /// A full-screen page for configuring and previewing flag shader options.

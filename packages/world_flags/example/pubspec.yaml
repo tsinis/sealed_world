@@ -6,11 +6,12 @@ publish_to: none
 resolution: workspace
 
 environment:
-  sdk: ^3.13.3
+  sdk: ^3.13.4
 
 dependencies:
   flutter:
     sdk: flutter
+  meta: any
   world_flags:
     path: ../
 
