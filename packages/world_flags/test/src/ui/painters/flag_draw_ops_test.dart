@@ -37,6 +37,7 @@ const listDecoration = BoxDecoration(
 const listHeight = 24.0;
 
 /// Paints [flag] the way `BasicFlag.build` does and counts what it drew.
+// ignore: library_private_types_in_public_api, it's not a public API.
 _FlagDrawOpsTest measureFlag(BasicFlag flag) {
   final canvas = RecordingCanvas();
   final properties = flag.properties;
