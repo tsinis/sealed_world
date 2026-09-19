@@ -95,6 +95,50 @@ void main() {
     expect(first.layers.single.path.getBounds().size, const Size(4, 4));
     expect(second.layers.single.path.getBounds().size, const Size(8, 8));
   });
+
+  test("keeps the paths of the last two boxes it painted", () {
+    final artwork = BadgeArtwork(const [(color: 0, geometry: square)]);
+    final small = _pathAt(artwork, 4);
+    final large = _pathAt(artwork, 8);
+
+    // Back to the first box. It is the older of the two the artwork holds, so
+    // this is the one that has to be found in the second slot and promoted,
+    // which is what lets a flag in a list and the same flag in a detail view
+    // share an artwork without rebuilding on every frame of either. Painting
+    // a box again is the assertion, so these calls cannot reuse a variable.
+    // ignore_for_file: use-existing-variable, prefer-moving-to-variable
+    expect(_pathAt(artwork, 4), same(small));
+    expect(_pathAt(artwork, 8), same(large), reason: "Both are still held.");
+
+    // A third box only displaces the older of the two.
+    expect(_pathAt(artwork, 16).getBounds().size, const Size(16, 16));
+    expect(_pathAt(artwork, 8), same(large));
+    expect(_pathAt(artwork, 4), isNot(same(small)));
+  });
+}
+
+/// Paints [artwork] into a square box of [side] and returns the path it drew.
+///
+/// [RecordingCanvas] copies what it is handed, which is what its own tests
+/// need; this keeps the instance so that a cached path can be told apart from
+/// a rebuilt one.
+Path _pathAt(BadgeArtwork artwork, double side) {
+  final canvas = _BadgeArtworkTest();
+  artwork.paint(canvas, Rect.fromLTWH(0, 0, side, side), _paint);
+
+  return canvas.paths.single;
+}
+
+/// A [Canvas] that keeps the exact [Path] instances it is given.
+final class _BadgeArtworkTest implements Canvas {
+  final paths = <Path>[];
+
+  @override
+  // ignore: avoid-collection-mutating-methods, collecting them is the point.
+  void drawPath(Path path, Paint paint) => paths.add(path);
+
+  @override
+  Object? noSuchMethod(Invocation invocation) => null;
 }
 
 /// Encodes the palette index into the color, so a test can read it back.
