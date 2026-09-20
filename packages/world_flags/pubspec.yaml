@@ -29,7 +29,7 @@ platforms:
   windows:
 
 environment:
-  sdk: ^3.13.0
+  sdk: ^3.13.4
 
 dependencies:
   flutter:
