@@ -71,17 +71,21 @@ The package requires no PNG, SVG, or asset bundles — every flag is rendered as
 - **Do not add `RepaintBoundary` by reflex in scrolling lists**: `ListView.builder` and `GridView.builder` use a `SliverChildBuilderDelegate`, whose `addRepaintBoundaries` already defaults to `true`, so each flag is isolated for free. Add one manually only where that is absent — a custom delegate passing `addRepaintBoundaries: false`, or a flag repainting inside a hand-built scrolling widget.
 - **Prefer `FlagThemeData` over per-widget decorations in lists**: One ambient decoration avoids allocating an identical `BoxDecoration` per row.
 
-### App-Wide Flag Theming (`FlagThemeData`)
+### App-Wide Flag Theming (`FlagTheme`)
 
-- **Ambient styling via `ThemeData`**: Avoid duplicating decorations and sizes across individual widgets by registering `FlagThemeData` in `ThemeData.extensions`:
+- **Ambient styling via `FlagTheme`**: Avoid duplicating decorations and sizes across individual widgets by wrapping your app or subtree in a `FlagTheme`:
   ```dart
-  ThemeData(
-    extensions: const [
-      FlagThemeData.small(), // 18 px height, 4 px border radius
-    ],
+  FlagTheme(
+    data: DecoratedFlagData(
+      height: 18, 
+      decoration: BoxDecoration(borderRadius: BorderRadius.circular(4)),
+    ),
+    child: MaterialApp(
+      ...
+    ),
   )
   ```
-- **Flag widgets inherit ambient properties**: When `height`, `width`, or `decoration` are omitted on `CountryFlag`, they fall back to the ambient `FlagThemeData` in the widget tree.
+- **Flag widgets inherit ambient properties**: When `height`, `width`, or `decoration` are omitted on `CountryFlag`, they fall back to the ambient `FlagTheme` in the widget tree.
 
 ---
 
@@ -202,17 +206,17 @@ class FlagGrid extends StatelessWidget {
 import 'package:flutter/material.dart';
 import 'package:world_flags/world_flags.dart';
 
-MaterialApp buildApp() => MaterialApp(
-  theme: ThemeData(
-    extensions: const [
-      // Pre-configured 18 px height and 4 px rounded corners
-      FlagThemeData.small(),
-    ],
+Widget buildApp() => FlagTheme(
+  data: DecoratedFlagData(
+    height: 18,
+    decoration: BoxDecoration(borderRadius: BorderRadius.circular(4)),
   ),
-  home: const Scaffold(
-    body: Center(
-      // Automatically receives 18 px height and 4 px border radius from theme
-      child: CountryFlag.simplified(CountryMex()),
+  child: MaterialApp(
+    home: const Scaffold(
+      body: Center(
+        // Automatically receives 18 px height and 4 px border radius from theme
+        child: CountryFlag.simplified(CountryMex()),
+      ),
     ),
   ),
 );
