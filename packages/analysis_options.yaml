@@ -575,7 +575,6 @@ linter:
     avoid_multiple_declarations_per_line: true
     avoid_positional_boolean_parameters: true
     avoid_print: true
-    avoid_private_typedef_functions: true
     avoid_redundant_argument_values: true
     avoid_relative_lib_imports: true
     avoid_renaming_method_parameters: true
@@ -653,7 +652,6 @@ linter:
     noop_primitive_operations: true
     null_check_on_nullable_type_parameter: true
     null_closures: true
-    one_member_abstracts: true
     only_throw_errors: true
     overridden_fields: true
     package_names: true
@@ -720,7 +718,6 @@ linter:
     unawaited_futures: true
     unintended_html_in_doc_comment: true
     unnecessary_async: true
-    unnecessary_await_in_return: true
     unnecessary_brace_in_string_interps: true
     unnecessary_breaks: true
     unnecessary_const: true
