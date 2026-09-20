@@ -1,7 +1,6 @@
 version: 4.5.0
 name: world_countries
 description: Sealed world data in form of Flutter widgets (country, phone, currency pickers, etc.).
-publish_to: none # Until world_flags v3.5 is live.
 maintainer: Roman Cinis
 repository: https://github.com/tsinis/sealed_world/tree/main/packages/world_countries
 issue_tracker: https://github.com/tsinis/sealed_world/issues
@@ -25,15 +24,14 @@ screenshots:
     path: doc/modal_picker.webp
 
 environment:
-  sdk: ^3.13.0
+  sdk: ^3.13.4
 
 dependencies:
   flutter:
     sdk: flutter
   material_ui: ^1.3.0
   meta: ^1.18.3 # Same as in Flutter SDK.
-  world_flags:
-    path: ../world_flags
+  world_flags: ^3.5.0
 
 dev_dependencies:
   _sealed_world_tests:
