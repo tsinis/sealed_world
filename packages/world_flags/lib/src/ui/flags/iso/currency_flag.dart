@@ -19,6 +19,7 @@ import "../../painters/custom/gib_painter.dart";
 import "../../painters/custom/hkg_painter.dart";
 import "../../painters/custom/irq_painter.dart";
 import "../../painters/custom/ken_painter.dart";
+import "../../painters/custom/kgz_painter.dart";
 import "../../painters/custom/khm_painter.dart";
 import "../../painters/custom/lbn_painter.dart";
 import "../../painters/custom/lie_painter.dart";
@@ -194,7 +195,7 @@ class CurrencyFlag extends DualFlag<FiatCurrency, BasicFlag> {
     FiatJod(): BasicFlag(flagJorProperties),
     FiatJpy(): BasicFlag(flagJpnProperties),
     FiatKes(): BasicFlag(flagKenProperties, elementsBuilder: KenPainter.new),
-    FiatKgs(): BasicFlag(flagKgzProperties),
+    FiatKgs(): BasicFlag(flagKgzProperties, elementsBuilder: KgzPainter.new),
     FiatKhr(): BasicFlag(flagKhmProperties, elementsBuilder: KhmPainter.new),
     FiatKmf(): BasicFlag(flagComProperties),
     FiatKpw(): BasicFlag(flagPrkProperties),
@@ -203,10 +204,7 @@ class CurrencyFlag extends DualFlag<FiatCurrency, BasicFlag> {
       elementsBuilder: TaegukgiPainter.new,
     ),
     FiatKwd(): BasicFlag(flagKwtProperties),
-    FiatKyd(): BasicFlag(
-      flagCymProperties,
-      elementsBuilder: UnionJackPainter.half,
-    ),
+    FiatKyd(): BasicFlag(flagCymProperties, elementsBuilder: CymPainter.new),
     FiatKzt(): BasicFlag(flagKazProperties, elementsBuilder: KazPainter.new),
     FiatLak(): BasicFlag(flagLaoProperties),
     FiatLbp(): BasicFlag(flagLbnProperties, elementsBuilder: LbnPainter.new),

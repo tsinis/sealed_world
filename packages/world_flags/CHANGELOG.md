@@ -11,6 +11,15 @@ NEW FEATURES
 
 DEPRECATIONS
 
+- **Deprecated the shield dividers.** `SimpleShieldPainter.outlinedWithDividers`,
+  `SimpleShieldPainter.withDividers` and `UnionJackPainter.halfWithDividers` are
+  marked `@Deprecated` and will be removed in the next major version. No flag in
+  the package asks for the dividers, so the two lines they draw across the
+  shield are reachable only from outside it. Use
+  `SimpleShieldPainter.outlinedWithoutDividers`,
+  `SimpleShieldPainter.withoutDividers` and
+  `UnionJackPainter.halfWithoutOutline` instead. They keep working, and keep
+  drawing exactly what they drew before, until that release.
 - **Fully deprecated `FlagThemeData`**: The class and all its constructors are now marked `@Deprecated`. Please use `DecoratedFlagInterface` as your data model and pass it to `FlagTheme(data: ...)`. `FlagThemeData` will be completely removed in the next major release to eliminate `package:flutter/material.dart` dependencies from this package. Please see `FLAG_THEME_MIGRATION.md` for migration instructions.
 
 REFACTOR
@@ -29,11 +38,20 @@ FIX
 - Fixed symmetric equality in `FlagThemeData.operator ==` where `specifiedAspectRatio`
   was incorrectly compared against `aspectRatio`.
 
-- Three flags that had no emblem painter at all now have one: Gibraltar
-  (`GIB`), Dominica (`DMA`) and Zimbabwe (`ZWE`).
+- Five flags that had no emblem painter at all now have one: Gibraltar
+  (`GIB`), Dominica (`DMA`), Zimbabwe (`ZWE`), the Cayman Islands (`CYM`) and
+  Kyrgyzstan (`KGZ`).
   `MultiElementPainter.paintFlagElements` returns `null`, so a
   `CustomElementsProperties` with no matching `elementsBuilder` renders as
-  nothing and its palette sits unused; that is what these three were doing.
+  nothing and its palette sits unused; that is what these five were doing.
+  The Cayman Islands and Kyrgyzstan were worse off than that: they borrowed a
+  painter meant for something else, so they rendered a plausible shape rather
+  than nothing. `CYM` fell back to the generic quartered shield and showed a
+  red-and-blue lozenge in place of its coat of arms; `KGZ` approximated the
+  sun's tunduk with nested ellipses and a four-pointed star, which reads as a
+  cross in a ring. Both now draw their own artwork, and `KGZ` is drawn from
+  the 2023 flag, with straight rays and four beams to each half of the
+  tunduk.
 - `BadgeArtwork` holds a badge's layers as a flat run of numbers. A layer is
   an opcode followed by its coordinates, given as fractions of the badge box,
   so the artwork still scales with the flag. `BadgeLayer` pairs that geometry
@@ -42,12 +60,16 @@ FIX
   Layers that follow one another in the same color are filled as a single
   path, and the built paths are cached for the last two box sizes, so a flag
   shown in a list and in a detail view at once does not rebuild either.
+  `BadgeArtwork.evenOdd` fills a layer by the even-odd rule instead of the
+  winding rule, for artwork drawn as one self-overlapping outline. The whole
+  Kyrgyz emblem is one such outline — rays, ring and the woven tunduk — so it
+  costs a single draw call and the red of the flag shows through the holes.
 
 IMPROVEMENTS
 
 - **Every flag costs the engine fewer draw calls.** Measured across the whole
-  catalogue at list size, the 250 flags went from 2,088 draw commands to 1,359
-  (-35%), from 400 clips to 285 (-29%), and from five offscreen layers to none.
+  catalogue at list size, the 250 flags went from 2,088 draw commands to 1,358
+  (-35%), from 400 clips to 284 (-29%), and from five offscreen layers to none.
   The average flag went from 8.4 draws to 5.4 and the worst from 65 to 18.
   Impeller's GLES backend re-issues the complete GL state for every draw
   command (flutter/flutter#192147), so on the mid-range Android devices that
@@ -121,6 +143,9 @@ FIX
   from four anti-aliased half-discs whose flat edges all met on the same
   diameter, so each covered about half of those pixels and the background
   showed through between them.
+- Zimbabwe's bird is smaller, so the red star it stands on is visible around
+  it the way it is on the flag. The Twemoji artwork it came from draws the
+  bird nearly as tall as the star.
 - Currency and language dual flags that reused these countries' properties
   without an `elementsBuilder` left their emblems unpainted. `GIP`, `ZWG` and
   the Ndebele, Shona, Chichewa, Tsonga, Venda and Xhosa flags render their
@@ -132,6 +157,12 @@ TEST
   `StripesPainter` at list size, counts every canvas command, and fails if any
   flag or the catalogue as a whole costs more than the numbers recorded in
   `flag_draw_ops.json`. Regenerate them with `UPDATE_DRAW_OPS=1 flutter test`.
+- Added `simple_shield_painter_test.dart`, which pins what each of the shield
+  constructors draws, the deprecated ones included, so the divider path no
+  flag takes stays covered for as long as it is still public API.
+- Added `elements_painter_test.dart` for `ElementsPainter.calculateSize`: it
+  is `@protected` API a subclass outside the package can call, and no painter
+  in the package reaches its width-factor branch, so nothing covered it.
 - Added `badge_artwork_test.dart` for the geometry encoding itself: opcode
   handling, absolute coordinates, color resolution, and that packing happens
   once rather than per paint.

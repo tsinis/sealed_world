@@ -1,8 +1,8 @@
 {
   "_totals": {
-    "clips": 285,
-    "contours": 2315,
-    "draws": 1359,
+    "clips": 284,
+    "contours": 2392,
+    "draws": 1358,
     "saveLayers": 0
   },
   "abw": {
@@ -342,9 +342,9 @@
     "saveLayers": 0
   },
   "cym": {
-    "clips": 3,
-    "contours": 18,
-    "draws": 12,
+    "clips": 2,
+    "contours": 34,
+    "draws": 16,
     "saveLayers": 0
   },
   "cyp": {
@@ -709,8 +709,8 @@
   },
   "kgz": {
     "clips": 1,
-    "contours": 7,
-    "draws": 7,
+    "contours": 68,
+    "draws": 2,
     "saveLayers": 0
   },
   "khm": {

@@ -1369,7 +1369,7 @@ const flagZweProperties = FlagProperties(
     CustomElementsProperties(
       Color(0xffde200f),
       otherColors: [Color(0xffffd200)],
-      offset: Offset(-0.64, -0.07),
+      offset: Offset(-0.75, -0.07),
       heightFactor: 0.36,
       widthFactor: 0.1893,
     ),

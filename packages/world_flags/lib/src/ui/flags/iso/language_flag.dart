@@ -20,6 +20,7 @@ import "../../painters/custom/hrv_painter.dart";
 import "../../painters/custom/imn_painter.dart";
 import "../../painters/custom/irq_painter.dart";
 import "../../painters/custom/ken_painter.dart";
+import "../../painters/custom/kgz_painter.dart";
 import "../../painters/custom/khm_painter.dart";
 import "../../painters/custom/lka_painter.dart";
 import "../../painters/custom/lso_painter.dart";
@@ -211,7 +212,7 @@ class LanguageFlag extends DualFlag<NaturalLanguage, BasicFlag> {
     LangKhm(): BasicFlag(flagKhmProperties, elementsBuilder: KhmPainter.new),
     LangKik(): BasicFlag(flagKenProperties, elementsBuilder: KenPainter.new),
     LangKin(): BasicFlag(flagRwaProperties),
-    LangKir(): BasicFlag(flagKgzProperties),
+    LangKir(): BasicFlag(flagKgzProperties, elementsBuilder: KgzPainter.new),
     LangKom(): BasicFlag(flagRusProperties),
     LangKon(): BasicFlag(
       flagCogProperties,

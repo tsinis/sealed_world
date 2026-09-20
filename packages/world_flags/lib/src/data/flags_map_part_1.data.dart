@@ -1083,41 +1083,11 @@ const flagKenProperties = FlagProperties(
 const flagKgzProperties = FlagProperties(
   [ColorsProperties(Color(0xffff0000))],
   aspectRatio: 5 / 3,
-  baseElementType: FlagElementsType.star,
-  isSimplified: true,
   elementsProperties: [
-    ElementsProperties(
+    CustomElementsProperties(
       Color(0xffFFED00),
-      shape: Star(points: 40, radiusFactor: 0.52),
-      heightFactor: 3 / 5,
-      angle: 41,
-      child: ElementsProperties(
-        Color(0xffff0000),
-        shape: Ellipse(),
-        heightFactor: 0.666,
-        child: ElementsProperties(
-          Color(0xffFFED00),
-          shape: Ellipse(),
-          heightFactor: 0.95,
-          child: ElementsProperties(
-            Color(0xffff0000),
-            shape: Ellipse(),
-            heightFactor: 0.85,
-            child: ElementsProperties(
-              Color(0xffFFED00),
-              shape: Ellipse(),
-              offset: Offset(0, -0.05),
-              heightFactor: 0.88,
-              child: ElementsProperties(
-                Color(0xffff0000),
-                shape: Star(points: 4, radiusFactor: 0.1),
-                offset: Offset(0, -0.3),
-                heightFactor: 0.9,
-              ),
-            ),
-          ),
-        ),
-      ),
+      heightFactor: 0.6155,
+      widthFactor: 0.3693,
     ),
   ],
   url: "https://www.vexilla-mundi.com/kyrgyzstan/kyrgyzstan_sheet.png",
