@@ -65,7 +65,7 @@ TEST
 
 CHORE
 
-- Dart SDK bumped to `^3.13.4`.
+- Dart SDK bumped to v3.13.4.
 - Added [material_ui](https://pub.dev/packages/material_ui) dependency and updated `world_flags` to v3.5.0.
 
 ## 4.4.0
