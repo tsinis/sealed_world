@@ -1,8 +1,8 @@
 import "package:flutter/widgets.dart";
 
+import "../../interfaces/decorated_flag_interface.dart";
 import "../../model/flag_properties.dart";
 import "../../model/typedefs.dart" show FlagPainterBuilder, FlagWidgetBuilder;
-import "../../theme/flag_theme_data.dart";
 import "../../ui/flags/basic_flag.dart";
 
 /// An extension on [BasicFlag] to provide a [copyWith] method for creating a
@@ -54,7 +54,8 @@ extension BasicFlagExtensionCopyWith<T extends BasicFlag> on T {
     FlagWidgetBuilder? foregroundWidgetBuilder,
     double? height,
     double? width,
-    Widget? child,
+    Widget? flagChild,
+    @Deprecated("Use flagChild instead.") Widget? child,
     Key? key,
   }) => BasicFlag(
     properties ?? this.properties,
@@ -74,14 +75,14 @@ extension BasicFlagExtensionCopyWith<T extends BasicFlag> on T {
     height: (height?.isNegative ?? false) ? null : (height ?? this.height),
     width: (width?.isNegative ?? false) ? null : (width ?? this.width),
     key: key ?? this.key,
-    child: child ?? this.child,
+    flagChild: flagChild ?? child ?? this.flagChild,
   );
 
-  /// Creates a copy of this [BasicFlag] but with the given fields replaced with
-  /// the new values.
+  /// Creates a copy of this [BasicFlag] but with fields taken from a
+  /// [DecoratedFlagInterface] theme.
   ///
   /// - [properties]: The properties of the flag.
-  /// - [theme]: The theme data for the flag.
+  /// - [theme]: The theme data for the flag (any [DecoratedFlagInterface]).
   /// - [elementsBuilder]: A builder for the elements of the flag.
   /// - [backgroundPainter]: A custom painter for the background of the flag.
   /// - [foregroundPainter]: A custom painter for the foreground of the flag.
@@ -90,7 +91,7 @@ extension BasicFlagExtensionCopyWith<T extends BasicFlag> on T {
   /// - [key]: The key for the widget.
   BasicFlag copyWithTheme({
     FlagProperties? properties,
-    FlagThemeData? theme,
+    DecoratedFlagInterface? theme,
     FlagPainterBuilder? elementsBuilder,
     CustomPainter? backgroundPainter,
     CustomPainter? foregroundPainter,
@@ -113,6 +114,6 @@ extension BasicFlagExtensionCopyWith<T extends BasicFlag> on T {
     height: theme?.height ?? height,
     width: theme?.width ?? width,
     key: key ?? this.key,
-    child: theme?.child ?? child,
+    flagChild: theme?.flagChild ?? flagChild,
   );
 }

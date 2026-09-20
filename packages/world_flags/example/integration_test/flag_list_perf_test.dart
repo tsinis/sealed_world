@@ -1,3 +1,4 @@
+// ignore_for_file: deprecated_member_use, stage 1 deprecation.
 // Scrolls three flag screens on a real device or desktop, so the frame times
 // can be split into build and raster. Run it through
 // `test_driver/perf_driver.dart`.
@@ -12,9 +13,9 @@
 
 // ignore_for_file:prefer-extracting-function-callbacks, missing-test-assertion
 // ignore_for_file: prefer-static-class, avoid-local-functions
-import "package:flutter/material.dart";
 import "package:flutter_test/flutter_test.dart";
 import "package:integration_test/integration_test.dart";
+import "package:material_ui/material_ui.dart";
 import "package:world_flags/world_flags.dart";
 
 /// The example app's list row and flag height.

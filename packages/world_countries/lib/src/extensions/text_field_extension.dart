@@ -3,8 +3,8 @@
 import "dart:ui" as ui;
 
 import "package:flutter/gestures.dart";
-import "package:flutter/material.dart";
 import "package:flutter/services.dart";
+import "package:material_ui/material_ui.dart";
 
 import "../helpers/name_text_input.dart" show NameTextInput;
 

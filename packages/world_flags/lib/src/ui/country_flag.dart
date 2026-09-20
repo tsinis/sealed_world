@@ -56,6 +56,8 @@ class CountryFlag extends IsoFlag<WorldCountry, BasicFlag> {
     super.padding,
     super.shader,
     super.orElse,
+    super.flagChild,
+    @Deprecated("Use flagChild instead. Will be removed in next major version.")
     super.child,
     super.key,
   }) : super(country, smallSimplifiedFlagsMap);
@@ -88,6 +90,8 @@ class CountryFlag extends IsoFlag<WorldCountry, BasicFlag> {
     super.width,
     super.shader,
     super.orElse,
+    super.flagChild,
+    @Deprecated("Use flagChild instead. Will be removed in next major version.")
     super.child,
     super.key,
   });

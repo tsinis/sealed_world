@@ -215,6 +215,8 @@ keystore
 klass
 kotlin
 lcov
+lerp
+lerped
 libapp
 libc
 libflutter

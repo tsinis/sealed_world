@@ -1,7 +1,7 @@
 import "package:flutter/foundation.dart";
-import "package:flutter/material.dart" show MaterialApp;
 import "package:flutter/widgets.dart";
 import "package:flutter_test/flutter_test.dart";
+import "package:material_ui/material_ui.dart" show MaterialApp;
 import "package:sealed_countries/sealed_countries.dart";
 import "package:world_flags/src/model/colors_properties.dart";
 import "package:world_flags/src/model/flag_properties.dart";

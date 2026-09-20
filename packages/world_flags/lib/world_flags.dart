@@ -86,6 +86,8 @@ export "src/model/flag_properties.dart";
 export "src/model/shape.dart";
 export "src/model/stripe_orientation.dart";
 export "src/model/typedefs.dart";
+export "src/theme/decorated_flag_data.dart";
+export "src/theme/flag_theme.dart";
 export "src/theme/flag_theme_data.dart";
 export "src/ui/country_flag.dart";
 export "src/ui/decorated_flag_widget.dart";

@@ -1,6 +1,6 @@
 import "dart:async" show unawaited;
 
-import "package:flutter/material.dart";
+import "package:material_ui/material_ui.dart";
 import "package:world_countries/helpers.dart";
 
 import "../../../helpers/extensions/parsed_route_settings_extension.dart";

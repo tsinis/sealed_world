@@ -1,7 +1,12 @@
 // ignore_for_file: prefer-class-destructuring, prefer-private-named-parameters
 
-import "package:flutter/material.dart" show ThemeExtension;
+import "dart:ui" as ui show lerpDouble;
+
 import "package:flutter/widgets.dart";
+import "package:material_ui/material_ui.dart"
+    show // ignore: multiple_combinators, due to `dart:io` import in the about
+        ThemeExtension
+    hide AboutDialog;
 
 import "../helpers/extensions/decorated_flag_interface_extension.dart";
 import "../interfaces/decorated_flag_interface.dart";
@@ -13,6 +18,10 @@ import "../interfaces/decorated_flag_interface.dart";
 /// customization of flags. It also implements [DecoratedFlagInterface] to
 /// provide a consistent interface for decorated flags.
 @immutable
+@Deprecated(
+  "Use FlagTheme instead. FlagThemeData is fully deprecated "
+  "and will be removed in the next major version.",
+)
 class FlagThemeData extends ThemeExtension<FlagThemeData>
     implements DecoratedFlagInterface {
   /// Creates a new instance of [FlagThemeData].
@@ -25,6 +34,10 @@ class FlagThemeData extends ThemeExtension<FlagThemeData>
   /// - [height]: The height of the flag.
   /// - [width]: The width of the flag.
   /// - [child]: A widget to display in the foreground of the flag.
+  @Deprecated(
+    "Use FlagTheme instead. FlagThemeData is fully deprecated"
+    " and will be removed in the next major version.",
+  )
   const new({
     double? aspectRatio,
     this.decoration,
@@ -32,14 +45,30 @@ class FlagThemeData extends ThemeExtension<FlagThemeData>
     this.padding,
     this.height,
     this.width,
-    this.child,
+    Widget? child,
+    Widget? flagChild,
   }) : assert(height == null || height > 0, "`height` must be greater than 0"),
        assert(width == null || width > 0, "`width` must be greater than 0"),
        assert(
          aspectRatio == null || aspectRatio > 0,
          "`aspectRatio` must be greater than 0",
        ),
+       flagChild = flagChild ?? child,
        _aspectRatio = aspectRatio;
+
+  /// Creates a fallback instance of [FlagThemeData] with all fields `null`.
+  @Deprecated(
+    "Use FlagTheme instead. FlagThemeData is fully deprecated "
+    "and will be removed in the next major version.",
+  )
+  const new fallback()
+    : decoration = null,
+      decorationPosition = null,
+      padding = null,
+      height = null,
+      width = null,
+      flagChild = null,
+      _aspectRatio = null;
 
   /// Creates a new instance of [FlagThemeData] with pre-defined default values
   /// for small flags with rounded corners.
@@ -54,6 +83,10 @@ class FlagThemeData extends ThemeExtension<FlagThemeData>
   /// - [height]: The height of the flag, defaults to 18.
   /// - [width]: The width of the flag.
   /// - [child]: A widget to display in the foreground of the flag.
+  @Deprecated(
+    "Use FlagTheme instead. FlagThemeData is fully deprecated "
+    "and will be removed in the next major version.",
+  )
   const new small({
     double? aspectRatio,
     this.decoration = const BoxDecoration(
@@ -63,13 +96,15 @@ class FlagThemeData extends ThemeExtension<FlagThemeData>
     this.padding,
     this.height = 18,
     this.width,
-    this.child,
+    Widget? child,
+    Widget? flagChild,
   }) : assert(height == null || height > 0, "`height` must be greater than 0"),
        assert(width == null || width > 0, "`width` must be greater than 0"),
        assert(
          aspectRatio == null || aspectRatio > 0,
          "`aspectRatio` must be greater than 0",
        ),
+       flagChild = flagChild ?? child,
        _aspectRatio = aspectRatio;
 
   @override
@@ -90,7 +125,10 @@ class FlagThemeData extends ThemeExtension<FlagThemeData>
   final double? width;
 
   @override
-  final Widget? child;
+  final Widget? flagChild;
+
+  @override
+  Widget? get child => flagChild;
 
   /// The specified aspect ratio of the flag.
   final double? _aspectRatio;
@@ -122,6 +160,7 @@ class FlagThemeData extends ThemeExtension<FlagThemeData>
     double? height,
     double? width,
     Widget? child,
+    Widget? flagChild,
   }) => FlagThemeData(
     aspectRatio: (aspectRatio?.isNegative ?? false)
         ? null
@@ -131,7 +170,7 @@ class FlagThemeData extends ThemeExtension<FlagThemeData>
     padding: padding ?? this.padding,
     height: (height?.isNegative ?? false) ? null : (height ?? this.height),
     width: (width?.isNegative ?? false) ? null : (width ?? this.width),
-    child: child ?? this.child,
+    flagChild: flagChild ?? child ?? this.flagChild,
   );
 
   @override
@@ -149,13 +188,13 @@ class FlagThemeData extends ThemeExtension<FlagThemeData>
     if (identical(this, other)) return true;
 
     return other is FlagThemeData &&
-        other.aspectRatio == _aspectRatio &&
+        other.specifiedAspectRatio == specifiedAspectRatio &&
         other.decoration == decoration &&
         other.decorationPosition == decorationPosition &&
         other.padding == padding &&
         other.height == height &&
         other.width == width &&
-        other.child == child;
+        other.flagChild == flagChild;
   }
 
   @override
@@ -166,12 +205,53 @@ class FlagThemeData extends ThemeExtension<FlagThemeData>
     padding,
     height,
     width,
-    child,
+    flagChild,
   );
 
+  @Deprecated(
+    "Use FlagTheme instead. FlagThemeData is fully deprecated"
+    " and will be removed in the next major version.",
+  )
   @override // coverage:ignore-line
-  FlagThemeData lerp(
-    covariant ThemeExtension<FlagThemeData>? other,
+  FlagThemeData lerp(covariant ThemeExtension<FlagThemeData>? other, double t) {
+    if (other is! FlagThemeData) return this;
+
+    return lerpStatic(this, other, t) ?? this;
+  }
+
+  /// Linearly interpolate between two [FlagThemeData] objects.
+  ///
+  /// Interpolates every property including dimensions, aspect ratio,
+  /// decoration, and padding. Returns `null` if both [a] and [b] are `null`.
+  static FlagThemeData? lerpStatic(
+    FlagThemeData? a,
+    FlagThemeData? b,
+    // ignore: prefer-correct-identifier-length, during the transition.
     double t,
-  ) => this;
+  ) {
+    if (identical(a, b)) return a;
+    if (a == null && b == null) return null;
+
+    final rawAspectRatio = ui.lerpDouble(
+      a?.specifiedAspectRatio,
+      b?.specifiedAspectRatio,
+      t,
+    );
+    final rawHeight = ui.lerpDouble(a?.height, b?.height, t);
+    final rawWidth = ui.lerpDouble(a?.width, b?.width, t);
+
+    return FlagThemeData(
+      aspectRatio: rawAspectRatio != null && rawAspectRatio > 0
+          ? rawAspectRatio
+          : null,
+      decoration: BoxDecoration.lerp(a?.decoration, b?.decoration, t),
+      decorationPosition: t < 0.5
+          ? a?.decorationPosition
+          : b?.decorationPosition,
+      padding: EdgeInsetsGeometry.lerp(a?.padding, b?.padding, t),
+      height: rawHeight != null && rawHeight > 0 ? rawHeight : null,
+      width: rawWidth != null && rawWidth > 0 ? rawWidth : null,
+      flagChild: t < 0.5 ? a?.flagChild : b?.flagChild,
+    );
+  }
 }

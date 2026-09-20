@@ -2,8 +2,8 @@
 
 import "package:_sealed_world_tests/sealed_world_tests.dart";
 import "package:flutter/foundation.dart";
-import "package:flutter/material.dart" show FlutterLogo;
 import "package:flutter_test/flutter_test.dart";
+import "package:material_ui/material_ui.dart" show FlutterLogo;
 import "package:sealed_countries/sealed_countries.dart";
 import "package:world_flags/src/helpers/extensions/flag_extension.dart";
 import "package:world_flags/src/ui/flags/basic_flag.dart";

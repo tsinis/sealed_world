@@ -1,6 +1,6 @@
-import "package:flutter/material.dart" show Icons, SearchAnchor;
 import "package:flutter/widgets.dart";
 import "package:flutter_test/flutter_test.dart";
+import "package:material_ui/material_ui.dart" show Icons, SearchAnchor;
 import "package:world_countries/src/model/typedefs.dart";
 import "package:world_countries/src/theme/tile_theme_data/country_tile_theme_data.dart";
 import "package:world_countries/src/widgets/country/country_picker.dart";

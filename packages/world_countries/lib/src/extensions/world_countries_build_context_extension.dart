@@ -1,5 +1,6 @@
-import "package:flutter/material.dart" show MaterialApp, Theme, ThemeData;
 import "package:flutter/widgets.dart" show BuildContext;
+import "package:material_ui/material_ui.dart"
+    show MaterialApp, Theme, ThemeData;
 import "package:world_flags/world_flags.dart";
 
 import "../helpers/typed_locale_delegate.dart";

@@ -6,10 +6,9 @@
 
 // ignore_for_file: avoid-local-functions, prefer-static-class,
 // ignore_for_file: prefer-extracting-function-callbacks, missing-test-assertion
-import "package:flutter/material.dart";
-import "package:flutter_localizations/flutter_localizations.dart";
 import "package:flutter_test/flutter_test.dart";
 import "package:integration_test/integration_test.dart";
+import "package:material_ui/material_ui.dart";
 import "package:world_countries/world_countries.dart";
 
 const _frames = 150;

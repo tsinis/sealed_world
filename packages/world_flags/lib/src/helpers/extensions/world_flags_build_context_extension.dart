@@ -1,18 +1,25 @@
-import "package:flutter/material.dart" show Theme;
+// Stage 1 deprecation: fallback to deprecated FlagThemeData -> ThemeExtension.
+// ignore_for_file: deprecated_member_use_from_same_package
 import "package:flutter/widgets.dart" show BuildContext;
+import "package:material_ui/material_ui.dart" show Theme;
 
+import "../../interfaces/decorated_flag_interface.dart";
+import "../../theme/flag_theme.dart";
 import "../../theme/flag_theme_data.dart";
 
-/// A set of useful extensions for [BuildContext] related to the `world_flags`
-/// package.
+/// This extension provides convenient access to the [DecoratedFlagInterface]
+/// from the [BuildContext].
 ///
-/// This extension provides convenient access to the [FlagThemeData] from the
-/// current theme.
+/// It allows you to easily retrieve the flag theme data associated with the
+/// current context without having to explicitly call
+/// `FlagTheme.maybeOf(context)`.
 extension WorldFlagsBuildContextExtension on BuildContext {
-  /// Retrieves the [FlagThemeData] from the current theme.
+  /// Retrieves the [DecoratedFlagInterface] from the current context.
   ///
-  /// This getter allows you to easily access the flag theme data within the
-  /// current [BuildContext]. If no [FlagThemeData] is found in the current
-  /// theme, this returns `null`.
-  FlagThemeData? get flagTheme => Theme.of(this).extension<FlagThemeData>();
+  /// Checks for an ambient [FlagTheme] first (and its resolvers, which
+  /// includes the Material ThemeExtension bridge registered by
+  /// `world_countries`). If none is found, falls back to the ambient
+  /// Material `ThemeData` extension for [FlagThemeData] during Stage 1.
+  DecoratedFlagInterface? get flagTheme =>
+      FlagTheme.maybeOf(this) ?? Theme.of(this).extension<FlagThemeData>();
 }

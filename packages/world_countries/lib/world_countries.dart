@@ -2,7 +2,7 @@
 /// widgets (country, phone, currency pickers, etc.).
 library world_countries;
 
-export "package:world_flags/world_flags.dart";
+export "package:world_flags/world_flags.dart" hide FlagThemeData;
 
 export "src/extensions/core/locale_extension.dart";
 export "src/extensions/iso_tile_extension.dart";
@@ -32,6 +32,7 @@ export "src/model/item_properties.dart";
 export "src/model/locale/typed_locale.dart";
 export "src/model/search_data.dart";
 export "src/model/typedefs.dart";
+export "src/theme/flag_theme_data.dart";
 export "src/theme/pickers_theme_data.dart";
 export "src/theme/tile_theme_data/base_tile_theme_data.dart";
 export "src/theme/tile_theme_data/country_tile_theme_data.dart";

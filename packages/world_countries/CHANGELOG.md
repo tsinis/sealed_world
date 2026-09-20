@@ -6,9 +6,16 @@ Inherited from `world_flags` 3.4.0:
 
 - `NRU`/`NR` is now named "Naoero" ("Republic of Naoero" officially), following the [United Nations' update of the country's name](https://www.un.org/en/about-us/member-states/naoero). This package re-exports `world_flags` (and through it `sealed_countries`), so any picker, flag list, or label showing `name.common` will display the new name. Flag artwork and all codes are unchanged.
 
-IMPROVEMENTS
+REFACTOR
 
-Inherited from `world_flags` 3.4.0:
+- **Zero-touch flag theme bridge for `world_flags` decoupling.**
+  - Pickers and themes now accept `DecoratedFlagInterface` instead of the deprecated `FlagThemeData`.
+  - Replaced the exported `world_flags`'s `FlagThemeData` with a local, self-contained deprecated shim that implements `DecoratedFlagInterface` and `ThemeExtension`.
+  - Automatically bridges the Material `ThemeExtension` carrier to `FlagTheme.fallbackResolvers` via internal resolvers.
+  - Added `FlagThemeDataBase` as an alias to `DecoratedFlagInterface` (previously aliased `FlagThemeData`).
+  - No breaking changes for consumers: `ThemeData(extensions: [FlagThemeData(...)])` still works for now, but migrating to `FlagTheme` is highly recommended. (See `MIGRATION_GUIDES.md` -> `FLAG_THEME_MIGRATION.md`).Pickers (`BasicPicker`, `IsoTile`, etc.) resolve flag themes transparently. Existing consumers configuring `ThemeData(extensions: [FlagThemeData(...)])` require zero code changes.
+
+Inherited from `world_flags` 3.5.0:
 
 - `availableLocales` is now built on first read instead of in the constructor, making a `localize()` call (mapper construction included) around 15% faster. Mappers are single-use, so every call previously paid for materializing the full locale set even when it was never read.
 

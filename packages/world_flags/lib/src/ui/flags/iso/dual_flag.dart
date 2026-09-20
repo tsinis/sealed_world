@@ -50,6 +50,8 @@ class DualFlag<T extends IsoStandardized, F extends BasicFlag>
     super.decorationPosition,
     super.padding,
     super.shader,
+    super.flagChild,
+    @Deprecated("Use flagChild instead. Will be removed in next major version.")
     super.child,
     super.key,
   });
@@ -87,8 +89,8 @@ class DualFlag<T extends IsoStandardized, F extends BasicFlag>
             final foreground = clipSecondary ? secondary : primary;
 
             return background?.copyWithTheme(
-              theme: toThemeData(
-                child: ClipPath(
+              theme: toData(
+                flagChild: ClipPath(
                   clipBehavior: clipBehavior,
                   clipper: DualFlagClipper(splitAngle),
                   child: foreground?.copyWith(
@@ -96,7 +98,7 @@ class DualFlag<T extends IsoStandardized, F extends BasicFlag>
                     decoration: decoration,
                     decorationPosition: decorationPosition,
                     padding: EdgeInsets.zero,
-                    child: child,
+                    flagChild: flagChild,
                   ),
                 ),
               ),

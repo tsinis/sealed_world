@@ -1,3 +1,4 @@
+// Example app manages the deprecated FlagThemeData bridge during Stage 1.
 // ignore_for_file: prefer-class-destructuring
 
 import "package:flutter/widgets.dart";

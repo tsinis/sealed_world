@@ -1,9 +1,9 @@
 // ignore_for_file: prefer-moving-to-variable, avoid_redundant_argument_values
 import "dart:io" show Platform;
 
-import "package:flutter/material.dart" show MaterialApp, ThemeData;
 import "package:flutter/widgets.dart";
 import "package:flutter_test/flutter_test.dart";
+import "package:material_ui/material_ui.dart" show MaterialApp, ThemeData;
 import "package:sealed_countries/sealed_countries.dart";
 import "package:world_flags/src/constants/flag_constants.dart";
 import "package:world_flags/src/helpers/extensions/flag_extension.dart";
@@ -53,6 +53,7 @@ extension GoldenWidgetTesterExtension on WidgetTester {
       MaterialApp(
         home: flagWidget,
         theme: ThemeData(
+          // ignore: deprecated_member_use_from_same_package, stage 1 deprecate.
           extensions: [FlagThemeData(decoration: type.decoration)],
         ),
       ),

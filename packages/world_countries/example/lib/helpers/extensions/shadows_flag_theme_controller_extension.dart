@@ -1,7 +1,7 @@
 // Shadow-specific helpers & mutators extracted for clarity.
 // ignore_for_file: prefer-class-destructuring
 
-import "package:flutter/material.dart";
+import "package:material_ui/material_ui.dart";
 import "package:world_countries/helpers.dart";
 
 import "../../theme/flag_theme_controller.dart";

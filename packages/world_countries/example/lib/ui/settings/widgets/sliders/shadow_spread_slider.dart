@@ -1,4 +1,4 @@
-import "package:flutter/material.dart";
+import "package:material_ui/material_ui.dart";
 
 import "../../../../helpers/extensions/shadows_flag_theme_controller_extension.dart";
 import "settings_tile_slider.dart";

@@ -2,9 +2,9 @@
 
 import "dart:ui" as ui;
 
-import "package:flutter/material.dart" show MaterialApp, Scaffold;
 import "package:flutter/widgets.dart";
 import "package:flutter_test/flutter_test.dart";
+import "package:material_ui/material_ui.dart" show MaterialApp, Scaffold;
 import "package:world_flags/src/model/colors_properties.dart";
 import "package:world_flags/src/model/flag_properties.dart";
 import "package:world_flags/src/ui/effects/flag_shader_delegate.dart";

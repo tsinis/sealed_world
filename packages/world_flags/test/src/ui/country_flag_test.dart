@@ -1,8 +1,8 @@
 import "package:_sealed_world_tests/sealed_world_tests.dart";
 import "package:flutter/foundation.dart";
-import "package:flutter/material.dart" show MaterialApp;
 import "package:flutter/widgets.dart";
 import "package:flutter_test/flutter_test.dart";
+import "package:material_ui/material_ui.dart" show MaterialApp;
 import "package:sealed_countries/sealed_countries.dart";
 import "package:world_flags/src/helpers/extensions/basic_flag_extension_copy_with.dart";
 import "package:world_flags/src/ui/country_flag.dart";
@@ -25,10 +25,19 @@ void main() => group("$CountryFlag", () {
   );
 
   assertTest("zero height", () => CountryFlag.simplified(value, height: 0));
+  assertTest(
+    "negative height",
+    () => CountryFlag.simplified(value, height: -1),
+  );
   assertTest("zero width", () => CountryFlag.simplified(value, width: 0));
+  assertTest("negative width", () => CountryFlag.simplified(value, width: -1));
   assertTest(
     "zero aspectRatio",
     () => CountryFlag.simplified(value, aspectRatio: 0),
+  );
+  assertTest(
+    "negative aspectRatio",
+    () => CountryFlag.simplified(value, aspectRatio: -1),
   );
 
   test("debugFillProperties", () {
@@ -37,6 +46,14 @@ void main() => group("$CountryFlag", () {
 
     flag.debugFillProperties(builder);
     expect(builder.properties.any((prop) => prop.name == "padding"), isTrue);
+  });
+
+  test("child getter returns flagChild", () {
+    // ignore: deprecated_member_use_from_same_package, testing deprecated getter.
+    expect(flag.child, isNull);
+    const withChild = CountryFlag.simplified(value, flagChild: FlutterLogo());
+    // ignore: deprecated_member_use_from_same_package, testing deprecated getter.
+    expect(withChild.child, isA<FlutterLogo>());
   });
 
   testWidgets("custom constructor", (tester) async {
