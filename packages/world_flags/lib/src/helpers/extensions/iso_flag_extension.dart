@@ -38,7 +38,8 @@ extension IsoFlagExtension<T extends IsoStandardized, F extends BasicFlag>
     DecorationPosition? decorationPosition,
     EdgeInsetsGeometry? padding,
     FlagShaderDelegate? shader,
-    Widget? child,
+    Widget? flagChild,
+    @Deprecated("Use flagChild instead.") Widget? child,
     Key? key,
   }) => IsoFlag(
     alternativeMap: alternativeMap ?? this.alternativeMap,
@@ -55,6 +56,6 @@ extension IsoFlagExtension<T extends IsoStandardized, F extends BasicFlag>
     padding: padding ?? this.padding,
     width: (width?.isNegative ?? false) ? null : (width ?? this.width),
     shader: shader ?? this.shader,
-    child: child ?? this.child,
+    flagChild: flagChild ?? child ?? this.flagChild,
   );
 }

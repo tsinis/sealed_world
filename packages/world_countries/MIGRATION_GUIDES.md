@@ -15,8 +15,16 @@ This document lists all the breaking changes in v4 of the `world_countries` pack
 - [Tile Widgets](#tile-widgets)
 - [L10N Changes](#l10n-changes)
 - [Moon shape changes](#moon-shape-changes)
+- [FlagTheme Decoupling & Migration](#flagtheme-decoupling--migration)
 
 ---
+
+## FlagTheme Decoupling & Migration
+
+Starting from `world_countries` v4.5.0 and `world_flags` v3.5.0, flag theming is transitioning from Material `ThemeExtension` to widgets-level `FlagTheme` (`InheritedTheme`).
+
+- **For `world_countries` users:** No changes are required. The package automatically bridges Material `ThemeExtension` carrier to the new `FlagTheme` carrier.
+- **For direct `world_flags` users or roadmap details:** See the full [FlagTheme Migration Guide](../world_flags/FLAG_THEME_MIGRATION.md).
 
 ## Generic Type Arguments
 

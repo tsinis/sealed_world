@@ -63,6 +63,8 @@ class IsoFlag<T extends IsoStandardized, F extends BasicFlag>
     super.decoration,
     super.decorationPosition,
     super.padding,
+    super.flagChild,
+    @Deprecated("Use flagChild instead. Will be removed in next major version.")
     super.child,
     super.key,
   });
@@ -119,8 +121,8 @@ class IsoFlag<T extends IsoStandardized, F extends BasicFlag>
       )
       ..add(
         ObjectFlagProperty<Widget>(
-          "child",
-          child,
+          "flagChild",
+          flagChild,
           ifNull: "no foreground widget",
         ),
       )
@@ -219,7 +221,7 @@ class IsoFlag<T extends IsoStandardized, F extends BasicFlag>
         padding: padding,
         height: height,
         width: width,
-        child: child,
+        flagChild: flagChild,
       ) ??
       orElse ??
       const SizedBox.shrink();

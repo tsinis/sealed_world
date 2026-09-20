@@ -1,13 +1,17 @@
+// Stage 1 bridge: this file intentionally uses the deprecated FlagThemeData
+// shim that bridges Material ThemeExtension to FlagTheme. It will be removed
+// in Stage 2 alongside the shim itself.
 import "package:flutter/gestures.dart";
 import "package:flutter/material.dart" show TextField, ThemeExtension;
 import "package:flutter/widgets.dart";
 import "package:meta/meta.dart" show useResult;
-import "package:world_flags/world_flags.dart";
+import "package:world_flags/world_flags.dart" show DecoratedFlagInterface;
 
 import "../constants/ui_constants.dart";
 import "../interfaces/basic_picker_interface.dart";
 import "../interfaces/indexed_list_view_interface.dart";
 import "../model/iso/iso_maps.dart";
+import "flag_theme_data.dart";
 
 /// Holds the theme data for pickers.
 ///
@@ -64,6 +68,12 @@ class PickersThemeData extends ThemeExtension<PickersThemeData>
     this.flagTheme,
     this.spacing = 0,
   });
+  @override
+  Object get type {
+    FlagThemeData.ensureBridge();
+
+    return PickersThemeData;
+  }
 
   /// Creates a copy of this theme data but with the given fields replaced with
   /// the new values.
@@ -94,7 +104,7 @@ class PickersThemeData extends ThemeExtension<PickersThemeData>
     TextField? searchBar,
     EdgeInsetsGeometry? searchBarPadding,
     IsoMaps? maps,
-    FlagThemeData? flagTheme,
+    DecoratedFlagInterface? flagTheme,
     Widget? separator,
     bool? showHeader,
     Widget? header,
@@ -172,7 +182,7 @@ class PickersThemeData extends ThemeExtension<PickersThemeData>
   final IsoMaps? maps;
 
   @override
-  final FlagThemeData? flagTheme;
+  final DecoratedFlagInterface? flagTheme;
 
   @override
   final Widget? separator;

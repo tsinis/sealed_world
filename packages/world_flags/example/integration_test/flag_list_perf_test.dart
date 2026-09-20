@@ -1,3 +1,4 @@
+// ignore_for_file: deprecated_member_use, stage 1 deprecation.
 // Scrolls three flag screens on a real device or desktop, so the frame times
 // can be split into build and raster. Run it through
 // `test_driver/perf_driver.dart`.

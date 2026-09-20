@@ -30,14 +30,17 @@ abstract class DecoratedFlagWidget extends StatelessWidget
     this.padding,
     this.height,
     this.width,
-    this.child,
+    Widget? flagChild,
+    @Deprecated("Use flagChild instead. Will be removed in next major version.")
+    Widget? child,
     super.key,
   }) : assert(height == null || height > 0, "`height` must be greater than 0"),
        assert(width == null || width > 0, "`width` must be greater than 0"),
        assert(
          aspectRatio == null || aspectRatio > 0,
          "`aspectRatio` must be greater than 0",
-       );
+       ),
+       flagChild = flagChild ?? child;
 
   @override
   final double? height;
@@ -46,7 +49,14 @@ abstract class DecoratedFlagWidget extends StatelessWidget
   final double? width;
 
   @override
-  final Widget? child;
+  final Widget? flagChild;
+
+  @Deprecated(
+    "Use flagChild instead. This resolves a naming collision with "
+    "InheritedTheme.child. Will be removed in next major version.",
+  )
+  @override
+  Widget? get child => flagChild;
 
   @override
   final double? aspectRatio;

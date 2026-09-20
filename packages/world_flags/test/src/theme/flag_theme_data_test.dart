@@ -1,3 +1,5 @@
+// This file is part of stage 1 deprecation.
+// ignore_for_file: deprecated_member_use_from_same_package
 import "package:_sealed_world_tests/sealed_world_tests.dart";
 import "package:flutter/material.dart" show Colors;
 import "package:flutter/widgets.dart";
@@ -113,6 +115,101 @@ void main() => group("$FlagThemeData", () {
         expect(copy.width, isNull);
         expect(copy.specifiedAspectRatio, isNull);
       });
+    });
+  });
+
+  group("fallback", () {
+    test("creates an empty instance with all null properties", () {
+      const fallback = FlagThemeData.fallback();
+      expect(fallback.aspectRatio, isNull);
+      expect(fallback.specifiedAspectRatio, isNull);
+      expect(fallback.decoration, isNull);
+      expect(fallback.decorationPosition, isNull);
+      expect(fallback.padding, isNull);
+      expect(fallback.height, isNull);
+      expect(fallback.width, isNull);
+      expect(fallback.child, isNull);
+    });
+  });
+
+  group("equality", () {
+    test("symmetric equality with specifiedAspectRatio", () {
+      const a = FlagThemeData(aspectRatio: 1.5);
+      const b = FlagThemeData(aspectRatio: 1.5);
+      expect(a == b, isTrue);
+      expect(b == a, isTrue);
+      expect(a.hashCode, b.hashCode);
+
+      const different = FlagThemeData(aspectRatio: 2);
+      expect(a == different, isFalse);
+    });
+  });
+
+  group("lerpStatic & lerp", () {
+    const start = FlagThemeData(
+      aspectRatio: 1,
+      decoration: BoxDecoration(color: Colors.red),
+      decorationPosition: DecorationPosition.background,
+      padding: EdgeInsets.all(10),
+      height: 100,
+      width: 100,
+      child: Text("start"),
+    );
+
+    const end = FlagThemeData(
+      aspectRatio: 2,
+      decoration: BoxDecoration(color: Colors.blue),
+      decorationPosition: DecorationPosition.foreground,
+      padding: EdgeInsets.all(20),
+      height: 200,
+      width: 200,
+      child: Text("end"),
+    );
+
+    test("returns null if both are null", () {
+      expect(FlagThemeData.lerpStatic(null, null, 0.5), isNull);
+    });
+
+    test("returns identical when identical", () {
+      expect(FlagThemeData.lerpStatic(start, start, 0.5), same(start));
+    });
+
+    test("returns start values at t = 0.0", () {
+      final result = FlagThemeData.lerpStatic(start, end, 0);
+      expect(result?.aspectRatio, 1.0);
+      expect(result?.height, 100.0);
+      expect(result?.width, 100.0);
+      expect(result?.decorationPosition, DecorationPosition.background);
+      expect(result?.padding, const EdgeInsets.all(10));
+    });
+
+    test("returns end values at t = 1.0", () {
+      final result = FlagThemeData.lerpStatic(start, end, 1);
+      expect(result?.aspectRatio, 2.0);
+      expect(result?.height, 200.0);
+      expect(result?.width, 200.0);
+      expect(result?.decorationPosition, DecorationPosition.foreground);
+      expect(result?.padding, const EdgeInsets.all(20));
+    });
+
+    test("interpolates properties at t = 0.5", () {
+      final result = FlagThemeData.lerpStatic(start, end, 0.5);
+      expect(result?.aspectRatio, 1.5);
+      expect(result?.height, 150.0);
+      expect(result?.width, 150.0);
+      expect(result?.decorationPosition, DecorationPosition.foreground);
+      expect(result?.padding, const EdgeInsets.all(15));
+    });
+
+    test("instance lerp delegates to lerpStatic", () {
+      final result = start.lerp(end, 0.5);
+      expect(result.aspectRatio, 1.5);
+      expect(result.height, 150.0);
+      expect(result.width, 150.0);
+    });
+
+    test("instance lerp returns this if other is not FlagThemeData", () {
+      expect(start.lerp(null, 0.5), same(start));
     });
   });
 });

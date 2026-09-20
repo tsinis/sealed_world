@@ -4,15 +4,14 @@ import "dart:ui" show Offset;
 
 import "package:flutter/foundation.dart";
 
-import "../../theme/flag_theme_data.dart";
 import "flag_shader_surface.dart" show FlagShaderSurface;
 
 /// Immutable configuration for waved-flag style shader delegates.
 ///
 /// These options describe purely visual preferences (amplitude, turbulence,
-/// highlights, etc.) and can be stored inside [FlagThemeData] or supplied to
-/// a [FlagShaderSurface]. They do *not* manage shader life-cycles, tickers,
-/// or GPU resources.
+/// highlights, etc.) and can be stored inside via `DecoratedFlagInterface` or
+/// supplied to a [FlagShaderSurface]. They do *not* manage shader life-cycles,
+/// tickers, or GPU resources.
 ///
 /// ### Usage
 ///

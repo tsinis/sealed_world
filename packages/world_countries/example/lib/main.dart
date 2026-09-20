@@ -25,7 +25,7 @@ class Main extends StatefulWidget {
 
 class _MainState extends State<Main> {
   /// Also [CurrencyTileThemeData], [LanguageTileThemeData],
-  /// [CountryTileThemeData], [FlagThemeData], etc.
+  /// [CountryTileThemeData], `FlagThemeData`, etc.
   final _pickersExtensions = <ThemeExtension>[
     const PickersThemeData(primary: true),
     CurrencyTileThemeData(

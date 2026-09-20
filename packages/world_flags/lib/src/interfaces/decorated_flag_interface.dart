@@ -21,7 +21,8 @@ abstract interface class DecoratedFlagInterface {
   /// theme is used.
   /// - [width]: The width of the flag. If null, the width from the flag theme
   /// is used.
-  /// - [child]: A widget to display in the foreground of the flag.
+  /// - [flagChild]: A widget to display in the foreground of the flag.
+  /// - [child]: Deprecated in favor of [flagChild].
   const new( // coverage:ignore-line
   {
     this.aspectRatio,
@@ -30,8 +31,10 @@ abstract interface class DecoratedFlagInterface {
     this.padding,
     this.width,
     this.height,
-    this.child,
-  });
+    Widget? flagChild,
+    @Deprecated("Use flagChild instead. Will be removed in next major version.")
+    Widget? child,
+  }) : flagChild = flagChild ?? child;
 
   /// The specified aspect ratio of the flag.
   final double? aspectRatio;
@@ -65,5 +68,16 @@ abstract interface class DecoratedFlagInterface {
   final double? height;
 
   /// A widget to display in the foreground of the flag.
-  final Widget? child;
+  final Widget? flagChild;
+
+  /// A widget to display in the foreground of the flag.
+  ///
+  /// Deprecated because `child` collides with `InheritedTheme.child`, which
+  /// prevents `FlagTheme` from implementing this interface. Use [flagChild]
+  /// instead.
+  @Deprecated(
+    "Use flagChild instead. This resolves a naming collision with "
+    "InheritedTheme.child. Will be removed in next major version.",
+  )
+  Widget? get child => flagChild;
 }

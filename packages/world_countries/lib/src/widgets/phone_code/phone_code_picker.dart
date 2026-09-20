@@ -1,7 +1,7 @@
 import "package:flutter/gestures.dart" show DragStartBehavior;
 import "package:flutter/material.dart" show TextField;
 import "package:flutter/widgets.dart";
-import "package:world_flags/world_flags.dart";
+import "package:world_flags/world_flags.dart" hide FlagThemeData;
 
 import "../../constants/ui_constants.dart";
 import "../../extensions/build_context_extension.dart";
@@ -204,7 +204,7 @@ class PhoneCodePicker extends CountryPicker {
     Widget? Function(ItemProperties<WorldCountry>, CountryTile)? itemBuilder,
     double? spacing,
     IsoMaps? maps,
-    FlagThemeData? flagTheme,
+    DecoratedFlagInterface? flagTheme,
   }) => PhoneCodePicker(
     countries: items ?? this.items,
     addAutomaticKeepAlives:

@@ -1,11 +1,12 @@
 import "package:flutter/foundation.dart" show immutable;
 import "package:flutter/material.dart" show TextField, Theme;
 import "package:flutter/widgets.dart" show EdgeInsetsGeometry;
-import "package:world_flags/world_flags.dart";
+import "package:world_flags/world_flags.dart" show DecoratedFlagInterface;
 
 import "../constants/ui_constants.dart";
 import "../helpers/typed_locale_delegate.dart";
 import "../model/iso/iso_maps.dart";
+import "../theme/flag_theme_data.dart";
 
 /// An abstract interface defining the basic contract for picker components.
 ///
@@ -59,5 +60,5 @@ abstract interface class BasicPickerInterface {
   /// Optional [FlagThemeData] override for the flags rendered in tiles.
   ///
   /// When not provided, the [FlagThemeData] from the current [Theme] is used.
-  final FlagThemeData? flagTheme;
+  final DecoratedFlagInterface? flagTheme;
 }

@@ -59,6 +59,8 @@ class BasicFlag extends DecoratedFlagWidget {
     super.padding,
     super.height,
     super.width,
+    super.flagChild,
+    @Deprecated("Use flagChild instead. Will be removed in next major version.")
     super.child,
     super.key,
   });
@@ -190,7 +192,11 @@ class BasicFlag extends DecoratedFlagWidget {
         ),
       )
       ..add(
-        ObjectFlagProperty<Widget>("child", child, ifNull: "no child widget"),
+        ObjectFlagProperty<Widget>(
+          "flagChild",
+          flagChild,
+          ifNull: "no child widget",
+        ),
       )
       ..add(
         DiagnosticsProperty<ElementsProps>(
@@ -240,9 +246,9 @@ class BasicFlag extends DecoratedFlagWidget {
                     foregroundPainter ??
                     foregroundPainterBuilder?.call(_elements, flagAspectRatio),
                 child:
-                    child ??
+                    flagChild ??
                     foregroundWidgetBuilder?.call(_elements, flagAspectRatio) ??
-                    theme?.child,
+                    theme?.flagChild,
               ),
             ),
           ),

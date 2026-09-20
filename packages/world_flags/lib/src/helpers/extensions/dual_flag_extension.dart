@@ -44,7 +44,8 @@ extension DualFlagExtension<T extends IsoStandardized, F extends BasicFlag>
     int? splitAngle,
     bool? clipSecondary,
     Clip? clipBehavior,
-    Widget? child,
+    Widget? flagChild,
+    @Deprecated("Use flagChild instead.") Widget? child,
     Key? key,
   }) => DualFlag<T, F>(
     item ?? this.item,
@@ -64,6 +65,6 @@ extension DualFlagExtension<T extends IsoStandardized, F extends BasicFlag>
     shader: shader ?? this.shader,
     splitAngle: splitAngle ?? this.splitAngle,
     width: (width?.isNegative ?? false) ? null : (width ?? this.width),
-    child: child ?? this.child,
+    flagChild: flagChild ?? child ?? this.flagChild,
   );
 }

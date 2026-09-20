@@ -2,7 +2,7 @@ import "package:flutter/widgets.dart";
 import "package:flutter_test/flutter_test.dart";
 import "package:sealed_countries/sealed_countries.dart";
 import "package:world_flags/src/helpers/extensions/decorated_flag_interface_extension.dart";
-import "package:world_flags/src/theme/flag_theme_data.dart";
+import "package:world_flags/src/interfaces/decorated_flag_interface.dart";
 import "package:world_flags/src/ui/flags/basic_flag.dart";
 import "package:world_flags/src/ui/flags/iso/iso_flag.dart";
 
@@ -52,39 +52,39 @@ void main() => group("DecoratedFlagInterfaceExtension", () {
       );
 
       final themeData = original.toThemeData();
-      expect(themeData, isA<FlagThemeData>());
+      expect(themeData, isA<DecoratedFlagInterface>());
       expect(themeData.height, original.height);
       expect(themeData.width, original.width);
       expect(themeData.aspectRatio, original.aspectRatio);
       expect(themeData.decoration, original.decoration);
       expect(themeData.decorationPosition, original.decorationPosition);
       expect(themeData.padding, original.padding);
-      expect(themeData.child, isNull);
+      expect(themeData.flagChild, isNull);
     });
 
-    test("toThemeData overrides child when provided", () {
+    test("toThemeData overrides flagChild when provided", () {
       const original = IsoFlag(
         FiatEur(),
         <FiatCurrency, BasicFlag>{},
-        child: SizedBox.shrink(),
+        flagChild: SizedBox.shrink(),
       );
       const override = Placeholder();
 
-      final themeData = original.toThemeData(child: override);
-      expect(themeData.child, override);
-      expect(themeData.child, isNot(original.child));
+      final themeData = original.toThemeData(flagChild: override);
+      expect(themeData.flagChild, override);
+      expect(themeData.flagChild, isNot(original.flagChild));
     });
 
-    test("toThemeData preserves existing child when not overridden", () {
+    test("toThemeData preserves existing flagChild when not overridden", () {
       const child = SizedBox.shrink();
       const original = IsoFlag(
         FiatEur(),
         <FiatCurrency, BasicFlag>{},
-        child: child,
+        flagChild: child,
       );
 
       final themeData = original.toThemeData();
-      expect(themeData.child, child);
+      expect(themeData.flagChild, child);
     });
   });
 });

@@ -39,6 +39,7 @@ void main() => group("BasicFlagExtensionCopyWith", () {
   });
 
   group("copyWithTheme", () {
+    // ignore: deprecated_member_use_from_same_package, stage 1 deprecation.
     const smallTheme = FlagThemeData.small();
 
     test("applies FlagThemeData.small properties", () {

@@ -53,6 +53,7 @@ extension GoldenWidgetTesterExtension on WidgetTester {
       MaterialApp(
         home: flagWidget,
         theme: ThemeData(
+          // ignore: deprecated_member_use_from_same_package, stage 1 deprecate.
           extensions: [FlagThemeData(decoration: type.decoration)],
         ),
       ),

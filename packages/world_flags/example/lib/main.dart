@@ -1,3 +1,4 @@
+// ignore_for_file: deprecated_member_use, Stage 1 deprecation.
 import "package:flutter/material.dart";
 import "package:world_flags/world_flags.dart";
 
@@ -15,15 +16,14 @@ void main() async {
     await CupertinoEmojiShaderDelegate.warmUp();
     await WavedFlagShaderDelegate.warmUp();
   }
-  const extensions = [
-    FlagThemeData(decoration: BoxDecoration(borderRadius: .all(.circular(4)))),
-  ];
+  const flagTheme = FlagThemeData(
+    decoration: BoxDecoration(borderRadius: .all(.circular(4))),
+  );
 
   runApp(
-    MaterialApp(
-      home: const Main(isSimpleExample: !isComplexExample),
-      theme: ThemeData(extensions: extensions, brightness: Brightness.light),
-      darkTheme: ThemeData(extensions: extensions, brightness: Brightness.dark),
+    const FlagTheme.fromBase(
+      data: flagTheme,
+      child: MaterialApp(home: Main(isSimpleExample: !isComplexExample)),
     ),
   );
 }

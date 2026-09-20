@@ -1,12 +1,13 @@
 import "package:flutter/gestures.dart" show DragStartBehavior;
 import "package:flutter/material.dart" show TextField;
 import "package:flutter/widgets.dart";
-import "package:world_flags/world_flags.dart";
+import "package:world_flags/world_flags.dart" hide FlagThemeData;
 
 import "../../model/iso/iso_maps.dart";
 import "../../model/item_properties.dart";
 import "../../model/search_data.dart";
 import "../../model/typedefs.dart";
+import "../../theme/flag_theme_data.dart";
 import "../pickers/basic_picker.dart";
 
 /// A picker widget that displays a list of fiat currencies.
@@ -147,7 +148,7 @@ class CurrencyPicker extends BasicPicker<FiatCurrency, CurrencyTile> {
     Widget? Function(ItemProperties<FiatCurrency>, CurrencyTile)? itemBuilder,
     double? spacing,
     IsoMaps? maps,
-    FlagThemeData? flagTheme,
+    DecoratedFlagInterface? flagTheme,
   }) => CurrencyPicker(
     currencies: items ?? this.items,
     addAutomaticKeepAlives:

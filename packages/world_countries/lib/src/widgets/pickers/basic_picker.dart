@@ -5,7 +5,7 @@ import "dart:async" show FutureOr, unawaited;
 
 import "package:flutter/gestures.dart" show DragStartBehavior;
 import "package:flutter/material.dart";
-import "package:world_flags/world_flags.dart";
+import "package:world_flags/world_flags.dart" hide FlagThemeData;
 
 import "../../constants/ui_constants.dart";
 import "../../extensions/build_context_extension.dart";
@@ -20,6 +20,7 @@ import "../../model/iso/iso_maps.dart";
 import "../../model/item_properties.dart";
 import "../../model/search_data.dart";
 import "../../model/typedefs.dart";
+import "../../theme/flag_theme_data.dart";
 import "../../theme/pickers_theme_data.dart";
 import "../adaptive/adaptive_search_text_field.dart";
 import "../generic_widgets/implicit_search_delegate.dart";
@@ -174,7 +175,7 @@ abstract class BasicPicker<T extends IsoTranslated, W extends IsoTile<T>>
   ///
   /// When not provided, the [FlagThemeData] from the current [Theme] is used.
   @override
-  final FlagThemeData? flagTheme;
+  final DecoratedFlagInterface? flagTheme;
 
   /// Returns the default tile widget for the items.
   ///
@@ -322,7 +323,7 @@ abstract class BasicPicker<T extends IsoTranslated, W extends IsoTile<T>>
   /// current [Theme] extension. Falls back to a default [FlagThemeData.small()]
   /// flag theme if none of the sources provide a flag theme.
   @protected
-  FlagThemeData resolvedFlagTheme(BuildContext? context) =>
+  DecoratedFlagInterface resolvedFlagTheme(BuildContext? context) =>
       flagTheme ??
       context?.pickersTheme?.flagTheme ??
       context?.flagTheme ??
@@ -622,6 +623,6 @@ abstract class BasicPicker<T extends IsoTranslated, W extends IsoTile<T>>
     Widget? Function(ItemProperties<T>, IsoTile<T>)? itemBuilder,
     double? spacing,
     IsoMaps? maps,
-    FlagThemeData? flagTheme,
+    DecoratedFlagInterface? flagTheme,
   });
 }
