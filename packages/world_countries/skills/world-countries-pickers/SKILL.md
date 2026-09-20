@@ -132,12 +132,11 @@ The package re-exports `package:world_flags/world_flags.dart` and the entire `se
         padding: EdgeInsets.symmetric(horizontal: 16),
         showClearButton: true,
       ),
-      FlagThemeData.small(),
     ],
   )
   ```
 - **Ambient tile themes**: Use `CountryTileThemeData`, `CurrencyTileThemeData`, or `LanguageTileThemeData` to register global `itemBuilder` overrides across the entire app.
-- **Ambient flag styling**: Flags rendered inside picker tiles automatically inherit `FlagThemeData` from `ThemeData.extensions`.
+- **Ambient flag styling**: Flags rendered inside picker tiles automatically inherit `FlagTheme` styling. You should wrap your app with `FlagTheme(data: DecoratedFlagData(...), child: ...)` to style all flags globally.
 
 ### Performance in Long Lists
 
@@ -312,32 +311,36 @@ class MyApp extends StatelessWidget {
   const MyApp({super.key});
 
   @override
-  Widget build(BuildContext context) => MaterialApp(
-    localizationsDelegates: const [
-      // Required: resolves TypedLocale and pre-computes O(1) translation caches
-      TypedLocaleDelegate(),
-      ...GlobalMaterialLocalizations.delegates,
-    ],
-    supportedLocales: const [
-      Locale('en'),
-      Locale('de'),
-      Locale('fr'),
-      Locale('es'),
-    ],
-    theme: ThemeData(
-      useMaterial3: true,
-      extensions: const [
-        // App-wide picker styling
-        PickersThemeData(
-          padding: EdgeInsets.symmetric(horizontal: 16),
-          showClearButton: true,
-        ),
-        // Ambient flag size and shape for all picker tiles
-        FlagThemeData.small(),
-      ],
+  Widget build(BuildContext context) => FlagTheme(
+    data: DecoratedFlagData(
+      height: 18,
+      decoration: BoxDecoration(borderRadius: BorderRadius.circular(4)),
     ),
-    home: const Scaffold(
-      body: Center(child: Text('World Countries App')),
+    child: MaterialApp(
+      localizationsDelegates: const [
+        // Required: resolves TypedLocale and pre-computes O(1) translation caches
+        TypedLocaleDelegate(),
+        ...GlobalMaterialLocalizations.delegates,
+      ],
+      supportedLocales: const [
+        Locale('en'),
+        Locale('de'),
+        Locale('fr'),
+        Locale('es'),
+      ],
+      theme: ThemeData(
+        useMaterial3: true,
+        extensions: const [
+          // App-wide picker styling
+          PickersThemeData(
+            padding: EdgeInsets.symmetric(horizontal: 16),
+            showClearButton: true,
+          ),
+        ],
+      ),
+      home: const Scaffold(
+        body: Center(child: Text('World Countries App')),
+      ),
     ),
   );
 }

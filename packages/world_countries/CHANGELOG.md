@@ -1,28 +1,72 @@
 ## 4.5.0
 
+> Big update refreshing flag visuals and performance across all pickers, introducing zero-touch Material theme bridging, and decoupling from Material theme extensions ahead of **the upcoming year-end major release**.
+
+DEPRECATIONS
+
+- **`FlagThemeData`**: Deprecated in favor of `DecoratedFlagData` and `FlagTheme(data: ...)`. Will be removed in the next major release to eliminate `package:flutter/material.dart` dependencies (see `FLAG_THEME_MIGRATION.md`).
+- **`child` Property**: Deprecated across flag interfaces and constructors in favor of `flagChild` (resolves naming conflict with `InheritedTheme.child`).
+- **Shield Dividers**: Deprecated `SimpleShieldPainter.outlinedWithDividers`, `SimpleShieldPainter.withDividers`, and `UnionJackPainter.halfWithDividers`. Use the corresponding `*WithoutDividers` and `*WithoutOutline` constructors instead.
+
+TLDR: Here what the new `FlagTheme` usage looks like:
+
+```diff
++ FlagTheme( // <-- Here
++   data: FlagThemeData(), // <-- Ideally use `DecoratedFlagData()` - same API.
+    child: MaterialApp(
+-     theme: ThemeData(extensions: [FlagThemeData()]), // <-- Move this.
+      home: ...,
+    ),
++ )
+```
+
+NEW FEATURES
+
+- **Zero-Touch Flag Theme Bridge & Material Decoupling**:
+  - Pickers (`BasicPicker`, `IsoTile`, etc.) and picker themes now accept any `DecoratedFlagInterface` instead of the deprecated `FlagThemeData`.
+  - Replaced re-exported `world_flags`'s `FlagThemeData` with a local, backward-compatible deprecated shim implementing `DecoratedFlagInterface` and `ThemeExtension`.
+  - Seamless integration: automatically bridges Material `ThemeExtension` to `FlagTheme.fallbackResolvers` via internal resolvers. Existing `ThemeData(extensions: [FlagThemeData(...)])` setups require zero code changes.
+- **Inherited from `world_flags` 3.5.0**:
+  - **`FlagTheme` Carrier**: Added standalone `FlagTheme` (`InheritedTheme`) carrier with `maybeOf`, `of`, `fallbackResolvers`, and `FlagThemeData.lerpStatic`.
+  - **Dedicated Badge & Emblem Painters**: Added 12 dedicated badge painters replacing generic shield fallbacks (`AIA`, `AND`, `BMU`, `ECU`, `FJI`, `FLK`, `IOT`, `JEY`, `MSR`, `PCN`, `SGS`, `TCA`) and 5 emblem painters (`GIB`, `DMA`, `ZWE`, `CYM`, `KGZ`), including related currency and language dual flags (`GIP`, `ZWG`, etc.).
+  - **Proportional Bounds**: Added `CustomElementsPainter.proportionalBounds` to preserve aspect ratio during flag scaling.
+  - Introduced `flagChild` across all flag interfaces, models, and constructors to replace `child`.
+
+IMPROVEMENTS
+
+- **Picker & Flag Rendering Performance**:
+  - Reduced draw calls across the flag catalogue by ~35% and clips by ~29%, removing all offscreen `saveLayer` passes.
+  - Converted 24 complex hand-written emblems into cached `BadgeArtwork` polygon tables built once per size.
+  - Batched same-color paths into single draw calls (e.g. US stripes and stars, Cook Islands ring, Union Jack, and Korean trigrams).
+  - `availableLocales` is now built on first read instead of in the constructor, making `localize()` calls ~15% faster.
+- **Flag Artwork & Accuracy**:
+  - Aligned badge colors and geometry with official construction sheets (e.g. Montserrat, Pitcairn, Jersey, Bermuda, Turks & Caicos, Falkland Islands, South Georgia).
+  - Moved badge positioning and scaling entirely into flag data properties.
+  - Removed `isSimplified: true` from `AIA`, `FJI`, `JEY`, `MSR`, and `TCA`.
+- **API & Painter Cleanups**: Added `RectanglePainter.rectangleBounds`, eliminated cross-platform golden test skips by replacing rasterizer-sensitive clip paths with cubic fills, and resolved painter TODOs in `DavidStarPainter`, `AlmondPainter`, and `TaegukgiPainter`.
+
 FIX
 
-Inherited from `world_flags` 3.4.0:
-
-- `NRU`/`NR` is now named "Naoero" ("Republic of Naoero" officially), following the [United Nations' update of the country's name](https://www.un.org/en/about-us/member-states/naoero). This package re-exports `world_flags` (and through it `sealed_countries`), so any picker, flag list, or label showing `name.common` will display the new name. Flag artwork and all codes are unchanged.
-
-REFACTOR
-
-- **Zero-touch flag theme bridge for `world_flags` decoupling.**
-  - Pickers and themes now accept `DecoratedFlagInterface` instead of the deprecated `FlagThemeData`.
-  - Replaced the exported `world_flags`'s `FlagThemeData` with a local, self-contained deprecated shim that implements `DecoratedFlagInterface` and `ThemeExtension`.
-  - Automatically bridges the Material `ThemeExtension` carrier to `FlagTheme.fallbackResolvers` via internal resolvers.
-  - Added `FlagThemeDataBase` as an alias to `DecoratedFlagInterface` (previously aliased `FlagThemeData`).
-  - No breaking changes for consumers: `ThemeData(extensions: [FlagThemeData(...)])` still works for now, but migrating to `FlagTheme` is highly recommended. (See `MIGRATION_GUIDES.md` -> `FLAG_THEME_MIGRATION.md`).Pickers (`BasicPicker`, `IsoTile`, etc.) resolve flag themes transparently. Existing consumers configuring `ThemeData(extensions: [FlagThemeData(...)])` require zero code changes.
-
-Inherited from `world_flags` 3.5.0:
-
-- `availableLocales` is now built on first read instead of in the constructor, making a `localize()` call (mapper construction included) around 15% faster. Mappers are single-use, so every call previously paid for materializing the full locale set even when it was never read.
+- `NRU`/`NR` is now officially named "Naoero" ("Republic of Naoero"), following the [United Nations' update](https://www.un.org/en/about-us/member-states/naoero). All pickers, flag lists, and labels reflect the new name.
+- Fixed symmetric equality check in `FlagThemeData.operator ==` where `specifiedAspectRatio` was compared against `aspectRatio`.
+- Corrected South Korea (`KOR`) taeguk hairline rendering seam caused by adjacent half-disc fills.
+- Corrected Zimbabwe (`ZWE`) bird scale relative to the star.
+- Fixed edge clipping on shader paths for elements overhanging the flag body (e.g. Bosnia and Herzegovina).
 
 DOCUMENTATION
 
 - Added a bundled agent skill (`skills/world-countries-pickers`), compliant with the [Agent Skills specification](https://agentskills.io), installable via `dart run skills@ get`.
-- Replaced the README's inline LLM agent instructions with a pointer to that skill.
+- Replaced README inline LLM agent instructions with a pointer to the skill.
+
+TEST
+
+- Added `picker_perf_test.dart` with `perf_driver.dart` to benchmark picker scrolling and flag rendering under `--profile`.
+- Inherited `flag_draw_ops_test.dart` canvas command budget enforcement and unit tests for painters and badge geometry.
+
+CHORE
+
+- Dart SDK bumped to v3.13.4.
+- Added [material_ui](https://pub.dev/packages/material_ui) dependency and updated `world_flags` to v3.5.0.
 
 ## 4.4.0
 

@@ -9,6 +9,11 @@ final class SimpleShieldPainter extends MultiElementPainter {
   ///
   /// The [properties] parameter specifies the properties of the shield. The
   /// [aspectRatio] parameter specifies the aspect ratio of the shield.
+  @Deprecated(
+    "Use SimpleShieldPainter.outlinedWithoutDividers instead. No flag in the "
+    "package draws the dividers and they will be removed in the next major "
+    "version.",
+  )
   const new outlinedWithDividers(super._properties, super.aspectRatio)
     : _showDividers = true,
       _showOutline = true;
@@ -26,6 +31,10 @@ final class SimpleShieldPainter extends MultiElementPainter {
   ///
   /// The [properties] parameter specifies the properties of the shield. The
   /// [aspectRatio] parameter specifies the aspect ratio of the shield.
+  @Deprecated(
+    "Use SimpleShieldPainter.withoutDividers instead. No flag in the package "
+    "draws the dividers and they will be removed in the next major version.",
+  )
   const new withDividers(super._properties, super.aspectRatio)
     : _showDividers = true,
       _showOutline = false;

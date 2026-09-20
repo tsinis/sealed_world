@@ -1,4 +1,4 @@
-import "dart:ui" show Canvas, Paint, Path, Rect;
+import "dart:ui" show Canvas, Paint, Path, PathFillType, Rect;
 
 /// One layer of a flag badge: a palette index and the geometry filled with it.
 ///
@@ -45,6 +45,11 @@ typedef _BadgePath = ({int color, Path path});
 /// assert(layers.single.geometry.length == 10, "Ten numbers, one triangle.");
 /// ```
 ///
+/// Contours are filled by the winding rule, so a layer's shapes add together
+/// however they are wound. [BadgeArtwork.evenOdd] switches a layer to the
+/// even-odd rule instead, which is what artwork that cuts holes out of one
+/// outline needs.
+///
 /// A painter holds the artwork built from such a table in a `static final`
 /// field, so that one instance serves every flag that paints it and they
 /// share its path cache.
@@ -61,7 +66,16 @@ final class BadgeArtwork {
   /// it into a typed array would only duplicate what is already in the binary.
   /// Call this from a `static final` field, so that one instance serves every
   /// flag that paints this artwork and they share its path cache.
-  new(this._layers);
+  new(this._layers) : _fillType = PathFillType.nonZero;
+
+  /// Holds `layers` whose contours are filled by the even-odd rule.
+  ///
+  /// Artwork drawn as one self-overlapping outline — where a contour inside
+  /// another cuts a hole in it, and two crossing contours leave the crossing
+  /// unfilled — needs this rather than the winding rule the other constructor
+  /// uses. It buys a woven emblem in a single draw, since the holes are the
+  /// color of whatever the flag already painted underneath.
+  new evenOdd(this._layers) : _fillType = PathFillType.evenOdd;
 
   // Declared as doubles so they can sit in the geometry list itself, where an
   // inferred int would not be assignable.
@@ -77,6 +91,7 @@ final class BadgeArtwork {
   static const double closePath = 0;
 
   final List<BadgeLayer> _layers;
+  final PathFillType _fillType;
 
   /// The paths last built, keyed by the box they were built for.
   ///
@@ -121,16 +136,22 @@ final class BadgeArtwork {
     // Layers that follow one another in the same color are filled as a
     // single path: one draw command instead of one per layer, and the result
     // is identical because they were painted back to back anyway.
+    //
+    // Only under the winding rule, though. Even-odd cancels wherever two
+    // contours overlap, so merging two layers into one path would punch a
+    // hole through where they cross instead of filling it, which is not what
+    // painting one after the other does. Those layers stay apart.
+    final merges = _fillType != PathFillType.evenOdd;
     final built = <_BadgePath>[];
     Path? open;
     int openColor = -1;
     for (final layer in _layers) {
-      if (open != null && openColor == layer.color) {
+      if (merges && open != null && openColor == layer.color) {
         _addTo(open, layer.geometry, width, height);
 
         continue;
       }
-      open = _addTo(Path(), layer.geometry, width, height);
+      open = _addTo(_emptyPath(), layer.geometry, width, height);
       openColor = layer.color;
       built.add((color: layer.color, path: open));
     }
@@ -140,6 +161,9 @@ final class BadgeArtwork {
 
     return built;
   }
+
+  // ignore: avoid-returning-cascades, it's a one-expression factory.
+  Path _emptyPath() => Path()..fillType = _fillType;
 
   static Path _addTo(
     Path path,
