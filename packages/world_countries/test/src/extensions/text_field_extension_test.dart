@@ -3,10 +3,10 @@
 import "dart:ui" as ui;
 
 import "package:flutter/gestures.dart";
-import "package:flutter/material.dart" show InputDecoration, TextField;
 import "package:flutter/services.dart";
 import "package:flutter/widgets.dart";
 import "package:flutter_test/flutter_test.dart";
+import "package:material_ui/material_ui.dart" show InputDecoration, TextField;
 import "package:world_countries/src/extensions/text_field_extension.dart";
 
 void main() => group("TextFieldExtension", () {

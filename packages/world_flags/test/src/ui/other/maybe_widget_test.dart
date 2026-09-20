@@ -1,7 +1,7 @@
 import "package:flutter/foundation.dart" show DiagnosticPropertiesBuilder;
-import "package:flutter/material.dart" show Icons, MaterialApp;
 import "package:flutter/widgets.dart";
 import "package:flutter_test/flutter_test.dart";
+import "package:material_ui/material_ui.dart" show Icons, MaterialApp;
 import "package:world_flags/src/ui/other/maybe_widget.dart";
 
 void main() => group("$MaybeWidget", () {

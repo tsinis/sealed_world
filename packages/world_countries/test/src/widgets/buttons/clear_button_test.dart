@@ -1,6 +1,6 @@
-import "package:flutter/material.dart" show Icons;
 import "package:flutter/widgets.dart";
 import "package:flutter_test/flutter_test.dart";
+import "package:material_ui/material_ui.dart" show Icons;
 import "package:world_countries/src/widgets/buttons/clear_button.dart";
 
 import "../../../helpers/widget_tester_extension.dart";

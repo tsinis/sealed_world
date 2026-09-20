@@ -1,10 +1,11 @@
 // ignore_for_file: avoid-nullable-parameters-with-default-values
 
 import "package:flutter/widgets.dart" show Text, TextOverflow, Widget;
-import "package:world_flags/world_flags.dart";
+import "package:world_flags/world_flags.dart" hide FlagThemeData;
 
 import "../../extensions/models/iso_semantics_extension.dart";
 import "../../model/item_properties.dart";
+import "../../theme/flag_theme_data.dart";
 import "list_item_tile.dart";
 
 /// A tile widget that displays information about the ISO object.
@@ -118,7 +119,7 @@ class IsoTile<T extends IsoTranslated> extends ListItemTile<T> {
          isDisabled: iso.isDisabled,
          semanticsIdentifier: iso.item.semanticIdentifier,
          minLeadingWidth: minLeadingWidth ?? (leadingFlag == null ? 0 : null),
-         leading: MaybeWidget.orNull(
+         leading: MaybeWidget.orNull<Widget, DecoratedFlagInterface>(
            flagTheme,
            (theme) => leadingFlag?.copyWithTheme(theme: theme),
          ),
@@ -137,7 +138,7 @@ class IsoTile<T extends IsoTranslated> extends ListItemTile<T> {
   /// The theme data for the displayed in the tile, could be also provided
   /// via [ThemeExtension<FlagThemeData>]. If not provided - flag will not be
   /// displayed. Defaults to [FlagThemeData.small()].
-  final FlagThemeData? flagTheme;
+  final DecoratedFlagInterface? flagTheme;
 
   /// The title widget to display in the tile, typically a [Text] widget with
   /// a localized name of the ISO object.

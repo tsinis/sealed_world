@@ -95,10 +95,10 @@ void main() => group("DualFlagExtension", () {
     expect(copy.orElse, widget);
   });
 
-  test("copyWith updates child", () {
+  test("copyWith updates flagChild", () {
     const child = Text("test");
-    final copy = original.copyWith(child: child);
-    expect(copy.child, child);
+    final copy = original.copyWith(flagChild: child);
+    expect(copy.flagChild, child);
   });
 
   test("copyWith updates splitAngle", () {

@@ -1,7 +1,5 @@
 // ignore_for_file: avoid-late-keyword, avoid-disposing-late-fields
-
-import "package:flutter/material.dart";
-import "package:flutter_localizations/flutter_localizations.dart";
+import "package:material_ui/material_ui.dart";
 import "package:world_countries/world_countries.dart";
 
 import "app_navigator.dart";
@@ -25,7 +23,7 @@ class Main extends StatefulWidget {
 
 class _MainState extends State<Main> {
   /// Also [CurrencyTileThemeData], [LanguageTileThemeData],
-  /// [CountryTileThemeData], [FlagThemeData], etc.
+  /// [CountryTileThemeData], `FlagThemeData`, etc.
   final _pickersExtensions = <ThemeExtension>[
     const PickersThemeData(primary: true),
     CurrencyTileThemeData(

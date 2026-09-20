@@ -84,6 +84,8 @@ class LanguageFlag extends DualFlag<NaturalLanguage, BasicFlag> {
     super.decorationPosition,
     super.padding,
     super.shader,
+    super.flagChild,
+    @Deprecated("Use flagChild instead. Will be removed in next major version.")
     super.child,
     super.key,
   }) : super(language, defaultConventionalLanguageFlags);

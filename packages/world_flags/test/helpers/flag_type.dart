@@ -1,5 +1,5 @@
-import "package:flutter/material.dart" show kMinInteractiveDimension;
 import "package:flutter/widgets.dart";
+import "package:material_ui/material_ui.dart" show kMinInteractiveDimension;
 
 // ignore: avoid-top-level-members-in-tests, it support model.
 enum FlagType {

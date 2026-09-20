@@ -2,6 +2,33 @@
 
 NEW FEATURES
 
+- **Widgets-level `FlagTheme` carrier and Material decoupling.**
+  - Introduced `DecoratedFlagInterface` as the core data contract for flags.
+  - Introduced `FlagTheme` (`InheritedTheme`) as the widgets-only theme carrier for `DecoratedFlagInterface`.
+  - Added `FlagTheme.maybeOf(context)` and `FlagTheme.of(context)` with fallback resolution.
+  - Added `FlagTheme.fallbackResolvers` for external theme bridges (such as Material `ThemeExtension`).
+  - Added `FlagThemeData.lerpStatic(a, b, t)` with complete interpolation for all visual properties (dimensions, aspect ratio, decoration, and padding).
+
+DEPRECATIONS
+
+- **Fully deprecated `FlagThemeData`**: The class and all its constructors are now marked `@Deprecated`. Please use `DecoratedFlagInterface` as your data model and pass it to `FlagTheme(data: ...)`. `FlagThemeData` will be completely removed in the next major release to eliminate `package:flutter/material.dart` dependencies from this package. Please see `FLAG_THEME_MIGRATION.md` for migration instructions.
+
+REFACTOR
+
+- `FlagThemeData` is now a `base class` preparing for removing `ThemeExtension`
+  inheritance in the next major version. Its `ThemeExtension.lerp` method is now
+  marked `@Deprecated` in favor of `FlagTheme` and `FlagThemeData.lerpStatic`.
+- `BuildContext.flagTheme` now queries `FlagTheme.maybeOf(context)` before
+  falling back to `Theme.of(context).extension<FlagThemeData>()`.
+- Introduced `flagChild` and deprecated `child` across all flag interfaces, models, and constructors. This resolves a naming collision with `InheritedTheme.child`, clearing the path for `FlagTheme` to directly implement `DecoratedFlagInterface` in the next major release.
+- Architecturally overhauled `FlagTheme` to completely detach from Material's `ThemeExtension`. `FlagTheme` now acts as a standalone `InheritedTheme` carrier that accepts flag properties via its default constructor or an existing `DecoratedFlagInterface` implementation via `FlagTheme.fromBase(...)`.
+- The `FlagThemeData` class is fully deprecated to prepare for its removal in the next major release.
+
+FIX
+
+- Fixed symmetric equality in `FlagThemeData.operator ==` where `specifiedAspectRatio`
+  was incorrectly compared against `aspectRatio`.
+
 - Three flags that had no emblem painter at all now have one: Gibraltar
   (`GIB`), Dominica (`DMA`) and Zimbabwe (`ZWE`).
   `MultiElementPainter.paintFlagElements` returns `null`, so a

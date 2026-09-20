@@ -1,6 +1,6 @@
 // ignore_for_file: specify_nonobvious_property_types, compile-time constants.
 
-import "package:flutter/material.dart";
+import "package:material_ui/material_ui.dart";
 
 /// A utility class that contains constants related to the user interface (UI).
 sealed class UiConstants {

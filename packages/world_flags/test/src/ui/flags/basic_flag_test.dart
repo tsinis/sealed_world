@@ -25,7 +25,7 @@ void main() => group("$BasicFlag", () {
   const basicFlag = BasicFlag(
     FlagProperties(stripes),
     key: Key("key"),
-    child: Text("Flag Child"),
+    flagChild: Text("Flag Child"),
   );
 
   test(

@@ -1,7 +1,7 @@
 import "package:_sealed_world_tests/sealed_world_tests.dart";
-import "package:flutter/material.dart" show Colors;
 import "package:flutter/widgets.dart";
 import "package:flutter_test/flutter_test.dart";
+import "package:material_ui/material_ui.dart" show Colors;
 import "package:world_flags/src/model/colors_properties.dart";
 
 void main() => group("$ColorsProperties", () {

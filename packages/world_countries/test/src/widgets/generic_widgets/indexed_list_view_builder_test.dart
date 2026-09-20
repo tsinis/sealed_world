@@ -1,6 +1,6 @@
-import "package:flutter/material.dart" show Divider;
 import "package:flutter/widgets.dart";
 import "package:flutter_test/flutter_test.dart";
+import "package:material_ui/material_ui.dart" show Divider;
 import "package:world_countries/src/widgets/generic_widgets/indexed_list_view_builder.dart";
 
 import "../../../helpers/widget_tester_extension.dart";

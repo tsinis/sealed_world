@@ -5,7 +5,6 @@
 // for details. All rights reserved. Use of this source code is governed by a
 // BSD-style license that can be found in the LICENSE file.
 
-// ignore: depend_on_referenced_packages, to match original code.
 import "package:collection/collection.dart";
 import "package:flutter/foundation.dart";
 import "package:quiver/core.dart";

@@ -1,8 +1,8 @@
-import "package:flutter/material.dart"
-    show ListTileStyle, ListTileTitleAlignment, VisualDensity;
 import "package:flutter/widgets.dart";
+import "package:material_ui/material_ui.dart"
+    show ListTileStyle, ListTileTitleAlignment, VisualDensity;
 import "package:meta/meta.dart" show useResult;
-import "package:world_flags/world_flags.dart";
+import "package:world_flags/world_flags.dart" hide FlagThemeData;
 
 import "../widgets/generic_widgets/iso_tile.dart";
 
@@ -54,7 +54,7 @@ extension IsoTileExtension<T extends IsoTranslated> on IsoTile<T> {
     double? minTileHeight,
     ListTileTitleAlignment? titleAlignment,
     WidgetStatesController? statesController,
-    FlagThemeData? flagTheme,
+    DecoratedFlagInterface? flagTheme,
   }) => IsoTile<T>(
     item ?? this.item,
     onPressed: onPressed ?? this.onPressed,
