@@ -1,8 +1,7 @@
-// ignore_for_file:deprecated_member_use_from_same_package, stage 1 deprecation.
 import "package:flutter/widgets.dart" show Widget;
 
 import "../../interfaces/decorated_flag_interface.dart";
-import "../../theme/flag_theme_data.dart";
+import "../../theme/decorated_flag_data.dart";
 import "aspect_ratio_extension.dart";
 
 /// An extension on [DecoratedFlagInterface] that provides a method to calculate
@@ -12,20 +11,23 @@ extension DecoratedFlagInterfaceExtension<T extends DecoratedFlagInterface>
   /// The calculated aspect ratio of the flag based on its width and height.
   double? get calculatedAspectRatio => height.aspectRatio(width);
 
-  /// Converts this [DecoratedFlagInterface] to a [FlagThemeData] instance.
+  /// Converts this [DecoratedFlagInterface] to a [DecoratedFlagData] instance.
   ///
-  /// Optionally overrides the [child] widget. If not provided, uses the
-  /// existing [child] value.
-  DecoratedFlagInterface toThemeData({
-    @Deprecated("Use `flagChild` instead.") Widget? child,
-    Widget? flagChild,
-  }) => FlagThemeData(
+  /// Optionally overrides the [flagChild] widget. If not provided, uses the
+  /// existing [flagChild] value.
+  DecoratedFlagData toData({Widget? flagChild}) => DecoratedFlagData(
     aspectRatio: aspectRatio,
     decoration: decoration,
     decorationPosition: decorationPosition,
     padding: padding,
     height: height,
     width: width,
-    child: flagChild ?? child ?? this.flagChild,
+    flagChild: flagChild ?? this.flagChild,
   );
+
+  /// Converts this [DecoratedFlagInterface] to a [DecoratedFlagData] instance.
+  ///
+  /// Deprecated in favor of [toData].
+  @Deprecated("Use `toData()` instead.")
+  DecoratedFlagData toThemeData({Widget? child}) => toData(flagChild: child);
 }

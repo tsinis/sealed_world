@@ -25,10 +25,19 @@ void main() => group("$CountryFlag", () {
   );
 
   assertTest("zero height", () => CountryFlag.simplified(value, height: 0));
+  assertTest(
+    "negative height",
+    () => CountryFlag.simplified(value, height: -1),
+  );
   assertTest("zero width", () => CountryFlag.simplified(value, width: 0));
+  assertTest("negative width", () => CountryFlag.simplified(value, width: -1));
   assertTest(
     "zero aspectRatio",
     () => CountryFlag.simplified(value, aspectRatio: 0),
+  );
+  assertTest(
+    "negative aspectRatio",
+    () => CountryFlag.simplified(value, aspectRatio: -1),
   );
 
   test("debugFillProperties", () {
@@ -37,6 +46,14 @@ void main() => group("$CountryFlag", () {
 
     flag.debugFillProperties(builder);
     expect(builder.properties.any((prop) => prop.name == "padding"), isTrue);
+  });
+
+  test("child getter returns flagChild", () {
+    // ignore: deprecated_member_use_from_same_package, testing deprecated getter.
+    expect(flag.child, isNull);
+    const withChild = CountryFlag.simplified(value, flagChild: FlutterLogo());
+    // ignore: deprecated_member_use_from_same_package, testing deprecated getter.
+    expect(withChild.child, isA<FlutterLogo>());
   });
 
   testWidgets("custom constructor", (tester) async {

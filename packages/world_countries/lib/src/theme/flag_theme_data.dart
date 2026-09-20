@@ -86,7 +86,8 @@ final class FlagThemeData
   final Widget? flagChild;
 
   @Deprecated(
-    "Use flagChild instead. Will be removed in the next major version.",
+    "Use flagChild instead. This resolves a naming collision with "
+    "InheritedTheme.child. Will be removed in next major version.",
   )
   @override
   Widget? get child => flagChild;
@@ -101,9 +102,7 @@ final class FlagThemeData
 
   // Bridge registration.
   static a.DecoratedFlagInterface? _resolver(BuildContext context) =>
-      Theme.of(context).extensions.values
-          .whereType<FlagThemeData>()
-          .firstOrNull;
+      Theme.of(context).extension<FlagThemeData>();
 
   /// Registers the Material -> FlagTheme bridge.
   /// Idempotent by closure identity.
@@ -115,6 +114,13 @@ final class FlagThemeData
   }
 
   // ThemeExtension overrides.
+  /// Gets the type of this extension.
+  ///
+  /// Note: This has a deliberate side-effect of calling [ensureBridge].
+  /// Flutter evaluates `.type` during `ThemeData` extension registration.
+  /// By hooking into this, we automatically register the bridge to
+  /// `world_flags` whenever this extension is added to a `ThemeData`,
+  /// allowing users to use `const FlagThemeData(...)` without manual setup.
   @override
   Object get type {
     ensureBridge();
@@ -135,32 +141,53 @@ final class FlagThemeData
     )
     Widget? child,
     Widget? flagChild,
+    bool clearDecoration = false,
+    bool clearDecorationPosition = false,
+    bool clearPadding = false,
+    bool clearFlagChild = false,
   }) => FlagThemeData(
     aspectRatio: (aspectRatio?.isNegative ?? false)
         ? null
         : (aspectRatio ?? _aspectRatio),
-    decoration: decoration ?? this.decoration,
-    decorationPosition: decorationPosition ?? this.decorationPosition,
-    padding: padding ?? this.padding,
+    decoration: clearDecoration ? null : (decoration ?? this.decoration),
+    decorationPosition: clearDecorationPosition
+        ? null
+        : (decorationPosition ?? this.decorationPosition),
+    padding: clearPadding ? null : (padding ?? this.padding),
     height: (height?.isNegative ?? false) ? null : (height ?? this.height),
     width: (width?.isNegative ?? false) ? null : (width ?? this.width),
-    flagChild: flagChild ?? child ?? this.flagChild,
+    flagChild: clearFlagChild ? null : (flagChild ?? child ?? this.flagChild),
   );
 
   @override
   FlagThemeData lerp(covariant FlagThemeData? other, double t) {
-    if (other == null) return this;
+    if (identical(this, other)) return this;
+    final otherTheme = other ?? const FlagThemeData.fallback();
+
+    final rawAspectRatio = ui.lerpDouble(
+      _aspectRatio,
+      otherTheme._aspectRatio,
+      t,
+    );
+    final rawHeight = ui.lerpDouble(height, otherTheme.height, t);
+    final rawWidth = ui.lerpDouble(width, otherTheme.width, t);
+
+    final safeAspectRatio = rawAspectRatio != null && rawAspectRatio > 0
+        ? rawAspectRatio
+        : null;
+    final safeHeight = rawHeight != null && rawHeight > 0 ? rawHeight : null;
+    final safeWidth = rawWidth != null && rawWidth > 0 ? rawWidth : null;
 
     return FlagThemeData(
-      aspectRatio: ui.lerpDouble(_aspectRatio, other._aspectRatio, t),
-      decoration: BoxDecoration.lerp(decoration, other.decoration, t),
+      aspectRatio: safeAspectRatio,
+      decoration: BoxDecoration.lerp(decoration, otherTheme.decoration, t),
       decorationPosition: t < 0.5
           ? decorationPosition
-          : other.decorationPosition,
-      padding: EdgeInsetsGeometry.lerp(padding, other.padding, t),
-      height: ui.lerpDouble(height, other.height, t),
-      width: ui.lerpDouble(width, other.width, t),
-      flagChild: t < 0.5 ? flagChild : other.flagChild,
+          : otherTheme.decorationPosition,
+      padding: EdgeInsetsGeometry.lerp(padding, otherTheme.padding, t),
+      height: safeHeight,
+      width: safeWidth,
+      flagChild: t < 0.5 ? flagChild : otherTheme.flagChild,
     );
   }
 

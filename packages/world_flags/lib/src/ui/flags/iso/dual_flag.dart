@@ -89,7 +89,7 @@ class DualFlag<T extends IsoStandardized, F extends BasicFlag>
             final foreground = clipSecondary ? secondary : primary;
 
             return background?.copyWithTheme(
-              theme: toThemeData(
+              theme: toData(
                 flagChild: ClipPath(
                   clipBehavior: clipBehavior,
                   clipper: DualFlagClipper(splitAngle),

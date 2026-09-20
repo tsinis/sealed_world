@@ -22,6 +22,18 @@ void main() => group("$FlagThemeData", () {
         expect(value.toString(), startsWith("$FlagThemeData(aspectRatio: 1.5")),
   );
 
+  test("fallback constructor creates all-null instance", () {
+    // ignore: prefer_const_constructors, intentional non-const to hit runtime constructor.
+    final fallback = FlagThemeData.fallback();
+    expect(fallback.aspectRatio, isNull);
+    expect(fallback.decoration, isNull);
+    expect(fallback.decorationPosition, isNull);
+    expect(fallback.padding, isNull);
+    expect(fallback.height, isNull);
+    expect(fallback.width, isNull);
+    expect(fallback.flagChild, isNull);
+  });
+
   group("copyWith", () {
     test("returns a new instance with updated values", () {
       final updated = value.copyWith(

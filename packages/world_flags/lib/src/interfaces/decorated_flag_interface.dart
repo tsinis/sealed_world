@@ -79,5 +79,5 @@ abstract interface class DecoratedFlagInterface {
     "Use flagChild instead. This resolves a naming collision with "
     "InheritedTheme.child. Will be removed in next major version.",
   )
-  Widget? get child => flagChild;
+  Widget? get child;
 }

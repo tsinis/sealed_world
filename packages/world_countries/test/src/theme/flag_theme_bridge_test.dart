@@ -8,11 +8,13 @@ void main() {
     tearDown(flags.FlagTheme.debugResetFallbackResolvers);
 
     testWidgets(
-      "provides theme data to flags without FlagTheme wrapper, proving ensureBridge works",
+      "provides theme data to flags without FlagTheme wrapper, "
+      "proving ensureBridge works",
       (tester) async {
         const expectedHeight = 42.0;
         const expectedDecoration = BoxDecoration(color: Colors.red);
         final properties = const CountryAfg().flagProperties;
+        if (properties == null) fail("Flag properties are null.");
 
         await tester.pumpWidget(
           MaterialApp(
@@ -24,8 +26,7 @@ void main() {
                 ),
               ],
             ),
-            // ignore: avoid-non-null-assertion, this is just a test, props are there.
-            home: Scaffold(body: flags.BasicFlag(properties!)),
+            home: Scaffold(body: flags.BasicFlag(properties)),
           ),
         );
 
@@ -38,7 +39,13 @@ void main() {
 
         final sizedBox = tester.widget<SizedBox>(sizedBoxFinder);
         expect(sizedBox.height, expectedHeight);
-      },
+
+        final decoratedBoxFinder = find
+            .descendant(of: flagFinder, matching: find.byType(DecoratedBox))
+            .first;
+        final decoratedBox = tester.widget<DecoratedBox>(decoratedBoxFinder);
+        expect(decoratedBox.decoration, expectedDecoration);
+      }, // Dart 3.8 formatting.
     );
 
     testWidgets(
@@ -47,10 +54,13 @@ void main() {
         const expectedHeight = 50.0;
         const expectedDecoration = BoxDecoration(color: Colors.blue);
         const country = CountryAfg();
-        final flag = flags.BasicFlag(country.flagProperties!);
+        final properties = country.flagProperties;
+        if (properties == null) fail("Flag properties are null.");
+        final flag = flags.BasicFlag(properties);
 
-        // We wrap the Tile in Builder so we have a context to pass to ItemProperties
-        // and resolve the flagTheme via context.flagTheme (which pickers use).
+        // We wrap the Tile in Builder so we have a context to pass to
+        // ItemProperties and resolve the flagTheme via context.flagTheme
+        // (which pickers use).
         await tester.pumpWidget(
           MaterialApp(
             theme: ThemeData(
@@ -83,6 +93,12 @@ void main() {
 
         final sizedBox = tester.widget<SizedBox>(sizedBoxFinder);
         expect(sizedBox.height, expectedHeight);
+
+        final decoratedBoxFinder = find
+            .descendant(of: flagFinder, matching: find.byType(DecoratedBox))
+            .first;
+        final decoratedBox = tester.widget<DecoratedBox>(decoratedBoxFinder);
+        expect(decoratedBox.decoration, expectedDecoration);
       },
     );
 
@@ -92,6 +108,7 @@ void main() {
       const extensionHeight = 42.0;
       const inheritedHeight = 100.0;
       final properties = const CountryAfg().flagProperties;
+      if (properties == null) fail("Flag properties are null.");
 
       await tester.pumpWidget(
         MaterialApp(
@@ -100,9 +117,8 @@ void main() {
           ),
           home: Scaffold(
             body: flags.FlagTheme(
-              height: inheritedHeight,
-              // ignore: avoid-non-null-assertion, it's just a test.
-              child: flags.BasicFlag(properties!),
+              data: const flags.DecoratedFlagData(height: inheritedHeight),
+              child: flags.BasicFlag(properties),
             ),
           ),
         ),
