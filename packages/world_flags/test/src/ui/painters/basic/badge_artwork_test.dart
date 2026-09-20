@@ -96,6 +96,37 @@ void main() {
     expect(second.layers.single.path.getBounds().size, const Size(8, 8));
   });
 
+  test("fills two layers of a color as one path", () {
+    final artwork = BadgeArtwork(const [
+      (color: 0, geometry: square),
+      (color: 0, geometry: square),
+    ]);
+    final canvas = RecordingCanvas();
+
+    artwork.paint(canvas, const Rect.fromLTWH(0, 0, 8, 8), _paint);
+
+    expect(canvas.layers, hasLength(1), reason: "One draw, not two.");
+  });
+
+  test("leaves an even-odd artwork's layers apart", () {
+    // Merged, the two squares would cancel each other and fill nothing: it is
+    // the crossing of two contours that even-odd leaves empty, so layers of
+    // one color have to keep their own paths.
+    final artwork = BadgeArtwork.evenOdd(const [
+      (color: 0, geometry: square),
+      (color: 0, geometry: square),
+    ]);
+    final canvas = RecordingCanvas();
+
+    artwork.paint(canvas, const Rect.fromLTWH(0, 0, 8, 8), _paint);
+
+    expect(canvas.layers, hasLength(2));
+    for (final layer in canvas.layers) {
+      expect(layer.path.getBounds().size, const Size(8, 8));
+      expect(layer.path.contains(const Offset(4, 4)), isTrue);
+    }
+  });
+
   test("keeps the paths of the last two boxes it painted", () {
     final artwork = BadgeArtwork(const [(color: 0, geometry: square)]);
     final small = _pathAt(artwork, 4);

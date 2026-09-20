@@ -136,11 +136,17 @@ final class BadgeArtwork {
     // Layers that follow one another in the same color are filled as a
     // single path: one draw command instead of one per layer, and the result
     // is identical because they were painted back to back anyway.
+    //
+    // Only under the winding rule, though. Even-odd cancels wherever two
+    // contours overlap, so merging two layers into one path would punch a
+    // hole through where they cross instead of filling it, which is not what
+    // painting one after the other does. Those layers stay apart.
+    final merges = _fillType != PathFillType.evenOdd;
     final built = <_BadgePath>[];
     Path? open;
     int openColor = -1;
     for (final layer in _layers) {
-      if (open != null && openColor == layer.color) {
+      if (merges && open != null && openColor == layer.color) {
         _addTo(open, layer.geometry, width, height);
 
         continue;

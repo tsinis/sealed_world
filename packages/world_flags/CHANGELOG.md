@@ -4,7 +4,7 @@
 
 DEPRECATIONS
 
-- **`FlagThemeData`**: Deprecated in favor of `FlagThemeData` and `FlagTheme(data: ...)`. Will be removed in the next major release to eliminate `package:flutter/material.dart` dependencies (see `FLAG_THEME_MIGRATION.md`).
+- **`FlagThemeData`**: Deprecated in favor of `DecoratedFlagData` and `FlagTheme(data: ...)`. Will be removed in the next major release to eliminate `package:flutter/material.dart` dependencies (see `FLAG_THEME_MIGRATION.md`).
 - **`child` Property**: Deprecated across flag interfaces and constructors in favor of `flagChild` (resolves naming conflict with `InheritedTheme.child`).
 - **Shield Dividers**: Deprecated `SimpleShieldPainter.outlinedWithDividers`, `SimpleShieldPainter.withDividers`, and `UnionJackPainter.halfWithDividers`. Use the corresponding `*WithoutDividers` and `*WithoutOutline` constructors instead.
 
@@ -23,7 +23,7 @@ TLDR: Here what the new `FlagTheme` usage looks like:
 NEW FEATURES
 
 - **Widgets-level `FlagTheme` & Material Decoupling**:
-  - Introduced `FlagThemeData` as the core data contract for flags.
+  - Introduced `DecoratedFlagData` as the core data contract for flags.
   - Added `FlagTheme` (`InheritedTheme`) as a standalone widgets-only theme carrier with `maybeOf`, `of`, `fallbackResolvers`, and `FlagThemeData.lerpStatic`.
   - Introduced `flagChild` across all flag interfaces, models, and constructors to replace `child`.
 - **Dedicated Badge & Emblem Painters**:
