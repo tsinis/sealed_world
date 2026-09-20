@@ -1,9 +1,9 @@
 import "dart:ui";
 
-import "package:flutter/material.dart" show Colors;
 import "package:flutter/scheduler.dart";
 import "package:flutter/widgets.dart";
 import "package:flutter_test/flutter_test.dart";
+import "package:material_ui/material_ui.dart" show Colors;
 import "package:world_flags/src/ui/effects/flag_shader_options.dart";
 import "package:world_flags/src/ui/effects/waved_flag_shader_delegate.dart";
 

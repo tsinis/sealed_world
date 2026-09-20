@@ -4,7 +4,7 @@
 import "dart:async" show FutureOr, unawaited;
 
 import "package:flutter/gestures.dart" show DragStartBehavior;
-import "package:flutter/material.dart";
+import "package:material_ui/material_ui.dart";
 import "package:world_flags/world_flags.dart" hide FlagThemeData;
 
 import "../../constants/ui_constants.dart";

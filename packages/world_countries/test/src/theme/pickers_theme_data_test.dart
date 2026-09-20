@@ -1,7 +1,7 @@
 import "package:flutter/gestures.dart";
-import "package:flutter/material.dart" show Divider;
 import "package:flutter/widgets.dart";
 import "package:flutter_test/flutter_test.dart";
+import "package:material_ui/material_ui.dart" show Divider;
 import "package:world_countries/src/model/iso/iso_maps.dart";
 import "package:world_countries/src/theme/flag_theme_data.dart";
 import "package:world_countries/src/theme/pickers_theme_data.dart";

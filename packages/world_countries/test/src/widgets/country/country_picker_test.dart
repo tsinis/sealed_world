@@ -1,8 +1,9 @@
 // ignore_for_file: unnecessary_async, async_return_with_no_await, it's a test.
 
-import "package:flutter/material.dart" show Icons, SearchAnchor, TextField;
 import "package:flutter/widgets.dart";
 import "package:flutter_test/flutter_test.dart";
+import "package:material_ui/material_ui.dart"
+    show Icons, SearchAnchor, TextField;
 import "package:world_countries/src/helpers/typed_locale_delegate.dart";
 import "package:world_countries/src/model/iso/iso_maps.dart";
 import "package:world_countries/src/model/search_data.dart";

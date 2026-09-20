@@ -1,6 +1,6 @@
-import "package:flutter/material.dart" show MaterialApp;
 import "package:flutter/widgets.dart";
 import "package:flutter_test/flutter_test.dart";
+import "package:material_ui/material_ui.dart" show MaterialApp;
 import "package:world_countries/src/model/item_properties.dart";
 
 void main() => group("$ItemProperties", () {

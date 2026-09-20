@@ -1,7 +1,7 @@
 // Stage 1 deprecation: fallback to deprecated FlagThemeData -> ThemeExtension.
 // ignore_for_file: deprecated_member_use_from_same_package
-import "package:flutter/material.dart" show Theme;
 import "package:flutter/widgets.dart" show BuildContext;
+import "package:material_ui/material_ui.dart" show Theme;
 
 import "../../interfaces/decorated_flag_interface.dart";
 import "../../theme/flag_theme.dart";

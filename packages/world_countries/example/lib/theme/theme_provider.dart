@@ -1,5 +1,5 @@
 import "package:flutter/foundation.dart" show listEquals;
-import "package:flutter/material.dart";
+import "package:material_ui/material_ui.dart";
 
 class ThemeProvider<T extends List<Color>> extends InheritedWidget {
   const new(

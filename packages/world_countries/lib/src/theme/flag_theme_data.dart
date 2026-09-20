@@ -2,7 +2,7 @@
 
 import "dart:ui" as ui show lerpDouble;
 
-import "package:flutter/material.dart";
+import "package:material_ui/material_ui.dart";
 import "package:world_flags/world_flags.dart" as a;
 
 /// A Material [ThemeExtension] that provides flag theming data.

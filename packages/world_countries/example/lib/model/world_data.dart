@@ -1,6 +1,6 @@
 // ignore_for_file: avoid-unnecessary-enum-prefix, Due to shadowing.
 
-import "package:flutter/material.dart" show IconData, Icons;
+import "package:material_ui/material_ui.dart" show IconData, Icons;
 
 import "../helpers/extensions/string_extension.dart";
 import "constants.dart";

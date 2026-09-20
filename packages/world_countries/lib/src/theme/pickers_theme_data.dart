@@ -2,8 +2,8 @@
 // shim that bridges Material ThemeExtension to FlagTheme. It will be removed
 // in Stage 2 alongside the shim itself.
 import "package:flutter/gestures.dart";
-import "package:flutter/material.dart" show TextField, ThemeExtension;
 import "package:flutter/widgets.dart";
+import "package:material_ui/material_ui.dart" show TextField, ThemeExtension;
 import "package:meta/meta.dart" show useResult;
 import "package:world_flags/world_flags.dart" show DecoratedFlagInterface;
 

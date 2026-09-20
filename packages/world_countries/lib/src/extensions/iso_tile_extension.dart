@@ -1,6 +1,6 @@
-import "package:flutter/material.dart"
-    show ListTileStyle, ListTileTitleAlignment, VisualDensity;
 import "package:flutter/widgets.dart";
+import "package:material_ui/material_ui.dart"
+    show ListTileStyle, ListTileTitleAlignment, VisualDensity;
 import "package:meta/meta.dart" show useResult;
 import "package:world_flags/world_flags.dart" hide FlagThemeData;
 

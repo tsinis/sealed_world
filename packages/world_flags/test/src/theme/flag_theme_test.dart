@@ -1,7 +1,7 @@
 // ignore_for_file: deprecated_member_use_from_same_package, stage 1 deprecation
 import "package:flutter/foundation.dart";
-import "package:flutter/material.dart";
 import "package:flutter_test/flutter_test.dart";
+import "package:material_ui/material_ui.dart";
 import "package:world_flags/src/helpers/extensions/world_flags_build_context_extension.dart";
 import "package:world_flags/src/interfaces/decorated_flag_interface.dart";
 import "package:world_flags/src/theme/decorated_flag_data.dart";

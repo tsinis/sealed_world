@@ -1,6 +1,6 @@
-import "package:flutter/material.dart"
-    show CircularProgressIndicator, IconButton, Icons, TextField;
 import "package:flutter/widgets.dart";
+import "package:material_ui/material_ui.dart"
+    show CircularProgressIndicator, IconButton, Icons, TextField;
 
 import "../../constants/ui_constants.dart";
 

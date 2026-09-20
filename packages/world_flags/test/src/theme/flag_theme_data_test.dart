@@ -1,9 +1,9 @@
 // This file is part of stage 1 deprecation.
 // ignore_for_file: deprecated_member_use_from_same_package
 import "package:_sealed_world_tests/sealed_world_tests.dart";
-import "package:flutter/material.dart" show Colors;
 import "package:flutter/widgets.dart";
 import "package:flutter_test/flutter_test.dart";
+import "package:material_ui/material_ui.dart" show Colors;
 import "package:world_flags/src/theme/flag_theme_data.dart";
 
 void main() => group("$FlagThemeData", () {

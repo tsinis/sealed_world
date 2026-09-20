@@ -2,8 +2,8 @@
 // ignore_for_file: prefer-single-widget-per-file
 
 import "package:flutter/foundation.dart" show kDebugMode;
-import "package:flutter/material.dart";
 import "package:flutter/services.dart" show Clipboard, ClipboardData;
+import "package:material_ui/material_ui.dart";
 import "package:meta/meta.dart";
 import "package:world_flags/world_flags.dart";
 

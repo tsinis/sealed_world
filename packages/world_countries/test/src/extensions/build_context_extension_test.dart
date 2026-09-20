@@ -1,4 +1,6 @@
-import "package:flutter/material.dart"
+import "package:flutter/widgets.dart";
+import "package:flutter_test/flutter_test.dart";
+import "package:material_ui/material_ui.dart"
     show
         MaterialLocalizations,
         ScaffoldFeatureController,
@@ -6,8 +8,6 @@ import "package:flutter/material.dart"
         ScaffoldState,
         SnackBar,
         SnackBarClosedReason;
-import "package:flutter/widgets.dart";
-import "package:flutter_test/flutter_test.dart";
 import "package:world_countries/src/extensions/build_context_extension.dart";
 
 import "../../helpers/widget_tester_extension.dart";

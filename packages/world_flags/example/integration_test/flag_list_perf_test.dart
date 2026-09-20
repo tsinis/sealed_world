@@ -13,9 +13,9 @@
 
 // ignore_for_file:prefer-extracting-function-callbacks, missing-test-assertion
 // ignore_for_file: prefer-static-class, avoid-local-functions
-import "package:flutter/material.dart";
 import "package:flutter_test/flutter_test.dart";
 import "package:integration_test/integration_test.dart";
+import "package:material_ui/material_ui.dart";
 import "package:world_flags/world_flags.dart";
 
 /// The example app's list row and flag height.

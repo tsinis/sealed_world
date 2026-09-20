@@ -2,8 +2,8 @@
 import "dart:async";
 
 import "package:flutter/gestures.dart";
-import "package:flutter/material.dart";
 import "package:flutter_test/flutter_test.dart";
+import "package:material_ui/material_ui.dart";
 import "package:world_countries/src/constants/ui_constants.dart";
 import "package:world_countries/src/helpers/typed_locale_delegate.dart";
 import "package:world_countries/src/model/locale/typed_locale.dart";
