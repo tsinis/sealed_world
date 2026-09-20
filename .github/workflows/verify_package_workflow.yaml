@@ -132,7 +132,7 @@ jobs:
         wait: [analyze, dcm]
 
       - name: 💯 Upload coverage
-        uses: codecov/codecov-action@v7.0.0
+        uses: codecov/codecov-action@v7.1.1
         with:
           token: ${{ secrets.CODECOV_TOKEN }}
           files: ${{ env.relative_path }}/coverage/lcov.info
