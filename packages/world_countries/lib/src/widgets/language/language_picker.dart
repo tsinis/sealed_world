@@ -96,7 +96,10 @@ class LanguagePicker extends BasicPicker<NaturalLanguage, LanguageTile> {
       "with language translations or non-empty `languages`",
     );
 
-    return keys ?? NaturalLanguage.list;
+    // The keys of a map are an iterable, and the list asks for them by index
+    // for every row it builds, which walks from the start each time. A list
+    // is built once here instead, so a row is an indexed read.
+    return keys == null ? NaturalLanguage.list : List.of(keys, growable: false);
   }
 
   @override
