@@ -22,6 +22,7 @@ abstract interface class MaterialContextInterface<T extends Object> {
   Future<T?> showInModalBottomSheet(
     BuildContext context, {
     Color? backgroundColor,
+    String? barrierLabel,
     double? elevation,
     ShapeBorder? shape = UiConstants.shape,
     Clip? clipBehavior,

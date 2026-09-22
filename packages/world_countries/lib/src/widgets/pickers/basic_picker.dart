@@ -336,6 +336,7 @@ abstract class BasicPicker<T extends IsoTranslated, W extends IsoTile<T>>
   Future<T?> showInModalBottomSheet(
     BuildContext context, {
     Color? backgroundColor,
+    String? barrierLabel,
     double? elevation,
     ShapeBorder? shape = UiConstants.shape,
     Clip? clipBehavior,
@@ -366,6 +367,7 @@ abstract class BasicPicker<T extends IsoTranslated, W extends IsoTile<T>>
       ),
     ),
     backgroundColor: backgroundColor,
+    barrierLabel: barrierLabel,
     elevation: elevation,
     shape: shape,
     clipBehavior: clipBehavior,

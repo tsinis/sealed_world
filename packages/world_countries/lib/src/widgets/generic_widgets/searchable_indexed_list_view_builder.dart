@@ -153,6 +153,7 @@ class SearchableIndexedListViewBuilder<T extends Object, W extends Widget>
   Future<T?> showInModalBottomSheet(
     BuildContext context, {
     Color? backgroundColor,
+    String? barrierLabel,
     double? elevation,
     ShapeBorder? shape = UiConstants.shape,
     Clip? clipBehavior,
