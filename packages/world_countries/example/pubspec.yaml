@@ -1,4 +1,4 @@
-version: 4.5.0
+version: 4.5.1
 name: world_countries_example
 description: A world_countries example application.
 publish_to: none
@@ -6,7 +6,7 @@ publish_to: none
 resolution: workspace
 
 environment:
-  sdk: ^3.13.3
+  sdk: ^3.13.4
   flutter: ^3.47.5
 
 dependencies:
