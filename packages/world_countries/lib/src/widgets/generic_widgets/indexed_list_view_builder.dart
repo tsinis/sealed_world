@@ -160,12 +160,14 @@ class _IndexedListViewBuilderState<T extends Object, W extends Widget>
                         // It's up on the dev to provide a feedback on top.
                         // ignore: prefer-haptic-feedback-on-interaction
                         onTap: () => widget.onSelect?.call(properties.item),
-                        // A tile of the package already exposes the tap
-                        // through its own ink well, and that inner
-                        // recognizer is the one that wins the gesture arena,
-                        // so a second tap node around it only adds to what
-                        // the accessibility tree re-walks on every frame.
-                        excludeFromSemantics: child is ListItemTile<T>,
+                        // A tile of the package that selects on its own
+                        // already exposes the tap through its ink well, so a
+                        // second tap node around it only adds to what the
+                        // accessibility tree re-walks on every frame. Without
+                        // `onPressed` that ink well selects nothing, and this
+                        // detector is the only way a screen reader can.
+                        excludeFromSemantics:
+                            child is ListItemTile<T> && child.onPressed != null,
                         child: child,
                       );
                     },

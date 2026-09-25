@@ -1,3 +1,4 @@
+import "package:flutter/semantics.dart" show SemanticsAction;
 import "package:flutter/widgets.dart";
 import "package:flutter_test/flutter_test.dart";
 import "package:material_ui/material_ui.dart" show Divider;
@@ -27,16 +28,17 @@ void main() => group("$IndexedListViewBuilder", () {
     expect(find.byType(Divider), findsOneWidget);
   });
 
-  testWidgets("leaves the tap semantics to the package's tile", (tester) async {
+  testWidgets("leaves tap semantics to a tile that selects", (tester) async {
     await tester.pumpMaterialApp(
       IndexedListViewBuilder<int, Widget>(
         const [1],
-        itemBuilder: (props, _) => ListItemTile(props.item), // Dart 3.8 format.
+        itemBuilder: (props, _) =>
+            ListItemTile(props.item, onPressed: print), // Dart 3.8 format.
       ),
     );
 
-    // The tile's own ink well exposes the tap and wins the gesture arena, so
-    // the row's detector adds nothing to the accessibility tree.
+    // The tile's own ink well exposes the tap and selects, so the row's
+    // detector adds nothing to the accessibility tree.
     final detector = tester.widget<GestureDetector>(
       find.ancestor(
         of: find.byType(ListItemTile<int>),
@@ -44,6 +46,34 @@ void main() => group("$IndexedListViewBuilder", () {
       ),
     );
     expect(detector.excludeFromSemantics, isTrue);
+  });
+
+  testWidgets("a screen reader selects a tile that does not select", (
+    tester,
+  ) async {
+    final handle = tester.ensureSemantics();
+    final selected = <int>[];
+    await tester.pumpMaterialApp(
+      IndexedListViewBuilder<int, Widget>(
+        const [1],
+        onSelect: selected.add,
+        itemBuilder: (props, _) =>
+            ListItemTile(props.item, title: const Text("one")),
+      ),
+    );
+
+    // Without `onPressed` the tile's ink well selects nothing, so the row's
+    // detector keeps its tap: it is the node around the tile's own.
+    final row = tester.getSemantics(find.text("one")).parent;
+    expect(row?.getSemanticsData().hasAction(SemanticsAction.tap), isTrue);
+    tester.binding.renderViews.first.owner?.semanticsOwner?.performAction(
+      row?.id ?? -1,
+      SemanticsAction.tap,
+    );
+    await tester.pump();
+
+    expect(selected, [1]);
+    handle.dispose();
   });
 
   testWidgets("exposes the tap of any other row", (tester) async {

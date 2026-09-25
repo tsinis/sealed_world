@@ -8,7 +8,7 @@ REFACTOR
 
 - **Less Per-Frame Semantics Work in Pickers**: profiled on desktop, the accessibility tree was the largest UI-thread phase of a scrolling picker after layout (~30%), re-walked on every frame whenever assistive technology or an automation tool (UiAutomator, Maestro) has semantics on. Three nodes per row were doing nothing:
   - `ListItemTile` now passes `leading` and `subtitle` through untouched unless it has to hide them or label them with a `semanticsIdentifier`; an empty `Semantics` is still a render object the tree walks. A missing slot keeps its node, so tiles lay out exactly as before.
-  - The row `GestureDetector` in `IndexedListViewBuilder` is excluded from semantics when the row is a `ListItemTile`, whose own ink well already exposes the tap and wins the gesture arena. Custom rows keep it.
+  - The row `GestureDetector` in `IndexedListViewBuilder` is excluded from semantics when the row is a `ListItemTile` with an `onPressed`, whose own ink well already exposes the selection. A tile without `onPressed`, and any custom row, keeps it, so a screen reader can still select it.
   - Pickers hand their default items over as a `List`: rows are read by index, and `Map.keys` walked from the start for each one (~40× slower per row, measured).
 
 IMPROVEMENTS
