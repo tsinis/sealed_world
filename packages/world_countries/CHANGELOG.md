@@ -11,6 +11,17 @@ REFACTOR
   - The row `GestureDetector` in `IndexedListViewBuilder` is excluded from semantics when the row is a `ListItemTile`, whose own ink well already exposes the tap and wins the gesture arena. Custom rows keep it.
   - Pickers hand their default items over as a `List`: rows are read by index, and `Map.keys` walked from the start for each one (~40× slower per row, measured).
 
+IMPROVEMENTS
+
+- **Diagnostic Properties & Widget Inspection**:
+  - Implemented comprehensive `debugFillProperties` diagnostics across `AdaptiveSearchTextField`, `ClearButton`, `IsoTile`, `ListItemTile`, `SearchListListenableBuilder`, `SearchableIndexedListViewBuilder`, `StatefulIndexedListView`, and `StatefulSearchable`, resolving all `diagnostic_describe_all_properties` lints.
+  - Integrated `IsoDiagnosticsProperty` from `world_flags` into `ListItemTile.debugFillProperties` for detailed diagnostic representation of ISO-standardized objects.
+  - Encapsulated internal state members with leading underscores in `_AdaptiveSearchTextFieldState` and `_SearchListListenableBuilderState` to follow member privacy best practices and eliminate lint suppressions.
+
+TEST
+
+- Added unit and widget tests for `debugFillProperties` across all modified widgets and their private state representations, maintaining 100% code coverage.
+
 ## 4.5.0
 
 > Big update refreshing flag visuals and performance across all pickers, introducing zero-touch Material theme bridging, and decoupling from Material theme extensions ahead of **the upcoming year-end major release**.
