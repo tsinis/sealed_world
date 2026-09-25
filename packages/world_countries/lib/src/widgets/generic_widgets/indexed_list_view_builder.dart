@@ -7,6 +7,7 @@ import "../../constants/ui_constants.dart";
 import "../../extensions/world_countries_build_context_extension.dart";
 import "../../mixins/properties_convertible_mixin.dart";
 import "../base_widgets/stateful_indexed_list_view.dart";
+import "list_item_tile.dart";
 
 /// A stateful indexed list view widget that displays a list of items.
 class IndexedListViewBuilder<T extends Object, W extends Widget>
@@ -159,6 +160,12 @@ class _IndexedListViewBuilderState<T extends Object, W extends Widget>
                         // It's up on the dev to provide a feedback on top.
                         // ignore: prefer-haptic-feedback-on-interaction
                         onTap: () => widget.onSelect?.call(properties.item),
+                        // A tile of the package already exposes the tap
+                        // through its own ink well, and that inner
+                        // recognizer is the one that wins the gesture arena,
+                        // so a second tap node around it only adds to what
+                        // the accessibility tree re-walks on every frame.
+                        excludeFromSemantics: child is ListItemTile<T>,
                         child: child,
                       );
                     },
