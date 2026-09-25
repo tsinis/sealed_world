@@ -34,6 +34,17 @@ android {
             signingConfig = signingConfigs.getByName("debug")
         }
     }
+
+    // The Flutter Gradle plugin creates the `profile` build type with
+    // `initWith(debug)`, which makes profile APKs debuggable. ART then runs
+    // the app's Java, the embedding's `AccessibilityBridge` included, with
+    // CheckJNI and without ahead-of-time code, which no release user gets, so
+    // on-device benchmarks would measure a slower Java side than ships.
+    // Profileable keeps `simpleperf` and the Android Studio profiler working.
+    buildTypes.matching { it.name == "profile" }.configureEach {
+        isDebuggable = false
+        isProfileable = true
+    }
 }
 
 kotlin {
