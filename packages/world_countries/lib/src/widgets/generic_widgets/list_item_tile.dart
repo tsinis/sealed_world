@@ -5,7 +5,8 @@ import "package:flutter/widgets.dart"
     show BuildContext, Icon, Semantics, TextStyle, Widget;
 import "package:material_ui/material_ui.dart"
     show Icons, ListTile, Material, MaterialType;
-import "package:world_flags/world_flags.dart" show MaybeWidget;
+import "package:world_flags/world_flags.dart"
+    show IsoDiagnosticsProperty, IsoStandardized, MaybeWidget;
 
 import "../../constants/ui_constants.dart";
 
@@ -81,6 +82,27 @@ class ListItemTile<T extends Object> extends ListTile {
   /// tools that work by querying the accessibility hierarchy, such as Android
   /// UI Automator, iOS XCUITest, or Appium. It's not exposed to users.
   final String? semanticsIdentifier;
+
+  @override
+  void debugFillProperties(DiagnosticPropertiesBuilder properties) {
+    super.debugFillProperties(properties);
+    properties
+      ..add(
+        item is IsoStandardized
+            // ignore: avoid-type-casts, it's type checked above.
+            ? IsoDiagnosticsProperty(item as IsoStandardized)
+            : DiagnosticsProperty<T>("item", item),
+      )
+      ..add(ObjectFlagProperty<ValueSetter<T>?>.has("onPressed", onPressed))
+      ..add(StringProperty("semanticsIdentifier", semanticsIdentifier))
+      ..add(
+        DiagnosticsProperty<bool>(
+          "excludeSemantics",
+          excludeSemantics,
+          defaultValue: true,
+        ),
+      );
+  }
 
   @override
   Widget build(BuildContext context) => Material(

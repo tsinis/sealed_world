@@ -1,7 +1,6 @@
-// ignore_for_file: prefer-widget-private-members
-
 import "dart:collection";
 
+import "package:flutter/foundation.dart";
 import "package:flutter/widgets.dart"
     show BuildContext, State, Widget, WidgetsBinding;
 
@@ -48,53 +47,74 @@ class SearchListListenableBuilder<T extends Object>
   builder;
 
   @override
+  void debugFillProperties(DiagnosticPropertiesBuilder properties) {
+    super.debugFillProperties(properties);
+    properties
+      ..add(IterableProperty<T>("items", items))
+      ..add(
+        ObjectFlagProperty<
+          // ignore: prefer-typedefs-for-callbacks, it's just a debug property.
+          Widget Function(BuildContext context, UnmodifiableListView<T> list)
+        >.has("builder", builder),
+      );
+  }
+
+  @override
   State<SearchListListenableBuilder<T>> createState() =>
       _SearchListListenableBuilderState<T>();
 }
 
 class _SearchListListenableBuilderState<T extends Object>
     extends State<SearchListListenableBuilder<T>> {
-  UnmodifiableListView<T> items = UnmodifiableListView(const []);
-  SearchMap<T> map = const {};
+  UnmodifiableListView<T> _items = UnmodifiableListView(const []);
+  SearchMap<T> _map = const {};
 
   @override
   void initState() {
     super.initState();
-    items = UnmodifiableListView(widget.items);
-    widget.textController.addListener(textChanged);
-    WidgetsBinding.instance.addPostFrameCallback((_) => updateMap());
+    _items = UnmodifiableListView(widget.items);
+    widget.textController.addListener(_textChanged);
+    WidgetsBinding.instance.addPostFrameCallback((_) => _updateMap());
   }
+
+  bool _hasSameText(String itemText) =>
+      widget.compareWithTextInput(widget.textController, itemText);
+
+  void _textChanged() {
+    final text = widget.textController.text.trim();
+    final filteredItems =
+        widget.onSearchResultsBuilder?.call(text, _map) ??
+        widget.items.searchResults(_map, _hasSameText);
+
+    setState(() => _items = UnmodifiableListView(filteredItems));
+  }
+
+  void _updateMap() => _map = widget.items.searchMap(context, widget.searchIn);
 
   @override
   void didUpdateWidget(SearchListListenableBuilder<T> oldWidget) {
     super.didUpdateWidget(oldWidget);
-    if (oldWidget.items.length != widget.items.length) updateMap();
+    if (oldWidget.items.length != widget.items.length) _updateMap();
     if (oldWidget.textController != widget.textController) {
-      oldWidget.textController.removeListener(textChanged);
-      widget.textController.addListener(textChanged);
+      oldWidget.textController.removeListener(_textChanged);
+      widget.textController.addListener(_textChanged);
     }
   }
 
-  bool hasSameText(String itemText) =>
-      widget.compareWithTextInput(widget.textController, itemText);
-
-  void textChanged() {
-    final text = widget.textController.text.trim();
-    final filteredItems =
-        widget.onSearchResultsBuilder?.call(text, map) ??
-        widget.items.searchResults(map, hasSameText);
-
-    setState(() => items = UnmodifiableListView(filteredItems));
-  }
-
-  void updateMap() => map = widget.items.searchMap(context, widget.searchIn);
-
   @override
   void dispose() {
-    widget.textController.removeListener(textChanged);
+    widget.textController.removeListener(_textChanged);
     super.dispose();
   }
 
   @override
-  Widget build(BuildContext context) => widget.builder(context, items);
+  void debugFillProperties(DiagnosticPropertiesBuilder properties) {
+    super.debugFillProperties(properties);
+    properties
+      ..add(IterableProperty<T>("items", _items))
+      ..add(IntProperty("mapLength", _map.length));
+  }
+
+  @override
+  Widget build(BuildContext context) => widget.builder(context, _items);
 }

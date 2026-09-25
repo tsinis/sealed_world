@@ -1,5 +1,6 @@
 // ignore_for_file: avoid-nullable-parameters-with-default-values
 
+import "package:flutter/foundation.dart";
 import "package:flutter/widgets.dart" show Text, TextOverflow, Widget;
 import "package:world_flags/world_flags.dart" hide FlagThemeData;
 
@@ -144,4 +145,16 @@ class IsoTile<T extends IsoTranslated> extends ListItemTile<T> {
   /// a localized name of the ISO object.
   @override
   final Text? title; // ignore: overridden_fields, it's intended.
+
+  @override
+  void debugFillProperties(DiagnosticPropertiesBuilder properties) {
+    super.debugFillProperties(properties);
+    properties.add(
+      DiagnosticsProperty<DecoratedFlagInterface?>(
+        "flagTheme",
+        flagTheme,
+        defaultValue: const FlagThemeData.small(),
+      ),
+    );
+  }
 }

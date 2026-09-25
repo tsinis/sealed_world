@@ -1,5 +1,4 @@
-// ignore_for_file: prefer-widget-private-members
-
+import "package:flutter/foundation.dart";
 import "package:flutter/widgets.dart";
 import "package:material_ui/material_ui.dart"
     show Colors, InputDecoration, Material, MaterialType, TextField;
@@ -40,32 +39,65 @@ class AdaptiveSearchTextField extends TextField {
   final bool? showClearButton;
 
   @override
+  void debugFillProperties(DiagnosticPropertiesBuilder properties) {
+    super.debugFillProperties(properties);
+    properties
+      ..add(
+        DiagnosticsProperty<TextField?>(
+          "copyFrom",
+          copyFrom,
+          defaultValue: null,
+        ),
+      )
+      ..add(
+        DiagnosticsProperty<EdgeInsetsGeometry?>(
+          "padding",
+          padding,
+          defaultValue: null,
+        ),
+      )
+      ..add(
+        DiagnosticsProperty<bool?>(
+          "showClearButton",
+          showClearButton,
+          defaultValue: true,
+        ),
+      );
+  }
+
+  @override
   State<AdaptiveSearchTextField> createState() =>
       _AdaptiveSearchTextFieldState();
 }
 
 class _AdaptiveSearchTextFieldState extends State<AdaptiveSearchTextField> {
-  final focusNode = FocusNode();
+  final _focusNode = FocusNode();
 
   @override
   void dispose() {
-    focusNode.dispose();
+    _focusNode.dispose();
     super.dispose();
   }
 
   // ignore: avoid-non-null-assertion, cannot be null since it's required.
-  TextEditingController get controller => widget.controller!;
+  TextEditingController get _controller => widget.controller!;
 
-  InputDecoration get decoration =>
+  InputDecoration get _decoration =>
       widget.copyFrom?.decoration ??
       UiConstants.inputDecoration.copyWith(
         hintText: context.materialL10n.searchFieldLabel,
         suffixIcon: (widget.showClearButton ?? true)
-            ? ClearButton(controller)
+            ? ClearButton(_controller)
             : null,
       );
 
-  TextStyle? get textStyle => context.theme.textTheme.titleMedium;
+  TextStyle? get _textStyle => context.theme.textTheme.titleMedium;
+
+  @override
+  void debugFillProperties(DiagnosticPropertiesBuilder properties) {
+    super.debugFillProperties(properties);
+    properties.add(DiagnosticsProperty<FocusNode>("focusNode", _focusNode));
+  }
 
   @override
   Widget build(BuildContext context) => Padding(
@@ -73,12 +105,15 @@ class _AdaptiveSearchTextFieldState extends State<AdaptiveSearchTextField> {
     child: context.hasMaterialL10n
         ? Material(
             type: MaterialType.transparency,
-            child: widget.copyFrom.copyWith(controller, decoration: decoration),
+            child: widget.copyFrom.copyWith(
+              _controller,
+              decoration: _decoration,
+            ),
           )
         : DecoratedBox(
             decoration: BoxDecoration(
               border: Border.fromBorderSide(
-                BorderSide(color: textStyle?.color ?? UiConstants.color),
+                BorderSide(color: _textStyle?.color ?? UiConstants.color),
               ),
               borderRadius: const BorderRadius.all(
                 Radius.circular(UiConstants.point / 2),
@@ -88,10 +123,10 @@ class _AdaptiveSearchTextFieldState extends State<AdaptiveSearchTextField> {
               padding: const EdgeInsets.all(UiConstants.point),
               // ignore: provide-autofill-hints, it's a very basic widget.
               child: EditableText(
-                controller: controller,
-                focusNode: focusNode,
-                style: textStyle ?? const TextStyle(),
-                cursorColor: textStyle?.color ?? UiConstants.color,
+                controller: _controller,
+                focusNode: _focusNode,
+                style: _textStyle ?? const TextStyle(),
+                cursorColor: _textStyle?.color ?? UiConstants.color,
                 backgroundCursorColor: Colors.transparent,
                 textInputAction: UiConstants.textInputAction,
                 inputFormatters: NameTextInput.formatters,
