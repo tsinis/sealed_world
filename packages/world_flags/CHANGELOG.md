@@ -1,3 +1,9 @@
+## 3.5.1
+
+CHORE
+
+- Updated [material_ui](https://pub.dev/packages/material_ui) dependency to v1.4.0 (v1.3.0 was retracked by Google).
+
 ## 3.5.0
 
 > **Last big update ahead of the upcoming year-end major release**. This version refreshes flag visuals, optimizes rendering performance, and decouples theming from Material.
