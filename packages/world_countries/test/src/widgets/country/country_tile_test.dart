@@ -1,3 +1,4 @@
+import "package:flutter/foundation.dart";
 import "package:flutter_test/flutter_test.dart";
 import "package:world_countries/src/model/item_properties.dart";
 import "package:world_countries/src/model/typedefs.dart";
@@ -13,6 +14,14 @@ void main() => group("$CountryTile", () {
     // ignore: avoid-misused-test-matchers, testing constructor.
     () => expect(CountryTile(value).autofocus, isNotNull),
   );
+
+  test("debugFillProperties", () {
+    final tile = CountryTile(value);
+    final builder = DiagnosticPropertiesBuilder();
+    tile.debugFillProperties(builder);
+    final props = builder.properties.map((i) => i.name).toSet();
+    expect(props, contains("flagTheme"));
+  });
 
   testWidgets("default title", (tester) async {
     final context = await tester.contextExtractor();

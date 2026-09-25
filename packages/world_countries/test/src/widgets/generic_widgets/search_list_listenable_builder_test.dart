@@ -1,3 +1,4 @@
+import "package:flutter/foundation.dart";
 import "package:flutter/widgets.dart";
 import "package:flutter_test/flutter_test.dart";
 import "package:world_countries/src/model/search_data.dart";
@@ -54,6 +55,47 @@ void main() => group("$SearchListListenableBuilder", () {
 
     expect(lastBuiltList, isEmpty);
     anotherController.dispose();
+    controller.dispose();
+  });
+
+  test("debugFillProperties on widget", () {
+    final controller = TextEditingController();
+    final widget = SearchListListenableBuilder(
+      items: items,
+      searchIn: (item, _) => SearchData.empty(code: item),
+      textController: controller,
+      builder: (_, _) => const SizedBox.shrink(),
+    );
+    final builder = DiagnosticPropertiesBuilder();
+    widget.debugFillProperties(builder);
+    final props = builder.properties.map((i) => i.name).toSet();
+    expect(props, contains("items"));
+    expect(props, contains("builder"));
+    expect(props, contains("textController"));
+    expect(props, contains("searchIn"));
+    expect(props, contains("caseSensitiveSearch"));
+    expect(props, contains("startWithSearch"));
+    controller.dispose();
+  });
+
+  testWidgets("debugFillProperties on state", (tester) async {
+    final controller = TextEditingController();
+    await tester.pumpWidgetsApp(
+      SearchListListenableBuilder<String>(
+        items: items,
+        searchIn: (item, _) => SearchData.empty(code: item),
+        textController: controller,
+        builder: (_, _) => const SizedBox.shrink(),
+      ),
+    );
+    final state = tester.state(
+      find.byType(SearchListListenableBuilder<String>),
+    );
+    final builder = DiagnosticPropertiesBuilder();
+    state.debugFillProperties(builder);
+    final props = builder.properties.map((i) => i.name).toSet();
+    expect(props, contains("items"));
+    expect(props, contains("mapLength"));
     controller.dispose();
   });
 });

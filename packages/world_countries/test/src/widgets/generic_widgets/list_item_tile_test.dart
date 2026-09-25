@@ -1,7 +1,9 @@
+import "package:flutter/foundation.dart";
 import "package:flutter/widgets.dart";
 import "package:flutter_test/flutter_test.dart";
 import "package:material_ui/material_ui.dart" show ListTile;
 import "package:world_countries/src/widgets/generic_widgets/list_item_tile.dart";
+import "package:world_flags/world_flags.dart";
 
 import "../../../helpers/widget_tester_extension.dart";
 
@@ -104,5 +106,26 @@ void main() => group("$ListItemTile", () {
     final tile = tester.widget<ListTile>(find.byType(ListTile).last);
     expect(tile.leading, isA<Semantics>(), reason: "The slot stays laid out.");
     expect(tile.subtitle, isA<Semantics>());
+  });
+
+  test("debugFillProperties with non-ISO item", () {
+    const tile = ListItemTile(
+      1,
+      excludeSemantics: false,
+      semanticsIdentifier: "test",
+    );
+    final builder = DiagnosticPropertiesBuilder();
+    tile.debugFillProperties(builder);
+    final props = builder.properties.map((i) => i.name).toSet();
+    expect(props, contains("item"));
+    expect(props, contains("excludeSemantics"));
+    expect(props, contains("semanticsIdentifier"));
+  });
+
+  test("debugFillProperties with IsoStandardized item", () {
+    const tile = ListItemTile(CountryUsa());
+    final builder = DiagnosticPropertiesBuilder();
+    tile.debugFillProperties(builder);
+    expect(builder.properties.any((i) => i is IsoDiagnosticsProperty), isTrue);
   });
 });
