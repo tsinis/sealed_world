@@ -2,7 +2,7 @@
 
 CHORE
 
-- Updated [material_ui](https://pub.dev/packages/material_ui) dependency to v1.4.0 (v1.3.0 was retracked by Google).
+- Updated [material_ui](https://pub.dev/packages/material_ui) dependency to v1.4.0 (v1.3.0 was retracted by Google).
 
 REFACTOR
 
@@ -13,6 +13,9 @@ REFACTOR
 
 IMPROVEMENTS
 
+- Modal picker sheets can now provide a barrier label (via `barrierLabel` parameter), improving accessibility for assistive technologies.
+- **Picker Row Semantics**: Improved picker row semantics to reduce redundant announcements while preserving semantics for custom rows and explicitly identified content.
+- **Picker Item Collections**: Picker item collections now use predictable list-based access when translations are available.
 - **Diagnostic Properties & Widget Inspection**:
   - Implemented comprehensive `debugFillProperties` diagnostics across `AdaptiveSearchTextField`, `ClearButton`, `IsoTile`, `ListItemTile`, `SearchListListenableBuilder`, `SearchableIndexedListViewBuilder`, `StatefulIndexedListView`, and `StatefulSearchable`, resolving all `diagnostic_describe_all_properties` lints.
   - Integrated `IsoDiagnosticsProperty` from `world_flags` into `ListItemTile.debugFillProperties` for detailed diagnostic representation of ISO-standardized objects.

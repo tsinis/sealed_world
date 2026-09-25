@@ -2,7 +2,7 @@
 
 CHORE
 
-- Updated [material_ui](https://pub.dev/packages/material_ui) dependency to v1.4.0 (v1.3.0 was retracked by Google).
+- Updated [material_ui](https://pub.dev/packages/material_ui) dependency to v1.4.0 (v1.3.0 was retracted by Google).
 
 ## 3.5.0
 
