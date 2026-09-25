@@ -1,3 +1,30 @@
+## 4.5.1
+
+CHORE
+
+- Updated [material_ui](https://pub.dev/packages/material_ui) dependency to v1.4.0 (v1.3.0 was retracted by Google).
+
+REFACTOR
+
+- **Less Per-Frame Semantics Work in Pickers**: profiled on desktop, the accessibility tree was the largest UI-thread phase of a scrolling picker after layout (~30%), re-walked on every frame whenever assistive technology or an automation tool (UiAutomator, Maestro) has semantics on. Three nodes per row were doing nothing:
+  - `ListItemTile` now passes `leading` and `subtitle` through untouched unless it has to hide them or label them with a `semanticsIdentifier`; an empty `Semantics` is still a render object the tree walks. A missing slot keeps its node, so tiles lay out exactly as before.
+  - The row `GestureDetector` in `IndexedListViewBuilder` is excluded from semantics when the row is a `ListItemTile` with an `onPressed`, whose own ink well already exposes the selection. A tile without `onPressed`, and any custom row, keeps it, so a screen reader can still select it.
+  - Pickers hand their default items over as a `List`: rows are read by index, and `Map.keys` walked from the start for each one (~40× slower per row, measured).
+
+IMPROVEMENTS
+
+- Modal picker sheets can now provide a barrier label (via `barrierLabel` parameter), improving accessibility for assistive technologies.
+- **Picker Row Semantics**: Improved picker row semantics to reduce redundant announcements while preserving semantics for custom rows and explicitly identified content.
+- **Picker Item Collections**: Picker item collections now use predictable list-based access when translations are available.
+- **Diagnostic Properties & Widget Inspection**:
+  - Implemented comprehensive `debugFillProperties` diagnostics across `AdaptiveSearchTextField`, `ClearButton`, `IsoTile`, `ListItemTile`, `SearchListListenableBuilder`, `SearchableIndexedListViewBuilder`, `StatefulIndexedListView`, and `StatefulSearchable`, resolving all `diagnostic_describe_all_properties` lints.
+  - Integrated `IsoDiagnosticsProperty` from `world_flags` into `ListItemTile.debugFillProperties` for detailed diagnostic representation of ISO-standardized objects.
+  - Encapsulated internal state members with leading underscores in `_AdaptiveSearchTextFieldState` and `_SearchListListenableBuilderState` to follow member privacy best practices and eliminate lint suppressions.
+
+TEST
+
+- Added unit and widget tests for `debugFillProperties` across all modified widgets and their private state representations, maintaining 100% code coverage.
+
 ## 4.5.0
 
 > Big update refreshing flag visuals and performance across all pickers, introducing zero-touch Material theme bridging, and decoupling from Material theme extensions ahead of **the upcoming year-end major release**.

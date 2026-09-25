@@ -5,6 +5,8 @@ import "package:flutter/widgets.dart"
     show BuildContext, Icon, Semantics, TextStyle, Widget;
 import "package:material_ui/material_ui.dart"
     show Icons, ListTile, Material, MaterialType;
+import "package:world_flags/world_flags.dart"
+    show IsoDiagnosticsProperty, IsoStandardized, MaybeWidget;
 
 import "../../constants/ui_constants.dart";
 
@@ -82,18 +84,56 @@ class ListItemTile<T extends Object> extends ListTile {
   final String? semanticsIdentifier;
 
   @override
+  void debugFillProperties(DiagnosticPropertiesBuilder properties) {
+    super.debugFillProperties(properties);
+    properties
+      ..add(
+        item is IsoStandardized
+            // ignore: avoid-type-casts, it's type checked above.
+            ? IsoDiagnosticsProperty(item as IsoStandardized)
+            : DiagnosticsProperty<T>("item", item),
+      )
+      ..add(ObjectFlagProperty<ValueSetter<T>?>.has("onPressed", onPressed))
+      ..add(StringProperty("semanticsIdentifier", semanticsIdentifier))
+      ..add(
+        DiagnosticsProperty<bool>(
+          "excludeSemantics",
+          excludeSemantics,
+          defaultValue: true,
+        ),
+      );
+  }
+
+  @override
   Widget build(BuildContext context) => Material(
     // Reference: https://github.com/flutter/flutter/issues/86584.
     type: MaterialType.transparency,
     child: ListTile(
       key: key,
-      leading: Semantics(
-        excludeSemantics: excludeSemantics,
-        identifier: semanticsIdentifier,
-        child: leading,
-      ),
+      // A slot is passed through as it is when there is nothing to say about
+      // it: an empty `Semantics` is still a render object, and the
+      // accessibility tree walks every one of them on each frame a list
+      // scrolls. A missing child keeps its node, though: `ListTile` lays out
+      // a slot for any widget it is handed, so null instead would shift it.
+      leading:
+          MaybeWidget.orNull(
+            leading,
+            (found) => found,
+            buildWhen: (_) => !excludeSemantics && semanticsIdentifier == null,
+          ) ??
+          Semantics(
+            excludeSemantics: excludeSemantics,
+            identifier: semanticsIdentifier,
+            child: leading,
+          ),
       title: title,
-      subtitle: Semantics(excludeSemantics: excludeSemantics, child: subtitle),
+      subtitle:
+          MaybeWidget.orNull(
+            subtitle,
+            (found) => found,
+            buildWhen: (_) => !excludeSemantics,
+          ) ??
+          Semantics(excludeSemantics: excludeSemantics, child: subtitle),
       trailing: selected ? trailing : null,
       isThreeLine: isThreeLine,
       dense: dense,

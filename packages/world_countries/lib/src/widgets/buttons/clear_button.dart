@@ -1,3 +1,4 @@
+import "package:flutter/foundation.dart";
 import "package:flutter/widgets.dart";
 import "package:material_ui/material_ui.dart"
     show CircularProgressIndicator, IconButton, Icons, TextField;
@@ -110,6 +111,65 @@ class ClearButton extends IconButton {
   /// useful for animating between different [TextField]s so the keyboard
   /// remains open during the cross-fade animation.
   final bool excludeBottomFocus;
+
+  @override
+  // ignore: avoid-long-functions, a lot of params here.
+  void debugFillProperties(DiagnosticPropertiesBuilder properties) {
+    super.debugFillProperties(properties);
+    properties
+      ..add(
+        DiagnosticsProperty<TextEditingController>("controller", _controller),
+      )
+      ..add(
+        DiagnosticsProperty<Duration>(
+          "duration",
+          duration,
+          defaultValue: UiConstants.duration,
+        ),
+      )
+      ..add(DiagnosticsProperty<Duration?>("reverseDuration", reverseDuration))
+      ..add(
+        DiagnosticsProperty<Curve>(
+          "firstCurve",
+          firstCurve,
+          defaultValue: UiConstants.switchOutCurve,
+        ),
+      )
+      ..add(
+        DiagnosticsProperty<Curve>(
+          "secondCurve",
+          secondCurve,
+          defaultValue: UiConstants.switchInCurve,
+        ),
+      )
+      ..add(
+        DiagnosticsProperty<Curve>(
+          "sizeCurve",
+          sizeCurve,
+          defaultValue: UiConstants.switchOutCurve,
+        ),
+      )
+      ..add(
+        DiagnosticsProperty<Widget>(
+          "whenEmptyChild",
+          whenEmptyChild,
+          defaultValue: UiConstants.placeholder,
+        ),
+      )
+      ..add(
+        ObjectFlagProperty<AnimatedCrossFadeBuilder>.has(
+          "layoutBuilder",
+          layoutBuilder,
+        ),
+      )
+      ..add(
+        DiagnosticsProperty<bool>(
+          "excludeBottomFocus",
+          excludeBottomFocus,
+          defaultValue: true,
+        ),
+      );
+  }
 
   @override
   Widget build(BuildContext context) => ValueListenableBuilder(

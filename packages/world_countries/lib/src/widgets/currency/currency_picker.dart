@@ -97,7 +97,10 @@ class CurrencyPicker extends BasicPicker<FiatCurrency, CurrencyTile> {
       "with currency translations or non-empty `currencies`",
     );
 
-    return keys ?? FiatCurrency.list;
+    // The keys of a map are an iterable, and the list asks for them by index
+    // for every row it builds, which walks from the start each time. A list
+    // is built once here instead, so a row is an indexed read.
+    return keys == null ? FiatCurrency.list : List.of(keys, growable: false);
   }
 
   @override

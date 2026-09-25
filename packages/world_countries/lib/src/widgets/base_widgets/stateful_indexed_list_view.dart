@@ -1,3 +1,6 @@
+// ignore_for_file: prefer-typedefs-for-callbacks
+
+import "package:flutter/foundation.dart";
 import "package:flutter/gestures.dart" show DragStartBehavior;
 import "package:flutter/widgets.dart";
 
@@ -185,6 +188,100 @@ abstract class StatefulIndexedListView<T extends Object, W extends Widget>
 
   @override
   final double? spacing;
+
+  @override
+  // ignore: avoid-long-functions, a lot of properties to show.
+  void debugFillProperties(DiagnosticPropertiesBuilder properties) {
+    super.debugFillProperties(properties);
+    properties
+      ..add(IterableProperty<T>("items", items))
+      ..add(ObjectFlagProperty<ValueSetter<T>?>.has("onSelect", onSelect))
+      ..add(IterableProperty<T>("chosen", chosen))
+      ..add(IterableProperty<T>("disabled", disabled))
+      ..add(DiagnosticsProperty<Widget?>("separator", separator))
+      ..add(ObjectFlagProperty<int Function(T, T)?>.has("sort", sort))
+      ..add(DiagnosticsProperty<bool?>("showHeader", showHeader))
+      ..add(DiagnosticsProperty<Widget?>("header", header))
+      ..add(EnumProperty<Axis?>("direction", direction))
+      ..add(EnumProperty<MainAxisSize?>("mainAxisSize", mainAxisSize))
+      ..add(EnumProperty<TextDirection?>("textDirection", textDirection))
+      ..add(EnumProperty<TextBaseline?>("textBaseline", textBaseline))
+      ..add(EnumProperty<Clip?>("clipBehavior", clipBehavior))
+      ..add(DiagnosticsProperty<bool?>("reverse", reverse))
+      ..add(DiagnosticsProperty<bool?>("primary", primary))
+      ..add(DiagnosticsProperty<bool?>("shrinkWrap", shrinkWrap))
+      ..add(StringProperty("restorationId", restorationId))
+      ..add(DiagnosticsProperty<ScrollPhysics?>("physics", physics))
+      ..add(DiagnosticsProperty<EdgeInsetsGeometry?>("padding", padding))
+      ..add(DoubleProperty("cacheExtent", cacheExtent))
+      ..add(EnumProperty<HitTestBehavior?>("hitTestBehavior", hitTestBehavior))
+      ..add(DoubleProperty("spacing", spacing))
+      ..add(
+        ObjectFlagProperty<Widget? Function(ItemProperties<T>, W?)?>.has(
+          "itemBuilder",
+          itemBuilder,
+        ),
+      )
+      ..add(
+        DiagnosticsProperty<Widget>(
+          "emptyStatePlaceholder",
+          emptyStatePlaceholder,
+          defaultValue: UiConstants.placeholder,
+        ),
+      )
+      ..add(
+        EnumProperty<MainAxisAlignment?>(
+          "mainAxisAlignment",
+          mainAxisAlignment,
+        ),
+      )
+      ..add(
+        EnumProperty<CrossAxisAlignment?>(
+          "crossAxisAlignment",
+          crossAxisAlignment,
+        ),
+      )
+      ..add(
+        EnumProperty<VerticalDirection?>(
+          "verticalDirection",
+          verticalDirection,
+        ),
+      )
+      ..add(
+        DiagnosticsProperty<ScrollController?>(
+          "scrollController",
+          scrollController,
+        ),
+      )
+      ..add(
+        DiagnosticsProperty<bool>(
+          "addAutomaticKeepAlives",
+          addAutomaticKeepAlives,
+          defaultValue: true,
+        ),
+      )
+      ..add(
+        DiagnosticsProperty<bool?>(
+          "addRepaintBoundaries",
+          addRepaintBoundaries,
+        ),
+      )
+      ..add(
+        DiagnosticsProperty<bool?>("addSemanticIndexes", addSemanticIndexes),
+      )
+      ..add(
+        EnumProperty<DragStartBehavior?>(
+          "dragStartBehavior",
+          dragStartBehavior,
+        ),
+      )
+      ..add(
+        EnumProperty<ScrollViewKeyboardDismissBehavior?>(
+          "keyboardDismissBehavior",
+          keyboardDismissBehavior,
+        ),
+      );
+  }
 
   /// Provides the default list of items to display when [items] is `null`.
   ///

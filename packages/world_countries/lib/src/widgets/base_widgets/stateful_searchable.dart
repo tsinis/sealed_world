@@ -1,3 +1,4 @@
+import "package:flutter/foundation.dart";
 import "package:flutter/widgets.dart"
     show BuildContext, StatefulWidget, TextEditingController;
 
@@ -42,4 +43,42 @@ abstract class StatefulSearchable<T extends Object> extends StatefulWidget
   @override
   final Iterable<T> Function(String query, SearchMap<T> map)?
   onSearchResultsBuilder;
+
+  @override
+  void debugFillProperties(DiagnosticPropertiesBuilder properties) {
+    super.debugFillProperties(properties);
+    properties
+      ..add(
+        DiagnosticsProperty<TextEditingController>(
+          "textController",
+          textController,
+        ),
+      )
+      ..add(
+        ObjectFlagProperty<
+          // ignore: prefer-typedefs-for-callbacks, it's just a debug property.
+          SearchData Function(T item, BuildContext context)
+        >.has("searchIn", searchIn),
+      )
+      ..add(
+        DiagnosticsProperty<bool>(
+          "caseSensitiveSearch",
+          caseSensitiveSearch,
+          defaultValue: false,
+        ),
+      )
+      ..add(
+        DiagnosticsProperty<bool>(
+          "startWithSearch",
+          startWithSearch,
+          defaultValue: true,
+        ),
+      )
+      ..add(
+        ObjectFlagProperty<
+          // ignore: prefer-typedefs-for-callbacks, it's just a debug property.
+          Iterable<T> Function(String query, SearchMap<T> map)?
+        >.has("onSearchResultsBuilder", onSearchResultsBuilder),
+      );
+  }
 }

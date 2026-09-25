@@ -3,6 +3,7 @@
 
 import "dart:async" show unawaited;
 
+import "package:flutter/foundation.dart" show awaitNotRequired;
 import "package:flutter/services.dart";
 import "package:material_ui/material_ui.dart";
 import "package:world_countries/helpers.dart";
@@ -32,7 +33,7 @@ class CodeCopyPreview extends StatelessWidget {
     if (theme == null) return "";
 
     final buffer = StringBuffer()
-      ..writeln("FlagThemeData(")
+      ..writeln("DecoratedFlagData(")
       ..writeln("  height: 18,");
 
     void add(String line) => buffer.writeln("  $line");
@@ -81,7 +82,7 @@ class CodeCopyPreview extends StatelessWidget {
       }
 
       if (parts.isNotEmpty) {
-        buffer.writeln("  decoration: const BoxDecoration(");
+        buffer.writeln("  decoration: BoxDecoration(");
         // ignore: curly_braces_in_flow_control_structures, just an example.
         for (final part in parts) buffer.writeln("    $part");
         buffer.writeln("  ),");
@@ -110,7 +111,7 @@ class CodeCopyPreview extends StatelessWidget {
               children: [
                 const Expanded(
                   child: Text(
-                    "FlagThemeData snippet",
+                    "DecoratedFlagData snippet",
                     style: TextStyle(fontWeight: FontWeight.bold),
                   ),
                 ),
@@ -138,6 +139,7 @@ class _CopyButton extends StatefulWidget {
 class _CopyButtonState extends State<_CopyButton> {
   bool _isCopied = false;
 
+  @awaitNotRequired
   static Future<void> _markSettingsMenuAccessed() => kTabScrollDuration.delayed(
     NotificationsCenter.instance.markSettingsMenuAccessed,
   );
@@ -145,7 +147,7 @@ class _CopyButtonState extends State<_CopyButton> {
   @override
   void initState() {
     super.initState();
-    unawaited(_markSettingsMenuAccessed());
+    _markSettingsMenuAccessed();
   }
 
   void _handleCopy() {
@@ -160,16 +162,14 @@ class _CopyButtonState extends State<_CopyButton> {
   }
 
   @override
-  Widget build(BuildContext context) => Tooltip(
-    message: _isCopied ? "Copied" : "Copy to clipboard",
-    triggerMode: TooltipTriggerMode.tap,
-    onTriggered: _handleCopy,
-    child: AnimatedSwitcher(
-      duration: kThemeAnimationDuration,
-      switchInCurve: Curves.fastEaseInToSlowEaseOut,
-      switchOutCurve: Curves.fastEaseInToSlowEaseOut,
-      child: Icon(
-        semanticLabel: _isCopied ? "Copied" : "Copy to clipboard",
+  Widget build(BuildContext context) => AnimatedSwitcher(
+    duration: kThemeAnimationDuration,
+    switchInCurve: Curves.fastEaseInToSlowEaseOut,
+    switchOutCurve: Curves.fastEaseInToSlowEaseOut,
+    child: IconButton(
+      onPressed: _handleCopy,
+      tooltip: _isCopied ? "Copied" : "Copy to clipboard",
+      icon: Icon(
         _isCopied ? Icons.check : Icons.copy,
         key: ValueKey(_isCopied),
       ),

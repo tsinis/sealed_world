@@ -1,3 +1,4 @@
+import "package:flutter/foundation.dart";
 import "package:flutter/widgets.dart";
 import "package:flutter_test/flutter_test.dart";
 import "package:material_ui/material_ui.dart" show Icons;
@@ -35,6 +36,24 @@ void main() => group("$ClearButton", () {
 
     expect(controller.text, isEmpty);
 
+    controller.dispose();
+  });
+
+  test("debugFillProperties", () {
+    final controller = TextEditingController();
+    final button = ClearButton(controller);
+    final builder = DiagnosticPropertiesBuilder();
+    button.debugFillProperties(builder);
+    final props = builder.properties.map((i) => i.name).toSet();
+    expect(props, contains("controller"));
+    expect(props, contains("duration"));
+    expect(props, contains("reverseDuration"));
+    expect(props, contains("firstCurve"));
+    expect(props, contains("secondCurve"));
+    expect(props, contains("sizeCurve"));
+    expect(props, contains("whenEmptyChild"));
+    expect(props, contains("layoutBuilder"));
+    expect(props, contains("excludeBottomFocus"));
     controller.dispose();
   });
 });

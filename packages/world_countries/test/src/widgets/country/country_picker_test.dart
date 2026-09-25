@@ -27,6 +27,25 @@ void main() => group("$CountryPicker", () {
     expect(newestPicker.copyWith(), isNot(newestPicker));
   });
 
+  testWidgets("defaultItems hands the cache over as a list", (tester) async {
+    const picker = CountryPicker(
+      maps: IsoMaps(countryTranslations: {CountryUsa(): "USA"}),
+    );
+    await tester.pumpMaterialApp(picker);
+
+    final items = picker.resolvedItems(
+      tester.element(find.byType(CountryPicker)),
+    );
+    // Rows are read by index, so the keys are handed over as a list rather
+    // than walked from the start for every row.
+    expect(items, isA<List<WorldCountry>>());
+    expect(items, [const CountryUsa()]);
+  });
+
+  test("defaultItems falls back to every country without a cache", () {
+    expect(const CountryPicker().resolvedItems(), same(WorldCountry.list));
+  });
+
   testWidgets("copyWith itemBuilder fallback to defaultBuilder", (
     tester, // Dart 3.8 formatting.
   ) async {

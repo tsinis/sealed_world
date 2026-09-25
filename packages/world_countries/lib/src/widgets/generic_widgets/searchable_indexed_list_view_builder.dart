@@ -1,5 +1,6 @@
 // ignore_for_file: avoid-nullable-parameters-with-default-values
 
+import "package:flutter/foundation.dart";
 import "package:flutter/gestures.dart";
 import "package:flutter/widgets.dart";
 import "package:material_ui/material_ui.dart" show Colors;
@@ -142,6 +143,44 @@ class SearchableIndexedListViewBuilder<T extends Object, W extends Widget>
   final Iterable<T> Function(String query, SearchMap<T> map)?
   onSearchResultsBuilder;
 
+  @override
+  void debugFillProperties(DiagnosticPropertiesBuilder properties) {
+    super.debugFillProperties(properties);
+    properties
+      ..add(
+        DiagnosticsProperty<TextEditingController?>(
+          "textController",
+          textController,
+        ),
+      )
+      ..add(
+        ObjectFlagProperty<
+          // ignore: prefer-typedefs-for-callbacks, it's just a debug property.
+          SearchData Function(T item, BuildContext context)?
+        >.has("searchIn", searchIn),
+      )
+      ..add(
+        DiagnosticsProperty<bool>(
+          "caseSensitiveSearch",
+          caseSensitiveSearch,
+          defaultValue: false,
+        ),
+      )
+      ..add(
+        DiagnosticsProperty<bool>(
+          "startWithSearch",
+          startWithSearch,
+          defaultValue: true,
+        ),
+      )
+      ..add(
+        ObjectFlagProperty<
+          // ignore: prefer-typedefs-for-callbacks, it's just a debug property.
+          Iterable<T> Function(String query, SearchMap<T> map)?
+        >.has("onSearchResultsBuilder", onSearchResultsBuilder),
+      );
+  }
+
   @override // coverage:ignore-line
   Iterable<T> defaultItems(BuildContext? context) => const [];
 
@@ -153,6 +192,7 @@ class SearchableIndexedListViewBuilder<T extends Object, W extends Widget>
   Future<T?> showInModalBottomSheet(
     BuildContext context, {
     Color? backgroundColor,
+    String? barrierLabel,
     double? elevation,
     ShapeBorder? shape = UiConstants.shape,
     Clip? clipBehavior,

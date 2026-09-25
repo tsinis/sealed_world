@@ -1,3 +1,4 @@
+import "package:flutter/foundation.dart";
 import "package:flutter_test/flutter_test.dart";
 import "package:material_ui/material_ui.dart";
 import "package:world_countries/src/widgets/adaptive/adaptive_search_text_field.dart";
@@ -26,6 +27,29 @@ void main() => group("$AdaptiveSearchTextField", () {
       ),
     );
     expect(find.byType(TextField), findsOneWidget);
+    controller.dispose();
+  });
+
+  test("debugFillProperties on widget", () {
+    final controller = TextEditingController();
+    final field = AdaptiveSearchTextField(controller);
+    final builder = DiagnosticPropertiesBuilder();
+    field.debugFillProperties(builder);
+    final props = builder.properties.map((i) => i.name).toSet();
+    expect(props, contains("copyFrom"));
+    expect(props, contains("padding"));
+    expect(props, contains("showClearButton"));
+    controller.dispose();
+  });
+
+  testWidgets("debugFillProperties on state", (tester) async {
+    final controller = TextEditingController();
+    await tester.pumpWidgetsApp(AdaptiveSearchTextField(controller));
+    final state = tester.state(find.byType(AdaptiveSearchTextField));
+    final builder = DiagnosticPropertiesBuilder();
+    state.debugFillProperties(builder);
+    final props = builder.properties.map((i) => i.name).toSet();
+    expect(props, contains("focusNode"));
     controller.dispose();
   });
 });
