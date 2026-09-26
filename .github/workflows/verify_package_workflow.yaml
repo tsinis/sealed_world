@@ -84,7 +84,7 @@ jobs:
           sudo apt-get install webp
           dart pub global activate pana
           if [ "${{ inputs.is_flutter }}" = "true" ]; then
-            dart pub global run pana . --no-warning --exit-code-threshold 10 --flutter-sdk $FLUTTER_ROOT
+            dart pub global run pana . --no-warning --exit-code-threshold 0 --flutter-sdk $FLUTTER_ROOT
           else
             dart pub global run pana . --no-warning --exit-code-threshold 0
           fi
