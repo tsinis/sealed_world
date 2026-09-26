@@ -31,7 +31,7 @@ dependencies:
     sdk: flutter
   material_ui: ^1.4.0
   meta: ^1.18.3 # Same as in Flutter SDK.
-  world_flags: ^3.5.0
+  world_flags: ^3.5.1
 
 dev_dependencies:
   _sealed_world_tests:
