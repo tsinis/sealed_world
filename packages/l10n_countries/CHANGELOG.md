@@ -1,3 +1,26 @@
+## 2.1.1
+
+FIX
+
+- Reviewed the Slovak (`sk`) locale against the official list of country names published by the Slovak geodesy and cartography authority, fixing 75 entries:
+  - Replaced corrupted characters (e.g. in `AZE`, `DJI`, `FJI`, `KNA`, `GBR`) and typos (e.g. in `GRC`, `NLD`, `CXR`, `UMI`).
+  - Fixed factual errors: Morocco was called a principality, French Guiana and the Democratic Republic of the Congo shared their short names with Guyana and the Republic of the Congo, and Eswatini still had its former name.
+  - Updated outdated official names (e.g. `BOL`, `BRN`, `COM`, `LBY`, `IRL`, `BIH`) and aligned short names (e.g. `GBR`, `USA`, `KOR`, `PRK`) and Slovak exonyms (e.g. `BES`, `CUW`, `MTQ`, `SLB`, `VGB`) with the official list.
+- Fixed short names shared by two different countries in other locales:
+  - Serbian (`sr`): `GIN` was translated as Guyana (both short and official name).
+  - Polish (`pl`): `SSD` was translated as Sudan.
+  - Albanian (`sq`): `NGA` repeated the name of Niger.
+  - Hungarian (`hu`): `ASM` repeated the name of Samoa.
+  - Finnish (`fi`): `VGB` and `VIR` both lacked their British and United States qualifiers.
+  - Sundanese (`su`): `TWN` repeated the name of China.
+- Disambiguated the French (`MAF`) and Dutch (`SXM`) parts of Saint Martin, which shared a short or an official name in the Czech (`cs`), Persian (`fa`), Croatian (`hr`), Portuguese (`pt`), Slovak (`sk`) and Serbian (`sr`) locales.
+- Fixed other data errors:
+  - Croatian (`hr`): added the missing space in the `HKG` and `MAC` official names, and the `NLD` official name now matches its short name.
+  - Portuguese (`pt`): capitalized the `MAF` official name.
+  - Nepali (`ne`): removed the unbalanced opening parenthesis from `MAC`.
+  - Dutch (`nl`): added the missing space in the `HMD` short name.
+  - Trimmed stray whitespace in Japanese (`ja`), Korean (`ko`), Polish (`pl`) and Urdu (`ur`) names.
+
 ## 2.1.0
 
 FIX

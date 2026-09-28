@@ -411,7 +411,7 @@ class KoCountriesL10N extends IsoLocaleMapper<String> {
       "SMR": "산마리노",
       "SMR+": "산마리노 공화국",
       "SOM": "소말리아",
-      "SOM+": " 소말리아 연방 공화국",
+      "SOM+": "소말리아 연방 공화국",
       "SPM": "생피에르 미클롱",
       "SPM+": "생피에르 미클롱",
       "SRB": "세르비아",

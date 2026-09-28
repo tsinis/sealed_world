@@ -170,7 +170,7 @@ class SqCountriesL10N extends IsoLocaleMapper<String> {
       "NCL": "Kaledoni e Re",
       "NER": "Nigeri",
       "NFK": "Ishulli Norfolk",
-      "NGA": "Nigeri",
+      "NGA": "Nigeria",
       "NIC": "Nikaragua",
       "NIU": "Niue",
       "NLD": "Holandë",

@@ -107,7 +107,7 @@ class SuCountriesL10N extends IsoLocaleMapper<String> {
       "SYR": "Suriah",
       "TKM": "Turkménistan",
       "TUR": "Turki",
-      "TWN": "Tiongkok",
+      "TWN": "Taiwan",
       "UKR": "Ukraina",
       "UNK": "Kosovo",
       "USA": "Amérika Sarikat",
