@@ -1,3 +1,27 @@
+## 2.1.1
+
+FIX
+
+- Reviewed the Slovak (`sk`) locale against the official list of country names published by the Slovak Office of Geodesy, Cartography and Cadastre (ÚGKK SR), fixing 75 entries:
+  - Replaced corrupted characters (e.g. `AzerbajǇan`, `ǅibutsko`, `Fiǆi`, `Feder໡cia`, `SevernéhoÌrska`) and typos (e.g. `Greécko`, `Holansko`, `Vianočnú ostrov`, `Spjoených`).
+  - Fixed factual errors: Morocco was called a principality, French Guiana and the Democratic Republic of the Congo shared their short names with Guyana and the Republic of the Congo, and Eswatini was still named Svazijsko.
+  - Updated outdated official names (e.g. `BOL`, `BRN`, `COM`, `LBY`, `IRL`, `BIH`) and aligned short names (e.g. `GBR`, `USA`, `KOR`, `PRK`) and Slovak exonyms (e.g. `BES`, `CUW`, `MTQ`, `SLB`, `VGB`) with the official list.
+  - Disambiguated the French (`MAF`) and Dutch (`SXM`) parts of Saint Martin, which share one official name.
+- Fixed short names shared by two different countries in other locales:
+  - Serbian (`sr`): `GIN` was translated as Guyana (both short and official name), now reads "Гвинеја".
+  - Polish (`pl`): `SSD` was translated as Sudan, now reads "Sudan Południowy".
+  - Albanian (`sq`): `NGA` now reads "Nigeria" instead of repeating Niger's "Nigeri".
+  - Hungarian (`hu`): `ASM` now reads "Amerikai Szamoa" instead of repeating Samoa's "Szamoa".
+  - Finnish (`fi`): `VGB` and `VIR` now carry their "Brittiläiset" and "Yhdysvaltain" prefixes.
+  - Sundanese (`su`): `TWN` now reads "Taiwan" instead of repeating China's "Tiongkok".
+  - Persian (`fa`), Croatian (`hr`), Portuguese (`pt`) and Serbian (`sr`): the French (`MAF`) and Dutch (`SXM`) parts of Saint Martin are now disambiguated.
+- Fixed other data errors:
+  - Croatian (`hr`): added the missing space in the `HKG` and `MAC` official names, and `NLD` official name now reads "Kraljevina Nizozemska" instead of "Holandija".
+  - Portuguese (`pt`): `MAF` official name now reads "Saint-Martin" instead of "saint Martin".
+  - Nepali (`ne`): removed the unbalanced opening parenthesis from `MAC`.
+  - Dutch (`nl`): `HMD` now reads "Heard- en McDonaldeilanden".
+  - Trimmed stray whitespace in Japanese (`ja`), Korean (`ko`), Polish (`pl`) and Urdu (`ur`) names.
+
 ## 2.1.0
 
 FIX
