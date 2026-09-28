@@ -295,7 +295,7 @@ class JaCountriesL10N extends IsoLocaleMapper<String> {
       "MEX+": "メキシコ合衆国",
       "MHL": "マーシャル諸島",
       "MHL+": "マーシャル諸島共和国",
-      "MKD": "北マケドニア ",
+      "MKD": "北マケドニア",
       "MKD+": "北マケドニア共和国",
       "MLI": "マリ",
       "MLI+": "マリ共和国",

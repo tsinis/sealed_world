@@ -202,7 +202,7 @@ class NlCountriesL10N extends IsoLocaleMapper<String> {
       "HKG": "Hongkong",
       "HKG+":
           """Hong Kong Speciale Administratieve Regio van de Volksrepubliek China""",
-      "HMD": "Heard-en McDonaldeilanden",
+      "HMD": "Heard- en McDonaldeilanden",
       "HMD+": "Heard en McDonaldeilanden",
       "HND": "Honduras",
       "HND+": "Republiek Honduras",
