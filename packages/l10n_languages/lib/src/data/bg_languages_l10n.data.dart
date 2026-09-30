@@ -144,7 +144,7 @@ class BgLanguagesL10N extends IsoLocaleMapper<String> {
       "RUN": "Рунди",
       "RUS": "Руски",
       "SAG": "Санго",
-      "SAN": "Санкскритски",
+      "SAN": "Санскритски",
       "SIN": "Синхалски",
       "SLK": "Словашки",
       "SLV": "Словенски",

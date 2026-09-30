@@ -125,7 +125,7 @@ class HuLanguagesL10N extends IsoLocaleMapper<String> {
       "NEP": "Nepáli",
       "NLD": "Holland",
       "NNO": "Norvég nynorsk",
-      "NOB": "Norvég bokmal",
+      "NOB": "Norvég bokmål",
       "NOR": "Norvég",
       "NYA": "Nyanja",
       "OCI": "Okszitán",

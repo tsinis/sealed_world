@@ -58,7 +58,7 @@ class IsLanguagesL10N extends IsoLocaleMapper<String> {
       "FUL": "Fúla",
       "GLA": "Skosk gelíska",
       "GLE": "Írska",
-      "GLG": "Galíanska",
+      "GLG": "Galisíska",
       "GLV": "Manska",
       "GRN": "Gvaraní",
       "GUJ": "Gújaratí",

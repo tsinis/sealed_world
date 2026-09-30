@@ -119,7 +119,7 @@ class NlLanguagesL10N extends IsoLocaleMapper<String> {
       "MYA": "Birmaans",
       "NAU": "Nauruaans",
       "NAV": "Navajo",
-      "NBL": "Zuid-Ndbele",
+      "NBL": "Zuid-Ndebele",
       "NDE": "Noord-Ndebele",
       "NDO": "Ndonga",
       "NEP": "Nepalees",

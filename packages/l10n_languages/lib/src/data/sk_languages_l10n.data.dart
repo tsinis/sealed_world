@@ -42,7 +42,7 @@ class SkLanguagesL10N extends IsoLocaleMapper<String> {
       "DAN": "Dánčina",
       "DEU": "Nemčina",
       "DIV": "Divehi",
-      "DZO": "Dzongkä",
+      "DZO": "Dzongkha",
       "ELL": "Gréčtina",
       "ENG": "Angličtina",
       "EPO": "Esperanto",

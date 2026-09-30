@@ -125,7 +125,7 @@ class GlLanguagesL10N extends IsoLocaleMapper<String> {
       "NEP": "Nepalí",
       "NLD": "Holandés",
       "NNO": "Noruegués nynorsk",
-      "NOB": "Noruegués bokmal",
+      "NOB": "Noruegués bokmål",
       "NOR": "Noruegués",
       "NYA": "Chewa",
       "OCI": "Occitano",

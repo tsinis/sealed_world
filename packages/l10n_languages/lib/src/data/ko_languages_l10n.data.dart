@@ -23,7 +23,7 @@ class KoLanguagesL10N extends IsoLocaleMapper<String> {
       "BAM": "밤바라어",
       "BEL": "벨라루스어",
       "BEN": "벵골어",
-      "BIH": "호즈푸리어",
+      "BIH": "보즈푸리어",
       "BIS": "비슬라마어",
       "BOD": "티베트어",
       "BOS": "보스니아어",

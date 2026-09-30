@@ -101,7 +101,7 @@ class LtLanguagesL10N extends IsoLocaleMapper<String> {
       "LAO": "Laosiečių",
       "LAT": "Lotynų",
       "LAV": "Latvių",
-      "LIM": "Limburgiš",
+      "LIM": "Limburgiečių",
       "LIN": "Ngalų",
       "LIT": "Lietuvių",
       "LTZ": "Liuksemburgiečių",

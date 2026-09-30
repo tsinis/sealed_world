@@ -60,7 +60,7 @@ class KyLanguagesL10N extends IsoLocaleMapper<String> {
       "GLE": "Ирландча",
       "GLG": "Галисияча",
       "GLV": "Манксыча",
-      "GRN": "Гуараш",
+      "GRN": "Гуарани",
       "GUJ": "Гужаратча",
       "HAT": "Гаитиче",
       "HAU": "Хаусача",

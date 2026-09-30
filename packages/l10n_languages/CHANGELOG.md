@@ -1,3 +1,9 @@
+## 2.2.0
+
+FIX
+
+- Proofread all locales, fixing 53 entries across 36 of them: misspellings, broken characters and missing spaces.
+
 ## 2.1.0
 
 IMPROVEMENTS

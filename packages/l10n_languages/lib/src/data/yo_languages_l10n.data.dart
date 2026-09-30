@@ -132,7 +132,7 @@ class YoLanguagesL10N extends IsoLocaleMapper<String> {
       "ROH": "Rómáǹṣì",
       "RON": "Èdè Romania",
       "RUN": "Rúńdì",
-      "RUS": "Èdè ̣Rọọsia",
+      "RUS": "Èdè Rọọsia",
       "SAN": "Èdè awon ara Indo",
       "SIN": "Èdè Sinhalese",
       "SLK": "Èdè Slovaki",

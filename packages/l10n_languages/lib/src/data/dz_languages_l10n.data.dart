@@ -36,7 +36,7 @@ class DzLanguagesL10N extends IsoLocaleMapper<String> {
       "FIJ": "ཕི་ཇི་ཡཱན་ཁ",
       "FIN": "ཕི་ནིཤ་ཁ",
       "FRA": "ཕྲནཅ་ཁ",
-      "FRY": "ནུབ་ཕྼི་སི་ཡན་ཁ",
+      "FRY": "ནུབ་ཕྲི་སི་ཡན་ཁ",
       "GLE": "ཨཱའི་རིཤ་ཁ",
       "GLG": "གལ་ཨིས་ཨི་ཡན་ཁ",
       "GRN": "གུ་ཝ་ར་ནི་ཁ",

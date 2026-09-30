@@ -68,7 +68,7 @@ class HaLanguagesL10N extends IsoLocaleMapper<String> {
       "MYA": "Burmanci",
       "NBL": "Ndebele na Kudu",
       "NLD": "Holanci",
-      "NOR": "Harhsen Norway",
+      "NOR": "Harshen Norway",
       "OCI": "Ositanci",
       "ORI": "Odiya",
       "POL": "Harshen Polan",

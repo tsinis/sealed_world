@@ -58,7 +58,7 @@ class KkLanguagesL10N extends IsoLocaleMapper<String> {
       "FUL": "Фула тілі",
       "GLA": "Шотландиялық гэль тілі",
       "GLE": "Ирланд тілі",
-      "GLG": "Гали",
+      "GLG": "Галисия тілі",
       "GLV": "Мэнс",
       "GRN": "Гуарани",
       "GUJ": "Гуджарати",
