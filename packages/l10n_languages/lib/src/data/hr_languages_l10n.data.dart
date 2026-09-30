@@ -75,7 +75,7 @@ class HrLanguagesL10N extends IsoLocaleMapper<String> {
       "IDO": "Ido",
       "III": "Sichuan yi",
       "IKU": "Inuktitut",
-      "ILE": "Interligua",
+      "ILE": "Interlingue",
       "INA": "Interlingua",
       "IND": "Indonezijski",
       "IPK": "Inupiaq",

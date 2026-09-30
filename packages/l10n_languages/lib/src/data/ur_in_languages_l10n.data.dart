@@ -11,7 +11,7 @@ class UrInLanguagesL10N extends IsoLocaleMapper<String> {
       "COS": "کارسیکائی",
       "KAN": "کنڑ",
       "KUR": "کرد",
-      "LAV": "لٹويای",
+      "LAV": "لٹویای",
     });
   }
 }

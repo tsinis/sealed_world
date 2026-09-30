@@ -74,7 +74,7 @@ class NeLanguagesL10N extends IsoLocaleMapper<String> {
       "IBO": "इग्बो",
       "IDO": "इडो",
       "III": "सिचुआन यि",
-      "IKU": "लनुक्टिटुट",
+      "IKU": "इनुक्टिटुट",
       "ILE": "इन्टरलिङ्ग्वे",
       "INA": "इन्टर्लिङ्गुआ",
       "IND": "इन्डोनेसियाली",

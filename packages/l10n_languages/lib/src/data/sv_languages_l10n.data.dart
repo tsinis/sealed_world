@@ -93,7 +93,7 @@ class SvLanguagesL10N extends IsoLocaleMapper<String> {
       "KIK": "Kikuyu",
       "KIN": "Kinjarwanda",
       "KIR": "Kirgisiska",
-      "KOM": "Kome",
+      "KOM": "Komi",
       "KON": "Kikongo",
       "KOR": "Koreanska",
       "KUA": "Kuanyama",

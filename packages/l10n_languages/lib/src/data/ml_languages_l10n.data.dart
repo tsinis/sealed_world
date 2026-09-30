@@ -10,7 +10,7 @@ class MlLanguagesL10N extends IsoLocaleMapper<String> {
       "AAR": "അഫാർ",
       "ABK": "അബ്‌ഖാസിയൻ",
       "AFR": "ആഫ്രിക്കാൻസ്",
-      "AKA": "അകാൻ‌",
+      "AKA": "അകാൻ",
       "AMH": "അംഹാരിക്",
       "ARA": "അറബിക്",
       "ARG": "അരഗോണീസ്",

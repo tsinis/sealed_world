@@ -29,7 +29,7 @@ class FoLanguagesL10N extends IsoLocaleMapper<String> {
       "BRE": "Bretonskt",
       "BUL": "Bulgarskt",
       "CAT": "Katalanskt",
-      "CES": "Kekkiskt",
+      "CES": "Tjekkiskt",
       "CHA": "Chamorro",
       "CHE": "Tjetjenskt",
       "CHU": "Kirkju sláviskt",

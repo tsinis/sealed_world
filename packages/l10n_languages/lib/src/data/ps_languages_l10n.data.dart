@@ -78,7 +78,7 @@ class PsLanguagesL10N extends IsoLocaleMapper<String> {
       "ILE": "انټرلینګو",
       "INA": "انټرلنګوا",
       "IND": "انډونېزي",
-      "IPK": "اینوپیاڪ",
+      "IPK": "اینوپیاک",
       "ISL": "ايسلنډي",
       "ITA": "ایټالوي",
       "JAV": "جاوايي",

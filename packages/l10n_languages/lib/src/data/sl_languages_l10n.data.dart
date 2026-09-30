@@ -66,7 +66,7 @@ class SlLanguagesL10N extends IsoLocaleMapper<String> {
       "HAU": "Havščina",
       "HEB": "Hebrejščina",
       "HER": "Herero",
-      "HIN": "Hindujščina",
+      "HIN": "Hindijščina",
       "HMO": "Hiri motu",
       "HRV": "Hrvaščina",
       "HUN": "Madžarščina",

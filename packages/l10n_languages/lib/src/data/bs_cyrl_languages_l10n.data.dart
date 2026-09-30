@@ -22,7 +22,7 @@ class BsCyrlLanguagesL10N extends IsoLocaleMapper<String> {
       "BAK": "Башкир",
       "BAM": "Бамбара",
       "BEL": "Белоруски",
-      "BEN": "Бенгласки",
+      "BEN": "Бенгалски",
       "BIH": "Бојпури",
       "BIS": "Бислама",
       "BOD": "Тибетански",

@@ -133,3 +133,4 @@ json/
 **/example/android/app/.cxx/*
 **/example/benchmarks/*.json
 **/example/android/.kotlin/sessions/**
+.proofread/*

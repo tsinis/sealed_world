@@ -113,7 +113,7 @@ class UzLanguagesL10N extends IsoLocaleMapper<String> {
       "MKD": "Makedoncha",
       "MLG": "Malagasiycha",
       "MLT": "Maltacha",
-      "MON": "Mo‘g‘ulcha",
+      "MON": "Moʻgʻulcha",
       "MRI": "Maoriycha",
       "MSA": "Malaycha",
       "MYA": "Birmancha",

@@ -12,7 +12,7 @@ class YoBjLanguagesL10N extends IsoLocaleMapper<String> {
       "ENG": "Èdè Gɛ̀ɛ́sì",
       "POL": "Èdè Ilɛ̀ Polandi",
       "POR": "Èdè Pɔtugi",
-      "RUS": "Èdè ̣Rɔɔsia",
+      "RUS": "Èdè Rɔɔsia",
       "TUR": "Èdè Tɔɔkisi",
       "ZUL": "Èdè Shulu",
     });

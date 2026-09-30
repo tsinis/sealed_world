@@ -132,7 +132,7 @@ class UgLanguagesL10N extends IsoLocaleMapper<String> {
       "OJI": "ئوجىبۋاچە",
       "ORI": "ئورىياچە",
       "ORM": "ئوروموچە",
-      "OSS": "ئوسسېتچەچە",
+      "OSS": "ئوسسېتچە",
       "PAN": "پەنجابچە",
       "PLI": "پالىچە",
       "POL": "پولەكچە",
