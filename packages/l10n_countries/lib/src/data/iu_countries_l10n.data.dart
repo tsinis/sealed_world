@@ -20,7 +20,7 @@ class IuCountriesL10N extends IsoLocaleMapper<String> {
       "GBR": "ᑐᓗᐃᑦ ᓄᓈᑦ",
       "GRL": "ᐊᑯᑭᑦᑐᑦ",
       "IDN": "ᐄᓅᓯᐊ",
-      "IND": "ᐃᓐᑎᐊ/intia",
+      "IND": "ᐃᓐᑎᐊ",
       "IRQ": "ᐃᕉᒃ",
       "JPN": "ᓃᑉᐊᓐ",
       "LTU": "ᓕᐋᑐᕙ",

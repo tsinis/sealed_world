@@ -50,7 +50,7 @@ class AzCyrlCountriesL10N extends IsoLocaleMapper<String> {
       "CHE": "Исвечрә",
       "CHL": "Чили",
       "CHN": "Чин",
-      "CIV": "Kотд’ивуар",
+      "CIV": "Котд’ивуар",
       "CMR": "Камерун",
       "COD": "Конго-Киншаса",
       "COG": "Конго-Браззавил",

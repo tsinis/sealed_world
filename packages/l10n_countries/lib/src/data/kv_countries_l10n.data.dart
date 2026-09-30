@@ -15,7 +15,7 @@ class KvCountriesL10N extends IsoLocaleMapper<String> {
       "ARM": "Армения",
       "AUS": "Австралия",
       "AUT": "Австрия",
-      "AZE": "Азербайджа́н",
+      "AZE": "Азербайджан",
       "BEL": "Бельгия",
       "BGR": "Болгария",
       "BHR": "Бахрейн",

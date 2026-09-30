@@ -53,7 +53,7 @@ class XhCountriesL10N extends IsoLocaleMapper<String> {
       "CHN": "IShayina",
       "CIV": "ECôte d’Ivoire",
       "CMR": "ECameroon",
-      "COD": "ECongo -Kinshasa",
+      "COD": "ECongo - Kinshasa",
       "COG": "ECongo - Brazzaville",
       "COK": "ECook Islands",
       "COL": "IsiColombia",

@@ -94,7 +94,7 @@ class NnCountriesL10N extends IsoLocaleMapper<String> {
       "PYF": "Fransk Polynesia",
       "RUS": "Russland",
       "SAU": "Saudi-Arabia",
-      "SGS": "Sør-Georgia og Sør-Sandwichøyene",
+      "SGS": "Sør-Georgia og Sør-Sandwichøyane",
       "SHN": "Saint Helena",
       "SJM": "Svalbard og Jan Mayen",
       "SLB": "Salomonøyane",

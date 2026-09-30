@@ -203,7 +203,7 @@ class LvCountriesL10N extends IsoLocaleMapper<String> {
       "SEN": "Senegāla",
       "SGP": "Singapūra",
       "SGS": "Dienviddžordžija un Dienvidsendviču salas",
-      "SHN": "Sv.Helēnas sala",
+      "SHN": "Sv. Helēnas sala",
       "SJM": "Svalbāra un Jana Majena sala",
       "SLB": "Zālamana salas",
       "SLE": "Sjerraleone",
