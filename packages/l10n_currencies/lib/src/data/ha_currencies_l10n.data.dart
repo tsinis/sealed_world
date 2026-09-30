@@ -95,7 +95,7 @@ class HaCurrenciesL10N extends IsoLocaleMapper<String> {
       "MOP": "Pataca na ƙasar Macao",
       "MRU": "Kuɗin Moritaniya",
       "MUR": "Kuɗin Moritus",
-      "MVR": "Rufiyaa na ɓasar Maldives",
+      "MVR": "Rufiyaa na ƙasar Maldives",
       "MWK": "Kuɗin Malawi",
       "MYR": "Kuɗin Malaysia",
       "MZN": "Metical na ƙasar Mozambique",

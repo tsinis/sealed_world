@@ -32,12 +32,12 @@ class ZhHkCurrenciesL10N extends IsoLocaleMapper<String> {
       "LRD": "利比利亞元",
       "MDL": "摩爾多瓦列伊",
       "MRU": "毛里塔尼亞烏吉亞",
-      "MUR": "毛里裘斯盧布",
+      "MUR": "毛里裘斯盧比",
       "MVR": "馬爾代夫盧非亞",
       "MZN": "莫桑比克梅蒂卡爾",
       "NGN": "尼日利亞奈拉",
       "NZD": "紐西蘭元",
-      "OMR": "阿曼里奧",
+      "OMR": "阿曼里亞爾",
       "PGK": "巴布亞新幾內亞基那",
       "QAR": "卡塔爾里亞爾",
       "RSD": "塞爾維亞第納爾",
@@ -57,7 +57,7 @@ class ZhHkCurrenciesL10N extends IsoLocaleMapper<String> {
       "VUV": "瓦努阿圖瓦圖",
       "XCD": "東加勒比元",
       "XOF": "多哥非洲共同體法郎",
-      "YER": "也門里雅",
+      "YER": "也門里亞爾",
       "ZMW": "贊比亞克瓦查",
     });
   }

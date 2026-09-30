@@ -163,7 +163,7 @@ class KaCurrenciesL10N extends IsoLocaleMapper<String> {
       "XCG": "კარიბის გულდენი",
       "XOF": "(CFA) ფრანკი (BCEAO)",
       "XPF": "CFP ფრანკი",
-      "YER": "იემენის რეალი",
+      "YER": "იემენის რიალი",
       "ZAR": "სამხრეთ აფრიკული რანდი",
       "ZMW": "ზამბიური კვაჭა",
       "ZWG": "ზიმბაბვეს გოლდი",

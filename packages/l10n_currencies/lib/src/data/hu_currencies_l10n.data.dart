@@ -94,7 +94,7 @@ class HuCurrenciesL10N extends IsoLocaleMapper<String> {
       "MAD": "Marokkói dirham",
       "MDL": "Moldován lei",
       "MGA": "Madagaszkári ariary",
-      "MKD": "Macedon dínár",
+      "MKD": "Macedón dénár",
       "MMK": "Mianmari kyat",
       "MNT": "Mongóliai tugrik",
       "MOP": "Makaói pataca",

@@ -26,7 +26,7 @@ class TlCurrenciesL10N extends IsoLocaleMapper<String> {
       "BMD": "Dolyar ng Bermuda",
       "BND": "Dolyar ng Brunei",
       "BOB": "Boliviano ng Bolivia",
-      "BRL": "Real ng Barzil",
+      "BRL": "Real ng Brazil",
       "BSD": "Dolyar ng Bahamas",
       "BTN": "Bhutanese Ngultrum",
       "BWP": "Botswanan Pula",

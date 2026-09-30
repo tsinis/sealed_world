@@ -7,7 +7,7 @@ class EnAuCurrenciesL10N extends IsoLocaleMapper<String> {
   /// Provides currency translations for the `en_AU` locale.
   EnAuCurrenciesL10N() {
     map.addAll({
-      "BAM": "Bosnia-Herzegovina Convertible Marka",
+      "BAM": "Bosnia-Herzegovina Convertible Mark",
       "BBD": "Barbados Dollar",
       "BMD": "Bermuda Dollar",
       "BOB": "Boliviano",

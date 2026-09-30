@@ -43,7 +43,7 @@ class YoBjCurrenciesL10N extends IsoLocaleMapper<String> {
       "SAR": "Riya ti Orílɛ́ède Saudi",
       "SCR": "Rupi ti Orílɛ́ède Sayiselesi",
       "SDG": "Dina ti Orílɛ́ède Sudani",
-      "SHP": "Pɔɔun ti Orílɛ́ède ̣Elena",
+      "SHP": "Pɔɔun ti Orílɛ́ède Elena",
       "SOS": "Sile ti Orílɛ́ède Somali",
       "STN": "Dobira ti Orílɛ́ède Sao tome Ati Pirisipe",
       "TND": "Dina ti Orílɛ́ède Tunisia",

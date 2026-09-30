@@ -72,7 +72,7 @@ class UrCurrenciesL10N extends IsoLocaleMapper<String> {
       "INR": "بھارتی روپیہ",
       "IQD": "عراقی دینار",
       "IRR": "ایرانی ریال",
-      "ISK": "آئس لينڈی کرونا",
+      "ISK": "آئس لینڈی کرونا",
       "JMD": "جمائیکن ڈالر",
       "JOD": "اردنی دینار",
       "JPY": "جاپانی ین",

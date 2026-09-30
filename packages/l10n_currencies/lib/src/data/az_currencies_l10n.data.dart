@@ -54,7 +54,7 @@ class AzCurrenciesL10N extends IsoLocaleMapper<String> {
       "EUR": "Avro",
       "FJD": "Fici Dolları",
       "FKP": "Folklend Adaları Funtu",
-      "GBP": "Britaniya Funt",
+      "GBP": "Britaniya Funtu",
       "GEL": "Gürcüstan Larisi",
       "GHS": "Qana Sedisi",
       "GIP": "Gibraltar Funtu",

@@ -35,7 +35,7 @@ class SrLatnCurrenciesL10N extends IsoLocaleMapper<String> {
       "CAD": "Kanadski dolar",
       "CDF": "Kongoanski franak",
       "CHF": "Švajcarski franak",
-      "CLF": "Čileovski unidades se fomento",
+      "CLF": "Čileovski unidades de fomento",
       "CLP": "Čileanski pezos",
       "CNY": "Kineski juan",
       "COP": "Kolumbijski pezos",

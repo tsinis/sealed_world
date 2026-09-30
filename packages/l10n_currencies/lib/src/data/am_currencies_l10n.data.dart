@@ -146,7 +146,7 @@ class AmCurrenciesL10N extends IsoLocaleMapper<String> {
       "TND": "የቱኒዚያ ዲናር",
       "TOP": "ቶንጋን ፓ’አንጋ",
       "TRY": "የቱርክ ሊራ",
-      "TTD": "የትሪንዳድ እና ቶቤጎዶላር",
+      "TTD": "የትሪንዳድ እና ቶቤጎ ዶላር",
       "TWD": "የአዲሷ ታይዋን ዶላር",
       "TZS": "የታንዛኒያ ሺሊንግ",
       "UAH": "የዩክሬን ሀሪይቭኒአ",

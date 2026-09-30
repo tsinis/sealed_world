@@ -61,7 +61,7 @@ class PtPtCurrenciesL10N extends IsoLocaleMapper<String> {
       "SRD": "Dólar do Suriname",
       "SZL": "Lilangeni da Suazilândia",
       "THB": "Baht da Tailândia",
-      "TJS": "Somoni do Tajaquistão",
+      "TJS": "Somoni do Tajiquistão",
       "TMT": "Manat do Turquemenistão",
       "TND": "Dinar tunisino",
       "TOP": "Paʻanga de Tonga",
