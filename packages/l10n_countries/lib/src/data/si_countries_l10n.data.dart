@@ -223,7 +223,7 @@ class SiCountriesL10N extends IsoLocaleMapper<String> {
       "SYC": "සීශෙල්ස්",
       "SYR": "සිරියාව",
       "TCA": "ටර්ක්ස් සහ කයිකොස් දූපත්",
-      "TCD": "චැච්",
+      "TCD": "චැඩ්",
       "TGO": "ටොගෝ",
       "THA": "තායිලන්තය",
       "TJK": "ටජිකිස්තානය",

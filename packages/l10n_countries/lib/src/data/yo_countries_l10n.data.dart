@@ -229,7 +229,7 @@ class YoCountriesL10N extends IsoLocaleMapper<String> {
       "TJK": "Orílẹ́ède Takisitani",
       "TKL": "Orílẹ́ède Tokelau",
       "TKM": "Orílẹ́ède Tọọkimenisita",
-      "TLS": "Orílẹ́ède ÌlàOòrùn Tímọ̀",
+      "TLS": "Orílẹ́ède Ìlà Oòrùn Tímọ̀",
       "TON": "Orílẹ́ède Tonga",
       "TTO": "Orílẹ́ède Tirinida ati Tobaga",
       "TUN": "Orílẹ́ède Tuniṣia",

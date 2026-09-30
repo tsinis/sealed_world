@@ -207,7 +207,7 @@ class BoCountriesL10N extends IsoLocaleMapper<String> {
       "VUT": "ཝ་ནུའ་ཏུ།",
       "WSM": "ནུ་བ་ས་མོ་འ།",
       "YEM": "ཡེ་མེན།",
-      "ZAF": "ལྷོ་ ཨཕྲི་ཀ།",
+      "ZAF": "ལྷོ་ཨཕྲི་ཀ།",
       "ZMB": "ཛམ་བི་ཡ།",
       "ZWE": "ཛིམ་བབ་ཝི།",
     });

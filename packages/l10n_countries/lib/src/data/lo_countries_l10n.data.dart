@@ -218,7 +218,7 @@ class LoCountriesL10N extends IsoLocaleMapper<String> {
       "SVK": "ສະໂລວາເກຍ",
       "SVN": "ສະໂລເວເນຍ",
       "SWE": "ສະວີເດັນ",
-      "SWZ": "​ເອ​ສະ​ວາ​ຕິ​ນີ",
+      "SWZ": "ເອສະວາຕິນີ",
       "SXM": "ຊິນ ມາເທັນ",
       "SYC": "ເຊເຊວເລສ",
       "SYR": "ຊີເຣຍ",

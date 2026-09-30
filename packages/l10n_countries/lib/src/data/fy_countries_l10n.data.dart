@@ -74,7 +74,7 @@ class FyCountriesL10N extends IsoLocaleMapper<String> {
       "DZA": "Algerije",
       "ECU": "Ekwador",
       "EGY": "Egypte",
-      "ERI": "Eritreä",
+      "ERI": "Eritrea",
       "ESH": "Westelijke Sahara",
       "ESP": "Spanje",
       "EST": "Estlân",

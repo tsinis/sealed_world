@@ -43,7 +43,7 @@ class YiCountriesL10N extends IsoLocaleMapper<String> {
       "CHE": "שווייץ",
       "CHL": "טשילע",
       "CHN": "כינע",
-      "CIV": "העלפֿאַ נדביין בארטן",
+      "CIV": "העלפֿאַנדביין בארטן",
       "CMR": "קאַמערון",
       "COD": "קאנגא־קינשאַזע",
       "COG": "רעפובליק פון קאנגא",

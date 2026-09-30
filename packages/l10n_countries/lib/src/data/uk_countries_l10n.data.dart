@@ -39,7 +39,7 @@ class UkCountriesL10N extends IsoLocaleMapper<String> {
       "BLZ": "Беліз",
       "BMU": "Бермудські Острови",
       "BOL": "Болівія",
-      "BRA": "Бразілія",
+      "BRA": "Бразилія",
       "BRB": "Барбадос",
       "BRN": "Бруней",
       "BTN": "Бутан",

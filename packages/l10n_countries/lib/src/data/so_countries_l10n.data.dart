@@ -70,7 +70,7 @@ class SoCountriesL10N extends IsoLocaleMapper<String> {
       "DJI": "Jabuuti",
       "DMA": "Dominika",
       "DNK": "Denmark",
-      "DOM": "Jamhuuriyaddda Dominika",
+      "DOM": "Jamhuuriyadda Dominika",
       "DZA": "Aljeeriya",
       "ECU": "Ikuwadoor",
       "EGY": "Masar",

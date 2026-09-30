@@ -189,7 +189,7 @@ class KuCountriesL10N extends IsoLocaleMapper<String> {
       "SVN": "Slovenya",
       "SWE": "Swêd",
       "SWZ": "Swazîlenda",
-      "SXM": "Sint Marteen",
+      "SXM": "Sint Maarten",
       "SYC": "Seyşel",
       "SYR": "Sûrî",
       "TCA": "Giravên Turk û Kaîkos",

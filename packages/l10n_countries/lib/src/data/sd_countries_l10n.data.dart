@@ -150,7 +150,7 @@ class SdCountriesL10N extends IsoLocaleMapper<String> {
       "MDG": "مداگيسڪر",
       "MDV": "مالديپ",
       "MEX": "ميڪسيڪو",
-      "MHL": "مارشل ڀيٽ",
+      "MHL": "مارشل ٻيٽ",
       "MKD": "شمالي مقدونيا",
       "MLI": "مالي",
       "MLT": "مالٽا",

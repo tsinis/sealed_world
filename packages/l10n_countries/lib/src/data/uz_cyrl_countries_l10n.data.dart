@@ -44,7 +44,7 @@ class UzCyrlCountriesL10N extends IsoLocaleMapper<String> {
       "BRN": "Бруней",
       "BTN": "Бутан",
       "BVT": "Буве ороли",
-      "BWA": "Ботсванна",
+      "BWA": "Ботсвана",
       "CAF": "Марказий Африка Республикаси",
       "CAN": "Канада",
       "CCK": "Кокос (Килинг) ороллари",
