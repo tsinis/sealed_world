@@ -133,7 +133,7 @@ class TkCurrenciesL10N extends IsoLocaleMapper<String> {
       "TND": "Tunis dinary",
       "TOP": "Tonga paangasy",
       "TRY": "Türk lirasy",
-      "TTD": "Trininad we Tobago dollary",
+      "TTD": "Trinidad we Tobago dollary",
       "TZS": "Tanzaniýa şillingi",
       "UAH": "Ukrain griwnasy",
       "UGX": "Uganda şillingi",

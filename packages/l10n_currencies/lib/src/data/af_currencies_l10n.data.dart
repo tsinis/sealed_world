@@ -26,7 +26,7 @@ class AfCurrenciesL10N extends IsoLocaleMapper<String> {
       "BMD": "Bermuda-dollar",
       "BND": "Broeneise dollar",
       "BOB": "Boliviaanse boliviano",
-      "BRL": "Brasilliaanse reaal",
+      "BRL": "Brasiliaanse reaal",
       "BSD": "Bahamiaanse dollar",
       "BTN": "Bhoetanese ngoeltroem",
       "BWP": "Botswana pula",

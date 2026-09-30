@@ -125,7 +125,7 @@ class HrCurrenciesL10N extends IsoLocaleMapper<String> {
       "RUB": "Ruski rubalj",
       "RWF": "Ruandski franak",
       "SAR": "Saudijski rial",
-      "SBD": "Solmonskootočni dolar",
+      "SBD": "Solomonskootočni dolar",
       "SCR": "Sejšelska rupija",
       "SDG": "Sudanska funta",
       "SEK": "Švedska kruna",

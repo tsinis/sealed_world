@@ -55,10 +55,10 @@ class AkCurrenciesL10N extends IsoLocaleMapper<String> {
       "UGX": "Uganda Hyelen",
       "USD": "Amɛrika Dɔla",
       "XAF": "Sefa",
-      "XCG": "Karibiafoᴐ giida",
+      "XCG": "Karibiafoɔ giida",
       "ZAR": "Afrika Anaafo Rand",
       "ZMW": "Zambia Kwacha",
-      "ZWG": "Zimbabwe sika kᴐkᴐᴐ",
+      "ZWG": "Zimbabwe sika kɔkɔɔ",
     });
   }
 }

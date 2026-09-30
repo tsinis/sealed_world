@@ -117,7 +117,7 @@ class MiCurrenciesL10N extends IsoLocaleMapper<String> {
       "SGD": "Tāra Hingapoa",
       "SHP": "Pāuna Hato Herena",
       "SLE": "Leone Araone",
-      "SLL": "Leone Araon (1964—2022)e",
+      "SLL": "Leone Araone (1964—2022)",
       "SOS": "Hereni Hūmārie",
       "SRD": "Tāra Huriname",
       "SSP": "Pāuna Hūtāne Tonga",

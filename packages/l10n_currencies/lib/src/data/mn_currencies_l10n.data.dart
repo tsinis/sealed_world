@@ -26,7 +26,7 @@ class MnCurrenciesL10N extends IsoLocaleMapper<String> {
       "BMD": "Бермуд доллар",
       "BND": "Бруней доллар",
       "BOB": "Боливи боливиано",
-      "BRL": "Бразилийн рил",
+      "BRL": "Бразилийн реал",
       "BSD": "Багам доллар",
       "BTN": "Бутаны нгултрум",
       "BWP": "Ботсвани пула",
@@ -167,7 +167,7 @@ class MnCurrenciesL10N extends IsoLocaleMapper<String> {
       "ZAR": "Өмнөд африкийн ранд",
       "ZMW": "Замби квача",
       "ZWG": "Зимбабвегийн гоулд",
-      "ZWL": "Замбабив доллар",
+      "ZWL": "Зимбабвегийн доллар",
     });
   }
 }

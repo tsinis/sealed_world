@@ -130,7 +130,7 @@ class LvCurrenciesL10N extends IsoLocaleMapper<String> {
       "SDG": "Sudānas mārciņa",
       "SEK": "Zviedrijas krona",
       "SGD": "Singapūras dolārs",
-      "SHP": "Sv.Helēnas salas mārciņa",
+      "SHP": "Sv. Helēnas salas mārciņa",
       "SLE": "Sjerraleones leone",
       "SLL": "Sjerraleones leone",
       "SOS": "Somālijas šiliņš",

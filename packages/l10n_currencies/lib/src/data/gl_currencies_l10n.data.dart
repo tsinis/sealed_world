@@ -23,7 +23,7 @@ class GlCurrenciesL10N extends IsoLocaleMapper<String> {
       "BGN": "Lev búlgaro",
       "BHD": "Dinar de Bahrain",
       "BIF": "Franco burundiano",
-      "BMD": "Dólar das Bemudas",
+      "BMD": "Dólar das Bermudas",
       "BND": "Dólar de Brunei",
       "BOB": "Boliviano",
       "BRL": "Real brasileiro",
