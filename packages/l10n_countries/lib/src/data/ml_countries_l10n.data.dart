@@ -77,7 +77,7 @@ class MlCountriesL10N extends IsoLocaleMapper<String> {
       "ERI": "എറിത്രിയ",
       "ESH": "പശ്ചിമ സഹാറ",
       "ESP": "സ്‌പെയിൻ",
-      "EST": "എസ്റ്റോണിയ‍",
+      "EST": "എസ്റ്റോണിയ",
       "ETH": "എത്യോപ്യ",
       "FIN": "ഫിൻലാൻഡ്",
       "FJI": "ഫിജി",

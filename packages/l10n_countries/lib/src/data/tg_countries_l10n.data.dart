@@ -53,7 +53,7 @@ class TgCountriesL10N extends IsoLocaleMapper<String> {
       "CIV": "Кот-д’Ивуар",
       "CMR": "Камерун",
       "COD": "Конго (ҶДК)",
-      "COG": "Ҷумҳӯрии Конго",
+      "COG": "Ҷумҳурии Конго",
       "COK": "Ҷазираҳои Кук",
       "COL": "Колумбия",
       "COM": "Комор",

@@ -122,7 +122,7 @@ class HaCountriesL10N extends IsoLocaleMapper<String> {
       "JAM": "Jamaika",
       "JEY": "Kasar Jersey",
       "JOR": "Jordan",
-      "JPN": "Jàpân",
+      "JPN": "Japan",
       "KAZ": "Kazakistan",
       "KEN": "Kenya",
       "KGZ": "Kirgizistan",

@@ -48,7 +48,7 @@ class EnCountriesL10N extends IsoLocaleMapper<String> {
       "BEN": "Benin",
       "BEN+": "Republic of Benin",
       "BES": "Caribbean Netherlands",
-      "BES+": "Bonaire, Sint Eust,atius and Saba",
+      "BES+": "Bonaire, Sint Eustatius and Saba",
       "BFA": "Burkina Faso",
       "BFA+": "Burkina Faso",
       "BGD": "Bangladesh",

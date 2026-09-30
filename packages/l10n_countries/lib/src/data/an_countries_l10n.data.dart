@@ -62,7 +62,7 @@ class AnCountriesL10N extends IsoLocaleMapper<String> {
       "CRI": "Costa Rica",
       "CUB": "Cuba",
       "CUW": "Curaçao",
-      "CXR": "Isla Chirstmas",
+      "CXR": "Isla Christmas",
       "CYM": "Islas Caimán",
       "CYP": "Chipre",
       "CZE": "Republica Checa",

@@ -245,7 +245,7 @@ class BsCountriesL10N extends IsoLocaleMapper<String> {
       "USA": "Sjedinjene Države",
       "UZB": "Uzbekistan",
       "VAT": "Vatikan",
-      "VCT": "Sveti Vinsent i Grenadin",
+      "VCT": "Sveti Vinsent i Grenadini",
       "VEN": "Venecuela",
       "VGB": "Britanska Djevičanska ostrva",
       "VIR": "Američka Djevičanska ostrva",

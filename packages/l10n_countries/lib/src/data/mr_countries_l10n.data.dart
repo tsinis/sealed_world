@@ -33,7 +33,7 @@ class MrCountriesL10N extends IsoLocaleMapper<String> {
       "BGR": "बल्गेरिया",
       "BHR": "बहारीन",
       "BHS": "बहामाज",
-      "BIH": "बोस्निया अणि हर्जेगोविना",
+      "BIH": "बोस्निया आणि हर्जेगोविना",
       "BLM": "सेंट बार्थेलेमी",
       "BLR": "बेलारूस",
       "BLZ": "बेलिझे",

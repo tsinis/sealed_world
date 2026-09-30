@@ -61,7 +61,7 @@ class IsCountriesL10N extends IsoLocaleMapper<String> {
       "CPV": "Grænhöfðaeyjar",
       "CRI": "Kostaríka",
       "CUB": "Kúba",
-      "CUW": "Curacao",
+      "CUW": "Curaçao",
       "CXR": "Jólaey",
       "CYM": "Caymaneyjar",
       "CYP": "Kýpur",

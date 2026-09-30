@@ -222,7 +222,7 @@ class AsCountriesL10N extends IsoLocaleMapper<String> {
       "SXM": "চিণ্ট মাৰ্টেন",
       "SYC": "ছিচিলিছ",
       "SYR": "চিৰিয়া",
-      "TCA": "টাৰ্কছ অৰু কেইক’ছ দ্বীপপুঞ্জ",
+      "TCA": "টাৰ্কছ আৰু কেইক’ছ দ্বীপপুঞ্জ",
       "TCD": "চাড",
       "TGO": "টোগো",
       "THA": "থাইলেণ্ড",

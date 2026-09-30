@@ -164,7 +164,7 @@ class MsCountriesL10N extends IsoLocaleMapper<String> {
       "MTQ": "Martinique",
       "MUS": "Mauritius",
       "MWI": "Malawi",
-      "MYS": "Maleisië",
+      "MYS": "Malaysia",
       "MYT": "Mayotte",
       "NAM": "Namibia",
       "NCL": "New Caledonia",

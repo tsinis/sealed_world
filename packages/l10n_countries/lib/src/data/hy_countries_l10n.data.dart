@@ -240,7 +240,7 @@ class HyCountriesL10N extends IsoLocaleMapper<String> {
       "UGA": "Ուգանդա",
       "UKR": "Ուկրաինա",
       "UMI": "Արտաքին կղզիներ (ԱՄՆ)",
-      "UNK": "Կոսովոն",
+      "UNK": "Կոսովո",
       "URY": "Ուրուգվայ",
       "USA": "Միացյալ Նահանգներ",
       "UZB": "Ուզբեկստան",

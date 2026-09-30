@@ -167,7 +167,7 @@ class GuCountriesL10N extends IsoLocaleMapper<String> {
       "MYS": "મલેશિયા",
       "MYT": "મેયોટ",
       "NAM": "નામિબિયા",
-      "NCL": "ન્યુ સેલેડોનિયા",
+      "NCL": "ન્યુ કેલેડોનિયા",
       "NER": "નાઇજર",
       "NFK": "નોરફોક આઇલેન્ડ્સ",
       "NGA": "નાઇજેરિયા",

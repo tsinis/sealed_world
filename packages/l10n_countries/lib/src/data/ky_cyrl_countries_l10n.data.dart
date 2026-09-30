@@ -25,7 +25,7 @@ class KyCyrlCountriesL10N extends IsoLocaleMapper<String> {
       "NCL": "Жаӊы Каледония",
       "NLD": "Нидерланддар",
       "NZL": "Жаӊы Зеландия",
-      "PHL": "Филлипин",
+      "PHL": "Филиппин",
       "PNG": "Папуа Жаңы-Гвинея",
       "PYF": "Француз Полинезиясы",
       "REU": "Реюнион",
