@@ -1,3 +1,28 @@
+## 3.4.1
+
+FIX
+
+- `FiatCurrency.copyWith` now resets `symbol` to `null` when an empty string is passed, as documented for nullable `String` fields (and as `CryptoCurrency.copyWith` already does). Previously, it failed on the constructor assertion.
+
+Inherited from `sealed_languages` 3.4.1:
+
+- `UpperCaseIsoMapExtension.copyWith` no longer throws a `StateError` when both the original and the `other` maps are empty.
+- `namesCommonNative` now returns `orElse` (when used together with `skipFirst`) for empty or `null` `namesNative`, as documented.
+- ISO code lookups reuse cached `RegExp` instances, and `fromEnums`/`toEnums` remove duplicates in linear time.
+
+DOCUMENTATION
+
+- Fixed the `addUnit` documentation: `unitFirst` is `false` by default.
+- The `FiatCurrency.copyWith` documentation now describes how to reset nullable fields.
+
+TEST
+
+- Added a test for resetting the `FiatCurrency` symbol via `copyWith`.
+
+CHORE
+
+- Updated `sealed_languages` dependency to v3.4.1.
+
 ## 3.4.0
 
 IMPROVEMENTS
