@@ -2,6 +2,7 @@
 
 FIX
 
+- Fix reversed letters in the IQD and LYD symbols.
 - `FiatCurrency.copyWith` now resets `symbol` to `null` when an empty string is passed, as documented for nullable `String` fields (and as `CryptoCurrency.copyWith` already does). Previously, it failed on the constructor assertion.
 
 Inherited from `sealed_languages` 3.4.1:

@@ -17,7 +17,7 @@ final class FiatIqd extends FiatCurrency {
     : super(
         code: "IQD",
         name: "Iraqi Dinar",
-        symbol: "ع.د",
+        symbol: "د.ع",
         codeNumeric: "368",
         namesNative: const ["دينار عراقي"],
         smallestDenomination: 50000,
