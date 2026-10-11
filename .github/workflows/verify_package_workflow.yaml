@@ -26,7 +26,7 @@ jobs:
       run:
         working-directory: ${{ env.relative_path }}
 
-    runs-on: "ubuntu-latest"
+    runs-on: ubuntu-26.04 # gleon (golden tests) supports Ubuntu 26.04+
     timeout-minutes: 20
 
     steps:
