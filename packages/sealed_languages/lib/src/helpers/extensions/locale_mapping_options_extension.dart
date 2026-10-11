@@ -16,6 +16,7 @@ extension LocaleMappingOptionsExtension<T extends Object>
   /// - [localizeFullNames]: New flag for full names localization.
   /// - [mainLocale]: New main locale.
   /// - [useLanguageFallback]: New flag for language fallback.
+  /// - [formatter]: New function to customize localized string formatting.
   ///
   /// Returns a new [LocaleMappingOptions] instance with the specified changes.
   LocaleMappingOptions<T> copyWith({

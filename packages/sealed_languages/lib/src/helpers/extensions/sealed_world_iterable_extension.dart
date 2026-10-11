@@ -111,12 +111,12 @@ extension SealedWorldNullableIterableIsoExtension<T extends IsoStandardized>
   /// }
   /// ```
   List<T> fromEnums<E extends Enum>(Iterable<E> values) {
-    if (values.isEmpty || this?.isEmpty == true) return const [];
+    if (values.isEmpty || (this?.isEmpty ?? true)) return const [];
 
-    final result = <T>[];
+    final result = <T>{};
     for (final value in values) {
-      final i = _firstIsoWhereEnum(value);
-      if (i != null && !result.contains(i)) result.add(i);
+      final iso = _firstIsoWhereEnum(value);
+      if (iso != null) result.add(iso);
     }
 
     return List<T>.unmodifiable(result);
@@ -147,11 +147,11 @@ extension SealedWorldNullableIterableIsoExtension<T extends IsoStandardized>
   /// }
   /// ```
   List<E> toEnums<E extends Enum>(Iterable<E> values) {
-    if (values.isEmpty || this?.isEmpty == true) return const [];
+    if (values.isEmpty || (this?.isEmpty ?? true)) return const [];
 
-    final result = <E>[];
-    for (final i in values) {
-      if (_firstIsoWhereEnum(i) != null && !result.contains(i)) result.add(i);
+    final result = <E>{};
+    for (final value in values) {
+      if (_firstIsoWhereEnum(value) != null) result.add(value);
     }
 
     return List<E>.unmodifiable(result);
@@ -196,16 +196,17 @@ extension SealedWorldNullableIterableIsoExtension<T extends IsoStandardized>
   );
 
   /// The first [IsoStandardized] element satisfying [test], or `null` if there
-  /// are none. If [assertNotEmpty] is set to `true` (default to `false`),
-  /// then an [AssertionError] is thrown if the collection is empty.
+  /// are none. If [assertNotEmpty] is set to `true` (default), then an
+  /// [AssertionError] is thrown if the collection is empty.
   T? firstIsoWhereOrNull(
     bool Function(T iso) test, {
     bool assertNotEmpty = true,
   }) {
-    if (this == null) return null;
-    if (assertNotEmpty) this?.assertNotEmpty();
+    final items = this;
+    if (items == null) return null;
+    if (assertNotEmpty) items.assertNotEmpty();
 
-    for (final item in this ?? <T>[]) {
+    for (final item in items) {
       if (test(item)) return item;
     }
 

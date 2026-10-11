@@ -17,13 +17,11 @@ extension IsoTranslatedNamesExtension on IsoTranslated {
     bool skipFirst = false,
     String? orElse,
   }) {
-    if (namesNative?.isEmpty ?? true) return "";
-    final names = namesNative?.map((i) => i.toString()).toList() ?? const [];
-    final length = names.length;
-    if (orElse != null && skipFirst && length < 2) return orElse;
-    // ignore: avoid-passing-self-as-argument, length is checked.
-    if (skipFirst && length > 1) names.remove(names.first);
+    final names = namesNative;
+    if (names == null || names.isEmpty) return "";
+    final hasMany = names.length > 1;
+    if (skipFirst && !hasMany && orElse != null) return orElse;
 
-    return names.join(separator);
+    return names.skip(skipFirst && hasMany ? 1 : 0).join(separator);
   }
 }
