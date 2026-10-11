@@ -7,7 +7,7 @@ import "../../../model/country/submodels/car.dart";
 extension CarExtension on Car {
   /// {@macro copy_with_method}
   Car copyWith({bool? isRightSide, String? sign}) => Car(
-    sign: sign ?? this.sign,
+    sign: (sign?.isEmpty ?? false) ? null : (sign ?? this.sign),
     isRightSide: isRightSide ?? this.isRightSide,
   );
 

@@ -17,12 +17,12 @@ extension WorldCountryNames on WorldCountry {
     bool skipFirst = false,
     String? orElse,
   }) {
-    final names = namesNative.map((i) => i.official).toList();
-    final length = names.length;
-    if (orElse != null && skipFirst && length < 2) return orElse;
-    // ignore: avoid-passing-self-as-argument, length is checked.
-    if (skipFirst && length > 1) names.remove(names.first);
+    final hasMany = namesNative.length > 1;
+    if (skipFirst && !hasMany && orElse != null) return orElse;
 
-    return names.join(separator);
+    return namesNative
+        .skip(skipFirst && hasMany ? 1 : 0)
+        .map((name) => name.official)
+        .join(separator);
   }
 }

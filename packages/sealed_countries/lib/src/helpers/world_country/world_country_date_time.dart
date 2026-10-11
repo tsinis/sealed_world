@@ -62,8 +62,10 @@ extension WorldCountryDateTime on WorldCountry {
   /// from UTC and whether the offset is to be added to UTC or subtracted from
   /// it. Returns an unmodifiable list of [UtcDurationDifference] objects, each
   /// of which contains the duration offset and a boolean indicating whether it
-  /// is to be added to or subtracted from UTC. If the length of the [timezones]
-  /// list is 0 or if any of the timezones are invalid, returns an empty list.
+  /// is to be added to or subtracted from UTC. If the [timezones] list is
+  /// empty, returns an empty list. Parsing stops at the first invalid
+  /// timezone, so only the durations of the preceding valid timezones are
+  /// returned.
   List<UtcDurationDifference> get tzUtcDurations {
     final elements = List<UtcDurationDifference>.empty(growable: true);
 

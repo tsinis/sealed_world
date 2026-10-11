@@ -76,7 +76,7 @@ extension WorldCountryCopyWith<T extends WorldCountry> on T {
     tld: tld ?? this.tld,
     mapper: mapper ?? l10n.mapper,
     demonyms: demonyms ?? this.demonyms,
-    currencies: currencies != null && currencies.isEmpty
+    currencies: (currencies?.isEmpty ?? false)
         ? null
         : (currencies ?? this.currencies),
     capitalInfo: capitalInfo ?? this.capitalInfo,

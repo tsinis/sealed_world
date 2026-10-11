@@ -19,5 +19,12 @@ void main() => group("CarExtension", () {
       expect(copy.sign, isNull);
       expect(copy.isRightSide, value.isRightSide);
     });
+
+    test("should reset sign to null with empty string", () {
+      const withSign = Car(sign: TestData.string);
+      final copy = withSign.copyWith(sign: "");
+      expect(copy.sign, isNull);
+      expect(copy.isRightSide, withSign.isRightSide);
+    });
   });
 });

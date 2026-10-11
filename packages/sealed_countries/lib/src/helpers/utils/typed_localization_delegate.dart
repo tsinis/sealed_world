@@ -10,9 +10,11 @@ import "../../model/locale/basic_typed_locale.dart";
 /// entities localization without extending the base locale functionality.
 class TypedLocalizationDelegate
     extends BasicLocalizationDelegate<BasicTypedLocale, TranslatedName> {
-  /// Creates a [LocalizationDelegate] instance.
+  /// Creates a [TypedLocalizationDelegate] instance.
   ///
-  /// Parameters are passed directly to [BasicLocalizationDelegate]:
+  /// - [countries]: Optional collection of supported countries.
+  ///
+  /// Other parameters are passed directly to [BasicLocalizationDelegate]:
   /// - [languages]: Optional collection of supported languages.
   /// - [scripts]: Optional collection of supported scripts.
   /// - [mapper]: Optional function that returns locale mapping function.
