@@ -38,6 +38,7 @@ federace
 ffaabbcc
 français
 française
+gleon
 GLES
 inglés
 islas

@@ -75,8 +75,11 @@ extension UpperCaseIsoMapExtension<V extends IsoStandardized>
   /// import 'package:sealed_languages/sealed_languages.dart';
   ///
   /// void main() {
-  ///   const map = UpperCaseIsoMap({'ENG': LangEng()}, exactLength: null);
-  ///   final copy = map.copyWith({' fra ': LangFra(), 'de': LangDeu()});
+  ///   const map = UpperCaseIsoMap<NaturalLanguage>(
+  ///     {'ENG': LangEng()},
+  ///     exactLength: null,
+  ///   );
+  ///   final copy = map.copyWith(const {' fra ': LangFra(), 'de': LangDeu()});
   ///
   ///   assert(copy['eng'] == const LangEng(), 'should be LangEng');
   ///   assert(copy['FRA'] == const LangFra(), 'should be LangFra');
