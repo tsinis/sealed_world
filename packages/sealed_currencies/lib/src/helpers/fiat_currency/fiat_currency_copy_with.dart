@@ -5,11 +5,7 @@ import "../../model/currency/submodels/fiat_currency.dart";
 /// Extension on [FiatCurrency] that provides a `copyWith` method for
 /// creating a new instance of [FiatCurrency] with updated properties.
 extension FiatCurrencyCopyWith<T extends FiatCurrency> on T {
-  /// Creates a new instance of [FiatCurrency] with updated properties.
-  ///
-  /// The optional named parameters can be used to specify new values for the
-  /// corresponding properties. If a named parameter is not provided, the
-  /// corresponding property is copied from the original instance.
+  /// {@macro copy_with_method}
   ///
   /// Example usage:
   ///
@@ -47,7 +43,7 @@ extension FiatCurrencyCopyWith<T extends FiatCurrency> on T {
     namesNative: namesNative ?? this.namesNative,
     codeNumeric: codeNumeric ?? this.codeNumeric,
     mapper: mapper ?? l10n.mapper,
-    alternateSymbols: alternateSymbols != null && alternateSymbols.isEmpty
+    alternateSymbols: (alternateSymbols?.isEmpty ?? false)
         ? null
         : (alternateSymbols ?? this.alternateSymbols),
     disambiguateSymbol: (disambiguateSymbol?.isEmpty ?? false)
@@ -61,7 +57,7 @@ extension FiatCurrencyCopyWith<T extends FiatCurrency> on T {
     subunit: (subunit?.isEmpty ?? false) ? null : (subunit ?? this.subunit),
     subunitToUnit: subunitToUnit ?? this.subunitToUnit,
     unitFirst: unitFirst ?? this.unitFirst,
-    symbol: symbol ?? this.symbol,
+    symbol: (symbol?.isEmpty ?? false) ? null : (symbol ?? this.symbol),
     decimalMark: decimalMark ?? this.decimalMark,
     thousandsSeparator: thousandsSeparator ?? this.thousandsSeparator,
   );

@@ -17,8 +17,7 @@ extension IsoTranslatedNamesExtension on IsoTranslated {
     bool skipFirst = false,
     String? orElse,
   }) {
-    final names = namesNative;
-    if (names == null || names.isEmpty) return "";
+    final names = namesNative ?? const [];
     final hasMany = names.length > 1;
     if (skipFirst && !hasMany && orElse != null) return orElse;
 

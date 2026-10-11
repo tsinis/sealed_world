@@ -1,4 +1,5 @@
 import "package:sealed_currencies/src/helpers/fiat_currency/fiat_currency_copy_with.dart";
+import "package:sealed_currencies/src/helpers/fiat_currency/fiat_currency_getters.dart";
 import "package:sealed_currencies/src/model/currency/submodels/fiat_currency.dart";
 import "package:test/test.dart";
 
@@ -50,6 +51,13 @@ void main() => group("FiatCurrencyCopyWith", () {
     final copy = withHtml.copyWith(htmlEntity: "");
     expect(copy.htmlEntity, isNull);
     expect(copy.code, withHtml.code);
+  });
+
+  test("copyWith should reset symbol to null with empty string", () {
+    final withSymbol = FiatCurrency.list.firstWhere((i) => i.symbol != null);
+    final copy = withSymbol.copyWith(symbol: "");
+    expect(copy.symbol, isNull);
+    expect(copy.unit, withSymbol.code);
   });
 
   test("copyWith should reset nullable List field to null with empty list", () {

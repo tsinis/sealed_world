@@ -18,8 +18,8 @@ extension FiatCurrencyFormat on FiatCurrency {
 
   /// Adds the currency unit to a value.
   ///
-  /// If [unitFirst] is `true` (default), the currency unit is added before the
-  /// value, otherwise it is added after the value.
+  /// If [unitFirst] is `true`, the currency unit is added before the value,
+  /// otherwise (default) it is added after the value.
   ///
   /// When [isRtl] is `true`, the unit position is flipped to ensure correct
   /// display in right-to-left locales.
