@@ -10,7 +10,10 @@ import "../../model/country/country.dart";
 extension IsoStandardizedWorldCountryExtension on IsoStandardized? {
   /// Pattern-matching helper for ISO types.
   ///
-  /// Returns the result of the first matching callback or `null` if none match.
+  /// Returns the result of the callback matching the type of this object. If
+  /// there is no such callback (or it returns `null`), the result of [orElse]
+  /// is returned instead. The [orElse] callback is invoked lazily, only when
+  /// needed. Returns `null` if this object is `null`.
   T? mapWhenOrNull<T extends Object>({
     T? Function(WorldCountry country)? country,
     T? Function(FiatCurrency currency)? currency,
@@ -19,15 +22,16 @@ extension IsoStandardizedWorldCountryExtension on IsoStandardized? {
     T? Function(IsoStandardized iso)? orElse,
   }) {
     final iso = this;
-
     if (iso == null) return null;
-    final elseResult = orElse?.call(iso);
 
-    if (iso is WorldCountry) return country?.call(iso) ?? elseResult;
-    if (iso is FiatCurrency) return currency?.call(iso) ?? elseResult;
-    if (iso is NaturalLanguage) return language?.call(iso) ?? elseResult;
-    if (iso is Script) return script?.call(iso) ?? elseResult;
+    final result = switch (iso) {
+      final WorldCountry value => country?.call(value),
+      final FiatCurrency value => currency?.call(value),
+      final NaturalLanguage value => language?.call(value),
+      final Script value => script?.call(value),
+      _ => null,
+    };
 
-    return elseResult;
+    return result ?? orElse?.call(iso);
   }
 }

@@ -36,6 +36,8 @@ extension GiniExtension on Gini {
   Map<String, num> toMap() => {"coefficient": coefficient, "year": year};
 
   /// {@macro from_map_method}
-  static Gini fromMap(JsonMap map) =>
-      Gini(year: map["year"] as int, coefficient: map["coefficient"] as double);
+  static Gini fromMap(JsonMap map) => Gini(
+    year: map["year"] as int,
+    coefficient: (map["coefficient"] as num).toDouble(),
+  );
 }

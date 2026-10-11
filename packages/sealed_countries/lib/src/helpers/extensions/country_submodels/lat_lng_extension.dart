@@ -1,3 +1,5 @@
+// ignore_for_file: avoid-type-casts
+
 import "package:sealed_currencies/sealed_currencies.dart";
 
 import "../../../model/country/submodels/lat_lng.dart";
@@ -13,7 +15,8 @@ extension LatLngExtension on LatLng {
   Map<String, double> toMap() => {"latitude": latitude, "longitude": longitude};
 
   /// {@macro from_map_method}
-  static LatLng fromMap(JsonMap map) =>
-      // ignore: avoid-type-casts, it's JSON map.
-      LatLng(map["latitude"] as double, map["longitude"] as double);
+  static LatLng fromMap(JsonMap map) => LatLng(
+    (map["latitude"] as num).toDouble(),
+    (map["longitude"] as num).toDouble(),
+  );
 }

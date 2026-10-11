@@ -73,6 +73,24 @@ void main() => group("IsoStandardizedWorldCountryExtension", () {
       expect(result, "script:Latn");
     });
 
+    test("does not invoke orElse if matching callback returns value", () {
+      final orElseCalls = <IsoStandardized>[];
+      final result = script.mapWhenOrNull(
+        script: (iso) => iso.code,
+        orElse: (iso) => (orElseCalls..add(iso)).toString(),
+      );
+      expect(result, "Latn");
+      expect(orElseCalls, isEmpty);
+    });
+
+    test("returns orElse value if matching callback returns null", () {
+      final result = script.mapWhenOrNull<String>(
+        script: (_) => null,
+        orElse: (iso) => "orElse:${iso.code}",
+      );
+      expect(result, "orElse:Latn");
+    });
+
     test("returns null for null instance", () {
       expect(
         nullValue.mapWhenOrNull(

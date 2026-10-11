@@ -37,6 +37,24 @@ void main() => group("IsoTranslatedNamesExtension", () {
       expect(nullNameLanguage.namesCommonNative(), "");
     });
 
+    test("empty or null namesNative with skipFirst and orElse", () {
+      const fallback = "Fallback";
+      expect(
+        const _MockLanguageWithEmptyNames().namesCommonNative(
+          skipFirst: true,
+          orElse: fallback,
+        ),
+        fallback,
+      );
+      expect(
+        const _MockLanguageWithNullNames().namesCommonNative(
+          skipFirst: true,
+          orElse: fallback,
+        ),
+        fallback,
+      );
+    });
+
     test("duplicate names with default separator", () {
       const duplicateLanguage = _MockLanguageWithDuplicateNames();
       expect(duplicateLanguage.namesCommonNative(), "Mock/Mock/Test");

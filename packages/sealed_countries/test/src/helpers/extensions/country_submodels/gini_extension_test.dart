@@ -22,4 +22,19 @@ void main() => group("GiniExtension", () {
       expect(copy.coefficient, value.coefficient);
     });
   });
+
+  group("fromMap", () {
+    test("round-trips toMap output", () {
+      expect(GiniExtension.fromMap(value.toMap()), value);
+    });
+
+    test("accepts integer coefficient", () {
+      final gini = GiniExtension.fromMap(const {
+        "coefficient": 32,
+        "year": year,
+      });
+      expect(gini.coefficient, 32.0);
+      expect(gini.year, year);
+    });
+  });
 });

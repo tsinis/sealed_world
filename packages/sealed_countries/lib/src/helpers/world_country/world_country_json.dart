@@ -27,9 +27,10 @@ import "world_country_copy_with.dart";
 extension WorldCountryJson on WorldCountry {
   /// {@macro to_map_method}
   JsonObjectMap toMap() {
-    final encodedBlocs = jsonEncode(
-      regionalBlocs?.map((rb) => rb.acronym).toList(growable: false) ?? [],
-    );
+    final blocs = regionalBlocs;
+    final encodedBlocs = blocs == null || blocs.isEmpty
+        ? null
+        : jsonEncode(blocs.map((rb) => rb.acronym).toList(growable: false));
 
     return {
       "altSpellings": altSpellings,
@@ -60,7 +61,7 @@ extension WorldCountryJson on WorldCountry {
           .toList(growable: false),
       "population": population,
       "postalCode": ?postalCode?.toMap(),
-      "regionalBlocs": ?(encodedBlocs.isEmpty ? null : encodedBlocs),
+      "regionalBlocs": ?encodedBlocs,
       "startOfWeek": startOfWeek.toMap(),
       "subregion": ?subregion?.name,
       "timezones": timezones,
@@ -89,7 +90,7 @@ extension WorldCountryJson on WorldCountry {
     ).copyWith(
       name: CountryNameExtension.fromMap(map["name"] as JsonMap),
       altSpellings: List<String>.unmodifiable(map["altSpellings"] as List),
-      areaMetric: map["areaMetric"] as double?,
+      areaMetric: (map["areaMetric"] as num?)?.toDouble(),
       continent: Continent.maybeFromValue(map["continent"]),
       emoji: map["emoji"]?.toString(),
       idd: IddExtension.fromMap(map["idd"] as JsonMap),

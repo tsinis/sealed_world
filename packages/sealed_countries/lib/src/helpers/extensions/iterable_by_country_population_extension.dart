@@ -37,17 +37,18 @@ extension IterableByCountryPopulationExtension<T extends IsoStandardized>
   ///    associations
   /// 3. **Official Mapping**: For each country, extract associated items using
   ///    [itemsForCountry]
-  /// 4. **Unofficial Addition**: Add countries from [unofficialMap] at the
-  ///    beginning of the list if they're not already included.
+  /// 4. **Unofficial Addition**: Add countries from [unofficialMap] (in their
+  ///    original order) at the beginning of the list, official countries that
+  ///    are already included this way are not duplicated.
   Map<T, List<WorldCountry>> byPopulationCountryMap(
     Iterable<T>? Function(WorldCountry country) itemsForCountry,
     Map<T, Iterable<WorldCountry>> unofficialMap, {
     required Iterable<WorldCountry> countries,
     Map<T, Iterable<WorldCountry>> custom = const {},
   }) {
-    final map = <T, List<WorldCountry>>{};
     final sortedCountries = List.of(countries)
       ..sort((a, b) => b.population.compareTo(a.population));
+    final map = <T, List<WorldCountry>>{};
 
     for (final item in this) {
       final customValue = custom[item];
@@ -57,22 +58,11 @@ extension IterableByCountryPopulationExtension<T extends IsoStandardized>
         continue;
       }
 
-      map[item] ??= const <WorldCountry>[];
-      for (final country in sortedCountries) {
-        final existing = map[item] ?? const [];
-        if (existing.contains(country)) continue;
-
-        final items = itemsForCountry(country);
-        if (items == null || items.isEmpty) continue;
-        if (items.contains(item)) {
-          map[item] = [...existing, country];
-        } else {
-          final unofficialCountries = unofficialMap[item] ?? const [];
-          for (final unoff in unofficialCountries) {
-            if (!existing.contains(unoff)) map[item] = [unoff, ...existing];
-          }
-        }
-      }
+      final official = sortedCountries.where(
+        (country) => itemsForCountry(country)?.contains(item) ?? false,
+      );
+      // LinkedHashSet keeps the insertion order and removes duplicates.
+      map[item] = {...?unofficialMap[item], ...official}.toList();
     }
 
     return Map.unmodifiable(map);

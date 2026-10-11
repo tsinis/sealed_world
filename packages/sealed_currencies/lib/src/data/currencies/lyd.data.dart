@@ -17,7 +17,7 @@ final class FiatLyd extends FiatCurrency {
     : super(
         code: "LYD",
         name: "Libyan Dinar",
-        symbol: "ل.د",
+        symbol: "د.ل",
         alternateSymbols: const ["LD"],
         codeNumeric: "434",
         namesNative: const ["دينار ليبي"],

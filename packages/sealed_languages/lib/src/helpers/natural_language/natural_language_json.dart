@@ -1,6 +1,5 @@
 // ignore_for_file: avoid-type-casts
 
-import "../../interfaces/json_encodable.dart";
 import "../../model/language/submodels/natural_language.dart";
 import "../../model/language_family/submodels/natural_language_family.dart";
 import "../../model/script/submodels/script.dart";
@@ -14,18 +13,21 @@ extension NaturalLanguageJson on NaturalLanguage {
   /// Creates a new instance of [NaturalLanguage] from a JSON map.
   ///
   /// The [map] parameter is a JSON map that contains the properties of the
-  /// [NaturalLanguage] object. The map must contain the following keys:
+  /// [NaturalLanguage] object. The map can contain the following keys:
   ///
-  /// - `"name"`: Required. A string that represents the name of the language.
-  /// - `"code"`: Required. A string that represents the ISO 639-1 code of the
-  ///   language.
-  /// - `"codeShort"`: Required. A string that represents the short code of the
-  ///   language.
-  /// - `"namesNative"`: Required. A string that represents the native names
-  ///    of the language, separated by the [JsonEncodable.separator] character.
+  /// - `"code"`: A string that represents the ISO 639-2/T (three-letter) code
+  ///   of the language. Either this or `"codeShort"` must be provided.
+  /// - `"codeShort"`: A string that represents the ISO 639-1 (two-letter) code
+  ///   of the language. Either this or `"code"` must be provided.
+  /// - `"name"`: A string that represents the name of the language.
+  /// - `"namesNative"`: Required. A list of strings that represents the native
+  ///   names of the language.
+  /// - `"isRightToLeft"`: Required. A boolean that indicates whether the
+  ///   language is written from right to left.
+  /// - `"scripts"`: Required. A list of ISO 15924 script codes.
+  /// - `"bibliographicCode"`: A string that represents the ISO 639-2/B
+  ///   bibliographic code of the language.
   /// - `"family"`: A string that represents the name of the language family.
-  /// - `"isRightToLeft"`: A boolean that indicates whether the language is
-  ///   written from right to left.
   ///
   /// Example usage:
   ///
@@ -72,15 +74,15 @@ extension NaturalLanguageJson on NaturalLanguage {
   ///
   /// The returned map contains the following keys:
   ///
-  /// - `"name"`: A string that represents the name of the language.
-  /// - `"code"`: A string that represents the ISO 639-1 code of the language.
-  /// - `"codeShort"`: A string that represents the short code of the language.
-  /// - `"namesNative"`: A string that represents the native names of the
-  /// language.
-  /// - `"family"`: A string that represents the name of the language family.
+  /// - `"bibliographicCode"`: The ISO 639-2/B code (only if available).
+  /// - `"code"`: The ISO 639-2/T (three-letter) code of the language.
+  /// - `"codeShort"`: The ISO 639-1 (two-letter) code of the language.
+  /// - `"family"`: The name of the language family.
   /// - `"isRightToLeft"`: A boolean that indicates whether the language is
   ///   written from right to left.
-  /// - `"scripts"`: A string that represents the scripts of the language.
+  /// - `"name"`: The name of the language.
+  /// - `"namesNative"`: A list of the native names of the language.
+  /// - `"scripts"`: A list of ISO 15924 codes of the language scripts.
   ///
   /// Example usage:
   ///

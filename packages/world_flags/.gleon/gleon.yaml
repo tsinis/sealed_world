@@ -1,0 +1,24 @@
+# gleon workspace config, read by the gleon Flutter package (`matchesGoldenFile`
+# of `package:gleon/gleon.dart`) and by the gleon CLI.
+required_version: ">=0.2.0"
+
+# The goldens in test/goldens/ are recorded on Linux x64 (update_goldens.yaml).
+fallback_platform: linux-x86_64
+
+screenshots:
+  # The first matching rule wins.
+  # Shader-based flags rasterize differently on every OS: the tightest SSIM
+  # policy macOS renders pass against the Linux goldens (measured with
+  # GLEON_METRICS=1: worst min SSIM 0.9723, peak excess 1 in isolated pixels).
+  # Still fails a single changed pixel or a color shift of 4 over an area.
+  - include: "test/goldens/waved/*.png"
+    mode: ssim
+    diff: { min_similarity: 0.97, color_tolerance: 0 }
+  # Painted flags render identically everywhere: exact.
+  - include: "test/goldens/**/*.png"
+    mode: pixel
+    diff: { threshold: 0 }
+
+# Per-golden case reports in .gleon/runs/latest/cases/<platform>/ (GLEON_METRICS=1).
+metrics:
+  enabled: false

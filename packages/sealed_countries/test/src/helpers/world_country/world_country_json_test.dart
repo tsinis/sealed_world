@@ -33,5 +33,30 @@ void main() => group("WorldCountryJson", () {
       expect(decoded.regionalBlocs, source.regionalBlocs);
       expect(decoded.namesNative, source.namesNative);
     });
+
+    test("deserializes WorldCountry without regional blocs", () {
+      final source = WorldCountry.list.firstWhere(
+        (country) => country.regionalBlocs == null,
+      );
+      final map = source.toMap();
+      expect(map.containsKey("regionalBlocs"), isFalse);
+
+      final decoded = WorldCountryJson.fromMap(map);
+      expect(decoded.regionalBlocs, isNull);
+      expect(decoded.areaMetric, source.areaMetric);
+    });
+
+    test("accepts integer values for double fields", () {
+      final source = WorldCountry.list.first;
+      final decoded = WorldCountryJson.fromMap({
+        ...source.toMap(),
+        "areaMetric": 42,
+        "latLng": const {"latitude": 1, "longitude": -2},
+      });
+
+      expect(decoded.areaMetric, 42.0);
+      expect(decoded.latLng.latitude, 1.0);
+      expect(decoded.latLng.longitude, -2.0);
+    });
   });
 });

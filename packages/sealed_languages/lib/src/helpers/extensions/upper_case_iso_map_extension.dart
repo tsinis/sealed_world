@@ -38,12 +38,9 @@ extension UpperCaseIsoMapExtension<V extends IsoStandardized>
   /// import 'package:sealed_languages/sealed_languages.dart';
   ///
   /// void main() {
-  ///   const map = UpperCaseIsoMap(
-  ///     {'EN': LangEng()},
-  ///     defaultValue: LangEng(),
-  ///   );
-  ///   final result = map.maybeFindByCode('ISO');
-  ///   assert(result == null, 'should be null');
+  ///   const map = UpperCaseIsoMap({'ENG': LangEng()});
+  ///   assert(map.findByCodeOrThrow(' eng ') == const LangEng());
+  ///   assert(map.maybeFindByCode('ISO') == null, 'should be null');
   /// }
   /// ```
   V findByCodeOrThrow(Object? code) {
@@ -57,75 +54,64 @@ extension UpperCaseIsoMapExtension<V extends IsoStandardized>
     );
   }
 
-  /// Creates a copy of [UpperCaseIsoMap] with a new map of ISO codes to values.
+  /// Creates a copy of [UpperCaseIsoMap] extended with the [other] map entries.
   ///
-  /// This factory takes an existing map of string keys to [IsoStandardized]
-  /// values and creates a new instance of [UpperCaseIsoMap]. The keys in the
-  /// provided map are processed to ensure that they are in uppercase and
-  /// trimmed of leading and trailing whitespace, following ISO standardized
-  /// rules for code representation.
+  /// The keys of the [other] map are trimmed and converted to UPPERCASE,
+  /// following ISO standardized rules for code representation. If the same
+  /// (normalized) key is present in both maps, the value from [other] wins.
+  /// If [other] contains the same key in different cases (e.g., 'en' and
+  /// 'EN'), the last one in the iteration order wins.
   ///
-  /// If a key appears in different cases (e.g., 'en' and 'EN'), the uppercase
-  /// version of the key will take precedence, and its associated value will be
-  /// used in the resulting [UpperCaseIsoMap]. This ensures case-insensitive
-  /// access to the values by their ISO codes.
+  /// The key length constraints of the resulting map are recalculated from the
+  /// merged keys: `minLength` and `maxLength` are set to the shortest and
+  /// longest key lengths, and if all keys share the same length, it's also
+  /// used as the `exactLength`.
   ///
-  /// The [defaultValue] parameter allows specifying a default value that will
-  /// be returned by the [UpperCaseIsoMap] when a key is not found. If not
-  /// provided, the default value will be `null`.
+  /// The [defaultValue] parameter allows overriding the value returned when a
+  /// key is not found. If not provided, the current `defaultValue` is kept.
   ///
   /// Usage:
   /// ```dart
   /// import 'package:sealed_languages/sealed_languages.dart';
   ///
   /// void main() {
-  ///   const originalMap = {'en': LangEng(), 'fr': LangFra()};
-  ///   const upperCaseIsoMap = UpperCaseIsoMap(
-  ///     originalMap,
-  ///     defaultValue: LangEng(),
+  ///   const map = UpperCaseIsoMap<NaturalLanguage>(
+  ///     {'ENG': LangEng()},
+  ///     exactLength: null,
   ///   );
+  ///   final copy = map.copyWith(const {' fra ': LangFra(), 'de': LangDeu()});
   ///
-  ///   // Accessing 'EN' or 'en' will return const LangEng()
-  ///   final english = upperCaseIsoMap['En']; // Returns const LangEng()
-  ///   final french = upperCaseIsoMap['FR'];  // Returns const LangFra()
-  ///   final unknown = upperCaseIsoMap['DE']; // Returns defaultValue
-  ///   assert(originalMap.isNotEmpty, 'originalMap should not be empty');
-  ///   assert(upperCaseIsoMap.isNotEmpty, 'map shouldn\'t be empty');
-  ///   assert(english == const LangEng(), 'should be LangEng');
-  ///   assert(french == const LangFra(), 'should be LangFra');
-  ///   assert(unknown == const LangEng(), 'should be LangEng');
+  ///   assert(copy['eng'] == const LangEng(), 'should be LangEng');
+  ///   assert(copy['FRA'] == const LangFra(), 'should be LangFra');
+  ///   assert(copy['De'] == const LangDeu(), 'should be LangDeu');
+  ///   assert(copy.minLength == 2 && copy.maxLength == 3, 'lengths');
   /// }
   /// ```
-  ///
-  /// - Parameters:
-  ///   - [map]: The original map of string ISO codes to [IsoStandardized]
-  ///     values to be used as the basis for the new [UpperCaseIsoMap].
-  ///   - [defaultValue]: An optional default value to return when a key is not
-  ///     found within the new [UpperCaseIsoMap].
-  /// - Returns: A new instance of [UpperCaseIsoMap] containing the provided ISO
-  ///   codes and values, with keys standardized to uppercase.
   // ignore: avoid-incomplete-copy-with, those are calculated.
   UpperCaseIsoMap<V> copyWith(Map<String, V> other, {V? defaultValue}) {
-    final upperCase = other.map(
-      (k, v) => MapEntry(IsoString(k).toUpperCaseCode(), v),
+    final newMap = Map<String, V>.fromEntries(
+      entries.followedBy(
+        other.entries.map(
+          (e) => MapEntry(IsoString(e.key).toUpperCaseCode(), e.value),
+        ),
+      ),
     );
-    final newMap = Map.fromEntries(entries.followedBy(upperCase.entries));
-    final list = List<String>.unmodifiable(newMap.keys);
-    final short = list.map((key) => key.length).reduce((a, b) => a < b ? a : b);
-    final hasSameLength = list.every((key) => key.length == short);
     final value = defaultValue ?? this.defaultValue;
+    if (newMap.isEmpty) return UpperCaseIsoMap(newMap, defaultValue: value);
 
-    if (hasSameLength) {
-      return UpperCaseIsoMap(newMap, defaultValue: value, exactLength: short);
+    int shortest = newMap.keys.first.length;
+    int longest = shortest;
+    for (final key in newMap.keys) {
+      if (key.length < shortest) shortest = key.length;
+      if (key.length > longest) longest = key.length;
     }
-    final longest = list.map((k) => k.length).reduce((a, b) => a > b ? a : b);
 
     return UpperCaseIsoMap(
       newMap,
       defaultValue: value,
-      exactLength: null,
+      exactLength: shortest == longest ? shortest : null,
       maxLength: longest,
-      minLength: short,
+      minLength: shortest,
     );
   }
 }

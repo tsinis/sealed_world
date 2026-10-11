@@ -72,14 +72,7 @@ extension TranslatedExtension<
     bool useLanguageFallback = true,
     String orElse = "",
   }) =>
-      l10n.commonNamesMap(
-        {this},
-        options: LocaleMappingOptions<B>(
-          mainLocale: mainLocale,
-          fallbackLocale: fallbackLocale,
-          useLanguageFallback: useLanguageFallback,
-        ),
-      )[this] ??
+      _commonNameOrNull(mainLocale, fallbackLocale, useLanguageFallback) ??
       orElse;
 
   /// Returns a localized common name for this object or `null` if not found.
@@ -110,13 +103,20 @@ extension TranslatedExtension<
     String? orElse,
   }) => mainLocale == null
       ? null
-      : (l10n.commonNamesMap(
-              {this},
-              options: LocaleMappingOptions<B>(
-                mainLocale: mainLocale,
-                fallbackLocale: fallbackLocale,
-                useLanguageFallback: useLanguageFallback,
-              ),
-            )[this] ??
+      : (_commonNameOrNull(mainLocale, fallbackLocale, useLanguageFallback) ??
             orElse);
+
+  String? _commonNameOrNull<B extends L>(
+    B mainLocale,
+    B? fallbackLocale,
+    // ignore: avoid-positional-boolean-parameters, private helper.
+    bool useLanguageFallback,
+  ) => l10n.commonNamesMap(
+    {this},
+    options: LocaleMappingOptions<B>(
+      mainLocale: mainLocale,
+      fallbackLocale: fallbackLocale,
+      useLanguageFallback: useLanguageFallback,
+    ),
+  )[this];
 }

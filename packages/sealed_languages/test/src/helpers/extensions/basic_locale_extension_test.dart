@@ -38,6 +38,54 @@ void main() => group("BasicLocaleExtension", () {
     expect(copy.regionalCode, string);
   });
 
+  group("toUnicodeLocaleId", () {
+    test("with language only", () => expect(value.toUnicodeLocaleId(), "en"));
+
+    test(
+      "with script only",
+      () => expect(
+        const BasicLocale(LangSrp(), script: ScriptCyrl()).toUnicodeLocaleId(),
+        "sr_Cyrl",
+      ),
+    );
+
+    test(
+      "with country code only",
+      () => expect(
+        const BasicLocale(LangEng(), countryCode: " us ").toUnicodeLocaleId(),
+        "en_US",
+      ),
+    );
+
+    test(
+      "with script, country code and custom separator",
+      () => expect(
+        const BasicLocale(
+          LangSrp(),
+          countryCode: "RS",
+          script: ScriptLatn(),
+        ).toUnicodeLocaleId(separator: "-"),
+        "sr-Latn-RS",
+      ),
+    );
+  });
+
+  group("toMap", () {
+    test("with language only", () => expect(value.toMap(), {"language": "en"}));
+
+    test(
+      "with all fields",
+      () => expect(
+        const BasicLocale(
+          LangSrp(),
+          countryCode: " rs ",
+          script: ScriptCyrl(),
+        ).toMap(),
+        {"countryCode": "RS", "language": "sr", "script": "Cyrl"},
+      ),
+    );
+  });
+
   test(
     "toTranslatedName",
     () => expect(

@@ -3,7 +3,6 @@ import "../../model/language/submodels/natural_language.dart";
 import "../../model/script/submodels/script.dart";
 import "../../model/translated_name.dart";
 import "../../typedefs/typedefs.dart";
-import "iso_string_extension_type.dart";
 
 /// Provides extension methods for [BasicLocale] class.
 /// {@macro submodels_class_extension}
@@ -23,7 +22,7 @@ extension BasicLocaleExtension on BasicLocale {
 
   /// {@macro to_map_method}
   Map<String, String> toMap() => {
-    "countryCode": ?IsoString.maybe(countryCode)?.toUpperCaseCode(),
+    "countryCode": ?countryCode,
     "language": language.codeShort.toLowerCase(),
     "script": ?script?.code,
   };
@@ -56,11 +55,11 @@ extension BasicLocaleExtension on BasicLocale {
     final languageCode = language.codeShort.toLowerCase();
     if (hasOnlyLanguage) return languageCode;
 
-    final sb = StringBuffer(languageCode);
-    if (!hasNoScript) sb.write(separator + (script?.code ?? separator));
-    if (!hasNoCountry) sb.write(separator + (countryCode ?? separator));
+    final buffer = StringBuffer(languageCode);
+    if (script case final script?) buffer.write("$separator${script.code}");
+    if (countryCode case final code?) buffer.write("$separator$code");
 
-    return sb.toString();
+    return buffer.toString();
   }
 
   /// Creates a [TranslatedName] instance from this locale with the provided

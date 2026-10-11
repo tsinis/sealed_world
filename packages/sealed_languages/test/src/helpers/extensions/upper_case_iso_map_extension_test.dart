@@ -34,6 +34,20 @@ void main() => group("UpperCaseIsoMapExtension", () {
       expect(copy.defaultValue, isNull);
       expect(copy.exactLength, isNull);
     });
+
+    test("should not throw on empty maps", () {
+      const emptyMap = UpperCaseIsoMap<NaturalLanguage>({});
+      final copy = emptyMap.copyWith(const {}, defaultValue: const LangEng());
+      expect(copy, isEmpty);
+      expect(copy.defaultValue, const LangEng());
+      expect(copy[eng], const LangEng());
+    });
+
+    test("other map values should override existing ones", () {
+      final copy = map.copyWith({" eng ": const LangDeu()});
+      expect(copy[eng], const LangDeu());
+      expect(copy.codes, [eng]);
+    });
   });
 
   group("findByCodeOrThrow", () {

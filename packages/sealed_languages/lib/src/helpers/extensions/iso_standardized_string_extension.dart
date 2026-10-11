@@ -6,6 +6,12 @@ import "iso_object_extension_type.dart";
 ///
 /// **Note:** This extension is internal one. Use [IsoObject] extension type.
 extension IsoStandardizedStringExtension on String {
+  static final _latinLetterPattern = RegExp("[a-z]", caseSensitive: false);
+  static final _regularCodePattern = RegExp(
+    r"^[a-z]{3,}$",
+    caseSensitive: false,
+  );
+
   /// Checks if the string is a valid ISO code.
   ///
   /// Returns `true` if the string matches strings that consist of Latin
@@ -15,8 +21,7 @@ extension IsoStandardizedStringExtension on String {
   ///
   /// In terms of this package, it means that it is a valid
   /// ISO `code` (not `codeOther`).
-  bool get isIsoAlphaRegularCode =>
-      RegExp(r"^[a-z]{3,}$", caseSensitive: false).hasMatch(this);
+  bool get isIsoAlphaRegularCode => _regularCodePattern.hasMatch(this);
 
   /// Trims the provided string to an ISO code if it's
   /// length is within the valid ISO codes range. If the string is not a valid
@@ -105,7 +110,7 @@ extension IsoStandardizedStringExtension on String {
   }) {
     if (numeric == null && regular == null) return orElse(code);
 
-    return RegExp("[a-z]", caseSensitive: false).hasMatch(code)
+    return _latinLetterPattern.hasMatch(code)
         ? (regular?.call(code) ?? orElse(code))
         : (numeric?.call(code) ?? orElse(code));
   }

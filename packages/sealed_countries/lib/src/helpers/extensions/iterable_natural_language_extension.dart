@@ -27,16 +27,27 @@ extension IterableNaturalLanguageExtension on Iterable<NaturalLanguage> {
   ///   language exists in this map, its custom country list is used instead of
   ///   the computed one.
   /// * [mapper] - Optional transformation function applied to each language's
-  ///   country list. If not provided, uses [_defaultCountryMapper] which
-  ///   applies intelligent language-specific prioritization rules.
+  ///   country list. If not provided, the default mapper is used, which
+  ///   applies intelligent language-specific prioritization rules (see below).
+  ///
+  /// Default prioritization rules:
+  /// * Constructed languages (i.e. Esperanto) are not tied to any country, so
+  ///   an empty list is returned for them.
+  /// * Some regional languages (Guarani, Somali, Setswana, Swati) use reversed
+  ///   population order, to highlight smaller countries where the language has
+  ///   special cultural significance.
+  /// * English, French, Portuguese and Spanish have their country of origin
+  ///   moved to the first place (if it's present in the list).
   ///
   /// Usage Example:
   /// ```dart
-  /// // Map all languages to their countries
-  /// final allLanguages = NaturalLanguage.list.byCountryMap();
-  /// // Get countries for a specific language.
-  /// final arabicCountries = allLanguages[LangAra()];
-  /// print('Arabic spoken in ${arabicCountries?.length} countries');
+  /// import 'package:sealed_countries/sealed_countries.dart';
+  ///
+  /// void main() {
+  ///   final allLanguages = NaturalLanguage.list.byCountryMap();
+  ///   final arabicCountries = allLanguages[const LangAra()];
+  ///   assert(arabicCountries?.isNotEmpty ?? false);
+  /// }
   /// ```
   Map<NaturalLanguage, List<WorldCountry>> byCountryMap({
     Iterable<WorldCountry> countries = WorldCountry.list,
@@ -55,41 +66,12 @@ extension IterableNaturalLanguageExtension on Iterable<NaturalLanguage> {
   }
 
   /// Default country mapping logic that applies language-specific
-  /// prioritization rules.
-  ///
-  /// This method implements contextual intelligence for language-country
-  /// associations, ensuring that languages are primarily associated with their
-  /// most culturally or historically significant countries rather than just
-  /// population-based ordering.
-  ///
-  /// Prioritization Logic:
-  ///
-  /// - European Colonial Languages.
-  /// For languages with strong colonial history, prioritizes the origin
-  /// country:
-  /// - **English**: United Kingdom first, then other English-speaking countries
-  /// - **French**: France first, then other Francophone countries
-  /// - **Portuguese**: Portugal first, then other Lusophone countries
-  /// - **Spanish**: Spain first, then other Spanish-speaking countries
-  ///
-  /// - African Regional Languages.
-  /// For certain African languages, uses reverse population order to highlight
-  /// smaller countries where the language has special cultural significance:
-  /// - Regional languages (Guarani, Somali, Setswana, Swati)
-  ///
-  /// - Constructed Languages.
-  /// Returns empty lists for artificial/constructed languages that aren't tied
-  /// to specific geographical regions:
-  /// - Esperanto, Interlingua, Ido, Volapük, Interlingue
-  ///
-  /// - Default Behavior
-  /// For all other languages, returns the countries list as-is
-  /// (population-ordered).
+  /// prioritization rules, described in the [byCountryMap] documentation.
   List<WorldCountry> _defaultCountryMapper(
     NaturalLanguage language,
     List<WorldCountry> countries,
   ) => switch (language) {
-    LangEpo() || LangIle() || LangIna() || LangIdo() || LangVol() => const [],
+    NaturalLanguage(isConstructed: true) => const [],
     const LangGrn() ||
     const LangSom() ||
     const LangSsw() ||
@@ -103,5 +85,7 @@ extension IterableNaturalLanguageExtension on Iterable<NaturalLanguage> {
   };
 
   List<WorldCountry> _changeFirst(WorldCountry first, List<WorldCountry> all) =>
-      [first, ...all.where((country) => !country.isSameAs(first))];
+      all.any((country) => country.isSameAs(first))
+      ? [first, ...all.where((country) => !country.isSameAs(first))]
+      : all;
 }

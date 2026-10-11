@@ -12,7 +12,7 @@ extension CountryNameExtension on CountryName {
   // ignore: avoid-non-null-assertion, field is required and immutable.
   String get official => fullName!;
 
-  /// {@macro to_map_method}
+  /// {@macro from_map_method}
   static CountryName fromMap(JsonMap map) => CountryName(
     language: NaturalLanguage.fromCode(map["language"].toString()),
     official: map["official"].toString(),
