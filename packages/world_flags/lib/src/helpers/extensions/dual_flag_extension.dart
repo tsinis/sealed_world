@@ -18,16 +18,22 @@ extension DualFlagExtension<T extends IsoStandardized, F extends BasicFlag>
   /// - [map]: A map of flags for ISO objects.
   /// - [alternativeMap]: A map of non-official or alternative flags of the ISO.
   /// - [orElse]: A widget to display if the flag is not found in the map.
-  /// - [height]: The height of the flag.
-  /// - [width]: The width of the flag.
-  /// - [aspectRatio]: The aspect ratio of the flag.
+  /// - [height]: The height of the flag. Pass a negative value to reset it to
+  ///   `null`.
+  /// - [width]: The width of the flag. Pass a negative value to reset it to
+  ///   `null`.
+  /// - [aspectRatio]: The aspect ratio of the flag. Pass a negative value to
+  ///   reset it to `null`.
   /// - [decoration]: The decoration to paint behind the flag.
   /// - [decorationPosition]: The position of the decoration.
   /// - [padding]: The padding around the flag.
+  /// - [shader]: An optional shader delegate the flags are painted through.
   /// - [splitAngle]: The angle of the split line in degrees.
   /// - [clipSecondary]: Whether to clip the secondary flag or the primary flag.
   /// - [clipBehavior]: The clip behavior for the split edge.
-  /// - [child]: A widget to display in the foreground of the flag.
+  /// - [flagChild]: A widget to display in the foreground of the flag.
+  /// - [child]: Deprecated, use [flagChild] instead.
+  /// - [semanticLabel]: A description of the flag for accessibility.
   /// - [key]: The key for the widget.
   DualFlag<T, F> copyWith({
     T? item,
@@ -46,6 +52,7 @@ extension DualFlagExtension<T extends IsoStandardized, F extends BasicFlag>
     Clip? clipBehavior,
     Widget? flagChild,
     @Deprecated("Use flagChild instead.") Widget? child,
+    String? semanticLabel,
     Key? key,
   }) => DualFlag<T, F>(
     item ?? this.item,
@@ -66,5 +73,6 @@ extension DualFlagExtension<T extends IsoStandardized, F extends BasicFlag>
     splitAngle: splitAngle ?? this.splitAngle,
     width: (width?.isNegative ?? false) ? null : (width ?? this.width),
     flagChild: flagChild ?? child ?? this.flagChild,
+    semanticLabel: semanticLabel ?? this.semanticLabel,
   );
 }

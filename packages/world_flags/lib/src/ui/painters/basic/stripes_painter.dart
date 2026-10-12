@@ -20,11 +20,14 @@ class StripesPainter<T extends CustomPainter> extends CustomPainter {
   ///   color and border radius.
   /// - [elementsPainter]: An optional custom painter for additional elements on
   ///   the flag.
+  /// - [textDirection]: The direction used to resolve a directional border
+  ///   radius of the [decoration], left-to-right by default.
   const new(
     this.properties,
     this.decoration,
     this.elementsPainter, {
     super.repaint,
+    this.textDirection,
   });
 
   /// The properties of the flag.
@@ -33,6 +36,10 @@ class StripesPainter<T extends CustomPainter> extends CustomPainter {
   /// The decoration to apply to the flag, such as background color and border
   /// radius.
   final BoxDecoration? decoration;
+
+  /// The direction used to resolve a directional border radius of the
+  /// [decoration] (i.e. [BorderRadiusDirectional]), left-to-right if `null`.
+  final TextDirection? textDirection;
 
   /// An optional custom painter for additional elements on the flag.
   final T? elementsPainter;
@@ -46,6 +53,7 @@ class StripesPainter<T extends CustomPainter> extends CustomPainter {
 
   @override
   void paint(Canvas canvas, Size size) {
+    if (size.isEmpty) return; // There is nothing to see, ratios would be NaN.
     applyFlagClipping(canvas, size);
     paintStripes(canvas, size);
   }
@@ -60,6 +68,13 @@ class StripesPainter<T extends CustomPainter> extends CustomPainter {
       // ignore: prefer-correct-identifier-length, CP for [ColorsProperties].
       (sum, cp) => sum + cp.ratio,
     );
+    // Stripes have no extent then, only the elements could be painted.
+    if (total == 0) {
+      elementsPainter?.paint(canvas, size);
+
+      return;
+    }
+
     switch (properties.stripeOrientation) {
       case StripeOrientation.horizontal:
         _drawStripes(canvas, size, total, isVertical: false);
@@ -86,8 +101,9 @@ class StripesPainter<T extends CustomPainter> extends CustomPainter {
       final circle = Rect.fromCircle(center: rect.center, radius: radius);
       final rRect = RRect.fromRectAndRadius(circle, Radius.circular(radius));
       canvas.clipRRect(rRect);
-    } else if (borderRadius != BorderRadius.zero) {
-      canvas.clipRRect(borderRadius.resolve(TextDirection.ltr).toRRect(rect));
+    } else if (borderRadius.resolve(textDirection ?? TextDirection.ltr)
+        case final radius when radius != BorderRadius.zero) {
+      canvas.clipRRect(radius.toRRect(rect));
     } else {
       canvas.clipRect(rect, doAntiAlias: false); // Straight rectangle.
     }
@@ -149,16 +165,29 @@ class StripesPainter<T extends CustomPainter> extends CustomPainter {
       ..clipRect(Rect.fromLTWH(0, 0, size.width, height))
       ..translate(size.width / 2, height / 2)
       ..rotate(isTopLeftToBottom ? angle : -angle)
-      ..translate(-diagonalLength, -height * 2);
+      // The rotated square of the diagonal size covers the whole flag, at any
+      // aspect ratio, so no corner is left unpainted.
+      ..translate(-diagonalLength, -diagonalLength);
 
+    final span = diagonalLength * 2;
+    final stripes = properties.stripeColors;
     double position = 0;
     final paint = Paint();
-    for (final colorProperty in properties.stripeColors) {
-      final stripeSize = diagonalLength * 2 * colorProperty.ratio / totalRatio;
-      final stripe = Rect.fromLTWH(position, 0, stripeSize, height * 4);
+    for (final (index, colorProperty) in stripes.indexed) {
+      final extent = span * colorProperty.ratio / totalRatio;
+      // A stripe reaches the far end if the next ones are opaque and drawn over
+      // it: two anti-aliased edges meeting each other would let the background
+      // show through the seam between them. Translucent stripes would blend
+      // with it though, so they keep the exact extent.
+      final isCovered = stripes
+          .skip(index + 1)
+          .every((next) => next.color.a == 1);
       paint.color = colorProperty.color;
-      canvas.drawRect(stripe, paint);
-      position += stripeSize;
+      canvas.drawRect(
+        Rect.fromLTWH(position, 0, isCovered ? span - position : extent, span),
+        paint,
+      );
+      position += extent;
     }
 
     canvas.restore();
@@ -167,6 +196,23 @@ class StripesPainter<T extends CustomPainter> extends CustomPainter {
   @override // coverage:ignore-line
   bool shouldRebuildSemantics(covariant CustomPainter oldDelegate) => false;
 
-  @override // coverage:ignore-line
-  bool shouldRepaint(CustomPainter oldDelegate) => false;
+  @override
+  bool shouldRepaint(covariant StripesPainter<T> oldDelegate) {
+    final StripesPainter(
+      decoration: oldDecoration,
+      elementsPainter: oldElements,
+      properties: oldProperties,
+      textDirection: oldTextDirection,
+    ) = oldDelegate;
+    if (oldProperties != properties ||
+        oldDecoration != decoration ||
+        oldTextDirection != textDirection) {
+      return true;
+    }
+    final elements = elementsPainter;
+    if (elements == null || oldElements == null) return elements != oldElements;
+
+    return elements.runtimeType != oldElements.runtimeType ||
+        elements.shouldRepaint(oldElements);
+  }
 }

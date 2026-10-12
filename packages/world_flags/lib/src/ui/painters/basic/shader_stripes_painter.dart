@@ -130,8 +130,8 @@ class ShaderStripesPainter<T extends CustomPainter> extends StripesPainter<T> {
   @override
   bool shouldRepaint(covariant ShaderStripesPainter<T> oldDelegate) =>
       oldDelegate.shader != shader ||
+      oldDelegate.pixelRatio != pixelRatio ||
       oldDelegate.properties != properties ||
-      oldDelegate.decoration != decoration ||
       oldDelegate.elementsPainter != elementsPainter;
 
   /// Disposes resources owned by this painter.

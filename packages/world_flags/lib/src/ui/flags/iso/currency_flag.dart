@@ -89,6 +89,7 @@ class CurrencyFlag extends DualFlag<FiatCurrency, BasicFlag> {
     super.flagChild,
     @Deprecated("Use flagChild instead. Will be removed in next major version.")
     super.child,
+    super.semanticLabel,
     super.key,
   }) : super(currency, defaultConventionalCurrencyFlags);
 

@@ -19,7 +19,7 @@ import "flag_shader_delegate.dart";
 ///   render.
 /// - **Standard paint pattern**: Sets size uniforms and texture sampler.
 /// - **Safe disposal**: Tracks disposed state to prevent use-after-dispose.
-/// - **Error handling**: Optional callback for paint failures.
+/// - **Error handling**: Optional callback for loading and paint failures.
 ///
 /// ## What You Provide
 ///
@@ -80,11 +80,16 @@ abstract class StaticFlagShaderDelegate extends ChangeNotifier
   /// Creates a static flag shader delegate.
   ///
   /// The [assetPath] must point to a valid fragment shader asset. For shaders
-  /// bundled with your package, use the full path:
-  /// `'shaders/my_shader.frag'`
-  ///
-  /// For shaders in the app's asset bundle, use a relative path:
+  /// in the app's asset bundle, use the path from the `pubspec.yaml`:
   /// `'shaders/my_shader.frag'`.
+  ///
+  /// For shaders bundled with your package, use the package asset key:
+  /// `'packages/my_package/shaders/my_shader.frag'`. When it's not found (i.e.
+  /// in the package's own tests, where it's the root package), the path
+  /// without the `packages/my_package/` prefix is loaded instead.
+  ///
+  /// If the program was already loaded (see [warmUp]), the shader is ready
+  /// synchronously, so the very first frame is already painted with it.
   new({
     required this.assetPath,
     this.contentScale = 1,
@@ -93,7 +98,12 @@ abstract class StaticFlagShaderDelegate extends ChangeNotifier
   })
   // ignore: avoid-non-empty-constructor-bodies, for async initialization.
   {
-    unawaited(_initShader());
+    final program = _programCache[assetPath];
+    if (program == null) {
+      unawaited(_initShader());
+    } else {
+      _shader = program.fragmentShader();
+    }
   }
 
   /// Path to the fragment shader asset.
@@ -105,18 +115,22 @@ abstract class StaticFlagShaderDelegate extends ChangeNotifier
   @override
   final bool shouldClipContent;
 
-  /// Optional callback for shader paint failures.
+  /// Optional callback for shader loading and paint failures.
   ///
-  /// When provided, errors during [paintWithShader] are passed to this callback
-  /// instead of being silently swallowed. Useful for debugging and logging.
+  /// When provided, errors while loading the shader program or during
+  /// [paintWithShader] are passed to this callback. Useful for debugging and
+  /// logging.
   ///
-  /// If `null`, errors are silently handled and [paintWithShader] returns
-  /// `false`, causing the fallback painter to be used.
+  /// If `null`, paint errors are silently handled, and loading errors are
+  /// reported via [FlutterError.reportError]. In both cases
+  /// [paintWithShader] returns `false`, causing the fallback painter to be
+  /// used.
   final void Function(Object error, StackTrace stack)? onError;
 
   /// Shader program cache, shared across all instances by asset path.
   static final _programCache = <String, FragmentProgram>{};
   static final _loadingFutures = <String, Future<FragmentProgram>>{};
+  static final _packagePrefix = RegExp("^packages/[^/]+/");
   final _paint = Paint();
 
   FragmentShader? _shader;
@@ -143,20 +157,73 @@ abstract class StaticFlagShaderDelegate extends ChangeNotifier
   /// ```
   ///
   /// Programs are cached globally, so warming up once benefits all instances.
+  /// Failed loads are not cached, so the next call tries to load it again.
   static Future<void> warmUp(String assetPath) async {
     if (_programCache.containsKey(assetPath)) return;
     // ignore: avoid-collection-mutating-methods, intentional cache.
-    _loadingFutures[assetPath] ??= FragmentProgram.fromAsset(assetPath);
-    // ignore: avoid-collection-mutating-methods, intentional cache.
-    _programCache[assetPath] = await _loadingFutures[assetPath]!;
+    final loading = _loadingFutures.putIfAbsent(
+      assetPath,
+      () => _load(assetPath),
+    );
+    try {
+      // ignore: avoid-collection-mutating-methods, intentional cache.
+      _programCache[assetPath] = await loading;
+    } finally {
+      // Other callers awaiting it remove it too, so leave a newer load intact.
+      if (identical(_loadingFutures[assetPath], loading)) {
+        // The removed future was awaited above, so it's safe to not await it.
+        // ignore: avoid-collection-mutating-methods, intentional cache.
+        unawaited(_loadingFutures.remove(assetPath));
+      }
+    }
+  }
+
+  static Future<FragmentProgram> _load(String assetPath) async {
+    try {
+      return await FragmentProgram.fromAsset(assetPath);
+    } on Object catch (error, stackTrace) {
+      if (!assetPath.startsWith(_packagePrefix)) rethrow;
+
+      try {
+        // Inside the package itself (i.e. in its own tests) it's not prefixed.
+        return await FragmentProgram.fromAsset(
+          assetPath.replaceFirst(_packagePrefix, ""),
+        );
+      } on Object {
+        Error.throwWithStackTrace(error, stackTrace);
+      }
+    }
   }
 
   Future<void> _initShader() async {
-    await warmUp(assetPath);
+    try {
+      await warmUp(assetPath);
+    } on Object catch (error, stackTrace) {
+      if (!_disposed) _reportLoadingError(error, stackTrace);
+
+      return;
+    }
     if (_disposed) return;
-    _shader?.dispose();
     _shader = _programCache[assetPath]?.fragmentShader();
     notifyListeners();
+  }
+
+  void _reportLoadingError(Object error, StackTrace stackTrace) {
+    final callback = onError;
+    if (callback != null) {
+      callback(error, stackTrace);
+
+      return;
+    }
+
+    FlutterError.reportError(
+      FlutterErrorDetails(
+        exception: error,
+        stack: stackTrace,
+        library: "world_flags",
+        context: ErrorDescription("while loading the shader $assetPath"),
+      ),
+    );
   }
 
   /// Configures shader uniforms before painting.
@@ -190,7 +257,8 @@ abstract class StaticFlagShaderDelegate extends ChangeNotifier
     shader
       ..setFloat(0, size.width)
       ..setFloat(1, size.height)
-      ..setImageSampler(0, image);
+      // Distorted samples fall between pixels, so interpolate them smoothly.
+      ..setImageSampler(0, image, filterQuality: FilterQuality.low);
   }
 
   @override

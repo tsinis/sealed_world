@@ -5,11 +5,14 @@ import "package:flutter/widgets.dart";
 /// A [CustomClipper] that clips to one side of a line through the center at
 /// the given [angle].
 ///
-/// - `0` or `360` degrees: clips to the top half
+/// The kept side rotates clockwise with the [angle], so neighbouring angles
+/// always keep the same side:
+/// - `0` or `360` degrees: clips to the bottom half
 /// - `90` or `-270` degrees: clips to the left half
-/// - `180` or `-180` degrees: clips to the bottom half
+/// - `180` or `-180` degrees: clips to the top half
 /// - `270` or `-90` degrees: clips to the right half
-/// - Other values: clips along the angled line through the center.
+/// - Other values: clips along the angled line through the center (i.e. `45`
+///   degrees clips to the bottom-left half).
 @immutable
 class DualFlagClipper extends CustomClipper<Path> {
   /// Creates a new instance of [DualFlagClipper].
@@ -19,15 +22,15 @@ class DualFlagClipper extends CustomClipper<Path> {
   final int angle;
 
   @override
+  // Dart's `%` is never negative for a positive divisor, so `-90` is `270`.
   Path getClip(Size size) => switch (angle % 360) {
-    0 => Path()..addRect(Rect.fromLTWH(0, 0, size.width, size.height / 2)),
-    90 ||
-    -270 => Path()..addRect(Rect.fromLTWH(0, 0, size.width / 2, size.height)),
-    180 || -180 =>
+    0 =>
       Path()..addRect(
         Rect.fromLTWH(0, size.height / 2, size.width, size.height / 2),
       ),
-    270 || -90 =>
+    90 => Path()..addRect(Rect.fromLTWH(0, 0, size.width / 2, size.height)),
+    180 => Path()..addRect(Rect.fromLTWH(0, 0, size.width, size.height / 2)),
+    270 =>
       Path()..addRect(
         Rect.fromLTWH(size.width / 2, 0, size.width / 2, size.height),
       ),

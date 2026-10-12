@@ -1,3 +1,56 @@
+## 3.6.0
+
+NEW FEATURES
+
+- Added `semanticLabel` to `BasicFlag`, `IsoFlag` (so `CountryFlag`, `CurrencyFlag`, `LanguageFlag` and `DualFlag` too) and their `copyWith` methods, so a flag can be described to screen readers. Previously every flag was announced as an image without any description.
+- `CountryFlag.copyWith` now returns a `CountryFlag` (keeping its emoji debug label) instead of a plain `IsoFlag`.
+- Added the `BadgeArtworkPainter` mixin with `CustomElementsPainter.badgePalette` and `CustomElementsPainter.paintShapes` helpers for badge painters, and exported `BadgeArtwork` (with `BadgeLayer` and `BadgePaintResolver`) to build badges with.
+- Added `CustomElementsPainter.customColor` and `CustomElementsPainter.lastCustomColor`, which fall back to the main color when the custom element provides fewer colors than a painter draws with.
+- Added `ElementsPainter.variant`, compared by `shouldRepaint`, for painters whose named constructors change what they paint (i.e. `UnionJackPainter.full` or `.half`).
+- `StripesPainter` accepts an optional `textDirection` to resolve a directional border radius, `BasicFlag` passes the ambient one.
+
+FIX
+
+- The `shader` parameter of `IsoFlag`, `CountryFlag`, `CurrencyFlag`, `LanguageFlag` and `DualFlag` was ignored. The flag is now painted through the shader (by a `FlagShaderSurface` clipped to the shape of the decoration), keeping its size, padding, decoration and child.
+- `WavedFlagShaderDelegate` applied `animationSpeed` twice (i.e. speed `2` animated four times faster), and the frozen pose (`animate: false`) depended on the speed, not only on `frozenPhase`.
+- The waved flag shader multiplied its premultiplied colors by alpha again, darkening translucent flags and anti-aliased edges. It also samples the flag smoothly now, instead of the nearest pixel.
+- The waved flag shader couldn't be loaded in tests of apps depending on this package. A `packages/<package>/` shader asset key now falls back to the key without this prefix (i.e. inside the package itself).
+- Shader loading errors are passed to `onError` (or reported via `FlutterError.reportError`) instead of being thrown as uncaught async errors, and a failed load is retried instead of being cached.
+- `FlagShaderSurface`:
+  - A recreated delegate (i.e. on `options` change) no longer paints a frame without the shader, and continues the animation instead of restarting it.
+  - The flag is updated when the `map` or `alternativeMap` changes (to a flag with other properties or elements, a copy of the same flag keeps its painter).
+  - Repaints of the animation are isolated by a `RepaintBoundary`, and `willChange` is only set for an animated delegate.
+- `AnimatedFlagShaderDelegate` skipped its first two frames and jumped after a long pause (i.e. a muted ticker), now a single frame advances the time by at most `0.1` second. The `animate` getter is checked on every tick, and the ticker is stopped when it returns `false`.
+- `ShaderStripesPainter` repaints when the pixel ratio changes.
+- `DualFlagClipper` kept the opposite side for `0` and `180` degrees than for the angles next to them. Now `0` degrees keeps the bottom half and `180` degrees the top half, consistently with all other angles.
+- Diagonal stripes (i.e. Namibia, Tanzania or Saint Kitts and Nevis) had semi-transparent seams the background showed through (translucent stripes keep their exact extent, so they don't blend with each other), and corners left unpainted at aspect ratios above ~3.9.
+- Overlapping badge layers of a color wound in opposite ways were merged into one path, which punched holes into them (i.e. British Indian Ocean Territory).
+- `StripesPainter` and `ElementsPainter` never repainted, so a `BasicFlag` with new properties (or another variant of a painter) could keep showing the previous flag.
+- Painting a flag of zero size, or with all stripe ratios of zero, failed on NaN assertions.
+- A directional border radius (`BorderRadiusDirectional`) was always resolved as left-to-right.
+- Custom painters failed when the custom element provided fewer `otherColors` than they paint with, now the missing colors are the `mainColor` (see `customColor`). `SimpleShieldPainter` failed with the default empty `otherColors`, and `SimpleShieldPainter` with `SimpleBirdPainter` failed if a shape element preceded the custom one.
+- The shield of Eswatini was centered by a compensating offset in the data, which drifted off-center at aspect ratios above 3.
+
+IMPROVEMENTS
+
+- Moon paths (a costly `Path.combine`) are cached per size, badge palettes are resolved once per paint, and the winding of badge layers is computed once.
+- The default `WavedFlagShaderDelegate` error log prints every distinct error once per delegate, instead of on every frame.
+- Removed 69 duplicate path segments from painters, deduplicated the badge painters with the `BadgeArtworkPainter` mixin, and `ClippedTrianglePainter` reuses `TrianglePainter`.
+- Removed the internal platform environment helpers, which are no longer needed.
+
+DOCUMENTATION
+
+- Fixed the documentation of `DiagonalLine.isTopRightToBottomLeft` (`true` draws a `\` line), `TrianglePainter` angles and offsets, `EllipsePainter`, `StarPainter`, `ElementsPainter`, `CustomElementsPainter`, `BadgeArtwork` (winding rule and path caching), `UnionJackPainter.full`, `FlagShaderDelegate.contentScale` (it's vertical), `FlagShaderOptions.waveDirection`, shader asset paths and error handling, `FlagShaderSurface.delegateBuilder` ownership, `AnimatedFlagShaderDelegate.animate` and the `copyWith` methods (`flagChild`, `shader` and the reset by a negative value).
+
+TEST
+
+- Added tests for all of the fixes above, updated the goldens of the diagonal stripes flags, Andorra, British Indian Ocean Territory and the waved Slovakia flag.
+- Golden tests use [gleon](https://github.com/gleon-rs/flutter) with platform-aware goldens and a tolerance for shader flags.
+
+CHORE
+
+- Updated `sealed_countries` dependency to v3.4.2.
+
 ## 3.5.1
 
 CHORE
@@ -164,7 +217,6 @@ NEW FEATURES
 
 - Animated shader delegate system (`AnimatedFlagShaderDelegate`, `StaticFlagShaderDelegate`).
 - Pixel ratio support in flag shaders.
-
 - New `namesCommonNative` method on ISO (`IsoTranslated`) classes, returning the native name for the given locale as a single string.
 - Enhanced locale parsing to support three-letter codes.
 

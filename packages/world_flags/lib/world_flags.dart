@@ -111,6 +111,8 @@ export "src/ui/flags/star_flag.dart";
 export "src/ui/flags/triangle_flag.dart";
 export "src/ui/other/dual_flag_clipper.dart";
 export "src/ui/other/maybe_widget.dart";
+export "src/ui/painters/basic/badge_artwork.dart";
+export "src/ui/painters/basic/badge_artwork_painter.dart";
 export "src/ui/painters/basic/custom_elements_painter.dart";
 export "src/ui/painters/basic/elements_painter.dart";
 export "src/ui/painters/basic/shader_stripes_painter.dart";

@@ -1,10 +1,11 @@
 import "dart:math";
-import "dart:ui" show Color, Offset, Paint, Rect, Size;
+import "dart:ui" show Canvas, Color, Offset, Paint, Rect, Size;
 
 import "package:flutter/foundation.dart";
 
 import "../../../model/elements/custom_elements_properties.dart";
 import "../../../model/typedefs.dart";
+import "badge_artwork.dart";
 import "elements_painter.dart";
 
 /// An abstract base class for painting custom elements on a flag.
@@ -42,10 +43,56 @@ abstract base class CustomElementsPainter<T extends FlagParentBounds>
   /// Retrieves the custom colors of the elements to be painted.
   ///
   /// This getter returns the list of other colors from the [customProperties].
+  /// Painters read their palette by index, prefer [customColor] and
+  /// [lastCustomColor] for that: they don't fail when the custom properties
+  /// provide fewer colors than the painter draws with.
   ///
   /// Returns a list of custom colors.
   @protected
   List<Color> get customColors => customProperties.otherColors;
+
+  /// The custom color at [index] of [customColors], or the `mainColor` of the
+  /// custom element if there's no such color.
+  @protected
+  Color customColor(int index) =>
+      (index.isNegative ? null : customColors.elementAtOrNull(index)) ??
+      customProperties.mainColor;
+
+  /// The last of [customColors], or the `mainColor` of the custom element if
+  /// there are none.
+  @protected
+  Color get lastCustomColor =>
+      customColors.lastOrNull ?? customProperties.mainColor;
+
+  /// Resolves the paint of every badge layer by its palette index, see
+  /// [badgePaint]. The palette is read once, so prefer it over [badgePaint]
+  /// when painting all layers of a badge.
+  @protected
+  BadgePaintResolver badgePalette() {
+    final CustomElementsProperties(:mainColor, :otherColors) = customProperties;
+    final paint = paintCreator(mainColor);
+
+    // Canvas copies the paint on every draw call, so one instance is enough.
+    return (index) {
+      paint.color = index == 0
+          ? mainColor
+          : (otherColors.elementAtOrNull(index - 1) ?? mainColor);
+
+      return paint;
+    };
+  }
+
+  /// Paints every element of [properties] that has a shape (i.e. the stars
+  /// around an emblem), in their order. Custom elements have no shape, so they
+  /// are left to the painter itself.
+  @protected
+  void paintShapes(Canvas canvas, Size size) {
+    for (final element in properties) {
+      final shape = element.shape;
+      if (shape == null) continue;
+      painter(shape)([element], size.aspectRatio).paint(canvas, size);
+    }
+  }
 
   /// The bounds of artwork that must keep a fixed [artworkAspectRatio], given
   /// as width over height.
@@ -54,7 +101,8 @@ abstract base class CustomElementsPainter<T extends FlagParentBounds>
   /// artwork fills at the flag's own aspect ratio. When
   /// the flag is drawn wider or narrower than that, the artwork is fitted into
   /// the box rather than stretched with it, so it is never squeezed. The
-  /// result is centered by [calculateCenter], like every other element.
+  /// result is centered at the element's `offset`, the same way as
+  /// [calculateCenter] centers every other element.
   ///
   /// - [size]: The size of the flag.
   /// - [artworkAspectRatio]: The width-to-height ratio the artwork keeps.
@@ -88,7 +136,7 @@ abstract base class CustomElementsPainter<T extends FlagParentBounds>
   /// `otherColors[n - 1]`, so the palette stays in the flag data.
   @protected
   Paint badgePaint(int index) => paintCreator(
-    index == 0 ? customProperties.mainColor : customColors[index - 1],
+    index == 0 ? customProperties.mainColor : customColor(index - 1),
   );
 
   /// Adjusts the size of the child element based on the aspect ratio.
@@ -97,7 +145,8 @@ abstract base class CustomElementsPainter<T extends FlagParentBounds>
   /// [originalAspectRatio], [minRatio], and the size of the parent bounds.
   ///
   /// - [size]: The size of the child element.
-  /// - [minRatio]: The minimum ratio to use for adjustment. Defaults to `1.1`.
+  /// - [minRatio]: The upper limit of the adjustment ratio, so the element is
+  ///   never grown more than this. Defaults to `1.1`.
   ///
   /// Returns the adjusted size of the child element.
   @protected

@@ -79,6 +79,19 @@ void main() {
   });
 
   group("$UnionJackPainter", () {
+    test("repaints when only its variant changes", () {
+      final half = UnionJackPainter.half(properties, size.aspectRatio);
+
+      expect(
+        UnionJackPainter.full(properties, size.aspectRatio).shouldRepaint(half),
+        isTrue,
+      );
+      expect(
+        UnionJackPainter.half(properties, size.aspectRatio).shouldRepaint(half),
+        isFalse,
+      );
+    });
+
     test("paints the jack over the shield unless it is full", () {
       final half = RecordingCanvas();
       final full = RecordingCanvas();

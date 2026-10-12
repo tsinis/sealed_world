@@ -21,6 +21,46 @@ void main() => group("$AnimatedFlagShaderDelegate", () {
     });
   });
 
+  group("ticker", () {
+    testWidgets("advances the time from the second frame", (tester) async {
+      final delegate = _AnimatedFlagShaderDelegateTest(vsync: tester);
+      await tester.pump();
+      await tester.pump(const Duration(milliseconds: 50));
+
+      expect(delegate.currentTime, closeTo(0.05, 1e-9));
+      delegate.dispose();
+    });
+
+    testWidgets("limits the time advanced by a single frame", (tester) async {
+      final delegate = _AnimatedFlagShaderDelegateTest(vsync: tester);
+      await tester.pump();
+      await tester.pump(const Duration(seconds: 5));
+
+      expect(delegate.currentTime, lessThanOrEqualTo(0.1));
+      delegate.dispose();
+    });
+
+    testWidgets("schedules no frames while paused", (tester) async {
+      final delegate = _PausableAnimatedDelegate(vsync: tester, isPaused: true)
+        ..startAnimation();
+      await tester.pump();
+
+      expect(tester.binding.hasScheduledFrame, isFalse);
+      delegate.dispose();
+    });
+
+    testWidgets("continues from the time of another delegate", (tester) async {
+      final previous = _AnimatedFlagShaderDelegateTest(vsync: tester)
+        ..simulateTick(1.5);
+      final next = _AnimatedFlagShaderDelegateTest(vsync: tester)
+        ..continueFrom(previous);
+
+      expect(next.currentTime, 1.5);
+      previous.dispose();
+      next.dispose();
+    });
+  });
+
   group("startAnimation", () {
     testWidgets("can be called on paused delegate", (tester) async {
       final delegate = _PausableAnimatedDelegate(vsync: tester, isPaused: true);

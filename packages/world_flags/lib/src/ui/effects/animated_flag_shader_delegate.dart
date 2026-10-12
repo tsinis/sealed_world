@@ -1,3 +1,5 @@
+import "dart:math" show min;
+
 import "package:flutter/foundation.dart";
 import "package:flutter/scheduler.dart";
 
@@ -102,7 +104,9 @@ abstract class AnimatedFlagShaderDelegate extends StaticFlagShaderDelegate {
   /// Current animation time in seconds.
   ///
   /// Use this value in [configureShader] to pass time to your shader. The value
-  /// increments each frame by `deltaSeconds * animationSpeed`.
+  /// increments each frame by `deltaSeconds * animationSpeed`. A single frame
+  /// advances it by at most `0.1` second (scaled by [animationSpeed]), so the
+  /// animation doesn't jump after a long pause (i.e. a muted ticker).
   ///
   /// Automatically wraps around at `10000` to prevent floating-point precision
   /// issues in long-running animations.
@@ -130,13 +134,17 @@ abstract class AnimatedFlagShaderDelegate extends StaticFlagShaderDelegate {
   /// }
   /// ```
   ///
-  /// When this returns `false`, the ticker is stopped and [time] stops
-  /// incrementing. When it returns `true`, the ticker starts automatically.
+  /// It's checked on every tick, so when it returns `false`, [time] stops
+  /// incrementing and the ticker is stopped. When the delegate is created and
+  /// it returns `false`, the ticker is not started at all. Call
+  /// [startAnimation] to start it again later.
   bool get animate => true;
+
+  static const _maxDeltaSeconds = 0.1;
 
   // ignore: avoid-late-keyword, initialized in constructor.
   late final Ticker _ticker;
-  Duration _lastTick = Duration.zero;
+  Duration? _lastTick;
 
   /// Called each tick with the delta time in seconds.
   ///
@@ -172,32 +180,42 @@ abstract class AnimatedFlagShaderDelegate extends StaticFlagShaderDelegate {
     if (time > 1e4) time -= 1e4; // Prevent overflow.
   }
 
+  /// Continues the animation from the [time] of the [previous] delegate, so
+  /// replacing a delegate (i.e. with new options) doesn't restart it.
+  @internal
+  void continueFrom(AnimatedFlagShaderDelegate previous) =>
+      time = previous.time;
+
   void _updateTicker() {
     if (!animate) {
       _ticker.stop();
-      _lastTick = Duration.zero;
+      _lastTick = null;
 
       return;
     }
 
     if (!_ticker.isActive) {
-      _lastTick = Duration.zero;
+      _lastTick = null;
       _ticker.start();
     }
   }
 
-  Duration? _handleTick(Duration timestamp) {
-    if (_lastTick == Duration.zero) return _lastTick = timestamp;
+  void _handleTick(Duration elapsed) {
+    if (!animate) {
+      stopAnimation(); // No frames while it's paused.
 
-    final delta = timestamp - _lastTick;
-    _lastTick = timestamp;
-    final deltaSeconds = delta.inMicroseconds / 1e6;
-    if (deltaSeconds <= 0) return null;
+      return;
+    }
+    final lastTick = _lastTick;
+    _lastTick = elapsed;
+    if (lastTick == null) return;
+
+    final seconds = (elapsed - lastTick).inMicroseconds / 1e6;
+    final deltaSeconds = min(seconds, _maxDeltaSeconds);
+    if (deltaSeconds <= 0) return;
 
     onTick(deltaSeconds);
     notifyListeners();
-
-    return null;
   }
 
   /// Starts the animation ticker.
@@ -206,7 +224,7 @@ abstract class AnimatedFlagShaderDelegate extends StaticFlagShaderDelegate {
   /// effect if the ticker is already active.
   void startAnimation() {
     if (_ticker.isActive) return;
-    _lastTick = Duration.zero;
+    _lastTick = null;
     _ticker.start();
   }
 
@@ -216,7 +234,7 @@ abstract class AnimatedFlagShaderDelegate extends StaticFlagShaderDelegate {
   /// resumes from the same point when [startAnimation] is called.
   void stopAnimation() {
     _ticker.stop();
-    _lastTick = Duration.zero;
+    _lastTick = null;
   }
 
   @override

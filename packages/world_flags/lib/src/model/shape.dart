@@ -114,6 +114,11 @@ final class DiagonalLine implements Shape {
     this.isTopRightToBottomLeft = true, // Dart 3.8 format.
   });
 
-  /// Whether the diagonal line goes from top-right to bottom-left.
+  /// The direction of the diagonal line.
+  ///
+  /// Despite its name, `true` (default) draws the line from the top-left to
+  /// the bottom-right corner (`\`), while `false` draws it from the
+  /// bottom-left to the top-right corner (`/`). The name is kept for backward
+  /// compatibility.
   final bool isTopRightToBottomLeft;
 }

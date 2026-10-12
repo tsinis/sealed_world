@@ -23,7 +23,8 @@ final class StarPainter extends ElementsPainter {
   /// Creates a painter for a star, or a chain of stars.
   const new(super._properties, super.aspectRatio);
 
-  /// The first point of a star sits at the top.
+  /// The path starts at the inner vertex below the center, so an outer point
+  /// of a star (with an odd number of points) sits at the top.
   static const _startRadians = pi / 2;
   static const _radiansMultiplier = pi / 180;
 

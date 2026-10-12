@@ -97,11 +97,13 @@ vec2 waveDir() {
 
 float edgeRamp(float u) {
     float r = 1.0;
+    // smoothstep is undefined for equal edges, so keep the softness positive.
+    float softness = max(uPinSoftness, 1e-4);
     if (uLeftEdgePinned > 0.5) {
-        r *= smoothstep(uPoleMargin, uPoleMargin + uPinSoftness, u);
+        r *= smoothstep(uPoleMargin, uPoleMargin + softness, u);
     }
     if (uRightEdgePinned > 0.5) {
-        r *= smoothstep(uPoleMargin, uPoleMargin + uPinSoftness, 1.0 - u);
+        r *= smoothstep(uPoleMargin, uPoleMargin + softness, 1.0 - u);
     }
     return r;
 }
@@ -294,6 +296,8 @@ void main() {
     vec2 warped = warpUV(uv, phase, dir, time, slope);
 
     vec4 tex = texture(uTexture, warped);
+    // Samples are premultiplied: light the straight color, premultiply once.
+    if (tex.a > 0.0) tex.rgb /= tex.a;
 
     // Fabric texture with luminance protection
     float fabricMask = 1.0;

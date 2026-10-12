@@ -112,6 +112,24 @@ void main() => group("$ShaderStripesPainter", () {
     shader.dispose();
   });
 
+  testWidgets("shouldRepaint returns true when pixel ratio changes", (
+    tester,
+  ) async {
+    final shader = WavedFlagShaderDelegate(vsync: tester);
+    await tester.pump();
+    final oldPainter = ShaderStripesPainter(properties, null, shader: shader);
+    final newPainter = ShaderStripesPainter(
+      properties,
+      null,
+      shader: shader,
+      pixelRatio: 2,
+    );
+    expect(newPainter.shouldRepaint(oldPainter), isTrue);
+    oldPainter.dispose();
+    newPainter.dispose();
+    shader.dispose();
+  });
+
   testWidgets("shouldRepaint returns false when nothing changes", (
     tester,
   ) async {

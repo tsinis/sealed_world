@@ -39,7 +39,8 @@ abstract base class ElementsPainter extends CustomPainter {
 
   /// Retrieves the properties of the elements to be painted.
   ///
-  /// If no properties are provided, this returns an empty list.
+  /// The constructor asserts there is at least one, if `null` is passed
+  /// regardless (i.e. in a release build), this returns an empty list.
   ElementsProps get properties => _properties ?? const [];
 
   /// Retrieves the first property from the list of properties.
@@ -73,6 +74,7 @@ abstract base class ElementsPainter extends CustomPainter {
   /// elements.
   @override
   FlagParentBounds? paint(Canvas canvas, Size size) {
+    if (size.isEmpty) return null; // There is nothing to see, ratios are NaN.
     final parent = paintFlagElements(canvas, size);
     if (parent == null) return null;
     final child = paintChild(parent.canvas, parent.bounds, parent.child);
@@ -176,8 +178,9 @@ abstract base class ElementsPainter extends CustomPainter {
   @protected
   double calculateSize(Size size) {
     final heightRadius = property.heightFactor * size.height / 2;
-    if (property.widthFactor == null) return heightRadius;
-    final widthRadius = (property.widthFactor ?? 1) * size.width / 2;
+    final widthFactor = property.widthFactor;
+    if (widthFactor == null) return heightRadius;
+    final widthRadius = widthFactor * size.width / 2;
 
     return math.min(widthRadius, heightRadius);
   }
@@ -212,6 +215,20 @@ abstract base class ElementsPainter extends CustomPainter {
   @override // coverage:ignore-line
   bool shouldRebuildSemantics(covariant CustomPainter oldDelegate) => false;
 
-  @override // coverage:ignore-line
-  bool shouldRepaint(CustomPainter oldDelegate) => false;
+  /// The state set by a (named) constructor of the painter, which changes
+  /// what it paints besides its [properties] (i.e. the variant of a badge).
+  ///
+  /// It's compared by [shouldRepaint], so painters with such a state have to
+  /// override it with a record of their fields. `null` by default.
+  @protected
+  @visibleForOverriding
+  Record? get variant => null;
+
+  @override
+  bool shouldRepaint(CustomPainter oldDelegate) =>
+      oldDelegate is! ElementsPainter ||
+      oldDelegate.runtimeType != runtimeType ||
+      oldDelegate.aspectRatio != aspectRatio ||
+      oldDelegate.variant != variant ||
+      !listEquals(oldDelegate._properties, _properties);
 }
