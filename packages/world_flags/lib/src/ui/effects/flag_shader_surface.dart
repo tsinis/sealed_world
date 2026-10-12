@@ -11,6 +11,7 @@ import "../../../world_flags.dart"
         smallSimplifiedFlagsMap,
         smallSimplifiedLanguageFlagsMap;
 import "../../helpers/extensions/aspect_ratio_extension.dart";
+import "../../helpers/extensions/paint_equality_extension.dart";
 import "../../model/flag_properties.dart";
 import "../../model/typedefs.dart";
 import "../flags/basic_flag.dart";
@@ -240,13 +241,18 @@ class _FlagShaderSurfaceState extends State<FlagShaderSurface>
       WavedFlagShaderDelegate(vsync: tickerProvider, options: options);
 
   // Only what the painter is built from matters, not the (i.e. copied) flag.
-  static bool _isRepaintedFlag(BasicFlag? old, BasicFlag? flag) =>
-      old?.properties != flag?.properties ||
-      old?.elementsBuilder != flag?.elementsBuilder ||
-      old?.backgroundPainter != flag?.backgroundPainter ||
-      old?.foregroundPainter != flag?.foregroundPainter ||
-      old?.foregroundPainterBuilder != flag?.foregroundPainterBuilder ||
-      old?.decoration != flag?.decoration;
+  static bool _isRepaintedFlag(BasicFlag? old, BasicFlag? flag) {
+    final isSameFlag = old == null
+        ? flag == null
+        : old.properties.paintsLike(flag?.properties);
+
+    return !isSameFlag ||
+        old?.elementsBuilder != flag?.elementsBuilder ||
+        old?.backgroundPainter != flag?.backgroundPainter ||
+        old?.foregroundPainter != flag?.foregroundPainter ||
+        old?.foregroundPainterBuilder != flag?.foregroundPainterBuilder ||
+        old?.decoration != flag?.decoration;
+  }
 
   void _disposeManagedDelegate() {
     _managedDelegate?.dispose();

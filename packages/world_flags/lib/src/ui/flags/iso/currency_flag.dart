@@ -98,7 +98,7 @@ class CurrencyFlag extends DualFlag<FiatCurrency, BasicFlag> {
   /// Maps each [FiatCurrency] to the flag of its main/conventional country.
   /// For example, USD maps to the USA flag, GBP to the UK flag, etc.
   ///
-  /// This map is generated from [FiatCurrency.list.byCountryMap()] with
+  /// This map is generated from `FiatCurrency.list.byCountryMap()` with
   /// `en_GB` locale, providing the standard currency-country associations based
   /// on cultural/historical significance.
   static const defaultConventionalCurrencyFlags = <FiatCurrency, BasicFlag>{

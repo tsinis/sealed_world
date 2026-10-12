@@ -3,6 +3,7 @@ import "dart:math" as math;
 import "package:flutter/foundation.dart";
 import "package:flutter/rendering.dart";
 
+import "../../../helpers/extensions/paint_equality_extension.dart";
 import "../../../model/elements/elements_properties.dart";
 import "../../../model/shape.dart";
 import "../../../model/typedefs.dart";
@@ -232,5 +233,8 @@ abstract base class ElementsPainter extends CustomPainter {
       oldDelegate.runtimeType != runtimeType ||
       oldDelegate.aspectRatio != aspectRatio ||
       oldDelegate.variant != variant ||
-      !listEquals(oldDelegate._properties, _properties);
+      !PaintEqualityExtension.elementsPaintLike(
+        oldDelegate._properties,
+        _properties,
+      );
 }

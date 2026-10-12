@@ -4,6 +4,7 @@ import "package:flutter/foundation.dart";
 import "package:flutter/rendering.dart";
 
 import "../../../helpers/extensions/box_decoration_extension.dart";
+import "../../../helpers/extensions/paint_equality_extension.dart";
 import "../../../model/flag_properties.dart";
 import "../../../model/stripe_orientation.dart";
 
@@ -209,7 +210,7 @@ class StripesPainter<T extends CustomPainter> extends CustomPainter {
       properties: oldProperties,
       textDirection: oldTextDirection,
     ) = oldDelegate;
-    if (oldProperties != properties ||
+    if (!oldProperties.paintsLike(properties) ||
         oldDecoration != decoration ||
         oldTextDirection != textDirection) {
       return true;

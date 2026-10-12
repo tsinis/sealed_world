@@ -7,6 +7,7 @@ import "package:flutter/foundation.dart" show Listenable;
 import "package:flutter/rendering.dart";
 
 import "../../../helpers/extensions/box_decoration_extension.dart";
+import "../../../helpers/extensions/paint_equality_extension.dart";
 import "../../../model/flag_properties.dart";
 import "../../effects/flag_shader_delegate.dart";
 import "../../effects/flag_shader_surface.dart" show FlagShaderSurface;
@@ -20,6 +21,11 @@ import "stripes_painter.dart";
 /// This painter OWNS the [_image] and is responsible for its lifecycle.
 /// The [shader] delegate receives the image for rendering but must NOT
 /// dispose it.
+///
+/// A [CustomPainter] has no lifecycle of its own, so whoever creates this
+/// painter (i.e. the state of a [FlagShaderSurface]) has to call [dispose]
+/// when it's not used anymore: it releases the cached image and stops
+/// listening to the [backgroundPainter] and [foregroundPainter].
 class ShaderStripesPainter<T extends CustomPainter> extends StripesPainter<T> {
   /// Creates a new instance of [ShaderStripesPainter].
   ///
@@ -177,7 +183,7 @@ class ShaderStripesPainter<T extends CustomPainter> extends StripesPainter<T> {
   bool shouldRepaint(covariant ShaderStripesPainter<T> oldDelegate) =>
       oldDelegate.shader != shader ||
       oldDelegate.pixelRatio != pixelRatio ||
-      oldDelegate.properties != properties ||
+      !oldDelegate.properties.paintsLike(properties) ||
       oldDelegate.elementsPainter != elementsPainter ||
       oldDelegate.backgroundPainter != backgroundPainter ||
       oldDelegate.foregroundPainter != foregroundPainter ||

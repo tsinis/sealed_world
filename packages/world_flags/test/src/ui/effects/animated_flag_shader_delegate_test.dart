@@ -75,6 +75,28 @@ void main() => group("$AnimatedFlagShaderDelegate", () {
         ..dispose();
     });
 
+    testWidgets("starts on a paint if it was created paused", (tester) async {
+      final delegate = _VisibilityDelegate(vsync: tester, isVisible: false);
+      await tester.pump();
+      expect(tester.binding.transientCallbackCount, isZero);
+
+      delegate.isVisible = true;
+      final recorder = PictureRecorder();
+      final texture = _texture();
+      delegate.paintWithShader(
+        Canvas(recorder),
+        const Size(1, 1),
+        image: texture,
+      );
+      recorder.endRecording().dispose();
+      texture.dispose();
+      expect(tester.binding.transientCallbackCount, 1);
+
+      delegate
+        ..stopAnimation()
+        ..dispose();
+    });
+
     testWidgets("stays stopped when stopped explicitly", (tester) async {
       final delegate = _VisibilityDelegate(vsync: tester)..stopAnimation();
       final recorder = PictureRecorder();
@@ -302,9 +324,10 @@ class _TrackingAnimatedDelegate extends AnimatedFlagShaderDelegate {
 
 /// A delegate animated only while it's visible, like a list item.
 class _VisibilityDelegate extends AnimatedFlagShaderDelegate {
-  new({required super.vsync}) : super(assetPath: "shaders/waved_flag.frag");
+  new({required super.vsync, this.isVisible = true})
+    : super(assetPath: "shaders/waved_flag.frag");
 
-  bool isVisible = true;
+  bool isVisible;
 
   @override
   bool get animate => isVisible;

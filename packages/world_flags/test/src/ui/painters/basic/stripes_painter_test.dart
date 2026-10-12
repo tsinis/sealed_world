@@ -68,6 +68,22 @@ void main() => group("$StripesPainter", () {
       );
     });
 
+    test("returns false for equal properties", () {
+      // Not `const`, so they're equal, but not identical.
+      final painter = StripesPainter<CustomPainter>(
+        FlagProperties([ColorsProperties(red.stripeColors.first.color)]),
+        null,
+        null,
+      );
+      final other = StripesPainter<CustomPainter>(
+        FlagProperties([ColorsProperties(red.stripeColors.first.color)]),
+        null,
+        null,
+      );
+
+      expect(other.shouldRepaint(painter), isFalse);
+    });
+
     test("returns false when nothing changes", () {
       const oldPainter = StripesPainter<CustomPainter>(red, null, null);
       const newPainter = StripesPainter<CustomPainter>(red, null, null);

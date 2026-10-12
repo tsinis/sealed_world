@@ -139,9 +139,9 @@ abstract class AnimatedFlagShaderDelegate extends StaticFlagShaderDelegate {
   /// It's checked on every tick, so when it returns `false`, [time] stops
   /// incrementing and the ticker is paused. It's checked on every paint too,
   /// so a paused ticker resumes on the next paint after it returns `true`
-  /// again (i.e. when the flag is visible again). When the delegate is created
-  /// and it returns `false`, the ticker is not started at all. A ticker stopped
-  /// by [stopAnimation] doesn't resume until [startAnimation] is called.
+  /// again (i.e. when the flag is visible again), even if it returned `false`
+  /// when the delegate was created. A ticker stopped by [stopAnimation]
+  /// doesn't resume until [startAnimation] is called.
   bool get animate => true;
 
   static const _maxDeltaSeconds = 0.1;
@@ -202,6 +202,7 @@ abstract class AnimatedFlagShaderDelegate extends StaticFlagShaderDelegate {
     if (!animate) {
       _ticker.stop();
       _lastTick = null;
+      _isPausedByAnimate = true; // Resumes on a paint, after it animates.
 
       return;
     }
