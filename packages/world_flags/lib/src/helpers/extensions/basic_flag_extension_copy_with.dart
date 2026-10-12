@@ -26,7 +26,8 @@ extension BasicFlagExtensionCopyWith<T extends BasicFlag> on T {
   /// the new values.
   ///
   /// - [properties]: The properties of the flag.
-  /// - [aspectRatio]: The aspect ratio of the flag.
+  /// - [aspectRatio]: The aspect ratio of the flag. Pass a negative value to
+  ///   reset it to `null`.
   /// - [decoration]: The decoration to paint behind the flag.
   /// - [decorationPosition]: The position of the decoration.
   /// - [padding]: The padding around the flag.
@@ -36,10 +37,12 @@ extension BasicFlagExtensionCopyWith<T extends BasicFlag> on T {
   /// - [foregroundPainterBuilder]: A builder for the foreground painter.
   /// - [foregroundWidgetBuilder]: A builder for the foreground widget.
   /// - [height]: The height of the flag. If `null`, the height from the flag
-  /// theme is used.
+  ///   theme is used. Pass a negative value to reset it to `null`.
   /// - [width]: The width of the flag. If `null`, the width from the flag theme
-  /// is used.
-  /// - [child]: A widget to display in the foreground of the flag.
+  ///   is used. Pass a negative value to reset it to `null`.
+  /// - [flagChild]: A widget to display in the foreground of the flag.
+  /// - [child]: Deprecated, use [flagChild] instead.
+  /// - [semanticLabel]: A description of the flag for accessibility.
   /// - [key]: The key for the widget.
   BasicFlag copyWith({
     FlagProperties? properties,
@@ -56,6 +59,7 @@ extension BasicFlagExtensionCopyWith<T extends BasicFlag> on T {
     double? width,
     Widget? flagChild,
     @Deprecated("Use flagChild instead.") Widget? child,
+    String? semanticLabel,
     Key? key,
   }) => BasicFlag(
     properties ?? this.properties,
@@ -76,6 +80,7 @@ extension BasicFlagExtensionCopyWith<T extends BasicFlag> on T {
     width: (width?.isNegative ?? false) ? null : (width ?? this.width),
     key: key ?? this.key,
     flagChild: flagChild ?? child ?? this.flagChild,
+    semanticLabel: semanticLabel ?? this.semanticLabel,
   );
 
   /// Creates a copy of this [BasicFlag] but with fields taken from a
@@ -88,6 +93,7 @@ extension BasicFlagExtensionCopyWith<T extends BasicFlag> on T {
   /// - [foregroundPainter]: A custom painter for the foreground of the flag.
   /// - [foregroundPainterBuilder]: A builder for the foreground painter.
   /// - [foregroundWidgetBuilder]: A builder for the foreground widget.
+  /// - [semanticLabel]: A description of the flag for accessibility.
   /// - [key]: The key for the widget.
   BasicFlag copyWithTheme({
     FlagProperties? properties,
@@ -97,6 +103,7 @@ extension BasicFlagExtensionCopyWith<T extends BasicFlag> on T {
     CustomPainter? foregroundPainter,
     FlagPainterBuilder? foregroundPainterBuilder,
     FlagWidgetBuilder? foregroundWidgetBuilder,
+    String? semanticLabel,
     Key? key,
   }) => BasicFlag(
     properties ?? this.properties,
@@ -115,5 +122,6 @@ extension BasicFlagExtensionCopyWith<T extends BasicFlag> on T {
     width: theme?.width ?? width,
     key: key ?? this.key,
     flagChild: theme?.flagChild ?? flagChild,
+    semanticLabel: semanticLabel ?? this.semanticLabel,
   );
 }

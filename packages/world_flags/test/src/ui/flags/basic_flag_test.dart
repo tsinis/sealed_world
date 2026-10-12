@@ -2,8 +2,10 @@
 import "dart:ui";
 
 import "package:flutter/foundation.dart";
-import "package:flutter/widgets.dart" show Text;
+import "package:flutter/widgets.dart"
+    show Center, Directionality, Text, TextDirection;
 import "package:flutter_test/flutter_test.dart";
+import "package:world_flags/src/helpers/extensions/basic_flag_extension_copy_with.dart";
 import "package:world_flags/src/model/colors_properties.dart";
 import "package:world_flags/src/model/elements/elements_properties.dart";
 import "package:world_flags/src/model/flag_elements_type.dart";
@@ -152,6 +154,33 @@ void main() => group("$BasicFlag", () {
         elementsBuilder: StarPainter.new,
       );
       expect(flag.resolvePainter(elementsList, ratio), isA<StarPainter>());
+    });
+  });
+
+  group("semanticLabel", () {
+    testWidgets("labels the flag image", (tester) async {
+      final handle = tester.ensureSemantics();
+      await tester.pumpWidget(
+        const Directionality(
+          textDirection: TextDirection.ltr,
+          child: Center(
+            child: BasicFlag(FlagProperties(stripes), semanticLabel: "Flag"),
+          ),
+        ),
+      );
+
+      expect(
+        tester.getSemantics(find.bySemanticsLabel("Flag")),
+        matchesSemantics(label: "Flag", isImage: true),
+      );
+      handle.dispose();
+    });
+
+    test("is kept by copyWith", () {
+      const flag = BasicFlag(FlagProperties(stripes), semanticLabel: "Flag");
+
+      expect(flag.copyWith(height: 1).semanticLabel, "Flag");
+      expect(flag.copyWith(semanticLabel: "Other").semanticLabel, "Other");
     });
   });
 });

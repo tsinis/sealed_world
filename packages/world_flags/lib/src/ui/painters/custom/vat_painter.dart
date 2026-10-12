@@ -52,7 +52,6 @@ final class VatPainter extends CustomElementsPainter {
       ..lineTo(width * 0.17, height * 0.42)
       ..lineTo(width * 0.33, height * 0.3)
       ..lineTo(width * 0.33, height * 0.3)
-      ..lineTo(width * 0.33, height * 0.3)
       ..moveTo(width * 0.75, height * 0.75)
       ..cubicTo(
         width * 0.79,
@@ -92,7 +91,7 @@ final class VatPainter extends CustomElementsPainter {
 
     canvas
       ..translate(center.dx - bounds.center.dx, center.dy - bounds.center.dy)
-      ..drawPath(path, paintCreator(customColors.first))
+      ..drawPath(path, paintCreator(customColor(0)))
       ..scale(-1, 1)
       ..translate(-bounds.width, 0)
       ..drawPath(path, paintCreator());

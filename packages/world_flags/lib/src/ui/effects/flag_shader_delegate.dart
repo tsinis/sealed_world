@@ -21,11 +21,11 @@ abstract class FlagShaderDelegate implements Listenable {
   /// rectangle.
   final bool shouldClipContent;
 
-  /// Uniform scale factor to apply to the painted flag before handing it to the
-  /// shader.
+  /// Vertical scale factor to apply to the painted flag before handing it to
+  /// the shader (the flag keeps its full width, centered vertically).
   ///
   /// Values below `1.0` shrink the base content to leave visual headroom for
-  /// shader-driven overflow. Defaults to `1.0` (no scaling).
+  /// shader-driven (vertical) overflow. Defaults to `1.0` (no scaling).
   final double contentScale;
 
   /// Attempts to paint [image] with a shader.

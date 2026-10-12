@@ -6,8 +6,11 @@ import "package:sealed_countries/sealed_countries.dart";
 import "package:world_flags/src/helpers/extensions/box_decoration_extension.dart";
 import "package:world_flags/src/model/colors_properties.dart";
 import "package:world_flags/src/model/flag_properties.dart";
+import "package:world_flags/src/ui/effects/flag_shader_surface.dart";
 import "package:world_flags/src/ui/flags/basic_flag.dart";
 import "package:world_flags/src/ui/flags/iso/dual_flag.dart";
+
+import "../../../../helpers/fake_flag_shader_delegate.dart";
 
 void main() => group("$DualFlag", () {
   const item = FiatEur();
@@ -49,6 +52,28 @@ void main() => group("$DualFlag", () {
     await tester.pumpWidget(const MaterialApp(home: flag));
 
     expect(find.byType(ClipPath), findsNothing);
+  });
+
+  testWidgets("paints both flags through the shader", (tester) async {
+    final shader = FakeFlagShaderDelegate();
+    addTearDown(shader.dispose);
+    await tester.pumpWidget(
+      MaterialApp(
+        home: DualFlag(
+          item,
+          primeMap,
+          alternativeMap: alternativeMap,
+          shader: shader,
+        ),
+      ),
+    );
+
+    final surfaces = tester.widgetList<FlagShaderSurface>(
+      find.byType(FlagShaderSurface),
+    );
+    expect(surfaces, hasLength(2));
+    expect(surfaces.map((surface) => surface.shader), everyElement(shader));
+    expect(find.byType(ClipPath), findsOneWidget);
   });
 
   testWidgets("renders dual flag with clip when flags differ", (tester) async {

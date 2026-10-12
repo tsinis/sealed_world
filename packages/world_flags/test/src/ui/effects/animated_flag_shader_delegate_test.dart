@@ -1,3 +1,5 @@
+import "dart:ui";
+
 import "package:flutter_test/flutter_test.dart";
 import "package:world_flags/src/ui/effects/animated_flag_shader_delegate.dart";
 
@@ -18,6 +20,108 @@ void main() => group("$AnimatedFlagShaderDelegate", () {
       final delegate = _PausableAnimatedDelegate(vsync: tester, isPaused: true);
       expect(delegate.animate, isFalse);
       delegate.dispose();
+    });
+  });
+
+  group("ticker", () {
+    testWidgets("advances the time from the second frame", (tester) async {
+      final delegate = _AnimatedFlagShaderDelegateTest(vsync: tester);
+      await tester.pump();
+      await tester.pump(const Duration(milliseconds: 50));
+
+      expect(delegate.currentTime, closeTo(0.05, 1e-9));
+      delegate.dispose();
+    });
+
+    testWidgets("limits the time advanced by a single frame", (tester) async {
+      final delegate = _AnimatedFlagShaderDelegateTest(vsync: tester);
+      await tester.pump();
+      await tester.pump(const Duration(seconds: 5));
+
+      expect(delegate.currentTime, lessThanOrEqualTo(0.1));
+      delegate.dispose();
+    });
+
+    testWidgets("schedules no frames while paused", (tester) async {
+      final delegate = _PausableAnimatedDelegate(vsync: tester, isPaused: true)
+        ..startAnimation();
+      await tester.pump();
+
+      expect(tester.binding.hasScheduledFrame, isFalse);
+      delegate.dispose();
+    });
+
+    testWidgets("resumes on the next paint after a pause", (tester) async {
+      final delegate = _VisibilityDelegate(vsync: tester);
+      await tester.pump();
+      delegate.isVisible = false;
+      await tester.pump(const Duration(milliseconds: 50));
+      expect(tester.binding.transientCallbackCount, isZero);
+
+      delegate.isVisible = true;
+      final recorder = PictureRecorder();
+      final texture = _texture();
+      delegate.paintWithShader(
+        Canvas(recorder),
+        const Size(1, 1),
+        image: texture,
+      );
+      recorder.endRecording().dispose();
+      texture.dispose();
+      expect(tester.binding.transientCallbackCount, 1);
+
+      delegate
+        ..stopAnimation()
+        ..dispose();
+    });
+
+    testWidgets("starts on a paint if it was created paused", (tester) async {
+      final delegate = _VisibilityDelegate(vsync: tester, isVisible: false);
+      await tester.pump();
+      expect(tester.binding.transientCallbackCount, isZero);
+
+      delegate.isVisible = true;
+      final recorder = PictureRecorder();
+      final texture = _texture();
+      delegate.paintWithShader(
+        Canvas(recorder),
+        const Size(1, 1),
+        image: texture,
+      );
+      recorder.endRecording().dispose();
+      texture.dispose();
+      expect(tester.binding.transientCallbackCount, 1);
+
+      delegate
+        ..stopAnimation()
+        ..dispose();
+    });
+
+    testWidgets("stays stopped when stopped explicitly", (tester) async {
+      final delegate = _VisibilityDelegate(vsync: tester)..stopAnimation();
+      final recorder = PictureRecorder();
+      final texture = _texture();
+      delegate.paintWithShader(
+        Canvas(recorder),
+        const Size(1, 1),
+        image: texture,
+      );
+      recorder.endRecording().dispose();
+      texture.dispose();
+
+      expect(tester.binding.transientCallbackCount, isZero);
+      delegate.dispose();
+    });
+
+    testWidgets("continues from the time of another delegate", (tester) async {
+      final previous = _AnimatedFlagShaderDelegateTest(vsync: tester)
+        ..simulateTick(1.5);
+      final next = _AnimatedFlagShaderDelegateTest(vsync: tester)
+        ..continueFrom(previous);
+
+      expect(next.currentTime, 1.5);
+      previous.dispose();
+      next.dispose();
     });
   });
 
@@ -216,4 +320,26 @@ class _TrackingAnimatedDelegate extends AnimatedFlagShaderDelegate {
 
   /// Simulates a tick by directly calling [onTick].
   void simulateTick(double deltaSeconds) => onTick(deltaSeconds);
+}
+
+/// A delegate animated only while it's visible, like a list item.
+class _VisibilityDelegate extends AnimatedFlagShaderDelegate {
+  new({required super.vsync, this.isVisible = true})
+    : super(assetPath: "shaders/waved_flag.frag");
+
+  bool isVisible;
+
+  @override
+  bool get animate => isVisible;
+}
+
+/// A single transparent pixel, to paint the shader with.
+Image _texture() {
+  final recorder = PictureRecorder();
+  Canvas(recorder).drawPaint(Paint());
+  final picture = recorder.endRecording();
+  final image = picture.toImageSync(1, 1);
+  picture.dispose();
+
+  return image;
 }

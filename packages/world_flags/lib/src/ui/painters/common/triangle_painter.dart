@@ -6,7 +6,16 @@ import "../basic/elements_painter.dart";
 /// A painter for rendering triangular elements on flags.
 ///
 /// This class extends [ElementsPainter] and provides methods to paint
-/// triangles in various orientations based on the specified properties.
+/// triangles in various orientations based on the `angle` of the properties:
+/// - `0` or `null` (default): pointing right from the left edge (i.e. Czechia),
+/// - `180`: pointing left from the right edge (i.e. American Samoa),
+/// - `270`: pointing up,
+/// - any other value: pointing down.
+///
+/// For the left and right pointing triangles, the `offset` is relative to the
+/// center of the flag (from `-1` to `1`, like for other elements). For the up
+/// and down pointing ones, `offset.dx` is a fraction of the flag width from
+/// its left edge instead, where the triangle starts.
 final class TrianglePainter extends ElementsPainter {
   /// Creates a [TrianglePainter] with the given properties and aspect ratio.
   const new(super._properties, super.aspectRatio);
@@ -43,8 +52,7 @@ final class TrianglePainter extends ElementsPainter {
     final compensation = (aspectRatio / calculateAspectRatio(size) + 1) / 2;
     final width = size.width * (property.widthFactor ?? 1) * compensation;
     final height = size.height * property.heightFactor;
-    final horizontal =
-        size.width - ((size.width / 2) * (1 - property.offset.dx));
+    final horizontal = (size.width / 2) * (property.offset.dx + 1);
     final vertical = (size.height / 2) * (property.offset.dy + 1);
 
     final path = Path()

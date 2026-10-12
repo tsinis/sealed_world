@@ -1,9 +1,7 @@
 // ignore_for_file: format-comment
 
-import "dart:ui";
-
-import "../../../model/typedefs.dart";
 import "../basic/badge_artwork.dart";
+import "../basic/badge_artwork_painter.dart";
 import "../basic/custom_elements_painter.dart";
 
 /// Painter for the flag badge of Kyrgyzstan.
@@ -12,7 +10,7 @@ import "../basic/custom_elements_painter.dart";
 /// from the construction drawing the flag data links to. The emoji artwork
 /// the other badges come from still draws the pre-2023 flag, whose rays are
 /// wavy and whose tunduk has three beams to a half rather than four.
-final class KgzPainter extends CustomElementsPainter {
+final class KgzPainter extends CustomElementsPainter with BadgeArtworkPainter {
   /// Creates a new instance of [KgzPainter].
   const new(super._properties, super.aspectRatio);
 
@@ -206,10 +204,9 @@ final class KgzPainter extends CustomElementsPainter {
   // dart format on
 
   @override
-  FlagParentBounds paintFlagElements(Canvas canvas, Size size) {
-    final bounds = proportionalBounds(size, _artworkRatio);
-    _artwork.paint(canvas, bounds, badgePaint);
+  // ignore: avoid-unnecessary-getter, the static one shares its path cache.
+  BadgeArtwork get artwork => _artwork;
 
-    return (canvas: canvas, bounds: bounds, child: property.child);
-  }
+  @override
+  double get artworkRatio => _artworkRatio;
 }

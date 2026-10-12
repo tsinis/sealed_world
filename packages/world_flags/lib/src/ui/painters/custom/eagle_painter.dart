@@ -3,7 +3,6 @@ import "dart:ui";
 import "../../../data/flags_map_part_2.data.dart";
 import "../../../model/typedefs.dart";
 import "../basic/custom_elements_painter.dart";
-import "../multi_element_painter.dart";
 
 /// Painter for the simple eagle.
 final class EaglePainter extends CustomElementsPainter {
@@ -15,10 +14,7 @@ final class EaglePainter extends CustomElementsPainter {
 
   @override
   FlagParentBounds paintFlagElements(Canvas canvas, Size size) {
-    MultiElementPainter(
-      List.unmodifiable(properties.skip(1)),
-      aspectRatio,
-    ).paint(canvas, size);
+    paintShapes(canvas, size);
 
     final adjustedSize = ratioAdjustedSize(size, minRatio: 2);
     final center = calculateCenter(size);
@@ -148,7 +144,7 @@ final class EaglePainter extends CustomElementsPainter {
 
     canvas
       ..translate(center.dx - bounds.center.dx, center.dy - bounds.center.dy)
-      ..drawPath(eagle, paintCreator(customColors.first))
+      ..drawPath(eagle, paintCreator(customColor(0)))
       ..drawPath(
         path,
         paintCreator()

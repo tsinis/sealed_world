@@ -133,7 +133,8 @@ class FlagShaderOptions {
   /// Global turbulence factor that adds organic irregularities.
   final double turbulence;
 
-  /// Default wave direction unit vector.
+  /// Default wave direction, normalized by the shader (so only its direction
+  /// matters, not its length).
   final Offset waveDirection;
 
   /// Visibility of the procedural cloth texture (0 = off, 1 = fully visible).

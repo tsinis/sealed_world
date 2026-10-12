@@ -43,7 +43,8 @@ class CountryFlag extends IsoFlag<WorldCountry, BasicFlag> {
   ///  theme is used.
   /// - [width]: The width of the flag. If `null`, the width from the flag theme
   ///  is used.
-  /// - [child]: A widget to display in the foreground of the flag.
+  /// - [flagChild]: A widget to display in the foreground of the flag.
+  /// - [semanticLabel]: A description of the flag for accessibility.
   /// - [key]: The key for the widget.
   const new simplified(
     WorldCountry country, {
@@ -59,6 +60,7 @@ class CountryFlag extends IsoFlag<WorldCountry, BasicFlag> {
     super.flagChild,
     @Deprecated("Use flagChild instead. Will be removed in next major version.")
     super.child,
+    super.semanticLabel,
     super.key,
   }) : super(country, smallSimplifiedFlagsMap);
 
@@ -76,7 +78,8 @@ class CountryFlag extends IsoFlag<WorldCountry, BasicFlag> {
   /// theme is used.
   /// - [width]: The width of the flag. If `null`, the width from the flag theme
   /// is used.
-  /// - [child]: A widget to display in the foreground of the flag.
+  /// - [flagChild]: A widget to display in the foreground of the flag.
+  /// - [semanticLabel]: A description of the flag for accessibility.
   /// - [key]: The key for the widget.
   const new custom(
     super.item,
@@ -93,6 +96,7 @@ class CountryFlag extends IsoFlag<WorldCountry, BasicFlag> {
     super.flagChild,
     @Deprecated("Use flagChild instead. Will be removed in next major version.")
     super.child,
+    super.semanticLabel,
     super.key,
   });
 

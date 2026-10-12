@@ -1,13 +1,11 @@
 // ignore_for_file: format-comment
 
-import "dart:ui";
-
-import "../../../model/typedefs.dart";
 import "../basic/badge_artwork.dart";
+import "../basic/badge_artwork_painter.dart";
 import "../basic/custom_elements_painter.dart";
 
 /// Painter for the double-headed eagle of Albania.
-final class AlbPainter extends CustomElementsPainter {
+final class AlbPainter extends CustomElementsPainter with BadgeArtworkPainter {
   /// Creates a new instance of [AlbPainter].
   const new(super._properties, super.aspectRatio);
 
@@ -16,7 +14,7 @@ final class AlbPainter extends CustomElementsPainter {
   /// The emblem keeps this ratio whatever ratio the flag itself is drawn at.
   static const _artworkRatio = 0.9183;
 
-  /// The artwork, packed into typed arrays on first paint and reused after.
+  /// The artwork, built into paths on first paint and reused after.
   static final _artwork = BadgeArtwork(_layers);
 
   /// Commands as an opcode then its coordinates, relative to the emblem
@@ -195,10 +193,9 @@ final class AlbPainter extends CustomElementsPainter {
   // dart format on
 
   @override
-  FlagParentBounds paintFlagElements(Canvas canvas, Size size) {
-    final bounds = proportionalBounds(size, _artworkRatio);
-    _artwork.paint(canvas, bounds, badgePaint);
+  // ignore: avoid-unnecessary-getter, the static one shares its path cache.
+  BadgeArtwork get artwork => _artwork;
 
-    return (canvas: canvas, bounds: bounds, child: property.child);
-  }
+  @override
+  double get artworkRatio => _artworkRatio;
 }

@@ -24,7 +24,6 @@ final class TkmPainter extends MultiElementPainter {
       ..lineTo(width * 0.99, height * 0.08)
       ..lineTo(width * 0.99, height * 0.13)
       ..lineTo(width * 0.5, height * 0.27)
-      ..lineTo(width * 0.29, height * 0.27)
       ..lineTo(width * 0.29, height * 0.27);
 
     final path2 = Path()
@@ -34,13 +33,11 @@ final class TkmPainter extends MultiElementPainter {
       ..lineTo(width * 0.01, height * 0.13)
       ..lineTo(width * 0.5, height * 0.13)
       ..lineTo(width * 0.5, 0)
-      ..lineTo(width * 0.5, 0)
       ..moveTo(width * 0.5, height * 0.27)
       ..lineTo(width * 0.71, height * 0.27)
       ..lineTo(width * 0.99, height * 0.19)
       ..lineTo(width * 0.99, height * 0.13)
       ..lineTo(width * 0.5, height * 0.13)
-      ..lineTo(width * 0.5, height * 0.27)
       ..lineTo(width * 0.5, height * 0.27);
 
     final path3 = Path()
@@ -52,7 +49,6 @@ final class TkmPainter extends MultiElementPainter {
       ..lineTo(width * 0.99, height * 0.78)
       ..lineTo(width * 0.99, height * 0.89)
       ..lineTo(width * 0.71, height * 0.97)
-      ..lineTo(width * 0.29, height * 0.97)
       ..lineTo(width * 0.29, height * 0.97)
       ..moveTo(width, height * 1.14)
       ..lineTo(width * 0.87, height * 1.14)
@@ -73,7 +69,6 @@ final class TkmPainter extends MultiElementPainter {
       ..lineTo(width * 0.87, height * 1.23)
       ..lineTo(width, height * 1.23)
       ..lineTo(width, height * 1.14)
-      ..lineTo(width, height * 1.14)
       ..moveTo(width, height * 0.44)
       ..lineTo(width * 0.87, height * 0.44)
       ..lineTo(width * 0.87, height * 0.39)
@@ -92,7 +87,6 @@ final class TkmPainter extends MultiElementPainter {
       ..lineTo(width * 0.87, height * 0.58)
       ..lineTo(width * 0.87, height * 0.53)
       ..lineTo(width, height * 0.53)
-      ..lineTo(width, height * 0.44)
       ..lineTo(width, height * 0.44);
 
     final path4 = Path()
@@ -100,7 +94,6 @@ final class TkmPainter extends MultiElementPainter {
       ..lineTo(width * 0.64, height * 0.78)
       ..lineTo(width * 0.64, height * 0.89)
       ..lineTo(width * 0.36, height * 0.89)
-      ..lineTo(width * 0.36, height * 0.78)
       ..lineTo(width * 0.36, height * 0.78)
       ..moveTo(width * 0.5, height * 0.54)
       ..cubicTo(
@@ -180,7 +173,6 @@ final class TkmPainter extends MultiElementPainter {
       ..lineTo(width * 0.99, height * 1.48)
       ..lineTo(width * 0.99, height * 1.54)
       ..lineTo(width * 0.5, height * 1.67)
-      ..lineTo(width * 0.29, height * 1.67)
       ..lineTo(width * 0.29, height * 1.67);
 
     final path6 = Path()
@@ -190,13 +182,11 @@ final class TkmPainter extends MultiElementPainter {
       ..lineTo(width * 0.01, height * 1.54)
       ..lineTo(width * 0.5, height * 1.54)
       ..lineTo(width * 0.5, height * 1.4)
-      ..lineTo(width * 0.5, height * 1.4)
       ..moveTo(width * 0.5, height * 1.67)
       ..lineTo(width * 0.71, height * 1.67)
       ..lineTo(width * 0.99, height * 1.59)
       ..lineTo(width * 0.99, height * 1.54)
       ..lineTo(width * 0.5, height * 1.54)
-      ..lineTo(width * 0.5, height * 1.67)
       ..lineTo(width * 0.5, height * 1.67);
 
     final bounds = path.getBounds();
@@ -210,13 +200,13 @@ final class TkmPainter extends MultiElementPainter {
     canvas
       ..save()
       ..translate(center.dx - bounds.center.dx, center.dy - bounds.center.dy)
-      ..drawRect(rect, paintCreator(customColors[1])) // Red.
-      ..drawPath(path, paintCreator(customColors.first)) // White.
-      ..drawPath(path2, paintCreator(customColors[3])) // Yellow.
+      ..drawRect(rect, paintCreator(customColor(1))) // Red.
+      ..drawPath(path, paintCreator(customColor(0))) // White.
+      ..drawPath(path2, paintCreator(customColor(3))) // Yellow.
       ..drawPath(path3, paintCreator(customProperties.mainColor)) // Green.
-      ..drawPath(path4, paintCreator(customColors[1])) // Red.
-      ..drawPath(path5, paintCreator(customColors.first)) // White.
-      ..drawPath(path6, paintCreator(customColors[3])) // Yellow.
+      ..drawPath(path4, paintCreator(customColor(1))) // Red.
+      ..drawPath(path5, paintCreator(customColor(0))) // White.
+      ..drawPath(path6, paintCreator(customColor(3))) // Yellow.
       ..restore();
 
     return (canvas: canvas, bounds: rect, child: property.child);

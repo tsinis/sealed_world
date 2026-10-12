@@ -38,18 +38,15 @@ final class AtfPainter extends MultiElementPainter {
       ..lineTo(width * 0.82, height * 0.15)
       ..lineTo(width * 0.9, 0)
       ..lineTo(width * 0.1, 0)
-      ..lineTo(width * 0.1, 0)
       ..moveTo(width * 0.38, height * 0.61)
       ..lineTo(width * 0.12, height * 0.61)
       ..lineTo(width * 0.12, height * 0.71)
       ..lineTo(width * 0.38, height * 0.71)
       ..lineTo(width * 0.38, height * 0.61)
-      ..lineTo(width * 0.38, height * 0.61)
       ..moveTo(width * 0.88, height * 0.61)
       ..lineTo(width * 0.62, height * 0.61)
       ..lineTo(width * 0.62, height * 0.71)
       ..lineTo(width * 0.88, height * 0.71)
-      ..lineTo(width * 0.88, height * 0.61)
       ..lineTo(width * 0.88, height * 0.61);
 
     canvas

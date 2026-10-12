@@ -156,14 +156,13 @@ final class BtnPainter extends CustomElementsPainter {
         width * 0.78,
         height * 0.14,
       )
-      ..lineTo(width, height * 0.14)
       ..lineTo(width, height * 0.14);
 
     final bounds = path.getBounds();
 
     canvas
       ..translate(center.dx - bounds.center.dx, center.dy - bounds.center.dy)
-      ..drawPath(path, paintCreator(customColors.first))
+      ..drawPath(path, paintCreator(customColor(0)))
       ..drawPath(
         path,
         paintCreator()

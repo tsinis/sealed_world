@@ -96,7 +96,34 @@ void main() {
     expect(second.layers.single.path.getBounds().size, const Size(8, 8));
   });
 
-  test("fills two layers of a color as one path", () {
+  test("fills two separate layers of a color as one path", () {
+    const farSquare = <double>[
+      BadgeArtwork.moveTo,
+      2,
+      0,
+      BadgeArtwork.lineTo,
+      3,
+      0,
+      BadgeArtwork.lineTo,
+      3,
+      1,
+      BadgeArtwork.lineTo,
+      2,
+      1,
+      BadgeArtwork.closePath,
+    ];
+    final artwork = BadgeArtwork(const [
+      (color: 0, geometry: square),
+      (color: 0, geometry: farSquare),
+    ]);
+    final canvas = RecordingCanvas();
+
+    artwork.paint(canvas, const Rect.fromLTWH(0, 0, 8, 8), _paint);
+
+    expect(canvas.layers, hasLength(1), reason: "One draw, not two.");
+  });
+
+  test("fills overlapping layers wound the same way as one path", () {
     final artwork = BadgeArtwork(const [
       (color: 0, geometry: square),
       (color: 0, geometry: square),
@@ -105,7 +132,41 @@ void main() {
 
     artwork.paint(canvas, const Rect.fromLTWH(0, 0, 8, 8), _paint);
 
-    expect(canvas.layers, hasLength(1), reason: "One draw, not two.");
+    expect(canvas.layers, hasLength(1), reason: "They can't cancel out.");
+  });
+
+  test("fills overlapping layers of a color wound in opposite ways", () {
+    // Merged under the winding rule, the opposite windings of the overlap
+    // would cancel each other and punch a hole, which painting one layer
+    // after the other doesn't do.
+    const reversed = <double>[
+      BadgeArtwork.moveTo,
+      0.5,
+      0,
+      BadgeArtwork.lineTo,
+      0.5,
+      1,
+      BadgeArtwork.lineTo,
+      1.5,
+      1,
+      BadgeArtwork.lineTo,
+      1.5,
+      0,
+      BadgeArtwork.closePath,
+    ];
+    final artwork = BadgeArtwork(const [
+      (color: 0, geometry: square),
+      (color: 0, geometry: reversed),
+    ]);
+    final canvas = RecordingCanvas();
+
+    artwork.paint(canvas, const Rect.fromLTWH(0, 0, 8, 8), _paint);
+
+    expect(
+      canvas.layers.any((layer) => layer.path.contains(const Offset(6, 4))),
+      isTrue,
+      reason: "The overlap of both layers has to stay filled.",
+    );
   });
 
   test("leaves an even-odd artwork's layers apart", () {

@@ -6,8 +6,10 @@ import "package:sealed_countries/sealed_countries.dart" show IsoStandardized;
 
 import "../../../debug/iso_diagnostics_property.dart";
 import "../../../helpers/extensions/basic_flag_extension_copy_with.dart";
+import "../../../helpers/extensions/world_flags_build_context_extension.dart";
 import "../../decorated_flag_widget.dart";
 import "../../effects/flag_shader_delegate.dart";
+import "../../effects/flag_shader_surface.dart";
 import "../basic_flag.dart";
 
 /// A widget that displays a flag for a given ISO object.
@@ -49,7 +51,9 @@ class IsoFlag<T extends IsoStandardized, F extends BasicFlag>
   ///  theme is used.
   /// - [width]: The width of the flag. If `null`, the width from the flag theme
   ///  is used.
-  /// - [child]: A widget to display in the foreground of the flag.
+  /// - [shader]: An optional shader delegate the flag is painted through.
+  /// - [flagChild]: A widget to display in the foreground of the flag.
+  /// - [semanticLabel]: A description of the flag for accessibility.
   /// - [key]: The key for the widget.
   const new(
     this.item,
@@ -66,6 +70,7 @@ class IsoFlag<T extends IsoStandardized, F extends BasicFlag>
     super.flagChild,
     @Deprecated("Use flagChild instead. Will be removed in next major version.")
     super.child,
+    this.semanticLabel,
     super.key,
   });
 
@@ -86,8 +91,17 @@ class IsoFlag<T extends IsoStandardized, F extends BasicFlag>
   /// A widget to display if the flag is not found in the map.
   final Widget? orElse;
 
-  /// Optional shader delegate applied when painting the stripes.
+  /// Optional shader delegate the flag is painted through.
+  ///
+  /// When provided, the flag is rendered by a [FlagShaderSurface] with this
+  /// delegate, while its size, padding, decoration and child are preserved.
+  /// The delegate is owned by the caller, who is responsible for disposing it.
   final FlagShaderDelegate? shader;
+
+  /// A description of the flag for accessibility, announced by screen readers
+  /// (i.e. the name of the country). If `null`, the flag is announced as an
+  /// image without description, so provide it if no text describes the flag.
+  final String? semanticLabel;
 
   @override
   String toStringShort() => "IsoFlag($debugLabel)";
@@ -208,21 +222,86 @@ class IsoFlag<T extends IsoStandardized, F extends BasicFlag>
           shader,
           ifNull: "no shader provided",
         ),
-      );
+      )
+      ..add(StringProperty("semanticLabel", semanticLabel, defaultValue: null));
+  }
+
+  /// Returns the [flag] painted through the [shader], if it's provided.
+  ///
+  /// The flag keeps its size, padding, decoration and child: its stripes,
+  /// elements and painters are painted by a [FlagShaderSurface] instead
+  /// (clipped to the shape of the decoration), with the child (if any) laid
+  /// out above it.
+  @protected
+  BasicFlag withShader(BuildContext context, BasicFlag flag) {
+    final delegate = shader;
+    if (delegate == null) return flag;
+
+    final theme = context.flagTheme;
+    final themeDecoration = theme?.decoration;
+    // The surface paints the painters of the flag, with its (theme) decoration.
+    final surface = FlagShaderSurface(
+      item,
+      map: {
+        item: flag.decoration == null && themeDecoration != null
+            ? flag.copyWith(decoration: themeDecoration)
+            : flag,
+      },
+      shader: delegate,
+    );
+    final BasicFlag(
+      :flagAspectRatio,
+      flagChild: child,
+      :foregroundWidgetBuilder,
+      :properties,
+    ) = flag;
+    final foreground =
+        child ??
+        foregroundWidgetBuilder?.call(
+          properties.elementsProperties,
+          flagAspectRatio,
+        ) ??
+        theme?.flagChild;
+
+    return flag.copyWith(
+      // Both are painted by the surface, so nothing is painted outside of it.
+      backgroundPainter: const _EmptyPainter(),
+      foregroundPainter: const _EmptyPainter(),
+      flagChild: foreground == null
+          ? surface
+          : Stack(fit: StackFit.expand, children: [surface, foreground]),
+    );
   }
 
   @override
-  Widget build(BuildContext context) =>
-      basicFlag?.copyWith(
-        key: Key(debugLabel),
-        aspectRatio: aspectRatio,
-        decoration: decoration,
-        decorationPosition: decorationPosition,
-        padding: padding,
-        height: height,
-        width: width,
-        flagChild: flagChild,
-      ) ??
-      orElse ??
-      const SizedBox.shrink();
+  Widget build(BuildContext context) {
+    final flag = basicFlag?.copyWith(
+      key: Key(debugLabel),
+      aspectRatio: aspectRatio,
+      decoration: decoration,
+      decorationPosition: decorationPosition,
+      padding: padding,
+      height: height,
+      width: width,
+      flagChild: flagChild,
+      semanticLabel: semanticLabel,
+    );
+
+    return flag == null
+        ? (orElse ?? const SizedBox.shrink())
+        // ignore: avoid-returning-widgets, it's a modified copy of the flag.
+        : withShader(context, flag);
+  }
+}
+
+/// Paints nothing, used in place of the stripes when a shader paints the flag.
+final class _EmptyPainter extends CustomPainter {
+  const new();
+
+  @override
+  // ignore: no-empty-block, the shader surface child paints the flag instead.
+  void paint(Canvas canvas, Size size) {}
+
+  @override
+  bool shouldRepaint(_EmptyPainter oldDelegate) => false;
 }

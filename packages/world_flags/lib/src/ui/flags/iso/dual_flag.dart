@@ -53,6 +53,7 @@ class DualFlag<T extends IsoStandardized, F extends BasicFlag>
     super.flagChild,
     @Deprecated("Use flagChild instead. Will be removed in next major version.")
     super.child,
+    super.semanticLabel,
     super.key,
   });
 
@@ -87,18 +88,26 @@ class DualFlag<T extends IsoStandardized, F extends BasicFlag>
           (secondary) {
             final background = clipSecondary ? primary : secondary;
             final foreground = clipSecondary ? secondary : primary;
+            if (background == null) return null;
+            final clipped = foreground?.copyWith(
+              aspectRatio: aspectRatio,
+              decoration: decoration,
+              decorationPosition: decorationPosition,
+              padding: EdgeInsets.zero,
+              flagChild: flagChild,
+            );
 
-            return background?.copyWithTheme(
-              theme: toData(
-                flagChild: ClipPath(
-                  clipBehavior: clipBehavior,
-                  clipper: DualFlagClipper(splitAngle),
-                  child: foreground?.copyWith(
-                    aspectRatio: aspectRatio,
-                    decoration: decoration,
-                    decorationPosition: decorationPosition,
-                    padding: EdgeInsets.zero,
-                    flagChild: flagChild,
+            return withShader(
+              context,
+              background.copyWithTheme(
+                semanticLabel: semanticLabel,
+                theme: toData(
+                  flagChild: ClipPath(
+                    clipBehavior: clipBehavior,
+                    clipper: DualFlagClipper(splitAngle),
+                    child: clipped == null
+                        ? null
+                        : withShader(context, clipped),
                   ),
                 ),
               ),

@@ -16,6 +16,10 @@ final class DiagonalLinePainter extends ElementsPainter {
 
   @override
   FlagParentBounds paintFlagElements(Canvas canvas, Size size) {
+    assert(
+      property.child == null,
+      "A diagonal line can't have a child element: its bounds are rotated.",
+    );
     final angle = atan2(size.height, size.width);
     final thickness = size.height * property.heightFactor;
     final length = sqrt(size.width * size.width + size.height * size.height);

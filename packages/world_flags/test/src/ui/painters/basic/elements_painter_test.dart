@@ -1,5 +1,7 @@
 // ignore_for_file: prefer-match-file-name, the subject is the base class.
 
+import "dart:ui" show PictureRecorder;
+
 import "package:flutter/rendering.dart";
 import "package:flutter_test/flutter_test.dart";
 import "package:world_flags/src/model/elements/elements_properties.dart";
@@ -43,6 +45,28 @@ void main() => group("$ElementsPainter", () {
     expect(_SizePainter(wider).size(size), 25, reason: "Height is smaller.");
     expect(_SizePainter(narrower).size(size), 10, reason: "Width is smaller.");
   });
+
+  group("shouldRepaint", () {
+    const element = ElementsProperties(_color, shape: _shape);
+    const other = ElementsProperties(_color, shape: Star());
+
+    test("returns true when elements change", () {
+      expect(_SizePainter(other).shouldRepaint(_SizePainter(element)), isTrue);
+    });
+
+    test("returns false when nothing changes", () {
+      const list = [element];
+      expect(_ListPainter(list).shouldRepaint(_ListPainter(list)), isFalse);
+    });
+  });
+
+  test("doesn't paint into an empty size", () {
+    final painter = _ThrowingPainter(const [
+      ElementsProperties(_color, shape: _shape),
+    ]);
+
+    expect(painter.paint(Canvas(PictureRecorder()), Size.zero), isNull);
+  });
 });
 
 const _color = Color(0xff000000);
@@ -56,4 +80,21 @@ final class _SizePainter extends ElementsPainter {
 
   @override
   FlagParentBounds? paintFlagElements(Canvas canvas, Size size) => null;
+}
+
+/// A painter of a constant list of elements, painting nothing.
+final class _ListPainter extends ElementsPainter {
+  new(ElementsProps elements) : super(elements, 1);
+
+  @override
+  FlagParentBounds? paintFlagElements(Canvas canvas, Size size) => null;
+}
+
+/// A painter that must not be asked to paint its elements.
+final class _ThrowingPainter extends ElementsPainter {
+  new(ElementsProps elements) : super(elements, 1);
+
+  @override
+  FlagParentBounds paintFlagElements(Canvas canvas, Size size) =>
+      throw StateError("Painted into $size");
 }

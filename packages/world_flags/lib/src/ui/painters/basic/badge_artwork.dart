@@ -1,4 +1,4 @@
-import "dart:ui" show Canvas, Paint, Path, PathFillType, Rect;
+import "dart:ui" show Canvas, Offset, Paint, Path, PathFillType, Rect;
 
 /// One layer of a flag badge: a palette index and the geometry filled with it.
 ///
@@ -45,10 +45,11 @@ typedef _BadgePath = ({int color, Path path});
 /// assert(layers.single.geometry.length == 10, "Ten numbers, one triangle.");
 /// ```
 ///
-/// Contours are filled by the winding rule, so a layer's shapes add together
-/// however they are wound. [BadgeArtwork.evenOdd] switches a layer to the
-/// even-odd rule instead, which is what artwork that cuts holes out of one
-/// outline needs.
+/// Contours are filled by the winding rule, so within a layer the shapes wound
+/// the same way add together, while a contour wound against its outline cuts
+/// a hole into it. [BadgeArtwork.evenOdd] switches a layer to the even-odd
+/// rule instead, which is what artwork that cuts holes out of one outline
+/// regardless of the winding needs. Layers are painted one over another.
 ///
 /// A painter holds the artwork built from such a table in a `static final`
 /// field, so that one instance serves every flag that paints it and they
@@ -99,6 +100,7 @@ final class BadgeArtwork {
   /// same time does not rebuild its artwork on every frame of either.
   _BadgeCache? _recent;
   _BadgeCache? _previous;
+  List<int>? _windings; // Of every layer: the same for any size, so built once.
 
   /// Fills every layer into [bounds], resolving colors through [paintFor].
   ///
@@ -137,23 +139,34 @@ final class BadgeArtwork {
     // single path: one draw command instead of one per layer, and the result
     // is identical because they were painted back to back anyway.
     //
-    // Only under the winding rule, though. Even-odd cancels wherever two
-    // contours overlap, so merging two layers into one path would punch a
-    // hole through where they cross instead of filling it, which is not what
-    // painting one after the other does. Those layers stay apart.
+    // Only under the winding rule, though, and only where it can't cancel.
+    // Wherever two contours overlap, even-odd cancels them, and so does the
+    // winding rule if they are wound in opposite ways (i.e. mirrored halves
+    // of a shape). Merged, they would punch a hole through where they cross
+    // instead of filling it, which is not what painting one after the other
+    // does. So overlapping layers are merged only if all their contours wind
+    // the same way, otherwise they stay apart.
     final merges = _fillType != PathFillType.evenOdd;
+    final windings = merges ? _layerWindings() : const <int>[];
     final built = <_BadgePath>[];
-    Path? open;
-    int openColor = -1;
-    for (final layer in _layers) {
-      if (merges && open != null && openColor == layer.color) {
-        _addTo(open, layer.geometry, width, height);
+    int runWinding = 0;
+    for (final (index, layer) in _layers.indexed) {
+      final path = _addTo(_emptyPath(), layer.geometry, width, height);
+      final layerWinding = windings.elementAtOrNull(index) ?? 0;
+      // ignore: move-variable-outside-iteration, the list grows in the loop.
+      final lastBuilt = built.lastOrNull;
+      if (merges && lastBuilt != null && lastBuilt.color == layer.color) {
+        final isSameWinding = layerWinding != 0 && layerWinding == runWinding;
+        if (isSameWinding ||
+            !lastBuilt.path.getBounds().overlaps(path.getBounds())) {
+          lastBuilt.path.addPath(path, Offset.zero);
+          if (!isSameWinding) runWinding = 0; // Mixed run, keep the rest apart.
 
-        continue;
+          continue;
+        }
       }
-      open = _addTo(_emptyPath(), layer.geometry, width, height);
-      openColor = layer.color;
-      built.add((color: layer.color, path: open));
+      built.add((color: layer.color, path: path));
+      runWinding = layerWinding;
     }
 
     _previous = recent;
@@ -164,6 +177,60 @@ final class BadgeArtwork {
 
   // ignore: avoid-returning-cascades, it's a one-expression factory.
   Path _emptyPath() => Path()..fillType = _fillType;
+
+  List<int> _layerWindings() {
+    final cached = _windings;
+    if (cached != null) return cached;
+    final windings = List<int>.unmodifiable(
+      _layers.map((layer) => _windingOf(layer.geometry)),
+    );
+    _windings = windings;
+
+    return windings;
+  }
+
+  /// The direction all contours of the [geometry] are wound in: `1` or `-1`,
+  /// or `0` if they are wound in both directions (or enclose no area).
+  static int _windingOf(List<double> geometry) {
+    int winding = 0;
+    double area = 0; // Twice the signed area, by the shoelace formula.
+    bool isContourOpen = false;
+    Offset start = Offset.zero;
+    Offset point = Offset.zero;
+    int index = 0;
+
+    while (index <= geometry.length) {
+      final isEnd = index == geometry.length;
+      final command = isEnd ? closePath : geometry[index];
+      // A close, a move or the end of the geometry completes the contour.
+      if (isContourOpen && command != lineTo) {
+        final closing = point.dx * start.dy - start.dx * point.dy;
+        final sign = (area + closing).sign.toInt();
+        if (sign == 0 || (winding != 0 && sign != winding)) return 0;
+        winding = sign;
+        area = 0;
+        isContourOpen = false;
+      }
+      if (isEnd) break;
+      if (command == closePath) {
+        index += 1;
+
+        continue;
+      }
+
+      final next = Offset(geometry[index + 1], geometry[index + 2]);
+      if (command == moveTo) {
+        start = next;
+        isContourOpen = true;
+      } else {
+        area += point.dx * next.dy - next.dx * point.dy;
+      }
+      point = next;
+      index += 3;
+    }
+
+    return winding;
+  }
 
   static Path _addTo(
     Path path,

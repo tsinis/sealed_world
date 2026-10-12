@@ -1,9 +1,7 @@
-import "dart:math" as math;
 import "dart:ui";
 
 import "package:flutter/foundation.dart";
 
-import "../../helpers/platform_environment.dart";
 import "../painters/basic/shader_stripes_painter.dart"
     show ShaderStripesPainter;
 import "animated_flag_shader_delegate.dart";
@@ -66,28 +64,32 @@ class WavedFlagShaderDelegate extends AnimatedFlagShaderDelegate {
          contentScale: options.clipContent ? 1 : options.overflowScale,
          shouldClipContent: options.clipContent,
          animationSpeed: options.animationSpeed,
-         onError: onError ?? _debugPrintError,
+         onError: onError ?? _printOnce(<String>{}),
        );
 
   /// Visual preferences of shader output.
   final FlagShaderOptions options;
 
-  static void _debugPrintError(Object error, StackTrace stackTrace) =>
-      debugPrint("WavedFlagShaderDelegate paint failed: $error\n$stackTrace");
+  // Prints every distinct error of a delegate once, not on every frame.
+  // ignore: prefer-correct-mutated, it's the set of errors of a delegate.
+  static _ErrorCallback _printOnce(Set<String> printed) => (error, stackTrace) {
+    // ignore: avoid-collection-mutating-methods, the errors of a delegate.
+    if (!printed.add("$error")) return;
+    debugPrint("WavedFlagShaderDelegate failed: $error\n$stackTrace");
+  };
 
-  static final _shaderPath =
-      !kIsWeb && platformEnvironment.containsKey("FLUTTER_TEST")
-      ? "shaders/waved_flag.frag"
-      : "packages/world_flags/shaders/waved_flag.frag";
+  // Falls back to "shaders/waved_flag.frag" inside this package (its tests).
+  static const _shaderPath = "packages/world_flags/shaders/waved_flag.frag";
 
-  /// Ensures the shader program is loaded before instantiating delegates.
+  /// Ensures the shader program is loaded before instantiating delegates, so
+  /// the very first frame of the flag is already painted with the shader.
   ///
   /// [assetKey] - represents path to the fragment program from the asset,
   /// default to package's `packages/world_flags/shaders/waved_flag.frag`.
+  /// The delegate itself always uses the package's shader, so a custom key is
+  /// only useful to pre-load other shaders (i.e. of your own delegates).
   static Future<void> warmUp([String? assetKey]) =>
       StaticFlagShaderDelegate.warmUp(assetKey ?? _shaderPath);
-
-  Offset get _effectiveWaveDirection => options.waveDirection;
 
   @override
   bool get animate => options.animate;
@@ -105,10 +107,12 @@ class WavedFlagShaderDelegate extends AnimatedFlagShaderDelegate {
     // Seed/wave direction (indices 20-22).
     // Turbulence (index 23).
     // Fabric visibility (index 24).
-    final waveDir = _normalizeWaveDirection(_effectiveWaveDirection);
+    final waveDirection = options.waveDirection; // Normalized by the shader.
     shader
       ..setFloat(2, timeValue)
-      ..setFloat(3, options.animationSpeed)
+      // The ticker already scales the time by the animation speed, so it must
+      // not be applied twice (and must not affect the frozen pose).
+      ..setFloat(3, 1)
       ..setFloat(4, options.waveAmplitude)
       ..setFloat(5, options.waveFrequency)
       ..setFloat(6, options.wavePhaseShift)
@@ -126,17 +130,11 @@ class WavedFlagShaderDelegate extends AnimatedFlagShaderDelegate {
       ..setFloat(18, options.sheenFrequency)
       ..setFloat(19, options.perspective)
       ..setFloat(20, options.seed) // Seed/wave direction (indices 20-22).
-      ..setFloat(21, waveDir.dx)
-      ..setFloat(22, waveDir.dy)
+      ..setFloat(21, waveDirection.dx)
+      ..setFloat(22, waveDirection.dy)
       ..setFloat(23, options.turbulence) // Turbulence, (index 23).
       ..setFloat(24, options.fabricVisibility.clamp(0, 1));
   }
-
-  static Offset _normalizeWaveDirection(Offset dir) {
-    final x = dir.dx;
-    final y = dir.dy;
-    final len = math.sqrt(x * x + y * y);
-
-    return len > 0.001 ? Offset(x / len, y / len) : const Offset(1, 0);
-  }
 }
+
+typedef _ErrorCallback = void Function(Object error, StackTrace stackTrace);

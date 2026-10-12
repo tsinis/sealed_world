@@ -1,4 +1,4 @@
-import "dart:ui" show Size;
+import "dart:ui" show Offset, Size;
 
 import "package:flutter_test/flutter_test.dart";
 import "package:world_flags/src/ui/other/dual_flag_clipper.dart";
@@ -17,8 +17,19 @@ void main() => group("$DualFlagClipper", () {
     expect(bounds.height, size.height);
   });
 
-  test("clips top half at 0 degrees", () {
+  test("clips bottom half at 0 degrees", () {
     const clipper = DualFlagClipper(0);
+    final path = clipper.getClip(size);
+    final bounds = path.getBounds();
+
+    expect(bounds.left, isZero);
+    expect(bounds.top, size.height / 2);
+    expect(bounds.width, size.width);
+    expect(bounds.height, size.height / 2);
+  });
+
+  test("clips top half at 180 degrees", () {
+    const clipper = DualFlagClipper(180);
     final path = clipper.getClip(size);
     final bounds = path.getBounds();
 
@@ -28,15 +39,27 @@ void main() => group("$DualFlagClipper", () {
     expect(bounds.height, size.height / 2);
   });
 
-  test("clips bottom half at 180 degrees", () {
-    const clipper = DualFlagClipper(180);
-    final path = clipper.getClip(size);
-    final bounds = path.getBounds();
+  test("keeps the same side as neighbouring angles", () {
+    const top = Offset(100, 10);
+    const bottom = Offset(100, 90);
+    const left = Offset(10, 50);
+    const right = Offset(190, 50);
 
-    expect(bounds.left, isZero);
-    expect(bounds.top, size.height / 2);
-    expect(bounds.width, size.width);
-    expect(bounds.height, size.height / 2);
+    for (final angle in const [0, 90, 180, 270]) {
+      final exact = DualFlagClipper(angle).getClip(size);
+      for (final near in [angle - 1, angle + 1]) {
+        final nearPath = DualFlagClipper(near).getClip(size);
+        // Points on the split line itself are ambiguous, so skip them.
+        final points = angle % 180 == 0 ? const [top, bottom] : [left, right];
+        for (final point in points) {
+          expect(
+            exact.contains(point),
+            nearPath.contains(point),
+            reason: "$angle vs $near degrees at $point",
+          );
+        }
+      }
+    }
   });
 
   test("clips right half at 270 degrees", () {

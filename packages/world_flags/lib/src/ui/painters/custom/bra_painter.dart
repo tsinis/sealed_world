@@ -43,7 +43,7 @@ final class BraPainter extends MultiElementPainter {
       ..close();
 
     final arcPaint = Paint()
-      ..color = customColors[1]
+      ..color = customColor(1)
       ..style = PaintingStyle.stroke
       ..strokeWidth = height / 20;
 
@@ -52,7 +52,7 @@ final class BraPainter extends MultiElementPainter {
       ..translate(center.dx - width / 2, center.dy - height / 2)
       ..drawPath(path, paintCreator())
       ..restore()
-      ..drawOval(ovalRect, paintCreator(customColors.first))
+      ..drawOval(ovalRect, paintCreator(customColor(0)))
       ..drawPath(arc, arcPaint);
 
     return (canvas: canvas, bounds: path.getBounds(), child: property.child);

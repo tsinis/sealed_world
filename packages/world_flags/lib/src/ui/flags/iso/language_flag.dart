@@ -88,6 +88,7 @@ class LanguageFlag extends DualFlag<NaturalLanguage, BasicFlag> {
     super.flagChild,
     @Deprecated("Use flagChild instead. Will be removed in next major version.")
     super.child,
+    super.semanticLabel,
     super.key,
   }) : super(language, defaultConventionalLanguageFlags);
 
@@ -96,7 +97,7 @@ class LanguageFlag extends DualFlag<NaturalLanguage, BasicFlag> {
   /// Maps each [NaturalLanguage] to the flag of its main/conventional country.
   /// For example, German maps to the Germany flag, English to the UK flag, etc.
   ///
-  /// This map is generated from [NaturalLanguage.list.byCountryMap()] with
+  /// This map is generated from `NaturalLanguage.list.byCountryMap()` with
   /// `en_GB` locale, providing the standard language-country associations based
   /// on cultural/historical significance.
   static const defaultConventionalLanguageFlags = <NaturalLanguage, BasicFlag>{

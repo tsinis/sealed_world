@@ -6,7 +6,9 @@ import "../basic/elements_painter.dart";
 /// A painter for rendering elliptical elements on flags.
 ///
 /// This class extends [ElementsPainter] and provides methods to paint
-/// ellipses based on the specified properties.
+/// ellipses based on the specified properties. The ellipse is a circle with
+/// the diameter of `heightFactor` of the flag height, `widthFactor` of the
+/// properties is not used.
 final class EllipsePainter extends ElementsPainter {
   /// Creates an [EllipsePainter] with the given properties and aspect ratio.
   const new(super._properties, super.aspectRatio);

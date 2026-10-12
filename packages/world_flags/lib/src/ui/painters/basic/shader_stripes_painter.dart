@@ -6,6 +6,8 @@ import "dart:ui";
 import "package:flutter/foundation.dart" show Listenable;
 import "package:flutter/rendering.dart";
 
+import "../../../helpers/extensions/box_decoration_extension.dart";
+import "../../../helpers/extensions/paint_equality_extension.dart";
 import "../../../model/flag_properties.dart";
 import "../../effects/flag_shader_delegate.dart";
 import "../../effects/flag_shader_surface.dart" show FlagShaderSurface;
@@ -19,23 +21,65 @@ import "stripes_painter.dart";
 /// This painter OWNS the [_image] and is responsible for its lifecycle.
 /// The [shader] delegate receives the image for rendering but must NOT
 /// dispose it.
+///
+/// A [CustomPainter] has no lifecycle of its own, so whoever creates this
+/// painter (i.e. the state of a [FlagShaderSurface]) has to call [dispose]
+/// when it's not used anymore: it releases the cached image and stops
+/// listening to the [backgroundPainter] and [foregroundPainter].
 class ShaderStripesPainter<T extends CustomPainter> extends StripesPainter<T> {
   /// Creates a new instance of [ShaderStripesPainter].
   ///
   /// The [shader] delegate drives both animation (via its [Listenable]
   /// interface) and the shader rendering path.
+  ///
+  /// A [backgroundPainter] replaces the stripes and elements and a
+  /// [foregroundPainter] is painted over them, both before the shader, so they
+  /// are distorted with the flag. The output is clipped to the shape of the
+  /// `decoration` (resolved in the `textDirection`), if it has one.
   new(
     FlagProperties properties,
     T? elementsPainter, {
     required this.shader,
     this.pixelRatio = 1,
-  }) : super(properties, null, elementsPainter, repaint: shader);
+    this.backgroundPainter,
+    this.foregroundPainter,
+    BoxDecoration? decoration,
+    TextDirection? textDirection,
+  }) : super(
+         properties,
+         decoration,
+         elementsPainter,
+         repaint: Listenable.merge([
+           shader,
+           backgroundPainter,
+           foregroundPainter,
+         ]),
+         textDirection: textDirection,
+       )
+  // ignore: avoid-non-empty-constructor-bodies, to listen to the painters.
+  {
+    backgroundPainter?.addListener(_invalidateCache);
+    foregroundPainter?.addListener(_invalidateCache);
+  }
 
   /// The shader delegate responsible for applying visual effects.
   final FlagShaderDelegate shader;
 
   /// The pixel ratio used for scaling the flag image.
   final double pixelRatio;
+
+  /// An optional painter of the flag, in place of its stripes and elements.
+  final CustomPainter? backgroundPainter;
+
+  /// An optional painter painted over the flag.
+  final CustomPainter? foregroundPainter;
+
+  // A shaped decoration clips the output, like the stripes are clipped to it.
+  bool get _isClipped =>
+      shader.shouldClipContent ||
+      decoration.isCircle ||
+      borderRadius.resolve(textDirection ?? TextDirection.ltr) !=
+          BorderRadius.zero;
   final _paint = Paint()..filterQuality = FilterQuality.high;
   bool? _clip;
   Image? _image;
@@ -96,23 +140,31 @@ class ShaderStripesPainter<T extends CustomPainter> extends StripesPainter<T> {
     // nothing may be left outside. The picture is cached, so this costs
     // nothing per frame.
     canvas.clipRect(Offset.zero & size, doAntiAlias: false);
-    paintStripes(canvas, size);
+    final background = backgroundPainter;
+    if (background == null) {
+      paintStripes(canvas, size);
+    } else {
+      background.paint(canvas, size);
+    }
+    foregroundPainter?.paint(canvas, size);
     canvas.restore();
   }
 
   bool _renderWithShader(Canvas canvas, Size size, Image image) {
-    if (shader.shouldClipContent) {
+    final isClipped = _isClipped;
+    if (isClipped) {
       canvas.save();
       applyFlagClipping(canvas, size);
     }
     final painted = shader.paintWithShader(canvas, size, image: image);
-    if (shader.shouldClipContent) canvas.restore();
+    if (isClipped) canvas.restore();
 
     return painted;
   }
 
   void _drawCachedImage(Canvas canvas, Size size, Image image) {
-    if (shader.shouldClipContent) {
+    final isClipped = _isClipped;
+    if (isClipped) {
       canvas.save();
       applyFlagClipping(canvas, size);
     }
@@ -124,21 +176,33 @@ class ShaderStripesPainter<T extends CustomPainter> extends StripesPainter<T> {
     );
     final destination = Rect.fromLTWH(0, 0, size.width, size.height);
     canvas.drawImageRect(image, source, destination, _paint);
-    if (shader.shouldClipContent) canvas.restore();
+    if (isClipped) canvas.restore();
   }
 
   @override
   bool shouldRepaint(covariant ShaderStripesPainter<T> oldDelegate) =>
       oldDelegate.shader != shader ||
-      oldDelegate.properties != properties ||
+      oldDelegate.pixelRatio != pixelRatio ||
+      !oldDelegate.properties.paintsLike(properties) ||
+      oldDelegate.elementsPainter != elementsPainter ||
+      oldDelegate.backgroundPainter != backgroundPainter ||
+      oldDelegate.foregroundPainter != foregroundPainter ||
       oldDelegate.decoration != decoration ||
-      oldDelegate.elementsPainter != elementsPainter;
+      oldDelegate.textDirection != textDirection;
+
+  // The painters are recorded into the cached image, so it's outdated now.
+  void _invalidateCache() {
+    _image?.dispose();
+    _image = null;
+  }
 
   /// Disposes resources owned by this painter.
   ///
   /// This disposes [_image] which this painter owns. The [shader] delegate
   /// is NOT disposed here - its lifecycle is managed by [FlagShaderSurface].
   void dispose() {
+    backgroundPainter?.removeListener(_invalidateCache);
+    foregroundPainter?.removeListener(_invalidateCache);
     _image?.dispose();
     _image = null;
     _size = null;

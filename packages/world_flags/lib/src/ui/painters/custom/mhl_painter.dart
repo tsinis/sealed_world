@@ -13,7 +13,7 @@ final class MhlPainter extends MultiElementPainter {
     final topRightBelow = Offset(size.width, offsetFromEdges);
     final rightEdgeBottom = Offset(size.width, size.height * biggerFactor);
     final end = Offset(0, size.height - offsetFromEdges);
-    final orange = paintCreator(customColors.last);
+    final orange = paintCreator(lastCustomColor);
 
     final orangePath = Path()
       ..moveTo(start.dx, start.dy)

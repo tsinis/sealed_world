@@ -14,7 +14,7 @@ final class PyfPainter extends MultiElementPainter {
       ..shader = LinearGradient(
         begin: Alignment.topCenter,
         end: Alignment.bottomCenter,
-        colors: [customColors.first, customColors.last],
+        colors: [customColor(0), lastCustomColor],
         stops: const [0.6, 0.6],
       ).createShader(rect);
 

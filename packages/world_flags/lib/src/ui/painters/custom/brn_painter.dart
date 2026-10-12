@@ -31,7 +31,7 @@ final class BrnPainter extends MultiElementPainter {
 
     canvas
       ..drawPath(whitePath, paintCreator())
-      ..drawPath(blackPath, paintCreator(customColors.first));
+      ..drawPath(blackPath, paintCreator(customColor(0)));
 
     return null;
   }

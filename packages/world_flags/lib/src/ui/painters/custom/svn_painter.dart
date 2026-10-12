@@ -72,7 +72,6 @@ final class SvnPainter extends CustomElementsPainter {
       ..lineTo(width * 0.16, height * 0.71)
       ..lineTo(width * 0.31, height * 0.51)
       ..lineTo(width * 0.38, height * 0.59)
-      ..lineTo(width * 0.48, height * 0.41)
       ..lineTo(width * 0.48, height * 0.41);
 
     final path3 = Path()
@@ -121,8 +120,8 @@ final class SvnPainter extends CustomElementsPainter {
 
     canvas
       ..translate(center.dx - bounds.center.dx, center.dy - bounds.center.dy)
-      ..drawPath(path, paintCreator(customColors.first)) // Blue.
-      ..drawPath(path2, paintCreator(customColors.last)) // White.
+      ..drawPath(path, paintCreator(customColor(0))) // Blue.
+      ..drawPath(path2, paintCreator(lastCustomColor)) // White.
       ..drawPath(path3, paintCreator()); // Red.
 
     return (canvas: canvas, bounds: bounds, child: property.child);

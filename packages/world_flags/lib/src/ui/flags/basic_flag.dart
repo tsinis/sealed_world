@@ -44,7 +44,8 @@ class BasicFlag extends DecoratedFlagWidget {
   /// theme is used.
   /// - [width]: The width of the flag. If `null`, the width from the flag theme
   /// is used.
-  /// - [child]: A widget to display in the foreground of the flag.
+  /// - [flagChild]: A widget to display in the foreground of the flag.
+  /// - [semanticLabel]: A description of the flag for accessibility.
   /// - [key]: The key for the widget.
   const new(
     this.properties, {
@@ -62,11 +63,17 @@ class BasicFlag extends DecoratedFlagWidget {
     super.flagChild,
     @Deprecated("Use flagChild instead. Will be removed in next major version.")
     super.child,
+    this.semanticLabel,
     super.key,
   });
 
   /// The properties of the flag.
   final FlagProperties properties;
+
+  /// A description of the flag for accessibility, announced by screen readers
+  /// (i.e. the name of the country). If `null`, the flag is announced as an
+  /// image without description, so provide it if no text describes the flag.
+  final String? semanticLabel;
 
   /// A custom painter for the background of the flag.
   final CustomPainter? backgroundPainter;
@@ -204,7 +211,8 @@ class BasicFlag extends DecoratedFlagWidget {
           _elements,
           ifNull: "no elements properties",
         ),
-      );
+      )
+      ..add(StringProperty("semanticLabel", semanticLabel, defaultValue: null));
   }
 
   @override
@@ -223,6 +231,7 @@ class BasicFlag extends DecoratedFlagWidget {
         width: width ?? theme?.width,
         child: Semantics(
           image: true,
+          label: semanticLabel,
           child: DecoratedBox(
             decoration: boxDecoration ?? const BoxDecoration(),
             position:
@@ -241,6 +250,7 @@ class BasicFlag extends DecoratedFlagWidget {
                       properties,
                       boxDecoration,
                       resolvePainter(_elements, flagAspectRatio),
+                      textDirection: Directionality.maybeOf(context),
                     ),
                 foregroundPainter:
                     foregroundPainter ??

@@ -800,7 +800,6 @@ const flagSwzProperties = FlagProperties(
         Color(0xffb3b3b3),
         Color(0xff000000),
       ],
-      offset: Offset(1, 0),
       heightFactor: 0.75,
       widthFactor: 0.27,
     ),

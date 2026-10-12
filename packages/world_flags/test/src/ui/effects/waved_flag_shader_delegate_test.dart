@@ -191,6 +191,38 @@ void main() => group("$WavedFlagShaderDelegate", () {
     delegate.dispose();
   });
 
+  testWidgets("prints errors of every delegate", (tester) async {
+    final printed = <String?>[];
+    // ignore: avoid-unnecessary-local-variable, the test may override it too.
+    final previous = debugPrint;
+    debugPrint = (message, {wrapWidth}) => printed.add(message);
+    final recorder = PictureRecorder();
+    Canvas(recorder).drawPaint(Paint());
+    final picture = recorder.endRecording();
+    final image = picture.toImageSync(1, 1);
+    picture.dispose();
+    image.dispose(); // A disposed image makes the shader fail to paint.
+
+    await tester.runAsync(WavedFlagShaderDelegate.warmUp);
+    try {
+      for (int i = 0; i < 2; i += 1) {
+        final delegate = WavedFlagShaderDelegate(vsync: tester);
+        for (int frame = 0; frame < 2; frame += 1) {
+          delegate.paintWithShader(
+            Canvas(PictureRecorder()),
+            const Size(2, 1),
+            image: image,
+          );
+        }
+        delegate.dispose();
+      }
+    } finally {
+      debugPrint = previous; // Restored before the test ends.
+    }
+
+    expect(printed, hasLength(2), reason: "Once per delegate, not per frame.");
+  });
+
   testWidgets("uses default error handler when none provided", (tester) async {
     // Create delegate without custom onError - uses _debugPrintError default.
     final delegate = WavedFlagShaderDelegate(vsync: tester);
