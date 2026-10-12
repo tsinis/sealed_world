@@ -4,6 +4,7 @@ import "dart:ui" show Canvas, Color, Offset, Paint, Rect, Size;
 import "package:flutter/foundation.dart";
 
 import "../../../model/elements/custom_elements_properties.dart";
+import "../../../model/elements/elements_properties.dart";
 import "../../../model/typedefs.dart";
 import "badge_artwork.dart";
 import "elements_painter.dart";
@@ -147,18 +148,23 @@ abstract base class CustomElementsPainter<T extends FlagParentBounds>
   /// - [size]: The size of the child element.
   /// - [minRatio]: The upper limit of the adjustment ratio, so the element is
   ///   never grown more than this. Defaults to `1.1`.
+  /// - [element]: The element to size, the `property` by default.
   ///
   /// Returns the adjusted size of the child element.
   @protected
-  Size ratioAdjustedSize(Size size, {double minRatio = 1.1}) {
+  Size ratioAdjustedSize(
+    Size size, {
+    double minRatio = 1.1,
+    ElementsProperties? element,
+  }) {
     final originalRatio = originalAspectRatio;
     if (originalRatio == null) return size;
 
+    final ElementsProperties(:heightFactor, :widthFactor) = element ?? property;
     final currentAspectRatio = calculateAspectRatio(size);
     final adjustedRatio = min(minRatio, currentAspectRatio / originalRatio);
-    final heightFactor = property.heightFactor;
     final height = size.height * heightFactor * adjustedRatio;
-    final width = size.width * (property.widthFactor ?? 1);
+    final width = size.width * (widthFactor ?? 1);
 
     return Size(width, height);
   }

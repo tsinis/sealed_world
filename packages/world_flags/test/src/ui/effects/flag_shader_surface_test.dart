@@ -274,6 +274,51 @@ void main() => group("$FlagShaderSurface", () {
       expect(_flagPaint(tester).painter, same(painter));
     });
 
+    testWidgets("paints the built foreground painter", (tester) async {
+      const overlay = _OverlayPainter();
+      await tester.pumpWidget(
+        FlagShaderSurface(
+          const CountryUsa(),
+          map: {
+            const CountryUsa(): BasicFlag(
+              const FlagProperties([ColorsProperties(Color(0xFFFF0000))]),
+              foregroundPainterBuilder: (_, _) => overlay,
+            ),
+          },
+        ),
+      );
+
+      expect(
+        _flagPaint(tester).painter,
+        isA<ShaderStripesPainter>().having(
+          (painter) => painter.foregroundPainter,
+          "foregroundPainter",
+          same(overlay),
+        ),
+      );
+    });
+
+    testWidgets("repaints a flag replaced in the same map", (tester) async {
+      const blue = FlagProperties([ColorsProperties(Color(0xFF0000FF))]);
+      final map = <IsoStandardized, BasicFlag>{
+        const CountryUsa(): const BasicFlag(
+          FlagProperties([ColorsProperties(Color(0xFFFF0000))]),
+        ),
+      };
+      await tester.pumpWidget(FlagShaderSurface(const CountryUsa(), map: map));
+      map[const CountryUsa()] = const BasicFlag(blue);
+      await tester.pumpWidget(FlagShaderSurface(const CountryUsa(), map: map));
+
+      expect(
+        _flagPaint(tester).painter,
+        isA<ShaderStripesPainter>().having(
+          (painter) => painter.properties,
+          "properties",
+          same(blue),
+        ),
+      );
+    });
+
     testWidgets("isolates the shader repaints", (tester) async {
       await tester.pumpWidget(const FlagShaderSurface(CountryUsa()));
 
@@ -401,4 +446,16 @@ Future<Uint8List> _render(
   );
 
   return await tester.runAsync(() => straightPixels(boundary)) ?? Uint8List(0);
+}
+
+/// A painter painting nothing, to be told apart by its identity.
+final class _OverlayPainter extends CustomPainter {
+  const new();
+
+  @override
+  // ignore: no-empty-block, it's a test painter.
+  void paint(Canvas canvas, Size size) {}
+
+  @override
+  bool shouldRepaint(_OverlayPainter oldDelegate) => false;
 }

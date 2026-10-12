@@ -32,7 +32,6 @@ base mixin BadgeArtworkPainter<T extends FlagParentBounds>
     final bounds = proportionalBounds(size, artworkRatio);
     artwork.paint(canvas, bounds, badgePalette());
 
-    // A badge is painted in one piece, it has no child element.
-    return (canvas: canvas, bounds: bounds, child: null);
+    return (canvas: canvas, bounds: bounds, child: property.child);
   }
 }

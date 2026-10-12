@@ -241,6 +241,30 @@ void main() => group("$ShaderStripesPainter", () {
     // With clipContent: true, this tests the clipping path in _drawCachedImage.
     expect(shader.shouldClipContent, isTrue);
   });
+
+  test("repaints the cached flag when its painters change", () {
+    const shader = _ShaderStripesPainterTest();
+    final notifier = ChangeNotifier();
+    final counter = _CountingPainter(notifier);
+    final painter = ShaderStripesPainter(
+      properties,
+      null,
+      shader: shader,
+      backgroundPainter: counter,
+      foregroundPainter: counter,
+    );
+
+    _paintOnce(painter);
+    _paintOnce(painter);
+    expect(counter.paints, 2, reason: "Cached: background and foreground.");
+
+    notifier.notifyListeners();
+    _paintOnce(painter);
+    expect(counter.paints, 4, reason: "Painted into a new image again.");
+
+    painter.dispose();
+    notifier.dispose();
+  });
 });
 
 class _ShaderStripesPainterTest implements FlagShaderDelegate {
@@ -267,4 +291,23 @@ class _ShaderStripesPainterTest implements FlagShaderDelegate {
 
   @override
   void removeListener(VoidCallback listener) {}
+}
+
+void _paintOnce(CustomPainter painter) {
+  final recorder = ui.PictureRecorder();
+  painter.paint(Canvas(recorder), const Size(4, 2));
+  recorder.endRecording().dispose();
+}
+
+/// A painter counting its paints, repainted by the `repaint` notifier.
+final class _CountingPainter extends CustomPainter {
+  new(ChangeNotifier repaint) : super(repaint: repaint);
+
+  int paints = 0;
+
+  @override
+  void paint(Canvas canvas, Size size) => paints += 1;
+
+  @override
+  bool shouldRepaint(_CountingPainter oldDelegate) => false;
 }

@@ -3,12 +3,17 @@ import "package:flutter_test/flutter_test.dart";
 import "package:world_flags/src/model/elements/custom_elements_properties.dart";
 import "package:world_flags/src/model/elements/elements_properties.dart";
 import "package:world_flags/src/model/shape.dart";
+import "package:world_flags/src/model/typedefs.dart";
 import "package:world_flags/world_flags.dart"
     show
         AiaPainter,
+        AlmondPainter,
+        CustomDiagonalPainter,
         CustomElementsPainter,
         HrvPainter,
         PrtPainter,
+        ShahadaPainter,
+        SimpleBirdPainter,
         SimpleShieldPainter,
         TaegukgiPainter;
 
@@ -51,4 +56,60 @@ void main() => group("$CustomElementsPainter", () {
     expect(() => painter.paintFlagElements(canvas, size), returnsNormally);
     expect(canvas.drawCount, isPositive);
   });
+
+  group("variant", () {
+    const properties = [custom];
+    for (final (first, second)
+        in <(CustomElementsPainter, CustomElementsPainter)>[
+          (
+            AlmondPainter.gum(properties, 1.5),
+            AlmondPainter.swz(properties, 1.5),
+          ),
+          (
+            CustomDiagonalPainter.vertical(properties, 1.5),
+            CustomDiagonalPainter.horizontal(properties, 1.5),
+          ),
+          (
+            ShahadaPainter.sau(properties, 1.5),
+            ShahadaPainter.afg(properties, 1.5),
+          ),
+          (
+            SimpleBirdPainter.egy(properties, 1.5),
+            SimpleBirdPainter.mda(properties, 1.5),
+          ),
+        ]) {
+      test("of ${first.runtimeType} is compared on repaint", () {
+        expect(first.shouldRepaint(second), isTrue);
+        expect(first.shouldRepaint(first), isFalse);
+      });
+    }
+  });
+
+  test("badge paint falls back to the main color", () {
+    final painter = _CustomElementsPainterTest(const [custom]);
+
+    expect(painter.badgePaintOf(0).color, isSameColorAs(custom.mainColor));
+    expect(painter.badgePaintOf(2).color, isSameColorAs(custom.mainColor));
+  });
+
+  test("paints a shield without a custom element", () {
+    const shapeOnly = [
+      ElementsProperties(Color(0xff000000), shape: Rectangle()),
+    ];
+    final painter = SimpleShieldPainter.outlinedWithoutDividers(shapeOnly, 1.5);
+    final canvas = RecordingCanvas();
+
+    expect(() => painter.paintFlagElements(canvas, size), returnsNormally);
+    expect(canvas.drawCount, isPositive);
+  });
 });
+
+/// A painter exposing the protected badge paint resolution.
+final class _CustomElementsPainterTest extends CustomElementsPainter {
+  new(ElementsProps properties) : super(properties, 1.5);
+
+  Paint badgePaintOf(int index) => badgePaint(index);
+
+  @override
+  FlagParentBounds? paintFlagElements(Canvas canvas, Size size) => null;
+}

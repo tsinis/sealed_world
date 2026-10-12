@@ -182,18 +182,14 @@ abstract class StaticFlagShaderDelegate extends ChangeNotifier
   static Future<FragmentProgram> _load(String assetPath) async {
     try {
       return await FragmentProgram.fromAsset(assetPath);
-    } on Object catch (error, stackTrace) {
+    } on Object {
       final unprefixed = assetPath.replaceFirst(_packagePrefix, "");
       if (unprefixed == assetPath ||
           !await _isOnlyUnprefixed(assetPath, unprefixed)) {
         rethrow; // Not a missing package asset (i.e. a network error).
       }
 
-      try {
-        return await FragmentProgram.fromAsset(unprefixed);
-      } on Object {
-        Error.throwWithStackTrace(error, stackTrace);
-      }
+      return await FragmentProgram.fromAsset(unprefixed); // In the manifest.
     }
   }
 

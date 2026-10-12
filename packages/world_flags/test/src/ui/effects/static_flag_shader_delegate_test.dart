@@ -16,6 +16,14 @@ void main() => group("$StaticFlagShaderDelegate", () {
     expect(reported, hasLength(1));
   });
 
+  testWidgets("reports loading errors to Flutter", (tester) async {
+    final delegate = _StaticFlagShaderDelegateTest(missing);
+    addTearDown(delegate.dispose);
+    await tester.runAsync(() => Future<void>.delayed(Duration.zero));
+
+    expect(tester.takeException(), isNotNull);
+  });
+
   testWidgets("retries loading after a failure", (tester) async {
     final first = await tester.runAsync(() => _warmUpError(missing));
     final second = await tester.runAsync(() => _warmUpError(missing));

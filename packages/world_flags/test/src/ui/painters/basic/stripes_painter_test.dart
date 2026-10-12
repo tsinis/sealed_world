@@ -6,11 +6,14 @@ import "package:flutter/widgets.dart";
 import "package:flutter_test/flutter_test.dart";
 import "package:sealed_countries/sealed_countries.dart";
 import "package:world_flags/src/model/colors_properties.dart";
+import "package:world_flags/src/model/elements/elements_properties.dart";
 import "package:world_flags/src/model/flag_properties.dart";
+import "package:world_flags/src/model/shape.dart";
 import "package:world_flags/src/model/stripe_orientation.dart";
 import "package:world_flags/src/ui/country_flag.dart";
 import "package:world_flags/src/ui/flags/basic_flag.dart";
 import "package:world_flags/src/ui/painters/basic/stripes_painter.dart";
+import "package:world_flags/src/ui/painters/common/star_painter.dart";
 
 import "../../../../helpers/recording_canvas.dart";
 import "../../../../helpers/straight_pixels.dart";
@@ -36,6 +39,33 @@ void main() => group("$StripesPainter", () {
       );
 
       expect(newPainter.shouldRepaint(oldPainter), isTrue);
+    });
+
+    test("compares the elements painters", () {
+      const star = ElementsProperties(Color(0xFF000000), shape: Star());
+      const moon = ElementsProperties(Color(0xFF000000), shape: Moon());
+      final starPainter = StripesPainter(
+        red,
+        null,
+        StarPainter(const [star], 1),
+      );
+
+      expect(
+        StripesPainter(
+          red,
+          null,
+          StarPainter(const [star], 1),
+        ).shouldRepaint(starPainter),
+        isFalse,
+      );
+      expect(
+        StripesPainter(
+          red,
+          null,
+          StarPainter(const [moon], 1),
+        ).shouldRepaint(starPainter),
+        isTrue,
+      );
     });
 
     test("returns false when nothing changes", () {

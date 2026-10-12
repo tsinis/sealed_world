@@ -191,12 +191,14 @@ abstract base class ElementsPainter extends CustomPainter {
   /// `property.offset`.
   ///
   /// - [size]: The size of the area to paint.
+  /// - [element]: The element to center, the [property] by default.
   ///
   /// Returns the calculated center offset of the element.
   @protected
-  Offset calculateCenter(Size size) {
-    final horizontal = (property.offset.dx + 1) * size.width / 2;
-    final vertical = (property.offset.dy + 1) * size.height / 2;
+  Offset calculateCenter(Size size, {ElementsProperties? element}) {
+    final offset = (element ?? property).offset;
+    final horizontal = (offset.dx + 1) * size.width / 2;
+    final vertical = (offset.dy + 1) * size.height / 2;
 
     return Offset(horizontal, vertical);
   }

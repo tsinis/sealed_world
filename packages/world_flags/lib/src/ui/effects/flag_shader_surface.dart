@@ -225,6 +225,8 @@ class _FlagShaderSurfaceState extends State<FlagShaderSurface>
   FlagShaderDelegate? _managedDelegate;
   bool _isManagedDelegateOutdated = false;
   ShaderStripesPainter? _painter;
+  // The flag the painter was built from, maps may be changed in place.
+  BasicFlag? _paintedFlag;
   double _pixelRatio = 1;
   TextDirection? _textDirection;
 
@@ -297,6 +299,7 @@ class _FlagShaderSurfaceState extends State<FlagShaderSurface>
       return currentPainter; // Reuse painter if delegate hasn't changed.
     }
     _disposePainter(); // Dispose old painter and create new one.
+    _paintedFlag = flag;
     final BasicFlag(
       :backgroundPainter,
       :decoration,
@@ -341,7 +344,7 @@ class _FlagShaderSurfaceState extends State<FlagShaderSurface>
         oldWidget.options != widget.options ||
         oldWidget.item != widget.item ||
         oldWidget.shader != widget.shader ||
-        _isRepaintedFlag(oldWidget._flag, widget._flag);
+        _isRepaintedFlag(_paintedFlag, widget._flag);
     if (!delegateChanged) return;
 
     _disposePainter();

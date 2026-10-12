@@ -43,9 +43,18 @@ class ShaderStripesPainter<T extends CustomPainter> extends StripesPainter<T> {
          properties,
          decoration,
          elementsPainter,
-         repaint: shader,
+         repaint: Listenable.merge([
+           shader,
+           backgroundPainter,
+           foregroundPainter,
+         ]),
          textDirection: textDirection,
-       );
+       )
+  // ignore: avoid-non-empty-constructor-bodies, to listen to the painters.
+  {
+    backgroundPainter?.addListener(_invalidateCache);
+    foregroundPainter?.addListener(_invalidateCache);
+  }
 
   /// The shader delegate responsible for applying visual effects.
   final FlagShaderDelegate shader;
@@ -175,11 +184,19 @@ class ShaderStripesPainter<T extends CustomPainter> extends StripesPainter<T> {
       oldDelegate.decoration != decoration ||
       oldDelegate.textDirection != textDirection;
 
+  // The painters are recorded into the cached image, so it's outdated now.
+  void _invalidateCache() {
+    _image?.dispose();
+    _image = null;
+  }
+
   /// Disposes resources owned by this painter.
   ///
   /// This disposes [_image] which this painter owns. The [shader] delegate
   /// is NOT disposed here - its lifecycle is managed by [FlagShaderSurface].
   void dispose() {
+    backgroundPainter?.removeListener(_invalidateCache);
+    foregroundPainter?.removeListener(_invalidateCache);
     _image?.dispose();
     _image = null;
     _size = null;

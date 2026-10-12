@@ -54,7 +54,6 @@ final class SimpleShieldPainter extends MultiElementPainter {
   @override
   Record get variant => (super.variant, _showDividers, _showOutline);
 
-  static const _fallback = Color(0x00000000);
   static const _lineFactor = 0.2;
 
   @override
@@ -62,12 +61,13 @@ final class SimpleShieldPainter extends MultiElementPainter {
 
   @override
   FlagParentBounds paintFlagElements(Canvas canvas, Size size) {
-    final adjustedSize = ratioAdjustedSize(size);
-    final otherColors = properties
-        .whereType<CustomElementsProperties>()
-        .firstOrNull
-        ?.otherColors;
-    final center = calculateCenter(size);
+    // The shield is the custom element, even if a shape is painted before it.
+    final custom = properties.whereType<CustomElementsProperties>().firstOrNull;
+    final element = custom ?? property;
+    final otherColors = custom?.otherColors;
+    final fallback = element.mainColor;
+    final adjustedSize = ratioAdjustedSize(size, element: element);
+    final center = calculateCenter(size, element: element);
     final height = adjustedSize.height;
     final width = adjustedSize.width;
     final half = height * 0.5;
@@ -90,7 +90,7 @@ final class SimpleShieldPainter extends MultiElementPainter {
 
     if (_showOutline) {
       paint
-        ..color = otherColors?.lastOrNull ?? _fallback
+        ..color = otherColors?.lastOrNull ?? fallback
         ..style = PaintingStyle.stroke
         ..strokeWidth = height * _lineFactor;
       canvas.drawPath(path, paint);
@@ -102,7 +102,7 @@ final class SimpleShieldPainter extends MultiElementPainter {
       ..save()
       ..clipPath(path);
 
-    paint.color = otherColors?.elementAtOrNull(1) ?? _fallback;
+    paint.color = otherColors?.elementAtOrNull(1) ?? fallback;
     canvas.drawRect(Rect.fromLTWH(0, 0, halfWidth, half), paint);
     paint.color = otherColors?.elementAtOrNull(2) ?? paint.color;
     canvas.drawRect(Rect.fromLTWH(halfWidth, 0, halfWidth, half), paint);
@@ -116,7 +116,7 @@ final class SimpleShieldPainter extends MultiElementPainter {
     if (_showDividers) {
       canvas.clipPath(path);
       paint
-        ..color = property.mainColor
+        ..color = element.mainColor
         ..strokeWidth = half * 0.2;
       canvas
         ..drawLine(Offset(halfWidth, 0), Offset(halfWidth, height), paint)
