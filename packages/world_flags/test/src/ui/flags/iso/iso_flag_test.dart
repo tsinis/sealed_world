@@ -7,9 +7,12 @@ import "package:flutter_test/flutter_test.dart";
 import "package:material_ui/material_ui.dart" show FlutterLogo, MaterialApp;
 import "package:sealed_countries/sealed_countries.dart";
 import "package:world_flags/src/helpers/extensions/flag_extension.dart";
+import "package:world_flags/src/model/colors_properties.dart";
+import "package:world_flags/src/model/flag_properties.dart";
 import "package:world_flags/src/ui/effects/flag_shader_surface.dart";
 import "package:world_flags/src/ui/flags/basic_flag.dart";
 import "package:world_flags/src/ui/flags/iso/iso_flag.dart";
+import "package:world_flags/src/ui/painters/basic/shader_stripes_painter.dart";
 import "package:world_flags/world_flags.dart"
     show smallSimplifiedFlagsMap, smallSimplifiedLanguageFlagsMap;
 
@@ -76,32 +79,47 @@ void main() => group("$IsoFlag", () {
     testWidgets("clips the shader to the decoration", (tester) async {
       final shader = FakeFlagShaderDelegate();
       addTearDown(shader.dispose);
-      for (final (decoration, clip) in const [
-        (BoxDecoration(shape: BoxShape.circle), ClipOval),
-        (
-          BoxDecoration(borderRadius: BorderRadius.all(Radius.circular(4))),
-          ClipRRect,
+      const circle = BoxDecoration(shape: BoxShape.circle);
+      await tester.pumpWidget(
+        MaterialApp(
+          home: IsoFlag(
+            value,
+            smallSimplifiedFlagsMap,
+            shader: shader,
+            decoration: circle,
+          ),
         ),
-      ]) {
-        await tester.pumpWidget(
-          MaterialApp(
-            home: IsoFlag(
-              value,
-              smallSimplifiedFlagsMap,
-              shader: shader,
-              decoration: decoration,
-            ),
-          ),
-        );
+      );
 
-        expect(
-          find.ancestor(
-            of: find.byType(FlagShaderSurface),
-            matching: find.byType(clip),
-          ),
-          findsOneWidget,
-        );
-      }
+      expect(_shaderPainter(tester)?.decoration, circle);
+    });
+
+    testWidgets("paints custom painters of the flag", (tester) async {
+      final shader = FakeFlagShaderDelegate();
+      addTearDown(shader.dispose);
+      const background = _IsoFlagTest();
+      const foreground = _IsoFlagTest();
+      const customFlag = BasicFlag(
+        FlagProperties([ColorsProperties(Color(0xFFFF0000))]),
+        backgroundPainter: background,
+        foregroundPainter: foreground,
+      );
+      await tester.pumpWidget(
+        MaterialApp(
+          home: IsoFlag(value, const {value: customFlag}, shader: shader),
+        ),
+      );
+      final painter = _shaderPainter(tester);
+
+      expect(painter?.backgroundPainter, same(background));
+      expect(painter?.foregroundPainter, same(foreground));
+      expect(
+        tester
+            .widgetList<CustomPaint>(find.byType(CustomPaint))
+            .map((paint) => paint.foregroundPainter),
+        isNot(contains(foreground)),
+        reason: "It's painted by the shader only, not over it.",
+      );
     });
 
     testWidgets("doesn't use a shader surface without shader", (tester) async {
@@ -143,3 +161,22 @@ void main() => group("$IsoFlag", () {
     }
   });
 });
+
+/// The painter of the flag in the shader surface, if any.
+ShaderStripesPainter? _shaderPainter(WidgetTester tester) => tester
+    .widgetList<CustomPaint>(find.byType(CustomPaint))
+    .map((paint) => paint.painter)
+    .whereType<ShaderStripesPainter>()
+    .firstOrNull;
+
+/// A painter painting nothing, to be told apart by its identity.
+final class _IsoFlagTest extends CustomPainter {
+  const new();
+
+  @override
+  // ignore: no-empty-block, it's a test painter.
+  void paint(Canvas canvas, Size size) {}
+
+  @override
+  bool shouldRepaint(_IsoFlagTest oldDelegate) => false;
+}

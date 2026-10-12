@@ -1,3 +1,5 @@
+import "dart:ui";
+
 import "package:flutter_test/flutter_test.dart";
 import "package:world_flags/src/ui/effects/animated_flag_shader_delegate.dart";
 
@@ -46,6 +48,46 @@ void main() => group("$AnimatedFlagShaderDelegate", () {
       await tester.pump();
 
       expect(tester.binding.hasScheduledFrame, isFalse);
+      delegate.dispose();
+    });
+
+    testWidgets("resumes on the next paint after a pause", (tester) async {
+      final delegate = _VisibilityDelegate(vsync: tester);
+      await tester.pump();
+      delegate.isVisible = false;
+      await tester.pump(const Duration(milliseconds: 50));
+      expect(tester.binding.transientCallbackCount, isZero);
+
+      delegate.isVisible = true;
+      final recorder = PictureRecorder();
+      final texture = _texture();
+      delegate.paintWithShader(
+        Canvas(recorder),
+        const Size(1, 1),
+        image: texture,
+      );
+      recorder.endRecording().dispose();
+      texture.dispose();
+      expect(tester.binding.transientCallbackCount, 1);
+
+      delegate
+        ..stopAnimation()
+        ..dispose();
+    });
+
+    testWidgets("stays stopped when stopped explicitly", (tester) async {
+      final delegate = _VisibilityDelegate(vsync: tester)..stopAnimation();
+      final recorder = PictureRecorder();
+      final texture = _texture();
+      delegate.paintWithShader(
+        Canvas(recorder),
+        const Size(1, 1),
+        image: texture,
+      );
+      recorder.endRecording().dispose();
+      texture.dispose();
+
+      expect(tester.binding.transientCallbackCount, isZero);
       delegate.dispose();
     });
 
@@ -256,4 +298,25 @@ class _TrackingAnimatedDelegate extends AnimatedFlagShaderDelegate {
 
   /// Simulates a tick by directly calling [onTick].
   void simulateTick(double deltaSeconds) => onTick(deltaSeconds);
+}
+
+/// A delegate animated only while it's visible, like a list item.
+class _VisibilityDelegate extends AnimatedFlagShaderDelegate {
+  new({required super.vsync}) : super(assetPath: "shaders/waved_flag.frag");
+
+  bool isVisible = true;
+
+  @override
+  bool get animate => isVisible;
+}
+
+/// A single transparent pixel, to paint the shader with.
+Image _texture() {
+  final recorder = PictureRecorder();
+  Canvas(recorder).drawPaint(Paint());
+  final picture = recorder.endRecording();
+  final image = picture.toImageSync(1, 1);
+  picture.dispose();
+
+  return image;
 }

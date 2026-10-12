@@ -6,7 +6,6 @@ import "package:sealed_countries/sealed_countries.dart" show IsoStandardized;
 
 import "../../../debug/iso_diagnostics_property.dart";
 import "../../../helpers/extensions/basic_flag_extension_copy_with.dart";
-import "../../../helpers/extensions/box_decoration_extension.dart";
 import "../../../helpers/extensions/world_flags_build_context_extension.dart";
 import "../../decorated_flag_widget.dart";
 import "../../effects/flag_shader_delegate.dart";
@@ -74,22 +73,6 @@ class IsoFlag<T extends IsoStandardized, F extends BasicFlag>
     this.semanticLabel,
     super.key,
   });
-
-  // The stripes painter clips the flag to the decoration, the shader doesn't.
-  static Widget _clipToDecoration(
-    BuildContext context,
-    BoxDecoration? decoration,
-    Widget surface,
-  ) {
-    if (decoration.isCircle) return ClipOval(child: surface);
-    final radius = decoration?.borderRadius?.resolve(
-      Directionality.maybeOf(context) ?? TextDirection.ltr,
-    );
-
-    return radius == null || radius == BorderRadius.zero
-        ? surface
-        : ClipRRect(borderRadius: radius, child: surface);
-  }
 
   final Map<T, F> _map;
   final Map<T, F>? _alternativeMap;
@@ -245,39 +228,48 @@ class IsoFlag<T extends IsoStandardized, F extends BasicFlag>
 
   /// Returns the [flag] painted through the [shader], if it's provided.
   ///
-  /// The flag keeps its size, padding, decoration and child: only its stripes
-  /// and elements are replaced by a [FlagShaderSurface] (clipped to the shape
-  /// of the decoration), with the child (if any) laid out above it.
+  /// The flag keeps its size, padding, decoration and child: its stripes,
+  /// elements and painters are painted by a [FlagShaderSurface] instead
+  /// (clipped to the shape of the decoration), with the child (if any) laid
+  /// out above it.
   @protected
   BasicFlag withShader(BuildContext context, BasicFlag flag) {
     final delegate = shader;
     if (delegate == null) return flag;
 
-    // ignore: avoid-returning-widgets, it only wraps the surface into a clip.
-    final surface = _clipToDecoration(
-      context,
-      flag.decoration ?? context.flagTheme?.decoration,
-      FlagShaderSurface(item, map: {item: flag}, shader: delegate),
+    final theme = context.flagTheme;
+    final themeDecoration = theme?.decoration;
+    // The surface paints the painters of the flag, with its (theme) decoration.
+    final surface = FlagShaderSurface(
+      item,
+      map: {
+        item: flag.decoration == null && themeDecoration != null
+            ? flag.copyWith(decoration: themeDecoration)
+            : flag,
+      },
+      shader: delegate,
     );
     final BasicFlag(
       :flagAspectRatio,
-      :flagChild,
+      flagChild: child,
       :foregroundWidgetBuilder,
       :properties,
     ) = flag;
-    final child =
-        flagChild ??
+    final foreground =
+        child ??
         foregroundWidgetBuilder?.call(
           properties.elementsProperties,
           flagAspectRatio,
         ) ??
-        context.flagTheme?.flagChild;
+        theme?.flagChild;
 
     return flag.copyWith(
+      // Both are painted by the surface, so nothing is painted outside of it.
       backgroundPainter: const _EmptyPainter(),
-      flagChild: child == null
+      foregroundPainter: const _EmptyPainter(),
+      flagChild: foreground == null
           ? surface
-          : Stack(fit: StackFit.expand, children: [surface, child]),
+          : Stack(fit: StackFit.expand, children: [surface, foreground]),
     );
   }
 

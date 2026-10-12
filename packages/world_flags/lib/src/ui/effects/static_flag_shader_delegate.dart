@@ -2,6 +2,7 @@ import "dart:async" show unawaited;
 import "dart:ui";
 
 import "package:flutter/foundation.dart";
+import "package:flutter/services.dart" show AssetManifest, rootBundle;
 
 import "flag_shader_delegate.dart";
 
@@ -182,16 +183,30 @@ abstract class StaticFlagShaderDelegate extends ChangeNotifier
     try {
       return await FragmentProgram.fromAsset(assetPath);
     } on Object catch (error, stackTrace) {
-      if (!assetPath.startsWith(_packagePrefix)) rethrow;
+      final unprefixed = assetPath.replaceFirst(_packagePrefix, "");
+      if (unprefixed == assetPath ||
+          !await _isOnlyUnprefixed(assetPath, unprefixed)) {
+        rethrow; // Not a missing package asset (i.e. a network error).
+      }
 
       try {
-        // Inside the package itself (i.e. in its own tests) it's not prefixed.
-        return await FragmentProgram.fromAsset(
-          assetPath.replaceFirst(_packagePrefix, ""),
-        );
+        return await FragmentProgram.fromAsset(unprefixed);
       } on Object {
         Error.throwWithStackTrace(error, stackTrace);
       }
+    }
+  }
+
+  // Inside the package itself (i.e. in its own tests) its assets aren't keyed
+  // with the `packages/<package>/` prefix.
+  static Future<bool> _isOnlyUnprefixed(String prefixed, String key) async {
+    try {
+      final manifest = await AssetManifest.loadFromAssetBundle(rootBundle);
+      final assets = manifest.listAssets();
+
+      return !assets.contains(prefixed) && assets.contains(key);
+    } on Object {
+      return false; // Without a manifest, there is nothing to fall back to.
     }
   }
 

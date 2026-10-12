@@ -12,6 +12,7 @@ import "package:world_flags/src/ui/country_flag.dart";
 import "package:world_flags/src/ui/flags/basic_flag.dart";
 import "package:world_flags/src/ui/painters/basic/stripes_painter.dart";
 
+import "../../../../helpers/recording_canvas.dart";
 import "../../../../helpers/straight_pixels.dart";
 
 void main() => group("$StripesPainter", () {
@@ -133,6 +134,35 @@ void main() => group("$StripesPainter", () {
         reason: "One stripe at ($x, $y): red $redChannel, blue $blueChannel",
       );
     }
+  });
+
+  test("covers seams of opaque stripes before a translucent one", () {
+    const stripesWithTranslucentLast = [
+      ColorsProperties(Color(0xFFFF0000)),
+      ColorsProperties(Color(0xFF00FF00)),
+      ColorsProperties(Color(0x800000FF)),
+    ];
+    const painter = StripesPainter<CustomPainter>(
+      FlagProperties(
+        stripesWithTranslucentLast,
+        stripeOrientation: StripeOrientation.diagonalTopLeftToBottomRight,
+      ),
+      null,
+      null,
+    );
+    final canvas = RecordingCanvas();
+    painter.paintStripes(canvas, const Size(30, 20));
+    final widths = [
+      for (final layer in canvas.layers) layer.path.getBounds().width,
+    ];
+
+    expect(widths, hasLength(3));
+    expect(
+      widths.first,
+      greaterThan(widths[1]),
+      reason: "Red goes under green",
+    );
+    expect(widths[1], closeTo(widths.last, 1e-6), reason: "Not under blue");
   });
 
   testWidgets("resolves directional border radius in RTL", (tester) async {

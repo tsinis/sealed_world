@@ -171,23 +171,28 @@ class StripesPainter<T extends CustomPainter> extends CustomPainter {
 
     final span = diagonalLength * 2;
     final stripes = properties.stripeColors;
+    final starts = <double>[];
     double position = 0;
+    for (final colorProperty in stripes) {
+      starts.add(position);
+      position += span * colorProperty.ratio / totalRatio;
+    }
+    // A stripe reaches the start of the first translucent stripe after it (or
+    // the far end), as the opaque ones in between are drawn over it: two
+    // anti-aliased edges meeting each other would let the background show
+    // through the seam between them. Translucent ones would blend with it.
+    final ends = List<double>.filled(stripes.length, span);
+    double reach = span;
+    for (int index = stripes.length - 1; index >= 0; index -= 1) {
+      ends[index] = reach;
+      if (stripes[index].color.a < 1) reach = starts[index];
+    }
+
     final paint = Paint();
     for (final (index, colorProperty) in stripes.indexed) {
-      final extent = span * colorProperty.ratio / totalRatio;
-      // A stripe reaches the far end if the next ones are opaque and drawn over
-      // it: two anti-aliased edges meeting each other would let the background
-      // show through the seam between them. Translucent stripes would blend
-      // with it though, so they keep the exact extent.
-      final isCovered = stripes
-          .skip(index + 1)
-          .every((next) => next.color.a == 1);
+      final left = starts[index];
       paint.color = colorProperty.color;
-      canvas.drawRect(
-        Rect.fromLTWH(position, 0, isCovered ? span - position : extent, span),
-        paint,
-      );
-      position += extent;
+      canvas.drawRect(Rect.fromLTRB(left, 0, ends[index], span), paint);
     }
 
     canvas.restore();

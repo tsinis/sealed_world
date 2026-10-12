@@ -226,6 +226,7 @@ class _FlagShaderSurfaceState extends State<FlagShaderSurface>
   bool _isManagedDelegateOutdated = false;
   ShaderStripesPainter? _painter;
   double _pixelRatio = 1;
+  TextDirection? _textDirection;
 
   /// Creates the default waved-flag shader delegate (it loads the shader).
   static FlagShaderDelegate _defaultDelegateBuilder(
@@ -239,7 +240,11 @@ class _FlagShaderSurfaceState extends State<FlagShaderSurface>
   // Only what the painter is built from matters, not the (i.e. copied) flag.
   static bool _isRepaintedFlag(BasicFlag? old, BasicFlag? flag) =>
       old?.properties != flag?.properties ||
-      old?.elementsBuilder != flag?.elementsBuilder;
+      old?.elementsBuilder != flag?.elementsBuilder ||
+      old?.backgroundPainter != flag?.backgroundPainter ||
+      old?.foregroundPainter != flag?.foregroundPainter ||
+      old?.foregroundPainterBuilder != flag?.foregroundPainterBuilder ||
+      old?.decoration != flag?.decoration;
 
   void _disposeManagedDelegate() {
     _managedDelegate?.dispose();
@@ -292,14 +297,26 @@ class _FlagShaderSurfaceState extends State<FlagShaderSurface>
       return currentPainter; // Reuse painter if delegate hasn't changed.
     }
     _disposePainter(); // Dispose old painter and create new one.
-    final properties = flag.properties;
+    final BasicFlag(
+      :backgroundPainter,
+      :decoration,
+      :flagAspectRatio,
+      foregroundPainter: overlay,
+      foregroundPainterBuilder: overlayBuilder,
+      :properties,
+    ) = flag;
+    final elements = properties.elementsProperties;
 
     return _painter = ShaderStripesPainter(
       properties,
-      // ignore: avoid-passing-self-as-argument, passing painter to the delegate
-      flag.resolvePainter(properties.elementsProperties, flag.flagAspectRatio),
+      flag.resolvePainter(elements, flagAspectRatio),
       pixelRatio: _pixelRatio,
       shader: delegate,
+      backgroundPainter: backgroundPainter,
+      foregroundPainter:
+          overlay ?? overlayBuilder?.call(elements, flagAspectRatio),
+      decoration: decoration,
+      textDirection: _textDirection,
     );
   }
 
@@ -309,8 +326,10 @@ class _FlagShaderSurfaceState extends State<FlagShaderSurface>
     final pixelRatio =
         MediaQuery.maybeDevicePixelRatioOf(context) ??
         View.of(context).devicePixelRatio; // coverage:ignore-line
-    if (pixelRatio == _pixelRatio) return;
+    final textDirection = Directionality.maybeOf(context);
+    if (pixelRatio == _pixelRatio && textDirection == _textDirection) return;
     _pixelRatio = pixelRatio;
+    _textDirection = textDirection; // Of a directional decoration radius.
     _disposePainter(); // Force painter rebuild with new pixel ratio.
   }
 

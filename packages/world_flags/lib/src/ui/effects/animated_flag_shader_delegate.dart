@@ -1,5 +1,7 @@
 import "dart:math" show min;
 
+import "dart:ui" show Canvas, Image, Size;
+
 import "package:flutter/foundation.dart";
 import "package:flutter/scheduler.dart";
 
@@ -135,9 +137,11 @@ abstract class AnimatedFlagShaderDelegate extends StaticFlagShaderDelegate {
   /// ```
   ///
   /// It's checked on every tick, so when it returns `false`, [time] stops
-  /// incrementing and the ticker is stopped. When the delegate is created and
-  /// it returns `false`, the ticker is not started at all. Call
-  /// [startAnimation] to start it again later.
+  /// incrementing and the ticker is paused. It's checked on every paint too,
+  /// so a paused ticker resumes on the next paint after it returns `true`
+  /// again (i.e. when the flag is visible again). When the delegate is created
+  /// and it returns `false`, the ticker is not started at all. A ticker stopped
+  /// by [stopAnimation] doesn't resume until [startAnimation] is called.
   bool get animate => true;
 
   static const _maxDeltaSeconds = 0.1;
@@ -145,6 +149,7 @@ abstract class AnimatedFlagShaderDelegate extends StaticFlagShaderDelegate {
   // ignore: avoid-late-keyword, initialized in constructor.
   late final Ticker _ticker;
   Duration? _lastTick;
+  bool _isPausedByAnimate = false;
 
   /// Called each tick with the delta time in seconds.
   ///
@@ -186,6 +191,13 @@ abstract class AnimatedFlagShaderDelegate extends StaticFlagShaderDelegate {
   void continueFrom(AnimatedFlagShaderDelegate previous) =>
       time = previous.time;
 
+  @override
+  bool paintWithShader(Canvas destination, Size size, {required Image image}) {
+    if (_isPausedByAnimate && animate) startAnimation(); // Resume on paint.
+
+    return super.paintWithShader(destination, size, image: image);
+  }
+
   void _updateTicker() {
     if (!animate) {
       _ticker.stop();
@@ -203,6 +215,7 @@ abstract class AnimatedFlagShaderDelegate extends StaticFlagShaderDelegate {
   void _handleTick(Duration elapsed) {
     if (!animate) {
       stopAnimation(); // No frames while it's paused.
+      _isPausedByAnimate = true;
 
       return;
     }
@@ -223,6 +236,7 @@ abstract class AnimatedFlagShaderDelegate extends StaticFlagShaderDelegate {
   /// Call this to resume animation after [stopAnimation] was called. Has no
   /// effect if the ticker is already active.
   void startAnimation() {
+    _isPausedByAnimate = false;
     if (_ticker.isActive) return;
     _lastTick = null;
     _ticker.start();
@@ -233,6 +247,7 @@ abstract class AnimatedFlagShaderDelegate extends StaticFlagShaderDelegate {
   /// Call this to pause animation. The [time] value is preserved and animation
   /// resumes from the same point when [startAnimation] is called.
   void stopAnimation() {
+    _isPausedByAnimate = false;
     _ticker.stop();
     _lastTick = null;
   }
