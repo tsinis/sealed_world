@@ -13,13 +13,18 @@ final class SimpleBirdPainter extends MultiElementPainter {
   final double _originalAspectRatio;
 
   @override
+  Record get variant => (super.variant, _originalAspectRatio);
+
+  @override
   // ignore: avoid-unnecessary-getter, _originalAspectRatio shouldn't be public.
   double get originalAspectRatio => _originalAspectRatio;
 
   @override
   FlagParentBounds? paintFlagElements(Canvas canvas, Size size) {
-    // ignore: avoid-type-casts, it's tested.
-    final otherColors = (property as CustomElementsProperties?)?.otherColors;
+    final otherColors = properties
+        .whereType<CustomElementsProperties>()
+        .firstOrNull
+        ?.otherColors;
 
     final adjustedSize = ratioAdjustedSize(size);
     final center = calculateCenter(size);

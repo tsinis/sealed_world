@@ -5,7 +5,7 @@ part of "../multi_element_painter.dart";
 /// Painter for the flag badge of South Georgia and the South Sandwich Islands.
 ///
 /// Draws the lozenged shield between a fur seal and a macaroni penguin.
-final class SgsPainter extends UnionJackPainter {
+final class SgsPainter extends UnionJackPainter with BadgeArtworkPainter {
   /// Creates a new instance of [SgsPainter].
   const new(super._properties, super.aspectRatio) : super.halfWithoutOutline();
 
@@ -14,7 +14,7 @@ final class SgsPainter extends UnionJackPainter {
   /// The badge keeps this ratio whatever ratio the flag itself is drawn at.
   static const _artworkRatio = 0.652;
 
-  /// The artwork, packed into typed arrays on first paint and reused after.
+  /// The artwork, built into paths on first paint and reused after.
   static final _artwork = BadgeArtwork(_layers);
 
   /// Commands as an opcode then its coordinates, relative to the badge
@@ -148,10 +148,9 @@ final class SgsPainter extends UnionJackPainter {
   // dart format on
 
   @override
-  FlagParentBounds paintFlagElements(Canvas canvas, Size size) {
-    final bounds = proportionalBounds(size, _artworkRatio);
-    _artwork.paint(canvas, bounds, badgePaint);
+  // ignore: avoid-unnecessary-getter, the static one shares its path cache.
+  BadgeArtwork get artwork => _artwork;
 
-    return (canvas: canvas, bounds: bounds, child: property.child);
-  }
+  @override
+  double get artworkRatio => _artworkRatio;
 }

@@ -128,7 +128,6 @@ final class LsoPainter extends CustomElementsPainter {
       ..lineTo(width * 0.46, height * 0.34)
       ..lineTo(width * 0.41, height * 0.34)
       ..lineTo(width * 0.47, height * 0.27)
-      ..lineTo(width * 0.47, height * 0.13)
       ..lineTo(width * 0.47, height * 0.13);
 
     final bounds = path.getBounds();

@@ -62,7 +62,6 @@ final class PrtPainter extends CustomElementsPainter {
       ..moveTo(width * 0.07, height * 0.54)
       ..lineTo(width * 0.34, height * 0.67)
       ..lineTo(width * 0.17, height * 0.79)
-      ..lineTo(width * 0.17, height * 0.79)
       ..cubicTo(
         width * 0.11,
         height * 0.72,
@@ -83,11 +82,9 @@ final class PrtPainter extends CustomElementsPainter {
       )
       ..lineTo(width * 0.44, height * 0.88)
       ..lineTo(width * 0.44, height * 0.93)
-      ..lineTo(width * 0.44, height * 0.93)
       ..moveTo(width * 0.44, height * 0.81)
       ..lineTo(width * 0.24, height * 0.81)
       ..lineTo(width * 0.44, height * 0.68)
-      ..lineTo(width * 0.44, height * 0.81)
       ..lineTo(width * 0.44, height * 0.81)
       ..moveTo(width * 0.44, height * 0.61)
       ..lineTo(width * 0.4, height * 0.63)
@@ -95,11 +92,9 @@ final class PrtPainter extends CustomElementsPainter {
       ..lineTo(width * 0.26, height * 0.43)
       ..lineTo(width * 0.44, height * 0.61)
       ..lineTo(width * 0.44, height * 0.61)
-      ..lineTo(width * 0.44, height * 0.61)
       ..moveTo(width * 0.44, height * 0.52)
       ..lineTo(width * 0.22, height * 0.3)
       ..lineTo(width * 0.44, height * 0.33)
-      ..lineTo(width * 0.44, height * 0.52)
       ..lineTo(width * 0.44, height * 0.52)
       ..moveTo(width * 0.44, height * 0.27)
       ..lineTo(width * 0.16, height * 0.22)
@@ -112,7 +107,6 @@ final class PrtPainter extends CustomElementsPainter {
         height * 0.07,
       )
       ..lineTo(width * 0.44, height * 0.27)
-      ..lineTo(width * 0.44, height * 0.27)
       ..moveTo(width * 0.88, height * 0.29)
       ..cubicTo(
         width * 0.91,
@@ -123,7 +117,6 @@ final class PrtPainter extends CustomElementsPainter {
         height * 0.46,
       )
       ..lineTo(width * 0.78, height * 0.39)
-      ..lineTo(width * 0.88, height * 0.29)
       ..lineTo(width * 0.88, height * 0.29)
       ..moveTo(width * 0.56, height * 0.07)
       ..cubicTo(
@@ -136,17 +129,14 @@ final class PrtPainter extends CustomElementsPainter {
       )
       ..lineTo(width * 0.56, height * 0.27)
       ..lineTo(width * 0.56, height * 0.07)
-      ..lineTo(width * 0.56, height * 0.07)
       ..moveTo(width * 0.56, height * 0.33)
       ..lineTo(width * 0.78, height * 0.3)
       ..lineTo(width * 0.56, height * 0.52)
-      ..lineTo(width * 0.56, height * 0.33)
       ..lineTo(width * 0.56, height * 0.33)
       ..moveTo(width * 0.56, height * 0.61)
       ..lineTo(width * 0.73, height * 0.43)
       ..lineTo(width * 0.87, height * 0.5)
       ..lineTo(width * 0.6, height * 0.63)
-      ..lineTo(width * 0.56, height * 0.61)
       ..lineTo(width * 0.56, height * 0.61)
       ..lineTo(width * 0.56, height * 0.61)
       ..moveTo(width * 0.56, height * 0.93)
@@ -165,9 +155,7 @@ final class PrtPainter extends CustomElementsPainter {
       ..lineTo(width * 0.56, height * 0.68)
       ..lineTo(width * 0.75, height * 0.81)
       ..lineTo(width * 0.56, height * 0.81)
-      ..lineTo(width * 0.56, height * 0.81)
       ..moveTo(width * 0.83, height * 0.79)
-      ..lineTo(width * 0.83, height * 0.79)
       ..lineTo(width * 0.66, height * 0.67)
       ..lineTo(width * 0.93, height * 0.54)
       ..cubicTo(
@@ -200,7 +188,6 @@ final class PrtPainter extends CustomElementsPainter {
         height * 0.63,
       )
       ..lineTo(width * 0.75, height * 0.19)
-      ..lineTo(width * 0.25, height * 0.19)
       ..lineTo(width * 0.25, height * 0.19);
 
     final path3 = Path()
@@ -223,7 +210,6 @@ final class PrtPainter extends CustomElementsPainter {
         height * 0.63,
       )
       ..lineTo(width * 0.69, height * 0.25)
-      ..lineTo(width * 0.31, height * 0.25)
       ..lineTo(width * 0.31, height * 0.25);
 
     final path6 = Path()
@@ -232,40 +218,35 @@ final class PrtPainter extends CustomElementsPainter {
       ..lineTo(width * 0.38, height * 0.56)
       ..lineTo(width * 0.31, height * 0.56)
       ..lineTo(width * 0.31, height * 0.44)
-      ..lineTo(width * 0.31, height * 0.44)
       ..moveTo(width * 0.44, height * 0.44)
       ..lineTo(width * 0.56, height * 0.44)
       ..lineTo(width * 0.56, height * 0.56)
       ..lineTo(width * 0.44, height * 0.56)
-      ..lineTo(width * 0.44, height * 0.44)
       ..lineTo(width * 0.44, height * 0.44)
       ..moveTo(width * 0.62, height * 0.44)
       ..lineTo(width * 0.69, height * 0.44)
       ..lineTo(width * 0.69, height * 0.56)
       ..lineTo(width * 0.62, height * 0.56)
       ..lineTo(width * 0.62, height * 0.44)
-      ..lineTo(width * 0.62, height * 0.44)
       ..moveTo(width * 0.44, height * 0.63)
       ..lineTo(width * 0.56, height * 0.63)
       ..lineTo(width * 0.56, height * 0.75)
       ..lineTo(width * 0.44, height * 0.75)
       ..lineTo(width * 0.44, height * 0.63)
-      ..lineTo(width * 0.44, height * 0.63)
       ..moveTo(width * 0.44, height * 0.25)
       ..lineTo(width * 0.56, height * 0.25)
       ..lineTo(width * 0.56, height * 0.38)
       ..lineTo(width * 0.44, height * 0.38)
-      ..lineTo(width * 0.44, height * 0.25)
       ..lineTo(width * 0.44, height * 0.25);
 
     final bounds = path.getBounds();
-    final bluePaint = paintCreator(customColors[1]);
+    final bluePaint = paintCreator(customColor(1));
 
     canvas
       ..translate(center.dx - bounds.center.dx, center.dy - bounds.center.dy)
       ..drawPath(path, paintCreator()) // Yellow.
-      ..drawPath(path2, paintCreator(customColors.last)) // Red.
-      ..drawPath(path3, paintCreator(customColors.first)) // White.
+      ..drawPath(path2, paintCreator(lastCustomColor)) // Red.
+      ..drawPath(path3, paintCreator(customColor(0))) // White.
       ..drawPath(path6, bluePaint); // Blue.
 
     return (canvas: canvas, bounds: bounds, child: property.child);

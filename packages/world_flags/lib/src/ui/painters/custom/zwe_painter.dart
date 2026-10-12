@@ -5,7 +5,7 @@ part of "../multi_element_painter.dart";
 /// Painter for the flag badge of Zimbabwe.
 ///
 /// Draws the Zimbabwe Bird on the red star.
-final class ZwePainter extends MultiElementPainter {
+final class ZwePainter extends MultiElementPainter with BadgeArtworkPainter {
   /// Creates a new instance of [ZwePainter].
   const new(super._properties, super.aspectRatio);
 
@@ -39,10 +39,9 @@ final class ZwePainter extends MultiElementPainter {
   // dart format on
 
   @override
-  FlagParentBounds paintFlagElements(Canvas canvas, Size size) {
-    final bounds = proportionalBounds(size, _artworkRatio);
-    _artwork.paint(canvas, bounds, badgePaint);
+  // ignore: avoid-unnecessary-getter, the static one shares its path cache.
+  BadgeArtwork get artwork => _artwork;
 
-    return (canvas: canvas, bounds: bounds, child: property.child);
-  }
+  @override
+  double get artworkRatio => _artworkRatio;
 }

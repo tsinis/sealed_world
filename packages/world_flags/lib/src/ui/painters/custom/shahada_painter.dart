@@ -21,6 +21,9 @@ final class ShahadaPainter extends CustomElementsPainter {
   /// Whether the sabre below the creed is drawn, as Saudi Arabia's flag has.
   final bool _hasSabre;
 
+  @override
+  Record get variant => (super.variant, _hasSabre);
+
   /// Width over height of each artwork.
   static const _sauRatio = 1.5364;
   static const _afgRatio = 2.5205;
@@ -683,9 +686,10 @@ final class ShahadaPainter extends CustomElementsPainter {
     // a second pushes those edge pixels back towards opaque. That is what the
     // painter used to get by accident from building the glyphs up over eight
     // passes; two is enough, and the path behind them is built once.
+    final palette = badgePalette();
     (_hasSabre ? _sauArtwork : _afgArtwork)
-      ..paint(canvas, bounds, badgePaint)
-      ..paint(canvas, bounds, badgePaint);
+      ..paint(canvas, bounds, palette)
+      ..paint(canvas, bounds, palette);
 
     return (canvas: canvas, bounds: bounds, child: property.child);
   }

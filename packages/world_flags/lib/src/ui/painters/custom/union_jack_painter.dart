@@ -39,6 +39,10 @@ final class UnionJackPainter extends SimpleShieldPainter {
 
   /// Creates a [UnionJackPainter] with a full Union Jack without dividers.
   ///
+  /// The full Union Jack is the whole flag, so it's painted with its official
+  /// colors and proportions: the elements of the flag properties (i.e. of the
+  /// United Kingdom) are not painted by it.
+  ///
   /// The [properties] parameter specifies the properties of the shield. The
   /// [aspectRatio] parameter specifies the aspect ratio of the shield.
   const new full(super._properties, super.aspectRatio)
@@ -46,6 +50,9 @@ final class UnionJackPainter extends SimpleShieldPainter {
       super.withoutDividers();
 
   final bool _isFull;
+
+  @override
+  Record get variant => (super.variant, _isFull);
 
   static const _blueColor = Color(0xff012169);
   static const _redColor = Color(0xffc8102e);
@@ -183,11 +190,11 @@ class _SaintPatrickCross {
   final Size _size;
 
   void add(Offset start, double xShiftPercent, [double yShiftPercent = 0]) {
-    final width = _size.height;
-    final height = _size.width;
-    final aspectRatioCorrectionFactor = height / width / 2;
-    final xShift = width * xShiftPercent * aspectRatioCorrectionFactor;
-    final yShift = height * yShiftPercent * aspectRatioCorrectionFactor;
+    final height = _size.height;
+    final width = _size.width;
+    final aspectRatioCorrectionFactor = width / height / 2;
+    final xShift = height * xShiftPercent * aspectRatioCorrectionFactor;
+    final yShift = width * yShiftPercent * aspectRatioCorrectionFactor;
     final shift = start.translate(xShift, yShift);
 
     _path

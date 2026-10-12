@@ -39,7 +39,6 @@ final class HrvPainter extends CustomElementsPainter {
         height * 0.79,
       )
       ..lineTo(width * 0.92, height * 0.22)
-      ..lineTo(width * 0.09, height * 0.22)
       ..lineTo(width * 0.09, height * 0.22);
 
     final path2 = Path()
@@ -48,42 +47,35 @@ final class HrvPainter extends CustomElementsPainter {
       ..lineTo(width * 0.42, height * 0.89)
       ..lineTo(width * 0.26, height * 0.89)
       ..lineTo(width * 0.26, height * 0.72)
-      ..lineTo(width * 0.26, height * 0.72)
       ..moveTo(width * 0.42, height * 0.89)
       ..lineTo(width * 0.58, height * 0.89)
       ..lineTo(width * 0.58, height * 1.05)
       ..lineTo(width * 0.42, height * 1.05)
-      ..lineTo(width * 0.42, height * 0.89)
       ..lineTo(width * 0.42, height * 0.89)
       ..moveTo(width * 0.42, height * 0.56)
       ..lineTo(width * 0.58, height * 0.56)
       ..lineTo(width * 0.58, height * 0.72)
       ..lineTo(width * 0.42, height * 0.72)
       ..lineTo(width * 0.42, height * 0.56)
-      ..lineTo(width * 0.42, height * 0.56)
       ..moveTo(width * 0.58, height * 0.72)
       ..lineTo(width * 0.74, height * 0.72)
       ..lineTo(width * 0.74, height * 0.89)
       ..lineTo(width * 0.58, height * 0.89)
-      ..lineTo(width * 0.58, height * 0.72)
       ..lineTo(width * 0.58, height * 0.72)
       ..moveTo(width * 0.58, height * 0.4)
       ..lineTo(width * 0.74, height * 0.4)
       ..lineTo(width * 0.74, height * 0.56)
       ..lineTo(width * 0.58, height * 0.56)
       ..lineTo(width * 0.58, height * 0.4)
-      ..lineTo(width * 0.58, height * 0.4)
       ..moveTo(width * 0.74, height * 0.56)
       ..lineTo(width * 0.89, height * 0.56)
       ..lineTo(width * 0.89, height * 0.72)
       ..lineTo(width * 0.74, height * 0.72)
       ..lineTo(width * 0.74, height * 0.56)
-      ..lineTo(width * 0.74, height * 0.56)
       ..moveTo(width * 0.26, height * 0.4)
       ..lineTo(width * 0.42, height * 0.4)
       ..lineTo(width * 0.42, height * 0.56)
       ..lineTo(width * 0.26, height * 0.56)
-      ..lineTo(width * 0.26, height * 0.4)
       ..lineTo(width * 0.26, height * 0.4)
       ..moveTo(width * 0.74, height * 1.05)
       ..lineTo(width * 0.79, height * 1.05)
@@ -97,7 +89,6 @@ final class HrvPainter extends CustomElementsPainter {
       )
       ..lineTo(width * 0.74, height * 0.89)
       ..lineTo(width * 0.74, height * 1.05)
-      ..lineTo(width * 0.74, height * 1.05)
       ..moveTo(width * 0.58, height * 1.05)
       ..lineTo(width * 0.58, height * 1.18)
       ..cubicTo(
@@ -109,7 +100,6 @@ final class HrvPainter extends CustomElementsPainter {
         height * 1.1,
       )
       ..lineTo(width * 0.74, height * 1.05)
-      ..lineTo(width * 0.58, height * 1.05)
       ..lineTo(width * 0.58, height * 1.05)
       ..moveTo(width * 0.26, height * 1.05)
       ..lineTo(width * 0.26, height * 0.89)
@@ -123,12 +113,10 @@ final class HrvPainter extends CustomElementsPainter {
         height * 1.05,
       )
       ..lineTo(width * 0.26, height * 1.05)
-      ..lineTo(width * 0.26, height * 1.05)
       ..moveTo(width * 0.12, height * 0.56)
       ..lineTo(width * 0.26, height * 0.56)
       ..lineTo(width * 0.26, height * 0.72)
       ..lineTo(width * 0.12, height * 0.72)
-      ..lineTo(width * 0.12, height * 0.56)
       ..lineTo(width * 0.12, height * 0.56)
       ..moveTo(width * 0.26, height * 1.05)
       ..lineTo(width * 0.26, height * 1.1)
@@ -141,7 +129,6 @@ final class HrvPainter extends CustomElementsPainter {
         height * 1.18,
       )
       ..lineTo(width * 0.42, height * 1.05)
-      ..lineTo(width * 0.26, height * 1.05)
       ..lineTo(width * 0.26, height * 1.05);
 
     final path3 = Path()
@@ -194,7 +181,6 @@ final class HrvPainter extends CustomElementsPainter {
       )
       ..lineTo(width * 0.91, height * 0.4)
       ..lineTo(width, height * 0.21)
-      ..lineTo(width * 0.93, height * 0.08)
       ..lineTo(width * 0.93, height * 0.08);
 
     final path4 = Path()
@@ -211,7 +197,6 @@ final class HrvPainter extends CustomElementsPainter {
       ..lineTo(width * 0.59, height * 0.11)
       ..lineTo(width * 0.5, height * 0.04)
       ..lineTo(width * 0.42, height * 0.11)
-      ..lineTo(width * 0.42, height * 0.11)
       ..moveTo(width * 0.92, height * 0.11)
       ..lineTo(width * 0.81, height * 0.16)
       ..lineTo(width * 0.77, height * 0.32)
@@ -225,7 +210,6 @@ final class HrvPainter extends CustomElementsPainter {
       )
       ..lineTo(width * 0.97, height * 0.21)
       ..lineTo(width * 0.92, height * 0.11)
-      ..lineTo(width * 0.92, height * 0.11)
       ..moveTo(width * 0.09, height * 0.11)
       ..lineTo(width * 0.03, height * 0.21)
       ..lineTo(width * 0.1, height * 0.37)
@@ -238,7 +222,6 @@ final class HrvPainter extends CustomElementsPainter {
         height * 0.32,
       )
       ..lineTo(width * 0.19, height * 0.16)
-      ..lineTo(width * 0.09, height * 0.11)
       ..lineTo(width * 0.09, height * 0.11);
 
     final bounds = path.getBounds();
@@ -246,9 +229,9 @@ final class HrvPainter extends CustomElementsPainter {
     canvas
       ..translate(center.dx - bounds.center.dx, center.dy - bounds.center.dy)
       ..drawPath(path, paintCreator()) // Red.
-      ..drawPath(path2, paintCreator(customColors.first)) // White.
-      ..drawPath(path3, paintCreator(customColors[1])) // Blue.
-      ..drawPath(path4, paintCreator(customColors.last)); // Light blue.
+      ..drawPath(path2, paintCreator(customColor(0))) // White.
+      ..drawPath(path3, paintCreator(customColor(1))) // Blue.
+      ..drawPath(path4, paintCreator(lastCustomColor)); // Light blue.
 
     return (canvas: canvas, bounds: bounds, child: property.child);
   }

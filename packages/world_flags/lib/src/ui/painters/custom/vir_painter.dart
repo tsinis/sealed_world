@@ -52,16 +52,16 @@ final class VirPainter extends CustomElementsPainter {
     final letterHeight = height / 8;
     final vPath = _createVPath(height);
     final iPath = _createIPath(height);
-    final paint = paintCreator(customColors.last)
+    final paint = paintCreator(lastCustomColor)
       ..style = PaintingStyle.stroke
       ..strokeWidth = letterHeight / 3
-      ..strokeCap = StrokeCap.square;
-    final vPaint = paint..strokeJoin = StrokeJoin.bevel;
+      ..strokeCap = StrokeCap.square
+      ..strokeJoin = StrokeJoin.bevel;
 
     canvas
       ..save()
       ..translate(width * 0.1, center.dy - letterHeight)
-      ..drawPath(vPath, vPaint)
+      ..drawPath(vPath, paint)
       ..restore()
       ..save()
       ..translate(width * 1.5, center.dy - letterHeight)

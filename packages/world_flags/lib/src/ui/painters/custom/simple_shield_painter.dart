@@ -51,6 +51,9 @@ final class SimpleShieldPainter extends MultiElementPainter {
   final bool _showDividers;
   final bool _showOutline;
 
+  @override
+  Record get variant => (super.variant, _showDividers, _showOutline);
+
   static const _fallback = Color(0x00000000);
   static const _lineFactor = 0.2;
 
@@ -60,10 +63,10 @@ final class SimpleShieldPainter extends MultiElementPainter {
   @override
   FlagParentBounds paintFlagElements(Canvas canvas, Size size) {
     final adjustedSize = ratioAdjustedSize(size);
-    final thisProperty = property;
-    final otherColors =
-        // ignore: avoid-type-casts, Might be a breaking change.
-        (thisProperty as CustomElementsProperties?)?.otherColors;
+    final otherColors = properties
+        .whereType<CustomElementsProperties>()
+        .firstOrNull
+        ?.otherColors;
     final center = calculateCenter(size);
     final height = adjustedSize.height;
     final width = adjustedSize.width;
@@ -87,7 +90,7 @@ final class SimpleShieldPainter extends MultiElementPainter {
 
     if (_showOutline) {
       paint
-        ..color = otherColors?.last ?? _fallback
+        ..color = otherColors?.lastOrNull ?? _fallback
         ..style = PaintingStyle.stroke
         ..strokeWidth = height * _lineFactor;
       canvas.drawPath(path, paint);

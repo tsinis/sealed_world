@@ -2,7 +2,6 @@ import "dart:ui";
 
 import "../../../model/typedefs.dart";
 import "../basic/custom_elements_painter.dart";
-import "../multi_element_painter.dart";
 
 /// Painter for the Nepal flag.
 final class NplPainter extends CustomElementsPainter {
@@ -24,16 +23,15 @@ final class NplPainter extends CustomElementsPainter {
     canvas
       ..drawPath(
         path,
-        paintCreator(customColors.first)
+        paintCreator(customColor(0))
           ..style = PaintingStyle.stroke
           ..strokeWidth = height / 15
           ..strokeMiterLimit = 10, // Sharp triangle apexes at any aspect ratio.
       )
       ..drawPath(path, paintCreator());
 
-    return MultiElementPainter(
-      List.unmodifiable(properties.skip(1)),
-      aspectRatio,
-    ).paint(canvas, size);
+    paintShapes(canvas, size);
+
+    return null;
   }
 }

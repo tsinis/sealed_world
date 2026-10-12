@@ -4,13 +4,13 @@ import "dart:ui";
 
 import "../../../model/typedefs.dart";
 import "../basic/badge_artwork.dart";
+import "../basic/badge_artwork_painter.dart";
 import "../basic/custom_elements_painter.dart";
-import "../multi_element_painter.dart";
 
 /// Painter for the lion of Sri Lanka.
 ///
 /// The four bo leaves come from the flag data; this draws the lion.
-final class LkaPainter extends CustomElementsPainter {
+final class LkaPainter extends CustomElementsPainter with BadgeArtworkPainter {
   /// Creates a new instance of [LkaPainter].
   const new(super._properties, super.aspectRatio);
 
@@ -19,7 +19,7 @@ final class LkaPainter extends CustomElementsPainter {
   /// The emblem keeps this ratio whatever ratio the flag itself is drawn at.
   static const _artworkRatio = 1.2337;
 
-  /// The artwork, packed into typed arrays on first paint and reused after.
+  /// The artwork, built into paths on first paint and reused after.
   static final _artwork = BadgeArtwork(_layers);
 
   /// Commands as an opcode then its coordinates, relative to the emblem
@@ -153,14 +153,16 @@ final class LkaPainter extends CustomElementsPainter {
   // dart format on
 
   @override
-  FlagParentBounds paintFlagElements(Canvas canvas, Size size) {
-    MultiElementPainter(
-      List.unmodifiable(properties.skip(1)),
-      aspectRatio,
-    ).paint(canvas, size);
-    final bounds = proportionalBounds(size, _artworkRatio);
-    _artwork.paint(canvas, bounds, badgePaint);
+  // ignore: avoid-unnecessary-getter, the static one shares its path cache.
+  BadgeArtwork get artwork => _artwork;
 
-    return (canvas: canvas, bounds: bounds, child: property.child);
+  @override
+  double get artworkRatio => _artworkRatio;
+
+  @override
+  FlagParentBounds paintFlagElements(Canvas canvas, Size size) {
+    paintShapes(canvas, size);
+
+    return super.paintFlagElements(canvas, size);
   }
 }

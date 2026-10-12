@@ -45,11 +45,13 @@ islas
 japon
 japán
 jazyk
+Kitts
 lanna
 lozenged
 ltwh
 nagkakaisang
 Naoero
+neighbouring
 njemačka
 Pushto
 rasterizer

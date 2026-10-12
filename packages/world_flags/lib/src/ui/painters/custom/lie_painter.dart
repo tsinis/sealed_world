@@ -75,7 +75,6 @@ final class LiePainter extends CustomElementsPainter {
         width * 0.99,
         height * 0.64,
       )
-      ..lineTo(width * 0.99, height * 0.64)
       ..lineTo(width * 0.99, height * 0.64);
 
     final bounds = path.getBounds();

@@ -21,7 +21,8 @@ abstract class DecoratedFlagWidget extends StatelessWidget
   ///  is used.
   /// - [height]: The height of the flag. If `null`, the height from the flag
   ///  theme is used.
-  /// - [child]: A widget to display in the foreground of the flag.
+  /// - [flagChild]: A widget to display in the foreground of the flag.
+  /// - [child]: Deprecated, use [flagChild] instead.
   /// - [key]: The key for the widget.
   const new({
     this.aspectRatio,

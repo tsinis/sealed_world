@@ -5,7 +5,7 @@ part of "../multi_element_painter.dart";
 /// Painter for the flag badge of the Cayman Islands.
 ///
 /// Draws the turtle and pineapple above the shield, over its scroll.
-final class CymPainter extends UnionJackPainter {
+final class CymPainter extends UnionJackPainter with BadgeArtworkPainter {
   /// Creates a new instance of [CymPainter].
   const new(super._properties, super.aspectRatio) : super.halfWithoutOutline();
 
@@ -135,10 +135,9 @@ final class CymPainter extends UnionJackPainter {
   // dart format on
 
   @override
-  FlagParentBounds paintFlagElements(Canvas canvas, Size size) {
-    final bounds = proportionalBounds(size, _artworkRatio);
-    _artwork.paint(canvas, bounds, badgePaint);
+  // ignore: avoid-unnecessary-getter, the static one shares its path cache.
+  BadgeArtwork get artwork => _artwork;
 
-    return (canvas: canvas, bounds: bounds, child: property.child);
-  }
+  @override
+  double get artworkRatio => _artworkRatio;
 }

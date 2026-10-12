@@ -39,7 +39,6 @@ final class KhmPainter extends CustomElementsPainter {
       ..lineTo(0, height * 1.01)
       ..lineTo(width, height * 1.01)
       ..lineTo(width, height * 0.81)
-      ..lineTo(width * 0.9, height * 0.81)
       ..lineTo(width * 0.9, height * 0.81);
 
     final bounds = path.getBounds();
@@ -49,7 +48,7 @@ final class KhmPainter extends CustomElementsPainter {
       ..drawPath(path, paintCreator())
       ..drawPath(
         path,
-        paintCreator(customColors.first)
+        paintCreator(customColor(0))
           ..style = PaintingStyle.stroke
           ..strokeWidth = height * 0.02,
       );

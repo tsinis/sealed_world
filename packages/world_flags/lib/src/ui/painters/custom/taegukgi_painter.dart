@@ -18,7 +18,7 @@ final class TaegukgiPainter extends CustomElementsPainter {
 
   @override
   FlagParentBounds? paintFlagElements(Canvas canvas, Size size) {
-    final paint = paintCreator(customColors.last);
+    final paint = paintCreator(lastCustomColor);
     final adjustedSize = ratioAdjustedSize(size);
     final center = calculateCenter(size);
     final height = adjustedSize.height;
@@ -54,8 +54,8 @@ final class TaegukgiPainter extends CustomElementsPainter {
       ..translate(center.dx, center.dy)
       ..rotate(_radians)
       ..translate(-center.dx, -center.dy)
-      ..drawOval(disc, paint..color = customColors.first)
-      ..drawPath(yang, paint..color = customColors.last)
+      ..drawOval(disc, paint..color = customColor(0))
+      ..drawPath(yang, paint..color = lastCustomColor)
       ..restore();
 
     // All twelve bars share one color and never overlap, so the four

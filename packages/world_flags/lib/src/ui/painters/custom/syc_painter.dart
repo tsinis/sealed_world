@@ -10,8 +10,8 @@ final class SycPainter extends CustomElementsPainter {
 
   @override
   FlagParentBounds paintFlagElements(Canvas canvas, Size size) {
-    final white = paintCreator(customColors.last);
-    final yellow = paintCreator(customColors.first);
+    final white = paintCreator(lastCustomColor);
+    final yellow = paintCreator(customColor(0));
 
     final bottomLeft = Offset(0, size.height);
     final oneThirdRight = Offset(size.width, size.height / 3);

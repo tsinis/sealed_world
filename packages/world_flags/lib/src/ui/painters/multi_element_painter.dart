@@ -10,6 +10,7 @@ import "../../model/elements/elements_properties.dart";
 import "../../model/shape.dart";
 import "../../model/typedefs.dart";
 import "basic/badge_artwork.dart";
+import "basic/badge_artwork_painter.dart";
 import "basic/custom_elements_painter.dart";
 import "common/rectangle_painter.dart";
 
@@ -87,6 +88,7 @@ final class MultiElementPainter extends CustomElementsPainter {
   /// elements.
   @override
   FlagParentBounds? paint(Canvas canvas, Size size) {
+    if (size.isEmpty) return null; // There is nothing to see, ratios are NaN.
     // No clip here: the caller has already clipped to `size`.
     bool hasPaintedElements = false;
     for (final props in properties) {

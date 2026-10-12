@@ -80,7 +80,7 @@ final class GgyPainter extends CustomElementsPainter {
         Rect.fromLTWH((width - redThickness) / 2, 0, redThickness, height),
         paintCreator()..isAntiAlias = false,
       )
-      ..drawPath(yellowPath, paintCreator(customColors.first));
+      ..drawPath(yellowPath, paintCreator(customColor(0)));
 
     return (
       canvas: canvas,
