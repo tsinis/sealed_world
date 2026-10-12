@@ -224,6 +224,8 @@ class FlagShaderSurface extends StatefulWidget {
 class _FlagShaderSurfaceState extends State<FlagShaderSurface>
     with TickerProviderStateMixin {
   FlagShaderDelegate? _managedDelegate;
+  // The properties the managed delegate was built from.
+  FlagProperties? _delegateProperties;
   bool _isManagedDelegateOutdated = false;
   ShaderStripesPainter? _painter;
   // The flag the painter was built from, maps may be changed in place.
@@ -254,9 +256,19 @@ class _FlagShaderSurfaceState extends State<FlagShaderSurface>
         old?.decoration != flag?.decoration;
   }
 
+  // A custom builder also gets the metadata, which isn't painted.
+  bool _isOtherBuilderInput(FlagProperties? properties) {
+    final built = _delegateProperties;
+
+    return widget.delegateBuilder != null &&
+        built != null &&
+        built.isSimplified != properties?.isSimplified;
+  }
+
   void _disposeManagedDelegate() {
     _managedDelegate?.dispose();
     _managedDelegate = null;
+    _delegateProperties = null;
     _isManagedDelegateOutdated = false;
   }
 
@@ -288,6 +300,7 @@ class _FlagShaderSurfaceState extends State<FlagShaderSurface>
       created.continueFrom(current);
     }
     _disposeManagedDelegate();
+    _delegateProperties = flag.properties;
 
     return _managedDelegate = created;
   }
@@ -350,7 +363,8 @@ class _FlagShaderSurfaceState extends State<FlagShaderSurface>
         oldWidget.options != widget.options ||
         oldWidget.item != widget.item ||
         oldWidget.shader != widget.shader ||
-        _isRepaintedFlag(_paintedFlag, widget._flag);
+        _isRepaintedFlag(_paintedFlag, widget._flag) ||
+        _isOtherBuilderInput(widget._flag?.properties);
     if (!delegateChanged) return;
 
     _disposePainter();
@@ -371,7 +385,12 @@ class _FlagShaderSurfaceState extends State<FlagShaderSurface>
   @override
   Widget build(BuildContext context) {
     final flag = widget._flag;
-    if (flag == null) return widget.orElse;
+    if (flag == null) {
+      _disposePainter();
+      _disposeManagedDelegate(); // Stops the ticker of an animated delegate.
+
+      return widget.orElse;
+    }
     final delegate = _resolveDelegate(flag);
 
     return SizedBox(

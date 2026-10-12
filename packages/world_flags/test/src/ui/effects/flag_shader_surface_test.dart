@@ -5,6 +5,7 @@ import "package:flutter_test/flutter_test.dart";
 import "package:material_ui/material_ui.dart" show MaterialApp;
 import "package:sealed_countries/sealed_countries.dart";
 import "package:world_flags/src/helpers/extensions/basic_flag_extension_copy_with.dart";
+import "package:world_flags/src/helpers/extensions/flag_properties_copy_with.dart";
 import "package:world_flags/src/model/colors_properties.dart";
 import "package:world_flags/src/model/flag_properties.dart";
 import "package:world_flags/src/ui/effects/animated_flag_shader_delegate.dart";
@@ -360,6 +361,43 @@ void main() => group("$FlagShaderSurface", () {
         recorder.created.last.currentTime,
         recorder.created.first.currentTime,
       );
+    });
+
+    testWidgets("rebuilds the delegate for other metadata", (tester) async {
+      const red = FlagProperties([ColorsProperties(Color(0xFFFF0000))]);
+      final recorder = _DelegateRecorder();
+      for (final isSimplified in const [false, false, true]) {
+        await tester.pumpWidget(
+          FlagShaderSurface(
+            const CountryUsa(),
+            map: {
+              const CountryUsa(): BasicFlag(
+                red.copyWith(isSimplified: isSimplified),
+              ),
+            },
+            delegateBuilder: recorder.build,
+          ),
+        );
+      }
+
+      expect(recorder.created, hasLength(2)); // Not for an equal flag.
+    });
+
+    testWidgets("disposes the delegate when there is no flag", (tester) async {
+      final recorder = _DelegateRecorder();
+      await tester.pumpWidget(
+        FlagShaderSurface(const CountryUsa(), delegateBuilder: recorder.build),
+      );
+      expect(tester.binding.transientCallbackCount, 1); // A ticker.
+      await tester.pumpWidget(
+        FlagShaderSurface(const FiatXts(), delegateBuilder: recorder.build),
+      );
+      expect(tester.binding.transientCallbackCount, isZero);
+      await tester.pumpWidget(
+        FlagShaderSurface(const CountryUsa(), delegateBuilder: recorder.build),
+      );
+
+      expect(recorder.created, hasLength(2));
     });
   });
 
