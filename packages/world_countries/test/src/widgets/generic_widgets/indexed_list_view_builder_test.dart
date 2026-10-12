@@ -1,3 +1,5 @@
+// ignore_for_file: prefer-match-file-name, a helper of the tests below.
+
 import "package:flutter/semantics.dart" show SemanticsAction;
 import "package:flutter/widgets.dart";
 import "package:flutter_test/flutter_test.dart";
@@ -62,12 +64,12 @@ void main() => group("$IndexedListViewBuilder", () {
       ),
     );
 
-    // Without `onPressed` the tile's ink well selects nothing, so the row's
-    // detector keeps its tap: it is the node around the tile's own.
-    final row = tester.getSemantics(find.text("one")).parent;
-    expect(row?.getSemanticsData().hasAction(SemanticsAction.tap), isTrue);
+    // Without `onPressed` the tile has no tap of its own, so the row's
+    // detector keeps its tap, merged into the node of the tile.
+    final row = tester.getSemantics(find.text("one"));
+    expect(row.getSemanticsData().hasAction(SemanticsAction.tap), isTrue);
     tester.binding.renderViews.first.owner?.semanticsOwner?.performAction(
-      row?.id ?? -1,
+      row.id,
       SemanticsAction.tap,
     );
     await tester.pump();
@@ -94,6 +96,65 @@ void main() => group("$IndexedListViewBuilder", () {
     );
   });
 
+  group("reads the items", () {
+    final numbers = List<int>.generate(100, (i) => i);
+
+    test("sorted only once for a list sorted already", () {
+      final counter = _Counter();
+      final view = _SortingListView(numbers, sort: counter.descending);
+      final sorted = view.sortedItems(numbers);
+      final comparisons = counter.count;
+
+      expect(view.sortedItems(sorted), same(sorted));
+      expect(counter.count, comparisons);
+    });
+
+    testWidgets("sorted once per build", (tester) async {
+      final oneSort = _Counter();
+      final sorted = List.of(numbers)..sort(oneSort.descending);
+      final counter = _Counter();
+      await tester.pumpMaterialApp(
+        IndexedListViewBuilder<int, Widget>(
+          numbers,
+          sort: counter.descending,
+          itemBuilder: (props, _) => Text("${props.item}"),
+        ),
+      );
+
+      expect(counter.count, oneSort.count);
+      expect(
+        tester.widgetList<Text>(find.byType(Text)).first.data,
+        "${sorted.first}",
+      );
+    });
+
+    testWidgets("from a lazy iterable only once", (tester) async {
+      final counter = _Counter();
+      await tester.pumpMaterialApp(
+        IndexedListViewBuilder<int, Widget>(
+          numbers.where(counter.isRead),
+          itemBuilder: (props, _) => Text("${props.item}"),
+        ),
+      );
+
+      expect(counter.count, numbers.length);
+      expect(find.text("0"), findsOneWidget);
+    });
+
+    testWidgets("sorted when asked for properties of unsorted ones", (
+      tester,
+    ) async {
+      final context = await tester.contextExtractor();
+      final widget = IndexedListViewBuilder<int, Widget>(
+        numbers,
+        sort: _Counter().descending,
+      );
+
+      expect(widget.properties(context, 0).item, numbers.last);
+      expect(widget.properties(context, 1, const [7, 9, 8]).item, 8);
+    });
+  });
+
   testWidgets("hitTestBehavior uses explicit value", (tester) async {
     const widget = IndexedListViewBuilder([1], hitTestBehavior: .translucent);
     await tester.pumpWidgetsApp(widget);
@@ -101,3 +162,31 @@ void main() => group("$IndexedListViewBuilder", () {
     expect(listView.hitTestBehavior, HitTestBehavior.translucent);
   });
 });
+
+/// Counts the comparisons (or reads) of the items.
+final class _Counter {
+  int count = 0;
+
+  int descending(int first, int second) {
+    count += 1;
+
+    return second.compareTo(first);
+  }
+
+  bool isRead(int _) {
+    count += 1;
+
+    return true;
+  }
+}
+
+/// Exposes the sorting of the list view.
+class _SortingListView extends IndexedListViewBuilder<int, Widget> {
+  const new(super.items, {super.sort});
+
+  @override
+  Iterable<int> defaultItems(BuildContext? context) => const [];
+
+  @override
+  List<int> sortedItems(Iterable<int> items) => super.sortedItems(items);
+}

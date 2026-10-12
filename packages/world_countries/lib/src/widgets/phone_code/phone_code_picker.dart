@@ -1,4 +1,6 @@
 import "package:flutter/gestures.dart" show DragStartBehavior;
+import "package:flutter/services.dart"
+    show FilteringTextInputFormatter, TextInputFormatter;
 import "package:flutter/widgets.dart";
 import "package:material_ui/material_ui.dart" show TextField;
 import "package:world_flags/world_flags.dart" hide FlagThemeData;
@@ -6,6 +8,7 @@ import "package:world_flags/world_flags.dart" hide FlagThemeData;
 import "../../constants/ui_constants.dart";
 import "../../extensions/build_context_extension.dart";
 import "../../extensions/iso_tile_extension.dart";
+import "../../helpers/name_text_input.dart";
 import "../../model/iso/iso_maps.dart";
 import "../../model/item_properties.dart";
 import "../../model/search_data.dart";
@@ -115,6 +118,15 @@ class PhoneCodePicker extends CountryPicker {
         maps: picker.maps,
         flagTheme: picker.flagTheme,
       );
+
+  /// Digits are allowed, so that a country can be found by its phone code.
+  /// Special characters are not, so a typed `+` of the code is left out.
+  static final _phoneCodeFormatters = List<TextInputFormatter>.unmodifiable([
+    FilteringTextInputFormatter.deny(RegExp(NameTextInput.specialCharsPattern)),
+  ]);
+
+  @override
+  List<TextInputFormatter> get searchInputFormatters => _phoneCodeFormatters;
 
   @override
   CountryTile defaultBuilder(ItemProperties<WorldCountry> props) {

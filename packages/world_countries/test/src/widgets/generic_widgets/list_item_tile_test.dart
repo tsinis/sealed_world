@@ -2,6 +2,7 @@ import "package:flutter/foundation.dart";
 import "package:flutter/widgets.dart";
 import "package:flutter_test/flutter_test.dart";
 import "package:material_ui/material_ui.dart" show ListTile;
+import "package:world_countries/src/widgets/generic_widgets/indexed_list_view_builder.dart";
 import "package:world_countries/src/widgets/generic_widgets/list_item_tile.dart";
 import "package:world_flags/world_flags.dart";
 
@@ -106,6 +107,29 @@ void main() => group("$ListItemTile", () {
     final tile = tester.widget<ListTile>(find.byType(ListTile).last);
     expect(tile.leading, isA<Semantics>(), reason: "The slot stays laid out.");
     expect(tile.subtitle, isA<Semantics>());
+  });
+
+  testWidgets("can be found by a global key", (tester) async {
+    final key = GlobalKey();
+    await tester.pumpMaterialApp(ListItemTile(1, key: key));
+
+    expect(tester.takeException(), isNull);
+    expect(key.currentWidget, isA<ListItemTile<int>>());
+  });
+
+  testWidgets("is selected by a list without onPressed", (tester) async {
+    final selected = <int>[];
+    await tester.pumpMaterialApp(
+      IndexedListViewBuilder<int, Widget>(
+        const [1],
+        onSelect: selected.add,
+        itemBuilder: (props, _) =>
+            ListItemTile(props.item, title: const Text("one")),
+      ),
+    );
+    await tester.tap(find.text("one"));
+
+    expect(selected, [1]);
   });
 
   test("debugFillProperties with non-ISO item", () {

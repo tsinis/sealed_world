@@ -36,12 +36,14 @@ base class BaseTileThemeData<T extends IsoTranslated>
     Widget? Function(ItemProperties<T>, IsoTile<T>)? itemBuilder,
   }) => BaseTileThemeData<T>(itemBuilder: itemBuilder ?? this.itemBuilder);
 
+  /// An [itemBuilder] cannot be interpolated, so the theme switches to the
+  /// [other] one halfway through, as Material themes do for such values.
   @override
   @useResult
   BaseTileThemeData<T> lerp(
     covariant ThemeExtension<BaseTileThemeData<T>>? other,
     double t,
-  ) => this;
+  ) => t < 0.5 || other is! BaseTileThemeData<T> ? this : other;
 }
 
 @immutable

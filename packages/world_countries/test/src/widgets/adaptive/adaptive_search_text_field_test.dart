@@ -1,6 +1,8 @@
 import "package:flutter/foundation.dart";
+import "package:flutter/services.dart" show FilteringTextInputFormatter;
 import "package:flutter_test/flutter_test.dart";
 import "package:material_ui/material_ui.dart";
+import "package:world_countries/src/helpers/name_text_input.dart";
 import "package:world_countries/src/widgets/adaptive/adaptive_search_text_field.dart";
 
 import "../../../helpers/widget_tester_extension.dart";
@@ -10,7 +12,25 @@ void main() => group("$AdaptiveSearchTextField", () {
     final controller = TextEditingController();
     await tester.pumpWidgetsApp(AdaptiveSearchTextField(controller));
     expect(find.byType(EditableText), findsOneWidget);
+    expect(
+      tester.widget<EditableText>(find.byType(EditableText)).inputFormatters,
+      containsAll(NameTextInput.formatters),
+    );
     controller.dispose();
+  });
+
+  testWidgets("in $WidgetsApp with input formatters", (tester) async {
+    final controller = TextEditingController();
+    addTearDown(controller.dispose);
+    final formatters = [FilteringTextInputFormatter.digitsOnly];
+    await tester.pumpWidgetsApp(
+      AdaptiveSearchTextField(controller, inputFormatters: formatters),
+    );
+
+    expect(
+      tester.widget<EditableText>(find.byType(EditableText)).inputFormatters,
+      containsAll(formatters),
+    );
   });
 
   testWidgets("in $MaterialApp", (tester) async {

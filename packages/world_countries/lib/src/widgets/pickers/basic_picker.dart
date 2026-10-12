@@ -3,7 +3,10 @@
 
 import "dart:async" show FutureOr, unawaited;
 
+import "package:flutter/foundation.dart"
+    show DiagnosticPropertiesBuilder, IterableProperty;
 import "package:flutter/gestures.dart" show DragStartBehavior;
+import "package:flutter/services.dart" show TextInputFormatter;
 import "package:material_ui/material_ui.dart";
 import "package:world_flags/world_flags.dart" hide FlagThemeData;
 
@@ -205,6 +208,31 @@ abstract class BasicPicker<T extends IsoTranslated, W extends IsoTile<T>>
   @protected
   SearchData defaultSearch(T item, BuildContext context);
 
+  /// The input formatters of the default search bar, used when the
+  /// [searchBar] (or the one of [PickersThemeData]) does not provide its own.
+  ///
+  /// Returns `null` by default, so the formatters of names are used: digits
+  /// and special characters are not allowed.
+  @protected
+  List<TextInputFormatter>? get searchInputFormatters => null;
+
+  /// The controller of the search bar given to the picker, if any.
+  TextEditingController? get _givenController =>
+      textController ?? searchBar?.controller;
+
+  @override
+  void debugFillProperties(DiagnosticPropertiesBuilder properties) {
+    super.debugFillProperties(properties);
+    properties.add(
+      IterableProperty<TextInputFormatter>(
+        "searchInputFormatters",
+        searchInputFormatters,
+        // ignore: avoid-passing-default-values, it's `kNoDefaultValue` there.
+        defaultValue: null,
+      ),
+    );
+  }
+
   /// Returns the name translation of the item (if exists) in form
   /// of [Text] widget.
   Text? itemNameTranslated(T item, BuildContext context) => MaybeWidget.orNull(
@@ -221,20 +249,25 @@ abstract class BasicPicker<T extends IsoTranslated, W extends IsoTile<T>>
   ) {
     final text = controller.text.trim();
     final sourceItems = resolvedItems(context);
-    final map = sourceItems.searchMap(context, searchIn ?? defaultSearch);
-    final iterable = text.isNotEmpty
-        ? (onSearchResultsBuilder?.call(text, map) ??
-              sourceItems.searchResults(
-                map,
-                (itemText) => compareWithTextInput(controller, itemText),
-              ))
-        : sourceItems;
+    final Iterable<T> found;
+    if (text.isEmpty && onSearchResultsBuilder == null) {
+      found = sourceItems; // There is nothing to search for.
+    } else {
+      final map = sourceItems.searchMap(context, searchIn ?? defaultSearch);
+      found =
+          onSearchResultsBuilder?.call(text, map) ??
+          sourceItems.searchResults(
+            map,
+            (itemText) => compareWithTextInput(controller, itemText),
+          );
+    }
+    final results = sortedItems(found);
 
     return List<Widget>.generate(
-      iterable.length,
+      results.length,
       // ignore: prefer-extracting-callbacks, due to complexity.
       (i) {
-        final props = filteredProperties(iterable, context, i);
+        final props = filteredProperties(results, context, i);
         final defaultTile = defaultBuilder(props).copyWith(
           onPressed: (item) => maybeSelectAndPop(item, context),
           titleAlignment: ListTileTitleAlignment.titleHeight,
@@ -408,11 +441,18 @@ abstract class BasicPicker<T extends IsoTranslated, W extends IsoTile<T>>
     T? result;
     final sourceItems = resolvedItems(context);
     final searchMap = sourceItems.searchMap(context, searchIn ?? defaultSearch);
+    // The search page is closed on the navigator it is pushed to, that is not
+    // the closest one to the [context] with the `useRootNavigator`.
+    final navigatorContext = Navigator.of(
+      context,
+      rootNavigator: useRootNavigator,
+    ).context;
     // ignore: avoid-late-keyword, avoid-unnecessary-local-late, it's not.
     late final ImplicitSearchDelegate<T> delegate;
     // ignore: avoid-local-functions, lazy delegate.
     void closeOnSelect(T select) {
-      delegate.close(context, select);
+      // ignore: use-closest-build-context, the navigator of the search page.
+      delegate.close(navigatorContext, select);
       onSelect?.call(result = select); //ignore:avoid-nested-assignments,it's it
     }
 

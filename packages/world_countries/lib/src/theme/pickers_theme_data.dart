@@ -1,3 +1,5 @@
+// ignore_for_file: prefer-class-destructuring, == and hashCode use all fields.
+
 // Stage 1 bridge: this file intentionally uses the deprecated FlagThemeData
 // shim that bridges Material ThemeExtension to FlagTheme. It will be removed
 // in Stage 2 alongside the shim itself.
@@ -162,12 +164,83 @@ class PickersThemeData extends ThemeExtension<PickersThemeData>
     spacing: spacing ?? this.spacing,
   );
 
+  /// Nothing in a pickers theme can be interpolated, so the theme switches to
+  /// the [other] one halfway through, as Material themes do for such values.
   @override
   @useResult
   ThemeExtension<PickersThemeData> lerp(
     covariant ThemeExtension<PickersThemeData>? other,
     double t,
-  ) => this;
+  ) => t < 0.5 || other is! PickersThemeData ? this : other;
+
+  @override
+  bool operator ==(Object other) {
+    if (identical(this, other)) return true;
+    if (other.runtimeType != runtimeType) return false;
+
+    // ignore: avoid-complex-conditions, it's regular == override in big class.
+    return other is PickersThemeData &&
+        other.showClearButton == showClearButton &&
+        other.searchBar == searchBar &&
+        other.searchBarPadding == searchBarPadding &&
+        other.maps == maps &&
+        other.flagTheme == flagTheme &&
+        other.separator == separator &&
+        other.showHeader == showHeader &&
+        other.header == header &&
+        other.direction == direction &&
+        other.mainAxisAlignment == mainAxisAlignment &&
+        other.mainAxisSize == mainAxisSize &&
+        other.crossAxisAlignment == crossAxisAlignment &&
+        other.textDirection == textDirection &&
+        other.verticalDirection == verticalDirection &&
+        other.textBaseline == textBaseline &&
+        other.clipBehavior == clipBehavior &&
+        other.reverse == reverse &&
+        other.primary == primary &&
+        other.shrinkWrap == shrinkWrap &&
+        other.physics == physics &&
+        other.padding == padding &&
+        other.addRepaintBoundaries == addRepaintBoundaries &&
+        other.addSemanticIndexes == addSemanticIndexes &&
+        other.cacheExtent == cacheExtent &&
+        other.dragStartBehavior == dragStartBehavior &&
+        other.hitTestBehavior == hitTestBehavior &&
+        other.keyboardDismissBehavior == keyboardDismissBehavior &&
+        other.spacing == spacing;
+  }
+
+  @override
+  int get hashCode => Object.hashAll([
+    showClearButton,
+    searchBar,
+    searchBarPadding,
+    maps,
+    flagTheme,
+    separator,
+    showHeader,
+    header,
+    direction,
+    mainAxisAlignment,
+    mainAxisSize,
+    crossAxisAlignment,
+    textDirection,
+    verticalDirection,
+    textBaseline,
+    clipBehavior,
+    reverse,
+    primary,
+    shrinkWrap,
+    physics,
+    padding,
+    addRepaintBoundaries,
+    addSemanticIndexes,
+    cacheExtent,
+    dragStartBehavior,
+    hitTestBehavior,
+    keyboardDismissBehavior,
+    spacing,
+  ]);
 
   @override
   final bool showClearButton;

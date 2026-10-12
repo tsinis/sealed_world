@@ -19,12 +19,16 @@ class AdaptiveSearchTextField extends TextField {
   /// * [padding] is an optional padding to apply to the text field.
   /// * [showClearButton] is a boolean indicating whether a clear button should
   ///   be displayed in the text field.
+  /// * [inputFormatters] are the optional formatters of the text field, used
+  ///   when [copyFrom] does not provide its own. Defaults to the formatters
+  ///   of names (digits and special characters are not allowed).
   /// * `key` is the optional key to use for the widget.
   const new(
     TextEditingController controller, {
     this.copyFrom,
     this.padding,
     this.showClearButton = true,
+    super.inputFormatters,
     super.key,
   }) : super(controller: controller);
 
@@ -108,6 +112,8 @@ class _AdaptiveSearchTextFieldState extends State<AdaptiveSearchTextField> {
             child: widget.copyFrom.copyWith(
               _controller,
               decoration: _decoration,
+              inputFormatters:
+                  widget.copyFrom?.inputFormatters ?? widget.inputFormatters,
             ),
           )
         : DecoratedBox(
@@ -129,7 +135,8 @@ class _AdaptiveSearchTextFieldState extends State<AdaptiveSearchTextField> {
                 cursorColor: _textStyle?.color ?? UiConstants.color,
                 backgroundCursorColor: Colors.transparent,
                 textInputAction: UiConstants.textInputAction,
-                inputFormatters: NameTextInput.formatters,
+                inputFormatters:
+                    widget.inputFormatters ?? NameTextInput.formatters,
               ),
             ),
           ),
