@@ -24,6 +24,7 @@ class _BasicPickerState<T extends IsoTranslated, W extends IsoTile<T>>
     }
   }
 
+  // Not a tear-off: it calls the current `widget`, not the one it's made with.
   // ignore: prefer-typedefs-for-callbacks, the same type as `searchIn` has.
   SearchData Function(T, BuildContext) get _newDefaultSearch =>
       (item, context) => widget.defaultSearch(item, context);

@@ -16,18 +16,20 @@ mixin PoppedMixin<T extends Object, W extends Widget>
   /// then pops the current route using `maybePop()` from the [context]. The
   /// [item] is the result of the route if the route returns such items (e.g.
   /// a modal bottom sheet or a dialog of the picker), other routes (e.g. the
-  /// view of a `SearchAnchor`) are popped without a result. Nothing is popped
-  /// if the route of the [context] is not the current one.
+  /// view of a `SearchAnchor`) are popped without a result.
   ///
   /// Returns the selected [item].
   @protected
   @optionalTypeArgs
   T maybeSelectAndPop(T item, BuildContext context) {
     onSelect?.call(item);
-    final route = ModalRoute.of(context);
-    // `maybePop` pops the top-most route, that is another one above it.
-    if (route != null && !route.isCurrent) return item;
-    unawaited(context.maybePop(route is Route<T?> ? item : null));
+    // `maybePop` pops the top-most route, e.g. the view of a `SearchAnchor`
+    // above the route of a page [context], that may not take the item.
+    final takesItem = switch (ModalRoute.of(context)) {
+      final Route<T?> route => route.isCurrent,
+      _ => false,
+    };
+    unawaited(context.maybePop(takesItem ? item : null));
 
     return item;
   }
