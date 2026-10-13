@@ -66,13 +66,13 @@ void main() => group("$BasicPicker", () {
     });
   });
 
-  testWidgets("does not pop a route above the one of the picker", (
+  testWidgets("pops a route above the one of the picker without the item", (
     tester, // Dart 3.8 formatting.
   ) async {
     const routeAbove = Key("above");
     final context = await tester.contextExtractor();
-    Navigator.of(context).push(
-      PageRouteBuilder<void>(
+    final popped = Navigator.of(context).push(
+      PageRouteBuilder<bool>(
         pageBuilder: (_, _, _) => const SizedBox(key: routeAbove),
       ),
     );
@@ -80,7 +80,8 @@ void main() => group("$BasicPicker", () {
 
     const _BasicPickerTest().maybeSelectAndPop(testCountry, context);
     await tester.pumpAndSettle();
-    expect(find.byKey(routeAbove), findsOneWidget);
+    expect(find.byKey(routeAbove), findsNothing);
+    expect(await popped, isNull);
   });
 
   group("search text controller", () {

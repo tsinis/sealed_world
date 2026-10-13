@@ -2,7 +2,8 @@
 
 import "package:flutter/widgets.dart";
 import "package:flutter_test/flutter_test.dart";
-import "package:material_ui/material_ui.dart" show SearchController, TextField;
+import "package:material_ui/material_ui.dart"
+    show Icons, SearchAnchor, SearchBar, SearchController, TextField;
 import "package:world_countries/src/model/iso/iso_maps.dart";
 import "package:world_countries/src/model/search_data.dart";
 import "package:world_countries/src/model/typedefs.dart";
@@ -17,6 +18,29 @@ void main() => group("$BasicPicker search", () {
   const anotherCountry = CountryGbr();
 
   group("searchSuggestions()", () {
+    testWidgets("closes the view on a tap with a context of the page", (
+      tester, // Dart 3.8 formatting.
+    ) async {
+      final selected = <WorldCountry>[];
+      await tester.pumpMaterialApp(
+        Builder(
+          builder: (pageContext) => SearchAnchor.bar(
+            suggestionsBuilder: (_, controller) =>
+                CountryPicker(onSelect: selected.add)
+                    .searchSuggestions(pageContext, controller),
+          ),
+        ),
+      );
+      await tester.tapAndSettle(find.byIcon(Icons.search));
+      final tiles = find.byType(CountryTile);
+      final country = tester.widget<CountryTile>(tiles.first).item;
+      await tester.tapAndSettle(tiles.first);
+
+      expect(tiles, findsNothing, reason: "The search view is closed.");
+      expect(find.byType(SearchBar), findsOneWidget, reason: "The page stays.");
+      expect(selected, [country]);
+    });
+
     testWidgets("does not search without a query", (tester) async {
       final counter = _Counter();
       final context = await tester.contextExtractor();
@@ -102,6 +126,17 @@ void main() => group("$BasicPicker search", () {
       );
       await tester.pumpAndSettle();
       expect(find.byType(CountryTile), findsOneWidget);
+    });
+
+    testWidgets("is done by the current picker", (tester) async {
+      final first = _Counter();
+      final current = _Counter();
+      await tester.pumpMaterialApp(_SearchingPicker(first, countries));
+      await tester.pumpMaterialApp(_SearchingPicker(current, countries));
+      await tester.enterText(find.byType(TextField), "a");
+
+      expect(first.count, isZero, reason: "The first picker is replaced.");
+      expect(current.count, countries.length);
     });
 
     testWidgets("is not done again for the same picker", (tester) async {

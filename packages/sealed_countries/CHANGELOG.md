@@ -2,35 +2,21 @@
 
 FIX
 
-- `byCountryMap` no longer loses unofficial countries when a limited `countries` collection is provided. For example, the Abkhaz language with only China in `countries` was mapped to `[Russia]` instead of `[Georgia, Russia]`. Results for the default `WorldCountry.list` are unchanged.
-- The default `byCountryMap` mapper of `NaturalLanguage` no longer adds the country of origin (United Kingdom, France, Portugal and Spain) for English, French, Portuguese and Spanish if it's not present in the list, it's only moved to the first place now. This also means that `custom` country lists for these languages (e.g. `languagesFlagsMap` in `world_countries`) are respected now.
-- `mapWhenOrNull` now invokes `orElse` lazily, only if there is no matching callback or it returns `null`. Previously, `orElse` was always invoked, even if its result was not used.
-- `Car.copyWith` now resets `sign` to `null` when an empty string is passed, as documented for nullable `String` fields. Previously, it failed on the constructor assertion.
-- `WorldCountry.toMap` no longer adds `"regionalBlocs": "[]"` for countries without regional blocs, the key is omitted instead. Deserialization via `fromMap` is unaffected.
-- `fromMap` methods of `WorldCountry` (`areaMetric`), `Gini` (`coefficient`) and `LatLng` now accept integer JSON numbers for `double` fields.
+- `byCountryMap` keeps unofficial countries for a limited `countries` list (e.g. Abkhaz with only China now maps to Georgia and Russia).
+- The default `byCountryMap` mapper of `NaturalLanguage` moves the country of origin of English, French, Portuguese and Spanish first instead of adding it, so custom lists (e.g. `languagesFlagsMap` in `world_countries`) are respected.
+- `mapWhenOrNull` calls `orElse` only when its result is used.
+- `Car.copyWith` resets `sign` to `null` for an empty string.
+- `WorldCountry.toMap` omits `regionalBlocs` instead of writing `"[]"`.
+- `fromMap` of `WorldCountry`, `Gini` and `LatLng` accepts integer JSON numbers for `double` fields.
+- Includes the fixes of `sealed_currencies` 3.4.1 and `sealed_languages` 3.4.1.
 
-Inherited from `sealed_currencies` 3.4.1 and `sealed_languages` 3.4.1:
+IMPROVEMENTS
 
-- `FiatCurrency.copyWith` now resets `symbol` to `null` when an empty string is passed.
-- `UpperCaseIsoMapExtension.copyWith` no longer throws a `StateError` when both the original and the `other` maps are empty.
-- `namesCommonNative` now returns `orElse` (when used together with `skipFirst`) for empty or `null` `namesNative`, as documented.
-
-REFACTOR
-
-- `byCountryMap` now builds each country list in a single pass, instead of copying the list on every added country.
-- The default `byCountryMap` mapper of `NaturalLanguage` now detects constructed languages via the `isConstructed` getter instead of a duplicated list.
-- Simplified `namesOfficialNative`.
+- `byCountryMap` builds each country list in a single pass.
 
 DOCUMENTATION
 
-- Fixed the `TypedLocalizationDelegate` constructor documentation (class name and the `countries` parameter).
-- Fixed the `tzUtcDurations` documentation: parsing stops at the first invalid timezone, returning durations of the preceding valid ones.
-- Fixed the documentation template of `CountryName.fromMap`.
-- Moved the `byCountryMap` default prioritization rules of `NaturalLanguage` to its public documentation and made its code sample runnable.
-
-TEST
-
-- Added tests for the `byCountryMap` unofficial countries and country of origin handling, lazy `orElse` in `mapWhenOrNull`, `Car` sign reset, and `Gini`/`WorldCountry` JSON deserialization.
+- Fixed the docs of `TypedLocalizationDelegate`, `tzUtcDurations`, `CountryName.fromMap` and the `byCountryMap` rules of `NaturalLanguage`.
 
 CHORE
 

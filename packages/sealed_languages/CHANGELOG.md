@@ -2,29 +2,17 @@
 
 FIX
 
-- `UpperCaseIsoMapExtension.copyWith` no longer throws a `StateError` when both the original and the `other` maps are empty. If all merged keys share the same length, the `minLength` and `maxLength` of the resulting map now also match it (previously they kept their default values, which were ignored anyway because of `exactLength`).
-- `namesCommonNative` now returns `orElse` (when used together with `skipFirst`) for empty or `null` `namesNative`, as documented. Previously, an empty string was returned.
+- `UpperCaseIsoMapExtension.copyWith` no longer throws a `StateError` when both maps are empty.
+- `namesCommonNative` returns `orElse` (with `skipFirst`) for empty or `null` `namesNative`, as documented.
 
 IMPROVEMENTS
 
-- `IsoStandardizedStringExtension` now reuses cached `RegExp` instances instead of creating new ones on every `isIsoAlphaRegularCode` and `maybeMapIsoCode` call, which are used by ISO code lookups (i.e. `UpperCaseIsoMap` and `maybeFromAnyCode` methods).
-- `fromEnums` and `toEnums` now remove duplicates in linear time instead of quadratic.
-
-REFACTOR
-
-- Simplified `firstIsoWhereOrNull`, `namesCommonNative`, `toUnicodeLocaleId` and the common name lookup in `TranslatedExtension`.
-- Removed redundant `countryCode` normalization from `BasicLocale.toMap`, since the `countryCode` getter is already trimmed and in uppercase.
+- ISO code lookups (`UpperCaseIsoMap`, `maybeFromAnyCode`) reuse cached `RegExp` instances.
+- `fromEnums` and `toEnums` remove duplicates in linear time.
 
 DOCUMENTATION
 
-- Fixed the `findByCodeOrThrow` code sample, which asserted an incorrect result, and the `UpperCaseIsoMapExtension.copyWith` documentation (key precedence description and code sample).
-- Fixed the default value of `assertNotEmpty` in the `firstIsoWhereOrNull` documentation.
-- Fixed the map keys description in `NaturalLanguageJson`: `code` is an ISO 639-2/T code, `codeShort` is an ISO 639-1 code, `namesNative` is a list, and `bibliographicCode` and `scripts` keys are now documented.
-- Documented the `formatter` parameter of `LocaleMappingOptionsExtension.copyWith`.
-
-TEST
-
-- Added tests for `toUnicodeLocaleId`, `BasicLocale.toMap`, `UpperCaseIsoMapExtension.copyWith` edge cases and the `namesCommonNative` fallback.
+- Fixed the docs and code samples of `findByCodeOrThrow`, `UpperCaseIsoMapExtension.copyWith`, `firstIsoWhereOrNull`, `NaturalLanguageJson` and `LocaleMappingOptionsExtension.copyWith`.
 
 ## 3.4.0
 
