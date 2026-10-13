@@ -1,8 +1,13 @@
+import "package:flutter/foundation.dart"
+    show DiagnosticPropertiesBuilder, DiagnosticsNode;
+import "package:flutter/services.dart" show FilteringTextInputFormatter;
 import "package:flutter/widgets.dart";
 import "package:flutter_test/flutter_test.dart";
-import "package:material_ui/material_ui.dart" show Icons, SearchAnchor;
+import "package:material_ui/material_ui.dart"
+    show Icons, SearchAnchor, TextField;
 import "package:world_countries/src/model/typedefs.dart";
 import "package:world_countries/src/theme/tile_theme_data/country_tile_theme_data.dart";
+import "package:world_countries/src/widgets/adaptive/adaptive_search_text_field.dart";
 import "package:world_countries/src/widgets/country/country_picker.dart";
 import "package:world_countries/src/widgets/phone_code/phone_code_picker.dart";
 import "package:world_flags/world_flags.dart";
@@ -10,6 +15,67 @@ import "package:world_flags/world_flags.dart";
 import "../../../helpers/widget_tester_extension.dart";
 
 void main() => group("$PhoneCodePicker", () {
+  group("search by the phone code", () {
+    testWidgets("allows digits", (tester) async {
+      await tester.pumpMaterialApp(const PhoneCodePicker());
+      await tester.enterText(find.byType(TextField), "+49");
+      await tester.pumpAndSettle();
+
+      expect(_typed(tester), "49");
+      expect(
+        tester
+            .widgetList<CountryTile>(find.byType(CountryTile))
+            .map((tile) => tile.item),
+        contains(const CountryDeu()),
+      );
+    });
+
+    testWidgets("keeps the formatters of a search bar", (tester) async {
+      final controller = TextEditingController();
+      addTearDown(controller.dispose);
+      await tester.pumpMaterialApp(
+        PhoneCodePicker(
+          searchBar: TextField(
+            autofillHints: const ["test"],
+            controller: controller,
+            inputFormatters: [FilteringTextInputFormatter.deny("9")],
+          ),
+        ),
+      );
+      await tester.enterText(find.byType(TextField), "+49");
+
+      expect(_typed(tester), "+4");
+    });
+
+    testWidgets("are not modifiable", (tester) async {
+      await tester.pumpMaterialApp(const PhoneCodePicker());
+      final formatters = tester
+          .widget<AdaptiveSearchTextField>(find.byType(AdaptiveSearchTextField))
+          .inputFormatters;
+
+      expect(formatters, isNotEmpty);
+      expect(() => formatters?.clear(), throwsUnsupportedError);
+    });
+
+    test("are described in the diagnostics only if given", () {
+      expect(
+        _formattersProperty(const PhoneCodePicker()).isFiltered(.info),
+        isFalse,
+      );
+      expect(
+        _formattersProperty(const CountryPicker()).isFiltered(.info),
+        isTrue,
+      );
+    });
+
+    testWidgets("is not available in a country picker", (tester) async {
+      await tester.pumpMaterialApp(const CountryPicker());
+      await tester.enterText(find.byType(TextField), "+49");
+
+      expect(_typed(tester), isEmpty);
+    });
+  });
+
   test("copyWith", () {
     const picker = PhoneCodePicker();
     expect(picker.onSelect, isNull);
@@ -127,3 +193,15 @@ void main() => group("$PhoneCodePicker", () {
     expect(tile, findsNothing);
   });
 });
+
+String _typed(WidgetTester tester) =>
+    tester.widget<TextField>(find.byType(TextField)).controller?.text ?? "";
+
+DiagnosticsNode _formattersProperty(CountryPicker picker) {
+  final builder = DiagnosticPropertiesBuilder();
+  picker.debugFillProperties(builder);
+
+  return builder.properties.singleWhere(
+    (property) => property.name == "searchInputFormatters",
+  );
+}

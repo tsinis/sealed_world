@@ -1,7 +1,10 @@
+// ignore_for_file: prefer-match-file-name, a theme of the tests below.
+
 import "package:flutter/gestures.dart";
 import "package:flutter/widgets.dart";
 import "package:flutter_test/flutter_test.dart";
-import "package:material_ui/material_ui.dart" show Divider;
+import "package:material_ui/material_ui.dart" show Divider, ThemeData;
+import "package:world_countries/src/constants/ui_constants.dart";
 import "package:world_countries/src/model/iso/iso_maps.dart";
 import "package:world_countries/src/theme/flag_theme_data.dart";
 import "package:world_countries/src/theme/pickers_theme_data.dart";
@@ -135,4 +138,67 @@ void main() => group("$PickersThemeData", () {
   });
 
   test("lerp", () => expect(original.lerp(original, 1), original));
+
+  test("lerp switches to the other theme halfway", () {
+    const other = PickersThemeData(showClearButton: false);
+
+    expect(original.lerp(other, 0.4), original);
+    expect(original.lerp(other, 0.5), other);
+    expect(original.lerp(other, 1), other);
+    expect(original.lerp(null, 1), original);
+  });
+
+  test("ThemeData.lerp keeps the pickers theme of the end theme", () {
+    const end = PickersThemeData(showClearButton: false);
+    final lerped = ThemeData.lerp(
+      ThemeData(extensions: const [original]),
+      ThemeData(extensions: const [end]),
+      1,
+    );
+
+    expect(lerped.extension<PickersThemeData>()?.showClearButton, isFalse);
+  });
+
+  group("equality", () {
+    test("is equal to a theme with the same values", () {
+      final theme = _theme(maps);
+
+      expect(theme, _theme(maps));
+      expect(theme.hashCode, _theme(maps).hashCode);
+      expect(theme, isNot(_theme(maps, spacing: 4)));
+      expect(theme, isNot(theme.copyWith(showHeader: false)));
+      expect(theme, isNot(theme.copyWith(primary: true)));
+    });
+
+    test("is not equal to a theme of another type", () {
+      expect(const PickersThemeData() == const _BrandPickersTheme(), isFalse);
+      expect(const _BrandPickersTheme() == const PickersThemeData(), isFalse);
+    });
+
+    test("keeps ThemeData equal when rebuilt with the same values", () {
+      expect(
+        ThemeData(extensions: [_theme(maps)]),
+        ThemeData(extensions: [_theme(maps)]),
+      );
+    });
+  });
 });
+
+/// Creates a new (not a constant) theme on every call.
+PickersThemeData _theme(IsoMaps maps, {double spacing = 2}) => PickersThemeData(
+  cacheExtent: 100,
+  header: UiConstants.placeholder,
+  maps: maps,
+  padding: EdgeInsets.all(spacing),
+  physics: const ClampingScrollPhysics(),
+  searchBarPadding: EdgeInsets.all(spacing),
+  separator: UiConstants.separator,
+  spacing: spacing,
+  textBaseline: TextBaseline.alphabetic,
+  textDirection: TextDirection.rtl,
+);
+
+/// A theme of an app, that extends the pickers theme with its own values.
+class _BrandPickersTheme extends PickersThemeData {
+  const new();
+}

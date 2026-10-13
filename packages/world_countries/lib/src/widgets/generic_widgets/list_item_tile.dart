@@ -109,7 +109,6 @@ class ListItemTile<T extends Object> extends ListTile {
     // Reference: https://github.com/flutter/flutter/issues/86584.
     type: MaterialType.transparency,
     child: ListTile(
-      key: key,
       // A slot is passed through as it is when there is nothing to say about
       // it: an empty `Semantics` is still a render object, and the
       // accessibility tree walks every one of them on each frame a list
@@ -149,7 +148,12 @@ class ListItemTile<T extends Object> extends ListTile {
           leadingAndTrailingTextStyle ?? const TextStyle(fontSize: fontSize),
       contentPadding: contentPadding,
       enabled: enabled,
-      onTap: enabled ? () => onPressed?.call(item) : null,
+      // Without `onPressed` the tile has no tap of its own, so a tap reaches
+      // a detector around it (e.g. the one of a row that selects the item).
+      onTap: switch (onPressed) {
+        final select? when enabled => () => select(item),
+        _ => null,
+      },
       onLongPress: onLongPress,
       onFocusChange: onFocusChange,
       mouseCursor: mouseCursor,

@@ -90,6 +90,8 @@ class IndexedListViewBuilder<T extends Object, W extends Widget>
     super.spacing,
   });
 
+  List<T> _sortedItems(Iterable<T> items) => sortedItems(items);
+
   @override // coverage:ignore-line
   @mustBeOverridden
   Iterable<T> defaultItems(BuildContext? context) => const [];
@@ -105,7 +107,7 @@ class _IndexedListViewBuilderState<T extends Object, W extends Widget>
   // ignore: avoid-high-cyclomatic-complexity, build methods are typically long.
   Widget build(BuildContext context) {
     final theme = context.pickersTheme;
-    final items = widget.resolvedItems(context);
+    final items = widget._sortedItems(widget.resolvedItems(context));
     final header = widget.header ?? theme?.header;
     final cacheExtent = widget.cacheExtent ?? theme?.cacheExtent;
 

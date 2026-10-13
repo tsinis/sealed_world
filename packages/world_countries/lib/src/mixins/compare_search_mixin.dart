@@ -27,6 +27,7 @@ mixin CompareSearchMixin<T extends Object> on SearchableInterface<T> {
   }
 
   /// Compares an [TextEditingController] text input string with an item's text.
+  /// Spaces around the text input are ignored.
   ///
   /// * [controller] is the text editing controller input by the user.
   /// * [item] is the text of the item being compared.
@@ -35,5 +36,5 @@ mixin CompareSearchMixin<T extends Object> on SearchableInterface<T> {
   /// query.
   @useResult
   bool compareWithTextInput(TextEditingController controller, String item) =>
-      compareWithInput(controller.text, item);
+      compareWithInput(controller.text.trim(), item);
 }

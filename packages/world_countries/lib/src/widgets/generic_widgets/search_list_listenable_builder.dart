@@ -1,8 +1,7 @@
 import "dart:collection";
 
 import "package:flutter/foundation.dart";
-import "package:flutter/widgets.dart"
-    show BuildContext, State, Widget, WidgetsBinding;
+import "package:flutter/widgets.dart" show BuildContext, State, Widget;
 
 import "../../extensions/iterable_search_map_extension.dart";
 import "../../mixins/compare_search_mixin.dart";
@@ -46,6 +45,11 @@ class SearchListListenableBuilder<T extends Object>
   final Widget Function(BuildContext context, UnmodifiableListView<T> list)
   builder;
 
+  bool _filtersLike(SearchListListenableBuilder<T> other) =>
+      caseSensitiveSearch == other.caseSensitiveSearch &&
+      startWithSearch == other.startWithSearch &&
+      onSearchResultsBuilder == other.onSearchResultsBuilder;
+
   @override
   void debugFillProperties(DiagnosticPropertiesBuilder properties) {
     super.debugFillProperties(properties);
@@ -67,37 +71,90 @@ class SearchListListenableBuilder<T extends Object>
 class _SearchListListenableBuilderState<T extends Object>
     extends State<SearchListListenableBuilder<T>> {
   UnmodifiableListView<T> _items = UnmodifiableListView(const []);
-  SearchMap<T> _map = const {};
+
+  /// The search data of the items, built once they are searched.
+  SearchMap<T>? _map;
+
+  /// The trimmed text the [_items] were last filtered with.
+  String? _query;
 
   @override
   void initState() {
     super.initState();
-    _items = UnmodifiableListView(widget.items);
     widget.textController.addListener(_textChanged);
-    WidgetsBinding.instance.addPostFrameCallback((_) => _updateMap());
   }
-
-  bool _hasSameText(String itemText) =>
-      widget.compareWithTextInput(widget.textController, itemText);
 
   void _textChanged() {
-    final text = widget.textController.text.trim();
-    final filteredItems =
-        widget.onSearchResultsBuilder?.call(text, _map) ??
-        widget.items.searchResults(_map, _hasSameText);
-
-    setState(() => _items = UnmodifiableListView(filteredItems));
+    // The controller also notifies about selection and composing changes.
+    if (widget.textController.text.trim() == _query) return;
+    setState(_filter);
   }
 
-  void _updateMap() => _map = widget.items.searchMap(context, widget.searchIn);
+  void _filter() {
+    final query = widget.textController.text.trim();
+    _query = query;
+    final items = widget.items;
+    final onSearchResultsBuilder = widget.onSearchResultsBuilder;
+    final filtered = query.isEmpty && onSearchResultsBuilder == null
+        ? items
+        : (onSearchResultsBuilder?.call(query, _searchMap) ??
+              items.searchResults(
+                _searchMap,
+                (itemText) => widget.compareWithTextInput(
+                  widget.textController,
+                  itemText,
+                ),
+              ));
+
+    // A list view reads the items by length and index, so the (lazy) results
+    // are put into a list once, instead of being filtered again on each read.
+    _items = UnmodifiableListView(List.of(filtered, growable: false));
+  }
+
+  SearchMap<T> get _searchMap =>
+      _map ??= widget.items.searchMap(context, widget.searchIn);
+
+  bool _hasSameItems(Iterable<T> oldItems) {
+    final items = widget.items;
+    if (identical(items, oldItems)) return true;
+    // A length of a lazy iterable is one more pass over all of its items.
+    if (items is List<T> &&
+        oldItems is List<T> &&
+        items.length != oldItems.length) {
+      return false;
+    }
+    final oldIterator = oldItems.iterator;
+    for (final item in items) {
+      if (!oldIterator.moveNext() || oldIterator.current != item) return false;
+    }
+
+    return !oldIterator.moveNext();
+  }
+
+  @override
+  void didChangeDependencies() {
+    super.didChangeDependencies();
+    // The search data may come from the context (e.g. translations of the
+    // current locale), so it is built again whenever the context changes.
+    _map = null;
+    _filter();
+  }
 
   @override
   void didUpdateWidget(SearchListListenableBuilder<T> oldWidget) {
     super.didUpdateWidget(oldWidget);
-    if (oldWidget.items.length != widget.items.length) _updateMap();
-    if (oldWidget.textController != widget.textController) {
+    final hasNewController = oldWidget.textController != widget.textController;
+    if (hasNewController) {
       oldWidget.textController.removeListener(_textChanged);
       widget.textController.addListener(_textChanged);
+    }
+
+    if (!_hasSameItems(oldWidget.items) ||
+        oldWidget.searchIn != widget.searchIn) {
+      _map = null;
+      _filter();
+    } else if (hasNewController || !widget._filtersLike(oldWidget)) {
+      _filter();
     }
   }
 
@@ -112,7 +169,7 @@ class _SearchListListenableBuilderState<T extends Object>
     super.debugFillProperties(properties);
     properties
       ..add(IterableProperty<T>("items", _items))
-      ..add(IntProperty("mapLength", _map.length));
+      ..add(IntProperty("mapLength", _map?.length));
   }
 
   @override

@@ -157,20 +157,18 @@ class ImplicitSearchDelegate<T extends Object>
   ]) => resultsBuilder(context, itemsList ?? _filteredItems(context), query);
 
   UnmodifiableListView<T> _filteredItems(BuildContext context) {
-    if (searchMap.isEmpty) {
-      return UnmodifiableListView(
-        items.where((i) => searchIn(i, context).any(_hasSameText)),
-      );
-    }
+    final filteredItems = searchMap.isEmpty
+        ? items.where((i) => searchIn(i, context).any(_hasSameText))
+        : (onSearchResultsBuilder?.call(query.trim(), searchMap) ??
+              items.searchResults(searchMap, _hasSameText));
 
-    final filteredItems =
-        onSearchResultsBuilder?.call(query.trim(), searchMap) ??
-        items.searchResults(searchMap, _hasSameText);
-
-    return UnmodifiableListView(filteredItems);
+    // A list view reads the items by length and index, so the (lazy) results
+    // are put into a list once, instead of being filtered again on each read.
+    return UnmodifiableListView(List.of(filteredItems, growable: false));
   }
 
-  bool _hasSameText(String itemText) => compareWithInput(query, itemText);
+  bool _hasSameText(String itemText) =>
+      compareWithInput(query.trim(), itemText);
 
   UnmodifiableListView<T> _maybeCloseOnSingleResult(BuildContext context) {
     final filteredItems = _filteredItems(context);

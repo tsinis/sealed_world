@@ -1,3 +1,53 @@
+## 4.7.0
+
+> A release fixing the lifecycle, search and theme bugs of the pickers, and the waste of their hot paths. No API was removed or changed, but some results differ from 4.6.0: see the behavior changes first.
+
+BEHAVIOR CHANGES
+
+- `showInModalBottomSheet` and `showInDialog` return the selected item instead of `null`. Code that relied on `null` and read the selection only via `onSelect` keeps working, `onSelect` is still called.
+- `onSearchResultsBuilder` is also called for an empty query: for the first list of a picker and in `searchSuggestions` (as `showInSearch` already did). A builder that returns no items for an empty query now shows an empty list there, return `map.keys` instead to show all of them (as in the [fuzzy search example](https://github.com/tsinis/sealed_world/tree/main/packages/world_countries#how-to-use-fuzzy-or-similar-search-functionality)).
+- `CompareSearchMixin.compareWithTextInput` ignores spaces around the text, so a query with spaces around it finds the same items as without them.
+- `PhoneCodePicker` allows digits in its default search bar. Provide a `searchBar` with your own `inputFormatters` to keep the previous ones (`NameTextInput.formatters`).
+- `PickersThemeData` compares by its values (and type) instead of by identity, and `PickersThemeData.lerp`/`BaseTileThemeData.lerp` return the other theme from `t` 0.5. A subclass of `PickersThemeData` with own fields should override `==` and `hashCode`.
+- `ListItemTile` (and so `IsoTile`) without `onPressed` has no tap of its own: no ink splash and no focus (unless it has `onLongPress`), and a tap reaches the detector around it (e.g. the one of `IndexedListViewBuilder`, that selects the item). Its `key` is no longer duplicated on the inner `ListTile`, so `find.byKey` finds one widget instead of two.
+- `maybeSelectAndPop` pops nothing when the route of its `context` is not the current one.
+
+FIX
+
+- **Search Controller of Pickers**: a picker now owns its search `TextEditingController` only while no other one is given (via `searchBar`). Previously, it created one next to a given controller and never disposed it, kept using the first controller after the widget was updated with another one, and disposed a given controller of the app once it was removed from the picker. A picker now switches to a controller given later, and a controller of its own keeps the text typed so far, as in a `TextField`.
+- **Search List Stays in Sync** (`SearchListListenableBuilder`, the list of all pickers with a search bar):
+  - New `items` are shown right away. Previously, the old ones were shown until the next keystroke, and items of the same count were also searched with the old search data.
+  - The search data is built again when the context changes, e.g. the translations of a new locale were not searchable before. It's also built again for a new `searchIn` (or new `maps` of a picker), and the list is filtered again for a new `onSearchResultsBuilder`.
+  - A text the controller already has is applied to the first list, and a new controller, `caseSensitiveSearch` or `startWithSearch` filters the list again. `onSearchResultsBuilder` now also builds the first list (with an empty query), as it does in `showInSearch`.
+- **Selected Item as a Result**: `showInModalBottomSheet` and `showInDialog` now return the selected item, as `showInSearch` does. Previously, they returned `null`. A selection in a route that is not the current one no longer pops the route above it.
+- **Search Page on the Root Navigator**: selecting an item in `showInSearch` with `useRootNavigator: true`, called from a nested navigator, now closes the search page. Previously, the routes of the nested navigator were popped instead.
+- **Search Results Builder of Suggestions**: `searchSuggestions` now calls `onSearchResultsBuilder` for an empty query too, as the pickers and `showInSearch` do. Previously, all the items were suggested for it.
+- **Spaces Around the Query**: pickers, `searchSuggestions` and `ImplicitSearchDelegate` now ignore spaces around the query, as `onSearchResultsBuilder` already did (`CompareSearchMixin.compareWithTextInput` trims the text now). Previously, a single space emptied the list, and "Germany " found nothing.
+- **Phone Code Search**: the search bar of `PhoneCodePicker` now allows digits, so a country can be found by its phone code (a typed `+` is left out). Formatters of a given `searchBar` still take precedence.
+- **Theme Interpolation**: `PickersThemeData.lerp` and `BaseTileThemeData.lerp` now switch to the other theme halfway, as Material themes do for values that cannot be interpolated. Previously, the first theme was always kept, so e.g. `ThemeData.lerp(light, dark, 1)` used the pickers theme of `light`.
+- **`ListItemTile` Keys**: the `key` of a `ListItemTile` (and so `IsoTile`) is no longer passed to its inner `ListTile` too, a `GlobalKey` threw "Multiple widgets used the same GlobalKey".
+- **`ListItemTile` without `onPressed`**: the tile no longer takes the tap of its row, so `IndexedListViewBuilder.onSelect` is called on a tap again (only a screen reader could select such a row). Its tap is now exposed in the same semantics node as the tile.
+
+NEW FEATURES
+
+- Added the `searchInputFormatters` getter to `BasicPicker` (formatters of the default search bar) and the `inputFormatters` parameter to `AdaptiveSearchTextField`.
+- Added the `sortedItems` method to `PropertiesConvertibleMixin`, returning the items in the order they are displayed in.
+
+IMPROVEMENTS
+
+- `PickersThemeData` now implements `==` and `hashCode`: a `ThemeData` rebuilt with an equal (not constant) pickers theme no longer differs from the previous one, which restarted the theme animation of `MaterialApp` and rebuilt every widget depending on the theme. A theme of another type (e.g. a subclass) is never equal to it.
+REFACTOR
+
+- **Sorting Once per Build**: items with a `sort` were sorted again for every row built. They are sorted once per build now via the new `PropertiesConvertibleMixin.sortedItems` (`properties` and `filteredProperties` of such a list do not sort it again): ~34× fewer comparisons for 100 items, and ~250× fewer for the search suggestions of all countries (measured).
+- **Search Results as a List**: search results were a lazy view, so every read of the list view (its length, and each row by index) filtered all the items again from the start. They are put into a list once now, e.g. 100 reads instead of ~700 for 100 items.
+- The search list no longer filters and rebuilds when only the selection of the text changes (e.g. a cursor move), and `searchSuggestions` no longer builds the search map for an empty query without `onSearchResultsBuilder`.
+- The search list builds the search data of the items once they are searched, instead of after the first frame of every picker, and compares new items in a single pass.
+- `sortedItems` returns a list it sorted already as it is.
+
+TEST
+
+- Added tests for the controller ownership (tracked via `FlutterMemoryAllocations`), the search list updates, the results of the picker routes, the theme interpolation and equality, the tile keys and taps, the phone code search, custom `compareWithTextInput` overrides, and the number of searches, comparisons and reads, maintaining 100% code coverage.
+
 ## 4.6.0
 
 CHORE
@@ -208,7 +258,6 @@ NEW FEATURES
 - `SearchData` model for structured, multi-variant search terms (e.g. for fuzzy search).
 - `L10nSorter` typedef for locale-aware alphabetical sorting.
 - `MapIsoL10nExtension.sortAlphabetically` for sorted translation maps.
-
 - New `namesCommonNative` method on ISO (`IsoTranslated`) classes, returning the native name for the given locale as a single string.
 - Enhanced locale parsing to support three-letter codes.
 - L10N tree-shakable via dart define flags.
@@ -779,7 +828,6 @@ NEW FEATURES
 
 - Added new constructor called `permissive` - which allow the creation of custom class instances that are not fully compatible with the ISO standard.
 - `Translated` class is now sealed - which means you can now directly compare instances of different ISO classes directly (for example in switch statements).
-
 - Added theme extensions that you can specify in your `ThemeData` to provide global theme to your pickers. You can find `PickersThemeData`, `CountryTileThemeData`, `CurrencyTileThemeData` and `LanguageTileThemeData`:
 
 ```dart
@@ -806,7 +854,6 @@ NEW FEATURES
 - Added a lot of translations from the Symfony.
 - Currencies translations now support all GlobalMaterialLocalizations and GlobalCupertinoLocalizations locales.
 - Updated LICENSE.
-
 - Added CLI tool for removing unused emoji font families on the Web platform `dart run world_countries:clean_build [--keep twemoji,notoemoji,openmoji]`
 - Added `fromSubtags` constructors for `IsoLocale` and `TypedLocale` classes.
 - Added `defaultLocaleMapResolution` for a `TypedLocaleDelegate` that maps:

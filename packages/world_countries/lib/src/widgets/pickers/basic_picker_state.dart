@@ -2,20 +2,50 @@ part of "basic_picker.dart";
 
 class _BasicPickerState<T extends IsoTranslated, W extends IsoTile<T>>
     extends State<BasicPicker<T, W>> {
-  TextEditingController _controller = TextEditingController();
+  /// The controller of the picker itself, only there while none is given.
+  TextEditingController? _localController;
+
+  /// The default search of the picker. A new one is only created for new
+  /// maps of the picker, so the search data of the items is kept until then.
+  // ignore: prefer-correct-callback-field-name, it's a search, not a callback.
+  SearchData Function(T item, BuildContext context)? _defaultSearch;
+
+  TextEditingController get _controller =>
+      widget._givenController ??
+      // ignore: avoid-non-null-assertion, created whenever none is given.
+      _localController!;
 
   @override
   void initState() {
     super.initState();
-    _controller =
-        widget.textController ?? widget.searchBar?.controller ?? _controller;
+    _defaultSearch = _newDefaultSearch;
+    if (widget._givenController == null) {
+      _localController = TextEditingController();
+    }
+  }
+
+  // ignore: prefer-typedefs-for-callbacks, the same type as `searchIn` has.
+  SearchData Function(T, BuildContext) get _newDefaultSearch =>
+      (item, context) => widget.defaultSearch(item, context);
+
+  @override
+  void didUpdateWidget(BasicPicker<T, W> oldWidget) {
+    super.didUpdateWidget(oldWidget);
+    if (oldWidget.maps != widget.maps) _defaultSearch = _newDefaultSearch;
+    final oldController = oldWidget._givenController;
+    final hasController = widget._givenController != null;
+    if (oldController != null && !hasController) {
+      // The text typed so far stays, as it does in a `TextField`.
+      _localController = TextEditingController.fromValue(oldController.value);
+    } else if (oldController == null && hasController) {
+      _localController?.dispose();
+      _localController = null;
+    }
   }
 
   @override
   void dispose() {
-    if (widget.textController == null && widget.searchBar?.controller == null) {
-      _controller.dispose();
-    }
+    _localController?.dispose();
     super.dispose();
   }
 
@@ -34,6 +64,7 @@ class _BasicPickerState<T extends IsoTranslated, W extends IsoTile<T>>
                 UiConstants.padding,
             showClearButton:
                 widget.showClearButton ?? theme?.showClearButton ?? true,
+            inputFormatters: widget.searchInputFormatters,
           )
         : null;
 
@@ -102,7 +133,7 @@ class _BasicPickerState<T extends IsoTranslated, W extends IsoTile<T>>
           theme?.verticalDirection ??
           VerticalDirection.down,
       caseSensitiveSearch: widget.caseSensitiveSearch,
-      searchIn: widget.searchIn ?? widget.defaultSearch,
+      searchIn: widget.searchIn ?? _defaultSearch,
       onSearchResultsBuilder: widget.onSearchResultsBuilder,
       startWithSearch: widget.startWithSearch,
       textController: _controller,
