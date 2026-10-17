@@ -202,6 +202,12 @@ dart_code_metrics:
         exclude:
           - "**/data/**.data.dart"
           - "**/test/**"
+    - use-existing-variable:
+        exclude:
+          - "**/**_test.dart"
+    - avoid-enum-values-by-index:
+        exclude:
+          - "**/**_test.dart"
     - avoid-collection-mutating-methods:
         exclude:
           - "**/data/**_l10n.data.dart"
@@ -243,9 +249,22 @@ dart_code_metrics:
     - prefer-test-matchers: false # Matter of style + introduces coupling in tests.
     - prefer-unmodifiable-of: false # TODO(tsinis)! adopt in Dart only packages too.
     - prefer-private-named-parameters: false # TODO(tsinis)! adopt in Dart only packages too.
+    - prefer-test-body-last: false # A lot of false positives.
 
     # Enabled:
     - add-static-field: true
+    - prefer-initializing-in-declaration: true
+    - avoid-unnecessary-declaring-parameters: true
+    - avoid-skipping-tests: true
+    - avoid-test-in-test-invocation: true
+    - avoid-test-on: true
+    - prefer-test-name-first: true
+    - prefer-block-in-switch-case: true
+    - avoid-block-in-switch-case: true
+    - avoid-multiple-blocks-in-switch-case: true
+    - avoid-legacy-web-import-conditions: true
+    - primary-parameters-ordering: true
+    - avoid-hardcoded-numbers: true
     - avoid-accessing-collections-by-constant-index: true
     - avoid-accessing-other-classes-private-members: true
     - avoid-always-null-parameters: true
@@ -288,7 +307,6 @@ dart_code_metrics:
     - avoid-dynamic: true
     - avoid-empty-spread: true
     - avoid-empty-test-groups: true
-    - avoid-enum-values-by-index: true
     - avoid-equal-expressions: true
     - avoid-excessive-expressions: true
     - avoid-explicit-pattern-field-name: true
@@ -531,7 +549,6 @@ dart_code_metrics:
     - require-atomic-async-updates: true
     - unnecessary-trailing-comma: true
     - use-existing-destructuring: true
-    - use-existing-variable: true
 
 linter:
   rules:

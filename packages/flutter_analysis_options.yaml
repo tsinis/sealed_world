@@ -31,13 +31,17 @@ dart_code_metrics:
     - avoid-empty-setstate: true
     - avoid-expanded-as-spacer: true
     - avoid-flexible-outside-flex: true
+    - avoid-focusable-offstage: true
     - avoid-incorrect-image-opacity: true
     - avoid-inherited-widget-in-initstate: true
     - avoid-late-context: true
+    - avoid-merge-semantics-list-tile: true
     - avoid-missing-controller: true
     - avoid-missing-image-alt: true
     - avoid-mounted-in-setstate: true
+    - avoid-nested-interactive-semantics: true
     - avoid-recursive-widget-calls: true
+    - avoid-redundant-semantics-wrapper: true
     - avoid-shrink-wrap-in-lists: true
     - avoid-single-child-column-or-row: true
     - avoid-state-constructors: true
@@ -70,7 +74,14 @@ dart_code_metrics:
     - prefer-define-hero-tag: true
     - prefer-extracting-callbacks: true
     - prefer-for-loop-in-children: true
+    - prefer-gestures-semantics-role: true
+    - prefer-haptic-feedback-on-interaction: true
+    - prefer-icon-button-tooltip: true
+    - prefer-merge-semantics-composite: true
     - prefer-padding-over-container: true
+    - prefer-primary-constructors: true
+    - prefer-private-named-parameters: true
+    - prefer-semantics-header: true
     - prefer-single-setstate: true
     - prefer-single-widget-per-file: true
     - prefer-sized-box-square: true
@@ -78,26 +89,18 @@ dart_code_metrics:
     - prefer-spacing: true
     - prefer-text-rich: true
     - prefer-transform-over-container: true
+    - prefer-unmodifiable-of: true
     - prefer-using-list-view: true
     - prefer-void-callback: true
     - proper-super-calls: true
-    - use-closest-build-context: true
-    - use-setstate-synchronously: true
-    - prefer-unmodifiable-of: true
-    - use-existing-widget: true
-    - prefer-icon-button-tooltip: true
-    - avoid-redundant-semantics-wrapper: true
-    - provide-progress-indicator-semantics: true
-    - avoid-focusable-offstage: true
-    - provide-input-field-label: true
-    - avoid-merge-semantics-list-tile: true
-    - provide-slider-semantic-formatter: true
-    - provide-icon-semantic-label: true
     - provide-autofill-hints: true
-    - prefer-semantics-header: true
-    - avoid-nested-interactive-semantics: true
-    - prefer-haptic-feedback-on-interaction: true
-    - prefer-private-named-parameters: true
+    - provide-icon-semantic-label: true
+    - provide-input-field-label: true
+    - provide-progress-indicator-semantics: true
+    - provide-slider-semantic-formatter: true
+    - use-closest-build-context: true
+    - use-existing-widget: true
+    - use-setstate-synchronously: true
 
 linter:
   rules:
