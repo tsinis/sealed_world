@@ -34,7 +34,7 @@ environment:
 dependencies:
   flutter:
     sdk: flutter
-  material_ui: ^1.4.0
+  material_ui: ^1.6.0
   sealed_countries: ^3.4.1
 
 dev_dependencies:
@@ -46,7 +46,7 @@ dev_dependencies:
   gleon: # Golden tests with tolerance (shader flags) and platform-aware goldens.
     git:
       url: https://github.com/gleon-rs/flutter.git
-      ref: v0.3.0 # A released tag: prebuilt libraries exist for tags only.
+      ref: v0.5.0 # A released tag: prebuilt libraries exist for tags only.
 
 flutter:
   shaders:

@@ -339,11 +339,11 @@ packages:
     dependency: transitive
     description:
       path: "."
-      ref: "v0.3.0"
-      resolved-ref: "04f09e3de125a4a7542594f6496de6a43ee8f524"
+      ref: "v0.5.0"
+      resolved-ref: "64f8ee45c71ec4f26a55e673c7e7ce50e758a327"
       url: "https://github.com/gleon-rs/flutter.git"
     source: git
-    version: "0.3.0"
+    version: "0.5.0"
   glob:
     dependency: transitive
     description:
