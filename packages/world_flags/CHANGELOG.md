@@ -15,6 +15,7 @@ FIX
 
 - The `shader` parameter of ISO flags was ignored.
 - Waved shader: `animationSpeed` was applied twice, translucent colors were darkened, sampling was pixelated, and the shader couldn't be loaded in tests of dependent apps.
+- Waved shader was upside down on the OpenGLES backend (e.g. Android): Flutter 3.47 flips GLES coordinates itself, so the old manual flip was removed.
 - Shader loading errors go to `onError` instead of being thrown, and a failed load is retried.
 - `FlagShaderSurface` keeps animating with a new delegate, updates on `map` and `alternativeMap` changes, and isolates its repaints.
 - `AnimatedFlagShaderDelegate` no longer skips the first frames or jumps after a pause, and pauses its ticker while `animate` is `false`.
@@ -32,6 +33,7 @@ TEST
 CHORE
 
 - Updated `sealed_countries` dependency to v3.4.2.
+- Updated `material_ui` dependency to v1.7.0 (fixes PANA warnings).
 
 ## 3.5.1
 

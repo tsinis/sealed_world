@@ -283,10 +283,6 @@ vec3 light(vec3 color, float slope, vec2 uv, float phase, float fabricMask, floa
 void main() {
     vec2 uv = FlutterFragCoord().xy / uSize;
 
-    #ifdef IMPELLER_TARGET_OPENGLES
-    uv.y = 1.0 - uv.y;
-    #endif
-
     vec2 dir = waveDir();
     float time = uTime * uAnimationSpeed;
     float phase = time * TAU;

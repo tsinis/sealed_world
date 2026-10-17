@@ -188,31 +188,29 @@ vec3 applyLeftShadow(vec3 color, float x) {
 void main() {
     vec2 uv = FlutterFragCoord().xy / uSize;
 
-    #ifdef IMPELLER_TARGET_OPENGLES
-    uv.y = 1.0 - uv.y;
-    #endif
-
     float mask = insideFlag(uv);
+
+    // Single exit point: an early `return;` next to texture sampling can crash
+    // ANGLE's D3D shader compiler on Windows (flutter/flutter#190809).
     if (mask < 0.01) {
         fragColor = vec4(0.0);
-        return;
+    } else {
+        vec2 warpedUV = warpUV(uv);
+        vec4 tex = texture(uTexture, warpedUV);
+        vec3 color = tex.rgb;
+
+        // 1. Apply overall slight darkening (for white flags)
+        color = color * OVERALL_DARKEN;
+
+        // 2. Apply left-side shadow (pole shadow)
+        color = applyLeftShadow(color, uv.x);
+
+        // 3. Apply bevel & emboss (strong bottom/left shadow)
+        color = applyBevelEmboss(color, uv);
+
+        // 4. Apply gloss gradient LAST (so it's on top and visible)
+        color = applyGloss(color, uv.x);
+
+        fragColor = vec4(clamp(color, 0.0, 1.0) * tex.a * mask, tex.a * mask);
     }
-
-    vec2 warpedUV = warpUV(uv);
-    vec4 tex = texture(uTexture, warpedUV);
-    vec3 color = tex.rgb;
-
-    // 1. Apply overall slight darkening (for white flags)
-    color = color * OVERALL_DARKEN;
-
-    // 2. Apply left-side shadow (pole shadow)
-    color = applyLeftShadow(color, uv.x);
-
-    // 3. Apply bevel & emboss (strong bottom/left shadow)
-    color = applyBevelEmboss(color, uv);
-
-    // 4. Apply gloss gradient LAST (so it's on top and visible)
-    color = applyGloss(color, uv.x);
-
-    fragColor = vec4(clamp(color, 0.0, 1.0) * tex.a * mask, tex.a * mask);
 }

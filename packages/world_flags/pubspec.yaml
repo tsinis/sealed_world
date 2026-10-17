@@ -34,8 +34,8 @@ environment:
 dependencies:
   flutter:
     sdk: flutter
-  material_ui: ^1.6.0
-  sealed_countries: ^3.4.1
+  material_ui: ^1.7.0
+  sealed_countries: ^3.4.2
 
 dev_dependencies:
   _sealed_world_tests:
