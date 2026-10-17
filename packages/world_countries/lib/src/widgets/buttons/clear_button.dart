@@ -53,7 +53,6 @@ class ClearButton extends IconButton {
   });
 
   /// The default icon to display in the button.
-  // ignore: provide-icon-semantic-label, this is generic/abstract icon.
   static const defaultIcon = Icon(Icons.clear);
 
   /// The text editing controller to listen to.

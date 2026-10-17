@@ -140,7 +140,7 @@ Yes. This package bundles an official agent skill compliant with the [Agent Skil
 To install it into your project for AI agents (Cursor, Claude Code, GitHub Copilot, Gemini):
 
 ```console
-dart run skills@ get
+dart run skills@ get -p sealed_currencies
 ```
 
 Select `sealed-currencies-core` when prompted. For advanced raw translation tables and custom translation injection, also install the companion `l10n-currencies-localization` skill.

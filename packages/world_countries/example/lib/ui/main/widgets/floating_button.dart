@@ -10,6 +10,7 @@ class FloatingButton extends StatelessWidget {
   final TabsDataController _controller;
 
   @override
+  // ignore: prefer-gestures-semantics-role, it's just an example.
   Widget build(BuildContext context) => GestureDetector(
     onLongPress: () => onPressed(isLong: true),
     // ignore: prefer-action-button-tooltip, we need long-press here.

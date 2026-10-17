@@ -265,7 +265,6 @@ abstract class BasicPicker<T extends IsoTranslated, W extends IsoTile<T>>
 
     return List<Widget>.generate(
       results.length,
-      // ignore: prefer-extracting-callbacks, due to complexity.
       (i) {
         final props = filteredProperties(results, context, i);
         final defaultTile = defaultBuilder(props).copyWith(
@@ -279,7 +278,7 @@ abstract class BasicPicker<T extends IsoTranslated, W extends IsoTile<T>>
             context.tileTheme<T>()?.itemBuilder?.call(props, defaultTile) ??
             defaultTile;
       },
-      growable: false,
+      growable: false, // Dart 3.8 formatting.
     );
   }
 
@@ -475,7 +474,6 @@ abstract class BasicPicker<T extends IsoTranslated, W extends IsoTile<T>>
       caseSensitiveSearch: caseSensitiveSearch,
       clearIconButton: clearIconButton,
       keyboardType: keyboardType,
-      // ignore: prefer-extracting-callbacks, same reason as prev. ignore.
       resultValidator: (i) {
         final isValid = !(disabled?.contains(i) ?? false);
         if (isValid) {
