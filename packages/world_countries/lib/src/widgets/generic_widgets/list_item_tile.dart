@@ -24,7 +24,6 @@ class ListItemTile<T extends Object> extends ListTile {
     this.onPressed,
     this.excludeSemantics = true,
     this.semanticsIdentifier,
-    // ignore: provide-icon-semantic-label, could be specified by the developer.
     Widget? chosenIcon = const Icon(Icons.beenhere_outlined),
     bool isChosen = false,
     bool isDisabled = false,

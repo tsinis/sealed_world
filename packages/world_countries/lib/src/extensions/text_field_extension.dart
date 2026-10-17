@@ -87,7 +87,8 @@ extension TextFieldExtension on TextField? {
   }) {
     final textField =
         this ??
-        // ignore: avoid-missing-controller, provide-autofill-hints,added later.
+        // It's already provided by the default TextField instance.
+        // ignore: avoid-missing-controller, provide-autofill-hints, provide-input-field-label
         const TextField(textCapitalization: TextCapitalization.sentences);
 
     return TextField(

@@ -92,6 +92,7 @@ final class RouteParseUtils {
       country: country,
       currency: maybeCurrency ?? country.currencies?.first ?? fallbackCurrency,
       language: maybeLanguage ?? country.languages.first,
+      // ignore: avoid-enum-values-by-index, it's just an example.
       value: data ?? WorldData.values.first,
       isSettings: isSettings,
     );

@@ -1,5 +1,6 @@
 part of "basic_picker.dart";
 
+// ignore: keep-state-below-its-widget, old codebase.
 class _BasicPickerState<T extends IsoTranslated, W extends IsoTile<T>>
     extends State<BasicPicker<T, W>> {
   /// The controller of the picker itself, only there while none is given.

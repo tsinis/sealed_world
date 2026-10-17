@@ -96,10 +96,7 @@ class ImplicitSearchDelegate<T extends Object>
         highlightColor: clearIconButton?.highlightColor,
         splashColor: clearIconButton?.splashColor,
         disabledColor: clearIconButton?.disabledColor,
-        onPressed: () {
-          clearIconButton?.onPressed?.call();
-          query = "";
-        },
+        onPressed: _handleActionsPressed,
         mouseCursor: clearIconButton?.mouseCursor,
         focusNode: clearIconButton?.focusNode,
         autofocus: clearIconButton?.autofocus ?? false,
@@ -130,10 +127,7 @@ class ImplicitSearchDelegate<T extends Object>
     highlightColor: backIconButton?.highlightColor,
     splashColor: backIconButton?.splashColor,
     disabledColor: backIconButton?.disabledColor,
-    onPressed: () {
-      backIconButton?.onPressed?.call();
-      close(context, null);
-    },
+    onPressed: () => _handleLeadingPressed(context),
     mouseCursor: backIconButton?.mouseCursor,
     focusNode: backIconButton?.focusNode,
     autofocus: backIconButton?.autofocus ?? false,
@@ -165,6 +159,16 @@ class ImplicitSearchDelegate<T extends Object>
     // A list view reads the items by length and index, so the (lazy) results
     // are put into a list once, instead of being filtered again on each read.
     return UnmodifiableListView(List.of(filteredItems, growable: false));
+  }
+
+  void _handleActionsPressed() {
+    clearIconButton?.onPressed?.call();
+    query = "";
+  }
+
+  void _handleLeadingPressed(BuildContext context) {
+    backIconButton?.onPressed?.call();
+    close(context, null);
   }
 
   bool _hasSameText(String itemText) =>

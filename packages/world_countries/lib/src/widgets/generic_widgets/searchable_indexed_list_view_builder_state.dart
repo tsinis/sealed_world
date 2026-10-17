@@ -1,5 +1,6 @@
 part of "searchable_indexed_list_view_builder.dart";
 
+// ignore: keep-state-below-its-widget, old codebase.
 class _SearchableIndexedListViewBuilderState<T extends Object, W extends Widget>
     extends State<SearchableIndexedListViewBuilder<T, W>> {
   bool get _isSearchable =>
