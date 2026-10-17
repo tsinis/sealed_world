@@ -79,7 +79,6 @@ dart_code_metrics:
     - prefer-icon-button-tooltip: true
     - prefer-merge-semantics-composite: true
     - prefer-padding-over-container: true
-    - prefer-primary-constructors: true
     - prefer-private-named-parameters: true
     - prefer-semantics-header: true
     - prefer-single-setstate: true

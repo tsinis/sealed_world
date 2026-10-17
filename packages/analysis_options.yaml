@@ -249,7 +249,9 @@ dart_code_metrics:
     - prefer-test-matchers: false # Matter of style + introduces coupling in tests.
     - prefer-unmodifiable-of: false # TODO(tsinis)! adopt in Dart only packages too.
     - prefer-private-named-parameters: false # TODO(tsinis)! adopt in Dart only packages too.
-    - prefer-test-body-last: false # A lot of false positives.
+    - prefer-block-in-switch-case: false # Against avoid-block-in-switch-case.
+    - prefer-primary-constructors: false # A lot of false positives - not supported in older SDKs.
+    - prefer-test-body-last: false # Same thing, a lot of false positives.
 
     # Enabled:
     - add-static-field: true
@@ -259,7 +261,6 @@ dart_code_metrics:
     - avoid-test-in-test-invocation: true
     - avoid-test-on: true
     - prefer-test-name-first: true
-    - prefer-block-in-switch-case: true
     - avoid-block-in-switch-case: true
     - avoid-multiple-blocks-in-switch-case: true
     - avoid-legacy-web-import-conditions: true

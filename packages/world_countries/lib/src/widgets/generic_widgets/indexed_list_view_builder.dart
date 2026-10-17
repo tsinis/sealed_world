@@ -158,6 +158,7 @@ class _IndexedListViewBuilderState<T extends Object, W extends Widget>
                       if (child == null) return null;
                       if (properties.isDisabled) return child;
 
+                      // ignore: prefer-gestures-semantics-role, dev decides.
                       return GestureDetector(
                         // It's up on the dev to provide a feedback on top.
                         // ignore: prefer-haptic-feedback-on-interaction
