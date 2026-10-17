@@ -100,7 +100,7 @@ Yes. This package bundles an official agent skill compliant with the [Agent Skil
 To install it into your project for AI agents (Cursor, Claude Code, GitHub Copilot, Gemini):
 
 ```console
-dart run skills@ get
+dart run skills@ get -p l10n_currencies
 ```
 
 Select `l10n-currencies-localization` when prompted.
