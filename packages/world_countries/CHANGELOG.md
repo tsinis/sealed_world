@@ -32,7 +32,8 @@ IMPROVEMENTS
 
 CHORE
 
-- Updated [material_ui](https://pub.dev/packages/material_ui) dependency to v1.6.0.
+- Updated [material_ui](https://pub.dev/packages/material_ui) dependency to v1.7.0.
+- Updated `world_flags` dependency to v3.6.0 (so and related changes from the new version are included).
 
 ## 4.6.0
 
