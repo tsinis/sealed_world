@@ -1,6 +1,5 @@
 import "dart:convert";
 
-import "package:_sealed_world_tests/sealed_world_tests.dart";
 import "package:sealed_languages/src/helpers/extensions/basic_locale_extension.dart";
 import "package:sealed_languages/src/model/core/basic_locale.dart";
 import "package:sealed_languages/src/model/language/submodels/natural_language.dart";
@@ -16,19 +15,24 @@ void main() => group("$BasicLocale", () {
   );
 
   group("asserts", () {
-    assertTest(
+    test(
       "not",
-      () => BasicLocale(
-        NaturalLanguage.list.first,
-        countryCode: string,
-        script: Script.list.last,
+      () => expect(
+        () => BasicLocale(
+          NaturalLanguage.list.first,
+          countryCode: string,
+          script: Script.list.last,
+        ),
+        returnsNormally,
       ),
-      shouldThrow: false,
     );
 
-    assertTest(
+    test(
       "countryCode length",
-      () => BasicLocale(NaturalLanguage.list.last, countryCode: "1"),
+      () => expect(
+        () => BasicLocale(NaturalLanguage.list.last, countryCode: "1"),
+        throwsA(isA<AssertionError>()),
+      ),
     );
   });
 

@@ -1,6 +1,5 @@
 import "dart:convert";
 
-import "package:_sealed_world_tests/sealed_world_tests.dart";
 import "package:sealed_countries/src/helpers/extensions/country_submodels/gini_extension.dart";
 import "package:sealed_countries/src/model/country/submodels/gini.dart";
 import "package:test/test.dart";
@@ -45,33 +44,44 @@ void main() => group("$Gini", () {
   });
 
   group("asserts", () {
-    assertTest(
+    test(
       "not",
-      () => Gini(year: value.year, coefficient: value.coefficient),
-      shouldThrow: false,
+      () => expect(
+        () => Gini(year: value.year, coefficient: value.coefficient),
+        returnsNormally,
+      ),
     );
 
-    assertTest(
+    test(
       "wrong year",
-      () => Gini(
-        year: Gini.minYear - TestData.integer,
-        coefficient: value.coefficient,
+      () => expect(
+        () => Gini(
+          year: Gini.minYear - TestData.integer,
+          coefficient: value.coefficient,
+        ),
+        throwsA(isA<AssertionError>()),
       ),
     );
 
-    assertTest(
+    test(
       "wrong coefficient (too low)",
-      () => Gini(
-        year: value.year,
-        coefficient: Gini.minCoefficient - TestData.float,
+      () => expect(
+        () => Gini(
+          year: value.year,
+          coefficient: Gini.minCoefficient - TestData.float,
+        ),
+        throwsA(isA<AssertionError>()),
       ),
     );
 
-    assertTest(
+    test(
       "wrong coefficient (too high)",
-      () => Gini(
-        year: value.year,
-        coefficient: Gini.maxCoefficient + TestData.float,
+      () => expect(
+        () => Gini(
+          year: value.year,
+          coefficient: Gini.maxCoefficient + TestData.float,
+        ),
+        throwsA(isA<AssertionError>()),
       ),
     );
   });

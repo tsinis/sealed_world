@@ -37,10 +37,6 @@
       "path": "../packages/sealed_languages",
     },
     {
-      "name": "Tests",
-      "path": "../packages/_sealed_world_tests",
-    },
-    {
       "name": "L10N Langs",
       "path": "../packages/l10n_languages",
     },
@@ -63,7 +59,7 @@
     "explorer.fileNesting.enabled": true,
     "explorer.fileNesting.expand": false,
     "explorer.fileNesting.patterns": {
-      "pubspec.yaml": ".flutter-plugins, .packages, .dart_tool, .flutter-plugins-dependencies, .metadata, .packages, pubspec.lock, build.yaml, analysis_options.yaml, all_lint_rules.yaml, flutter_*.yaml, icons_launcher.yaml",
+      "pubspec.yaml": ".flutter-plugins, .packages, .dart_tool, .flutter-plugins-dependencies, .metadata, .packages, pubspec.lock, build.yaml, analysis_options.yaml, dart_test.yaml, all_lint_rules.yaml, flutter_*.yaml, icons_launcher.yaml",
       ".gitignore": ".gitattributes, .gitmodules, .gitmessage, .pubignore, .mailmap, .git-blame*",
       "readme.*": "authors, backers.md, changelog*, citation*, code_of_conduct.md, codeowners, contributing.md, contributors, copying, credits, governance.md, history.md, license*, maintainers, readme*, security.md, sponsors.md",
     },

@@ -1,6 +1,3 @@
-@TestOn("vm")
-library;
-
 // Locale-count assertions and the "en" anchor only hold on an unshaken
 // build. CI shakes with `l10n-de`; `hasEnvironment` so a `=false` run
 // skips too. See CHANGELOG note on a fuller any-filter guard.

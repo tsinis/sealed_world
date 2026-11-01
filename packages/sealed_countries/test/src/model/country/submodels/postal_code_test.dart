@@ -1,6 +1,5 @@
 import "dart:convert";
 
-import "package:_sealed_world_tests/sealed_world_tests.dart";
 import "package:sealed_countries/src/helpers/extensions/country_submodels/postal_code_extension.dart";
 import "package:sealed_countries/src/model/country/submodels/postal_code.dart";
 import "package:test/test.dart";
@@ -37,17 +36,25 @@ void main() => group("$PostalCode", () {
   });
 
   group("asserts", () {
-    assertTest(
+    test(
       "not",
-      () => PostalCode(format: value.format),
-      shouldThrow: false,
+      () => expect(() => PostalCode(format: value.format), returnsNormally),
     );
 
-    assertTest("empty format", () => PostalCode(format: TestData.emptyString));
+    test(
+      "empty format",
+      () => expect(
+        () => PostalCode(format: TestData.emptyString),
+        throwsA(isA<AssertionError>()),
+      ),
+    );
 
-    assertTest(
+    test(
       "empty regExpPattern",
-      () => PostalCode(regExpPattern: TestData.emptyString),
+      () => expect(
+        () => PostalCode(regExpPattern: TestData.emptyString),
+        throwsA(isA<AssertionError>()),
+      ),
     );
   });
 

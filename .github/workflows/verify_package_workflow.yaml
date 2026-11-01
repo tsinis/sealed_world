@@ -122,11 +122,23 @@ jobs:
 
       - name: 🧪 Run Dart tests
         if: ${{ !inputs.is_flutter }}
-        run: dart run coverage:test_with_coverage --fail-under=40
+        run: dart run coverage:test_with_coverage --fail-under=40 -- --file-reporter=json:build/test-report.json
 
       - name: 🔬 Run Flutter tests
         if: ${{ inputs.is_flutter }}
-        run: flutter test --coverage --no-pub
+        run: flutter test --coverage --no-pub --file-reporter=json:build/test-report.json
+
+      - name: 🧾 Publish test report
+        if: ${{ !cancelled() && (github.event_name == 'push' || github.event.pull_request.head.repo.full_name == github.repository) }}
+        uses: dorny/test-reporter@v3.0.0
+        with:
+          name: 🧾 Tests ${{ inputs.package_name }}
+          path: build/test-report.json
+          reporter: ${{ inputs.is_flutter && 'flutter-json' || 'dart-json' }}
+          working-directory: ${{ env.relative_path }}
+          list-tests: failed
+          fail-on-error: false
+          fail-on-empty: false
 
       - name: ⏳ Wait for Analyze and DCM
         wait: [analyze, dcm]

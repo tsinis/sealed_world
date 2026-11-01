@@ -164,7 +164,6 @@ dart_code_metrics:
         include-assertions:
           - verify
           - verifyZeroInteractions
-          - assertTest
           - testPickerBody
           - testPickerInDialog
           - testPickerInSearch

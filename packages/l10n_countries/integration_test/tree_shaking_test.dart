@@ -13,7 +13,6 @@
 ///  3 locales:         122.7KB
 ///  1 locale (DE):     64.5KB
 /// ```
-@TestOn("vm")
 library;
 
 import "dart:io";

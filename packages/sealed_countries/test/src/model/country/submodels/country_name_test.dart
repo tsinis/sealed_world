@@ -1,6 +1,5 @@
 import "dart:convert";
 
-import "package:_sealed_world_tests/sealed_world_tests.dart";
 import "package:sealed_countries/src/helpers/extensions/country_submodels/country_name_extension.dart";
 import "package:sealed_countries/src/model/country/submodels/country_name.dart";
 import "package:sealed_currencies/sealed_currencies.dart";
@@ -66,31 +65,39 @@ void main() => group("$CountryName", () {
   });
 
   group("asserts", () {
-    assertTest(
+    test(
       "not",
-      () => CountryName(
-        language: value.language,
-        official: value.official,
-        common: value.common,
+      () => expect(
+        () => CountryName(
+          language: value.language,
+          official: value.official,
+          common: value.common,
+        ),
+        returnsNormally,
       ),
-      shouldThrow: false,
     );
 
-    assertTest(
+    test(
       "empty official",
-      () => CountryName(
-        language: value.language,
-        official: TestData.emptyString,
-        common: value.common,
+      () => expect(
+        () => CountryName(
+          language: value.language,
+          official: TestData.emptyString,
+          common: value.common,
+        ),
+        throwsA(isA<AssertionError>()),
       ),
     );
 
-    assertTest(
+    test(
       "empty common",
-      () => CountryName(
-        language: value.language,
-        official: value.official,
-        common: TestData.emptyString,
+      () => expect(
+        () => CountryName(
+          language: value.language,
+          official: value.official,
+          common: TestData.emptyString,
+        ),
+        throwsA(isA<AssertionError>()),
       ),
     );
   });

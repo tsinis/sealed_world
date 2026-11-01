@@ -1,6 +1,5 @@
 import "dart:ui";
 
-import "package:_sealed_world_tests/tests/advanced_tests.dart";
 import "package:flutter_test/flutter_test.dart";
 import "package:world_flags/src/model/elements/elements_properties.dart";
 
@@ -24,21 +23,27 @@ void main() => group("$ElementsProperties", () {
 
   group("asserts", () {
     const negative = -1.0;
-    assertTest(
+    test(
       "negative heightFactor",
-      () => ElementsProperties(
-        const Color(0xffffffff),
-        shape: null,
-        heightFactor: negative,
+      () => expect(
+        () => ElementsProperties(
+          const Color(0xffffffff),
+          shape: null,
+          heightFactor: negative,
+        ),
+        throwsAssertionError,
       ),
     );
 
-    assertTest(
+    test(
       "negative widthFactor",
-      () => ElementsProperties(
-        const Color(0xffffffff),
-        shape: null,
-        widthFactor: negative,
+      () => expect(
+        () => ElementsProperties(
+          const Color(0xffffffff),
+          shape: null,
+          widthFactor: negative,
+        ),
+        throwsAssertionError,
       ),
     );
   });

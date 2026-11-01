@@ -1,6 +1,5 @@
 import "dart:convert";
 
-import "package:_sealed_world_tests/sealed_world_tests.dart";
 import "package:sealed_countries/src/helpers/extensions/country_submodels/demonyms_extension.dart";
 import "package:sealed_countries/src/model/country/submodels/demonyms.dart";
 import "package:sealed_currencies/sealed_currencies.dart";
@@ -66,31 +65,39 @@ void main() => group("$Demonyms", () {
   });
 
   group("asserts", () {
-    assertTest(
+    test(
       "not",
-      () => Demonyms(
-        language: value.language,
-        female: value.female,
-        male: value.male,
+      () => expect(
+        () => Demonyms(
+          language: value.language,
+          female: value.female,
+          male: value.male,
+        ),
+        returnsNormally,
       ),
-      shouldThrow: false,
     );
 
-    assertTest(
+    test(
       "empty female",
-      () => Demonyms(
-        language: value.language,
-        female: TestData.emptyString,
-        male: value.male,
+      () => expect(
+        () => Demonyms(
+          language: value.language,
+          female: TestData.emptyString,
+          male: value.male,
+        ),
+        throwsA(isA<AssertionError>()),
       ),
     );
 
-    assertTest(
+    test(
       "empty male",
-      () => Demonyms(
-        language: value.language,
-        female: value.female,
-        male: TestData.emptyString,
+      () => expect(
+        () => Demonyms(
+          language: value.language,
+          female: value.female,
+          male: TestData.emptyString,
+        ),
+        throwsA(isA<AssertionError>()),
       ),
     );
   });

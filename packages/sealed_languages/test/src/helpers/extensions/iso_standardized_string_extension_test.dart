@@ -1,4 +1,3 @@
-import "package:_sealed_world_tests/sealed_world_tests.dart";
 import "package:sealed_languages/src/helpers/extensions/iso_standardized_string_extension.dart";
 import "package:sealed_languages/src/model/script/submodels/script.dart";
 import "package:test/test.dart";
@@ -10,38 +9,51 @@ void main() => group("IsoStandardizedStringExtension", () {
   const invalidCodes = ["a", "B", "1"];
 
   group("maybeToValidIsoCode", () {
-    assertTest(
+    test(
       "should throw assert if maxLength is smaller than minLength",
-      () => alphaRegularCodes.first.maybeToValidIsoCode(maxLength: 2),
+      () => expect(
+        () => alphaRegularCodes.first.maybeToValidIsoCode(maxLength: 2),
+        throwsA(isA<AssertionError>()),
+      ),
     );
 
-    assertTest(
+    test(
       "should throw assert if maxLength is zero",
-      () => alphaRegularCodes.first.maybeToValidIsoCode(maxLength: 1),
+      () => expect(
+        () => alphaRegularCodes.first.maybeToValidIsoCode(maxLength: 1),
+        throwsA(isA<AssertionError>()),
+      ),
     );
 
-    assertTest(
+    test(
       "should throw assert if minLength is zero",
-      () => alphaRegularCodes.first.maybeToValidIsoCode(minLength: 0),
+      () => expect(
+        () => alphaRegularCodes.first.maybeToValidIsoCode(minLength: 0),
+        throwsA(isA<AssertionError>()),
+      ),
     );
 
-    performanceTest(
+    test(
       "should return null on too short code",
+      tags: "performance",
       () => expect(" E".maybeToValidIsoCode(), isNull),
     );
 
-    performanceTest(
+    test(
       "should return null on too long code",
+      tags: "performance",
       () => expect("english".maybeToValidIsoCode(), isNull),
     );
 
-    performanceTest(
+    test(
       "should trim and convert to uppercase",
+      tags: "performance",
       () => expect(" ENG ".maybeToValidIsoCode(), alphaRegularCodes.first),
     );
 
-    performanceTest(
+    test(
       "should not make any changes",
+      tags: "performance",
       () => expect(
         alphaRegularCodes.first.maybeToValidIsoCode(),
         alphaRegularCodes.first,

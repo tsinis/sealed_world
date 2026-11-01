@@ -30,7 +30,5 @@ dependencies:
   sealed_languages: ^3.4.1
 
 dev_dependencies:
-  _sealed_world_tests:
-    path: ../_sealed_world_tests
   dart_code_metrics_presets: any # Constrained in the workspace pubspec.yaml
   test: any # Constrained in the workspace pubspec.yaml

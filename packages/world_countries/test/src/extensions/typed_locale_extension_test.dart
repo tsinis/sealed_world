@@ -1,6 +1,5 @@
 import "dart:ui" show Locale;
 
-import "package:_sealed_world_tests/sealed_world_tests.dart";
 import "package:flutter_test/flutter_test.dart";
 import "package:world_countries/world_countries.dart";
 
@@ -46,9 +45,12 @@ void main() => group("TypedLocaleExtension", () {
   });
 
   group("copyWithTranslationsCache", () {
-    assertTest(
+    test(
       "should throw assert when no iterable specified",
-      () => locale.copyWithTranslationsCache(),
+      () => expect(
+        () => locale.copyWithTranslationsCache(),
+        throwsAssertionError,
+      ),
     );
 
     test("should only create languages cache", () {
@@ -85,11 +87,12 @@ void main() => group("TypedLocaleExtension", () {
   });
 
   group("copyWithTranslationsCacheAsync", () {
-    assertTest(
-      "should throw assert when no iterable specified",
-      // ignore: avoid-async-call-in-sync-function, it's just a test.
-      () => locale.copyWithTranslationsCacheAsync(),
-    );
+    test("should throw assert when no iterable specified", () async {
+      await expectLater(
+        locale.copyWithTranslationsCacheAsync(),
+        throwsAssertionError,
+      );
+    });
 
     test("should only create languages cache", () async {
       final copy = await locale.copyWithTranslationsCacheAsync(

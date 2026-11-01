@@ -17,7 +17,6 @@ environment:
 
 workspace:
   - tools # Command-line tools for public packages.
-  - packages/_sealed_world_tests # Internal tests for public packages.
 
   - packages/l10n_languages # Localized languages maps.
   - packages/l10n_currencies # Localized currencies maps.
