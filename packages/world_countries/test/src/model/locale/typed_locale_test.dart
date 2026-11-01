@@ -1,7 +1,6 @@
 import "dart:convert";
 import "dart:ui";
 
-import "package:_sealed_world_tests/sealed_world_tests.dart";
 import "package:flutter_test/flutter_test.dart";
 import "package:world_countries/src/extensions/models/typed_locale_extension.dart";
 import "package:world_countries/src/model/iso/iso_maps.dart";
@@ -77,14 +76,17 @@ void main() => group("$TypedLocale", () {
   });
 
   group("withTranslationsCache constructor", () {
-    assertTest(
+    test(
       "should throw assert when no iterable specified",
-      () => TypedLocale.withTranslationsCache(
-        const LangEng(),
-        // ignore_for_file: avoid-passing-default-values, false-positive.
-        languages: null,
-        currencies: null,
-        countries: null,
+      () => expect(
+        () => TypedLocale.withTranslationsCache(
+          const LangEng(),
+          // ignore_for_file: avoid-passing-default-values, false-positive.
+          languages: null,
+          currencies: null,
+          countries: null,
+        ),
+        throwsAssertionError,
       ),
     );
 
@@ -136,11 +138,14 @@ void main() => group("$TypedLocale", () {
       expect(copy.script, value.script);
     });
 
-    assertTest(
+    test(
       "copyWith assert when provided both regionalCode and country",
-      () => value.copyWith(
-        country: WorldCountry.list.first,
-        regionalCode: string,
+      () => expect(
+        () => value.copyWith(
+          country: WorldCountry.list.first,
+          regionalCode: string,
+        ),
+        throwsAssertionError,
       ),
     );
   });

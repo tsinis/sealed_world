@@ -1,6 +1,5 @@
 import "dart:convert";
 
-import "package:_sealed_world_tests/sealed_world_tests.dart";
 import "package:sealed_languages/src/helpers/extensions/translated_name_extension.dart";
 import "package:sealed_languages/src/model/language/submodels/natural_language.dart";
 import "package:sealed_languages/src/model/script/submodels/script.dart";
@@ -75,27 +74,35 @@ void main() => group("$TranslatedName", () {
   });
 
   group("asserts", () {
-    assertTest(
+    test(
       "not",
-      () => TranslatedName(
-        value.language,
-        name: value.name,
-        fullName: value.fullName,
+      () => expect(
+        () => TranslatedName(
+          value.language,
+          name: value.name,
+          fullName: value.fullName,
+        ),
+        returnsNormally,
       ),
-      shouldThrow: false,
     );
 
-    assertTest(
+    test(
       "empty official",
-      () => TranslatedName(value.language, name: value.name, fullName: ""),
+      () => expect(
+        () => TranslatedName(value.language, name: value.name, fullName: ""),
+        throwsA(isA<AssertionError>()),
+      ),
     );
 
-    assertTest(
+    test(
       "empty common",
-      () => TranslatedName(
-        NaturalLanguage.list.first,
-        name: "",
-        fullName: value.fullName,
+      () => expect(
+        () => TranslatedName(
+          NaturalLanguage.list.first,
+          name: "",
+          fullName: value.fullName,
+        ),
+        throwsA(isA<AssertionError>()),
       ),
     );
   });

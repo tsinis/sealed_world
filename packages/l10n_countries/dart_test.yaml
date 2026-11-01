@@ -1,0 +1,4 @@
+include: ../dart_test.yaml
+
+# Unit tests were VM-only before, integration tests use dart:io.
+test_on: vm

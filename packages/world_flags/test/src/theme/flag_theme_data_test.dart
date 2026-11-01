@@ -1,6 +1,5 @@
 // This file is part of stage 1 deprecation.
 // ignore_for_file: deprecated_member_use_from_same_package
-import "package:_sealed_world_tests/sealed_world_tests.dart";
 import "package:flutter/widgets.dart";
 import "package:flutter_test/flutter_test.dart";
 import "package:material_ui/material_ui.dart" show Colors;
@@ -94,26 +93,44 @@ void main() => group("$FlagThemeData", () {
   group("asserts", () {
     const negative = -1.0;
 
-    assertTest("negative width", () => FlagThemeData(width: negative));
-    assertTest("negative height", () => FlagThemeData(height: negative));
+    test(
+      "negative width",
+      () => expect(() => FlagThemeData(width: negative), throwsAssertionError),
+    );
+    test(
+      "negative height",
+      () => expect(() => FlagThemeData(height: negative), throwsAssertionError),
+    );
 
-    assertTest(
+    test(
       "negative aspectRatio",
-      () => FlagThemeData(aspectRatio: negative),
+      () => expect(
+        () => FlagThemeData(aspectRatio: negative),
+        throwsAssertionError,
+      ),
     );
 
-    assertTest(
+    test(
       "small negative width",
-      () => FlagThemeData.small(width: negative),
+      () => expect(
+        () => FlagThemeData.small(width: negative),
+        throwsAssertionError,
+      ),
     );
-    assertTest(
+    test(
       "small negative height",
-      () => FlagThemeData.small(height: negative),
+      () => expect(
+        () => FlagThemeData.small(height: negative),
+        throwsAssertionError,
+      ),
     );
 
-    assertTest(
+    test(
       "small negative aspectRatio",
-      () => FlagThemeData.small(aspectRatio: negative),
+      () => expect(
+        () => FlagThemeData.small(aspectRatio: negative),
+        throwsAssertionError,
+      ),
     );
 
     group("copyWith sentinel resets to null with negative values", () {

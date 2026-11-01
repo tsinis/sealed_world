@@ -1,4 +1,3 @@
-import "package:_sealed_world_tests/sealed_world_tests.dart";
 import "package:sealed_languages/src/model/language_family/submodels/natural_language_family.dart";
 import "package:test/test.dart";
 
@@ -76,9 +75,12 @@ void main() => group("$NaturalLanguageFamily", () {
       ),
     );
 
-    assertTest(
+    test(
       "with empty families",
-      () => NaturalLanguageFamily.fromName(value.name, const []),
+      () => expect(
+        () => NaturalLanguageFamily.fromName(value.name, const []),
+        throwsA(isA<AssertionError>()),
+      ),
     );
   });
 
@@ -112,10 +114,15 @@ void main() => group("$NaturalLanguageFamily", () {
       ),
     );
 
-    assertTest(
+    test(
       "with empty families",
-      () =>
-          NaturalLanguageFamily.maybeFromValue(value.name, families: const []),
+      () => expect(
+        () => NaturalLanguageFamily.maybeFromValue(
+          value.name,
+          families: const [],
+        ),
+        throwsA(isA<AssertionError>()),
+      ),
     );
 
     test(

@@ -2,8 +2,8 @@
 // ignore_for_file: avoid-duplicate-test-assertions
 
 import "dart:convert";
+import "dart:math";
 
-import "package:_sealed_world_tests/sealed_world_tests.dart";
 import "package:sealed_languages/src/helpers/script/script_json.dart";
 import "package:sealed_languages/src/interfaces/iso_standardized.dart";
 import "package:sealed_languages/src/interfaces/json_encodable.dart";
@@ -20,27 +20,32 @@ void main() => group("$Script", () {
     expect(value, isA<Comparable<IsoStandardized>>());
   });
 
-  performanceTest("compile and non compile time constructors equality", () {
-    expect(Script.adlm(), ScriptAdlm());
-    expect(Script.adlm(), const ScriptAdlm());
-    expect(const Script.adlm(), ScriptAdlm());
-    expect(const Script.adlm(), const ScriptAdlm());
-  });
+  test(
+    "compile and non compile time constructors equality",
+    tags: "performance",
+    () {
+      expect(Script.adlm(), ScriptAdlm());
+      expect(Script.adlm(), const ScriptAdlm());
+      expect(const Script.adlm(), ScriptAdlm());
+      expect(const Script.adlm(), const ScriptAdlm());
+    },
+  );
 
   group("permissive constructor asserts", () {
-    assertTest(
+    test(
       "not empty code",
-      () => ScriptCustom(code: " "),
-      shouldThrow: false,
+      () => expect(() => ScriptCustom(code: " "), returnsNormally),
     );
 
-    assertTest(
+    test(
       "not empty codeNumeric",
-      () => ScriptCustom(codeNumeric: " "),
-      shouldThrow: false,
+      () => expect(() => ScriptCustom(codeNumeric: " "), returnsNormally),
     );
 
-    assertTest("empty codeNumeric and code", ScriptCustom.new);
+    test(
+      "empty codeNumeric and code",
+      () => expect(ScriptCustom.new, throwsA(isA<AssertionError>())),
+    );
   });
 
   test("compareTo", () => expect(value.compareTo(array.last), isNot(isZero)));
@@ -94,7 +99,7 @@ void main() => group("$Script", () {
 
   group("maps O(1) access time check", () {
     for (final element in Script.list) {
-      performanceTest("of $Script: ${element.name}", () {
+      test("of $Script: ${element.name}", tags: "performance", () {
         expect(Script.map[element.code], element);
         expect(Script.codeMap[element.code], element);
         expect(Script.codeNumericMap[element.codeNumeric], element);
@@ -118,7 +123,7 @@ void main() => group("$Script", () {
       expect(array.length, 2);
     });
 
-    performanceTest("with ${Map<Script, Object>}", () {
+    test("with ${Map<Script, Object>}", tags: "performance", () {
       final map = <Script, int>{
         ScriptAdlm(): 4,
         const ScriptAdlm(): 3,
@@ -140,78 +145,99 @@ void main() => group("$Script", () {
   });
 
   group("fromName", () {
-    performanceTest(
+    test(
       "with proper name",
+      tags: "performance",
       () => expect(Script.fromName(value.name), value),
     );
 
-    performanceTest(
+    test(
       "with proper name uppercase",
+      tags: "performance",
       () => expect(Script.fromName(value.name.toUpperCase()), value),
     );
 
-    performanceTest(
+    test(
       "with proper name lowercase",
+      tags: "performance",
       () => expect(Script.fromName(value.name.toLowerCase()), value),
     );
 
-    performanceTest(
+    test(
       "with wrong name",
+      tags: "performance",
       () => expect(() => Script.fromName(value.toString()), throwsStateError),
     );
 
-    assertTest("with empty array", () => Script.fromName(value.name, const []));
+    test(
+      "with empty array",
+      () => expect(
+        () => Script.fromName(value.name, const []),
+        throwsA(isA<AssertionError>()),
+      ),
+    );
   });
 
   group("fromCode", () {
     group("with custom array", () {
-      performanceTest(
+      test(
         "with proper code",
+        tags: "performance",
         () => expect(Script.fromCode(value.code, array), value),
       );
 
-      performanceTest(
+      test(
         "with proper code lowercase",
+        tags: "performance",
         () => expect(Script.fromCode(value.code.toLowerCase(), array), value),
       );
 
-      performanceTest(
+      test(
         "with wrong length code",
+        tags: "performance",
         () => expect(
           () => Script.fromCode(value.toString(), array),
           throwsStateError,
         ),
       );
 
-      performanceTest(
+      test(
         "with wrong value code",
+        tags: "performance",
         () => expect(() => Script.fromCode("code", array), throwsStateError),
       );
 
-      assertTest(
+      test(
         "with empty array",
-        () => Script.fromCode(value.code, const []),
+        () => expect(
+          () => Script.fromCode(value.code, const []),
+          throwsA(isA<AssertionError>()),
+        ),
       );
     });
 
     group("without custom array", () {
-      performanceTest(
+      test(
         "with proper code",
+        tags: "performance",
         () => expect(Script.fromCode(value.code), value),
       );
 
-      performanceTest(
+      test(
         "with proper code lowercase",
+        tags: "performance",
         () => expect(Script.fromCode(value.code.toLowerCase()), value),
       );
 
-      performanceTest(
+      test(
         "with wrong length code",
+        tags: "performance",
         () => expect(() => Script.fromCode(value.toString()), throwsStateError),
       );
 
-      performanceTest(
+      test(
         "with wrong value code",
+        tags: "performance",
         () => expect(() => Script.fromCode("code"), throwsStateError),
       );
     });
@@ -219,124 +245,141 @@ void main() => group("$Script", () {
 
   group("fromCodeNumeric", () {
     group("with custom array", () {
-      performanceTest(
+      test(
         "with proper code",
+        tags: "performance",
         () => expect(Script.fromCodeNumeric(value.codeNumeric, array), value),
       );
 
-      performanceTest(
+      test(
         "with proper code lowercase",
+        tags: "performance",
         () => expect(
           Script.fromCodeNumeric(value.codeNumeric.toLowerCase(), array),
           value,
         ),
       );
 
-      performanceTest(
+      test(
         "with wrong code",
+        tags: "performance",
         () => expect(
-          () => Script.fromCodeNumeric(value.toString()),
+          () => Script.fromCodeNumeric(value.toString(), array),
           throwsStateError,
         ),
       );
 
-      assertTest(
+      test(
         "with empty array",
-        () => Script.fromCodeNumeric(value.codeNumeric, const []),
+        () => expect(
+          () => Script.fromCodeNumeric(value.codeNumeric, const []),
+          throwsA(isA<AssertionError>()),
+        ),
       );
     });
 
     group("without custom array", () {
-      performanceTest(
+      test(
         "with proper code",
+        tags: "performance",
         () => expect(Script.fromCodeNumeric(value.codeNumeric), value),
       );
 
-      performanceTest(
+      test(
         "with proper code uppercase",
+        tags: "performance",
         () => expect(
           Script.fromCodeNumeric(value.codeNumeric.toUpperCase()),
           value,
         ),
       );
 
-      performanceTest(
+      test(
         "with proper code lowercase",
+        tags: "performance",
         () => expect(
           Script.fromCodeNumeric(value.codeNumeric.toLowerCase()),
           value,
         ),
       );
 
-      performanceTest(
+      test(
         "with wrong code",
+        tags: "performance",
         () => expect(
           () => Script.fromCodeNumeric(value.toString()),
           throwsStateError,
         ),
-      );
-
-      assertTest(
-        "with empty array",
-        () => Script.fromCodeNumeric(value.codeNumeric, const []),
       );
     });
   });
 
   group("fromAnyCode", () {
     group("with custom array", () {
-      performanceTest(
+      test(
         "with proper non-numeric code",
+        tags: "performance",
         () => expect(Script.fromAnyCode(value.code, array), value),
       );
-      performanceTest(
+      test(
         "with proper non-numeric code lowercase",
+        tags: "performance",
         () =>
             expect(Script.fromAnyCode(value.code.toLowerCase(), array), value),
       );
 
-      performanceTest(
+      test(
         "with proper numeric code",
+        tags: "performance",
         () => expect(Script.fromAnyCode(value.codeNumeric, array), value),
       );
 
-      performanceTest(
+      test(
         "with wrong code",
+        tags: "performance",
         () => expect(
           () => Script.fromAnyCode(value.toString(), array),
           throwsStateError,
         ),
       );
 
-      assertTest(
+      test(
         "with empty array",
-        () => Script.fromAnyCode(value.code, const []),
+        () => expect(
+          () => Script.fromAnyCode(value.code, const []),
+          throwsA(isA<AssertionError>()),
+        ),
       );
     });
 
     group("without custom array", () {
-      performanceTest(
+      test(
         "with proper non-numeric code",
+        tags: "performance",
         () => expect(Script.fromAnyCode(value.code), value),
       );
 
-      performanceTest(
+      test(
         "with proper non-numeric code uppercase",
+        tags: "performance",
         () => expect(Script.fromAnyCode(value.code.toUpperCase()), value),
       );
 
-      performanceTest(
+      test(
         "with proper non-numeric code lowercase",
+        tags: "performance",
         () => expect(Script.fromAnyCode(value.code.toLowerCase()), value),
       );
 
-      performanceTest(
+      test(
         "with proper numeric code",
+        tags: "performance",
         () => expect(Script.fromAnyCode(value.codeNumeric), value),
       );
 
-      performanceTest(
+      test(
         "with wrong code",
+        tags: "performance",
         () => expect(
           () => Script.fromAnyCode(value.toString()),
           throwsStateError,
@@ -365,217 +408,255 @@ void main() => group("$Script", () {
   });
 
   group("maybeFromValue", () {
-    performanceTest(
+    test(
       "with proper value, without where",
+      tags: "performance",
       () => expect(Script.maybeFromValue(value.code), value),
     );
 
-    performanceTest(
+    test(
       "with proper value, with where",
+      tags: "performance",
       () => expect(
         Script.maybeFromValue(value.name, where: (script) => script.name),
         value,
       ),
     );
 
-    performanceTest(
+    test(
       "with wrong value, without where",
+      tags: "performance",
       () => expect(Script.maybeFromValue(value), isNull),
     );
 
-    performanceTest(
+    test(
       "with wrong value, with where",
+      tags: "performance",
       () => expect(
         Script.maybeFromValue(value, where: (script) => script.name),
         isNull,
       ),
     );
 
-    assertTest(
+    test(
       "with empty array",
-      () => Script.maybeFromValue(value.name, scripts: const []),
+      () => expect(
+        () => Script.maybeFromValue(value.name, scripts: const []),
+        throwsA(isA<AssertionError>()),
+      ),
     );
 
-    performanceTest(
+    test(
       "with custom scripts",
+      tags: "performance",
       () => expect(Script.maybeFromValue(value.code, scripts: array), value),
     );
   });
 
   group("maybeFromAnyCode", () {
     group("with custom array", () {
-      performanceTest(
+      test(
         "with proper non-numeric code",
+        tags: "performance",
         () => expect(Script.maybeFromAnyCode(value.code, array), value),
       );
 
-      performanceTest(
+      test(
         "with proper non-numeric code uppercase",
+        tags: "performance",
         () => expect(
           Script.maybeFromAnyCode(value.code.toUpperCase(), array),
           value,
         ),
       );
 
-      performanceTest(
+      test(
         "with proper non-numeric code lowercase",
+        tags: "performance",
         () => expect(
           Script.maybeFromAnyCode(value.code.toLowerCase(), array),
           value,
         ),
       );
 
-      performanceTest(
+      test(
         "with proper numeric code",
+        tags: "performance",
         () => expect(Script.maybeFromAnyCode(value.codeNumeric, array), value),
       );
 
-      performanceTest(
+      test(
         "with wrong code",
+        tags: "performance",
         () => expect(Script.maybeFromAnyCode(value.toString(), array), isNull),
       );
 
-      performanceTest(
+      test(
         "with null code",
+        tags: "performance",
         () => expect(Script.maybeFromAnyCode(null, array), isNull),
       );
 
-      assertTest(
+      test(
         "with empty array",
-        () => Script.maybeFromAnyCode(value.code, const []),
+        () => expect(
+          () => Script.maybeFromAnyCode(value.code, const []),
+          throwsA(isA<AssertionError>()),
+        ),
       );
     });
 
     group("without custom array", () {
-      randomElementTest(
-        "with random element from list",
-        Script.list,
-        (random) => expect(Script.maybeFromAnyCode(random.code), random),
-      );
+      test("with random element from list", tags: "performance", () {
+        final random = Script.list[Random.secure().nextInt(Script.list.length)];
+        expect(Script.maybeFromAnyCode(random.code), random);
+      });
 
-      performanceTest(
+      test(
         "with proper non-numeric code",
+        tags: "performance",
         () => expect(Script.maybeFromAnyCode(value.code), value),
       );
 
-      performanceTest(
+      test(
         "with proper non-numeric code uppercase",
+        tags: "performance",
         () => expect(Script.maybeFromAnyCode(value.code.toUpperCase()), value),
       );
 
-      performanceTest(
+      test(
         "with proper non-numeric code lowercase",
+        tags: "performance",
         () => expect(Script.maybeFromAnyCode(value.code.toLowerCase()), value),
       );
 
-      performanceTest(
+      test(
         "with proper numeric code",
+        tags: "performance",
         () => expect(Script.maybeFromAnyCode(value.codeNumeric), value),
       );
 
-      performanceTest(
+      test(
         "with wrong code",
+        tags: "performance",
         () => expect(Script.maybeFromAnyCode(value.toString()), isNull),
       );
 
-      performanceTest(
+      test(
         "with null code",
+        tags: "performance",
         () => expect(Script.maybeFromAnyCode(null), isNull),
       );
     });
   });
 
   group("asserts", () {
-    assertTest(
+    test(
       "not",
-      () => ScriptCustom(
-        name: value.name,
-        code: value.code,
-        codeNumeric: value.codeNumeric,
-        date: value.date,
-        pva: value.pva,
+      () => expect(
+        () => ScriptCustom(
+          name: value.name,
+          code: value.code,
+          codeNumeric: value.codeNumeric,
+          date: value.date,
+          pva: value.pva,
+        ),
+        returnsNormally,
       ),
-      shouldThrow: false,
     );
   });
 
   group("maybeFromCode", () {
     group("with custom array", () {
-      performanceTest(
+      test(
         "with proper non-numeric code",
+        tags: "performance",
         () => expect(Script.maybeFromCode(value.code, array), value),
       );
 
-      performanceTest(
+      test(
         "with proper non-numeric code uppercase",
+        tags: "performance",
         () => expect(
           Script.maybeFromCode(value.code.toUpperCase(), array),
           value,
         ),
       );
 
-      performanceTest(
+      test(
         "with proper non-numeric code lowercase",
+        tags: "performance",
         () => expect(
           Script.maybeFromCode(value.code.toLowerCase(), array),
           value,
         ),
       );
 
-      performanceTest(
+      test(
         "with proper numeric code",
+        tags: "performance",
         () => expect(Script.maybeFromCode(value.codeNumeric, array), isNull),
       );
 
-      performanceTest(
+      test(
         "with wrong code",
+        tags: "performance",
         () => expect(Script.maybeFromCode(value.toString(), array), isNull),
       );
 
-      performanceTest(
+      test(
         "with null code",
+        tags: "performance",
         () => expect(Script.maybeFromCode(null, array), isNull),
       );
 
-      assertTest(
+      test(
         "with empty array",
-        () => Script.maybeFromCode(value.code, const []),
+        () => expect(
+          () => Script.maybeFromCode(value.code, const []),
+          throwsA(isA<AssertionError>()),
+        ),
       );
     });
     group("without custom array", () {
-      randomElementTest(
-        "with random element from list",
-        Script.list,
-        (random) => expect(Script.maybeFromCode(random.code), random),
-      );
+      test("with random element from list", tags: "performance", () {
+        final random = Script.list[Random.secure().nextInt(Script.list.length)];
+        expect(Script.maybeFromCode(random.code), random);
+      });
 
-      performanceTest(
+      test(
         "with proper non-numeric code",
+        tags: "performance",
         () => expect(Script.maybeFromCode(value.code), value),
       );
 
-      performanceTest(
+      test(
         "with proper non-numeric code uppercase",
+        tags: "performance",
         () => expect(Script.maybeFromCode(value.code.toUpperCase()), value),
       );
 
-      performanceTest(
+      test(
         "with proper non-numeric code lowercase",
+        tags: "performance",
         () => expect(Script.maybeFromCode(value.code.toLowerCase()), value),
       );
 
-      performanceTest(
+      test(
         "with proper numeric code",
+        tags: "performance",
         () => expect(Script.maybeFromCode(value.codeNumeric), isNull),
       );
 
-      performanceTest(
+      test(
         "with wrong code",
+        tags: "performance",
         () => expect(Script.maybeFromCode(value.toString()), isNull),
       );
 
-      performanceTest(
+      test(
         "with null code",
+        tags: "performance",
         () => expect(Script.maybeFromCode(null), isNull),
       );
     });
@@ -583,85 +664,100 @@ void main() => group("$Script", () {
 
   group("maybeFromCodeNumeric", () {
     group("with custom array", () {
-      performanceTest(
+      test(
         "with proper non-numeric code",
+        tags: "performance",
         () => expect(Script.maybeFromCodeNumeric(value.code, array), isNull),
       );
 
-      performanceTest(
+      test(
         "with proper numeric code",
+        tags: "performance",
         () => expect(
           Script.maybeFromCodeNumeric(value.codeNumeric, array),
           value,
         ),
       );
 
-      performanceTest(
+      test(
         "with wrong code",
+        tags: "performance",
         () => expect(
           Script.maybeFromCodeNumeric(value.toString(), array),
           isNull,
         ),
       );
 
-      performanceTest(
+      test(
         "with null code",
+        tags: "performance",
         () => expect(Script.maybeFromCodeNumeric(null, array), isNull),
       );
 
-      assertTest(
+      test(
         "with empty array",
-        () => Script.maybeFromCodeNumeric(value.codeNumeric, const []),
+        () => expect(
+          () => Script.maybeFromCodeNumeric(value.codeNumeric, const []),
+          throwsA(isA<AssertionError>()),
+        ),
       );
     });
 
     group("without custom array", () {
-      randomElementTest(
-        "with random element from list",
-        Script.list,
-        (random) =>
-            expect(Script.maybeFromCodeNumeric(random.codeNumeric), random),
-      );
+      test("with random element from list", tags: "performance", () {
+        final random = Script.list[Random.secure().nextInt(Script.list.length)];
+        expect(Script.maybeFromCodeNumeric(random.codeNumeric), random);
+      });
 
-      performanceTest(
+      test(
         "with proper non-numeric code",
+        tags: "performance",
         () => expect(Script.maybeFromCodeNumeric(value.code), isNull),
       );
 
-      performanceTest(
+      test(
         "with proper numeric code",
+        tags: "performance",
         () => expect(Script.maybeFromCodeNumeric(value.codeNumeric), value),
       );
 
-      performanceTest(
+      test(
         "with wrong code",
+        tags: "performance",
         () => expect(Script.maybeFromCodeNumeric(value.toString()), isNull),
       );
 
-      performanceTest(
+      test(
         "with null code",
+        tags: "performance",
         () => expect(Script.maybeFromCodeNumeric(null), isNull),
       );
     });
   });
 
   group("formatToStandardCode", () {
-    randomElementTest(
+    test(
       "with random element from list and uppercase code",
-      Script.list,
-      (random) => expect(
-        Script.formatToStandardCode(random.code.toUpperCase()),
-        random.code,
-      ),
+      tags: "performance",
+      () {
+        final random = Script.list[Random.secure().nextInt(Script.list.length)];
+        expect(
+          Script.formatToStandardCode(random.code.toUpperCase()),
+          random.code,
+        );
+      },
     );
 
-    randomElementTest(
+    test(
       "with random element from list and lowercase code",
-      Script.list,
-      (random) => expect(
-        Script.formatToStandardCode(random.code.toLowerCase()),
-        random.code,
-      ),
+      tags: "performance",
+      () {
+        final random = Script.list[Random.secure().nextInt(Script.list.length)];
+        expect(
+          Script.formatToStandardCode(random.code.toLowerCase()),
+          random.code,
+        );
+      },
     );
   });
 });

@@ -1,6 +1,3 @@
-@TestOn("vm")
-library;
-
 // ignore_for_file: do_not_use_environment, avoid-non-ascii-symbols
 import "package:l10n_currencies/l10n_currencies.dart"
     show CurrenciesLocaleMapper;

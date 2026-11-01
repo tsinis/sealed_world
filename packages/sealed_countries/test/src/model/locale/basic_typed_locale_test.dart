@@ -1,4 +1,3 @@
-import "package:_sealed_world_tests/sealed_world_tests.dart";
 import "package:sealed_countries/src/model/country/country.dart";
 import "package:sealed_countries/src/model/locale/basic_typed_locale.dart";
 import "package:sealed_currencies/sealed_currencies.dart";
@@ -12,23 +11,28 @@ void main() => group("$BasicTypedLocale", () {
   );
 
   group("asserts", () {
-    assertTest(
+    test(
       "not",
-      () => BasicTypedLocale(
-        NaturalLanguage.list.first,
-        country: WorldCountry.list.first,
-        script: Script.list.last,
+      () => expect(
+        () => BasicTypedLocale(
+          NaturalLanguage.list.first,
+          country: WorldCountry.list.first,
+          script: Script.list.last,
+        ),
+        returnsNormally,
       ),
-      shouldThrow: false,
     );
 
-    assertTest(
+    test(
       "code length",
-      () => BasicTypedLocale(
-        NaturalLanguage.list.first,
-        country: WorldCountry.list.first,
-        script: Script.list.last,
-        regionalCode: WorldCountry.list.first.codeShort,
+      () => expect(
+        () => BasicTypedLocale(
+          NaturalLanguage.list.first,
+          country: WorldCountry.list.first,
+          script: Script.list.last,
+          regionalCode: WorldCountry.list.first.codeShort,
+        ),
+        throwsA(isA<AssertionError>()),
       ),
     );
   });

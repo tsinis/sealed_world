@@ -1,4 +1,3 @@
-import "package:_sealed_world_tests/sealed_world_tests.dart";
 import "package:flutter/foundation.dart";
 import "package:flutter/widgets.dart";
 import "package:flutter_test/flutter_test.dart";
@@ -24,20 +23,47 @@ void main() => group("$CountryFlag", () {
     ),
   );
 
-  assertTest("zero height", () => CountryFlag.simplified(value, height: 0));
-  assertTest(
+  test(
+    "zero height",
+    () => expect(
+      () => CountryFlag.simplified(value, height: 0),
+      throwsAssertionError,
+    ),
+  );
+  test(
     "negative height",
-    () => CountryFlag.simplified(value, height: -1),
+    () => expect(
+      () => CountryFlag.simplified(value, height: -1),
+      throwsAssertionError,
+    ),
   );
-  assertTest("zero width", () => CountryFlag.simplified(value, width: 0));
-  assertTest("negative width", () => CountryFlag.simplified(value, width: -1));
-  assertTest(
+  test(
+    "zero width",
+    () => expect(
+      () => CountryFlag.simplified(value, width: 0),
+      throwsAssertionError,
+    ),
+  );
+  test(
+    "negative width",
+    () => expect(
+      () => CountryFlag.simplified(value, width: -1),
+      throwsAssertionError,
+    ),
+  );
+  test(
     "zero aspectRatio",
-    () => CountryFlag.simplified(value, aspectRatio: 0),
+    () => expect(
+      () => CountryFlag.simplified(value, aspectRatio: 0),
+      throwsAssertionError,
+    ),
   );
-  assertTest(
+  test(
     "negative aspectRatio",
-    () => CountryFlag.simplified(value, aspectRatio: -1),
+    () => expect(
+      () => CountryFlag.simplified(value, aspectRatio: -1),
+      throwsAssertionError,
+    ),
   );
 
   test("debugFillProperties", () {

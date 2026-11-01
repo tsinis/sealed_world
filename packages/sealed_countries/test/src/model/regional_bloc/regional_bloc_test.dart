@@ -1,6 +1,5 @@
 import "dart:convert";
 
-import "package:_sealed_world_tests/sealed_world_tests.dart";
 import "package:sealed_countries/src/model/regional_bloc/regional_bloc.dart";
 import "package:test/test.dart";
 
@@ -114,9 +113,12 @@ void main() => group("$RegionalBloc", () {
       ),
     );
 
-    assertTest(
+    test(
       "empty countries",
-      () => RegionalBloc.maybeFromValue(value.name, regionalBlocs: const []),
+      () => expect(
+        () => RegionalBloc.maybeFromValue(value.name, regionalBlocs: const []),
+        throwsA(isA<AssertionError>()),
+      ),
     );
 
     test(
@@ -167,14 +169,20 @@ void main() => group("$RegionalBloc", () {
   });
 
   group("asserts", () {
-    assertTest(
+    test(
       "acronym length",
-      () => BlocCustom(acronym: TestData.emptyString, name: TestData.string),
+      () => expect(
+        () => BlocCustom(acronym: TestData.emptyString, name: TestData.string),
+        throwsA(isA<AssertionError>()),
+      ),
     );
 
-    assertTest(
+    test(
       "name length",
-      () => BlocCustom(acronym: TestData.string, name: TestData.emptyString),
+      () => expect(
+        () => BlocCustom(acronym: TestData.string, name: TestData.emptyString),
+        throwsA(isA<AssertionError>()),
+      ),
     );
   });
 

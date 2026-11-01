@@ -1,0 +1,4 @@
+tags:
+  performance: # Lookups should be O(1). One retry absorbs JIT warm-up.
+    timeout: 2ms
+    retry: 1

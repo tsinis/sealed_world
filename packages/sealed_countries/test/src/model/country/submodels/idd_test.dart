@@ -1,6 +1,5 @@
 import "dart:convert";
 
-import "package:_sealed_world_tests/sealed_world_tests.dart";
 import "package:sealed_countries/src/helpers/extensions/country_submodels/idd_extension.dart";
 import "package:sealed_countries/src/model/country/submodels/idd.dart";
 import "package:test/test.dart";
@@ -39,15 +38,20 @@ void main() => group("$Idd", () {
   });
 
   group("asserts", () {
-    assertTest(
+    test(
       "not",
-      () => Idd(root: value.root, suffixes: value.suffixes),
-      shouldThrow: false,
+      () => expect(
+        () => Idd(root: value.root, suffixes: value.suffixes),
+        returnsNormally,
+      ),
     );
 
-    assertTest(
+    test(
       "empty suffixes",
-      () => Idd(root: value.root, suffixes: const []),
+      () => expect(
+        () => Idd(root: value.root, suffixes: const []),
+        throwsA(isA<AssertionError>()),
+      ),
     );
   });
 

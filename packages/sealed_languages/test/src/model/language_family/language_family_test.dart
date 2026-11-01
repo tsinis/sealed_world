@@ -1,15 +1,30 @@
-import "package:_sealed_world_tests/tests/advanced_tests.dart";
 import "package:sealed_languages/src/model/language_family/language_family.dart";
 import "package:test/test.dart";
 
 void main() => group("$LanguageFamily", () {
+  test(
+    "toString",
+    () => expect(
+      const LanguageFamily(name: "Valid Name").toString(),
+      'LanguageFamily(name: "Valid Name")',
+    ),
+  );
+
   group("asserts", () {
-    assertTest(
+    test(
       "not",
-      () => const LanguageFamily(name: "Valid Name"),
-      shouldThrow: false,
+      () => expect(
+        () => const LanguageFamily(name: "Valid Name"),
+        returnsNormally,
+      ),
     );
 
-    assertTest("empty name", () => LanguageFamily(name: ""));
+    test(
+      "empty name",
+      () => expect(
+        () => LanguageFamily(name: ""),
+        throwsA(isA<AssertionError>()),
+      ),
+    );
   });
 });

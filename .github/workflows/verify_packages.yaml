@@ -53,12 +53,12 @@ jobs:
           CHANGED=$(git diff --name-only "$BASE_SHA...$HEAD_SHA" -- packages tools)
           CHANGED=$(grep -E '\.(dart|yaml|frag)$' <<< "$CHANGED" || true)
 
-          # Shared configs, test helpers and tools are used by every package.
-          if grep -qE '^(packages/[^/]+\.yaml|packages/_[^/]+/.+|tools/.+)$' <<< "$CHANGED"; then
+          # Shared configs and tools are used by every package.
+          if grep -qE '^(packages/[^/]+\.yaml|tools/.+)$' <<< "$CHANGED"; then
             PACKAGES=$(find packages -mindepth 2 -maxdepth 2 -name pubspec.yaml \
-              | cut -d'/' -f2 | grep -v '^_' || true)
+              | cut -d'/' -f2 || true)
           else
-            PACKAGES=$(grep -E '^packages/[^_/][^/]*/' <<< "$CHANGED" | cut -d'/' -f2 || true)
+            PACKAGES=$(grep -E '^packages/[^/]+/' <<< "$CHANGED" | cut -d'/' -f2 || true)
           fi
 
           # A removed package has nothing left to verify.

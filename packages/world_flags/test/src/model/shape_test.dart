@@ -1,4 +1,3 @@
-import "package:_sealed_world_tests/sealed_world_tests.dart";
 import "package:flutter_test/flutter_test.dart";
 import "package:world_flags/src/model/shape.dart";
 
@@ -38,12 +37,19 @@ void main() => group("$Shape", () {
   group("asserts", () {
     const negative = -1.0;
 
-    assertTest(
+    test(
       "$Rectangle negative aspectRatio",
-      () => Rectangle(aspectRatio: negative),
+      () =>
+          expect(() => Rectangle(aspectRatio: negative), throwsAssertionError),
     );
-    assertTest("$Star negative points", () => Star(points: negative.toInt()));
+    test(
+      "$Star negative points",
+      () => expect(() => Star(points: negative.toInt()), throwsAssertionError),
+    );
 
-    assertTest("$Moon negative radius", () => Moon(radius: negative));
+    test(
+      "$Moon negative radius",
+      () => expect(() => Moon(radius: negative), throwsAssertionError),
+    );
   });
 });

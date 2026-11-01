@@ -1,4 +1,3 @@
-import "package:_sealed_world_tests/sealed_world_tests.dart";
 import "package:flutter/widgets.dart";
 import "package:flutter_test/flutter_test.dart";
 import "package:material_ui/material_ui.dart" show Colors;
@@ -27,9 +26,12 @@ void main() => group("$ColorsProperties", () {
       expect(colorsProperties.ratio, ratio);
     });
 
-    assertTest(
+    test(
       "invalid ratio",
-      () => ColorsProperties(color, ratio: invalidRatio),
+      () => expect(
+        () => ColorsProperties(color, ratio: invalidRatio),
+        throwsAssertionError,
+      ),
     );
   });
 
@@ -42,9 +44,12 @@ void main() => group("$ColorsProperties", () {
       expect(colorsProperties.ratio, ratio);
     });
 
-    assertTest(
+    test(
       "invalid ratio",
-      () => ColorsProperties.fromIntColor(bitColor, ratio: invalidRatio),
+      () => expect(
+        () => ColorsProperties.fromIntColor(bitColor, ratio: invalidRatio),
+        throwsAssertionError,
+      ),
     );
   });
 });

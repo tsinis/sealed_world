@@ -1,6 +1,5 @@
 import "dart:convert";
 
-import "package:_sealed_world_tests/sealed_world_tests.dart";
 import "package:sealed_countries/src/helpers/extensions/country_submodels/capital_extension.dart";
 import "package:sealed_countries/src/model/country/submodels/capital.dart";
 import "package:test/test.dart";
@@ -9,6 +8,15 @@ import "../../../test_data.dart";
 
 void main() => group("$Capital", () {
   const value = Capital(TestData.string);
+
+  test("toString", () {
+    expect(value.toString(), "Capital(${value.deFacto})");
+    expect(value.toString(short: false), 'Capital("${value.deFacto}")');
+    expect(
+      const Capital("A", deJure: "B", third: "C").toString(short: false),
+      'Capital("A", deJure: "B", third: "C")',
+    );
+  });
 
   group("equality", () {
     const other = Capital("${TestData.float}");
@@ -33,26 +41,40 @@ void main() => group("$Capital", () {
   });
 
   group("asserts", () {
-    assertTest(
+    test(
       "not",
-      () => Capital(
-        value.deFacto,
-        deJure: TestData.string,
-        third: TestData.string,
+      () => expect(
+        () => Capital(
+          value.deFacto,
+          deJure: TestData.string,
+          third: TestData.string,
+        ),
+        returnsNormally,
       ),
-      shouldThrow: false,
     );
 
-    assertTest("name length", () => Capital(TestData.emptyString));
+    test(
+      "name length",
+      () => expect(
+        () => Capital(TestData.emptyString),
+        throwsA(isA<AssertionError>()),
+      ),
+    );
 
-    assertTest(
+    test(
       "deJure length",
-      () => Capital(value.deFacto, deJure: TestData.emptyString),
+      () => expect(
+        () => Capital(value.deFacto, deJure: TestData.emptyString),
+        throwsA(isA<AssertionError>()),
+      ),
     );
 
-    assertTest(
+    test(
       "third length",
-      () => Capital(value.deFacto, third: TestData.emptyString),
+      () => expect(
+        () => Capital(value.deFacto, third: TestData.emptyString),
+        throwsA(isA<AssertionError>()),
+      ),
     );
   });
 

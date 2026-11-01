@@ -3,7 +3,6 @@
 
 import "dart:convert";
 
-import "package:_sealed_world_tests/sealed_world_tests.dart";
 import "package:sealed_countries/sealed_countries.dart";
 import "package:test/test.dart";
 
@@ -25,18 +24,20 @@ void main() => group("$WorldCountry", () {
     expect(value, isA<Named>());
   });
 
-  performanceTest("compile and non compile time constructors equality", () {
-    expect(WorldCountry.abw(), const CountryAbw());
-    expect(const WorldCountry.abw(), CountryAbw());
-    expect(const WorldCountry.abw(), const CountryAbw());
-    expect(WorldCountry.abw(), CountryAbw());
-  });
+  test(
+    "compile and non compile time constructors equality",
+    tags: "performance",
+    () {
+      expect(WorldCountry.abw(), const CountryAbw());
+      expect(const WorldCountry.abw(), CountryAbw());
+      expect(const WorldCountry.abw(), const CountryAbw());
+      expect(WorldCountry.abw(), CountryAbw());
+    },
+  );
 
-  assertTest(
+  test(
     "permissive constructor",
-    () => WorldCountry.list.last.tld,
-    shouldThrow: false,
-    alsoExpect: () => expect(WorldCountry.list.last.tld, isEmpty),
+    () => expect(WorldCountry.list.last.tld, isEmpty),
   );
 
   test("compareTo", () => expect(value.compareTo(array.first), isNot(isZero)));
@@ -340,7 +341,7 @@ void main() => group("$WorldCountry", () {
 
   group("maps O(1) access time check", () {
     for (final element in officialList) {
-      performanceTest("of $WorldCountry: ${element.name.common}", () {
+      test("of $WorldCountry: ${element.name.common}", tags: "performance", () {
         expect(WorldCountry.map[element.code], element);
         expect(WorldCountry.codeMap[element.code], element);
         expect(WorldCountry.codeShortMap[element.codeShort], element);
@@ -372,7 +373,7 @@ void main() => group("$WorldCountry", () {
       expect(length, array.length);
     });
 
-    performanceTest("with ${Map<WorldCountry, Object>}", () {
+    test("with ${Map<WorldCountry, Object>}", tags: "performance", () {
       final map = <WorldCountry, int>{
         CountryAbw(): 4,
         const CountryAbw(): 3,
@@ -395,57 +396,67 @@ void main() => group("$WorldCountry", () {
 
   group("fromCodeShort", () {
     group("with custom array", () {
-      performanceTest(
+      test(
         "with proper code",
+        tags: "performance",
         () => expect(WorldCountry.fromCodeShort(value.codeShort, array), value),
       );
 
-      performanceTest(
+      test(
         "with proper code lowercase",
+        tags: "performance",
         () => expect(
           WorldCountry.fromCodeShort(value.codeShort.toLowerCase(), array),
           value,
         ),
       );
 
-      performanceTest(
+      test(
         "with wrong code",
+        tags: "performance",
         () => expect(
           () => WorldCountry.fromCodeShort(value.toString(), array),
           throwsStateError,
         ),
       );
 
-      assertTest(
+      test(
         "with empty countries",
-        () => WorldCountry.fromCodeShort(value.codeShort, const []),
+        () => expect(
+          () => WorldCountry.fromCodeShort(value.codeShort, const []),
+          throwsA(isA<AssertionError>()),
+        ),
       );
     });
 
     group("without custom array", () {
-      performanceTest(
+      test(
         "from $Enum",
+        tags: "performance",
         () => expect(
           WorldCountry.fromCodeShort(_WorldCountryTest.de),
           const CountryDeu(),
         ),
       );
 
-      performanceTest(
+      test(
         "with proper code",
+        tags: "performance",
         () => expect(WorldCountry.fromCodeShort(value.codeShort), value),
       );
 
-      performanceTest(
+      test(
         "with proper code lowercase",
+        tags: "performance",
         () => expect(
           WorldCountry.fromCodeShort(value.codeShort.toLowerCase()),
           value,
         ),
       );
 
-      performanceTest(
+      test(
         "with wrong code",
+        tags: "performance",
         () => expect(
           () => WorldCountry.fromCodeShort(value.toString()),
           throwsStateError,
@@ -456,54 +467,64 @@ void main() => group("$WorldCountry", () {
 
   group("fromCode", () {
     group("with custom array", () {
-      performanceTest(
+      test(
         "with proper code",
+        tags: "performance",
         () => expect(WorldCountry.fromCode(value.code, array), value),
       );
 
-      performanceTest(
+      test(
         "with proper code lowercase",
+        tags: "performance",
         () => expect(
           WorldCountry.fromCode(value.code.toLowerCase(), array),
           value,
         ),
       );
 
-      performanceTest(
+      test(
         "with wrong code",
+        tags: "performance",
         () => expect(
           () => WorldCountry.fromCode(value.toString(), array),
           throwsStateError,
         ),
       );
 
-      assertTest(
+      test(
         "with empty countries",
-        () => WorldCountry.fromCode(value.code, const []),
+        () => expect(
+          () => WorldCountry.fromCode(value.code, const []),
+          throwsA(isA<AssertionError>()),
+        ),
       );
     });
 
     group("without custom array", () {
-      performanceTest(
+      test(
         "from $Enum",
+        tags: "performance",
         () => expect(
           WorldCountry.fromCode(_WorldCountryTest.rus),
           const CountryRus(),
         ),
       );
 
-      performanceTest(
+      test(
         "with proper code",
+        tags: "performance",
         () => expect(WorldCountry.fromCode(value.code), value),
       );
 
-      performanceTest(
+      test(
         "with proper code lowercase",
+        tags: "performance",
         () => expect(WorldCountry.fromCode(value.code.toLowerCase()), value),
       );
 
-      performanceTest(
+      test(
         "with wrong code",
+        tags: "performance",
         () => expect(() => WorldCountry.fromCode(value), throwsStateError),
       );
     });
@@ -511,41 +532,49 @@ void main() => group("$WorldCountry", () {
 
   group("fromCodeNumeric", () {
     group("with custom array", () {
-      performanceTest(
+      test(
         "with proper code",
+        tags: "performance",
         () => expect(
           WorldCountry.fromCodeNumeric(value.codeNumeric, array),
           value,
         ),
       );
 
-      performanceTest(
+      test(
         "with wrong code",
+        tags: "performance",
         () => expect(
           () => WorldCountry.fromCodeNumeric(value, array),
           throwsStateError,
         ),
       );
 
-      assertTest(
+      test(
         "with empty countries",
-        () => WorldCountry.fromCodeNumeric(value.codeNumeric, const []),
+        () => expect(
+          () => WorldCountry.fromCodeNumeric(value.codeNumeric, const []),
+          throwsA(isA<AssertionError>()),
+        ),
       );
     });
 
     group("without custom array", () {
       test(
         "from int",
+        tags: "performance",
         () => expect(WorldCountry.fromCodeNumeric(100), const CountryBgr()),
       );
 
-      performanceTest(
+      test(
         "with proper code",
+        tags: "performance",
         () => expect(WorldCountry.fromCodeNumeric(value.codeNumeric), value),
       );
 
-      performanceTest(
+      test(
         "with wrong code",
+        tags: "performance",
         () =>
             expect(() => WorldCountry.fromCodeNumeric(value), throwsStateError),
       );
@@ -554,101 +583,118 @@ void main() => group("$WorldCountry", () {
 
   group("fromAnyCode", () {
     group("with custom array", () {
-      performanceTest(
+      test(
         "with numeric code",
+        tags: "performance",
         () => expect(
           WorldCountry.fromAnyCode(array.last.codeNumeric, array),
           array.last,
         ),
       );
 
-      performanceTest(
+      test(
         "with short code",
+        tags: "performance",
         () => expect(WorldCountry.fromAnyCode(value.codeShort, array), value),
       );
 
-      performanceTest(
+      test(
         "with short code lowercase",
+        tags: "performance",
         () => expect(
           WorldCountry.fromAnyCode(value.codeShort.toLowerCase(), array),
           value,
         ),
       );
 
-      performanceTest(
+      test(
         "with regular code",
+        tags: "performance",
         () => expect(WorldCountry.fromAnyCode(value.code, array), value),
       );
 
-      performanceTest(
+      test(
         "with regular code lowercase",
+        tags: "performance",
         () => expect(
           WorldCountry.fromAnyCode(value.code.toLowerCase(), array),
           value,
         ),
       );
 
-      performanceTest(
+      test(
         "with wrong code",
+        tags: "performance",
         () => expect(
           () => WorldCountry.fromAnyCode(value, array),
           throwsStateError,
         ),
       );
 
-      assertTest(
+      test(
         "with empty countries",
-        () => WorldCountry.fromAnyCode(value.codeNumeric, const []),
+        () => expect(
+          () => WorldCountry.fromAnyCode(value.codeNumeric, const []),
+          throwsA(isA<AssertionError>()),
+        ),
       );
     });
 
     group("without custom array", () {
       test(
         "from int",
+        tags: "performance",
         () => expect(WorldCountry.fromAnyCode(100), const CountryBgr()),
       );
 
       test(
         "from $Enum",
+        tags: "performance",
         () => expect(
           WorldCountry.fromAnyCode(_WorldCountryTest.rus),
           const CountryRus(),
         ),
       );
 
-      performanceTest(
+      test(
         "with numeric code",
+        tags: "performance",
         () => expect(
           WorldCountry.fromAnyCode(array.last.codeNumeric),
           array.last,
         ),
       );
 
-      performanceTest(
+      test(
         "with short code",
+        tags: "performance",
         () => expect(WorldCountry.fromAnyCode(value.codeShort), value),
       );
 
-      performanceTest(
+      test(
         "with short code lowercase",
+        tags: "performance",
         () => expect(
           WorldCountry.fromAnyCode(value.codeShort.toLowerCase()),
           value,
         ),
       );
 
-      performanceTest(
+      test(
         "with regular code",
+        tags: "performance",
         () => expect(WorldCountry.fromAnyCode(value.code), value),
       );
 
-      performanceTest(
+      test(
         "with regular code lowercase",
+        tags: "performance",
         () => expect(WorldCountry.fromAnyCode(value.code.toLowerCase()), value),
       );
 
-      performanceTest(
+      test(
         "with wrong code",
+        tags: "performance",
         () => expect(
           () => WorldCountry.fromAnyCode(value.toString()),
           throwsStateError,
@@ -705,13 +751,15 @@ void main() => group("$WorldCountry", () {
   });
 
   group("maybeFromValue", () {
-    performanceTest(
+    test(
       "with proper value, without where",
+      tags: "performance",
       () => expect(WorldCountry.maybeFromValue(value.code), value),
     );
 
-    performanceTest(
+    test(
       "with proper value, with where",
+      tags: "performance",
       () => expect(
         WorldCountry.maybeFromValue(
           value.code,
@@ -721,13 +769,15 @@ void main() => group("$WorldCountry", () {
       ),
     );
 
-    performanceTest(
+    test(
       "with wrong value, without where",
+      tags: "performance",
       () => expect(WorldCountry.maybeFromValue(value), isNull),
     );
 
-    performanceTest(
+    test(
       "with wrong value, with where",
+      tags: "performance",
       () => expect(
         WorldCountry.maybeFromValue(
           value,
@@ -737,13 +787,17 @@ void main() => group("$WorldCountry", () {
       ),
     );
 
-    assertTest(
+    test(
       "with empty countries",
-      () => WorldCountry.maybeFromValue(value.codeShort, countries: const []),
+      () => expect(
+        () => WorldCountry.maybeFromValue(value.codeShort, countries: const []),
+        throwsA(isA<AssertionError>()),
+      ),
     );
 
-    performanceTest(
+    test(
       "with custom countries",
+      tags: "performance",
       () => expect(
         WorldCountry.maybeFromValue(value.code, countries: array),
         value,
@@ -753,104 +807,121 @@ void main() => group("$WorldCountry", () {
 
   group("maybeFromAnyCode", () {
     group("with custom array", () {
-      performanceTest(
+      test(
         "with numeric code",
+        tags: "performance",
         () => expect(
           WorldCountry.maybeFromAnyCode(array.last.codeNumeric, array),
           array.last,
         ),
       );
 
-      performanceTest(
+      test(
         "with short code",
+        tags: "performance",
         () => expect(
           WorldCountry.maybeFromAnyCode(value.codeShort, array),
           value,
         ),
       );
 
-      performanceTest(
+      test(
         "with short code lowercase",
+        tags: "performance",
         () => expect(
           WorldCountry.maybeFromAnyCode(value.codeShort.toLowerCase(), array),
           value,
         ),
       );
 
-      performanceTest(
+      test(
         "with regular code",
+        tags: "performance",
         () => expect(WorldCountry.maybeFromAnyCode(value.code, array), value),
       );
 
-      performanceTest(
+      test(
         "with regular code lowercase",
+        tags: "performance",
         () => expect(
           WorldCountry.maybeFromAnyCode(value.code.toLowerCase(), array),
           value,
         ),
       );
 
-      performanceTest(
+      test(
         "with wrong code",
+        tags: "performance",
         () => expect(WorldCountry.maybeFromAnyCode(value, array), isNull),
       );
 
-      assertTest(
+      test(
         "with empty countries",
-        () => WorldCountry.maybeFromAnyCode(value.code, const []),
+        () => expect(
+          () => WorldCountry.maybeFromAnyCode(value.code, const []),
+          throwsA(isA<AssertionError>()),
+        ),
       );
     });
 
     group("without custom array", () {
       test(
         "from int",
+        tags: "performance",
         () => expect(WorldCountry.maybeFromAnyCode(100), const CountryBgr()),
       );
 
       test(
         "from $Enum",
+        tags: "performance",
         () => expect(
           WorldCountry.maybeFromAnyCode(_WorldCountryTest.rus),
           const CountryRus(),
         ),
       );
 
-      performanceTest(
+      test(
         "with numeric code",
+        tags: "performance",
         () => expect(
           WorldCountry.maybeFromAnyCode(array.last.codeNumeric),
           array.last,
         ),
       );
 
-      performanceTest(
+      test(
         "with short code",
+        tags: "performance",
         () => expect(WorldCountry.maybeFromAnyCode(value.codeShort), value),
       );
 
-      performanceTest(
+      test(
         "with short code lowercase",
+        tags: "performance",
         () => expect(
           WorldCountry.maybeFromAnyCode(value.codeShort.toLowerCase()),
           value,
         ),
       );
 
-      performanceTest(
+      test(
         "with regular code",
+        tags: "performance",
         () => expect(WorldCountry.maybeFromAnyCode(value.code), value),
       );
 
-      performanceTest(
+      test(
         "with regular code lowercase",
+        tags: "performance",
         () => expect(
           WorldCountry.maybeFromAnyCode(value.code.toLowerCase()),
           value,
         ),
       );
 
-      performanceTest(
+      test(
         "with wrong code",
+        tags: "performance",
         () => expect(WorldCountry.maybeFromAnyCode(value), isNull),
       );
     });
@@ -858,42 +929,50 @@ void main() => group("$WorldCountry", () {
 
   group("maybeFromCodeNumeric", () {
     group("with custom array", () {
-      performanceTest(
+      test(
         "with numeric code",
+        tags: "performance",
         () => expect(
           WorldCountry.maybeFromCodeNumeric(array.last.codeNumeric, array),
           array.last,
         ),
       );
 
-      performanceTest(
+      test(
         "with wrong code",
+        tags: "performance",
         () => expect(WorldCountry.maybeFromCodeNumeric(value, array), isNull),
       );
 
-      assertTest(
+      test(
         "with empty countries",
-        () => WorldCountry.maybeFromCodeNumeric(value.codeNumeric, const []),
+        () => expect(
+          () => WorldCountry.maybeFromCodeNumeric(value.codeNumeric, const []),
+          throwsA(isA<AssertionError>()),
+        ),
       );
     });
 
     group("without custom array", () {
       test(
         "from int",
+        tags: "performance",
         () =>
             expect(WorldCountry.maybeFromCodeNumeric(100), const CountryBgr()),
       );
 
-      performanceTest(
+      test(
         "with numeric code",
+        tags: "performance",
         () => expect(
           WorldCountry.maybeFromCodeNumeric(array.last.codeNumeric),
           array.last,
         ),
       );
 
-      performanceTest(
+      test(
         "with wrong code",
+        tags: "performance",
         () => expect(WorldCountry.maybeFromCodeNumeric(value), isNull),
       );
     });
@@ -901,53 +980,63 @@ void main() => group("$WorldCountry", () {
 
   group("maybeFromCode", () {
     group("with custom array", () {
-      performanceTest(
+      test(
         "with regular code",
+        tags: "performance",
         () => expect(WorldCountry.maybeFromCode(value.code, array), value),
       );
 
-      performanceTest(
+      test(
         "with regular code lowercase",
+        tags: "performance",
         () => expect(
           WorldCountry.maybeFromCode(value.code.toLowerCase(), array),
           value,
         ),
       );
 
-      performanceTest(
+      test(
         "with wrong code",
+        tags: "performance",
         () =>
             expect(WorldCountry.maybeFromCode(value.toString(), array), isNull),
       );
 
-      assertTest(
+      test(
         "with empty countries",
-        () => WorldCountry.maybeFromCode(value.code, const []),
+        () => expect(
+          () => WorldCountry.maybeFromCode(value.code, const []),
+          throwsA(isA<AssertionError>()),
+        ),
       );
     });
 
     group("without custom array", () {
-      performanceTest(
+      test(
         "from $Enum",
+        tags: "performance",
         () => expect(
           WorldCountry.maybeFromCode(_WorldCountryTest.rus),
           const CountryRus(),
         ),
       );
 
-      performanceTest(
+      test(
         "with regular code",
+        tags: "performance",
         () => expect(WorldCountry.maybeFromCode(value.code), value),
       );
 
-      performanceTest(
+      test(
         "with regular code lowercase",
+        tags: "performance",
         () =>
             expect(WorldCountry.maybeFromCode(value.code.toLowerCase()), value),
       );
 
-      performanceTest(
+      test(
         "with wrong code",
+        tags: "performance",
         () => expect(WorldCountry.maybeFromCode(value), isNull),
       );
     });
@@ -955,81 +1044,98 @@ void main() => group("$WorldCountry", () {
 
   group("maybeFromCodeShort", () {
     group("with custom array", () {
-      performanceTest(
+      test(
         "with short code",
+        tags: "performance",
         () => expect(
           WorldCountry.maybeFromCodeShort(value.codeShort, array),
           value,
         ),
       );
 
-      performanceTest(
+      test(
         "with short code lowercase",
+        tags: "performance",
         () => expect(
           WorldCountry.maybeFromCodeShort(value.codeShort.toLowerCase(), array),
           value,
         ),
       );
 
-      performanceTest(
+      test(
         "with wrong code",
+        tags: "performance",
         () => expect(WorldCountry.maybeFromCodeShort(value, array), isNull),
       );
 
-      assertTest(
+      test(
         "with empty countries",
-        () => WorldCountry.maybeFromCodeShort(value.codeShort, const []),
+        () => expect(
+          () => WorldCountry.maybeFromCodeShort(value.codeShort, const []),
+          throwsA(isA<AssertionError>()),
+        ),
       );
     });
 
     group("without custom array", () {
       test(
         "from $Enum",
+        tags: "performance",
         () => expect(
           WorldCountry.maybeFromCodeShort(_WorldCountryTest.de),
           const CountryDeu(),
         ),
       );
 
-      performanceTest(
+      test(
         "with short code",
+        tags: "performance",
         () => expect(WorldCountry.maybeFromCodeShort(value.codeShort), value),
       );
 
-      performanceTest(
+      test(
         "with short code lowercase",
+        tags: "performance",
         () => expect(
           WorldCountry.maybeFromCodeShort(value.codeShort.toLowerCase()),
           value,
         ),
       );
 
-      performanceTest(
+      test(
         "with wrong code",
+        tags: "performance",
         () => expect(WorldCountry.maybeFromCodeShort(value), isNull),
       );
     });
   });
 
   group("permissive constructor asserts", () {
-    assertTest(
+    test(
       "not empty code",
-      () => const CountryCustom(code: "code").code,
-      shouldThrow: false,
+      () =>
+          expect(() => const CountryCustom(code: "code").code, returnsNormally),
     );
 
-    assertTest(
+    test(
       "not empty codeShort",
-      () => const CountryCustom(codeShort: "code").codeShort,
-      shouldThrow: false,
+      () => expect(
+        () => const CountryCustom(codeShort: "code").codeShort,
+        returnsNormally,
+      ),
     );
 
-    assertTest(
+    test(
       "not empty codeNumeric",
-      () => const CountryCustom(codeNumeric: "code").codeNumeric,
-      shouldThrow: false,
+      () => expect(
+        () => const CountryCustom(codeNumeric: "code").codeNumeric,
+        returnsNormally,
+      ),
     );
 
-    assertTest("empty code, codeShort and codeNumeric", CountryCustom.new);
+    test(
+      "empty code, codeShort and codeNumeric",
+      () => expect(CountryCustom.new, throwsA(isA<AssertionError>())),
+    );
   });
 });

@@ -1,6 +1,3 @@
-@TestOn("vm")
-library;
-
 // ignore_for_file: do_not_use_environment, avoid-non-ascii-symbols
 import "package:l10n_countries/l10n_countries.dart" show CountriesLocaleMapper;
 import "package:l10n_countries/src/data/af_countries_l10n.data.dart";

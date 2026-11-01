@@ -1,4 +1,3 @@
-import "package:_sealed_world_tests/sealed_world_tests.dart";
 import "package:sealed_countries/src/model/geo/submodels/continent.dart";
 import "package:test/test.dart";
 
@@ -83,9 +82,12 @@ void main() => group("$Continent", () {
       ),
     );
 
-    assertTest(
+    test(
       "with empty countries",
-      () => Continent.maybeFromValue(value.name, continents: const []),
+      () => expect(
+        () => Continent.maybeFromValue(value.name, continents: const []),
+        throwsA(isA<AssertionError>()),
+      ),
     );
 
     test(

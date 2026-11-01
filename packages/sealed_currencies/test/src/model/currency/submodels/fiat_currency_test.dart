@@ -3,7 +3,6 @@
 
 import "dart:convert";
 
-import "package:_sealed_world_tests/sealed_world_tests.dart";
 import "package:sealed_currencies/src/helpers/fiat_currency/fiat_currency_json.dart";
 import "package:sealed_currencies/src/model/currency/currency.dart";
 import "package:sealed_currencies/src/model/currency/submodels/fiat_currency.dart";
@@ -22,27 +21,35 @@ void main() => group("$FiatCurrency", () {
     expect(value, isA<Named>());
   });
 
-  performanceTest("compile and non compile time constructors equality", () {
-    expect(FiatCurrency.aed(), FiatAed());
-    expect(FiatCurrency.aed(), const FiatAed());
-    expect(const FiatCurrency.aed(), FiatAed());
-    expect(const FiatCurrency.aed(), const FiatAed());
-  });
+  test(
+    "compile and non compile time constructors equality",
+    tags: "performance",
+    () {
+      expect(FiatCurrency.aed(), FiatAed());
+      expect(FiatCurrency.aed(), const FiatAed());
+      expect(const FiatCurrency.aed(), FiatAed());
+      expect(const FiatCurrency.aed(), const FiatAed());
+    },
+  );
 
   group("permissive constructor asserts", () {
-    assertTest(
+    test(
       "not empty code",
-      () => const FiatCustom(code: "code").code,
-      shouldThrow: false,
+      () => expect(() => const FiatCustom(code: "code").code, returnsNormally),
     );
 
-    assertTest(
+    test(
       "not empty codeNumeric",
-      () => const FiatCustom(codeNumeric: "code").codeNumeric,
-      shouldThrow: false,
+      () => expect(
+        () => const FiatCustom(codeNumeric: "code").codeNumeric,
+        returnsNormally,
+      ),
     );
 
-    assertTest("empty code and codeNumeric", FiatCustom.new);
+    test(
+      "empty code and codeNumeric",
+      () => expect(FiatCustom.new, throwsA(isA<AssertionError>())),
+    );
   });
 
   group("some currencies should be fully translated", () {
@@ -243,7 +250,7 @@ void main() => group("$FiatCurrency", () {
 
   group("maps O(1) access time check", () {
     for (final element in FiatCurrency.listExtended) {
-      performanceTest("of $FiatCurrency: ${element.name}", () {
+      test("of $FiatCurrency: ${element.name}", tags: "performance", () {
         expect(FiatCurrency.map[element.code], element);
         expect(FiatCurrency.codeMap[element.code], element);
         expect(FiatCurrency.codeNumericMap[element.codeNumeric], element);
@@ -270,7 +277,7 @@ void main() => group("$FiatCurrency", () {
       expect(array.length, 2);
     });
 
-    performanceTest("with ${Map<FiatCurrency, Object>}", () {
+    test("with ${Map<FiatCurrency, Object>}", tags: "performance", () {
       final map = <FiatCurrency, int>{
         FiatAed(): 4,
         const FiatAed(): 3,
@@ -317,77 +324,93 @@ void main() => group("$FiatCurrency", () {
   });
 
   group("fromName", () {
-    performanceTest(
+    test(
       "with proper name",
+      tags: "performance",
       () => expect(FiatCurrency.fromName(value.name), value),
     );
 
-    performanceTest(
+    test(
       "with proper name lowercase",
+      tags: "performance",
       () => expect(FiatCurrency.fromName(value.name.toLowerCase()), value),
     );
 
-    performanceTest(
+    test(
       "with proper name uppercase",
+      tags: "performance",
       () => expect(FiatCurrency.fromName(value.name.toUpperCase()), value),
     );
 
-    performanceTest(
+    test(
       "with wrong name",
+      tags: "performance",
       () => expect(
         () => FiatCurrency.fromName(value.toString()),
         throwsStateError,
       ),
     );
 
-    assertTest(
+    test(
       "with empty array",
-      () => FiatCurrency.fromName(value.name, const []),
+      () => expect(
+        () => FiatCurrency.fromName(value.name, const []),
+        throwsA(isA<AssertionError>()),
+      ),
     );
   });
 
   group("fromCode", () {
     group("with custom array", () {
-      performanceTest(
+      test(
         "with proper code",
+        tags: "performance",
         () => expect(FiatCurrency.fromCode(value.code, array), value),
       );
 
-      performanceTest(
+      test(
         "with proper code lowercase",
+        tags: "performance",
         () => expect(
           FiatCurrency.fromCode(value.code.toLowerCase(), array),
           value,
         ),
       );
 
-      performanceTest(
+      test(
         "with wrong code",
+        tags: "performance",
         () => expect(
           () => FiatCurrency.fromCode(value.toString(), array),
           throwsStateError,
         ),
       );
 
-      assertTest(
+      test(
         "with empty array",
-        () => FiatCurrency.fromCode(value.code, const []),
+        () => expect(
+          () => FiatCurrency.fromCode(value.code, const []),
+          throwsA(isA<AssertionError>()),
+        ),
       );
     });
 
     group("without custom array", () {
-      performanceTest(
+      test(
         "with proper code",
+        tags: "performance",
         () => expect(FiatCurrency.fromCode(value.code), value),
       );
 
-      performanceTest(
+      test(
         "with proper code lowercase",
+        tags: "performance",
         () => expect(FiatCurrency.fromCode(value.code.toLowerCase()), value),
       );
 
-      performanceTest(
+      test(
         "with wrong code",
+        tags: "performance",
         () => expect(
           () => FiatCurrency.fromCode(value.toString()),
           throwsStateError,
@@ -398,41 +421,49 @@ void main() => group("$FiatCurrency", () {
 
   group("fromCodeNumeric", () {
     group("with custom array", () {
-      performanceTest(
+      test(
         "with proper code",
+        tags: "performance",
         () => expect(
           FiatCurrency.fromCodeNumeric(value.codeNumeric, array),
           value,
         ),
       );
 
-      performanceTest(
+      test(
         "with wrong code",
+        tags: "performance",
         () => expect(
           () => FiatCurrency.fromCodeNumeric(value.toString(), array),
           throwsStateError,
         ),
       );
 
-      assertTest(
+      test(
         "with empty array",
-        () => FiatCurrency.fromCodeNumeric(value.code, const []),
+        () => expect(
+          () => FiatCurrency.fromCodeNumeric(value.code, const []),
+          throwsA(isA<AssertionError>()),
+        ),
       );
     });
 
     group("without custom array", () {
-      performanceTest(
+      test(
         "with int code",
+        tags: "performance",
         () => expect(FiatCurrency.fromCodeNumeric(924), value),
       );
 
-      performanceTest(
+      test(
         "with proper code",
+        tags: "performance",
         () => expect(FiatCurrency.fromCodeNumeric(value.codeNumeric), value),
       );
 
-      performanceTest(
+      test(
         "with wrong code",
+        tags: "performance",
         () => expect(
           () => FiatCurrency.fromCodeNumeric(value.toString()),
           throwsStateError,
@@ -443,56 +474,67 @@ void main() => group("$FiatCurrency", () {
 
   group("fromAnyCode", () {
     group("with custom array", () {
-      performanceTest(
+      test(
         "with proper numeric code",
+        tags: "performance",
         () => expect(FiatCurrency.fromAnyCode(value.codeNumeric, array), value),
       );
 
-      performanceTest(
+      test(
         "with proper alpha code",
+        tags: "performance",
         () => expect(FiatCurrency.fromAnyCode(value.code, array), value),
       );
 
-      performanceTest(
+      test(
         "with proper alpha code lowercase",
+        tags: "performance",
         () => expect(
           FiatCurrency.fromAnyCode(value.code.toLowerCase(), array),
           value,
         ),
       );
 
-      performanceTest(
+      test(
         "with wrong code",
+        tags: "performance",
         () => expect(
           () => FiatCurrency.fromAnyCode(value.toString(), array),
           throwsStateError,
         ),
       );
 
-      assertTest(
+      test(
         "with empty array",
-        () => FiatCurrency.fromAnyCode(value.code, const []),
+        () => expect(
+          () => FiatCurrency.fromAnyCode(value.code, const []),
+          throwsA(isA<AssertionError>()),
+        ),
       );
     });
 
     group("without custom array", () {
-      performanceTest(
+      test(
         "with proper numeric code",
+        tags: "performance",
         () => expect(FiatCurrency.fromAnyCode(value.codeNumeric), value),
       );
 
-      performanceTest(
+      test(
         "with proper alpha code",
+        tags: "performance",
         () => expect(FiatCurrency.fromAnyCode(value.code), value),
       );
 
-      performanceTest(
+      test(
         "with proper alpha code lowercase",
+        tags: "performance",
         () => expect(FiatCurrency.fromAnyCode(value.code.toLowerCase()), value),
       );
 
-      performanceTest(
+      test(
         "with wrong code",
+        tags: "performance",
         () => expect(
           () => FiatCurrency.fromAnyCode(value.toString()),
           throwsStateError,
@@ -528,13 +570,15 @@ void main() => group("$FiatCurrency", () {
   });
 
   group("maybeFromValue", () {
-    performanceTest(
+    test(
       "with proper value, without where",
+      tags: "performance",
       () => expect(FiatCurrency.maybeFromValue(value.code), value),
     );
 
-    performanceTest(
+    test(
       "with proper value, with where",
+      tags: "performance",
       () => expect(
         FiatCurrency.maybeFromValue(
           value.code,
@@ -544,26 +588,32 @@ void main() => group("$FiatCurrency", () {
       ),
     );
 
-    performanceTest(
+    test(
       "with wrong value, without where",
+      tags: "performance",
       () => expect(FiatCurrency.maybeFromValue(value), isNull),
     );
 
-    performanceTest(
+    test(
       "with wrong value, with where",
+      tags: "performance",
       () => expect(
         FiatCurrency.maybeFromValue(value, where: (currency) => currency.name),
         isNull,
       ),
     );
 
-    assertTest(
+    test(
       "with empty languages",
-      () => FiatCurrency.maybeFromValue(value.name, currencies: const []),
+      () => expect(
+        () => FiatCurrency.maybeFromValue(value.name, currencies: const []),
+        throwsA(isA<AssertionError>()),
+      ),
     );
 
-    performanceTest(
+    test(
       "with custom currencies",
+      tags: "performance",
       () => expect(
         FiatCurrency.maybeFromValue(value.code, currencies: array),
         value,
@@ -573,48 +623,57 @@ void main() => group("$FiatCurrency", () {
 
   group("maybeFromCodeNumeric", () {
     group("with custom array", () {
-      performanceTest(
+      test(
         "with proper alpha code",
+        tags: "performance",
         () => expect(
           FiatCurrency.maybeFromCodeNumeric(value.codeNumeric, array),
           value,
         ),
       );
 
-      performanceTest(
+      test(
         "with wrong code",
+        tags: "performance",
         () => expect(
           FiatCurrency.maybeFromCodeNumeric(value.toString(), array),
           isNull,
         ),
       );
 
-      assertTest(
+      test(
         "with empty array",
-        () => FiatCurrency.maybeFromCodeNumeric(value.code, const []),
+        () => expect(
+          () => FiatCurrency.maybeFromCodeNumeric(value.code, const []),
+          throwsA(isA<AssertionError>()),
+        ),
       );
 
-      performanceTest(
+      test(
         "with null code",
+        tags: "performance",
         () => expect(FiatCurrency.maybeFromCodeNumeric(null, array), isNull),
       );
     });
 
     group("without custom array", () {
-      performanceTest(
+      test(
         "with proper alpha code",
+        tags: "performance",
         () =>
             expect(FiatCurrency.maybeFromCodeNumeric(value.codeNumeric), value),
       );
 
-      performanceTest(
+      test(
         "with wrong code",
+        tags: "performance",
         () =>
             expect(FiatCurrency.maybeFromCodeNumeric(value.toString()), isNull),
       );
 
-      performanceTest(
+      test(
         "with null code",
+        tags: "performance",
         () => expect(FiatCurrency.maybeFromCodeNumeric(null), isNull),
       );
     });
@@ -622,55 +681,66 @@ void main() => group("$FiatCurrency", () {
 
   group("maybeFromCode", () {
     group("with custom array", () {
-      performanceTest(
+      test(
         "with proper alpha code",
+        tags: "performance",
         () => expect(FiatCurrency.maybeFromCode(value.code, array), value),
       );
 
-      performanceTest(
+      test(
         "with proper alpha code lowercase",
+        tags: "performance",
         () => expect(
           FiatCurrency.maybeFromCode(value.code.toLowerCase(), array),
           value,
         ),
       );
 
-      performanceTest(
+      test(
         "with wrong code",
+        tags: "performance",
         () =>
             expect(FiatCurrency.maybeFromCode(value.toString(), array), isNull),
       );
 
-      assertTest(
+      test(
         "with empty array",
-        () => FiatCurrency.maybeFromCode(value.code, const []),
+        () => expect(
+          () => FiatCurrency.maybeFromCode(value.code, const []),
+          throwsA(isA<AssertionError>()),
+        ),
       );
 
-      performanceTest(
+      test(
         "with null code",
+        tags: "performance",
         () => expect(FiatCurrency.maybeFromCode(null, array), isNull),
       );
     });
 
     group("without custom array", () {
-      performanceTest(
+      test(
         "with proper alpha code",
+        tags: "performance",
         () => expect(FiatCurrency.maybeFromCode(value.code), value),
       );
 
-      performanceTest(
+      test(
         "with proper alpha code lowercase",
+        tags: "performance",
         () =>
             expect(FiatCurrency.maybeFromCode(value.code.toLowerCase()), value),
       );
 
-      performanceTest(
+      test(
         "with wrong code",
+        tags: "performance",
         () => expect(FiatCurrency.maybeFromCode(value.toString()), isNull),
       );
 
-      performanceTest(
+      test(
         "with null code",
+        tags: "performance",
         () => expect(FiatCurrency.maybeFromCode(null), isNull),
       );
     });
@@ -678,80 +748,105 @@ void main() => group("$FiatCurrency", () {
 
   group("maybeFromAnyCode", () {
     group("with custom array", () {
-      performanceTest(
+      test(
         "with proper numeric code",
+        tags: "performance",
         () => expect(
           FiatCurrency.maybeFromAnyCode(value.codeNumeric, array),
           value,
         ),
       );
 
-      performanceTest(
+      test(
         "with proper alpha code",
+        tags: "performance",
         () => expect(FiatCurrency.maybeFromAnyCode(value.code, array), value),
       );
 
-      performanceTest(
+      test(
         "with proper alpha code lowercase",
+        tags: "performance",
         () => expect(
           FiatCurrency.maybeFromAnyCode(value.code.toLowerCase(), array),
           value,
         ),
       );
 
-      performanceTest(
+      test(
         "with wrong code",
+        tags: "performance",
         () => expect(
           FiatCurrency.maybeFromAnyCode(value.toString(), array),
           isNull,
         ),
       );
 
-      assertTest(
+      test(
         "with empty array",
-        () => FiatCurrency.maybeFromAnyCode(value.code, const []),
+        () => expect(
+          () => FiatCurrency.maybeFromAnyCode(value.code, const []),
+          throwsA(isA<AssertionError>()),
+        ),
       );
 
-      performanceTest(
+      test(
         "with null code",
+        tags: "performance",
         () => expect(FiatCurrency.maybeFromAnyCode(null, array), isNull),
       );
     });
 
     group("without custom array", () {
-      performanceTest(
+      test(
         "with proper numeric code",
+        tags: "performance",
         () => expect(FiatCurrency.maybeFromAnyCode(value.codeNumeric), value),
       );
 
-      performanceTest(
+      test(
         "with proper alpha code",
+        tags: "performance",
         () => expect(FiatCurrency.maybeFromAnyCode(value.code), value),
       );
 
-      performanceTest(
+      test(
         "with proper alpha code lowercase",
+        tags: "performance",
         () => expect(
           FiatCurrency.maybeFromAnyCode(value.code.toLowerCase()),
           value,
         ),
       );
 
-      performanceTest(
+      test(
         "with wrong code",
+        tags: "performance",
         () => expect(FiatCurrency.maybeFromAnyCode(value.toString()), isNull),
       );
 
-      performanceTest(
+      test(
         "with null code",
+        tags: "performance",
         () => expect(FiatCurrency.maybeFromAnyCode(null), isNull),
       );
     });
   });
 
   group("asserts", () {
-    assertTest("not", () => FiatCustom(code: value.code), shouldThrow: false);
-    assertTest("empty code", () => FiatCustom(code: ""));
-    assertTest("empty codeNumeric", () => FiatCustom(codeNumeric: " ".trim()));
+    test(
+      "not",
+      () => expect(() => FiatCustom(code: value.code), returnsNormally),
+    );
+    test(
+      "empty code",
+      () => expect(() => FiatCustom(code: ""), throwsA(isA<AssertionError>())),
+    );
+    test(
+      "empty codeNumeric",
+      () => expect(
+        () => FiatCustom(codeNumeric: " ".trim()),
+        throwsA(isA<AssertionError>()),
+      ),
+    );
   });
 });

@@ -1,6 +1,5 @@
 // ignore_for_file: missing-test-assertion, flagGolden does the job.
 
-import "package:_sealed_world_tests/sealed_world_tests.dart";
 import "package:flutter/foundation.dart";
 import "package:flutter/widgets.dart";
 import "package:flutter_test/flutter_test.dart";
@@ -31,9 +30,19 @@ void main() => group("$IsoFlag", () {
     () => expect(flag.toStringShort(), "IsoFlag(${value.code})"),
   );
 
-  assertTest("zero height", () => IsoFlag(value, map, height: 0));
-  assertTest("zero width", () => IsoFlag(value, map, width: 0));
-  assertTest("zero aspectRatio", () => IsoFlag(value, map, aspectRatio: 0));
+  test(
+    "zero height",
+    () => expect(() => IsoFlag(value, map, height: 0), throwsAssertionError),
+  );
+  test(
+    "zero width",
+    () => expect(() => IsoFlag(value, map, width: 0), throwsAssertionError),
+  );
+  test(
+    "zero aspectRatio",
+    () =>
+        expect(() => IsoFlag(value, map, aspectRatio: 0), throwsAssertionError),
+  );
 
   test("debugFillProperties", () {
     final builder = DiagnosticPropertiesBuilder();

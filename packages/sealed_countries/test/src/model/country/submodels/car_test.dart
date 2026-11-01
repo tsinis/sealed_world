@@ -1,6 +1,5 @@
 import "dart:convert";
 
-import "package:_sealed_world_tests/sealed_world_tests.dart";
 import "package:sealed_countries/src/helpers/extensions/country_submodels/car_extension.dart";
 import "package:sealed_countries/src/model/country/submodels/car.dart";
 import "package:test/test.dart";
@@ -39,13 +38,21 @@ void main() => group("$Car", () {
   });
 
   group("asserts", () {
-    assertTest(
+    test(
       "not",
-      () => Car(sign: value.sign, isRightSide: value.isRightSide),
-      shouldThrow: false,
+      () => expect(
+        () => Car(sign: value.sign, isRightSide: value.isRightSide),
+        returnsNormally,
+      ),
     );
 
-    assertTest("empty sign", () => Car(sign: TestData.emptyString));
+    test(
+      "empty sign",
+      () => expect(
+        () => Car(sign: TestData.emptyString),
+        throwsA(isA<AssertionError>()),
+      ),
+    );
   });
 
   test("toJson", () {
