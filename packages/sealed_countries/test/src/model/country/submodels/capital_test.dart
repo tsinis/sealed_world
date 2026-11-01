@@ -9,6 +9,15 @@ import "../../../test_data.dart";
 void main() => group("$Capital", () {
   const value = Capital(TestData.string);
 
+  test("toString", () {
+    expect(value.toString(), "Capital(${value.deFacto})");
+    expect(value.toString(short: false), 'Capital("${value.deFacto}")');
+    expect(
+      const Capital("A", deJure: "B", third: "C").toString(short: false),
+      'Capital("A", deJure: "B", third: "C")',
+    );
+  });
+
   group("equality", () {
     const other = Capital("${TestData.float}");
     final array = {value, other};

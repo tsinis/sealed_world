@@ -12,6 +12,14 @@ void main() => group("$Gini", () {
     coefficient: TestData.float,
   );
 
+  test(
+    "toString",
+    () => expect(
+      value.toString(),
+      "Gini(year: ${value.year}, coefficient: ${value.coefficient})",
+    ),
+  );
+
   group("equality", () {
     const other = Gini(
       year: Gini.minYear + TestData.integer,
