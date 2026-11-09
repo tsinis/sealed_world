@@ -125,7 +125,7 @@ jobs:
 
       - name: 🔬 Run Flutter tests
         if: ${{ inputs.is_flutter }}
-        run: flutter test --coverage --experimental-faster-testing --no-pub --concurrency=$(nproc) --file-reporter=json:build/test-report.json # Default is half of the cores.
+        run: flutter test --coverage --no-pub --concurrency=$(nproc) --file-reporter=json:build/test-report.json # Default is half of the cores.
 
       - name: 🧾 Publish test report
         if: ${{ !cancelled() && (github.event_name == 'push' || github.event.pull_request.head.repo.full_name == github.repository) }}

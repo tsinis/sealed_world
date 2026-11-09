@@ -312,7 +312,7 @@
       },
       {
         "type": "shell",
-        "command": "flutter test --coverage --no-pub --experimental-faster-testing",
+        "command": "flutter test --coverage --no-pub",
         "label": "Flutter Test",
       },
       {

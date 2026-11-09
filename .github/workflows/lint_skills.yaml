@@ -50,6 +50,8 @@ jobs:
     steps:
       - name: 📚 Git checkout
         uses: actions/checkout@v7.0.1
+        with:
+          persist-credentials: false # No later step runs git with the token.
 
       - name: 🧹 Workspace cleaner
         if: ${{ !matrix.is_flutter }}
@@ -76,28 +78,31 @@ jobs:
       - name: 📦 Install dependencies
         run: dart pub upgrade
 
-      # Same split as in verify_packages: world_* packages are the Flutter ones.
-      - name: 📋 Collect skills directories
-        run: |
-          DIRS=$(ls -d packages/*/skills | grep ${{ matrix.is_flutter && '-e' || '-ve' }} '^packages/world_')
-          echo "SKILLS_DIRS=$(printf -- '--skills-directory %s ' $DIRS)" >> "$GITHUB_ENV"
-
-      # The linter exits with 1 on violations, so the upload has to run first.
+      # Writes the SARIF report, and on violations also prints readable findings
+      # and fails here. The upload below still runs, as it is not cancelled.
       - name: 🧠 Lint skills
         id: lint
-        continue-on-error: true
-        run: dart run skills_lint --config packages/skills_lint.yaml $SKILLS_DIRS --format=sarif > skills-lint.sarif
+        run: |
+          # Same split as in verify_packages: world_* packages are the Flutter ones.
+          args=(--config packages/skills_lint.yaml)
+          for dir in packages/*/skills; do
+            case "$dir" in
+              packages/world_*) is_flutter=true ;;
+              *) is_flutter=false ;;
+            esac
+            if [ "$is_flutter" = "${{ matrix.is_flutter }}" ]; then
+              args+=(--skills-directory "$dir")
+            fi
+          done
+
+          dart run skills_lint "${args[@]}" --format=sarif > skills-lint.sarif ||
+            { dart run skills_lint "${args[@]}"; exit 1; }
 
       # Pull requests from forks cannot write security events.
       - name: 🛡️ Upload SARIF report
         if: ${{ !cancelled() && steps.lint.conclusion != 'skipped' && (github.event_name != 'pull_request' || !github.event.pull_request.head.repo.fork) }}
+        continue-on-error: true # An empty or invalid report must not hide the lint result.
         uses: github/codeql-action/upload-sarif@v4.39.3
         with:
           sarif_file: skills-lint.sarif
           category: skills_lint_${{ matrix.is_flutter && 'flutter' || 'dart' }}
-
-      - name: 🚨 Fail on lint violations
-        if: steps.lint.outcome != 'success'
-        run: |
-          dart run skills_lint --config packages/skills_lint.yaml $SKILLS_DIRS # Readable findings.
-          exit 1
