@@ -77,7 +77,7 @@ The package requires no PNG, SVG, or asset bundles — every flag is rendered as
   ```dart
   FlagTheme(
     data: DecoratedFlagData(
-      height: 18, 
+      height: 18,
       decoration: BoxDecoration(borderRadius: BorderRadius.circular(4)),
     ),
     child: MaterialApp(

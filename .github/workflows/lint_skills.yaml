@@ -1,0 +1,103 @@
+# Lints the Agent Skills of all packages here instead of a step in
+# `verify_package_workflow.yaml`, so the SARIF report fits GitHub Code Scanning.
+# It keeps one analysis per category: in the verify matrix, which runs only for
+# changed packages, a shared category is overwritten by each package, and
+# per-package categories go missing on most pull requests (Code Scanning warns
+# that configurations present on main were not found). Here both jobs (Dart and
+# Flutter packages, split as in verify) always run, each with its own category.
+# The same rules also run in each package's `test/agent_skills_test.dart`.
+name: lint_skills
+
+on:
+  push:
+    branches: [main]
+    paths:
+      - "packages/*/skills/**"
+      - "packages/*/.pubignore"
+      - "packages/*/pubspec.yaml"
+      - "packages/skills_lint.yaml"
+      - "pubspec.yaml"
+  pull_request:
+    branches: [main]
+    paths:
+      - ".github/workflows/lint_skills.yaml"
+      - "packages/*/skills/**"
+      - "packages/*/.pubignore"
+      - "packages/*/pubspec.yaml"
+      - "packages/skills_lint.yaml"
+      - "pubspec.yaml"
+
+permissions:
+  contents: read
+
+concurrency:
+  group: ${{ github.workflow }}-${{ github.event.pull_request.number || github.ref }}
+  cancel-in-progress: true
+
+jobs:
+  lint-skills:
+    name: 🧠 Lint ${{ matrix.is_flutter && 'Flutter' || 'Dart' }} Agent Skills
+    runs-on: ubuntu-latest
+    timeout-minutes: 10
+    permissions:
+      contents: read
+      security-events: write # Uploads the SARIF report to GitHub Code Scanning.
+    strategy:
+      fail-fast: false
+      matrix:
+        is_flutter: [false, true]
+
+    steps:
+      - name: 📚 Git checkout
+        uses: actions/checkout@v7.0.1
+
+      - name: 🧹 Workspace cleaner
+        if: ${{ !matrix.is_flutter }}
+        uses: actions/github-script@v9.0.0
+        with:
+          script: |
+            const f = 'pubspec.yaml', c = await require('fs').promises.readFile(f, 'utf8')
+            await require('fs').promises.writeFile(f, c.replace(/- packages\/world_/g, '#'))
+
+      - name: 🎯 Setup Dart
+        if: ${{ !matrix.is_flutter }}
+        uses: dart-lang/setup-dart@v1.8.1
+        with:
+          sdk: "stable"
+
+      - name: 🐦 Setup Flutter
+        if: ${{ matrix.is_flutter }}
+        uses: subosito/flutter-action@v2.23.0
+        with:
+          cache: true
+          channel: "stable"
+          cache-key: "flutter-:os:-:channel:-:version:-:arch:-:hash:"
+
+      - name: 📦 Install dependencies
+        run: dart pub upgrade
+
+      # Same split as in verify_packages: world_* packages are the Flutter ones.
+      - name: 📋 Collect skills directories
+        run: |
+          DIRS=$(ls -d packages/*/skills | grep ${{ matrix.is_flutter && '-e' || '-ve' }} '^packages/world_')
+          echo "SKILLS_DIRS=$(printf -- '--skills-directory %s ' $DIRS)" >> "$GITHUB_ENV"
+
+      # The linter exits with 1 on violations, so the upload has to run first.
+      - name: 🧠 Lint skills
+        id: lint
+        continue-on-error: true
+        run: dart run skills_lint --config packages/skills_lint.yaml $SKILLS_DIRS --format=sarif > skills-lint.sarif
+
+      # Pull requests from forks cannot write security events.
+      - name: 🛡️ Upload SARIF report
+        if: ${{ !cancelled() && steps.lint.conclusion != 'skipped' && (github.event_name != 'pull_request' || !github.event.pull_request.head.repo.fork) }}
+        uses: github/codeql-action/upload-sarif@v4.39.3
+        with:
+          sarif_file: skills-lint.sarif
+          category: skills_lint_${{ matrix.is_flutter && 'flutter' || 'dart' }}
+
+      - name: 🚨 Fail on lint violations
+        if: steps.lint.outcome != 'success'
+        run: |
+          dart run skills_lint --config packages/skills_lint.yaml $SKILLS_DIRS # Readable findings.
+          exit 1

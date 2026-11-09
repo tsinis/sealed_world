@@ -24,4 +24,5 @@ environment:
   sdk: ^3.10.4
 
 dev_dependencies:
+  skills_lint: any # Constrained in the workspace pubspec.yaml
   test: any # Constrained in the workspace pubspec.yaml

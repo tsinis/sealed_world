@@ -1,0 +1,24 @@
+# Shared skills_lint (https://pub.dev/packages/skills_lint) rules for the Agent
+# Skills that every package publishes in its `skills/` directory. Each package
+# applies them in its `test/agent_skills_test.dart`, the `lint_skills` workflow
+# applies them to all packages at once. To lint (or `--fix`) the skills of a
+# package, run from the package root directory:
+#   dart run skills_lint --config ../skills_lint.yaml --skills-directory skills
+skills_lint:
+  # Every rule of the linter is listed, so a new default severity can't relax it.
+  rules:
+    check-absolute-paths: error # Absolute paths break on other machines.
+    check-relative-paths:
+      severity: error
+      within-skill: true # An installed skill is copied without files around it.
+    check-trailing-whitespace: error
+    description-too-long:
+      severity: error
+      max-length: 500 # Not 1024: agents keep every description in their context.
+    disallowed-field: error # Only fields from the Agent Skills specification.
+    invalid-skill-name: error
+    path-does-not-exist: error
+    prevent-skills-sh-publishing: disabled # Requires `metadata: internal: true`.
+    pub-archive-includes-skill: error # `dart pub publish` must ship the skill.
+    published-skill-name: error # Naming convention required by `package:skills`.
+    valid-yaml-metadata: error
