@@ -129,7 +129,7 @@ jobs:
 
       - name: 🧾 Publish test report
         if: ${{ !cancelled() && (github.event_name == 'push' || github.event.pull_request.head.repo.full_name == github.repository) }}
-        uses: dorny/test-reporter@v3.0.0
+        uses: dorny/test-reporter@v3.2.0
         with:
           name: 🧾 Tests ${{ inputs.package_name }}
           path: build/test-report.json
