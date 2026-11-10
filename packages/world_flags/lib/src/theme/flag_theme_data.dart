@@ -3,10 +3,7 @@
 import "dart:ui" as ui show lerpDouble;
 
 import "package:flutter/widgets.dart";
-import "package:material_ui/material_ui.dart"
-    show // ignore: multiple_combinators, due to `dart:io` import in the about
-        ThemeExtension
-    hide AboutDialog;
+import "package:material_ui/material_ui.dart" show ThemeExtension;
 
 import "../helpers/extensions/decorated_flag_interface_extension.dart";
 import "../interfaces/decorated_flag_interface.dart";

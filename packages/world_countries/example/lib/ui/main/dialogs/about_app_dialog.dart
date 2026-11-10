@@ -7,7 +7,7 @@ final class AboutAppDialog extends StatelessWidget {
 
   static void show(BuildContext context) =>
       // Just an example of showing the dialog.
-      // ignore: inference_failure_on_function_invocation, avoid-recursive-widget-calls
+      // ignore: inference_failure_on_function_invocation
       showDialog(context: context, builder: (_) => const AboutAppDialog._());
 
   @override

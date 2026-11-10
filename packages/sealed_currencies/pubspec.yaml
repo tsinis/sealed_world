@@ -31,4 +31,5 @@ dependencies:
 
 dev_dependencies:
   dart_code_metrics_presets: any # Constrained in the workspace pubspec.yaml
+  skills_lint: any # Constrained in the workspace pubspec.yaml
   test: any # Constrained in the workspace pubspec.yaml

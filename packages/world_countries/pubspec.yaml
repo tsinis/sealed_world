@@ -37,6 +37,7 @@ dev_dependencies:
   dart_code_metrics_presets: any # Constrained in the workspace pubspec.yaml
   flutter_test: # From Google
     sdk: flutter
+  skills_lint: any # Constrained in the workspace pubspec.yaml
 
 flutter:
   uses-material-design: true # Pickers using the Material icon font.

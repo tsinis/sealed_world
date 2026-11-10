@@ -41,7 +41,7 @@ jobs:
 
       - name: 🛠️ Build for web
         working-directory: packages/world_countries/example
-        run: flutter build web --release --base-href=/sealed_world/ --wasm
+        run: flutter build web --release --no-deprecated-js-interop --base-href=/sealed_world/
 
       - name: 📤 Upload Pages Artifact
         uses: actions/upload-pages-artifact@v5.0.0

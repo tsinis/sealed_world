@@ -669,6 +669,14 @@ packages:
       url: "https://pub.dev"
     source: hosted
     version: "3.0.0"
+  skills_lint:
+    dependency: "direct dev"
+    description:
+      name: skills_lint
+      sha256: "65573cb01cd7c16e7fe11b1d9e2e1cb5d3aacaa4bb879b9b9b7f1df0206bf99d"
+      url: "https://pub.dev"
+    source: hosted
+    version: "0.5.3+1"
   sky_engine:
     dependency: transitive
     description: flutter
@@ -738,6 +746,14 @@ packages:
       url: "https://pub.dev"
     source: hosted
     version: "0.3.1"
+  tar:
+    dependency: transitive
+    description:
+      name: tar
+      sha256: af61a6382fb7a702b93a7b400492405793e0ebf3d2bea5d698d5ca39823ca46f
+      url: "https://pub.dev"
+    source: hosted
+    version: "2.0.3"
   term_glyph:
     dependency: transitive
     description:
