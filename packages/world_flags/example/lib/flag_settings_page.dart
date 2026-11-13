@@ -705,13 +705,14 @@ class _AspectRatioSlider extends StatelessWidget {
           ),
         ],
       ),
-      trailing: ratio == null
-          ? null
-          : AppIconButton(
-              shape: AppIconShape.refresh,
-              tooltip: "Reset to original",
-              onPressed: () => aspectRatio.value = null,
-            ),
+      trailing: MaybeWidget.orNull(
+        ratio,
+        (_) => AppIconButton(
+          shape: AppIconShape.refresh,
+          tooltip: "Reset to original",
+          onPressed: () => aspectRatio.value = null,
+        ),
+      ),
       dense: true,
     ),
   );

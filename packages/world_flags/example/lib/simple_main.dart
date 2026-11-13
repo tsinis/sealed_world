@@ -18,7 +18,9 @@ void main() => runApp(
       ),
       child: ColoredBox(
         color: AppColors.surface,
-        child: MaybeWidget(const CountryAfg().flagProperties, BasicFlag.new),
+        child: Center(
+          child: MaybeWidget(const CountryAfg().flagProperties, BasicFlag.new),
+        ),
       ),
     ),
   ),

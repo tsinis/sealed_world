@@ -16,25 +16,31 @@ abstract final class AppToast {
     String message, {
     Duration duration = const Duration(seconds: 2),
   }) {
-    _handleDismissed();
-    final entry = OverlayEntry(
+    _removeShown();
+    // ignore: avoid-late-keyword, the toast refers to its own entry.
+    late final OverlayEntry entry;
+    entry = OverlayEntry(
       builder: (_) => _Toast(
         message: message,
         duration: duration,
-        onDismissed: _handleDismissed,
+        onDismissed: () => _handleDismissed(entry),
       ),
     );
     _entry = entry;
     Overlay.of(context, rootOverlay: true).insert(entry);
   }
 
-  static void _handleDismissed() {
+  /// A replaced toast can still end its fade out (it's removed on the next
+  /// frame), but it must not remove the toast that replaced it.
+  static void _handleDismissed(OverlayEntry entry) {
+    if (identical(entry, _entry)) _removeShown();
+  }
+
+  static void _removeShown() {
     final entry = _entry;
     _entry = null;
-    // Inserted, but maybe not mounted yet (i.e. shown twice in one frame).
-    if (entry == null) return;
     entry
-      ..remove()
+      ?..remove()
       ..dispose();
   }
 }

@@ -1,4 +1,5 @@
 import "package:flutter/widgets.dart";
+import "package:world_flags/world_flags.dart" show MaybeWidget;
 
 import "../theme/app_colors.dart";
 import "../theme/app_text.dart";
@@ -46,8 +47,6 @@ class ListRow extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    final details = subtitle;
-    final end = trailing;
     final content = SafeArea(
       top: false,
       bottom: false,
@@ -66,39 +65,44 @@ class ListRow extends StatelessWidget {
                 ),
                 child: title,
               ),
-              subtitle: details == null
-                  ? null
-                  : DefaultTextStyle(
-                      style: AppText.bodyMedium.copyWith(
-                        color: enabled
-                            ? AppColors.surfaceVariantContent
-                            : AppColors.disabled,
-                        fontSize: dense ? 12 : null,
-                      ),
-                      child: details,
-                    ),
+              subtitle: MaybeWidget.orNull(
+                subtitle,
+                (details) => DefaultTextStyle(
+                  style: AppText.bodyMedium.copyWith(
+                    color: enabled
+                        ? AppColors.surfaceVariantContent
+                        : AppColors.disabled,
+                    fontSize: dense ? 12 : null,
+                  ),
+                  child: details,
+                ),
+              ),
             ),
           ),
-          if (end != null) ...[const SizedBox(width: _trailingGap), end],
+          ...MaybeWidget.list(
+            trailing,
+            children: (end) => [const SizedBox(width: _trailingGap), end],
+          ),
         ],
       ),
     );
-    final onPressed = enabled ? onTap : null;
 
     return MergeSemantics(
-      child: onPressed == null
-          ? Semantics(enabled: enabled, child: content)
-          : Pressable(
-              onPressed: onPressed,
-              toggled: toggled,
-              builder: (_, states) => AnimatedContainer(
-                duration: const Duration(milliseconds: 150),
-                color: AppColors.surfaceContent.withValues(
-                  alpha: AppColors.overlayOpacityOf(states),
-                ),
-                child: content,
-              ),
+      child: MaybeWidget(
+        enabled ? onTap : null,
+        (onPressed) => Pressable(
+          onPressed: onPressed,
+          toggled: toggled,
+          builder: (_, states) => AnimatedContainer(
+            duration: const Duration(milliseconds: 150),
+            color: AppColors.surfaceContent.withValues(
+              alpha: AppColors.overlayOpacityOf(states),
             ),
+            child: content,
+          ),
+        ),
+        orElse: Semantics(enabled: enabled, child: content),
+      ),
     );
   }
 }

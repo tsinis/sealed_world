@@ -95,7 +95,7 @@ class _ListApp extends StatelessWidget {
     pageRouteBuilder: <T>(settings, builder) =>
         AppPageRoute<T>(settings: settings, builder: builder),
     builder: (_, child) =>
-        FlagTheme(data: _flagTheme, child: child ?? const SizedBox.shrink()),
+        MaybeWidget(child, (page) => FlagTheme(data: _flagTheme, child: page)),
     home: ColoredBox(
       color: AppColors.surface,
       child: ListView.builder(

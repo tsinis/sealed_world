@@ -71,7 +71,14 @@ class _PressableState extends State<Pressable> {
       enabled: true,
       child: FocusableActionDetector(
         actions: {
-          ActivateIntent: ActivateCallbackAction(onActivate: _handleTap),
+          ActivateIntent: ActivateCallbackAction<ActivateIntent>(
+            onActivate: _handleTap,
+          ),
+          // Enter on the web activates buttons, but not toggles (as Material).
+          if (toggled == null)
+            ButtonActivateIntent: ActivateCallbackAction<ButtonActivateIntent>(
+              onActivate: _handleTap,
+            ),
         },
         mouseCursor: SystemMouseCursors.click,
         onShowFocusHighlight: _handleFocus,

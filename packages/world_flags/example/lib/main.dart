@@ -34,9 +34,12 @@ void main() async {
         textStyle: AppText.bodyMedium,
         pageRouteBuilder: <T>(settings, builder) =>
             AppPageRoute<T>(settings: settings, builder: builder),
-        builder: (_, child) => ScrollConfiguration(
-          behavior: const AppScrollBehavior(),
-          child: child ?? const SizedBox.shrink(),
+        builder: (_, child) => MaybeWidget(
+          child,
+          (page) => ScrollConfiguration(
+            behavior: const AppScrollBehavior(),
+            child: page,
+          ),
         ),
         home: const Main(isSimpleExample: !isComplexExample),
       ),

@@ -199,7 +199,9 @@ class MaybeWidget<T extends Object> extends StatelessWidget {
   }) {
     final maybeVal = _passes(value, buildWhen);
     if (maybeVal == null) return const [];
-    if (children != null) return List.unmodifiable(children(maybeVal).nonNulls);
+    if (children != null) {
+      return List.unmodifiableOf(children(maybeVal).nonNulls);
+    }
     final maybeChild = child?.call(maybeVal);
 
     return maybeChild == null ? const [] : [maybeChild];

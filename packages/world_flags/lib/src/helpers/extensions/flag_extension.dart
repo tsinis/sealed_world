@@ -15,10 +15,10 @@ extension FlagExtension on WorldCountry {
   /// Combines [flagStripeColors] and [flagElementsColors] into a single list of
   /// colors.
   List<Color> get flagColors =>
-      List.unmodifiable([...flagStripeColors, ...flagElementsColors]);
+      List.unmodifiableOf([...flagStripeColors, ...flagElementsColors]);
 
   /// Retrieves the stripe colors of the flag from [FlagProperties].
-  List<Color> get flagStripeColors => List.unmodifiable(
+  List<Color> get flagStripeColors => List.unmodifiableOf(
     flagProperties?.stripeColors.map((stripe) => stripe.color) ?? const [],
   );
 
