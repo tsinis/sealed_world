@@ -2,6 +2,7 @@
 
 import "package:flutter/foundation.dart";
 import "package:flutter/gestures.dart" show DragStartBehavior;
+import "package:flutter/rendering.dart" show ItemExtentBuilder;
 import "package:flutter/widgets.dart";
 
 import "../../constants/ui_constants.dart";
@@ -48,6 +49,7 @@ abstract class StatefulIndexedListView<T extends Object, W extends Widget>
     this.header,
     this.hitTestBehavior, // Default to: HitTestBehavior.opaque.
     this.itemBuilder,
+    this.itemExtentBuilder,
     // Default to: ScrollViewKeyboardDismissBehavior.manual.
     this.keyboardDismissBehavior,
     this.mainAxisAlignment, // Default to: MainAxisAlignment.start.
@@ -184,6 +186,9 @@ abstract class StatefulIndexedListView<T extends Object, W extends Widget>
   final HitTestBehavior? hitTestBehavior;
 
   @override
+  final ItemExtentBuilder? itemExtentBuilder;
+
+  @override
   final ScrollViewKeyboardDismissBehavior? keyboardDismissBehavior;
 
   @override
@@ -215,6 +220,12 @@ abstract class StatefulIndexedListView<T extends Object, W extends Widget>
       ..add(DiagnosticsProperty<EdgeInsetsGeometry?>("padding", padding))
       ..add(DoubleProperty("cacheExtent", cacheExtent))
       ..add(EnumProperty<HitTestBehavior?>("hitTestBehavior", hitTestBehavior))
+      ..add(
+        ObjectFlagProperty<ItemExtentBuilder?>.has(
+          "itemExtentBuilder",
+          itemExtentBuilder,
+        ),
+      )
       ..add(DoubleProperty("spacing", spacing))
       ..add(
         ObjectFlagProperty<Widget? Function(ItemProperties<T>, W?)?>.has(

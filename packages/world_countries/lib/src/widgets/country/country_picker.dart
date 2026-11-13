@@ -1,4 +1,5 @@
 import "package:flutter/gestures.dart" show DragStartBehavior;
+import "package:flutter/rendering.dart" show ItemExtentBuilder;
 import "package:flutter/widgets.dart";
 import "package:material_ui/material_ui.dart" show TextField;
 import "package:world_flags/world_flags.dart" hide FlagThemeData;
@@ -32,6 +33,7 @@ class CountryPicker extends BasicPicker<WorldCountry, CountryTile> {
   /// * [dragStartBehavior] is the drag start behavior for the list.
   /// * [emptyStatePlaceholder] is the widget to display when the list is empty.
   /// * [itemBuilder] is the builder function for the items.
+  /// * [itemExtentBuilder] returns the extent of a child by its index.
   /// * [key] is the optional key to use for the widget.
   /// * [hitTestBehavior] is the hit test behavior for the list.
   /// * [keyboardDismissBehavior] is the keyboard dismiss behavior for the list.
@@ -81,6 +83,7 @@ class CountryPicker extends BasicPicker<WorldCountry, CountryTile> {
     super.itemBuilder,
     super.key,
     super.hitTestBehavior,
+    super.itemExtentBuilder,
     super.keyboardDismissBehavior,
     super.mainAxisAlignment,
     super.mainAxisSize,
@@ -167,6 +170,7 @@ class CountryPicker extends BasicPicker<WorldCountry, CountryTile> {
     Widget? emptyStatePlaceholder,
     Key? key,
     HitTestBehavior? hitTestBehavior,
+    ItemExtentBuilder? itemExtentBuilder,
     ScrollViewKeyboardDismissBehavior? keyboardDismissBehavior,
     MainAxisAlignment? mainAxisAlignment,
     MainAxisSize? mainAxisSize,
@@ -218,6 +222,7 @@ class CountryPicker extends BasicPicker<WorldCountry, CountryTile> {
         this.itemBuilder?.call(props, tile),
     key: key ?? this.key,
     hitTestBehavior: hitTestBehavior ?? this.hitTestBehavior,
+    itemExtentBuilder: itemExtentBuilder ?? this.itemExtentBuilder,
     keyboardDismissBehavior:
         keyboardDismissBehavior ?? this.keyboardDismissBehavior,
     mainAxisAlignment: mainAxisAlignment ?? this.mainAxisAlignment,

@@ -94,6 +94,7 @@ class _BasicPickerState<T extends IsoTranslated, W extends IsoTile<T>>
           widget.hitTestBehavior ??
           theme?.hitTestBehavior ??
           HitTestBehavior.opaque,
+      itemExtentBuilder: widget.itemExtentBuilder ?? theme?.itemExtentBuilder,
       emptyStatePlaceholder: widget.emptyStatePlaceholder,
       header: adaptiveTextField == null
           ? null

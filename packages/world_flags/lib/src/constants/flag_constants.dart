@@ -10,7 +10,7 @@
 ///
 /// Example usage:
 /// ```dart
-/// import 'package:flutter/material.dart';
+/// import 'package:material_ui/material_ui.dart';
 /// import 'package:world_flags/world_flags.dart';
 ///
 /// class FlagAspectRatioSlider extends StatefulWidget {

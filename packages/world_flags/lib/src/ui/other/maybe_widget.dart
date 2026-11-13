@@ -19,7 +19,7 @@ class MaybeWidget<T extends Object> extends StatelessWidget {
   /// Example:
   ///
   /// ```dart
-  /// import 'package:flutter/material.dart';
+  /// import 'package:flutter/widgets.dart';
   ///
   /// void main() {
   ///   final Widget widget = MaybeWidget<String>(
@@ -57,7 +57,7 @@ class MaybeWidget<T extends Object> extends StatelessWidget {
   /// Example:
   ///
   /// ```dart
-  /// import 'package:flutter/material.dart';
+  /// import 'package:flutter/widgets.dart';
   ///
   /// void main() {
   ///   final Widget widget = AnimatedSwitcher(
@@ -95,7 +95,7 @@ class MaybeWidget<T extends Object> extends StatelessWidget {
   /// Example:
   ///
   /// ```dart
-  /// import 'package:flutter/material.dart';
+  /// import 'package:flutter/widgets.dart';
   ///
   /// void main() {
   ///   final Widget widget = MaybeWidget<String>.offstage(
@@ -131,7 +131,7 @@ class MaybeWidget<T extends Object> extends StatelessWidget {
   ///
   /// Example with single child:
   /// ```dart
-  /// import 'package:flutter/material.dart';
+  /// import 'package:flutter/widgets.dart';
   ///
   /// class User {
   ///   const User(this.name);
@@ -150,7 +150,7 @@ class MaybeWidget<T extends Object> extends StatelessWidget {
   ///
   /// Example with multiple children:
   /// ```dart
-  /// import 'package:flutter/material.dart';
+  /// import 'package:flutter/widgets.dart';
   ///
   /// class User {
   ///   const User(this.name, {this.isAdmin = false});
@@ -173,7 +173,7 @@ class MaybeWidget<T extends Object> extends StatelessWidget {
   ///
   /// Example using [buildWhen]:
   /// ```dart
-  /// import 'package:flutter/material.dart';
+  /// import 'package:flutter/widgets.dart';
   ///
   /// class User {
   ///   const User(this.name, {this.isActive = true});
@@ -217,7 +217,7 @@ class MaybeWidget<T extends Object> extends StatelessWidget {
   /// non-`null` [value].
   ///
   /// ```dart
-  /// import 'package:flutter/material.dart';
+  /// import 'package:flutter/widgets.dart';
   ///
   /// void main() {
   ///   const String? subtitle = 'Sub';
@@ -233,7 +233,7 @@ class MaybeWidget<T extends Object> extends StatelessWidget {
   ///
   /// Simple example with inference:
   /// ```dart
-  /// import 'package:flutter/material.dart';
+  /// import 'package:flutter/widgets.dart';
   ///
   /// void main() {
   ///   final lastEdited = DateTime.now();
@@ -248,7 +248,7 @@ class MaybeWidget<T extends Object> extends StatelessWidget {
   /// If you do not need a specialized widget subtype you can omit the generic
   /// arguments entirely and let inference work:
   /// ```dart
-  /// import 'package:flutter/material.dart';
+  /// import 'package:flutter/widgets.dart';
   ///
   /// void main() {
   ///   const String? tag = 'tag';
@@ -265,7 +265,7 @@ class MaybeWidget<T extends Object> extends StatelessWidget {
   ///
   /// Example:
   /// ```dart
-  /// import 'package:flutter/material.dart';
+  /// import 'package:flutter/widgets.dart';
   ///
   /// void main() {
   ///   const String? maybeSubtitle = '  ';

@@ -38,6 +38,7 @@ extension TextFieldExtension on TextField? {
     SmartDashesType? smartDashesType,
     SmartQuotesType? smartQuotesType,
     bool? enableSuggestions,
+    bool? enableInlinePrediction,
     int? maxLines,
     int? minLines,
     bool? expands,
@@ -122,6 +123,8 @@ extension TextFieldExtension on TextField? {
       smartDashesType: smartDashesType ?? textField.smartDashesType,
       smartQuotesType: smartQuotesType ?? textField.smartQuotesType,
       enableSuggestions: enableSuggestions ?? textField.enableSuggestions,
+      enableInlinePrediction:
+          enableInlinePrediction ?? textField.enableInlinePrediction,
       maxLines: (maxLines?.isNegative ?? false)
           ? null
           : (maxLines ?? textField.maxLines),

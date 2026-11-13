@@ -1,4 +1,3 @@
-// ignore_for_file: deprecated_member_use, stage 1 deprecation.
 // Scrolls three flag screens on a real device or desktop, so the frame times
 // can be split into build and raster. Run it through
 // `test_driver/perf_driver.dart`.
@@ -13,10 +12,13 @@
 
 // ignore_for_file:prefer-extracting-function-callbacks, missing-test-assertion
 // ignore_for_file: prefer-static-class, avoid-local-functions
+import "package:flutter/widgets.dart";
 import "package:flutter_test/flutter_test.dart";
 import "package:integration_test/integration_test.dart";
-import "package:material_ui/material_ui.dart";
 import "package:world_flags/world_flags.dart";
+import "package:world_flags_example/theme/app_colors.dart";
+import "package:world_flags_example/theme/app_page_route.dart";
+import "package:world_flags_example/theme/app_text.dart";
 
 /// The example app's list row and flag height.
 const _flagListPerfTestHeight = 28.0;
@@ -29,15 +31,9 @@ const _flagHeight = 24.0;
 const _frames = 150;
 const _step = 32.0;
 
-final _theme = ThemeData(
-  extensions: const [
-    FlagThemeData(
-      decoration: BoxDecoration(
-        borderRadius: BorderRadius.all(Radius.circular(4)),
-      ),
-      height: _flagHeight,
-    ),
-  ],
+const _flagTheme = DecoratedFlagData(
+  decoration: BoxDecoration(borderRadius: BorderRadius.all(Radius.circular(4))),
+  height: _flagHeight,
 );
 
 void main() {
@@ -93,9 +89,15 @@ class _ListApp extends StatelessWidget {
   final _FlagListPerfTest row;
 
   @override
-  Widget build(BuildContext context) => MaterialApp(
-    theme: _theme,
-    home: Material(
+  Widget build(BuildContext context) => WidgetsApp(
+    color: AppColors.primary,
+    textStyle: AppText.bodyMedium,
+    pageRouteBuilder: <T>(settings, builder) =>
+        AppPageRoute<T>(settings: settings, builder: builder),
+    builder: (_, child) =>
+        FlagTheme(data: _flagTheme, child: child ?? const SizedBox.shrink()),
+    home: ColoredBox(
+      color: AppColors.surface,
       child: ListView.builder(
         itemExtent: _flagListPerfTestHeight,
         itemCount: WorldCountry.list.length,

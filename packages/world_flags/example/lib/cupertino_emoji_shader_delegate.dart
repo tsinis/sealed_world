@@ -6,8 +6,7 @@ import "package:world_flags/world_flags.dart";
 /// This delegate renders flags like the iOS emoji flags: a gently waving
 /// cloth (a cosine wave), brightest in the middle (a sine across the width),
 /// with a soft darker outline and an inner shadow (bevel) along the bottom and
-/// left edges. To compare it with the emoji of the
-/// platform, run `flutter run -t lib/emoji_comparison_main.dart`.
+/// left edges.
 ///
 /// ## Usage
 ///

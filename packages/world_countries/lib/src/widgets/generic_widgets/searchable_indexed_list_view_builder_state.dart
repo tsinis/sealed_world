@@ -50,6 +50,8 @@ class _SearchableIndexedListViewBuilderState<T extends Object, W extends Widget>
               emptyStatePlaceholder: widget.emptyStatePlaceholder,
               header: widget.header ?? theme?.header,
               itemBuilder: widget.itemBuilder,
+              itemExtentBuilder:
+                  widget.itemExtentBuilder ?? theme?.itemExtentBuilder,
               keyboardDismissBehavior:
                   widget.keyboardDismissBehavior ??
                   theme?.keyboardDismissBehavior ??
@@ -120,6 +122,8 @@ class _SearchableIndexedListViewBuilderState<T extends Object, W extends Widget>
             emptyStatePlaceholder: widget.emptyStatePlaceholder,
             header: widget.header ?? theme?.header,
             itemBuilder: widget.itemBuilder,
+            itemExtentBuilder:
+                widget.itemExtentBuilder ?? theme?.itemExtentBuilder,
             keyboardDismissBehavior:
                 widget.keyboardDismissBehavior ??
                 theme?.keyboardDismissBehavior ??

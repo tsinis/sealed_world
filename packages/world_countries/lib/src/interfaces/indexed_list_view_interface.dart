@@ -1,4 +1,5 @@
 import "package:flutter/gestures.dart" show DragStartBehavior;
+import "package:flutter/rendering.dart" show ItemExtentBuilder;
 import "package:flutter/widgets.dart";
 
 /// An interface for widgets that are displaying an indexed list of items.
@@ -30,6 +31,7 @@ abstract interface class IndexedListViewInterface {
     this.header,
     // Default to: HitTestBehavior.opaque.
     this.hitTestBehavior,
+    this.itemExtentBuilder,
     // Default to: ScrollViewKeyboardDismissBehavior.manual.
     this.keyboardDismissBehavior,
     this.mainAxisAlignment, // Default to: MainAxisAlignment.start.
@@ -204,6 +206,21 @@ abstract interface class IndexedListViewInterface {
 
   /// {@macro flutter.widgets.scrollable.hitTestBehavior}
   final HitTestBehavior? hitTestBehavior;
+
+  /// {@template sealed_world.item_extent_builder}
+  /// Returns the extent of a list child by its index, so the list can lay out
+  /// (and jump through) long lists without measuring every child first.
+  ///
+  /// The `index` is the interleaved index of the list's children, separators
+  /// included: even indexes are items and odd indexes are separators (use
+  /// `index ~/ 2` to get the index of an item in the shown, i.e. searched and
+  /// sorted, items). The list bounds the number of its children itself, so
+  /// always return an extent: a shrink-wrapped list may ask for the index past
+  /// its last child and fails on `null`.
+  ///
+  /// See also [ListView.separated].
+  /// {@endtemplate}
+  final ItemExtentBuilder? itemExtentBuilder;
 
   /// {@macro flutter.widgets.scroll_view.keyboardDismissBehavior}
   final ScrollViewKeyboardDismissBehavior? keyboardDismissBehavior;

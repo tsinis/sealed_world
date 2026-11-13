@@ -16,7 +16,7 @@ CHORE
 - Golden tests use [gleon](https://pub.dev/packages/gleon) v0.6.1 from pub.dev instead of a git dependency.
 - Updated [material_ui](https://pub.dev/packages/material_ui) dependency to v1.11.0. Material is no longer a part of Flutter SDK since 3.50, and this package only needs it for the deprecated `FlagThemeData`, so the dependency will be removed together with it.
 - Code samples in the docs, the README and the agent skill import `package:material_ui/material_ui.dart` instead of the deprecated `package:flutter/material.dart`.
-- The example app is built with the widgets layer only (`WidgetsApp` and own list rows, slider, switch, icons and toast) and looks the same as before. Its shader settings page is drawn by other widgets, so its benchmark results are not comparable with v3.6.0. On wide (landscape) screens the settings page shows the flag preview next to the settings instead of overflowing, and the Cupertino emoji shader of the example is simplified (a cosine wave, a light gradient across the width, a soft outline and a bevel on the bottom and left edges, see `shaders/cupertino_emoji_flag.frag`) and looks closer to the iOS emoji flags, `emoji_comparison_main.dart` shows both side by side.
+- The example app is built with the widgets layer only (`WidgetsApp` and own list rows, slider, switch, icons and toast) and looks the same as before. On wide (landscape) screens the settings page shows the flag preview next to the settings instead of overflowing, and the Cupertino emoji shader of the example is simplified (a cosine wave, a light gradient across the width, a soft outline and a bevel on the bottom and left edges, see `shaders/cupertino_emoji_flag.frag`) and looks closer to the iOS emoji flags.
 
 ## 3.6.0
 

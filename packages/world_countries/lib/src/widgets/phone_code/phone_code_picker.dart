@@ -1,4 +1,5 @@
 import "package:flutter/gestures.dart" show DragStartBehavior;
+import "package:flutter/rendering.dart" show ItemExtentBuilder;
 import "package:flutter/services.dart"
     show FilteringTextInputFormatter, TextInputFormatter;
 import "package:flutter/widgets.dart";
@@ -40,6 +41,7 @@ class PhoneCodePicker extends CountryPicker {
     super.itemBuilder,
     super.key,
     super.hitTestBehavior,
+    super.itemExtentBuilder,
     super.keyboardDismissBehavior,
     super.mainAxisAlignment,
     super.mainAxisSize,
@@ -91,6 +93,7 @@ class PhoneCodePicker extends CountryPicker {
         emptyStatePlaceholder: picker.emptyStatePlaceholder,
         itemBuilder: picker.itemBuilder,
         hitTestBehavior: picker.hitTestBehavior,
+        itemExtentBuilder: picker.itemExtentBuilder,
         keyboardDismissBehavior: picker.keyboardDismissBehavior,
         mainAxisAlignment: picker.mainAxisAlignment,
         mainAxisSize: picker.mainAxisSize,
@@ -186,6 +189,7 @@ class PhoneCodePicker extends CountryPicker {
     Widget? emptyStatePlaceholder,
     Key? key,
     HitTestBehavior? hitTestBehavior,
+    ItemExtentBuilder? itemExtentBuilder,
     ScrollViewKeyboardDismissBehavior? keyboardDismissBehavior,
     MainAxisAlignment? mainAxisAlignment,
     MainAxisSize? mainAxisSize,
@@ -237,6 +241,7 @@ class PhoneCodePicker extends CountryPicker {
         this.itemBuilder?.call(props, tile),
     key: key ?? this.key,
     hitTestBehavior: hitTestBehavior ?? this.hitTestBehavior,
+    itemExtentBuilder: itemExtentBuilder ?? this.itemExtentBuilder,
     keyboardDismissBehavior:
         keyboardDismissBehavior ?? this.keyboardDismissBehavior,
     mainAxisAlignment: mainAxisAlignment ?? this.mainAxisAlignment,

@@ -15,6 +15,17 @@ import "package:world_flags/world_flags.dart";
 import "../../../helpers/widget_tester_extension.dart";
 
 void main() => group("$LanguagePicker", () {
+  test("copyWith updates and keeps itemExtentBuilder", () {
+    final picker = const LanguagePicker().copyWith(
+      itemExtentBuilder: WidgetTesterExtension.itemExtent,
+    );
+    expect(picker.itemExtentBuilder, WidgetTesterExtension.itemExtent);
+    expect(
+      picker.copyWith().itemExtentBuilder,
+      WidgetTesterExtension.itemExtent,
+    );
+  });
+
   test("copyWith", () {
     const picker = LanguagePicker();
     expect(picker.onSelect, isNull);

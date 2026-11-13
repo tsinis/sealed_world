@@ -44,6 +44,7 @@ class SearchableIndexedListViewBuilder<T extends Object, W extends Widget>
   /// * [emptyStatePlaceholder] is the widget to display when the list is empty.
   /// * [header] is the optional header to display above the list.
   /// * [itemBuilder] is the builder function for the items.
+  /// * [itemExtentBuilder] returns the extent of a child by its index.
   /// * [key] is the optional key to use for the widget.
   /// * [hitTestBehavior] is the hit test behavior for the list.
   /// * [keyboardDismissBehavior] is the keyboard dismiss behavior for the list.
@@ -93,6 +94,7 @@ class SearchableIndexedListViewBuilder<T extends Object, W extends Widget>
     super.emptyStatePlaceholder,
     super.header,
     super.itemBuilder,
+    super.itemExtentBuilder,
     super.key,
     super.hitTestBehavior,
     super.keyboardDismissBehavior,

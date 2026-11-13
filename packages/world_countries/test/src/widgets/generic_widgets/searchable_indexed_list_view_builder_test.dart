@@ -79,6 +79,17 @@ void main() => group("$SearchableIndexedListViewBuilder", () {
     expect(listView.hitTestBehavior, HitTestBehavior.translucent);
   });
 
+  testWidgets("itemExtentBuilder uses theme value", (tester) async {
+    await tester.pumpMaterialApp(
+      const SearchableIndexedListViewBuilder(<Object>[1]),
+      const PickersThemeData(
+        itemExtentBuilder: WidgetTesterExtension.itemExtent,
+      ),
+    );
+    final listView = tester.widget<ListView>(find.byType(ListView));
+    expect(listView.itemExtentBuilder, WidgetTesterExtension.itemExtent);
+  });
+
   testWidgets("showInSearch", (tester) async {
     final context = await tester.contextExtractor();
     expect(await builder.showInSearch(context), isNull);

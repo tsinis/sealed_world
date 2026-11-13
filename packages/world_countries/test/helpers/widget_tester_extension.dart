@@ -2,6 +2,7 @@
 import "dart:async";
 
 import "package:flutter/gestures.dart";
+import "package:flutter/rendering.dart" show SliverLayoutDimensions;
 import "package:flutter_test/flutter_test.dart";
 import "package:material_ui/material_ui.dart";
 import "package:world_countries/src/constants/ui_constants.dart";
@@ -15,6 +16,10 @@ import "package:world_flags/world_flags.dart";
 
 // ignore: avoid-top-level-members-in-tests, it's not a test.
 extension WidgetTesterExtension on WidgetTester {
+  /// A fixed extent for list items (even indexes) and separators (odd ones).
+  static double itemExtent(int index, SliverLayoutDimensions _) =>
+      index.isEven ? 48 : 1;
+
   static const pickersTheme = PickersThemeData(
     cacheExtent: 100,
     padding: EdgeInsets.zero,

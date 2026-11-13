@@ -1,43 +1,48 @@
 #version 460 core
 #include <flutter/runtime_effect.glsl>
+
+// A waving cloth: moves the flag (painted to `uTexture` by `FlagShaderSurface`)
+// along a traveling wave with organic noise, a secondary ripple and pinned
+// edges, then lights it like a fabric.
+//
+// `WavedFlagShaderDelegate.configureShader` sets the uniforms by index, so
+// their order must not change.
+
 precision highp float;
 
-// Uniforms (indices 0-24, unchanged)
-uniform vec2  uSize;
-uniform sampler2D uTexture;
+uniform vec2 uSize; // 0-1: the size of the painted area, in pixels.
+uniform sampler2D uTexture; // The flat flag (premultiplied colors).
 
-uniform float uTime;
-uniform float uAnimationSpeed;
+uniform float uTime; // 2
+uniform float uAnimationSpeed; // 3: always 1, the ticker scales the time.
 
-uniform float uWaveAmplitude;
-uniform float uWaveFrequency;
-uniform float uWavePhaseShift;
-uniform float uSecondaryAmp;
-uniform float uSecondaryFreq;
+uniform float uWaveAmplitude; // 4
+uniform float uWaveFrequency; // 5
+uniform float uWavePhaseShift; // 6
+uniform float uSecondaryAmp; // 7
+uniform float uSecondaryFreq; // 8
 
-uniform float uLeftEdgePinned;
-uniform float uRightEdgePinned;
-uniform float uPinSoftness;
-uniform float uPoleMargin;
+uniform float uLeftEdgePinned; // 9
+uniform float uRightEdgePinned; // 10
+uniform float uPinSoftness; // 11
+uniform float uPoleMargin; // 12
 
-uniform float uShadingEnabled;
-uniform float uFoldStrength;
-uniform float uHighlightStrength;
-uniform float uShadowStrength;
-uniform float uSheenStrength;
-uniform float uSheenFrequency;
-uniform float uPerspective;
+uniform float uShadingEnabled; // 13
+uniform float uFoldStrength; // 14
+uniform float uHighlightStrength; // 15
+uniform float uShadowStrength; // 16
+uniform float uSheenStrength; // 17
+uniform float uSheenFrequency; // 18
+uniform float uPerspective; // 19
 
-uniform float uSeed;
-uniform float uWaveDirX;
-uniform float uWaveDirY;
-uniform float uTurbulence;
-uniform float uFabricVisibility;
+uniform float uSeed; // 20
+uniform float uWaveDirX; // 21
+uniform float uWaveDirY; // 22
+uniform float uTurbulence; // 23
+uniform float uFabricVisibility; // 24
 
 out vec4 fragColor;
 
-// Constants
-const float PI = 3.14159265359;
 const float TAU = 6.28318530718;
 const vec3 LIGHT = vec3(0.371, 0.464, 0.743);
 
@@ -61,32 +66,18 @@ float noise(vec2 p) {
     );
 }
 
-// FBM with 2 octaves - unrolled for SkSL compatibility.
-// SkSL requires loop bounds to be compile-time constants; dynamic `int octaves`
-// parameter causes "loop index must be compared with a constant" error in tests.
+// Fractal noise of 2 and 3 octaves, unrolled: SkSL (used in tests) requires
+// loop bounds to be compile-time constants.
 float fbm2(vec2 p) {
-    float value = 0.0;
-    float amp = 0.5;
-    value += amp * noise(p);
-    amp *= 0.5;
-    value += amp * noise(p * 2.0);
-    return value;
+    return 0.5 * noise(p) + 0.25 * noise(p * 2.0);
 }
 
-// FBM with 3 octaves - unrolled for SkSL compatibility.
 float fbm3(vec2 p) {
-    float value = 0.0;
-    float amp = 0.5;
-    value += amp * noise(p);
-    amp *= 0.5;
-    value += amp * noise(p * 2.0);
-    amp *= 0.5;
-    value += amp * noise(p * 4.0);
-    return value;
+    return fbm2(p) + 0.125 * noise(p * 4.0);
 }
 
 // ─────────────────────────────────────────────────────────────────────────────
-// WAVE HELPERS
+// MASKS
 // ─────────────────────────────────────────────────────────────────────────────
 
 vec2 waveDir() {
@@ -95,6 +86,7 @@ vec2 waveDir() {
     return len > 0.001 ? d / len : vec2(1.0, 0.0);
 }
 
+// 0 at a pinned edge (and its pole margin), easing to 1 in the cloth.
 float edgeRamp(float u) {
     float r = 1.0;
     // smoothstep is undefined for equal edges, so keep the softness positive.
@@ -108,72 +100,48 @@ float edgeRamp(float u) {
     return r;
 }
 
+// 0 at the borders of the flag, 1 in its center.
 float borderMask(vec2 uv) {
     return min(uv.x * (1.0 - uv.x), uv.y * (1.0 - uv.y)) * 4.0;
 }
 
+// 0 at the top and bottom hems, 1 between them.
 float hemMask(float v) {
     return smoothstep(0.02, 0.1, v) * smoothstep(0.02, 0.1, 1.0 - v);
 }
 
 // ─────────────────────────────────────────────────────────────────────────────
-// ORGANIC WAVE
+// WAVE
 // ─────────────────────────────────────────────────────────────────────────────
 
-float organicWave(vec2 uv, float baseArg, float turb, float time) {
-    float wave = sin(baseArg);
-
-    if (turb < 0.02) return wave;
-
-    vec2 noisePos = uv * 3.0 + vec2(time * 0.3, time * 0.2);
-
-    // Frequency modulation: random wave intervals
-    float freqNoise = noise(noisePos * 0.7) * 2.0 - 1.0;
-    float modulatedArg = baseArg + turb * freqNoise * 1.5;
-
-    // Amplitude modulation: cotton breathing
-    float ampNoise = noise(noisePos * 1.3 + 100.0);
-    float ampMod = 1.0 + turb * (ampNoise - 0.5) * 0.8;
-
-    wave = sin(modulatedArg) * ampMod;
-
-    // Soft harmonics
-    float h1 = sin(modulatedArg * 2.1 + 0.8) * 0.35;
-    float h2 = sin(modulatedArg * 3.3 + 1.6) * 0.15;
-    wave += turb * (h1 + h2);
-
-    // Cotton drift - uses fbm2 (was: fbm(..., 2))
-    float drift = fbm2(noisePos * 0.5) * 2.0 - 1.0;
-    wave += turb * drift * 0.4;
-
-    return wave / (1.0 + turb * 0.7);
-}
-
-float organicDeriv(vec2 uv, float baseArg, float turb, float time) {
-    float d = cos(baseArg);
-
-    if (turb < 0.02) return d;
+// The wave (x) and its derivative (y, for the lighting) at `baseArg`: a sine
+// with noise-modulated frequency and amplitude, soft harmonics and a drift.
+vec2 organicWave(vec2 uv, float baseArg, float turb, float time) {
+    if (turb < 0.02) return vec2(sin(baseArg), cos(baseArg));
 
     vec2 noisePos = uv * 3.0 + vec2(time * 0.3, time * 0.2);
-    float freqNoise = noise(noisePos * 0.7) * 2.0 - 1.0;
-    float modulatedArg = baseArg + turb * freqNoise * 1.5;
+    // Frequency modulation: random wave intervals.
+    float arg = baseArg + turb * (noise(noisePos * 0.7) * 2.0 - 1.0) * 1.5;
+    // Amplitude modulation: cotton breathing.
+    float ampMod = 1.0 + turb * (noise(noisePos * 1.3 + 100.0) - 0.5) * 0.8;
 
-    float ampNoise = noise(noisePos * 1.3 + 100.0);
-    float ampMod = 1.0 + turb * (ampNoise - 0.5) * 0.8;
+    float wave = sin(arg) * ampMod;
+    wave += turb * (sin(arg * 2.1 + 0.8) * 0.35 + sin(arg * 3.3 + 1.6) * 0.15);
+    wave += turb * (fbm2(noisePos * 0.5) * 2.0 - 1.0) * 0.4; // Cotton drift.
 
-    d = cos(modulatedArg) * ampMod;
-    d += turb * 0.35 * 2.1 * cos(modulatedArg * 2.1 + 0.8);
-    d += turb * 0.15 * 3.3 * cos(modulatedArg * 3.3 + 1.6);
+    float deriv = cos(arg) * ampMod;
+    deriv += turb * 0.35 * 2.1 * cos(arg * 2.1 + 0.8);
+    deriv += turb * 0.15 * 3.3 * cos(arg * 3.3 + 1.6);
 
-    return d / (1.0 + turb * 0.7);
+    return vec2(wave, deriv) / (1.0 + turb * 0.7);
 }
 
 // ─────────────────────────────────────────────────────────────────────────────
-// FABRIC
+// FABRIC AND LIGHTING
 // ─────────────────────────────────────────────────────────────────────────────
 
+// Cotton noise mixed with a woven pattern, slightly darkening the cloth.
 float fabric(vec2 uv) {
-    // Uses fbm3 (was: fbm(..., 3))
     float cotton = fbm3(uv * 8.0);
 
     vec2 t = uv * 55.0;
@@ -185,90 +153,21 @@ float fabric(vec2 uv) {
     return 1.0 - 0.08 * (1.0 - f);
 }
 
-// ─────────────────────────────────────────────────────────────────────────────
-// WAVE COMPUTATION
-// ─────────────────────────────────────────────────────────────────────────────
-
-vec3 computeWave(vec2 uv, float phase, vec2 dir, float time) {
-    float ramp = edgeRamp(uv.x);
-    float border = borderMask(uv);
-    float hem = hemMask(uv.y);
-
-    float sPhase = uSeed * TAU + uWavePhaseShift;
-    float k = TAU * uWaveFrequency;
-    float baseArg = k * dot(uv, dir) - phase + sPhase;
-
-    float localTurb = uTurbulence * mix(0.3, 1.0, hem) * mix(0.5, 1.0, border);
-
-    float wave = organicWave(uv, baseArg, localTurb, time);
-    float deriv = organicDeriv(uv, baseArg, localTurb, time);
-
-    float secOffset = noise(uv * 2.0 + time * 0.5) * 0.5;
-    float secArg = TAU * uSecondaryFreq * (uv.x + uv.y * 0.3) - phase * 1.3 + secOffset;
-    float sec = sin(secArg);
-
-    float total = uWaveAmplitude * wave + uSecondaryAmp * sec;
-
-    vec2 ortho = vec2(-dir.y, dir.x);
-    vec2 disp = ramp * total * ortho * mix(0.8, 1.0, hem);
-    disp.x *= border;
-
-    float slope = ramp * uWaveAmplitude * k * deriv * mix(0.75, 1.0, hem);
-
-    return vec3(disp, slope);
-}
-
-// ─────────────────────────────────────────────────────────────────────────────
-// UV WARPING
-// ─────────────────────────────────────────────────────────────────────────────
-
-vec2 warpUV(vec2 uv, float phase, vec2 dir, float time, out float slope) {
-    vec3 wave = computeWave(uv, phase, dir, time);
-    slope = wave.z;
-
-    float border = borderMask(uv);
-    float hem = hemMask(uv.y);
-
-    float persp = 1.0;
-    if (uPerspective > 0.0 && uLeftEdgePinned > 0.5) {
-        persp = 1.0 - uv.x * uPerspective * 0.1;
-    }
-
-    float fold = wave.y * uFoldStrength * 0.3 * persp * border * mix(0.6, 1.0, hem);
-
-    vec2 warped = vec2(uv.x + fold + wave.x, uv.y - wave.y);
-    return clamp(warped, 0.001, 0.999);
-}
-
-// ─────────────────────────────────────────────────────────────────────────────
-// LIGHTING (FIXED: shadowStrength now controls ALL darkening)
-// ─────────────────────────────────────────────────────────────────────────────
-
 vec3 light(vec3 color, float slope, vec2 uv, float phase, float fabricMask, float hem) {
     if (uShadingEnabled < 0.5) return color;
 
-    // Surface normal from wave slope
+    // Surface normal from the wave slope.
     vec3 N = normalize(vec3(-slope * 2.5, 0.0, 1.0));
 
-    // Raw diffuse: 0 (facing away) to 1 (facing light)
+    // Diffuse: 0 (facing away) to 1 (facing the light), wrapped to 0.3..1 for
+    // a softer look. The shadow strength blends from flat to fully shaded.
     float diff = max(dot(N, LIGHT), 0.0);
-
-    // Wrapped diffuse for softer look (range 0.3 to 1.0)
     float wrap = min(diff + 0.3, 1.0);
-
-    // Combined shading factor: how much to darken
-    // At shadowStrength=0: shadeFactor = 1.0 (no darkening)
-    // At shadowStrength=1: shadeFactor = wrap * extraShadow (full effect)
     float extraShadow = 1.0 - (1.0 - wrap) * mix(0.35, 0.6, hem);
-    float fullShade = wrap * extraShadow;
+    float shadeFactor = mix(1.0, wrap * extraShadow, uShadowStrength);
 
-    // THE FIX: blend between flat (1.0) and shaded based on shadowStrength
-    float shadeFactor = mix(1.0, fullShade, uShadowStrength);
-
-    // Highlights (additive, always visible if highlightStrength > 0)
+    // Highlights (additive) and a silk sheen.
     float hi = uHighlightStrength * diff * diff * 0.3 * fabricMask;
-
-    // Sheen (silk shimmer)
     float sheenArg = (uv.x + uv.y) * uSheenFrequency - phase * 0.35;
     float sheen = uSheenStrength * (0.5 + 0.5 * sin(sheenArg));
     sheen *= (1.0 - N.z) * 0.25 * fabricMask * hem;
@@ -282,20 +181,43 @@ vec3 light(vec3 color, float slope, vec2 uv, float phase, float fabricMask, floa
 
 void main() {
     vec2 uv = FlutterFragCoord().xy / uSize;
-
     vec2 dir = waveDir();
     float time = uTime * uAnimationSpeed;
     float phase = time * TAU;
+    float ramp = edgeRamp(uv.x);
+    float border = borderMask(uv);
     float hem = hemMask(uv.y);
 
-    float slope = 0.0;
-    vec2 warped = warpUV(uv, phase, dir, time, slope);
+    // 1. Wave: the organic main wave along `dir` and a secondary ripple.
+    float sPhase = uSeed * TAU + uWavePhaseShift;
+    float k = TAU * uWaveFrequency;
+    float baseArg = k * dot(uv, dir) - phase + sPhase;
+    float localTurb = uTurbulence * mix(0.3, 1.0, hem) * mix(0.5, 1.0, border);
+    vec2 wave = organicWave(uv, baseArg, localTurb, time);
 
+    float secOffset = noise(uv * 2.0 + time * 0.5) * 0.5;
+    float secArg = TAU * uSecondaryFreq * (uv.x + uv.y * 0.3) - phase * 1.3 + secOffset;
+    float total = uWaveAmplitude * wave.x + uSecondaryAmp * sin(secArg);
+
+    // 2. Displacement across the wave, damped at pinned edges and hems, plus
+    // a fold that pulls the cloth sideways.
+    vec2 ortho = vec2(-dir.y, dir.x);
+    vec2 disp = ramp * total * ortho * mix(0.8, 1.0, hem);
+    disp.x *= border;
+    float slope = ramp * uWaveAmplitude * k * wave.y * mix(0.75, 1.0, hem);
+
+    float persp = uPerspective > 0.0 && uLeftEdgePinned > 0.5
+        ? 1.0 - uv.x * uPerspective * 0.1
+        : 1.0;
+    float fold = disp.y * uFoldStrength * 0.3 * persp * border * mix(0.6, 1.0, hem);
+    vec2 warped = clamp(vec2(uv.x + fold + disp.x, uv.y - disp.y), 0.001, 0.999);
+
+    // 3. Color: samples are premultiplied, so the fabric and the light are
+    // applied to the straight color, which is premultiplied once at the end.
     vec4 tex = texture(uTexture, warped);
-    // Samples are premultiplied: light the straight color, premultiply once.
     if (tex.a > 0.0) tex.rgb /= tex.a;
 
-    // Fabric texture with luminance protection
+    // Fabric texture, which spares the brightest colors.
     float fabricMask = 1.0;
     if (uFabricVisibility > 0.01) {
         float f = fabric(warped);
@@ -304,10 +226,8 @@ void main() {
         tex.rgb *= mix(mix(1.0, f, uFabricVisibility), 1.0, protection);
         fabricMask = mix(0.4, 0.95, f);
     }
-
     fabricMask *= mix(0.5, 1.0, hem);
 
     vec3 lit = light(tex.rgb, slope, uv, phase, fabricMask, hem);
-
     fragColor = vec4(lit * tex.a, tex.a);
 }

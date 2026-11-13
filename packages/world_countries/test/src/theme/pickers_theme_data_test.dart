@@ -131,6 +131,17 @@ void main() => group("$PickersThemeData", () {
     expect(copy.physics, physics);
   });
 
+  test("copyWith updates and preserves itemExtentBuilder", () {
+    final copy = original.copyWith(
+      itemExtentBuilder: WidgetTesterExtension.itemExtent,
+    );
+    expect(copy.itemExtentBuilder, WidgetTesterExtension.itemExtent);
+    expect(copy.copyWith().itemExtentBuilder, WidgetTesterExtension.itemExtent);
+    expect(copy, isNot(original));
+    expect(copy.copyWith(), copy);
+    expect(copy.copyWith().hashCode, copy.hashCode);
+  });
+
   test("copyWith resets cacheExtent to null with negative value", () {
     expect(original.cacheExtent, isNotNull);
     final copy = original.copyWith(cacheExtent: -1);
