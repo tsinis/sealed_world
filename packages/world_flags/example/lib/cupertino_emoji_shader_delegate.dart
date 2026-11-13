@@ -1,63 +1,56 @@
 import "package:world_flags/world_flags.dart";
 
-/// A static, Apple emoji-style flag shader delegate. For example of the
-/// animated variant, see [WavedFlagShaderDelegate].
+/// A static, Apple emoji-style flag shader delegate. For an animated
+/// delegate, see [WavedFlagShaderDelegate].
 ///
-/// This delegate renders flags with an Apple-inspired curved shape,
-/// asymmetric gloss gradient, and soft inner bevel — matching the
-/// aesthetic of iOS country flag emojis.
+/// This delegate renders flags like the iOS emoji flags: a gently waving
+/// cloth (a cosine wave), brightest in the middle (a sine across the width),
+/// with a soft darker outline and an inner shadow (bevel) along the bottom and
+/// left edges. To compare it with the emoji of the
+/// platform, run `flutter run -t lib/emoji_comparison_main.dart`.
 ///
 /// ## Usage
 ///
-/// For shared delegate across multiple widgets (recommended for ListView):
+/// Share one delegate across multiple widgets (recommended for lists):
 ///
 /// ```dart
-/// import "package:sealed_countries/sealed_countries.dart";
-/// import "package:world_flags/src/ui/effects/flag_shader_surface.dart";
+/// import "package:world_flags/world_flags.dart";
 /// import "package:world_flags_example/cupertino_emoji_shader_delegate.dart";
 ///
 /// void main() {
 ///   final delegate = CupertinoEmojiShaderDelegate();
-///   final surface = FlagShaderSurface(
-///     const CountryUsa(),
-///     shader: delegate,
-///   );
-///   assert(surface.shader != null);
+///   final surface = FlagShaderSurface(const CountryUsa(), shader: delegate);
+///   assert(surface.shader != null, "The shared delegate is used");
 /// }
 /// ```
 ///
-/// For single-use:
+/// Or let every surface create (and dispose) its own one:
 ///
 /// ```dart
-/// import "package:sealed_countries/sealed_countries.dart";
-/// import "package:world_flags/src/ui/effects/flag_shader_surface.dart";
+/// import "package:world_flags/world_flags.dart";
 /// import "package:world_flags_example/cupertino_emoji_shader_delegate.dart";
 ///
 /// void main() {
 ///   final surface = FlagShaderSurface(
 ///     const CountryUsa(),
-///     delegateBuilder: (vsync, options, properties) =>
-///         CupertinoEmojiShaderDelegate(),
+///     delegateBuilder: (_, _, _) => CupertinoEmojiShaderDelegate(),
 ///   );
-///   assert(surface.delegateBuilder != null);
+///   assert(surface.delegateBuilder != null, "A delegate per surface");
 /// }
 /// ```
 ///
 /// ## How This Works
 ///
-/// This class extends [StaticFlagShaderDelegate], which handles all the
-/// boilerplate:
-/// - Shader program loading and caching.
-/// - Safe disposal and double-dispose prevention.
-/// - The standard `paintWithShader` implementation.
-///
-/// Since the Cupertino emoji shader only uses the standard uniforms (`uSize`
-/// and `uTexture`), no [configureShader] override is needed
-/// - the base class handles everything.
+/// [StaticFlagShaderDelegate] loads and caches the shader program, guards
+/// against a double dispose, and paints the flag with the shader. The
+/// Cupertino emoji shader only uses the standard uniforms (`uSize` and
+/// `uTexture`), so this delegate doesn't override `configureShader`.
 class CupertinoEmojiShaderDelegate extends StaticFlagShaderDelegate {
+  /// Creates a delegate painting with the Cupertino emoji flag shader.
   new() : super(assetPath: _assetPath);
+
   static const _assetPath = "shaders/cupertino_emoji_flag.frag";
 
-  /// Pre-warms the shader program for faster first render on Skia backend.
+  /// Pre-warms the shader program for a faster first render.
   static Future<void> warmUp() => StaticFlagShaderDelegate.warmUp(_assetPath);
 }

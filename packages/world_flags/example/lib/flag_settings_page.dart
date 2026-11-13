@@ -3,9 +3,21 @@
 
 import "package:flutter/foundation.dart" show kDebugMode;
 import "package:flutter/services.dart" show Clipboard, ClipboardData;
-import "package:material_ui/material_ui.dart";
+import "package:flutter/widgets.dart";
 import "package:meta/meta.dart";
 import "package:world_flags/world_flags.dart";
+
+import "theme/app_colors.dart";
+import "theme/app_page_route.dart";
+import "theme/app_text.dart";
+import "widgets/app_icon_button.dart";
+import "widgets/app_icon_shape.dart";
+import "widgets/app_slider.dart";
+import "widgets/app_switch.dart";
+import "widgets/app_toast.dart";
+import "widgets/app_top_bar.dart";
+import "widgets/line_divider.dart";
+import "widgets/list_row.dart";
 
 /// A full-screen page for configuring and previewing flag shader options.
 class FlagSettingsPage extends StatefulWidget {
@@ -21,7 +33,7 @@ class FlagSettingsPage extends StatefulWidget {
     if (iso is! WorldCountry) return;
 
     await Navigator.of(context).push<void>(
-      MaterialPageRoute(
+      AppPageRoute(
         builder: (_) =>
             FlagSettingsPage(aspectRatio: aspectRatio, country: iso),
       ),
@@ -42,11 +54,30 @@ class _FlagSettingsPageState extends State<FlagSettingsPage> {
   final _options = ValueNotifier<FlagShaderOptions>(const FlagShaderOptions());
   final _debugCompareMode = ValueNotifier<bool>(false);
   final _opacity = ValueNotifier<double>(1);
+  final _scrollController = ScrollController();
+  bool _isScrolledUnder = false;
 
   WorldCountry get _country => widget.country;
 
   @override
+  void initState() {
+    super.initState();
+    _scrollController.addListener(_handleScroll);
+  }
+
+  /// The top bar is tinted while the settings are scrolled under it.
+  void _handleScroll() {
+    final isScrolledUnder = _scrollController.offset > 0;
+    if (isScrolledUnder != _isScrolledUnder) {
+      setState(() => _isScrolledUnder = isScrolledUnder);
+    }
+  }
+
+  @override
   void dispose() {
+    _scrollController
+      ..removeListener(_handleScroll)
+      ..dispose();
     _options.dispose();
     _debugCompareMode.dispose();
     _opacity.dispose();
@@ -54,53 +85,95 @@ class _FlagSettingsPageState extends State<FlagSettingsPage> {
   }
 
   @override
-  Widget build(BuildContext context) => Scaffold(
-    appBar: AppBar(
-      automaticallyImplyLeading: false,
-      title: Semantics(
-        header: true,
-        child: Text("${_country.internationalName} (${_country.code})"),
-      ),
-      actions: [
-        IconButton(
-          tooltip: "close",
-          icon: const Icon(Icons.close),
-          onPressed: Navigator.of(context).pop,
-        ),
-      ],
-    ),
-    body: Column(
+  Widget build(BuildContext context) => ColoredBox(
+    color: AppColors.surface,
+    child: Column(
       children: [
-        // Fixed flag preview at top (not scrollable).
-        _FlagPreview(
-          country: _country,
-          aspectRatio: widget.aspectRatio,
-          options: _options,
-          debugCompareMode: _debugCompareMode,
-          opacity: _opacity,
+        AppTopBar(
+          title: Text("${_country.internationalName} (${_country.code})"),
+          isScrolledUnder: _isScrolledUnder,
+          actions: [
+            AppIconButton(
+              shape: AppIconShape.close,
+              tooltip: "close",
+              onPressed: Navigator.of(context).pop,
+            ),
+          ],
         ),
-        // Scrollable settings below.
         Expanded(
-          child: ListView(
-            padding: EdgeInsets.zero,
-            children: [
-              _SettingsPanel(
-                options: _options,
+          child: MediaQuery.removePadding(
+            context: context,
+            removeTop: true,
+            child: _ResponsiveLayout(
+              // Fixed flag preview (not scrollable).
+              preview: _FlagPreview(
+                country: _country,
                 aspectRatio: widget.aspectRatio,
+                options: _options,
                 debugCompareMode: _debugCompareMode,
                 opacity: _opacity,
-                country: _country,
               ),
-              _CodeSnippetSection(
-                options: _options,
-                aspectRatio: widget.aspectRatio,
+              // Scrollable settings.
+              settings: ListView(
+                controller: _scrollController,
+                padding: EdgeInsets.zero,
+                children: [
+                  _SettingsPanel(
+                    options: _options,
+                    aspectRatio: widget.aspectRatio,
+                    debugCompareMode: _debugCompareMode,
+                    opacity: _opacity,
+                    country: _country,
+                  ),
+                  _CodeSnippetSection(
+                    options: _options,
+                    aspectRatio: widget.aspectRatio,
+                  ),
+                ],
               ),
-            ],
+            ),
           ),
         ),
       ],
     ),
   );
+}
+
+/// Places the preview above the settings, or next to them on a wide (i.e.
+/// landscape) screen, which has no height for a preview above the settings.
+class _ResponsiveLayout extends StatelessWidget {
+  const new({required this.preview, required this.settings});
+
+  final Widget preview;
+  final Widget settings;
+
+  Widget _handleLayout(BuildContext context, BoxConstraints constraints) {
+    final isWide = constraints.maxWidth > constraints.maxHeight;
+
+    return Flex(
+      direction: isWide ? Axis.horizontal : Axis.vertical,
+      crossAxisAlignment: CrossAxisAlignment.stretch,
+      children: [
+        if (isWide)
+          Expanded(child: SafeArea(top: false, right: false, child: preview))
+        else
+          preview,
+        Expanded(
+          // On a wide screen the preview is next to the left inset, and the
+          // settings next to the right one.
+          child: SafeArea(
+            top: false,
+            bottom: false,
+            left: !isWide,
+            child: settings,
+          ),
+        ),
+      ],
+    );
+  }
+
+  @override
+  Widget build(BuildContext context) => LayoutBuilder(builder: _handleLayout);
 }
 
 class _FlagPreview extends StatelessWidget {
@@ -224,47 +297,43 @@ class _SettingsPanel extends StatelessWidget {
   final WorldCountry country;
 
   @override
-  Widget build(BuildContext context) {
-    final theme = Theme.of(context);
-
-    return ValueListenableBuilder(
-      valueListenable: options,
-      builder: (_, opts, _) => Column(
-        crossAxisAlignment: CrossAxisAlignment.start,
-        mainAxisSize: MainAxisSize.min,
-        children: [
-          if (kDebugMode) ...[
-            _SectionHeader(title: "Debug", theme: theme),
-            _DebugCompareSection(
-              debugCompareMode: debugCompareMode,
-              opacity: opacity,
-            ),
-            const Divider(),
-          ],
-          _SectionHeader(title: "Aspect Ratio", theme: theme),
-          _AspectRatioSlider(aspectRatio: aspectRatio, country: country),
-          const Divider(),
-          _SectionHeader(title: "Animation", theme: theme),
-          ..._AnimationControls(options: options, opts: opts).build(),
-          const Divider(),
-          _SectionHeader(title: "Wave", theme: theme),
-          ..._WaveControls(options: options, opts: opts).build(),
-          const Divider(),
-          _SectionHeader(title: "Wave Direction", theme: theme),
-          ..._WaveDirectionControls(options: options, opts: opts).build(),
-          const Divider(),
-          _SectionHeader(title: "Edge Pinning", theme: theme),
-          ..._EdgePinningControls(options: options, opts: opts).build(),
-          const Divider(),
-          _SectionHeader(title: "Shading", theme: theme),
-          ..._ShadingControls(options: options, opts: opts).build(),
-          const Divider(),
-          _SectionHeader(title: "Other", theme: theme),
-          ..._OtherControls(options: options, opts: opts).build(),
+  Widget build(BuildContext context) => ValueListenableBuilder(
+    valueListenable: options,
+    builder: (_, opts, _) => Column(
+      crossAxisAlignment: CrossAxisAlignment.start,
+      mainAxisSize: MainAxisSize.min,
+      children: [
+        if (kDebugMode) ...[
+          const _SectionHeader(title: "Debug"),
+          _DebugCompareSection(
+            debugCompareMode: debugCompareMode,
+            opacity: opacity,
+          ),
+          const LineDivider(),
         ],
-      ),
-    );
-  }
+        const _SectionHeader(title: "Aspect Ratio"),
+        _AspectRatioSlider(aspectRatio: aspectRatio, country: country),
+        const LineDivider(),
+        const _SectionHeader(title: "Animation"),
+        ..._AnimationControls(options: options, opts: opts).build(),
+        const LineDivider(),
+        const _SectionHeader(title: "Wave"),
+        ..._WaveControls(options: options, opts: opts).build(),
+        const LineDivider(),
+        const _SectionHeader(title: "Wave Direction"),
+        ..._WaveDirectionControls(options: options, opts: opts).build(),
+        const LineDivider(),
+        const _SectionHeader(title: "Edge Pinning"),
+        ..._EdgePinningControls(options: options, opts: opts).build(),
+        const LineDivider(),
+        const _SectionHeader(title: "Shading"),
+        ..._ShadingControls(options: options, opts: opts).build(),
+        const LineDivider(),
+        const _SectionHeader(title: "Other"),
+        ..._OtherControls(options: options, opts: opts).build(),
+      ],
+    ),
+  );
 }
 
 class _AnimationControls {
@@ -553,18 +622,17 @@ class _OtherControls {
 }
 
 class _SectionHeader extends StatelessWidget {
-  const new({required this.title, required this.theme});
+  const new({required this.title});
 
   final String title;
-  final ThemeData theme;
 
   @override
   Widget build(BuildContext context) => Padding(
     padding: const EdgeInsets.only(top: 12, bottom: 4, left: 16),
     child: Text(
       title,
-      style: theme.textTheme.titleSmall?.copyWith(
-        color: theme.colorScheme.primary,
+      style: AppText.titleSmall.copyWith(
+        color: AppColors.primary,
         fontWeight: FontWeight.bold,
       ),
     ),
@@ -583,12 +651,11 @@ class _DebugCompareSection extends StatelessWidget {
     builder: (_, isCompareMode, _) => Column(
       mainAxisSize: MainAxisSize.min,
       children: [
-        SwitchListTile(
-          title: const Text("Compare with PNG Original"),
-          subtitle: const Text("Shows BasicFlag over original PNG."),
+        _OptionSwitch(
+          name: "Compare with PNG Original",
+          description: "Shows BasicFlag over original PNG.",
           value: isCompareMode,
           onChanged: (val) => debugCompareMode.value = val,
-          dense: true,
         ),
         if (isCompareMode)
           ValueListenableBuilder(
@@ -622,14 +689,14 @@ class _AspectRatioSlider extends StatelessWidget {
   @override
   Widget build(BuildContext context) => ValueListenableBuilder(
     valueListenable: aspectRatio,
-    builder: (_, ratio, _) => ListTile(
+    builder: (_, ratio, _) => ListRow(
       title: Text("aspectRatio: ${_formatValue(ratio ?? _originalRatio)}"),
       subtitle: Column(
         crossAxisAlignment: CrossAxisAlignment.start,
         children: [
           const Text("Width to height ratio of the flag."),
-          Slider(
-            semanticFormatterCallback: (value) => "ratio: $value",
+          AppSlider(
+            semanticValueBuilder: (value) => "ratio: $value",
             value: ratio ?? _originalRatio,
             secondaryTrackValue: _originalRatio,
             onChanged: (newRatio) => aspectRatio.value = newRatio,
@@ -640,8 +707,8 @@ class _AspectRatioSlider extends StatelessWidget {
       ),
       trailing: ratio == null
           ? null
-          : IconButton(
-              icon: const Icon(Icons.refresh),
+          : AppIconButton(
+              shape: AppIconShape.refresh,
               tooltip: "Reset to original",
               onPressed: () => aspectRatio.value = null,
             ),
@@ -670,16 +737,16 @@ class _OptionSlider extends StatelessWidget {
   final ValueChanged<double> onChanged;
 
   @override
-  Widget build(BuildContext context) => ListTile(
+  Widget build(BuildContext context) => ListRow(
     title: Text("$name: ${value.toStringAsFixed(3)}"),
     subtitle: Column(
       crossAxisAlignment: CrossAxisAlignment.start,
       children: [
         Text(description),
-        Slider(
+        AppSlider(
           value: value.clamp(min, max),
           secondaryTrackValue: defaultValue,
-          semanticFormatterCallback: (val) => val.toString(),
+          semanticValueBuilder: (val) => val.toString(),
           onChanged: onChanged,
           min: min,
           max: max,
@@ -704,11 +771,15 @@ class _OptionSwitch extends StatelessWidget {
   final ValueChanged<bool> onChanged;
 
   @override
-  Widget build(BuildContext context) => SwitchListTile(
+  Widget build(BuildContext context) => ListRow(
     title: Text(name),
     subtitle: Text(description),
-    value: value,
-    onChanged: onChanged,
+    // One focus stop per row, like Material's SwitchListTile.
+    trailing: ExcludeFocus(
+      child: AppSwitch(value: value, onChanged: onChanged),
+    ),
+    onTap: () => onChanged(!value),
+    toggled: value,
     dense: true,
   );
 }
@@ -720,63 +791,59 @@ class _CodeSnippetSection extends StatelessWidget {
   final ValueNotifier<double?> aspectRatio;
 
   @override
-  Widget build(BuildContext context) {
-    final theme = Theme.of(context);
+  Widget build(BuildContext context) => Padding(
+    padding: const EdgeInsets.all(16),
+    child: ValueListenableBuilder(
+      valueListenable: options,
+      builder: (_, opts, _) => ValueListenableBuilder(
+        valueListenable: aspectRatio,
+        builder: (bc, ratio, _) {
+          final snippet = _SnippetGenerator.generate(opts, ratio);
 
-    return Padding(
-      padding: const EdgeInsets.all(16),
-      child: ValueListenableBuilder(
-        valueListenable: options,
-        builder: (_, opts, _) => ValueListenableBuilder(
-          valueListenable: aspectRatio,
-          builder: (bc, ratio, _) {
-            final snippet = _SnippetGenerator.generate(opts, ratio);
-
-            return Stack(
-              children: [
-                Container(
-                  width: double.infinity,
-                  padding: const EdgeInsets.all(12),
-                  decoration: BoxDecoration(
-                    color: theme.colorScheme.surfaceContainerLow,
-                    borderRadius: const BorderRadius.all(Radius.circular(8)),
-                    border: Border.all(color: theme.dividerColor),
+          return Stack(
+            children: [
+              Container(
+                width: double.infinity,
+                padding: const EdgeInsets.all(12),
+                decoration: const BoxDecoration(
+                  color: AppColors.surfaceContainerLow,
+                  borderRadius: BorderRadius.all(Radius.circular(8)),
+                  border: Border.fromBorderSide(
+                    BorderSide(color: AppColors.outline),
                   ),
-                  child: SelectableText(
+                ),
+                child: SelectableRegion(
+                  selectionControls: emptyTextSelectionControls,
+                  child: Text(
                     snippet,
-                    style: theme.textTheme.bodySmall?.copyWith(
+                    style: AppText.bodySmall.copyWith(
                       fontFamily: "monospace",
                       fontSize: 11,
                     ),
                   ),
                 ),
-                Positioned(
-                  top: 4,
-                  right: 4,
-                  child: IconButton(
-                    icon: const Icon(Icons.copy, size: 18),
-                    tooltip: "Copy to clipboard",
-                    // ignore: prefer-extracting-callbacks, for simplicity.
-                    onPressed: () {
-                      // ignore: avoid-future-ignore, we don't care if it fails.
-                      Clipboard.setData(ClipboardData(text: snippet)).ignore();
-
-                      ScaffoldMessenger.of(bc).showSnackBar(
-                        const SnackBar(
-                          content: Text("Options copied to clipboard"),
-                          duration: Duration(seconds: 2),
-                        ),
-                      );
-                    },
-                  ),
+              ),
+              Positioned(
+                top: 4,
+                right: 4,
+                child: AppIconButton(
+                  shape: AppIconShape.copy,
+                  iconSize: 18,
+                  tooltip: "Copy to clipboard",
+                  // ignore: prefer-extracting-callbacks, for simplicity.
+                  onPressed: () {
+                    // ignore: avoid-future-ignore, we don't care if it fails.
+                    Clipboard.setData(ClipboardData(text: snippet)).ignore();
+                    AppToast.show(bc, "Options copied to clipboard");
+                  },
                 ),
-              ],
-            );
-          },
-        ),
+              ),
+            ],
+          );
+        },
       ),
-    );
-  }
+    ),
+  );
 }
 
 /// Generates the FlagShaderOptions code snippet for copy-paste.

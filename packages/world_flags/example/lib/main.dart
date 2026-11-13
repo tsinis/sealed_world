@@ -1,8 +1,14 @@
-import "package:material_ui/material_ui.dart";
+import "package:flutter/widgets.dart";
 import "package:world_flags/world_flags.dart";
 
 import "cupertino_emoji_shader_delegate.dart";
 import "flag_settings_page.dart";
+import "theme/app_colors.dart";
+import "theme/app_page_route.dart";
+import "theme/app_scroll_behavior.dart";
+import "theme/app_text.dart";
+import "widgets/line_divider.dart";
+import "widgets/list_row.dart";
 
 /// Run `flutter run` for the simple list, or add `--dart-define=isComplex=true`
 /// to enable shader previews. `isComplex` defaults to `false` when omitted.
@@ -20,9 +26,20 @@ void main() async {
   );
 
   runApp(
-    const FlagTheme(
+    FlagTheme(
       data: flagTheme,
-      child: MaterialApp(home: Main(isSimpleExample: !isComplexExample)),
+      // The example uses only the widgets layer, no design library.
+      child: WidgetsApp(
+        color: AppColors.primary,
+        textStyle: AppText.bodyMedium,
+        pageRouteBuilder: <T>(settings, builder) =>
+            AppPageRoute<T>(settings: settings, builder: builder),
+        builder: (_, child) => ScrollConfiguration(
+          behavior: const AppScrollBehavior(),
+          child: child ?? const SizedBox.shrink(),
+        ),
+        home: const Main(isSimpleExample: !isComplexExample),
+      ),
     ),
   );
 }
@@ -37,8 +54,7 @@ class Main extends StatefulWidget {
 }
 
 class _MainState extends State<Main> {
-  // ignore: specify_nonobvious_property_types, a double as it's divided by 2.0.
-  static const _size = kMinInteractiveDimension / 2.0;
+  static const _size = 24.0; // Half of the minimal interactive dimension.
   static const _items = <IsoTranslated, BasicFlag>{
     ...smallSimplifiedFlagsMap,
     ...smallSimplifiedCurrencyFlagsMap,
@@ -59,14 +75,14 @@ class _MainState extends State<Main> {
   }
 
   @override
-  Widget build(BuildContext context) => Material(
-    color: Theme.of(context).scaffoldBackgroundColor,
+  Widget build(BuildContext context) => ColoredBox(
+    color: AppColors.surface,
     child: ListView.separated(
       itemBuilder: (bc, index) {
         final item = _items.keys.elementAt(index);
         final isSimplified = _items[item]?.properties.isSimplified ?? true;
 
-        return ListTile(
+        return ListRow(
           enabled: !isSimplified,
           title: Text(item.internationalName),
           subtitle: Text("${item.namesNative?.first}"),
@@ -87,10 +103,8 @@ class _MainState extends State<Main> {
           ),
         );
       },
-      separatorBuilder: (bc, _) => Divider(
-        color: Theme.of(bc).disabledColor.withValues(alpha: 0.1),
-        height: 1,
-      ),
+      separatorBuilder: (_, _) =>
+          const LineDivider(height: 1, color: AppColors.separator),
       itemCount: _items.length,
       clipBehavior: Clip.none,
     ),
