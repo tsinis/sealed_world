@@ -636,6 +636,7 @@ linter:
     eol_at_end_of_file: true
     exhaustive_cases: true
     file_names: true
+    future_sync_value: true
     hash_and_equals: true
     implementation_imports: true
     implicit_call_tearoffs: true

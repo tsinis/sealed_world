@@ -34,10 +34,11 @@ Each flag is a vector-based `CustomPainter`, ensuring precise, scalable, and stu
 
 ## Getting Started
 
-To use this package, you will need a stable Flutter. Add `world_flags` as a dependency in your `pubspec.yaml` file.
+To use this package, you will need a stable Flutter (3.50 or newer). Add `world_flags` as a dependency in your `pubspec.yaml` file. The example below also uses [material_ui](https://pub.dev/packages/material_ui), as Material is no longer a part of Flutter SDK.
 
 ```yaml
 dependencies:
+  material_ui: any
   world_flags: any
 ```
 
@@ -46,7 +47,7 @@ dependencies:
 All you need is a compile-time [WorldCountry](https://github.com/tsinis/sealed_world/tree/main/packages/sealed_countries#usage) instance (either create with factories of that class or just pick some specific one, i.e. `const CountryDeu()`). Use it in the `CountryFlag` widget. For example:
 
 ```dart
-import "package:flutter/material.dart";
+import "package:material_ui/material_ui.dart";
 import "package:world_flags/world_flags.dart";
 import "cupertino_emoji_shader_delegate.dart";
 

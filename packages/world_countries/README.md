@@ -56,10 +56,11 @@ To preview the demo from the example, you can visit [this web page](https://tsin
 
 ### Getting started
 
-To use this package, you will need a stable Flutter SDK. Add `world_countries` as a dependency in your `pubspec.yaml` file.
+To use this package, you will need a stable Flutter SDK (3.50 or newer). Add `world_countries` as a dependency in your `pubspec.yaml` file. The examples below also use [material_ui](https://pub.dev/packages/material_ui), as Material is no longer a part of Flutter SDK.
 
 ```yaml
 dependencies:
+  material_ui: any
   world_countries: any
 ```
 
@@ -93,7 +94,7 @@ Then you can also extract this delegate data from the context via `context.maybe
 ```dart
 import "dart:async" show unawaited;
 
-import "package:flutter/material.dart";
+import "package:material_ui/material_ui.dart";
 import "package:flutter_localizations/flutter_localizations.dart";
 import "package:world_countries/world_countries.dart";
 

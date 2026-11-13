@@ -18,7 +18,7 @@ Guidelines and examples for displaying, searching, and selecting countries, phon
 Add the package to the Flutter project:
 
 ```console
-$ flutter pub add world_countries
+$ flutter pub add world_countries material_ui
 ```
 
 Then import the library:
@@ -163,7 +163,7 @@ The package re-exports `package:world_flags/world_flags.dart` and the entire `se
 ### 1. Modal Bottom Sheet Country Picker
 
 ```dart
-import 'package:flutter/material.dart';
+import 'package:material_ui/material_ui.dart';
 import 'package:world_countries/world_countries.dart';
 
 class CountryPickerTile extends StatefulWidget {
@@ -196,7 +196,7 @@ class _CountryPickerTileState extends State<CountryPickerTile> {
 ### 2. Phone Code Picker for Contact Forms
 
 ```dart
-import 'package:flutter/material.dart';
+import 'package:material_ui/material_ui.dart';
 import 'package:world_countries/world_countries.dart';
 
 class PhoneInputField extends StatefulWidget {
@@ -242,7 +242,7 @@ class _PhoneInputFieldState extends State<PhoneInputField> {
 ### 3. Material 3 SearchAnchor Integration
 
 ```dart
-import 'package:flutter/material.dart';
+import 'package:material_ui/material_ui.dart';
 import 'package:world_countries/world_countries.dart';
 
 class CountrySearchField extends StatelessWidget {
@@ -268,7 +268,7 @@ class CountrySearchField extends StatelessWidget {
 ### 4. Dual-Flag Language and Currency Pickers
 
 ```dart
-import 'package:flutter/material.dart';
+import 'package:material_ui/material_ui.dart';
 import 'package:world_countries/world_countries.dart';
 
 // Pickers are scrollable viewports: inside a Column each one needs a bounded
@@ -303,7 +303,7 @@ Widget buildDualFlagPickers(BuildContext context) => Column(
 ### 5. App Setup with TypedLocaleDelegate and Theming
 
 ```dart
-import 'package:flutter/material.dart';
+import 'package:material_ui/material_ui.dart';
 import 'package:flutter_localizations/flutter_localizations.dart';
 import 'package:world_countries/world_countries.dart';
 

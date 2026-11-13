@@ -17,7 +17,7 @@ Guidelines and examples for displaying and styling declaratively drawn, asset-fr
 Add the package to the Flutter project:
 
 ```console
-$ flutter pub add world_flags
+$ flutter pub add world_flags material_ui
 ```
 
 Then import the library:
@@ -94,7 +94,7 @@ The package requires no PNG, SVG, or asset bundles — every flag is rendered as
 ### 1. Basic Country Flag
 
 ```dart
-import 'package:flutter/material.dart';
+import 'package:material_ui/material_ui.dart';
 import 'package:world_flags/world_flags.dart';
 
 class FlagTile extends StatelessWidget {
@@ -114,7 +114,7 @@ class FlagTile extends StatelessWidget {
 ### 2. Rounded and Circular Flags
 
 ```dart
-import 'package:flutter/material.dart';
+import 'package:material_ui/material_ui.dart';
 import 'package:world_flags/world_flags.dart';
 
 Widget buildFlagBadges() => Row(
@@ -142,7 +142,7 @@ Widget buildFlagBadges() => Row(
 ### 3. Language and Currency Dual Flags
 
 ```dart
-import 'package:flutter/material.dart';
+import 'package:material_ui/material_ui.dart';
 import 'package:world_flags/world_flags.dart';
 
 Widget buildLocaleSelectors() => Row(
@@ -165,7 +165,7 @@ Widget buildLocaleSelectors() => Row(
 ### 4. Overriding Aspect Ratios for Uniform Grids
 
 ```dart
-import 'package:flutter/material.dart';
+import 'package:material_ui/material_ui.dart';
 import 'package:world_flags/world_flags.dart';
 
 class FlagGrid extends StatelessWidget {
@@ -203,7 +203,7 @@ class FlagGrid extends StatelessWidget {
 ### 5. App-Wide Flag Theming
 
 ```dart
-import 'package:flutter/material.dart';
+import 'package:material_ui/material_ui.dart';
 import 'package:world_flags/world_flags.dart';
 
 Widget buildApp() => FlagTheme(

@@ -1,4 +1,4 @@
-version: 3.6.0
+version: 3.7.0
 name: world_flags_example
 description: A world_flags package example application.
 publish_to: none
@@ -6,13 +6,12 @@ publish_to: none
 resolution: workspace
 
 environment:
-  sdk: ^3.13.5
+  sdk: ^3.14.0
 
 dependencies:
   flutter:
     sdk: flutter
-  material_ui: any
-  meta: any
+  meta: any # Constrained by Flutter SDK.
   world_flags:
     path: ../
 
@@ -25,6 +24,5 @@ dev_dependencies:
     sdk: flutter
 
 flutter:
-  uses-material-design: true
   shaders:
     - shaders/cupertino_emoji_flag.frag
