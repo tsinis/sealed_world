@@ -44,7 +44,7 @@ class _SearchableIndexedListViewBuilderState<T extends Object, W extends Widget>
       reverse: widget.reverse,
       scrollController: widget.scrollController,
       separator: widget.separator,
-      showHeader: widget.showHeader,
+      showHeader: shouldShowHeader,
       shrinkWrap: widget.shrinkWrap,
       sort: widget.sort,
       textBaseline: widget.textBaseline,

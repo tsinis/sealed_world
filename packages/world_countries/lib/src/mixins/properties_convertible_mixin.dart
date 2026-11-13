@@ -35,7 +35,7 @@ mixin PropertiesConvertibleMixin<T extends Object, W extends Widget>
   List<T> sortedItems(Iterable<T> items) {
     final compare = sort;
     if (compare == null) {
-      return items is List<T> ? items : List.unmodifiable(items);
+      return items is List<T> ? items : List.unmodifiableOf(items);
     }
     if (items is List<T> && identical(_sortedBy[items], compare)) return items;
 

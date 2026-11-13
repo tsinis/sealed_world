@@ -124,7 +124,7 @@ class PhoneCodePicker extends CountryPicker {
 
   /// Digits are allowed, so that a country can be found by its phone code.
   /// Special characters are not, so a typed `+` of the code is left out.
-  static final _phoneCodeFormatters = List<TextInputFormatter>.unmodifiable([
+  static final _phoneCodeFormatters = List<TextInputFormatter>.unmodifiableOf([
     FilteringTextInputFormatter.deny(RegExp(NameTextInput.specialCharsPattern)),
   ]);
 

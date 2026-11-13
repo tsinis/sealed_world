@@ -58,5 +58,5 @@ extension DurationExtension on Duration {
   ///   await const Duration(seconds: 1).sleep;
   /// }
   /// ```
-  Future<void> get sleep => delayed<void>();
+  Future<void> get sleep => Future.pause(this);
 }

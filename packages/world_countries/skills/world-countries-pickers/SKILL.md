@@ -304,7 +304,6 @@ Widget buildDualFlagPickers(BuildContext context) => Column(
 
 ```dart
 import 'package:material_ui/material_ui.dart';
-import 'package:flutter_localizations/flutter_localizations.dart';
 import 'package:world_countries/world_countries.dart';
 
 class MyApp extends StatelessWidget {

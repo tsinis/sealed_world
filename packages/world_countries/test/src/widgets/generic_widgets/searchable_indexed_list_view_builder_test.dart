@@ -101,6 +101,21 @@ void main() => group("$SearchableIndexedListViewBuilder", () {
     expect(find.text("header"), findsNothing);
   });
 
+  testWidgets("short list without a theme hides the header", (tester) async {
+    await tester.pumpWidgetsApp(
+      const SearchableIndexedListViewBuilder([1], header: Text("header")),
+    );
+    expect(find.text("header"), findsNothing);
+  });
+
+  testWidgets("long list without a theme shows the header", (tester) async {
+    const items = [1, 2, 3, 4, 5, 6];
+    await tester.pumpWidgetsApp(
+      const SearchableIndexedListViewBuilder(items, header: Text("header")),
+    );
+    expect(find.text("header"), findsOneWidget);
+  });
+
   testWidgets("shown search bar wins over the theme", (tester) async {
     await tester.pumpMaterialApp(
       const SearchableIndexedListViewBuilder(
