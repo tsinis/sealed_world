@@ -181,7 +181,7 @@ final class BadgeArtwork {
   List<int> _layerWindings() {
     final cached = _windings;
     if (cached != null) return cached;
-    final windings = List<int>.unmodifiable(
+    final windings = List<int>.unmodifiableOf(
       _layers.map((layer) => _windingOf(layer.geometry)),
     );
     _windings = windings;

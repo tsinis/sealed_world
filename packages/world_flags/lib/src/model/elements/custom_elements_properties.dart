@@ -12,7 +12,7 @@ import "elements_properties.dart";
 /// Example usage:
 /// ```dart
 /// import 'package:world_flags/world_flags.dart';
-/// import 'package:flutter/material.dart';
+/// import 'package:material_ui/material_ui.dart';
 ///
 /// void main() {
 ///   const customProps = CustomElementsProperties(

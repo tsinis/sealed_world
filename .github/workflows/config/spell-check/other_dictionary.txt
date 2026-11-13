@@ -5,6 +5,7 @@ aabbcc
 aabbcx
 AARRGGBB
 Abbcc
+Adwaita
 alphae
 alphaen
 americký
@@ -19,6 +20,7 @@ biblio
 Bienvenido
 Bienvenue
 bouvet
+Cantarell
 checo
 cldr
 Dhivehi
@@ -48,11 +50,14 @@ jazyk
 Kitts
 lanna
 lozenged
+LTRBR
 ltwh
 nagkakaisang
 Naoero
 neighbouring
 njemačka
+Pressable
+pressable
 Pushto
 rasterizer
 rasterizes
@@ -60,6 +65,7 @@ rasterizing
 republika
 restcountries
 Ripublik
+Roboto
 RRGGBB
 rubeľ
 rusija

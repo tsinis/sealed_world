@@ -1,8 +1,10 @@
 // ignore_for_file: avoid_futureor_void, it's just an example app.
 
 import "dart:async" show FutureOr;
+import "dart:math" show max;
 
 import "package:flutter/foundation.dart";
+import "package:flutter/rendering.dart" show ItemExtentBuilder;
 import "package:material_ui/material_ui.dart";
 import "package:world_countries/world_countries.dart";
 
@@ -41,11 +43,48 @@ class MainPage extends StatefulWidget {
 
 class _MainPageState extends State<MainPage>
     with SingleTickerProviderStateMixin {
+  /// The height of a line of text in the [style], scaled by the [textScaler].
+  static double _lineHeight(TextStyle? style, TextScaler textScaler) {
+    final painter = TextPainter(
+      text: TextSpan(text: " ", style: style),
+      textDirection: TextDirection.ltr,
+      textScaler: textScaler,
+      maxLines: 1,
+    )..layout();
+    final height = painter.height;
+    painter.dispose();
+
+    return height;
+  }
+
   // ignore: avoid-late-keyword, we need lazy data value first.
   late final _controller = TabsDataController(widget._data.value, vsync: this);
 
   // ignore: avoid-returning-widgets, it's just shorthand in the example app.
-  BasicPicker get _picker => widget._mapPickers(_controller.currentData);
+  BasicPicker get _picker => widget
+      ._mapPickers(_controller.currentData)
+      .copyWith(itemExtentBuilder: _itemExtent);
+
+  /// Every item of the pickers here is a two-line Material 3 `ListTile` with
+  /// one line of title and one of subtitle, so the list can get the extents
+  /// of its items without laying out each one (e.g. when it jumps far).
+  ItemExtentBuilder get _itemExtent {
+    final theme = Theme.of(context);
+    final textScaler = MediaQuery.textScalerOf(context);
+    // Such a tile is 72 points tall (with the visual density, e.g. 64 points
+    // on desktop), or as tall as its lines with 8 points above and below them.
+    // The larger of both is never shorter than a tile, a tile in some other
+    // script (e.g. Arabic) can be a few points shorter and gets that extent.
+    final tileHeight = max(
+      theme.visualDensity.baseSizeAdjustment.dy + 72,
+      _lineHeight(theme.textTheme.bodyLarge, textScaler) +
+          _lineHeight(theme.textTheme.bodyMedium, textScaler) +
+          2 * 8,
+    );
+
+    // Tiles are on even indexes, separators (`Divider(height: 1)`) on odd ones.
+    return (index, _) => index.isEven ? tileHeight : 1;
+  }
 
   @override
   void initState() {
@@ -116,7 +155,7 @@ class _MainPageState extends State<MainPage>
           const MenuButton(),
         ],
         bottom: TabBar(
-          tabs: List.unmodifiable(
+          tabs: List.unmodifiableOf(
             WorldData.values.map((tab) => Tab(text: tab.label)),
           ),
           controller: _controller,

@@ -1,3 +1,26 @@
+## 4.8.0
+
+> Requires Dart 3.14 and Flutter 3.50, and adopts their new list and text field APIs.
+
+NEW FEATURES
+
+- `itemExtentBuilder` for pickers, `IndexedListViewBuilder`, `SearchableIndexedListViewBuilder` and `PickersThemeData` (new `ListView.separated` API of Flutter 3.50): returns the extent of a child, so long lists are laid out and jumped through without measuring every child. Its index includes the separators (even indexes are items, odd ones are separators).
+- `TextFieldExtension.copyWith` forwards `enableInlinePrediction`.
+
+FIX
+
+- The search bar of a picker filters a short list (5 items or fewer) too, and is shown by `showSearchBar: true` over a `PickersThemeData.showHeader: false`.
+- A picker with `showSearchBar: false` (and the results of `searchSuggestions`) no longer shows the `PickersThemeData.header`.
+- `SearchableIndexedListViewBuilder` hides its `header` with `showSearchBar: false` and shows it with `true`, whatever the `PickersThemeData.showHeader` is. Without either, the header is shown (with the search) only for more than 5 items, as documented.
+
+CHORE
+
+- Requires Dart 3.14 and Flutter 3.50.
+- Updated [material_ui](https://pub.dev/packages/material_ui) dependency to v1.11.0 (Material is no longer a part of Flutter SDK since 3.50) and `meta` to v1.19.0 (same as in Flutter 3.50 SDK).
+- Updated `world_flags` dependency to v3.7.0.
+- Uses `Future.pause` for `DurationExtension.sleep`, and `List.unmodifiableOf` and `Map.unmodifiableOf` (Dart 3.13) instead of the soon deprecated `List.unmodifiable` and `Map.unmodifiable`.
+- Code samples in the README and the agent skill import `package:material_ui/material_ui.dart` instead of the deprecated `package:flutter/material.dart`.
+
 ## 4.7.0
 
 > Fixes for the search, lifecycle and themes of pickers, and faster lists. No API was removed, but some behavior changed.

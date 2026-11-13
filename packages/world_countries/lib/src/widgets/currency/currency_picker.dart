@@ -1,4 +1,5 @@
 import "package:flutter/gestures.dart" show DragStartBehavior;
+import "package:flutter/rendering.dart" show ItemExtentBuilder;
 import "package:flutter/widgets.dart";
 import "package:material_ui/material_ui.dart" show TextField;
 import "package:world_flags/world_flags.dart" hide FlagThemeData;
@@ -35,6 +36,7 @@ class CurrencyPicker extends BasicPicker<FiatCurrency, CurrencyTile> {
     super.itemBuilder,
     super.key,
     super.hitTestBehavior,
+    super.itemExtentBuilder,
     super.keyboardDismissBehavior,
     super.mainAxisAlignment,
     super.mainAxisSize,
@@ -121,6 +123,7 @@ class CurrencyPicker extends BasicPicker<FiatCurrency, CurrencyTile> {
     Widget? emptyStatePlaceholder,
     Key? key,
     HitTestBehavior? hitTestBehavior,
+    ItemExtentBuilder? itemExtentBuilder,
     ScrollViewKeyboardDismissBehavior? keyboardDismissBehavior,
     MainAxisAlignment? mainAxisAlignment,
     MainAxisSize? mainAxisSize,
@@ -172,6 +175,7 @@ class CurrencyPicker extends BasicPicker<FiatCurrency, CurrencyTile> {
         this.itemBuilder?.call(props, tile),
     key: key ?? this.key,
     hitTestBehavior: hitTestBehavior ?? this.hitTestBehavior,
+    itemExtentBuilder: itemExtentBuilder ?? this.itemExtentBuilder,
     keyboardDismissBehavior:
         keyboardDismissBehavior ?? this.keyboardDismissBehavior,
     mainAxisAlignment: mainAxisAlignment ?? this.mainAxisAlignment,

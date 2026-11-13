@@ -1,4 +1,4 @@
-version: 4.7.0
+version: 4.8.0
 name: world_countries
 description: Sealed world data in form of Flutter widgets (country, phone, currency pickers, etc.).
 maintainer: Roman Cinis
@@ -24,13 +24,14 @@ screenshots:
     path: doc/modal_picker.webp
 
 environment:
-  sdk: ^3.13.5
+  sdk: ^3.14.0
 
 dependencies:
   flutter:
     sdk: flutter
-  material_ui: ^1.7.0
-  meta: ^1.18.3 # Same as in Flutter SDK.
+  # Material is no longer a part of Flutter SDK (deprecated in Flutter 3.50).
+  material_ui: ^1.11.0 # Pickers, search bars and themes are Material widgets.
+  meta: ^1.19.0 # Same as in Flutter 3.50 SDK (flutter and flutter_test).
   world_flags: ^3.6.0
 
 dev_dependencies:

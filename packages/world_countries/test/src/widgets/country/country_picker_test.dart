@@ -1,5 +1,7 @@
 // ignore_for_file: unnecessary_async, async_return_with_no_await, it's a test.
 
+import "package:flutter/rendering.dart"
+    show ItemExtentBuilder, SliverLayoutDimensions;
 import "package:flutter/widgets.dart";
 import "package:flutter_test/flutter_test.dart";
 import "package:material_ui/material_ui.dart"
@@ -16,6 +18,64 @@ import "package:world_flags/world_flags.dart";
 import "../../../helpers/widget_tester_extension.dart";
 
 void main() => group("$CountryPicker", () {
+  group("itemExtentBuilder", () {
+    testWidgets("reaches the list over the theme", (tester) async {
+      await tester.pumpMaterialApp(
+        const CountryPicker(
+          itemExtentBuilder: WidgetTesterExtension.itemExtent,
+        ),
+        const PickersThemeData(itemExtentBuilder: _themeExtent),
+      );
+
+      expect(_listExtent(tester), WidgetTesterExtension.itemExtent);
+      expect(tester.getSize(find.byType(CountryTile).first).height, 48);
+    });
+
+    testWidgets("reaches the list of search results", (tester) async {
+      await tester.pumpMaterialApp(
+        const CountryPicker(
+          itemExtentBuilder: WidgetTesterExtension.itemExtent,
+        ),
+        const PickersThemeData(itemExtentBuilder: _themeExtent),
+      );
+      await tester.enterText(find.byType(TextField), "Ger");
+      await tester.pumpAndSettle();
+
+      expect(_listExtent(tester), WidgetTesterExtension.itemExtent);
+      expect(tester.getSize(find.byType(CountryTile).first).height, 48);
+    });
+
+    testWidgets("falls back to the theme", (tester) async {
+      await tester.pumpMaterialApp(
+        const CountryPicker(),
+        const PickersThemeData(itemExtentBuilder: _themeExtent),
+      );
+      expect(_listExtent(tester), _themeExtent);
+    });
+
+    testWidgets("works in a shrink-wrapped picker", (tester) async {
+      await tester.pumpMaterialApp(
+        const CountryPicker(
+          shrinkWrap: true,
+          itemExtentBuilder: WidgetTesterExtension.itemExtent,
+        ),
+      );
+      expect(tester.takeException(), isNull);
+      expect(find.byType(CountryTile), findsWidgets);
+    });
+  });
+
+  test("copyWith updates and keeps itemExtentBuilder", () {
+    final picker = const CountryPicker().copyWith(
+      itemExtentBuilder: WidgetTesterExtension.itemExtent,
+    );
+    expect(picker.itemExtentBuilder, WidgetTesterExtension.itemExtent);
+    expect(
+      picker.copyWith().itemExtentBuilder,
+      WidgetTesterExtension.itemExtent,
+    );
+  });
+
   test("copyWith", () {
     const picker = CountryPicker();
     expect(picker.onSelect, isNull);
@@ -325,3 +385,14 @@ void main() => group("$CountryPicker", () {
     expect(find.byType(Placeholder), findsOneWidget);
   });
 });
+
+/// A theme extent, different from [WidgetTesterExtension.itemExtent].
+double _themeExtent(int index, SliverLayoutDimensions _) => 10;
+
+/// The item extent builder of the (only) list of a picker.
+ItemExtentBuilder? _listExtent(WidgetTester tester) =>
+    tester.widget<ListView>(_listView).itemExtentBuilder;
+
+/// The (only) list of a picker.
+// ignore: avoid-explicit-type-declaration, vs specify_nonobvious_property_types.
+final Finder _listView = find.byType(ListView);

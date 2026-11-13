@@ -7,16 +7,12 @@ on:
       - "packages/**/*.dart"
       - "packages/**/*.yaml"
       - "packages/**/*.frag"
-      - "tools/**/*.dart"
-      - "tools/**/*.yaml"
   pull_request:
     branches: [main]
     paths:
       - "packages/**/*.dart"
       - "packages/**/*.yaml"
       - "packages/**/*.frag"
-      - "tools/**/*.dart"
-      - "tools/**/*.yaml"
       - ".github/workflows/verify_packages.yaml"
 
 permissions:
@@ -50,15 +46,21 @@ jobs:
 
           # Changes since the branch point only, and only code and configs need
           # the checks (e.g. not a CHANGELOG or README).
-          CHANGED=$(git diff --name-only "$BASE_SHA...$HEAD_SHA" -- packages tools)
+          CHANGED=$(git diff --name-only "$BASE_SHA...$HEAD_SHA" -- packages)
           CHANGED=$(grep -E '\.(dart|yaml|frag)$' <<< "$CHANGED" || true)
 
-          # Shared configs and tools are used by every package.
-          if grep -qE '^(packages/[^/]+\.yaml|tools/.+)$' <<< "$CHANGED"; then
+          PACKAGES=$(grep -E '^packages/[^/]+/' <<< "$CHANGED" | cut -d'/' -f2 || true)
+
+          # Shared configs are used by every package, but a Flutter config only
+          # by the packages that include it.
+          if grep -E '^packages/[^/]+\.yaml$' <<< "$CHANGED" | grep -qvE '^packages/flutter_'; then
             PACKAGES=$(find packages -mindepth 2 -maxdepth 2 -name pubspec.yaml \
               | cut -d'/' -f2 || true)
           else
-            PACKAGES=$(grep -E '^packages/[^/]+/' <<< "$CHANGED" | cut -d'/' -f2 || true)
+            for CONFIG in $(grep -E '^packages/flutter_[^/]+\.yaml$' <<< "$CHANGED" || true); do
+              PACKAGES+=$'\n'$(grep -l "include: ../${CONFIG#packages/}" \
+                packages/*/analysis_options.yaml | cut -d'/' -f2 || true)
+            done
           fi
 
           # A removed package has nothing left to verify.

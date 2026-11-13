@@ -1,16 +1,27 @@
-// ignore_for_file: deprecated_member_use, until deprecation is removed.
-import "package:material_ui/material_ui.dart";
+import "package:flutter/widgets.dart";
 import "package:world_flags/world_flags.dart";
 
+import "theme/app_colors.dart";
+import "theme/app_page_route.dart";
+import "theme/app_text.dart";
+
 void main() => runApp(
-  MaterialApp(
-    theme: ThemeData(
-      extensions: const [
-        FlagThemeData(aspectRatio: 1, child: Text("Old child in theme")),
-      ],
-    ),
-    home: Scaffold(
-      body: MaybeWidget(const CountryAfg().flagProperties, BasicFlag.new),
+  WidgetsApp(
+    color: AppColors.primary,
+    textStyle: AppText.bodyMedium,
+    pageRouteBuilder: <T>(settings, builder) =>
+        AppPageRoute<T>(settings: settings, builder: builder),
+    home: FlagTheme(
+      data: const DecoratedFlagData(
+        aspectRatio: 1,
+        flagChild: Text("Old child in theme"),
+      ),
+      child: ColoredBox(
+        color: AppColors.surface,
+        child: Center(
+          child: MaybeWidget(const CountryAfg().flagProperties, BasicFlag.new),
+        ),
+      ),
     ),
   ),
 );

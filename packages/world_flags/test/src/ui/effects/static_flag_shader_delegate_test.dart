@@ -11,7 +11,7 @@ void main() => group("$StaticFlagShaderDelegate", () {
     final reported = <Object>[];
     final delegate = _StaticFlagShaderDelegateTest(missing, reported: reported);
     addTearDown(delegate.dispose);
-    await tester.runAsync(() => Future<void>.delayed(Duration.zero));
+    await tester.runAsync(Future.pause);
 
     expect(reported, hasLength(1));
   });
@@ -19,7 +19,7 @@ void main() => group("$StaticFlagShaderDelegate", () {
   testWidgets("reports loading errors to Flutter", (tester) async {
     final delegate = _StaticFlagShaderDelegateTest(missing);
     addTearDown(delegate.dispose);
-    await tester.runAsync(() => Future<void>.delayed(Duration.zero));
+    await tester.runAsync(Future.pause);
 
     expect(tester.takeException(), isNotNull);
   });

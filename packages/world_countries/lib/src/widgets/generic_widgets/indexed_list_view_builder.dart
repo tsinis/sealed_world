@@ -1,5 +1,4 @@
 import "package:flutter/gestures.dart";
-import "package:flutter/rendering.dart" show ScrollCacheExtent;
 import "package:flutter/widgets.dart";
 import "package:meta/meta.dart" show mustBeOverridden;
 
@@ -35,6 +34,7 @@ class IndexedListViewBuilder<T extends Object, W extends Widget>
   /// * [header] is the optional header widget to display.
   /// * [hitTestBehavior] is the hit test behavior to use.
   /// * [itemBuilder] is the builder function to use for the items.
+  /// * [itemExtentBuilder] returns the extent of a child by its index.
   /// * [key] is the optional key to use for the widget.
   /// * [keyboardDismissBehavior] is the keyboard dismiss behavior to use.
   /// * [mainAxisAlignment] is the main axis alignment to use.
@@ -69,6 +69,7 @@ class IndexedListViewBuilder<T extends Object, W extends Widget>
     super.header,
     super.hitTestBehavior,
     super.itemBuilder,
+    super.itemExtentBuilder,
     super.key,
     super.keyboardDismissBehavior,
     super.mainAxisAlignment,
@@ -196,6 +197,8 @@ class _IndexedListViewBuilderState<T extends Object, W extends Widget>
                         widget.hitTestBehavior ??
                         theme?.hitTestBehavior ??
                         HitTestBehavior.opaque,
+                    itemExtentBuilder:
+                        widget.itemExtentBuilder ?? theme?.itemExtentBuilder,
                     keyboardDismissBehavior:
                         widget.keyboardDismissBehavior ??
                         theme?.keyboardDismissBehavior ??

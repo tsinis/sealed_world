@@ -1,4 +1,4 @@
-version: 4.7.0
+version: 4.8.0
 name: world_countries_example
 description: A world_countries example application.
 publish_to: none
@@ -6,8 +6,8 @@ publish_to: none
 resolution: workspace
 
 environment:
-  sdk: ^3.13.5
-  flutter: ^3.47.7
+  sdk: ^3.14.0
+  flutter: ^3.50.0
 
 dependencies:
   collection: 1.19.1
@@ -17,7 +17,7 @@ dependencies:
     sdk: flutter
   flutter_web_plugins:
     sdk: flutter
-  material_ui: any
+  material_ui: any # Constrained in the world_countries pubspec.yaml
   path_to_regexp: ^0.4.0
   quiver: ^3.2.2 # From Google
   world_countries:

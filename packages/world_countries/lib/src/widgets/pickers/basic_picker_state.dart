@@ -52,11 +52,13 @@ class _BasicPickerState<T extends IsoTranslated, W extends IsoTile<T>>
   }
 
   @override
-  // ignore: avoid-high-cyclomatic-complexity, build methods are typically long.
   Widget build(BuildContext context) {
     final theme = context.pickersTheme;
     final maybeSearchBar = widget.searchBar ?? theme?.searchBar;
-    final adaptiveTextField = (widget.showHeader ?? theme?.showHeader ?? true)
+    // A picker shows its search bar by default, even for a short list (unlike
+    // a `SearchableIndexedListViewBuilder`), so the decision is passed down.
+    final showSearchBar = widget.showHeader ?? theme?.showHeader ?? true;
+    final adaptiveTextField = showSearchBar
         ? AdaptiveSearchTextField(
             _controller,
             copyFrom: maybeSearchBar,
@@ -70,30 +72,21 @@ class _BasicPickerState<T extends IsoTranslated, W extends IsoTile<T>>
           )
         : null;
 
+    // The list resolves the theme and the defaults of the rest on its own.
     return SearchableIndexedListViewBuilder<T, W>(
       widget.resolvedItems(context),
       addAutomaticKeepAlives: widget.addAutomaticKeepAlives,
-      addRepaintBoundaries:
-          widget.addRepaintBoundaries ?? theme?.addRepaintBoundaries ?? true,
-      addSemanticIndexes:
-          widget.addSemanticIndexes ?? theme?.addSemanticIndexes ?? true,
-      cacheExtent: widget.cacheExtent ?? theme?.cacheExtent,
+      addRepaintBoundaries: widget.addRepaintBoundaries,
+      addSemanticIndexes: widget.addSemanticIndexes,
+      cacheExtent: widget.cacheExtent,
       chosen: widget.chosen,
-      clipBehavior: widget.clipBehavior ?? theme?.clipBehavior ?? Clip.hardEdge,
-      crossAxisAlignment:
-          widget.crossAxisAlignment ??
-          theme?.crossAxisAlignment ??
-          CrossAxisAlignment.center,
-      direction: widget.direction ?? theme?.direction ?? Axis.vertical,
+      clipBehavior: widget.clipBehavior,
+      crossAxisAlignment: widget.crossAxisAlignment,
+      direction: widget.direction,
       disabled: widget.disabled,
-      dragStartBehavior:
-          widget.dragStartBehavior ??
-          theme?.dragStartBehavior ??
-          DragStartBehavior.start,
-      hitTestBehavior:
-          widget.hitTestBehavior ??
-          theme?.hitTestBehavior ??
-          HitTestBehavior.opaque,
+      dragStartBehavior: widget.dragStartBehavior,
+      hitTestBehavior: widget.hitTestBehavior,
+      itemExtentBuilder: widget.itemExtentBuilder,
       emptyStatePlaceholder: widget.emptyStatePlaceholder,
       header: adaptiveTextField == null
           ? null
@@ -108,38 +101,29 @@ class _BasicPickerState<T extends IsoTranslated, W extends IsoTile<T>>
             context.tileTheme<T>()?.itemBuilder?.call(props, defaultTile) ??
             defaultTile;
       },
-      keyboardDismissBehavior:
-          widget.keyboardDismissBehavior ??
-          theme?.keyboardDismissBehavior ??
-          ScrollViewKeyboardDismissBehavior.manual,
-      mainAxisAlignment:
-          widget.mainAxisAlignment ??
-          theme?.mainAxisAlignment ??
-          MainAxisAlignment.start,
-      mainAxisSize:
-          widget.mainAxisSize ?? theme?.mainAxisSize ?? MainAxisSize.min,
+      keyboardDismissBehavior: widget.keyboardDismissBehavior,
+      mainAxisAlignment: widget.mainAxisAlignment,
+      mainAxisSize: widget.mainAxisSize,
       onSelect: widget.onSelect,
-      padding: widget.padding ?? theme?.padding,
-      physics: widget.physics ?? theme?.physics,
-      primary: widget.primary ?? theme?.primary,
+      padding: widget.padding,
+      physics: widget.physics,
+      primary: widget.primary,
       restorationId: widget.restorationId,
-      reverse: widget.reverse ?? theme?.reverse ?? false,
+      reverse: widget.reverse,
       scrollController: widget.scrollController,
-      separator: widget.separator ?? theme?.separator ?? UiConstants.separator,
-      shrinkWrap: widget.shrinkWrap ?? theme?.shrinkWrap ?? false,
+      separator: widget.separator,
+      showSearchBar: showSearchBar,
+      shrinkWrap: widget.shrinkWrap,
       sort: widget.sort,
-      textBaseline: widget.textBaseline ?? theme?.textBaseline,
-      textDirection: widget.textDirection ?? theme?.textDirection,
-      verticalDirection:
-          widget.verticalDirection ??
-          theme?.verticalDirection ??
-          VerticalDirection.down,
+      textBaseline: widget.textBaseline,
+      textDirection: widget.textDirection,
+      verticalDirection: widget.verticalDirection,
       caseSensitiveSearch: widget.caseSensitiveSearch,
       searchIn: widget.searchIn ?? _defaultSearch,
       onSearchResultsBuilder: widget.onSearchResultsBuilder,
       startWithSearch: widget.startWithSearch,
       textController: _controller,
-      spacing: widget.spacing ?? theme?.spacing ?? 0.0,
+      spacing: widget.spacing,
     );
   }
 }

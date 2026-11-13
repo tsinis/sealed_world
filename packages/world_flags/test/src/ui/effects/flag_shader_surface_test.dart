@@ -18,6 +18,7 @@ import "package:world_flags/src/ui/painters/basic/shader_stripes_painter.dart";
 
 import "../../../helpers/extensions/golden_widget_tester_extension.dart";
 import "../../../helpers/fake_flag_shader_delegate.dart";
+import "../../../helpers/flag_paint.dart";
 import "../../../helpers/straight_pixels.dart";
 
 void main() => group("$FlagShaderSurface", () {
@@ -245,7 +246,7 @@ void main() => group("$FlagShaderSurface", () {
       );
 
       expect(
-        _flagPaint(tester).painter,
+        flagPaint(tester).painter,
         isA<ShaderStripesPainter>().having(
           (painter) => painter.properties,
           "properties",
@@ -264,7 +265,7 @@ void main() => group("$FlagShaderSurface", () {
           map: {const CountryUsa(): flag.copyWith(height: 1)},
         ),
       );
-      final painter = _flagPaint(tester).painter;
+      final painter = flagPaint(tester).painter;
       await tester.pumpWidget(
         FlagShaderSurface(
           const CountryUsa(),
@@ -272,7 +273,7 @@ void main() => group("$FlagShaderSurface", () {
         ),
       );
 
-      expect(_flagPaint(tester).painter, same(painter));
+      expect(flagPaint(tester).painter, same(painter));
     });
 
     testWidgets("paints the built foreground painter", (tester) async {
@@ -290,7 +291,7 @@ void main() => group("$FlagShaderSurface", () {
       );
 
       expect(
-        _flagPaint(tester).painter,
+        flagPaint(tester).painter,
         isA<ShaderStripesPainter>().having(
           (painter) => painter.foregroundPainter,
           "foregroundPainter",
@@ -311,7 +312,7 @@ void main() => group("$FlagShaderSurface", () {
       await tester.pumpWidget(FlagShaderSurface(const CountryUsa(), map: map));
 
       expect(
-        _flagPaint(tester).painter,
+        flagPaint(tester).painter,
         isA<ShaderStripesPainter>().having(
           (painter) => painter.properties,
           "properties",
@@ -339,7 +340,7 @@ void main() => group("$FlagShaderSurface", () {
         FlagShaderSurface(const CountryUsa(), shader: shader),
       );
 
-      expect(_flagPaint(tester).willChange, isFalse);
+      expect(flagPaint(tester).willChange, isFalse);
     });
 
     testWidgets("continues the time when options change", (tester) async {
@@ -442,19 +443,6 @@ final class _DelegateRecorder {
 const _boundary = Key("boundary");
 
 /// The painter and the change hint of the flag in the [FlagShaderSurface].
-({CustomPainter? painter, bool willChange}) _flagPaint(WidgetTester tester) {
-  final CustomPaint(:painter, :willChange) = tester.widget<CustomPaint>(
-    find
-        .descendant(
-          of: find.byType(FlagShaderSurface),
-          matching: find.byType(CustomPaint),
-        )
-        .first,
-  );
-
-  return (painter: painter, willChange: willChange);
-}
-
 /// Renders a plain flag of the [color] by a [FlagShaderSurface] of 40x20.
 Future<Uint8List> _render(
   WidgetTester tester,

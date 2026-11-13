@@ -177,9 +177,11 @@ class _SearchingPicker extends CountryPicker {
   final _Counter _counter;
 
   @override
-  bool compareWithTextInput(TextEditingController controller, String item) =>
-      controller.text.trim() == "any" ||
-      super.compareWithTextInput(controller, item);
+  bool compareWithTextInput(TextEditingController controller, String item) {
+    if (controller.text.trim() == "any") return true;
+
+    return super.compareWithTextInput(controller, item);
+  }
 
   @override
   SearchData defaultSearch(WorldCountry item, BuildContext context) {

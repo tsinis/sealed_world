@@ -4,6 +4,7 @@
 // shim that bridges Material ThemeExtension to FlagTheme. It will be removed
 // in Stage 2 alongside the shim itself.
 import "package:flutter/gestures.dart";
+import "package:flutter/rendering.dart" show ItemExtentBuilder;
 import "package:flutter/widgets.dart";
 import "package:material_ui/material_ui.dart" show TextField, ThemeExtension;
 import "package:meta/meta.dart" show useResult;
@@ -50,6 +51,7 @@ class PickersThemeData extends ThemeExtension<PickersThemeData>
     this.dragStartBehavior = DragStartBehavior.start,
     this.header,
     this.hitTestBehavior = HitTestBehavior.opaque,
+    this.itemExtentBuilder,
     this.keyboardDismissBehavior = ScrollViewKeyboardDismissBehavior.manual,
     this.mainAxisAlignment = MainAxisAlignment.start,
     this.mainAxisSize = MainAxisSize.min,
@@ -128,6 +130,7 @@ class PickersThemeData extends ThemeExtension<PickersThemeData>
     double? cacheExtent,
     DragStartBehavior? dragStartBehavior,
     HitTestBehavior? hitTestBehavior,
+    ItemExtentBuilder? itemExtentBuilder,
     ScrollViewKeyboardDismissBehavior? keyboardDismissBehavior,
     double? spacing,
   }) => PickersThemeData(
@@ -142,6 +145,7 @@ class PickersThemeData extends ThemeExtension<PickersThemeData>
     dragStartBehavior: dragStartBehavior ?? this.dragStartBehavior,
     header: header ?? this.header,
     hitTestBehavior: hitTestBehavior ?? this.hitTestBehavior,
+    itemExtentBuilder: itemExtentBuilder ?? this.itemExtentBuilder,
     keyboardDismissBehavior:
         keyboardDismissBehavior ?? this.keyboardDismissBehavior,
     mainAxisAlignment: mainAxisAlignment ?? this.mainAxisAlignment,
@@ -206,6 +210,7 @@ class PickersThemeData extends ThemeExtension<PickersThemeData>
         other.cacheExtent == cacheExtent &&
         other.dragStartBehavior == dragStartBehavior &&
         other.hitTestBehavior == hitTestBehavior &&
+        other.itemExtentBuilder == itemExtentBuilder &&
         other.keyboardDismissBehavior == keyboardDismissBehavior &&
         other.spacing == spacing;
   }
@@ -238,6 +243,7 @@ class PickersThemeData extends ThemeExtension<PickersThemeData>
     cacheExtent,
     dragStartBehavior,
     hitTestBehavior,
+    itemExtentBuilder,
     keyboardDismissBehavior,
     spacing,
   ]);
@@ -319,6 +325,9 @@ class PickersThemeData extends ThemeExtension<PickersThemeData>
 
   @override
   final HitTestBehavior hitTestBehavior;
+
+  @override
+  final ItemExtentBuilder? itemExtentBuilder;
 
   @override
   final ScrollViewKeyboardDismissBehavior keyboardDismissBehavior;

@@ -80,6 +80,16 @@ import "waved_flag_shader_delegate.dart";
 ///   created and disposed automatically when the widget is removed from the
 ///   tree or when [options] change.
 ///
+/// ## Reduced Motion
+///
+/// When the platform asks to reduce or disable animations (see
+/// [MediaQueryData.reduceMotion] and [MediaQueryData.disableAnimations]), the
+/// internal delegate is created with `animate: false`, so the flag rests at
+/// [FlagShaderOptions.frozenPhase]. Wrap the widget in a [MediaQuery] to
+/// override it. A delegate provided via [shader] is used as is, and a delegate
+/// of a [delegateBuilder] has to follow [FlagShaderOptions.animate] (i.e. in
+/// its `animate` getter) to respect it.
+///
 /// ## Performance Considerations
 ///
 /// - The shader painter caches rasterized flag content to minimize GPU work.
@@ -232,6 +242,7 @@ class _FlagShaderSurfaceState extends State<FlagShaderSurface>
   BasicFlag? _paintedFlag;
   double _pixelRatio = 1;
   TextDirection? _textDirection;
+  bool _isMotionReduced = false;
 
   /// Creates the default waved-flag shader delegate (it loads the shader).
   static FlagShaderDelegate _defaultDelegateBuilder(
@@ -290,9 +301,12 @@ class _FlagShaderSurfaceState extends State<FlagShaderSurface>
     final current = _managedDelegate;
     if (current != null && !_isManagedDelegateOutdated) return current;
 
+    final options = widget.options;
     final created = (widget.delegateBuilder ?? _defaultDelegateBuilder)(
       this,
-      widget.options,
+      _isMotionReduced && options.animate
+          ? options.copyWith(animate: false)
+          : options,
       flag.properties,
     );
     if (current is AnimatedFlagShaderDelegate &&
@@ -345,6 +359,17 @@ class _FlagShaderSurfaceState extends State<FlagShaderSurface>
   @override
   void didChangeDependencies() {
     super.didChangeDependencies();
+    final isMotionReduced =
+        (MediaQuery.maybeReduceMotionOf(context) ?? false) ||
+        (MediaQuery.maybeDisableAnimationsOf(context) ?? false);
+    if (isMotionReduced != _isMotionReduced) {
+      _isMotionReduced = isMotionReduced;
+      // Rebuilt with or without the animation (the time continues), unless
+      // it doesn't animate anyway.
+      if (_managedDelegate != null && widget.options.animate) {
+        _isManagedDelegateOutdated = true;
+      }
+    }
     final pixelRatio =
         MediaQuery.maybeDevicePixelRatioOf(context) ??
         View.of(context).devicePixelRatio; // coverage:ignore-line

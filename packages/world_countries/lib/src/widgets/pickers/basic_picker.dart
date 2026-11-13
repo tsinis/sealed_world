@@ -6,6 +6,7 @@ import "dart:async" show FutureOr, unawaited;
 import "package:flutter/foundation.dart"
     show DiagnosticPropertiesBuilder, IterableProperty;
 import "package:flutter/gestures.dart" show DragStartBehavior;
+import "package:flutter/rendering.dart" show ItemExtentBuilder;
 import "package:flutter/services.dart" show TextInputFormatter;
 import "package:material_ui/material_ui.dart";
 import "package:world_flags/world_flags.dart" hide FlagThemeData;
@@ -60,6 +61,7 @@ abstract class BasicPicker<T extends IsoTranslated, W extends IsoTile<T>>
   /// * [emptyStatePlaceholder] is the widget to display when the list is empty.
   /// * [header] is the optional header to display above the list.
   /// * [itemBuilder] is the builder function for the items.
+  /// * [itemExtentBuilder] returns the extent of a child by its index.
   /// * [key] is the optional key to use for the widget.
   /// * [hitTestBehavior] is the hit test behavior for the list.
   /// * [keyboardDismissBehavior] is the keyboard dismiss behavior for the list.
@@ -104,6 +106,7 @@ abstract class BasicPicker<T extends IsoTranslated, W extends IsoTile<T>>
     this.itemBuilder,
     super.key,
     super.hitTestBehavior,
+    super.itemExtentBuilder,
     super.keyboardDismissBehavior,
     super.mainAxisAlignment,
     super.mainAxisSize,
@@ -636,6 +639,7 @@ abstract class BasicPicker<T extends IsoTranslated, W extends IsoTile<T>>
     Widget? emptyStatePlaceholder,
     Key? key,
     HitTestBehavior? hitTestBehavior,
+    ItemExtentBuilder? itemExtentBuilder,
     ScrollViewKeyboardDismissBehavior? keyboardDismissBehavior,
     MainAxisAlignment? mainAxisAlignment,
     MainAxisSize? mainAxisSize,

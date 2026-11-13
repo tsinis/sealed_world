@@ -26,7 +26,7 @@ enum WorldData {
   String get pathTemplate => "$path${Constants.slash}:${Constants.code}";
   String? get label => name.toBeginningOfSentenceCase;
 
-  static final paths = List<String>.unmodifiable([
+  static final paths = List<String>.unmodifiableOf([
     for (final tab in WorldData.values) ...[
       tab.path,
       tab.pathTemplate,

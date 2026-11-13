@@ -161,6 +161,19 @@ void main() => group("$IndexedListViewBuilder", () {
     final listView = tester.widget<ListView>(find.byType(ListView));
     expect(listView.hitTestBehavior, HitTestBehavior.translucent);
   });
+
+  testWidgets("itemExtentBuilder uses explicit value", (tester) async {
+    final widget = IndexedListViewBuilder(
+      const [1, 2],
+      itemBuilder: (props, _) => Text("${props.item}"),
+      itemExtentBuilder: WidgetTesterExtension.itemExtent,
+    );
+    await tester.pumpWidgetsApp(widget);
+    final listView = tester.widget<ListView>(find.byType(ListView));
+    expect(listView.itemExtentBuilder, WidgetTesterExtension.itemExtent);
+    expect(tester.getSize(find.text("1")).height, 48);
+    expect(widget.toStringDeep(), contains("itemExtentBuilder"));
+  });
 });
 
 /// Counts the comparisons (or reads) of the items.

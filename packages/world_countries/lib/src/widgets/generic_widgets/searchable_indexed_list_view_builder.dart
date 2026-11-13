@@ -44,6 +44,7 @@ class SearchableIndexedListViewBuilder<T extends Object, W extends Widget>
   /// * [emptyStatePlaceholder] is the widget to display when the list is empty.
   /// * [header] is the optional header to display above the list.
   /// * [itemBuilder] is the builder function for the items.
+  /// * [itemExtentBuilder] returns the extent of a child by its index.
   /// * [key] is the optional key to use for the widget.
   /// * [hitTestBehavior] is the hit test behavior for the list.
   /// * [keyboardDismissBehavior] is the keyboard dismiss behavior for the list.
@@ -75,9 +76,10 @@ class SearchableIndexedListViewBuilder<T extends Object, W extends Widget>
   /// * [startWithSearch] is a boolean indicating whether the search should only
   ///   start with the search string.
   /// * [showSearchBar] is a nullable boolean indicating whether to show the
-  /// search bar. If not specified uses `PickersThemeData.showHeader` value and
-  /// fallbacks to items count condition `if (items.length > 5)`, according to
-  /// the Hick's law optimal range number of options.
+  /// search bar (the [header]) and to search. If not specified uses
+  /// `PickersThemeData.showHeader` value and fallbacks to items count
+  /// condition `if (items.length > 5)`, according to the Hick's law optimal
+  /// range number of options.
   const new(
     super.items, {
     super.addAutomaticKeepAlives,
@@ -93,6 +95,7 @@ class SearchableIndexedListViewBuilder<T extends Object, W extends Widget>
     super.emptyStatePlaceholder,
     super.header,
     super.itemBuilder,
+    super.itemExtentBuilder,
     super.key,
     super.hitTestBehavior,
     super.keyboardDismissBehavior,

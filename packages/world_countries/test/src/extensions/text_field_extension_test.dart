@@ -263,4 +263,15 @@ void main() => group("TextFieldExtension", () {
     expect(copy.showCursor, isFalse);
     controller.dispose();
   });
+
+  test("copyWith updates and preserves enableInlinePrediction", () {
+    final controller = TextEditingController();
+    final copy = nullTextField.copyWith(
+      controller,
+      enableInlinePrediction: true,
+    );
+    expect(copy.enableInlinePrediction, isTrue);
+    expect(copy.copyWith(controller).enableInlinePrediction, isTrue);
+    controller.dispose();
+  });
 });

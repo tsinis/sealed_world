@@ -26,7 +26,7 @@ extension IterableSearchMapExtension<T extends Object> on Iterable<T> {
   SearchMap<T> searchMap(
     BuildContext context,
     SearchData Function(T, BuildContext) search,
-  ) => SearchMap<T>.unmodifiable({
+  ) => SearchMap<T>.unmodifiableOf({
     for (final item in this) item: search(item, context),
   });
 

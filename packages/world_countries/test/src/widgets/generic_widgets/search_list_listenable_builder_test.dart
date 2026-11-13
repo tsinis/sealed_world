@@ -353,9 +353,11 @@ class _WildcardSearchList extends SearchListListenableBuilder<String> {
   final String wildcard;
 
   @override
-  bool compareWithTextInput(TextEditingController controller, String item) =>
-      controller.text.trim() == wildcard ||
-      super.compareWithTextInput(controller, item);
+  bool compareWithTextInput(TextEditingController controller, String item) {
+    if (controller.text.trim() == wildcard) return true;
+
+    return super.compareWithTextInput(controller, item);
+  }
 
   @override
   void debugFillProperties(DiagnosticPropertiesBuilder properties) {

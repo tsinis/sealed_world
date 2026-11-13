@@ -15,6 +15,25 @@ import "package:world_flags/world_flags.dart";
 import "../../../helpers/widget_tester_extension.dart";
 
 void main() => group("$PhoneCodePicker", () {
+  test("copyWith updates and keeps itemExtentBuilder", () {
+    final picker = const PhoneCodePicker().copyWith(
+      itemExtentBuilder: WidgetTesterExtension.itemExtent,
+    );
+    expect(picker.itemExtentBuilder, WidgetTesterExtension.itemExtent);
+    expect(
+      picker.copyWith().itemExtentBuilder,
+      WidgetTesterExtension.itemExtent,
+    );
+    expect(
+      PhoneCodePicker.fromCountryPicker(
+        const CountryPicker().copyWith(
+          itemExtentBuilder: WidgetTesterExtension.itemExtent,
+        ),
+      ).itemExtentBuilder,
+      WidgetTesterExtension.itemExtent,
+    );
+  });
+
   group("search by the phone code", () {
     testWidgets("allows digits", (tester) async {
       await tester.pumpMaterialApp(const PhoneCodePicker());

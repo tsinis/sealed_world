@@ -1,3 +1,24 @@
+## 3.7.0
+
+> Requires Dart 3.14 and Flutter 3.50, respects reduced motion, and the example app no longer depends on Material.
+
+NEW FEATURES
+
+- `FlagShaderSurface` doesn't animate its own (internal) delegate when the platform asks to reduce motion or to disable animations (`MediaQueryData.reduceMotion` of Flutter 3.50 and `MediaQueryData.disableAnimations`): the flag rests at `FlagShaderOptions.frozenPhase`. Wrap it in a `MediaQuery` to override this, a delegate provided via `shader` is used as is.
+
+IMPROVEMENTS
+
+- The waved flag shader is simpler and does less work per pixel: the wave and its slope share one noise pass (2 noise lookups less per pixel) and the edge masks are computed once. The output is pixel-identical.
+
+CHORE
+
+- Requires Dart 3.14 and Flutter 3.50.
+- Golden tests use [gleon](https://pub.dev/packages/gleon) v0.6.1 from pub.dev instead of a git dependency.
+- Uses `List.unmodifiableOf` (Dart 3.13) instead of the soon deprecated `List.unmodifiable`.
+- Updated [material_ui](https://pub.dev/packages/material_ui) dependency to v1.11.0. Material is no longer a part of Flutter SDK since 3.50, and this package only needs it for the deprecated `FlagThemeData`, so the dependency will be removed together with it.
+- Code samples in the docs, the README and the agent skill import `package:material_ui/material_ui.dart` instead of the deprecated `package:flutter/material.dart`.
+- The example app is built with the widgets layer only (`WidgetsApp` and own list rows, slider, switch, icons and toast) and looks the same as before. On wide (landscape) screens the settings page shows the flag preview next to the settings instead of overflowing, and the Cupertino emoji shader of the example is simplified (a cosine wave, a light gradient across the width, a soft outline and a bevel on the bottom and left edges, see `shaders/cupertino_emoji_flag.frag`) and looks closer to the iOS emoji flags.
+
 ## 3.6.0
 
 > Last big update before the year-end major release: flag semantics, working shaders and many painting fixes.

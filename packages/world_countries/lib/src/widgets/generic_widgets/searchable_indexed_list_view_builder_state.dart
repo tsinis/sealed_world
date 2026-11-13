@@ -7,147 +7,64 @@ class _SearchableIndexedListViewBuilderState<T extends Object, W extends Widget>
       widget.searchIn != null && widget.textController != null;
 
   @override
-  // ignore: avoid-high-cyclomatic-complexity, build methods are typically long.
   Widget build(BuildContext context) {
-    final theme = context.pickersTheme;
     final itemsList = widget.resolvedItems(context);
     final shouldShowHeader =
         widget.showHeader ??
-        theme?.showHeader ??
+        context.pickersTheme?.showHeader ??
         (itemsList.length > 5); // Hick's law optimal range.
+
+    // The list resolves the theme and the defaults on its own.
+    // ignore: prefer_function_declarations_over_variables, vs DCM widget rules.
+    final listOf = (Iterable<T> items) => IndexedListViewBuilder<T, W>(
+      items,
+      addAutomaticKeepAlives: widget.addAutomaticKeepAlives,
+      addRepaintBoundaries: widget.addRepaintBoundaries,
+      addSemanticIndexes: widget.addSemanticIndexes,
+      cacheExtent: widget.cacheExtent,
+      chosen: widget.chosen,
+      clipBehavior: widget.clipBehavior,
+      crossAxisAlignment: widget.crossAxisAlignment,
+      direction: widget.direction,
+      disabled: widget.disabled,
+      dragStartBehavior: widget.dragStartBehavior,
+      emptyStatePlaceholder: widget.emptyStatePlaceholder,
+      header: widget.header,
+      hitTestBehavior: widget.hitTestBehavior,
+      itemBuilder: widget.itemBuilder,
+      itemExtentBuilder: widget.itemExtentBuilder,
+      keyboardDismissBehavior: widget.keyboardDismissBehavior,
+      mainAxisAlignment: widget.mainAxisAlignment,
+      mainAxisSize: widget.mainAxisSize,
+      onSelect: widget.onSelect,
+      padding: widget.padding,
+      physics: widget.physics,
+      primary: widget.primary,
+      restorationId: widget.restorationId,
+      reverse: widget.reverse,
+      scrollController: widget.scrollController,
+      separator: widget.separator,
+      showHeader: shouldShowHeader,
+      shrinkWrap: widget.shrinkWrap,
+      sort: widget.sort,
+      textBaseline: widget.textBaseline,
+      textDirection: widget.textDirection,
+      verticalDirection: widget.verticalDirection,
+      spacing: widget.spacing,
+    );
 
     return _isSearchable && shouldShowHeader
         ? SearchListListenableBuilder<T>(
-            builder: (_, filteredItems) => IndexedListViewBuilder<T, W>(
-              filteredItems,
-              addAutomaticKeepAlives: widget.addAutomaticKeepAlives,
-              addRepaintBoundaries:
-                  widget.addRepaintBoundaries ??
-                  theme?.addRepaintBoundaries ??
-                  true,
-              addSemanticIndexes:
-                  widget.addSemanticIndexes ??
-                  theme?.addSemanticIndexes ??
-                  true,
-              cacheExtent: widget.cacheExtent ?? theme?.cacheExtent,
-              chosen: widget.chosen,
-              clipBehavior:
-                  widget.clipBehavior ?? theme?.clipBehavior ?? Clip.hardEdge,
-              crossAxisAlignment:
-                  widget.crossAxisAlignment ??
-                  theme?.crossAxisAlignment ??
-                  CrossAxisAlignment.center,
-              direction: widget.direction ?? theme?.direction ?? Axis.vertical,
-              disabled: widget.disabled,
-              dragStartBehavior:
-                  widget.dragStartBehavior ??
-                  theme?.dragStartBehavior ??
-                  DragStartBehavior.start,
-              hitTestBehavior:
-                  widget.hitTestBehavior ??
-                  theme?.hitTestBehavior ??
-                  HitTestBehavior.opaque,
-              emptyStatePlaceholder: widget.emptyStatePlaceholder,
-              header: widget.header ?? theme?.header,
-              itemBuilder: widget.itemBuilder,
-              keyboardDismissBehavior:
-                  widget.keyboardDismissBehavior ??
-                  theme?.keyboardDismissBehavior ??
-                  ScrollViewKeyboardDismissBehavior.manual,
-              mainAxisAlignment:
-                  widget.mainAxisAlignment ??
-                  theme?.mainAxisAlignment ??
-                  MainAxisAlignment.start,
-              mainAxisSize:
-                  widget.mainAxisSize ??
-                  theme?.mainAxisSize ??
-                  MainAxisSize.min,
-              onSelect: widget.onSelect,
-              padding: widget.padding ?? theme?.padding,
-              physics: widget.physics ?? theme?.physics,
-              primary: widget.primary ?? theme?.primary,
-              restorationId: widget.restorationId,
-              reverse: widget.reverse ?? theme?.reverse ?? false,
-              scrollController: widget.scrollController,
-              separator:
-                  widget.separator ?? theme?.separator ?? UiConstants.separator,
-              shrinkWrap: widget.shrinkWrap ?? theme?.shrinkWrap ?? false,
-              sort: widget.sort,
-              textBaseline: widget.textBaseline ?? theme?.textBaseline,
-              spacing: widget.spacing ?? theme?.spacing,
-              textDirection: widget.textDirection ?? theme?.textDirection,
-              verticalDirection:
-                  widget.verticalDirection ??
-                  theme?.verticalDirection ??
-                  VerticalDirection.down,
-            ),
+            builder: (_, filteredItems) => listOf(filteredItems),
             items: itemsList,
-            // ignore: avoid-non-null-assertion, null-checked on build first line.
+            // ignore: avoid-non-null-assertion, null-checked by `_isSearchable`.
             searchIn: widget.searchIn!,
             onSearchResultsBuilder: widget.onSearchResultsBuilder,
-            // ignore: avoid-non-null-assertion, null-checked on build first line.
+            // ignore: avoid-non-null-assertion, null-checked by `_isSearchable`.
             textController: widget.textController!,
             caseSensitiveSearch: widget.caseSensitiveSearch,
             startWithSearch: widget.startWithSearch,
           )
-        : IndexedListViewBuilder<T, W>(
-            itemsList,
-            addAutomaticKeepAlives: widget.addAutomaticKeepAlives,
-            addRepaintBoundaries:
-                widget.addRepaintBoundaries ??
-                theme?.addRepaintBoundaries ??
-                true,
-            addSemanticIndexes:
-                widget.addSemanticIndexes ?? theme?.addSemanticIndexes ?? true,
-            cacheExtent: widget.cacheExtent ?? theme?.cacheExtent,
-            chosen: widget.chosen,
-            clipBehavior:
-                widget.clipBehavior ?? theme?.clipBehavior ?? Clip.hardEdge,
-            crossAxisAlignment:
-                widget.crossAxisAlignment ??
-                theme?.crossAxisAlignment ??
-                CrossAxisAlignment.center,
-            direction: widget.direction ?? theme?.direction ?? Axis.vertical,
-            disabled: widget.disabled,
-            dragStartBehavior:
-                widget.dragStartBehavior ??
-                theme?.dragStartBehavior ??
-                DragStartBehavior.start,
-            hitTestBehavior:
-                widget.hitTestBehavior ??
-                theme?.hitTestBehavior ??
-                HitTestBehavior.opaque,
-            emptyStatePlaceholder: widget.emptyStatePlaceholder,
-            header: widget.header ?? theme?.header,
-            itemBuilder: widget.itemBuilder,
-            keyboardDismissBehavior:
-                widget.keyboardDismissBehavior ??
-                theme?.keyboardDismissBehavior ??
-                ScrollViewKeyboardDismissBehavior.manual,
-            mainAxisAlignment:
-                widget.mainAxisAlignment ??
-                theme?.mainAxisAlignment ??
-                MainAxisAlignment.start,
-            mainAxisSize:
-                widget.mainAxisSize ?? theme?.mainAxisSize ?? MainAxisSize.min,
-            onSelect: widget.onSelect,
-            padding: widget.padding ?? theme?.padding,
-            physics: widget.physics ?? theme?.physics,
-            primary: widget.primary ?? theme?.primary,
-            restorationId: widget.restorationId,
-            reverse: widget.reverse ?? theme?.reverse ?? false,
-            scrollController: widget.scrollController,
-            separator:
-                widget.separator ?? theme?.separator ?? UiConstants.separator,
-            shrinkWrap: widget.shrinkWrap ?? theme?.shrinkWrap ?? false,
-            sort: widget.sort,
-            textBaseline: widget.textBaseline ?? theme?.textBaseline,
-            textDirection: widget.textDirection ?? theme?.textDirection,
-            spacing: widget.spacing ?? theme?.spacing ?? 0,
-            verticalDirection:
-                widget.verticalDirection ??
-                theme?.verticalDirection ??
-                VerticalDirection.down,
-          );
+        : listOf(itemsList);
   }
 }
