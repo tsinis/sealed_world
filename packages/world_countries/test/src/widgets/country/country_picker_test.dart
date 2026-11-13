@@ -391,4 +391,8 @@ double _themeExtent(int index, SliverLayoutDimensions _) => 10;
 
 /// The item extent builder of the (only) list of a picker.
 ItemExtentBuilder? _listExtent(WidgetTester tester) =>
-    tester.widget<ListView>(find.byType(ListView)).itemExtentBuilder;
+    tester.widget<ListView>(_listView).itemExtentBuilder;
+
+/// The (only) list of a picker.
+// ignore: avoid-explicit-type-declaration, vs specify_nonobvious_property_types.
+final Finder _listView = find.byType(ListView);

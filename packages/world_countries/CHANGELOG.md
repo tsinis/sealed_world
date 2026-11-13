@@ -7,6 +7,12 @@ NEW FEATURES
 - `itemExtentBuilder` for pickers, `IndexedListViewBuilder`, `SearchableIndexedListViewBuilder` and `PickersThemeData` (new `ListView.separated` API of Flutter 3.50): returns the extent of a child, so long lists are laid out and jumped through without measuring every child. Its index includes the separators (even indexes are items, odd ones are separators).
 - `TextFieldExtension.copyWith` forwards `enableInlinePrediction`.
 
+FIX
+
+- The search bar of a picker filters a short list (5 items or fewer) too, and is shown by `showSearchBar: true` over a `PickersThemeData.showHeader: false`.
+- A picker with `showSearchBar: false` (and the results of `searchSuggestions`) no longer shows the `PickersThemeData.header`.
+- `SearchableIndexedListViewBuilder` hides its `header` with `showSearchBar: false` and shows it with `true`, whatever the `PickersThemeData.showHeader` is.
+
 CHORE
 
 - Requires Dart 3.14 and Flutter 3.50.

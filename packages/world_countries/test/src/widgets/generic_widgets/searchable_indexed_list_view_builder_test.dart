@@ -90,6 +90,29 @@ void main() => group("$SearchableIndexedListViewBuilder", () {
     expect(listView.itemExtentBuilder, WidgetTesterExtension.itemExtent);
   });
 
+  testWidgets("hidden search bar hides the header", (tester) async {
+    await tester.pumpWidgetsApp(
+      const SearchableIndexedListViewBuilder(
+        <Object>[1],
+        header: Text("header"),
+        showSearchBar: false,
+      ),
+    );
+    expect(find.text("header"), findsNothing);
+  });
+
+  testWidgets("shown search bar wins over the theme", (tester) async {
+    await tester.pumpMaterialApp(
+      const SearchableIndexedListViewBuilder(
+        <Object>[1],
+        header: Text("header"),
+        showSearchBar: true,
+      ),
+      const PickersThemeData(showHeader: false),
+    );
+    expect(find.text("header"), findsOneWidget);
+  });
+
   testWidgets("showInSearch", (tester) async {
     final context = await tester.contextExtractor();
     expect(await builder.showInSearch(context), isNull);

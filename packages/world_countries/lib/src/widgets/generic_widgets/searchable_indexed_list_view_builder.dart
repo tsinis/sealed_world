@@ -76,9 +76,10 @@ class SearchableIndexedListViewBuilder<T extends Object, W extends Widget>
   /// * [startWithSearch] is a boolean indicating whether the search should only
   ///   start with the search string.
   /// * [showSearchBar] is a nullable boolean indicating whether to show the
-  /// search bar. If not specified uses `PickersThemeData.showHeader` value and
-  /// fallbacks to items count condition `if (items.length > 5)`, according to
-  /// the Hick's law optimal range number of options.
+  /// search bar (the [header]) and to search. If not specified uses
+  /// `PickersThemeData.showHeader` value and fallbacks to items count
+  /// condition `if (items.length > 5)`, according to the Hick's law optimal
+  /// range number of options.
   const new(
     super.items, {
     super.addAutomaticKeepAlives,
