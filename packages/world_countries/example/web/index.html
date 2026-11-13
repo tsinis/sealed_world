@@ -15,7 +15,6 @@
     <base href="$FLUTTER_BASE_HREF">
 
     <meta charset="UTF-8">
-    <meta content="IE=Edge" http-equiv="X-UA-Compatible">
     <meta name="description" content="An example project for sealed_world packages.">
 
     <!-- iOS meta tags & icons -->
@@ -106,10 +105,17 @@
     {{flutter_js}}
     {{flutter_build_config}}
 
+    // No splash plugin removes the (animated) splash, so the first frame does.
+    window.addEventListener('flutter-first-frame', removeSplashFromWeb, { once: true });
+
     _flutter.loader.load({
       config: {
-        renderer: 'canvaskit',
-        forceSingleThreadedSkwasm: true,
+        // Chromium runs Wasm by default, Safari 26.2+ and Firefox 147+ only
+        // when allowed (older ones fall back to JavaScript on their own).
+        wasmAllowList: { blink: true, webkit: true, gecko: true },
+        // GitHub Pages can't send the COOP and COEP headers, so skwasm runs on
+        // a single thread there anyway, no need to warn about it.
+        suppressMultithreadingWarning: true,
       },
     });
   </script>
