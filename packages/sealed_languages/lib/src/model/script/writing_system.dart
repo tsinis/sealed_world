@@ -5,6 +5,8 @@ import "../../interfaces/named.dart";
 /// A writing system is a set of symbols used to represent the sounds of a
 /// language. Examples of writing systems include the Latin alphabet, the
 /// Cyrillic alphabet, the Chinese script, etc.
+// TODO(tsinis): When making this `final`, also hide the
+// `SealedWorldIterableExtension` from the public API, see the note there.
 @Deprecated.subclass(
   "This class will be marked as `final` in the next major version to support "
   "deep immutability optimizations. Do not extend or implement this class.",

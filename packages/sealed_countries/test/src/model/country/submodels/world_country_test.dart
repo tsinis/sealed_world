@@ -945,6 +945,27 @@ void main() => group("$WorldCountry", () {
       );
 
       test(
+        "with null code",
+        () => expect(WorldCountry.maybeFromCodeNumeric(null, array), isNull),
+      );
+
+      test(
+        "with alpha code",
+        () => expect(
+          WorldCountry.maybeFromCodeNumeric("USA", WorldCountry.list),
+          isNull,
+        ),
+      );
+
+      test(
+        "with leading zeros",
+        () => expect(
+          WorldCountry.maybeFromCodeNumeric("004", WorldCountry.list),
+          const CountryAfg(),
+        ),
+      );
+
+      test(
         "with empty countries",
         () => expect(
           () => WorldCountry.maybeFromCodeNumeric(value.codeNumeric, const []),
@@ -959,6 +980,21 @@ void main() => group("$WorldCountry", () {
         tags: "performance",
         () =>
             expect(WorldCountry.maybeFromCodeNumeric(100), const CountryBgr()),
+      );
+
+      test(
+        "with null code",
+        () => expect(WorldCountry.maybeFromCodeNumeric(null), isNull),
+      );
+
+      test(
+        "with leading zeros",
+        () => expect(WorldCountry.maybeFromCodeNumeric("004"), CountryAfg()),
+      );
+
+      test(
+        "from int below 100 (no leading zeros)",
+        () => expect(WorldCountry.maybeFromCodeNumeric(4), isNull),
       );
 
       test(

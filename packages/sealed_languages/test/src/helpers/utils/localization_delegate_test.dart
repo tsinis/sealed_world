@@ -424,6 +424,48 @@ void main() => group("$LocalizationDelegate", () {
       });
     });
 
+    group("numeric regions and POSIX suffixes", () {
+      test("parses UN M49 region", () {
+        final result = parser.parseLocale("en_419");
+
+        expect(result?.language, equals(language));
+        expect(result?.script, isNull);
+        expect(result?.countryCode, equals("419"));
+        expect(result?.toString(), "en_419");
+      });
+
+      test(
+        "parses UN M49 region with hyphen",
+        () => expect(parser.parseLocale("en-150")?.countryCode, equals("150")),
+      );
+
+      test("parses UN M49 region with script", () {
+        final result = parser.parseLocale("en_Latn_001");
+
+        expect(result?.script, equals(script));
+        expect(result?.countryCode, equals("001"));
+      });
+
+      test("ignores POSIX encoding", () {
+        final result = parser.parseLocale("en_US.UTF-8");
+
+        expect(result?.language, equals(language));
+        expect(result?.countryCode, equals(countryCode));
+      });
+
+      test("ignores POSIX modifier", () {
+        final result = parser.parseLocale("en_US@euro");
+
+        expect(result?.language, equals(language));
+        expect(result?.countryCode, equals(countryCode));
+      });
+
+      test(
+        "ignores POSIX encoding without region",
+        () => expect(parser.parseLocale("en.UTF-8")?.language, language),
+      );
+    });
+
     group("case sensitivity", () {
       test(
         "uppercase language",
@@ -484,7 +526,44 @@ void main() => group("$LocalizationDelegate", () {
 
       test(
         "rejects invalid characters",
-        () => expect(parser.parseLocale("en_123"), isNull),
+        () => expect(parser.parseLocale("en_U1"), isNull),
+      );
+
+      test(
+        "rejects numeric region of invalid length",
+        () => expect(parser.parseLocale("en_12"), isNull),
+      );
+
+      test(
+        "rejects variant subtags",
+        () => expect(parser.parseLocale("en_US_POSIX"), isNull),
+      );
+
+      test(
+        "rejects POSIX locale without language",
+        () => expect(parser.parseLocale("C.UTF-8"), isNull),
+      );
+
+      test(
+        "rejects empty POSIX suffix",
+        () => expect(parser.parseLocale("en."), isNull),
+      );
+
+      test(
+        "rejects empty POSIX modifier",
+        () => expect(parser.parseLocale("en@"), isNull),
+      );
+
+      test(
+        "rejects non-ASCII region",
+        // ignore: avoid-non-ascii-symbols, testing non-ASCII input.
+        () => expect(parser.parseLocale("en_日本"), isNull),
+      );
+
+      test(
+        "rejects non-ASCII region of country length",
+        // ignore: avoid-non-ascii-symbols, testing non-ASCII input.
+        () => expect(parser.parseLocale("en_БГ"), isNull),
       );
 
       test(

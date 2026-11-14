@@ -11,6 +11,9 @@ import "../../helpers/extensions/iso_object_extension_type.dart";
 /// Each key is trimmed and converted to UPPERCASE, ensuring that the map
 /// lookup is case-insensitive.
 ///
+/// Only the key of a lookup is normalized: the keys of the provided map have
+/// to be trimmed and UPPERCASE already, otherwise they are never found.
+///
 /// The [UpperCaseMap] also supports default values. If a key is not found
 /// within the map, and a [defaultValue] is provided, that default value will be
 /// returned instead.

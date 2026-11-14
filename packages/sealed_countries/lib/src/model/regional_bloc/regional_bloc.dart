@@ -115,7 +115,9 @@ sealed class RegionalBloc extends WorldBloc {
   /// matches the acronym of a RegionalBloc, a new [RegionalBloc] object
   /// representing that regional bloc is returned. If there is no match, `null`
   /// is returned. If the [where] parameter is provided, it is used to determine
-  /// the value to compare for each regional bloc.
+  /// the value to compare for each regional bloc. If [where] returns `null`
+  /// for a regional bloc, the acronym of that bloc is compared to [value]
+  /// instead.
   ///
   /// The [regionalBlocs] parameter is the list of regional blocs to search. If
   /// no value is provided, the `RegionalBloc.list` constant is used.

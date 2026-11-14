@@ -1,3 +1,44 @@
+## 3.4.3
+
+FIX
+
+- `tzUtcDurations` skips invalid timezones instead of stopping at the first one. Previously (as documented) a single invalid timezone of a custom country dropped it and every timezone after it. The result is no longer index-aligned with `timezones` when one is skipped, as documented now.
+- `tzDuration` and `toAdd` read a bare `"UTC"` as a zero offset, they returned `null` for it, so `tzUtcDurations` dropped it.
+- `tzDuration` only accepts the `UTC±hh:mm` format: it returned an offset for `GMT+01:00`, `UTC+99:99` or `UTC+-1:-5` (a negative `Duration`), so `tzUtcDurations` did not skip them.
+- The postal code of Ireland (`CountryIrl`) had the format and pattern of the UK postcodes, it now validates Eircodes (`A65 F4E2`, `D6W FN43`).
+- Includes the fixes of `sealed_currencies` 3.4.2 and `sealed_languages` 3.4.2, so `TypedLocalizationDelegate.parseLocale` keeps a UN M49 region (`es_419`) as the regional code and resolves an ISO 3166-1 numeric one (`en_840`) to its country.
+
+Inherited from `l10n_countries` 2.3.0:
+
+- Regional and script locales now fall back to their parent locales instead of straight to the language: `zh_Hant_TW` → `zh_Hant` → `zh`, `zh_TW` and `zh_HK` → `zh_Hant`, `pt_MO`, `pt_MZ` (and other CLDR children) → `pt_PT` → `pt`, `nb` and `nn` → `no`. Previously, for example, `bs_Cyrl_BA` returned the Latin script names of `bs`.
+- Locales are normalized before the lookup (`zh-Hant-TW`, `pt-pt`, `en_US` and `en_US.UTF-8` become `zh_Hant_TW`, `pt_PT` and `en_US`), also with `useLanguageFallback: false`. The locale as given is still tried first, so custom locale keys keep working.
+- Translations injected via `other` are no longer cleared by `localize()`: a `const` map no longer throws an `UnsupportedError`, and an `IsoLocaleMapper` shared between mappers no longer returns an empty map on its second use.
+- `l10n-<locale>=false` now drops only that locale, previously it dropped all of them.
+- `formatter` receives the ISO code of an alternative name with its symbol (`AFG+`) also when several locales match, previously only when a single one did. A formatter that compares `isoLocale.isoCode` with an ISO code has to drop the symbol first to treat both names alike.
+- `nn` falls back to `no`, so the 134 country names that `nn` lacks are no longer missing.
+
+IMPROVEMENTS
+
+- `WorldCountry.maybeFromCodeNumeric` accepts `null` (and returns `null`), like the other `maybeFrom*` methods.
+
+Inherited from `l10n_countries` 2.3.0:
+
+- `localize()` returns an unmodifiable view instead of copying its result, and no longer copies the set of ISO codes.
+- `localize()` reads the names straight from each matched locale in a single pass: bundled locales are no longer stored in the mapper's `map`, no intermediate map is built per locale, and there is no second lookup per ISO code when more than one locale matches.
+
+DOCUMENTATION
+
+- Documented the `@` and `*` placeholders of `PostalCode.format`.
+- Documented that `maybeFromValue` of `WorldCountry`, `Continent`, `SubRegion` and `RegionalBloc` compares the `code`, `name` or `acronym` of an item when `where` returns `null` for it.
+- Fixed the `WorldCountry.maybeFromAnyCode` docs, which mentioned a currency code, the `WorldCountry.fromAnyCode` code sample, whose assert compared a `CountryName` with a `String`, and the description of `WorldCountry.map` in the agent skill.
+- Reworded the "Sealed classes" FAQ entry of the README.
+- Documented on the `WorldCountry` numeric and any-code lookups that an `int` has no leading zeros (`4` is `"4"`, not `"004"`), so codes below 100 have to be passed as strings.
+
+CHORE
+
+- Updated `sealed_currencies` dependency to v3.4.2 and `l10n_countries` dependency to v2.3.0.
+- The Dart SDK was bumped to v3.13.0, as required by `l10n_countries` 2.3.0. `WorldCountry` constructors use its private named parameters, the API is the same.
+
 ## 3.4.2
 
 FIX

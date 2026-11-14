@@ -23,6 +23,12 @@ extension IsoTranslatedIterableExtension<
   ///
   /// The returned map is unmodifiable to prevent accidental modifications.
   ///
+  /// All items are localized with the localization delegate (and so the
+  /// mapper) of the first item, in a single call. Items that have their own
+  /// custom `mapper` while others do not (or vice versa) are not translated
+  /// by their own mapper here, localize them separately (e.g. with
+  /// `commonNameFor`).
+  ///
   /// Example usage:
   ///
   /// ```dart

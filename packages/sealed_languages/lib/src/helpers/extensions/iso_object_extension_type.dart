@@ -45,7 +45,9 @@ extension type const IsoObject._(Object _value) implements Object {
   /// Converts the object to a trimmed, [String] representation.
   ///
   /// If the object is an [Enum], this method returns the name of the enum
-  /// entry. Otherwise, it converts the object to a string and trims it.
+  /// entry. Otherwise, it converts the object to a string and trims it. An
+  /// [int] has no leading zeros, so `50` becomes `"50"`, not the ISO numeric
+  /// code `"050"`.
   String toCode() => _value is Enum ? _value.name : _value.toString().trim();
 
   /// Checks if the object's string representation is a valid ISO code.

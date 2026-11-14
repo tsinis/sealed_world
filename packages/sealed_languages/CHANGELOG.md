@@ -6,10 +6,44 @@ FIX
 - `translatedNames` passes a custom `LocaleMappingOptions.altSymbol` to the mapper, so alternative names marked with a symbol other than `"+"` are found.
 - `translatedNames` with an empty `LocaleMappingOptions.altSymbol` returns the common names instead of an empty list.
 - `LocaleMappingOptions.toString()` separates `fallbackLocale` and `mainLocale` with commas, it printed `"+", , fallbackLocale: "en"localizeFullNames`.
+- `parseLocale` accepts three-digit UN M49 regions (`es_419`) and ignores a POSIX encoding or modifier (`de_DE.UTF-8`, `ca_ES@valencia`), it returned `null` for the whole locale. So `translatedNames` no longer drops the translations of such locales either.
+- `parseLocale` only accepts ASCII letters in the language, script and region subtags, and a non-empty POSIX suffix: `en_日本` and `en.` are no longer parsed as locales.
+- `isConstructed` checks whether the `family` is `Constructed`, so it is also `true` for copies (`copyWith`) and custom constructed languages, not only for the five bundled instances.
+
+Inherited from `l10n_languages` 2.3.0:
+
+- Regional and script locales now fall back to their parent locales instead of straight to the language: `zh_Hant_TW` → `zh_Hant` → `zh`, `zh_TW` and `zh_HK` → `zh_Hant`, `pt_MO`, `pt_MZ` (and other CLDR children) → `pt_PT` → `pt`, `nb` and `nn` → `no`. Previously, for example, `bs_Cyrl_BA` returned the Latin script names of `bs`.
+- Locales are normalized before the lookup (`zh-Hant-TW`, `pt-pt`, `en_US` and `en_US.UTF-8` become `zh_Hant_TW`, `pt_PT` and `en_US`), also with `useLanguageFallback: false`. The locale as given is still tried first, so custom locale keys keep working.
+- Translations injected via `other` are no longer cleared by `localize()`: a `const` map no longer throws an `UnsupportedError`, and an `IsoLocaleMapper` shared between mappers no longer returns an empty map on its second use.
+- `l10n-<locale>=false` now drops only that locale, previously it dropped all of them.
+- `formatter` receives the ISO code of an alternative name with its symbol (`ENG+`) also when several locales match, previously only when a single one did. A formatter that compares `isoLocale.isoCode` with an ISO code has to drop the symbol first to treat both names alike.
+
+IMPROVEMENTS
+
+Inherited from `l10n_languages` 2.3.0:
+
+- `localize()` returns an unmodifiable view instead of copying its result, and no longer copies the set of ISO codes.
+- Bundled locales, which ship no alternative names, are looked up without the alternative name symbol, so the default `altSymbol` no longer costs an extra lookup per ISO code.
+- `localize()` reads the names straight from each matched locale in a single pass: bundled locales are no longer stored in the mapper's `map`, and no intermediate map is built per locale.
 
 DOCUMENTATION
 
 - Documented that `LocaleMappingOptions.formatter` receives the key of the entry it formats: the ISO code of a full name ends with `altSymbol` (`USA+`).
+- Documented on the `Script` numeric and any-code lookups that an `int` has no leading zeros (`50` is `"50"`, not `"050"`), so codes below 100 have to be passed as strings.
+- Documented that `maybeFromValue` compares the `code` (or `name`) of an item when `where` returns `null` for it.
+- Documented that the `commonNamesMap` of an `Iterable` uses the mapper of its first item for all items.
+- Documented that `translatedNames` returns only the injected translations when neither a `mainLocale` nor a `fallbackLocale` is set.
+- Documented that `TranslatedName` equality ignores `countryCode` and `script` on purpose.
+- Documented that the keys of the map passed to `UpperCaseMap` and `UpperCaseIsoMap` have to be UPPERCASE already.
+- Documented the locale formats `parseLocale` accepts.
+- Fixed the docs of `NaturalLanguage.maybeFromCodeShort`, which described the three-letter code.
+- Fixed the code samples of `UpperCaseIsoMap` and of the `any_code_object` doc template (shared by the `fromCode`-like methods), their asserts failed when run.
+- Reworded the "Sealed classes" FAQ entry of the README.
+
+CHORE
+
+- Updated `l10n_languages` dependency to v2.3.0.
+- The Dart SDK was bumped to v3.13.0, as required by `l10n_languages` 2.3.0. `NaturalLanguage` constructors use its private named parameters, the API is the same.
 
 ## 3.4.1
 

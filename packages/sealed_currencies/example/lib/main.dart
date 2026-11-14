@@ -3,7 +3,7 @@
 import "package:sealed_currencies/sealed_currencies.dart";
 
 void main() {
-  print(FiatCurrency.listExtended.length); // Prints: "171".
+  print(FiatCurrency.listExtended.length); // Prints: "165".
 
   final serbianDinar = FiatCurrency.fromCode("Rsd");
   print(serbianDinar.name); // Prints: "Serbian Dinar".

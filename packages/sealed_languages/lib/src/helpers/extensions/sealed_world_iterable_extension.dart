@@ -4,6 +4,11 @@ import "../../interfaces/iso_standardized.dart";
 import "../../model/script/submodels/script.dart" show Script;
 import "iso_object_extension_type.dart";
 
+// TODO(tsinis): Hide this extension from the public API in the next major
+// version, together with making the `@Deprecated.subclass` classes `final`.
+// It is exported only because sealed_currencies and sealed_countries use
+// `assertNotEmpty`, `toInstancesString` and `fromIsoList`, but it also adds
+// these methods to every `Iterable` in the consumer's code.
 /// Extension on [Iterable] class to provide helper methods for working
 /// with Iterables.
 extension SealedWorldIterableExtension<T extends Object> on Iterable<T?> {

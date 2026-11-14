@@ -1,1 +1,7 @@
 include: ../analysis_options.yaml
+
+linter:
+  rules:
+    # TODO(tsinis): Migrate to the Dart 3.13 constructor syntax (`new()`) in the
+    # next release, as `l10n_*` already did.
+    unnecessary_type_name_in_constructor: false

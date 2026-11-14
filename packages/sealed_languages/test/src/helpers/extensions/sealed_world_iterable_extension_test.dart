@@ -152,9 +152,8 @@ void main() {
       });
 
       test("should ignore enums that don't match any object in receiver", () {
-        final result = const <Script>[
-          .adlm(),
-        ].toEnums(const [_SealedWorldIterableExtensionTest.cyrl]);
+        final result = const <Script>[.adlm()]
+            .toEnums(const [_SealedWorldIterableExtensionTest.cyrl]);
         expect(result, isEmpty);
       });
     });

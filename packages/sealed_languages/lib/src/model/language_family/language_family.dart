@@ -4,6 +4,8 @@ import "../../interfaces/named.dart";
 ///
 /// A language family is a group of languages that have a common ancestor or are
 /// related in some other way.
+// TODO(tsinis): When making this `final`, also hide the
+// `SealedWorldIterableExtension` from the public API, see the note there.
 @Deprecated.subclass(
   "This class will be marked as `final` in the next major version to support "
   "deep immutability optimizations. Do not extend or implement this class.",

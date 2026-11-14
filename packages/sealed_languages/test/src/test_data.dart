@@ -7,7 +7,7 @@ enum TestData { rus, cn }
 
 // ignore: prefer-single-declaration-per-file, it's a test data class.
 class IsoCodeClass {
-  const IsoCodeClass({String code = firstCode}) : _code = code;
+  const IsoCodeClass({this._code = firstCode});
   final String _code;
 
   @override

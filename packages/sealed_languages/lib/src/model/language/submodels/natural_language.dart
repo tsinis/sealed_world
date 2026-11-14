@@ -226,7 +226,7 @@ sealed class NaturalLanguage extends Language
   /// [isRightToLeft] parameter specifies whether the language is written
   /// right-to-left (defaults to `false`).
   /// {@template sealed_world.locale_mapper_callback}
-  /// The optional [mapper] parameter and lets you inject custom localization
+  /// The optional `mapper` parameter lets you inject custom localization
   /// sources.
   ///
   /// Lazily provides a [LocaleMapFunction] that translates ISO codes into human
@@ -280,7 +280,7 @@ sealed class NaturalLanguage extends Language
     this.scripts = const {ScriptLatn()},
 
     /// {@macro sealed_world.locale_mapper_callback}
-    LocaleMapFunction<String> Function()? mapper,
+    this._mapper,
   }) : assert(
          code.length == IsoStandardized.codeLength,
          """`code` should be exactly ${IsoStandardized.codeLength} characters long!""",
@@ -298,8 +298,7 @@ sealed class NaturalLanguage extends Language
          bibliographicCode == null ||
              bibliographicCode.length == IsoStandardized.codeLength,
          """`bibliographicCode` should be exactly ${IsoStandardized.codeLength} characters long!""",
-       ),
-       _mapper = mapper;
+       );
 
   /// {@template permissive_constructor}
   /// Creates an instance of the class with relaxed constraints.
@@ -348,12 +347,11 @@ sealed class NaturalLanguage extends Language
     this.scripts = const {ScriptLatn()},
 
     /// {@macro sealed_world.locale_mapper_callback}
-    LocaleMapFunction<String> Function()? mapper,
+    this._mapper,
   }) : assert(
          code.length > 0 || codeShort.length > 0,
          "The `code` (or at least `codeShort`) must be provided!",
-       ),
-       _mapper = mapper;
+       );
 
   /// {@macro sealed_world.language_aar_constructor}
   const factory NaturalLanguage.aar() = _AarFactory;
@@ -920,10 +918,10 @@ sealed class NaturalLanguage extends Language
   /// ```dart
   /// import 'package:sealed_languages/sealed_languages.dart';
   ///
-  /// enum IsoEnum { de, fr, ar }
+  /// enum IsoEnum { deu, fra, ara }
   ///
   /// void main() {
-  ///   final lang = NaturalLanguage.fromCode(IsoEnum.de);
+  ///   final lang = NaturalLanguage.fromCode(IsoEnum.deu);
   ///   assert(lang == const LangDeu());
   /// }
   /// ```
@@ -1068,11 +1066,11 @@ sealed class NaturalLanguage extends Language
           ),
         );
 
-  /// Returns an instance of the [NaturalLanguage] class from a three-letter
-  /// Terminological ISO 639-2 code if it exists. Returns `null` otherwise.
+  /// Returns an instance of the [NaturalLanguage] class from a two-letter
+  /// ISO 639-1 code if it exists. Returns `null` otherwise.
   ///
-  /// The [code] parameter is required and should be an object representing
-  /// the three-letter Terminological ISO 639-2 code for the language.
+  /// The [codeShort] parameter is required and should be an object
+  /// representing the two-letter ISO 639-1 code for the language.
   /// {@macro any_code_object}
   /// The optional [languages] parameter can be used to specify a list of
   /// [NaturalLanguage] objects to search through.
@@ -1403,7 +1401,8 @@ sealed class NaturalLanguage extends Language
   /// not `null`, this method uses the result of calling [where] with each
   /// [NaturalLanguage] object in [languages] to determine whether the object's
   /// [code] matches [value]. If [where] is `null`, this method simply compares
-  /// each [NaturalLanguage]'s [code] to [value].
+  /// each [NaturalLanguage]'s [code] to [value]. If [where] returns `null` for
+  /// a language, the [code] of that language is compared to [value] instead.
   ///
   /// The optional [languages] parameter specifies the list of [NaturalLanguage]
   /// objects to search (defaults to [NaturalLanguage.list]).

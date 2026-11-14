@@ -57,6 +57,11 @@ class TranslatedName extends BasicLocale implements Named<String> {
   @override
   String toJson({JsonCodec codec = const JsonCodec()}) => codec.encode(toMap());
 
+  /// Two translated names are equal when they have the same [language] and
+  /// the same [name] and [fullName] (case-insensitive).
+  ///
+  /// The [countryCode] and [script] are intentionally ignored, so the same
+  /// name in `pt_BR` and `pt_PT` is considered equal.
   @override
   bool operator ==(Object other) {
     if (identical(this, other)) return true;

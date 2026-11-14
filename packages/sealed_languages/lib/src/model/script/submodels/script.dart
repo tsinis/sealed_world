@@ -925,9 +925,8 @@ sealed class Script extends WritingSystem
   factory Script.fromCode(Object code, [Iterable<Script>? scripts]) {
     if (scripts == null) return codeMap.findByCodeOrThrow(code);
 
-    String? validCode = IsoObject(
-      code,
-    ).maybeToValidIsoCode(exactLength: codeLength);
+    String? validCode = IsoObject(code)
+        .maybeToValidIsoCode(exactLength: codeLength);
     if (validCode == null) {
       throw StateError(
         "Provided $code isn't a valid $standardCodeName code. "
@@ -952,6 +951,12 @@ sealed class Script extends WritingSystem
   /// The [codeNumeric] parameter is required and should be an object
   /// representing the three-digit ISO 15924 numeric code for the script.
   /// {@macro any_code_object}
+  /// {@template sealed_world.int_numeric_code}
+  /// Note that an [int] is converted with its `toString()` method too, and a
+  /// Dart integer cannot hold leading zeros: `50` becomes `"50"`, not `"050"`.
+  /// Pass numeric codes below 100 as strings (e.g. `'050'` instead of `50`),
+  /// otherwise they will not be found.
+  /// {@endtemplate}
   /// The optional [scripts] parameter can be used to specify a list of [Script]
   /// objects to search through.
   /// {@macro optional_instances_array_parameter}
@@ -986,6 +991,7 @@ sealed class Script extends WritingSystem
   /// The [code] parameter is required and should be an object representing the
   /// ISO 15924 code for the script.
   /// {@macro any_code_object}
+  /// {@macro sealed_world.int_numeric_code}
   /// The optional [scripts] parameter can be
   /// used to specify a list of [Script] objects to search through.
   /// {@macro optional_instances_array_parameter}
@@ -1069,7 +1075,8 @@ sealed class Script extends WritingSystem
   /// instance. The optional [scripts] parameter can be used to specify a list
   /// of [Script] objects to search through. This method returns the [Script]
   /// instance that corresponds to the given value, or `null` if no such
-  /// instance exists.
+  /// instance exists. If [where] is `null`, or returns `null` for a script,
+  /// the [code] of that script is compared to [value] instead.
   static Script? maybeFromValue<T extends Object>(
     T value, {
     T? Function(Script script)? where,
@@ -1091,6 +1098,7 @@ sealed class Script extends WritingSystem
   /// The [code] parameter is required and should be an object representing the
   /// ISO 15924 code for the script.
   /// {@macro any_code_object}
+  /// {@macro sealed_world.int_numeric_code}
   /// The optional [scripts] parameter can be used to specify a list of
   /// [Script] objects to search through.
   /// {@macro optional_instances_array_parameter}
@@ -1150,9 +1158,8 @@ sealed class Script extends WritingSystem
   static Script? maybeFromCode(Object? code, [Iterable<Script>? scripts]) {
     if (scripts == null) return codeMap.maybeFindByCode(code);
 
-    String? string = IsoObject.maybe(
-      code,
-    )?.maybeToValidIsoCode(exactLength: codeLength);
+    String? string = IsoObject.maybe(code)
+        ?.maybeToValidIsoCode(exactLength: codeLength);
     if (string == null) return null;
     string = formatToStandardCode(string);
 
@@ -1165,6 +1172,7 @@ sealed class Script extends WritingSystem
   /// The [codeNumeric] parameter is required and should be an object
   /// representing the three-digit ISO 15924 numeric code for the script.
   /// {@macro any_code_object}
+  /// {@macro sealed_world.int_numeric_code}
   /// The optional [scripts] parameter can be used to specify a list of [Script]
   /// objects to search through.
   /// {@macro optional_instances_array_parameter}
@@ -1187,9 +1195,8 @@ sealed class Script extends WritingSystem
   ]) {
     if (scripts == null) return codeNumericMap.maybeFindByCode(codeNumeric);
 
-    final string = IsoObject.maybe(
-      codeNumeric,
-    )?.maybeToValidIsoCode(exactLength: IsoStandardized.codeLength);
+    final string = IsoObject.maybe(codeNumeric)
+        ?.maybeToValidIsoCode(exactLength: IsoStandardized.codeLength);
 
     return scripts.firstIsoWhereCodeOtherOrNull(string, toUpperCase: false);
   }

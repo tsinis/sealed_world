@@ -1,5 +1,3 @@
-import "dart:collection";
-
 import "../helpers/extensions/basic_locale_extension.dart";
 import "../helpers/extensions/locale_mapping_options_extension.dart";
 import "../model/core/basic_locale.dart";
@@ -43,8 +41,15 @@ abstract class BasicLocalizationDelegate<
   final Iterable<Script>? scripts;
 
   /// Regular expression pattern for parsing Unicode locale identifiers.
+  ///
+  /// Matches a language subtag, an optional script subtag and an optional
+  /// region subtag (all ASCII), separated by `_`, `-` or whitespace. The region
+  /// is either an alphabetic code (`US`, `USA`) or a three-digit UN M49 code
+  /// (`419`). A trailing POSIX encoding or modifier (`.UTF-8`, `@valencia`) is
+  /// ignored. Variant subtags (such as `POSIX` in `en_US_POSIX`) are not
+  /// supported.
   static const unicodeLocale =
-      r"^(\p{L}{2,3})(?:[_\s-]+(?:(\p{L}{4})(?:[_\s-]+(\p{L}{2,3}))?|(\p{L}{2,3})))?$";
+      r"^([a-z]{2,3})(?:[_\s-]+(?:([a-z]{4})(?:[_\s-]+([a-z]{2,3}|\d{3}))?|([a-z]{2,3}|\d{3})))?(?:[.@]\S+)?$";
 
   /// {@macro copy_with_method}
   BasicLocalizationDelegate<L, T> copyWith({
@@ -87,9 +92,13 @@ abstract class BasicLocalizationDelegate<
   /// Parses a locale identifier string into a locale object.
   ///
   /// Parameters:
-  /// - [locale]: The locale identifier to parse.
+  /// - [locale]: The locale identifier to parse, in the format described in
+  ///   [unicodeLocale] (e.g. `en`, `en_US`, `zh-Hant-TW`, `es_419` or
+  ///   `de_DE.UTF-8`).
   ///
-  /// Returns a locale of type [L] if valid, `null` otherwise.
+  /// Returns a locale of type [L] if valid, `null` otherwise. A region code
+  /// is passed to [toLocale] as is (uppercased), even if it is not a known
+  /// country code, while an unknown script is dropped.
   L? parseLocale(Object? locale) {
     final input = locale?.toString().trim() ?? "";
     if (input.isEmpty) return null;
@@ -138,7 +147,12 @@ abstract class BasicLocalizationDelegate<
   /// - [items]: Collection of ISO standardized items to translate.
   /// - [options]: Optional locale mapping configuration.
   ///
-  /// Returns an unmodifiable list of translated names.
+  /// Returns an unmodifiable list of translated names. When neither
+  /// [LocaleMappingOptions.mainLocale] nor
+  /// [LocaleMappingOptions.fallbackLocale] is set, the default `*LocaleMapper`
+  /// of the `l10n_*` packages only returns the translations injected into it
+  /// (via its `other` parameter), so for the bundled translations alone the
+  /// result is empty. A custom [mapper] decides on its own.
   ///
   /// !Important: This method is quite heavy (it's recommended to cache
   /// the results)!
