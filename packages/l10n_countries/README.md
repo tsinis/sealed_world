@@ -50,7 +50,7 @@ import 'package:l10n_countries/l10n_countries.dart';
 > Parent locales of the enabled ones are kept automatically (`l10n-sw_cd=true` also keeps `sw`), and `l10n-<locale>=false` drops a single locale. Enable the locale passed as `fallbackLocale` too.
 
 > [!WARNING]
-> Only flags of locales bundled in this package (its `lib/src/data` locales, which `availableLocales` lists in a build without flags), spelled like the locale or lowercased, switch it to this opt-in mode. Flags of other locales, such as `l10n-en_US`, `l10n-pt_BR` or the `l10n-fil` alias, are ignored: `--dart-define=l10n-en=true --dart-define=l10n-pt_BR=true` keeps English only and drops Portuguese. Name the bundled locale instead: `l10n-pt`, and `l10n-tl` for Flutter's `fil` (Filipino). In debug builds, `localize()` prints a warning the first time it skips a locale stripped this way.
+> Only flags of locales bundled in this package (its `lib/src/data` locales, which `availableLocales` lists in a build without flags), spelled like the locale or lowercased, switch it to this opt-in mode. Flags of other locales, such as `l10n-en_US`, `l10n-pt_BR` or the `l10n-fil` alias, are ignored: `--dart-define=l10n-en=true --dart-define=l10n-pt_BR=true` keeps English only and drops Portuguese. Name the bundled locale instead: `l10n-pt`, and `l10n-tl` for Flutter's `fil` (Filipino). In debug builds, `localize()` prints a warning the first time a requested locale and all its parents are missing for this reason.
 
 ### Usage
 

@@ -73,9 +73,9 @@ class {{mapper}} extends IsoLocaleMapper<IsoLocaleMapper<String>> {
 {{bundledLocales}}
   };
 
-  /// The locales that [_reportStripped] has already checked, so that it
-  /// reports each stripped one once.
-  static final _checked = <String>{};
+  /// The stripped locales that [_reportStripped] has already reported. Only a
+  /// build whose defines strip a locale fills it, which `dart test` does not.
+  static final _reported = <String>{}; // coverage:ignore-line
 
   /// Localizes a set of ISO codes into names (to specified locale if needed).
   ///
@@ -129,6 +129,11 @@ class {{mapper}} extends IsoLocaleMapper<IsoLocaleMapper<String>> {
     if (isoCodes.isEmpty) return const {};
     final locale = mainLocale?.toString();
     final altLocale = fallbackLocale?.toString();
+    assert(
+      _reportStripped(locale, useLanguageFallback: useLanguageFallback) &&
+          _reportStripped(altLocale, useLanguageFallback: useLanguageFallback),
+      "It only reports, it never fails.",
+    );
     final localeKeys = locale == null && altLocale == null
         ? null
         : {
@@ -152,11 +157,7 @@ class {{mapper}} extends IsoLocaleMapper<IsoLocaleMapper<String>> {
     for (final key in localeKeys ?? map.keys) {
       final custom = map[key];
       final names = custom ?? _factories[key]?.call();
-      if (names == null) {
-        assert(_reportStripped(key), "It only reports, it never fails.");
-
-        continue;
-      }
+      if (names == null) continue;
       hasLocale = true;
       results.addAll(
         names,
@@ -176,25 +177,37 @@ class {{mapper}} extends IsoLocaleMapper<IsoLocaleMapper<String>> {
     _isConsumed = true;
   }
 
-  /// Prints a warning the first time [localize] skips a bundled [locale] that
-  /// the `l10n-*` defines of this build stripped. Otherwise an ignored define
-  /// strips a language silently: `l10n-en=true` with `l10n-pt_BR=true` keeps
-  /// `en` only, so a `pt_BR` lookup finds neither `pt_BR` nor `pt`.
+  /// Prints a warning the first time a requested [locale] finds none of its
+  /// locales in this build because the `l10n-*` defines stripped them.
+  /// Otherwise an ignored define strips a language silently: `l10n-en=true`
+  /// with `l10n-pt_BR=true` keeps `en` only, so `pt_BR` finds neither `pt_BR`
+  /// nor `pt`. A locale that finds one of its parents (`de_CH` -> `de`) is
+  /// not reported, and a chain is reported once, by its most specific
+  /// stripped locale, whose define keeps the rest of the chain too.
   ///
   /// It is only called from an `assert`, so it always returns `true`, and
   /// release builds neither run nor contain it.
-  static bool _reportStripped(String locale) {
-    if (_checked.add(locale) && _bundledLocales.contains(locale)) {
-      // Only a build whose defines strip a locale gets here, which `dart test`
-      // does not cover: see the stripped locales test in this package.
-      // coverage:ignore-start
+  bool _reportStripped(String? locale, {required bool useLanguageFallback}) {
+    final chain = locale == null
+        ? const <String>{}
+        : LocaleFallback.chain(locale, useLanguageFallback: useLanguageFallback);
+    final isFound = chain.any(
+      (key) => map.containsKey(key) || _factories.containsKey(key),
+    );
+    final stripped = isFound
+        ? null
+        : chain.where(_bundledLocales.contains).firstOrNull;
+    // Only a build whose defines strip a locale finds one, which `dart test`
+    // does not cover: see the stripped locales test in this package.
+    // coverage:ignore-start
+    if (stripped != null && _reported.add(stripped)) {
       // ignore: avoid_print, a debug-only warning, the package has no logger.
       print(
-        '{{package}}: "$locale" was stripped by the l10n-* defines, pass '
-        "--dart-define=l10n-$locale=true to keep it.",
+        '{{package}}: "$stripped" was stripped by the l10n-* defines, pass '
+        "--dart-define=l10n-$stripped=true if it should be kept.",
       );
-      // coverage:ignore-end
     }
+    // coverage:ignore-end
 
     return true;
   }

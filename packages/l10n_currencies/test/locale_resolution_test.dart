@@ -152,8 +152,9 @@ void main() {
     });
 
     test("get their alternative names next to a bundled locale", () {
+      // `de` is bundled, and kept by the `l10n-de` define of a shaken build.
       final result = CurrenciesLocaleMapper(other: {"zz": _withAltName()})
-          .localize(const {"AAA"}, mainLocale: "zz", fallbackLocale: "en");
+          .localize(const {"AAA"}, mainLocale: "zz", fallbackLocale: "de");
 
       expect(result.keys.map((key) => key.isoCode), ["AAA", "AAA+"]);
     });
@@ -260,13 +261,18 @@ void main() {
   // CI also runs this file on a shaken build with asserts, see the l10n
   // tree-shaking step of the verify package workflow.
   group("$CurrenciesLocaleMapper stripped locales", skip: !isShaken, () {
-    test("are reported once, in debug builds", () {
+    test("are reported once, if no locale of the chain is kept", () {
       const codes = {"USD"};
+      const warning =
+          'l10n_currencies: "fr" was stripped by the l10n-* defines, pass '
+          "--dart-define=l10n-fr=true if it should be kept.";
       final printed = <String>[];
-      // Every l10n_* package bundles `de` (kept) and `fr` (stripped).
+      // Every l10n_* package bundles `de` (kept) and `fr` (stripped), not
+      // `fr_XX`, whose chain ends at the already reported `fr`. `de_CH` finds
+      // `de`, even where `de_CH` is bundled (and stripped).
       final found = runZoned(
         () => [
-          for (final locale in const ["fr_CA", "fr", "de", "xx"])
+          for (final locale in const ["fr", "fr_XX", "de", "de_CH", "xx"])
             CurrenciesLocaleMapper()
                 .localize(codes, mainLocale: locale)
                 .isNotEmpty,
@@ -275,16 +281,9 @@ void main() {
           print: (_, _, _, line) => printed.add(line),
         ),
       );
-      final aboutFrench = printed.where((line) => line.contains('"fr"'));
 
-      expect(found, [false, false, true, false], reason: "only de is kept");
-      expect(aboutFrench, hasLength(1), reason: "run with --enable-asserts");
-      expect(aboutFrench.single, contains("--dart-define=l10n-fr=true"));
-      expect(
-        printed.where((line) => line.contains(RegExp('"(de|xx)"'))),
-        isEmpty,
-        reason: "de is kept, xx is not bundled",
-      );
+      expect(found, [false, false, true, true, false]);
+      expect(printed, const [warning], reason: "run with --enable-asserts");
     });
   });
 }

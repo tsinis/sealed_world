@@ -13,7 +13,7 @@ NEW FEATURES
 
 - Enabling a regional or script locale keeps the locales it falls back to (`l10n-sw_cd=true` also keeps `sw`), unless they are set to false.
 - Locale defines also accept the locale spelling (`l10n-sw_CD`), not only the lowercase one.
-- In debug builds, `localize()` prints a warning the first time it skips a bundled locale that the `l10n-*` defines stripped, with the define that keeps it. An ignored define strips a language silently otherwise: `l10n-en=true` with `l10n-pt_BR=true` keeps English only.
+- In debug builds, `localize()` prints a warning the first time a requested locale and all its parents are missing because the `l10n-*` defines stripped them, naming the define that keeps them. An ignored define strips a language silently otherwise: `l10n-en=true` with `l10n-pt_BR=true` keeps English only, so `pt_BR` finds neither `pt_BR` nor `pt`.
 - Added names for `XCG`, `ZWG`, `TWD` and `KRW` where missing (also to regional and script locales such as `zh_Hant`, `sr_Latn` and `pt_PT`), and for the ISO 4217 codes `XAU`, `XAG`, `XPT`, `XPD`, `XDR`, `XTS`, `XBA`, `XBB`, `XBC` and `XBD`: 642 names across 87 locales, from CLDR 48 (ICU 78). The `XDR` names of `bs`, `bs_Cyrl`, `hr`, `id`, `sr` and `sr_Latn` and the `XBD` name of `sk` were corrected, CLDR has them wrong.
 
 IMPROVEMENTS
