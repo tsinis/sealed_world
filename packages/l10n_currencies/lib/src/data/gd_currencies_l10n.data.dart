@@ -1,6 +1,6 @@
 import "../iso_locale_mapper.dart";
 
-/// Contains 161 translation(s).
+/// Contains 171 translation(s).
 /// Provides translations for the (Scottish) Gaelic language
 /// locale.
 class GdCurrenciesL10N extends IsoLocaleMapper<String> {
@@ -159,10 +159,20 @@ class GdCurrenciesL10N extends IsoLocaleMapper<String> {
       "VUV": "Vatu Vanuatuthach",
       "WST": "Tala Samothach",
       "XAF": "Franc CFA Meadhan-Afragach",
+      "XAG": "Airgead",
+      "XAU": "Òr",
+      "XBA": "Aonad co-dhèanta Eòrpach",
+      "XBB": "Aonad airgid Eòrpach",
+      "XBC": "Aonad cunntasachd Eòrpach (XBC)",
+      "XBD": "Aonad cunntasachd Eòrpach (XBD)",
       "XCD": "Dolar Caraibeach earach",
       "XCG": "Gulden Caraibeach",
+      "XDR": "Còir tarraing shònraichte",
       "XOF": "Franc CFA Afraga an Iar",
+      "XPD": "Pallaideam",
       "XPF": "Franc CFP",
+      "XPT": "Platanam",
+      "XTS": "Còd airgeadra fo dheuchainn",
       "YER": "Rial Eamanach",
       "ZAR": "Rand Afraga a Deas",
       "ZMW": "Kwacha Sàimbitheach",

@@ -1,6 +1,6 @@
 import "../iso_locale_mapper.dart";
 
-/// Contains 161 translation(s).
+/// Contains 171 translation(s).
 /// Provides translations for the Russian language
 /// locale.
 class RuCurrenciesL10N extends IsoLocaleMapper<String> {
@@ -159,10 +159,20 @@ class RuCurrenciesL10N extends IsoLocaleMapper<String> {
       "VUV": "Вату Вануату",
       "WST": "Самоанская тала",
       "XAF": "Франк КФА ВЕАС",
+      "XAG": "Серебро",
+      "XAU": "Золото",
+      "XBA": "Европейская составная единица",
+      "XBB": "Европейская денежная единица",
+      "XBC": "Расчетная единица европейского валютного соглашения (XBC)",
+      "XBD": "Расчетная единица европейского валютного соглашения (XBD)",
       "XCD": "Восточно-карибский доллар",
       "XCG": "Карибский гульден",
+      "XDR": "СДР (специальные права заимствования)",
       "XOF": "Франк КФА ВСЕАО",
+      "XPD": "Палладий",
       "XPF": "Французский тихоокеанский франк",
+      "XPT": "Платина",
+      "XTS": "Тестовый валютный код",
       "YER": "Йеменский риал",
       "ZAR": "Южноафриканский рэнд",
       "ZMW": "Замбийская квача",

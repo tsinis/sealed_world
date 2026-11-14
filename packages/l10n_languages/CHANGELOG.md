@@ -1,3 +1,30 @@
+## 2.3.0
+
+FIX
+
+- Regional and script locales now fall back to their parent locales instead of straight to the language: `zh_Hant_TW` → `zh_Hant` → `zh`, `zh_TW` and `zh_HK` → `zh_Hant`, `pt_MO`, `pt_MZ` (and other CLDR children) → `pt_PT` → `pt`, `nb` and `nn` → `no`, `fil` → `tl`, plus the legacy `iw`, `in` and `ji` codes. Previously, for example, `bs_Cyrl_BA` returned the Latin script names of `bs`.
+- Locales are normalized before the lookup (`zh-Hant-TW`, `pt-pt`, ` en_US ` and `en_US.UTF-8` become `zh_Hant_TW`, `pt_PT` and `en_US`), also with `useLanguageFallback: false`. The locale as given is still tried first, so custom locale keys keep working.
+- Translations injected via `other` are no longer cleared by `localize()`: a `const` map no longer throws an `UnsupportedError`, and an `IsoLocaleMapper` shared between mappers no longer returns an empty map on its second use.
+- `l10n-<locale>=false` now drops only that locale, previously it dropped all of them.
+
+NEW FEATURES
+
+- Enabling a regional or script locale keeps the locales it falls back to (`l10n-sw_cd=true` also keeps `sw`), unless they are set to false.
+- Locale defines also accept the locale spelling (`l10n-sw_CD`), not only the lowercase one.
+
+IMPROVEMENTS
+
+- `localize()` returns an unmodifiable view instead of copying its result, and no longer copies the set of ISO codes.
+
+DOCUMENTATION
+
+- Documented the order of the returned map, which `sealed_*` packages rely on: the main locale and its parents first, then the fallback locale and its parents.
+- Documented that only defines of locales bundled in this package switch it to opt-in mode.
+
+CHORE
+
+- The mapper is generated from a single template shared by all `l10n_*` packages (`dart run :l10n_mapper` in `tools/`), and CI now runs the tree-shaking tests.
+
 ## 2.2.0
 
 FIX

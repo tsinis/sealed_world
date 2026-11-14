@@ -1,6 +1,6 @@
 // Locale-count assertions and the "en" anchor only hold on an unshaken
-// build. CI shakes with `l10n-de`; `hasEnvironment` so a `=false` run
-// skips too. See CHANGELOG note on a fuller any-filter guard.
+// build, so any `l10n-de` define skips them (`hasEnvironment`, so `=false`
+// too). The define matrix itself is covered in integration_test.
 // ignore_for_file: do_not_use_environment
 
 import "package:l10n_currencies/l10n_currencies.dart";

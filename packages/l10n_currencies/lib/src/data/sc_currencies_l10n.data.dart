@@ -1,6 +1,6 @@
 import "../iso_locale_mapper.dart";
 
-/// Contains 140 translation(s).
+/// Contains 152 translation(s).
 /// Provides translations for the Sardinian language
 /// locale.
 class ScCurrenciesL10N extends IsoLocaleMapper<String> {
@@ -71,6 +71,7 @@ class ScCurrenciesL10N extends IsoLocaleMapper<String> {
       "KHR": "Riel cambogianu",
       "KMF": "Francu comorianu",
       "KPW": "Won nordcoreanu",
+      "KRW": "Won sudcoreanu",
       "KWD": "Dinar kuwaitianu",
       "KYD": "Dòllaru de sas Ìsulas Cayman",
       "KZT": "Tenge kazaku",
@@ -133,6 +134,7 @@ class ScCurrenciesL10N extends IsoLocaleMapper<String> {
       "TOP": "Paʻanga tongana",
       "TRY": "Lira turca",
       "TTD": "Dòllaru de Trinidad e Tobago",
+      "TWD": "Dòllaru nou taiwanesu",
       "TZS": "Iscellinu tanzanianu",
       "UAH": "Hryvnia ucraina",
       "UGX": "Iscellinu ugandesu",
@@ -141,7 +143,17 @@ class ScCurrenciesL10N extends IsoLocaleMapper<String> {
       "VES": "Bolivar venezuelanu",
       "VUV": "Vatu de Vanuatu",
       "WST": "Tala samoana",
+      "XAG": "Prata",
+      "XAU": "Oro",
+      "XBA": "Unidade cumpòsita europea",
+      "XBB": "Unidade monetària europea",
+      "XBC": "Unidade de acontu europea (XBC)",
+      "XBD": "Unidade de acontu europea (XBD)",
       "XCG": "Fiorinu caraìbicu",
+      "XDR": "Diritos ispetziales de prelievu",
+      "XPD": "Pallàdiu",
+      "XPT": "Plàtinu",
+      "XTS": "Còdighe de valuta pro sas proas",
       "YER": "Rial yemenita",
       "ZAR": "Rand sudafricanu",
       "ZMW": "Kwacha zambiana",

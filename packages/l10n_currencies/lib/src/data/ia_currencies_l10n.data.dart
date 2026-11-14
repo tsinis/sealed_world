@@ -1,6 +1,6 @@
 import "../iso_locale_mapper.dart";
 
-/// Contains 136 translation(s).
+/// Contains 138 translation(s).
 /// Provides translations for the Interlingua language
 /// locale.
 class IaCurrenciesL10N extends IsoLocaleMapper<String> {
@@ -70,6 +70,7 @@ class IaCurrenciesL10N extends IsoLocaleMapper<String> {
       "KHR": "Riel cambodgian",
       "KMF": "Franco comorian",
       "KPW": "Won nordkorean",
+      "KRW": "Won sudkorean",
       "KWD": "Dinar kuwaiti",
       "KYD": "Dollar del Insulas Caiman",
       "KZT": "Tenge kazakh",
@@ -130,6 +131,7 @@ class IaCurrenciesL10N extends IsoLocaleMapper<String> {
       "TOP": "Paʻanga tongan",
       "TRY": "Lira turc",
       "TTD": "Dollar de Trinidad e Tobago",
+      "TWD": "Nove dollar taiwanese",
       "TZS": "Shilling tanzanian",
       "UAH": "Hryvnia ukrainian",
       "UGX": "Shilling ugandese",

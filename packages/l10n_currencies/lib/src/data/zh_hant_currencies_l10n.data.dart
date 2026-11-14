@@ -1,6 +1,6 @@
 import "../iso_locale_mapper.dart";
 
-/// Contains 145 translation(s).
+/// Contains 158 translation(s).
 /// Provides translations for the Chinese language
 /// and Han (Traditional variant) script locale.
 class ZhHantCurrenciesL10N extends IsoLocaleMapper<String> {
@@ -75,6 +75,7 @@ class ZhHantCurrenciesL10N extends IsoLocaleMapper<String> {
       "KHR": "柬埔寨瑞爾",
       "KMF": "科摩羅法郎",
       "KPW": "北韓圓",
+      "KRW": "韓元",
       "KWD": "科威特第納爾",
       "KYD": "開曼群島元",
       "KZT": "卡扎克斯坦坦吉",
@@ -136,6 +137,7 @@ class ZhHantCurrenciesL10N extends IsoLocaleMapper<String> {
       "TOP": "東加潘加",
       "TRY": "新土耳其里拉",
       "TTD": "千里達及托巴哥元",
+      "TWD": "新台幣",
       "TZS": "坦尚尼亞先令",
       "UAH": "烏克蘭格里夫納",
       "UGX": "烏干達先令",
@@ -145,12 +147,23 @@ class ZhHantCurrenciesL10N extends IsoLocaleMapper<String> {
       "VUV": "萬那杜瓦圖",
       "WST": "西薩摩亞塔拉",
       "XAF": "法郎 (CFA–BEAC)",
+      "XAG": "白銀",
+      "XAU": "黃金",
+      "XBA": "歐洲綜合單位",
+      "XBB": "歐洲貨幣單位 (XBB)",
+      "XBC": "歐洲會計單位 (XBC)",
+      "XBD": "歐洲會計單位 (XBD)",
       "XCD": "格瑞那達元",
+      "XDR": "特殊提款權",
       "XOF": "法郎 (CFA–BCEAO)",
+      "XPD": "帕拉狄昂",
       "XPF": "法郎 (CFP)",
+      "XPT": "白金",
+      "XTS": "測試用貨幣代碼",
       "YER": "葉門里亞爾",
       "ZAR": "南非蘭特",
       "ZMW": "尚比亞克瓦查",
+      "ZWG": "辛巴威金",
       "ZWL": "辛巴威元",
     });
   }

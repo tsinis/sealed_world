@@ -12,6 +12,7 @@ FIX
 - The search bar of a picker filters a short list (5 items or fewer) too, and is shown by `showSearchBar: true` over a `PickersThemeData.showHeader: false`.
 - A picker with `showSearchBar: false` (and the results of `searchSuggestions`) no longer shows the `PickersThemeData.header`.
 - `SearchableIndexedListViewBuilder` hides its `header` with `showSearchBar: false` and shows it with `true`, whatever the `PickersThemeData.showHeader` is. Without either, the header is shown (with the search) only for more than 5 items, as documented.
+- `localeMapResolution` entries cover regional variants too, like CLDR parent locales: a script entry covers its regions (`bs_Cyrl_BA` resolves to Serbian in Bosnia and Herzegovina, `sr_BA`, as `bs_Cyrl` does), and a language entry covers the variants of a language without a `NaturalLanguage` (`fil_PH` resolves to `tl_PH` and `gsw_CH` to `de_CH`, instead of English with that region). A variant keeps only the subtags that the matched key doesn't cover, unless the entry sets them: the region, and the script only after a language key (the `Cyrl` of `bs_Cyrl_BA` is covered by the `bs_Cyrl` key, so it's not kept).
 
 CHORE
 

@@ -1,18 +1,21 @@
 // ignore_for_file: avoid-non-ascii-symbols, prefer-static-class
-// ignore_for_file: avoid_print, avoid-non-null-assertion
+// ignore_for_file: avoid_print, avoid-late-keyword
 
-/// Integration tests that verify tree-shaking works correctly by comparing
-/// compiled binary sizes with different locale configurations.
+/// Integration tests of the `l10n-<locale>` defines: they compile the package
+/// to JS with different defines and compare the output sizes, then run it with
+/// different defines and compare the locales it keeps.
 ///
 /// Run: `dart test integration_test`
 ///
-/// It should run all the tests and print out size comparisons, for example:
+/// It prints the size comparison, for example:
 /// ```shell
-/// 📊 Graduated Size Comparison:
-///  All locales (149): 1018.2KB
-///  3 locales:         77.8KB
-///  1 locale (DE):     56.9KB
+/// 📊 Bundle Size Comparison:
+///    All locales: 1016.5KB
+///    3 locales:   78.2KB
+///    DE only:     57.3KB
 /// ```
+// Three dart2js -O2 builds run in `setUpAll`, too slow for the default 30s.
+@Timeout(Duration(minutes: 5))
 library;
 
 import "dart:io";
@@ -21,252 +24,210 @@ import "dart:io";
 import "package:path/path.dart" as path;
 import "package:test/test.dart";
 
+// Package specific values, the rest of this file is the same in all l10n_*.
+const _package = "l10n_currencies";
+const _mapper = "CurrenciesLocaleMapper";
+const _isoCode = "USD";
+const _germanName = "US-Dollar"; // German for US dollar.
+const _frenchName = "dollar des États-Unis"; // French for US dollar.
+
 void main() {
-  Directory? tempDir;
-  File? testEntryPoint;
-  String? packageRoot;
+  late String root;
+  late Directory tempDir;
+  late File entryPoint;
+  late Map<String, int> sizes;
 
   // ignore: prefer-extracting-function-callbacks, it's a setup call.
   setUpAll(() async {
-    // Find the package root (where pubspec.yaml lives).
-    packageRoot = _TreeShakingTest.findPackageRoot(Directory.current.path);
-
-    // Create temp directory INSIDE the package so package resolution works.
+    root = _findPackageRoot(Directory.current.path);
+    // Inside the package, so the package resolution works.
     tempDir = await Directory(
-      path.join(packageRoot!, ".dart_tool", "tree_shake_test"),
+      path.join(root, ".dart_tool", "tree_shake_test"),
     ).create(recursive: true);
-
-    // Create a minimal entry point that imports the mapper.
-    testEntryPoint = File(path.join(tempDir!.path, "main.dart"));
-    await testEntryPoint!.writeAsString('''
-import "package:l10n_currencies/l10n_currencies.dart";
+    entryPoint = File(path.join(tempDir.path, "main.dart"))
+      ..writeAsStringSync('''
+import "package:$_package/$_package.dart";
 
 void main() {
-  final mapper = CurrenciesLocaleMapper();
+  final mapper = $_mapper();
   // Force usage so tree-shaker doesn't remove everything.
-  print(mapper.availableLocales.length);
-  print(mapper.localize(const {"USD"}, mainLocale: "en"));
+  print(mapper.availableLocales.join(","));
+  print(mapper.localize(const {"$_isoCode"}, mainLocale: "en"));
 }
 ''');
+
+    const builds = {
+      "all": <String>[],
+      "de": ["l10n-de=true"],
+      "three": ["l10n-en=true", "l10n-de=true", "l10n-ru=true"],
+    };
+    final results = await Future.wait(
+      builds.entries.map(
+        (build) => _compileJs(
+          entryPoint,
+          path.join(tempDir.path, "${build.key}.js"),
+          defines: build.value,
+          workingDirectory: root,
+        ),
+      ),
+    );
+    sizes = Map.fromIterables(builds.keys, results);
+
+    print(
+      "📊 Bundle Size Comparison:\n"
+      "   All locales: ${_formatBytes(sizes["all"] ?? 0)}\n"
+      "   3 locales:   ${_formatBytes(sizes["three"] ?? 0)}\n"
+      "   DE only:     ${_formatBytes(sizes["de"] ?? 0)}",
+    );
   });
 
   tearDownAll(
-    () async => (tempDir?.existsSync() ?? false)
-        ? await tempDir?.delete(recursive: true)
-        : null,
+    () async =>
+        tempDir.existsSync() ? await tempDir.delete(recursive: true) : null,
   );
 
   group("Tree-shaking verification", () {
-    test(
-      "single locale build is significantly smaller than full build",
-      () async {
-        final root = packageRoot!;
-        final temp = tempDir!;
-        final entry = testEntryPoint!;
+    test("single locale build is significantly smaller than full build", () {
+      final all = sizes["all"] ?? 0;
+      final german = sizes["de"] ?? 0;
 
-        // Compile with ALL locales (default).
-        final allLocalesSize = await _TreeShakingTest.compileAndGetSize(
-          entryPoint: entry,
-          outputPath: path.join(temp.path, "all_locales.js"),
-          defines: const [],
-          workingDirectory: root,
-        );
+      expect(german, lessThan(all * 0.5), reason: "<50% of the full build");
+      expect(german, greaterThan(1024), reason: "build should not be empty");
+    });
 
-        // Compile with ONLY German locale.
-        final deOnlySize = await _TreeShakingTest.compileAndGetSize(
-          entryPoint: entry,
-          outputPath: path.join(temp.path, "de_only.js"),
-          defines: const ["l10n-de=true"],
-          workingDirectory: root,
-        );
+    test("three locales build is smaller than full but larger than single", () {
+      final three = sizes["three"] ?? 0;
 
-        // Calculate reduction percentage.
-        final reductionPercent =
-            ((allLocalesSize - deOnlySize) / allLocalesSize) * 100;
-        final formattedReduction = reductionPercent.toStringAsFixed(1);
+      expect(three, greaterThan(sizes["de"] ?? 0));
+      expect(three, lessThan((sizes["all"] ?? 0) * 0.1));
+    });
 
-        print(
-          "📊 Bundle Size Comparison:\n"
-          "   All locales: ${_TreeShakingTest.formatBytes(allLocalesSize)}\n"
-          "   DE only:     ${_TreeShakingTest.formatBytes(deOnlySize)}\n"
-          "   Reduction:   $formattedReduction%",
-        );
+    test("excluded locale strings are not present in compiled output", () {
+      final output = File(path.join(tempDir.path, "de.js")).readAsStringSync();
 
-        final halfOfAllLocales = allLocalesSize * 0.5;
+      expect(output, isNot(contains(_frenchName)), reason: "no French");
+      expect(output, contains(_germanName), reason: "German is included");
+    });
+  });
 
-        // Expect at least 50% reduction when using single locale.
-        expect(
-          deOnlySize,
-          lessThan(halfOfAllLocales),
-          reason:
-              "Single locale build should be <50% of full build. "
-              "Got $formattedReduction% reduction.",
-        );
+  group("Locale defines", () {
+    const runs = {
+      "child on": ["l10n-sw_cd=true"],
+      "child on (locale spelling)": ["l10n-sw_CD=true"],
+      "child on, parent off": ["l10n-sw_cd=true", "l10n-sw=false"],
+      "de on": ["l10n-de=true"],
+      "fr off": ["l10n-fr=false"],
+      "none": <String>[],
+      "not bundled on": ["l10n-xx=true"],
+    };
+    late Map<String, Set<String>> kept;
 
-        // Sanity check: DE-only should still have reasonable size.
-        expect(
-          deOnlySize,
-          greaterThan(1024), // At least 1KB.
-          reason: "Build should not be empty",
-        );
-      },
-      timeout: const Timeout(Duration(minutes: 5)),
-    );
+    // ignore: prefer-extracting-function-callbacks, it's a setup call.
+    setUpAll(() async {
+      final results = await Future.wait(
+        runs.values.map(
+          (defines) => _runLocales(entryPoint, defines, workingDirectory: root),
+        ),
+      );
+      kept = Map.fromIterables(runs.keys, results);
+    });
 
-    test(
-      "three locales build is smaller than full but larger than single",
-      () async {
-        final root = packageRoot!;
-        final temp = tempDir!;
-        final entry = testEntryPoint!;
+    test("keep all locales by default", () {
+      expect(kept["none"], containsAll(const ["de", "fr", "sw", "sw_CD"]));
+    });
 
-        // Compile with 3 locales.
-        final threeLocalesSize = await _TreeShakingTest.compileAndGetSize(
-          entryPoint: entry,
-          outputPath: path.join(temp.path, "three_locales.js"),
-          defines: const ["l10n-en=true", "l10n-de=true", "l10n-ru=true"],
-          workingDirectory: root,
-        );
+    test("drop only the locale set to false", () {
+      expect(kept["fr off"], kept["none"]?.difference(const {"fr"}));
+    });
 
-        final deOnlySize = await _TreeShakingTest.compileAndGetSize(
-          entryPoint: entry,
-          outputPath: path.join(temp.path, "de_only_2.js"),
-          defines: const ["l10n-de=true"],
-          workingDirectory: root,
-        );
+    test("keep only the locale set to true", () {
+      expect(kept["de on"], const {"de"});
+    });
 
-        final allLocalesSize = await _TreeShakingTest.compileAndGetSize(
-          entryPoint: entry,
-          outputPath: path.join(temp.path, "all_locales_2.js"),
-          defines: const [],
-          workingDirectory: root,
-        );
+    test("keep the parent of an enabled child locale", () {
+      expect(kept["child on"], const {"sw", "sw_CD"});
+      expect(kept["child on (locale spelling)"], const {"sw", "sw_CD"});
+    });
 
-        print(
-          "📊 Graduated Size Comparison:\n"
-          "   All locales (149): "
-          "${_TreeShakingTest.formatBytes(allLocalesSize)}\n"
-          "   3 locales:         "
-          "${_TreeShakingTest.formatBytes(threeLocalesSize)}\n"
-          "   1 locale (DE):     "
-          "${_TreeShakingTest.formatBytes(deOnlySize)}",
-        );
+    test("drop a parent locale set to false", () {
+      expect(kept["child on, parent off"], const {"sw_CD"});
+    });
 
-        final tenPercentOfAllLocales = allLocalesSize * 0.1;
-
-        // Three locales should be between single and all.
-        expect(
-          threeLocalesSize,
-          greaterThan(deOnlySize),
-          reason: "3 locales should be larger than 1 locale",
-        );
-        expect(
-          threeLocalesSize,
-          lessThan(tenPercentOfAllLocales),
-          reason: "3 locales should be <10% of full build (3/149 ≈ 2%)",
-        );
-      },
-      timeout: const Timeout(Duration(minutes: 5)),
-    );
-
-    test(
-      "excluded locale class name not present in compiled output",
-      () async {
-        final root = packageRoot!;
-        final temp = tempDir!;
-        final entry = testEntryPoint!;
-
-        final outputPath = path.join(temp.path, "de_only_check.js");
-
-        await _TreeShakingTest.compileAndGetSize(
-          entryPoint: entry,
-          outputPath: outputPath,
-          defines: const ["l10n-de=true"],
-          workingDirectory: root,
-        );
-
-        final jsContent = await File(outputPath).readAsString();
-
-        // French-specific string (should NOT be present).
-        expect(
-          jsContent.contains("dollar des États-Unis"), // French for US dollar.
-          isFalse,
-          reason: "French translations should be tree-shaken out",
-        );
-
-        // German-specific string (SHOULD be present).
-        expect(
-          jsContent.contains("US-Dollar"), // German for US dollar.
-          isTrue,
-          reason: "German translations should be included",
-        );
-      },
-      timeout: const Timeout(Duration(minutes: 3)), // Dart 3.13 formatting.
-    );
+    test("ignore defines of locales the package does not bundle", () {
+      expect(kept["not bundled on"], kept["none"]);
+    });
   });
 }
 
-/// Helper class containing static methods for tree-shaking tests.
-abstract final class _TreeShakingTest {
-  /// Finds the package root directory (containing pubspec.yaml).
-  static String findPackageRoot(String startPath) {
-    Directory current = Directory(startPath);
-    while (current.path != current.parent.path) {
-      final pubspec = File(path.join(current.path, "pubspec.yaml"));
-      if (pubspec.existsSync()) return current.path;
-      current = current.parent;
-    }
-
-    throw StateError("Could not find package root (no pubspec.yaml found)");
+/// Finds the package root directory (containing pubspec.yaml).
+String _findPackageRoot(String startPath) {
+  Directory current = Directory(startPath);
+  while (current.path != current.parent.path) {
+    final pubspec = File(path.join(current.path, "pubspec.yaml"));
+    if (pubspec.existsSync()) return current.path;
+    current = current.parent;
   }
 
-  /// Compiles the entry point to JavaScript and returns the file size in bytes.
-  static Future<int> compileAndGetSize({
-    required File entryPoint,
-    required String outputPath,
-    required List<String> defines,
-    required String workingDirectory,
-  }) async {
-    final defineArgs = defines.map((define) => "-D$define").toList();
+  throw StateError("Could not find package root (no pubspec.yaml found)");
+}
 
-    final result = await Process.run(
-      "dart",
-      [
-        "compile",
-        "js",
-        ...defineArgs,
-        "-O2",
-        "-o",
-        outputPath,
-        entryPoint.path,
-      ], // Dart 3.8 formatting.
-      workingDirectory: workingDirectory,
-    );
-
-    if (result.exitCode != 0) {
-      fail(
-        "Compilation failed:\n"
-        "STDOUT: ${result.stdout}\n"
-        "STDERR: ${result.stderr}",
-      );
-    }
-
-    final outputFile = File(outputPath);
-    if (!outputFile.existsSync()) {
-      fail("Compiled output not found at $outputPath");
-    }
-
-    return outputFile.lengthSync();
+/// Compiles the entry point to JavaScript and returns the file size in bytes.
+Future<int> _compileJs(
+  File entryPoint,
+  String outputPath, {
+  required List<String> defines,
+  required String workingDirectory,
+}) async {
+  final arguments = [
+    "compile",
+    "js",
+    for (final define in defines) "-D$define",
+    "-O2",
+    "-o",
+    outputPath,
+    entryPoint.path,
+  ];
+  final result = await Process.run(
+    "dart",
+    arguments,
+    workingDirectory: workingDirectory,
+  );
+  if (result.exitCode != 0) {
+    fail("Compilation failed:\n${result.stdout}\n${result.stderr}");
   }
 
-  /// Formats bytes to human-readable string.
-  static String formatBytes(int bytes) {
-    const bytesInKb = 1024;
-    const bytesInMb = 1024 * 1024;
+  return File(outputPath).lengthSync();
+}
 
-    if (bytes < bytesInKb) return "${bytes}B";
-    if (bytes < bytesInMb) return "${(bytes / bytesInKb).toStringAsFixed(1)}KB";
+/// Runs the entry point and returns the locales its mapper keeps.
+Future<Set<String>> _runLocales(
+  File entryPoint,
+  List<String> defines, {
+  required String workingDirectory,
+}) async {
+  final arguments = [
+    "run",
+    for (final define in defines) "-D$define",
+    entryPoint.path,
+  ];
+  final result = await Process.run(
+    "dart",
+    arguments,
+    workingDirectory: workingDirectory,
+  );
+  if (result.exitCode != 0) fail("Run failed:\n${result.stderr}");
+  final locales = "${result.stdout}".split("\n").first;
 
-    return "${(bytes / bytesInMb).toStringAsFixed(2)}MB";
-  }
+  return locales.isEmpty ? const {} : locales.split(",").toSet();
+}
+
+/// Formats bytes to human-readable string.
+String _formatBytes(int bytes) {
+  const bytesInKb = 1024;
+  const bytesInMb = 1024 * 1024;
+
+  if (bytes < bytesInKb) return "${bytes}B";
+  if (bytes < bytesInMb) return "${(bytes / bytesInKb).toStringAsFixed(1)}KB";
+
+  return "${(bytes / bytesInMb).toStringAsFixed(2)}MB";
 }

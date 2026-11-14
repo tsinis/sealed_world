@@ -1,6 +1,6 @@
 import "../iso_locale_mapper.dart";
 
-/// Contains 161 translation(s).
+/// Contains 171 translation(s).
 /// Provides translations for the Chinese language
 /// locale.
 class ZhCurrenciesL10N extends IsoLocaleMapper<String> {
@@ -159,10 +159,20 @@ class ZhCurrenciesL10N extends IsoLocaleMapper<String> {
       "VUV": "瓦努阿图瓦图",
       "WST": "萨摩亚塔拉",
       "XAF": "中非法郎",
+      "XAG": "银",
+      "XAU": "黄金",
+      "XBA": "欧洲复合单位",
+      "XBB": "欧洲货币联盟",
+      "XBC": "欧洲计算单位 (XBC)",
+      "XBD": "欧洲计算单位 (XBD)",
       "XCD": "东加勒比元",
       "XCG": "加勒比盾",
+      "XDR": "特别提款权",
       "XOF": "西非法郎",
+      "XPD": "钯",
       "XPF": "太平洋法郎",
+      "XPT": "铂",
+      "XTS": "测试货币代码",
       "YER": "也门里亚尔",
       "ZAR": "南非兰特",
       "ZMW": "赞比亚克瓦查",

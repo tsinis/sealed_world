@@ -7,6 +7,12 @@ import "../iso_locale_mapper.dart";
 class SdCurrenciesL10N extends IsoLocaleMapper<String> {
   /// Provides currency translations for the `sd` locale.
   SdCurrenciesL10N() {
-    map.addAll({"RUB": "रशियनु रुबलु"});
+    map.addAll({
+      "KRW": "ڏکڻ ڪوريائي ون",
+      "RUB": "रशियनु रुबलु",
+      "TWD": "نيو تائيوان ڊالر",
+      "XCG": "ڪريبيئن گلڊر",
+      "ZWG": "زمبابوي سون",
+    });
   }
 }

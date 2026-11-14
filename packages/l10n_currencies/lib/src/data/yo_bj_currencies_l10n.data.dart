@@ -1,6 +1,6 @@
 import "../iso_locale_mapper.dart";
 
-/// Contains 47 translation(s).
+/// Contains 50 translation(s).
 /// Provides translations for the Yoruba language
 /// and `BJ` country/region code locale.
 class YoBjCurrenciesL10N extends IsoLocaleMapper<String> {
@@ -29,6 +29,7 @@ class YoBjCurrenciesL10N extends IsoLocaleMapper<String> {
       "JPY": "Yeni ti Orílɛ́ède Japani",
       "KES": "Shiili ti Orílɛ́ède Kenya",
       "KMF": "Faransi ti Orílɛ́ède Shomoriani",
+      "KRW": "Wɔ́ɔ̀nù Gúúsù Kòríà",
       "LRD": "Dɔla ti Orílɛ́ède Liberia",
       "LSL": "Loti ti Orílɛ́ède Lesoto",
       "LYD": "Dina ti Orílɛ́ède Libiya",
@@ -47,10 +48,12 @@ class YoBjCurrenciesL10N extends IsoLocaleMapper<String> {
       "SOS": "Sile ti Orílɛ́ède Somali",
       "STN": "Dobira ti Orílɛ́ède Sao tome Ati Pirisipe",
       "TND": "Dina ti Orílɛ́ède Tunisia",
+      "TWD": "Dɔ́là Tàìwánì Tuntun",
       "TZS": "Sile ti Orílɛ́ède Tansania",
       "UGX": "Siile ti Orílɛ́ède Uganda",
       "USD": "Dɔla ti Orílɛ́ède Amerika",
       "XAF": "Faransi ti Orílɛ́ède BEKA",
+      "XCG": "Owó ìlú Kùrásɔ̀ àti Saint Mátìnì",
       "XOF": "Faransi ti Orílɛ́ède BIKEAO",
       "ZAR": "Randi ti Orílɛ́ède Ariwa Afirika",
       "ZMW": "Kawasha ti Orílɛ́ède Saabia",

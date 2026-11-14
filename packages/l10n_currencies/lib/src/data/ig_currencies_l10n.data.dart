@@ -1,6 +1,6 @@
 import "../iso_locale_mapper.dart";
 
-/// Contains 137 translation(s).
+/// Contains 139 translation(s).
 /// Provides translations for the Igbo language
 /// locale.
 class IgCurrenciesL10N extends IsoLocaleMapper<String> {
@@ -70,6 +70,7 @@ class IgCurrenciesL10N extends IsoLocaleMapper<String> {
       "KHR": "Ego Riel obodo Cambodia",
       "KMF": "Ego Franc obodo Comoros",
       "KPW": "Ego Won Obodo North Korea",
+      "KRW": "Ego Won Obodo South Korea",
       "KWD": "Ego Dinar Obodo Kuwait",
       "KYD": "Ego Dollar obodo Cayman Islands",
       "KZT": "Ego Tenge obodo Kazakhstani",
@@ -131,6 +132,7 @@ class IgCurrenciesL10N extends IsoLocaleMapper<String> {
       "TOP": "Ego paʻanga obodo Tonga",
       "TRY": "Ego Lira obodo Turkey",
       "TTD": "Dollar Trinidad & Tobago",
+      "TWD": "Dollar obodo New Taiwan",
       "TZS": "Ego Shilling Obodo Tanzania",
       "UAH": "Ego Hryvnia obodo Ukraine",
       "UGX": "Ego Shilling obodo Uganda",

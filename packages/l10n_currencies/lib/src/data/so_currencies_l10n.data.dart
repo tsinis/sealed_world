@@ -1,6 +1,6 @@
 import "../iso_locale_mapper.dart";
 
-/// Contains 138 translation(s).
+/// Contains 140 translation(s).
 /// Provides translations for the Somali language
 /// locale.
 class SoCurrenciesL10N extends IsoLocaleMapper<String> {
@@ -70,6 +70,7 @@ class SoCurrenciesL10N extends IsoLocaleMapper<String> {
       "KHR": "Riyf kambodiya",
       "KMF": "Faranka Komoros",
       "KPW": "Wonka Waqooyiga Kuuriya",
+      "KRW": "Wonka Koonfur Kuuriya",
       "KWD": "Dinaarka Kuweyt",
       "KYD": "Doolarka Kayman Aylaanis",
       "KZT": "Tengeda Kasakhstan",
@@ -131,6 +132,7 @@ class SoCurrenciesL10N extends IsoLocaleMapper<String> {
       "TOP": "Ba’angada Tonga",
       "TRY": "Liirada Turkiga",
       "TTD": "Doolarka Tirinidad iyo Tobago",
+      "TWD": "Doolarka Taywaanta Cusub",
       "TZS": "Shilin Tansaani",
       "UAH": "Hirfiniyada Yukreeyn",
       "UGX": "Shilingka Yugandha",

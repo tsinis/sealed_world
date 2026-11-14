@@ -9,6 +9,7 @@ void main() => group("$CountriesLocaleMapper", () {
 
   setUp(() => mapper = CountriesLocaleMapper()); // Fresh instance each time.
   const hasDeFlag = bool.hasEnvironment("l10n-de");
+  const deEnabled = bool.fromEnvironment("l10n-de");
 
   group("constructor", skip: hasDeFlag, () {
     test(
@@ -299,8 +300,7 @@ void main() => group("$CountriesLocaleMapper", () {
     });
   });
 
-  group("Compile-time locale filtering", skip: !hasDeFlag, () {
-    const deEnabled = bool.fromEnvironment("l10n-de");
+  group("Compile-time locale filtering", skip: !deEnabled, () {
     test("_hasAnyLocaleFilter detects when flags are provided", () {
       expect(hasDeFlag, isTrue, reason: "Flag should be detected");
       expect(deEnabled, isTrue, reason: "DE should be enabled");

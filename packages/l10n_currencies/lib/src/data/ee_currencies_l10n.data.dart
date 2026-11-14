@@ -1,6 +1,6 @@
 import "../iso_locale_mapper.dart";
 
-/// Contains 155 translation(s).
+/// Contains 165 translation(s).
 /// Provides translations for the Ewe language
 /// locale.
 class EeCurrenciesL10N extends IsoLocaleMapper<String> {
@@ -155,9 +155,19 @@ class EeCurrenciesL10N extends IsoLocaleMapper<String> {
       "VUV": "Vanuatuga vatu",
       "WST": "Samaoga tala",
       "XAF": "Ɣetoɖofe Afrikaga CFA franc BEAC",
+      "XAG": "Klosalo",
+      "XAU": "Sika",
+      "XBA": "Europa dzidzenu xba",
+      "XBB": "Europa gadzidzenu xbb",
+      "XBC": "Europa kɔnta dzidzenu xbc",
+      "XBD": "Europa kɔnta dzidzenu xbd",
       "XCD": "Ɣedzeƒe Caribbeaga dollar",
+      "XDR": "Gaɖuɖu ɖoɖo tɔxɛ",
       "XOF": "Ɣetoɖofe Afrikaga CFA franc BCEAO",
+      "XPD": "Palladiumga",
       "XPF": "CFP ga franc",
+      "XPT": "Platinum",
+      "XTS": "Gaɖuɖu dodokpɔ dzesi xts",
       "YER": "Yemeniga rial",
       "ZAR": "South Africaga rand",
       "ZMW": "Zambiaga kwacha",

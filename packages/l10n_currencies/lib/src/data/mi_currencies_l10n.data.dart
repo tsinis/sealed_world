@@ -1,6 +1,6 @@
 import "../iso_locale_mapper.dart";
 
-/// Contains 137 translation(s).
+/// Contains 139 translation(s).
 /// Provides translations for the Māori language
 /// locale.
 class MiCurrenciesL10N extends IsoLocaleMapper<String> {
@@ -70,6 +70,7 @@ class MiCurrenciesL10N extends IsoLocaleMapper<String> {
       "KHR": "Riel Kamapōtia",
       "KMF": "Franc Komoro",
       "KPW": "Won Kōrea ki te Raki",
+      "KRW": "Won Kōrea ki te Tonga",
       "KWD": "Dinar Kūweiti",
       "KYD": "Tāra Kāmana",
       "KZT": "Tenge Katatānga",
@@ -131,6 +132,7 @@ class MiCurrenciesL10N extends IsoLocaleMapper<String> {
       "TOP": "Pa’anga Tonga",
       "TRY": "Lira Tākei",
       "TTD": "Tāra Tirinaki Tōpako",
+      "TWD": "Tāra Taiwana Hou",
       "TZS": "Hereni Tānahia",
       "UAH": "Hryvnia Ukareinga",
       "UGX": "Hereni Ukānga",

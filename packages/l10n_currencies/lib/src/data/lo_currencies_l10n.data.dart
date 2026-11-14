@@ -1,6 +1,6 @@
 import "../iso_locale_mapper.dart";
 
-/// Contains 161 translation(s).
+/// Contains 171 translation(s).
 /// Provides translations for the Lao language
 /// locale.
 class LoCurrenciesL10N extends IsoLocaleMapper<String> {
@@ -159,10 +159,20 @@ class LoCurrenciesL10N extends IsoLocaleMapper<String> {
       "VUV": "​ວາ​ນົວ​ຕູ ວາ​ຕູ",
       "WST": "ຊາ​ໂມນ ທາ​ລາ",
       "XAF": "ສາທາລະນະລັດອາຟຣິກາກາງ",
+      "XAG": "ເງິນ",
+      "XAU": "ຄຳ",
+      "XBA": "ຫົວໜ່ວຍຄອມໂປຊິດ ເອີຣົບ",
+      "XBB": "ຫົວໜ່ວຍໂມນີແທຣີ ເອີຣົບ",
+      "XBC": "ຫົວໜ່ວຍບັນຊີເອີຣົບ (XBC)",
+      "XBD": "ຫົວໜ່ວຍບັນຊີເອີຣົບ (XBD)",
       "XCD": "ອີ​ສ ຄາ​ຣິ​ບຽນ ໂດ​ລ່າ",
       "XCG": "ຄາຣິບຽນ ກິວເດີ",
+      "XDR": "ສິດທິຖອນເງິນພິເສດ",
       "XOF": "ຟັງເຊຟານ ອາຟຣິກາຕາເວັນຕົກ",
+      "XPD": "ແພເລດຽມ",
       "XPF": "ຊີ​ເອັບ​ພີ ຟຣັງ",
+      "XPT": "ແພລັດຕິນຳ",
+      "XTS": "ລະຫັດທົດສອບສະກຸນເງິນ",
       "YER": "ເຢ​ເມ​ນິ ຣຽວ",
       "ZAR": "ເຊົາທ໌ ອາ​ຟຣິ​ກັນ ແຣນດ໌",
       "ZMW": "ແຊມ​ບຽນ ຄວາ​ຊາ",

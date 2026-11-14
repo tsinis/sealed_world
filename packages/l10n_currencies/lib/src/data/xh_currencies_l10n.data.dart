@@ -1,6 +1,6 @@
 import "../iso_locale_mapper.dart";
 
-/// Contains 136 translation(s).
+/// Contains 138 translation(s).
 /// Provides translations for the Xhosa language
 /// locale.
 class XhCurrenciesL10N extends IsoLocaleMapper<String> {
@@ -70,6 +70,7 @@ class XhCurrenciesL10N extends IsoLocaleMapper<String> {
       "KHR": "I-Riel yaseCambodia",
       "KMF": "I-Franc yaseComoros",
       "KPW": "I-Won yaseNorth Korea",
+      "KRW": "I-Won yaseSouth Korea",
       "KWD": "I-Dinar yaseKuwait",
       "KYD": "Cayman Islands Dollar",
       "KZT": "I-Tenge yaseKazakhstan",
@@ -131,6 +132,7 @@ class XhCurrenciesL10N extends IsoLocaleMapper<String> {
       "TOP": "I-Paʻanga yaseTonga",
       "TRY": "I-Lira yaseTurkey",
       "TTD": "Trinidad & Tobago Dollar",
+      "TWD": "IDola yaseNew Taiwan",
       "TZS": "I-Shilling yaseTanzania",
       "UAH": "I-Hryvnia yase-Ukraine",
       "UGX": "I-Shilling yase-Uganda",

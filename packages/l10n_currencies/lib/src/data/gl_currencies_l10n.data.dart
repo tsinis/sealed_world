@@ -1,6 +1,6 @@
 import "../iso_locale_mapper.dart";
 
-/// Contains 161 translation(s).
+/// Contains 165 translation(s).
 /// Provides translations for the Galician language
 /// locale.
 class GlCurrenciesL10N extends IsoLocaleMapper<String> {
@@ -159,10 +159,14 @@ class GlCurrenciesL10N extends IsoLocaleMapper<String> {
       "VUV": "Vatu vanuatiano",
       "WST": "Tala samoano",
       "XAF": "Franco CFA (BEAC)",
+      "XAG": "Prata",
+      "XAU": "Ouro",
       "XCD": "Dólar do Caribe Oriental",
       "XCG": "Florín caribeño",
       "XOF": "Franco CFA (BCEAO)",
+      "XPD": "Paladio",
       "XPF": "Franco CFP",
+      "XPT": "Platino",
       "YER": "Rial iemení",
       "ZAR": "Rand surafricano",
       "ZMW": "Kwacha zambiano",

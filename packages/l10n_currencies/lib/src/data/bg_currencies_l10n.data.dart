@@ -1,6 +1,6 @@
 import "../iso_locale_mapper.dart";
 
-/// Contains 161 translation(s).
+/// Contains 171 translation(s).
 /// Provides translations for the Bulgarian language
 /// locale.
 class BgCurrenciesL10N extends IsoLocaleMapper<String> {
@@ -159,10 +159,20 @@ class BgCurrenciesL10N extends IsoLocaleMapper<String> {
       "VUV": "Вануатско вату",
       "WST": "Самоанска тала",
       "XAF": "Централноафрикански франк",
+      "XAG": "Сребро",
+      "XAU": "Злато",
+      "XBA": "Европейска съставна единица",
+      "XBB": "Европейска валутна единица",
+      "XBC": "Европейска единица по сметка (XBC)",
+      "XBD": "Европейска единица по сметка (XBD)",
       "XCD": "Източнокарибски долар",
       "XCG": "Карибски гулден",
+      "XDR": "Специални права на тираж",
       "XOF": "Западноафрикански франк",
+      "XPD": "Паладий",
       "XPF": "Френскополинезийски франк",
+      "XPT": "Платина",
+      "XTS": "Код резервиран за целите на тестване",
       "YER": "Йеменски риал",
       "ZAR": "Южноафрикански ранд",
       "ZMW": "Замбийска квача",

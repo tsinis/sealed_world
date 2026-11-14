@@ -1,6 +1,6 @@
 import "../iso_locale_mapper.dart";
 
-/// Contains 161 translation(s).
+/// Contains 171 translation(s).
 /// Provides translations for the Romanian language
 /// locale.
 class RoCurrenciesL10N extends IsoLocaleMapper<String> {
@@ -159,10 +159,20 @@ class RoCurrenciesL10N extends IsoLocaleMapper<String> {
       "VUV": "Vatu din Vanuatu",
       "WST": "Tala samoană",
       "XAF": "Franc CFA BEAC",
+      "XAG": "Argint",
+      "XAU": "Aur",
+      "XBA": "Unitate compusă europeană",
+      "XBB": "Unitate monetară europeană",
+      "XBC": "Unitate de cont europeană (XBC)",
+      "XBD": "Unitate de cont europeană (XBD)",
       "XCD": "Dolar din Caraibele de Est",
       "XCG": "Gulden caraibic",
+      "XDR": "Drepturi speciale de tragere",
       "XOF": "Franc CFA BCEAO",
+      "XPD": "Paladiu",
       "XPF": "Franc CFP",
+      "XPT": "Platină",
+      "XTS": "Cod monetar de test",
       "YER": "Rial yemenit",
       "ZAR": "Rand sud-african",
       "ZMW": "Kwacha zambian",

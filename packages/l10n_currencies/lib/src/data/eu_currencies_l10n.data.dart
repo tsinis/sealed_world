@@ -1,6 +1,6 @@
 import "../iso_locale_mapper.dart";
 
-/// Contains 161 translation(s).
+/// Contains 171 translation(s).
 /// Provides translations for the Basque language
 /// locale.
 class EuCurrenciesL10N extends IsoLocaleMapper<String> {
@@ -159,10 +159,20 @@ class EuCurrenciesL10N extends IsoLocaleMapper<String> {
       "VUV": "Vanuatuko vatua",
       "WST": "Samoko tala",
       "XAF": "Afrika erdialdeko CFA frankoa",
+      "XAG": "Zilarra",
+      "XAU": "Urrea",
+      "XBA": "Europako unitate konposatua",
+      "XBB": "Europako moneta-unitatea",
+      "XBC": "Europako kontu-unitatea (XBC)",
+      "XBD": "Europako kontu-unitatea (XBD)",
       "XCD": "Karibe ekialdeko dolarra",
       "XCG": "Florin karibetarra",
+      "XDR": "Igorpen-eskubide berezia",
       "XOF": "Afrika mendebaldeko CFA frankoa",
+      "XPD": "Paladioa",
       "XPF": "CFP frankoa",
+      "XPT": "Platinozko troy ontza",
+      "XTS": "Aztertzeko dibisa-unitatea",
       "YER": "Yemengo riala",
       "ZAR": "Hegoafrikako randa",
       "ZMW": "Zambiako kwacha",

@@ -1,6 +1,6 @@
 import "../iso_locale_mapper.dart";
 
-/// Contains 158 translation(s).
+/// Contains 162 translation(s).
 /// Provides translations for the Faroese language
 /// locale.
 class FoCurrenciesL10N extends IsoLocaleMapper<String> {
@@ -157,10 +157,14 @@ class FoCurrenciesL10N extends IsoLocaleMapper<String> {
       "VUV": "Vanuatu vatu",
       "WST": "Samoa tala",
       "XAF": "Miðafrika CFA frankur",
+      "XAG": "Unse sølv",
+      "XAU": "Unse guld",
       "XCD": "Eystur Karibia dollari",
       "XCG": "Karibia gyllin",
       "XOF": "Vesturafrika CFA frankur",
+      "XPD": "Unse palladium",
       "XPF": "CFP frankur",
+      "XPT": "Unse platin",
       "YER": "Jemen rial",
       "ZAR": "Suðurafrika rand",
       "ZMW": "Sambia kwacha",

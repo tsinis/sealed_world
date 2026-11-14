@@ -216,10 +216,57 @@ class TypedLocaleDelegate implements LocalizationsDelegate<TypedLocale?> {
   @override
   Type get type => TypedLocale;
 
-  TypedLocale? _maybeResolutionLocale(Locale locale) =>
-      Map<Locale, TypedLocale>.fromEntries(
-        _isoCollections.localeMapResolution ?? const [],
-      )[locale];
+  /// Resolves [locale] through [IsoCollections.localeMapResolution], trying the
+  /// entry of the locale itself, then of its script locale and then of its
+  /// language, like CLDR parent locales (`bs_Cyrl_BA` -> `bs_Cyrl` -> `bs`).
+  ///
+  /// The language entry is only used for a language without [NaturalLanguage],
+  /// which would otherwise fall back to [fallbackLanguage] while keeping its
+  /// region (`fil_PH` -> `en_PH`). A known language keeps its own region and
+  /// script, so an `en` -> `en_GB` entry doesn't turn `en_US` into `en_GB`.
+  ///
+  /// Subtags that the matched entry key doesn't cover, and the entry itself
+  /// doesn't set, are taken from [locale] (`fil_PH` -> `tl_PH`).
+  TypedLocale? _maybeResolutionLocale(Locale locale) {
+    final resolutions = Map<Locale, TypedLocale>.fromEntries(
+      _isoCollections.localeMapResolution ?? const [],
+    );
+    final exact = resolutions[locale];
+    if (exact != null) return exact;
+
+    final language = locale.languageCode;
+    final scriptCode = locale.scriptCode;
+    final scriptEntry = scriptCode == null
+        ? null
+        : resolutions[Locale.fromSubtags(
+            languageCode: language,
+            scriptCode: scriptCode,
+          )];
+    if (scriptEntry != null) return _withRegionOf(locale, scriptEntry);
+
+    final languageEntry = locale.maybeLanguage == null
+        ? resolutions[Locale(language)]
+        : null;
+    if (languageEntry == null) return null;
+
+    return _withRegionOf(
+      locale,
+      languageEntry.script == null
+          ? languageEntry.copyWith(script: locale.maybeScript)
+          : languageEntry,
+    );
+  }
+
+  /// Returns [entry] with the region of [locale], unless it sets its own.
+  static TypedLocale _withRegionOf(Locale locale, TypedLocale entry) {
+    if (entry.countryCode != null) return entry;
+    final country = locale.maybeCountry;
+
+    return entry.copyWith(
+      country: country,
+      regionalCode: country == null ? locale.countryCode : null,
+    );
+  }
 
   TypedLocale? _toTypedLocale(Locale locale) =>
       _maybeResolutionLocale(locale) ??

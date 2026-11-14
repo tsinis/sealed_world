@@ -1,6 +1,6 @@
 import "../iso_locale_mapper.dart";
 
-/// Contains 161 translation(s).
+/// Contains 163 translation(s).
 /// Provides translations for the Azerbaijani language
 /// locale.
 class AzCurrenciesL10N extends IsoLocaleMapper<String> {
@@ -159,6 +159,8 @@ class AzCurrenciesL10N extends IsoLocaleMapper<String> {
       "VUV": "Vanuatu Vatusu",
       "WST": "Samoa Talası",
       "XAF": "Kamerun Frankı",
+      "XAG": "Gümüş",
+      "XAU": "Qızıl",
       "XCD": "Şərqi Karib Dolları",
       "XCG": "Karib gilderi",
       "XOF": "Fil Dişi Sahili Frankı",

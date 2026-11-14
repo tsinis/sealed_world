@@ -1,6 +1,6 @@
 import "../iso_locale_mapper.dart";
 
-/// Contains 161 translation(s).
+/// Contains 171 translation(s).
 /// Provides translations for the French language
 /// locale.
 class FrCurrenciesL10N extends IsoLocaleMapper<String> {
@@ -159,10 +159,20 @@ class FrCurrenciesL10N extends IsoLocaleMapper<String> {
       "VUV": "Vatu vanuatuan",
       "WST": "Tala samoan",
       "XAF": "Franc CFA (BEAC)",
+      "XAG": "Argent",
+      "XAU": "Or",
+      "XBA": "Unité européenne composée",
+      "XBB": "Unité monétaire européenne",
+      "XBC": "Unité de compte européenne (XBC)",
+      "XBD": "Unité de compte européenne (XBD)",
       "XCD": "Dollar des Caraïbes orientales",
       "XCG": "Florin caribéen",
+      "XDR": "Droit de tirage spécial",
       "XOF": "Franc CFA (BCEAO)",
+      "XPD": "Palladium",
       "XPF": "Franc CFP",
+      "XPT": "Platine",
+      "XTS": "(devise de test)",
       "YER": "Rial yéménite",
       "ZAR": "Rand sud-africain",
       "ZMW": "Kwacha zambien",

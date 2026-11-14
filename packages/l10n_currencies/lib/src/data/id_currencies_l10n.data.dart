@@ -1,6 +1,6 @@
 import "../iso_locale_mapper.dart";
 
-/// Contains 161 translation(s).
+/// Contains 168 translation(s).
 /// Provides translations for the Indonesian language
 /// locale.
 class IdCurrenciesL10N extends IsoLocaleMapper<String> {
@@ -159,10 +159,17 @@ class IdCurrenciesL10N extends IsoLocaleMapper<String> {
       "VUV": "Vatu Vanuatu",
       "WST": "Tala Samoa",
       "XAF": "Franc CFA BEAC",
+      "XAU": "Emas",
+      "XBA": "Unit Gabungan Eropa",
+      "XBB": "Unit Keuangan Eropa",
+      "XBC": "Satuan Hitung Eropa (XBC)",
+      "XBD": "Satuan Hitung Eropa (XBD)",
       "XCD": "Dolar Karibia Timur",
       "XCG": "Guilder Karibia",
+      "XDR": "Hak Penarikan Khusus",
       "XOF": "Franc CFA BCEAO",
       "XPF": "Franc CFP",
+      "XTS": "Kode Mata Uang Pengujian",
       "YER": "Rial Yaman",
       "ZAR": "Rand Afrika Selatan",
       "ZMW": "Kwacha Zambia",

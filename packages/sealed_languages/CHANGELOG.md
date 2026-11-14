@@ -1,3 +1,11 @@
+## 3.4.2
+
+FIX
+
+- `commonNamesMap` and `translatedNames` pass the `formatter` of `LocaleMappingOptions` to the mapper, it was silently ignored.
+- `translatedNames` passes a custom `LocaleMappingOptions.altSymbol` to the mapper, so alternative names marked with a symbol other than `"+"` are found.
+- `translatedNames` with an empty `LocaleMappingOptions.altSymbol` returns the common names instead of an empty list.
+
 ## 3.4.1
 
 FIX

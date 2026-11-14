@@ -1,6 +1,6 @@
 import "../iso_locale_mapper.dart";
 
-/// Contains 161 translation(s).
+/// Contains 171 translation(s).
 /// Provides translations for the Arabic language
 /// locale.
 class ArCurrenciesL10N extends IsoLocaleMapper<String> {
@@ -159,10 +159,20 @@ class ArCurrenciesL10N extends IsoLocaleMapper<String> {
       "VUV": "فاتو فانواتو",
       "WST": "تالا ساموا",
       "XAF": "فرنك وسط أفريقي",
+      "XAG": "فضة",
+      "XAU": "ذهب",
+      "XBA": "الوحدة الأوروبية المركبة",
+      "XBB": "الوحدة المالية الأوروبية",
+      "XBC": "الوحدة الحسابية الأوروبية",
+      "XBD": "(XBD)وحدة الحساب الأوروبية",
       "XCD": "دولار شرق الكاريبي",
       "XCG": "غيلدر كاريبي",
+      "XDR": "حقوق السحب الخاصة",
       "XOF": "فرنك غرب أفريقي",
+      "XPD": "بالاديوم",
       "XPF": "فرنك سي إف بي",
+      "XPT": "البلاتين",
+      "XTS": "كود اختبار العملة",
       "YER": "ريال يمني",
       "ZAR": "راند جنوب أفريقيا",
       "ZMW": "كواشا زامبي",

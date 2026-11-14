@@ -1,6 +1,6 @@
 import "../iso_locale_mapper.dart";
 
-/// Contains 161 translation(s).
+/// Contains 171 translation(s).
 /// Provides translations for the Finnish language
 /// locale.
 class FiCurrenciesL10N extends IsoLocaleMapper<String> {
@@ -159,10 +159,20 @@ class FiCurrenciesL10N extends IsoLocaleMapper<String> {
       "VUV": "Vanuatun vatu",
       "WST": "Samoan tala",
       "XAF": "CFA-frangi BEAC",
+      "XAG": "Hopea",
+      "XAU": "Kulta",
+      "XBA": "EURCO",
+      "XBB": "Euroopan rahayksikkö (EMU)",
+      "XBC": "EUA (XBC)",
+      "XBD": "EUA (XBD)",
       "XCD": "Itä-Karibian dollari",
       "XCG": "Karibian guldeni",
+      "XDR": "Erityisnosto-oikeus (SDR)",
       "XOF": "CFA-frangi BCEAO",
+      "XPD": "Palladium",
       "XPF": "CFP-frangi",
+      "XPT": "Platina",
+      "XTS": "Testaustarkoitukseen varattu valuuttakoodi",
       "YER": "Jemenin rial",
       "ZAR": "Etelä-Afrikan randi",
       "ZMW": "Sambian kwacha",

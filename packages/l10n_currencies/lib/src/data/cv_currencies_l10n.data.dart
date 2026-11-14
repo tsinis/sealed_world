@@ -1,6 +1,6 @@
 import "../iso_locale_mapper.dart";
 
-/// Contains 136 translation(s).
+/// Contains 148 translation(s).
 /// Provides translations for the Chuvash language
 /// locale.
 class CvCurrenciesL10N extends IsoLocaleMapper<String> {
@@ -70,6 +70,7 @@ class CvCurrenciesL10N extends IsoLocaleMapper<String> {
       "KHR": "Камбоджа риелӗ",
       "KMF": "Комора франкӗ",
       "KPW": "КХДР вони",
+      "KRW": "Кӑнтӑр Корей вони",
       "KWD": "Кувейт динарӗ",
       "KYD": "Кайман утравӗсен долларӗ",
       "KZT": "Казах тенгейӗ",
@@ -130,6 +131,7 @@ class CvCurrenciesL10N extends IsoLocaleMapper<String> {
       "TOP": "Тонган паанги",
       "TRY": "Турци лири",
       "TTD": "Тринидад тата Тобаго долларӗ",
+      "TWD": "Тайвань ҫӗнӗ долларӗ",
       "TZS": "Танзани шиллингӗ",
       "UAH": "Украина гривни",
       "UGX": "Уганда шиллингӗ",
@@ -138,7 +140,17 @@ class CvCurrenciesL10N extends IsoLocaleMapper<String> {
       "VES": "Венесуэла боливарӗ",
       "VUV": "Вануату ватуйӗ",
       "WST": "Самоа тали",
+      "XAG": "Кӗмӗл",
+      "XAU": "Ылтӑн",
+      "XBA": "Европа сыпӑнчӑк единици",
+      "XBB": "Европа укҫа единици",
+      "XBC": "Европа тӳлев единици (XBС)",
+      "XBD": "Европа тӳлев единици (XBD)",
       "XCG": "Кариб гульденӗ",
+      "XDR": "Ятарлӑ йышӑну прависем (СДР)",
+      "XPD": "Паллади",
+      "XPT": "Платина",
+      "XTS": "Тӗрӗслев валют кочӗ",
       "YER": "Йемен риалӗ",
       "ZAR": "Кӑнтӑр Африка рэндӗ",
       "ZMW": "Замби квачи",

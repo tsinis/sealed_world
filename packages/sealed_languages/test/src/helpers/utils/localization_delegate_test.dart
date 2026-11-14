@@ -296,6 +296,60 @@ void main() => group("$LocalizationDelegate", () {
         const BasicLocale(LangDeu()).toUnicodeLocaleId(),
       );
     });
+
+    test("returns common names for an empty altSymbol", () {
+      final customParser = LocalizationDelegate(
+        mapper: () =>
+            (
+              isoCodes, {
+              useLanguageFallback = true,
+              altSymbol,
+              mainLocale,
+              fallbackLocale,
+              formatter,
+            }) => const {(isoCode: "ENG", locale: "en"): "English"},
+      );
+
+      final result = customParser.translatedNames(
+        const [LangEng()],
+        options: const LocaleMappingOptions(altSymbol: ""), // Dart 3.8 format.
+      );
+
+      expect(result.single.name, "English");
+      expect(result.single.fullName, isNull);
+    });
+
+    test("passes altSymbol and formatter to mapper function", () {
+      final symbols = <String?>[];
+      final formatters = <Object?>[];
+      final delegate = LocalizationDelegate(
+        mapper: () =>
+            (
+              isoCodes, {
+              useLanguageFallback = true,
+              altSymbol,
+              mainLocale,
+              fallbackLocale,
+              formatter,
+            }) {
+              symbols.add(altSymbol);
+              formatters.add(formatter);
+
+              return const {(isoCode: "ENG", locale: "en"): "English"};
+            },
+      );
+      const options = LocaleMappingOptions<BasicLocale>(
+        altSymbol: "*",
+        formatter: _upperCase,
+      );
+
+      delegate
+        ..translatedNames(const [LangEng()], options: options)
+        ..commonNamesMap(const [LangEng()], options: options);
+
+      expect(symbols, ["*", ""], reason: "no alternative names for commons");
+      expect(formatters, [_upperCase, _upperCase]);
+    });
   });
 
   group("parseLocale", () {
@@ -483,3 +537,6 @@ void main() => group("$LocalizationDelegate", () {
     });
   });
 });
+
+String _upperCase(({String isoCode, String locale}) _, String l10n) =>
+    l10n.toUpperCase();

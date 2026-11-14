@@ -1,6 +1,6 @@
 import "../iso_locale_mapper.dart";
 
-/// Contains 161 translation(s).
+/// Contains 171 translation(s).
 /// Provides translations for the Slovak language
 /// locale.
 class SkCurrenciesL10N extends IsoLocaleMapper<String> {
@@ -159,10 +159,20 @@ class SkCurrenciesL10N extends IsoLocaleMapper<String> {
       "VUV": "Vanuatské vatu",
       "WST": "Samojská tala",
       "XAF": "Stredoafrický frank",
+      "XAG": "Striebro",
+      "XAU": "Zlato",
+      "XBA": "Európska zmiešaná jednotka",
+      "XBB": "Európska peňažná jednotka",
+      "XBC": "Európska jednotka účtu 9 (XBC)",
+      "XBD": "Európska jednotka účtu 17 (XBD)",
       "XCD": "Východokaribský dolár",
       "XCG": "Karibský gulden",
+      "XDR": "SDR",
       "XOF": "Západoafrický frank",
+      "XPD": "Paládium",
       "XPF": "CFP frank",
+      "XPT": "Platina",
+      "XTS": "Kód testovacej meny",
       "YER": "Jemenský rial",
       "ZAR": "Juhoafrický rand",
       "ZMW": "Zambijská kwacha",

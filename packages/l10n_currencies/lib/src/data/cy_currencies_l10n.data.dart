@@ -1,6 +1,6 @@
 import "../iso_locale_mapper.dart";
 
-/// Contains 161 translation(s).
+/// Contains 167 translation(s).
 /// Provides translations for the Welsh language
 /// locale.
 class CyCurrenciesL10N extends IsoLocaleMapper<String> {
@@ -159,10 +159,16 @@ class CyCurrenciesL10N extends IsoLocaleMapper<String> {
       "VUV": "Vatu Vanuatu",
       "WST": "Tala Samoa",
       "XAF": "Ffranc CFA Canol Affrica",
+      "XAG": "Arian",
+      "XAU": "Aur",
+      "XBA": "Uned Cyfansawdd Ewropeaidd",
+      "XBB": "Uned Ariannol Ewropeaidd",
       "XCD": "Doler Dwyrain y Caribî",
       "XCG": "Guilder Caribïaidd",
       "XOF": "Ffranc CFA Gorllewin Affrica",
+      "XPD": "Paladiwm",
       "XPF": "Ffranc CFP",
+      "XPT": "Platinwm",
       "YER": "Rial Yemen",
       "ZAR": "Rand De Affrica",
       "ZMW": "Kwacha Zambia",

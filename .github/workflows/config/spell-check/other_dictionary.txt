@@ -86,6 +86,7 @@ taegukgi
 tcheco
 tham
 tlhIngan
+tmpl
 tokelau
 unidos
 unlocalized
