@@ -165,7 +165,7 @@ class BsCyrlCurrenciesL10N extends IsoLocaleMapper<String> {
       "XBC": "Европска јединица рачуна (XBC)",
       "XBD": "Европска јединица рачуна (XBD)",
       "XCD": "Источно-карибски долар",
-      "XDR": "Посебна цртаћа права",
+      "XDR": "Посебна права вучења",
       "XOF": "CFA франак BCEAO",
       "XPD": "Паладијум",
       "XPF": "CFP франак",

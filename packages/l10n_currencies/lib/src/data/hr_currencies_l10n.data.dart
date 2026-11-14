@@ -167,7 +167,7 @@ class HrCurrenciesL10N extends IsoLocaleMapper<String> {
       "XBD": "Europska obračunska jedinica (XBD)",
       "XCD": "Istočnokaripski dolar",
       "XCG": "Karipski gulden",
-      "XDR": "Posebna crtaća prava",
+      "XDR": "Posebna prava vučenja",
       "XOF": "CFA franak BCEAO",
       "XPD": "Paladij",
       "XPF": "CFP franak",

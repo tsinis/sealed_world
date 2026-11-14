@@ -166,7 +166,7 @@ class IdCurrenciesL10N extends IsoLocaleMapper<String> {
       "XBD": "Satuan Hitung Eropa (XBD)",
       "XCD": "Dolar Karibia Timur",
       "XCG": "Guilder Karibia",
-      "XDR": "Hak Khusus Menggambar",
+      "XDR": "Hak Penarikan Khusus",
       "XOF": "Franc CFA BCEAO",
       "XPF": "Franc CFP",
       "XTS": "Kode Mata Uang Pengujian",

@@ -164,7 +164,7 @@ class SkCurrenciesL10N extends IsoLocaleMapper<String> {
       "XBA": "Európska zmiešaná jednotka",
       "XBB": "Európska peňažná jednotka",
       "XBC": "Európska jednotka účtu 9 (XBC)",
-      "XBD": "Európska jednotka účtu 17 (XBC)",
+      "XBD": "Európska jednotka účtu 17 (XBD)",
       "XCD": "Východokaribský dolár",
       "XCG": "Karibský gulden",
       "XDR": "SDR",
