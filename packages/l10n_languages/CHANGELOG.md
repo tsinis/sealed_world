@@ -12,7 +12,7 @@ NEW FEATURES
 
 - Enabling a regional or script locale keeps the locales it falls back to (`l10n-sw_cd=true` also keeps `sw`), unless they are set to false.
 - Locale defines also accept the locale spelling (`l10n-sw_CD`), not only the lowercase one.
-- Defines of the locales that the fallback table gives an explicit parent work too: language code aliases (`l10n-fil=true` keeps `tl`) and CLDR regional locales whose parent is not their language (`l10n-pa_PK=true` keeps `pa_Arab` and `pa`, also `zh_TW`, `pt_AO` and the like). Previously such a define was ignored. Defines of other regional locales, such as `l10n-pt_BR`, are still ignored.
+- In debug builds, `localize()` prints a warning the first time a requested locale and all its parents are missing because the `l10n-*` defines stripped them, naming the define that keeps them. An ignored define strips a language silently otherwise: `l10n-en=true` with `l10n-pt_BR=true` keeps English only, so `pt_BR` finds neither `pt_BR` nor `pt`.
 
 IMPROVEMENTS
 
@@ -24,7 +24,8 @@ IMPROVEMENTS
 DOCUMENTATION
 
 - Documented the order of the returned map, which `sealed_*` packages rely on: the main locale and its parents first, then the fallback locale and its parents.
-- Documented that only defines of locales bundled in this package, or of the locales whose fallback table parent leads to them, switch it to opt-in mode, and that defines of other regional locales are ignored.
+- Documented that only defines of locales bundled in this package switch it to opt-in mode, and that defines of other locales, such as `l10n-pt_BR` or the `l10n-fil` alias, are ignored (so `l10n-en=true` with `l10n-pt_BR=true` keeps English only, and Flutter's `fil` needs `l10n-tl`).
+- Documented how much the bundled locales add to a build, that an injected locale replaces the bundled one with the same key entirely, and that importing several `l10n_*` packages in one file needs `show` or an import prefix.
 - Documented that Swiss German (`gsw`) is the only Flutter locale that is not bundled, that less common locales translate only a part of the names, that a script locale falls back to its language even in another script, and what `localize()` returns without a locale.
 - Removed the advice to pass `altSymbol: ""` from the README and the agent skill, it no longer makes a difference.
 
@@ -33,7 +34,7 @@ CHORE
 - The mapper is generated from a single template shared by all `l10n_*` packages (`dart run :l10n_mapper` in `tools/`), and CI now runs the tree-shaking tests.
 - The Dart SDK was bumped to v3.13.0, the code uses its `new()` constructors and private named parameters. The API is the same.
 - The tree-shaking test checks that the name it expects to be stripped is in a full build: the name it looked for was spelled differently than in the data, so that check passed without testing anything.
-- The tests that all `l10n_*` packages share (`locale_resolution_test.dart`, `mapper_optimization_test.dart` and the tree-shaking test) are generated from the same templates by `dart run :l10n_mapper`, so they no longer drift apart. They also check that every alternative name in the data files is returned with the default `altSymbol`, and the defines of the fallback table locales, multi-step ones included (`l10n-zh_Hant_HK`, `l10n-zh_MO`).
+- The tests that all `l10n_*` packages share (`locale_resolution_test.dart`, `mapper_optimization_test.dart` and the tree-shaking test) are generated from the same templates by `dart run :l10n_mapper`, so they no longer drift apart. They also check that every alternative name in the data files is returned with the default `altSymbol`, that a define keeps the explicit parents of the fallback table (`l10n-nn=true` keeps `no`), that the defines of locales the package does not bundle are ignored, aliases (`l10n-fil`) and regional locales (`l10n-pa_PK`, `l10n-pt_BR`) included, and that a stripped locale is reported once in debug builds.
 - The generated mapper lists the locales in locale order, not file name order, so `availableLocales` has `zh` before `zh_Hant` (and `bs` before `bs_Cyrl`) in every `l10n_*` package.
 
 ## 2.2.0

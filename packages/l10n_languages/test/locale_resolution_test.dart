@@ -3,6 +3,8 @@
 
 // Reads the `l10n-de` define to skip bundled lookups on a shaken build.
 // ignore_for_file: do_not_use_environment
+import "dart:async";
+
 import "package:l10n_languages/l10n_languages.dart";
 import "package:l10n_languages/src/locale_fallback.dart";
 import "package:test/test.dart";
@@ -150,8 +152,9 @@ void main() {
     });
 
     test("get their alternative names next to a bundled locale", () {
+      // `de` is bundled, and kept by the `l10n-de` define of a shaken build.
       final result = LanguagesLocaleMapper(other: {"zz": _withAltName()})
-          .localize(const {"AAA"}, mainLocale: "zz", fallbackLocale: "en");
+          .localize(const {"AAA"}, mainLocale: "zz", fallbackLocale: "de");
 
       expect(result.keys.map((key) => key.isoCode), ["AAA", "AAA+"]);
     });
@@ -251,6 +254,35 @@ void main() {
         "bs_Cyrl",
         if (language.containsKey(iso)) "bs",
       ]);
+    });
+  });
+
+  // CI also runs this file on a shaken build with asserts, see the l10n
+  // tree-shaking step of the verify package workflow.
+  group("$LanguagesLocaleMapper stripped locales", skip: !isShaken, () {
+    test("are reported once, if no locale of the chain is kept", () {
+      const codes = {"ENG"};
+      const warning =
+          'l10n_languages: "fr" was stripped by the l10n-* defines, pass '
+          "--dart-define=l10n-fr=true if it should be kept.";
+      final printed = <String>[];
+      // Every l10n_* package bundles `de` (kept) and `fr` (stripped), not
+      // `fr_XX`, whose chain ends at the already reported `fr`. `de_CH` finds
+      // `de`, even where `de_CH` is bundled (and stripped).
+      final found = runZoned(
+        () => [
+          for (final locale in const ["fr", "fr_XX", "de", "de_CH", "xx"])
+            LanguagesLocaleMapper()
+                .localize(codes, mainLocale: locale)
+                .isNotEmpty,
+        ],
+        zoneSpecification: ZoneSpecification(
+          print: (_, _, _, line) => printed.add(line),
+        ),
+      );
+
+      expect(found, [false, false, true, true, false]);
+      expect(printed, const [warning], reason: "run with --enable-asserts");
     });
   });
 }
