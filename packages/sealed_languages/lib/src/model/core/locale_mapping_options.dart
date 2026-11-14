@@ -17,6 +17,8 @@ class LocaleMappingOptions<T extends Object> {
   /// - [useLanguageFallback]: Whether to fallback to language-only codes.
   /// - [altSymbol]: Symbol used to mark alternative names, defaults to `"+"`.
   /// - [formatter]: Optional function to customize localized string formatting.
+  /// It receives the key of the entry it formats, so the ISO code of a full
+  /// name ends with [altSymbol] (e.g. `USA+`).
   const LocaleMappingOptions({
     this.mainLocale,
     this.fallbackLocale,
@@ -47,6 +49,10 @@ class LocaleMappingOptions<T extends Object> {
   final bool useLanguageFallback;
 
   /// Optional formatter function for customizing localized strings.
+  ///
+  /// It receives the key of the entry it formats, so the ISO code of a full
+  /// (alternative) name ends with [altSymbol] (e.g. `USA+`): compare the code
+  /// without the symbol to format the common and the full name alike.
   final String Function(IsoLocaleKey isoLocale, String l10n)?
   // ignore: prefer-correct-callback-field-name, to match L10N naming.
   formatter;
@@ -54,9 +60,9 @@ class LocaleMappingOptions<T extends Object> {
   @override
   String toString() =>
       'LocaleMappingOptions(altSymbol: "$altSymbol", '
-      '${fallbackLocale == null ? '' : ', fallbackLocale: "$fallbackLocale"'}'
+      '${fallbackLocale == null ? '' : 'fallbackLocale: "$fallbackLocale", '}'
       "localizeFullNames: $localizeFullNames, "
-      '${mainLocale == null ? '' : ', mainLocale: "$mainLocale" '}'
+      '${mainLocale == null ? '' : 'mainLocale: "$mainLocale", '}'
       "useLanguageFallback: $useLanguageFallback, "
       "formatter: ${formatter != null})";
 }

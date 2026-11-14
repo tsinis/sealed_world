@@ -6,26 +6,35 @@ FIX
 - Locales are normalized before the lookup (`zh-Hant-TW`, `pt-pt`, `en_US` and `en_US.UTF-8` become `zh_Hant_TW`, `pt_PT` and `en_US`), also with `useLanguageFallback: false`. The locale as given is still tried first, so custom locale keys keep working.
 - Translations injected via `other` are no longer cleared by `localize()`: a `const` map no longer throws an `UnsupportedError`, and an `IsoLocaleMapper` shared between mappers no longer returns an empty map on its second use.
 - `l10n-<locale>=false` now drops only that locale, previously it dropped all of them.
+- `formatter` receives the ISO code of an alternative name with its symbol (`ENG+`) also when several locales match, previously only when a single one did. A formatter that compares `isoLocale.isoCode` with an ISO code has to drop the symbol first to treat both names alike.
 
 NEW FEATURES
 
 - Enabling a regional or script locale keeps the locales it falls back to (`l10n-sw_cd=true` also keeps `sw`), unless they are set to false.
 - Locale defines also accept the locale spelling (`l10n-sw_CD`), not only the lowercase one.
+- Defines of the locales that the fallback table gives an explicit parent work too: language code aliases (`l10n-fil=true` keeps `tl`) and CLDR regional locales whose parent is not their language (`l10n-pa_PK=true` keeps `pa_Arab` and `pa`, also `zh_TW`, `pt_AO` and the like). Previously such a define was ignored. Defines of other regional locales, such as `l10n-pt_BR`, are still ignored.
 
 IMPROVEMENTS
 
 - `localize()` returns an unmodifiable view instead of copying its result, and no longer copies the set of ISO codes.
 - Each locale class passes its translations straight to `IsoLocaleMapper` instead of copying them into an empty map in its constructor: one map less for every locale a `localize()` call uses, and about 1.5% fewer instructions in a benchmark that localizes all codes for every locale.
+- Bundled locales, which ship no alternative names, are looked up without the alternative name symbol, so the default `altSymbol` no longer costs an extra lookup per ISO code. Translations injected via `other` still get their alternative names.
+- `localize()` reads the names straight from each matched locale in a single pass: bundled locales are no longer stored in the mapper's `map`, and no intermediate map is built per locale.
 
 DOCUMENTATION
 
 - Documented the order of the returned map, which `sealed_*` packages rely on: the main locale and its parents first, then the fallback locale and its parents.
-- Documented that only defines of locales bundled in this package switch it to opt-in mode.
+- Documented that only defines of locales bundled in this package, or of the locales whose fallback table parent leads to them, switch it to opt-in mode, and that defines of other regional locales are ignored.
+- Documented that Swiss German (`gsw`) is the only Flutter locale that is not bundled, that less common locales translate only a part of the names, that a script locale falls back to its language even in another script, and what `localize()` returns without a locale.
+- Removed the advice to pass `altSymbol: ""` from the README and the agent skill, it no longer makes a difference.
 
 CHORE
 
 - The mapper is generated from a single template shared by all `l10n_*` packages (`dart run :l10n_mapper` in `tools/`), and CI now runs the tree-shaking tests.
 - The Dart SDK was bumped to v3.13.0, the code uses its `new()` constructors and private named parameters. The API is the same.
+- The tree-shaking test checks that the name it expects to be stripped is in a full build: the name it looked for was spelled differently than in the data, so that check passed without testing anything.
+- The tests that all `l10n_*` packages share (`locale_resolution_test.dart`, `mapper_optimization_test.dart` and the tree-shaking test) are generated from the same templates by `dart run :l10n_mapper`, so they no longer drift apart. They also check that every alternative name in the data files is returned with the default `altSymbol`, and the defines of the fallback table locales, multi-step ones included (`l10n-zh_Hant_HK`, `l10n-zh_MO`).
+- The generated mapper lists the locales in locale order, not file name order, so `availableLocales` has `zh` before `zh_Hant` (and `bs` before `bs_Cyrl`) in every `l10n_*` package.
 
 ## 2.2.0
 

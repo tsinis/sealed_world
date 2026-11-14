@@ -31,13 +31,29 @@ class {{mapper}} extends IsoLocaleMapper<IsoLocaleMapper<String>> {
 
   bool _isConsumed = false;
 
-  /// Whether an `l10n-<locale>=true` define names a locale of this package.
+  /// Whether the bundled translations include alternative names (entries
+  /// keyed `<CODE>+`), derived from the data files by the generator.
+  // NOTE for future LLM agents and maintainers: this template is shared by all
+  // l10n_* packages. Only l10n_countries bundles alternative (official) names,
+  // so it is `true` there and every locale is looked up with the alternative
+  // name symbol. In l10n_currencies and l10n_languages it is `false`: bundled
+  // locales skip that lookup, it only runs for translations that did not come
+  // from [_factories] (e.g. injected via `other`). Never hardcode it, and keep
+  // the lookup for bundled locales while it is `true`, otherwise the official
+  // country names silently disappear.
+  static const _bundlesAltNames = {{bundlesAltNames}};
+
+  /// Whether an `l10n-<locale>=true` define names a locale of this package,
+  /// or a locale whose explicit parent in `LocaleFallback.parents` leads to
+  /// one of them (e.g. `l10n-fil=true` keeps `tl`, `l10n-pa_PK=true` keeps
+  /// `pa_Arab` and `pa`).
   ///
   /// If so, the mapper switches to "opt-in" mode: it keeps only the locales
   /// enabled by their own define, plus the parent locales they fall back to.
   /// Otherwise it keeps all locales, except those disabled with
-  /// `l10n-<locale>=false`. Defines of locales that this package does not
-  /// bundle (e.g. of another l10n_* package) are ignored.
+  /// `l10n-<locale>=false`. Defines of other locales (e.g. `l10n-en_US` or
+  /// `l10n-pt_BR`, or a locale that only another l10n_* package bundles) are
+  /// ignored.
   // ignore: avoid-explicit-type-declaration, the inferred type is not obvious.
   static const bool _hasAnyLocaleFilter =
 {{flags}};
@@ -53,16 +69,24 @@ class {{mapper}} extends IsoLocaleMapper<IsoLocaleMapper<String>> {
   /// Parameters:
   /// - [isoCodes]: Set of ISO codes to be localized.
   /// - [altSymbol]: Optional symbol for alternative (full) name translations.
-{{altDoc}}  /// - [fallbackLocale]: Optional secondary locale for translations.
+{{altDoc}}
+  /// - [fallbackLocale]: Optional secondary locale for translations.
   /// - [mainLocale]: Optional primary locale for translations.
   /// - [useLanguageFallback]: Whether to also try the parent locales of the
   /// specified ones (i.e. 'en_US' -> 'en', 'zh_Hant_TW' -> 'zh_Hant' -> 'zh').
-  /// - [formatter]: Optional callback to modify each translation.
+  /// - [formatter]: Optional callback to modify each translation. It receives
+  /// the key of the entry it formats, so the ISO code of an alternative name
+  /// ends with the alternative name symbol (`<CODE>+` by default).
   ///
   /// A locale is matched as given first, then normalized (`zh-hant-tw` ->
   /// `zh_Hant_TW`). The returned map follows the lookup order: [mainLocale]
   /// and its parents come before [fallbackLocale] and its parents, so the
   /// first entry of an ISO code is its most specific translation.
+  ///
+  /// Without [mainLocale] and [fallbackLocale], only the translations injected
+  /// via the `other` constructor parameter are used (all of their locales), so
+  /// the result is empty if there are none. A call that matches no locale
+  /// returns an empty map and does not consume the mapper.
   ///
   /// Returns a [Map] containing the localized names for the provided ISO
   /// codes.
@@ -107,80 +131,69 @@ class {{mapper}} extends IsoLocaleMapper<IsoLocaleMapper<String>> {
               ),
           };
 
-    if (localeKeys != null) {
-      for (final key in localeKeys) {
-        if (map.containsKey(key)) continue;
-        final maybeFactory = _factories[key];
-        if (maybeFactory != null) map[key] = maybeFactory();
-      }
+    final altNameSymbol = altSymbol ?? symbol;
+    final results = _Results(isoCodes, formatter);
+    bool hasLocale = false;
+    // Without locales, every locale injected via `other` is used. Bundled
+    // locales are instantiated here, never stored in [map].
+    for (final key in localeKeys ?? map.keys) {
+      final custom = map[key];
+      final names = custom ?? _factories[key]?.call();
+      if (names == null) continue;
+      hasLocale = true;
+      results.addAll(
+        names,
+        locale: key,
+        // Bundled locales skip the lookup when they ship no alternative names.
+        altSymbol: custom == null && !_bundlesAltNames ? "" : altNameSymbol,
+      );
     }
-    final localeData = extract(localeKeys);
-
-    return switch (localeData.length) {
-      0 => const {},
-      1 => _fromSingle(
-        isoCodes,
-        localeData.entries.first,
-        altSymbol ?? symbol,
-        formatter,
-      ),
-      _ => _fromMultiple(isoCodes, localeData, altSymbol ?? symbol, formatter),
-    };
-  }
-
-  LocaleMap _fromSingle(
-    Set<String> codes,
-    MapEntry<String, IsoLocaleMapper<String>> localeEntry,
-    String altSymbol,
-    String Function(LocaleKey isoLocale, String l10n)? formatter,
-  ) {
-    final locale = localeEntry.key;
-    final translations = localeEntry.value.extract(codes, altSymbol: altSymbol);
-    final results = <LocaleKey, String>{};
-    for (final MapEntry(key: iso, value: l10n) in translations.entries) {
-      final isoLocale = (isoCode: iso, locale: locale);
-      results[isoLocale] = formatter?.call(isoLocale, l10n) ?? l10n;
-    }
+    if (!hasLocale) return const {}; // Not consumed, can be retried.
     _consume();
 
-    return UnmodifiableMapView(results);
-  }
-
-  LocaleMap _fromMultiple(
-    Set<String> codes,
-    Map<String, IsoLocaleMapper<String>> localesData,
-    String altSymbol,
-    String Function(LocaleKey isoLocale, String l10n)? formatter,
-  ) {
-    final results = <LocaleKey, String>{};
-
-    for (final MapEntry(key: locale, value: mapper) in localesData.entries) {
-      final translations = mapper.extract(codes, altSymbol: altSymbol);
-
-      for (final code in codes) {
-        final key = (isoCode: code, locale: locale);
-        final l10n = translations[code];
-        if (l10n != null && !results.containsKey(key)) {
-          results[key] = formatter?.call(key, l10n) ?? l10n;
-        }
-
-        final secondary = altKey(code, altSymbol);
-        if (secondary == null) continue;
-
-        final alternative = (isoCode: secondary, locale: locale);
-        final altL10n = translations[secondary];
-        if (altL10n != null && !results.containsKey(alternative)) {
-          results[alternative] = formatter?.call(key, altL10n) ?? altL10n;
-        }
-      }
-    }
-    _consume();
-
-    return UnmodifiableMapView(results);
+    return results.view;
   }
 
   void _consume() {
     map.clear();
     _isConsumed = true;
+  }
+}
+
+/// Collects the names of one [{{mapper}}.localize] call.
+///
+/// The names keep the lookup order. They are read straight from each locale,
+/// without the intermediate map of [IsoLocaleMapper.extract], since
+/// `localize` runs on every build.
+final class _Results {
+  new(this._isoCodes, this._formatter);
+
+  final Set<String> _isoCodes;
+  // ignore: prefer-correct-callback-field-name, to match L10N naming.
+  final String Function(LocaleKey isoLocale, String l10n)? _formatter;
+  final _names = <LocaleKey, String>{};
+
+  /// An unmodifiable view of the names collected so far.
+  LocaleMap get view => UnmodifiableMapView(_names);
+
+  /// Adds the [names] of the ISO codes in [locale], each followed by its
+  /// alternative name (see [IsoLocaleMapper.altKey]), if there is one.
+  void addAll(
+    IsoLocaleMapper<String> names, {
+    required String locale,
+    required String altSymbol,
+  }) {
+    for (final code in _isoCodes) {
+      _add(names, code, locale);
+      final altCode = names.altKey(code, altSymbol);
+      if (altCode != null) _add(names, altCode, locale);
+    }
+  }
+
+  void _add(IsoLocaleMapper<String> names, String isoCode, String locale) {
+    final l10n = names.map[isoCode];
+    if (l10n == null) return;
+    final isoLocale = (isoCode: isoCode, locale: locale);
+    _names[isoLocale] = _formatter?.call(isoLocale, l10n) ?? l10n;
   }
 }

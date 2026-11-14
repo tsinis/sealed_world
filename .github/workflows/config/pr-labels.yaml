@@ -1,7 +1,8 @@
-feature: ["feature/*", "feat/*"]
-tests: ["test/*", "tests/*"]
 bug: ["fix/*", "bug/*"]
-dependencies: ["chore/*", "deps/*"]
 ci/cd: ["ci/*", "build/*"]
+dependencies: ["chore/*", "deps/*"]
 documentation: ["docs/*", "doc/*", "style/*"]
+feature: ["feature/*", "feat/*"]
+performance: ["perf/*", "performance/*"]
 refactor: refactor/*
+tests: ["test/*", "tests/*"]

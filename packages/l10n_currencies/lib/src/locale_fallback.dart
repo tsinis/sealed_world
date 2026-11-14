@@ -9,7 +9,10 @@ abstract final class LocaleFallback {
   /// Based on the CLDR `parentLocales` of the bundled regional locales, plus
   /// the legacy language codes still reported by older Android and JVM
   /// platforms, and the `fil` -> `tl` alias (bundled data uses `tl`).
-  static const _parents = {
+  ///
+  /// The mapper generator (`tools/lib/l10n`) reads its keys too, so that an
+  /// `l10n-<key>=true` define keeps the locales that the key falls back to.
+  static const parents = {
     "fil": "tl",
     "in": "id",
     "iw": "he",
@@ -53,6 +56,12 @@ abstract final class LocaleFallback {
   /// 3. If [useLanguageFallback] is `true`, its parent locales: a CLDR parent
   ///    or alias if there is one, otherwise the locale without its last
   ///    subtag (`zh_Hant_TW` -> `zh_Hant` -> `zh`, `zh_HK` -> `zh_Hant`).
+  ///    A script locale falls back to its language even if the language is
+  ///    written in another script (`pa_Arab` -> `pa`, `zh_Hant` -> `zh`),
+  ///    unlike in CLDR, where such locales fall back to the `root`. The mapper
+  ///    returns the names of both, script locale first: so the first name of
+  ///    an ISO code is the language's one (in its own script) only where the
+  ///    script locale has none, and it comes before any fallback locale name.
   ///
   /// A locale whose language subtag is not valid only matches as given.
   static Set<String> chain(String locale, {bool useLanguageFallback = true}) {
@@ -95,7 +104,7 @@ abstract final class LocaleFallback {
   }
 
   static String? _parentOf(String locale) {
-    final parent = _parents[locale];
+    final parent = parents[locale];
     if (parent != null) return parent;
     final subtags = locale.split("_");
     if (subtags.length == 1) return null;

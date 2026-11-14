@@ -18,7 +18,7 @@ This ISO-driven, pure Dart, fully tested and dependency-free package provides CL
 
 - 193 locales supported out of the box.
 - Three-letter ISO 3166-1 Alpha-3 code lookup.
-- Fallback locale support, including parent locales (e.g. `bs_Cyrl_BA` → `bs_Cyrl` → `bs`).
+- Fallback locale support, including parent locales (e.g. `bs_Cyrl_BA` → `bs_Cyrl` → `bs`). A script locale falls back to its language even if the language is written in another script (`pa_Arab` → `pa`): the result has the names of both, so show the first entry of each ISO code. Where the script locale has no name, that entry is the language's one, and it comes before any name of `fallbackLocale`.
 - Alternative names and conditional formatting support.
 - Tree-shakable via dart define flags.
 
@@ -43,7 +43,7 @@ import 'package:l10n_countries/l10n_countries.dart';
 > [!TIP]
 > Tree-shakable builds can be achieved by providing dart define flags to exclude unused locales. For example, to include only EN and SK locales, use:
 > `dart run -Dl10n-en=true -Dl10n-sk=true` or `flutter run --dart-define=l10n-en=true --dart-define=l10n-sk=true`
-> Parent locales of the enabled ones are kept automatically (`l10n-sw_cd=true` also keeps `sw`), and `l10n-<locale>=false` drops a single locale. Only flags of locales bundled in this package switch it to this opt-in mode.
+> Parent locales of the enabled ones are kept automatically (`l10n-sw_cd=true` also keeps `sw`), and `l10n-<locale>=false` drops a single locale. Only flags of locales bundled in this package switch it to this opt-in mode, and the flags of the locales that its fallback table gives an explicit parent: language code aliases (`l10n-fil=true` keeps `tl`, also `iw`, `in` and `ji`) and CLDR regional locales whose parent is not their language (`l10n-pa_PK=true` keeps `pa_Arab` and `pa`, also `uz_AF`, `zh_TW`, `zh_HK`, `zh_MO`, `zh_Hant_HK`, `zh_Hant_MO` and the `pt` regions that fall back to `pt_PT`, such as `pt_AO`). Flags of other regional locales, such as `l10n-en_US`, `l10n-pt_BR` or `l10n-zh_Hant_TW`, are ignored: name the bundled locale (`l10n-en`, `l10n-pt`), and enable the locale passed as `fallbackLocale` too.
 
 ### Usage
 
@@ -84,7 +84,7 @@ void main() {
 
 - **No dependencies**: This package has no dependencies, not even `meta`, ensuring that you won't have any issues or conflicts with other dependencies.
 - **Memory efficient**: Lazy initialization loads translations on-demand, reducing initial memory footprint by ~90% - only the locales you actually use are loaded into memory.
-- **Rich data**: This package offers tons of translations (all [GlobalMaterialLocalizations](https://api.flutter.dev/flutter/flutter_localizations/GlobalMaterialLocalizations-class.html) and [GlobalCupertinoLocalizations](https://api.flutter.dev/flutter/flutter_localizations/GlobalCupertinoLocalizations-class.html) locales and more).
+- **Rich data**: This package offers tons of translations (all [GlobalMaterialLocalizations](https://api.flutter.dev/flutter/flutter_localizations/GlobalMaterialLocalizations-class.html) and [GlobalCupertinoLocalizations](https://api.flutter.dev/flutter/flutter_localizations/GlobalCupertinoLocalizations-class.html) locales except Swiss German `gsw`, and more). Like in CLDR, some less common locales translate only a part of the names: their parent locales cover the rest first, then the `fallbackLocale`.
 - **High code coverage**: The code in this package has 100% code coverage, providing confidence in its reliability and stability.
 - **Comprehensive documentation**: This package provides full documentation for every non-code generated public member, usually with examples, ensuring clarity and ease of use.
 - **Mirrored Repository**: The GitHub repository, including all package tags, is mirrored on [GitLab](https://gitlab.com/tsinis/sealed_world/), providing an alternative access point should GitHub become unavailable.

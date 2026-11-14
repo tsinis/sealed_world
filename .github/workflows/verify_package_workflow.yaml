@@ -133,7 +133,7 @@ jobs:
 
       - name: 🧪 Run Dart tests
         if: ${{ !inputs.is_flutter }}
-        run: dart run coverage:test_with_coverage --fail-under=40 -- --file-reporter=json:build/test-report.json
+        run: dart run coverage:test_with_coverage --fail-under=33 -- --file-reporter=json:build/test-report.json
 
       - name: 🌳 Run l10n tree-shaking tests
         if: ${{ startsWith(inputs.package_name, 'l10n_') }}

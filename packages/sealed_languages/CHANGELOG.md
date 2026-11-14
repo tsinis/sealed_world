@@ -5,6 +5,11 @@ FIX
 - `commonNamesMap` and `translatedNames` pass the `formatter` of `LocaleMappingOptions` to the mapper, it was silently ignored.
 - `translatedNames` passes a custom `LocaleMappingOptions.altSymbol` to the mapper, so alternative names marked with a symbol other than `"+"` are found.
 - `translatedNames` with an empty `LocaleMappingOptions.altSymbol` returns the common names instead of an empty list.
+- `LocaleMappingOptions.toString()` separates `fallbackLocale` and `mainLocale` with commas, it printed `"+", , fallbackLocale: "en"localizeFullNames`.
+
+DOCUMENTATION
+
+- Documented that `LocaleMappingOptions.formatter` receives the key of the entry it formats: the ISO code of a full name ends with `altSymbol` (`USA+`).
 
 ## 3.4.1
 
