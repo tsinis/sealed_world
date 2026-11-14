@@ -351,13 +351,29 @@ class CurrenciesLocaleMapper extends IsoLocaleMapper<IsoLocaleMapper<String>> {
 
   bool _isConsumed = false;
 
-  /// Whether an `l10n-<locale>=true` define names a locale of this package.
+  /// Whether the bundled translations include alternative names (entries
+  /// keyed `<CODE>+`), derived from the data files by the generator.
+  // NOTE for future LLM agents and maintainers: this template is shared by all
+  // l10n_* packages. Only l10n_countries bundles alternative (official) names,
+  // so it is `true` there and every locale is looked up with the alternative
+  // name symbol. In l10n_currencies and l10n_languages it is `false`: bundled
+  // locales skip that lookup, it only runs for translations that did not come
+  // from [_factories] (e.g. injected via `other`). Never hardcode it, and keep
+  // the lookup for bundled locales while it is `true`, otherwise the official
+  // country names silently disappear.
+  static const _bundlesAltNames = false;
+
+  /// Whether an `l10n-<locale>=true` define names a locale of this package,
+  /// or a locale whose explicit parent in `LocaleFallback.parents` leads to
+  /// one of them (e.g. `l10n-fil=true` keeps `tl`, `l10n-pa_PK=true` keeps
+  /// `pa_Arab` and `pa`).
   ///
   /// If so, the mapper switches to "opt-in" mode: it keeps only the locales
   /// enabled by their own define, plus the parent locales they fall back to.
   /// Otherwise it keeps all locales, except those disabled with
-  /// `l10n-<locale>=false`. Defines of locales that this package does not
-  /// bundle (e.g. of another l10n_* package) are ignored.
+  /// `l10n-<locale>=false`. Defines of other locales (e.g. `l10n-en_US` or
+  /// `l10n-pt_BR`, or a locale that only another l10n_* package bundles) are
+  /// ignored.
   // ignore: avoid-explicit-type-declaration, the inferred type is not obvious.
   static const bool _hasAnyLocaleFilter =
       bool.fromEnvironment("l10n-af") ||
@@ -381,35 +397,35 @@ class CurrenciesLocaleMapper extends IsoLocaleMapper<IsoLocaleMapper<String>> {
       bool.fromEnvironment("l10n-cv") ||
       bool.fromEnvironment("l10n-cy") ||
       bool.fromEnvironment("l10n-da") ||
+      bool.fromEnvironment("l10n-de") ||
       bool.fromEnvironment("l10n-de_ch") ||
       bool.fromEnvironment("l10n-de_CH") ||
-      bool.fromEnvironment("l10n-de") ||
       bool.fromEnvironment("l10n-dz") ||
       bool.fromEnvironment("l10n-ee") ||
       bool.fromEnvironment("l10n-el") ||
+      bool.fromEnvironment("l10n-en") ||
       bool.fromEnvironment("l10n-en_au") ||
       bool.fromEnvironment("l10n-en_AU") ||
-      bool.fromEnvironment("l10n-en") ||
       bool.fromEnvironment("l10n-en_gg") ||
       bool.fromEnvironment("l10n-en_GG") ||
+      bool.fromEnvironment("l10n-es") ||
       bool.fromEnvironment("l10n-es_cl") ||
       bool.fromEnvironment("l10n-es_CL") ||
-      bool.fromEnvironment("l10n-es") ||
       bool.fromEnvironment("l10n-es_gt") ||
       bool.fromEnvironment("l10n-es_GT") ||
       bool.fromEnvironment("l10n-es_mx") ||
       bool.fromEnvironment("l10n-es_MX") ||
       bool.fromEnvironment("l10n-et") ||
       bool.fromEnvironment("l10n-eu") ||
+      bool.fromEnvironment("l10n-fa") ||
       bool.fromEnvironment("l10n-fa_af") ||
       bool.fromEnvironment("l10n-fa_AF") ||
-      bool.fromEnvironment("l10n-fa") ||
       bool.fromEnvironment("l10n-ff") ||
       bool.fromEnvironment("l10n-fi") ||
       bool.fromEnvironment("l10n-fo") ||
+      bool.fromEnvironment("l10n-fr") ||
       bool.fromEnvironment("l10n-fr_ca") ||
       bool.fromEnvironment("l10n-fr_CA") ||
-      bool.fromEnvironment("l10n-fr") ||
       bool.fromEnvironment("l10n-fy") ||
       bool.fromEnvironment("l10n-ga") ||
       bool.fromEnvironment("l10n-gd") ||
@@ -461,9 +477,9 @@ class CurrenciesLocaleMapper extends IsoLocaleMapper<IsoLocaleMapper<String>> {
       bool.fromEnvironment("l10n-om") ||
       bool.fromEnvironment("l10n-or") ||
       bool.fromEnvironment("l10n-os") ||
+      bool.fromEnvironment("l10n-pa") ||
       bool.fromEnvironment("l10n-pa_arab") ||
       bool.fromEnvironment("l10n-pa_Arab") ||
-      bool.fromEnvironment("l10n-pa") ||
       bool.fromEnvironment("l10n-pl") ||
       bool.fromEnvironment("l10n-ps") ||
       bool.fromEnvironment("l10n-pt") ||
@@ -494,9 +510,9 @@ class CurrenciesLocaleMapper extends IsoLocaleMapper<IsoLocaleMapper<String>> {
       bool.fromEnvironment("l10n-sr_Latn") ||
       bool.fromEnvironment("l10n-su") ||
       bool.fromEnvironment("l10n-sv") ||
+      bool.fromEnvironment("l10n-sw") ||
       bool.fromEnvironment("l10n-sw_cd") ||
       bool.fromEnvironment("l10n-sw_CD") ||
-      bool.fromEnvironment("l10n-sw") ||
       bool.fromEnvironment("l10n-ta") ||
       bool.fromEnvironment("l10n-te") ||
       bool.fromEnvironment("l10n-tg") ||
@@ -511,18 +527,18 @@ class CurrenciesLocaleMapper extends IsoLocaleMapper<IsoLocaleMapper<String>> {
       bool.fromEnvironment("l10n-ur") ||
       bool.fromEnvironment("l10n-ur_in") ||
       bool.fromEnvironment("l10n-ur_IN") ||
+      bool.fromEnvironment("l10n-uz") ||
       bool.fromEnvironment("l10n-uz_arab") ||
       bool.fromEnvironment("l10n-uz_Arab") ||
-      bool.fromEnvironment("l10n-uz") ||
       bool.fromEnvironment("l10n-uz_cyrl") ||
       bool.fromEnvironment("l10n-uz_Cyrl") ||
       bool.fromEnvironment("l10n-vi") ||
       bool.fromEnvironment("l10n-wo") ||
       bool.fromEnvironment("l10n-xh") ||
       bool.fromEnvironment("l10n-yi") ||
+      bool.fromEnvironment("l10n-yo") ||
       bool.fromEnvironment("l10n-yo_bj") ||
       bool.fromEnvironment("l10n-yo_BJ") ||
-      bool.fromEnvironment("l10n-yo") ||
       bool.fromEnvironment("l10n-zh") ||
       bool.fromEnvironment("l10n-zh_hans_hk") ||
       bool.fromEnvironment("l10n-zh_Hans_HK") ||
@@ -530,7 +546,41 @@ class CurrenciesLocaleMapper extends IsoLocaleMapper<IsoLocaleMapper<String>> {
       bool.fromEnvironment("l10n-zh_Hant") ||
       bool.fromEnvironment("l10n-zh_hk") ||
       bool.fromEnvironment("l10n-zh_HK") ||
-      bool.fromEnvironment("l10n-zu");
+      bool.fromEnvironment("l10n-zu") ||
+      bool.fromEnvironment("l10n-fil") ||
+      bool.fromEnvironment("l10n-in") ||
+      bool.fromEnvironment("l10n-iw") ||
+      bool.fromEnvironment("l10n-ji") ||
+      bool.fromEnvironment("l10n-pa_pk") ||
+      bool.fromEnvironment("l10n-pa_PK") ||
+      bool.fromEnvironment("l10n-pt_ao") ||
+      bool.fromEnvironment("l10n-pt_AO") ||
+      bool.fromEnvironment("l10n-pt_ch") ||
+      bool.fromEnvironment("l10n-pt_CH") ||
+      bool.fromEnvironment("l10n-pt_cv") ||
+      bool.fromEnvironment("l10n-pt_CV") ||
+      bool.fromEnvironment("l10n-pt_fr") ||
+      bool.fromEnvironment("l10n-pt_FR") ||
+      bool.fromEnvironment("l10n-pt_gq") ||
+      bool.fromEnvironment("l10n-pt_GQ") ||
+      bool.fromEnvironment("l10n-pt_gw") ||
+      bool.fromEnvironment("l10n-pt_GW") ||
+      bool.fromEnvironment("l10n-pt_lu") ||
+      bool.fromEnvironment("l10n-pt_LU") ||
+      bool.fromEnvironment("l10n-pt_st") ||
+      bool.fromEnvironment("l10n-pt_ST") ||
+      bool.fromEnvironment("l10n-pt_tl") ||
+      bool.fromEnvironment("l10n-pt_TL") ||
+      bool.fromEnvironment("l10n-uz_af") ||
+      bool.fromEnvironment("l10n-uz_AF") ||
+      bool.fromEnvironment("l10n-zh_hant_hk") ||
+      bool.fromEnvironment("l10n-zh_Hant_HK") ||
+      bool.fromEnvironment("l10n-zh_hant_mo") ||
+      bool.fromEnvironment("l10n-zh_Hant_MO") ||
+      bool.fromEnvironment("l10n-zh_mo") ||
+      bool.fromEnvironment("l10n-zh_MO") ||
+      bool.fromEnvironment("l10n-zh_tw") ||
+      bool.fromEnvironment("l10n-zh_TW");
 
   /// Lazy factories — static final means this map is only created once,
   /// and the tear-offs (.new) don't invoke constructors until called.
@@ -642,14 +692,6 @@ class CurrenciesLocaleMapper extends IsoLocaleMapper<IsoLocaleMapper<String>> {
     ))
       "da": DaCurrenciesL10N.new,
     if (const bool.fromEnvironment(
-      "l10n-de_ch",
-      defaultValue: bool.fromEnvironment(
-        "l10n-de_CH",
-        defaultValue: !_hasAnyLocaleFilter,
-      ),
-    ))
-      "de_CH": DeChCurrenciesL10N.new,
-    if (const bool.fromEnvironment(
       "l10n-de",
       defaultValue:
           !_hasAnyLocaleFilter ||
@@ -657,6 +699,14 @@ class CurrenciesLocaleMapper extends IsoLocaleMapper<IsoLocaleMapper<String>> {
           bool.fromEnvironment("l10n-de_CH"),
     ))
       "de": DeCurrenciesL10N.new,
+    if (const bool.fromEnvironment(
+      "l10n-de_ch",
+      defaultValue: bool.fromEnvironment(
+        "l10n-de_CH",
+        defaultValue: !_hasAnyLocaleFilter,
+      ),
+    ))
+      "de_CH": DeChCurrenciesL10N.new,
     if (const bool.fromEnvironment(
       "l10n-dz",
       defaultValue: !_hasAnyLocaleFilter,
@@ -673,14 +723,6 @@ class CurrenciesLocaleMapper extends IsoLocaleMapper<IsoLocaleMapper<String>> {
     ))
       "el": ElCurrenciesL10N.new,
     if (const bool.fromEnvironment(
-      "l10n-en_au",
-      defaultValue: bool.fromEnvironment(
-        "l10n-en_AU",
-        defaultValue: !_hasAnyLocaleFilter,
-      ),
-    ))
-      "en_AU": EnAuCurrenciesL10N.new,
-    if (const bool.fromEnvironment(
       "l10n-en",
       defaultValue:
           !_hasAnyLocaleFilter ||
@@ -691,6 +733,14 @@ class CurrenciesLocaleMapper extends IsoLocaleMapper<IsoLocaleMapper<String>> {
     ))
       "en": EnCurrenciesL10N.new,
     if (const bool.fromEnvironment(
+      "l10n-en_au",
+      defaultValue: bool.fromEnvironment(
+        "l10n-en_AU",
+        defaultValue: !_hasAnyLocaleFilter,
+      ),
+    ))
+      "en_AU": EnAuCurrenciesL10N.new,
+    if (const bool.fromEnvironment(
       "l10n-en_gg",
       defaultValue: bool.fromEnvironment(
         "l10n-en_GG",
@@ -698,14 +748,6 @@ class CurrenciesLocaleMapper extends IsoLocaleMapper<IsoLocaleMapper<String>> {
       ),
     ))
       "en_GG": EnGgCurrenciesL10N.new,
-    if (const bool.fromEnvironment(
-      "l10n-es_cl",
-      defaultValue: bool.fromEnvironment(
-        "l10n-es_CL",
-        defaultValue: !_hasAnyLocaleFilter,
-      ),
-    ))
-      "es_CL": EsClCurrenciesL10N.new,
     if (const bool.fromEnvironment(
       "l10n-es",
       defaultValue:
@@ -718,6 +760,14 @@ class CurrenciesLocaleMapper extends IsoLocaleMapper<IsoLocaleMapper<String>> {
           bool.fromEnvironment("l10n-es_MX"),
     ))
       "es": EsCurrenciesL10N.new,
+    if (const bool.fromEnvironment(
+      "l10n-es_cl",
+      defaultValue: bool.fromEnvironment(
+        "l10n-es_CL",
+        defaultValue: !_hasAnyLocaleFilter,
+      ),
+    ))
+      "es_CL": EsClCurrenciesL10N.new,
     if (const bool.fromEnvironment(
       "l10n-es_gt",
       defaultValue: bool.fromEnvironment(
@@ -745,14 +795,6 @@ class CurrenciesLocaleMapper extends IsoLocaleMapper<IsoLocaleMapper<String>> {
     ))
       "eu": EuCurrenciesL10N.new,
     if (const bool.fromEnvironment(
-      "l10n-fa_af",
-      defaultValue: bool.fromEnvironment(
-        "l10n-fa_AF",
-        defaultValue: !_hasAnyLocaleFilter,
-      ),
-    ))
-      "fa_AF": FaAfCurrenciesL10N.new,
-    if (const bool.fromEnvironment(
       "l10n-fa",
       defaultValue:
           !_hasAnyLocaleFilter ||
@@ -760,6 +802,14 @@ class CurrenciesLocaleMapper extends IsoLocaleMapper<IsoLocaleMapper<String>> {
           bool.fromEnvironment("l10n-fa_AF"),
     ))
       "fa": FaCurrenciesL10N.new,
+    if (const bool.fromEnvironment(
+      "l10n-fa_af",
+      defaultValue: bool.fromEnvironment(
+        "l10n-fa_AF",
+        defaultValue: !_hasAnyLocaleFilter,
+      ),
+    ))
+      "fa_AF": FaAfCurrenciesL10N.new,
     if (const bool.fromEnvironment(
       "l10n-ff",
       defaultValue: !_hasAnyLocaleFilter,
@@ -776,14 +826,6 @@ class CurrenciesLocaleMapper extends IsoLocaleMapper<IsoLocaleMapper<String>> {
     ))
       "fo": FoCurrenciesL10N.new,
     if (const bool.fromEnvironment(
-      "l10n-fr_ca",
-      defaultValue: bool.fromEnvironment(
-        "l10n-fr_CA",
-        defaultValue: !_hasAnyLocaleFilter,
-      ),
-    ))
-      "fr_CA": FrCaCurrenciesL10N.new,
-    if (const bool.fromEnvironment(
       "l10n-fr",
       defaultValue:
           !_hasAnyLocaleFilter ||
@@ -791,6 +833,14 @@ class CurrenciesLocaleMapper extends IsoLocaleMapper<IsoLocaleMapper<String>> {
           bool.fromEnvironment("l10n-fr_CA"),
     ))
       "fr": FrCurrenciesL10N.new,
+    if (const bool.fromEnvironment(
+      "l10n-fr_ca",
+      defaultValue: bool.fromEnvironment(
+        "l10n-fr_CA",
+        defaultValue: !_hasAnyLocaleFilter,
+      ),
+    ))
+      "fr_CA": FrCaCurrenciesL10N.new,
     if (const bool.fromEnvironment(
       "l10n-fy",
       defaultValue: !_hasAnyLocaleFilter,
@@ -823,7 +873,7 @@ class CurrenciesLocaleMapper extends IsoLocaleMapper<IsoLocaleMapper<String>> {
       "ha": HaCurrenciesL10N.new,
     if (const bool.fromEnvironment(
       "l10n-he",
-      defaultValue: !_hasAnyLocaleFilter,
+      defaultValue: !_hasAnyLocaleFilter || bool.fromEnvironment("l10n-iw"),
     ))
       "he": HeCurrenciesL10N.new,
     if (const bool.fromEnvironment(
@@ -853,7 +903,7 @@ class CurrenciesLocaleMapper extends IsoLocaleMapper<IsoLocaleMapper<String>> {
       "ia": IaCurrenciesL10N.new,
     if (const bool.fromEnvironment(
       "l10n-id",
-      defaultValue: !_hasAnyLocaleFilter,
+      defaultValue: !_hasAnyLocaleFilter || bool.fromEnvironment("l10n-in"),
     ))
       "id": IdCurrenciesL10N.new,
     if (const bool.fromEnvironment(
@@ -1050,21 +1100,26 @@ class CurrenciesLocaleMapper extends IsoLocaleMapper<IsoLocaleMapper<String>> {
     ))
       "os": OsCurrenciesL10N.new,
     if (const bool.fromEnvironment(
-      "l10n-pa_arab",
-      defaultValue: bool.fromEnvironment(
-        "l10n-pa_Arab",
-        defaultValue: !_hasAnyLocaleFilter,
-      ),
-    ))
-      "pa_Arab": PaArabCurrenciesL10N.new,
-    if (const bool.fromEnvironment(
       "l10n-pa",
       defaultValue:
           !_hasAnyLocaleFilter ||
           bool.fromEnvironment("l10n-pa_arab") ||
-          bool.fromEnvironment("l10n-pa_Arab"),
+          bool.fromEnvironment("l10n-pa_Arab") ||
+          bool.fromEnvironment("l10n-pa_pk") ||
+          bool.fromEnvironment("l10n-pa_PK"),
     ))
       "pa": PaCurrenciesL10N.new,
+    if (const bool.fromEnvironment(
+      "l10n-pa_arab",
+      defaultValue: bool.fromEnvironment(
+        "l10n-pa_Arab",
+        defaultValue:
+            !_hasAnyLocaleFilter ||
+            bool.fromEnvironment("l10n-pa_pk") ||
+            bool.fromEnvironment("l10n-pa_PK"),
+      ),
+    ))
+      "pa_Arab": PaArabCurrenciesL10N.new,
     if (const bool.fromEnvironment(
       "l10n-pl",
       defaultValue: !_hasAnyLocaleFilter,
@@ -1084,7 +1139,25 @@ class CurrenciesLocaleMapper extends IsoLocaleMapper<IsoLocaleMapper<String>> {
           bool.fromEnvironment("l10n-pt_mz") ||
           bool.fromEnvironment("l10n-pt_MZ") ||
           bool.fromEnvironment("l10n-pt_pt") ||
-          bool.fromEnvironment("l10n-pt_PT"),
+          bool.fromEnvironment("l10n-pt_PT") ||
+          bool.fromEnvironment("l10n-pt_ao") ||
+          bool.fromEnvironment("l10n-pt_AO") ||
+          bool.fromEnvironment("l10n-pt_ch") ||
+          bool.fromEnvironment("l10n-pt_CH") ||
+          bool.fromEnvironment("l10n-pt_cv") ||
+          bool.fromEnvironment("l10n-pt_CV") ||
+          bool.fromEnvironment("l10n-pt_fr") ||
+          bool.fromEnvironment("l10n-pt_FR") ||
+          bool.fromEnvironment("l10n-pt_gq") ||
+          bool.fromEnvironment("l10n-pt_GQ") ||
+          bool.fromEnvironment("l10n-pt_gw") ||
+          bool.fromEnvironment("l10n-pt_GW") ||
+          bool.fromEnvironment("l10n-pt_lu") ||
+          bool.fromEnvironment("l10n-pt_LU") ||
+          bool.fromEnvironment("l10n-pt_st") ||
+          bool.fromEnvironment("l10n-pt_ST") ||
+          bool.fromEnvironment("l10n-pt_tl") ||
+          bool.fromEnvironment("l10n-pt_TL"),
     ))
       "pt": PtCurrenciesL10N.new,
     if (const bool.fromEnvironment(
@@ -1112,7 +1185,25 @@ class CurrenciesLocaleMapper extends IsoLocaleMapper<IsoLocaleMapper<String>> {
             bool.fromEnvironment("l10n-pt_mo") ||
             bool.fromEnvironment("l10n-pt_MO") ||
             bool.fromEnvironment("l10n-pt_mz") ||
-            bool.fromEnvironment("l10n-pt_MZ"),
+            bool.fromEnvironment("l10n-pt_MZ") ||
+            bool.fromEnvironment("l10n-pt_ao") ||
+            bool.fromEnvironment("l10n-pt_AO") ||
+            bool.fromEnvironment("l10n-pt_ch") ||
+            bool.fromEnvironment("l10n-pt_CH") ||
+            bool.fromEnvironment("l10n-pt_cv") ||
+            bool.fromEnvironment("l10n-pt_CV") ||
+            bool.fromEnvironment("l10n-pt_fr") ||
+            bool.fromEnvironment("l10n-pt_FR") ||
+            bool.fromEnvironment("l10n-pt_gq") ||
+            bool.fromEnvironment("l10n-pt_GQ") ||
+            bool.fromEnvironment("l10n-pt_gw") ||
+            bool.fromEnvironment("l10n-pt_GW") ||
+            bool.fromEnvironment("l10n-pt_lu") ||
+            bool.fromEnvironment("l10n-pt_LU") ||
+            bool.fromEnvironment("l10n-pt_st") ||
+            bool.fromEnvironment("l10n-pt_ST") ||
+            bool.fromEnvironment("l10n-pt_tl") ||
+            bool.fromEnvironment("l10n-pt_TL"),
       ),
     ))
       "pt_PT": PtPtCurrenciesL10N.new,
@@ -1223,14 +1314,6 @@ class CurrenciesLocaleMapper extends IsoLocaleMapper<IsoLocaleMapper<String>> {
     ))
       "sv": SvCurrenciesL10N.new,
     if (const bool.fromEnvironment(
-      "l10n-sw_cd",
-      defaultValue: bool.fromEnvironment(
-        "l10n-sw_CD",
-        defaultValue: !_hasAnyLocaleFilter,
-      ),
-    ))
-      "sw_CD": SwCdCurrenciesL10N.new,
-    if (const bool.fromEnvironment(
       "l10n-sw",
       defaultValue:
           !_hasAnyLocaleFilter ||
@@ -1238,6 +1321,14 @@ class CurrenciesLocaleMapper extends IsoLocaleMapper<IsoLocaleMapper<String>> {
           bool.fromEnvironment("l10n-sw_CD"),
     ))
       "sw": SwCurrenciesL10N.new,
+    if (const bool.fromEnvironment(
+      "l10n-sw_cd",
+      defaultValue: bool.fromEnvironment(
+        "l10n-sw_CD",
+        defaultValue: !_hasAnyLocaleFilter,
+      ),
+    ))
+      "sw_CD": SwCdCurrenciesL10N.new,
     if (const bool.fromEnvironment(
       "l10n-ta",
       defaultValue: !_hasAnyLocaleFilter,
@@ -1270,7 +1361,7 @@ class CurrenciesLocaleMapper extends IsoLocaleMapper<IsoLocaleMapper<String>> {
       "tk": TkCurrenciesL10N.new,
     if (const bool.fromEnvironment(
       "l10n-tl",
-      defaultValue: !_hasAnyLocaleFilter,
+      defaultValue: !_hasAnyLocaleFilter || bool.fromEnvironment("l10n-fil"),
     ))
       "tl": TlCurrenciesL10N.new,
     if (const bool.fromEnvironment(
@@ -1310,23 +1401,28 @@ class CurrenciesLocaleMapper extends IsoLocaleMapper<IsoLocaleMapper<String>> {
     ))
       "ur_IN": UrInCurrenciesL10N.new,
     if (const bool.fromEnvironment(
-      "l10n-uz_arab",
-      defaultValue: bool.fromEnvironment(
-        "l10n-uz_Arab",
-        defaultValue: !_hasAnyLocaleFilter,
-      ),
-    ))
-      "uz_Arab": UzArabCurrenciesL10N.new,
-    if (const bool.fromEnvironment(
       "l10n-uz",
       defaultValue:
           !_hasAnyLocaleFilter ||
           bool.fromEnvironment("l10n-uz_arab") ||
           bool.fromEnvironment("l10n-uz_Arab") ||
           bool.fromEnvironment("l10n-uz_cyrl") ||
-          bool.fromEnvironment("l10n-uz_Cyrl"),
+          bool.fromEnvironment("l10n-uz_Cyrl") ||
+          bool.fromEnvironment("l10n-uz_af") ||
+          bool.fromEnvironment("l10n-uz_AF"),
     ))
       "uz": UzCurrenciesL10N.new,
+    if (const bool.fromEnvironment(
+      "l10n-uz_arab",
+      defaultValue: bool.fromEnvironment(
+        "l10n-uz_Arab",
+        defaultValue:
+            !_hasAnyLocaleFilter ||
+            bool.fromEnvironment("l10n-uz_af") ||
+            bool.fromEnvironment("l10n-uz_AF"),
+      ),
+    ))
+      "uz_Arab": UzArabCurrenciesL10N.new,
     if (const bool.fromEnvironment(
       "l10n-uz_cyrl",
       defaultValue: bool.fromEnvironment(
@@ -1352,17 +1448,9 @@ class CurrenciesLocaleMapper extends IsoLocaleMapper<IsoLocaleMapper<String>> {
       "xh": XhCurrenciesL10N.new,
     if (const bool.fromEnvironment(
       "l10n-yi",
-      defaultValue: !_hasAnyLocaleFilter,
+      defaultValue: !_hasAnyLocaleFilter || bool.fromEnvironment("l10n-ji"),
     ))
       "yi": YiCurrenciesL10N.new,
-    if (const bool.fromEnvironment(
-      "l10n-yo_bj",
-      defaultValue: bool.fromEnvironment(
-        "l10n-yo_BJ",
-        defaultValue: !_hasAnyLocaleFilter,
-      ),
-    ))
-      "yo_BJ": YoBjCurrenciesL10N.new,
     if (const bool.fromEnvironment(
       "l10n-yo",
       defaultValue:
@@ -1372,6 +1460,14 @@ class CurrenciesLocaleMapper extends IsoLocaleMapper<IsoLocaleMapper<String>> {
     ))
       "yo": YoCurrenciesL10N.new,
     if (const bool.fromEnvironment(
+      "l10n-yo_bj",
+      defaultValue: bool.fromEnvironment(
+        "l10n-yo_BJ",
+        defaultValue: !_hasAnyLocaleFilter,
+      ),
+    ))
+      "yo_BJ": YoBjCurrenciesL10N.new,
+    if (const bool.fromEnvironment(
       "l10n-zh",
       defaultValue:
           !_hasAnyLocaleFilter ||
@@ -1380,7 +1476,15 @@ class CurrenciesLocaleMapper extends IsoLocaleMapper<IsoLocaleMapper<String>> {
           bool.fromEnvironment("l10n-zh_hant") ||
           bool.fromEnvironment("l10n-zh_Hant") ||
           bool.fromEnvironment("l10n-zh_hk") ||
-          bool.fromEnvironment("l10n-zh_HK"),
+          bool.fromEnvironment("l10n-zh_HK") ||
+          bool.fromEnvironment("l10n-zh_hant_hk") ||
+          bool.fromEnvironment("l10n-zh_Hant_HK") ||
+          bool.fromEnvironment("l10n-zh_hant_mo") ||
+          bool.fromEnvironment("l10n-zh_Hant_MO") ||
+          bool.fromEnvironment("l10n-zh_mo") ||
+          bool.fromEnvironment("l10n-zh_MO") ||
+          bool.fromEnvironment("l10n-zh_tw") ||
+          bool.fromEnvironment("l10n-zh_TW"),
     ))
       "zh": ZhCurrenciesL10N.new,
     if (const bool.fromEnvironment(
@@ -1398,7 +1502,15 @@ class CurrenciesLocaleMapper extends IsoLocaleMapper<IsoLocaleMapper<String>> {
         defaultValue:
             !_hasAnyLocaleFilter ||
             bool.fromEnvironment("l10n-zh_hk") ||
-            bool.fromEnvironment("l10n-zh_HK"),
+            bool.fromEnvironment("l10n-zh_HK") ||
+            bool.fromEnvironment("l10n-zh_hant_hk") ||
+            bool.fromEnvironment("l10n-zh_Hant_HK") ||
+            bool.fromEnvironment("l10n-zh_hant_mo") ||
+            bool.fromEnvironment("l10n-zh_Hant_MO") ||
+            bool.fromEnvironment("l10n-zh_mo") ||
+            bool.fromEnvironment("l10n-zh_MO") ||
+            bool.fromEnvironment("l10n-zh_tw") ||
+            bool.fromEnvironment("l10n-zh_TW"),
       ),
     ))
       "zh_Hant": ZhHantCurrenciesL10N.new,
@@ -1406,7 +1518,14 @@ class CurrenciesLocaleMapper extends IsoLocaleMapper<IsoLocaleMapper<String>> {
       "l10n-zh_hk",
       defaultValue: bool.fromEnvironment(
         "l10n-zh_HK",
-        defaultValue: !_hasAnyLocaleFilter,
+        defaultValue:
+            !_hasAnyLocaleFilter ||
+            bool.fromEnvironment("l10n-zh_hant_hk") ||
+            bool.fromEnvironment("l10n-zh_Hant_HK") ||
+            bool.fromEnvironment("l10n-zh_hant_mo") ||
+            bool.fromEnvironment("l10n-zh_Hant_MO") ||
+            bool.fromEnvironment("l10n-zh_mo") ||
+            bool.fromEnvironment("l10n-zh_MO"),
       ),
     ))
       "zh_HK": ZhHkCurrenciesL10N.new,
@@ -1422,19 +1541,26 @@ class CurrenciesLocaleMapper extends IsoLocaleMapper<IsoLocaleMapper<String>> {
   /// Parameters:
   /// - [isoCodes]: Set of ISO codes to be localized.
   /// - [altSymbol]: Optional symbol for alternative (full) name translations.
-  /// The bundled translations ship no alternative names, so this only matters
-  /// for entries injected via the `other` constructor parameter. Pass an empty
-  /// string to skip the extra lookup per ISO code when none are injected.
+  /// The bundled translations ship no alternative names and are looked up
+  /// without it, so it only applies to the translations injected via the
+  /// `other` constructor parameter.
   /// - [fallbackLocale]: Optional secondary locale for translations.
   /// - [mainLocale]: Optional primary locale for translations.
   /// - [useLanguageFallback]: Whether to also try the parent locales of the
   /// specified ones (i.e. 'en_US' -> 'en', 'zh_Hant_TW' -> 'zh_Hant' -> 'zh').
-  /// - [formatter]: Optional callback to modify each translation.
+  /// - [formatter]: Optional callback to modify each translation. It receives
+  /// the key of the entry it formats, so the ISO code of an alternative name
+  /// ends with the alternative name symbol (`<CODE>+` by default).
   ///
   /// A locale is matched as given first, then normalized (`zh-hant-tw` ->
   /// `zh_Hant_TW`). The returned map follows the lookup order: [mainLocale]
   /// and its parents come before [fallbackLocale] and its parents, so the
   /// first entry of an ISO code is its most specific translation.
+  ///
+  /// Without [mainLocale] and [fallbackLocale], only the translations injected
+  /// via the `other` constructor parameter are used (all of their locales), so
+  /// the result is empty if there are none. A call that matches no locale
+  /// returns an empty map and does not consume the mapper.
   ///
   /// Returns a [Map] containing the localized names for the provided ISO
   /// codes.
@@ -1479,80 +1605,69 @@ class CurrenciesLocaleMapper extends IsoLocaleMapper<IsoLocaleMapper<String>> {
               ),
           };
 
-    if (localeKeys != null) {
-      for (final key in localeKeys) {
-        if (map.containsKey(key)) continue;
-        final maybeFactory = _factories[key];
-        if (maybeFactory != null) map[key] = maybeFactory();
-      }
+    final altNameSymbol = altSymbol ?? symbol;
+    final results = _Results(isoCodes, formatter);
+    bool hasLocale = false;
+    // Without locales, every locale injected via `other` is used. Bundled
+    // locales are instantiated here, never stored in [map].
+    for (final key in localeKeys ?? map.keys) {
+      final custom = map[key];
+      final names = custom ?? _factories[key]?.call();
+      if (names == null) continue;
+      hasLocale = true;
+      results.addAll(
+        names,
+        locale: key,
+        // Bundled locales skip the lookup when they ship no alternative names.
+        altSymbol: custom == null && !_bundlesAltNames ? "" : altNameSymbol,
+      );
     }
-    final localeData = extract(localeKeys);
-
-    return switch (localeData.length) {
-      0 => const {},
-      1 => _fromSingle(
-        isoCodes,
-        localeData.entries.first,
-        altSymbol ?? symbol,
-        formatter,
-      ),
-      _ => _fromMultiple(isoCodes, localeData, altSymbol ?? symbol, formatter),
-    };
-  }
-
-  LocaleMap _fromSingle(
-    Set<String> codes,
-    MapEntry<String, IsoLocaleMapper<String>> localeEntry,
-    String altSymbol,
-    String Function(LocaleKey isoLocale, String l10n)? formatter,
-  ) {
-    final locale = localeEntry.key;
-    final translations = localeEntry.value.extract(codes, altSymbol: altSymbol);
-    final results = <LocaleKey, String>{};
-    for (final MapEntry(key: iso, value: l10n) in translations.entries) {
-      final isoLocale = (isoCode: iso, locale: locale);
-      results[isoLocale] = formatter?.call(isoLocale, l10n) ?? l10n;
-    }
+    if (!hasLocale) return const {}; // Not consumed, can be retried.
     _consume();
 
-    return UnmodifiableMapView(results);
-  }
-
-  LocaleMap _fromMultiple(
-    Set<String> codes,
-    Map<String, IsoLocaleMapper<String>> localesData,
-    String altSymbol,
-    String Function(LocaleKey isoLocale, String l10n)? formatter,
-  ) {
-    final results = <LocaleKey, String>{};
-
-    for (final MapEntry(key: locale, value: mapper) in localesData.entries) {
-      final translations = mapper.extract(codes, altSymbol: altSymbol);
-
-      for (final code in codes) {
-        final key = (isoCode: code, locale: locale);
-        final l10n = translations[code];
-        if (l10n != null && !results.containsKey(key)) {
-          results[key] = formatter?.call(key, l10n) ?? l10n;
-        }
-
-        final secondary = altKey(code, altSymbol);
-        if (secondary == null) continue;
-
-        final alternative = (isoCode: secondary, locale: locale);
-        final altL10n = translations[secondary];
-        if (altL10n != null && !results.containsKey(alternative)) {
-          results[alternative] = formatter?.call(key, altL10n) ?? altL10n;
-        }
-      }
-    }
-    _consume();
-
-    return UnmodifiableMapView(results);
+    return results.view;
   }
 
   void _consume() {
     map.clear();
     _isConsumed = true;
+  }
+}
+
+/// Collects the names of one [CurrenciesLocaleMapper.localize] call.
+///
+/// The names keep the lookup order. They are read straight from each locale,
+/// without the intermediate map of [IsoLocaleMapper.extract], since
+/// `localize` runs on every build.
+final class _Results {
+  new(this._isoCodes, this._formatter);
+
+  final Set<String> _isoCodes;
+  // ignore: prefer-correct-callback-field-name, to match L10N naming.
+  final String Function(LocaleKey isoLocale, String l10n)? _formatter;
+  final _names = <LocaleKey, String>{};
+
+  /// An unmodifiable view of the names collected so far.
+  LocaleMap get view => UnmodifiableMapView(_names);
+
+  /// Adds the [names] of the ISO codes in [locale], each followed by its
+  /// alternative name (see [IsoLocaleMapper.altKey]), if there is one.
+  void addAll(
+    IsoLocaleMapper<String> names, {
+    required String locale,
+    required String altSymbol,
+  }) {
+    for (final code in _isoCodes) {
+      _add(names, code, locale);
+      final altCode = names.altKey(code, altSymbol);
+      if (altCode != null) _add(names, altCode, locale);
+    }
+  }
+
+  void _add(IsoLocaleMapper<String> names, String isoCode, String locale) {
+    final l10n = names.map[isoCode];
+    if (l10n == null) return;
+    final isoLocale = (isoCode: isoCode, locale: locale);
+    _names[isoLocale] = _formatter?.call(isoLocale, l10n) ?? l10n;
   }
 }

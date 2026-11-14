@@ -13,6 +13,15 @@ void main() => group("$LocaleMappingOptions", () {
     );
   });
 
+  test("toString with locales", () {
+    expect(
+      options.copyWith(mainLocale: "de", fallbackLocale: "en").toString(),
+      'LocaleMappingOptions(altSymbol: "+", fallbackLocale: "en", '
+      'localizeFullNames: true, mainLocale: "de", useLanguageFallback: true, '
+      "formatter: false)",
+    );
+  });
+
   group("copyWith", () {
     test("returns same values when no parameters provided", () {
       final copy = options.copyWith();

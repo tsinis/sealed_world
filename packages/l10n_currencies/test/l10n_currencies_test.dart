@@ -38,7 +38,7 @@ void main() => group("$CurrenciesLocaleMapper", () {
   });
 
   group("lazy instantiation", skip: hasDeFlag, () {
-    test("materializes only requested locales", () {
+    test("keeps no locales after use", () {
       mapper.localize(const {"USD"}, mainLocale: "en");
       expect(mapper.map.length, isZero, reason: "cleared after use");
     });

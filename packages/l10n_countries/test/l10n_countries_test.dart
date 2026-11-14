@@ -37,7 +37,7 @@ void main() => group("$CountriesLocaleMapper", () {
   });
 
   group("lazy instantiation", skip: hasDeFlag, () {
-    test("materializes only requested locales", () {
+    test("keeps no locales after use", () {
       mapper.localize(const {"MKD"}, mainLocale: "en");
       expect(mapper.map.length, isZero, reason: "cleared after use");
     });

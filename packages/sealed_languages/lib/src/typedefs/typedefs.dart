@@ -71,6 +71,9 @@ typedef LocaleMap = Map<IsoLocaleKey, String>;
 /// - [useLanguageFallback]: Whether to try language-only codes if specific
 /// locale not found.
 /// - [altSymbol]: Symbol used to mark alternative names.
+/// - [formatter]: Optional callback to modify each translation, it receives
+/// the key of the entry it formats (the ISO code of an alternative name ends
+/// with [altSymbol]).
 /// - [mainLocale]: Primary locale for translation lookup.
 /// - [fallbackLocale]: Secondary locale used when translation not found in main
 /// locale.

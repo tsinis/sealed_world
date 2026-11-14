@@ -1,0 +1,234 @@
+// Locale-count assertions and the "en" anchor only hold on an unshaken
+// build, so any `l10n-de` define skips them (`hasEnvironment`, so `=false`
+// too). The define matrix itself is covered in integration_test.
+// ignore_for_file: do_not_use_environment
+
+import "dart:io";
+import "dart:isolate";
+
+import "package:{{package}}/{{package}}.dart";
+import "package:test/test.dart";
+
+// Package specific values, filled in by the generator (tools/lib/l10n).
+const _bundledLocales = {{count}};
+const _isoCode = "{{isoCode}}";
+
+/// The key of a data file entry, its first group is the ISO code.
+final _dataKey = RegExp(r'"([A-Z0-9]+)\+?":\s');
+
+/// The key of an alternative name in a data file.
+final _dataAltKey = RegExp(r'"[A-Z0-9]+\+":\s');
+
+void main() {
+  const hasDeFlag = bool.hasEnvironment("l10n-de");
+
+  group("${{mapper}} optimizations", skip: hasDeFlag, () {
+    group("availableLocales", () {
+      test("is not materialized until it is read", () {
+        const iterations = 20000;
+        int sink = 0;
+
+        for (int i = 0; i < 2000; i += 1) {
+          sink += {{mapper}}().availableLocales.length;
+        }
+
+        final constructOnly = Stopwatch()..start();
+        for (int i = 0; i < iterations; i += 1) {
+          sink += {{mapper}}().map.length;
+        }
+        constructOnly.stop();
+
+        final constructAndRead = Stopwatch()..start();
+        for (int i = 0; i < iterations; i += 1) {
+          sink += {{mapper}}().availableLocales.length;
+        }
+        constructAndRead.stop();
+
+        expect(sink, isPositive, reason: "guards against dead code removal");
+        expect(
+          constructAndRead.elapsedMicroseconds,
+          greaterThan(constructOnly.elapsedMicroseconds * 5),
+          reason:
+              "Building the $_bundledLocales-locale set must happen on first "
+              "read, not in the constructor, since every localize() call "
+              "needs a new mapper",
+        );
+      });
+
+      test("is served by the base getter for a plain IsoLocaleMapper", () {
+        const locales = {"en", "de"};
+        final base = IsoLocaleMapper<String>(
+          other: const {"AAA": "Test"},
+          availableLocales: locales,
+        );
+
+        expect(
+          base.availableLocales,
+          locales,
+          reason:
+              "the mapper overrides it with a lazy field, so the base "
+              "getter is only reachable through IsoLocaleMapper itself",
+        );
+        expect(IsoLocaleMapper<String>().availableLocales, isEmpty);
+      });
+
+      test("still reports all bundled locales", () {
+        expect({{mapper}}().availableLocales.length, _bundledLocales);
+      });
+
+      test("still reports injected locales", () {
+        final custom = {{mapper}}(
+          other: {"custom": Af{{prefix}}L10N()},
+        );
+
+        expect(custom.availableLocales.length, _bundledLocales + 1);
+        expect(custom.availableLocales, contains("custom"));
+      });
+
+      test("survives consumption of the mapper", () {
+        final custom = {{mapper}}(
+          other: {"custom": Af{{prefix}}L10N()},
+        )..localize(const {_isoCode}, mainLocale: "en");
+
+        expect(
+          custom.availableLocales,
+          contains("custom"),
+          reason: "localize() clears map, but must not erase injected locales",
+        );
+        expect(custom.availableLocales.length, _bundledLocales + 1);
+      });
+    });
+
+    group("altSymbol", () {
+      test("returns the bundled alternative names, and only with it", () async {
+        final lib = await Isolate.resolvePackageUri(
+          Uri.parse("package:{{package}}/"),
+        );
+        final data = [
+          for (final file in Directory.fromUri(
+            lib?.resolve("src/data/") ?? Uri(),
+          ).listSync())
+            if (file is File && file.path.endsWith(".data.dart"))
+              file.readAsStringSync(),
+        ];
+        final codes = {
+          for (final content in data)
+            for (final match in _dataKey.allMatches(content)) ?match.group(1),
+        };
+        final bundledAltNames = data.fold(
+          0,
+          (count, content) => count + _dataAltKey.allMatches(content).length,
+        );
+        int altNames = 0;
+
+        for (final locale in {{mapper}}().availableLocales) {
+          final withAlt = {{mapper}}().localize(
+            codes,
+            mainLocale: locale,
+            useLanguageFallback: false,
+          );
+          final withoutAlt = {{mapper}}().localize(
+            codes,
+            mainLocale: locale,
+            useLanguageFallback: false,
+            altSymbol: "",
+          );
+          altNames += withAlt.length - withoutAlt.length;
+
+          expect(withoutAlt, isNotEmpty, reason: 'Locale "$locale" is empty');
+          expect(withAlt.keys, containsAll(withoutAlt.keys));
+          expect(
+            withoutAlt.keys.where((key) => key.isoCode.endsWith("+")),
+            isEmpty,
+          );
+        }
+
+        expect(data, hasLength(_bundledLocales), reason: "one file per locale");
+        expect(
+          altNames,
+          bundledAltNames,
+          reason:
+              "every <CODE>+ entry in lib/src/data comes back with the default "
+              "symbol, and no other: see _bundlesAltNames in the mapper",
+        );
+      });
+
+      test("returns the names of every matched locale", () {
+        final both = {{mapper}}().localize(
+          const {_isoCode},
+          mainLocale: "de",
+          fallbackLocale: "fr",
+          useLanguageFallback: false,
+        );
+        final german = {{mapper}}().localize(
+          const {_isoCode},
+          mainLocale: "de",
+          useLanguageFallback: false,
+        );
+        final french = {{mapper}}().localize(
+          const {_isoCode},
+          mainLocale: "fr",
+          useLanguageFallback: false,
+        );
+
+        expect(both.keys, [...german.keys, ...french.keys]);
+        expect(both, {...german, ...french});
+      });
+    });
+
+    group("empty results", () {
+      test("does not consume the mapper, so a miss can be retried", () {
+        final mapper = {{mapper}}();
+
+        expect(mapper.localize(const {_isoCode}, mainLocale: "zz"), isEmpty);
+        expect(
+          mapper.localize(const {_isoCode}, mainLocale: "en"),
+          isNotEmpty,
+          reason: "the single-use contract starts at the first actual hit",
+        );
+      });
+
+      test("retains injected translations so a retry can still use them", () {
+        final custom = {{mapper}}(
+          other: {"custom": Af{{prefix}}L10N()},
+        );
+
+        expect(custom.localize(const {_isoCode}, mainLocale: "zz"), isEmpty);
+        expect(
+          custom.map,
+          isNotEmpty,
+          reason: "retained on purpose: clearing here would break the retry",
+        );
+        expect(
+          custom.localize(const {_isoCode}, mainLocale: "custom"),
+          isNotEmpty,
+        );
+      });
+    });
+
+    group("missing locale arguments", () {
+      test("returns an empty map instead of throwing", () {
+        expect(
+          {{mapper}}().localize(const {_isoCode}),
+          isEmpty,
+          reason:
+              "sealed_* delegates call localize() with both locales null when "
+              "LocaleMappingOptions defaults are used; asserting here would "
+              "break those callers in debug mode",
+        );
+      });
+
+      test("still allows an empty set of ISO codes without a locale", () {
+        expect({{mapper}}().localize(const {}), isEmpty);
+      });
+
+      test("uses injected translations when no locale is given", () {
+        final custom = {{mapper}}(
+          other: {"custom": Af{{prefix}}L10N()},
+        );
+
+        expect(custom.localize(const {_isoCode}), isNotEmpty);
+      });
+    });
+  });
+}
