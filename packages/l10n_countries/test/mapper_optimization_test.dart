@@ -99,7 +99,7 @@ void main() {
         expect(
           custom.availableLocales,
           contains("custom"),
-          reason: "localize() clears map, but must not erase injected locales",
+          reason: "localize() drops the injected map, not its locale keys",
         );
         expect(custom.availableLocales.length, _bundledLocales + 1);
       });

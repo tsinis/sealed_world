@@ -38,9 +38,13 @@ void main() => group("$LanguagesLocaleMapper", () {
   });
 
   group("lazy instantiation", skip: hasDeFlag, () {
-    test("keeps no locales after use", () {
-      mapper.localize({"ENG"}, mainLocale: "en");
-      expect(mapper.map.length, isZero, reason: "cleared after use");
+    test("drops injected locales after use", () {
+      final other = {"custom": AfLanguagesL10N()};
+      final custom = LanguagesLocaleMapper(other: other);
+      expect(custom.map, hasLength(1), reason: "held until used");
+      custom.localize(const {"ENG"}, mainLocale: "en");
+      expect(custom.map, isEmpty, reason: "dropped after use");
+      expect(other, hasLength(1), reason: "the caller's map stays intact");
     });
 
     test(
@@ -91,7 +95,7 @@ void main() => group("$LanguagesLocaleMapper", () {
       expect(result, isEmpty);
     });
 
-    test("cleans up internal maps after use", () {
+    test("localizes a bundled locale without storing it", () {
       final result = mapper.localize(const {"ENG"}, mainLocale: "en");
       expect(mapper.map, isEmpty);
       expect(result, isNotEmpty);

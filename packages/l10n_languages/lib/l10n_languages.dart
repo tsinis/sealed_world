@@ -336,10 +336,13 @@ export "src/iso_locale_mapper.dart";
 
 /// Provides language names translations for different locales.
 ///
-/// **Important**: This mapper is designed for single-use only. Once [localize]
-/// is called, the mapper clears its internal data to free memory and cannot be
-/// reused. Attempting to call [localize] again on the same instance will throw
-/// an assertion error. Create a new instance if you need to localize again.
+/// **Important**: This mapper is designed for single-use only. Bundled
+/// locales are instantiated per [localize] call and never stored in the
+/// mapper. Once [localize] returns names, the mapper drops its references to
+/// the translations injected via `other` and cannot be reused. Calling
+/// [localize] again on the same instance throws an assertion error in debug
+/// builds, in release builds it no longer finds the injected translations.
+/// Create a new instance if you need to localize again.
 // ignore: prefer-match-file-name, it's main library file.
 class LanguagesLocaleMapper extends IsoLocaleMapper<IsoLocaleMapper<String>> {
   /// Provides names translations for 157 locales, with the option to
@@ -1689,9 +1692,9 @@ class LanguagesLocaleMapper extends IsoLocaleMapper<IsoLocaleMapper<String>> {
     assert(
       !_isConsumed,
       "A LanguagesLocaleMapper was used after being consumed. "
-      "Once localize() is called, the mapper clears its internal data to free "
-      "memory and must not be reused. If you need to call localize() again, "
-      "create a new LanguagesLocaleMapper instance.",
+      "Once localize() returns names, the mapper drops the translations "
+      "injected via `other` and must not be reused. If you need to call "
+      "localize() again, create a new LanguagesLocaleMapper instance.",
     );
 
     if (isoCodes.isEmpty) return const {};

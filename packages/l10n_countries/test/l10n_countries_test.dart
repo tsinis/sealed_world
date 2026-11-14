@@ -18,8 +18,8 @@ void main() => group("$CountriesLocaleMapper", () {
     );
 
     test(
-      "starts with empty map (lazy)",
-      () => expect(mapper.map.length, isZero, reason: "lazy instantiation"),
+      "never stores bundled locales in its map",
+      () => expect(mapper.map, isEmpty, reason: "they are built per call"),
     );
 
     test("allows adding custom translations", () {
@@ -37,9 +37,13 @@ void main() => group("$CountriesLocaleMapper", () {
   });
 
   group("lazy instantiation", skip: hasDeFlag, () {
-    test("keeps no locales after use", () {
-      mapper.localize(const {"MKD"}, mainLocale: "en");
-      expect(mapper.map.length, isZero, reason: "cleared after use");
+    test("drops injected locales after use", () {
+      final other = {"custom": AfCountriesL10N()};
+      final custom = CountriesLocaleMapper(other: other);
+      expect(custom.map, hasLength(1), reason: "held until used");
+      custom.localize(const {"MKD"}, mainLocale: "en");
+      expect(custom.map, isEmpty, reason: "dropped after use");
+      expect(other, hasLength(1), reason: "the caller's map stays intact");
     });
 
     test(
@@ -89,7 +93,7 @@ void main() => group("$CountriesLocaleMapper", () {
       expect(result, isEmpty);
     });
 
-    test("cleans up internal maps after use", () {
+    test("localizes a bundled locale without storing it", () {
       final result = mapper.localize(const {"USA"}, mainLocale: "en");
       expect(mapper.map, isEmpty);
       expect(result, isNotEmpty);

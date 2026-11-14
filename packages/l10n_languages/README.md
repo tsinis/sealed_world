@@ -16,7 +16,7 @@ This ISO-driven, pure Dart, fully tested and dependency-free package provides CL
 
 ### Features
 
-- 157 locales supported out of the box.
+- 157 locales bundled, with different coverage: 94 languages have at least 90% of the names, 44 have a part of them (10 of those only a few names), and 19 regional and script locales hold only the names that differ from their parent locales.
 - Three-letter ISO 639-2/T Terminological code lookup.
 - Fallback locale support, including parent locales (e.g. `bs_Cyrl_BA` → `bs_Cyrl` → `bs`). A script locale falls back to its language even if the language is written in another script (`pa_Arab` → `pa`): the result has the names of both, so show the first entry of each ISO code. Where the script locale has no name, that entry is the language's one, and it comes before any name of `fallbackLocale`.
 - Allows injecting custom translations, for new locales or in place of a bundled one (an injected locale replaces the bundled locale with the same key entirely).
@@ -83,14 +83,14 @@ void main() {
 ```
 
 > [!IMPORTANT]
-> Mapper instances are designed for single-use only. After calling `localize()`, the mapper clears its internal data to free memory and cannot be reused. Create a new instance if you need to localize again.
+> Mapper instances are designed for single-use only. Bundled locales are built per `localize()` call and never stored in the mapper. Once `localize()` returns names, the mapper drops the translations injected via `other` and cannot be reused. Create a new instance if you need to localize again.
 
 ### FAQ
 
 #### Why should I use this package over any other language-related package?
 
 - **No dependencies**: This package has no dependencies, not even `meta`, ensuring that you won't have any issues or conflicts with other dependencies.
-- **Memory efficient**: Lazy initialization loads translations on-demand, reducing initial memory footprint by ~90% - only the locales you actually use are loaded into memory.
+- **Memory efficient**: Bundled locales are instantiated on demand, per `localize()` call, and never retained by the mapper - only the locales a call matches are built.
 - **Rich data**: This package offers tons of translations (all [GlobalMaterialLocalizations](https://api.flutter.dev/flutter/flutter_localizations/GlobalMaterialLocalizations-class.html) and [GlobalCupertinoLocalizations](https://api.flutter.dev/flutter/flutter_localizations/GlobalCupertinoLocalizations-class.html) locales except Swiss German `gsw`, and more). Like in CLDR, some less common locales translate only a part of the names: their parent locales cover the rest first, then the `fallbackLocale`.
 - **High code coverage**: The code in this package has 100% code coverage, providing confidence in its reliability and stability.
 - **Comprehensive documentation**: This package provides full documentation for every non-code generated public member, usually with examples, ensuring clarity and ease of use.
@@ -113,7 +113,7 @@ dart run skills@ get -p l10n_languages
 Select `l10n-languages-localization` when prompted.
 
 > [!IMPORTANT]
-> **Key rule for LLM agents**: `LanguagesLocaleMapper` instances are designed for **single-use only**. They purge internal data immediately upon calling `localize()`. Never cache or reuse mapper instances—always instantiate a new mapper per request and cache the localized result strings instead.
+> **Key rule for LLM agents**: `LanguagesLocaleMapper` instances are designed for **single-use only**. They drop the translations injected via `other` once `localize()` returns names. Never cache or reuse mapper instances—always instantiate a new mapper per request and cache the localized result strings instead.
 
 ### Additional information
 
