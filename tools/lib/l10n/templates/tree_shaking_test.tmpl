@@ -20,7 +20,6 @@ library;
 
 import "dart:io";
 
-import "package:{{package}}/src/locale_fallback.dart";
 // ignore: depend_on_referenced_packages, it's an integration test.
 import "package:path/path.dart" as path;
 import "package:test/test.dart";
@@ -115,22 +114,19 @@ void main() {
 
   group("Locale defines", () {
     const runs = {
+      "alias on (fil)": ["l10n-fil=true"],
       "child off (locale spelling)": ["l10n-sw_CD=false"],
       "child off (lowercase)": ["l10n-sw_cd=false"],
       "child on": ["l10n-sw_cd=true"],
+      "child on (explicit parent)": ["l10n-nn=true"],
       "child on (locale spelling)": ["l10n-sw_CD=true"],
       "child on, parent off": ["l10n-sw_cd=true", "l10n-sw=false"],
       "de on": ["l10n-de=true"],
       "fr off": ["l10n-fr=false"],
       "none": <String>[],
       "not bundled on": ["l10n-xx=true"],
+      "regional on (pa_PK)": ["l10n-pa_PK=true"],
       "regional on (pt_BR)": ["l10n-pt_BR=true"],
-      "table on (fil)": ["l10n-fil=true"],
-      "table on (fil), parent off": ["l10n-fil=true", "l10n-tl=false"],
-      "table on (pa_PK)": ["l10n-pa_PK=true"],
-      "table on (pa_pk)": ["l10n-pa_pk=true"],
-      "table on (zh_Hant_HK)": ["l10n-zh_Hant_HK=true"],
-      "table on (zh_MO)": ["l10n-zh_MO=true"],
     };
     late Map<String, Set<String>> kept;
 
@@ -164,38 +160,27 @@ void main() {
     test("keep the parent of an enabled child locale", () {
       expect(kept["child on"], const {"sw", "sw_CD"});
       expect(kept["child on (locale spelling)"], const {"sw", "sw_CD"});
-    });
-
-    // The fallback table gives language code aliases (`fil` -> `tl`) and some
-    // CLDR regional locales (`pa_PK` -> `pa_Arab`) an explicit parent.
-    test("keep the locales a locale of the fallback table falls back to", () {
-      final bundled = kept["none"] ?? const {};
-
-      expect(kept["table on (fil)"], const {"tl"});
-      expect(kept["table on (pa_PK)"], const {"pa", "pa_Arab"});
-      expect(kept["table on (pa_pk)"], const {"pa", "pa_Arab"});
-      // Multi-step chains, `zh_MO` goes through `zh_HK`, which is in the table
-      // too, and not bundled by every package.
-      for (final locale in const ["zh_Hant_HK", "zh_MO"]) {
-        final expected = LocaleFallback.chain(locale).where(bundled.contains);
-
-        expect(expected, contains("zh"), reason: "$locale reaches a locale");
-        expect(kept["table on ($locale)"], expected.toSet());
-      }
+      // A parent from `LocaleFallback.parents`, not from dropping a subtag.
+      expect(kept["child on (explicit parent)"], const {"nn", "no"});
     });
 
     test("drop a parent locale set to false", () {
       expect(kept["child on, parent off"], const {"sw_CD"});
-      expect(kept["table on (fil), parent off"], isEmpty);
     });
 
+    // Only bundled locales have a define, even where the fallback table gives
+    // a locale an explicit parent (`fil` -> `tl`, `pa_PK` -> `pa_Arab`).
     test("ignore defines of locales the package does not bundle", () {
-      expect(kept["not bundled on"], kept["none"]);
-      expect(
-        kept["regional on (pt_BR)"],
-        kept["none"],
-        reason: "only the regional locales of the fallback table have a define",
-      );
+      final all = kept["none"];
+
+      for (final run in const [
+        "alias on (fil)",
+        "not bundled on",
+        "regional on (pa_PK)",
+        "regional on (pt_BR)",
+      ]) {
+        expect(kept[run], all, reason: run);
+      }
     });
   });
 }

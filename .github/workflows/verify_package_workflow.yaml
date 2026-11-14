@@ -139,6 +139,7 @@ jobs:
         if: ${{ startsWith(inputs.package_name, 'l10n_') }}
         run: | # `dart test` can't pass defines, so run the test file directly.
           dart run --enable-asserts -Dl10n-de=true test/${{ inputs.package_name }}_test.dart
+          dart run --enable-asserts -Dl10n-de=true test/locale_resolution_test.dart
           dart test integration_test
 
       - name: 🔬 Run Flutter tests

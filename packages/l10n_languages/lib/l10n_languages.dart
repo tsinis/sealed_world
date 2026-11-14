@@ -344,6 +344,10 @@ export "src/iso_locale_mapper.dart";
 class LanguagesLocaleMapper extends IsoLocaleMapper<IsoLocaleMapper<String>> {
   /// Provides names translations for 157 locales, with the option to
   /// add more translations via the [other] parameter.
+  ///
+  /// The [other] map is keyed by locale (`"en"`, `"de_CH"`). An entry with
+  /// the key of a bundled locale replaces that locale entirely, so to extend
+  /// a bundled locale, start from its data class.
   new({Map<String, IsoLocaleMapper<String>>? other})
     : _customLocales = other?.keys.toSet(),
       // A copy: consuming the mapper clears its map, `other` stays intact.
@@ -379,17 +383,15 @@ class LanguagesLocaleMapper extends IsoLocaleMapper<IsoLocaleMapper<String>> {
   // country names silently disappear.
   static const _bundlesAltNames = false;
 
-  /// Whether an `l10n-<locale>=true` define names a locale of this package,
-  /// or a locale whose explicit parent in `LocaleFallback.parents` leads to
-  /// one of them (e.g. `l10n-fil=true` keeps `tl`, `l10n-pa_PK=true` keeps
-  /// `pa_Arab` and `pa`).
+  /// Whether an `l10n-<locale>=true` define names a locale bundled in this
+  /// package (one of [_bundledLocales], e.g. `l10n-de` or `l10n-sw_CD`).
   ///
   /// If so, the mapper switches to "opt-in" mode: it keeps only the locales
   /// enabled by their own define, plus the parent locales they fall back to.
   /// Otherwise it keeps all locales, except those disabled with
-  /// `l10n-<locale>=false`. Defines of other locales (e.g. `l10n-en_US` or
-  /// `l10n-pt_BR`, or a locale that only another l10n_* package bundles) are
-  /// ignored.
+  /// `l10n-<locale>=false`. Defines of any other locale (e.g. `l10n-en_US`,
+  /// `l10n-pt_BR`, the `l10n-fil` alias, or a locale that only another l10n_*
+  /// package bundles) are ignored.
   // ignore: avoid-explicit-type-declaration, the inferred type is not obvious.
   static const bool _hasAnyLocaleFilter =
       bool.fromEnvironment("l10n-af") ||
@@ -567,47 +569,7 @@ class LanguagesLocaleMapper extends IsoLocaleMapper<IsoLocaleMapper<String>> {
       bool.fromEnvironment("l10n-zh") ||
       bool.fromEnvironment("l10n-zh_hant") ||
       bool.fromEnvironment("l10n-zh_Hant") ||
-      bool.fromEnvironment("l10n-zu") ||
-      bool.fromEnvironment("l10n-fil") ||
-      bool.fromEnvironment("l10n-in") ||
-      bool.fromEnvironment("l10n-iw") ||
-      bool.fromEnvironment("l10n-ji") ||
-      bool.fromEnvironment("l10n-pa_pk") ||
-      bool.fromEnvironment("l10n-pa_PK") ||
-      bool.fromEnvironment("l10n-pt_ao") ||
-      bool.fromEnvironment("l10n-pt_AO") ||
-      bool.fromEnvironment("l10n-pt_ch") ||
-      bool.fromEnvironment("l10n-pt_CH") ||
-      bool.fromEnvironment("l10n-pt_cv") ||
-      bool.fromEnvironment("l10n-pt_CV") ||
-      bool.fromEnvironment("l10n-pt_fr") ||
-      bool.fromEnvironment("l10n-pt_FR") ||
-      bool.fromEnvironment("l10n-pt_gq") ||
-      bool.fromEnvironment("l10n-pt_GQ") ||
-      bool.fromEnvironment("l10n-pt_gw") ||
-      bool.fromEnvironment("l10n-pt_GW") ||
-      bool.fromEnvironment("l10n-pt_lu") ||
-      bool.fromEnvironment("l10n-pt_LU") ||
-      bool.fromEnvironment("l10n-pt_mo") ||
-      bool.fromEnvironment("l10n-pt_MO") ||
-      bool.fromEnvironment("l10n-pt_mz") ||
-      bool.fromEnvironment("l10n-pt_MZ") ||
-      bool.fromEnvironment("l10n-pt_st") ||
-      bool.fromEnvironment("l10n-pt_ST") ||
-      bool.fromEnvironment("l10n-pt_tl") ||
-      bool.fromEnvironment("l10n-pt_TL") ||
-      bool.fromEnvironment("l10n-uz_af") ||
-      bool.fromEnvironment("l10n-uz_AF") ||
-      bool.fromEnvironment("l10n-zh_hk") ||
-      bool.fromEnvironment("l10n-zh_HK") ||
-      bool.fromEnvironment("l10n-zh_hant_hk") ||
-      bool.fromEnvironment("l10n-zh_Hant_HK") ||
-      bool.fromEnvironment("l10n-zh_hant_mo") ||
-      bool.fromEnvironment("l10n-zh_Hant_MO") ||
-      bool.fromEnvironment("l10n-zh_mo") ||
-      bool.fromEnvironment("l10n-zh_MO") ||
-      bool.fromEnvironment("l10n-zh_tw") ||
-      bool.fromEnvironment("l10n-zh_TW");
+      bool.fromEnvironment("l10n-zu");
 
   /// Lazy factories — static final means this map is only created once,
   /// and the tear-offs (.new) don't invoke constructors until called.
@@ -891,7 +853,7 @@ class LanguagesLocaleMapper extends IsoLocaleMapper<IsoLocaleMapper<String>> {
       "ha": HaLanguagesL10N.new,
     if (const bool.fromEnvironment(
       "l10n-he",
-      defaultValue: !_hasAnyLocaleFilter || bool.fromEnvironment("l10n-iw"),
+      defaultValue: !_hasAnyLocaleFilter,
     ))
       "he": HeLanguagesL10N.new,
     if (const bool.fromEnvironment(
@@ -921,7 +883,7 @@ class LanguagesLocaleMapper extends IsoLocaleMapper<IsoLocaleMapper<String>> {
       "ia": IaLanguagesL10N.new,
     if (const bool.fromEnvironment(
       "l10n-id",
-      defaultValue: !_hasAnyLocaleFilter || bool.fromEnvironment("l10n-in"),
+      defaultValue: !_hasAnyLocaleFilter,
     ))
       "id": IdLanguagesL10N.new,
     if (const bool.fromEnvironment(
@@ -1152,19 +1114,14 @@ class LanguagesLocaleMapper extends IsoLocaleMapper<IsoLocaleMapper<String>> {
       defaultValue:
           !_hasAnyLocaleFilter ||
           bool.fromEnvironment("l10n-pa_arab") ||
-          bool.fromEnvironment("l10n-pa_Arab") ||
-          bool.fromEnvironment("l10n-pa_pk") ||
-          bool.fromEnvironment("l10n-pa_PK"),
+          bool.fromEnvironment("l10n-pa_Arab"),
     ))
       "pa": PaLanguagesL10N.new,
     if (const bool.fromEnvironment(
       "l10n-pa_arab",
       defaultValue: bool.fromEnvironment(
         "l10n-pa_Arab",
-        defaultValue:
-            !_hasAnyLocaleFilter ||
-            bool.fromEnvironment("l10n-pa_pk") ||
-            bool.fromEnvironment("l10n-pa_PK"),
+        defaultValue: !_hasAnyLocaleFilter,
       ),
     ))
       "pa_Arab": PaArabLanguagesL10N.new,
@@ -1183,59 +1140,14 @@ class LanguagesLocaleMapper extends IsoLocaleMapper<IsoLocaleMapper<String>> {
       defaultValue:
           !_hasAnyLocaleFilter ||
           bool.fromEnvironment("l10n-pt_pt") ||
-          bool.fromEnvironment("l10n-pt_PT") ||
-          bool.fromEnvironment("l10n-pt_ao") ||
-          bool.fromEnvironment("l10n-pt_AO") ||
-          bool.fromEnvironment("l10n-pt_ch") ||
-          bool.fromEnvironment("l10n-pt_CH") ||
-          bool.fromEnvironment("l10n-pt_cv") ||
-          bool.fromEnvironment("l10n-pt_CV") ||
-          bool.fromEnvironment("l10n-pt_fr") ||
-          bool.fromEnvironment("l10n-pt_FR") ||
-          bool.fromEnvironment("l10n-pt_gq") ||
-          bool.fromEnvironment("l10n-pt_GQ") ||
-          bool.fromEnvironment("l10n-pt_gw") ||
-          bool.fromEnvironment("l10n-pt_GW") ||
-          bool.fromEnvironment("l10n-pt_lu") ||
-          bool.fromEnvironment("l10n-pt_LU") ||
-          bool.fromEnvironment("l10n-pt_mo") ||
-          bool.fromEnvironment("l10n-pt_MO") ||
-          bool.fromEnvironment("l10n-pt_mz") ||
-          bool.fromEnvironment("l10n-pt_MZ") ||
-          bool.fromEnvironment("l10n-pt_st") ||
-          bool.fromEnvironment("l10n-pt_ST") ||
-          bool.fromEnvironment("l10n-pt_tl") ||
-          bool.fromEnvironment("l10n-pt_TL"),
+          bool.fromEnvironment("l10n-pt_PT"),
     ))
       "pt": PtLanguagesL10N.new,
     if (const bool.fromEnvironment(
       "l10n-pt_pt",
       defaultValue: bool.fromEnvironment(
         "l10n-pt_PT",
-        defaultValue:
-            !_hasAnyLocaleFilter ||
-            bool.fromEnvironment("l10n-pt_ao") ||
-            bool.fromEnvironment("l10n-pt_AO") ||
-            bool.fromEnvironment("l10n-pt_ch") ||
-            bool.fromEnvironment("l10n-pt_CH") ||
-            bool.fromEnvironment("l10n-pt_cv") ||
-            bool.fromEnvironment("l10n-pt_CV") ||
-            bool.fromEnvironment("l10n-pt_fr") ||
-            bool.fromEnvironment("l10n-pt_FR") ||
-            bool.fromEnvironment("l10n-pt_gq") ||
-            bool.fromEnvironment("l10n-pt_GQ") ||
-            bool.fromEnvironment("l10n-pt_gw") ||
-            bool.fromEnvironment("l10n-pt_GW") ||
-            bool.fromEnvironment("l10n-pt_lu") ||
-            bool.fromEnvironment("l10n-pt_LU") ||
-            bool.fromEnvironment("l10n-pt_mo") ||
-            bool.fromEnvironment("l10n-pt_MO") ||
-            bool.fromEnvironment("l10n-pt_mz") ||
-            bool.fromEnvironment("l10n-pt_MZ") ||
-            bool.fromEnvironment("l10n-pt_st") ||
-            bool.fromEnvironment("l10n-pt_ST") ||
-            bool.fromEnvironment("l10n-pt_tl") ||
-            bool.fromEnvironment("l10n-pt_TL"),
+        defaultValue: !_hasAnyLocaleFilter,
       ),
     ))
       "pt_PT": PtPtLanguagesL10N.new,
@@ -1430,7 +1342,7 @@ class LanguagesLocaleMapper extends IsoLocaleMapper<IsoLocaleMapper<String>> {
       "tk": TkLanguagesL10N.new,
     if (const bool.fromEnvironment(
       "l10n-tl",
-      defaultValue: !_hasAnyLocaleFilter || bool.fromEnvironment("l10n-fil"),
+      defaultValue: !_hasAnyLocaleFilter,
     ))
       "tl": TlLanguagesL10N.new,
     if (const bool.fromEnvironment(
@@ -1481,19 +1393,14 @@ class LanguagesLocaleMapper extends IsoLocaleMapper<IsoLocaleMapper<String>> {
           bool.fromEnvironment("l10n-uz_arab") ||
           bool.fromEnvironment("l10n-uz_Arab") ||
           bool.fromEnvironment("l10n-uz_cyrl") ||
-          bool.fromEnvironment("l10n-uz_Cyrl") ||
-          bool.fromEnvironment("l10n-uz_af") ||
-          bool.fromEnvironment("l10n-uz_AF"),
+          bool.fromEnvironment("l10n-uz_Cyrl"),
     ))
       "uz": UzLanguagesL10N.new,
     if (const bool.fromEnvironment(
       "l10n-uz_arab",
       defaultValue: bool.fromEnvironment(
         "l10n-uz_Arab",
-        defaultValue:
-            !_hasAnyLocaleFilter ||
-            bool.fromEnvironment("l10n-uz_af") ||
-            bool.fromEnvironment("l10n-uz_AF"),
+        defaultValue: !_hasAnyLocaleFilter,
       ),
     ))
       "uz_Arab": UzArabLanguagesL10N.new,
@@ -1522,7 +1429,7 @@ class LanguagesLocaleMapper extends IsoLocaleMapper<IsoLocaleMapper<String>> {
       "xh": XhLanguagesL10N.new,
     if (const bool.fromEnvironment(
       "l10n-yi",
-      defaultValue: !_hasAnyLocaleFilter || bool.fromEnvironment("l10n-ji"),
+      defaultValue: !_hasAnyLocaleFilter,
     ))
       "yi": YiLanguagesL10N.new,
     if (const bool.fromEnvironment(
@@ -1551,35 +1458,14 @@ class LanguagesLocaleMapper extends IsoLocaleMapper<IsoLocaleMapper<String>> {
       defaultValue:
           !_hasAnyLocaleFilter ||
           bool.fromEnvironment("l10n-zh_hant") ||
-          bool.fromEnvironment("l10n-zh_Hant") ||
-          bool.fromEnvironment("l10n-zh_hk") ||
-          bool.fromEnvironment("l10n-zh_HK") ||
-          bool.fromEnvironment("l10n-zh_hant_hk") ||
-          bool.fromEnvironment("l10n-zh_Hant_HK") ||
-          bool.fromEnvironment("l10n-zh_hant_mo") ||
-          bool.fromEnvironment("l10n-zh_Hant_MO") ||
-          bool.fromEnvironment("l10n-zh_mo") ||
-          bool.fromEnvironment("l10n-zh_MO") ||
-          bool.fromEnvironment("l10n-zh_tw") ||
-          bool.fromEnvironment("l10n-zh_TW"),
+          bool.fromEnvironment("l10n-zh_Hant"),
     ))
       "zh": ZhLanguagesL10N.new,
     if (const bool.fromEnvironment(
       "l10n-zh_hant",
       defaultValue: bool.fromEnvironment(
         "l10n-zh_Hant",
-        defaultValue:
-            !_hasAnyLocaleFilter ||
-            bool.fromEnvironment("l10n-zh_hk") ||
-            bool.fromEnvironment("l10n-zh_HK") ||
-            bool.fromEnvironment("l10n-zh_hant_hk") ||
-            bool.fromEnvironment("l10n-zh_Hant_HK") ||
-            bool.fromEnvironment("l10n-zh_hant_mo") ||
-            bool.fromEnvironment("l10n-zh_Hant_MO") ||
-            bool.fromEnvironment("l10n-zh_mo") ||
-            bool.fromEnvironment("l10n-zh_MO") ||
-            bool.fromEnvironment("l10n-zh_tw") ||
-            bool.fromEnvironment("l10n-zh_TW"),
+        defaultValue: !_hasAnyLocaleFilter,
       ),
     ))
       "zh_Hant": ZhHantLanguagesL10N.new,
@@ -1589,6 +1475,173 @@ class LanguagesLocaleMapper extends IsoLocaleMapper<IsoLocaleMapper<String>> {
     ))
       "zu": ZuLanguagesL10N.new,
   };
+
+  /// All locales bundled in this package, whether the `l10n-*` defines of this
+  /// build keep them or not. Only [_reportStripped] reads it, from an
+  /// `assert`, so release builds do not contain it.
+  static const _bundledLocales = {
+    "af",
+    "ak",
+    "am",
+    "ar",
+    "ar_EG",
+    "as",
+    "az",
+    "az_Cyrl",
+    "be",
+    "bg",
+    "bm",
+    "bn",
+    "bo",
+    "br",
+    "bs",
+    "bs_Cyrl",
+    "ca",
+    "ce",
+    "cs",
+    "cv",
+    "cy",
+    "da",
+    "de",
+    "de_CH",
+    "dz",
+    "ee",
+    "el",
+    "en",
+    "eo",
+    "es",
+    "es_MX",
+    "et",
+    "eu",
+    "fa",
+    "fa_AF",
+    "ff",
+    "ff_Adlm",
+    "fi",
+    "fo",
+    "fr",
+    "fy",
+    "ga",
+    "gd",
+    "gl",
+    "gu",
+    "gv",
+    "ha",
+    "he",
+    "hi",
+    "hr",
+    "hu",
+    "hy",
+    "ia",
+    "id",
+    "ie",
+    "ig",
+    "ii",
+    "is",
+    "it",
+    "ja",
+    "jv",
+    "ka",
+    "ki",
+    "kk",
+    "kl",
+    "km",
+    "kn",
+    "ko",
+    "ks",
+    "ku",
+    "kw",
+    "ky",
+    "lb",
+    "lg",
+    "ln",
+    "lo",
+    "lt",
+    "lu",
+    "lv",
+    "mg",
+    "mi",
+    "mk",
+    "ml",
+    "mn",
+    "mr",
+    "ms",
+    "mt",
+    "my",
+    "nb",
+    "nd",
+    "ne",
+    "nl",
+    "nn",
+    "no",
+    "oc",
+    "om",
+    "or",
+    "os",
+    "pa",
+    "pa_Arab",
+    "pl",
+    "ps",
+    "pt",
+    "pt_PT",
+    "qu",
+    "rm",
+    "rn",
+    "ro",
+    "ru",
+    "rw",
+    "sa",
+    "sc",
+    "sd",
+    "se",
+    "se_FI",
+    "sg",
+    "si",
+    "sk",
+    "sl",
+    "sn",
+    "so",
+    "sq",
+    "sr",
+    "sr_Latn",
+    "su",
+    "sv",
+    "sv_FI",
+    "sw",
+    "sw_CD",
+    "sw_KE",
+    "ta",
+    "te",
+    "tg",
+    "th",
+    "ti",
+    "tk",
+    "tl",
+    "to",
+    "tr",
+    "tt",
+    "ug",
+    "uk",
+    "ur",
+    "ur_IN",
+    "uz",
+    "uz_Arab",
+    "uz_Cyrl",
+    "vi",
+    "wo",
+    "xh",
+    "yi",
+    "yo",
+    "yo_BJ",
+    "za",
+    "zh",
+    "zh_Hant",
+    "zu",
+  };
+
+  /// The locales that [_reportStripped] has already checked, so that it
+  /// reports each stripped one once.
+  static final _checked = <String>{};
 
   /// Localizes a set of ISO codes into names (to specified locale if needed).
   ///
@@ -1667,7 +1720,11 @@ class LanguagesLocaleMapper extends IsoLocaleMapper<IsoLocaleMapper<String>> {
     for (final key in localeKeys ?? map.keys) {
       final custom = map[key];
       final names = custom ?? _factories[key]?.call();
-      if (names == null) continue;
+      if (names == null) {
+        assert(_reportStripped(key), "It only reports, it never fails.");
+
+        continue;
+      }
       hasLocale = true;
       results.addAll(
         names,
@@ -1685,6 +1742,29 @@ class LanguagesLocaleMapper extends IsoLocaleMapper<IsoLocaleMapper<String>> {
   void _consume() {
     map.clear();
     _isConsumed = true;
+  }
+
+  /// Prints a warning the first time [localize] skips a bundled [locale] that
+  /// the `l10n-*` defines of this build stripped. Otherwise an ignored define
+  /// strips a language silently: `l10n-en=true` with `l10n-pt_BR=true` keeps
+  /// `en` only, so a `pt_BR` lookup finds neither `pt_BR` nor `pt`.
+  ///
+  /// It is only called from an `assert`, so it always returns `true`, and
+  /// release builds neither run nor contain it.
+  static bool _reportStripped(String locale) {
+    if (_checked.add(locale) && _bundledLocales.contains(locale)) {
+      // Only a build whose defines strip a locale gets here, which `dart test`
+      // does not cover: see the stripped locales test in this package.
+      // coverage:ignore-start
+      // ignore: avoid_print, a debug-only warning, the package has no logger.
+      print(
+        'l10n_languages: "$locale" was stripped by the l10n-* defines, pass '
+        "--dart-define=l10n-$locale=true to keep it.",
+      );
+      // coverage:ignore-end
+    }
+
+    return true;
   }
 }
 

@@ -8,6 +8,10 @@
 class {{mapper}} extends IsoLocaleMapper<IsoLocaleMapper<String>> {
   /// Provides names translations for {{count}} locales, with the option to
   /// add more translations via the [other] parameter.
+  ///
+  /// The [other] map is keyed by locale (`"en"`, `"de_CH"`). An entry with
+  /// the key of a bundled locale replaces that locale entirely, so to extend
+  /// a bundled locale, start from its data class.
   new({Map<String, IsoLocaleMapper<String>>? other})
     : _customLocales = other?.keys.toSet(),
       // A copy: consuming the mapper clears its map, `other` stays intact.
@@ -43,17 +47,15 @@ class {{mapper}} extends IsoLocaleMapper<IsoLocaleMapper<String>> {
   // country names silently disappear.
   static const _bundlesAltNames = {{bundlesAltNames}};
 
-  /// Whether an `l10n-<locale>=true` define names a locale of this package,
-  /// or a locale whose explicit parent in `LocaleFallback.parents` leads to
-  /// one of them (e.g. `l10n-fil=true` keeps `tl`, `l10n-pa_PK=true` keeps
-  /// `pa_Arab` and `pa`).
+  /// Whether an `l10n-<locale>=true` define names a locale bundled in this
+  /// package (one of [_bundledLocales], e.g. `l10n-de` or `l10n-sw_CD`).
   ///
   /// If so, the mapper switches to "opt-in" mode: it keeps only the locales
   /// enabled by their own define, plus the parent locales they fall back to.
   /// Otherwise it keeps all locales, except those disabled with
-  /// `l10n-<locale>=false`. Defines of other locales (e.g. `l10n-en_US` or
-  /// `l10n-pt_BR`, or a locale that only another l10n_* package bundles) are
-  /// ignored.
+  /// `l10n-<locale>=false`. Defines of any other locale (e.g. `l10n-en_US`,
+  /// `l10n-pt_BR`, the `l10n-fil` alias, or a locale that only another l10n_*
+  /// package bundles) are ignored.
   // ignore: avoid-explicit-type-declaration, the inferred type is not obvious.
   static const bool _hasAnyLocaleFilter =
 {{flags}};
@@ -63,6 +65,17 @@ class {{mapper}} extends IsoLocaleMapper<IsoLocaleMapper<String>> {
   static final _factories = <String, IsoLocaleMapper<String> Function()>{
 {{factories}}
   };
+
+  /// All locales bundled in this package, whether the `l10n-*` defines of this
+  /// build keep them or not. Only [_reportStripped] reads it, from an
+  /// `assert`, so release builds do not contain it.
+  static const _bundledLocales = {
+{{bundledLocales}}
+  };
+
+  /// The locales that [_reportStripped] has already checked, so that it
+  /// reports each stripped one once.
+  static final _checked = <String>{};
 
   /// Localizes a set of ISO codes into names (to specified locale if needed).
   ///
@@ -139,7 +152,11 @@ class {{mapper}} extends IsoLocaleMapper<IsoLocaleMapper<String>> {
     for (final key in localeKeys ?? map.keys) {
       final custom = map[key];
       final names = custom ?? _factories[key]?.call();
-      if (names == null) continue;
+      if (names == null) {
+        assert(_reportStripped(key), "It only reports, it never fails.");
+
+        continue;
+      }
       hasLocale = true;
       results.addAll(
         names,
@@ -157,6 +174,29 @@ class {{mapper}} extends IsoLocaleMapper<IsoLocaleMapper<String>> {
   void _consume() {
     map.clear();
     _isConsumed = true;
+  }
+
+  /// Prints a warning the first time [localize] skips a bundled [locale] that
+  /// the `l10n-*` defines of this build stripped. Otherwise an ignored define
+  /// strips a language silently: `l10n-en=true` with `l10n-pt_BR=true` keeps
+  /// `en` only, so a `pt_BR` lookup finds neither `pt_BR` nor `pt`.
+  ///
+  /// It is only called from an `assert`, so it always returns `true`, and
+  /// release builds neither run nor contain it.
+  static bool _reportStripped(String locale) {
+    if (_checked.add(locale) && _bundledLocales.contains(locale)) {
+      // Only a build whose defines strip a locale gets here, which `dart test`
+      // does not cover: see the stripped locales test in this package.
+      // coverage:ignore-start
+      // ignore: avoid_print, a debug-only warning, the package has no logger.
+      print(
+        '{{package}}: "$locale" was stripped by the l10n-* defines, pass '
+        "--dart-define=l10n-$locale=true to keep it.",
+      );
+      // coverage:ignore-end
+    }
+
+    return true;
   }
 }
 

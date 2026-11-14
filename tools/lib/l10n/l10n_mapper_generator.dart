@@ -112,17 +112,19 @@ final class L10nMapperGenerator {
     final hasAltNames = files.any((file) => file.hasAltNames);
     // Directives keep the file name order, the rest uses the locale order.
     final byLocale = [...files]..sort(_compareLocales);
-    final locales = [for (final file in byLocale) file.locale];
-    final tableLocales = _tableLocales(locales);
     final values = {
       "{{altDoc}}": hasAltNames ? _altNamesDoc : _noAltNamesDoc,
+      "{{bundledLocales}}": byLocale
+          .map((file) => '    "${file.locale}",')
+          .join("\n"),
       "{{bundlesAltNames}}": "$hasAltNames",
       "{{count}}": "${files.length}",
       "{{example}}": package.exampleCodes,
-      "{{factories}}": _factories(byLocale, tableLocales),
-      "{{flags}}": [...locales, ...tableLocales].map(_isOn).join(" ||\n"),
+      "{{factories}}": _factories(byLocale),
+      "{{flags}}": byLocale.map((file) => _isOn(file.locale)).join(" ||\n"),
       "{{item}}": package.item,
       "{{mapper}}": package.mapperName,
+      "{{package}}": package.dirName,
     };
 
     return _directives(files) + _fill(_readTemplate(_classTemplate), values);
@@ -185,34 +187,28 @@ final class L10nMapperGenerator {
     return buffer.toString();
   }
 
-  /// Locales that the package does not bundle, but whose explicit parent in
-  /// [LocaleFallback.parents] leads to one of its locales, so that their
-  /// define keeps the locales they fall back to, like a bundled child does:
-  /// language code aliases (`fil` -> `tl`) and CLDR regional locales whose
-  /// parent is not their language (`pa_PK` -> `pa_Arab`). Other regional
-  /// locales (`en_US`, `pt_BR`) get no define, there are too many of them.
-  static List<String> _tableLocales(List<String> locales) => List.unmodifiable(
-    LocaleFallback.parents.keys.where(
-      (locale) =>
-          !locales.contains(locale) &&
-          LocaleFallback.chain(locale).skip(1).any(locales.contains),
-    ),
-  );
-
   /// Every entry is kept if its define says so (lowercase spelling first, then
   /// the locale spelling), otherwise if no opt-in define is set at all, or if
-  /// a child locale, which falls back to this one, is enabled (a locale of
-  /// [_tableLocales] counts too: `fil` is a child of `tl`).
-  static String _factories(List<_DataFile> files, List<String> table) {
-    final locales = [for (final file in files) file.locale, ...table];
+  /// a bundled child locale, which falls back to this one, is enabled.
+  ///
+  /// Only bundled locales get a define, so the rule is the same for every
+  /// locale: `l10n-pt_BR` is ignored like `l10n-pt_AO` or the `l10n-fil`
+  /// alias, even though [LocaleFallback.chain] resolves them at runtime.
+  static String _factories(List<_DataFile> files) {
+    // The parents of every locale, resolved once instead of once per pair.
+    final parents = {
+      for (final file in files)
+        file.locale: LocaleFallback.chain(file.locale).skip(1).toSet(),
+    };
     final buffer = StringBuffer();
 
     for (final file in files) {
       final key = file.locale;
       final lower = key.toLowerCase();
-      final children = locales.where(
-        (child) => LocaleFallback.chain(child).skip(1).contains(key),
-      );
+      final children = [
+        for (final MapEntry(key: child, value: ofChild) in parents.entries)
+          if (ofChild.contains(key)) child,
+      ];
       final byDefault = [
         "!_hasAnyLocaleFilter",
         ...children.map(_isOn),

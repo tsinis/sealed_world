@@ -3,6 +3,8 @@
 
 // Reads the `l10n-de` define to skip bundled lookups on a shaken build.
 // ignore_for_file: do_not_use_environment
+import "dart:async";
+
 import "package:l10n_currencies/l10n_currencies.dart";
 import "package:l10n_currencies/src/locale_fallback.dart";
 import "package:test/test.dart";
@@ -252,6 +254,37 @@ void main() {
         "bs_Cyrl",
         if (language.containsKey(iso)) "bs",
       ]);
+    });
+  });
+
+  // CI also runs this file on a shaken build with asserts, see the l10n
+  // tree-shaking step of the verify package workflow.
+  group("$CurrenciesLocaleMapper stripped locales", skip: !isShaken, () {
+    test("are reported once, in debug builds", () {
+      const codes = {"USD"};
+      final printed = <String>[];
+      // Every l10n_* package bundles `de` (kept) and `fr` (stripped).
+      final found = runZoned(
+        () => [
+          for (final locale in const ["fr_CA", "fr", "de", "xx"])
+            CurrenciesLocaleMapper()
+                .localize(codes, mainLocale: locale)
+                .isNotEmpty,
+        ],
+        zoneSpecification: ZoneSpecification(
+          print: (_, _, _, line) => printed.add(line),
+        ),
+      );
+      final aboutFrench = printed.where((line) => line.contains('"fr"'));
+
+      expect(found, [false, false, true, false], reason: "only de is kept");
+      expect(aboutFrench, hasLength(1), reason: "run with --enable-asserts");
+      expect(aboutFrench.single, contains("--dart-define=l10n-fr=true"));
+      expect(
+        printed.where((line) => line.contains(RegExp('"(de|xx)"'))),
+        isEmpty,
+        reason: "de is kept, xx is not bundled",
+      );
     });
   });
 }

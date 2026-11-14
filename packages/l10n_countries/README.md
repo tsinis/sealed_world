@@ -19,6 +19,7 @@ This ISO-driven, pure Dart, fully tested and dependency-free package provides CL
 - 193 locales supported out of the box.
 - Three-letter ISO 3166-1 Alpha-3 code lookup.
 - Fallback locale support, including parent locales (e.g. `bs_Cyrl_BA` → `bs_Cyrl` → `bs`). A script locale falls back to its language even if the language is written in another script (`pa_Arab` → `pa`): the result has the names of both, so show the first entry of each ISO code. Where the script locale has no name, that entry is the language's one, and it comes before any name of `fallbackLocale`.
+- Allows injecting custom translations, for new locales or in place of a bundled one (an injected locale replaces the bundled locale with the same key entirely).
 - Alternative names and conditional formatting support.
 - Tree-shakable via dart define flags.
 
@@ -40,10 +41,16 @@ Then import the package in your Dart code:
 import 'package:l10n_countries/l10n_countries.dart';
 ```
 
+> [!NOTE]
+> Every `l10n_*` package exports its own `IsoLocaleMapper`, `LocaleKey` and `LocaleMap`. To import several of them in one file, use `show` (e.g. `show CountriesLocaleMapper`) or an import prefix.
+
 > [!TIP]
-> Tree-shakable builds can be achieved by providing dart define flags to exclude unused locales. For example, to include only EN and SK locales, use:
+> Tree-shakable builds can be achieved by providing dart define flags to exclude unused locales. Without them, all 193 locales are compiled in: compared to an English-only build, that is over 2.5 MB more in a native (AOT) build and over 1.5 MB more of minified JS. For example, to include only EN and SK locales, use:
 > `dart run -Dl10n-en=true -Dl10n-sk=true` or `flutter run --dart-define=l10n-en=true --dart-define=l10n-sk=true`
-> Parent locales of the enabled ones are kept automatically (`l10n-sw_cd=true` also keeps `sw`), and `l10n-<locale>=false` drops a single locale. Only flags of locales bundled in this package switch it to this opt-in mode, and the flags of the locales that its fallback table gives an explicit parent: language code aliases (`l10n-fil=true` keeps `tl`, also `iw`, `in` and `ji`) and CLDR regional locales whose parent is not their language (`l10n-pa_PK=true` keeps `pa_Arab` and `pa`, also `uz_AF`, `zh_TW`, `zh_HK`, `zh_MO`, `zh_Hant_HK`, `zh_Hant_MO` and the `pt` regions that fall back to `pt_PT`, such as `pt_AO`). Flags of other regional locales, such as `l10n-en_US`, `l10n-pt_BR` or `l10n-zh_Hant_TW`, are ignored: name the bundled locale (`l10n-en`, `l10n-pt`), and enable the locale passed as `fallbackLocale` too.
+> Parent locales of the enabled ones are kept automatically (`l10n-sw_cd=true` also keeps `sw`), and `l10n-<locale>=false` drops a single locale. Enable the locale passed as `fallbackLocale` too.
+
+> [!WARNING]
+> Only flags of locales bundled in this package (its `lib/src/data` locales, which `availableLocales` lists in a build without flags), spelled like the locale or lowercased, switch it to this opt-in mode. Flags of other locales, such as `l10n-en_US`, `l10n-pt_BR` or the `l10n-fil` alias, are ignored: `--dart-define=l10n-en=true --dart-define=l10n-pt_BR=true` keeps English only and drops Portuguese. Name the bundled locale instead: `l10n-pt`, and `l10n-tl` for Flutter's `fil` (Filipino). In debug builds, `localize()` prints a warning the first time it skips a locale stripped this way.
 
 ### Usage
 

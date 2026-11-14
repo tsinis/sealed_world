@@ -7,8 +7,8 @@ abstract final class LocaleFallback {
   /// the legacy language codes still reported by older Android and JVM
   /// platforms, and the `fil` -> `tl` alias (bundled data uses `tl`).
   ///
-  /// The mapper generator (`tools/lib/l10n`) reads its keys too, so that an
-  /// `l10n-<key>=true` define keeps the locales that the key falls back to.
+  /// The mapper generator (`tools/lib/l10n`) follows it too, so that the
+  /// define of a bundled locale keeps the bundled locales it falls back to.
   static const parents = {
     "fil": "tl",
     "in": "id",
