@@ -5,11 +5,12 @@ import "../iso_locale_mapper.dart";
 /// and `CA` country/region code locale.
 class FrCaCurrenciesL10N extends IsoLocaleMapper<String> {
   /// Provides currency translations for the `fr_CA` locale.
-  FrCaCurrenciesL10N() {
-    map.addAll({
-      "FKP": "Livre des Îles Malouines",
-      "TOP": "Pa’anga",
-      "TTD": "Dollar de Trinité-et-Tobago",
-    });
-  }
+  new()
+    : super(
+        other: {
+          "FKP": "Livre des Îles Malouines",
+          "TOP": "Pa’anga",
+          "TTD": "Dollar de Trinité-et-Tobago",
+        },
+      );
 }

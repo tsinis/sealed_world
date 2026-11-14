@@ -5,7 +5,8 @@ import "../iso_locale_mapper.dart";
 /// and Latin script locale.
 class BmLatnCountriesL10N extends IsoLocaleMapper<String> {
   /// Provides country translations for the `bm_Latn` locale.
-  BmLatnCountriesL10N() {
-    map.addAll({"MAC": "Macau SAR China", "MKD": "Macedɔni", "UNK": "Kosovo"});
-  }
+  new()
+    : super(
+        other: {"MAC": "Macau SAR China", "MKD": "Macedɔni", "UNK": "Kosovo"},
+      );
 }

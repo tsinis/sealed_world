@@ -5,7 +5,8 @@ import "../iso_locale_mapper.dart";
 /// locale.
 class BoCurrenciesL10N extends IsoLocaleMapper<String> {
   /// Provides currency translations for the `bo` locale.
-  BoCurrenciesL10N() {
-    map.addAll({"CNY": "ཡུ་ཨན་", "INR": "རྒྱ་གར་སྒོར་", "USD": "ཨ་རིའི་སྒོར་"});
-  }
+  new()
+    : super(
+        other: {"CNY": "ཡུ་ཨན་", "INR": "རྒྱ་གར་སྒོར་", "USD": "ཨ་རིའི་སྒོར་"},
+      );
 }

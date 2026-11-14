@@ -5,18 +5,19 @@ import "../iso_locale_mapper.dart";
 /// and `FI` country/region code locale.
 class SeFiLanguagesL10N extends IsoLocaleMapper<String> {
   /// Provides language translations for the `se_FI` locale.
-  SeFiLanguagesL10N() {
-    map.addAll({
-      "BEL": "Vilgesruoššagiella",
-      "BEN": "Bengalagiella",
-      "FIJ": "Fižigiella",
-      "HYE": "Armenagiella",
-      "KAZ": "Kazakhgiella",
-      "KHM": "Kambožagiella",
-      "NEP": "Nepalagiella",
-      "PAN": "Panjabagiella",
-      "THA": "Thaigiella",
-      "VIE": "Vietnamagiella",
-    });
-  }
+  new()
+    : super(
+        other: {
+          "BEL": "Vilgesruoššagiella",
+          "BEN": "Bengalagiella",
+          "FIJ": "Fižigiella",
+          "HYE": "Armenagiella",
+          "KAZ": "Kazakhgiella",
+          "KHM": "Kambožagiella",
+          "NEP": "Nepalagiella",
+          "PAN": "Panjabagiella",
+          "THA": "Thaigiella",
+          "VIE": "Vietnamagiella",
+        },
+      );
 }

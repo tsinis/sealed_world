@@ -3,7 +3,7 @@
 FIX
 
 - Regional and script locales now fall back to their parent locales instead of straight to the language: `zh_Hant_TW` → `zh_Hant` → `zh`, `zh_TW` and `zh_HK` → `zh_Hant`, `pt_MO`, `pt_MZ` (and other CLDR children) → `pt_PT` → `pt`, `nb` and `nn` → `no`, `fil` → `tl`, plus the legacy `iw`, `in` and `ji` codes. Previously, for example, `bs_Cyrl_BA` returned the Latin script names of `bs`.
-- Locales are normalized before the lookup (`zh-Hant-TW`, `pt-pt`, ` en_US ` and `en_US.UTF-8` become `zh_Hant_TW`, `pt_PT` and `en_US`), also with `useLanguageFallback: false`. The locale as given is still tried first, so custom locale keys keep working.
+- Locales are normalized before the lookup (`zh-Hant-TW`, `pt-pt`, `en_US` and `en_US.UTF-8` become `zh_Hant_TW`, `pt_PT` and `en_US`), also with `useLanguageFallback: false`. The locale as given is still tried first, so custom locale keys keep working.
 - Translations injected via `other` are no longer cleared by `localize()`: a `const` map no longer throws an `UnsupportedError`, and an `IsoLocaleMapper` shared between mappers no longer returns an empty map on its second use.
 - `l10n-<locale>=false` now drops only that locale, previously it dropped all of them.
 
@@ -15,6 +15,7 @@ NEW FEATURES
 IMPROVEMENTS
 
 - `localize()` returns an unmodifiable view instead of copying its result, and no longer copies the set of ISO codes.
+- Each locale class passes its translations straight to `IsoLocaleMapper` instead of copying them into an empty map in its constructor: one map less for every locale a `localize()` call uses, and about 1.5% fewer instructions in a benchmark that localizes all codes for every locale.
 
 DOCUMENTATION
 
@@ -24,6 +25,7 @@ DOCUMENTATION
 CHORE
 
 - The mapper is generated from a single template shared by all `l10n_*` packages (`dart run :l10n_mapper` in `tools/`), and CI now runs the tree-shaking tests.
+- The Dart SDK was bumped to v3.13.0, the code uses its `new()` constructors and private named parameters. The API is the same.
 
 ## 2.2.0
 

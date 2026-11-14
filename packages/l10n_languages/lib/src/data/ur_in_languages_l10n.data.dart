@@ -5,13 +5,14 @@ import "../iso_locale_mapper.dart";
 /// and `IN` country/region code locale.
 class UrInLanguagesL10N extends IsoLocaleMapper<String> {
   /// Provides language translations for the `ur_IN` locale.
-  UrInLanguagesL10N() {
-    map.addAll({
-      "AFR": "افریقی",
-      "COS": "کارسیکائی",
-      "KAN": "کنڑ",
-      "KUR": "کرد",
-      "LAV": "لٹویای",
-    });
-  }
+  new()
+    : super(
+        other: {
+          "AFR": "افریقی",
+          "COS": "کارسیکائی",
+          "KAN": "کنڑ",
+          "KUR": "کرد",
+          "LAV": "لٹویای",
+        },
+      );
 }

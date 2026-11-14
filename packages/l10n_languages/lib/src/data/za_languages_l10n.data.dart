@@ -5,7 +5,5 @@ import "../iso_locale_mapper.dart";
 /// locale.
 class ZaLanguagesL10N extends IsoLocaleMapper<String> {
   /// Provides language translations for the `za` locale.
-  ZaLanguagesL10N() {
-    map.addAll({"ENG": "Yinghyij", "ZHA": "Vahcuengh"});
-  }
+  new() : super(other: {"ENG": "Yinghyij", "ZHA": "Vahcuengh"});
 }

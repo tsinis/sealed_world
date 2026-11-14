@@ -5,14 +5,15 @@ import "../iso_locale_mapper.dart";
 /// locale.
 class FjCountriesL10N extends IsoLocaleMapper<String> {
   /// Provides country translations for the `fj` locale.
-  FjCountriesL10N() {
-    map.addAll({
-      "CHN": "Jaina",
-      "EGY": "Ijipta",
-      "FJI": "Viti",
-      "ISR": "Isireli",
-      "LTU": "Lituani",
-      "MDG": "Madagasikar",
-    });
-  }
+  new()
+    : super(
+        other: {
+          "CHN": "Jaina",
+          "EGY": "Ijipta",
+          "FJI": "Viti",
+          "ISR": "Isireli",
+          "LTU": "Lituani",
+          "MDG": "Madagasikar",
+        },
+      );
 }

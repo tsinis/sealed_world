@@ -5,13 +5,14 @@ import "../iso_locale_mapper.dart";
 /// locale.
 class SeCurrenciesL10N extends IsoLocaleMapper<String> {
   /// Provides currency translations for the `se` locale.
-  SeCurrenciesL10N() {
-    map.addAll({
-      "EUR": "Euro",
-      "NOK": "Norgga kruvdno",
-      "SEK": "Ruoŧŧa kruvdno",
-      "XAG": "Uns silba",
-      "XAU": "Uns golli",
-    });
-  }
+  new()
+    : super(
+        other: {
+          "EUR": "Euro",
+          "NOK": "Norgga kruvdno",
+          "SEK": "Ruoŧŧa kruvdno",
+          "XAG": "Uns silba",
+          "XAU": "Uns golli",
+        },
+      );
 }

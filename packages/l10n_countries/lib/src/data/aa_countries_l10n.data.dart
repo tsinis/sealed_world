@@ -5,7 +5,5 @@ import "../iso_locale_mapper.dart";
 /// locale.
 class AaCountriesL10N extends IsoLocaleMapper<String> {
   /// Provides country translations for the `aa` locale.
-  AaCountriesL10N() {
-    map.addAll({"DJI": "Yabuuti", "ERI": "Eretria", "ETH": "Otobbia"});
-  }
+  new() : super(other: {"DJI": "Yabuuti", "ERI": "Eretria", "ETH": "Otobbia"});
 }

@@ -5,15 +5,16 @@ import "../iso_locale_mapper.dart";
 /// locale.
 class StCountriesL10N extends IsoLocaleMapper<String> {
   /// Provides country translations for the `st` locale.
-  StCountriesL10N() {
-    map.addAll({
-      "CHN": "Tjhaena",
-      "EGY": "Egepeta",
-      "FRA": "Fora",
-      "HRV": "Kroatia",
-      "LTU": "Lituania",
-      "NLD": "Hôlanê",
-      "ZAF": "Afrika Borwa",
-    });
-  }
+  new()
+    : super(
+        other: {
+          "CHN": "Tjhaena",
+          "EGY": "Egepeta",
+          "FRA": "Fora",
+          "HRV": "Kroatia",
+          "LTU": "Lituania",
+          "NLD": "Hôlanê",
+          "ZAF": "Afrika Borwa",
+        },
+      );
 }

@@ -5,7 +5,5 @@ import "../iso_locale_mapper.dart";
 /// locale.
 class NyCountriesL10N extends IsoLocaleMapper<String> {
   /// Provides country translations for the `ny` locale.
-  NyCountriesL10N() {
-    map.addAll({"MWI": "Malaŵi", "UNK": "Kosovo"});
-  }
+  new() : super(other: {"MWI": "Malaŵi", "UNK": "Kosovo"});
 }

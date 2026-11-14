@@ -135,6 +135,16 @@ void main() {
       }
       expect(shared.map, {"AAA": "Shared"});
     });
+
+    test("are copied, so consuming the mapper keeps the given map", () {
+      final other = {
+        "zz": IsoLocaleMapper(other: {"AAA": "Kept"}),
+      };
+      LanguagesLocaleMapper(other: other)
+          .localize(const {"AAA"}, mainLocale: "zz");
+
+      expect(other.keys, ["zz"]);
+    });
   });
 
   group("$LanguagesLocaleMapper formatter with alternative names", () {

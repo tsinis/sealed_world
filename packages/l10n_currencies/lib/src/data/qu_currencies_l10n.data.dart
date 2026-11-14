@@ -1,4 +1,3 @@
-// ignore_for_file: avoid-unnecessary-collections
 import "../iso_locale_mapper.dart";
 
 /// Contains 4 translation(s).
@@ -6,12 +5,13 @@ import "../iso_locale_mapper.dart";
 /// locale.
 class QuCurrenciesL10N extends IsoLocaleMapper<String> {
   /// Provides currency translations for the `qu` locale.
-  QuCurrenciesL10N() {
-    map.addAll({
-      "KRW": "Won Surcoreano",
-      "TWD": "Nuevo Dólar Taiwanés",
-      "XCG": "Caribe guilderkuna",
-      "ZWG": "Zimbabuemanta quri",
-    });
-  }
+  new()
+    : super(
+        other: {
+          "KRW": "Won Surcoreano",
+          "TWD": "Nuevo Dólar Taiwanés",
+          "XCG": "Caribe guilderkuna",
+          "ZWG": "Zimbabuemanta quri",
+        },
+      );
 }

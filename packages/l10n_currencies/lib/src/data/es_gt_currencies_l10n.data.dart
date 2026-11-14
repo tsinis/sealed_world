@@ -1,4 +1,3 @@
-// ignore_for_file: avoid-unnecessary-collections
 import "../iso_locale_mapper.dart";
 
 /// Contains 1 translation(s).
@@ -6,7 +5,5 @@ import "../iso_locale_mapper.dart";
 /// and `GT` country/region code locale.
 class EsGtCurrenciesL10N extends IsoLocaleMapper<String> {
   /// Provides currency translations for the `es_GT` locale.
-  EsGtCurrenciesL10N() {
-    map.addAll({"GTQ": "Quetzal"});
-  }
+  new() : super(other: {"GTQ": "Quetzal"});
 }

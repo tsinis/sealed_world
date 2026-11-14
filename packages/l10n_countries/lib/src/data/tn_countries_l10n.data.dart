@@ -5,7 +5,5 @@ import "../iso_locale_mapper.dart";
 /// locale.
 class TnCountriesL10N extends IsoLocaleMapper<String> {
   /// Provides country translations for the `tn` locale.
-  TnCountriesL10N() {
-    map.addAll({"USA": "USA", "ZAF": "Aferika Borwa"});
-  }
+  new() : super(other: {"USA": "USA", "ZAF": "Aferika Borwa"});
 }

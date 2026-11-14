@@ -328,11 +328,10 @@ export "src/iso_locale_mapper.dart";
 class CurrenciesLocaleMapper extends IsoLocaleMapper<IsoLocaleMapper<String>> {
   /// Provides names translations for 149 locales, with the option to
   /// add more translations via the [other] parameter.
-  CurrenciesLocaleMapper({Map<String, IsoLocaleMapper<String>>? other})
-    // ignore: avoid-non-empty-constructor-bodies,on purpose.
-    : _customLocales = other?.keys.toSet() {
-    if (other != null) map.addAll(other);
-  }
+  new({Map<String, IsoLocaleMapper<String>>? other})
+    : _customLocales = other?.keys.toSet(),
+      // A copy: consuming the mapper clears its map, `other` stays intact.
+      super(other: {...?other});
 
   /// The symbol used to identify the alternative/full name of the ISO object.
   static const symbol = "+";

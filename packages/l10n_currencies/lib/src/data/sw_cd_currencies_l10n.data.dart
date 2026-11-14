@@ -5,16 +5,17 @@ import "../iso_locale_mapper.dart";
 /// and `CD` country/region code locale.
 class SwCdCurrenciesL10N extends IsoLocaleMapper<String> {
   /// Provides currency translations for the `sw_CD` locale.
-  SwCdCurrenciesL10N() {
-    map.addAll({
-      "CNY": "Yuan Renminbi ya China",
-      "ETB": "Bir ya Uhabeshi",
-      "JPY": "Sarafu ya Kijapani",
-      "MGA": "Ariary ya Bukini",
-      "MRU": "Ugwiya ya Moritania",
-      "SCR": "Rupia ya Shelisheli",
-      "XAF": "Faranga CFA BEAC",
-      "XOF": "Faranga CFA BCEAO",
-    });
-  }
+  new()
+    : super(
+        other: {
+          "CNY": "Yuan Renminbi ya China",
+          "ETB": "Bir ya Uhabeshi",
+          "JPY": "Sarafu ya Kijapani",
+          "MGA": "Ariary ya Bukini",
+          "MRU": "Ugwiya ya Moritania",
+          "SCR": "Rupia ya Shelisheli",
+          "XAF": "Faranga CFA BEAC",
+          "XOF": "Faranga CFA BCEAO",
+        },
+      );
 }

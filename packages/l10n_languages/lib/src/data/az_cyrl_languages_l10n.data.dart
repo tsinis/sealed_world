@@ -5,18 +5,19 @@ import "../iso_locale_mapper.dart";
 /// and Cyrillic script locale.
 class AzCyrlLanguagesL10N extends IsoLocaleMapper<String> {
   /// Provides language translations for the `az_Cyrl` locale.
-  AzCyrlLanguagesL10N() {
-    map.addAll({
-      "AZE": "Азәрбајҹан",
-      "DEU": "Алманҹа",
-      "ENG": "Инҝилисҹә",
-      "FRA": "Франсызҹа",
-      "ITA": "Италјанҹа",
-      "JPN": "Јапонҹа",
-      "POR": "Португалҹа",
-      "RUS": "Русҹа",
-      "SPA": "Испанҹа",
-      "ZHO": "Чинҹә",
-    });
-  }
+  new()
+    : super(
+        other: {
+          "AZE": "Азәрбајҹан",
+          "DEU": "Алманҹа",
+          "ENG": "Инҝилисҹә",
+          "FRA": "Франсызҹа",
+          "ITA": "Италјанҹа",
+          "JPN": "Јапонҹа",
+          "POR": "Португалҹа",
+          "RUS": "Русҹа",
+          "SPA": "Испанҹа",
+          "ZHO": "Чинҹә",
+        },
+      );
 }

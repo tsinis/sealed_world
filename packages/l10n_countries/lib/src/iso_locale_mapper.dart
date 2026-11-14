@@ -20,11 +20,8 @@ class IsoLocaleMapper<V extends Object> {
   ///
   /// Parameters:
   /// - [other]: Optional initial mapping data.
-  IsoLocaleMapper({
-    Map<String, V>? other,
-    Set<String> availableLocales = const {},
-  }) : map = other ?? {},
-       _availableLocales = availableLocales;
+  new({Map<String, V>? other, this._availableLocales = const {}})
+    : map = other ?? {};
 
   /// The internal mapping between ISO codes and their values.
   final Map<String, V> map;

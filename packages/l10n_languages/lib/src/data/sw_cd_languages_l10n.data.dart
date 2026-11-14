@@ -5,12 +5,13 @@ import "../iso_locale_mapper.dart";
 /// and `CD` country/region code locale.
 class SwCdLanguagesL10N extends IsoLocaleMapper<String> {
   /// Provides language translations for the `sw_CD` locale.
-  SwCdLanguagesL10N() {
-    map.addAll({
-      "AKA": "Kiakan",
-      "BEN": "Kibangla",
-      "CES": "Kichecki",
-      "ENG": "Kingereza",
-    });
-  }
+  new()
+    : super(
+        other: {
+          "AKA": "Kiakan",
+          "BEN": "Kibangla",
+          "CES": "Kichecki",
+          "ENG": "Kingereza",
+        },
+      );
 }

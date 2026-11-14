@@ -5,7 +5,5 @@ import "../iso_locale_mapper.dart";
 /// and Arabic script locale.
 class PaArabCurrenciesL10N extends IsoLocaleMapper<String> {
   /// Provides currency translations for the `pa_Arab` locale.
-  PaArabCurrenciesL10N() {
-    map.addAll({"EUR": "یورو", "INR": "روپئیہ [INR]", "PKR": "روپئیہ"});
-  }
+  new() : super(other: {"EUR": "یورو", "INR": "روپئیہ [INR]", "PKR": "روپئیہ"});
 }

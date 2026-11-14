@@ -1,4 +1,3 @@
-// ignore_for_file: avoid-unnecessary-collections
 import "../iso_locale_mapper.dart";
 
 /// Contains 1 translation(s).
@@ -6,7 +5,5 @@ import "../iso_locale_mapper.dart";
 /// locale.
 class GvLanguagesL10N extends IsoLocaleMapper<String> {
   /// Provides language translations for the `gv` locale.
-  GvLanguagesL10N() {
-    map.addAll({"GLV": "Gaelg"});
-  }
+  new() : super(other: {"GLV": "Gaelg"});
 }

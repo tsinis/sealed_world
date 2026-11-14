@@ -5,7 +5,5 @@ import "../iso_locale_mapper.dart";
 /// and Arabic script locale.
 class UzArabLanguagesL10N extends IsoLocaleMapper<String> {
   /// Provides language translations for the `uz_Arab` locale.
-  UzArabLanguagesL10N() {
-    map.addAll({"FAS": "دری", "PUS": "پشتو", "UZB": "اوزبیک"});
-  }
+  new() : super(other: {"FAS": "دری", "PUS": "پشتو", "UZB": "اوزبیک"});
 }

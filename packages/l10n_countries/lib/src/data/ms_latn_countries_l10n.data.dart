@@ -5,13 +5,14 @@ import "../iso_locale_mapper.dart";
 /// and Latin script locale.
 class MsLatnCountriesL10N extends IsoLocaleMapper<String> {
   /// Provides country translations for the `ms_Latn` locale.
-  MsLatnCountriesL10N() {
-    map.addAll({
-      "BLM": "Saint Barthélemy",
-      "CZE": "Republik Czech",
-      "GRC": "Yunani",
-      "MKD": "Macedonia",
-      "UNK": "Kosovo",
-    });
-  }
+  new()
+    : super(
+        other: {
+          "BLM": "Saint Barthélemy",
+          "CZE": "Republik Czech",
+          "GRC": "Yunani",
+          "MKD": "Macedonia",
+          "UNK": "Kosovo",
+        },
+      );
 }

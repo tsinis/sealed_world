@@ -5,18 +5,19 @@ import "../iso_locale_mapper.dart";
 /// locale.
 class IiCountriesL10N extends IsoLocaleMapper<String> {
   /// Provides country translations for the `ii` locale.
-  IiCountriesL10N() {
-    map.addAll({
-      "BRA": "ꀠꑭ",
-      "CHN": "ꍏꇩ",
-      "DEU": "ꄓꇩ",
-      "FRA": "ꃔꇩ",
-      "GBR": "ꑱꇩ",
-      "IND": "ꑴꄗ",
-      "ITA": "ꑴꄊꆺ",
-      "JPN": "ꏝꀪ",
-      "RUS": "ꊉꇆꌦ",
-      "USA": "ꂰꇩ",
-    });
-  }
+  new()
+    : super(
+        other: {
+          "BRA": "ꀠꑭ",
+          "CHN": "ꍏꇩ",
+          "DEU": "ꄓꇩ",
+          "FRA": "ꃔꇩ",
+          "GBR": "ꑱꇩ",
+          "IND": "ꑴꄗ",
+          "ITA": "ꑴꄊꆺ",
+          "JPN": "ꏝꀪ",
+          "RUS": "ꊉꇆꌦ",
+          "USA": "ꂰꇩ",
+        },
+      );
 }

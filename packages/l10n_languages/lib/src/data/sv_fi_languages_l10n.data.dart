@@ -1,4 +1,3 @@
-// ignore_for_file: avoid-unnecessary-collections
 import "../iso_locale_mapper.dart";
 
 /// Contains 1 translation(s).
@@ -6,7 +5,5 @@ import "../iso_locale_mapper.dart";
 /// and `FI` country/region code locale.
 class SvFiLanguagesL10N extends IsoLocaleMapper<String> {
   /// Provides language translations for the `sv_FI` locale.
-  SvFiLanguagesL10N() {
-    map.addAll({"KIR": "Kirgiziska"});
-  }
+  new() : super(other: {"KIR": "Kirgiziska"});
 }

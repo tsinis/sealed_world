@@ -5,7 +5,5 @@ import "../iso_locale_mapper.dart";
 /// and `KE` country/region code locale.
 class SwKeLanguagesL10N extends IsoLocaleMapper<String> {
   /// Provides language translations for the `sw_KE` locale.
-  SwKeLanguagesL10N() {
-    map.addAll({"LIM": "Kilimbugi", "TWI": "Kitwi"});
-  }
+  new() : super(other: {"LIM": "Kilimbugi", "TWI": "Kitwi"});
 }

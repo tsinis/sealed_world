@@ -76,8 +76,8 @@ void main(List<String> args) {
           : null;
       if (parent != null && icuNames[parent] == name) continue;
 
-      final l10n = _sentenceCase(name, locale, entries.values);
-      entries[code] = _escape(l10n);
+      final l10n = _sentenceCase(name, locale, entries.values.map(_unquoted));
+      entries[code] = _literal(code, _escape(l10n));
       file.writeAsStringSync(_withEntries(content, entries));
       added += 1;
       print("✓ $locale: $l10n");
@@ -88,7 +88,11 @@ void main(List<String> args) {
   if (added == 0) return;
 
   Process.runSync("dart", ["format", dataDir.path]);
-  final analyze = Process.runSync("dart", ["analyze", dataDir.path]);
+  final analyze = Process.runSync("dart", [
+    "analyze",
+    "--fatal-infos", // As in CI, a lint like the line length is an info.
+    dataDir.path,
+  ]);
   if (analyze.exitCode != 0) {
     print("✗ dart analyze found issues:\n${analyze.stdout}${analyze.stderr}");
     exit(1);
@@ -101,11 +105,14 @@ const _keepEnglish = "--keep-english=";
 /// The ICU4C `curr/<locale>.txt` files, relative to the `tools` directory.
 const _icuDataPath = "json/data";
 
-/// The whole `map.addAll({...});` block, its entries can span lines.
-final _mapRegExp = RegExp(r"map\.addAll\(\{([\s\S]*)\}\);");
+/// The map of the `super(other: {...});` call, its entries can span lines.
+final _mapRegExp = RegExp(r"super\(\s*other:\s*\{([\s\S]*)\},?\s*\);");
 
-/// A `"CODE": "Name"` entry, the value may be wrapped onto the next line.
-final _entryRegExp = RegExp(r'"([A-Z0-9]+\+?)":\s*"((?:[^"\\]|\\.)*)"');
+/// A `"CODE": "Name"` entry, the value may be wrapped onto the next line and
+/// be a `"""` string (for names longer than a line).
+final _entryRegExp = RegExp(
+  r'"([A-Z0-9]+\+?)":\s*("""[\s\S]*?"""|"(?:[^"\\]|\\.)*")',
+);
 
 /// Data files of the package by their locale (as in the `Provides ...` docs).
 Map<String, File> _dataFiles(Directory dataDir) {
@@ -121,10 +128,10 @@ Map<String, File> _dataFiles(Directory dataDir) {
   return files;
 }
 
-/// The entries of a data file, with their values still escaped.
+/// The entries of a data file, with their values as string literals.
 Map<String, String> _entries(String content, String path) {
   final body = _mapRegExp.firstMatch(content)?.group(1);
-  if (body == null) throw FormatException("No map.addAll block in $path");
+  if (body == null) throw FormatException("No super(other: {...}) in $path");
 
   return {
     for (final match in _entryRegExp.allMatches(body))
@@ -135,14 +142,14 @@ Map<String, String> _entries(String content, String path) {
 /// The data file content with sorted [entries] and their count in the docs.
 String _withEntries(String content, Map<String, String> entries) {
   final sorted = entries.keys.toList()..sort();
-  final lines = sorted.map((key) => '      "$key": "${entries[key]}",');
+  final lines = sorted.map((key) => '"$key": ${entries[key]},');
 
   return content
       .replaceFirst(
-        RegExp(r"/// Contains \d+ translation\(s\)\."),
+        RegExp(r"/// Contains \d+ translations?(?:\(s\))?\."),
         "/// Contains ${entries.length} translation(s).",
       )
-      .replaceFirst(_mapRegExp, "map.addAll({\n${lines.join("\n")}\n    });");
+      .replaceFirst(_mapRegExp, "super(other: {\n${lines.join("\n")}\n});");
 }
 
 /// Names from the ICU4C `curr/<locale>.txt` files, named like the locales.
@@ -268,6 +275,24 @@ String _sentenceCase(String name, String locale, Iterable<String> values) {
 
   return upper + String.fromCharCodes(name.runes.skip(1));
 }
+
+/// The `"..."` literal of an escaped [value], or a `"""..."""` one if its
+/// entry would be longer than a line: the formatter can't split a string, and
+/// the line length lint skips `"""` strings (as the data files do already).
+String _literal(String code, String value) {
+  final line = '${" " * _entryIndent}"$code": "$value",';
+
+  return line.length > _maxLineLength ? '"""$value"""' : '"$value"';
+}
+
+/// The indentation of the formatted `super(other: {...})` entries.
+const _entryIndent = 10;
+const _maxLineLength = 80;
+
+/// The text of a `"..."` or `"""..."""` literal, its escapes are kept.
+String _unquoted(String literal) => literal.replaceAll(_quotesRegExp, "");
+
+final _quotesRegExp = RegExp(r'^"+|"+$');
 
 String _escape(String value) => value
     .replaceAll(r"\", r"\\")

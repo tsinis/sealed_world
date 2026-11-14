@@ -41,9 +41,8 @@ void main() {
   setUpAll(() async {
     root = _findPackageRoot(Directory.current.path);
     // Inside the package, so the package resolution works.
-    tempDir = await Directory(
-      path.join(root, ".dart_tool", "tree_shake_test"),
-    ).create(recursive: true);
+    tempDir = await Directory(path.join(root, ".dart_tool", "tree_shake_test"))
+        .create(recursive: true);
     entryPoint = File(path.join(tempDir.path, "main.dart"))
       ..writeAsStringSync('''
 import "package:$_package/$_package.dart";

@@ -5,7 +5,5 @@ import "../iso_locale_mapper.dart";
 /// locale.
 class ToCurrenciesL10N extends IsoLocaleMapper<String> {
   /// Provides currency translations for the `to` locale.
-  ToCurrenciesL10N() {
-    map.addAll({"TOP": "Paʻanga fakatonga", "WST": "Tala fakahaʻamoa"});
-  }
+  new() : super(other: {"TOP": "Paʻanga fakatonga", "WST": "Tala fakahaʻamoa"});
 }
