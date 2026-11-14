@@ -1,150 +1,162 @@
-// ignore_for_file:avoid_print,prefer-for-in,avoid-long-functions,max-statements
+// ignore_for_file: avoid_print, prefer-static-class, avoid-long-functions
+// ignore_for_file: max-statements, prefer-for-in
 
 import "dart:io";
 
+import "package:cli/l10n/templates/locale_fallback.dart";
 import "package:path/path.dart";
-import "package:sealed_languages/sealed_languages.dart";
 
+/// Adds currency names to the l10n_currencies data files, where missing.
+///
+/// Usage, from the `tools` directory:
+///   dart run :currency_l10n_map ZWG [XCG ...]
+///     reads the ICU4C `curr/<locale>.txt` files from `json/data`;
+///   dart run :currency_l10n_map ZWG [XCG ...] --system
+///     reads the CLDR data of the system ICU (macOS only, needs `swift`).
+///
+/// Every data file of the package is checked, regional and script locales
+/// included. A name is only added to a locale that lacks the code, and to a
+/// regional or script locale (`zh_Hant`, `pt_PT`) only if it differs from the
+/// name of its parent locale, since those files hold only the differences.
+///
+/// The system ICU falls back to English for a locale without a name, so with
+/// `--system` a non-English name equal to the English one counts as missing.
+/// Pass `--keep-english=nl,fy` to keep such names of the given locales, when
+/// they are real names spelled like English ones (Dutch "Palladium").
 void main(List<String> args) {
-  if (args.isEmpty) {
-    print("Error: Currency code is required.");
-    print("Usage: dart run :currency_l10n_map <CURRENCY_CODE>");
-    print("Example: dart run :currency_l10n_map ZWG");
-    exit(1);
+  final useSystemIcu = args.contains("--system");
+  final keepEnglish = {
+    for (final arg in args.where((value) => value.startsWith(_keepEnglish)))
+      ...arg.replaceFirst(_keepEnglish, "").split(","),
+  };
+  final codes = {
+    for (final arg in args.where((value) => !value.startsWith("--")))
+      arg.trim().toUpperCase(),
+  };
+  if (codes.isEmpty || codes.any((code) => code.length != 3)) {
+    print("Usage: dart run :currency_l10n_map <CODE>... [--system] ");
+    print("  [$_keepEnglish<locale>,...]");
+    print("Example: dart run :currency_l10n_map ZWG XCG --system");
+    exit(64);
   }
-
-  final currencyCode = args.first.toUpperCase().trim();
-
-  if (currencyCode.length != IsoStandardized.codeLength) {
-    print("Error: Currency code must be exactly 3 letters.");
-    exit(1);
-  }
-
-  final currencyMap = <NaturalLanguage, String>{};
-  final l10nDir = Directory(join("json", "data"));
-
-  if (!l10nDir.existsSync()) {
-    print("Error: Currency directory not found at ${l10nDir.path}");
-    exit(1);
-  }
-
-  for (final language in NaturalLanguage.list) {
-    final fileName = "${language.codeShort.toLowerCase()}.txt";
-    final file = File(join(l10nDir.path, fileName));
-    if (!file.existsSync()) continue;
-
-    final currencyName = _extractCurrencyName(file, currencyCode);
-    if (currencyName != null) currencyMap[language] = currencyName;
-  }
-
-  if (currencyMap.isEmpty) {
-    print("No translations found for currency code: $currencyCode");
-    exit(0);
-  }
-
-  for (final entry in currencyMap.entries) {
-    final langClass = entry.key.runtimeType.toString();
-    print('  $langClass(): "${entry.value}",');
-  }
-
-  print("\nTotal languages found: ${currencyMap.length}");
 
   final dataDir = Directory(
-    join("../", "packages", "l10n_currencies", "lib", "src", "data"),
+    join("..", "packages", "l10n_currencies", "lib", "src", "data"),
   );
-  if (!dataDir.existsSync()) {
-    print("Error: Data directory not found at ${dataDir.path}");
-    print(Directory.current.path);
+  final dataFiles = _dataFiles(dataDir);
+  final bundled = dataFiles.keys.toSet();
+  final translations = useSystemIcu
+      ? _systemIcuNames(codes, bundled, keepEnglish)
+      : {for (final code in codes) code: _icuFileNames(code, bundled)};
+  int added = 0;
+
+  for (final code in codes) {
+    final icuNames = translations[code] ?? const <String, String>{};
+    print("\n--- $code: ${icuNames.length} locale(s) with a name ---");
+
+    for (final MapEntry(key: locale, value: file) in dataFiles.entries) {
+      final name = icuNames[locale];
+      if (name == null) continue;
+      final content = file.readAsStringSync();
+      final entries = _entries(content, file.path);
+      if (entries.containsKey(code)) continue;
+
+      // Only regional and script locales are differences to their parent,
+      // `nb` and `nn` are full languages although they fall back to `no`.
+      final parent = locale.contains("_")
+          ? LocaleFallback.chain(locale)
+                .skip(1)
+                .where(bundled.contains)
+                .firstOrNull
+          : null;
+      if (parent != null && icuNames[parent] == name) continue;
+
+      final l10n = _sentenceCase(name, locale, entries.values);
+      entries[code] = _escape(l10n);
+      file.writeAsStringSync(_withEntries(content, entries));
+      added += 1;
+      print("✓ $locale: $l10n");
+    }
+  }
+
+  print("\n--- Added $added name(s) ---");
+  if (added == 0) return;
+
+  Process.runSync("dart", ["format", dataDir.path]);
+  final analyze = Process.runSync("dart", ["analyze", dataDir.path]);
+  if (analyze.exitCode != 0) {
+    print("✗ dart analyze found issues:\n${analyze.stdout}${analyze.stderr}");
     exit(1);
   }
-
-  final missingDataFiles = <String>[];
-  for (final entry in currencyMap.entries) {
-    final language = entry.key;
-    final dataFileName =
-        "${language.codeShort.toLowerCase()}_currencies_l10n.data.dart";
-    final dataFile = File(join(dataDir.path, dataFileName));
-
-    if (!dataFile.existsSync()) {
-      missingDataFiles.add(dataFileName);
-    }
-  }
-
-  if (missingDataFiles.isNotEmpty) {
-    print(
-      "\n⚠️  Warning: Missing .data.dart files for ${missingDataFiles.length} "
-      "language(s):",
-    );
-    for (final file in missingDataFiles) {
-      print("  - $file");
-    }
-    print("(These will be skipped, but other files will be updated)\n");
-  }
-
-  print("--- Updating .data.dart files ---");
-  int updatedCount = 0;
-  int errorCount = 0;
-
-  for (final entry in currencyMap.entries) {
-    final language = entry.key;
-    final translation = entry.value;
-    final dataFileName =
-        "${language.codeShort.toLowerCase()}_currencies_l10n.data.dart";
-    final dataFile = File(join(dataDir.path, dataFileName));
-
-    if (!dataFile.existsSync()) continue;
-
-    try {
-      final result = _updateDataFile(dataFile, currencyCode, translation);
-      if (result) {
-        updatedCount += 1;
-        print("✓ Updated: $dataFileName");
-      }
-    } on Object catch (error) {
-      errorCount += 1;
-      print("✗ Error updating $dataFileName: $error");
-    }
-  }
-
-  print("\n--- Update Summary ---");
-  print("✓ Successfully updated: $updatedCount file(s)");
-  if (errorCount > 0) {
-    print("✗ Errors: $errorCount file(s)");
-  }
-
-  print("\n--- Running dart analyze ---");
-  final analyzeResult = Process.runSync(
-    "dart",
-    ["analyze", dataDir.path],
-    workingDirectory: Directory.current.path, // Dart 3.8 Formatting.
-  );
-
-  if (analyzeResult.exitCode == 0) {
-    print("✓ dart analyze completed successfully");
-  } else {
-    print("✗ dart analyze found issues:");
-    print(analyzeResult.stdout);
-    print(analyzeResult.stderr);
-    exit(1);
-  }
-  print("\n--- Running dart format ---");
-  Process.runSync(
-    "dart",
-    ["format", dataDir.path],
-    workingDirectory: Directory.current.path, // Dart 3.8 Formatting.
-  );
-
-  print("\n🎉 All done!");
+  print("Run `dart run :l10n_mapper currencies` if data files were added.");
 }
 
-// ignore_for_file: prefer-static-class, it's just a CLI utility function.
+const _keepEnglish = "--keep-english=";
+
+/// The whole `map.addAll({...});` block, its entries can span lines.
+final _mapRegExp = RegExp(r"map\.addAll\(\{([\s\S]*)\}\);");
+
+/// A `"CODE": "Name"` entry, the value may be wrapped onto the next line.
+final _entryRegExp = RegExp(r'"([A-Z0-9]+\+?)":\s*"((?:[^"\\]|\\.)*)"');
+
+/// Data files of the package by their locale (as in the `Provides ...` docs).
+Map<String, File> _dataFiles(Directory dataDir) {
+  final localeRegExp = RegExp("translations for the `([^`]+)` locale");
+  final files = <String, File>{};
+  final sorted = dataDir.listSync().whereType<File>().toList()
+    ..sort((a, b) => a.path.compareTo(b.path));
+  for (final file in sorted) {
+    final locale = localeRegExp.firstMatch(file.readAsStringSync())?.group(1);
+    if (locale != null) files[locale] = file;
+  }
+
+  return files;
+}
+
+/// The entries of a data file, with their values still escaped.
+Map<String, String> _entries(String content, String path) {
+  final body = _mapRegExp.firstMatch(content)?.group(1);
+  if (body == null) throw FormatException("No map.addAll block in $path");
+
+  return {
+    for (final match in _entryRegExp.allMatches(body))
+      match.group(1) ?? "": match.group(2) ?? "",
+  };
+}
+
+/// The data file content with sorted [entries] and their count in the docs.
+String _withEntries(String content, Map<String, String> entries) {
+  final sorted = entries.keys.toList()..sort();
+  final lines = sorted.map((key) => '      "$key": "${entries[key]}",');
+
+  return content
+      .replaceFirst(
+        RegExp(r"/// Contains \d+ translation\(s\)\."),
+        "/// Contains ${entries.length} translation(s).",
+      )
+      .replaceFirst(_mapRegExp, "map.addAll({\n${lines.join("\n")}\n    });");
+}
+
+/// Names from the ICU4C `curr/<locale>.txt` files, named like the locales.
+Map<String, String> _icuFileNames(String code, Set<String> locales) {
+  final found = <String, String>{};
+  for (final locale in locales) {
+    final file = File(join("json", "data", "$locale.txt"));
+    if (!file.existsSync()) continue;
+    final name = _extractCurrencyName(file, code);
+    if (name != null) found[locale] = name;
+  }
+
+  return found;
+}
+
 String? _extractCurrencyName(File file, String currencyCode) {
   final allLines = file.readAsLinesSync();
   for (int i = 0; i < allLines.length; i += 1) {
     final line = allLines[i].trim();
 
     if (line.startsWith("$currencyCode{")) {
-      if (i + 1 < allLines.length && i + 2 < allLines.length) {
+      if (i + 2 < allLines.length) {
         final nameLine = allLines[i + 2].trim();
         final match = RegExp('"([^"]+)"').firstMatch(nameLine);
         if (match != null) return match.group(1);
@@ -157,134 +169,99 @@ String? _extractCurrencyName(File file, String currencyCode) {
   return null;
 }
 
-/// Updates a .data.dart file by inserting a currency translation.
-///
-/// Maintains alphabetical order of currency codes.
-/// Returns true if successful, throws an error if currency already exists.
-bool _updateDataFile(File file, String currencyCode, String translation) {
-  final content = file.readAsStringSync();
-  if (content.contains(RegExp(r"map\.addAll\(\{[^}]+\}\);"))) {
-    return _updateSingleLineMap(file, content, currencyCode, translation);
-  }
-
-  final lines = content.split("\n");
-  int mapStartIndex = -1;
-  int mapEndIndex = -1;
-
-  for (int i = 0; i < lines.length; i += 1) {
-    if (lines[i].contains("map.addAll({")) {
-      mapStartIndex = i;
-    } else if (mapStartIndex != -1 && lines[i].trim() == "});") {
-      mapEndIndex = i;
-
-      break;
-    }
-  }
-
-  if (mapStartIndex == -1 || mapEndIndex == -1) {
-    throw Exception("Could not find map.addAll block");
-  }
-
-  final entries = <String, String>{};
-  for (int i = mapStartIndex + 1; i < mapEndIndex; i += 1) {
-    // ignore: avoid-similar-names, just a CLI utility function.
-    final line = lines[i].trim();
-    if (line.isEmpty || line.startsWith("//")) continue;
-
-    final match = RegExp(r'"([^"]+)":\s*"([^"]+)",?').firstMatch(line);
-    if (match != null) {
-      final code = match.group(1);
-      final name = match.group(2);
-
-      if (code == null || name == null) continue;
-      if (code == currencyCode) {
-        throw Exception(
-          "Currency $currencyCode already exists with value: $name\n"
-          "Please review manually if update is needed.",
-        );
-      }
-
-      entries[code] = name;
-    }
-  }
-  entries[currencyCode] = translation;
-  final sortedKeys = entries.keys.toList()..sort();
-  const indent = "      ";
-  final newMapLines = <String>[lines[mapStartIndex]];
-
-  for (final key in sortedKeys) {
-    newMapLines.add('$indent"$key": "${entries[key]}",');
-  }
-
-  newMapLines.add(lines[mapEndIndex]);
-  final newCount = entries.length;
-  for (int i = 0; i < lines.length; i += 1) {
-    if (lines[i].contains("/// Contains") &&
-        lines[i].contains("translation(s)")) {
-      lines[i] = "/// Contains $newCount translation(s).";
-
-      break;
-    }
-  }
-
-  final newLines = [
-    ...lines.sublist(0, mapStartIndex),
-    ...newMapLines,
-    ...lines.sublist(mapEndIndex + 1),
-  ];
-  file.writeAsStringSync(newLines.join("\n"));
-
-  return true;
-}
-
-/// Handles updating files with single-line map format.
-bool _updateSingleLineMap(
-  File file,
-  String content,
-  String currencyCode,
-  String translation,
+/// Names of all [codes] from the system ICU via Foundation, in one `swift`
+/// run. A non-English name equal to the English one is treated as missing,
+/// unless its locale is in [keepEnglish].
+Map<String, Map<String, String>> _systemIcuNames(
+  Set<String> codes,
+  Set<String> locales,
+  Set<String> keepEnglish,
 ) {
-  final mapMatch = RegExp(r"map\.addAll\(\{([^}]+)\}\);").firstMatch(content);
-  if (mapMatch == null) {
-    throw Exception("Could not parse single-line map");
+  const script = r"""
+import Foundation
+let args = Array(CommandLine.arguments.dropFirst())
+let codes = args[0].split(separator: ",").map(String.init)
+for identifier in args.dropFirst() {
+  let locale = Locale(identifier: identifier)
+  for code in codes {
+    if let name = locale.localizedString(forCurrencyCode: code) {
+      print("\(code)\t\(identifier)\t\(name)")
+    }
   }
-
-  final mapContent = mapMatch.group(1);
-  if (mapContent == null) throw Exception("Could not extract map content");
-
-  final entries = <String, String>{};
-  final entryPattern = RegExp(r'"([^"]+)":\s*"([^"]+)"');
-  for (final match in entryPattern.allMatches(mapContent)) {
-    final code = match.group(1);
-    final name = match.group(2);
-    if (code == null || name == null) continue;
-
-    if (code == currencyCode) {
-      throw Exception(
-        "Currency $currencyCode already exists with value: $name\n"
-        "Please review manually if update is needed.",
-      );
+}
+""";
+  final temp = Directory.systemTemp.createTempSync("currency_l10n_map");
+  try {
+    final file = File(join(temp.path, "names.swift"))
+      ..writeAsStringSync(script);
+    final result = Process.runSync("swift", [
+      file.path,
+      codes.join(","),
+      "en",
+      ...locales,
+    ]);
+    if (result.exitCode != 0) {
+      print("✗ swift failed:\n${result.stderr}");
+      exit(1);
     }
 
-    entries[code] = name;
+    final rows = [
+      for (final line in "${result.stdout}".split("\n"))
+        if (line.split("\t") case [final code, final locale, final name]
+            when name.toUpperCase() != code)
+          (code: code, locale: locale, name: name),
+    ];
+
+    return {
+      for (final code in codes)
+        code: _withoutEnglishFallback(
+          rows.where((row) => row.code == code),
+          keepEnglish,
+        ),
+    };
+  } finally {
+    temp.deleteSync(recursive: true);
   }
-
-  entries[currencyCode] = translation;
-  final sortedKeys = entries.keys.toList()..sort();
-  final newEntries = sortedKeys
-      .map((key) => '"$key": "${entries[key]}"')
-      .join(", ");
-  final newCount = entries.length;
-  final updatedContent = content
-      .replaceFirst(
-        RegExp(r"/// Contains \d+ translation\(s\)\."),
-        "/// Contains $newCount translation(s).",
-      )
-      .replaceFirst(
-        RegExp(r"map\.addAll\(\{[^}]+\}\);"),
-        "map.addAll({$newEntries});",
-      );
-  file.writeAsStringSync(updatedContent);
-
-  return true;
 }
+
+/// Names of one code by locale, without those that the system ICU fell back
+/// to English for: a non-English name equal to the English one, unless its
+/// locale is in [keepEnglish].
+Map<String, String> _withoutEnglishFallback(
+  Iterable<({String code, String locale, String name})> rows,
+  Set<String> keepEnglish,
+) {
+  final english = rows.where((row) => row.locale == "en").firstOrNull?.name;
+
+  return {
+    for (final row in rows)
+      if (row.locale.startsWith("en") ||
+          keepEnglish.contains(row.locale) ||
+          row.name != english)
+        row.locale: row.name,
+  };
+}
+
+/// Bundled names start with an uppercase letter, unless the locale keeps them
+/// lowercase (like the `i-` noun class prefix in Zulu).
+String _sentenceCase(String name, String locale, Iterable<String> values) {
+  final initials = values
+      .where((value) => value.isNotEmpty)
+      .map((value) => String.fromCharCode(value.runes.first));
+  final lowercase = initials.where((char) => char != char.toUpperCase());
+  if (lowercase.length * 2 > initials.length) return name;
+
+  final first = String.fromCharCode(name.runes.first);
+  final language = locale.split("_").first;
+  final upper = first == "i" && (language == "tr" || language == "az")
+      // ignore: avoid-non-ascii-symbols, the Turkish dotted capital I.
+      ? "İ"
+      : first.toUpperCase();
+
+  return upper + String.fromCharCodes(name.runes.skip(1));
+}
+
+String _escape(String value) => value
+    .replaceAll(r"\", r"\\")
+    .replaceAll('"', r'\"')
+    .replaceAll(r"$", r"\$");

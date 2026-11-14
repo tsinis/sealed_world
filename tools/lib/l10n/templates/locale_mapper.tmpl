@@ -1,0 +1,187 @@
+/// Provides {{item}} names translations for different locales.
+///
+/// **Important**: This mapper is designed for single-use only. Once [localize]
+/// is called, the mapper clears its internal data to free memory and cannot be
+/// reused. Attempting to call [localize] again on the same instance will throw
+/// an assertion error. Create a new instance if you need to localize again.
+// ignore: prefer-match-file-name, it's main library file.
+class {{mapper}} extends IsoLocaleMapper<IsoLocaleMapper<String>> {
+  /// Provides names translations for {{count}} locales, with the option to
+  /// add more translations via the [other] parameter.
+  {{mapper}}({Map<String, IsoLocaleMapper<String>>? other})
+    // ignore: avoid-non-empty-constructor-bodies,on purpose.
+    : _customLocales = other?.keys.toSet() {
+    if (other != null) map.addAll(other);
+  }
+
+  /// The symbol used to identify the alternative/full name of the ISO object.
+  static const symbol = "+";
+
+  /// Returns all available locale keys (both lazy and already instantiated).
+  ///
+  /// Built on first read rather than in the constructor: a mapper is single-use
+  /// and most callers never read this, so materializing the full locale set
+  /// eagerly would add cost to every [localize] call.
+  @override
+  // ignore: avoid-late-keyword, deferring this set is the point of the field.
+  late final availableLocales = {..._factories.keys, ...?_customLocales};
+
+  /// Locale keys supplied via the `other` constructor parameter, kept apart
+  /// from [map] so that [availableLocales] stays correct after consumption.
+  final Set<String>? _customLocales;
+
+  bool _isConsumed = false;
+
+  /// Whether an `l10n-<locale>=true` define names a locale of this package.
+  ///
+  /// If so, the mapper switches to "opt-in" mode: it keeps only the locales
+  /// enabled by their own define, plus the parent locales they fall back to.
+  /// Otherwise it keeps all locales, except those disabled with
+  /// `l10n-<locale>=false`. Defines of locales that this package does not
+  /// bundle (e.g. of another l10n_* package) are ignored.
+  // ignore: avoid-explicit-type-declaration, the inferred type is not obvious.
+  static const bool _hasAnyLocaleFilter =
+{{flags}};
+
+  /// Lazy factories — static final means this map is only created once,
+  /// and the tear-offs (.new) don't invoke constructors until called.
+  static final _factories = <String, IsoLocaleMapper<String> Function()>{
+{{factories}}
+  };
+
+  /// Localizes a set of ISO codes into names (to specified locale if needed).
+  ///
+  /// Parameters:
+  /// - [isoCodes]: Set of ISO codes to be localized.
+  /// - [altSymbol]: Optional symbol for alternative (full) name translations.
+{{altDoc}}  /// - [fallbackLocale]: Optional secondary locale for translations.
+  /// - [mainLocale]: Optional primary locale for translations.
+  /// - [useLanguageFallback]: Whether to also try the parent locales of the
+  /// specified ones (i.e. 'en_US' -> 'en', 'zh_Hant_TW' -> 'zh_Hant' -> 'zh').
+  /// - [formatter]: Optional callback to modify each translation.
+  ///
+  /// A locale is matched as given first, then normalized (`zh-hant-tw` ->
+  /// `zh_Hant_TW`). The returned map follows the lookup order: [mainLocale]
+  /// and its parents come before [fallbackLocale] and its parents, so the
+  /// first entry of an ISO code is its most specific translation.
+  ///
+  /// Returns a [Map] containing the localized names for the provided ISO
+  /// codes.
+  ///
+  /// Example:
+  /// ```dart
+  /// final mapper = {{mapper}}();
+  /// final map = mapper.localize({{example}}, mainLocale: 'en');
+  /// print(map);
+  /// ```
+  LocaleMap localize(
+    Set<String> isoCodes, {
+    String? altSymbol,
+    Object? fallbackLocale,
+    Object? mainLocale,
+    bool useLanguageFallback = true,
+    String Function(LocaleKey isoLocale, String l10n)? formatter,
+  }) {
+    assert(
+      !_isConsumed,
+      "A {{mapper}} was used after being consumed. "
+      "Once localize() is called, the mapper clears its internal data to free "
+      "memory and must not be reused. If you need to call localize() again, "
+      "create a new {{mapper}} instance.",
+    );
+
+    if (isoCodes.isEmpty) return const {};
+    final locale = mainLocale?.toString();
+    final altLocale = fallbackLocale?.toString();
+    final localeKeys = locale == null && altLocale == null
+        ? null
+        : {
+            if (locale != null)
+              ...LocaleFallback.chain(
+                locale,
+                useLanguageFallback: useLanguageFallback,
+              ),
+            if (altLocale != null)
+              ...LocaleFallback.chain(
+                altLocale,
+                useLanguageFallback: useLanguageFallback,
+              ),
+          };
+
+    if (localeKeys != null) {
+      for (final key in localeKeys) {
+        if (map.containsKey(key)) continue;
+        final maybeFactory = _factories[key];
+        if (maybeFactory != null) map[key] = maybeFactory();
+      }
+    }
+    final localeData = extract(localeKeys);
+
+    return switch (localeData.length) {
+      0 => const {},
+      1 => _fromSingle(
+        isoCodes,
+        localeData.entries.first,
+        altSymbol ?? symbol,
+        formatter,
+      ),
+      _ => _fromMultiple(isoCodes, localeData, altSymbol ?? symbol, formatter),
+    };
+  }
+
+  LocaleMap _fromSingle(
+    Set<String> codes,
+    MapEntry<String, IsoLocaleMapper<String>> localeEntry,
+    String altSymbol,
+    String Function(LocaleKey isoLocale, String l10n)? formatter,
+  ) {
+    final locale = localeEntry.key;
+    final translations = localeEntry.value.extract(codes, altSymbol: altSymbol);
+    final results = <LocaleKey, String>{};
+    for (final MapEntry(key: iso, value: l10n) in translations.entries) {
+      final isoLocale = (isoCode: iso, locale: locale);
+      results[isoLocale] = formatter?.call(isoLocale, l10n) ?? l10n;
+    }
+    _consume();
+
+    return UnmodifiableMapView(results);
+  }
+
+  LocaleMap _fromMultiple(
+    Set<String> codes,
+    Map<String, IsoLocaleMapper<String>> localesData,
+    String altSymbol,
+    String Function(LocaleKey isoLocale, String l10n)? formatter,
+  ) {
+    final results = <LocaleKey, String>{};
+
+    for (final MapEntry(key: locale, value: mapper) in localesData.entries) {
+      final translations = mapper.extract(codes, altSymbol: altSymbol);
+
+      for (final code in codes) {
+        final key = (isoCode: code, locale: locale);
+        final l10n = translations[code];
+        if (l10n != null && !results.containsKey(key)) {
+          results[key] = formatter?.call(key, l10n) ?? l10n;
+        }
+
+        final secondary = altKey(code, altSymbol);
+        if (secondary == null) continue;
+
+        final alternative = (isoCode: secondary, locale: locale);
+        final altL10n = translations[secondary];
+        if (altL10n != null && !results.containsKey(alternative)) {
+          results[alternative] = formatter?.call(key, altL10n) ?? altL10n;
+        }
+      }
+    }
+    _consume();
+
+    return UnmodifiableMapView(results);
+  }
+
+  void _consume() {
+    map.clear();
+    _isConsumed = true;
+  }
+}

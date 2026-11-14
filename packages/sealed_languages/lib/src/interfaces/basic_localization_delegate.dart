@@ -159,8 +159,9 @@ abstract class BasicLocalizationDelegate<
   ) =>
       mapper?.call().call(
         isoCodes.map((iso) => iso.code).toSet(),
-        altSymbol: options.localizeFullNames ? null : "",
+        altSymbol: options.localizeFullNames ? options.altSymbol : "",
         fallbackLocale: options.fallbackLocale?.toUnicodeLocaleId(),
+        formatter: options.formatter,
         mainLocale: options.mainLocale?.toUnicodeLocaleId(),
         useLanguageFallback: options.useLanguageFallback,
       ) ??
@@ -172,13 +173,15 @@ abstract class BasicLocalizationDelegate<
     LocaleMappingOptions<L> options,
   ) {
     final isoCode = entry.key.isoCode;
-    if (isoCode.endsWith(options.altSymbol)) return null;
+    final altSymbol = options.altSymbol;
+    // An empty symbol means no alternative names, but every code ends with it.
+    if (altSymbol.isNotEmpty && isoCode.endsWith(altSymbol)) return null;
 
     final basicLocale = parseLocale(entry.key.locale);
     if (basicLocale == null) return null;
 
-    final fullName = options.localizeFullNames
-        ? map[(isoCode: isoCode + options.altSymbol, locale: entry.key.locale)]
+    final fullName = options.localizeFullNames && altSymbol.isNotEmpty
+        ? map[(isoCode: isoCode + altSymbol, locale: entry.key.locale)]
         : null;
 
     return toTranslation(basicLocale, entry.value, fullName);

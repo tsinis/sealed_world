@@ -1,8 +1,6 @@
 analyzer:
-  language:
-    strict-casts: true
+  language: # `strict-casts` and `strict-raw-types` are now the lints below.
     strict-inference: true
-    strict-raw-types: true
 
   errors:
     # Info

@@ -62,6 +62,18 @@ jobs:
         working-directory: tools
         run: dart run bin/test_docs.dart ${{ inputs.package_name }}
 
+      - name: 🧬 Check generated l10n mapper is up to date
+        if: ${{ startsWith(inputs.package_name, 'l10n_') }}
+        working-directory: tools
+        run: |
+          dart run :l10n_mapper ${{ inputs.package_name }}
+          if [ -n "$(git status --porcelain -- ../${{ env.relative_path }})" ]; then
+            echo "::error::Run 'dart run :l10n_mapper ${{ inputs.package_name }}' in tools/ and commit the result."
+            git status --short -- ../${{ env.relative_path }}
+            git diff -- ../${{ env.relative_path }}
+            exit 1
+          fi
+
       - name: 🕵️ Analyze code
         uses: ValentinVignal/action-dart-analyze@v2.2
         if: ${{ github.event_name == 'pull_request' }}
@@ -122,6 +134,12 @@ jobs:
       - name: 🧪 Run Dart tests
         if: ${{ !inputs.is_flutter }}
         run: dart run coverage:test_with_coverage --fail-under=40 -- --file-reporter=json:build/test-report.json
+
+      - name: 🌳 Run l10n tree-shaking tests
+        if: ${{ startsWith(inputs.package_name, 'l10n_') }}
+        run: | # `dart test` can't pass defines, so run the test file directly.
+          dart run --enable-asserts -Dl10n-de=true test/${{ inputs.package_name }}_test.dart
+          dart test integration_test
 
       - name: 🔬 Run Flutter tests
         if: ${{ inputs.is_flutter }}

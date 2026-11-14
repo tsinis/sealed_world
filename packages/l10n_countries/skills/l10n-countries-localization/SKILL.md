@@ -40,7 +40,8 @@ The package has no dependencies and exposes `CountriesLocaleMapper`, `IsoLocaleM
 
 - **Always provide a fallback**: Specify `fallbackLocale` when working with user-selected or device locales to guarantee a valid translation if the requested locale is missing.
 - **ISO 3166-1 Alpha-3 code format only**: Pass three-letter uppercase ISO 3166-1 Alpha-3 country codes (e.g. `"USA"`, `"GBR"`, `"DEU"`, `"FRA"`). Alpha-2 (`"US"`) and numeric (`"840"`) codes are not bundled: they raise no error and are simply absent from the result.
-- **Automatic language subtag fallback**: By default, `useLanguageFallback: true` resolves country-specific locales (e.g. `"en_US"`) to their base language (`"en"`) if the regional variant is unavailable.
+- **Automatic locale fallback**: By default, `useLanguageFallback: true` also tries the parent locales of the requested one, most specific first: `"zh_Hant_TW"` → `"zh_Hant"` → `"zh"`, `"zh_TW"` → `"zh_Hant"`, `"pt_MO"` → `"pt_PT"` → `"pt"`, `"nn"` → `"no"`, `"fil"` → `"tl"`, skipping the locales this package doesn't bundle. Locales are normalized first, so `"zh-hant-tw"`, `"pt-PT"` and `"en_US.UTF-8"` match too.
+- **First entry wins**: The returned map follows the lookup order (the main locale and its parents, then the fallback locale and its parents), so the first entry of each ISO code is its most specific translation.
 
 ### Alternative Names & Formatting
 
@@ -50,9 +51,11 @@ The package has no dependencies and exposes `CountriesLocaleMapper`, `IsoLocaleM
 
 ### Tree-Shaking for Production Builds
 
-- **Strip unused locales at compile time**: Include only required locales using `--dart-define=l10n-<locale>=true` flags during compilation. When any `l10n-*` flag is present, all unspecified locales are tree-shaken from the binary.
-- **Always lowercase the flag suffix**: The define name is `l10n-` followed by the locale identifier **lowercased**, keeping underscores: `de_CH` becomes `l10n-de_ch`, `zh_Hant` becomes `l10n-zh_hant`, `zh_Hans_HK` becomes `l10n-zh_hans_hk`. A mismatched flag (such as `l10n-de_CH`) raises no error — the locale is silently stripped and its translations go missing at runtime.
-- **Include every fallback**: A flag list must also cover the locales passed as `fallbackLocale` and any base language relied upon by `useLanguageFallback`.
+- **Strip unused locales at compile time**: Include only required locales using `--dart-define=l10n-<locale>=true` flags during compilation. Once such a flag names a locale of this package, all its other locales are tree-shaken from the binary. To drop just a few locales instead, set them to false (`--dart-define=l10n-fr=false`).
+- **Flag spelling**: The define name is `l10n-` followed by the locale identifier, either lowercased (`l10n-sw_cd`, `l10n-bs_cyrl`) or spelled like the locale (`l10n-sw_CD`, `l10n-bs_Cyrl`). Any other spelling raises no error: the flag is ignored.
+- **Parent locales are kept automatically**: Enabling a regional or script locale also keeps the locales it falls back to (`l10n-sw_cd=true` keeps `sw`, `l10n-bs_cyrl=true` keeps `bs`), unless a parent is explicitly set to false.
+- **Include every fallback locale**: A flag list must still cover the locales passed as `fallbackLocale`.
+- **Flags are per package**: Only flags naming a locale bundled in this package switch it to opt-in mode. A flag list naming only locales that another l10n_* package bundles leaves every locale of this package in the build, so add a flag for a locale this package has (such as `l10n-en`).
 
 ### Custom Translations
 
@@ -164,7 +167,7 @@ Compile-time tree-shaking reduces application binary size by stripping unused lo
 **Flutter build:**
 
 ```console
-$ flutter build apk --dart-define=l10n-en=true --dart-define=l10n-de=true --dart-define=l10n-de_ch=true
+$ flutter build apk --dart-define=l10n-en=true --dart-define=l10n-de=true --dart-define=l10n-sw_cd=true
 ```
 
 **Dart CLI / Server:**

@@ -7,12 +7,16 @@ on:
       - "packages/**/*.dart"
       - "packages/**/*.yaml"
       - "packages/**/*.frag"
+      - "tools/bin/l10n_mapper.dart"
+      - "tools/lib/l10n/**"
   pull_request:
     branches: [main]
     paths:
       - "packages/**/*.dart"
       - "packages/**/*.yaml"
       - "packages/**/*.frag"
+      - "tools/bin/l10n_mapper.dart"
+      - "tools/lib/l10n/**"
       - ".github/workflows/verify_packages.yaml"
 
 permissions:
@@ -61,6 +65,12 @@ jobs:
               PACKAGES+=$'\n'$(grep -l "include: ../${CONFIG#packages/}" \
                 packages/*/analysis_options.yaml | cut -d'/' -f2 || true)
             done
+          fi
+
+          # The l10n_* mapper is generated from tools, so its generator and
+          # templates are checked (by regenerating) in every l10n_* package.
+          if git diff --name-only "$BASE_SHA...$HEAD_SHA" -- tools/bin/l10n_mapper.dart tools/lib/l10n | grep -q .; then
+            PACKAGES+=$'\n'$(find packages -mindepth 1 -maxdepth 1 -type d -name 'l10n_*' | cut -d'/' -f2)
           fi
 
           # A removed package has nothing left to verify.

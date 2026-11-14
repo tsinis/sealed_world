@@ -1,5 +1,10 @@
 include: ../packages/analysis_options.yaml
 
+analyzer:
+  exclude:
+    # Copied into the l10n_* packages (lower SDK constraint) and linted there.
+    - lib/l10n/templates/**
+
 linter:
   rules:
     public_member_api_docs: false

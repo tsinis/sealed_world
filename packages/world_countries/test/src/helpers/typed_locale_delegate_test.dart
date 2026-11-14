@@ -7,6 +7,7 @@ import "package:world_countries/src/helpers/typed_locale_delegate.dart";
 import "package:world_countries/src/model/iso/iso_collections.dart";
 import "package:world_countries/src/model/iso/iso_maps.dart";
 import "package:world_countries/src/model/locale/typed_locale.dart";
+import "package:world_countries/src/model/typedefs.dart";
 import "package:world_flags/world_flags.dart";
 
 import "../../helpers/widget_tester_extension.dart";
@@ -282,6 +283,121 @@ void main() => group("$TypedLocaleDelegate", () {
         const TypedLocale(LangDeu(), country: CountryChe()),
       ),
     );
+
+    group("localeMapResolution", () {
+      // Every branch of the resolution: the locale and the expected locale.
+      const defaults = [
+        // Exact entries.
+        (Locale("fil"), TypedLocale(LangTgl())),
+        (Locale("gsw"), TypedLocale(LangDeu(), country: CountryChe())),
+        (
+          Locale.fromSubtags(languageCode: "bs", scriptCode: "Cyrl"),
+          TypedLocale(LangSrp()),
+        ),
+        // The script entry, with the region of the locale.
+        (
+          Locale.fromSubtags(
+            languageCode: "bs",
+            scriptCode: "Cyrl",
+            countryCode: "BA",
+          ),
+          TypedLocale(LangSrp(), country: CountryBih()),
+        ),
+        // Other scripts and the language of a known language stay as they are.
+        (
+          Locale.fromSubtags(
+            languageCode: "bs",
+            scriptCode: "Latn",
+            countryCode: "BA",
+          ),
+          TypedLocale(LangBos(), script: ScriptLatn(), country: CountryBih()),
+        ),
+        (Locale("bs", "BA"), TypedLocale(LangBos(), country: CountryBih())),
+        // The language entry of an unknown language, with the locale subtags.
+        (Locale("fil", "PH"), TypedLocale(LangTgl(), country: CountryPhl())),
+        (Locale("fil", "419"), TypedLocale(LangTgl(), regionalCode: "419")),
+        (
+          Locale.fromSubtags(
+            languageCode: "fil",
+            scriptCode: "Latn",
+            countryCode: "PH",
+          ),
+          TypedLocale(LangTgl(), script: ScriptLatn(), country: CountryPhl()),
+        ),
+        // The region of an entry wins over the region of the locale.
+        (Locale("gsw", "AT"), TypedLocale(LangDeu(), country: CountryChe())),
+      ];
+
+      for (final (requested, expected) in defaults) {
+        test("resolves $requested to $expected", () async {
+          final resolved = await delegate.load(requested);
+
+          expect(resolved, expected);
+          expect(resolved?.country, expected.country, reason: "not a code");
+          expect(resolved?.script, expected.script);
+        });
+      }
+
+      test("prefers an exact entry to a language entry", () async {
+        const custom = TypedLocaleDelegate(
+          isoCollections: IsoCollections.selective(
+            localeMapResolution: [
+              LocaleEntry(Locale("fil"), TypedLocale(LangTgl())),
+              LocaleEntry(Locale("fil", "PH"), TypedLocale(LangEng())),
+            ],
+          ),
+        );
+
+        expect(
+          await custom.load(const Locale("fil", "PH")),
+          const TypedLocale(english),
+        );
+      });
+
+      test("keeps the script of the entry over the locale script", () async {
+        const custom = TypedLocaleDelegate(
+          isoCollections: IsoCollections.selective(
+            localeMapResolution: [
+              LocaleEntry(
+                Locale("fil"),
+                TypedLocale(LangTgl(), script: ScriptLatn()),
+              ),
+            ],
+          ),
+        );
+        final resolved = await custom.load(
+          const Locale.fromSubtags(
+            languageCode: "fil",
+            scriptCode: "Arab",
+            countryCode: "PH",
+          ),
+        );
+
+        expect(
+          resolved,
+          const TypedLocale(
+            LangTgl(),
+            script: ScriptLatn(),
+            country: CountryPhl(),
+          ),
+        );
+      });
+
+      test("ignores the language entry of a known language", () async {
+        const custom = TypedLocaleDelegate(
+          isoCollections: IsoCollections.selective(
+            localeMapResolution: [
+              LocaleEntry(Locale("en"), TypedLocale(LangDeu())),
+            ],
+          ),
+        );
+
+        expect(
+          await custom.load(const Locale("en", "US")),
+          const TypedLocale(english, country: CountryUsa()),
+        );
+      });
+    });
 
     test("falls back to default language on unsupported locale", () async {
       expect(delegate.toString(), contains("LangEng()"));

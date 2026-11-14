@@ -180,5 +180,16 @@ void main() => group("IsoTranslatedIterableExtension", () {
         expect(map.entries.single.value, "English");
       },
     );
+
+    test("applies the formatter of the options", () {
+      final map = const {LangDeu()}.commonNamesMap(
+        options: LocaleMappingOptions(
+          mainLocale: const BasicLocale(LangEng()),
+          formatter: (_, l10n) => l10n.toLowerCase(),
+        ),
+      );
+
+      expect(map.values.single, "german");
+    });
   });
 });

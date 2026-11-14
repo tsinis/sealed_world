@@ -12,7 +12,7 @@ extension FiatCurrencyFormat on FiatCurrency {
   /// When [isRtl] is `true`, the unit position is flipped to ensure correct
   /// display in right-to-left locales.
   // This is limitation of Dart language + breaking change.
-  // ignore: avoid_positional_boolean_parameters, prefer-named-boolean-parameters
+  // ignore: prefer-named-boolean-parameters
   String? tryFormat([num? maybeValue, bool isRtl = false]) =>
       maybeValue == null ? null : format(maybeValue, isRtl: isRtl);
 
