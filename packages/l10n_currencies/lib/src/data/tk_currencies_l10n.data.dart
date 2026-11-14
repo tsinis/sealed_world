@@ -1,6 +1,6 @@
 import "../iso_locale_mapper.dart";
 
-/// Contains 140 translation(s).
+/// Contains 142 translation(s).
 /// Provides translations for the Turkmen language
 /// locale.
 class TkCurrenciesL10N extends IsoLocaleMapper<String> {
@@ -72,6 +72,7 @@ class TkCurrenciesL10N extends IsoLocaleMapper<String> {
       "KHR": "Kamboja riýeli",
       "KMF": "Komor adalarynyň franky",
       "KPW": "Demirgazyk Koreý wony",
+      "KRW": "Günorta Koreý wony",
       "KWD": "Kuweýt dinary",
       "KYD": "Kaýman adalarynyň dollary",
       "KZT": "Gazak teňňesi",
@@ -134,6 +135,7 @@ class TkCurrenciesL10N extends IsoLocaleMapper<String> {
       "TOP": "Tonga paangasy",
       "TRY": "Türk lirasy",
       "TTD": "Trinidad we Tobago dollary",
+      "TWD": "Täze Taýwan dollary",
       "TZS": "Tanzaniýa şillingi",
       "UAH": "Ukrain griwnasy",
       "UGX": "Uganda şillingi",

@@ -1,6 +1,6 @@
 import "../iso_locale_mapper.dart";
 
-/// Contains 147 translation(s).
+/// Contains 149 translation(s).
 /// Provides translations for the Hausa language
 /// locale.
 class HaCurrenciesL10N extends IsoLocaleMapper<String> {
@@ -77,6 +77,7 @@ class HaCurrenciesL10N extends IsoLocaleMapper<String> {
       "KHR": "Riel na ƙasar Cambodia",
       "KMF": "Kuɗin Kwamoras",
       "KPW": "Won na ƙasar Koriya ta Arewa",
+      "KRW": "Won na Koriya ta Kudu",
       "KWD": "Dinarin Kuwaiti",
       "KYD": "Dalar ƙasar Tsibirai na Cayman",
       "KZT": "Tenge na ƙasar Kazkhstan",
@@ -138,6 +139,7 @@ class HaCurrenciesL10N extends IsoLocaleMapper<String> {
       "TOP": "Paʻanga na ƙasar Tonga",
       "TRY": "Kuɗin Turkiyya",
       "TTD": "Dalar ƙasar Trinidad da Tobago",
+      "TWD": "Sabuwar Dalar Taiwan",
       "TZS": "Sulen Tanzaniya",
       "UAH": "Kudin Ukrainian",
       "UGX": "Sule Yuganda",

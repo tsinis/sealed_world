@@ -1,6 +1,6 @@
 import "../iso_locale_mapper.dart";
 
-/// Contains 161 translation(s).
+/// Contains 170 translation(s).
 /// Provides translations for the Irish language
 /// locale.
 class GaCurrenciesL10N extends IsoLocaleMapper<String> {
@@ -159,10 +159,19 @@ class GaCurrenciesL10N extends IsoLocaleMapper<String> {
       "VUV": "Vatu Vanuatú",
       "WST": "Tala Shamó",
       "XAF": "Franc CFA na hAfraice Láir",
+      "XAG": "Airgead",
+      "XAU": "Ór",
+      "XBA": "Aonad Ilchodach Eorpach",
+      "XBB": "Aonad Airgeadaíochta Eorpach",
+      "XBC": "Aonad Cuntais Eorpach (XBC)",
+      "XBD": "Aonad Cuntais Eorpach (XBD)",
       "XCD": "Dollar na Cairibe Thoir",
       "XCG": "Gildear Chairib",
+      "XDR": "Cearta Speisialta Tarraingthe",
       "XOF": "Franc CFA Iarthar na hAfraice",
+      "XPD": "Pallaidiam",
       "XPF": "Franc CFP",
+      "XPT": "Platanam",
       "YER": "Rial Éimin",
       "ZAR": "Rand na hAfraice Theas",
       "ZMW": "Kwacha na Saimbia",

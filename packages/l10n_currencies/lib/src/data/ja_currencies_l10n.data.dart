@@ -1,6 +1,6 @@
 import "../iso_locale_mapper.dart";
 
-/// Contains 161 translation(s).
+/// Contains 171 translation(s).
 /// Provides translations for the Japanese language
 /// locale.
 class JaCurrenciesL10N extends IsoLocaleMapper<String> {
@@ -159,10 +159,20 @@ class JaCurrenciesL10N extends IsoLocaleMapper<String> {
       "VUV": "バヌアツ バツ",
       "WST": "サモア タラ",
       "XAF": "中央アフリカ CFA フラン",
+      "XAG": "銀",
+      "XAU": "金",
+      "XBA": "ヨーロッパ混合単位 (EURCO)",
+      "XBB": "ヨーロッパ通貨単位 (EMU–6)",
+      "XBC": "ヨーロッパ勘定単位 (EUA–9)",
+      "XBD": "ヨーロッパ勘定単位 (EUA–17)",
       "XCD": "東カリブ ドル",
       "XCG": "カリブ ギルダー",
+      "XDR": "特別引き出し権",
       "XOF": "西アフリカ CFA フラン",
+      "XPD": "パラジウム",
       "XPF": "CFP フラン",
+      "XPT": "プラチナ",
+      "XTS": "テスト用通貨コード",
       "YER": "イエメン リアル",
       "ZAR": "南アフリカ ランド",
       "ZMW": "ザンビア クワチャ",

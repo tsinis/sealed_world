@@ -1,6 +1,6 @@
 import "../iso_locale_mapper.dart";
 
-/// Contains 161 translation(s).
+/// Contains 164 translation(s).
 /// Provides translations for the Georgian language
 /// locale.
 class KaCurrenciesL10N extends IsoLocaleMapper<String> {
@@ -159,6 +159,9 @@ class KaCurrenciesL10N extends IsoLocaleMapper<String> {
       "VUV": "ვანუატუს ვატუ",
       "WST": "სამოური ტალა",
       "XAF": "ცენტრალურ აფრიკული CFA ფრანკი",
+      "XAG": "ვერცხლი",
+      "XBA": "ევროპული კომპპოზიტური ერთეული",
+      "XBB": "ევროპული ფულადი ერთეული",
       "XCD": "აღმოსავლეთ კარიბიული დოლარი",
       "XCG": "კარიბის გულდენი",
       "XOF": "(CFA) ფრანკი (BCEAO)",

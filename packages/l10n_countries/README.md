@@ -18,7 +18,7 @@ This ISO-driven, pure Dart, fully tested and dependency-free package provides CL
 
 - 193 locales supported out of the box.
 - Three-letter ISO 3166-1 Alpha-3 code lookup.
-- Fallback locale support.
+- Fallback locale support, including parent locales (e.g. `bs_Cyrl_BA` → `bs_Cyrl` → `bs`).
 - Alternative names and conditional formatting support.
 - Tree-shakable via dart define flags.
 
@@ -43,6 +43,7 @@ import 'package:l10n_countries/l10n_countries.dart';
 > [!TIP]
 > Tree-shakable builds can be achieved by providing dart define flags to exclude unused locales. For example, to include only EN and SK locales, use:
 > `dart run -Dl10n-en=true -Dl10n-sk=true` or `flutter run --dart-define=l10n-en=true --dart-define=l10n-sk=true`
+> Parent locales of the enabled ones are kept automatically (`l10n-sw_cd=true` also keeps `sw`), and `l10n-<locale>=false` drops a single locale. Only flags of locales bundled in this package switch it to this opt-in mode.
 
 ### Usage
 

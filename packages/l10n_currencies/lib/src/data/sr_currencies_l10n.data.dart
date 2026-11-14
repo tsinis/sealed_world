@@ -1,6 +1,6 @@
 import "../iso_locale_mapper.dart";
 
-/// Contains 161 translation(s).
+/// Contains 171 translation(s).
 /// Provides translations for the Serbian language
 /// locale.
 class SrCurrenciesL10N extends IsoLocaleMapper<String> {
@@ -159,10 +159,20 @@ class SrCurrenciesL10N extends IsoLocaleMapper<String> {
       "VUV": "Вануатски вату",
       "WST": "Самоанска тала",
       "XAF": "CFA франак BEAC",
+      "XAG": "Сребро",
+      "XAU": "Злато",
+      "XBA": "Европска композитна јединица",
+      "XBB": "Европска новчана јединица",
+      "XBC": "Европска јединица рачуна (XBC)",
+      "XBD": "Европска јединица рачуна (XBD)",
       "XCD": "Источнокарипски долар",
       "XCG": "Карипски гулден",
+      "XDR": "Посебна цртаћа права",
       "XOF": "ЦФА франак БЦЕАО",
+      "XPD": "Паладијум",
       "XPF": "CFP франак",
+      "XPT": "Платина",
+      "XTS": "Код тестиране валуте",
       "YER": "Јеменски ријал",
       "ZAR": "Јужноафрички ранд",
       "ZMW": "Замбијска квача",

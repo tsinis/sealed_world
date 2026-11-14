@@ -1,6 +1,6 @@
 import "../iso_locale_mapper.dart";
 
-/// Contains 136 translation(s).
+/// Contains 148 translation(s).
 /// Provides translations for the Kurdish language
 /// locale.
 class KuCurrenciesL10N extends IsoLocaleMapper<String> {
@@ -70,6 +70,7 @@ class KuCurrenciesL10N extends IsoLocaleMapper<String> {
       "KHR": "Rîelê kamboçyayî",
       "KMF": "Frankê komoranî",
       "KPW": "Wonê koreya bakurî",
+      "KRW": "Wonê koreya başûrî",
       "KWD": "Dînarê kuweytî",
       "KYD": "Dolarê giravên keymanî",
       "KZT": "Tengeyê qazaxistanî",
@@ -130,6 +131,7 @@ class KuCurrenciesL10N extends IsoLocaleMapper<String> {
       "TND": "Dînarê tûnisî",
       "TOP": "Paʻangayê tonganî",
       "TTD": "Dolarê trinidad û tobagoyî",
+      "TWD": "Dolarê taywanî",
       "TZS": "Şîlîngê tanzanî",
       "UAH": "Grîvnayê ûkraynî",
       "UGX": "Şîlîngê ûgandayî",
@@ -138,7 +140,17 @@ class KuCurrenciesL10N extends IsoLocaleMapper<String> {
       "VES": "Bolîvarê venezuelayî",
       "VUV": "Vatûyê vanûatûyî",
       "WST": "Talayê somonî",
+      "XAG": "Zîv",
+      "XAU": "Zêr",
+      "XBA": "Yekeya Yekgirtî ya Ewropî",
+      "XBB": "Yekeya Pereyê ya Ewropî",
+      "XBC": "Yekeya Hesabê ya Ewropî (XBC)",
+      "XBD": "Yekeya Hesabê ya Ewropî (XBD)",
       "XCG": "Guldenê karayîbî",
+      "XDR": "Heqê Kişandinê yê Xisûsî",
+      "XPD": "Paladyûm",
+      "XPT": "Platîn",
+      "XTS": "Yekeya Pereyê ya Testê",
       "YER": "Riyalê yemenî",
       "ZAR": "Randê afrîkaya başûrî",
       "ZMW": "Kwaçayê zambiyayî",

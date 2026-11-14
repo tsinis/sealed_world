@@ -1,6 +1,6 @@
 import "../iso_locale_mapper.dart";
 
-/// Contains 11 translation(s).
+/// Contains 13 translation(s).
 /// Provides translations for the Yiddish language
 /// locale.
 class YiCurrenciesL10N extends IsoLocaleMapper<String> {
@@ -18,6 +18,8 @@ class YiCurrenciesL10N extends IsoLocaleMapper<String> {
       "RUB": "רוסישער רובל",
       "SEK": "שוועדישע קראנע",
       "USD": "אמעריקאנער דאלאר",
+      "XAG": "זילבער",
+      "XAU": "גאלד",
     });
   }
 }

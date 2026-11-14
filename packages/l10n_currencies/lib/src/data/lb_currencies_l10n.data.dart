@@ -1,6 +1,6 @@
 import "../iso_locale_mapper.dart";
 
-/// Contains 161 translation(s).
+/// Contains 171 translation(s).
 /// Provides translations for the Luxembourgish (Letzeburgesch) language
 /// locale.
 class LbCurrenciesL10N extends IsoLocaleMapper<String> {
@@ -159,10 +159,20 @@ class LbCurrenciesL10N extends IsoLocaleMapper<String> {
       "VUV": "Vanuatu-Vatu",
       "WST": "Samoaneschen Tala",
       "XAF": "CFA-Frang (BEAC)",
+      "XAG": "Onze Sëlwer",
+      "XAU": "Onze Gold",
+      "XBA": "Europäesch Rechnungseenheet",
+      "XBB": "Europäesch Währungseenheet (XBB)",
+      "XBC": "Europäesch Rechnungseenheet (XBC)",
+      "XBD": "Europäesch Rechnungseenheet (XBD)",
       "XCD": "Ostkaribeschen Dollar",
       "XCG": "Karibesche Gulden",
+      "XDR": "Sonnerzéiungsrecht",
       "XOF": "CFA-Frang (BCEAO)",
+      "XPD": "Onz Palladium",
       "XPF": "CFP-Frang",
+      "XPT": "Onz Platin",
+      "XTS": "Testwährung",
       "YER": "Jemen-Rial",
       "ZAR": "Südafrikanesche Rand",
       "ZMW": "Kwacha",

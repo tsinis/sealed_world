@@ -1,6 +1,6 @@
 import "../iso_locale_mapper.dart";
 
-/// Contains 161 translation(s).
+/// Contains 162 translation(s).
 /// Provides translations for the Icelandic language
 /// locale.
 class IsCurrenciesL10N extends IsoLocaleMapper<String> {
@@ -161,6 +161,7 @@ class IsCurrenciesL10N extends IsoLocaleMapper<String> {
       "XAF": "Miðafrískur franki",
       "XCD": "Austurkarabískur dalur",
       "XCG": "Karíbahafsgyllini",
+      "XDR": "Sérstök dráttarréttindi",
       "XOF": "Vesturafrískur franki",
       "XPF": "Pólýnesískur franki",
       "YER": "Jemenskt ríal",

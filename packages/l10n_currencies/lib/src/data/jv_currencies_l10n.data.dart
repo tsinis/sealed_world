@@ -1,6 +1,6 @@
 import "../iso_locale_mapper.dart";
 
-/// Contains 136 translation(s).
+/// Contains 138 translation(s).
 /// Provides translations for the Javanese language
 /// locale.
 class JvCurrenciesL10N extends IsoLocaleMapper<String> {
@@ -69,6 +69,7 @@ class JvCurrenciesL10N extends IsoLocaleMapper<String> {
       "KHR": "Riel Kamboja",
       "KMF": "Franc Komoro",
       "KPW": "Won Korea Lor",
+      "KRW": "Won Korea Kidul",
       "KWD": "Dinar Kuwait",
       "KYD": "Dolar Kepuloan Caiman",
       "KZT": "Tenge Kasakhstan",
@@ -130,6 +131,7 @@ class JvCurrenciesL10N extends IsoLocaleMapper<String> {
       "TOP": "Paʻanga Tonga",
       "TRY": "Lira Turki",
       "TTD": "Dolar Trinidad lan Tobago",
+      "TWD": "Dolar Anyar Taiwan",
       "TZS": "Shilling Tansania",
       "UAH": "Hryvnia Ukrania",
       "UGX": "Shilling Uganda",

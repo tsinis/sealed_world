@@ -1,6 +1,6 @@
 import "../iso_locale_mapper.dart";
 
-/// Contains 161 translation(s).
+/// Contains 171 translation(s).
 /// Provides translations for the Czech language
 /// locale.
 class CsCurrenciesL10N extends IsoLocaleMapper<String> {
@@ -159,10 +159,20 @@ class CsCurrenciesL10N extends IsoLocaleMapper<String> {
       "VUV": "Vanuatský vatu",
       "WST": "Samojská tala",
       "XAF": "CFA/BEAC frank",
+      "XAG": "Stříbro",
+      "XAU": "Zlato",
+      "XBA": "Evropská smíšená jednotka",
+      "XBB": "Evropská peněžní jednotka",
+      "XBC": "Evropská jednotka účtu 9 (XBC)",
+      "XBD": "Evropská jednotka účtu 17 (XBD)",
       "XCD": "Východokaribský dolar",
       "XCG": "Karibský gulden",
+      "XDR": "SDR",
       "XOF": "CFA/BCEAO frank",
+      "XPD": "Palladium",
       "XPF": "CFP frank",
+      "XPT": "Platina",
+      "XTS": "Kód zvlášť vyhrazený pro testovací účely",
       "YER": "Jemenský rijál",
       "ZAR": "Jihoafrický rand",
       "ZMW": "Zambijská kwacha",

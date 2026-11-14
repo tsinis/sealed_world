@@ -1,6 +1,6 @@
 import "../iso_locale_mapper.dart";
 
-/// Contains 161 translation(s).
+/// Contains 166 translation(s).
 /// Provides translations for the Persian (Farsi) language
 /// locale.
 class FaCurrenciesL10N extends IsoLocaleMapper<String> {
@@ -159,10 +159,15 @@ class FaCurrenciesL10N extends IsoLocaleMapper<String> {
       "VUV": "واتوی وانوواتو",
       "WST": "تالای ساموا",
       "XAF": "فرانک CFA مرکز افریقا",
+      "XAG": "نقره",
+      "XAU": "طلا",
       "XCD": "دلار شرق کارائیب",
       "XCG": "گیلدر کارائیب",
       "XOF": "فرانک CFA غرب افریقا",
+      "XPD": "پالادیم",
       "XPF": "فرانک اقیانوسیه",
+      "XPT": "پلاتین",
+      "XTS": "ارز آزمایشی",
       "YER": "ریال یمن",
       "ZAR": "راند افریقای جنوبی",
       "ZMW": "کواچای زامبیا",

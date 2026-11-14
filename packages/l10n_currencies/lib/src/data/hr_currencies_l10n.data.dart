@@ -1,6 +1,6 @@
 import "../iso_locale_mapper.dart";
 
-/// Contains 161 translation(s).
+/// Contains 171 translation(s).
 /// Provides translations for the Croatian language
 /// locale.
 class HrCurrenciesL10N extends IsoLocaleMapper<String> {
@@ -159,10 +159,20 @@ class HrCurrenciesL10N extends IsoLocaleMapper<String> {
       "VUV": "Vanuatski vatu",
       "WST": "Samoanska tala",
       "XAF": "CFA franak BEAC",
+      "XAG": "Srebro",
+      "XAU": "Zlato",
+      "XBA": "Europska složena jedinica",
+      "XBB": "Europska monetarna jedinica",
+      "XBC": "Europska obračunska jedinica (XBC)",
+      "XBD": "Europska obračunska jedinica (XBD)",
       "XCD": "Istočnokaripski dolar",
       "XCG": "Karipski gulden",
+      "XDR": "Posebna crtaća prava",
       "XOF": "CFA franak BCEAO",
+      "XPD": "Paladij",
       "XPF": "CFP franak",
+      "XPT": "Platina",
+      "XTS": "Ispitni kod valute",
       "YER": "Jemenski rial",
       "ZAR": "Južnoafrički rand",
       "ZMW": "Zambijska kvača",

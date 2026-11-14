@@ -1,6 +1,6 @@
 import "../iso_locale_mapper.dart";
 
-/// Contains 3 translation(s).
+/// Contains 5 translation(s).
 /// Provides translations for the Northern Sami language
 /// locale.
 class SeCurrenciesL10N extends IsoLocaleMapper<String> {
@@ -10,6 +10,8 @@ class SeCurrenciesL10N extends IsoLocaleMapper<String> {
       "EUR": "Euro",
       "NOK": "Norgga kruvdno",
       "SEK": "Ruoŧŧa kruvdno",
+      "XAG": "Uns silba",
+      "XAU": "Uns golli",
     });
   }
 }

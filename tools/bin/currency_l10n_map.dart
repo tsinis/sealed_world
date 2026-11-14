@@ -39,6 +39,11 @@ void main(List<String> args) {
     print("Example: dart run :currency_l10n_map ZWG XCG --system");
     exit(64);
   }
+  if (!useSystemIcu && !Directory(_icuDataPath).existsSync()) {
+    print("Error: ICU directory not found at $_icuDataPath.");
+    print("Add the ICU4C curr/<locale>.txt files there, or pass --system.");
+    exit(1);
+  }
 
   final dataDir = Directory(
     join("..", "packages", "l10n_currencies", "lib", "src", "data"),
@@ -93,6 +98,9 @@ void main(List<String> args) {
 
 const _keepEnglish = "--keep-english=";
 
+/// The ICU4C `curr/<locale>.txt` files, relative to the `tools` directory.
+const _icuDataPath = "json/data";
+
 /// The whole `map.addAll({...});` block, its entries can span lines.
 final _mapRegExp = RegExp(r"map\.addAll\(\{([\s\S]*)\}\);");
 
@@ -141,7 +149,7 @@ String _withEntries(String content, Map<String, String> entries) {
 Map<String, String> _icuFileNames(String code, Set<String> locales) {
   final found = <String, String>{};
   for (final locale in locales) {
-    final file = File(join("json", "data", "$locale.txt"));
+    final file = File(join(_icuDataPath, "$locale.txt"));
     if (!file.existsSync()) continue;
     final name = _extractCurrencyName(file, code);
     if (name != null) found[locale] = name;

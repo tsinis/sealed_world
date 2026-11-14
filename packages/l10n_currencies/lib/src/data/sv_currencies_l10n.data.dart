@@ -1,6 +1,6 @@
 import "../iso_locale_mapper.dart";
 
-/// Contains 161 translation(s).
+/// Contains 171 translation(s).
 /// Provides translations for the Swedish language
 /// locale.
 class SvCurrenciesL10N extends IsoLocaleMapper<String> {
@@ -159,10 +159,20 @@ class SvCurrenciesL10N extends IsoLocaleMapper<String> {
       "VUV": "Vanuatisk vatu",
       "WST": "Västsamoansk tala",
       "XAF": "Centralafrikansk franc",
+      "XAG": "Silver",
+      "XAU": "Guld",
+      "XBA": "Europeisk kompositenhet",
+      "XBB": "Europeisk monetär enhet",
+      "XBC": "Europeisk kontoenhet (XBC)",
+      "XBD": "Europeisk kontoenhet (XBD)",
       "XCD": "Östkaribisk dollar",
       "XCG": "Karibisk gulden",
+      "XDR": "IMF särskild dragningsrätt",
       "XOF": "Västafrikansk franc",
+      "XPD": "Palladium",
       "XPF": "CFP-franc",
+      "XPT": "Platina",
+      "XTS": "Testvalutaenhet",
       "YER": "Jemenitisk rial",
       "ZAR": "Sydafrikansk rand",
       "ZMW": "Zambisk kwacha",

@@ -1,6 +1,6 @@
 import "../iso_locale_mapper.dart";
 
-/// Contains 52 translation(s).
+/// Contains 53 translation(s).
 /// Provides translations for the Chinese language
 /// and `HK` country/region code locale.
 class ZhHkCurrenciesL10N extends IsoLocaleMapper<String> {
@@ -59,6 +59,7 @@ class ZhHkCurrenciesL10N extends IsoLocaleMapper<String> {
       "XOF": "多哥非洲共同體法郎",
       "YER": "也門里亞爾",
       "ZMW": "贊比亞克瓦查",
+      "ZWG": "津布巴韋金",
     });
   }
 }

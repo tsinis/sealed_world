@@ -1,6 +1,6 @@
 import "../iso_locale_mapper.dart";
 
-/// Contains 161 translation(s).
+/// Contains 171 translation(s).
 /// Provides translations for the Vietnamese language
 /// locale.
 class ViCurrenciesL10N extends IsoLocaleMapper<String> {
@@ -159,10 +159,20 @@ class ViCurrenciesL10N extends IsoLocaleMapper<String> {
       "VUV": "Vatu Vanuatu",
       "WST": "Tala Samoa",
       "XAF": "Franc CFA Trung Phi",
+      "XAG": "Bạc",
+      "XAU": "Vàng",
+      "XBA": "Đơn vị Tổng hợp Châu Âu",
+      "XBB": "Đơn vị Tiền tệ Châu Âu",
+      "XBC": "Đơn vị Kế toán Châu Âu (XBC)",
+      "XBD": "Đơn vị Kế toán Châu Âu (XBD)",
       "XCD": "Đô la Đông Caribê",
       "XCG": "Đồng Guilder Caribe",
+      "XDR": "Quyền Rút vốn Đặc biệt",
       "XOF": "Franc CFA Tây Phi",
+      "XPD": "Paladi",
       "XPF": "Franc CFP",
+      "XPT": "Bạch kim",
+      "XTS": "Mã Tiền tệ Kiểm tra",
       "YER": "Rial Yemen",
       "ZAR": "Rand Nam Phi",
       "ZMW": "Kwacha Zambia",

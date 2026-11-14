@@ -1,6 +1,6 @@
 import "../iso_locale_mapper.dart";
 
-/// Contains 149 translation(s).
+/// Contains 159 translation(s).
 /// Provides translations for the Kashmiri language
 /// locale.
 class KsCurrenciesL10N extends IsoLocaleMapper<String> {
@@ -150,9 +150,19 @@ class KsCurrenciesL10N extends IsoLocaleMapper<String> {
       "VUV": "وَنوٗاَتوٗ وَتوٗ",
       "WST": "سَمون تَلا",
       "XAF": "سی ایٚف اے فرینک بی ایٖ اے سی",
+      "XAG": "رۄپھ",
+      "XAU": "سۄن",
+      "XBA": "یوٗرپی کَمپوسِٹ یوٗنِٹ",
+      "XBB": "یوٗرپی مونِٹَری یوٗنِٹ",
+      "XBC": "یوٗرپی یوٗنِٹ آف ایکاوُنٹ (ایکس بی سی)",
+      "XBD": "یوٗرپی یوٗنِٹ آف ایکاوُنٹ (ایکس بی ڈی)",
       "XCD": "مَشرِقی کیرِبِیَن ڈالَر",
+      "XDR": "خاص ڈرایِنگ رایٹس",
       "XOF": "سی ایٚف اے فرینک بی سی ایٖ اے او",
+      "XPD": "پُلیڈیَم",
       "XPF": "سی ایٚف پی فرینک",
+      "XPT": "پلیٹِنَم",
+      "XTS": "ٹیسٹِنگ کَرَنسی کوڈ",
       "YER": "یَمنُک رِیال",
       "ZAR": "ساوُتھ افریٖکاہُک رینڈ",
       "ZMW": "زِمبابیُک کواچا",

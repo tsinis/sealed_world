@@ -1,6 +1,6 @@
 import "../iso_locale_mapper.dart";
 
-/// Contains 52 translation(s).
+/// Contains 54 translation(s).
 /// Provides translations for the Akan language
 /// locale.
 class AkCurrenciesL10N extends IsoLocaleMapper<String> {
@@ -30,6 +30,7 @@ class AkCurrenciesL10N extends IsoLocaleMapper<String> {
       "JPY": "Gyapan Yɛn",
       "KES": "Kenya Hyelen",
       "KMF": "Komoro Frank",
+      "KRW": "Korea Anaafoɔ won",
       "LRD": "Laeberia Dɔla",
       "LSL": "Lesoto Loti",
       "LYD": "Libya Dina",
@@ -51,6 +52,7 @@ class AkCurrenciesL10N extends IsoLocaleMapper<String> {
       "STN": "Sao Tome ne Principe Dobra",
       "SZL": "Lilangeni",
       "TND": "Tunisia Dina",
+      "TWD": "Taewanfoɔ dɔla foforɔ",
       "TZS": "Tanzania Hyelen",
       "UGX": "Uganda Hyelen",
       "USD": "Amɛrika Dɔla",

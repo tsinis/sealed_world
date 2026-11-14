@@ -1,6 +1,6 @@
 import "../iso_locale_mapper.dart";
 
-/// Contains 66 translation(s).
+/// Contains 70 translation(s).
 /// Provides translations for the Portuguese language
 /// and `PT` country/region code locale.
 class PtPtCurrenciesL10N extends IsoLocaleMapper<String> {
@@ -35,6 +35,7 @@ class PtPtCurrenciesL10N extends IsoLocaleMapper<String> {
       "HNL": "Lempira das Honduras",
       "KGS": "Som do Quirguistão",
       "KMF": "Franco comoriano",
+      "KRW": "Won sul-coreano",
       "KYD": "Dólar das Ilhas Caimão",
       "KZT": "Tenge do Cazaquistão",
       "LAK": "Kip de Laos",
@@ -66,13 +67,16 @@ class PtPtCurrenciesL10N extends IsoLocaleMapper<String> {
       "TND": "Dinar tunisino",
       "TOP": "Paʻanga de Tonga",
       "TTD": "Dólar de Trindade e Tobago",
+      "TWD": "Novo dólar taiwanês",
       "UAH": "Hryvnia da Ucrânia",
       "USD": "Dólar dos Estados Unidos",
       "UZS": "Som do Uzbequistão",
       "VUV": "Vatu de Vanuatu",
       "XAF": "Franco CFA (BEAC)",
       "XCD": "Dólar das Caraíbas Orientais",
+      "XCG": "Florim caribenho",
       "XOF": "Franco CFA (BCEAO)",
+      "ZWG": "Ouro zimbabuense",
     });
   }
 }

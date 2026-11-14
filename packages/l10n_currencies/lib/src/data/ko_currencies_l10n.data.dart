@@ -1,6 +1,6 @@
 import "../iso_locale_mapper.dart";
 
-/// Contains 161 translation(s).
+/// Contains 171 translation(s).
 /// Provides translations for the Korean language
 /// locale.
 class KoCurrenciesL10N extends IsoLocaleMapper<String> {
@@ -159,10 +159,20 @@ class KoCurrenciesL10N extends IsoLocaleMapper<String> {
       "VUV": "바누아투 바투",
       "WST": "서 사모아 탈라",
       "XAF": "중앙아프리카 CFA 프랑",
+      "XAG": "은화",
+      "XAU": "금",
+      "XBA": "유르코 (유럽 회계 단위)",
+      "XBB": "유럽 통화 동맹",
+      "XBC": "유럽 계산 단위 (XBC)",
+      "XBD": "유럽 계산 단위 (XBD)",
       "XCD": "동카리브 달러",
       "XCG": "카리브 길더",
+      "XDR": "특별인출권",
       "XOF": "서아프리카 CFA 프랑",
+      "XPD": "팔라듐",
       "XPF": "CFP 프랑",
+      "XPT": "백금",
+      "XTS": "테스트 통화 코드",
       "YER": "예멘 리알",
       "ZAR": "남아프리카 랜드",
       "ZMW": "잠비아 콰쳐",
