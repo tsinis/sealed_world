@@ -6,8 +6,8 @@ FIX
 - `translatedNames` passes a custom `LocaleMappingOptions.altSymbol` to the mapper, so alternative names marked with a symbol other than `"+"` are found.
 - `translatedNames` with an empty `LocaleMappingOptions.altSymbol` returns the common names instead of an empty list.
 - `LocaleMappingOptions.toString()` separates `fallbackLocale` and `mainLocale` with commas, it printed `"+", , fallbackLocale: "en"localizeFullNames`.
-- `parseLocale` accepts three-digit UN M49 regions (`es_419`) and ignores a POSIX encoding or modifier (`de_DE.UTF-8`, `ca_ES@valencia`), it returned `null` for the whole locale. So `translatedNames` no longer drops the translations of such locales either.
-- `parseLocale` only accepts ASCII letters in the language, script and region subtags, and a non-empty POSIX suffix: `en_日本` and `en.` are no longer parsed as locales.
+- `parseLocale` accepts three-digit UN M49 regions (`es_419`) and ignores a non-empty POSIX encoding, modifier or both (`de_DE.UTF-8`, `ca_ES@valencia`, `ca_ES.UTF-8@valencia`), it returned `null` for the whole locale. So `translatedNames` no longer drops the translations of such locales either.
+- `parseLocale` only accepts ASCII letters in the language, script and region subtags: `en_日本` is no longer parsed as a locale.
 - `isConstructed` checks whether the `family` is `Constructed`, so it is also `true` for copies (`copyWith`) and custom constructed languages, not only for the five bundled instances.
 
 Inherited from `l10n_languages` 2.3.0:

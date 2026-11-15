@@ -464,6 +464,13 @@ void main() => group("$LocalizationDelegate", () {
         "ignores POSIX encoding without region",
         () => expect(parser.parseLocale("en.UTF-8")?.language, language),
       );
+
+      test("ignores POSIX encoding with modifier", () {
+        final result = parser.parseLocale("en_US.UTF-8@euro");
+
+        expect(result?.language, equals(language));
+        expect(result?.countryCode, equals(countryCode));
+      });
     });
 
     group("case sensitivity", () {
@@ -552,6 +559,21 @@ void main() => group("$LocalizationDelegate", () {
       test(
         "rejects empty POSIX modifier",
         () => expect(parser.parseLocale("en@"), isNull),
+      );
+
+      test(
+        "rejects empty POSIX modifier after encoding",
+        () => expect(parser.parseLocale("en_US.UTF-8@"), isNull),
+      );
+
+      test(
+        "rejects empty POSIX encoding before modifier",
+        () => expect(parser.parseLocale("en_US.@valencia"), isNull),
+      );
+
+      test(
+        "rejects POSIX modifier before encoding",
+        () => expect(parser.parseLocale("en_US@euro.UTF-8"), isNull),
       );
 
       test(

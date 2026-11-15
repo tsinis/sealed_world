@@ -45,11 +45,12 @@ abstract class BasicLocalizationDelegate<
   /// Matches a language subtag, an optional script subtag and an optional
   /// region subtag (all ASCII), separated by `_`, `-` or whitespace. The region
   /// is either an alphabetic code (`US`, `USA`) or a three-digit UN M49 code
-  /// (`419`). A trailing POSIX encoding or modifier (`.UTF-8`, `@valencia`) is
-  /// ignored. Variant subtags (such as `POSIX` in `en_US_POSIX`) are not
-  /// supported.
+  /// (`419`). A trailing POSIX encoding, modifier or both, in that order
+  /// (`.UTF-8`, `@valencia`, `.UTF-8@valencia`), are ignored, but each of them
+  /// must not be empty. Variant subtags (such as `POSIX` in `en_US_POSIX`) are
+  /// not supported.
   static const unicodeLocale =
-      r"^([a-zA-Z]{2,3})(?:[_\s-]+(?:([a-zA-Z]{4})(?:[_\s-]+([a-zA-Z]{2,3}|\d{3}))?|([a-zA-Z]{2,3}|\d{3})))?(?:[.@]\S+)?$";
+      r"^([a-zA-Z]{2,3})(?:[_\s-]+(?:([a-zA-Z]{4})(?:[_\s-]+([a-zA-Z]{2,3}|\d{3}))?|([a-zA-Z]{2,3}|\d{3})))?(?:\.[^\s.@]+)?(?:@[^\s.@]+)?$";
 
   /// {@macro copy_with_method}
   BasicLocalizationDelegate<L, T> copyWith({
