@@ -1,0 +1,8 @@
+# Bulk changes that `git blame` should skip. GitHub reads this file from the
+# repository root only. To use it locally, run once:
+# git config blame.ignoreRevsFile .git-blame-ignore-revs
+
+# perf(l10n): initialize generated maps through super constructors
+e5c56dab17d46b703d66469c1f8d6180c0f57119
+# refactor: migrate constructors to dart 3.13 syntax
+0482ae0ae155d5bf408747007807b95ec83e8c6b
