@@ -1,7 +1,7 @@
 part of "../../model/language/submodels/natural_language.dart";
 
 extension type const _LatFactory._(LangLat _) implements LangLat {
-  const _LatFactory() : this._(const LangLat._());
+  const new() : this._(const LangLat._());
 }
 
 /// A class that represents the Latin language.
@@ -11,9 +11,9 @@ final class LangLat extends NaturalLanguage {
   ///
   /// ISO 639-2/T code: `LAT`, ISO 639-1 code: `LA`.
   /// {@endtemplate}
-  const factory LangLat() = _LatFactory;
+  const factory() = _LatFactory;
 
-  const LangLat._()
+  const new _()
     : super._(
         name: "Latin",
         code: "LAT",

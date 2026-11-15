@@ -1,7 +1,7 @@
 part of "../../model/language/submodels/natural_language.dart";
 
 extension type const _LinFactory._(LangLin _) implements LangLin {
-  const _LinFactory() : this._(const LangLin._());
+  const new() : this._(const LangLin._());
 }
 
 /// A class that represents the Lingala language.
@@ -11,9 +11,9 @@ final class LangLin extends NaturalLanguage {
   ///
   /// ISO 639-2/T code: `LIN`, ISO 639-1 code: `LN`.
   /// {@endtemplate}
-  const factory LangLin() = _LinFactory;
+  const factory() = _LinFactory;
 
-  const LangLin._()
+  const new _()
     : super._(
         name: "Lingala",
         code: "LIN",

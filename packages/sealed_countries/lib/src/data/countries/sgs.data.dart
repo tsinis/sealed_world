@@ -7,7 +7,7 @@
 part of "../../model/country/submodels/world_country.dart";
 
 extension type const _SgsFactory._(CountrySgs _) implements CountrySgs {
-  const _SgsFactory() : this._(const CountrySgs._());
+  const new() : this._(const CountrySgs._());
 }
 
 /// A class that represents the South Georgia country.
@@ -17,9 +17,9 @@ class CountrySgs extends WorldCountry {
   ///
   /// ISO 3166-1 Alpha-3 code: `SGS`, ISO 3166-1 Alpha-2 code: `GS`.
   /// {@endtemplate}
-  const factory CountrySgs() = _SgsFactory;
+  const factory() = _SgsFactory;
 
-  const CountrySgs._()
+  const new _()
     : super._(
         name: const CountryName(
           language: LangEng(),

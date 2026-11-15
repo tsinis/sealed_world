@@ -1,7 +1,7 @@
 part of "../../model/language/submodels/natural_language.dart";
 
 extension type const _FulFactory._(LangFul _) implements LangFul {
-  const _FulFactory() : this._(const LangFul._());
+  const new() : this._(const LangFul._());
 }
 
 /// A class that represents the Fula (Fulah/Pulaar/Pular) language.
@@ -11,9 +11,9 @@ final class LangFul extends NaturalLanguage {
   ///
   /// ISO 639-2/T code: `FUL`, ISO 639-1 code: `FF`.
   /// {@endtemplate}
-  const factory LangFul() = _FulFactory;
+  const factory() = _FulFactory;
 
-  const LangFul._()
+  const new _()
     : super._(
         name: "Fula (Fulah/Pulaar/Pular)",
         code: "FUL",

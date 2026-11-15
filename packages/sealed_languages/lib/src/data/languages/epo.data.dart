@@ -1,7 +1,7 @@
 part of "../../model/language/submodels/natural_language.dart";
 
 extension type const _EpoFactory._(LangEpo _) implements LangEpo {
-  const _EpoFactory() : this._(const LangEpo._());
+  const new() : this._(const LangEpo._());
 }
 
 /// A class that represents the Esperanto language.
@@ -11,9 +11,9 @@ final class LangEpo extends NaturalLanguage {
   ///
   /// ISO 639-2/T code: `EPO`, ISO 639-1 code: `EO`.
   /// {@endtemplate}
-  const factory LangEpo() = _EpoFactory;
+  const factory() = _EpoFactory;
 
-  const LangEpo._()
+  const new _()
     : super._(
         name: "Esperanto",
         code: "EPO",

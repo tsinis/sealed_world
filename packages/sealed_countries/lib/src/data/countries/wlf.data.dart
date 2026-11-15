@@ -7,7 +7,7 @@
 part of "../../model/country/submodels/world_country.dart";
 
 extension type const _WlfFactory._(CountryWlf _) implements CountryWlf {
-  const _WlfFactory() : this._(const CountryWlf._());
+  const new() : this._(const CountryWlf._());
 }
 
 /// A class that represents the Wallis and Futuna country.
@@ -17,9 +17,9 @@ class CountryWlf extends WorldCountry {
   ///
   /// ISO 3166-1 Alpha-3 code: `WLF`, ISO 3166-1 Alpha-2 code: `WF`.
   /// {@endtemplate}
-  const factory CountryWlf() = _WlfFactory;
+  const factory() = _WlfFactory;
 
-  const CountryWlf._()
+  const new _()
     : super._(
         name: const CountryName(
           language: LangEng(),

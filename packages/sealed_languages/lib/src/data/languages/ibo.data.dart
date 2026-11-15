@@ -1,7 +1,7 @@
 part of "../../model/language/submodels/natural_language.dart";
 
 extension type const _IboFactory._(LangIbo _) implements LangIbo {
-  const _IboFactory() : this._(const LangIbo._());
+  const new() : this._(const LangIbo._());
 }
 
 /// A class that represents the Igbo language.
@@ -11,9 +11,9 @@ final class LangIbo extends NaturalLanguage {
   ///
   /// ISO 639-2/T code: `IBO`, ISO 639-1 code: `IG`.
   /// {@endtemplate}
-  const factory LangIbo() = _IboFactory;
+  const factory() = _IboFactory;
 
-  const LangIbo._()
+  const new _()
     : super._(
         name: "Igbo",
         code: "IBO",

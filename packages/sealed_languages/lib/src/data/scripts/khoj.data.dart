@@ -1,7 +1,7 @@
 part of "../../model/script/submodels/script.dart";
 
 extension type const _KhojFactory._(ScriptKhoj _) implements ScriptKhoj {
-  const _KhojFactory() : this._(const ScriptKhoj._());
+  const new() : this._(const ScriptKhoj._());
 }
 
 /// A class that represents the Khojki script.
@@ -11,9 +11,9 @@ final class ScriptKhoj extends Script {
   ///
   /// ISO 15924 Alpha-4 code: `Khoj`, ISO 15924 Numeric code: `322`.
   /// {@endtemplate}
-  const factory ScriptKhoj() = _KhojFactory;
+  const factory() = _KhojFactory;
 
-  const ScriptKhoj._()
+  const new _()
     : super._(
         name: "Khojki",
         code: "Khoj",

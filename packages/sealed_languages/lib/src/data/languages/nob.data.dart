@@ -1,7 +1,7 @@
 part of "../../model/language/submodels/natural_language.dart";
 
 extension type const _NobFactory._(LangNob _) implements LangNob {
-  const _NobFactory() : this._(const LangNob._());
+  const new() : this._(const LangNob._());
 }
 
 /// A class that represents the Norwegian Bokmål language.
@@ -11,9 +11,9 @@ final class LangNob extends NaturalLanguage {
   ///
   /// ISO 639-2/T code: `NOB`, ISO 639-1 code: `NB`.
   /// {@endtemplate}
-  const factory LangNob() = _NobFactory;
+  const factory() = _NobFactory;
 
-  const LangNob._()
+  const new _()
     : super._(
         name: "Norwegian Bokmål",
         code: "NOB",

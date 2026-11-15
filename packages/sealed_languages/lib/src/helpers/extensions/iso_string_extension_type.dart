@@ -18,7 +18,7 @@
 // ignore: prefer-match-file-name, doesn't respect keywords + "IsoString".
 extension type const IsoString._(String _value) implements String {
   /// Creates an ISO code wrapper for any [String] value.
-  const IsoString(String value) : this._(value);
+  const new(String value) : this._(value);
 
   /// Creates an ISO code wrapper for any [String?] value.
   ///

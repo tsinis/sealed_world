@@ -1,7 +1,7 @@
 part of "../../model/script/submodels/script.dart";
 
 extension type const _ZzzzFactory._(ScriptZzzz _) implements ScriptZzzz {
-  const _ZzzzFactory() : this._(const ScriptZzzz._());
+  const new() : this._(const ScriptZzzz._());
 }
 
 /// A class that represents the Code for uncoded script script.
@@ -11,9 +11,9 @@ final class ScriptZzzz extends Script {
   ///
   /// ISO 15924 Alpha-4 code: `Zzzz`, ISO 15924 Numeric code: `999`.
   /// {@endtemplate}
-  const factory ScriptZzzz() = _ZzzzFactory;
+  const factory() = _ZzzzFactory;
 
-  const ScriptZzzz._()
+  const new _()
     : super._(
         name: "Code for uncoded script",
         code: "Zzzz",

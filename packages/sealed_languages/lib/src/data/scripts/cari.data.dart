@@ -1,7 +1,7 @@
 part of "../../model/script/submodels/script.dart";
 
 extension type const _CariFactory._(ScriptCari _) implements ScriptCari {
-  const _CariFactory() : this._(const ScriptCari._());
+  const new() : this._(const ScriptCari._());
 }
 
 /// A class that represents the Carian script.
@@ -11,9 +11,9 @@ final class ScriptCari extends Script {
   ///
   /// ISO 15924 Alpha-4 code: `Cari`, ISO 15924 Numeric code: `201`.
   /// {@endtemplate}
-  const factory ScriptCari() = _CariFactory;
+  const factory() = _CariFactory;
 
-  const ScriptCari._()
+  const new _()
     : super._(
         name: "Carian",
         code: "Cari",

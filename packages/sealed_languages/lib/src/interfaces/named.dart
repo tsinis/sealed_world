@@ -11,7 +11,7 @@ abstract interface class Named<T extends Object> {
   ///
   /// The [name] parameter represents the name of the object.
   /// It should be a non-null [String].
-  const Named(this.name); // coverage:ignore-line
+  const new(this.name); // coverage:ignore-line
 
   /// The common name of the object.
   final T name;

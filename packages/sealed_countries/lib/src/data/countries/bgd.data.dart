@@ -7,7 +7,7 @@
 part of "../../model/country/submodels/world_country.dart";
 
 extension type const _BgdFactory._(CountryBgd _) implements CountryBgd {
-  const _BgdFactory() : this._(const CountryBgd._());
+  const new() : this._(const CountryBgd._());
 }
 
 /// A class that represents the Bangladesh country.
@@ -17,9 +17,9 @@ class CountryBgd extends WorldCountry {
   ///
   /// ISO 3166-1 Alpha-3 code: `BGD`, ISO 3166-1 Alpha-2 code: `BD`.
   /// {@endtemplate}
-  const factory CountryBgd() = _BgdFactory;
+  const factory() = _BgdFactory;
 
-  const CountryBgd._()
+  const new _()
     : super._(
         name: const CountryName(
           language: LangEng(),

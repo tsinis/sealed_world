@@ -7,7 +7,7 @@
 part of "../../model/country/submodels/world_country.dart";
 
 extension type const _EthFactory._(CountryEth _) implements CountryEth {
-  const _EthFactory() : this._(const CountryEth._());
+  const new() : this._(const CountryEth._());
 }
 
 /// A class that represents the Ethiopia country.
@@ -17,9 +17,9 @@ class CountryEth extends WorldCountry {
   ///
   /// ISO 3166-1 Alpha-3 code: `ETH`, ISO 3166-1 Alpha-2 code: `ET`.
   /// {@endtemplate}
-  const factory CountryEth() = _EthFactory;
+  const factory() = _EthFactory;
 
-  const CountryEth._()
+  const new _()
     : super._(
         name: const CountryName(
           language: LangEng(),

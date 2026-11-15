@@ -1,7 +1,7 @@
 part of "../../model/script/submodels/script.dart";
 
 extension type const _MlymFactory._(ScriptMlym _) implements ScriptMlym {
-  const _MlymFactory() : this._(const ScriptMlym._());
+  const new() : this._(const ScriptMlym._());
 }
 
 /// A class that represents the Malayalam script.
@@ -11,9 +11,9 @@ final class ScriptMlym extends Script {
   ///
   /// ISO 15924 Alpha-4 code: `Mlym`, ISO 15924 Numeric code: `347`.
   /// {@endtemplate}
-  const factory ScriptMlym() = _MlymFactory;
+  const factory() = _MlymFactory;
 
-  const ScriptMlym._()
+  const new _()
     : super._(
         name: "Malayalam",
         code: "Mlym",

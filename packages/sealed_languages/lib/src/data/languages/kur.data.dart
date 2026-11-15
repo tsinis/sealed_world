@@ -1,7 +1,7 @@
 part of "../../model/language/submodels/natural_language.dart";
 
 extension type const _KurFactory._(LangKur _) implements LangKur {
-  const _KurFactory() : this._(const LangKur._());
+  const new() : this._(const LangKur._());
 }
 
 /// A class that represents the Kurdish language.
@@ -11,9 +11,9 @@ final class LangKur extends NaturalLanguage {
   ///
   /// ISO 639-2/T code: `KUR`, ISO 639-1 code: `KU`.
   /// {@endtemplate}
-  const factory LangKur() = _KurFactory;
+  const factory() = _KurFactory;
 
-  const LangKur._()
+  const new _()
     : super._(
         name: "Kurdish",
         code: "KUR",

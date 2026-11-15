@@ -1,7 +1,7 @@
 part of "../../model/script/submodels/script.dart";
 
 extension type const _RunrFactory._(ScriptRunr _) implements ScriptRunr {
-  const _RunrFactory() : this._(const ScriptRunr._());
+  const new() : this._(const ScriptRunr._());
 }
 
 /// A class that represents the Runic script.
@@ -11,9 +11,9 @@ final class ScriptRunr extends Script {
   ///
   /// ISO 15924 Alpha-4 code: `Runr`, ISO 15924 Numeric code: `211`.
   /// {@endtemplate}
-  const factory ScriptRunr() = _RunrFactory;
+  const factory() = _RunrFactory;
 
-  const ScriptRunr._()
+  const new _()
     : super._(
         name: "Runic",
         code: "Runr",

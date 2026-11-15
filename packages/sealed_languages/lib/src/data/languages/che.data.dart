@@ -1,7 +1,7 @@
 part of "../../model/language/submodels/natural_language.dart";
 
 extension type const _CheFactory._(LangChe _) implements LangChe {
-  const _CheFactory() : this._(const LangChe._());
+  const new() : this._(const LangChe._());
 }
 
 /// A class that represents the Chechen language.
@@ -11,9 +11,9 @@ final class LangChe extends NaturalLanguage {
   ///
   /// ISO 639-2/T code: `CHE`, ISO 639-1 code: `CE`.
   /// {@endtemplate}
-  const factory LangChe() = _CheFactory;
+  const factory() = _CheFactory;
 
-  const LangChe._()
+  const new _()
     : super._(
         name: "Chechen",
         code: "CHE",

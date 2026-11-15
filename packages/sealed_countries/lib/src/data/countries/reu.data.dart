@@ -7,7 +7,7 @@
 part of "../../model/country/submodels/world_country.dart";
 
 extension type const _ReuFactory._(CountryReu _) implements CountryReu {
-  const _ReuFactory() : this._(const CountryReu._());
+  const new() : this._(const CountryReu._());
 }
 
 /// A class that represents the Réunion country.
@@ -17,9 +17,9 @@ class CountryReu extends WorldCountry {
   ///
   /// ISO 3166-1 Alpha-3 code: `REU`, ISO 3166-1 Alpha-2 code: `RE`.
   /// {@endtemplate}
-  const factory CountryReu() = _ReuFactory;
+  const factory() = _ReuFactory;
 
-  const CountryReu._()
+  const new _()
     : super._(
         name: const CountryName(
           language: LangEng(),

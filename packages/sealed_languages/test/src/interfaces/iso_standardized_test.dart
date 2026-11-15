@@ -2,7 +2,7 @@ import "package:sealed_languages/src/interfaces/iso_standardized.dart";
 import "package:test/test.dart";
 
 final class _IsoStandardizedTest implements IsoStandardized {
-  const _IsoStandardizedTest({required this.code, required this.name});
+  const new({required this.code, required this.name});
 
   @override
   final String code;

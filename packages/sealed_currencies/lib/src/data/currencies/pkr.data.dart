@@ -1,7 +1,7 @@
 part of "../../model/currency/submodels/fiat_currency.dart";
 
 extension type const _PkrFactory._(FiatPkr _) implements FiatPkr {
-  const _PkrFactory() : this._(const FiatPkr._());
+  const new() : this._(const FiatPkr._());
 }
 
 /// A class that represents the Pakistani Rupee currency.
@@ -11,9 +11,9 @@ final class FiatPkr extends FiatCurrency {
   ///
   /// ISO 4217 Alpha code: `PKR`, ISO 4217 Numeric code: `586`.
   /// {@endtemplate}
-  const factory FiatPkr() = _PkrFactory;
+  const factory() = _PkrFactory;
 
-  const FiatPkr._()
+  const new _()
     : super(
         code: "PKR",
         name: "Pakistani Rupee",

@@ -1,7 +1,7 @@
 part of "../../model/language/submodels/natural_language.dart";
 
 extension type const _SweFactory._(LangSwe _) implements LangSwe {
-  const _SweFactory() : this._(const LangSwe._());
+  const new() : this._(const LangSwe._());
 }
 
 /// A class that represents the Swedish language.
@@ -11,9 +11,9 @@ final class LangSwe extends NaturalLanguage {
   ///
   /// ISO 639-2/T code: `SWE`, ISO 639-1 code: `SV`.
   /// {@endtemplate}
-  const factory LangSwe() = _SweFactory;
+  const factory() = _SweFactory;
 
-  const LangSwe._()
+  const new _()
     : super._(
         name: "Swedish",
         code: "SWE",

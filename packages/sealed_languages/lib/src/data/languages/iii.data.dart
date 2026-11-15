@@ -1,7 +1,7 @@
 part of "../../model/language/submodels/natural_language.dart";
 
 extension type const _IiiFactory._(LangIii _) implements LangIii {
-  const _IiiFactory() : this._(const LangIii._());
+  const new() : this._(const LangIii._());
 }
 
 /// A class that represents the Nuosu language.
@@ -11,9 +11,9 @@ final class LangIii extends NaturalLanguage {
   ///
   /// ISO 639-2/T code: `III`, ISO 639-1 code: `II`.
   /// {@endtemplate}
-  const factory LangIii() = _IiiFactory;
+  const factory() = _IiiFactory;
 
-  const LangIii._()
+  const new _()
     : super._(
         name: "Nuosu",
         code: "III",

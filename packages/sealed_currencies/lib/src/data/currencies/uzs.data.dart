@@ -1,7 +1,7 @@
 part of "../../model/currency/submodels/fiat_currency.dart";
 
 extension type const _UzsFactory._(FiatUzs _) implements FiatUzs {
-  const _UzsFactory() : this._(const FiatUzs._());
+  const new() : this._(const FiatUzs._());
 }
 
 /// A class that represents the Uzbekistani Som currency.
@@ -11,9 +11,9 @@ final class FiatUzs extends FiatCurrency {
   ///
   /// ISO 4217 Alpha code: `UZS`, ISO 4217 Numeric code: `860`.
   /// {@endtemplate}
-  const factory FiatUzs() = _UzsFactory;
+  const factory() = _UzsFactory;
 
-  const FiatUzs._()
+  const new _()
     : super(
         code: "UZS",
         name: "Uzbekistani Som",

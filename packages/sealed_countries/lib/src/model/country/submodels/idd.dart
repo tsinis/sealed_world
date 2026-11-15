@@ -19,7 +19,7 @@ final class Idd implements JsonEncodable<Idd> {
   /// Creates a new [Idd] object with the given root and suffixes.
   ///
   /// The [suffixes] parameter must not be an empty list.
-  const Idd({required this.root, required this.suffixes})
+  const new({required this.root, required this.suffixes})
     : assert(suffixes != const <int>[], "`suffixes` should not be empty!");
 
   /// The root of this IDD code.

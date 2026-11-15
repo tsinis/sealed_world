@@ -1,7 +1,7 @@
 part of "../../model/script/submodels/script.dart";
 
 extension type const _SgnwFactory._(ScriptSgnw _) implements ScriptSgnw {
-  const _SgnwFactory() : this._(const ScriptSgnw._());
+  const new() : this._(const ScriptSgnw._());
 }
 
 /// A class that represents the SignWriting script.
@@ -11,9 +11,9 @@ final class ScriptSgnw extends Script {
   ///
   /// ISO 15924 Alpha-4 code: `Sgnw`, ISO 15924 Numeric code: `095`.
   /// {@endtemplate}
-  const factory ScriptSgnw() = _SgnwFactory;
+  const factory() = _SgnwFactory;
 
-  const ScriptSgnw._()
+  const new _()
     : super._(
         name: "SignWriting",
         code: "Sgnw",

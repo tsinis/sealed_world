@@ -1,7 +1,7 @@
 part of "../../model/currency/submodels/fiat_currency.dart";
 
 extension type const _MgaFactory._(FiatMga _) implements FiatMga {
-  const _MgaFactory() : this._(const FiatMga._());
+  const new() : this._(const FiatMga._());
 }
 
 /// A class that represents the Malagasy Ariary currency.
@@ -11,9 +11,9 @@ final class FiatMga extends FiatCurrency {
   ///
   /// ISO 4217 Alpha code: `MGA`, ISO 4217 Numeric code: `969`.
   /// {@endtemplate}
-  const factory FiatMga() = _MgaFactory;
+  const factory() = _MgaFactory;
 
-  const FiatMga._()
+  const new _()
     : super(
         code: "MGA",
         name: "Malagasy Ariary",

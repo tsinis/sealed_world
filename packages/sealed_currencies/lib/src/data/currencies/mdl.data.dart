@@ -1,7 +1,7 @@
 part of "../../model/currency/submodels/fiat_currency.dart";
 
 extension type const _MdlFactory._(FiatMdl _) implements FiatMdl {
-  const _MdlFactory() : this._(const FiatMdl._());
+  const new() : this._(const FiatMdl._());
 }
 
 /// A class that represents the Moldovan Leu currency.
@@ -11,9 +11,9 @@ final class FiatMdl extends FiatCurrency {
   ///
   /// ISO 4217 Alpha code: `MDL`, ISO 4217 Numeric code: `498`.
   /// {@endtemplate}
-  const factory FiatMdl() = _MdlFactory;
+  const factory() = _MdlFactory;
 
-  const FiatMdl._()
+  const new _()
     : super(
         code: "MDL",
         name: "Moldovan Leu",

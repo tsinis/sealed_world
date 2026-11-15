@@ -1,7 +1,7 @@
 part of "../../model/script/submodels/script.dart";
 
 extension type const _HansFactory._(ScriptHans _) implements ScriptHans {
-  const _HansFactory() : this._(const ScriptHans._());
+  const new() : this._(const ScriptHans._());
 }
 
 /// A class that represents the Han (Simplified variant) script.
@@ -11,9 +11,9 @@ final class ScriptHans extends Script {
   ///
   /// ISO 15924 Alpha-4 code: `Hans`, ISO 15924 Numeric code: `501`.
   /// {@endtemplate}
-  const factory ScriptHans() = _HansFactory;
+  const factory() = _HansFactory;
 
-  const ScriptHans._()
+  const new _()
     : super._(
         name: "Han (Simplified variant)",
         code: "Hans",

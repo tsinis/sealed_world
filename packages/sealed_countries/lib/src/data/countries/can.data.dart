@@ -7,7 +7,7 @@
 part of "../../model/country/submodels/world_country.dart";
 
 extension type const _CanFactory._(CountryCan _) implements CountryCan {
-  const _CanFactory() : this._(const CountryCan._());
+  const new() : this._(const CountryCan._());
 }
 
 /// A class that represents the Canada country.
@@ -17,9 +17,9 @@ class CountryCan extends WorldCountry {
   ///
   /// ISO 3166-1 Alpha-3 code: `CAN`, ISO 3166-1 Alpha-2 code: `CA`.
   /// {@endtemplate}
-  const factory CountryCan() = _CanFactory;
+  const factory() = _CanFactory;
 
-  const CountryCan._()
+  const new _()
     : super._(
         name: const CountryName(
           language: LangEng(),

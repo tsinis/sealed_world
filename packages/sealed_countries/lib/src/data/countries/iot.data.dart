@@ -7,7 +7,7 @@
 part of "../../model/country/submodels/world_country.dart";
 
 extension type const _IotFactory._(CountryIot _) implements CountryIot {
-  const _IotFactory() : this._(const CountryIot._());
+  const new() : this._(const CountryIot._());
 }
 
 /// A class that represents the British Indian Ocean Territory country.
@@ -18,9 +18,9 @@ class CountryIot extends WorldCountry {
   ///
   /// ISO 3166-1 Alpha-3 code: `IOT`, ISO 3166-1 Alpha-2 code: `IO`.
   /// {@endtemplate}
-  const factory CountryIot() = _IotFactory;
+  const factory() = _IotFactory;
 
-  const CountryIot._()
+  const new _()
     : super._(
         name: const CountryName(
           language: LangEng(),

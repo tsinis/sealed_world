@@ -1,7 +1,7 @@
 part of "../../model/script/submodels/script.dart";
 
 extension type const _SindFactory._(ScriptSind _) implements ScriptSind {
-  const _SindFactory() : this._(const ScriptSind._());
+  const new() : this._(const ScriptSind._());
 }
 
 /// A class that represents the Khudawadi, Sindhi script.
@@ -11,9 +11,9 @@ final class ScriptSind extends Script {
   ///
   /// ISO 15924 Alpha-4 code: `Sind`, ISO 15924 Numeric code: `318`.
   /// {@endtemplate}
-  const factory ScriptSind() = _SindFactory;
+  const factory() = _SindFactory;
 
-  const ScriptSind._()
+  const new _()
     : super._(
         name: "Khudawadi, Sindhi",
         code: "Sind",

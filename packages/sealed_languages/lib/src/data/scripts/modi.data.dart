@@ -1,7 +1,7 @@
 part of "../../model/script/submodels/script.dart";
 
 extension type const _ModiFactory._(ScriptModi _) implements ScriptModi {
-  const _ModiFactory() : this._(const ScriptModi._());
+  const new() : this._(const ScriptModi._());
 }
 
 /// A class that represents the Modi, Moḍī script.
@@ -11,9 +11,9 @@ final class ScriptModi extends Script {
   ///
   /// ISO 15924 Alpha-4 code: `Modi`, ISO 15924 Numeric code: `324`.
   /// {@endtemplate}
-  const factory ScriptModi() = _ModiFactory;
+  const factory() = _ModiFactory;
 
-  const ScriptModi._()
+  const new _()
     : super._(
         name: "Modi, Moḍī",
         code: "Modi",

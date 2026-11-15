@@ -7,7 +7,7 @@
 part of "../../model/country/submodels/world_country.dart";
 
 extension type const _BhrFactory._(CountryBhr _) implements CountryBhr {
-  const _BhrFactory() : this._(const CountryBhr._());
+  const new() : this._(const CountryBhr._());
 }
 
 /// A class that represents the Bahrain country.
@@ -17,9 +17,9 @@ class CountryBhr extends WorldCountry {
   ///
   /// ISO 3166-1 Alpha-3 code: `BHR`, ISO 3166-1 Alpha-2 code: `BH`.
   /// {@endtemplate}
-  const factory CountryBhr() = _BhrFactory;
+  const factory() = _BhrFactory;
 
-  const CountryBhr._()
+  const new _()
     : super._(
         name: const CountryName(
           language: LangEng(),

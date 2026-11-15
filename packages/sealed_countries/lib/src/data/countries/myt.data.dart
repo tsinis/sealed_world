@@ -7,7 +7,7 @@
 part of "../../model/country/submodels/world_country.dart";
 
 extension type const _MytFactory._(CountryMyt _) implements CountryMyt {
-  const _MytFactory() : this._(const CountryMyt._());
+  const new() : this._(const CountryMyt._());
 }
 
 /// A class that represents the Mayotte country.
@@ -17,9 +17,9 @@ class CountryMyt extends WorldCountry {
   ///
   /// ISO 3166-1 Alpha-3 code: `MYT`, ISO 3166-1 Alpha-2 code: `YT`.
   /// {@endtemplate}
-  const factory CountryMyt() = _MytFactory;
+  const factory() = _MytFactory;
 
-  const CountryMyt._()
+  const new _()
     : super._(
         name: const CountryName(
           language: LangEng(),

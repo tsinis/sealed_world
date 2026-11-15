@@ -7,7 +7,7 @@
 part of "../../model/country/submodels/world_country.dart";
 
 extension type const _AutFactory._(CountryAut _) implements CountryAut {
-  const _AutFactory() : this._(const CountryAut._());
+  const new() : this._(const CountryAut._());
 }
 
 /// A class that represents the Austria country.
@@ -17,9 +17,9 @@ class CountryAut extends WorldCountry {
   ///
   /// ISO 3166-1 Alpha-3 code: `AUT`, ISO 3166-1 Alpha-2 code: `AT`.
   /// {@endtemplate}
-  const factory CountryAut() = _AutFactory;
+  const factory() = _AutFactory;
 
-  const CountryAut._()
+  const new _()
     : super._(
         name: const CountryName(
           language: LangEng(),

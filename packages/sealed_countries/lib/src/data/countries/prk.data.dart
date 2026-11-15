@@ -7,7 +7,7 @@
 part of "../../model/country/submodels/world_country.dart";
 
 extension type const _PrkFactory._(CountryPrk _) implements CountryPrk {
-  const _PrkFactory() : this._(const CountryPrk._());
+  const new() : this._(const CountryPrk._());
 }
 
 /// A class that represents the North Korea country.
@@ -17,9 +17,9 @@ class CountryPrk extends WorldCountry {
   ///
   /// ISO 3166-1 Alpha-3 code: `PRK`, ISO 3166-1 Alpha-2 code: `KP`.
   /// {@endtemplate}
-  const factory CountryPrk() = _PrkFactory;
+  const factory() = _PrkFactory;
 
-  const CountryPrk._()
+  const new _()
     : super._(
         name: const CountryName(
           language: LangEng(),

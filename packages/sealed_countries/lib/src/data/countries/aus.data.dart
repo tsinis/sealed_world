@@ -7,7 +7,7 @@
 part of "../../model/country/submodels/world_country.dart";
 
 extension type const _AusFactory._(CountryAus _) implements CountryAus {
-  const _AusFactory() : this._(const CountryAus._());
+  const new() : this._(const CountryAus._());
 }
 
 /// A class that represents the Australia country.
@@ -17,9 +17,9 @@ class CountryAus extends WorldCountry {
   ///
   /// ISO 3166-1 Alpha-3 code: `AUS`, ISO 3166-1 Alpha-2 code: `AU`.
   /// {@endtemplate}
-  const factory CountryAus() = _AusFactory;
+  const factory() = _AusFactory;
 
-  const CountryAus._()
+  const new _()
     : super._(
         name: const CountryName(
           language: LangEng(),

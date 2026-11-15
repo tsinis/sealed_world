@@ -7,7 +7,7 @@
 part of "../../model/country/submodels/world_country.dart";
 
 extension type const _QatFactory._(CountryQat _) implements CountryQat {
-  const _QatFactory() : this._(const CountryQat._());
+  const new() : this._(const CountryQat._());
 }
 
 /// A class that represents the Qatar country.
@@ -17,9 +17,9 @@ class CountryQat extends WorldCountry {
   ///
   /// ISO 3166-1 Alpha-3 code: `QAT`, ISO 3166-1 Alpha-2 code: `QA`.
   /// {@endtemplate}
-  const factory CountryQat() = _QatFactory;
+  const factory() = _QatFactory;
 
-  const CountryQat._()
+  const new _()
     : super._(
         name: const CountryName(
           language: LangEng(),

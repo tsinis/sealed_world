@@ -1,7 +1,7 @@
 part of "../../model/language/submodels/natural_language.dart";
 
 extension type const _MahFactory._(LangMah _) implements LangMah {
-  const _MahFactory() : this._(const LangMah._());
+  const new() : this._(const LangMah._());
 }
 
 /// A class that represents the Marshallese language.
@@ -11,9 +11,9 @@ final class LangMah extends NaturalLanguage {
   ///
   /// ISO 639-2/T code: `MAH`, ISO 639-1 code: `MH`.
   /// {@endtemplate}
-  const factory LangMah() = _MahFactory;
+  const factory() = _MahFactory;
 
-  const LangMah._()
+  const new _()
     : super._(
         name: "Marshallese",
         code: "MAH",

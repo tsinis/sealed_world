@@ -1,7 +1,7 @@
 part of "../../model/language/submodels/natural_language.dart";
 
 extension type const _DzoFactory._(LangDzo _) implements LangDzo {
-  const _DzoFactory() : this._(const LangDzo._());
+  const new() : this._(const LangDzo._());
 }
 
 /// A class that represents the Dzongkha language.
@@ -11,9 +11,9 @@ final class LangDzo extends NaturalLanguage {
   ///
   /// ISO 639-2/T code: `DZO`, ISO 639-1 code: `DZ`.
   /// {@endtemplate}
-  const factory LangDzo() = _DzoFactory;
+  const factory() = _DzoFactory;
 
-  const LangDzo._()
+  const new _()
     : super._(
         name: "Dzongkha",
         code: "DZO",

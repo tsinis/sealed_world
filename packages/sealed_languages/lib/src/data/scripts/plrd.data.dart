@@ -1,7 +1,7 @@
 part of "../../model/script/submodels/script.dart";
 
 extension type const _PlrdFactory._(ScriptPlrd _) implements ScriptPlrd {
-  const _PlrdFactory() : this._(const ScriptPlrd._());
+  const new() : this._(const ScriptPlrd._());
 }
 
 /// A class that represents the Miao (Pollard) script.
@@ -11,9 +11,9 @@ final class ScriptPlrd extends Script {
   ///
   /// ISO 15924 Alpha-4 code: `Plrd`, ISO 15924 Numeric code: `282`.
   /// {@endtemplate}
-  const factory ScriptPlrd() = _PlrdFactory;
+  const factory() = _PlrdFactory;
 
-  const ScriptPlrd._()
+  const new _()
     : super._(
         name: "Miao (Pollard)",
         code: "Plrd",

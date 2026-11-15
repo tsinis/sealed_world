@@ -1,7 +1,7 @@
 part of "../../model/script/submodels/script.dart";
 
 extension type const _NarbFactory._(ScriptNarb _) implements ScriptNarb {
-  const _NarbFactory() : this._(const ScriptNarb._());
+  const new() : this._(const ScriptNarb._());
 }
 
 /// A class that represents the Old North Arabian (Ancient North Arabian)
@@ -13,9 +13,9 @@ final class ScriptNarb extends Script {
   ///
   /// ISO 15924 Alpha-4 code: `Narb`, ISO 15924 Numeric code: `106`.
   /// {@endtemplate}
-  const factory ScriptNarb() = _NarbFactory;
+  const factory() = _NarbFactory;
 
-  const ScriptNarb._()
+  const new _()
     : super._(
         name: "Old North Arabian (Ancient North Arabian)",
         code: "Narb",

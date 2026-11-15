@@ -1,7 +1,7 @@
 part of "../../model/language/submodels/natural_language.dart";
 
 extension type const _MltFactory._(LangMlt _) implements LangMlt {
-  const _MltFactory() : this._(const LangMlt._());
+  const new() : this._(const LangMlt._());
 }
 
 /// A class that represents the Maltese language.
@@ -11,9 +11,9 @@ final class LangMlt extends NaturalLanguage {
   ///
   /// ISO 639-2/T code: `MLT`, ISO 639-1 code: `MT`.
   /// {@endtemplate}
-  const factory LangMlt() = _MltFactory;
+  const factory() = _MltFactory;
 
-  const LangMlt._()
+  const new _()
     : super._(
         name: "Maltese",
         code: "MLT",

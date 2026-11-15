@@ -1,7 +1,7 @@
 part of "../../model/language/submodels/natural_language.dart";
 
 extension type const _ItaFactory._(LangIta _) implements LangIta {
-  const _ItaFactory() : this._(const LangIta._());
+  const new() : this._(const LangIta._());
 }
 
 /// A class that represents the Italian language.
@@ -11,9 +11,9 @@ final class LangIta extends NaturalLanguage {
   ///
   /// ISO 639-2/T code: `ITA`, ISO 639-1 code: `IT`.
   /// {@endtemplate}
-  const factory LangIta() = _ItaFactory;
+  const factory() = _ItaFactory;
 
-  const LangIta._()
+  const new _()
     : super._(
         name: "Italian",
         code: "ITA",

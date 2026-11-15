@@ -7,7 +7,7 @@
 part of "../../model/country/submodels/world_country.dart";
 
 extension type const _MdvFactory._(CountryMdv _) implements CountryMdv {
-  const _MdvFactory() : this._(const CountryMdv._());
+  const new() : this._(const CountryMdv._());
 }
 
 /// A class that represents the Maldives country.
@@ -17,9 +17,9 @@ class CountryMdv extends WorldCountry {
   ///
   /// ISO 3166-1 Alpha-3 code: `MDV`, ISO 3166-1 Alpha-2 code: `MV`.
   /// {@endtemplate}
-  const factory CountryMdv() = _MdvFactory;
+  const factory() = _MdvFactory;
 
-  const CountryMdv._()
+  const new _()
     : super._(
         name: const CountryName(
           language: LangEng(),

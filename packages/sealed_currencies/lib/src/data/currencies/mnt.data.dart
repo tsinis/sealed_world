@@ -1,7 +1,7 @@
 part of "../../model/currency/submodels/fiat_currency.dart";
 
 extension type const _MntFactory._(FiatMnt _) implements FiatMnt {
-  const _MntFactory() : this._(const FiatMnt._());
+  const new() : this._(const FiatMnt._());
 }
 
 /// A class that represents the Mongolian Tugrik currency.
@@ -11,9 +11,9 @@ final class FiatMnt extends FiatCurrency {
   ///
   /// ISO 4217 Alpha code: `MNT`, ISO 4217 Numeric code: `496`.
   /// {@endtemplate}
-  const factory FiatMnt() = _MntFactory;
+  const factory() = _MntFactory;
 
-  const FiatMnt._()
+  const new _()
     : super(
         code: "MNT",
         name: "Mongolian Tugrik",

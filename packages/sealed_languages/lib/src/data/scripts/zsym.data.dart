@@ -1,7 +1,7 @@
 part of "../../model/script/submodels/script.dart";
 
 extension type const _ZsymFactory._(ScriptZsym _) implements ScriptZsym {
-  const _ZsymFactory() : this._(const ScriptZsym._());
+  const new() : this._(const ScriptZsym._());
 }
 
 /// A class that represents the Symbols script.
@@ -11,9 +11,9 @@ final class ScriptZsym extends Script {
   ///
   /// ISO 15924 Alpha-4 code: `Zsym`, ISO 15924 Numeric code: `996`.
   /// {@endtemplate}
-  const factory ScriptZsym() = _ZsymFactory;
+  const factory() = _ZsymFactory;
 
-  const ScriptZsym._()
+  const new _()
     : super._(
         name: "Symbols",
         code: "Zsym",

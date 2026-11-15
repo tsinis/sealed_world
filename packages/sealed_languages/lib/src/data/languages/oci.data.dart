@@ -1,7 +1,7 @@
 part of "../../model/language/submodels/natural_language.dart";
 
 extension type const _OciFactory._(LangOci _) implements LangOci {
-  const _OciFactory() : this._(const LangOci._());
+  const new() : this._(const LangOci._());
 }
 
 /// A class that represents the Occitan language.
@@ -11,9 +11,9 @@ final class LangOci extends NaturalLanguage {
   ///
   /// ISO 639-2/T code: `OCI`, ISO 639-1 code: `OC`.
   /// {@endtemplate}
-  const factory LangOci() = _OciFactory;
+  const factory() = _OciFactory;
 
-  const LangOci._()
+  const new _()
     : super._(
         name: "Occitan",
         code: "OCI",

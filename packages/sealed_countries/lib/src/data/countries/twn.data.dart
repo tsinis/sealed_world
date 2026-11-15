@@ -7,7 +7,7 @@
 part of "../../model/country/submodels/world_country.dart";
 
 extension type const _TwnFactory._(CountryTwn _) implements CountryTwn {
-  const _TwnFactory() : this._(const CountryTwn._());
+  const new() : this._(const CountryTwn._());
 }
 
 /// A class that represents the Taiwan country.
@@ -17,9 +17,9 @@ class CountryTwn extends WorldCountry {
   ///
   /// ISO 3166-1 Alpha-3 code: `TWN`, ISO 3166-1 Alpha-2 code: `TW`.
   /// {@endtemplate}
-  const factory CountryTwn() = _TwnFactory;
+  const factory() = _TwnFactory;
 
-  const CountryTwn._()
+  const new _()
     : super._(
         name: const CountryName(
           language: LangEng(),

@@ -1,7 +1,7 @@
 part of "../../model/currency/submodels/fiat_currency.dart";
 
 extension type const _XpdFactory._(FiatXpd _) implements FiatXpd {
-  const _XpdFactory() : this._(const FiatXpd._());
+  const new() : this._(const FiatXpd._());
 }
 
 /// A class that represents the Palladium currency.
@@ -11,9 +11,9 @@ final class FiatXpd extends FiatCurrency {
   ///
   /// ISO 4217 Alpha code: `XPD`, ISO 4217 Numeric code: `964`.
   /// {@endtemplate}
-  const factory FiatXpd() = _XpdFactory;
+  const factory() = _XpdFactory;
 
-  const FiatXpd._()
+  const new _()
     : super(
         code: "XPD",
         name: "Palladium",

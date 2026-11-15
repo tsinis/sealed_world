@@ -7,7 +7,7 @@
 part of "../../model/country/submodels/world_country.dart";
 
 extension type const _ChlFactory._(CountryChl _) implements CountryChl {
-  const _ChlFactory() : this._(const CountryChl._());
+  const new() : this._(const CountryChl._());
 }
 
 /// A class that represents the Chile country.
@@ -17,9 +17,9 @@ class CountryChl extends WorldCountry {
   ///
   /// ISO 3166-1 Alpha-3 code: `CHL`, ISO 3166-1 Alpha-2 code: `CL`.
   /// {@endtemplate}
-  const factory CountryChl() = _ChlFactory;
+  const factory() = _ChlFactory;
 
-  const CountryChl._()
+  const new _()
     : super._(
         name: const CountryName(
           language: LangEng(),

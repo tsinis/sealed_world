@@ -1,7 +1,7 @@
 part of "../../model/currency/submodels/fiat_currency.dart";
 
 extension type const _CdfFactory._(FiatCdf _) implements FiatCdf {
-  const _CdfFactory() : this._(const FiatCdf._());
+  const new() : this._(const FiatCdf._());
 }
 
 /// A class that represents the Congolese Franc currency.
@@ -11,9 +11,9 @@ final class FiatCdf extends FiatCurrency {
   ///
   /// ISO 4217 Alpha code: `CDF`, ISO 4217 Numeric code: `976`.
   /// {@endtemplate}
-  const factory FiatCdf() = _CdfFactory;
+  const factory() = _CdfFactory;
 
-  const FiatCdf._()
+  const new _()
     : super(
         code: "CDF",
         name: "Congolese Franc",

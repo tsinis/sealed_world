@@ -7,7 +7,7 @@
 part of "../../model/country/submodels/world_country.dart";
 
 extension type const _UzbFactory._(CountryUzb _) implements CountryUzb {
-  const _UzbFactory() : this._(const CountryUzb._());
+  const new() : this._(const CountryUzb._());
 }
 
 /// A class that represents the Uzbekistan country.
@@ -17,9 +17,9 @@ class CountryUzb extends WorldCountry {
   ///
   /// ISO 3166-1 Alpha-3 code: `UZB`, ISO 3166-1 Alpha-2 code: `UZ`.
   /// {@endtemplate}
-  const factory CountryUzb() = _UzbFactory;
+  const factory() = _UzbFactory;
 
-  const CountryUzb._()
+  const new _()
     : super._(
         name: const CountryName(
           language: LangEng(),

@@ -1,7 +1,7 @@
 part of "../../model/currency/submodels/fiat_currency.dart";
 
 extension type const _SarFactory._(FiatSar _) implements FiatSar {
-  const _SarFactory() : this._(const FiatSar._());
+  const new() : this._(const FiatSar._());
 }
 
 /// A class that represents the Saudi Riyal currency.
@@ -11,9 +11,9 @@ final class FiatSar extends FiatCurrency {
   ///
   /// ISO 4217 Alpha code: `SAR`, ISO 4217 Numeric code: `682`.
   /// {@endtemplate}
-  const factory FiatSar() = _SarFactory;
+  const factory() = _SarFactory;
 
-  const FiatSar._()
+  const new _()
     : super(
         code: "SAR",
         name: "Saudi Riyal",

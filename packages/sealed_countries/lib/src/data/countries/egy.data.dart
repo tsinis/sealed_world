@@ -7,7 +7,7 @@
 part of "../../model/country/submodels/world_country.dart";
 
 extension type const _EgyFactory._(CountryEgy _) implements CountryEgy {
-  const _EgyFactory() : this._(const CountryEgy._());
+  const new() : this._(const CountryEgy._());
 }
 
 /// A class that represents the Egypt country.
@@ -17,9 +17,9 @@ class CountryEgy extends WorldCountry {
   ///
   /// ISO 3166-1 Alpha-3 code: `EGY`, ISO 3166-1 Alpha-2 code: `EG`.
   /// {@endtemplate}
-  const factory CountryEgy() = _EgyFactory;
+  const factory() = _EgyFactory;
 
-  const CountryEgy._()
+  const new _()
     : super._(
         name: const CountryName(
           language: LangEng(),

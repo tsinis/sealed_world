@@ -7,7 +7,7 @@
 part of "../../model/country/submodels/world_country.dart";
 
 extension type const _MdaFactory._(CountryMda _) implements CountryMda {
-  const _MdaFactory() : this._(const CountryMda._());
+  const new() : this._(const CountryMda._());
 }
 
 /// A class that represents the Moldova country.
@@ -17,9 +17,9 @@ class CountryMda extends WorldCountry {
   ///
   /// ISO 3166-1 Alpha-3 code: `MDA`, ISO 3166-1 Alpha-2 code: `MD`.
   /// {@endtemplate}
-  const factory CountryMda() = _MdaFactory;
+  const factory() = _MdaFactory;
 
-  const CountryMda._()
+  const new _()
     : super._(
         name: const CountryName(
           language: LangEng(),

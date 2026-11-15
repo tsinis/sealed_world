@@ -22,7 +22,7 @@ final class Car implements JsonEncodable<Car> {
   /// Creates a new [Car] object with the given sign and side values.
   ///
   /// The [sign] parameter may be `null` or a non-empty string.
-  const Car({this.sign, this.isRightSide = true})
+  const new({this.sign, this.isRightSide = true})
     : assert(sign == null || sign.length > 0, "`sign` should not be empty!");
 
   /// Indicates whether the car is right-side or left-side drive.

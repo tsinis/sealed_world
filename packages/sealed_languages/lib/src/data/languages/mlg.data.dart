@@ -1,7 +1,7 @@
 part of "../../model/language/submodels/natural_language.dart";
 
 extension type const _MlgFactory._(LangMlg _) implements LangMlg {
-  const _MlgFactory() : this._(const LangMlg._());
+  const new() : this._(const LangMlg._());
 }
 
 /// A class that represents the Malagasy language.
@@ -11,9 +11,9 @@ final class LangMlg extends NaturalLanguage {
   ///
   /// ISO 639-2/T code: `MLG`, ISO 639-1 code: `MG`.
   /// {@endtemplate}
-  const factory LangMlg() = _MlgFactory;
+  const factory() = _MlgFactory;
 
-  const LangMlg._()
+  const new _()
     : super._(
         name: "Malagasy",
         code: "MLG",

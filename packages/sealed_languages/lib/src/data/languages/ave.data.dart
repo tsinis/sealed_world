@@ -1,7 +1,7 @@
 part of "../../model/language/submodels/natural_language.dart";
 
 extension type const _AveFactory._(LangAve _) implements LangAve {
-  const _AveFactory() : this._(const LangAve._());
+  const new() : this._(const LangAve._());
 }
 
 /// A class that represents the Avestan language.
@@ -11,9 +11,9 @@ final class LangAve extends NaturalLanguage {
   ///
   /// ISO 639-2/T code: `AVE`, ISO 639-1 code: `AE`.
   /// {@endtemplate}
-  const factory LangAve() = _AveFactory;
+  const factory() = _AveFactory;
 
-  const LangAve._()
+  const new _()
     : super._(
         name: "Avestan",
         code: "AVE",

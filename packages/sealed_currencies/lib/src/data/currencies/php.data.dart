@@ -1,7 +1,7 @@
 part of "../../model/currency/submodels/fiat_currency.dart";
 
 extension type const _PhpFactory._(FiatPhp _) implements FiatPhp {
-  const _PhpFactory() : this._(const FiatPhp._());
+  const new() : this._(const FiatPhp._());
 }
 
 /// A class that represents the Philippine Peso currency.
@@ -11,9 +11,9 @@ final class FiatPhp extends FiatCurrency {
   ///
   /// ISO 4217 Alpha code: `PHP`, ISO 4217 Numeric code: `608`.
   /// {@endtemplate}
-  const factory FiatPhp() = _PhpFactory;
+  const factory() = _PhpFactory;
 
-  const FiatPhp._()
+  const new _()
     : super(
         code: "PHP",
         name: "Philippine Peso",

@@ -1,7 +1,7 @@
 part of "../../model/language/submodels/natural_language.dart";
 
 extension type const _TirFactory._(LangTir _) implements LangTir {
-  const _TirFactory() : this._(const LangTir._());
+  const new() : this._(const LangTir._());
 }
 
 /// A class that represents the Tigrinya language.
@@ -11,9 +11,9 @@ final class LangTir extends NaturalLanguage {
   ///
   /// ISO 639-2/T code: `TIR`, ISO 639-1 code: `TI`.
   /// {@endtemplate}
-  const factory LangTir() = _TirFactory;
+  const factory() = _TirFactory;
 
-  const LangTir._()
+  const new _()
     : super._(
         name: "Tigrinya",
         code: "TIR",

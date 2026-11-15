@@ -1,7 +1,7 @@
 part of "../../model/language/submodels/natural_language.dart";
 
 extension type const _ChuFactory._(LangChu _) implements LangChu {
-  const _ChuFactory() : this._(const LangChu._());
+  const new() : this._(const LangChu._());
 }
 
 /// A class that represents the (Old) Church Slavonic language.
@@ -11,9 +11,9 @@ final class LangChu extends NaturalLanguage {
   ///
   /// ISO 639-2/T code: `CHU`, ISO 639-1 code: `CU`.
   /// {@endtemplate}
-  const factory LangChu() = _ChuFactory;
+  const factory() = _ChuFactory;
 
-  const LangChu._()
+  const new _()
     : super._(
         name: "(Old) Church Slavonic",
         code: "CHU",

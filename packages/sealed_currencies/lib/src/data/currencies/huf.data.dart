@@ -1,7 +1,7 @@
 part of "../../model/currency/submodels/fiat_currency.dart";
 
 extension type const _HufFactory._(FiatHuf _) implements FiatHuf {
-  const _HufFactory() : this._(const FiatHuf._());
+  const new() : this._(const FiatHuf._());
 }
 
 /// A class that represents the Hungarian Forint currency.
@@ -11,9 +11,9 @@ final class FiatHuf extends FiatCurrency {
   ///
   /// ISO 4217 Alpha code: `HUF`, ISO 4217 Numeric code: `348`.
   /// {@endtemplate}
-  const factory FiatHuf() = _HufFactory;
+  const factory() = _HufFactory;
 
-  const FiatHuf._()
+  const new _()
     : super(
         code: "HUF",
         name: "Hungarian Forint",

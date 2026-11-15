@@ -1,7 +1,7 @@
 part of "../../model/currency/submodels/fiat_currency.dart";
 
 extension type const _BrlFactory._(FiatBrl _) implements FiatBrl {
-  const _BrlFactory() : this._(const FiatBrl._());
+  const new() : this._(const FiatBrl._());
 }
 
 /// A class that represents the Brazilian Real currency.
@@ -11,9 +11,9 @@ final class FiatBrl extends FiatCurrency {
   ///
   /// ISO 4217 Alpha code: `BRL`, ISO 4217 Numeric code: `986`.
   /// {@endtemplate}
-  const factory FiatBrl() = _BrlFactory;
+  const factory() = _BrlFactory;
 
-  const FiatBrl._()
+  const new _()
     : super(
         code: "BRL",
         name: "Brazilian Real",

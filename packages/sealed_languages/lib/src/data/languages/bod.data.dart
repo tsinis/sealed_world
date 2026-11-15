@@ -1,7 +1,7 @@
 part of "../../model/language/submodels/natural_language.dart";
 
 extension type const _BodFactory._(LangBod _) implements LangBod {
-  const _BodFactory() : this._(const LangBod._());
+  const new() : this._(const LangBod._());
 }
 
 /// A class that represents the Tibetan Standard language.
@@ -11,9 +11,9 @@ final class LangBod extends NaturalLanguage {
   ///
   /// ISO 639-2/T code: `BOD`, ISO 639-1 code: `BO`.
   /// {@endtemplate}
-  const factory LangBod() = _BodFactory;
+  const factory() = _BodFactory;
 
-  const LangBod._()
+  const new _()
     : super._(
         name: "Tibetan Standard",
         code: "BOD",

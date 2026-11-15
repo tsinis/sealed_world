@@ -1,7 +1,7 @@
 part of "../../model/language/submodels/natural_language.dart";
 
 extension type const _SrdFactory._(LangSrd _) implements LangSrd {
-  const _SrdFactory() : this._(const LangSrd._());
+  const new() : this._(const LangSrd._());
 }
 
 /// A class that represents the Sardinian language.
@@ -11,9 +11,9 @@ final class LangSrd extends NaturalLanguage {
   ///
   /// ISO 639-2/T code: `SRD`, ISO 639-1 code: `SC`.
   /// {@endtemplate}
-  const factory LangSrd() = _SrdFactory;
+  const factory() = _SrdFactory;
 
-  const LangSrd._()
+  const new _()
     : super._(
         name: "Sardinian",
         code: "SRD",

@@ -1,7 +1,7 @@
 part of "../../model/script/submodels/script.dart";
 
 extension type const _HatrFactory._(ScriptHatr _) implements ScriptHatr {
-  const _HatrFactory() : this._(const ScriptHatr._());
+  const new() : this._(const ScriptHatr._());
 }
 
 /// A class that represents the Hatran script.
@@ -11,9 +11,9 @@ final class ScriptHatr extends Script {
   ///
   /// ISO 15924 Alpha-4 code: `Hatr`, ISO 15924 Numeric code: `127`.
   /// {@endtemplate}
-  const factory ScriptHatr() = _HatrFactory;
+  const factory() = _HatrFactory;
 
-  const ScriptHatr._()
+  const new _()
     : super._(
         name: "Hatran",
         code: "Hatr",

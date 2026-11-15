@@ -1,7 +1,7 @@
 part of "../../model/language/submodels/natural_language.dart";
 
 extension type const _HyeFactory._(LangHye _) implements LangHye {
-  const _HyeFactory() : this._(const LangHye._());
+  const new() : this._(const LangHye._());
 }
 
 /// A class that represents the Armenian language.
@@ -11,9 +11,9 @@ final class LangHye extends NaturalLanguage {
   ///
   /// ISO 639-2/T code: `HYE`, ISO 639-1 code: `HY`.
   /// {@endtemplate}
-  const factory LangHye() = _HyeFactory;
+  const factory() = _HyeFactory;
 
-  const LangHye._()
+  const new _()
     : super._(
         name: "Armenian",
         code: "HYE",

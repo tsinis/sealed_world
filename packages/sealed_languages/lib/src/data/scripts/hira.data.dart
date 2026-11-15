@@ -1,7 +1,7 @@
 part of "../../model/script/submodels/script.dart";
 
 extension type const _HiraFactory._(ScriptHira _) implements ScriptHira {
-  const _HiraFactory() : this._(const ScriptHira._());
+  const new() : this._(const ScriptHira._());
 }
 
 /// A class that represents the Hiragana script.
@@ -11,9 +11,9 @@ final class ScriptHira extends Script {
   ///
   /// ISO 15924 Alpha-4 code: `Hira`, ISO 15924 Numeric code: `410`.
   /// {@endtemplate}
-  const factory ScriptHira() = _HiraFactory;
+  const factory() = _HiraFactory;
 
-  const ScriptHira._()
+  const new _()
     : super._(
         name: "Hiragana",
         code: "Hira",

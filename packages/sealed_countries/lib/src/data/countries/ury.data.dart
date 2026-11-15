@@ -7,7 +7,7 @@
 part of "../../model/country/submodels/world_country.dart";
 
 extension type const _UryFactory._(CountryUry _) implements CountryUry {
-  const _UryFactory() : this._(const CountryUry._());
+  const new() : this._(const CountryUry._());
 }
 
 /// A class that represents the Uruguay country.
@@ -17,9 +17,9 @@ class CountryUry extends WorldCountry {
   ///
   /// ISO 3166-1 Alpha-3 code: `URY`, ISO 3166-1 Alpha-2 code: `UY`.
   /// {@endtemplate}
-  const factory CountryUry() = _UryFactory;
+  const factory() = _UryFactory;
 
-  const CountryUry._()
+  const new _()
     : super._(
         name: const CountryName(
           language: LangEng(),

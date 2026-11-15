@@ -1,7 +1,7 @@
 part of "../../model/currency/submodels/fiat_currency.dart";
 
 extension type const _PenFactory._(FiatPen _) implements FiatPen {
-  const _PenFactory() : this._(const FiatPen._());
+  const new() : this._(const FiatPen._());
 }
 
 /// A class that represents the Peruvian Sol currency.
@@ -11,9 +11,9 @@ final class FiatPen extends FiatCurrency {
   ///
   /// ISO 4217 Alpha code: `PEN`, ISO 4217 Numeric code: `604`.
   /// {@endtemplate}
-  const factory FiatPen() = _PenFactory;
+  const factory() = _PenFactory;
 
-  const FiatPen._()
+  const new _()
     : super(
         code: "PEN",
         name: "Peruvian Sol",

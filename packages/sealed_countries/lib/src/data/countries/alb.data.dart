@@ -7,7 +7,7 @@
 part of "../../model/country/submodels/world_country.dart";
 
 extension type const _AlbFactory._(CountryAlb _) implements CountryAlb {
-  const _AlbFactory() : this._(const CountryAlb._());
+  const new() : this._(const CountryAlb._());
 }
 
 /// A class that represents the Albania country.
@@ -17,9 +17,9 @@ class CountryAlb extends WorldCountry {
   ///
   /// ISO 3166-1 Alpha-3 code: `ALB`, ISO 3166-1 Alpha-2 code: `AL`.
   /// {@endtemplate}
-  const factory CountryAlb() = _AlbFactory;
+  const factory() = _AlbFactory;
 
-  const CountryAlb._()
+  const new _()
     : super._(
         name: const CountryName(
           language: LangEng(),

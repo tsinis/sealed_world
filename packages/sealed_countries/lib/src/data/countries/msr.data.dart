@@ -7,7 +7,7 @@
 part of "../../model/country/submodels/world_country.dart";
 
 extension type const _MsrFactory._(CountryMsr _) implements CountryMsr {
-  const _MsrFactory() : this._(const CountryMsr._());
+  const new() : this._(const CountryMsr._());
 }
 
 /// A class that represents the Montserrat country.
@@ -17,9 +17,9 @@ class CountryMsr extends WorldCountry {
   ///
   /// ISO 3166-1 Alpha-3 code: `MSR`, ISO 3166-1 Alpha-2 code: `MS`.
   /// {@endtemplate}
-  const factory CountryMsr() = _MsrFactory;
+  const factory() = _MsrFactory;
 
-  const CountryMsr._()
+  const new _()
     : super._(
         name: const CountryName(
           language: LangEng(),

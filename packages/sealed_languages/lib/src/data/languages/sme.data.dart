@@ -1,7 +1,7 @@
 part of "../../model/language/submodels/natural_language.dart";
 
 extension type const _SmeFactory._(LangSme _) implements LangSme {
-  const _SmeFactory() : this._(const LangSme._());
+  const new() : this._(const LangSme._());
 }
 
 /// A class that represents the Northern Sami language.
@@ -11,9 +11,9 @@ final class LangSme extends NaturalLanguage {
   ///
   /// ISO 639-2/T code: `SME`, ISO 639-1 code: `SE`.
   /// {@endtemplate}
-  const factory LangSme() = _SmeFactory;
+  const factory() = _SmeFactory;
 
-  const LangSme._()
+  const new _()
     : super._(
         name: "Northern Sami",
         code: "SME",

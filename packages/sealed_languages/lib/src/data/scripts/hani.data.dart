@@ -1,7 +1,7 @@
 part of "../../model/script/submodels/script.dart";
 
 extension type const _HaniFactory._(ScriptHani _) implements ScriptHani {
-  const _HaniFactory() : this._(const ScriptHani._());
+  const new() : this._(const ScriptHani._());
 }
 
 /// A class that represents the Han (Hanzi, Kanji, Hanja) script.
@@ -11,9 +11,9 @@ final class ScriptHani extends Script {
   ///
   /// ISO 15924 Alpha-4 code: `Hani`, ISO 15924 Numeric code: `500`.
   /// {@endtemplate}
-  const factory ScriptHani() = _HaniFactory;
+  const factory() = _HaniFactory;
 
-  const ScriptHani._()
+  const new _()
     : super._(
         name: "Han (Hanzi, Kanji, Hanja)",
         code: "Hani",

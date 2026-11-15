@@ -7,7 +7,7 @@
 part of "../../model/country/submodels/world_country.dart";
 
 extension type const _DjiFactory._(CountryDji _) implements CountryDji {
-  const _DjiFactory() : this._(const CountryDji._());
+  const new() : this._(const CountryDji._());
 }
 
 /// A class that represents the Djibouti country.
@@ -17,9 +17,9 @@ class CountryDji extends WorldCountry {
   ///
   /// ISO 3166-1 Alpha-3 code: `DJI`, ISO 3166-1 Alpha-2 code: `DJ`.
   /// {@endtemplate}
-  const factory CountryDji() = _DjiFactory;
+  const factory() = _DjiFactory;
 
-  const CountryDji._()
+  const new _()
     : super._(
         name: const CountryName(
           language: LangEng(),

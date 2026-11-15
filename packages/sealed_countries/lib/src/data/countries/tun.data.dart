@@ -7,7 +7,7 @@
 part of "../../model/country/submodels/world_country.dart";
 
 extension type const _TunFactory._(CountryTun _) implements CountryTun {
-  const _TunFactory() : this._(const CountryTun._());
+  const new() : this._(const CountryTun._());
 }
 
 /// A class that represents the Tunisia country.
@@ -17,9 +17,9 @@ class CountryTun extends WorldCountry {
   ///
   /// ISO 3166-1 Alpha-3 code: `TUN`, ISO 3166-1 Alpha-2 code: `TN`.
   /// {@endtemplate}
-  const factory CountryTun() = _TunFactory;
+  const factory() = _TunFactory;
 
-  const CountryTun._()
+  const new _()
     : super._(
         name: const CountryName(
           language: LangEng(),

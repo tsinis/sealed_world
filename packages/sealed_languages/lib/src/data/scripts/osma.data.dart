@@ -1,7 +1,7 @@
 part of "../../model/script/submodels/script.dart";
 
 extension type const _OsmaFactory._(ScriptOsma _) implements ScriptOsma {
-  const _OsmaFactory() : this._(const ScriptOsma._());
+  const new() : this._(const ScriptOsma._());
 }
 
 /// A class that represents the Osmanya script.
@@ -11,9 +11,9 @@ final class ScriptOsma extends Script {
   ///
   /// ISO 15924 Alpha-4 code: `Osma`, ISO 15924 Numeric code: `260`.
   /// {@endtemplate}
-  const factory ScriptOsma() = _OsmaFactory;
+  const factory() = _OsmaFactory;
 
-  const ScriptOsma._()
+  const new _()
     : super._(
         name: "Osmanya",
         code: "Osma",

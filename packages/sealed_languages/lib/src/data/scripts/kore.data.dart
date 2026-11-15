@@ -1,7 +1,7 @@
 part of "../../model/script/submodels/script.dart";
 
 extension type const _KoreFactory._(ScriptKore _) implements ScriptKore {
-  const _KoreFactory() : this._(const ScriptKore._());
+  const new() : this._(const ScriptKore._());
 }
 
 /// A class that represents the Korean (alias for Hangul + Han) script.
@@ -12,9 +12,9 @@ final class ScriptKore extends Script {
   ///
   /// ISO 15924 Alpha-4 code: `Kore`, ISO 15924 Numeric code: `287`.
   /// {@endtemplate}
-  const factory ScriptKore() = _KoreFactory;
+  const factory() = _KoreFactory;
 
-  const ScriptKore._()
+  const new _()
     : super._(
         name: "Korean (alias for Hangul + Han)",
         code: "Kore",

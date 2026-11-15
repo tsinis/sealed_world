@@ -7,7 +7,7 @@
 part of "../../model/country/submodels/world_country.dart";
 
 extension type const _GeoFactory._(CountryGeo _) implements CountryGeo {
-  const _GeoFactory() : this._(const CountryGeo._());
+  const new() : this._(const CountryGeo._());
 }
 
 /// A class that represents the Georgia country.
@@ -17,9 +17,9 @@ class CountryGeo extends WorldCountry {
   ///
   /// ISO 3166-1 Alpha-3 code: `GEO`, ISO 3166-1 Alpha-2 code: `GE`.
   /// {@endtemplate}
-  const factory CountryGeo() = _GeoFactory;
+  const factory() = _GeoFactory;
 
-  const CountryGeo._()
+  const new _()
     : super._(
         name: const CountryName(
           language: LangEng(),

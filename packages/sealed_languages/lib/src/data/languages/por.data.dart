@@ -1,7 +1,7 @@
 part of "../../model/language/submodels/natural_language.dart";
 
 extension type const _PorFactory._(LangPor _) implements LangPor {
-  const _PorFactory() : this._(const LangPor._());
+  const new() : this._(const LangPor._());
 }
 
 /// A class that represents the Portuguese language.
@@ -11,9 +11,9 @@ final class LangPor extends NaturalLanguage {
   ///
   /// ISO 639-2/T code: `POR`, ISO 639-1 code: `PT`.
   /// {@endtemplate}
-  const factory LangPor() = _PorFactory;
+  const factory() = _PorFactory;
 
-  const LangPor._()
+  const new _()
     : super._(
         name: "Portuguese",
         code: "POR",

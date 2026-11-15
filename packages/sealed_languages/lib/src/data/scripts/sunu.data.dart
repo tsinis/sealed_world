@@ -1,7 +1,7 @@
 part of "../../model/script/submodels/script.dart";
 
 extension type const _SunuFactory._(ScriptSunu _) implements ScriptSunu {
-  const _SunuFactory() : this._(const ScriptSunu._());
+  const new() : this._(const ScriptSunu._());
 }
 
 /// A class that represents the Sunuwar script.
@@ -11,9 +11,9 @@ final class ScriptSunu extends Script {
   ///
   /// ISO 15924 Alpha-4 code: `Sunu`, ISO 15924 Numeric code: `274`.
   /// {@endtemplate}
-  const factory ScriptSunu() = _SunuFactory;
+  const factory() = _SunuFactory;
 
-  const ScriptSunu._()
+  const new _()
     : super._(
         name: "Sunuwar",
         code: "Sunu",

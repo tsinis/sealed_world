@@ -7,7 +7,7 @@
 part of "../../model/country/submodels/world_country.dart";
 
 extension type const _SyrFactory._(CountrySyr _) implements CountrySyr {
-  const _SyrFactory() : this._(const CountrySyr._());
+  const new() : this._(const CountrySyr._());
 }
 
 /// A class that represents the Syria country.
@@ -17,9 +17,9 @@ class CountrySyr extends WorldCountry {
   ///
   /// ISO 3166-1 Alpha-3 code: `SYR`, ISO 3166-1 Alpha-2 code: `SY`.
   /// {@endtemplate}
-  const factory CountrySyr() = _SyrFactory;
+  const factory() = _SyrFactory;
 
-  const CountrySyr._()
+  const new _()
     : super._(
         name: const CountryName(
           language: LangEng(),

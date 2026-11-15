@@ -1,7 +1,7 @@
 part of "../../model/language/submodels/natural_language.dart";
 
 extension type const _KazFactory._(LangKaz _) implements LangKaz {
-  const _KazFactory() : this._(const LangKaz._());
+  const new() : this._(const LangKaz._());
 }
 
 /// A class that represents the Kazakh language.
@@ -11,9 +11,9 @@ final class LangKaz extends NaturalLanguage {
   ///
   /// ISO 639-2/T code: `KAZ`, ISO 639-1 code: `KK`.
   /// {@endtemplate}
-  const factory LangKaz() = _KazFactory;
+  const factory() = _KazFactory;
 
-  const LangKaz._()
+  const new _()
     : super._(
         name: "Kazakh",
         code: "KAZ",

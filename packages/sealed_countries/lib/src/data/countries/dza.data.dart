@@ -7,7 +7,7 @@
 part of "../../model/country/submodels/world_country.dart";
 
 extension type const _DzaFactory._(CountryDza _) implements CountryDza {
-  const _DzaFactory() : this._(const CountryDza._());
+  const new() : this._(const CountryDza._());
 }
 
 /// A class that represents the Algeria country.
@@ -17,9 +17,9 @@ class CountryDza extends WorldCountry {
   ///
   /// ISO 3166-1 Alpha-3 code: `DZA`, ISO 3166-1 Alpha-2 code: `DZ`.
   /// {@endtemplate}
-  const factory CountryDza() = _DzaFactory;
+  const factory() = _DzaFactory;
 
-  const CountryDza._()
+  const new _()
     : super._(
         name: const CountryName(
           language: LangEng(),

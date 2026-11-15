@@ -7,7 +7,7 @@
 part of "../../model/country/submodels/world_country.dart";
 
 extension type const _MozFactory._(CountryMoz _) implements CountryMoz {
-  const _MozFactory() : this._(const CountryMoz._());
+  const new() : this._(const CountryMoz._());
 }
 
 /// A class that represents the Mozambique country.
@@ -17,9 +17,9 @@ class CountryMoz extends WorldCountry {
   ///
   /// ISO 3166-1 Alpha-3 code: `MOZ`, ISO 3166-1 Alpha-2 code: `MZ`.
   /// {@endtemplate}
-  const factory CountryMoz() = _MozFactory;
+  const factory() = _MozFactory;
 
-  const CountryMoz._()
+  const new _()
     : super._(
         name: const CountryName(
           language: LangEng(),

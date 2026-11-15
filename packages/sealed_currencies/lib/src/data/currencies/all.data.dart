@@ -1,7 +1,7 @@
 part of "../../model/currency/submodels/fiat_currency.dart";
 
 extension type const _AllFactory._(FiatAll _) implements FiatAll {
-  const _AllFactory() : this._(const FiatAll._());
+  const new() : this._(const FiatAll._());
 }
 
 /// A class that represents the Albanian Lek currency.
@@ -11,9 +11,9 @@ final class FiatAll extends FiatCurrency {
   ///
   /// ISO 4217 Alpha code: `ALL`, ISO 4217 Numeric code: `008`.
   /// {@endtemplate}
-  const factory FiatAll() = _AllFactory;
+  const factory() = _AllFactory;
 
-  const FiatAll._()
+  const new _()
     : super(
         code: "ALL",
         name: "Albanian Lek",

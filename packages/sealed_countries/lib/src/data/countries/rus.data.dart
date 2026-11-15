@@ -7,7 +7,7 @@
 part of "../../model/country/submodels/world_country.dart";
 
 extension type const _RusFactory._(CountryRus _) implements CountryRus {
-  const _RusFactory() : this._(const CountryRus._());
+  const new() : this._(const CountryRus._());
 }
 
 /// A class that represents the Russia country.
@@ -17,9 +17,9 @@ class CountryRus extends WorldCountry {
   ///
   /// ISO 3166-1 Alpha-3 code: `RUS`, ISO 3166-1 Alpha-2 code: `RU`.
   /// {@endtemplate}
-  const factory CountryRus() = _RusFactory;
+  const factory() = _RusFactory;
 
-  const CountryRus._()
+  const new _()
     : super._(
         name: const CountryName(
           language: LangEng(),

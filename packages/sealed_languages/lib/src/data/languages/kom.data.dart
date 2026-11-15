@@ -1,7 +1,7 @@
 part of "../../model/language/submodels/natural_language.dart";
 
 extension type const _KomFactory._(LangKom _) implements LangKom {
-  const _KomFactory() : this._(const LangKom._());
+  const new() : this._(const LangKom._());
 }
 
 /// A class that represents the Komi language.
@@ -11,9 +11,9 @@ final class LangKom extends NaturalLanguage {
   ///
   /// ISO 639-2/T code: `KOM`, ISO 639-1 code: `KV`.
   /// {@endtemplate}
-  const factory LangKom() = _KomFactory;
+  const factory() = _KomFactory;
 
-  const LangKom._()
+  const new _()
     : super._(
         name: "Komi",
         code: "KOM",

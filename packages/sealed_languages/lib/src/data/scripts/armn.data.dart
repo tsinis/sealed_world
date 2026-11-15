@@ -1,7 +1,7 @@
 part of "../../model/script/submodels/script.dart";
 
 extension type const _ArmnFactory._(ScriptArmn _) implements ScriptArmn {
-  const _ArmnFactory() : this._(const ScriptArmn._());
+  const new() : this._(const ScriptArmn._());
 }
 
 /// A class that represents the Armenian script.
@@ -11,9 +11,9 @@ final class ScriptArmn extends Script {
   ///
   /// ISO 15924 Alpha-4 code: `Armn`, ISO 15924 Numeric code: `230`.
   /// {@endtemplate}
-  const factory ScriptArmn() = _ArmnFactory;
+  const factory() = _ArmnFactory;
 
-  const ScriptArmn._()
+  const new _()
     : super._(
         name: "Armenian",
         code: "Armn",

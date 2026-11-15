@@ -7,7 +7,7 @@
 part of "../../model/country/submodels/world_country.dart";
 
 extension type const _CodFactory._(CountryCod _) implements CountryCod {
-  const _CodFactory() : this._(const CountryCod._());
+  const new() : this._(const CountryCod._());
 }
 
 /// A class that represents the DR Congo country.
@@ -17,9 +17,9 @@ class CountryCod extends WorldCountry {
   ///
   /// ISO 3166-1 Alpha-3 code: `COD`, ISO 3166-1 Alpha-2 code: `CD`.
   /// {@endtemplate}
-  const factory CountryCod() = _CodFactory;
+  const factory() = _CodFactory;
 
-  const CountryCod._()
+  const new _()
     : super._(
         name: const CountryName(
           language: LangEng(),

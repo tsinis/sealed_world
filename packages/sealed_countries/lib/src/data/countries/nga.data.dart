@@ -7,7 +7,7 @@
 part of "../../model/country/submodels/world_country.dart";
 
 extension type const _NgaFactory._(CountryNga _) implements CountryNga {
-  const _NgaFactory() : this._(const CountryNga._());
+  const new() : this._(const CountryNga._());
 }
 
 /// A class that represents the Nigeria country.
@@ -17,9 +17,9 @@ class CountryNga extends WorldCountry {
   ///
   /// ISO 3166-1 Alpha-3 code: `NGA`, ISO 3166-1 Alpha-2 code: `NG`.
   /// {@endtemplate}
-  const factory CountryNga() = _NgaFactory;
+  const factory() = _NgaFactory;
 
-  const CountryNga._()
+  const new _()
     : super._(
         name: const CountryName(
           language: LangEng(),

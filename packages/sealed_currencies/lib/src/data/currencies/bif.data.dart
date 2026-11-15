@@ -1,7 +1,7 @@
 part of "../../model/currency/submodels/fiat_currency.dart";
 
 extension type const _BifFactory._(FiatBif _) implements FiatBif {
-  const _BifFactory() : this._(const FiatBif._());
+  const new() : this._(const FiatBif._());
 }
 
 /// A class that represents the Burundian Franc currency.
@@ -11,9 +11,9 @@ final class FiatBif extends FiatCurrency {
   ///
   /// ISO 4217 Alpha code: `BIF`, ISO 4217 Numeric code: `108`.
   /// {@endtemplate}
-  const factory FiatBif() = _BifFactory;
+  const factory() = _BifFactory;
 
-  const FiatBif._()
+  const new _()
     : super(
         code: "BIF",
         name: "Burundian Franc",

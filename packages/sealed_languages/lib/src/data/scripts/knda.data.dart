@@ -1,7 +1,7 @@
 part of "../../model/script/submodels/script.dart";
 
 extension type const _KndaFactory._(ScriptKnda _) implements ScriptKnda {
-  const _KndaFactory() : this._(const ScriptKnda._());
+  const new() : this._(const ScriptKnda._());
 }
 
 /// A class that represents the Kannada script.
@@ -11,9 +11,9 @@ final class ScriptKnda extends Script {
   ///
   /// ISO 15924 Alpha-4 code: `Knda`, ISO 15924 Numeric code: `345`.
   /// {@endtemplate}
-  const factory ScriptKnda() = _KndaFactory;
+  const factory() = _KndaFactory;
 
-  const ScriptKnda._()
+  const new _()
     : super._(
         name: "Kannada",
         code: "Knda",

@@ -7,7 +7,7 @@
 part of "../../model/country/submodels/world_country.dart";
 
 extension type const _CheFactory._(CountryChe _) implements CountryChe {
-  const _CheFactory() : this._(const CountryChe._());
+  const new() : this._(const CountryChe._());
 }
 
 /// A class that represents the Switzerland country.
@@ -17,9 +17,9 @@ class CountryChe extends WorldCountry {
   ///
   /// ISO 3166-1 Alpha-3 code: `CHE`, ISO 3166-1 Alpha-2 code: `CH`.
   /// {@endtemplate}
-  const factory CountryChe() = _CheFactory;
+  const factory() = _CheFactory;
 
-  const CountryChe._()
+  const new _()
     : super._(
         name: const CountryName(
           language: LangEng(),

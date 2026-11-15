@@ -1,7 +1,7 @@
 part of "../../model/language/submodels/natural_language.dart";
 
 extension type const _FryFactory._(LangFry _) implements LangFry {
-  const _FryFactory() : this._(const LangFry._());
+  const new() : this._(const LangFry._());
 }
 
 /// A class that represents the Western Frisian language.
@@ -11,9 +11,9 @@ final class LangFry extends NaturalLanguage {
   ///
   /// ISO 639-2/T code: `FRY`, ISO 639-1 code: `FY`.
   /// {@endtemplate}
-  const factory LangFry() = _FryFactory;
+  const factory() = _FryFactory;
 
-  const LangFry._()
+  const new _()
     : super._(
         name: "Western Frisian",
         code: "FRY",

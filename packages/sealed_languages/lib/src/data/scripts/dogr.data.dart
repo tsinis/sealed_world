@@ -1,7 +1,7 @@
 part of "../../model/script/submodels/script.dart";
 
 extension type const _DogrFactory._(ScriptDogr _) implements ScriptDogr {
-  const _DogrFactory() : this._(const ScriptDogr._());
+  const new() : this._(const ScriptDogr._());
 }
 
 /// A class that represents the Dogra script.
@@ -11,9 +11,9 @@ final class ScriptDogr extends Script {
   ///
   /// ISO 15924 Alpha-4 code: `Dogr`, ISO 15924 Numeric code: `328`.
   /// {@endtemplate}
-  const factory ScriptDogr() = _DogrFactory;
+  const factory() = _DogrFactory;
 
-  const ScriptDogr._()
+  const new _()
     : super._(
         name: "Dogra",
         code: "Dogr",

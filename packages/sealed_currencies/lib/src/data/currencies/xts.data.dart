@@ -1,7 +1,7 @@
 part of "../../model/currency/submodels/fiat_currency.dart";
 
 extension type const _XtsFactory._(FiatXts _) implements FiatXts {
-  const _XtsFactory() : this._(const FiatXts._());
+  const new() : this._(const FiatXts._());
 }
 
 /// A class that represents the Codes specifically reserved for testing
@@ -13,9 +13,9 @@ final class FiatXts extends FiatCurrency {
   ///
   /// ISO 4217 Alpha code: `XTS`, ISO 4217 Numeric code: `963`.
   /// {@endtemplate}
-  const factory FiatXts() = _XtsFactory;
+  const factory() = _XtsFactory;
 
-  const FiatXts._()
+  const new _()
     : super(
         code: "XTS",
         name: "Codes specifically reserved for testing purposes",

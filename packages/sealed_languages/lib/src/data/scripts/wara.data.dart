@@ -1,7 +1,7 @@
 part of "../../model/script/submodels/script.dart";
 
 extension type const _WaraFactory._(ScriptWara _) implements ScriptWara {
-  const _WaraFactory() : this._(const ScriptWara._());
+  const new() : this._(const ScriptWara._());
 }
 
 /// A class that represents the Warang Citi (Varang Kshiti) script.
@@ -11,9 +11,9 @@ final class ScriptWara extends Script {
   ///
   /// ISO 15924 Alpha-4 code: `Wara`, ISO 15924 Numeric code: `262`.
   /// {@endtemplate}
-  const factory ScriptWara() = _WaraFactory;
+  const factory() = _WaraFactory;
 
-  const ScriptWara._()
+  const new _()
     : super._(
         name: "Warang Citi (Varang Kshiti)",
         code: "Wara",

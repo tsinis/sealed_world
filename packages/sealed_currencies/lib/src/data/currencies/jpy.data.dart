@@ -1,7 +1,7 @@
 part of "../../model/currency/submodels/fiat_currency.dart";
 
 extension type const _JpyFactory._(FiatJpy _) implements FiatJpy {
-  const _JpyFactory() : this._(const FiatJpy._());
+  const new() : this._(const FiatJpy._());
 }
 
 /// A class that represents the Japanese Yen currency.
@@ -11,9 +11,9 @@ final class FiatJpy extends FiatCurrency {
   ///
   /// ISO 4217 Alpha code: `JPY`, ISO 4217 Numeric code: `392`.
   /// {@endtemplate}
-  const factory FiatJpy() = _JpyFactory;
+  const factory() = _JpyFactory;
 
-  const FiatJpy._()
+  const new _()
     : super(
         code: "JPY",
         name: "Japanese Yen",

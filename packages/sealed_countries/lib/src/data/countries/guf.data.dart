@@ -7,7 +7,7 @@
 part of "../../model/country/submodels/world_country.dart";
 
 extension type const _GufFactory._(CountryGuf _) implements CountryGuf {
-  const _GufFactory() : this._(const CountryGuf._());
+  const new() : this._(const CountryGuf._());
 }
 
 /// A class that represents the Guiana country.
@@ -17,9 +17,9 @@ class CountryGuf extends WorldCountry {
   ///
   /// ISO 3166-1 Alpha-3 code: `GUF`, ISO 3166-1 Alpha-2 code: `GF`.
   /// {@endtemplate}
-  const factory CountryGuf() = _GufFactory;
+  const factory() = _GufFactory;
 
-  const CountryGuf._()
+  const new _()
     : super._(
         name: const CountryName(
           language: LangEng(),

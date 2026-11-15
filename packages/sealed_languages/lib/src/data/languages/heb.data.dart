@@ -1,7 +1,7 @@
 part of "../../model/language/submodels/natural_language.dart";
 
 extension type const _HebFactory._(LangHeb _) implements LangHeb {
-  const _HebFactory() : this._(const LangHeb._());
+  const new() : this._(const LangHeb._());
 }
 
 /// A class that represents the Hebrew (modern) language.
@@ -11,9 +11,9 @@ final class LangHeb extends NaturalLanguage {
   ///
   /// ISO 639-2/T code: `HEB`, ISO 639-1 code: `HE`.
   /// {@endtemplate}
-  const factory LangHeb() = _HebFactory;
+  const factory() = _HebFactory;
 
-  const LangHeb._()
+  const new _()
     : super._(
         name: "Hebrew (modern)",
         code: "HEB",

@@ -1,7 +1,7 @@
 part of "../../model/script/submodels/script.dart";
 
 extension type const _SaraFactory._(ScriptSara _) implements ScriptSara {
-  const _SaraFactory() : this._(const ScriptSara._());
+  const new() : this._(const ScriptSara._());
 }
 
 /// A class that represents the Sarati script.
@@ -11,9 +11,9 @@ final class ScriptSara extends Script {
   ///
   /// ISO 15924 Alpha-4 code: `Sara`, ISO 15924 Numeric code: `292`.
   /// {@endtemplate}
-  const factory ScriptSara() = _SaraFactory;
+  const factory() = _SaraFactory;
 
-  const ScriptSara._()
+  const new _()
     : super._(
         name: "Sarati",
         code: "Sara",

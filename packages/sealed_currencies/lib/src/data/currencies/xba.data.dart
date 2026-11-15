@@ -1,7 +1,7 @@
 part of "../../model/currency/submodels/fiat_currency.dart";
 
 extension type const _XbaFactory._(FiatXba _) implements FiatXba {
-  const _XbaFactory() : this._(const FiatXba._());
+  const new() : this._(const FiatXba._());
 }
 
 /// A class that represents the European Composite Unit currency.
@@ -11,9 +11,9 @@ final class FiatXba extends FiatCurrency {
   ///
   /// ISO 4217 Alpha code: `XBA`, ISO 4217 Numeric code: `955`.
   /// {@endtemplate}
-  const factory FiatXba() = _XbaFactory;
+  const factory() = _XbaFactory;
 
-  const FiatXba._()
+  const new _()
     : super(
         code: "XBA",
         name: "European Composite Unit",

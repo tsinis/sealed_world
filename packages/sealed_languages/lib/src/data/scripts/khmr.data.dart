@@ -1,7 +1,7 @@
 part of "../../model/script/submodels/script.dart";
 
 extension type const _KhmrFactory._(ScriptKhmr _) implements ScriptKhmr {
-  const _KhmrFactory() : this._(const ScriptKhmr._());
+  const new() : this._(const ScriptKhmr._());
 }
 
 /// A class that represents the Khmer script.
@@ -11,9 +11,9 @@ final class ScriptKhmr extends Script {
   ///
   /// ISO 15924 Alpha-4 code: `Khmr`, ISO 15924 Numeric code: `355`.
   /// {@endtemplate}
-  const factory ScriptKhmr() = _KhmrFactory;
+  const factory() = _KhmrFactory;
 
-  const ScriptKhmr._()
+  const new _()
     : super._(
         name: "Khmer",
         code: "Khmr",

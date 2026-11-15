@@ -7,7 +7,7 @@
 part of "../../model/country/submodels/world_country.dart";
 
 extension type const _UmiFactory._(CountryUmi _) implements CountryUmi {
-  const _UmiFactory() : this._(const CountryUmi._());
+  const new() : this._(const CountryUmi._());
 }
 
 /// A class that represents the United States Minor Outlying Islands country.
@@ -18,9 +18,9 @@ class CountryUmi extends WorldCountry {
   ///
   /// ISO 3166-1 Alpha-3 code: `UMI`, ISO 3166-1 Alpha-2 code: `UM`.
   /// {@endtemplate}
-  const factory CountryUmi() = _UmiFactory;
+  const factory() = _UmiFactory;
 
-  const CountryUmi._()
+  const new _()
     : super._(
         name: const CountryName(
           language: LangEng(),

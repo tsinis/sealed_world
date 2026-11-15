@@ -7,7 +7,7 @@
 part of "../../model/country/submodels/world_country.dart";
 
 extension type const _DmaFactory._(CountryDma _) implements CountryDma {
-  const _DmaFactory() : this._(const CountryDma._());
+  const new() : this._(const CountryDma._());
 }
 
 /// A class that represents the Dominica country.
@@ -17,9 +17,9 @@ class CountryDma extends WorldCountry {
   ///
   /// ISO 3166-1 Alpha-3 code: `DMA`, ISO 3166-1 Alpha-2 code: `DM`.
   /// {@endtemplate}
-  const factory CountryDma() = _DmaFactory;
+  const factory() = _DmaFactory;
 
-  const CountryDma._()
+  const new _()
     : super._(
         name: const CountryName(
           language: LangEng(),

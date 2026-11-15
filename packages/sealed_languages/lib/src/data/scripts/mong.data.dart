@@ -1,7 +1,7 @@
 part of "../../model/script/submodels/script.dart";
 
 extension type const _MongFactory._(ScriptMong _) implements ScriptMong {
-  const _MongFactory() : this._(const ScriptMong._());
+  const new() : this._(const ScriptMong._());
 }
 
 /// A class that represents the Mongolian script.
@@ -11,9 +11,9 @@ final class ScriptMong extends Script {
   ///
   /// ISO 15924 Alpha-4 code: `Mong`, ISO 15924 Numeric code: `145`.
   /// {@endtemplate}
-  const factory ScriptMong() = _MongFactory;
+  const factory() = _MongFactory;
 
-  const ScriptMong._()
+  const new _()
     : super._(
         name: "Mongolian",
         code: "Mong",

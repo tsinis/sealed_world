@@ -7,7 +7,7 @@
 part of "../../model/country/submodels/world_country.dart";
 
 extension type const _TklFactory._(CountryTkl _) implements CountryTkl {
-  const _TklFactory() : this._(const CountryTkl._());
+  const new() : this._(const CountryTkl._());
 }
 
 /// A class that represents the Tokelau country.
@@ -17,9 +17,9 @@ class CountryTkl extends WorldCountry {
   ///
   /// ISO 3166-1 Alpha-3 code: `TKL`, ISO 3166-1 Alpha-2 code: `TK`.
   /// {@endtemplate}
-  const factory CountryTkl() = _TklFactory;
+  const factory() = _TklFactory;
 
-  const CountryTkl._()
+  const new _()
     : super._(
         name: const CountryName(
           language: LangEng(),

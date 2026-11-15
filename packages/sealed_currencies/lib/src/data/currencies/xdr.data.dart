@@ -1,7 +1,7 @@
 part of "../../model/currency/submodels/fiat_currency.dart";
 
 extension type const _XdrFactory._(FiatXdr _) implements FiatXdr {
-  const _XdrFactory() : this._(const FiatXdr._());
+  const new() : this._(const FiatXdr._());
 }
 
 /// A class that represents the Special Drawing Rights currency.
@@ -11,9 +11,9 @@ final class FiatXdr extends FiatCurrency {
   ///
   /// ISO 4217 Alpha code: `XDR`, ISO 4217 Numeric code: `960`.
   /// {@endtemplate}
-  const factory FiatXdr() = _XdrFactory;
+  const factory() = _XdrFactory;
 
-  const FiatXdr._()
+  const new _()
     : super(
         code: "XDR",
         name: "Special Drawing Rights",

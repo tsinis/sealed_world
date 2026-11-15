@@ -7,7 +7,7 @@
 part of "../../model/country/submodels/world_country.dart";
 
 extension type const _SomFactory._(CountrySom _) implements CountrySom {
-  const _SomFactory() : this._(const CountrySom._());
+  const new() : this._(const CountrySom._());
 }
 
 /// A class that represents the Somalia country.
@@ -17,9 +17,9 @@ class CountrySom extends WorldCountry {
   ///
   /// ISO 3166-1 Alpha-3 code: `SOM`, ISO 3166-1 Alpha-2 code: `SO`.
   /// {@endtemplate}
-  const factory CountrySom() = _SomFactory;
+  const factory() = _SomFactory;
 
-  const CountrySom._()
+  const new _()
     : super._(
         name: const CountryName(
           language: LangEng(),

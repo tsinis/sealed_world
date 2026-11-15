@@ -1,7 +1,7 @@
 part of "../../model/currency/submodels/fiat_currency.dart";
 
 extension type const _ThbFactory._(FiatThb _) implements FiatThb {
-  const _ThbFactory() : this._(const FiatThb._());
+  const new() : this._(const FiatThb._());
 }
 
 /// A class that represents the Thai Baht currency.
@@ -11,9 +11,9 @@ final class FiatThb extends FiatCurrency {
   ///
   /// ISO 4217 Alpha code: `THB`, ISO 4217 Numeric code: `764`.
   /// {@endtemplate}
-  const factory FiatThb() = _ThbFactory;
+  const factory() = _ThbFactory;
 
-  const FiatThb._()
+  const new _()
     : super(
         code: "THB",
         name: "Thai Baht",

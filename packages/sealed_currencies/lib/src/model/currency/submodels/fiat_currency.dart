@@ -204,7 +204,7 @@ sealed class FiatCurrency extends Currency
   /// Use the optional `mapper` parameter when you need custom localization
   /// data:
   /// {@macro sealed_world.locale_mapper_callback}
-  const FiatCurrency({
+  const new({
     /// The international three-letter alphabetic code as defined by the ISO
     /// 4217 standard.
     required super.code,
@@ -256,7 +256,7 @@ sealed class FiatCurrency extends Currency
 
   /// {@macro permissive_constructor}
   /// {@macro currency_constructor}
-  const FiatCurrency._permissive({
+  const new _permissive({
     String? code,
     super.name = " ",
     this.namesNative = const [],
@@ -282,500 +282,500 @@ sealed class FiatCurrency extends Currency
        super(code: code ?? " ");
 
   /// {@macro sealed_world.currency_aed_constructor}
-  const factory FiatCurrency.aed() = _AedFactory;
+  const factory aed() = _AedFactory;
 
   /// {@macro sealed_world.currency_afn_constructor}
-  const factory FiatCurrency.afn() = _AfnFactory;
+  const factory afn() = _AfnFactory;
 
   /// {@macro sealed_world.currency_all_constructor}
-  const factory FiatCurrency.all() = _AllFactory;
+  const factory all() = _AllFactory;
 
   /// {@macro sealed_world.currency_amd_constructor}
-  const factory FiatCurrency.amd() = _AmdFactory;
+  const factory amd() = _AmdFactory;
 
   /// {@macro sealed_world.currency_aoa_constructor}
-  const factory FiatCurrency.aoa() = _AoaFactory;
+  const factory aoa() = _AoaFactory;
 
   /// {@macro sealed_world.currency_ars_constructor}
-  const factory FiatCurrency.ars() = _ArsFactory;
+  const factory ars() = _ArsFactory;
 
   /// {@macro sealed_world.currency_aud_constructor}
-  const factory FiatCurrency.aud() = _AudFactory;
+  const factory aud() = _AudFactory;
 
   /// {@macro sealed_world.currency_awg_constructor}
-  const factory FiatCurrency.awg() = _AwgFactory;
+  const factory awg() = _AwgFactory;
 
   /// {@macro sealed_world.currency_azn_constructor}
-  const factory FiatCurrency.azn() = _AznFactory;
+  const factory azn() = _AznFactory;
 
   /// {@macro sealed_world.currency_bam_constructor}
-  const factory FiatCurrency.bam() = _BamFactory;
+  const factory bam() = _BamFactory;
 
   /// {@macro sealed_world.currency_bbd_constructor}
-  const factory FiatCurrency.bbd() = _BbdFactory;
+  const factory bbd() = _BbdFactory;
 
   /// {@macro sealed_world.currency_bdt_constructor}
-  const factory FiatCurrency.bdt() = _BdtFactory;
+  const factory bdt() = _BdtFactory;
 
   /// {@macro sealed_world.currency_bhd_constructor}
-  const factory FiatCurrency.bhd() = _BhdFactory;
+  const factory bhd() = _BhdFactory;
 
   /// {@macro sealed_world.currency_bif_constructor}
-  const factory FiatCurrency.bif() = _BifFactory;
+  const factory bif() = _BifFactory;
 
   /// {@macro sealed_world.currency_bmd_constructor}
-  const factory FiatCurrency.bmd() = _BmdFactory;
+  const factory bmd() = _BmdFactory;
 
   /// {@macro sealed_world.currency_bnd_constructor}
-  const factory FiatCurrency.bnd() = _BndFactory;
+  const factory bnd() = _BndFactory;
 
   /// {@macro sealed_world.currency_bob_constructor}
-  const factory FiatCurrency.bob() = _BobFactory;
+  const factory bob() = _BobFactory;
 
   /// {@macro sealed_world.currency_brl_constructor}
-  const factory FiatCurrency.brl() = _BrlFactory;
+  const factory brl() = _BrlFactory;
 
   /// {@macro sealed_world.currency_bsd_constructor}
-  const factory FiatCurrency.bsd() = _BsdFactory;
+  const factory bsd() = _BsdFactory;
 
   /// {@macro sealed_world.currency_btn_constructor}
-  const factory FiatCurrency.btn() = _BtnFactory;
+  const factory btn() = _BtnFactory;
 
   /// {@macro sealed_world.currency_bwp_constructor}
-  const factory FiatCurrency.bwp() = _BwpFactory;
+  const factory bwp() = _BwpFactory;
 
   /// {@macro sealed_world.currency_byn_constructor}
-  const factory FiatCurrency.byn() = _BynFactory;
+  const factory byn() = _BynFactory;
 
   /// {@macro sealed_world.currency_bzd_constructor}
-  const factory FiatCurrency.bzd() = _BzdFactory;
+  const factory bzd() = _BzdFactory;
 
   /// {@macro sealed_world.currency_cad_constructor}
-  const factory FiatCurrency.cad() = _CadFactory;
+  const factory cad() = _CadFactory;
 
   /// {@macro sealed_world.currency_cdf_constructor}
-  const factory FiatCurrency.cdf() = _CdfFactory;
+  const factory cdf() = _CdfFactory;
 
   /// {@macro sealed_world.currency_chf_constructor}
-  const factory FiatCurrency.chf() = _ChfFactory;
+  const factory chf() = _ChfFactory;
 
   /// {@macro sealed_world.currency_clf_constructor}
-  const factory FiatCurrency.clf() = _ClfFactory;
+  const factory clf() = _ClfFactory;
 
   /// {@macro sealed_world.currency_clp_constructor}
-  const factory FiatCurrency.clp() = _ClpFactory;
+  const factory clp() = _ClpFactory;
 
   /// {@macro sealed_world.currency_cny_constructor}
-  const factory FiatCurrency.cny() = _CnyFactory;
+  const factory cny() = _CnyFactory;
 
   /// {@macro sealed_world.currency_cop_constructor}
-  const factory FiatCurrency.cop() = _CopFactory;
+  const factory cop() = _CopFactory;
 
   /// {@macro sealed_world.currency_crc_constructor}
-  const factory FiatCurrency.crc() = _CrcFactory;
+  const factory crc() = _CrcFactory;
 
   /// {@macro sealed_world.currency_cuc_constructor}
-  const factory FiatCurrency.cuc() = _CucFactory;
+  const factory cuc() = _CucFactory;
 
   /// {@macro sealed_world.currency_cup_constructor}
-  const factory FiatCurrency.cup() = _CupFactory;
+  const factory cup() = _CupFactory;
 
   /// {@macro sealed_world.currency_cve_constructor}
-  const factory FiatCurrency.cve() = _CveFactory;
+  const factory cve() = _CveFactory;
 
   /// {@macro sealed_world.currency_czk_constructor}
-  const factory FiatCurrency.czk() = _CzkFactory;
+  const factory czk() = _CzkFactory;
 
   /// {@macro sealed_world.currency_djf_constructor}
-  const factory FiatCurrency.djf() = _DjfFactory;
+  const factory djf() = _DjfFactory;
 
   /// {@macro sealed_world.currency_dkk_constructor}
-  const factory FiatCurrency.dkk() = _DkkFactory;
+  const factory dkk() = _DkkFactory;
 
   /// {@macro sealed_world.currency_dop_constructor}
-  const factory FiatCurrency.dop() = _DopFactory;
+  const factory dop() = _DopFactory;
 
   /// {@macro sealed_world.currency_dzd_constructor}
-  const factory FiatCurrency.dzd() = _DzdFactory;
+  const factory dzd() = _DzdFactory;
 
   /// {@macro sealed_world.currency_egp_constructor}
-  const factory FiatCurrency.egp() = _EgpFactory;
+  const factory egp() = _EgpFactory;
 
   /// {@macro sealed_world.currency_ern_constructor}
-  const factory FiatCurrency.ern() = _ErnFactory;
+  const factory ern() = _ErnFactory;
 
   /// {@macro sealed_world.currency_etb_constructor}
-  const factory FiatCurrency.etb() = _EtbFactory;
+  const factory etb() = _EtbFactory;
 
   /// {@macro sealed_world.currency_eur_constructor}
-  const factory FiatCurrency.eur() = _EurFactory;
+  const factory eur() = _EurFactory;
 
   /// {@macro sealed_world.currency_fjd_constructor}
-  const factory FiatCurrency.fjd() = _FjdFactory;
+  const factory fjd() = _FjdFactory;
 
   /// {@macro sealed_world.currency_fkp_constructor}
-  const factory FiatCurrency.fkp() = _FkpFactory;
+  const factory fkp() = _FkpFactory;
 
   /// {@macro sealed_world.currency_gbp_constructor}
-  const factory FiatCurrency.gbp() = _GbpFactory;
+  const factory gbp() = _GbpFactory;
 
   /// {@macro sealed_world.currency_gel_constructor}
-  const factory FiatCurrency.gel() = _GelFactory;
+  const factory gel() = _GelFactory;
 
   /// {@macro sealed_world.currency_ghs_constructor}
-  const factory FiatCurrency.ghs() = _GhsFactory;
+  const factory ghs() = _GhsFactory;
 
   /// {@macro sealed_world.currency_gip_constructor}
-  const factory FiatCurrency.gip() = _GipFactory;
+  const factory gip() = _GipFactory;
 
   /// {@macro sealed_world.currency_gmd_constructor}
-  const factory FiatCurrency.gmd() = _GmdFactory;
+  const factory gmd() = _GmdFactory;
 
   /// {@macro sealed_world.currency_gnf_constructor}
-  const factory FiatCurrency.gnf() = _GnfFactory;
+  const factory gnf() = _GnfFactory;
 
   /// {@macro sealed_world.currency_gtq_constructor}
-  const factory FiatCurrency.gtq() = _GtqFactory;
+  const factory gtq() = _GtqFactory;
 
   /// {@macro sealed_world.currency_gyd_constructor}
-  const factory FiatCurrency.gyd() = _GydFactory;
+  const factory gyd() = _GydFactory;
 
   /// {@macro sealed_world.currency_hkd_constructor}
-  const factory FiatCurrency.hkd() = _HkdFactory;
+  const factory hkd() = _HkdFactory;
 
   /// {@macro sealed_world.currency_hnl_constructor}
-  const factory FiatCurrency.hnl() = _HnlFactory;
+  const factory hnl() = _HnlFactory;
 
   /// {@macro sealed_world.currency_htg_constructor}
-  const factory FiatCurrency.htg() = _HtgFactory;
+  const factory htg() = _HtgFactory;
 
   /// {@macro sealed_world.currency_huf_constructor}
-  const factory FiatCurrency.huf() = _HufFactory;
+  const factory huf() = _HufFactory;
 
   /// {@macro sealed_world.currency_idr_constructor}
-  const factory FiatCurrency.idr() = _IdrFactory;
+  const factory idr() = _IdrFactory;
 
   /// {@macro sealed_world.currency_ils_constructor}
-  const factory FiatCurrency.ils() = _IlsFactory;
+  const factory ils() = _IlsFactory;
 
   /// {@macro sealed_world.currency_inr_constructor}
-  const factory FiatCurrency.inr() = _InrFactory;
+  const factory inr() = _InrFactory;
 
   /// {@macro sealed_world.currency_iqd_constructor}
-  const factory FiatCurrency.iqd() = _IqdFactory;
+  const factory iqd() = _IqdFactory;
 
   /// {@macro sealed_world.currency_irr_constructor}
-  const factory FiatCurrency.irr() = _IrrFactory;
+  const factory irr() = _IrrFactory;
 
   /// {@macro sealed_world.currency_isk_constructor}
-  const factory FiatCurrency.isk() = _IskFactory;
+  const factory isk() = _IskFactory;
 
   /// {@macro sealed_world.currency_jmd_constructor}
-  const factory FiatCurrency.jmd() = _JmdFactory;
+  const factory jmd() = _JmdFactory;
 
   /// {@macro sealed_world.currency_jod_constructor}
-  const factory FiatCurrency.jod() = _JodFactory;
+  const factory jod() = _JodFactory;
 
   /// {@macro sealed_world.currency_jpy_constructor}
-  const factory FiatCurrency.jpy() = _JpyFactory;
+  const factory jpy() = _JpyFactory;
 
   /// {@macro sealed_world.currency_kes_constructor}
-  const factory FiatCurrency.kes() = _KesFactory;
+  const factory kes() = _KesFactory;
 
   /// {@macro sealed_world.currency_kgs_constructor}
-  const factory FiatCurrency.kgs() = _KgsFactory;
+  const factory kgs() = _KgsFactory;
 
   /// {@macro sealed_world.currency_khr_constructor}
-  const factory FiatCurrency.khr() = _KhrFactory;
+  const factory khr() = _KhrFactory;
 
   /// {@macro sealed_world.currency_kmf_constructor}
-  const factory FiatCurrency.kmf() = _KmfFactory;
+  const factory kmf() = _KmfFactory;
 
   /// {@macro sealed_world.currency_kpw_constructor}
-  const factory FiatCurrency.kpw() = _KpwFactory;
+  const factory kpw() = _KpwFactory;
 
   /// {@macro sealed_world.currency_krw_constructor}
-  const factory FiatCurrency.krw() = _KrwFactory;
+  const factory krw() = _KrwFactory;
 
   /// {@macro sealed_world.currency_kwd_constructor}
-  const factory FiatCurrency.kwd() = _KwdFactory;
+  const factory kwd() = _KwdFactory;
 
   /// {@macro sealed_world.currency_kyd_constructor}
-  const factory FiatCurrency.kyd() = _KydFactory;
+  const factory kyd() = _KydFactory;
 
   /// {@macro sealed_world.currency_kzt_constructor}
-  const factory FiatCurrency.kzt() = _KztFactory;
+  const factory kzt() = _KztFactory;
 
   /// {@macro sealed_world.currency_lak_constructor}
-  const factory FiatCurrency.lak() = _LakFactory;
+  const factory lak() = _LakFactory;
 
   /// {@macro sealed_world.currency_lbp_constructor}
-  const factory FiatCurrency.lbp() = _LbpFactory;
+  const factory lbp() = _LbpFactory;
 
   /// {@macro sealed_world.currency_lkr_constructor}
-  const factory FiatCurrency.lkr() = _LkrFactory;
+  const factory lkr() = _LkrFactory;
 
   /// {@macro sealed_world.currency_lrd_constructor}
-  const factory FiatCurrency.lrd() = _LrdFactory;
+  const factory lrd() = _LrdFactory;
 
   /// {@macro sealed_world.currency_lsl_constructor}
-  const factory FiatCurrency.lsl() = _LslFactory;
+  const factory lsl() = _LslFactory;
 
   /// {@macro sealed_world.currency_lyd_constructor}
-  const factory FiatCurrency.lyd() = _LydFactory;
+  const factory lyd() = _LydFactory;
 
   /// {@macro sealed_world.currency_mad_constructor}
-  const factory FiatCurrency.mad() = _MadFactory;
+  const factory mad() = _MadFactory;
 
   /// {@macro sealed_world.currency_mdl_constructor}
-  const factory FiatCurrency.mdl() = _MdlFactory;
+  const factory mdl() = _MdlFactory;
 
   /// {@macro sealed_world.currency_mga_constructor}
-  const factory FiatCurrency.mga() = _MgaFactory;
+  const factory mga() = _MgaFactory;
 
   /// {@macro sealed_world.currency_mkd_constructor}
-  const factory FiatCurrency.mkd() = _MkdFactory;
+  const factory mkd() = _MkdFactory;
 
   /// {@macro sealed_world.currency_mmk_constructor}
-  const factory FiatCurrency.mmk() = _MmkFactory;
+  const factory mmk() = _MmkFactory;
 
   /// {@macro sealed_world.currency_mnt_constructor}
-  const factory FiatCurrency.mnt() = _MntFactory;
+  const factory mnt() = _MntFactory;
 
   /// {@macro sealed_world.currency_mop_constructor}
-  const factory FiatCurrency.mop() = _MopFactory;
+  const factory mop() = _MopFactory;
 
   /// {@macro sealed_world.currency_mru_constructor}
-  const factory FiatCurrency.mru() = _MruFactory;
+  const factory mru() = _MruFactory;
 
   /// {@macro sealed_world.currency_mur_constructor}
-  const factory FiatCurrency.mur() = _MurFactory;
+  const factory mur() = _MurFactory;
 
   /// {@macro sealed_world.currency_mvr_constructor}
-  const factory FiatCurrency.mvr() = _MvrFactory;
+  const factory mvr() = _MvrFactory;
 
   /// {@macro sealed_world.currency_mwk_constructor}
-  const factory FiatCurrency.mwk() = _MwkFactory;
+  const factory mwk() = _MwkFactory;
 
   /// {@macro sealed_world.currency_mxn_constructor}
-  const factory FiatCurrency.mxn() = _MxnFactory;
+  const factory mxn() = _MxnFactory;
 
   /// {@macro sealed_world.currency_myr_constructor}
-  const factory FiatCurrency.myr() = _MyrFactory;
+  const factory myr() = _MyrFactory;
 
   /// {@macro sealed_world.currency_mzn_constructor}
-  const factory FiatCurrency.mzn() = _MznFactory;
+  const factory mzn() = _MznFactory;
 
   /// {@macro sealed_world.currency_nad_constructor}
-  const factory FiatCurrency.nad() = _NadFactory;
+  const factory nad() = _NadFactory;
 
   /// {@macro sealed_world.currency_ngn_constructor}
-  const factory FiatCurrency.ngn() = _NgnFactory;
+  const factory ngn() = _NgnFactory;
 
   /// {@macro sealed_world.currency_nio_constructor}
-  const factory FiatCurrency.nio() = _NioFactory;
+  const factory nio() = _NioFactory;
 
   /// {@macro sealed_world.currency_nok_constructor}
-  const factory FiatCurrency.nok() = _NokFactory;
+  const factory nok() = _NokFactory;
 
   /// {@macro sealed_world.currency_npr_constructor}
-  const factory FiatCurrency.npr() = _NprFactory;
+  const factory npr() = _NprFactory;
 
   /// {@macro sealed_world.currency_nzd_constructor}
-  const factory FiatCurrency.nzd() = _NzdFactory;
+  const factory nzd() = _NzdFactory;
 
   /// {@macro sealed_world.currency_omr_constructor}
-  const factory FiatCurrency.omr() = _OmrFactory;
+  const factory omr() = _OmrFactory;
 
   /// {@macro sealed_world.currency_pab_constructor}
-  const factory FiatCurrency.pab() = _PabFactory;
+  const factory pab() = _PabFactory;
 
   /// {@macro sealed_world.currency_pen_constructor}
-  const factory FiatCurrency.pen() = _PenFactory;
+  const factory pen() = _PenFactory;
 
   /// {@macro sealed_world.currency_pgk_constructor}
-  const factory FiatCurrency.pgk() = _PgkFactory;
+  const factory pgk() = _PgkFactory;
 
   /// {@macro sealed_world.currency_php_constructor}
-  const factory FiatCurrency.php() = _PhpFactory;
+  const factory php() = _PhpFactory;
 
   /// {@macro sealed_world.currency_pkr_constructor}
-  const factory FiatCurrency.pkr() = _PkrFactory;
+  const factory pkr() = _PkrFactory;
 
   /// {@macro sealed_world.currency_pln_constructor}
-  const factory FiatCurrency.pln() = _PlnFactory;
+  const factory pln() = _PlnFactory;
 
   /// {@macro sealed_world.currency_pyg_constructor}
-  const factory FiatCurrency.pyg() = _PygFactory;
+  const factory pyg() = _PygFactory;
 
   /// {@macro sealed_world.currency_qar_constructor}
-  const factory FiatCurrency.qar() = _QarFactory;
+  const factory qar() = _QarFactory;
 
   /// {@macro sealed_world.currency_ron_constructor}
-  const factory FiatCurrency.ron() = _RonFactory;
+  const factory ron() = _RonFactory;
 
   /// {@macro sealed_world.currency_rsd_constructor}
-  const factory FiatCurrency.rsd() = _RsdFactory;
+  const factory rsd() = _RsdFactory;
 
   /// {@macro sealed_world.currency_rub_constructor}
-  const factory FiatCurrency.rub() = _RubFactory;
+  const factory rub() = _RubFactory;
 
   /// {@macro sealed_world.currency_rwf_constructor}
-  const factory FiatCurrency.rwf() = _RwfFactory;
+  const factory rwf() = _RwfFactory;
 
   /// {@macro sealed_world.currency_sar_constructor}
-  const factory FiatCurrency.sar() = _SarFactory;
+  const factory sar() = _SarFactory;
 
   /// {@macro sealed_world.currency_sbd_constructor}
-  const factory FiatCurrency.sbd() = _SbdFactory;
+  const factory sbd() = _SbdFactory;
 
   /// {@macro sealed_world.currency_scr_constructor}
-  const factory FiatCurrency.scr() = _ScrFactory;
+  const factory scr() = _ScrFactory;
 
   /// {@macro sealed_world.currency_sdg_constructor}
-  const factory FiatCurrency.sdg() = _SdgFactory;
+  const factory sdg() = _SdgFactory;
 
   /// {@macro sealed_world.currency_sek_constructor}
-  const factory FiatCurrency.sek() = _SekFactory;
+  const factory sek() = _SekFactory;
 
   /// {@macro sealed_world.currency_sgd_constructor}
-  const factory FiatCurrency.sgd() = _SgdFactory;
+  const factory sgd() = _SgdFactory;
 
   /// {@macro sealed_world.currency_shp_constructor}
-  const factory FiatCurrency.shp() = _ShpFactory;
+  const factory shp() = _ShpFactory;
 
   /// {@macro sealed_world.currency_sle_constructor}
-  const factory FiatCurrency.sle() = _SleFactory;
+  const factory sle() = _SleFactory;
 
   /// {@macro sealed_world.currency_sos_constructor}
-  const factory FiatCurrency.sos() = _SosFactory;
+  const factory sos() = _SosFactory;
 
   /// {@macro sealed_world.currency_srd_constructor}
-  const factory FiatCurrency.srd() = _SrdFactory;
+  const factory srd() = _SrdFactory;
 
   /// {@macro sealed_world.currency_ssp_constructor}
-  const factory FiatCurrency.ssp() = _SspFactory;
+  const factory ssp() = _SspFactory;
 
   /// {@macro sealed_world.currency_stn_constructor}
-  const factory FiatCurrency.stn() = _StnFactory;
+  const factory stn() = _StnFactory;
 
   /// {@macro sealed_world.currency_syp_constructor}
-  const factory FiatCurrency.syp() = _SypFactory;
+  const factory syp() = _SypFactory;
 
   /// {@macro sealed_world.currency_szl_constructor}
-  const factory FiatCurrency.szl() = _SzlFactory;
+  const factory szl() = _SzlFactory;
 
   /// {@macro sealed_world.currency_thb_constructor}
-  const factory FiatCurrency.thb() = _ThbFactory;
+  const factory thb() = _ThbFactory;
 
   /// {@macro sealed_world.currency_tjs_constructor}
-  const factory FiatCurrency.tjs() = _TjsFactory;
+  const factory tjs() = _TjsFactory;
 
   /// {@macro sealed_world.currency_tmt_constructor}
-  const factory FiatCurrency.tmt() = _TmtFactory;
+  const factory tmt() = _TmtFactory;
 
   /// {@macro sealed_world.currency_tnd_constructor}
-  const factory FiatCurrency.tnd() = _TndFactory;
+  const factory tnd() = _TndFactory;
 
   /// {@macro sealed_world.currency_top_constructor}
-  const factory FiatCurrency.top() = _TopFactory;
+  const factory top() = _TopFactory;
 
   /// {@macro sealed_world.currency_try_constructor}
   /// Name `try` can't be used because it's a keyword, so we use `try_` instead.
-  const factory FiatCurrency.try_() = _TryFactory;
+  const factory try_() = _TryFactory;
 
   /// {@macro sealed_world.currency_ttd_constructor}
-  const factory FiatCurrency.ttd() = _TtdFactory;
+  const factory ttd() = _TtdFactory;
 
   /// {@macro sealed_world.currency_twd_constructor}
-  const factory FiatCurrency.twd() = _TwdFactory;
+  const factory twd() = _TwdFactory;
 
   /// {@macro sealed_world.currency_tzs_constructor}
-  const factory FiatCurrency.tzs() = _TzsFactory;
+  const factory tzs() = _TzsFactory;
 
   /// {@macro sealed_world.currency_uah_constructor}
-  const factory FiatCurrency.uah() = _UahFactory;
+  const factory uah() = _UahFactory;
 
   /// {@macro sealed_world.currency_ugx_constructor}
-  const factory FiatCurrency.ugx() = _UgxFactory;
+  const factory ugx() = _UgxFactory;
 
   /// {@macro sealed_world.currency_usd_constructor}
-  const factory FiatCurrency.usd() = _UsdFactory;
+  const factory usd() = _UsdFactory;
 
   /// {@macro sealed_world.currency_uyu_constructor}
-  const factory FiatCurrency.uyu() = _UyuFactory;
+  const factory uyu() = _UyuFactory;
 
   /// {@macro sealed_world.currency_uzs_constructor}
-  const factory FiatCurrency.uzs() = _UzsFactory;
+  const factory uzs() = _UzsFactory;
 
   /// {@macro sealed_world.currency_ves_constructor}
-  const factory FiatCurrency.ves() = _VesFactory;
+  const factory ves() = _VesFactory;
 
   /// {@macro sealed_world.currency_vnd_constructor}
-  const factory FiatCurrency.vnd() = _VndFactory;
+  const factory vnd() = _VndFactory;
 
   /// {@macro sealed_world.currency_vuv_constructor}
-  const factory FiatCurrency.vuv() = _VuvFactory;
+  const factory vuv() = _VuvFactory;
 
   /// {@macro sealed_world.currency_wst_constructor}
-  const factory FiatCurrency.wst() = _WstFactory;
+  const factory wst() = _WstFactory;
 
   /// {@macro sealed_world.currency_xaf_constructor}
-  const factory FiatCurrency.xaf() = _XafFactory;
+  const factory xaf() = _XafFactory;
 
   /// {@macro sealed_world.currency_xcd_constructor}
-  const factory FiatCurrency.xcd() = _XcdFactory;
+  const factory xcd() = _XcdFactory;
 
   /// {@macro sealed_world.currency_xcg_constructor}
-  const factory FiatCurrency.xcg() = _XcgFactory;
+  const factory xcg() = _XcgFactory;
 
   /// {@macro sealed_world.currency_xof_constructor}
-  const factory FiatCurrency.xof() = _XofFactory;
+  const factory xof() = _XofFactory;
 
   /// {@macro sealed_world.currency_xpf_constructor}
-  const factory FiatCurrency.xpf() = _XpfFactory;
+  const factory xpf() = _XpfFactory;
 
   /// {@macro sealed_world.currency_yer_constructor}
-  const factory FiatCurrency.yer() = _YerFactory;
+  const factory yer() = _YerFactory;
 
   /// {@macro sealed_world.currency_zar_constructor}
-  const factory FiatCurrency.zar() = _ZarFactory;
+  const factory zar() = _ZarFactory;
 
   /// {@macro sealed_world.currency_zmw_constructor}
-  const factory FiatCurrency.zmw() = _ZmwFactory;
+  const factory zmw() = _ZmwFactory;
 
   /// {@macro sealed_world.currency_zwg_constructor}
-  const factory FiatCurrency.zwg() = _ZwgFactory;
+  const factory zwg() = _ZwgFactory;
 
   /// {@macro sealed_world.currency_xag_constructor}
-  const factory FiatCurrency.xag() = _XagFactory;
+  const factory xag() = _XagFactory;
 
   /// {@macro sealed_world.currency_xau_constructor}
-  const factory FiatCurrency.xau() = _XauFactory;
+  const factory xau() = _XauFactory;
 
   /// {@macro sealed_world.currency_xba_constructor}
-  const factory FiatCurrency.xba() = _XbaFactory;
+  const factory xba() = _XbaFactory;
 
   /// {@macro sealed_world.currency_xbb_constructor}
-  const factory FiatCurrency.xbb() = _XbbFactory;
+  const factory xbb() = _XbbFactory;
 
   /// {@macro sealed_world.currency_xbc_constructor}
-  const factory FiatCurrency.xbc() = _XbcFactory;
+  const factory xbc() = _XbcFactory;
 
   /// {@macro sealed_world.currency_xbd_constructor}
-  const factory FiatCurrency.xbd() = _XbdFactory;
+  const factory xbd() = _XbdFactory;
 
   /// {@macro sealed_world.currency_xdr_constructor}
-  const factory FiatCurrency.xdr() = _XdrFactory;
+  const factory xdr() = _XdrFactory;
 
   /// {@macro sealed_world.currency_xpd_constructor}
-  const factory FiatCurrency.xpd() = _XpdFactory;
+  const factory xpd() = _XpdFactory;
 
   /// {@macro sealed_world.currency_xpt_constructor}
-  const factory FiatCurrency.xpt() = _XptFactory;
+  const factory xpt() = _XptFactory;
 
   /// {@macro sealed_world.currency_xts_constructor}
-  const factory FiatCurrency.xts() = _XtsFactory;
+  const factory xts() = _XtsFactory;
 
   /// Returns a [FiatCurrency] instance from an letter ISO 4217 code.
   ///
@@ -788,10 +788,8 @@ sealed class FiatCurrency extends Currency
   /// This method returns the [FiatCurrency] instance
   /// that corresponds to the given code, or throws a [StateError] if no such
   /// instance exists.
-  factory FiatCurrency.fromCode(
-    Object code, [
-    Iterable<FiatCurrency>? currencies,
-  ]) => currencies == null
+  factory fromCode(Object code, [Iterable<FiatCurrency>? currencies]) =>
+      currencies == null
       ? codeMap.findByCodeOrThrow(code)
       : currencies.firstIsoWhereCode(code);
 
@@ -807,7 +805,7 @@ sealed class FiatCurrency extends Currency
   /// This method returns the
   /// [FiatCurrency] instance that corresponds to the given code, or throws a
   /// [StateError] if no such instance exists.
-  factory FiatCurrency.fromCodeNumeric(
+  factory fromCodeNumeric(
     Object codeNumeric, [
     Iterable<FiatCurrency>? currencies,
   ]) => currencies == null
@@ -825,7 +823,7 @@ sealed class FiatCurrency extends Currency
   /// This method returns the
   /// [FiatCurrency] instance that corresponds to the given name, or throws a
   /// [StateError] if no such instance exists.
-  factory FiatCurrency.fromName(
+  factory fromName(
     Object name, [
     Iterable<FiatCurrency> currencies = listExtended,
     // ignore: avoid-non-empty-constructor-bodies, more clear for factory methods.
@@ -867,10 +865,8 @@ sealed class FiatCurrency extends Currency
   /// Otherwise, it calls the `fromCode` factory method to create a
   /// [FiatCurrency] instance. The resulting [FiatCurrency] instance is assigned
   /// to the [code] variable.
-  factory FiatCurrency.fromAnyCode(
-    Object code, [
-    Iterable<FiatCurrency>? currencies,
-  ]) => currencies == null
+  factory fromAnyCode(Object code, [Iterable<FiatCurrency>? currencies]) =>
+      currencies == null
       ? map.findByCodeOrThrow(code)
       : IsoObject(code).maybeMapIsoCode(
           orElse: (regular) => FiatCurrency.fromCode(regular, currencies),

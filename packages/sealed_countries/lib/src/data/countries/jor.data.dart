@@ -7,7 +7,7 @@
 part of "../../model/country/submodels/world_country.dart";
 
 extension type const _JorFactory._(CountryJor _) implements CountryJor {
-  const _JorFactory() : this._(const CountryJor._());
+  const new() : this._(const CountryJor._());
 }
 
 /// A class that represents the Jordan country.
@@ -17,9 +17,9 @@ class CountryJor extends WorldCountry {
   ///
   /// ISO 3166-1 Alpha-3 code: `JOR`, ISO 3166-1 Alpha-2 code: `JO`.
   /// {@endtemplate}
-  const factory CountryJor() = _JorFactory;
+  const factory() = _JorFactory;
 
-  const CountryJor._()
+  const new _()
     : super._(
         name: const CountryName(
           language: LangEng(),

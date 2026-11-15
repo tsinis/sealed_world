@@ -1,7 +1,7 @@
 part of "../../model/script/submodels/script.dart";
 
 extension type const _LydiFactory._(ScriptLydi _) implements ScriptLydi {
-  const _LydiFactory() : this._(const ScriptLydi._());
+  const new() : this._(const ScriptLydi._());
 }
 
 /// A class that represents the Lydian script.
@@ -11,9 +11,9 @@ final class ScriptLydi extends Script {
   ///
   /// ISO 15924 Alpha-4 code: `Lydi`, ISO 15924 Numeric code: `116`.
   /// {@endtemplate}
-  const factory ScriptLydi() = _LydiFactory;
+  const factory() = _LydiFactory;
 
-  const ScriptLydi._()
+  const new _()
     : super._(
         name: "Lydian",
         code: "Lydi",

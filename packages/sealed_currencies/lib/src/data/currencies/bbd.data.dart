@@ -1,7 +1,7 @@
 part of "../../model/currency/submodels/fiat_currency.dart";
 
 extension type const _BbdFactory._(FiatBbd _) implements FiatBbd {
-  const _BbdFactory() : this._(const FiatBbd._());
+  const new() : this._(const FiatBbd._());
 }
 
 /// A class that represents the Barbadian Dollar currency.
@@ -11,9 +11,9 @@ final class FiatBbd extends FiatCurrency {
   ///
   /// ISO 4217 Alpha code: `BBD`, ISO 4217 Numeric code: `052`.
   /// {@endtemplate}
-  const factory FiatBbd() = _BbdFactory;
+  const factory() = _BbdFactory;
 
-  const FiatBbd._()
+  const new _()
     : super(
         code: "BBD",
         name: "Barbadian Dollar",

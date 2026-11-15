@@ -7,7 +7,7 @@
 part of "../../model/country/submodels/world_country.dart";
 
 extension type const _CmrFactory._(CountryCmr _) implements CountryCmr {
-  const _CmrFactory() : this._(const CountryCmr._());
+  const new() : this._(const CountryCmr._());
 }
 
 /// A class that represents the Cameroon country.
@@ -17,9 +17,9 @@ class CountryCmr extends WorldCountry {
   ///
   /// ISO 3166-1 Alpha-3 code: `CMR`, ISO 3166-1 Alpha-2 code: `CM`.
   /// {@endtemplate}
-  const factory CountryCmr() = _CmrFactory;
+  const factory() = _CmrFactory;
 
-  const CountryCmr._()
+  const new _()
     : super._(
         name: const CountryName(
           language: LangEng(),

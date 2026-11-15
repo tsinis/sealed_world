@@ -1,7 +1,7 @@
 part of "../../model/script/submodels/script.dart";
 
 extension type const _CirtFactory._(ScriptCirt _) implements ScriptCirt {
-  const _CirtFactory() : this._(const ScriptCirt._());
+  const new() : this._(const ScriptCirt._());
 }
 
 /// A class that represents the Cirth script.
@@ -11,9 +11,9 @@ final class ScriptCirt extends Script {
   ///
   /// ISO 15924 Alpha-4 code: `Cirt`, ISO 15924 Numeric code: `291`.
   /// {@endtemplate}
-  const factory ScriptCirt() = _CirtFactory;
+  const factory() = _CirtFactory;
 
-  const ScriptCirt._()
+  const new _()
     : super._(
         name: "Cirth",
         code: "Cirt",

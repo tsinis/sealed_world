@@ -1,7 +1,7 @@
 part of "../../model/currency/submodels/fiat_currency.dart";
 
 extension type const _MadFactory._(FiatMad _) implements FiatMad {
-  const _MadFactory() : this._(const FiatMad._());
+  const new() : this._(const FiatMad._());
 }
 
 /// A class that represents the Moroccan Dirham currency.
@@ -11,9 +11,9 @@ final class FiatMad extends FiatCurrency {
   ///
   /// ISO 4217 Alpha code: `MAD`, ISO 4217 Numeric code: `504`.
   /// {@endtemplate}
-  const factory FiatMad() = _MadFactory;
+  const factory() = _MadFactory;
 
-  const FiatMad._()
+  const new _()
     : super(
         code: "MAD",
         name: "Moroccan Dirham",

@@ -1,7 +1,7 @@
 part of "../../model/script/submodels/script.dart";
 
 extension type const _GujrFactory._(ScriptGujr _) implements ScriptGujr {
-  const _GujrFactory() : this._(const ScriptGujr._());
+  const new() : this._(const ScriptGujr._());
 }
 
 /// A class that represents the Gujarati script.
@@ -11,9 +11,9 @@ final class ScriptGujr extends Script {
   ///
   /// ISO 15924 Alpha-4 code: `Gujr`, ISO 15924 Numeric code: `320`.
   /// {@endtemplate}
-  const factory ScriptGujr() = _GujrFactory;
+  const factory() = _GujrFactory;
 
-  const ScriptGujr._()
+  const new _()
     : super._(
         name: "Gujarati",
         code: "Gujr",

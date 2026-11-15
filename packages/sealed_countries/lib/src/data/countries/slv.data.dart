@@ -7,7 +7,7 @@
 part of "../../model/country/submodels/world_country.dart";
 
 extension type const _SlvFactory._(CountrySlv _) implements CountrySlv {
-  const _SlvFactory() : this._(const CountrySlv._());
+  const new() : this._(const CountrySlv._());
 }
 
 /// A class that represents the El Salvador country.
@@ -17,9 +17,9 @@ class CountrySlv extends WorldCountry {
   ///
   /// ISO 3166-1 Alpha-3 code: `SLV`, ISO 3166-1 Alpha-2 code: `SV`.
   /// {@endtemplate}
-  const factory CountrySlv() = _SlvFactory;
+  const factory() = _SlvFactory;
 
-  const CountrySlv._()
+  const new _()
     : super._(
         name: const CountryName(
           language: LangEng(),

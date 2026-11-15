@@ -1,7 +1,7 @@
 part of "../../model/currency/submodels/fiat_currency.dart";
 
 extension type const _MopFactory._(FiatMop _) implements FiatMop {
-  const _MopFactory() : this._(const FiatMop._());
+  const new() : this._(const FiatMop._());
 }
 
 /// A class that represents the Macanese Pataca currency.
@@ -11,9 +11,9 @@ final class FiatMop extends FiatCurrency {
   ///
   /// ISO 4217 Alpha code: `MOP`, ISO 4217 Numeric code: `446`.
   /// {@endtemplate}
-  const factory FiatMop() = _MopFactory;
+  const factory() = _MopFactory;
 
-  const FiatMop._()
+  const new _()
     : super(
         code: "MOP",
         name: "Macanese Pataca",

@@ -7,7 +7,7 @@
 part of "../../model/country/submodels/world_country.dart";
 
 extension type const _KgzFactory._(CountryKgz _) implements CountryKgz {
-  const _KgzFactory() : this._(const CountryKgz._());
+  const new() : this._(const CountryKgz._());
 }
 
 /// A class that represents the Kyrgyzstan country.
@@ -17,9 +17,9 @@ class CountryKgz extends WorldCountry {
   ///
   /// ISO 3166-1 Alpha-3 code: `KGZ`, ISO 3166-1 Alpha-2 code: `KG`.
   /// {@endtemplate}
-  const factory CountryKgz() = _KgzFactory;
+  const factory() = _KgzFactory;
 
-  const CountryKgz._()
+  const new _()
     : super._(
         name: const CountryName(
           language: LangEng(),

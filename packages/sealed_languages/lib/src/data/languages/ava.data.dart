@@ -1,7 +1,7 @@
 part of "../../model/language/submodels/natural_language.dart";
 
 extension type const _AvaFactory._(LangAva _) implements LangAva {
-  const _AvaFactory() : this._(const LangAva._());
+  const new() : this._(const LangAva._());
 }
 
 /// A class that represents the Avaric language.
@@ -11,9 +11,9 @@ final class LangAva extends NaturalLanguage {
   ///
   /// ISO 639-2/T code: `AVA`, ISO 639-1 code: `AV`.
   /// {@endtemplate}
-  const factory LangAva() = _AvaFactory;
+  const factory() = _AvaFactory;
 
-  const LangAva._()
+  const new _()
     : super._(
         name: "Avaric",
         code: "AVA",

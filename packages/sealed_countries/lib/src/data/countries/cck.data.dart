@@ -7,7 +7,7 @@
 part of "../../model/country/submodels/world_country.dart";
 
 extension type const _CckFactory._(CountryCck _) implements CountryCck {
-  const _CckFactory() : this._(const CountryCck._());
+  const new() : this._(const CountryCck._());
 }
 
 /// A class that represents the Cocos (Keeling) Islands country.
@@ -17,9 +17,9 @@ class CountryCck extends WorldCountry {
   ///
   /// ISO 3166-1 Alpha-3 code: `CCK`, ISO 3166-1 Alpha-2 code: `CC`.
   /// {@endtemplate}
-  const factory CountryCck() = _CckFactory;
+  const factory() = _CckFactory;
 
-  const CountryCck._()
+  const new _()
     : super._(
         name: const CountryName(
           language: LangEng(),

@@ -1,7 +1,7 @@
 part of "../../model/currency/submodels/fiat_currency.dart";
 
 extension type const _XcgFactory._(FiatXcg _) implements FiatXcg {
-  const _XcgFactory() : this._(const FiatXcg._());
+  const new() : this._(const FiatXcg._());
 }
 
 /// A class that represents the Caribbean Guilder currency.
@@ -11,9 +11,9 @@ final class FiatXcg extends FiatCurrency {
   ///
   /// ISO 4217 Alpha code: `XCG`, ISO 4217 Numeric code: `532`.
   /// {@endtemplate}
-  const factory FiatXcg() = _XcgFactory;
+  const factory() = _XcgFactory;
 
-  const FiatXcg._()
+  const new _()
     : super(
         code: "XCG",
         name: "Caribbean Guilder",

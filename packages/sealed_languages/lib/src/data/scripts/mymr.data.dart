@@ -1,7 +1,7 @@
 part of "../../model/script/submodels/script.dart";
 
 extension type const _MymrFactory._(ScriptMymr _) implements ScriptMymr {
-  const _MymrFactory() : this._(const ScriptMymr._());
+  const new() : this._(const ScriptMymr._());
 }
 
 /// A class that represents the Myanmar (Burmese) script.
@@ -11,9 +11,9 @@ final class ScriptMymr extends Script {
   ///
   /// ISO 15924 Alpha-4 code: `Mymr`, ISO 15924 Numeric code: `350`.
   /// {@endtemplate}
-  const factory ScriptMymr() = _MymrFactory;
+  const factory() = _MymrFactory;
 
-  const ScriptMymr._()
+  const new _()
     : super._(
         name: "Myanmar (Burmese)",
         code: "Mymr",

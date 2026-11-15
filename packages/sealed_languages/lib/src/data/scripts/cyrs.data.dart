@@ -1,7 +1,7 @@
 part of "../../model/script/submodels/script.dart";
 
 extension type const _CyrsFactory._(ScriptCyrs _) implements ScriptCyrs {
-  const _CyrsFactory() : this._(const ScriptCyrs._());
+  const new() : this._(const ScriptCyrs._());
 }
 
 /// A class that represents the Cyrillic (Old Church Slavonic variant) script.
@@ -12,9 +12,9 @@ final class ScriptCyrs extends Script {
   ///
   /// ISO 15924 Alpha-4 code: `Cyrs`, ISO 15924 Numeric code: `221`.
   /// {@endtemplate}
-  const factory ScriptCyrs() = _CyrsFactory;
+  const factory() = _CyrsFactory;
 
-  const ScriptCyrs._()
+  const new _()
     : super._(
         name: "Cyrillic (Old Church Slavonic variant)",
         code: "Cyrs",

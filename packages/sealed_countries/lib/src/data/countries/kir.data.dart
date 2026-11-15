@@ -7,7 +7,7 @@
 part of "../../model/country/submodels/world_country.dart";
 
 extension type const _KirFactory._(CountryKir _) implements CountryKir {
-  const _KirFactory() : this._(const CountryKir._());
+  const new() : this._(const CountryKir._());
 }
 
 /// A class that represents the Kiribati country.
@@ -17,9 +17,9 @@ class CountryKir extends WorldCountry {
   ///
   /// ISO 3166-1 Alpha-3 code: `KIR`, ISO 3166-1 Alpha-2 code: `KI`.
   /// {@endtemplate}
-  const factory CountryKir() = _KirFactory;
+  const factory() = _KirFactory;
 
-  const CountryKir._()
+  const new _()
     : super._(
         name: const CountryName(
           language: LangEng(),

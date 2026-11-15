@@ -1,7 +1,7 @@
 part of "../../model/language/submodels/natural_language.dart";
 
 extension type const _TatFactory._(LangTat _) implements LangTat {
-  const _TatFactory() : this._(const LangTat._());
+  const new() : this._(const LangTat._());
 }
 
 /// A class that represents the Tatar language.
@@ -11,9 +11,9 @@ final class LangTat extends NaturalLanguage {
   ///
   /// ISO 639-2/T code: `TAT`, ISO 639-1 code: `TT`.
   /// {@endtemplate}
-  const factory LangTat() = _TatFactory;
+  const factory() = _TatFactory;
 
-  const LangTat._()
+  const new _()
     : super._(
         name: "Tatar",
         code: "TAT",

@@ -7,7 +7,7 @@
 part of "../../model/country/submodels/world_country.dart";
 
 extension type const _LaoFactory._(CountryLao _) implements CountryLao {
-  const _LaoFactory() : this._(const CountryLao._());
+  const new() : this._(const CountryLao._());
 }
 
 /// A class that represents the Laos country.
@@ -17,9 +17,9 @@ class CountryLao extends WorldCountry {
   ///
   /// ISO 3166-1 Alpha-3 code: `LAO`, ISO 3166-1 Alpha-2 code: `LA`.
   /// {@endtemplate}
-  const factory CountryLao() = _LaoFactory;
+  const factory() = _LaoFactory;
 
-  const CountryLao._()
+  const new _()
     : super._(
         name: const CountryName(
           language: LangEng(),

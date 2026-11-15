@@ -1,7 +1,7 @@
 part of "../../model/language/submodels/natural_language.dart";
 
 extension type const _TgkFactory._(LangTgk _) implements LangTgk {
-  const _TgkFactory() : this._(const LangTgk._());
+  const new() : this._(const LangTgk._());
 }
 
 /// A class that represents the Tajik language.
@@ -11,9 +11,9 @@ final class LangTgk extends NaturalLanguage {
   ///
   /// ISO 639-2/T code: `TGK`, ISO 639-1 code: `TG`.
   /// {@endtemplate}
-  const factory LangTgk() = _TgkFactory;
+  const factory() = _TgkFactory;
 
-  const LangTgk._()
+  const new _()
     : super._(
         name: "Tajik",
         code: "TGK",

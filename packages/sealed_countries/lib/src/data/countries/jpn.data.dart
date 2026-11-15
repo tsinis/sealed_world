@@ -7,7 +7,7 @@
 part of "../../model/country/submodels/world_country.dart";
 
 extension type const _JpnFactory._(CountryJpn _) implements CountryJpn {
-  const _JpnFactory() : this._(const CountryJpn._());
+  const new() : this._(const CountryJpn._());
 }
 
 /// A class that represents the Japan country.
@@ -17,9 +17,9 @@ class CountryJpn extends WorldCountry {
   ///
   /// ISO 3166-1 Alpha-3 code: `JPN`, ISO 3166-1 Alpha-2 code: `JP`.
   /// {@endtemplate}
-  const factory CountryJpn() = _JpnFactory;
+  const factory() = _JpnFactory;
 
-  const CountryJpn._()
+  const new _()
     : super._(
         name: const CountryName(
           language: LangEng(),

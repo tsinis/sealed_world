@@ -1,7 +1,7 @@
 part of "../../model/script/submodels/script.dart";
 
 extension type const _SundFactory._(ScriptSund _) implements ScriptSund {
-  const _SundFactory() : this._(const ScriptSund._());
+  const new() : this._(const ScriptSund._());
 }
 
 /// A class that represents the Sundanese script.
@@ -11,9 +11,9 @@ final class ScriptSund extends Script {
   ///
   /// ISO 15924 Alpha-4 code: `Sund`, ISO 15924 Numeric code: `362`.
   /// {@endtemplate}
-  const factory ScriptSund() = _SundFactory;
+  const factory() = _SundFactory;
 
-  const ScriptSund._()
+  const new _()
     : super._(
         name: "Sundanese",
         code: "Sund",

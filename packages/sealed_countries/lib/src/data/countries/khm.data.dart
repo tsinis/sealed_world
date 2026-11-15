@@ -7,7 +7,7 @@
 part of "../../model/country/submodels/world_country.dart";
 
 extension type const _KhmFactory._(CountryKhm _) implements CountryKhm {
-  const _KhmFactory() : this._(const CountryKhm._());
+  const new() : this._(const CountryKhm._());
 }
 
 /// A class that represents the Cambodia country.
@@ -17,9 +17,9 @@ class CountryKhm extends WorldCountry {
   ///
   /// ISO 3166-1 Alpha-3 code: `KHM`, ISO 3166-1 Alpha-2 code: `KH`.
   /// {@endtemplate}
-  const factory CountryKhm() = _KhmFactory;
+  const factory() = _KhmFactory;
 
-  const CountryKhm._()
+  const new _()
     : super._(
         name: const CountryName(
           language: LangEng(),

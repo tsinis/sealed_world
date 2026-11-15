@@ -1,7 +1,7 @@
 part of "../../model/currency/submodels/fiat_currency.dart";
 
 extension type const _CnyFactory._(FiatCny _) implements FiatCny {
-  const _CnyFactory() : this._(const FiatCny._());
+  const new() : this._(const FiatCny._());
 }
 
 /// A class that represents the Chinese Renminbi Yuan currency.
@@ -11,9 +11,9 @@ final class FiatCny extends FiatCurrency {
   ///
   /// ISO 4217 Alpha code: `CNY`, ISO 4217 Numeric code: `156`.
   /// {@endtemplate}
-  const factory FiatCny() = _CnyFactory;
+  const factory() = _CnyFactory;
 
-  const FiatCny._()
+  const new _()
     : super(
         code: "CNY",
         name: "Chinese Renminbi Yuan",

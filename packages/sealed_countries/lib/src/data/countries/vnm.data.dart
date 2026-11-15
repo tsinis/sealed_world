@@ -7,7 +7,7 @@
 part of "../../model/country/submodels/world_country.dart";
 
 extension type const _VnmFactory._(CountryVnm _) implements CountryVnm {
-  const _VnmFactory() : this._(const CountryVnm._());
+  const new() : this._(const CountryVnm._());
 }
 
 /// A class that represents the Vietnam country.
@@ -17,9 +17,9 @@ class CountryVnm extends WorldCountry {
   ///
   /// ISO 3166-1 Alpha-3 code: `VNM`, ISO 3166-1 Alpha-2 code: `VN`.
   /// {@endtemplate}
-  const factory CountryVnm() = _VnmFactory;
+  const factory() = _VnmFactory;
 
-  const CountryVnm._()
+  const new _()
     : super._(
         name: const CountryName(
           language: LangEng(),

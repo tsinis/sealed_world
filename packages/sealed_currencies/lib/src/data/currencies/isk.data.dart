@@ -1,7 +1,7 @@
 part of "../../model/currency/submodels/fiat_currency.dart";
 
 extension type const _IskFactory._(FiatIsk _) implements FiatIsk {
-  const _IskFactory() : this._(const FiatIsk._());
+  const new() : this._(const FiatIsk._());
 }
 
 /// A class that represents the Icelandic Króna currency.
@@ -11,9 +11,9 @@ final class FiatIsk extends FiatCurrency {
   ///
   /// ISO 4217 Alpha code: `ISK`, ISO 4217 Numeric code: `352`.
   /// {@endtemplate}
-  const factory FiatIsk() = _IskFactory;
+  const factory() = _IskFactory;
 
-  const FiatIsk._()
+  const new _()
     : super(
         code: "ISK",
         name: "Icelandic Króna",

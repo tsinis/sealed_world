@@ -32,7 +32,7 @@ final class CountryName extends TranslatedName {
   /// values.
   ///
   /// The [official] and [common] parameters must not be empty.
-  const CountryName({
+  const new({
     required NaturalLanguage language,
     required String official,
     required String common,

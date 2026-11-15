@@ -1,7 +1,7 @@
 part of "../../model/language/submodels/natural_language.dart";
 
 extension type const _AraFactory._(LangAra _) implements LangAra {
-  const _AraFactory() : this._(const LangAra._());
+  const new() : this._(const LangAra._());
 }
 
 /// A class that represents the Arabic language.
@@ -11,9 +11,9 @@ final class LangAra extends NaturalLanguage {
   ///
   /// ISO 639-2/T code: `ARA`, ISO 639-1 code: `AR`.
   /// {@endtemplate}
-  const factory LangAra() = _AraFactory;
+  const factory() = _AraFactory;
 
-  const LangAra._()
+  const new _()
     : super._(
         name: "Arabic",
         code: "ARA",

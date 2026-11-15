@@ -1,7 +1,7 @@
 part of "../../model/currency/submodels/fiat_currency.dart";
 
 extension type const _ZmwFactory._(FiatZmw _) implements FiatZmw {
-  const _ZmwFactory() : this._(const FiatZmw._());
+  const new() : this._(const FiatZmw._());
 }
 
 /// A class that represents the Zambian Kwacha currency.
@@ -11,9 +11,9 @@ final class FiatZmw extends FiatCurrency {
   ///
   /// ISO 4217 Alpha code: `ZMW`, ISO 4217 Numeric code: `967`.
   /// {@endtemplate}
-  const factory FiatZmw() = _ZmwFactory;
+  const factory() = _ZmwFactory;
 
-  const FiatZmw._()
+  const new _()
     : super(
         code: "ZMW",
         name: "Zambian Kwacha",

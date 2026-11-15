@@ -269,7 +269,7 @@ sealed class NaturalLanguage extends Language
   /// mutable for registration without leaking mutations between lookups.
   /// {@endtemplate}
   /// {@endtemplate}
-  const NaturalLanguage._({
+  const new _({
     required super.name,
     required this.codeShort,
     required this.namesNative,
@@ -336,7 +336,7 @@ sealed class NaturalLanguage extends Language
   /// the established ISO specifications and should be approached with caution.
   /// {@endtemplate}
   /// {@macro natural_language_constructor}
-  const NaturalLanguage._permissive({
+  const new _permissive({
     this.code = "",
     super.name = " ",
     this.codeShort = "",
@@ -354,556 +354,556 @@ sealed class NaturalLanguage extends Language
        );
 
   /// {@macro sealed_world.language_aar_constructor}
-  const factory NaturalLanguage.aar() = _AarFactory;
+  const factory aar() = _AarFactory;
 
   /// {@macro sealed_world.language_abk_constructor}
-  const factory NaturalLanguage.abk() = _AbkFactory;
+  const factory abk() = _AbkFactory;
 
   /// {@macro sealed_world.language_afr_constructor}
-  const factory NaturalLanguage.afr() = _AfrFactory;
+  const factory afr() = _AfrFactory;
 
   /// {@macro sealed_world.language_aka_constructor}
-  const factory NaturalLanguage.aka() = _AkaFactory;
+  const factory aka() = _AkaFactory;
 
   /// {@macro sealed_world.language_amh_constructor}
-  const factory NaturalLanguage.amh() = _AmhFactory;
+  const factory amh() = _AmhFactory;
 
   /// {@macro sealed_world.language_ara_constructor}
-  const factory NaturalLanguage.ara() = _AraFactory;
+  const factory ara() = _AraFactory;
 
   /// {@macro sealed_world.language_arg_constructor}
-  const factory NaturalLanguage.arg() = _ArgFactory;
+  const factory arg() = _ArgFactory;
 
   /// {@macro sealed_world.language_asm_constructor}
-  const factory NaturalLanguage.asm() = _AsmFactory;
+  const factory asm() = _AsmFactory;
 
   /// {@macro sealed_world.language_ava_constructor}
-  const factory NaturalLanguage.ava() = _AvaFactory;
+  const factory ava() = _AvaFactory;
 
   /// {@macro sealed_world.language_ave_constructor}
-  const factory NaturalLanguage.ave() = _AveFactory;
+  const factory ave() = _AveFactory;
 
   /// {@macro sealed_world.language_aym_constructor}
-  const factory NaturalLanguage.aym() = _AymFactory;
+  const factory aym() = _AymFactory;
 
   /// {@macro sealed_world.language_aze_constructor}
-  const factory NaturalLanguage.aze() = _AzeFactory;
+  const factory aze() = _AzeFactory;
 
   /// {@macro sealed_world.language_bak_constructor}
-  const factory NaturalLanguage.bak() = _BakFactory;
+  const factory bak() = _BakFactory;
 
   /// {@macro sealed_world.language_bam_constructor}
-  const factory NaturalLanguage.bam() = _BamFactory;
+  const factory bam() = _BamFactory;
 
   /// {@macro sealed_world.language_bel_constructor}
-  const factory NaturalLanguage.bel() = _BelFactory;
+  const factory bel() = _BelFactory;
 
   /// {@macro sealed_world.language_ben_constructor}
-  const factory NaturalLanguage.ben() = _BenFactory;
+  const factory ben() = _BenFactory;
 
   /// {@macro sealed_world.language_bih_constructor}
-  const factory NaturalLanguage.bih() = _BihFactory;
+  const factory bih() = _BihFactory;
 
   /// {@macro sealed_world.language_bis_constructor}
-  const factory NaturalLanguage.bis() = _BisFactory;
+  const factory bis() = _BisFactory;
 
   /// {@macro sealed_world.language_bod_constructor}
-  const factory NaturalLanguage.bod() = _BodFactory;
+  const factory bod() = _BodFactory;
 
   /// {@macro sealed_world.language_bos_constructor}
-  const factory NaturalLanguage.bos() = _BosFactory;
+  const factory bos() = _BosFactory;
 
   /// {@macro sealed_world.language_bre_constructor}
-  const factory NaturalLanguage.bre() = _BreFactory;
+  const factory bre() = _BreFactory;
 
   /// {@macro sealed_world.language_bul_constructor}
-  const factory NaturalLanguage.bul() = _BulFactory;
+  const factory bul() = _BulFactory;
 
   /// {@macro sealed_world.language_cat_constructor}
-  const factory NaturalLanguage.cat() = _CatFactory;
+  const factory cat() = _CatFactory;
 
   /// {@macro sealed_world.language_ces_constructor}
-  const factory NaturalLanguage.ces() = _CesFactory;
+  const factory ces() = _CesFactory;
 
   /// {@macro sealed_world.language_cha_constructor}
-  const factory NaturalLanguage.cha() = _ChaFactory;
+  const factory cha() = _ChaFactory;
 
   /// {@macro sealed_world.language_che_constructor}
-  const factory NaturalLanguage.che() = _CheFactory;
+  const factory che() = _CheFactory;
 
   /// {@macro sealed_world.language_chu_constructor}
-  const factory NaturalLanguage.chu() = _ChuFactory;
+  const factory chu() = _ChuFactory;
 
   /// {@macro sealed_world.language_chv_constructor}
-  const factory NaturalLanguage.chv() = _ChvFactory;
+  const factory chv() = _ChvFactory;
 
   /// {@macro sealed_world.language_cor_constructor}
-  const factory NaturalLanguage.cor() = _CorFactory;
+  const factory cor() = _CorFactory;
 
   /// {@macro sealed_world.language_cos_constructor}
-  const factory NaturalLanguage.cos() = _CosFactory;
+  const factory cos() = _CosFactory;
 
   /// {@macro sealed_world.language_cre_constructor}
-  const factory NaturalLanguage.cre() = _CreFactory;
+  const factory cre() = _CreFactory;
 
   /// {@macro sealed_world.language_cym_constructor}
-  const factory NaturalLanguage.cym() = _CymFactory;
+  const factory cym() = _CymFactory;
 
   /// {@macro sealed_world.language_dan_constructor}
-  const factory NaturalLanguage.dan() = _DanFactory;
+  const factory dan() = _DanFactory;
 
   /// {@macro sealed_world.language_deu_constructor}
-  const factory NaturalLanguage.deu() = _DeuFactory;
+  const factory deu() = _DeuFactory;
 
   /// {@macro sealed_world.language_div_constructor}
-  const factory NaturalLanguage.div() = _DivFactory;
+  const factory div() = _DivFactory;
 
   /// {@macro sealed_world.language_dzo_constructor}
-  const factory NaturalLanguage.dzo() = _DzoFactory;
+  const factory dzo() = _DzoFactory;
 
   /// {@macro sealed_world.language_ell_constructor}
-  const factory NaturalLanguage.ell() = _EllFactory;
+  const factory ell() = _EllFactory;
 
   /// {@macro sealed_world.language_eng_constructor}
-  const factory NaturalLanguage.eng() = _EngFactory;
+  const factory eng() = _EngFactory;
 
   /// {@macro sealed_world.language_epo_constructor}
-  const factory NaturalLanguage.epo() = _EpoFactory;
+  const factory epo() = _EpoFactory;
 
   /// {@macro sealed_world.language_est_constructor}
-  const factory NaturalLanguage.est() = _EstFactory;
+  const factory est() = _EstFactory;
 
   /// {@macro sealed_world.language_eus_constructor}
-  const factory NaturalLanguage.eus() = _EusFactory;
+  const factory eus() = _EusFactory;
 
   /// {@macro sealed_world.language_ewe_constructor}
-  const factory NaturalLanguage.ewe() = _EweFactory;
+  const factory ewe() = _EweFactory;
 
   /// {@macro sealed_world.language_fao_constructor}
-  const factory NaturalLanguage.fao() = _FaoFactory;
+  const factory fao() = _FaoFactory;
 
   /// {@macro sealed_world.language_fas_constructor}
-  const factory NaturalLanguage.fas() = _FasFactory;
+  const factory fas() = _FasFactory;
 
   /// {@macro sealed_world.language_fij_constructor}
-  const factory NaturalLanguage.fij() = _FijFactory;
+  const factory fij() = _FijFactory;
 
   /// {@macro sealed_world.language_fin_constructor}
-  const factory NaturalLanguage.fin() = _FinFactory;
+  const factory fin() = _FinFactory;
 
   /// {@macro sealed_world.language_fra_constructor}
-  const factory NaturalLanguage.fra() = _FraFactory;
+  const factory fra() = _FraFactory;
 
   /// {@macro sealed_world.language_fry_constructor}
-  const factory NaturalLanguage.fry() = _FryFactory;
+  const factory fry() = _FryFactory;
 
   /// {@macro sealed_world.language_ful_constructor}
-  const factory NaturalLanguage.ful() = _FulFactory;
+  const factory ful() = _FulFactory;
 
   /// {@macro sealed_world.language_gla_constructor}
-  const factory NaturalLanguage.gla() = _GlaFactory;
+  const factory gla() = _GlaFactory;
 
   /// {@macro sealed_world.language_gle_constructor}
-  const factory NaturalLanguage.gle() = _GleFactory;
+  const factory gle() = _GleFactory;
 
   /// {@macro sealed_world.language_glg_constructor}
-  const factory NaturalLanguage.glg() = _GlgFactory;
+  const factory glg() = _GlgFactory;
 
   /// {@macro sealed_world.language_glv_constructor}
-  const factory NaturalLanguage.glv() = _GlvFactory;
+  const factory glv() = _GlvFactory;
 
   /// {@macro sealed_world.language_grn_constructor}
-  const factory NaturalLanguage.grn() = _GrnFactory;
+  const factory grn() = _GrnFactory;
 
   /// {@macro sealed_world.language_guj_constructor}
-  const factory NaturalLanguage.guj() = _GujFactory;
+  const factory guj() = _GujFactory;
 
   /// {@macro sealed_world.language_hat_constructor}
-  const factory NaturalLanguage.hat() = _HatFactory;
+  const factory hat() = _HatFactory;
 
   /// {@macro sealed_world.language_hau_constructor}
-  const factory NaturalLanguage.hau() = _HauFactory;
+  const factory hau() = _HauFactory;
 
   /// {@macro sealed_world.language_heb_constructor}
-  const factory NaturalLanguage.heb() = _HebFactory;
+  const factory heb() = _HebFactory;
 
   /// {@macro sealed_world.language_her_constructor}
-  const factory NaturalLanguage.her() = _HerFactory;
+  const factory her() = _HerFactory;
 
   /// {@macro sealed_world.language_hin_constructor}
-  const factory NaturalLanguage.hin() = _HinFactory;
+  const factory hin() = _HinFactory;
 
   /// {@macro sealed_world.language_hmo_constructor}
-  const factory NaturalLanguage.hmo() = _HmoFactory;
+  const factory hmo() = _HmoFactory;
 
   /// {@macro sealed_world.language_hrv_constructor}
-  const factory NaturalLanguage.hrv() = _HrvFactory;
+  const factory hrv() = _HrvFactory;
 
   /// {@macro sealed_world.language_hun_constructor}
-  const factory NaturalLanguage.hun() = _HunFactory;
+  const factory hun() = _HunFactory;
 
   /// {@macro sealed_world.language_hye_constructor}
-  const factory NaturalLanguage.hye() = _HyeFactory;
+  const factory hye() = _HyeFactory;
 
   /// {@macro sealed_world.language_ibo_constructor}
-  const factory NaturalLanguage.ibo() = _IboFactory;
+  const factory ibo() = _IboFactory;
 
   /// {@macro sealed_world.language_ido_constructor}
-  const factory NaturalLanguage.ido() = _IdoFactory;
+  const factory ido() = _IdoFactory;
 
   /// {@macro sealed_world.language_iii_constructor}
-  const factory NaturalLanguage.iii() = _IiiFactory;
+  const factory iii() = _IiiFactory;
 
   /// {@macro sealed_world.language_iku_constructor}
-  const factory NaturalLanguage.iku() = _IkuFactory;
+  const factory iku() = _IkuFactory;
 
   /// {@macro sealed_world.language_ile_constructor}
-  const factory NaturalLanguage.ile() = _IleFactory;
+  const factory ile() = _IleFactory;
 
   /// {@macro sealed_world.language_ina_constructor}
-  const factory NaturalLanguage.ina() = _InaFactory;
+  const factory ina() = _InaFactory;
 
   /// {@macro sealed_world.language_ind_constructor}
-  const factory NaturalLanguage.ind() = _IndFactory;
+  const factory ind() = _IndFactory;
 
   /// {@macro sealed_world.language_ipk_constructor}
-  const factory NaturalLanguage.ipk() = _IpkFactory;
+  const factory ipk() = _IpkFactory;
 
   /// {@macro sealed_world.language_isl_constructor}
-  const factory NaturalLanguage.isl() = _IslFactory;
+  const factory isl() = _IslFactory;
 
   /// {@macro sealed_world.language_ita_constructor}
-  const factory NaturalLanguage.ita() = _ItaFactory;
+  const factory ita() = _ItaFactory;
 
   /// {@macro sealed_world.language_jav_constructor}
-  const factory NaturalLanguage.jav() = _JavFactory;
+  const factory jav() = _JavFactory;
 
   /// {@macro sealed_world.language_jpn_constructor}
-  const factory NaturalLanguage.jpn() = _JpnFactory;
+  const factory jpn() = _JpnFactory;
 
   /// {@macro sealed_world.language_kal_constructor}
-  const factory NaturalLanguage.kal() = _KalFactory;
+  const factory kal() = _KalFactory;
 
   /// {@macro sealed_world.language_kan_constructor}
-  const factory NaturalLanguage.kan() = _KanFactory;
+  const factory kan() = _KanFactory;
 
   /// {@macro sealed_world.language_kas_constructor}
-  const factory NaturalLanguage.kas() = _KasFactory;
+  const factory kas() = _KasFactory;
 
   /// {@macro sealed_world.language_kat_constructor}
-  const factory NaturalLanguage.kat() = _KatFactory;
+  const factory kat() = _KatFactory;
 
   /// {@macro sealed_world.language_kau_constructor}
-  const factory NaturalLanguage.kau() = _KauFactory;
+  const factory kau() = _KauFactory;
 
   /// {@macro sealed_world.language_kaz_constructor}
-  const factory NaturalLanguage.kaz() = _KazFactory;
+  const factory kaz() = _KazFactory;
 
   /// {@macro sealed_world.language_khm_constructor}
-  const factory NaturalLanguage.khm() = _KhmFactory;
+  const factory khm() = _KhmFactory;
 
   /// {@macro sealed_world.language_kik_constructor}
-  const factory NaturalLanguage.kik() = _KikFactory;
+  const factory kik() = _KikFactory;
 
   /// {@macro sealed_world.language_kin_constructor}
-  const factory NaturalLanguage.kin() = _KinFactory;
+  const factory kin() = _KinFactory;
 
   /// {@macro sealed_world.language_kir_constructor}
-  const factory NaturalLanguage.kir() = _KirFactory;
+  const factory kir() = _KirFactory;
 
   /// {@macro sealed_world.language_kom_constructor}
-  const factory NaturalLanguage.kom() = _KomFactory;
+  const factory kom() = _KomFactory;
 
   /// {@macro sealed_world.language_kon_constructor}
-  const factory NaturalLanguage.kon() = _KonFactory;
+  const factory kon() = _KonFactory;
 
   /// {@macro sealed_world.language_kor_constructor}
-  const factory NaturalLanguage.kor() = _KorFactory;
+  const factory kor() = _KorFactory;
 
   /// {@macro sealed_world.language_kua_constructor}
-  const factory NaturalLanguage.kua() = _KuaFactory;
+  const factory kua() = _KuaFactory;
 
   /// {@macro sealed_world.language_kur_constructor}
-  const factory NaturalLanguage.kur() = _KurFactory;
+  const factory kur() = _KurFactory;
 
   /// {@macro sealed_world.language_lao_constructor}
-  const factory NaturalLanguage.lao() = _LaoFactory;
+  const factory lao() = _LaoFactory;
 
   /// {@macro sealed_world.language_lat_constructor}
-  const factory NaturalLanguage.lat() = _LatFactory;
+  const factory lat() = _LatFactory;
 
   /// {@macro sealed_world.language_lav_constructor}
-  const factory NaturalLanguage.lav() = _LavFactory;
+  const factory lav() = _LavFactory;
 
   /// {@macro sealed_world.language_lim_constructor}
-  const factory NaturalLanguage.lim() = _LimFactory;
+  const factory lim() = _LimFactory;
 
   /// {@macro sealed_world.language_lin_constructor}
-  const factory NaturalLanguage.lin() = _LinFactory;
+  const factory lin() = _LinFactory;
 
   /// {@macro sealed_world.language_lit_constructor}
-  const factory NaturalLanguage.lit() = _LitFactory;
+  const factory lit() = _LitFactory;
 
   /// {@macro sealed_world.language_ltz_constructor}
-  const factory NaturalLanguage.ltz() = _LtzFactory;
+  const factory ltz() = _LtzFactory;
 
   /// {@macro sealed_world.language_lub_constructor}
-  const factory NaturalLanguage.lub() = _LubFactory;
+  const factory lub() = _LubFactory;
 
   /// {@macro sealed_world.language_lug_constructor}
-  const factory NaturalLanguage.lug() = _LugFactory;
+  const factory lug() = _LugFactory;
 
   /// {@macro sealed_world.language_mah_constructor}
-  const factory NaturalLanguage.mah() = _MahFactory;
+  const factory mah() = _MahFactory;
 
   /// {@macro sealed_world.language_mal_constructor}
-  const factory NaturalLanguage.mal() = _MalFactory;
+  const factory mal() = _MalFactory;
 
   /// {@macro sealed_world.language_mar_constructor}
-  const factory NaturalLanguage.mar() = _MarFactory;
+  const factory mar() = _MarFactory;
 
   /// {@macro sealed_world.language_mkd_constructor}
-  const factory NaturalLanguage.mkd() = _MkdFactory;
+  const factory mkd() = _MkdFactory;
 
   /// {@macro sealed_world.language_mlg_constructor}
-  const factory NaturalLanguage.mlg() = _MlgFactory;
+  const factory mlg() = _MlgFactory;
 
   /// {@macro sealed_world.language_mlt_constructor}
-  const factory NaturalLanguage.mlt() = _MltFactory;
+  const factory mlt() = _MltFactory;
 
   /// {@macro sealed_world.language_mon_constructor}
-  const factory NaturalLanguage.mon() = _MonFactory;
+  const factory mon() = _MonFactory;
 
   /// {@macro sealed_world.language_mri_constructor}
-  const factory NaturalLanguage.mri() = _MriFactory;
+  const factory mri() = _MriFactory;
 
   /// {@macro sealed_world.language_msa_constructor}
-  const factory NaturalLanguage.msa() = _MsaFactory;
+  const factory msa() = _MsaFactory;
 
   /// {@macro sealed_world.language_mya_constructor}
-  const factory NaturalLanguage.mya() = _MyaFactory;
+  const factory mya() = _MyaFactory;
 
   /// {@macro sealed_world.language_nau_constructor}
-  const factory NaturalLanguage.nau() = _NauFactory;
+  const factory nau() = _NauFactory;
 
   /// {@macro sealed_world.language_nav_constructor}
-  const factory NaturalLanguage.nav() = _NavFactory;
+  const factory nav() = _NavFactory;
 
   /// {@macro sealed_world.language_nbl_constructor}
-  const factory NaturalLanguage.nbl() = _NblFactory;
+  const factory nbl() = _NblFactory;
 
   /// {@macro sealed_world.language_nde_constructor}
-  const factory NaturalLanguage.nde() = _NdeFactory;
+  const factory nde() = _NdeFactory;
 
   /// {@macro sealed_world.language_ndo_constructor}
-  const factory NaturalLanguage.ndo() = _NdoFactory;
+  const factory ndo() = _NdoFactory;
 
   /// {@macro sealed_world.language_nep_constructor}
-  const factory NaturalLanguage.nep() = _NepFactory;
+  const factory nep() = _NepFactory;
 
   /// {@macro sealed_world.language_nld_constructor}
-  const factory NaturalLanguage.nld() = _NldFactory;
+  const factory nld() = _NldFactory;
 
   /// {@macro sealed_world.language_nno_constructor}
-  const factory NaturalLanguage.nno() = _NnoFactory;
+  const factory nno() = _NnoFactory;
 
   /// {@macro sealed_world.language_nob_constructor}
-  const factory NaturalLanguage.nob() = _NobFactory;
+  const factory nob() = _NobFactory;
 
   /// {@macro sealed_world.language_nor_constructor}
-  const factory NaturalLanguage.nor() = _NorFactory;
+  const factory nor() = _NorFactory;
 
   /// {@macro sealed_world.language_nya_constructor}
-  const factory NaturalLanguage.nya() = _NyaFactory;
+  const factory nya() = _NyaFactory;
 
   /// {@macro sealed_world.language_oci_constructor}
-  const factory NaturalLanguage.oci() = _OciFactory;
+  const factory oci() = _OciFactory;
 
   /// {@macro sealed_world.language_oji_constructor}
-  const factory NaturalLanguage.oji() = _OjiFactory;
+  const factory oji() = _OjiFactory;
 
   /// {@macro sealed_world.language_ori_constructor}
-  const factory NaturalLanguage.ori() = _OriFactory;
+  const factory ori() = _OriFactory;
 
   /// {@macro sealed_world.language_orm_constructor}
-  const factory NaturalLanguage.orm() = _OrmFactory;
+  const factory orm() = _OrmFactory;
 
   /// {@macro sealed_world.language_oss_constructor}
-  const factory NaturalLanguage.oss() = _OssFactory;
+  const factory oss() = _OssFactory;
 
   /// {@macro sealed_world.language_pan_constructor}
-  const factory NaturalLanguage.pan() = _PanFactory;
+  const factory pan() = _PanFactory;
 
   /// {@macro sealed_world.language_pli_constructor}
-  const factory NaturalLanguage.pli() = _PliFactory;
+  const factory pli() = _PliFactory;
 
   /// {@macro sealed_world.language_pol_constructor}
-  const factory NaturalLanguage.pol() = _PolFactory;
+  const factory pol() = _PolFactory;
 
   /// {@macro sealed_world.language_por_constructor}
-  const factory NaturalLanguage.por() = _PorFactory;
+  const factory por() = _PorFactory;
 
   /// {@macro sealed_world.language_pus_constructor}
-  const factory NaturalLanguage.pus() = _PusFactory;
+  const factory pus() = _PusFactory;
 
   /// {@macro sealed_world.language_que_constructor}
-  const factory NaturalLanguage.que() = _QueFactory;
+  const factory que() = _QueFactory;
 
   /// {@macro sealed_world.language_roh_constructor}
-  const factory NaturalLanguage.roh() = _RohFactory;
+  const factory roh() = _RohFactory;
 
   /// {@macro sealed_world.language_ron_constructor}
-  const factory NaturalLanguage.ron() = _RonFactory;
+  const factory ron() = _RonFactory;
 
   /// {@macro sealed_world.language_run_constructor}
-  const factory NaturalLanguage.run() = _RunFactory;
+  const factory run() = _RunFactory;
 
   /// {@macro sealed_world.language_rus_constructor}
-  const factory NaturalLanguage.rus() = _RusFactory;
+  const factory rus() = _RusFactory;
 
   /// {@macro sealed_world.language_sag_constructor}
-  const factory NaturalLanguage.sag() = _SagFactory;
+  const factory sag() = _SagFactory;
 
   /// {@macro sealed_world.language_san_constructor}
-  const factory NaturalLanguage.san() = _SanFactory;
+  const factory san() = _SanFactory;
 
   /// {@macro sealed_world.language_sin_constructor}
-  const factory NaturalLanguage.sin() = _SinFactory;
+  const factory sin() = _SinFactory;
 
   /// {@macro sealed_world.language_slk_constructor}
-  const factory NaturalLanguage.slk() = _SlkFactory;
+  const factory slk() = _SlkFactory;
 
   /// {@macro sealed_world.language_slv_constructor}
-  const factory NaturalLanguage.slv() = _SlvFactory;
+  const factory slv() = _SlvFactory;
 
   /// {@macro sealed_world.language_sme_constructor}
-  const factory NaturalLanguage.sme() = _SmeFactory;
+  const factory sme() = _SmeFactory;
 
   /// {@macro sealed_world.language_smo_constructor}
-  const factory NaturalLanguage.smo() = _SmoFactory;
+  const factory smo() = _SmoFactory;
 
   /// {@macro sealed_world.language_sna_constructor}
-  const factory NaturalLanguage.sna() = _SnaFactory;
+  const factory sna() = _SnaFactory;
 
   /// {@macro sealed_world.language_snd_constructor}
-  const factory NaturalLanguage.snd() = _SndFactory;
+  const factory snd() = _SndFactory;
 
   /// {@macro sealed_world.language_som_constructor}
-  const factory NaturalLanguage.som() = _SomFactory;
+  const factory som() = _SomFactory;
 
   /// {@macro sealed_world.language_sot_constructor}
-  const factory NaturalLanguage.sot() = _SotFactory;
+  const factory sot() = _SotFactory;
 
   /// {@macro sealed_world.language_spa_constructor}
-  const factory NaturalLanguage.spa() = _SpaFactory;
+  const factory spa() = _SpaFactory;
 
   /// {@macro sealed_world.language_sqi_constructor}
-  const factory NaturalLanguage.sqi() = _SqiFactory;
+  const factory sqi() = _SqiFactory;
 
   /// {@macro sealed_world.language_srd_constructor}
-  const factory NaturalLanguage.srd() = _SrdFactory;
+  const factory srd() = _SrdFactory;
 
   /// {@macro sealed_world.language_srp_constructor}
-  const factory NaturalLanguage.srp() = _SrpFactory;
+  const factory srp() = _SrpFactory;
 
   /// {@macro sealed_world.language_ssw_constructor}
-  const factory NaturalLanguage.ssw() = _SswFactory;
+  const factory ssw() = _SswFactory;
 
   /// {@macro sealed_world.language_sun_constructor}
-  const factory NaturalLanguage.sun() = _SunFactory;
+  const factory sun() = _SunFactory;
 
   /// {@macro sealed_world.language_swa_constructor}
-  const factory NaturalLanguage.swa() = _SwaFactory;
+  const factory swa() = _SwaFactory;
 
   /// {@macro sealed_world.language_swe_constructor}
-  const factory NaturalLanguage.swe() = _SweFactory;
+  const factory swe() = _SweFactory;
 
   /// {@macro sealed_world.language_tah_constructor}
-  const factory NaturalLanguage.tah() = _TahFactory;
+  const factory tah() = _TahFactory;
 
   /// {@macro sealed_world.language_tam_constructor}
-  const factory NaturalLanguage.tam() = _TamFactory;
+  const factory tam() = _TamFactory;
 
   /// {@macro sealed_world.language_tat_constructor}
-  const factory NaturalLanguage.tat() = _TatFactory;
+  const factory tat() = _TatFactory;
 
   /// {@macro sealed_world.language_tel_constructor}
-  const factory NaturalLanguage.tel() = _TelFactory;
+  const factory tel() = _TelFactory;
 
   /// {@macro sealed_world.language_tgk_constructor}
-  const factory NaturalLanguage.tgk() = _TgkFactory;
+  const factory tgk() = _TgkFactory;
 
   /// {@macro sealed_world.language_tgl_constructor}
-  const factory NaturalLanguage.tgl() = _TglFactory;
+  const factory tgl() = _TglFactory;
 
   /// {@macro sealed_world.language_tha_constructor}
-  const factory NaturalLanguage.tha() = _ThaFactory;
+  const factory tha() = _ThaFactory;
 
   /// {@macro sealed_world.language_tir_constructor}
-  const factory NaturalLanguage.tir() = _TirFactory;
+  const factory tir() = _TirFactory;
 
   /// {@macro sealed_world.language_ton_constructor}
-  const factory NaturalLanguage.ton() = _TonFactory;
+  const factory ton() = _TonFactory;
 
   /// {@macro sealed_world.language_tsn_constructor}
-  const factory NaturalLanguage.tsn() = _TsnFactory;
+  const factory tsn() = _TsnFactory;
 
   /// {@macro sealed_world.language_tso_constructor}
-  const factory NaturalLanguage.tso() = _TsoFactory;
+  const factory tso() = _TsoFactory;
 
   /// {@macro sealed_world.language_tuk_constructor}
-  const factory NaturalLanguage.tuk() = _TukFactory;
+  const factory tuk() = _TukFactory;
 
   /// {@macro sealed_world.language_tur_constructor}
-  const factory NaturalLanguage.tur() = _TurFactory;
+  const factory tur() = _TurFactory;
 
   /// {@macro sealed_world.language_twi_constructor}
-  const factory NaturalLanguage.twi() = _TwiFactory;
+  const factory twi() = _TwiFactory;
 
   /// {@macro sealed_world.language_uig_constructor}
-  const factory NaturalLanguage.uig() = _UigFactory;
+  const factory uig() = _UigFactory;
 
   /// {@macro sealed_world.language_ukr_constructor}
-  const factory NaturalLanguage.ukr() = _UkrFactory;
+  const factory ukr() = _UkrFactory;
 
   /// {@macro sealed_world.language_urd_constructor}
-  const factory NaturalLanguage.urd() = _UrdFactory;
+  const factory urd() = _UrdFactory;
 
   /// {@macro sealed_world.language_uzb_constructor}
-  const factory NaturalLanguage.uzb() = _UzbFactory;
+  const factory uzb() = _UzbFactory;
 
   /// {@macro sealed_world.language_ven_constructor}
-  const factory NaturalLanguage.ven() = _VenFactory;
+  const factory ven() = _VenFactory;
 
   /// {@macro sealed_world.language_vie_constructor}
-  const factory NaturalLanguage.vie() = _VieFactory;
+  const factory vie() = _VieFactory;
 
   /// {@macro sealed_world.language_vol_constructor}
-  const factory NaturalLanguage.vol() = _VolFactory;
+  const factory vol() = _VolFactory;
 
   /// {@macro sealed_world.language_wln_constructor}
-  const factory NaturalLanguage.wln() = _WlnFactory;
+  const factory wln() = _WlnFactory;
 
   /// {@macro sealed_world.language_wol_constructor}
-  const factory NaturalLanguage.wol() = _WolFactory;
+  const factory wol() = _WolFactory;
 
   /// {@macro sealed_world.language_xho_constructor}
-  const factory NaturalLanguage.xho() = _XhoFactory;
+  const factory xho() = _XhoFactory;
 
   /// {@macro sealed_world.language_yid_constructor}
-  const factory NaturalLanguage.yid() = _YidFactory;
+  const factory yid() = _YidFactory;
 
   /// {@macro sealed_world.language_yor_constructor}
-  const factory NaturalLanguage.yor() = _YorFactory;
+  const factory yor() = _YorFactory;
 
   /// {@macro sealed_world.language_zha_constructor}
-  const factory NaturalLanguage.zha() = _ZhaFactory;
+  const factory zha() = _ZhaFactory;
 
   /// {@macro sealed_world.language_zho_constructor}
-  const factory NaturalLanguage.zho() = _ZhoFactory;
+  const factory zho() = _ZhoFactory;
 
   /// {@macro sealed_world.language_zul_constructor}
-  const factory NaturalLanguage.zul() = _ZulFactory;
+  const factory zul() = _ZulFactory;
 
   /// Returns an instance of the [NaturalLanguage] class from a three-letter
   /// Terminological ISO 639-2 code.
@@ -961,10 +961,8 @@ sealed class NaturalLanguage extends Language
   /// {@endtemplate}
   /// This method returns the [NaturalLanguage] instance that corresponds to the
   /// given code, or throws a [StateError] if no such instance exists.
-  factory NaturalLanguage.fromCode(
-    Object code, [
-    Iterable<NaturalLanguage>? languages,
-  ]) => languages == null
+  factory fromCode(Object code, [Iterable<NaturalLanguage>? languages]) =>
+      languages == null
       ? codeMap.findByCodeOrThrow(code)
       : languages.firstIsoWhereCode(code);
 
@@ -979,7 +977,7 @@ sealed class NaturalLanguage extends Language
   /// {@macro optional_instances_array_parameter}
   /// This method returns the [NaturalLanguage] instance that corresponds to the
   /// given code, or throws a [StateError] if no such instance exists.
-  factory NaturalLanguage.fromCodeShort(
+  factory fromCodeShort(
     Object codeShort, [
     Iterable<NaturalLanguage>? languages,
   ]) => languages == null
@@ -995,11 +993,8 @@ sealed class NaturalLanguage extends Language
   /// [NaturalLanguage] objects to search through.
   /// This method returns the [NaturalLanguage] instance that corresponds to the
   /// given name, or throws a [StateError] if no such instance exists.
-  factory NaturalLanguage.fromName(
-    Object name, [
-    Iterable<NaturalLanguage> languages = list,
-    // ignore: avoid-non-empty-constructor-bodies, more clear for factory methods.
-  ]) {
+  // ignore: avoid-non-empty-constructor-bodies, more clear for factory methods.
+  factory fromName(Object name, [Iterable<NaturalLanguage> languages = list]) {
     final upperCaseName = IsoObject(name).toUpperCaseCode();
 
     return languages.firstIsoWhere(
@@ -1036,10 +1031,8 @@ sealed class NaturalLanguage extends Language
   /// Otherwise, it calls the `fromCode` factory method to create a
   /// [NaturalLanguage] instance. The resulting [NaturalLanguage] instance is
   /// assigned to the `language` variable.
-  factory NaturalLanguage.fromAnyCode(
-    Object code, [
-    Iterable<NaturalLanguage>? languages,
-  ]) => languages == null
+  factory fromAnyCode(Object code, [Iterable<NaturalLanguage>? languages]) =>
+      languages == null
       ? map.findByCodeOrThrow(code)
       : IsoObject(code).maybeMapIsoCode(
           orElse: (regular) => NaturalLanguage.fromCode(regular, languages),

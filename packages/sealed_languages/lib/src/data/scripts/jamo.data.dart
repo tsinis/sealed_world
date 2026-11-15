@@ -1,7 +1,7 @@
 part of "../../model/script/submodels/script.dart";
 
 extension type const _JamoFactory._(ScriptJamo _) implements ScriptJamo {
-  const _JamoFactory() : this._(const ScriptJamo._());
+  const new() : this._(const ScriptJamo._());
 }
 
 /// A class that represents the Jamo (alias for Jamo subset of Hangul) script.
@@ -12,9 +12,9 @@ final class ScriptJamo extends Script {
   ///
   /// ISO 15924 Alpha-4 code: `Jamo`, ISO 15924 Numeric code: `284`.
   /// {@endtemplate}
-  const factory ScriptJamo() = _JamoFactory;
+  const factory() = _JamoFactory;
 
-  const ScriptJamo._()
+  const new _()
     : super._(
         name: "Jamo (alias for Jamo subset of Hangul)",
         code: "Jamo",

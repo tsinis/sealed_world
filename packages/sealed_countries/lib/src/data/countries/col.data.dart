@@ -7,7 +7,7 @@
 part of "../../model/country/submodels/world_country.dart";
 
 extension type const _ColFactory._(CountryCol _) implements CountryCol {
-  const _ColFactory() : this._(const CountryCol._());
+  const new() : this._(const CountryCol._());
 }
 
 /// A class that represents the Colombia country.
@@ -17,9 +17,9 @@ class CountryCol extends WorldCountry {
   ///
   /// ISO 3166-1 Alpha-3 code: `COL`, ISO 3166-1 Alpha-2 code: `CO`.
   /// {@endtemplate}
-  const factory CountryCol() = _ColFactory;
+  const factory() = _ColFactory;
 
-  const CountryCol._()
+  const new _()
     : super._(
         name: const CountryName(
           language: LangEng(),

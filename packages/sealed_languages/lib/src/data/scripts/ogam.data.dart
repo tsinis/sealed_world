@@ -1,7 +1,7 @@
 part of "../../model/script/submodels/script.dart";
 
 extension type const _OgamFactory._(ScriptOgam _) implements ScriptOgam {
-  const _OgamFactory() : this._(const ScriptOgam._());
+  const new() : this._(const ScriptOgam._());
 }
 
 /// A class that represents the Ogham script.
@@ -11,9 +11,9 @@ final class ScriptOgam extends Script {
   ///
   /// ISO 15924 Alpha-4 code: `Ogam`, ISO 15924 Numeric code: `212`.
   /// {@endtemplate}
-  const factory ScriptOgam() = _OgamFactory;
+  const factory() = _OgamFactory;
 
-  const ScriptOgam._()
+  const new _()
     : super._(
         name: "Ogham",
         code: "Ogam",

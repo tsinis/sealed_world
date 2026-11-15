@@ -1,7 +1,7 @@
 part of "../../model/language/submodels/natural_language.dart";
 
 extension type const _TahFactory._(LangTah _) implements LangTah {
-  const _TahFactory() : this._(const LangTah._());
+  const new() : this._(const LangTah._());
 }
 
 /// A class that represents the Tahitian language.
@@ -11,9 +11,9 @@ final class LangTah extends NaturalLanguage {
   ///
   /// ISO 639-2/T code: `TAH`, ISO 639-1 code: `TY`.
   /// {@endtemplate}
-  const factory LangTah() = _TahFactory;
+  const factory() = _TahFactory;
 
-  const LangTah._()
+  const new _()
     : super._(
         name: "Tahitian",
         code: "TAH",

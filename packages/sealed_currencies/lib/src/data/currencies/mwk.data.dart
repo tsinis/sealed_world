@@ -1,7 +1,7 @@
 part of "../../model/currency/submodels/fiat_currency.dart";
 
 extension type const _MwkFactory._(FiatMwk _) implements FiatMwk {
-  const _MwkFactory() : this._(const FiatMwk._());
+  const new() : this._(const FiatMwk._());
 }
 
 /// A class that represents the Malawian Kwacha currency.
@@ -11,9 +11,9 @@ final class FiatMwk extends FiatCurrency {
   ///
   /// ISO 4217 Alpha code: `MWK`, ISO 4217 Numeric code: `454`.
   /// {@endtemplate}
-  const factory FiatMwk() = _MwkFactory;
+  const factory() = _MwkFactory;
 
-  const FiatMwk._()
+  const new _()
     : super(
         code: "MWK",
         name: "Malawian Kwacha",

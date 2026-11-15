@@ -1,7 +1,7 @@
 part of "../../model/script/submodels/script.dart";
 
 extension type const _TavtFactory._(ScriptTavt _) implements ScriptTavt {
-  const _TavtFactory() : this._(const ScriptTavt._());
+  const new() : this._(const ScriptTavt._());
 }
 
 /// A class that represents the Tai Viet script.
@@ -11,9 +11,9 @@ final class ScriptTavt extends Script {
   ///
   /// ISO 15924 Alpha-4 code: `Tavt`, ISO 15924 Numeric code: `359`.
   /// {@endtemplate}
-  const factory ScriptTavt() = _TavtFactory;
+  const factory() = _TavtFactory;
 
-  const ScriptTavt._()
+  const new _()
     : super._(
         name: "Tai Viet",
         code: "Tavt",

@@ -1,7 +1,7 @@
 part of "../../model/language/submodels/natural_language.dart";
 
 extension type const _KasFactory._(LangKas _) implements LangKas {
-  const _KasFactory() : this._(const LangKas._());
+  const new() : this._(const LangKas._());
 }
 
 /// A class that represents the Kashmiri language.
@@ -11,9 +11,9 @@ final class LangKas extends NaturalLanguage {
   ///
   /// ISO 639-2/T code: `KAS`, ISO 639-1 code: `KS`.
   /// {@endtemplate}
-  const factory LangKas() = _KasFactory;
+  const factory() = _KasFactory;
 
-  const LangKas._()
+  const new _()
     : super._(
         name: "Kashmiri",
         code: "KAS",

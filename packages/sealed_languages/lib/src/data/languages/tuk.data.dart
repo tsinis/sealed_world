@@ -1,7 +1,7 @@
 part of "../../model/language/submodels/natural_language.dart";
 
 extension type const _TukFactory._(LangTuk _) implements LangTuk {
-  const _TukFactory() : this._(const LangTuk._());
+  const new() : this._(const LangTuk._());
 }
 
 /// A class that represents the Turkmen language.
@@ -11,9 +11,9 @@ final class LangTuk extends NaturalLanguage {
   ///
   /// ISO 639-2/T code: `TUK`, ISO 639-1 code: `TK`.
   /// {@endtemplate}
-  const factory LangTuk() = _TukFactory;
+  const factory() = _TukFactory;
 
-  const LangTuk._()
+  const new _()
     : super._(
         name: "Turkmen",
         code: "TUK",

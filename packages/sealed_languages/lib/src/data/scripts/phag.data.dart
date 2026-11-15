@@ -1,7 +1,7 @@
 part of "../../model/script/submodels/script.dart";
 
 extension type const _PhagFactory._(ScriptPhag _) implements ScriptPhag {
-  const _PhagFactory() : this._(const ScriptPhag._());
+  const new() : this._(const ScriptPhag._());
 }
 
 /// A class that represents the Phags-pa script.
@@ -11,9 +11,9 @@ final class ScriptPhag extends Script {
   ///
   /// ISO 15924 Alpha-4 code: `Phag`, ISO 15924 Numeric code: `331`.
   /// {@endtemplate}
-  const factory ScriptPhag() = _PhagFactory;
+  const factory() = _PhagFactory;
 
-  const ScriptPhag._()
+  const new _()
     : super._(
         name: "Phags-pa",
         code: "Phag",

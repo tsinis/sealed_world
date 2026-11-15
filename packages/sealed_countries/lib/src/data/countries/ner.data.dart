@@ -7,7 +7,7 @@
 part of "../../model/country/submodels/world_country.dart";
 
 extension type const _NerFactory._(CountryNer _) implements CountryNer {
-  const _NerFactory() : this._(const CountryNer._());
+  const new() : this._(const CountryNer._());
 }
 
 /// A class that represents the Niger country.
@@ -17,9 +17,9 @@ class CountryNer extends WorldCountry {
   ///
   /// ISO 3166-1 Alpha-3 code: `NER`, ISO 3166-1 Alpha-2 code: `NE`.
   /// {@endtemplate}
-  const factory CountryNer() = _NerFactory;
+  const factory() = _NerFactory;
 
-  const CountryNer._()
+  const new _()
     : super._(
         name: const CountryName(
           language: LangEng(),

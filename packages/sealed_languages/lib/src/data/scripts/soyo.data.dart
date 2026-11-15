@@ -1,7 +1,7 @@
 part of "../../model/script/submodels/script.dart";
 
 extension type const _SoyoFactory._(ScriptSoyo _) implements ScriptSoyo {
-  const _SoyoFactory() : this._(const ScriptSoyo._());
+  const new() : this._(const ScriptSoyo._());
 }
 
 /// A class that represents the Soyombo script.
@@ -11,9 +11,9 @@ final class ScriptSoyo extends Script {
   ///
   /// ISO 15924 Alpha-4 code: `Soyo`, ISO 15924 Numeric code: `329`.
   /// {@endtemplate}
-  const factory ScriptSoyo() = _SoyoFactory;
+  const factory() = _SoyoFactory;
 
-  const ScriptSoyo._()
+  const new _()
     : super._(
         name: "Soyombo",
         code: "Soyo",

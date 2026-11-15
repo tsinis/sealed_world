@@ -1,7 +1,7 @@
 part of "../../model/language/submodels/natural_language.dart";
 
 extension type const _QueFactory._(LangQue _) implements LangQue {
-  const _QueFactory() : this._(const LangQue._());
+  const new() : this._(const LangQue._());
 }
 
 /// A class that represents the Quechua language.
@@ -11,9 +11,9 @@ final class LangQue extends NaturalLanguage {
   ///
   /// ISO 639-2/T code: `QUE`, ISO 639-1 code: `QU`.
   /// {@endtemplate}
-  const factory LangQue() = _QueFactory;
+  const factory() = _QueFactory;
 
-  const LangQue._()
+  const new _()
     : super._(
         name: "Quechua",
         code: "QUE",

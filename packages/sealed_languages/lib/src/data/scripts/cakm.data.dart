@@ -1,7 +1,7 @@
 part of "../../model/script/submodels/script.dart";
 
 extension type const _CakmFactory._(ScriptCakm _) implements ScriptCakm {
-  const _CakmFactory() : this._(const ScriptCakm._());
+  const new() : this._(const ScriptCakm._());
 }
 
 /// A class that represents the Chakma script.
@@ -11,9 +11,9 @@ final class ScriptCakm extends Script {
   ///
   /// ISO 15924 Alpha-4 code: `Cakm`, ISO 15924 Numeric code: `349`.
   /// {@endtemplate}
-  const factory ScriptCakm() = _CakmFactory;
+  const factory() = _CakmFactory;
 
-  const ScriptCakm._()
+  const new _()
     : super._(
         name: "Chakma",
         code: "Cakm",

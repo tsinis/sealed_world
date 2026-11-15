@@ -7,7 +7,7 @@
 part of "../../model/country/submodels/world_country.dart";
 
 extension type const _CypFactory._(CountryCyp _) implements CountryCyp {
-  const _CypFactory() : this._(const CountryCyp._());
+  const new() : this._(const CountryCyp._());
 }
 
 /// A class that represents the Cyprus country.
@@ -17,9 +17,9 @@ class CountryCyp extends WorldCountry {
   ///
   /// ISO 3166-1 Alpha-3 code: `CYP`, ISO 3166-1 Alpha-2 code: `CY`.
   /// {@endtemplate}
-  const factory CountryCyp() = _CypFactory;
+  const factory() = _CypFactory;
 
-  const CountryCyp._()
+  const new _()
     : super._(
         name: const CountryName(
           language: LangEng(),

@@ -1,7 +1,7 @@
 part of "../../model/currency/submodels/fiat_currency.dart";
 
 extension type const _MxnFactory._(FiatMxn _) implements FiatMxn {
-  const _MxnFactory() : this._(const FiatMxn._());
+  const new() : this._(const FiatMxn._());
 }
 
 /// A class that represents the Mexican Peso currency.
@@ -11,9 +11,9 @@ final class FiatMxn extends FiatCurrency {
   ///
   /// ISO 4217 Alpha code: `MXN`, ISO 4217 Numeric code: `484`.
   /// {@endtemplate}
-  const factory FiatMxn() = _MxnFactory;
+  const factory() = _MxnFactory;
 
-  const FiatMxn._()
+  const new _()
     : super(
         code: "MXN",
         name: "Mexican Peso",

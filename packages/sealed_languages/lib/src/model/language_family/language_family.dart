@@ -16,7 +16,7 @@ class LanguageFamily implements Named<String> {
   /// The [name] parameter is required and should be a non-empty string
   /// representing the name of the language family.
   // ignore: deprecated_consistency, constructor cannot be annotated with it.
-  const LanguageFamily({required this.name})
+  const new({required this.name})
     : assert(name.length > 0, "`name` should not be empty!");
 
   /// The name of the language family.

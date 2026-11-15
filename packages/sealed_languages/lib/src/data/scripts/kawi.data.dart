@@ -1,7 +1,7 @@
 part of "../../model/script/submodels/script.dart";
 
 extension type const _KawiFactory._(ScriptKawi _) implements ScriptKawi {
-  const _KawiFactory() : this._(const ScriptKawi._());
+  const new() : this._(const ScriptKawi._());
 }
 
 /// A class that represents the Kawi script.
@@ -11,9 +11,9 @@ final class ScriptKawi extends Script {
   ///
   /// ISO 15924 Alpha-4 code: `Kawi`, ISO 15924 Numeric code: `368`.
   /// {@endtemplate}
-  const factory ScriptKawi() = _KawiFactory;
+  const factory() = _KawiFactory;
 
-  const ScriptKawi._()
+  const new _()
     : super._(
         name: "Kawi",
         code: "Kawi",

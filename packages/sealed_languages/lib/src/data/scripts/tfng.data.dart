@@ -1,7 +1,7 @@
 part of "../../model/script/submodels/script.dart";
 
 extension type const _TfngFactory._(ScriptTfng _) implements ScriptTfng {
-  const _TfngFactory() : this._(const ScriptTfng._());
+  const new() : this._(const ScriptTfng._());
 }
 
 /// A class that represents the Tifinagh (Berber) script.
@@ -11,9 +11,9 @@ final class ScriptTfng extends Script {
   ///
   /// ISO 15924 Alpha-4 code: `Tfng`, ISO 15924 Numeric code: `120`.
   /// {@endtemplate}
-  const factory ScriptTfng() = _TfngFactory;
+  const factory() = _TfngFactory;
 
-  const ScriptTfng._()
+  const new _()
     : super._(
         name: "Tifinagh (Berber)",
         code: "Tfng",

@@ -1,7 +1,7 @@
 part of "../../model/language/submodels/natural_language.dart";
 
 extension type const _OriFactory._(LangOri _) implements LangOri {
-  const _OriFactory() : this._(const LangOri._());
+  const new() : this._(const LangOri._());
 }
 
 /// A class that represents the Oriya language.
@@ -11,9 +11,9 @@ final class LangOri extends NaturalLanguage {
   ///
   /// ISO 639-2/T code: `ORI`, ISO 639-1 code: `OR`.
   /// {@endtemplate}
-  const factory LangOri() = _OriFactory;
+  const factory() = _OriFactory;
 
-  const LangOri._()
+  const new _()
     : super._(
         name: "Oriya",
         code: "ORI",

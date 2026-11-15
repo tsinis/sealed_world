@@ -1,7 +1,7 @@
 part of "../../model/currency/submodels/fiat_currency.dart";
 
 extension type const _BhdFactory._(FiatBhd _) implements FiatBhd {
-  const _BhdFactory() : this._(const FiatBhd._());
+  const new() : this._(const FiatBhd._());
 }
 
 /// A class that represents the Bahraini Dinar currency.
@@ -11,9 +11,9 @@ final class FiatBhd extends FiatCurrency {
   ///
   /// ISO 4217 Alpha code: `BHD`, ISO 4217 Numeric code: `048`.
   /// {@endtemplate}
-  const factory FiatBhd() = _BhdFactory;
+  const factory() = _BhdFactory;
 
-  const FiatBhd._()
+  const new _()
     : super(
         code: "BHD",
         name: "Bahraini Dinar",

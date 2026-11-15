@@ -1,7 +1,7 @@
 part of "../../model/currency/submodels/fiat_currency.dart";
 
 extension type const _KztFactory._(FiatKzt _) implements FiatKzt {
-  const _KztFactory() : this._(const FiatKzt._());
+  const new() : this._(const FiatKzt._());
 }
 
 /// A class that represents the Kazakhstani Tenge currency.
@@ -11,9 +11,9 @@ final class FiatKzt extends FiatCurrency {
   ///
   /// ISO 4217 Alpha code: `KZT`, ISO 4217 Numeric code: `398`.
   /// {@endtemplate}
-  const factory FiatKzt() = _KztFactory;
+  const factory() = _KztFactory;
 
-  const FiatKzt._()
+  const new _()
     : super(
         code: "KZT",
         name: "Kazakhstani Tenge",

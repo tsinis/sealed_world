@@ -1,7 +1,7 @@
 part of "../../model/currency/submodels/fiat_currency.dart";
 
 extension type const _CupFactory._(FiatCup _) implements FiatCup {
-  const _CupFactory() : this._(const FiatCup._());
+  const new() : this._(const FiatCup._());
 }
 
 /// A class that represents the Cuban Peso currency.
@@ -11,9 +11,9 @@ final class FiatCup extends FiatCurrency {
   ///
   /// ISO 4217 Alpha code: `CUP`, ISO 4217 Numeric code: `192`.
   /// {@endtemplate}
-  const factory FiatCup() = _CupFactory;
+  const factory() = _CupFactory;
 
-  const FiatCup._()
+  const new _()
     : super(
         code: "CUP",
         name: "Cuban Peso",

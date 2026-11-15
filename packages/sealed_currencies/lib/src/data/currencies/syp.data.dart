@@ -1,7 +1,7 @@
 part of "../../model/currency/submodels/fiat_currency.dart";
 
 extension type const _SypFactory._(FiatSyp _) implements FiatSyp {
-  const _SypFactory() : this._(const FiatSyp._());
+  const new() : this._(const FiatSyp._());
 }
 
 /// A class that represents the Syrian Pound currency.
@@ -11,9 +11,9 @@ final class FiatSyp extends FiatCurrency {
   ///
   /// ISO 4217 Alpha code: `SYP`, ISO 4217 Numeric code: `760`.
   /// {@endtemplate}
-  const factory FiatSyp() = _SypFactory;
+  const factory() = _SypFactory;
 
-  const FiatSyp._()
+  const new _()
     : super(
         code: "SYP",
         name: "Syrian Pound",

@@ -1,7 +1,7 @@
 part of "../../model/currency/submodels/fiat_currency.dart";
 
 extension type const _UahFactory._(FiatUah _) implements FiatUah {
-  const _UahFactory() : this._(const FiatUah._());
+  const new() : this._(const FiatUah._());
 }
 
 /// A class that represents the Ukrainian Hryvnia currency.
@@ -11,9 +11,9 @@ final class FiatUah extends FiatCurrency {
   ///
   /// ISO 4217 Alpha code: `UAH`, ISO 4217 Numeric code: `980`.
   /// {@endtemplate}
-  const factory FiatUah() = _UahFactory;
+  const factory() = _UahFactory;
 
-  const FiatUah._()
+  const new _()
     : super(
         code: "UAH",
         name: "Ukrainian Hryvnia",

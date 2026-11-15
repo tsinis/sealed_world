@@ -6,7 +6,7 @@ final class LangCustom extends NaturalLanguage {
   /// custom natural language).
   /// {@macro natural_language_constructor}
   /// {@macro permissive_constructor}
-  const LangCustom({
+  const new({
     super.code,
     super.codeShort,
     super.bibliographicCode,

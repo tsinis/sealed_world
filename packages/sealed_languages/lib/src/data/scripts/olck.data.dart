@@ -1,7 +1,7 @@
 part of "../../model/script/submodels/script.dart";
 
 extension type const _OlckFactory._(ScriptOlck _) implements ScriptOlck {
-  const _OlckFactory() : this._(const ScriptOlck._());
+  const new() : this._(const ScriptOlck._());
 }
 
 /// A class that represents the Ol Chiki (Ol Cemet’, Ol, Santali) script.
@@ -12,9 +12,9 @@ final class ScriptOlck extends Script {
   ///
   /// ISO 15924 Alpha-4 code: `Olck`, ISO 15924 Numeric code: `261`.
   /// {@endtemplate}
-  const factory ScriptOlck() = _OlckFactory;
+  const factory() = _OlckFactory;
 
-  const ScriptOlck._()
+  const new _()
     : super._(
         name: "Ol Chiki (Ol Cemet’, Ol, Santali)",
         code: "Olck",

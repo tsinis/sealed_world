@@ -1,7 +1,7 @@
 part of "../../model/currency/submodels/fiat_currency.dart";
 
 extension type const _MruFactory._(FiatMru _) implements FiatMru {
-  const _MruFactory() : this._(const FiatMru._());
+  const new() : this._(const FiatMru._());
 }
 
 /// A class that represents the Mauritanian Ouguiya currency.
@@ -11,9 +11,9 @@ final class FiatMru extends FiatCurrency {
   ///
   /// ISO 4217 Alpha code: `MRU`, ISO 4217 Numeric code: `929`.
   /// {@endtemplate}
-  const factory FiatMru() = _MruFactory;
+  const factory() = _MruFactory;
 
-  const FiatMru._()
+  const new _()
     : super(
         code: "MRU",
         name: "Mauritanian Ouguiya",

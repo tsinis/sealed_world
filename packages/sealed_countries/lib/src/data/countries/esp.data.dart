@@ -7,7 +7,7 @@
 part of "../../model/country/submodels/world_country.dart";
 
 extension type const _EspFactory._(CountryEsp _) implements CountryEsp {
-  const _EspFactory() : this._(const CountryEsp._());
+  const new() : this._(const CountryEsp._());
 }
 
 /// A class that represents the Spain country.
@@ -17,9 +17,9 @@ class CountryEsp extends WorldCountry {
   ///
   /// ISO 3166-1 Alpha-3 code: `ESP`, ISO 3166-1 Alpha-2 code: `ES`.
   /// {@endtemplate}
-  const factory CountryEsp() = _EspFactory;
+  const factory() = _EspFactory;
 
-  const CountryEsp._()
+  const new _()
     : super._(
         name: const CountryName(
           language: LangEng(),

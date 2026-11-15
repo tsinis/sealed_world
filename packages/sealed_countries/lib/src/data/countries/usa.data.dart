@@ -7,7 +7,7 @@
 part of "../../model/country/submodels/world_country.dart";
 
 extension type const _UsaFactory._(CountryUsa _) implements CountryUsa {
-  const _UsaFactory() : this._(const CountryUsa._());
+  const new() : this._(const CountryUsa._());
 }
 
 /// A class that represents the United States country.
@@ -17,9 +17,9 @@ class CountryUsa extends WorldCountry {
   ///
   /// ISO 3166-1 Alpha-3 code: `USA`, ISO 3166-1 Alpha-2 code: `US`.
   /// {@endtemplate}
-  const factory CountryUsa() = _UsaFactory;
+  const factory() = _UsaFactory;
 
-  const CountryUsa._()
+  const new _()
     : super._(
         name: const CountryName(
           language: LangEng(),

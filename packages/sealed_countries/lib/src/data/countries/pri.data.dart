@@ -7,7 +7,7 @@
 part of "../../model/country/submodels/world_country.dart";
 
 extension type const _PriFactory._(CountryPri _) implements CountryPri {
-  const _PriFactory() : this._(const CountryPri._());
+  const new() : this._(const CountryPri._());
 }
 
 /// A class that represents the Puerto Rico country.
@@ -17,9 +17,9 @@ class CountryPri extends WorldCountry {
   ///
   /// ISO 3166-1 Alpha-3 code: `PRI`, ISO 3166-1 Alpha-2 code: `PR`.
   /// {@endtemplate}
-  const factory CountryPri() = _PriFactory;
+  const factory() = _PriFactory;
 
-  const CountryPri._()
+  const new _()
     : super._(
         name: const CountryName(
           language: LangEng(),

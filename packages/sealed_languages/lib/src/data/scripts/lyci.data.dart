@@ -1,7 +1,7 @@
 part of "../../model/script/submodels/script.dart";
 
 extension type const _LyciFactory._(ScriptLyci _) implements ScriptLyci {
-  const _LyciFactory() : this._(const ScriptLyci._());
+  const new() : this._(const ScriptLyci._());
 }
 
 /// A class that represents the Lycian script.
@@ -11,9 +11,9 @@ final class ScriptLyci extends Script {
   ///
   /// ISO 15924 Alpha-4 code: `Lyci`, ISO 15924 Numeric code: `202`.
   /// {@endtemplate}
-  const factory ScriptLyci() = _LyciFactory;
+  const factory() = _LyciFactory;
 
-  const ScriptLyci._()
+  const new _()
     : super._(
         name: "Lycian",
         code: "Lyci",

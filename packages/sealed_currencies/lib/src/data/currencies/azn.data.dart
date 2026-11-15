@@ -1,7 +1,7 @@
 part of "../../model/currency/submodels/fiat_currency.dart";
 
 extension type const _AznFactory._(FiatAzn _) implements FiatAzn {
-  const _AznFactory() : this._(const FiatAzn._());
+  const new() : this._(const FiatAzn._());
 }
 
 /// A class that represents the Azerbaijani Manat currency.
@@ -11,9 +11,9 @@ final class FiatAzn extends FiatCurrency {
   ///
   /// ISO 4217 Alpha code: `AZN`, ISO 4217 Numeric code: `944`.
   /// {@endtemplate}
-  const factory FiatAzn() = _AznFactory;
+  const factory() = _AznFactory;
 
-  const FiatAzn._()
+  const new _()
     : super(
         code: "AZN",
         name: "Azerbaijani Manat",

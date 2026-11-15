@@ -7,7 +7,7 @@
 part of "../../model/country/submodels/world_country.dart";
 
 extension type const _StpFactory._(CountryStp _) implements CountryStp {
-  const _StpFactory() : this._(const CountryStp._());
+  const new() : this._(const CountryStp._());
 }
 
 /// A class that represents the São Tomé and Príncipe country.
@@ -17,9 +17,9 @@ class CountryStp extends WorldCountry {
   ///
   /// ISO 3166-1 Alpha-3 code: `STP`, ISO 3166-1 Alpha-2 code: `ST`.
   /// {@endtemplate}
-  const factory CountryStp() = _StpFactory;
+  const factory() = _StpFactory;
 
-  const CountryStp._()
+  const new _()
     : super._(
         name: const CountryName(
           language: LangEng(),

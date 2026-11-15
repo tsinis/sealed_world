@@ -1,7 +1,7 @@
 part of "../../model/language/submodels/natural_language.dart";
 
 extension type const _HinFactory._(LangHin _) implements LangHin {
-  const _HinFactory() : this._(const LangHin._());
+  const new() : this._(const LangHin._());
 }
 
 /// A class that represents the Hindi language.
@@ -11,9 +11,9 @@ final class LangHin extends NaturalLanguage {
   ///
   /// ISO 639-2/T code: `HIN`, ISO 639-1 code: `HI`.
   /// {@endtemplate}
-  const factory LangHin() = _HinFactory;
+  const factory() = _HinFactory;
 
-  const LangHin._()
+  const new _()
     : super._(
         name: "Hindi",
         code: "HIN",

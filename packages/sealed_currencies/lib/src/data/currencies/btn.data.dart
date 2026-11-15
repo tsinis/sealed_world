@@ -1,7 +1,7 @@
 part of "../../model/currency/submodels/fiat_currency.dart";
 
 extension type const _BtnFactory._(FiatBtn _) implements FiatBtn {
-  const _BtnFactory() : this._(const FiatBtn._());
+  const new() : this._(const FiatBtn._());
 }
 
 /// A class that represents the Bhutanese Ngultrum currency.
@@ -11,9 +11,9 @@ final class FiatBtn extends FiatCurrency {
   ///
   /// ISO 4217 Alpha code: `BTN`, ISO 4217 Numeric code: `064`.
   /// {@endtemplate}
-  const factory FiatBtn() = _BtnFactory;
+  const factory() = _BtnFactory;
 
-  const FiatBtn._()
+  const new _()
     : super(
         code: "BTN",
         name: "Bhutanese Ngultrum",

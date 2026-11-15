@@ -1,7 +1,7 @@
 part of "../../model/language/submodels/natural_language.dart";
 
 extension type const _SlkFactory._(LangSlk _) implements LangSlk {
-  const _SlkFactory() : this._(const LangSlk._());
+  const new() : this._(const LangSlk._());
 }
 
 /// A class that represents the Slovak language.
@@ -11,9 +11,9 @@ final class LangSlk extends NaturalLanguage {
   ///
   /// ISO 639-2/T code: `SLK`, ISO 639-1 code: `SK`.
   /// {@endtemplate}
-  const factory LangSlk() = _SlkFactory;
+  const factory() = _SlkFactory;
 
-  const LangSlk._()
+  const new _()
     : super._(
         name: "Slovak",
         code: "SLK",

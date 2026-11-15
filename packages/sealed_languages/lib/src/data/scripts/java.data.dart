@@ -1,7 +1,7 @@
 part of "../../model/script/submodels/script.dart";
 
 extension type const _JavaFactory._(ScriptJava _) implements ScriptJava {
-  const _JavaFactory() : this._(const ScriptJava._());
+  const new() : this._(const ScriptJava._());
 }
 
 /// A class that represents the Javanese script.
@@ -11,9 +11,9 @@ final class ScriptJava extends Script {
   ///
   /// ISO 15924 Alpha-4 code: `Java`, ISO 15924 Numeric code: `361`.
   /// {@endtemplate}
-  const factory ScriptJava() = _JavaFactory;
+  const factory() = _JavaFactory;
 
-  const ScriptJava._()
+  const new _()
     : super._(
         name: "Javanese",
         code: "Java",

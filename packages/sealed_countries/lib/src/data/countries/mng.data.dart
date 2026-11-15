@@ -7,7 +7,7 @@
 part of "../../model/country/submodels/world_country.dart";
 
 extension type const _MngFactory._(CountryMng _) implements CountryMng {
-  const _MngFactory() : this._(const CountryMng._());
+  const new() : this._(const CountryMng._());
 }
 
 /// A class that represents the Mongolia country.
@@ -17,9 +17,9 @@ class CountryMng extends WorldCountry {
   ///
   /// ISO 3166-1 Alpha-3 code: `MNG`, ISO 3166-1 Alpha-2 code: `MN`.
   /// {@endtemplate}
-  const factory CountryMng() = _MngFactory;
+  const factory() = _MngFactory;
 
-  const CountryMng._()
+  const new _()
     : super._(
         name: const CountryName(
           language: LangEng(),

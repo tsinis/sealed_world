@@ -1,7 +1,7 @@
 part of "../../model/currency/submodels/fiat_currency.dart";
 
 extension type const _GipFactory._(FiatGip _) implements FiatGip {
-  const _GipFactory() : this._(const FiatGip._());
+  const new() : this._(const FiatGip._());
 }
 
 /// A class that represents the Gibraltar Pound currency.
@@ -11,9 +11,9 @@ final class FiatGip extends FiatCurrency {
   ///
   /// ISO 4217 Alpha code: `GIP`, ISO 4217 Numeric code: `292`.
   /// {@endtemplate}
-  const factory FiatGip() = _GipFactory;
+  const factory() = _GipFactory;
 
-  const FiatGip._()
+  const new _()
     : super(
         code: "GIP",
         name: "Gibraltar Pound",

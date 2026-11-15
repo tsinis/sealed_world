@@ -1,7 +1,7 @@
 part of "../../model/language/submodels/natural_language.dart";
 
 extension type const _NnoFactory._(LangNno _) implements LangNno {
-  const _NnoFactory() : this._(const LangNno._());
+  const new() : this._(const LangNno._());
 }
 
 /// A class that represents the Norwegian Nynorsk language.
@@ -11,9 +11,9 @@ final class LangNno extends NaturalLanguage {
   ///
   /// ISO 639-2/T code: `NNO`, ISO 639-1 code: `NN`.
   /// {@endtemplate}
-  const factory LangNno() = _NnoFactory;
+  const factory() = _NnoFactory;
 
-  const LangNno._()
+  const new _()
     : super._(
         name: "Norwegian Nynorsk",
         code: "NNO",

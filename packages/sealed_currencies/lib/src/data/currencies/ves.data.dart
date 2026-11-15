@@ -1,7 +1,7 @@
 part of "../../model/currency/submodels/fiat_currency.dart";
 
 extension type const _VesFactory._(FiatVes _) implements FiatVes {
-  const _VesFactory() : this._(const FiatVes._());
+  const new() : this._(const FiatVes._());
 }
 
 /// A class that represents the Venezuelan Bolívar Soberano currency.
@@ -11,9 +11,9 @@ final class FiatVes extends FiatCurrency {
   ///
   /// ISO 4217 Alpha code: `VES`, ISO 4217 Numeric code: `928`.
   /// {@endtemplate}
-  const factory FiatVes() = _VesFactory;
+  const factory() = _VesFactory;
 
-  const FiatVes._()
+  const new _()
     : super(
         code: "VES",
         name: "Venezuelan Bolívar Soberano",

@@ -7,7 +7,7 @@
 part of "../../model/country/submodels/world_country.dart";
 
 extension type const _MliFactory._(CountryMli _) implements CountryMli {
-  const _MliFactory() : this._(const CountryMli._());
+  const new() : this._(const CountryMli._());
 }
 
 /// A class that represents the Mali country.
@@ -17,9 +17,9 @@ class CountryMli extends WorldCountry {
   ///
   /// ISO 3166-1 Alpha-3 code: `MLI`, ISO 3166-1 Alpha-2 code: `ML`.
   /// {@endtemplate}
-  const factory CountryMli() = _MliFactory;
+  const factory() = _MliFactory;
 
-  const CountryMli._()
+  const new _()
     : super._(
         name: const CountryName(
           language: LangEng(),

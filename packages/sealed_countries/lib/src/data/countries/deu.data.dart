@@ -7,7 +7,7 @@
 part of "../../model/country/submodels/world_country.dart";
 
 extension type const _DeuFactory._(CountryDeu _) implements CountryDeu {
-  const _DeuFactory() : this._(const CountryDeu._());
+  const new() : this._(const CountryDeu._());
 }
 
 /// A class that represents the Germany country.
@@ -17,9 +17,9 @@ class CountryDeu extends WorldCountry {
   ///
   /// ISO 3166-1 Alpha-3 code: `DEU`, ISO 3166-1 Alpha-2 code: `DE`.
   /// {@endtemplate}
-  const factory CountryDeu() = _DeuFactory;
+  const factory() = _DeuFactory;
 
-  const CountryDeu._()
+  const new _()
     : super._(
         name: const CountryName(
           language: LangEng(),

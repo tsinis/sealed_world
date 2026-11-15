@@ -1,7 +1,7 @@
 part of "../../model/currency/submodels/fiat_currency.dart";
 
 extension type const _LkrFactory._(FiatLkr _) implements FiatLkr {
-  const _LkrFactory() : this._(const FiatLkr._());
+  const new() : this._(const FiatLkr._());
 }
 
 /// A class that represents the Sri Lankan Rupee currency.
@@ -11,9 +11,9 @@ final class FiatLkr extends FiatCurrency {
   ///
   /// ISO 4217 Alpha code: `LKR`, ISO 4217 Numeric code: `144`.
   /// {@endtemplate}
-  const factory FiatLkr() = _LkrFactory;
+  const factory() = _LkrFactory;
 
-  const FiatLkr._()
+  const new _()
     : super(
         code: "LKR",
         name: "Sri Lankan Rupee",

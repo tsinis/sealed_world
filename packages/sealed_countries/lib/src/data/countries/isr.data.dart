@@ -7,7 +7,7 @@
 part of "../../model/country/submodels/world_country.dart";
 
 extension type const _IsrFactory._(CountryIsr _) implements CountryIsr {
-  const _IsrFactory() : this._(const CountryIsr._());
+  const new() : this._(const CountryIsr._());
 }
 
 /// A class that represents the Israel country.
@@ -17,9 +17,9 @@ class CountryIsr extends WorldCountry {
   ///
   /// ISO 3166-1 Alpha-3 code: `ISR`, ISO 3166-1 Alpha-2 code: `IL`.
   /// {@endtemplate}
-  const factory CountryIsr() = _IsrFactory;
+  const factory() = _IsrFactory;
 
-  const CountryIsr._()
+  const new _()
     : super._(
         name: const CountryName(
           language: LangEng(),

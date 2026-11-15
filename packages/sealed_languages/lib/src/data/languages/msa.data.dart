@@ -1,7 +1,7 @@
 part of "../../model/language/submodels/natural_language.dart";
 
 extension type const _MsaFactory._(LangMsa _) implements LangMsa {
-  const _MsaFactory() : this._(const LangMsa._());
+  const new() : this._(const LangMsa._());
 }
 
 /// A class that represents the Malay language.
@@ -11,9 +11,9 @@ final class LangMsa extends NaturalLanguage {
   ///
   /// ISO 639-2/T code: `MSA`, ISO 639-1 code: `MS`.
   /// {@endtemplate}
-  const factory LangMsa() = _MsaFactory;
+  const factory() = _MsaFactory;
 
-  const LangMsa._()
+  const new _()
     : super._(
         name: "Malay",
         code: "MSA",

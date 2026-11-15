@@ -1,7 +1,7 @@
 part of "../../model/currency/submodels/fiat_currency.dart";
 
 extension type const _AwgFactory._(FiatAwg _) implements FiatAwg {
-  const _AwgFactory() : this._(const FiatAwg._());
+  const new() : this._(const FiatAwg._());
 }
 
 /// A class that represents the Aruban Florin currency.
@@ -11,9 +11,9 @@ final class FiatAwg extends FiatCurrency {
   ///
   /// ISO 4217 Alpha code: `AWG`, ISO 4217 Numeric code: `533`.
   /// {@endtemplate}
-  const factory FiatAwg() = _AwgFactory;
+  const factory() = _AwgFactory;
 
-  const FiatAwg._()
+  const new _()
     : super(
         code: "AWG",
         name: "Aruban Florin",

@@ -1,7 +1,7 @@
 part of "../../model/script/submodels/script.dart";
 
 extension type const _AdlmFactory._(ScriptAdlm _) implements ScriptAdlm {
-  const _AdlmFactory() : this._(const ScriptAdlm._());
+  const new() : this._(const ScriptAdlm._());
 }
 
 /// A class that represents the Adlam script.
@@ -11,9 +11,9 @@ final class ScriptAdlm extends Script {
   ///
   /// ISO 15924 Alpha-4 code: `Adlm`, ISO 15924 Numeric code: `166`.
   /// {@endtemplate}
-  const factory ScriptAdlm() = _AdlmFactory;
+  const factory() = _AdlmFactory;
 
-  const ScriptAdlm._()
+  const new _()
     : super._(
         name: "Adlam",
         code: "Adlm",

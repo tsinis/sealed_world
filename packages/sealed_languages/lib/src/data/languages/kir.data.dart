@@ -1,7 +1,7 @@
 part of "../../model/language/submodels/natural_language.dart";
 
 extension type const _KirFactory._(LangKir _) implements LangKir {
-  const _KirFactory() : this._(const LangKir._());
+  const new() : this._(const LangKir._());
 }
 
 /// A class that represents the Kyrgyz language.
@@ -11,9 +11,9 @@ final class LangKir extends NaturalLanguage {
   ///
   /// ISO 639-2/T code: `KIR`, ISO 639-1 code: `KY`.
   /// {@endtemplate}
-  const factory LangKir() = _KirFactory;
+  const factory() = _KirFactory;
 
-  const LangKir._()
+  const new _()
     : super._(
         name: "Kyrgyz",
         code: "KIR",

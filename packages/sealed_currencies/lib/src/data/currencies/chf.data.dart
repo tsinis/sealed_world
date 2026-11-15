@@ -1,7 +1,7 @@
 part of "../../model/currency/submodels/fiat_currency.dart";
 
 extension type const _ChfFactory._(FiatChf _) implements FiatChf {
-  const _ChfFactory() : this._(const FiatChf._());
+  const new() : this._(const FiatChf._());
 }
 
 /// A class that represents the Swiss Franc currency.
@@ -11,9 +11,9 @@ final class FiatChf extends FiatCurrency {
   ///
   /// ISO 4217 Alpha code: `CHF`, ISO 4217 Numeric code: `756`.
   /// {@endtemplate}
-  const factory FiatChf() = _ChfFactory;
+  const factory() = _ChfFactory;
 
-  const FiatChf._()
+  const new _()
     : super(
         code: "CHF",
         name: "Swiss Franc",

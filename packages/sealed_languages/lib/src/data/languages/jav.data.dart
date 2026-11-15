@@ -1,7 +1,7 @@
 part of "../../model/language/submodels/natural_language.dart";
 
 extension type const _JavFactory._(LangJav _) implements LangJav {
-  const _JavFactory() : this._(const LangJav._());
+  const new() : this._(const LangJav._());
 }
 
 /// A class that represents the Javanese language.
@@ -11,9 +11,9 @@ final class LangJav extends NaturalLanguage {
   ///
   /// ISO 639-2/T code: `JAV`, ISO 639-1 code: `JV`.
   /// {@endtemplate}
-  const factory LangJav() = _JavFactory;
+  const factory() = _JavFactory;
 
-  const LangJav._()
+  const new _()
     : super._(
         name: "Javanese",
         code: "JAV",

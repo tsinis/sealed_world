@@ -1,7 +1,7 @@
 part of "../../model/language/submodels/natural_language.dart";
 
 extension type const _CymFactory._(LangCym _) implements LangCym {
-  const _CymFactory() : this._(const LangCym._());
+  const new() : this._(const LangCym._());
 }
 
 /// A class that represents the Welsh language.
@@ -11,9 +11,9 @@ final class LangCym extends NaturalLanguage {
   ///
   /// ISO 639-2/T code: `CYM`, ISO 639-1 code: `CY`.
   /// {@endtemplate}
-  const factory LangCym() = _CymFactory;
+  const factory() = _CymFactory;
 
-  const LangCym._()
+  const new _()
     : super._(
         name: "Welsh",
         code: "CYM",

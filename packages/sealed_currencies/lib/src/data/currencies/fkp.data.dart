@@ -1,7 +1,7 @@
 part of "../../model/currency/submodels/fiat_currency.dart";
 
 extension type const _FkpFactory._(FiatFkp _) implements FiatFkp {
-  const _FkpFactory() : this._(const FiatFkp._());
+  const new() : this._(const FiatFkp._());
 }
 
 /// A class that represents the Falkland Pound currency.
@@ -11,9 +11,9 @@ final class FiatFkp extends FiatCurrency {
   ///
   /// ISO 4217 Alpha code: `FKP`, ISO 4217 Numeric code: `238`.
   /// {@endtemplate}
-  const factory FiatFkp() = _FkpFactory;
+  const factory() = _FkpFactory;
 
-  const FiatFkp._()
+  const new _()
     : super(
         code: "FKP",
         name: "Falkland Pound",

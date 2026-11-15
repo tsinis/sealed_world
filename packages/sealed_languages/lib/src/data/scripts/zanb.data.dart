@@ -1,7 +1,7 @@
 part of "../../model/script/submodels/script.dart";
 
 extension type const _ZanbFactory._(ScriptZanb _) implements ScriptZanb {
-  const _ZanbFactory() : this._(const ScriptZanb._());
+  const new() : this._(const ScriptZanb._());
 }
 
 /// A class that represents the Zanabazar Square (Zanabazarin Dörböljin Useg,
@@ -13,9 +13,9 @@ final class ScriptZanb extends Script {
   ///
   /// ISO 15924 Alpha-4 code: `Zanb`, ISO 15924 Numeric code: `339`.
   /// {@endtemplate}
-  const factory ScriptZanb() = _ZanbFactory;
+  const factory() = _ZanbFactory;
 
-  const ScriptZanb._()
+  const new _()
     : super._(
         name:
             "Zanabazar Square (Zanabazarin Dörböljin Useg, "

@@ -1,7 +1,7 @@
 part of "../../model/script/submodels/script.dart";
 
 extension type const _MeroFactory._(ScriptMero _) implements ScriptMero {
-  const _MeroFactory() : this._(const ScriptMero._());
+  const new() : this._(const ScriptMero._());
 }
 
 /// A class that represents the Meroitic Hieroglyphs script.
@@ -11,9 +11,9 @@ final class ScriptMero extends Script {
   ///
   /// ISO 15924 Alpha-4 code: `Mero`, ISO 15924 Numeric code: `100`.
   /// {@endtemplate}
-  const factory ScriptMero() = _MeroFactory;
+  const factory() = _MeroFactory;
 
-  const ScriptMero._()
+  const new _()
     : super._(
         name: "Meroitic Hieroglyphs",
         code: "Mero",

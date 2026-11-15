@@ -1,7 +1,7 @@
 part of "../../model/currency/submodels/fiat_currency.dart";
 
 extension type const _OmrFactory._(FiatOmr _) implements FiatOmr {
-  const _OmrFactory() : this._(const FiatOmr._());
+  const new() : this._(const FiatOmr._());
 }
 
 /// A class that represents the Omani Rial currency.
@@ -11,9 +11,9 @@ final class FiatOmr extends FiatCurrency {
   ///
   /// ISO 4217 Alpha code: `OMR`, ISO 4217 Numeric code: `512`.
   /// {@endtemplate}
-  const factory FiatOmr() = _OmrFactory;
+  const factory() = _OmrFactory;
 
-  const FiatOmr._()
+  const new _()
     : super(
         code: "OMR",
         name: "Omani Rial",

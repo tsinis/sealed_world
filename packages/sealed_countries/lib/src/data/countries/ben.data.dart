@@ -7,7 +7,7 @@
 part of "../../model/country/submodels/world_country.dart";
 
 extension type const _BenFactory._(CountryBen _) implements CountryBen {
-  const _BenFactory() : this._(const CountryBen._());
+  const new() : this._(const CountryBen._());
 }
 
 /// A class that represents the Benin country.
@@ -17,9 +17,9 @@ class CountryBen extends WorldCountry {
   ///
   /// ISO 3166-1 Alpha-3 code: `BEN`, ISO 3166-1 Alpha-2 code: `BJ`.
   /// {@endtemplate}
-  const factory CountryBen() = _BenFactory;
+  const factory() = _BenFactory;
 
-  const CountryBen._()
+  const new _()
     : super._(
         name: const CountryName(
           language: LangEng(),

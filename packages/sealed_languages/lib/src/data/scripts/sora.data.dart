@@ -1,7 +1,7 @@
 part of "../../model/script/submodels/script.dart";
 
 extension type const _SoraFactory._(ScriptSora _) implements ScriptSora {
-  const _SoraFactory() : this._(const ScriptSora._());
+  const new() : this._(const ScriptSora._());
 }
 
 /// A class that represents the Sora Sompeng script.
@@ -11,9 +11,9 @@ final class ScriptSora extends Script {
   ///
   /// ISO 15924 Alpha-4 code: `Sora`, ISO 15924 Numeric code: `398`.
   /// {@endtemplate}
-  const factory ScriptSora() = _SoraFactory;
+  const factory() = _SoraFactory;
 
-  const ScriptSora._()
+  const new _()
     : super._(
         name: "Sora Sompeng",
         code: "Sora",

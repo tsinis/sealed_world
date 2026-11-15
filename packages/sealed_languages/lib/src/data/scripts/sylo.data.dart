@@ -1,7 +1,7 @@
 part of "../../model/script/submodels/script.dart";
 
 extension type const _SyloFactory._(ScriptSylo _) implements ScriptSylo {
-  const _SyloFactory() : this._(const ScriptSylo._());
+  const new() : this._(const ScriptSylo._());
 }
 
 /// A class that represents the Syloti Nagri script.
@@ -11,9 +11,9 @@ final class ScriptSylo extends Script {
   ///
   /// ISO 15924 Alpha-4 code: `Sylo`, ISO 15924 Numeric code: `316`.
   /// {@endtemplate}
-  const factory ScriptSylo() = _SyloFactory;
+  const factory() = _SyloFactory;
 
-  const ScriptSylo._()
+  const new _()
     : super._(
         name: "Syloti Nagri",
         code: "Sylo",

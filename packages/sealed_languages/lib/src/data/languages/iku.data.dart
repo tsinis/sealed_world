@@ -1,7 +1,7 @@
 part of "../../model/language/submodels/natural_language.dart";
 
 extension type const _IkuFactory._(LangIku _) implements LangIku {
-  const _IkuFactory() : this._(const LangIku._());
+  const new() : this._(const LangIku._());
 }
 
 /// A class that represents the Inuktitut language.
@@ -11,9 +11,9 @@ final class LangIku extends NaturalLanguage {
   ///
   /// ISO 639-2/T code: `IKU`, ISO 639-1 code: `IU`.
   /// {@endtemplate}
-  const factory LangIku() = _IkuFactory;
+  const factory() = _IkuFactory;
 
-  const LangIku._()
+  const new _()
     : super._(
         name: "Inuktitut",
         code: "IKU",

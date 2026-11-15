@@ -7,7 +7,7 @@
 part of "../../model/country/submodels/world_country.dart";
 
 extension type const _SweFactory._(CountrySwe _) implements CountrySwe {
-  const _SweFactory() : this._(const CountrySwe._());
+  const new() : this._(const CountrySwe._());
 }
 
 /// A class that represents the Sweden country.
@@ -17,9 +17,9 @@ class CountrySwe extends WorldCountry {
   ///
   /// ISO 3166-1 Alpha-3 code: `SWE`, ISO 3166-1 Alpha-2 code: `SE`.
   /// {@endtemplate}
-  const factory CountrySwe() = _SweFactory;
+  const factory() = _SweFactory;
 
-  const CountrySwe._()
+  const new _()
     : super._(
         name: const CountryName(
           language: LangEng(),

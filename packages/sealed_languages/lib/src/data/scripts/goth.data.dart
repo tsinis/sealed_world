@@ -1,7 +1,7 @@
 part of "../../model/script/submodels/script.dart";
 
 extension type const _GothFactory._(ScriptGoth _) implements ScriptGoth {
-  const _GothFactory() : this._(const ScriptGoth._());
+  const new() : this._(const ScriptGoth._());
 }
 
 /// A class that represents the Gothic script.
@@ -11,9 +11,9 @@ final class ScriptGoth extends Script {
   ///
   /// ISO 15924 Alpha-4 code: `Goth`, ISO 15924 Numeric code: `206`.
   /// {@endtemplate}
-  const factory ScriptGoth() = _GothFactory;
+  const factory() = _GothFactory;
 
-  const ScriptGoth._()
+  const new _()
     : super._(
         name: "Gothic",
         code: "Goth",

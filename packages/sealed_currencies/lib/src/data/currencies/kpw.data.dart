@@ -1,7 +1,7 @@
 part of "../../model/currency/submodels/fiat_currency.dart";
 
 extension type const _KpwFactory._(FiatKpw _) implements FiatKpw {
-  const _KpwFactory() : this._(const FiatKpw._());
+  const new() : this._(const FiatKpw._());
 }
 
 /// A class that represents the North Korean Won currency.
@@ -11,9 +11,9 @@ final class FiatKpw extends FiatCurrency {
   ///
   /// ISO 4217 Alpha code: `KPW`, ISO 4217 Numeric code: `408`.
   /// {@endtemplate}
-  const factory FiatKpw() = _KpwFactory;
+  const factory() = _KpwFactory;
 
-  const FiatKpw._()
+  const new _()
     : super(
         code: "KPW",
         name: "North Korean Won",

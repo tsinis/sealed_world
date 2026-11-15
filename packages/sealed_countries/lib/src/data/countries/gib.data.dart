@@ -7,7 +7,7 @@
 part of "../../model/country/submodels/world_country.dart";
 
 extension type const _GibFactory._(CountryGib _) implements CountryGib {
-  const _GibFactory() : this._(const CountryGib._());
+  const new() : this._(const CountryGib._());
 }
 
 /// A class that represents the Gibraltar country.
@@ -17,9 +17,9 @@ class CountryGib extends WorldCountry {
   ///
   /// ISO 3166-1 Alpha-3 code: `GIB`, ISO 3166-1 Alpha-2 code: `GI`.
   /// {@endtemplate}
-  const factory CountryGib() = _GibFactory;
+  const factory() = _GibFactory;
 
-  const CountryGib._()
+  const new _()
     : super._(
         name: const CountryName(
           language: LangEng(),

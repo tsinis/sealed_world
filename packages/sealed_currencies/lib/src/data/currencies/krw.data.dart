@@ -1,7 +1,7 @@
 part of "../../model/currency/submodels/fiat_currency.dart";
 
 extension type const _KrwFactory._(FiatKrw _) implements FiatKrw {
-  const _KrwFactory() : this._(const FiatKrw._());
+  const new() : this._(const FiatKrw._());
 }
 
 /// A class that represents the South Korean Won currency.
@@ -11,9 +11,9 @@ final class FiatKrw extends FiatCurrency {
   ///
   /// ISO 4217 Alpha code: `KRW`, ISO 4217 Numeric code: `410`.
   /// {@endtemplate}
-  const factory FiatKrw() = _KrwFactory;
+  const factory() = _KrwFactory;
 
-  const FiatKrw._()
+  const new _()
     : super(
         code: "KRW",
         name: "South Korean Won",

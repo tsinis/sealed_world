@@ -7,7 +7,7 @@
 part of "../../model/country/submodels/world_country.dart";
 
 extension type const _IslFactory._(CountryIsl _) implements CountryIsl {
-  const _IslFactory() : this._(const CountryIsl._());
+  const new() : this._(const CountryIsl._());
 }
 
 /// A class that represents the Iceland country.
@@ -17,9 +17,9 @@ class CountryIsl extends WorldCountry {
   ///
   /// ISO 3166-1 Alpha-3 code: `ISL`, ISO 3166-1 Alpha-2 code: `IS`.
   /// {@endtemplate}
-  const factory CountryIsl() = _IslFactory;
+  const factory() = _IslFactory;
 
-  const CountryIsl._()
+  const new _()
     : super._(
         name: const CountryName(
           language: LangEng(),

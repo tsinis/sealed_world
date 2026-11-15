@@ -1,7 +1,7 @@
 part of "../../model/script/submodels/script.dart";
 
 extension type const _NandFactory._(ScriptNand _) implements ScriptNand {
-  const _NandFactory() : this._(const ScriptNand._());
+  const new() : this._(const ScriptNand._());
 }
 
 /// A class that represents the Nandinagari script.
@@ -11,9 +11,9 @@ final class ScriptNand extends Script {
   ///
   /// ISO 15924 Alpha-4 code: `Nand`, ISO 15924 Numeric code: `311`.
   /// {@endtemplate}
-  const factory ScriptNand() = _NandFactory;
+  const factory() = _NandFactory;
 
-  const ScriptNand._()
+  const new _()
     : super._(
         name: "Nandinagari",
         code: "Nand",

@@ -1,7 +1,7 @@
 part of "../../model/language/submodels/natural_language.dart";
 
 extension type const _SwaFactory._(LangSwa _) implements LangSwa {
-  const _SwaFactory() : this._(const LangSwa._());
+  const new() : this._(const LangSwa._());
 }
 
 /// A class that represents the Swahili language.
@@ -11,9 +11,9 @@ final class LangSwa extends NaturalLanguage {
   ///
   /// ISO 639-2/T code: `SWA`, ISO 639-1 code: `SW`.
   /// {@endtemplate}
-  const factory LangSwa() = _SwaFactory;
+  const factory() = _SwaFactory;
 
-  const LangSwa._()
+  const new _()
     : super._(
         name: "Swahili",
         code: "SWA",

@@ -24,7 +24,7 @@ final class Gini implements JsonEncodable<Gini> {
   ///
   /// The [year] parameter must be greater than 1990, and the [coefficient]
   /// parameter must be between 0.0 and 100.0 (inclusive).
-  const Gini({required this.year, required this.coefficient})
+  const new({required this.year, required this.coefficient})
     : assert(year > minYear, "`year` should be greater than $minYear!"),
       assert(
         coefficient < maxCoefficient,

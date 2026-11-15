@@ -1,7 +1,7 @@
 part of "../../model/script/submodels/script.dart";
 
 extension type const _ElymFactory._(ScriptElym _) implements ScriptElym {
-  const _ElymFactory() : this._(const ScriptElym._());
+  const new() : this._(const ScriptElym._());
 }
 
 /// A class that represents the Elymaic script.
@@ -11,9 +11,9 @@ final class ScriptElym extends Script {
   ///
   /// ISO 15924 Alpha-4 code: `Elym`, ISO 15924 Numeric code: `128`.
   /// {@endtemplate}
-  const factory ScriptElym() = _ElymFactory;
+  const factory() = _ElymFactory;
 
-  const ScriptElym._()
+  const new _()
     : super._(
         name: "Elymaic",
         code: "Elym",

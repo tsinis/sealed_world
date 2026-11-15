@@ -7,7 +7,7 @@
 part of "../../model/country/submodels/world_country.dart";
 
 extension type const _DomFactory._(CountryDom _) implements CountryDom {
-  const _DomFactory() : this._(const CountryDom._());
+  const new() : this._(const CountryDom._());
 }
 
 /// A class that represents the Dominican Republic country.
@@ -17,9 +17,9 @@ class CountryDom extends WorldCountry {
   ///
   /// ISO 3166-1 Alpha-3 code: `DOM`, ISO 3166-1 Alpha-2 code: `DO`.
   /// {@endtemplate}
-  const factory CountryDom() = _DomFactory;
+  const factory() = _DomFactory;
 
-  const CountryDom._()
+  const new _()
     : super._(
         name: const CountryName(
           language: LangEng(),

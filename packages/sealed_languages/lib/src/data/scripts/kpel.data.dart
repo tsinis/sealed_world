@@ -1,7 +1,7 @@
 part of "../../model/script/submodels/script.dart";
 
 extension type const _KpelFactory._(ScriptKpel _) implements ScriptKpel {
-  const _KpelFactory() : this._(const ScriptKpel._());
+  const new() : this._(const ScriptKpel._());
 }
 
 /// A class that represents the Kpelle script.
@@ -11,9 +11,9 @@ final class ScriptKpel extends Script {
   ///
   /// ISO 15924 Alpha-4 code: `Kpel`, ISO 15924 Numeric code: `436`.
   /// {@endtemplate}
-  const factory ScriptKpel() = _KpelFactory;
+  const factory() = _KpelFactory;
 
-  const ScriptKpel._()
+  const new _()
     : super._(
         name: "Kpelle",
         code: "Kpel",

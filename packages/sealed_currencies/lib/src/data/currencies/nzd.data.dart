@@ -1,7 +1,7 @@
 part of "../../model/currency/submodels/fiat_currency.dart";
 
 extension type const _NzdFactory._(FiatNzd _) implements FiatNzd {
-  const _NzdFactory() : this._(const FiatNzd._());
+  const new() : this._(const FiatNzd._());
 }
 
 /// A class that represents the New Zealand Dollar currency.
@@ -11,9 +11,9 @@ final class FiatNzd extends FiatCurrency {
   ///
   /// ISO 4217 Alpha code: `NZD`, ISO 4217 Numeric code: `554`.
   /// {@endtemplate}
-  const factory FiatNzd() = _NzdFactory;
+  const factory() = _NzdFactory;
 
-  const FiatNzd._()
+  const new _()
     : super(
         code: "NZD",
         name: "New Zealand Dollar",

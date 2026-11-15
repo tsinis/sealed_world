@@ -7,7 +7,7 @@
 part of "../../model/country/submodels/world_country.dart";
 
 extension type const _CymFactory._(CountryCym _) implements CountryCym {
-  const _CymFactory() : this._(const CountryCym._());
+  const new() : this._(const CountryCym._());
 }
 
 /// A class that represents the Cayman Islands country.
@@ -17,9 +17,9 @@ class CountryCym extends WorldCountry {
   ///
   /// ISO 3166-1 Alpha-3 code: `CYM`, ISO 3166-1 Alpha-2 code: `KY`.
   /// {@endtemplate}
-  const factory CountryCym() = _CymFactory;
+  const factory() = _CymFactory;
 
-  const CountryCym._()
+  const new _()
     : super._(
         name: const CountryName(
           language: LangEng(),

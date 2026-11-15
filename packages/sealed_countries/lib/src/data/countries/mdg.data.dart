@@ -7,7 +7,7 @@
 part of "../../model/country/submodels/world_country.dart";
 
 extension type const _MdgFactory._(CountryMdg _) implements CountryMdg {
-  const _MdgFactory() : this._(const CountryMdg._());
+  const new() : this._(const CountryMdg._());
 }
 
 /// A class that represents the Madagascar country.
@@ -17,9 +17,9 @@ class CountryMdg extends WorldCountry {
   ///
   /// ISO 3166-1 Alpha-3 code: `MDG`, ISO 3166-1 Alpha-2 code: `MG`.
   /// {@endtemplate}
-  const factory CountryMdg() = _MdgFactory;
+  const factory() = _MdgFactory;
 
-  const CountryMdg._()
+  const new _()
     : super._(
         name: const CountryName(
           language: LangEng(),

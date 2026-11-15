@@ -7,7 +7,7 @@
 part of "../../model/country/submodels/world_country.dart";
 
 extension type const _VirFactory._(CountryVir _) implements CountryVir {
-  const _VirFactory() : this._(const CountryVir._());
+  const new() : this._(const CountryVir._());
 }
 
 /// A class that represents the United States Virgin Islands country.
@@ -17,9 +17,9 @@ class CountryVir extends WorldCountry {
   ///
   /// ISO 3166-1 Alpha-3 code: `VIR`, ISO 3166-1 Alpha-2 code: `VI`.
   /// {@endtemplate}
-  const factory CountryVir() = _VirFactory;
+  const factory() = _VirFactory;
 
-  const CountryVir._()
+  const new _()
     : super._(
         name: const CountryName(
           language: LangEng(),

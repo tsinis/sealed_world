@@ -7,7 +7,7 @@
 part of "../../model/country/submodels/world_country.dart";
 
 extension type const _PseFactory._(CountryPse _) implements CountryPse {
-  const _PseFactory() : this._(const CountryPse._());
+  const new() : this._(const CountryPse._());
 }
 
 /// A class that represents the Palestine country.
@@ -17,9 +17,9 @@ class CountryPse extends WorldCountry {
   ///
   /// ISO 3166-1 Alpha-3 code: `PSE`, ISO 3166-1 Alpha-2 code: `PS`.
   /// {@endtemplate}
-  const factory CountryPse() = _PseFactory;
+  const factory() = _PseFactory;
 
-  const CountryPse._()
+  const new _()
     : super._(
         name: const CountryName(
           language: LangEng(),

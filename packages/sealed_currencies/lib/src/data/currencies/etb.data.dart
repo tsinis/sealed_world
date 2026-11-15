@@ -1,7 +1,7 @@
 part of "../../model/currency/submodels/fiat_currency.dart";
 
 extension type const _EtbFactory._(FiatEtb _) implements FiatEtb {
-  const _EtbFactory() : this._(const FiatEtb._());
+  const new() : this._(const FiatEtb._());
 }
 
 /// A class that represents the Ethiopian Birr currency.
@@ -11,9 +11,9 @@ final class FiatEtb extends FiatCurrency {
   ///
   /// ISO 4217 Alpha code: `ETB`, ISO 4217 Numeric code: `230`.
   /// {@endtemplate}
-  const factory FiatEtb() = _EtbFactory;
+  const factory() = _EtbFactory;
 
-  const FiatEtb._()
+  const new _()
     : super(
         code: "ETB",
         name: "Ethiopian Birr",

@@ -1,7 +1,7 @@
 part of "../../model/script/submodels/script.dart";
 
 extension type const _BamuFactory._(ScriptBamu _) implements ScriptBamu {
-  const _BamuFactory() : this._(const ScriptBamu._());
+  const new() : this._(const ScriptBamu._());
 }
 
 /// A class that represents the Bamum script.
@@ -11,9 +11,9 @@ final class ScriptBamu extends Script {
   ///
   /// ISO 15924 Alpha-4 code: `Bamu`, ISO 15924 Numeric code: `435`.
   /// {@endtemplate}
-  const factory ScriptBamu() = _BamuFactory;
+  const factory() = _BamuFactory;
 
-  const ScriptBamu._()
+  const new _()
     : super._(
         name: "Bamum",
         code: "Bamu",

@@ -1,7 +1,7 @@
 part of "../../model/currency/submodels/fiat_currency.dart";
 
 extension type const _HkdFactory._(FiatHkd _) implements FiatHkd {
-  const _HkdFactory() : this._(const FiatHkd._());
+  const new() : this._(const FiatHkd._());
 }
 
 /// A class that represents the Hong Kong Dollar currency.
@@ -11,9 +11,9 @@ final class FiatHkd extends FiatCurrency {
   ///
   /// ISO 4217 Alpha code: `HKD`, ISO 4217 Numeric code: `344`.
   /// {@endtemplate}
-  const factory FiatHkd() = _HkdFactory;
+  const factory() = _HkdFactory;
 
-  const FiatHkd._()
+  const new _()
     : super(
         code: "HKD",
         name: "Hong Kong Dollar",

@@ -7,7 +7,7 @@
 part of "../../model/country/submodels/world_country.dart";
 
 extension type const _BhsFactory._(CountryBhs _) implements CountryBhs {
-  const _BhsFactory() : this._(const CountryBhs._());
+  const new() : this._(const CountryBhs._());
 }
 
 /// A class that represents the Bahamas country.
@@ -17,9 +17,9 @@ class CountryBhs extends WorldCountry {
   ///
   /// ISO 3166-1 Alpha-3 code: `BHS`, ISO 3166-1 Alpha-2 code: `BS`.
   /// {@endtemplate}
-  const factory CountryBhs() = _BhsFactory;
+  const factory() = _BhsFactory;
 
-  const CountryBhs._()
+  const new _()
     : super._(
         name: const CountryName(
           language: LangEng(),

@@ -7,7 +7,7 @@
 part of "../../model/country/submodels/world_country.dart";
 
 extension type const _TzaFactory._(CountryTza _) implements CountryTza {
-  const _TzaFactory() : this._(const CountryTza._());
+  const new() : this._(const CountryTza._());
 }
 
 /// A class that represents the Tanzania country.
@@ -17,9 +17,9 @@ class CountryTza extends WorldCountry {
   ///
   /// ISO 3166-1 Alpha-3 code: `TZA`, ISO 3166-1 Alpha-2 code: `TZ`.
   /// {@endtemplate}
-  const factory CountryTza() = _TzaFactory;
+  const factory() = _TzaFactory;
 
-  const CountryTza._()
+  const new _()
     : super._(
         name: const CountryName(
           language: LangEng(),

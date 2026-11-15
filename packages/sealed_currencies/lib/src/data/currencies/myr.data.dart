@@ -1,7 +1,7 @@
 part of "../../model/currency/submodels/fiat_currency.dart";
 
 extension type const _MyrFactory._(FiatMyr _) implements FiatMyr {
-  const _MyrFactory() : this._(const FiatMyr._());
+  const new() : this._(const FiatMyr._());
 }
 
 /// A class that represents the Malaysian Ringgit currency.
@@ -11,9 +11,9 @@ final class FiatMyr extends FiatCurrency {
   ///
   /// ISO 4217 Alpha code: `MYR`, ISO 4217 Numeric code: `458`.
   /// {@endtemplate}
-  const factory FiatMyr() = _MyrFactory;
+  const factory() = _MyrFactory;
 
-  const FiatMyr._()
+  const new _()
     : super(
         code: "MYR",
         name: "Malaysian Ringgit",

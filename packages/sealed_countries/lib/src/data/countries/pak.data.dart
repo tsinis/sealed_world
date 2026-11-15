@@ -7,7 +7,7 @@
 part of "../../model/country/submodels/world_country.dart";
 
 extension type const _PakFactory._(CountryPak _) implements CountryPak {
-  const _PakFactory() : this._(const CountryPak._());
+  const new() : this._(const CountryPak._());
 }
 
 /// A class that represents the Pakistan country.
@@ -17,9 +17,9 @@ class CountryPak extends WorldCountry {
   ///
   /// ISO 3166-1 Alpha-3 code: `PAK`, ISO 3166-1 Alpha-2 code: `PK`.
   /// {@endtemplate}
-  const factory CountryPak() = _PakFactory;
+  const factory() = _PakFactory;
 
-  const CountryPak._()
+  const new _()
     : super._(
         name: const CountryName(
           language: LangEng(),

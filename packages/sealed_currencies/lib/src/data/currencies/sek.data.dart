@@ -1,7 +1,7 @@
 part of "../../model/currency/submodels/fiat_currency.dart";
 
 extension type const _SekFactory._(FiatSek _) implements FiatSek {
-  const _SekFactory() : this._(const FiatSek._());
+  const new() : this._(const FiatSek._());
 }
 
 /// A class that represents the Swedish Krona currency.
@@ -11,9 +11,9 @@ final class FiatSek extends FiatCurrency {
   ///
   /// ISO 4217 Alpha code: `SEK`, ISO 4217 Numeric code: `752`.
   /// {@endtemplate}
-  const factory FiatSek() = _SekFactory;
+  const factory() = _SekFactory;
 
-  const FiatSek._()
+  const new _()
     : super(
         code: "SEK",
         name: "Swedish Krona",

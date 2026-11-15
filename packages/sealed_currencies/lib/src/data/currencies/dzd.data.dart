@@ -1,7 +1,7 @@
 part of "../../model/currency/submodels/fiat_currency.dart";
 
 extension type const _DzdFactory._(FiatDzd _) implements FiatDzd {
-  const _DzdFactory() : this._(const FiatDzd._());
+  const new() : this._(const FiatDzd._());
 }
 
 /// A class that represents the Algerian Dinar currency.
@@ -11,9 +11,9 @@ final class FiatDzd extends FiatCurrency {
   ///
   /// ISO 4217 Alpha code: `DZD`, ISO 4217 Numeric code: `012`.
   /// {@endtemplate}
-  const factory FiatDzd() = _DzdFactory;
+  const factory() = _DzdFactory;
 
-  const FiatDzd._()
+  const new _()
     : super(
         code: "DZD",
         name: "Algerian Dinar",

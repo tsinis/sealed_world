@@ -1,7 +1,7 @@
 part of "../../model/language/submodels/natural_language.dart";
 
 extension type const _BisFactory._(LangBis _) implements LangBis {
-  const _BisFactory() : this._(const LangBis._());
+  const new() : this._(const LangBis._());
 }
 
 /// A class that represents the Bislama language.
@@ -11,9 +11,9 @@ final class LangBis extends NaturalLanguage {
   ///
   /// ISO 639-2/T code: `BIS`, ISO 639-1 code: `BI`.
   /// {@endtemplate}
-  const factory LangBis() = _BisFactory;
+  const factory() = _BisFactory;
 
-  const LangBis._()
+  const new _()
     : super._(
         name: "Bislama",
         code: "BIS",

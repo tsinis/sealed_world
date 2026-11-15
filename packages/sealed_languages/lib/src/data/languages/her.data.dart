@@ -1,7 +1,7 @@
 part of "../../model/language/submodels/natural_language.dart";
 
 extension type const _HerFactory._(LangHer _) implements LangHer {
-  const _HerFactory() : this._(const LangHer._());
+  const new() : this._(const LangHer._());
 }
 
 /// A class that represents the Herero language.
@@ -11,9 +11,9 @@ final class LangHer extends NaturalLanguage {
   ///
   /// ISO 639-2/T code: `HER`, ISO 639-1 code: `HZ`.
   /// {@endtemplate}
-  const factory LangHer() = _HerFactory;
+  const factory() = _HerFactory;
 
-  const LangHer._()
+  const new _()
     : super._(
         name: "Herero",
         code: "HER",

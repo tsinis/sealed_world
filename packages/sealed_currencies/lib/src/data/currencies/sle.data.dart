@@ -1,7 +1,7 @@
 part of "../../model/currency/submodels/fiat_currency.dart";
 
 extension type const _SleFactory._(FiatSle _) implements FiatSle {
-  const _SleFactory() : this._(const FiatSle._());
+  const new() : this._(const FiatSle._());
 }
 
 /// A class that represents the Sierra Leonean Leone currency.
@@ -11,9 +11,9 @@ final class FiatSle extends FiatCurrency {
   ///
   /// ISO 4217 Alpha code: `SLE`, ISO 4217 Numeric code: `925`.
   /// {@endtemplate}
-  const factory FiatSle() = _SleFactory;
+  const factory() = _SleFactory;
 
-  const FiatSle._()
+  const new _()
     : super(
         code: "SLE",
         name: "Sierra Leonean Leone",

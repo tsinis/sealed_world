@@ -1,7 +1,7 @@
 part of "../../model/currency/submodels/fiat_currency.dart";
 
 extension type const _HnlFactory._(FiatHnl _) implements FiatHnl {
-  const _HnlFactory() : this._(const FiatHnl._());
+  const new() : this._(const FiatHnl._());
 }
 
 /// A class that represents the Honduran Lempira currency.
@@ -11,9 +11,9 @@ final class FiatHnl extends FiatCurrency {
   ///
   /// ISO 4217 Alpha code: `HNL`, ISO 4217 Numeric code: `340`.
   /// {@endtemplate}
-  const factory FiatHnl() = _HnlFactory;
+  const factory() = _HnlFactory;
 
-  const FiatHnl._()
+  const new _()
     : super(
         code: "HNL",
         name: "Honduran Lempira",

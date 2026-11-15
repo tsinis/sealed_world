@@ -1,7 +1,7 @@
 part of "../../model/script/submodels/script.dart";
 
 extension type const _QabxFactory._(ScriptQabx _) implements ScriptQabx {
-  const _QabxFactory() : this._(const ScriptQabx._());
+  const new() : this._(const ScriptQabx._());
 }
 
 /// A class that represents the Reserved for private use (end) script.
@@ -12,9 +12,9 @@ final class ScriptQabx extends Script {
   ///
   /// ISO 15924 Alpha-4 code: `Qabx`, ISO 15924 Numeric code: `949`.
   /// {@endtemplate}
-  const factory ScriptQabx() = _QabxFactory;
+  const factory() = _QabxFactory;
 
-  const ScriptQabx._()
+  const new _()
     : super._(
         name: "Reserved for private use (end)",
         code: "Qabx",

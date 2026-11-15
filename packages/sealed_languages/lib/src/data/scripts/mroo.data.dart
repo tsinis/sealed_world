@@ -1,7 +1,7 @@
 part of "../../model/script/submodels/script.dart";
 
 extension type const _MrooFactory._(ScriptMroo _) implements ScriptMroo {
-  const _MrooFactory() : this._(const ScriptMroo._());
+  const new() : this._(const ScriptMroo._());
 }
 
 /// A class that represents the Mro, Mru script.
@@ -11,9 +11,9 @@ final class ScriptMroo extends Script {
   ///
   /// ISO 15924 Alpha-4 code: `Mroo`, ISO 15924 Numeric code: `264`.
   /// {@endtemplate}
-  const factory ScriptMroo() = _MrooFactory;
+  const factory() = _MrooFactory;
 
-  const ScriptMroo._()
+  const new _()
     : super._(
         name: "Mro, Mru",
         code: "Mroo",

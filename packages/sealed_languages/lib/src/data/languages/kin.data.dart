@@ -1,7 +1,7 @@
 part of "../../model/language/submodels/natural_language.dart";
 
 extension type const _KinFactory._(LangKin _) implements LangKin {
-  const _KinFactory() : this._(const LangKin._());
+  const new() : this._(const LangKin._());
 }
 
 /// A class that represents the Kinyarwanda language.
@@ -11,9 +11,9 @@ final class LangKin extends NaturalLanguage {
   ///
   /// ISO 639-2/T code: `KIN`, ISO 639-1 code: `RW`.
   /// {@endtemplate}
-  const factory LangKin() = _KinFactory;
+  const factory() = _KinFactory;
 
-  const LangKin._()
+  const new _()
     : super._(
         name: "Kinyarwanda",
         code: "KIN",

@@ -1,7 +1,7 @@
 part of "../../model/language/submodels/natural_language.dart";
 
 extension type const _IslFactory._(LangIsl _) implements LangIsl {
-  const _IslFactory() : this._(const LangIsl._());
+  const new() : this._(const LangIsl._());
 }
 
 /// A class that represents the Icelandic language.
@@ -11,9 +11,9 @@ final class LangIsl extends NaturalLanguage {
   ///
   /// ISO 639-2/T code: `ISL`, ISO 639-1 code: `IS`.
   /// {@endtemplate}
-  const factory LangIsl() = _IslFactory;
+  const factory() = _IslFactory;
 
-  const LangIsl._()
+  const new _()
     : super._(
         name: "Icelandic",
         code: "ISL",

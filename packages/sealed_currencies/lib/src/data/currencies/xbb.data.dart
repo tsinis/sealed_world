@@ -1,7 +1,7 @@
 part of "../../model/currency/submodels/fiat_currency.dart";
 
 extension type const _XbbFactory._(FiatXbb _) implements FiatXbb {
-  const _XbbFactory() : this._(const FiatXbb._());
+  const new() : this._(const FiatXbb._());
 }
 
 /// A class that represents the European Monetary Unit currency.
@@ -11,9 +11,9 @@ final class FiatXbb extends FiatCurrency {
   ///
   /// ISO 4217 Alpha code: `XBB`, ISO 4217 Numeric code: `956`.
   /// {@endtemplate}
-  const factory FiatXbb() = _XbbFactory;
+  const factory() = _XbbFactory;
 
-  const FiatXbb._()
+  const new _()
     : super(
         code: "XBB",
         name: "European Monetary Unit",

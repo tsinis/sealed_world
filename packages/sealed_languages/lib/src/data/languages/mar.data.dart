@@ -1,7 +1,7 @@
 part of "../../model/language/submodels/natural_language.dart";
 
 extension type const _MarFactory._(LangMar _) implements LangMar {
-  const _MarFactory() : this._(const LangMar._());
+  const new() : this._(const LangMar._());
 }
 
 /// A class that represents the Marathi (Marāṭhī) language.
@@ -11,9 +11,9 @@ final class LangMar extends NaturalLanguage {
   ///
   /// ISO 639-2/T code: `MAR`, ISO 639-1 code: `MR`.
   /// {@endtemplate}
-  const factory LangMar() = _MarFactory;
+  const factory() = _MarFactory;
 
-  const LangMar._()
+  const new _()
     : super._(
         name: "Marathi (Marāṭhī)",
         code: "MAR",

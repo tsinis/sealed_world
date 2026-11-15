@@ -19,13 +19,13 @@ import "../../../helpers/extensions/country_submodels/lat_lng_extension.dart";
 @pragma("vm:deeply-immutable")
 final class LatLng implements JsonEncodable<LatLng> {
   /// Creates a new [LatLng] object with the given [latitude] and [longitude].
-  const LatLng(this.latitude, this.longitude);
+  const new(this.latitude, this.longitude);
 
   /// Creates a new [LatLng] object with the given latitude and longitude.
   ///
   /// The [latitude] and [longitude] parameters are required and represent the
   /// latitude and longitude of the geographic point, respectively.
-  const LatLng.named({required this.latitude, required this.longitude});
+  const new named({required this.latitude, required this.longitude});
 
   /// The latitude of this geographic point, in degrees.
   final double latitude;

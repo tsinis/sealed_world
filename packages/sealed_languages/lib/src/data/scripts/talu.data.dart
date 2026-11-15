@@ -1,7 +1,7 @@
 part of "../../model/script/submodels/script.dart";
 
 extension type const _TaluFactory._(ScriptTalu _) implements ScriptTalu {
-  const _TaluFactory() : this._(const ScriptTalu._());
+  const new() : this._(const ScriptTalu._());
 }
 
 /// A class that represents the New Tai Lue script.
@@ -11,9 +11,9 @@ final class ScriptTalu extends Script {
   ///
   /// ISO 15924 Alpha-4 code: `Talu`, ISO 15924 Numeric code: `354`.
   /// {@endtemplate}
-  const factory ScriptTalu() = _TaluFactory;
+  const factory() = _TaluFactory;
 
-  const ScriptTalu._()
+  const new _()
     : super._(
         name: "New Tai Lue",
         code: "Talu",

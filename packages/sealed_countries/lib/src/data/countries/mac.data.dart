@@ -7,7 +7,7 @@
 part of "../../model/country/submodels/world_country.dart";
 
 extension type const _MacFactory._(CountryMac _) implements CountryMac {
-  const _MacFactory() : this._(const CountryMac._());
+  const new() : this._(const CountryMac._());
 }
 
 /// A class that represents the Macau country.
@@ -17,9 +17,9 @@ class CountryMac extends WorldCountry {
   ///
   /// ISO 3166-1 Alpha-3 code: `MAC`, ISO 3166-1 Alpha-2 code: `MO`.
   /// {@endtemplate}
-  const factory CountryMac() = _MacFactory;
+  const factory() = _MacFactory;
 
-  const CountryMac._()
+  const new _()
     : super._(
         name: const CountryName(
           language: LangEng(),

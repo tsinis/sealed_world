@@ -1,7 +1,7 @@
 part of "../../model/script/submodels/script.dart";
 
 extension type const _MakaFactory._(ScriptMaka _) implements ScriptMaka {
-  const _MakaFactory() : this._(const ScriptMaka._());
+  const new() : this._(const ScriptMaka._());
 }
 
 /// A class that represents the Makasar script.
@@ -11,9 +11,9 @@ final class ScriptMaka extends Script {
   ///
   /// ISO 15924 Alpha-4 code: `Maka`, ISO 15924 Numeric code: `366`.
   /// {@endtemplate}
-  const factory ScriptMaka() = _MakaFactory;
+  const factory() = _MakaFactory;
 
-  const ScriptMaka._()
+  const new _()
     : super._(
         name: "Makasar",
         code: "Maka",

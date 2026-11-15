@@ -1,7 +1,7 @@
 part of "../../model/script/submodels/script.dart";
 
 extension type const _GlagFactory._(ScriptGlag _) implements ScriptGlag {
-  const _GlagFactory() : this._(const ScriptGlag._());
+  const new() : this._(const ScriptGlag._());
 }
 
 /// A class that represents the Glagolitic script.
@@ -11,9 +11,9 @@ final class ScriptGlag extends Script {
   ///
   /// ISO 15924 Alpha-4 code: `Glag`, ISO 15924 Numeric code: `225`.
   /// {@endtemplate}
-  const factory ScriptGlag() = _GlagFactory;
+  const factory() = _GlagFactory;
 
-  const ScriptGlag._()
+  const new _()
     : super._(
         name: "Glagolitic",
         code: "Glag",

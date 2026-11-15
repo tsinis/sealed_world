@@ -1,7 +1,7 @@
 part of "../../model/language/submodels/natural_language.dart";
 
 extension type const _GujFactory._(LangGuj _) implements LangGuj {
-  const _GujFactory() : this._(const LangGuj._());
+  const new() : this._(const LangGuj._());
 }
 
 /// A class that represents the Gujarati language.
@@ -11,9 +11,9 @@ final class LangGuj extends NaturalLanguage {
   ///
   /// ISO 639-2/T code: `GUJ`, ISO 639-1 code: `GU`.
   /// {@endtemplate}
-  const factory LangGuj() = _GujFactory;
+  const factory() = _GujFactory;
 
-  const LangGuj._()
+  const new _()
     : super._(
         name: "Gujarati",
         code: "GUJ",

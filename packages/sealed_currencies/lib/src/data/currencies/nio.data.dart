@@ -1,7 +1,7 @@
 part of "../../model/currency/submodels/fiat_currency.dart";
 
 extension type const _NioFactory._(FiatNio _) implements FiatNio {
-  const _NioFactory() : this._(const FiatNio._());
+  const new() : this._(const FiatNio._());
 }
 
 /// A class that represents the Nicaraguan Córdoba currency.
@@ -11,9 +11,9 @@ final class FiatNio extends FiatCurrency {
   ///
   /// ISO 4217 Alpha code: `NIO`, ISO 4217 Numeric code: `558`.
   /// {@endtemplate}
-  const factory FiatNio() = _NioFactory;
+  const factory() = _NioFactory;
 
-  const FiatNio._()
+  const new _()
     : super(
         code: "NIO",
         name: "Nicaraguan Córdoba",

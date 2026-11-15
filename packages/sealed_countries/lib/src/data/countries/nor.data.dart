@@ -7,7 +7,7 @@
 part of "../../model/country/submodels/world_country.dart";
 
 extension type const _NorFactory._(CountryNor _) implements CountryNor {
-  const _NorFactory() : this._(const CountryNor._());
+  const new() : this._(const CountryNor._());
 }
 
 /// A class that represents the Norway country.
@@ -17,9 +17,9 @@ class CountryNor extends WorldCountry {
   ///
   /// ISO 3166-1 Alpha-3 code: `NOR`, ISO 3166-1 Alpha-2 code: `NO`.
   /// {@endtemplate}
-  const factory CountryNor() = _NorFactory;
+  const factory() = _NorFactory;
 
-  const CountryNor._()
+  const new _()
     : super._(
         name: const CountryName(
           language: LangEng(),

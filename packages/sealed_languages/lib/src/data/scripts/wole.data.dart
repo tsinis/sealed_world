@@ -1,7 +1,7 @@
 part of "../../model/script/submodels/script.dart";
 
 extension type const _WoleFactory._(ScriptWole _) implements ScriptWole {
-  const _WoleFactory() : this._(const ScriptWole._());
+  const new() : this._(const ScriptWole._());
 }
 
 /// A class that represents the Woleai script.
@@ -11,9 +11,9 @@ final class ScriptWole extends Script {
   ///
   /// ISO 15924 Alpha-4 code: `Wole`, ISO 15924 Numeric code: `480`.
   /// {@endtemplate}
-  const factory ScriptWole() = _WoleFactory;
+  const factory() = _WoleFactory;
 
-  const ScriptWole._()
+  const new _()
     : super._(
         name: "Woleai",
         code: "Wole",

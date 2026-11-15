@@ -1,7 +1,7 @@
 part of "../../model/currency/submodels/fiat_currency.dart";
 
 extension type const _FjdFactory._(FiatFjd _) implements FiatFjd {
-  const _FjdFactory() : this._(const FiatFjd._());
+  const new() : this._(const FiatFjd._());
 }
 
 /// A class that represents the Fijian Dollar currency.
@@ -11,9 +11,9 @@ final class FiatFjd extends FiatCurrency {
   ///
   /// ISO 4217 Alpha code: `FJD`, ISO 4217 Numeric code: `242`.
   /// {@endtemplate}
-  const factory FiatFjd() = _FjdFactory;
+  const factory() = _FjdFactory;
 
-  const FiatFjd._()
+  const new _()
     : super(
         code: "FJD",
         name: "Fijian Dollar",

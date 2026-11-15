@@ -7,7 +7,7 @@
 part of "../../model/country/submodels/world_country.dart";
 
 extension type const _PolFactory._(CountryPol _) implements CountryPol {
-  const _PolFactory() : this._(const CountryPol._());
+  const new() : this._(const CountryPol._());
 }
 
 /// A class that represents the Poland country.
@@ -17,9 +17,9 @@ class CountryPol extends WorldCountry {
   ///
   /// ISO 3166-1 Alpha-3 code: `POL`, ISO 3166-1 Alpha-2 code: `PL`.
   /// {@endtemplate}
-  const factory CountryPol() = _PolFactory;
+  const factory() = _PolFactory;
 
-  const CountryPol._()
+  const new _()
     : super._(
         name: const CountryName(
           language: LangEng(),

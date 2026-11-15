@@ -7,7 +7,7 @@
 part of "../../model/country/submodels/world_country.dart";
 
 extension type const _AtfFactory._(CountryAtf _) implements CountryAtf {
-  const _AtfFactory() : this._(const CountryAtf._());
+  const new() : this._(const CountryAtf._());
 }
 
 /// A class that represents the French Southern and Antarctic Lands country.
@@ -18,9 +18,9 @@ class CountryAtf extends WorldCountry {
   ///
   /// ISO 3166-1 Alpha-3 code: `ATF`, ISO 3166-1 Alpha-2 code: `TF`.
   /// {@endtemplate}
-  const factory CountryAtf() = _AtfFactory;
+  const factory() = _AtfFactory;
 
-  const CountryAtf._()
+  const new _()
     : super._(
         name: const CountryName(
           language: LangEng(),

@@ -1,7 +1,7 @@
 part of "../../model/script/submodels/script.dart";
 
 extension type const _TnsaFactory._(ScriptTnsa _) implements ScriptTnsa {
-  const _TnsaFactory() : this._(const ScriptTnsa._());
+  const new() : this._(const ScriptTnsa._());
 }
 
 /// A class that represents the Tangsa script.
@@ -11,9 +11,9 @@ final class ScriptTnsa extends Script {
   ///
   /// ISO 15924 Alpha-4 code: `Tnsa`, ISO 15924 Numeric code: `275`.
   /// {@endtemplate}
-  const factory ScriptTnsa() = _TnsaFactory;
+  const factory() = _TnsaFactory;
 
-  const ScriptTnsa._()
+  const new _()
     : super._(
         name: "Tangsa",
         code: "Tnsa",

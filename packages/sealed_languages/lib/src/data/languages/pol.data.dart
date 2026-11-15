@@ -1,7 +1,7 @@
 part of "../../model/language/submodels/natural_language.dart";
 
 extension type const _PolFactory._(LangPol _) implements LangPol {
-  const _PolFactory() : this._(const LangPol._());
+  const new() : this._(const LangPol._());
 }
 
 /// A class that represents the Polish language.
@@ -11,9 +11,9 @@ final class LangPol extends NaturalLanguage {
   ///
   /// ISO 639-2/T code: `POL`, ISO 639-1 code: `PL`.
   /// {@endtemplate}
-  const factory LangPol() = _PolFactory;
+  const factory() = _PolFactory;
 
-  const LangPol._()
+  const new _()
     : super._(
         name: "Polish",
         code: "POL",

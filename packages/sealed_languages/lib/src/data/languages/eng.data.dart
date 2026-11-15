@@ -1,7 +1,7 @@
 part of "../../model/language/submodels/natural_language.dart";
 
 extension type const _EngFactory._(LangEng _) implements LangEng {
-  const _EngFactory() : this._(const LangEng._());
+  const new() : this._(const LangEng._());
 }
 
 /// A class that represents the English language.
@@ -11,9 +11,9 @@ final class LangEng extends NaturalLanguage {
   ///
   /// ISO 639-2/T code: `ENG`, ISO 639-1 code: `EN`.
   /// {@endtemplate}
-  const factory LangEng() = _EngFactory;
+  const factory() = _EngFactory;
 
-  const LangEng._()
+  const new _()
     : super._(
         name: "English",
         code: "ENG",

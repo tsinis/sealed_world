@@ -1,7 +1,7 @@
 part of "../../model/language/submodels/natural_language.dart";
 
 extension type const _MyaFactory._(LangMya _) implements LangMya {
-  const _MyaFactory() : this._(const LangMya._());
+  const new() : this._(const LangMya._());
 }
 
 /// A class that represents the Burmese language.
@@ -11,9 +11,9 @@ final class LangMya extends NaturalLanguage {
   ///
   /// ISO 639-2/T code: `MYA`, ISO 639-1 code: `MY`.
   /// {@endtemplate}
-  const factory LangMya() = _MyaFactory;
+  const factory() = _MyaFactory;
 
-  const LangMya._()
+  const new _()
     : super._(
         name: "Burmese",
         code: "MYA",

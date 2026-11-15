@@ -1,7 +1,7 @@
 part of "../../model/language/submodels/natural_language.dart";
 
 extension type const _UzbFactory._(LangUzb _) implements LangUzb {
-  const _UzbFactory() : this._(const LangUzb._());
+  const new() : this._(const LangUzb._());
 }
 
 /// A class that represents the Uzbek language.
@@ -11,9 +11,9 @@ final class LangUzb extends NaturalLanguage {
   ///
   /// ISO 639-2/T code: `UZB`, ISO 639-1 code: `UZ`.
   /// {@endtemplate}
-  const factory LangUzb() = _UzbFactory;
+  const factory() = _UzbFactory;
 
-  const LangUzb._()
+  const new _()
     : super._(
         name: "Uzbek",
         code: "UZB",

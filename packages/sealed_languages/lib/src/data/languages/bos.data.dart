@@ -1,7 +1,7 @@
 part of "../../model/language/submodels/natural_language.dart";
 
 extension type const _BosFactory._(LangBos _) implements LangBos {
-  const _BosFactory() : this._(const LangBos._());
+  const new() : this._(const LangBos._());
 }
 
 /// A class that represents the Bosnian language.
@@ -11,9 +11,9 @@ final class LangBos extends NaturalLanguage {
   ///
   /// ISO 639-2/T code: `BOS`, ISO 639-1 code: `BS`.
   /// {@endtemplate}
-  const factory LangBos() = _BosFactory;
+  const factory() = _BosFactory;
 
-  const LangBos._()
+  const new _()
     : super._(
         name: "Bosnian",
         code: "BOS",

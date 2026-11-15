@@ -1,7 +1,7 @@
 part of "../../model/language/submodels/natural_language.dart";
 
 extension type const _IndFactory._(LangInd _) implements LangInd {
-  const _IndFactory() : this._(const LangInd._());
+  const new() : this._(const LangInd._());
 }
 
 /// A class that represents the Indonesian language.
@@ -11,9 +11,9 @@ final class LangInd extends NaturalLanguage {
   ///
   /// ISO 639-2/T code: `IND`, ISO 639-1 code: `ID`.
   /// {@endtemplate}
-  const factory LangInd() = _IndFactory;
+  const factory() = _IndFactory;
 
-  const LangInd._()
+  const new _()
     : super._(
         name: "Indonesian",
         code: "IND",

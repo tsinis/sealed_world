@@ -1,7 +1,7 @@
 part of "../../model/script/submodels/script.dart";
 
 extension type const _PhlvFactory._(ScriptPhlv _) implements ScriptPhlv {
-  const _PhlvFactory() : this._(const ScriptPhlv._());
+  const new() : this._(const ScriptPhlv._());
 }
 
 /// A class that represents the Book Pahlavi script.
@@ -11,9 +11,9 @@ final class ScriptPhlv extends Script {
   ///
   /// ISO 15924 Alpha-4 code: `Phlv`, ISO 15924 Numeric code: `133`.
   /// {@endtemplate}
-  const factory ScriptPhlv() = _PhlvFactory;
+  const factory() = _PhlvFactory;
 
-  const ScriptPhlv._()
+  const new _()
     : super._(
         name: "Book Pahlavi",
         code: "Phlv",

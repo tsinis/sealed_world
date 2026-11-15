@@ -1,7 +1,7 @@
 part of "../../model/currency/submodels/fiat_currency.dart";
 
 extension type const _XagFactory._(FiatXag _) implements FiatXag {
-  const _XagFactory() : this._(const FiatXag._());
+  const new() : this._(const FiatXag._());
 }
 
 /// A class that represents the Silver (Troy Ounce) currency.
@@ -11,9 +11,9 @@ final class FiatXag extends FiatCurrency {
   ///
   /// ISO 4217 Alpha code: `XAG`, ISO 4217 Numeric code: `961`.
   /// {@endtemplate}
-  const factory FiatXag() = _XagFactory;
+  const factory() = _XagFactory;
 
-  const FiatXag._()
+  const new _()
     : super(
         code: "XAG",
         name: "Silver (Troy Ounce)",

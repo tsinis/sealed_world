@@ -7,7 +7,7 @@
 part of "../../model/country/submodels/world_country.dart";
 
 extension type const _CokFactory._(CountryCok _) implements CountryCok {
-  const _CokFactory() : this._(const CountryCok._());
+  const new() : this._(const CountryCok._());
 }
 
 /// A class that represents the Cook Islands country.
@@ -17,9 +17,9 @@ class CountryCok extends WorldCountry {
   ///
   /// ISO 3166-1 Alpha-3 code: `COK`, ISO 3166-1 Alpha-2 code: `CK`.
   /// {@endtemplate}
-  const factory CountryCok() = _CokFactory;
+  const factory() = _CokFactory;
 
-  const CountryCok._()
+  const new _()
     : super._(
         name: const CountryName(
           language: LangEng(),

@@ -1,7 +1,7 @@
 part of "../../model/currency/submodels/fiat_currency.dart";
 
 extension type const _NprFactory._(FiatNpr _) implements FiatNpr {
-  const _NprFactory() : this._(const FiatNpr._());
+  const new() : this._(const FiatNpr._());
 }
 
 /// A class that represents the Nepalese Rupee currency.
@@ -11,9 +11,9 @@ final class FiatNpr extends FiatCurrency {
   ///
   /// ISO 4217 Alpha code: `NPR`, ISO 4217 Numeric code: `524`.
   /// {@endtemplate}
-  const factory FiatNpr() = _NprFactory;
+  const factory() = _NprFactory;
 
-  const FiatNpr._()
+  const new _()
     : super(
         code: "NPR",
         name: "Nepalese Rupee",

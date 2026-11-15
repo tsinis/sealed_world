@@ -7,7 +7,7 @@
 part of "../../model/country/submodels/world_country.dart";
 
 extension type const _GhaFactory._(CountryGha _) implements CountryGha {
-  const _GhaFactory() : this._(const CountryGha._());
+  const new() : this._(const CountryGha._());
 }
 
 /// A class that represents the Ghana country.
@@ -17,9 +17,9 @@ class CountryGha extends WorldCountry {
   ///
   /// ISO 3166-1 Alpha-3 code: `GHA`, ISO 3166-1 Alpha-2 code: `GH`.
   /// {@endtemplate}
-  const factory CountryGha() = _GhaFactory;
+  const factory() = _GhaFactory;
 
-  const CountryGha._()
+  const new _()
     : super._(
         name: const CountryName(
           language: LangEng(),

@@ -1,7 +1,7 @@
 part of "../../model/script/submodels/script.dart";
 
 extension type const _TibtFactory._(ScriptTibt _) implements ScriptTibt {
-  const _TibtFactory() : this._(const ScriptTibt._());
+  const new() : this._(const ScriptTibt._());
 }
 
 /// A class that represents the Tibetan script.
@@ -11,9 +11,9 @@ final class ScriptTibt extends Script {
   ///
   /// ISO 15924 Alpha-4 code: `Tibt`, ISO 15924 Numeric code: `330`.
   /// {@endtemplate}
-  const factory ScriptTibt() = _TibtFactory;
+  const factory() = _TibtFactory;
 
-  const ScriptTibt._()
+  const new _()
     : super._(
         name: "Tibetan",
         code: "Tibt",

@@ -7,7 +7,7 @@
 part of "../../model/country/submodels/world_country.dart";
 
 extension type const _TcaFactory._(CountryTca _) implements CountryTca {
-  const _TcaFactory() : this._(const CountryTca._());
+  const new() : this._(const CountryTca._());
 }
 
 /// A class that represents the Turks and Caicos Islands country.
@@ -17,9 +17,9 @@ class CountryTca extends WorldCountry {
   ///
   /// ISO 3166-1 Alpha-3 code: `TCA`, ISO 3166-1 Alpha-2 code: `TC`.
   /// {@endtemplate}
-  const factory CountryTca() = _TcaFactory;
+  const factory() = _TcaFactory;
 
-  const CountryTca._()
+  const new _()
     : super._(
         name: const CountryName(
           language: LangEng(),

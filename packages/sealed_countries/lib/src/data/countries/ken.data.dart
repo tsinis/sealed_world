@@ -7,7 +7,7 @@
 part of "../../model/country/submodels/world_country.dart";
 
 extension type const _KenFactory._(CountryKen _) implements CountryKen {
-  const _KenFactory() : this._(const CountryKen._());
+  const new() : this._(const CountryKen._());
 }
 
 /// A class that represents the Kenya country.
@@ -17,9 +17,9 @@ class CountryKen extends WorldCountry {
   ///
   /// ISO 3166-1 Alpha-3 code: `KEN`, ISO 3166-1 Alpha-2 code: `KE`.
   /// {@endtemplate}
-  const factory CountryKen() = _KenFactory;
+  const factory() = _KenFactory;
 
-  const CountryKen._()
+  const new _()
     : super._(
         name: const CountryName(
           language: LangEng(),

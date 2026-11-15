@@ -7,7 +7,7 @@
 part of "../../model/country/submodels/world_country.dart";
 
 extension type const _UkrFactory._(CountryUkr _) implements CountryUkr {
-  const _UkrFactory() : this._(const CountryUkr._());
+  const new() : this._(const CountryUkr._());
 }
 
 /// A class that represents the Ukraine country.
@@ -17,9 +17,9 @@ class CountryUkr extends WorldCountry {
   ///
   /// ISO 3166-1 Alpha-3 code: `UKR`, ISO 3166-1 Alpha-2 code: `UA`.
   /// {@endtemplate}
-  const factory CountryUkr() = _UkrFactory;
+  const factory() = _UkrFactory;
 
-  const CountryUkr._()
+  const new _()
     : super._(
         name: const CountryName(
           language: LangEng(),

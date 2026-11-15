@@ -1,7 +1,7 @@
 part of "../../model/language/submodels/natural_language.dart";
 
 extension type const _FijFactory._(LangFij _) implements LangFij {
-  const _FijFactory() : this._(const LangFij._());
+  const new() : this._(const LangFij._());
 }
 
 /// A class that represents the Fijian language.
@@ -11,9 +11,9 @@ final class LangFij extends NaturalLanguage {
   ///
   /// ISO 639-2/T code: `FIJ`, ISO 639-1 code: `FJ`.
   /// {@endtemplate}
-  const factory LangFij() = _FijFactory;
+  const factory() = _FijFactory;
 
-  const LangFij._()
+  const new _()
     : super._(
         name: "Fijian",
         code: "FIJ",

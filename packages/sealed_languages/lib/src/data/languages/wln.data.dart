@@ -1,7 +1,7 @@
 part of "../../model/language/submodels/natural_language.dart";
 
 extension type const _WlnFactory._(LangWln _) implements LangWln {
-  const _WlnFactory() : this._(const LangWln._());
+  const new() : this._(const LangWln._());
 }
 
 /// A class that represents the Walloon language.
@@ -11,9 +11,9 @@ final class LangWln extends NaturalLanguage {
   ///
   /// ISO 639-2/T code: `WLN`, ISO 639-1 code: `WA`.
   /// {@endtemplate}
-  const factory LangWln() = _WlnFactory;
+  const factory() = _WlnFactory;
 
-  const LangWln._()
+  const new _()
     : super._(
         name: "Walloon",
         code: "WLN",

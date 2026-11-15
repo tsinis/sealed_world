@@ -43,7 +43,7 @@ DOCUMENTATION
 CHORE
 
 - Updated `l10n_languages` dependency to v2.3.0.
-- The Dart SDK was bumped to v3.13.0, as required by `l10n_languages` 2.3.0. `NaturalLanguage` constructors use its private named parameters, the API is the same.
+- The Dart SDK was bumped to v3.13.0, as required by `l10n_languages` 2.3.0. Constructors are declared with its `new` and `factory` syntax (without the class name) and `NaturalLanguage` ones use its private named parameters, the API is the same.
 
 ## 3.4.1
 

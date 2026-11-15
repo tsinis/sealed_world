@@ -1,7 +1,7 @@
 part of "../../model/language/submodels/natural_language.dart";
 
 extension type const _TsoFactory._(LangTso _) implements LangTso {
-  const _TsoFactory() : this._(const LangTso._());
+  const new() : this._(const LangTso._());
 }
 
 /// A class that represents the Tsonga language.
@@ -11,9 +11,9 @@ final class LangTso extends NaturalLanguage {
   ///
   /// ISO 639-2/T code: `TSO`, ISO 639-1 code: `TS`.
   /// {@endtemplate}
-  const factory LangTso() = _TsoFactory;
+  const factory() = _TsoFactory;
 
-  const LangTso._()
+  const new _()
     : super._(
         name: "Tsonga",
         code: "TSO",

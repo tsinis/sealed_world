@@ -1,7 +1,7 @@
 part of "../../model/script/submodels/script.dart";
 
 extension type const _PiqdFactory._(ScriptPiqd _) implements ScriptPiqd {
-  const _PiqdFactory() : this._(const ScriptPiqd._());
+  const new() : this._(const ScriptPiqd._());
 }
 
 /// A class that represents the Klingon (KLI pIqaD) script.
@@ -11,9 +11,9 @@ final class ScriptPiqd extends Script {
   ///
   /// ISO 15924 Alpha-4 code: `Piqd`, ISO 15924 Numeric code: `293`.
   /// {@endtemplate}
-  const factory ScriptPiqd() = _PiqdFactory;
+  const factory() = _PiqdFactory;
 
-  const ScriptPiqd._()
+  const new _()
     : super._(
         name: "Klingon (KLI pIqaD)",
         code: "Piqd",

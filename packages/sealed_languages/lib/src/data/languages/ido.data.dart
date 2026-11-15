@@ -1,7 +1,7 @@
 part of "../../model/language/submodels/natural_language.dart";
 
 extension type const _IdoFactory._(LangIdo _) implements LangIdo {
-  const _IdoFactory() : this._(const LangIdo._());
+  const new() : this._(const LangIdo._());
 }
 
 /// A class that represents the Ido language.
@@ -11,9 +11,9 @@ final class LangIdo extends NaturalLanguage {
   ///
   /// ISO 639-2/T code: `IDO`, ISO 639-1 code: `IO`.
   /// {@endtemplate}
-  const factory LangIdo() = _IdoFactory;
+  const factory() = _IdoFactory;
 
-  const LangIdo._()
+  const new _()
     : super._(
         name: "Ido",
         code: "IDO",

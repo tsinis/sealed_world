@@ -1,7 +1,7 @@
 part of "../../model/language/submodels/natural_language.dart";
 
 extension type const _FasFactory._(LangFas _) implements LangFas {
-  const _FasFactory() : this._(const LangFas._());
+  const new() : this._(const LangFas._());
 }
 
 /// A class that represents the Persian (Farsi) language.
@@ -11,9 +11,9 @@ final class LangFas extends NaturalLanguage {
   ///
   /// ISO 639-2/T code: `FAS`, ISO 639-1 code: `FA`.
   /// {@endtemplate}
-  const factory LangFas() = _FasFactory;
+  const factory() = _FasFactory;
 
-  const LangFas._()
+  const new _()
     : super._(
         name: "Persian (Farsi)",
         code: "FAS",

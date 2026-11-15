@@ -1,7 +1,7 @@
 part of "../../model/currency/submodels/fiat_currency.dart";
 
 extension type const _CopFactory._(FiatCop _) implements FiatCop {
-  const _CopFactory() : this._(const FiatCop._());
+  const new() : this._(const FiatCop._());
 }
 
 /// A class that represents the Colombian Peso currency.
@@ -11,9 +11,9 @@ final class FiatCop extends FiatCurrency {
   ///
   /// ISO 4217 Alpha code: `COP`, ISO 4217 Numeric code: `170`.
   /// {@endtemplate}
-  const factory FiatCop() = _CopFactory;
+  const factory() = _CopFactory;
 
-  const FiatCop._()
+  const new _()
     : super(
         code: "COP",
         name: "Colombian Peso",

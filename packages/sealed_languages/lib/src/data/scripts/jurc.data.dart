@@ -1,7 +1,7 @@
 part of "../../model/script/submodels/script.dart";
 
 extension type const _JurcFactory._(ScriptJurc _) implements ScriptJurc {
-  const _JurcFactory() : this._(const ScriptJurc._());
+  const new() : this._(const ScriptJurc._());
 }
 
 /// A class that represents the Jurchen script.
@@ -11,9 +11,9 @@ final class ScriptJurc extends Script {
   ///
   /// ISO 15924 Alpha-4 code: `Jurc`, ISO 15924 Numeric code: `510`.
   /// {@endtemplate}
-  const factory ScriptJurc() = _JurcFactory;
+  const factory() = _JurcFactory;
 
-  const ScriptJurc._()
+  const new _()
     : super._(
         name: "Jurchen",
         code: "Jurc",

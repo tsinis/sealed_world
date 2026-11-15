@@ -1,7 +1,7 @@
 part of "../../model/currency/submodels/fiat_currency.dart";
 
 extension type const _CrcFactory._(FiatCrc _) implements FiatCrc {
-  const _CrcFactory() : this._(const FiatCrc._());
+  const new() : this._(const FiatCrc._());
 }
 
 /// A class that represents the Costa Rican Colón currency.
@@ -11,9 +11,9 @@ final class FiatCrc extends FiatCurrency {
   ///
   /// ISO 4217 Alpha code: `CRC`, ISO 4217 Numeric code: `188`.
   /// {@endtemplate}
-  const factory FiatCrc() = _CrcFactory;
+  const factory() = _CrcFactory;
 
-  const FiatCrc._()
+  const new _()
     : super(
         code: "CRC",
         name: "Costa Rican Colón",

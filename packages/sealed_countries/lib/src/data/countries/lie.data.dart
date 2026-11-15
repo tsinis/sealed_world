@@ -7,7 +7,7 @@
 part of "../../model/country/submodels/world_country.dart";
 
 extension type const _LieFactory._(CountryLie _) implements CountryLie {
-  const _LieFactory() : this._(const CountryLie._());
+  const new() : this._(const CountryLie._());
 }
 
 /// A class that represents the Liechtenstein country.
@@ -17,9 +17,9 @@ class CountryLie extends WorldCountry {
   ///
   /// ISO 3166-1 Alpha-3 code: `LIE`, ISO 3166-1 Alpha-2 code: `LI`.
   /// {@endtemplate}
-  const factory CountryLie() = _LieFactory;
+  const factory() = _LieFactory;
 
-  const CountryLie._()
+  const new _()
     : super._(
         name: const CountryName(
           language: LangEng(),

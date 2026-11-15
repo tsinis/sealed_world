@@ -1,7 +1,7 @@
 part of "../../model/currency/submodels/fiat_currency.dart";
 
 extension type const _TndFactory._(FiatTnd _) implements FiatTnd {
-  const _TndFactory() : this._(const FiatTnd._());
+  const new() : this._(const FiatTnd._());
 }
 
 /// A class that represents the Tunisian Dinar currency.
@@ -11,9 +11,9 @@ final class FiatTnd extends FiatCurrency {
   ///
   /// ISO 4217 Alpha code: `TND`, ISO 4217 Numeric code: `788`.
   /// {@endtemplate}
-  const factory FiatTnd() = _TndFactory;
+  const factory() = _TndFactory;
 
-  const FiatTnd._()
+  const new _()
     : super(
         code: "TND",
         name: "Tunisian Dinar",

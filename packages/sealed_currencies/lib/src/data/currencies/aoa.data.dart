@@ -1,7 +1,7 @@
 part of "../../model/currency/submodels/fiat_currency.dart";
 
 extension type const _AoaFactory._(FiatAoa _) implements FiatAoa {
-  const _AoaFactory() : this._(const FiatAoa._());
+  const new() : this._(const FiatAoa._());
 }
 
 /// A class that represents the Angolan Kwanza currency.
@@ -11,9 +11,9 @@ final class FiatAoa extends FiatCurrency {
   ///
   /// ISO 4217 Alpha code: `AOA`, ISO 4217 Numeric code: `973`.
   /// {@endtemplate}
-  const factory FiatAoa() = _AoaFactory;
+  const factory() = _AoaFactory;
 
-  const FiatAoa._()
+  const new _()
     : super(
         code: "AOA",
         name: "Angolan Kwanza",

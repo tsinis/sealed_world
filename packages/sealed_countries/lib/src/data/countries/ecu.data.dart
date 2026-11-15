@@ -7,7 +7,7 @@
 part of "../../model/country/submodels/world_country.dart";
 
 extension type const _EcuFactory._(CountryEcu _) implements CountryEcu {
-  const _EcuFactory() : this._(const CountryEcu._());
+  const new() : this._(const CountryEcu._());
 }
 
 /// A class that represents the Ecuador country.
@@ -17,9 +17,9 @@ class CountryEcu extends WorldCountry {
   ///
   /// ISO 3166-1 Alpha-3 code: `ECU`, ISO 3166-1 Alpha-2 code: `EC`.
   /// {@endtemplate}
-  const factory CountryEcu() = _EcuFactory;
+  const factory() = _EcuFactory;
 
-  const CountryEcu._()
+  const new _()
     : super._(
         name: const CountryName(
           language: LangEng(),

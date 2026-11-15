@@ -7,7 +7,7 @@
 part of "../../model/country/submodels/world_country.dart";
 
 extension type const _GabFactory._(CountryGab _) implements CountryGab {
-  const _GabFactory() : this._(const CountryGab._());
+  const new() : this._(const CountryGab._());
 }
 
 /// A class that represents the Gabon country.
@@ -17,9 +17,9 @@ class CountryGab extends WorldCountry {
   ///
   /// ISO 3166-1 Alpha-3 code: `GAB`, ISO 3166-1 Alpha-2 code: `GA`.
   /// {@endtemplate}
-  const factory CountryGab() = _GabFactory;
+  const factory() = _GabFactory;
 
-  const CountryGab._()
+  const new _()
     : super._(
         name: const CountryName(
           language: LangEng(),

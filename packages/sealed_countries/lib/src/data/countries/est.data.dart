@@ -7,7 +7,7 @@
 part of "../../model/country/submodels/world_country.dart";
 
 extension type const _EstFactory._(CountryEst _) implements CountryEst {
-  const _EstFactory() : this._(const CountryEst._());
+  const new() : this._(const CountryEst._());
 }
 
 /// A class that represents the Estonia country.
@@ -17,9 +17,9 @@ class CountryEst extends WorldCountry {
   ///
   /// ISO 3166-1 Alpha-3 code: `EST`, ISO 3166-1 Alpha-2 code: `EE`.
   /// {@endtemplate}
-  const factory CountryEst() = _EstFactory;
+  const factory() = _EstFactory;
 
-  const CountryEst._()
+  const new _()
     : super._(
         name: const CountryName(
           language: LangEng(),

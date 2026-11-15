@@ -7,7 +7,7 @@
 part of "../../model/country/submodels/world_country.dart";
 
 extension type const _SxmFactory._(CountrySxm _) implements CountrySxm {
-  const _SxmFactory() : this._(const CountrySxm._());
+  const new() : this._(const CountrySxm._());
 }
 
 /// A class that represents the Sint Maarten country.
@@ -17,9 +17,9 @@ class CountrySxm extends WorldCountry {
   ///
   /// ISO 3166-1 Alpha-3 code: `SXM`, ISO 3166-1 Alpha-2 code: `SX`.
   /// {@endtemplate}
-  const factory CountrySxm() = _SxmFactory;
+  const factory() = _SxmFactory;
 
-  const CountrySxm._()
+  const new _()
     : super._(
         name: const CountryName(
           language: LangEng(),

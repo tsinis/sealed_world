@@ -1,7 +1,7 @@
 part of "../../model/currency/submodels/fiat_currency.dart";
 
 extension type const _LslFactory._(FiatLsl _) implements FiatLsl {
-  const _LslFactory() : this._(const FiatLsl._());
+  const new() : this._(const FiatLsl._());
 }
 
 /// A class that represents the Lesotho Loti currency.
@@ -11,9 +11,9 @@ final class FiatLsl extends FiatCurrency {
   ///
   /// ISO 4217 Alpha code: `LSL`, ISO 4217 Numeric code: `426`.
   /// {@endtemplate}
-  const factory FiatLsl() = _LslFactory;
+  const factory() = _LslFactory;
 
-  const FiatLsl._()
+  const new _()
     : super(
         code: "LSL",
         name: "Lesotho Loti",

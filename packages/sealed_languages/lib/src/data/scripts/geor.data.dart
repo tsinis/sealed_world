@@ -1,7 +1,7 @@
 part of "../../model/script/submodels/script.dart";
 
 extension type const _GeorFactory._(ScriptGeor _) implements ScriptGeor {
-  const _GeorFactory() : this._(const ScriptGeor._());
+  const new() : this._(const ScriptGeor._());
 }
 
 /// A class that represents the Georgian (Mkhedruli and Mtavruli) script.
@@ -12,9 +12,9 @@ final class ScriptGeor extends Script {
   ///
   /// ISO 15924 Alpha-4 code: `Geor`, ISO 15924 Numeric code: `240`.
   /// {@endtemplate}
-  const factory ScriptGeor() = _GeorFactory;
+  const factory() = _GeorFactory;
 
-  const ScriptGeor._()
+  const new _()
     : super._(
         name: "Georgian (Mkhedruli and Mtavruli)",
         code: "Geor",

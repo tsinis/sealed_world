@@ -1,7 +1,7 @@
 part of "../../model/currency/submodels/fiat_currency.dart";
 
 extension type const _NokFactory._(FiatNok _) implements FiatNok {
-  const _NokFactory() : this._(const FiatNok._());
+  const new() : this._(const FiatNok._());
 }
 
 /// A class that represents the Norwegian Krone currency.
@@ -11,9 +11,9 @@ final class FiatNok extends FiatCurrency {
   ///
   /// ISO 4217 Alpha code: `NOK`, ISO 4217 Numeric code: `578`.
   /// {@endtemplate}
-  const factory FiatNok() = _NokFactory;
+  const factory() = _NokFactory;
 
-  const FiatNok._()
+  const new _()
     : super(
         code: "NOK",
         name: "Norwegian Krone",

@@ -1,7 +1,7 @@
 part of "../../model/currency/submodels/fiat_currency.dart";
 
 extension type const _ClfFactory._(FiatClf _) implements FiatClf {
-  const _ClfFactory() : this._(const FiatClf._());
+  const new() : this._(const FiatClf._());
 }
 
 /// A class that represents the Chilean Unit of Account (UF) currency.
@@ -11,9 +11,9 @@ final class FiatClf extends FiatCurrency {
   ///
   /// ISO 4217 Alpha code: `CLF`, ISO 4217 Numeric code: `990`.
   /// {@endtemplate}
-  const factory FiatClf() = _ClfFactory;
+  const factory() = _ClfFactory;
 
-  const FiatClf._()
+  const new _()
     : super(
         code: "CLF",
         name: "Chilean Unit of Account (UF)",

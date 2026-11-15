@@ -1,7 +1,7 @@
 part of "../../model/language/submodels/natural_language.dart";
 
 extension type const _SagFactory._(LangSag _) implements LangSag {
-  const _SagFactory() : this._(const LangSag._());
+  const new() : this._(const LangSag._());
 }
 
 /// A class that represents the Sango language.
@@ -11,9 +11,9 @@ final class LangSag extends NaturalLanguage {
   ///
   /// ISO 639-2/T code: `SAG`, ISO 639-1 code: `SG`.
   /// {@endtemplate}
-  const factory LangSag() = _SagFactory;
+  const factory() = _SagFactory;
 
-  const LangSag._()
+  const new _()
     : super._(
         name: "Sango",
         code: "SAG",

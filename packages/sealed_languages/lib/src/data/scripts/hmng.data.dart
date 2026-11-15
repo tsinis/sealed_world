@@ -1,7 +1,7 @@
 part of "../../model/script/submodels/script.dart";
 
 extension type const _HmngFactory._(ScriptHmng _) implements ScriptHmng {
-  const _HmngFactory() : this._(const ScriptHmng._());
+  const new() : this._(const ScriptHmng._());
 }
 
 /// A class that represents the Pahawh Hmong script.
@@ -11,9 +11,9 @@ final class ScriptHmng extends Script {
   ///
   /// ISO 15924 Alpha-4 code: `Hmng`, ISO 15924 Numeric code: `450`.
   /// {@endtemplate}
-  const factory ScriptHmng() = _HmngFactory;
+  const factory() = _HmngFactory;
 
-  const ScriptHmng._()
+  const new _()
     : super._(
         name: "Pahawh Hmong",
         code: "Hmng",

@@ -7,7 +7,7 @@
 part of "../../model/country/submodels/world_country.dart";
 
 extension type const _ImnFactory._(CountryImn _) implements CountryImn {
-  const _ImnFactory() : this._(const CountryImn._());
+  const new() : this._(const CountryImn._());
 }
 
 /// A class that represents the Isle of Man country.
@@ -17,9 +17,9 @@ class CountryImn extends WorldCountry {
   ///
   /// ISO 3166-1 Alpha-3 code: `IMN`, ISO 3166-1 Alpha-2 code: `IM`.
   /// {@endtemplate}
-  const factory CountryImn() = _ImnFactory;
+  const factory() = _ImnFactory;
 
-  const CountryImn._()
+  const new _()
     : super._(
         name: const CountryName(
           language: LangEng(),

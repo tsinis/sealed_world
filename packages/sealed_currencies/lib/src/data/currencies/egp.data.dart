@@ -1,7 +1,7 @@
 part of "../../model/currency/submodels/fiat_currency.dart";
 
 extension type const _EgpFactory._(FiatEgp _) implements FiatEgp {
-  const _EgpFactory() : this._(const FiatEgp._());
+  const new() : this._(const FiatEgp._());
 }
 
 /// A class that represents the Egyptian Pound currency.
@@ -11,9 +11,9 @@ final class FiatEgp extends FiatCurrency {
   ///
   /// ISO 4217 Alpha code: `EGP`, ISO 4217 Numeric code: `818`.
   /// {@endtemplate}
-  const factory FiatEgp() = _EgpFactory;
+  const factory() = _EgpFactory;
 
-  const FiatEgp._()
+  const new _()
     : super(
         code: "EGP",
         name: "Egyptian Pound",

@@ -9,7 +9,7 @@ class WorldBloc implements Named<String> {
   ///
   /// The [name] and [acronym] parameters are required and must not be empty
   /// (if provided).
-  const WorldBloc({required this.name, this.acronym})
+  const new({required this.name, this.acronym})
     : assert(name.length > 0, "`name` should not be empty!"),
       assert(
         acronym == null || acronym.length > 0,

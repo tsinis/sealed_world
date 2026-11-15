@@ -7,7 +7,7 @@
 part of "../../model/country/submodels/world_country.dart";
 
 extension type const _AreFactory._(CountryAre _) implements CountryAre {
-  const _AreFactory() : this._(const CountryAre._());
+  const new() : this._(const CountryAre._());
 }
 
 /// A class that represents the United Arab Emirates country.
@@ -17,9 +17,9 @@ class CountryAre extends WorldCountry {
   ///
   /// ISO 3166-1 Alpha-3 code: `ARE`, ISO 3166-1 Alpha-2 code: `AE`.
   /// {@endtemplate}
-  const factory CountryAre() = _AreFactory;
+  const factory() = _AreFactory;
 
-  const CountryAre._()
+  const new _()
     : super._(
         name: const CountryName(
           language: LangEng(),

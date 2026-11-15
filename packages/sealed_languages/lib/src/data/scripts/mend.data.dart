@@ -1,7 +1,7 @@
 part of "../../model/script/submodels/script.dart";
 
 extension type const _MendFactory._(ScriptMend _) implements ScriptMend {
-  const _MendFactory() : this._(const ScriptMend._());
+  const new() : this._(const ScriptMend._());
 }
 
 /// A class that represents the Mende Kikakui script.
@@ -11,9 +11,9 @@ final class ScriptMend extends Script {
   ///
   /// ISO 15924 Alpha-4 code: `Mend`, ISO 15924 Numeric code: `438`.
   /// {@endtemplate}
-  const factory ScriptMend() = _MendFactory;
+  const factory() = _MendFactory;
 
-  const ScriptMend._()
+  const new _()
     : super._(
         name: "Mende Kikakui",
         code: "Mend",

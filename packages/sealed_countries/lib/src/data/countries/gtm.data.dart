@@ -7,7 +7,7 @@
 part of "../../model/country/submodels/world_country.dart";
 
 extension type const _GtmFactory._(CountryGtm _) implements CountryGtm {
-  const _GtmFactory() : this._(const CountryGtm._());
+  const new() : this._(const CountryGtm._());
 }
 
 /// A class that represents the Guatemala country.
@@ -17,9 +17,9 @@ class CountryGtm extends WorldCountry {
   ///
   /// ISO 3166-1 Alpha-3 code: `GTM`, ISO 3166-1 Alpha-2 code: `GT`.
   /// {@endtemplate}
-  const factory CountryGtm() = _GtmFactory;
+  const factory() = _GtmFactory;
 
-  const CountryGtm._()
+  const new _()
     : super._(
         name: const CountryName(
           language: LangEng(),

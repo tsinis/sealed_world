@@ -7,7 +7,7 @@
 part of "../../model/country/submodels/world_country.dart";
 
 extension type const _PanFactory._(CountryPan _) implements CountryPan {
-  const _PanFactory() : this._(const CountryPan._());
+  const new() : this._(const CountryPan._());
 }
 
 /// A class that represents the Panama country.
@@ -17,9 +17,9 @@ class CountryPan extends WorldCountry {
   ///
   /// ISO 3166-1 Alpha-3 code: `PAN`, ISO 3166-1 Alpha-2 code: `PA`.
   /// {@endtemplate}
-  const factory CountryPan() = _PanFactory;
+  const factory() = _PanFactory;
 
-  const CountryPan._()
+  const new _()
     : super._(
         name: const CountryName(
           language: LangEng(),

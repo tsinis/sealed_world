@@ -119,7 +119,7 @@ void main() => group("IsoTranslatedNamesExtension", () {
 
 /// Mock language implementation for testing edge cases.
 class _MockLanguageWithEmptyNames implements IsoTranslated {
-  const _MockLanguageWithEmptyNames();
+  const new();
 
   @override
   List<String> get namesNative => const [];
@@ -145,7 +145,7 @@ class _MockLanguageWithEmptyNames implements IsoTranslated {
 
 /// Mock language implementation with null namesNative for testing edge cases.
 class _MockLanguageWithNullNames implements IsoTranslated {
-  const _MockLanguageWithNullNames();
+  const new();
 
   @override
   List<String>? get namesNative => null;
@@ -171,7 +171,7 @@ class _MockLanguageWithNullNames implements IsoTranslated {
 
 /// Mock language implementation with duplicate names for testing edge cases.
 class _MockLanguageWithDuplicateNames implements IsoTranslated {
-  const _MockLanguageWithDuplicateNames();
+  const new();
 
   @override
   List<String> get namesNative => const ["Mock", "Mock", "Test"];

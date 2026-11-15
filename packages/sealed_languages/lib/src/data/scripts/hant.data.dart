@@ -1,7 +1,7 @@
 part of "../../model/script/submodels/script.dart";
 
 extension type const _HantFactory._(ScriptHant _) implements ScriptHant {
-  const _HantFactory() : this._(const ScriptHant._());
+  const new() : this._(const ScriptHant._());
 }
 
 /// A class that represents the Han (Traditional variant) script.
@@ -11,9 +11,9 @@ final class ScriptHant extends Script {
   ///
   /// ISO 15924 Alpha-4 code: `Hant`, ISO 15924 Numeric code: `502`.
   /// {@endtemplate}
-  const factory ScriptHant() = _HantFactory;
+  const factory() = _HantFactory;
 
-  const ScriptHant._()
+  const new _()
     : super._(
         name: "Han (Traditional variant)",
         code: "Hant",

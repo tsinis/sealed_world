@@ -1,7 +1,7 @@
 part of "../../model/currency/submodels/fiat_currency.dart";
 
 extension type const _JmdFactory._(FiatJmd _) implements FiatJmd {
-  const _JmdFactory() : this._(const FiatJmd._());
+  const new() : this._(const FiatJmd._());
 }
 
 /// A class that represents the Jamaican Dollar currency.
@@ -11,9 +11,9 @@ final class FiatJmd extends FiatCurrency {
   ///
   /// ISO 4217 Alpha code: `JMD`, ISO 4217 Numeric code: `388`.
   /// {@endtemplate}
-  const factory FiatJmd() = _JmdFactory;
+  const factory() = _JmdFactory;
 
-  const FiatJmd._()
+  const new _()
     : super(
         code: "JMD",
         name: "Jamaican Dollar",

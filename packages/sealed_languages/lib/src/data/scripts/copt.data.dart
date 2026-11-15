@@ -1,7 +1,7 @@
 part of "../../model/script/submodels/script.dart";
 
 extension type const _CoptFactory._(ScriptCopt _) implements ScriptCopt {
-  const _CoptFactory() : this._(const ScriptCopt._());
+  const new() : this._(const ScriptCopt._());
 }
 
 /// A class that represents the Coptic script.
@@ -11,9 +11,9 @@ final class ScriptCopt extends Script {
   ///
   /// ISO 15924 Alpha-4 code: `Copt`, ISO 15924 Numeric code: `204`.
   /// {@endtemplate}
-  const factory ScriptCopt() = _CoptFactory;
+  const factory() = _CoptFactory;
 
-  const ScriptCopt._()
+  const new _()
     : super._(
         name: "Coptic",
         code: "Copt",

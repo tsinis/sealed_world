@@ -1,7 +1,7 @@
 part of "../../model/language/submodels/natural_language.dart";
 
 extension type const _LavFactory._(LangLav _) implements LangLav {
-  const _LavFactory() : this._(const LangLav._());
+  const new() : this._(const LangLav._());
 }
 
 /// A class that represents the Latvian language.
@@ -11,9 +11,9 @@ final class LangLav extends NaturalLanguage {
   ///
   /// ISO 639-2/T code: `LAV`, ISO 639-1 code: `LV`.
   /// {@endtemplate}
-  const factory LangLav() = _LavFactory;
+  const factory() = _LavFactory;
 
-  const LangLav._()
+  const new _()
     : super._(
         name: "Latvian",
         code: "LAV",

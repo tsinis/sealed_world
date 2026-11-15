@@ -1,7 +1,7 @@
 part of "../../model/script/submodels/script.dart";
 
 extension type const _ZmthFactory._(ScriptZmth _) implements ScriptZmth {
-  const _ZmthFactory() : this._(const ScriptZmth._());
+  const new() : this._(const ScriptZmth._());
 }
 
 /// A class that represents the Mathematical notation script.
@@ -11,9 +11,9 @@ final class ScriptZmth extends Script {
   ///
   /// ISO 15924 Alpha-4 code: `Zmth`, ISO 15924 Numeric code: `995`.
   /// {@endtemplate}
-  const factory ScriptZmth() = _ZmthFactory;
+  const factory() = _ZmthFactory;
 
-  const ScriptZmth._()
+  const new _()
     : super._(
         name: "Mathematical notation",
         code: "Zmth",

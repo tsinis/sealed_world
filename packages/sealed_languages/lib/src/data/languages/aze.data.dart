@@ -1,7 +1,7 @@
 part of "../../model/language/submodels/natural_language.dart";
 
 extension type const _AzeFactory._(LangAze _) implements LangAze {
-  const _AzeFactory() : this._(const LangAze._());
+  const new() : this._(const LangAze._());
 }
 
 /// A class that represents the Azerbaijani language.
@@ -11,9 +11,9 @@ final class LangAze extends NaturalLanguage {
   ///
   /// ISO 639-2/T code: `AZE`, ISO 639-1 code: `AZ`.
   /// {@endtemplate}
-  const factory LangAze() = _AzeFactory;
+  const factory() = _AzeFactory;
 
-  const LangAze._()
+  const new _()
     : super._(
         name: "Azerbaijani",
         code: "AZE",

@@ -1,7 +1,7 @@
 part of "../../model/script/submodels/script.dart";
 
 extension type const _TotoFactory._(ScriptToto _) implements ScriptToto {
-  const _TotoFactory() : this._(const ScriptToto._());
+  const new() : this._(const ScriptToto._());
 }
 
 /// A class that represents the Toto script.
@@ -11,9 +11,9 @@ final class ScriptToto extends Script {
   ///
   /// ISO 15924 Alpha-4 code: `Toto`, ISO 15924 Numeric code: `294`.
   /// {@endtemplate}
-  const factory ScriptToto() = _TotoFactory;
+  const factory() = _TotoFactory;
 
-  const ScriptToto._()
+  const new _()
     : super._(
         name: "Toto",
         code: "Toto",

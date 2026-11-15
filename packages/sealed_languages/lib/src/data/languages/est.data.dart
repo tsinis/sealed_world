@@ -1,7 +1,7 @@
 part of "../../model/language/submodels/natural_language.dart";
 
 extension type const _EstFactory._(LangEst _) implements LangEst {
-  const _EstFactory() : this._(const LangEst._());
+  const new() : this._(const LangEst._());
 }
 
 /// A class that represents the Estonian language.
@@ -11,9 +11,9 @@ final class LangEst extends NaturalLanguage {
   ///
   /// ISO 639-2/T code: `EST`, ISO 639-1 code: `ET`.
   /// {@endtemplate}
-  const factory LangEst() = _EstFactory;
+  const factory() = _EstFactory;
 
-  const LangEst._()
+  const new _()
     : super._(
         name: "Estonian",
         code: "EST",

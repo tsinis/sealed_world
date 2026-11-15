@@ -7,7 +7,7 @@
 part of "../../model/country/submodels/world_country.dart";
 
 extension type const _BraFactory._(CountryBra _) implements CountryBra {
-  const _BraFactory() : this._(const CountryBra._());
+  const new() : this._(const CountryBra._());
 }
 
 /// A class that represents the Brazil country.
@@ -17,9 +17,9 @@ class CountryBra extends WorldCountry {
   ///
   /// ISO 3166-1 Alpha-3 code: `BRA`, ISO 3166-1 Alpha-2 code: `BR`.
   /// {@endtemplate}
-  const factory CountryBra() = _BraFactory;
+  const factory() = _BraFactory;
 
-  const CountryBra._()
+  const new _()
     : super._(
         name: const CountryName(
           language: LangEng(),

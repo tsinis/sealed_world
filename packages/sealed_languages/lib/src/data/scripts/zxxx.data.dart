@@ -1,7 +1,7 @@
 part of "../../model/script/submodels/script.dart";
 
 extension type const _ZxxxFactory._(ScriptZxxx _) implements ScriptZxxx {
-  const _ZxxxFactory() : this._(const ScriptZxxx._());
+  const new() : this._(const ScriptZxxx._());
 }
 
 /// A class that represents the Code for unwritten documents script.
@@ -11,9 +11,9 @@ final class ScriptZxxx extends Script {
   ///
   /// ISO 15924 Alpha-4 code: `Zxxx`, ISO 15924 Numeric code: `997`.
   /// {@endtemplate}
-  const factory ScriptZxxx() = _ZxxxFactory;
+  const factory() = _ZxxxFactory;
 
-  const ScriptZxxx._()
+  const new _()
     : super._(
         name: "Code for unwritten documents",
         code: "Zxxx",

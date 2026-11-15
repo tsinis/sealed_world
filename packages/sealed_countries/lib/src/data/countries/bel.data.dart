@@ -7,7 +7,7 @@
 part of "../../model/country/submodels/world_country.dart";
 
 extension type const _BelFactory._(CountryBel _) implements CountryBel {
-  const _BelFactory() : this._(const CountryBel._());
+  const new() : this._(const CountryBel._());
 }
 
 /// A class that represents the Belgium country.
@@ -17,9 +17,9 @@ class CountryBel extends WorldCountry {
   ///
   /// ISO 3166-1 Alpha-3 code: `BEL`, ISO 3166-1 Alpha-2 code: `BE`.
   /// {@endtemplate}
-  const factory CountryBel() = _BelFactory;
+  const factory() = _BelFactory;
 
-  const CountryBel._()
+  const new _()
     : super._(
         name: const CountryName(
           language: LangEng(),

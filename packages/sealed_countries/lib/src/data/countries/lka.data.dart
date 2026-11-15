@@ -7,7 +7,7 @@
 part of "../../model/country/submodels/world_country.dart";
 
 extension type const _LkaFactory._(CountryLka _) implements CountryLka {
-  const _LkaFactory() : this._(const CountryLka._());
+  const new() : this._(const CountryLka._());
 }
 
 /// A class that represents the Sri Lanka country.
@@ -17,9 +17,9 @@ class CountryLka extends WorldCountry {
   ///
   /// ISO 3166-1 Alpha-3 code: `LKA`, ISO 3166-1 Alpha-2 code: `LK`.
   /// {@endtemplate}
-  const factory CountryLka() = _LkaFactory;
+  const factory() = _LkaFactory;
 
-  const CountryLka._()
+  const new _()
     : super._(
         name: const CountryName(
           language: LangEng(),

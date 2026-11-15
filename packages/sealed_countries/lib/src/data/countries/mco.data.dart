@@ -7,7 +7,7 @@
 part of "../../model/country/submodels/world_country.dart";
 
 extension type const _McoFactory._(CountryMco _) implements CountryMco {
-  const _McoFactory() : this._(const CountryMco._());
+  const new() : this._(const CountryMco._());
 }
 
 /// A class that represents the Monaco country.
@@ -17,9 +17,9 @@ class CountryMco extends WorldCountry {
   ///
   /// ISO 3166-1 Alpha-3 code: `MCO`, ISO 3166-1 Alpha-2 code: `MC`.
   /// {@endtemplate}
-  const factory CountryMco() = _McoFactory;
+  const factory() = _McoFactory;
 
-  const CountryMco._()
+  const new _()
     : super._(
         name: const CountryName(
           language: LangEng(),

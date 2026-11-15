@@ -17,7 +17,7 @@ class WritingSystem implements Named<String> {
   /// The [name] parameter is a non-empty string that represents the name of
   /// the writing system.
   // ignore: deprecated_consistency, constructor cannot be annotated with it.
-  const WritingSystem({required this.name})
+  const new({required this.name})
     : assert(name.length > 0, "`name` should not be empty!");
 
   @override

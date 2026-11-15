@@ -7,7 +7,7 @@
 part of "../../model/country/submodels/world_country.dart";
 
 extension type const _RouFactory._(CountryRou _) implements CountryRou {
-  const _RouFactory() : this._(const CountryRou._());
+  const new() : this._(const CountryRou._());
 }
 
 /// A class that represents the Romania country.
@@ -17,9 +17,9 @@ class CountryRou extends WorldCountry {
   ///
   /// ISO 3166-1 Alpha-3 code: `ROU`, ISO 3166-1 Alpha-2 code: `RO`.
   /// {@endtemplate}
-  const factory CountryRou() = _RouFactory;
+  const factory() = _RouFactory;
 
-  const CountryRou._()
+  const new _()
     : super._(
         name: const CountryName(
           language: LangEng(),

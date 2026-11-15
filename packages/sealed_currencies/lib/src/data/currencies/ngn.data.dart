@@ -1,7 +1,7 @@
 part of "../../model/currency/submodels/fiat_currency.dart";
 
 extension type const _NgnFactory._(FiatNgn _) implements FiatNgn {
-  const _NgnFactory() : this._(const FiatNgn._());
+  const new() : this._(const FiatNgn._());
 }
 
 /// A class that represents the Nigerian Naira currency.
@@ -11,9 +11,9 @@ final class FiatNgn extends FiatCurrency {
   ///
   /// ISO 4217 Alpha code: `NGN`, ISO 4217 Numeric code: `566`.
   /// {@endtemplate}
-  const factory FiatNgn() = _NgnFactory;
+  const factory() = _NgnFactory;
 
-  const FiatNgn._()
+  const new _()
     : super(
         code: "NGN",
         name: "Nigerian Naira",

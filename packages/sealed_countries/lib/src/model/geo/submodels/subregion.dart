@@ -13,11 +13,11 @@ part "../../../data/geo/continental_sections.data.dart";
 // ignore: deprecated_subclass, it's TODO to address in the next major version.
 sealed class SubRegion extends Region {
   /// Creates a new [SubRegion] with the provided [name] and [continent].
-  const SubRegion(this.continent, {required super.name});
+  const new(this.continent, {required super.name});
 
   /// Finds a subregion that matches the provided [name] (case-insensitive).
   // ignore: avoid-non-empty-constructor-bodies, false positive, it's factory...
-  factory SubRegion.fromName(String name) {
+  factory fromName(String name) {
     final upperCaseName = IsoObject(name).toUpperCaseCode();
 
     return list.firstWhere(

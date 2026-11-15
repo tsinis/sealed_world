@@ -1,7 +1,7 @@
 part of "../../model/language/submodels/natural_language.dart";
 
 extension type const _NyaFactory._(LangNya _) implements LangNya {
-  const _NyaFactory() : this._(const LangNya._());
+  const new() : this._(const LangNya._());
 }
 
 /// A class that represents the Chichewa (Chewa/Nyanja) language.
@@ -11,9 +11,9 @@ final class LangNya extends NaturalLanguage {
   ///
   /// ISO 639-2/T code: `NYA`, ISO 639-1 code: `NY`.
   /// {@endtemplate}
-  const factory LangNya() = _NyaFactory;
+  const factory() = _NyaFactory;
 
-  const LangNya._()
+  const new _()
     : super._(
         name: "Chichewa (Chewa/Nyanja)",
         code: "NYA",

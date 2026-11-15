@@ -1,7 +1,7 @@
 part of "../../model/script/submodels/script.dart";
 
 extension type const _DsrtFactory._(ScriptDsrt _) implements ScriptDsrt {
-  const _DsrtFactory() : this._(const ScriptDsrt._());
+  const new() : this._(const ScriptDsrt._());
 }
 
 /// A class that represents the Deseret (Mormon) script.
@@ -11,9 +11,9 @@ final class ScriptDsrt extends Script {
   ///
   /// ISO 15924 Alpha-4 code: `Dsrt`, ISO 15924 Numeric code: `250`.
   /// {@endtemplate}
-  const factory ScriptDsrt() = _DsrtFactory;
+  const factory() = _DsrtFactory;
 
-  const ScriptDsrt._()
+  const new _()
     : super._(
         name: "Deseret (Mormon)",
         code: "Dsrt",

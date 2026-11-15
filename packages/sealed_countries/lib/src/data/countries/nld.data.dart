@@ -7,7 +7,7 @@
 part of "../../model/country/submodels/world_country.dart";
 
 extension type const _NldFactory._(CountryNld _) implements CountryNld {
-  const _NldFactory() : this._(const CountryNld._());
+  const new() : this._(const CountryNld._());
 }
 
 /// A class that represents the Netherlands country.
@@ -17,9 +17,9 @@ class CountryNld extends WorldCountry {
   ///
   /// ISO 3166-1 Alpha-3 code: `NLD`, ISO 3166-1 Alpha-2 code: `NL`.
   /// {@endtemplate}
-  const factory CountryNld() = _NldFactory;
+  const factory() = _NldFactory;
 
-  const CountryNld._()
+  const new _()
     : super._(
         name: const CountryName(
           language: LangEng(),

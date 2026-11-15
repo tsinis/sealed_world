@@ -1,7 +1,7 @@
 part of "../../model/currency/submodels/fiat_currency.dart";
 
 extension type const _IdrFactory._(FiatIdr _) implements FiatIdr {
-  const _IdrFactory() : this._(const FiatIdr._());
+  const new() : this._(const FiatIdr._());
 }
 
 /// A class that represents the Indonesian Rupiah currency.
@@ -11,9 +11,9 @@ final class FiatIdr extends FiatCurrency {
   ///
   /// ISO 4217 Alpha code: `IDR`, ISO 4217 Numeric code: `360`.
   /// {@endtemplate}
-  const factory FiatIdr() = _IdrFactory;
+  const factory() = _IdrFactory;
 
-  const FiatIdr._()
+  const new _()
     : super(
         code: "IDR",
         name: "Indonesian Rupiah",

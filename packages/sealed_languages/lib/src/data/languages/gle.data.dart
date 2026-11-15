@@ -1,7 +1,7 @@
 part of "../../model/language/submodels/natural_language.dart";
 
 extension type const _GleFactory._(LangGle _) implements LangGle {
-  const _GleFactory() : this._(const LangGle._());
+  const new() : this._(const LangGle._());
 }
 
 /// A class that represents the Irish language.
@@ -11,9 +11,9 @@ final class LangGle extends NaturalLanguage {
   ///
   /// ISO 639-2/T code: `GLE`, ISO 639-1 code: `GA`.
   /// {@endtemplate}
-  const factory LangGle() = _GleFactory;
+  const factory() = _GleFactory;
 
-  const LangGle._()
+  const new _()
     : super._(
         name: "Irish",
         code: "GLE",

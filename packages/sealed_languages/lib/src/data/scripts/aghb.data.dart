@@ -1,7 +1,7 @@
 part of "../../model/script/submodels/script.dart";
 
 extension type const _AghbFactory._(ScriptAghb _) implements ScriptAghb {
-  const _AghbFactory() : this._(const ScriptAghb._());
+  const new() : this._(const ScriptAghb._());
 }
 
 /// A class that represents the Caucasian Albanian script.
@@ -11,9 +11,9 @@ final class ScriptAghb extends Script {
   ///
   /// ISO 15924 Alpha-4 code: `Aghb`, ISO 15924 Numeric code: `239`.
   /// {@endtemplate}
-  const factory ScriptAghb() = _AghbFactory;
+  const factory() = _AghbFactory;
 
-  const ScriptAghb._()
+  const new _()
     : super._(
         name: "Caucasian Albanian",
         code: "Aghb",

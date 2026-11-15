@@ -7,7 +7,7 @@
 part of "../../model/country/submodels/world_country.dart";
 
 extension type const _CxrFactory._(CountryCxr _) implements CountryCxr {
-  const _CxrFactory() : this._(const CountryCxr._());
+  const new() : this._(const CountryCxr._());
 }
 
 /// A class that represents the Christmas Island country.
@@ -17,9 +17,9 @@ class CountryCxr extends WorldCountry {
   ///
   /// ISO 3166-1 Alpha-3 code: `CXR`, ISO 3166-1 Alpha-2 code: `CX`.
   /// {@endtemplate}
-  const factory CountryCxr() = _CxrFactory;
+  const factory() = _CxrFactory;
 
-  const CountryCxr._()
+  const new _()
     : super._(
         name: const CountryName(
           language: LangEng(),

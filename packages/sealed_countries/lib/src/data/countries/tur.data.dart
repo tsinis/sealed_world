@@ -7,7 +7,7 @@
 part of "../../model/country/submodels/world_country.dart";
 
 extension type const _TurFactory._(CountryTur _) implements CountryTur {
-  const _TurFactory() : this._(const CountryTur._());
+  const new() : this._(const CountryTur._());
 }
 
 /// A class that represents the Turkey country.
@@ -17,9 +17,9 @@ class CountryTur extends WorldCountry {
   ///
   /// ISO 3166-1 Alpha-3 code: `TUR`, ISO 3166-1 Alpha-2 code: `TR`.
   /// {@endtemplate}
-  const factory CountryTur() = _TurFactory;
+  const factory() = _TurFactory;
 
-  const CountryTur._()
+  const new _()
     : super._(
         name: const CountryName(
           language: LangEng(),

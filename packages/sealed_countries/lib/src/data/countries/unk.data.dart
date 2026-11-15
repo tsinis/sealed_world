@@ -7,7 +7,7 @@
 part of "../../model/country/submodels/world_country.dart";
 
 extension type const _UnkFactory._(CountryUnk _) implements CountryUnk {
-  const _UnkFactory() : this._(const CountryUnk._());
+  const new() : this._(const CountryUnk._());
 }
 
 /// A class that represents the Kosovo country.
@@ -17,9 +17,9 @@ class CountryUnk extends WorldCountry {
   ///
   /// ISO 3166-1 Alpha-3 code: `UNK`, ISO 3166-1 Alpha-2 code: `XK`.
   /// {@endtemplate}
-  const factory CountryUnk() = _UnkFactory;
+  const factory() = _UnkFactory;
 
-  const CountryUnk._()
+  const new _()
     : super._permissive(
         name: const CountryName(
           language: LangEng(),

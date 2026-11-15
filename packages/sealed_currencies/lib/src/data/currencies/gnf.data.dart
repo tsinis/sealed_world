@@ -1,7 +1,7 @@
 part of "../../model/currency/submodels/fiat_currency.dart";
 
 extension type const _GnfFactory._(FiatGnf _) implements FiatGnf {
-  const _GnfFactory() : this._(const FiatGnf._());
+  const new() : this._(const FiatGnf._());
 }
 
 /// A class that represents the Guinean Franc currency.
@@ -11,9 +11,9 @@ final class FiatGnf extends FiatCurrency {
   ///
   /// ISO 4217 Alpha code: `GNF`, ISO 4217 Numeric code: `324`.
   /// {@endtemplate}
-  const factory FiatGnf() = _GnfFactory;
+  const factory() = _GnfFactory;
 
-  const FiatGnf._()
+  const new _()
     : super(
         code: "GNF",
         name: "Guinean Franc",

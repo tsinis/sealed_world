@@ -1,7 +1,7 @@
 part of "../../model/script/submodels/script.dart";
 
 extension type const _LanaFactory._(ScriptLana _) implements ScriptLana {
-  const _LanaFactory() : this._(const ScriptLana._());
+  const new() : this._(const ScriptLana._());
 }
 
 /// A class that represents the Tai Tham (Lanna) script.
@@ -11,9 +11,9 @@ final class ScriptLana extends Script {
   ///
   /// ISO 15924 Alpha-4 code: `Lana`, ISO 15924 Numeric code: `351`.
   /// {@endtemplate}
-  const factory ScriptLana() = _LanaFactory;
+  const factory() = _LanaFactory;
 
-  const ScriptLana._()
+  const new _()
     : super._(
         name: "Tai Tham (Lanna)",
         code: "Lana",

@@ -1,7 +1,7 @@
 part of "../../model/script/submodels/script.dart";
 
 extension type const _DevaFactory._(ScriptDeva _) implements ScriptDeva {
-  const _DevaFactory() : this._(const ScriptDeva._());
+  const new() : this._(const ScriptDeva._());
 }
 
 /// A class that represents the Devanagari (Nagari) script.
@@ -11,9 +11,9 @@ final class ScriptDeva extends Script {
   ///
   /// ISO 15924 Alpha-4 code: `Deva`, ISO 15924 Numeric code: `315`.
   /// {@endtemplate}
-  const factory ScriptDeva() = _DevaFactory;
+  const factory() = _DevaFactory;
 
-  const ScriptDeva._()
+  const new _()
     : super._(
         name: "Devanagari (Nagari)",
         code: "Deva",

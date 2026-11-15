@@ -7,7 +7,7 @@
 part of "../../model/country/submodels/world_country.dart";
 
 extension type const _CuwFactory._(CountryCuw _) implements CountryCuw {
-  const _CuwFactory() : this._(const CountryCuw._());
+  const new() : this._(const CountryCuw._());
 }
 
 /// A class that represents the Curaçao country.
@@ -17,9 +17,9 @@ class CountryCuw extends WorldCountry {
   ///
   /// ISO 3166-1 Alpha-3 code: `CUW`, ISO 3166-1 Alpha-2 code: `CW`.
   /// {@endtemplate}
-  const factory CountryCuw() = _CuwFactory;
+  const factory() = _CuwFactory;
 
-  const CountryCuw._()
+  const new _()
     : super._(
         name: const CountryName(
           language: LangEng(),

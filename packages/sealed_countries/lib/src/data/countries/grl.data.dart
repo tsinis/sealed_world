@@ -7,7 +7,7 @@
 part of "../../model/country/submodels/world_country.dart";
 
 extension type const _GrlFactory._(CountryGrl _) implements CountryGrl {
-  const _GrlFactory() : this._(const CountryGrl._());
+  const new() : this._(const CountryGrl._());
 }
 
 /// A class that represents the Greenland country.
@@ -17,9 +17,9 @@ class CountryGrl extends WorldCountry {
   ///
   /// ISO 3166-1 Alpha-3 code: `GRL`, ISO 3166-1 Alpha-2 code: `GL`.
   /// {@endtemplate}
-  const factory CountryGrl() = _GrlFactory;
+  const factory() = _GrlFactory;
 
-  const CountryGrl._()
+  const new _()
     : super._(
         name: const CountryName(
           language: LangEng(),

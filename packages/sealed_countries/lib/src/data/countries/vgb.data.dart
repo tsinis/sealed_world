@@ -7,7 +7,7 @@
 part of "../../model/country/submodels/world_country.dart";
 
 extension type const _VgbFactory._(CountryVgb _) implements CountryVgb {
-  const _VgbFactory() : this._(const CountryVgb._());
+  const new() : this._(const CountryVgb._());
 }
 
 /// A class that represents the British Virgin Islands country.
@@ -17,9 +17,9 @@ class CountryVgb extends WorldCountry {
   ///
   /// ISO 3166-1 Alpha-3 code: `VGB`, ISO 3166-1 Alpha-2 code: `VG`.
   /// {@endtemplate}
-  const factory CountryVgb() = _VgbFactory;
+  const factory() = _VgbFactory;
 
-  const CountryVgb._()
+  const new _()
     : super._(
         name: const CountryName(
           language: LangEng(),

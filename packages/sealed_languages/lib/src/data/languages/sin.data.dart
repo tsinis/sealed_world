@@ -1,7 +1,7 @@
 part of "../../model/language/submodels/natural_language.dart";
 
 extension type const _SinFactory._(LangSin _) implements LangSin {
-  const _SinFactory() : this._(const LangSin._());
+  const new() : this._(const LangSin._());
 }
 
 /// A class that represents the Sinhalese (Sinhala) language.
@@ -11,9 +11,9 @@ final class LangSin extends NaturalLanguage {
   ///
   /// ISO 639-2/T code: `SIN`, ISO 639-1 code: `SI`.
   /// {@endtemplate}
-  const factory LangSin() = _SinFactory;
+  const factory() = _SinFactory;
 
-  const LangSin._()
+  const new _()
     : super._(
         name: "Sinhalese (Sinhala)",
         code: "SIN",

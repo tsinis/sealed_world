@@ -1,7 +1,7 @@
 part of "../../model/script/submodels/script.dart";
 
 extension type const _LaooFactory._(ScriptLaoo _) implements ScriptLaoo {
-  const _LaooFactory() : this._(const ScriptLaoo._());
+  const new() : this._(const ScriptLaoo._());
 }
 
 /// A class that represents the Lao script.
@@ -11,9 +11,9 @@ final class ScriptLaoo extends Script {
   ///
   /// ISO 15924 Alpha-4 code: `Laoo`, ISO 15924 Numeric code: `356`.
   /// {@endtemplate}
-  const factory ScriptLaoo() = _LaooFactory;
+  const factory() = _LaooFactory;
 
-  const ScriptLaoo._()
+  const new _()
     : super._(
         name: "Lao",
         code: "Laoo",

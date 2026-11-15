@@ -19,7 +19,7 @@ class LocaleMappingOptions<T extends Object> {
   /// - [formatter]: Optional function to customize localized string formatting.
   /// It receives the key of the entry it formats, so the ISO code of a full
   /// name ends with [altSymbol] (e.g. `USA+`).
-  const LocaleMappingOptions({
+  const new({
     this.mainLocale,
     this.fallbackLocale,
     this.localizeFullNames = true,

@@ -1,7 +1,7 @@
 part of "../../model/currency/submodels/fiat_currency.dart";
 
 extension type const _SbdFactory._(FiatSbd _) implements FiatSbd {
-  const _SbdFactory() : this._(const FiatSbd._());
+  const new() : this._(const FiatSbd._());
 }
 
 /// A class that represents the Solomon Islands Dollar currency.
@@ -11,9 +11,9 @@ final class FiatSbd extends FiatCurrency {
   ///
   /// ISO 4217 Alpha code: `SBD`, ISO 4217 Numeric code: `090`.
   /// {@endtemplate}
-  const factory FiatSbd() = _SbdFactory;
+  const factory() = _SbdFactory;
 
-  const FiatSbd._()
+  const new _()
     : super(
         code: "SBD",
         name: "Solomon Islands Dollar",

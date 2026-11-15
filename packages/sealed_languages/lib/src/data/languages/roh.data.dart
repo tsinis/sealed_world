@@ -1,7 +1,7 @@
 part of "../../model/language/submodels/natural_language.dart";
 
 extension type const _RohFactory._(LangRoh _) implements LangRoh {
-  const _RohFactory() : this._(const LangRoh._());
+  const new() : this._(const LangRoh._());
 }
 
 /// A class that represents the Romansh language.
@@ -11,9 +11,9 @@ final class LangRoh extends NaturalLanguage {
   ///
   /// ISO 639-2/T code: `ROH`, ISO 639-1 code: `RM`.
   /// {@endtemplate}
-  const factory LangRoh() = _RohFactory;
+  const factory() = _RohFactory;
 
-  const LangRoh._()
+  const new _()
     : super._(
         name: "Romansh",
         code: "ROH",

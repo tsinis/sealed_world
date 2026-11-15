@@ -1,7 +1,7 @@
 part of "../../model/script/submodels/script.dart";
 
 extension type const _PsinFactory._(ScriptPsin _) implements ScriptPsin {
-  const _PsinFactory() : this._(const ScriptPsin._());
+  const new() : this._(const ScriptPsin._());
 }
 
 /// A class that represents the Proto-Sinaitic script.
@@ -11,9 +11,9 @@ final class ScriptPsin extends Script {
   ///
   /// ISO 15924 Alpha-4 code: `Psin`, ISO 15924 Numeric code: `103`.
   /// {@endtemplate}
-  const factory ScriptPsin() = _PsinFactory;
+  const factory() = _PsinFactory;
 
-  const ScriptPsin._()
+  const new _()
     : super._(
         name: "Proto-Sinaitic",
         code: "Psin",

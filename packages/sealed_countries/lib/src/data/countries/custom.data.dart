@@ -5,7 +5,7 @@ final class CountryCustom extends WorldCountry {
   /// Creates a custom [WorldCountry] implementation for non-standard cases.
   /// {@macro country_constructor}
   /// {@macro permissive_constructor}
-  const CountryCustom({
+  const new({
     super.code,
     super.codeNumeric,
     super.codeShort,

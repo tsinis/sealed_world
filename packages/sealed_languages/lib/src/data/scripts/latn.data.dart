@@ -1,7 +1,7 @@
 part of "../../model/script/submodels/script.dart";
 
 extension type const _LatnFactory._(ScriptLatn _) implements ScriptLatn {
-  const _LatnFactory() : this._(const ScriptLatn._());
+  const new() : this._(const ScriptLatn._());
 }
 
 /// A class that represents the Latin script.
@@ -11,9 +11,9 @@ final class ScriptLatn extends Script {
   ///
   /// ISO 15924 Alpha-4 code: `Latn`, ISO 15924 Numeric code: `215`.
   /// {@endtemplate}
-  const factory ScriptLatn() = _LatnFactory;
+  const factory() = _LatnFactory;
 
-  const ScriptLatn._()
+  const new _()
     : super._(
         name: "Latin",
         code: "Latn",

@@ -7,7 +7,7 @@
 part of "../../model/country/submodels/world_country.dart";
 
 extension type const _VenFactory._(CountryVen _) implements CountryVen {
-  const _VenFactory() : this._(const CountryVen._());
+  const new() : this._(const CountryVen._());
 }
 
 /// A class that represents the Venezuela country.
@@ -17,9 +17,9 @@ class CountryVen extends WorldCountry {
   ///
   /// ISO 3166-1 Alpha-3 code: `VEN`, ISO 3166-1 Alpha-2 code: `VE`.
   /// {@endtemplate}
-  const factory CountryVen() = _VenFactory;
+  const factory() = _VenFactory;
 
-  const CountryVen._()
+  const new _()
     : super._(
         name: const CountryName(
           language: LangEng(),

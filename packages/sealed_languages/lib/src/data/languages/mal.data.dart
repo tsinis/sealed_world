@@ -1,7 +1,7 @@
 part of "../../model/language/submodels/natural_language.dart";
 
 extension type const _MalFactory._(LangMal _) implements LangMal {
-  const _MalFactory() : this._(const LangMal._());
+  const new() : this._(const LangMal._());
 }
 
 /// A class that represents the Malayalam language.
@@ -11,9 +11,9 @@ final class LangMal extends NaturalLanguage {
   ///
   /// ISO 639-2/T code: `MAL`, ISO 639-1 code: `ML`.
   /// {@endtemplate}
-  const factory LangMal() = _MalFactory;
+  const factory() = _MalFactory;
 
-  const LangMal._()
+  const new _()
     : super._(
         name: "Malayalam",
         code: "MAL",

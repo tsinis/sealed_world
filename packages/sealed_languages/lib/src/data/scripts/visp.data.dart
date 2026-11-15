@@ -1,7 +1,7 @@
 part of "../../model/script/submodels/script.dart";
 
 extension type const _VispFactory._(ScriptVisp _) implements ScriptVisp {
-  const _VispFactory() : this._(const ScriptVisp._());
+  const new() : this._(const ScriptVisp._());
 }
 
 /// A class that represents the Visible Speech script.
@@ -11,9 +11,9 @@ final class ScriptVisp extends Script {
   ///
   /// ISO 15924 Alpha-4 code: `Visp`, ISO 15924 Numeric code: `280`.
   /// {@endtemplate}
-  const factory ScriptVisp() = _VispFactory;
+  const factory() = _VispFactory;
 
-  const ScriptVisp._()
+  const new _()
     : super._(
         name: "Visible Speech",
         code: "Visp",

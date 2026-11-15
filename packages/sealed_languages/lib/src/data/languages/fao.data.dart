@@ -1,7 +1,7 @@
 part of "../../model/language/submodels/natural_language.dart";
 
 extension type const _FaoFactory._(LangFao _) implements LangFao {
-  const _FaoFactory() : this._(const LangFao._());
+  const new() : this._(const LangFao._());
 }
 
 /// A class that represents the Faroese language.
@@ -11,9 +11,9 @@ final class LangFao extends NaturalLanguage {
   ///
   /// ISO 639-2/T code: `FAO`, ISO 639-1 code: `FO`.
   /// {@endtemplate}
-  const factory LangFao() = _FaoFactory;
+  const factory() = _FaoFactory;
 
-  const LangFao._()
+  const new _()
     : super._(
         name: "Faroese",
         code: "FAO",

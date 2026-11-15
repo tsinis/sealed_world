@@ -1,7 +1,7 @@
 part of "../../model/language/submodels/natural_language.dart";
 
 extension type const _InaFactory._(LangIna _) implements LangIna {
-  const _InaFactory() : this._(const LangIna._());
+  const new() : this._(const LangIna._());
 }
 
 /// A class that represents the Interlingua language.
@@ -11,9 +11,9 @@ final class LangIna extends NaturalLanguage {
   ///
   /// ISO 639-2/T code: `INA`, ISO 639-1 code: `IA`.
   /// {@endtemplate}
-  const factory LangIna() = _InaFactory;
+  const factory() = _InaFactory;
 
-  const LangIna._()
+  const new _()
     : super._(
         name: "Interlingua",
         code: "INA",

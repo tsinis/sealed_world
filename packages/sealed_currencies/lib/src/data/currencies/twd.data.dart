@@ -1,7 +1,7 @@
 part of "../../model/currency/submodels/fiat_currency.dart";
 
 extension type const _TwdFactory._(FiatTwd _) implements FiatTwd {
-  const _TwdFactory() : this._(const FiatTwd._());
+  const new() : this._(const FiatTwd._());
 }
 
 /// A class that represents the New Taiwan Dollar currency.
@@ -11,9 +11,9 @@ final class FiatTwd extends FiatCurrency {
   ///
   /// ISO 4217 Alpha code: `TWD`, ISO 4217 Numeric code: `901`.
   /// {@endtemplate}
-  const factory FiatTwd() = _TwdFactory;
+  const factory() = _TwdFactory;
 
-  const FiatTwd._()
+  const new _()
     : super(
         code: "TWD",
         name: "New Taiwan Dollar",

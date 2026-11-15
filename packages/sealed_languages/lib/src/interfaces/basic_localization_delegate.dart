@@ -25,7 +25,7 @@ abstract class BasicLocalizationDelegate<
   /// - [scripts]: Optional collection of supported scripts for locale parsing.
   /// - [mapper]:
   /// {@macro sealed_world.locale_mapper_callback}
-  const BasicLocalizationDelegate({this.languages, this.mapper, this.scripts});
+  const new({this.languages, this.mapper, this.scripts});
 
   /// Optional collection of supported languages. Used to limit locale parsing
   /// and validation.

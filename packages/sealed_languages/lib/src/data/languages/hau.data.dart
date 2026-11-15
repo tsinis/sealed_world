@@ -1,7 +1,7 @@
 part of "../../model/language/submodels/natural_language.dart";
 
 extension type const _HauFactory._(LangHau _) implements LangHau {
-  const _HauFactory() : this._(const LangHau._());
+  const new() : this._(const LangHau._());
 }
 
 /// A class that represents the Hausa language.
@@ -11,9 +11,9 @@ final class LangHau extends NaturalLanguage {
   ///
   /// ISO 639-2/T code: `HAU`, ISO 639-1 code: `HA`.
   /// {@endtemplate}
-  const factory LangHau() = _HauFactory;
+  const factory() = _HauFactory;
 
-  const LangHau._()
+  const new _()
     : super._(
         name: "Hausa",
         code: "HAU",

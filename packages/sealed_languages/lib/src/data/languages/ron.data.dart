@@ -1,7 +1,7 @@
 part of "../../model/language/submodels/natural_language.dart";
 
 extension type const _RonFactory._(LangRon _) implements LangRon {
-  const _RonFactory() : this._(const LangRon._());
+  const new() : this._(const LangRon._());
 }
 
 /// A class that represents the Romanian language.
@@ -11,9 +11,9 @@ final class LangRon extends NaturalLanguage {
   ///
   /// ISO 639-2/T code: `RON`, ISO 639-1 code: `RO`.
   /// {@endtemplate}
-  const factory LangRon() = _RonFactory;
+  const factory() = _RonFactory;
 
-  const LangRon._()
+  const new _()
     : super._(
         name: "Romanian",
         code: "RON",

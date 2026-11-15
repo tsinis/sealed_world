@@ -1,7 +1,7 @@
 part of "../../model/currency/submodels/fiat_currency.dart";
 
 extension type const _TopFactory._(FiatTop _) implements FiatTop {
-  const _TopFactory() : this._(const FiatTop._());
+  const new() : this._(const FiatTop._());
 }
 
 /// A class that represents the Tongan Paʻanga currency.
@@ -11,9 +11,9 @@ final class FiatTop extends FiatCurrency {
   ///
   /// ISO 4217 Alpha code: `TOP`, ISO 4217 Numeric code: `776`.
   /// {@endtemplate}
-  const factory FiatTop() = _TopFactory;
+  const factory() = _TopFactory;
 
-  const FiatTop._()
+  const new _()
     : super(
         code: "TOP",
         name: "Tongan Paʻanga",

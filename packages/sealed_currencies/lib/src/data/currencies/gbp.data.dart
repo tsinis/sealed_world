@@ -1,7 +1,7 @@
 part of "../../model/currency/submodels/fiat_currency.dart";
 
 extension type const _GbpFactory._(FiatGbp _) implements FiatGbp {
-  const _GbpFactory() : this._(const FiatGbp._());
+  const new() : this._(const FiatGbp._());
 }
 
 /// A class that represents the British Pound currency.
@@ -11,9 +11,9 @@ final class FiatGbp extends FiatCurrency {
   ///
   /// ISO 4217 Alpha code: `GBP`, ISO 4217 Numeric code: `826`.
   /// {@endtemplate}
-  const factory FiatGbp() = _GbpFactory;
+  const factory() = _GbpFactory;
 
-  const FiatGbp._()
+  const new _()
     : super(
         code: "GBP",
         name: "British Pound",

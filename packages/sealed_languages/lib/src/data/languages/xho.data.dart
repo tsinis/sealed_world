@@ -1,7 +1,7 @@
 part of "../../model/language/submodels/natural_language.dart";
 
 extension type const _XhoFactory._(LangXho _) implements LangXho {
-  const _XhoFactory() : this._(const LangXho._());
+  const new() : this._(const LangXho._());
 }
 
 /// A class that represents the Xhosa language.
@@ -11,9 +11,9 @@ final class LangXho extends NaturalLanguage {
   ///
   /// ISO 639-2/T code: `XHO`, ISO 639-1 code: `XH`.
   /// {@endtemplate}
-  const factory LangXho() = _XhoFactory;
+  const factory() = _XhoFactory;
 
-  const LangXho._()
+  const new _()
     : super._(
         name: "Xhosa",
         code: "XHO",

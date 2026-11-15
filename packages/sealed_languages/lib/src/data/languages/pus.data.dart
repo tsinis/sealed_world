@@ -1,7 +1,7 @@
 part of "../../model/language/submodels/natural_language.dart";
 
 extension type const _PusFactory._(LangPus _) implements LangPus {
-  const _PusFactory() : this._(const LangPus._());
+  const new() : this._(const LangPus._());
 }
 
 /// A class that represents the Pashto (Pushto) language.
@@ -11,9 +11,9 @@ final class LangPus extends NaturalLanguage {
   ///
   /// ISO 639-2/T code: `PUS`, ISO 639-1 code: `PS`.
   /// {@endtemplate}
-  const factory LangPus() = _PusFactory;
+  const factory() = _PusFactory;
 
-  const LangPus._()
+  const new _()
     : super._(
         name: "Pashto (Pushto)",
         code: "PUS",

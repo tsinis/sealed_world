@@ -7,7 +7,7 @@
 part of "../../model/country/submodels/world_country.dart";
 
 extension type const _LbnFactory._(CountryLbn _) implements CountryLbn {
-  const _LbnFactory() : this._(const CountryLbn._());
+  const new() : this._(const CountryLbn._());
 }
 
 /// A class that represents the Lebanon country.
@@ -17,9 +17,9 @@ class CountryLbn extends WorldCountry {
   ///
   /// ISO 3166-1 Alpha-3 code: `LBN`, ISO 3166-1 Alpha-2 code: `LB`.
   /// {@endtemplate}
-  const factory CountryLbn() = _LbnFactory;
+  const factory() = _LbnFactory;
 
-  const CountryLbn._()
+  const new _()
     : super._(
         name: const CountryName(
           language: LangEng(),

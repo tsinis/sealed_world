@@ -1,7 +1,7 @@
 part of "../../model/currency/submodels/fiat_currency.dart";
 
 extension type const _KwdFactory._(FiatKwd _) implements FiatKwd {
-  const _KwdFactory() : this._(const FiatKwd._());
+  const new() : this._(const FiatKwd._());
 }
 
 /// A class that represents the Kuwaiti Dinar currency.
@@ -11,9 +11,9 @@ final class FiatKwd extends FiatCurrency {
   ///
   /// ISO 4217 Alpha code: `KWD`, ISO 4217 Numeric code: `414`.
   /// {@endtemplate}
-  const factory FiatKwd() = _KwdFactory;
+  const factory() = _KwdFactory;
 
-  const FiatKwd._()
+  const new _()
     : super(
         code: "KWD",
         name: "Kuwaiti Dinar",

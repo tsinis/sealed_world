@@ -1,7 +1,7 @@
 part of "../../model/language/submodels/natural_language.dart";
 
 extension type const _BamFactory._(LangBam _) implements LangBam {
-  const _BamFactory() : this._(const LangBam._());
+  const new() : this._(const LangBam._());
 }
 
 /// A class that represents the Bambara language.
@@ -11,9 +11,9 @@ final class LangBam extends NaturalLanguage {
   ///
   /// ISO 639-2/T code: `BAM`, ISO 639-1 code: `BM`.
   /// {@endtemplate}
-  const factory LangBam() = _BamFactory;
+  const factory() = _BamFactory;
 
-  const LangBam._()
+  const new _()
     : super._(
         name: "Bambara",
         code: "BAM",

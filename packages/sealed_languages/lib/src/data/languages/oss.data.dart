@@ -1,7 +1,7 @@
 part of "../../model/language/submodels/natural_language.dart";
 
 extension type const _OssFactory._(LangOss _) implements LangOss {
-  const _OssFactory() : this._(const LangOss._());
+  const new() : this._(const LangOss._());
 }
 
 /// A class that represents the Ossetian (Ossetic) language.
@@ -11,9 +11,9 @@ final class LangOss extends NaturalLanguage {
   ///
   /// ISO 639-2/T code: `OSS`, ISO 639-1 code: `OS`.
   /// {@endtemplate}
-  const factory LangOss() = _OssFactory;
+  const factory() = _OssFactory;
 
-  const LangOss._()
+  const new _()
     : super._(
         name: "Ossetian (Ossetic)",
         code: "OSS",

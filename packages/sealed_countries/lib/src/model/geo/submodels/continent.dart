@@ -33,11 +33,11 @@ sealed class Continent extends Region {
   /// Creates a new [Continent] object with the given name.
   ///
   /// The [name] parameter is required and must not be empty.
-  const Continent({required super.name});
+  const new({required super.name});
 
   /// Creates a new [Continent] object from its name.
   // ignore: avoid-non-empty-constructor-bodies, false positive, it's factory...
-  factory Continent.fromName(String name) {
+  factory fromName(String name) {
     final upperCaseName = IsoObject(name).toUpperCaseCode();
 
     return list.firstWhere(

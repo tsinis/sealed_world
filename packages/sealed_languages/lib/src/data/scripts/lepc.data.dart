@@ -1,7 +1,7 @@
 part of "../../model/script/submodels/script.dart";
 
 extension type const _LepcFactory._(ScriptLepc _) implements ScriptLepc {
-  const _LepcFactory() : this._(const ScriptLepc._());
+  const new() : this._(const ScriptLepc._());
 }
 
 /// A class that represents the Lepcha (Róng) script.
@@ -11,9 +11,9 @@ final class ScriptLepc extends Script {
   ///
   /// ISO 15924 Alpha-4 code: `Lepc`, ISO 15924 Numeric code: `335`.
   /// {@endtemplate}
-  const factory ScriptLepc() = _LepcFactory;
+  const factory() = _LepcFactory;
 
-  const ScriptLepc._()
+  const new _()
     : super._(
         name: "Lepcha (Róng)",
         code: "Lepc",

@@ -1,7 +1,7 @@
 part of "../../model/script/submodels/script.dart";
 
 extension type const _ArabFactory._(ScriptArab _) implements ScriptArab {
-  const _ArabFactory() : this._(const ScriptArab._());
+  const new() : this._(const ScriptArab._());
 }
 
 /// A class that represents the Arabic script.
@@ -11,9 +11,9 @@ final class ScriptArab extends Script {
   ///
   /// ISO 15924 Alpha-4 code: `Arab`, ISO 15924 Numeric code: `160`.
   /// {@endtemplate}
-  const factory ScriptArab() = _ArabFactory;
+  const factory() = _ArabFactory;
 
-  const ScriptArab._()
+  const new _()
     : super._(
         name: "Arabic",
         code: "Arab",

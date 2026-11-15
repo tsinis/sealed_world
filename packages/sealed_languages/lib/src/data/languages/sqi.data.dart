@@ -1,7 +1,7 @@
 part of "../../model/language/submodels/natural_language.dart";
 
 extension type const _SqiFactory._(LangSqi _) implements LangSqi {
-  const _SqiFactory() : this._(const LangSqi._());
+  const new() : this._(const LangSqi._());
 }
 
 /// A class that represents the Albanian language.
@@ -11,9 +11,9 @@ final class LangSqi extends NaturalLanguage {
   ///
   /// ISO 639-2/T code: `SQI`, ISO 639-1 code: `SQ`.
   /// {@endtemplate}
-  const factory LangSqi() = _SqiFactory;
+  const factory() = _SqiFactory;
 
-  const LangSqi._()
+  const new _()
     : super._(
         name: "Albanian",
         code: "SQI",

@@ -18,7 +18,7 @@ sealed class NaturalLanguageFamily extends LanguageFamily {
   ///
   /// The [name] parameter is required and should be a string representing the
   /// name of the language family.
-  const NaturalLanguageFamily({required super.name});
+  const new({required super.name});
 
   /// Returns a [NaturalLanguageFamily] object with the given [name].
   ///
@@ -36,7 +36,7 @@ sealed class NaturalLanguageFamily extends LanguageFamily {
   ///   assert(family.name == 'Indo-European');
   /// }
   /// ```
-  factory NaturalLanguageFamily.fromName(
+  factory fromName(
     Object name, [
     Iterable<NaturalLanguageFamily> families = list,
     // ignore: avoid-non-empty-constructor-bodies, more clear for factory methods.

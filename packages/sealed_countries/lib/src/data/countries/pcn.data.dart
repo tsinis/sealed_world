@@ -7,7 +7,7 @@
 part of "../../model/country/submodels/world_country.dart";
 
 extension type const _PcnFactory._(CountryPcn _) implements CountryPcn {
-  const _PcnFactory() : this._(const CountryPcn._());
+  const new() : this._(const CountryPcn._());
 }
 
 /// A class that represents the Pitcairn Islands country.
@@ -17,9 +17,9 @@ class CountryPcn extends WorldCountry {
   ///
   /// ISO 3166-1 Alpha-3 code: `PCN`, ISO 3166-1 Alpha-2 code: `PN`.
   /// {@endtemplate}
-  const factory CountryPcn() = _PcnFactory;
+  const factory() = _PcnFactory;
 
-  const CountryPcn._()
+  const new _()
     : super._(
         name: const CountryName(
           language: LangEng(),

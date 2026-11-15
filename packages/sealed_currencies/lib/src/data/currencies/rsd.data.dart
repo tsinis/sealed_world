@@ -1,7 +1,7 @@
 part of "../../model/currency/submodels/fiat_currency.dart";
 
 extension type const _RsdFactory._(FiatRsd _) implements FiatRsd {
-  const _RsdFactory() : this._(const FiatRsd._());
+  const new() : this._(const FiatRsd._());
 }
 
 /// A class that represents the Serbian Dinar currency.
@@ -11,9 +11,9 @@ final class FiatRsd extends FiatCurrency {
   ///
   /// ISO 4217 Alpha code: `RSD`, ISO 4217 Numeric code: `941`.
   /// {@endtemplate}
-  const factory FiatRsd() = _RsdFactory;
+  const factory() = _RsdFactory;
 
-  const FiatRsd._()
+  const new _()
     : super(
         code: "RSD",
         name: "Serbian Dinar",

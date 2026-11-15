@@ -7,7 +7,7 @@
 part of "../../model/country/submodels/world_country.dart";
 
 extension type const _EshFactory._(CountryEsh _) implements CountryEsh {
-  const _EshFactory() : this._(const CountryEsh._());
+  const new() : this._(const CountryEsh._());
 }
 
 /// A class that represents the Western Sahara country.
@@ -17,9 +17,9 @@ class CountryEsh extends WorldCountry {
   ///
   /// ISO 3166-1 Alpha-3 code: `ESH`, ISO 3166-1 Alpha-2 code: `EH`.
   /// {@endtemplate}
-  const factory CountryEsh() = _EshFactory;
+  const factory() = _EshFactory;
 
-  const CountryEsh._()
+  const new _()
     : super._(
         name: const CountryName(
           language: LangEng(),

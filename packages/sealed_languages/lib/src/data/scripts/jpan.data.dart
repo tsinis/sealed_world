@@ -1,7 +1,7 @@
 part of "../../model/script/submodels/script.dart";
 
 extension type const _JpanFactory._(ScriptJpan _) implements ScriptJpan {
-  const _JpanFactory() : this._(const ScriptJpan._());
+  const new() : this._(const ScriptJpan._());
 }
 
 /// A class that represents the Japanese (alias for Han + Hiragana + Katakana)
@@ -13,9 +13,9 @@ final class ScriptJpan extends Script {
   ///
   /// ISO 15924 Alpha-4 code: `Jpan`, ISO 15924 Numeric code: `413`.
   /// {@endtemplate}
-  const factory ScriptJpan() = _JpanFactory;
+  const factory() = _JpanFactory;
 
-  const ScriptJpan._()
+  const new _()
     : super._(
         name: "Japanese (alias for Han + Hiragana + Katakana)",
         code: "Jpan",

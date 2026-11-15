@@ -1,7 +1,7 @@
 part of "../../model/script/submodels/script.dart";
 
 extension type const _CherFactory._(ScriptCher _) implements ScriptCher {
-  const _CherFactory() : this._(const ScriptCher._());
+  const new() : this._(const ScriptCher._());
 }
 
 /// A class that represents the Cherokee script.
@@ -11,9 +11,9 @@ final class ScriptCher extends Script {
   ///
   /// ISO 15924 Alpha-4 code: `Cher`, ISO 15924 Numeric code: `445`.
   /// {@endtemplate}
-  const factory ScriptCher() = _CherFactory;
+  const factory() = _CherFactory;
 
-  const ScriptCher._()
+  const new _()
     : super._(
         name: "Cherokee",
         code: "Cher",

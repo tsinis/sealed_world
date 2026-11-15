@@ -1,7 +1,7 @@
 part of "../../model/currency/submodels/fiat_currency.dart";
 
 extension type const _GhsFactory._(FiatGhs _) implements FiatGhs {
-  const _GhsFactory() : this._(const FiatGhs._());
+  const new() : this._(const FiatGhs._());
 }
 
 /// A class that represents the Ghanaian Cedi currency.
@@ -11,9 +11,9 @@ final class FiatGhs extends FiatCurrency {
   ///
   /// ISO 4217 Alpha code: `GHS`, ISO 4217 Numeric code: `936`.
   /// {@endtemplate}
-  const factory FiatGhs() = _GhsFactory;
+  const factory() = _GhsFactory;
 
-  const FiatGhs._()
+  const new _()
     : super(
         code: "GHS",
         name: "Ghanaian Cedi",

@@ -7,7 +7,7 @@
 part of "../../model/country/submodels/world_country.dart";
 
 extension type const _LvaFactory._(CountryLva _) implements CountryLva {
-  const _LvaFactory() : this._(const CountryLva._());
+  const new() : this._(const CountryLva._());
 }
 
 /// A class that represents the Latvia country.
@@ -17,9 +17,9 @@ class CountryLva extends WorldCountry {
   ///
   /// ISO 3166-1 Alpha-3 code: `LVA`, ISO 3166-1 Alpha-2 code: `LV`.
   /// {@endtemplate}
-  const factory CountryLva() = _LvaFactory;
+  const factory() = _LvaFactory;
 
-  const CountryLva._()
+  const new _()
     : super._(
         name: const CountryName(
           language: LangEng(),

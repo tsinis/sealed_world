@@ -1,7 +1,7 @@
 part of "../../model/script/submodels/script.dart";
 
 extension type const _SogdFactory._(ScriptSogd _) implements ScriptSogd {
-  const _SogdFactory() : this._(const ScriptSogd._());
+  const new() : this._(const ScriptSogd._());
 }
 
 /// A class that represents the Sogdian script.
@@ -11,9 +11,9 @@ final class ScriptSogd extends Script {
   ///
   /// ISO 15924 Alpha-4 code: `Sogd`, ISO 15924 Numeric code: `141`.
   /// {@endtemplate}
-  const factory ScriptSogd() = _SogdFactory;
+  const factory() = _SogdFactory;
 
-  const ScriptSogd._()
+  const new _()
     : super._(
         name: "Sogdian",
         code: "Sogd",

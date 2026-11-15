@@ -1,7 +1,7 @@
 part of "../../model/script/submodels/script.dart";
 
 extension type const _UgarFactory._(ScriptUgar _) implements ScriptUgar {
-  const _UgarFactory() : this._(const ScriptUgar._());
+  const new() : this._(const ScriptUgar._());
 }
 
 /// A class that represents the Ugaritic script.
@@ -11,9 +11,9 @@ final class ScriptUgar extends Script {
   ///
   /// ISO 15924 Alpha-4 code: `Ugar`, ISO 15924 Numeric code: `040`.
   /// {@endtemplate}
-  const factory ScriptUgar() = _UgarFactory;
+  const factory() = _UgarFactory;
 
-  const ScriptUgar._()
+  const new _()
     : super._(
         name: "Ugaritic",
         code: "Ugar",

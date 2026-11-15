@@ -1,7 +1,7 @@
 part of "../../model/script/submodels/script.dart";
 
 extension type const _EgyhFactory._(ScriptEgyh _) implements ScriptEgyh {
-  const _EgyhFactory() : this._(const ScriptEgyh._());
+  const new() : this._(const ScriptEgyh._());
 }
 
 /// A class that represents the Egyptian hieratic script.
@@ -11,9 +11,9 @@ final class ScriptEgyh extends Script {
   ///
   /// ISO 15924 Alpha-4 code: `Egyh`, ISO 15924 Numeric code: `060`.
   /// {@endtemplate}
-  const factory ScriptEgyh() = _EgyhFactory;
+  const factory() = _EgyhFactory;
 
-  const ScriptEgyh._()
+  const new _()
     : super._(
         name: "Egyptian hieratic",
         code: "Egyh",

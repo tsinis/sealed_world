@@ -1,7 +1,7 @@
 part of "../../model/script/submodels/script.dart";
 
 extension type const _PelmFactory._(ScriptPelm _) implements ScriptPelm {
-  const _PelmFactory() : this._(const ScriptPelm._());
+  const new() : this._(const ScriptPelm._());
 }
 
 /// A class that represents the Proto-Elamite script.
@@ -11,9 +11,9 @@ final class ScriptPelm extends Script {
   ///
   /// ISO 15924 Alpha-4 code: `Pelm`, ISO 15924 Numeric code: `016`.
   /// {@endtemplate}
-  const factory ScriptPelm() = _PelmFactory;
+  const factory() = _PelmFactory;
 
-  const ScriptPelm._()
+  const new _()
     : super._(
         name: "Proto-Elamite",
         code: "Pelm",

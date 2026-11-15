@@ -7,7 +7,7 @@
 part of "../../model/country/submodels/world_country.dart";
 
 extension type const _NiuFactory._(CountryNiu _) implements CountryNiu {
-  const _NiuFactory() : this._(const CountryNiu._());
+  const new() : this._(const CountryNiu._());
 }
 
 /// A class that represents the Niue country.
@@ -17,9 +17,9 @@ class CountryNiu extends WorldCountry {
   ///
   /// ISO 3166-1 Alpha-3 code: `NIU`, ISO 3166-1 Alpha-2 code: `NU`.
   /// {@endtemplate}
-  const factory CountryNiu() = _NiuFactory;
+  const factory() = _NiuFactory;
 
-  const CountryNiu._()
+  const new _()
     : super._(
         name: const CountryName(
           language: LangEng(),

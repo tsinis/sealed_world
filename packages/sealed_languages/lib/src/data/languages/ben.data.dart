@@ -1,7 +1,7 @@
 part of "../../model/language/submodels/natural_language.dart";
 
 extension type const _BenFactory._(LangBen _) implements LangBen {
-  const _BenFactory() : this._(const LangBen._());
+  const new() : this._(const LangBen._());
 }
 
 /// A class that represents the Bengali (Bangla) language.
@@ -11,9 +11,9 @@ final class LangBen extends NaturalLanguage {
   ///
   /// ISO 639-2/T code: `BEN`, ISO 639-1 code: `BN`.
   /// {@endtemplate}
-  const factory LangBen() = _BenFactory;
+  const factory() = _BenFactory;
 
-  const LangBen._()
+  const new _()
     : super._(
         name: "Bengali (Bangla)",
         code: "BEN",

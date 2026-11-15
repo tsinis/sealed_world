@@ -1,7 +1,7 @@
 part of "../../model/script/submodels/script.dart";
 
 extension type const _TengFactory._(ScriptTeng _) implements ScriptTeng {
-  const _TengFactory() : this._(const ScriptTeng._());
+  const new() : this._(const ScriptTeng._());
 }
 
 /// A class that represents the Tengwar script.
@@ -11,9 +11,9 @@ final class ScriptTeng extends Script {
   ///
   /// ISO 15924 Alpha-4 code: `Teng`, ISO 15924 Numeric code: `290`.
   /// {@endtemplate}
-  const factory ScriptTeng() = _TengFactory;
+  const factory() = _TengFactory;
 
-  const ScriptTeng._()
+  const new _()
     : super._(
         name: "Tengwar",
         code: "Teng",

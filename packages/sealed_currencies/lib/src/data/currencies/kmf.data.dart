@@ -1,7 +1,7 @@
 part of "../../model/currency/submodels/fiat_currency.dart";
 
 extension type const _KmfFactory._(FiatKmf _) implements FiatKmf {
-  const _KmfFactory() : this._(const FiatKmf._());
+  const new() : this._(const FiatKmf._());
 }
 
 /// A class that represents the Comorian Franc currency.
@@ -11,9 +11,9 @@ final class FiatKmf extends FiatCurrency {
   ///
   /// ISO 4217 Alpha code: `KMF`, ISO 4217 Numeric code: `174`.
   /// {@endtemplate}
-  const factory FiatKmf() = _KmfFactory;
+  const factory() = _KmfFactory;
 
-  const FiatKmf._()
+  const new _()
     : super(
         code: "KMF",
         name: "Comorian Franc",

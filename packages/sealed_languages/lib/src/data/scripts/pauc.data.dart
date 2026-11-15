@@ -1,7 +1,7 @@
 part of "../../model/script/submodels/script.dart";
 
 extension type const _PaucFactory._(ScriptPauc _) implements ScriptPauc {
-  const _PaucFactory() : this._(const ScriptPauc._());
+  const new() : this._(const ScriptPauc._());
 }
 
 /// A class that represents the Pau Cin Hau script.
@@ -11,9 +11,9 @@ final class ScriptPauc extends Script {
   ///
   /// ISO 15924 Alpha-4 code: `Pauc`, ISO 15924 Numeric code: `263`.
   /// {@endtemplate}
-  const factory ScriptPauc() = _PaucFactory;
+  const factory() = _PaucFactory;
 
-  const ScriptPauc._()
+  const new _()
     : super._(
         name: "Pau Cin Hau",
         code: "Pauc",

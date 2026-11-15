@@ -1,7 +1,7 @@
 part of "../../model/script/submodels/script.dart";
 
 extension type const _HrktFactory._(ScriptHrkt _) implements ScriptHrkt {
-  const _HrktFactory() : this._(const ScriptHrkt._());
+  const new() : this._(const ScriptHrkt._());
 }
 
 /// A class that represents the Japanese syllabaries
@@ -13,9 +13,9 @@ final class ScriptHrkt extends Script {
   ///
   /// ISO 15924 Alpha-4 code: `Hrkt`, ISO 15924 Numeric code: `412`.
   /// {@endtemplate}
-  const factory ScriptHrkt() = _HrktFactory;
+  const factory() = _HrktFactory;
 
-  const ScriptHrkt._()
+  const new _()
     : super._(
         name: "Japanese syllabaries (alias for Hiragana + Katakana)",
         code: "Hrkt",

@@ -1,7 +1,7 @@
 part of "../../model/script/submodels/script.dart";
 
 extension type const _MarcFactory._(ScriptMarc _) implements ScriptMarc {
-  const _MarcFactory() : this._(const ScriptMarc._());
+  const new() : this._(const ScriptMarc._());
 }
 
 /// A class that represents the Marchen script.
@@ -11,9 +11,9 @@ final class ScriptMarc extends Script {
   ///
   /// ISO 15924 Alpha-4 code: `Marc`, ISO 15924 Numeric code: `332`.
   /// {@endtemplate}
-  const factory ScriptMarc() = _MarcFactory;
+  const factory() = _MarcFactory;
 
-  const ScriptMarc._()
+  const new _()
     : super._(
         name: "Marchen",
         code: "Marc",

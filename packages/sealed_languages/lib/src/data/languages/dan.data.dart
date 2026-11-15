@@ -1,7 +1,7 @@
 part of "../../model/language/submodels/natural_language.dart";
 
 extension type const _DanFactory._(LangDan _) implements LangDan {
-  const _DanFactory() : this._(const LangDan._());
+  const new() : this._(const LangDan._());
 }
 
 /// A class that represents the Danish language.
@@ -11,9 +11,9 @@ final class LangDan extends NaturalLanguage {
   ///
   /// ISO 639-2/T code: `DAN`, ISO 639-1 code: `DA`.
   /// {@endtemplate}
-  const factory LangDan() = _DanFactory;
+  const factory() = _DanFactory;
 
-  const LangDan._()
+  const new _()
     : super._(
         name: "Danish",
         code: "DAN",

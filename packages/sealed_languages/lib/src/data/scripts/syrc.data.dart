@@ -1,7 +1,7 @@
 part of "../../model/script/submodels/script.dart";
 
 extension type const _SyrcFactory._(ScriptSyrc _) implements ScriptSyrc {
-  const _SyrcFactory() : this._(const ScriptSyrc._());
+  const new() : this._(const ScriptSyrc._());
 }
 
 /// A class that represents the Syriac script.
@@ -11,9 +11,9 @@ final class ScriptSyrc extends Script {
   ///
   /// ISO 15924 Alpha-4 code: `Syrc`, ISO 15924 Numeric code: `135`.
   /// {@endtemplate}
-  const factory ScriptSyrc() = _SyrcFactory;
+  const factory() = _SyrcFactory;
 
-  const ScriptSyrc._()
+  const new _()
     : super._(
         name: "Syriac",
         code: "Syrc",

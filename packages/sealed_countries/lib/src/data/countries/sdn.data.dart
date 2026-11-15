@@ -7,7 +7,7 @@
 part of "../../model/country/submodels/world_country.dart";
 
 extension type const _SdnFactory._(CountrySdn _) implements CountrySdn {
-  const _SdnFactory() : this._(const CountrySdn._());
+  const new() : this._(const CountrySdn._());
 }
 
 /// A class that represents the Sudan country.
@@ -17,9 +17,9 @@ class CountrySdn extends WorldCountry {
   ///
   /// ISO 3166-1 Alpha-3 code: `SDN`, ISO 3166-1 Alpha-2 code: `SD`.
   /// {@endtemplate}
-  const factory CountrySdn() = _SdnFactory;
+  const factory() = _SdnFactory;
 
-  const CountrySdn._()
+  const new _()
     : super._(
         name: const CountryName(
           language: LangEng(),

@@ -7,7 +7,7 @@
 part of "../../model/country/submodels/world_country.dart";
 
 extension type const _ComFactory._(CountryCom _) implements CountryCom {
-  const _ComFactory() : this._(const CountryCom._());
+  const new() : this._(const CountryCom._());
 }
 
 /// A class that represents the Comoros country.
@@ -17,9 +17,9 @@ class CountryCom extends WorldCountry {
   ///
   /// ISO 3166-1 Alpha-3 code: `COM`, ISO 3166-1 Alpha-2 code: `KM`.
   /// {@endtemplate}
-  const factory CountryCom() = _ComFactory;
+  const factory() = _ComFactory;
 
-  const CountryCom._()
+  const new _()
     : super._(
         name: const CountryName(
           language: LangEng(),

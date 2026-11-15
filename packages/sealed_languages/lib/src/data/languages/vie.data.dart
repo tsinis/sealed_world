@@ -1,7 +1,7 @@
 part of "../../model/language/submodels/natural_language.dart";
 
 extension type const _VieFactory._(LangVie _) implements LangVie {
-  const _VieFactory() : this._(const LangVie._());
+  const new() : this._(const LangVie._());
 }
 
 /// A class that represents the Vietnamese language.
@@ -11,9 +11,9 @@ final class LangVie extends NaturalLanguage {
   ///
   /// ISO 639-2/T code: `VIE`, ISO 639-1 code: `VI`.
   /// {@endtemplate}
-  const factory LangVie() = _VieFactory;
+  const factory() = _VieFactory;
 
-  const LangVie._()
+  const new _()
     : super._(
         name: "Vietnamese",
         code: "VIE",

@@ -7,7 +7,7 @@
 part of "../../model/country/submodels/world_country.dart";
 
 extension type const _UgaFactory._(CountryUga _) implements CountryUga {
-  const _UgaFactory() : this._(const CountryUga._());
+  const new() : this._(const CountryUga._());
 }
 
 /// A class that represents the Uganda country.
@@ -17,9 +17,9 @@ class CountryUga extends WorldCountry {
   ///
   /// ISO 3166-1 Alpha-3 code: `UGA`, ISO 3166-1 Alpha-2 code: `UG`.
   /// {@endtemplate}
-  const factory CountryUga() = _UgaFactory;
+  const factory() = _UgaFactory;
 
-  const CountryUga._()
+  const new _()
     : super._(
         name: const CountryName(
           language: LangEng(),

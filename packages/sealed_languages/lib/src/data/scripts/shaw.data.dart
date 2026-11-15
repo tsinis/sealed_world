@@ -1,7 +1,7 @@
 part of "../../model/script/submodels/script.dart";
 
 extension type const _ShawFactory._(ScriptShaw _) implements ScriptShaw {
-  const _ShawFactory() : this._(const ScriptShaw._());
+  const new() : this._(const ScriptShaw._());
 }
 
 /// A class that represents the Shavian (Shaw) script.
@@ -11,9 +11,9 @@ final class ScriptShaw extends Script {
   ///
   /// ISO 15924 Alpha-4 code: `Shaw`, ISO 15924 Numeric code: `281`.
   /// {@endtemplate}
-  const factory ScriptShaw() = _ShawFactory;
+  const factory() = _ShawFactory;
 
-  const ScriptShaw._()
+  const new _()
     : super._(
         name: "Shavian (Shaw)",
         code: "Shaw",

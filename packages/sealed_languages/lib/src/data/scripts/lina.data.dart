@@ -1,7 +1,7 @@
 part of "../../model/script/submodels/script.dart";
 
 extension type const _LinaFactory._(ScriptLina _) implements ScriptLina {
-  const _LinaFactory() : this._(const ScriptLina._());
+  const new() : this._(const ScriptLina._());
 }
 
 /// A class that represents the Linear A script.
@@ -11,9 +11,9 @@ final class ScriptLina extends Script {
   ///
   /// ISO 15924 Alpha-4 code: `Lina`, ISO 15924 Numeric code: `400`.
   /// {@endtemplate}
-  const factory ScriptLina() = _LinaFactory;
+  const factory() = _LinaFactory;
 
-  const ScriptLina._()
+  const new _()
     : super._(
         name: "Linear A",
         code: "Lina",

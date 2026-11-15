@@ -7,7 +7,7 @@
 part of "../../model/country/submodels/world_country.dart";
 
 extension type const _NclFactory._(CountryNcl _) implements CountryNcl {
-  const _NclFactory() : this._(const CountryNcl._());
+  const new() : this._(const CountryNcl._());
 }
 
 /// A class that represents the New Caledonia country.
@@ -17,9 +17,9 @@ class CountryNcl extends WorldCountry {
   ///
   /// ISO 3166-1 Alpha-3 code: `NCL`, ISO 3166-1 Alpha-2 code: `NC`.
   /// {@endtemplate}
-  const factory CountryNcl() = _NclFactory;
+  const factory() = _NclFactory;
 
-  const CountryNcl._()
+  const new _()
     : super._(
         name: const CountryName(
           language: LangEng(),

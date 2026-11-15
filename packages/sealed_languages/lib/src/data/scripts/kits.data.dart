@@ -1,7 +1,7 @@
 part of "../../model/script/submodels/script.dart";
 
 extension type const _KitsFactory._(ScriptKits _) implements ScriptKits {
-  const _KitsFactory() : this._(const ScriptKits._());
+  const new() : this._(const ScriptKits._());
 }
 
 /// A class that represents the Khitan small script script.
@@ -11,9 +11,9 @@ final class ScriptKits extends Script {
   ///
   /// ISO 15924 Alpha-4 code: `Kits`, ISO 15924 Numeric code: `288`.
   /// {@endtemplate}
-  const factory ScriptKits() = _KitsFactory;
+  const factory() = _KitsFactory;
 
-  const ScriptKits._()
+  const new _()
     : super._(
         name: "Khitan small script",
         code: "Kits",

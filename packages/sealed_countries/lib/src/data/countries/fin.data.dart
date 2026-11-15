@@ -7,7 +7,7 @@
 part of "../../model/country/submodels/world_country.dart";
 
 extension type const _FinFactory._(CountryFin _) implements CountryFin {
-  const _FinFactory() : this._(const CountryFin._());
+  const new() : this._(const CountryFin._());
 }
 
 /// A class that represents the Finland country.
@@ -17,9 +17,9 @@ class CountryFin extends WorldCountry {
   ///
   /// ISO 3166-1 Alpha-3 code: `FIN`, ISO 3166-1 Alpha-2 code: `FI`.
   /// {@endtemplate}
-  const factory CountryFin() = _FinFactory;
+  const factory() = _FinFactory;
 
-  const CountryFin._()
+  const new _()
     : super._(
         name: const CountryName(
           language: LangEng(),

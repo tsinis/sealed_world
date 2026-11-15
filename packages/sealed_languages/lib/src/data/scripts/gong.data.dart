@@ -1,7 +1,7 @@
 part of "../../model/script/submodels/script.dart";
 
 extension type const _GongFactory._(ScriptGong _) implements ScriptGong {
-  const _GongFactory() : this._(const ScriptGong._());
+  const new() : this._(const ScriptGong._());
 }
 
 /// A class that represents the Gunjala Gondi script.
@@ -11,9 +11,9 @@ final class ScriptGong extends Script {
   ///
   /// ISO 15924 Alpha-4 code: `Gong`, ISO 15924 Numeric code: `312`.
   /// {@endtemplate}
-  const factory ScriptGong() = _GongFactory;
+  const factory() = _GongFactory;
 
-  const ScriptGong._()
+  const new _()
     : super._(
         name: "Gunjala Gondi",
         code: "Gong",

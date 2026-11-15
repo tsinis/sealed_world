@@ -1,7 +1,7 @@
 part of "../../model/currency/submodels/fiat_currency.dart";
 
 extension type const _LrdFactory._(FiatLrd _) implements FiatLrd {
-  const _LrdFactory() : this._(const FiatLrd._());
+  const new() : this._(const FiatLrd._());
 }
 
 /// A class that represents the Liberian Dollar currency.
@@ -11,9 +11,9 @@ final class FiatLrd extends FiatCurrency {
   ///
   /// ISO 4217 Alpha code: `LRD`, ISO 4217 Numeric code: `430`.
   /// {@endtemplate}
-  const factory FiatLrd() = _LrdFactory;
+  const factory() = _LrdFactory;
 
-  const FiatLrd._()
+  const new _()
     : super(
         code: "LRD",
         name: "Liberian Dollar",

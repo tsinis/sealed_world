@@ -7,7 +7,7 @@
 part of "../../model/country/submodels/world_country.dart";
 
 extension type const _ChnFactory._(CountryChn _) implements CountryChn {
-  const _ChnFactory() : this._(const CountryChn._());
+  const new() : this._(const CountryChn._());
 }
 
 /// A class that represents the China country.
@@ -17,9 +17,9 @@ class CountryChn extends WorldCountry {
   ///
   /// ISO 3166-1 Alpha-3 code: `CHN`, ISO 3166-1 Alpha-2 code: `CN`.
   /// {@endtemplate}
-  const factory CountryChn() = _ChnFactory;
+  const factory() = _ChnFactory;
 
-  const CountryChn._()
+  const new _()
     : super._(
         name: const CountryName(
           language: LangEng(),

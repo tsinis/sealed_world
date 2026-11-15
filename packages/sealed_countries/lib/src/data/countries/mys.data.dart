@@ -7,7 +7,7 @@
 part of "../../model/country/submodels/world_country.dart";
 
 extension type const _MysFactory._(CountryMys _) implements CountryMys {
-  const _MysFactory() : this._(const CountryMys._());
+  const new() : this._(const CountryMys._());
 }
 
 /// A class that represents the Malaysia country.
@@ -17,9 +17,9 @@ class CountryMys extends WorldCountry {
   ///
   /// ISO 3166-1 Alpha-3 code: `MYS`, ISO 3166-1 Alpha-2 code: `MY`.
   /// {@endtemplate}
-  const factory CountryMys() = _MysFactory;
+  const factory() = _MysFactory;
 
-  const CountryMys._()
+  const new _()
     : super._(
         name: const CountryName(
           language: LangEng(),

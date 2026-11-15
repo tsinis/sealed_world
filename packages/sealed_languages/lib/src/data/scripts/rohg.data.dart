@@ -1,7 +1,7 @@
 part of "../../model/script/submodels/script.dart";
 
 extension type const _RohgFactory._(ScriptRohg _) implements ScriptRohg {
-  const _RohgFactory() : this._(const ScriptRohg._());
+  const new() : this._(const ScriptRohg._());
 }
 
 /// A class that represents the Hanifi Rohingya script.
@@ -11,9 +11,9 @@ final class ScriptRohg extends Script {
   ///
   /// ISO 15924 Alpha-4 code: `Rohg`, ISO 15924 Numeric code: `167`.
   /// {@endtemplate}
-  const factory ScriptRohg() = _RohgFactory;
+  const factory() = _RohgFactory;
 
-  const ScriptRohg._()
+  const new _()
     : super._(
         name: "Hanifi Rohingya",
         code: "Rohg",

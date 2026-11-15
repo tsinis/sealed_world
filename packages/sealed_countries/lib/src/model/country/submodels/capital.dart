@@ -26,7 +26,7 @@ final class Capital implements JsonEncodable<Capital> {
   /// de jure and third values.
   ///
   /// The [deFacto] parameter must not be empty.
-  const Capital(this.deFacto, {this.deJure, this.third})
+  const new(this.deFacto, {this.deJure, this.third})
     : assert(third == null || third.length > 0, "`third` should not be empty!"),
       assert(deFacto.length > 0, "`deFacto` capital should not be empty!"),
       assert(

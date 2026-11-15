@@ -1,7 +1,7 @@
 part of "../../model/currency/submodels/fiat_currency.dart";
 
 extension type const _LbpFactory._(FiatLbp _) implements FiatLbp {
-  const _LbpFactory() : this._(const FiatLbp._());
+  const new() : this._(const FiatLbp._());
 }
 
 /// A class that represents the Lebanese Pound currency.
@@ -11,9 +11,9 @@ final class FiatLbp extends FiatCurrency {
   ///
   /// ISO 4217 Alpha code: `LBP`, ISO 4217 Numeric code: `422`.
   /// {@endtemplate}
-  const factory FiatLbp() = _LbpFactory;
+  const factory() = _LbpFactory;
 
-  const FiatLbp._()
+  const new _()
     : super(
         code: "LBP",
         name: "Lebanese Pound",

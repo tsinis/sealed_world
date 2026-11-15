@@ -7,7 +7,7 @@
 part of "../../model/country/submodels/world_country.dart";
 
 extension type const _FlkFactory._(CountryFlk _) implements CountryFlk {
-  const _FlkFactory() : this._(const CountryFlk._());
+  const new() : this._(const CountryFlk._());
 }
 
 /// A class that represents the Falkland Islands country.
@@ -17,9 +17,9 @@ class CountryFlk extends WorldCountry {
   ///
   /// ISO 3166-1 Alpha-3 code: `FLK`, ISO 3166-1 Alpha-2 code: `FK`.
   /// {@endtemplate}
-  const factory CountryFlk() = _FlkFactory;
+  const factory() = _FlkFactory;
 
-  const CountryFlk._()
+  const new _()
     : super._(
         name: const CountryName(
           language: LangEng(),

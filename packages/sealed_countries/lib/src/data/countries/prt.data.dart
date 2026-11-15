@@ -7,7 +7,7 @@
 part of "../../model/country/submodels/world_country.dart";
 
 extension type const _PrtFactory._(CountryPrt _) implements CountryPrt {
-  const _PrtFactory() : this._(const CountryPrt._());
+  const new() : this._(const CountryPrt._());
 }
 
 /// A class that represents the Portugal country.
@@ -17,9 +17,9 @@ class CountryPrt extends WorldCountry {
   ///
   /// ISO 3166-1 Alpha-3 code: `PRT`, ISO 3166-1 Alpha-2 code: `PT`.
   /// {@endtemplate}
-  const factory CountryPrt() = _PrtFactory;
+  const factory() = _PrtFactory;
 
-  const CountryPrt._()
+  const new _()
     : super._(
         name: const CountryName(
           language: LangEng(),

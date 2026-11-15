@@ -7,7 +7,7 @@
 part of "../../model/country/submodels/world_country.dart";
 
 extension type const _SenFactory._(CountrySen _) implements CountrySen {
-  const _SenFactory() : this._(const CountrySen._());
+  const new() : this._(const CountrySen._());
 }
 
 /// A class that represents the Senegal country.
@@ -17,9 +17,9 @@ class CountrySen extends WorldCountry {
   ///
   /// ISO 3166-1 Alpha-3 code: `SEN`, ISO 3166-1 Alpha-2 code: `SN`.
   /// {@endtemplate}
-  const factory CountrySen() = _SenFactory;
+  const factory() = _SenFactory;
 
-  const CountrySen._()
+  const new _()
     : super._(
         name: const CountryName(
           language: LangEng(),

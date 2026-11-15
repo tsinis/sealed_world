@@ -1,7 +1,7 @@
 part of "../../model/script/submodels/script.dart";
 
 extension type const _CprtFactory._(ScriptCprt _) implements ScriptCprt {
-  const _CprtFactory() : this._(const ScriptCprt._());
+  const new() : this._(const ScriptCprt._());
 }
 
 /// A class that represents the Cypriot syllabary script.
@@ -11,9 +11,9 @@ final class ScriptCprt extends Script {
   ///
   /// ISO 15924 Alpha-4 code: `Cprt`, ISO 15924 Numeric code: `403`.
   /// {@endtemplate}
-  const factory ScriptCprt() = _CprtFactory;
+  const factory() = _CprtFactory;
 
-  const ScriptCprt._()
+  const new _()
     : super._(
         name: "Cypriot syllabary",
         code: "Cprt",

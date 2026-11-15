@@ -1,7 +1,7 @@
 part of "../../model/script/submodels/script.dart";
 
 extension type const _HanbFactory._(ScriptHanb _) implements ScriptHanb {
-  const _HanbFactory() : this._(const ScriptHanb._());
+  const new() : this._(const ScriptHanb._());
 }
 
 /// A class that represents the Han with Bopomofo (alias for Han + Bopomofo)
@@ -13,9 +13,9 @@ final class ScriptHanb extends Script {
   ///
   /// ISO 15924 Alpha-4 code: `Hanb`, ISO 15924 Numeric code: `503`.
   /// {@endtemplate}
-  const factory ScriptHanb() = _HanbFactory;
+  const factory() = _HanbFactory;
 
-  const ScriptHanb._()
+  const new _()
     : super._(
         name: "Han with Bopomofo (alias for Han + Bopomofo)",
         code: "Hanb",

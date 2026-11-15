@@ -1,7 +1,7 @@
 part of "../../model/script/submodels/script.dart";
 
 extension type const _BengFactory._(ScriptBeng _) implements ScriptBeng {
-  const _BengFactory() : this._(const ScriptBeng._());
+  const new() : this._(const ScriptBeng._());
 }
 
 /// A class that represents the Bengali (Bangla) script.
@@ -11,9 +11,9 @@ final class ScriptBeng extends Script {
   ///
   /// ISO 15924 Alpha-4 code: `Beng`, ISO 15924 Numeric code: `325`.
   /// {@endtemplate}
-  const factory ScriptBeng() = _BengFactory;
+  const factory() = _BengFactory;
 
-  const ScriptBeng._()
+  const new _()
     : super._(
         name: "Bengali (Bangla)",
         code: "Beng",

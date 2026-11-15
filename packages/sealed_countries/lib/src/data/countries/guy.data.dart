@@ -7,7 +7,7 @@
 part of "../../model/country/submodels/world_country.dart";
 
 extension type const _GuyFactory._(CountryGuy _) implements CountryGuy {
-  const _GuyFactory() : this._(const CountryGuy._());
+  const new() : this._(const CountryGuy._());
 }
 
 /// A class that represents the Guyana country.
@@ -17,9 +17,9 @@ class CountryGuy extends WorldCountry {
   ///
   /// ISO 3166-1 Alpha-3 code: `GUY`, ISO 3166-1 Alpha-2 code: `GY`.
   /// {@endtemplate}
-  const factory CountryGuy() = _GuyFactory;
+  const factory() = _GuyFactory;
 
-  const CountryGuy._()
+  const new _()
     : super._(
         name: const CountryName(
           language: LangEng(),

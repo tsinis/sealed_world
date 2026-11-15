@@ -1,7 +1,7 @@
 part of "../../model/currency/submodels/fiat_currency.dart";
 
 extension type const _LakFactory._(FiatLak _) implements FiatLak {
-  const _LakFactory() : this._(const FiatLak._());
+  const new() : this._(const FiatLak._());
 }
 
 /// A class that represents the Laotian Kip currency.
@@ -11,9 +11,9 @@ final class FiatLak extends FiatCurrency {
   ///
   /// ISO 4217 Alpha code: `LAK`, ISO 4217 Numeric code: `418`.
   /// {@endtemplate}
-  const factory FiatLak() = _LakFactory;
+  const factory() = _LakFactory;
 
-  const FiatLak._()
+  const new _()
     : super(
         code: "LAK",
         name: "Laotian Kip",

@@ -1,7 +1,7 @@
 part of "../../model/currency/submodels/fiat_currency.dart";
 
 extension type const _KgsFactory._(FiatKgs _) implements FiatKgs {
-  const _KgsFactory() : this._(const FiatKgs._());
+  const new() : this._(const FiatKgs._());
 }
 
 /// A class that represents the Kyrgyzstani Som currency.
@@ -11,9 +11,9 @@ final class FiatKgs extends FiatCurrency {
   ///
   /// ISO 4217 Alpha code: `KGS`, ISO 4217 Numeric code: `417`.
   /// {@endtemplate}
-  const factory FiatKgs() = _KgsFactory;
+  const factory() = _KgsFactory;
 
-  const FiatKgs._()
+  const new _()
     : super(
         code: "KGS",
         name: "Kyrgyzstani Som",

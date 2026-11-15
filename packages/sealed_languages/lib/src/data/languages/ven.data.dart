@@ -1,7 +1,7 @@
 part of "../../model/language/submodels/natural_language.dart";
 
 extension type const _VenFactory._(LangVen _) implements LangVen {
-  const _VenFactory() : this._(const LangVen._());
+  const new() : this._(const LangVen._());
 }
 
 /// A class that represents the Venda language.
@@ -11,9 +11,9 @@ final class LangVen extends NaturalLanguage {
   ///
   /// ISO 639-2/T code: `VEN`, ISO 639-1 code: `VE`.
   /// {@endtemplate}
-  const factory LangVen() = _VenFactory;
+  const factory() = _VenFactory;
 
-  const LangVen._()
+  const new _()
     : super._(
         name: "Venda",
         code: "VEN",

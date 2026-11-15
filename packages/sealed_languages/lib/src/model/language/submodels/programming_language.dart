@@ -12,7 +12,7 @@ class ProgrammingLanguage extends Language {
   /// [isCompiled] parameter specifies whether the language is compiled
   /// (defaults to `true`). The optional [isLowLevel] parameter specifies
   /// whether the language is low-level (defaults to `false`).
-  const ProgrammingLanguage({
+  const new({
     required super.name,
     this.isCompiled = true,
     this.isLowLevel = false,

@@ -1,7 +1,7 @@
 part of "../../model/language/submodels/natural_language.dart";
 
 extension type const _NorFactory._(LangNor _) implements LangNor {
-  const _NorFactory() : this._(const LangNor._());
+  const new() : this._(const LangNor._());
 }
 
 /// A class that represents the Norwegian language.
@@ -11,9 +11,9 @@ final class LangNor extends NaturalLanguage {
   ///
   /// ISO 639-2/T code: `NOR`, ISO 639-1 code: `NO`.
   /// {@endtemplate}
-  const factory LangNor() = _NorFactory;
+  const factory() = _NorFactory;
 
-  const LangNor._()
+  const new _()
     : super._(
         name: "Norwegian",
         code: "NOR",

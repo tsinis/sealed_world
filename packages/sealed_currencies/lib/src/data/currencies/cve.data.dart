@@ -1,7 +1,7 @@
 part of "../../model/currency/submodels/fiat_currency.dart";
 
 extension type const _CveFactory._(FiatCve _) implements FiatCve {
-  const _CveFactory() : this._(const FiatCve._());
+  const new() : this._(const FiatCve._());
 }
 
 /// A class that represents the Cape Verdean Escudo currency.
@@ -11,9 +11,9 @@ final class FiatCve extends FiatCurrency {
   ///
   /// ISO 4217 Alpha code: `CVE`, ISO 4217 Numeric code: `132`.
   /// {@endtemplate}
-  const factory FiatCve() = _CveFactory;
+  const factory() = _CveFactory;
 
-  const FiatCve._()
+  const new _()
     : super(
         code: "CVE",
         name: "Cape Verdean Escudo",

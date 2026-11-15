@@ -7,7 +7,7 @@
 part of "../../model/country/submodels/world_country.dart";
 
 extension type const _AlaFactory._(CountryAla _) implements CountryAla {
-  const _AlaFactory() : this._(const CountryAla._());
+  const new() : this._(const CountryAla._());
 }
 
 /// A class that represents the Åland Islands country.
@@ -17,9 +17,9 @@ class CountryAla extends WorldCountry {
   ///
   /// ISO 3166-1 Alpha-3 code: `ALA`, ISO 3166-1 Alpha-2 code: `AX`.
   /// {@endtemplate}
-  const factory CountryAla() = _AlaFactory;
+  const factory() = _AlaFactory;
 
-  const CountryAla._()
+  const new _()
     : super._(
         name: const CountryName(
           language: LangEng(),

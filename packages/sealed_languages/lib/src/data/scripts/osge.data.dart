@@ -1,7 +1,7 @@
 part of "../../model/script/submodels/script.dart";
 
 extension type const _OsgeFactory._(ScriptOsge _) implements ScriptOsge {
-  const _OsgeFactory() : this._(const ScriptOsge._());
+  const new() : this._(const ScriptOsge._());
 }
 
 /// A class that represents the Osage script.
@@ -11,9 +11,9 @@ final class ScriptOsge extends Script {
   ///
   /// ISO 15924 Alpha-4 code: `Osge`, ISO 15924 Numeric code: `219`.
   /// {@endtemplate}
-  const factory ScriptOsge() = _OsgeFactory;
+  const factory() = _OsgeFactory;
 
-  const ScriptOsge._()
+  const new _()
     : super._(
         name: "Osage",
         code: "Osge",

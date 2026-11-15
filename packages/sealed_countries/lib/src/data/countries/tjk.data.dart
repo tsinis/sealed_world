@@ -7,7 +7,7 @@
 part of "../../model/country/submodels/world_country.dart";
 
 extension type const _TjkFactory._(CountryTjk _) implements CountryTjk {
-  const _TjkFactory() : this._(const CountryTjk._());
+  const new() : this._(const CountryTjk._());
 }
 
 /// A class that represents the Tajikistan country.
@@ -17,9 +17,9 @@ class CountryTjk extends WorldCountry {
   ///
   /// ISO 3166-1 Alpha-3 code: `TJK`, ISO 3166-1 Alpha-2 code: `TJ`.
   /// {@endtemplate}
-  const factory CountryTjk() = _TjkFactory;
+  const factory() = _TjkFactory;
 
-  const CountryTjk._()
+  const new _()
     : super._(
         name: const CountryName(
           language: LangEng(),

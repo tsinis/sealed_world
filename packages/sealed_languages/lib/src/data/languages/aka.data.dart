@@ -1,7 +1,7 @@
 part of "../../model/language/submodels/natural_language.dart";
 
 extension type const _AkaFactory._(LangAka _) implements LangAka {
-  const _AkaFactory() : this._(const LangAka._());
+  const new() : this._(const LangAka._());
 }
 
 /// A class that represents the Akan language.
@@ -11,9 +11,9 @@ final class LangAka extends NaturalLanguage {
   ///
   /// ISO 639-2/T code: `AKA`, ISO 639-1 code: `AK`.
   /// {@endtemplate}
-  const factory LangAka() = _AkaFactory;
+  const factory() = _AkaFactory;
 
-  const LangAka._()
+  const new _()
     : super._(
         name: "Akan",
         code: "AKA",

@@ -7,7 +7,7 @@
 part of "../../model/country/submodels/world_country.dart";
 
 extension type const _DnkFactory._(CountryDnk _) implements CountryDnk {
-  const _DnkFactory() : this._(const CountryDnk._());
+  const new() : this._(const CountryDnk._());
 }
 
 /// A class that represents the Denmark country.
@@ -17,9 +17,9 @@ class CountryDnk extends WorldCountry {
   ///
   /// ISO 3166-1 Alpha-3 code: `DNK`, ISO 3166-1 Alpha-2 code: `DK`.
   /// {@endtemplate}
-  const factory CountryDnk() = _DnkFactory;
+  const factory() = _DnkFactory;
 
-  const CountryDnk._()
+  const new _()
     : super._(
         name: const CountryName(
           language: LangEng(),

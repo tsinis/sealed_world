@@ -7,7 +7,7 @@
 part of "../../model/country/submodels/world_country.dart";
 
 extension type const _YemFactory._(CountryYem _) implements CountryYem {
-  const _YemFactory() : this._(const CountryYem._());
+  const new() : this._(const CountryYem._());
 }
 
 /// A class that represents the Yemen country.
@@ -17,9 +17,9 @@ class CountryYem extends WorldCountry {
   ///
   /// ISO 3166-1 Alpha-3 code: `YEM`, ISO 3166-1 Alpha-2 code: `YE`.
   /// {@endtemplate}
-  const factory CountryYem() = _YemFactory;
+  const factory() = _YemFactory;
 
-  const CountryYem._()
+  const new _()
     : super._(
         name: const CountryName(
           language: LangEng(),

@@ -7,7 +7,7 @@
 part of "../../model/country/submodels/world_country.dart";
 
 extension type const _SvkFactory._(CountrySvk _) implements CountrySvk {
-  const _SvkFactory() : this._(const CountrySvk._());
+  const new() : this._(const CountrySvk._());
 }
 
 /// A class that represents the Slovakia country.
@@ -17,9 +17,9 @@ class CountrySvk extends WorldCountry {
   ///
   /// ISO 3166-1 Alpha-3 code: `SVK`, ISO 3166-1 Alpha-2 code: `SK`.
   /// {@endtemplate}
-  const factory CountrySvk() = _SvkFactory;
+  const factory() = _SvkFactory;
 
-  const CountrySvk._()
+  const new _()
     : super._(
         name: const CountryName(
           language: LangEng(),

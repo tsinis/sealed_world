@@ -1,7 +1,7 @@
 part of "../../model/script/submodels/script.dart";
 
 extension type const _YeziFactory._(ScriptYezi _) implements ScriptYezi {
-  const _YeziFactory() : this._(const ScriptYezi._());
+  const new() : this._(const ScriptYezi._());
 }
 
 /// A class that represents the Yezidi script.
@@ -11,9 +11,9 @@ final class ScriptYezi extends Script {
   ///
   /// ISO 15924 Alpha-4 code: `Yezi`, ISO 15924 Numeric code: `192`.
   /// {@endtemplate}
-  const factory ScriptYezi() = _YeziFactory;
+  const factory() = _YeziFactory;
 
-  const ScriptYezi._()
+  const new _()
     : super._(
         name: "Yezidi",
         code: "Yezi",

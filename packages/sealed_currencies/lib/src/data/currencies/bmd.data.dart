@@ -1,7 +1,7 @@
 part of "../../model/currency/submodels/fiat_currency.dart";
 
 extension type const _BmdFactory._(FiatBmd _) implements FiatBmd {
-  const _BmdFactory() : this._(const FiatBmd._());
+  const new() : this._(const FiatBmd._());
 }
 
 /// A class that represents the Bermudian Dollar currency.
@@ -11,9 +11,9 @@ final class FiatBmd extends FiatCurrency {
   ///
   /// ISO 4217 Alpha code: `BMD`, ISO 4217 Numeric code: `060`.
   /// {@endtemplate}
-  const factory FiatBmd() = _BmdFactory;
+  const factory() = _BmdFactory;
 
-  const FiatBmd._()
+  const new _()
     : super(
         code: "BMD",
         name: "Bermudian Dollar",

@@ -1,7 +1,7 @@
 part of "../../model/currency/submodels/fiat_currency.dart";
 
 extension type const _XptFactory._(FiatXpt _) implements FiatXpt {
-  const _XptFactory() : this._(const FiatXpt._());
+  const new() : this._(const FiatXpt._());
 }
 
 /// A class that represents the Platinum currency.
@@ -11,9 +11,9 @@ final class FiatXpt extends FiatCurrency {
   ///
   /// ISO 4217 Alpha code: `XPT`, ISO 4217 Numeric code: `962`.
   /// {@endtemplate}
-  const factory FiatXpt() = _XptFactory;
+  const factory() = _XptFactory;
 
-  const FiatXpt._()
+  const new _()
     : super(
         code: "XPT",
         name: "Platinum",

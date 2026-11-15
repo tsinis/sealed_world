@@ -7,7 +7,7 @@
 part of "../../model/country/submodels/world_country.dart";
 
 extension type const _IrqFactory._(CountryIrq _) implements CountryIrq {
-  const _IrqFactory() : this._(const CountryIrq._());
+  const new() : this._(const CountryIrq._());
 }
 
 /// A class that represents the Iraq country.
@@ -17,9 +17,9 @@ class CountryIrq extends WorldCountry {
   ///
   /// ISO 3166-1 Alpha-3 code: `IRQ`, ISO 3166-1 Alpha-2 code: `IQ`.
   /// {@endtemplate}
-  const factory CountryIrq() = _IrqFactory;
+  const factory() = _IrqFactory;
 
-  const CountryIrq._()
+  const new _()
     : super._(
         name: const CountryName(
           language: LangEng(),

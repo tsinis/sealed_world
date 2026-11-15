@@ -7,7 +7,7 @@
 part of "../../model/country/submodels/world_country.dart";
 
 extension type const _PngFactory._(CountryPng _) implements CountryPng {
-  const _PngFactory() : this._(const CountryPng._());
+  const new() : this._(const CountryPng._());
 }
 
 /// A class that represents the Papua New Guinea country.
@@ -17,9 +17,9 @@ class CountryPng extends WorldCountry {
   ///
   /// ISO 3166-1 Alpha-3 code: `PNG`, ISO 3166-1 Alpha-2 code: `PG`.
   /// {@endtemplate}
-  const factory CountryPng() = _PngFactory;
+  const factory() = _PngFactory;
 
-  const CountryPng._()
+  const new _()
     : super._(
         name: const CountryName(
           language: LangEng(),

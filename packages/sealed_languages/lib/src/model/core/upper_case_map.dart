@@ -61,7 +61,7 @@ class UpperCaseMap<V extends Object> extends MapView<String, V> {
   /// [map]: The original map that this is a view of.
   /// [defaultValue]: An optional default value to return when a key is not
   /// found.
-  const UpperCaseMap(super.map, {this.defaultValue});
+  const new(super.map, {this.defaultValue});
 
   /// The default value to return when a key lookup does not exist in the map.
   ///

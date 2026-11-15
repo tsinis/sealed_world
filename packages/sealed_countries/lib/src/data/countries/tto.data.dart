@@ -7,7 +7,7 @@
 part of "../../model/country/submodels/world_country.dart";
 
 extension type const _TtoFactory._(CountryTto _) implements CountryTto {
-  const _TtoFactory() : this._(const CountryTto._());
+  const new() : this._(const CountryTto._());
 }
 
 /// A class that represents the Trinidad and Tobago country.
@@ -17,9 +17,9 @@ class CountryTto extends WorldCountry {
   ///
   /// ISO 3166-1 Alpha-3 code: `TTO`, ISO 3166-1 Alpha-2 code: `TT`.
   /// {@endtemplate}
-  const factory CountryTto() = _TtoFactory;
+  const factory() = _TtoFactory;
 
-  const CountryTto._()
+  const new _()
     : super._(
         name: const CountryName(
           language: LangEng(),

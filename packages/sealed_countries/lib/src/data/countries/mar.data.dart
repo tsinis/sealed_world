@@ -7,7 +7,7 @@
 part of "../../model/country/submodels/world_country.dart";
 
 extension type const _MarFactory._(CountryMar _) implements CountryMar {
-  const _MarFactory() : this._(const CountryMar._());
+  const new() : this._(const CountryMar._());
 }
 
 /// A class that represents the Morocco country.
@@ -17,9 +17,9 @@ class CountryMar extends WorldCountry {
   ///
   /// ISO 3166-1 Alpha-3 code: `MAR`, ISO 3166-1 Alpha-2 code: `MA`.
   /// {@endtemplate}
-  const factory CountryMar() = _MarFactory;
+  const factory() = _MarFactory;
 
-  const CountryMar._()
+  const new _()
     : super._(
         name: const CountryName(
           language: LangEng(),

@@ -1,7 +1,7 @@
 part of "../../model/currency/submodels/fiat_currency.dart";
 
 extension type const _BwpFactory._(FiatBwp _) implements FiatBwp {
-  const _BwpFactory() : this._(const FiatBwp._());
+  const new() : this._(const FiatBwp._());
 }
 
 /// A class that represents the Botswanan Pula currency.
@@ -11,9 +11,9 @@ final class FiatBwp extends FiatCurrency {
   ///
   /// ISO 4217 Alpha code: `BWP`, ISO 4217 Numeric code: `072`.
   /// {@endtemplate}
-  const factory FiatBwp() = _BwpFactory;
+  const factory() = _BwpFactory;
 
-  const FiatBwp._()
+  const new _()
     : super(
         code: "BWP",
         name: "Botswanan Pula",

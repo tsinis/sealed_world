@@ -7,7 +7,7 @@
 part of "../../model/country/submodels/world_country.dart";
 
 extension type const _MrtFactory._(CountryMrt _) implements CountryMrt {
-  const _MrtFactory() : this._(const CountryMrt._());
+  const new() : this._(const CountryMrt._());
 }
 
 /// A class that represents the Mauritania country.
@@ -17,9 +17,9 @@ class CountryMrt extends WorldCountry {
   ///
   /// ISO 3166-1 Alpha-3 code: `MRT`, ISO 3166-1 Alpha-2 code: `MR`.
   /// {@endtemplate}
-  const factory CountryMrt() = _MrtFactory;
+  const factory() = _MrtFactory;
 
-  const CountryMrt._()
+  const new _()
     : super._(
         name: const CountryName(
           language: LangEng(),

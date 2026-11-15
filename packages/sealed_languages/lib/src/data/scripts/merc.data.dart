@@ -1,7 +1,7 @@
 part of "../../model/script/submodels/script.dart";
 
 extension type const _MercFactory._(ScriptMerc _) implements ScriptMerc {
-  const _MercFactory() : this._(const ScriptMerc._());
+  const new() : this._(const ScriptMerc._());
 }
 
 /// A class that represents the Meroitic Cursive script.
@@ -11,9 +11,9 @@ final class ScriptMerc extends Script {
   ///
   /// ISO 15924 Alpha-4 code: `Merc`, ISO 15924 Numeric code: `101`.
   /// {@endtemplate}
-  const factory ScriptMerc() = _MercFactory;
+  const factory() = _MercFactory;
 
-  const ScriptMerc._()
+  const new _()
     : super._(
         name: "Meroitic Cursive",
         code: "Merc",

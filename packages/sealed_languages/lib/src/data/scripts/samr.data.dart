@@ -1,7 +1,7 @@
 part of "../../model/script/submodels/script.dart";
 
 extension type const _SamrFactory._(ScriptSamr _) implements ScriptSamr {
-  const _SamrFactory() : this._(const ScriptSamr._());
+  const new() : this._(const ScriptSamr._());
 }
 
 /// A class that represents the Samaritan script.
@@ -11,9 +11,9 @@ final class ScriptSamr extends Script {
   ///
   /// ISO 15924 Alpha-4 code: `Samr`, ISO 15924 Numeric code: `123`.
   /// {@endtemplate}
-  const factory ScriptSamr() = _SamrFactory;
+  const factory() = _SamrFactory;
 
-  const ScriptSamr._()
+  const new _()
     : super._(
         name: "Samaritan",
         code: "Samr",

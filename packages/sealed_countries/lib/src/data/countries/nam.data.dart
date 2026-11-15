@@ -7,7 +7,7 @@
 part of "../../model/country/submodels/world_country.dart";
 
 extension type const _NamFactory._(CountryNam _) implements CountryNam {
-  const _NamFactory() : this._(const CountryNam._());
+  const new() : this._(const CountryNam._());
 }
 
 /// A class that represents the Namibia country.
@@ -17,9 +17,9 @@ class CountryNam extends WorldCountry {
   ///
   /// ISO 3166-1 Alpha-3 code: `NAM`, ISO 3166-1 Alpha-2 code: `NA`.
   /// {@endtemplate}
-  const factory CountryNam() = _NamFactory;
+  const factory() = _NamFactory;
 
-  const CountryNam._()
+  const new _()
     : super._(
         name: const CountryName(
           language: LangEng(),

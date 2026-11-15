@@ -1,7 +1,7 @@
 part of "../../model/script/submodels/script.dart";
 
 extension type const _TaleFactory._(ScriptTale _) implements ScriptTale {
-  const _TaleFactory() : this._(const ScriptTale._());
+  const new() : this._(const ScriptTale._());
 }
 
 /// A class that represents the Tai Le script.
@@ -11,9 +11,9 @@ final class ScriptTale extends Script {
   ///
   /// ISO 15924 Alpha-4 code: `Tale`, ISO 15924 Numeric code: `353`.
   /// {@endtemplate}
-  const factory ScriptTale() = _TaleFactory;
+  const factory() = _TaleFactory;
 
-  const ScriptTale._()
+  const new _()
     : super._(
         name: "Tai Le",
         code: "Tale",

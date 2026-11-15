@@ -7,7 +7,7 @@
 part of "../../model/country/submodels/world_country.dart";
 
 extension type const _ThaFactory._(CountryTha _) implements CountryTha {
-  const _ThaFactory() : this._(const CountryTha._());
+  const new() : this._(const CountryTha._());
 }
 
 /// A class that represents the Thailand country.
@@ -17,9 +17,9 @@ class CountryTha extends WorldCountry {
   ///
   /// ISO 3166-1 Alpha-3 code: `THA`, ISO 3166-1 Alpha-2 code: `TH`.
   /// {@endtemplate}
-  const factory CountryTha() = _ThaFactory;
+  const factory() = _ThaFactory;
 
-  const CountryTha._()
+  const new _()
     : super._(
         name: const CountryName(
           language: LangEng(),

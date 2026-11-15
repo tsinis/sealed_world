@@ -1,7 +1,7 @@
 part of "../../model/script/submodels/script.dart";
 
 extension type const _MteiFactory._(ScriptMtei _) implements ScriptMtei {
-  const _MteiFactory() : this._(const ScriptMtei._());
+  const new() : this._(const ScriptMtei._());
 }
 
 /// A class that represents the Meitei Mayek (Meithei, Meetei) script.
@@ -12,9 +12,9 @@ final class ScriptMtei extends Script {
   ///
   /// ISO 15924 Alpha-4 code: `Mtei`, ISO 15924 Numeric code: `337`.
   /// {@endtemplate}
-  const factory ScriptMtei() = _MteiFactory;
+  const factory() = _MteiFactory;
 
-  const ScriptMtei._()
+  const new _()
     : super._(
         name: "Meitei Mayek (Meithei, Meetei)",
         code: "Mtei",

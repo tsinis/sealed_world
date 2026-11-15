@@ -1,7 +1,7 @@
 part of "../../model/script/submodels/script.dart";
 
 extension type const _BatkFactory._(ScriptBatk _) implements ScriptBatk {
-  const _BatkFactory() : this._(const ScriptBatk._());
+  const new() : this._(const ScriptBatk._());
 }
 
 /// A class that represents the Batak script.
@@ -11,9 +11,9 @@ final class ScriptBatk extends Script {
   ///
   /// ISO 15924 Alpha-4 code: `Batk`, ISO 15924 Numeric code: `365`.
   /// {@endtemplate}
-  const factory ScriptBatk() = _BatkFactory;
+  const factory() = _BatkFactory;
 
-  const ScriptBatk._()
+  const new _()
     : super._(
         name: "Batak",
         code: "Batk",

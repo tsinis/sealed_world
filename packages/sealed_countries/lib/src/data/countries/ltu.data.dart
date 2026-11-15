@@ -7,7 +7,7 @@
 part of "../../model/country/submodels/world_country.dart";
 
 extension type const _LtuFactory._(CountryLtu _) implements CountryLtu {
-  const _LtuFactory() : this._(const CountryLtu._());
+  const new() : this._(const CountryLtu._());
 }
 
 /// A class that represents the Lithuania country.
@@ -17,9 +17,9 @@ class CountryLtu extends WorldCountry {
   ///
   /// ISO 3166-1 Alpha-3 code: `LTU`, ISO 3166-1 Alpha-2 code: `LT`.
   /// {@endtemplate}
-  const factory CountryLtu() = _LtuFactory;
+  const factory() = _LtuFactory;
 
-  const CountryLtu._()
+  const new _()
     : super._(
         name: const CountryName(
           language: LangEng(),

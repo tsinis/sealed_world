@@ -1,7 +1,7 @@
 part of "../../model/script/submodels/script.dart";
 
 extension type const _BopoFactory._(ScriptBopo _) implements ScriptBopo {
-  const _BopoFactory() : this._(const ScriptBopo._());
+  const new() : this._(const ScriptBopo._());
 }
 
 /// A class that represents the Bopomofo script.
@@ -11,9 +11,9 @@ final class ScriptBopo extends Script {
   ///
   /// ISO 15924 Alpha-4 code: `Bopo`, ISO 15924 Numeric code: `285`.
   /// {@endtemplate}
-  const factory ScriptBopo() = _BopoFactory;
+  const factory() = _BopoFactory;
 
-  const ScriptBopo._()
+  const new _()
     : super._(
         name: "Bopomofo",
         code: "Bopo",

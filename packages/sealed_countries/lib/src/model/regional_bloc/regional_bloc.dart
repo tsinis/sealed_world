@@ -23,7 +23,7 @@ sealed class RegionalBloc extends WorldBloc {
   /// Creates a new [RegionalBloc] object with the given name.
   ///
   /// The [name] and [acronym] parameters are required and must not be empty.
-  const RegionalBloc._({
+  const new _({
     required String super.acronym,
     required super.name,
     this.otherAcronyms,
@@ -40,11 +40,8 @@ sealed class RegionalBloc extends WorldBloc {
   /// The optional [blocs] parameter can be used to specify a list of
   /// [RegionalBloc] objects to search through.
   /// {@macro optional_instances_array_parameter}
-  factory RegionalBloc.fromAcronym(
-    Object acronym, [
-    Iterable<RegionalBloc>? blocs,
-    // ignore: avoid-non-empty-constructor-bodies, more clear for factory methods.
-  ]) {
+  // ignore: avoid-non-empty-constructor-bodies, more clear for factory methods.
+  factory fromAcronym(Object acronym, [Iterable<RegionalBloc>? blocs]) {
     final string = IsoObject.maybe(acronym)?.toUpperCaseCode();
     final regionalBlocs = blocs ?? list;
 
@@ -59,7 +56,7 @@ sealed class RegionalBloc extends WorldBloc {
 
   /// Creates a new [RegionalBloc] object from its [name].
   // ignore: avoid-non-empty-constructor-bodies, false positive, it's factory...
-  factory RegionalBloc.fromName(String name) {
+  factory fromName(String name) {
     final upperCaseName = IsoObject(name).toUpperCaseCode();
 
     return list.firstWhere((bloc) => bloc.name.toUpperCase() == upperCaseName);

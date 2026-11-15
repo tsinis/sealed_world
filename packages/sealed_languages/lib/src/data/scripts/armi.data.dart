@@ -1,7 +1,7 @@
 part of "../../model/script/submodels/script.dart";
 
 extension type const _ArmiFactory._(ScriptArmi _) implements ScriptArmi {
-  const _ArmiFactory() : this._(const ScriptArmi._());
+  const new() : this._(const ScriptArmi._());
 }
 
 /// A class that represents the Imperial Aramaic script.
@@ -11,9 +11,9 @@ final class ScriptArmi extends Script {
   ///
   /// ISO 15924 Alpha-4 code: `Armi`, ISO 15924 Numeric code: `124`.
   /// {@endtemplate}
-  const factory ScriptArmi() = _ArmiFactory;
+  const factory() = _ArmiFactory;
 
-  const ScriptArmi._()
+  const new _()
     : super._(
         name: "Imperial Aramaic",
         code: "Armi",

@@ -1,7 +1,7 @@
 part of "../../model/language/submodels/natural_language.dart";
 
 extension type const _MriFactory._(LangMri _) implements LangMri {
-  const _MriFactory() : this._(const LangMri._());
+  const new() : this._(const LangMri._());
 }
 
 /// A class that represents the Māori language.
@@ -11,9 +11,9 @@ final class LangMri extends NaturalLanguage {
   ///
   /// ISO 639-2/T code: `MRI`, ISO 639-1 code: `MI`.
   /// {@endtemplate}
-  const factory LangMri() = _MriFactory;
+  const factory() = _MriFactory;
 
-  const LangMri._()
+  const new _()
     : super._(
         name: "Māori",
         code: "MRI",

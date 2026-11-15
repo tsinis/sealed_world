@@ -1,7 +1,7 @@
 part of "../../model/language/submodels/natural_language.dart";
 
 extension type const _HatFactory._(LangHat _) implements LangHat {
-  const _HatFactory() : this._(const LangHat._());
+  const new() : this._(const LangHat._());
 }
 
 /// A class that represents the Haitian (Haitian Creole) language.
@@ -11,9 +11,9 @@ final class LangHat extends NaturalLanguage {
   ///
   /// ISO 639-2/T code: `HAT`, ISO 639-1 code: `HT`.
   /// {@endtemplate}
-  const factory LangHat() = _HatFactory;
+  const factory() = _HatFactory;
 
-  const LangHat._()
+  const new _()
     : super._(
         name: "Haitian (Haitian Creole)",
         code: "HAT",

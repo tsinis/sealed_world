@@ -1,7 +1,7 @@
 part of "../../model/language/submodels/natural_language.dart";
 
 extension type const _CatFactory._(LangCat _) implements LangCat {
-  const _CatFactory() : this._(const LangCat._());
+  const new() : this._(const LangCat._());
 }
 
 /// A class that represents the Catalan language.
@@ -11,9 +11,9 @@ final class LangCat extends NaturalLanguage {
   ///
   /// ISO 639-2/T code: `CAT`, ISO 639-1 code: `CA`.
   /// {@endtemplate}
-  const factory LangCat() = _CatFactory;
+  const factory() = _CatFactory;
 
-  const LangCat._()
+  const new _()
     : super._(
         name: "Catalan",
         code: "CAT",

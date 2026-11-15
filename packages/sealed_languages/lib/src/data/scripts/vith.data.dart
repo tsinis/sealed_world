@@ -1,7 +1,7 @@
 part of "../../model/script/submodels/script.dart";
 
 extension type const _VithFactory._(ScriptVith _) implements ScriptVith {
-  const _VithFactory() : this._(const ScriptVith._());
+  const new() : this._(const ScriptVith._());
 }
 
 /// A class that represents the Vithkuqi script.
@@ -11,9 +11,9 @@ final class ScriptVith extends Script {
   ///
   /// ISO 15924 Alpha-4 code: `Vith`, ISO 15924 Numeric code: `228`.
   /// {@endtemplate}
-  const factory ScriptVith() = _VithFactory;
+  const factory() = _VithFactory;
 
-  const ScriptVith._()
+  const new _()
     : super._(
         name: "Vithkuqi",
         code: "Vith",

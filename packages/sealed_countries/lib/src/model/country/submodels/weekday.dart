@@ -35,7 +35,7 @@ enum Weekday implements JsonEncodable<Weekday> {
   sunday("Sunday");
 
   /// Creates a new [Weekday] object with the given label.
-  Weekday(this.label);
+  new(this.label);
 
   /// The label that corresponds to this `Weekday` object.
   final String label;

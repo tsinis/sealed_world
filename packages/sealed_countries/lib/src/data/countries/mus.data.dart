@@ -7,7 +7,7 @@
 part of "../../model/country/submodels/world_country.dart";
 
 extension type const _MusFactory._(CountryMus _) implements CountryMus {
-  const _MusFactory() : this._(const CountryMus._());
+  const new() : this._(const CountryMus._());
 }
 
 /// A class that represents the Mauritius country.
@@ -17,9 +17,9 @@ class CountryMus extends WorldCountry {
   ///
   /// ISO 3166-1 Alpha-3 code: `MUS`, ISO 3166-1 Alpha-2 code: `MU`.
   /// {@endtemplate}
-  const factory CountryMus() = _MusFactory;
+  const factory() = _MusFactory;
 
-  const CountryMus._()
+  const new _()
     : super._(
         name: const CountryName(
           language: LangEng(),

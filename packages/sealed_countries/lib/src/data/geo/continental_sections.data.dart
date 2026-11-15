@@ -19,7 +19,7 @@ part of "../../model/geo/submodels/subregion.dart";
 /// ```
 final class CentralAmerica extends SubRegion {
   /// Creates a new [CentralAmerica] instance.
-  const CentralAmerica() : super(const Americas(), name: "Central America");
+  const new() : super(const Americas(), name: "Central America");
 }
 
 /// Represents the North America region, which includes the countries of Canada,
@@ -40,7 +40,7 @@ final class CentralAmerica extends SubRegion {
 /// ```
 final class NorthAmerica extends SubRegion {
   /// Creates a new [NorthAmerica] instance.
-  const NorthAmerica() : super(const Americas(), name: "North America");
+  const new() : super(const Americas(), name: "North America");
 }
 
 /// Represents the South America region, which includes the countries of
@@ -61,7 +61,7 @@ final class NorthAmerica extends SubRegion {
 /// ```
 final class SouthAmerica extends SubRegion {
   /// Creates a new [SouthAmerica] instance.
-  const SouthAmerica() : super(const Americas(), name: "South America");
+  const new() : super(const Americas(), name: "South America");
 }
 
 /// Represents the Caribbean region, which includes the islands of the Caribbean
@@ -82,7 +82,7 @@ final class SouthAmerica extends SubRegion {
 /// ```
 final class Caribbean extends SubRegion {
   /// Creates a new [Caribbean] instance.
-  const Caribbean() : super(const Americas(), name: "Caribbean");
+  const new() : super(const Americas(), name: "Caribbean");
 }
 
 // Europe.
@@ -105,7 +105,7 @@ final class Caribbean extends SubRegion {
 /// ```
 final class CentralEurope extends SubRegion {
   /// Creates a new [CentralEurope] instance.
-  const CentralEurope() : super(const Europe(), name: "Central Europe");
+  const new() : super(const Europe(), name: "Central Europe");
 }
 
 /// Represents the Northern Europe region, which includes the countries of
@@ -126,7 +126,7 @@ final class CentralEurope extends SubRegion {
 /// ```
 final class NorthernEurope extends SubRegion {
   /// Creates a new [NorthernEurope] instance.
-  const NorthernEurope() : super(const Europe(), name: "Northern Europe");
+  const new() : super(const Europe(), name: "Northern Europe");
 }
 
 /// Represents the Southern Europe region, which includes the countries of
@@ -148,7 +148,7 @@ final class NorthernEurope extends SubRegion {
 /// ```
 final class SouthernEurope extends SubRegion {
   /// Creates a new [SouthernEurope] instance.
-  const SouthernEurope() : super(const Europe(), name: "Southern Europe");
+  const new() : super(const Europe(), name: "Southern Europe");
 }
 
 /// Represents the Eastern Europe region, which includes the countries of
@@ -169,7 +169,7 @@ final class SouthernEurope extends SubRegion {
 /// ```
 final class EasternEurope extends SubRegion {
   /// Creates a new [EasternEurope] instance.
-  const EasternEurope() : super(const Europe(), name: "Eastern Europe");
+  const new() : super(const Europe(), name: "Eastern Europe");
 }
 
 /// Represents the Western Europe region, which includes the countries of
@@ -190,7 +190,7 @@ final class EasternEurope extends SubRegion {
 /// ```
 final class WesternEurope extends SubRegion {
   /// Creates a new [WesternEurope] instance.
-  const WesternEurope() : super(const Europe(), name: "Western Europe");
+  const new() : super(const Europe(), name: "Western Europe");
 }
 
 /// Represents the Southwest Europe region, which includes the countries of
@@ -211,7 +211,7 @@ final class WesternEurope extends SubRegion {
 /// ```
 final class SouthwestEurope extends SubRegion {
   /// Creates a new [SouthwestEurope] instance.
-  const SouthwestEurope() : super(const Europe(), name: "Southwest Europe");
+  const new() : super(const Europe(), name: "Southwest Europe");
 }
 
 // Africa.
@@ -234,7 +234,7 @@ final class SouthwestEurope extends SubRegion {
 /// ```
 final class MiddleAfrica extends SubRegion {
   /// Creates a new [MiddleAfrica] instance.
-  const MiddleAfrica() : super(const Africa(), name: "Middle Africa");
+  const new() : super(const Africa(), name: "Middle Africa");
 }
 
 /// Represents the Western Africa region, which includes the countries of Benin,
@@ -255,7 +255,7 @@ final class MiddleAfrica extends SubRegion {
 /// ```
 final class WesternAfrica extends SubRegion {
   /// Creates a new [WesternAfrica] instance.
-  const WesternAfrica() : super(const Africa(), name: "Western Africa");
+  const new() : super(const Africa(), name: "Western Africa");
 }
 
 /// Represents the Southern Africa region, which includes the countries of
@@ -277,7 +277,7 @@ final class WesternAfrica extends SubRegion {
 /// ```
 final class SouthernAfrica extends SubRegion {
   /// Creates a new [SouthernAfrica] instance.
-  const SouthernAfrica() : super(const Africa(), name: "Southern Africa");
+  const new() : super(const Africa(), name: "Southern Africa");
 }
 
 /// Represents the Eastern Africa region, which includes the countries of
@@ -298,7 +298,7 @@ final class SouthernAfrica extends SubRegion {
 /// ```
 final class EasternAfrica extends SubRegion {
   /// Creates a new [EasternAfrica] instance.
-  const EasternAfrica() : super(const Africa(), name: "Eastern Africa");
+  const new() : super(const Africa(), name: "Eastern Africa");
 }
 
 /// Represents the Northern Africa region, which includes the countries of
@@ -319,7 +319,7 @@ final class EasternAfrica extends SubRegion {
 /// ```
 final class NorthernAfrica extends SubRegion {
   /// Creates a new [NorthernAfrica] instance.
-  const NorthernAfrica() : super(const Africa(), name: "Northern Africa");
+  const new() : super(const Africa(), name: "Northern Africa");
 }
 
 // Asia.
@@ -342,7 +342,7 @@ final class NorthernAfrica extends SubRegion {
 /// ```
 final class CentralAsia extends SubRegion {
   /// Creates a new [CentralAsia] instance.
-  const CentralAsia() : super(const Asia(), name: "Central Asia");
+  const new() : super(const Asia(), name: "Central Asia");
 }
 
 /// Represents the Eastern Asia region, which includes the countries of China,
@@ -363,7 +363,7 @@ final class CentralAsia extends SubRegion {
 /// ```
 final class EasternAsia extends SubRegion {
   /// Creates a new [EasternAsia] instance.
-  const EasternAsia() : super(const Asia(), name: "Eastern Asia");
+  const new() : super(const Asia(), name: "Eastern Asia");
 }
 
 /// Represents the Western Asia region, which includes the countries of Armenia,
@@ -384,7 +384,7 @@ final class EasternAsia extends SubRegion {
 /// ```
 final class WesternAsia extends SubRegion {
   /// Creates a new [WesternAsia] instance.
-  const WesternAsia() : super(const Asia(), name: "Western Asia");
+  const new() : super(const Asia(), name: "Western Asia");
 }
 
 /// Represents the Southern Asia region, which includes the countries of
@@ -405,7 +405,7 @@ final class WesternAsia extends SubRegion {
 /// ```
 final class SouthernAsia extends SubRegion {
   /// Creates a new [SouthernAsia] instance.
-  const SouthernAsia() : super(const Asia(), name: "Southern Asia");
+  const new() : super(const Asia(), name: "Southern Asia");
 }
 
 /// Represents the Southeastern Asia region, which includes the countries of
@@ -426,7 +426,7 @@ final class SouthernAsia extends SubRegion {
 /// ```
 final class SouthEasternAsia extends SubRegion {
   /// Creates a new [SouthEasternAsia] instance.
-  const SouthEasternAsia() : super(const Asia(), name: "SouthEastern Asia");
+  const new() : super(const Asia(), name: "SouthEastern Asia");
 }
 
 // Oceania.
@@ -449,8 +449,7 @@ final class SouthEasternAsia extends SubRegion {
 /// ```
 final class AustraliaAndNewZealand extends SubRegion {
   /// Creates a new [AustraliaAndNewZealand] instance.
-  const AustraliaAndNewZealand()
-    : super(const Oceania(), name: "AustraliaAndNewZealand");
+  const new() : super(const Oceania(), name: "AustraliaAndNewZealand");
 }
 
 /// Represents the Melanesia region, which includes the countries of Fiji, Papua
@@ -471,7 +470,7 @@ final class AustraliaAndNewZealand extends SubRegion {
 /// ```
 final class Melanesia extends SubRegion {
   /// Creates a new [Melanesia] instance.
-  const Melanesia() : super(const Oceania(), name: "Melanesia");
+  const new() : super(const Oceania(), name: "Melanesia");
 }
 
 /// Represents the Micronesia region, which includes the countries of Federated
@@ -492,7 +491,7 @@ final class Melanesia extends SubRegion {
 /// ```
 final class Micronesia extends SubRegion {
   /// Creates a new [Micronesia] instance.
-  const Micronesia() : super(const Oceania(), name: "Micronesia");
+  const new() : super(const Oceania(), name: "Micronesia");
 }
 
 /// Represents the Polynesia region, which includes the countries of American
@@ -513,5 +512,5 @@ final class Micronesia extends SubRegion {
 /// ```
 final class Polynesia extends SubRegion {
   /// Creates a new [Polynesia] instance.
-  const Polynesia() : super(const Oceania(), name: "Polynesia");
+  const new() : super(const Oceania(), name: "Polynesia");
 }

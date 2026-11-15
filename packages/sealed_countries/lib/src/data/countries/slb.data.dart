@@ -7,7 +7,7 @@
 part of "../../model/country/submodels/world_country.dart";
 
 extension type const _SlbFactory._(CountrySlb _) implements CountrySlb {
-  const _SlbFactory() : this._(const CountrySlb._());
+  const new() : this._(const CountrySlb._());
 }
 
 /// A class that represents the Solomon Islands country.
@@ -17,9 +17,9 @@ class CountrySlb extends WorldCountry {
   ///
   /// ISO 3166-1 Alpha-3 code: `SLB`, ISO 3166-1 Alpha-2 code: `SB`.
   /// {@endtemplate}
-  const factory CountrySlb() = _SlbFactory;
+  const factory() = _SlbFactory;
 
-  const CountrySlb._()
+  const new _()
     : super._(
         name: const CountryName(
           language: LangEng(),

@@ -7,7 +7,7 @@
 part of "../../model/country/submodels/world_country.dart";
 
 extension type const _KwtFactory._(CountryKwt _) implements CountryKwt {
-  const _KwtFactory() : this._(const CountryKwt._());
+  const new() : this._(const CountryKwt._());
 }
 
 /// A class that represents the Kuwait country.
@@ -17,9 +17,9 @@ class CountryKwt extends WorldCountry {
   ///
   /// ISO 3166-1 Alpha-3 code: `KWT`, ISO 3166-1 Alpha-2 code: `KW`.
   /// {@endtemplate}
-  const factory CountryKwt() = _KwtFactory;
+  const factory() = _KwtFactory;
 
-  const CountryKwt._()
+  const new _()
     : super._(
         name: const CountryName(
           language: LangEng(),

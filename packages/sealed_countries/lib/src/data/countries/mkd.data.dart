@@ -7,7 +7,7 @@
 part of "../../model/country/submodels/world_country.dart";
 
 extension type const _MkdFactory._(CountryMkd _) implements CountryMkd {
-  const _MkdFactory() : this._(const CountryMkd._());
+  const new() : this._(const CountryMkd._());
 }
 
 /// A class that represents the North Macedonia country.
@@ -17,9 +17,9 @@ class CountryMkd extends WorldCountry {
   ///
   /// ISO 3166-1 Alpha-3 code: `MKD`, ISO 3166-1 Alpha-2 code: `MK`.
   /// {@endtemplate}
-  const factory CountryMkd() = _MkdFactory;
+  const factory() = _MkdFactory;
 
-  const CountryMkd._()
+  const new _()
     : super._(
         name: const CountryName(
           language: LangEng(),

@@ -19,12 +19,7 @@ class TypedLocalizationDelegate
   /// - [scripts]: Optional collection of supported scripts.
   /// - [mapper]: Optional function that returns locale mapping function.
   /// {@macro sealed_world.locale_mapper_callback}
-  const TypedLocalizationDelegate({
-    this.countries,
-    super.languages,
-    super.mapper,
-    super.scripts,
-  });
+  const new({this.countries, super.languages, super.mapper, super.scripts});
 
   /// Optional collection of supported countries. Used to limit locale parsing
   /// and validation.

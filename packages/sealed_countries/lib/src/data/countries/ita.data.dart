@@ -7,7 +7,7 @@
 part of "../../model/country/submodels/world_country.dart";
 
 extension type const _ItaFactory._(CountryIta _) implements CountryIta {
-  const _ItaFactory() : this._(const CountryIta._());
+  const new() : this._(const CountryIta._());
 }
 
 /// A class that represents the Italy country.
@@ -17,9 +17,9 @@ class CountryIta extends WorldCountry {
   ///
   /// ISO 3166-1 Alpha-3 code: `ITA`, ISO 3166-1 Alpha-2 code: `IT`.
   /// {@endtemplate}
-  const factory CountryIta() = _ItaFactory;
+  const factory() = _ItaFactory;
 
-  const CountryIta._()
+  const new _()
     : super._(
         name: const CountryName(
           language: LangEng(),

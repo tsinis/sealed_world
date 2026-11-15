@@ -1,7 +1,7 @@
 part of "../../model/currency/submodels/fiat_currency.dart";
 
 extension type const _IlsFactory._(FiatIls _) implements FiatIls {
-  const _IlsFactory() : this._(const FiatIls._());
+  const new() : this._(const FiatIls._());
 }
 
 /// A class that represents the Israeli New Shekel currency.
@@ -11,9 +11,9 @@ final class FiatIls extends FiatCurrency {
   ///
   /// ISO 4217 Alpha code: `ILS`, ISO 4217 Numeric code: `376`.
   /// {@endtemplate}
-  const factory FiatIls() = _IlsFactory;
+  const factory() = _IlsFactory;
 
-  const FiatIls._()
+  const new _()
     : super(
         code: "ILS",
         name: "Israeli New Shekel",

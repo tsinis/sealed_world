@@ -7,7 +7,7 @@
 part of "../../model/country/submodels/world_country.dart";
 
 extension type const _FsmFactory._(CountryFsm _) implements CountryFsm {
-  const _FsmFactory() : this._(const CountryFsm._());
+  const new() : this._(const CountryFsm._());
 }
 
 /// A class that represents the Micronesia country.
@@ -17,9 +17,9 @@ class CountryFsm extends WorldCountry {
   ///
   /// ISO 3166-1 Alpha-3 code: `FSM`, ISO 3166-1 Alpha-2 code: `FM`.
   /// {@endtemplate}
-  const factory CountryFsm() = _FsmFactory;
+  const factory() = _FsmFactory;
 
-  const CountryFsm._()
+  const new _()
     : super._(
         name: const CountryName(
           language: LangEng(),

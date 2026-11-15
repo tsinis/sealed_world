@@ -1,7 +1,7 @@
 part of "../../model/script/submodels/script.dart";
 
 extension type const _BrahFactory._(ScriptBrah _) implements ScriptBrah {
-  const _BrahFactory() : this._(const ScriptBrah._());
+  const new() : this._(const ScriptBrah._());
 }
 
 /// A class that represents the Brahmi script.
@@ -11,9 +11,9 @@ final class ScriptBrah extends Script {
   ///
   /// ISO 15924 Alpha-4 code: `Brah`, ISO 15924 Numeric code: `300`.
   /// {@endtemplate}
-  const factory ScriptBrah() = _BrahFactory;
+  const factory() = _BrahFactory;
 
-  const ScriptBrah._()
+  const new _()
     : super._(
         name: "Brahmi",
         code: "Brah",

@@ -7,7 +7,7 @@
 part of "../../model/country/submodels/world_country.dart";
 
 extension type const _BlmFactory._(CountryBlm _) implements CountryBlm {
-  const _BlmFactory() : this._(const CountryBlm._());
+  const new() : this._(const CountryBlm._());
 }
 
 /// A class that represents the Saint Barthélemy country.
@@ -17,9 +17,9 @@ class CountryBlm extends WorldCountry {
   ///
   /// ISO 3166-1 Alpha-3 code: `BLM`, ISO 3166-1 Alpha-2 code: `BL`.
   /// {@endtemplate}
-  const factory CountryBlm() = _BlmFactory;
+  const factory() = _BlmFactory;
 
-  const CountryBlm._()
+  const new _()
     : super._(
         name: const CountryName(
           language: LangEng(),

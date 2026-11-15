@@ -1,7 +1,7 @@
 part of "../../model/currency/submodels/fiat_currency.dart";
 
 extension type const _PabFactory._(FiatPab _) implements FiatPab {
-  const _PabFactory() : this._(const FiatPab._());
+  const new() : this._(const FiatPab._());
 }
 
 /// A class that represents the Panamanian Balboa currency.
@@ -11,9 +11,9 @@ final class FiatPab extends FiatCurrency {
   ///
   /// ISO 4217 Alpha code: `PAB`, ISO 4217 Numeric code: `590`.
   /// {@endtemplate}
-  const factory FiatPab() = _PabFactory;
+  const factory() = _PabFactory;
 
-  const FiatPab._()
+  const new _()
     : super(
         code: "PAB",
         name: "Panamanian Balboa",

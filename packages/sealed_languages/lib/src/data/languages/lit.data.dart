@@ -1,7 +1,7 @@
 part of "../../model/language/submodels/natural_language.dart";
 
 extension type const _LitFactory._(LangLit _) implements LangLit {
-  const _LitFactory() : this._(const LangLit._());
+  const new() : this._(const LangLit._());
 }
 
 /// A class that represents the Lithuanian language.
@@ -11,9 +11,9 @@ final class LangLit extends NaturalLanguage {
   ///
   /// ISO 639-2/T code: `LIT`, ISO 639-1 code: `LT`.
   /// {@endtemplate}
-  const factory LangLit() = _LitFactory;
+  const factory() = _LitFactory;
 
-  const LangLit._()
+  const new _()
     : super._(
         name: "Lithuanian",
         code: "LIT",

@@ -1,7 +1,7 @@
 part of "../../model/language/submodels/natural_language.dart";
 
 extension type const _WolFactory._(LangWol _) implements LangWol {
-  const _WolFactory() : this._(const LangWol._());
+  const new() : this._(const LangWol._());
 }
 
 /// A class that represents the Wolof language.
@@ -11,9 +11,9 @@ final class LangWol extends NaturalLanguage {
   ///
   /// ISO 639-2/T code: `WOL`, ISO 639-1 code: `WO`.
   /// {@endtemplate}
-  const factory LangWol() = _WolFactory;
+  const factory() = _WolFactory;
 
-  const LangWol._()
+  const new _()
     : super._(
         name: "Wolof",
         code: "WOL",

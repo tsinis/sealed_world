@@ -29,7 +29,7 @@ class Region implements Named<String> {
   ///
   /// The [name] parameter is required and must not be empty.
   // ignore: deprecated_consistency, constructor cannot be annotated with it.
-  const Region({required this.name});
+  const new({required this.name});
 
   /// The name of the region.
   @override

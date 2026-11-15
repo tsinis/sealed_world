@@ -1,7 +1,7 @@
 part of "../../model/script/submodels/script.dart";
 
 extension type const _LinbFactory._(ScriptLinb _) implements ScriptLinb {
-  const _LinbFactory() : this._(const ScriptLinb._());
+  const new() : this._(const ScriptLinb._());
 }
 
 /// A class that represents the Linear B script.
@@ -11,9 +11,9 @@ final class ScriptLinb extends Script {
   ///
   /// ISO 15924 Alpha-4 code: `Linb`, ISO 15924 Numeric code: `401`.
   /// {@endtemplate}
-  const factory ScriptLinb() = _LinbFactory;
+  const factory() = _LinbFactory;
 
-  const ScriptLinb._()
+  const new _()
     : super._(
         name: "Linear B",
         code: "Linb",

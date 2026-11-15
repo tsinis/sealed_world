@@ -1,7 +1,7 @@
 part of "../../model/currency/submodels/fiat_currency.dart";
 
 extension type const _TjsFactory._(FiatTjs _) implements FiatTjs {
-  const _TjsFactory() : this._(const FiatTjs._());
+  const new() : this._(const FiatTjs._());
 }
 
 /// A class that represents the Tajikistani Somoni currency.
@@ -11,9 +11,9 @@ final class FiatTjs extends FiatCurrency {
   ///
   /// ISO 4217 Alpha code: `TJS`, ISO 4217 Numeric code: `972`.
   /// {@endtemplate}
-  const factory FiatTjs() = _TjsFactory;
+  const factory() = _TjsFactory;
 
-  const FiatTjs._()
+  const new _()
     : super(
         code: "TJS",
         name: "Tajikistani Somoni",

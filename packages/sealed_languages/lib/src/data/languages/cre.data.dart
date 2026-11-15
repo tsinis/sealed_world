@@ -1,7 +1,7 @@
 part of "../../model/language/submodels/natural_language.dart";
 
 extension type const _CreFactory._(LangCre _) implements LangCre {
-  const _CreFactory() : this._(const LangCre._());
+  const new() : this._(const LangCre._());
 }
 
 /// A class that represents the Cree language.
@@ -11,9 +11,9 @@ final class LangCre extends NaturalLanguage {
   ///
   /// ISO 639-2/T code: `CRE`, ISO 639-1 code: `CR`.
   /// {@endtemplate}
-  const factory LangCre() = _CreFactory;
+  const factory() = _CreFactory;
 
-  const LangCre._()
+  const new _()
     : super._(
         name: "Cree",
         code: "CRE",

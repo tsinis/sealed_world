@@ -1,7 +1,7 @@
 part of "../../model/language/submodels/natural_language.dart";
 
 extension type const _KikFactory._(LangKik _) implements LangKik {
-  const _KikFactory() : this._(const LangKik._());
+  const new() : this._(const LangKik._());
 }
 
 /// A class that represents the Kikuyu (Gikuyu) language.
@@ -11,9 +11,9 @@ final class LangKik extends NaturalLanguage {
   ///
   /// ISO 639-2/T code: `KIK`, ISO 639-1 code: `KI`.
   /// {@endtemplate}
-  const factory LangKik() = _KikFactory;
+  const factory() = _KikFactory;
 
-  const LangKik._()
+  const new _()
     : super._(
         name: "Kikuyu (Gikuyu)",
         code: "KIK",

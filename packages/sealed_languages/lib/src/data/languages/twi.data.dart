@@ -1,7 +1,7 @@
 part of "../../model/language/submodels/natural_language.dart";
 
 extension type const _TwiFactory._(LangTwi _) implements LangTwi {
-  const _TwiFactory() : this._(const LangTwi._());
+  const new() : this._(const LangTwi._());
 }
 
 /// A class that represents the Twi language.
@@ -11,9 +11,9 @@ final class LangTwi extends NaturalLanguage {
   ///
   /// ISO 639-2/T code: `TWI`, ISO 639-1 code: `TW`.
   /// {@endtemplate}
-  const factory LangTwi() = _TwiFactory;
+  const factory() = _TwiFactory;
 
-  const LangTwi._()
+  const new _()
     : super._(
         name: "Twi",
         code: "TWI",

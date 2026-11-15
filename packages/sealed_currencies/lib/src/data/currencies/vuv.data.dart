@@ -1,7 +1,7 @@
 part of "../../model/currency/submodels/fiat_currency.dart";
 
 extension type const _VuvFactory._(FiatVuv _) implements FiatVuv {
-  const _VuvFactory() : this._(const FiatVuv._());
+  const new() : this._(const FiatVuv._());
 }
 
 /// A class that represents the Vanuatu Vatu currency.
@@ -11,9 +11,9 @@ final class FiatVuv extends FiatCurrency {
   ///
   /// ISO 4217 Alpha code: `VUV`, ISO 4217 Numeric code: `548`.
   /// {@endtemplate}
-  const factory FiatVuv() = _VuvFactory;
+  const factory() = _VuvFactory;
 
-  const FiatVuv._()
+  const new _()
     : super(
         code: "VUV",
         name: "Vanuatu Vatu",

@@ -1,7 +1,7 @@
 part of "../../model/currency/submodels/fiat_currency.dart";
 
 extension type const _XcdFactory._(FiatXcd _) implements FiatXcd {
-  const _XcdFactory() : this._(const FiatXcd._());
+  const new() : this._(const FiatXcd._());
 }
 
 /// A class that represents the East Caribbean Dollar currency.
@@ -11,9 +11,9 @@ final class FiatXcd extends FiatCurrency {
   ///
   /// ISO 4217 Alpha code: `XCD`, ISO 4217 Numeric code: `951`.
   /// {@endtemplate}
-  const factory FiatXcd() = _XcdFactory;
+  const factory() = _XcdFactory;
 
-  const FiatXcd._()
+  const new _()
     : super(
         code: "XCD",
         name: "East Caribbean Dollar",

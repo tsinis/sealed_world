@@ -1,7 +1,7 @@
 part of "../../model/script/submodels/script.dart";
 
 extension type const _PermFactory._(ScriptPerm _) implements ScriptPerm {
-  const _PermFactory() : this._(const ScriptPerm._());
+  const new() : this._(const ScriptPerm._());
 }
 
 /// A class that represents the Old Permic script.
@@ -11,9 +11,9 @@ final class ScriptPerm extends Script {
   ///
   /// ISO 15924 Alpha-4 code: `Perm`, ISO 15924 Numeric code: `227`.
   /// {@endtemplate}
-  const factory ScriptPerm() = _PermFactory;
+  const factory() = _PermFactory;
 
-  const ScriptPerm._()
+  const new _()
     : super._(
         name: "Old Permic",
         code: "Perm",

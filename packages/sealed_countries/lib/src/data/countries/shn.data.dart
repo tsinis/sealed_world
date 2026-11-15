@@ -7,7 +7,7 @@
 part of "../../model/country/submodels/world_country.dart";
 
 extension type const _ShnFactory._(CountryShn _) implements CountryShn {
-  const _ShnFactory() : this._(const CountryShn._());
+  const new() : this._(const CountryShn._());
 }
 
 /// A class that represents the Saint Helena, Ascension and Tristan da Cunha
@@ -19,9 +19,9 @@ class CountryShn extends WorldCountry {
   ///
   /// ISO 3166-1 Alpha-3 code: `SHN`, ISO 3166-1 Alpha-2 code: `SH`.
   /// {@endtemplate}
-  const factory CountryShn() = _ShnFactory;
+  const factory() = _ShnFactory;
 
-  const CountryShn._()
+  const new _()
     : super._(
         name: const CountryName(
           language: LangEng(),

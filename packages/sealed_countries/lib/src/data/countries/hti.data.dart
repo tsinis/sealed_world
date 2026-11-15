@@ -7,7 +7,7 @@
 part of "../../model/country/submodels/world_country.dart";
 
 extension type const _HtiFactory._(CountryHti _) implements CountryHti {
-  const _HtiFactory() : this._(const CountryHti._());
+  const new() : this._(const CountryHti._());
 }
 
 /// A class that represents the Haiti country.
@@ -17,9 +17,9 @@ class CountryHti extends WorldCountry {
   ///
   /// ISO 3166-1 Alpha-3 code: `HTI`, ISO 3166-1 Alpha-2 code: `HT`.
   /// {@endtemplate}
-  const factory CountryHti() = _HtiFactory;
+  const factory() = _HtiFactory;
 
-  const CountryHti._()
+  const new _()
     : super._(
         name: const CountryName(
           language: LangEng(),

@@ -1,7 +1,7 @@
 part of "../../model/language/submodels/natural_language.dart";
 
 extension type const _VolFactory._(LangVol _) implements LangVol {
-  const _VolFactory() : this._(const LangVol._());
+  const new() : this._(const LangVol._());
 }
 
 /// A class that represents the Volapük language.
@@ -11,9 +11,9 @@ final class LangVol extends NaturalLanguage {
   ///
   /// ISO 639-2/T code: `VOL`, ISO 639-1 code: `VO`.
   /// {@endtemplate}
-  const factory LangVol() = _VolFactory;
+  const factory() = _VolFactory;
 
-  const LangVol._()
+  const new _()
     : super._(
         name: "Volapük",
         code: "VOL",

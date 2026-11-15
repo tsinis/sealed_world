@@ -1,7 +1,7 @@
 part of "../../model/currency/submodels/fiat_currency.dart";
 
 extension type const _MkdFactory._(FiatMkd _) implements FiatMkd {
-  const _MkdFactory() : this._(const FiatMkd._());
+  const new() : this._(const FiatMkd._());
 }
 
 /// A class that represents the Macedonian Denar currency.
@@ -11,9 +11,9 @@ final class FiatMkd extends FiatCurrency {
   ///
   /// ISO 4217 Alpha code: `MKD`, ISO 4217 Numeric code: `807`.
   /// {@endtemplate}
-  const factory FiatMkd() = _MkdFactory;
+  const factory() = _MkdFactory;
 
-  const FiatMkd._()
+  const new _()
     : super(
         code: "MKD",
         name: "Macedonian Denar",

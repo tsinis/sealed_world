@@ -1,7 +1,7 @@
 part of "../../model/language/submodels/natural_language.dart";
 
 extension type const _TurFactory._(LangTur _) implements LangTur {
-  const _TurFactory() : this._(const LangTur._());
+  const new() : this._(const LangTur._());
 }
 
 /// A class that represents the Turkish language.
@@ -11,9 +11,9 @@ final class LangTur extends NaturalLanguage {
   ///
   /// ISO 639-2/T code: `TUR`, ISO 639-1 code: `TR`.
   /// {@endtemplate}
-  const factory LangTur() = _TurFactory;
+  const factory() = _TurFactory;
 
-  const LangTur._()
+  const new _()
     : super._(
         name: "Turkish",
         code: "TUR",

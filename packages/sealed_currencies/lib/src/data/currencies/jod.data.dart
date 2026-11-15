@@ -1,7 +1,7 @@
 part of "../../model/currency/submodels/fiat_currency.dart";
 
 extension type const _JodFactory._(FiatJod _) implements FiatJod {
-  const _JodFactory() : this._(const FiatJod._());
+  const new() : this._(const FiatJod._());
 }
 
 /// A class that represents the Jordanian Dinar currency.
@@ -11,9 +11,9 @@ final class FiatJod extends FiatCurrency {
   ///
   /// ISO 4217 Alpha code: `JOD`, ISO 4217 Numeric code: `400`.
   /// {@endtemplate}
-  const factory FiatJod() = _JodFactory;
+  const factory() = _JodFactory;
 
-  const FiatJod._()
+  const new _()
     : super(
         code: "JOD",
         name: "Jordanian Dinar",

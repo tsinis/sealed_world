@@ -7,7 +7,7 @@
 part of "../../model/country/submodels/world_country.dart";
 
 extension type const _ArgFactory._(CountryArg _) implements CountryArg {
-  const _ArgFactory() : this._(const CountryArg._());
+  const new() : this._(const CountryArg._());
 }
 
 /// A class that represents the Argentina country.
@@ -17,9 +17,9 @@ class CountryArg extends WorldCountry {
   ///
   /// ISO 3166-1 Alpha-3 code: `ARG`, ISO 3166-1 Alpha-2 code: `AR`.
   /// {@endtemplate}
-  const factory CountryArg() = _ArgFactory;
+  const factory() = _ArgFactory;
 
-  const CountryArg._()
+  const new _()
     : super._(
         name: const CountryName(
           language: LangEng(),

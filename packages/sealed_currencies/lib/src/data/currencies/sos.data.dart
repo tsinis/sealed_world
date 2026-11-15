@@ -1,7 +1,7 @@
 part of "../../model/currency/submodels/fiat_currency.dart";
 
 extension type const _SosFactory._(FiatSos _) implements FiatSos {
-  const _SosFactory() : this._(const FiatSos._());
+  const new() : this._(const FiatSos._());
 }
 
 /// A class that represents the Somali Shilling currency.
@@ -11,9 +11,9 @@ final class FiatSos extends FiatCurrency {
   ///
   /// ISO 4217 Alpha code: `SOS`, ISO 4217 Numeric code: `706`.
   /// {@endtemplate}
-  const factory FiatSos() = _SosFactory;
+  const factory() = _SosFactory;
 
-  const FiatSos._()
+  const new _()
     : super(
         code: "SOS",
         name: "Somali Shilling",

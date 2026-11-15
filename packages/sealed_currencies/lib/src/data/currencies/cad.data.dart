@@ -1,7 +1,7 @@
 part of "../../model/currency/submodels/fiat_currency.dart";
 
 extension type const _CadFactory._(FiatCad _) implements FiatCad {
-  const _CadFactory() : this._(const FiatCad._());
+  const new() : this._(const FiatCad._());
 }
 
 /// A class that represents the Canadian Dollar currency.
@@ -11,9 +11,9 @@ final class FiatCad extends FiatCurrency {
   ///
   /// ISO 4217 Alpha code: `CAD`, ISO 4217 Numeric code: `124`.
   /// {@endtemplate}
-  const factory FiatCad() = _CadFactory;
+  const factory() = _CadFactory;
 
-  const FiatCad._()
+  const new _()
     : super(
         code: "CAD",
         name: "Canadian Dollar",

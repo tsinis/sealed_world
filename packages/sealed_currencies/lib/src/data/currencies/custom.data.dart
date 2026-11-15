@@ -5,7 +5,7 @@ final class FiatCustom extends FiatCurrency {
   /// Creates a custom instance of [FiatCurrency] (non-standard ISO 4217).
   /// {@macro currency_constructor}
   /// {@macro permissive_constructor}
-  const FiatCustom({
+  const new({
     super.code,
     super.codeNumeric,
     super.alternateSymbols,

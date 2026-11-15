@@ -1,7 +1,7 @@
 part of "../../model/currency/submodels/fiat_currency.dart";
 
 extension type const _DkkFactory._(FiatDkk _) implements FiatDkk {
-  const _DkkFactory() : this._(const FiatDkk._());
+  const new() : this._(const FiatDkk._());
 }
 
 /// A class that represents the Danish Krone currency.
@@ -11,9 +11,9 @@ final class FiatDkk extends FiatCurrency {
   ///
   /// ISO 4217 Alpha code: `DKK`, ISO 4217 Numeric code: `208`.
   /// {@endtemplate}
-  const factory FiatDkk() = _DkkFactory;
+  const factory() = _DkkFactory;
 
-  const FiatDkk._()
+  const new _()
     : super(
         code: "DKK",
         name: "Danish Krone",

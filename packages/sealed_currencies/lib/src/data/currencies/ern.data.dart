@@ -1,7 +1,7 @@
 part of "../../model/currency/submodels/fiat_currency.dart";
 
 extension type const _ErnFactory._(FiatErn _) implements FiatErn {
-  const _ErnFactory() : this._(const FiatErn._());
+  const new() : this._(const FiatErn._());
 }
 
 /// A class that represents the Eritrean Nakfa currency.
@@ -11,9 +11,9 @@ final class FiatErn extends FiatCurrency {
   ///
   /// ISO 4217 Alpha code: `ERN`, ISO 4217 Numeric code: `232`.
   /// {@endtemplate}
-  const factory FiatErn() = _ErnFactory;
+  const factory() = _ErnFactory;
 
-  const FiatErn._()
+  const new _()
     : super(
         code: "ERN",
         name: "Eritrean Nakfa",

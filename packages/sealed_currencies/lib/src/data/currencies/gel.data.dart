@@ -1,7 +1,7 @@
 part of "../../model/currency/submodels/fiat_currency.dart";
 
 extension type const _GelFactory._(FiatGel _) implements FiatGel {
-  const _GelFactory() : this._(const FiatGel._());
+  const new() : this._(const FiatGel._());
 }
 
 /// A class that represents the Georgian Lari currency.
@@ -11,9 +11,9 @@ final class FiatGel extends FiatCurrency {
   ///
   /// ISO 4217 Alpha code: `GEL`, ISO 4217 Numeric code: `981`.
   /// {@endtemplate}
-  const factory FiatGel() = _GelFactory;
+  const factory() = _GelFactory;
 
-  const FiatGel._()
+  const new _()
     : super(
         code: "GEL",
         name: "Georgian Lari",

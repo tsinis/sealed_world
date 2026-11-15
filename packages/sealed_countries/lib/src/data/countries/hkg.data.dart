@@ -7,7 +7,7 @@
 part of "../../model/country/submodels/world_country.dart";
 
 extension type const _HkgFactory._(CountryHkg _) implements CountryHkg {
-  const _HkgFactory() : this._(const CountryHkg._());
+  const new() : this._(const CountryHkg._());
 }
 
 /// A class that represents the Hong Kong country.
@@ -17,9 +17,9 @@ class CountryHkg extends WorldCountry {
   ///
   /// ISO 3166-1 Alpha-3 code: `HKG`, ISO 3166-1 Alpha-2 code: `HK`.
   /// {@endtemplate}
-  const factory CountryHkg() = _HkgFactory;
+  const factory() = _HkgFactory;
 
-  const CountryHkg._()
+  const new _()
     : super._(
         name: const CountryName(
           language: LangEng(),

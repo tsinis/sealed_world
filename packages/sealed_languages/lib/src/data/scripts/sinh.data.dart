@@ -1,7 +1,7 @@
 part of "../../model/script/submodels/script.dart";
 
 extension type const _SinhFactory._(ScriptSinh _) implements ScriptSinh {
-  const _SinhFactory() : this._(const ScriptSinh._());
+  const new() : this._(const ScriptSinh._());
 }
 
 /// A class that represents the Sinhala script.
@@ -11,9 +11,9 @@ final class ScriptSinh extends Script {
   ///
   /// ISO 15924 Alpha-4 code: `Sinh`, ISO 15924 Numeric code: `348`.
   /// {@endtemplate}
-  const factory ScriptSinh() = _SinhFactory;
+  const factory() = _SinhFactory;
 
-  const ScriptSinh._()
+  const new _()
     : super._(
         name: "Sinhala",
         code: "Sinh",

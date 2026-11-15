@@ -17,7 +17,7 @@ part of "../../model/geo/submodels/continent.dart";
 /// ```
 final class Europe extends Continent {
   /// Creates a new [Europe] instance.
-  const Europe() : super(name: "Europe");
+  const new() : super(name: "Europe");
 }
 
 /// Represents the continent of Africa.
@@ -37,7 +37,7 @@ final class Europe extends Continent {
 /// ```
 final class Africa extends Continent {
   /// Creates a new [Africa] instance.
-  const Africa() : super(name: "Africa");
+  const new() : super(name: "Africa");
 }
 
 /// Represents the continent of the Americas.
@@ -57,7 +57,7 @@ final class Africa extends Continent {
 /// ```
 final class Americas extends Continent {
   /// Creates a new [Americas] instance.
-  const Americas() : super(name: "Americas");
+  const new() : super(name: "Americas");
 }
 
 /// Represents the continent of Asia.
@@ -77,7 +77,7 @@ final class Americas extends Continent {
 /// ```
 final class Asia extends Continent {
   /// Creates a new [Asia] instance.
-  const Asia() : super(name: "Asia");
+  const new() : super(name: "Asia");
 }
 
 /// Represents the continent of Antarctica.
@@ -97,7 +97,7 @@ final class Asia extends Continent {
 /// ```
 final class Antarctica extends Continent {
   /// Creates a new [Antarctica] instance.
-  const Antarctica() : super(name: "Antarctica");
+  const new() : super(name: "Antarctica");
 }
 
 /// Represents the continent of Oceania.
@@ -117,5 +117,5 @@ final class Antarctica extends Continent {
 /// ```
 final class Oceania extends Continent {
   /// Creates a new [Oceania] instance.
-  const Oceania() : super(name: "Oceania");
+  const new() : super(name: "Oceania");
 }

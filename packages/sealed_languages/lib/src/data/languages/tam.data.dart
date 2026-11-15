@@ -1,7 +1,7 @@
 part of "../../model/language/submodels/natural_language.dart";
 
 extension type const _TamFactory._(LangTam _) implements LangTam {
-  const _TamFactory() : this._(const LangTam._());
+  const new() : this._(const LangTam._());
 }
 
 /// A class that represents the Tamil language.
@@ -11,9 +11,9 @@ final class LangTam extends NaturalLanguage {
   ///
   /// ISO 639-2/T code: `TAM`, ISO 639-1 code: `TA`.
   /// {@endtemplate}
-  const factory LangTam() = _TamFactory;
+  const factory() = _TamFactory;
 
-  const LangTam._()
+  const new _()
     : super._(
         name: "Tamil",
         code: "TAM",

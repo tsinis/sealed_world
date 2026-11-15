@@ -1,7 +1,7 @@
 part of "../../model/language/submodels/natural_language.dart";
 
 extension type const _EusFactory._(LangEus _) implements LangEus {
-  const _EusFactory() : this._(const LangEus._());
+  const new() : this._(const LangEus._());
 }
 
 /// A class that represents the Basque language.
@@ -11,9 +11,9 @@ final class LangEus extends NaturalLanguage {
   ///
   /// ISO 639-2/T code: `EUS`, ISO 639-1 code: `EU`.
   /// {@endtemplate}
-  const factory LangEus() = _EusFactory;
+  const factory() = _EusFactory;
 
-  const LangEus._()
+  const new _()
     : super._(
         name: "Basque",
         code: "EUS",

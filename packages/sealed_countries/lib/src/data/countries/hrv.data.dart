@@ -7,7 +7,7 @@
 part of "../../model/country/submodels/world_country.dart";
 
 extension type const _HrvFactory._(CountryHrv _) implements CountryHrv {
-  const _HrvFactory() : this._(const CountryHrv._());
+  const new() : this._(const CountryHrv._());
 }
 
 /// A class that represents the Croatia country.
@@ -17,9 +17,9 @@ class CountryHrv extends WorldCountry {
   ///
   /// ISO 3166-1 Alpha-3 code: `HRV`, ISO 3166-1 Alpha-2 code: `HR`.
   /// {@endtemplate}
-  const factory CountryHrv() = _HrvFactory;
+  const factory() = _HrvFactory;
 
-  const CountryHrv._()
+  const new _()
     : super._(
         name: const CountryName(
           language: LangEng(),

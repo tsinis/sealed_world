@@ -1,7 +1,7 @@
 part of "../../model/script/submodels/script.dart";
 
 extension type const _XpeoFactory._(ScriptXpeo _) implements ScriptXpeo {
-  const _XpeoFactory() : this._(const ScriptXpeo._());
+  const new() : this._(const ScriptXpeo._());
 }
 
 /// A class that represents the Old Persian script.
@@ -11,9 +11,9 @@ final class ScriptXpeo extends Script {
   ///
   /// ISO 15924 Alpha-4 code: `Xpeo`, ISO 15924 Numeric code: `030`.
   /// {@endtemplate}
-  const factory ScriptXpeo() = _XpeoFactory;
+  const factory() = _XpeoFactory;
 
-  const ScriptXpeo._()
+  const new _()
     : super._(
         name: "Old Persian",
         code: "Xpeo",

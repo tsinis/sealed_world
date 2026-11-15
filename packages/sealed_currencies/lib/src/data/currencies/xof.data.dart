@@ -1,7 +1,7 @@
 part of "../../model/currency/submodels/fiat_currency.dart";
 
 extension type const _XofFactory._(FiatXof _) implements FiatXof {
-  const _XofFactory() : this._(const FiatXof._());
+  const new() : this._(const FiatXof._());
 }
 
 /// A class that represents the West African Cfa Franc currency.
@@ -11,9 +11,9 @@ final class FiatXof extends FiatCurrency {
   ///
   /// ISO 4217 Alpha code: `XOF`, ISO 4217 Numeric code: `952`.
   /// {@endtemplate}
-  const factory FiatXof() = _XofFactory;
+  const factory() = _XofFactory;
 
-  const FiatXof._()
+  const new _()
     : super(
         code: "XOF",
         name: "West African Cfa Franc",

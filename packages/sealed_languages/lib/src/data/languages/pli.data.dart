@@ -1,7 +1,7 @@
 part of "../../model/language/submodels/natural_language.dart";
 
 extension type const _PliFactory._(LangPli _) implements LangPli {
-  const _PliFactory() : this._(const LangPli._());
+  const new() : this._(const LangPli._());
 }
 
 /// A class that represents the Pāli language.
@@ -11,9 +11,9 @@ final class LangPli extends NaturalLanguage {
   ///
   /// ISO 639-2/T code: `PLI`, ISO 639-1 code: `PI`.
   /// {@endtemplate}
-  const factory LangPli() = _PliFactory;
+  const factory() = _PliFactory;
 
-  const LangPli._()
+  const new _()
     : super._(
         name: "Pāli",
         code: "PLI",

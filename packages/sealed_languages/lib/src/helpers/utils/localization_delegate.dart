@@ -20,7 +20,7 @@ class LocalizationDelegate
   /// - [scripts]: Optional collection of supported scripts.
   /// - [mapper]:
   /// {@macro sealed_world.locale_mapper_callback}
-  const LocalizationDelegate({super.languages, super.mapper, super.scripts});
+  const new({super.languages, super.mapper, super.scripts});
 
   @override
   BasicLocale toLocale(

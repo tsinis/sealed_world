@@ -1,7 +1,7 @@
 part of "../../model/script/submodels/script.dart";
 
 extension type const _RanjFactory._(ScriptRanj _) implements ScriptRanj {
-  const _RanjFactory() : this._(const ScriptRanj._());
+  const new() : this._(const ScriptRanj._());
 }
 
 /// A class that represents the Ranjana script.
@@ -11,9 +11,9 @@ final class ScriptRanj extends Script {
   ///
   /// ISO 15924 Alpha-4 code: `Ranj`, ISO 15924 Numeric code: `303`.
   /// {@endtemplate}
-  const factory ScriptRanj() = _RanjFactory;
+  const factory() = _RanjFactory;
 
-  const ScriptRanj._()
+  const new _()
     : super._(
         name: "Ranjana",
         code: "Ranj",

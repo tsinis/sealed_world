@@ -1,7 +1,7 @@
 part of "../../model/language/submodels/natural_language.dart";
 
 extension type const _IpkFactory._(LangIpk _) implements LangIpk {
-  const _IpkFactory() : this._(const LangIpk._());
+  const new() : this._(const LangIpk._());
 }
 
 /// A class that represents the Inupiaq language.
@@ -11,9 +11,9 @@ final class LangIpk extends NaturalLanguage {
   ///
   /// ISO 639-2/T code: `IPK`, ISO 639-1 code: `IK`.
   /// {@endtemplate}
-  const factory LangIpk() = _IpkFactory;
+  const factory() = _IpkFactory;
 
-  const LangIpk._()
+  const new _()
     : super._(
         name: "Inupiaq",
         code: "IPK",

@@ -1,7 +1,7 @@
 part of "../../model/currency/submodels/fiat_currency.dart";
 
 extension type const _AmdFactory._(FiatAmd _) implements FiatAmd {
-  const _AmdFactory() : this._(const FiatAmd._());
+  const new() : this._(const FiatAmd._());
 }
 
 /// A class that represents the Armenian Dram currency.
@@ -11,9 +11,9 @@ final class FiatAmd extends FiatCurrency {
   ///
   /// ISO 4217 Alpha code: `AMD`, ISO 4217 Numeric code: `051`.
   /// {@endtemplate}
-  const factory FiatAmd() = _AmdFactory;
+  const factory() = _AmdFactory;
 
-  const FiatAmd._()
+  const new _()
     : super(
         code: "AMD",
         name: "Armenian Dram",

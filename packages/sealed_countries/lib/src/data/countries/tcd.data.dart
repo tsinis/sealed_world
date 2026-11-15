@@ -7,7 +7,7 @@
 part of "../../model/country/submodels/world_country.dart";
 
 extension type const _TcdFactory._(CountryTcd _) implements CountryTcd {
-  const _TcdFactory() : this._(const CountryTcd._());
+  const new() : this._(const CountryTcd._());
 }
 
 /// A class that represents the Chad country.
@@ -17,9 +17,9 @@ class CountryTcd extends WorldCountry {
   ///
   /// ISO 3166-1 Alpha-3 code: `TCD`, ISO 3166-1 Alpha-2 code: `TD`.
   /// {@endtemplate}
-  const factory CountryTcd() = _TcdFactory;
+  const factory() = _TcdFactory;
 
-  const CountryTcd._()
+  const new _()
     : super._(
         name: const CountryName(
           language: LangEng(),

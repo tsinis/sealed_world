@@ -1,7 +1,7 @@
 part of "../../model/language/submodels/natural_language.dart";
 
 extension type const _BakFactory._(LangBak _) implements LangBak {
-  const _BakFactory() : this._(const LangBak._());
+  const new() : this._(const LangBak._());
 }
 
 /// A class that represents the Bashkir language.
@@ -11,9 +11,9 @@ final class LangBak extends NaturalLanguage {
   ///
   /// ISO 639-2/T code: `BAK`, ISO 639-1 code: `BA`.
   /// {@endtemplate}
-  const factory LangBak() = _BakFactory;
+  const factory() = _BakFactory;
 
-  const LangBak._()
+  const new _()
     : super._(
         name: "Bashkir",
         code: "BAK",

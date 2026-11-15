@@ -7,7 +7,7 @@
 part of "../../model/country/submodels/world_country.dart";
 
 extension type const _AtaFactory._(CountryAta _) implements CountryAta {
-  const _AtaFactory() : this._(const CountryAta._());
+  const new() : this._(const CountryAta._());
 }
 
 /// A class that represents the Antarctica country.
@@ -17,9 +17,9 @@ class CountryAta extends WorldCountry {
   ///
   /// ISO 3166-1 Alpha-3 code: `ATA`, ISO 3166-1 Alpha-2 code: `AQ`.
   /// {@endtemplate}
-  const factory CountryAta() = _AtaFactory;
+  const factory() = _AtaFactory;
 
-  const CountryAta._()
+  const new _()
     : super._(
         name: const CountryName(
           language: LangEng(),

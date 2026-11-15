@@ -1,7 +1,7 @@
 part of "../../model/script/submodels/script.dart";
 
 extension type const _KharFactory._(ScriptKhar _) implements ScriptKhar {
-  const _KharFactory() : this._(const ScriptKhar._());
+  const new() : this._(const ScriptKhar._());
 }
 
 /// A class that represents the Kharoshthi script.
@@ -11,9 +11,9 @@ final class ScriptKhar extends Script {
   ///
   /// ISO 15924 Alpha-4 code: `Khar`, ISO 15924 Numeric code: `305`.
   /// {@endtemplate}
-  const factory ScriptKhar() = _KharFactory;
+  const factory() = _KharFactory;
 
-  const ScriptKhar._()
+  const new _()
     : super._(
         name: "Kharoshthi",
         code: "Khar",

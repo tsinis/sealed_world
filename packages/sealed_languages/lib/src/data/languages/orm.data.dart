@@ -1,7 +1,7 @@
 part of "../../model/language/submodels/natural_language.dart";
 
 extension type const _OrmFactory._(LangOrm _) implements LangOrm {
-  const _OrmFactory() : this._(const LangOrm._());
+  const new() : this._(const LangOrm._());
 }
 
 /// A class that represents the Oromo language.
@@ -11,9 +11,9 @@ final class LangOrm extends NaturalLanguage {
   ///
   /// ISO 639-2/T code: `ORM`, ISO 639-1 code: `OM`.
   /// {@endtemplate}
-  const factory LangOrm() = _OrmFactory;
+  const factory() = _OrmFactory;
 
-  const LangOrm._()
+  const new _()
     : super._(
         name: "Oromo",
         code: "ORM",

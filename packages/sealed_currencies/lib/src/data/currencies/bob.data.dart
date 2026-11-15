@@ -1,7 +1,7 @@
 part of "../../model/currency/submodels/fiat_currency.dart";
 
 extension type const _BobFactory._(FiatBob _) implements FiatBob {
-  const _BobFactory() : this._(const FiatBob._());
+  const new() : this._(const FiatBob._());
 }
 
 /// A class that represents the Bolivian Boliviano currency.
@@ -11,9 +11,9 @@ final class FiatBob extends FiatCurrency {
   ///
   /// ISO 4217 Alpha code: `BOB`, ISO 4217 Numeric code: `068`.
   /// {@endtemplate}
-  const factory FiatBob() = _BobFactory;
+  const factory() = _BobFactory;
 
-  const FiatBob._()
+  const new _()
     : super(
         code: "BOB",
         name: "Bolivian Boliviano",

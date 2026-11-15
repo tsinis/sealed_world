@@ -1,7 +1,7 @@
 part of "../../model/script/submodels/script.dart";
 
 extension type const _HebrFactory._(ScriptHebr _) implements ScriptHebr {
-  const _HebrFactory() : this._(const ScriptHebr._());
+  const new() : this._(const ScriptHebr._());
 }
 
 /// A class that represents the Hebrew script.
@@ -11,9 +11,9 @@ final class ScriptHebr extends Script {
   ///
   /// ISO 15924 Alpha-4 code: `Hebr`, ISO 15924 Numeric code: `125`.
   /// {@endtemplate}
-  const factory ScriptHebr() = _HebrFactory;
+  const factory() = _HebrFactory;
 
-  const ScriptHebr._()
+  const new _()
     : super._(
         name: "Hebrew",
         code: "Hebr",

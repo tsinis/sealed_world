@@ -1,7 +1,7 @@
 part of "../../model/script/submodels/script.dart";
 
 extension type const _NshuFactory._(ScriptNshu _) implements ScriptNshu {
-  const _NshuFactory() : this._(const ScriptNshu._());
+  const new() : this._(const ScriptNshu._());
 }
 
 /// A class that represents the Nüshu script.
@@ -11,9 +11,9 @@ final class ScriptNshu extends Script {
   ///
   /// ISO 15924 Alpha-4 code: `Nshu`, ISO 15924 Numeric code: `499`.
   /// {@endtemplate}
-  const factory ScriptNshu() = _NshuFactory;
+  const factory() = _NshuFactory;
 
-  const ScriptNshu._()
+  const new _()
     : super._(
         name: "Nüshu",
         code: "Nshu",

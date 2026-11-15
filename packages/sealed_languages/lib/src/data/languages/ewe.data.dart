@@ -1,7 +1,7 @@
 part of "../../model/language/submodels/natural_language.dart";
 
 extension type const _EweFactory._(LangEwe _) implements LangEwe {
-  const _EweFactory() : this._(const LangEwe._());
+  const new() : this._(const LangEwe._());
 }
 
 /// A class that represents the Ewe language.
@@ -11,9 +11,9 @@ final class LangEwe extends NaturalLanguage {
   ///
   /// ISO 639-2/T code: `EWE`, ISO 639-1 code: `EE`.
   /// {@endtemplate}
-  const factory LangEwe() = _EweFactory;
+  const factory() = _EweFactory;
 
-  const LangEwe._()
+  const new _()
     : super._(
         name: "Ewe",
         code: "EWE",

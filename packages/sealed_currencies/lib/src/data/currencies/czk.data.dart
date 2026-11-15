@@ -1,7 +1,7 @@
 part of "../../model/currency/submodels/fiat_currency.dart";
 
 extension type const _CzkFactory._(FiatCzk _) implements FiatCzk {
-  const _CzkFactory() : this._(const FiatCzk._());
+  const new() : this._(const FiatCzk._());
 }
 
 /// A class that represents the Czech Koruna currency.
@@ -11,9 +11,9 @@ final class FiatCzk extends FiatCurrency {
   ///
   /// ISO 4217 Alpha code: `CZK`, ISO 4217 Numeric code: `203`.
   /// {@endtemplate}
-  const factory FiatCzk() = _CzkFactory;
+  const factory() = _CzkFactory;
 
-  const FiatCzk._()
+  const new _()
     : super(
         code: "CZK",
         name: "Czech Koruna",

@@ -7,7 +7,7 @@
 part of "../../model/country/submodels/world_country.dart";
 
 extension type const _MmrFactory._(CountryMmr _) implements CountryMmr {
-  const _MmrFactory() : this._(const CountryMmr._());
+  const new() : this._(const CountryMmr._());
 }
 
 /// A class that represents the Myanmar country.
@@ -17,9 +17,9 @@ class CountryMmr extends WorldCountry {
   ///
   /// ISO 3166-1 Alpha-3 code: `MMR`, ISO 3166-1 Alpha-2 code: `MM`.
   /// {@endtemplate}
-  const factory CountryMmr() = _MmrFactory;
+  const factory() = _MmrFactory;
 
-  const CountryMmr._()
+  const new _()
     : super._(
         name: const CountryName(
           language: LangEng(),

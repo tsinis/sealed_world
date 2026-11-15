@@ -7,7 +7,7 @@
 part of "../../model/country/submodels/world_country.dart";
 
 extension type const _CogFactory._(CountryCog _) implements CountryCog {
-  const _CogFactory() : this._(const CountryCog._());
+  const new() : this._(const CountryCog._());
 }
 
 /// A class that represents the Republic of the Congo country.
@@ -17,9 +17,9 @@ class CountryCog extends WorldCountry {
   ///
   /// ISO 3166-1 Alpha-3 code: `COG`, ISO 3166-1 Alpha-2 code: `CG`.
   /// {@endtemplate}
-  const factory CountryCog() = _CogFactory;
+  const factory() = _CogFactory;
 
-  const CountryCog._()
+  const new _()
     : super._(
         name: const CountryName(
           language: LangEng(),

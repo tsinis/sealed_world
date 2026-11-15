@@ -1,7 +1,7 @@
 part of "../../model/script/submodels/script.dart";
 
 extension type const _OugrFactory._(ScriptOugr _) implements ScriptOugr {
-  const _OugrFactory() : this._(const ScriptOugr._());
+  const new() : this._(const ScriptOugr._());
 }
 
 /// A class that represents the Old Uyghur script.
@@ -11,9 +11,9 @@ final class ScriptOugr extends Script {
   ///
   /// ISO 15924 Alpha-4 code: `Ougr`, ISO 15924 Numeric code: `143`.
   /// {@endtemplate}
-  const factory ScriptOugr() = _OugrFactory;
+  const factory() = _OugrFactory;
 
-  const ScriptOugr._()
+  const new _()
     : super._(
         name: "Old Uyghur",
         code: "Ougr",

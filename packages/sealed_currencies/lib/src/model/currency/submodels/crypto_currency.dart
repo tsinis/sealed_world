@@ -15,7 +15,7 @@ class CryptoCurrency extends Currency {
   /// The [proofType] and [dateAdded] parameters are optional.
   ///
   /// Throws an [AssertionError] if [proofType] is empty.
-  const CryptoCurrency({
+  const new({
     required super.code,
     required super.name,
     this.dateAdded,

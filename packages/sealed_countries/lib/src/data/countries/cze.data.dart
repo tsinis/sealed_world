@@ -7,7 +7,7 @@
 part of "../../model/country/submodels/world_country.dart";
 
 extension type const _CzeFactory._(CountryCze _) implements CountryCze {
-  const _CzeFactory() : this._(const CountryCze._());
+  const new() : this._(const CountryCze._());
 }
 
 /// A class that represents the Czechia country.
@@ -17,9 +17,9 @@ class CountryCze extends WorldCountry {
   ///
   /// ISO 3166-1 Alpha-3 code: `CZE`, ISO 3166-1 Alpha-2 code: `CZ`.
   /// {@endtemplate}
-  const factory CountryCze() = _CzeFactory;
+  const factory() = _CzeFactory;
 
-  const CountryCze._()
+  const new _()
     : super._(
         name: const CountryName(
           language: LangEng(),

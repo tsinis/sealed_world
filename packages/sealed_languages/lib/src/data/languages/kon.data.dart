@@ -1,7 +1,7 @@
 part of "../../model/language/submodels/natural_language.dart";
 
 extension type const _KonFactory._(LangKon _) implements LangKon {
-  const _KonFactory() : this._(const LangKon._());
+  const new() : this._(const LangKon._());
 }
 
 /// A class that represents the Kongo language.
@@ -11,9 +11,9 @@ final class LangKon extends NaturalLanguage {
   ///
   /// ISO 639-2/T code: `KON`, ISO 639-1 code: `KG`.
   /// {@endtemplate}
-  const factory LangKon() = _KonFactory;
+  const factory() = _KonFactory;
 
-  const LangKon._()
+  const new _()
     : super._(
         name: "Kongo",
         code: "KON",

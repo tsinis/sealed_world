@@ -1,7 +1,7 @@
 part of "../../model/script/submodels/script.dart";
 
 extension type const _MoonFactory._(ScriptMoon _) implements ScriptMoon {
-  const _MoonFactory() : this._(const ScriptMoon._());
+  const new() : this._(const ScriptMoon._());
 }
 
 /// A class that represents the Moon (Moon code, Moon script, Moon type) script.
@@ -12,9 +12,9 @@ final class ScriptMoon extends Script {
   ///
   /// ISO 15924 Alpha-4 code: `Moon`, ISO 15924 Numeric code: `218`.
   /// {@endtemplate}
-  const factory ScriptMoon() = _MoonFactory;
+  const factory() = _MoonFactory;
 
-  const ScriptMoon._()
+  const new _()
     : super._(
         name: "Moon (Moon code, Moon script, Moon type)",
         code: "Moon",

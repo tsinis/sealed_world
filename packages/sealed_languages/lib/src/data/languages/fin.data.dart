@@ -1,7 +1,7 @@
 part of "../../model/language/submodels/natural_language.dart";
 
 extension type const _FinFactory._(LangFin _) implements LangFin {
-  const _FinFactory() : this._(const LangFin._());
+  const new() : this._(const LangFin._());
 }
 
 /// A class that represents the Finnish language.
@@ -11,9 +11,9 @@ final class LangFin extends NaturalLanguage {
   ///
   /// ISO 639-2/T code: `FIN`, ISO 639-1 code: `FI`.
   /// {@endtemplate}
-  const factory LangFin() = _FinFactory;
+  const factory() = _FinFactory;
 
-  const LangFin._()
+  const new _()
     : super._(
         name: "Finnish",
         code: "FIN",

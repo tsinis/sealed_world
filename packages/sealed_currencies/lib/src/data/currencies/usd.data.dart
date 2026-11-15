@@ -1,7 +1,7 @@
 part of "../../model/currency/submodels/fiat_currency.dart";
 
 extension type const _UsdFactory._(FiatUsd _) implements FiatUsd {
-  const _UsdFactory() : this._(const FiatUsd._());
+  const new() : this._(const FiatUsd._());
 }
 
 /// A class that represents the United States Dollar currency.
@@ -11,9 +11,9 @@ final class FiatUsd extends FiatCurrency {
   ///
   /// ISO 4217 Alpha code: `USD`, ISO 4217 Numeric code: `840`.
   /// {@endtemplate}
-  const factory FiatUsd() = _UsdFactory;
+  const factory() = _UsdFactory;
 
-  const FiatUsd._()
+  const new _()
     : super(
         code: "USD",
         name: "United States Dollar",

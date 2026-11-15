@@ -7,7 +7,7 @@
 part of "../../model/country/submodels/world_country.dart";
 
 extension type const _RwaFactory._(CountryRwa _) implements CountryRwa {
-  const _RwaFactory() : this._(const CountryRwa._());
+  const new() : this._(const CountryRwa._());
 }
 
 /// A class that represents the Rwanda country.
@@ -17,9 +17,9 @@ class CountryRwa extends WorldCountry {
   ///
   /// ISO 3166-1 Alpha-3 code: `RWA`, ISO 3166-1 Alpha-2 code: `RW`.
   /// {@endtemplate}
-  const factory CountryRwa() = _RwaFactory;
+  const factory() = _RwaFactory;
 
-  const CountryRwa._()
+  const new _()
     : super._(
         name: const CountryName(
           language: LangEng(),

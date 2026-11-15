@@ -1,7 +1,7 @@
 part of "../../model/script/submodels/script.dart";
 
 extension type const _KthiFactory._(ScriptKthi _) implements ScriptKthi {
-  const _KthiFactory() : this._(const ScriptKthi._());
+  const new() : this._(const ScriptKthi._());
 }
 
 /// A class that represents the Kaithi script.
@@ -11,9 +11,9 @@ final class ScriptKthi extends Script {
   ///
   /// ISO 15924 Alpha-4 code: `Kthi`, ISO 15924 Numeric code: `317`.
   /// {@endtemplate}
-  const factory ScriptKthi() = _KthiFactory;
+  const factory() = _KthiFactory;
 
-  const ScriptKthi._()
+  const new _()
     : super._(
         name: "Kaithi",
         code: "Kthi",

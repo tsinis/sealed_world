@@ -1,7 +1,7 @@
 part of "../../model/language/submodels/natural_language.dart";
 
 extension type const _SmoFactory._(LangSmo _) implements LangSmo {
-  const _SmoFactory() : this._(const LangSmo._());
+  const new() : this._(const LangSmo._());
 }
 
 /// A class that represents the Samoan language.
@@ -11,9 +11,9 @@ final class LangSmo extends NaturalLanguage {
   ///
   /// ISO 639-2/T code: `SMO`, ISO 639-1 code: `SM`.
   /// {@endtemplate}
-  const factory LangSmo() = _SmoFactory;
+  const factory() = _SmoFactory;
 
-  const LangSmo._()
+  const new _()
     : super._(
         name: "Samoan",
         code: "SMO",

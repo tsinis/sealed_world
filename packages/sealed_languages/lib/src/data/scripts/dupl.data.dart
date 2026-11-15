@@ -1,7 +1,7 @@
 part of "../../model/script/submodels/script.dart";
 
 extension type const _DuplFactory._(ScriptDupl _) implements ScriptDupl {
-  const _DuplFactory() : this._(const ScriptDupl._());
+  const new() : this._(const ScriptDupl._());
 }
 
 /// A class that represents the Duployan shorthand, Duployan stenography script.
@@ -12,9 +12,9 @@ final class ScriptDupl extends Script {
   ///
   /// ISO 15924 Alpha-4 code: `Dupl`, ISO 15924 Numeric code: `755`.
   /// {@endtemplate}
-  const factory ScriptDupl() = _DuplFactory;
+  const factory() = _DuplFactory;
 
-  const ScriptDupl._()
+  const new _()
     : super._(
         name: "Duployan shorthand, Duployan stenography",
         code: "Dupl",

@@ -1,7 +1,7 @@
 part of "../../model/script/submodels/script.dart";
 
 extension type const _NkooFactory._(ScriptNkoo _) implements ScriptNkoo {
-  const _NkooFactory() : this._(const ScriptNkoo._());
+  const new() : this._(const ScriptNkoo._());
 }
 
 /// A class that represents the N’Ko script.
@@ -11,9 +11,9 @@ final class ScriptNkoo extends Script {
   ///
   /// ISO 15924 Alpha-4 code: `Nkoo`, ISO 15924 Numeric code: `165`.
   /// {@endtemplate}
-  const factory ScriptNkoo() = _NkooFactory;
+  const factory() = _NkooFactory;
 
-  const ScriptNkoo._()
+  const new _()
     : super._(
         name: "N’Ko",
         code: "Nkoo",

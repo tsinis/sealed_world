@@ -1,7 +1,7 @@
 part of "../../model/currency/submodels/fiat_currency.dart";
 
 extension type const _CucFactory._(FiatCuc _) implements FiatCuc {
-  const _CucFactory() : this._(const FiatCuc._());
+  const new() : this._(const FiatCuc._());
 }
 
 /// A class that represents the Cuban Convertible Peso currency.
@@ -11,9 +11,9 @@ final class FiatCuc extends FiatCurrency {
   ///
   /// ISO 4217 Alpha code: `CUC`, ISO 4217 Numeric code: `931`.
   /// {@endtemplate}
-  const factory FiatCuc() = _CucFactory;
+  const factory() = _CucFactory;
 
-  const FiatCuc._()
+  const new _()
     : super(
         code: "CUC",
         name: "Cuban Convertible Peso",

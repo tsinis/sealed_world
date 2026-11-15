@@ -7,7 +7,7 @@
 part of "../../model/country/submodels/world_country.dart";
 
 extension type const _CriFactory._(CountryCri _) implements CountryCri {
-  const _CriFactory() : this._(const CountryCri._());
+  const new() : this._(const CountryCri._());
 }
 
 /// A class that represents the Costa Rica country.
@@ -17,9 +17,9 @@ class CountryCri extends WorldCountry {
   ///
   /// ISO 3166-1 Alpha-3 code: `CRI`, ISO 3166-1 Alpha-2 code: `CR`.
   /// {@endtemplate}
-  const factory CountryCri() = _CriFactory;
+  const factory() = _CriFactory;
 
-  const CountryCri._()
+  const new _()
     : super._(
         name: const CountryName(
           language: LangEng(),

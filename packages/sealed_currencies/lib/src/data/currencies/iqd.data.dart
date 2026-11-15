@@ -1,7 +1,7 @@
 part of "../../model/currency/submodels/fiat_currency.dart";
 
 extension type const _IqdFactory._(FiatIqd _) implements FiatIqd {
-  const _IqdFactory() : this._(const FiatIqd._());
+  const new() : this._(const FiatIqd._());
 }
 
 /// A class that represents the Iraqi Dinar currency.
@@ -11,9 +11,9 @@ final class FiatIqd extends FiatCurrency {
   ///
   /// ISO 4217 Alpha code: `IQD`, ISO 4217 Numeric code: `368`.
   /// {@endtemplate}
-  const factory FiatIqd() = _IqdFactory;
+  const factory() = _IqdFactory;
 
-  const FiatIqd._()
+  const new _()
     : super(
         code: "IQD",
         name: "Iraqi Dinar",

@@ -73,7 +73,7 @@ class UpperCaseIsoMap<V extends IsoStandardized> extends UpperCaseMap<V> {
   /// [map]: The original map that this is a view of.
   /// [defaultValue]: An optional default value to return when a key is not
   /// found.
-  const UpperCaseIsoMap(
+  const new(
     super.map, {
     super.defaultValue,
     this.exactLength = IsoStandardized.codeLength,

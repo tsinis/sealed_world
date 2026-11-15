@@ -1,7 +1,7 @@
 part of "../../model/script/submodels/script.dart";
 
 extension type const _SyreFactory._(ScriptSyre _) implements ScriptSyre {
-  const _SyreFactory() : this._(const ScriptSyre._());
+  const new() : this._(const ScriptSyre._());
 }
 
 /// A class that represents the Syriac (Estrangelo variant) script.
@@ -11,9 +11,9 @@ final class ScriptSyre extends Script {
   ///
   /// ISO 15924 Alpha-4 code: `Syre`, ISO 15924 Numeric code: `138`.
   /// {@endtemplate}
-  const factory ScriptSyre() = _SyreFactory;
+  const factory() = _SyreFactory;
 
-  const ScriptSyre._()
+  const new _()
     : super._(
         name: "Syriac (Estrangelo variant)",
         code: "Syre",

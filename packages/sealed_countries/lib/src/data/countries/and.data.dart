@@ -7,7 +7,7 @@
 part of "../../model/country/submodels/world_country.dart";
 
 extension type const _AndFactory._(CountryAnd _) implements CountryAnd {
-  const _AndFactory() : this._(const CountryAnd._());
+  const new() : this._(const CountryAnd._());
 }
 
 /// A class that represents the Andorra country.
@@ -17,9 +17,9 @@ class CountryAnd extends WorldCountry {
   ///
   /// ISO 3166-1 Alpha-3 code: `AND`, ISO 3166-1 Alpha-2 code: `AD`.
   /// {@endtemplate}
-  const factory CountryAnd() = _AndFactory;
+  const factory() = _AndFactory;
 
-  const CountryAnd._()
+  const new _()
     : super._(
         name: const CountryName(
           language: LangEng(),

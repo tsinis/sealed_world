@@ -1,7 +1,7 @@
 part of "../../model/currency/submodels/fiat_currency.dart";
 
 extension type const _ZwgFactory._(FiatZwg _) implements FiatZwg {
-  const _ZwgFactory() : this._(const FiatZwg._());
+  const new() : this._(const FiatZwg._());
 }
 
 /// A class that represents the Zimbabwe Gold currency.
@@ -11,9 +11,9 @@ final class FiatZwg extends FiatCurrency {
   ///
   /// ISO 4217 Alpha code: `ZWG`, ISO 4217 Numeric code: `924`.
   /// {@endtemplate}
-  const factory FiatZwg() = _ZwgFactory;
+  const factory() = _ZwgFactory;
 
-  const FiatZwg._()
+  const new _()
     : super(
         code: "ZWG",
         name: "Zimbabwe Gold",

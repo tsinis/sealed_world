@@ -1,7 +1,7 @@
 part of "../../model/language/submodels/natural_language.dart";
 
 extension type const _KatFactory._(LangKat _) implements LangKat {
-  const _KatFactory() : this._(const LangKat._());
+  const new() : this._(const LangKat._());
 }
 
 /// A class that represents the Georgian language.
@@ -11,9 +11,9 @@ final class LangKat extends NaturalLanguage {
   ///
   /// ISO 639-2/T code: `KAT`, ISO 639-1 code: `KA`.
   /// {@endtemplate}
-  const factory LangKat() = _KatFactory;
+  const factory() = _KatFactory;
 
-  const LangKat._()
+  const new _()
     : super._(
         name: "Georgian",
         code: "KAT",

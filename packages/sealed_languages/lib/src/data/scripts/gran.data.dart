@@ -1,7 +1,7 @@
 part of "../../model/script/submodels/script.dart";
 
 extension type const _GranFactory._(ScriptGran _) implements ScriptGran {
-  const _GranFactory() : this._(const ScriptGran._());
+  const new() : this._(const ScriptGran._());
 }
 
 /// A class that represents the Grantha script.
@@ -11,9 +11,9 @@ final class ScriptGran extends Script {
   ///
   /// ISO 15924 Alpha-4 code: `Gran`, ISO 15924 Numeric code: `343`.
   /// {@endtemplate}
-  const factory ScriptGran() = _GranFactory;
+  const factory() = _GranFactory;
 
-  const ScriptGran._()
+  const new _()
     : super._(
         name: "Grantha",
         code: "Gran",

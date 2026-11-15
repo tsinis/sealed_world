@@ -1,7 +1,7 @@
 part of "../../model/currency/submodels/fiat_currency.dart";
 
 extension type const _InrFactory._(FiatInr _) implements FiatInr {
-  const _InrFactory() : this._(const FiatInr._());
+  const new() : this._(const FiatInr._());
 }
 
 /// A class that represents the Indian Rupee currency.
@@ -11,9 +11,9 @@ final class FiatInr extends FiatCurrency {
   ///
   /// ISO 4217 Alpha code: `INR`, ISO 4217 Numeric code: `356`.
   /// {@endtemplate}
-  const factory FiatInr() = _InrFactory;
+  const factory() = _InrFactory;
 
-  const FiatInr._()
+  const new _()
     : super(
         code: "INR",
         name: "Indian Rupee",

@@ -1,7 +1,7 @@
 part of "../../model/script/submodels/script.dart";
 
 extension type const _PrtiFactory._(ScriptPrti _) implements ScriptPrti {
-  const _PrtiFactory() : this._(const ScriptPrti._());
+  const new() : this._(const ScriptPrti._());
 }
 
 /// A class that represents the Inscriptional Parthian script.
@@ -11,9 +11,9 @@ final class ScriptPrti extends Script {
   ///
   /// ISO 15924 Alpha-4 code: `Prti`, ISO 15924 Numeric code: `130`.
   /// {@endtemplate}
-  const factory ScriptPrti() = _PrtiFactory;
+  const factory() = _PrtiFactory;
 
-  const ScriptPrti._()
+  const new _()
     : super._(
         name: "Inscriptional Parthian",
         code: "Prti",

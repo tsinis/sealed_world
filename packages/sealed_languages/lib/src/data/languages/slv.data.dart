@@ -1,7 +1,7 @@
 part of "../../model/language/submodels/natural_language.dart";
 
 extension type const _SlvFactory._(LangSlv _) implements LangSlv {
-  const _SlvFactory() : this._(const LangSlv._());
+  const new() : this._(const LangSlv._());
 }
 
 /// A class that represents the Slovene language.
@@ -11,9 +11,9 @@ final class LangSlv extends NaturalLanguage {
   ///
   /// ISO 639-2/T code: `SLV`, ISO 639-1 code: `SL`.
   /// {@endtemplate}
-  const factory LangSlv() = _SlvFactory;
+  const factory() = _SlvFactory;
 
-  const LangSlv._()
+  const new _()
     : super._(
         name: "Slovene",
         code: "SLV",

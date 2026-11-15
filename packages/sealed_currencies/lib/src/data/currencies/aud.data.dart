@@ -1,7 +1,7 @@
 part of "../../model/currency/submodels/fiat_currency.dart";
 
 extension type const _AudFactory._(FiatAud _) implements FiatAud {
-  const _AudFactory() : this._(const FiatAud._());
+  const new() : this._(const FiatAud._());
 }
 
 /// A class that represents the Australian Dollar currency.
@@ -11,9 +11,9 @@ final class FiatAud extends FiatCurrency {
   ///
   /// ISO 4217 Alpha code: `AUD`, ISO 4217 Numeric code: `036`.
   /// {@endtemplate}
-  const factory FiatAud() = _AudFactory;
+  const factory() = _AudFactory;
 
-  const FiatAud._()
+  const new _()
     : super(
         code: "AUD",
         name: "Australian Dollar",

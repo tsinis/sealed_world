@@ -1,7 +1,7 @@
 part of "../../model/script/submodels/script.dart";
 
 extension type const _ShuiFactory._(ScriptShui _) implements ScriptShui {
-  const _ShuiFactory() : this._(const ScriptShui._());
+  const new() : this._(const ScriptShui._());
 }
 
 /// A class that represents the Shuishu script.
@@ -11,9 +11,9 @@ final class ScriptShui extends Script {
   ///
   /// ISO 15924 Alpha-4 code: `Shui`, ISO 15924 Numeric code: `530`.
   /// {@endtemplate}
-  const factory ScriptShui() = _ShuiFactory;
+  const factory() = _ShuiFactory;
 
-  const ScriptShui._()
+  const new _()
     : super._(
         name: "Shuishu",
         code: "Shui",

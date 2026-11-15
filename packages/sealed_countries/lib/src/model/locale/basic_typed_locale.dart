@@ -8,16 +8,12 @@ class BasicTypedLocale extends BasicLocale {
   ///
   /// The [language] parameter is required.
   /// The [country], [regionalCode] and [script] parameters are optional.
-  const BasicTypedLocale(
-    super.language, {
-    this.country,
-    super.script,
-    String? regionalCode,
-  }) : assert(
-         regionalCode == null || country == null,
-         "Cannot provide both `regionalCode` and `country` at the same time",
-       ),
-       super(countryCode: regionalCode);
+  const new(super.language, {this.country, super.script, String? regionalCode})
+    : assert(
+        regionalCode == null || country == null,
+        "Cannot provide both `regionalCode` and `country` at the same time",
+      ),
+      super(countryCode: regionalCode);
 
   /// The optional country information of type [WorldCountry]. Has higher
   /// priority than primitive-typed `regionalCode` aka [countryCode].

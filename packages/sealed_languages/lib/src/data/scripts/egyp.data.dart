@@ -1,7 +1,7 @@
 part of "../../model/script/submodels/script.dart";
 
 extension type const _EgypFactory._(ScriptEgyp _) implements ScriptEgyp {
-  const _EgypFactory() : this._(const ScriptEgyp._());
+  const new() : this._(const ScriptEgyp._());
 }
 
 /// A class that represents the Egyptian hieroglyphs script.
@@ -11,9 +11,9 @@ final class ScriptEgyp extends Script {
   ///
   /// ISO 15924 Alpha-4 code: `Egyp`, ISO 15924 Numeric code: `050`.
   /// {@endtemplate}
-  const factory ScriptEgyp() = _EgypFactory;
+  const factory() = _EgypFactory;
 
-  const ScriptEgyp._()
+  const new _()
     : super._(
         name: "Egyptian hieroglyphs",
         code: "Egyp",

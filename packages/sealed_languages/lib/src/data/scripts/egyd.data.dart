@@ -1,7 +1,7 @@
 part of "../../model/script/submodels/script.dart";
 
 extension type const _EgydFactory._(ScriptEgyd _) implements ScriptEgyd {
-  const _EgydFactory() : this._(const ScriptEgyd._());
+  const new() : this._(const ScriptEgyd._());
 }
 
 /// A class that represents the Egyptian demotic script.
@@ -11,9 +11,9 @@ final class ScriptEgyd extends Script {
   ///
   /// ISO 15924 Alpha-4 code: `Egyd`, ISO 15924 Numeric code: `070`.
   /// {@endtemplate}
-  const factory ScriptEgyd() = _EgydFactory;
+  const factory() = _EgydFactory;
 
-  const ScriptEgyd._()
+  const new _()
     : super._(
         name: "Egyptian demotic",
         code: "Egyd",

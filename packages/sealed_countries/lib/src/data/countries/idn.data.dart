@@ -7,7 +7,7 @@
 part of "../../model/country/submodels/world_country.dart";
 
 extension type const _IdnFactory._(CountryIdn _) implements CountryIdn {
-  const _IdnFactory() : this._(const CountryIdn._());
+  const new() : this._(const CountryIdn._());
 }
 
 /// A class that represents the Indonesia country.
@@ -17,9 +17,9 @@ class CountryIdn extends WorldCountry {
   ///
   /// ISO 3166-1 Alpha-3 code: `IDN`, ISO 3166-1 Alpha-2 code: `ID`.
   /// {@endtemplate}
-  const factory CountryIdn() = _IdnFactory;
+  const factory() = _IdnFactory;
 
-  const CountryIdn._()
+  const new _()
     : super._(
         name: const CountryName(
           language: LangEng(),

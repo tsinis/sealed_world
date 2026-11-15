@@ -1,7 +1,7 @@
 part of "../../model/currency/submodels/fiat_currency.dart";
 
 extension type const _BzdFactory._(FiatBzd _) implements FiatBzd {
-  const _BzdFactory() : this._(const FiatBzd._());
+  const new() : this._(const FiatBzd._());
 }
 
 /// A class that represents the Belize Dollar currency.
@@ -11,9 +11,9 @@ final class FiatBzd extends FiatCurrency {
   ///
   /// ISO 4217 Alpha code: `BZD`, ISO 4217 Numeric code: `084`.
   /// {@endtemplate}
-  const factory FiatBzd() = _BzdFactory;
+  const factory() = _BzdFactory;
 
-  const FiatBzd._()
+  const new _()
     : super(
         code: "BZD",
         name: "Belize Dollar",

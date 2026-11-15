@@ -1,7 +1,7 @@
 part of "../../model/language/submodels/natural_language.dart";
 
 extension type const _LimFactory._(LangLim _) implements LangLim {
-  const _LimFactory() : this._(const LangLim._());
+  const new() : this._(const LangLim._());
 }
 
 /// A class that represents the Limburgish (Limburgan/Limburger) language.
@@ -11,9 +11,9 @@ final class LangLim extends NaturalLanguage {
   ///
   /// ISO 639-2/T code: `LIM`, ISO 639-1 code: `LI`.
   /// {@endtemplate}
-  const factory LangLim() = _LimFactory;
+  const factory() = _LimFactory;
 
-  const LangLim._()
+  const new _()
     : super._(
         name: "Limburgish (Limburgan/Limburger)",
         code: "LIM",

@@ -1,7 +1,7 @@
 part of "../../model/script/submodels/script.dart";
 
 extension type const _ElbaFactory._(ScriptElba _) implements ScriptElba {
-  const _ElbaFactory() : this._(const ScriptElba._());
+  const new() : this._(const ScriptElba._());
 }
 
 /// A class that represents the Elbasan script.
@@ -11,9 +11,9 @@ final class ScriptElba extends Script {
   ///
   /// ISO 15924 Alpha-4 code: `Elba`, ISO 15924 Numeric code: `226`.
   /// {@endtemplate}
-  const factory ScriptElba() = _ElbaFactory;
+  const factory() = _ElbaFactory;
 
-  const ScriptElba._()
+  const new _()
     : super._(
         name: "Elbasan",
         code: "Elba",

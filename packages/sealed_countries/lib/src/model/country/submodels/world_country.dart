@@ -312,7 +312,7 @@ sealed class WorldCountry extends Country
   /// [areaMetric], [population], and [startOfWeek] parameters should not be
   /// `null` and must be valid values.
   /// {@endtemplate}
-  const WorldCountry._({
+  const new _({
     required super.name,
     required this.altSpellings,
     required this.areaMetric,
@@ -380,758 +380,758 @@ sealed class WorldCountry extends Country
        _mapper = null;
 
   /// {@macro sealed_world.country_abw_constructor}
-  const factory WorldCountry.abw() = _AbwFactory;
+  const factory abw() = _AbwFactory;
 
   /// {@macro sealed_world.country_afg_constructor}
-  const factory WorldCountry.afg() = _AfgFactory;
+  const factory afg() = _AfgFactory;
 
   /// {@macro sealed_world.country_ago_constructor}
-  const factory WorldCountry.ago() = _AgoFactory;
+  const factory ago() = _AgoFactory;
 
   /// {@macro sealed_world.country_aia_constructor}
-  const factory WorldCountry.aia() = _AiaFactory;
+  const factory aia() = _AiaFactory;
 
   /// {@macro sealed_world.country_ala_constructor}
-  const factory WorldCountry.ala() = _AlaFactory;
+  const factory ala() = _AlaFactory;
 
   /// {@macro sealed_world.country_alb_constructor}
-  const factory WorldCountry.alb() = _AlbFactory;
+  const factory alb() = _AlbFactory;
 
   /// {@macro sealed_world.country_and_constructor}
-  const factory WorldCountry.and() = _AndFactory;
+  const factory and() = _AndFactory;
 
   /// {@macro sealed_world.country_are_constructor}
-  const factory WorldCountry.are() = _AreFactory;
+  const factory are() = _AreFactory;
 
   /// {@macro sealed_world.country_arg_constructor}
-  const factory WorldCountry.arg() = _ArgFactory;
+  const factory arg() = _ArgFactory;
 
   /// {@macro sealed_world.country_arm_constructor}
-  const factory WorldCountry.arm() = _ArmFactory;
+  const factory arm() = _ArmFactory;
 
   /// {@macro sealed_world.country_asm_constructor}
-  const factory WorldCountry.asm() = _AsmFactory;
+  const factory asm() = _AsmFactory;
 
   /// {@macro sealed_world.country_ata_constructor}
-  const factory WorldCountry.ata() = _AtaFactory;
+  const factory ata() = _AtaFactory;
 
   /// {@macro sealed_world.country_atf_constructor}
-  const factory WorldCountry.atf() = _AtfFactory;
+  const factory atf() = _AtfFactory;
 
   /// {@macro sealed_world.country_atg_constructor}
-  const factory WorldCountry.atg() = _AtgFactory;
+  const factory atg() = _AtgFactory;
 
   /// {@macro sealed_world.country_aus_constructor}
-  const factory WorldCountry.aus() = _AusFactory;
+  const factory aus() = _AusFactory;
 
   /// {@macro sealed_world.country_aut_constructor}
-  const factory WorldCountry.aut() = _AutFactory;
+  const factory aut() = _AutFactory;
 
   /// {@macro sealed_world.country_aze_constructor}
-  const factory WorldCountry.aze() = _AzeFactory;
+  const factory aze() = _AzeFactory;
 
   /// {@macro sealed_world.country_bdi_constructor}
-  const factory WorldCountry.bdi() = _BdiFactory;
+  const factory bdi() = _BdiFactory;
 
   /// {@macro sealed_world.country_bel_constructor}
-  const factory WorldCountry.bel() = _BelFactory;
+  const factory bel() = _BelFactory;
 
   /// {@macro sealed_world.country_ben_constructor}
-  const factory WorldCountry.ben() = _BenFactory;
+  const factory ben() = _BenFactory;
 
   /// {@macro sealed_world.country_bes_constructor}
-  const factory WorldCountry.bes() = _BesFactory;
+  const factory bes() = _BesFactory;
 
   /// {@macro sealed_world.country_bfa_constructor}
-  const factory WorldCountry.bfa() = _BfaFactory;
+  const factory bfa() = _BfaFactory;
 
   /// {@macro sealed_world.country_bgd_constructor}
-  const factory WorldCountry.bgd() = _BgdFactory;
+  const factory bgd() = _BgdFactory;
 
   /// {@macro sealed_world.country_bgr_constructor}
-  const factory WorldCountry.bgr() = _BgrFactory;
+  const factory bgr() = _BgrFactory;
 
   /// {@macro sealed_world.country_bhr_constructor}
-  const factory WorldCountry.bhr() = _BhrFactory;
+  const factory bhr() = _BhrFactory;
 
   /// {@macro sealed_world.country_bhs_constructor}
-  const factory WorldCountry.bhs() = _BhsFactory;
+  const factory bhs() = _BhsFactory;
 
   /// {@macro sealed_world.country_bih_constructor}
-  const factory WorldCountry.bih() = _BihFactory;
+  const factory bih() = _BihFactory;
 
   /// {@macro sealed_world.country_blm_constructor}
-  const factory WorldCountry.blm() = _BlmFactory;
+  const factory blm() = _BlmFactory;
 
   /// {@macro sealed_world.country_blr_constructor}
-  const factory WorldCountry.blr() = _BlrFactory;
+  const factory blr() = _BlrFactory;
 
   /// {@macro sealed_world.country_blz_constructor}
-  const factory WorldCountry.blz() = _BlzFactory;
+  const factory blz() = _BlzFactory;
 
   /// {@macro sealed_world.country_bmu_constructor}
-  const factory WorldCountry.bmu() = _BmuFactory;
+  const factory bmu() = _BmuFactory;
 
   /// {@macro sealed_world.country_bol_constructor}
-  const factory WorldCountry.bol() = _BolFactory;
+  const factory bol() = _BolFactory;
 
   /// {@macro sealed_world.country_bra_constructor}
-  const factory WorldCountry.bra() = _BraFactory;
+  const factory bra() = _BraFactory;
 
   /// {@macro sealed_world.country_brb_constructor}
-  const factory WorldCountry.brb() = _BrbFactory;
+  const factory brb() = _BrbFactory;
 
   /// {@macro sealed_world.country_brn_constructor}
-  const factory WorldCountry.brn() = _BrnFactory;
+  const factory brn() = _BrnFactory;
 
   /// {@macro sealed_world.country_btn_constructor}
-  const factory WorldCountry.btn() = _BtnFactory;
+  const factory btn() = _BtnFactory;
 
   /// {@macro sealed_world.country_bvt_constructor}
-  const factory WorldCountry.bvt() = _BvtFactory;
+  const factory bvt() = _BvtFactory;
 
   /// {@macro sealed_world.country_bwa_constructor}
-  const factory WorldCountry.bwa() = _BwaFactory;
+  const factory bwa() = _BwaFactory;
 
   /// {@macro sealed_world.country_caf_constructor}
-  const factory WorldCountry.caf() = _CafFactory;
+  const factory caf() = _CafFactory;
 
   /// {@macro sealed_world.country_can_constructor}
-  const factory WorldCountry.can() = _CanFactory;
+  const factory can() = _CanFactory;
 
   /// {@macro sealed_world.country_cck_constructor}
-  const factory WorldCountry.cck() = _CckFactory;
+  const factory cck() = _CckFactory;
 
   /// {@macro sealed_world.country_che_constructor}
-  const factory WorldCountry.che() = _CheFactory;
+  const factory che() = _CheFactory;
 
   /// {@macro sealed_world.country_chl_constructor}
-  const factory WorldCountry.chl() = _ChlFactory;
+  const factory chl() = _ChlFactory;
 
   /// {@macro sealed_world.country_chn_constructor}
-  const factory WorldCountry.chn() = _ChnFactory;
+  const factory chn() = _ChnFactory;
 
   /// {@macro sealed_world.country_civ_constructor}
-  const factory WorldCountry.civ() = _CivFactory;
+  const factory civ() = _CivFactory;
 
   /// {@macro sealed_world.country_cmr_constructor}
-  const factory WorldCountry.cmr() = _CmrFactory;
+  const factory cmr() = _CmrFactory;
 
   /// {@macro sealed_world.country_cod_constructor}
-  const factory WorldCountry.cod() = _CodFactory;
+  const factory cod() = _CodFactory;
 
   /// {@macro sealed_world.country_cog_constructor}
-  const factory WorldCountry.cog() = _CogFactory;
+  const factory cog() = _CogFactory;
 
   /// {@macro sealed_world.country_cok_constructor}
-  const factory WorldCountry.cok() = _CokFactory;
+  const factory cok() = _CokFactory;
 
   /// {@macro sealed_world.country_col_constructor}
-  const factory WorldCountry.col() = _ColFactory;
+  const factory col() = _ColFactory;
 
   /// {@macro sealed_world.country_com_constructor}
-  const factory WorldCountry.com() = _ComFactory;
+  const factory com() = _ComFactory;
 
   /// {@macro sealed_world.country_cpv_constructor}
-  const factory WorldCountry.cpv() = _CpvFactory;
+  const factory cpv() = _CpvFactory;
 
   /// {@macro sealed_world.country_cri_constructor}
-  const factory WorldCountry.cri() = _CriFactory;
+  const factory cri() = _CriFactory;
 
   /// {@macro sealed_world.country_cub_constructor}
-  const factory WorldCountry.cub() = _CubFactory;
+  const factory cub() = _CubFactory;
 
   /// {@macro sealed_world.country_cuw_constructor}
-  const factory WorldCountry.cuw() = _CuwFactory;
+  const factory cuw() = _CuwFactory;
 
   /// {@macro sealed_world.country_cxr_constructor}
-  const factory WorldCountry.cxr() = _CxrFactory;
+  const factory cxr() = _CxrFactory;
 
   /// {@macro sealed_world.country_cym_constructor}
-  const factory WorldCountry.cym() = _CymFactory;
+  const factory cym() = _CymFactory;
 
   /// {@macro sealed_world.country_cyp_constructor}
-  const factory WorldCountry.cyp() = _CypFactory;
+  const factory cyp() = _CypFactory;
 
   /// {@macro sealed_world.country_cze_constructor}
-  const factory WorldCountry.cze() = _CzeFactory;
+  const factory cze() = _CzeFactory;
 
   /// {@macro sealed_world.country_deu_constructor}
-  const factory WorldCountry.deu() = _DeuFactory;
+  const factory deu() = _DeuFactory;
 
   /// {@macro sealed_world.country_dji_constructor}
-  const factory WorldCountry.dji() = _DjiFactory;
+  const factory dji() = _DjiFactory;
 
   /// {@macro sealed_world.country_dma_constructor}
-  const factory WorldCountry.dma() = _DmaFactory;
+  const factory dma() = _DmaFactory;
 
   /// {@macro sealed_world.country_dnk_constructor}
-  const factory WorldCountry.dnk() = _DnkFactory;
+  const factory dnk() = _DnkFactory;
 
   /// {@macro sealed_world.country_dom_constructor}
-  const factory WorldCountry.dom() = _DomFactory;
+  const factory dom() = _DomFactory;
 
   /// {@macro sealed_world.country_dza_constructor}
-  const factory WorldCountry.dza() = _DzaFactory;
+  const factory dza() = _DzaFactory;
 
   /// {@macro sealed_world.country_ecu_constructor}
-  const factory WorldCountry.ecu() = _EcuFactory;
+  const factory ecu() = _EcuFactory;
 
   /// {@macro sealed_world.country_egy_constructor}
-  const factory WorldCountry.egy() = _EgyFactory;
+  const factory egy() = _EgyFactory;
 
   /// {@macro sealed_world.country_eri_constructor}
-  const factory WorldCountry.eri() = _EriFactory;
+  const factory eri() = _EriFactory;
 
   /// {@macro sealed_world.country_esh_constructor}
-  const factory WorldCountry.esh() = _EshFactory;
+  const factory esh() = _EshFactory;
 
   /// {@macro sealed_world.country_esp_constructor}
-  const factory WorldCountry.esp() = _EspFactory;
+  const factory esp() = _EspFactory;
 
   /// {@macro sealed_world.country_est_constructor}
-  const factory WorldCountry.est() = _EstFactory;
+  const factory est() = _EstFactory;
 
   /// {@macro sealed_world.country_eth_constructor}
-  const factory WorldCountry.eth() = _EthFactory;
+  const factory eth() = _EthFactory;
 
   /// {@macro sealed_world.country_fin_constructor}
-  const factory WorldCountry.fin() = _FinFactory;
+  const factory fin() = _FinFactory;
 
   /// {@macro sealed_world.country_fji_constructor}
-  const factory WorldCountry.fji() = _FjiFactory;
+  const factory fji() = _FjiFactory;
 
   /// {@macro sealed_world.country_flk_constructor}
-  const factory WorldCountry.flk() = _FlkFactory;
+  const factory flk() = _FlkFactory;
 
   /// {@macro sealed_world.country_fra_constructor}
-  const factory WorldCountry.fra() = _FraFactory;
+  const factory fra() = _FraFactory;
 
   /// {@macro sealed_world.country_fro_constructor}
-  const factory WorldCountry.fro() = _FroFactory;
+  const factory fro() = _FroFactory;
 
   /// {@macro sealed_world.country_fsm_constructor}
-  const factory WorldCountry.fsm() = _FsmFactory;
+  const factory fsm() = _FsmFactory;
 
   /// {@macro sealed_world.country_gab_constructor}
-  const factory WorldCountry.gab() = _GabFactory;
+  const factory gab() = _GabFactory;
 
   /// {@macro sealed_world.country_gbr_constructor}
-  const factory WorldCountry.gbr() = _GbrFactory;
+  const factory gbr() = _GbrFactory;
 
   /// {@macro sealed_world.country_geo_constructor}
-  const factory WorldCountry.geo() = _GeoFactory;
+  const factory geo() = _GeoFactory;
 
   /// {@macro sealed_world.country_ggy_constructor}
-  const factory WorldCountry.ggy() = _GgyFactory;
+  const factory ggy() = _GgyFactory;
 
   /// {@macro sealed_world.country_gha_constructor}
-  const factory WorldCountry.gha() = _GhaFactory;
+  const factory gha() = _GhaFactory;
 
   /// {@macro sealed_world.country_gib_constructor}
-  const factory WorldCountry.gib() = _GibFactory;
+  const factory gib() = _GibFactory;
 
   /// {@macro sealed_world.country_gin_constructor}
-  const factory WorldCountry.gin() = _GinFactory;
+  const factory gin() = _GinFactory;
 
   /// {@macro sealed_world.country_glp_constructor}
-  const factory WorldCountry.glp() = _GlpFactory;
+  const factory glp() = _GlpFactory;
 
   /// {@macro sealed_world.country_gmb_constructor}
-  const factory WorldCountry.gmb() = _GmbFactory;
+  const factory gmb() = _GmbFactory;
 
   /// {@macro sealed_world.country_gnb_constructor}
-  const factory WorldCountry.gnb() = _GnbFactory;
+  const factory gnb() = _GnbFactory;
 
   /// {@macro sealed_world.country_gnq_constructor}
-  const factory WorldCountry.gnq() = _GnqFactory;
+  const factory gnq() = _GnqFactory;
 
   /// {@macro sealed_world.country_grc_constructor}
-  const factory WorldCountry.grc() = _GrcFactory;
+  const factory grc() = _GrcFactory;
 
   /// {@macro sealed_world.country_grd_constructor}
-  const factory WorldCountry.grd() = _GrdFactory;
+  const factory grd() = _GrdFactory;
 
   /// {@macro sealed_world.country_grl_constructor}
-  const factory WorldCountry.grl() = _GrlFactory;
+  const factory grl() = _GrlFactory;
 
   /// {@macro sealed_world.country_gtm_constructor}
-  const factory WorldCountry.gtm() = _GtmFactory;
+  const factory gtm() = _GtmFactory;
 
   /// {@macro sealed_world.country_guf_constructor}
-  const factory WorldCountry.guf() = _GufFactory;
+  const factory guf() = _GufFactory;
 
   /// {@macro sealed_world.country_gum_constructor}
-  const factory WorldCountry.gum() = _GumFactory;
+  const factory gum() = _GumFactory;
 
   /// {@macro sealed_world.country_guy_constructor}
-  const factory WorldCountry.guy() = _GuyFactory;
+  const factory guy() = _GuyFactory;
 
   /// {@macro sealed_world.country_hkg_constructor}
-  const factory WorldCountry.hkg() = _HkgFactory;
+  const factory hkg() = _HkgFactory;
 
   /// {@macro sealed_world.country_hmd_constructor}
-  const factory WorldCountry.hmd() = _HmdFactory;
+  const factory hmd() = _HmdFactory;
 
   /// {@macro sealed_world.country_hnd_constructor}
-  const factory WorldCountry.hnd() = _HndFactory;
+  const factory hnd() = _HndFactory;
 
   /// {@macro sealed_world.country_hrv_constructor}
-  const factory WorldCountry.hrv() = _HrvFactory;
+  const factory hrv() = _HrvFactory;
 
   /// {@macro sealed_world.country_hti_constructor}
-  const factory WorldCountry.hti() = _HtiFactory;
+  const factory hti() = _HtiFactory;
 
   /// {@macro sealed_world.country_hun_constructor}
-  const factory WorldCountry.hun() = _HunFactory;
+  const factory hun() = _HunFactory;
 
   /// {@macro sealed_world.country_idn_constructor}
-  const factory WorldCountry.idn() = _IdnFactory;
+  const factory idn() = _IdnFactory;
 
   /// {@macro sealed_world.country_imn_constructor}
-  const factory WorldCountry.imn() = _ImnFactory;
+  const factory imn() = _ImnFactory;
 
   /// {@macro sealed_world.country_ind_constructor}
-  const factory WorldCountry.ind() = _IndFactory;
+  const factory ind() = _IndFactory;
 
   /// {@macro sealed_world.country_iot_constructor}
-  const factory WorldCountry.iot() = _IotFactory;
+  const factory iot() = _IotFactory;
 
   /// {@macro sealed_world.country_irl_constructor}
-  const factory WorldCountry.irl() = _IrlFactory;
+  const factory irl() = _IrlFactory;
 
   /// {@macro sealed_world.country_irn_constructor}
-  const factory WorldCountry.irn() = _IrnFactory;
+  const factory irn() = _IrnFactory;
 
   /// {@macro sealed_world.country_irq_constructor}
-  const factory WorldCountry.irq() = _IrqFactory;
+  const factory irq() = _IrqFactory;
 
   /// {@macro sealed_world.country_isl_constructor}
-  const factory WorldCountry.isl() = _IslFactory;
+  const factory isl() = _IslFactory;
 
   /// {@macro sealed_world.country_isr_constructor}
-  const factory WorldCountry.isr() = _IsrFactory;
+  const factory isr() = _IsrFactory;
 
   /// {@macro sealed_world.country_ita_constructor}
-  const factory WorldCountry.ita() = _ItaFactory;
+  const factory ita() = _ItaFactory;
 
   /// {@macro sealed_world.country_jam_constructor}
-  const factory WorldCountry.jam() = _JamFactory;
+  const factory jam() = _JamFactory;
 
   /// {@macro sealed_world.country_jey_constructor}
-  const factory WorldCountry.jey() = _JeyFactory;
+  const factory jey() = _JeyFactory;
 
   /// {@macro sealed_world.country_jor_constructor}
-  const factory WorldCountry.jor() = _JorFactory;
+  const factory jor() = _JorFactory;
 
   /// {@macro sealed_world.country_jpn_constructor}
-  const factory WorldCountry.jpn() = _JpnFactory;
+  const factory jpn() = _JpnFactory;
 
   /// {@macro sealed_world.country_kaz_constructor}
-  const factory WorldCountry.kaz() = _KazFactory;
+  const factory kaz() = _KazFactory;
 
   /// {@macro sealed_world.country_ken_constructor}
-  const factory WorldCountry.ken() = _KenFactory;
+  const factory ken() = _KenFactory;
 
   /// {@macro sealed_world.country_kgz_constructor}
-  const factory WorldCountry.kgz() = _KgzFactory;
+  const factory kgz() = _KgzFactory;
 
   /// {@macro sealed_world.country_khm_constructor}
-  const factory WorldCountry.khm() = _KhmFactory;
+  const factory khm() = _KhmFactory;
 
   /// {@macro sealed_world.country_kir_constructor}
-  const factory WorldCountry.kir() = _KirFactory;
+  const factory kir() = _KirFactory;
 
   /// {@macro sealed_world.country_kna_constructor}
-  const factory WorldCountry.kna() = _KnaFactory;
+  const factory kna() = _KnaFactory;
 
   /// {@macro sealed_world.country_kor_constructor}
-  const factory WorldCountry.kor() = _KorFactory;
+  const factory kor() = _KorFactory;
 
   /// {@macro sealed_world.country_kwt_constructor}
-  const factory WorldCountry.kwt() = _KwtFactory;
+  const factory kwt() = _KwtFactory;
 
   /// {@macro sealed_world.country_lao_constructor}
-  const factory WorldCountry.lao() = _LaoFactory;
+  const factory lao() = _LaoFactory;
 
   /// {@macro sealed_world.country_lbn_constructor}
-  const factory WorldCountry.lbn() = _LbnFactory;
+  const factory lbn() = _LbnFactory;
 
   /// {@macro sealed_world.country_lbr_constructor}
-  const factory WorldCountry.lbr() = _LbrFactory;
+  const factory lbr() = _LbrFactory;
 
   /// {@macro sealed_world.country_lby_constructor}
-  const factory WorldCountry.lby() = _LbyFactory;
+  const factory lby() = _LbyFactory;
 
   /// {@macro sealed_world.country_lca_constructor}
-  const factory WorldCountry.lca() = _LcaFactory;
+  const factory lca() = _LcaFactory;
 
   /// {@macro sealed_world.country_lie_constructor}
-  const factory WorldCountry.lie() = _LieFactory;
+  const factory lie() = _LieFactory;
 
   /// {@macro sealed_world.country_lka_constructor}
-  const factory WorldCountry.lka() = _LkaFactory;
+  const factory lka() = _LkaFactory;
 
   /// {@macro sealed_world.country_lso_constructor}
-  const factory WorldCountry.lso() = _LsoFactory;
+  const factory lso() = _LsoFactory;
 
   /// {@macro sealed_world.country_ltu_constructor}
-  const factory WorldCountry.ltu() = _LtuFactory;
+  const factory ltu() = _LtuFactory;
 
   /// {@macro sealed_world.country_lux_constructor}
-  const factory WorldCountry.lux() = _LuxFactory;
+  const factory lux() = _LuxFactory;
 
   /// {@macro sealed_world.country_lva_constructor}
-  const factory WorldCountry.lva() = _LvaFactory;
+  const factory lva() = _LvaFactory;
 
   /// {@macro sealed_world.country_mac_constructor}
-  const factory WorldCountry.mac() = _MacFactory;
+  const factory mac() = _MacFactory;
 
   /// {@macro sealed_world.country_maf_constructor}
-  const factory WorldCountry.maf() = _MafFactory;
+  const factory maf() = _MafFactory;
 
   /// {@macro sealed_world.country_mar_constructor}
-  const factory WorldCountry.mar() = _MarFactory;
+  const factory mar() = _MarFactory;
 
   /// {@macro sealed_world.country_mco_constructor}
-  const factory WorldCountry.mco() = _McoFactory;
+  const factory mco() = _McoFactory;
 
   /// {@macro sealed_world.country_mda_constructor}
-  const factory WorldCountry.mda() = _MdaFactory;
+  const factory mda() = _MdaFactory;
 
   /// {@macro sealed_world.country_mdg_constructor}
-  const factory WorldCountry.mdg() = _MdgFactory;
+  const factory mdg() = _MdgFactory;
 
   /// {@macro sealed_world.country_mdv_constructor}
-  const factory WorldCountry.mdv() = _MdvFactory;
+  const factory mdv() = _MdvFactory;
 
   /// {@macro sealed_world.country_mex_constructor}
-  const factory WorldCountry.mex() = _MexFactory;
+  const factory mex() = _MexFactory;
 
   /// {@macro sealed_world.country_mhl_constructor}
-  const factory WorldCountry.mhl() = _MhlFactory;
+  const factory mhl() = _MhlFactory;
 
   /// {@macro sealed_world.country_mkd_constructor}
-  const factory WorldCountry.mkd() = _MkdFactory;
+  const factory mkd() = _MkdFactory;
 
   /// {@macro sealed_world.country_mli_constructor}
-  const factory WorldCountry.mli() = _MliFactory;
+  const factory mli() = _MliFactory;
 
   /// {@macro sealed_world.country_mlt_constructor}
-  const factory WorldCountry.mlt() = _MltFactory;
+  const factory mlt() = _MltFactory;
 
   /// {@macro sealed_world.country_mmr_constructor}
-  const factory WorldCountry.mmr() = _MmrFactory;
+  const factory mmr() = _MmrFactory;
 
   /// {@macro sealed_world.country_mne_constructor}
-  const factory WorldCountry.mne() = _MneFactory;
+  const factory mne() = _MneFactory;
 
   /// {@macro sealed_world.country_mng_constructor}
-  const factory WorldCountry.mng() = _MngFactory;
+  const factory mng() = _MngFactory;
 
   /// {@macro sealed_world.country_mnp_constructor}
-  const factory WorldCountry.mnp() = _MnpFactory;
+  const factory mnp() = _MnpFactory;
 
   /// {@macro sealed_world.country_moz_constructor}
-  const factory WorldCountry.moz() = _MozFactory;
+  const factory moz() = _MozFactory;
 
   /// {@macro sealed_world.country_mrt_constructor}
-  const factory WorldCountry.mrt() = _MrtFactory;
+  const factory mrt() = _MrtFactory;
 
   /// {@macro sealed_world.country_msr_constructor}
-  const factory WorldCountry.msr() = _MsrFactory;
+  const factory msr() = _MsrFactory;
 
   /// {@macro sealed_world.country_mtq_constructor}
-  const factory WorldCountry.mtq() = _MtqFactory;
+  const factory mtq() = _MtqFactory;
 
   /// {@macro sealed_world.country_mus_constructor}
-  const factory WorldCountry.mus() = _MusFactory;
+  const factory mus() = _MusFactory;
 
   /// {@macro sealed_world.country_mwi_constructor}
-  const factory WorldCountry.mwi() = _MwiFactory;
+  const factory mwi() = _MwiFactory;
 
   /// {@macro sealed_world.country_mys_constructor}
-  const factory WorldCountry.mys() = _MysFactory;
+  const factory mys() = _MysFactory;
 
   /// {@macro sealed_world.country_myt_constructor}
-  const factory WorldCountry.myt() = _MytFactory;
+  const factory myt() = _MytFactory;
 
   /// {@macro sealed_world.country_nam_constructor}
-  const factory WorldCountry.nam() = _NamFactory;
+  const factory nam() = _NamFactory;
 
   /// {@macro sealed_world.country_ncl_constructor}
-  const factory WorldCountry.ncl() = _NclFactory;
+  const factory ncl() = _NclFactory;
 
   /// {@macro sealed_world.country_ner_constructor}
-  const factory WorldCountry.ner() = _NerFactory;
+  const factory ner() = _NerFactory;
 
   /// {@macro sealed_world.country_nfk_constructor}
-  const factory WorldCountry.nfk() = _NfkFactory;
+  const factory nfk() = _NfkFactory;
 
   /// {@macro sealed_world.country_nga_constructor}
-  const factory WorldCountry.nga() = _NgaFactory;
+  const factory nga() = _NgaFactory;
 
   /// {@macro sealed_world.country_nic_constructor}
-  const factory WorldCountry.nic() = _NicFactory;
+  const factory nic() = _NicFactory;
 
   /// {@macro sealed_world.country_niu_constructor}
-  const factory WorldCountry.niu() = _NiuFactory;
+  const factory niu() = _NiuFactory;
 
   /// {@macro sealed_world.country_nld_constructor}
-  const factory WorldCountry.nld() = _NldFactory;
+  const factory nld() = _NldFactory;
 
   /// {@macro sealed_world.country_nor_constructor}
-  const factory WorldCountry.nor() = _NorFactory;
+  const factory nor() = _NorFactory;
 
   /// {@macro sealed_world.country_npl_constructor}
-  const factory WorldCountry.npl() = _NplFactory;
+  const factory npl() = _NplFactory;
 
   /// {@macro sealed_world.country_nru_constructor}
-  const factory WorldCountry.nru() = _NruFactory;
+  const factory nru() = _NruFactory;
 
   /// {@macro sealed_world.country_nzl_constructor}
-  const factory WorldCountry.nzl() = _NzlFactory;
+  const factory nzl() = _NzlFactory;
 
   /// {@macro sealed_world.country_omn_constructor}
-  const factory WorldCountry.omn() = _OmnFactory;
+  const factory omn() = _OmnFactory;
 
   /// {@macro sealed_world.country_pak_constructor}
-  const factory WorldCountry.pak() = _PakFactory;
+  const factory pak() = _PakFactory;
 
   /// {@macro sealed_world.country_pan_constructor}
-  const factory WorldCountry.pan() = _PanFactory;
+  const factory pan() = _PanFactory;
 
   /// {@macro sealed_world.country_pcn_constructor}
-  const factory WorldCountry.pcn() = _PcnFactory;
+  const factory pcn() = _PcnFactory;
 
   /// {@macro sealed_world.country_per_constructor}
-  const factory WorldCountry.per() = _PerFactory;
+  const factory per() = _PerFactory;
 
   /// {@macro sealed_world.country_phl_constructor}
-  const factory WorldCountry.phl() = _PhlFactory;
+  const factory phl() = _PhlFactory;
 
   /// {@macro sealed_world.country_plw_constructor}
-  const factory WorldCountry.plw() = _PlwFactory;
+  const factory plw() = _PlwFactory;
 
   /// {@macro sealed_world.country_png_constructor}
-  const factory WorldCountry.png() = _PngFactory;
+  const factory png() = _PngFactory;
 
   /// {@macro sealed_world.country_pol_constructor}
-  const factory WorldCountry.pol() = _PolFactory;
+  const factory pol() = _PolFactory;
 
   /// {@macro sealed_world.country_pri_constructor}
-  const factory WorldCountry.pri() = _PriFactory;
+  const factory pri() = _PriFactory;
 
   /// {@macro sealed_world.country_prk_constructor}
-  const factory WorldCountry.prk() = _PrkFactory;
+  const factory prk() = _PrkFactory;
 
   /// {@macro sealed_world.country_prt_constructor}
-  const factory WorldCountry.prt() = _PrtFactory;
+  const factory prt() = _PrtFactory;
 
   /// {@macro sealed_world.country_pry_constructor}
-  const factory WorldCountry.pry() = _PryFactory;
+  const factory pry() = _PryFactory;
 
   /// {@macro sealed_world.country_pse_constructor}
-  const factory WorldCountry.pse() = _PseFactory;
+  const factory pse() = _PseFactory;
 
   /// {@macro sealed_world.country_pyf_constructor}
-  const factory WorldCountry.pyf() = _PyfFactory;
+  const factory pyf() = _PyfFactory;
 
   /// {@macro sealed_world.country_qat_constructor}
-  const factory WorldCountry.qat() = _QatFactory;
+  const factory qat() = _QatFactory;
 
   /// {@macro sealed_world.country_reu_constructor}
-  const factory WorldCountry.reu() = _ReuFactory;
+  const factory reu() = _ReuFactory;
 
   /// {@macro sealed_world.country_rou_constructor}
-  const factory WorldCountry.rou() = _RouFactory;
+  const factory rou() = _RouFactory;
 
   /// {@macro sealed_world.country_rus_constructor}
-  const factory WorldCountry.rus() = _RusFactory;
+  const factory rus() = _RusFactory;
 
   /// {@macro sealed_world.country_rwa_constructor}
-  const factory WorldCountry.rwa() = _RwaFactory;
+  const factory rwa() = _RwaFactory;
 
   /// {@macro sealed_world.country_sau_constructor}
-  const factory WorldCountry.sau() = _SauFactory;
+  const factory sau() = _SauFactory;
 
   /// {@macro sealed_world.country_sdn_constructor}
-  const factory WorldCountry.sdn() = _SdnFactory;
+  const factory sdn() = _SdnFactory;
 
   /// {@macro sealed_world.country_sen_constructor}
-  const factory WorldCountry.sen() = _SenFactory;
+  const factory sen() = _SenFactory;
 
   /// {@macro sealed_world.country_sgp_constructor}
-  const factory WorldCountry.sgp() = _SgpFactory;
+  const factory sgp() = _SgpFactory;
 
   /// {@macro sealed_world.country_sgs_constructor}
-  const factory WorldCountry.sgs() = _SgsFactory;
+  const factory sgs() = _SgsFactory;
 
   /// {@macro sealed_world.country_shn_constructor}
-  const factory WorldCountry.shn() = _ShnFactory;
+  const factory shn() = _ShnFactory;
 
   /// {@macro sealed_world.country_sjm_constructor}
-  const factory WorldCountry.sjm() = _SjmFactory;
+  const factory sjm() = _SjmFactory;
 
   /// {@macro sealed_world.country_slb_constructor}
-  const factory WorldCountry.slb() = _SlbFactory;
+  const factory slb() = _SlbFactory;
 
   /// {@macro sealed_world.country_sle_constructor}
-  const factory WorldCountry.sle() = _SleFactory;
+  const factory sle() = _SleFactory;
 
   /// {@macro sealed_world.country_slv_constructor}
-  const factory WorldCountry.slv() = _SlvFactory;
+  const factory slv() = _SlvFactory;
 
   /// {@macro sealed_world.country_smr_constructor}
-  const factory WorldCountry.smr() = _SmrFactory;
+  const factory smr() = _SmrFactory;
 
   /// {@macro sealed_world.country_som_constructor}
-  const factory WorldCountry.som() = _SomFactory;
+  const factory som() = _SomFactory;
 
   /// {@macro sealed_world.country_spm_constructor}
-  const factory WorldCountry.spm() = _SpmFactory;
+  const factory spm() = _SpmFactory;
 
   /// {@macro sealed_world.country_srb_constructor}
-  const factory WorldCountry.srb() = _SrbFactory;
+  const factory srb() = _SrbFactory;
 
   /// {@macro sealed_world.country_ssd_constructor}
-  const factory WorldCountry.ssd() = _SsdFactory;
+  const factory ssd() = _SsdFactory;
 
   /// {@macro sealed_world.country_stp_constructor}
-  const factory WorldCountry.stp() = _StpFactory;
+  const factory stp() = _StpFactory;
 
   /// {@macro sealed_world.country_sur_constructor}
-  const factory WorldCountry.sur() = _SurFactory;
+  const factory sur() = _SurFactory;
 
   /// {@macro sealed_world.country_svk_constructor}
-  const factory WorldCountry.svk() = _SvkFactory;
+  const factory svk() = _SvkFactory;
 
   /// {@macro sealed_world.country_svn_constructor}
-  const factory WorldCountry.svn() = _SvnFactory;
+  const factory svn() = _SvnFactory;
 
   /// {@macro sealed_world.country_swe_constructor}
-  const factory WorldCountry.swe() = _SweFactory;
+  const factory swe() = _SweFactory;
 
   /// {@macro sealed_world.country_swz_constructor}
-  const factory WorldCountry.swz() = _SwzFactory;
+  const factory swz() = _SwzFactory;
 
   /// {@macro sealed_world.country_sxm_constructor}
-  const factory WorldCountry.sxm() = _SxmFactory;
+  const factory sxm() = _SxmFactory;
 
   /// {@macro sealed_world.country_syc_constructor}
-  const factory WorldCountry.syc() = _SycFactory;
+  const factory syc() = _SycFactory;
 
   /// {@macro sealed_world.country_syr_constructor}
-  const factory WorldCountry.syr() = _SyrFactory;
+  const factory syr() = _SyrFactory;
 
   /// {@macro sealed_world.country_tca_constructor}
-  const factory WorldCountry.tca() = _TcaFactory;
+  const factory tca() = _TcaFactory;
 
   /// {@macro sealed_world.country_tcd_constructor}
-  const factory WorldCountry.tcd() = _TcdFactory;
+  const factory tcd() = _TcdFactory;
 
   /// {@macro sealed_world.country_tgo_constructor}
-  const factory WorldCountry.tgo() = _TgoFactory;
+  const factory tgo() = _TgoFactory;
 
   /// {@macro sealed_world.country_tha_constructor}
-  const factory WorldCountry.tha() = _ThaFactory;
+  const factory tha() = _ThaFactory;
 
   /// {@macro sealed_world.country_tjk_constructor}
-  const factory WorldCountry.tjk() = _TjkFactory;
+  const factory tjk() = _TjkFactory;
 
   /// {@macro sealed_world.country_tkl_constructor}
-  const factory WorldCountry.tkl() = _TklFactory;
+  const factory tkl() = _TklFactory;
 
   /// {@macro sealed_world.country_tkm_constructor}
-  const factory WorldCountry.tkm() = _TkmFactory;
+  const factory tkm() = _TkmFactory;
 
   /// {@macro sealed_world.country_tls_constructor}
-  const factory WorldCountry.tls() = _TlsFactory;
+  const factory tls() = _TlsFactory;
 
   /// {@macro sealed_world.country_ton_constructor}
-  const factory WorldCountry.ton() = _TonFactory;
+  const factory ton() = _TonFactory;
 
   /// {@macro sealed_world.country_tto_constructor}
-  const factory WorldCountry.tto() = _TtoFactory;
+  const factory tto() = _TtoFactory;
 
   /// {@macro sealed_world.country_tun_constructor}
-  const factory WorldCountry.tun() = _TunFactory;
+  const factory tun() = _TunFactory;
 
   /// {@macro sealed_world.country_tur_constructor}
-  const factory WorldCountry.tur() = _TurFactory;
+  const factory tur() = _TurFactory;
 
   /// {@macro sealed_world.country_tuv_constructor}
-  const factory WorldCountry.tuv() = _TuvFactory;
+  const factory tuv() = _TuvFactory;
 
   /// {@macro sealed_world.country_twn_constructor}
-  const factory WorldCountry.twn() = _TwnFactory;
+  const factory twn() = _TwnFactory;
 
   /// {@macro sealed_world.country_tza_constructor}
-  const factory WorldCountry.tza() = _TzaFactory;
+  const factory tza() = _TzaFactory;
 
   /// {@macro sealed_world.country_uga_constructor}
-  const factory WorldCountry.uga() = _UgaFactory;
+  const factory uga() = _UgaFactory;
 
   /// {@macro sealed_world.country_ukr_constructor}
-  const factory WorldCountry.ukr() = _UkrFactory;
+  const factory ukr() = _UkrFactory;
 
   /// {@macro sealed_world.country_umi_constructor}
-  const factory WorldCountry.umi() = _UmiFactory;
+  const factory umi() = _UmiFactory;
 
   /// {@macro sealed_world.country_ury_constructor}
-  const factory WorldCountry.ury() = _UryFactory;
+  const factory ury() = _UryFactory;
 
   /// {@macro sealed_world.country_usa_constructor}
-  const factory WorldCountry.usa() = _UsaFactory;
+  const factory usa() = _UsaFactory;
 
   /// {@macro sealed_world.country_uzb_constructor}
-  const factory WorldCountry.uzb() = _UzbFactory;
+  const factory uzb() = _UzbFactory;
 
   /// {@macro sealed_world.country_vat_constructor}
-  const factory WorldCountry.vat() = _VatFactory;
+  const factory vat() = _VatFactory;
 
   /// {@macro sealed_world.country_vct_constructor}
-  const factory WorldCountry.vct() = _VctFactory;
+  const factory vct() = _VctFactory;
 
   /// {@macro sealed_world.country_ven_constructor}
-  const factory WorldCountry.ven() = _VenFactory;
+  const factory ven() = _VenFactory;
 
   /// {@macro sealed_world.country_vgb_constructor}
-  const factory WorldCountry.vgb() = _VgbFactory;
+  const factory vgb() = _VgbFactory;
 
   /// {@macro sealed_world.country_vir_constructor}
-  const factory WorldCountry.vir() = _VirFactory;
+  const factory vir() = _VirFactory;
 
   /// {@macro sealed_world.country_vnm_constructor}
-  const factory WorldCountry.vnm() = _VnmFactory;
+  const factory vnm() = _VnmFactory;
 
   /// {@macro sealed_world.country_vut_constructor}
-  const factory WorldCountry.vut() = _VutFactory;
+  const factory vut() = _VutFactory;
 
   /// {@macro sealed_world.country_wlf_constructor}
-  const factory WorldCountry.wlf() = _WlfFactory;
+  const factory wlf() = _WlfFactory;
 
   /// {@macro sealed_world.country_wsm_constructor}
-  const factory WorldCountry.wsm() = _WsmFactory;
+  const factory wsm() = _WsmFactory;
 
   /// {@macro sealed_world.country_yem_constructor}
-  const factory WorldCountry.yem() = _YemFactory;
+  const factory yem() = _YemFactory;
 
   /// {@macro sealed_world.country_zaf_constructor}
-  const factory WorldCountry.zaf() = _ZafFactory;
+  const factory zaf() = _ZafFactory;
 
   /// {@macro sealed_world.country_zmb_constructor}
-  const factory WorldCountry.zmb() = _ZmbFactory;
+  const factory zmb() = _ZmbFactory;
 
   /// {@macro sealed_world.country_zwe_constructor}
-  const factory WorldCountry.zwe() = _ZweFactory;
+  const factory zwe() = _ZweFactory;
 
   /// {@macro sealed_world.country_unk_constructor}
-  const factory WorldCountry.unk() = _UnkFactory;
+  const factory unk() = _UnkFactory;
 
   /// {@macro permissive_constructor}
   /// {@macro country_constructor}
-  const WorldCountry._permissive({
+  const new _permissive({
     this.code = "",
     super.name = const CountryName(
       language: LangCustom(code: "und"),
@@ -1188,10 +1188,8 @@ sealed class WorldCountry extends Country
   /// The optional [countries] parameter can be used to specify a list of
   /// [WorldCountry] objects to search through.
   /// {@macro optional_instances_array_parameter}
-  factory WorldCountry.fromCode(
-    Object code, [
-    Iterable<WorldCountry>? countries,
-  ]) => countries == null
+  factory fromCode(Object code, [Iterable<WorldCountry>? countries]) =>
+      countries == null
       ? codeMap.findByCodeOrThrow(code)
       : countries.firstIsoWhereCode(code);
 
@@ -1207,8 +1205,9 @@ sealed class WorldCountry extends Country
   /// The optional [countries] parameter can be used to specify a list of
   /// [WorldCountry] objects to search through.
   /// {@macro optional_instances_array_parameter}
-  factory WorldCountry.fromCodeShort(
+  factory fromCodeShort(
     Object codeShort, [
+    // ignore: unnecessary-trailing-comma, Dart 3.13 formatting.
     Iterable<WorldCountry>? countries,
   ]) => countries == null
       ? codeShortMap.findByCodeOrThrow(codeShort)
@@ -1226,7 +1225,7 @@ sealed class WorldCountry extends Country
   /// The optional [countries] parameter can be used to specify a list of
   /// [WorldCountry] objects to search through.
   /// {@macro optional_instances_array_parameter}
-  factory WorldCountry.fromCodeNumeric(
+  factory fromCodeNumeric(
     Object codeNumeric, [
     Iterable<WorldCountry>? countries,
     // ignore: avoid-non-empty-constructor-bodies, it's a factory constructor.
@@ -1271,10 +1270,8 @@ sealed class WorldCountry extends Country
   /// Otherwise, it calls the `fromCode` factory method to create a
   /// [WorldCountry] instance. The resulting [WorldCountry] instance is assigned
   /// to the [code] variable.
-  factory WorldCountry.fromAnyCode(
-    Object code, [
-    Iterable<WorldCountry>? countries,
-  ]) => countries == null
+  factory fromAnyCode(Object code, [Iterable<WorldCountry>? countries]) =>
+      countries == null
       ? map.findByCodeOrThrow(code)
       : IsoObject(code).maybeMapIsoCode(
           orElse: (regular) => WorldCountry.fromCode(regular, countries),

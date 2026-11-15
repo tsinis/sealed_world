@@ -7,7 +7,7 @@
 part of "../../model/country/submodels/world_country.dart";
 
 extension type const _LsoFactory._(CountryLso _) implements CountryLso {
-  const _LsoFactory() : this._(const CountryLso._());
+  const new() : this._(const CountryLso._());
 }
 
 /// A class that represents the Lesotho country.
@@ -17,9 +17,9 @@ class CountryLso extends WorldCountry {
   ///
   /// ISO 3166-1 Alpha-3 code: `LSO`, ISO 3166-1 Alpha-2 code: `LS`.
   /// {@endtemplate}
-  const factory CountryLso() = _LsoFactory;
+  const factory() = _LsoFactory;
 
-  const CountryLso._()
+  const new _()
     : super._(
         name: const CountryName(
           language: LangEng(),

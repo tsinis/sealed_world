@@ -11,7 +11,7 @@ class Country implements Named<CountryName> {
   ///
   /// The [name] parameter is required and must be a non-empty valid
   /// [CountryName] object that represents the name of the country.
-  const Country({required this.name});
+  const new({required this.name});
 
   /// The name of the country.
   @override

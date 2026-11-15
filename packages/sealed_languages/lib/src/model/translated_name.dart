@@ -16,7 +16,7 @@ import "core/basic_locale.dart";
 class TranslatedName extends BasicLocale implements Named<String> {
   /// Creates a new [TranslatedName] instance with the given language, name
   /// and optional full name and country code.
-  const TranslatedName(
+  const new(
     super.language, {
     required this.name,
     this.fullName,

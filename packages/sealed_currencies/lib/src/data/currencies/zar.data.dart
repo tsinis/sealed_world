@@ -1,7 +1,7 @@
 part of "../../model/currency/submodels/fiat_currency.dart";
 
 extension type const _ZarFactory._(FiatZar _) implements FiatZar {
-  const _ZarFactory() : this._(const FiatZar._());
+  const new() : this._(const FiatZar._());
 }
 
 /// A class that represents the South African Rand currency.
@@ -11,9 +11,9 @@ final class FiatZar extends FiatCurrency {
   ///
   /// ISO 4217 Alpha code: `ZAR`, ISO 4217 Numeric code: `710`.
   /// {@endtemplate}
-  const factory FiatZar() = _ZarFactory;
+  const factory() = _ZarFactory;
 
-  const FiatZar._()
+  const new _()
     : super(
         code: "ZAR",
         name: "South African Rand",

@@ -1,7 +1,7 @@
 part of "../../model/script/submodels/script.dart";
 
 extension type const _PhliFactory._(ScriptPhli _) implements ScriptPhli {
-  const _PhliFactory() : this._(const ScriptPhli._());
+  const new() : this._(const ScriptPhli._());
 }
 
 /// A class that represents the Inscriptional Pahlavi script.
@@ -11,9 +11,9 @@ final class ScriptPhli extends Script {
   ///
   /// ISO 15924 Alpha-4 code: `Phli`, ISO 15924 Numeric code: `131`.
   /// {@endtemplate}
-  const factory ScriptPhli() = _PhliFactory;
+  const factory() = _PhliFactory;
 
-  const ScriptPhli._()
+  const new _()
     : super._(
         name: "Inscriptional Pahlavi",
         code: "Phli",

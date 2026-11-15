@@ -1,7 +1,7 @@
 part of "../../model/script/submodels/script.dart";
 
 extension type const _ZyyyFactory._(ScriptZyyy _) implements ScriptZyyy {
-  const _ZyyyFactory() : this._(const ScriptZyyy._());
+  const new() : this._(const ScriptZyyy._());
 }
 
 /// A class that represents the Code for undetermined script script.
@@ -11,9 +11,9 @@ final class ScriptZyyy extends Script {
   ///
   /// ISO 15924 Alpha-4 code: `Zyyy`, ISO 15924 Numeric code: `998`.
   /// {@endtemplate}
-  const factory ScriptZyyy() = _ZyyyFactory;
+  const factory() = _ZyyyFactory;
 
-  const ScriptZyyy._()
+  const new _()
     : super._(
         name: "Code for undetermined script",
         code: "Zyyy",

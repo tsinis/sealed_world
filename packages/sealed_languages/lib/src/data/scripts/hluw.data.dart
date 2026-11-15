@@ -1,7 +1,7 @@
 part of "../../model/script/submodels/script.dart";
 
 extension type const _HluwFactory._(ScriptHluw _) implements ScriptHluw {
-  const _HluwFactory() : this._(const ScriptHluw._());
+  const new() : this._(const ScriptHluw._());
 }
 
 /// A class that represents the Anatolian Hieroglyphs (Luwian Hieroglyphs,
@@ -13,9 +13,9 @@ final class ScriptHluw extends Script {
   ///
   /// ISO 15924 Alpha-4 code: `Hluw`, ISO 15924 Numeric code: `080`.
   /// {@endtemplate}
-  const factory ScriptHluw() = _HluwFactory;
+  const factory() = _HluwFactory;
 
-  const ScriptHluw._()
+  const new _()
     : super._(
         name: "Anatolian Hieroglyphs (Luwian Hieroglyphs, Hittite Hieroglyphs)",
         code: "Hluw",

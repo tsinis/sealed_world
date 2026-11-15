@@ -7,7 +7,7 @@
 part of "../../model/country/submodels/world_country.dart";
 
 extension type const _GmbFactory._(CountryGmb _) implements CountryGmb {
-  const _GmbFactory() : this._(const CountryGmb._());
+  const new() : this._(const CountryGmb._());
 }
 
 /// A class that represents the Gambia country.
@@ -17,9 +17,9 @@ class CountryGmb extends WorldCountry {
   ///
   /// ISO 3166-1 Alpha-3 code: `GMB`, ISO 3166-1 Alpha-2 code: `GM`.
   /// {@endtemplate}
-  const factory CountryGmb() = _GmbFactory;
+  const factory() = _GmbFactory;
 
-  const CountryGmb._()
+  const new _()
     : super._(
         name: const CountryName(
           language: LangEng(),

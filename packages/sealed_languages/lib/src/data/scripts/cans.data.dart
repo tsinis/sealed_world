@@ -1,7 +1,7 @@
 part of "../../model/script/submodels/script.dart";
 
 extension type const _CansFactory._(ScriptCans _) implements ScriptCans {
-  const _CansFactory() : this._(const ScriptCans._());
+  const new() : this._(const ScriptCans._());
 }
 
 /// A class that represents the Unified Canadian Aboriginal Syllabics script.
@@ -12,9 +12,9 @@ final class ScriptCans extends Script {
   ///
   /// ISO 15924 Alpha-4 code: `Cans`, ISO 15924 Numeric code: `440`.
   /// {@endtemplate}
-  const factory ScriptCans() = _CansFactory;
+  const factory() = _CansFactory;
 
-  const ScriptCans._()
+  const new _()
     : super._(
         name: "Unified Canadian Aboriginal Syllabics",
         code: "Cans",

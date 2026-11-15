@@ -1,7 +1,7 @@
 part of "../../model/currency/submodels/fiat_currency.dart";
 
 extension type const _PygFactory._(FiatPyg _) implements FiatPyg {
-  const _PygFactory() : this._(const FiatPyg._());
+  const new() : this._(const FiatPyg._());
 }
 
 /// A class that represents the Paraguayan Guarani currency.
@@ -11,9 +11,9 @@ final class FiatPyg extends FiatCurrency {
   ///
   /// ISO 4217 Alpha code: `PYG`, ISO 4217 Numeric code: `600`.
   /// {@endtemplate}
-  const factory FiatPyg() = _PygFactory;
+  const factory() = _PygFactory;
 
-  const FiatPyg._()
+  const new _()
     : super(
         code: "PYG",
         name: "Paraguayan Guarani",

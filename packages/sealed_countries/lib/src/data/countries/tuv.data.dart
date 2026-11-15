@@ -7,7 +7,7 @@
 part of "../../model/country/submodels/world_country.dart";
 
 extension type const _TuvFactory._(CountryTuv _) implements CountryTuv {
-  const _TuvFactory() : this._(const CountryTuv._());
+  const new() : this._(const CountryTuv._());
 }
 
 /// A class that represents the Tuvalu country.
@@ -17,9 +17,9 @@ class CountryTuv extends WorldCountry {
   ///
   /// ISO 3166-1 Alpha-3 code: `TUV`, ISO 3166-1 Alpha-2 code: `TV`.
   /// {@endtemplate}
-  const factory CountryTuv() = _TuvFactory;
+  const factory() = _TuvFactory;
 
-  const CountryTuv._()
+  const new _()
     : super._(
         name: const CountryName(
           language: LangEng(),

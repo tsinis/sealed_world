@@ -24,7 +24,7 @@ class Currency implements Named<String> {
   ///
   /// Throws an [AssertionError] if [code] is empty, [name] is empty, or
   /// [symbol] is empty (if provided).
-  const Currency({
+  const new({
     required this.code,
     required this.decimalMark,
     required this.name,

@@ -7,7 +7,7 @@
 part of "../../model/country/submodels/world_country.dart";
 
 extension type const _OmnFactory._(CountryOmn _) implements CountryOmn {
-  const _OmnFactory() : this._(const CountryOmn._());
+  const new() : this._(const CountryOmn._());
 }
 
 /// A class that represents the Oman country.
@@ -17,9 +17,9 @@ class CountryOmn extends WorldCountry {
   ///
   /// ISO 3166-1 Alpha-3 code: `OMN`, ISO 3166-1 Alpha-2 code: `OM`.
   /// {@endtemplate}
-  const factory CountryOmn() = _OmnFactory;
+  const factory() = _OmnFactory;
 
-  const CountryOmn._()
+  const new _()
     : super._(
         name: const CountryName(
           language: LangEng(),

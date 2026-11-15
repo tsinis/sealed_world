@@ -1,7 +1,7 @@
 part of "../../model/currency/submodels/fiat_currency.dart";
 
 extension type const _EurFactory._(FiatEur _) implements FiatEur {
-  const _EurFactory() : this._(const FiatEur._());
+  const new() : this._(const FiatEur._());
 }
 
 /// A class that represents the Euro currency.
@@ -11,9 +11,9 @@ final class FiatEur extends FiatCurrency {
   ///
   /// ISO 4217 Alpha code: `EUR`, ISO 4217 Numeric code: `978`.
   /// {@endtemplate}
-  const factory FiatEur() = _EurFactory;
+  const factory() = _EurFactory;
 
-  const FiatEur._()
+  const new _()
     : super(
         code: "EUR",
         name: "Euro",

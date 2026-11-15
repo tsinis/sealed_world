@@ -1,7 +1,7 @@
 part of "../../model/language/submodels/natural_language.dart";
 
 extension type const _NauFactory._(LangNau _) implements LangNau {
-  const _NauFactory() : this._(const LangNau._());
+  const new() : this._(const LangNau._());
 }
 
 /// A class that represents the Nauruan language.
@@ -11,9 +11,9 @@ final class LangNau extends NaturalLanguage {
   ///
   /// ISO 639-2/T code: `NAU`, ISO 639-1 code: `NA`.
   /// {@endtemplate}
-  const factory LangNau() = _NauFactory;
+  const factory() = _NauFactory;
 
-  const LangNau._()
+  const new _()
     : super._(
         name: "Nauruan",
         code: "NAU",

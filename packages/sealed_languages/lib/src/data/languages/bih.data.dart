@@ -1,7 +1,7 @@
 part of "../../model/language/submodels/natural_language.dart";
 
 extension type const _BihFactory._(LangBih _) implements LangBih {
-  const _BihFactory() : this._(const LangBih._());
+  const new() : this._(const LangBih._());
 }
 
 /// A class that represents the Bihari language.
@@ -11,9 +11,9 @@ final class LangBih extends NaturalLanguage {
   ///
   /// ISO 639-2/T code: `BIH`, ISO 639-1 code: `BH`.
   /// {@endtemplate}
-  const factory LangBih() = _BihFactory;
+  const factory() = _BihFactory;
 
-  const LangBih._()
+  const new _()
     : super._(
         name: "Bihari",
         code: "BIH",

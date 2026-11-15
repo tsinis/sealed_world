@@ -1,7 +1,7 @@
 part of "../../model/currency/submodels/fiat_currency.dart";
 
 extension type const _XpfFactory._(FiatXpf _) implements FiatXpf {
-  const _XpfFactory() : this._(const FiatXpf._());
+  const new() : this._(const FiatXpf._());
 }
 
 /// A class that represents the Cfp Franc currency.
@@ -11,9 +11,9 @@ final class FiatXpf extends FiatCurrency {
   ///
   /// ISO 4217 Alpha code: `XPF`, ISO 4217 Numeric code: `953`.
   /// {@endtemplate}
-  const factory FiatXpf() = _XpfFactory;
+  const factory() = _XpfFactory;
 
-  const FiatXpf._()
+  const new _()
     : super(
         code: "XPF",
         name: "Cfp Franc",

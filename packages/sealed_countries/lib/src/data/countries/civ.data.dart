@@ -7,7 +7,7 @@
 part of "../../model/country/submodels/world_country.dart";
 
 extension type const _CivFactory._(CountryCiv _) implements CountryCiv {
-  const _CivFactory() : this._(const CountryCiv._());
+  const new() : this._(const CountryCiv._());
 }
 
 /// A class that represents the Ivory Coast country.
@@ -17,9 +17,9 @@ class CountryCiv extends WorldCountry {
   ///
   /// ISO 3166-1 Alpha-3 code: `CIV`, ISO 3166-1 Alpha-2 code: `CI`.
   /// {@endtemplate}
-  const factory CountryCiv() = _CivFactory;
+  const factory() = _CivFactory;
 
-  const CountryCiv._()
+  const new _()
     : super._(
         name: const CountryName(
           language: LangEng(),

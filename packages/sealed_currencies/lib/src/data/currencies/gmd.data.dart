@@ -1,7 +1,7 @@
 part of "../../model/currency/submodels/fiat_currency.dart";
 
 extension type const _GmdFactory._(FiatGmd _) implements FiatGmd {
-  const _GmdFactory() : this._(const FiatGmd._());
+  const new() : this._(const FiatGmd._());
 }
 
 /// A class that represents the Gambian Dalasi currency.
@@ -11,9 +11,9 @@ final class FiatGmd extends FiatCurrency {
   ///
   /// ISO 4217 Alpha code: `GMD`, ISO 4217 Numeric code: `270`.
   /// {@endtemplate}
-  const factory FiatGmd() = _GmdFactory;
+  const factory() = _GmdFactory;
 
-  const FiatGmd._()
+  const new _()
     : super(
         code: "GMD",
         name: "Gambian Dalasi",

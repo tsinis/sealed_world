@@ -7,7 +7,7 @@
 part of "../../model/country/submodels/world_country.dart";
 
 extension type const _PhlFactory._(CountryPhl _) implements CountryPhl {
-  const _PhlFactory() : this._(const CountryPhl._());
+  const new() : this._(const CountryPhl._());
 }
 
 /// A class that represents the Philippines country.
@@ -17,9 +17,9 @@ class CountryPhl extends WorldCountry {
   ///
   /// ISO 3166-1 Alpha-3 code: `PHL`, ISO 3166-1 Alpha-2 code: `PH`.
   /// {@endtemplate}
-  const factory CountryPhl() = _PhlFactory;
+  const factory() = _PhlFactory;
 
-  const CountryPhl._()
+  const new _()
     : super._(
         name: const CountryName(
           language: LangEng(),

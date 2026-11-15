@@ -1,7 +1,7 @@
 part of "../../model/script/submodels/script.dart";
 
 extension type const _BuhdFactory._(ScriptBuhd _) implements ScriptBuhd {
-  const _BuhdFactory() : this._(const ScriptBuhd._());
+  const new() : this._(const ScriptBuhd._());
 }
 
 /// A class that represents the Buhid script.
@@ -11,9 +11,9 @@ final class ScriptBuhd extends Script {
   ///
   /// ISO 15924 Alpha-4 code: `Buhd`, ISO 15924 Numeric code: `372`.
   /// {@endtemplate}
-  const factory ScriptBuhd() = _BuhdFactory;
+  const factory() = _BuhdFactory;
 
-  const ScriptBuhd._()
+  const new _()
     : super._(
         name: "Buhid",
         code: "Buhd",

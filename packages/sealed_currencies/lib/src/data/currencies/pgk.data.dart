@@ -1,7 +1,7 @@
 part of "../../model/currency/submodels/fiat_currency.dart";
 
 extension type const _PgkFactory._(FiatPgk _) implements FiatPgk {
-  const _PgkFactory() : this._(const FiatPgk._());
+  const new() : this._(const FiatPgk._());
 }
 
 /// A class that represents the Papua New Guinean Kina currency.
@@ -11,9 +11,9 @@ final class FiatPgk extends FiatCurrency {
   ///
   /// ISO 4217 Alpha code: `PGK`, ISO 4217 Numeric code: `598`.
   /// {@endtemplate}
-  const factory FiatPgk() = _PgkFactory;
+  const factory() = _PgkFactory;
 
-  const FiatPgk._()
+  const new _()
     : super(
         code: "PGK",
         name: "Papua New Guinean Kina",

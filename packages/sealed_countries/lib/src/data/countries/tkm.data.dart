@@ -7,7 +7,7 @@
 part of "../../model/country/submodels/world_country.dart";
 
 extension type const _TkmFactory._(CountryTkm _) implements CountryTkm {
-  const _TkmFactory() : this._(const CountryTkm._());
+  const new() : this._(const CountryTkm._());
 }
 
 /// A class that represents the Turkmenistan country.
@@ -17,9 +17,9 @@ class CountryTkm extends WorldCountry {
   ///
   /// ISO 3166-1 Alpha-3 code: `TKM`, ISO 3166-1 Alpha-2 code: `TM`.
   /// {@endtemplate}
-  const factory CountryTkm() = _TkmFactory;
+  const factory() = _TkmFactory;
 
-  const CountryTkm._()
+  const new _()
     : super._(
         name: const CountryName(
           language: LangEng(),

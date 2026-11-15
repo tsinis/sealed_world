@@ -1,7 +1,7 @@
 part of "../../model/script/submodels/script.dart";
 
 extension type const _HanoFactory._(ScriptHano _) implements ScriptHano {
-  const _HanoFactory() : this._(const ScriptHano._());
+  const new() : this._(const ScriptHano._());
 }
 
 /// A class that represents the Hanunoo (Hanunóo) script.
@@ -11,9 +11,9 @@ final class ScriptHano extends Script {
   ///
   /// ISO 15924 Alpha-4 code: `Hano`, ISO 15924 Numeric code: `371`.
   /// {@endtemplate}
-  const factory ScriptHano() = _HanoFactory;
+  const factory() = _HanoFactory;
 
-  const ScriptHano._()
+  const new _()
     : super._(
         name: "Hanunoo (Hanunóo)",
         code: "Hano",

@@ -1,7 +1,7 @@
 part of "../../model/currency/submodels/fiat_currency.dart";
 
 extension type const _BndFactory._(FiatBnd _) implements FiatBnd {
-  const _BndFactory() : this._(const FiatBnd._());
+  const new() : this._(const FiatBnd._());
 }
 
 /// A class that represents the Brunei Dollar currency.
@@ -11,9 +11,9 @@ final class FiatBnd extends FiatCurrency {
   ///
   /// ISO 4217 Alpha code: `BND`, ISO 4217 Numeric code: `096`.
   /// {@endtemplate}
-  const factory FiatBnd() = _BndFactory;
+  const factory() = _BndFactory;
 
-  const FiatBnd._()
+  const new _()
     : super(
         code: "BND",
         name: "Brunei Dollar",

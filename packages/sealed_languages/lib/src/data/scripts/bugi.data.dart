@@ -1,7 +1,7 @@
 part of "../../model/script/submodels/script.dart";
 
 extension type const _BugiFactory._(ScriptBugi _) implements ScriptBugi {
-  const _BugiFactory() : this._(const ScriptBugi._());
+  const new() : this._(const ScriptBugi._());
 }
 
 /// A class that represents the Buginese script.
@@ -11,9 +11,9 @@ final class ScriptBugi extends Script {
   ///
   /// ISO 15924 Alpha-4 code: `Bugi`, ISO 15924 Numeric code: `367`.
   /// {@endtemplate}
-  const factory ScriptBugi() = _BugiFactory;
+  const factory() = _BugiFactory;
 
-  const ScriptBugi._()
+  const new _()
     : super._(
         name: "Buginese",
         code: "Bugi",

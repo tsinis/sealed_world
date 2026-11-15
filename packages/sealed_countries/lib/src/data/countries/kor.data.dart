@@ -7,7 +7,7 @@
 part of "../../model/country/submodels/world_country.dart";
 
 extension type const _KorFactory._(CountryKor _) implements CountryKor {
-  const _KorFactory() : this._(const CountryKor._());
+  const new() : this._(const CountryKor._());
 }
 
 /// A class that represents the South Korea country.
@@ -17,9 +17,9 @@ class CountryKor extends WorldCountry {
   ///
   /// ISO 3166-1 Alpha-3 code: `KOR`, ISO 3166-1 Alpha-2 code: `KR`.
   /// {@endtemplate}
-  const factory CountryKor() = _KorFactory;
+  const factory() = _KorFactory;
 
-  const CountryKor._()
+  const new _()
     : super._(
         name: const CountryName(
           language: LangEng(),

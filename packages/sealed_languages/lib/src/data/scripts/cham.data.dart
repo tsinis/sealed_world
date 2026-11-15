@@ -1,7 +1,7 @@
 part of "../../model/script/submodels/script.dart";
 
 extension type const _ChamFactory._(ScriptCham _) implements ScriptCham {
-  const _ChamFactory() : this._(const ScriptCham._());
+  const new() : this._(const ScriptCham._());
 }
 
 /// A class that represents the Cham script.
@@ -11,9 +11,9 @@ final class ScriptCham extends Script {
   ///
   /// ISO 15924 Alpha-4 code: `Cham`, ISO 15924 Numeric code: `358`.
   /// {@endtemplate}
-  const factory ScriptCham() = _ChamFactory;
+  const factory() = _ChamFactory;
 
-  const ScriptCham._()
+  const new _()
     : super._(
         name: "Cham",
         code: "Cham",

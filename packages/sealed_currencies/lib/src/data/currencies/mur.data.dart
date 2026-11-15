@@ -1,7 +1,7 @@
 part of "../../model/currency/submodels/fiat_currency.dart";
 
 extension type const _MurFactory._(FiatMur _) implements FiatMur {
-  const _MurFactory() : this._(const FiatMur._());
+  const new() : this._(const FiatMur._());
 }
 
 /// A class that represents the Mauritian Rupee currency.
@@ -11,9 +11,9 @@ final class FiatMur extends FiatCurrency {
   ///
   /// ISO 4217 Alpha code: `MUR`, ISO 4217 Numeric code: `480`.
   /// {@endtemplate}
-  const factory FiatMur() = _MurFactory;
+  const factory() = _MurFactory;
 
-  const FiatMur._()
+  const new _()
     : super(
         code: "MUR",
         name: "Mauritian Rupee",

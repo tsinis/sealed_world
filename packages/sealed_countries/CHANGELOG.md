@@ -37,7 +37,7 @@ DOCUMENTATION
 CHORE
 
 - Updated `sealed_currencies` dependency to v3.4.2 and `l10n_countries` dependency to v2.3.0.
-- The Dart SDK was bumped to v3.13.0, as required by `l10n_countries` 2.3.0. `WorldCountry` constructors use its private named parameters, the API is the same.
+- The Dart SDK was bumped to v3.13.0, as required by `l10n_countries` 2.3.0. Constructors are declared with its `new` and `factory` syntax (without the class name) and `WorldCountry` ones use its private named parameters, the API is the same.
 
 ## 3.4.2
 

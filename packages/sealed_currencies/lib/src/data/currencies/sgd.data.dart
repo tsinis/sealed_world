@@ -1,7 +1,7 @@
 part of "../../model/currency/submodels/fiat_currency.dart";
 
 extension type const _SgdFactory._(FiatSgd _) implements FiatSgd {
-  const _SgdFactory() : this._(const FiatSgd._());
+  const new() : this._(const FiatSgd._());
 }
 
 /// A class that represents the Singapore Dollar currency.
@@ -11,9 +11,9 @@ final class FiatSgd extends FiatCurrency {
   ///
   /// ISO 4217 Alpha code: `SGD`, ISO 4217 Numeric code: `702`.
   /// {@endtemplate}
-  const factory FiatSgd() = _SgdFactory;
+  const factory() = _SgdFactory;
 
-  const FiatSgd._()
+  const new _()
     : super(
         code: "SGD",
         name: "Singapore Dollar",

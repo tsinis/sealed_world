@@ -7,7 +7,7 @@
 part of "../../model/country/submodels/world_country.dart";
 
 extension type const _GgyFactory._(CountryGgy _) implements CountryGgy {
-  const _GgyFactory() : this._(const CountryGgy._());
+  const new() : this._(const CountryGgy._());
 }
 
 /// A class that represents the Guernsey country.
@@ -17,9 +17,9 @@ class CountryGgy extends WorldCountry {
   ///
   /// ISO 3166-1 Alpha-3 code: `GGY`, ISO 3166-1 Alpha-2 code: `GG`.
   /// {@endtemplate}
-  const factory CountryGgy() = _GgyFactory;
+  const factory() = _GgyFactory;
 
-  const CountryGgy._()
+  const new _()
     : super._(
         name: const CountryName(
           language: LangEng(),

@@ -1,7 +1,7 @@
 part of "../../model/language/submodels/natural_language.dart";
 
 extension type const _OjiFactory._(LangOji _) implements LangOji {
-  const _OjiFactory() : this._(const LangOji._());
+  const new() : this._(const LangOji._());
 }
 
 /// A class that represents the Ojibwe (Ojibwa) language.
@@ -11,9 +11,9 @@ final class LangOji extends NaturalLanguage {
   ///
   /// ISO 639-2/T code: `OJI`, ISO 639-1 code: `OJ`.
   /// {@endtemplate}
-  const factory LangOji() = _OjiFactory;
+  const factory() = _OjiFactory;
 
-  const LangOji._()
+  const new _()
     : super._(
         name: "Ojibwe (Ojibwa)",
         code: "OJI",

@@ -1,7 +1,7 @@
 part of "../../model/language/submodels/natural_language.dart";
 
 extension type const _FraFactory._(LangFra _) implements LangFra {
-  const _FraFactory() : this._(const LangFra._());
+  const new() : this._(const LangFra._());
 }
 
 /// A class that represents the French language.
@@ -11,9 +11,9 @@ final class LangFra extends NaturalLanguage {
   ///
   /// ISO 639-2/T code: `FRA`, ISO 639-1 code: `FR`.
   /// {@endtemplate}
-  const factory LangFra() = _FraFactory;
+  const factory() = _FraFactory;
 
-  const LangFra._()
+  const new _()
     : super._(
         name: "French",
         code: "FRA",

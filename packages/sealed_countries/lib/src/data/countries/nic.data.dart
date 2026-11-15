@@ -7,7 +7,7 @@
 part of "../../model/country/submodels/world_country.dart";
 
 extension type const _NicFactory._(CountryNic _) implements CountryNic {
-  const _NicFactory() : this._(const CountryNic._());
+  const new() : this._(const CountryNic._());
 }
 
 /// A class that represents the Nicaragua country.
@@ -17,9 +17,9 @@ class CountryNic extends WorldCountry {
   ///
   /// ISO 3166-1 Alpha-3 code: `NIC`, ISO 3166-1 Alpha-2 code: `NI`.
   /// {@endtemplate}
-  const factory CountryNic() = _NicFactory;
+  const factory() = _NicFactory;
 
-  const CountryNic._()
+  const new _()
     : super._(
         name: const CountryName(
           language: LangEng(),

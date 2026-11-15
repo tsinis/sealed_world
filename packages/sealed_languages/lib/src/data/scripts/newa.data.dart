@@ -1,7 +1,7 @@
 part of "../../model/script/submodels/script.dart";
 
 extension type const _NewaFactory._(ScriptNewa _) implements ScriptNewa {
-  const _NewaFactory() : this._(const ScriptNewa._());
+  const new() : this._(const ScriptNewa._());
 }
 
 /// A class that represents the Newa, Newar, Newari, Nepāla lipi script.
@@ -12,9 +12,9 @@ final class ScriptNewa extends Script {
   ///
   /// ISO 15924 Alpha-4 code: `Newa`, ISO 15924 Numeric code: `333`.
   /// {@endtemplate}
-  const factory ScriptNewa() = _NewaFactory;
+  const factory() = _NewaFactory;
 
-  const ScriptNewa._()
+  const new _()
     : super._(
         name: "Newa, Newar, Newari, Nepāla lipi",
         code: "Newa",

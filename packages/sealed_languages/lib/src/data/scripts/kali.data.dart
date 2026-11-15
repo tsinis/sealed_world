@@ -1,7 +1,7 @@
 part of "../../model/script/submodels/script.dart";
 
 extension type const _KaliFactory._(ScriptKali _) implements ScriptKali {
-  const _KaliFactory() : this._(const ScriptKali._());
+  const new() : this._(const ScriptKali._());
 }
 
 /// A class that represents the Kayah Li script.
@@ -11,9 +11,9 @@ final class ScriptKali extends Script {
   ///
   /// ISO 15924 Alpha-4 code: `Kali`, ISO 15924 Numeric code: `357`.
   /// {@endtemplate}
-  const factory ScriptKali() = _KaliFactory;
+  const factory() = _KaliFactory;
 
-  const ScriptKali._()
+  const new _()
     : super._(
         name: "Kayah Li",
         code: "Kali",

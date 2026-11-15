@@ -1,7 +1,7 @@
 part of "../../model/script/submodels/script.dart";
 
 extension type const _LimbFactory._(ScriptLimb _) implements ScriptLimb {
-  const _LimbFactory() : this._(const ScriptLimb._());
+  const new() : this._(const ScriptLimb._());
 }
 
 /// A class that represents the Limbu script.
@@ -11,9 +11,9 @@ final class ScriptLimb extends Script {
   ///
   /// ISO 15924 Alpha-4 code: `Limb`, ISO 15924 Numeric code: `336`.
   /// {@endtemplate}
-  const factory ScriptLimb() = _LimbFactory;
+  const factory() = _LimbFactory;
 
-  const ScriptLimb._()
+  const new _()
     : super._(
         name: "Limbu",
         code: "Limb",

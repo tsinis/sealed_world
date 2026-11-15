@@ -1,7 +1,7 @@
 part of "../../model/currency/submodels/fiat_currency.dart";
 
 extension type const _XafFactory._(FiatXaf _) implements FiatXaf {
-  const _XafFactory() : this._(const FiatXaf._());
+  const new() : this._(const FiatXaf._());
 }
 
 /// A class that represents the Central African Cfa Franc currency.
@@ -11,9 +11,9 @@ final class FiatXaf extends FiatCurrency {
   ///
   /// ISO 4217 Alpha code: `XAF`, ISO 4217 Numeric code: `950`.
   /// {@endtemplate}
-  const factory FiatXaf() = _XafFactory;
+  const factory() = _XafFactory;
 
-  const FiatXaf._()
+  const new _()
     : super(
         code: "XAF",
         name: "Central African Cfa Franc",

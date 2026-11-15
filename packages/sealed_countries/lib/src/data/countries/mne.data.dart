@@ -7,7 +7,7 @@
 part of "../../model/country/submodels/world_country.dart";
 
 extension type const _MneFactory._(CountryMne _) implements CountryMne {
-  const _MneFactory() : this._(const CountryMne._());
+  const new() : this._(const CountryMne._());
 }
 
 /// A class that represents the Montenegro country.
@@ -17,9 +17,9 @@ class CountryMne extends WorldCountry {
   ///
   /// ISO 3166-1 Alpha-3 code: `MNE`, ISO 3166-1 Alpha-2 code: `ME`.
   /// {@endtemplate}
-  const factory CountryMne() = _MneFactory;
+  const factory() = _MneFactory;
 
-  const CountryMne._()
+  const new _()
     : super._(
         name: const CountryName(
           language: LangEng(),

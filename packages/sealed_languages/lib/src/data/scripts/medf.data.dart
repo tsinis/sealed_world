@@ -1,7 +1,7 @@
 part of "../../model/script/submodels/script.dart";
 
 extension type const _MedfFactory._(ScriptMedf _) implements ScriptMedf {
-  const _MedfFactory() : this._(const ScriptMedf._());
+  const new() : this._(const ScriptMedf._());
 }
 
 /// A class that represents the Medefaidrin (Oberi Okaime, Oberi Ɔkaimɛ) script.
@@ -12,9 +12,9 @@ final class ScriptMedf extends Script {
   ///
   /// ISO 15924 Alpha-4 code: `Medf`, ISO 15924 Numeric code: `265`.
   /// {@endtemplate}
-  const factory ScriptMedf() = _MedfFactory;
+  const factory() = _MedfFactory;
 
-  const ScriptMedf._()
+  const new _()
     : super._(
         name: "Medefaidrin (Oberi Okaime, Oberi Ɔkaimɛ)",
         code: "Medf",

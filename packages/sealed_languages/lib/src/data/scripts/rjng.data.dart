@@ -1,7 +1,7 @@
 part of "../../model/script/submodels/script.dart";
 
 extension type const _RjngFactory._(ScriptRjng _) implements ScriptRjng {
-  const _RjngFactory() : this._(const ScriptRjng._());
+  const new() : this._(const ScriptRjng._());
 }
 
 /// A class that represents the Rejang (Redjang, Kaganga) script.
@@ -11,9 +11,9 @@ final class ScriptRjng extends Script {
   ///
   /// ISO 15924 Alpha-4 code: `Rjng`, ISO 15924 Numeric code: `363`.
   /// {@endtemplate}
-  const factory ScriptRjng() = _RjngFactory;
+  const factory() = _RjngFactory;
 
-  const ScriptRjng._()
+  const new _()
     : super._(
         name: "Rejang (Redjang, Kaganga)",
         code: "Rjng",

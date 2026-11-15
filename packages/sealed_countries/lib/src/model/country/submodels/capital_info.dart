@@ -30,7 +30,7 @@ final class CapitalInfo implements JsonEncodable<CapitalInfo> {
   /// and location values.
   ///
   /// Both the [capital] and [latLng] parameters are required.
-  const CapitalInfo({required this.capital, required this.latLng});
+  const new({required this.capital, required this.latLng});
 
   /// The capital city of the country.
   final Capital capital;

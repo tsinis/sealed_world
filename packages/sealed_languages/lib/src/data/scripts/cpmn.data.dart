@@ -1,7 +1,7 @@
 part of "../../model/script/submodels/script.dart";
 
 extension type const _CpmnFactory._(ScriptCpmn _) implements ScriptCpmn {
-  const _CpmnFactory() : this._(const ScriptCpmn._());
+  const new() : this._(const ScriptCpmn._());
 }
 
 /// A class that represents the Cypro-Minoan script.
@@ -11,9 +11,9 @@ final class ScriptCpmn extends Script {
   ///
   /// ISO 15924 Alpha-4 code: `Cpmn`, ISO 15924 Numeric code: `402`.
   /// {@endtemplate}
-  const factory ScriptCpmn() = _CpmnFactory;
+  const factory() = _CpmnFactory;
 
-  const ScriptCpmn._()
+  const new _()
     : super._(
         name: "Cypro-Minoan",
         code: "Cpmn",

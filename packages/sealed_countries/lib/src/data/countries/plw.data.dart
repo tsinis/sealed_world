@@ -7,7 +7,7 @@
 part of "../../model/country/submodels/world_country.dart";
 
 extension type const _PlwFactory._(CountryPlw _) implements CountryPlw {
-  const _PlwFactory() : this._(const CountryPlw._());
+  const new() : this._(const CountryPlw._());
 }
 
 /// A class that represents the Palau country.
@@ -17,9 +17,9 @@ class CountryPlw extends WorldCountry {
   ///
   /// ISO 3166-1 Alpha-3 code: `PLW`, ISO 3166-1 Alpha-2 code: `PW`.
   /// {@endtemplate}
-  const factory CountryPlw() = _PlwFactory;
+  const factory() = _PlwFactory;
 
-  const CountryPlw._()
+  const new _()
     : super._(
         name: const CountryName(
           language: LangEng(),

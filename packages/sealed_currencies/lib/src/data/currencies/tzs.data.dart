@@ -1,7 +1,7 @@
 part of "../../model/currency/submodels/fiat_currency.dart";
 
 extension type const _TzsFactory._(FiatTzs _) implements FiatTzs {
-  const _TzsFactory() : this._(const FiatTzs._());
+  const new() : this._(const FiatTzs._());
 }
 
 /// A class that represents the Tanzanian Shilling currency.
@@ -11,9 +11,9 @@ final class FiatTzs extends FiatCurrency {
   ///
   /// ISO 4217 Alpha code: `TZS`, ISO 4217 Numeric code: `834`.
   /// {@endtemplate}
-  const factory FiatTzs() = _TzsFactory;
+  const factory() = _TzsFactory;
 
-  const FiatTzs._()
+  const new _()
     : super(
         code: "TZS",
         name: "Tanzanian Shilling",

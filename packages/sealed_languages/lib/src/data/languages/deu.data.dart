@@ -1,7 +1,7 @@
 part of "../../model/language/submodels/natural_language.dart";
 
 extension type const _DeuFactory._(LangDeu _) implements LangDeu {
-  const _DeuFactory() : this._(const LangDeu._());
+  const new() : this._(const LangDeu._());
 }
 
 /// A class that represents the German language.
@@ -11,9 +11,9 @@ final class LangDeu extends NaturalLanguage {
   ///
   /// ISO 639-2/T code: `DEU`, ISO 639-1 code: `DE`.
   /// {@endtemplate}
-  const factory LangDeu() = _DeuFactory;
+  const factory() = _DeuFactory;
 
-  const LangDeu._()
+  const new _()
     : super._(
         name: "German",
         code: "DEU",

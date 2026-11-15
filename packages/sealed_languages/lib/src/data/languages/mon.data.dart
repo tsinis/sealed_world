@@ -1,7 +1,7 @@
 part of "../../model/language/submodels/natural_language.dart";
 
 extension type const _MonFactory._(LangMon _) implements LangMon {
-  const _MonFactory() : this._(const LangMon._());
+  const new() : this._(const LangMon._());
 }
 
 /// A class that represents the Mongolian language.
@@ -11,9 +11,9 @@ final class LangMon extends NaturalLanguage {
   ///
   /// ISO 639-2/T code: `MON`, ISO 639-1 code: `MN`.
   /// {@endtemplate}
-  const factory LangMon() = _MonFactory;
+  const factory() = _MonFactory;
 
-  const LangMon._()
+  const new _()
     : super._(
         name: "Mongolian",
         code: "MON",

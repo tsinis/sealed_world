@@ -1,7 +1,7 @@
 part of "../../model/currency/submodels/fiat_currency.dart";
 
 extension type const _MznFactory._(FiatMzn _) implements FiatMzn {
-  const _MznFactory() : this._(const FiatMzn._());
+  const new() : this._(const FiatMzn._());
 }
 
 /// A class that represents the Mozambican Metical currency.
@@ -11,9 +11,9 @@ final class FiatMzn extends FiatCurrency {
   ///
   /// ISO 4217 Alpha code: `MZN`, ISO 4217 Numeric code: `943`.
   /// {@endtemplate}
-  const factory FiatMzn() = _MznFactory;
+  const factory() = _MznFactory;
 
-  const FiatMzn._()
+  const new _()
     : super(
         code: "MZN",
         name: "Mozambican Metical",

@@ -7,7 +7,7 @@
 part of "../../model/country/submodels/world_country.dart";
 
 extension type const _BwaFactory._(CountryBwa _) implements CountryBwa {
-  const _BwaFactory() : this._(const CountryBwa._());
+  const new() : this._(const CountryBwa._());
 }
 
 /// A class that represents the Botswana country.
@@ -17,9 +17,9 @@ class CountryBwa extends WorldCountry {
   ///
   /// ISO 3166-1 Alpha-3 code: `BWA`, ISO 3166-1 Alpha-2 code: `BW`.
   /// {@endtemplate}
-  const factory CountryBwa() = _BwaFactory;
+  const factory() = _BwaFactory;
 
-  const CountryBwa._()
+  const new _()
     : super._(
         name: const CountryName(
           language: LangEng(),

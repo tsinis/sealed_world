@@ -1,7 +1,7 @@
 part of "../../model/language/submodels/natural_language.dart";
 
 extension type const _LubFactory._(LangLub _) implements LangLub {
-  const _LubFactory() : this._(const LangLub._());
+  const new() : this._(const LangLub._());
 }
 
 /// A class that represents the Luba-Katanga language.
@@ -11,9 +11,9 @@ final class LangLub extends NaturalLanguage {
   ///
   /// ISO 639-2/T code: `LUB`, ISO 639-1 code: `LU`.
   /// {@endtemplate}
-  const factory LangLub() = _LubFactory;
+  const factory() = _LubFactory;
 
-  const LangLub._()
+  const new _()
     : super._(
         name: "Luba-Katanga",
         code: "LUB",

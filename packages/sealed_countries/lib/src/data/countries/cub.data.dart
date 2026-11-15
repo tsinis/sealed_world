@@ -7,7 +7,7 @@
 part of "../../model/country/submodels/world_country.dart";
 
 extension type const _CubFactory._(CountryCub _) implements CountryCub {
-  const _CubFactory() : this._(const CountryCub._());
+  const new() : this._(const CountryCub._());
 }
 
 /// A class that represents the Cuba country.
@@ -17,9 +17,9 @@ class CountryCub extends WorldCountry {
   ///
   /// ISO 3166-1 Alpha-3 code: `CUB`, ISO 3166-1 Alpha-2 code: `CU`.
   /// {@endtemplate}
-  const factory CountryCub() = _CubFactory;
+  const factory() = _CubFactory;
 
-  const CountryCub._()
+  const new _()
     : super._(
         name: const CountryName(
           language: LangEng(),

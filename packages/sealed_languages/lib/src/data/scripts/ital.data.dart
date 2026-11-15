@@ -1,7 +1,7 @@
 part of "../../model/script/submodels/script.dart";
 
 extension type const _ItalFactory._(ScriptItal _) implements ScriptItal {
-  const _ItalFactory() : this._(const ScriptItal._());
+  const new() : this._(const ScriptItal._());
 }
 
 /// A class that represents the Old Italic (Etruscan, Oscan, etc.) script.
@@ -12,9 +12,9 @@ final class ScriptItal extends Script {
   ///
   /// ISO 15924 Alpha-4 code: `Ital`, ISO 15924 Numeric code: `210`.
   /// {@endtemplate}
-  const factory ScriptItal() = _ItalFactory;
+  const factory() = _ItalFactory;
 
-  const ScriptItal._()
+  const new _()
     : super._(
         name: "Old Italic (Etruscan, Oscan, etc.)",
         code: "Ital",

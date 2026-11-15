@@ -7,7 +7,7 @@
 part of "../../model/country/submodels/world_country.dart";
 
 extension type const _FraFactory._(CountryFra _) implements CountryFra {
-  const _FraFactory() : this._(const CountryFra._());
+  const new() : this._(const CountryFra._());
 }
 
 /// A class that represents the France country.
@@ -17,9 +17,9 @@ class CountryFra extends WorldCountry {
   ///
   /// ISO 3166-1 Alpha-3 code: `FRA`, ISO 3166-1 Alpha-2 code: `FR`.
   /// {@endtemplate}
-  const factory CountryFra() = _FraFactory;
+  const factory() = _FraFactory;
 
-  const CountryFra._()
+  const new _()
     : super._(
         name: const CountryName(
           language: LangEng(),

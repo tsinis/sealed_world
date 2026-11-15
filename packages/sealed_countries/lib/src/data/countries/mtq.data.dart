@@ -7,7 +7,7 @@
 part of "../../model/country/submodels/world_country.dart";
 
 extension type const _MtqFactory._(CountryMtq _) implements CountryMtq {
-  const _MtqFactory() : this._(const CountryMtq._());
+  const new() : this._(const CountryMtq._());
 }
 
 /// A class that represents the Martinique country.
@@ -17,9 +17,9 @@ class CountryMtq extends WorldCountry {
   ///
   /// ISO 3166-1 Alpha-3 code: `MTQ`, ISO 3166-1 Alpha-2 code: `MQ`.
   /// {@endtemplate}
-  const factory CountryMtq() = _MtqFactory;
+  const factory() = _MtqFactory;
 
-  const CountryMtq._()
+  const new _()
     : super._(
         name: const CountryName(
           language: LangEng(),

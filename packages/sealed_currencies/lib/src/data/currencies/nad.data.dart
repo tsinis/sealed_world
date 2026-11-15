@@ -1,7 +1,7 @@
 part of "../../model/currency/submodels/fiat_currency.dart";
 
 extension type const _NadFactory._(FiatNad _) implements FiatNad {
-  const _NadFactory() : this._(const FiatNad._());
+  const new() : this._(const FiatNad._());
 }
 
 /// A class that represents the Namibian Dollar currency.
@@ -11,9 +11,9 @@ final class FiatNad extends FiatCurrency {
   ///
   /// ISO 4217 Alpha code: `NAD`, ISO 4217 Numeric code: `516`.
   /// {@endtemplate}
-  const factory FiatNad() = _NadFactory;
+  const factory() = _NadFactory;
 
-  const FiatNad._()
+  const new _()
     : super(
         code: "NAD",
         name: "Namibian Dollar",

@@ -1,7 +1,7 @@
 part of "../../model/language/submodels/natural_language.dart";
 
 extension type const _NepFactory._(LangNep _) implements LangNep {
-  const _NepFactory() : this._(const LangNep._());
+  const new() : this._(const LangNep._());
 }
 
 /// A class that represents the Nepali language.
@@ -11,9 +11,9 @@ final class LangNep extends NaturalLanguage {
   ///
   /// ISO 639-2/T code: `NEP`, ISO 639-1 code: `NE`.
   /// {@endtemplate}
-  const factory LangNep() = _NepFactory;
+  const factory() = _NepFactory;
 
-  const LangNep._()
+  const new _()
     : super._(
         name: "Nepali",
         code: "NEP",

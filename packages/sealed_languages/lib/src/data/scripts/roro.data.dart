@@ -1,7 +1,7 @@
 part of "../../model/script/submodels/script.dart";
 
 extension type const _RoroFactory._(ScriptRoro _) implements ScriptRoro {
-  const _RoroFactory() : this._(const ScriptRoro._());
+  const new() : this._(const ScriptRoro._());
 }
 
 /// A class that represents the Rongorongo script.
@@ -11,9 +11,9 @@ final class ScriptRoro extends Script {
   ///
   /// ISO 15924 Alpha-4 code: `Roro`, ISO 15924 Numeric code: `620`.
   /// {@endtemplate}
-  const factory ScriptRoro() = _RoroFactory;
+  const factory() = _RoroFactory;
 
-  const ScriptRoro._()
+  const new _()
     : super._(
         name: "Rongorongo",
         code: "Roro",

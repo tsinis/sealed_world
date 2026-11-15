@@ -1,7 +1,7 @@
 part of "../../model/language/submodels/natural_language.dart";
 
 extension type const _GrnFactory._(LangGrn _) implements LangGrn {
-  const _GrnFactory() : this._(const LangGrn._());
+  const new() : this._(const LangGrn._());
 }
 
 /// A class that represents the Guaraní language.
@@ -11,9 +11,9 @@ final class LangGrn extends NaturalLanguage {
   ///
   /// ISO 639-2/T code: `GRN`, ISO 639-1 code: `GN`.
   /// {@endtemplate}
-  const factory LangGrn() = _GrnFactory;
+  const factory() = _GrnFactory;
 
-  const LangGrn._()
+  const new _()
     : super._(
         name: "Guaraní",
         code: "GRN",

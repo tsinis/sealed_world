@@ -1,7 +1,7 @@
 part of "../../model/script/submodels/script.dart";
 
 extension type const _ChrsFactory._(ScriptChrs _) implements ScriptChrs {
-  const _ChrsFactory() : this._(const ScriptChrs._());
+  const new() : this._(const ScriptChrs._());
 }
 
 /// A class that represents the Chorasmian script.
@@ -11,9 +11,9 @@ final class ScriptChrs extends Script {
   ///
   /// ISO 15924 Alpha-4 code: `Chrs`, ISO 15924 Numeric code: `109`.
   /// {@endtemplate}
-  const factory ScriptChrs() = _ChrsFactory;
+  const factory() = _ChrsFactory;
 
-  const ScriptChrs._()
+  const new _()
     : super._(
         name: "Chorasmian",
         code: "Chrs",

@@ -1,7 +1,7 @@
 part of "../../model/language/submodels/natural_language.dart";
 
 extension type const _KhmFactory._(LangKhm _) implements LangKhm {
-  const _KhmFactory() : this._(const LangKhm._());
+  const new() : this._(const LangKhm._());
 }
 
 /// A class that represents the Khmer language.
@@ -11,9 +11,9 @@ final class LangKhm extends NaturalLanguage {
   ///
   /// ISO 639-2/T code: `KHM`, ISO 639-1 code: `KM`.
   /// {@endtemplate}
-  const factory LangKhm() = _KhmFactory;
+  const factory() = _KhmFactory;
 
-  const LangKhm._()
+  const new _()
     : super._(
         name: "Khmer",
         code: "KHM",

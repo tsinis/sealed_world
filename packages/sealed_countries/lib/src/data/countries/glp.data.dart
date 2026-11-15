@@ -7,7 +7,7 @@
 part of "../../model/country/submodels/world_country.dart";
 
 extension type const _GlpFactory._(CountryGlp _) implements CountryGlp {
-  const _GlpFactory() : this._(const CountryGlp._());
+  const new() : this._(const CountryGlp._());
 }
 
 /// A class that represents the Guadeloupe country.
@@ -17,9 +17,9 @@ class CountryGlp extends WorldCountry {
   ///
   /// ISO 3166-1 Alpha-3 code: `GLP`, ISO 3166-1 Alpha-2 code: `GP`.
   /// {@endtemplate}
-  const factory CountryGlp() = _GlpFactory;
+  const factory() = _GlpFactory;
 
-  const CountryGlp._()
+  const new _()
     : super._(
         name: const CountryName(
           language: LangEng(),

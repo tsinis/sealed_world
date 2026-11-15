@@ -7,7 +7,7 @@
 part of "../../model/country/submodels/world_country.dart";
 
 extension type const _MafFactory._(CountryMaf _) implements CountryMaf {
-  const _MafFactory() : this._(const CountryMaf._());
+  const new() : this._(const CountryMaf._());
 }
 
 /// A class that represents the Saint Martin country.
@@ -17,9 +17,9 @@ class CountryMaf extends WorldCountry {
   ///
   /// ISO 3166-1 Alpha-3 code: `MAF`, ISO 3166-1 Alpha-2 code: `MF`.
   /// {@endtemplate}
-  const factory CountryMaf() = _MafFactory;
+  const factory() = _MafFactory;
 
-  const CountryMaf._()
+  const new _()
     : super._(
         name: const CountryName(
           language: LangEng(),

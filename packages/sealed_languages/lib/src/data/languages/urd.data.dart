@@ -1,7 +1,7 @@
 part of "../../model/language/submodels/natural_language.dart";
 
 extension type const _UrdFactory._(LangUrd _) implements LangUrd {
-  const _UrdFactory() : this._(const LangUrd._());
+  const new() : this._(const LangUrd._());
 }
 
 /// A class that represents the Urdu language.
@@ -11,9 +11,9 @@ final class LangUrd extends NaturalLanguage {
   ///
   /// ISO 639-2/T code: `URD`, ISO 639-1 code: `UR`.
   /// {@endtemplate}
-  const factory LangUrd() = _UrdFactory;
+  const factory() = _UrdFactory;
 
-  const LangUrd._()
+  const new _()
     : super._(
         name: "Urdu",
         code: "URD",

@@ -1,7 +1,7 @@
 part of "../../model/currency/submodels/fiat_currency.dart";
 
 extension type const _GydFactory._(FiatGyd _) implements FiatGyd {
-  const _GydFactory() : this._(const FiatGyd._());
+  const new() : this._(const FiatGyd._());
 }
 
 /// A class that represents the Guyanese Dollar currency.
@@ -11,9 +11,9 @@ final class FiatGyd extends FiatCurrency {
   ///
   /// ISO 4217 Alpha code: `GYD`, ISO 4217 Numeric code: `328`.
   /// {@endtemplate}
-  const factory FiatGyd() = _GydFactory;
+  const factory() = _GydFactory;
 
-  const FiatGyd._()
+  const new _()
     : super(
         code: "GYD",
         name: "Guyanese Dollar",

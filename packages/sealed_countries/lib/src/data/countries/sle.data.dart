@@ -7,7 +7,7 @@
 part of "../../model/country/submodels/world_country.dart";
 
 extension type const _SleFactory._(CountrySle _) implements CountrySle {
-  const _SleFactory() : this._(const CountrySle._());
+  const new() : this._(const CountrySle._());
 }
 
 /// A class that represents the Sierra Leone country.
@@ -17,9 +17,9 @@ class CountrySle extends WorldCountry {
   ///
   /// ISO 3166-1 Alpha-3 code: `SLE`, ISO 3166-1 Alpha-2 code: `SL`.
   /// {@endtemplate}
-  const factory CountrySle() = _SleFactory;
+  const factory() = _SleFactory;
 
-  const CountrySle._()
+  const new _()
     : super._(
         name: const CountryName(
           language: LangEng(),

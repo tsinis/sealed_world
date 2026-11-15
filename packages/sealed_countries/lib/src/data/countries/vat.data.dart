@@ -7,7 +7,7 @@
 part of "../../model/country/submodels/world_country.dart";
 
 extension type const _VatFactory._(CountryVat _) implements CountryVat {
-  const _VatFactory() : this._(const CountryVat._());
+  const new() : this._(const CountryVat._());
 }
 
 /// A class that represents the Vatican City country.
@@ -17,9 +17,9 @@ class CountryVat extends WorldCountry {
   ///
   /// ISO 3166-1 Alpha-3 code: `VAT`, ISO 3166-1 Alpha-2 code: `VA`.
   /// {@endtemplate}
-  const factory CountryVat() = _VatFactory;
+  const factory() = _VatFactory;
 
-  const CountryVat._()
+  const new _()
     : super._(
         name: const CountryName(
           language: LangEng(),

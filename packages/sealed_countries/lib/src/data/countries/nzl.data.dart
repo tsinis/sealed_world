@@ -7,7 +7,7 @@
 part of "../../model/country/submodels/world_country.dart";
 
 extension type const _NzlFactory._(CountryNzl _) implements CountryNzl {
-  const _NzlFactory() : this._(const CountryNzl._());
+  const new() : this._(const CountryNzl._());
 }
 
 /// A class that represents the New Zealand country.
@@ -17,9 +17,9 @@ class CountryNzl extends WorldCountry {
   ///
   /// ISO 3166-1 Alpha-3 code: `NZL`, ISO 3166-1 Alpha-2 code: `NZ`.
   /// {@endtemplate}
-  const factory CountryNzl() = _NzlFactory;
+  const factory() = _NzlFactory;
 
-  const CountryNzl._()
+  const new _()
     : super._(
         name: const CountryName(
           language: LangEng(),

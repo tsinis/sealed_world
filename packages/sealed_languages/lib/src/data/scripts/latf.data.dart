@@ -1,7 +1,7 @@
 part of "../../model/script/submodels/script.dart";
 
 extension type const _LatfFactory._(ScriptLatf _) implements ScriptLatf {
-  const _LatfFactory() : this._(const ScriptLatf._());
+  const new() : this._(const ScriptLatf._());
 }
 
 /// A class that represents the Latin (Fraktur variant) script.
@@ -11,9 +11,9 @@ final class ScriptLatf extends Script {
   ///
   /// ISO 15924 Alpha-4 code: `Latf`, ISO 15924 Numeric code: `217`.
   /// {@endtemplate}
-  const factory ScriptLatf() = _LatfFactory;
+  const factory() = _LatfFactory;
 
-  const ScriptLatf._()
+  const new _()
     : super._(
         name: "Latin (Fraktur variant)",
         code: "Latf",

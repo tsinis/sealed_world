@@ -1,7 +1,7 @@
 part of "../../model/language/submodels/natural_language.dart";
 
 extension type const _UigFactory._(LangUig _) implements LangUig {
-  const _UigFactory() : this._(const LangUig._());
+  const new() : this._(const LangUig._());
 }
 
 /// A class that represents the Uyghur language.
@@ -11,9 +11,9 @@ final class LangUig extends NaturalLanguage {
   ///
   /// ISO 639-2/T code: `UIG`, ISO 639-1 code: `UG`.
   /// {@endtemplate}
-  const factory LangUig() = _UigFactory;
+  const factory() = _UigFactory;
 
-  const LangUig._()
+  const new _()
     : super._(
         name: "Uyghur",
         code: "UIG",

@@ -1,7 +1,7 @@
 part of "../../model/script/submodels/script.dart";
 
 extension type const _SyrjFactory._(ScriptSyrj _) implements ScriptSyrj {
-  const _SyrjFactory() : this._(const ScriptSyrj._());
+  const new() : this._(const ScriptSyrj._());
 }
 
 /// A class that represents the Syriac (Western variant) script.
@@ -11,9 +11,9 @@ final class ScriptSyrj extends Script {
   ///
   /// ISO 15924 Alpha-4 code: `Syrj`, ISO 15924 Numeric code: `137`.
   /// {@endtemplate}
-  const factory ScriptSyrj() = _SyrjFactory;
+  const factory() = _SyrjFactory;
 
-  const ScriptSyrj._()
+  const new _()
     : super._(
         name: "Syriac (Western variant)",
         code: "Syrj",

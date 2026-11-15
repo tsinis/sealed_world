@@ -1,7 +1,7 @@
 part of "../../model/language/submodels/natural_language.dart";
 
 extension type const _SotFactory._(LangSot _) implements LangSot {
-  const _SotFactory() : this._(const LangSot._());
+  const new() : this._(const LangSot._());
 }
 
 /// A class that represents the Southern Sotho language.
@@ -11,9 +11,9 @@ final class LangSot extends NaturalLanguage {
   ///
   /// ISO 639-2/T code: `SOT`, ISO 639-1 code: `ST`.
   /// {@endtemplate}
-  const factory LangSot() = _SotFactory;
+  const factory() = _SotFactory;
 
-  const LangSot._()
+  const new _()
     : super._(
         name: "Southern Sotho",
         code: "SOT",

@@ -1,7 +1,7 @@
 part of "../../model/currency/submodels/fiat_currency.dart";
 
 extension type const _HtgFactory._(FiatHtg _) implements FiatHtg {
-  const _HtgFactory() : this._(const FiatHtg._());
+  const new() : this._(const FiatHtg._());
 }
 
 /// A class that represents the Haitian Gourde currency.
@@ -11,9 +11,9 @@ final class FiatHtg extends FiatCurrency {
   ///
   /// ISO 4217 Alpha code: `HTG`, ISO 4217 Numeric code: `332`.
   /// {@endtemplate}
-  const factory FiatHtg() = _HtgFactory;
+  const factory() = _HtgFactory;
 
-  const FiatHtg._()
+  const new _()
     : super(
         code: "HTG",
         name: "Haitian Gourde",

@@ -1,7 +1,7 @@
 part of "../../model/script/submodels/script.dart";
 
 extension type const _HangFactory._(ScriptHang _) implements ScriptHang {
-  const _HangFactory() : this._(const ScriptHang._());
+  const new() : this._(const ScriptHang._());
 }
 
 /// A class that represents the Hangul (Hangŭl, Hangeul) script.
@@ -11,9 +11,9 @@ final class ScriptHang extends Script {
   ///
   /// ISO 15924 Alpha-4 code: `Hang`, ISO 15924 Numeric code: `286`.
   /// {@endtemplate}
-  const factory ScriptHang() = _HangFactory;
+  const factory() = _HangFactory;
 
-  const ScriptHang._()
+  const new _()
     : super._(
         name: "Hangul (Hangŭl, Hangeul)",
         code: "Hang",

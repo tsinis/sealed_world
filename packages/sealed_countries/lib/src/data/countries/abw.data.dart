@@ -7,7 +7,7 @@
 part of "../../model/country/submodels/world_country.dart";
 
 extension type const _AbwFactory._(CountryAbw _) implements CountryAbw {
-  const _AbwFactory() : this._(const CountryAbw._());
+  const new() : this._(const CountryAbw._());
 }
 
 /// A class that represents the Aruba country.
@@ -17,9 +17,9 @@ class CountryAbw extends WorldCountry {
   ///
   /// ISO 3166-1 Alpha-3 code: `ABW`, ISO 3166-1 Alpha-2 code: `AW`.
   /// {@endtemplate}
-  const factory CountryAbw() = _AbwFactory;
+  const factory() = _AbwFactory;
 
-  const CountryAbw._()
+  const new _()
     : super._(
         name: const CountryName(
           language: LangEng(),

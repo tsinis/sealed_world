@@ -1,7 +1,7 @@
 part of "../../model/language/submodels/natural_language.dart";
 
 extension type const _NdeFactory._(LangNde _) implements LangNde {
-  const _NdeFactory() : this._(const LangNde._());
+  const new() : this._(const LangNde._());
 }
 
 /// A class that represents the Northern Ndebele language.
@@ -11,9 +11,9 @@ final class LangNde extends NaturalLanguage {
   ///
   /// ISO 639-2/T code: `NDE`, ISO 639-1 code: `ND`.
   /// {@endtemplate}
-  const factory LangNde() = _NdeFactory;
+  const factory() = _NdeFactory;
 
-  const LangNde._()
+  const new _()
     : super._(
         name: "Northern Ndebele",
         code: "NDE",

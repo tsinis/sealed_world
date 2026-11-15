@@ -7,7 +7,7 @@
 part of "../../model/country/submodels/world_country.dart";
 
 extension type const _ArmFactory._(CountryArm _) implements CountryArm {
-  const _ArmFactory() : this._(const CountryArm._());
+  const new() : this._(const CountryArm._());
 }
 
 /// A class that represents the Armenia country.
@@ -17,9 +17,9 @@ class CountryArm extends WorldCountry {
   ///
   /// ISO 3166-1 Alpha-3 code: `ARM`, ISO 3166-1 Alpha-2 code: `AM`.
   /// {@endtemplate}
-  const factory CountryArm() = _ArmFactory;
+  const factory() = _ArmFactory;
 
-  const CountryArm._()
+  const new _()
     : super._(
         name: const CountryName(
           language: LangEng(),

@@ -1,7 +1,7 @@
 part of "../../model/language/submodels/natural_language.dart";
 
 extension type const _UkrFactory._(LangUkr _) implements LangUkr {
-  const _UkrFactory() : this._(const LangUkr._());
+  const new() : this._(const LangUkr._());
 }
 
 /// A class that represents the Ukrainian language.
@@ -11,9 +11,9 @@ final class LangUkr extends NaturalLanguage {
   ///
   /// ISO 639-2/T code: `UKR`, ISO 639-1 code: `UK`.
   /// {@endtemplate}
-  const factory LangUkr() = _UkrFactory;
+  const factory() = _UkrFactory;
 
-  const LangUkr._()
+  const new _()
     : super._(
         name: "Ukrainian",
         code: "UKR",

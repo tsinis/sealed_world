@@ -1,7 +1,7 @@
 part of "../../model/script/submodels/script.dart";
 
 extension type const _TamlFactory._(ScriptTaml _) implements ScriptTaml {
-  const _TamlFactory() : this._(const ScriptTaml._());
+  const new() : this._(const ScriptTaml._());
 }
 
 /// A class that represents the Tamil script.
@@ -11,9 +11,9 @@ final class ScriptTaml extends Script {
   ///
   /// ISO 15924 Alpha-4 code: `Taml`, ISO 15924 Numeric code: `346`.
   /// {@endtemplate}
-  const factory ScriptTaml() = _TamlFactory;
+  const factory() = _TamlFactory;
 
-  const ScriptTaml._()
+  const new _()
     : super._(
         name: "Tamil",
         code: "Taml",

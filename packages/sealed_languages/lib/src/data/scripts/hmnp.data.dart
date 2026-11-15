@@ -1,7 +1,7 @@
 part of "../../model/script/submodels/script.dart";
 
 extension type const _HmnpFactory._(ScriptHmnp _) implements ScriptHmnp {
-  const _HmnpFactory() : this._(const ScriptHmnp._());
+  const new() : this._(const ScriptHmnp._());
 }
 
 /// A class that represents the Nyiakeng Puachue Hmong script.
@@ -11,9 +11,9 @@ final class ScriptHmnp extends Script {
   ///
   /// ISO 15924 Alpha-4 code: `Hmnp`, ISO 15924 Numeric code: `451`.
   /// {@endtemplate}
-  const factory ScriptHmnp() = _HmnpFactory;
+  const factory() = _HmnpFactory;
 
-  const ScriptHmnp._()
+  const new _()
     : super._(
         name: "Nyiakeng Puachue Hmong",
         code: "Hmnp",

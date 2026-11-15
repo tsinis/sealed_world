@@ -1,7 +1,7 @@
 part of "../../model/script/submodels/script.dart";
 
 extension type const _XsuxFactory._(ScriptXsux _) implements ScriptXsux {
-  const _XsuxFactory() : this._(const ScriptXsux._());
+  const new() : this._(const ScriptXsux._());
 }
 
 /// A class that represents the Cuneiform, Sumero-Akkadian script.
@@ -11,9 +11,9 @@ final class ScriptXsux extends Script {
   ///
   /// ISO 15924 Alpha-4 code: `Xsux`, ISO 15924 Numeric code: `020`.
   /// {@endtemplate}
-  const factory ScriptXsux() = _XsuxFactory;
+  const factory() = _XsuxFactory;
 
-  const ScriptXsux._()
+  const new _()
     : super._(
         name: "Cuneiform, Sumero-Akkadian",
         code: "Xsux",

@@ -1,7 +1,7 @@
 part of "../../model/script/submodels/script.dart";
 
 extension type const _BassFactory._(ScriptBass _) implements ScriptBass {
-  const _BassFactory() : this._(const ScriptBass._());
+  const new() : this._(const ScriptBass._());
 }
 
 /// A class that represents the Bassa Vah script.
@@ -11,9 +11,9 @@ final class ScriptBass extends Script {
   ///
   /// ISO 15924 Alpha-4 code: `Bass`, ISO 15924 Numeric code: `259`.
   /// {@endtemplate}
-  const factory ScriptBass() = _BassFactory;
+  const factory() = _BassFactory;
 
-  const ScriptBass._()
+  const new _()
     : super._(
         name: "Bassa Vah",
         code: "Bass",

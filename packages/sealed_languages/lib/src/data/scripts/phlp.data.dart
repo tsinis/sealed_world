@@ -1,7 +1,7 @@
 part of "../../model/script/submodels/script.dart";
 
 extension type const _PhlpFactory._(ScriptPhlp _) implements ScriptPhlp {
-  const _PhlpFactory() : this._(const ScriptPhlp._());
+  const new() : this._(const ScriptPhlp._());
 }
 
 /// A class that represents the Psalter Pahlavi script.
@@ -11,9 +11,9 @@ final class ScriptPhlp extends Script {
   ///
   /// ISO 15924 Alpha-4 code: `Phlp`, ISO 15924 Numeric code: `132`.
   /// {@endtemplate}
-  const factory ScriptPhlp() = _PhlpFactory;
+  const factory() = _PhlpFactory;
 
-  const ScriptPhlp._()
+  const new _()
     : super._(
         name: "Psalter Pahlavi",
         code: "Phlp",

@@ -1,7 +1,7 @@
 part of "../../model/currency/submodels/fiat_currency.dart";
 
 extension type const _SzlFactory._(FiatSzl _) implements FiatSzl {
-  const _SzlFactory() : this._(const FiatSzl._());
+  const new() : this._(const FiatSzl._());
 }
 
 /// A class that represents the Swazi Lilangeni currency.
@@ -11,9 +11,9 @@ final class FiatSzl extends FiatCurrency {
   ///
   /// ISO 4217 Alpha code: `SZL`, ISO 4217 Numeric code: `748`.
   /// {@endtemplate}
-  const factory FiatSzl() = _SzlFactory;
+  const factory() = _SzlFactory;
 
-  const FiatSzl._()
+  const new _()
     : super(
         code: "SZL",
         name: "Swazi Lilangeni",

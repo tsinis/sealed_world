@@ -1,7 +1,7 @@
 part of "../../model/script/submodels/script.dart";
 
 extension type const _EthiFactory._(ScriptEthi _) implements ScriptEthi {
-  const _EthiFactory() : this._(const ScriptEthi._());
+  const new() : this._(const ScriptEthi._());
 }
 
 /// A class that represents the Ethiopic (Geʻez) script.
@@ -11,9 +11,9 @@ final class ScriptEthi extends Script {
   ///
   /// ISO 15924 Alpha-4 code: `Ethi`, ISO 15924 Numeric code: `430`.
   /// {@endtemplate}
-  const factory ScriptEthi() = _EthiFactory;
+  const factory() = _EthiFactory;
 
-  const ScriptEthi._()
+  const new _()
     : super._(
         name: "Ethiopic (Geʻez)",
         code: "Ethi",

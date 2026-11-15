@@ -1,7 +1,7 @@
 part of "../../model/currency/submodels/fiat_currency.dart";
 
 extension type const _UyuFactory._(FiatUyu _) implements FiatUyu {
-  const _UyuFactory() : this._(const FiatUyu._());
+  const new() : this._(const FiatUyu._());
 }
 
 /// A class that represents the Uruguayan Peso currency.
@@ -11,9 +11,9 @@ final class FiatUyu extends FiatCurrency {
   ///
   /// ISO 4217 Alpha code: `UYU`, ISO 4217 Numeric code: `858`.
   /// {@endtemplate}
-  const factory FiatUyu() = _UyuFactory;
+  const factory() = _UyuFactory;
 
-  const FiatUyu._()
+  const new _()
     : super(
         code: "UYU",
         name: "Uruguayan Peso",

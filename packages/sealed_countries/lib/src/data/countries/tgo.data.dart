@@ -7,7 +7,7 @@
 part of "../../model/country/submodels/world_country.dart";
 
 extension type const _TgoFactory._(CountryTgo _) implements CountryTgo {
-  const _TgoFactory() : this._(const CountryTgo._());
+  const new() : this._(const CountryTgo._());
 }
 
 /// A class that represents the Togo country.
@@ -17,9 +17,9 @@ class CountryTgo extends WorldCountry {
   ///
   /// ISO 3166-1 Alpha-3 code: `TGO`, ISO 3166-1 Alpha-2 code: `TG`.
   /// {@endtemplate}
-  const factory CountryTgo() = _TgoFactory;
+  const factory() = _TgoFactory;
 
-  const CountryTgo._()
+  const new _()
     : super._(
         name: const CountryName(
           language: LangEng(),

@@ -7,7 +7,7 @@
 part of "../../model/country/submodels/world_country.dart";
 
 extension type const _AfgFactory._(CountryAfg _) implements CountryAfg {
-  const _AfgFactory() : this._(const CountryAfg._());
+  const new() : this._(const CountryAfg._());
 }
 
 /// A class that represents the Afghanistan country.
@@ -17,9 +17,9 @@ class CountryAfg extends WorldCountry {
   ///
   /// ISO 3166-1 Alpha-3 code: `AFG`, ISO 3166-1 Alpha-2 code: `AF`.
   /// {@endtemplate}
-  const factory CountryAfg() = _AfgFactory;
+  const factory() = _AfgFactory;
 
-  const CountryAfg._()
+  const new _()
     : super._(
         name: const CountryName(
           language: LangEng(),

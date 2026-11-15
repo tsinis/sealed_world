@@ -1,7 +1,7 @@
 part of "../../model/language/submodels/natural_language.dart";
 
 extension type const _IleFactory._(LangIle _) implements LangIle {
-  const _IleFactory() : this._(const LangIle._());
+  const new() : this._(const LangIle._());
 }
 
 /// A class that represents the Interlingue language.
@@ -11,9 +11,9 @@ final class LangIle extends NaturalLanguage {
   ///
   /// ISO 639-2/T code: `ILE`, ISO 639-1 code: `IE`.
   /// {@endtemplate}
-  const factory LangIle() = _IleFactory;
+  const factory() = _IleFactory;
 
-  const LangIle._()
+  const new _()
     : super._(
         name: "Interlingue",
         code: "ILE",

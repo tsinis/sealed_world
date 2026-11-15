@@ -1,7 +1,7 @@
 part of "../../model/script/submodels/script.dart";
 
 extension type const _VaiiFactory._(ScriptVaii _) implements ScriptVaii {
-  const _VaiiFactory() : this._(const ScriptVaii._());
+  const new() : this._(const ScriptVaii._());
 }
 
 /// A class that represents the Vai script.
@@ -11,9 +11,9 @@ final class ScriptVaii extends Script {
   ///
   /// ISO 15924 Alpha-4 code: `Vaii`, ISO 15924 Numeric code: `470`.
   /// {@endtemplate}
-  const factory ScriptVaii() = _VaiiFactory;
+  const factory() = _VaiiFactory;
 
-  const ScriptVaii._()
+  const new _()
     : super._(
         name: "Vai",
         code: "Vaii",

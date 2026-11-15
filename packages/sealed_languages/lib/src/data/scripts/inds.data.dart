@@ -1,7 +1,7 @@
 part of "../../model/script/submodels/script.dart";
 
 extension type const _IndsFactory._(ScriptInds _) implements ScriptInds {
-  const _IndsFactory() : this._(const ScriptInds._());
+  const new() : this._(const ScriptInds._());
 }
 
 /// A class that represents the Indus (Harappan) script.
@@ -11,9 +11,9 @@ final class ScriptInds extends Script {
   ///
   /// ISO 15924 Alpha-4 code: `Inds`, ISO 15924 Numeric code: `610`.
   /// {@endtemplate}
-  const factory ScriptInds() = _IndsFactory;
+  const factory() = _IndsFactory;
 
-  const ScriptInds._()
+  const new _()
     : super._(
         name: "Indus (Harappan)",
         code: "Inds",

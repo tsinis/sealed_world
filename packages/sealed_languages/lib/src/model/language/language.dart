@@ -9,7 +9,7 @@ class Language implements Named<String> {
   ///
   /// The [name] parameter is required and should be a non-empty [String]
   /// representing the name of the language.
-  const Language({required this.name})
+  const new({required this.name})
     : assert(name.length > 0, "`name` should not be empty!");
 
   /// The name of the language.

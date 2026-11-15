@@ -1,7 +1,7 @@
 part of "../../model/currency/submodels/fiat_currency.dart";
 
 extension type const _RwfFactory._(FiatRwf _) implements FiatRwf {
-  const _RwfFactory() : this._(const FiatRwf._());
+  const new() : this._(const FiatRwf._());
 }
 
 /// A class that represents the Rwandan Franc currency.
@@ -11,9 +11,9 @@ final class FiatRwf extends FiatCurrency {
   ///
   /// ISO 4217 Alpha code: `RWF`, ISO 4217 Numeric code: `646`.
   /// {@endtemplate}
-  const factory FiatRwf() = _RwfFactory;
+  const factory() = _RwfFactory;
 
-  const FiatRwf._()
+  const new _()
     : super(
         code: "RWF",
         name: "Rwandan Franc",

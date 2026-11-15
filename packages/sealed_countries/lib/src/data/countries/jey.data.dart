@@ -7,7 +7,7 @@
 part of "../../model/country/submodels/world_country.dart";
 
 extension type const _JeyFactory._(CountryJey _) implements CountryJey {
-  const _JeyFactory() : this._(const CountryJey._());
+  const new() : this._(const CountryJey._());
 }
 
 /// A class that represents the Jersey country.
@@ -17,9 +17,9 @@ class CountryJey extends WorldCountry {
   ///
   /// ISO 3166-1 Alpha-3 code: `JEY`, ISO 3166-1 Alpha-2 code: `JE`.
   /// {@endtemplate}
-  const factory CountryJey() = _JeyFactory;
+  const factory() = _JeyFactory;
 
-  const CountryJey._()
+  const new _()
     : super._(
         name: const CountryName(
           language: LangEng(),

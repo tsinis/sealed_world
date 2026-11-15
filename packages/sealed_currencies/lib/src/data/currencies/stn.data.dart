@@ -1,7 +1,7 @@
 part of "../../model/currency/submodels/fiat_currency.dart";
 
 extension type const _StnFactory._(FiatStn _) implements FiatStn {
-  const _StnFactory() : this._(const FiatStn._());
+  const new() : this._(const FiatStn._());
 }
 
 /// A class that represents the São Tomé and Príncipe Second Dobra currency.
@@ -12,9 +12,9 @@ final class FiatStn extends FiatCurrency {
   ///
   /// ISO 4217 Alpha code: `STN`, ISO 4217 Numeric code: `930`.
   /// {@endtemplate}
-  const factory FiatStn() = _StnFactory;
+  const factory() = _StnFactory;
 
-  const FiatStn._()
+  const new _()
     : super(
         code: "STN",
         name: "São Tomé and Príncipe Second Dobra",

@@ -1,7 +1,7 @@
 part of "../../model/script/submodels/script.dart";
 
 extension type const _WchoFactory._(ScriptWcho _) implements ScriptWcho {
-  const _WchoFactory() : this._(const ScriptWcho._());
+  const new() : this._(const ScriptWcho._());
 }
 
 /// A class that represents the Wancho script.
@@ -11,9 +11,9 @@ final class ScriptWcho extends Script {
   ///
   /// ISO 15924 Alpha-4 code: `Wcho`, ISO 15924 Numeric code: `283`.
   /// {@endtemplate}
-  const factory ScriptWcho() = _WchoFactory;
+  const factory() = _WchoFactory;
 
-  const ScriptWcho._()
+  const new _()
     : super._(
         name: "Wancho",
         code: "Wcho",

@@ -1,7 +1,7 @@
 part of "../../model/currency/submodels/fiat_currency.dart";
 
 extension type const _MmkFactory._(FiatMmk _) implements FiatMmk {
-  const _MmkFactory() : this._(const FiatMmk._());
+  const new() : this._(const FiatMmk._());
 }
 
 /// A class that represents the Myanmar Kyat currency.
@@ -11,9 +11,9 @@ final class FiatMmk extends FiatCurrency {
   ///
   /// ISO 4217 Alpha code: `MMK`, ISO 4217 Numeric code: `104`.
   /// {@endtemplate}
-  const factory FiatMmk() = _MmkFactory;
+  const factory() = _MmkFactory;
 
-  const FiatMmk._()
+  const new _()
     : super(
         code: "MMK",
         name: "Myanmar Kyat",

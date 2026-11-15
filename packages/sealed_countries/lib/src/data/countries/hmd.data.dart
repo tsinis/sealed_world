@@ -7,7 +7,7 @@
 part of "../../model/country/submodels/world_country.dart";
 
 extension type const _HmdFactory._(CountryHmd _) implements CountryHmd {
-  const _HmdFactory() : this._(const CountryHmd._());
+  const new() : this._(const CountryHmd._());
 }
 
 /// A class that represents the Heard Island and McDonald Islands country.
@@ -18,9 +18,9 @@ class CountryHmd extends WorldCountry {
   ///
   /// ISO 3166-1 Alpha-3 code: `HMD`, ISO 3166-1 Alpha-2 code: `HM`.
   /// {@endtemplate}
-  const factory CountryHmd() = _HmdFactory;
+  const factory() = _HmdFactory;
 
-  const CountryHmd._()
+  const new _()
     : super._(
         name: const CountryName(
           language: LangEng(),

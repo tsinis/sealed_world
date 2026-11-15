@@ -1,7 +1,7 @@
 part of "../../model/script/submodels/script.dart";
 
 extension type const _LatgFactory._(ScriptLatg _) implements ScriptLatg {
-  const _LatgFactory() : this._(const ScriptLatg._());
+  const new() : this._(const ScriptLatg._());
 }
 
 /// A class that represents the Latin (Gaelic variant) script.
@@ -11,9 +11,9 @@ final class ScriptLatg extends Script {
   ///
   /// ISO 15924 Alpha-4 code: `Latg`, ISO 15924 Numeric code: `216`.
   /// {@endtemplate}
-  const factory ScriptLatg() = _LatgFactory;
+  const factory() = _LatgFactory;
 
-  const ScriptLatg._()
+  const new _()
     : super._(
         name: "Latin (Gaelic variant)",
         code: "Latg",

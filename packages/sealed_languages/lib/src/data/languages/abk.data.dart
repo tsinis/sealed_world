@@ -1,7 +1,7 @@
 part of "../../model/language/submodels/natural_language.dart";
 
 extension type const _AbkFactory._(LangAbk _) implements LangAbk {
-  const _AbkFactory() : this._(const LangAbk._());
+  const new() : this._(const LangAbk._());
 }
 
 /// A class that represents the Abkhaz language.
@@ -11,9 +11,9 @@ final class LangAbk extends NaturalLanguage {
   ///
   /// ISO 639-2/T code: `ABK`, ISO 639-1 code: `AB`.
   /// {@endtemplate}
-  const factory LangAbk() = _AbkFactory;
+  const factory() = _AbkFactory;
 
-  const LangAbk._()
+  const new _()
     : super._(
         name: "Abkhaz",
         code: "ABK",

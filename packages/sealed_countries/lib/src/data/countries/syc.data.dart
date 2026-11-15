@@ -7,7 +7,7 @@
 part of "../../model/country/submodels/world_country.dart";
 
 extension type const _SycFactory._(CountrySyc _) implements CountrySyc {
-  const _SycFactory() : this._(const CountrySyc._());
+  const new() : this._(const CountrySyc._());
 }
 
 /// A class that represents the Seychelles country.
@@ -17,9 +17,9 @@ class CountrySyc extends WorldCountry {
   ///
   /// ISO 3166-1 Alpha-3 code: `SYC`, ISO 3166-1 Alpha-2 code: `SC`.
   /// {@endtemplate}
-  const factory CountrySyc() = _SycFactory;
+  const factory() = _SycFactory;
 
-  const CountrySyc._()
+  const new _()
     : super._(
         name: const CountryName(
           language: LangEng(),

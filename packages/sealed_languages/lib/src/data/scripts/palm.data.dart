@@ -1,7 +1,7 @@
 part of "../../model/script/submodels/script.dart";
 
 extension type const _PalmFactory._(ScriptPalm _) implements ScriptPalm {
-  const _PalmFactory() : this._(const ScriptPalm._());
+  const new() : this._(const ScriptPalm._());
 }
 
 /// A class that represents the Palmyrene script.
@@ -11,9 +11,9 @@ final class ScriptPalm extends Script {
   ///
   /// ISO 15924 Alpha-4 code: `Palm`, ISO 15924 Numeric code: `126`.
   /// {@endtemplate}
-  const factory ScriptPalm() = _PalmFactory;
+  const factory() = _PalmFactory;
 
-  const ScriptPalm._()
+  const new _()
     : super._(
         name: "Palmyrene",
         code: "Palm",

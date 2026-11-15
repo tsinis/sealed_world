@@ -1,7 +1,7 @@
 part of "../../model/language/submodels/natural_language.dart";
 
 extension type const _SpaFactory._(LangSpa _) implements LangSpa {
-  const _SpaFactory() : this._(const LangSpa._());
+  const new() : this._(const LangSpa._());
 }
 
 /// A class that represents the Spanish language.
@@ -11,9 +11,9 @@ final class LangSpa extends NaturalLanguage {
   ///
   /// ISO 639-2/T code: `SPA`, ISO 639-1 code: `ES`.
   /// {@endtemplate}
-  const factory LangSpa() = _SpaFactory;
+  const factory() = _SpaFactory;
 
-  const LangSpa._()
+  const new _()
     : super._(
         name: "Spanish",
         code: "SPA",

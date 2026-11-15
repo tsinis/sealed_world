@@ -1,7 +1,7 @@
 part of "../../model/currency/submodels/fiat_currency.dart";
 
 extension type const _IrrFactory._(FiatIrr _) implements FiatIrr {
-  const _IrrFactory() : this._(const FiatIrr._());
+  const new() : this._(const FiatIrr._());
 }
 
 /// A class that represents the Iranian Rial currency.
@@ -11,9 +11,9 @@ final class FiatIrr extends FiatCurrency {
   ///
   /// ISO 4217 Alpha code: `IRR`, ISO 4217 Numeric code: `364`.
   /// {@endtemplate}
-  const factory FiatIrr() = _IrrFactory;
+  const factory() = _IrrFactory;
 
-  const FiatIrr._()
+  const new _()
     : super(
         code: "IRR",
         name: "Iranian Rial",

@@ -7,7 +7,7 @@
 part of "../../model/country/submodels/world_country.dart";
 
 extension type const _BrbFactory._(CountryBrb _) implements CountryBrb {
-  const _BrbFactory() : this._(const CountryBrb._());
+  const new() : this._(const CountryBrb._());
 }
 
 /// A class that represents the Barbados country.
@@ -17,9 +17,9 @@ class CountryBrb extends WorldCountry {
   ///
   /// ISO 3166-1 Alpha-3 code: `BRB`, ISO 3166-1 Alpha-2 code: `BB`.
   /// {@endtemplate}
-  const factory CountryBrb() = _BrbFactory;
+  const factory() = _BrbFactory;
 
-  const CountryBrb._()
+  const new _()
     : super._(
         name: const CountryName(
           language: LangEng(),

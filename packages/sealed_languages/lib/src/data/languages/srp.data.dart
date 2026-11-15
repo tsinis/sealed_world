@@ -1,7 +1,7 @@
 part of "../../model/language/submodels/natural_language.dart";
 
 extension type const _SrpFactory._(LangSrp _) implements LangSrp {
-  const _SrpFactory() : this._(const LangSrp._());
+  const new() : this._(const LangSrp._());
 }
 
 /// A class that represents the Serbian language.
@@ -11,9 +11,9 @@ final class LangSrp extends NaturalLanguage {
   ///
   /// ISO 639-2/T code: `SRP`, ISO 639-1 code: `SR`.
   /// {@endtemplate}
-  const factory LangSrp() = _SrpFactory;
+  const factory() = _SrpFactory;
 
-  const LangSrp._()
+  const new _()
     : super._(
         name: "Serbian",
         code: "SRP",

@@ -1,7 +1,7 @@
 part of "../../model/currency/submodels/fiat_currency.dart";
 
 extension type const _BdtFactory._(FiatBdt _) implements FiatBdt {
-  const _BdtFactory() : this._(const FiatBdt._());
+  const new() : this._(const FiatBdt._());
 }
 
 /// A class that represents the Bangladeshi Taka currency.
@@ -11,9 +11,9 @@ final class FiatBdt extends FiatCurrency {
   ///
   /// ISO 4217 Alpha code: `BDT`, ISO 4217 Numeric code: `050`.
   /// {@endtemplate}
-  const factory FiatBdt() = _BdtFactory;
+  const factory() = _BdtFactory;
 
-  const FiatBdt._()
+  const new _()
     : super(
         code: "BDT",
         name: "Bangladeshi Taka",

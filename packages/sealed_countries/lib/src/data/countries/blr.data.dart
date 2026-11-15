@@ -7,7 +7,7 @@
 part of "../../model/country/submodels/world_country.dart";
 
 extension type const _BlrFactory._(CountryBlr _) implements CountryBlr {
-  const _BlrFactory() : this._(const CountryBlr._());
+  const new() : this._(const CountryBlr._());
 }
 
 /// A class that represents the Belarus country.
@@ -17,9 +17,9 @@ class CountryBlr extends WorldCountry {
   ///
   /// ISO 3166-1 Alpha-3 code: `BLR`, ISO 3166-1 Alpha-2 code: `BY`.
   /// {@endtemplate}
-  const factory CountryBlr() = _BlrFactory;
+  const factory() = _BlrFactory;
 
-  const CountryBlr._()
+  const new _()
     : super._(
         name: const CountryName(
           language: LangEng(),

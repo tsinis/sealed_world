@@ -1,7 +1,7 @@
 part of "../../model/currency/submodels/fiat_currency.dart";
 
 extension type const _DjfFactory._(FiatDjf _) implements FiatDjf {
-  const _DjfFactory() : this._(const FiatDjf._());
+  const new() : this._(const FiatDjf._());
 }
 
 /// A class that represents the Djiboutian Franc currency.
@@ -11,9 +11,9 @@ final class FiatDjf extends FiatCurrency {
   ///
   /// ISO 4217 Alpha code: `DJF`, ISO 4217 Numeric code: `262`.
   /// {@endtemplate}
-  const factory FiatDjf() = _DjfFactory;
+  const factory() = _DjfFactory;
 
-  const FiatDjf._()
+  const new _()
     : super(
         code: "DJF",
         name: "Djiboutian Franc",

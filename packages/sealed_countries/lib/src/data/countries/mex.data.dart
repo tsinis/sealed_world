@@ -7,7 +7,7 @@
 part of "../../model/country/submodels/world_country.dart";
 
 extension type const _MexFactory._(CountryMex _) implements CountryMex {
-  const _MexFactory() : this._(const CountryMex._());
+  const new() : this._(const CountryMex._());
 }
 
 /// A class that represents the Mexico country.
@@ -17,9 +17,9 @@ class CountryMex extends WorldCountry {
   ///
   /// ISO 3166-1 Alpha-3 code: `MEX`, ISO 3166-1 Alpha-2 code: `MX`.
   /// {@endtemplate}
-  const factory CountryMex() = _MexFactory;
+  const factory() = _MexFactory;
 
-  const CountryMex._()
+  const new _()
     : super._(
         name: const CountryName(
           language: LangEng(),

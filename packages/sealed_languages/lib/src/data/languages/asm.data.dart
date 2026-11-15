@@ -1,7 +1,7 @@
 part of "../../model/language/submodels/natural_language.dart";
 
 extension type const _AsmFactory._(LangAsm _) implements LangAsm {
-  const _AsmFactory() : this._(const LangAsm._());
+  const new() : this._(const LangAsm._());
 }
 
 /// A class that represents the Assamese language.
@@ -11,9 +11,9 @@ final class LangAsm extends NaturalLanguage {
   ///
   /// ISO 639-2/T code: `ASM`, ISO 639-1 code: `AS`.
   /// {@endtemplate}
-  const factory LangAsm() = _AsmFactory;
+  const factory() = _AsmFactory;
 
-  const LangAsm._()
+  const new _()
     : super._(
         name: "Assamese",
         code: "ASM",

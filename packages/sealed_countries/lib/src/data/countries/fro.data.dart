@@ -7,7 +7,7 @@
 part of "../../model/country/submodels/world_country.dart";
 
 extension type const _FroFactory._(CountryFro _) implements CountryFro {
-  const _FroFactory() : this._(const CountryFro._());
+  const new() : this._(const CountryFro._());
 }
 
 /// A class that represents the Faroe Islands country.
@@ -17,9 +17,9 @@ class CountryFro extends WorldCountry {
   ///
   /// ISO 3166-1 Alpha-3 code: `FRO`, ISO 3166-1 Alpha-2 code: `FO`.
   /// {@endtemplate}
-  const factory CountryFro() = _FroFactory;
+  const factory() = _FroFactory;
 
-  const CountryFro._()
+  const new _()
     : super._(
         name: const CountryName(
           language: LangEng(),

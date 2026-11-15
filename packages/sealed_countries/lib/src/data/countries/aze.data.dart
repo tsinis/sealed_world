@@ -7,7 +7,7 @@
 part of "../../model/country/submodels/world_country.dart";
 
 extension type const _AzeFactory._(CountryAze _) implements CountryAze {
-  const _AzeFactory() : this._(const CountryAze._());
+  const new() : this._(const CountryAze._());
 }
 
 /// A class that represents the Azerbaijan country.
@@ -17,9 +17,9 @@ class CountryAze extends WorldCountry {
   ///
   /// ISO 3166-1 Alpha-3 code: `AZE`, ISO 3166-1 Alpha-2 code: `AZ`.
   /// {@endtemplate}
-  const factory CountryAze() = _AzeFactory;
+  const factory() = _AzeFactory;
 
-  const CountryAze._()
+  const new _()
     : super._(
         name: const CountryName(
           language: LangEng(),

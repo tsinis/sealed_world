@@ -1,7 +1,7 @@
 part of "../../model/script/submodels/script.dart";
 
 extension type const _GonmFactory._(ScriptGonm _) implements ScriptGonm {
-  const _GonmFactory() : this._(const ScriptGonm._());
+  const new() : this._(const ScriptGonm._());
 }
 
 /// A class that represents the Masaram Gondi script.
@@ -11,9 +11,9 @@ final class ScriptGonm extends Script {
   ///
   /// ISO 15924 Alpha-4 code: `Gonm`, ISO 15924 Numeric code: `313`.
   /// {@endtemplate}
-  const factory ScriptGonm() = _GonmFactory;
+  const factory() = _GonmFactory;
 
-  const ScriptGonm._()
+  const new _()
     : super._(
         name: "Masaram Gondi",
         code: "Gonm",

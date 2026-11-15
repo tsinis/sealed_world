@@ -1,7 +1,7 @@
 part of "../../model/script/submodels/script.dart";
 
 extension type const _SyrnFactory._(ScriptSyrn _) implements ScriptSyrn {
-  const _SyrnFactory() : this._(const ScriptSyrn._());
+  const new() : this._(const ScriptSyrn._());
 }
 
 /// A class that represents the Syriac (Eastern variant) script.
@@ -11,9 +11,9 @@ final class ScriptSyrn extends Script {
   ///
   /// ISO 15924 Alpha-4 code: `Syrn`, ISO 15924 Numeric code: `136`.
   /// {@endtemplate}
-  const factory ScriptSyrn() = _SyrnFactory;
+  const factory() = _SyrnFactory;
 
-  const ScriptSyrn._()
+  const new _()
     : super._(
         name: "Syriac (Eastern variant)",
         code: "Syrn",

@@ -1,7 +1,7 @@
 part of "../../model/language/submodels/natural_language.dart";
 
 extension type const _TsnFactory._(LangTsn _) implements LangTsn {
-  const _TsnFactory() : this._(const LangTsn._());
+  const new() : this._(const LangTsn._());
 }
 
 /// A class that represents the Tswana language.
@@ -11,9 +11,9 @@ final class LangTsn extends NaturalLanguage {
   ///
   /// ISO 639-2/T code: `TSN`, ISO 639-1 code: `TN`.
   /// {@endtemplate}
-  const factory LangTsn() = _TsnFactory;
+  const factory() = _TsnFactory;
 
-  const LangTsn._()
+  const new _()
     : super._(
         name: "Tswana",
         code: "TSN",

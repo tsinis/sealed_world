@@ -1,7 +1,7 @@
 part of "../../model/currency/submodels/fiat_currency.dart";
 
 extension type const _QarFactory._(FiatQar _) implements FiatQar {
-  const _QarFactory() : this._(const FiatQar._());
+  const new() : this._(const FiatQar._());
 }
 
 /// A class that represents the Qatari Riyal currency.
@@ -11,9 +11,9 @@ final class FiatQar extends FiatCurrency {
   ///
   /// ISO 4217 Alpha code: `QAR`, ISO 4217 Numeric code: `634`.
   /// {@endtemplate}
-  const factory FiatQar() = _QarFactory;
+  const factory() = _QarFactory;
 
-  const FiatQar._()
+  const new _()
     : super(
         code: "QAR",
         name: "Qatari Riyal",

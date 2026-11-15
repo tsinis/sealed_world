@@ -1,7 +1,7 @@
 part of "../../model/currency/submodels/fiat_currency.dart";
 
 extension type const _PlnFactory._(FiatPln _) implements FiatPln {
-  const _PlnFactory() : this._(const FiatPln._());
+  const new() : this._(const FiatPln._());
 }
 
 /// A class that represents the Polish Zloty currency.
@@ -11,9 +11,9 @@ final class FiatPln extends FiatCurrency {
   ///
   /// ISO 4217 Alpha code: `PLN`, ISO 4217 Numeric code: `985`.
   /// {@endtemplate}
-  const factory FiatPln() = _PlnFactory;
+  const factory() = _PlnFactory;
 
-  const FiatPln._()
+  const new _()
     : super(
         code: "PLN",
         name: "Polish Zloty",

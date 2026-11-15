@@ -7,7 +7,7 @@
 part of "../../model/country/submodels/world_country.dart";
 
 extension type const _SpmFactory._(CountrySpm _) implements CountrySpm {
-  const _SpmFactory() : this._(const CountrySpm._());
+  const new() : this._(const CountrySpm._());
 }
 
 /// A class that represents the Saint Pierre and Miquelon country.
@@ -17,9 +17,9 @@ class CountrySpm extends WorldCountry {
   ///
   /// ISO 3166-1 Alpha-3 code: `SPM`, ISO 3166-1 Alpha-2 code: `PM`.
   /// {@endtemplate}
-  const factory CountrySpm() = _SpmFactory;
+  const factory() = _SpmFactory;
 
-  const CountrySpm._()
+  const new _()
     : super._(
         name: const CountryName(
           language: LangEng(),

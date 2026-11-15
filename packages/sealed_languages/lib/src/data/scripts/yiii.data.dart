@@ -1,7 +1,7 @@
 part of "../../model/script/submodels/script.dart";
 
 extension type const _YiiiFactory._(ScriptYiii _) implements ScriptYiii {
-  const _YiiiFactory() : this._(const ScriptYiii._());
+  const new() : this._(const ScriptYiii._());
 }
 
 /// A class that represents the Yi script.
@@ -11,9 +11,9 @@ final class ScriptYiii extends Script {
   ///
   /// ISO 15924 Alpha-4 code: `Yiii`, ISO 15924 Numeric code: `460`.
   /// {@endtemplate}
-  const factory ScriptYiii() = _YiiiFactory;
+  const factory() = _YiiiFactory;
 
-  const ScriptYiii._()
+  const new _()
     : super._(
         name: "Yi",
         code: "Yiii",

@@ -1,7 +1,7 @@
 part of "../../model/script/submodels/script.dart";
 
 extension type const _TakrFactory._(ScriptTakr _) implements ScriptTakr {
-  const _TakrFactory() : this._(const ScriptTakr._());
+  const new() : this._(const ScriptTakr._());
 }
 
 /// A class that represents the Takri, Ṭākrī, Ṭāṅkrī script.
@@ -11,9 +11,9 @@ final class ScriptTakr extends Script {
   ///
   /// ISO 15924 Alpha-4 code: `Takr`, ISO 15924 Numeric code: `321`.
   /// {@endtemplate}
-  const factory ScriptTakr() = _TakrFactory;
+  const factory() = _TakrFactory;
 
-  const ScriptTakr._()
+  const new _()
     : super._(
         name: "Takri, Ṭākrī, Ṭāṅkrī",
         code: "Takr",

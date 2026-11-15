@@ -1,7 +1,7 @@
 part of "../../model/currency/submodels/fiat_currency.dart";
 
 extension type const _VndFactory._(FiatVnd _) implements FiatVnd {
-  const _VndFactory() : this._(const FiatVnd._());
+  const new() : this._(const FiatVnd._());
 }
 
 /// A class that represents the Vietnamese Dong currency.
@@ -11,9 +11,9 @@ final class FiatVnd extends FiatCurrency {
   ///
   /// ISO 4217 Alpha code: `VND`, ISO 4217 Numeric code: `704`.
   /// {@endtemplate}
-  const factory FiatVnd() = _VndFactory;
+  const factory() = _VndFactory;
 
-  const FiatVnd._()
+  const new _()
     : super(
         code: "VND",
         name: "Vietnamese Dong",

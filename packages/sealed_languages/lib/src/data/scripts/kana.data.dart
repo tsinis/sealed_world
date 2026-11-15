@@ -1,7 +1,7 @@
 part of "../../model/script/submodels/script.dart";
 
 extension type const _KanaFactory._(ScriptKana _) implements ScriptKana {
-  const _KanaFactory() : this._(const ScriptKana._());
+  const new() : this._(const ScriptKana._());
 }
 
 /// A class that represents the Katakana script.
@@ -11,9 +11,9 @@ final class ScriptKana extends Script {
   ///
   /// ISO 15924 Alpha-4 code: `Kana`, ISO 15924 Numeric code: `411`.
   /// {@endtemplate}
-  const factory ScriptKana() = _KanaFactory;
+  const factory() = _KanaFactory;
 
-  const ScriptKana._()
+  const new _()
     : super._(
         name: "Katakana",
         code: "Kana",

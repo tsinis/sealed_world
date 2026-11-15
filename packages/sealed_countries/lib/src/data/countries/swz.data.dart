@@ -7,7 +7,7 @@
 part of "../../model/country/submodels/world_country.dart";
 
 extension type const _SwzFactory._(CountrySwz _) implements CountrySwz {
-  const _SwzFactory() : this._(const CountrySwz._());
+  const new() : this._(const CountrySwz._());
 }
 
 /// A class that represents the Eswatini country.
@@ -17,9 +17,9 @@ class CountrySwz extends WorldCountry {
   ///
   /// ISO 3166-1 Alpha-3 code: `SWZ`, ISO 3166-1 Alpha-2 code: `SZ`.
   /// {@endtemplate}
-  const factory CountrySwz() = _SwzFactory;
+  const factory() = _SwzFactory;
 
-  const CountrySwz._()
+  const new _()
     : super._(
         name: const CountryName(
           language: LangEng(),

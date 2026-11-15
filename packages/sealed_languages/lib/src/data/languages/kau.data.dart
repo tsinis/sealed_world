@@ -1,7 +1,7 @@
 part of "../../model/language/submodels/natural_language.dart";
 
 extension type const _KauFactory._(LangKau _) implements LangKau {
-  const _KauFactory() : this._(const LangKau._());
+  const new() : this._(const LangKau._());
 }
 
 /// A class that represents the Kanuri language.
@@ -11,9 +11,9 @@ final class LangKau extends NaturalLanguage {
   ///
   /// ISO 639-2/T code: `KAU`, ISO 639-1 code: `KR`.
   /// {@endtemplate}
-  const factory LangKau() = _KauFactory;
+  const factory() = _KauFactory;
 
-  const LangKau._()
+  const new _()
     : super._(
         name: "Kanuri",
         code: "KAU",

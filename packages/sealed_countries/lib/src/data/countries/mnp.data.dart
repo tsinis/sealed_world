@@ -7,7 +7,7 @@
 part of "../../model/country/submodels/world_country.dart";
 
 extension type const _MnpFactory._(CountryMnp _) implements CountryMnp {
-  const _MnpFactory() : this._(const CountryMnp._());
+  const new() : this._(const CountryMnp._());
 }
 
 /// A class that represents the Northern Mariana Islands country.
@@ -17,9 +17,9 @@ class CountryMnp extends WorldCountry {
   ///
   /// ISO 3166-1 Alpha-3 code: `MNP`, ISO 3166-1 Alpha-2 code: `MP`.
   /// {@endtemplate}
-  const factory CountryMnp() = _MnpFactory;
+  const factory() = _MnpFactory;
 
-  const CountryMnp._()
+  const new _()
     : super._(
         name: const CountryName(
           language: LangEng(),

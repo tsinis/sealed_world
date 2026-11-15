@@ -11,7 +11,7 @@ class BasicLocale implements JsonEncodable<BasicLocale> {
   ///
   /// The [language] parameter is required.
   /// The [countryCode] and [script] parameters are optional.
-  const BasicLocale(this.language, {String? countryCode, this.script})
+  const new(this.language, {String? countryCode, this.script})
     : assert(
         countryCode == null ||
             countryCode.length >= IsoStandardized.codeShortLength,

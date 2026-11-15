@@ -1,7 +1,7 @@
 part of "../../model/currency/submodels/fiat_currency.dart";
 
 extension type const _ClpFactory._(FiatClp _) implements FiatClp {
-  const _ClpFactory() : this._(const FiatClp._());
+  const new() : this._(const FiatClp._());
 }
 
 /// A class that represents the Chilean Peso currency.
@@ -11,9 +11,9 @@ final class FiatClp extends FiatCurrency {
   ///
   /// ISO 4217 Alpha code: `CLP`, ISO 4217 Numeric code: `152`.
   /// {@endtemplate}
-  const factory FiatClp() = _ClpFactory;
+  const factory() = _ClpFactory;
 
-  const FiatClp._()
+  const new _()
     : super(
         code: "CLP",
         name: "Chilean Peso",

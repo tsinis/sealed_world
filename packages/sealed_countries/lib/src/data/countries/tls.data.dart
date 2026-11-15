@@ -7,7 +7,7 @@
 part of "../../model/country/submodels/world_country.dart";
 
 extension type const _TlsFactory._(CountryTls _) implements CountryTls {
-  const _TlsFactory() : this._(const CountryTls._());
+  const new() : this._(const CountryTls._());
 }
 
 /// A class that represents the Timor-Leste country.
@@ -17,9 +17,9 @@ class CountryTls extends WorldCountry {
   ///
   /// ISO 3166-1 Alpha-3 code: `TLS`, ISO 3166-1 Alpha-2 code: `TL`.
   /// {@endtemplate}
-  const factory CountryTls() = _TlsFactory;
+  const factory() = _TlsFactory;
 
-  const CountryTls._()
+  const new _()
     : super._(
         name: const CountryName(
           language: LangEng(),

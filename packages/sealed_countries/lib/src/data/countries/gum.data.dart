@@ -7,7 +7,7 @@
 part of "../../model/country/submodels/world_country.dart";
 
 extension type const _GumFactory._(CountryGum _) implements CountryGum {
-  const _GumFactory() : this._(const CountryGum._());
+  const new() : this._(const CountryGum._());
 }
 
 /// A class that represents the Guam country.
@@ -17,9 +17,9 @@ class CountryGum extends WorldCountry {
   ///
   /// ISO 3166-1 Alpha-3 code: `GUM`, ISO 3166-1 Alpha-2 code: `GU`.
   /// {@endtemplate}
-  const factory CountryGum() = _GumFactory;
+  const factory() = _GumFactory;
 
-  const CountryGum._()
+  const new _()
     : super._(
         name: const CountryName(
           language: LangEng(),

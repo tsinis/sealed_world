@@ -1,7 +1,7 @@
 part of "../../model/language/submodels/natural_language.dart";
 
 extension type const _KalFactory._(LangKal _) implements LangKal {
-  const _KalFactory() : this._(const LangKal._());
+  const new() : this._(const LangKal._());
 }
 
 /// A class that represents the Kalaallisut (Greenlandic) language.
@@ -11,9 +11,9 @@ final class LangKal extends NaturalLanguage {
   ///
   /// ISO 639-2/T code: `KAL`, ISO 639-1 code: `KL`.
   /// {@endtemplate}
-  const factory LangKal() = _KalFactory;
+  const factory() = _KalFactory;
 
-  const LangKal._()
+  const new _()
     : super._(
         name: "Kalaallisut (Greenlandic)",
         code: "KAL",

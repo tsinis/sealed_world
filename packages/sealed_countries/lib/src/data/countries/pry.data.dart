@@ -7,7 +7,7 @@
 part of "../../model/country/submodels/world_country.dart";
 
 extension type const _PryFactory._(CountryPry _) implements CountryPry {
-  const _PryFactory() : this._(const CountryPry._());
+  const new() : this._(const CountryPry._());
 }
 
 /// A class that represents the Paraguay country.
@@ -17,9 +17,9 @@ class CountryPry extends WorldCountry {
   ///
   /// ISO 3166-1 Alpha-3 code: `PRY`, ISO 3166-1 Alpha-2 code: `PY`.
   /// {@endtemplate}
-  const factory CountryPry() = _PryFactory;
+  const factory() = _PryFactory;
 
-  const CountryPry._()
+  const new _()
     : super._(
         name: const CountryName(
           language: LangEng(),

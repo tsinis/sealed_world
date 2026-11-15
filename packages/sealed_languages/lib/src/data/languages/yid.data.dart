@@ -1,7 +1,7 @@
 part of "../../model/language/submodels/natural_language.dart";
 
 extension type const _YidFactory._(LangYid _) implements LangYid {
-  const _YidFactory() : this._(const LangYid._());
+  const new() : this._(const LangYid._());
 }
 
 /// A class that represents the Yiddish language.
@@ -11,9 +11,9 @@ final class LangYid extends NaturalLanguage {
   ///
   /// ISO 639-2/T code: `YID`, ISO 639-1 code: `YI`.
   /// {@endtemplate}
-  const factory LangYid() = _YidFactory;
+  const factory() = _YidFactory;
 
-  const LangYid._()
+  const new _()
     : super._(
         name: "Yiddish",
         code: "YID",

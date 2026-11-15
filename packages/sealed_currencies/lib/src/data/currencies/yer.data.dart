@@ -1,7 +1,7 @@
 part of "../../model/currency/submodels/fiat_currency.dart";
 
 extension type const _YerFactory._(FiatYer _) implements FiatYer {
-  const _YerFactory() : this._(const FiatYer._());
+  const new() : this._(const FiatYer._());
 }
 
 /// A class that represents the Yemeni Rial currency.
@@ -11,9 +11,9 @@ final class FiatYer extends FiatCurrency {
   ///
   /// ISO 4217 Alpha code: `YER`, ISO 4217 Numeric code: `886`.
   /// {@endtemplate}
-  const factory FiatYer() = _YerFactory;
+  const factory() = _YerFactory;
 
-  const FiatYer._()
+  const new _()
     : super(
         code: "YER",
         name: "Yemeni Rial",

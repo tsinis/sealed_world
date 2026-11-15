@@ -1,7 +1,7 @@
 part of "../../model/currency/submodels/fiat_currency.dart";
 
 extension type const _XbdFactory._(FiatXbd _) implements FiatXbd {
-  const _XbdFactory() : this._(const FiatXbd._());
+  const new() : this._(const FiatXbd._());
 }
 
 /// A class that represents the European Unit of Account 17 currency.
@@ -11,9 +11,9 @@ final class FiatXbd extends FiatCurrency {
   ///
   /// ISO 4217 Alpha code: `XBD`, ISO 4217 Numeric code: `958`.
   /// {@endtemplate}
-  const factory FiatXbd() = _XbdFactory;
+  const factory() = _XbdFactory;
 
-  const FiatXbd._()
+  const new _()
     : super(
         code: "XBD",
         name: "European Unit of Account 17",

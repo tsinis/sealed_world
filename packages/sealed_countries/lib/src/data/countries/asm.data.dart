@@ -7,7 +7,7 @@
 part of "../../model/country/submodels/world_country.dart";
 
 extension type const _AsmFactory._(CountryAsm _) implements CountryAsm {
-  const _AsmFactory() : this._(const CountryAsm._());
+  const new() : this._(const CountryAsm._());
 }
 
 /// A class that represents the American Samoa country.
@@ -17,9 +17,9 @@ class CountryAsm extends WorldCountry {
   ///
   /// ISO 3166-1 Alpha-3 code: `ASM`, ISO 3166-1 Alpha-2 code: `AS`.
   /// {@endtemplate}
-  const factory CountryAsm() = _AsmFactory;
+  const factory() = _AsmFactory;
 
-  const CountryAsm._()
+  const new _()
     : super._(
         name: const CountryName(
           language: LangEng(),

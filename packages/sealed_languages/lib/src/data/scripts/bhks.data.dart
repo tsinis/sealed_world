@@ -1,7 +1,7 @@
 part of "../../model/script/submodels/script.dart";
 
 extension type const _BhksFactory._(ScriptBhks _) implements ScriptBhks {
-  const _BhksFactory() : this._(const ScriptBhks._());
+  const new() : this._(const ScriptBhks._());
 }
 
 /// A class that represents the Bhaiksuki script.
@@ -11,9 +11,9 @@ final class ScriptBhks extends Script {
   ///
   /// ISO 15924 Alpha-4 code: `Bhks`, ISO 15924 Numeric code: `334`.
   /// {@endtemplate}
-  const factory ScriptBhks() = _BhksFactory;
+  const factory() = _BhksFactory;
 
-  const ScriptBhks._()
+  const new _()
     : super._(
         name: "Bhaiksuki",
         code: "Bhks",

@@ -1,7 +1,7 @@
 part of "../../model/language/submodels/natural_language.dart";
 
 extension type const _CosFactory._(LangCos _) implements LangCos {
-  const _CosFactory() : this._(const LangCos._());
+  const new() : this._(const LangCos._());
 }
 
 /// A class that represents the Corsican language.
@@ -11,9 +11,9 @@ final class LangCos extends NaturalLanguage {
   ///
   /// ISO 639-2/T code: `COS`, ISO 639-1 code: `CO`.
   /// {@endtemplate}
-  const factory LangCos() = _CosFactory;
+  const factory() = _CosFactory;
 
-  const LangCos._()
+  const new _()
     : super._(
         name: "Corsican",
         code: "COS",

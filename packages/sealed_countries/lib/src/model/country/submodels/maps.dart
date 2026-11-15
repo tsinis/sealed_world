@@ -26,7 +26,7 @@ final class Maps implements JsonEncodable<Maps> {
   ///
   /// The [googleMaps] and [openStreetMaps] parameters must be non-empty
   /// strings.
-  const Maps({required this.googleMaps, required this.openStreetMaps})
+  const new({required this.googleMaps, required this.openStreetMaps})
     : assert(googleMaps.length > 0, "`googleMaps` should not be empty!"),
       assert(
         openStreetMaps.length > 0,

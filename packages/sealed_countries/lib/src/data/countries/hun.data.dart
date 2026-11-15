@@ -7,7 +7,7 @@
 part of "../../model/country/submodels/world_country.dart";
 
 extension type const _HunFactory._(CountryHun _) implements CountryHun {
-  const _HunFactory() : this._(const CountryHun._());
+  const new() : this._(const CountryHun._());
 }
 
 /// A class that represents the Hungary country.
@@ -17,9 +17,9 @@ class CountryHun extends WorldCountry {
   ///
   /// ISO 3166-1 Alpha-3 code: `HUN`, ISO 3166-1 Alpha-2 code: `HU`.
   /// {@endtemplate}
-  const factory CountryHun() = _HunFactory;
+  const factory() = _HunFactory;
 
-  const CountryHun._()
+  const new _()
     : super._(
         name: const CountryName(
           language: LangEng(),

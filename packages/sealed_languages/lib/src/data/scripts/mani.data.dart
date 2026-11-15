@@ -1,7 +1,7 @@
 part of "../../model/script/submodels/script.dart";
 
 extension type const _ManiFactory._(ScriptMani _) implements ScriptMani {
-  const _ManiFactory() : this._(const ScriptMani._());
+  const new() : this._(const ScriptMani._());
 }
 
 /// A class that represents the Manichaean script.
@@ -11,9 +11,9 @@ final class ScriptMani extends Script {
   ///
   /// ISO 15924 Alpha-4 code: `Mani`, ISO 15924 Numeric code: `139`.
   /// {@endtemplate}
-  const factory ScriptMani() = _ManiFactory;
+  const factory() = _ManiFactory;
 
-  const ScriptMani._()
+  const new _()
     : super._(
         name: "Manichaean",
         code: "Mani",

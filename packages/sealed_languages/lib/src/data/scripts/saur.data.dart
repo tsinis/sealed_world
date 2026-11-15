@@ -1,7 +1,7 @@
 part of "../../model/script/submodels/script.dart";
 
 extension type const _SaurFactory._(ScriptSaur _) implements ScriptSaur {
-  const _SaurFactory() : this._(const ScriptSaur._());
+  const new() : this._(const ScriptSaur._());
 }
 
 /// A class that represents the Saurashtra script.
@@ -11,9 +11,9 @@ final class ScriptSaur extends Script {
   ///
   /// ISO 15924 Alpha-4 code: `Saur`, ISO 15924 Numeric code: `344`.
   /// {@endtemplate}
-  const factory ScriptSaur() = _SaurFactory;
+  const factory() = _SaurFactory;
 
-  const ScriptSaur._()
+  const new _()
     : super._(
         name: "Saurashtra",
         code: "Saur",
