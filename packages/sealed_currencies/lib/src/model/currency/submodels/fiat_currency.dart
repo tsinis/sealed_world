@@ -192,7 +192,7 @@ sealed class FiatCurrency extends Currency
   /// [smallestDenomination] parameter defaults to 1.
   ///
   /// The [alternateSymbols], [disambiguateSymbol], [htmlEntity], [subunit],
-  /// [subunitToUnit], [mapper] and [unitFirst] parameters are optional.
+  /// [subunitToUnit], `mapper` and [unitFirst] parameters are optional.
   ///
   /// The [symbol], [decimalMark], and [thousandsSeparator] parameters are
   /// inherited from the [Currency] class and are also optional.
@@ -201,10 +201,11 @@ sealed class FiatCurrency extends Currency
   /// [codeNumeric] is not exactly 3 characters long, [namesNative] is empty,
   /// [htmlEntity] is empty, [subunit] is empty, [alternateSymbols] is empty, or
   /// [smallestDenomination] is negative.
-  /// The optional [mapper] parameter when you need custom localization data:
+  /// Use the optional `mapper` parameter when you need custom localization
+  /// data:
   /// {@macro sealed_world.locale_mapper_callback}
   const FiatCurrency({
-    /// The international 3-numeric non-empty letter code as defined by the ISO
+    /// The international three-letter alphabetic code as defined by the ISO
     /// 4217 standard.
     required super.code,
     required super.name,
@@ -223,7 +224,7 @@ sealed class FiatCurrency extends Currency
     super.thousandsSeparator = ",",
 
     /// {@macro sealed_world.locale_mapper_callback}
-    LocaleMapFunction<String> Function()? mapper,
+    this._mapper,
   }) : assert(
          code.length == IsoStandardized.codeLength,
          """`code` should be exactly ${IsoStandardized.codeLength} characters long!""",
@@ -251,8 +252,7 @@ sealed class FiatCurrency extends Currency
        assert(
          smallestDenomination >= 0,
          "`smallestDenomination` should not be negative!",
-       ),
-       _mapper = mapper;
+       );
 
   /// {@macro permissive_constructor}
   /// {@macro currency_constructor}
@@ -274,12 +274,11 @@ sealed class FiatCurrency extends Currency
     super.thousandsSeparator = ",",
 
     /// {@macro sealed_world.locale_mapper_callback}
-    LocaleMapFunction<String> Function()? mapper,
+    this._mapper,
   }) : assert(
          (code?.length ?? 0) > 0 || codeNumeric.length > 0,
          "The `code` (or at least `codeNumeric`) must be provided!",
        ),
-       _mapper = mapper,
        super(code: code ?? " ");
 
   /// {@macro sealed_world.currency_aed_constructor}
@@ -799,8 +798,9 @@ sealed class FiatCurrency extends Currency
   /// Returns a [FiatCurrency] instance from an numeric ISO 4217 code.
   ///
   /// The [codeNumeric] parameter is required and should be an object
-  /// representing the three-letter numeric ISO 4217 code for the currency.
+  /// representing the three-digit numeric ISO 4217 code for the currency.
   /// {@macro any_code_object}
+  /// {@macro sealed_world.int_numeric_code}
   /// The optional [currencies] parameter can be used to specify a list of
   /// [FiatCurrency] objects to search through.
   /// {@macro optional_instances_array_parameter}
@@ -843,6 +843,7 @@ sealed class FiatCurrency extends Currency
   /// The [code] parameter is required and should be an object representing the
   /// ISO 4217 code for the currency.
   /// {@macro any_code_object}
+  /// {@macro sealed_world.int_numeric_code}
   /// The optional [currencies] parameter can be used to specify a list of
   /// [FiatCurrency] objects to search through.
   /// {@macro optional_instances_array_parameter}
@@ -949,7 +950,7 @@ sealed class FiatCurrency extends Currency
   );
 
   /// A tree-shakable combined map of [codeMap] and [codeNumericMap], providing
-  /// a unified view of currency codes (ISO 4217) and their [FiatCurrency
+  /// a unified view of currency codes (ISO 4217) and their [FiatCurrency]
   /// objects, for a O(1) access time.
   ///
   /// Example usage:
@@ -1193,7 +1194,8 @@ sealed class FiatCurrency extends Currency
   /// not `null`, this method uses the result of calling [where] with each
   /// [FiatCurrency] object in [currencies] to determine whether the object's
   /// [code] matches [value]. If [where] is `null`, this method simply compares
-  /// each [FiatCurrency]'s [code] to [value].
+  /// each [FiatCurrency]'s [code] to [value]. If [where] returns `null` for a
+  /// currency, the [code] of that currency is compared to [value] instead.
   ///
   /// The optional [currencies] parameter specifies the list of [FiatCurrency]
   /// objects to search (defaults to [FiatCurrency.listExtended]).
@@ -1227,6 +1229,7 @@ sealed class FiatCurrency extends Currency
   ///
   /// The [code] parameter is required and represent the ISO 4217 currency code.
   /// {@macro any_code_object}
+  /// {@macro sealed_world.int_numeric_code}
   /// The optional [currencies] parameter can be used to specify a list of
   /// [FiatCurrency] objects to search through.
   /// {@macro optional_instances_array_parameter}
@@ -1280,9 +1283,8 @@ sealed class FiatCurrency extends Currency
   ]) {
     if (currencies == null) return codeMap.maybeFindByCode(code);
 
-    final string = IsoObject.maybe(
-      code,
-    )?.maybeToValidIsoUpperCaseCode(exactLength: IsoStandardized.codeLength);
+    final string = IsoObject.maybe(code)
+        ?.maybeToValidIsoUpperCaseCode(exactLength: IsoStandardized.codeLength);
 
     return currencies.firstIsoWhereCodeOrNull(string, toUpperCase: false);
   }
@@ -1291,8 +1293,9 @@ sealed class FiatCurrency extends Currency
   /// `null` if no such instance exists.
   ///
   /// The [codeNumeric] parameter is required and should be an object
-  /// representing the three-letter numeric ISO 4217 code for the currency.
+  /// representing the three-digit numeric ISO 4217 code for the currency.
   /// {@macro any_code_object}
+  /// {@macro sealed_world.int_numeric_code}
   /// The optional [currencies] parameter can be used to specify a list of
   /// [FiatCurrency] objects to search through.
   /// {@macro optional_instances_array_parameter}
@@ -1304,9 +1307,8 @@ sealed class FiatCurrency extends Currency
   ]) {
     if (currencies == null) return codeNumericMap.maybeFindByCode(codeNumeric);
 
-    final string = IsoObject.maybe(
-      codeNumeric,
-    )?.maybeToValidIsoCode(exactLength: IsoStandardized.codeLength);
+    final string = IsoObject.maybe(codeNumeric)
+        ?.maybeToValidIsoCode(exactLength: IsoStandardized.codeLength);
 
     return currencies.firstIsoWhereCodeOtherOrNull(string, toUpperCase: false);
   }

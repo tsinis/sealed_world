@@ -52,7 +52,8 @@ sealed class Continent extends Region {
   /// name of a continent, a new [Continent] object representing that continent
   /// is returned. If there is no match, `null` is returned. If the [where]
   /// parameter is provided, it is used to determine the value to compare for
-  /// each continent.
+  /// each continent. If [where] returns `null` for a continent, the name of
+  /// that continent is compared to [value] instead.
   ///
   /// The [continents] parameter is the list of continents to search. If no
   /// value is provided, the [list] constant is used.

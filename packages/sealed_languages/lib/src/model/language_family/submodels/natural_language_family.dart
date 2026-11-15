@@ -55,7 +55,9 @@ sealed class NaturalLanguageFamily extends LanguageFamily {
   /// parameter can be used to specify a callback function that returns the
   /// value to match against for each language family. The optional [families]
   /// parameter can be used to specify a list of language families to search
-  /// through. If no match is found, this method returns `null`.
+  /// through. If no match is found, this method returns `null`. If [where] is
+  /// `null`, or returns `null` for a family, the [name] of that family is
+  /// compared to [value] instead.
   ///
   /// Example usage:
   ///

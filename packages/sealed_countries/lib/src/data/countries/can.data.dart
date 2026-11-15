@@ -95,8 +95,7 @@ class CountryCan extends WorldCountry {
         startOfWeek: Weekday.sunday,
         postalCode: const PostalCode(
           format: "@#@ #@#",
-          regExpPattern:
-              r"^([ABCEGHJKLMNPRSTVXY]\d[ABCEGHJKLMNPRSTVWXYZ]) ?(\d[ABCEGHJKLMNPRSTVWXYZ]\d)$",
+          regExpPattern: r"^([ABCEGHJKLMNPRSTVXY]\d[ABCEGHJKLMNPRSTVWXYZ]) ?(\d[ABCEGHJKLMNPRSTVWXYZ]\d)$",
         ),
       );
   @override

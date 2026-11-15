@@ -13,6 +13,10 @@ import "upper_case_map.dart";
 /// lookup is case-insensitive and conforms to the ISO standards. The keys are
 /// expected to be strings representing the ISO codes.
 ///
+/// Only the key of a lookup is normalized: the keys of the provided map have
+/// to be UPPERCASE already, otherwise they are never found (use
+/// `UpperCaseIsoMapExtension.copyWith` to add entries with any casing).
+///
 /// The [UpperCaseIsoMap] also supports default values. If a key is not found
 /// within the map, and a [defaultValue] is provided, that default value will be
 /// returned instead.
@@ -26,13 +30,13 @@ import "upper_case_map.dart";
 ///
 /// void main() {
 ///   const isoMap = UpperCaseIsoMap({
-///     'EN': LangEng(),
-///     'FR': LangFra(),
+///     'ENG': LangEng(),
+///     'FRA': LangFra(),
 ///   }, defaultValue: LangEng());
 ///
-///   final english = isoMap[' fr']; // Returns LangFra()
-///   final unknown = isoMap['DE']; // Returns LangEng() as the default value
-///   assert(english == const LangFra());
+///   final french = isoMap[' fra']; // Returns LangFra()
+///   final unknown = isoMap['DEU']; // Returns LangEng() as the default value
+///   assert(french == const LangFra());
 ///   assert(unknown == const LangEng());
 /// }
 /// ```
@@ -57,12 +61,12 @@ class UpperCaseIsoMap<V extends IsoStandardized> extends UpperCaseMap<V> {
   ///
   /// void main() {
   ///   const isoMap = UpperCaseIsoMap({
-  ///     'EN': LangEng(),
-  ///     'FR': LangFra(),
+  ///     'ENG': LangEng(),
+  ///     'FRA': LangFra(),
   ///   }, defaultValue: LangEng());
   ///
-  ///   assert(isoMap['fr'] == const LangFra());
-  ///   assert(isoMap['DE'] == const LangEng());
+  ///   assert(isoMap['fra'] == const LangFra());
+  ///   assert(isoMap['DEU'] == const LangEng());
   /// }
   /// ```
   ///

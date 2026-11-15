@@ -54,9 +54,9 @@ class CountryIrl extends WorldCountry {
         car: const Car(sign: "IRL", isRightSide: false),
         timezones: const ["UTC+00:00"],
         postalCode: const PostalCode(
-          format: "#|@#|@#|@#|@#|@#|@#|@",
+          format: "@## ****|D6W ****",
           regExpPattern:
-              r"^(([A-Z]\d{2}[A-Z]{2})|([A-Z]\d{3}[A-Z]{2})|([A-Z]{2}\d{2}[A-Z]{2})|([A-Z]{2}\d{3}[A-Z]{2})|([A-Z]\d[A-Z]\d[A-Z]{2})|([A-Z]{2}\d[A-Z]\d[A-Z]{2})|(GIR0AA))$",
+              r"^((?:[AC-FHKNPRTV-Y]\d{2}|D6W) ?[0-9AC-FHKNPRTV-Y]{4})$",
         ),
       );
   @override

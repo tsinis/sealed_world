@@ -32,7 +32,9 @@ final class PostalCode implements JsonEncodable<PostalCode> {
   ///
   /// The [format] string describes the format of a postal code. It typically
   /// consist of one or more `#` characters, which will be replaced with digits
-  /// when formatting a postal code.
+  /// when formatting a postal code. An `@` stands for a letter, a `*` for a
+  /// letter or a digit, any other character is literal, and `|` separates
+  /// alternative formats.
   final String format;
 
   /// The regular expression pattern for this [PostalCode] object.

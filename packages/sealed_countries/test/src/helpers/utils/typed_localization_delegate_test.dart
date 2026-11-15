@@ -122,6 +122,62 @@ void main() => group("$TypedLocalizationDelegate", () {
       });
     });
 
+    group("numeric regions and POSIX suffixes", () {
+      test("keeps UN M49 region as regional code", () {
+        final result = parser.parseLocale("en_419");
+
+        expect(result?.language, equals(language));
+        expect(result?.country, isNull);
+        expect(result?.countryCode, equals("419"));
+        expect(result?.toString(), "en_419");
+      });
+
+      test("resolves ISO 3166-1 numeric region to country", () {
+        final result = parser.parseLocale("en_840");
+
+        expect(result?.country, equals(country));
+        expect(result?.countryCode, equals(countryCode));
+      });
+
+      test("keeps UN M49 region with script as regional code", () {
+        final result = parser.parseLocale("en_Latn_001");
+
+        expect(result?.script, equals(script));
+        expect(result?.country, isNull);
+        expect(result?.countryCode, equals("001"));
+      });
+
+      test("ignores POSIX encoding", () {
+        final result = parser.parseLocale("en_US.UTF-8");
+
+        expect(result?.language, equals(language));
+        expect(result?.country, equals(country));
+      });
+
+      test("ignores POSIX modifier", () {
+        final result = parser.parseLocale("en_US@euro");
+
+        expect(result?.language, equals(language));
+        expect(result?.country, equals(country));
+      });
+
+      test(
+        "ignores POSIX encoding without region",
+        () => expect(parser.parseLocale("en.UTF-8")?.country, isNull),
+      );
+
+      test(
+        "rejects variant subtags",
+        () => expect(parser.parseLocale("en_US_POSIX"), isNull),
+      );
+
+      test(
+        "rejects non-ASCII region",
+        // ignore: avoid-non-ascii-symbols, testing non-ASCII input.
+        () => expect(parser.parseLocale("en_日本"), isNull),
+      );
+    });
+
     group("case sensitivity", () {
       test(
         "uppercase language",
@@ -182,7 +238,12 @@ void main() => group("$TypedLocalizationDelegate", () {
 
       test(
         "rejects invalid characters",
-        () => expect(parser.parseLocale("en_123"), isNull),
+        () => expect(parser.parseLocale("en_U1"), isNull),
+      );
+
+      test(
+        "rejects numeric region of invalid length",
+        () => expect(parser.parseLocale("en_12"), isNull),
       );
 
       test(

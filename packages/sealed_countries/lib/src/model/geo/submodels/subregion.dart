@@ -29,6 +29,11 @@ sealed class SubRegion extends Region {
   final Continent continent;
 
   /// Creates a subregion from an arbitrary [value].
+  ///
+  /// The [value] is compared to the name of each subregion in [subregions],
+  /// or to the value returned by [where] for it, if provided. If [where]
+  /// returns `null` for a subregion, the name of that subregion is compared to
+  /// [value] instead. Returns `null` if there is no match.
   static SubRegion? maybeFromValue<T extends Object>(
     T? value, {
     Iterable<SubRegion> subregions = list,

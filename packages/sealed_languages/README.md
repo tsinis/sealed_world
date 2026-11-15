@@ -132,7 +132,7 @@ For more usage examples, please see the `/example` folder.
 
 #### Why should I use this package over any other language-related package?
 
-- **Sealed classes**: Unlike enums, you can create your own ISO instances, yet unlike open classes, the sealed hierarchy guarantees exhaustive pattern matching and compile-time safety. You get the immutability and type-safety of enums with the extensibility to define custom values — all while maintaining full switch exhaustiveness checking.
+- **Sealed classes**: Every ISO object is a compile-time constant with a single canonical instance (`LangEng()` is always identical to `const LangEng()`), so you get the identity, immutability and `switch` support of enums. Unlike enums, you can still create your own instances (`LangCustom`), and unlike open classes the hierarchy is closed, so nobody can add unexpected subclasses.
 - **No 3rd-party dependencies**: This package has no third-party dependencies, ensuring that you won't have any issues or conflicts with other dependencies (no even `meta` here, because of that).
 - **Rich data**: This package offers far more data than any other package + tons of translations (all [GlobalMaterialLocalizations](https://api.flutter.dev/flutter/flutter_localizations/GlobalMaterialLocalizations-class.html) and [GlobalCupertinoLocalizations](https://api.flutter.dev/flutter/flutter_localizations/GlobalCupertinoLocalizations-class.html) locales and more).
 - **Type-safe**: The contracts and types in this package are exceptionally strong, ensuring that your code is strongly typed and well-defined.

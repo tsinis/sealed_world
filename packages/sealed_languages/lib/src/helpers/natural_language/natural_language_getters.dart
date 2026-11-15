@@ -1,18 +1,11 @@
 import "../../model/language/submodels/natural_language.dart";
+import "../../model/language_family/submodels/natural_language_family.dart";
 
 /// Provides convenient getters for ISO 639 language codes
 /// on a [NaturalLanguage] class.
 extension NaturalLanguageGetters on NaturalLanguage {
-  static const _constructedLanguages = <NaturalLanguage>{
-    LangEpo(),
-    LangIle(),
-    LangIna(),
-    LangIdo(),
-    LangVol(),
-  };
-
   /// Returns boolean indicating whether this [NaturalLanguage] is a constructed
-  /// language.
+  /// language, i.e. whether its [family] is [Constructed].
   ///
   /// ```dart
   /// import 'package:sealed_languages/sealed_languages.dart';
@@ -24,7 +17,7 @@ extension NaturalLanguageGetters on NaturalLanguage {
   ///   assert(!english.isConstructed);
   /// }
   /// ```
-  bool get isConstructed => _constructedLanguages.contains(this);
+  bool get isConstructed => family is Constructed;
 
   /// Returns the ISO 639-1 language code for a [NaturalLanguage].
   ///

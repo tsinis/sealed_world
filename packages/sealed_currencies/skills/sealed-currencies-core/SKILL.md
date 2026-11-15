@@ -43,7 +43,7 @@ The package exposes `FiatCurrency`, `Currency`, `BasicLocale`, `TranslatedName`,
 
 - **Prefer `maybeFrom*` for untrusted input**: Use `maybeFromAnyCode()`, `maybeFromCode()`, or `maybeFromCodeNumeric()` when parsing external or user-provided data. These methods return `null` if the code is invalid or unrecognized.
 - **Avoid throwing variants for user input**: Methods like `fromCode()`, `fromCodeNumeric()`, `fromAnyCode()`, and `fromName()` throw when no matching currency is found. Only use them when input validity is guaranteed.
-- **O(1) lookups**: Access pre-indexed lookup tables using `FiatCurrency.map` (keyed by uppercase 3-letter code), `FiatCurrency.list` (155 regular active currencies), or `FiatCurrency.listExtended` (all 165). The 10 extra entries in `listExtended` are not spendable currencies: precious metals (`XAU`, `XAG`, `XPT`, `XPD`), bond market units (`XBA`–`XBD`), IMF special drawing rights (`XDR`), and the reserved test code `XTS`. Prefer `list` for anything users pick or pay in.
+- **O(1) lookups**: Access pre-indexed lookup tables using `FiatCurrency.map` (keyed by the uppercase Alpha-3 and Numeric-3 codes of all currencies in the package; `codeMap` and `codeNumericMap` hold only one kind), `FiatCurrency.list` (155 regular active currencies), or `FiatCurrency.listExtended` (all 165). The 10 extra entries in `listExtended` are not spendable currencies: precious metals (`XAU`, `XAG`, `XPT`, `XPD`), bond market units (`XBA`–`XBD`), IMF special drawing rights (`XDR`), and the reserved test code `XTS`. Prefer `list` for anything users pick or pay in.
 
 ### Formatting & Monetary Properties
 

@@ -1,5 +1,3 @@
-// ignore_for_file: avoid-substring
-
 import "../../model/country/country.dart";
 import "../../model/typedefs/utc_duration_difference.dart";
 
@@ -21,11 +19,12 @@ extension WorldCountryDateTime on WorldCountry {
   /// Returns a boolean indicating whether the given timezone string indicates
   /// an offset to add to UTC.
   ///
-  /// If the timezone string contains the `plus` character, returns `true`. If
-  /// the timezone string contains the `minus` character, returns `false`.
-  /// Otherwise, returns `null`.
+  /// If the timezone string contains the `plus` character, or is the
+  /// [utcString] itself (a zero offset), returns `true`. If the timezone
+  /// string contains the `minus` character, returns `false`. Otherwise,
+  /// returns `null`.
   static bool? toAdd(String timezone) {
-    if (timezone.contains(plus)) return true;
+    if (timezone == utcString || timezone.contains(plus)) return true;
     if (timezone.contains(minus)) return false;
 
     return null;
@@ -34,25 +33,22 @@ extension WorldCountryDateTime on WorldCountry {
   /// Returns a [Duration] object representing the offset from UTC indicated by
   /// the given timezone string.
   ///
-  /// If the length of the timezone string is not equal to
-  /// [timezoneValueLength], returns `null`. Otherwise, extracts the hours and
-  /// minutes values from the timezone string and returns a [Duration] object
-  /// representing the offset from UTC. The hours and minutes values are parsed
-  /// from the substring of the timezone string starting at the index of the
-  /// [utcString] constant plus 1 and continuing for two characters (the hours
-  /// value), and the substring starting at the index of the [utcString]
-  /// constant plus 4 and continuing for two characters (the minutes value).
+  /// If the timezone string is the [utcString] itself, returns a zero
+  /// [Duration]. If it has the `UTC±hh:mm` format (e.g. `UTC+05:30`, with
+  /// hours from `00` to `23` and minutes from `00` to `59`), returns the
+  /// (always positive) offset from UTC, use [toAdd] for its direction.
+  /// Otherwise, returns `null`.
   static Duration? tzDuration(String timezone) {
-    if (timezone.length != timezoneValueLength) return null;
-    final hour = timezone.substring(utcString.length + 1, utcString.length + 3);
-    final min = timezone.substring(utcString.length + 4, timezoneValueLength);
+    if (timezone == utcString) return Duration.zero;
+    final match = _offsetPattern.firstMatch(timezone);
+    if (match == null) return null;
+    final hours = int.parse(match.group(1) ?? "");
+    final minutes = int.parse(match.group(2) ?? "");
 
-    final intHour = int.tryParse(hour);
-    final minutes = int.tryParse(min);
-    if (minutes == null || intHour == null) return null;
-
-    return Duration(hours: intHour, minutes: minutes);
+    return Duration(hours: hours, minutes: minutes);
   }
+
+  static final _offsetPattern = RegExp(r"^UTC[+-]([01]\d|2[0-3]):([0-5]\d)$");
 
   /// Returns an unmodifiable list of [UtcDurationDifference] objects
   /// representing the time differences between Coordinated Universal Time (UTC)
@@ -63,16 +59,18 @@ extension WorldCountryDateTime on WorldCountry {
   /// it. Returns an unmodifiable list of [UtcDurationDifference] objects, each
   /// of which contains the duration offset and a boolean indicating whether it
   /// is to be added to or subtracted from UTC. If the [timezones] list is
-  /// empty, returns an empty list. Parsing stops at the first invalid
-  /// timezone, so only the durations of the preceding valid timezones are
-  /// returned.
+  /// empty, returns an empty list. Invalid timezones are skipped, so the
+  /// durations of all valid timezones are returned. In that case the result is
+  /// shorter than [timezones] and its indices no longer match it, so use
+  /// [tzDuration] and [toAdd] on each timezone when you need to know which
+  /// timezone an offset belongs to.
   List<UtcDurationDifference> get tzUtcDurations {
     final elements = List<UtcDurationDifference>.empty(growable: true);
 
     for (final timezone in timezones) {
       final duration = tzDuration(timezone);
       final toAddDuration = toAdd(timezone);
-      if (duration == null || toAddDuration == null) break;
+      if (duration == null || toAddDuration == null) continue;
       elements.add((duration: duration, toAdd: toAddDuration));
     }
 

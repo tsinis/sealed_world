@@ -342,9 +342,9 @@ sealed class WorldCountry extends Country
     this.subregion,
     this.unMember = true,
     this.regionalBlocs,
-    List<Demonyms>? demonyms,
-    List<NaturalLanguage>? languages,
-    List<CountryName>? namesNative,
+    this._demonyms,
+    this._languages,
+    this._namesNative,
   }) : assert(
          code.length == IsoStandardized.codeLength,
          """`code` should be exactly ${IsoStandardized.codeLength} characters long!""",
@@ -377,9 +377,6 @@ sealed class WorldCountry extends Country
          regionalBlocs != const <RegionalBloc>[],
          "`regionalBlocs` should not be empty!",
        ),
-       _demonyms = demonyms,
-       _languages = languages,
-       _namesNative = namesNative,
        _mapper = null;
 
   /// {@macro sealed_world.country_abw_constructor}
@@ -1168,20 +1165,16 @@ sealed class WorldCountry extends Country
     this.subregion,
     this.unMember = true,
     this.regionalBlocs,
-    List<Demonyms> demonyms = const [],
-    List<NaturalLanguage>? languages,
-    List<CountryName> namesNative = const [],
+    this._demonyms = const [],
+    this._languages,
+    this._namesNative = const [],
 
     /// {@macro sealed_world.locale_mapper_callback}
-    LocaleMapFunction<String> Function()? mapper,
+    this._mapper,
   }) : assert(
          code.length > 0 || codeNumeric.length > 0 || codeShort.length > 0,
          "The `code` (or at least `codeShort`/`codeNumeric`) must be provided!",
-       ),
-       _demonyms = demonyms,
-       _languages = languages,
-       _namesNative = namesNative,
-       _mapper = mapper;
+       );
 
   /// Returns an [WorldCountry] object from the given [code]
   /// ISO 3166-1 Alpha-3 code.
@@ -1226,6 +1219,7 @@ sealed class WorldCountry extends Country
   /// The [codeNumeric] parameter is required and must be a valid country code
   /// object representing a three-digit ISO 3166-1 numeric code.
   /// {@macro any_code_object}
+  /// {@macro sealed_world.int_numeric_code}
   /// Returns a [WorldCountry] object that represents the country with the given
   /// code or throws a [StateError] if no such country exists.
   ///
@@ -1252,6 +1246,7 @@ sealed class WorldCountry extends Country
   /// The [code] parameter is required and must be a valid country code object
   /// representing a ISO 3166-1 code.
   /// {@macro any_code_object}
+  /// {@macro sealed_world.int_numeric_code}
   /// Returns a [WorldCountry] object that represents the country with the given
   /// code or throws a [StateError] if no such country exists.
   ///
@@ -1265,7 +1260,7 @@ sealed class WorldCountry extends Country
   ///
   /// void main() {
   ///   final country = WorldCountry.fromAnyCode('BLR');
-  ///   assert(country.name == 'Belarus');
+  ///   assert(country.name.common == 'Belarus');
   /// }
   /// ```
   ///
@@ -1433,7 +1428,8 @@ sealed class WorldCountry extends Country
   /// The [value] parameter is required and should not be `null`. The [where]
   /// parameter is an optional function that takes a [WorldCountry] object as
   /// its parameter and returns a value to compare with [value]. If [where] is
-  /// `null`, the [code] field of the [WorldCountry] object will be used. The
+  /// `null`, or returns `null` for a country, the [code] field of that
+  /// [WorldCountry] object will be used. The
   /// [countries] parameter is an optional iterable of [WorldCountry] objects
   /// that defaults to [list]. Returns a [WorldCountry] object that represents
   /// the country with the given [value], or `null` if no such country exists.
@@ -1469,9 +1465,8 @@ sealed class WorldCountry extends Country
   ]) {
     if (countries == null) return codeMap.maybeFindByCode(code);
 
-    final string = IsoObject.maybe(
-      code,
-    )?.maybeToValidIsoUpperCaseCode(exactLength: IsoStandardized.codeLength);
+    final string = IsoObject.maybe(code)
+        ?.maybeToValidIsoUpperCaseCode(exactLength: IsoStandardized.codeLength);
 
     return countries.firstIsoWhereCodeOrNull(string, toUpperCase: false);
   }
@@ -1504,9 +1499,11 @@ sealed class WorldCountry extends Country
   /// Returns an [WorldCountry] object from the given [codeNumeric] ISO 3166-1
   /// code or `null` if no such instance exists.
   ///
-  /// The [codeNumeric] parameter is required and must be a valid country code
-  /// object representing a three-digit ISO 3166-1 numeric code.
+  /// The [codeNumeric] parameter is required and should be a valid country
+  /// code object representing a three-digit ISO 3166-1 numeric code, `null`
+  /// returns `null`.
   /// {@macro any_code_object}
+  /// {@macro sealed_world.int_numeric_code}
   /// Returns a [WorldCountry] object that represents the country with the given
   /// code or `null` if no such country exists.
   ///
@@ -1514,13 +1511,13 @@ sealed class WorldCountry extends Country
   /// [WorldCountry] objects to search through.
   /// {@macro optional_instances_array_parameter}
   static WorldCountry? maybeFromCodeNumeric(
-    Object codeNumeric, [
+    Object? codeNumeric, [
     Iterable<WorldCountry>? countries,
   ]) {
     if (countries == null) return codeNumericMap.maybeFindByCode(codeNumeric);
-    final trimmedCode = IsoObject(
-      codeNumeric,
-    ).maybeToValidIsoCode(exactLength: IsoStandardized.codeLength);
+    final trimmedCode = IsoObject.maybe(codeNumeric)
+        ?.maybeToValidIsoCode(exactLength: IsoStandardized.codeLength);
+    if (trimmedCode == null) return null;
 
     return countries.firstIsoWhereOrNull(
       (country) => country.codeNumeric == trimmedCode,
@@ -1533,6 +1530,7 @@ sealed class WorldCountry extends Country
   /// The [code] parameter is required and must be a valid country code object
   /// representing a ISO 3166-1 country code.
   /// {@macro any_code_object}
+  /// {@macro sealed_world.int_numeric_code}
   /// Returns a [WorldCountry] object that represents the country with the given
   /// code or `null` if no such country exists.
   ///
@@ -1551,7 +1549,7 @@ sealed class WorldCountry extends Country
   /// ```
   ///
   /// In the above example, the [maybeFromAnyCode] method is called with the
-  /// value "eur". It uses the `maybeMapIsoCode` method to determine the
+  /// value "BLR". It uses the `maybeMapIsoCode` method to determine the
   /// appropriate mapping for the value. If the value is numeric, it compares it
   /// with the `codeNumeric` property of each [WorldCountry] instance.
   /// If the value is two characters code, it compares it

@@ -46,7 +46,7 @@ The package exposes `NaturalLanguage`, `Script`, `LanguageFamily`, `BasicLocale`
 
 - **Prefer `maybeFrom*` for untrusted input**: Use `maybeFromAnyCode()`, `maybeFromCode()`, or `maybeFromCodeShort()` when parsing external or user-provided data. These methods return `null` if the code does not exist.
 - **Avoid throwing variants for user input**: Methods like `fromCode()`, `fromCodeShort()`, and `fromAnyCode()` throw when no matching language is found. Only use them when input validity is guaranteed.
-- **O(1) lookups**: Access pre-indexed lookup tables using `NaturalLanguage.map` (keyed by uppercase ISO 639-2/T code), `NaturalLanguage.list`, `Script.map`, or `Script.list`.
+- **O(1) lookups**: Access pre-indexed lookup tables using `NaturalLanguage.map` (keyed by every uppercase ISO 639-1 code and the ISO 639-2/T code of the same language; `codeMap` and `codeShortMap` hold only one kind), `NaturalLanguage.list`, `Script.map`, or `Script.list`.
 
 ### Language Properties & Metadata
 

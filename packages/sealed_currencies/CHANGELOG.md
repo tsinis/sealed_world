@@ -1,3 +1,44 @@
+## 3.4.2
+
+FIX
+
+- Includes the fixes of `sealed_languages` 3.4.2.
+
+Inherited from `l10n_currencies` 2.3.0:
+
+- Regional and script locales now fall back to their parent locales instead of straight to the language: `zh_Hant_TW` → `zh_Hant` → `zh`, `zh_TW` and `zh_HK` → `zh_Hant`, `pt_MO`, `pt_MZ` (and other CLDR children) → `pt_PT` → `pt`, `nb` and `nn` → `no`. Previously, for example, `bs_Cyrl_BA` returned the Latin script names of `bs`.
+- Locales are normalized before the lookup (`zh-Hant-TW`, `pt-pt`, `en_US` and `en_US.UTF-8` become `zh_Hant_TW`, `pt_PT` and `en_US`), also with `useLanguageFallback: false`. The locale as given is still tried first, so custom locale keys keep working.
+- Translations injected via `other` are no longer cleared by `localize()`: a `const` map no longer throws an `UnsupportedError`, and an `IsoLocaleMapper` shared between mappers no longer returns an empty map on its second use.
+- `l10n-<locale>=false` now drops only that locale, previously it dropped all of them.
+- `formatter` receives the ISO code of an alternative name with its symbol (`USD+`) also when several locales match, previously only when a single one did. A formatter that compares `isoLocale.isoCode` with an ISO code has to drop the symbol first to treat both names alike.
+- The `sd` (Sindhi, Arabic script) name of `RUB` was in Devanagari, the script of `sd_Deva`.
+
+NEW FEATURES
+
+Inherited from `l10n_currencies` 2.3.0:
+
+- Added the missing names of `XCG`, `ZWG`, `TWD` and `KRW` (also to regional and script locales such as `zh_Hant`, `sr_Latn` and `pt_PT`), and of the ISO 4217 codes `XAU`, `XAG`, `XPT`, `XPD`, `XDR`, `XTS`, `XBA`, `XBB`, `XBC` and `XBD`: 642 names across 87 locales, from CLDR 48 (ICU 78). The `XDR` names of `bs`, `bs_Cyrl`, `hr`, `id`, `sr` and `sr_Latn` and the `XBD` name of `sk` were corrected, CLDR has them wrong.
+
+IMPROVEMENTS
+
+Inherited from `l10n_currencies` 2.3.0:
+
+- `localize()` returns an unmodifiable view instead of copying its result, and no longer copies the set of ISO codes.
+- Bundled locales, which ship no alternative names, are looked up without the alternative name symbol.
+- `localize()` reads the names straight from each matched locale in a single pass: localizing all 171 ISO codes with `de_CH` as the main locale and `en` as the fallback takes 36 µs instead of 135 µs in 2.2.0 (AOT, default `altSymbol`).
+
+DOCUMENTATION
+
+- Documented that `FiatCurrency.maybeFromValue` compares the `code` of a currency when `where` returns `null` for it.
+- Fixed the docs of `FiatCurrency` (`code`, `codeNumeric` and `map`) and the currency count in the example.
+- Reworded the "Sealed classes" FAQ entry of the README.
+- Documented on the `FiatCurrency` numeric and any-code lookups that an `int` has no leading zeros (`8` is `"8"`, not `"008"`), so codes below 100 have to be passed as strings.
+
+CHORE
+
+- Updated `sealed_languages` dependency to v3.4.2 and `l10n_currencies` dependency to v2.3.0.
+- The Dart SDK was bumped to v3.13.0, as required by `l10n_currencies` 2.3.0. `FiatCurrency` constructors use its private named parameters, the API is the same.
+
 ## 3.4.1
 
 FIX

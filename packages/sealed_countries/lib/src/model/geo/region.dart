@@ -17,6 +17,9 @@ import "package:sealed_currencies/sealed_currencies.dart";
 /// }
 /// ```
 /// Base type shared by continent and subregion models.
+// TODO(tsinis): When making this `final`, also hide the
+// `SealedWorldIterableExtension` (sealed_languages) from the public API, see
+// the note there.
 @Deprecated.subclass(
   "This class will be marked as `final` in the next major version to support "
   "deep immutability optimizations. Do not extend or implement this class.",

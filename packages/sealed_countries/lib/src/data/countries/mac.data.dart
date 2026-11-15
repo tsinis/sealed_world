@@ -69,8 +69,7 @@ class CountryMac extends WorldCountry {
   List<CountryName> get namesNative => const [
     CountryName(
       language: LangPor(),
-      official:
-          """Região Administrativa Especial de Macau da República Popular da China""",
+      official: """Região Administrativa Especial de Macau da República Popular da China""",
       common: "Macau",
     ),
     CountryName(language: LangZho(), official: "中华人民共和国澳门特别行政区", common: "澳门"),

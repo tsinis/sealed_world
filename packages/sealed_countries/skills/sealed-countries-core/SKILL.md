@@ -26,7 +26,7 @@ Then import the main library:
 import 'package:sealed_countries/sealed_countries.dart';
 ```
 
-The package exposes `WorldCountry`, `CountryName`, `BasicTypedLocale`, `Continent`, `Subregion`, and dedicated subclasses for all 250 countries (e.g. `CountryUsa`, `CountryMex`, `CountryIrl`, `CountryDeu`).
+The package exposes `WorldCountry`, `CountryName`, `BasicTypedLocale`, `Continent`, `SubRegion`, and dedicated subclasses for all 250 countries (e.g. `CountryUsa`, `CountryMex`, `CountryIrl`, `CountryDeu`).
 
 ## Guidelines
 
@@ -45,7 +45,7 @@ The package exposes `WorldCountry`, `CountryName`, `BasicTypedLocale`, `Continen
 
 - **Prefer `maybeFrom*` for untrusted input**: Use `maybeFromAnyCode()`, `maybeFromCode()`, `maybeFromCodeShort()`, or `maybeFromCodeNumeric()` when parsing external or user-provided data. These methods return `null` if the code is invalid or unrecognized.
 - **Avoid throwing variants for user input**: Methods like `fromCode()`, `fromCodeShort()`, `fromCodeNumeric()`, and `fromAnyCode()` throw when no matching country is found. Only use them when input validity is guaranteed.
-- **O(1) lookups**: Access pre-indexed lookup tables using `WorldCountry.map` (keyed by uppercase 3-letter Alpha-3 code) or `WorldCountry.list` (contains all 250 countries: 249 ISO 3166-1 officially assigned countries plus Kosovo).
+- **O(1) lookups**: Access pre-indexed lookup tables using `WorldCountry.map` (keyed by every uppercase Alpha-3, Alpha-2 and Numeric-3 code; `codeMap`, `codeShortMap` and `codeNumericMap` hold only one kind) or `WorldCountry.list` (contains all 250 countries: 249 ISO 3166-1 officially assigned countries plus Kosovo).
 
 ### Names & Endonyms Structure
 
