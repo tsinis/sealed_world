@@ -124,6 +124,8 @@ EGYH
 Egyh
 Egyp
 EGYP
+Eircode
+Eircodes
 Elym
 ELYM
 Englisch

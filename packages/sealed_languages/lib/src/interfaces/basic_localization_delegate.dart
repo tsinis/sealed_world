@@ -49,7 +49,7 @@ abstract class BasicLocalizationDelegate<
   /// ignored. Variant subtags (such as `POSIX` in `en_US_POSIX`) are not
   /// supported.
   static const unicodeLocale =
-      r"^([a-z]{2,3})(?:[_\s-]+(?:([a-z]{4})(?:[_\s-]+([a-z]{2,3}|\d{3}))?|([a-z]{2,3}|\d{3})))?(?:[.@]\S+)?$";
+      r"^([a-zA-Z]{2,3})(?:[_\s-]+(?:([a-zA-Z]{4})(?:[_\s-]+([a-zA-Z]{2,3}|\d{3}))?|([a-zA-Z]{2,3}|\d{3})))?(?:[.@]\S+)?$";
 
   /// {@macro copy_with_method}
   BasicLocalizationDelegate<L, T> copyWith({
@@ -82,12 +82,11 @@ abstract class BasicLocalizationDelegate<
 
   /// Gets the compiled regular expression for parsing locale identifiers.
   ///
-  /// Returns a case-insensitive [RegExp] with Unicode support.
-  static final localePattern = RegExp(
-    unicodeLocale,
-    caseSensitive: false,
-    unicode: true,
-  );
+  /// Returns a case-sensitive [RegExp] with Unicode support. [unicodeLocale]
+  /// lists both cases of the ASCII letters itself, because case-insensitive
+  /// Unicode matching would also accept letters that fold to ASCII ones, such
+  /// as the Kelvin sign (U+212A) for `k`.
+  static final localePattern = RegExp(unicodeLocale, unicode: true);
 
   /// Parses a locale identifier string into a locale object.
   ///
@@ -97,8 +96,8 @@ abstract class BasicLocalizationDelegate<
   ///   `de_DE.UTF-8`).
   ///
   /// Returns a locale of type [L] if valid, `null` otherwise. A region code
-  /// is passed to [toLocale] as is (uppercased), even if it is not a known
-  /// country code, while an unknown script is dropped.
+  /// is passed to [toLocale] as is (converted to uppercase), even if it is
+  /// not a known country code, while an unknown script is dropped.
   L? parseLocale(Object? locale) {
     final input = locale?.toString().trim() ?? "";
     if (input.isEmpty) return null;

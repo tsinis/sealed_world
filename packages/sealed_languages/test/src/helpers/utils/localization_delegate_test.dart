@@ -566,6 +566,14 @@ void main() => group("$LocalizationDelegate", () {
         () => expect(parser.parseLocale("en_БГ"), isNull),
       );
 
+      test("rejects non-ASCII letters that fold to ASCII ones", () {
+        // The Kelvin sign (U+212A) folds to "k", the long s (U+017F) to "s".
+        final kelvin = String.fromCharCode(0x212A);
+        final longS = String.fromCharCode(0x017F);
+        expect(parser.parseLocale("en_${kelvin}R"), isNull);
+        expect(parser.parseLocale("${longS}q_AL"), isNull);
+      });
+
       test(
         "rejects wrong order",
         () => expect(parser.parseLocale("US_en"), isNull),
