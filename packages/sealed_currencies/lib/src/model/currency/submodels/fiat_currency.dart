@@ -192,15 +192,17 @@ sealed class FiatCurrency extends Currency
   /// [smallestDenomination] parameter defaults to 1.
   ///
   /// The [alternateSymbols], [disambiguateSymbol], [htmlEntity], [subunit],
-  /// [subunitToUnit], `mapper` and [unitFirst] parameters are optional.
+  /// [subunitToUnit], [decimalDigits], `mapper` and [unitFirst] parameters are
+  /// optional.
   ///
   /// The [symbol], [decimalMark], and [thousandsSeparator] parameters are
   /// inherited from the [Currency] class and are also optional.
   /// {@endtemplate}
   /// Throws an [AssertionError] if [code] is not exactly 3 characters long,
   /// [codeNumeric] is not exactly 3 characters long, [namesNative] is empty,
-  /// [htmlEntity] is empty, [subunit] is empty, [alternateSymbols] is empty, or
-  /// [smallestDenomination] is negative.
+  /// [htmlEntity] is empty, [subunit] is empty, [alternateSymbols] is empty,
+  /// [smallestDenomination] is negative, or [decimalDigits] is not between 0
+  /// and 20.
   /// Use the optional `mapper` parameter when you need custom localization
   /// data:
   /// {@macro sealed_world.locale_mapper_callback}
@@ -223,9 +225,17 @@ sealed class FiatCurrency extends Currency
     super.decimalMark = dot,
     super.thousandsSeparator = ",",
 
+    /// {@macro sealed_world.currency_decimal_digits}
+    this._decimalDigits,
+
     /// {@macro sealed_world.locale_mapper_callback}
     this._mapper,
   }) : assert(
+         _decimalDigits == null ||
+             (_decimalDigits >= 0 && _decimalDigits <= maxDecimalDigits),
+         "`decimalDigits` should be between 0 and $maxDecimalDigits!",
+       ),
+       assert(
          code.length == IsoStandardized.codeLength,
          """`code` should be exactly ${IsoStandardized.codeLength} characters long!""",
        ),
@@ -273,11 +283,19 @@ sealed class FiatCurrency extends Currency
     super.decimalMark = dot,
     super.thousandsSeparator = ",",
 
+    /// {@macro sealed_world.currency_decimal_digits}
+    this._decimalDigits,
+
     /// {@macro sealed_world.locale_mapper_callback}
     this._mapper,
   }) : assert(
          (code?.length ?? 0) > 0 || codeNumeric.length > 0,
          "The `code` (or at least `codeNumeric`) must be provided!",
+       ),
+       assert(
+         _decimalDigits == null ||
+             (_decimalDigits >= 0 && _decimalDigits <= maxDecimalDigits),
+         "`decimalDigits` should be between 0 and $maxDecimalDigits!",
        ),
        super(code: code ?? " ");
 
@@ -912,6 +930,10 @@ sealed class FiatCurrency extends Currency
   /// Default decimal separator for most currencies.
   static const dot = ".";
 
+  /// The largest supported [decimalDigits] (the limit of
+  /// [num.toStringAsFixed]).
+  static const maxDecimalDigits = 20;
+
   /// The general standard ISO code for currencies, defined as ISO 4217.
   static const standardGeneralName = "4217";
 
@@ -1146,6 +1168,32 @@ sealed class FiatCurrency extends Currency
   // ignore: prefer-correct-callback-field-name, follows delegate naming.
   final LocaleMapFunction<String> Function()? _mapper;
 
+  final int? _decimalDigits;
+
+  /// {@template sealed_world.currency_decimal_digits}
+  /// The number of decimal digits (the ISO 4217 minor unit) of the currency.
+  ///
+  /// Unless set explicitly, it's the fewest digits that fit [subunitToUnit]:
+  /// `0` for the Japanese yen (`1`), `2` for the Euro (`100`) and `3` for the
+  /// Kuwaiti dinar (`1000`). The non-decimal Malagasy ariary and Mauritanian
+  /// ouguiya (`subunitToUnit` is `5`) set it to `2`, as ISO 4217 does. Pass it
+  /// to the `fractionDigits` parameter of `format` to round a value to the
+  /// subunit.
+  /// {@endtemplate}
+  int get decimalDigits => _decimalDigits ?? _digitsFor(subunitToUnit);
+
+  /// The number of digits of `subunitToUnit - 1`, which is the smallest
+  /// `digits` where `10^digits >= subunitToUnit`. Divides instead of
+  /// multiplying, so it can't overflow (at most 19 digits for 64-bit `int`).
+  static int _digitsFor(int subunitToUnit) {
+    int digits = 0;
+    for (int rest = subunitToUnit - 1; rest > 0; rest ~/= 10) {
+      digits += 1;
+    }
+
+    return digits;
+  }
+
   /// The international 3-numeric non-empty numeric code as defined by the ISO
   /// 4217 standard.
   @override
@@ -1174,7 +1222,8 @@ sealed class FiatCurrency extends Currency
             "namesNative: ${jsonEncode(namesNative)}, "
             "priority: $priority, smallestDenomination: $smallestDenomination, "
             '${subunit == null ? '' : 'subunit: "$subunit", '}'
-            "subunitToUnit: $subunitToUnit, unitFirst: $unitFirst,)";
+            "subunitToUnit: $subunitToUnit, unitFirst: $unitFirst,"
+            '''${_decimalDigits == null ? '' : ' decimalDigits: $_decimalDigits,'})''';
 
   @override
   String toJson({JsonCodec codec = const JsonCodec()}) => codec.encode(toMap());

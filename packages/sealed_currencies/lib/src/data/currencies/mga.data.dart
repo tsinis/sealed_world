@@ -23,5 +23,6 @@ final class FiatMga extends FiatCurrency {
         subunit: "Iraimbilanja",
         subunitToUnit: 5,
         unitFirst: true,
+        decimalDigits: 2,
       );
 }

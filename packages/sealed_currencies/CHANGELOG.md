@@ -1,4 +1,4 @@
-## 3.4.2
+## 3.5.0
 
 FIX
 
@@ -14,6 +14,9 @@ Inherited from `l10n_currencies` 2.3.0:
 - The `sd` (Sindhi, Arabic script) name of `RUB` was in Devanagari, the script of `sd_Deva`.
 
 NEW FEATURES
+
+- `format` of `FiatCurrency` takes an optional `fractionDigits` that rounds the value half away from zero and pads it with zeros (with `2`, `1.5` is `€ 1,50`, `0.1 + 0.2` is `€ 0,30` and `1.005` is `€ 1,01`, while `1.005.toStringAsFixed(2)` is `1.00`). A value that rounds to zero has no minus sign (`-0.001` is `€ 0,00`). Without `fractionDigits` the value is still printed as is.
+- `FiatCurrency.decimalDigits` is the number of decimal digits (the ISO 4217 minor unit) of a currency, to pass as `fractionDigits`: `0` for `JPY`, `2` for `EUR` and `3` for `KWD`. It's derived from `subunitToUnit` unless set by the new `decimalDigits` parameter of the constructors and `copyWith` (from `0` to `FiatCurrency.maxDecimalDigits`), as `MGA` and `MRU` do (`2`, while their `subunitToUnit` is `5`). It's also part of `toMap` and `fromMap`.
 
 Inherited from `l10n_currencies` 2.3.0:
 

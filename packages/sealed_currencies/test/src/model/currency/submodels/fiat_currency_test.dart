@@ -2,6 +2,7 @@
 // ignore_for_file: avoid-duplicate-test-assertions
 
 import "dart:convert";
+import "dart:math" show pow;
 
 import "package:sealed_currencies/src/helpers/fiat_currency/fiat_currency_json.dart";
 import "package:sealed_currencies/src/model/currency/currency.dart";
@@ -321,6 +322,59 @@ void main() => group("$FiatCurrency", () {
   test("toString", () {
     expect(value.toString(short: false), contains(value.code));
     expect(value.toString().contains(value.name), isFalse);
+  });
+
+  group("decimalDigits", () {
+    test("of decimal currencies", () {
+      expect(const FiatJpy().decimalDigits, 0);
+      expect(const FiatEur().decimalDigits, 2);
+      expect(const FiatKwd().decimalDigits, 3);
+      expect(const FiatClf().decimalDigits, 4);
+    });
+
+    test("of non-decimal currencies follows ISO 4217", () {
+      expect(const FiatMga().decimalDigits, 2);
+      expect(const FiatMru().decimalDigits, 2);
+    });
+
+    test("of every currency fits its subunit", () {
+      for (final currency in FiatCurrency.listExtended) {
+        expect(
+          pow(10, currency.decimalDigits),
+          greaterThanOrEqualTo(currency.subunitToUnit),
+          reason: currency.code,
+        );
+      }
+    });
+
+    test("is derived as the fewest digits that fit subunitToUnit", () {
+      expect(FiatCustom(code: value.code, subunitToUnit: 0).decimalDigits, 0);
+      expect(FiatCustom(code: value.code, subunitToUnit: 10).decimalDigits, 1);
+      expect(FiatCustom(code: value.code, subunitToUnit: 11).decimalDigits, 2);
+      expect(FiatCustom(code: value.code, subunitToUnit: 5).decimalDigits, 1);
+    });
+
+    test("does not overflow for a huge subunitToUnit", () {
+      const maxInt = 9_223_372_036_854_775_807; // 2^63 - 1, the max VM int.
+      final currency = FiatCustom(code: value.code, subunitToUnit: maxInt);
+
+      expect(currency.decimalDigits, 19);
+      expect(
+        currency.decimalDigits,
+        lessThanOrEqualTo(FiatCurrency.maxDecimalDigits),
+      );
+    });
+
+    test("is printed by toString only when set", () {
+      expect(
+        const FiatMga().toString(short: false),
+        contains("decimalDigits: 2,"),
+      );
+      expect(
+        const FiatEur().toString(short: false),
+        isNot(contains("decimalDigits")),
+      );
+    });
   });
 
   group("fromName", () {
@@ -848,5 +902,25 @@ void main() => group("$FiatCurrency", () {
         throwsA(isA<AssertionError>()),
       ),
     );
+    test("decimalDigits out of range", () {
+      expect(
+        () => FiatCustom(code: value.code, decimalDigits: -1),
+        throwsA(isA<AssertionError>()),
+      );
+      expect(
+        () => FiatCustom(
+          code: value.code,
+          decimalDigits: FiatCurrency.maxDecimalDigits + 1,
+        ),
+        throwsA(isA<AssertionError>()),
+      );
+      expect(
+        () => FiatCustom(
+          code: value.code,
+          decimalDigits: FiatCurrency.maxDecimalDigits,
+        ),
+        returnsNormally,
+      );
+    });
   });
 });

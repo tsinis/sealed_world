@@ -9,6 +9,7 @@ final class FiatCustom extends FiatCurrency {
     super.code,
     super.codeNumeric,
     super.alternateSymbols,
+    super.decimalDigits,
     super.decimalMark,
     super.disambiguateSymbol,
     super.htmlEntity,

@@ -47,6 +47,26 @@ void main() => group("FiatCurrencyJson", () {
       expect(currency.priority, 42);
       expect(currency.smallestDenomination, 5);
       expect(currency.unitFirst, isTrue);
+      expect(currency.decimalDigits, 2);
+    });
+
+    test("keeps decimalDigits in a round trip", () {
+      const ariary = FiatMga();
+      final map = ariary.toMap();
+
+      expect(map["decimalDigits"], 2);
+      expect(FiatCurrencyJson.fromMap(map).decimalDigits, ariary.decimalDigits);
+    });
+
+    test("reads decimalDigits", () {
+      const map = {
+        "code": "ZZZ",
+        "codeNumeric": "999",
+        "decimalDigits": 3,
+        "namesNative": ["Zed"],
+      };
+
+      expect(FiatCurrencyJson.fromMap(map).decimalDigits, 3);
     });
   });
 });

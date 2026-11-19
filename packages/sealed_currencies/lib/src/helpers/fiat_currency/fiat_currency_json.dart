@@ -22,6 +22,7 @@ extension FiatCurrencyJson on FiatCurrency {
       alternateSymbols: map["alternateSymbols"] is List
           ? List<String>.unmodifiable(map["alternateSymbols"] as List)
           : null,
+      decimalDigits: map["decimalDigits"] as int?,
       decimalMark: map["decimalMark"]?.toString(),
       disambiguateSymbol: map["disambiguateSymbol"]?.toString(),
       htmlEntity: map["htmlEntity"]?.toString(),
@@ -42,6 +43,7 @@ extension FiatCurrencyJson on FiatCurrency {
     "alternateSymbols": ?alternateSymbols,
     "code": code,
     "codeNumeric": codeNumeric,
+    "decimalDigits": decimalDigits,
     "decimalMark": decimalMark,
     "disambiguateSymbol": ?disambiguateSymbol,
     "htmlEntity": ?htmlEntity,

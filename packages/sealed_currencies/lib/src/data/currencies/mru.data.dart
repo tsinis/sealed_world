@@ -22,5 +22,6 @@ final class FiatMru extends FiatCurrency {
         namesNative: const ["أوقية موريتانية"],
         subunit: "Khoums",
         subunitToUnit: 5,
+        decimalDigits: 2,
       );
 }
