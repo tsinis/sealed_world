@@ -9,11 +9,16 @@ NEW FEATURES
 IMPROVEMENTS
 
 - The waved flag shader is simpler and does less work per pixel: the wave and its slope share one noise pass (2 noise lookups less per pixel) and the edge masks are computed once. The output is pixel-identical.
+- The waved flag shader skips the noise of the secondary ripple if `FlagShaderOptions.secondaryAmplitude` is zero.
+- `FlagShaderSurface` creates and disposes its shader delegate and painter only when its dependencies or the widget change, no longer during the build. Another flag (i.e. item) no longer recreates its own delegate, unless a `delegateBuilder` gets the flag.
+- The docs of `BasicFlag`, `flagPropertiesMap` and `WorldCountry.flagProperties` explain that the properties alone don't paint custom elements (i.e. a coat of arms), and the simple example uses `CountryFlag.simplified` instead.
 
 CHORE
 
 - Requires Dart 3.14 and Flutter 3.50.
-- Golden tests use [gleon](https://pub.dev/packages/gleon) v0.6.1 from pub.dev instead of a git dependency.
+- Golden tests use [gleon](https://pub.dev/packages/gleon) v0.6.2 from pub.dev instead of a git dependency.
+- The waved flag shader (`shaders/waved_flag.frag`) is restructured, with named constants. Its unused animation speed uniform is removed and the wave direction is one `vec2` uniform, so the uniforms after the time moved one index down: if you copied the shader, update its `setFloat` indices too.
+- The flag maps (`smallSimplifiedFlagsMap` and others) are declared in the `src` folder instead of the library file, and are exported as before.
 - Uses `List.unmodifiableOf` (Dart 3.13) instead of the soon deprecated `List.unmodifiable`.
 - Updated [material_ui](https://pub.dev/packages/material_ui) dependency to v1.11.0. Material is no longer a part of Flutter SDK since 3.50, and this package only needs it for the deprecated `FlagThemeData`, so the dependency will be removed together with it.
 - Code samples in the docs, the README and the agent skill import `package:material_ui/material_ui.dart` instead of the deprecated `package:flutter/material.dart`.
