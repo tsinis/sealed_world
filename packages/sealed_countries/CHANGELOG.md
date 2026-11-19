@@ -1,4 +1,4 @@
-## 3.4.3
+## 3.5.0
 
 FIX
 
@@ -6,7 +6,9 @@ FIX
 - `tzDuration` and `toAdd` read a bare `"UTC"` as a zero offset, they returned `null` for it, so `tzUtcDurations` dropped it.
 - `tzDuration` only accepts the `UTC±hh:mm` format: it returned an offset for `GMT+01:00`, `UTC+99:99` or `UTC+-1:-5` (a negative `Duration`), so `tzUtcDurations` did not skip them.
 - The postal code of Ireland (`CountryIrl`) had the format and pattern of the UK postcodes, it now validates Eircodes (`A65 F4E2`, `D6W FN43`).
-- Includes the fixes of `sealed_currencies` 3.4.2 and `sealed_languages` 3.4.2, so `TypedLocalizationDelegate.parseLocale` keeps a UN M49 region (`es_419`) as the regional code and resolves an ISO 3166-1 numeric one (`en_840`) to its country.
+- `Idd` equality only compared the number of `suffixes`, so countries sharing a calling code root were equal (`CountryBhs().idd == CountryBrb().idd`, `+1 242` and `+1 246`), the suffixes are now compared one by one. Equal `Idd`s also have equal hash codes, they had different ones when their suffixes were in different lists.
+- `==` of `Capital`, `CapitalInfo`, `Car`, `Demonyms`, `Gini`, `Idd`, `LatLng`, `Maps` and `PostalCode` returns `false` for an object of another type, it threw a `TypeError` (for example in `List.contains`).
+- Includes the fixes of `sealed_currencies` 3.5.0 and `sealed_languages` 3.4.2, so `TypedLocalizationDelegate.parseLocale` keeps a UN M49 region (`es_419`) as the regional code and resolves an ISO 3166-1 numeric one (`en_840`) to its country.
 
 Inherited from `l10n_countries` 2.3.0:
 
@@ -16,6 +18,12 @@ Inherited from `l10n_countries` 2.3.0:
 - `l10n-<locale>=false` now drops only that locale, previously it dropped all of them.
 - `formatter` receives the ISO code of an alternative name with its symbol (`AFG+`) also when several locales match, previously only when a single one did. A formatter that compares `isoLocale.isoCode` with an ISO code has to drop the symbol first to treat both names alike.
 - `nn` falls back to `no`, so the 134 country names that `nn` lacks are no longer missing.
+
+NEW FEATURES
+
+Inherited from `sealed_currencies` 3.5.0:
+
+- `FiatCurrency.decimalDigits` (the ISO 4217 minor unit) and an optional `fractionDigits` of `FiatCurrency.format`, which rounds a value half away from zero (`1.005` is `€ 1,01`).
 
 IMPROVEMENTS
 
@@ -36,7 +44,7 @@ DOCUMENTATION
 
 CHORE
 
-- Updated `sealed_currencies` dependency to v3.4.2 and `l10n_countries` dependency to v2.3.0.
+- Updated `sealed_currencies` dependency to v3.5.0 and `l10n_countries` dependency to v2.3.0.
 - The Dart SDK was bumped to v3.13.0, as required by `l10n_countries` 2.3.0. Constructors are declared with its `new` and `factory` syntax (without the class name) and `WorldCountry` ones use its private named parameters, the API is the same.
 
 ## 3.4.2

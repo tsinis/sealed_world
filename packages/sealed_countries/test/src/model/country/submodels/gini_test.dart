@@ -20,6 +20,11 @@ void main() => group("$Gini", () {
     ),
   );
 
+  test(
+    "not equal to other types",
+    () => expect(value == TestData.object, isFalse),
+  );
+
   group("equality", () {
     const other = Gini(
       year: Gini.minYear + TestData.integer,

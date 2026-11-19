@@ -60,10 +60,12 @@ final class Gini implements JsonEncodable<Gini> {
   String toJson({JsonCodec codec = const JsonCodec()}) => codec.encode(toMap());
 
   @override
-  bool operator ==(covariant Gini other) {
+  bool operator ==(Object other) {
     if (identical(this, other)) return true;
 
-    return other.year == year && other.coefficient == coefficient;
+    return other is Gini &&
+        other.year == year &&
+        other.coefficient == coefficient;
   }
 
   @override

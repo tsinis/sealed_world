@@ -35,12 +35,23 @@ final class Idd implements JsonEncodable<Idd> {
   String toJson({JsonCodec codec = const JsonCodec()}) => codec.encode(toMap());
 
   @override
-  bool operator ==(covariant Idd other) {
+  bool operator ==(Object other) {
     if (identical(this, other)) return true;
 
-    return other.root == root && other.suffixes.length == suffixes.length;
+    return other is Idd && other.root == root && _equalSuffixes(other.suffixes);
   }
 
   @override
-  int get hashCode => Object.hash(root, suffixes);
+  int get hashCode => Object.hash(root, Object.hashAll(suffixes));
+
+  bool _equalSuffixes(List<int> other) {
+    if (identical(other, suffixes)) return true;
+    if (other.length != suffixes.length) return false;
+
+    for (final (index, suffix) in suffixes.indexed) {
+      if (other[index] != suffix) return false;
+    }
+
+    return true;
+  }
 }

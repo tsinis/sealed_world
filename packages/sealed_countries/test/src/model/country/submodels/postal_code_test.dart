@@ -13,6 +13,11 @@ void main() => group("$PostalCode", () {
     expect(value.toString(), contains(value.regExpPattern));
   });
 
+  test(
+    "not equal to other types",
+    () => expect(value == TestData.object, isFalse),
+  );
+
   group("equality", () {
     const other = PostalCode(format: TestData.string);
     final array = {value, other};
