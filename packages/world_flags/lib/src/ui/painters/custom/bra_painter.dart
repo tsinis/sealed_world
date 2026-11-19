@@ -1,5 +1,3 @@
-// ignore_for_file: prefer-class-destructuring
-
 part of "../multi_element_painter.dart";
 
 /// Painter for the Brazil flag.

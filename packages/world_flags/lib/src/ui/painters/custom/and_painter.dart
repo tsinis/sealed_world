@@ -1,5 +1,3 @@
-// ignore_for_file: format-comment
-
 import "../basic/badge_artwork.dart";
 import "../basic/badge_artwork_painter.dart";
 import "../basic/custom_elements_painter.dart";
@@ -101,7 +99,6 @@ final class AndPainter extends CustomElementsPainter with BadgeArtworkPainter {
   // dart format on
 
   @override
-  // ignore: avoid-unnecessary-getter, the static one shares its path cache.
   BadgeArtwork get artwork => _artwork;
 
   @override

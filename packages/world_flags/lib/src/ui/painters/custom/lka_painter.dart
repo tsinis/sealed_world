@@ -1,5 +1,3 @@
-// ignore_for_file: format-comment
-
 import "dart:ui";
 
 import "../../../model/typedefs.dart";
@@ -153,7 +151,6 @@ final class LkaPainter extends CustomElementsPainter with BadgeArtworkPainter {
   // dart format on
 
   @override
-  // ignore: avoid-unnecessary-getter, the static one shares its path cache.
   BadgeArtwork get artwork => _artwork;
 
   @override
