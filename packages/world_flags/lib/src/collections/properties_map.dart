@@ -1,4 +1,3 @@
-// ignore_for_file: prefer-static-class, to follow pattern from eco-system.
 import "package:sealed_countries/sealed_countries.dart";
 
 import "../data/flags_map_part_1.data.dart";
@@ -10,6 +9,11 @@ import "../model/flag_properties.dart";
 ///
 /// This map associates each flag with its specific properties, such as colors,
 /// elements, and aspect ratios.
+///
+/// Note: the custom elements of a flag (i.e. a coat of arms) are described by
+/// the properties, but painted by a painter of that flag. So for the whole
+/// flag widget use the `smallSimplifiedFlagsMap` (or `CountryFlag.simplified`)
+/// instead of a `BasicFlag` built from these properties alone.
 ///
 /// Example usage:
 /// ```dart

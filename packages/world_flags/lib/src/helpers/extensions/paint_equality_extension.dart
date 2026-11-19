@@ -1,5 +1,4 @@
 // Comparing fields of two objects is the point here, not destructuring one.
-// ignore_for_file: prefer-class-destructuring
 
 import "package:flutter/foundation.dart" show internal, listEquals;
 

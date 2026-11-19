@@ -14,7 +14,6 @@ final class RectanglePainter extends ElementsPainter {
 
   @override
   Paint paintCreator([Color? color]) =>
-      // ignore: avoid-returning-cascades, it's ok for a shorthand method.
       super.paintCreator(color)..isAntiAlias = false;
 
   /// Where the rectangle of [property] lands in a flag of [size].
