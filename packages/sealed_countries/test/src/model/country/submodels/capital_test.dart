@@ -18,6 +18,11 @@ void main() => group("$Capital", () {
     );
   });
 
+  test(
+    "not equal to other types",
+    () => expect(value == TestData.object, isFalse),
+  );
+
   group("equality", () {
     const other = Capital("${TestData.float}");
     final array = {value, other};

@@ -39,10 +39,12 @@ final class Car implements JsonEncodable<Car> {
   String toJson({JsonCodec codec = const JsonCodec()}) => codec.encode(toMap());
 
   @override
-  bool operator ==(covariant Car other) {
+  bool operator ==(Object other) {
     if (identical(this, other)) return true;
 
-    return other.isRightSide == isRightSide && other.sign == sign;
+    return other is Car &&
+        other.isRightSide == isRightSide &&
+        other.sign == sign;
   }
 
   @override

@@ -18,10 +18,14 @@ extension FiatCurrencyCopyWith<T extends FiatCurrency> on T {
   ///   assert(shortTaka.name == 'Taka');
   /// }
   /// ```
+  ///
+  /// A new [subunitToUnit] without a new [decimalDigits] derives the decimal
+  /// digits from that [subunitToUnit] again.
   FiatCurrency copyWith({
     List<String>? alternateSymbols,
     String? code,
     String? codeNumeric,
+    int? decimalDigits,
     String? decimalMark,
     String? disambiguateSymbol,
     String? htmlEntity,
@@ -56,6 +60,8 @@ extension FiatCurrencyCopyWith<T extends FiatCurrency> on T {
     smallestDenomination: smallestDenomination ?? this.smallestDenomination,
     subunit: (subunit?.isEmpty ?? false) ? null : (subunit ?? this.subunit),
     subunitToUnit: subunitToUnit ?? this.subunitToUnit,
+    decimalDigits:
+        decimalDigits ?? (subunitToUnit == null ? this.decimalDigits : null),
     unitFirst: unitFirst ?? this.unitFirst,
     symbol: (symbol?.isEmpty ?? false) ? null : (symbol ?? this.symbol),
     decimalMark: decimalMark ?? this.decimalMark,

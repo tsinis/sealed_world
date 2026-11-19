@@ -46,10 +46,12 @@ final class CapitalInfo implements JsonEncodable<CapitalInfo> {
   String toJson({JsonCodec codec = const JsonCodec()}) => codec.encode(toMap());
 
   @override
-  bool operator ==(covariant CapitalInfo other) {
+  bool operator ==(Object other) {
     if (identical(this, other)) return true;
 
-    return other.capital == capital && other.latLng == latLng;
+    return other is CapitalInfo &&
+        other.capital == capital &&
+        other.latLng == latLng;
   }
 
   @override

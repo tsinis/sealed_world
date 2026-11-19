@@ -9,6 +9,11 @@ import "../../../test_data.dart";
 void main() => group("$Car", () {
   const value = Car();
 
+  test(
+    "not equal to other types",
+    () => expect(value == TestData.object, isFalse),
+  );
+
   group("equality", () {
     const other = Car(sign: TestData.string);
     final array = {value, other};

@@ -7,5 +7,7 @@ abstract final class TestData {
   static const double float = integer + 0.0;
 
   static const string = "$integer";
+  // ignore: avoid-explicit-type-declaration, no-object-declaration, for test.
+  static const Object object = string;
   static const emptyString = "";
 }

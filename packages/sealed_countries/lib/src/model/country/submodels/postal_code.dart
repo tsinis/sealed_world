@@ -52,10 +52,12 @@ final class PostalCode implements JsonEncodable<PostalCode> {
   String toJson({JsonCodec codec = const JsonCodec()}) => codec.encode(toMap());
 
   @override
-  bool operator ==(covariant PostalCode other) {
+  bool operator ==(Object other) {
     if (identical(this, other)) return true;
 
-    return other.format == format && other.regExpPattern == regExpPattern;
+    return other is PostalCode &&
+        other.format == format &&
+        other.regExpPattern == regExpPattern;
   }
 
   @override

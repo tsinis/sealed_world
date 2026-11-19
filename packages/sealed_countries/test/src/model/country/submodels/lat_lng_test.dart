@@ -9,6 +9,11 @@ import "../../../test_data.dart";
 void main() => group("$LatLng", () {
   const value = LatLng(TestData.float, TestData.float);
 
+  test(
+    "not equal to other types",
+    () => expect(value == TestData.object, isFalse),
+  );
+
   group("equality", () {
     const other = LatLng(TestData.float * 2, TestData.float);
     final array = {value, other};

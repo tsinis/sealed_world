@@ -68,4 +68,26 @@ void main() => group("FiatCurrencyCopyWith", () {
     expect(copy.alternateSymbols, isNull);
     expect(copy.code, withAlt.code);
   });
+
+  group("copyWith decimalDigits", () {
+    const ariary = FiatMga();
+
+    test(
+      "keeps an explicit value",
+      () => expect(ariary.copyWith(name: "Ariary").decimalDigits, 2),
+    );
+
+    test(
+      "sets a new value",
+      () => expect(ariary.copyWith(decimalDigits: 1).decimalDigits, 1),
+    );
+
+    test("derives the value again from a new subunitToUnit", () {
+      expect(ariary.copyWith(subunitToUnit: 1000).decimalDigits, 3);
+      expect(
+        ariary.copyWith(subunitToUnit: 1000, decimalDigits: 2).decimalDigits,
+        2,
+      );
+    });
+  });
 });

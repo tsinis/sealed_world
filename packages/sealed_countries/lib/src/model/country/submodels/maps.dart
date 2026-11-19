@@ -53,10 +53,11 @@ final class Maps implements JsonEncodable<Maps> {
   String toJson({JsonCodec codec = const JsonCodec()}) => codec.encode(toMap());
 
   @override
-  bool operator ==(covariant Maps other) {
+  bool operator ==(Object other) {
     if (identical(this, other)) return true;
 
-    return other.googleMaps == googleMaps &&
+    return other is Maps &&
+        other.googleMaps == googleMaps &&
         other.openStreetMaps == openStreetMaps;
   }
 

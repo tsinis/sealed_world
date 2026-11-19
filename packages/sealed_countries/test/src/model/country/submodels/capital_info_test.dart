@@ -14,6 +14,11 @@ void main() => group("$CapitalInfo", () {
     latLng: LatLng(TestData.float, TestData.float),
   );
 
+  test(
+    "not equal to other types",
+    () => expect(value == TestData.object, isFalse),
+  );
+
   group("equality", () {
     const other = CapitalInfo(
       capital: Capital("${TestData.float}"),

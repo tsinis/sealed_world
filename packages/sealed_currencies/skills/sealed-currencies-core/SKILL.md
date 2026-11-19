@@ -51,6 +51,7 @@ The package exposes `FiatCurrency`, `Currency`, `BasicLocale`, `TranslatedName`,
 - **Symbol Placement**: `unitFirst` is a boolean indicating whether the symbol precedes the amount (e.g. `true` for `$100`, `false` for `100 €`).
 - **Punctuation**: `decimalMark` and `thousandsSeparator` define the default number formatting characters for the currency.
 - **Subunit Conversion**: `subunitToUnit` represents the proportion between the main unit and fractional unit (e.g. `100` for cents in USD, `1` for zero-decimal currencies like JPY where `subunit` is `null`). Use this for precision-safe calculations.
+- **Decimal Digits & Formatting**: `decimalDigits` is the ISO 4217 minor unit (`2` for EUR, `0` for JPY, also `2` for the non-decimal MGA and MRU). `currency.format(amount, fractionDigits: currency.decimalDigits)` rounds half away from zero and applies the symbol, `decimalMark` and `thousandsSeparator` (e.g. `€ 1,01` for `1.005`); without `fractionDigits` the amount is not rounded.
 
 ### Names & Native Endonyms
 

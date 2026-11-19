@@ -14,6 +14,11 @@ void main() => group("$Demonyms", () {
     male: TestData.string,
   );
 
+  test(
+    "not equal to other types",
+    () => expect(value == TestData.object, isFalse),
+  );
+
   group("equality", () {
     const other = Demonyms(
       language: LangFra(),

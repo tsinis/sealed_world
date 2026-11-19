@@ -40,10 +40,12 @@ final class LatLng implements JsonEncodable<LatLng> {
   String toJson({JsonCodec codec = const JsonCodec()}) => codec.encode(toMap());
 
   @override
-  bool operator ==(covariant LatLng other) {
+  bool operator ==(Object other) {
     if (identical(this, other)) return true;
 
-    return other.latitude == latitude && other.longitude == longitude;
+    return other is LatLng &&
+        other.latitude == latitude &&
+        other.longitude == longitude;
   }
 
   @override

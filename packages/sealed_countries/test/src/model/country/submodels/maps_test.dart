@@ -24,6 +24,11 @@ void main() => group("$Maps", () {
     ),
   );
 
+  test(
+    "not equal to other types",
+    () => expect(value == TestData.object, isFalse),
+  );
+
   group("equality", () {
     const other = Maps(
       googleMaps: "${TestData.float}",
