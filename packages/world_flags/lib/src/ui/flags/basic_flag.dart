@@ -30,7 +30,8 @@ import "../painters/multi_element_painter.dart";
 /// `CustomElementsProperties` (i.e. a coat of arms) are painted only by the
 /// [elementsBuilder] of that flag, and without it the flag has none of them.
 /// For a ready-made flag, use `CountryFlag.simplified` or the flags from the
-/// `smallSimplifiedFlagsMap` instead.
+/// `smallSimplifiedFlagsMap` instead: simplified renditions, which may omit
+/// custom details or use an alternative design.
 @immutable
 class BasicFlag extends DecoratedFlagWidget {
   /// Creates a new instance of [BasicFlag].

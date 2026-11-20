@@ -306,7 +306,12 @@ class _FlagShaderSurfaceState extends State<FlagShaderSurface>
     } else {
       delegate = _managedDelegateFor(flag, isOutdated: isDelegateOutdated);
     }
-    if (!isPainterOutdated && _painter?.shader == delegate) return;
+    // Maps may be changed in place, so the flag is compared too.
+    if (!isPainterOutdated &&
+        _painter?.shader == delegate &&
+        !_isRepaintedFlag(_paintedFlag, flag)) {
+      return;
+    }
 
     _disposePainter();
     _painter = _createPainter(flag, delegate);

@@ -11,9 +11,11 @@ import "../model/flag_properties.dart";
 /// elements, and aspect ratios.
 ///
 /// Note: the custom elements of a flag (i.e. a coat of arms) are described by
-/// the properties, but painted by a painter of that flag. So for the whole
-/// flag widget use the `smallSimplifiedFlagsMap` (or `CountryFlag.simplified`)
-/// instead of a `BasicFlag` built from these properties alone.
+/// the properties, but painted by a painter of that flag. So instead of a
+/// `BasicFlag` built from these properties alone, use the ready-made flags of
+/// the `smallSimplifiedFlagsMap` (or `CountryFlag.simplified`). Keep in mind
+/// that those are simplified renditions, which may omit custom details or use
+/// an alternative design.
 ///
 /// Example usage:
 /// ```dart

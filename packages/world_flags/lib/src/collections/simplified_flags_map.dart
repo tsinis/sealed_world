@@ -52,9 +52,9 @@ import "../ui/painters/custom/vct_painter.dart";
 import "../ui/painters/custom/vir_painter.dart";
 import "../ui/painters/multi_element_painter.dart";
 
-/// A map that associates country objects (excluding Afghanistan and French
-/// Guiana - because they have alternative flag representations) with simplified
-/// flag representations.
+/// A map that associates country objects (excluding French Guiana - because it
+/// has an alternative flag representation) with simplified flag
+/// representations.
 ///
 /// This map is used to provide simplified flag representations for various
 /// countries. Each entry in the map consists of a country as the key and a

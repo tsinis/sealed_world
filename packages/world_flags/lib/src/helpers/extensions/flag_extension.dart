@@ -12,8 +12,10 @@ extension FlagExtension on WorldCountry {
   /// Retrieves the [FlagProperties] associated with the default [WorldCountry].
   ///
   /// Note: these are not enough to paint a flag with custom elements (i.e. a
-  /// coat of arms), which is painted by a painter of that flag. To get the
-  /// whole flag, use `CountryFlag.simplified` or the `smallSimplifiedFlagsMap`.
+  /// coat of arms), which is painted by a painter of that flag. For a
+  /// ready-made flag, use `CountryFlag.simplified` or the
+  /// `smallSimplifiedFlagsMap`: simplified renditions, which may omit custom
+  /// details or use an alternative design.
   FlagProperties? get flagProperties => flagPropertiesMap[this];
 
   /// Combines [flagStripeColors] and [flagElementsColors] into a single list of
