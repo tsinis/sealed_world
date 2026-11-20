@@ -1,4 +1,4 @@
-// ignore_for_file: prefer-static-class, avoid-long-files
+// ignore_for_file: avoid-long-files, it's TODO!
 import "dart:ui";
 
 import "../constants/flag_constants.dart";

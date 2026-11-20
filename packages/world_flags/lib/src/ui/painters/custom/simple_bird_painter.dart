@@ -16,7 +16,6 @@ final class SimpleBirdPainter extends MultiElementPainter {
   Record get variant => (super.variant, _originalAspectRatio);
 
   @override
-  // ignore: avoid-unnecessary-getter, _originalAspectRatio shouldn't be public.
   double get originalAspectRatio => _originalAspectRatio;
 
   @override
@@ -87,106 +86,104 @@ final class SimpleBirdPainter extends MultiElementPainter {
     return (canvas: canvas, bounds: birdSize, child: property.child);
   }
 
-  static Path _drawPath(double width, double height) =>
-      // ignore: avoid-returning-cascades, it's exceptional.
-      Path()
-        ..moveTo(width, height * 0.2)
-        ..lineTo(width * 0.68, height * 0.2)
-        ..cubicTo(
-          width * 0.74,
-          height * 0.14,
-          width * 0.72,
-          height * 0.03,
-          width * 0.63,
-          0,
-        )
-        ..cubicTo(width * 0.6, 0, width * 0.58, 0, width * 0.54, height * 0.02)
-        ..cubicTo(
-          width * 0.52,
-          height * 0.02,
-          width * 0.51,
-          height * 0.04,
-          width * 0.5,
-          height * 0.06,
-        )
-        ..cubicTo(
-          width * 0.45,
-          height * -0.01,
-          width * 0.34,
-          0,
-          width * 0.3,
-          height * 0.08,
-        )
-        ..cubicTo(
-          width * 0.29,
-          height * 0.12,
-          width * 0.3,
-          height * 0.16,
-          width * 0.32,
-          height * 0.2,
-        )
-        ..lineTo(0, height * 0.2)
-        ..cubicTo(
-          0,
-          height * 0.28,
-          width * 0.07,
-          height * 0.35,
-          width * 0.16,
-          height * 0.35,
-        )
-        ..lineTo(width * 0.16, height * 0.35)
-        ..cubicTo(
-          width * 0.16,
-          height * 0.43,
-          width * 0.22,
-          height * 0.5,
-          width * 0.31,
-          height * 0.5,
-        )
-        ..cubicTo(
-          width * 0.31,
-          height * 0.53,
-          width * 0.31,
-          height * 0.56,
-          width * 0.33,
-          height * 0.58,
-        )
-        ..lineTo(width * 0.2, height * 0.71)
-        ..lineTo(width * 0.3, height * 0.8)
-        ..lineTo(width * 0.44, height * 0.67)
-        ..lineTo(width * 0.46, height * 0.67)
-        ..lineTo(width * 0.37, height * 0.86)
-        ..lineTo(width * 0.5, height)
-        ..lineTo(width * 0.63, height * 0.86)
-        ..lineTo(width * 0.54, height * 0.67)
-        ..lineTo(width * 0.56, height * 0.67)
-        ..lineTo(width * 0.7, height * 0.8)
-        ..lineTo(width * 0.8, height * 0.71)
-        ..lineTo(width * 0.67, height * 0.58)
-        ..cubicTo(
-          width * 0.69,
-          height * 0.56,
-          width * 0.69,
-          height * 0.53,
-          width * 0.69,
-          height * 0.5,
-        )
-        ..cubicTo(
-          width * 0.78,
-          height * 0.5,
-          width * 0.84,
-          height * 0.43,
-          width * 0.84,
-          height * 0.35,
-        )
-        ..lineTo(width * 0.84, height * 0.35)
-        ..cubicTo(
-          width * 0.92,
-          height * 0.35,
-          width,
-          height * 0.28,
-          width,
-          height * 0.2,
-        )
-        ..lineTo(width, height * 0.2);
+  static Path _drawPath(double width, double height) => Path()
+    ..moveTo(width, height * 0.2)
+    ..lineTo(width * 0.68, height * 0.2)
+    ..cubicTo(
+      width * 0.74,
+      height * 0.14,
+      width * 0.72,
+      height * 0.03,
+      width * 0.63,
+      0,
+    )
+    ..cubicTo(width * 0.6, 0, width * 0.58, 0, width * 0.54, height * 0.02)
+    ..cubicTo(
+      width * 0.52,
+      height * 0.02,
+      width * 0.51,
+      height * 0.04,
+      width * 0.5,
+      height * 0.06,
+    )
+    ..cubicTo(
+      width * 0.45,
+      height * -0.01,
+      width * 0.34,
+      0,
+      width * 0.3,
+      height * 0.08,
+    )
+    ..cubicTo(
+      width * 0.29,
+      height * 0.12,
+      width * 0.3,
+      height * 0.16,
+      width * 0.32,
+      height * 0.2,
+    )
+    ..lineTo(0, height * 0.2)
+    ..cubicTo(
+      0,
+      height * 0.28,
+      width * 0.07,
+      height * 0.35,
+      width * 0.16,
+      height * 0.35,
+    )
+    ..lineTo(width * 0.16, height * 0.35)
+    ..cubicTo(
+      width * 0.16,
+      height * 0.43,
+      width * 0.22,
+      height * 0.5,
+      width * 0.31,
+      height * 0.5,
+    )
+    ..cubicTo(
+      width * 0.31,
+      height * 0.53,
+      width * 0.31,
+      height * 0.56,
+      width * 0.33,
+      height * 0.58,
+    )
+    ..lineTo(width * 0.2, height * 0.71)
+    ..lineTo(width * 0.3, height * 0.8)
+    ..lineTo(width * 0.44, height * 0.67)
+    ..lineTo(width * 0.46, height * 0.67)
+    ..lineTo(width * 0.37, height * 0.86)
+    ..lineTo(width * 0.5, height)
+    ..lineTo(width * 0.63, height * 0.86)
+    ..lineTo(width * 0.54, height * 0.67)
+    ..lineTo(width * 0.56, height * 0.67)
+    ..lineTo(width * 0.7, height * 0.8)
+    ..lineTo(width * 0.8, height * 0.71)
+    ..lineTo(width * 0.67, height * 0.58)
+    ..cubicTo(
+      width * 0.69,
+      height * 0.56,
+      width * 0.69,
+      height * 0.53,
+      width * 0.69,
+      height * 0.5,
+    )
+    ..cubicTo(
+      width * 0.78,
+      height * 0.5,
+      width * 0.84,
+      height * 0.43,
+      width * 0.84,
+      height * 0.35,
+    )
+    ..lineTo(width * 0.84, height * 0.35)
+    ..cubicTo(
+      width * 0.92,
+      height * 0.35,
+      width,
+      height * 0.28,
+      width,
+      height * 0.2,
+    )
+    ..lineTo(width, height * 0.2);
 }

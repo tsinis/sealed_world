@@ -1,5 +1,3 @@
-// ignore_for_file: avoid-passing-default-values
-
 import "package:flutter/foundation.dart";
 import "package:flutter/widgets.dart";
 
@@ -26,6 +24,14 @@ import "../painters/multi_element_painter.dart";
 /// interface for decorated flags. It allows for various customizations such as
 /// aspect ratio, decoration, padding, height, width, and custom painters
 /// for background and foreground elements.
+///
+/// Note: the properties alone are enough only for flags whose elements are
+/// simple shapes (see `FlagProperties.baseElementType`). Elements that are
+/// `CustomElementsProperties` (i.e. a coat of arms) are painted only by the
+/// [elementsBuilder] of that flag, and without it the flag has none of them.
+/// For a ready-made flag, use `CountryFlag.simplified` or the flags from the
+/// `smallSimplifiedFlagsMap` instead: simplified renditions, which may omit
+/// custom details or use an alternative design.
 @immutable
 class BasicFlag extends DecoratedFlagWidget {
   /// Creates a new instance of [BasicFlag].
@@ -133,6 +139,7 @@ class BasicFlag extends DecoratedFlagWidget {
           "aspectRatio",
           aspectRatio,
           ifNull: "$theme flag's aspect ratio ($flagAspectRatio)",
+          // ignore: avoid-passing-default-values, the default is kNoDefaultValue.
           defaultValue: null,
         ),
       )
@@ -212,6 +219,7 @@ class BasicFlag extends DecoratedFlagWidget {
           ifNull: "no elements properties",
         ),
       )
+      // ignore: avoid-passing-default-values, the default is kNoDefaultValue.
       ..add(StringProperty("semanticLabel", semanticLabel, defaultValue: null));
   }
 

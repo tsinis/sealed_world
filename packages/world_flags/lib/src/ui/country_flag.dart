@@ -1,9 +1,6 @@
-// ignore_for_file: avoid-passing-default-values
-
 import "package:sealed_countries/sealed_countries.dart";
 
-// ignore: avoid-importing-entrypoint-exports, only shows maps.
-import "../../world_flags.dart" show smallSimplifiedFlagsMap;
+import "../collections/simplified_flags_map.dart";
 import "flags/basic_flag.dart";
 import "flags/iso/iso_flag.dart";
 

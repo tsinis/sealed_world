@@ -1,5 +1,3 @@
-// ignore_for_file: prefer-static-class
-
 import "dart:ui";
 
 import "../model/colors_properties.dart";

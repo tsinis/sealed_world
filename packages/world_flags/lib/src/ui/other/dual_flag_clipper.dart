@@ -50,7 +50,6 @@ class DualFlagClipper extends CustomClipper<Path> {
     final farEnd = lineEnd + perpendicular * extent;
     final farStart = lineStart + perpendicular * extent;
 
-    // ignore: avoid-returning-cascades, it's common for the custom painter api.
     return Path()
       ..moveTo(lineStart.dx, lineStart.dy)
       ..lineTo(lineEnd.dx, lineEnd.dy)

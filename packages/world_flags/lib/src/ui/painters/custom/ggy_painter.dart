@@ -1,6 +1,6 @@
 // The SVG reference path contains unavoidable long segments; splitting further would
 // reduce readability and introduce accidental geometry errors, so we ignore line length.
-// ignore_for_file: lines_longer_than_80_chars, avoid-similar-names
+// ignore_for_file: lines_longer_than_80_chars
 import "dart:ui";
 
 import "../../../model/typedefs.dart";

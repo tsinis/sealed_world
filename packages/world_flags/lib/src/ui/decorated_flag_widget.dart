@@ -1,5 +1,3 @@
-// ignore_for_file: avoid-passing-default-values
-
 import "package:flutter/widgets.dart";
 
 import "../interfaces/decorated_flag_interface.dart";

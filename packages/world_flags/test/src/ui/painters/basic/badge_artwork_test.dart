@@ -234,7 +234,4 @@ final class _BadgeArtworkTest implements Canvas {
 }
 
 /// Encodes the palette index into the color, so a test can read it back.
-// The analyzer wants a cascade here and DCM would rather not return one, so
-// the rules are traded off explicitly.
-// ignore: avoid-returning-cascades
 Paint _paint(int index) => Paint()..color = Color(index + 0xff000000);

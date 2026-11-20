@@ -175,7 +175,6 @@ final class BadgeArtwork {
     return built;
   }
 
-  // ignore: avoid-returning-cascades, it's a one-expression factory.
   Path _emptyPath() => Path()..fillType = _fillType;
 
   List<int> _layerWindings() {

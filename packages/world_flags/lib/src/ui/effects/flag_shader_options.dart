@@ -1,5 +1,3 @@
-// ignore_for_file: prefer-class-destructuring
-
 import "dart:ui" show Offset;
 
 import "package:flutter/foundation.dart";

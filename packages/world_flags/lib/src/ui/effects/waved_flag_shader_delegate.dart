@@ -91,49 +91,63 @@ class WavedFlagShaderDelegate extends AnimatedFlagShaderDelegate {
   static Future<void> warmUp([String? assetKey]) =>
       StaticFlagShaderDelegate.warmUp(assetKey ?? _shaderPath);
 
+  // Float uniforms of the shader, in the order of their declaration (the size
+  // takes 0-1, set by the super class). Keep in sync with `waved_flag.frag`.
+  static const _time = 2;
+  static const _waveAmplitude = 3;
+  static const _waveFrequency = 4;
+  static const _wavePhaseShift = 5;
+  static const _secondaryAmplitude = 6;
+  static const _secondaryFrequency = 7;
+  static const _leftEdgePinned = 8;
+  static const _rightEdgePinned = 9;
+  static const _pinSoftness = 10;
+  static const _poleMargin = 11;
+  static const _shadingEnabled = 12;
+  static const _foldStrength = 13;
+  static const _highlightStrength = 14;
+  static const _shadowStrength = 15;
+  static const _sheenStrength = 16;
+  static const _sheenFrequency = 17;
+  static const _perspective = 18;
+  static const _seed = 19;
+  static const _waveDirection = 20; // A vector, it takes 20-21.
+  static const _turbulence = 22;
+  static const _fabricVisibility = 23;
+
   @override
   bool get animate => options.animate;
 
   @override
   void configureShader(FragmentShader shader, Size size, Image image) {
     super.configureShader(shader, size, image);
-
-    // Time uniform (indices 2-3).
-    final timeValue = options.animate ? time : options.frozenPhase;
-
-    // Wave parameters (indices 4-8).
-    // Edge pinning (indices 9-12).
-    // Shading (indices 13-19).
-    // Seed/wave direction (indices 20-22).
-    // Turbulence (index 23).
-    // Fabric visibility (index 24).
     final waveDirection = options.waveDirection; // Normalized by the shader.
+
     shader
-      ..setFloat(2, timeValue)
-      // The ticker already scales the time by the animation speed, so it must
-      // not be applied twice (and must not affect the frozen pose).
-      ..setFloat(3, 1)
-      ..setFloat(4, options.waveAmplitude)
-      ..setFloat(5, options.waveFrequency)
-      ..setFloat(6, options.wavePhaseShift)
-      ..setFloat(7, options.secondaryAmplitude)
-      ..setFloat(8, options.secondaryFrequency)
-      ..setFloat(9, options.leftEdgePinned ? 1 : 0) // Edge pinning (9-12).
-      ..setFloat(10, options.rightEdgePinned ? 1.0 : 0.0)
-      ..setFloat(11, options.pinSoftness)
-      ..setFloat(12, options.poleMargin)
-      ..setFloat(13, options.shadingEnabled ? 1 : 0) // Shading (13-19).
-      ..setFloat(14, options.foldStrength)
-      ..setFloat(15, options.highlightStrength)
-      ..setFloat(16, options.shadowStrength)
-      ..setFloat(17, options.sheenStrength)
-      ..setFloat(18, options.sheenFrequency)
-      ..setFloat(19, options.perspective)
-      ..setFloat(20, options.seed) // Seed/wave direction (indices 20-22).
-      ..setFloat(21, waveDirection.dx)
-      ..setFloat(22, waveDirection.dy)
-      ..setFloat(23, options.turbulence) // Turbulence, (index 23).
-      ..setFloat(24, options.fabricVisibility.clamp(0, 1));
+      // The ticker already scales the time by the animation speed, so the
+      // speed must not be applied again (nor affect the frozen pose).
+      ..setFloat(_time, options.animate ? time : options.frozenPhase)
+      ..setFloat(_waveAmplitude, options.waveAmplitude)
+      ..setFloat(_waveFrequency, options.waveFrequency)
+      ..setFloat(_wavePhaseShift, options.wavePhaseShift)
+      ..setFloat(_secondaryAmplitude, options.secondaryAmplitude)
+      ..setFloat(_secondaryFrequency, options.secondaryFrequency)
+      ..setFloat(_leftEdgePinned, options.leftEdgePinned ? 1 : 0)
+      ..setFloat(_rightEdgePinned, options.rightEdgePinned ? 1 : 0)
+      ..setFloat(_pinSoftness, options.pinSoftness)
+      ..setFloat(_poleMargin, options.poleMargin)
+      ..setFloat(_shadingEnabled, options.shadingEnabled ? 1 : 0)
+      ..setFloat(_foldStrength, options.foldStrength)
+      ..setFloat(_highlightStrength, options.highlightStrength)
+      ..setFloat(_shadowStrength, options.shadowStrength)
+      ..setFloat(_sheenStrength, options.sheenStrength)
+      ..setFloat(_sheenFrequency, options.sheenFrequency)
+      ..setFloat(_perspective, options.perspective)
+      ..setFloat(_seed, options.seed)
+      ..setFloat(_waveDirection, waveDirection.dx)
+      ..setFloat(_waveDirection + 1, waveDirection.dy)
+      ..setFloat(_turbulence, options.turbulence)
+      ..setFloat(_fabricVisibility, options.fabricVisibility.clamp(0, 1));
   }
 }
 

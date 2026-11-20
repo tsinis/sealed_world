@@ -93,7 +93,6 @@ abstract base class ElementsPainter extends CustomPainter {
   /// Returns a configured [Paint] object.
   @protected
   Paint paintCreator([Color? color]) =>
-      // ignore: avoid-returning-cascades, it's ok for a shorthand method.
       Paint()..color = color ?? property.mainColor;
 
   /// Retrieves the shape type if it matches the specified type [T].

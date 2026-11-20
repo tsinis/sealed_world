@@ -11,15 +11,17 @@ void main() => runApp(
     textStyle: AppText.bodyMedium,
     pageRouteBuilder: <T>(settings, builder) =>
         AppPageRoute<T>(settings: settings, builder: builder),
-    home: FlagTheme(
-      data: const DecoratedFlagData(
+    home: const FlagTheme(
+      data: DecoratedFlagData(
         aspectRatio: 1,
         flagChild: Text("Old child in theme"),
       ),
       child: ColoredBox(
         color: AppColors.surface,
         child: Center(
-          child: MaybeWidget(const CountryAfg().flagProperties, BasicFlag.new),
+          // Afghanistan's emblem is painted by the painter of its flag, so use
+          // the ready-made flag instead of building it from its properties.
+          child: CountryFlag.simplified(CountryAfg()),
         ),
       ),
     ),

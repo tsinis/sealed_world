@@ -1,5 +1,3 @@
-// ignore_for_file: avoid-passing-default-values
-
 import "package:flutter/foundation.dart";
 import "package:flutter/widgets.dart";
 import "package:sealed_countries/sealed_countries.dart" show IsoStandardized;
@@ -130,6 +128,7 @@ class IsoFlag<T extends IsoStandardized, F extends BasicFlag>
           "aspectRatio",
           aspectRatio,
           ifNull: "$theme flag's aspect ratio (${basicFlag?.flagAspectRatio})",
+          // ignore: avoid-passing-default-values, the default is kNoDefaultValue.
           defaultValue: null,
         ),
       )
@@ -223,6 +222,7 @@ class IsoFlag<T extends IsoStandardized, F extends BasicFlag>
           ifNull: "no shader provided",
         ),
       )
+      // ignore: avoid-passing-default-values, the default is kNoDefaultValue.
       ..add(StringProperty("semanticLabel", semanticLabel, defaultValue: null));
   }
 

@@ -1,5 +1,3 @@
-// ignore_for_file: prefer-class-destructuring
-
 import "dart:ui";
 
 import "package:flutter/foundation.dart";

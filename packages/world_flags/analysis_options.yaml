@@ -9,3 +9,36 @@ analyzer:
     - windows/**
     - macos/**
     - linux/**
+
+# Rules that fight the style of this package (flags declared as constant data
+# and drawn by painters), so they are tuned here instead of being ignored in
+# almost every file. A rule configured here replaces its shared configuration.
+dart_code_metrics:
+  rules:
+    # Flags, their properties and maps are top-level constants.
+    - prefer-static-class: false
+    # Painters and diagnostics read a few fields of the same model.
+    - prefer-class-destructuring: false
+    # A cascade is the shortest way to build a `Paint` or `Path`.
+    - avoid-returning-cascades: false
+    # Painters switch the formatter off around their artwork data.
+    - format-comment:
+        ignored-patterns:
+          - ^coverage.*
+          - ^dart format (on|off)$
+    # The artwork getters of the painters override those of their mixin.
+    - avoid-unnecessary-getter:
+        exclude:
+          - lib/src/ui/painters/custom/**
+    # Painters name their paths and points (i.e. `path1`, `path2`).
+    - avoid-similar-names:
+        similarity-threshold: 0.8
+        ignored-names:
+          - path
+        exclude:
+          - lib/src/ui/painters/custom/**
+    # The maps of all flags (the long files of their data are still a TODO).
+    - avoid-long-files:
+        exclude:
+          - lib/**/*_painter.dart
+          - lib/src/collections/**

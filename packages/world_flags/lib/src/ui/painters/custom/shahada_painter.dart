@@ -1,5 +1,3 @@
-// ignore_for_file: format-comment
-
 import "dart:ui";
 
 import "../../../model/typedefs.dart";
