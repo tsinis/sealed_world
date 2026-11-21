@@ -28,7 +28,7 @@ CHORE
 
 - Requires Dart 3.14 and Flutter 3.50.
 - Golden tests use [gleon](https://pub.dev/packages/gleon) v0.6.2 from pub.dev instead of a git dependency.
-- The waved flag shader (`shaders/waved_flag.frag`) is restructured, with named constants. Its unused animation speed uniform is removed and the wave direction is one `vec2` uniform, so the uniforms after the time moved one index down: if you copied the shader, or override `WavedFlagShaderDelegate.configureShader` to set its uniforms, update the `setFloat` indices too (there are 24 floats now, 0 to 23).
+- The waved flag shader (`shaders/waved_flag.frag`) is restructured, with named constants. Its unused animation speed uniform is removed and the wave direction is one `vec2` uniform, so the uniforms after the time moved one index down (there are 24 floats now, 0 to 23, instead of 25). `WavedFlagShaderDelegate.configureShader` is the place to customize them: an override of it always sets the uniforms of this package's shader, so it has to use the new `setFloat` indices. If you copied the shader, keep the `setFloat` indices of your copy in line with its uniforms: switch to the new indices only once your copy adopts the new uniform layout, a copy that keeps the old layout has to keep the old indices.
 - The flag maps (`smallSimplifiedFlagsMap` and others) are declared in the `src` folder instead of the library file, and are exported as before.
 - Uses `List.unmodifiableOf` (Dart 3.13) instead of the soon deprecated `List.unmodifiable`.
 - Updated [material_ui](https://pub.dev/packages/material_ui) dependency to v1.11.0. Material is no longer a part of Flutter SDK since 3.50, and this package only needs it for the deprecated `FlagThemeData`, so the dependency will be removed together with it.
