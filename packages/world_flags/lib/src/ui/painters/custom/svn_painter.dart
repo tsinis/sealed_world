@@ -11,6 +11,9 @@ import "../basic/custom_elements_painter.dart";
 ///
 /// Draws its coat of arms: the shield with the mountain and the waves as a
 /// badge, and the three stars above them with the star shape.
+///
+/// Palette: the red border is the main color, then the `otherColors` are the
+/// blue of the shield, the white of the mountain and the yellow of the stars.
 final class SvnPainter extends CustomElementsPainter with BadgeArtworkPainter {
   /// Creates a new instance of [SvnPainter].
   const new(super._properties, super.aspectRatio);
@@ -110,6 +113,9 @@ final class SvnPainter extends CustomElementsPainter with BadgeArtworkPainter {
   @override
   FlagParentBounds paintFlagElements(Canvas canvas, Size size) {
     final shield = super.paintFlagElements(canvas, size);
+    // Stars in a shield without extent would have no aspect ratio.
+    if (shield.bounds.isEmpty) return shield;
+
     final color = customColor(2); // Yellow.
     ElementsProperties? stars;
     for (final (offset, heightFactor) in _stars.reversed) {

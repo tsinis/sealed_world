@@ -1,8 +1,8 @@
 {
   "_totals": {
     "clips": 284,
-    "contours": 2422,
-    "draws": 1370,
+    "contours": 2447,
+    "draws": 1371,
     "saveLayers": 0
   },
   "abw": {
@@ -403,8 +403,8 @@
   },
   "egy": {
     "clips": 1,
-    "contours": 13,
-    "draws": 9,
+    "contours": 22,
+    "draws": 10,
     "saveLayers": 0
   },
   "eri": {
@@ -835,7 +835,7 @@
   },
   "mda": {
     "clips": 1,
-    "contours": 16,
+    "contours": 24,
     "draws": 11,
     "saveLayers": 0
   },
@@ -1441,7 +1441,7 @@
   },
   "vir": {
     "clips": 1,
-    "contours": 15,
+    "contours": 23,
     "draws": 9,
     "saveLayers": 0
   },

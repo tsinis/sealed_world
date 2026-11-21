@@ -10,6 +10,9 @@ import "../basic/custom_elements_painter.dart";
 /// Draws its emblem: the lotus flower above the bridge and the water, and the
 /// arc of five stars above them with the star shape.
 ///
+/// Palette: the emblem is the main color, the stars are the first of the
+/// `otherColors`.
+///
 /// The lotus, the bridge and the water are built the way the flag is
 /// constructed: from circles (and the water from bars), cut and joined into a
 /// single path. That path is built once, in the units of the construction
@@ -131,6 +134,10 @@ final class MacPainter extends CustomElementsPainter {
       ..drawPath(_emblem, paintCreator())
       ..restore();
 
+    final emblem = (canvas: canvas, bounds: bounds, child: property.child);
+    // Stars in an emblem without extent would have no aspect ratio.
+    if (bounds.isEmpty) return emblem;
+
     final color = customColor(0); // Yellow.
     ElementsProperties? stars;
     for (final (offset, heightFactor, angle) in _stars.reversed) {
@@ -145,6 +152,6 @@ final class MacPainter extends CustomElementsPainter {
     }
     paintChild(canvas, bounds, stars);
 
-    return (canvas: canvas, bounds: bounds, child: property.child);
+    return emblem;
   }
 }

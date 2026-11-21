@@ -10,12 +10,16 @@ import "package:world_flags/world_flags.dart"
         AlmondPainter,
         CustomDiagonalPainter,
         CustomElementsPainter,
+        CxrPainter,
         HrvPainter,
+        MacPainter,
         PrtPainter,
         ShahadaPainter,
         SimpleBirdPainter,
         SimpleShieldPainter,
-        TaegukgiPainter;
+        SvnPainter,
+        TaegukgiPainter,
+        VirPainter;
 
 import "../../../../helpers/recording_canvas.dart";
 
@@ -118,6 +122,48 @@ void main() => group("$CustomElementsPainter", () {
     });
   });
 
+  group("an emblem without extent", () {
+    const flat = [CustomElementsProperties(Color(0xff102030), heightFactor: 0)];
+    for (final painter in <CustomElementsPainter>[
+      MacPainter(flat, 1.5),
+      SvnPainter(flat, 1.5),
+    ]) {
+      test("${painter.runtimeType} skips the stars in it", () {
+        final canvas = RecordingCanvas();
+
+        expect(() => painter.paint(canvas, size), returnsNormally);
+      });
+    }
+  });
+
+  group("$CxrPainter", () {
+    const map = CustomElementsProperties(Color(0xff1c8a42), heightFactor: 0.36);
+    const bird = CustomElementsProperties(Color(0xffffc639), heightFactor: 0.5);
+
+    test("paints the bird of the second custom element", () {
+      final canvas = RecordingCanvas();
+      CxrPainter(const [map, bird], 2).paint(canvas, size);
+
+      expect(canvas.drawCount, 2);
+      expect(canvas.layers.last.color, isSameColorAs(bird.mainColor));
+    });
+
+    test("skips the bird without a second custom element", () {
+      final canvas = RecordingCanvas();
+      CxrPainter(const [map], 2).paint(canvas, size);
+
+      expect(canvas.drawCount, 1);
+      expect(canvas.layers.single.color, isSameColorAs(map.mainColor));
+    });
+  });
+
+  test("$VirPainter sizes its eagle from the element", () {
+    expect(
+      _virEagleHeight(size, 0.45),
+      closeTo(_virEagleHeight(size, 0.9) / 2, 1),
+    );
+  });
+
   test("paints a shield without a custom element", () {
     const shapeOnly = [
       ElementsProperties(Color(0xff000000), shape: Rectangle()),
@@ -141,4 +187,30 @@ final class _CustomElementsPainterTest extends CustomElementsPainter {
 
   @override
   FlagParentBounds? paintFlagElements(Canvas canvas, Size size) => null;
+}
+
+/// The height of the eagle a [VirPainter] paints with the [heightFactor].
+double _virEagleHeight(Size size, double heightFactor) {
+  const eagle = Color(0xfff4c53d);
+  final properties = [
+    CustomElementsProperties(
+      eagle,
+      otherColors: const [
+        Color(0xff162667),
+        Color(0xffa60032),
+        Color(0xff0081c6),
+        Color(0xff369443),
+      ],
+      heightFactor: heightFactor,
+      widthFactor: 0.6,
+    ),
+  ];
+  final canvas = RecordingCanvas();
+  VirPainter(properties, 1.5).paint(canvas, size);
+
+  return canvas.layers
+      .where((layer) => layer.color.toARGB32() == eagle.toARGB32())
+      .map((layer) => layer.path.getBounds())
+      .reduce((all, bounds) => all.expandToInclude(bounds))
+      .height;
 }

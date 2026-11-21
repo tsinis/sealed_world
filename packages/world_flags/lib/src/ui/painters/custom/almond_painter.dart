@@ -8,6 +8,9 @@ import "../../../model/typedefs.dart";
 import "../basic/custom_elements_painter.dart";
 
 /// Painter for the Guam and Eswatini flag.
+///
+/// Palette of Guam: the border of the seal is the main color, the first four
+/// `otherColors` fill it with the sky, the palm crown, the sea and the sand.
 final class AlmondPainter extends CustomElementsPainter {
   /// Creates a new instance of [AlmondPainter] for Guam flag.
   const new gum(super._properties, super.aspectRatio) : _isVertical = true;

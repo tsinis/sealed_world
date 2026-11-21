@@ -7,12 +7,15 @@ import "../basic/custom_elements_painter.dart";
 import "../multi_element_painter.dart";
 
 /// Painter for the U.S. Virgin Islands flag.
+///
+/// Palette: the one of the eagle (see `SimpleBirdPainter`), whose third other
+/// color (the sceptre) also colors the letters.
 final class VirPainter extends CustomElementsPainter {
   /// Creates a new instance of [VirPainter].
   const new(super._properties, super.aspectRatio);
 
-  /// The height of the eagle, relative to the flag height.
-  static const _eagleHeightFactor = 0.72;
+  /// The height of the eagle, relative to the box of the letters.
+  static const _eagleScale = 0.8;
 
   @override
   double get originalAspectRatio => flagVirProperties.aspectRatio;
@@ -73,7 +76,9 @@ final class VirPainter extends CustomElementsPainter {
       ..restore();
 
     // The eagle stands between the letters, smaller than their box.
-    final eagle = customProperties.copyWith(heightFactor: _eagleHeightFactor);
+    final eagle = customProperties.copyWith(
+      heightFactor: customProperties.heightFactor * _eagleScale,
+    );
 
     return SimpleBirdPainter.vir([eagle], aspectRatio).paint(canvas, size);
   }

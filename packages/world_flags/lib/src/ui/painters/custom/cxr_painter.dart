@@ -97,10 +97,13 @@ final class CxrPainter extends MultiElementPainter {
     final map = proportionalBounds(size, _mapRatio);
     _map.paint(canvas, map, badgePalette());
 
-    // The bird is the second custom element, in its own color.
-    final bird =
-        properties.whereType<CustomElementsProperties>().elementAtOrNull(1) ??
-        customProperties;
+    final result = (canvas: canvas, bounds: map, child: property.child);
+    // The bird is the second custom element, in its own color (if any).
+    final bird = properties
+        .whereType<CustomElementsProperties>()
+        .elementAtOrNull(1);
+    if (bird == null) return result;
+
     final paint = paintCreator(bird.mainColor);
     _bird.paint(
       canvas,
@@ -108,6 +111,6 @@ final class CxrPainter extends MultiElementPainter {
       (_) => paint,
     );
 
-    return (canvas: canvas, bounds: map, child: property.child);
+    return result;
   }
 }
