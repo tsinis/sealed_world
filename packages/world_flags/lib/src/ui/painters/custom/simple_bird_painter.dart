@@ -5,11 +5,6 @@ enum _Bird { egy, mda, vir }
 
 /// Painter for the simple bird: the shield eagle of the flags of Egypt, Moldova
 /// and the U.S. Virgin Islands, each in the colors of its flag.
-///
-/// The artwork is adapted from Twemoji graphics, Copyright 2019 Twitter, Inc
-/// and other contributors, licensed under CC-BY 4.0 (see the README of this
-/// package). It is converted to badge layers, cropped to the bird and colored
-/// by the flag palette.
 final class SimpleBirdPainter extends MultiElementPainter
     with BadgeArtworkPainter {
   /// Creates a new instance of [SimpleBirdPainter] for Egypt flag: the eagle of

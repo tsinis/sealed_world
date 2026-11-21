@@ -9,7 +9,7 @@ import "../basic/custom_elements_painter.dart";
 
 /// Painter for the Slovenia flag.
 ///
-/// Draws its coat of arms: the shield with the Triglav and the waves as a
+/// Draws its coat of arms: the shield with the mountain and the waves as a
 /// badge, and the three stars above them with the star shape.
 final class SvnPainter extends CustomElementsPainter with BadgeArtworkPainter {
   /// Creates a new instance of [SvnPainter].

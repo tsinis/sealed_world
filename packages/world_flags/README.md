@@ -179,7 +179,6 @@ cd tools && dart run :benchmarks world_flags
 This package is licensed under the MIT license (see [LICENSE](./LICENSE) for details). Its dependencies are under their respective licenses, which can be found in the corresponding `LICENSE` and `NOTICE` files.
 
 - [Project Roadmap](https://github.com/users/tsinis/projects/1)
-- The eagles of the flags of Egypt, Moldova and the U.S. Virgin Islands are adapted from [Twemoji](https://github.com/jdecked/twemoji) graphics, Copyright 2019 Twitter, Inc and other contributors, licensed under [CC-BY 4.0](https://creativecommons.org/licenses/by/4.0/). They were converted to the package's badge format, cropped to the birds and recolored.
 
 ### FAQ
 
