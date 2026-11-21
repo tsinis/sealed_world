@@ -1,6 +1,8 @@
 ## 3.7.0
 
-> Requires Dart 3.14 and Flutter 3.50, respects reduced motion, and the example app no longer depends on Material.
+> Last non-breaking release: deprecated members will be removed in the next version (December 2026).
+
+Requires Dart 3.14 and Flutter 3.50, respects reduced motion, and the example app no longer depends on Material.
 
 NEW FEATURES
 
