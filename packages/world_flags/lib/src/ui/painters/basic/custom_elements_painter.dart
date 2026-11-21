@@ -107,14 +107,21 @@ abstract base class CustomElementsPainter<T extends FlagParentBounds>
   ///
   /// - [size]: The size of the flag.
   /// - [artworkAspectRatio]: The width-to-height ratio the artwork keeps.
+  /// - [element]: The element whose box is used, the (first) custom element
+  ///   by default. Flags with more than one artwork pass the other ones here.
   ///
   /// Returns the bounds the artwork should be drawn into.
   @protected
-  Rect proportionalBounds(Size size, double artworkAspectRatio) {
+  Rect proportionalBounds(
+    Size size,
+    double artworkAspectRatio, {
+    ElementsProperties? element,
+  }) {
     assert(artworkAspectRatio > 0, "Aspect ratio should be greater than zero.");
     // Read from the custom element rather than the first one: flags that paint
     // a shape behind their badge keep that shape at the head of the list.
-    final element = customProperties;
+    // ignore: avoid-mutating-parameters, it's the default of the parameter.
+    element ??= customProperties;
     final height = min(
       size.height * element.heightFactor,
       (size.width * (element.widthFactor ?? 1)) / artworkAspectRatio,

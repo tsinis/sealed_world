@@ -1,180 +1,150 @@
 import "dart:ui";
 
-import "../../../data/flags_map_part_3.data.dart";
+import "../../../model/elements/elements_properties.dart";
+import "../../../model/shape.dart";
 import "../../../model/typedefs.dart";
 import "../basic/custom_elements_painter.dart";
-import "../common/star_painter.dart";
 
 /// Painter for the Macau flag.
+///
+/// Draws its emblem: the lotus flower above the bridge and the water, and the
+/// arc of five stars above them with the star shape.
+///
+/// The lotus, the bridge and the water are built the way the flag is
+/// constructed: from circles (and the water from bars), cut and joined into a
+/// single path. That path is built once, in the units of the construction
+/// sheet, and scaled to the emblem by the canvas.
 final class MacPainter extends CustomElementsPainter {
   /// Creates a new instance of [MacPainter].
   const new(super._properties, super.aspectRatio);
 
-  @override
-  double get originalAspectRatio => flagMacProperties.aspectRatio;
+  /// The box of the emblem (stars included) in the units of the construction
+  /// sheet, where the flag is 2880 by 1920 units, centered at its origin.
+  static const _box = Rect.fromLTRB(-485, -598, 485, 538);
+
+  /// The radius of the circles the petals and the bridge are made of.
+  static const _radius = 324.5;
+
+  /// The radius of the circles the side petals are made of.
+  static const _sideRadius = 381.5;
+
+  /// The radius of the circles that cut the tips of the petal outlines.
+  static const _tipRadius = 130.0;
+
+  /// The stars as a chain, painted in one go: the big one relative to the
+  /// emblem, and every small one relative to the bounds of the star before it
+  /// (as the star shape places its children), turned towards the arc center.
+  static const _stars = <(Offset, double, int)>[
+    (Offset(0, -0.8143), 0.1857, 0),
+    (Offset(-2.5982, 0.9669), 0.765, -35),
+    (Offset(-2.1782, 2.835), 1.1056, -65),
+    (Offset(9.688, -2.6239), 1.1056, 35),
+    (Offset(2.1782, 2.835), 1.1056, 65),
+  ];
+
+  /// The white part of the emblem, built on its first paint.
+  // ignore: avoid-explicit-type-declaration, vs specify_nonobvious_property_types.
+  static final Path _emblem = _constructedEmblem;
+
+  static Path _circle(double x, double y, [double radius = _radius]) =>
+      Path()..addOval(Rect.fromCircle(center: Offset(x, y), radius: radius));
+
+  /// The lens shape where the circles at `(x, y)` and `(-x, y)` overlap.
+  static Path _lens(double x, double y) => _and(_circle(x, y), _circle(-x, y));
+
+  static Path _and(Path first, Path second) =>
+      Path.combine(PathOperation.intersect, first, second);
+
+  static Path _or(Path first, Path second) =>
+      Path.combine(PathOperation.union, first, second);
+
+  static Path _without(Path first, Path second) =>
+      Path.combine(PathOperation.difference, first, second);
+
+  /// Follows the construction sheet: white shapes are joined, and the field
+  /// colored ones painted over them are cut out, in the order they are drawn.
+  static Path get _constructedEmblem {
+    // The bridge: two arches, thinned by the circles of the field color.
+    final arches = _and(
+      _or(_circle(-209, -7), _circle(209, -7)),
+      Path()..addRect(const Rect.fromLTRB(-224, 0, 224, 400)),
+    );
+    Path emblem = _without(
+      _without(arches, _circle(224, -39)),
+      _circle(-224, -39),
+    );
+
+    // The water: bars in the circle around the lotus, the top one split by
+    // the bridge.
+    final bars = Path()
+      ..addRect(const Rect.fromLTRB(-500, 285.5, -209, 317.5))
+      ..addRect(const Rect.fromLTRB(209, 285.5, 500, 317.5))
+      ..addRect(const Rect.fromLTRB(-500, 350.5, 500, 366.5))
+      ..addRect(const Rect.fromLTRB(-500, 399.5, 500, 424.5))
+      ..addRect(const Rect.fromLTRB(-500, 449.5, 500, 481.5))
+      ..addRect(const Rect.fromLTRB(-500, 497.5, 500, 547.5));
+    emblem = _or(emblem, _and(bars, _circle(0, -38, 576)));
+
+    // The middle petal: its outline, then the petal inside of it.
+    emblem = _or(emblem, _lens(158, -149));
+    emblem = _without(emblem, _lens(199, -118));
+    emblem = _without(emblem, _circle(0, -346, _tipRadius));
+    emblem = _or(emblem, _lens(212, -100));
+
+    // The side petals, the left one and then its mirror image.
+    for (final side in const [1.0, -1.0]) {
+      final clip = _circle(side * -234, -64);
+      emblem = _or(emblem, _and(_circle(side * -379, 307, _sideRadius), clip));
+      emblem = _without(
+        emblem,
+        _and(_circle(side * -370, 343, _sideRadius), _circle(side * -213, -91)),
+      );
+      emblem = _without(emblem, _circle(side * -485, 21, _tipRadius));
+      final petal = _and(
+        _circle(side * -339, 372, _sideRadius),
+        _circle(side * -182, -96),
+      );
+      final stemPoints = [
+        Offset(side * -100, 50),
+        Offset(side * -40, 100),
+        Offset(side * 10, 100),
+        Offset(side * 10, 200),
+        Offset(side * -50, 200),
+      ];
+      final stem = Path()..addPolygon(stemPoints, true);
+      emblem = _or(emblem, _and(_or(petal, stem), clip));
+    }
+
+    return emblem;
+  }
 
   @override
   FlagParentBounds paintFlagElements(Canvas canvas, Size size) {
-    final adjustedSize = ratioAdjustedSize(size, minRatio: 2);
-    final center = calculateCenter(size);
-    final height = adjustedSize.height;
-    final width = adjustedSize.width;
-
-    final path = Path()
-      ..moveTo(width * 0.59, height * 1.09)
-      ..cubicTo(
-        width * 0.58,
-        height * 1.09,
-        width * 0.56,
-        height * 1.1,
-        width * 0.55,
-        height * 1.12,
-      )
-      ..lineTo(width * 0.56, height * 1.05)
-      ..lineTo(width * 0.5, height * 0.79)
-      ..cubicTo(
-        width * 0.5,
-        height * 0.79,
-        width * 0.45,
-        height * 0.92,
-        width * 0.45,
-        height * 1.05,
-      )
-      ..lineTo(width * 0.45, height * 1.12)
-      ..cubicTo(
-        width * 0.44,
-        height * 1.1,
-        width * 0.43,
-        height * 1.09,
-        width * 0.42,
-        height * 1.08,
-      )
-      ..lineTo(width * 0.28, height * 1.13)
-      ..cubicTo(
-        width * 0.28,
-        height * 1.13,
-        width * 0.33,
-        height * 1.31,
-        width * 0.39,
-        height * 1.35,
-      )
-      ..cubicTo(
-        width * 0.45,
-        height * 1.38,
-        width * 0.48,
-        height * 1.29,
-        width * 0.5,
-        height * 1.28,
-      )
-      ..lineTo(width * 0.5, height * 1.28)
-      ..cubicTo(
-        width * 0.52,
-        height * 1.29,
-        width * 0.56,
-        height * 1.38,
-        width * 0.61,
-        height * 1.35,
-      )
-      ..lineTo(width * 0.72, height * 1.13)
-      ..cubicTo(
-        width * 0.72,
-        height * 1.13,
-        width * 0.65,
-        height * 1.05,
-        width * 0.59,
-        height * 1.09,
-      )
-      ..moveTo(width * 0.39, height * 1.71)
-      ..cubicTo(
-        width * 0.42,
-        height * 1.76,
-        width * 0.46,
-        height * 1.79,
-        width * 0.5,
-        height * 1.79,
-      )
-      ..cubicTo(
-        width * 0.54,
-        height * 1.79,
-        width * 0.58,
-        height * 1.76,
-        width * 0.61,
-        height * 1.71,
-      )
-      ..lineTo(width * 0.39, height * 1.71)
-      ..moveTo(width * 0.32, height * 1.57)
-      ..cubicTo(
-        width * 0.32,
-        height * 1.6,
-        width * 0.33,
-        height * 1.62,
-        width * 0.35,
-        height * 1.64,
-      )
-      ..lineTo(width * 0.65, height * 1.64)
-      ..cubicTo(
-        width * 0.67,
-        height * 1.62,
-        width * 0.67,
-        height * 1.6,
-        width * 0.68,
-        height * 1.57,
-      )
-      ..lineTo(width * 0.32, height * 1.57);
-
-    final path2 = Path()
-      ..moveTo(width * 0.72, height * 1.43)
-      ..lineTo(width * 0.56, height * 1.43)
-      ..cubicTo(
-        width * 0.52,
-        height * 1.43,
-        width * 0.52,
-        height * 1.37,
-        width * 0.52,
-        height * 1.36,
-      )
-      ..lineTo(width * 0.48, height * 1.36)
-      ..cubicTo(
-        width * 0.48,
-        height * 1.36,
-        width * 0.48,
-        height * 1.43,
-        width * 0.44,
-        height * 1.43,
-      )
-      ..lineTo(width * 0.28, height * 1.43)
-      ..lineTo(width * 0.29, height * 1.5)
-      ..lineTo(width * 0.44, height * 1.5)
-      ..cubicTo(
-        width * 0.47,
-        height * 1.5,
-        width * 0.49,
-        height * 1.48,
-        width * 0.5,
-        height * 1.45,
-      )
-      ..cubicTo(
-        width * 0.51,
-        height * 1.48,
-        width * 0.53,
-        height * 1.5,
-        width * 0.56,
-        height * 1.5,
-      )
-      ..lineTo(width * 0.71, height * 1.5)
-      ..lineTo(width * 0.72, height * 1.43);
-
-    final bounds = path.getBounds();
-    final paint = paintCreator();
+    final bounds = proportionalBounds(size, _box.width / _box.height);
+    final scale = bounds.height / _box.height;
 
     canvas
-      ..translate(center.dx - bounds.width, center.dy - bounds.height * 1.2)
-      ..drawPath(path2, paint)
-      ..drawPath(path, paint);
+      ..save()
+      ..translate(bounds.left, bounds.top)
+      ..scale(scale)
+      ..translate(-_box.left, -_box.top)
+      ..drawPath(_emblem, paintCreator())
+      ..restore();
 
-    return StarPainter([
-      properties.last,
-      // ignore: prefer-trailing-comma, new dart format
-    ], aspectRatio).paintFlagElements(canvas, adjustedSize);
+    final color = customColor(0); // Yellow.
+    ElementsProperties? stars;
+    for (final (offset, heightFactor, angle) in _stars.reversed) {
+      stars = ElementsProperties(
+        color,
+        shape: const Star(),
+        offset: offset,
+        heightFactor: heightFactor,
+        angle: angle,
+        child: stars,
+      );
+    }
+    paintChild(canvas, bounds, stars);
+
+    return (canvas: canvas, bounds: bounds, child: property.child);
   }
 }

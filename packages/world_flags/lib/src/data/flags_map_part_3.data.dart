@@ -287,47 +287,13 @@ const flagLkaProperties = FlagProperties(
 /// Flag properties of country Macau (MO).
 const flagMacProperties = FlagProperties(
   [ColorsProperties(Color(0xff067662))],
-  isSimplified: true,
   elementsProperties: [
     CustomElementsProperties(
       Color(0xffffffff),
-      offset: Offset(-0.1, 0),
-      heightFactor: 0.45,
-      widthFactor: 0.8,
-    ),
-    ElementsProperties(
-      Color(0xffFFDF1E),
-      shape: Star(),
-      offset: Offset(0, 0.26),
-      heightFactor: 0.24,
-      child: ElementsProperties(
-        Color(0xffFFDF1E),
-        shape: Star(),
-        offset: Offset(2.6, 0.95),
-        heightFactor: 0.7,
-        angle: 36,
-        child: ElementsProperties(
-          Color(0xffFFDF1E),
-          shape: Star(),
-          offset: Offset(-8.2, 0.1),
-          heightFactor: 1.1,
-          angle: -36,
-          child: ElementsProperties(
-            Color(0xffFFDF1E),
-            shape: Star(),
-            offset: Offset(-2.4, 3.1),
-            heightFactor: 1.18,
-            angle: 8,
-            child: ElementsProperties(
-              Color(0xffFFDF1E),
-              shape: Star(),
-              offset: Offset(12.2, 0.1),
-              heightFactor: 1.1,
-              angle: -8,
-            ),
-          ),
-        ),
-      ),
+      otherColors: [Color(0xffFFDF1E)],
+      offset: Offset(0, -0.0312),
+      heightFactor: 0.5917,
+      widthFactor: 0.3368,
     ),
   ],
   url: "https://wikipedia.org/wiki/File:Flag_of_Macau.svg",
@@ -1631,11 +1597,12 @@ const flagEgyProperties = FlagProperties(
   ],
   isSimplified: true,
   elementsProperties: [
+    // The eagle is gold all over, its outlines are the white of the flag. It
+    // is 9/10 of the white stripe (a third of the flag), so always inside it.
     CustomElementsProperties(
-      Color.fromARGB(50, 190, 145, 0),
-      otherColors: [Color(0xffc09300), Color(0xffffffff), Color(0xffc09300)],
+      Color(0xffc09300),
       heightFactor: 0.3,
-      widthFactor: 1 / 6,
+      widthFactor: 0.1429,
     ),
   ],
   url: "https://www.vexilla-mundi.com/egypt/egypt_sheet.png",
@@ -1904,20 +1871,13 @@ const flagSvnProperties = FlagProperties(
     ColorsProperties(Color(0xffFF0000)),
   ],
   aspectRatio: 2,
-  isSimplified: null,
   elementsProperties: [
     CustomElementsProperties(
       Color(0xffFF0000),
-      otherColors: [
-        Color(0xff0000FF),
-        Color(0xff0000FF),
-        Color(0xff0000FF),
-        Color(0xffFFFF00),
-        Color(0xffffffff),
-      ],
-      offset: Offset(-0.5, -0.34),
-      heightFactor: 0.333,
-      widthFactor: 0.15,
+      otherColors: [Color(0xff0000FF), Color(0xffffffff), Color(0xffFFFF00)],
+      offset: Offset(-0.5, -1 / 3),
+      heightFactor: 1 / 3,
+      widthFactor: 0.1305,
     ),
   ],
   url: "https://wikipedia.org/wiki/File:Flag_of_Slovenia_(construction_sheet).svg",

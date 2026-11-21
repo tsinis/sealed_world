@@ -8,6 +8,7 @@ import "package:world_flags/src/ui/effects/flag_shader_surface.dart";
 import "package:world_flags/src/ui/flags/basic_flag.dart";
 import "package:world_flags/src/ui/painters/basic/shader_stripes_painter.dart";
 
+import "../../../helpers/fake_flag_shader_delegate.dart";
 import "../../../helpers/flag_paint.dart";
 
 void main() => group("$FlagShaderSurface with another flag", () {
@@ -61,6 +62,38 @@ void main() => group("$FlagShaderSurface with another flag", () {
         same(blue),
       ),
     );
+  });
+
+  testWidgets("rebuilds a custom delegate for a flag replaced in place", (
+    tester,
+  ) async {
+    const red = FlagProperties([ColorsProperties(Color(0xFFFF0000))]);
+    const blue = FlagProperties([ColorsProperties(Color(0xFF0000FF))]);
+    final built = <FlagProperties>[];
+    final map = <IsoStandardized, BasicFlag>{
+      const CountryUsa(): const BasicFlag(red),
+    };
+    // The same widget instance, so only its dependencies change.
+    final surface = FlagShaderSurface(
+      const CountryUsa(),
+      map: map,
+      options: const FlagShaderOptions(animate: false),
+      delegateBuilder: (_, _, properties) {
+        built.add(properties);
+
+        return FakeFlagShaderDelegate();
+      },
+    );
+    await tester.pumpWidget(MediaQuery(data: const .new(), child: surface));
+    await tester.pumpWidget(
+      MediaQuery(data: const .new(disableAnimations: true), child: surface),
+    );
+    expect(built.single, same(red), reason: "Unchanged flag keeps delegate.");
+    map[const CountryUsa()] = const BasicFlag(blue);
+    await tester.pumpWidget(MediaQuery(data: const .new(), child: surface));
+
+    expect(built, hasLength(2));
+    expect(built.last, same(blue));
   });
 
   testWidgets("keeps its own delegate for another flag", (tester) async {

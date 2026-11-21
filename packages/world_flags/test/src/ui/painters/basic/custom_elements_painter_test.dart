@@ -77,6 +77,10 @@ void main() => group("$CustomElementsPainter", () {
             SimpleBirdPainter.egy(properties, 1.5),
             SimpleBirdPainter.mda(properties, 1.5),
           ),
+          (
+            SimpleBirdPainter.mda(properties, 1.5),
+            SimpleBirdPainter.vir(properties, 1.5),
+          ),
         ]) {
       test("of ${first.runtimeType} is compared on repaint", () {
         expect(first.shouldRepaint(second), isTrue);
@@ -90,6 +94,28 @@ void main() => group("$CustomElementsPainter", () {
 
     expect(painter.badgePaintOf(0).color, isSameColorAs(custom.mainColor));
     expect(painter.badgePaintOf(2).color, isSameColorAs(custom.mainColor));
+  });
+
+  group("proportional bounds", () {
+    final painter = _CustomElementsPainterTest(const [custom]);
+
+    test("are of the custom element by default", () {
+      final bounds = painter.boundsOf(size, 1);
+
+      // Fitted into 0.4 of the width (120) and 0.5 of the height (100).
+      expect(bounds, const Rect.fromLTWH(100, 50, 100, 100));
+    });
+
+    test("are of the given element", () {
+      const other = CustomElementsProperties(
+        Color(0xff405060),
+        offset: Offset(0.5, -0.5),
+        heightFactor: 0.2,
+      );
+      final bounds = painter.boundsOf(size, 2, element: other);
+
+      expect(bounds, const Rect.fromLTWH(185, 30, 80, 40));
+    });
   });
 
   test("paints a shield without a custom element", () {
@@ -109,6 +135,9 @@ final class _CustomElementsPainterTest extends CustomElementsPainter {
   new(ElementsProps properties) : super(properties, 1.5);
 
   Paint badgePaintOf(int index) => badgePaint(index);
+
+  Rect boundsOf(Size size, double ratio, {ElementsProperties? element}) =>
+      proportionalBounds(size, ratio, element: element);
 
   @override
   FlagParentBounds? paintFlagElements(Canvas canvas, Size size) => null;

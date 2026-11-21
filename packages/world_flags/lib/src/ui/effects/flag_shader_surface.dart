@@ -246,26 +246,24 @@ class _FlagShaderSurfaceState extends State<FlagShaderSurface>
       WavedFlagShaderDelegate(vsync: tickerProvider, options: options);
 
   // Only what the painter is built from matters, not the (i.e. copied) flag.
-  static bool _isRepaintedFlag(BasicFlag? old, BasicFlag? flag) {
-    final isSameFlag = old == null
-        ? flag == null
-        : old.properties.paintsLike(flag?.properties);
+  static bool _isRepaintedFlag(BasicFlag? old, BasicFlag flag) =>
+      old == null ||
+      !old.properties.paintsLike(flag.properties) ||
+      old.elementsBuilder != flag.elementsBuilder ||
+      old.backgroundPainter != flag.backgroundPainter ||
+      old.foregroundPainter != flag.foregroundPainter ||
+      old.foregroundPainterBuilder != flag.foregroundPainterBuilder ||
+      old.decoration != flag.decoration;
 
-    return !isSameFlag ||
-        old?.elementsBuilder != flag?.elementsBuilder ||
-        old?.backgroundPainter != flag?.backgroundPainter ||
-        old?.foregroundPainter != flag?.foregroundPainter ||
-        old?.foregroundPainterBuilder != flag?.foregroundPainterBuilder ||
-        old?.decoration != flag?.decoration;
-  }
-
-  // A custom builder also gets the metadata, which isn't painted.
-  bool _isOtherBuilderInput(FlagProperties? properties) {
+  // A custom builder gets the properties of the flag (also the metadata, which
+  // isn't painted), so its delegate is outdated if they change.
+  bool _isOtherBuilderInput(FlagProperties properties) {
     final built = _delegateProperties;
 
     return widget.delegateBuilder != null &&
         built != null &&
-        built.isSimplified != properties?.isSimplified;
+        (!built.paintsLike(properties) ||
+            built.isSimplified != properties.isSimplified);
   }
 
   void _disposeManagedDelegate() {
@@ -284,9 +282,10 @@ class _FlagShaderSurfaceState extends State<FlagShaderSurface>
   /// the build only reads them.
   ///
   /// Uses the externally-provided `widget.shader` if available, otherwise an
-  /// internal delegate (see [_managedDelegateFor]). The painter is recreated
-  /// only if it's outdated or painted with another delegate, minimizing object
-  /// allocation during animation frames.
+  /// internal delegate (see [_managedDelegateFor]), replaced if it's outdated
+  /// or built from other flag properties. The painter is recreated only if
+  /// it's outdated, painted with another delegate or of another flag,
+  /// minimizing object allocation during animation frames.
   void _sync({
     bool isDelegateOutdated = false,
     bool isPainterOutdated = false,
@@ -304,7 +303,11 @@ class _FlagShaderSurfaceState extends State<FlagShaderSurface>
       _disposeManagedDelegate();
       delegate = shader;
     } else {
-      delegate = _managedDelegateFor(flag, isOutdated: isDelegateOutdated);
+      // Maps may be changed in place, so the flag is compared here.
+      delegate = _managedDelegateFor(
+        flag,
+        isOutdated: isDelegateOutdated || _isOtherBuilderInput(flag.properties),
+      );
     }
     // Maps may be changed in place, so the flag is compared too.
     if (!isPainterOutdated &&
@@ -405,23 +408,13 @@ class _FlagShaderSurfaceState extends State<FlagShaderSurface>
   @override
   void didUpdateWidget(covariant FlagShaderSurface oldWidget) {
     super.didUpdateWidget(oldWidget);
-    final isFlagChanged =
-        oldWidget.item != widget.item ||
-        _isRepaintedFlag(_paintedFlag, widget._flag);
-    // The default builder doesn't use the flag, so another flag only needs a
-    // new painter, unless a custom builder gets it.
-    final isDelegateOutdated =
-        oldWidget.delegateBuilder != widget.delegateBuilder ||
-        oldWidget.options != widget.options ||
-        (isFlagChanged && widget.delegateBuilder != null) ||
-        _isOtherBuilderInput(widget._flag?.properties);
-    if (!isFlagChanged &&
-        !isDelegateOutdated &&
-        oldWidget.shader == widget.shader) {
-      return;
-    }
-
-    _sync(isDelegateOutdated: isDelegateOutdated, isPainterOutdated: true);
+    // Another flag (or its properties) is detected by the sync itself, and an
+    // unchanged flag keeps both its delegate and its painter.
+    _sync(
+      isDelegateOutdated:
+          oldWidget.delegateBuilder != widget.delegateBuilder ||
+          oldWidget.options != widget.options,
+    );
   }
 
   @override

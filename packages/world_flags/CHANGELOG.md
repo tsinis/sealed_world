@@ -4,6 +4,10 @@
 
 NEW FEATURES
 
+- Richer flags, now no longer simplified: the Cocos (Keeling) Islands (the palm tree in the golden disc), Christmas Island (the map of the island in the golden disc and the golden bosun bird), Macau (the lotus, the bridge and the water) and Slovenia (the coat of arms). Their artwork follows the public domain Wikimedia Commons SVGs: the emblem of Macau is built from the circles and bars of its construction sheet into one smooth path, and the stars are still painted with the star shape.
+- Egypt, Moldova and the U.S. Virgin Islands share one redrawn shield eagle, each in the colors of its flag (the aurochs is only on the shield of Moldova). `SimpleBirdPainter.vir` paints the eagle of the U.S. Virgin Islands.
+- The seal of Guam is filled with the sky, the palm crown, the sea and the sand, so it looks closer to the original at small sizes.
+- `CustomElementsPainter.proportionalBounds` takes an optional `element`, for flags that paint more than one badge.
 - `FlagShaderSurface` doesn't animate its own (internal) delegate when the platform asks to reduce motion or to disable animations (`MediaQueryData.reduceMotion` of Flutter 3.50 and `MediaQueryData.disableAnimations`): the flag rests at `FlagShaderOptions.frozenPhase`. Wrap it in a `MediaQuery` to override this, a delegate provided via `shader` is used as is.
 
 IMPROVEMENTS
