@@ -26,8 +26,8 @@ environment:
   sdk: ^3.13.0
 
 dependencies:
-  l10n_countries: ^2.2.0
-  sealed_currencies: ^3.4.1
+  l10n_countries: ^2.3.0
+  sealed_currencies: ^3.5.0
 
 dev_dependencies:
   dart_code_metrics_presets: any # Constrained in the workspace pubspec.yaml
