@@ -1,19 +1,35 @@
 ## 3.7.0
 
-> Requires Dart 3.14 and Flutter 3.50, respects reduced motion, and the example app no longer depends on Material.
+> Last non-breaking release: deprecated members will be removed in the next version (December 2026).
+
+Requires Dart 3.14 and Flutter 3.50, respects reduced motion, and the example app no longer depends on Material.
 
 NEW FEATURES
 
+- Richer flags: Christmas Island (the map of the island in the golden disc and the golden bosun bird), Macau (the lotus, the bridge and the water) and Slovenia (the coat of arms) are no longer simplified, and the Cocos (Keeling) Islands have a real palm tree in the golden disc. Their artwork follows the public domain Wikimedia Commons SVGs: the emblem of Macau is built from the circles and bars of its construction sheet into one smooth path, and the stars are still painted with the star shape. These painted parts are custom elements now, so the flags of the Cocos (Keeling) Islands and of Christmas Island need their painters (`CckPainter` and `CxrPainter`, as in `smallSimplifiedFlagsMap`): a `BasicFlag` built from their properties alone shows an empty disc (and no bird).
+- Egypt, Moldova and the U.S. Virgin Islands share one redrawn shield eagle, taking off (raised wings, spread legs and a fanned tail), each in the colors of its flag and with the emblem of its flag on the shield: the aurochs head of Moldova and the white pale of Egypt. The eagle of Egypt always stays inside the white stripe. `SimpleBirdPainter.vir` paints the eagle of the U.S. Virgin Islands, sized from its element.
+- The seal of Guam is filled with the sky, the palm crown, the sea and the sand, so it looks closer to the original at small sizes.
+- `CustomElementsPainter.proportionalBounds` takes an optional `element`, for flags that paint more than one badge.
 - `FlagShaderSurface` doesn't animate its own (internal) delegate when the platform asks to reduce motion or to disable animations (`MediaQueryData.reduceMotion` of Flutter 3.50 and `MediaQueryData.disableAnimations`): the flag rests at `FlagShaderOptions.frozenPhase`. Wrap it in a `MediaQuery` to override this, a delegate provided via `shader` is used as is.
 
 IMPROVEMENTS
 
 - The waved flag shader is simpler and does less work per pixel: the wave and its slope share one noise pass (2 noise lookups less per pixel) and the edge masks are computed once. The output is pixel-identical.
+- The waved flag shader skips the noise of the secondary ripple if `FlagShaderOptions.secondaryAmplitude` is zero.
+- `FlagShaderSurface` creates and disposes its shader delegate and painter only when its dependencies or the widget change, no longer during the build. Another flag (i.e. item) no longer recreates its own delegate, unless a `delegateBuilder` gets the flag.
+- The docs of `BasicFlag`, `flagPropertiesMap` and `WorldCountry.flagProperties` explain that the properties alone don't paint custom elements (i.e. a coat of arms), and the simple example uses `CountryFlag.simplified` instead.
+- The palettes (`CustomElementsProperties.otherColors`) of the redrawn flags are laid out for their new artwork, see the docs of each painter: `AlmondPainter.gum` (the sky, the palm crown, the sea and the sand), `MacPainter` (the stars), `SimpleBirdPainter`, `SvnPainter` (the blue, the white and the stars) and `VirPainter` (the letters are its third other color). Flags with own palettes for these painters have to follow them.
+
+FIX
+
+- `ElementsPainter.paintChild` doesn't paint a child into bounds without extent (i.e. a parent with a zero `heightFactor`), which used to fail an assertion in debug mode.
 
 CHORE
 
 - Requires Dart 3.14 and Flutter 3.50.
-- Golden tests use [gleon](https://pub.dev/packages/gleon) v0.6.1 from pub.dev instead of a git dependency.
+- Golden tests use [gleon](https://pub.dev/packages/gleon) v0.6.2 from pub.dev instead of a git dependency.
+- The waved flag shader (`shaders/waved_flag.frag`) is restructured, with named constants. Its unused animation speed uniform is removed and the wave direction is one `vec2` uniform, so the uniforms after the time moved one index down (there are 24 floats now, 0 to 23, instead of 25). `WavedFlagShaderDelegate.configureShader` is the place to customize them: an override of it always sets the uniforms of this package's shader, so it has to use the new `setFloat` indices. If you copied the shader, keep the `setFloat` indices of your copy in line with its uniforms: switch to the new indices only once your copy adopts the new uniform layout, a copy that keeps the old layout has to keep the old indices.
+- The flag maps (`smallSimplifiedFlagsMap` and others) are declared in the `src` folder instead of the library file, and are exported as before.
 - Uses `List.unmodifiableOf` (Dart 3.13) instead of the soon deprecated `List.unmodifiable`.
 - Updated [material_ui](https://pub.dev/packages/material_ui) dependency to v1.11.0. Material is no longer a part of Flutter SDK since 3.50, and this package only needs it for the deprecated `FlagThemeData`, so the dependency will be removed together with it.
 - Code samples in the docs, the README and the agent skill import `package:material_ui/material_ui.dart` instead of the deprecated `package:flutter/material.dart`.

@@ -1,5 +1,3 @@
-// ignore_for_file: avoid-passing-default-values
-
 import "package:flutter/widgets.dart";
 import "package:sealed_countries/sealed_countries.dart" show WorldCountry;
 

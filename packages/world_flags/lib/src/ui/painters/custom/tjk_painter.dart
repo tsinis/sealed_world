@@ -1,5 +1,3 @@
-// ignore_for_file: format-comment
-
 part of "../multi_element_painter.dart";
 
 /// Painter for the crown and stars of Tajikistan.
@@ -62,7 +60,6 @@ final class TjkPainter extends MultiElementPainter with BadgeArtworkPainter {
   // dart format on
 
   @override
-  // ignore: avoid-unnecessary-getter, the static one shares its path cache.
   BadgeArtwork get artwork => _artwork;
 
   @override

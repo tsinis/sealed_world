@@ -197,10 +197,10 @@ packages:
     dependency: "direct dev"
     description:
       name: coverage
-      sha256: ff89e37c19355194e279d26dafe8e4bece46c9ea63a30be4dc68214f5bc290d3
+      sha256: "0a864527020e20835094b04b6ca1f9e50c7defedb74892aed72e67323e5072b7"
       url: "https://pub.dev"
     source: hosted
-    version: "1.16.0"
+    version: "1.16.1"
   crypto:
     dependency: transitive
     description:
@@ -339,10 +339,10 @@ packages:
     dependency: transitive
     description:
       name: gleon
-      sha256: e48caddd34c0fc16be547b588046749466961caa30ec2d859a424bee74e587d1
+      sha256: e19f32f387685d404483eb54e677bcae1651f31df069d310e63c2a411381ad8e
       url: "https://pub.dev"
     source: hosted
-    version: "0.6.1"
+    version: "0.6.2"
   glob:
     dependency: transitive
     description:

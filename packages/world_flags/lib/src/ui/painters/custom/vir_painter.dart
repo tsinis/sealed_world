@@ -1,14 +1,21 @@
 import "package:flutter/rendering.dart";
 
 import "../../../data/flags_map_part_1.data.dart";
+import "../../../helpers/extensions/custom_elements_properties_copy_with.dart";
 import "../../../model/typedefs.dart";
 import "../basic/custom_elements_painter.dart";
 import "../multi_element_painter.dart";
 
 /// Painter for the U.S. Virgin Islands flag.
+///
+/// Palette: the one of the eagle (see `SimpleBirdPainter`), whose third other
+/// color (the sceptre) also colors the letters.
 final class VirPainter extends CustomElementsPainter {
   /// Creates a new instance of [VirPainter].
   const new(super._properties, super.aspectRatio);
+
+  /// The height of the eagle, relative to the box of the letters.
+  static const _eagleScale = 0.8;
 
   @override
   double get originalAspectRatio => flagVirProperties.aspectRatio;
@@ -52,7 +59,7 @@ final class VirPainter extends CustomElementsPainter {
     final letterHeight = height / 8;
     final vPath = _createVPath(height);
     final iPath = _createIPath(height);
-    final paint = paintCreator(lastCustomColor)
+    final paint = paintCreator(customColor(2))
       ..style = PaintingStyle.stroke
       ..strokeWidth = letterHeight / 3
       ..strokeCap = StrokeCap.square
@@ -68,6 +75,11 @@ final class VirPainter extends CustomElementsPainter {
       ..drawPath(iPath, paint)
       ..restore();
 
-    return SimpleBirdPainter.mda(properties, aspectRatio).paint(canvas, size);
+    // The eagle stands between the letters, smaller than their box.
+    final eagle = customProperties.copyWith(
+      heightFactor: customProperties.heightFactor * _eagleScale,
+    );
+
+    return SimpleBirdPainter.vir([eagle], aspectRatio).paint(canvas, size);
   }
 }

@@ -1,7 +1,7 @@
 import "package:sealed_countries/sealed_countries.dart";
 
-// ignore: avoid-importing-entrypoint-exports, only show constructed flags.
-import "../../../../world_flags.dart" show smallSimplifiedLanguageFlagsMap;
+import "../../../collections/simplified_flags_map.dart"
+    show smallSimplifiedLanguageFlagsMap;
 import "../../../data/flags_map_part_1.data.dart";
 import "../../../data/flags_map_part_2.data.dart";
 import "../../../data/flags_map_part_3.data.dart";

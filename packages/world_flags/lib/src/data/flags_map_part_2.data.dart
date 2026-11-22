@@ -1,4 +1,4 @@
-// ignore_for_file: prefer-static-class, avoid-long-files
+// ignore_for_file: avoid-long-files, it's TODO!
 import "dart:ui";
 
 import "../constants/flag_constants.dart";
@@ -479,18 +479,15 @@ const flagMdaProperties = FlagProperties(
   isSimplified: true,
   elementsProperties: [
     CustomElementsProperties(
-      Color.fromARGB(255, 113, 55, 13),
+      Color(0xffB07E5B), // Eagle.
       otherColors: [
-        Color.fromARGB(255, 92, 55, 29),
-        Color(0xffCC092F),
-        Color(0xff0046AE),
-        Color(0xffB07E5B),
-        Color(0xffFFD200),
-        Color(0xff007A50),
-        Color(0xff000000),
+        Color(0xffCC092F), // Top of the shield and the talons.
+        Color(0xff0046AE), // Bottom of the shield.
+        Color(0xffFFD200), // Sceptre and aurochs.
+        Color(0xff007A50), // Olive branch.
       ],
-      heightFactor: 168 / 300,
-      widthFactor: 1 / 5,
+      heightFactor: 0.5385,
+      widthFactor: 0.1923,
     ),
   ],
   url:
@@ -555,7 +552,6 @@ const flagCxrProperties = FlagProperties(
   aspectRatio: 2,
   stripeOrientation: StripeOrientation.diagonalTopLeftToBottomRight,
   baseElementType: FlagElementsType.multiElement,
-  isSimplified: true,
   elementsProperties: [
     ElementsProperties(
       Color(0xffffffff),
@@ -587,27 +583,15 @@ const flagCxrProperties = FlagProperties(
         ),
       ),
     ),
-    ElementsProperties(
-      Color(0xffffc639),
-      shape: Ellipse(),
-      heightFactor: 0.36,
-      child: ElementsProperties(
-        Color(0xff1c8a42),
-        shape: Star(points: 3, radiusFactor: 0.3),
-        heightFactor: 0.8,
-        angle: 50,
-      ),
-    ),
-    ElementsProperties(
-      Color(0xffffc639),
-      shape: Star(points: 3, radiusFactor: 0.3),
-      offset: Offset(0.66, -0.3),
-      heightFactor: 0.5,
-      angle: -20,
-    ),
+    ElementsProperties(Color(0xffffc639), shape: Ellipse(), heightFactor: 0.36),
+    // The map of the island, in the (square) box of the disc above.
+    CustomElementsProperties(Color(0xff1c8a42), heightFactor: 0.36),
+    // The golden bosun bird.
     CustomElementsProperties(
-      Color(0xff1c8a42),
-      otherColors: [Color(0xffffc639)],
+      Color(0xffffc639),
+      offset: Offset(0.572, -0.3858),
+      heightFactor: 0.5434,
+      widthFactor: 0.3188,
     ),
   ],
   url: "https://www.vexilla-mundi.com/christmas_island/christmas_island_sheet.png",
@@ -1043,7 +1027,7 @@ const flagCckProperties = FlagProperties(
   [ColorsProperties(Color(0xff008000))],
   aspectRatio: 2,
   baseElementType: FlagElementsType.multiElement,
-  isSimplified: true,
+  isSimplified: null,
   elementsProperties: [
     ElementsProperties(
       Color(0xffffe000),
@@ -1084,24 +1068,13 @@ const flagCckProperties = FlagProperties(
       shape: Ellipse(),
       offset: Offset(-0.658, -0.418),
       heightFactor: 0.435,
-      child: ElementsProperties(
-        Color(0xff802000),
-        shape: Rectangle(aspectRatio: 0.15),
-        offset: Offset(0.1, 0.2),
-        heightFactor: 0.6,
-        child: ElementsProperties(
-          Color(0xff008000),
-          shape: Star(points: 3),
-          offset: Offset(0, -0.4),
-          heightFactor: 1.1,
-          angle: 20,
-        ),
-      ),
     ),
+    // The palm tree, in the (square) box of the disc above.
     CustomElementsProperties(
       Color(0xff802000),
       otherColors: [Color(0xff008000)],
-      heightFactor: 0.8,
+      offset: Offset(-0.658, -0.418),
+      heightFactor: 0.435,
     ),
   ],
   url: "https://www.vexilla-mundi.com/cocos_islands/cocos_islands_sheet.png",

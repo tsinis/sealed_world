@@ -1,5 +1,3 @@
-// ignore_for_file: prefer-class-destructuring
-
 import "dart:ui" as ui show lerpDouble;
 
 import "package:flutter/widgets.dart";

@@ -1,5 +1,3 @@
-// ignore_for_file: prefer-class-destructuring
-
 import "package:flutter/foundation.dart";
 
 import "../model/flag_properties.dart";

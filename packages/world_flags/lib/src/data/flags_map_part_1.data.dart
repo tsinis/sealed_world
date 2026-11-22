@@ -1,5 +1,5 @@
-// ignore_for_file: specify_nonobvious_property_types, prefer-static-class
 // ignore_for_file: avoid-long-files, it's TODO!
+// ignore_for_file: specify_nonobvious_property_types
 import "dart:ui";
 
 import "../model/colors_properties.dart";
@@ -425,17 +425,10 @@ const flagGumProperties = FlagProperties(
     CustomElementsProperties(
       Color(0xffC62139),
       otherColors: [
-        Color(0xffadd2d9),
-        Color(0xffcbe0e5),
-        Color(0xff00297B),
-        Color(0xff179a3b),
-        Color(0xffa79270),
-        Color(0xffbd0728),
-        Color(0xff239e46),
-        Color(0xfffdf9ff),
-        Color(0xffa68861),
-        Color(0xffffffff),
-        Color(0xfffdf9a1),
+        Color(0xff92DBFC), // Sky.
+        Color(0xff109421), // Palm crown.
+        Color(0xff008CE7), // Sea.
+        Color(0xffFFDE52), // Sand.
       ],
       heightFactor: 0.52,
       widthFactor: 0.18,
@@ -1887,15 +1880,12 @@ const flagVirProperties = FlagProperties(
   isSimplified: true,
   elementsProperties: [
     CustomElementsProperties(
-      Color(0xfff4c53d),
+      Color(0xfff4c53d), // Eagle.
       otherColors: [
-        Color(0xfff4c53d),
-        Color(0xff162667),
-        Color(0xffffffff),
-        Color(0xffa60032),
-        Color(0xff369443),
-        Color(0xff010002),
-        Color(0xff0081c6),
+        Color(0xff162667), // Top of the shield and the talons.
+        Color(0xffa60032), // Bottom of the shield.
+        Color(0xff0081c6), // Arrows and the letters.
+        Color(0xff369443), // Olive branch.
       ],
       heightFactor: 0.9,
       widthFactor: 0.6,

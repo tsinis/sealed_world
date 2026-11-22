@@ -1,8 +1,8 @@
 {
   "_totals": {
     "clips": 284,
-    "contours": 2392,
-    "draws": 1360,
+    "contours": 2447,
+    "draws": 1371,
     "saveLayers": 0
   },
   "abw": {
@@ -337,7 +337,7 @@
   },
   "cxr": {
     "clips": 2,
-    "contours": 10,
+    "contours": 11,
     "draws": 6,
     "saveLayers": 0
   },
@@ -403,8 +403,8 @@
   },
   "egy": {
     "clips": 1,
-    "contours": 7,
-    "draws": 7,
+    "contours": 22,
+    "draws": 10,
     "saveLayers": 0
   },
   "eri": {
@@ -811,8 +811,8 @@
   },
   "mac": {
     "clips": 1,
-    "contours": 10,
-    "draws": 4,
+    "contours": 12,
+    "draws": 3,
     "saveLayers": 0
   },
   "maf": {
@@ -835,8 +835,8 @@
   },
   "mda": {
     "clips": 1,
-    "contours": 7,
-    "draws": 7,
+    "contours": 24,
+    "draws": 11,
     "saveLayers": 0
   },
   "mdg": {
@@ -1255,8 +1255,8 @@
   },
   "svn": {
     "clips": 1,
-    "contours": 6,
-    "draws": 6,
+    "contours": 11,
+    "draws": 8,
     "saveLayers": 0
   },
   "swe": {
@@ -1441,8 +1441,8 @@
   },
   "vir": {
     "clips": 1,
-    "contours": 8,
-    "draws": 6,
+    "contours": 23,
+    "draws": 9,
     "saveLayers": 0
   },
   "vnm": {

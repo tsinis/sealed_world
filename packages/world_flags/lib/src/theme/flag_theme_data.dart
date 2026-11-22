@@ -1,4 +1,4 @@
-// ignore_for_file: prefer-class-destructuring, prefer-private-named-parameters
+// ignore_for_file: prefer-private-named-parameters
 
 import "dart:ui" as ui show lerpDouble;
 

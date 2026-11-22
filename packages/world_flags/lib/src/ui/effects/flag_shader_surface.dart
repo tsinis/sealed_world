@@ -1,15 +1,8 @@
-// ignore_for_file: prefer-class-destructuring
-
 import "package:flutter/foundation.dart";
 import "package:flutter/widgets.dart";
 import "package:sealed_countries/sealed_countries.dart" show IsoStandardized;
 
-// ignore: avoid-importing-entrypoint-exports, only shows maps.
-import "../../../world_flags.dart"
-    show
-        smallSimplifiedCurrencyFlagsMap,
-        smallSimplifiedFlagsMap,
-        smallSimplifiedLanguageFlagsMap;
+import "../../collections/simplified_flags_map.dart";
 import "../../helpers/extensions/aspect_ratio_extension.dart";
 import "../../helpers/extensions/paint_equality_extension.dart";
 import "../../model/flag_properties.dart";
@@ -236,7 +229,6 @@ class _FlagShaderSurfaceState extends State<FlagShaderSurface>
   FlagShaderDelegate? _managedDelegate;
   // The properties the managed delegate was built from.
   FlagProperties? _delegateProperties;
-  bool _isManagedDelegateOutdated = false;
   ShaderStripesPainter? _painter;
   // The flag the painter was built from, maps may be changed in place.
   BasicFlag? _paintedFlag;
@@ -254,52 +246,89 @@ class _FlagShaderSurfaceState extends State<FlagShaderSurface>
       WavedFlagShaderDelegate(vsync: tickerProvider, options: options);
 
   // Only what the painter is built from matters, not the (i.e. copied) flag.
-  static bool _isRepaintedFlag(BasicFlag? old, BasicFlag? flag) {
-    final isSameFlag = old == null
-        ? flag == null
-        : old.properties.paintsLike(flag?.properties);
+  static bool _isRepaintedFlag(BasicFlag? old, BasicFlag flag) =>
+      old == null ||
+      !old.properties.paintsLike(flag.properties) ||
+      old.elementsBuilder != flag.elementsBuilder ||
+      old.backgroundPainter != flag.backgroundPainter ||
+      old.foregroundPainter != flag.foregroundPainter ||
+      old.foregroundPainterBuilder != flag.foregroundPainterBuilder ||
+      old.decoration != flag.decoration;
 
-    return !isSameFlag ||
-        old?.elementsBuilder != flag?.elementsBuilder ||
-        old?.backgroundPainter != flag?.backgroundPainter ||
-        old?.foregroundPainter != flag?.foregroundPainter ||
-        old?.foregroundPainterBuilder != flag?.foregroundPainterBuilder ||
-        old?.decoration != flag?.decoration;
-  }
-
-  // A custom builder also gets the metadata, which isn't painted.
-  bool _isOtherBuilderInput(FlagProperties? properties) {
+  // A custom builder gets the properties of the flag (also the metadata, which
+  // isn't painted), so its delegate is outdated if they change.
+  bool _isOtherBuilderInput(FlagProperties properties) {
     final built = _delegateProperties;
 
     return widget.delegateBuilder != null &&
         built != null &&
-        built.isSimplified != properties?.isSimplified;
+        (!built.paintsLike(properties) ||
+            built.isSimplified != properties.isSimplified);
   }
 
   void _disposeManagedDelegate() {
     _managedDelegate?.dispose();
     _managedDelegate = null;
     _delegateProperties = null;
-    _isManagedDelegateOutdated = false;
   }
 
   void _disposePainter() {
     _painter?.dispose();
     _painter = null;
+    _paintedFlag = null;
   }
 
-  /// Resolves or creates the appropriate shader delegate for the given flag.
+  /// Brings the delegate and the painter up to date with the widget, so that
+  /// the build only reads them.
   ///
-  /// Returns the externally-provided `widget.shader` if available, otherwise
-  /// creates and caches an internal delegate using `widget.delegateBuilder`,
-  /// or the default builder. An outdated internal delegate is replaced, and
-  /// the animation time continues in the new one.
-  FlagShaderDelegate _resolveDelegate(BasicFlag flag) {
-    final widgetShader = widget.shader;
-    if (widgetShader != null) return widgetShader;
+  /// Uses the externally-provided `widget.shader` if available, otherwise an
+  /// internal delegate (see [_managedDelegateFor]), replaced if it's outdated
+  /// or built from other flag properties. The painter is recreated only if
+  /// it's outdated, painted with another delegate or of another flag,
+  /// minimizing object allocation during animation frames.
+  void _sync({
+    bool isDelegateOutdated = false,
+    bool isPainterOutdated = false,
+  }) {
+    final flag = widget._flag;
+    if (flag == null) {
+      _disposePainter();
+      _disposeManagedDelegate(); // Stops the ticker of an animated delegate.
 
+      return;
+    }
+
+    final FlagShaderDelegate delegate;
+    if (widget.shader case final shader?) {
+      _disposeManagedDelegate();
+      delegate = shader;
+    } else {
+      // Maps may be changed in place, so the flag is compared here.
+      delegate = _managedDelegateFor(
+        flag,
+        isOutdated: isDelegateOutdated || _isOtherBuilderInput(flag.properties),
+      );
+    }
+    // Maps may be changed in place, so the flag is compared too.
+    if (!isPainterOutdated &&
+        _painter?.shader == delegate &&
+        !_isRepaintedFlag(_paintedFlag, flag)) {
+      return;
+    }
+
+    _disposePainter();
+    _painter = _createPainter(flag, delegate);
+  }
+
+  /// Returns the internal delegate, created using `widget.delegateBuilder` (or
+  /// the default builder) if there is none yet. An outdated one is replaced,
+  /// and the animation time continues in the new one.
+  FlagShaderDelegate _managedDelegateFor(
+    BasicFlag flag, {
+    required bool isOutdated,
+  }) {
     final current = _managedDelegate;
-    if (current != null && !_isManagedDelegateOutdated) return current;
+    if (current != null && !isOutdated) return current;
 
     final options = widget.options;
     final created = (widget.delegateBuilder ?? _defaultDelegateBuilder)(
@@ -319,19 +348,11 @@ class _FlagShaderSurfaceState extends State<FlagShaderSurface>
     return _managedDelegate = created;
   }
 
-  /// Creates or updates the shader painter for the given flag and delegate.
-  ///
-  /// The painter is cached and only recreated when the delegate or flag
-  /// properties change, minimizing object allocation during animation frames.
-  ShaderStripesPainter _resolvePainter(
+  /// Creates the shader painter for the given flag and delegate.
+  ShaderStripesPainter _createPainter(
     BasicFlag flag,
     FlagShaderDelegate delegate,
   ) {
-    final currentPainter = _painter;
-    if (currentPainter != null && currentPainter.shader == delegate) {
-      return currentPainter; // Reuse painter if delegate hasn't changed.
-    }
-    _disposePainter(); // Dispose old painter and create new one.
     _paintedFlag = flag;
     final BasicFlag(
       :backgroundPainter,
@@ -343,7 +364,7 @@ class _FlagShaderSurfaceState extends State<FlagShaderSurface>
     ) = flag;
     final elements = properties.elementsProperties;
 
-    return _painter = ShaderStripesPainter(
+    return ShaderStripesPainter(
       properties,
       flag.resolvePainter(elements, flagAspectRatio),
       pixelRatio: _pixelRatio,
@@ -362,42 +383,38 @@ class _FlagShaderSurfaceState extends State<FlagShaderSurface>
     final isMotionReduced =
         (MediaQuery.maybeReduceMotionOf(context) ?? false) ||
         (MediaQuery.maybeDisableAnimationsOf(context) ?? false);
-    if (isMotionReduced != _isMotionReduced) {
-      _isMotionReduced = isMotionReduced;
-      // Rebuilt with or without the animation (the time continues), unless
-      // it doesn't animate anyway.
-      if (_managedDelegate != null && widget.options.animate) {
-        _isManagedDelegateOutdated = true;
-      }
-    }
+    // Rebuilt with or without the animation (the time continues), unless it
+    // doesn't animate anyway.
+    final isDelegateOutdated =
+        isMotionReduced != _isMotionReduced && widget.options.animate;
+    _isMotionReduced = isMotionReduced;
     final pixelRatio =
         MediaQuery.maybeDevicePixelRatioOf(context) ??
         View.of(context).devicePixelRatio; // coverage:ignore-line
     final textDirection = Directionality.maybeOf(context);
-    if (pixelRatio == _pixelRatio && textDirection == _textDirection) return;
+    // The painter is built with the pixel ratio and the text direction (of a
+    // directional decoration radius).
+    final isPainterOutdated =
+        pixelRatio != _pixelRatio || textDirection != _textDirection;
     _pixelRatio = pixelRatio;
-    _textDirection = textDirection; // Of a directional decoration radius.
-    _disposePainter(); // Force painter rebuild with new pixel ratio.
+    _textDirection = textDirection;
+    // Also creates the delegate and the painter, on the first call.
+    _sync(
+      isDelegateOutdated: isDelegateOutdated,
+      isPainterOutdated: isPainterOutdated,
+    );
   }
 
   @override
   void didUpdateWidget(covariant FlagShaderSurface oldWidget) {
     super.didUpdateWidget(oldWidget);
-    final delegateChanged =
-        oldWidget.delegateBuilder != widget.delegateBuilder ||
-        oldWidget.options != widget.options ||
-        oldWidget.item != widget.item ||
-        oldWidget.shader != widget.shader ||
-        _isRepaintedFlag(_paintedFlag, widget._flag) ||
-        _isOtherBuilderInput(widget._flag?.properties);
-    if (!delegateChanged) return;
-
-    _disposePainter();
-    if (widget.shader == null) {
-      _isManagedDelegateOutdated = true; // Replaced in the build.
-    } else {
-      _disposeManagedDelegate();
-    }
+    // Another flag (or its properties) is detected by the sync itself, and an
+    // unchanged flag keeps both its delegate and its painter.
+    _sync(
+      isDelegateOutdated:
+          oldWidget.delegateBuilder != widget.delegateBuilder ||
+          oldWidget.options != widget.options,
+    );
   }
 
   @override
@@ -410,13 +427,13 @@ class _FlagShaderSurfaceState extends State<FlagShaderSurface>
   @override
   Widget build(BuildContext context) {
     final flag = widget._flag;
-    if (flag == null) {
-      _disposePainter();
-      _disposeManagedDelegate(); // Stops the ticker of an animated delegate.
-
-      return widget.orElse;
-    }
-    final delegate = _resolveDelegate(flag);
+    final painter = _painter; // Kept up to date by [_sync].
+    assert(
+      flag == null || painter != null,
+      "The painter of the flag must be created before the build.",
+    );
+    if (flag == null || painter == null) return widget.orElse;
+    final delegate = painter.shader;
 
     return SizedBox(
       height: widget.height ?? flag.height,
@@ -429,7 +446,7 @@ class _FlagShaderSurfaceState extends State<FlagShaderSurface>
         // Animated shader repaints every frame, so isolate it from parents.
         child: RepaintBoundary(
           child: CustomPaint(
-            painter: _resolvePainter(flag, delegate),
+            painter: painter,
             willChange:
                 delegate is AnimatedFlagShaderDelegate && delegate.animate,
           ),

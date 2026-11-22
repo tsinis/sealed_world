@@ -42,7 +42,7 @@ dev_dependencies:
   dart_code_metrics_presets: any # Constrained in the workspace pubspec.yaml
   flutter_test: # From Google
     sdk: flutter
-  gleon: ^0.6.1 # Golden tests with tolerance (shader flags), platform-aware.
+  gleon: ^0.6.2 # Golden tests with tolerance (shader flags), platform-aware.
   skills_lint: any # Constrained in the workspace pubspec.yaml
 
 flutter:

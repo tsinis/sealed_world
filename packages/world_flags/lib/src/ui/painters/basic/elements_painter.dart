@@ -93,7 +93,6 @@ abstract base class ElementsPainter extends CustomPainter {
   /// Returns a configured [Paint] object.
   @protected
   Paint paintCreator([Color? color]) =>
-      // ignore: avoid-returning-cascades, it's ok for a shorthand method.
       Paint()..color = color ?? property.mainColor;
 
   /// Retrieves the shape type if it matches the specified type [T].
@@ -124,7 +123,7 @@ abstract base class ElementsPainter extends CustomPainter {
   /// - [child]: The properties of the child element to paint.
   ///
   /// Returns a [FlagParentBounds] object representing the bounds of the painted
-  /// child.
+  /// child, or `null` if nothing was painted (i.e. in empty [parentBounds]).
   @protected
   FlagParentBounds? paintChild(
     Canvas canvas,
@@ -132,7 +131,10 @@ abstract base class ElementsPainter extends CustomPainter {
     ElementsProperties? child,
   ) {
     final childShape = child?.shape;
-    if (childShape == null || child == null) return null;
+    // A child in bounds without extent has nothing to show, nor aspect ratio.
+    if (childShape == null || child == null || parentBounds.isEmpty) {
+      return null;
+    }
 
     final shapePainter = painter(childShape);
     final parent = parentBounds.size;

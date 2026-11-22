@@ -1,5 +1,3 @@
-// ignore_for_file: format-comment
-
 part of "../multi_element_painter.dart";
 
 /// Painter for the grey crowned crane of Uganda.
@@ -52,7 +50,6 @@ final class UgaPainter extends MultiElementPainter with BadgeArtworkPainter {
   // dart format on
 
   @override
-  // ignore: avoid-unnecessary-getter, the static one shares its path cache.
   BadgeArtwork get artwork => _artwork;
 
   @override

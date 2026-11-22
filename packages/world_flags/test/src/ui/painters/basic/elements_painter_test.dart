@@ -8,6 +8,7 @@ import "package:world_flags/src/model/elements/elements_properties.dart";
 import "package:world_flags/src/model/shape.dart";
 import "package:world_flags/src/model/typedefs.dart";
 import "package:world_flags/src/ui/painters/basic/elements_painter.dart";
+import "package:world_flags/src/ui/painters/common/ellipse_painter.dart";
 
 /// The sizing every shape painter inherits.
 ///
@@ -58,6 +59,23 @@ void main() => group("$ElementsPainter", () {
       const list = [element];
       expect(_ListPainter(list).shouldRepaint(_ListPainter(list)), isFalse);
     });
+  });
+
+  test("doesn't paint a child into a parent without extent", () {
+    const flat = [
+      ElementsProperties(
+        _color,
+        shape: _shape,
+        heightFactor: 0,
+        child: ElementsProperties(_color, shape: Star()),
+      ),
+    ];
+    final painter = EllipsePainter(flat, 1);
+
+    expect(
+      () => painter.paint(Canvas(PictureRecorder()), size),
+      returnsNormally,
+    );
   });
 
   test("doesn't paint into an empty size", () {
