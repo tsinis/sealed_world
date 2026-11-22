@@ -1,5 +1,7 @@
 ## 3.5.0
 
+> Last non-breaking release: deprecated members will be removed in the next version (December 2026).
+
 FIX
 
 - `tzUtcDurations` skips invalid timezones instead of stopping at the first one. Previously (as documented) a single invalid timezone of a custom country dropped it and every timezone after it. The result is no longer index-aligned with `timezones` when one is skipped, as documented now.

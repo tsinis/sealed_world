@@ -1,5 +1,7 @@
 ## 3.4.2
 
+> Last non-breaking release: deprecated members will be removed in the next version (December 2026).
+
 FIX
 
 - `commonNamesMap` and `translatedNames` pass the `formatter` of `LocaleMappingOptions` to the mapper, it was silently ignored.

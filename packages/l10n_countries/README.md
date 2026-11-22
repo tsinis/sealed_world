@@ -8,7 +8,9 @@
 [![GitHub issues](https://img.shields.io/github/issues-raw/tsinis/sealed_world)](https://github.com/tsinis/sealed_world/issues?q=is%3Aissue+is%3Aopen)
 [![GitHub stars](https://img.shields.io/github/stars/tsinis/sealed_world?style=flat&color=green)](https://github.com/tsinis/sealed_world/stargazers)
 [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
+[![Agent Skill](https://img.shields.io/badge/AI-skill%20included-teal)](https://github.com/tsinis/sealed_world/blob/main/packages/l10n_countries/skills/l10n-countries-localization/SKILL.md)
 [![Pub package](https://img.shields.io/pub/v/l10n_countries.svg)](https://pub.dev/packages/l10n_countries)
+[![Try in DartPad](https://img.shields.io/badge/dartpad-try-0175C2)](https://preview.dartpad.dev/?package=l10n_countries&file=example/lib/main.dart&panels=%2Bconsole)
 [![FOSSA Status](https://app.fossa.com/api/projects/git%2Bgithub.com%2Ftsinis%2Fsealed_world.svg?type=shield&issueType=security)](https://app.fossa.com/projects/git%2Bgithub.com%2Ftsinis%2Fsealed_world?ref=badge_shield&issueType=security)
 [![FOSSA Status](https://app.fossa.com/api/projects/git%2Bgithub.com%2Ftsinis%2Fsealed_world.svg?type=shield&issueType=license)](https://app.fossa.com/projects/git%2Bgithub.com%2Ftsinis%2Fsealed_world?ref=badge_shield&issueType=license)
 
@@ -119,6 +121,9 @@ Select `l10n-countries-localization` when prompted.
 
 If you like this package, please give it a star or like. For more information on using this package, check out the API documentation. **PRs or ideas are always welcome**.
 If you have any issues or suggestions for the package, please file them in the GitHub repository.
+
+> [!NOTE]
+> **Contributing on Windows**: `dart test` also lints the bundled agent skill (`test/agent_skills_test.dart`), which starts `dart pub publish` via the `dart.exe` found on `PATH`. A Flutter-only setup puts just the `dart.bat` wrapper there, so this test fails with "needs the Dart SDK on PATH". Add `<flutter>\bin\cache\dart-sdk\bin` (or a standalone Dart SDK) to `PATH`.
 
 ### References, credits and sources
 

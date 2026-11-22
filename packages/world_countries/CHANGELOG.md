@@ -1,6 +1,8 @@
 ## 4.8.0
 
-> Requires Dart 3.14 and Flutter 3.50, and adopts their new list and text field APIs.
+> Last non-breaking release: deprecated members will be removed in the next version (December 2026).
+
+Requires Dart 3.14 and Flutter 3.50, and adopts their new list and text field APIs.
 
 NEW FEATURES
 

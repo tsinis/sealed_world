@@ -1,5 +1,7 @@
 ## 3.5.0
 
+> Last non-breaking release: deprecated members will be removed in the next version (December 2026).
+
 FIX
 
 - Includes the fixes of `sealed_languages` 3.4.2.
