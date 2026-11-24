@@ -288,7 +288,7 @@ This ensures that characters like `ä`, `ö`, `ü` in German or `č`, `š`, `ž`
 
 #### How to use fuzzy or similar search functionality?
 
-By default, a picker shows the items with a search term (localized, native, international or alternative name, code, etc.) that contains the query, ignoring the case. Diacritics are not ignored, so `Cesko` doesn't find `Česko`. For a different search (accent-insensitive, fuzzy, weighted, etc.), provide own matching via `onSearchResultsBuilder`, where you can fold both the query and the search terms. Adding folded variants of the terms via `searchIn` only helps partially: the query itself is not folded, so a query with some of its diacritics (like `Ceská`) still matches neither the original nor the folded term.
+By default, a picker shows the items with a search term (localized, native, international or alternative name, code, etc.) that contains the query, ignoring the case. Diacritics are not ignored, so `Cesko` doesn't find `Česko`. For a different search (accent-insensitive, fuzzy, weighted, etc.), provide own matching via `onSearchResultsBuilder`, where you can fold both the query and the search terms. Adding folded variants of the terms via `searchIn` only helps partially: the query itself is not folded, so a query typed with only some of its diacritics still matches neither the original nor the folded term.
 
 For example, use custom `onSearchResultsBuilder` in your picker. Here, fuzzy matching is performed using `fuse.search` from your favorite fuzzy search package, add its import and:
 
