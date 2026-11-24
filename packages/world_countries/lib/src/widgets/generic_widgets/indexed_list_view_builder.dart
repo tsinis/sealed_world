@@ -23,11 +23,11 @@ class IndexedListViewBuilder<T extends Object, W extends Widget>
   /// * [addSemanticIndexes] is a boolean indicating whether to add semantic
   ///   indexes.
   /// * [cacheExtent] is the cache extent to use.
-  /// * [chosen] is the optional item that is chosen by default.
+  /// * [chosen] is the items to highlight as selected.
   /// * [clipBehavior] is the clip behavior to use.
   /// * [crossAxisAlignment] is the cross axis alignment to use.
   /// * [direction] is the direction to use.
-  /// * [disabled] is a boolean indicating whether the list view is disabled.
+  /// * [disabled] is the items the list shows disabled and won't select.
   /// * [dragStartBehavior] is the drag start behavior to use.
   /// * [emptyStatePlaceholder] is the placeholder widget to display when the
   ///   list is empty.

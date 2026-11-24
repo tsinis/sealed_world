@@ -74,8 +74,16 @@ typedef TranslationMap<T extends IsoTranslated> = Map<T, String>;
 
 /// A typedef representing a [Map] of [T] and its [SearchData].
 /// This is used for search functionality, where [T] is the type of the
-/// items being searched and [SearchData] contains the normalized search
-/// terms associated with each item.
+/// items being searched and [SearchData] contains the search terms
+/// associated with each item.
+///
+/// The terms are kept as they are. A query matches a term that starts with
+/// it when `startWithSearch` is `true` (the default, except in pickers), or
+/// that contains it otherwise, ignoring the case unless `caseSensitiveSearch`
+/// is `true`. Neither the query nor the terms are folded otherwise, so
+/// `Cesko` doesn't match `Česko`. Use `onSearchResultsBuilder` for own
+/// matching, or add folded variants next to the original terms via
+/// `searchIn` (replacing them would stop queries with diacritics matching).
 typedef SearchMap<T extends Object> = Map<T, SearchData>;
 
 /// A typedef representing a function that formats a translation

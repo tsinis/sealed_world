@@ -146,6 +146,7 @@ The package re-exports `package:world_flags/world_flags.dart` and the entire `se
 
 ### Custom Search, Collation, and Formatting
 
+- **Default search matching**: A picker's query matches the items with a search term (localized, native, international or alternative name, code, etc.) that contains it (`startWithSearch: true` matches only the start), ignoring the case unless `caseSensitiveSearch: true`. Diacritics are not folded (`Cesko` doesn't match `Česko`) — for accent-insensitive search use `onSearchResultsBuilder`, or add folded variants next to (not instead of) the original terms via `searchIn`, since the query itself is not folded.
 - **Diacritics and locale collation**: By default, translation sorting uses `String.compareTo`. For proper locale-sensitive collation (e.g. `ä`, `ö`, `ü`, `č`, `š`), configure `l10nSorter` in `TypedLocaleDelegate`.
 - **Custom text formatting**: Use `l10nFormatter` in `TypedLocaleDelegate` to apply custom transformations (such as uppercase names) across all translations.
 - **Custom search matching**: Provide `onSearchResultsBuilder` on any picker to implement fuzzy search or weighted matching. It receives the pre-built search map and returns a flat, ordered iterable — `Iterable<T> Function(String query, SearchMap<T> map)`, where `SearchMap<T>` is `Map<T, SearchData>`:

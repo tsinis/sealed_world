@@ -15,6 +15,12 @@ FIX
 - A picker with `showSearchBar: false` (and the results of `searchSuggestions`) no longer shows the `PickersThemeData.header`.
 - `SearchableIndexedListViewBuilder` hides its `header` with `showSearchBar: false` and shows it with `true`, whatever the `PickersThemeData.showHeader` is. Without either, the header is shown (with the search) only for more than 5 items, as documented.
 - `localeMapResolution` entries cover regional variants too, like CLDR parent locales: a script entry covers its regions (`bs_Cyrl_BA` resolves to Serbian in Bosnia and Herzegovina, `sr_BA`, as `bs_Cyrl` does), and a language entry covers the variants of a language without a `NaturalLanguage` (`fil_PH` resolves to `tl_PH` and `gsw_CH` to `de_CH`, instead of English with that region). A variant keeps only the subtags that the matched key doesn't cover, unless the entry sets them: the region, and the script only after a language key (the `Cyrl` of `bs_Cyrl_BA` is covered by the `bs_Cyrl` key, so it's not kept).
+- `ListItemTile` (and `IsoTile`) pass `minTileHeight` and `internalAddSemanticForOnTap` to the tile, they were ignored before.
+
+DOCUMENTATION
+
+- The default search matching is documented (in `SearchMap`, `CompareSearchMixin.compareWithInput`, `SearchableInterface.caseSensitiveSearch`, the README and the agent skill): the query and the search terms are only lower-cased (unless `caseSensitiveSearch: true`), diacritics are not folded. Use `searchIn` or `onSearchResultsBuilder` for another search.
+- The `chosen` and `disabled` parameters of pickers, `IndexedListViewBuilder` and `SearchableIndexedListViewBuilder` are described as the items they are (not an index and a boolean).
 
 CHORE
 
