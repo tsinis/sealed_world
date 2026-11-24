@@ -35,11 +35,13 @@ class SearchableIndexedListViewBuilder<T extends Object, W extends Widget>
   /// * [addSemanticIndexes] is a boolean indicating whether to add semantic
   ///   indexes to the items.
   /// * [cacheExtent] is the cache extent for the list.
-  /// * [chosen] is the index of the currently chosen item.
+  /// * [chosen] is the items to highlight as selected.
   /// * [clipBehavior] is the clip behavior for the list.
   /// * [crossAxisAlignment] is the cross-axis alignment for the list.
   /// * [direction] is the direction of the list.
-  /// * [disabled] is a boolean indicating whether the list is disabled.
+  /// * [disabled] is the items the list won't select on a tap. Their widgets
+  ///   from [itemBuilder] are shown as they are (with `isDisabled` in their
+  ///   properties), so they have to disable their own interactions.
   /// * [dragStartBehavior] is the drag start behavior for the list.
   /// * [emptyStatePlaceholder] is the widget to display when the list is empty.
   /// * [header] is the optional header to display above the list.

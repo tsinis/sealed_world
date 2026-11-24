@@ -17,6 +17,10 @@ mixin CompareSearchMixin<T extends Object> on SearchableInterface<T> {
   ///
   /// Returns a boolean indicating whether the item's text matches the search
   /// query.
+  ///
+  /// Both strings are lower-cased unless [caseSensitiveSearch] is `true`, and
+  /// are not changed otherwise: diacritics and other Unicode forms are not
+  /// folded, so `Cesko` doesn't match `Česko`.
   @protected
   @useResult
   bool compareWithInput(String input, String itemText) {

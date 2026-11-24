@@ -168,7 +168,9 @@ class ListItemTile<T extends Object> extends ListTile {
       horizontalTitleGap: horizontalTitleGap,
       minVerticalPadding: minVerticalPadding,
       minLeadingWidth: minLeadingWidth ?? (fontSize + UiConstants.point),
+      minTileHeight: minTileHeight,
       titleAlignment: titleAlignment,
+      internalAddSemanticForOnTap: internalAddSemanticForOnTap,
       statesController: statesController,
     ),
   );

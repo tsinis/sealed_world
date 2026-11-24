@@ -9,7 +9,7 @@ abstract interface class SearchableInterface<T extends Object> {
   /// * [searchIn] is a function that takes an item and [BuildContext] and
   ///   returns a [SearchData] containing the searchable terms for that item.
   /// * [caseSensitiveSearch] is a boolean indicating whether the search should
-  ///   be case-sensitive.
+  ///   be case-sensitive (only the case is ignored, not diacritics).
   /// * [startWithSearch] is a boolean indicating whether the search field
   ///   should only search by starting with the search string.
   const new( // coverage:ignore-line
@@ -33,6 +33,10 @@ abstract interface class SearchableInterface<T extends Object> {
   onSearchResultsBuilder;
 
   /// A boolean indicating whether the search should be case-sensitive.
+  ///
+  /// When `false`, the query and the search terms are only lower-cased before
+  /// they are compared: diacritics are not ignored, so `Cesko` doesn't match
+  /// `Česko`. Use [onSearchResultsBuilder] for an accent-insensitive search.
   final bool caseSensitiveSearch;
 
   /// A boolean indicating whether the search field

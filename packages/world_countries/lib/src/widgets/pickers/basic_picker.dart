@@ -52,11 +52,11 @@ abstract class BasicPicker<T extends IsoTranslated, W extends IsoTile<T>>
   /// * [cacheExtent] is the cache extent for the list.
   /// * [caseSensitiveSearch] is a boolean indicating whether the search is
   ///   case-sensitive.
-  /// * [chosen] is the index of the currently chosen item.
+  /// * [chosen] is the items to highlight as selected.
   /// * [clipBehavior] is the clip behavior for the list.
   /// * [crossAxisAlignment] is the cross-axis alignment for the list.
   /// * [direction] is the direction of the list.
-  /// * [disabled] is a boolean indicating whether the list is disabled.
+  /// * [disabled] is the items the list shows disabled and won't select.
   /// * [dragStartBehavior] is the drag start behavior for the list.
   /// * [emptyStatePlaceholder] is the widget to display when the list is empty.
   /// * [header] is the optional header to display above the list.
