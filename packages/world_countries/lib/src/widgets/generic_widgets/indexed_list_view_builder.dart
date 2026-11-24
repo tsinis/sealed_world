@@ -27,7 +27,9 @@ class IndexedListViewBuilder<T extends Object, W extends Widget>
   /// * [clipBehavior] is the clip behavior to use.
   /// * [crossAxisAlignment] is the cross axis alignment to use.
   /// * [direction] is the direction to use.
-  /// * [disabled] is the items the list shows disabled and won't select.
+  /// * [disabled] is the items the list won't select on a tap. Their widgets
+  ///   from [itemBuilder] are shown as they are (with `isDisabled` in their
+  ///   properties), so they have to disable their own interactions.
   /// * [dragStartBehavior] is the drag start behavior to use.
   /// * [emptyStatePlaceholder] is the placeholder widget to display when the
   ///   list is empty.

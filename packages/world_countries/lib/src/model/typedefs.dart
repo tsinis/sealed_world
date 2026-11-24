@@ -82,8 +82,8 @@ typedef TranslationMap<T extends IsoTranslated> = Map<T, String>;
 /// that contains it otherwise, ignoring the case unless `caseSensitiveSearch`
 /// is `true`. Neither the query nor the terms are folded otherwise, so
 /// `Cesko` doesn't match `Česko`. Use `onSearchResultsBuilder` for own
-/// matching, or add folded variants next to the original terms via
-/// `searchIn` (replacing them would stop queries with diacritics matching).
+/// matching, e.g. to fold both the query and the terms. Folded terms from
+/// `searchIn` only help partially, as the query itself is not folded.
 typedef SearchMap<T extends Object> = Map<T, SearchData>;
 
 /// A typedef representing a function that formats a translation

@@ -39,7 +39,9 @@ class SearchableIndexedListViewBuilder<T extends Object, W extends Widget>
   /// * [clipBehavior] is the clip behavior for the list.
   /// * [crossAxisAlignment] is the cross-axis alignment for the list.
   /// * [direction] is the direction of the list.
-  /// * [disabled] is the items the list shows disabled and won't select.
+  /// * [disabled] is the items the list won't select on a tap. Their widgets
+  ///   from [itemBuilder] are shown as they are (with `isDisabled` in their
+  ///   properties), so they have to disable their own interactions.
   /// * [dragStartBehavior] is the drag start behavior for the list.
   /// * [emptyStatePlaceholder] is the widget to display when the list is empty.
   /// * [header] is the optional header to display above the list.
