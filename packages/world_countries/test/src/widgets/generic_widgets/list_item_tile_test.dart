@@ -109,6 +109,25 @@ void main() => group("$ListItemTile", () {
     expect(tile.subtitle, isA<Semantics>());
   });
 
+  testWidgets("passes the tile height and tap semantics to the tile", (
+    tester, // Dart 3.8 formatting.
+  ) async {
+    const height = 100.0;
+    await tester.pumpMaterialApp(
+      const ListItemTile(
+        1,
+        title: Text("title"),
+        minTileHeight: height,
+        internalAddSemanticForOnTap: false,
+      ),
+    );
+
+    final tile = tester.widget<ListTile>(find.byType(ListTile).last);
+    expect(tile.minTileHeight, height);
+    expect(tile.internalAddSemanticForOnTap, isFalse);
+    expect(tester.getSize(find.byType(ListItemTile<int>)).height, height);
+  });
+
   testWidgets("can be found by a global key", (tester) async {
     final key = GlobalKey();
     await tester.pumpMaterialApp(ListItemTile(1, key: key));
