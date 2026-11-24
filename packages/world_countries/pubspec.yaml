@@ -32,7 +32,7 @@ dependencies:
   # Material is no longer a part of Flutter SDK (deprecated in Flutter 3.50).
   material_ui: ^1.11.0 # Pickers, search bars and themes are Material widgets.
   meta: ^1.19.0 # Same as in Flutter 3.50 SDK (flutter and flutter_test).
-  world_flags: ^3.6.0
+  world_flags: ^3.7.0
 
 dev_dependencies:
   dart_code_metrics_presets: any # Constrained in the workspace pubspec.yaml
